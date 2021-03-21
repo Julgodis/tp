@@ -73,10 +73,372 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">vec.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="vec_8h_source.html">dolphin/mtx/vec.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECAdd.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECSubtract.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECScale.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECNormalize.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECSquareMag.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECMag.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECDotProduct.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECCrossProduct.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/C_VECHalfAngle.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/C_VECReflect.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECSquareDistance.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/vec/PSVECDistance.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for vec.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="vec_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a2d764a513a37c661319298005a236abc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a2d764a513a37c661319298005a236abc">PSVECAdd</a> ()</td></tr>
+<tr class="separator:a2d764a513a37c661319298005a236abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0c92f112facbcaf192f1baacbf7af9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#afc0c92f112facbcaf192f1baacbf7af9">PSVECSubtract</a> ()</td></tr>
+<tr class="separator:afc0c92f112facbcaf192f1baacbf7af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775b9d140a0f4dcf213338a70ab2ba8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a775b9d140a0f4dcf213338a70ab2ba8c">PSVECScale</a> ()</td></tr>
+<tr class="separator:a775b9d140a0f4dcf213338a70ab2ba8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#ad147100ce3c1b81ba959b43b39ad5a53">PSVECNormalize</a> ()</td></tr>
+<tr class="separator:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c6b9ce661844f2cadd1160699eaff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a88c6b9ce661844f2cadd1160699eaff8">PSVECSquareMag</a> ()</td></tr>
+<tr class="separator:a88c6b9ce661844f2cadd1160699eaff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5f81b08ecc7317a404edd1b0686ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#aee5f81b08ecc7317a404edd1b0686ea3">PSVECMag</a> ()</td></tr>
+<tr class="separator:aee5f81b08ecc7317a404edd1b0686ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af301a4435b08e492ffc7f470cd6cc0ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#af301a4435b08e492ffc7f470cd6cc0ae">PSVECDotProduct</a> ()</td></tr>
+<tr class="separator:af301a4435b08e492ffc7f470cd6cc0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad020f89b3a5906e30371543f023f919f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#ad020f89b3a5906e30371543f023f919f">PSVECCrossProduct</a> ()</td></tr>
+<tr class="separator:ad020f89b3a5906e30371543f023f919f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b077a14eaccd614129be269fd93efd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#ae8b077a14eaccd614129be269fd93efd">C_VECHalfAngle</a> ()</td></tr>
+<tr class="separator:ae8b077a14eaccd614129be269fd93efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a222f2f85a3a3153ebc16b2f02d670ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a222f2f85a3a3153ebc16b2f02d670ad4">C_VECReflect</a> ()</td></tr>
+<tr class="separator:a222f2f85a3a3153ebc16b2f02d670ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21505f0028282e0dcc507940f24da508"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a21505f0028282e0dcc507940f24da508">PSVECSquareDistance</a> ()</td></tr>
+<tr class="separator:a21505f0028282e0dcc507940f24da508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5236be8fa08a5b825d25b621baf37fb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a5236be8fa08a5b825d25b621baf37fb3">PSVECDistance</a> ()</td></tr>
+<tr class="separator:a5236be8fa08a5b825d25b621baf37fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa3a5fd33cacff75d903cadb9bf0243a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#aa3a5fd33cacff75d903cadb9bf0243a2">vec__lit_113</a> [4]</td></tr>
+<tr class="separator:aa3a5fd33cacff75d903cadb9bf0243a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802a09257f069b7de714d22468b3c045"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a802a09257f069b7de714d22468b3c045">vec__lit_118</a> = 0.5f</td></tr>
+<tr class="separator:a802a09257f069b7de714d22468b3c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5008de5389cf9dbc3031dd09351c37f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#aa5008de5389cf9dbc3031dd09351c37f">vec__lit_119</a> = 3.0f</td></tr>
+<tr class="separator:aa5008de5389cf9dbc3031dd09351c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67483054532acbc91d6985fd5b8066b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vec_8cpp.html#a67483054532acbc91d6985fd5b8066b9">vec__lit_161</a> = 2.0f</td></tr>
+<tr class="separator:a67483054532acbc91d6985fd5b8066b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ae8b077a14eaccd614129be269fd93efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b077a14eaccd614129be269fd93efd">&#9670;&nbsp;</a></span>C_VECHalfAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_VECHalfAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a222f2f85a3a3153ebc16b2f02d670ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a222f2f85a3a3153ebc16b2f02d670ad4">&#9670;&nbsp;</a></span>C_VECReflect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_VECReflect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d764a513a37c661319298005a236abc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d764a513a37c661319298005a236abc">&#9670;&nbsp;</a></span>PSVECAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECAdd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad020f89b3a5906e30371543f023f919f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad020f89b3a5906e30371543f023f919f">&#9670;&nbsp;</a></span>PSVECCrossProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECCrossProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5236be8fa08a5b825d25b621baf37fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5236be8fa08a5b825d25b621baf37fb3">&#9670;&nbsp;</a></span>PSVECDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void PSVECDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af301a4435b08e492ffc7f470cd6cc0ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af301a4435b08e492ffc7f470cd6cc0ae">&#9670;&nbsp;</a></span>PSVECDotProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECDotProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee5f81b08ecc7317a404edd1b0686ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5f81b08ecc7317a404edd1b0686ea3">&#9670;&nbsp;</a></span>PSVECMag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECMag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad147100ce3c1b81ba959b43b39ad5a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad147100ce3c1b81ba959b43b39ad5a53">&#9670;&nbsp;</a></span>PSVECNormalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECNormalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a775b9d140a0f4dcf213338a70ab2ba8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a775b9d140a0f4dcf213338a70ab2ba8c">&#9670;&nbsp;</a></span>PSVECScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21505f0028282e0dcc507940f24da508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21505f0028282e0dcc507940f24da508">&#9670;&nbsp;</a></span>PSVECSquareDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECSquareDistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88c6b9ce661844f2cadd1160699eaff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c6b9ce661844f2cadd1160699eaff8">&#9670;&nbsp;</a></span>PSVECSquareMag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECSquareMag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc0c92f112facbcaf192f1baacbf7af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0c92f112facbcaf192f1baacbf7af9">&#9670;&nbsp;</a></span>PSVECSubtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECSubtract </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa3a5fd33cacff75d903cadb9bf0243a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a5fd33cacff75d903cadb9bf0243a2">&#9670;&nbsp;</a></span>vec__lit_113</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> vec__lit_113[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a802a09257f069b7de714d22468b3c045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802a09257f069b7de714d22468b3c045">&#9670;&nbsp;</a></span>vec__lit_118</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> vec__lit_118 = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5008de5389cf9dbc3031dd09351c37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5008de5389cf9dbc3031dd09351c37f">&#9670;&nbsp;</a></span>vec__lit_119</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> vec__lit_119 = 3.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67483054532acbc91d6985fd5b8066b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67483054532acbc91d6985fd5b8066b9">&#9670;&nbsp;</a></span>vec__lit_161</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> vec__lit_161 = 2.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

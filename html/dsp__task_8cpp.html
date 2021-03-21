@@ -73,10 +73,440 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">dsp_task.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dsp__task_8h_source.html">dolphin/dsp/dsp_task.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/dsp/dsp_task/__DSP_exec_task.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/dsp/dsp_task/__DSP_boot_task.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/dsp/dsp_task/__DSP_insert_task.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/dsp/dsp_task/__DSP_remove_task.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for dsp_task.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="dsp__task_8cpp__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a62fb19f971eb98b93560bc9a1bff60f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a62fb19f971eb98b93560bc9a1bff60f7">__DSP_exec_task</a> ()</td></tr>
+<tr class="separator:a62fb19f971eb98b93560bc9a1bff60f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0252ad403bcdf39c51714f8f06a791ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a0252ad403bcdf39c51714f8f06a791ea">__DSP_boot_task</a> ()</td></tr>
+<tr class="separator:a0252ad403bcdf39c51714f8f06a791ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8effc54a556f83ee279d74bd396b33d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#ad8effc54a556f83ee279d74bd396b33d">__DSP_insert_task</a> ()</td></tr>
+<tr class="separator:ad8effc54a556f83ee279d74bd396b33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24e9ea3d1d26593d6f040dbf237dddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#ad24e9ea3d1d26593d6f040dbf237dddc">__DSP_remove_task</a> ()</td></tr>
+<tr class="separator:ad24e9ea3d1d26593d6f040dbf237dddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98eefec700202c5f87ca84e3f132aed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a98eefec700202c5f87ca84e3f132aed3">DSPCheckMailToDSP</a> ()</td></tr>
+<tr class="separator:a98eefec700202c5f87ca84e3f132aed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e224685350c00dec11f3034b7c88b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a13e224685350c00dec11f3034b7c88b4">DSPCheckMailFromDSP</a> ()</td></tr>
+<tr class="separator:a13e224685350c00dec11f3034b7c88b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90d4a056267ec96c8e6e6f720b393a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#ad90d4a056267ec96c8e6e6f720b393a7">DSPReadMailFromDSP</a> ()</td></tr>
+<tr class="separator:ad90d4a056267ec96c8e6e6f720b393a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062773d9cf66ef4c4f9e930a1c792d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a062773d9cf66ef4c4f9e930a1c792d35">DSPSendMailToDSP</a> ()</td></tr>
+<tr class="separator:a062773d9cf66ef4c4f9e930a1c792d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c8256e259c584b10a99ba2c9ad3ce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a11c8256e259c584b10a99ba2c9ad3ce8">__DSP_debug_printf</a> ()</td></tr>
+<tr class="separator:a11c8256e259c584b10a99ba2c9ad3ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aee843afd3368617959aa895c9cd62939"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#aee843afd3368617959aa895c9cd62939">dsp_task__lit_267</a> [45+3]</td></tr>
+<tr class="separator:aee843afd3368617959aa895c9cd62939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fcb9f31dd8917c355cd4ccad55741c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a4fcb9f31dd8917c355cd4ccad55741c7">dsp_task__lit_268</a> [45+3]</td></tr>
+<tr class="separator:a4fcb9f31dd8917c355cd4ccad55741c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f72fdb1bca137fb5549211f5d04940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a64f72fdb1bca137fb5549211f5d04940">dsp_task__lit_269</a> [45+3]</td></tr>
+<tr class="separator:a64f72fdb1bca137fb5549211f5d04940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94757303e7485c7a634a76afaed1441c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a94757303e7485c7a634a76afaed1441c">dsp_task__lit_270</a> [45+3]</td></tr>
+<tr class="separator:a94757303e7485c7a634a76afaed1441c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803f9d1aef5e006ccae53f13ae9399b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a803f9d1aef5e006ccae53f13ae9399b4">dsp_task__lit_271</a> [45+3]</td></tr>
+<tr class="separator:a803f9d1aef5e006ccae53f13ae9399b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536cea1486d6c00a3f1449a7c94f22ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a536cea1486d6c00a3f1449a7c94f22ed">dsp_task__lit_294</a> [43+5]</td></tr>
+<tr class="separator:a536cea1486d6c00a3f1449a7c94f22ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e23791254fcc29da22add0c09c8b3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a73e23791254fcc29da22add0c09c8b3f">__DSP_tmp_task</a> [4]</td></tr>
+<tr class="separator:a73e23791254fcc29da22add0c09c8b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1980ebebc5108d6ace541f9ca53030f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a1980ebebc5108d6ace541f9ca53030f8">__DSP_last_task</a> [4]</td></tr>
+<tr class="separator:a1980ebebc5108d6ace541f9ca53030f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70738d7a6f93aad25279fd2c333eda9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#ac70738d7a6f93aad25279fd2c333eda9">__DSP_first_task</a> [4]</td></tr>
+<tr class="separator:ac70738d7a6f93aad25279fd2c333eda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad03d6e01ef594cd9dd49d36301b31c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#a7ad03d6e01ef594cd9dd49d36301b31c">__DSP_curr_task</a> [4]</td></tr>
+<tr class="separator:a7ad03d6e01ef594cd9dd49d36301b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96ca132b9aa8303ba35464a71af3966"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dsp__task_8cpp.html#aa96ca132b9aa8303ba35464a71af3966">lit_266</a> [29+3]</td></tr>
+<tr class="separator:aa96ca132b9aa8303ba35464a71af3966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0252ad403bcdf39c51714f8f06a791ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0252ad403bcdf39c51714f8f06a791ea">&#9670;&nbsp;</a></span>__DSP_boot_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __DSP_boot_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11c8256e259c584b10a99ba2c9ad3ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c8256e259c584b10a99ba2c9ad3ce8">&#9670;&nbsp;</a></span>__DSP_debug_printf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __DSP_debug_printf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62fb19f971eb98b93560bc9a1bff60f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fb19f971eb98b93560bc9a1bff60f7">&#9670;&nbsp;</a></span>__DSP_exec_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __DSP_exec_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8effc54a556f83ee279d74bd396b33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8effc54a556f83ee279d74bd396b33d">&#9670;&nbsp;</a></span>__DSP_insert_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __DSP_insert_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad24e9ea3d1d26593d6f040dbf237dddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad24e9ea3d1d26593d6f040dbf237dddc">&#9670;&nbsp;</a></span>__DSP_remove_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __DSP_remove_task </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13e224685350c00dec11f3034b7c88b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e224685350c00dec11f3034b7c88b4">&#9670;&nbsp;</a></span>DSPCheckMailFromDSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSPCheckMailFromDSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98eefec700202c5f87ca84e3f132aed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98eefec700202c5f87ca84e3f132aed3">&#9670;&nbsp;</a></span>DSPCheckMailToDSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSPCheckMailToDSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad90d4a056267ec96c8e6e6f720b393a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90d4a056267ec96c8e6e6f720b393a7">&#9670;&nbsp;</a></span>DSPReadMailFromDSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSPReadMailFromDSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a062773d9cf66ef4c4f9e930a1c792d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062773d9cf66ef4c4f9e930a1c792d35">&#9670;&nbsp;</a></span>DSPSendMailToDSP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DSPSendMailToDSP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7ad03d6e01ef594cd9dd49d36301b31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad03d6e01ef594cd9dd49d36301b31c">&#9670;&nbsp;</a></span>__DSP_curr_task</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __DSP_curr_task[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac70738d7a6f93aad25279fd2c333eda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70738d7a6f93aad25279fd2c333eda9">&#9670;&nbsp;</a></span>__DSP_first_task</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __DSP_first_task[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1980ebebc5108d6ace541f9ca53030f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1980ebebc5108d6ace541f9ca53030f8">&#9670;&nbsp;</a></span>__DSP_last_task</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __DSP_last_task[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e23791254fcc29da22add0c09c8b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e23791254fcc29da22add0c09c8b3f">&#9670;&nbsp;</a></span>__DSP_tmp_task</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __DSP_tmp_task[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee843afd3368617959aa895c9cd62939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee843afd3368617959aa895c9cd62939">&#9670;&nbsp;</a></span>dsp_task__lit_267</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_267</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x62, 0x6F, 0x6F, 0x74, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28,</div>
+<div class="line">    0x29, 0x20, 0x20, 0x3A, 0x20, 0x49, 0x52, 0x41, 0x4D, 0x20, 0x4D, 0x4D, 0x45, 0x4D, 0x20, 0x41,</div>
+<div class="line">    0x44, 0x44, 0x52, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4fcb9f31dd8917c355cd4ccad55741c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fcb9f31dd8917c355cd4ccad55741c7">&#9670;&nbsp;</a></span>dsp_task__lit_268</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_268</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x62, 0x6F, 0x6F, 0x74, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28,</div>
+<div class="line">    0x29, 0x20, 0x20, 0x3A, 0x20, 0x49, 0x52, 0x41, 0x4D, 0x20, 0x44, 0x53, 0x50, 0x20, 0x41, 0x44,</div>
+<div class="line">    0x44, 0x52, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64f72fdb1bca137fb5549211f5d04940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f72fdb1bca137fb5549211f5d04940">&#9670;&nbsp;</a></span>dsp_task__lit_269</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_269</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x62, 0x6F, 0x6F, 0x74, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28,</div>
+<div class="line">    0x29, 0x20, 0x20, 0x3A, 0x20, 0x49, 0x52, 0x41, 0x4D, 0x20, 0x4C, 0x45, 0x4E, 0x47, 0x54, 0x48,</div>
+<div class="line">    0x20, 0x20, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a94757303e7485c7a634a76afaed1441c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94757303e7485c7a634a76afaed1441c">&#9670;&nbsp;</a></span>dsp_task__lit_270</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_270</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x62, 0x6F, 0x6F, 0x74, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28,</div>
+<div class="line">    0x29, 0x20, 0x20, 0x3A, 0x20, 0x44, 0x52, 0x41, 0x4D, 0x20, 0x4D, 0x4D, 0x45, 0x4D, 0x20, 0x41,</div>
+<div class="line">    0x44, 0x44, 0x52, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a803f9d1aef5e006ccae53f13ae9399b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a803f9d1aef5e006ccae53f13ae9399b4">&#9670;&nbsp;</a></span>dsp_task__lit_271</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_271</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x62, 0x6F, 0x6F, 0x74, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28,</div>
+<div class="line">    0x29, 0x20, 0x20, 0x3A, 0x20, 0x53, 0x74, 0x61, 0x72, 0x74, 0x20, 0x56, 0x65, 0x63, 0x74, 0x6F,</div>
+<div class="line">    0x72, 0x20, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a536cea1486d6c00a3f1449a7c94f22ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536cea1486d6c00a3f1449a7c94f22ed">&#9670;&nbsp;</a></span>dsp_task__lit_294</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dsp_task__lit_294</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x5F, 0x5F, 0x44, 0x53, 0x50, 0x5F, 0x61, 0x64, 0x64, 0x5F, 0x74, 0x61, 0x73, 0x6B, 0x28, 0x29,</div>
+<div class="line">    0x20, 0x3A, 0x20, 0x41, 0x64, 0x64, 0x65, 0x64, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x20, 0x20, 0x20,</div>
+<div class="line">    0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa96ca132b9aa8303ba35464a71af3966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa96ca132b9aa8303ba35464a71af3966">&#9670;&nbsp;</a></span>lit_266</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_266[29+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x44, 0x53, 0x50, 0x20, 0x69, 0x73, 0x20, 0x62, 0x6F, 0x6F, 0x74, 0x69, 0x6E, 0x67, 0x20, 0x74,</div>
+<div class="line">    0x61, 0x73, 0x6B, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x58, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

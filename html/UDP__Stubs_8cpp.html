@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: libs/debugger/MetroTRK/Os/dolphin/UDP_Stubs.cpp File Reference</title>
+<title>Twilight Princess: libs/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,14 +69,212 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_24f13134bc6452a3f9fa8346c9be9d8b.html">debugger</a></li><li class="navelem"><a class="el" href="dir_e65b68ee53c6ff8e4aaf57f439c94be0.html">MetroTRK</a></li><li class="navelem"><a class="el" href="dir_96db97df662aabffa10185e84d58a249.html">Os</a></li><li class="navelem"><a class="el" href="dir_1f4991f5d74911f9f6d1daa569c519f6.html">dolphin</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_6b67cfcdbcbf1df04fac4a98c3b947ab.html">TRK_MINNOW_DOLPHIN</a></li><li class="navelem"><a class="el" href="dir_fcd9a856ba91741775342c525f76e758.html">Os</a></li><li class="navelem"><a class="el" href="dir_1c30fee3d0b309fc0bb8b9442f5be8e2.html">dolphin</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">UDP_Stubs.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="UDP__Stubs_8h_source.html">TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs.h</a>&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_post_stop.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_pre_continue.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_peek.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_write.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_read.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_close.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_open.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_shutdown.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs/udp_cc_initialize.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for UDP_Stubs.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="UDP__Stubs_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1bb9e5d1c5d87f42cdedd160fc02ba16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a1bb9e5d1c5d87f42cdedd160fc02ba16">udp_cc_post_stop</a> ()</td></tr>
+<tr class="separator:a1bb9e5d1c5d87f42cdedd160fc02ba16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc7a7d520208c02eab92023c8dbe36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#abdc7a7d520208c02eab92023c8dbe36a">udp_cc_pre_continue</a> ()</td></tr>
+<tr class="separator:abdc7a7d520208c02eab92023c8dbe36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105b7fa30100bad4a7073c953f2e1ee3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a105b7fa30100bad4a7073c953f2e1ee3">udp_cc_peek</a> ()</td></tr>
+<tr class="separator:a105b7fa30100bad4a7073c953f2e1ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255f46a17ad674912b43ae0cd60fba22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a255f46a17ad674912b43ae0cd60fba22">udp_cc_write</a> ()</td></tr>
+<tr class="separator:a255f46a17ad674912b43ae0cd60fba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332b9093ea3e6e13d07bebc92d344eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a332b9093ea3e6e13d07bebc92d344eaf">udp_cc_read</a> ()</td></tr>
+<tr class="separator:a332b9093ea3e6e13d07bebc92d344eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e479a99b332f40455ec3742b16c360f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a2e479a99b332f40455ec3742b16c360f">udp_cc_close</a> ()</td></tr>
+<tr class="separator:a2e479a99b332f40455ec3742b16c360f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e10f0cc31aa812e7ae6528306a46a13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a2e10f0cc31aa812e7ae6528306a46a13">udp_cc_open</a> ()</td></tr>
+<tr class="separator:a2e10f0cc31aa812e7ae6528306a46a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9234238e31ee8ec4fb8b5f52d8ce5c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#a9234238e31ee8ec4fb8b5f52d8ce5c5a">udp_cc_shutdown</a> ()</td></tr>
+<tr class="separator:a9234238e31ee8ec4fb8b5f52d8ce5c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea987b0864929f007da9cfecd31987a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="UDP__Stubs_8cpp.html#acea987b0864929f007da9cfecd31987a">udp_cc_initialize</a> ()</td></tr>
+<tr class="separator:acea987b0864929f007da9cfecd31987a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a2e479a99b332f40455ec3742b16c360f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e479a99b332f40455ec3742b16c360f">&#9670;&nbsp;</a></span>udp_cc_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acea987b0864929f007da9cfecd31987a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea987b0864929f007da9cfecd31987a">&#9670;&nbsp;</a></span>udp_cc_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e10f0cc31aa812e7ae6528306a46a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e10f0cc31aa812e7ae6528306a46a13">&#9670;&nbsp;</a></span>udp_cc_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a105b7fa30100bad4a7073c953f2e1ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105b7fa30100bad4a7073c953f2e1ee3">&#9670;&nbsp;</a></span>udp_cc_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bb9e5d1c5d87f42cdedd160fc02ba16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bb9e5d1c5d87f42cdedd160fc02ba16">&#9670;&nbsp;</a></span>udp_cc_post_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_post_stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdc7a7d520208c02eab92023c8dbe36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc7a7d520208c02eab92023c8dbe36a">&#9670;&nbsp;</a></span>udp_cc_pre_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_pre_continue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a332b9093ea3e6e13d07bebc92d344eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332b9093ea3e6e13d07bebc92d344eaf">&#9670;&nbsp;</a></span>udp_cc_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9234238e31ee8ec4fb8b5f52d8ce5c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9234238e31ee8ec4fb8b5f52d8ce5c5a">&#9670;&nbsp;</a></span>udp_cc_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a255f46a17ad674912b43ae0cd60fba22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255f46a17ad674912b43ae0cd60fba22">&#9670;&nbsp;</a></span>udp_cc_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void udp_cc_write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

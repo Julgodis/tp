@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_op/f_op_draw_iter.cpp File Reference</title>
+<title>Twilight Princess: src/f_op/f_op_draw_iter.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,61 +69,70 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_78d979f70e66f5399b8b2e33e5bfc8e1.html">f_op</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1067c0d41a0230984cbcba896d5e4c43.html">f_op</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">f_op_draw_iter.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__op__draw__iter_8h_source.html">f/f_op/f_op_draw_iter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__tree_8h_source.html">SComponent/c_tree.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_draw_iter/asm/func_80020400.s&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_draw_iter/asm/func_80020444.s&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_draw_iter/asm/func_80020480.s&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__op__draw__iter_8h_source.html">f_op/f_op_draw_iter.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_draw_iter/fopDwIt_GetTag__Fv.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_draw_iter/fopDwIt_Begin__Fv.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_draw_iter/fopDwIt_Next__FP16create_tag_class.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_op_draw_iter.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__draw__iter_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__draw__iter_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcreate__tag__class.html">create_tag_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea475cb3f55e1ad6fbd100e3054775e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#aea475cb3f55e1ad6fbd100e3054775e6">fopDwIt_GetTag__Fv</a> (void)</td></tr>
-<tr class="separator:aea475cb3f55e1ad6fbd100e3054775e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79381bb1fc844dbb3aac321ac5810ed2"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a79381bb1fc844dbb3aac321ac5810ed2">fopDwIt_GetTag</a> (void)</td></tr>
-<tr class="separator:a79381bb1fc844dbb3aac321ac5810ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd85820e3d2af86a53af79e7c8b9c656"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#abd85820e3d2af86a53af79e7c8b9c656">fopDwIt_Begin</a> (void)</td></tr>
-<tr class="separator:abd85820e3d2af86a53af79e7c8b9c656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34dbf48afe4b3150bad4bd957c06e93"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#ad34dbf48afe4b3150bad4bd957c06e93">fopDwIt_Next</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *pCreateTag)</td></tr>
-<tr class="separator:ad34dbf48afe4b3150bad4bd957c06e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafde201b829eacd9b93f70932028f889"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#aafde201b829eacd9b93f70932028f889">fopDwIt_GetTag</a> ()</td></tr>
+<tr class="separator:aafde201b829eacd9b93f70932028f889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68998f9e3a133a114977e5a0a7237e61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a68998f9e3a133a114977e5a0a7237e61">fopDwIt_Begin</a> ()</td></tr>
+<tr class="separator:a68998f9e3a133a114977e5a0a7237e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3530a36cf5ab64fc1124a93db85dbd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a3530a36cf5ab64fc1124a93db85dbd5d">fopDwIt_Next</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *)</td></tr>
+<tr class="separator:a3530a36cf5ab64fc1124a93db85dbd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49696d16ebf113aa26f79c983001bbf7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a49696d16ebf113aa26f79c983001bbf7">fopDwIt_GetTag__Fv</a> ()</td></tr>
+<tr class="separator:a49696d16ebf113aa26f79c983001bbf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be928d7062dd38668d04faa2353cd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a6be928d7062dd38668d04faa2353cd37">fopDwIt_Begin__Fv</a> ()</td></tr>
+<tr class="separator:a6be928d7062dd38668d04faa2353cd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd63fb8d502dcf02421818b035d38651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#abd63fb8d502dcf02421818b035d38651">fopDwIt_Next__FP16create_tag_class</a> ()</td></tr>
+<tr class="separator:abd63fb8d502dcf02421818b035d38651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a7c5a8a28d5dc7d22d712127f6b76b353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a7c5a8a28d5dc7d22d712127f6b76b353">g_fopDwTg_Queue</a></td></tr>
-<tr class="separator:a7c5a8a28d5dc7d22d712127f6b76b353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce19a617ccab48e7746ef79d63dc479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#a3ce19a617ccab48e7746ef79d63dc479">l_fopDwTg_id</a></td></tr>
-<tr class="separator:a3ce19a617ccab48e7746ef79d63dc479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab548aa9482c3d59155b3642ecdf78c63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#ab548aa9482c3d59155b3642ecdf78c63">g_fopDwTg_Queue</a> [8]</td></tr>
+<tr class="separator:ab548aa9482c3d59155b3642ecdf78c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01408e9ac5a515a6f21b9f8facbf8a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__draw__iter_8cpp.html#ac01408e9ac5a515a6f21b9f8facbf8a8">l_fopDwTg_id</a> [4+4]</td></tr>
+<tr class="separator:ac01408e9ac5a515a6f21b9f8facbf8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abd85820e3d2af86a53af79e7c8b9c656"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd85820e3d2af86a53af79e7c8b9c656">&#9670;&nbsp;</a></span>fopDwIt_Begin()</h2>
+<a id="a68998f9e3a133a114977e5a0a7237e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68998f9e3a133a114977e5a0a7237e61">&#9670;&nbsp;</a></span>fopDwIt_Begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void fopDwIt_Begin </td>
+          <td class="memname">void fopDwIt_Begin </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -132,16 +141,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a79381bb1fc844dbb3aac321ac5810ed2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79381bb1fc844dbb3aac321ac5810ed2">&#9670;&nbsp;</a></span>fopDwIt_GetTag()</h2>
+<a id="a6be928d7062dd38668d04faa2353cd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be928d7062dd38668d04faa2353cd37">&#9670;&nbsp;</a></span>fopDwIt_Begin__Fv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void fopDwIt_GetTag </td>
+          <td class="memname">void fopDwIt_Begin__Fv </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -150,35 +158,84 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aea475cb3f55e1ad6fbd100e3054775e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea475cb3f55e1ad6fbd100e3054775e6">&#9670;&nbsp;</a></span>fopDwIt_GetTag__Fv()</h2>
+<a id="aafde201b829eacd9b93f70932028f889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafde201b829eacd9b93f70932028f889">&#9670;&nbsp;</a></span>fopDwIt_GetTag()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void fopDwIt_GetTag__Fv </td>
+          <td class="memname">static asm void fopDwIt_GetTag </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad34dbf48afe4b3150bad4bd957c06e93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34dbf48afe4b3150bad4bd957c06e93">&#9670;&nbsp;</a></span>fopDwIt_Next()</h2>
+<a id="a49696d16ebf113aa26f79c983001bbf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49696d16ebf113aa26f79c983001bbf7">&#9670;&nbsp;</a></span>fopDwIt_GetTag__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void fopDwIt_GetTag__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3530a36cf5ab64fc1124a93db85dbd5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3530a36cf5ab64fc1124a93db85dbd5d">&#9670;&nbsp;</a></span>fopDwIt_Next()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void fopDwIt_Next </td>
+          <td class="memname">void fopDwIt_Next </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
-          <td class="paramname"><em>pCreateTag</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd63fb8d502dcf02421818b035d38651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd63fb8d502dcf02421818b035d38651">&#9670;&nbsp;</a></span>fopDwIt_Next__FP16create_tag_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopDwIt_Next__FP16create_tag_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -187,8 +244,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a7c5a8a28d5dc7d22d712127f6b76b353"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c5a8a28d5dc7d22d712127f6b76b353">&#9670;&nbsp;</a></span>g_fopDwTg_Queue</h2>
+<a id="ab548aa9482c3d59155b3642ecdf78c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab548aa9482c3d59155b3642ecdf78c63">&#9670;&nbsp;</a></span>g_fopDwTg_Queue</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +254,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a> g_fopDwTg_Queue</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> g_fopDwTg_Queue</td>
         </tr>
       </table>
   </td>
@@ -206,11 +263,14 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
-<a id="a3ce19a617ccab48e7746ef79d63dc479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ce19a617ccab48e7746ef79d63dc479">&#9670;&nbsp;</a></span>l_fopDwTg_id</h2>
+<a id="ac01408e9ac5a515a6f21b9f8facbf8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01408e9ac5a515a6f21b9f8facbf8a8">&#9670;&nbsp;</a></span>l_fopDwTg_id</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,12 +279,12 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> l_fopDwTg_id</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> l_fopDwTg_id[4+4]</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

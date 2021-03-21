@@ -74,50 +74,76 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">c_bg_w.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__bg__w_8h_source.html">SComponent/c_bg_w.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__bg__w_8h_source.html">SSystem/SComponent/c_bg_w.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/Regist__9cBgW_BgIdFi.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/Release__9cBgW_BgIdFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/ChkUsed__9cBgW_BgIdCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/cBgW_CheckBGround__Ff.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/cBgW_CheckBRoof__Ff.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_bg_w/cBgW_CheckBWall__Ff.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_bg_w.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c__bg__w_8cpp__incl.svg" width="352" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="c__bg__w_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgW__BgId.html">cBgW_BgId</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5daced002bc564977ee093bcd132954c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a5daced002bc564977ee093bcd132954c">cBgW_CheckBGround</a> (float a1)</td></tr>
-<tr class="separator:a5daced002bc564977ee093bcd132954c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a104d1418b6ddd5e62616e51ff95a7fb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a104d1418b6ddd5e62616e51ff95a7fb6">cBgW_CheckBRoof</a> (float a1)</td></tr>
-<tr class="separator:a104d1418b6ddd5e62616e51ff95a7fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabffba8bee311b1789a3e56bfdbe7275"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#aabffba8bee311b1789a3e56bfdbe7275">cBgW_CheckBWall</a> (float a1)</td></tr>
-<tr class="separator:aabffba8bee311b1789a3e56bfdbe7275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f2f74bbc1108275c1d1f9933ca4f575"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a1f2f74bbc1108275c1d1f9933ca4f575">cBgW_CheckBGround</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:a1f2f74bbc1108275c1d1f9933ca4f575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a503d22719b1b92c67c51aca7b2dea866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a503d22719b1b92c67c51aca7b2dea866">cBgW_CheckBRoof</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:a503d22719b1b92c67c51aca7b2dea866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65d178e1c0e42387674c85fcea07317"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#aa65d178e1c0e42387674c85fcea07317">cBgW_CheckBWall</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:aa65d178e1c0e42387674c85fcea07317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e0a0ddd8e1114a2a1cd849121691c98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a0e0a0ddd8e1114a2a1cd849121691c98">Regist__9cBgW_BgIdFi</a> ()</td></tr>
+<tr class="separator:a0e0a0ddd8e1114a2a1cd849121691c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5392287bee24cc00274d588e8f11fc39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a5392287bee24cc00274d588e8f11fc39">Release__9cBgW_BgIdFv</a> ()</td></tr>
+<tr class="separator:a5392287bee24cc00274d588e8f11fc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8833ea30ee46643221badba21ac640e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a8833ea30ee46643221badba21ac640e0">ChkUsed__9cBgW_BgIdCFv</a> ()</td></tr>
+<tr class="separator:a8833ea30ee46643221badba21ac640e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127917db155e522b6a9d2ee2a3f7642b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a127917db155e522b6a9d2ee2a3f7642b">cBgW_CheckBGround__Ff</a> ()</td></tr>
+<tr class="separator:a127917db155e522b6a9d2ee2a3f7642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3eeaf6c6fcaefc13512b4f3c6b0fef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#aa3eeaf6c6fcaefc13512b4f3c6b0fef8">cBgW_CheckBRoof__Ff</a> ()</td></tr>
+<tr class="separator:aa3eeaf6c6fcaefc13512b4f3c6b0fef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef003a048e80cb99540a04b3fc095bed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#aef003a048e80cb99540a04b3fc095bed">cBgW_CheckBWall__Ff</a> ()</td></tr>
+<tr class="separator:aef003a048e80cb99540a04b3fc095bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2962464e6400653e88efc67bbf88e19d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a2962464e6400653e88efc67bbf88e19d">lbl_804550E8</a></td></tr>
-<tr class="separator:a2962464e6400653e88efc67bbf88e19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addcf1adb972a652ca0a6aac7312b30f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#addcf1adb972a652ca0a6aac7312b30f1">lbl_804550EC</a></td></tr>
-<tr class="separator:addcf1adb972a652ca0a6aac7312b30f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4555bcaf1a5b9fe4d09719ad2068c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a4a4555bcaf1a5b9fe4d09719ad2068c9">c_bg_w__lit_2242</a> = 0.5f</td></tr>
+<tr class="separator:a4a4555bcaf1a5b9fe4d09719ad2068c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519711090113ffef6d240bf5c6a537c6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__bg__w_8cpp.html#a519711090113ffef6d240bf5c6a537c6">lit_2249</a> = -4.0f / 5.0f</td></tr>
+<tr class="separator:a519711090113ffef6d240bf5c6a537c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5daced002bc564977ee093bcd132954c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5daced002bc564977ee093bcd132954c">&#9670;&nbsp;</a></span>cBgW_CheckBGround()</h2>
+<a id="a1f2f74bbc1108275c1d1f9933ca4f575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f2f74bbc1108275c1d1f9933ca4f575">&#9670;&nbsp;</a></span>cBgW_CheckBGround()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool cBgW_CheckBGround </td>
+          <td class="memname">void cBgW_CheckBGround </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a1</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -125,17 +151,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a104d1418b6ddd5e62616e51ff95a7fb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a104d1418b6ddd5e62616e51ff95a7fb6">&#9670;&nbsp;</a></span>cBgW_CheckBRoof()</h2>
+<a id="a127917db155e522b6a9d2ee2a3f7642b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127917db155e522b6a9d2ee2a3f7642b">&#9670;&nbsp;</a></span>cBgW_CheckBGround__Ff()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool cBgW_CheckBRoof </td>
+          <td class="memname">void cBgW_CheckBGround__Ff </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a1</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -143,17 +168,120 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aabffba8bee311b1789a3e56bfdbe7275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabffba8bee311b1789a3e56bfdbe7275">&#9670;&nbsp;</a></span>cBgW_CheckBWall()</h2>
+<a id="a503d22719b1b92c67c51aca7b2dea866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a503d22719b1b92c67c51aca7b2dea866">&#9670;&nbsp;</a></span>cBgW_CheckBRoof()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool cBgW_CheckBWall </td>
+          <td class="memname">void cBgW_CheckBRoof </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>a1</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3eeaf6c6fcaefc13512b4f3c6b0fef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3eeaf6c6fcaefc13512b4f3c6b0fef8">&#9670;&nbsp;</a></span>cBgW_CheckBRoof__Ff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cBgW_CheckBRoof__Ff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa65d178e1c0e42387674c85fcea07317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65d178e1c0e42387674c85fcea07317">&#9670;&nbsp;</a></span>cBgW_CheckBWall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cBgW_CheckBWall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef003a048e80cb99540a04b3fc095bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef003a048e80cb99540a04b3fc095bed">&#9670;&nbsp;</a></span>cBgW_CheckBWall__Ff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cBgW_CheckBWall__Ff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8833ea30ee46643221badba21ac640e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8833ea30ee46643221badba21ac640e0">&#9670;&nbsp;</a></span>ChkUsed__9cBgW_BgIdCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChkUsed__9cBgW_BgIdCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e0a0ddd8e1114a2a1cd849121691c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0a0ddd8e1114a2a1cd849121691c98">&#9670;&nbsp;</a></span>Regist__9cBgW_BgIdFi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Regist__9cBgW_BgIdFi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5392287bee24cc00274d588e8f11fc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5392287bee24cc00274d588e8f11fc39">&#9670;&nbsp;</a></span>Release__9cBgW_BgIdFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Release__9cBgW_BgIdFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -162,8 +290,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a2962464e6400653e88efc67bbf88e19d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2962464e6400653e88efc67bbf88e19d">&#9670;&nbsp;</a></span>lbl_804550E8</h2>
+<a id="a4a4555bcaf1a5b9fe4d09719ad2068c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4555bcaf1a5b9fe4d09719ad2068c9">&#9670;&nbsp;</a></span>c_bg_w__lit_2242</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,20 +300,20 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lbl_804550E8</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_bg_w__lit_2242 = 0.5f</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="addcf1adb972a652ca0a6aac7312b30f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addcf1adb972a652ca0a6aac7312b30f1">&#9670;&nbsp;</a></span>lbl_804550EC</h2>
+<a id="a519711090113ffef6d240bf5c6a537c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519711090113ffef6d240bf5c6a537c6">&#9670;&nbsp;</a></span>lit_2249</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,12 +322,12 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lbl_804550EC</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2249 = -4.0f / 5.0f</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -73,10 +73,1005 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">JASWSParser.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JASWSParser_8h_source.html">JSystem/JAudio2/JASWSParser.h</a>&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/getGroupCount__11JASWSParserFPCv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/createWaveBank__11JASWSParserFPCvP7JKRHeap.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/createBasicWaveBank__11JASWSParserFPCvP7JKRHeap.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_80299490.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_802994A8.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_802994C0.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_802994D8.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_802994F0.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_80299508.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JAudio2/JASWSParser/func_80299520.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JASWSParser.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JASWSParser_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASWSParser.html">JASWSParser</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASWaveInfo.html">JASWaveInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASBasicWaveBank.html">JASBasicWaveBank</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASBasicWaveBank_1_1TWaveGroup.html">JASBasicWaveBank::TWaveGroup</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASSimpleWaveBank.html">JASSimpleWaveBank</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASWaveArc.html">JASWaveArc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:add60aad640cf8764d77789f3bd320753"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#add60aad640cf8764d77789f3bd320753">JSUConvertOffsetToPtr__template0</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:add60aad640cf8764d77789f3bd320753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046af8e61af0f7c7ef45f7c39ae3d440"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a046af8e61af0f7c7ef45f7c39ae3d440">JSUConvertOffsetToPtr__template1</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a046af8e61af0f7c7ef45f7c39ae3d440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1c9dc1ace2c0a215e508cd5cfb09de"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a7e1c9dc1ace2c0a215e508cd5cfb09de">JSUConvertOffsetToPtr__template2</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a7e1c9dc1ace2c0a215e508cd5cfb09de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6ef68dc33bf366ee366f674f6eadf6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a3c6ef68dc33bf366ee366f674f6eadf6">JSUConvertOffsetToPtr__template3</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a3c6ef68dc33bf366ee366f674f6eadf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d7f273b95dd08653dd189ed10db89e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ab2d7f273b95dd08653dd189ed10db89e">JSUConvertOffsetToPtr__template4</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:ab2d7f273b95dd08653dd189ed10db89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c1f620676e7ee67f1ddbd40f0a46ea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a20c1f620676e7ee67f1ddbd40f0a46ea">JSUConvertOffsetToPtr__template5</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a20c1f620676e7ee67f1ddbd40f0a46ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fd4f51e270616fc1c87e3c58dc6872"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#af7fd4f51e270616fc1c87e3c58dc6872">JSUConvertOffsetToPtr__template6</a> (void const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:af7fd4f51e270616fc1c87e3c58dc6872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c0e849402841e9a01d29c029006df8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ad4c0e849402841e9a01d29c029006df8">getGroupCount__11JASWSParserFPCv</a> ()</td></tr>
+<tr class="separator:ad4c0e849402841e9a01d29c029006df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c26e7a6a5e65c9085a73b1f91b6a849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a2c26e7a6a5e65c9085a73b1f91b6a849">createWaveBank__11JASWSParserFPCvP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a2c26e7a6a5e65c9085a73b1f91b6a849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cdfd1ca05cca693cfa70b447a8e1db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a85cdfd1ca05cca693cfa70b447a8e1db">createBasicWaveBank__11JASWSParserFPCvP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a85cdfd1ca05cca693cfa70b447a8e1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46396f32328ff2a98af5b511af6b4539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a46396f32328ff2a98af5b511af6b4539">createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a46396f32328ff2a98af5b511af6b4539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e13d043d183402db47230327b8b9a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ad3e13d043d183402db47230327b8b9a7">func_80299490</a> ()</td></tr>
+<tr class="separator:ad3e13d043d183402db47230327b8b9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5faf01daf6b2f167abcf7270d75bfe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a2a5faf01daf6b2f167abcf7270d75bfe">func_802994A8</a> ()</td></tr>
+<tr class="separator:a2a5faf01daf6b2f167abcf7270d75bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774d717a748dae3882a98c8e7547094f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a774d717a748dae3882a98c8e7547094f">func_802994C0</a> ()</td></tr>
+<tr class="separator:a774d717a748dae3882a98c8e7547094f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b50e6333252ec6ae1ea2c4cfaf67e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a98b50e6333252ec6ae1ea2c4cfaf67e5">func_802994D8</a> ()</td></tr>
+<tr class="separator:a98b50e6333252ec6ae1ea2c4cfaf67e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a423ef6311a592f78fd5f2e0c69c57c8a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a423ef6311a592f78fd5f2e0c69c57c8a">func_802994F0</a> ()</td></tr>
+<tr class="separator:a423ef6311a592f78fd5f2e0c69c57c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23ed6dd3a55c022217f751b42c49345"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ae23ed6dd3a55c022217f751b42c49345">func_80299508</a> ()</td></tr>
+<tr class="separator:ae23ed6dd3a55c022217f751b42c49345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5efb4713e38bcb8bcb92d0baa1f7df1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ad5efb4713e38bcb8bcb92d0baa1f7df1">func_80299520</a> ()</td></tr>
+<tr class="separator:ad5efb4713e38bcb8bcb92d0baa1f7df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58200a5202aa4a094697387f8d509a77"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a58200a5202aa4a094697387f8d509a77">operator new</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="structJKRHeap.html">JKRHeap</a> *, int)</td></tr>
+<tr class="separator:a58200a5202aa4a094697387f8d509a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc702e9ad3ac17dbd388a1237f21216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a0dc702e9ad3ac17dbd388a1237f21216">__ct__16JASBasicWaveBankFv</a> ()</td></tr>
+<tr class="separator:a0dc702e9ad3ac17dbd388a1237f21216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e56075ca555239182b6436e98ec83f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a6e56075ca555239182b6436e98ec83f6">getWaveGroup__16JASBasicWaveBankFUl</a> ()</td></tr>
+<tr class="separator:a6e56075ca555239182b6436e98ec83f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae45a655d38aad479ad8b7de0f05b84a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ae45a655d38aad479ad8b7de0f05b84a4">setGroupCount__16JASBasicWaveBankFUlP7JKRHeap</a> ()</td></tr>
+<tr class="separator:ae45a655d38aad479ad8b7de0f05b84a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb06e9e05bef9d5d2d5412fa8411b939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#acb06e9e05bef9d5d2d5412fa8411b939">setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap</a> ()</td></tr>
+<tr class="separator:acb06e9e05bef9d5d2d5412fa8411b939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5755238ed02adcf3db16fe85d6c36a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#aca5755238ed02adcf3db16fe85d6c36a">setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo</a> ()</td></tr>
+<tr class="separator:aca5755238ed02adcf3db16fe85d6c36a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b37e6655911df4af37828f2e1be0a4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a8b37e6655911df4af37828f2e1be0a4a">setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a8b37e6655911df4af37828f2e1be0a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641d7db74f9cc6d5fa855c358d288c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a641d7db74f9cc6d5fa855c358d288c19">__ct__17JASSimpleWaveBankFv</a> ()</td></tr>
+<tr class="separator:a641d7db74f9cc6d5fa855c358d288c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a955879db88a4717e83337bd81327ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a6a955879db88a4717e83337bd81327ad">setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a6a955879db88a4717e83337bd81327ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26893398c388797924c5a22e4e9bc2ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a26893398c388797924c5a22e4e9bc2ff">setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo</a> ()</td></tr>
+<tr class="separator:a26893398c388797924c5a22e4e9bc2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343025d5cd3fecfba92c3d8c7c909454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a343025d5cd3fecfba92c3d8c7c909454">setFileName__10JASWaveArcFPCc</a> ()</td></tr>
+<tr class="separator:a343025d5cd3fecfba92c3d8c7c909454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf9460d8c0eec10ea0ec6f82bcc8d029"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#aaf9460d8c0eec10ea0ec6f82bcc8d029">getFreeSize__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:aaf9460d8c0eec10ea0ec6f82bcc8d029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa7378e3c64fb68c851b08de3a2a355"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#abfa7378e3c64fb68c851b08de3a2a355">__nw__FUlP7JKRHeapi</a> ()</td></tr>
+<tr class="separator:abfa7378e3c64fb68c851b08de3a2a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566d6f444acc8afb9516df2eb3ee3753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a566d6f444acc8afb9516df2eb3ee3753">_savegpr_20</a> ()</td></tr>
+<tr class="separator:a566d6f444acc8afb9516df2eb3ee3753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5749e2c74495633f05da725d7b4e38e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a5749e2c74495633f05da725d7b4e38e8">_savegpr_23</a> ()</td></tr>
+<tr class="separator:a5749e2c74495633f05da725d7b4e38e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aca8d40c5f7f620c2bf2ebd6c1497ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a2aca8d40c5f7f620c2bf2ebd6c1497ba">_restgpr_20</a> ()</td></tr>
+<tr class="separator:a2aca8d40c5f7f620c2bf2ebd6c1497ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778466826efe33e53ffca7d528cfcd23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a778466826efe33e53ffca7d528cfcd23">_restgpr_23</a> ()</td></tr>
+<tr class="separator:a778466826efe33e53ffca7d528cfcd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad39326200dd446e4969f40a736f3abb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ad39326200dd446e4969f40a736f3abb3">one__11JASWaveInfo</a> [1+1]</td></tr>
+<tr class="separator:ad39326200dd446e4969f40a736f3abb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a7a3822f0b02c17ed6f8a99b46e7618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#a4a7a3822f0b02c17ed6f8a99b46e7618">JASDram</a> [4]</td></tr>
+<tr class="separator:a4a7a3822f0b02c17ed6f8a99b46e7618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e98bc7193fe35e87eaf98403baa5e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JASWSParser_8cpp.html#ad3e98bc7193fe35e87eaf98403baa5e6">sUsedHeapSize__11JASWSParser</a> [4+4]</td></tr>
+<tr class="separator:ad3e98bc7193fe35e87eaf98403baa5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0dc702e9ad3ac17dbd388a1237f21216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc702e9ad3ac17dbd388a1237f21216">&#9670;&nbsp;</a></span>__ct__16JASBasicWaveBankFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__16JASBasicWaveBankFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a641d7db74f9cc6d5fa855c358d288c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641d7db74f9cc6d5fa855c358d288c19">&#9670;&nbsp;</a></span>__ct__17JASSimpleWaveBankFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__17JASSimpleWaveBankFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfa7378e3c64fb68c851b08de3a2a355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa7378e3c64fb68c851b08de3a2a355">&#9670;&nbsp;</a></span>__nw__FUlP7JKRHeapi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* __nw__FUlP7JKRHeapi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2aca8d40c5f7f620c2bf2ebd6c1497ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aca8d40c5f7f620c2bf2ebd6c1497ba">&#9670;&nbsp;</a></span>_restgpr_20()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_20 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a778466826efe33e53ffca7d528cfcd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778466826efe33e53ffca7d528cfcd23">&#9670;&nbsp;</a></span>_restgpr_23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a566d6f444acc8afb9516df2eb3ee3753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566d6f444acc8afb9516df2eb3ee3753">&#9670;&nbsp;</a></span>_savegpr_20()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_20 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5749e2c74495633f05da725d7b4e38e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5749e2c74495633f05da725d7b4e38e8">&#9670;&nbsp;</a></span>_savegpr_23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85cdfd1ca05cca693cfa70b447a8e1db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cdfd1ca05cca693cfa70b447a8e1db">&#9670;&nbsp;</a></span>createBasicWaveBank__11JASWSParserFPCvP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46396f32328ff2a98af5b511af6b4539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46396f32328ff2a98af5b511af6b4539">&#9670;&nbsp;</a></span>createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c26e7a6a5e65c9085a73b1f91b6a849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c26e7a6a5e65c9085a73b1f91b6a849">&#9670;&nbsp;</a></span>createWaveBank__11JASWSParserFPCvP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createWaveBank__11JASWSParserFPCvP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3e13d043d183402db47230327b8b9a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e13d043d183402db47230327b8b9a7">&#9670;&nbsp;</a></span>func_80299490()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_80299490 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a5faf01daf6b2f167abcf7270d75bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5faf01daf6b2f167abcf7270d75bfe">&#9670;&nbsp;</a></span>func_802994A8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_802994A8 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a774d717a748dae3882a98c8e7547094f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774d717a748dae3882a98c8e7547094f">&#9670;&nbsp;</a></span>func_802994C0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_802994C0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98b50e6333252ec6ae1ea2c4cfaf67e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b50e6333252ec6ae1ea2c4cfaf67e5">&#9670;&nbsp;</a></span>func_802994D8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_802994D8 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a423ef6311a592f78fd5f2e0c69c57c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423ef6311a592f78fd5f2e0c69c57c8a">&#9670;&nbsp;</a></span>func_802994F0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_802994F0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae23ed6dd3a55c022217f751b42c49345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23ed6dd3a55c022217f751b42c49345">&#9670;&nbsp;</a></span>func_80299508()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_80299508 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5efb4713e38bcb8bcb92d0baa1f7df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5efb4713e38bcb8bcb92d0baa1f7df1">&#9670;&nbsp;</a></span>func_80299520()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void func_80299520 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf9460d8c0eec10ea0ec6f82bcc8d029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9460d8c0eec10ea0ec6f82bcc8d029">&#9670;&nbsp;</a></span>getFreeSize__7JKRHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getFreeSize__7JKRHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4c0e849402841e9a01d29c029006df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c0e849402841e9a01d29c029006df8">&#9670;&nbsp;</a></span>getGroupCount__11JASWSParserFPCv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getGroupCount__11JASWSParserFPCv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e56075ca555239182b6436e98ec83f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e56075ca555239182b6436e98ec83f6">&#9670;&nbsp;</a></span>getWaveGroup__16JASBasicWaveBankFUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getWaveGroup__16JASBasicWaveBankFUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add60aad640cf8764d77789f3bd320753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add60aad640cf8764d77789f3bd320753">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template0 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a046af8e61af0f7c7ef45f7c39ae3d440"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046af8e61af0f7c7ef45f7c39ae3d440">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template1 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e1c9dc1ace2c0a215e508cd5cfb09de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e1c9dc1ace2c0a215e508cd5cfb09de">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template2 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c6ef68dc33bf366ee366f674f6eadf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6ef68dc33bf366ee366f674f6eadf6">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template3 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2d7f273b95dd08653dd189ed10db89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d7f273b95dd08653dd189ed10db89e">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template4 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c1f620676e7ee67f1ddbd40f0a46ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c1f620676e7ee67f1ddbd40f0a46ea">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template5 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7fd4f51e270616fc1c87e3c58dc6872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fd4f51e270616fc1c87e3c58dc6872">&#9670;&nbsp;</a></span>JSUConvertOffsetToPtr__template6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JSUConvertOffsetToPtr__template6 </td>
+          <td>(</td>
+          <td class="paramtype">void const *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58200a5202aa4a094697387f8d509a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58200a5202aa4a094697387f8d509a77">&#9670;&nbsp;</a></span>operator new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* operator new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a343025d5cd3fecfba92c3d8c7c909454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343025d5cd3fecfba92c3d8c7c909454">&#9670;&nbsp;</a></span>setFileName__10JASWaveArcFPCc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setFileName__10JASWaveArcFPCc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae45a655d38aad479ad8b7de0f05b84a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae45a655d38aad479ad8b7de0f05b84a4">&#9670;&nbsp;</a></span>setGroupCount__16JASBasicWaveBankFUlP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b37e6655911df4af37828f2e1be0a4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b37e6655911df4af37828f2e1be0a4a">&#9670;&nbsp;</a></span>setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca5755238ed02adcf3db16fe85d6c36a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5755238ed02adcf3db16fe85d6c36a">&#9670;&nbsp;</a></span>setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26893398c388797924c5a22e4e9bc2ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26893398c388797924c5a22e4e9bc2ff">&#9670;&nbsp;</a></span>setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb06e9e05bef9d5d2d5412fa8411b939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb06e9e05bef9d5d2d5412fa8411b939">&#9670;&nbsp;</a></span>setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a955879db88a4717e83337bd81327ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a955879db88a4717e83337bd81327ad">&#9670;&nbsp;</a></span>setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4a7a3822f0b02c17ed6f8a99b46e7618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a7a3822f0b02c17ed6f8a99b46e7618">&#9670;&nbsp;</a></span>JASDram</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JASDram[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad39326200dd446e4969f40a736f3abb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39326200dd446e4969f40a736f3abb3">&#9670;&nbsp;</a></span>one__11JASWaveInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> one__11JASWaveInfo[1+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3e98bc7193fe35e87eaf98403baa5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e98bc7193fe35e87eaf98403baa5e6">&#9670;&nbsp;</a></span>sUsedHeapSize__11JASWSParser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sUsedHeapSize__11JASWSParser[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

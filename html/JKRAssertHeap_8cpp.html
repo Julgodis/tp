@@ -73,21 +73,732 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">JKRAssertHeap.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="JKRAssertHeap_8h_source.html">JSystem/JKernel/JKRAssertHeap/JKRAssertHeap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRAssertHeap_8h_source.html">JSystem/JKernel/JKRAssertHeap.h</a>&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/__ct__13JKRAssertHeapFPvUlP7JKRHeapb.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/__dt__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/create__13JKRAssertHeapFP7JKRHeap.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_destroy__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/getHeapType__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/check__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/dump__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/dump_sort__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_changeGroupID__13JKRAssertHeapFUc.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_getCurrentGroupId__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_alloc__13JKRAssertHeapFUli.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_free__13JKRAssertHeapFPv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_freeAll__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_freeTail__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_fillFreeArea__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_resize__13JKRAssertHeapFPvUl.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_getSize__13JKRAssertHeapFPv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_getFreeSize__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_getMaxFreeBlock__13JKRAssertHeapFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAssertHeap/do_getTotalFreeSize__13JKRAssertHeapFv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JKRAssertHeap.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JKRAssertHeap_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JKRAssertHeap_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap_1_1TState.html">JKRHeap::TState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAssertHeap.html">JKRAssertHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1c4b0f834790bc7bd77d95d5e810a666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a1c4b0f834790bc7bd77d95d5e810a666">__ct__13JKRAssertHeapFPvUlP7JKRHeapb</a> ()</td></tr>
+<tr class="separator:a1c4b0f834790bc7bd77d95d5e810a666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17b560a2c8dfc0d87a22d571d0af437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#aa17b560a2c8dfc0d87a22d571d0af437">__dt__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:aa17b560a2c8dfc0d87a22d571d0af437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cfde25abc8a54d4f41801fcf111577"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ac0cfde25abc8a54d4f41801fcf111577">create__13JKRAssertHeapFP7JKRHeap</a> ()</td></tr>
+<tr class="separator:ac0cfde25abc8a54d4f41801fcf111577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf5c7647993e281eb421028889fb4208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#abf5c7647993e281eb421028889fb4208">do_destroy__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:abf5c7647993e281eb421028889fb4208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad73ade2a8b988de111d007e029345766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ad73ade2a8b988de111d007e029345766">getHeapType__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:ad73ade2a8b988de111d007e029345766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a7026286e0930de74dee09bbe6742e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a72a7026286e0930de74dee09bbe6742e">check__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a72a7026286e0930de74dee09bbe6742e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6fd2f0945903bde94cfb595515a8fb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ae6fd2f0945903bde94cfb595515a8fb8">dump__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:ae6fd2f0945903bde94cfb595515a8fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac263cc156ba8851c23023ad3b67d3134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ac263cc156ba8851c23023ad3b67d3134">dump_sort__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:ac263cc156ba8851c23023ad3b67d3134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89514ae23350c22ff7716716a01f5919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a89514ae23350c22ff7716716a01f5919">do_changeGroupID__13JKRAssertHeapFUc</a> ()</td></tr>
+<tr class="separator:a89514ae23350c22ff7716716a01f5919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c40c2a6611962ea0191316008a5329"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a78c40c2a6611962ea0191316008a5329">do_getCurrentGroupId__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a78c40c2a6611962ea0191316008a5329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d311b651d1efb4257135d61a14e7847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a7d311b651d1efb4257135d61a14e7847">do_alloc__13JKRAssertHeapFUli</a> ()</td></tr>
+<tr class="separator:a7d311b651d1efb4257135d61a14e7847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7847e92f6d930e8d20a496e79739914e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a7847e92f6d930e8d20a496e79739914e">do_free__13JKRAssertHeapFPv</a> ()</td></tr>
+<tr class="separator:a7847e92f6d930e8d20a496e79739914e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730b184097fc400709d63eb4e33e0021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a730b184097fc400709d63eb4e33e0021">do_freeAll__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a730b184097fc400709d63eb4e33e0021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533a337a3cf1156178a5a88b249bf321"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a533a337a3cf1156178a5a88b249bf321">do_freeTail__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a533a337a3cf1156178a5a88b249bf321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d944bad8a00b2b0619263a870547be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a42d944bad8a00b2b0619263a870547be">do_fillFreeArea__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a42d944bad8a00b2b0619263a870547be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9135082d6a70e2334692009cc6d671fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a9135082d6a70e2334692009cc6d671fc">do_resize__13JKRAssertHeapFPvUl</a> ()</td></tr>
+<tr class="separator:a9135082d6a70e2334692009cc6d671fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98611813e2922a26cfd9b9b43a1f46d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ad98611813e2922a26cfd9b9b43a1f46d">do_getSize__13JKRAssertHeapFPv</a> ()</td></tr>
+<tr class="separator:ad98611813e2922a26cfd9b9b43a1f46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acbb3644dc46696b53bfb2c86ada9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a5acbb3644dc46696b53bfb2c86ada9c0">do_getFreeSize__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a5acbb3644dc46696b53bfb2c86ada9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a3c436dbd1170cbe73554d27e0c7e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a85a3c436dbd1170cbe73554d27e0c7e7">do_getMaxFreeBlock__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a85a3c436dbd1170cbe73554d27e0c7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac131e1a291730c44b792b28e3afa57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a8ac131e1a291730c44b792b28e3afa57">do_getTotalFreeSize__13JKRAssertHeapFv</a> ()</td></tr>
+<tr class="separator:a8ac131e1a291730c44b792b28e3afa57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581ac9487348557df9e0f9bd828952af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a581ac9487348557df9e0f9bd828952af">operator delete</a> (void *)</td></tr>
+<tr class="separator:a581ac9487348557df9e0f9bd828952af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758c4368325ed4e05f98c70df33bb198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a758c4368325ed4e05f98c70df33bb198">__ct__7JKRHeapFPvUlP7JKRHeapb</a> ()</td></tr>
+<tr class="separator:a758c4368325ed4e05f98c70df33bb198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208e12666bceff4f78f4eb9b3578eae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a208e12666bceff4f78f4eb9b3578eae0">__dt__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:a208e12666bceff4f78f4eb9b3578eae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50822d5e9b3169cfa601e786f9cb374e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a50822d5e9b3169cfa601e786f9cb374e">alloc__7JKRHeapFUliP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a50822d5e9b3169cfa601e786f9cb374e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d7ae11d36c630ffeb70e98b41a2e73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a52d7ae11d36c630ffeb70e98b41a2e73">callAllDisposer__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:a52d7ae11d36c630ffeb70e98b41a2e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8134900282f41c6a6f04d85fbd4c42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#adb8134900282f41c6a6f04d85fbd4c42">dispose__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:adb8134900282f41c6a6f04d85fbd4c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
+<tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b7ed879bb4f7a8fc82bed86e00737d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a48b7ed879bb4f7a8fc82bed86e00737d">state_register__7JKRHeapCFPQ27JKRHeap6TStateUl</a> ()</td></tr>
+<tr class="separator:a48b7ed879bb4f7a8fc82bed86e00737d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbb251f4ab06933978e62e2ba40abfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#acdbb251f4ab06933978e62e2ba40abfa">state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState</a> ()</td></tr>
+<tr class="separator:acdbb251f4ab06933978e62e2ba40abfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6bb4ab2ad7902af2c9a74736c3a9883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#ae6bb4ab2ad7902af2c9a74736c3a9883">state_dump__7JKRHeapCFRCQ27JKRHeap6TState</a> ()</td></tr>
+<tr class="separator:ae6bb4ab2ad7902af2c9a74736c3a9883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a24754799fc31eb21c77b7f0301886e01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a24754799fc31eb21c77b7f0301886e01">sRootHeap__7JKRHeap</a> [4]</td></tr>
+<tr class="separator:a24754799fc31eb21c77b7f0301886e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1baab7ec1354c7fac24aeeffeba4a5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAssertHeap_8cpp.html#a8e1baab7ec1354c7fac24aeeffeba4a5">__vt__13JKRAssertHeap</a> [24]</td></tr>
+<tr class="separator:a8e1baab7ec1354c7fac24aeeffeba4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a1c4b0f834790bc7bd77d95d5e810a666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4b0f834790bc7bd77d95d5e810a666">&#9670;&nbsp;</a></span>__ct__13JKRAssertHeapFPvUlP7JKRHeapb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__13JKRAssertHeapFPvUlP7JKRHeapb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a758c4368325ed4e05f98c70df33bb198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758c4368325ed4e05f98c70df33bb198">&#9670;&nbsp;</a></span>__ct__7JKRHeapFPvUlP7JKRHeapb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7JKRHeapFPvUlP7JKRHeapb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498e6440d5c316e2672169ee4ed92309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e6440d5c316e2672169ee4ed92309">&#9670;&nbsp;</a></span>__dl__FPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dl__FPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa17b560a2c8dfc0d87a22d571d0af437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17b560a2c8dfc0d87a22d571d0af437">&#9670;&nbsp;</a></span>__dt__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208e12666bceff4f78f4eb9b3578eae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208e12666bceff4f78f4eb9b3578eae0">&#9670;&nbsp;</a></span>__dt__7JKRHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__7JKRHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50822d5e9b3169cfa601e786f9cb374e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50822d5e9b3169cfa601e786f9cb374e">&#9670;&nbsp;</a></span>alloc__7JKRHeapFUliP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void alloc__7JKRHeapFUliP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52d7ae11d36c630ffeb70e98b41a2e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d7ae11d36c630ffeb70e98b41a2e73">&#9670;&nbsp;</a></span>callAllDisposer__7JKRHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void callAllDisposer__7JKRHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72a7026286e0930de74dee09bbe6742e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a7026286e0930de74dee09bbe6742e">&#9670;&nbsp;</a></span>check__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0cfde25abc8a54d4f41801fcf111577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cfde25abc8a54d4f41801fcf111577">&#9670;&nbsp;</a></span>create__13JKRAssertHeapFP7JKRHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create__13JKRAssertHeapFP7JKRHeap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb8134900282f41c6a6f04d85fbd4c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8134900282f41c6a6f04d85fbd4c42">&#9670;&nbsp;</a></span>dispose__7JKRHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dispose__7JKRHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d311b651d1efb4257135d61a14e7847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d311b651d1efb4257135d61a14e7847">&#9670;&nbsp;</a></span>do_alloc__13JKRAssertHeapFUli()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_alloc__13JKRAssertHeapFUli </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89514ae23350c22ff7716716a01f5919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89514ae23350c22ff7716716a01f5919">&#9670;&nbsp;</a></span>do_changeGroupID__13JKRAssertHeapFUc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_changeGroupID__13JKRAssertHeapFUc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf5c7647993e281eb421028889fb4208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf5c7647993e281eb421028889fb4208">&#9670;&nbsp;</a></span>do_destroy__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_destroy__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42d944bad8a00b2b0619263a870547be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d944bad8a00b2b0619263a870547be">&#9670;&nbsp;</a></span>do_fillFreeArea__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_fillFreeArea__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7847e92f6d930e8d20a496e79739914e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7847e92f6d930e8d20a496e79739914e">&#9670;&nbsp;</a></span>do_free__13JKRAssertHeapFPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_free__13JKRAssertHeapFPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a730b184097fc400709d63eb4e33e0021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730b184097fc400709d63eb4e33e0021">&#9670;&nbsp;</a></span>do_freeAll__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_freeAll__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a533a337a3cf1156178a5a88b249bf321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533a337a3cf1156178a5a88b249bf321">&#9670;&nbsp;</a></span>do_freeTail__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_freeTail__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78c40c2a6611962ea0191316008a5329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78c40c2a6611962ea0191316008a5329">&#9670;&nbsp;</a></span>do_getCurrentGroupId__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_getCurrentGroupId__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5acbb3644dc46696b53bfb2c86ada9c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acbb3644dc46696b53bfb2c86ada9c0">&#9670;&nbsp;</a></span>do_getFreeSize__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_getFreeSize__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85a3c436dbd1170cbe73554d27e0c7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a3c436dbd1170cbe73554d27e0c7e7">&#9670;&nbsp;</a></span>do_getMaxFreeBlock__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_getMaxFreeBlock__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad98611813e2922a26cfd9b9b43a1f46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98611813e2922a26cfd9b9b43a1f46d">&#9670;&nbsp;</a></span>do_getSize__13JKRAssertHeapFPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_getSize__13JKRAssertHeapFPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ac131e1a291730c44b792b28e3afa57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac131e1a291730c44b792b28e3afa57">&#9670;&nbsp;</a></span>do_getTotalFreeSize__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_getTotalFreeSize__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9135082d6a70e2334692009cc6d671fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9135082d6a70e2334692009cc6d671fc">&#9670;&nbsp;</a></span>do_resize__13JKRAssertHeapFPvUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void do_resize__13JKRAssertHeapFPvUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6fd2f0945903bde94cfb595515a8fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fd2f0945903bde94cfb595515a8fb8">&#9670;&nbsp;</a></span>dump__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dump__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac263cc156ba8851c23023ad3b67d3134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac263cc156ba8851c23023ad3b67d3134">&#9670;&nbsp;</a></span>dump_sort__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dump_sort__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad73ade2a8b988de111d007e029345766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad73ade2a8b988de111d007e029345766">&#9670;&nbsp;</a></span>getHeapType__13JKRAssertHeapFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getHeapType__13JKRAssertHeapFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a581ac9487348557df9e0f9bd828952af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581ac9487348557df9e0f9bd828952af">&#9670;&nbsp;</a></span>operator delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void operator delete </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbb251f4ab06933978e62e2ba40abfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbb251f4ab06933978e62e2ba40abfa">&#9670;&nbsp;</a></span>state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6bb4ab2ad7902af2c9a74736c3a9883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6bb4ab2ad7902af2c9a74736c3a9883">&#9670;&nbsp;</a></span>state_dump__7JKRHeapCFRCQ27JKRHeap6TState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void state_dump__7JKRHeapCFRCQ27JKRHeap6TState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48b7ed879bb4f7a8fc82bed86e00737d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b7ed879bb4f7a8fc82bed86e00737d">&#9670;&nbsp;</a></span>state_register__7JKRHeapCFPQ27JKRHeap6TStateUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a8e1baab7ec1354c7fac24aeeffeba4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1baab7ec1354c7fac24aeeffeba4a5">&#9670;&nbsp;</a></span>__vt__13JKRAssertHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__13JKRAssertHeap[24]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#aa17b560a2c8dfc0d87a22d571d0af437">__dt__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a52d7ae11d36c630ffeb70e98b41a2e73">callAllDisposer__7JKRHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#ad73ade2a8b988de111d007e029345766">getHeapType__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a72a7026286e0930de74dee09bbe6742e">check__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#ac263cc156ba8851c23023ad3b67d3134">dump_sort__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#ae6fd2f0945903bde94cfb595515a8fb8">dump__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#abf5c7647993e281eb421028889fb4208">do_destroy__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a7d311b651d1efb4257135d61a14e7847">do_alloc__13JKRAssertHeapFUli</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a7847e92f6d930e8d20a496e79739914e">do_free__13JKRAssertHeapFPv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a730b184097fc400709d63eb4e33e0021">do_freeAll__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a533a337a3cf1156178a5a88b249bf321">do_freeTail__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a42d944bad8a00b2b0619263a870547be">do_fillFreeArea__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a9135082d6a70e2334692009cc6d671fc">do_resize__13JKRAssertHeapFPvUl</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#ad98611813e2922a26cfd9b9b43a1f46d">do_getSize__13JKRAssertHeapFPv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a5acbb3644dc46696b53bfb2c86ada9c0">do_getFreeSize__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a85a3c436dbd1170cbe73554d27e0c7e7">do_getMaxFreeBlock__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a8ac131e1a291730c44b792b28e3afa57">do_getTotalFreeSize__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a89514ae23350c22ff7716716a01f5919">do_changeGroupID__13JKRAssertHeapFUc</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a78c40c2a6611962ea0191316008a5329">do_getCurrentGroupId__13JKRAssertHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#a48b7ed879bb4f7a8fc82bed86e00737d">state_register__7JKRHeapCFPQ27JKRHeap6TStateUl</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#acdbb251f4ab06933978e62e2ba40abfa">state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAssertHeap_8cpp.html#ae6bb4ab2ad7902af2c9a74736c3a9883">state_dump__7JKRHeapCFRCQ27JKRHeap6TState</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a42d944bad8a00b2b0619263a870547be"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a42d944bad8a00b2b0619263a870547be">do_fillFreeArea__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_fillFreeArea__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a48b7ed879bb4f7a8fc82bed86e00737d"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a48b7ed879bb4f7a8fc82bed86e00737d">state_register__7JKRHeapCFPQ27JKRHeap6TStateUl</a></div><div class="ttdeci">void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a52d7ae11d36c630ffeb70e98b41a2e73"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a52d7ae11d36c630ffeb70e98b41a2e73">callAllDisposer__7JKRHeapFv</a></div><div class="ttdeci">void callAllDisposer__7JKRHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a533a337a3cf1156178a5a88b249bf321"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a533a337a3cf1156178a5a88b249bf321">do_freeTail__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_freeTail__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a5acbb3644dc46696b53bfb2c86ada9c0"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a5acbb3644dc46696b53bfb2c86ada9c0">do_getFreeSize__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_getFreeSize__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a72a7026286e0930de74dee09bbe6742e"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a72a7026286e0930de74dee09bbe6742e">check__13JKRAssertHeapFv</a></div><div class="ttdeci">void check__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a730b184097fc400709d63eb4e33e0021"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a730b184097fc400709d63eb4e33e0021">do_freeAll__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_freeAll__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a7847e92f6d930e8d20a496e79739914e"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a7847e92f6d930e8d20a496e79739914e">do_free__13JKRAssertHeapFPv</a></div><div class="ttdeci">void do_free__13JKRAssertHeapFPv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a78c40c2a6611962ea0191316008a5329"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a78c40c2a6611962ea0191316008a5329">do_getCurrentGroupId__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_getCurrentGroupId__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a7d311b651d1efb4257135d61a14e7847"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a7d311b651d1efb4257135d61a14e7847">do_alloc__13JKRAssertHeapFUli</a></div><div class="ttdeci">void do_alloc__13JKRAssertHeapFUli()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a85a3c436dbd1170cbe73554d27e0c7e7"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a85a3c436dbd1170cbe73554d27e0c7e7">do_getMaxFreeBlock__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_getMaxFreeBlock__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a89514ae23350c22ff7716716a01f5919"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a89514ae23350c22ff7716716a01f5919">do_changeGroupID__13JKRAssertHeapFUc</a></div><div class="ttdeci">void do_changeGroupID__13JKRAssertHeapFUc()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a8ac131e1a291730c44b792b28e3afa57"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a8ac131e1a291730c44b792b28e3afa57">do_getTotalFreeSize__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_getTotalFreeSize__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_a9135082d6a70e2334692009cc6d671fc"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#a9135082d6a70e2334692009cc6d671fc">do_resize__13JKRAssertHeapFPvUl</a></div><div class="ttdeci">void do_resize__13JKRAssertHeapFPvUl()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_aa17b560a2c8dfc0d87a22d571d0af437"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#aa17b560a2c8dfc0d87a22d571d0af437">__dt__13JKRAssertHeapFv</a></div><div class="ttdeci">void __dt__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_abf5c7647993e281eb421028889fb4208"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#abf5c7647993e281eb421028889fb4208">do_destroy__13JKRAssertHeapFv</a></div><div class="ttdeci">void do_destroy__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_ac263cc156ba8851c23023ad3b67d3134"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#ac263cc156ba8851c23023ad3b67d3134">dump_sort__13JKRAssertHeapFv</a></div><div class="ttdeci">void dump_sort__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_acdbb251f4ab06933978e62e2ba40abfa"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#acdbb251f4ab06933978e62e2ba40abfa">state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState</a></div><div class="ttdeci">void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_ad73ade2a8b988de111d007e029345766"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#ad73ade2a8b988de111d007e029345766">getHeapType__13JKRAssertHeapFv</a></div><div class="ttdeci">void getHeapType__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_ad98611813e2922a26cfd9b9b43a1f46d"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#ad98611813e2922a26cfd9b9b43a1f46d">do_getSize__13JKRAssertHeapFPv</a></div><div class="ttdeci">void do_getSize__13JKRAssertHeapFPv()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_ae6bb4ab2ad7902af2c9a74736c3a9883"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#ae6bb4ab2ad7902af2c9a74736c3a9883">state_dump__7JKRHeapCFRCQ27JKRHeap6TState</a></div><div class="ttdeci">void state_dump__7JKRHeapCFRCQ27JKRHeap6TState()</div></div>
+<div class="ttc" id="aJKRAssertHeap_8cpp_html_ae6fd2f0945903bde94cfb595515a8fb8"><div class="ttname"><a href="JKRAssertHeap_8cpp.html#ae6fd2f0945903bde94cfb595515a8fb8">dump__13JKRAssertHeapFv</a></div><div class="ttdeci">void dump__13JKRAssertHeapFv()</div></div>
+<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a24754799fc31eb21c77b7f0301886e01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24754799fc31eb21c77b7f0301886e01">&#9670;&nbsp;</a></span>sRootHeap__7JKRHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sRootHeap__7JKRHeap[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1

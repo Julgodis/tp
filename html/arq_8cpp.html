@@ -73,10 +73,556 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">arq.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arq_8h_source.html">dolphin/ar/arq.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/ar/arq/__ARQServiceQueueLo.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/ar/arq/__ARQCallbackHack.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/ar/arq/__ARQInterruptServiceRoutine.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/ar/arq/ARQInit.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/ar/arq/ARQPostRequest.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for arq.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="arq_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a23e7c015708f80da739a7e862a56e6eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a23e7c015708f80da739a7e862a56e6eb">__ARQServiceQueueLo</a> ()</td></tr>
+<tr class="separator:a23e7c015708f80da739a7e862a56e6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add561dceeb41f001cc1404fad723bef7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#add561dceeb41f001cc1404fad723bef7">__ARQCallbackHack</a> ()</td></tr>
+<tr class="separator:add561dceeb41f001cc1404fad723bef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a7db9a19af8fe61bf602ab6c7fc8d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#ab2a7db9a19af8fe61bf602ab6c7fc8d4">__ARQInterruptServiceRoutine</a> ()</td></tr>
+<tr class="separator:ab2a7db9a19af8fe61bf602ab6c7fc8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c343840fd83acd8140aade4afa4b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a20c343840fd83acd8140aade4afa4b55">ARQInit</a> ()</td></tr>
+<tr class="separator:a20c343840fd83acd8140aade4afa4b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5768eaf083f9aaa42a0b6ac00146ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#aeb5768eaf083f9aaa42a0b6ac00146ec">ARQPostRequest</a> ()</td></tr>
+<tr class="separator:aeb5768eaf083f9aaa42a0b6ac00146ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d1c86f609bd2033df6f4d22094f42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a688d1c86f609bd2033df6f4d22094f42">OSRegisterVersion</a> ()</td></tr>
+<tr class="separator:a688d1c86f609bd2033df6f4d22094f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a65b7dd4c9756f26d16dcf8f0dedb07bf">OSDisableInterrupts</a> ()</td></tr>
+<tr class="separator:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a14b5cc2befa83d8710fba14f4de14fd9">OSRestoreInterrupts</a> ()</td></tr>
+<tr class="separator:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac933d56b9aa1fc37548f815c4137a68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#aac933d56b9aa1fc37548f815c4137a68">ARRegisterDMACallback</a> ()</td></tr>
+<tr class="separator:aac933d56b9aa1fc37548f815c4137a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6f5c84a4f43eb6265df1eaaa244dd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a7c6f5c84a4f43eb6265df1eaaa244dd8">ARStartDMA</a> ()</td></tr>
+<tr class="separator:a7c6f5c84a4f43eb6265df1eaaa244dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a896f347f9179c66fa132de59e2de8291"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a896f347f9179c66fa132de59e2de8291">__ARQRequestQueueHi</a> [4]</td></tr>
+<tr class="separator:a896f347f9179c66fa132de59e2de8291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfbe8f726240eeb8b5d85bd5a574b8eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#abfbe8f726240eeb8b5d85bd5a574b8eb">__ARQRequestTailHi</a> [4]</td></tr>
+<tr class="separator:abfbe8f726240eeb8b5d85bd5a574b8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469ec490539319a4fea989a3ec5e0ec4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a469ec490539319a4fea989a3ec5e0ec4">__ARQRequestQueueLo</a> [4]</td></tr>
+<tr class="separator:a469ec490539319a4fea989a3ec5e0ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0085b8ab117b4034619c9f23961b57"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a6a0085b8ab117b4034619c9f23961b57">__ARQRequestTailLo</a> [4]</td></tr>
+<tr class="separator:a6a0085b8ab117b4034619c9f23961b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1535cfe6b315b9559ff9ef10f1f64c66"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a1535cfe6b315b9559ff9ef10f1f64c66">__ARQRequestPendingHi</a> [4]</td></tr>
+<tr class="separator:a1535cfe6b315b9559ff9ef10f1f64c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e37e51159d495e58c1a1a3463543d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a73e37e51159d495e58c1a1a3463543d1">__ARQRequestPendingLo</a> [4]</td></tr>
+<tr class="separator:a73e37e51159d495e58c1a1a3463543d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942da21e2bb63160472186837f4c0800"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a942da21e2bb63160472186837f4c0800">__ARQCallbackHi</a> [4]</td></tr>
+<tr class="separator:a942da21e2bb63160472186837f4c0800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e64ff641bd695f6c54de5291c0561a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a54e64ff641bd695f6c54de5291c0561a">__ARQCallbackLo</a> [4]</td></tr>
+<tr class="separator:a54e64ff641bd695f6c54de5291c0561a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff853ba54ea6eb5291796558ed9ee3c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#aff853ba54ea6eb5291796558ed9ee3c9">__ARQChunkSize</a> [4]</td></tr>
+<tr class="separator:aff853ba54ea6eb5291796558ed9ee3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e99901e9e6c2f2951f038e3650b871e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a1e99901e9e6c2f2951f038e3650b871e">arq__lit_1</a> [69+3]</td></tr>
+<tr class="separator:a1e99901e9e6c2f2951f038e3650b871e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b0d5eb952c4ff3d8a967f1d6a28e6f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a09b0d5eb952c4ff3d8a967f1d6a28e6f">__ARQVersion</a> [1+1]</td></tr>
+<tr class="separator:a09b0d5eb952c4ff3d8a967f1d6a28e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f0c99d95652f45787ee4064fbc8e28"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arq_8cpp.html#a23f0c99d95652f45787ee4064fbc8e28">__ARQ_init_flag</a> [4]</td></tr>
+<tr class="separator:a23f0c99d95652f45787ee4064fbc8e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="add561dceeb41f001cc1404fad723bef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add561dceeb41f001cc1404fad723bef7">&#9670;&nbsp;</a></span>__ARQCallbackHack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __ARQCallbackHack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2a7db9a19af8fe61bf602ab6c7fc8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a7db9a19af8fe61bf602ab6c7fc8d4">&#9670;&nbsp;</a></span>__ARQInterruptServiceRoutine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __ARQInterruptServiceRoutine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23e7c015708f80da739a7e862a56e6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e7c015708f80da739a7e862a56e6eb">&#9670;&nbsp;</a></span>__ARQServiceQueueLo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __ARQServiceQueueLo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c343840fd83acd8140aade4afa4b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c343840fd83acd8140aade4afa4b55">&#9670;&nbsp;</a></span>ARQInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ARQInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb5768eaf083f9aaa42a0b6ac00146ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5768eaf083f9aaa42a0b6ac00146ec">&#9670;&nbsp;</a></span>ARQPostRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ARQPostRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac933d56b9aa1fc37548f815c4137a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac933d56b9aa1fc37548f815c4137a68">&#9670;&nbsp;</a></span>ARRegisterDMACallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARRegisterDMACallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c6f5c84a4f43eb6265df1eaaa244dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6f5c84a4f43eb6265df1eaaa244dd8">&#9670;&nbsp;</a></span>ARStartDMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARStartDMA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65b7dd4c9756f26d16dcf8f0dedb07bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b7dd4c9756f26d16dcf8f0dedb07bf">&#9670;&nbsp;</a></span>OSDisableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDisableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a688d1c86f609bd2033df6f4d22094f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d1c86f609bd2033df6f4d22094f42">&#9670;&nbsp;</a></span>OSRegisterVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSRegisterVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b5cc2befa83d8710fba14f4de14fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b5cc2befa83d8710fba14f4de14fd9">&#9670;&nbsp;</a></span>OSRestoreInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSRestoreInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a23f0c99d95652f45787ee4064fbc8e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f0c99d95652f45787ee4064fbc8e28">&#9670;&nbsp;</a></span>__ARQ_init_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQ_init_flag[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a942da21e2bb63160472186837f4c0800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942da21e2bb63160472186837f4c0800">&#9670;&nbsp;</a></span>__ARQCallbackHi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQCallbackHi[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54e64ff641bd695f6c54de5291c0561a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e64ff641bd695f6c54de5291c0561a">&#9670;&nbsp;</a></span>__ARQCallbackLo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQCallbackLo[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff853ba54ea6eb5291796558ed9ee3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff853ba54ea6eb5291796558ed9ee3c9">&#9670;&nbsp;</a></span>__ARQChunkSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQChunkSize[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1535cfe6b315b9559ff9ef10f1f64c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1535cfe6b315b9559ff9ef10f1f64c66">&#9670;&nbsp;</a></span>__ARQRequestPendingHi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestPendingHi[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73e37e51159d495e58c1a1a3463543d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e37e51159d495e58c1a1a3463543d1">&#9670;&nbsp;</a></span>__ARQRequestPendingLo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestPendingLo[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a896f347f9179c66fa132de59e2de8291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896f347f9179c66fa132de59e2de8291">&#9670;&nbsp;</a></span>__ARQRequestQueueHi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestQueueHi[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a469ec490539319a4fea989a3ec5e0ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469ec490539319a4fea989a3ec5e0ec4">&#9670;&nbsp;</a></span>__ARQRequestQueueLo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestQueueLo[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfbe8f726240eeb8b5d85bd5a574b8eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbe8f726240eeb8b5d85bd5a574b8eb">&#9670;&nbsp;</a></span>__ARQRequestTailHi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestTailHi[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a0085b8ab117b4034619c9f23961b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0085b8ab117b4034619c9f23961b57">&#9670;&nbsp;</a></span>__ARQRequestTailLo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __ARQRequestTailLo[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09b0d5eb952c4ff3d8a967f1d6a28e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b0d5eb952c4ff3d8a967f1d6a28e6f">&#9670;&nbsp;</a></span>__ARQVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* __ARQVersion[1+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="arq_8cpp.html#a1e99901e9e6c2f2951f038e3650b871e">arq__lit_1</a>,</div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aarq_8cpp_html_a1e99901e9e6c2f2951f038e3650b871e"><div class="ttname"><a href="arq_8cpp.html#a1e99901e9e6c2f2951f038e3650b871e">arq__lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 arq__lit_1[69+3]</div><div class="ttdef"><b>Definition:</b> arq.cpp:99</div></div>
+<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1e99901e9e6c2f2951f038e3650b871e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e99901e9e6c2f2951f038e3650b871e">&#9670;&nbsp;</a></span>arq__lit_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> arq__lit_1[69+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x41, 0x52, 0x51, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,</div>
+<div class="line">    0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,</div>
+<div class="line">    0x30, 0x34, 0x3A, 0x31, 0x35, 0x3A, 0x30, 0x34, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,</div>
+<div class="line">    0x29, 0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

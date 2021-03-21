@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_pc/f_pc_line.cpp File Reference</title>
+<title>Twilight Princess: src/f_pc/f_pc_line.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,49 +69,116 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_89dee0e9ccaa7c098b3a159a2ece8505.html">f_pc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_15a1977171855e2c8b0c1e68c97c2b83.html">f_pc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">f_pc_line.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__list_8h_source.html">SComponent/c_list.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__pc__line_8h_source.html">f_pc/f_pc_line.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_line/fpcLn_Create__Fv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_pc_line.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="f__pc__line_8cpp__incl.svg" width="380" height="486"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="f__pc__line_8cpp__incl.svg" width="448" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__list__class.html">node_list_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6d6da718191526bf47b6aa3efff36378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a6d6da718191526bf47b6aa3efff36378">fpcLn_Create</a> (void)</td></tr>
-<tr class="separator:a6d6da718191526bf47b6aa3efff36378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c940b89aefe64c62878f73d8b7eb2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a56c940b89aefe64c62878f73d8b7eb2e">fpcLn_Create</a> ()</td></tr>
+<tr class="separator:a56c940b89aefe64c62878f73d8b7eb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1a77cc140712b09d749a387c5ea237"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#ade1a77cc140712b09d749a387c5ea237">fpcLn_Create__Fv</a> ()</td></tr>
+<tr class="separator:ade1a77cc140712b09d749a387c5ea237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad556b0c810cb1b9d3f1f101fe6824bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#ad556b0c810cb1b9d3f1f101fe6824bbe">cLs_Create</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *)</td></tr>
+<tr class="separator:ad556b0c810cb1b9d3f1f101fe6824bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10525069df6dbcaa90e08cdff092d195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a10525069df6dbcaa90e08cdff092d195">cLs_Create__FP15node_list_class</a> ()</td></tr>
+<tr class="separator:a10525069df6dbcaa90e08cdff092d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0cfe2a44bb51c79fd6f3d95c07729792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnode__list__class.html">node_list_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a0cfe2a44bb51c79fd6f3d95c07729792">lbl_803F4CF0</a> [16]</td></tr>
-<tr class="separator:a0cfe2a44bb51c79fd6f3d95c07729792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebe3bcbc8fbe2b72bd055c4dd6d0d65"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a5ebe3bcbc8fbe2b72bd055c4dd6d0d65">g_fpcLn_Queue</a> [2]</td></tr>
+<tr class="separator:a5ebe3bcbc8fbe2b72bd055c4dd6d0d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4502d2828dac803676730806b71f1271"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__line_8cpp.html#a4502d2828dac803676730806b71f1271">l_fpcLn_Line</a> [192]</td></tr>
+<tr class="separator:a4502d2828dac803676730806b71f1271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6d6da718191526bf47b6aa3efff36378"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d6da718191526bf47b6aa3efff36378">&#9670;&nbsp;</a></span>fpcLn_Create()</h2>
+<a id="ad556b0c810cb1b9d3f1f101fe6824bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad556b0c810cb1b9d3f1f101fe6824bbe">&#9670;&nbsp;</a></span>cLs_Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fpcLn_Create </td>
+          <td class="memname">void cLs_Create </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10525069df6dbcaa90e08cdff092d195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10525069df6dbcaa90e08cdff092d195">&#9670;&nbsp;</a></span>cLs_Create__FP15node_list_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLs_Create__FP15node_list_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56c940b89aefe64c62878f73d8b7eb2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c940b89aefe64c62878f73d8b7eb2e">&#9670;&nbsp;</a></span>fpcLn_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void fpcLn_Create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade1a77cc140712b09d749a387c5ea237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1a77cc140712b09d749a387c5ea237">&#9670;&nbsp;</a></span>fpcLn_Create__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLn_Create__Fv </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -121,8 +188,27 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a0cfe2a44bb51c79fd6f3d95c07729792"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cfe2a44bb51c79fd6f3d95c07729792">&#9670;&nbsp;</a></span>lbl_803F4CF0</h2>
+<a id="a5ebe3bcbc8fbe2b72bd055c4dd6d0d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebe3bcbc8fbe2b72bd055c4dd6d0d65">&#9670;&nbsp;</a></span>g_fpcLn_Queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void * g_fpcLn_Queue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="f__pc__line_8cpp.html#a4502d2828dac803676730806b71f1271">l_fpcLn_Line</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)0x00000010,</div>
+<div class="line">}</div>
+<div class="ttc" id="af__pc__line_8cpp_html_a4502d2828dac803676730806b71f1271"><div class="ttname"><a href="f__pc__line_8cpp.html#a4502d2828dac803676730806b71f1271">l_fpcLn_Line</a></div><div class="ttdeci">static u8 l_fpcLn_Line[192]</div><div class="ttdef"><b>Definition:</b> f_pc_line.cpp:40</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4502d2828dac803676730806b71f1271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4502d2828dac803676730806b71f1271">&#9670;&nbsp;</a></span>l_fpcLn_Line</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,12 +217,12 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnode__list__class.html">node_list_class</a> lbl_803F4CF0[16]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> l_fpcLn_Line[192]</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

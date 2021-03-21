@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['base_5fprocess_5fclass_31785',['base_process_class',['../f__pc__base_8h.html#a37a6142583ac987e2d0c8306517383db',1,'f_pc_base.h']]],
-  ['bool_31786',['BOOL',['../types_8h.html#a050c65e107f0c828f856a231f4b4e788',1,'types.h']]]
+  ['f32_86897',['f32',['../types_8h.html#a5f6906312a689f27d70e9d086649d3fd',1,'types.h']]],
+  ['f64_86898',['f64',['../types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5',1,'types.h']]]
 ];

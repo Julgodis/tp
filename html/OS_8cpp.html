@@ -73,10 +73,2147 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">OS.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OS_8h_source.html">dolphin/os/OS.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSFPRInit.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSGetConsoleType.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/InquiryCallback.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSInit.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSExceptionInit.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSDBIntegrator.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSDBJump.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSSetExceptionHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSGetExceptionHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSExceptionVector.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__DBVECTOR.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSEVSetNumber.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSEVEnd.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSDefaultExceptionHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSPSInit.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/__OSGetDIConfig.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OS/OSRegisterVersion.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for OS.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="OS_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af52d3704d7226ec5823e3ebbe49c2588"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af52d3704d7226ec5823e3ebbe49c2588">__OSFPRInit</a> ()</td></tr>
+<tr class="separator:af52d3704d7226ec5823e3ebbe49c2588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9144b2707b0a8250037579ba6b1dd919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a9144b2707b0a8250037579ba6b1dd919">OSGetConsoleType</a> ()</td></tr>
+<tr class="separator:a9144b2707b0a8250037579ba6b1dd919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02bad3dc274fe211242813f42343e0a9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a02bad3dc274fe211242813f42343e0a9">InquiryCallback</a> ()</td></tr>
+<tr class="separator:a02bad3dc274fe211242813f42343e0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e00cd9f4e0fa5db15d6bbb9ffd437c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8e00cd9f4e0fa5db15d6bbb9ffd437c1">OSInit</a> ()</td></tr>
+<tr class="separator:a8e00cd9f4e0fa5db15d6bbb9ffd437c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bda85f96628ee1bcf0736770c543ee4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a4bda85f96628ee1bcf0736770c543ee4">OSExceptionInit</a> ()</td></tr>
+<tr class="separator:a4bda85f96628ee1bcf0736770c543ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fecb2c630b6a01b0bb5d300a62bcfd8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8fecb2c630b6a01b0bb5d300a62bcfd8">__OSDBIntegrator</a> ()</td></tr>
+<tr class="separator:a8fecb2c630b6a01b0bb5d300a62bcfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1cafcca4b19b467923f81be8c94925"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8b1cafcca4b19b467923f81be8c94925">__OSDBJump</a> ()</td></tr>
+<tr class="separator:a8b1cafcca4b19b467923f81be8c94925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8b93f5e5e371a16fe2ad2c6f42ac09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ade8b93f5e5e371a16fe2ad2c6f42ac09">__OSSetExceptionHandler</a> ()</td></tr>
+<tr class="separator:ade8b93f5e5e371a16fe2ad2c6f42ac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119e3739ec66e31d306991a8d0f754f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a119e3739ec66e31d306991a8d0f754f4">__OSGetExceptionHandler</a> ()</td></tr>
+<tr class="separator:a119e3739ec66e31d306991a8d0f754f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0de86e2f667b140ab6f6f2194be4a81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ae0de86e2f667b140ab6f6f2194be4a81">OSExceptionVector</a> ()</td></tr>
+<tr class="separator:ae0de86e2f667b140ab6f6f2194be4a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f0dff51a2d7a0e7e87d0d0c8dfb0f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab3f0dff51a2d7a0e7e87d0d0c8dfb0f4">__DBVECTOR</a> ()</td></tr>
+<tr class="separator:ab3f0dff51a2d7a0e7e87d0d0c8dfb0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acfc79388580a487c18c3d6564f3099"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a3acfc79388580a487c18c3d6564f3099">__OSEVSetNumber</a> ()</td></tr>
+<tr class="separator:a3acfc79388580a487c18c3d6564f3099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec4f90f9f5d114611d72ae2a1a71d9f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aec4f90f9f5d114611d72ae2a1a71d9f3">__OSEVEnd</a> ()</td></tr>
+<tr class="separator:aec4f90f9f5d114611d72ae2a1a71d9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4ca1bc35af2cd9535c731a849b6d71"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#afe4ca1bc35af2cd9535c731a849b6d71">OSDefaultExceptionHandler</a> ()</td></tr>
+<tr class="separator:afe4ca1bc35af2cd9535c731a849b6d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7720949b8924eb834d39e3e8e79143ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a7720949b8924eb834d39e3e8e79143ff">__OSPSInit</a> ()</td></tr>
+<tr class="separator:a7720949b8924eb834d39e3e8e79143ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6728d47fe7ff2e6c8fb3da0918c02e81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a6728d47fe7ff2e6c8fb3da0918c02e81">__OSGetDIConfig</a> ()</td></tr>
+<tr class="separator:a6728d47fe7ff2e6c8fb3da0918c02e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d1c86f609bd2033df6f4d22094f42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a688d1c86f609bd2033df6f4d22094f42">OSRegisterVersion</a> ()</td></tr>
+<tr class="separator:a688d1c86f609bd2033df6f4d22094f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5483d4fbef9a528a3f56d30a4c5da3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ae5483d4fbef9a528a3f56d30a4c5da3a">memset</a> ()</td></tr>
+<tr class="separator:ae5483d4fbef9a528a3f56d30a4c5da3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6bb37288ea54f2151b2ecd4d4ccf3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#afc6bb37288ea54f2151b2ecd4d4ccf3b">memcpy</a> ()</td></tr>
+<tr class="separator:afc6bb37288ea54f2151b2ecd4d4ccf3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4b47b8fab54c8f6a71bf594943c828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ade4b47b8fab54c8f6a71bf594943c828">OSReport</a> ()</td></tr>
+<tr class="separator:ade4b47b8fab54c8f6a71bf594943c828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72d44a0e211de64334307aa7775fe26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ae72d44a0e211de64334307aa7775fe26">PPCMtmmcr0</a> ()</td></tr>
+<tr class="separator:ae72d44a0e211de64334307aa7775fe26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac310e84b1b7be6dcafe61e2a9ef767d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ac310e84b1b7be6dcafe61e2a9ef767d8">PPCMtmmcr1</a> ()</td></tr>
+<tr class="separator:ac310e84b1b7be6dcafe61e2a9ef767d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa07ada4d541ce31b85127dc0997651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#adfa07ada4d541ce31b85127dc0997651">PPCMtpmc1</a> ()</td></tr>
+<tr class="separator:adfa07ada4d541ce31b85127dc0997651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac495c3b8a968a791ebca7d87ecdc05b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ac495c3b8a968a791ebca7d87ecdc05b1">PPCMtpmc2</a> ()</td></tr>
+<tr class="separator:ac495c3b8a968a791ebca7d87ecdc05b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa4bd8e4f19bb9117d6269effe3b441"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aeaa4bd8e4f19bb9117d6269effe3b441">PPCMtpmc3</a> ()</td></tr>
+<tr class="separator:aeaa4bd8e4f19bb9117d6269effe3b441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1690cfe670b313a2051e1fc244e3e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab1690cfe670b313a2051e1fc244e3e65">PPCMtpmc4</a> ()</td></tr>
+<tr class="separator:ab1690cfe670b313a2051e1fc244e3e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ad6f109169d6bcafd497ae18bdbc1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aa7ad6f109169d6bcafd497ae18bdbc1e">PPCMfhid2</a> ()</td></tr>
+<tr class="separator:aa7ad6f109169d6bcafd497ae18bdbc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb6cbdf45abd9a5006bba1c144ccc21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8bb6cbdf45abd9a5006bba1c144ccc21">PPCMthid2</a> ()</td></tr>
+<tr class="separator:a8bb6cbdf45abd9a5006bba1c144ccc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052a79dd8eaab08cfa4ee7b33f2fd314"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a052a79dd8eaab08cfa4ee7b33f2fd314">PPCDisableSpeculation</a> ()</td></tr>
+<tr class="separator:a052a79dd8eaab08cfa4ee7b33f2fd314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2499f0cf7b9a0e9e3151d123489294d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad2499f0cf7b9a0e9e3151d123489294d">PPCSetFpNonIEEEMode</a> ()</td></tr>
+<tr class="separator:ad2499f0cf7b9a0e9e3151d123489294d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6db83ea94e00550dff9ed61435babe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af6db83ea94e00550dff9ed61435babe5">OSInitAlarm</a> ()</td></tr>
+<tr class="separator:af6db83ea94e00550dff9ed61435babe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b4352be1eb07b6a07f38b4ab147a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ac7b4352be1eb07b6a07f38b4ab147a27">OSGetArenaHi</a> ()</td></tr>
+<tr class="separator:ac7b4352be1eb07b6a07f38b4ab147a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27c8c416dbad606daa17b5f7258e7053"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a27c8c416dbad606daa17b5f7258e7053">OSGetArenaLo</a> ()</td></tr>
+<tr class="separator:a27c8c416dbad606daa17b5f7258e7053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085831d18023b8ff1ec12431b3fca37f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a085831d18023b8ff1ec12431b3fca37f">OSSetArenaHi</a> ()</td></tr>
+<tr class="separator:a085831d18023b8ff1ec12431b3fca37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c49bef720c8f7cde64f8bac603e077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab6c49bef720c8f7cde64f8bac603e077">OSSetArenaLo</a> ()</td></tr>
+<tr class="separator:ab6c49bef720c8f7cde64f8bac603e077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad63b5e752abd2d5c95757ce2d8619480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad63b5e752abd2d5c95757ce2d8619480">__OSInitAudioSystem</a> ()</td></tr>
+<tr class="separator:ad63b5e752abd2d5c95757ce2d8619480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d5d7a69e38c98d1817a890960c30b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a32d5d7a69e38c98d1817a890960c30b7">DCInvalidateRange</a> ()</td></tr>
+<tr class="separator:a32d5d7a69e38c98d1817a890960c30b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e8a9b6dec260382f91ecc3456469bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a80e8a9b6dec260382f91ecc3456469bd">DCFlushRangeNoSync</a> ()</td></tr>
+<tr class="separator:a80e8a9b6dec260382f91ecc3456469bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2f4fa4c27f6e37c3c67f940188c647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a5e2f4fa4c27f6e37c3c67f940188c647">ICInvalidateRange</a> ()</td></tr>
+<tr class="separator:a5e2f4fa4c27f6e37c3c67f940188c647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9110025c707191e8459b052a1e6a248"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ac9110025c707191e8459b052a1e6a248">ICFlashInvalidate</a> ()</td></tr>
+<tr class="separator:ac9110025c707191e8459b052a1e6a248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30f30b5ade1347fbc57ccdb040733b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a5d30f30b5ade1347fbc57ccdb040733b">__OSCacheInit</a> ()</td></tr>
+<tr class="separator:a5d30f30b5ade1347fbc57ccdb040733b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80080339eef19e71079f55509abe0f36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a80080339eef19e71079f55509abe0f36">__OSContextInit</a> ()</td></tr>
+<tr class="separator:a80080339eef19e71079f55509abe0f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76ee70c3d825409135f3f5b9415e8b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad76ee70c3d825409135f3f5b9415e8b4">__OSUnhandledException</a> ()</td></tr>
+<tr class="separator:ad76ee70c3d825409135f3f5b9415e8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8cb3d1066912b0d6f5ff7803d934154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aa8cb3d1066912b0d6f5ff7803d934154">__OSGetExecParams</a> ()</td></tr>
+<tr class="separator:aa8cb3d1066912b0d6f5ff7803d934154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a65b7dd4c9756f26d16dcf8f0dedb07bf">OSDisableInterrupts</a> ()</td></tr>
+<tr class="separator:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6faa3a5fef9056c12ce125084000acb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ac6faa3a5fef9056c12ce125084000acb">OSEnableInterrupts</a> ()</td></tr>
+<tr class="separator:ac6faa3a5fef9056c12ce125084000acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bf60a3621a2d64b536790302451842"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a84bf60a3621a2d64b536790302451842">__OSSetInterruptHandler</a> ()</td></tr>
+<tr class="separator:a84bf60a3621a2d64b536790302451842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bfccf49c8d1db310d37a239157a1613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8bfccf49c8d1db310d37a239157a1613">__OSInterruptInit</a> ()</td></tr>
+<tr class="separator:a8bfccf49c8d1db310d37a239157a1613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af78a0427c48c8863a7f86385818fbc9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af78a0427c48c8863a7f86385818fbc9e">__OSModuleInit</a> ()</td></tr>
+<tr class="separator:af78a0427c48c8863a7f86385818fbc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b56a4b5b57f2ef5e64c2bc67ad1da33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a7b56a4b5b57f2ef5e64c2bc67ad1da33">__OSInitMemoryProtection</a> ()</td></tr>
+<tr class="separator:a7b56a4b5b57f2ef5e64c2bc67ad1da33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a856ba78a89db71f1b07049990c38d20a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a856ba78a89db71f1b07049990c38d20a">OSGetResetCode</a> ()</td></tr>
+<tr class="separator:a856ba78a89db71f1b07049990c38d20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac6d3efe325a8bcb56829c6cd244a28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#acac6d3efe325a8bcb56829c6cd244a28">__OSResetSWInterruptHandler</a> ()</td></tr>
+<tr class="separator:acac6d3efe325a8bcb56829c6cd244a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf775a38098126cd9d1a1379c919dc3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aaf775a38098126cd9d1a1379c919dc3d">__OSInitSram</a> ()</td></tr>
+<tr class="separator:aaf775a38098126cd9d1a1379c919dc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5b88de9fbf4e9a8d742274af3f481d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a6c5b88de9fbf4e9a8d742274af3f481d">__OSInitSystemCall</a> ()</td></tr>
+<tr class="separator:a6c5b88de9fbf4e9a8d742274af3f481d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28643a2df9f7fa46a294c015f862aa95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a28643a2df9f7fa46a294c015f862aa95">__OSThreadInit</a> ()</td></tr>
+<tr class="separator:a28643a2df9f7fa46a294c015f862aa95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab291114d2ce5fe2988a979db7b11f85c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab291114d2ce5fe2988a979db7b11f85c">__OSGetSystemTime</a> ()</td></tr>
+<tr class="separator:ab291114d2ce5fe2988a979db7b11f85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ebeb50a3224d8a5e10a2a57ec2e2c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab6ebeb50a3224d8a5e10a2a57ec2e2c9">EXIInit</a> ()</td></tr>
+<tr class="separator:ab6ebeb50a3224d8a5e10a2a57ec2e2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a9c0072d1095e11f0692966b97bd7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aa3a9c0072d1095e11f0692966b97bd7e">SIInit</a> ()</td></tr>
+<tr class="separator:aa3a9c0072d1095e11f0692966b97bd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ffaf0a4cdcf67c6ef0fed4ff07d59d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aa5ffaf0a4cdcf67c6ef0fed4ff07d59d">__DBIsExceptionMarked</a> ()</td></tr>
+<tr class="separator:aa5ffaf0a4cdcf67c6ef0fed4ff07d59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369192899c00f00928ed748b73fb0c48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a369192899c00f00928ed748b73fb0c48">DBPrintf</a> ()</td></tr>
+<tr class="separator:a369192899c00f00928ed748b73fb0c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e38a04ccc2dd987bb6c2f42fbe4ac1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a0e38a04ccc2dd987bb6c2f42fbe4ac1a">DVDInit</a> ()</td></tr>
+<tr class="separator:a0e38a04ccc2dd987bb6c2f42fbe4ac1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ae4077e3e92bd411281170121744c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a61ae4077e3e92bd411281170121744c9">DVDInquiryAsync</a> ()</td></tr>
+<tr class="separator:a61ae4077e3e92bd411281170121744c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b09ace916a95b31742dd6566ce8f48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a48b09ace916a95b31742dd6566ce8f48">EnableMetroTRKInterrupts</a> ()</td></tr>
+<tr class="separator:a48b09ace916a95b31742dd6566ce8f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad3b730ce2bbb2a81507afdd75d072c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad3b730ce2bbb2a81507afdd75d072c75">OS__lit_105</a> [13+3]</td></tr>
+<tr class="separator:ad3b730ce2bbb2a81507afdd75d072c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99792295c74df099066aae326fa78436"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a99792295c74df099066aae326fa78436">OS__lit_106</a> [22+2]</td></tr>
+<tr class="separator:a99792295c74df099066aae326fa78436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c568e022002848c45e217680c8fbf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a17c568e022002848c45e217680c8fbf0">OS__lit_107</a> [12]</td></tr>
+<tr class="separator:a17c568e022002848c45e217680c8fbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3fa25ba06dc5f667f33716dcb29b2b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad3fa25ba06dc5f667f33716dcb29b2b1">OS__lit_108</a> [9+3]</td></tr>
+<tr class="separator:ad3fa25ba06dc5f667f33716dcb29b2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0a88ad576091cafb77112761650e27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aec0a88ad576091cafb77112761650e27">OS__lit_109</a> [16]</td></tr>
+<tr class="separator:aec0a88ad576091cafb77112761650e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27df50529a215675a132f165adb2f6e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a27df50529a215675a132f165adb2f6e8">OS__lit_110</a> [11+1]</td></tr>
+<tr class="separator:a27df50529a215675a132f165adb2f6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef7d82eeab863b0887408c7c24bb39b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a6ef7d82eeab863b0887408c7c24bb39b">lit_111</a> [14+2]</td></tr>
+<tr class="separator:a6ef7d82eeab863b0887408c7c24bb39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3c4f43db8626b40f114afd3c2f03c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a1c3c4f43db8626b40f114afd3c2f03c9">lit_112</a> [13+3]</td></tr>
+<tr class="separator:a1c3c4f43db8626b40f114afd3c2f03c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c39cb984cb3f17953e0b544f913d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a90c39cb984cb3f17953e0b544f913d24">OS__lit_113</a> [13+3]</td></tr>
+<tr class="separator:a90c39cb984cb3f17953e0b544f913d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ae7817cd22102e6208e6fd666950e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab7ae7817cd22102e6208e6fd666950e5">lit_114</a> [13+3]</td></tr>
+<tr class="separator:ab7ae7817cd22102e6208e6fd666950e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66ffa2ed13d5bc877b346ce59e2b07c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a66ffa2ed13d5bc877b346ce59e2b07c7">OS__lit_115</a> [25+3]</td></tr>
+<tr class="separator:a66ffa2ed13d5bc877b346ce59e2b07c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a68b9bff65e25a88ef9b2bc0036cda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab4a68b9bff65e25a88ef9b2bc0036cda">OS__lit_117</a> [14+2]</td></tr>
+<tr class="separator:ab4a68b9bff65e25a88ef9b2bc0036cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1be88580ec4f62a3c54a9e69df9c7d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af1be88580ec4f62a3c54a9e69df9c7d0">OS__lit_118</a> [21+3]</td></tr>
+<tr class="separator:af1be88580ec4f62a3c54a9e69df9c7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86ddaeb6f2b9b6c233359bd80d000a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ab86ddaeb6f2b9b6c233359bd80d000a0">__OSExceptionLocations</a> [60]</td></tr>
+<tr class="separator:ab86ddaeb6f2b9b6c233359bd80d000a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c619d67de4b808cd2a6b54405bc0914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a7c619d67de4b808cd2a6b54405bc0914">OS__lit_152</a> [27+1]</td></tr>
+<tr class="separator:a7c619d67de4b808cd2a6b54405bc0914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a10dae624571c793c92af1f06bc62b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a63a10dae624571c793c92af1f06bc62b">OS__lit_153</a> [46+2]</td></tr>
+<tr class="separator:a63a10dae624571c793c92af1f06bc62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39c68fdaa3c2104256a87fa06419602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aa39c68fdaa3c2104256a87fa06419602">OS__lit_154</a> [47+1]</td></tr>
+<tr class="separator:aa39c68fdaa3c2104256a87fa06419602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc66b65792b683731d464c129b0f3c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a4dc66b65792b683731d464c129b0f3c0">OS__lit_155</a> [27+1]</td></tr>
+<tr class="separator:a4dc66b65792b683731d464c129b0f3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad844f884dc65582384b10d9d2f8e9dac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad844f884dc65582384b10d9d2f8e9dac">DriveBlock</a> [48]</td></tr>
+<tr class="separator:ad844f884dc65582384b10d9d2f8e9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf96ac34379bf28889b6527406f9c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#acbf96ac34379bf28889b6527406f9c1f">__OSRebootParams</a> [28+4]</td></tr>
+<tr class="separator:acbf96ac34379bf28889b6527406f9c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafbdfcab8118f3b662a5ca64ffaae4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#acafbdfcab8118f3b662a5ca64ffaae4a">__OSIsGcam</a> [4]</td></tr>
+<tr class="separator:acafbdfcab8118f3b662a5ca64ffaae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9c67074dfefc798c7bd5b862f54ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#afb9c67074dfefc798c7bd5b862f54ec8">__OSInIPL</a> [4+4]</td></tr>
+<tr class="separator:afb9c67074dfefc798c7bd5b862f54ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a8de42a17c866bdda5ee56f532c637"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ad4a8de42a17c866bdda5ee56f532c637">__OSStartTime</a> [4]</td></tr>
+<tr class="separator:ad4a8de42a17c866bdda5ee56f532c637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39d905b02074f58d033df21eaeaab2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af39d905b02074f58d033df21eaeaab2d">data_80451634</a> [4]</td></tr>
+<tr class="separator:af39d905b02074f58d033df21eaeaab2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b286350dda887575562d5a51288bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a07b286350dda887575562d5a51288bca">__DVDLongFileNameFlag</a> [4]</td></tr>
+<tr class="separator:a07b286350dda887575562d5a51288bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff72a3fffe4996d1e5a9e90dc23db2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#adff72a3fffe4996d1e5a9e90dc23db2b">__PADSpec</a> [4+4]</td></tr>
+<tr class="separator:adff72a3fffe4996d1e5a9e90dc23db2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3299087314b62f56ecce3ce4ad2e7165"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a3299087314b62f56ecce3ce4ad2e7165">OS__BootInfo</a> [4]</td></tr>
+<tr class="separator:a3299087314b62f56ecce3ce4ad2e7165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5f98604c6cf0dcac62085597c046db"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a8e5f98604c6cf0dcac62085597c046db">BI2DebugFlag</a> [4]</td></tr>
+<tr class="separator:a8e5f98604c6cf0dcac62085597c046db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2f3ae6b52e77fe13d41422ba96bcd2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a4a2f3ae6b52e77fe13d41422ba96bcd2">BI2DebugFlagHolder</a> [4]</td></tr>
+<tr class="separator:a4a2f3ae6b52e77fe13d41422ba96bcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a1f0ca3990eff4a2d3a068caa01bb28"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a6a1f0ca3990eff4a2d3a068caa01bb28">ZeroF</a></td></tr>
+<tr class="separator:a6a1f0ca3990eff4a2d3a068caa01bb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af500d9c720c5ab08773200336db85b14"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af500d9c720c5ab08773200336db85b14">ZeroPS</a> [8]</td></tr>
+<tr class="separator:af500d9c720c5ab08773200336db85b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ee747d256832d8fa9ae5b2616cc91a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#ae9ee747d256832d8fa9ae5b2616cc91a">DriveInfo</a> [32]</td></tr>
+<tr class="separator:ae9ee747d256832d8fa9ae5b2616cc91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa8dd01f1137d55ccc2a9cded81934fc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#aaa8dd01f1137d55ccc2a9cded81934fc">OS__lit_1</a> [68]</td></tr>
+<tr class="separator:aaa8dd01f1137d55ccc2a9cded81934fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15a91d1a30b51a26a4f7cc12d4edc33"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#af15a91d1a30b51a26a4f7cc12d4edc33">__OSVersion</a> = (void*)&amp;<a class="el" href="OS_8cpp.html#aaa8dd01f1137d55ccc2a9cded81934fc">OS__lit_1</a></td></tr>
+<tr class="separator:af15a91d1a30b51a26a4f7cc12d4edc33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108b76e2e9c2f4c617feb66b149fa18d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a108b76e2e9c2f4c617feb66b149fa18d">OS__lit_116</a> [6+2]</td></tr>
+<tr class="separator:a108b76e2e9c2f4c617feb66b149fa18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202d8b6fcb72a41fd2f27bcbe7f6dbb5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a202d8b6fcb72a41fd2f27bcbe7f6dbb5">AreWeInitialized</a> [4]</td></tr>
+<tr class="separator:a202d8b6fcb72a41fd2f27bcbe7f6dbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e660cc3e039da3cb1a04e6bf2604f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a39e660cc3e039da3cb1a04e6bf2604f1">OSExceptionTable</a> [4]</td></tr>
+<tr class="separator:a39e660cc3e039da3cb1a04e6bf2604f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403b0da3e8a93c001fcf4639654ca083"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OS_8cpp.html#a403b0da3e8a93c001fcf4639654ca083">lit_163</a> = 0x25730A00</td></tr>
+<tr class="separator:a403b0da3e8a93c001fcf4639654ca083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa5ffaf0a4cdcf67c6ef0fed4ff07d59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ffaf0a4cdcf67c6ef0fed4ff07d59d">&#9670;&nbsp;</a></span>__DBIsExceptionMarked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __DBIsExceptionMarked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3f0dff51a2d7a0e7e87d0d0c8dfb0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f0dff51a2d7a0e7e87d0d0c8dfb0f4">&#9670;&nbsp;</a></span>__DBVECTOR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __DBVECTOR </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d30f30b5ade1347fbc57ccdb040733b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d30f30b5ade1347fbc57ccdb040733b">&#9670;&nbsp;</a></span>__OSCacheInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSCacheInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80080339eef19e71079f55509abe0f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80080339eef19e71079f55509abe0f36">&#9670;&nbsp;</a></span>__OSContextInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSContextInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fecb2c630b6a01b0bb5d300a62bcfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fecb2c630b6a01b0bb5d300a62bcfd8">&#9670;&nbsp;</a></span>__OSDBIntegrator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __OSDBIntegrator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b1cafcca4b19b467923f81be8c94925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1cafcca4b19b467923f81be8c94925">&#9670;&nbsp;</a></span>__OSDBJump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __OSDBJump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec4f90f9f5d114611d72ae2a1a71d9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec4f90f9f5d114611d72ae2a1a71d9f3">&#9670;&nbsp;</a></span>__OSEVEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __OSEVEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3acfc79388580a487c18c3d6564f3099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acfc79388580a487c18c3d6564f3099">&#9670;&nbsp;</a></span>__OSEVSetNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __OSEVSetNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af52d3704d7226ec5823e3ebbe49c2588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af52d3704d7226ec5823e3ebbe49c2588">&#9670;&nbsp;</a></span>__OSFPRInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSFPRInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6728d47fe7ff2e6c8fb3da0918c02e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6728d47fe7ff2e6c8fb3da0918c02e81">&#9670;&nbsp;</a></span>__OSGetDIConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSGetDIConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a119e3739ec66e31d306991a8d0f754f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119e3739ec66e31d306991a8d0f754f4">&#9670;&nbsp;</a></span>__OSGetExceptionHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSGetExceptionHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8cb3d1066912b0d6f5ff7803d934154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cb3d1066912b0d6f5ff7803d934154">&#9670;&nbsp;</a></span>__OSGetExecParams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSGetExecParams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab291114d2ce5fe2988a979db7b11f85c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab291114d2ce5fe2988a979db7b11f85c">&#9670;&nbsp;</a></span>__OSGetSystemTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSGetSystemTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad63b5e752abd2d5c95757ce2d8619480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63b5e752abd2d5c95757ce2d8619480">&#9670;&nbsp;</a></span>__OSInitAudioSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSInitAudioSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b56a4b5b57f2ef5e64c2bc67ad1da33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b56a4b5b57f2ef5e64c2bc67ad1da33">&#9670;&nbsp;</a></span>__OSInitMemoryProtection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSInitMemoryProtection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf775a38098126cd9d1a1379c919dc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf775a38098126cd9d1a1379c919dc3d">&#9670;&nbsp;</a></span>__OSInitSram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSInitSram </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c5b88de9fbf4e9a8d742274af3f481d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5b88de9fbf4e9a8d742274af3f481d">&#9670;&nbsp;</a></span>__OSInitSystemCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSInitSystemCall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bfccf49c8d1db310d37a239157a1613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bfccf49c8d1db310d37a239157a1613">&#9670;&nbsp;</a></span>__OSInterruptInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSInterruptInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af78a0427c48c8863a7f86385818fbc9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af78a0427c48c8863a7f86385818fbc9e">&#9670;&nbsp;</a></span>__OSModuleInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSModuleInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7720949b8924eb834d39e3e8e79143ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7720949b8924eb834d39e3e8e79143ff">&#9670;&nbsp;</a></span>__OSPSInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSPSInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acac6d3efe325a8bcb56829c6cd244a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac6d3efe325a8bcb56829c6cd244a28">&#9670;&nbsp;</a></span>__OSResetSWInterruptHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSResetSWInterruptHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade8b93f5e5e371a16fe2ad2c6f42ac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8b93f5e5e371a16fe2ad2c6f42ac09">&#9670;&nbsp;</a></span>__OSSetExceptionHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSSetExceptionHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84bf60a3621a2d64b536790302451842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84bf60a3621a2d64b536790302451842">&#9670;&nbsp;</a></span>__OSSetInterruptHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSSetInterruptHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28643a2df9f7fa46a294c015f862aa95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28643a2df9f7fa46a294c015f862aa95">&#9670;&nbsp;</a></span>__OSThreadInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSThreadInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad76ee70c3d825409135f3f5b9415e8b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76ee70c3d825409135f3f5b9415e8b4">&#9670;&nbsp;</a></span>__OSUnhandledException()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __OSUnhandledException </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a369192899c00f00928ed748b73fb0c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369192899c00f00928ed748b73fb0c48">&#9670;&nbsp;</a></span>DBPrintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DBPrintf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80e8a9b6dec260382f91ecc3456469bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e8a9b6dec260382f91ecc3456469bd">&#9670;&nbsp;</a></span>DCFlushRangeNoSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void DCFlushRangeNoSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32d5d7a69e38c98d1817a890960c30b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d5d7a69e38c98d1817a890960c30b7">&#9670;&nbsp;</a></span>DCInvalidateRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCInvalidateRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e38a04ccc2dd987bb6c2f42fbe4ac1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e38a04ccc2dd987bb6c2f42fbe4ac1a">&#9670;&nbsp;</a></span>DVDInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DVDInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61ae4077e3e92bd411281170121744c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ae4077e3e92bd411281170121744c9">&#9670;&nbsp;</a></span>DVDInquiryAsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DVDInquiryAsync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48b09ace916a95b31742dd6566ce8f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b09ace916a95b31742dd6566ce8f48">&#9670;&nbsp;</a></span>EnableMetroTRKInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void EnableMetroTRKInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6ebeb50a3224d8a5e10a2a57ec2e2c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ebeb50a3224d8a5e10a2a57ec2e2c9">&#9670;&nbsp;</a></span>EXIInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void EXIInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9110025c707191e8459b052a1e6a248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9110025c707191e8459b052a1e6a248">&#9670;&nbsp;</a></span>ICFlashInvalidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ICFlashInvalidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e2f4fa4c27f6e37c3c67f940188c647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2f4fa4c27f6e37c3c67f940188c647">&#9670;&nbsp;</a></span>ICInvalidateRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ICInvalidateRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02bad3dc274fe211242813f42343e0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02bad3dc274fe211242813f42343e0a9">&#9670;&nbsp;</a></span>InquiryCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void InquiryCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc6bb37288ea54f2151b2ecd4d4ccf3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6bb37288ea54f2151b2ecd4d4ccf3b">&#9670;&nbsp;</a></span>memcpy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void memcpy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5483d4fbef9a528a3f56d30a4c5da3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5483d4fbef9a528a3f56d30a4c5da3a">&#9670;&nbsp;</a></span>memset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void memset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe4ca1bc35af2cd9535c731a849b6d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4ca1bc35af2cd9535c731a849b6d71">&#9670;&nbsp;</a></span>OSDefaultExceptionHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void OSDefaultExceptionHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65b7dd4c9756f26d16dcf8f0dedb07bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b7dd4c9756f26d16dcf8f0dedb07bf">&#9670;&nbsp;</a></span>OSDisableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDisableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6faa3a5fef9056c12ce125084000acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6faa3a5fef9056c12ce125084000acb">&#9670;&nbsp;</a></span>OSEnableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSEnableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bda85f96628ee1bcf0736770c543ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bda85f96628ee1bcf0736770c543ee4">&#9670;&nbsp;</a></span>OSExceptionInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void OSExceptionInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0de86e2f667b140ab6f6f2194be4a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0de86e2f667b140ab6f6f2194be4a81">&#9670;&nbsp;</a></span>OSExceptionVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void OSExceptionVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7b4352be1eb07b6a07f38b4ab147a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b4352be1eb07b6a07f38b4ab147a27">&#9670;&nbsp;</a></span>OSGetArenaHi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSGetArenaHi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27c8c416dbad606daa17b5f7258e7053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c8c416dbad606daa17b5f7258e7053">&#9670;&nbsp;</a></span>OSGetArenaLo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSGetArenaLo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9144b2707b0a8250037579ba6b1dd919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9144b2707b0a8250037579ba6b1dd919">&#9670;&nbsp;</a></span>OSGetConsoleType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSGetConsoleType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a856ba78a89db71f1b07049990c38d20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a856ba78a89db71f1b07049990c38d20a">&#9670;&nbsp;</a></span>OSGetResetCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSGetResetCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e00cd9f4e0fa5db15d6bbb9ffd437c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e00cd9f4e0fa5db15d6bbb9ffd437c1">&#9670;&nbsp;</a></span>OSInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6db83ea94e00550dff9ed61435babe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6db83ea94e00550dff9ed61435babe5">&#9670;&nbsp;</a></span>OSInitAlarm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSInitAlarm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a688d1c86f609bd2033df6f4d22094f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d1c86f609bd2033df6f4d22094f42">&#9670;&nbsp;</a></span>OSRegisterVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSRegisterVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade4b47b8fab54c8f6a71bf594943c828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4b47b8fab54c8f6a71bf594943c828">&#9670;&nbsp;</a></span>OSReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a085831d18023b8ff1ec12431b3fca37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085831d18023b8ff1ec12431b3fca37f">&#9670;&nbsp;</a></span>OSSetArenaHi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSSetArenaHi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6c49bef720c8f7cde64f8bac603e077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c49bef720c8f7cde64f8bac603e077">&#9670;&nbsp;</a></span>OSSetArenaLo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void OSSetArenaLo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a052a79dd8eaab08cfa4ee7b33f2fd314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052a79dd8eaab08cfa4ee7b33f2fd314">&#9670;&nbsp;</a></span>PPCDisableSpeculation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCDisableSpeculation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7ad6f109169d6bcafd497ae18bdbc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ad6f109169d6bcafd497ae18bdbc1e">&#9670;&nbsp;</a></span>PPCMfhid2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMfhid2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bb6cbdf45abd9a5006bba1c144ccc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb6cbdf45abd9a5006bba1c144ccc21">&#9670;&nbsp;</a></span>PPCMthid2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMthid2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae72d44a0e211de64334307aa7775fe26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72d44a0e211de64334307aa7775fe26">&#9670;&nbsp;</a></span>PPCMtmmcr0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtmmcr0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac310e84b1b7be6dcafe61e2a9ef767d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac310e84b1b7be6dcafe61e2a9ef767d8">&#9670;&nbsp;</a></span>PPCMtmmcr1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtmmcr1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfa07ada4d541ce31b85127dc0997651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa07ada4d541ce31b85127dc0997651">&#9670;&nbsp;</a></span>PPCMtpmc1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtpmc1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac495c3b8a968a791ebca7d87ecdc05b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac495c3b8a968a791ebca7d87ecdc05b1">&#9670;&nbsp;</a></span>PPCMtpmc2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtpmc2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaa4bd8e4f19bb9117d6269effe3b441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa4bd8e4f19bb9117d6269effe3b441">&#9670;&nbsp;</a></span>PPCMtpmc3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtpmc3 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1690cfe670b313a2051e1fc244e3e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1690cfe670b313a2051e1fc244e3e65">&#9670;&nbsp;</a></span>PPCMtpmc4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtpmc4 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2499f0cf7b9a0e9e3151d123489294d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2499f0cf7b9a0e9e3151d123489294d">&#9670;&nbsp;</a></span>PPCSetFpNonIEEEMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCSetFpNonIEEEMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3a9c0072d1095e11f0692966b97bd7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a9c0072d1095e11f0692966b97bd7e">&#9670;&nbsp;</a></span>SIInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void SIInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a07b286350dda887575562d5a51288bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b286350dda887575562d5a51288bca">&#9670;&nbsp;</a></span>__DVDLongFileNameFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __DVDLongFileNameFlag[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab86ddaeb6f2b9b6c233359bd80d000a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab86ddaeb6f2b9b6c233359bd80d000a0">&#9670;&nbsp;</a></span>__OSExceptionLocations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __OSExceptionLocations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0F, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x17, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afb9c67074dfefc798c7bd5b862f54ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9c67074dfefc798c7bd5b862f54ec8">&#9670;&nbsp;</a></span>__OSInIPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __OSInIPL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acafbdfcab8118f3b662a5ca64ffaae4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafbdfcab8118f3b662a5ca64ffaae4a">&#9670;&nbsp;</a></span>__OSIsGcam</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __OSIsGcam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbf96ac34379bf28889b6527406f9c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbf96ac34379bf28889b6527406f9c1f">&#9670;&nbsp;</a></span>__OSRebootParams</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __OSRebootParams</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4a8de42a17c866bdda5ee56f532c637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a8de42a17c866bdda5ee56f532c637">&#9670;&nbsp;</a></span>__OSStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __OSStartTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af15a91d1a30b51a26a4f7cc12d4edc33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15a91d1a30b51a26a4f7cc12d4edc33">&#9670;&nbsp;</a></span>__OSVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* __OSVersion = (void*)&amp;<a class="el" href="OS_8cpp.html#aaa8dd01f1137d55ccc2a9cded81934fc">OS__lit_1</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adff72a3fffe4996d1e5a9e90dc23db2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff72a3fffe4996d1e5a9e90dc23db2b">&#9670;&nbsp;</a></span>__PADSpec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> __PADSpec</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a202d8b6fcb72a41fd2f27bcbe7f6dbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a202d8b6fcb72a41fd2f27bcbe7f6dbb5">&#9670;&nbsp;</a></span>AreWeInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> AreWeInitialized[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e5f98604c6cf0dcac62085597c046db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5f98604c6cf0dcac62085597c046db">&#9670;&nbsp;</a></span>BI2DebugFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> BI2DebugFlag[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a2f3ae6b52e77fe13d41422ba96bcd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2f3ae6b52e77fe13d41422ba96bcd2">&#9670;&nbsp;</a></span>BI2DebugFlagHolder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> BI2DebugFlagHolder[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af39d905b02074f58d033df21eaeaab2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39d905b02074f58d033df21eaeaab2d">&#9670;&nbsp;</a></span>data_80451634</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_80451634</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad844f884dc65582384b10d9d2f8e9dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad844f884dc65582384b10d9d2f8e9dac">&#9670;&nbsp;</a></span>DriveBlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DriveBlock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9ee747d256832d8fa9ae5b2616cc91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ee747d256832d8fa9ae5b2616cc91a">&#9670;&nbsp;</a></span>DriveInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> DriveInfo[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ef7d82eeab863b0887408c7c24bb39b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef7d82eeab863b0887408c7c24bb39b">&#9670;&nbsp;</a></span>lit_111</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_111</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4D, 0x61, 0x63, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1c3c4f43db8626b40f114afd3c2f03c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3c4f43db8626b40f114afd3c2f03c9">&#9670;&nbsp;</a></span>lit_112</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_112</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x50, 0x43, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab7ae7817cd22102e6208e6fd666950e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ae7817cd22102e6208e6fd666950e5">&#9670;&nbsp;</a></span>lit_114</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_114</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x45, 0x50, 0x50, 0x43, 0x20, 0x4D, 0x69, 0x6E, 0x6E, 0x6F, 0x77, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a403b0da3e8a93c001fcf4639654ca083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403b0da3e8a93c001fcf4639654ca083">&#9670;&nbsp;</a></span>lit_163</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> lit_163 = 0x25730A00</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3299087314b62f56ecce3ce4ad2e7165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3299087314b62f56ecce3ce4ad2e7165">&#9670;&nbsp;</a></span>OS__BootInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__BootInfo[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa8dd01f1137d55ccc2a9cded81934fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8dd01f1137d55ccc2a9cded81934fc">&#9670;&nbsp;</a></span>OS__lit_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_1[68]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x4F, 0x53, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,</div>
+<div class="line">    0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,</div>
+<div class="line">    0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,</div>
+<div class="line">    0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad3b730ce2bbb2a81507afdd75d072c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b730ce2bbb2a81507afdd75d072c75">&#9670;&nbsp;</a></span>OS__lit_105</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_105</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x0A, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x4F, 0x53, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a99792295c74df099066aae326fa78436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99792295c74df099066aae326fa78436">&#9670;&nbsp;</a></span>OS__lit_106</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_106</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4B, 0x65, 0x72, 0x6E, 0x65, 0x6C, 0x20, 0x62, 0x75, 0x69, 0x6C, 0x74, 0x20, 0x3A, 0x20, 0x25,</div>
+<div class="line">    0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a17c568e022002848c45e217680c8fbf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c568e022002848c45e217680c8fbf0">&#9670;&nbsp;</a></span>OS__lit_107</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_107</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad3fa25ba06dc5f667f33716dcb29b2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fa25ba06dc5f667f33716dcb29b2b1">&#9670;&nbsp;</a></span>OS__lit_108</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_108</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x30, 0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aec0a88ad576091cafb77112761650e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0a88ad576091cafb77112761650e27">&#9670;&nbsp;</a></span>OS__lit_109</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_109</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x43, 0x6F, 0x6E, 0x73, 0x6F, 0x6C, 0x65, 0x20, 0x54, 0x79, 0x70, 0x65, 0x20, 0x3A, 0x20, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a27df50529a215675a132f165adb2f6e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27df50529a215675a132f165adb2f6e8">&#9670;&nbsp;</a></span>OS__lit_110</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_110</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x52, 0x65, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x25, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a90c39cb984cb3f17953e0b544f913d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c39cb984cb3f17953e0b544f913d24">&#9670;&nbsp;</a></span>OS__lit_113</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_113</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x45, 0x50, 0x50, 0x43, 0x20, 0x41, 0x72, 0x74, 0x68, 0x75, 0x72, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a66ffa2ed13d5bc877b346ce59e2b07c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ffa2ed13d5bc877b346ce59e2b07c7">&#9670;&nbsp;</a></span>OS__lit_115</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_115</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x44, 0x65, 0x76, 0x65, 0x6C, 0x6F, 0x70, 0x6D, 0x65, 0x6E, 0x74, 0x20, 0x48, 0x57, 0x25, 0x64,</div>
+<div class="line">    0x20, 0x28, 0x25, 0x30, 0x38, 0x78, 0x29, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a108b76e2e9c2f4c617feb66b149fa18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a108b76e2e9c2f4c617feb66b149fa18d">&#9670;&nbsp;</a></span>OS__lit_116</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_116[6+2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab4a68b9bff65e25a88ef9b2bc0036cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a68b9bff65e25a88ef9b2bc0036cda">&#9670;&nbsp;</a></span>OS__lit_117</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_117</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x25, 0x64, 0x20, 0x4D, 0x42, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1be88580ec4f62a3c54a9e69df9c7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1be88580ec4f62a3c54a9e69df9c7d0">&#9670;&nbsp;</a></span>OS__lit_118</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_118</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x41, 0x72, 0x65, 0x6E, 0x61, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x2D, 0x20, 0x30,</div>
+<div class="line">    0x78, 0x25, 0x78, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7c619d67de4b808cd2a6b54405bc0914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c619d67de4b808cd2a6b54405bc0914">&#9670;&nbsp;</a></span>OS__lit_152</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_152</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x49, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x69, 0x6E, 0x67, 0x20, 0x4F, 0x53, 0x44, 0x42, 0x49,</div>
+<div class="line">    0x6E, 0x74, 0x65, 0x67, 0x72, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63a10dae624571c793c92af1f06bc62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a10dae624571c793c92af1f06bc62b">&#9670;&nbsp;</a></span>OS__lit_153</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_153</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,</div>
+<div class="line">    0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,</div>
+<div class="line">    0x65, 0x65, 0x72, 0x65, 0x64, 0x20, 0x62, 0x79, 0x20, 0x54, 0x52, 0x4B, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa39c68fdaa3c2104256a87fa06419602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39c68fdaa3c2104256a87fa06419602">&#9670;&nbsp;</a></span>OS__lit_154</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_154</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,</div>
+<div class="line">    0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x76, 0x65, 0x63, 0x74, 0x6F, 0x72, 0x65,</div>
+<div class="line">    0x64, 0x20, 0x74, 0x6F, 0x20, 0x64, 0x65, 0x62, 0x75, 0x67, 0x67, 0x65, 0x72, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4dc66b65792b683731d464c129b0f3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc66b65792b683731d464c129b0f3c0">&#9670;&nbsp;</a></span>OS__lit_155</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OS__lit_155</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69,</div>
+<div class="line">    0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x2E, 0x2E, 0x2E, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a39e660cc3e039da3cb1a04e6bf2604f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e660cc3e039da3cb1a04e6bf2604f1">&#9670;&nbsp;</a></span>OSExceptionTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSExceptionTable[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a1f0ca3990eff4a2d3a068caa01bb28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1f0ca3990eff4a2d3a068caa01bb28">&#9670;&nbsp;</a></span>ZeroF</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> ZeroF</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af500d9c720c5ab08773200336db85b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af500d9c720c5ab08773200336db85b14">&#9670;&nbsp;</a></span>ZeroPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> ZeroPS[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

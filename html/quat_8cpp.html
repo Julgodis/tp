@@ -73,10 +73,268 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">quat.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="quat_8h_source.html">dolphin/mtx/quat.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/quat/PSQUATMultiply.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/quat/C_QUATRotAxisRad.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/quat/C_QUATSlerp.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for quat.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="quat_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5bacef5036c57bc35961d8066de1b053"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a5bacef5036c57bc35961d8066de1b053">PSQUATMultiply</a> ()</td></tr>
+<tr class="separator:a5bacef5036c57bc35961d8066de1b053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0626216bcbf201bbd8824291d3442123"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a0626216bcbf201bbd8824291d3442123">C_QUATRotAxisRad</a> ()</td></tr>
+<tr class="separator:a0626216bcbf201bbd8824291d3442123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa05d31b60c10ba1e3d6f552fbe266f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a0aa05d31b60c10ba1e3d6f552fbe266f">C_QUATSlerp</a> ()</td></tr>
+<tr class="separator:a0aa05d31b60c10ba1e3d6f552fbe266f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#ad147100ce3c1b81ba959b43b39ad5a53">PSVECNormalize</a> ()</td></tr>
+<tr class="separator:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292027392a3fed503320b9fa650ce29d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a292027392a3fed503320b9fa650ce29d">sinf</a> ()</td></tr>
+<tr class="separator:a292027392a3fed503320b9fa650ce29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbf5a634bcf032fd74e706856c29cd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a0fbf5a634bcf032fd74e706856c29cd4">cosf</a> ()</td></tr>
+<tr class="separator:a0fbf5a634bcf032fd74e706856c29cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdc45f1e926f4353c81b57faa719c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#aebdc45f1e926f4353c81b57faa719c79">acosf</a> ()</td></tr>
+<tr class="separator:aebdc45f1e926f4353c81b57faa719c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a675f550f86f753b7a2c2f33f66d3fd93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a675f550f86f753b7a2c2f33f66d3fd93">lit_130</a> [4]</td></tr>
+<tr class="separator:a675f550f86f753b7a2c2f33f66d3fd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d01f13940f53af798e1d739c9bad84e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a1d01f13940f53af798e1d739c9bad84e">quat__lit_133</a> = 1.0f</td></tr>
+<tr class="separator:a1d01f13940f53af798e1d739c9bad84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658b6fdbad4601d23df50f249e5fc807"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#a658b6fdbad4601d23df50f249e5fc807">quat__lit_135</a> = 0.5f</td></tr>
+<tr class="separator:a658b6fdbad4601d23df50f249e5fc807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ad55f9122bab05392294e373bdcd85"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="quat_8cpp.html#aa9ad55f9122bab05392294e373bdcd85">lit_261</a> = 0.9999899864196777f</td></tr>
+<tr class="separator:aa9ad55f9122bab05392294e373bdcd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aebdc45f1e926f4353c81b57faa719c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebdc45f1e926f4353c81b57faa719c79">&#9670;&nbsp;</a></span>acosf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void acosf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0626216bcbf201bbd8824291d3442123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0626216bcbf201bbd8824291d3442123">&#9670;&nbsp;</a></span>C_QUATRotAxisRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_QUATRotAxisRad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0aa05d31b60c10ba1e3d6f552fbe266f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aa05d31b60c10ba1e3d6f552fbe266f">&#9670;&nbsp;</a></span>C_QUATSlerp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void C_QUATSlerp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fbf5a634bcf032fd74e706856c29cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fbf5a634bcf032fd74e706856c29cd4">&#9670;&nbsp;</a></span>cosf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cosf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bacef5036c57bc35961d8066de1b053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bacef5036c57bc35961d8066de1b053">&#9670;&nbsp;</a></span>PSQUATMultiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void PSQUATMultiply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad147100ce3c1b81ba959b43b39ad5a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad147100ce3c1b81ba959b43b39ad5a53">&#9670;&nbsp;</a></span>PSVECNormalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECNormalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a292027392a3fed503320b9fa650ce29d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292027392a3fed503320b9fa650ce29d">&#9670;&nbsp;</a></span>sinf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sinf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a675f550f86f753b7a2c2f33f66d3fd93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675f550f86f753b7a2c2f33f66d3fd93">&#9670;&nbsp;</a></span>lit_130</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_130[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa9ad55f9122bab05392294e373bdcd85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ad55f9122bab05392294e373bdcd85">&#9670;&nbsp;</a></span>lit_261</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_261 = 0.9999899864196777f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d01f13940f53af798e1d739c9bad84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d01f13940f53af798e1d739c9bad84e">&#9670;&nbsp;</a></span>quat__lit_133</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> quat__lit_133 = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a658b6fdbad4601d23df50f249e5fc807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658b6fdbad4601d23df50f249e5fc807">&#9670;&nbsp;</a></span>quat__lit_135</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> quat__lit_135 = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

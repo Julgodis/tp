@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['jkrarchive_5fattr_5fcompression_32399',['JKRARCHIVE_ATTR_COMPRESSION',['../JKRArchive_8h.html#ace8c13163f1d0d0a4d370ea457337753',1,'JKRArchive.h']]],
-  ['jkrarchive_5fattr_5fyay0_32400',['JKRARCHIVE_ATTR_YAY0',['../JKRArchive_8h.html#a446e94e46732a80582e4161a86462273',1,'JKRArchive.h']]],
-  ['jkrdecomp_5fsync_5fblocking_32401',['JKRDECOMP_SYNC_BLOCKING',['../JKRDecomp_8h.html#abf777efb3e61d487ec1af84bcd900f9f',1,'JKRDecomp.h']]],
-  ['jkrdecomp_5fsync_5fnon_5fblocking_32402',['JKRDECOMP_SYNC_NON_BLOCKING',['../JKRDecomp_8h.html#a8fb1bd37ab2259821ffe3341560ca2cf',1,'JKRDecomp.h']]],
-  ['jsu_5ftree_5ffrom_5flink_32403',['JSU_TREE_FROM_LINK',['../JSUList_8h.html#a2b33901e47ea5e7359b30b56460e4cc6',1,'JSUList.h']]],
-  ['jsu_5ftree_5flink_5fif_5fnot_5fnull_32404',['JSU_TREE_LINK_IF_NOT_NULL',['../JSUList_8h.html#a68f5fb9096e57c8df38c00e7270c51c6',1,'JSUList.h']]],
-  ['jut_5fassert_32405',['JUT_ASSERT',['../global_8h.html#a666f8d9f61d842b3b29b0f2782cad2d8',1,'global.h']]],
-  ['jut_5fexpect_32406',['JUT_EXPECT',['../global_8h.html#a45a2bf9a03d4ed09842ad44eae97d1b1',1,'global.h']]]
+  ['section_5fbss_86927',['SECTION_BSS',['../dol2asm_8h.html#a7873e820b6567070fa316a6dac0a74dd',1,'dol2asm.h']]],
+  ['section_5fctors_86928',['SECTION_CTORS',['../dol2asm_8h.html#a344cd9f1efa3d4d358d9d988f604a10d',1,'dol2asm.h']]],
+  ['section_5fdata_86929',['SECTION_DATA',['../dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b',1,'dol2asm.h']]],
+  ['section_5fdead_86930',['SECTION_DEAD',['../dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7',1,'dol2asm.h']]],
+  ['section_5fdtors_86931',['SECTION_DTORS',['../dol2asm_8h.html#a0437b07276494cfa4e5bcf248090266b',1,'dol2asm.h']]],
+  ['section_5fextab_86932',['SECTION_EXTAB',['../dol2asm_8h.html#a44286215b09482bbba1c4c0fcf008369',1,'dol2asm.h']]],
+  ['section_5fextabindex_86933',['SECTION_EXTABINDEX',['../dol2asm_8h.html#a519748bb54f7a7b008aa5413dc405072',1,'dol2asm.h']]],
+  ['section_5finit_86934',['SECTION_INIT',['../dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf',1,'dol2asm.h']]],
+  ['section_5frodata_86935',['SECTION_RODATA',['../dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b',1,'dol2asm.h']]],
+  ['section_5fsbss_86936',['SECTION_SBSS',['../dol2asm_8h.html#a09536a9e7de1a4cecdd62a1686ddbf13',1,'dol2asm.h']]],
+  ['section_5fsbss2_86937',['SECTION_SBSS2',['../dol2asm_8h.html#a4f4769b6050d0b45c649c757062be78d',1,'dol2asm.h']]],
+  ['section_5fsdata_86938',['SECTION_SDATA',['../dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92',1,'dol2asm.h']]],
+  ['section_5fsdata2_86939',['SECTION_SDATA2',['../dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10',1,'dol2asm.h']]]
 ];

@@ -73,10 +73,682 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">GXAttr.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GXAttr_8h_source.html">dolphin/gx/GXAttr.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetVtxDesc.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetVtxDescv.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/__GXSetVCD.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/__GXCalculateVLim.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXClearVtxDesc.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetVtxAttrFmt.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetVtxAttrFmtv.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/__GXSetVAT.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetArray.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXInvalidateVtxCache.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetTexCoordGen2.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/gx/GXAttr/GXSetNumTexGens.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for GXAttr.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="GXAttr_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9576f658455e973120b0a3f040636de1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a> ()</td></tr>
+<tr class="separator:a9576f658455e973120b0a3f040636de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f0e77c71fe95099c993150bca10cab2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a> ()</td></tr>
+<tr class="separator:a5f0e77c71fe95099c993150bca10cab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dabd898f0876e78d31cba11a337cea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a60dabd898f0876e78d31cba11a337cea">__GXSetVCD</a> ()</td></tr>
+<tr class="separator:a60dabd898f0876e78d31cba11a337cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a798ccece01086f40efa2b8071f3247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a1a798ccece01086f40efa2b8071f3247">__GXCalculateVLim</a> ()</td></tr>
+<tr class="separator:a1a798ccece01086f40efa2b8071f3247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeda9a890b80f99bde25c07b6adbbb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#adeda9a890b80f99bde25c07b6adbbb08">GXClearVtxDesc</a> ()</td></tr>
+<tr class="separator:adeda9a890b80f99bde25c07b6adbbb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c52e0b82172a5ccebc9be8362536a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a> ()</td></tr>
+<tr class="separator:af7c52e0b82172a5ccebc9be8362536a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c4da09f08b4a6974c15fd73257bc2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a> ()</td></tr>
+<tr class="separator:a61c4da09f08b4a6974c15fd73257bc2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362d32d64aaac8ccac8152a0d07a4d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a362d32d64aaac8ccac8152a0d07a4d06">__GXSetVAT</a> ()</td></tr>
+<tr class="separator:a362d32d64aaac8ccac8152a0d07a4d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa35943586f0a2cb8b50d0d7311d119"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a2fa35943586f0a2cb8b50d0d7311d119">GXSetArray</a> ()</td></tr>
+<tr class="separator:a2fa35943586f0a2cb8b50d0d7311d119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfcab8658298d99a9529336c8e55f1fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#acfcab8658298d99a9529336c8e55f1fb">GXInvalidateVtxCache</a> ()</td></tr>
+<tr class="separator:acfcab8658298d99a9529336c8e55f1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71bcc96cc7d4a9d330d2be4b5a9548a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a> ()</td></tr>
+<tr class="separator:a71bcc96cc7d4a9d330d2be4b5a9548a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546f2bd89b1c3dc0298389b68c9ae235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a546f2bd89b1c3dc0298389b68c9ae235">GXSetNumTexGens</a> ()</td></tr>
+<tr class="separator:a546f2bd89b1c3dc0298389b68c9ae235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc986317dfe0d4cfb4a0e8563f3fa966"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#adc986317dfe0d4cfb4a0e8563f3fa966">__GXSetMatrixIndex</a> ()</td></tr>
+<tr class="separator:adc986317dfe0d4cfb4a0e8563f3fa966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a67d59b54f9c6f12ea6f3559cd53ca228"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a67d59b54f9c6f12ea6f3559cd53ca228">__GXData</a> = (void*)&amp;<a class="el" href="GXInit_8cpp.html#a94ff76ebb5c2554e10fbff96795c7955">gxData</a></td></tr>
+<tr class="separator:a67d59b54f9c6f12ea6f3559cd53ca228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a47ce79c2ef1d7bbf3ca9a621e606d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#af1a47ce79c2ef1d7bbf3ca9a621e606d">GXAttr__lit_176</a> [26]</td></tr>
+<tr class="separator:af1a47ce79c2ef1d7bbf3ca9a621e606d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca7361dafd5281c6992db13f6c3507fe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#aca7361dafd5281c6992db13f6c3507fe">lit_223</a> [26]</td></tr>
+<tr class="separator:aca7361dafd5281c6992db13f6c3507fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd46dfa5ed2a28a9a171a6f761e1d62f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#acd46dfa5ed2a28a9a171a6f761e1d62f">data_80450A80</a> [4]</td></tr>
+<tr class="separator:acd46dfa5ed2a28a9a171a6f761e1d62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5a39c8f83ca9470928b65c25958ff4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a5e5a39c8f83ca9470928b65c25958ff4">data_80450A84</a> [4]</td></tr>
+<tr class="separator:a5e5a39c8f83ca9470928b65c25958ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813df0bdc4042cb4ff8f33dc734553d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a813df0bdc4042cb4ff8f33dc734553d6">data_80450A88</a> [4+4]</td></tr>
+<tr class="separator:a813df0bdc4042cb4ff8f33dc734553d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045580dd954d39f8b0f66bf3e49fb280"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a045580dd954d39f8b0f66bf3e49fb280">GXAttr__lit_476</a> [17]</td></tr>
+<tr class="separator:a045580dd954d39f8b0f66bf3e49fb280"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ab2f5e1e417f70b982d4499361b63e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#a19ab2f5e1e417f70b982d4499361b63e">GXAttr__lit_503</a> [17]</td></tr>
+<tr class="separator:a19ab2f5e1e417f70b982d4499361b63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d05341dd2175b7147ca0b3aeef7564"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#aa4d05341dd2175b7147ca0b3aeef7564">GXAttr__lit_740</a> [7]</td></tr>
+<tr class="separator:aa4d05341dd2175b7147ca0b3aeef7564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f18e1b61cb77eb504f451c48032cb5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GXAttr_8cpp.html#ad0f18e1b61cb77eb504f451c48032cb5">lit_739</a> [21]</td></tr>
+<tr class="separator:ad0f18e1b61cb77eb504f451c48032cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a1a798ccece01086f40efa2b8071f3247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a798ccece01086f40efa2b8071f3247">&#9670;&nbsp;</a></span>__GXCalculateVLim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __GXCalculateVLim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc986317dfe0d4cfb4a0e8563f3fa966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc986317dfe0d4cfb4a0e8563f3fa966">&#9670;&nbsp;</a></span>__GXSetMatrixIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __GXSetMatrixIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a362d32d64aaac8ccac8152a0d07a4d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362d32d64aaac8ccac8152a0d07a4d06">&#9670;&nbsp;</a></span>__GXSetVAT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __GXSetVAT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60dabd898f0876e78d31cba11a337cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60dabd898f0876e78d31cba11a337cea">&#9670;&nbsp;</a></span>__GXSetVCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __GXSetVCD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adeda9a890b80f99bde25c07b6adbbb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeda9a890b80f99bde25c07b6adbbb08">&#9670;&nbsp;</a></span>GXClearVtxDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXClearVtxDesc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfcab8658298d99a9529336c8e55f1fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfcab8658298d99a9529336c8e55f1fb">&#9670;&nbsp;</a></span>GXInvalidateVtxCache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXInvalidateVtxCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fa35943586f0a2cb8b50d0d7311d119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa35943586f0a2cb8b50d0d7311d119">&#9670;&nbsp;</a></span>GXSetArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXSetArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a546f2bd89b1c3dc0298389b68c9ae235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546f2bd89b1c3dc0298389b68c9ae235">&#9670;&nbsp;</a></span>GXSetNumTexGens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXSetNumTexGens </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71bcc96cc7d4a9d330d2be4b5a9548a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71bcc96cc7d4a9d330d2be4b5a9548a5">&#9670;&nbsp;</a></span>GXSetTexCoordGen2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXSetTexCoordGen2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c52e0b82172a5ccebc9be8362536a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c52e0b82172a5ccebc9be8362536a4">&#9670;&nbsp;</a></span>GXSetVtxAttrFmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXSetVtxAttrFmt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61c4da09f08b4a6974c15fd73257bc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c4da09f08b4a6974c15fd73257bc2f">&#9670;&nbsp;</a></span>GXSetVtxAttrFmtv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void GXSetVtxAttrFmtv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9576f658455e973120b0a3f040636de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9576f658455e973120b0a3f040636de1">&#9670;&nbsp;</a></span>GXSetVtxDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GXSetVtxDesc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f0e77c71fe95099c993150bca10cab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f0e77c71fe95099c993150bca10cab2">&#9670;&nbsp;</a></span>GXSetVtxDescv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void GXSetVtxDescv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a67d59b54f9c6f12ea6f3559cd53ca228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d59b54f9c6f12ea6f3559cd53ca228">&#9670;&nbsp;</a></span>__GXData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> void * __GXData = (void*)&amp;<a class="el" href="GXInit_8cpp.html#a94ff76ebb5c2554e10fbff96795c7955">gxData</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd46dfa5ed2a28a9a171a6f761e1d62f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd46dfa5ed2a28a9a171a6f761e1d62f">&#9670;&nbsp;</a></span>data_80450A80</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_80450A80[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x04, 0x01, 0x02,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5e5a39c8f83ca9470928b65c25958ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5a39c8f83ca9470928b65c25958ff4">&#9670;&nbsp;</a></span>data_80450A84</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_80450A84[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x08, 0x01, 0x02,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a813df0bdc4042cb4ff8f33dc734553d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813df0bdc4042cb4ff8f33dc734553d6">&#9670;&nbsp;</a></span>data_80450A88</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_80450A88[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x0C, 0x01, 0x02,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1a47ce79c2ef1d7bbf3ca9a621e606d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a47ce79c2ef1d7bbf3ca9a621e606d">&#9670;&nbsp;</a></span>GXAttr__lit_176</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* GXAttr__lit_176[26]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x20),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x34),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x48),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x5C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x70),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x84),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0xAC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0xC0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0xD4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0xE8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x150),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x164),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x178),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x18C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x1A0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x1B4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x1C8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x1DC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x1F0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x204),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x214),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x214),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x214),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x214),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a>)+0x11C),</div>
+<div class="line">}</div>
+<div class="ttc" id="aGXAttr_8cpp_html_a9576f658455e973120b0a3f040636de1"><div class="ttname"><a href="GXAttr_8cpp.html#a9576f658455e973120b0a3f040636de1">GXSetVtxDesc</a></div><div class="ttdeci">void GXSetVtxDesc()</div><div class="ttdef"><b>Definition:</b> GXAttr.cpp:75</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a045580dd954d39f8b0f66bf3e49fb280"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a045580dd954d39f8b0f66bf3e49fb280">&#9670;&nbsp;</a></span>GXAttr__lit_476</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* GXAttr__lit_476[17]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x3C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x64),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0xB8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0xD4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0xF0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x118),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x140),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x168),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x190),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x1B8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x1E0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x208),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x22C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x22C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x22C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x22C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a>)+0x64),</div>
+<div class="line">}</div>
+<div class="ttc" id="aGXAttr_8cpp_html_af7c52e0b82172a5ccebc9be8362536a4"><div class="ttname"><a href="GXAttr_8cpp.html#af7c52e0b82172a5ccebc9be8362536a4">GXSetVtxAttrFmt</a></div><div class="ttdeci">void GXSetVtxAttrFmt()</div><div class="ttdef"><b>Definition:</b> GXAttr.cpp:201</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a19ab2f5e1e417f70b982d4499361b63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19ab2f5e1e417f70b982d4499361b63e">&#9670;&nbsp;</a></span>GXAttr__lit_503</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* GXAttr__lit_503[17]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x50),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x78),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0xCC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0xE8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x104),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x12C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x154),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x17C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x1A4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x1CC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x1F4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x21C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x240),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x240),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x240),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x240),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a>)+0x78),</div>
+<div class="line">}</div>
+<div class="ttc" id="aGXAttr_8cpp_html_a61c4da09f08b4a6974c15fd73257bc2f"><div class="ttname"><a href="GXAttr_8cpp.html#a61c4da09f08b4a6974c15fd73257bc2f">GXSetVtxAttrFmtv</a></div><div class="ttdeci">void GXSetVtxAttrFmtv()</div><div class="ttdef"><b>Definition:</b> GXAttr.cpp:234</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa4d05341dd2175b7147ca0b3aeef7564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d05341dd2175b7147ca0b3aeef7564">&#9670;&nbsp;</a></span>GXAttr__lit_740</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* GXAttr__lit_740[7]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x1CC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x1E0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x1F4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x208),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x21C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x230),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x244),</div>
+<div class="line">}</div>
+<div class="ttc" id="aGXAttr_8cpp_html_a71bcc96cc7d4a9d330d2be4b5a9548a5"><div class="ttname"><a href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a></div><div class="ttdeci">void GXSetTexCoordGen2()</div><div class="ttdef"><b>Definition:</b> GXAttr.cpp:315</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aca7361dafd5281c6992db13f6c3507fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7361dafd5281c6992db13f6c3507fe">&#9670;&nbsp;</a></span>lit_223</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* lit_223[26]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x2C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x54),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x68),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x7C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0xA4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0xB8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0xCC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0xE0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0xF4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x15C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x170),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x184),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x198),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x1AC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x1C0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x1D4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x1E8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x1FC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x210),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x220),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x220),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x220),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x220),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a>)+0x128),</div>
+<div class="line">}</div>
+<div class="ttc" id="aGXAttr_8cpp_html_a5f0e77c71fe95099c993150bca10cab2"><div class="ttname"><a href="GXAttr_8cpp.html#a5f0e77c71fe95099c993150bca10cab2">GXSetVtxDescv</a></div><div class="ttdeci">static void GXSetVtxDescv()</div><div class="ttdef"><b>Definition:</b> GXAttr.cpp:117</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad0f18e1b61cb77eb504f451c48032cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f18e1b61cb77eb504f451c48032cb5">&#9670;&nbsp;</a></span>lit_739</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* lit_739[21]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x38),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x44),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x50),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x5C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x78),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x80),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x88),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xA0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xA8),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0xB4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x68),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="GXAttr_8cpp.html#a71bcc96cc7d4a9d330d2be4b5a9548a5">GXSetTexCoordGen2</a>)+0x70),</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

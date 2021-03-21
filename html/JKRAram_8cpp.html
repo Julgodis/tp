@@ -74,137 +74,324 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">JKRAram.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="JKRAram_8h_source.html">JSystem/JKernel/JKRAram/JKRAram.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRAramBlock_8h_source.html">JSystem/JKernel/JKRAramBlock/JKRAramBlock.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRAramHeap_8h_source.html">JSystem/JKernel/JKRAramHeap/JKRAramHeap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRAramPiece_8h_source.html">JSystem/JKernel/JKRAramPiece/JKRAramPiece.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRAramStream_8h_source.html">JSystem/JKernel/JKRAramStream/JKRAramStream.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="JKRExpHeap_8h_source.html">JSystem/JKernel/JKRExpHeap/JKRExpHeap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">msl_c/string.h</a>&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D21DC.s&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D233C.s&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D25B4.s&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D2830.s&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D29A0.s&quot;</code><br />
-<code>#include &quot;JSystem/JKernel/JKRAram/asm/func_802D2CE4.s&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="JKRAram_8h_source.html">JSystem/JKernel/JKRAram.h</a>&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/create__7JKRAramFUlUllll.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/__ct__7JKRAramFUlUll.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/__dt__7JKRAramFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/run__7JKRAramFv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/changeGroupIdIfNeed__7JKRAramFPUci.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/JKRAram__decompSZS_subroutine__FPUcPUc.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/JKRAram__firstSrcData__Fv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/JKRAram__nextSrcData__FPUc.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/__sinit_JKRAram_cpp.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRAram/func_802D2DF0.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JKRAram.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JKRAram_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="JKRAram_8cpp__incl.svg" width="100%" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRExpandSwitch.html">JKRExpandSwitch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAramBlock.html">JKRAramBlock</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAram.html">JKRAram</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJSUList.html">JSUList&lt; A0 &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJSUList____template5.html">JSUList__template5</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRThread.html">JKRThread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAramHeap.html">JKRAramHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAramHeap_1_1EAllocMode.html">JKRAramHeap::EAllocMode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAMCommand.html">JKRAMCommand</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAramPiece.html">JKRAramPiece</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRAramStream.html">JKRAramStream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRDecomp.html">JKRDecomp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJSUPtrList.html">JSUPtrList</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTException.html">JUTException</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9be61384cd32b9eb630f88dfef31d461"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9be61384cd32b9eb630f88dfef31d461">__dl__FPv</a> (void)</td></tr>
-<tr class="separator:a9be61384cd32b9eb630f88dfef31d461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a886e64a4b76cb88006e277dfe878e179"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a886e64a4b76cb88006e277dfe878e179">__RAS_OSDisableInterrupts_begin</a> (void)</td></tr>
-<tr class="separator:a886e64a4b76cb88006e277dfe878e179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae0b394d48cd74529358568680f91f5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aae0b394d48cd74529358568680f91f5b">alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode</a> (void)</td></tr>
-<tr class="separator:aae0b394d48cd74529358568680f91f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65eb454d208a4fd7d06be0cecdc71645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a65eb454d208a4fd7d06be0cecdc71645">alloc__7JKRHeapFUli</a> (void)</td></tr>
-<tr class="separator:a65eb454d208a4fd7d06be0cecdc71645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe71f830b8a3d0f7afbdcca9135fe8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abe71f830b8a3d0f7afbdcca9135fe8cf">alloc__7JKRHeapFUliP7JKRHeap</a> (void)</td></tr>
-<tr class="separator:abe71f830b8a3d0f7afbdcca9135fe8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a1cc23105190832eed7c53fef866b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a00a1cc23105190832eed7c53fef866b8">changeGroupIdIfNeed__7JKRAramFPUci</a> (void)</td></tr>
-<tr class="separator:a00a1cc23105190832eed7c53fef866b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1d3689b89017c7933bf5cab5d8185d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa1d3689b89017c7933bf5cab5d8185d6">checkCompressed__9JKRDecompFPUc</a> (void)</td></tr>
-<tr class="separator:aa1d3689b89017c7933bf5cab5d8185d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e3f4493572c34219c22f12fab5735bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6e3f4493572c34219c22f12fab5735bb">checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl</a> (void)</td></tr>
-<tr class="separator:a6e3f4493572c34219c22f12fab5735bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9381054a89f43d123db671932ae2e25b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9381054a89f43d123db671932ae2e25b">DCStoreRangeNoSync</a> (void)</td></tr>
-<tr class="separator:a9381054a89f43d123db671932ae2e25b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5c6934c0335565f9a9a005ce34b7f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab5c6934c0335565f9a9a005ce34b7f39">decompSZS_subroutine__FPUcPUc</a> (void)</td></tr>
-<tr class="separator:ab5c6934c0335565f9a9a005ce34b7f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e04bca665537b33401b98d6d700252e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a5e04bca665537b33401b98d6d700252e">firstSrcData__Fv</a> (void)</td></tr>
-<tr class="separator:a5e04bca665537b33401b98d6d700252e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f6448f349403cbbab3c5b5879acb8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8f6448f349403cbbab3c5b5879acb8a4">free__7JKRHeapFPvP7JKRHeap</a> (void)</td></tr>
-<tr class="separator:a8f6448f349403cbbab3c5b5879acb8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9070637b70efd8e967bec78dbded6900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9070637b70efd8e967bec78dbded6900">JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl</a> (void)</td></tr>
-<tr class="separator:a9070637b70efd8e967bec78dbded6900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90730dfad239736d7e7f7bbc52ec90fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a90730dfad239736d7e7f7bbc52ec90fb">panic_f__12JUTExceptionFPCciPCce</a> (const char *filename, int line, const char *format,...)</td></tr>
-<tr class="separator:a90730dfad239736d7e7f7bbc52ec90fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27360973c282f793686deb69c252ebcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a27360973c282f793686deb69c252ebcf">nextSrcData__FPUc</a> (void)</td></tr>
-<tr class="separator:a27360973c282f793686deb69c252ebcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ee733957c48378e183292c2b931c9ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9ee733957c48378e183292c2b931c9ac">orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock</a> (void)</td></tr>
-<tr class="separator:a9ee733957c48378e183292c2b931c9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf215e9bc1cf3c798e1464697eb24e9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#adf215e9bc1cf3c798e1464697eb24e9f">orderSync__9JKRDecompFPUcPUcUlUl</a> (void)</td></tr>
-<tr class="separator:adf215e9bc1cf3c798e1464697eb24e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a9a020ade8934133961bac4d01a6d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a92a9a020ade8934133961bac4d01a6d7">startDMA__12JKRAramPieceFP12JKRAMCommand</a> (void)</td></tr>
-<tr class="separator:a92a9a020ade8934133961bac4d01a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3523ec7b788f1f2b14ab7899b414a85d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a3523ec7b788f1f2b14ab7899b414a85d">decompSZS_subroutine</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)</td></tr>
-<tr class="separator:a3523ec7b788f1f2b14ab7899b414a85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a393c7b38b8d59d6d222f002bedea3162"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a393c7b38b8d59d6d222f002bedea3162">firstSrcData</a> (void)</td></tr>
-<tr class="separator:a393c7b38b8d59d6d222f002bedea3162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addf3e20a7141b3d98770ec00d68e238c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#addf3e20a7141b3d98770ec00d68e238c">nextSrcData</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)</td></tr>
-<tr class="separator:addf3e20a7141b3d98770ec00d68e238c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5869789811126408f9c69ac02863b18"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ae5869789811126408f9c69ac02863b18">JKRDecompressFromAramToMainRam</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> src, void *dst, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> srcLength, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> dstLength, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> offset, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> *resourceSize)</td></tr>
-<tr class="separator:ae5869789811126408f9c69ac02863b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecbb8d8e0105f99bb86a9548521d0ec8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aecbb8d8e0105f99bb86a9548521d0ec8">JKRDecompressFromAramToMainRam</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, void *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> *)</td></tr>
+<tr class="separator:aecbb8d8e0105f99bb86a9548521d0ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede703f7678516f57c272b7e0af60cbb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aede703f7678516f57c272b7e0af60cbb">decompSZS_subroutine</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *, <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)</td></tr>
+<tr class="separator:aede703f7678516f57c272b7e0af60cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e49a98712f029af3397195b32bef29"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a99e49a98712f029af3397195b32bef29">firstSrcData</a> ()</td></tr>
+<tr class="separator:a99e49a98712f029af3397195b32bef29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde7811580303adcaeb549c7d46a1cef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#adde7811580303adcaeb549c7d46a1cef">nextSrcData</a> (<a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)</td></tr>
+<tr class="separator:adde7811580303adcaeb549c7d46a1cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6343a1a522f7ab0aa2cabe134adc15b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6343a1a522f7ab0aa2cabe134adc15b7">create__7JKRAramFUlUllll</a> ()</td></tr>
+<tr class="separator:a6343a1a522f7ab0aa2cabe134adc15b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1577be232cdea4c91eb4b4b5634fa502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a1577be232cdea4c91eb4b4b5634fa502">__ct__7JKRAramFUlUll</a> ()</td></tr>
+<tr class="separator:a1577be232cdea4c91eb4b4b5634fa502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32ae0a85577a3e15e5ccea51d68ed5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa32ae0a85577a3e15e5ccea51d68ed5d">__dt__7JKRAramFv</a> ()</td></tr>
+<tr class="separator:aa32ae0a85577a3e15e5ccea51d68ed5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3196569e0135a64040e6f0655cde0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a2e3196569e0135a64040e6f0655cde0f">run__7JKRAramFv</a> ()</td></tr>
+<tr class="separator:a2e3196569e0135a64040e6f0655cde0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89dac43fa337fef8556954bf7fb3b6ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a89dac43fa337fef8556954bf7fb3b6ae">checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl</a> ()</td></tr>
+<tr class="separator:a89dac43fa337fef8556954bf7fb3b6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b484ea3e82de3bc7b8c48530ec5f70d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4b484ea3e82de3bc7b8c48530ec5f70d">changeGroupIdIfNeed__7JKRAramFPUci</a> ()</td></tr>
+<tr class="separator:a4b484ea3e82de3bc7b8c48530ec5f70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a339565e1df4caf6e10fbd9e27256faec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a339565e1df4caf6e10fbd9e27256faec">mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl</a> ()</td></tr>
+<tr class="separator:a339565e1df4caf6e10fbd9e27256faec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e8e3e8f67e21730dc150d55f259772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a65e8e3e8f67e21730dc150d55f259772">aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl</a> ()</td></tr>
+<tr class="separator:a65e8e3e8f67e21730dc150d55f259772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0fd8fa9c74517f3abd33a0ddba07e9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4a0fd8fa9c74517f3abd33a0ddba07e9">JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl</a> ()</td></tr>
+<tr class="separator:a4a0fd8fa9c74517f3abd33a0ddba07e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65cf5cc2bf198d2c697765bae49708c9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a65cf5cc2bf198d2c697765bae49708c9">JKRAram__decompSZS_subroutine__FPUcPUc</a> ()</td></tr>
+<tr class="separator:a65cf5cc2bf198d2c697765bae49708c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02667f284fa4d6e231ad46575ef66044"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a02667f284fa4d6e231ad46575ef66044">JKRAram__firstSrcData__Fv</a> ()</td></tr>
+<tr class="separator:a02667f284fa4d6e231ad46575ef66044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd53f17f3016792c0762a6c6ecc5f67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#acdd53f17f3016792c0762a6c6ecc5f67">JKRAram__nextSrcData__FPUc</a> ()</td></tr>
+<tr class="separator:acdd53f17f3016792c0762a6c6ecc5f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8016053e51c8d3801f0b164e06c9005b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8016053e51c8d3801f0b164e06c9005b">__sinit_JKRAram_cpp</a> ()</td></tr>
+<tr class="separator:a8016053e51c8d3801f0b164e06c9005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab0dd9c10f3beca8f37118c000466c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abab0dd9c10f3beca8f37118c000466c5">func_802D2DF0</a> ()</td></tr>
+<tr class="separator:abab0dd9c10f3beca8f37118c000466c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58200a5202aa4a094697387f8d509a77"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a58200a5202aa4a094697387f8d509a77">operator new</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="structJKRHeap.html">JKRHeap</a> *, int)</td></tr>
+<tr class="separator:a58200a5202aa4a094697387f8d509a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581ac9487348557df9e0f9bd828952af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a581ac9487348557df9e0f9bd828952af">operator delete</a> (void *)</td></tr>
+<tr class="separator:a581ac9487348557df9e0f9bd828952af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6bb37288ea54f2151b2ecd4d4ccf3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#afc6bb37288ea54f2151b2ecd4d4ccf3b">memcpy</a> ()</td></tr>
+<tr class="separator:afc6bb37288ea54f2151b2ecd4d4ccf3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50822d5e9b3169cfa601e786f9cb374e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a50822d5e9b3169cfa601e786f9cb374e">alloc__7JKRHeapFUliP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a50822d5e9b3169cfa601e786f9cb374e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68efb2a511dab9425f5d413faf0b4df6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a68efb2a511dab9425f5d413faf0b4df6">alloc__7JKRHeapFUli</a> ()</td></tr>
+<tr class="separator:a68efb2a511dab9425f5d413faf0b4df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c963c3e10e5fb046f48cbcd6d6472f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0c963c3e10e5fb046f48cbcd6d6472f2">free__7JKRHeapFPvP7JKRHeap</a> ()</td></tr>
+<tr class="separator:a0c963c3e10e5fb046f48cbcd6d6472f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa7378e3c64fb68c851b08de3a2a355"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abfa7378e3c64fb68c851b08de3a2a355">__nw__FUlP7JKRHeapi</a> ()</td></tr>
+<tr class="separator:abfa7378e3c64fb68c851b08de3a2a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
+<tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30134b2343660b27a0f865c65ca05ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ae30134b2343660b27a0f865c65ca05ad">__ct__9JKRThreadFUlii</a> ()</td></tr>
+<tr class="separator:ae30134b2343660b27a0f865c65ca05ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b8e393760e1451f4d2fc876cc86295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a34b8e393760e1451f4d2fc876cc86295">__dt__9JKRThreadFv</a> ()</td></tr>
+<tr class="separator:a34b8e393760e1451f4d2fc876cc86295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e4ab732d3792d06f316b993b186eed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a59e4ab732d3792d06f316b993b186eed">__ct__11JKRAramHeapFUlUl</a> ()</td></tr>
+<tr class="separator:a59e4ab732d3792d06f316b993b186eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226a2060e32aa80ff10e7c6a45b2790e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a226a2060e32aa80ff10e7c6a45b2790e">alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode</a> ()</td></tr>
+<tr class="separator:a226a2060e32aa80ff10e7c6a45b2790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b402df4c5d26196aa20546343bec78e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0b402df4c5d26196aa20546343bec78e">orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock</a> ()</td></tr>
+<tr class="separator:a0b402df4c5d26196aa20546343bec78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ce47a27441601ab3106b63520485bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a91ce47a27441601ab3106b63520485bb">startDMA__12JKRAramPieceFP12JKRAMCommand</a> ()</td></tr>
+<tr class="separator:a91ce47a27441601ab3106b63520485bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db5cad6ce94d5d30bc99985466abb88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6db5cad6ce94d5d30bc99985466abb88">create__13JKRAramStreamFl</a> ()</td></tr>
+<tr class="separator:a6db5cad6ce94d5d30bc99985466abb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfa31c31af2af0e645bafa3938276f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8cfa31c31af2af0e645bafa3938276f3">create__9JKRDecompFl</a> ()</td></tr>
+<tr class="separator:a8cfa31c31af2af0e645bafa3938276f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d97367d70f60613ffb7fe17317d5482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6d97367d70f60613ffb7fe17317d5482">orderSync__9JKRDecompFPUcPUcUlUl</a> ()</td></tr>
+<tr class="separator:a6d97367d70f60613ffb7fe17317d5482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f70d07de3157f05bd11ba7264ae8fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ac0f70d07de3157f05bd11ba7264ae8fd">checkCompressed__9JKRDecompFPUc</a> ()</td></tr>
+<tr class="separator:ac0f70d07de3157f05bd11ba7264ae8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad169dce2c1d6d6192840f04eef6a7359"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ad169dce2c1d6d6192840f04eef6a7359">__dt__10JSUPtrListFv</a> ()</td></tr>
+<tr class="separator:ad169dce2c1d6d6192840f04eef6a7359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a33915af65a90059928e122f720e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a59a33915af65a90059928e122f720e44">initiate__10JSUPtrListFv</a> ()</td></tr>
+<tr class="separator:a59a33915af65a90059928e122f720e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5af1df4bd804c83ba7726611a5d3916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ae5af1df4bd804c83ba7726611a5d3916">panic_f__12JUTExceptionFPCciPCce</a> ()</td></tr>
+<tr class="separator:ae5af1df4bd804c83ba7726611a5d3916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad447114b3d91ab5c0a9dc74c6da0b71c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ad447114b3d91ab5c0a9dc74c6da0b71c">DCStoreRangeNoSync</a> ()</td></tr>
+<tr class="separator:ad447114b3d91ab5c0a9dc74c6da0b71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a65b7dd4c9756f26d16dcf8f0dedb07bf">OSDisableInterrupts</a> ()</td></tr>
+<tr class="separator:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a14b5cc2befa83d8710fba14f4de14fd9">OSRestoreInterrupts</a> ()</td></tr>
+<tr class="separator:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35bf20443ae3d3166ff1139f3cd98201"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a35bf20443ae3d3166ff1139f3cd98201">OSInitMessageQueue</a> ()</td></tr>
+<tr class="separator:a35bf20443ae3d3166ff1139f3cd98201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4e639b17c1e988fa8071898bf0334a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4f4e639b17c1e988fa8071898bf0334a">OSReceiveMessage</a> ()</td></tr>
+<tr class="separator:a4f4e639b17c1e988fa8071898bf0334a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0479ff9acf9dce313eca521393718388"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0479ff9acf9dce313eca521393718388">OSInitMutex</a> ()</td></tr>
+<tr class="separator:a0479ff9acf9dce313eca521393718388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3cc032bb3c6864dcd79c297743c4b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ac3cc032bb3c6864dcd79c297743c4b6c">OSLockMutex</a> ()</td></tr>
+<tr class="separator:ac3cc032bb3c6864dcd79c297743c4b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1d6e851f76276d5bbcfd37f2005628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4f1d6e851f76276d5bbcfd37f2005628">OSUnlockMutex</a> ()</td></tr>
+<tr class="separator:a4f1d6e851f76276d5bbcfd37f2005628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f96c218acfbd8f92b48607ed3e06598"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9f96c218acfbd8f92b48607ed3e06598">OSResumeThread</a> ()</td></tr>
+<tr class="separator:a9f96c218acfbd8f92b48607ed3e06598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655a0fff9fdb1b74f4213abc836e9547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a655a0fff9fdb1b74f4213abc836e9547">ARAlloc</a> ()</td></tr>
+<tr class="separator:a655a0fff9fdb1b74f4213abc836e9547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655aa8aa5339964ef8d20f498c743737"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a655aa8aa5339964ef8d20f498c743737">ARInit</a> ()</td></tr>
+<tr class="separator:a655aa8aa5339964ef8d20f498c743737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0ddeafc79634f4c2f2213f4b6b1ca5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aca0ddeafc79634f4c2f2213f4b6b1ca5">ARGetSize</a> ()</td></tr>
+<tr class="separator:aca0ddeafc79634f4c2f2213f4b6b1ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282f38aa9c73feb039197e350089cb9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a282f38aa9c73feb039197e350089cb9e">ARQInit</a> ()</td></tr>
+<tr class="separator:a282f38aa9c73feb039197e350089cb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cea59a88b9016eb884c7c20cdc3a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a75cea59a88b9016eb884c7c20cdc3a21">__register_global_object</a> ()</td></tr>
+<tr class="separator:a75cea59a88b9016eb884c7c20cdc3a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab005390d5a49aad5909569f937a00215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab005390d5a49aad5909569f937a00215">_savegpr_22</a> ()</td></tr>
+<tr class="separator:ab005390d5a49aad5909569f937a00215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5749e2c74495633f05da725d7b4e38e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a5749e2c74495633f05da725d7b4e38e8">_savegpr_23</a> ()</td></tr>
+<tr class="separator:a5749e2c74495633f05da725d7b4e38e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fb5b02bb14a176b115397be03bbe99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a58fb5b02bb14a176b115397be03bbe99">_savegpr_25</a> ()</td></tr>
+<tr class="separator:a58fb5b02bb14a176b115397be03bbe99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b2b992407cf48ba98905b417420685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa8b2b992407cf48ba98905b417420685">_savegpr_27</a> ()</td></tr>
+<tr class="separator:aa8b2b992407cf48ba98905b417420685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96be8c79baacd021a226016df5297c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a96be8c79baacd021a226016df5297c51">_savegpr_28</a> ()</td></tr>
+<tr class="separator:a96be8c79baacd021a226016df5297c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3662cd06864ff7627d5424c192e6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a5f3662cd06864ff7627d5424c192e6f2">_savegpr_29</a> ()</td></tr>
+<tr class="separator:a5f3662cd06864ff7627d5424c192e6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3882b952263b3390250bf0142a47e57d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a3882b952263b3390250bf0142a47e57d">_restgpr_22</a> ()</td></tr>
+<tr class="separator:a3882b952263b3390250bf0142a47e57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778466826efe33e53ffca7d528cfcd23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a778466826efe33e53ffca7d528cfcd23">_restgpr_23</a> ()</td></tr>
+<tr class="separator:a778466826efe33e53ffca7d528cfcd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07802390ec789d585ab9991a261e4ee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a07802390ec789d585ab9991a261e4ee5">_restgpr_25</a> ()</td></tr>
+<tr class="separator:a07802390ec789d585ab9991a261e4ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdca0eb87578e0952b66387b093d81f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#afdca0eb87578e0952b66387b093d81f3">_restgpr_27</a> ()</td></tr>
+<tr class="separator:afdca0eb87578e0952b66387b093d81f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f61243ebf5cbb2ff90548d397b16772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a3f61243ebf5cbb2ff90548d397b16772">_restgpr_28</a> ()</td></tr>
+<tr class="separator:a3f61243ebf5cbb2ff90548d397b16772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed5bd59c54272a132a5b4da4beff66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abed5bd59c54272a132a5b4da4beff66d">_restgpr_29</a> ()</td></tr>
+<tr class="separator:abed5bd59c54272a132a5b4da4beff66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0a4aa498aed4b4b9e43c56fb203996a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0a4aa498aed4b4b9e43c56fb203996a5">lbl_803CC158</a></td></tr>
-<tr class="separator:a0a4aa498aed4b4b9e43c56fb203996a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd7514e27e0798e3b83a4e3c1f4cf8b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structOSMessageQueue.html">OSMessageQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abd7514e27e0798e3b83a4e3c1f4cf8b6">sMessageQueue__7JKRAram</a></td></tr>
-<tr class="separator:abd7514e27e0798e3b83a4e3c1f4cf8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0109ffed856e42b99e115fc3f5e5f219"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0109ffed856e42b99e115fc3f5e5f219">lbl_804513FC</a></td></tr>
-<tr class="separator:a0109ffed856e42b99e115fc3f5e5f219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4b35d5ebbddac522a92e57a46cc00e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structOSMutex.html">OSMutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#af4b35d5ebbddac522a92e57a46cc00e7">lbl_804342E8</a></td></tr>
-<tr class="separator:af4b35d5ebbddac522a92e57a46cc00e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa200f86790ddd90739732abd07c02993"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa200f86790ddd90739732abd07c02993">lbl_804342D0</a></td></tr>
-<tr class="separator:aa200f86790ddd90739732abd07c02993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9345d52ac59b914d9640dad83070add5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9345d52ac59b914d9640dad83070add5">sAramCommandList__7JKRAram</a></td></tr>
-<tr class="separator:a9345d52ac59b914d9640dad83070add5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd9609faa6fe9123e720a028d3c5de6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a3cd9609faa6fe9123e720a028d3c5de6">sSZSBufferSize__7JKRAram</a></td></tr>
-<tr class="separator:a3cd9609faa6fe9123e720a028d3c5de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6fd60ab90c5c8a60642c896aaf0f5c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ad6fd60ab90c5c8a60642c896aaf0f5c4">sMessageBuffer__7JKRAram</a></td></tr>
-<tr class="separator:ad6fd60ab90c5c8a60642c896aaf0f5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42280e49b90596c0ff7f406d82d73e1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a42280e49b90596c0ff7f406d82d73e1c">JKRAram__szpBuf</a></td></tr>
-<tr class="separator:a42280e49b90596c0ff7f406d82d73e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac222eaeaeb6a2fe73193efcfd65dc3e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ac222eaeaeb6a2fe73193efcfd65dc3e4">JKRAram__szpEnd</a></td></tr>
-<tr class="separator:ac222eaeaeb6a2fe73193efcfd65dc3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab28eea4d2ec7f05cc97cf992df64e94a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab28eea4d2ec7f05cc97cf992df64e94a">JKRAram__refBuf</a></td></tr>
-<tr class="separator:ab28eea4d2ec7f05cc97cf992df64e94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa21347a72fdfc2d541484dcfa38f47c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aaa21347a72fdfc2d541484dcfa38f47c">JKRAram__refEnd</a></td></tr>
-<tr class="separator:aaa21347a72fdfc2d541484dcfa38f47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe853952d1749ede6146abe29b206b7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#afe853952d1749ede6146abe29b206b7f">JKRAram__refCurrent</a></td></tr>
-<tr class="separator:afe853952d1749ede6146abe29b206b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ccd9401adfa99b17b84f9e6a9af9cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab2ccd9401adfa99b17b84f9e6a9af9cb">JKRAram__srcOffset</a></td></tr>
-<tr class="separator:ab2ccd9401adfa99b17b84f9e6a9af9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0f04ba5435c9eecb188f9a36c92d59f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab0f04ba5435c9eecb188f9a36c92d59f">JKRAram__transLeft</a></td></tr>
-<tr class="separator:ab0f04ba5435c9eecb188f9a36c92d59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1a59ce6b157d0f3d8fa0ab8b2e2d9da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ae1a59ce6b157d0f3d8fa0ab8b2e2d9da">JKRAram__srcLimit</a></td></tr>
-<tr class="separator:ae1a59ce6b157d0f3d8fa0ab8b2e2d9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d5af84d87513859308ff603e0e120f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ad9d5af84d87513859308ff603e0e120f">JKRAram__srcAddress</a></td></tr>
-<tr class="separator:ad9d5af84d87513859308ff603e0e120f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56887e33b2d31ddd3ac05ec8e58d5ae5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a56887e33b2d31ddd3ac05ec8e58d5ae5">JKRAram__fileOffset</a></td></tr>
-<tr class="separator:a56887e33b2d31ddd3ac05ec8e58d5ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a2f70a71c8f32bfc982839344c196bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a5a2f70a71c8f32bfc982839344c196bf">JKRAram__readCount</a></td></tr>
-<tr class="separator:a5a2f70a71c8f32bfc982839344c196bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abad8819caddd3a342951e479e1babd8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abad8819caddd3a342951e479e1babd8e">JKRAram__maxDest</a></td></tr>
-<tr class="separator:abad8819caddd3a342951e479e1babd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2a26e36b7bf4d7bbf32def3f793833b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa2a26e36b7bf4d7bbf32def3f793833b">JKRAram__tsPtr</a></td></tr>
-<tr class="separator:aa2a26e36b7bf4d7bbf32def3f793833b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa06dd5f8c530f40eadb2bf369088f9d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aa06dd5f8c530f40eadb2bf369088f9d9">JKRAram__tsArea</a></td></tr>
-<tr class="separator:aa06dd5f8c530f40eadb2bf369088f9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4541a503d57f8a770c2db63d30e46f73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classJKRExpHeap.html">JKRExpHeap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4541a503d57f8a770c2db63d30e46f73">sSystemHeap__7JKRHeap</a></td></tr>
-<tr class="separator:a4541a503d57f8a770c2db63d30e46f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45e813b7c6cdb33ef3f0ea6e8eda7543"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a45e813b7c6cdb33ef3f0ea6e8eda7543">lbl_8039D0A6</a> = &quot;bad aramSync\n&quot;</td></tr>
-<tr class="separator:a45e813b7c6cdb33ef3f0ea6e8eda7543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea535219056164118ddf33cb6a93343"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8ea535219056164118ddf33cb6a93343">lbl_8039D0B4</a> = &quot;\x00\x00\x00&quot;</td></tr>
-<tr class="separator:a8ea535219056164118ddf33cb6a93343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e04bc732ff99e69562476575a647aa8"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a4e04bc732ff99e69562476575a647aa8">JKRAram__stringBase0</a></td></tr>
+<tr class="separator:a4e04bc732ff99e69562476575a647aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dce078758815c8136111e834709b96d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a7dce078758815c8136111e834709b96d">sMessageQueue__7JKRAram</a> [32]</td></tr>
+<tr class="separator:a7dce078758815c8136111e834709b96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e351528352cf30d91c3d4e163f95f98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6e351528352cf30d91c3d4e163f95f98">sSZSBufferSize__7JKRAram</a> [1+1]</td></tr>
+<tr class="separator:a6e351528352cf30d91c3d4e163f95f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1981e5e29bc6546d77174c6763b98c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a1981e5e29bc6546d77174c6763b98c69">sAramObject__7JKRAram</a> [4]</td></tr>
+<tr class="separator:a1981e5e29bc6546d77174c6763b98c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2560338b58a7b440b0e94ea6217fef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ab2560338b58a7b440b0e94ea6217fef7">sSystemHeap__7JKRHeap</a> [4]</td></tr>
+<tr class="separator:ab2560338b58a7b440b0e94ea6217fef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec5e1d1ec38494498d5f453a709c09a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a5ec5e1d1ec38494498d5f453a709c09a">sCurrentHeap__7JKRHeap</a> [4]</td></tr>
+<tr class="separator:a5ec5e1d1ec38494498d5f453a709c09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337ba696b514478c1c9a3234a8bb75ec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a337ba696b514478c1c9a3234a8bb75ec">sMessageBuffer__7JKRAram</a> [16]</td></tr>
+<tr class="separator:a337ba696b514478c1c9a3234a8bb75ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0426b878b822957b4e7028d15a2eb9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#adc0426b878b822957b4e7028d15a2eb9">__vt__7JKRAram</a> [4]</td></tr>
+<tr class="separator:adc0426b878b822957b4e7028d15a2eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11eb1a96d5ed01db4e617ec73975ffe2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a11eb1a96d5ed01db4e617ec73975ffe2">stringBase_8039D078</a> = &quot;JKRAram.cpp&quot;</td></tr>
+<tr class="separator:a11eb1a96d5ed01db4e617ec73975ffe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eeca345a448be11b4687d4be8bba785"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a1eeca345a448be11b4687d4be8bba785">stringBase_8039D084</a> = &quot;%s&quot;</td></tr>
+<tr class="separator:a1eeca345a448be11b4687d4be8bba785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7968b6bd3180917f39427354d7f9ce6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#af7968b6bd3180917f39427354d7f9ce6">stringBase_8039D087</a> = &quot;:::address not 32Byte aligned.&quot;</td></tr>
+<tr class="separator:af7968b6bd3180917f39427354d7f9ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa521dbf1d037de214f09e345122b03c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#aaa521dbf1d037de214f09e345122b03c">stringBase_8039D0A6</a> = &quot;bad aramSync\n&quot;</td></tr>
+<tr class="separator:aaa521dbf1d037de214f09e345122b03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d98d28e36f510098f075c7605af3dc3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a1d98d28e36f510098f075c7605af3dc3">pad_8039D0B4</a> = &quot;\0\0\0&quot;</td></tr>
+<tr class="separator:a1d98d28e36f510098f075c7605af3dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12872648629a34e4aa511e5b33e65ac5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a12872648629a34e4aa511e5b33e65ac5">JKRAram__lit_492</a> [12]</td></tr>
+<tr class="separator:a12872648629a34e4aa511e5b33e65ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0ecd3dc172772921ce769e477709ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a1b0ecd3dc172772921ce769e477709ea">sAramCommandList__7JKRAram</a> [12]</td></tr>
+<tr class="separator:a1b0ecd3dc172772921ce769e477709ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9035b7defddc584836bdd5cb1c463396"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a9035b7defddc584836bdd5cb1c463396">JKRAram__decompMutex</a> [24]</td></tr>
+<tr class="separator:a9035b7defddc584836bdd5cb1c463396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bc9ba4fd5c7c7cd30aab730d2889459"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0bc9ba4fd5c7c7cd30aab730d2889459">JKRAram__szpBuf</a> [4]</td></tr>
+<tr class="separator:a0bc9ba4fd5c7c7cd30aab730d2889459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b796392eaedc4dce7e6aafdf7ae0f80"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a0b796392eaedc4dce7e6aafdf7ae0f80">JKRAram__szpEnd</a> [4]</td></tr>
+<tr class="separator:a0b796392eaedc4dce7e6aafdf7ae0f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055c23a7db98a817e3320788d9047c25"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a055c23a7db98a817e3320788d9047c25">JKRAram__refBuf</a> [4]</td></tr>
+<tr class="separator:a055c23a7db98a817e3320788d9047c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9c03914d42f2c02722810c6c9c0bed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8b9c03914d42f2c02722810c6c9c0bed">JKRAram__refEnd</a> [4]</td></tr>
+<tr class="separator:a8b9c03914d42f2c02722810c6c9c0bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ecc975f6f2a5e407313c0c34ba1468"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#af8ecc975f6f2a5e407313c0c34ba1468">JKRAram__refCurrent</a> [4]</td></tr>
+<tr class="separator:af8ecc975f6f2a5e407313c0c34ba1468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2c41940bf7ea36607ecb78bef9377e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6d2c41940bf7ea36607ecb78bef9377e">JKRAram__srcOffset</a> [4]</td></tr>
+<tr class="separator:a6d2c41940bf7ea36607ecb78bef9377e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c51ff5581f550ad69f6ce7897264ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a88c51ff5581f550ad69f6ce7897264ea">JKRAram__transLeft</a> [4]</td></tr>
+<tr class="separator:a88c51ff5581f550ad69f6ce7897264ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09761ece86a5e9c7c6cb30411ef86bae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a09761ece86a5e9c7c6cb30411ef86bae">JKRAram__srcLimit</a> [4]</td></tr>
+<tr class="separator:a09761ece86a5e9c7c6cb30411ef86bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae200c6d1eb1b9176d943986c89032898"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#ae200c6d1eb1b9176d943986c89032898">srcAddress</a> [4]</td></tr>
+<tr class="separator:ae200c6d1eb1b9176d943986c89032898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02cc049971dce2d39efc0846a070bc9f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a02cc049971dce2d39efc0846a070bc9f">JKRAram__fileOffset</a> [4]</td></tr>
+<tr class="separator:a02cc049971dce2d39efc0846a070bc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74a0fd7a9e3e142d2ed2186052ea81ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a74a0fd7a9e3e142d2ed2186052ea81ac">JKRAram__readCount</a> [4]</td></tr>
+<tr class="separator:a74a0fd7a9e3e142d2ed2186052ea81ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8445581a7390def3b5e18098016f1445"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a8445581a7390def3b5e18098016f1445">JKRAram__maxDest</a> [4]</td></tr>
+<tr class="separator:a8445581a7390def3b5e18098016f1445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8d45a1988bc4795bc689b92a2fb873"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#abf8d45a1988bc4795bc689b92a2fb873">data_804513FC</a> [4]</td></tr>
+<tr class="separator:abf8d45a1988bc4795bc689b92a2fb873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a0ea3d8107d066d682c861e6183e17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a61a0ea3d8107d066d682c861e6183e17">JKRAram__tsPtr</a> [4]</td></tr>
+<tr class="separator:a61a0ea3d8107d066d682c861e6183e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4f639ffbf27714e68115ff45dda299"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRAram_8cpp.html#a6e4f639ffbf27714e68115ff45dda299">JKRAram__tsArea</a> [4]</td></tr>
+<tr class="separator:a6e4f639ffbf27714e68115ff45dda299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9be61384cd32b9eb630f88dfef31d461"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9be61384cd32b9eb630f88dfef31d461">&#9670;&nbsp;</a></span>__dl__FPv()</h2>
+<a id="a59e4ab732d3792d06f316b993b186eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59e4ab732d3792d06f316b993b186eed">&#9670;&nbsp;</a></span>__ct__11JKRAramHeapFUlUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__11JKRAramHeapFUlUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1577be232cdea4c91eb4b4b5634fa502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1577be232cdea4c91eb4b4b5634fa502">&#9670;&nbsp;</a></span>__ct__7JKRAramFUlUll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7JKRAramFUlUll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae30134b2343660b27a0f865c65ca05ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30134b2343660b27a0f865c65ca05ad">&#9670;&nbsp;</a></span>__ct__9JKRThreadFUlii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__9JKRThreadFUlii </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498e6440d5c316e2672169ee4ed92309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e6440d5c316e2672169ee4ed92309">&#9670;&nbsp;</a></span>__dl__FPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +399,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void __dl__FPv </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -221,16 +407,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a886e64a4b76cb88006e277dfe878e179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a886e64a4b76cb88006e277dfe878e179">&#9670;&nbsp;</a></span>__RAS_OSDisableInterrupts_begin()</h2>
+<a id="ad169dce2c1d6d6192840f04eef6a7359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad169dce2c1d6d6192840f04eef6a7359">&#9670;&nbsp;</a></span>__dt__10JSUPtrListFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void __RAS_OSDisableInterrupts_begin </td>
+          <td class="memname">void __dt__10JSUPtrListFv </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -239,8 +424,297 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aae0b394d48cd74529358568680f91f5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae0b394d48cd74529358568680f91f5b">&#9670;&nbsp;</a></span>alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode()</h2>
+<a id="aa32ae0a85577a3e15e5ccea51d68ed5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32ae0a85577a3e15e5ccea51d68ed5d">&#9670;&nbsp;</a></span>__dt__7JKRAramFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__7JKRAramFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34b8e393760e1451f4d2fc876cc86295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b8e393760e1451f4d2fc876cc86295">&#9670;&nbsp;</a></span>__dt__9JKRThreadFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__9JKRThreadFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfa7378e3c64fb68c851b08de3a2a355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa7378e3c64fb68c851b08de3a2a355">&#9670;&nbsp;</a></span>__nw__FUlP7JKRHeapi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* __nw__FUlP7JKRHeapi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75cea59a88b9016eb884c7c20cdc3a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cea59a88b9016eb884c7c20cdc3a21">&#9670;&nbsp;</a></span>__register_global_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __register_global_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8016053e51c8d3801f0b164e06c9005b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8016053e51c8d3801f0b164e06c9005b">&#9670;&nbsp;</a></span>__sinit_JKRAram_cpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void __sinit_JKRAram_cpp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3882b952263b3390250bf0142a47e57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3882b952263b3390250bf0142a47e57d">&#9670;&nbsp;</a></span>_restgpr_22()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_22 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a778466826efe33e53ffca7d528cfcd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778466826efe33e53ffca7d528cfcd23">&#9670;&nbsp;</a></span>_restgpr_23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07802390ec789d585ab9991a261e4ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07802390ec789d585ab9991a261e4ee5">&#9670;&nbsp;</a></span>_restgpr_25()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_25 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdca0eb87578e0952b66387b093d81f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdca0eb87578e0952b66387b093d81f3">&#9670;&nbsp;</a></span>_restgpr_27()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_27 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f61243ebf5cbb2ff90548d397b16772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f61243ebf5cbb2ff90548d397b16772">&#9670;&nbsp;</a></span>_restgpr_28()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_28 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abed5bd59c54272a132a5b4da4beff66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed5bd59c54272a132a5b4da4beff66d">&#9670;&nbsp;</a></span>_restgpr_29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _restgpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab005390d5a49aad5909569f937a00215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab005390d5a49aad5909569f937a00215">&#9670;&nbsp;</a></span>_savegpr_22()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_22 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5749e2c74495633f05da725d7b4e38e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5749e2c74495633f05da725d7b4e38e8">&#9670;&nbsp;</a></span>_savegpr_23()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_23 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58fb5b02bb14a176b115397be03bbe99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58fb5b02bb14a176b115397be03bbe99">&#9670;&nbsp;</a></span>_savegpr_25()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_25 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8b2b992407cf48ba98905b417420685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8b2b992407cf48ba98905b417420685">&#9670;&nbsp;</a></span>_savegpr_27()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_27 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96be8c79baacd021a226016df5297c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96be8c79baacd021a226016df5297c51">&#9670;&nbsp;</a></span>_savegpr_28()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_28 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f3662cd06864ff7627d5424c192e6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3662cd06864ff7627d5424c192e6f2">&#9670;&nbsp;</a></span>_savegpr_29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a226a2060e32aa80ff10e7c6a45b2790e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226a2060e32aa80ff10e7c6a45b2790e">&#9670;&nbsp;</a></span>alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +722,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -257,8 +730,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a65eb454d208a4fd7d06be0cecdc71645"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65eb454d208a4fd7d06be0cecdc71645">&#9670;&nbsp;</a></span>alloc__7JKRHeapFUli()</h2>
+<a id="a68efb2a511dab9425f5d413faf0b4df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68efb2a511dab9425f5d413faf0b4df6">&#9670;&nbsp;</a></span>alloc__7JKRHeapFUli()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +739,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void alloc__7JKRHeapFUli </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -275,8 +747,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abe71f830b8a3d0f7afbdcca9135fe8cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe71f830b8a3d0f7afbdcca9135fe8cf">&#9670;&nbsp;</a></span>alloc__7JKRHeapFUliP7JKRHeap()</h2>
+<a id="a50822d5e9b3169cfa601e786f9cb374e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50822d5e9b3169cfa601e786f9cb374e">&#9670;&nbsp;</a></span>alloc__7JKRHeapFUliP7JKRHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +756,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void alloc__7JKRHeapFUliP7JKRHeap </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -293,8 +764,93 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a00a1cc23105190832eed7c53fef866b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00a1cc23105190832eed7c53fef866b8">&#9670;&nbsp;</a></span>changeGroupIdIfNeed__7JKRAramFPUci()</h2>
+<a id="a655a0fff9fdb1b74f4213abc836e9547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655a0fff9fdb1b74f4213abc836e9547">&#9670;&nbsp;</a></span>ARAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARAlloc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65e8e3e8f67e21730dc150d55f259772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65e8e3e8f67e21730dc150d55f259772">&#9670;&nbsp;</a></span>aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca0ddeafc79634f4c2f2213f4b6b1ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0ddeafc79634f4c2f2213f4b6b1ca5">&#9670;&nbsp;</a></span>ARGetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARGetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a655aa8aa5339964ef8d20f498c743737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655aa8aa5339964ef8d20f498c743737">&#9670;&nbsp;</a></span>ARInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a282f38aa9c73feb039197e350089cb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282f38aa9c73feb039197e350089cb9e">&#9670;&nbsp;</a></span>ARQInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ARQInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b484ea3e82de3bc7b8c48530ec5f70d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b484ea3e82de3bc7b8c48530ec5f70d">&#9670;&nbsp;</a></span>changeGroupIdIfNeed__7JKRAramFPUci()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +858,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void changeGroupIdIfNeed__7JKRAramFPUci </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -311,8 +866,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa1d3689b89017c7933bf5cab5d8185d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1d3689b89017c7933bf5cab5d8185d6">&#9670;&nbsp;</a></span>checkCompressed__9JKRDecompFPUc()</h2>
+<a id="ac0f70d07de3157f05bd11ba7264ae8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f70d07de3157f05bd11ba7264ae8fd">&#9670;&nbsp;</a></span>checkCompressed__9JKRDecompFPUc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,7 +875,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void checkCompressed__9JKRDecompFPUc </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -329,8 +883,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6e3f4493572c34219c22f12fab5735bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e3f4493572c34219c22f12fab5735bb">&#9670;&nbsp;</a></span>checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl()</h2>
+<a id="a89dac43fa337fef8556954bf7fb3b6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89dac43fa337fef8556954bf7fb3b6ae">&#9670;&nbsp;</a></span>checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +892,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -347,8 +900,59 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9381054a89f43d123db671932ae2e25b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9381054a89f43d123db671932ae2e25b">&#9670;&nbsp;</a></span>DCStoreRangeNoSync()</h2>
+<a id="a6db5cad6ce94d5d30bc99985466abb88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db5cad6ce94d5d30bc99985466abb88">&#9670;&nbsp;</a></span>create__13JKRAramStreamFl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create__13JKRAramStreamFl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6343a1a522f7ab0aa2cabe134adc15b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6343a1a522f7ab0aa2cabe134adc15b7">&#9670;&nbsp;</a></span>create__7JKRAramFUlUllll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create__7JKRAramFUlUllll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cfa31c31af2af0e645bafa3938276f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfa31c31af2af0e645bafa3938276f3">&#9670;&nbsp;</a></span>create__9JKRDecompFl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create__9JKRDecompFl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad447114b3d91ab5c0a9dc74c6da0b71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad447114b3d91ab5c0a9dc74c6da0b71c">&#9670;&nbsp;</a></span>DCStoreRangeNoSync()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +960,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void DCStoreRangeNoSync </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -365,8 +968,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3523ec7b788f1f2b14ab7899b414a85d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3523ec7b788f1f2b14ab7899b414a85d">&#9670;&nbsp;</a></span>decompSZS_subroutine()</h2>
+<a id="aede703f7678516f57c272b7e0af60cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede703f7678516f57c272b7e0af60cbb">&#9670;&nbsp;</a></span>decompSZS_subroutine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -375,16 +978,16 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">asm void decompSZS_subroutine </td>
+          <td class="memname">static asm void decompSZS_subroutine </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -401,26 +1004,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab5c6934c0335565f9a9a005ce34b7f39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5c6934c0335565f9a9a005ce34b7f39">&#9670;&nbsp;</a></span>decompSZS_subroutine__FPUcPUc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void decompSZS_subroutine__FPUcPUc </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a393c7b38b8d59d6d222f002bedea3162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a393c7b38b8d59d6d222f002bedea3162">&#9670;&nbsp;</a></span>firstSrcData()</h2>
+<a id="a99e49a98712f029af3397195b32bef29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e49a98712f029af3397195b32bef29">&#9670;&nbsp;</a></span>firstSrcData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,9 +1014,8 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> * firstSrcData </td>
+          <td class="memname">static asm void firstSrcData </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -445,26 +1029,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e04bca665537b33401b98d6d700252e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e04bca665537b33401b98d6d700252e">&#9670;&nbsp;</a></span>firstSrcData__Fv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void firstSrcData__Fv </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8f6448f349403cbbab3c5b5879acb8a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f6448f349403cbbab3c5b5879acb8a4">&#9670;&nbsp;</a></span>free__7JKRHeapFPvP7JKRHeap()</h2>
+<a id="a0c963c3e10e5fb046f48cbcd6d6472f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c963c3e10e5fb046f48cbcd6d6472f2">&#9670;&nbsp;</a></span>free__7JKRHeapFPvP7JKRHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -472,7 +1038,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void free__7JKRHeapFPvP7JKRHeap </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -481,68 +1046,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5869789811126408f9c69ac02863b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5869789811126408f9c69ac02863b18">&#9670;&nbsp;</a></span>JKRDecompressFromAramToMainRam()</h2>
+<a id="abab0dd9c10f3beca8f37118c000466c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab0dd9c10f3beca8f37118c000466c5">&#9670;&nbsp;</a></span>func_802D2DF0()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void JKRDecompressFromAramToMainRam </td>
+          <td class="memname">void func_802D2DF0 </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>dst</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>srcLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>dstLength</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> *&#160;</td>
-          <td class="paramname"><em>resourceSize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9070637b70efd8e967bec78dbded6900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9070637b70efd8e967bec78dbded6900">&#9670;&nbsp;</a></span>JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -551,8 +1063,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="addf3e20a7141b3d98770ec00d68e238c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addf3e20a7141b3d98770ec00d68e238c">&#9670;&nbsp;</a></span>nextSrcData()</h2>
+<a id="a59a33915af65a90059928e122f720e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a33915af65a90059928e122f720e44">&#9670;&nbsp;</a></span>initiate__10JSUPtrListFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initiate__10JSUPtrListFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65cf5cc2bf198d2c697765bae49708c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cf5cc2bf198d2c697765bae49708c9">&#9670;&nbsp;</a></span>JKRAram__decompSZS_subroutine__FPUcPUc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,10 +1090,9 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">asm <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> * nextSrcData </td>
+          <td class="memname">static void JKRAram__decompSZS_subroutine__FPUcPUc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
-          <td class="paramname"><em>current</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -577,16 +1105,150 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a27360973c282f793686deb69c252ebcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27360973c282f793686deb69c252ebcf">&#9670;&nbsp;</a></span>nextSrcData__FPUc()</h2>
+<a id="a02667f284fa4d6e231ad46575ef66044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02667f284fa4d6e231ad46575ef66044">&#9670;&nbsp;</a></span>JKRAram__firstSrcData__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void JKRAram__firstSrcData__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdd53f17f3016792c0762a6c6ecc5f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd53f17f3016792c0762a6c6ecc5f67">&#9670;&nbsp;</a></span>JKRAram__nextSrcData__FPUc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void JKRAram__nextSrcData__FPUc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecbb8d8e0105f99bb86a9548521d0ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecbb8d8e0105f99bb86a9548521d0ec8">&#9670;&nbsp;</a></span>JKRDecompressFromAramToMainRam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void JKRDecompressFromAramToMainRam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> *&#160;</td>
+          <td class="paramname"><em>param_5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a0fd8fa9c74517f3abd33a0ddba07e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0fd8fa9c74517f3abd33a0ddba07e9">&#9670;&nbsp;</a></span>JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a339565e1df4caf6e10fbd9e27256faec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339565e1df4caf6e10fbd9e27256faec">&#9670;&nbsp;</a></span>mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void nextSrcData__FPUc </td>
+          <td class="memname">void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -595,16 +1257,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ee733957c48378e183292c2b931c9ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ee733957c48378e183292c2b931c9ac">&#9670;&nbsp;</a></span>orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock()</h2>
+<a id="afc6bb37288ea54f2151b2ecd4d4ccf3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6bb37288ea54f2151b2ecd4d4ccf3b">&#9670;&nbsp;</a></span>memcpy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock </td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#adc00f0d3ad529c0cb72985d54bfe7ccf">SECTION_INIT</a> void memcpy </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -613,17 +1274,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adf215e9bc1cf3c798e1464697eb24e9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf215e9bc1cf3c798e1464697eb24e9f">&#9670;&nbsp;</a></span>orderSync__9JKRDecompFPUcPUcUlUl()</h2>
+<a id="adde7811580303adcaeb549c7d46a1cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde7811580303adcaeb549c7d46a1cef">&#9670;&nbsp;</a></span>nextSrcData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void nextSrcData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a581ac9487348557df9e0f9bd828952af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581ac9487348557df9e0f9bd828952af">&#9670;&nbsp;</a></span>operator delete()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void orderSync__9JKRDecompFPUcPUcUlUl </td>
+          <td class="memname">void operator delete </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -631,35 +1318,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a90730dfad239736d7e7f7bbc52ec90fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90730dfad239736d7e7f7bbc52ec90fb">&#9670;&nbsp;</a></span>panic_f__12JUTExceptionFPCciPCce()</h2>
+<a id="a58200a5202aa4a094697387f8d509a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58200a5202aa4a094697387f8d509a77">&#9670;&nbsp;</a></span>operator new()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void panic_f__12JUTExceptionFPCciPCce </td>
+          <td class="memname">void* operator new </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structJKRHeap.html">JKRHeap</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>format</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -671,8 +1352,212 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a92a9a020ade8934133961bac4d01a6d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a9a020ade8934133961bac4d01a6d7">&#9670;&nbsp;</a></span>startDMA__12JKRAramPieceFP12JKRAMCommand()</h2>
+<a id="a0b402df4c5d26196aa20546343bec78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b402df4c5d26196aa20546343bec78e">&#9670;&nbsp;</a></span>orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d97367d70f60613ffb7fe17317d5482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d97367d70f60613ffb7fe17317d5482">&#9670;&nbsp;</a></span>orderSync__9JKRDecompFPUcPUcUlUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void orderSync__9JKRDecompFPUcPUcUlUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65b7dd4c9756f26d16dcf8f0dedb07bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b7dd4c9756f26d16dcf8f0dedb07bf">&#9670;&nbsp;</a></span>OSDisableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDisableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35bf20443ae3d3166ff1139f3cd98201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bf20443ae3d3166ff1139f3cd98201">&#9670;&nbsp;</a></span>OSInitMessageQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSInitMessageQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0479ff9acf9dce313eca521393718388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0479ff9acf9dce313eca521393718388">&#9670;&nbsp;</a></span>OSInitMutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSInitMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3cc032bb3c6864dcd79c297743c4b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3cc032bb3c6864dcd79c297743c4b6c">&#9670;&nbsp;</a></span>OSLockMutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSLockMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f4e639b17c1e988fa8071898bf0334a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4e639b17c1e988fa8071898bf0334a">&#9670;&nbsp;</a></span>OSReceiveMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSReceiveMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b5cc2befa83d8710fba14f4de14fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b5cc2befa83d8710fba14f4de14fd9">&#9670;&nbsp;</a></span>OSRestoreInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSRestoreInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f96c218acfbd8f92b48607ed3e06598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f96c218acfbd8f92b48607ed3e06598">&#9670;&nbsp;</a></span>OSResumeThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSResumeThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f1d6e851f76276d5bbcfd37f2005628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1d6e851f76276d5bbcfd37f2005628">&#9670;&nbsp;</a></span>OSUnlockMutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSUnlockMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5af1df4bd804c83ba7726611a5d3916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5af1df4bd804c83ba7726611a5d3916">&#9670;&nbsp;</a></span>panic_f__12JUTExceptionFPCciPCce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void panic_f__12JUTExceptionFPCciPCce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e3196569e0135a64040e6f0655cde0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3196569e0135a64040e6f0655cde0f">&#9670;&nbsp;</a></span>run__7JKRAramFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void run__7JKRAramFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91ce47a27441601ab3106b63520485bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ce47a27441601ab3106b63520485bb">&#9670;&nbsp;</a></span>startDMA__12JKRAramPieceFP12JKRAMCommand()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +1565,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void startDMA__12JKRAramPieceFP12JKRAMCommand </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -690,8 +1574,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a56887e33b2d31ddd3ac05ec8e58d5ae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56887e33b2d31ddd3ac05ec8e58d5ae5">&#9670;&nbsp;</a></span>JKRAram__fileOffset</h2>
+<a id="adc0426b878b822957b4e7028d15a2eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0426b878b822957b4e7028d15a2eb9">&#9670;&nbsp;</a></span>__vt__7JKRAram</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +1584,280 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__fileOffset</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__7JKRAram[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAram_8cpp.html#aa32ae0a85577a3e15e5ccea51d68ed5d">__dt__7JKRAramFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRAram_8cpp.html#a2e3196569e0135a64040e6f0655cde0f">run__7JKRAramFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aJKRAram_8cpp_html_a2e3196569e0135a64040e6f0655cde0f"><div class="ttname"><a href="JKRAram_8cpp.html#a2e3196569e0135a64040e6f0655cde0f">run__7JKRAramFv</a></div><div class="ttdeci">void run__7JKRAramFv()</div></div>
+<div class="ttc" id="aJKRAram_8cpp_html_aa32ae0a85577a3e15e5ccea51d68ed5d"><div class="ttname"><a href="JKRAram_8cpp.html#aa32ae0a85577a3e15e5ccea51d68ed5d">__dt__7JKRAramFv</a></div><div class="ttdeci">void __dt__7JKRAramFv()</div></div>
+<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf8d45a1988bc4795bc689b92a2fb873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8d45a1988bc4795bc689b92a2fb873">&#9670;&nbsp;</a></span>data_804513FC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_804513FC[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9035b7defddc584836bdd5cb1c463396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9035b7defddc584836bdd5cb1c463396">&#9670;&nbsp;</a></span>JKRAram__decompMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__decompMutex[24]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02cc049971dce2d39efc0846a070bc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02cc049971dce2d39efc0846a070bc9f">&#9670;&nbsp;</a></span>JKRAram__fileOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__fileOffset[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12872648629a34e4aa511e5b33e65ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12872648629a34e4aa511e5b33e65ac5">&#9670;&nbsp;</a></span>JKRAram__lit_492</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__lit_492[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8445581a7390def3b5e18098016f1445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8445581a7390def3b5e18098016f1445">&#9670;&nbsp;</a></span>JKRAram__maxDest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__maxDest[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74a0fd7a9e3e142d2ed2186052ea81ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74a0fd7a9e3e142d2ed2186052ea81ac">&#9670;&nbsp;</a></span>JKRAram__readCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__readCount[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a055c23a7db98a817e3320788d9047c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055c23a7db98a817e3320788d9047c25">&#9670;&nbsp;</a></span>JKRAram__refBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__refBuf[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8ecc975f6f2a5e407313c0c34ba1468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ecc975f6f2a5e407313c0c34ba1468">&#9670;&nbsp;</a></span>JKRAram__refCurrent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__refCurrent[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b9c03914d42f2c02722810c6c9c0bed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9c03914d42f2c02722810c6c9c0bed">&#9670;&nbsp;</a></span>JKRAram__refEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__refEnd[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09761ece86a5e9c7c6cb30411ef86bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09761ece86a5e9c7c6cb30411ef86bae">&#9670;&nbsp;</a></span>JKRAram__srcLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__srcLimit[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d2c41940bf7ea36607ecb78bef9377e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2c41940bf7ea36607ecb78bef9377e">&#9670;&nbsp;</a></span>JKRAram__srcOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__srcOffset[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e04bc732ff99e69562476575a647aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e04bc732ff99e69562476575a647aa8">&#9670;&nbsp;</a></span>JKRAram__stringBase0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const* const JKRAram__stringBase0</td>
         </tr>
       </table>
   </td>
@@ -712,8 +1869,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abad8819caddd3a342951e479e1babd8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abad8819caddd3a342951e479e1babd8e">&#9670;&nbsp;</a></span>JKRAram__maxDest</h2>
+<a id="a0bc9ba4fd5c7c7cd30aab730d2889459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc9ba4fd5c7c7cd30aab730d2889459">&#9670;&nbsp;</a></span>JKRAram__szpBuf</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -722,7 +1879,175 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__maxDest</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__szpBuf[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b796392eaedc4dce7e6aafdf7ae0f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b796392eaedc4dce7e6aafdf7ae0f80">&#9670;&nbsp;</a></span>JKRAram__szpEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__szpEnd[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88c51ff5581f550ad69f6ce7897264ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88c51ff5581f550ad69f6ce7897264ea">&#9670;&nbsp;</a></span>JKRAram__transLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__transLeft[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e4f639ffbf27714e68115ff45dda299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4f639ffbf27714e68115ff45dda299">&#9670;&nbsp;</a></span>JKRAram__tsArea</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__tsArea[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61a0ea3d8107d066d682c861e6183e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a0ea3d8107d066d682c861e6183e17">&#9670;&nbsp;</a></span>JKRAram__tsPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRAram__tsPtr[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d98d28e36f510098f075c7605af3dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d98d28e36f510098f075c7605af3dc3">&#9670;&nbsp;</a></span>pad_8039D0B4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const pad_8039D0B4 = &quot;\0\0\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b0ecd3dc172772921ce769e477709ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0ecd3dc172772921ce769e477709ea">&#9670;&nbsp;</a></span>sAramCommandList__7JKRAram</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sAramCommandList__7JKRAram[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1981e5e29bc6546d77174c6763b98c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1981e5e29bc6546d77174c6763b98c69">&#9670;&nbsp;</a></span>sAramObject__7JKRAram</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sAramObject__7JKRAram[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ec5e1d1ec38494498d5f453a709c09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec5e1d1ec38494498d5f453a709c09a">&#9670;&nbsp;</a></span>sCurrentHeap__7JKRHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sCurrentHeap__7JKRHeap[4]</td>
         </tr>
       </table>
   </td>
@@ -734,8 +2059,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a2f70a71c8f32bfc982839344c196bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a2f70a71c8f32bfc982839344c196bf">&#9670;&nbsp;</a></span>JKRAram__readCount</h2>
+<a id="a337ba696b514478c1c9a3234a8bb75ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337ba696b514478c1c9a3234a8bb75ec">&#9670;&nbsp;</a></span>sMessageBuffer__7JKRAram</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -744,7 +2069,72 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__readCount</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sMessageBuffer__7JKRAram[16]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7dce078758815c8136111e834709b96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dce078758815c8136111e834709b96d">&#9670;&nbsp;</a></span>sMessageQueue__7JKRAram</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sMessageQueue__7JKRAram</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae200c6d1eb1b9176d943986c89032898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae200c6d1eb1b9176d943986c89032898">&#9670;&nbsp;</a></span>srcAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> srcAddress[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2560338b58a7b440b0e94ea6217fef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2560338b58a7b440b0e94ea6217fef7">&#9670;&nbsp;</a></span>sSystemHeap__7JKRHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sSystemHeap__7JKRHeap[4]</td>
         </tr>
       </table>
   </td>
@@ -756,8 +2146,27 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab28eea4d2ec7f05cc97cf992df64e94a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab28eea4d2ec7f05cc97cf992df64e94a">&#9670;&nbsp;</a></span>JKRAram__refBuf</h2>
+<a id="a6e351528352cf30d91c3d4e163f95f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e351528352cf30d91c3d4e163f95f98">&#9670;&nbsp;</a></span>sSZSBufferSize__7JKRAram</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> sSZSBufferSize__7JKRAram[1+1]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00000400,</div>
+<div class="line">    </div>
+<div class="line">    0x00000000,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a11eb1a96d5ed01db4e617ec73975ffe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11eb1a96d5ed01db4e617ec73975ffe2">&#9670;&nbsp;</a></span>stringBase_8039D078</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -766,20 +2175,20 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* JKRAram__refBuf</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039D078 = &quot;JKRAram.cpp&quot;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afe853952d1749ede6146abe29b206b7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe853952d1749ede6146abe29b206b7f">&#9670;&nbsp;</a></span>JKRAram__refCurrent</h2>
+<a id="a1eeca345a448be11b4687d4be8bba785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eeca345a448be11b4687d4be8bba785">&#9670;&nbsp;</a></span>stringBase_8039D084</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -788,20 +2197,20 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* JKRAram__refCurrent</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039D084 = &quot;%s&quot;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aaa21347a72fdfc2d541484dcfa38f47c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa21347a72fdfc2d541484dcfa38f47c">&#9670;&nbsp;</a></span>JKRAram__refEnd</h2>
+<a id="af7968b6bd3180917f39427354d7f9ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7968b6bd3180917f39427354d7f9ce6">&#9670;&nbsp;</a></span>stringBase_8039D087</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -810,20 +2219,20 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* JKRAram__refEnd</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039D087 = &quot;:::address not 32Byte aligned.&quot;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad9d5af84d87513859308ff603e0e120f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9d5af84d87513859308ff603e0e120f">&#9670;&nbsp;</a></span>JKRAram__srcAddress</h2>
+<a id="aaa521dbf1d037de214f09e345122b03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa521dbf1d037de214f09e345122b03c">&#9670;&nbsp;</a></span>stringBase_8039D0A6</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -832,392 +2241,12 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__srcAddress</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8039D0A6 = &quot;bad aramSync\n&quot;</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae1a59ce6b157d0f3d8fa0ab8b2e2d9da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1a59ce6b157d0f3d8fa0ab8b2e2d9da">&#9670;&nbsp;</a></span>JKRAram__srcLimit</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__srcLimit</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab2ccd9401adfa99b17b84f9e6a9af9cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2ccd9401adfa99b17b84f9e6a9af9cb">&#9670;&nbsp;</a></span>JKRAram__srcOffset</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__srcOffset</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a42280e49b90596c0ff7f406d82d73e1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42280e49b90596c0ff7f406d82d73e1c">&#9670;&nbsp;</a></span>JKRAram__szpBuf</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* JKRAram__szpBuf</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac222eaeaeb6a2fe73193efcfd65dc3e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac222eaeaeb6a2fe73193efcfd65dc3e4">&#9670;&nbsp;</a></span>JKRAram__szpEnd</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* JKRAram__szpEnd</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab0f04ba5435c9eecb188f9a36c92d59f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0f04ba5435c9eecb188f9a36c92d59f">&#9670;&nbsp;</a></span>JKRAram__transLeft</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__transLeft</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa06dd5f8c530f40eadb2bf369088f9d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa06dd5f8c530f40eadb2bf369088f9d9">&#9670;&nbsp;</a></span>JKRAram__tsArea</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> JKRAram__tsArea</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa2a26e36b7bf4d7bbf32def3f793833b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2a26e36b7bf4d7bbf32def3f793833b">&#9670;&nbsp;</a></span>JKRAram__tsPtr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>* JKRAram__tsPtr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a45e813b7c6cdb33ef3f0ea6e8eda7543"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45e813b7c6cdb33ef3f0ea6e8eda7543">&#9670;&nbsp;</a></span>lbl_8039D0A6</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* lbl_8039D0A6 = &quot;bad aramSync\n&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8ea535219056164118ddf33cb6a93343"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ea535219056164118ddf33cb6a93343">&#9670;&nbsp;</a></span>lbl_8039D0B4</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* lbl_8039D0B4 = &quot;\x00\x00\x00&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0a4aa498aed4b4b9e43c56fb203996a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a4aa498aed4b4b9e43c56fb203996a5">&#9670;&nbsp;</a></span>lbl_803CC158</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lbl_803CC158</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa200f86790ddd90739732abd07c02993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa200f86790ddd90739732abd07c02993">&#9670;&nbsp;</a></span>lbl_804342D0</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lbl_804342D0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af4b35d5ebbddac522a92e57a46cc00e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4b35d5ebbddac522a92e57a46cc00e7">&#9670;&nbsp;</a></span>lbl_804342E8</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structOSMutex.html">OSMutex</a> lbl_804342E8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0109ffed856e42b99e115fc3f5e5f219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0109ffed856e42b99e115fc3f5e5f219">&#9670;&nbsp;</a></span>lbl_804513FC</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool lbl_804513FC</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9345d52ac59b914d9640dad83070add5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9345d52ac59b914d9640dad83070add5">&#9670;&nbsp;</a></span>sAramCommandList__7JKRAram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sAramCommandList__7JKRAram</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad6fd60ab90c5c8a60642c896aaf0f5c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6fd60ab90c5c8a60642c896aaf0f5c4">&#9670;&nbsp;</a></span>sMessageBuffer__7JKRAram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sMessageBuffer__7JKRAram</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abd7514e27e0798e3b83a4e3c1f4cf8b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd7514e27e0798e3b83a4e3c1f4cf8b6">&#9670;&nbsp;</a></span>sMessageQueue__7JKRAram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structOSMessageQueue.html">OSMessageQueue</a> sMessageQueue__7JKRAram</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4541a503d57f8a770c2db63d30e46f73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4541a503d57f8a770c2db63d30e46f73">&#9670;&nbsp;</a></span>sSystemHeap__7JKRHeap</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classJKRExpHeap.html">JKRExpHeap</a>* sSystemHeap__7JKRHeap</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3cd9609faa6fe9123e720a028d3c5de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cd9609faa6fe9123e720a028d3c5de6">&#9670;&nbsp;</a></span>sSZSBufferSize__7JKRAram</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sSZSBufferSize__7JKRAram</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

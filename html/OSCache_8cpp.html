@@ -73,10 +73,1047 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">OSCache.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="OSCache_8h_source.html">dolphin/os/OSCache.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCEnable.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCInvalidateRange.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCFlushRange.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCStoreRange.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCFlushRangeNoSync.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCStoreRangeNoSync.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DCZeroRange.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/ICInvalidateRange.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/ICFlashInvalidate.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/ICEnable.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/__LCEnable.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/LCEnable.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/LCDisable.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/LCStoreBlocks.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/LCStoreData.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/LCQueueWait.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/L2GlobalInvalidate.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/DMAErrorHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSCache/__OSCacheInit.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for OSCache.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="OSCache_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3b358c5697f3c6a7b23d9e965770a464"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a3b358c5697f3c6a7b23d9e965770a464">DCEnable</a> ()</td></tr>
+<tr class="separator:a3b358c5697f3c6a7b23d9e965770a464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d5d7a69e38c98d1817a890960c30b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a32d5d7a69e38c98d1817a890960c30b7">DCInvalidateRange</a> ()</td></tr>
+<tr class="separator:a32d5d7a69e38c98d1817a890960c30b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f2e75fcba58c9a779201edd6a372f6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a9f2e75fcba58c9a779201edd6a372f6c">DCFlushRange</a> ()</td></tr>
+<tr class="separator:a9f2e75fcba58c9a779201edd6a372f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0440acad7d135008a79a898fb9e03f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a0440acad7d135008a79a898fb9e03f45">DCStoreRange</a> ()</td></tr>
+<tr class="separator:a0440acad7d135008a79a898fb9e03f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2691ff81fe6cba84cbd3e49ef078be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#aea2691ff81fe6cba84cbd3e49ef078be">DCFlushRangeNoSync</a> ()</td></tr>
+<tr class="separator:aea2691ff81fe6cba84cbd3e49ef078be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad447114b3d91ab5c0a9dc74c6da0b71c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ad447114b3d91ab5c0a9dc74c6da0b71c">DCStoreRangeNoSync</a> ()</td></tr>
+<tr class="separator:ad447114b3d91ab5c0a9dc74c6da0b71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048f6375e9632bd61fe191b408a76b7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a048f6375e9632bd61fe191b408a76b7e">DCZeroRange</a> ()</td></tr>
+<tr class="separator:a048f6375e9632bd61fe191b408a76b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aaddb8f5d421df2b57558206ee5a443"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a6aaddb8f5d421df2b57558206ee5a443">ICInvalidateRange</a> ()</td></tr>
+<tr class="separator:a6aaddb8f5d421df2b57558206ee5a443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37de73baaf1903063d5fae675e151afe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a37de73baaf1903063d5fae675e151afe">ICFlashInvalidate</a> ()</td></tr>
+<tr class="separator:a37de73baaf1903063d5fae675e151afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f59c4388c6af7c0dba68fc632e13eff"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a2f59c4388c6af7c0dba68fc632e13eff">ICEnable</a> ()</td></tr>
+<tr class="separator:a2f59c4388c6af7c0dba68fc632e13eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b9382d436997cfb7b56adf6f2e1935"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a19b9382d436997cfb7b56adf6f2e1935">__LCEnable</a> ()</td></tr>
+<tr class="separator:a19b9382d436997cfb7b56adf6f2e1935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0278d9bd63f7bfd9073f176d709126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a3f0278d9bd63f7bfd9073f176d709126">LCEnable</a> ()</td></tr>
+<tr class="separator:a3f0278d9bd63f7bfd9073f176d709126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d405402a755b1189d3e3f25af355ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a95d405402a755b1189d3e3f25af355ca">LCDisable</a> ()</td></tr>
+<tr class="separator:a95d405402a755b1189d3e3f25af355ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df9a6ede8d74c93ca3d37dc7cd6276c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a7df9a6ede8d74c93ca3d37dc7cd6276c">LCStoreBlocks</a> ()</td></tr>
+<tr class="separator:a7df9a6ede8d74c93ca3d37dc7cd6276c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5a408d0ec7e4c7c51ab4b636a2f1a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#abe5a408d0ec7e4c7c51ab4b636a2f1a7">LCStoreData</a> ()</td></tr>
+<tr class="separator:abe5a408d0ec7e4c7c51ab4b636a2f1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9c37eecfd1f7f05a7fcb295d7a73c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a4b9c37eecfd1f7f05a7fcb295d7a73c2">LCQueueWait</a> ()</td></tr>
+<tr class="separator:a4b9c37eecfd1f7f05a7fcb295d7a73c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac316e527761757340978ff31c0e6956d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ac316e527761757340978ff31c0e6956d">L2GlobalInvalidate</a> ()</td></tr>
+<tr class="separator:ac316e527761757340978ff31c0e6956d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbf63f7d153fdd20986e7a1615719514"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#afbf63f7d153fdd20986e7a1615719514">DMAErrorHandler</a> ()</td></tr>
+<tr class="separator:afbf63f7d153fdd20986e7a1615719514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d30f30b5ade1347fbc57ccdb040733b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a5d30f30b5ade1347fbc57ccdb040733b">__OSCacheInit</a> ()</td></tr>
+<tr class="separator:a5d30f30b5ade1347fbc57ccdb040733b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade4b47b8fab54c8f6a71bf594943c828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ade4b47b8fab54c8f6a71bf594943c828">OSReport</a> ()</td></tr>
+<tr class="separator:ade4b47b8fab54c8f6a71bf594943c828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72288d6fddcf63b28eee8bca4b9d9a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a72288d6fddcf63b28eee8bca4b9d9a9f">PPCMfmsr</a> ()</td></tr>
+<tr class="separator:a72288d6fddcf63b28eee8bca4b9d9a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18f0ca95ca6936e66ef36667e69e82a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#af18f0ca95ca6936e66ef36667e69e82a">PPCMtmsr</a> ()</td></tr>
+<tr class="separator:af18f0ca95ca6936e66ef36667e69e82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ba61b555493f703803b4b45a1a4686"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a79ba61b555493f703803b4b45a1a4686">PPCMfhid0</a> ()</td></tr>
+<tr class="separator:a79ba61b555493f703803b4b45a1a4686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f959a5639052e1b1b114bce3e84120a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a1f959a5639052e1b1b114bce3e84120a">PPCMfl2cr</a> ()</td></tr>
+<tr class="separator:a1f959a5639052e1b1b114bce3e84120a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed297b49f242b80056b78d2958e6242d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#aed297b49f242b80056b78d2958e6242d">PPCMtl2cr</a> ()</td></tr>
+<tr class="separator:aed297b49f242b80056b78d2958e6242d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4831a1a131204873ef617718ff64223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ad4831a1a131204873ef617718ff64223">PPCHalt</a> ()</td></tr>
+<tr class="separator:ad4831a1a131204873ef617718ff64223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ad6f109169d6bcafd497ae18bdbc1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#aa7ad6f109169d6bcafd497ae18bdbc1e">PPCMfhid2</a> ()</td></tr>
+<tr class="separator:aa7ad6f109169d6bcafd497ae18bdbc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb6cbdf45abd9a5006bba1c144ccc21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a8bb6cbdf45abd9a5006bba1c144ccc21">PPCMthid2</a> ()</td></tr>
+<tr class="separator:a8bb6cbdf45abd9a5006bba1c144ccc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310dbe1438ed769a46914dca79a43c2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a310dbe1438ed769a46914dca79a43c2b">OSDumpContext</a> ()</td></tr>
+<tr class="separator:a310dbe1438ed769a46914dca79a43c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6445aa6d866a96b12e87a092229ddd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ae6445aa6d866a96b12e87a092229ddd6">OSSetErrorHandler</a> ()</td></tr>
+<tr class="separator:ae6445aa6d866a96b12e87a092229ddd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a65b7dd4c9756f26d16dcf8f0dedb07bf">OSDisableInterrupts</a> ()</td></tr>
+<tr class="separator:a65b7dd4c9756f26d16dcf8f0dedb07bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a14b5cc2befa83d8710fba14f4de14fd9">OSRestoreInterrupts</a> ()</td></tr>
+<tr class="separator:a14b5cc2befa83d8710fba14f4de14fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369192899c00f00928ed748b73fb0c48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a369192899c00f00928ed748b73fb0c48">DBPrintf</a> ()</td></tr>
+<tr class="separator:a369192899c00f00928ed748b73fb0c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a137803b17dfea8e66f711735fff94795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a137803b17dfea8e66f711735fff94795">OSCache__lit_84</a> [24]</td></tr>
+<tr class="separator:a137803b17dfea8e66f711735fff94795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629bd130891a5011a6a88df050aa5e9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a629bd130891a5011a6a88df050aa5e9e">OSCache__lit_85</a> [27+1]</td></tr>
+<tr class="separator:a629bd130891a5011a6a88df050aa5e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af172ad0e54728555a38b5a3dba5c584b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#af172ad0e54728555a38b5a3dba5c584b">OSCache__lit_86</a> [48]</td></tr>
+<tr class="separator:af172ad0e54728555a38b5a3dba5c584b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f4e42bf867282f7bda2628dfcaf5ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#aa7f4e42bf867282f7bda2628dfcaf5ab">OSCache__lit_87</a> [60]</td></tr>
+<tr class="separator:aa7f4e42bf867282f7bda2628dfcaf5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480f51750783fbcc089fb6f896d634e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a480f51750783fbcc089fb6f896d634e0">OSCache__lit_88</a> [55+1]</td></tr>
+<tr class="separator:a480f51750783fbcc089fb6f896d634e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af658b5baab531e9ddfa427744023d611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#af658b5baab531e9ddfa427744023d611">OSCache__lit_89</a> [63+1]</td></tr>
+<tr class="separator:af658b5baab531e9ddfa427744023d611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f715487c270fe1b9cda7edf3a440189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a5f715487c270fe1b9cda7edf3a440189">OSCache__lit_90</a> [41+3]</td></tr>
+<tr class="separator:a5f715487c270fe1b9cda7edf3a440189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa31d964306fd2f4c6a0e0ed25b3e0e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#afa31d964306fd2f4c6a0e0ed25b3e0e3">OSCache__lit_91</a> [29+3]</td></tr>
+<tr class="separator:afa31d964306fd2f4c6a0e0ed25b3e0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64955c2bab6f4d410ae51d287d6df2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#af64955c2bab6f4d410ae51d287d6df2e">OSCache__lit_92</a> [25+3]</td></tr>
+<tr class="separator:af64955c2bab6f4d410ae51d287d6df2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ebf507993a0b7065a01d09f7103cb11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a4ebf507993a0b7065a01d09f7103cb11">OSCache__lit_104</a> [25+3]</td></tr>
+<tr class="separator:a4ebf507993a0b7065a01d09f7103cb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2618cf7108f1a1315423fcbd3c2e5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#aef2618cf7108f1a1315423fcbd3c2e5b">OSCache__lit_105</a> [25+3]</td></tr>
+<tr class="separator:aef2618cf7108f1a1315423fcbd3c2e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31e75caed02c90486faec5607be219e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#ad31e75caed02c90486faec5607be219e">OSCache__lit_106</a> [22+2]</td></tr>
+<tr class="separator:ad31e75caed02c90486faec5607be219e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d511c3ebf27fea5d8fc31d75e951e09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a4d511c3ebf27fea5d8fc31d75e951e09">OSCache__lit_107</a> [46+6]</td></tr>
+<tr class="separator:a4d511c3ebf27fea5d8fc31d75e951e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952d9aaf50199a7086eecd0bd4d6bb22"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSCache_8cpp.html#a952d9aaf50199a7086eecd0bd4d6bb22">OSCache__lit_63</a> [41+3]</td></tr>
+<tr class="separator:a952d9aaf50199a7086eecd0bd4d6bb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a19b9382d436997cfb7b56adf6f2e1935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19b9382d436997cfb7b56adf6f2e1935">&#9670;&nbsp;</a></span>__LCEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __LCEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d30f30b5ade1347fbc57ccdb040733b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d30f30b5ade1347fbc57ccdb040733b">&#9670;&nbsp;</a></span>__OSCacheInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __OSCacheInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a369192899c00f00928ed748b73fb0c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369192899c00f00928ed748b73fb0c48">&#9670;&nbsp;</a></span>DBPrintf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DBPrintf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b358c5697f3c6a7b23d9e965770a464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b358c5697f3c6a7b23d9e965770a464">&#9670;&nbsp;</a></span>DCEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void DCEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f2e75fcba58c9a779201edd6a372f6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f2e75fcba58c9a779201edd6a372f6c">&#9670;&nbsp;</a></span>DCFlushRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCFlushRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea2691ff81fe6cba84cbd3e49ef078be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2691ff81fe6cba84cbd3e49ef078be">&#9670;&nbsp;</a></span>DCFlushRangeNoSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCFlushRangeNoSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32d5d7a69e38c98d1817a890960c30b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d5d7a69e38c98d1817a890960c30b7">&#9670;&nbsp;</a></span>DCInvalidateRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCInvalidateRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0440acad7d135008a79a898fb9e03f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0440acad7d135008a79a898fb9e03f45">&#9670;&nbsp;</a></span>DCStoreRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCStoreRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad447114b3d91ab5c0a9dc74c6da0b71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad447114b3d91ab5c0a9dc74c6da0b71c">&#9670;&nbsp;</a></span>DCStoreRangeNoSync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DCStoreRangeNoSync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a048f6375e9632bd61fe191b408a76b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048f6375e9632bd61fe191b408a76b7e">&#9670;&nbsp;</a></span>DCZeroRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void DCZeroRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbf63f7d153fdd20986e7a1615719514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbf63f7d153fdd20986e7a1615719514">&#9670;&nbsp;</a></span>DMAErrorHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void DMAErrorHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f59c4388c6af7c0dba68fc632e13eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f59c4388c6af7c0dba68fc632e13eff">&#9670;&nbsp;</a></span>ICEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void ICEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37de73baaf1903063d5fae675e151afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37de73baaf1903063d5fae675e151afe">&#9670;&nbsp;</a></span>ICFlashInvalidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ICFlashInvalidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6aaddb8f5d421df2b57558206ee5a443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aaddb8f5d421df2b57558206ee5a443">&#9670;&nbsp;</a></span>ICInvalidateRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ICInvalidateRange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac316e527761757340978ff31c0e6956d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac316e527761757340978ff31c0e6956d">&#9670;&nbsp;</a></span>L2GlobalInvalidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void L2GlobalInvalidate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95d405402a755b1189d3e3f25af355ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d405402a755b1189d3e3f25af355ca">&#9670;&nbsp;</a></span>LCDisable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LCDisable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f0278d9bd63f7bfd9073f176d709126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0278d9bd63f7bfd9073f176d709126">&#9670;&nbsp;</a></span>LCEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void LCEnable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b9c37eecfd1f7f05a7fcb295d7a73c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9c37eecfd1f7f05a7fcb295d7a73c2">&#9670;&nbsp;</a></span>LCQueueWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void LCQueueWait </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7df9a6ede8d74c93ca3d37dc7cd6276c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df9a6ede8d74c93ca3d37dc7cd6276c">&#9670;&nbsp;</a></span>LCStoreBlocks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void LCStoreBlocks </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe5a408d0ec7e4c7c51ab4b636a2f1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe5a408d0ec7e4c7c51ab4b636a2f1a7">&#9670;&nbsp;</a></span>LCStoreData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void LCStoreData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65b7dd4c9756f26d16dcf8f0dedb07bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b7dd4c9756f26d16dcf8f0dedb07bf">&#9670;&nbsp;</a></span>OSDisableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDisableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a310dbe1438ed769a46914dca79a43c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310dbe1438ed769a46914dca79a43c2b">&#9670;&nbsp;</a></span>OSDumpContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSDumpContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade4b47b8fab54c8f6a71bf594943c828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade4b47b8fab54c8f6a71bf594943c828">&#9670;&nbsp;</a></span>OSReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14b5cc2befa83d8710fba14f4de14fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b5cc2befa83d8710fba14f4de14fd9">&#9670;&nbsp;</a></span>OSRestoreInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSRestoreInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6445aa6d866a96b12e87a092229ddd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6445aa6d866a96b12e87a092229ddd6">&#9670;&nbsp;</a></span>OSSetErrorHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void OSSetErrorHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4831a1a131204873ef617718ff64223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4831a1a131204873ef617718ff64223">&#9670;&nbsp;</a></span>PPCHalt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCHalt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79ba61b555493f703803b4b45a1a4686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ba61b555493f703803b4b45a1a4686">&#9670;&nbsp;</a></span>PPCMfhid0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMfhid0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7ad6f109169d6bcafd497ae18bdbc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ad6f109169d6bcafd497ae18bdbc1e">&#9670;&nbsp;</a></span>PPCMfhid2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMfhid2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f959a5639052e1b1b114bce3e84120a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f959a5639052e1b1b114bce3e84120a">&#9670;&nbsp;</a></span>PPCMfl2cr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMfl2cr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72288d6fddcf63b28eee8bca4b9d9a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72288d6fddcf63b28eee8bca4b9d9a9f">&#9670;&nbsp;</a></span>PPCMfmsr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMfmsr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bb6cbdf45abd9a5006bba1c144ccc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb6cbdf45abd9a5006bba1c144ccc21">&#9670;&nbsp;</a></span>PPCMthid2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMthid2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed297b49f242b80056b78d2958e6242d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed297b49f242b80056b78d2958e6242d">&#9670;&nbsp;</a></span>PPCMtl2cr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtl2cr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af18f0ca95ca6936e66ef36667e69e82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18f0ca95ca6936e66ef36667e69e82a">&#9670;&nbsp;</a></span>PPCMtmsr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PPCMtmsr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4ebf507993a0b7065a01d09f7103cb11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ebf507993a0b7065a01d09f7103cb11">&#9670;&nbsp;</a></span>OSCache__lit_104</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_104</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4C, 0x31, 0x20, 0x69, 0x2D, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74,</div>
+<div class="line">    0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aef2618cf7108f1a1315423fcbd3c2e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef2618cf7108f1a1315423fcbd3c2e5b">&#9670;&nbsp;</a></span>OSCache__lit_105</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_105</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4C, 0x31, 0x20, 0x64, 0x2D, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74,</div>
+<div class="line">    0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad31e75caed02c90486faec5607be219e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31e75caed02c90486faec5607be219e">&#9670;&nbsp;</a></span>OSCache__lit_106</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_106</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4C, 0x32, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C,</div>
+<div class="line">    0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d511c3ebf27fea5d8fc31d75e951e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d511c3ebf27fea5d8fc31d75e951e09">&#9670;&nbsp;</a></span>OSCache__lit_107</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_107</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4C, 0x6F, 0x63, 0x6B, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x6D, 0x61, 0x63,</div>
+<div class="line">    0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x68, 0x61, 0x6E, 0x64, 0x6C,</div>
+<div class="line">    0x65, 0x72, 0x20, 0x69, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a952d9aaf50199a7086eecd0bd4d6bb22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952d9aaf50199a7086eecd0bd4d6bb22">&#9670;&nbsp;</a></span>OSCache__lit_63</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_63[41+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3E, 0x3E, 0x3E, 0x20, 0x4C, 0x32, 0x20, 0x49, 0x4E, 0x56, 0x41, 0x4C, 0x49, 0x44, 0x41, 0x54,</div>
+<div class="line">    0x45, 0x20, 0x3A, 0x20, 0x53, 0x48, 0x4F, 0x55, 0x4C, 0x44, 0x20, 0x4E, 0x45, 0x56, 0x45, 0x52,</div>
+<div class="line">    0x20, 0x48, 0x41, 0x50, 0x50, 0x45, 0x4E, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a137803b17dfea8e66f711735fff94795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137803b17dfea8e66f711735fff94795">&#9670;&nbsp;</a></span>OSCache__lit_84</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_84</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4D, 0x61, 0x63, 0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x72, 0x65,</div>
+<div class="line">    0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a629bd130891a5011a6a88df050aa5e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629bd130891a5011a6a88df050aa5e9e">&#9670;&nbsp;</a></span>OSCache__lit_85</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_85</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x48, 0x49, 0x44, 0x32, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x20, 0x20, 0x53, 0x52,</div>
+<div class="line">    0x52, 0x31, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af172ad0e54728555a38b5a3dba5c584b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af172ad0e54728555a38b5a3dba5c584b">&#9670;&nbsp;</a></span>OSCache__lit_86</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_86</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4D, 0x61, 0x63, 0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x77, 0x61,</div>
+<div class="line">    0x73, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x44, 0x4D, 0x41, 0x2F, 0x6C, 0x6F, 0x63, 0x6B, 0x65, 0x64,</div>
+<div class="line">    0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x72, 0x65, 0x6C, 0x61, 0x74, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa7f4e42bf867282f7bda2628dfcaf5ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f4e42bf867282f7bda2628dfcaf5ab">&#9670;&nbsp;</a></span>OSCache__lit_87</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_87</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x44, 0x4D, 0x41, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x48, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x72, 0x28,</div>
+<div class="line">    0x29, 0x3A, 0x20, 0x41, 0x6E, 0x20, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x6F, 0x63, 0x63, 0x75,</div>
+<div class="line">    0x72, 0x72, 0x65, 0x64, 0x20, 0x77, 0x68, 0x69, 0x6C, 0x65, 0x20, 0x70, 0x72, 0x6F, 0x63, 0x65,</div>
+<div class="line">    0x73, 0x73, 0x69, 0x6E, 0x67, 0x20, 0x44, 0x4D, 0x41, 0x2E, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a480f51750783fbcc089fb6f896d634e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480f51750783fbcc089fb6f896d634e0">&#9670;&nbsp;</a></span>OSCache__lit_88</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_88</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x54, 0x68, 0x65, 0x20, 0x66, 0x6F, 0x6C, 0x6C, 0x6F, 0x77, 0x69, 0x6E, 0x67, 0x20, 0x65, 0x72,</div>
+<div class="line">    0x72, 0x6F, 0x72, 0x73, 0x20, 0x68, 0x61, 0x76, 0x65, 0x20, 0x62, 0x65, 0x65, 0x6E, 0x20, 0x64,</div>
+<div class="line">    0x65, 0x74, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x61, 0x6E, 0x64, 0x20, 0x63, 0x6C, 0x65, 0x61,</div>
+<div class="line">    0x72, 0x65, 0x64, 0x20, 0x3A, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af658b5baab531e9ddfa427744023d611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af658b5baab531e9ddfa427744023d611">&#9670;&nbsp;</a></span>OSCache__lit_89</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_89</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x09, 0x2D, 0x20, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x65, 0x64, 0x20, 0x61, 0x20, 0x6C,</div>
+<div class="line">    0x6F, 0x63, 0x6B, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x74, 0x61, 0x67, 0x20,</div>
+<div class="line">    0x74, 0x68, 0x61, 0x74, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79,</div>
+<div class="line">    0x20, 0x69, 0x6E, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5f715487c270fe1b9cda7edf3a440189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f715487c270fe1b9cda7edf3a440189">&#9670;&nbsp;</a></span>OSCache__lit_90</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x61, 0x74, 0x74, 0x65, 0x6D, 0x70, 0x74, 0x65, 0x64,</div>
+<div class="line">    0x20, 0x74, 0x6F, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x20, 0x6E, 0x6F, 0x72, 0x6D, 0x61,</div>
+<div class="line">    0x6C, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa31d964306fd2f4c6a0e0ed25b3e0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa31d964306fd2f4c6a0e0ed25b3e0e3">&#9670;&nbsp;</a></span>OSCache__lit_91</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_91</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x6D, 0x69, 0x73, 0x73, 0x65, 0x64, 0x20, 0x69, 0x6E,</div>
+<div class="line">    0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af64955c2bab6f4d410ae51d287d6df2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64955c2bab6f4d410ae51d287d6df2e">&#9670;&nbsp;</a></span>OSCache__lit_92</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSCache__lit_92</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x6F, 0x76, 0x65,</div>
+<div class="line">    0x72, 0x66, 0x6C, 0x6F, 0x77, 0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -74,60 +74,50 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">c_API_graphic.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__API__graphic_8h_source.html">SComponent/c_API_graphic.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__API__graphic_8h_source.html">SSystem/SComponent/c_API_graphic.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_API_graphic/cAPIGph_Painter__Fv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_API_graphic/cAPIGph_BeforeOfDraw__Fv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_API_graphic/cAPIGph_AfterOfDraw__Fv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_API_graphic.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c__API__graphic_8cpp__incl.svg" width="352" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="c__API__graphic_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a886376eb0d4542ca26341714d48a17a1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a886376eb0d4542ca26341714d48a17a1">cAPIGph_Mthd</a>) (void)</td></tr>
-<tr class="separator:a886376eb0d4542ca26341714d48a17a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8e35450512f58e2c248335d7f84e726b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a8e35450512f58e2c248335d7f84e726b">cAPIGph_Painter</a> (void)</td></tr>
-<tr class="separator:a8e35450512f58e2c248335d7f84e726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd30b9013f8cc79209db95addeca3993"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#afd30b9013f8cc79209db95addeca3993">cAPIGph_BeforeOfDraw</a> (void)</td></tr>
-<tr class="separator:afd30b9013f8cc79209db95addeca3993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca40a36ffd2318cf7714ee76d0dd1dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a8ca40a36ffd2318cf7714ee76d0dd1dc">cAPIGph_AfterOfDraw</a> (void)</td></tr>
-<tr class="separator:a8ca40a36ffd2318cf7714ee76d0dd1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b9e80562d187558dc6520d6d68ff4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a46b9e80562d187558dc6520d6d68ff4f">cAPIGph_Painter</a> ()</td></tr>
+<tr class="separator:a46b9e80562d187558dc6520d6d68ff4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb578d599cc6d7d1b8c4adbddb4bd80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a4fb578d599cc6d7d1b8c4adbddb4bd80">cAPIGph_BeforeOfDraw</a> ()</td></tr>
+<tr class="separator:a4fb578d599cc6d7d1b8c4adbddb4bd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1954b554e45eecf030dc634c13320679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a1954b554e45eecf030dc634c13320679">cAPIGph_AfterOfDraw</a> ()</td></tr>
+<tr class="separator:a1954b554e45eecf030dc634c13320679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69df7500a99dd5d270831ba40bf2267e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a69df7500a99dd5d270831ba40bf2267e">cAPIGph_Painter__Fv</a> ()</td></tr>
+<tr class="separator:a69df7500a99dd5d270831ba40bf2267e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b3656265adf8f63cc1845caf5fa5be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#ab4b3656265adf8f63cc1845caf5fa5be">cAPIGph_BeforeOfDraw__Fv</a> ()</td></tr>
+<tr class="separator:ab4b3656265adf8f63cc1845caf5fa5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed147cd02d94760a43c119bd7fba5f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#a2ed147cd02d94760a43c119bd7fba5f4">cAPIGph_AfterOfDraw__Fv</a> ()</td></tr>
+<tr class="separator:a2ed147cd02d94760a43c119bd7fba5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad5233fd04a581a53ed117a1b9746138c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__API__graphic_8cpp.html#a886376eb0d4542ca26341714d48a17a1">cAPIGph_Mthd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#ad5233fd04a581a53ed117a1b9746138c">lbl_803C3528</a> [6]</td></tr>
-<tr class="separator:ad5233fd04a581a53ed117a1b9746138c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e726c8d1fc85eb0ea6b9c0924cf3fa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__API__graphic_8cpp.html#ab0e726c8d1fc85eb0ea6b9c0924cf3fa">g_cAPI_Interface</a> [6]</td></tr>
+<tr class="separator:ab0e726c8d1fc85eb0ea6b9c0924cf3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a886376eb0d4542ca26341714d48a17a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a886376eb0d4542ca26341714d48a17a1">&#9670;&nbsp;</a></span>cAPIGph_Mthd</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* cAPIGph_Mthd) (void)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8ca40a36ffd2318cf7714ee76d0dd1dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ca40a36ffd2318cf7714ee76d0dd1dc">&#9670;&nbsp;</a></span>cAPIGph_AfterOfDraw()</h2>
+<a id="a1954b554e45eecf030dc634c13320679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1954b554e45eecf030dc634c13320679">&#9670;&nbsp;</a></span>cAPIGph_AfterOfDraw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +125,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void cAPIGph_AfterOfDraw </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -144,8 +133,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afd30b9013f8cc79209db95addeca3993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd30b9013f8cc79209db95addeca3993">&#9670;&nbsp;</a></span>cAPIGph_BeforeOfDraw()</h2>
+<a id="a2ed147cd02d94760a43c119bd7fba5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed147cd02d94760a43c119bd7fba5f4">&#9670;&nbsp;</a></span>cAPIGph_AfterOfDraw__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cAPIGph_AfterOfDraw__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fb578d599cc6d7d1b8c4adbddb4bd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb578d599cc6d7d1b8c4adbddb4bd80">&#9670;&nbsp;</a></span>cAPIGph_BeforeOfDraw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +159,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void cAPIGph_BeforeOfDraw </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -162,8 +167,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8e35450512f58e2c248335d7f84e726b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e35450512f58e2c248335d7f84e726b">&#9670;&nbsp;</a></span>cAPIGph_Painter()</h2>
+<a id="ab4b3656265adf8f63cc1845caf5fa5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b3656265adf8f63cc1845caf5fa5be">&#9670;&nbsp;</a></span>cAPIGph_BeforeOfDraw__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cAPIGph_BeforeOfDraw__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46b9e80562d187558dc6520d6d68ff4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b9e80562d187558dc6520d6d68ff4f">&#9670;&nbsp;</a></span>cAPIGph_Painter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +193,23 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void cAPIGph_Painter </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69df7500a99dd5d270831ba40bf2267e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69df7500a99dd5d270831ba40bf2267e">&#9670;&nbsp;</a></span>cAPIGph_Painter__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cAPIGph_Painter__Fv </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -181,8 +219,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ad5233fd04a581a53ed117a1b9746138c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5233fd04a581a53ed117a1b9746138c">&#9670;&nbsp;</a></span>lbl_803C3528</h2>
+<a id="ab0e726c8d1fc85eb0ea6b9c0924cf3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e726c8d1fc85eb0ea6b9c0924cf3fa">&#9670;&nbsp;</a></span>g_cAPI_Interface</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +229,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="c__API__graphic_8cpp.html#a886376eb0d4542ca26341714d48a17a1">cAPIGph_Mthd</a> lbl_803C3528[6]</td>
+          <td class="memname">void* g_cAPI_Interface[6]</td>
         </tr>
       </table>
   </td>

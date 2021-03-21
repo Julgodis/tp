@@ -73,10 +73,667 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">mtx.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mtx_8h_source.html">dolphin/mtx/mtx.h</a>&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXIdentity.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXCopy.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXConcat.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXInverse.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXRotRad.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXRotTrig.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/__PSMTXRotAxisRadInternal.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXRotAxisRad.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXTrans.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXTransApply.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXScale.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXScaleApply.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/PSMTXQuat.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/C_MTXLookAt.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/C_MTXLightPerspective.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/mtx/mtx/C_MTXLightOrtho.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for mtx.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="mtx_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a64906dab7f0ac23a0637165adf500964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a64906dab7f0ac23a0637165adf500964">PSMTXIdentity</a> ()</td></tr>
+<tr class="separator:a64906dab7f0ac23a0637165adf500964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec00f755b69eb1ecdd833e3148126dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a9ec00f755b69eb1ecdd833e3148126dc">PSMTXCopy</a> ()</td></tr>
+<tr class="separator:a9ec00f755b69eb1ecdd833e3148126dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93df645b0f4cbe24ff486f44e7490d6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a93df645b0f4cbe24ff486f44e7490d6c">PSMTXConcat</a> ()</td></tr>
+<tr class="separator:a93df645b0f4cbe24ff486f44e7490d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e84a3f7489b65f3d6432ac4aca0e118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a0e84a3f7489b65f3d6432ac4aca0e118">PSMTXInverse</a> ()</td></tr>
+<tr class="separator:a0e84a3f7489b65f3d6432ac4aca0e118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf3ba14a8667d82e0dd5578160c16c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#aecf3ba14a8667d82e0dd5578160c16c9">PSMTXRotRad</a> ()</td></tr>
+<tr class="separator:aecf3ba14a8667d82e0dd5578160c16c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797a87d89280c1243413114d60f3215a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a797a87d89280c1243413114d60f3215a">PSMTXRotTrig</a> ()</td></tr>
+<tr class="separator:a797a87d89280c1243413114d60f3215a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f8495f16c0612467297061e3b92cc9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#ac9f8495f16c0612467297061e3b92cc9">__PSMTXRotAxisRadInternal</a> ()</td></tr>
+<tr class="separator:ac9f8495f16c0612467297061e3b92cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31aa4c5b0eade1dd98e4ec3def8cf4ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a31aa4c5b0eade1dd98e4ec3def8cf4ba">PSMTXRotAxisRad</a> ()</td></tr>
+<tr class="separator:a31aa4c5b0eade1dd98e4ec3def8cf4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71457f4c801a39c1b90e6c06e11d5550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a71457f4c801a39c1b90e6c06e11d5550">PSMTXTrans</a> ()</td></tr>
+<tr class="separator:a71457f4c801a39c1b90e6c06e11d5550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43441beef72a3179f4bfb5127f7938f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a43441beef72a3179f4bfb5127f7938f9">PSMTXTransApply</a> ()</td></tr>
+<tr class="separator:a43441beef72a3179f4bfb5127f7938f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fe0a3a47a4a7334c3cef19bb25b8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a71fe0a3a47a4a7334c3cef19bb25b8a3">PSMTXScale</a> ()</td></tr>
+<tr class="separator:a71fe0a3a47a4a7334c3cef19bb25b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e06f4c704f99cd9ef333ed9e3a76821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a5e06f4c704f99cd9ef333ed9e3a76821">PSMTXScaleApply</a> ()</td></tr>
+<tr class="separator:a5e06f4c704f99cd9ef333ed9e3a76821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592cd3be19266527aab9636cb0374cf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a592cd3be19266527aab9636cb0374cf0">PSMTXQuat</a> ()</td></tr>
+<tr class="separator:a592cd3be19266527aab9636cb0374cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a163ed06ee54c9ca6f203a1ba0e829693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a163ed06ee54c9ca6f203a1ba0e829693">C_MTXLookAt</a> ()</td></tr>
+<tr class="separator:a163ed06ee54c9ca6f203a1ba0e829693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fd11b86005297366cc418b22845e7b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a2fd11b86005297366cc418b22845e7b0">C_MTXLightPerspective</a> ()</td></tr>
+<tr class="separator:a2fd11b86005297366cc418b22845e7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12801dc32f56f3fbc357c68719144e10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a12801dc32f56f3fbc357c68719144e10">C_MTXLightOrtho</a> ()</td></tr>
+<tr class="separator:a12801dc32f56f3fbc357c68719144e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#ad147100ce3c1b81ba959b43b39ad5a53">PSVECNormalize</a> ()</td></tr>
+<tr class="separator:ad147100ce3c1b81ba959b43b39ad5a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad020f89b3a5906e30371543f023f919f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#ad020f89b3a5906e30371543f023f919f">PSVECCrossProduct</a> ()</td></tr>
+<tr class="separator:ad020f89b3a5906e30371543f023f919f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7880d1860ae5064f77f9105ae330889"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#aa7880d1860ae5064f77f9105ae330889">tanf</a> ()</td></tr>
+<tr class="separator:aa7880d1860ae5064f77f9105ae330889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20bc3061a311db1a6ec6c319ccc768f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#ab20bc3061a311db1a6ec6c319ccc768f">sinf</a> ()</td></tr>
+<tr class="separator:ab20bc3061a311db1a6ec6c319ccc768f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbf5a634bcf032fd74e706856c29cd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a0fbf5a634bcf032fd74e706856c29cd4">cosf</a> ()</td></tr>
+<tr class="separator:a0fbf5a634bcf032fd74e706856c29cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a801ee9ddd95ef704759eed79a5fbd80a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a801ee9ddd95ef704759eed79a5fbd80a">mtx__lit_96</a> = 1.0f</td></tr>
+<tr class="separator:a801ee9ddd95ef704759eed79a5fbd80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b35e2ed927afded55e9c279c326bbf2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a8b35e2ed927afded55e9c279c326bbf2">mtx__lit_97</a> [4]</td></tr>
+<tr class="separator:a8b35e2ed927afded55e9c279c326bbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b86fbafcbe82996935a1d1c4109803"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a72b86fbafcbe82996935a1d1c4109803">mtx__Unit01</a> [8]</td></tr>
+<tr class="separator:a72b86fbafcbe82996935a1d1c4109803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee883741baac7c81c77a00adf0d67cc9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#aee883741baac7c81c77a00adf0d67cc9">lit_190</a> = 0.5f</td></tr>
+<tr class="separator:aee883741baac7c81c77a00adf0d67cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13f6ea84e0a0f8a3b79fb6baaab3e35"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#ae13f6ea84e0a0f8a3b79fb6baaab3e35">lit_191</a> = 3.0f</td></tr>
+<tr class="separator:ae13f6ea84e0a0f8a3b79fb6baaab3e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a374885fd0c51fa54c4762af61e539"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a64a374885fd0c51fa54c4762af61e539">mtx__lit_206</a> = 2.0f</td></tr>
+<tr class="separator:a64a374885fd0c51fa54c4762af61e539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085c2001671faee5161c18103390cc93"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a085c2001671faee5161c18103390cc93">lit_227</a> = -1.0f</td></tr>
+<tr class="separator:a085c2001671faee5161c18103390cc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77972144a9ef8d1158e2d14942383dc3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtx_8cpp.html#a77972144a9ef8d1158e2d14942383dc3">lit_230</a> [1+1]</td></tr>
+<tr class="separator:a77972144a9ef8d1158e2d14942383dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac9f8495f16c0612467297061e3b92cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f8495f16c0612467297061e3b92cc9">&#9670;&nbsp;</a></span>__PSMTXRotAxisRadInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void __PSMTXRotAxisRadInternal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12801dc32f56f3fbc357c68719144e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12801dc32f56f3fbc357c68719144e10">&#9670;&nbsp;</a></span>C_MTXLightOrtho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_MTXLightOrtho </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fd11b86005297366cc418b22845e7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fd11b86005297366cc418b22845e7b0">&#9670;&nbsp;</a></span>C_MTXLightPerspective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_MTXLightPerspective </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a163ed06ee54c9ca6f203a1ba0e829693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a163ed06ee54c9ca6f203a1ba0e829693">&#9670;&nbsp;</a></span>C_MTXLookAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void C_MTXLookAt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fbf5a634bcf032fd74e706856c29cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fbf5a634bcf032fd74e706856c29cd4">&#9670;&nbsp;</a></span>cosf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cosf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93df645b0f4cbe24ff486f44e7490d6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93df645b0f4cbe24ff486f44e7490d6c">&#9670;&nbsp;</a></span>PSMTXConcat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXConcat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ec00f755b69eb1ecdd833e3148126dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec00f755b69eb1ecdd833e3148126dc">&#9670;&nbsp;</a></span>PSMTXCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64906dab7f0ac23a0637165adf500964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64906dab7f0ac23a0637165adf500964">&#9670;&nbsp;</a></span>PSMTXIdentity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXIdentity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e84a3f7489b65f3d6432ac4aca0e118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e84a3f7489b65f3d6432ac4aca0e118">&#9670;&nbsp;</a></span>PSMTXInverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXInverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a592cd3be19266527aab9636cb0374cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592cd3be19266527aab9636cb0374cf0">&#9670;&nbsp;</a></span>PSMTXQuat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXQuat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31aa4c5b0eade1dd98e4ec3def8cf4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31aa4c5b0eade1dd98e4ec3def8cf4ba">&#9670;&nbsp;</a></span>PSMTXRotAxisRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXRotAxisRad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecf3ba14a8667d82e0dd5578160c16c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf3ba14a8667d82e0dd5578160c16c9">&#9670;&nbsp;</a></span>PSMTXRotRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXRotRad </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a797a87d89280c1243413114d60f3215a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797a87d89280c1243413114d60f3215a">&#9670;&nbsp;</a></span>PSMTXRotTrig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void PSMTXRotTrig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71fe0a3a47a4a7334c3cef19bb25b8a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fe0a3a47a4a7334c3cef19bb25b8a3">&#9670;&nbsp;</a></span>PSMTXScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXScale </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e06f4c704f99cd9ef333ed9e3a76821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e06f4c704f99cd9ef333ed9e3a76821">&#9670;&nbsp;</a></span>PSMTXScaleApply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void PSMTXScaleApply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71457f4c801a39c1b90e6c06e11d5550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71457f4c801a39c1b90e6c06e11d5550">&#9670;&nbsp;</a></span>PSMTXTrans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXTrans </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43441beef72a3179f4bfb5127f7938f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43441beef72a3179f4bfb5127f7938f9">&#9670;&nbsp;</a></span>PSMTXTransApply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void PSMTXTransApply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad020f89b3a5906e30371543f023f919f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad020f89b3a5906e30371543f023f919f">&#9670;&nbsp;</a></span>PSVECCrossProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECCrossProduct </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad147100ce3c1b81ba959b43b39ad5a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad147100ce3c1b81ba959b43b39ad5a53">&#9670;&nbsp;</a></span>PSVECNormalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSVECNormalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab20bc3061a311db1a6ec6c319ccc768f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20bc3061a311db1a6ec6c319ccc768f">&#9670;&nbsp;</a></span>sinf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void sinf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7880d1860ae5064f77f9105ae330889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7880d1860ae5064f77f9105ae330889">&#9670;&nbsp;</a></span>tanf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void tanf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aee883741baac7c81c77a00adf0d67cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee883741baac7c81c77a00adf0d67cc9">&#9670;&nbsp;</a></span>lit_190</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_190 = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae13f6ea84e0a0f8a3b79fb6baaab3e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13f6ea84e0a0f8a3b79fb6baaab3e35">&#9670;&nbsp;</a></span>lit_191</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_191 = 3.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a085c2001671faee5161c18103390cc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085c2001671faee5161c18103390cc93">&#9670;&nbsp;</a></span>lit_227</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_227 = -1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77972144a9ef8d1158e2d14942383dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77972144a9ef8d1158e2d14942383dc3">&#9670;&nbsp;</a></span>lit_230</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_230[1+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0.01745329238474369f,</div>
+<div class="line">    </div>
+<div class="line">    0.0f,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64a374885fd0c51fa54c4762af61e539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a374885fd0c51fa54c4762af61e539">&#9670;&nbsp;</a></span>mtx__lit_206</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> mtx__lit_206 = 2.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a801ee9ddd95ef704759eed79a5fbd80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801ee9ddd95ef704759eed79a5fbd80a">&#9670;&nbsp;</a></span>mtx__lit_96</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> mtx__lit_96 = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b35e2ed927afded55e9c279c326bbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b35e2ed927afded55e9c279c326bbf2">&#9670;&nbsp;</a></span>mtx__lit_97</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mtx__lit_97[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a72b86fbafcbe82996935a1d1c4109803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b86fbafcbe82996935a1d1c4109803">&#9670;&nbsp;</a></span>mtx__Unit01</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mtx__Unit01[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

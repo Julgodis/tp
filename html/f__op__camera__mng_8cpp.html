@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_op/f_op_camera_mng.cpp File Reference</title>
+<title>Twilight Princess: src/f_op/f_op_camera_mng.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,53 +69,80 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_78d979f70e66f5399b8b2e33e5bfc8e1.html">f_op</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1067c0d41a0230984cbcba896d5e4c43.html">f_op</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">f_op_camera_mng.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__op__camera__mng_8h_source.html">f/f_op/f_op_camera_mng.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__pc__layer_8h_source.html">f/f_pc/f_pc_layer.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__pc__stdcreate__req_8h_source.html">f/f_pc/f_pc_stdcreate_req.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__op__camera__mng_8h_source.html">f_op/f_op_camera_mng.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_camera_mng/fopCamM_GetParam__FP12camera_class.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_camera_mng/fopCamM_Create__FisPv.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_camera_mng/fopCamM_Management__Fv.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_camera_mng/fopCamM_Init__Fv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_op_camera_mng.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__camera__mng_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__camera__mng_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcamera__class.html">camera_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer__class.html">layer_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a48d8f739ce2e7307c492f77e691dad43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a48d8f739ce2e7307c492f77e691dad43">_restgpr_29</a> (void)</td></tr>
-<tr class="separator:a48d8f739ce2e7307c492f77e691dad43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7713ba636cbd9b1a18d454801252866b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a7713ba636cbd9b1a18d454801252866b">_savegpr_29</a> (void)</td></tr>
-<tr class="separator:a7713ba636cbd9b1a18d454801252866b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade25b5f8ec54a4e11bbcdb5695a76301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#ade25b5f8ec54a4e11bbcdb5695a76301">fopCamM_GetParam</a> (<a class="el" href="classcamera__class.html">camera_class</a> *pCamera)</td></tr>
-<tr class="separator:ade25b5f8ec54a4e11bbcdb5695a76301"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4121e513ace023d4c2bde3830b572830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a4121e513ace023d4c2bde3830b572830">fopCamM_Create</a> (int i_cameraIdx, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> pProcName, void *param_3)</td></tr>
-<tr class="separator:a4121e513ace023d4c2bde3830b572830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d80b8b2f53415d5482bbc22514c4ba7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a3d80b8b2f53415d5482bbc22514c4ba7">fopCamM_Management</a> (void)</td></tr>
-<tr class="separator:a3d80b8b2f53415d5482bbc22514c4ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd16391c9114485da566faa5a3e81e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#abd16391c9114485da566faa5a3e81e99">fopCamM_Init</a> (void)</td></tr>
-<tr class="separator:abd16391c9114485da566faa5a3e81e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b12bb7b0918f6321efc7f6d044e8b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a00b12bb7b0918f6321efc7f6d044e8b6">fopCamM_GetParam</a> (<a class="el" href="structcamera__class.html">camera_class</a> *)</td></tr>
+<tr class="separator:a00b12bb7b0918f6321efc7f6d044e8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56edc307e2b4026c2a71957bd2f7872a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a56edc307e2b4026c2a71957bd2f7872a">fopCamM_Create</a> (int, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, void *)</td></tr>
+<tr class="separator:a56edc307e2b4026c2a71957bd2f7872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bcc58dceb19f5834e7e9d9136c38c6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a3bcc58dceb19f5834e7e9d9136c38c6f">fopCamM_Management</a> ()</td></tr>
+<tr class="separator:a3bcc58dceb19f5834e7e9d9136c38c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf080bd6bba96503cfeae909537fe4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#abbf080bd6bba96503cfeae909537fe4c">fopCamM_Init</a> ()</td></tr>
+<tr class="separator:abbf080bd6bba96503cfeae909537fe4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59431100165a8f40e188b64094651efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a59431100165a8f40e188b64094651efe">fopCamM_GetParam__FP12camera_class</a> ()</td></tr>
+<tr class="separator:a59431100165a8f40e188b64094651efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b2544f6c464671463a4d3733d30f15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#aa0b2544f6c464671463a4d3733d30f15">fopCamM_Create__FisPv</a> ()</td></tr>
+<tr class="separator:aa0b2544f6c464671463a4d3733d30f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36dc4a6fbda15c50a03d3f03ded9da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#ab36dc4a6fbda15c50a03d3f03ded9da8">fopCamM_Management__Fv</a> ()</td></tr>
+<tr class="separator:ab36dc4a6fbda15c50a03d3f03ded9da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac12a4d0f0d89383c790da0217fc58d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#aac12a4d0f0d89383c790da0217fc58d3">fopCamM_Init__Fv</a> ()</td></tr>
+<tr class="separator:aac12a4d0f0d89383c790da0217fc58d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6970acb7ab7819039b435045d1addd8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a6970acb7ab7819039b435045d1addd8b">fpcLy_CurrentLayer</a> ()</td></tr>
+<tr class="separator:a6970acb7ab7819039b435045d1addd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0827bb5b5a35cb91d7a387c1f77300e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a0827bb5b5a35cb91d7a387c1f77300e8">fpcSCtRq_Request</a> (<a class="el" href="structlayer__class.html">layer_class</a> *, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, int(*)(void *, void *), void *, void *)</td></tr>
+<tr class="separator:a0827bb5b5a35cb91d7a387c1f77300e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6360d307f710b311afd3b3c25d8c55b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a6360d307f710b311afd3b3c25d8c55b9">fpcLy_CurrentLayer__Fv</a> ()</td></tr>
+<tr class="separator:a6360d307f710b311afd3b3c25d8c55b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1afa4f490afc55501395dd622f1c4c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a1afa4f490afc55501395dd622f1c4c7b">fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv</a> ()</td></tr>
+<tr class="separator:a1afa4f490afc55501395dd622f1c4c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3662cd06864ff7627d5424c192e6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a5f3662cd06864ff7627d5424c192e6f2">_savegpr_29</a> ()</td></tr>
+<tr class="separator:a5f3662cd06864ff7627d5424c192e6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed5bd59c54272a132a5b4da4beff66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#abed5bd59c54272a132a5b4da4beff66d">_restgpr_29</a> ()</td></tr>
+<tr class="separator:abed5bd59c54272a132a5b4da4beff66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae7f844fbfcdc54f8b4d775f5644cc4be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#ae7f844fbfcdc54f8b4d775f5644cc4be">l_fopCamM_id</a> [4]</td></tr>
-<tr class="separator:ae7f844fbfcdc54f8b4d775f5644cc4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c473da253b0e8158a2dc3e8ee53fcc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__camera__mng_8cpp.html#a96c473da253b0e8158a2dc3e8ee53fcc">l_fopCamM_id</a> [16]</td></tr>
+<tr class="separator:a96c473da253b0e8158a2dc3e8ee53fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a48d8f739ce2e7307c492f77e691dad43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48d8f739ce2e7307c492f77e691dad43">&#9670;&nbsp;</a></span>_restgpr_29()</h2>
+<a id="abed5bd59c54272a132a5b4da4beff66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed5bd59c54272a132a5b4da4beff66d">&#9670;&nbsp;</a></span>_restgpr_29()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +150,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void _restgpr_29 </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -132,8 +158,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7713ba636cbd9b1a18d454801252866b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7713ba636cbd9b1a18d454801252866b">&#9670;&nbsp;</a></span>_savegpr_29()</h2>
+<a id="a5f3662cd06864ff7627d5424c192e6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3662cd06864ff7627d5424c192e6f2">&#9670;&nbsp;</a></span>_savegpr_29()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +167,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void _savegpr_29 </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -150,29 +175,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a4121e513ace023d4c2bde3830b572830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4121e513ace023d4c2bde3830b572830">&#9670;&nbsp;</a></span>fopCamM_Create()</h2>
+<a id="a56edc307e2b4026c2a71957bd2f7872a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56edc307e2b4026c2a71957bd2f7872a">&#9670;&nbsp;</a></span>fopCamM_Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> fopCamM_Create </td>
+          <td class="memname">void fopCamM_Create </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i_cameraIdx</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>pProcName</em>, </td>
+          <td class="paramname"><em>param_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>param_3</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,34 +209,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ade25b5f8ec54a4e11bbcdb5695a76301"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade25b5f8ec54a4e11bbcdb5695a76301">&#9670;&nbsp;</a></span>fopCamM_GetParam()</h2>
+<a id="aa0b2544f6c464671463a4d3733d30f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b2544f6c464671463a4d3733d30f15">&#9670;&nbsp;</a></span>fopCamM_Create__FisPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> fopCamM_GetParam </td>
+          <td class="memname">void fopCamM_Create__FisPv </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcamera__class.html">camera_class</a> *&#160;</td>
-          <td class="paramname"><em>pCamera</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abd16391c9114485da566faa5a3e81e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd16391c9114485da566faa5a3e81e99">&#9670;&nbsp;</a></span>fopCamM_Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fopCamM_Init </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -220,8 +226,77 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d80b8b2f53415d5482bbc22514c4ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d80b8b2f53415d5482bbc22514c4ba7">&#9670;&nbsp;</a></span>fopCamM_Management()</h2>
+<a id="a00b12bb7b0918f6321efc7f6d044e8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00b12bb7b0918f6321efc7f6d044e8b6">&#9670;&nbsp;</a></span>fopCamM_GetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopCamM_GetParam </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcamera__class.html">camera_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59431100165a8f40e188b64094651efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59431100165a8f40e188b64094651efe">&#9670;&nbsp;</a></span>fopCamM_GetParam__FP12camera_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopCamM_GetParam__FP12camera_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbf080bd6bba96503cfeae909537fe4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbf080bd6bba96503cfeae909537fe4c">&#9670;&nbsp;</a></span>fopCamM_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopCamM_Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac12a4d0f0d89383c790da0217fc58d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac12a4d0f0d89383c790da0217fc58d3">&#9670;&nbsp;</a></span>fopCamM_Init__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopCamM_Init__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bcc58dceb19f5834e7e9d9136c38c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bcc58dceb19f5834e7e9d9136c38c6f">&#9670;&nbsp;</a></span>fopCamM_Management()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +304,120 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopCamM_Management </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab36dc4a6fbda15c50a03d3f03ded9da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36dc4a6fbda15c50a03d3f03ded9da8">&#9670;&nbsp;</a></span>fopCamM_Management__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopCamM_Management__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6970acb7ab7819039b435045d1addd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6970acb7ab7819039b435045d1addd8b">&#9670;&nbsp;</a></span>fpcLy_CurrentLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_CurrentLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6360d307f710b311afd3b3c25d8c55b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6360d307f710b311afd3b3c25d8c55b9">&#9670;&nbsp;</a></span>fpcLy_CurrentLayer__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_CurrentLayer__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0827bb5b5a35cb91d7a387c1f77300e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0827bb5b5a35cb91d7a387c1f77300e8">&#9670;&nbsp;</a></span>fpcSCtRq_Request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcSCtRq_Request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(void *, void *)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_4</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1afa4f490afc55501395dd622f1c4c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1afa4f490afc55501395dd622f1c4c7b">&#9670;&nbsp;</a></span>fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -239,8 +427,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="ae7f844fbfcdc54f8b4d775f5644cc4be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7f844fbfcdc54f8b4d775f5644cc4be">&#9670;&nbsp;</a></span>l_fopCamM_id</h2>
+<a id="a96c473da253b0e8158a2dc3e8ee53fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c473da253b0e8158a2dc3e8ee53fcc">&#9670;&nbsp;</a></span>l_fopCamM_id</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,12 +437,12 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> l_fopCamM_id[4]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> l_fopCamM_id[16]</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: libs/debugger/MetroTRK/cc/exi2/GCN/EXI2_DDH_GCN/main.cpp File Reference</title>
+<title>Twilight Princess: libs/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,14 +69,728 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_24f13134bc6452a3f9fa8346c9be9d8b.html">debugger</a></li><li class="navelem"><a class="el" href="dir_e65b68ee53c6ff8e4aaf57f439c94be0.html">MetroTRK</a></li><li class="navelem"><a class="el" href="dir_083ee4fea0d8b4d36b196247619d46b6.html">cc</a></li><li class="navelem"><a class="el" href="dir_38e035004c68b5d29f04bf59005b276e.html">exi2</a></li><li class="navelem"><a class="el" href="dir_3c69bc137e8381808f8934ff86e9db81.html">GCN</a></li><li class="navelem"><a class="el" href="dir_75f86d8e9eeb6c6a3181be85519cc621.html">EXI2_DDH_GCN</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li><li class="navelem"><a class="el" href="dir_6b67cfcdbcbf1df04fac4a98c3b947ab.html">TRK_MINNOW_DOLPHIN</a></li><li class="navelem"><a class="el" href="dir_064abc8c8cd59e9f6fdc99656c118319.html">GCN</a></li><li class="navelem"><a class="el" href="dir_42e7a37c9b865062021144f899953ab1.html">EXI2_DDH_GCN</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EXI2__DDH__GCN_2main_8h_source.html">TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main.h</a>&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_initinterrupts.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_peek.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_post_stop.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_pre_continue.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_write.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_read.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_close.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_open.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_shutdown.s&quot;</code><br />
+<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_initialize.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="EXI2__DDH__GCN_2main_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a90fe236ca135394325317a5152b0821d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a90fe236ca135394325317a5152b0821d">ddh_cc_initinterrupts</a> ()</td></tr>
+<tr class="separator:a90fe236ca135394325317a5152b0821d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1062e5d70f59c2b24f30f68a46523c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a1062e5d70f59c2b24f30f68a46523c16">ddh_cc_peek</a> ()</td></tr>
+<tr class="separator:a1062e5d70f59c2b24f30f68a46523c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178196f85601bed44190750ace3e5289"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a178196f85601bed44190750ace3e5289">ddh_cc_post_stop</a> ()</td></tr>
+<tr class="separator:a178196f85601bed44190750ace3e5289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54978973462f4cbce8ba74963740964c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a54978973462f4cbce8ba74963740964c">ddh_cc_pre_continue</a> ()</td></tr>
+<tr class="separator:a54978973462f4cbce8ba74963740964c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5120830a0eaf184a5198ea5892319c18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a5120830a0eaf184a5198ea5892319c18">ddh_cc_write</a> ()</td></tr>
+<tr class="separator:a5120830a0eaf184a5198ea5892319c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654490c46b704d69917ccfba9f0d400c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a654490c46b704d69917ccfba9f0d400c">ddh_cc_read</a> ()</td></tr>
+<tr class="separator:a654490c46b704d69917ccfba9f0d400c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e49fbafaa627981fecb1dbc4cb4a3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a69e49fbafaa627981fecb1dbc4cb4a3a">ddh_cc_close</a> ()</td></tr>
+<tr class="separator:a69e49fbafaa627981fecb1dbc4cb4a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76993c8c9af24127a15eb5f0a892f137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a76993c8c9af24127a15eb5f0a892f137">ddh_cc_open</a> ()</td></tr>
+<tr class="separator:a76993c8c9af24127a15eb5f0a892f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26443e2517beb1707be3d28d7a053d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab26443e2517beb1707be3d28d7a053d1">ddh_cc_shutdown</a> ()</td></tr>
+<tr class="separator:ab26443e2517beb1707be3d28d7a053d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41fade5fd60780ef66d40d2f93db987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ad41fade5fd60780ef66d40d2f93db987">ddh_cc_initialize</a> ()</td></tr>
+<tr class="separator:ad41fade5fd60780ef66d40d2f93db987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab555d70ee82516ccc5c1c04443820e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab555d70ee82516ccc5c1c04443820e63">CircleBufferReadBytes</a> ()</td></tr>
+<tr class="separator:ab555d70ee82516ccc5c1c04443820e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e71a8413d92253ab9b0c727f108ce6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a8e71a8413d92253ab9b0c727f108ce6a">CircleBufferWriteBytes</a> ()</td></tr>
+<tr class="separator:a8e71a8413d92253ab9b0c727f108ce6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad3f13bfcc18d0841132a1b937deb31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#abad3f13bfcc18d0841132a1b937deb31">CircleBufferInitialize</a> ()</td></tr>
+<tr class="separator:abad3f13bfcc18d0841132a1b937deb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78a1618b3e407ea7dd7bd7ef3e746ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#aa78a1618b3e407ea7dd7bd7ef3e746ec">CBGetBytesAvailableForRead</a> ()</td></tr>
+<tr class="separator:aa78a1618b3e407ea7dd7bd7ef3e746ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16eaa6729572ccbd8dd6ff6a01042166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a16eaa6729572ccbd8dd6ff6a01042166">MWTRACE</a> ()</td></tr>
+<tr class="separator:a16eaa6729572ccbd8dd6ff6a01042166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ad29b760bd1f580202149ba1c23e97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#aa1ad29b760bd1f580202149ba1c23e97">EXI2_Init</a> ()</td></tr>
+<tr class="separator:aa1ad29b760bd1f580202149ba1c23e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6238babe397ebbf8e935f106bf53fb73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a6238babe397ebbf8e935f106bf53fb73">EXI2_EnableInterrupts</a> ()</td></tr>
+<tr class="separator:a6238babe397ebbf8e935f106bf53fb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9c0655ddd4cb0d4a05d10a09c6cd1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a9d9c0655ddd4cb0d4a05d10a09c6cd1e">EXI2_Poll</a> ()</td></tr>
+<tr class="separator:a9d9c0655ddd4cb0d4a05d10a09c6cd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5a29e187e78add55b489fbf00e70a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a7e5a29e187e78add55b489fbf00e70a7">EXI2_ReadN</a> ()</td></tr>
+<tr class="separator:a7e5a29e187e78add55b489fbf00e70a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e70cfe6c623ed97d9fdde17d2b964e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#aa0e70cfe6c623ed97d9fdde17d2b964e">EXI2_WriteN</a> ()</td></tr>
+<tr class="separator:aa0e70cfe6c623ed97d9fdde17d2b964e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728d488125d4565b836cff949d46ad21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a728d488125d4565b836cff949d46ad21">EXI2_Reserve</a> ()</td></tr>
+<tr class="separator:a728d488125d4565b836cff949d46ad21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4dacb764d77bde437dbc03fdcf6b085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab4dacb764d77bde437dbc03fdcf6b085">EXI2_Unreserve</a> ()</td></tr>
+<tr class="separator:ab4dacb764d77bde437dbc03fdcf6b085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a31cde75f653f7df104fa8d60d7a4655a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a31cde75f653f7df104fa8d60d7a4655a">GCN_EXI2_DDH_GCN_main__lit_319</a> [41+3]</td></tr>
+<tr class="separator:a31cde75f653f7df104fa8d60d7a4655a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db1dcc4035c68d7f77b2ba810be0feb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a7db1dcc4035c68d7f77b2ba810be0feb">GCN_EXI2_DDH_GCN_main__lit_320</a> [28]</td></tr>
+<tr class="separator:a7db1dcc4035c68d7f77b2ba810be0feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa053711aaaad8dd7dcfe5a82b45caf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#abaa053711aaaad8dd7dcfe5a82b45caf">GCN_EXI2_DDH_GCN_main__gRecvBuf</a> [2048]</td></tr>
+<tr class="separator:abaa053711aaaad8dd7dcfe5a82b45caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3207af2e3ed163d6b65938afee6b5d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ac3207af2e3ed163d6b65938afee6b5d0">GCN_EXI2_DDH_GCN_main__gRecvCB</a> [28+4]</td></tr>
+<tr class="separator:ac3207af2e3ed163d6b65938afee6b5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc3fac5503f62cb7f8f8cf8757c730dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#abc3fac5503f62cb7f8f8cf8757c730dc">GCN_EXI2_DDH_GCN_main__lit_318</a> [20]</td></tr>
+<tr class="separator:abc3fac5503f62cb7f8f8cf8757c730dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183444d24b7f79d9b04ac22d49a4abca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a183444d24b7f79d9b04ac22d49a4abca">GCN_EXI2_DDH_GCN_main__gIsInitialized</a> [4+4]</td></tr>
+<tr class="separator:a183444d24b7f79d9b04ac22d49a4abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f66471bd84e7e2574fe37f4f3fc258"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#af7f66471bd84e7e2574fe37f4f3fc258">GCN_EXI2_DDH_GCN_main__lit_342</a> [37+3]</td></tr>
+<tr class="separator:af7f66471bd84e7e2574fe37f4f3fc258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93db03e9ed727c061686198a77933a9a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a93db03e9ed727c061686198a77933a9a">GCN_EXI2_DDH_GCN_main__lit_343</a> [45+3]</td></tr>
+<tr class="separator:a93db03e9ed727c061686198a77933a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9287df7ed55496a70e2d22a0897d68c3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a9287df7ed55496a70e2d22a0897d68c3">GCN_EXI2_DDH_GCN_main__lit_349</a> [19+1]</td></tr>
+<tr class="separator:a9287df7ed55496a70e2d22a0897d68c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000b09e525fa2cc0269a5f69713b75a7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a000b09e525fa2cc0269a5f69713b75a7">GCN_EXI2_DDH_GCN_main__lit_350</a> [24]</td></tr>
+<tr class="separator:a000b09e525fa2cc0269a5f69713b75a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa78a1618b3e407ea7dd7bd7ef3e746ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78a1618b3e407ea7dd7bd7ef3e746ec">&#9670;&nbsp;</a></span>CBGetBytesAvailableForRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void CBGetBytesAvailableForRead </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abad3f13bfcc18d0841132a1b937deb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad3f13bfcc18d0841132a1b937deb31">&#9670;&nbsp;</a></span>CircleBufferInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void CircleBufferInitialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab555d70ee82516ccc5c1c04443820e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab555d70ee82516ccc5c1c04443820e63">&#9670;&nbsp;</a></span>CircleBufferReadBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void CircleBufferReadBytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e71a8413d92253ab9b0c727f108ce6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e71a8413d92253ab9b0c727f108ce6a">&#9670;&nbsp;</a></span>CircleBufferWriteBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void CircleBufferWriteBytes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69e49fbafaa627981fecb1dbc4cb4a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e49fbafaa627981fecb1dbc4cb4a3a">&#9670;&nbsp;</a></span>ddh_cc_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad41fade5fd60780ef66d40d2f93db987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad41fade5fd60780ef66d40d2f93db987">&#9670;&nbsp;</a></span>ddh_cc_initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90fe236ca135394325317a5152b0821d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fe236ca135394325317a5152b0821d">&#9670;&nbsp;</a></span>ddh_cc_initinterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_initinterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76993c8c9af24127a15eb5f0a892f137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76993c8c9af24127a15eb5f0a892f137">&#9670;&nbsp;</a></span>ddh_cc_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1062e5d70f59c2b24f30f68a46523c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1062e5d70f59c2b24f30f68a46523c16">&#9670;&nbsp;</a></span>ddh_cc_peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a178196f85601bed44190750ace3e5289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178196f85601bed44190750ace3e5289">&#9670;&nbsp;</a></span>ddh_cc_post_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_post_stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54978973462f4cbce8ba74963740964c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54978973462f4cbce8ba74963740964c">&#9670;&nbsp;</a></span>ddh_cc_pre_continue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_pre_continue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a654490c46b704d69917ccfba9f0d400c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654490c46b704d69917ccfba9f0d400c">&#9670;&nbsp;</a></span>ddh_cc_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab26443e2517beb1707be3d28d7a053d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26443e2517beb1707be3d28d7a053d1">&#9670;&nbsp;</a></span>ddh_cc_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5120830a0eaf184a5198ea5892319c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5120830a0eaf184a5198ea5892319c18">&#9670;&nbsp;</a></span>ddh_cc_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void ddh_cc_write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6238babe397ebbf8e935f106bf53fb73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6238babe397ebbf8e935f106bf53fb73">&#9670;&nbsp;</a></span>EXI2_EnableInterrupts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_EnableInterrupts </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1ad29b760bd1f580202149ba1c23e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ad29b760bd1f580202149ba1c23e97">&#9670;&nbsp;</a></span>EXI2_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d9c0655ddd4cb0d4a05d10a09c6cd1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d9c0655ddd4cb0d4a05d10a09c6cd1e">&#9670;&nbsp;</a></span>EXI2_Poll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_Poll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e5a29e187e78add55b489fbf00e70a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5a29e187e78add55b489fbf00e70a7">&#9670;&nbsp;</a></span>EXI2_ReadN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_ReadN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a728d488125d4565b836cff949d46ad21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728d488125d4565b836cff949d46ad21">&#9670;&nbsp;</a></span>EXI2_Reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_Reserve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4dacb764d77bde437dbc03fdcf6b085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4dacb764d77bde437dbc03fdcf6b085">&#9670;&nbsp;</a></span>EXI2_Unreserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_Unreserve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0e70cfe6c623ed97d9fdde17d2b964e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e70cfe6c623ed97d9fdde17d2b964e">&#9670;&nbsp;</a></span>EXI2_WriteN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EXI2_WriteN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16eaa6729572ccbd8dd6ff6a01042166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16eaa6729572ccbd8dd6ff6a01042166">&#9670;&nbsp;</a></span>MWTRACE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void MWTRACE </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a183444d24b7f79d9b04ac22d49a4abca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183444d24b7f79d9b04ac22d49a4abca">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__gIsInitialized</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> GCN_EXI2_DDH_GCN_main__gIsInitialized[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaa053711aaaad8dd7dcfe5a82b45caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa053711aaaad8dd7dcfe5a82b45caf">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__gRecvBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> GCN_EXI2_DDH_GCN_main__gRecvBuf[2048]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3207af2e3ed163d6b65938afee6b5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3207af2e3ed163d6b65938afee6b5d0">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__gRecvCB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> GCN_EXI2_DDH_GCN_main__gRecvCB[28+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc3fac5503f62cb7f8f8cf8757c730dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc3fac5503f62cb7f8f8cf8757c730dc">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_318</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_318[20]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x63, 0x63, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A,</div>
+<div class="line">    0x65, 0x64, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a31cde75f653f7df104fa8d60d7a4655a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31cde75f653f7df104fa8d60d7a4655a">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_319</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_319</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x63, 0x63, 0x5F, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x3A, 0x20, 0x4F, 0x75, 0x74, 0x70, 0x75,</div>
+<div class="line">    0x74, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x25, 0x6C,</div>
+<div class="line">    0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7db1dcc4035c68d7f77b2ba810be0feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db1dcc4035c68d7f77b2ba810be0feb">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_320</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x63, 0x63, 0x5F, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x73, 0x65, 0x6E, 0x64, 0x69, 0x6E, 0x67,</div>
+<div class="line">    0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af7f66471bd84e7e2574fe37f4f3fc258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7f66471bd84e7e2574fe37f4f3fc258">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_342</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_342[37+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x45, 0x78, 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x70, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20,</div>
+<div class="line">    0x73, 0x69, 0x7A, 0x65, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x28, 0x25,</div>
+<div class="line">    0x6C, 0x64, 0x29, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a93db03e9ed727c061686198a77933a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93db03e9ed727c061686198a77933a9a">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_343</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_343[45+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x63, 0x63, 0x5F, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3A, 0x20, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x20,</div>
+<div class="line">    0x72, 0x65, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x20, 0x66, 0x72,</div>
+<div class="line">    0x6F, 0x6D, 0x20, 0x45, 0x58, 0x49, 0x32, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9287df7ed55496a70e2d22a0897d68c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9287df7ed55496a70e2d22a0897d68c3">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_349</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_349[19+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x43, 0x41, 0x4C, 0x4C, 0x49, 0x4E, 0x47, 0x20, 0x45, 0x58, 0x49, 0x32, 0x5F, 0x49, 0x6E, 0x69,</div>
+<div class="line">    0x74, 0x0A, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a000b09e525fa2cc0269a5f69713b75a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000b09e525fa2cc0269a5f69713b75a7">&#9670;&nbsp;</a></span>GCN_EXI2_DDH_GCN_main__lit_350</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const GCN_EXI2_DDH_GCN_main__lit_350[24]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x44, 0x4F, 0x4E, 0x45, 0x20, 0x43, 0x41, 0x4C, 0x4C, 0x49, 0x4E, 0x47, 0x20, 0x45, 0x58, 0x49,</div>
+<div class="line">    0x32, 0x5F, 0x49, 0x6E, 0x69, 0x74, 0x0A, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

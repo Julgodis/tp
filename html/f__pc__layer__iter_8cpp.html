@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_pc/f_pc_layer_iter.cpp File Reference</title>
+<title>Twilight Princess: src/f_pc/f_pc_layer_iter.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,57 +69,151 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_89dee0e9ccaa7c098b3a159a2ece8505.html">f_pc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_15a1977171855e2c8b0c1e68c97c2b83.html">f_pc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">f_pc_layer_iter.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__pc__layer__iter_8h_source.html">f/f_pc/f_pc_layer_iter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__tag__iter_8h_source.html">SComponent/c_tag_iter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__tree__iter_8h_source.html">SComponent/c_tree_iter.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__pc__layer__iter_8h_source.html">f_pc/f_pc_layer_iter.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_layer_iter/fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_layer_iter/fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_layer_iter/fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_layer_iter/fpcLyIt_AllJudge__FPFPvPv_PvPv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_pc_layer_iter.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__pc__layer__iter_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__pc__layer__iter_8cpp__incl.svg" width="100%" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlayer__class.html">layer_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html">node_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcreate__tag__class.html">create_tag_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmethod__filter.html">method_filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjudge__filter.html">judge_filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3f37505bbda6ff67a90b868bfebb4578"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a3f37505bbda6ff67a90b868bfebb4578">fpcLyIt_OnlyHere</a> (<a class="el" href="structlayer__class.html">layer_class</a> *pLayer, <a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a> pFunc, void *pUserData)</td></tr>
-<tr class="separator:a3f37505bbda6ff67a90b868bfebb4578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838a264e1c42c162d129e6cf8a0cd3ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a838a264e1c42c162d129e6cf8a0cd3ad">fpcLyIt_OnlyHereLY</a> (<a class="el" href="structlayer__class.html">layer_class</a> *pLayer, <a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a> pFunc, void *pUserData)</td></tr>
-<tr class="separator:a838a264e1c42c162d129e6cf8a0cd3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a418ecdd2a97c6c9d2c56ae089f44db16"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a418ecdd2a97c6c9d2c56ae089f44db16">fpcLyIt_Judge</a> (<a class="el" href="structlayer__class.html">layer_class</a> *pLayer, <a class="el" href="f__pc__layer__iter_8h.html#a7ee99a2a29f72fecd18f53738ad970f0">fpcLyIt_JudgeFunc</a> pFunc, void *pUserData)</td></tr>
-<tr class="separator:a418ecdd2a97c6c9d2c56ae089f44db16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2746812f58faacd784f8c998a86f566a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a2746812f58faacd784f8c998a86f566a">fpcLyIt_AllJudge</a> (<a class="el" href="f__pc__layer__iter_8h.html#a7ee99a2a29f72fecd18f53738ad970f0">fpcLyIt_JudgeFunc</a> pFunc, void *pUserData)</td></tr>
-<tr class="separator:a2746812f58faacd784f8c998a86f566a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a07b4e50f029ddaea2a89f9c36beeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#ad5a07b4e50f029ddaea2a89f9c36beeb">fpcLyIt_OnlyHere</a> (<a class="el" href="structlayer__class.html">layer_class</a> *, int(*)(void *, void *), void *)</td></tr>
+<tr class="separator:ad5a07b4e50f029ddaea2a89f9c36beeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9969165afef0c8b8439ba43a724c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a1a9969165afef0c8b8439ba43a724c35">fpcLyIt_OnlyHereLY</a> (<a class="el" href="structlayer__class.html">layer_class</a> *, int(*)(void *, void *), void *)</td></tr>
+<tr class="separator:a1a9969165afef0c8b8439ba43a724c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b92191c0884bb291f2e962cbeb7cf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#ae1b92191c0884bb291f2e962cbeb7cf9">fpcLyIt_Judge</a> (<a class="el" href="structlayer__class.html">layer_class</a> *, void *(*)(void *, void *), void *)</td></tr>
+<tr class="separator:ae1b92191c0884bb291f2e962cbeb7cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a032082356230a1d0ef96d0fcb999d094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a032082356230a1d0ef96d0fcb999d094">fpcLyIt_AllJudge</a> (void *(*)(void *, void *), void *)</td></tr>
+<tr class="separator:a032082356230a1d0ef96d0fcb999d094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d99697b30aa0715e60a1ce66893c7bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a3d99697b30aa0715e60a1ce66893c7bf">fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv</a> ()</td></tr>
+<tr class="separator:a3d99697b30aa0715e60a1ce66893c7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a3066cf0ac3851029f43393e714181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a41a3066cf0ac3851029f43393e714181">fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv</a> ()</td></tr>
+<tr class="separator:a41a3066cf0ac3851029f43393e714181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bcc233fc740b392936b44e942d78653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a4bcc233fc740b392936b44e942d78653">fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv</a> ()</td></tr>
+<tr class="separator:a4bcc233fc740b392936b44e942d78653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223ffdad41851a906561be689abc26e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a223ffdad41851a906561be689abc26e6">fpcLyIt_AllJudge__FPFPvPv_PvPv</a> ()</td></tr>
+<tr class="separator:a223ffdad41851a906561be689abc26e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8279da5778e79f48750a688bf9388db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#ab8279da5778e79f48750a688bf9388db">fpcLy_RootLayer</a> ()</td></tr>
+<tr class="separator:ab8279da5778e79f48750a688bf9388db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614e714bb8054a3f3290614fcf469583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a614e714bb8054a3f3290614fcf469583">fpcLy_SetCurrentLayer</a> (<a class="el" href="structlayer__class.html">layer_class</a> *)</td></tr>
+<tr class="separator:a614e714bb8054a3f3290614fcf469583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6970acb7ab7819039b435045d1addd8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a6970acb7ab7819039b435045d1addd8b">fpcLy_CurrentLayer</a> ()</td></tr>
+<tr class="separator:a6970acb7ab7819039b435045d1addd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81b9895d4215d5f278446004cdf0bd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#af81b9895d4215d5f278446004cdf0bd8">cTrIt_Method</a> (<a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a> *, int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:af81b9895d4215d5f278446004cdf0bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc7bc0ff08b28691828478e6f56e1bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#abfc7bc0ff08b28691828478e6f56e1bc">cTrIt_Judge</a> (<a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a> *, void *(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:abfc7bc0ff08b28691828478e6f56e1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb0c0be7b2ad6a4ee5e291945ae3030"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a8fb0c0be7b2ad6a4ee5e291945ae3030">cTgIt_MethodCall</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *, <a class="el" href="structmethod__filter.html">method_filter</a> *)</td></tr>
+<tr class="separator:a8fb0c0be7b2ad6a4ee5e291945ae3030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed1f15487059e2e5e68612672013182"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a5ed1f15487059e2e5e68612672013182">cTgIt_JudgeFilter</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *, <a class="el" href="structjudge__filter.html">judge_filter</a> *)</td></tr>
+<tr class="separator:a5ed1f15487059e2e5e68612672013182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6705eef28ebdaf9f7db78041e8e30b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a7a6705eef28ebdaf9f7db78041e8e30b">fpcLy_RootLayer__Fv</a> ()</td></tr>
+<tr class="separator:a7a6705eef28ebdaf9f7db78041e8e30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99765ae9a08e3eaa301d020fd0b8f4ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a99765ae9a08e3eaa301d020fd0b8f4ba">fpcLy_SetCurrentLayer__FP11layer_class</a> ()</td></tr>
+<tr class="separator:a99765ae9a08e3eaa301d020fd0b8f4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6360d307f710b311afd3b3c25d8c55b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a6360d307f710b311afd3b3c25d8c55b9">fpcLy_CurrentLayer__Fv</a> ()</td></tr>
+<tr class="separator:a6360d307f710b311afd3b3c25d8c55b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44a18b5e61d2a70f498faf4ce9aad51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#ac44a18b5e61d2a70f498faf4ce9aad51">cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv</a> ()</td></tr>
+<tr class="separator:ac44a18b5e61d2a70f498faf4ce9aad51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fffbc22c72a3c9a364597ee6d643bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a6fffbc22c72a3c9a364597ee6d643bce">cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv</a> ()</td></tr>
+<tr class="separator:a6fffbc22c72a3c9a364597ee6d643bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d88618f7e6c016ac1a9b4e923e7024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#ab0d88618f7e6c016ac1a9b4e923e7024">cTgIt_MethodCall__FP16create_tag_classP13method_filter</a> ()</td></tr>
+<tr class="separator:ab0d88618f7e6c016ac1a9b4e923e7024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c485c0804bf8fa0a1d669b6e570f5e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a3c485c0804bf8fa0a1d669b6e570f5e0">cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter</a> ()</td></tr>
+<tr class="separator:a3c485c0804bf8fa0a1d669b6e570f5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96be8c79baacd021a226016df5297c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a96be8c79baacd021a226016df5297c51">_savegpr_28</a> ()</td></tr>
+<tr class="separator:a96be8c79baacd021a226016df5297c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f61243ebf5cbb2ff90548d397b16772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__layer__iter_8cpp.html#a3f61243ebf5cbb2ff90548d397b16772">_restgpr_28</a> ()</td></tr>
+<tr class="separator:a3f61243ebf5cbb2ff90548d397b16772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2746812f58faacd784f8c998a86f566a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2746812f58faacd784f8c998a86f566a">&#9670;&nbsp;</a></span>fpcLyIt_AllJudge()</h2>
+<a id="a3f61243ebf5cbb2ff90548d397b16772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f61243ebf5cbb2ff90548d397b16772">&#9670;&nbsp;</a></span>_restgpr_28()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* fpcLyIt_AllJudge </td>
+          <td class="memname">void _restgpr_28 </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="f__pc__layer__iter_8h.html#a7ee99a2a29f72fecd18f53738ad970f0">fpcLyIt_JudgeFunc</a>&#160;</td>
-          <td class="paramname"><em>pFunc</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96be8c79baacd021a226016df5297c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96be8c79baacd021a226016df5297c51">&#9670;&nbsp;</a></span>_savegpr_28()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_28 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ed1f15487059e2e5e68612672013182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed1f15487059e2e5e68612672013182">&#9670;&nbsp;</a></span>cTgIt_JudgeFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTgIt_JudgeFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structjudge__filter.html">judge_filter</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -131,29 +225,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a418ecdd2a97c6c9d2c56ae089f44db16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a418ecdd2a97c6c9d2c56ae089f44db16">&#9670;&nbsp;</a></span>fpcLyIt_Judge()</h2>
+<a id="a3c485c0804bf8fa0a1d669b6e570f5e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c485c0804bf8fa0a1d669b6e570f5e0">&#9670;&nbsp;</a></span>cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* fpcLyIt_Judge </td>
+          <td class="memname">void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
-          <td class="paramname"><em>pLayer</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fb0c0be7b2ad6a4ee5e291945ae3030"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb0c0be7b2ad6a4ee5e291945ae3030">&#9670;&nbsp;</a></span>cTgIt_MethodCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTgIt_MethodCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="f__pc__layer__iter_8h.html#a7ee99a2a29f72fecd18f53738ad970f0">fpcLyIt_JudgeFunc</a>&#160;</td>
-          <td class="paramname"><em>pFunc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structmethod__filter.html">method_filter</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -165,29 +270,46 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f37505bbda6ff67a90b868bfebb4578"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f37505bbda6ff67a90b868bfebb4578">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHere()</h2>
+<a id="ab0d88618f7e6c016ac1a9b4e923e7024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d88618f7e6c016ac1a9b4e923e7024">&#9670;&nbsp;</a></span>cTgIt_MethodCall__FP16create_tag_classP13method_filter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcLyIt_OnlyHere </td>
+          <td class="memname">void cTgIt_MethodCall__FP16create_tag_classP13method_filter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
-          <td class="paramname"><em>pLayer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a>&#160;</td>
-          <td class="paramname"><em>pFunc</em>, </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfc7bc0ff08b28691828478e6f56e1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfc7bc0ff08b28691828478e6f56e1bc">&#9670;&nbsp;</a></span>cTrIt_Judge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cTrIt_Judge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname">*)(node_class *, void *, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,34 +321,369 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a838a264e1c42c162d129e6cf8a0cd3ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a838a264e1c42c162d129e6cf8a0cd3ad">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHereLY()</h2>
+<a id="a6fffbc22c72a3c9a364597ee6d643bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fffbc22c72a3c9a364597ee6d643bce">&#9670;&nbsp;</a></span>cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcLyIt_OnlyHereLY </td>
+          <td class="memname">void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
-          <td class="paramname"><em>pLayer</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af81b9895d4215d5f278446004cdf0bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81b9895d4215d5f278446004cdf0bd8">&#9670;&nbsp;</a></span>cTrIt_Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cTrIt_Method </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__lists__tree__class.html">node_lists_tree_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a>&#160;</td>
-          <td class="paramname"><em>pFunc</em>, </td>
+          <td class="paramtype">int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *)&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac44a18b5e61d2a70f498faf4ce9aad51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44a18b5e61d2a70f498faf4ce9aad51">&#9670;&nbsp;</a></span>cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6970acb7ab7819039b435045d1addd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6970acb7ab7819039b435045d1addd8b">&#9670;&nbsp;</a></span>fpcLy_CurrentLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_CurrentLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6360d307f710b311afd3b3c25d8c55b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6360d307f710b311afd3b3c25d8c55b9">&#9670;&nbsp;</a></span>fpcLy_CurrentLayer__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_CurrentLayer__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8279da5778e79f48750a688bf9388db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8279da5778e79f48750a688bf9388db">&#9670;&nbsp;</a></span>fpcLy_RootLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_RootLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a6705eef28ebdaf9f7db78041e8e30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6705eef28ebdaf9f7db78041e8e30b">&#9670;&nbsp;</a></span>fpcLy_RootLayer__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_RootLayer__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a614e714bb8054a3f3290614fcf469583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614e714bb8054a3f3290614fcf469583">&#9670;&nbsp;</a></span>fpcLy_SetCurrentLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_SetCurrentLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99765ae9a08e3eaa301d020fd0b8f4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99765ae9a08e3eaa301d020fd0b8f4ba">&#9670;&nbsp;</a></span>fpcLy_SetCurrentLayer__FP11layer_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLy_SetCurrentLayer__FP11layer_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a032082356230a1d0ef96d0fcb999d094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a032082356230a1d0ef96d0fcb999d094">&#9670;&nbsp;</a></span>fpcLyIt_AllJudge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_AllJudge </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">*)(void *, void *, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a223ffdad41851a906561be689abc26e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223ffdad41851a906561be689abc26e6">&#9670;&nbsp;</a></span>fpcLyIt_AllJudge__FPFPvPv_PvPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_AllJudge__FPFPvPv_PvPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1b92191c0884bb291f2e962cbeb7cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b92191c0884bb291f2e962cbeb7cf9">&#9670;&nbsp;</a></span>fpcLyIt_Judge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_Judge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">*)(void *, void *, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bcc233fc740b392936b44e942d78653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bcc233fc740b392936b44e942d78653">&#9670;&nbsp;</a></span>fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5a07b4e50f029ddaea2a89f9c36beeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a07b4e50f029ddaea2a89f9c36beeb">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_OnlyHere </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(void *, void *)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d99697b30aa0715e60a1ce66893c7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d99697b30aa0715e60a1ce66893c7bf">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a9969165afef0c8b8439ba43a724c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9969165afef0c8b8439ba43a724c35">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHereLY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_OnlyHereLY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlayer__class.html">layer_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(void *, void *)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41a3066cf0ac3851029f43393e714181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a3066cf0ac3851029f43393e714181">&#9670;&nbsp;</a></span>fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

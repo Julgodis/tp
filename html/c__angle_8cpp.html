@@ -74,54 +74,383 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">c_angle.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__angle_8h_source.html">SComponent/c_angle.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="math_8h_source.html">msl_c/math.h</a>&quot;</code><br />
-<code>#include &quot;SComponent/c_angle/asm/func_80271BD4.s&quot;</code><br />
-</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_angle.cpp:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c__angle_8cpp__incl.svg" width="635" height="590"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__angle_8h_source.html">SSystem/SComponent/c_angle.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSAngleFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSAngleFs.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSAngleFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSAngleFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSAngleFs.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSAngleFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Degree__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Radian__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Norm__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Abs__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Inv__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Sin__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Cos__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__pl__7cSAngleCFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__apl__7cSAngleFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ami__7cSAngleFRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__pl__7cSAngleCFs.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__mi__7cSAngleCFs.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__apl__7cSAngleFs.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ml__7cSAngleCFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__amu__7cSAngleFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__pl__FsRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__mi__FsRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cDegreeFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Formal__7cDegreeFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cDegreeFf.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Radian__7cDegreeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Sin__7cDegreeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Cos__7cDegreeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Tan__7cDegreeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSPolarFRC4cXyz.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Formal__7cSPolarFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSPolarFfss.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSPolarFRC4cXyz.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Xyz__7cSPolarCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Globe__7cSPolarCFP7cSGlobe.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFRC7cSGlobe.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFfss.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFfRC7cSAngleRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__ct__7cSGlobeFRC4cXyz.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Formal__7cSGlobeFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSGlobeFRC7cSGlobe.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSGlobeFfss.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSGlobeFfRC7cSAngleRC7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Val__7cSGlobeFRC4cXyz.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Xyz__7cSGlobeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Polar__7cSGlobeCFP7cSPolar.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Norm__7cSGlobeCFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/Invert__7cSGlobeFv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/func_80271BA8.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_angle/__sinit_c_angle_cpp.s&quot;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcSAngle.html">cSAngle</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcDegree.html">cDegree</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcXyz.html">cXyz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcSGlobe.html">cSGlobe</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcSPolar.html">cSPolar</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcAngle.html">cAngle</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acdb55c1010a6c379a49db0201bf55d89"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#acdb55c1010a6c379a49db0201bf55d89">sqrt</a> (double)</td></tr>
-<tr class="separator:acdb55c1010a6c379a49db0201bf55d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade009dc00b4f17d4e5c73802809b52a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ade009dc00b4f17d4e5c73802809b52a5">__ct__7cSAngleFs</a> (void)</td></tr>
-<tr class="separator:ade009dc00b4f17d4e5c73802809b52a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2701f833c7b99545f4eae02c6d1b79be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2701f833c7b99545f4eae02c6d1b79be">__dt__7cSAngleFv</a> (void)</td></tr>
-<tr class="separator:a2701f833c7b99545f4eae02c6d1b79be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba007816dbbc70c1a67b11637aae766e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#aba007816dbbc70c1a67b11637aae766e">func_80361C24</a> (void)</td></tr>
-<tr class="separator:aba007816dbbc70c1a67b11637aae766e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ba77c7b20af9359098c36b8b82ceb0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#aa3ba77c7b20af9359098c36b8b82ceb0">cAngle_NS_Adjust</a> (float, float, float)</td></tr>
-<tr class="separator:aa3ba77c7b20af9359098c36b8b82ceb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c09c7a298830e5dc7e18ac503558285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcSAngle.html">cSAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a5c09c7a298830e5dc7e18ac503558285">operator+</a> (short other, const <a class="el" href="classcSAngle.html">cSAngle</a> &amp;angle)</td></tr>
-<tr class="separator:a5c09c7a298830e5dc7e18ac503558285"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d05b5a1d3ab320851ec802992dbd326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcSAngle.html">cSAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2d05b5a1d3ab320851ec802992dbd326">operator-</a> (short other, const <a class="el" href="classcSAngle.html">cSAngle</a> &amp;angle)</td></tr>
-<tr class="separator:a2d05b5a1d3ab320851ec802992dbd326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0511d0f7e47b9b58805db434b28ab573"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a0511d0f7e47b9b58805db434b28ab573">square</a> (float f)</td></tr>
-<tr class="separator:a0511d0f7e47b9b58805db434b28ab573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9af317896953e4ffd886d513d631eeda"><td class="memItemLeft" align="right" valign="top">asm void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a9af317896953e4ffd886d513d631eeda">__sinit_c_angle_cpp</a> (void)</td></tr>
-<tr class="separator:a9af317896953e4ffd886d513d631eeda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e66504685c62271c8c235440f54080c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a8e66504685c62271c8c235440f54080c">operator+</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="structcSAngle.html">cSAngle</a> const &amp;)</td></tr>
+<tr class="separator:a8e66504685c62271c8c235440f54080c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ac9b2caa491a13b1594e9e3d97420a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a91ac9b2caa491a13b1594e9e3d97420a">operator-</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="structcSAngle.html">cSAngle</a> const &amp;)</td></tr>
+<tr class="separator:a91ac9b2caa491a13b1594e9e3d97420a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3722cd2af48f1d3234cbfb4d5b9f918"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#aa3722cd2af48f1d3234cbfb4d5b9f918">__ct__7cSAngleFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:aa3722cd2af48f1d3234cbfb4d5b9f918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad601eb0e2265d48ac1e2ccb8b713947e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad601eb0e2265d48ac1e2ccb8b713947e">__ct__7cSAngleFs</a> ()</td></tr>
+<tr class="separator:ad601eb0e2265d48ac1e2ccb8b713947e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3015d9a097fc07add3a943067853aa0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3015d9a097fc07add3a943067853aa0f">__ct__7cSAngleFf</a> ()</td></tr>
+<tr class="separator:a3015d9a097fc07add3a943067853aa0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a748dcc93e59b05b2fc66172ca35e3729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a748dcc93e59b05b2fc66172ca35e3729">Val__7cSAngleFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:a748dcc93e59b05b2fc66172ca35e3729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac0cadfc662843e7687c8bebcbe9bbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#abac0cadfc662843e7687c8bebcbe9bbb">Val__7cSAngleFs</a> ()</td></tr>
+<tr class="separator:abac0cadfc662843e7687c8bebcbe9bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee86999244134e338430dbf35a3a875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3ee86999244134e338430dbf35a3a875">Val__7cSAngleFf</a> ()</td></tr>
+<tr class="separator:a3ee86999244134e338430dbf35a3a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1902a4104b23850cfeccafb0e31e416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ab1902a4104b23850cfeccafb0e31e416">Degree__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:ab1902a4104b23850cfeccafb0e31e416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0261ea7b2b0953cdea5dc1cefd3eeb2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a0261ea7b2b0953cdea5dc1cefd3eeb2a">Radian__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a0261ea7b2b0953cdea5dc1cefd3eeb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4caa39ae4f3d727ac6601c33bed20bea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a4caa39ae4f3d727ac6601c33bed20bea">Norm__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a4caa39ae4f3d727ac6601c33bed20bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9ebbc4d5f1dc56bf68bdb17889f22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3a9ebbc4d5f1dc56bf68bdb17889f22c">Abs__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a3a9ebbc4d5f1dc56bf68bdb17889f22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d317ddb3ec7ec268cb3721bfc275ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2d317ddb3ec7ec268cb3721bfc275ed7">Inv__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a2d317ddb3ec7ec268cb3721bfc275ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6605fa32dd8edc56ac5c8237e8d6bb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a6605fa32dd8edc56ac5c8237e8d6bb7e">Sin__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a6605fa32dd8edc56ac5c8237e8d6bb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31235dda97aeb96f6ae232c0008ae38b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a31235dda97aeb96f6ae232c0008ae38b">Cos__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a31235dda97aeb96f6ae232c0008ae38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e47c1864f7f839bede8d9e0e677b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a67e47c1864f7f839bede8d9e0e677b22">__mi__7cSAngleCFv</a> ()</td></tr>
+<tr class="separator:a67e47c1864f7f839bede8d9e0e677b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787c9f7d5020f334cf30427896374755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a787c9f7d5020f334cf30427896374755">__pl__7cSAngleCFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:a787c9f7d5020f334cf30427896374755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3928877b1e396dbe76a6d57050978a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#afc3928877b1e396dbe76a6d57050978a">__mi__7cSAngleCFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:afc3928877b1e396dbe76a6d57050978a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdfbd18b518f0fd90c3cf11e2745991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#abfdfbd18b518f0fd90c3cf11e2745991">__apl__7cSAngleFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:abfdfbd18b518f0fd90c3cf11e2745991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536ec47b863f804def689c55032eb11a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a536ec47b863f804def689c55032eb11a">__ami__7cSAngleFRC7cSAngle</a> ()</td></tr>
+<tr class="separator:a536ec47b863f804def689c55032eb11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2c7519590ba718a363bf038b580553"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#add2c7519590ba718a363bf038b580553">__pl__7cSAngleCFs</a> ()</td></tr>
+<tr class="separator:add2c7519590ba718a363bf038b580553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e4d9d9eee189e1676e8aa2c729bd9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a79e4d9d9eee189e1676e8aa2c729bd9f">__mi__7cSAngleCFs</a> ()</td></tr>
+<tr class="separator:a79e4d9d9eee189e1676e8aa2c729bd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace0d8d3835f361b35559c324bfbc7f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ace0d8d3835f361b35559c324bfbc7f5d">__apl__7cSAngleFs</a> ()</td></tr>
+<tr class="separator:ace0d8d3835f361b35559c324bfbc7f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d219b5027cff6f19ecb15885e202a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3d219b5027cff6f19ecb15885e202a74">__ml__7cSAngleCFf</a> ()</td></tr>
+<tr class="separator:a3d219b5027cff6f19ecb15885e202a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbc4cf1ec4afceb213c1fb5e6686114"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#acdbc4cf1ec4afceb213c1fb5e6686114">__amu__7cSAngleFf</a> ()</td></tr>
+<tr class="separator:acdbc4cf1ec4afceb213c1fb5e6686114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a284cba7720d3f074317398bd7e976050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a284cba7720d3f074317398bd7e976050">__pl__FsRC7cSAngle</a> ()</td></tr>
+<tr class="separator:a284cba7720d3f074317398bd7e976050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8a18684e06b00a8c11218b033f96df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2a8a18684e06b00a8c11218b033f96df">__mi__FsRC7cSAngle</a> ()</td></tr>
+<tr class="separator:a2a8a18684e06b00a8c11218b033f96df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1838f4f2ccb8526558d70c563010c72e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a1838f4f2ccb8526558d70c563010c72e">__ct__7cDegreeFf</a> ()</td></tr>
+<tr class="separator:a1838f4f2ccb8526558d70c563010c72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e323b51fda77465c4d2ce5a886508cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a7e323b51fda77465c4d2ce5a886508cb">Formal__7cDegreeFv</a> ()</td></tr>
+<tr class="separator:a7e323b51fda77465c4d2ce5a886508cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e38aa199c5635ce5ee81705c98d578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a26e38aa199c5635ce5ee81705c98d578">Val__7cDegreeFf</a> ()</td></tr>
+<tr class="separator:a26e38aa199c5635ce5ee81705c98d578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af777ab22d30c6f92026faaa6cfedf4df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#af777ab22d30c6f92026faaa6cfedf4df">Radian__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:af777ab22d30c6f92026faaa6cfedf4df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6fb9f0863a4dc4732dc7becb18e27a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a6d6fb9f0863a4dc4732dc7becb18e27a">Sin__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:a6d6fb9f0863a4dc4732dc7becb18e27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537cd23d0d8a55317e14904ee3018b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a537cd23d0d8a55317e14904ee3018b96">Cos__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:a537cd23d0d8a55317e14904ee3018b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0759475a30114e065775c0b4b5493943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a0759475a30114e065775c0b4b5493943">Tan__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:a0759475a30114e065775c0b4b5493943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc51c3bbbfcb3957ebcc1fbffdc374e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a8dc51c3bbbfcb3957ebcc1fbffdc374e">__ct__7cSPolarFRC4cXyz</a> ()</td></tr>
+<tr class="separator:a8dc51c3bbbfcb3957ebcc1fbffdc374e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359bd83f9386dd9777caa10472619dcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a359bd83f9386dd9777caa10472619dcc">Formal__7cSPolarFv</a> ()</td></tr>
+<tr class="separator:a359bd83f9386dd9777caa10472619dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5491b2932cdb0057606a9b51a2f4fa4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a5491b2932cdb0057606a9b51a2f4fa4f">Val__7cSPolarFfss</a> ()</td></tr>
+<tr class="separator:a5491b2932cdb0057606a9b51a2f4fa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fdabfa37fa28e4589e1a14b7a9e624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a29fdabfa37fa28e4589e1a14b7a9e624">Val__7cSPolarFRC4cXyz</a> ()</td></tr>
+<tr class="separator:a29fdabfa37fa28e4589e1a14b7a9e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad974f4983262237354a7cf922347f03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad974f4983262237354a7cf922347f03d">Xyz__7cSPolarCFv</a> ()</td></tr>
+<tr class="separator:ad974f4983262237354a7cf922347f03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26bef143014be6fe09f833bca44eb77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad26bef143014be6fe09f833bca44eb77">Globe__7cSPolarCFP7cSGlobe</a> ()</td></tr>
+<tr class="separator:ad26bef143014be6fe09f833bca44eb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad292f225218ad982d4e40e8b0547b110"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad292f225218ad982d4e40e8b0547b110">__ct__7cSGlobeFRC7cSGlobe</a> ()</td></tr>
+<tr class="separator:ad292f225218ad982d4e40e8b0547b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69c59dcfb7ed2a516d3af2a67855c7b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a69c59dcfb7ed2a516d3af2a67855c7b5">__ct__7cSGlobeFfss</a> ()</td></tr>
+<tr class="separator:a69c59dcfb7ed2a516d3af2a67855c7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5324801108fc779d4caabd5bed35cf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ac5324801108fc779d4caabd5bed35cf9">__ct__7cSGlobeFfRC7cSAngleRC7cSAngle</a> ()</td></tr>
+<tr class="separator:ac5324801108fc779d4caabd5bed35cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1acbc2a8dcdcf436a1a0daa9176f2b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a1acbc2a8dcdcf436a1a0daa9176f2b09">__ct__7cSGlobeFRC4cXyz</a> ()</td></tr>
+<tr class="separator:a1acbc2a8dcdcf436a1a0daa9176f2b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a4b3827d2412a0874182d3a476a20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad0a4b3827d2412a0874182d3a476a20f">Formal__7cSGlobeFv</a> ()</td></tr>
+<tr class="separator:ad0a4b3827d2412a0874182d3a476a20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9659ec618be3f5335f6820a31f7d920a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a9659ec618be3f5335f6820a31f7d920a">Val__7cSGlobeFRC7cSGlobe</a> ()</td></tr>
+<tr class="separator:a9659ec618be3f5335f6820a31f7d920a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28b1856e697da044928f74f151458a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ad28b1856e697da044928f74f151458a7">Val__7cSGlobeFfss</a> ()</td></tr>
+<tr class="separator:ad28b1856e697da044928f74f151458a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb8b83d330816bd8862f04a2fd659e40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#acb8b83d330816bd8862f04a2fd659e40">Val__7cSGlobeFfRC7cSAngleRC7cSAngle</a> ()</td></tr>
+<tr class="separator:acb8b83d330816bd8862f04a2fd659e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5de9679a150306ee8ec4f36ebacf98f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#af5de9679a150306ee8ec4f36ebacf98f">Val__7cSGlobeFRC4cXyz</a> ()</td></tr>
+<tr class="separator:af5de9679a150306ee8ec4f36ebacf98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ccf3ce423be441712fa566a3c2c167b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a4ccf3ce423be441712fa566a3c2c167b">Xyz__7cSGlobeCFv</a> ()</td></tr>
+<tr class="separator:a4ccf3ce423be441712fa566a3c2c167b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e96d0b6e507b0f789cfb6481add04c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a06e96d0b6e507b0f789cfb6481add04c">Polar__7cSGlobeCFP7cSPolar</a> ()</td></tr>
+<tr class="separator:a06e96d0b6e507b0f789cfb6481add04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e57416bc4a311b47cd6587f2703562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a69e57416bc4a311b47cd6587f2703562">Norm__7cSGlobeCFv</a> ()</td></tr>
+<tr class="separator:a69e57416bc4a311b47cd6587f2703562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dc9418003dc84c4e53ea34689e8b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a62dc9418003dc84c4e53ea34689e8b6c">Invert__7cSGlobeFv</a> ()</td></tr>
+<tr class="separator:a62dc9418003dc84c4e53ea34689e8b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a923a29b3f33fb9352af21e41f579bc8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a923a29b3f33fb9352af21e41f579bc8f">func_80271BA8</a> ()</td></tr>
+<tr class="separator:a923a29b3f33fb9352af21e41f579bc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106751d3f8d7808e12393841ffe4b365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a106751d3f8d7808e12393841ffe4b365">__sinit_c_angle_cpp</a> ()</td></tr>
+<tr class="separator:a106751d3f8d7808e12393841ffe4b365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acd54daf120482b50552d2094b8dcb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3acd54daf120482b50552d2094b8dcb6">cM_atan2f</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:a3acd54daf120482b50552d2094b8dcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ec279b87470acc4b7ababbc44b6a36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a97ec279b87470acc4b7ababbc44b6a36">__dt__7cSAngleFv</a> ()</td></tr>
+<tr class="separator:a97ec279b87470acc4b7ababbc44b6a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ea586ca609fcb56605d0ccc534944c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ac0ea586ca609fcb56605d0ccc534944c">cM_atan2f__Fff</a> ()</td></tr>
+<tr class="separator:ac0ea586ca609fcb56605d0ccc534944c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cea59a88b9016eb884c7c20cdc3a21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a75cea59a88b9016eb884c7c20cdc3a21">__register_global_object</a> ()</td></tr>
+<tr class="separator:a75cea59a88b9016eb884c7c20cdc3a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f5002363ada0a0d26d888dd21f5424b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a8f5002363ada0a0d26d888dd21f5424b">cos</a> ()</td></tr>
+<tr class="separator:a8f5002363ada0a0d26d888dd21f5424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca44f2392317d007d181914c5b40a0d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#aca44f2392317d007d181914c5b40a0d0">sin</a> ()</td></tr>
+<tr class="separator:aca44f2392317d007d181914c5b40a0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f8cde11d4ab68e76a2f4a091422f1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a60f8cde11d4ab68e76a2f4a091422f1b">tan</a> ()</td></tr>
+<tr class="separator:a60f8cde11d4ab68e76a2f4a091422f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0961d5643c48c2776ad8d3ac494e03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a0c0961d5643c48c2776ad8d3ac494e03">sqrt</a> ()</td></tr>
+<tr class="separator:a0c0961d5643c48c2776ad8d3ac494e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1b47df9669d27c4887c7b77e45248691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a1b47df9669d27c4887c7b77e45248691">lbl_80430F98</a></td></tr>
-<tr class="separator:a1b47df9669d27c4887c7b77e45248691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b922d58c99c77de571f12a59c9a178a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a8b922d58c99c77de571f12a59c9a178a">lit_2402</a> [12]</td></tr>
+<tr class="separator:a8b922d58c99c77de571f12a59c9a178a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ff16a301441f3bfc1a6d07acf6e543"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a73ff16a301441f3bfc1a6d07acf6e543">lit_2403</a> [12]</td></tr>
+<tr class="separator:a73ff16a301441f3bfc1a6d07acf6e543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c896bf172f61d668ed6de1ff9269804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a9c896bf172f61d668ed6de1ff9269804">lit_2404</a> [12]</td></tr>
+<tr class="separator:a9c896bf172f61d668ed6de1ff9269804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7140e1af15e37fea0945d6c9bee5cb27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a7140e1af15e37fea0945d6c9bee5cb27">c_angle__lit_2405</a> [12+4]</td></tr>
+<tr class="separator:a7140e1af15e37fea0945d6c9bee5cb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a523953e89dc53c53218ee1c704c67824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a523953e89dc53c53218ee1c704c67824">_0__7cSAngle</a> [2+2]</td></tr>
+<tr class="separator:a523953e89dc53c53218ee1c704c67824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375156f7f4cfb4bd5f5b32474b6196ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a375156f7f4cfb4bd5f5b32474b6196ac">_90__7cSAngle</a> [2+2]</td></tr>
+<tr class="separator:a375156f7f4cfb4bd5f5b32474b6196ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24de538fed5918d5362bd10dc0b385a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a24de538fed5918d5362bd10dc0b385a2">_180__7cSAngle</a> [2+2]</td></tr>
+<tr class="separator:a24de538fed5918d5362bd10dc0b385a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67e7fe0e5d223d9800c606e51120f8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ab67e7fe0e5d223d9800c606e51120f8b">_270__7cSAngle</a> [2+6]</td></tr>
+<tr class="separator:ab67e7fe0e5d223d9800c606e51120f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6302170b1a18886908d3cee640304cc6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a6302170b1a18886908d3cee640304cc6">lit_2248</a> = 182.04444885253906f</td></tr>
+<tr class="separator:a6302170b1a18886908d3cee640304cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89bba8286fb5da6616fba576dcca54f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a89bba8286fb5da6616fba576dcca54f2">lit_2260</a> = 0.0054931640625f</td></tr>
+<tr class="separator:a89bba8286fb5da6616fba576dcca54f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc8ed96550a6136c6a53cccbe9fbcd7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2cc8ed96550a6136c6a53cccbe9fbcd7">lit_2263</a> = 4503601774854144.0</td></tr>
+<tr class="separator:a2cc8ed96550a6136c6a53cccbe9fbcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a64f9ed44898fb37465e02ca080b2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ac4a64f9ed44898fb37465e02ca080b2a">c_angle__lit_2269</a> = 9.58738019107841e-05f</td></tr>
+<tr class="separator:ac4a64f9ed44898fb37465e02ca080b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2938cdd765c4063773e1fa32c76d2ce1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a2938cdd765c4063773e1fa32c76d2ce1">c_angle__lit_2277</a> = 3.0517578125e-05f</td></tr>
+<tr class="separator:a2938cdd765c4063773e1fa32c76d2ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237a93f52eb7f572742e771f85ba062d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a237a93f52eb7f572742e771f85ba062d">c_angle__lit_2440</a> = -180.0f</td></tr>
+<tr class="separator:a237a93f52eb7f572742e771f85ba062d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9b2f9c1a4af8173fdecf8673eb4055"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a1d9b2f9c1a4af8173fdecf8673eb4055">c_angle__lit_2441</a> = 180.0f</td></tr>
+<tr class="separator:a1d9b2f9c1a4af8173fdecf8673eb4055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf74c2cad25ce8d95427ada119608477"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#aaf74c2cad25ce8d95427ada119608477">lit_2474</a> = 0.01745329238474369f</td></tr>
+<tr class="separator:aaf74c2cad25ce8d95427ada119608477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4798efa1e6b1ef47eae719c88c6ceb61"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a4798efa1e6b1ef47eae719c88c6ceb61">lit_2491</a> [4]</td></tr>
+<tr class="separator:a4798efa1e6b1ef47eae719c88c6ceb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34269d8606eca74960a7033b592ba283"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a34269d8606eca74960a7033b592ba283">lit_2671</a> [8]</td></tr>
+<tr class="separator:a34269d8606eca74960a7033b592ba283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57e5d158f3f797f568f9cd683af1c61"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ab57e5d158f3f797f568f9cd683af1c61">lit_2672</a> = 10430.3779296875f</td></tr>
+<tr class="separator:ab57e5d158f3f797f568f9cd683af1c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d990de71aced88df123fbff6ff3140e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a6d990de71aced88df123fbff6ff3140e">c_angle__lit_2744</a> = 1.0f</td></tr>
+<tr class="separator:a6d990de71aced88df123fbff6ff3140e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9f1b305e1361e7191394ce75ef7e50"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#a3c9f1b305e1361e7191394ce75ef7e50">lit_2401</a> [12]</td></tr>
+<tr class="separator:a3c9f1b305e1361e7191394ce75ef7e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e6c3050470931df04b8e80f2b6d202"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__angle_8cpp.html#ac5e6c3050470931df04b8e80f2b6d202">_1__7cSAngle</a> [2+2]</td></tr>
+<tr class="separator:ac5e6c3050470931df04b8e80f2b6d202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ade009dc00b4f17d4e5c73802809b52a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade009dc00b4f17d4e5c73802809b52a5">&#9670;&nbsp;</a></span>__ct__7cSAngleFs()</h2>
+<a id="a536ec47b863f804def689c55032eb11a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536ec47b863f804def689c55032eb11a">&#9670;&nbsp;</a></span>__ami__7cSAngleFRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ami__7cSAngleFRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbc4cf1ec4afceb213c1fb5e6686114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbc4cf1ec4afceb213c1fb5e6686114">&#9670;&nbsp;</a></span>__amu__7cSAngleFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __amu__7cSAngleFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfdfbd18b518f0fd90c3cf11e2745991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfdfbd18b518f0fd90c3cf11e2745991">&#9670;&nbsp;</a></span>__apl__7cSAngleFRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __apl__7cSAngleFRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace0d8d3835f361b35559c324bfbc7f5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0d8d3835f361b35559c324bfbc7f5d">&#9670;&nbsp;</a></span>__apl__7cSAngleFs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __apl__7cSAngleFs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1838f4f2ccb8526558d70c563010c72e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1838f4f2ccb8526558d70c563010c72e">&#9670;&nbsp;</a></span>__ct__7cDegreeFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cDegreeFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3015d9a097fc07add3a943067853aa0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3015d9a097fc07add3a943067853aa0f">&#9670;&nbsp;</a></span>__ct__7cSAngleFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSAngleFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3722cd2af48f1d3234cbfb4d5b9f918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3722cd2af48f1d3234cbfb4d5b9f918">&#9670;&nbsp;</a></span>__ct__7cSAngleFRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSAngleFRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad601eb0e2265d48ac1e2ccb8b713947e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad601eb0e2265d48ac1e2ccb8b713947e">&#9670;&nbsp;</a></span>__ct__7cSAngleFs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +458,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void __ct__7cSAngleFs </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -138,8 +466,93 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2701f833c7b99545f4eae02c6d1b79be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2701f833c7b99545f4eae02c6d1b79be">&#9670;&nbsp;</a></span>__dt__7cSAngleFv()</h2>
+<a id="ac5324801108fc779d4caabd5bed35cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5324801108fc779d4caabd5bed35cf9">&#9670;&nbsp;</a></span>__ct__7cSGlobeFfRC7cSAngleRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69c59dcfb7ed2a516d3af2a67855c7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69c59dcfb7ed2a516d3af2a67855c7b5">&#9670;&nbsp;</a></span>__ct__7cSGlobeFfss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSGlobeFfss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1acbc2a8dcdcf436a1a0daa9176f2b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1acbc2a8dcdcf436a1a0daa9176f2b09">&#9670;&nbsp;</a></span>__ct__7cSGlobeFRC4cXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSGlobeFRC4cXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad292f225218ad982d4e40e8b0547b110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad292f225218ad982d4e40e8b0547b110">&#9670;&nbsp;</a></span>__ct__7cSGlobeFRC7cSGlobe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSGlobeFRC7cSGlobe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dc51c3bbbfcb3957ebcc1fbffdc374e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dc51c3bbbfcb3957ebcc1fbffdc374e">&#9670;&nbsp;</a></span>__ct__7cSPolarFRC4cXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cSPolarFRC4cXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97ec279b87470acc4b7ababbc44b6a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ec279b87470acc4b7ababbc44b6a36">&#9670;&nbsp;</a></span>__dt__7cSAngleFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +560,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void __dt__7cSAngleFv </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -156,16 +568,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9af317896953e4ffd886d513d631eeda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9af317896953e4ffd886d513d631eeda">&#9670;&nbsp;</a></span>__sinit_c_angle_cpp()</h2>
+<a id="afc3928877b1e396dbe76a6d57050978a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3928877b1e396dbe76a6d57050978a">&#9670;&nbsp;</a></span>__mi__7cSAngleCFRC7cSAngle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void __sinit_c_angle_cpp </td>
+          <td class="memname">void __mi__7cSAngleCFRC7cSAngle </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -174,29 +585,193 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3ba77c7b20af9359098c36b8b82ceb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3ba77c7b20af9359098c36b8b82ceb0">&#9670;&nbsp;</a></span>cAngle_NS_Adjust()</h2>
+<a id="a79e4d9d9eee189e1676e8aa2c729bd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e4d9d9eee189e1676e8aa2c729bd9f">&#9670;&nbsp;</a></span>__mi__7cSAngleCFs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float cAngle_NS_Adjust </td>
+          <td class="memname">void __mi__7cSAngleCFs </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>f1</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67e47c1864f7f839bede8d9e0e677b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e47c1864f7f839bede8d9e0e677b22">&#9670;&nbsp;</a></span>__mi__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __mi__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8a18684e06b00a8c11218b033f96df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8a18684e06b00a8c11218b033f96df">&#9670;&nbsp;</a></span>__mi__FsRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __mi__FsRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d219b5027cff6f19ecb15885e202a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d219b5027cff6f19ecb15885e202a74">&#9670;&nbsp;</a></span>__ml__7cSAngleCFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ml__7cSAngleCFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a787c9f7d5020f334cf30427896374755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787c9f7d5020f334cf30427896374755">&#9670;&nbsp;</a></span>__pl__7cSAngleCFRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __pl__7cSAngleCFRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add2c7519590ba718a363bf038b580553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2c7519590ba718a363bf038b580553">&#9670;&nbsp;</a></span>__pl__7cSAngleCFs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __pl__7cSAngleCFs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a284cba7720d3f074317398bd7e976050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a284cba7720d3f074317398bd7e976050">&#9670;&nbsp;</a></span>__pl__FsRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __pl__FsRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75cea59a88b9016eb884c7c20cdc3a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cea59a88b9016eb884c7c20cdc3a21">&#9670;&nbsp;</a></span>__register_global_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __register_global_object </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a106751d3f8d7808e12393841ffe4b365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106751d3f8d7808e12393841ffe4b365">&#9670;&nbsp;</a></span>__sinit_c_angle_cpp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __sinit_c_angle_cpp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a9ebbc4d5f1dc56bf68bdb17889f22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9ebbc4d5f1dc56bf68bdb17889f22c">&#9670;&nbsp;</a></span>Abs__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Abs__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3acd54daf120482b50552d2094b8dcb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acd54daf120482b50552d2094b8dcb6">&#9670;&nbsp;</a></span>cM_atan2f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cM_atan2f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>f2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>f3</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,16 +783,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aba007816dbbc70c1a67b11637aae766e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba007816dbbc70c1a67b11637aae766e">&#9670;&nbsp;</a></span>func_80361C24()</h2>
+<a id="ac0ea586ca609fcb56605d0ccc534944c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ea586ca609fcb56605d0ccc534944c">&#9670;&nbsp;</a></span>cM_atan2f__Fff()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void func_80361C24 </td>
+          <td class="memname">void cM_atan2f__Fff </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -226,23 +800,244 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5c09c7a298830e5dc7e18ac503558285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c09c7a298830e5dc7e18ac503558285">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="a8f5002363ada0a0d26d888dd21f5424b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f5002363ada0a0d26d888dd21f5424b">&#9670;&nbsp;</a></span>cos()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcSAngle.html">cSAngle</a> operator+ </td>
+          <td class="memname">void cos </td>
           <td>(</td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>other</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a537cd23d0d8a55317e14904ee3018b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537cd23d0d8a55317e14904ee3018b96">&#9670;&nbsp;</a></span>Cos__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31235dda97aeb96f6ae232c0008ae38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31235dda97aeb96f6ae232c0008ae38b">&#9670;&nbsp;</a></span>Cos__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1902a4104b23850cfeccafb0e31e416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1902a4104b23850cfeccafb0e31e416">&#9670;&nbsp;</a></span>Degree__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Degree__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e323b51fda77465c4d2ce5a886508cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e323b51fda77465c4d2ce5a886508cb">&#9670;&nbsp;</a></span>Formal__7cDegreeFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Formal__7cDegreeFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a4b3827d2412a0874182d3a476a20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a4b3827d2412a0874182d3a476a20f">&#9670;&nbsp;</a></span>Formal__7cSGlobeFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Formal__7cSGlobeFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a359bd83f9386dd9777caa10472619dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359bd83f9386dd9777caa10472619dcc">&#9670;&nbsp;</a></span>Formal__7cSPolarFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Formal__7cSPolarFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a923a29b3f33fb9352af21e41f579bc8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a923a29b3f33fb9352af21e41f579bc8f">&#9670;&nbsp;</a></span>func_80271BA8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void func_80271BA8 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad26bef143014be6fe09f833bca44eb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26bef143014be6fe09f833bca44eb77">&#9670;&nbsp;</a></span>Globe__7cSPolarCFP7cSGlobe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Globe__7cSPolarCFP7cSGlobe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d317ddb3ec7ec268cb3721bfc275ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d317ddb3ec7ec268cb3721bfc275ed7">&#9670;&nbsp;</a></span>Inv__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Inv__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62dc9418003dc84c4e53ea34689e8b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62dc9418003dc84c4e53ea34689e8b6c">&#9670;&nbsp;</a></span>Invert__7cSGlobeFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Invert__7cSGlobeFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4caa39ae4f3d727ac6601c33bed20bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4caa39ae4f3d727ac6601c33bed20bea">&#9670;&nbsp;</a></span>Norm__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Norm__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69e57416bc4a311b47cd6587f2703562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e57416bc4a311b47cd6587f2703562">&#9670;&nbsp;</a></span>Norm__7cSGlobeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Norm__7cSGlobeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e66504685c62271c8c235440f54080c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e66504685c62271c8c235440f54080c">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcSAngle.html">cSAngle</a> &amp;&#160;</td>
-          <td class="paramname"><em>angle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structcSAngle.html">cSAngle</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,23 +1049,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2d05b5a1d3ab320851ec802992dbd326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d05b5a1d3ab320851ec802992dbd326">&#9670;&nbsp;</a></span>operator-()</h2>
+<a id="a91ac9b2caa491a13b1594e9e3d97420a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ac9b2caa491a13b1594e9e3d97420a">&#9670;&nbsp;</a></span>operator-()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcSAngle.html">cSAngle</a> operator- </td>
+          <td class="memname">void operator- </td>
           <td>(</td>
-          <td class="paramtype">short&#160;</td>
-          <td class="paramname"><em>other</em>, </td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcSAngle.html">cSAngle</a> &amp;&#160;</td>
-          <td class="paramname"><em>angle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structcSAngle.html">cSAngle</a> const &amp;&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -282,16 +1077,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acdb55c1010a6c379a49db0201bf55d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb55c1010a6c379a49db0201bf55d89">&#9670;&nbsp;</a></span>sqrt()</h2>
+<a id="a06e96d0b6e507b0f789cfb6481add04c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e96d0b6e507b0f789cfb6481add04c">&#9670;&nbsp;</a></span>Polar__7cSGlobeCFP7cSPolar()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double sqrt </td>
+          <td class="memname">void Polar__7cSGlobeCFP7cSPolar </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -300,8 +1094,377 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0511d0f7e47b9b58805db434b28ab573"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0511d0f7e47b9b58805db434b28ab573">&#9670;&nbsp;</a></span>square()</h2>
+<a id="af777ab22d30c6f92026faaa6cfedf4df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af777ab22d30c6f92026faaa6cfedf4df">&#9670;&nbsp;</a></span>Radian__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Radian__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0261ea7b2b0953cdea5dc1cefd3eeb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0261ea7b2b0953cdea5dc1cefd3eeb2a">&#9670;&nbsp;</a></span>Radian__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Radian__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca44f2392317d007d181914c5b40a0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca44f2392317d007d181914c5b40a0d0">&#9670;&nbsp;</a></span>sin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d6fb9f0863a4dc4732dc7becb18e27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6fb9f0863a4dc4732dc7becb18e27a">&#9670;&nbsp;</a></span>Sin__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sin__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6605fa32dd8edc56ac5c8237e8d6bb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6605fa32dd8edc56ac5c8237e8d6bb7e">&#9670;&nbsp;</a></span>Sin__7cSAngleCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sin__7cSAngleCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c0961d5643c48c2776ad8d3ac494e03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0961d5643c48c2776ad8d3ac494e03">&#9670;&nbsp;</a></span>sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sqrt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60f8cde11d4ab68e76a2f4a091422f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f8cde11d4ab68e76a2f4a091422f1b">&#9670;&nbsp;</a></span>tan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tan </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0759475a30114e065775c0b4b5493943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0759475a30114e065775c0b4b5493943">&#9670;&nbsp;</a></span>Tan__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tan__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26e38aa199c5635ce5ee81705c98d578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e38aa199c5635ce5ee81705c98d578">&#9670;&nbsp;</a></span>Val__7cDegreeFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cDegreeFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ee86999244134e338430dbf35a3a875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee86999244134e338430dbf35a3a875">&#9670;&nbsp;</a></span>Val__7cSAngleFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSAngleFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a748dcc93e59b05b2fc66172ca35e3729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a748dcc93e59b05b2fc66172ca35e3729">&#9670;&nbsp;</a></span>Val__7cSAngleFRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSAngleFRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abac0cadfc662843e7687c8bebcbe9bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac0cadfc662843e7687c8bebcbe9bbb">&#9670;&nbsp;</a></span>Val__7cSAngleFs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSAngleFs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb8b83d330816bd8862f04a2fd659e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb8b83d330816bd8862f04a2fd659e40">&#9670;&nbsp;</a></span>Val__7cSGlobeFfRC7cSAngleRC7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSGlobeFfRC7cSAngleRC7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad28b1856e697da044928f74f151458a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28b1856e697da044928f74f151458a7">&#9670;&nbsp;</a></span>Val__7cSGlobeFfss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSGlobeFfss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5de9679a150306ee8ec4f36ebacf98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5de9679a150306ee8ec4f36ebacf98f">&#9670;&nbsp;</a></span>Val__7cSGlobeFRC4cXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSGlobeFRC4cXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9659ec618be3f5335f6820a31f7d920a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9659ec618be3f5335f6820a31f7d920a">&#9670;&nbsp;</a></span>Val__7cSGlobeFRC7cSGlobe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSGlobeFRC7cSGlobe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5491b2932cdb0057606a9b51a2f4fa4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5491b2932cdb0057606a9b51a2f4fa4f">&#9670;&nbsp;</a></span>Val__7cSPolarFfss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSPolarFfss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29fdabfa37fa28e4589e1a14b7a9e624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fdabfa37fa28e4589e1a14b7a9e624">&#9670;&nbsp;</a></span>Val__7cSPolarFRC4cXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Val__7cSPolarFRC4cXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ccf3ce423be441712fa566a3c2c167b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ccf3ce423be441712fa566a3c2c167b">&#9670;&nbsp;</a></span>Xyz__7cSGlobeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xyz__7cSGlobeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad974f4983262237354a7cf922347f03d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad974f4983262237354a7cf922347f03d">&#9670;&nbsp;</a></span>Xyz__7cSPolarCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xyz__7cSPolarCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a523953e89dc53c53218ee1c704c67824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a523953e89dc53c53218ee1c704c67824">&#9670;&nbsp;</a></span>_0__7cSAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> _0__7cSAngle[2+2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24de538fed5918d5362bd10dc0b385a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24de538fed5918d5362bd10dc0b385a2">&#9670;&nbsp;</a></span>_180__7cSAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> _180__7cSAngle[2+2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5e6c3050470931df04b8e80f2b6d202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e6c3050470931df04b8e80f2b6d202">&#9670;&nbsp;</a></span>_1__7cSAngle</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,25 +1473,48 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double square </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> _1__7cSAngle[2+2]</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a1b47df9669d27c4887c7b77e45248691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b47df9669d27c4887c7b77e45248691">&#9670;&nbsp;</a></span>lbl_80430F98</h2>
+<a id="ab67e7fe0e5d223d9800c606e51120f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67e7fe0e5d223d9800c606e51120f8b">&#9670;&nbsp;</a></span>_270__7cSAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> _270__7cSAngle[2+6]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a375156f7f4cfb4bd5f5b32474b6196ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375156f7f4cfb4bd5f5b32474b6196ac">&#9670;&nbsp;</a></span>_90__7cSAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> _90__7cSAngle[2+2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4a64f9ed44898fb37465e02ca080b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a64f9ed44898fb37465e02ca080b2a">&#9670;&nbsp;</a></span>c_angle__lit_2269</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,12 +1523,338 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lbl_80430F98</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_angle__lit_2269 = 9.58738019107841e-05f</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2938cdd765c4063773e1fa32c76d2ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2938cdd765c4063773e1fa32c76d2ce1">&#9670;&nbsp;</a></span>c_angle__lit_2277</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_angle__lit_2277 = 3.0517578125e-05f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7140e1af15e37fea0945d6c9bee5cb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7140e1af15e37fea0945d6c9bee5cb27">&#9670;&nbsp;</a></span>c_angle__lit_2405</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> c_angle__lit_2405</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a237a93f52eb7f572742e771f85ba062d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237a93f52eb7f572742e771f85ba062d">&#9670;&nbsp;</a></span>c_angle__lit_2440</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_angle__lit_2440 = -180.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d9b2f9c1a4af8173fdecf8673eb4055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d9b2f9c1a4af8173fdecf8673eb4055">&#9670;&nbsp;</a></span>c_angle__lit_2441</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_angle__lit_2441 = 180.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d990de71aced88df123fbff6ff3140e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d990de71aced88df123fbff6ff3140e">&#9670;&nbsp;</a></span>c_angle__lit_2744</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> c_angle__lit_2744 = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6302170b1a18886908d3cee640304cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6302170b1a18886908d3cee640304cc6">&#9670;&nbsp;</a></span>lit_2248</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2248 = 182.04444885253906f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89bba8286fb5da6616fba576dcca54f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bba8286fb5da6616fba576dcca54f2">&#9670;&nbsp;</a></span>lit_2260</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2260 = 0.0054931640625f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cc8ed96550a6136c6a53cccbe9fbcd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc8ed96550a6136c6a53cccbe9fbcd7">&#9670;&nbsp;</a></span>lit_2263</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> lit_2263 = 4503601774854144.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c9f1b305e1361e7191394ce75ef7e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9f1b305e1361e7191394ce75ef7e50">&#9670;&nbsp;</a></span>lit_2401</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2401[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b922d58c99c77de571f12a59c9a178a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b922d58c99c77de571f12a59c9a178a">&#9670;&nbsp;</a></span>lit_2402</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2402</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73ff16a301441f3bfc1a6d07acf6e543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ff16a301441f3bfc1a6d07acf6e543">&#9670;&nbsp;</a></span>lit_2403</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2403</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c896bf172f61d668ed6de1ff9269804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c896bf172f61d668ed6de1ff9269804">&#9670;&nbsp;</a></span>lit_2404</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2404</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf74c2cad25ce8d95427ada119608477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf74c2cad25ce8d95427ada119608477">&#9670;&nbsp;</a></span>lit_2474</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2474 = 0.01745329238474369f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4798efa1e6b1ef47eae719c88c6ceb61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4798efa1e6b1ef47eae719c88c6ceb61">&#9670;&nbsp;</a></span>lit_2491</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2491[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34269d8606eca74960a7033b592ba283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34269d8606eca74960a7033b592ba283">&#9670;&nbsp;</a></span>lit_2671</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_2671[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab57e5d158f3f797f568f9cd683af1c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57e5d158f3f797f568f9cd683af1c61">&#9670;&nbsp;</a></span>lit_2672</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_2672 = 10430.3779296875f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_pc/f_pc_method.cpp File Reference</title>
+<title>Twilight Princess: src/f_pc/f_pc_method.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,58 +69,80 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_89dee0e9ccaa7c098b3a159a2ece8505.html">f_pc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_15a1977171855e2c8b0c1e68c97c2b83.html">f_pc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">f_pc_method.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__pc__method_8h_source.html">f/f_pc/f_pc_method.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__pc__method_8h_source.html">f_pc/f_pc_method.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_method/fpcMtd_Method__FPFPv_iPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_method/fpcMtd_Execute__FP20process_method_classPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_method/fpcMtd_IsDelete__FP20process_method_classPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_method/fpcMtd_Delete__FP20process_method_classPv.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_method/fpcMtd_Create__FP20process_method_classPv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_pc_method.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="f__pc__method_8cpp__incl.svg" width="391" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__pc__method_8cpp__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprocess__method__class.html">process_method_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac9b977fb93217c2b5a17ad0e08c3eb5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#ac9b977fb93217c2b5a17ad0e08c3eb5f">fpcMtd_Method</a> (<a class="el" href="f__pc__method_8h.html#abf9b33cc1155a600cb957704c94e23fa">process_method_func</a> pFunc, void *pUserData)</td></tr>
-<tr class="separator:ac9b977fb93217c2b5a17ad0e08c3eb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc97698eb5c9d5340f3671fc8ff0b3b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#abc97698eb5c9d5340f3671fc8ff0b3b9">fpcMtd_Execute</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *pMthd, void *pUserData)</td></tr>
-<tr class="separator:abc97698eb5c9d5340f3671fc8ff0b3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c555f1c0adc42f08cd1d46815ed347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a17c555f1c0adc42f08cd1d46815ed347">fpcMtd_IsDelete</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *pMthd, void *pUserData)</td></tr>
-<tr class="separator:a17c555f1c0adc42f08cd1d46815ed347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6484ff6cc79b24a44b4e7e3c7e00b6cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a6484ff6cc79b24a44b4e7e3c7e00b6cd">fpcMtd_Delete</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *pMthd, void *pUserData)</td></tr>
-<tr class="separator:a6484ff6cc79b24a44b4e7e3c7e00b6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b38ebc043412de1e3b9a6d13cb3103"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#af8b38ebc043412de1e3b9a6d13cb3103">fpcMtd_Create</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *pMthd, void *pUserData)</td></tr>
-<tr class="separator:af8b38ebc043412de1e3b9a6d13cb3103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5551f205097784b435433adccdf9ea4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a5551f205097784b435433adccdf9ea4f">fpcMtd_Method</a> (int(*)(void *), void *)</td></tr>
+<tr class="separator:a5551f205097784b435433adccdf9ea4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700c6070ee3db0c6a5171111880b8786"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a700c6070ee3db0c6a5171111880b8786">fpcMtd_Execute</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *, void *)</td></tr>
+<tr class="separator:a700c6070ee3db0c6a5171111880b8786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8616f2d2f88e4b4622e01a2f171e5cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#ae8616f2d2f88e4b4622e01a2f171e5cf">fpcMtd_IsDelete</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *, void *)</td></tr>
+<tr class="separator:ae8616f2d2f88e4b4622e01a2f171e5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8921f3c4c83a123ba056916e239ce0a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a8921f3c4c83a123ba056916e239ce0a5">fpcMtd_Delete</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *, void *)</td></tr>
+<tr class="separator:a8921f3c4c83a123ba056916e239ce0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97cc9a975d9e6022127e27c0520858a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a97cc9a975d9e6022127e27c0520858a7">fpcMtd_Create</a> (<a class="el" href="structprocess__method__class.html">process_method_class</a> *, void *)</td></tr>
+<tr class="separator:a97cc9a975d9e6022127e27c0520858a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16169e07de4328bf16eca417f61a561c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a16169e07de4328bf16eca417f61a561c">fpcMtd_Method__FPFPv_iPv</a> ()</td></tr>
+<tr class="separator:a16169e07de4328bf16eca417f61a561c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cb07e2efaab174e4aa8ea9eb9312ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a79cb07e2efaab174e4aa8ea9eb9312ab">fpcMtd_Execute__FP20process_method_classPv</a> ()</td></tr>
+<tr class="separator:a79cb07e2efaab174e4aa8ea9eb9312ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac697f181973f6e2561ef7d574a8bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a2ac697f181973f6e2561ef7d574a8bf5">fpcMtd_IsDelete__FP20process_method_classPv</a> ()</td></tr>
+<tr class="separator:a2ac697f181973f6e2561ef7d574a8bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64342f520ee10fdf03490c2726c77d4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a64342f520ee10fdf03490c2726c77d4e">fpcMtd_Delete__FP20process_method_classPv</a> ()</td></tr>
+<tr class="separator:a64342f520ee10fdf03490c2726c77d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ff7561552a731d31b67d43e6d22c7ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__method_8cpp.html#a4ff7561552a731d31b67d43e6d22c7ce">fpcMtd_Create__FP20process_method_classPv</a> ()</td></tr>
+<tr class="separator:a4ff7561552a731d31b67d43e6d22c7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af8b38ebc043412de1e3b9a6d13cb3103"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8b38ebc043412de1e3b9a6d13cb3103">&#9670;&nbsp;</a></span>fpcMtd_Create()</h2>
+<a id="a97cc9a975d9e6022127e27c0520858a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cc9a975d9e6022127e27c0520858a7">&#9670;&nbsp;</a></span>fpcMtd_Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcMtd_Create </td>
+          <td class="memname">void fpcMtd_Create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structprocess__method__class.html">process_method_class</a> *&#160;</td>
-          <td class="paramname"><em>pMthd</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -132,23 +154,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6484ff6cc79b24a44b4e7e3c7e00b6cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6484ff6cc79b24a44b4e7e3c7e00b6cd">&#9670;&nbsp;</a></span>fpcMtd_Delete()</h2>
+<a id="a4ff7561552a731d31b67d43e6d22c7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff7561552a731d31b67d43e6d22c7ce">&#9670;&nbsp;</a></span>fpcMtd_Create__FP20process_method_classPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcMtd_Delete </td>
+          <td class="memname">void fpcMtd_Create__FP20process_method_classPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8921f3c4c83a123ba056916e239ce0a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8921f3c4c83a123ba056916e239ce0a5">&#9670;&nbsp;</a></span>fpcMtd_Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcMtd_Delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structprocess__method__class.html">process_method_class</a> *&#160;</td>
-          <td class="paramname"><em>pMthd</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,23 +199,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abc97698eb5c9d5340f3671fc8ff0b3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc97698eb5c9d5340f3671fc8ff0b3b9">&#9670;&nbsp;</a></span>fpcMtd_Execute()</h2>
+<a id="a64342f520ee10fdf03490c2726c77d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64342f520ee10fdf03490c2726c77d4e">&#9670;&nbsp;</a></span>fpcMtd_Delete__FP20process_method_classPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcMtd_Execute </td>
+          <td class="memname">void fpcMtd_Delete__FP20process_method_classPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a700c6070ee3db0c6a5171111880b8786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700c6070ee3db0c6a5171111880b8786">&#9670;&nbsp;</a></span>fpcMtd_Execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcMtd_Execute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structprocess__method__class.html">process_method_class</a> *&#160;</td>
-          <td class="paramname"><em>pMthd</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -188,23 +244,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a17c555f1c0adc42f08cd1d46815ed347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17c555f1c0adc42f08cd1d46815ed347">&#9670;&nbsp;</a></span>fpcMtd_IsDelete()</h2>
+<a id="a79cb07e2efaab174e4aa8ea9eb9312ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cb07e2efaab174e4aa8ea9eb9312ab">&#9670;&nbsp;</a></span>fpcMtd_Execute__FP20process_method_classPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcMtd_IsDelete </td>
+          <td class="memname">void fpcMtd_Execute__FP20process_method_classPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8616f2d2f88e4b4622e01a2f171e5cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8616f2d2f88e4b4622e01a2f171e5cf">&#9670;&nbsp;</a></span>fpcMtd_IsDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcMtd_IsDelete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structprocess__method__class.html">process_method_class</a> *&#160;</td>
-          <td class="paramname"><em>pMthd</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -216,28 +289,62 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9b977fb93217c2b5a17ad0e08c3eb5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b977fb93217c2b5a17ad0e08c3eb5f">&#9670;&nbsp;</a></span>fpcMtd_Method()</h2>
+<a id="a2ac697f181973f6e2561ef7d574a8bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac697f181973f6e2561ef7d574a8bf5">&#9670;&nbsp;</a></span>fpcMtd_IsDelete__FP20process_method_classPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcMtd_Method </td>
+          <td class="memname">void fpcMtd_IsDelete__FP20process_method_classPv </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="f__pc__method_8h.html#abf9b33cc1155a600cb957704c94e23fa">process_method_func</a>&#160;</td>
-          <td class="paramname"><em>pFunc</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5551f205097784b435433adccdf9ea4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5551f205097784b435433adccdf9ea4f">&#9670;&nbsp;</a></span>fpcMtd_Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcMtd_Method </td>
+          <td>(</td>
+          <td class="paramtype">int(*)(void *)&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16169e07de4328bf16eca417f61a561c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16169e07de4328bf16eca417f61a561c">&#9670;&nbsp;</a></span>fpcMtd_Method__FPFPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcMtd_Method__FPFPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

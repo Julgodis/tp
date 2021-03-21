@@ -79,26 +79,34 @@ $(function() {
 <div class="title">s_basic.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="s__basic_8h_source.html">SStandard/s_basic.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="s__basic_8h_source.html">SSystem/SStandard/s_basic.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SStandard/s_basic/sBs_FillArea_s__FPvUls.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SStandard/s_basic/sBs_ClearArea__FPvUl.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for s_basic.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="s__basic_8cpp__incl.svg" width="352" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="s__basic_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6b862020d8f9e4cd4893cbb25855268b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#a6b862020d8f9e4cd4893cbb25855268b">sBs_FillArea_s</a> (void *pPtr, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> pNumBytes, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> pValue)</td></tr>
-<tr class="separator:a6b862020d8f9e4cd4893cbb25855268b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaca3985d63a4660a48a179692f375cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#aaaca3985d63a4660a48a179692f375cd">sBs_ClearArea</a> (void *pPtr, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> pNumBytes)</td></tr>
-<tr class="separator:aaaca3985d63a4660a48a179692f375cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09881698ab92f4568f3c2ad3e0b26e09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#a09881698ab92f4568f3c2ad3e0b26e09">sBs_FillArea_s</a> (void *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a09881698ab92f4568f3c2ad3e0b26e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378de23656a4bc35f0e40fa9cc9f61d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#a378de23656a4bc35f0e40fa9cc9f61d0">sBs_ClearArea</a> (void *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a378de23656a4bc35f0e40fa9cc9f61d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8efdcbe4b67c2322dc1216c256a2a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#a0c8efdcbe4b67c2322dc1216c256a2a2">sBs_FillArea_s__FPvUls</a> ()</td></tr>
+<tr class="separator:a0c8efdcbe4b67c2322dc1216c256a2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2164eb10a3186e6988b35b0bc69c8916"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s__basic_8cpp.html#a2164eb10a3186e6988b35b0bc69c8916">sBs_ClearArea__FPvUl</a> ()</td></tr>
+<tr class="separator:a2164eb10a3186e6988b35b0bc69c8916"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aaaca3985d63a4660a48a179692f375cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaca3985d63a4660a48a179692f375cd">&#9670;&nbsp;</a></span>sBs_ClearArea()</h2>
+<a id="a378de23656a4bc35f0e40fa9cc9f61d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378de23656a4bc35f0e40fa9cc9f61d0">&#9670;&nbsp;</a></span>sBs_ClearArea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,13 +115,13 @@ Functions</h2></td></tr>
           <td class="memname">void sBs_ClearArea </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pPtr</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>pNumBytes</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -125,29 +133,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6b862020d8f9e4cd4893cbb25855268b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b862020d8f9e4cd4893cbb25855268b">&#9670;&nbsp;</a></span>sBs_FillArea_s()</h2>
+<a id="a2164eb10a3186e6988b35b0bc69c8916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2164eb10a3186e6988b35b0bc69c8916">&#9670;&nbsp;</a></span>sBs_ClearArea__FPvUl()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sBs_FillArea_s </td>
+          <td class="memname">void sBs_ClearArea__FPvUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09881698ab92f4568f3c2ad3e0b26e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09881698ab92f4568f3c2ad3e0b26e09">&#9670;&nbsp;</a></span>sBs_FillArea_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void sBs_FillArea_s </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pPtr</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>pNumBytes</em>, </td>
+          <td class="paramname"><em>param_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>pValue</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -155,6 +183,36 @@ Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c8efdcbe4b67c2322dc1216c256a2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8efdcbe4b67c2322dc1216c256a2a2">&#9670;&nbsp;</a></span>sBs_FillArea_s__FPvUls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sBs_FillArea_s__FPvUls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

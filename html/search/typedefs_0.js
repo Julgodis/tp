@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['arqcallback_31783',['ARQCallback',['../ARQ_8h.html#a5d574a7644e6cde2dc9e8895fa983a6a',1,'ARQ.h']]],
-  ['asynccallback_31784',['AsyncCallback',['../classJKRAMCommand.html#a79b229cc0211d57835160b2dec7bbcbf',1,'JKRAMCommand::AsyncCallback()'],['../classJKRDecompCommand.html#a4d19c197a8374effdb4711d0a214eae6',1,'JKRDecompCommand::AsyncCallback()']]]
+  ['bool_86896',['BOOL',['../types_8h.html#a050c65e107f0c828f856a231f4b4e788',1,'types.h']]]
 ];

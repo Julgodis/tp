@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_op/f_op_scene_tag.cpp File Reference</title>
+<title>Twilight Princess: src/f_op/f_op_scene_tag.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,48 +69,230 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_78d979f70e66f5399b8b2e33e5bfc8e1.html">f_op</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1067c0d41a0230984cbcba896d5e4c43.html">f_op</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">f_op_scene_tag.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__tag_8h_source.html">SComponent/c_tag.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_scene_tag/asm/func_8001F13C.s&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_scene_tag/asm/func_8001F15C.s&quot;</code><br />
-<code>#include &quot;f/f_op/f_op_scene_tag/asm/func_8001F188.s&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__op__scene__tag_8h_source.html">f_op/f_op_scene_tag.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_tag/fopScnTg_QueueTo__FP15scene_tag_class.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_tag/fopScnTg_ToQueue__FP15scene_tag_class.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_tag/fopScnTg_Init__FP15scene_tag_classPv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_op_scene_tag.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__scene__tag_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__scene__tag_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscene__tag__class.html">scene_tag_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcreate__tag__class.html">create_tag_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__list__class.html">node_list_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:accf40c6b8efff213d0f45f421402239f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#accf40c6b8efff213d0f45f421402239f">fopScnTg_Init__FP15scene_tag_classPv</a> (void)</td></tr>
-<tr class="separator:accf40c6b8efff213d0f45f421402239f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a146ba95415fc877c8e636f8749ec10e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a146ba95415fc877c8e636f8749ec10e5">fopScnTg_QueueTo__FP15scene_tag_class</a> (void)</td></tr>
-<tr class="separator:a146ba95415fc877c8e636f8749ec10e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53c6f01ee5561068a81b08e65e4de5a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a53c6f01ee5561068a81b08e65e4de5a3">fopScnTg_ToQueue__FP15scene_tag_class</a> (void)</td></tr>
-<tr class="separator:a53c6f01ee5561068a81b08e65e4de5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a119e36ec611aed67f185a7189733934f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a119e36ec611aed67f185a7189733934f">fopScnTg_QueueTo</a> (<a class="el" href="structscene__tag__class.html">scene_tag_class</a> *)</td></tr>
+<tr class="separator:a119e36ec611aed67f185a7189733934f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce3c5086c0200c6f5a1cd27ce957f73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#abce3c5086c0200c6f5a1cd27ce957f73">fopScnTg_ToQueue</a> (<a class="el" href="structscene__tag__class.html">scene_tag_class</a> *)</td></tr>
+<tr class="separator:abce3c5086c0200c6f5a1cd27ce957f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4603cc69c197ab9e4bd8d12179fe6f3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a4603cc69c197ab9e4bd8d12179fe6f3e">fopScnTg_Init</a> (<a class="el" href="structscene__tag__class.html">scene_tag_class</a> *, void *)</td></tr>
+<tr class="separator:a4603cc69c197ab9e4bd8d12179fe6f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc855953d71028634fc892abefb3b312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#adc855953d71028634fc892abefb3b312">fopScnTg_QueueTo__FP15scene_tag_class</a> ()</td></tr>
+<tr class="separator:adc855953d71028634fc892abefb3b312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc58eafb2605c55459cb35558f32d81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a7fc58eafb2605c55459cb35558f32d81">fopScnTg_ToQueue__FP15scene_tag_class</a> ()</td></tr>
+<tr class="separator:a7fc58eafb2605c55459cb35558f32d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d2c0d8bdd1a111571ccd127b3a37f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#af7d2c0d8bdd1a111571ccd127b3a37f7">fopScnTg_Init__FP15scene_tag_classPv</a> ()</td></tr>
+<tr class="separator:af7d2c0d8bdd1a111571ccd127b3a37f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab1e2ff4f4ae2c9ae6ca9723bb25605"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a0ab1e2ff4f4ae2c9ae6ca9723bb25605">cTg_SingleCut</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *)</td></tr>
+<tr class="separator:a0ab1e2ff4f4ae2c9ae6ca9723bb25605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8801d356b3a1568ab70b89f87200b7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#ab8801d356b3a1568ab70b89f87200b7f">cTg_Addition</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *, <a class="el" href="structcreate__tag__class.html">create_tag_class</a> *)</td></tr>
+<tr class="separator:ab8801d356b3a1568ab70b89f87200b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd99807e6e9bac9caba54a76203030d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#aefd99807e6e9bac9caba54a76203030d">cTg_Create</a> (<a class="el" href="structcreate__tag__class.html">create_tag_class</a> *, void *)</td></tr>
+<tr class="separator:aefd99807e6e9bac9caba54a76203030d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b71716cfea0146a2fb303d26cd0634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#ae5b71716cfea0146a2fb303d26cd0634">cTg_SingleCut__FP16create_tag_class</a> ()</td></tr>
+<tr class="separator:ae5b71716cfea0146a2fb303d26cd0634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10801da5e7e93d9074dadd28bfb5a3c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a10801da5e7e93d9074dadd28bfb5a3c3">cTg_Addition__FP15node_list_classP16create_tag_class</a> ()</td></tr>
+<tr class="separator:a10801da5e7e93d9074dadd28bfb5a3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062172961ec5fc00fb910dd750e90c7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a062172961ec5fc00fb910dd750e90c7c">cTg_Create__FP16create_tag_classPv</a> ()</td></tr>
+<tr class="separator:a062172961ec5fc00fb910dd750e90c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a53062c03f401e775e9b2a3acfb864154"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a53062c03f401e775e9b2a3acfb864154">lbl_803A3918</a></td></tr>
-<tr class="separator:a53062c03f401e775e9b2a3acfb864154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15008be129315a7fea55dedae7a0c97a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__tag_8cpp.html#a15008be129315a7fea55dedae7a0c97a">g_fopScnTg_SceneList</a> [12+4]</td></tr>
+<tr class="separator:a15008be129315a7fea55dedae7a0c97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="accf40c6b8efff213d0f45f421402239f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accf40c6b8efff213d0f45f421402239f">&#9670;&nbsp;</a></span>fopScnTg_Init__FP15scene_tag_classPv()</h2>
+<a id="ab8801d356b3a1568ab70b89f87200b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8801d356b3a1568ab70b89f87200b7f">&#9670;&nbsp;</a></span>cTg_Addition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTg_Addition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10801da5e7e93d9074dadd28bfb5a3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10801da5e7e93d9074dadd28bfb5a3c3">&#9670;&nbsp;</a></span>cTg_Addition__FP15node_list_classP16create_tag_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTg_Addition__FP15node_list_classP16create_tag_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefd99807e6e9bac9caba54a76203030d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd99807e6e9bac9caba54a76203030d">&#9670;&nbsp;</a></span>cTg_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTg_Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a062172961ec5fc00fb910dd750e90c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062172961ec5fc00fb910dd750e90c7c">&#9670;&nbsp;</a></span>cTg_Create__FP16create_tag_classPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTg_Create__FP16create_tag_classPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ab1e2ff4f4ae2c9ae6ca9723bb25605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab1e2ff4f4ae2c9ae6ca9723bb25605">&#9670;&nbsp;</a></span>cTg_SingleCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cTg_SingleCut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcreate__tag__class.html">create_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5b71716cfea0146a2fb303d26cd0634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b71716cfea0146a2fb303d26cd0634">&#9670;&nbsp;</a></span>cTg_SingleCut__FP16create_tag_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cTg_SingleCut__FP16create_tag_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4603cc69c197ab9e4bd8d12179fe6f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4603cc69c197ab9e4bd8d12179fe6f3e">&#9670;&nbsp;</a></span>fopScnTg_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnTg_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structscene__tag__class.html">scene_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7d2c0d8bdd1a111571ccd127b3a37f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d2c0d8bdd1a111571ccd127b3a37f7">&#9670;&nbsp;</a></span>fopScnTg_Init__FP15scene_tag_classPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,7 +300,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopScnTg_Init__FP15scene_tag_classPv </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -127,8 +308,26 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a146ba95415fc877c8e636f8749ec10e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a146ba95415fc877c8e636f8749ec10e5">&#9670;&nbsp;</a></span>fopScnTg_QueueTo__FP15scene_tag_class()</h2>
+<a id="a119e36ec611aed67f185a7189733934f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a119e36ec611aed67f185a7189733934f">&#9670;&nbsp;</a></span>fopScnTg_QueueTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnTg_QueueTo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structscene__tag__class.html">scene_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc855953d71028634fc892abefb3b312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc855953d71028634fc892abefb3b312">&#9670;&nbsp;</a></span>fopScnTg_QueueTo__FP15scene_tag_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,7 +335,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopScnTg_QueueTo__FP15scene_tag_class </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -145,8 +343,26 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a53c6f01ee5561068a81b08e65e4de5a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53c6f01ee5561068a81b08e65e4de5a3">&#9670;&nbsp;</a></span>fopScnTg_ToQueue__FP15scene_tag_class()</h2>
+<a id="abce3c5086c0200c6f5a1cd27ce957f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce3c5086c0200c6f5a1cd27ce957f73">&#9670;&nbsp;</a></span>fopScnTg_ToQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnTg_ToQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structscene__tag__class.html">scene_tag_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fc58eafb2605c55459cb35558f32d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fc58eafb2605c55459cb35558f32d81">&#9670;&nbsp;</a></span>fopScnTg_ToQueue__FP15scene_tag_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +370,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopScnTg_ToQueue__FP15scene_tag_class </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -164,26 +379,23 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a53062c03f401e775e9b2a3acfb864154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53062c03f401e775e9b2a3acfb864154">&#9670;&nbsp;</a></span>lbl_803A3918</h2>
+<a id="a15008be129315a7fea55dedae7a0c97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15008be129315a7fea55dedae7a0c97a">&#9670;&nbsp;</a></span>g_fopScnTg_SceneList</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lbl_803A3918</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> g_fopScnTg_SceneList[12+4]</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

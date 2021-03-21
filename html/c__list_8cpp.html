@@ -74,55 +74,156 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">c_list.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__list_8h_source.html">SComponent/c_list.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__list_8h_source.html">SSystem/SComponent/c_list.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_Init__FP15node_list_class.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_SingleCut__FP10node_class.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_Addition__FP15node_list_classP10node_class.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_Insert__FP15node_list_classiP10node_class.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_GetFirst__FP15node_list_class.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list/cLs_Create__FP15node_list_class.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_list.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c__list_8cpp__incl.svg" width="380" height="500"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="c__list_8cpp__incl.svg" width="100%" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__list__class.html">node_list_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html">node_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a199b2002efa5d05726847980275929fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a199b2002efa5d05726847980275929fb">cLs_Init</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList)</td></tr>
-<tr class="separator:a199b2002efa5d05726847980275929fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab05e1e82571f70531e5a04781569b2ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ab05e1e82571f70531e5a04781569b2ba">cLs_SingleCut</a> (<a class="el" href="structnode__class.html">node_class</a> *pNode)</td></tr>
-<tr class="separator:ab05e1e82571f70531e5a04781569b2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a4a9846fb4be38c7585f3ba4f3e7f3e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a8a4a9846fb4be38c7585f3ba4f3e7f3e">cLs_Addition</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList, <a class="el" href="structnode__class.html">node_class</a> *pNode)</td></tr>
-<tr class="separator:a8a4a9846fb4be38c7585f3ba4f3e7f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bbb2cde576d315a3aceb86d8fe3047f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a8bbb2cde576d315a3aceb86d8fe3047f">cLs_Insert</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList, int idx, <a class="el" href="structnode__class.html">node_class</a> *pNode)</td></tr>
-<tr class="separator:a8bbb2cde576d315a3aceb86d8fe3047f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4db05e8d1ef299a6c498c2810b8c342b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a4db05e8d1ef299a6c498c2810b8c342b">cLs_GetFirst</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList)</td></tr>
-<tr class="separator:a4db05e8d1ef299a6c498c2810b8c342b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf89fa93fa86a6186ef0de0e693d7c3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#acf89fa93fa86a6186ef0de0e693d7c3c">cLs_Create</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList)</td></tr>
-<tr class="separator:acf89fa93fa86a6186ef0de0e693d7c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3d97cefb586e750e3f5d890ab703f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a7b3d97cefb586e750e3f5d890ab703f7">cLs_Init</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *)</td></tr>
+<tr class="separator:a7b3d97cefb586e750e3f5d890ab703f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8167cedbc7ec41597facc9dfa095d724"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a8167cedbc7ec41597facc9dfa095d724">cLs_SingleCut</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a8167cedbc7ec41597facc9dfa095d724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0351b1de2da4c087cee46a66a500a44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a0351b1de2da4c087cee46a66a500a44b">cLs_Addition</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *, <a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a0351b1de2da4c087cee46a66a500a44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d0eafa162070496af9bef9e6e3084a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ad5d0eafa162070496af9bef9e6e3084a">cLs_Insert</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *, int, <a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:ad5d0eafa162070496af9bef9e6e3084a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfc4d88b0c06713811dcdf8fa7f16a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#afcfc4d88b0c06713811dcdf8fa7f16a9">cLs_GetFirst</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *)</td></tr>
+<tr class="separator:afcfc4d88b0c06713811dcdf8fa7f16a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad556b0c810cb1b9d3f1f101fe6824bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ad556b0c810cb1b9d3f1f101fe6824bbe">cLs_Create</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *)</td></tr>
+<tr class="separator:ad556b0c810cb1b9d3f1f101fe6824bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7fcffe63b4730201f7c0a26c0a088c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#aef7fcffe63b4730201f7c0a26c0a088c">cLs_Init__FP15node_list_class</a> ()</td></tr>
+<tr class="separator:aef7fcffe63b4730201f7c0a26c0a088c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bf8e53739b3c68b010606f70857e76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a91bf8e53739b3c68b010606f70857e76">cLs_SingleCut__FP10node_class</a> ()</td></tr>
+<tr class="separator:a91bf8e53739b3c68b010606f70857e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe2ce26464bab7419a9d79aa61b42c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a1fe2ce26464bab7419a9d79aa61b42c0">cLs_Addition__FP15node_list_classP10node_class</a> ()</td></tr>
+<tr class="separator:a1fe2ce26464bab7419a9d79aa61b42c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa732d1eb047dcf31b9d2dd12e9f78124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#aa732d1eb047dcf31b9d2dd12e9f78124">cLs_Insert__FP15node_list_classiP10node_class</a> ()</td></tr>
+<tr class="separator:aa732d1eb047dcf31b9d2dd12e9f78124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4b9d22635c253c69a8b7fd99474495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#acf4b9d22635c253c69a8b7fd99474495">cLs_GetFirst__FP15node_list_class</a> ()</td></tr>
+<tr class="separator:acf4b9d22635c253c69a8b7fd99474495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10525069df6dbcaa90e08cdff092d195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a10525069df6dbcaa90e08cdff092d195">cLs_Create__FP15node_list_class</a> ()</td></tr>
+<tr class="separator:a10525069df6dbcaa90e08cdff092d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ca51c374e4118874006fe8b27c9ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a26ca51c374e4118874006fe8b27c9ffd">cNd_LengthOf</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a26ca51c374e4118874006fe8b27c9ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afdba60ce50ad12d66ccf15cdd81add"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a4afdba60ce50ad12d66ccf15cdd81add">cNd_First</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a4afdba60ce50ad12d66ccf15cdd81add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7959e3d35680e6b3408cdc8ac8266ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a7959e3d35680e6b3408cdc8ac8266ce0">cNd_Last</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a7959e3d35680e6b3408cdc8ac8266ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542881abaa98c8093348221836a22306"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a542881abaa98c8093348221836a22306">cNd_Order</a> (<a class="el" href="structnode__class.html">node_class</a> *, int)</td></tr>
+<tr class="separator:a542881abaa98c8093348221836a22306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7ff872c350a4b9a6e4263fb4de896e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#aba7ff872c350a4b9a6e4263fb4de896e">cNd_SingleCut</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:aba7ff872c350a4b9a6e4263fb4de896e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09591eae8f35b8f1287d76671eaadcb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a09591eae8f35b8f1287d76671eaadcb6">cNd_Addition</a> (<a class="el" href="structnode__class.html">node_class</a> *, <a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a09591eae8f35b8f1287d76671eaadcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e8a7205ef0abc35964de563b4a758b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a56e8a7205ef0abc35964de563b4a758b">cNd_Insert</a> (<a class="el" href="structnode__class.html">node_class</a> *, <a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:a56e8a7205ef0abc35964de563b4a758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ea125afcac8478fa3068105c250528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ad5ea125afcac8478fa3068105c250528">cNd_SetObject</a> (<a class="el" href="structnode__class.html">node_class</a> *, void *)</td></tr>
+<tr class="separator:ad5ea125afcac8478fa3068105c250528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cc411c8a542b79062f877f6a57622e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ae0cc411c8a542b79062f877f6a57622e">cNd_ClearObject</a> (<a class="el" href="structnode__class.html">node_class</a> *)</td></tr>
+<tr class="separator:ae0cc411c8a542b79062f877f6a57622e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4ddbf43ac947cca4ae9a5a542b2a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#acf4ddbf43ac947cca4ae9a5a542b2a11">cNd_LengthOf__FP10node_class</a> ()</td></tr>
+<tr class="separator:acf4ddbf43ac947cca4ae9a5a542b2a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10fee064abed0245e724bf422c97100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#af10fee064abed0245e724bf422c97100">cNd_First__FP10node_class</a> ()</td></tr>
+<tr class="separator:af10fee064abed0245e724bf422c97100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbefaaebf2a617548601c3e3d5bcb2ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#acbefaaebf2a617548601c3e3d5bcb2ac">cNd_Last__FP10node_class</a> ()</td></tr>
+<tr class="separator:acbefaaebf2a617548601c3e3d5bcb2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e422db3ff6edb8628cbd2c37800ae0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a3e422db3ff6edb8628cbd2c37800ae0f">cNd_Order__FP10node_classi</a> ()</td></tr>
+<tr class="separator:a3e422db3ff6edb8628cbd2c37800ae0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201ba067549b977cd4c9d6ea8bacb692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a201ba067549b977cd4c9d6ea8bacb692">cNd_SingleCut__FP10node_class</a> ()</td></tr>
+<tr class="separator:a201ba067549b977cd4c9d6ea8bacb692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c02696f607f93a440e03d6ecf58aa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ad1c02696f607f93a440e03d6ecf58aa6">cNd_Addition__FP10node_classP10node_class</a> ()</td></tr>
+<tr class="separator:ad1c02696f607f93a440e03d6ecf58aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2fc59d210cc4b5b49c02b5284f025c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#aa2fc59d210cc4b5b49c02b5284f025c8">cNd_Insert__FP10node_classP10node_class</a> ()</td></tr>
+<tr class="separator:aa2fc59d210cc4b5b49c02b5284f025c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c85110b031433c1217a8b1633caa7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a65c85110b031433c1217a8b1633caa7f">cNd_SetObject__FP10node_classPv</a> ()</td></tr>
+<tr class="separator:a65c85110b031433c1217a8b1633caa7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8559d8ebd5de12a0d8a2b3d81ca33a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#ae8559d8ebd5de12a0d8a2b3d81ca33a3">cNd_ClearObject__FP10node_class</a> ()</td></tr>
+<tr class="separator:ae8559d8ebd5de12a0d8a2b3d81ca33a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3662cd06864ff7627d5424c192e6f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#a5f3662cd06864ff7627d5424c192e6f2">_savegpr_29</a> ()</td></tr>
+<tr class="separator:a5f3662cd06864ff7627d5424c192e6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed5bd59c54272a132a5b4da4beff66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list_8cpp.html#abed5bd59c54272a132a5b4da4beff66d">_restgpr_29</a> ()</td></tr>
+<tr class="separator:abed5bd59c54272a132a5b4da4beff66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8a4a9846fb4be38c7585f3ba4f3e7f3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a4a9846fb4be38c7585f3ba4f3e7f3e">&#9670;&nbsp;</a></span>cLs_Addition()</h2>
+<a id="abed5bd59c54272a132a5b4da4beff66d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed5bd59c54272a132a5b4da4beff66d">&#9670;&nbsp;</a></span>_restgpr_29()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cLs_Addition </td>
+          <td class="memname">void _restgpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f3662cd06864ff7627d5424c192e6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3662cd06864ff7627d5424c192e6f2">&#9670;&nbsp;</a></span>_savegpr_29()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _savegpr_29 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0351b1de2da4c087cee46a66a500a44b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0351b1de2da4c087cee46a66a500a44b">&#9670;&nbsp;</a></span>cLs_Addition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLs_Addition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
-          <td class="paramname"><em>pNode</em>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -134,8 +235,25 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acf89fa93fa86a6186ef0de0e693d7c3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf89fa93fa86a6186ef0de0e693d7c3c">&#9670;&nbsp;</a></span>cLs_Create()</h2>
+<a id="a1fe2ce26464bab7419a9d79aa61b42c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe2ce26464bab7419a9d79aa61b42c0">&#9670;&nbsp;</a></span>cLs_Addition__FP15node_list_classP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLs_Addition__FP15node_list_classP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad556b0c810cb1b9d3f1f101fe6824bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad556b0c810cb1b9d3f1f101fe6824bbe">&#9670;&nbsp;</a></span>cLs_Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,7 +262,7 @@ Functions</h2></td></tr>
           <td class="memname">void cLs_Create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -152,17 +270,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4db05e8d1ef299a6c498c2810b8c342b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4db05e8d1ef299a6c498c2810b8c342b">&#9670;&nbsp;</a></span>cLs_GetFirst()</h2>
+<a id="a10525069df6dbcaa90e08cdff092d195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10525069df6dbcaa90e08cdff092d195">&#9670;&nbsp;</a></span>cLs_Create__FP15node_list_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnode__class.html">node_class</a>* cLs_GetFirst </td>
+          <td class="memname">void cLs_Create__FP15node_list_class </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -170,17 +287,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a199b2002efa5d05726847980275929fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a199b2002efa5d05726847980275929fb">&#9670;&nbsp;</a></span>cLs_Init()</h2>
+<a id="afcfc4d88b0c06713811dcdf8fa7f16a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcfc4d88b0c06713811dcdf8fa7f16a9">&#9670;&nbsp;</a></span>cLs_GetFirst()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void cLs_Init </td>
+          <td class="memname">asm void cLs_GetFirst </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -188,29 +305,97 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8bbb2cde576d315a3aceb86d8fe3047f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bbb2cde576d315a3aceb86d8fe3047f">&#9670;&nbsp;</a></span>cLs_Insert()</h2>
+<a id="acf4b9d22635c253c69a8b7fd99474495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4b9d22635c253c69a8b7fd99474495">&#9670;&nbsp;</a></span>cLs_GetFirst__FP15node_list_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cLs_Insert </td>
+          <td class="memname">void cLs_GetFirst__FP15node_list_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b3d97cefb586e750e3f5d890ab703f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3d97cefb586e750e3f5d890ab703f7">&#9670;&nbsp;</a></span>cLs_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void cLs_Init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em>, </td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef7fcffe63b4730201f7c0a26c0a088c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7fcffe63b4730201f7c0a26c0a088c">&#9670;&nbsp;</a></span>cLs_Init__FP15node_list_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cLs_Init__FP15node_list_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5d0eafa162070496af9bef9e6e3084a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d0eafa162070496af9bef9e6e3084a">&#9670;&nbsp;</a></span>cLs_Insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cLs_Insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>idx</em>, </td>
+          <td class="paramname"><em>param_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
-          <td class="paramname"><em>pNode</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,17 +407,406 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab05e1e82571f70531e5a04781569b2ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab05e1e82571f70531e5a04781569b2ba">&#9670;&nbsp;</a></span>cLs_SingleCut()</h2>
+<a id="aa732d1eb047dcf31b9d2dd12e9f78124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa732d1eb047dcf31b9d2dd12e9f78124">&#9670;&nbsp;</a></span>cLs_Insert__FP15node_list_classiP10node_class()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cLs_SingleCut </td>
+          <td class="memname">void cLs_Insert__FP15node_list_classiP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8167cedbc7ec41597facc9dfa095d724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8167cedbc7ec41597facc9dfa095d724">&#9670;&nbsp;</a></span>cLs_SingleCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLs_SingleCut </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
-          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91bf8e53739b3c68b010606f70857e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bf8e53739b3c68b010606f70857e76">&#9670;&nbsp;</a></span>cLs_SingleCut__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLs_SingleCut__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09591eae8f35b8f1287d76671eaadcb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09591eae8f35b8f1287d76671eaadcb6">&#9670;&nbsp;</a></span>cNd_Addition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_Addition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1c02696f607f93a440e03d6ecf58aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c02696f607f93a440e03d6ecf58aa6">&#9670;&nbsp;</a></span>cNd_Addition__FP10node_classP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_Addition__FP10node_classP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0cc411c8a542b79062f877f6a57622e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0cc411c8a542b79062f877f6a57622e">&#9670;&nbsp;</a></span>cNd_ClearObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_ClearObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8559d8ebd5de12a0d8a2b3d81ca33a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8559d8ebd5de12a0d8a2b3d81ca33a3">&#9670;&nbsp;</a></span>cNd_ClearObject__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_ClearObject__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4afdba60ce50ad12d66ccf15cdd81add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afdba60ce50ad12d66ccf15cdd81add">&#9670;&nbsp;</a></span>cNd_First()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_First </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af10fee064abed0245e724bf422c97100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af10fee064abed0245e724bf422c97100">&#9670;&nbsp;</a></span>cNd_First__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_First__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56e8a7205ef0abc35964de563b4a758b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e8a7205ef0abc35964de563b4a758b">&#9670;&nbsp;</a></span>cNd_Insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_Insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2fc59d210cc4b5b49c02b5284f025c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2fc59d210cc4b5b49c02b5284f025c8">&#9670;&nbsp;</a></span>cNd_Insert__FP10node_classP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_Insert__FP10node_classP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7959e3d35680e6b3408cdc8ac8266ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7959e3d35680e6b3408cdc8ac8266ce0">&#9670;&nbsp;</a></span>cNd_Last()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_Last </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbefaaebf2a617548601c3e3d5bcb2ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbefaaebf2a617548601c3e3d5bcb2ac">&#9670;&nbsp;</a></span>cNd_Last__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_Last__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26ca51c374e4118874006fe8b27c9ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ca51c374e4118874006fe8b27c9ffd">&#9670;&nbsp;</a></span>cNd_LengthOf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_LengthOf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf4ddbf43ac947cca4ae9a5a542b2a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4ddbf43ac947cca4ae9a5a542b2a11">&#9670;&nbsp;</a></span>cNd_LengthOf__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_LengthOf__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a542881abaa98c8093348221836a22306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542881abaa98c8093348221836a22306">&#9670;&nbsp;</a></span>cNd_Order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_Order </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e422db3ff6edb8628cbd2c37800ae0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e422db3ff6edb8628cbd2c37800ae0f">&#9670;&nbsp;</a></span>cNd_Order__FP10node_classi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_Order__FP10node_classi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5ea125afcac8478fa3068105c250528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ea125afcac8478fa3068105c250528">&#9670;&nbsp;</a></span>cNd_SetObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_SetObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65c85110b031433c1217a8b1633caa7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c85110b031433c1217a8b1633caa7f">&#9670;&nbsp;</a></span>cNd_SetObject__FP10node_classPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_SetObject__FP10node_classPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba7ff872c350a4b9a6e4263fb4de896e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7ff872c350a4b9a6e4263fb4de896e">&#9670;&nbsp;</a></span>cNd_SingleCut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNd_SingleCut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a201ba067549b977cd4c9d6ea8bacb692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a201ba067549b977cd4c9d6ea8bacb692">&#9670;&nbsp;</a></span>cNd_SingleCut__FP10node_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNd_SingleCut__FP10node_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

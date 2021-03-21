@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_pc/f_pc_load.cpp File Reference</title>
+<title>Twilight Princess: src/f_pc/f_pc_load.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_89dee0e9ccaa7c098b3a159a2ece8505.html">f_pc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_15a1977171855e2c8b0c1e68c97c2b83.html">f_pc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,47 +79,65 @@ $(function() {
 <div class="title">f_pc_load.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__pc__load_8h_source.html">f/f_pc/f_pc_load.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="c__phase_8h_source.html">SComponent/c_phase.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__pc__load_8h_source.html">f_pc/f_pc_load.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_load/fpcLd_Use__Fs.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_load/fpcLd_IsLoaded__Fs.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_load/fpcLd_Free__Fs.s&quot;</code><br />
+<code>#include &quot;asm/f_pc/f_pc_load/fpcLd_Load__Fs.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_pc_load.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="f__pc__load_8cpp__incl.svg" width="588" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__pc__load_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abafa11313fb24324e1efe3c78b57668a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#abafa11313fb24324e1efe3c78b57668a">cDyl_IsLinked__Fs</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:abafa11313fb24324e1efe3c78b57668a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6180c970caf0cbd851a0733431b69f55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a6180c970caf0cbd851a0733431b69f55">cDyl_Unlink__Fs</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:a6180c970caf0cbd851a0733431b69f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636e365f5c7537411bab31440f597d73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a636e365f5c7537411bab31440f597d73">cDyl_LinkASync__Fs</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:a636e365f5c7537411bab31440f597d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ec6e1a679cfffa29d752c94d23491b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#ae1ec6e1a679cfffa29d752c94d23491b">fpcLd_Use</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:ae1ec6e1a679cfffa29d752c94d23491b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cd7b0466031a203ac79e902f77e059b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a8cd7b0466031a203ac79e902f77e059b">fpcLd_IsLoaded</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:a8cd7b0466031a203ac79e902f77e059b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa942629609d0733221ac81b1f083d00e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#aa942629609d0733221ac81b1f083d00e">fpcLd_Free</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:aa942629609d0733221ac81b1f083d00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04374782fcb7b691f269ad9d8dbba27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#af04374782fcb7b691f269ad9d8dbba27">fpcLd_Load</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> procName)</td></tr>
-<tr class="separator:af04374782fcb7b691f269ad9d8dbba27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599b217f91d7cf7e9a9d724b1fbf52cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a599b217f91d7cf7e9a9d724b1fbf52cf">fpcLd_Use</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a599b217f91d7cf7e9a9d724b1fbf52cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3c45d85507bc59198adfc0c5a2d391"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a6a3c45d85507bc59198adfc0c5a2d391">fpcLd_IsLoaded</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a6a3c45d85507bc59198adfc0c5a2d391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb3d4736144ff8f558f25693fb7591a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#addb3d4736144ff8f558f25693fb7591a">fpcLd_Free</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:addb3d4736144ff8f558f25693fb7591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6083d0a7cfa6e1e26eb087cf77f6467"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#af6083d0a7cfa6e1e26eb087cf77f6467">fpcLd_Load</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:af6083d0a7cfa6e1e26eb087cf77f6467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ac3a1cae8e778a9f5ad61231bf7bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a58ac3a1cae8e778a9f5ad61231bf7bcb">fpcLd_Use__Fs</a> ()</td></tr>
+<tr class="separator:a58ac3a1cae8e778a9f5ad61231bf7bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae778bfff9ab710cd679da3dc6f95c0c5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#ae778bfff9ab710cd679da3dc6f95c0c5">fpcLd_IsLoaded__Fs</a> ()</td></tr>
+<tr class="separator:ae778bfff9ab710cd679da3dc6f95c0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc9c6c2a7dc888653b4b464cc86190fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#acc9c6c2a7dc888653b4b464cc86190fb">fpcLd_Free__Fs</a> ()</td></tr>
+<tr class="separator:acc9c6c2a7dc888653b4b464cc86190fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5017bb34eb50af909c1722c5dd838d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#aa5017bb34eb50af909c1722c5dd838d2">fpcLd_Load__Fs</a> ()</td></tr>
+<tr class="separator:aa5017bb34eb50af909c1722c5dd838d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99885d4cb3216a36b143cec8af863f3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a99885d4cb3216a36b143cec8af863f3a">cDyl_IsLinked</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a99885d4cb3216a36b143cec8af863f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30cee345abdf5e60bb95c8899c987078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a30cee345abdf5e60bb95c8899c987078">cDyl_Unlink</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a30cee345abdf5e60bb95c8899c987078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2e2df50430dd201dc7ec37a72acc63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#adb2e2df50430dd201dc7ec37a72acc63">cDyl_LinkASync</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:adb2e2df50430dd201dc7ec37a72acc63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac9272a6f01dbb46c5891d3ab6da6699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#aac9272a6f01dbb46c5891d3ab6da6699">cDyl_IsLinked__Fs</a> ()</td></tr>
+<tr class="separator:aac9272a6f01dbb46c5891d3ab6da6699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a204e94f13a3f54d934b57aee103d726b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#a204e94f13a3f54d934b57aee103d726b">cDyl_Unlink__Fs</a> ()</td></tr>
+<tr class="separator:a204e94f13a3f54d934b57aee103d726b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b572db9d9b1c4552b9e5b2efc2f1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__pc__load_8cpp.html#ab9b572db9d9b1c4552b9e5b2efc2f1a6">cDyl_LinkASync__Fs</a> ()</td></tr>
+<tr class="separator:ab9b572db9d9b1c4552b9e5b2efc2f1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abafa11313fb24324e1efe3c78b57668a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abafa11313fb24324e1efe3c78b57668a">&#9670;&nbsp;</a></span>cDyl_IsLinked__Fs()</h2>
+<a id="a99885d4cb3216a36b143cec8af863f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99885d4cb3216a36b143cec8af863f3a">&#9670;&nbsp;</a></span>cDyl_IsLinked()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> cDyl_IsLinked__Fs </td>
+          <td class="memname">void cDyl_IsLinked </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -127,17 +145,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a636e365f5c7537411bab31440f597d73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a636e365f5c7537411bab31440f597d73">&#9670;&nbsp;</a></span>cDyl_LinkASync__Fs()</h2>
+<a id="aac9272a6f01dbb46c5891d3ab6da6699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac9272a6f01dbb46c5891d3ab6da6699">&#9670;&nbsp;</a></span>cDyl_IsLinked__Fs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> cDyl_LinkASync__Fs </td>
+          <td class="memname">void cDyl_IsLinked__Fs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -145,17 +162,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6180c970caf0cbd851a0733431b69f55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6180c970caf0cbd851a0733431b69f55">&#9670;&nbsp;</a></span>cDyl_Unlink__Fs()</h2>
+<a id="adb2e2df50430dd201dc7ec37a72acc63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2e2df50430dd201dc7ec37a72acc63">&#9670;&nbsp;</a></span>cDyl_LinkASync()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> cDyl_Unlink__Fs </td>
+          <td class="memname">void cDyl_LinkASync </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -163,8 +180,60 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa942629609d0733221ac81b1f083d00e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa942629609d0733221ac81b1f083d00e">&#9670;&nbsp;</a></span>fpcLd_Free()</h2>
+<a id="ab9b572db9d9b1c4552b9e5b2efc2f1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b572db9d9b1c4552b9e5b2efc2f1a6">&#9670;&nbsp;</a></span>cDyl_LinkASync__Fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cDyl_LinkASync__Fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30cee345abdf5e60bb95c8899c987078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30cee345abdf5e60bb95c8899c987078">&#9670;&nbsp;</a></span>cDyl_Unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cDyl_Unlink </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a204e94f13a3f54d934b57aee103d726b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204e94f13a3f54d934b57aee103d726b">&#9670;&nbsp;</a></span>cDyl_Unlink__Fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cDyl_Unlink__Fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addb3d4736144ff8f558f25693fb7591a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb3d4736144ff8f558f25693fb7591a">&#9670;&nbsp;</a></span>fpcLd_Free()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +242,7 @@ Functions</h2></td></tr>
           <td class="memname">void fpcLd_Free </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -181,17 +250,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8cd7b0466031a203ac79e902f77e059b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cd7b0466031a203ac79e902f77e059b">&#9670;&nbsp;</a></span>fpcLd_IsLoaded()</h2>
+<a id="acc9c6c2a7dc888653b4b464cc86190fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc9c6c2a7dc888653b4b464cc86190fb">&#9670;&nbsp;</a></span>fpcLd_Free__Fs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcLd_IsLoaded </td>
+          <td class="memname">void fpcLd_Free__Fs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -199,17 +267,68 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af04374782fcb7b691f269ad9d8dbba27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af04374782fcb7b691f269ad9d8dbba27">&#9670;&nbsp;</a></span>fpcLd_Load()</h2>
+<a id="a6a3c45d85507bc59198adfc0c5a2d391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3c45d85507bc59198adfc0c5a2d391">&#9670;&nbsp;</a></span>fpcLd_IsLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void fpcLd_IsLoaded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae778bfff9ab710cd679da3dc6f95c0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae778bfff9ab710cd679da3dc6f95c0c5">&#9670;&nbsp;</a></span>fpcLd_IsLoaded__Fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void fpcLd_IsLoaded__Fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6083d0a7cfa6e1e26eb087cf77f6467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6083d0a7cfa6e1e26eb087cf77f6467">&#9670;&nbsp;</a></span>fpcLd_Load()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> fpcLd_Load </td>
+          <td class="memname">asm void fpcLd_Load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -217,17 +336,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1ec6e1a679cfffa29d752c94d23491b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1ec6e1a679cfffa29d752c94d23491b">&#9670;&nbsp;</a></span>fpcLd_Use()</h2>
+<a id="aa5017bb34eb50af909c1722c5dd838d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5017bb34eb50af909c1722c5dd838d2">&#9670;&nbsp;</a></span>fpcLd_Load__Fs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> fpcLd_Use </td>
+          <td class="memname">void fpcLd_Load__Fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a599b217f91d7cf7e9a9d724b1fbf52cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599b217f91d7cf7e9a9d724b1fbf52cf">&#9670;&nbsp;</a></span>fpcLd_Use()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLd_Use </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>procName</em></td><td>)</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58ac3a1cae8e778a9f5ad61231bf7bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ac3a1cae8e778a9f5ad61231bf7bcb">&#9670;&nbsp;</a></span>fpcLd_Use__Fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcLd_Use__Fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

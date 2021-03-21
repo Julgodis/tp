@@ -73,10 +73,2197 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">d_cam_param.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="d__cam__param_8h_source.html">d/d_cam_param.h</a>&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/rationalBezierRatio__8dCamMathFff.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/zoomFovy__8dCamMathFff.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__dt__7cDegreeFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/xyzRotateX__8dCamMathFR4cXyz7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/xyzRotateY__8dCamMathFR4cXyz7cSAngle.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__ct__9dCstick_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/Shift__9dCstick_cFUl.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__ct__11dCamBGChk_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__ct__11dCamParam_cFl.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__dt__11dCamParam_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/Change__11dCamParam_cFl.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/SearchStyle__11dCamParam_cFUl.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__ct__11dCamSetup_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__dt__11dCamSetup_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/CheckLatitudeRange__11dCamSetup_cFPs.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/PlayerHideDist__11dCamSetup_cFv.s&quot;</code><br />
+<code>#include &quot;asm/d/d_cam_param/__dt__9dCstick_cFv.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for d_cam_param.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="d__cam__param_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcXyz.html">cXyz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcSAngle.html">cSAngle</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCamMath.html">dCamMath</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcDegree.html">cDegree</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCstick__c.html">dCstick_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCamBGChk__c.html">dCamBGChk_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCamParam__c.html">dCamParam_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCamSetup__c.html">dCamSetup_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdRes__info__c.html">dRes_info_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdRes__control__c.html">dRes_control_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdCamera__c.html">dCamera_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a30698c9ba37a05000da909545bb2bac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a30698c9ba37a05000da909545bb2bac7">rationalBezierRatio__8dCamMathFff</a> ()</td></tr>
+<tr class="separator:a30698c9ba37a05000da909545bb2bac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77102e4df6619119b0cd71f6dae77fca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a77102e4df6619119b0cd71f6dae77fca">zoomFovy__8dCamMathFff</a> ()</td></tr>
+<tr class="separator:a77102e4df6619119b0cd71f6dae77fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30bb64857f57a1c03d9790378b61f8b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a30bb64857f57a1c03d9790378b61f8b7">__dt__7cDegreeFv</a> ()</td></tr>
+<tr class="separator:a30bb64857f57a1c03d9790378b61f8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab115b3bc61686f4b37e90dc040b2b9eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab115b3bc61686f4b37e90dc040b2b9eb">xyzRotateX__8dCamMathFR4cXyz7cSAngle</a> ()</td></tr>
+<tr class="separator:ab115b3bc61686f4b37e90dc040b2b9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac308eae89e71695c1f7fe6812889b46b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac308eae89e71695c1f7fe6812889b46b">xyzRotateY__8dCamMathFR4cXyz7cSAngle</a> ()</td></tr>
+<tr class="separator:ac308eae89e71695c1f7fe6812889b46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569b299a8e0a23e72b15c7d165044fc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a569b299a8e0a23e72b15c7d165044fc1">xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz</a> ()</td></tr>
+<tr class="separator:a569b299a8e0a23e72b15c7d165044fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10951eab0c3e15fbaa0dcdc2e2e27771"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a10951eab0c3e15fbaa0dcdc2e2e27771">__ct__9dCstick_cFv</a> ()</td></tr>
+<tr class="separator:a10951eab0c3e15fbaa0dcdc2e2e27771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375c56570b2dec2d086a37edf2b1a39e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a375c56570b2dec2d086a37edf2b1a39e">Shift__9dCstick_cFUl</a> ()</td></tr>
+<tr class="separator:a375c56570b2dec2d086a37edf2b1a39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e67b884e481b68644b29b653de2143"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a29e67b884e481b68644b29b653de2143">__ct__11dCamBGChk_cFv</a> ()</td></tr>
+<tr class="separator:a29e67b884e481b68644b29b653de2143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2e904915aad91e4c7b850040ff39f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a8a2e904915aad91e4c7b850040ff39f3">__ct__11dCamParam_cFl</a> ()</td></tr>
+<tr class="separator:a8a2e904915aad91e4c7b850040ff39f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad0a73859785372104bc525a78b4642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#adad0a73859785372104bc525a78b4642">__dt__11dCamParam_cFv</a> ()</td></tr>
+<tr class="separator:adad0a73859785372104bc525a78b4642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ffcaaee59603b5548a1d2ab7293403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab9ffcaaee59603b5548a1d2ab7293403">Change__11dCamParam_cFl</a> ()</td></tr>
+<tr class="separator:ab9ffcaaee59603b5548a1d2ab7293403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebbec338c6114af7cb43a8790a70ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a1ebbec338c6114af7cb43a8790a70ab2">SearchStyle__11dCamParam_cFUl</a> ()</td></tr>
+<tr class="separator:a1ebbec338c6114af7cb43a8790a70ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22ae4b62399a282a80a5a2773e4a843b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a22ae4b62399a282a80a5a2773e4a843b">__ct__11dCamSetup_cFv</a> ()</td></tr>
+<tr class="separator:a22ae4b62399a282a80a5a2773e4a843b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e327f1e5eda4ff500978a1b20366a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a79e327f1e5eda4ff500978a1b20366a7">__dt__11dCamSetup_cFv</a> ()</td></tr>
+<tr class="separator:a79e327f1e5eda4ff500978a1b20366a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b830b90fe96daed524afaa23331b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a75b830b90fe96daed524afaa23331b77">CheckLatitudeRange__11dCamSetup_cFPs</a> ()</td></tr>
+<tr class="separator:a75b830b90fe96daed524afaa23331b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf2a55f50424de215502727319ff6e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aaf2a55f50424de215502727319ff6e8b">PlayerHideDist__11dCamSetup_cFv</a> ()</td></tr>
+<tr class="separator:aaf2a55f50424de215502727319ff6e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b0c21fde1bc1637b7198aa12bf8478"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a12b0c21fde1bc1637b7198aa12bf8478">__dt__9dCstick_cFv</a> ()</td></tr>
+<tr class="separator:a12b0c21fde1bc1637b7198aa12bf8478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a3849850605d89b99a08fa09e4a3d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a92a3849850605d89b99a08fa09e4a3d6">mDoMtx_XrotS</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)[4], <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a92a3849850605d89b99a08fa09e4a3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c2727f4382b09d445cc528969af3db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a9c2727f4382b09d445cc528969af3db8">mDoMtx_YrotS</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)[4], <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>)</td></tr>
+<tr class="separator:a9c2727f4382b09d445cc528969af3db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61347c9a14a3822e3952f5e9c8b34d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac61347c9a14a3822e3952f5e9c8b34d1">dCam_getBody</a> ()</td></tr>
+<tr class="separator:ac61347c9a14a3822e3952f5e9c8b34d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3acd54daf120482b50552d2094b8dcb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a3acd54daf120482b50552d2094b8dcb6">cM_atan2f</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>, <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>)</td></tr>
+<tr class="separator:a3acd54daf120482b50552d2094b8dcb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581ac9487348557df9e0f9bd828952af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a581ac9487348557df9e0f9bd828952af">operator delete</a> (void *)</td></tr>
+<tr class="separator:a581ac9487348557df9e0f9bd828952af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20a484c1f5699a5a4ad043fa47999ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab20a484c1f5699a5a4ad043fa47999ce">mDoMtx_XrotS__FPA4_fs</a> ()</td></tr>
+<tr class="separator:ab20a484c1f5699a5a4ad043fa47999ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c0eaf05e93f15b23bde149cdfe83c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a30c0eaf05e93f15b23bde149cdfe83c0">mDoMtx_YrotS__FPA4_fs</a> ()</td></tr>
+<tr class="separator:a30c0eaf05e93f15b23bde149cdfe83c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c33da78181b8797e05f57a82dfb141c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a8c33da78181b8797e05f57a82dfb141c">getRes__14dRes_control_cFPCcPCcP11dRes_info_ci</a> ()</td></tr>
+<tr class="separator:a8c33da78181b8797e05f57a82dfb141c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b99496119e64a8c8d40b9d1e440f14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a71b99496119e64a8c8d40b9d1e440f14">EventRecoverNotime__9dCamera_cFv</a> ()</td></tr>
+<tr class="separator:a71b99496119e64a8c8d40b9d1e440f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab76257f1e03878dd6eed3cf7c92eb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aab76257f1e03878dd6eed3cf7c92eb7e">dCam_getBody__Fv</a> ()</td></tr>
+<tr class="separator:aab76257f1e03878dd6eed3cf7c92eb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ea586ca609fcb56605d0ccc534944c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac0ea586ca609fcb56605d0ccc534944c">cM_atan2f__Fff</a> ()</td></tr>
+<tr class="separator:ac0ea586ca609fcb56605d0ccc534944c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1838f4f2ccb8526558d70c563010c72e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a1838f4f2ccb8526558d70c563010c72e">__ct__7cDegreeFf</a> ()</td></tr>
+<tr class="separator:a1838f4f2ccb8526558d70c563010c72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d6fb9f0863a4dc4732dc7becb18e27a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a6d6fb9f0863a4dc4732dc7becb18e27a">Sin__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:a6d6fb9f0863a4dc4732dc7becb18e27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537cd23d0d8a55317e14904ee3018b96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a537cd23d0d8a55317e14904ee3018b96">Cos__7cDegreeCFv</a> ()</td></tr>
+<tr class="separator:a537cd23d0d8a55317e14904ee3018b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
+<tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9202d7b49cfe094cad7baadc3487f43d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a9202d7b49cfe094cad7baadc3487f43d">PSMTXMultVec</a> ()</td></tr>
+<tr class="separator:a9202d7b49cfe094cad7baadc3487f43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71db102a0dcb116c11cd709f017d5b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac71db102a0dcb116c11cd709f017d5b2">sqrt</a> ()</td></tr>
+<tr class="separator:ac71db102a0dcb116c11cd709f017d5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a64ed72a6c41293053d21762cb4bf7c0b"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a64ed72a6c41293053d21762cb4bf7c0b">d_d_cam_param__stringBase0</a></td></tr>
+<tr class="separator:a64ed72a6c41293053d21762cb4bf7c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ad47c26bcc2867f2c14d349753f58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a50ad47c26bcc2867f2c14d349753f58e">g_dComIfG_gameInfo</a> [122384]</td></tr>
+<tr class="separator:a50ad47c26bcc2867f2c14d349753f58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe45abdd1c74899e53ec529f41a7484"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#acfe45abdd1c74899e53ec529f41a7484">d_d_cam_param__lit_3769</a> [4+4]</td></tr>
+<tr class="separator:acfe45abdd1c74899e53ec529f41a7484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e33e4b86249cf03f4c5d36e304724a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a78e33e4b86249cf03f4c5d36e304724a">d_d_cam_param__lit_3770</a> = 1.0</td></tr>
+<tr class="separator:a78e33e4b86249cf03f4c5d36e304724a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad94b20e353e42b62d8a1f2f8d1c16ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aad94b20e353e42b62d8a1f2f8d1c16ea">d_d_cam_param__lit_3771</a> = -1.0</td></tr>
+<tr class="separator:aad94b20e353e42b62d8a1f2f8d1c16ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2fdf1e2c465aa2d61fc4679af00a83"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a3e2fdf1e2c465aa2d61fc4679af00a83">d_d_cam_param__lit_3772</a> = 2.0</td></tr>
+<tr class="separator:a3e2fdf1e2c465aa2d61fc4679af00a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8543ddd728c5a6ee25b506aaaf5d4996"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a8543ddd728c5a6ee25b506aaaf5d4996">d_d_cam_param__lit_3773</a> = 4.0</td></tr>
+<tr class="separator:a8543ddd728c5a6ee25b506aaaf5d4996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768678b5e47a2f4a0ad2d6be02ad28a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a768678b5e47a2f4a0ad2d6be02ad28a0">d_d_cam_param__lit_3774</a> [8]</td></tr>
+<tr class="separator:a768678b5e47a2f4a0ad2d6be02ad28a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50b60b25cdfee4d373ca8d1318a3c55"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aa50b60b25cdfee4d373ca8d1318a3c55">d_d_cam_param__lit_3775</a> = 1e-07</td></tr>
+<tr class="separator:aa50b60b25cdfee4d373ca8d1318a3c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf397384cc079a98e2efdafa7af9cbe5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#acf397384cc079a98e2efdafa7af9cbe5">d_d_cam_param__lit_3776</a> = -1e-07</td></tr>
+<tr class="separator:acf397384cc079a98e2efdafa7af9cbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ae85f95e6ae9f75971f7e7949e8033"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a23ae85f95e6ae9f75971f7e7949e8033">d_d_cam_param__lit_3777</a> = 1.0000000116860974e-07</td></tr>
+<tr class="separator:a23ae85f95e6ae9f75971f7e7949e8033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f754fe3fc9af6a2ec81823c43d7e4c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a3f754fe3fc9af6a2ec81823c43d7e4c0">d_d_cam_param__lit_3791</a> = 1.0f</td></tr>
+<tr class="separator:a3f754fe3fc9af6a2ec81823c43d7e4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab2779125463349b6219f4b0787680f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#adab2779125463349b6219f4b0787680f">d_d_cam_param__lit_3807</a> = 57.2957763671875f</td></tr>
+<tr class="separator:adab2779125463349b6219f4b0787680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a95bd5344eb0ffc65264fc6457f538"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a81a95bd5344eb0ffc65264fc6457f538">__vt__11dCamSetup_c</a> [3]</td></tr>
+<tr class="separator:a81a95bd5344eb0ffc65264fc6457f538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22ae0f3eabb165354d3d90095c68696"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aa22ae0f3eabb165354d3d90095c68696">__vt__11dCamParam_c</a> [3]</td></tr>
+<tr class="separator:aa22ae0f3eabb165354d3d90095c68696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54826033ce437801c5e2ce6c1fcbfcf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac54826033ce437801c5e2ce6c1fcbfcf">__vt__9dCstick_c</a> [3+1]</td></tr>
+<tr class="separator:ac54826033ce437801c5e2ce6c1fcbfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29cb2a29cbf526a53c66e2904d006420"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a29cb2a29cbf526a53c66e2904d006420">lit_3991</a> = 1.0f / 5.0f</td></tr>
+<tr class="separator:a29cb2a29cbf526a53c66e2904d006420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e9f971099b0830c39dfec4699b8d1d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a86e9f971099b0830c39dfec4699b8d1d">d_d_cam_param__lit_3992</a> = 19.0f / 20.0f</td></tr>
+<tr class="separator:a86e9f971099b0830c39dfec4699b8d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276d94964e6648f0b42e7c39976b29b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a276d94964e6648f0b42e7c39976b29b0">d_d_cam_param__lit_4001</a> = 32.0f</td></tr>
+<tr class="separator:a276d94964e6648f0b42e7c39976b29b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27a7d772148520c02741d630c325940"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab27a7d772148520c02741d630c325940">lit_4002</a> = 25.0f</td></tr>
+<tr class="separator:ab27a7d772148520c02741d630c325940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4b815ac2ce07d2723dcef27523c8c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a2c4b815ac2ce07d2723dcef27523c8c0">d_d_cam_param__lit_4003</a> = 2.0f / 5.0f</td></tr>
+<tr class="separator:a2c4b815ac2ce07d2723dcef27523c8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687c2b1f94a26ef4db7a16cc70929237"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a687c2b1f94a26ef4db7a16cc70929237">lit_4004</a> = 3.0f / 5.0f</td></tr>
+<tr class="separator:a687c2b1f94a26ef4db7a16cc70929237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d438edf9db95126e4ed5d0dccd11b3b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a6d438edf9db95126e4ed5d0dccd11b3b">lit_4005</a> = 3.0f</td></tr>
+<tr class="separator:a6d438edf9db95126e4ed5d0dccd11b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75d4507d9f96da384c628cd371b642f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a75d4507d9f96da384c628cd371b642f2">lit_4006</a> = 15.0f</td></tr>
+<tr class="separator:a75d4507d9f96da384c628cd371b642f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d5af2b924e7fa5c9dd2e5906a7d106"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ae0d5af2b924e7fa5c9dd2e5906a7d106">lit_4007</a> = 0.5f</td></tr>
+<tr class="separator:ae0d5af2b924e7fa5c9dd2e5906a7d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac348a3698c9a33f250f7e39a1bbfb8b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac348a3698c9a33f250f7e39a1bbfb8b6">lit_4008</a> = 3.0f / 10.0f</td></tr>
+<tr class="separator:ac348a3698c9a33f250f7e39a1bbfb8b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cf00ceb43cd753c98866a47f7aa76e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ac5cf00ceb43cd753c98866a47f7aa76e">d_d_cam_param__lit_4009</a> = 10.0f</td></tr>
+<tr class="separator:ac5cf00ceb43cd753c98866a47f7aa76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add6c37fb27d3e2b470b17744dde8a5b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#add6c37fb27d3e2b470b17744dde8a5b8">d_d_cam_param__lit_4010</a> = 1.0f / 10.0f</td></tr>
+<tr class="separator:add6c37fb27d3e2b470b17744dde8a5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acafc6d7174aabc6c849c334b6bae090a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#acafc6d7174aabc6c849c334b6bae090a">d_d_cam_param__lit_4011</a> = 0.75f</td></tr>
+<tr class="separator:acafc6d7174aabc6c849c334b6bae090a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8856916d9378db7e34692c1b7a97d580"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a8856916d9378db7e34692c1b7a97d580">d_d_cam_param__lit_4012</a> = 80.0f</td></tr>
+<tr class="separator:a8856916d9378db7e34692c1b7a97d580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4631fe01450d366fa65e7db27e6de83"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab4631fe01450d366fa65e7db27e6de83">d_d_cam_param__lit_4013</a> = 2.0f / 25.0f</td></tr>
+<tr class="separator:ab4631fe01450d366fa65e7db27e6de83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53236a08baba71846d328f5bc7784c10"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a53236a08baba71846d328f5bc7784c10">lit_4014</a> = 120.0f</td></tr>
+<tr class="separator:a53236a08baba71846d328f5bc7784c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905b92d4042f3e8369ecc15319728365"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a905b92d4042f3e8369ecc15319728365">stringBase_8037A7E0</a> = &quot;camstyle.dat&quot;</td></tr>
+<tr class="separator:a905b92d4042f3e8369ecc15319728365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad049c8d45ddfea8f047b3a4ff24b395e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ad049c8d45ddfea8f047b3a4ff24b395e">pad_8037A7ED</a> = &quot;\0\0&quot;</td></tr>
+<tr class="separator:ad049c8d45ddfea8f047b3a4ff24b395e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2736cce2fc7e8da119aed13cee065ded"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a2736cce2fc7e8da119aed13cee065ded">d_d_cam_param__lit_4058</a> = 0.25f</td></tr>
+<tr class="separator:a2736cce2fc7e8da119aed13cee065ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6cd2e908827855bd548497e0ea790c2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ae6cd2e908827855bd548497e0ea790c2">d_d_cam_param__lit_4119</a> = 100000.0f</td></tr>
+<tr class="separator:ae6cd2e908827855bd548497e0ea790c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45919c66b33ceb274dd967ae8a0eae61"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a45919c66b33ceb274dd967ae8a0eae61">d_d_cam_param__lit_4120</a> = 1.0f / 20.0f</td></tr>
+<tr class="separator:a45919c66b33ceb274dd967ae8a0eae61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3758eb80efcff64ed54acf42b9df42d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ab3758eb80efcff64ed54acf42b9df42d">d_d_cam_param__lit_4121</a> = -60.0f</td></tr>
+<tr class="separator:ab3758eb80efcff64ed54acf42b9df42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0602e11beef4e84af2e09dfd8a42d2e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a0602e11beef4e84af2e09dfd8a42d2e3">d_d_cam_param__lit_4122</a> = 33.0f / 100.0f</td></tr>
+<tr class="separator:a0602e11beef4e84af2e09dfd8a42d2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdd5cdcdf788b43616513eddf91bb31"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a1cdd5cdcdf788b43616513eddf91bb31">d_d_cam_param__lit_4123</a> = 1.0f / 50.0f</td></tr>
+<tr class="separator:a1cdd5cdcdf788b43616513eddf91bb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8403efd073d9de86033449386cb08b4e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a8403efd073d9de86033449386cb08b4e">d_d_cam_param__lit_4124</a> = 100.0f</td></tr>
+<tr class="separator:a8403efd073d9de86033449386cb08b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab9ec3bbf5badc81badef3e9d0694b3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aaab9ec3bbf5badc81badef3e9d0694b3">d_d_cam_param__lit_4125</a> = 7.0f / 25.0f</td></tr>
+<tr class="separator:aaab9ec3bbf5badc81badef3e9d0694b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a488e24271e1bebfa6266dafb215ce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a02a488e24271e1bebfa6266dafb215ce">d_d_cam_param__lit_4126</a> = 3.0f / 20.0f</td></tr>
+<tr class="separator:a02a488e24271e1bebfa6266dafb215ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90292f87a72cb6b7aa7a59dcc0c8af8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ae90292f87a72cb6b7aa7a59dcc0c8af8">d_d_cam_param__lit_4127</a> = 0.004999999888241291f</td></tr>
+<tr class="separator:ae90292f87a72cb6b7aa7a59dcc0c8af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78fb3afb9ecc05124d2db67562c2055"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aa78fb3afb9ecc05124d2db67562c2055">d_d_cam_param__lit_4128</a> = 3.0f / 50.0f</td></tr>
+<tr class="separator:aa78fb3afb9ecc05124d2db67562c2055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0ee7c79ff7f7c3f9318f776952d7cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a6a0ee7c79ff7f7c3f9318f776952d7cf">d_d_cam_param__lit_4129</a> = 70.0f</td></tr>
+<tr class="separator:a6a0ee7c79ff7f7c3f9318f776952d7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42998b7dca050f64fb79c7cc31c4d6ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a42998b7dca050f64fb79c7cc31c4d6ae">d_d_cam_param__lit_4130</a> = 60.0f</td></tr>
+<tr class="separator:a42998b7dca050f64fb79c7cc31c4d6ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f67d0cf7a45a9ea6efb4603bca47113"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a3f67d0cf7a45a9ea6efb4603bca47113">d_d_cam_param__lit_4131</a> = 35.0f</td></tr>
+<tr class="separator:a3f67d0cf7a45a9ea6efb4603bca47113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954d3791c25d9fec6dcf6b081ea92ea3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a954d3791c25d9fec6dcf6b081ea92ea3">d_d_cam_param__lit_4132</a> = 65.0f</td></tr>
+<tr class="separator:a954d3791c25d9fec6dcf6b081ea92ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a905351dd1c829ce1be971359bd7fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a09a905351dd1c829ce1be971359bd7fa">d_d_cam_param__lit_4133</a> = 30.0f</td></tr>
+<tr class="separator:a09a905351dd1c829ce1be971359bd7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ae1c2c70fcb3289277ce575d19a79ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a5ae1c2c70fcb3289277ce575d19a79ab">d_d_cam_param__lit_4134</a> = 27.0f</td></tr>
+<tr class="separator:a5ae1c2c70fcb3289277ce575d19a79ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa035a087592dc884327a277c7d99aba5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#aa035a087592dc884327a277c7d99aba5">d_d_cam_param__lit_4135</a> = 45.0f</td></tr>
+<tr class="separator:aa035a087592dc884327a277c7d99aba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a25e27e5667db9309e2cc0b87a8ae0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a28a25e27e5667db9309e2cc0b87a8ae0">d_d_cam_param__lit_4136</a> = 3500.0f</td></tr>
+<tr class="separator:a28a25e27e5667db9309e2cc0b87a8ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e83dc5a3d27ffae9fde315bdb015b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ad8e83dc5a3d27ffae9fde315bdb015b2">d_d_cam_param__lit_4137</a> = 4.0f</td></tr>
+<tr class="separator:ad8e83dc5a3d27ffae9fde315bdb015b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad93fff72f153ada33403b06891c2be52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#ad93fff72f153ada33403b06891c2be52">d_d_cam_param__lit_4138</a> = 1200.0f</td></tr>
+<tr class="separator:ad93fff72f153ada33403b06891c2be52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8072022c99410d5fa2fd007f1e53673"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#af8072022c99410d5fa2fd007f1e53673">d_d_cam_param__lit_4139</a> = 17.0f / 20.0f</td></tr>
+<tr class="separator:af8072022c99410d5fa2fd007f1e53673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e9b13f44be8bf378c3bb7069db65a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a89e9b13f44be8bf378c3bb7069db65a2">d_d_cam_param__lit_4140</a> = 50.0f</td></tr>
+<tr class="separator:a89e9b13f44be8bf378c3bb7069db65a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d240bd360288b41976895c13790e4ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__cam__param_8cpp.html#a7d240bd360288b41976895c13790e4ee">d_d_cam_param__lit_4173</a> = 182.04444885253906f</td></tr>
+<tr class="separator:a7d240bd360288b41976895c13790e4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a29e67b884e481b68644b29b653de2143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e67b884e481b68644b29b653de2143">&#9670;&nbsp;</a></span>__ct__11dCamBGChk_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__11dCamBGChk_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a2e904915aad91e4c7b850040ff39f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2e904915aad91e4c7b850040ff39f3">&#9670;&nbsp;</a></span>__ct__11dCamParam_cFl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__11dCamParam_cFl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22ae4b62399a282a80a5a2773e4a843b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ae4b62399a282a80a5a2773e4a843b">&#9670;&nbsp;</a></span>__ct__11dCamSetup_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__11dCamSetup_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1838f4f2ccb8526558d70c563010c72e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1838f4f2ccb8526558d70c563010c72e">&#9670;&nbsp;</a></span>__ct__7cDegreeFf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__7cDegreeFf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10951eab0c3e15fbaa0dcdc2e2e27771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10951eab0c3e15fbaa0dcdc2e2e27771">&#9670;&nbsp;</a></span>__ct__9dCstick_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __ct__9dCstick_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a498e6440d5c316e2672169ee4ed92309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498e6440d5c316e2672169ee4ed92309">&#9670;&nbsp;</a></span>__dl__FPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dl__FPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adad0a73859785372104bc525a78b4642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad0a73859785372104bc525a78b4642">&#9670;&nbsp;</a></span>__dt__11dCamParam_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__11dCamParam_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79e327f1e5eda4ff500978a1b20366a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e327f1e5eda4ff500978a1b20366a7">&#9670;&nbsp;</a></span>__dt__11dCamSetup_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__11dCamSetup_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30bb64857f57a1c03d9790378b61f8b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30bb64857f57a1c03d9790378b61f8b7">&#9670;&nbsp;</a></span>__dt__7cDegreeFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__7cDegreeFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12b0c21fde1bc1637b7198aa12bf8478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b0c21fde1bc1637b7198aa12bf8478">&#9670;&nbsp;</a></span>__dt__9dCstick_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __dt__9dCstick_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9ffcaaee59603b5548a1d2ab7293403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ffcaaee59603b5548a1d2ab7293403">&#9670;&nbsp;</a></span>Change__11dCamParam_cFl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Change__11dCamParam_cFl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75b830b90fe96daed524afaa23331b77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75b830b90fe96daed524afaa23331b77">&#9670;&nbsp;</a></span>CheckLatitudeRange__11dCamSetup_cFPs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CheckLatitudeRange__11dCamSetup_cFPs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3acd54daf120482b50552d2094b8dcb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3acd54daf120482b50552d2094b8dcb6">&#9670;&nbsp;</a></span>cM_atan2f()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cM_atan2f </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0ea586ca609fcb56605d0ccc534944c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ea586ca609fcb56605d0ccc534944c">&#9670;&nbsp;</a></span>cM_atan2f__Fff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cM_atan2f__Fff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a537cd23d0d8a55317e14904ee3018b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537cd23d0d8a55317e14904ee3018b96">&#9670;&nbsp;</a></span>Cos__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cos__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac61347c9a14a3822e3952f5e9c8b34d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61347c9a14a3822e3952f5e9c8b34d1">&#9670;&nbsp;</a></span>dCam_getBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dCam_getBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab76257f1e03878dd6eed3cf7c92eb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab76257f1e03878dd6eed3cf7c92eb7e">&#9670;&nbsp;</a></span>dCam_getBody__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dCam_getBody__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71b99496119e64a8c8d40b9d1e440f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b99496119e64a8c8d40b9d1e440f14">&#9670;&nbsp;</a></span>EventRecoverNotime__9dCamera_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EventRecoverNotime__9dCamera_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c33da78181b8797e05f57a82dfb141c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c33da78181b8797e05f57a82dfb141c">&#9670;&nbsp;</a></span>getRes__14dRes_control_cFPCcPCcP11dRes_info_ci()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92a3849850605d89b99a08fa09e4a3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a3849850605d89b99a08fa09e4a3d6">&#9670;&nbsp;</a></span>mDoMtx_XrotS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mDoMtx_XrotS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)&#160;</td>
+          <td class="paramname"><em>param_0</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab20a484c1f5699a5a4ad043fa47999ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20a484c1f5699a5a4ad043fa47999ce">&#9670;&nbsp;</a></span>mDoMtx_XrotS__FPA4_fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mDoMtx_XrotS__FPA4_fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c2727f4382b09d445cc528969af3db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c2727f4382b09d445cc528969af3db8">&#9670;&nbsp;</a></span>mDoMtx_YrotS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mDoMtx_YrotS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)&#160;</td>
+          <td class="paramname"><em>param_0</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30c0eaf05e93f15b23bde149cdfe83c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c0eaf05e93f15b23bde149cdfe83c0">&#9670;&nbsp;</a></span>mDoMtx_YrotS__FPA4_fs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mDoMtx_YrotS__FPA4_fs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a581ac9487348557df9e0f9bd828952af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581ac9487348557df9e0f9bd828952af">&#9670;&nbsp;</a></span>operator delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void operator delete </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf2a55f50424de215502727319ff6e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf2a55f50424de215502727319ff6e8b">&#9670;&nbsp;</a></span>PlayerHideDist__11dCamSetup_cFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerHideDist__11dCamSetup_cFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9202d7b49cfe094cad7baadc3487f43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9202d7b49cfe094cad7baadc3487f43d">&#9670;&nbsp;</a></span>PSMTXMultVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PSMTXMultVec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30698c9ba37a05000da909545bb2bac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30698c9ba37a05000da909545bb2bac7">&#9670;&nbsp;</a></span>rationalBezierRatio__8dCamMathFff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rationalBezierRatio__8dCamMathFff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ebbec338c6114af7cb43a8790a70ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebbec338c6114af7cb43a8790a70ab2">&#9670;&nbsp;</a></span>SearchStyle__11dCamParam_cFUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SearchStyle__11dCamParam_cFUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a375c56570b2dec2d086a37edf2b1a39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375c56570b2dec2d086a37edf2b1a39e">&#9670;&nbsp;</a></span>Shift__9dCstick_cFUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shift__9dCstick_cFUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d6fb9f0863a4dc4732dc7becb18e27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d6fb9f0863a4dc4732dc7becb18e27a">&#9670;&nbsp;</a></span>Sin__7cDegreeCFv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sin__7cDegreeCFv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac71db102a0dcb116c11cd709f017d5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71db102a0dcb116c11cd709f017d5b2">&#9670;&nbsp;</a></span>sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void sqrt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a569b299a8e0a23e72b15c7d165044fc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569b299a8e0a23e72b15c7d165044fc1">&#9670;&nbsp;</a></span>xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab115b3bc61686f4b37e90dc040b2b9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab115b3bc61686f4b37e90dc040b2b9eb">&#9670;&nbsp;</a></span>xyzRotateX__8dCamMathFR4cXyz7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xyzRotateX__8dCamMathFR4cXyz7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac308eae89e71695c1f7fe6812889b46b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac308eae89e71695c1f7fe6812889b46b">&#9670;&nbsp;</a></span>xyzRotateY__8dCamMathFR4cXyz7cSAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xyzRotateY__8dCamMathFR4cXyz7cSAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77102e4df6619119b0cd71f6dae77fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77102e4df6619119b0cd71f6dae77fca">&#9670;&nbsp;</a></span>zoomFovy__8dCamMathFff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void zoomFovy__8dCamMathFff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aa22ae0f3eabb165354d3d90095c68696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22ae0f3eabb165354d3d90095c68696">&#9670;&nbsp;</a></span>__vt__11dCamParam_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__11dCamParam_c[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cam__param_8cpp.html#adad0a73859785372104bc525a78b4642">__dt__11dCamParam_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__cam__param_8cpp_html_adad0a73859785372104bc525a78b4642"><div class="ttname"><a href="d__cam__param_8cpp.html#adad0a73859785372104bc525a78b4642">__dt__11dCamParam_cFv</a></div><div class="ttdeci">void __dt__11dCamParam_cFv()</div></div>
+<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a81a95bd5344eb0ffc65264fc6457f538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a95bd5344eb0ffc65264fc6457f538">&#9670;&nbsp;</a></span>__vt__11dCamSetup_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__11dCamSetup_c[3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cam__param_8cpp.html#a79e327f1e5eda4ff500978a1b20366a7">__dt__11dCamSetup_cFv</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__cam__param_8cpp_html_a79e327f1e5eda4ff500978a1b20366a7"><div class="ttname"><a href="d__cam__param_8cpp.html#a79e327f1e5eda4ff500978a1b20366a7">__dt__11dCamSetup_cFv</a></div><div class="ttdeci">void __dt__11dCamSetup_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac54826033ce437801c5e2ce6c1fcbfcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54826033ce437801c5e2ce6c1fcbfcf">&#9670;&nbsp;</a></span>__vt__9dCstick_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* __vt__9dCstick_c[3+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cam__param_8cpp.html#a12b0c21fde1bc1637b7198aa12bf8478">__dt__9dCstick_cFv</a>,</div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ad__cam__param_8cpp_html_a12b0c21fde1bc1637b7198aa12bf8478"><div class="ttname"><a href="d__cam__param_8cpp.html#a12b0c21fde1bc1637b7198aa12bf8478">__dt__9dCstick_cFv</a></div><div class="ttdeci">void __dt__9dCstick_cFv()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acfe45abdd1c74899e53ec529f41a7484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe45abdd1c74899e53ec529f41a7484">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3769</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> d_d_cam_param__lit_3769[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a78e33e4b86249cf03f4c5d36e304724a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e33e4b86249cf03f4c5d36e304724a">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3770</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3770 = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad94b20e353e42b62d8a1f2f8d1c16ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad94b20e353e42b62d8a1f2f8d1c16ea">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3771</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3771 = -1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e2fdf1e2c465aa2d61fc4679af00a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2fdf1e2c465aa2d61fc4679af00a83">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3772</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3772 = 2.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8543ddd728c5a6ee25b506aaaf5d4996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8543ddd728c5a6ee25b506aaaf5d4996">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3773</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3773 = 4.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a768678b5e47a2f4a0ad2d6be02ad28a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768678b5e47a2f4a0ad2d6be02ad28a0">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3774</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> d_d_cam_param__lit_3774[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa50b60b25cdfee4d373ca8d1318a3c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50b60b25cdfee4d373ca8d1318a3c55">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3775</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3775 = 1e-07</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf397384cc079a98e2efdafa7af9cbe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf397384cc079a98e2efdafa7af9cbe5">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3776</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3776 = -1e-07</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23ae85f95e6ae9f75971f7e7949e8033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ae85f95e6ae9f75971f7e7949e8033">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3777</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a94dab5770726ccbef8c7d026cfbdf8e5">f64</a> d_d_cam_param__lit_3777 = 1.0000000116860974e-07</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f754fe3fc9af6a2ec81823c43d7e4c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f754fe3fc9af6a2ec81823c43d7e4c0">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3791</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_3791 = 1.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adab2779125463349b6219f4b0787680f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adab2779125463349b6219f4b0787680f">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3807</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_3807 = 57.2957763671875f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86e9f971099b0830c39dfec4699b8d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e9f971099b0830c39dfec4699b8d1d">&#9670;&nbsp;</a></span>d_d_cam_param__lit_3992</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_3992 = 19.0f / 20.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a276d94964e6648f0b42e7c39976b29b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a276d94964e6648f0b42e7c39976b29b0">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4001</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4001 = 32.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c4b815ac2ce07d2723dcef27523c8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4b815ac2ce07d2723dcef27523c8c0">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4003</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4003 = 2.0f / 5.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5cf00ceb43cd753c98866a47f7aa76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cf00ceb43cd753c98866a47f7aa76e">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4009</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4009 = 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add6c37fb27d3e2b470b17744dde8a5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6c37fb27d3e2b470b17744dde8a5b8">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4010</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4010 = 1.0f / 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acafc6d7174aabc6c849c334b6bae090a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acafc6d7174aabc6c849c334b6bae090a">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4011</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4011 = 0.75f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8856916d9378db7e34692c1b7a97d580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8856916d9378db7e34692c1b7a97d580">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4012</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4012 = 80.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4631fe01450d366fa65e7db27e6de83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4631fe01450d366fa65e7db27e6de83">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4013</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4013 = 2.0f / 25.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2736cce2fc7e8da119aed13cee065ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2736cce2fc7e8da119aed13cee065ded">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4058</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4058 = 0.25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6cd2e908827855bd548497e0ea790c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6cd2e908827855bd548497e0ea790c2">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4119</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4119 = 100000.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45919c66b33ceb274dd967ae8a0eae61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45919c66b33ceb274dd967ae8a0eae61">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4120</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4120 = 1.0f / 20.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3758eb80efcff64ed54acf42b9df42d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3758eb80efcff64ed54acf42b9df42d">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4121</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4121 = -60.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0602e11beef4e84af2e09dfd8a42d2e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0602e11beef4e84af2e09dfd8a42d2e3">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4122</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4122 = 33.0f / 100.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cdd5cdcdf788b43616513eddf91bb31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdd5cdcdf788b43616513eddf91bb31">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4123</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4123 = 1.0f / 50.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8403efd073d9de86033449386cb08b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8403efd073d9de86033449386cb08b4e">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4124</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4124 = 100.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaab9ec3bbf5badc81badef3e9d0694b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab9ec3bbf5badc81badef3e9d0694b3">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4125</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4125 = 7.0f / 25.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02a488e24271e1bebfa6266dafb215ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a488e24271e1bebfa6266dafb215ce">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4126</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4126 = 3.0f / 20.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae90292f87a72cb6b7aa7a59dcc0c8af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90292f87a72cb6b7aa7a59dcc0c8af8">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4127</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4127 = 0.004999999888241291f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa78fb3afb9ecc05124d2db67562c2055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78fb3afb9ecc05124d2db67562c2055">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4128</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4128 = 3.0f / 50.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a0ee7c79ff7f7c3f9318f776952d7cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0ee7c79ff7f7c3f9318f776952d7cf">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4129</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4129 = 70.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42998b7dca050f64fb79c7cc31c4d6ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42998b7dca050f64fb79c7cc31c4d6ae">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4130</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4130 = 60.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f67d0cf7a45a9ea6efb4603bca47113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f67d0cf7a45a9ea6efb4603bca47113">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4131</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4131 = 35.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a954d3791c25d9fec6dcf6b081ea92ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954d3791c25d9fec6dcf6b081ea92ea3">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4132</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4132 = 65.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09a905351dd1c829ce1be971359bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a905351dd1c829ce1be971359bd7fa">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4133</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4133 = 30.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ae1c2c70fcb3289277ce575d19a79ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae1c2c70fcb3289277ce575d19a79ab">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4134</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4134 = 27.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa035a087592dc884327a277c7d99aba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa035a087592dc884327a277c7d99aba5">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4135</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4135 = 45.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28a25e27e5667db9309e2cc0b87a8ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a25e27e5667db9309e2cc0b87a8ae0">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4136</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4136 = 3500.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8e83dc5a3d27ffae9fde315bdb015b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e83dc5a3d27ffae9fde315bdb015b2">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4137</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4137 = 4.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad93fff72f153ada33403b06891c2be52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad93fff72f153ada33403b06891c2be52">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4138</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4138 = 1200.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8072022c99410d5fa2fd007f1e53673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8072022c99410d5fa2fd007f1e53673">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4139</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4139 = 17.0f / 20.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89e9b13f44be8bf378c3bb7069db65a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e9b13f44be8bf378c3bb7069db65a2">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4140</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4140 = 50.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d240bd360288b41976895c13790e4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d240bd360288b41976895c13790e4ee">&#9670;&nbsp;</a></span>d_d_cam_param__lit_4173</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> d_d_cam_param__lit_4173 = 182.04444885253906f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64ed72a6c41293053d21762cb4bf7c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ed72a6c41293053d21762cb4bf7c0b">&#9670;&nbsp;</a></span>d_d_cam_param__stringBase0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const* const d_d_cam_param__stringBase0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50ad47c26bcc2867f2c14d349753f58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ad47c26bcc2867f2c14d349753f58e">&#9670;&nbsp;</a></span>g_dComIfG_gameInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> g_dComIfG_gameInfo[122384]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29cb2a29cbf526a53c66e2904d006420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29cb2a29cbf526a53c66e2904d006420">&#9670;&nbsp;</a></span>lit_3991</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_3991 = 1.0f / 5.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab27a7d772148520c02741d630c325940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27a7d772148520c02741d630c325940">&#9670;&nbsp;</a></span>lit_4002</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4002 = 25.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a687c2b1f94a26ef4db7a16cc70929237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687c2b1f94a26ef4db7a16cc70929237">&#9670;&nbsp;</a></span>lit_4004</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4004 = 3.0f / 5.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d438edf9db95126e4ed5d0dccd11b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d438edf9db95126e4ed5d0dccd11b3b">&#9670;&nbsp;</a></span>lit_4005</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4005 = 3.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75d4507d9f96da384c628cd371b642f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d4507d9f96da384c628cd371b642f2">&#9670;&nbsp;</a></span>lit_4006</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4006 = 15.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0d5af2b924e7fa5c9dd2e5906a7d106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d5af2b924e7fa5c9dd2e5906a7d106">&#9670;&nbsp;</a></span>lit_4007</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4007 = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac348a3698c9a33f250f7e39a1bbfb8b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac348a3698c9a33f250f7e39a1bbfb8b6">&#9670;&nbsp;</a></span>lit_4008</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4008 = 3.0f / 10.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53236a08baba71846d328f5bc7784c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53236a08baba71846d328f5bc7784c10">&#9670;&nbsp;</a></span>lit_4014</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a5c2a45e3895d11e22314dfe16ece0d10">SECTION_SDATA2</a> <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a> lit_4014 = 120.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad049c8d45ddfea8f047b3a4ff24b395e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad049c8d45ddfea8f047b3a4ff24b395e">&#9670;&nbsp;</a></span>pad_8037A7ED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const pad_8037A7ED = &quot;\0\0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a905b92d4042f3e8369ecc15319728365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905b92d4042f3e8369ecc15319728365">&#9670;&nbsp;</a></span>stringBase_8037A7E0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_8037A7E0 = &quot;camstyle.dat&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

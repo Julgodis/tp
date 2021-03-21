@@ -74,53 +74,76 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">c_list_iter.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="c__list__iter_8h_source.html">SComponent/c_list_iter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="c__list__iter_8h_source.html">SSystem/SComponent/c_list_iter.h</a>&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list_iter/cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv.s&quot;</code><br />
+<code>#include &quot;asm/SSystem/SComponent/c_list_iter/cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for c_list_iter.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="c__list__iter_8cpp__incl.svg" width="630" height="575"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="c__list__iter_8cpp__incl.svg" width="100%" height="484"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__list__class.html">node_list_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__class.html">node_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad0277831f634f36cd33b43349dc1e2ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#ad0277831f634f36cd33b43349dc1e2ac">cLsIt_Method</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList, <a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a> pMethod, void *pUserData)</td></tr>
-<tr class="separator:ad0277831f634f36cd33b43349dc1e2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef208efbcc2501cd91e8bb0b5ffb7f5b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#aef208efbcc2501cd91e8bb0b5ffb7f5b">cLsIt_Judge</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *pList, <a class="el" href="c__node__iter_8h.html#a13e89ced3e69b80af73ddd92d5e1b047">cNdIt_JudgeFunc</a> pJudge, void *pUserData)</td></tr>
-<tr class="separator:aef208efbcc2501cd91e8bb0b5ffb7f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5097f25dbd811d9e31d8705d17813bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#ab5097f25dbd811d9e31d8705d17813bf">cLsIt_Method</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *, int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:ab5097f25dbd811d9e31d8705d17813bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045e2d8703af97132b25b0faf3c94aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#a045e2d8703af97132b25b0faf3c94aab">cLsIt_Judge</a> (<a class="el" href="structnode__list__class.html">node_list_class</a> *, void *(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:a045e2d8703af97132b25b0faf3c94aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccf7834ddf78e8f5eda5c628046d3ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#a0ccf7834ddf78e8f5eda5c628046d3ac">cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv</a> ()</td></tr>
+<tr class="separator:a0ccf7834ddf78e8f5eda5c628046d3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb019a3eae74e230b2965400d898a293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#acb019a3eae74e230b2965400d898a293">cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv</a> ()</td></tr>
+<tr class="separator:acb019a3eae74e230b2965400d898a293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e1bd2c06a28d4cc72f97586a726972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#ad8e1bd2c06a28d4cc72f97586a726972">cNdIt_Method</a> (<a class="el" href="structnode__class.html">node_class</a> *, int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:ad8e1bd2c06a28d4cc72f97586a726972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a64a3f48c611b16c3df4653c0817a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#a92a64a3f48c611b16c3df4653c0817a3">cNdIt_Judge</a> (<a class="el" href="structnode__class.html">node_class</a> *, void *(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *), void *)</td></tr>
+<tr class="separator:a92a64a3f48c611b16c3df4653c0817a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1256a18a03947e30e1b22b2b687b2d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#aa1256a18a03947e30e1b22b2b687b2d4">cNdIt_Method__FP10node_classPFP10node_classPv_iPv</a> ()</td></tr>
+<tr class="separator:aa1256a18a03947e30e1b22b2b687b2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2f8d06063754fe147a622a19d71d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c__list__iter_8cpp.html#a8c2f8d06063754fe147a622a19d71d58">cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv</a> ()</td></tr>
+<tr class="separator:a8c2f8d06063754fe147a622a19d71d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aef208efbcc2501cd91e8bb0b5ffb7f5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef208efbcc2501cd91e8bb0b5ffb7f5b">&#9670;&nbsp;</a></span>cLsIt_Judge()</h2>
+<a id="a045e2d8703af97132b25b0faf3c94aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a045e2d8703af97132b25b0faf3c94aab">&#9670;&nbsp;</a></span>cLsIt_Judge()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* cLsIt_Judge </td>
+          <td class="memname">void cLsIt_Judge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="c__node__iter_8h.html#a13e89ced3e69b80af73ddd92d5e1b047">cNdIt_JudgeFunc</a>&#160;</td>
-          <td class="paramname"><em>pJudge</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname">*)(node_class *, void *, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -132,34 +155,170 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad0277831f634f36cd33b43349dc1e2ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0277831f634f36cd33b43349dc1e2ac">&#9670;&nbsp;</a></span>cLsIt_Method()</h2>
+<a id="acb019a3eae74e230b2965400d898a293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb019a3eae74e230b2965400d898a293">&#9670;&nbsp;</a></span>cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cLsIt_Method </td>
+          <td class="memname">void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5097f25dbd811d9e31d8705d17813bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5097f25dbd811d9e31d8705d17813bf">&#9670;&nbsp;</a></span>cLsIt_Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLsIt_Method </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnode__list__class.html">node_list_class</a> *&#160;</td>
-          <td class="paramname"><em>pList</em>, </td>
+          <td class="paramname"><em>param_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="c__node__iter_8h.html#a721a39d45276f2910d68164359852ec1">cNdIt_MethodFunc</a>&#160;</td>
-          <td class="paramname"><em>pMethod</em>, </td>
+          <td class="paramtype">int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *)&#160;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pUserData</em>&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ccf7834ddf78e8f5eda5c628046d3ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccf7834ddf78e8f5eda5c628046d3ac">&#9670;&nbsp;</a></span>cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92a64a3f48c611b16c3df4653c0817a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a64a3f48c611b16c3df4653c0817a3">&#9670;&nbsp;</a></span>cNdIt_Judge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNdIt_Judge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">*)(node_class *, void *, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c2f8d06063754fe147a622a19d71d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2f8d06063754fe147a622a19d71d58">&#9670;&nbsp;</a></span>cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8e1bd2c06a28d4cc72f97586a726972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e1bd2c06a28d4cc72f97586a726972">&#9670;&nbsp;</a></span>cNdIt_Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void cNdIt_Method </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structnode__class.html">node_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(<a class="el" href="structnode__class.html">node_class</a> *, void *)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1256a18a03947e30e1b22b2b687b2d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1256a18a03947e30e1b22b2b687b2d4">&#9670;&nbsp;</a></span>cNdIt_Method__FP10node_classPFP10node_classPv_iPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cNdIt_Method__FP10node_classPFP10node_classPv_iPv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

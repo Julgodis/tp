@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Twilight Princess: src/f/f_op/f_op_scene_mng.cpp File Reference</title>
+<title>Twilight Princess: src/f_op/f_op_scene_mng.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,85 +69,116 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_34ef17d041e5fba4773aca5ba7fe9b34.html">f</a></li><li class="navelem"><a class="el" href="dir_78d979f70e66f5399b8b2e33e5bfc8e1.html">f_op</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1067c0d41a0230984cbcba896d5e4c43.html">f_op</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">f_op_scene_mng.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="f__op__scene__mng_8h_source.html">f/f_op/f_op_scene_mng.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__op__scene__iter_8h_source.html">f/f_op/f_op_scene_iter.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__op__scene__req_8h_source.html">f/f_op/f_op_scene_req.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="f__pc__searcher_8h_source.html">f/f_pc/f_pc_searcher.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="global_8h_source.html">global.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="f__op__scene__mng_8h_source.html">f_op/f_op_scene_mng.h</a>&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_SearchByID__FUi.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_ChangeReq__FP11scene_classssUs.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_DeleteReq__FP11scene_class.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_CreateReq__FssUsUl.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_ReRequest__FsUl.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_Management__Fv.s&quot;</code><br />
+<code>#include &quot;asm/f_op/f_op_scene_mng/fopScnM_Init__Fv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for f_op_scene_mng.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__scene__mng_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="f__op__scene__mng_8cpp__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structscene__class.html">scene_class</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2282bc0c606cf21773a1cf9bbfdca7e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a2282bc0c606cf21773a1cf9bbfdca7e9">fopScnRq_Request__FiP11scene_classsPvsUs</a> (void)</td></tr>
-<tr class="separator:a2282bc0c606cf21773a1cf9bbfdca7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c4ced6ff0db7d704e0e8221e4ee2b0a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a2c4ced6ff0db7d704e0e8221e4ee2b0a">fopScnM_SearchByID</a> (unsigned int id)</td></tr>
-<tr class="separator:a2c4ced6ff0db7d704e0e8221e4ee2b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99dfcac284c64b512b6a7471dff68955"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a99dfcac284c64b512b6a7471dff68955">fopScnM_ChangeReq</a> (<a class="el" href="classscene__class.html">scene_class</a> *pScene, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_2, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_3, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> param_4)</td></tr>
-<tr class="separator:a99dfcac284c64b512b6a7471dff68955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab403f39c00b230bdc1ce6e1b6dac8924"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ab403f39c00b230bdc1ce6e1b6dac8924">fopScnM_DeleteReq</a> (<a class="el" href="classscene__class.html">scene_class</a> *pScene)</td></tr>
-<tr class="separator:ab403f39c00b230bdc1ce6e1b6dac8924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a595f219cd1ca8d41576c97fcf78dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a58a595f219cd1ca8d41576c97fcf78dc">fopScnM_CreateReq</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_1, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_2, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> param_3, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param_4)</td></tr>
-<tr class="separator:a58a595f219cd1ca8d41576c97fcf78dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36f1944cead38954ebe18463e4d7a9ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a36f1944cead38954ebe18463e4d7a9ef">fopScnM_ReRequest</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a> param_1, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> param_2)</td></tr>
-<tr class="separator:a36f1944cead38954ebe18463e4d7a9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12e571c4fbfca1d682b8dad719542ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a12e571c4fbfca1d682b8dad719542ef4">fopScnM_Management</a> (void)</td></tr>
-<tr class="separator:a12e571c4fbfca1d682b8dad719542ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1dd7330a499148e5f472dc974bace3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ac1dd7330a499148e5f472dc974bace3b">fopScnM_Init</a> (void)</td></tr>
-<tr class="separator:ac1dd7330a499148e5f472dc974bace3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d4ecaf435368cc6566f6f3e7b72e85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ae8d4ecaf435368cc6566f6f3e7b72e85">fopScnM_SearchByID</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:ae8d4ecaf435368cc6566f6f3e7b72e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d91448d6a5abc72c6bef68ddc86e1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ac8d91448d6a5abc72c6bef68ddc86e1b">fopScnM_ChangeReq</a> (<a class="el" href="structscene__class.html">scene_class</a> *, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:ac8d91448d6a5abc72c6bef68ddc86e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb6b36aa3952c809144ef4e206b2f2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a6eb6b36aa3952c809144ef4e206b2f2e">fopScnM_DeleteReq</a> (<a class="el" href="structscene__class.html">scene_class</a> *)</td></tr>
+<tr class="separator:a6eb6b36aa3952c809144ef4e206b2f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68cf8e743c48204537300d1929b1fd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ad68cf8e743c48204537300d1929b1fd5">fopScnM_CreateReq</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:ad68cf8e743c48204537300d1929b1fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae01f46fddbe297e6139c0f4ec132f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#adae01f46fddbe297e6139c0f4ec132f8">fopScnM_ReRequest</a> (<a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:adae01f46fddbe297e6139c0f4ec132f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d034b22568a26222a144b65b92f951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ac8d034b22568a26222a144b65b92f951">fopScnM_Management</a> ()</td></tr>
+<tr class="separator:ac8d034b22568a26222a144b65b92f951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945c3509f57ca47feacbb9c38c83dd37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a945c3509f57ca47feacbb9c38c83dd37">fopScnM_Init</a> ()</td></tr>
+<tr class="separator:a945c3509f57ca47feacbb9c38c83dd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eebe35f7952b13d66d97e4d220f7ed4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a5eebe35f7952b13d66d97e4d220f7ed4">fopScnM_SearchByID__FUi</a> ()</td></tr>
+<tr class="separator:a5eebe35f7952b13d66d97e4d220f7ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e84f89ca31f0423e16319843e11e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a23e84f89ca31f0423e16319843e11e1d">fopScnM_ChangeReq__FP11scene_classssUs</a> ()</td></tr>
+<tr class="separator:a23e84f89ca31f0423e16319843e11e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f9be242047a0fa8f6d9e2df5896c18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#aa2f9be242047a0fa8f6d9e2df5896c18">fopScnM_DeleteReq__FP11scene_class</a> ()</td></tr>
+<tr class="separator:aa2f9be242047a0fa8f6d9e2df5896c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074eb7ebbd85f78b42a49cb704aabc43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a074eb7ebbd85f78b42a49cb704aabc43">fopScnM_CreateReq__FssUsUl</a> ()</td></tr>
+<tr class="separator:a074eb7ebbd85f78b42a49cb704aabc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96b7077bc12c5070cd89c8d98599908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#af96b7077bc12c5070cd89c8d98599908">fopScnM_ReRequest__FsUl</a> ()</td></tr>
+<tr class="separator:af96b7077bc12c5070cd89c8d98599908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa3e28306eb2983afffbd9f40c22c9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#aeaa3e28306eb2983afffbd9f40c22c9c">fopScnM_Management__Fv</a> ()</td></tr>
+<tr class="separator:aeaa3e28306eb2983afffbd9f40c22c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b588695fb44776c6e5f11e332670dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a5b588695fb44776c6e5f11e332670dee">fopScnM_Init__Fv</a> ()</td></tr>
+<tr class="separator:a5b588695fb44776c6e5f11e332670dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5307a779413e60df2f3acf34e3bff6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a5307a779413e60df2f3acf34e3bff6bc">fopScnIt_Judge</a> (void *(*)(void *, void *), void *)</td></tr>
+<tr class="separator:a5307a779413e60df2f3acf34e3bff6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb62f5870216f7381f7bec02148b35c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a8bb62f5870216f7381f7bec02148b35c">fopScnRq_Request</a> (int, <a class="el" href="structscene__class.html">scene_class</a> *, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, void *, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, <a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)</td></tr>
+<tr class="separator:a8bb62f5870216f7381f7bec02148b35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bf471273be023371e4f403cea2c024"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a11bf471273be023371e4f403cea2c024">fopScnRq_ReRequest</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>, void *)</td></tr>
+<tr class="separator:a11bf471273be023371e4f403cea2c024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8aa28f95b80dd1f64d8607afa61e660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ad8aa28f95b80dd1f64d8607afa61e660">fopScnRq_Handler</a> ()</td></tr>
+<tr class="separator:ad8aa28f95b80dd1f64d8607afa61e660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a41352e5e67350d710531f44a59265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ad5a41352e5e67350d710531f44a59265">fpcSch_JudgeByID</a> (void *, void *)</td></tr>
+<tr class="separator:ad5a41352e5e67350d710531f44a59265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11187713a7ad12681da36771c0cef8f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a11187713a7ad12681da36771c0cef8f2">fopScnIt_Judge__FPFPvPv_PvPv</a> ()</td></tr>
+<tr class="separator:a11187713a7ad12681da36771c0cef8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a552019e90c02e51477a489960d87639f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a552019e90c02e51477a489960d87639f">fopScnRq_Request__FiP11scene_classsPvsUs</a> ()</td></tr>
+<tr class="separator:a552019e90c02e51477a489960d87639f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2793cee453487fcfbe0a418a6ab69e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a2793cee453487fcfbe0a418a6ab69e5d">fopScnRq_ReRequest__FUisPv</a> ()</td></tr>
+<tr class="separator:a2793cee453487fcfbe0a418a6ab69e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade50497cf24fcd65f82f025f17bf415a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ade50497cf24fcd65f82f025f17bf415a">fopScnRq_Handler__Fv</a> ()</td></tr>
+<tr class="separator:ade50497cf24fcd65f82f025f17bf415a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac238e2013cb086fcb9c2333c3f386471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#ac238e2013cb086fcb9c2333c3f386471">fpcSch_JudgeByID__FPvPv</a> ()</td></tr>
+<tr class="separator:ac238e2013cb086fcb9c2333c3f386471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a26ef3f4e8359a26228275490398e7288"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a26ef3f4e8359a26228275490398e7288">l_scnRqID</a></td></tr>
-<tr class="separator:a26ef3f4e8359a26228275490398e7288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4528ac8834086eaeb5d7c80c0df97788"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="f__op__scene__mng_8cpp.html#a4528ac8834086eaeb5d7c80c0df97788">l_scnRqID</a> [1+1]</td></tr>
+<tr class="separator:a4528ac8834086eaeb5d7c80c0df97788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a99dfcac284c64b512b6a7471dff68955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99dfcac284c64b512b6a7471dff68955">&#9670;&nbsp;</a></span>fopScnM_ChangeReq()</h2>
+<a id="a5307a779413e60df2f3acf34e3bff6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5307a779413e60df2f3acf34e3bff6bc">&#9670;&nbsp;</a></span>fopScnIt_Judge()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int fopScnM_ChangeReq </td>
+          <td class="memname">void fopScnIt_Judge </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classscene__class.html">scene_class</a> *&#160;</td>
-          <td class="paramname"><em>pScene</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">*)(void *, void *, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>param_2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
-          <td class="paramname"><em>param_3</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
-          <td class="paramname"><em>param_4</em>&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -159,15 +190,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a58a595f219cd1ca8d41576c97fcf78dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58a595f219cd1ca8d41576c97fcf78dc">&#9670;&nbsp;</a></span>fopScnM_CreateReq()</h2>
+<a id="a11187713a7ad12681da36771c0cef8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11187713a7ad12681da36771c0cef8f2">&#9670;&nbsp;</a></span>fopScnIt_Judge__FPFPvPv_PvPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int fopScnM_CreateReq </td>
+          <td class="memname">void fopScnIt_Judge__FPFPvPv_PvPv </td>
           <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8d91448d6a5abc72c6bef68ddc86e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d91448d6a5abc72c6bef68ddc86e1b">&#9670;&nbsp;</a></span>fopScnM_ChangeReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_ChangeReq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structscene__class.html">scene_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
           <td class="paramname"><em>param_1</em>, </td>
         </tr>
@@ -181,13 +235,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
-          <td class="paramname"><em>param_3</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
-          <td class="paramname"><em>param_4</em>&#160;</td>
+          <td class="paramname"><em>param_3</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,17 +247,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab403f39c00b230bdc1ce6e1b6dac8924"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab403f39c00b230bdc1ce6e1b6dac8924">&#9670;&nbsp;</a></span>fopScnM_DeleteReq()</h2>
+<a id="a23e84f89ca31f0423e16319843e11e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e84f89ca31f0423e16319843e11e1d">&#9670;&nbsp;</a></span>fopScnM_ChangeReq__FP11scene_classssUs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int fopScnM_DeleteReq </td>
+          <td class="memname">void fopScnM_ChangeReq__FP11scene_classssUs </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classscene__class.html">scene_class</a> *&#160;</td>
-          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -217,8 +264,100 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac1dd7330a499148e5f472dc974bace3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1dd7330a499148e5f472dc974bace3b">&#9670;&nbsp;</a></span>fopScnM_Init()</h2>
+<a id="ad68cf8e743c48204537300d1929b1fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68cf8e743c48204537300d1929b1fd5">&#9670;&nbsp;</a></span>fopScnM_CreateReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_CreateReq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a074eb7ebbd85f78b42a49cb704aabc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074eb7ebbd85f78b42a49cb704aabc43">&#9670;&nbsp;</a></span>fopScnM_CreateReq__FssUsUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_CreateReq__FssUsUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6eb6b36aa3952c809144ef4e206b2f2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eb6b36aa3952c809144ef4e206b2f2e">&#9670;&nbsp;</a></span>fopScnM_DeleteReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_DeleteReq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structscene__class.html">scene_class</a> *&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2f9be242047a0fa8f6d9e2df5896c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f9be242047a0fa8f6d9e2df5896c18">&#9670;&nbsp;</a></span>fopScnM_DeleteReq__FP11scene_class()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_DeleteReq__FP11scene_class </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a945c3509f57ca47feacbb9c38c83dd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a945c3509f57ca47feacbb9c38c83dd37">&#9670;&nbsp;</a></span>fopScnM_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +365,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopScnM_Init </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -235,8 +373,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a12e571c4fbfca1d682b8dad719542ef4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12e571c4fbfca1d682b8dad719542ef4">&#9670;&nbsp;</a></span>fopScnM_Management()</h2>
+<a id="a5b588695fb44776c6e5f11e332670dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b588695fb44776c6e5f11e332670dee">&#9670;&nbsp;</a></span>fopScnM_Init__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_Init__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8d034b22568a26222a144b65b92f951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d034b22568a26222a144b65b92f951">&#9670;&nbsp;</a></span>fopScnM_Management()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +399,6 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void fopScnM_Management </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -253,22 +407,228 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a36f1944cead38954ebe18463e4d7a9ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36f1944cead38954ebe18463e4d7a9ef">&#9670;&nbsp;</a></span>fopScnM_ReRequest()</h2>
+<a id="aeaa3e28306eb2983afffbd9f40c22c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa3e28306eb2983afffbd9f40c22c9c">&#9670;&nbsp;</a></span>fopScnM_Management__Fv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> fopScnM_ReRequest </td>
+          <td class="memname">void fopScnM_Management__Fv </td>
           <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adae01f46fddbe297e6139c0f4ec132f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae01f46fddbe297e6139c0f4ec132f8">&#9670;&nbsp;</a></span>fopScnM_ReRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_ReRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af96b7077bc12c5070cd89c8d98599908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96b7077bc12c5070cd89c8d98599908">&#9670;&nbsp;</a></span>fopScnM_ReRequest__FsUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_ReRequest__FsUl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8d4ecaf435368cc6566f6f3e7b72e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d4ecaf435368cc6566f6f3e7b72e85">&#9670;&nbsp;</a></span>fopScnM_SearchByID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_SearchByID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eebe35f7952b13d66d97e4d220f7ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eebe35f7952b13d66d97e4d220f7ed4">&#9670;&nbsp;</a></span>fopScnM_SearchByID__FUi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnM_SearchByID__FUi </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8aa28f95b80dd1f64d8607afa61e660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8aa28f95b80dd1f64d8607afa61e660">&#9670;&nbsp;</a></span>fopScnRq_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void fopScnRq_Handler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade50497cf24fcd65f82f025f17bf415a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade50497cf24fcd65f82f025f17bf415a">&#9670;&nbsp;</a></span>fopScnRq_Handler__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnRq_Handler__Fv </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bb62f5870216f7381f7bec02148b35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb62f5870216f7381f7bec02148b35c">&#9670;&nbsp;</a></span>fopScnRq_Request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void fopScnRq_Request </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structscene__class.html">scene_class</a> *&#160;</td>
+          <td class="paramname"><em>param_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
+          <td class="paramname"><em>param_4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>param_5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a552019e90c02e51477a489960d87639f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a552019e90c02e51477a489960d87639f">&#9670;&nbsp;</a></span>fopScnRq_Request__FiP11scene_classsPvsUs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fopScnRq_Request__FiP11scene_classsPvsUs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11bf471273be023371e4f403cea2c024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bf471273be023371e4f403cea2c024">&#9670;&nbsp;</a></span>fopScnRq_ReRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">asm void fopScnRq_ReRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="types_8h.html#a5ffa4f640862b25ba6d4f635b78bdbe1">s16</a>&#160;</td>
           <td class="paramname"><em>param_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>param_2</em>&#160;</td>
         </tr>
         <tr>
@@ -281,17 +641,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c4ced6ff0db7d704e0e8221e4ee2b0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c4ced6ff0db7d704e0e8221e4ee2b0a">&#9670;&nbsp;</a></span>fopScnM_SearchByID()</h2>
+<a id="a2793cee453487fcfbe0a418a6ab69e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2793cee453487fcfbe0a418a6ab69e5d">&#9670;&nbsp;</a></span>fopScnRq_ReRequest__FUisPv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* fopScnM_SearchByID </td>
+          <td class="memname">void fopScnRq_ReRequest__FUisPv </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -299,16 +658,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2282bc0c606cf21773a1cf9bbfdca7e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2282bc0c606cf21773a1cf9bbfdca7e9">&#9670;&nbsp;</a></span>fopScnRq_Request__FiP11scene_classsPvsUs()</h2>
+<a id="ad5a41352e5e67350d710531f44a59265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a41352e5e67350d710531f44a59265">&#9670;&nbsp;</a></span>fpcSch_JudgeByID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void fopScnRq_Request__FiP11scene_classsPvsUs </td>
+          <td class="memname">void fpcSch_JudgeByID </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param_1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac238e2013cb086fcb9c2333c3f386471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac238e2013cb086fcb9c2333c3f386471">&#9670;&nbsp;</a></span>fpcSch_JudgeByID__FPvPv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fpcSch_JudgeByID__FPvPv </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -318,8 +704,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a26ef3f4e8359a26228275490398e7288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ef3f4e8359a26228275490398e7288">&#9670;&nbsp;</a></span>l_scnRqID</h2>
+<a id="a4528ac8834086eaeb5d7c80c0df97788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4528ac8834086eaeb5d7c80c0df97788">&#9670;&nbsp;</a></span>l_scnRqID</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,16 +714,21 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int l_scnRqID</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> l_scnRqID[1+1]</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0xFFFFFFFF,</div>
+<div class="line">    </div>
+<div class="line">    0x00000000,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
