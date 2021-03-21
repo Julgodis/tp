@@ -1,0 +1,65 @@
+lbl_8012E1E8:
+/* 8012E1E8 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8012E1EC 00000004  7C 08 02 A6 */	mflr r0
+/* 8012E1F0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8012E1F4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 8012E1F8 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 8012E1FC 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 8012E200 00000018  7C 9F 23 78 */	mr r31, r4
+/* 8012E204 0000001C  38 80 00 F8 */	li r4, 0xf8
+/* 8012E208 00000020  4B F9 3D 65 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
+/* 8012E20C 00000024  88 1E 2F 98 */	lbz r0, 0x2f98(r30)
+/* 8012E210 00000028  28 00 00 01 */	cmplwi r0, 1
+/* 8012E214 0000002C  40 82 00 38 */	bne lbl_8012E24C
+/* 8012E218 00000030  7F C3 F3 78 */	mr r3, r30
+/* 8012E21C 00000034  38 80 00 4D */	li r4, 0x4d
+/* 8012E220 00000038  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlSideStep_c0@ha
+/* 8012E224 0000003C  38 A5 EF A8 */	addi r5, r5, m__24daAlinkHIO_wlSideStep_c0@l
+/* 8012E228 00000040  38 A5 00 3C */	addi r5, r5, 0x3c
+/* 8012E22C 00000044  4B FF B6 1D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
+/* 8012E230 00000048  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlSideStep_c0@ha
+/* 8012E234 0000004C  38 63 EF A8 */	addi r3, r3, m__24daAlinkHIO_wlSideStep_c0@l
+/* 8012E238 00000050  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 8012E23C 00000054  D0 1E 34 78 */	stfs f0, 0x3478(r30)
+/* 8012E240 00000058  38 00 00 0A */	li r0, 0xa
+/* 8012E244 0000005C  98 1E 2F CC */	stb r0, 0x2fcc(r30)
+/* 8012E248 00000060  48 00 00 44 */	b lbl_8012E28C
+lbl_8012E24C:
+/* 8012E24C 00000000  38 00 00 00 */	li r0, 0
+/* 8012E250 00000004  98 1E 2F CC */	stb r0, 0x2fcc(r30)
+/* 8012E254 00000008  7F C3 F3 78 */	mr r3, r30
+/* 8012E258 0000000C  88 1E 2F 98 */	lbz r0, 0x2f98(r30)
+/* 8012E25C 00000010  28 00 00 02 */	cmplwi r0, 2
+/* 8012E260 00000014  38 80 00 4B */	li r4, 0x4b
+/* 8012E264 00000018  40 82 00 08 */	bne lbl_8012E26C
+/* 8012E268 0000001C  38 80 00 49 */	li r4, 0x49
+lbl_8012E26C:
+/* 8012E26C 00000000  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlSideStep_c0@ha
+/* 8012E270 00000004  38 A5 EF A8 */	addi r5, r5, m__24daAlinkHIO_wlSideStep_c0@l
+/* 8012E274 00000008  38 A5 00 14 */	addi r5, r5, 0x14
+/* 8012E278 0000000C  4B FF B5 D1 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
+/* 8012E27C 00000010  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlSideStep_c0@ha
+/* 8012E280 00000014  38 63 EF A8 */	addi r3, r3, m__24daAlinkHIO_wlSideStep_c0@l
+/* 8012E284 00000018  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 8012E288 0000001C  D0 1E 34 78 */	stfs f0, 0x3478(r30)
+lbl_8012E28C:
+/* 8012E28C 00000000  B3 FE 30 12 */	sth r31, 0x3012(r30)
+/* 8012E290 00000004  38 00 00 04 */	li r0, 4
+/* 8012E294 00000008  98 1E 2F 9D */	stb r0, 0x2f9d(r30)
+/* 8012E298 0000000C  7F C3 F3 78 */	mr r3, r30
+/* 8012E29C 00000010  38 80 00 02 */	li r4, 2
+/* 8012E2A0 00000014  4B FF 2F 21 */	bl setFootEffectProcType__9daAlink_cFi
+/* 8012E2A4 00000018  80 1E 05 84 */	lwz r0, 0x584(r30)
+/* 8012E2A8 0000001C  60 00 00 0C */	ori r0, r0, 0xc
+/* 8012E2AC 00000020  90 1E 05 84 */	stw r0, 0x584(r30)
+/* 8012E2B0 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
+/* 8012E2B4 00000028  D0 1E 33 98 */	stfs f0, 0x3398(r30)
+/* 8012E2B8 0000002C  7F C3 F3 78 */	mr r3, r30
+/* 8012E2BC 00000030  4B F8 79 A9 */	bl setStepLandVibration__9daAlink_cFv
+/* 8012E2C0 00000034  38 60 00 01 */	li r3, 1
+/* 8012E2C4 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 8012E2C8 0000003C  83 C1 00 08 */	lwz r30, 8(r1)
+/* 8012E2CC 00000040  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8012E2D0 00000044  7C 08 03 A6 */	mtlr r0
+/* 8012E2D4 00000048  38 21 00 10 */	addi r1, r1, 0x10
+/* 8012E2D8 0000004C  4E 80 00 20 */	blr 

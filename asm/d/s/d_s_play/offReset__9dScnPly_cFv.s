@@ -1,0 +1,31 @@
+lbl_80259BFC:
+/* 80259BFC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80259C00 00000004  7C 08 02 A6 */	mflr r0
+/* 80259C04 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80259C08 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80259C0C 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80259C10 00000014  88 03 01 D4 */	lbz r0, 0x1d4(r3)
+/* 80259C14 00000018  28 00 00 00 */	cmplwi r0, 0
+/* 80259C18 0000001C  41 82 00 44 */	beq lbl_80259C5C
+/* 80259C1C 00000020  4B DC 49 3D */	bl fopOvlpM_IsPeek__Fv
+/* 80259C20 00000024  2C 03 00 00 */	cmpwi r3, 0
+/* 80259C24 00000028  40 82 00 38 */	bne lbl_80259C5C
+/* 80259C28 0000002C  38 80 00 00 */	li r4, 0
+/* 80259C2C 00000030  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst(r13)
+/* 80259C30 00000034  90 83 00 00 */	stw r4, 0(r3)
+/* 80259C34 00000038  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst(r13)
+/* 80259C38 0000003C  90 83 00 04 */	stw r4, 4(r3)
+/* 80259C3C 00000040  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst(r13)
+/* 80259C40 00000044  90 83 00 04 */	stw r4, 4(r3)
+/* 80259C44 00000048  98 8D 8F 81 */	stb r4, struct_80451500+0x1(r13)
+/* 80259C48 0000004C  3C 60 80 01 */	lis r3, mDoRst_resetCallBack__FiPv@ha
+/* 80259C4C 00000050  38 03 57 4C */	addi r0, r3, mDoRst_resetCallBack__FiPv@l
+/* 80259C50 00000054  90 0D 8F 6C */	stw r0, sCallback__Q210JUTGamePad13C3ButtonReset(r13)
+/* 80259C54 00000058  90 8D 8F 70 */	stw r4, sCallbackArg__Q210JUTGamePad13C3ButtonReset(r13)
+/* 80259C58 0000005C  98 9F 01 D4 */	stb r4, 0x1d4(r31)
+lbl_80259C5C:
+/* 80259C5C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80259C60 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80259C64 00000008  7C 08 03 A6 */	mtlr r0
+/* 80259C68 0000000C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80259C6C 00000010  4E 80 00 20 */	blr 

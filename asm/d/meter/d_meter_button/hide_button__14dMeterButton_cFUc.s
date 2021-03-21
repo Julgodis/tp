@@ -1,0 +1,82 @@
+lbl_8020A94C:
+/* 8020A94C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 8020A950 00000004  7C 08 02 A6 */	mflr r0
+/* 8020A954 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 8020A958 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 8020A95C 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 8020A960 00000014  88 03 04 BE */	lbz r0, 0x4be(r3)
+/* 8020A964 00000018  54 83 06 3E */	clrlwi r3, r4, 0x18
+/* 8020A968 0000001C  7C 00 18 40 */	cmplw r0, r3
+/* 8020A96C 00000020  40 82 00 C8 */	bne lbl_8020AA34
+/* 8020A970 00000024  88 1F 04 BF */	lbz r0, 0x4bf(r31)
+/* 8020A974 00000028  28 00 00 16 */	cmplwi r0, 0x16
+/* 8020A978 0000002C  41 82 00 90 */	beq lbl_8020AA08
+/* 8020A97C 00000030  28 00 00 01 */	cmplwi r0, 1
+/* 8020A980 00000034  41 82 00 88 */	beq lbl_8020AA08
+/* 8020A984 00000038  98 1F 04 BE */	stb r0, 0x4be(r31)
+/* 8020A988 0000003C  38 00 00 16 */	li r0, 0x16
+/* 8020A98C 00000040  98 1F 04 BF */	stb r0, 0x4bf(r31)
+/* 8020A990 00000044  A8 1F 04 BA */	lha r0, 0x4ba(r31)
+/* 8020A994 00000048  B0 1F 04 B8 */	sth r0, 0x4b8(r31)
+/* 8020A998 0000004C  88 1F 04 BD */	lbz r0, 0x4bd(r31)
+/* 8020A99C 00000050  98 1F 04 BC */	stb r0, 0x4bc(r31)
+/* 8020A9A0 00000054  38 00 00 00 */	li r0, 0
+/* 8020A9A4 00000058  B0 1F 04 BA */	sth r0, 0x4ba(r31)
+/* 8020A9A8 0000005C  98 1F 04 BD */	stb r0, 0x4bd(r31)
+/* 8020A9AC 00000060  38 7F 01 23 */	addi r3, r31, 0x123
+/* 8020A9B0 00000064  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 8020A9B4 00000068  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
+/* 8020A9B8 0000006C  38 84 00 21 */	addi r4, r4, 0x21
+/* 8020A9BC 00000070  48 15 E1 71 */	bl strcpy
+/* 8020A9C0 00000074  80 7F 00 7C */	lwz r3, 0x7c(r31)
+/* 8020A9C4 00000078  A8 03 00 16 */	lha r0, 0x16(r3)
+/* 8020A9C8 0000007C  80 7F 00 78 */	lwz r3, 0x78(r31)
+/* 8020A9CC 00000080  B0 03 00 16 */	sth r0, 0x16(r3)
+/* 8020A9D0 00000084  80 7F 00 7C */	lwz r3, 0x7c(r31)
+/* 8020A9D4 00000088  48 04 AE 55 */	bl getAlphaRate__13CPaneMgrAlphaFv
+/* 8020A9D8 0000008C  80 7F 00 78 */	lwz r3, 0x78(r31)
+/* 8020A9DC 00000090  48 04 AD F5 */	bl setAlphaRate__13CPaneMgrAlphaFf
+/* 8020A9E0 00000094  38 00 00 00 */	li r0, 0
+/* 8020A9E4 00000098  80 7F 00 7C */	lwz r3, 0x7c(r31)
+/* 8020A9E8 0000009C  B0 03 00 16 */	sth r0, 0x16(r3)
+/* 8020A9EC 000000A0  80 7F 00 7C */	lwz r3, 0x7c(r31)
+/* 8020A9F0 000000A4  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
+/* 8020A9F4 000000A8  48 04 AD DD */	bl setAlphaRate__13CPaneMgrAlphaFf
+/* 8020A9F8 000000AC  80 7F 00 F4 */	lwz r3, 0xf4(r31)
+/* 8020A9FC 000000B0  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
+/* 8020AA00 000000B4  48 04 AD D1 */	bl setAlphaRate__13CPaneMgrAlphaFf
+/* 8020AA04 000000B8  48 00 00 6C */	b lbl_8020AA70
+lbl_8020AA08:
+/* 8020AA08 00000000  38 00 00 16 */	li r0, 0x16
+/* 8020AA0C 00000004  98 1F 04 BE */	stb r0, 0x4be(r31)
+/* 8020AA10 00000008  38 00 00 00 */	li r0, 0
+/* 8020AA14 0000000C  B0 1F 04 B8 */	sth r0, 0x4b8(r31)
+/* 8020AA18 00000010  98 1F 04 BC */	stb r0, 0x4bc(r31)
+/* 8020AA1C 00000014  38 7F 01 14 */	addi r3, r31, 0x114
+/* 8020AA20 00000018  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 8020AA24 0000001C  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
+/* 8020AA28 00000020  38 84 00 21 */	addi r4, r4, 0x21
+/* 8020AA2C 00000024  48 15 E1 01 */	bl strcpy
+/* 8020AA30 00000028  48 00 00 40 */	b lbl_8020AA70
+lbl_8020AA34:
+/* 8020AA34 00000000  88 1F 04 BF */	lbz r0, 0x4bf(r31)
+/* 8020AA38 00000004  7C 00 18 40 */	cmplw r0, r3
+/* 8020AA3C 00000008  40 82 00 34 */	bne lbl_8020AA70
+/* 8020AA40 0000000C  38 00 00 16 */	li r0, 0x16
+/* 8020AA44 00000010  98 1F 04 BF */	stb r0, 0x4bf(r31)
+/* 8020AA48 00000014  38 00 00 00 */	li r0, 0
+/* 8020AA4C 00000018  B0 1F 04 BA */	sth r0, 0x4ba(r31)
+/* 8020AA50 0000001C  98 1F 04 BD */	stb r0, 0x4bd(r31)
+/* 8020AA54 00000020  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 8020AA58 00000024  D0 1F 02 F4 */	stfs f0, 0x2f4(r31)
+/* 8020AA5C 00000028  38 7F 01 23 */	addi r3, r31, 0x123
+/* 8020AA60 0000002C  3C 80 80 3A */	lis r4, d_meter_d_meter_button__stringBase0@ha
+/* 8020AA64 00000030  38 84 80 E8 */	addi r4, r4, d_meter_d_meter_button__stringBase0@l
+/* 8020AA68 00000034  38 84 00 21 */	addi r4, r4, 0x21
+/* 8020AA6C 00000038  48 15 E0 C1 */	bl strcpy
+lbl_8020AA70:
+/* 8020AA70 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 8020AA74 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 8020AA78 00000008  7C 08 03 A6 */	mtlr r0
+/* 8020AA7C 0000000C  38 21 00 10 */	addi r1, r1, 0x10
+/* 8020AA80 00000010  4E 80 00 20 */	blr 

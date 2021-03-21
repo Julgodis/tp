@@ -1,0 +1,12 @@
+lbl_800EEE30:
+/* 800EEE30 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 800EEE34 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 800EEE38 00000008  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 800EEE3C 0000000C  C0 43 05 2C */	lfs f2, 0x52c(r3)
+/* 800EEE40 00000010  C0 22 94 D0 */	lfs f1, lit_18847(r2)
+/* 800EEE44 00000014  C0 03 17 90 */	lfs f0, 0x1790(r3)
+/* 800EEE48 00000018  EC 01 00 32 */	fmuls f0, f1, f0
+/* 800EEE4C 0000001C  FC 02 00 40 */	fcmpo cr0, f2, f0
+/* 800EEE50 00000000  7C 00 00 26 */	mfcr r0
+/* 800EEE54 00000004  54 03 17 FE */	rlwinm r3, r0, 2, 0x1f, 0x1f
+/* 800EEE58 00000008  4E 80 00 20 */	blr 

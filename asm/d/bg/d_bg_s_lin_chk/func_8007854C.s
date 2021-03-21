@@ -1,0 +1,3 @@
+lbl_8007854C:
+/* 8007854C 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 80078550 00000004  4B FF F8 B0 */	b __dt__14dBgS_CamLinChkFv

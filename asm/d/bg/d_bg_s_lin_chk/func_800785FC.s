@@ -1,0 +1,3 @@
+lbl_800785FC:
+/* 800785FC 00000000  38 63 FF 98 */	addi r3, r3, -104
+/* 80078600 00000004  4B FF FD E8 */	b __dt__15dBgS_RopeLinChkFv
