@@ -109,12 +109,12 @@ clean:
 	$(MAKE) -C tools clean
 
 tools:
-	$(MAKE) -C tools
+	@$(MAKE) -C tools
 
 docs:
 	$(DOXYGEN) Doxyfile
 
-$(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
+$(ELF): $(LIBS) $(O_FILES)
 	echo $(O_FILES) > build/o_files
 	python3 tools/lcf.py --output $(LDSCRIPT)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files $(LIBS)
