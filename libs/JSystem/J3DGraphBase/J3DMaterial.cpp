@@ -80,11 +80,11 @@ struct J3DColorBlockLightOff {
 	/* 8031747C */ void initialize();
 };
 
-struct J3DLightObj {
-};
-
 struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
+};
+
+struct J3DLightObj {
 };
 
 struct J3DGXColor {
@@ -132,11 +132,11 @@ struct J3DTexGenBlockPatched {
 	/* 80317644 */ void initialize();
 };
 
-struct J3DTexMtx {
-};
-
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
+};
+
+struct J3DTexMtx {
 };
 
 struct J3DNBTScale {
@@ -167,9 +167,8 @@ struct J3DTevBlock {
 	/* 80317350 */ void reset(J3DTevBlock*);
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-	/* 8000E0E4 */ J3DIndTexCoordScale();
+struct J3DIndTexOrder {
+	/* 8000E128 */ J3DIndTexOrder();
 };
 
 struct J3DIndTexMtx {
@@ -177,8 +176,9 @@ struct J3DIndTexMtx {
 	/* 8000E0F0 */ J3DIndTexMtx();
 };
 
-struct J3DIndTexOrder {
-	/* 8000E128 */ J3DIndTexOrder();
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
 struct J3DIndBlock {
@@ -198,9 +198,6 @@ struct J3DIndBlock {
 	/* 80317410 */ void setIndTexOrder(u32, J3DIndTexOrder);
 };
 
-struct J3DFog {
-};
-
 struct J3DAlphaComp {
 };
 
@@ -208,6 +205,9 @@ struct J3DBlend {
 };
 
 struct J3DZMode {
+};
+
+struct J3DFog {
 };
 
 struct J3DPEBlock {

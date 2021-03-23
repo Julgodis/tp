@@ -17,16 +17,6 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
-struct dEvDtData_c {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct dEvDtStaff_c {
 	/* 80044134 */ void init();
 };
@@ -37,6 +27,16 @@ struct dEvDtEvent_c {
 };
 
 struct fopAc_ac_c {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dEvDtData_c {
 };
 
 struct dEvent_manager_c {

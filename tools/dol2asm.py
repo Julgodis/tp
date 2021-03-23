@@ -28,7 +28,6 @@ from pathlib import Path
 @click.option('--threads', '-j', 'process_count', default=8)
 @click.option('--select-module', '-g', 'select_modules', help = "Select what modules to generate. Default is everything.", multiple=True)
 def main(debug, game_path, asm_path, lib_path, src_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules):
-    libdol2asm.split(debug, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules)
-
+    return libdol2asm.split(debug, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules)
 
 main()

@@ -11,20 +11,6 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
-struct cXyz {
-	/* 80A29908 */ ~cXyz();
-	/* 80A29944 */ cXyz();
-};
-
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -37,6 +23,20 @@ struct daNpcF_c {
 	/* 80A29F1C */ void setExpressionBtp(int);
 	/* 80A29F24 */ void setExpression(int, f32);
 	/* 80A29F28 */ void drawOtherMdls();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	/* 80A29908 */ ~cXyz();
+	/* 80A29944 */ cXyz();
 };
 
 struct daNpcKasiMich_c {

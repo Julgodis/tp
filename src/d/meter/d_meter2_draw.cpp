@@ -14,6 +14,38 @@
 struct JKRExpHeap {
 };
 
+struct J2DGrafContext {
+};
+
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmColor {
+};
+
 struct J2DBasePosition {
 };
 
@@ -28,43 +60,11 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
-struct J2DGrafContext {
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 8025564C */ void isVisible();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
-struct J2DAnmColor {
 };
 
 struct dMeter2Draw_c {
@@ -192,9 +192,6 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JMSMesgEntry_c {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -204,15 +201,18 @@ struct JGeometry {
 
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {

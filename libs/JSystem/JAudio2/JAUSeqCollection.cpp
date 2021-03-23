@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISeqDataRegion {
+struct JAISeqData {
 };
 
-struct JAISeqData {
+struct JAISeqDataRegion {
 };
 
 struct JAUSeqCollection {
@@ -24,10 +24,10 @@ struct JAUSeqCollection {
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-struct JAISeqDataUser {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISeqDataUser {
 };
 
 struct JAUSeqDataMgr_SeqCollection {

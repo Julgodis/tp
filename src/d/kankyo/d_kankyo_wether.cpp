@@ -150,13 +150,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_levelEcallBack {

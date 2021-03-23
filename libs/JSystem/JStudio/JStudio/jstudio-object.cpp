@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct Vec {
-};
-
 struct _GXColor {
 };
 
-namespace JStudio {
-	struct TControl {
-	};
+struct Vec {
+};
 
+namespace JStudio {
 	struct data {
 		struct TEOperationData {
 		};
 
+	};
+
+	struct TControl {
 	};
 
 	struct TAdaptor {

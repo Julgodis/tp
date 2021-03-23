@@ -18,9 +18,6 @@ struct dCamMapToolData {
 	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
 };
 
-struct stage_camera2_data_class {
-};
-
 struct Vec {
 };
 
@@ -45,6 +42,9 @@ struct cXyz {
 
 struct dBgS_LinChk {
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct stage_camera2_data_class {
 };
 
 struct camera_class {
@@ -511,11 +511,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_PolyInfo {
 };
 
-struct cBgS_PolyInfo {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {

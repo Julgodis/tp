@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct mesg_flow_node_branch {
 };
 
@@ -28,6 +21,13 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A528 */ void getEventId(int*);
 	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct STControl {
@@ -113,10 +113,10 @@ struct dDlst_list_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {

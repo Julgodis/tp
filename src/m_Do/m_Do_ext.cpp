@@ -19,13 +19,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
+struct J3DAnmColor;
 struct J3DMaterialTable;
 struct J3DAnmTextureSRTKey {
 	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
-struct J3DAnmColor {
-	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DAnmTexPattern {
@@ -41,6 +38,10 @@ struct J3DMaterialTable {
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct J3DAnmColor {
+	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct mDoExt_bpkAnm {
@@ -63,10 +64,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -125,8 +126,24 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DTevOrder {
+	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
 struct J3DTevSwapModeTable {
 	/* 8000E134 */ J3DTevSwapModeTable();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
 };
 
 struct J3DTevStageInfo {
@@ -135,22 +152,6 @@ struct J3DTevStageInfo {
 struct J3DTevStage {
 	/* 8000E230 */ J3DTevStage();
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DTevOrder {
-	/* 8000E140 */ J3DTevOrder();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DTevBlock {
@@ -178,10 +179,10 @@ struct J3DTevBlock {
 	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
-struct J3DAlphaComp {
+struct J3DBlend {
 };
 
-struct J3DBlend {
+struct J3DAlphaComp {
 };
 
 struct J3DZMode {
@@ -216,14 +217,14 @@ struct J3DColorBlock {
 	/* 8000E0E0 */ void setColorChanNum(u8);
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-	/* 8000E0E4 */ J3DIndTexCoordScale();
-};
-
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 	/* 8000E0F0 */ J3DIndTexMtx();
+};
+
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
 struct J3DIndBlock {
@@ -346,10 +347,10 @@ struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorf {
@@ -402,10 +403,10 @@ struct mDoExt_3Dline_c {
 	/* 800126BC */ mDoExt_3Dline_c();
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat0_c {
@@ -458,10 +459,10 @@ struct dDlst_list_c {
 	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
 struct Z2SoundObjBase {
@@ -538,10 +539,10 @@ struct J3DIndTexMtxInfo {
 struct J3DTexMtxAnm {
 };
 
-struct J3DTevColorAnm {
+struct J3DTevKColorAnm {
 };
 
-struct J3DTevKColorAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {

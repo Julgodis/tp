@@ -31,18 +31,18 @@ struct daMidna_McaMorfCB1_c {
 struct mDoExt_invisibleModel {
 };
 
-struct cXyz {
-	/* 804BD8B8 */ ~cXyz();
-	/* 804BD8F4 */ cXyz();
+struct J3DModel {
+};
+
+struct J3DAnmTransform {
 };
 
 struct J3DModelData {
 };
 
-struct J3DModel {
-};
-
-struct J3DAnmTransform {
+struct cXyz {
+	/* 804BD8B8 */ ~cXyz();
+	/* 804BD8F4 */ cXyz();
 };
 
 struct daMidna_c {

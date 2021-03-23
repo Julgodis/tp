@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct JKRExpandSwitch {
-};
-
 struct JKRADCommand {
 	/* 802DAF1C */ JKRADCommand();
 	/* 802DAF5C */ ~JKRADCommand();
+};
+
+struct JKRExpandSwitch {
 };
 
 struct JKRDvdFile {

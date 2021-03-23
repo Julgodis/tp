@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct _GXColorS10 {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -33,6 +21,18 @@ struct daNpcF_c {
 	/* 809863F0 */ void setCollisions();
 	/* 809863F4 */ void setExpressionAnm(int, bool);
 	/* 809863FC */ void setExpression(int, f32);
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcChat_c {

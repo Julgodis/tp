@@ -46,6 +46,18 @@ namespace JGadget {
 
 namespace JStudio {
 	namespace fvb {
+		struct TObject;
+		struct TControl {
+			/* 80284668 */ TControl();
+			/* 80284698 */ ~TControl();
+			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
+			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
+			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
+			/* 802847D0 */ void destroyObject_all();
+			/* 80284834 */ void getObject(void const*, u32);
+			/* 802848D4 */ void getObject_index(u32);
+		};
+
 		struct data {
 			struct TParse_TBlock {
 			};
@@ -57,18 +69,6 @@ namespace JStudio {
 				/* 802850AC */ void getData(JStudio::fvb::data::TParse_TParagraph::TData*) const;
 			};
 
-		};
-
-		struct TObject;
-		struct TControl {
-			/* 80284668 */ TControl();
-			/* 80284698 */ ~TControl();
-			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
-			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
-			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
-			/* 802847D0 */ void destroyObject_all();
-			/* 80284834 */ void getObject(void const*, u32);
-			/* 802848D4 */ void getObject_index(u32);
 		};
 
 		struct TObject {

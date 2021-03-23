@@ -16,12 +16,12 @@ struct daE_Sm_HIO_c {
 	/* 807980E8 */ ~daE_Sm_HIO_c();
 };
 
+struct cXyz {
+};
+
 struct csXyz {
 	/* 8079809C */ csXyz();
 	/* 80798590 */ ~csXyz();
-};
-
-struct cXyz {
 };
 
 struct daE_SM_c {

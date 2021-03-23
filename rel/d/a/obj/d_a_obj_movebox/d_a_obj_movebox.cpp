@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
 struct dBgW {
 };
 
@@ -22,16 +28,7 @@ struct cXyz {
 	/* 8047DBEC */ cXyz();
 };
 
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
 struct daObjMovebox {
-	struct BgcSrc_c {
-	};
-
 	struct Act_c {
 		struct Prm_e {
 		};
@@ -67,6 +64,9 @@ struct daObjMovebox {
 		/* 8048027C */ void Execute(f32 (** )[3][4]);
 		/* 80480728 */ void Draw();
 		/* 804808FC */ void Delete();
+	};
+
+	struct BgcSrc_c {
 	};
 
 	struct Bgc_c {

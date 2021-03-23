@@ -14,10 +14,10 @@
 struct cCcD_Obj {
 };
 
-struct J3DModel {
+struct dBgW {
 };
 
-struct dBgW {
+struct J3DModel {
 };
 
 struct fopAc_ac_c {

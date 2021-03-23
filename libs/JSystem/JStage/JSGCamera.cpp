@@ -15,10 +15,10 @@ struct Vec {
 };
 
 struct JStage {
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
 	struct TCamera {

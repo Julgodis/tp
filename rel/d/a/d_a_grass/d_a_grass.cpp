@@ -28,15 +28,15 @@ struct daGrass_c {
 	/* 8051C304 */ void create();
 };
 
-struct cCcD_Obj {
+struct csXyz {
+	/* 8051EB4C */ ~csXyz();
 };
 
 struct dCcMassS_HitInf {
 	/* 8051ED98 */ ~dCcMassS_HitInf();
 };
 
-struct csXyz {
-	/* 8051EB4C */ ~csXyz();
+struct cCcD_Obj {
 };
 
 struct fopAc_ac_c {

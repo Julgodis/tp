@@ -17,13 +17,13 @@ struct cXyz {
 struct layer_class {
 };
 
-struct csXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_levelEcallBack {

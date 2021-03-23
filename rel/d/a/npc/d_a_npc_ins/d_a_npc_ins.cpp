@@ -14,7 +14,10 @@
 struct fopAc_ac_c {
 };
 
-struct Vec {
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct cXyz {
@@ -22,10 +25,7 @@ struct cXyz {
 	/* 80A13728 */ cXyz();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
+struct Vec {
 };
 
 struct daNpcIns_c {

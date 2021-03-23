@@ -19,10 +19,10 @@ struct daE_OC_HIO_c {
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct J3DModel {
 };
 
 struct daE_OC_c {

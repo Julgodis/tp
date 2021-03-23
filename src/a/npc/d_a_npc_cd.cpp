@@ -14,10 +14,10 @@
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
 struct daNpcCd_c {
@@ -72,19 +72,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
 };
 
 struct J3DModelData {
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -105,13 +105,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_levelEcallBack {

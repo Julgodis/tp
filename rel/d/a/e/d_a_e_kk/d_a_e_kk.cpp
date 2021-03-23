@@ -16,12 +16,12 @@ struct daE_KK_HIO_c {
 	/* 806FF0F0 */ ~daE_KK_HIO_c();
 };
 
+struct J3DJoint {
+};
+
 struct cXyz {
 	/* 806FF084 */ cXyz();
 	/* 806FF598 */ ~cXyz();
-};
-
-struct J3DJoint {
 };
 
 struct J3DModel {

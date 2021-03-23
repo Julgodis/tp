@@ -11,19 +11,17 @@
 // Types:
 // 
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844B8 */ void ResetTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846B0 */ void ResetCoHit();
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
 };
 
 struct Vec {
@@ -48,36 +46,15 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct J3DAnmTransform {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daPy_py_c {
@@ -310,48 +287,23 @@ struct daPy_py_c {
 	/* 8015F730 */ void checkCarryStartLightBallB();
 };
 
-struct daPy_anmHeap_c {
-	struct daAlinkHEAP_TYPE {
-	};
-
-	/* 80140DCC */ void __defctor();
-	/* 8015ED10 */ daPy_anmHeap_c(u32);
-	/* 8015ED50 */ ~daPy_anmHeap_c();
-	/* 8015EDC4 */ void mallocBuffer();
-	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
-	/* 8015F068 */ void loadDataIdx(u16);
-	/* 8015F0D0 */ void loadDataPriIdx(u16);
-	/* 8015F118 */ void loadDataDemoRID(u16, u16);
-	/* 8015F168 */ void setAnimeHeap();
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 };
 
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
-struct JPABaseEmitter {
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 800CFFE0 */ void getAnmMtx(int);
-	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
-	/* 803279A0 */ void diff();
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327C58 */ void calcWeightEnvelopeMtx();
-};
-
-struct dCcG_At_Spl {
-};
-
-struct fopEn_enemy_c {
+struct J3DAnmTransform {
 };
 
 struct J3DModelData {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
 struct JKRHeap {
@@ -360,12 +312,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
 struct J3DAnmBase {
@@ -382,6 +328,44 @@ struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
+struct daPy_anmHeap_c {
+	struct daAlinkHEAP_TYPE {
+	};
+
+	/* 80140DCC */ void __defctor();
+	/* 8015ED10 */ daPy_anmHeap_c(u32);
+	/* 8015ED50 */ ~daPy_anmHeap_c();
+	/* 8015EDC4 */ void mallocBuffer();
+	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
+	/* 8015F068 */ void loadDataIdx(u16);
+	/* 8015F0D0 */ void loadDataPriIdx(u16);
+	/* 8015F118 */ void loadDataDemoRID(u16, u16);
+	/* 8015F168 */ void setAnimeHeap();
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
+struct JPABaseEmitter {
+};
+
+struct fopEn_enemy_c {
+};
+
 struct daPy_frameCtrl_c {
 	/* 80140D24 */ ~daPy_frameCtrl_c();
 	/* 80140D80 */ daPy_frameCtrl_c();
@@ -390,22 +374,38 @@ struct daPy_frameCtrl_c {
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846B0 */ void ResetCoHit();
+};
+
+struct J3DDeformData {
+};
+
+struct J3DModel {
+	/* 800CFFE0 */ void getAnmMtx(int);
+	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
+	/* 803279A0 */ void diff();
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327C58 */ void calcWeightEnvelopeMtx();
+};
+
+struct dCcG_At_Spl {
+};
+
 struct daAlink_footData_c {
 	/* 800CFCB8 */ ~daAlink_footData_c();
 	/* 800CFCF4 */ daAlink_footData_c();
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct daAlink_c {
@@ -2422,10 +2422,10 @@ struct J3DTevBlock {
 	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DPane {
@@ -2544,11 +2544,11 @@ struct daHorse_c {
 	/* 80141944 */ void getZeldaActor();
 };
 
-struct Z2SoundObjBase {
-	/* 802BDFF8 */ void deleteObject();
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Z2SoundObjBase {
+	/* 802BDFF8 */ void deleteObject();
 };
 
 struct Z2CreatureLink {
@@ -3036,11 +3036,11 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct JKRArchive {
-	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
+	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
 struct J2DScreen {
@@ -3112,13 +3112,13 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-struct JAISeqMgr {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISeqMgr {
 };
 
 struct JAISeq {

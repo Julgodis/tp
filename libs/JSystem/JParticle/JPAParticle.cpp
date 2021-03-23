@@ -15,12 +15,12 @@ struct JPAParticleCallBack {
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
+struct JPAEmitterWorkData {
+};
+
 struct JPABaseParticle;
 struct JPABaseEmitter {
 	/* 8027EB60 */ void createChild(JPABaseParticle*);
-};
-
-struct JPAEmitterWorkData {
 };
 
 struct JPABaseParticle {

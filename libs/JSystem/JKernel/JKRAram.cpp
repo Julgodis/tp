@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JKRExpandSwitch {
+struct JKRAramBlock {
 };
 
 struct JKRHeap {
@@ -20,7 +20,7 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-struct JKRAramBlock {
+struct JKRExpandSwitch {
 };
 
 struct JKRAram {

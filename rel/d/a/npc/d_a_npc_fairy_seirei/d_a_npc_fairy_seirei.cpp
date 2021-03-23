@@ -11,13 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_evtData_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -25,6 +22,9 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct daNpc_FairySeirei_c {

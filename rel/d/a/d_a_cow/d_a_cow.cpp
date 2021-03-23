@@ -11,17 +11,17 @@
 // Types:
 // 
 
+struct J3DJoint {
+};
+
 struct cXyz {
 	/* 80658A68 */ ~cXyz();
 };
 
-struct J3DJoint {
+struct fopAc_ac_c {
 };
 
 struct J3DModel {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daCow_c {

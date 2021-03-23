@@ -14,13 +14,13 @@
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct Vec {
 };
 
 struct fopAc_ac_c {
 };
 
-struct Vec {
+struct J3DModel {
 };
 
 struct daNpcShad_c {

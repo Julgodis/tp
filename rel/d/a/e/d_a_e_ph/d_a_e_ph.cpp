@@ -16,10 +16,10 @@ struct daE_PH_HIO_c {
 	/* 80741B4C */ ~daE_PH_HIO_c();
 };
 
-struct cXyz {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct cXyz {
 };
 
 struct J3DModel {

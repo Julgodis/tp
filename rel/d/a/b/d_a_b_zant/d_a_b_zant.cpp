@@ -19,13 +19,13 @@ struct daB_ZANT_HIO_c {
 struct J3DJoint {
 };
 
-struct J3DModel {
-};
-
 struct dCcD_Sph {
 	/* 8063F0F4 */ void operator=(dCcD_Sph const&);
 	/* 8063F3C8 */ ~dCcD_Sph();
 	/* 8064E76C */ dCcD_Sph();
+};
+
+struct J3DModel {
 };
 
 struct daB_ZANT_c {

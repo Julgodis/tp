@@ -22,30 +22,6 @@ struct J3DAnmLoaderDataBase {
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-struct J3DAnmTransformFullData {
-};
-
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-struct J3DAnmTexPatternFullData {
-};
-
-struct J3DAnmClusterFull {
-};
-
-struct J3DAnmTransformFull {
-};
-
-struct J3DAnmVisibilityFull {
-	/* 8033979C */ ~J3DAnmVisibilityFull();
-	/* 803397F8 */ void getKind() const;
-};
-
-struct J3DAnmVisibilityFullData {
-};
-
 struct J3DAnmVtxColorFull {
 	/* 8032A30C */ J3DAnmVtxColorFull();
 };
@@ -53,11 +29,35 @@ struct J3DAnmVtxColorFull {
 struct J3DAnmColorFullData {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AED8 */ J3DAnmTexPattern();
+struct J3DAnmTransformFull {
+};
+
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
+};
+
+struct J3DAnmVisibilityFullData {
+};
+
+struct J3DAnmVisibilityFull {
+	/* 8033979C */ ~J3DAnmVisibilityFull();
+	/* 803397F8 */ void getKind() const;
+};
+
+struct J3DAnmTexPatternFullData {
+};
+
+struct J3DAnmTransformFullData {
 };
 
 struct J3DAnmClusterFullData {
+};
+
+struct J3DAnmClusterFull {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
 struct J3DAnmVtxColorFullData {
@@ -82,44 +82,44 @@ struct J3DAnmFullLoader_v15 {
 	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
-struct J3DAnmClusterKey {
+struct J3DAnmTransformKey {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J3DAnmTransformKeyData {
 };
 
 struct J3DAnmColorKey {
 	/* 8032AB00 */ J3DAnmColorKey();
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 80329E5C */ J3DAnmTextureSRTKey();
-};
-
-struct J3DAnmClusterKeyData {
-};
-
-struct J3DAnmVtxColorKey {
-	/* 8032A4E0 */ J3DAnmVtxColorKey();
-};
-
-struct J3DAnmTransformKeyData {
-};
-
 struct J3DAnmTextureSRTKeyData {
+};
+
+struct J3DAnmClusterKey {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032AE18 */ J3DAnmTevRegKey();
 };
 
+struct J3DAnmTextureSRTKey {
+	/* 80329E5C */ J3DAnmTextureSRTKey();
+};
+
+struct J3DAnmVtxColorKey {
+	/* 8032A4E0 */ J3DAnmVtxColorKey();
+};
+
+struct J3DAnmClusterKeyData {
+};
+
 struct J3DAnmColorKeyData {
-};
-
-struct J3DAnmTevRegKeyData {
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmVtxColorKeyData {
 };
 
 struct J3DAnmKeyLoader_v15 {

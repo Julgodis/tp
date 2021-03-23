@@ -23,10 +23,10 @@ struct J3DFrameCtrl {
 	/* 80C2E714 */ ~J3DFrameCtrl();
 };
 
-struct csXyz {
+struct cXyz {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct daObjKAG_c {

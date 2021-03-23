@@ -45,10 +45,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {

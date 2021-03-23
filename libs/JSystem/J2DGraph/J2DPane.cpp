@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct J2DBasePosition {
-};
-
-struct J2DRotateAxis {
-};
-
 struct J2DAnmVtxColor {
-};
-
-struct J2DAnmVisibilityFull {
 };
 
 struct JGeometry {
@@ -32,16 +23,7 @@ struct JGeometry {
 
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmTevRegKey {
+struct J2DAnmTexPattern {
 };
 
 struct ResFONT {
@@ -56,16 +38,13 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
+struct _GXCullMode {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTextureSRTKey {
 };
 
-struct ResTIMG {
-};
-
-struct JKRArchive {
+struct J2DAnmColor {
 };
 
 struct J2DGrafContext {
@@ -73,7 +52,28 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct J2DAnmColor {
+struct JKRArchive {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DRotateAxis {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct ResTIMG {
 };
 
 struct J2DPane {

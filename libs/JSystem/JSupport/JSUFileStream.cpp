@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JSUStreamSeekFrom {
+struct JKRFile {
 };
 
-struct JKRFile {
+struct JSUStreamSeekFrom {
 };
 
 struct JSUFileInputStream {

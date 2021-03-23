@@ -116,6 +116,9 @@ struct JAISoundParamsMove {
 	/* 802A2EBC */ void movePan(f32, u32);
 };
 
+struct JAISoundID {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -123,9 +126,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundID {
 };
 
 struct JAISoundStarter {

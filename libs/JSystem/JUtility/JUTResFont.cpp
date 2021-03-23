@@ -11,16 +11,13 @@
 // Types:
 // 
 
-struct ResFONT {
-};
-
-struct _GXTexMapID {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct ResFONT {
 };
 
 struct JUTFont {
@@ -35,6 +32,9 @@ struct JUTFont {
 };
 
 struct JKRHeap {
+};
+
+struct _GXTexMapID {
 };
 
 struct JUTResFont {

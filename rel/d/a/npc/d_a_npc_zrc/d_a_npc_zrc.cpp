@@ -14,9 +14,6 @@
 struct J3DJoint {
 };
 
-struct J3DModel {
-};
-
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -27,6 +24,9 @@ struct daNpcF_c {
 };
 
 struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct daNpc_zrC_c {

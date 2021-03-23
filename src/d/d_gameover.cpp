@@ -148,10 +148,10 @@ struct JGeometry {
 
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {

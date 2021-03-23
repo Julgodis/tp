@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct dSv_save_c {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct dSv_save_c {
 };
 
 struct dFile_info_c {

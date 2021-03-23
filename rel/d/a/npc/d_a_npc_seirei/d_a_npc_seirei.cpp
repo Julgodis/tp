@@ -14,10 +14,10 @@
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct fopAc_ac_c {
+struct daNpcT_evtData_c {
 };
 
-struct daNpcT_evtData_c {
+struct fopAc_ac_c {
 };
 
 struct daNpcT_motionAnmData_c {

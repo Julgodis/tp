@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DGXColor {
+struct J3DColorChan {
 };
 
-struct J3DColorChan {
+struct J3DGXColor {
 };
 
 struct J3DLightObj {
@@ -112,13 +112,13 @@ struct J3DColorBlockLightOn {
 	/* 80323018 */ ~J3DColorBlockLightOn();
 };
 
+struct J3DTexCoord {
+};
+
 struct J3DTexMtx {
 	/* 803238C4 */ void load(u32) const;
 	/* 80323900 */ void calc(f32 const (* )[4]);
 	/* 80323C0C */ void calcPostTexMtx(f32 const (* )[4]);
-};
-
-struct J3DTexCoord {
 };
 
 struct J3DNBTScale {
@@ -186,6 +186,15 @@ struct J3DTevBlockNull {
 	/* 803176D4 */ void initialize();
 };
 
+struct J3DGXColorS10 {
+};
+
+struct J3DTevOrder {
+};
+
+struct J3DIndTevStage {
+};
+
 struct J3DTevSwapModeInfo {
 };
 
@@ -193,15 +202,6 @@ struct J3DTevSwapModeTable {
 };
 
 struct J3DTevStage {
-};
-
-struct J3DIndTevStage {
-};
-
-struct J3DTevOrder {
-};
-
-struct J3DGXColorS10 {
 };
 
 struct J3DTevBlock {
@@ -506,18 +506,18 @@ struct J3DTevBlock16 {
 	/* 80321F84 */ ~J3DTevBlock16();
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-};
-
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
+};
+
+struct J3DIndTexOrder {
 };
 
 struct J3DIndBlock {
 };
 
-struct J3DIndTexOrder {
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
 };
 
 struct J3DIndBlockFull {
@@ -541,9 +541,6 @@ struct J3DIndBlockFull {
 	/* 803234A0 */ ~J3DIndBlockFull();
 };
 
-struct J3DFog {
-};
-
 struct J3DAlphaComp {
 };
 
@@ -551,6 +548,9 @@ struct J3DBlend {
 };
 
 struct J3DZMode {
+};
+
+struct J3DFog {
 };
 
 struct J3DPEBlock {

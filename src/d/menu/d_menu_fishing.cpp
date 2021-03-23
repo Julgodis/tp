@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct CSTControl {
+};
+
 struct JKRExpHeap {
 };
 
 struct STControl {
-};
-
-struct CSTControl {
 };
 
 struct dMenu_Fishing_c {
@@ -61,10 +61,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {

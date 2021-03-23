@@ -11,27 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TAmbientLight {
-	};
-
-	struct TCamera {
-	};
-
-	struct TFog {
-	};
-
-	struct TLight {
-	};
-
-};
-
 namespace JStudio {
 	struct TObject {
 	};
@@ -82,6 +61,27 @@ namespace JStudio {
 
 	struct TObject_light {
 		/* 80287368 */ TObject_light(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_light*);
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TAmbientLight {
+	};
+
+	struct TCamera {
+	};
+
+	struct TFog {
+	};
+
+	struct TLight {
 	};
 
 };

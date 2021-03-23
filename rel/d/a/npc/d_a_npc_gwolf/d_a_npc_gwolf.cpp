@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct dBgS_ObjAcch {
-	/* 809F828C */ ~dBgS_ObjAcch();
-};
-
-struct _GXColorS10 {
-};
-
 struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct dBgS_ObjAcch {
+	/* 809F828C */ ~dBgS_ObjAcch();
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpc_GWolf_c {

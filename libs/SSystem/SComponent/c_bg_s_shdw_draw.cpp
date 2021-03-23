@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cXyz {
 };
 
 struct cM3dGPla {

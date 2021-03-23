@@ -43,10 +43,10 @@ struct J3DAnmTransformKey {
 struct J3DMaterialTable {
 };
 
-struct J3DTextureSRTInfo {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DTextureSRTInfo {
 };
 
 struct J3DAnmTextureSRTKey {

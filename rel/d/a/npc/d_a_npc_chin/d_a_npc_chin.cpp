@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct dKy_tevstr_c {
-};
-
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct daNpcChin_c {

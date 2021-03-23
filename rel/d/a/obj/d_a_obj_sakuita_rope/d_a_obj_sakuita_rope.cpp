@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct cXyz {
 };
 
 struct Sakuita_c {

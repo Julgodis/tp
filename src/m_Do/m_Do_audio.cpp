@@ -16,6 +16,14 @@ struct mDoAud_zelAudio_c {
 	/* 80007368 */ ~mDoAud_zelAudio_c();
 };
 
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,14 +35,6 @@ struct JGeometry {
 
 struct JKRSolidHeap {
 	/* 802D0BF4 */ void adjustSize();
-};
-
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAISoundID {
 };
 
 struct JKRArchive {

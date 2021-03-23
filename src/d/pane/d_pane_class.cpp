@@ -14,6 +14,23 @@
 struct JKRExpHeap {
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRArchive {
+};
+
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
+};
+
+struct J2DScreen {
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+};
+
 struct J2DRotateAxis {
 };
 
@@ -23,23 +40,6 @@ struct J2DPane {
 	/* 802F7A8C */ void getFirstChildPane();
 	/* 802F7AC4 */ void getNextChildPane();
 	/* 802F7AFC */ void getParentPane();
-};
-
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
-};
-
-struct JKRArchive {
-};
-
-struct J2DScreen {
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {

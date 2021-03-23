@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
-struct Vec {
+struct fopAc_ac_c {
 };
 
 struct dDemo_actor_c {
@@ -123,10 +123,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
 	struct TCamera {

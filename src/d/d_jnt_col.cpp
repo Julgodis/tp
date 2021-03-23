@@ -14,7 +14,10 @@
 struct csXyz {
 };
 
-struct dJntColData_c {
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct Vec {
@@ -35,10 +38,7 @@ struct cM3dGLin {
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
+struct dJntColData_c {
 };
 
 struct dJntCol_c {

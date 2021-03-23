@@ -289,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgString_c {

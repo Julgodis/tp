@@ -27,18 +27,18 @@ struct daNpc_zrA_Path_c {
 	/* 80B7EF88 */ ~daNpc_zrA_Path_c();
 };
 
-struct csXyz {
-	/* 80B7EF44 */ ~csXyz();
-	/* 80B7EF80 */ csXyz();
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct J3DModel {
 };
 
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct csXyz {
+	/* 80B7EF44 */ ~csXyz();
+	/* 80B7EF80 */ csXyz();
 };
 
 struct daNpc_zrA_c {

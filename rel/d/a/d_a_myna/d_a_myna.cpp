@@ -17,23 +17,23 @@ struct fopAc_ac_c {
 struct J3DJoint {
 };
 
+struct J3DFrameCtrl {
+	/* 80946370 */ ~J3DFrameCtrl();
+};
+
+struct J3DAnmTransformKey {
+};
+
 struct msg_class {
 };
 
 struct J3DModel {
 };
 
-struct J3DFrameCtrl {
-	/* 80946370 */ ~J3DFrameCtrl();
-};
-
 struct cXyz {
 };
 
 struct J3DModelData {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTexPattern {

@@ -14,15 +14,15 @@
 struct csXyz {
 };
 
+struct cBgS_PolyInfo {
+};
+
 struct cXyz {
 };
 
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {

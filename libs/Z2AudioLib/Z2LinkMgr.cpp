@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct Z2SoundHandlePool {
-};
-
 struct JAISoundID {
 };
 
 struct Vec {
+};
+
+struct Z2SoundHandlePool {
 };
 
 struct Z2SoundObjBase {
@@ -61,6 +61,9 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -68,9 +71,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2LinkSoundStarter {

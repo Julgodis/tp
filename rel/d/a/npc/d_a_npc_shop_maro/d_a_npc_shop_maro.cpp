@@ -20,13 +20,13 @@ struct daNpc_shopMaro_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
+struct dMsgFlow_c {
+};
+
 struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
-};
-
-struct dMsgFlow_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {

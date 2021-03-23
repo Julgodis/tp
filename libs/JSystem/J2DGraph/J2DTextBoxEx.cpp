@@ -14,26 +14,10 @@
 struct J2DAnmVtxColor {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct _GXCullMode {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmTevRegKey {
+struct J2DTevStage {
 };
 
 struct ResFONT {
@@ -47,25 +31,20 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
+struct _GXCullMode {
 };
 
-struct J2DAnmTexPattern {
-};
-
-struct J2DTextBoxHBinding {
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct ResTIMG {
 };
 
-struct J2DTevStage {
+struct J2DAnmTransform {
 };
 
-struct JUTFont {
-};
-
-struct J2DAnmColor {
+struct J2DAnmBase {
 };
 
 struct J2DPane {
@@ -91,12 +70,33 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
+};
+
 struct J2DMaterial {
 	/* 802EA38C */ void setGX();
 	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
 	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
 	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct JUTFont {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DTextBoxHBinding {
 };
 
 struct J2DTextBoxEx {

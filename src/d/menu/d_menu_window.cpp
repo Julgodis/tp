@@ -152,10 +152,10 @@ struct dMenu_Collect2D_c {
 	/* 801B5FAC */ void isOutCheck();
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
 struct dMenu_Collect_c {

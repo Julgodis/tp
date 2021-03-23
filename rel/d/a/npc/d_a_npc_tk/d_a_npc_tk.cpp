@@ -16,18 +16,18 @@ struct daNPC_TK_HIO_c {
 	/* 80B0C104 */ ~daNPC_TK_HIO_c();
 };
 
+struct J3DJoint {
+};
+
 struct cXyz {
 	/* 80B01678 */ ~cXyz();
 	/* 80B0C0E0 */ cXyz();
 };
 
-struct J3DJoint {
+struct fopAc_ac_c {
 };
 
 struct J3DModel {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daNPC_TK_c {

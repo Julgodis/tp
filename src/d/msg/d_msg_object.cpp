@@ -21,10 +21,18 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
-struct J2DTextBox {
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
 };
 
-struct msg_class {
+struct JKRArchive {
+	struct EMountMode {
+	};
+
+};
+
+struct mDoDvdThd_mountXArchive_c {
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
 struct COutFont_c {
@@ -37,18 +45,10 @@ struct fopAc_ac_c {
 struct JUTFont {
 };
 
-struct JKRArchive {
-	struct EMountMode {
-	};
-
+struct J2DTextBox {
 };
 
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct mDoDvdThd_mountXArchive_c {
-	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
+struct msg_class {
 };
 
 struct dMsgObject_c {

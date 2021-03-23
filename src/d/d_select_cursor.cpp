@@ -16,17 +16,17 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
+struct J2DPane {
+};
+
 struct J2DAnmTransformKey {
 	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
-struct J2DAnmColor {
-};
-
-struct J2DPane {
-};
-
 struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
 };
 
 struct JKRArchive {

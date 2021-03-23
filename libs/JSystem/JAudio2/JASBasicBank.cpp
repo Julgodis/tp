@@ -14,10 +14,10 @@
 struct JASInst {
 };
 
-struct JKRHeap {
+struct JASInstParam {
 };
 
-struct JASInstParam {
+struct JKRHeap {
 };
 
 struct JASBasicBank {

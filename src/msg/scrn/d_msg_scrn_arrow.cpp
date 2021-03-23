@@ -25,10 +25,10 @@ struct dMsgScrnArrow_c {
 struct JKRExpHeap {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {

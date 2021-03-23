@@ -17,15 +17,15 @@ struct J3DJoint {
 struct dBgW {
 };
 
+struct J3DModel {
+};
+
 struct fopAc_ac_c {
 };
 
 struct cXyz {
 	/* 80C04BAC */ cXyz();
 	/* 80C04C40 */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daObj_GrA_c {

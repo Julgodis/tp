@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DAnmTexPattern {
@@ -42,19 +42,19 @@ struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-struct J3DTevColorAnm {
-};
-
 struct J3DMatColorAnm {
 };
 
 struct J3DTexMtxAnm {
 };
 
-struct J3DTexNoAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DTevKColorAnm {
+};
+
+struct J3DTexNoAnm {
 };
 
 struct J3DMaterialAnm {

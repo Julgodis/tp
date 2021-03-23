@@ -14,10 +14,10 @@
 struct fopAc_ac_c {
 };
 
-struct JPABaseEmitter {
+struct daMidna_c {
 };
 
-struct daMidna_c {
+struct JPABaseEmitter {
 };
 
 struct daSCannonCrs_c {

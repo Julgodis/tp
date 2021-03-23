@@ -11,20 +11,11 @@
 // Types:
 // 
 
-struct dCcD_GObjInf {
-};
-
-struct J3DAnmTransform {
-};
-
 struct J3DFrameCtrl {
 	/* 80A3C62C */ ~J3DFrameCtrl();
 };
 
-struct _GXColorS10 {
-};
-
-struct fopAc_ac_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct cXyz {
@@ -32,10 +23,17 @@ struct cXyz {
 	/* 80A3C45C */ cXyz();
 };
 
-struct daNpcT_motionAnmData_c {
+struct _GXColorS10 {
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_MotionSeqMngr_c {
+	struct sequenceStepData_c {
+	};
+
+	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -44,26 +42,28 @@ struct J3DAnmTextureSRTKey {
 struct J3DJoint {
 };
 
-struct J3DModel {
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct J3DModelData {
+struct daNpcT_motionAnmData_c {
 };
 
 struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTexPattern {
+struct dCcD_GObjInf {
 };
 
-struct daNpcT_MotionSeqMngr_c {
-	struct sequenceStepData_c {
-	};
+struct J3DModel {
+};
 
-	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
+struct J3DAnmTransform {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTexPattern {
 };
 
 struct daNpc_Kn_c {

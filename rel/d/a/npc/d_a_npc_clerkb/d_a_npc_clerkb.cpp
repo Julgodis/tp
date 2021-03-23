@@ -14,16 +14,19 @@
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct fopAc_ac_c {
+struct dMsgFlow_c {
 };
 
 struct daNpcT_evtData_c {
 };
 
+struct fopAc_ac_c {
+};
+
 struct J3DJoint {
 };
 
-struct dMsgFlow_c {
+struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -31,9 +34,6 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 8099907C */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct daNpc_clerkB_c {

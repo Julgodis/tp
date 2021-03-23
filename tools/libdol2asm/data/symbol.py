@@ -14,18 +14,18 @@ class ReferenceCount:
     extern: int = 0
     rel: int = 0
 
-    def add_reference(self, referencee, referencer):
-        self.total += 1
+    def add_reference(self, referencee, referencer, count):
+        self.total += count
         if referencer:
             if referencee._module != referencer._module:
-                self.rel += 1
+                self.rel += count
             elif (referencee._library == referencer._library and
                   referencee._translation_unit == referencer._translation_unit):
-                self.static += 1
+                self.static += count
             else:
-                self.extern += 1
+                self.extern += count
         else:
-            self.extern += 1
+            self.extern += count
 
     def make_static(self):
         self.total = 1
@@ -82,11 +82,11 @@ class Symbol:
     def is_static(self):
         return self.reference_count.static > 0 and self.reference_count.extern == 0 and self.reference_count.rel == 0
 
-    def add_reference(self, referencer):
-        self.reference_count.add_reference(self, referencer)
+    def add_reference(self, referencer, count=1):
+        self.reference_count.add_reference(self, referencer, count)
 
-    def add_sda_hack(self, referencer):
-        self.sda_hack_reference_count.add_reference(self, referencer)
+    def add_sda_hack(self, referencer, count=1):
+        self.sda_hack_reference_count.add_reference(self, referencer, count)
 
     def valid_reference(self, addr):
         return addr == self.addr

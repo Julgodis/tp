@@ -14,10 +14,10 @@
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
 struct daNpcCd2_c {
@@ -112,19 +112,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
 };
 
 struct J3DModelData {
 };
 
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {

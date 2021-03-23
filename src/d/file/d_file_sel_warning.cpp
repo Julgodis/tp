@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct JKRArchive {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -47,10 +47,10 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {

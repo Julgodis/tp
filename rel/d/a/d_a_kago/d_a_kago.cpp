@@ -16,12 +16,12 @@ struct daKago_HIO_c {
 	/* 80854A4C */ ~daKago_HIO_c();
 };
 
+struct J3DJoint {
+};
+
 struct cXyz {
 	/* 80849924 */ ~cXyz();
 	/* 80854A28 */ cXyz();
-};
-
-struct J3DJoint {
 };
 
 struct J3DModel {

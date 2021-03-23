@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
-};
-
-struct JASSoundParams {
-};
-
 struct JASDsp {
 	struct TChannel {
 		/* 8029E00C */ void setFilterMode(u16);
@@ -33,12 +21,24 @@ struct JASDsp {
 
 };
 
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
+};
+
 struct JASChannel {
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
 	/* 8029BBFC */ void free();
+};
+
+struct JASSoundParams {
 };
 
 struct JASTrack {

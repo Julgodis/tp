@@ -14,10 +14,16 @@
 struct daNpcT_faceMotionAnmData_c {
 };
 
+struct daNpcT_evtData_c {
+};
+
 struct fopAc_ac_c {
 };
 
-struct daNpcT_evtData_c {
+struct J3DJoint {
+};
+
+struct daNpcT_motionAnmData_c {
 };
 
 struct cXyz {
@@ -25,17 +31,11 @@ struct cXyz {
 	/* 80B672D4 */ cXyz();
 };
 
-struct J3DJoint {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
 
 	/* 80B672D8 */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct daNpc_ykW_c {

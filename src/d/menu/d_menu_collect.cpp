@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct CSTControl {
+};
+
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -18,9 +21,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct J2DAnmTextureSRTKey {
 };
 
 struct STControl {
@@ -31,7 +31,7 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct CSTControl {
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Collect2D_c {
@@ -250,10 +250,10 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {

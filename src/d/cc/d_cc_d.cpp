@@ -105,10 +105,10 @@ struct cCcD_GObjInf {
 	/* 8008517C */ void ClrCoHit();
 };
 
-struct cCcD_SrcObj {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cCcD_SrcObj {
 };
 
 struct cCcD_Obj {
@@ -166,14 +166,14 @@ struct dCcD_Tri {
 	/* 80084EF4 */ ~dCcD_Tri();
 };
 
+struct dCcD_SrcCyl {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dCcD_SrcCyl {
 };
 
 struct dCcD_Cyl {
@@ -196,11 +196,13 @@ struct dCcD_Sph {
 	/* 80084BF4 */ ~dCcD_Sph();
 };
 
+struct cCcD_CpsAttr;
+struct cCcD_AabAttr {
+};
+
 struct cCcD_PntAttr {
 };
 
-struct cCcD_CpsAttr;
-struct cCcD_SphAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -210,10 +212,8 @@ struct cCcD_ShapeAttr {
 	/* 80263A64 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
+struct cCcD_SphAttr;
 struct cCcD_CylAttr;
-struct cCcD_AabAttr {
-};
-
 struct cCcD_TriAttr {
 	/* 80084E44 */ void CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
 	/* 80263A88 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;

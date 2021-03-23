@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
 struct J2DOrthoGraph {
 };
 
-struct JKRArchive {
+struct JKRExpHeap {
 };
 
 struct STControl {
@@ -73,12 +73,6 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JUTFont {
-};
-
-struct JMSMesgEntry_c {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -88,15 +82,21 @@ struct JGeometry {
 
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+};
+
+struct JUTFont {
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {

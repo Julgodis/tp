@@ -14,20 +14,20 @@
 struct JKRExpHeap {
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct J2DGrafContext {
 };
 
 struct JKRArchive {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -164,12 +164,12 @@ struct dMeter2Draw_c {
 	/* 8021BBB4 */ void getCanoeFishing();
 };
 
+struct J2DPicture {
+};
+
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
-};
-
-struct J2DPicture {
 };
 
 struct dMeter2Info_c {

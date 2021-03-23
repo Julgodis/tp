@@ -5,14 +5,50 @@ import rich
 import pickle 
 import time
 import sys
+import gc
 
 from rich.progress import Progress
 from typing import Any, Tuple, List, Dict
-from multiprocessing import Manager, Queue, Process
+from multiprocessing import Manager, Queue, Process, Pool
+from multiprocessing import managers as m
 from queue import Empty
 
 from .globals import *
 from .context import Context, MainContext
+from .symbol_table import GlobalSymbolTable
+
+
+def _mp_entrypoint(input: Queue, output: Queue):
+
+
+class MPManager(m.BaseManager):
+    def __init__():
+        super().__init__()
+        self.start()
+
+        self.input = self.Queue()
+        self.output = self.Queue()
+
+        # create the processes
+        self.processors = [
+            Process(target=_mp_entrypoint, args=(input, output))
+            for i in range(process_count)
+        ]
+
+        # start the processes
+        for process in self.processors:
+            process.start()       
+
+MPManager.register('SymbolTable', GlobalSymbolTable)
+
+
+
+
+
+
+
+
+
 
 class TimeCode:
     def __init__(self, context: Context, text: str):
@@ -41,8 +77,10 @@ def _process_entrypoint(input: Queue, output: Queue, shared_file: str):
         try:
             context = Context(index=-1, output=output)
             with TimeCode(context, "load_shared") as tc:
+                gc.disable()
                 with open(shared_file, 'rb') as file:
                     shared = pickle.load(file)
+                gc.enable()
         except:
             exc_type, exc_value, tb = sys.exc_info()
             tb = rich.traceback.Traceback.from_exception(

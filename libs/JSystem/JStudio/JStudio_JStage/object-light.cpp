@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TLight {
+	};
+
+};
+
 struct _GXColor {
 };
 
@@ -42,15 +51,6 @@ namespace JStudio {
 
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TLight {
 	};
 
 };

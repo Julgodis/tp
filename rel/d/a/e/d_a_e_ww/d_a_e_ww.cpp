@@ -16,11 +16,11 @@ struct daE_WW_HIO_c {
 	/* 807EEEBC */ ~daE_WW_HIO_c();
 };
 
-struct cXyz {
-	/* 807EF708 */ ~cXyz();
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct cXyz {
+	/* 807EF708 */ ~cXyz();
 };
 
 struct J3DModel {

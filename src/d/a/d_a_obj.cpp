@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -22,15 +25,12 @@ struct cXyz {
 	/* 80266CBC */ void outprod(Vec const&) const;
 };
 
-struct Quaternion {
+struct fopAc_ac_c {
 };
 
 struct dCcD_GObjInf {
 	/* 800844F8 */ void GetTgHitObj();
 	/* 8008457C */ void GetTgHitObjSe();
-};
-
-struct fopAc_ac_c {
 };
 
 struct daObj {
@@ -73,10 +73,10 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_levelEcallBack {

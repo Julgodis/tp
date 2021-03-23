@@ -16,10 +16,10 @@ struct daE_OctBg_HIO_c {
 	/* 80739CB8 */ ~daE_OctBg_HIO_c();
 };
 
-struct cXyz {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct cXyz {
 };
 
 struct J3DModel {

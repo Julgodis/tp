@@ -25,16 +25,16 @@ struct cXyz {
 	/* 809A4D78 */ cXyz();
 };
 
-struct csXyz {
+struct J3DModel {
 };
 
 struct SVec {
 };
 
-struct Vec {
+struct csXyz {
 };
 
-struct J3DModel {
+struct Vec {
 };
 
 struct daNpcCoach_c {

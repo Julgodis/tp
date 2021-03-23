@@ -46,15 +46,6 @@ struct csXyz {
 	/* 80A208D0 */ csXyz();
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -67,6 +58,15 @@ struct daNpcF_c {
 	/* 80A20EAC */ void setExpressionBtp(int);
 	/* 80A20EB4 */ void setExpression(int, f32);
 	/* 80A20EB8 */ void drawOtherMdls();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daNpcKasiHana_c {

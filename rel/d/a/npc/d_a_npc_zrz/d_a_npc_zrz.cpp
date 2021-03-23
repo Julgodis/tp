@@ -14,13 +14,13 @@
 struct J3DJoint {
 };
 
+struct fopAc_ac_c {
+};
+
 struct J3DModel {
 };
 
 struct _GXColorS10 {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daNpc_zrZ_c {

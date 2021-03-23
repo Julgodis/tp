@@ -16,11 +16,11 @@ struct daE_YMB_HIO_c {
 	/* 80821460 */ ~daE_YMB_HIO_c();
 };
 
-struct cXyz {
-	/* 808164B4 */ ~cXyz();
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct cXyz {
+	/* 808164B4 */ ~cXyz();
 };
 
 struct J3DModel {

@@ -40,6 +40,10 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8014D0C0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_Hermite_c {
+	/* 8014CBAC */ ~daNpcT_Hermite_c();
+};
+
 struct Vec {
 };
 
@@ -50,10 +54,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct daNpcT_Hermite_c {
-	/* 8014CBAC */ ~daNpcT_Hermite_c();
 };
 
 struct daNpcT_Path_c {
@@ -88,10 +88,29 @@ struct daNpcT_DmgStagger_c {
 	/* 80147E3C */ void calc(int);
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DAnmColor {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct dCcD_GObjInf {
@@ -101,35 +120,16 @@ struct dCcD_GObjInf {
 struct J3DAnmTransform {
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-};
-
 struct J3DAnmTevRegKey {
-};
-
-struct _GXColorS10 {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DJoint {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct J3DModelData {
 };
 
-struct J3DAnmColor {
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct J3DAnmTexPattern {
@@ -315,13 +315,13 @@ struct daBaseNpc_c {
 	/* 8014F4AC */ void dbgDraw();
 };
 
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct daBaseNpc_moveBgActor_c {
@@ -609,13 +609,13 @@ struct dPaPoT_c {
 	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 };
 
+struct dBgW_Base {
+};
+
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS_LinChk {

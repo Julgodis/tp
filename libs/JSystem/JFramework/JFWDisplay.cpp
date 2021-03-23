@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
 struct _GXRenderModeObj {
 };
 
 struct JKRHeap {
-};
-
-struct _GXColor {
 };
 
 struct JUTXfb {

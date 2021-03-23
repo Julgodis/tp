@@ -19,13 +19,13 @@ struct daB_TN_HIO_c {
 struct J3DJoint {
 };
 
-struct J3DModel {
-};
-
 struct dCcD_Sph {
 	/* 806223A0 */ void operator=(dCcD_Sph const&);
 	/* 80622674 */ ~dCcD_Sph();
 	/* 8062D678 */ dCcD_Sph();
+};
+
+struct J3DModel {
 };
 
 struct daB_TN_c {

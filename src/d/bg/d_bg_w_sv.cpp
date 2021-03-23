@@ -14,13 +14,13 @@
 struct csXyz {
 };
 
+struct cBgS_PolyInfo {
+};
+
 struct cXyz {
 };
 
 struct cBgD_t {
-};
-
-struct cBgS_PolyInfo {
 };
 
 struct dBgWSv {
@@ -41,10 +41,10 @@ struct dBgW_Base {
 struct cBgS_GndChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_ShdwDraw {
 };
 
-struct cBgS_ShdwDraw {
+struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -67,28 +67,28 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct dBgS_SplGrpChk {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct dBgS_SphChk {
-};
-
 struct dBgS_Acch {
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_CaptPoly {
 };
 
-struct fopAc_ac_c {
+struct dBgS_SplGrpChk {
 };
 
 struct dBgS_RoofChk {
 };
 
-struct dBgS_CaptPoly {
+struct dBgS_SphChk {
+};
+
+struct cBgS_GrpPassChk {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cBgS_PolyPassChk {
 };
 
 struct dBgW {

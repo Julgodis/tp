@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct Vec {
+struct _GXDistAttnFn {
 };
 
 struct _GXColor {
 };
 
-struct _GXDistAttnFn {
+struct Vec {
 };
 
 struct _GXSpotFn {

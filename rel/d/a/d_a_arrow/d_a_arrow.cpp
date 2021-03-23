@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct cXyz {
-	/* 8049A334 */ ~cXyz();
-};
-
 struct dCcD_GObjInf {
 };
 
 struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 8049A334 */ ~cXyz();
 };
 
 struct daArrow_c {

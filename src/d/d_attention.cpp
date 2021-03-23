@@ -28,6 +28,13 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
+};
+
 struct Vec {
 };
 
@@ -36,13 +43,6 @@ struct cXyz {
 };
 
 struct fopAc_ac_c {
-};
-
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
 };
 
 struct dAttention_c {
@@ -138,10 +138,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_bpkAnm {
@@ -165,10 +165,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {

@@ -11,21 +11,21 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-};
-
 struct JPAEmitterWorkData {
-};
-
-struct JPABaseEmitter {
-	/* 8027EDD4 */ void processTillStartFrame();
-	/* 8027EE14 */ void processTermination();
 };
 
 struct JPABaseParticle {
 	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
 	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
+};
+
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+};
+
+struct JPABaseEmitter {
+	/* 8027EDD4 */ void processTillStartFrame();
+	/* 8027EE14 */ void processTermination();
 };
 
 struct JPAResource {

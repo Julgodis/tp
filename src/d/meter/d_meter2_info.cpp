@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct J2DTextBox {
-	/* 8021C7F4 */ void getFont() const;
+struct J2DPicture {
 };
 
 struct JUTFont {
 };
 
-struct cXyz {
-};
-
 struct JMSMesgEntry_c {
 };
 
-struct J2DPicture {
+struct cXyz {
+};
+
+struct J2DTextBox {
+	/* 8021C7F4 */ void getFont() const;
 };
 
 struct dMeter2Info_c {
