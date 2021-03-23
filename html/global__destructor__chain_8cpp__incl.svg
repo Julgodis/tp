@@ -98,7 +98,7 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="global__destructor__chain_8h.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="Runtime_8PPCEABI_8H_2global__destructor__chain_8h.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="117.5,-62 117.5,-92 253.5,-92 253.5,-62 117.5,-62"/>
 <text text-anchor="start" x="125.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">Runtime.PPCEABI.H/global</text>
 <text text-anchor="middle" x="185.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">_destructor_chain.h</text>

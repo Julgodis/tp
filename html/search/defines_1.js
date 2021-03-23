@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['double_5finf_86918',['DOUBLE_INF',['../dol2asm_8h.html#a84ee4d57a351467bb65314cdbfa12087',1,'dol2asm.h']]]
+  ['double_5finf_88448',['DOUBLE_INF',['../dol2asm_8h.html#a84ee4d57a351467bb65314cdbfa12087',1,'dol2asm.h']]]
 ];

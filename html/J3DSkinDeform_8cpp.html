@@ -121,13 +121,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DModelData.html">J3DModelData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DMtxBuffer.html">J3DMtxBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DVertexBuffer.html">J3DVertexBuffer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DModel.html">J3DModel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DVertexBuffer.html">J3DVertexBuffer</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DModelData.html">J3DModelData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DSkinDeform.html">J3DSkinDeform</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,7 +275,7 @@ Variables</h2></td></tr>
 <tr class="separator:aa72c934ed0e3b322d9ff29ff1619fc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac48a465ab413bb9cbf656e93357ca5b9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DSkinDeform_8cpp.html#ac48a465ab413bb9cbf656e93357ca5b9">J3DSkinDeform__lit_1270</a> [16]</td></tr>
 <tr class="separator:ac48a465ab413bb9cbf656e93357ca5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5de603fe6605bb4b01ba7842bdfdbd92"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DSkinDeform_8cpp.html#a5de603fe6605bb4b01ba7842bdfdbd92">stringBase_803A2028</a></td></tr>
+<tr class="memitem:a5de603fe6605bb4b01ba7842bdfdbd92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DSkinDeform_8cpp.html#a5de603fe6605bb4b01ba7842bdfdbd92">stringBase_803A2028</a></td></tr>
 <tr class="separator:a5de603fe6605bb4b01ba7842bdfdbd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed75a6724099ac45dc2b2e60d65c5ec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DSkinDeform_8cpp.html#a4ed75a6724099ac45dc2b2e60d65c5ec">pad_803A2062</a> = &quot;\0\0\0\0\0&quot;</td></tr>
 <tr class="separator:a4ed75a6724099ac45dc2b2e60d65c5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1616,19 +1616,11 @@ Variables</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="dol2asm_8h.html#a0c3c364808dd7c2796cc0eae538b63d7">SECTION_DEAD</a> char const* const stringBase_803A2028</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= </div>
 <div class="line">    <span class="stringliteral">&quot; Invlid Data : CPU Pipeline process GX_INDEX16 D&quot;</span></div>
