@@ -21,10 +21,15 @@ class Block(ArbitraryData):
             pass
         sda_hack_symbols = [symbol_table[self._module, x]
                             for x in collector.sda_hack_references]
-        self.sda_hack_references = set(
-            [(x._module, x.addr) for x in sda_hack_symbols if x])
-        symbols = [symbol_table[self._module, x.addr]
-                   for x in collector.accesses.values()]
+        self.sda_hack_references = set([
+            (x._module, x.addr) 
+            for x in sda_hack_symbols 
+            if x
+        ])
+        symbols = [
+            symbol_table[self._module, x.addr]
+            for x in collector.accesses.values()
+        ]
         return set([(x._module, x.addr) for x in symbols if x])
 
 

@@ -47,14 +47,14 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A35E0-803A35F0 000C+04 rc=3 efc=2 rfr=False None .data      g_fopAcTg_Queue                                              */
+/* 803A35E0-803A35F0 000C+04 r=3 e=2 z=0  None .data      g_fopAcTg_Queue                                              */
 SECTION_DATA u8 g_fopAcTg_Queue[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80019834-80019860 002C+00 rc=1 efc=1 rfr=False None .text      fopAcTg_ToActorQ__FP16create_tag_class                       */
+/* 80019834-80019860 002C+00 r=1 e=1 z=0  None .text      fopAcTg_ToActorQ__FP16create_tag_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ asm void fopAcTg_ToActorQ(create_tag_class* param_0) {
 #pragma pop
 
 
-/* 80019860-80019880 0020+00 rc=1 efc=1 rfr=False None .text      fopAcTg_ActorQTo__FP16create_tag_class                       */
+/* 80019860-80019880 0020+00 r=1 e=1 z=0  None .text      fopAcTg_ActorQTo__FP16create_tag_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void fopAcTg_ActorQTo(create_tag_class* param_0) {
 #pragma pop
 
 
-/* 80019880-800198A4 0024+00 rc=1 efc=1 rfr=False None .text      fopAcTg_Init__FP16create_tag_classPv                         */
+/* 80019880-800198A4 0024+00 r=1 e=1 z=0  None .text      fopAcTg_Init__FP16create_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

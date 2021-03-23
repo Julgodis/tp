@@ -32,7 +32,7 @@ extern "C" void fwide(); // 1
 // Declarations:
 // 
 
-/* 803651D8-803652AC 00D4+00 rc=1 efc=1 rfr=False None .text      fputs                                                        */
+/* 803651D8-803652AC 00D4+00 r=1 e=1 z=0  None .text      fputs                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +43,7 @@ extern "C" asm void fputs() {
 #pragma pop
 
 
-/* 803652AC-80365464 01B8+00 rc=1 efc=0 rfr=False None .text      __put_char                                                   */
+/* 803652AC-80365464 01B8+00 r=1 e=0 z=0  None .text      __put_char                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -36,7 +36,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9838-803C9858 0020+00 rc=2 efc=1 rfr=False None .data      __vt__11JAIAudience                                          */
+/* 803C9838-803C9858 0020+00 r=2 e=1 z=0  None .data      __vt__11JAIAudience                                          */
 SECTION_DATA void* __vt__11JAIAudience[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -48,7 +48,7 @@ SECTION_DATA void* __vt__11JAIAudience[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 8029EFF4-8029F03C 0048+00 rc=2 efc=1 rfr=False None .text      __dt__11JAIAudienceFv                                        */
+/* 8029EFF4-8029F03C 0048+00 r=2 e=1 z=0  None .text      __dt__11JAIAudienceFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

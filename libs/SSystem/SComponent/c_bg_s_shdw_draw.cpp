@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct cXyz {
+};
+
 struct cBgD_Vtx_t {
 };
 
 struct cM3dGPla {
-};
-
-struct cXyz {
 };
 
 struct cBgS_ShdwDraw {
@@ -63,7 +63,7 @@ extern "C" extern void* __vt__8cM3dGAab[3];
 // 
 
 /* ############################################################################################## */
-/* 803C3FC0-803C3FD0 000C+04 rc=2 efc=0 rfr=False None .data      __vt__13cBgS_ShdwDraw                                        */
+/* 803C3FC0-803C3FD0 000C+04 r=2 e=0 z=0  None .data      __vt__13cBgS_ShdwDraw                                        */
 SECTION_DATA static void* __vt__13cBgS_ShdwDraw[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -72,7 +72,7 @@ SECTION_DATA static void* __vt__13cBgS_ShdwDraw[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80267F88-80267FD0 0048+00 rc=1 efc=1 rfr=False None .text      __ct__13cBgS_ShdwDrawFv                                      */
+/* 80267F88-80267FD0 0048+00 r=1 e=1 z=0  None .text      __ct__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm cBgS_ShdwDraw::cBgS_ShdwDraw() {
 #pragma pop
 
 
-/* 80267FD0-80268048 0078+00 rc=3 efc=2 rfr=False None .text      __dt__13cBgS_ShdwDrawFv                                      */
+/* 80267FD0-80268048 0078+00 r=3 e=2 z=0  None .text      __dt__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm cBgS_ShdwDraw::~cBgS_ShdwDraw() {
 #pragma pop
 
 
-/* 80268048-8026806C 0024+00 rc=1 efc=1 rfr=False None .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
+/* 80268048-8026806C 0024+00 r=1 e=1 z=0  None .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void cBgS_ShdwDraw::Set(cXyz& param_0, cXyz& param_1) {
 #pragma pop
 
 
-/* 8026806C-80268074 0008+00 rc=1 efc=1 rfr=False None .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
+/* 8026806C-80268074 0008+00 r=1 e=1 z=0  None .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

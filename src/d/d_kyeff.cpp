@@ -72,7 +72,7 @@ extern "C" extern u8 g_mEnvSeMgr[780];
 // Declarations:
 // 
 
-/* 801ADD38-801ADD5C 0024+00 rc=1 efc=0 rfr=False None .text      dKyeff_Draw__FP8dKyeff_c                                     */
+/* 801ADD38-801ADD5C 0024+00 r=1 e=0 z=0  None .text      dKyeff_Draw__FP8dKyeff_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,16 +84,16 @@ asm static void dKyeff_Draw(dKyeff_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80394F38-80394F40 0005+03 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80394F38-80394F40 0005+03 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80394F38 = "Name";
+SECTION_DEAD char const* const stringBase_80394F38 = "Name";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80394F3D = "\0\0";
 #pragma pop
 
-/* 801ADD5C-801ADDB4 0058+00 rc=1 efc=0 rfr=False None .text      execute__8dKyeff_cFv                                         */
+/* 801ADD5C-801ADDB4 0058+00 r=1 e=0 z=0  None .text      execute__8dKyeff_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void dKyeff_c::execute() {
 #pragma pop
 
 
-/* 801ADDB4-801ADDD4 0020+00 rc=1 efc=0 rfr=False None .text      dKyeff_Execute__FP8dKyeff_c                                  */
+/* 801ADDB4-801ADDD4 0020+00 r=1 e=0 z=0  None .text      dKyeff_Execute__FP8dKyeff_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm static void dKyeff_Execute(dKyeff_c* param_0) {
 #pragma pop
 
 
-/* 801ADDD4-801ADDDC 0008+00 rc=1 efc=0 rfr=False None .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
+/* 801ADDD4-801ADDDC 0008+00 r=1 e=0 z=0  None .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ asm static void dKyeff_IsDelete(dKyeff_c* param_0) {
 #pragma pop
 
 
-/* 801ADDDC-801ADE00 0024+00 rc=1 efc=0 rfr=False None .text      dKyeff_Delete__FP8dKyeff_c                                   */
+/* 801ADDDC-801ADE00 0024+00 r=1 e=0 z=0  None .text      dKyeff_Delete__FP8dKyeff_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,24 +138,24 @@ asm static void dKyeff_Delete(dKyeff_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80453E58-80453E5C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3804                                                        */
+/* 80453E58-80453E5C 0004+00 r=1 e=0 z=0  None .sdata2    @3804                                                        */
 SECTION_SDATA2 static u8 d_d_kyeff__lit_3804[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453E5C-80453E60 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3805                                                        */
+/* 80453E5C-80453E60 0004+00 r=1 e=0 z=0  None .sdata2    @3805                                                        */
 SECTION_SDATA2 static f32 d_d_kyeff__lit_3805 = 1.0f;
 
-/* 80453E60-80453E68 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3812                                                        */
+/* 80453E60-80453E68 0008+00 r=1 e=0 z=0  None .sdata2    @3812                                                        */
 SECTION_SDATA2 static f64 d_d_kyeff__lit_3812 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80453E68-80453E6C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3843                                                        */
+/* 80453E68-80453E6C 0004+00 r=1 e=0 z=0  None .sdata2    @3843                                                        */
 SECTION_SDATA2 static f32 d_d_kyeff__lit_3843 = 7.0f / 10.0f;
 
-/* 80453E6C-80453E70 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3844                                                        */
+/* 80453E6C-80453E70 0004+00 r=1 e=0 z=0  None .sdata2    @3844                                                        */
 SECTION_SDATA2 static f32 d_d_kyeff__lit_3844 = 15.0f;
 
-/* 801ADE00-801ADEA0 00A0+00 rc=1 efc=0 rfr=False None .text      dKyeff_Create__FP12kankyo_class                              */
+/* 801ADE00-801ADEA0 00A0+00 r=1 e=0 z=0  None .text      dKyeff_Create__FP12kankyo_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ asm static void dKyeff_Create(kankyo_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803BC158-803BC16C 0014+00 rc=1 efc=0 rfr=False None .data      l_dKyeff_Method                                              */
+/* 803BC158-803BC16C 0014+00 r=1 e=0 z=0  None .data      l_dKyeff_Method                                              */
 SECTION_DATA static void* l_dKyeff_Method[5] = {
 	/* 0    */ (void*)dKyeff_Create__FP12kankyo_class,
 	/* 1    */ (void*)dKyeff_Delete__FP8dKyeff_c,
@@ -176,7 +176,7 @@ SECTION_DATA static void* l_dKyeff_Method[5] = {
 	/* 4    */ (void*)dKyeff_Draw__FP8dKyeff_c,
 };
 
-/* 803BC16C-803BC198 0028+04 rc=0 efc=0 rfr=False None .data      g_profile_KYEFF                                              */
+/* 803BC16C-803BC198 0028+04 r=1 e=0 z=1  None .data      g_profile_KYEFF                                              */
 SECTION_DATA void* g_profile_KYEFF[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x000CFFFD,

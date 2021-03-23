@@ -14,10 +14,10 @@
 struct STControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
 struct dMenu_Fishing_c {
@@ -198,36 +198,36 @@ extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
 // 
 
 /* ############################################################################################## */
-/* 803BD038-803BD044 000C+00 rc=1 efc=0 rfr=False None .data      cNullVec__6Z2Calc                                            */
+/* 803BD038-803BD044 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 d_menu_d_menu_fishing__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD044-803BD050 000C+00 rc=0 efc=0 rfr=False None .data      @3790                                                        */
+/* 803BD044-803BD050 000C+00 r=0 e=0 z=0  None .data      @3790                                                        */
 SECTION_DATA void* d_menu_d_menu_fishing__lit_3790[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_init__15dMenu_Fishing_cFv,
 };
 
-/* 803BD050-803BD05C 000C+00 rc=2 efc=0 rfr=False None .data      map_init_process                                             */
+/* 803BD050-803BD05C 000C+00 r=2 e=0 z=0  None .data      map_init_process                                             */
 SECTION_DATA static u8 d_menu_d_menu_fishing__map_init_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD05C-803BD068 000C+00 rc=0 efc=0 rfr=False None .data      @3791                                                        */
+/* 803BD05C-803BD068 000C+00 r=0 e=0 z=0  None .data      @3791                                                        */
 SECTION_DATA void* d_menu_d_menu_fishing__lit_3791[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_move__15dMenu_Fishing_cFv,
 };
 
-/* 803BD068-803BD074 000C+00 rc=1 efc=0 rfr=False None .data      map_move_process                                             */
+/* 803BD068-803BD074 000C+00 r=1 e=0 z=0  None .data      map_move_process                                             */
 SECTION_DATA static u8 d_menu_d_menu_fishing__map_move_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD074-803BD090 0010+0C rc=2 efc=0 rfr=False None .data      __vt__15dMenu_Fishing_c                                      */
+/* 803BD074-803BD090 0010+0C r=2 e=0 z=0  None .data      __vt__15dMenu_Fishing_c                                      */
 SECTION_DATA static void* __vt__15dMenu_Fishing_c[4 + 3 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -239,7 +239,7 @@ SECTION_DATA static void* __vt__15dMenu_Fishing_c[4 + 3 /* padding */] = {
 	NULL,
 };
 
-/* 801C4D54-801C4D98 0044+00 rc=2 efc=2 rfr=False None .text      __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl */
+/* 801C4D54-801C4D98 0044+00 r=2 e=2 z=0  None .text      __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ asm dMenu_Fishing_c::dMenu_Fishing_c(JKRExpHeap* param_0, STControl* param_1, CS
 #pragma pop
 
 
-/* 801C4D98-801C504C 02B4+00 rc=1 efc=0 rfr=False None .text      __dt__15dMenu_Fishing_cFv                                    */
+/* 801C4D98-801C504C 02B4+00 r=1 e=0 z=0  None .text      __dt__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm dMenu_Fishing_c::~dMenu_Fishing_c() {
 #pragma pop
 
 
-/* 801C504C-801C50B4 0068+00 rc=1 efc=0 rfr=False None .text      _create__15dMenu_Fishing_cFv                                 */
+/* 801C504C-801C50B4 0068+00 r=1 e=0 z=0  None .text      _create__15dMenu_Fishing_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +272,7 @@ asm void dMenu_Fishing_c::_create() {
 #pragma pop
 
 
-/* 801C50B4-801C514C 0098+00 rc=2 efc=2 rfr=False None .text      _move__15dMenu_Fishing_cFv                                   */
+/* 801C50B4-801C514C 0098+00 r=2 e=2 z=0  None .text      _move__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,18 +284,18 @@ asm void dMenu_Fishing_c::_move() {
 
 
 /* ############################################################################################## */
-/* 80454108-8045410C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3904                                                        */
+/* 80454108-8045410C 0004+00 r=3 e=0 z=0  None .sdata2    @3904                                                        */
 SECTION_SDATA2 static u8 d_menu_d_menu_fishing__lit_3904[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045410C-80454110 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3905                                                        */
+/* 8045410C-80454110 0004+00 r=1 e=0 z=0  None .sdata2    @3905                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_3905 = 608.0f;
 
-/* 80454110-80454114 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3906                                                        */
+/* 80454110-80454114 0004+00 r=1 e=0 z=0  None .sdata2    @3906                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_3906 = 448.0f;
 
-/* 801C514C-801C5204 00B8+00 rc=2 efc=1 rfr=False None .text      _draw__15dMenu_Fishing_cFv                                   */
+/* 801C514C-801C5204 00B8+00 r=2 e=1 z=0  None .text      _draw__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ asm void dMenu_Fishing_c::_draw() {
 #pragma pop
 
 
-/* 801C5204-801C522C 0028+00 rc=2 efc=2 rfr=False None .text      isSync__15dMenu_Fishing_cFv                                  */
+/* 801C5204-801C522C 0028+00 r=2 e=2 z=0  None .text      isSync__15dMenu_Fishing_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void dMenu_Fishing_c::isSync() {
 #pragma pop
 
 
-/* 801C522C-801C52E4 00B8+00 rc=1 efc=0 rfr=False None .text      init__15dMenu_Fishing_cFv                                    */
+/* 801C522C-801C52E4 00B8+00 r=1 e=0 z=0  None .text      init__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,138 +329,138 @@ asm void dMenu_Fishing_c::init() {
 
 
 /* ############################################################################################## */
-/* 80395D90-80395DC0 0030+00 rc=1 efc=0 rfr=False None .rodata    fish_n$4060                                                  */
+/* 80395D90-80395DC0 0030+00 r=1 e=0 z=0  None .rodata    fish_n$4060                                                  */
 SECTION_RODATA static u8 const data_80395D90[48] = {
 	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x36, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x35,
 	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x33, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x31,
 	0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x32, 0x66, 0x69, 0x73, 0x68, 0x5F, 0x6E, 0x5F, 0x34,
 };
 
-/* 80395DC0-80395DF0 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p0$4061                                                 */
+/* 80395DC0-80395DF0 0030+00 r=0 e=0 z=0  None .rodata    fish_p0$4061                                                 */
 SECTION_RODATA u8 const data_80395DC0[48] = {
 	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x35, 0x6E,
 	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x31, 0x6E,
 	0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x70, 0x61, 0x5F, 0x34, 0x6E,
 };
 
-/* 80395DF0-80395E20 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p1$4062                                                 */
+/* 80395DF0-80395E20 0030+00 r=0 e=0 z=0  None .rodata    fish_p1$4062                                                 */
 SECTION_RODATA u8 const data_80395DF0[48] = {
 	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x35, 0x6E,
 	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x31, 0x6E,
 	0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6E, 0x61, 0x5F, 0x34, 0x6E,
 };
 
-/* 80395E20-80395E50 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p2$4063                                                 */
+/* 80395E20-80395E50 0030+00 r=0 e=0 z=0  None .rodata    fish_p2$4063                                                 */
 SECTION_RODATA u8 const data_80395E20[48] = {
 	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x36, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x35, 0x6E,
 	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x33, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x31, 0x6E,
 	0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x32, 0x6E, 0x66, 0x69, 0x5F, 0x6C, 0x69, 0x5F, 0x34, 0x6E,
 };
 
-/* 80395E50-80395E80 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p3$4064                                                 */
+/* 80395E50-80395E80 0030+00 r=0 e=0 z=0  None .rodata    fish_p3$4064                                                 */
 SECTION_RODATA u8 const data_80395E50[48] = {
 	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
 	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
 	0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x62, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
 };
 
-/* 80395E80-80395EB0 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p4$4065                                                 */
+/* 80395E80-80395EB0 0030+00 r=0 e=0 z=0  None .rodata    fish_p4$4065                                                 */
 SECTION_RODATA u8 const data_80395E80[48] = {
 	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x36, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x35, 0x6E,
 	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x33, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x31, 0x6E,
 	0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x32, 0x6E, 0x72, 0x5F, 0x62, 0x6F, 0x78, 0x5F, 0x34, 0x6E,
 };
 
-/* 80395EB0-80395EE0 0030+00 rc=0 efc=0 rfr=False None .rodata    fish_p5$4066                                                 */
+/* 80395EB0-80395EE0 0030+00 r=0 e=0 z=0  None .rodata    fish_p5$4066                                                 */
 SECTION_RODATA u8 const data_80395EB0[48] = {
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x36, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x35, 0x5F, 0x6E,
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x33, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x31, 0x5F, 0x6E,
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x32, 0x5F, 0x6E, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x34, 0x5F, 0x6E,
 };
 
-/* 80395EE0-80395F10 0030+00 rc=0 efc=0 rfr=False None .rodata    size_1$4081                                                  */
+/* 80395EE0-80395F10 0030+00 r=0 e=0 z=0  None .rodata    size_1$4081                                                  */
 SECTION_RODATA u8 const data_80395EE0[48] = {
 	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x36, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x35,
 	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x33, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x31,
 	0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x32, 0x73, 0x69, 0x7A, 0x65, 0x5F, 0x74, 0x5F, 0x34,
 };
 
-/* 80395F10-80395F40 0030+00 rc=0 efc=0 rfr=False None .rodata    size_unit_1$4082                                             */
+/* 80395F10-80395F40 0030+00 r=0 e=0 z=0  None .rodata    size_unit_1$4082                                             */
 SECTION_RODATA u8 const data_80395F10[48] = {
 	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x35,
 	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x31,
 	0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x00, 0x63, 0x6D, 0x5F, 0x74, 0x5F, 0x34,
 };
 
-/* 80395F40-80395F70 0030+00 rc=0 efc=0 rfr=False None .rodata    count_1$4083                                                 */
+/* 80395F40-80395F70 0030+00 r=0 e=0 z=0  None .rodata    count_1$4083                                                 */
 SECTION_RODATA u8 const data_80395F40[48] = {
 	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x36, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x35,
 	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x33, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x31,
 	0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x32, 0x63, 0x6F, 0x75, 0x6E, 0x74, 0x5F, 0x74, 0x34,
 };
 
-/* 80395F70-80395FA0 0030+00 rc=0 efc=0 rfr=False None .rodata    count_unit_1$4084                                            */
+/* 80395F70-80395FA0 0030+00 r=0 e=0 z=0  None .rodata    count_unit_1$4084                                            */
 SECTION_RODATA u8 const data_80395F70[48] = {
 	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x36, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x35,
 	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x33, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x31,
 	0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x32, 0x00, 0x63, 0x6F, 0x75, 0x5F, 0x74, 0x5F, 0x34,
 };
 
-/* 80395FA0-80395FD0 0030+00 rc=0 efc=0 rfr=False None .rodata    name_0$4085                                                  */
+/* 80395FA0-80395FD0 0030+00 r=0 e=0 z=0  None .rodata    name_0$4085                                                  */
 SECTION_RODATA u8 const data_80395FA0[48] = {
 	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
 	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
 	0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x00, 0x00, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
 };
 
-/* 80395FD0-80396000 0030+00 rc=0 efc=0 rfr=False None .rodata    fname_0$4086                                                 */
+/* 80395FD0-80396000 0030+00 r=0 e=0 z=0  None .rodata    fname_0$4086                                                 */
 SECTION_RODATA u8 const data_80395FD0[48] = {
 	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x36, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x35,
 	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x33, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x31,
 	0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x32, 0x66, 0x5F, 0x6E, 0x61, 0x6D, 0x65, 0x5F, 0x34,
 };
 
-/* 80396000-80396018 0018+00 rc=0 efc=0 rfr=False None .rodata    name_id$4087                                                 */
+/* 80396000-80396018 0018+00 r=0 e=0 z=0  None .rodata    name_id$4087                                                 */
 SECTION_RODATA u8 const data_80396000[24] = {
 	0x00, 0x00, 0x05, 0x9E, 0x00, 0x00, 0x05, 0x9D, 0x00, 0x00, 0x05, 0x9B, 0x00, 0x00, 0x05, 0x99,
 	0x00, 0x00, 0x05, 0x9A, 0x00, 0x00, 0x05, 0x9C,
 };
 
-/* 80396018-80396040 0028+00 rc=1 efc=0 rfr=False None .rodata    text_a_tag$4167                                              */
+/* 80396018-80396040 0028+00 r=1 e=0 z=0  None .rodata    text_a_tag$4167                                              */
 SECTION_RODATA static u8 const data_80396018[40] = {
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396040-80396068 0028+00 rc=1 efc=0 rfr=False None .rodata    text_b_tag$4168                                              */
+/* 80396040-80396068 0028+00 r=1 e=0 z=0  None .rodata    text_b_tag$4168                                              */
 SECTION_RODATA static u8 const data_80396040[40] = {
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396068-803960D0 0065+03 rc=5 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80396068-803960D0 0065+03 r=5 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80396068 = "/res/Layout/fishres.arc";
-SECTION_DEAD static char const* const stringBase_80396080 = "tt_block8x8.bti";
-SECTION_DEAD static char const* const stringBase_80396090 = "zelda_fish_window.blo";
-SECTION_DEAD static char const* const stringBase_803960A6 = "";
-SECTION_DEAD static char const* const stringBase_803960A7 = 
+SECTION_DEAD char const* const stringBase_80396068 = "/res/Layout/fishres.arc";
+SECTION_DEAD char const* const stringBase_80396080 = "tt_block8x8.bti";
+SECTION_DEAD char const* const stringBase_80396090 = "zelda_fish_window.blo";
+SECTION_DEAD char const* const stringBase_803960A6 = "";
+SECTION_DEAD char const* const stringBase_803960A7 = 
     "zelda_collect_soubi_do_icon_parts.blo";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_803960CD = "\0\0";
 #pragma pop
 
-/* 80454114-80454118 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4010                                                        */
+/* 80454114-80454118 0004+00 r=1 e=0 z=0  None .sdata2    @4010                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_4010 = 1.0f;
 
-/* 80454118-80454120 0008+00 rc=2 efc=0 rfr=False None .sdata2    @4012                                                        */
+/* 80454118-80454120 0008+00 r=2 e=0 z=0  None .sdata2    @4012                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_fishing__lit_4012 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801C52E4-801C5470 018C+00 rc=2 efc=2 rfr=False None .text      _open__15dMenu_Fishing_cFv                                   */
+/* 801C52E4-801C5470 018C+00 r=2 e=2 z=0  None .text      _open__15dMenu_Fishing_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,7 +471,7 @@ asm void dMenu_Fishing_c::_open() {
 #pragma pop
 
 
-/* 801C5470-801C556C 00FC+00 rc=1 efc=1 rfr=False None .text      _close__15dMenu_Fishing_cFv                                  */
+/* 801C5470-801C556C 00FC+00 r=1 e=1 z=0  None .text      _close__15dMenu_Fishing_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,7 +482,7 @@ asm void dMenu_Fishing_c::_close() {
 #pragma pop
 
 
-/* 801C556C-801C55A8 003C+00 rc=1 efc=0 rfr=False None .text      wait_init__15dMenu_Fishing_cFv                               */
+/* 801C556C-801C55A8 003C+00 r=1 e=0 z=0  None .text      wait_init__15dMenu_Fishing_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +493,7 @@ asm void dMenu_Fishing_c::wait_init() {
 #pragma pop
 
 
-/* 801C55A8-801C55D8 0030+00 rc=1 efc=0 rfr=False None .text      wait_move__15dMenu_Fishing_cFv                               */
+/* 801C55A8-801C55D8 0030+00 r=1 e=0 z=0  None .text      wait_move__15dMenu_Fishing_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -504,7 +504,7 @@ asm void dMenu_Fishing_c::wait_move() {
 #pragma pop
 
 
-/* 801C55D8-801C5D3C 0764+00 rc=1 efc=0 rfr=False None .text      screenSetBase__15dMenu_Fishing_cFv                           */
+/* 801C55D8-801C5D3C 0764+00 r=1 e=0 z=0  None .text      screenSetBase__15dMenu_Fishing_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -515,7 +515,7 @@ asm void dMenu_Fishing_c::screenSetBase() {
 #pragma pop
 
 
-/* 801C5D3C-801C5EB8 017C+00 rc=1 efc=0 rfr=False None .text      screenSetDoIcon__15dMenu_Fishing_cFv                         */
+/* 801C5D3C-801C5EB8 017C+00 r=1 e=0 z=0  None .text      screenSetDoIcon__15dMenu_Fishing_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,7 +526,7 @@ asm void dMenu_Fishing_c::screenSetDoIcon() {
 #pragma pop
 
 
-/* 801C5EB8-801C5F68 00B0+00 rc=1 efc=0 rfr=False None .text      setAButtonString__15dMenu_Fishing_cFUs                       */
+/* 801C5EB8-801C5F68 00B0+00 r=1 e=0 z=0  None .text      setAButtonString__15dMenu_Fishing_cFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,7 +537,7 @@ asm void dMenu_Fishing_c::setAButtonString(u16 param_0) {
 #pragma pop
 
 
-/* 801C5F68-801C6018 00B0+00 rc=1 efc=0 rfr=False None .text      setBButtonString__15dMenu_Fishing_cFUs                       */
+/* 801C5F68-801C6018 00B0+00 r=1 e=0 z=0  None .text      setBButtonString__15dMenu_Fishing_cFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,7 +548,7 @@ asm void dMenu_Fishing_c::setBButtonString(u16 param_0) {
 #pragma pop
 
 
-/* 801C6018-801C605C 0044+00 rc=1 efc=0 rfr=False None .text      getFigure__15dMenu_Fishing_cFi                               */
+/* 801C6018-801C605C 0044+00 r=1 e=0 z=0  None .text      getFigure__15dMenu_Fishing_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -559,7 +559,7 @@ asm void dMenu_Fishing_c::getFigure(int param_0) {
 #pragma pop
 
 
-/* 801C605C-801C6210 01B4+00 rc=1 efc=0 rfr=False None .text      setFishParam__15dMenu_Fishing_cFiUsUc                        */
+/* 801C605C-801C6210 01B4+00 r=1 e=0 z=0  None .text      setFishParam__15dMenu_Fishing_cFiUsUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,7 +570,7 @@ asm void dMenu_Fishing_c::setFishParam(int param_0, u16 param_1, u8 param_2) {
 #pragma pop
 
 
-/* 801C6210-801C659C 038C+00 rc=2 efc=0 rfr=False None .text      setHIO__15dMenu_Fishing_cFb                                  */
+/* 801C6210-801C659C 038C+00 r=2 e=0 z=0  None .text      setHIO__15dMenu_Fishing_cFb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +581,7 @@ asm void dMenu_Fishing_c::setHIO(bool param_0) {
 #pragma pop
 
 
-/* 801C659C-801C65BC 0020+00 rc=1 efc=0 rfr=False None .text      draw__15dMenu_Fishing_cFv                                    */
+/* 801C659C-801C65BC 0020+00 r=1 e=0 z=0  None .text      draw__15dMenu_Fishing_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,7 +592,7 @@ asm void dMenu_Fishing_c::draw() {
 #pragma pop
 
 
-/* 801C65BC-801C65F8 003C+00 rc=1 efc=1 rfr=False None .text      __sinit_d_menu_fishing_cpp                                   */
+/* 801C65BC-801C65F8 003C+00 r=1 e=1 z=0  None .text      __sinit_d_menu_fishing_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

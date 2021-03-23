@@ -13,7 +13,7 @@
 
 struct JUTConsole {
 	/* 802E7C38 */ void print(char const*);
-	/* 802E7F7C */ void dumpToTerminal(u32);
+	/* 802E7F7C */ void dumpToTerminal(unsigned int);
 };
 
 struct dRes_control_c {
@@ -53,6 +53,8 @@ extern "C" static void dispDateInfo__Fv(); // 1
 extern "C" static void dispConsoleToTerminal__Fv(); // 1
 extern "C" void exception_addition__FP10JUTConsole(); // 1
 extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
+extern "C" extern u8 struct_80450C98[4];
+extern "C" extern u8 struct_80450C9C[4];
 
 // 
 // External References:
@@ -79,7 +81,6 @@ extern "C" extern u8 data_80450B14[4];
 extern "C" extern u8 gameHeap[4];
 extern "C" extern u8 zeldaHeap[4];
 extern "C" extern u8 archiveHeap[4];
-extern "C" extern u8 sConsole[4];
 extern "C" extern u8 systemConsole__9JFWSystem[4];
 extern "C" extern u8 sAramObject__7JKRAram[4];
 
@@ -87,7 +88,11 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // Declarations:
 // 
 
-/* 80017D7C-80017E08 008C+00 rc=3 efc=0 rfr=False None .text      print_f__FPCce                                               */
+/* ############################################################################################## */
+/* 80450C90-80450C98 0004+04 r=3 e=0 z=0  None .sbss      sConsole                                                     */
+static u8 sConsole[4 + 4 /* padding */];
+
+/* 80017D7C-80017E08 008C+00 r=3 e=0 z=0  None .text      print_f__FPCce                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +103,7 @@ asm static void print_f(char const* param_0, ...) {
 #pragma pop
 
 
-/* 80017E08-80017E30 0028+00 rc=2 efc=0 rfr=False None .text      print__FPCc                                                  */
+/* 80017E08-80017E30 0028+00 r=2 e=0 z=0  None .text      print__FPCc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,38 +115,38 @@ asm static void print(char const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80374460-80374640 01DF+01 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80374460-80374640 01DF+01 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80374460 = 
+SECTION_DEAD char const* const stringBase_80374460 = 
     "--------------------------------------\n";
-SECTION_DEAD static char const* const stringBase_80374488 = 
+SECTION_DEAD char const* const stringBase_80374488 = 
     "-- Heap Free / TotalFree (KB) --\n";
-SECTION_DEAD static char const* const stringBase_803744AA = "  Zelda %5d / %5d\n";
-SECTION_DEAD static char const* const stringBase_803744BD = "   Game %5d / %5d\n";
-SECTION_DEAD static char const* const stringBase_803744D0 = "Archive %5d / %5d\n";
-SECTION_DEAD static char const* const stringBase_803744E3 = 
+SECTION_DEAD char const* const stringBase_803744AA = "  Zelda %5d / %5d\n";
+SECTION_DEAD char const* const stringBase_803744BD = "   Game %5d / %5d\n";
+SECTION_DEAD char const* const stringBase_803744D0 = "Archive %5d / %5d\n";
+SECTION_DEAD char const* const stringBase_803744E3 = 
     "--------------------------------\n";
-SECTION_DEAD static char const* const stringBase_80374505 = "Start StageName:RoomNo [%s:%d]\n";
-SECTION_DEAD static char const* const stringBase_80374525 = 
+SECTION_DEAD char const* const stringBase_80374505 = "Start StageName:RoomNo [%s:%d]\n";
+SECTION_DEAD char const* const stringBase_80374525 = 
     "------------- Date Infomation ---------\n";
-SECTION_DEAD static char const* const stringBase_8037454E = " FINAL VERSION\n";
-SECTION_DEAD static char const* const stringBase_8037455E = "COMPILE USER: FINAL\n";
-SECTION_DEAD static char const* const stringBase_80374573 = "COPYDATE   : %17s\n";
-SECTION_DEAD static char const* const stringBase_80374586 = 
+SECTION_DEAD char const* const stringBase_8037454E = " FINAL VERSION\n";
+SECTION_DEAD char const* const stringBase_8037455E = "COMPILE USER: FINAL\n";
+SECTION_DEAD char const* const stringBase_80374573 = "COPYDATE   : %17s\n";
+SECTION_DEAD char const* const stringBase_80374586 = 
     "PowerOnTime: %04d/%2d/%2d %2d:%2d:%2d`%03d\"%03d\n";
-SECTION_DEAD static char const* const stringBase_803745B7 = 
+SECTION_DEAD char const* const stringBase_803745B7 = 
     "HungUpTime : %04d/%2d/%2d %2d:%2d:%2d`%03d\"%03d\n";
-SECTION_DEAD static char const* const stringBase_803745E8 = 
+SECTION_DEAD char const* const stringBase_803745E8 = 
     "PlayTime   : %4d days, %2d:%2d:%2d`%03d\"%03d\n";
-SECTION_DEAD static char const* const stringBase_80374616 = 
+SECTION_DEAD char const* const stringBase_80374616 = 
     "---------------------------------------\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8037463F = "";
 #pragma pop
 
-/* 80017E30-80017F8C 015C+00 rc=1 efc=0 rfr=False None .text      dispHeapInfo__Fv                                             */
+/* 80017E30-80017F8C 015C+00 r=1 e=0 z=0  None .text      dispHeapInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +157,7 @@ asm static void dispHeapInfo() {
 #pragma pop
 
 
-/* 80017F8C-80017FD0 0044+00 rc=1 efc=0 rfr=False None .text      dispGameInfo__Fv                                             */
+/* 80017F8C-80017FD0 0044+00 r=1 e=0 z=0  None .text      dispGameInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,7 +168,7 @@ asm static void dispGameInfo() {
 #pragma pop
 
 
-/* 80017FD0-80018124 0154+00 rc=1 efc=0 rfr=False None .text      dispDateInfo__Fv                                             */
+/* 80017FD0-80018124 0154+00 r=1 e=0 z=0  None .text      dispDateInfo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +179,7 @@ asm static void dispDateInfo() {
 #pragma pop
 
 
-/* 80018124-8001814C 0028+00 rc=1 efc=0 rfr=False None .text      dispConsoleToTerminal__Fv                                    */
+/* 80018124-8001814C 0028+00 r=1 e=0 z=0  None .text      dispConsoleToTerminal__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +190,7 @@ asm static void dispConsoleToTerminal() {
 #pragma pop
 
 
-/* 8001814C-8001817C 0030+00 rc=1 efc=1 rfr=False None .text      exception_addition__FP10JUTConsole                           */
+/* 8001814C-8001817C 0030+00 r=1 e=1 z=0  None .text      exception_addition__FP10JUTConsole                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,4 +200,11 @@ asm void exception_addition(JUTConsole* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80450C98-80450C9C 0004+00 r=50 e=0 z=50  None .sbss      None                                                         */
+u8 struct_80450C98[4];
+
+/* 80450C9C-80450CA0 0004+00 r=6 e=0 z=6  None .sbss      None                                                         */
+u8 struct_80450C9C[4];
 

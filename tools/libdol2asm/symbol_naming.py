@@ -20,8 +20,8 @@ integer_types = {
     ("long long", False, True): S64,
     ("long long", False, False): S64,
     ("int", False, False): INT,
-    ("int", True, False): U32,
-    ("int", False, True): S32,
+    ("int", True, False): UINT,
+    ("int", False, True): SINT,
 }
 
 type_map = {
@@ -158,7 +158,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                     context.warning(f"one of the demangled parameters could not be converted to data-type.")
                     context.warning([ x[1] for x in zip(types, p.demangled) if not x[0] ])
                         
-        except demangle.ParseError as e:
+        except Exception as e:# demangle.ParseError as e:
             context.error(f"demangle error: '{name}'")
             context.error(f"\t{e}")
             context.error(f"\t{p.func_name}")
@@ -166,43 +166,6 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
             
             pass
 
-
-
-
-    """
-        if symbol.name.demangled:
-            parts = symbol.name.demangled.demangled
-            demangled = symbol.name.demangled.to_str()
-            
-            pointer_types = []
-            valid = is_demangled_safe(parts, pointer_types)
-
-            if valid and demangled:
-                if not ("<" in demangled or ">" in demangled or ":" in demangled):
-                    if not symbol.return_type:
-                        ret_type = None
-                        if symbol.name.demangled.func_name == "operator new":
-                            ret_type = "void*"
-                        elif symbol.name.demangled.func_name == "operator new[]":
-                            ret_type = "void*"
-                        elif symbol.name.demangled.func_name == "operator==":
-                            ret_type = "bool"
-                        elif symbol.name.demangled.func_name == "operator!=":
-                            ret_type = "bool"
-                        elif symbol.name.demangled.func_name == "operator<":
-                            ret_type = "bool"
-                        elif symbol.name.demangled.func_name == "operator>":
-                            ret_type = "bool"
-
-                        symbol.return_type = ret_type
-                    symbol.name.pointer_types = pointer_types
-                    symbol.name.is_function = True
-    """
-    """
-    if isinstance(symbol, StaticLocalData):
-        nameFix(context, label_collisions, reference_collisions, symbol.value)
-        nameFix(context, label_collisions, reference_collisions, symbol.init_flag)
-    """
     label_collisions[symbol.identifier.label] += 1
     reference_collisions[symbol.identifier.reference] += 1
 
@@ -214,10 +177,6 @@ def execute(context, libraries):
         for tu in lib.translation_units.values():
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
-                    """
-                    if isinstance(symbol, StringBaseData):
-                        tu.using_string_base = True
-                    """
                     nameFix(context, label_collisions, reference_collisions, symbol)
 
     for lib in libraries:
@@ -233,30 +192,6 @@ def execute(context, libraries):
         raw_names = tuple([x.name for x in named.names])
         for i in range(len(raw_names) - index):
             types[i][raw_names[0:i+1]].append(named.names[0:i+1])
-
-    def iterate_type(type):
-        if not type:
-            return
-        if type.is_builtin:
-            return
-
-        if isinstance(type, ArrayType):
-            iterate_type(type.base)
-            iterate_type(type.inner)
-            return
-
-        if isinstance(type, ConstType):
-            return iterate_type(type.of)
-        if isinstance(type, PointerType):
-            return iterate_type(type.of)
-        if isinstance(type, ReferenceType):
-            return iterate_type(type.of)
-
-        if isinstance(type, NamedType):
-            for name in type.names:
-                for template in name.templates:
-                    iterate_type(template)
-            add_named_type(type)
 
     all_named_types = list()
     for lib in libraries:

@@ -26,12 +26,12 @@ extern "C" extern u8 g_dComIfGoat_gameInfo[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80450610-80450618 0008+00 rc=1 efc=1 rfr=False None .sdata     g_dComIfAc_gameInfo                                          */
+/* 80450610-80450618 0008+00 r=1 e=1 z=0  None .sdata     g_dComIfAc_gameInfo                                          */
 SECTION_SDATA u8 g_dComIfAc_gameInfo[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450618-80450620 0004+04 rc=2 efc=2 rfr=False None .sdata     g_dComIfGoat_gameInfo                                        */
+/* 80450618-80450620 0004+04 r=9 e=2 z=7  None .sdata     g_dComIfGoat_gameInfo                                        */
 SECTION_SDATA u8 g_dComIfGoat_gameInfo[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */

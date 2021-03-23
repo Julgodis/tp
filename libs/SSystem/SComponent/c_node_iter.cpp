@@ -38,7 +38,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 80266324-802663B4 0090+00 rc=1 efc=1 rfr=False None .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            */
+/* 80266324-802663B4 0090+00 r=1 e=1 z=0  None .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +49,7 @@ asm void cNdIt_Method(node_class* param_0, int (*)(node_class*, void*), void* pa
 #pragma pop
 
 
-/* 802663B4-80266440 008C+00 rc=1 efc=1 rfr=False None .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            */
+/* 802663B4-80266440 008C+00 r=1 e=1 z=0  None .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

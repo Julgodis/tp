@@ -25,7 +25,7 @@ extern "C" void __ieee754_pow(); // 1
 // Declarations:
 // 
 
-/* 8036C780-8036C7A0 0020+00 rc=3 efc=3 rfr=False None .text      pow                                                          */
+/* 8036C780-8036C7A0 0020+00 r=27 e=3 z=24  None .text      pow                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

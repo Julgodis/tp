@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISeqData {
+struct JAISeqDataRegion {
 };
 
-struct JAISeqDataRegion {
+struct JAISeqData {
 };
 
 struct JAUSeqCollection {
@@ -24,10 +24,10 @@ struct JAUSeqCollection {
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-struct JAISeqDataUser {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISeqDataUser {
 };
 
 struct JAUSeqDataMgr_SeqCollection {
@@ -71,7 +71,7 @@ extern "C" extern void* __vt__13JAISeqDataMgr[6];
 // Declarations:
 // 
 
-/* 802A66A0-802A66AC 000C+00 rc=1 efc=0 rfr=False None .text      __ct__16JAUSeqCollectionFv                                   */
+/* 802A66A0-802A66AC 000C+00 r=1 e=0 z=0  None .text      __ct__16JAUSeqCollectionFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm JAUSeqCollection::JAUSeqCollection() {
 #pragma pop
 
 
-/* 802A66AC-802A66FC 0050+00 rc=1 efc=1 rfr=False None .text      init__16JAUSeqCollectionFPCv                                 */
+/* 802A66AC-802A66FC 0050+00 r=1 e=1 z=0  None .text      init__16JAUSeqCollectionFPCv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void JAUSeqCollection::init(void const* param_0) {
 #pragma pop
 
 
-/* 802A66FC-802A6754 0058+00 rc=1 efc=0 rfr=False None .text      getSeqData__16JAUSeqCollectionFiiP10JAISeqData               */
+/* 802A66FC-802A6754 0058+00 r=1 e=0 z=0  None .text      getSeqData__16JAUSeqCollectionFiiP10JAISeqData               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void JAUSeqCollection::getSeqData(int param_0, int param_1, JAISeqData* para
 #pragma pop
 
 
-/* 802A6754-802A677C 0028+00 rc=1 efc=0 rfr=False None .text      getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion     */
+/* 802A6754-802A677C 0028+00 r=1 e=0 z=0  None .text      getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm void JAUSeqCollection::getSeqDataRegion(JAISeqDataRegion* param_0) {
 
 
 /* ############################################################################################## */
-/* 803C9B38-803C9B50 0018+00 rc=2 efc=0 rfr=False None .data      __vt__27JAUSeqDataMgr_SeqCollection                          */
+/* 803C9B38-803C9B50 0018+00 r=2 e=0 z=0  None .data      __vt__27JAUSeqDataMgr_SeqCollection                          */
 SECTION_DATA static void* __vt__27JAUSeqDataMgr_SeqCollection[6] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -126,7 +126,7 @@ SECTION_DATA static void* __vt__27JAUSeqDataMgr_SeqCollection[6] = {
 	/* 5    */ (void*)setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser,
 };
 
-/* 802A677C-802A67D0 0054+00 rc=1 efc=1 rfr=False None .text      __ct__27JAUSeqDataMgr_SeqCollectionFv                        */
+/* 802A677C-802A67D0 0054+00 r=1 e=1 z=0  None .text      __ct__27JAUSeqDataMgr_SeqCollectionFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm JAUSeqDataMgr_SeqCollection::JAUSeqDataMgr_SeqCollection() {
 #pragma pop
 
 
-/* 802A67D0-802A67DC 000C+00 rc=1 efc=0 rfr=False None .text      setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser */
+/* 802A67D0-802A67DC 000C+00 r=1 e=0 z=0  None .text      setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm void JAUSeqDataMgr_SeqCollection::setSeqDataUser(JAISeqDataUser* param_0) {
 #pragma pop
 
 
-/* 802A67DC-802A683C 0060+00 rc=1 efc=0 rfr=False None .text      releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv              */
+/* 802A67DC-802A683C 0060+00 r=1 e=0 z=0  None .text      releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ asm void JAUSeqDataMgr_SeqCollection::releaseSeqData() {
 #pragma pop
 
 
-/* 802A683C-802A6894 0058+00 rc=1 efc=0 rfr=False None .text      getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData */
+/* 802A683C-802A6894 0058+00 r=1 e=0 z=0  None .text      getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +170,7 @@ asm void JAUSeqDataMgr_SeqCollection::getSeqData(JAISoundID param_0, JAISeqData*
 #pragma pop
 
 
-/* 802A6894-802A68F4 0060+00 rc=1 efc=0 rfr=False None .text      __dt__27JAUSeqDataMgr_SeqCollectionFv                        */
+/* 802A6894-802A68F4 0060+00 r=1 e=0 z=0  None .text      __dt__27JAUSeqDataMgr_SeqCollectionFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

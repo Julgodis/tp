@@ -37,7 +37,7 @@ extern "C" void mDoGph_Create__Fv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C3528-803C3540 0018+00 rc=3 efc=3 rfr=False None .data      g_cAPI_Interface                                             */
+/* 803C3528-803C3540 0018+00 r=3 e=3 z=0  None .data      g_cAPI_Interface                                             */
 SECTION_DATA void* g_cAPI_Interface[6] = {
 	/* 0    */ (void*)mDoGph_Create__Fv,
 	/* 1    */ (void*)mDoGph_BeforeOfDraw__Fv,

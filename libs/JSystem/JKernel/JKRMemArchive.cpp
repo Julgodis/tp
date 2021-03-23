@@ -149,7 +149,7 @@ extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 // 
 
 /* ############################################################################################## */
-/* 803CC2D8-803CC328 0050+00 rc=3 efc=0 rfr=False None .data      __vt__13JKRMemArchive                                        */
+/* 803CC2D8-803CC328 0050+00 r=3 e=0 z=0  None .data      __vt__13JKRMemArchive                                        */
 SECTION_DATA static void* __vt__13JKRMemArchive[20] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -173,7 +173,7 @@ SECTION_DATA static void* __vt__13JKRMemArchive[20] = {
 	/* 19   */ (void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
-/* 802D69B8-802D6A6C 00B4+00 rc=2 efc=2 rfr=False None .text      __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection       */
+/* 802D69B8-802D6A6C 00B4+00 r=2 e=2 z=0  None .text      __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm JKRMemArchive::JKRMemArchive(s32 param_0, JKRArchive::EMountDirection param_
 #pragma pop
 
 
-/* 802D6A6C-802D6B24 00B8+00 rc=2 efc=2 rfr=False None .text      __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag                  */
+/* 802D6A6C-802D6B24 00B8+00 r=2 e=2 z=0  None .text      __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +195,7 @@ asm JKRMemArchive::JKRMemArchive(void* param_0, u32 param_1, JKRMemBreakFlag par
 #pragma pop
 
 
-/* 802D6B24-802D6BCC 00A8+00 rc=1 efc=0 rfr=False None .text      __dt__13JKRMemArchiveFv                                      */
+/* 802D6B24-802D6BCC 00A8+00 r=1 e=0 z=0  None .text      __dt__13JKRMemArchiveFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +206,7 @@ asm JKRMemArchive::~JKRMemArchive() {
 #pragma pop
 
 
-/* 802D6BCC-802D6D30 0164+00 rc=1 efc=0 rfr=False None .text      open__13JKRMemArchiveFlQ210JKRArchive15EMountDirection       */
+/* 802D6BCC-802D6D30 0164+00 r=1 e=0 z=0  None .text      open__13JKRMemArchiveFlQ210JKRArchive15EMountDirection       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +217,7 @@ asm void JKRMemArchive::open(s32 param_0, JKRArchive::EMountDirection param_1) {
 #pragma pop
 
 
-/* 802D6D30-802D6DDC 00AC+00 rc=1 efc=0 rfr=False None .text      open__13JKRMemArchiveFPvUl15JKRMemBreakFlag                  */
+/* 802D6D30-802D6DDC 00AC+00 r=1 e=0 z=0  None .text      open__13JKRMemArchiveFPvUl15JKRMemBreakFlag                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm void JKRMemArchive::open(void* param_0, u32 param_1, JKRMemBreakFlag param_2
 #pragma pop
 
 
-/* 802D6DDC-802D6E10 0034+00 rc=1 efc=0 rfr=False None .text      fetchResource__13JKRMemArchiveFPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D6DDC-802D6E10 0034+00 r=1 e=0 z=0  None .text      fetchResource__13JKRMemArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +239,7 @@ asm void JKRMemArchive::fetchResource(JKRArchive::SDIFileEntry* param_0, u32* pa
 #pragma pop
 
 
-/* 802D6E10-802D6ED0 00C0+00 rc=1 efc=0 rfr=False None .text      fetchResource__13JKRMemArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D6E10-802D6ED0 00C0+00 r=1 e=0 z=0  None .text      fetchResource__13JKRMemArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ asm void JKRMemArchive::fetchResource(void* param_0, u32 param_1, JKRArchive::SD
 #pragma pop
 
 
-/* 802D6ED0-802D6F20 0050+00 rc=1 efc=0 rfr=False None .text      removeResourceAll__13JKRMemArchiveFv                         */
+/* 802D6ED0-802D6F20 0050+00 r=1 e=0 z=0  None .text      removeResourceAll__13JKRMemArchiveFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm void JKRMemArchive::removeResourceAll() {
 #pragma pop
 
 
-/* 802D6F20-802D6F5C 003C+00 rc=1 efc=0 rfr=False None .text      removeResource__13JKRMemArchiveFPv                           */
+/* 802D6F20-802D6F5C 003C+00 r=1 e=0 z=0  None .text      removeResource__13JKRMemArchiveFPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,18 +273,18 @@ asm void JKRMemArchive::removeResource(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 8039D160-8039D188 0027+01 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D160-8039D188 0027+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D160 = "JKRMemArchive.cpp";
-SECTION_DEAD static char const* const stringBase_8039D172 = "%s";
-SECTION_DEAD static char const* const stringBase_8039D175 = "??? bad sequence\n";
+SECTION_DEAD char const* const stringBase_8039D160 = "JKRMemArchive.cpp";
+SECTION_DEAD char const* const stringBase_8039D172 = "%s";
+SECTION_DEAD char const* const stringBase_8039D175 = "??? bad sequence\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039D187 = "";
 #pragma pop
 
-/* 802D6F5C-802D7030 00D4+00 rc=2 efc=1 rfr=False None .text      fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli        */
+/* 802D6F5C-802D7030 00D4+00 r=2 e=1 z=0  None .text      fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +295,7 @@ asm void JKRMemArchive::fetchResource_subroutine(u8* param_0, u32 param_1, u8* p
 #pragma pop
 
 
-/* 802D7030-802D70C0 0090+00 rc=1 efc=0 rfr=False None .text      getExpandedResSize__13JKRMemArchiveCFPCv                     */
+/* 802D7030-802D70C0 0090+00 r=1 e=0 z=0  None .text      getExpandedResSize__13JKRMemArchiveCFPCv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

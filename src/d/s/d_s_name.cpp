@@ -239,54 +239,54 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C3040-803C304C 000C+00 rc=1 efc=0 rfr=False None .data      cNullVec__6Z2Calc                                            */
+/* 803C3040-803C304C 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 d_s_d_s_name__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C304C-803C3058 000C+00 rc=0 efc=0 rfr=False None .data      @3942                                                        */
+/* 803C304C-803C3058 000C+00 r=0 e=0 z=0  None .data      @3942                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3942[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectOpen__10dScnName_cFv,
 };
 
-/* 803C3058-803C3064 000C+00 rc=0 efc=0 rfr=False None .data      @3943                                                        */
+/* 803C3058-803C3064 000C+00 r=0 e=0 z=0  None .data      @3943                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3943[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectMain__10dScnName_cFv,
 };
 
-/* 803C3064-803C3070 000C+00 rc=0 efc=0 rfr=False None .data      @3944                                                        */
+/* 803C3064-803C3070 000C+00 r=0 e=0 z=0  None .data      @3944                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3944[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)FileSelectClose__10dScnName_cFv,
 };
 
-/* 803C3070-803C307C 000C+00 rc=0 efc=0 rfr=False None .data      @3945                                                        */
+/* 803C3070-803C307C 000C+00 r=0 e=0 z=0  None .data      @3945                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3945[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)brightCheckOpen__10dScnName_cFv,
 };
 
-/* 803C307C-803C3088 000C+00 rc=0 efc=0 rfr=False None .data      @3946                                                        */
+/* 803C307C-803C3088 000C+00 r=0 e=0 z=0  None .data      @3946                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3946[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)brightCheck__10dScnName_cFv,
 };
 
-/* 803C3088-803C3094 000C+00 rc=0 efc=0 rfr=False None .data      @3947                                                        */
+/* 803C3088-803C3094 000C+00 r=0 e=0 z=0  None .data      @3947                                                        */
 SECTION_DATA void* d_s_d_s_name__lit_3947[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)changeGameScene__10dScnName_cFv,
 };
 
-/* 803C3094-803C30DC 0048+00 rc=1 efc=0 rfr=False None .data      MainProc                                                     */
+/* 803C3094-803C30DC 0048+00 r=1 e=0 z=0  None .data      MainProc                                                     */
 SECTION_DATA static u8 MainProc[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -295,7 +295,7 @@ SECTION_DATA static u8 MainProc[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C30DC-803C30F0 0014+00 rc=2 efc=0 rfr=False None .data      l_dScnName_Method                                            */
+/* 803C30DC-803C30F0 0014+00 r=2 e=0 z=0  None .data      l_dScnName_Method                                            */
 SECTION_DATA static void* l_dScnName_Method[5] = {
 	/* 0    */ (void*)dScnName_Create__FP11scene_class,
 	/* 1    */ (void*)dScnName_Delete__FP10dScnName_c,
@@ -304,7 +304,7 @@ SECTION_DATA static void* l_dScnName_Method[5] = {
 	/* 4    */ (void*)dScnName_Draw__FP10dScnName_c,
 };
 
-/* 803C30F0-803C3118 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_NAME_SCENE                                         */
+/* 803C30F0-803C3118 0028+00 r=1 e=0 z=1  None .data      g_profile_NAME_SCENE                                         */
 SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -318,7 +318,7 @@ SECTION_DATA void* g_profile_NAME_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C3118-803C3140 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_NAMEEX_SCENE                                       */
+/* 803C3118-803C3140 0028+00 r=1 e=0 z=1  None .data      g_profile_NAMEEX_SCENE                                       */
 SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -332,21 +332,21 @@ SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C3140-803C314C 000C+00 rc=3 efc=0 rfr=False None .data      __vt__17dScnName_camera_c                                    */
+/* 803C3140-803C314C 000C+00 r=3 e=0 z=0  None .data      __vt__17dScnName_camera_c                                    */
 SECTION_DATA static void* __vt__17dScnName_camera_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__17dScnName_camera_cFv,
 };
 
-/* 803C314C-803C3158 000C+00 rc=2 efc=0 rfr=False None .data      __vt__9dSn_HIO_c                                             */
+/* 803C314C-803C3158 000C+00 r=2 e=0 z=0  None .data      __vt__9dSn_HIO_c                                             */
 SECTION_DATA static void* __vt__9dSn_HIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__9dSn_HIO_cFv,
 };
 
-/* 8025878C-802587A4 0018+00 rc=1 efc=0 rfr=False None .text      __ct__9dSn_HIO_cFv                                           */
+/* 8025878C-802587A4 0018+00 r=1 e=0 z=0  None .text      __ct__9dSn_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -358,18 +358,18 @@ asm dSn_HIO_c::dSn_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 8039A2A8-8039A2C8 001D+03 rc=4 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039A2A8-8039A2C8 001D+03 r=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039A2A8 = "/res/Object/";
-SECTION_DEAD static char const* const stringBase_8039A2B5 = "fileSel";
-SECTION_DEAD static char const* const stringBase_8039A2BD = "F_SP108";
+SECTION_DEAD char const* const stringBase_8039A2A8 = "/res/Object/";
+SECTION_DEAD char const* const stringBase_8039A2B5 = "fileSel";
+SECTION_DEAD char const* const stringBase_8039A2BD = "F_SP108";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039A2C5 = "\0\0";
 #pragma pop
 
-/* 802587A4-80258820 007C+00 rc=1 efc=0 rfr=False None .text      phase_1__FPc                                                 */
+/* 802587A4-80258820 007C+00 r=1 e=0 z=0  None .text      phase_1__FPc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +380,7 @@ asm static void phase_1(char* param_0) {
 #pragma pop
 
 
-/* 80258820-80258878 0058+00 rc=1 efc=0 rfr=False None .text      phase_2__FPc                                                 */
+/* 80258820-80258878 0058+00 r=1 e=0 z=0  None .text      phase_2__FPc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,13 +392,13 @@ asm static void phase_2(char* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450758-80450760 0008+00 rc=1 efc=0 rfr=False None .sdata     l_method$3851                                                */
+/* 80450758-80450760 0008+00 r=1 e=0 z=0  None .sdata     l_method$3851                                                */
 SECTION_SDATA static void* data_80450758[2] = {
 	/* 0    */ (void*)d_s_d_s_name__phase_1__FPc,
 	/* 1    */ (void*)d_s_d_s_name__phase_2__FPc,
 };
 
-/* 80258878-802588A0 0028+00 rc=1 efc=0 rfr=False None .text      resLoad__FP30request_of_phase_process_classPc                */
+/* 80258878-802588A0 0028+00 r=1 e=0 z=0  None .text      resLoad__FP30request_of_phase_process_classPc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,33 +410,33 @@ asm static void resLoad(request_of_phase_process_class* param_0, char* param_1) 
 
 
 /* ############################################################################################## */
-/* 804510F0-804510F8 0008+00 rc=2 efc=0 rfr=False None .sbss      g_snHIO                                                      */
+/* 804510F0-804510F8 0008+00 r=2 e=0 z=0  None .sbss      g_snHIO                                                      */
 static u8 g_snHIO[8];
 
-/* 80454EF8-80454EFC 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3923                                                        */
+/* 80454EF8-80454EFC 0004+00 r=2 e=0 z=0  None .sdata2    @3923                                                        */
 SECTION_SDATA2 static u8 d_s_d_s_name__lit_3923[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454EFC-80454F00 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3924                                                        */
+/* 80454EFC-80454F00 0004+00 r=1 e=0 z=0  None .sdata2    @3924                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_name__lit_3924 = 1.0f;
 
-/* 80454F00-80454F04 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3925                                                        */
+/* 80454F00-80454F04 0004+00 r=1 e=0 z=0  None .sdata2    @3925                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_name__lit_3925 = 100000.0f;
 
-/* 80454F04-80454F08 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3926                                                        */
+/* 80454F04-80454F08 0004+00 r=1 e=0 z=0  None .sdata2    @3926                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_name__lit_3926 = 45.0f;
 
-/* 80454F08-80454F0C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3927                                                        */
+/* 80454F08-80454F0C 0004+00 r=1 e=0 z=0  None .sdata2    @3927                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_name__lit_3927 = 19.0f / 14.0f;
 
-/* 80454F0C-80454F10 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3928                                                        */
+/* 80454F0C-80454F10 0004+00 r=1 e=0 z=0  None .sdata2    @3928                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_name__lit_3928 = -1000.0f;
 
-/* 80454F10-80454F18 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3930                                                        */
+/* 80454F10-80454F18 0008+00 r=1 e=0 z=0  None .sdata2    @3930                                                        */
 SECTION_SDATA2 static f64 lit_3930 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802588A0-80258B2C 028C+00 rc=1 efc=0 rfr=False None .text      create__10dScnName_cFv                                       */
+/* 802588A0-80258B2C 028C+00 r=1 e=0 z=0  None .text      create__10dScnName_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,7 +447,7 @@ asm void dScnName_c::create() {
 #pragma pop
 
 
-/* 80258B2C-80258BC8 009C+00 rc=1 efc=0 rfr=False None .text      setView__10dScnName_cFv                                      */
+/* 80258B2C-80258BC8 009C+00 r=1 e=0 z=0  None .text      setView__10dScnName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +458,7 @@ asm void dScnName_c::setView() {
 #pragma pop
 
 
-/* 80258BC8-80258C5C 0094+00 rc=1 efc=0 rfr=False None .text      execute__10dScnName_cFv                                      */
+/* 80258BC8-80258C5C 0094+00 r=1 e=0 z=0  None .text      execute__10dScnName_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -469,7 +469,7 @@ asm void dScnName_c::execute() {
 #pragma pop
 
 
-/* 80258C5C-80258CC8 006C+00 rc=1 efc=0 rfr=False None .text      draw__10dScnName_cFv                                         */
+/* 80258C5C-80258CC8 006C+00 r=1 e=0 z=0  None .text      draw__10dScnName_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -480,7 +480,7 @@ asm void dScnName_c::draw() {
 #pragma pop
 
 
-/* 80258CC8-80258DD0 0108+00 rc=1 efc=0 rfr=False None .text      __dt__10dScnName_cFv                                         */
+/* 80258CC8-80258DD0 0108+00 r=1 e=0 z=0  None .text      __dt__10dScnName_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,7 +491,7 @@ asm dScnName_c::~dScnName_c() {
 #pragma pop
 
 
-/* 80258DD0-80258E34 0064+00 rc=1 efc=0 rfr=False None .text      FileSelectOpen__10dScnName_cFv                               */
+/* 80258DD0-80258E34 0064+00 r=1 e=0 z=0  None .text      FileSelectOpen__10dScnName_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -502,7 +502,7 @@ asm void dScnName_c::FileSelectOpen() {
 #pragma pop
 
 
-/* 80258E34-80258E78 0044+00 rc=1 efc=0 rfr=False None .text      FileSelectMain__10dScnName_cFv                               */
+/* 80258E34-80258E78 0044+00 r=1 e=0 z=0  None .text      FileSelectMain__10dScnName_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +513,7 @@ asm void dScnName_c::FileSelectMain() {
 #pragma pop
 
 
-/* 80258E78-80258F20 00A8+00 rc=1 efc=0 rfr=False None .text      FileSelectMainNormal__10dScnName_cFv                         */
+/* 80258E78-80258F20 00A8+00 r=1 e=0 z=0  None .text      FileSelectMainNormal__10dScnName_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,7 +524,7 @@ asm void dScnName_c::FileSelectMainNormal() {
 #pragma pop
 
 
-/* 80258F20-80258FD4 00B4+00 rc=1 efc=0 rfr=False None .text      FileSelectClose__10dScnName_cFv                              */
+/* 80258F20-80258FD4 00B4+00 r=1 e=0 z=0  None .text      FileSelectClose__10dScnName_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -535,7 +535,7 @@ asm void dScnName_c::FileSelectClose() {
 #pragma pop
 
 
-/* 80258FD4-80259008 0034+00 rc=1 efc=0 rfr=False None .text      brightCheckOpen__10dScnName_cFv                              */
+/* 80258FD4-80259008 0034+00 r=1 e=0 z=0  None .text      brightCheckOpen__10dScnName_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -546,7 +546,7 @@ asm void dScnName_c::brightCheckOpen() {
 #pragma pop
 
 
-/* 80259008-802590F8 00F0+00 rc=1 efc=0 rfr=False None .text      brightCheck__10dScnName_cFv                                  */
+/* 80259008-802590F8 00F0+00 r=1 e=0 z=0  None .text      brightCheck__10dScnName_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -557,7 +557,7 @@ asm void dScnName_c::brightCheck() {
 #pragma pop
 
 
-/* 802590F8-802591C0 00C8+00 rc=1 efc=0 rfr=False None .text      changeGameScene__10dScnName_cFv                              */
+/* 802590F8-802591C0 00C8+00 r=1 e=0 z=0  None .text      changeGameScene__10dScnName_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -568,7 +568,7 @@ asm void dScnName_c::changeGameScene() {
 #pragma pop
 
 
-/* 802591C0-802591E0 0020+00 rc=1 efc=0 rfr=False None .text      dScnName_Draw__FP10dScnName_c                                */
+/* 802591C0-802591E0 0020+00 r=1 e=0 z=0  None .text      dScnName_Draw__FP10dScnName_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -579,7 +579,7 @@ asm static void dScnName_Draw(dScnName_c* param_0) {
 #pragma pop
 
 
-/* 802591E0-80259200 0020+00 rc=1 efc=0 rfr=False None .text      dScnName_Execute__FP10dScnName_c                             */
+/* 802591E0-80259200 0020+00 r=1 e=0 z=0  None .text      dScnName_Execute__FP10dScnName_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -590,7 +590,7 @@ asm static void dScnName_Execute(dScnName_c* param_0) {
 #pragma pop
 
 
-/* 80259200-80259230 0030+00 rc=1 efc=0 rfr=False None .text      dScnName_IsDelete__FP10dScnName_c                            */
+/* 80259200-80259230 0030+00 r=1 e=0 z=0  None .text      dScnName_IsDelete__FP10dScnName_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -601,7 +601,7 @@ asm static void dScnName_IsDelete(dScnName_c* param_0) {
 #pragma pop
 
 
-/* 80259230-80259258 0028+00 rc=1 efc=0 rfr=False None .text      dScnName_Delete__FP10dScnName_c                              */
+/* 80259230-80259258 0028+00 r=1 e=0 z=0  None .text      dScnName_Delete__FP10dScnName_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,7 +612,7 @@ asm static void dScnName_Delete(dScnName_c* param_0) {
 #pragma pop
 
 
-/* 80259258-80259294 003C+00 rc=1 efc=0 rfr=False None .text      dScnName_Create__FP11scene_class                             */
+/* 80259258-80259294 003C+00 r=1 e=0 z=0  None .text      dScnName_Create__FP11scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -623,7 +623,7 @@ asm static void dScnName_Create(scene_class* param_0) {
 #pragma pop
 
 
-/* 80259294-802592DC 0048+00 rc=1 efc=0 rfr=False None .text      __dt__17dScnName_camera_cFv                                  */
+/* 80259294-802592DC 0048+00 r=1 e=0 z=0  None .text      __dt__17dScnName_camera_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -634,7 +634,7 @@ asm dScnName_camera_c::~dScnName_camera_c() {
 #pragma pop
 
 
-/* 802592DC-80259324 0048+00 rc=2 efc=0 rfr=False None .text      __dt__9dSn_HIO_cFv                                           */
+/* 802592DC-80259324 0048+00 r=2 e=0 z=0  None .text      __dt__9dSn_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -646,10 +646,10 @@ asm dSn_HIO_c::~dSn_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 80430768-80430778 000C+04 rc=1 efc=0 rfr=False None .bss       @3822                                                        */
+/* 80430768-80430778 000C+04 r=1 e=0 z=0  None .bss       @3822                                                        */
 static u8 d_s_d_s_name__lit_3822[12 + 4 /* padding */];
 
-/* 80259324-80259400 00DC+00 rc=1 efc=1 rfr=False None .text      __sinit_d_s_name_cpp                                         */
+/* 80259324-80259400 00DC+00 r=1 e=1 z=0  None .text      __sinit_d_s_name_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

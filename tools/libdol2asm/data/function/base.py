@@ -73,7 +73,8 @@ class Function(Symbol):
             return f"(((char*){self.label})+0x{offset:X})"
 
     def relocation_symbols(self, context, symbol_table, section):
-        return section.relocations_in_range(symbol_table, self.start, self.end)
+        symbols = section.relocations_in_range(symbol_table, self.start, self.end)
+        return symbols
 
     def types(self):
         return set()
@@ -116,7 +117,7 @@ class Function(Symbol):
 
         if full_qualified_name and not self.has_class:
             # this symbol is only referenced by other symbol in the same translation unit
-            if self.reference_count > 0 and self.external_reference_count == 0:
+            if self.is_static:
                 await builder.write_nonewline(f"static ")
 
         if not self.special_func_name in special_func_no_return or original:

@@ -44,7 +44,7 @@ extern "C" void __dla__FPv(); // 1
 // Declarations:
 // 
 
-/* 80361C6C-80361CE8 007C+00 rc=13 efc=11 rfr=False None .text      __destroy_new_array                                          */
+/* 80361C6C-80361CE8 007C+00 r=16 e=11 z=3  None .text      __destroy_new_array                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ extern "C" asm void __destroy_new_array() {
 #pragma pop
 
 
-/* 80361CE8-80361D60 0078+00 rc=59 efc=58 rfr=False None .text      __destroy_arr                                                */
+/* 80361CE8-80361D60 0078+00 r=409 e=58 z=350  None .text      __destroy_arr                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm void __destroy_arr() {
 #pragma pop
 
 
-/* 80361D60-80361E5C 00FC+00 rc=99 efc=98 rfr=False None .text      __construct_array                                            */
+/* 80361D60-80361E5C 00FC+00 r=560 e=98 z=461  None .text      __construct_array                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ extern "C" asm void __construct_array() {
 #pragma pop
 
 
-/* 80361E5C-80361F14 00B8+00 rc=2 efc=1 rfr=False None .text      __dt__26__partial_array_destructorFv                         */
+/* 80361E5C-80361F14 00B8+00 r=2 e=1 z=0  None .text      __dt__26__partial_array_destructorFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void __dt__26__partial_array_destructorFv() {
 #pragma pop
 
 
-/* 80361F14-80362018 0104+00 rc=29 efc=28 rfr=False None .text      __construct_new_array                                        */
+/* 80361F14-80362018 0104+00 r=42 e=28 z=13  None .text      __construct_new_array                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,42 +100,42 @@ extern "C" asm void __construct_new_array() {
 
 
 /* ############################################################################################## */
-/* 80005660-8000566C 000C+00 rc=1 efc=0 rfr=False None .extabindex @206                                                         */
+/* 80005660-8000566C 000C+00 r=1 e=0 z=0  None .extabindex @206                                                         */
 SECTION_EXTABINDEX static void* NMWException__lit_206[3] = {
 	/* 0    */ (void*)__destroy_new_array,
 	/* 1    */ (void*)0x0000007C,
 	/* 2    */ (void*)&_section_symbol_extab,
 };
 
-/* 8000566C-80005678 000C+00 rc=0 efc=0 rfr=False None .extabindex @211                                                         */
+/* 8000566C-80005678 000C+00 r=0 e=0 z=0  None .extabindex @211                                                         */
 SECTION_EXTABINDEX void* NMWException__lit_211[3] = {
 	/* 0    */ (void*)__destroy_arr,
 	/* 1    */ (void*)0x00000078,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x8),
 };
 
-/* 80005678-80005684 000C+00 rc=0 efc=0 rfr=False None .extabindex @232                                                         */
+/* 80005678-80005684 000C+00 r=0 e=0 z=0  None .extabindex @232                                                         */
 SECTION_EXTABINDEX void* lit_232[3] = {
 	/* 0    */ (void*)__construct_array,
 	/* 1    */ (void*)0x000000FC,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x10),
 };
 
-/* 80005684-80005690 000C+00 rc=0 efc=0 rfr=False None .extabindex @240                                                         */
+/* 80005684-80005690 000C+00 r=0 e=0 z=0  None .extabindex @240                                                         */
 SECTION_EXTABINDEX void* lit_240[3] = {
 	/* 0    */ (void*)__dt__26__partial_array_destructorFv,
 	/* 1    */ (void*)0x000000B8,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x28),
 };
 
-/* 80005690-8000569C 000C+00 rc=0 efc=0 rfr=False None .extabindex @263                                                         */
+/* 80005690-8000569C 000C+00 r=0 e=0 z=0  None .extabindex @263                                                         */
 SECTION_EXTABINDEX void* lit_263[3] = {
 	/* 0    */ (void*)__construct_new_array,
 	/* 1    */ (void*)0x00000104,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x30),
 };
 
-/* 8000569C-800056BC 0020+00 rc=1 efc=1 rfr=False None .extabindex None                                                         */
+/* 8000569C-800056BC 0020+00 r=1 e=1 z=0  None .extabindex None                                                         */
 SECTION_EXTABINDEX void* data_8000569C[8] = {
 	/* 0    */ (void*)&NMWException__lit_206,
 	/* 1    */ (void*)&data_8000569C,

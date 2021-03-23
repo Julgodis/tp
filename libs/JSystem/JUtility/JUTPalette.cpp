@@ -17,10 +17,10 @@ struct JUTTransparency {
 struct ResTLUT {
 };
 
-struct _GXTlut {
+struct _GXTlutFmt {
 };
 
-struct _GXTlutFmt {
+struct _GXTlut {
 };
 
 struct JUTPalette {
@@ -55,17 +55,17 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8039D360-8039D390 0029+07 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D360-8039D390 0029+07 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D360 = "JUTPalette.cpp";
-SECTION_DEAD static char const* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
+SECTION_DEAD char const* const stringBase_8039D360 = "JUTPalette.cpp";
+SECTION_DEAD char const* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039D389 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 802DE890-802DE91C 008C+00 rc=8 efc=8 rfr=False None .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
+/* 802DE890-802DE91C 008C+00 r=8 e=8 z=0  None .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void JUTPalette::storeTLUT(_GXTlut param_0, ResTLUT* param_1) {
 #pragma pop
 
 
-/* 802DE91C-802DE95C 0040+00 rc=3 efc=3 rfr=False None .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
+/* 802DE91C-802DE95C 0040+00 r=3 e=3 z=0  None .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void JUTPalette::storeTLUT(_GXTlut param_0, _GXTlutFmt param_1, JUTTranspare
 #pragma pop
 
 
-/* 802DE95C-802DE9A0 0044+00 rc=1 efc=1 rfr=False None .text      load__10JUTPaletteFv                                         */
+/* 802DE95C-802DE9A0 0044+00 r=1 e=1 z=0  None .text      load__10JUTPaletteFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

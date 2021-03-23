@@ -38,7 +38,7 @@ extern "C" extern u8 data_80450B5C[4];
 // 
 
 /* ############################################################################################## */
-/* 803C99A0-803C99C8 0024+04 rc=2 efc=0 rfr=False None .data      __vt__12JAISoundInfo                                         */
+/* 803C99A0-803C99C8 0024+04 r=2 e=0 z=0  None .data      __vt__12JAISoundInfo                                         */
 SECTION_DATA static void* __vt__12JAISoundInfo[9 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -53,7 +53,7 @@ SECTION_DATA static void* __vt__12JAISoundInfo[9 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A2D34-802A2D50 001C+00 rc=1 efc=1 rfr=False None .text      __ct__12JAISoundInfoFb                                       */
+/* 802A2D34-802A2D50 001C+00 r=1 e=1 z=0  None .text      __ct__12JAISoundInfoFb                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm JAISoundInfo::JAISoundInfo(bool param_0) {
 #pragma pop
 
 
-/* 802A2D50-802A2DB4 0064+00 rc=3 efc=2 rfr=False None .text      __dt__12JAISoundInfoFv                                       */
+/* 802A2D50-802A2DB4 0064+00 r=3 e=2 z=0  None .text      __dt__12JAISoundInfoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

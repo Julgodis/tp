@@ -25,7 +25,7 @@ extern "C" void __ieee754_asin(); // 1
 // Declarations:
 // 
 
-/* 8036C700-8036C720 0020+00 rc=2 efc=2 rfr=False None .text      asin                                                         */
+/* 8036C700-8036C720 0020+00 r=2 e=2 z=0  None .text      asin                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

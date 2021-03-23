@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct J2DAnmTextureSRTKey {
+};
+
+struct ResFONT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -20,30 +26,27 @@ struct JGeometry {
 
 };
 
-struct _GXCullMode {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct ResFONT {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
+struct J2DGrafContext {
+	/* 802E8E20 */ void setScissor();
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
 struct J2DRotateAxis {
 };
 
-struct J2DGrafContext {
-	/* 802E8E20 */ void setScissor();
-	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
+};
+
+struct JKRArchive {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DBasePosition {
 };
 
 struct JSUStreamSeekFrom {
@@ -55,25 +58,22 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVtxColor {
 };
 
 struct ResTIMG {
 };
 
-struct JKRArchive {
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DAnmTexPattern {
-};
-
-struct J2DBasePosition {
 };
 
 struct J2DPane {
@@ -285,7 +285,7 @@ extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CCFB0-803CCFD0 0020+00 rc=1 efc=0 rfr=False None .data      @2709                                                        */
+/* 803CCFB0-803CCFD0 0020+00 r=1 e=0 z=0  None .data      @2709                                                        */
 SECTION_DATA static void* lit_2709[8] = {
 	/* 0    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x38),
 	/* 1    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x4C),
@@ -297,7 +297,7 @@ SECTION_DATA static void* lit_2709[8] = {
 	/* 7    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x60),
 };
 
-/* 803CCFD0-803CD068 0094+04 rc=5 efc=0 rfr=False None .data      __vt__7J2DPane                                               */
+/* 803CCFD0-803CD068 0094+04 r=5 e=0 z=0  None .data      __vt__7J2DPane                                               */
 SECTION_DATA static void* __vt__7J2DPane[37 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -340,12 +340,12 @@ SECTION_DATA static void* __vt__7J2DPane[37 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 804561F0-804561F4 0004+00 rc=12 efc=0 rfr=False None .sdata2    @1469                                                        */
+/* 804561F0-804561F4 0004+00 r=12 e=0 z=0  None .sdata2    @1469                                                        */
 SECTION_SDATA2 static u8 lit_1469[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802F5BF8-802F5CB8 00C0+00 rc=10 efc=10 rfr=False None .text      __ct__7J2DPaneFv                                             */
+/* 802F5BF8-802F5CB8 00C0+00 r=10 e=10 z=0  None .text      __ct__7J2DPaneFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,10 +357,10 @@ asm J2DPane::J2DPane() {
 
 
 /* ############################################################################################## */
-/* 804561F4-804561F8 0004+00 rc=3 efc=0 rfr=False None .sdata2    @1489                                                        */
+/* 804561F4-804561F8 0004+00 r=3 e=0 z=0  None .sdata2    @1489                                                        */
 SECTION_SDATA2 static f32 J2DPane__lit_1489 = 1.0f;
 
-/* 802F5CB8-802F5D40 0088+00 rc=3 efc=0 rfr=False None .text      initiate__7J2DPaneFv                                         */
+/* 802F5CB8-802F5D40 0088+00 r=3 e=0 z=0  None .text      initiate__7J2DPaneFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm void J2DPane::initiate() {
 #pragma pop
 
 
-/* 802F5D40-802F5DD0 0090+00 rc=1 efc=1 rfr=False None .text      __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>           */
+/* 802F5D40-802F5DD0 0090+00 r=1 e=1 z=0  None .text      __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm J2DPane::J2DPane(J2DPane* param_0, bool param_1, u64 param_2, JGeometry::TBo
 #pragma pop
 
 
-/* 802F5DD0-802F5E88 00B8+00 rc=1 efc=0 rfr=False None .text      initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>     */
+/* 802F5DD0-802F5E88 00B8+00 r=1 e=0 z=0  None .text      initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void J2DPane::initialize(J2DPane* param_0, bool param_1, u64 param_2, JGeome
 #pragma pop
 
 
-/* 802F5E88-802F5F08 0080+00 rc=3 efc=3 rfr=False None .text      __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>                     */
+/* 802F5E88-802F5F08 0080+00 r=3 e=3 z=0  None .text      __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ asm J2DPane::J2DPane(u64 param_0, JGeometry::TBox2<f32> const& param_1) {
 #pragma pop
 
 
-/* 802F5F08-802F5F9C 0094+00 rc=1 efc=0 rfr=False None .text      initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>               */
+/* 802F5F08-802F5F9C 0094+00 r=1 e=0 z=0  None .text      initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +415,7 @@ asm void J2DPane::initialize(u64 param_0, JGeometry::TBox2<f32> const& param_1) 
 #pragma pop
 
 
-/* 802F5F9C-802F60C4 0128+00 rc=1 efc=1 rfr=False None .text      __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc            */
+/* 802F5F9C-802F60C4 0128+00 r=1 e=1 z=0  None .text      __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,13 +427,13 @@ asm J2DPane::J2DPane(J2DPane* param_0, JSURandomInputStream* param_1, u8 param_2
 
 
 /* ############################################################################################## */
-/* 804561F8-80456200 0008+00 rc=3 efc=0 rfr=False None .sdata2    @1651                                                        */
+/* 804561F8-80456200 0008+00 r=3 e=0 z=0  None .sdata2    @1651                                                        */
 SECTION_SDATA2 static f64 lit_1651 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80456200-80456208 0008+00 rc=3 efc=0 rfr=False None .sdata2    @1655                                                        */
+/* 80456200-80456208 0008+00 r=3 e=0 z=0  None .sdata2    @1655                                                        */
 SECTION_SDATA2 static f64 lit_1655 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802F60C4-802F63F8 0334+00 rc=4 efc=3 rfr=False None .text      makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream    */
+/* 802F60C4-802F63F8 0334+00 r=4 e=3 z=0  None .text      makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,10 +445,10 @@ asm void J2DPane::makePaneStream(J2DPane* param_0, JSURandomInputStream* param_1
 
 
 /* ############################################################################################## */
-/* 80456208-8045620C 0004+00 rc=4 efc=0 rfr=False None .sdata2    @1725                                                        */
+/* 80456208-8045620C 0004+00 r=4 e=0 z=0  None .sdata2    @1725                                                        */
 SECTION_SDATA2 static f32 lit_1725 = 0.5f;
 
-/* 802F63F8-802F658C 0194+00 rc=4 efc=0 rfr=False None .text      changeUseTrans__7J2DPaneFP7J2DPane                           */
+/* 802F63F8-802F658C 0194+00 r=4 e=0 z=0  None .text      changeUseTrans__7J2DPaneFP7J2DPane                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -459,7 +459,7 @@ asm void J2DPane::changeUseTrans(J2DPane* param_0) {
 #pragma pop
 
 
-/* 802F658C-802F666C 00E0+00 rc=5 efc=4 rfr=False None .text      __dt__7J2DPaneFv                                             */
+/* 802F658C-802F666C 00E0+00 r=5 e=4 z=0  None .text      __dt__7J2DPaneFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,7 +470,7 @@ asm J2DPane::~J2DPane() {
 #pragma pop
 
 
-/* 802F666C-802F6714 00A8+00 rc=2 efc=2 rfr=False None .text      appendChild__7J2DPaneFP7J2DPane                              */
+/* 802F666C-802F6714 00A8+00 r=2 e=2 z=0  None .text      appendChild__7J2DPaneFP7J2DPane                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -481,7 +481,7 @@ asm void J2DPane::appendChild(J2DPane* param_0) {
 #pragma pop
 
 
-/* 802F6714-802F67E0 00CC+00 rc=1 efc=1 rfr=False None .text      insertChild__7J2DPaneFP7J2DPaneP7J2DPane                     */
+/* 802F6714-802F67E0 00CC+00 r=1 e=1 z=0  None .text      insertChild__7J2DPaneFP7J2DPaneP7J2DPane                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -492,7 +492,7 @@ asm void J2DPane::insertChild(J2DPane* param_0, J2DPane* param_1) {
 #pragma pop
 
 
-/* 802F67E0-802F6D18 0538+00 rc=1 efc=1 rfr=False None .text      draw__7J2DPaneFffPC14J2DGrafContextbb                        */
+/* 802F67E0-802F6D18 0538+00 r=1 e=1 z=0  None .text      draw__7J2DPaneFffPC14J2DGrafContextbb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +503,7 @@ asm void J2DPane::draw(f32 param_0, f32 param_1, J2DGrafContext const* param_2, 
 #pragma pop
 
 
-/* 802F6D18-802F6F60 0248+00 rc=6 efc=4 rfr=False None .text      place__7J2DPaneFRCQ29JGeometry8TBox2<f>                      */
+/* 802F6D18-802F6F60 0248+00 r=6 e=4 z=0  None .text      place__7J2DPaneFRCQ29JGeometry8TBox2<f>                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +514,7 @@ asm void J2DPane::place(JGeometry::TBox2<f32> const& param_0) {
 #pragma pop
 
 
-/* 802F6F60-802F6FB4 0054+00 rc=8 efc=7 rfr=False None .text      move__7J2DPaneFff                                            */
+/* 802F6F60-802F6FB4 0054+00 r=8 e=7 z=0  None .text      move__7J2DPaneFff                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -525,7 +525,7 @@ asm void J2DPane::move(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802F6FB4-802F6FF8 0044+00 rc=8 efc=7 rfr=False None .text      add__7J2DPaneFff                                             */
+/* 802F6FB4-802F6FF8 0044+00 r=8 e=7 z=0  None .text      add__7J2DPaneFff                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,7 +536,7 @@ asm void J2DPane::add(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802F6FF8-802F7100 0108+00 rc=6 efc=5 rfr=False None .text      resize__7J2DPaneFff                                          */
+/* 802F6FF8-802F7100 0108+00 r=6 e=5 z=0  None .text      resize__7J2DPaneFff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,10 +548,10 @@ asm void J2DPane::resize(f32 param_0, f32 param_1) {
 
 
 /* ############################################################################################## */
-/* 804349B0-804349C0 0010+00 rc=2 efc=0 rfr=False None .bss       static_mBounds__7J2DPane                                     */
+/* 804349B0-804349C0 0010+00 r=2 e=0 z=0  None .bss       static_mBounds__7J2DPane                                     */
 static u8 static_mBounds__7J2DPane[16];
 
-/* 802F7100-802F71DC 00DC+00 rc=25 efc=25 rfr=False None .text      getBounds__7J2DPaneFv                                        */
+/* 802F7100-802F71DC 00DC+00 r=26 e=25 z=1  None .text      getBounds__7J2DPaneFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,7 +562,7 @@ asm void J2DPane::getBounds() {
 #pragma pop
 
 
-/* 802F71DC-802F720C 0030+00 rc=12 efc=12 rfr=False None .text      rotate__7J2DPaneFff13J2DRotateAxisf                          */
+/* 802F71DC-802F720C 0030+00 r=12 e=12 z=0  None .text      rotate__7J2DPaneFff13J2DRotateAxisf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +573,7 @@ asm void J2DPane::rotate(f32 param_0, f32 param_1, J2DRotateAxis param_2, f32 pa
 #pragma pop
 
 
-/* 802F720C-802F7264 0058+00 rc=1 efc=0 rfr=False None .text      rotate__7J2DPaneFf                                           */
+/* 802F720C-802F7264 0058+00 r=1 e=0 z=0  None .text      rotate__7J2DPaneFf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,7 +584,7 @@ asm void J2DPane::rotate(f32 param_0) {
 #pragma pop
 
 
-/* 802F7264-802F72E0 007C+00 rc=2 efc=2 rfr=False None .text      clip__7J2DPaneFRCQ29JGeometry8TBox2<f>                       */
+/* 802F7264-802F72E0 007C+00 r=2 e=2 z=0  None .text      clip__7J2DPaneFRCQ29JGeometry8TBox2<f>                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ asm void J2DPane::clip(JGeometry::TBox2<f32> const& param_0) {
 #pragma pop
 
 
-/* 802F72E0-802F7388 00A8+00 rc=8 efc=7 rfr=False None .text      search__7J2DPaneFUx                                          */
+/* 802F72E0-802F7388 00A8+00 r=8 e=7 z=0  None .text      search__7J2DPaneFUx                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +606,7 @@ asm void J2DPane::search(u64 param_0) {
 #pragma pop
 
 
-/* 802F7388-802F7430 00A8+00 rc=8 efc=7 rfr=False None .text      searchUserInfo__7J2DPaneFUx                                  */
+/* 802F7388-802F7430 00A8+00 r=8 e=7 z=0  None .text      searchUserInfo__7J2DPaneFUx                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +617,7 @@ asm void J2DPane::searchUserInfo(u64 param_0) {
 #pragma pop
 
 
-/* 802F7430-802F74B8 0088+00 rc=8 efc=7 rfr=False None .text      isUsed__7J2DPaneFPC7ResTIMG                                  */
+/* 802F7430-802F74B8 0088+00 r=8 e=7 z=0  None .text      isUsed__7J2DPaneFPC7ResTIMG                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +628,7 @@ asm void J2DPane::isUsed(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 802F74B8-802F7540 0088+00 rc=8 efc=7 rfr=False None .text      isUsed__7J2DPaneFPC7ResFONT                                  */
+/* 802F74B8-802F7540 0088+00 r=8 e=7 z=0  None .text      isUsed__7J2DPaneFPC7ResFONT                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -640,10 +640,10 @@ asm void J2DPane::isUsed(ResFONT const* param_0) {
 
 
 /* ############################################################################################## */
-/* 8045620C-80456210 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2466                                                        */
+/* 8045620C-80456210 0004+00 r=1 e=0 z=0  None .sdata2    @2466                                                        */
 SECTION_SDATA2 static f32 J2DPane__lit_2466 = 0.01745329238474369f;
 
-/* 802F7540-802F7680 0140+00 rc=8 efc=7 rfr=False None .text      makeMatrix__7J2DPaneFffff                                    */
+/* 802F7540-802F7680 0140+00 r=8 e=7 z=0  None .text      makeMatrix__7J2DPaneFffff                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +654,7 @@ asm void J2DPane::makeMatrix(f32 param_0, f32 param_1, f32 param_2, f32 param_3)
 #pragma pop
 
 
-/* 802F7680-802F76F8 0078+00 rc=8 efc=7 rfr=False None .text      setCullBack__7J2DPaneF11_GXCullMode                          */
+/* 802F7680-802F76F8 0078+00 r=8 e=7 z=0  None .text      setCullBack__7J2DPaneF11_GXCullMode                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +665,7 @@ asm void J2DPane::setCullBack(_GXCullMode param_0) {
 #pragma pop
 
 
-/* 802F76F8-802F77D0 00D8+00 rc=8 efc=8 rfr=False None .text      setBasePosition__7J2DPaneF15J2DBasePosition                  */
+/* 802F76F8-802F77D0 00D8+00 r=8 e=8 z=0  None .text      setBasePosition__7J2DPaneF15J2DBasePosition                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,10 +677,10 @@ asm void J2DPane::setBasePosition(J2DBasePosition param_0) {
 
 
 /* ############################################################################################## */
-/* 80456210-80456214 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2547                                                        */
+/* 80456210-80456214 0004+00 r=1 e=0 z=0  None .sdata2    @2547                                                        */
 SECTION_SDATA2 static f32 lit_2547 = 255.0f;
 
-/* 802F77D0-802F79A8 01D8+00 rc=1 efc=1 rfr=False None .text      setInfluencedAlpha__7J2DPaneFbb                              */
+/* 802F77D0-802F79A8 01D8+00 r=1 e=1 z=0  None .text      setInfluencedAlpha__7J2DPaneFbb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +691,7 @@ asm void J2DPane::setInfluencedAlpha(bool param_0, bool param_1) {
 #pragma pop
 
 
-/* 802F79A8-802F7A8C 00E4+00 rc=3 efc=3 rfr=False None .text      getGlbVtx__7J2DPaneCFUc                                      */
+/* 802F79A8-802F7A8C 00E4+00 r=3 e=3 z=0  None .text      getGlbVtx__7J2DPaneCFUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -702,7 +702,7 @@ asm void J2DPane::getGlbVtx(u8 param_0) const {
 #pragma pop
 
 
-/* 802F7A8C-802F7AC4 0038+00 rc=16 efc=15 rfr=False None .text      getFirstChildPane__7J2DPaneFv                                */
+/* 802F7A8C-802F7AC4 0038+00 r=16 e=15 z=0  None .text      getFirstChildPane__7J2DPaneFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -713,7 +713,7 @@ asm void J2DPane::getFirstChildPane() {
 #pragma pop
 
 
-/* 802F7AC4-802F7AFC 0038+00 rc=9 efc=8 rfr=False None .text      getNextChildPane__7J2DPaneFv                                 */
+/* 802F7AC4-802F7AFC 0038+00 r=9 e=8 z=0  None .text      getNextChildPane__7J2DPaneFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -724,7 +724,7 @@ asm void J2DPane::getNextChildPane() {
 #pragma pop
 
 
-/* 802F7AFC-802F7B18 001C+00 rc=17 efc=11 rfr=False None .text      getParentPane__7J2DPaneFv                                    */
+/* 802F7AFC-802F7B18 001C+00 r=17 e=11 z=0  None .text      getParentPane__7J2DPaneFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +735,7 @@ asm void J2DPane::getParentPane() {
 #pragma pop
 
 
-/* 802F7B18-802F7D00 01E8+00 rc=7 efc=6 rfr=False None .text      makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream  */
+/* 802F7B18-802F7D00 01E8+00 r=7 e=6 z=0  None .text      makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -746,7 +746,7 @@ asm void J2DPane::makePaneExStream(J2DPane* param_0, JSURandomInputStream* param
 #pragma pop
 
 
-/* 802F7D00-802F7DB8 00B8+00 rc=1 efc=1 rfr=False None .text      J2DCast_F32_to_S16__7J2DPaneFfUc                             */
+/* 802F7D00-802F7DB8 00B8+00 r=1 e=1 z=0  None .text      J2DCast_F32_to_S16__7J2DPaneFfUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -757,7 +757,7 @@ asm void J2DPane::J2DCast_F32_to_S16(f32 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802F7DB8-802F7EF4 013C+00 rc=3 efc=3 rfr=False None .text      getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive  */
+/* 802F7DB8-802F7EF4 013C+00 r=3 e=3 z=0  None .text      getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -768,7 +768,7 @@ asm void J2DPane::getPointer(JSURandomInputStream* param_0, u32 param_1, JKRArch
 #pragma pop
 
 
-/* 802F7EF4-802F7FC4 00D0+00 rc=9 efc=7 rfr=False None .text      setAnimation__7J2DPaneFP10J2DAnmBase                         */
+/* 802F7EF4-802F7FC4 00D0+00 r=9 e=7 z=0  None .text      setAnimation__7J2DPaneFP10J2DAnmBase                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -779,7 +779,7 @@ asm void J2DPane::setAnimation(J2DAnmBase* param_0) {
 #pragma pop
 
 
-/* 802F7FC4-802F7FCC 0008+00 rc=8 efc=7 rfr=False None .text      setAnimation__7J2DPaneFP15J2DAnmTransform                    */
+/* 802F7FC4-802F7FCC 0008+00 r=8 e=7 z=0  None .text      setAnimation__7J2DPaneFP15J2DAnmTransform                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -790,7 +790,7 @@ asm void J2DPane::setAnimation(J2DAnmTransform* param_0) {
 #pragma pop
 
 
-/* 802F7FCC-802F8004 0038+00 rc=57 efc=57 rfr=False None .text      animationTransform__7J2DPaneFv                               */
+/* 802F7FCC-802F8004 0038+00 r=57 e=57 z=0  None .text      animationTransform__7J2DPaneFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -801,7 +801,7 @@ asm void J2DPane::animationTransform() {
 #pragma pop
 
 
-/* 802F8004-802F8080 007C+00 rc=8 efc=7 rfr=False None .text      clearAnmTransform__7J2DPaneFv                                */
+/* 802F8004-802F8080 007C+00 r=8 e=7 z=0  None .text      clearAnmTransform__7J2DPaneFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -812,7 +812,7 @@ asm void J2DPane::clearAnmTransform() {
 #pragma pop
 
 
-/* 802F8080-802F8118 0098+00 rc=8 efc=7 rfr=False None .text      animationTransform__7J2DPaneFPC15J2DAnmTransform             */
+/* 802F8080-802F8118 0098+00 r=8 e=7 z=0  None .text      animationTransform__7J2DPaneFPC15J2DAnmTransform             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -823,7 +823,7 @@ asm void J2DPane::animationTransform(J2DAnmTransform const* param_0) {
 #pragma pop
 
 
-/* 802F8118-802F81A0 0088+00 rc=9 efc=8 rfr=False None .text      setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull       */
+/* 802F8118-802F81A0 0088+00 r=9 e=8 z=0  None .text      setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -834,7 +834,7 @@ asm void J2DPane::setVisibileAnimation(J2DAnmVisibilityFull* param_0) {
 #pragma pop
 
 
-/* 802F81A0-802F8228 0088+00 rc=9 efc=8 rfr=False None .text      setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor             */
+/* 802F81A0-802F8228 0088+00 r=9 e=8 z=0  None .text      setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -845,7 +845,7 @@ asm void J2DPane::setVtxColorAnimation(J2DAnmVtxColor* param_0) {
 #pragma pop
 
 
-/* 802F8228-802F82C0 0098+00 rc=8 efc=7 rfr=False None .text      animationPane__7J2DPaneFPC15J2DAnmTransform                  */
+/* 802F8228-802F82C0 0098+00 r=8 e=7 z=0  None .text      animationPane__7J2DPaneFPC15J2DAnmTransform                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -857,17 +857,17 @@ asm void J2DPane::animationPane(J2DAnmTransform const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80456214-80456218 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2890                                                        */
+/* 80456214-80456218 0004+00 r=1 e=0 z=0  None .sdata2    @2890                                                        */
 SECTION_SDATA2 static f32 lit_2890 = 360.0f;
 
-/* 80456218-80456220 0004+04 rc=1 efc=0 rfr=False None .sdata2    @2891                                                        */
+/* 80456218-80456220 0004+04 r=1 e=0 z=0  None .sdata2    @2891                                                        */
 SECTION_SDATA2 static f32 lit_2891[1 + 1 /* padding */] = {
 	65535.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 802F82C0-802F83C8 0108+00 rc=2 efc=0 rfr=False None .text      updateTransform__7J2DPaneFPC15J2DAnmTransform                */
+/* 802F82C0-802F83C8 0108+00 r=2 e=0 z=0  None .text      updateTransform__7J2DPaneFPC15J2DAnmTransform                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -878,7 +878,7 @@ asm void J2DPane::updateTransform(J2DAnmTransform const* param_0) {
 #pragma pop
 
 
-/* 802F83C8-802F83CC 0004+00 rc=1 efc=0 rfr=False None .text      drawSelf__7J2DPaneFffPA3_A4_f                                */
+/* 802F83C8-802F83CC 0004+00 r=1 e=0 z=0  None .text      drawSelf__7J2DPaneFffPA3_A4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -889,7 +889,7 @@ asm void J2DPane::drawSelf(f32 param_0, f32 param_1, f32 (* param_2)[3][4]) {
 #pragma pop
 
 
-/* 802F83CC-802F83D0 0004+00 rc=2 efc=1 rfr=False None .text      rewriteAlpha__7J2DPaneFv                                     */
+/* 802F83CC-802F83D0 0004+00 r=2 e=1 z=0  None .text      rewriteAlpha__7J2DPaneFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -900,7 +900,7 @@ asm void J2DPane::rewriteAlpha() {
 #pragma pop
 
 
-/* 802F83D0-802F83FC 002C+00 rc=7 efc=6 rfr=False None .text      setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull             */
+/* 802F83D0-802F83FC 002C+00 r=7 e=6 z=0  None .text      setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -911,7 +911,7 @@ asm void J2DPane::setAnimationVF(J2DAnmVisibilityFull* param_0) {
 #pragma pop
 
 
-/* 802F83FC-802F8428 002C+00 rc=7 efc=6 rfr=False None .text      setAnimationVC__7J2DPaneFP14J2DAnmVtxColor                   */
+/* 802F83FC-802F8428 002C+00 r=7 e=6 z=0  None .text      setAnimationVC__7J2DPaneFP14J2DAnmVtxColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -922,7 +922,7 @@ asm void J2DPane::setAnimationVC(J2DAnmVtxColor* param_0) {
 #pragma pop
 
 
-/* 802F8428-802F8464 003C+00 rc=5 efc=4 rfr=False None .text      setCullBack__7J2DPaneFb                                      */
+/* 802F8428-802F8464 003C+00 r=5 e=4 z=0  None .text      setCullBack__7J2DPaneFb                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -933,7 +933,7 @@ asm void J2DPane::setCullBack(bool param_0) {
 #pragma pop
 
 
-/* 802F8464-802F8474 0010+00 rc=6 efc=5 rfr=False None .text      setConnectParent__7J2DPaneFb                                 */
+/* 802F8464-802F8474 0010+00 r=6 e=5 z=0  None .text      setConnectParent__7J2DPaneFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +944,7 @@ asm void J2DPane::setConnectParent(bool param_0) {
 #pragma pop
 
 
-/* 802F8474-802F8478 0004+00 rc=8 efc=7 rfr=False None .text      update__7J2DPaneFv                                           */
+/* 802F8474-802F8478 0004+00 r=8 e=7 z=0  None .text      update__7J2DPaneFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -955,7 +955,7 @@ asm void J2DPane::update() {
 #pragma pop
 
 
-/* 802F8478-802F847C 0004+00 rc=2 efc=1 rfr=False None .text      drawSelf__7J2DPaneFff                                        */
+/* 802F8478-802F847C 0004+00 r=2 e=1 z=0  None .text      drawSelf__7J2DPaneFff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -966,7 +966,7 @@ asm void J2DPane::drawSelf(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802F847C-802F8498 001C+00 rc=1 efc=1 rfr=False None .text      __sinit_J2DPane_cpp                                          */
+/* 802F847C-802F8498 001C+00 r=1 e=1 z=0  None .text      __sinit_J2DPane_cpp                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

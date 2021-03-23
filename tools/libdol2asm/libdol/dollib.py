@@ -13,6 +13,22 @@ class Section:
     name: str
     data: bytearray = field(repr=False)
 
+    @property
+    def start(self):
+        return self.addr
+
+    @property
+    def end(self):
+        return self.addr + self.size
+        
+    def get_data(self, start, end):
+        assert start >= self.start
+        assert end <= self.end
+        return self.data[start - self.start:end - self.start]
+
+    def __contains__(self, addr):
+        return addr >= self.start and addr < self.end
+
 @dataclass
 class DOL:
     sections: List[Section]

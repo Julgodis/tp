@@ -29,7 +29,7 @@ extern "C" extern void* __GXData;
 // 
 
 /* ############################################################################################## */
-/* 803D2858-803D28B4 005C+00 rc=1 efc=0 rfr=False None .data      @182                                                         */
+/* 803D2858-803D28B4 005C+00 r=1 e=0 z=0  None .data      @182                                                         */
 SECTION_DATA static void* lit_182[23] = {
 	/* 0    */ (void*)(((char*)GXSetGPMetric)+0x568),
 	/* 1    */ (void*)(((char*)GXSetGPMetric)+0x584),
@@ -56,7 +56,7 @@ SECTION_DATA static void* lit_182[23] = {
 	/* 22   */ (void*)(((char*)GXSetGPMetric)+0x838),
 };
 
-/* 803D28B4-803D2948 0090+04 rc=1 efc=0 rfr=False None .data      @181                                                         */
+/* 803D28B4-803D2948 0090+04 r=1 e=0 z=0  None .data      @181                                                         */
 SECTION_DATA static void* lit_181[36 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)GXSetGPMetric)+0x13C),
 	/* 1    */ (void*)(((char*)GXSetGPMetric)+0x15C),
@@ -98,7 +98,7 @@ SECTION_DATA static void* lit_181[36 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8036067C-80360EC4 0848+00 rc=3 efc=1 rfr=False None .text      GXSetGPMetric                                                */
+/* 8036067C-80360EC4 0848+00 r=3 e=1 z=0  None .text      GXSetGPMetric                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ extern "C" asm void GXSetGPMetric() {
 #pragma pop
 
 
-/* 80360EC4-80360ED4 0010+00 rc=1 efc=1 rfr=False None .text      GXClearGPMetric                                              */
+/* 80360EC4-80360ED4 0010+00 r=1 e=1 z=0  None .text      GXClearGPMetric                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ extern "C" asm void GXClearGPMetric() {
 #pragma pop
 
 
-/* 80360ED4-80360F98 00C4+00 rc=1 efc=1 rfr=False None .text      GXReadXfRasMetric                                            */
+/* 80360ED4-80360F98 00C4+00 r=1 e=1 z=0  None .text      GXReadXfRasMetric                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

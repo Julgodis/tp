@@ -54,12 +54,12 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804505D0-804505D8 0008+00 rc=4 efc=2 rfr=False None .sdata     g_fopDwTg_Queue                                              */
+/* 804505D0-804505D8 0008+00 r=4 e=2 z=0  None .sdata     g_fopDwTg_Queue                                              */
 SECTION_SDATA u8 g_fopDwTg_Queue[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800204AC-800204D4 0028+00 rc=4 efc=4 rfr=False None .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
+/* 800204AC-800204D4 0028+00 r=6 e=4 z=2  None .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm void fopDwTg_ToDrawQ(create_tag_class* param_0, int param_1) {
 #pragma pop
 
 
-/* 800204D4-800204F4 0020+00 rc=8 efc=8 rfr=False None .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
+/* 800204D4-800204F4 0020+00 r=11 e=8 z=3  None .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm void fopDwTg_DrawQTo(create_tag_class* param_0) {
 #pragma pop
 
 
-/* 800204F4-80020518 0024+00 rc=4 efc=4 rfr=False None .text      fopDwTg_Init__FP16create_tag_classPv                         */
+/* 800204F4-80020518 0024+00 r=4 e=4 z=0  None .text      fopDwTg_Init__FP16create_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,10 +93,10 @@ asm void fopDwTg_Init(create_tag_class* param_0, void* param_1) {
 
 
 /* ############################################################################################## */
-/* 803F1E10-803F4CF0 2EE0+00 rc=1 efc=0 rfr=False None .bss       lists$2216                                                   */
+/* 803F1E10-803F4CF0 2EE0+00 r=1 e=0 z=0  None .bss       lists$2216                                                   */
 static u8 data_803F1E10[12000];
 
-/* 80020518-80020548 0030+00 rc=1 efc=1 rfr=False None .text      fopDwTg_CreateQueue__Fv                                      */
+/* 80020518-80020548 0030+00 r=1 e=1 z=0  None .text      fopDwTg_CreateQueue__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

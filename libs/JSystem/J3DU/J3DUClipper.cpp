@@ -53,13 +53,13 @@ extern "C" void tan(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80455278-8045527C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @893                                                         */
+/* 80455278-8045527C 0004+00 r=1 e=0 z=0  None .sdata2    @893                                                         */
 SECTION_SDATA2 static f32 J3DUClipper__lit_893 = 1.0f;
 
-/* 8045527C-80455280 0004+00 rc=1 efc=0 rfr=False None .sdata2    @894                                                         */
+/* 8045527C-80455280 0004+00 r=1 e=0 z=0  None .sdata2    @894                                                         */
 SECTION_SDATA2 static f32 J3DUClipper__lit_894 = 100000.0f;
 
-/* 80273778-8027378C 0014+00 rc=1 efc=1 rfr=False None .text      init__11J3DUClipperFv                                        */
+/* 80273778-8027378C 0014+00 r=1 e=1 z=0  None .text      init__11J3DUClipperFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,18 +71,18 @@ asm void J3DUClipper::init() {
 
 
 /* ############################################################################################## */
-/* 8039A948-8039A954 000C+00 rc=1 efc=0 rfr=False None .rodata    @898                                                         */
+/* 8039A948-8039A954 000C+00 r=1 e=0 z=0  None .rodata    @898                                                         */
 SECTION_RODATA static u8 const J3DUClipper__lit_898[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455280-80455284 0004+00 rc=1 efc=0 rfr=False None .sdata2    @913                                                         */
+/* 80455280-80455284 0004+00 r=1 e=0 z=0  None .sdata2    @913                                                         */
 SECTION_SDATA2 static f32 J3DUClipper__lit_913 = 0.01745329238474369f;
 
-/* 80455284-80455288 0004+00 rc=1 efc=0 rfr=False None .sdata2    @914                                                         */
+/* 80455284-80455288 0004+00 r=1 e=0 z=0  None .sdata2    @914                                                         */
 SECTION_SDATA2 static f32 lit_914 = 0.5f;
 
-/* 8027378C-802738FC 0170+00 rc=3 efc=3 rfr=False None .text      calcViewFrustum__11J3DUClipperFv                             */
+/* 8027378C-802738FC 0170+00 r=7 e=3 z=4  None .text      calcViewFrustum__11J3DUClipperFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void J3DUClipper::calcViewFrustum() {
 #pragma pop
 
 
-/* 802738FC-80273A44 0148+00 rc=3 efc=3 rfr=False None .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             */
+/* 802738FC-80273A44 0148+00 r=5 e=3 z=2  None .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,14 +105,14 @@ asm void J3DUClipper::clip(f32 const (* param_0)[4], Vec param_1, f32 param_2) c
 
 
 /* ############################################################################################## */
-/* 80455288-80455290 0004+04 rc=1 efc=0 rfr=False None .sdata2    @991                                                         */
+/* 80455288-80455290 0004+04 r=1 e=0 z=0  None .sdata2    @991                                                         */
 SECTION_SDATA2 static u8 lit_991[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80273A44-80273E08 03C4+00 rc=3 efc=3 rfr=False None .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        */
+/* 80273A44-80273E08 03C4+00 r=5 e=3 z=2  None .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,27 +124,27 @@ asm void J3DUClipper::clip(f32 const (* param_0)[4], Vec* param_1, Vec* param_2)
 
 
 /* ############################################################################################## */
-/* 8039A954-8039A960 000C+00 rc=0 efc=0 rfr=False None .rodata    @899                                                         */
+/* 8039A954-8039A960 000C+00 r=0 e=0 z=0  None .rodata    @899                                                         */
 SECTION_RODATA u8 const J3DUClipper__lit_899[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039A960-8039A96C 000C+00 rc=0 efc=0 rfr=False None .rodata    @900                                                         */
+/* 8039A960-8039A96C 000C+00 r=0 e=0 z=0  None .rodata    @900                                                         */
 SECTION_RODATA u8 const lit_900[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039A96C-8039A978 000C+00 rc=0 efc=0 rfr=False None .rodata    @901                                                         */
+/* 8039A96C-8039A978 000C+00 r=0 e=0 z=0  None .rodata    @901                                                         */
 SECTION_RODATA u8 const lit_901[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039A978-8039A984 000C+00 rc=0 efc=0 rfr=False None .rodata    @902                                                         */
+/* 8039A978-8039A984 000C+00 r=0 e=0 z=0  None .rodata    @902                                                         */
 SECTION_RODATA u8 const lit_902[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039A984-8039A9F0 0065+07 rc=0 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039A984-8039A9F0 0065+07 r=0 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"

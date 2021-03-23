@@ -15,13 +15,13 @@ struct JAUSeqDataBlock {
 	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
+struct JAISoundID {
+};
+
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUSeqDataBlock> */
 struct JSULink__template1 {
-};
-
-struct JAISoundID {
 };
 
 struct JAUSeqDataBlocks {
@@ -35,10 +35,10 @@ struct JAUSeqDataBlocks {
 struct JKRArchive {
 };
 
-struct JAISeqDataUser {
+struct JAISeqData {
 };
 
-struct JAISeqData {
+struct JAISeqDataUser {
 };
 
 struct JAUDynamicSeqDataBlocks {
@@ -114,7 +114,7 @@ extern "C" extern u8 data_80450B50[4];
 // Declarations:
 // 
 
-/* 802A68F4-802A6928 0034+00 rc=2 efc=2 rfr=False None .text      __ct__15JAUSeqDataBlockFv                                    */
+/* 802A68F4-802A6928 0034+00 r=2 e=2 z=0  None .text      __ct__15JAUSeqDataBlockFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm JAUSeqDataBlock::JAUSeqDataBlock() {
 #pragma pop
 
 
-/* 802A6928-802A6974 004C+00 rc=1 efc=0 rfr=False None .text      getSeqData__16JAUSeqDataBlocksF10JAISoundID                  */
+/* 802A6928-802A6974 004C+00 r=1 e=0 z=0  None .text      getSeqData__16JAUSeqDataBlocksF10JAISoundID                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm void JAUSeqDataBlocks::getSeqData(JAISoundID param_0) {
 #pragma pop
 
 
-/* 802A6974-802A69D8 0064+00 rc=1 efc=0 rfr=False None .text      seekFreeBlock__16JAUSeqDataBlocksFUl                         */
+/* 802A6974-802A69D8 0064+00 r=1 e=0 z=0  None .text      seekFreeBlock__16JAUSeqDataBlocksFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void JAUSeqDataBlocks::seekFreeBlock(u32 param_0) {
 #pragma pop
 
 
-/* 802A69D8-802A69F8 0020+00 rc=5 efc=0 rfr=False None .text      append__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock>     */
+/* 802A69D8-802A69F8 0020+00 r=5 e=0 z=0  None .text      append__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock>     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void JAUSeqDataBlocks::append(JSULink<JAUSeqDataBlock>* param_0) {
 #pragma pop
 
 
-/* 802A69F8-802A6A18 0020+00 rc=4 efc=0 rfr=False None .text      remove__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock>     */
+/* 802A69F8-802A6A18 0020+00 r=4 e=0 z=0  None .text      remove__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock>     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm void JAUSeqDataBlocks::remove(JSULink<JAUSeqDataBlock>* param_0) {
 #pragma pop
 
 
-/* 802A6A18-802A6A58 0040+00 rc=1 efc=0 rfr=False None .text      hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID              */
+/* 802A6A18-802A6A58 0040+00 r=1 e=0 z=0  None .text      hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +180,7 @@ asm void JAUSeqDataBlocks::hasFailedBlock(JAISoundID param_0) {
 #pragma pop
 
 
-/* 802A6A58-802A6AA0 0048+00 rc=2 efc=2 rfr=False None .text      __ct__23JAUDynamicSeqDataBlocksFv                            */
+/* 802A6A58-802A6AA0 0048+00 r=2 e=2 z=0  None .text      __ct__23JAUDynamicSeqDataBlocksFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm JAUDynamicSeqDataBlocks::JAUDynamicSeqDataBlocks() {
 #pragma pop
 
 
-/* 802A6AA0-802A6AA8 0008+00 rc=2 efc=2 rfr=False None .text      setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive   */
+/* 802A6AA0-802A6AA8 0008+00 r=2 e=2 z=0  None .text      setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +202,7 @@ asm void JAUDynamicSeqDataBlocks::setSeqDataArchive(JKRArchive* param_0) {
 #pragma pop
 
 
-/* 802A6AA8-802A6B8C 00E4+00 rc=1 efc=1 rfr=False None .text      getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab */
+/* 802A6AA8-802A6B8C 00E4+00 r=1 e=1 z=0  None .text      getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +213,7 @@ asm void JAUDynamicSeqDataBlocks::getSeqData(JAISoundID param_0, JAISeqDataUser*
 #pragma pop
 
 
-/* 802A6B8C-802A6BF4 0068+00 rc=2 efc=2 rfr=False None .text      appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock */
+/* 802A6B8C-802A6BF4 0068+00 r=2 e=2 z=0  None .text      appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ asm void JAUDynamicSeqDataBlocks::appendDynamicSeqDataBlock(JAUSeqDataBlock* par
 #pragma pop
 
 
-/* 802A6BF4-802A6C18 0024+00 rc=1 efc=0 rfr=False None .text      JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl                */
+/* 802A6BF4-802A6C18 0024+00 r=1 e=0 z=0  None .text      JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +235,7 @@ asm static void JAUDynamicSeqDataBlocks_receiveLoaded_(u32 param_0, u32 param_1)
 #pragma pop
 
 
-/* 802A6C18-802A6D48 0130+00 rc=3 efc=2 rfr=False None .text      loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser */
+/* 802A6C18-802A6D48 0130+00 r=3 e=2 z=0  None .text      loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +246,7 @@ asm void JAUDynamicSeqDataBlocks::loadDynamicSeq(JAISoundID param_0, bool param_
 #pragma pop
 
 
-/* 802A6D48-802A6E00 00B8+00 rc=1 efc=1 rfr=False None .text      releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser */
+/* 802A6D48-802A6E00 00B8+00 r=1 e=1 z=0  None .text      releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +257,7 @@ asm void JAUDynamicSeqDataBlocks::releaseIdleDynamicSeqDataBlock(JAISeqDataUser*
 #pragma pop
 
 
-/* 802A6E00-802A6EDC 00DC+00 rc=1 efc=0 rfr=False None .text      releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl */
+/* 802A6E00-802A6EDC 00DC+00 r=1 e=0 z=0  None .text      releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ asm void JAUDynamicSeqDataBlocks::releaseIdleDynamicSeqDataBlock_(JAISeqDataUser
 #pragma pop
 
 
-/* 802A6EDC-802A6F70 0094+00 rc=4 efc=0 rfr=False None .text      rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv           */
+/* 802A6EDC-802A6F70 0094+00 r=4 e=0 z=0  None .text      rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

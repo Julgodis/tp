@@ -25,15 +25,15 @@ extern "C" void ceil(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456AE0-80456AE8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @124                                                         */
+/* 80456AE0-80456AE8 0008+00 r=1 e=0 z=0  None .sdata2    @124                                                         */
 SECTION_SDATA2 static f64 Math_Double_precision_s_ceil__lit_124 = 1e+300;
 
-/* 80456AE8-80456AF0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @125                                                         */
+/* 80456AE8-80456AF0 0008+00 r=1 e=0 z=0  None .sdata2    @125                                                         */
 SECTION_SDATA2 static u8 Math_Double_precision_s_ceil__lit_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036BEBC-8036C000 0144+00 rc=2 efc=2 rfr=False None .text      ceil                                                         */
+/* 8036BEBC-8036C000 0144+00 r=2 e=2 z=0  None .text      ceil                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

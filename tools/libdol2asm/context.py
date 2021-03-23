@@ -21,6 +21,9 @@ class Context:
     def error(self, *args):
         self.send_command('error', *args)
 
+    def info(self, *args):
+        self.send_command('info', *args)
+
     def complete(self, result=None):
         self.send_command('complete', self.index, result)
 
@@ -34,6 +37,8 @@ class MainContext(Context):
             debug(*args)
         elif command == 'warning':
             warning(*args)
+        elif command == 'info':
+            info(*args)
         elif command == 'error':
             error(*args)
         elif self.output:

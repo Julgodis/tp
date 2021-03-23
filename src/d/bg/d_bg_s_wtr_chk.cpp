@@ -38,7 +38,7 @@ extern "C" extern void* __vt__11dBgS_WtrChk[12];
 // Declarations:
 // 
 
-/* 80079164-800791C4 0060+00 rc=2 efc=2 rfr=False None .text      __ct__11dBgS_WtrChkFv                                        */
+/* 80079164-800791C4 0060+00 r=5 e=2 z=3  None .text      __ct__11dBgS_WtrChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

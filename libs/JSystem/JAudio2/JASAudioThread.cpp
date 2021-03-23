@@ -132,7 +132,7 @@ extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803C78E0-803C78F0 0010+00 rc=2 efc=0 rfr=False None .data      __vt__14JASAudioThread                                       */
+/* 803C78E0-803C78F0 0010+00 r=2 e=0 z=0  None .data      __vt__14JASAudioThread                                       */
 SECTION_DATA static void* __vt__14JASAudioThread[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -140,7 +140,7 @@ SECTION_DATA static void* __vt__14JASAudioThread[4] = {
 	/* 3    */ (void*)run__14JASAudioThreadFv,
 };
 
-/* 8029CCDC-8029CD4C 0070+00 rc=1 efc=0 rfr=False None .text      __ct__14JASAudioThreadFiiUl                                  */
+/* 8029CCDC-8029CD4C 0070+00 r=1 e=0 z=0  None .text      __ct__14JASAudioThreadFiiUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm JASAudioThread::JASAudioThread(int param_0, int param_1, u32 param_2) {
 #pragma pop
 
 
-/* 8029CD4C-8029CDC0 0074+00 rc=1 efc=1 rfr=False None .text      create__14JASAudioThreadFl                                   */
+/* 8029CD4C-8029CDC0 0074+00 r=1 e=1 z=0  None .text      create__14JASAudioThreadFl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm void JASAudioThread::create(s32 param_0) {
 #pragma pop
 
 
-/* 8029CDC0-8029CDEC 002C+00 rc=1 efc=1 rfr=False None .text      stop__14JASAudioThreadFv                                     */
+/* 8029CDC0-8029CDEC 002C+00 r=1 e=1 z=0  None .text      stop__14JASAudioThreadFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,23 +174,23 @@ asm void JASAudioThread::stop() {
 
 
 /* ############################################################################################## */
-/* 8039B338-8039B360 0013+15 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039B338-8039B360 0013+15 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039B338 = "SFR_DSP";
-SECTION_DEAD static char const* const stringBase_8039B340 = "UPDATE-DAC";
+SECTION_DEAD char const* const stringBase_8039B338 = "SFR_DSP";
+SECTION_DEAD char const* const stringBase_8039B340 = "UPDATE-DAC";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039B34B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 #pragma pop
 
-/* 80431C68-80431C78 000C+04 rc=1 efc=0 rfr=False None .bss       @205                                                         */
+/* 80431C68-80431C78 000C+04 r=1 e=0 z=0  None .bss       @205                                                         */
 static u8 lit_205[12 + 4 /* padding */];
 
-/* 804512D8-804512E0 0004+04 rc=3 efc=2 rfr=False None .sbss      snIntCount__14JASAudioThread                                 */
+/* 804512D8-804512E0 0004+04 r=3 e=2 z=0  None .sbss      snIntCount__14JASAudioThread                                 */
 u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
-/* 8029CDEC-8029CF68 017C+00 rc=1 efc=0 rfr=False None .text      run__14JASAudioThreadFv                                      */
+/* 8029CDEC-8029CF68 017C+00 r=1 e=0 z=0  None .text      run__14JASAudioThreadFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ asm void JASAudioThread::run() {
 #pragma pop
 
 
-/* 8029CF68-8029CFBC 0054+00 rc=1 efc=0 rfr=False None .text      DMACallback__14JASAudioThreadFv                              */
+/* 8029CF68-8029CFBC 0054+00 r=1 e=0 z=0  None .text      DMACallback__14JASAudioThreadFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +212,7 @@ asm void JASAudioThread::DMACallback() {
 #pragma pop
 
 
-/* 8029CFBC-8029D028 006C+00 rc=1 efc=0 rfr=False None .text      DSPCallback__14JASAudioThreadFPv                             */
+/* 8029CFBC-8029D028 006C+00 r=1 e=0 z=0  None .text      DSPCallback__14JASAudioThreadFPv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,7 +223,7 @@ asm void JASAudioThread::DSPCallback(void* param_0) {
 #pragma pop
 
 
-/* 8029D028-8029D0B4 008C+00 rc=1 efc=0 rfr=False None .text      __dt__14JASAudioThreadFv                                     */
+/* 8029D028-8029D0B4 008C+00 r=1 e=0 z=0  None .text      __dt__14JASAudioThreadFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

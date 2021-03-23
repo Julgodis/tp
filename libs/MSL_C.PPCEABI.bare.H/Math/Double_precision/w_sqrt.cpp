@@ -25,7 +25,7 @@ extern "C" void __ieee754_sqrt(); // 1
 // Declarations:
 // 
 
-/* 8036CA54-8036CA74 0020+00 rc=8 efc=8 rfr=False None .text      sqrt                                                         */
+/* 8036CA54-8036CA74 0020+00 r=9 e=8 z=1  None .text      sqrt                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

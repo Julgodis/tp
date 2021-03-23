@@ -1,0 +1,30 @@
+lbl_80BA0C1C:
+/* 80BA0C1C 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80BA0C20 00000004  7C 08 02 A6 */	mflr r0
+/* 80BA0C24 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80BA0C28 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
+/* 80BA0C2C 00000010  7C 7F 1B 79 */	or. r31, r3, r3
+/* 80BA0C30 00000014  41 82 00 08 */	beq lbl_80BA0C38
+/* 80BA0C34 00000018  38 63 05 A0 */	addi r3, r3, 0x5a0
+lbl_80BA0C38:
+/* 80BA0C38 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80BA11E0 */
+/* 80BA0C3C 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80BA11E0 */
+/* 80BA0C40 00000008  80 84 00 00 */	lwz r4, 0(r4)
+/* 80BA0C44 0000000C  4B FF EE 15 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80BA0C48 00000010  80 1F 07 64 */	lwz r0, 0x764(r31)
+/* 80BA0C4C 00000014  90 01 00 08 */	stw r0, 8(r1)
+/* 80BA0C50 00000018  3C 60 00 00 */	lis r3, fpcSch_JudgeByID__FPvPv@ha /* 80023590 */
+/* 80BA0C54 0000001C  38 63 00 00 */	addi r3, r3, fpcSch_JudgeByID__FPvPv@l /* 80023590 */
+/* 80BA0C58 00000020  38 81 00 08 */	addi r4, r1, 8
+/* 80BA0C5C 00000024  4B FF ED FD */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80BA0C60 00000028  7C 64 1B 79 */	or. r4, r3, r3
+/* 80BA0C64 0000002C  41 82 00 0C */	beq lbl_80BA0C70
+/* 80BA0C68 00000030  7F E3 FB 78 */	mr r3, r31
+/* 80BA0C6C 00000034  4B FF F2 45 */	bl setIronBall__14daObjYtaihou_cFP12daObjCarry_c
+lbl_80BA0C70:
+/* 80BA0C70 00000000  38 60 00 01 */	li r3, 1
+/* 80BA0C74 00000004  83 E1 00 1C */	lwz r31, 0x1c(r1)
+/* 80BA0C78 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80BA0C7C 0000000C  7C 08 03 A6 */	mtlr r0
+/* 80BA0C80 00000010  38 21 00 20 */	addi r1, r1, 0x20
+/* 80BA0C84 00000014  4E 80 00 20 */	blr 

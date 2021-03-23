@@ -71,15 +71,16 @@ class Namespace(Struct):
 
 
 class CPPDisassembler(Disassembler):
-    def __init__(self, builder, function, block_map, symbol_table):
+    def __init__(self, builder, function, block_map, symbol_table, relocations, context):
         super().__init__([])
         self.builder = builder
         self.function = function
         self.block_map = block_map
         self.symbol_table = symbol_table
         self.last_address = 0
-        self.relocations = []
+        self.relocations = relocations
         self.unregister_references = set()
+        self.context = context
 
     def get_symbol(self, addr):
         if addr == self.function.addr:
@@ -143,40 +144,51 @@ class CPPDisassembler(Disassembler):
         # Relocation
         if len(self.relocations) > 0 and addr in self.relocations:
             relocation = self.relocations[addr]
-            symbol = g.lookup_symbol(relocation)
+            access_addr, symbol = self.symbol_table[-1, relocation, addr]
+            reference = symbol.asm_reference(access_addr)
             if id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BDZ, PPC_INS_BDNZ}:
-                return f"{insn.mnemonic} {symbol.identifier.reference}"
+                return f"{insn.mnemonic} {reference}"
             elif id == PPC_INS_LIS:
                 reg = insn.reg_name(insn.operands[0].reg)
                 if relocation.type == librel.R_PPC_ADDR16_HA:
-                    return f"{insn.mnemonic} {reg}, {symbol.identifier.reference}@ha"
+                    return f"{insn.mnemonic} {reg}, {reference}@ha /* {access_addr:08X} */"
                 elif relocation.type == librel.R_PPC_ADDR16_HI:
-                    return f"{insn.mnemonic} {reg}, {symbol.identifier.reference}@hi"
+                    return f"{insn.mnemonic} {reg}, {reference}@hi /* {access_addr:08X} */"
                 else:
                     assert False
-            elif id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_ORI}:
+            elif id in {PPC_INS_ADDI, PPC_INS_ORI}:
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].reg)
                 if relocation.type == librel.R_PPC_ADDR16_LO:
-                    return f"{insn.mnemonic} {rA}, {rB}, {symbol.identifier.reference}@l"
+                    return f"{insn.mnemonic} {rA}, {rB}, {reference}@l /* {access_addr:08X} */"
+                else:
+                    assert False
+                    
+            # addic. rA, rB, name@l does not work in inline asm
+            # for now use don't use the name
+            elif id in {PPC_INS_ADDIC} and False:
+                rA = insn.reg_name(insn.operands[0].reg)
+                rB = insn.reg_name(insn.operands[1].reg)
+                if relocation.type == librel.R_PPC_ADDR16_LO:
+                    return f"{insn.mnemonic} {rA}, {rB}, {reference}@l /* {access_addr:08X} */"
                 else:
                     assert False
             elif offset_load:
                 rA = insn.reg_name(insn.operands[0].reg)
                 rB = insn.reg_name(insn.operands[1].mem.base)
                 if relocation.type == librel.R_PPC_ADDR16_LO:
-                    return f"{insn.mnemonic} {rA}, {symbol.identifier.reference}@l({rB})"
+                    return f"{insn.mnemonic} {rA}, {reference}@l({rB}) /* {access_addr:08X} */"
                 else:
                     assert False
             else:
-                g.LOG.warning(
+                self.context.warning(
                     f"{addr:08X}: relocation ({librel.RELOCATION_NAMES[relocation.type]}) for instruction not supported. \"{insn.mnemonic} {insn.op_str}\" ({id})")
 
         # Branch instruction replace immediate value with label
         if id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BDZ, PPC_INS_BDNZ}:
             label = self.addr_to_label(insn.operands[0].imm)
             if not label:
-                g.LOG.warning(
+                self.context.warning(
                     f"'{label}' {addr:08X} to {insn.operands[0].imm:08X}, branch to unknown addr: {insn}")
             assert label
             return f"{insn.mnemonic} {label}"
@@ -314,9 +326,9 @@ class CPPExporter:
     tu: TranslationUnit = None
 
     async def export_symbol_header(self, builder: AsyncBuilder, symbol: Symbol):
-        await builder.write("/* %08X-%08X %04X+%02X rc=%i efc=%i rfr=%s %s %-10s %-60s */" % (
+        await builder.write("/* %08X-%08X %04X+%02X s=%i e=%i z=%i  %s %-10s %-60s */" % (
             symbol.start, symbol.end+symbol.padding, symbol.size, symbol.padding,
-            symbol.reference_count, symbol.external_reference_count, symbol.require_forward_reference,
+            symbol.reference_count.static, symbol.reference_count.extern, symbol.reference_count.rel,
             symbol.force_section,
             symbol._section, symbol.identifier.name))
 
@@ -1153,10 +1165,6 @@ class CPPExporter:
             self.find_references(section, decl_references,
                                  internal_references, relocation_symbols)
 
-        rel_symbol_map = dict()
-        for symbol in relocation_symbols:
-            internal_references.add(symbol)
-            rel_symbol_map[symbol.addr] = symbol
 
         forward_references = list(decl_references)
         forward_references.sort(key=lambda x: x.addr)
@@ -1287,12 +1295,14 @@ def export_translation_unit_group(context: Context, tus: List[Tuple[TranslationU
     ]
 
     async def wait_all():
-        await asyncio.gather(*async_tasks)
+        for task in async_tasks:
+            await task
+        #await asyncio.gather(*async_tasks)
 
     asyncio.run(wait_all())
 
 
-async def export_function2(function: Function, symbol_table: GlobalSymbolTable, context: Context, no_file_generation: bool):
+async def export_function2(function: Function, symbol_table: GlobalSymbolTable, context: Context, relocations: Dict[int,"librel.Relocation"], no_file_generation: bool):
     if no_file_generation:
         if function.include_path.exists():
             return
@@ -1303,24 +1313,28 @@ async def export_function2(function: Function, symbol_table: GlobalSymbolTable, 
 
     async with AsyncBuilder(function.include_path) as include_builder:
         cppd = CPPDisassembler(include_builder, function,
-                               block_map, symbol_table)
+                               block_map, symbol_table, relocations, context)
         for block in function.blocks:
             await cppd.async_execute(block.addr, block.data, block.size)
 
-    #context.debug(f"generated asm: '{function.include_path}'")
+    context.debug(f"generated asm: '{function.include_path}'")
 
 
-def export_function(context: Context, functions: List[Tuple[Symbol, Path]], symbol_table: GlobalSymbolTable, no_file_generation: bool):
+def export_function(context: Context, section: Section, functions: List[Symbol], symbol_table: GlobalSymbolTable, no_file_generation: bool):
     async_tasks = [
-        export_function2(*function, symbol_table=symbol_table,
-                         no_file_generation=no_file_generation, context=context)
+        export_function2(*function, 
+                         symbol_table=symbol_table,
+                         no_file_generation=no_file_generation, 
+                         context=context, 
+                         relocations=section.relocations)
         for function in functions
     ]
 
     async def wait_all():
-        await asyncio.gather(*async_tasks)
+        for task in async_tasks:
+            await task
+        #await asyncio.gather(*async_tasks)
 
-    context.debug(f"generated asm {len(functions)} functions")
     asyncio.run(wait_all())
 
 

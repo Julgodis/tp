@@ -44,7 +44,7 @@ extern "C" void OSWakeupThread(); // 1
 // Declarations:
 // 
 
-/* 8033F008-8033F040 0038+00 rc=12 efc=12 rfr=False None .text      OSInitMutex                                                  */
+/* 8033F008-8033F040 0038+00 r=12 e=12 z=0  None .text      OSInitMutex                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ extern "C" asm void OSInitMutex() {
 #pragma pop
 
 
-/* 8033F040-8033F11C 00DC+00 rc=63 efc=62 rfr=False None .text      OSLockMutex                                                  */
+/* 8033F040-8033F11C 00DC+00 r=63 e=62 z=0  None .text      OSLockMutex                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm void OSLockMutex() {
 #pragma pop
 
 
-/* 8033F11C-8033F1E4 00C8+00 rc=71 efc=71 rfr=False None .text      OSUnlockMutex                                                */
+/* 8033F11C-8033F1E4 00C8+00 r=71 e=71 z=0  None .text      OSUnlockMutex                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ extern "C" asm void OSUnlockMutex() {
 #pragma pop
 
 
-/* 8033F1E4-8033F254 0070+00 rc=2 efc=2 rfr=False None .text      __OSUnlockAllMutex                                           */
+/* 8033F1E4-8033F254 0070+00 r=2 e=2 z=0  None .text      __OSUnlockAllMutex                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void __OSUnlockAllMutex() {
 #pragma pop
 
 
-/* 8033F254-8033F310 00BC+00 rc=9 efc=9 rfr=False None .text      OSTryLockMutex                                               */
+/* 8033F254-8033F310 00BC+00 r=9 e=9 z=0  None .text      OSTryLockMutex                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ extern "C" asm void OSTryLockMutex() {
 #pragma pop
 
 
-/* 8033F310-8033F330 0020+00 rc=1 efc=1 rfr=False None .text      OSInitCond                                                   */
+/* 8033F310-8033F330 0020+00 r=1 e=1 z=0  None .text      OSInitCond                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ extern "C" asm void OSInitCond() {
 #pragma pop
 
 
-/* 8033F330-8033F404 00D4+00 rc=1 efc=1 rfr=False None .text      OSWaitCond                                                   */
+/* 8033F330-8033F404 00D4+00 r=1 e=1 z=0  None .text      OSWaitCond                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ extern "C" asm void OSWaitCond() {
 #pragma pop
 
 
-/* 8033F404-8033F424 0020+00 rc=5 efc=5 rfr=False None .text      OSSignalCond                                                 */
+/* 8033F404-8033F424 0020+00 r=5 e=5 z=0  None .text      OSSignalCond                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ extern "C" asm void OSSignalCond() {
 #pragma pop
 
 
-/* 8033F424-8033F524 0100+00 rc=1 efc=0 rfr=False None .text      __OSCheckMutex                                               */
+/* 8033F424-8033F524 0100+00 r=1 e=0 z=0  None .text      __OSCheckMutex                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ extern "C" asm static void __OSCheckMutex() {
 #pragma pop
 
 
-/* 8033F524-8033F55C 0038+00 rc=1 efc=1 rfr=False None .text      __OSCheckDeadLock                                            */
+/* 8033F524-8033F55C 0038+00 r=1 e=1 z=0  None .text      __OSCheckDeadLock                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ extern "C" asm void __OSCheckDeadLock() {
 #pragma pop
 
 
-/* 8033F55C-8033F5D0 0074+00 rc=1 efc=1 rfr=False None .text      __OSCheckMutexes                                             */
+/* 8033F55C-8033F5D0 0074+00 r=1 e=1 z=0  None .text      __OSCheckMutexes                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

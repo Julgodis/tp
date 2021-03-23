@@ -26,7 +26,7 @@ extern "C" void TRKInitializeMutex(); // 1
 // Declarations:
 // 
 
-/* 8036F498-8036F4A0 0008+00 rc=6 efc=6 rfr=False None .text      TRKReleaseMutex                                              */
+/* 8036F498-8036F4A0 0008+00 r=6 e=6 z=0  None .text      TRKReleaseMutex                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -37,7 +37,7 @@ extern "C" asm void TRKReleaseMutex() {
 #pragma pop
 
 
-/* 8036F4A0-8036F4A8 0008+00 rc=6 efc=6 rfr=False None .text      TRKAcquireMutex                                              */
+/* 8036F4A0-8036F4A8 0008+00 r=6 e=6 z=0  None .text      TRKAcquireMutex                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void TRKAcquireMutex() {
 #pragma pop
 
 
-/* 8036F4A8-8036F4B0 0008+00 rc=2 efc=2 rfr=False None .text      TRKInitializeMutex                                           */
+/* 8036F4A8-8036F4B0 0008+00 r=2 e=2 z=0  None .text      TRKInitializeMutex                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

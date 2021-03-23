@@ -39,7 +39,7 @@ struct judge_filter {
 void fpcCtIt_Method(int (*)(void*, void*), void*); // 2
 void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
 static void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); // 2
-void fpcCtIt_JudgeInLayer(u32, void* (*)(void*, void*), void*); // 2
+void fpcCtIt_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); // 2
 
 extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
 extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
@@ -65,7 +65,7 @@ extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800209C8-80020A04 003C+00 rc=1 efc=1 rfr=False None .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
+/* 800209C8-80020A04 003C+00 r=1 e=1 z=0  None .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void fpcCtIt_Method(int (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80020A04-80020A40 003C+00 rc=3 efc=2 rfr=False None .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
+/* 80020A04-80020A40 003C+00 r=3 e=2 z=0  None .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void fpcCtIt_Judge(void* (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80020A40-80020A94 0054+00 rc=1 efc=0 rfr=False None .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
+/* 80020A40-80020A94 0054+00 r=1 e=0 z=0  None .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,11 +98,11 @@ asm static void fpcCtIt_filter_JudgeInLayer(create_tag* param_0, fpcCtIt_jilprm_
 #pragma pop
 
 
-/* 80020A94-80020ACC 0038+00 rc=1 efc=1 rfr=False None .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
+/* 80020A94-80020ACC 0038+00 r=1 e=1 z=0  None .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtIt_JudgeInLayer(u32 param_0, void* (*)(void*, void*), void* param_2) {
+asm void fpcCtIt_JudgeInLayer(unsigned int param_0, void* (*)(void*, void*), void* param_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_iter/fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv.s"
 }

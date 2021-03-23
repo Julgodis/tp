@@ -39,45 +39,45 @@ extern "C" extern void* __GXData;
 // 
 
 /* ############################################################################################## */
-/* 80456618-8045661C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @211                                                         */
+/* 80456618-8045661C 0004+00 r=1 e=0 z=0  None .sdata2    @211                                                         */
 SECTION_SDATA2 static u8 GXPixel__lit_211[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045661C-80456620 0004+00 rc=1 efc=0 rfr=False None .sdata2    @212                                                         */
+/* 8045661C-80456620 0004+00 r=1 e=0 z=0  None .sdata2    @212                                                         */
 SECTION_SDATA2 static f32 lit_212 = 1.0f;
 
-/* 80456620-80456628 0004+04 rc=1 efc=0 rfr=False None .sdata2    @213                                                         */
+/* 80456620-80456628 0004+04 r=1 e=0 z=0  None .sdata2    @213                                                         */
 SECTION_SDATA2 static f32 GXPixel__lit_213[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456628-80456630 0008+00 rc=1 efc=0 rfr=False None .sdata2    @214                                                         */
+/* 80456628-80456630 0008+00 r=1 e=0 z=0  None .sdata2    @214                                                         */
 SECTION_SDATA2 static f64 lit_214 = 1.0;
 
-/* 80456630-80456638 0004+04 rc=1 efc=0 rfr=False None .sdata2    @215                                                         */
+/* 80456630-80456638 0004+04 r=1 e=0 z=0  None .sdata2    @215                                                         */
 SECTION_SDATA2 static f32 GXPixel__lit_215[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456638-80456640 0008+00 rc=1 efc=0 rfr=False None .sdata2    @216                                                         */
+/* 80456638-80456640 0008+00 r=1 e=0 z=0  None .sdata2    @216                                                         */
 SECTION_SDATA2 static f64 GXPixel__lit_216 = 0.5;
 
-/* 80456640-80456648 0004+04 rc=1 efc=0 rfr=False None .sdata2    @217                                                         */
+/* 80456640-80456648 0004+04 r=1 e=0 z=0  None .sdata2    @217                                                         */
 SECTION_SDATA2 static f32 GXPixel__lit_217[1 + 1 /* padding */] = {
 	8388638.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456648-80456650 0008+00 rc=1 efc=0 rfr=False None .sdata2    @219                                                         */
+/* 80456648-80456650 0008+00 r=1 e=0 z=0  None .sdata2    @219                                                         */
 SECTION_SDATA2 static f64 GXPixel__lit_219 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8035F8B8-8035FACC 0214+00 rc=20 efc=20 rfr=False None .text      GXSetFog                                                     */
+/* 8035F8B8-8035FACC 0214+00 r=22 e=20 z=2  None .text      GXSetFog                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void GXSetFog() {
 #pragma pop
 
 
-/* 8035FACC-8035FBF0 0124+00 rc=9 efc=9 rfr=False None .text      GXSetFogRangeAdj                                             */
+/* 8035FACC-8035FBF0 0124+00 r=11 e=9 z=2  None .text      GXSetFogRangeAdj                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ extern "C" asm void GXSetFogRangeAdj() {
 #pragma pop
 
 
-/* 8035FBF0-8035FC44 0054+00 rc=53 efc=53 rfr=False None .text      GXSetBlendMode                                               */
+/* 8035FBF0-8035FC44 0054+00 r=56 e=53 z=3  None .text      GXSetBlendMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ extern "C" asm void GXSetBlendMode() {
 #pragma pop
 
 
-/* 8035FC44-8035FC70 002C+00 rc=10 efc=10 rfr=False None .text      GXSetColorUpdate                                             */
+/* 8035FC44-8035FC70 002C+00 r=12 e=10 z=2  None .text      GXSetColorUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ extern "C" asm void GXSetColorUpdate() {
 #pragma pop
 
 
-/* 8035FC70-8035FC9C 002C+00 rc=10 efc=10 rfr=False None .text      GXSetAlphaUpdate                                             */
+/* 8035FC70-8035FC9C 002C+00 r=12 e=10 z=2  None .text      GXSetAlphaUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ extern "C" asm void GXSetAlphaUpdate() {
 #pragma pop
 
 
-/* 8035FC9C-8035FCD0 0034+00 rc=40 efc=40 rfr=False None .text      GXSetZMode                                                   */
+/* 8035FC9C-8035FCD0 0034+00 r=46 e=40 z=6  None .text      GXSetZMode                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ extern "C" asm void GXSetZMode() {
 #pragma pop
 
 
-/* 8035FCD0-8035FD04 0034+00 rc=29 efc=29 rfr=False None .text      GXSetZCompLoc                                                */
+/* 8035FCD0-8035FD04 0034+00 r=34 e=29 z=5  None .text      GXSetZCompLoc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,13 +155,13 @@ extern "C" asm void GXSetZCompLoc() {
 
 
 /* ############################################################################################## */
-/* 803D2838-803D2858 0020+00 rc=1 efc=0 rfr=False None .data      p2f$358                                                      */
+/* 803D2838-803D2858 0020+00 r=1 e=0 z=0  None .data      p2f$358                                                      */
 SECTION_DATA static u8 data_803D2838[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 8035FD04-8035FDD8 00D4+00 rc=2 efc=2 rfr=False None .text      GXSetPixelFmt                                                */
+/* 8035FD04-8035FDD8 00D4+00 r=3 e=2 z=1  None .text      GXSetPixelFmt                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +172,7 @@ extern "C" asm void GXSetPixelFmt() {
 #pragma pop
 
 
-/* 8035FDD8-8035FE04 002C+00 rc=22 efc=22 rfr=False None .text      GXSetDither                                                  */
+/* 8035FDD8-8035FE04 002C+00 r=23 e=22 z=1  None .text      GXSetDither                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ extern "C" asm void GXSetDither() {
 #pragma pop
 
 
-/* 8035FE04-8035FE40 003C+00 rc=2 efc=2 rfr=False None .text      GXSetDstAlpha                                                */
+/* 8035FE04-8035FE40 003C+00 r=2 e=2 z=0  None .text      GXSetDstAlpha                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ extern "C" asm void GXSetDstAlpha() {
 #pragma pop
 
 
-/* 8035FE40-8035FE78 0038+00 rc=1 efc=1 rfr=False None .text      GXSetFieldMask                                               */
+/* 8035FE40-8035FE78 0038+00 r=1 e=1 z=0  None .text      GXSetFieldMask                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ extern "C" asm void GXSetFieldMask() {
 #pragma pop
 
 
-/* 8035FE78-8035FEF0 0078+00 rc=1 efc=1 rfr=False None .text      GXSetFieldMode                                               */
+/* 8035FE78-8035FEF0 0078+00 r=1 e=1 z=0  None .text      GXSetFieldMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -1,0 +1,15 @@
+lbl_80CDF0AC:
+/* 80CDF0AC 00000000  3C 80 00 00 */	lis r4, __vt__14mDoHIO_entry_c@ha /* 80CDF7B4 */
+/* 80CDF0B0 00000004  38 04 00 00 */	addi r0, r4, __vt__14mDoHIO_entry_c@l /* 80CDF7B4 */
+/* 80CDF0B4 00000008  90 03 00 00 */	stw r0, 0(r3)
+/* 80CDF0B8 0000000C  3C 80 00 00 */	lis r4, __vt__18daSnowEffTag_HIO_c@ha /* 80CDF7A8 */
+/* 80CDF0BC 00000010  38 04 00 00 */	addi r0, r4, __vt__18daSnowEffTag_HIO_c@l /* 80CDF7A8 */
+/* 80CDF0C0 00000014  90 03 00 00 */	stw r0, 0(r3)
+/* 80CDF0C4 00000018  38 00 00 14 */	li r0, 0x14
+/* 80CDF0C8 0000001C  98 03 00 04 */	stb r0, 4(r3)
+/* 80CDF0CC 00000020  38 00 00 00 */	li r0, 0
+/* 80CDF0D0 00000024  98 03 00 05 */	stb r0, 5(r3)
+/* 80CDF0D4 00000028  38 00 00 01 */	li r0, 1
+/* 80CDF0D8 0000002C  98 03 00 06 */	stb r0, 6(r3)
+/* 80CDF0DC 00000030  98 03 00 07 */	stb r0, 7(r3)
+/* 80CDF0E0 00000034  4E 80 00 20 */	blr 

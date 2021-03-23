@@ -187,13 +187,24 @@ extern "C" static void func_80031EF0(); // 1
 extern "C" void __dt__Q27daSus_c6data_cFv(); // 1
 extern "C" void __ct__Q27daSus_c6data_cFv(); // 1
 extern "C" extern char const* const d_com_d_com_static__stringBase0;
+extern "C" extern u8 mRoom__7daSus_c[256];
+extern "C" extern u8 m_entryModel__10daMirror_c[12];
+extern "C" extern u8 m_deleteRoom__15dGrass_packet_c[12];
+extern "C" extern u8 m_deleteRoom__16dFlower_packet_c[12];
 extern "C" extern u8 d_com_d_com_static__lit_4480[12];
+extern "C" extern u8 struct_80450D88[4];
 extern "C" extern u8 struct_80450D8C[4];
 extern "C" extern u8 m_aim_rate__8daYkgr_c[4];
 extern "C" extern u8 m_path__8daYkgr_c[4];
 extern "C" extern u8 m_emitter__8daYkgr_c[4];
 extern "C" extern u8 m_top__13daTagStream_c[4];
+extern "C" extern u8 m_myObj__10daMirror_c[4];
 extern "C" extern u8 m_myObj__9daGrass_c[4];
+extern "C" extern u8 m_grass__9daGrass_c[4];
+extern "C" extern u8 m_flower__9daGrass_c[4];
+extern "C" extern u8 m_myObj__6daMP_c[4];
+extern "C" extern u8 mTagMagne__12daTagMagne_c[4];
+extern "C" extern u8 struct_80450DC0[4];
 extern "C" extern u8 pad_80450DD1[4];
 extern "C" extern void* M_dir_base__Q212daObjMovebox5Act_c[2];
 extern "C" extern u32 OPEN_SIZE__7daDsh_c;
@@ -247,7 +258,7 @@ extern "C" extern u8 m_status__7dDemo_c[4];
 // Declarations:
 // 
 
-/* 80030F14-80030FBC 00A8+00 rc=1 efc=0 rfr=False None .text      set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc                */
+/* 80030F14-80030FBC 00A8+00 r=1 e=0 z=0  None .text      set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +269,7 @@ asm void daSus_c::data_c::set(s8 param_0, cXyz const& param_1, cXyz const& param
 #pragma pop
 
 
-/* 80030FBC-80030FCC 0010+00 rc=3 efc=0 rfr=False None .text      reset__Q27daSus_c6data_cFv                                   */
+/* 80030FBC-80030FCC 0010+00 r=3 e=0 z=0  None .text      reset__Q27daSus_c6data_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +280,7 @@ asm void daSus_c::data_c::reset() {
 #pragma pop
 
 
-/* 80030FCC-80031038 006C+00 rc=2 efc=0 rfr=False None .text      isSwitch__Q27daSus_c6data_cFv                                */
+/* 80030FCC-80031038 006C+00 r=2 e=0 z=0  None .text      isSwitch__Q27daSus_c6data_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +291,7 @@ asm void daSus_c::data_c::isSwitch() {
 #pragma pop
 
 
-/* 80031038-800310C8 0090+00 rc=2 efc=0 rfr=False None .text      check__Q27daSus_c6data_cFRC4cXyz                             */
+/* 80031038-800310C8 0090+00 r=2 e=0 z=0  None .text      check__Q27daSus_c6data_cFRC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +302,7 @@ asm void daSus_c::data_c::check(cXyz const& param_0) {
 #pragma pop
 
 
-/* 800310C8-80031150 0088+00 rc=1 efc=0 rfr=False None .text      check__Q27daSus_c6data_cFP10fopAc_ac_c                       */
+/* 800310C8-80031150 0088+00 r=1 e=0 z=0  None .text      check__Q27daSus_c6data_cFP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +313,7 @@ asm void daSus_c::data_c::check(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80031150-80031190 0040+00 rc=1 efc=0 rfr=False None .text      execute__Q27daSus_c6data_cFv                                 */
+/* 80031150-80031190 0040+00 r=1 e=0 z=0  None .text      execute__Q27daSus_c6data_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +324,7 @@ asm void daSus_c::data_c::execute() {
 #pragma pop
 
 
-/* 80031190-800311FC 006C+00 rc=1 efc=0 rfr=False None .text      add__Q27daSus_c6room_cFPQ27daSus_c6data_c                    */
+/* 80031190-800311FC 006C+00 r=1 e=0 z=0  None .text      add__Q27daSus_c6room_cFPQ27daSus_c6data_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +335,7 @@ asm void daSus_c::room_c::add(daSus_c::data_c* param_0) {
 #pragma pop
 
 
-/* 800311FC-80031248 004C+00 rc=0 efc=0 rfr=False None .text      reset__Q27daSus_c6room_cFv                                   */
+/* 800311FC-80031248 004C+00 r=1 e=0 z=1  None .text      reset__Q27daSus_c6room_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,19 +347,19 @@ asm void daSus_c::room_c::reset() {
 
 
 /* ############################################################################################## */
-/* 80423FF0-80423FFC 000C+00 rc=1 efc=0 rfr=False None .bss       @3840                                                        */
+/* 80423FF0-80423FFC 000C+00 r=1 e=0 z=0  None .bss       @3840                                                        */
 static u8 d_com_d_com_static__lit_3840[12];
 
-/* 80423FFC-8042447C 0480+00 rc=6 efc=0 rfr=False None .bss       mData__7daSus_c                                              */
+/* 80423FFC-8042447C 0480+00 r=6 e=0 z=0  None .bss       mData__7daSus_c                                              */
 static u8 mData__7daSus_c[1152];
 
-/* 8042447C-8042457C 0100+00 rc=2 efc=0 rfr=False None .bss       mRoom__7daSus_c                                              */
-static u8 mRoom__7daSus_c[256];
+/* 8042447C-8042457C 0100+00 r=3 e=0 z=1  None .bss       mRoom__7daSus_c                                              */
+u8 mRoom__7daSus_c[256];
 
-/* 80450D88-80450D8C 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
-static u8 struct_80450D88[4];
+/* 80450D88-80450D8C 0004+00 r=3 e=0 z=2  None .sbss      None                                                         */
+u8 struct_80450D88[4];
 
-/* 80031248-800313BC 0174+00 rc=0 efc=0 rfr=False None .text      newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc                     */
+/* 80031248-800313BC 0174+00 r=1 e=0 z=1  None .text      newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +370,7 @@ asm void daSus_c::newData(s8 param_0, cXyz const& param_1, cXyz const& param_2, 
 #pragma pop
 
 
-/* 800313BC-80031434 0078+00 rc=1 efc=1 rfr=False None .text      reset__7daSus_cFv                                            */
+/* 800313BC-80031434 0078+00 r=1 e=1 z=0  None .text      reset__7daSus_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +381,7 @@ asm void daSus_c::reset() {
 #pragma pop
 
 
-/* 80031434-800314D4 00A0+00 rc=4 efc=4 rfr=False None .text      check__7daSus_cFScRC4cXyz                                    */
+/* 80031434-800314D4 00A0+00 r=4 e=4 z=0  None .text      check__7daSus_cFScRC4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -381,7 +392,7 @@ asm void daSus_c::check(s8 param_0, cXyz const& param_1) {
 #pragma pop
 
 
-/* 800314D4-800315A4 00D0+00 rc=1 efc=1 rfr=False None .text      check__7daSus_cFP10fopAc_ac_c                                */
+/* 800314D4-800315A4 00D0+00 r=1 e=1 z=0  None .text      check__7daSus_cFP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,7 +403,7 @@ asm void daSus_c::check(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 800315A4-8003160C 0068+00 rc=2 efc=2 rfr=False None .text      execute__7daSus_cFv                                          */
+/* 800315A4-8003160C 0068+00 r=2 e=2 z=0  None .text      execute__7daSus_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,7 +414,7 @@ asm void daSus_c::execute() {
 #pragma pop
 
 
-/* 8003160C-80031648 003C+00 rc=0 efc=0 rfr=False None .text      daNpcMsg_setEvtNum__FUc                                      */
+/* 8003160C-80031648 003C+00 r=1 e=0 z=1  None .text      daNpcMsg_setEvtNum__FUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,15 +426,15 @@ asm void daNpcMsg_setEvtNum(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 803790B0-803790C0 0010+00 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 803790B0-803790C0 0010+00 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_803790B0 = "F_SP103";
-SECTION_DEAD static char const* const stringBase_803790B8 = "@bg%04x";
+SECTION_DEAD char const* const stringBase_803790B0 = "F_SP103";
+SECTION_DEAD char const* const stringBase_803790B8 = "@bg%04x";
 #pragma pop
 
-/* 80031648-800316A8 0060+00 rc=0 efc=0 rfr=False None .text      daNpcKakashi_chkSwdTutorialStage__Fv                         */
+/* 80031648-800316A8 0060+00 r=6 e=0 z=6  None .text      daNpcKakashi_chkSwdTutorialStage__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +445,7 @@ asm void daNpcKakashi_chkSwdTutorialStage() {
 #pragma pop
 
 
-/* 800316A8-800316E0 0038+00 rc=0 efc=0 rfr=False None .text      daNpcKakashi_setSwdTutorialStep__FUc                         */
+/* 800316A8-800316E0 0038+00 r=3 e=0 z=3  None .text      daNpcKakashi_setSwdTutorialStep__FUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +456,7 @@ asm void daNpcKakashi_setSwdTutorialStep(u8 param_0) {
 #pragma pop
 
 
-/* 800316E0-80031718 0038+00 rc=1 efc=1 rfr=False None .text      daNpcKakashi_getSwdTutorialStep__Fv                          */
+/* 800316E0-80031718 0038+00 r=5 e=1 z=4  None .text      daNpcKakashi_getSwdTutorialStep__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +467,7 @@ asm void daNpcKakashi_getSwdTutorialStep() {
 #pragma pop
 
 
-/* 80031718-80031754 003C+00 rc=1 efc=1 rfr=False None .text      daNpcKakashi_getSwdTutorialResult__Fv                        */
+/* 80031718-80031754 003C+00 r=1 e=1 z=0  None .text      daNpcKakashi_getSwdTutorialResult__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -467,7 +478,7 @@ asm void daNpcKakashi_getSwdTutorialResult() {
 #pragma pop
 
 
-/* 80031754-800317A4 0050+00 rc=0 efc=0 rfr=False None .text      daNpcKakashi_setSwdTutorialResult__Fb                        */
+/* 80031754-800317A4 0050+00 r=1 e=0 z=1  None .text      daNpcKakashi_setSwdTutorialResult__Fb                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,7 +489,7 @@ asm void daNpcKakashi_setSwdTutorialResult(bool param_0) {
 #pragma pop
 
 
-/* 800317A4-800317DC 0038+00 rc=1 efc=1 rfr=False None .text      daNpcKakashi_getSuccessCount__Fv                             */
+/* 800317A4-800317DC 0038+00 r=2 e=1 z=1  None .text      daNpcKakashi_getSuccessCount__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,7 +500,7 @@ asm void daNpcKakashi_getSuccessCount() {
 #pragma pop
 
 
-/* 800317DC-80031838 005C+00 rc=0 efc=0 rfr=False None .text      daNpcKakashi_incSuccessCount__Fv                             */
+/* 800317DC-80031838 005C+00 r=1 e=0 z=1  None .text      daNpcKakashi_incSuccessCount__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -500,7 +511,7 @@ asm void daNpcKakashi_incSuccessCount() {
 #pragma pop
 
 
-/* 80031838-80031870 0038+00 rc=0 efc=0 rfr=False None .text      daNpcKakashi_clrSuccessCount__Fv                             */
+/* 80031838-80031870 0038+00 r=4 e=0 z=4  None .text      daNpcKakashi_clrSuccessCount__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,22 +523,22 @@ asm void daNpcKakashi_clrSuccessCount() {
 
 
 /* ############################################################################################## */
-/* 80450D8C-80450D90 0004+00 rc=1 efc=1 rfr=False None .sbss      None                                                         */
+/* 80450D8C-80450D90 0004+00 r=4 e=1 z=3  None .sbss      None                                                         */
 u8 struct_80450D8C[4];
 
-/* 80450D90-80450D94 0004+00 rc=0 efc=0 rfr=False None .sbss      m_aim_rate__8daYkgr_c                                        */
+/* 80450D90-80450D94 0004+00 r=1 e=0 z=1  None .sbss      m_aim_rate__8daYkgr_c                                        */
 u8 m_aim_rate__8daYkgr_c[4];
 
-/* 80450D94-80450D98 0004+00 rc=0 efc=0 rfr=False None .sbss      m_path__8daYkgr_c                                            */
+/* 80450D94-80450D98 0004+00 r=2 e=0 z=2  None .sbss      m_path__8daYkgr_c                                            */
 u8 m_path__8daYkgr_c[4];
 
-/* 80450D98-80450D9C 0004+00 rc=1 efc=1 rfr=False None .sbss      m_emitter__8daYkgr_c                                         */
+/* 80450D98-80450D9C 0004+00 r=3 e=1 z=2  None .sbss      m_emitter__8daYkgr_c                                         */
 u8 m_emitter__8daYkgr_c[4];
 
-/* 80450D9C-80450DA4 0008+00 rc=1 efc=0 rfr=False None .sbss      arcName$4309                                                 */
+/* 80450D9C-80450DA4 0008+00 r=1 e=0 z=0  None .sbss      arcName$4309                                                 */
 static u8 data_80450D9C[8];
 
-/* 80031870-800318B4 0044+00 rc=0 efc=0 rfr=False None .text      getArcName__12daSetBgObj_cFP10fopAc_ac_c                     */
+/* 80031870-800318B4 0044+00 r=19 e=0 z=19  None .text      getArcName__12daSetBgObj_cFP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,45 +550,45 @@ asm void daSetBgObj_c::getArcName(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451D28-80451D30 0008+00 rc=0 efc=0 rfr=False None .sdata2    M_dir_base__Q212daObjMovebox5Act_c                           */
+/* 80451D28-80451D30 0008+00 r=3 e=0 z=3  None .sdata2    M_dir_base__Q212daObjMovebox5Act_c                           */
 SECTION_SDATA2 void* M_dir_base__Q212daObjMovebox5Act_c[2] = {
 	/* 0    */ (void*)0x00004000,
 	/* 1    */ (void*)(((char*)mDoMch_Create__Fv)+0x2BC),
 };
 
-/* 80451D30-80451D34 0004+00 rc=0 efc=0 rfr=False None .sdata2    OPEN_SIZE__7daDsh_c                                          */
+/* 80451D30-80451D34 0004+00 r=3 e=0 z=3  None .sdata2    OPEN_SIZE__7daDsh_c                                          */
 SECTION_SDATA2 u32 OPEN_SIZE__7daDsh_c = 0x43870CCD;
 
-/* 80451D34-80451D38 0004+00 rc=0 efc=0 rfr=False None .sdata2    OPEN_ACCEL__7daDsh_c                                         */
+/* 80451D34-80451D38 0004+00 r=1 e=0 z=1  None .sdata2    OPEN_ACCEL__7daDsh_c                                         */
 SECTION_SDATA2 u32 OPEN_ACCEL__7daDsh_c = 0x41200000;
 
-/* 80451D38-80451D3C 0004+00 rc=0 efc=0 rfr=False None .sdata2    OPEN_SPEED__7daDsh_c                                         */
+/* 80451D38-80451D3C 0004+00 r=1 e=0 z=1  None .sdata2    OPEN_SPEED__7daDsh_c                                         */
 SECTION_SDATA2 u32 OPEN_SPEED__7daDsh_c = 0xC2200000;
 
-/* 80451D3C-80451D40 0004+00 rc=0 efc=0 rfr=False None .sdata2    OPEN_BOUND_SPEED__7daDsh_c                                   */
+/* 80451D3C-80451D40 0004+00 r=1 e=0 z=1  None .sdata2    OPEN_BOUND_SPEED__7daDsh_c                                   */
 SECTION_SDATA2 u32 OPEN_BOUND_SPEED__7daDsh_c = 0xC1F00000;
 
-/* 80451D40-80451D44 0004+00 rc=0 efc=0 rfr=False None .sdata2    OPEN_BOUND_RATIO__7daDsh_c                                   */
+/* 80451D40-80451D44 0004+00 r=1 e=0 z=1  None .sdata2    OPEN_BOUND_RATIO__7daDsh_c                                   */
 SECTION_SDATA2 u32 OPEN_BOUND_RATIO__7daDsh_c = 0xBECCCCCD;
 
-/* 80451D44-80451D48 0004+00 rc=0 efc=0 rfr=False None .sdata2    CLOSE_ACCEL__7daDsh_c                                        */
+/* 80451D44-80451D48 0004+00 r=1 e=0 z=1  None .sdata2    CLOSE_ACCEL__7daDsh_c                                        */
 SECTION_SDATA2 u32 CLOSE_ACCEL__7daDsh_c = 0x41200000;
 
-/* 80451D48-80451D4C 0004+00 rc=0 efc=0 rfr=False None .sdata2    CLOSE_SPEED__7daDsh_c                                        */
+/* 80451D48-80451D4C 0004+00 r=1 e=0 z=1  None .sdata2    CLOSE_SPEED__7daDsh_c                                        */
 SECTION_SDATA2 u32 CLOSE_SPEED__7daDsh_c = 0x42200000;
 
-/* 80451D4C-80451D50 0004+00 rc=0 efc=0 rfr=False None .sdata2    CLOSE_BOUND_SPEED__7daDsh_c                                  */
+/* 80451D4C-80451D50 0004+00 r=1 e=0 z=1  None .sdata2    CLOSE_BOUND_SPEED__7daDsh_c                                  */
 SECTION_SDATA2 u32 CLOSE_BOUND_SPEED__7daDsh_c = 0x41F00000;
 
-/* 80451D50-80451D54 0004+00 rc=0 efc=0 rfr=False None .sdata2    CLOSE_BOUND_RATIO__7daDsh_c                                  */
+/* 80451D50-80451D54 0004+00 r=1 e=0 z=1  None .sdata2    CLOSE_BOUND_RATIO__7daDsh_c                                  */
 SECTION_SDATA2 u32 CLOSE_BOUND_RATIO__7daDsh_c = 0xBECCCCCD;
 
-/* 80451D54-80451D58 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4338                                                        */
+/* 80451D54-80451D58 0004+00 r=1 e=0 z=0  None .sdata2    @4338                                                        */
 SECTION_SDATA2 static u8 d_com_d_com_static__lit_4338[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800318B4-8003194C 0098+00 rc=1 efc=1 rfr=False None .text      checkArea__13daTagStream_cFPC4cXyz                           */
+/* 800318B4-8003194C 0098+00 r=1 e=1 z=0  None .text      checkArea__13daTagStream_cFPC4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,16 +600,16 @@ asm void daTagStream_c::checkArea(cXyz const* param_0) {
 
 
 /* ############################################################################################## */
-/* 8042457C-80424588 000C+00 rc=1 efc=0 rfr=False None .bss       m_entryModel__10daMirror_c                                   */
-static u8 m_entryModel__10daMirror_c[12];
+/* 8042457C-80424588 000C+00 r=2 e=0 z=1  None .bss       m_entryModel__10daMirror_c                                   */
+u8 m_entryModel__10daMirror_c[12];
 
-/* 80450DA4-80450DA8 0004+00 rc=1 efc=1 rfr=False None .sbss      m_top__13daTagStream_c                                       */
+/* 80450DA4-80450DA8 0004+00 r=3 e=1 z=2  None .sbss      m_top__13daTagStream_c                                       */
 u8 m_top__13daTagStream_c[4];
 
-/* 80450DA8-80450DAC 0004+00 rc=2 efc=0 rfr=False None .sbss      m_myObj__10daMirror_c                                        */
-static u8 m_myObj__10daMirror_c[4];
+/* 80450DA8-80450DAC 0004+00 r=6 e=0 z=4  None .sbss      m_myObj__10daMirror_c                                        */
+u8 m_myObj__10daMirror_c[4];
 
-/* 8003194C-80031990 0044+00 rc=1 efc=1 rfr=False None .text      entry__10daMirror_cFP8J3DModel                               */
+/* 8003194C-80031990 0044+00 r=10 e=1 z=9  None .text      entry__10daMirror_cFP8J3DModel                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,7 +620,7 @@ asm void daMirror_c::entry(J3DModel* param_0) {
 #pragma pop
 
 
-/* 80031990-800319C8 0038+00 rc=0 efc=0 rfr=False None .text      remove__10daMirror_cFv                                       */
+/* 80031990-800319C8 0038+00 r=2 e=0 z=2  None .text      remove__10daMirror_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,16 +632,16 @@ asm void daMirror_c::remove() {
 
 
 /* ############################################################################################## */
-/* 80424588-80424594 000C+00 rc=1 efc=0 rfr=False None .bss       m_deleteRoom__15dGrass_packet_c                              */
-static u8 m_deleteRoom__15dGrass_packet_c[12];
+/* 80424588-80424594 000C+00 r=2 e=0 z=1  None .bss       m_deleteRoom__15dGrass_packet_c                              */
+u8 m_deleteRoom__15dGrass_packet_c[12];
 
-/* 80450DAC-80450DB0 0004+00 rc=0 efc=0 rfr=False None .sbss      m_myObj__9daGrass_c                                          */
+/* 80450DAC-80450DB0 0004+00 r=2 e=0 z=2  None .sbss      m_myObj__9daGrass_c                                          */
 u8 m_myObj__9daGrass_c[4];
 
-/* 80450DB0-80450DB4 0004+00 rc=1 efc=0 rfr=False None .sbss      m_grass__9daGrass_c                                          */
-static u8 m_grass__9daGrass_c[4];
+/* 80450DB0-80450DB4 0004+00 r=12 e=0 z=11  None .sbss      m_grass__9daGrass_c                                          */
+u8 m_grass__9daGrass_c[4];
 
-/* 800319C8-80031A20 0058+00 rc=0 efc=0 rfr=False None .text      deleteRoomGrass__9daGrass_cFi                                */
+/* 800319C8-80031A20 0058+00 r=1 e=0 z=1  None .text      deleteRoomGrass__9daGrass_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,13 +653,13 @@ asm void daGrass_c::deleteRoomGrass(int param_0) {
 
 
 /* ############################################################################################## */
-/* 80424594-804245A0 000C+00 rc=1 efc=0 rfr=False None .bss       m_deleteRoom__16dFlower_packet_c                             */
-static u8 m_deleteRoom__16dFlower_packet_c[12];
+/* 80424594-804245A0 000C+00 r=2 e=0 z=1  None .bss       m_deleteRoom__16dFlower_packet_c                             */
+u8 m_deleteRoom__16dFlower_packet_c[12];
 
-/* 80450DB4-80450DB8 0004+00 rc=1 efc=0 rfr=False None .sbss      m_flower__9daGrass_c                                         */
-static u8 m_flower__9daGrass_c[4];
+/* 80450DB4-80450DB8 0004+00 r=10 e=0 z=9  None .sbss      m_flower__9daGrass_c                                         */
+u8 m_flower__9daGrass_c[4];
 
-/* 80031A20-80031A78 0058+00 rc=0 efc=0 rfr=False None .text      deleteRoomFlower__9daGrass_cFi                               */
+/* 80031A20-80031A78 0058+00 r=1 e=0 z=1  None .text      deleteRoomFlower__9daGrass_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -660,10 +671,10 @@ asm void daGrass_c::deleteRoomFlower(int param_0) {
 
 
 /* ############################################################################################## */
-/* 80450DB8-80450DBC 0004+00 rc=4 efc=0 rfr=False None .sbss      m_myObj__6daMP_c                                             */
-static u8 m_myObj__6daMP_c[4];
+/* 80450DB8-80450DBC 0004+00 r=6 e=0 z=2  None .sbss      m_myObj__6daMP_c                                             */
+u8 m_myObj__6daMP_c[4];
 
-/* 80031A78-80031AA4 002C+00 rc=0 efc=0 rfr=False None .text      daMP_c_Get_MovieRestFrame__6daMP_cFv                         */
+/* 80031A78-80031AA4 002C+00 r=1 e=0 z=1  None .text      daMP_c_Get_MovieRestFrame__6daMP_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -674,7 +685,7 @@ asm void daMP_c::daMP_c_Get_MovieRestFrame() {
 #pragma pop
 
 
-/* 80031AA4-80031AD0 002C+00 rc=0 efc=0 rfr=False None .text      daMP_c_Set_PercentMovieVolume__6daMP_cFf                     */
+/* 80031AA4-80031AD0 002C+00 r=1 e=0 z=1  None .text      daMP_c_Set_PercentMovieVolume__6daMP_cFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -685,7 +696,7 @@ asm void daMP_c::daMP_c_Set_PercentMovieVolume(f32 param_0) {
 #pragma pop
 
 
-/* 80031AD0-80031B24 0054+00 rc=1 efc=1 rfr=False None .text      daMP_c_THPPlayerPlay__6daMP_cFv                              */
+/* 80031AD0-80031B24 0054+00 r=2 e=1 z=1  None .text      daMP_c_THPPlayerPlay__6daMP_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,7 +707,7 @@ asm void daMP_c::daMP_c_THPPlayerPlay() {
 #pragma pop
 
 
-/* 80031B24-80031B50 002C+00 rc=0 efc=0 rfr=False None .text      daMP_c_THPPlayerPause__6daMP_cFv                             */
+/* 80031B24-80031B50 002C+00 r=1 e=0 z=1  None .text      daMP_c_THPPlayerPause__6daMP_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -708,10 +719,10 @@ asm void daMP_c::daMP_c_THPPlayerPause() {
 
 
 /* ############################################################################################## */
-/* 80450DBC-80450DC0 0004+00 rc=1 efc=0 rfr=False None .sbss      mTagMagne__12daTagMagne_c                                    */
-static u8 mTagMagne__12daTagMagne_c[4];
+/* 80450DBC-80450DC0 0004+00 r=4 e=0 z=3  None .sbss      mTagMagne__12daTagMagne_c                                    */
+u8 mTagMagne__12daTagMagne_c[4];
 
-/* 80031B50-80031BF4 00A4+00 rc=4 efc=4 rfr=False None .text      checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo             */
+/* 80031B50-80031BF4 00A4+00 r=4 e=4 z=0  None .text      checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -722,7 +733,7 @@ asm void daTagMagne_c::checkMagnetCode(cBgS_PolyInfo& param_0) {
 #pragma pop
 
 
-/* 80031BF4-80031C48 0054+00 rc=1 efc=0 rfr=False None .text      checkMagneA__12daTagMagne_cFv                                */
+/* 80031BF4-80031C48 0054+00 r=1 e=0 z=0  None .text      checkMagneA__12daTagMagne_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -733,7 +744,7 @@ asm void daTagMagne_c::checkMagneA() {
 #pragma pop
 
 
-/* 80031C48-80031C9C 0054+00 rc=1 efc=0 rfr=False None .text      checkMagneB__12daTagMagne_cFv                                */
+/* 80031C48-80031C9C 0054+00 r=1 e=0 z=0  None .text      checkMagneB__12daTagMagne_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -744,7 +755,7 @@ asm void daTagMagne_c::checkMagneB() {
 #pragma pop
 
 
-/* 80031C9C-80031CF0 0054+00 rc=1 efc=0 rfr=False None .text      checkMagneC__12daTagMagne_cFv                                */
+/* 80031C9C-80031CF0 0054+00 r=1 e=0 z=0  None .text      checkMagneC__12daTagMagne_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -756,10 +767,10 @@ asm void daTagMagne_c::checkMagneC() {
 
 
 /* ############################################################################################## */
-/* 80450DC0-80450DC4 0004+00 rc=4 efc=0 rfr=False None .sbss      None                                                         */
-static u8 struct_80450DC0[4];
+/* 80450DC0-80450DC4 0004+00 r=6 e=0 z=2  None .sbss      None                                                         */
+u8 struct_80450DC0[4];
 
-/* 80031CF0-80031CF8 0008+00 rc=1 efc=1 rfr=False None .text      getPlayerNo__11daTagMist_cFv                                 */
+/* 80031CF0-80031CF8 0008+00 r=1 e=1 z=0  None .text      getPlayerNo__11daTagMist_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -770,7 +781,7 @@ asm void daTagMist_c::getPlayerNo() {
 #pragma pop
 
 
-/* 80031CF8-80031D04 000C+00 rc=1 efc=1 rfr=False None .text      clrSaveFlag__12daObjCarry_cFv                                */
+/* 80031CF8-80031D04 000C+00 r=1 e=1 z=0  None .text      clrSaveFlag__12daObjCarry_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -781,7 +792,7 @@ asm void daObjCarry_c::clrSaveFlag() {
 #pragma pop
 
 
-/* 80031D04-80031D10 000C+00 rc=1 efc=1 rfr=False None .text      setSaveFlag__12daObjCarry_cFv                                */
+/* 80031D04-80031D10 000C+00 r=1 e=1 z=0  None .text      setSaveFlag__12daObjCarry_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,7 +803,7 @@ asm void daObjCarry_c::setSaveFlag() {
 #pragma pop
 
 
-/* 80031D10-80031D24 0014+00 rc=0 efc=0 rfr=False None .text      chkSaveFlag__12daObjCarry_cFv                                */
+/* 80031D10-80031D24 0014+00 r=1 e=0 z=1  None .text      chkSaveFlag__12daObjCarry_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -804,13 +815,13 @@ asm void daObjCarry_c::chkSaveFlag() {
 
 
 /* ############################################################################################## */
-/* 804245A0-804245AC 000C+00 rc=0 efc=0 rfr=False None .bss       @4480                                                        */
+/* 804245A0-804245AC 000C+00 r=0 e=0 z=0  None .bss       @4480                                                        */
 u8 d_com_d_com_static__lit_4480[12];
 
-/* 804245AC-804245E8 003C+00 rc=3 efc=0 rfr=False None .bss       mPos__12daObjCarry_c                                         */
+/* 804245AC-804245E8 003C+00 r=3 e=0 z=0  None .bss       mPos__12daObjCarry_c                                         */
 static u8 mPos__12daObjCarry_c[60];
 
-/* 80031D24-80031D38 0014+00 rc=0 efc=0 rfr=False None .text      getPos__12daObjCarry_cFi                                     */
+/* 80031D24-80031D38 0014+00 r=1 e=0 z=1  None .text      getPos__12daObjCarry_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -821,7 +832,7 @@ asm void daObjCarry_c::getPos(int param_0) {
 #pragma pop
 
 
-/* 80031D38-80031D64 002C+00 rc=0 efc=0 rfr=False None .text      savePos__12daObjCarry_cFi4cXyz                               */
+/* 80031D38-80031D64 002C+00 r=2 e=0 z=2  None .text      savePos__12daObjCarry_cFi4cXyz                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -833,10 +844,10 @@ asm void daObjCarry_c::savePos(int param_0, cXyz param_1) {
 
 
 /* ############################################################################################## */
-/* 80450DC4-80450DCC 0005+03 rc=3 efc=0 rfr=False None .sbss      mSttsFlag__12daObjCarry_c                                    */
+/* 80450DC4-80450DCC 0005+03 r=3 e=0 z=0  None .sbss      mSttsFlag__12daObjCarry_c                                    */
 static u8 mSttsFlag__12daObjCarry_c[5 + 3 /* padding */];
 
-/* 80031D64-80031D78 0014+00 rc=0 efc=0 rfr=False None .text      onSttsFlag__12daObjCarry_cFiUc                               */
+/* 80031D64-80031D78 0014+00 r=1 e=0 z=1  None .text      onSttsFlag__12daObjCarry_cFiUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -847,7 +858,7 @@ asm void daObjCarry_c::onSttsFlag(int param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80031D78-80031D8C 0014+00 rc=0 efc=0 rfr=False None .text      offSttsFlag__12daObjCarry_cFiUc                              */
+/* 80031D78-80031D8C 0014+00 r=1 e=0 z=1  None .text      offSttsFlag__12daObjCarry_cFiUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -858,7 +869,7 @@ asm void daObjCarry_c::offSttsFlag(int param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80031D8C-80031DAC 0020+00 rc=0 efc=0 rfr=False None .text      chkSttsFlag__12daObjCarry_cFiUc                              */
+/* 80031D8C-80031DAC 0020+00 r=1 e=0 z=1  None .text      chkSttsFlag__12daObjCarry_cFiUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,10 +881,10 @@ asm void daObjCarry_c::chkSttsFlag(int param_0, u8 param_1) {
 
 
 /* ############################################################################################## */
-/* 80450DCC-80450DD4 0005+03 rc=2 efc=0 rfr=False None .sbss      mRoomNo__12daObjCarry_c                                      */
+/* 80450DCC-80450DD4 0005+03 r=2 e=0 z=0  None .sbss      mRoomNo__12daObjCarry_c                                      */
 static u8 mRoomNo__12daObjCarry_c[5 + 3 /* padding */];
 
-/* 80031DAC-80031DB8 000C+00 rc=0 efc=0 rfr=False None .text      setRoomNo__12daObjCarry_cFiSc                                */
+/* 80031DAC-80031DB8 000C+00 r=2 e=0 z=2  None .text      setRoomNo__12daObjCarry_cFiSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -884,7 +895,7 @@ asm void daObjCarry_c::setRoomNo(int param_0, s8 param_1) {
 #pragma pop
 
 
-/* 80031DB8-80031DC4 000C+00 rc=0 efc=0 rfr=False None .text      getRoomNo__12daObjCarry_cFi                                  */
+/* 80031DB8-80031DC4 000C+00 r=1 e=0 z=1  None .text      getRoomNo__12daObjCarry_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -895,7 +906,7 @@ asm void daObjCarry_c::getRoomNo(int param_0) {
 #pragma pop
 
 
-/* 80031DC4-80031EAC 00E8+00 rc=1 efc=1 rfr=False None .text      __sinit_d_com_static_cpp                                     */
+/* 80031DC4-80031EAC 00E8+00 r=1 e=1 z=0  None .text      __sinit_d_com_static_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -906,7 +917,7 @@ extern "C" asm void __sinit_d_com_static_cpp() {
 #pragma pop
 
 
-/* 80031EAC-80031EE4 0038+00 rc=1 efc=0 rfr=False None .text      __arraydtor$4479                                             */
+/* 80031EAC-80031EE4 0038+00 r=1 e=0 z=0  None .text      __arraydtor$4479                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -917,7 +928,7 @@ extern "C" asm static void func_80031EAC() {
 #pragma pop
 
 
-/* 80031EE4-80031EF0 000C+00 rc=1 efc=0 rfr=False None .text      __ct__Q27daSus_c6room_cFv                                    */
+/* 80031EE4-80031EF0 000C+00 r=1 e=0 z=0  None .text      __ct__Q27daSus_c6room_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -928,7 +939,7 @@ asm daSus_c::room_c::room_c() {
 #pragma pop
 
 
-/* 80031EF0-80031F28 0038+00 rc=1 efc=0 rfr=False None .text      __arraydtor$3839                                             */
+/* 80031EF0-80031F28 0038+00 r=1 e=0 z=0  None .text      __arraydtor$3839                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -939,7 +950,7 @@ extern "C" asm static void func_80031EF0() {
 #pragma pop
 
 
-/* 80031F28-80031F64 003C+00 rc=2 efc=0 rfr=False None .text      __dt__Q27daSus_c6data_cFv                                    */
+/* 80031F28-80031F64 003C+00 r=2 e=0 z=0  None .text      __dt__Q27daSus_c6data_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -950,7 +961,7 @@ asm daSus_c::data_c::~data_c() {
 #pragma pop
 
 
-/* 80031F64-80031F94 0030+00 rc=1 efc=0 rfr=False None .text      __ct__Q27daSus_c6data_cFv                                    */
+/* 80031F64-80031F94 0030+00 r=1 e=0 z=0  None .text      __ct__Q27daSus_c6data_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,6 +973,6 @@ asm daSus_c::data_c::data_c() {
 
 
 /* ############################################################################################## */
-/* 80450DD1-80450DD5 0004+00 rc=0 efc=0 rfr=False None .sbss      None                                                         */
+/* 80450DD1-80450DD5 0004+00 r=0 e=0 z=0  None .sbss      None                                                         */
 u8 pad_80450DD1[4];
 

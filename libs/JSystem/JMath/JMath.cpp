@@ -44,7 +44,7 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 // Declarations:
 // 
 
-/* 80339878-80339938 00C0+00 rc=11 efc=11 rfr=False None .text      JMAEulerToQuat__FsssP10Quaternion                            */
+/* 80339878-80339938 00C0+00 r=13 e=11 z=2  None .text      JMAEulerToQuat__FsssP10Quaternion                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,12 +56,12 @@ asm void JMAEulerToQuat(s16 param_0, s16 param_1, s16 param_2, Quaternion* param
 
 
 /* ############################################################################################## */
-/* 804564C8-804564D0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @376                                                         */
+/* 804564C8-804564D0 0008+00 r=1 e=0 z=0  None .sdata2    @376                                                         */
 SECTION_SDATA2 static u8 JMath__lit_376[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80339938-80339A30 00F8+00 rc=5 efc=5 rfr=False None .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
+/* 80339938-80339A30 00F8+00 r=5 e=5 z=0  None .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm void JMAQuatLerp(Quaternion const* param_0, Quaternion const* param_1, f32 p
 #pragma pop
 
 
-/* 80339A30-80339A5C 002C+00 rc=1 efc=1 rfr=False None .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
+/* 80339A30-80339A5C 002C+00 r=1 e=1 z=0  None .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void JMAFastVECNormalize(Vec const* param_0, Vec* param_1) {
 #pragma pop
 
 
-/* 80339A5C-80339A84 0028+00 rc=1 efc=1 rfr=False None .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
+/* 80339A5C-80339A84 0028+00 r=1 e=1 z=0  None .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,14 +95,14 @@ asm void JMAVECScaleAdd(Vec const* param_0, Vec const* param_1, Vec* param_2, f3
 
 
 /* ############################################################################################## */
-/* 804564D0-804564D8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @411                                                         */
+/* 804564D0-804564D8 0004+04 r=1 e=0 z=0  None .sdata2    @411                                                         */
 SECTION_SDATA2 static f32 lit_411[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80339A84-80339AE4 0060+00 rc=5 efc=5 rfr=False None .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
+/* 80339A84-80339AE4 0060+00 r=5 e=5 z=0  None .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

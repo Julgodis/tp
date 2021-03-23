@@ -167,7 +167,7 @@ extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 802D49B4-802D4AB4 0100+00 rc=2 efc=2 rfr=False None .text      mount__12JKRFileCacheFPCcP7JKRHeapPCc                        */
+/* 802D49B4-802D4AB4 0100+00 r=2 e=2 z=0  None .text      mount__12JKRFileCacheFPCcP7JKRHeapPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,17 +179,17 @@ asm void JKRFileCache::mount(char const* param_0, JKRHeap* param_1, char const* 
 
 
 /* ############################################################################################## */
-/* 8039D158-8039D160 0006+02 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D158-8039D160 0006+02 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D158 = "/";
-SECTION_DEAD static char const* const stringBase_8039D15A = "dvd";
+SECTION_DEAD char const* const stringBase_8039D158 = "/";
+SECTION_DEAD char const* const stringBase_8039D15A = "dvd";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039D15E = "\0";
 #pragma pop
 
-/* 803CC238-803CC288 004C+04 rc=2 efc=0 rfr=False None .data      __vt__12JKRFileCache                                         */
+/* 803CC238-803CC288 004C+04 r=2 e=0 z=0  None .data      __vt__12JKRFileCache                                         */
 SECTION_DATA static void* __vt__12JKRFileCache[19 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -214,7 +214,7 @@ SECTION_DATA static void* __vt__12JKRFileCache[19 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802D4AB4-802D4C70 01BC+00 rc=1 efc=0 rfr=False None .text      __ct__12JKRFileCacheFPCcPCc                                  */
+/* 802D4AB4-802D4C70 01BC+00 r=1 e=0 z=0  None .text      __ct__12JKRFileCacheFPCcPCc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm JKRFileCache::JKRFileCache(char const* param_0, char const* param_1) {
 #pragma pop
 
 
-/* 802D4C70-802D4D44 00D4+00 rc=1 efc=0 rfr=False None .text      __dt__12JKRFileCacheFv                                       */
+/* 802D4C70-802D4D44 00D4+00 r=1 e=0 z=0  None .text      __dt__12JKRFileCacheFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ asm JKRFileCache::~JKRFileCache() {
 #pragma pop
 
 
-/* 802D4D44-802D4DD8 0094+00 rc=1 efc=0 rfr=False None .text      becomeCurrent__12JKRFileCacheFPCc                            */
+/* 802D4D44-802D4DD8 0094+00 r=1 e=0 z=0  None .text      becomeCurrent__12JKRFileCacheFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm void JKRFileCache::becomeCurrent(char const* param_0) {
 #pragma pop
 
 
-/* 802D4DD8-802D4EDC 0104+00 rc=1 efc=0 rfr=False None .text      getResource__12JKRFileCacheFPCc                              */
+/* 802D4DD8-802D4EDC 0104+00 r=1 e=0 z=0  None .text      getResource__12JKRFileCacheFPCc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ asm void JKRFileCache::getResource(char const* param_0) {
 #pragma pop
 
 
-/* 802D4EDC-802D4F64 0088+00 rc=1 efc=0 rfr=False None .text      getResource__12JKRFileCacheFUlPCc                            */
+/* 802D4EDC-802D4F64 0088+00 r=1 e=0 z=0  None .text      getResource__12JKRFileCacheFUlPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ asm void JKRFileCache::getResource(u32 param_0, char const* param_1) {
 #pragma pop
 
 
-/* 802D4F64-802D503C 00D8+00 rc=1 efc=0 rfr=False None .text      readResource__12JKRFileCacheFPvUlPCc                         */
+/* 802D4F64-802D503C 00D8+00 r=1 e=0 z=0  None .text      readResource__12JKRFileCacheFPvUlPCc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ asm void JKRFileCache::readResource(void* param_0, u32 param_1, char const* para
 #pragma pop
 
 
-/* 802D503C-802D50D4 0098+00 rc=1 efc=0 rfr=False None .text      readResource__12JKRFileCacheFPvUlUlPCc                       */
+/* 802D503C-802D50D4 0098+00 r=1 e=0 z=0  None .text      readResource__12JKRFileCacheFPvUlUlPCc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void JKRFileCache::readResource(void* param_0, u32 param_1, u32 param_2, cha
 #pragma pop
 
 
-/* 802D50D4-802D5164 0090+00 rc=1 efc=0 rfr=False None .text      removeResourceAll__12JKRFileCacheFv                          */
+/* 802D50D4-802D5164 0090+00 r=1 e=0 z=0  None .text      removeResourceAll__12JKRFileCacheFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ asm void JKRFileCache::removeResourceAll() {
 #pragma pop
 
 
-/* 802D5164-802D51F8 0094+00 rc=1 efc=0 rfr=False None .text      removeResource__12JKRFileCacheFPv                            */
+/* 802D5164-802D51F8 0094+00 r=1 e=0 z=0  None .text      removeResource__12JKRFileCacheFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void JKRFileCache::removeResource(void* param_0) {
 #pragma pop
 
 
-/* 802D51F8-802D526C 0074+00 rc=1 efc=0 rfr=False None .text      detachResource__12JKRFileCacheFPv                            */
+/* 802D51F8-802D526C 0074+00 r=1 e=0 z=0  None .text      detachResource__12JKRFileCacheFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +324,7 @@ asm void JKRFileCache::detachResource(void* param_0) {
 #pragma pop
 
 
-/* 802D526C-802D52A0 0034+00 rc=1 efc=0 rfr=False None .text      getResSize__12JKRFileCacheCFPCv                              */
+/* 802D526C-802D52A0 0034+00 r=1 e=0 z=0  None .text      getResSize__12JKRFileCacheCFPCv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +335,7 @@ asm void JKRFileCache::getResSize(void const* param_0) const {
 #pragma pop
 
 
-/* 802D52A0-802D531C 007C+00 rc=1 efc=0 rfr=False None .text      countFile__12JKRFileCacheCFPCc                               */
+/* 802D52A0-802D531C 007C+00 r=1 e=0 z=0  None .text      countFile__12JKRFileCacheCFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +346,7 @@ asm void JKRFileCache::countFile(char const* param_0) const {
 #pragma pop
 
 
-/* 802D531C-802D53B8 009C+00 rc=1 efc=0 rfr=False None .text      getFirstFile__12JKRFileCacheCFPCc                            */
+/* 802D531C-802D53B8 009C+00 r=1 e=0 z=0  None .text      getFirstFile__12JKRFileCacheCFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +357,7 @@ asm void JKRFileCache::getFirstFile(char const* param_0) const {
 #pragma pop
 
 
-/* 802D53B8-802D53E4 002C+00 rc=3 efc=0 rfr=False None .text      findCacheBlock__12JKRFileCacheCFPCv                          */
+/* 802D53B8-802D53E4 002C+00 r=3 e=0 z=0  None .text      findCacheBlock__12JKRFileCacheCFPCv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +368,7 @@ asm void JKRFileCache::findCacheBlock(void const* param_0) const {
 #pragma pop
 
 
-/* 802D53E4-802D5410 002C+00 rc=2 efc=0 rfr=False None .text      findCacheBlock__12JKRFileCacheCFUl                           */
+/* 802D53E4-802D5410 002C+00 r=2 e=0 z=0  None .text      findCacheBlock__12JKRFileCacheCFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,7 +379,7 @@ asm void JKRFileCache::findCacheBlock(u32 param_0) const {
 #pragma pop
 
 
-/* 802D5410-802D551C 010C+00 rc=2 efc=0 rfr=False None .text      findFile__12JKRFileCacheCFPcPCc                              */
+/* 802D5410-802D551C 010C+00 r=2 e=0 z=0  None .text      findFile__12JKRFileCacheCFPcPCc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +390,7 @@ asm void JKRFileCache::findFile(char* param_0, char const* param_1) const {
 #pragma pop
 
 
-/* 802D551C-802D5624 0108+00 rc=5 efc=0 rfr=False None .text      getDvdPathName__12JKRFileCacheCFPCc                          */
+/* 802D551C-802D5624 0108+00 r=5 e=0 z=0  None .text      getDvdPathName__12JKRFileCacheCFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +401,7 @@ asm void JKRFileCache::getDvdPathName(char const* param_0) const {
 #pragma pop
 
 
-/* 802D5624-802D566C 0048+00 rc=2 efc=0 rfr=False None .text      convStrLower__12JKRFileCacheCFPc                             */
+/* 802D5624-802D566C 0048+00 r=2 e=0 z=0  None .text      convStrLower__12JKRFileCacheCFPc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +412,7 @@ asm void JKRFileCache::convStrLower(char* param_0) const {
 #pragma pop
 
 
-/* 802D566C-802D56C8 005C+00 rc=1 efc=0 rfr=False None .text      __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv                  */
+/* 802D566C-802D56C8 005C+00 r=1 e=0 z=0  None .text      __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +423,7 @@ asm JKRFileCache::CCacheBlock::CCacheBlock(u32 param_0, u32 param_1, void const*
 #pragma pop
 
 
-/* 802D56C8-802D56F4 002C+00 rc=1 efc=0 rfr=False None .text      getFsResource__12JKRFileCacheFPCc                            */
+/* 802D56C8-802D56F4 002C+00 r=1 e=0 z=0  None .text      getFsResource__12JKRFileCacheFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +434,7 @@ asm void JKRFileCache::getFsResource(char const* param_0) {
 #pragma pop
 
 
-/* 802D56F4-802D5720 002C+00 rc=1 efc=0 rfr=False None .text      getNameResource__12JKRFileCacheFUlPCc                        */
+/* 802D56F4-802D5720 002C+00 r=1 e=0 z=0  None .text      getNameResource__12JKRFileCacheFUlPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +445,7 @@ asm void JKRFileCache::getNameResource(u32 param_0, char const* param_1) {
 #pragma pop
 
 
-/* 802D5720-802D574C 002C+00 rc=1 efc=0 rfr=False None .text      readFsResource__12JKRFileCacheFPvUlPCc                       */
+/* 802D5720-802D574C 002C+00 r=1 e=0 z=0  None .text      readFsResource__12JKRFileCacheFPvUlPCc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +456,7 @@ asm void JKRFileCache::readFsResource(void* param_0, u32 param_1, char const* pa
 #pragma pop
 
 
-/* 802D574C-802D5778 002C+00 rc=1 efc=0 rfr=False None .text      readNameResource__12JKRFileCacheFPvUlUlPCc                   */
+/* 802D574C-802D5778 002C+00 r=1 e=0 z=0  None .text      readNameResource__12JKRFileCacheFPvUlUlPCc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

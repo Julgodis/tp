@@ -27,10 +27,10 @@ extern "C" extern u8 g_Counter[12 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80430CD8-80430CE8 000C+04 rc=13 efc=12 rfr=False None .bss       g_Counter                                                    */
+/* 80430CD8-80430CE8 000C+04 r=35 e=12 z=22  None .bss       g_Counter                                                    */
 u8 g_Counter[12 + 4 /* padding */];
 
-/* 80265E1C-80265E64 0048+00 rc=1 efc=1 rfr=False None .text      cCt_Counter__Fi                                              */
+/* 80265E1C-80265E64 0048+00 r=1 e=1 z=0  None .text      cCt_Counter__Fi                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

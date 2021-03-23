@@ -56,7 +56,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803AB670-803AB688 0018+00 rc=2 efc=0 rfr=False None .data      __vt__8dBgS_Chk                                              */
+/* 803AB670-803AB688 0018+00 r=2 e=0 z=0  None .data      __vt__8dBgS_Chk                                              */
 SECTION_DATA static void* __vt__8dBgS_Chk[6] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -66,7 +66,7 @@ SECTION_DATA static void* __vt__8dBgS_Chk[6] = {
 	/* 5    */ (void*)func_80077574,
 };
 
-/* 8007749C-800774E8 004C+00 rc=6 efc=6 rfr=False None .text      __ct__8dBgS_ChkFv                                            */
+/* 8007749C-800774E8 004C+00 r=6 e=6 z=0  None .text      __ct__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm dBgS_Chk::dBgS_Chk() {
 #pragma pop
 
 
-/* 800774E8-80077560 0078+00 rc=8 efc=6 rfr=False None .text      __dt__8dBgS_ChkFv                                            */
+/* 800774E8-80077560 0078+00 r=8 e=6 z=0  None .text      __dt__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm dBgS_Chk::~dBgS_Chk() {
 #pragma pop
 
 
-/* 80077560-80077564 0004+00 rc=6 efc=6 rfr=False None .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
+/* 80077560-80077564 0004+00 r=6 e=6 z=0  None .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm void dBgS_Chk::GetPolyPassChkInfo() {
 #pragma pop
 
 
-/* 80077564-80077574 0010+00 rc=6 efc=6 rfr=False None .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
+/* 80077564-80077574 0010+00 r=6 e=6 z=0  None .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm void dBgS_Chk::GetGrpPassChkInfo() {
 #pragma pop
 
 
-/* 80077574-8007757C 0008+00 rc=1 efc=0 rfr=False None .text      @16@__dt__8dBgS_ChkFv                                        */
+/* 80077574-8007757C 0008+00 r=1 e=0 z=0  None .text      @16@__dt__8dBgS_ChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -84,7 +84,7 @@ extern "C" void PSMTXTrans(); // 1
 // Declarations:
 // 
 
-/* 8028A1F8-8028A290 0098+00 rc=2 efc=2 rfr=False None .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A1F8-8028A290 0098+00 r=2 e=2 z=0  None .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* param_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A290-8028A328 0098+00 rc=3 efc=3 rfr=False None .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A290-8028A328 0098+00 r=3 e=3 z=0  None .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* param_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A328-8028A3CC 00A4+00 rc=1 efc=1 rfr=False None .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A328-8028A3CC 00A4+00 r=1 e=1 z=0  None .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* param_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A3CC-8028A470 00A4+00 rc=2 efc=2 rfr=False None .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A3CC-8028A470 00A4+00 r=2 e=2 z=0  None .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* param_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A470-8028A4BC 004C+00 rc=5 efc=5 rfr=False None .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
+/* 8028A470-8028A4BC 004C+00 r=5 e=5 z=0  None .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_data_(void const* para
 #pragma pop
 
 
-/* 8028A4BC-8028A50C 0050+00 rc=4 efc=4 rfr=False None .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
+/* 8028A4BC-8028A50C 0050+00 r=4 e=4 z=0  None .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +150,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObject_(char co
 #pragma pop
 
 
-/* 8028A50C-8028A550 0044+00 rc=4 efc=4 rfr=False None .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
+/* 8028A50C-8028A550 0044+00 r=4 e=4 z=0  None .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObjectNode_(JSt
 #pragma pop
 
 
-/* 8028A550-8028A5F0 00A0+00 rc=1 efc=1 rfr=False None .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A550-8028A5F0 00A0+00 r=1 e=1 z=0  None .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

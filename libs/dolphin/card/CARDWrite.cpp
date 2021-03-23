@@ -42,7 +42,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80358914-80358A84 0170+00 rc=1 efc=0 rfr=False None .text      WriteCallback                                                */
+/* 80358914-80358A84 0170+00 r=1 e=0 z=0  None .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ extern "C" asm static void CARDWrite__WriteCallback() {
 #pragma pop
 
 
-/* 80358A84-80358B34 00B0+00 rc=2 efc=0 rfr=False None .text      EraseCallback                                                */
+/* 80358A84-80358B34 00B0+00 r=2 e=0 z=0  None .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ extern "C" asm static void CARDWrite__EraseCallback() {
 #pragma pop
 
 
-/* 80358B34-80358C48 0114+00 rc=1 efc=0 rfr=False None .text      CARDWriteAsync                                               */
+/* 80358B34-80358C48 0114+00 r=1 e=0 z=0  None .text      CARDWriteAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +75,7 @@ extern "C" asm static void CARDWriteAsync() {
 #pragma pop
 
 
-/* 80358C48-80358C90 0048+00 rc=2 efc=2 rfr=False None .text      CARDWrite                                                    */
+/* 80358C48-80358C90 0048+00 r=2 e=2 z=0  None .text      CARDWrite                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

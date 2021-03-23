@@ -27,12 +27,12 @@ extern "C" void __kernel_tan(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456B40-80456B48 0008+00 rc=1 efc=0 rfr=False None .sdata2    @58                                                          */
+/* 80456B40-80456B48 0008+00 r=1 e=0 z=0  None .sdata2    @58                                                          */
 SECTION_SDATA2 static u8 lit_58[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036C668-8036C6E0 0078+00 rc=7 efc=7 rfr=False None .text      tan                                                          */
+/* 8036C668-8036C6E0 0078+00 r=11 e=7 z=4  None .text      tan                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

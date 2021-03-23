@@ -45,7 +45,7 @@ extern "C" void GXSetTevColor(); // 1
 // Declarations:
 // 
 
-/* 8027AEBC-8027AFDC 0120+00 rc=1 efc=1 rfr=False None .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData                 */
+/* 8027AEBC-8027AFDC 0120+00 r=1 e=1 z=0  None .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,13 +57,13 @@ asm void JPARegistChildPrmEnv(JPAEmitterWorkData* param_0) {
 
 
 /* ############################################################################################## */
-/* 80455308-8045530C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2318                                                        */
+/* 80455308-8045530C 0004+00 r=1 e=0 z=0  None .sdata2    @2318                                                        */
 SECTION_SDATA2 static f32 lit_2318 = 255.0f;
 
-/* 8045530C-80455310 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2319                                                        */
+/* 8045530C-80455310 0004+00 r=2 e=0 z=0  None .sdata2    @2319                                                        */
 SECTION_SDATA2 static f32 lit_2319 = 1.0f;
 
-/* 8027AFDC-8027B008 002C+00 rc=1 efc=1 rfr=False None .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AFDC-8027B008 002C+00 r=1 e=1 z=0  None .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ asm void JPACalcChildAlphaOut(JPAEmitterWorkData* param_0, JPABaseParticle* para
 #pragma pop
 
 
-/* 8027B008-8027B038 0030+00 rc=1 efc=1 rfr=False None .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027B008-8027B038 0030+00 r=1 e=1 z=0  None .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ asm void JPACalcChildScaleOut(JPAEmitterWorkData* param_0, JPABaseParticle* para
 #pragma pop
 
 
-/* 8027B038-8027B040 0008+00 rc=1 efc=1 rfr=False None .text      __ct__13JPAChildShapeFPCUc                                   */
+/* 8027B038-8027B040 0008+00 r=1 e=1 z=0  None .text      __ct__13JPAChildShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

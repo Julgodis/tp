@@ -1,0 +1,3 @@
+lbl_806C7024:
+/* 806C7024 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 806C7028 00000004  4B FF FD 0C */	b __dt__12dBgS_ObjAcchFv

@@ -15,8 +15,8 @@ def escape_text(name):
 
     return "\"" + name.replace('"', '\\"') + "\""
 
-async def export_file_async(module, symbols, reference_count):
-    path = Path(f"symbols/module_{module.index}.py")
+async def export_file_async(module, symbols):
+    path = Path(f"defs/module{module.index}.py")
     await util.create_dirs_for_file(path)
     async with AsyncBuilder(path) as builder:
         await builder.write(f"#")
@@ -78,7 +78,7 @@ async def export_file_async(module, symbols, reference_count):
                 continue
             
             syms[symbol] = i
-            ref_count = reference_count[symbol]
+            #ref_count = reference_count[symbol]
 
             lib_key = symbol._library
             lib_index = libs[lib_key] if lib_key in libs else -1
@@ -95,7 +95,8 @@ async def export_file_async(module, symbols, reference_count):
                                 f"'lib':{lib_index},"
                                 f"'tu':{tu_index},"
                                 f"'section':{sec_index},"
-                                f"'rc':{ref_count},"
+                                f"'r':[{symbol.reference_count.static},{symbol.reference_count.extern},{symbol.reference_count.rel}],"
+                                f"'sh':[{symbol.sda_hack_reference_count.static},{symbol.sda_hack_reference_count.extern},{symbol.sda_hack_reference_count.rel}],"
                                 f"'type':{escape_text(type(symbol).__name__)}}},")
         await builder.write(f"]")
         await builder.write(f"")
@@ -108,6 +109,7 @@ async def export_file_async(module, symbols, reference_count):
         await builder.write(f"")
 
 def export_file(context: Context, module: Module, symbol_table: GlobalSymbolTable):
+    """
     symbols = []
     reference_count = defaultdict(int)
 
@@ -131,3 +133,14 @@ def export_file(context: Context, module: Module, symbol_table: GlobalSymbolTabl
                     symbols.append(symbol)
 
     asyncio.run(export_file_async(module, symbols, reference_count))
+    """
+
+    symbols = []
+    for lib in module.libraries.values():
+        for tu in lib.translation_units.values():
+            for sec in tu.sections.values():
+                symbols.extend([ 
+                    symbol 
+                    for symbol in sec.symbols 
+                ])
+    asyncio.run(export_file_async(module, symbols))

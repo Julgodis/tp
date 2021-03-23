@@ -44,21 +44,21 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C3FE0-803C3FEC 000C+00 rc=2 efc=0 rfr=False None .data      __vt__8cM3dGCir                                              */
+/* 803C3FE0-803C3FEC 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGCir                                              */
 SECTION_DATA static void* __vt__8cM3dGCir[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8cM3dGCirFv,
 };
 
-/* 803C3FEC-803C3FF8 000C+00 rc=3 efc=0 rfr=False None .data      __vt__8cM2dGCir                                              */
+/* 803C3FEC-803C3FF8 000C+00 r=3 e=0 z=0  None .data      __vt__8cM2dGCir                                              */
 SECTION_DATA static void* __vt__8cM2dGCir[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8cM2dGCirFv,
 };
 
-/* 8026EEB4-8026EED0 001C+00 rc=1 efc=1 rfr=False None .text      __ct__8cM3dGCirFv                                            */
+/* 8026EEB4-8026EED0 001C+00 r=1 e=1 z=0  None .text      __ct__8cM3dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +69,7 @@ asm cM3dGCir::cM3dGCir() {
 #pragma pop
 
 
-/* 8026EED0-8026EF18 0048+00 rc=1 efc=0 rfr=False None .text      __dt__8cM2dGCirFv                                            */
+/* 8026EED0-8026EF18 0048+00 r=1 e=0 z=0  None .text      __dt__8cM2dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm cM2dGCir::~cM2dGCir() {
 #pragma pop
 
 
-/* 8026EF18-8026EF74 005C+00 rc=5 efc=4 rfr=False None .text      __dt__8cM3dGCirFv                                            */
+/* 8026EF18-8026EF74 005C+00 r=391 e=4 z=386  None .text      __dt__8cM3dGCirFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +91,7 @@ asm cM3dGCir::~cM3dGCir() {
 #pragma pop
 
 
-/* 8026EF74-8026EF88 0014+00 rc=1 efc=1 rfr=False None .text      Set__8cM3dGCirFffff                                          */
+/* 8026EF74-8026EF88 0014+00 r=1 e=1 z=0  None .text      Set__8cM3dGCirFffff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

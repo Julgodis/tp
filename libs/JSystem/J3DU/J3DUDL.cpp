@@ -32,7 +32,7 @@ extern "C" void getUseMtxNum__11J3DShapeMtxCFv(); // 1
 // Declarations:
 // 
 
-/* 80273E08-80273E10 0008+00 rc=4 efc=4 rfr=False None .text      getUseMtxNum__11J3DShapeMtxCFv                               */
+/* 80273E08-80273E10 0008+00 r=4 e=4 z=0  None .text      getUseMtxNum__11J3DShapeMtxCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

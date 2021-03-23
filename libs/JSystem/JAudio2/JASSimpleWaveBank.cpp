@@ -87,7 +87,7 @@ extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C7798-803C77AC 0014+00 rc=2 efc=0 rfr=False None .data      __vt__Q217JASSimpleWaveBank11TWaveHandle                     */
+/* 803C7798-803C77AC 0014+00 r=2 e=0 z=0  None .data      __vt__Q217JASSimpleWaveBank11TWaveHandle                     */
 SECTION_DATA static void* __vt__Q217JASSimpleWaveBank11TWaveHandle[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -96,7 +96,7 @@ SECTION_DATA static void* __vt__Q217JASSimpleWaveBank11TWaveHandle[5] = {
 	/* 4    */ (void*)getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv,
 };
 
-/* 803C77AC-803C77E0 0030+04 rc=2 efc=0 rfr=False None .data      __vt__17JASSimpleWaveBank                                    */
+/* 803C77AC-803C77E0 0030+04 r=2 e=0 z=0  None .data      __vt__17JASSimpleWaveBank                                    */
 SECTION_DATA static void* __vt__17JASSimpleWaveBank[12 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -114,7 +114,7 @@ SECTION_DATA static void* __vt__17JASSimpleWaveBank[12 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80298C94-80298CF4 0060+00 rc=1 efc=1 rfr=False None .text      __ct__17JASSimpleWaveBankFv                                  */
+/* 80298C94-80298CF4 0060+00 r=1 e=1 z=0  None .text      __ct__17JASSimpleWaveBankFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm JASSimpleWaveBank::JASSimpleWaveBank() {
 #pragma pop
 
 
-/* 80298CF4-80298D84 0090+00 rc=2 efc=0 rfr=False None .text      __dt__17JASSimpleWaveBankFv                                  */
+/* 80298CF4-80298D84 0090+00 r=2 e=0 z=0  None .text      __dt__17JASSimpleWaveBankFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm JASSimpleWaveBank::~JASSimpleWaveBank() {
 #pragma pop
 
 
-/* 80298D84-80298DE0 005C+00 rc=3 efc=0 rfr=False None .text      __dt__Q217JASSimpleWaveBank11TWaveHandleFv                   */
+/* 80298D84-80298DE0 005C+00 r=3 e=0 z=0  None .text      __dt__Q217JASSimpleWaveBank11TWaveHandleFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm JASSimpleWaveBank::TWaveHandle::~TWaveHandle() {
 #pragma pop
 
 
-/* 80298DE0-80298E60 0080+00 rc=1 efc=1 rfr=False None .text      setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap            */
+/* 80298DE0-80298E60 0080+00 r=1 e=1 z=0  None .text      setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void JASSimpleWaveBank::setWaveTableSize(u32 param_0, JKRHeap* param_1) {
 #pragma pop
 
 
-/* 80298E60-80298E84 0024+00 rc=1 efc=0 rfr=False None .text      getWaveHandle__17JASSimpleWaveBankCFUl                       */
+/* 80298E60-80298E84 0024+00 r=1 e=0 z=0  None .text      getWaveHandle__17JASSimpleWaveBankCFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm void JASSimpleWaveBank::getWaveHandle(u32 param_0) const {
 #pragma pop
 
 
-/* 80298E84-80298F18 0094+00 rc=1 efc=1 rfr=False None .text      setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo           */
+/* 80298E84-80298F18 0094+00 r=1 e=1 z=0  None .text      setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +180,7 @@ asm void JASSimpleWaveBank::setWaveInfo(u32 param_0, JASWaveInfo const& param_1)
 #pragma pop
 
 
-/* 80298F18-80298F38 0020+00 rc=1 efc=0 rfr=False None .text      getWaveArc__17JASSimpleWaveBankFUl                           */
+/* 80298F18-80298F38 0020+00 r=1 e=0 z=0  None .text      getWaveArc__17JASSimpleWaveBankFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm void JASSimpleWaveBank::getWaveArc(u32 param_0) {
 #pragma pop
 
 
-/* 80298F38-80298F5C 0024+00 rc=1 efc=0 rfr=False None .text      getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv            */
+/* 80298F38-80298F5C 0024+00 r=1 e=0 z=0  None .text      getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +202,7 @@ asm void JASSimpleWaveBank::TWaveHandle::getWavePtr() const {
 #pragma pop
 
 
-/* 80298F5C-80298F90 0034+00 rc=1 efc=0 rfr=False None .text      __ct__Q217JASSimpleWaveBank11TWaveHandleFv                   */
+/* 80298F5C-80298F90 0034+00 r=1 e=0 z=0  None .text      __ct__Q217JASSimpleWaveBank11TWaveHandleFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +213,7 @@ asm JASSimpleWaveBank::TWaveHandle::TWaveHandle() {
 #pragma pop
 
 
-/* 80298F90-80298F98 0008+00 rc=1 efc=0 rfr=False None .text      getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv           */
+/* 80298F90-80298F98 0008+00 r=1 e=0 z=0  None .text      getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ asm void JASSimpleWaveBank::TWaveHandle::getWaveInfo() const {
 #pragma pop
 
 
-/* 80298F98-80298FA0 0008+00 rc=1 efc=0 rfr=False None .text      getArcCount__17JASSimpleWaveBankCFv                          */
+/* 80298F98-80298FA0 0008+00 r=1 e=0 z=0  None .text      getArcCount__17JASSimpleWaveBankCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +235,7 @@ asm void JASSimpleWaveBank::getArcCount() const {
 #pragma pop
 
 
-/* 80298FA0-80298FA4 0004+00 rc=2 efc=1 rfr=False None .text      onLoadDone__10JASWaveArcFv                                   */
+/* 80298FA0-80298FA4 0004+00 r=2 e=1 z=0  None .text      onLoadDone__10JASWaveArcFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +246,7 @@ asm void JASWaveArc::onLoadDone() {
 #pragma pop
 
 
-/* 80298FA4-80298FA8 0004+00 rc=2 efc=1 rfr=False None .text      onEraseDone__10JASWaveArcFv                                  */
+/* 80298FA4-80298FA8 0004+00 r=2 e=1 z=0  None .text      onEraseDone__10JASWaveArcFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +257,7 @@ asm void JASWaveArc::onEraseDone() {
 #pragma pop
 
 
-/* 80298FA8-80298FB0 0008+00 rc=1 efc=0 rfr=False None .text      @4@__dt__17JASSimpleWaveBankFv                               */
+/* 80298FA8-80298FB0 0008+00 r=1 e=0 z=0  None .text      @4@__dt__17JASSimpleWaveBankFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

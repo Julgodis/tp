@@ -102,7 +102,7 @@ extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800155D8-800155DC 0004+00 rc=1 efc=0 rfr=False None .text      my_OSCancelAlarmAll__Fv                                      */
+/* 800155D8-800155DC 0004+00 r=1 e=0 z=0  None .text      my_OSCancelAlarmAll__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm static void my_OSCancelAlarmAll() {
 #pragma pop
 
 
-/* 800155DC-80015614 0038+00 rc=1 efc=0 rfr=False None .text      destroyVideo__Fv                                             */
+/* 800155DC-80015614 0038+00 r=1 e=0 z=0  None .text      destroyVideo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,17 +125,17 @@ asm static void destroyVideo() {
 
 
 /* ############################################################################################## */
-/* 80374198-803741A8 0010+00 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80374198-803741A8 0010+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80374198 = "DVD_STATE_BUSY\n";
+SECTION_DEAD char const* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 #pragma pop
 
-/* 80450C78-80450C80 0004+04 rc=45 efc=42 rfr=False None .sbss      mResetData__6mDoRst                                          */
+/* 80450C78-80450C80 0004+04 r=47 e=42 z=2  None .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
-/* 80015614-8001574C 0138+00 rc=3 efc=3 rfr=False None .text      mDoRst_reset__FiUli                                          */
+/* 80015614-8001574C 0138+00 r=3 e=3 z=0  None .text      mDoRst_reset__FiUli                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm void mDoRst_reset(int param_0, u32 param_1, int param_2) {
 #pragma pop
 
 
-/* 8001574C-800157F4 00A8+00 rc=3 efc=3 rfr=False None .text      mDoRst_resetCallBack__FiPv                                   */
+/* 8001574C-800157F4 00A8+00 r=3 e=3 z=0  None .text      mDoRst_resetCallBack__FiPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void mDoRst_resetCallBack(int param_0, void* param_1) {
 #pragma pop
 
 
-/* 800157F4-800157FC 0008+00 rc=1 efc=0 rfr=False None .text      getResetData__6mDoRstFv                                      */
+/* 800157F4-800157FC 0008+00 r=1 e=0 z=0  None .text      getResetData__6mDoRstFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,9 +169,9 @@ asm void mDoRst::getResetData() {
 
 
 /* ############################################################################################## */
-/* 80450C80-80450C88 0008+00 rc=6 efc=6 rfr=False None .sbss      None                                                         */
+/* 80450C80-80450C88 0008+00 r=6 e=6 z=0  None .sbss      None                                                         */
 u8 struct_80450C80[8];
 
-/* 80450C88-80450C90 0008+00 rc=2 efc=2 rfr=False None .sbss      None                                                         */
+/* 80450C88-80450C90 0008+00 r=2 e=2 z=0  None .sbss      None                                                         */
 u8 data_80450C88[8];
 

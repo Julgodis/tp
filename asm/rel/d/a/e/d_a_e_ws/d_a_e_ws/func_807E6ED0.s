@@ -1,0 +1,3 @@
+lbl_807E6ED0:
+/* 807E6ED0 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 807E6ED4 00000004  4B FF FE 28 */	b __dt__12dBgS_ObjAcchFv

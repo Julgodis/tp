@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J3DMaterialBlock_v21 {
-};
-
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -21,6 +18,9 @@ struct J3DMaterial {
 	/* 80315E78 */ void createIndBlock(int);
 	/* 80315F60 */ void createPEBlock(u32, u32);
 	/* 80316240 */ void initialize();
+};
+
+struct J3DMaterialBlock_v21 {
 };
 
 struct J3DMaterialFactory_v21 {
@@ -173,7 +173,7 @@ extern "C" extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 80332DA4-80332F84 01E0+00 rc=2 efc=2 rfr=False None .text      __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21      */
+/* 80332DA4-80332F84 01E0+00 r=2 e=2 z=0  None .text      __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm J3DMaterialFactory_v21::J3DMaterialFactory_v21(J3DMaterialBlock_v21 const& p
 #pragma pop
 
 
-/* 80332F84-80332FA8 0024+00 rc=1 efc=1 rfr=False None .text      countUniqueMaterials__22J3DMaterialFactory_v21Fv             */
+/* 80332F84-80332FA8 0024+00 r=1 e=1 z=0  None .text      countUniqueMaterials__22J3DMaterialFactory_v21Fv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +195,7 @@ asm void J3DMaterialFactory_v21::countUniqueMaterials() {
 #pragma pop
 
 
-/* 80332FA8-80332FE0 0038+00 rc=1 efc=0 rfr=False None .text      countTexGens__22J3DMaterialFactory_v21CFi                    */
+/* 80332FA8-80332FE0 0038+00 r=1 e=0 z=0  None .text      countTexGens__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +206,7 @@ asm void J3DMaterialFactory_v21::countTexGens(int param_0) const {
 #pragma pop
 
 
-/* 80332FE0-80333068 0088+00 rc=1 efc=0 rfr=False None .text      countStages__22J3DMaterialFactory_v21CFi                     */
+/* 80332FE0-80333068 0088+00 r=1 e=0 z=0  None .text      countStages__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +217,7 @@ asm void J3DMaterialFactory_v21::countStages(int param_0) const {
 #pragma pop
 
 
-/* 80333068-803337D8 0770+00 rc=2 efc=2 rfr=False None .text      create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl          */
+/* 80333068-803337D8 0770+00 r=2 e=2 z=0  None .text      create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,10 +229,10 @@ asm void J3DMaterialFactory_v21::create(J3DMaterial* param_0, int param_1, u32 p
 
 
 /* ############################################################################################## */
-/* 804564B8-804564BC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1130                                                        */
+/* 804564B8-804564BC 0004+00 r=1 e=0 z=0  None .sdata2    @1130                                                        */
 SECTION_SDATA2 static u32 lit_1130 = 0xFFFFFFFF;
 
-/* 803337D8-80333834 005C+00 rc=1 efc=0 rfr=False None .text      newMatColor__22J3DMaterialFactory_v21CFii                    */
+/* 803337D8-80333834 005C+00 r=1 e=0 z=0  None .text      newMatColor__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ asm void J3DMaterialFactory_v21::newMatColor(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333834-8033386C 0038+00 rc=1 efc=0 rfr=False None .text      newColorChanNum__22J3DMaterialFactory_v21CFi                 */
+/* 80333834-8033386C 0038+00 r=1 e=0 z=0  None .text      newColorChanNum__22J3DMaterialFactory_v21CFi                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +254,7 @@ asm void J3DMaterialFactory_v21::newColorChanNum(int param_0) const {
 #pragma pop
 
 
-/* 8033386C-80333A10 01A4+00 rc=1 efc=0 rfr=False None .text      newColorChan__22J3DMaterialFactory_v21CFii                   */
+/* 8033386C-80333A10 01A4+00 r=1 e=0 z=0  None .text      newColorChan__22J3DMaterialFactory_v21CFii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +265,7 @@ asm void J3DMaterialFactory_v21::newColorChan(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333A10-80333A48 0038+00 rc=1 efc=0 rfr=False None .text      newTexGenNum__22J3DMaterialFactory_v21CFi                    */
+/* 80333A10-80333A48 0038+00 r=1 e=0 z=0  None .text      newTexGenNum__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +276,7 @@ asm void J3DMaterialFactory_v21::newTexGenNum(int param_0) const {
 #pragma pop
 
 
-/* 80333A48-80333AA8 0060+00 rc=1 efc=0 rfr=False None .text      newTexCoord__22J3DMaterialFactory_v21CFii                    */
+/* 80333A48-80333AA8 0060+00 r=1 e=0 z=0  None .text      newTexCoord__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +287,7 @@ asm void J3DMaterialFactory_v21::newTexCoord(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333AA8-80333B30 0088+00 rc=1 efc=0 rfr=False None .text      newTexMtx__22J3DMaterialFactory_v21CFii                      */
+/* 80333AA8-80333B30 0088+00 r=1 e=0 z=0  None .text      newTexMtx__22J3DMaterialFactory_v21CFii                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +298,7 @@ asm void J3DMaterialFactory_v21::newTexMtx(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333B30-80333B70 0040+00 rc=1 efc=0 rfr=False None .text      newCullMode__22J3DMaterialFactory_v21CFi                     */
+/* 80333B30-80333B70 0040+00 r=1 e=0 z=0  None .text      newCullMode__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +309,7 @@ asm void J3DMaterialFactory_v21::newCullMode(int param_0) const {
 #pragma pop
 
 
-/* 80333B70-80333BB8 0048+00 rc=1 efc=0 rfr=False None .text      newTexNo__22J3DMaterialFactory_v21CFii                       */
+/* 80333B70-80333BB8 0048+00 r=1 e=0 z=0  None .text      newTexNo__22J3DMaterialFactory_v21CFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +320,7 @@ asm void J3DMaterialFactory_v21::newTexNo(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333BB8-80333C04 004C+00 rc=1 efc=0 rfr=False None .text      newTevOrder__22J3DMaterialFactory_v21CFii                    */
+/* 80333BB8-80333C04 004C+00 r=1 e=0 z=0  None .text      newTevOrder__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,13 +332,13 @@ asm void J3DMaterialFactory_v21::newTevOrder(int param_0, int param_1) const {
 
 
 /* ############################################################################################## */
-/* 80456BC0-80456BC4 0004+00 rc=1 efc=0 rfr=False None .sbss2     @1299                                                        */
+/* 80456BC0-80456BC4 0004+00 r=1 e=0 z=0  None .sbss2     @1299                                                        */
 SECTION_SBSS2 static u8 lit_1299[4];
 
-/* 80456BC4-80456BC8 0004+00 rc=1 efc=0 rfr=False None .sbss2     None                                                         */
+/* 80456BC4-80456BC8 0004+00 r=1 e=0 z=0  None .sbss2     None                                                         */
 SECTION_SBSS2 static u8 data_80456BC4[4];
 
-/* 80333C04-80333C74 0070+00 rc=1 efc=0 rfr=False None .text      newTevColor__22J3DMaterialFactory_v21CFii                    */
+/* 80333C04-80333C74 0070+00 r=1 e=0 z=0  None .text      newTevColor__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,10 +350,10 @@ asm void J3DMaterialFactory_v21::newTevColor(int param_0, int param_1) const {
 
 
 /* ############################################################################################## */
-/* 804564BC-804564C0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1317                                                        */
+/* 804564BC-804564C0 0004+00 r=1 e=0 z=0  None .sdata2    @1317                                                        */
 SECTION_SDATA2 static u32 lit_1317 = 0xFFFFFFFF;
 
-/* 80333C74-80333CD0 005C+00 rc=1 efc=0 rfr=False None .text      newTevKColor__22J3DMaterialFactory_v21CFii                   */
+/* 80333C74-80333CD0 005C+00 r=1 e=0 z=0  None .text      newTevKColor__22J3DMaterialFactory_v21CFii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,7 +364,7 @@ asm void J3DMaterialFactory_v21::newTevKColor(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333CD0-80333D08 0038+00 rc=1 efc=0 rfr=False None .text      newTevStageNum__22J3DMaterialFactory_v21CFi                  */
+/* 80333CD0-80333D08 0038+00 r=1 e=0 z=0  None .text      newTevStageNum__22J3DMaterialFactory_v21CFi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -375,7 +375,7 @@ asm void J3DMaterialFactory_v21::newTevStageNum(int param_0) const {
 #pragma pop
 
 
-/* 80333D08-80333D68 0060+00 rc=1 efc=0 rfr=False None .text      newTevStage__22J3DMaterialFactory_v21CFii                    */
+/* 80333D08-80333D68 0060+00 r=1 e=0 z=0  None .text      newTevStage__22J3DMaterialFactory_v21CFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +386,7 @@ asm void J3DMaterialFactory_v21::newTevStage(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 80333D68-80333E04 009C+00 rc=1 efc=0 rfr=False None .text      newTevSwapModeTable__22J3DMaterialFactory_v21CFii            */
+/* 80333D68-80333E04 009C+00 r=1 e=0 z=0  None .text      newTevSwapModeTable__22J3DMaterialFactory_v21CFii            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,7 +397,7 @@ asm void J3DMaterialFactory_v21::newTevSwapModeTable(int param_0, int param_1) c
 #pragma pop
 
 
-/* 80333E04-80333EE0 00DC+00 rc=1 efc=0 rfr=False None .text      newFog__22J3DMaterialFactory_v21CFi                          */
+/* 80333E04-80333EE0 00DC+00 r=1 e=0 z=0  None .text      newFog__22J3DMaterialFactory_v21CFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +408,7 @@ asm void J3DMaterialFactory_v21::newFog(int param_0) const {
 #pragma pop
 
 
-/* 80333EE0-80333F60 0080+00 rc=1 efc=0 rfr=False None .text      newAlphaComp__22J3DMaterialFactory_v21CFi                    */
+/* 80333EE0-80333F60 0080+00 r=1 e=0 z=0  None .text      newAlphaComp__22J3DMaterialFactory_v21CFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +419,7 @@ asm void J3DMaterialFactory_v21::newAlphaComp(int param_0) const {
 #pragma pop
 
 
-/* 80333F60-80333FA4 0044+00 rc=1 efc=0 rfr=False None .text      newBlend__22J3DMaterialFactory_v21CFi                        */
+/* 80333F60-80333FA4 0044+00 r=1 e=0 z=0  None .text      newBlend__22J3DMaterialFactory_v21CFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +430,7 @@ asm void J3DMaterialFactory_v21::newBlend(int param_0) const {
 #pragma pop
 
 
-/* 80333FA4-80334004 0060+00 rc=1 efc=0 rfr=False None .text      newZMode__22J3DMaterialFactory_v21CFi                        */
+/* 80333FA4-80334004 0060+00 r=1 e=0 z=0  None .text      newZMode__22J3DMaterialFactory_v21CFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +441,7 @@ asm void J3DMaterialFactory_v21::newZMode(int param_0) const {
 #pragma pop
 
 
-/* 80334004-8033403C 0038+00 rc=1 efc=0 rfr=False None .text      newZCompLoc__22J3DMaterialFactory_v21CFi                     */
+/* 80334004-8033403C 0038+00 r=1 e=0 z=0  None .text      newZCompLoc__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +452,7 @@ asm void J3DMaterialFactory_v21::newZCompLoc(int param_0) const {
 #pragma pop
 
 
-/* 8033403C-80334074 0038+00 rc=1 efc=0 rfr=False None .text      newDither__22J3DMaterialFactory_v21CFi                       */
+/* 8033403C-80334074 0038+00 r=1 e=0 z=0  None .text      newDither__22J3DMaterialFactory_v21CFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +463,7 @@ asm void J3DMaterialFactory_v21::newDither(int param_0) const {
 #pragma pop
 
 
-/* 80334074-80334118 00A4+00 rc=1 efc=0 rfr=False None .text      newNBTScale__22J3DMaterialFactory_v21CFi                     */
+/* 80334074-80334118 00A4+00 r=1 e=0 z=0  None .text      newNBTScale__22J3DMaterialFactory_v21CFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +474,7 @@ asm void J3DMaterialFactory_v21::newNBTScale(int param_0) const {
 #pragma pop
 
 
-/* 80334118-80334130 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<23J3DMaterialInitData_v21>__FPCvPCv    */
+/* 80334118-80334130 0018+00 r=1 e=0 z=0  None .text      JSUConvertOffsetToPtr<23J3DMaterialInitData_v21>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

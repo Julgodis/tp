@@ -68,7 +68,7 @@ void fpcCt_Abort(base_process_class*); // 2
 void fpcDtTg_IsEmpty(); // 2
 void fpcDtTg_ToDeleteQ(delete_tag_class*); // 2
 void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); // 2
-void fpcEx_IsExist(u32); // 2
+void fpcEx_IsExist(unsigned int); // 2
 void fpcEx_ExecuteQTo(base_process_class*); // 2
 void fpcLy_DeletingMesg(layer_class*); // 2
 void fpcLy_DeletedMesg(layer_class*); // 2
@@ -114,7 +114,7 @@ extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80021040-80021060 0020+00 rc=1 efc=1 rfr=False None .text      fpcDt_IsComplete__Fv                                         */
+/* 80021040-80021060 0020+00 r=1 e=1 z=0  None .text      fpcDt_IsComplete__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm void fpcDt_IsComplete() {
 #pragma pop
 
 
-/* 80021060-800210D4 0074+00 rc=1 efc=0 rfr=False None .text      fpcDt_deleteMethod__FP18base_process_class                   */
+/* 80021060-800210D4 0074+00 r=1 e=0 z=0  None .text      fpcDt_deleteMethod__FP18base_process_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm static void fpcDt_deleteMethod(base_process_class* param_0) {
 #pragma pop
 
 
-/* 800210D4-8002110C 0038+00 rc=1 efc=1 rfr=False None .text      fpcDt_Handler__Fv                                            */
+/* 800210D4-8002110C 0038+00 r=1 e=1 z=0  None .text      fpcDt_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void fpcDt_Handler() {
 #pragma pop
 
 
-/* 8002110C-80021188 007C+00 rc=1 efc=0 rfr=False None .text      fpcDt_ToQueue__FP18base_process_class                        */
+/* 8002110C-80021188 007C+00 r=1 e=0 z=0  None .text      fpcDt_ToQueue__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm static void fpcDt_ToQueue(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80021188-800212A4 011C+00 rc=1 efc=0 rfr=False None .text      fpcDt_ToDeleteQ__FP18base_process_class                      */
+/* 80021188-800212A4 011C+00 r=1 e=0 z=0  None .text      fpcDt_ToDeleteQ__FP18base_process_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm static void fpcDt_ToDeleteQ(base_process_class* param_0) {
 #pragma pop
 
 
-/* 800212A4-80021308 0064+00 rc=3 efc=3 rfr=False None .text      fpcDt_Delete__FPv                                            */
+/* 800212A4-80021308 0064+00 r=3 e=3 z=0  None .text      fpcDt_Delete__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

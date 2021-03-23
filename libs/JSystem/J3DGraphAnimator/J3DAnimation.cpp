@@ -40,13 +40,13 @@ struct J3DAnmTransformKey {
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-struct J3DModelData {
+struct J3DMaterialTable {
 };
 
 struct J3DTextureSRTInfo {
 };
 
-struct J3DMaterialTable {
+struct J3DModelData {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -260,15 +260,15 @@ extern "C" extern void* __vt__10JUTNameTab[3];
 // 
 
 /* ############################################################################################## */
-/* 80456430-80456434 0004+00 rc=6 efc=0 rfr=False None .sdata2    @852                                                         */
+/* 80456430-80456434 0004+00 r=6 e=0 z=0  None .sdata2    @852                                                         */
 SECTION_SDATA2 static f32 J3DAnimation__lit_852 = 1.0f;
 
-/* 80456434-80456438 0004+00 rc=20 efc=0 rfr=False None .sdata2    @853                                                         */
+/* 80456434-80456438 0004+00 r=20 e=0 z=0  None .sdata2    @853                                                         */
 SECTION_SDATA2 static u8 J3DAnimation__lit_853[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803283FC-8032842C 0030+00 rc=25 efc=25 rfr=False None .text      init__12J3DFrameCtrlFs                                       */
+/* 803283FC-8032842C 0030+00 r=310 e=25 z=285  None .text      init__12J3DFrameCtrlFs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,17 +280,17 @@ asm void J3DFrameCtrl::init(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80456438-80456440 0004+04 rc=2 efc=0 rfr=False None .sdata2    @973                                                         */
+/* 80456438-80456440 0004+04 r=2 e=0 z=0  None .sdata2    @973                                                         */
 SECTION_SDATA2 static f32 J3DAnimation__lit_973[1 + 1 /* padding */] = {
 	0.0010000000474974513f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456440-80456448 0008+00 rc=4 efc=0 rfr=False None .sdata2    @975                                                         */
+/* 80456440-80456448 0008+00 r=4 e=0 z=0  None .sdata2    @975                                                         */
 SECTION_SDATA2 static f64 lit_975 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8032842C-803289CC 05A0+00 rc=92 efc=92 rfr=False None .text      checkPass__12J3DFrameCtrlFf                                  */
+/* 8032842C-803289CC 05A0+00 r=474 e=92 z=382  None .text      checkPass__12J3DFrameCtrlFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +301,7 @@ asm void J3DFrameCtrl::checkPass(f32 param_0) {
 #pragma pop
 
 
-/* 803289CC-80328E40 0474+00 rc=3 efc=3 rfr=False None .text      update__12J3DFrameCtrlFv                                     */
+/* 803289CC-80328E40 0474+00 r=3 e=3 z=0  None .text      update__12J3DFrameCtrlFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +312,7 @@ asm void J3DFrameCtrl::update() {
 #pragma pop
 
 
-/* 80328E40-80328E90 0050+00 rc=3 efc=3 rfr=False None .text      __ct__15J3DAnmTransformFsPfPsPf                              */
+/* 80328E40-80328E90 0050+00 r=3 e=3 z=0  None .text      __ct__15J3DAnmTransformFsPfPsPf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,14 +324,14 @@ asm J3DAnmTransform::J3DAnmTransform(s16 param_0, f32* param_1, s16* param_2, f3
 
 
 /* ############################################################################################## */
-/* 80456448-80456450 0004+04 rc=4 efc=0 rfr=False None .sdata2    @1092                                                        */
+/* 80456448-80456450 0004+04 r=4 e=0 z=0  None .sdata2    @1092                                                        */
 SECTION_SDATA2 static f32 lit_1092[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80328E90-803291F0 0360+00 rc=1 efc=0 rfr=False None .text      getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo   */
+/* 80328E90-803291F0 0360+00 r=1 e=0 z=0  None .text      getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,10 +343,10 @@ asm void J3DAnmTransformFull::getTransform(u16 param_0, J3DTransformInfo* param_
 
 
 /* ############################################################################################## */
-/* 80456450-80456458 0008+00 rc=2 efc=0 rfr=False None .sdata2    @1223                                                        */
+/* 80456450-80456458 0008+00 r=2 e=0 z=0  None .sdata2    @1223                                                        */
 SECTION_SDATA2 static f64 lit_1223 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 803291F0-80329A34 0844+00 rc=1 efc=0 rfr=False None .text      getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo */
+/* 803291F0-80329A34 0844+00 r=1 e=0 z=0  None .text      getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +357,7 @@ asm void J3DAnmTransformFullWithLerp::getTransform(u16 param_0, J3DTransformInfo
 #pragma pop
 
 
-/* 80329A34-80329E5C 0428+00 rc=1 efc=1 rfr=False None .text      calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo  */
+/* 80329A34-80329E5C 0428+00 r=1 e=1 z=0  None .text      calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,7 +369,7 @@ asm void J3DAnmTransformKey::calcTransform(f32 param_0, u16 param_1, J3DTransfor
 
 
 /* ############################################################################################## */
-/* 803CED50-803CED60 0010+00 rc=2 efc=0 rfr=False None .data      __vt__16J3DAnmTexPattern                                     */
+/* 803CED50-803CED60 0010+00 r=2 e=0 z=0  None .data      __vt__16J3DAnmTexPattern                                     */
 SECTION_DATA static void* __vt__16J3DAnmTexPattern[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -377,7 +377,7 @@ SECTION_DATA static void* __vt__16J3DAnmTexPattern[4] = {
 	/* 3    */ (void*)getKind__16J3DAnmTexPatternCFv,
 };
 
-/* 803CED60-803CED70 0010+00 rc=2 efc=0 rfr=False None .data      __vt__15J3DAnmTevRegKey                                      */
+/* 803CED60-803CED70 0010+00 r=2 e=0 z=0  None .data      __vt__15J3DAnmTevRegKey                                      */
 SECTION_DATA static void* __vt__15J3DAnmTevRegKey[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -385,7 +385,7 @@ SECTION_DATA static void* __vt__15J3DAnmTevRegKey[4] = {
 	/* 3    */ (void*)getKind__15J3DAnmTevRegKeyCFv,
 };
 
-/* 803CED70-803CED84 0014+00 rc=2 efc=0 rfr=False None .data      __vt__14J3DAnmColorKey                                       */
+/* 803CED70-803CED84 0014+00 r=2 e=0 z=0  None .data      __vt__14J3DAnmColorKey                                       */
 SECTION_DATA static void* __vt__14J3DAnmColorKey[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -394,7 +394,7 @@ SECTION_DATA static void* __vt__14J3DAnmColorKey[5] = {
 	/* 4    */ (void*)getColor__14J3DAnmColorKeyCFUsP8_GXColor,
 };
 
-/* 803CED84-803CED98 0014+00 rc=2 efc=0 rfr=False None .data      __vt__15J3DAnmColorFull                                      */
+/* 803CED84-803CED98 0014+00 r=2 e=0 z=0  None .data      __vt__15J3DAnmColorFull                                      */
 SECTION_DATA static void* __vt__15J3DAnmColorFull[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -403,7 +403,7 @@ SECTION_DATA static void* __vt__15J3DAnmColorFull[5] = {
 	/* 4    */ (void*)getColor__15J3DAnmColorFullCFUsP8_GXColor,
 };
 
-/* 803CED98-803CEDAC 0014+00 rc=4 efc=0 rfr=False None .data      __vt__11J3DAnmColor                                          */
+/* 803CED98-803CEDAC 0014+00 r=4 e=0 z=0  None .data      __vt__11J3DAnmColor                                          */
 SECTION_DATA static void* __vt__11J3DAnmColor[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -412,7 +412,7 @@ SECTION_DATA static void* __vt__11J3DAnmColor[5] = {
 	/* 4    */ (void*)getColor__11J3DAnmColorCFUsP8_GXColor,
 };
 
-/* 803CEDAC-803CEDC0 0014+00 rc=2 efc=0 rfr=False None .data      __vt__17J3DAnmVtxColorKey                                    */
+/* 803CEDAC-803CEDC0 0014+00 r=2 e=0 z=0  None .data      __vt__17J3DAnmVtxColorKey                                    */
 SECTION_DATA static void* __vt__17J3DAnmVtxColorKey[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -421,7 +421,7 @@ SECTION_DATA static void* __vt__17J3DAnmVtxColorKey[5] = {
 	/* 4    */ (void*)getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor,
 };
 
-/* 803CEDC0-803CEDD4 0014+00 rc=2 efc=0 rfr=False None .data      __vt__18J3DAnmVtxColorFull                                   */
+/* 803CEDC0-803CEDD4 0014+00 r=2 e=0 z=0  None .data      __vt__18J3DAnmVtxColorFull                                   */
 SECTION_DATA static void* __vt__18J3DAnmVtxColorFull[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -430,7 +430,7 @@ SECTION_DATA static void* __vt__18J3DAnmVtxColorFull[5] = {
 	/* 4    */ (void*)getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor,
 };
 
-/* 803CEDD4-803CEDE8 0014+00 rc=4 efc=0 rfr=False None .data      __vt__14J3DAnmVtxColor                                       */
+/* 803CEDD4-803CEDE8 0014+00 r=4 e=0 z=0  None .data      __vt__14J3DAnmVtxColor                                       */
 SECTION_DATA static void* __vt__14J3DAnmVtxColor[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -439,7 +439,7 @@ SECTION_DATA static void* __vt__14J3DAnmVtxColor[5] = {
 	/* 4    */ (void*)getColor__14J3DAnmVtxColorCFUcUsP8_GXColor,
 };
 
-/* 803CEDE8-803CEDFC 0014+00 rc=2 efc=1 rfr=False None .data      __vt__16J3DAnmClusterKey                                     */
+/* 803CEDE8-803CEDFC 0014+00 r=2 e=1 z=0  None .data      __vt__16J3DAnmClusterKey                                     */
 SECTION_DATA void* __vt__16J3DAnmClusterKey[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -448,7 +448,7 @@ SECTION_DATA void* __vt__16J3DAnmClusterKey[5] = {
 	/* 4    */ (void*)getWeight__16J3DAnmClusterKeyCFUs,
 };
 
-/* 803CEDFC-803CEE10 0014+00 rc=4 efc=1 rfr=False None .data      __vt__13J3DAnmCluster                                        */
+/* 803CEDFC-803CEE10 0014+00 r=4 e=1 z=0  None .data      __vt__13J3DAnmCluster                                        */
 SECTION_DATA void* __vt__13J3DAnmCluster[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -457,7 +457,7 @@ SECTION_DATA void* __vt__13J3DAnmCluster[5] = {
 	/* 4    */ (void*)getWeight__13J3DAnmClusterCFUs,
 };
 
-/* 803CEE10-803CEE24 0014+00 rc=2 efc=1 rfr=False None .data      __vt__17J3DAnmClusterFull                                    */
+/* 803CEE10-803CEE24 0014+00 r=2 e=1 z=0  None .data      __vt__17J3DAnmClusterFull                                    */
 SECTION_DATA void* __vt__17J3DAnmClusterFull[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -466,7 +466,7 @@ SECTION_DATA void* __vt__17J3DAnmClusterFull[5] = {
 	/* 4    */ (void*)getWeight__17J3DAnmClusterFullCFUs,
 };
 
-/* 803CEE24-803CEE34 0010+00 rc=2 efc=0 rfr=False None .data      __vt__19J3DAnmTextureSRTKey                                  */
+/* 803CEE24-803CEE34 0010+00 r=2 e=0 z=0  None .data      __vt__19J3DAnmTextureSRTKey                                  */
 SECTION_DATA static void* __vt__19J3DAnmTextureSRTKey[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -474,7 +474,7 @@ SECTION_DATA static void* __vt__19J3DAnmTextureSRTKey[4] = {
 	/* 3    */ (void*)getKind__19J3DAnmTextureSRTKeyCFv,
 };
 
-/* 80329E5C-80329F14 00B8+00 rc=2 efc=2 rfr=False None .text      __ct__19J3DAnmTextureSRTKeyFv                                */
+/* 80329E5C-80329F14 00B8+00 r=2 e=2 z=0  None .text      __ct__19J3DAnmTextureSRTKeyFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +485,7 @@ asm J3DAnmTextureSRTKey::J3DAnmTextureSRTKey() {
 #pragma pop
 
 
-/* 80329F14-8032A184 0270+00 rc=1 efc=1 rfr=False None .text      calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo */
+/* 80329F14-8032A184 0270+00 r=1 e=1 z=0  None .text      calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +496,7 @@ asm void J3DAnmTextureSRTKey::calcTransform(f32 param_0, u16 param_1, J3DTexture
 #pragma pop
 
 
-/* 8032A184-8032A218 0094+00 rc=1 efc=0 rfr=False None .text      getWeight__17J3DAnmClusterFullCFUs                           */
+/* 8032A184-8032A218 0094+00 r=1 e=0 z=0  None .text      getWeight__17J3DAnmClusterFullCFUs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,7 +507,7 @@ asm void J3DAnmClusterFull::getWeight(u16 param_0) const {
 #pragma pop
 
 
-/* 8032A218-8032A29C 0084+00 rc=1 efc=0 rfr=False None .text      getWeight__16J3DAnmClusterKeyCFUs                            */
+/* 8032A218-8032A29C 0084+00 r=1 e=0 z=0  None .text      getWeight__16J3DAnmClusterKeyCFUs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +518,7 @@ asm void J3DAnmClusterKey::getWeight(u16 param_0) const {
 #pragma pop
 
 
-/* 8032A29C-8032A30C 0070+00 rc=2 efc=0 rfr=False None .text      __ct__14J3DAnmVtxColorFv                                     */
+/* 8032A29C-8032A30C 0070+00 r=2 e=0 z=0  None .text      __ct__14J3DAnmVtxColorFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +529,7 @@ asm J3DAnmVtxColor::J3DAnmVtxColor() {
 #pragma pop
 
 
-/* 8032A30C-8032A368 005C+00 rc=1 efc=1 rfr=False None .text      __ct__18J3DAnmVtxColorFullFv                                 */
+/* 8032A30C-8032A368 005C+00 r=1 e=1 z=0  None .text      __ct__18J3DAnmVtxColorFullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +540,7 @@ asm J3DAnmVtxColorFull::J3DAnmVtxColorFull() {
 #pragma pop
 
 
-/* 8032A368-8032A4E0 0178+00 rc=1 efc=0 rfr=False None .text      getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor               */
+/* 8032A368-8032A4E0 0178+00 r=1 e=0 z=0  None .text      getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +551,7 @@ asm void J3DAnmVtxColorFull::getColor(u8 param_0, u16 param_1, _GXColor* param_2
 #pragma pop
 
 
-/* 8032A4E0-8032A53C 005C+00 rc=1 efc=1 rfr=False None .text      __ct__17J3DAnmVtxColorKeyFv                                  */
+/* 8032A4E0-8032A53C 005C+00 r=1 e=1 z=0  None .text      __ct__17J3DAnmVtxColorKeyFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,10 +563,10 @@ asm J3DAnmVtxColorKey::J3DAnmVtxColorKey() {
 
 
 /* ############################################################################################## */
-/* 80456458-8045645C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @1499                                                        */
+/* 80456458-8045645C 0004+00 r=3 e=0 z=0  None .sdata2    @1499                                                        */
 SECTION_SDATA2 static f32 lit_1499 = 255.0f;
 
-/* 8032A53C-8032A828 02EC+00 rc=1 efc=0 rfr=False None .text      getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor                */
+/* 8032A53C-8032A828 02EC+00 r=1 e=0 z=0  None .text      getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -577,7 +577,7 @@ asm void J3DAnmVtxColorKey::getColor(u8 param_0, u16 param_1, _GXColor* param_2)
 #pragma pop
 
 
-/* 8032A828-8032A8A4 007C+00 rc=2 efc=0 rfr=False None .text      __ct__11J3DAnmColorFv                                        */
+/* 8032A828-8032A8A4 007C+00 r=2 e=0 z=0  None .text      __ct__11J3DAnmColorFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,7 +588,7 @@ asm J3DAnmColor::J3DAnmColor() {
 #pragma pop
 
 
-/* 8032A8A4-8032A93C 0098+00 rc=1 efc=1 rfr=False None .text      searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable    */
+/* 8032A8A4-8032A93C 0098+00 r=1 e=1 z=0  None .text      searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,7 +599,7 @@ asm void J3DAnmColor::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032A93C-8032A990 0054+00 rc=1 efc=1 rfr=False None .text      __ct__15J3DAnmColorFullFv                                    */
+/* 8032A93C-8032A990 0054+00 r=1 e=1 z=0  None .text      __ct__15J3DAnmColorFullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -610,7 +610,7 @@ asm J3DAnmColorFull::J3DAnmColorFull() {
 #pragma pop
 
 
-/* 8032A990-8032AB00 0170+00 rc=1 efc=0 rfr=False None .text      getColor__15J3DAnmColorFullCFUsP8_GXColor                    */
+/* 8032A990-8032AB00 0170+00 r=1 e=0 z=0  None .text      getColor__15J3DAnmColorFullCFUsP8_GXColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,7 +621,7 @@ asm void J3DAnmColorFull::getColor(u16 param_0, _GXColor* param_1) const {
 #pragma pop
 
 
-/* 8032AB00-8032AB54 0054+00 rc=1 efc=1 rfr=False None .text      __ct__14J3DAnmColorKeyFv                                     */
+/* 8032AB00-8032AB54 0054+00 r=1 e=1 z=0  None .text      __ct__14J3DAnmColorKeyFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -632,7 +632,7 @@ asm J3DAnmColorKey::J3DAnmColorKey() {
 #pragma pop
 
 
-/* 8032AB54-8032AE18 02C4+00 rc=1 efc=0 rfr=False None .text      getColor__14J3DAnmColorKeyCFUsP8_GXColor                     */
+/* 8032AB54-8032AE18 02C4+00 r=1 e=0 z=0  None .text      getColor__14J3DAnmColorKeyCFUsP8_GXColor                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,7 +643,7 @@ asm void J3DAnmColorKey::getColor(u16 param_0, _GXColor* param_1) const {
 #pragma pop
 
 
-/* 8032AE18-8032AED8 00C0+00 rc=1 efc=1 rfr=False None .text      __ct__15J3DAnmTevRegKeyFv                                    */
+/* 8032AE18-8032AED8 00C0+00 r=1 e=1 z=0  None .text      __ct__15J3DAnmTevRegKeyFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +654,7 @@ asm J3DAnmTevRegKey::J3DAnmTevRegKey() {
 #pragma pop
 
 
-/* 8032AED8-8032AF50 0078+00 rc=2 efc=2 rfr=False None .text      __ct__16J3DAnmTexPatternFv                                   */
+/* 8032AED8-8032AF50 0078+00 r=2 e=2 z=0  None .text      __ct__16J3DAnmTexPatternFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +665,7 @@ asm J3DAnmTexPattern::J3DAnmTexPattern() {
 #pragma pop
 
 
-/* 8032AF50-8032B004 00B4+00 rc=1 efc=1 rfr=False None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
+/* 8032AF50-8032B004 00B4+00 r=73 e=1 z=72  None .text      getTexNo__16J3DAnmTexPatternCFUsPUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -676,7 +676,7 @@ asm void J3DAnmTexPattern::getTexNo(u16 param_0, u16* param_1) const {
 #pragma pop
 
 
-/* 8032B004-8032B09C 0098+00 rc=2 efc=1 rfr=False None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable */
+/* 8032B004-8032B09C 0098+00 r=2 e=1 z=0  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -687,7 +687,7 @@ asm void J3DAnmTexPattern::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B09C-8032B0C0 0024+00 rc=4 efc=4 rfr=False None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
+/* 8032B09C-8032B0C0 0024+00 r=5 e=4 z=1  None .text      searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -698,7 +698,7 @@ asm void J3DAnmTexPattern::searchUpdateMaterialID(J3DModelData* param_0) {
 #pragma pop
 
 
-/* 8032B0C0-8032B1D4 0114+00 rc=2 efc=1 rfr=False None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable */
+/* 8032B0C0-8032B1D4 0114+00 r=2 e=1 z=0  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -709,7 +709,7 @@ asm void J3DAnmTextureSRTKey::searchUpdateMaterialID(J3DMaterialTable* param_0) 
 #pragma pop
 
 
-/* 8032B1D4-8032B1F8 0024+00 rc=8 efc=8 rfr=False None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
+/* 8032B1D4-8032B1F8 0024+00 r=14 e=8 z=6  None .text      searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,17 +721,17 @@ asm void J3DAnmTextureSRTKey::searchUpdateMaterialID(J3DModelData* param_0) {
 
 
 /* ############################################################################################## */
-/* 8045645C-80456460 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1817                                                        */
+/* 8045645C-80456460 0004+00 r=1 e=0 z=0  None .sdata2    @1817                                                        */
 SECTION_SDATA2 static f32 J3DAnimation__lit_1817 = -1024.0f;
 
-/* 80456460-80456468 0004+04 rc=1 efc=0 rfr=False None .sdata2    @1818                                                        */
+/* 80456460-80456468 0004+04 r=1 e=0 z=0  None .sdata2    @1818                                                        */
 SECTION_SDATA2 static f32 J3DAnimation__lit_1818[1 + 1 /* padding */] = {
 	1023.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8032B1F8-8032B4BC 02C4+00 rc=2 efc=2 rfr=False None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
+/* 8032B1F8-8032B4BC 02C4+00 r=3 e=2 z=1  None .text      getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -742,7 +742,7 @@ asm void J3DAnmTevRegKey::getTevColorReg(u16 param_0, _GXColorS10* param_1) cons
 #pragma pop
 
 
-/* 8032B4BC-8032B780 02C4+00 rc=1 efc=1 rfr=False None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
+/* 8032B4BC-8032B780 02C4+00 r=2 e=1 z=1  None .text      getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -753,7 +753,7 @@ asm void J3DAnmTevRegKey::getTevKonstReg(u16 param_0, _GXColor* param_1) const {
 #pragma pop
 
 
-/* 8032B780-8032B87C 00FC+00 rc=2 efc=1 rfr=False None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable */
+/* 8032B780-8032B87C 00FC+00 r=2 e=1 z=0  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -764,7 +764,7 @@ asm void J3DAnmTevRegKey::searchUpdateMaterialID(J3DMaterialTable* param_0) {
 #pragma pop
 
 
-/* 8032B87C-8032B8A0 0024+00 rc=9 efc=9 rfr=False None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
+/* 8032B87C-8032B8A0 0024+00 r=13 e=9 z=4  None .text      searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -775,7 +775,7 @@ asm void J3DAnmTevRegKey::searchUpdateMaterialID(J3DModelData* param_0) {
 #pragma pop
 
 
-/* 8032B8A0-8032BAD4 0234+00 rc=6 efc=0 rfr=False None .text      J3DGetKeyFrameInterpolation<s>__FfP18J3DAnmKeyTableBasePs    */
+/* 8032B8A0-8032BAD4 0234+00 r=6 e=0 z=0  None .text      J3DGetKeyFrameInterpolation<s>__FfP18J3DAnmKeyTableBasePs    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -786,7 +786,7 @@ asm static void J3DGetKeyFrameInterpolation__template0(f32 param_0, J3DAnmKeyTab
 #pragma pop
 
 
-/* 8032BAD4-8032BC50 017C+00 rc=3 efc=0 rfr=False None .text      J3DGetKeyFrameInterpolation<f>__FfP18J3DAnmKeyTableBasePf    */
+/* 8032BAD4-8032BC50 017C+00 r=3 e=0 z=0  None .text      J3DGetKeyFrameInterpolation<f>__FfP18J3DAnmKeyTableBasePf    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -797,7 +797,7 @@ asm static void J3DGetKeyFrameInterpolation__template1(f32 param_0, J3DAnmKeyTab
 #pragma pop
 
 
-/* 8032BC50-8032BCAC 005C+00 rc=1 efc=0 rfr=False None .text      __dt__14J3DAnmVtxColorFv                                     */
+/* 8032BC50-8032BCAC 005C+00 r=1 e=0 z=0  None .text      __dt__14J3DAnmVtxColorFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -808,7 +808,7 @@ asm J3DAnmVtxColor::~J3DAnmVtxColor() {
 #pragma pop
 
 
-/* 8032BCAC-8032BD20 0074+00 rc=1 efc=0 rfr=False None .text      __dt__11J3DAnmColorFv                                        */
+/* 8032BCAC-8032BD20 0074+00 r=1 e=0 z=0  None .text      __dt__11J3DAnmColorFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -819,7 +819,7 @@ asm J3DAnmColor::~J3DAnmColor() {
 #pragma pop
 
 
-/* 8032BD20-8032BD94 0074+00 rc=1 efc=0 rfr=False None .text      __dt__16J3DAnmTexPatternFv                                   */
+/* 8032BD20-8032BD94 0074+00 r=1 e=0 z=0  None .text      __dt__16J3DAnmTexPatternFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -830,7 +830,7 @@ asm J3DAnmTexPattern::~J3DAnmTexPattern() {
 #pragma pop
 
 
-/* 8032BD94-8032BD9C 0008+00 rc=1 efc=0 rfr=False None .text      getKind__16J3DAnmTexPatternCFv                               */
+/* 8032BD94-8032BD9C 0008+00 r=1 e=0 z=0  None .text      getKind__16J3DAnmTexPatternCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -841,7 +841,7 @@ asm void J3DAnmTexPattern::getKind() const {
 #pragma pop
 
 
-/* 8032BD9C-8032BE24 0088+00 rc=1 efc=0 rfr=False None .text      __dt__15J3DAnmTevRegKeyFv                                    */
+/* 8032BD9C-8032BE24 0088+00 r=1 e=0 z=0  None .text      __dt__15J3DAnmTevRegKeyFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -852,7 +852,7 @@ asm J3DAnmTevRegKey::~J3DAnmTevRegKey() {
 #pragma pop
 
 
-/* 8032BE24-8032BE2C 0008+00 rc=1 efc=0 rfr=False None .text      getKind__15J3DAnmTevRegKeyCFv                                */
+/* 8032BE24-8032BE2C 0008+00 r=1 e=0 z=0  None .text      getKind__15J3DAnmTevRegKeyCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -863,7 +863,7 @@ asm void J3DAnmTevRegKey::getKind() const {
 #pragma pop
 
 
-/* 8032BE2C-8032BEB0 0084+00 rc=1 efc=0 rfr=False None .text      __dt__14J3DAnmColorKeyFv                                     */
+/* 8032BE2C-8032BEB0 0084+00 r=1 e=0 z=0  None .text      __dt__14J3DAnmColorKeyFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -874,7 +874,7 @@ asm J3DAnmColorKey::~J3DAnmColorKey() {
 #pragma pop
 
 
-/* 8032BEB0-8032BEB8 0008+00 rc=1 efc=0 rfr=False None .text      getKind__14J3DAnmColorKeyCFv                                 */
+/* 8032BEB0-8032BEB8 0008+00 r=1 e=0 z=0  None .text      getKind__14J3DAnmColorKeyCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,7 +885,7 @@ asm void J3DAnmColorKey::getKind() const {
 #pragma pop
 
 
-/* 8032BEB8-8032BF3C 0084+00 rc=1 efc=0 rfr=False None .text      __dt__15J3DAnmColorFullFv                                    */
+/* 8032BEB8-8032BF3C 0084+00 r=1 e=0 z=0  None .text      __dt__15J3DAnmColorFullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -896,7 +896,7 @@ asm J3DAnmColorFull::~J3DAnmColorFull() {
 #pragma pop
 
 
-/* 8032BF3C-8032BF44 0008+00 rc=1 efc=0 rfr=False None .text      getKind__15J3DAnmColorFullCFv                                */
+/* 8032BF3C-8032BF44 0008+00 r=1 e=0 z=0  None .text      getKind__15J3DAnmColorFullCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -907,7 +907,7 @@ asm void J3DAnmColorFull::getKind() const {
 #pragma pop
 
 
-/* 8032BF44-8032BF4C 0008+00 rc=1 efc=0 rfr=False None .text      getKind__11J3DAnmColorCFv                                    */
+/* 8032BF44-8032BF4C 0008+00 r=1 e=0 z=0  None .text      getKind__11J3DAnmColorCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -918,7 +918,7 @@ asm void J3DAnmColor::getKind() const {
 #pragma pop
 
 
-/* 8032BF4C-8032BF50 0004+00 rc=1 efc=0 rfr=False None .text      getColor__11J3DAnmColorCFUsP8_GXColor                        */
+/* 8032BF4C-8032BF50 0004+00 r=1 e=0 z=0  None .text      getColor__11J3DAnmColorCFUsP8_GXColor                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -929,7 +929,7 @@ asm void J3DAnmColor::getColor(u16 param_0, _GXColor* param_1) const {
 #pragma pop
 
 
-/* 8032BF50-8032BFBC 006C+00 rc=1 efc=0 rfr=False None .text      __dt__17J3DAnmVtxColorKeyFv                                  */
+/* 8032BF50-8032BFBC 006C+00 r=1 e=0 z=0  None .text      __dt__17J3DAnmVtxColorKeyFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -940,7 +940,7 @@ asm J3DAnmVtxColorKey::~J3DAnmVtxColorKey() {
 #pragma pop
 
 
-/* 8032BFBC-8032BFC4 0008+00 rc=1 efc=0 rfr=False None .text      getKind__17J3DAnmVtxColorKeyCFv                              */
+/* 8032BFBC-8032BFC4 0008+00 r=1 e=0 z=0  None .text      getKind__17J3DAnmVtxColorKeyCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -951,7 +951,7 @@ asm void J3DAnmVtxColorKey::getKind() const {
 #pragma pop
 
 
-/* 8032BFC4-8032C030 006C+00 rc=1 efc=0 rfr=False None .text      __dt__18J3DAnmVtxColorFullFv                                 */
+/* 8032BFC4-8032C030 006C+00 r=1 e=0 z=0  None .text      __dt__18J3DAnmVtxColorFullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,7 +962,7 @@ asm J3DAnmVtxColorFull::~J3DAnmVtxColorFull() {
 #pragma pop
 
 
-/* 8032C030-8032C038 0008+00 rc=1 efc=0 rfr=False None .text      getKind__18J3DAnmVtxColorFullCFv                             */
+/* 8032C030-8032C038 0008+00 r=1 e=0 z=0  None .text      getKind__18J3DAnmVtxColorFullCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -973,7 +973,7 @@ asm void J3DAnmVtxColorFull::getKind() const {
 #pragma pop
 
 
-/* 8032C038-8032C040 0008+00 rc=1 efc=0 rfr=False None .text      getKind__14J3DAnmVtxColorCFv                                 */
+/* 8032C038-8032C040 0008+00 r=1 e=0 z=0  None .text      getKind__14J3DAnmVtxColorCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -984,7 +984,7 @@ asm void J3DAnmVtxColor::getKind() const {
 #pragma pop
 
 
-/* 8032C040-8032C044 0004+00 rc=1 efc=0 rfr=False None .text      getColor__14J3DAnmVtxColorCFUcUsP8_GXColor                   */
+/* 8032C040-8032C044 0004+00 r=1 e=0 z=0  None .text      getColor__14J3DAnmVtxColorCFUcUsP8_GXColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -995,7 +995,7 @@ asm void J3DAnmVtxColor::getColor(u8 param_0, u16 param_1, _GXColor* param_2) co
 #pragma pop
 
 
-/* 8032C044-8032C0B0 006C+00 rc=1 efc=0 rfr=False None .text      __dt__16J3DAnmClusterKeyFv                                   */
+/* 8032C044-8032C0B0 006C+00 r=1 e=0 z=0  None .text      __dt__16J3DAnmClusterKeyFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1006,7 +1006,7 @@ asm J3DAnmClusterKey::~J3DAnmClusterKey() {
 #pragma pop
 
 
-/* 8032C0B0-8032C0B8 0008+00 rc=1 efc=0 rfr=False None .text      getKind__16J3DAnmClusterKeyCFv                               */
+/* 8032C0B0-8032C0B8 0008+00 r=1 e=0 z=0  None .text      getKind__16J3DAnmClusterKeyCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1017,7 +1017,7 @@ asm void J3DAnmClusterKey::getKind() const {
 #pragma pop
 
 
-/* 8032C0B8-8032C114 005C+00 rc=1 efc=0 rfr=False None .text      __dt__13J3DAnmClusterFv                                      */
+/* 8032C0B8-8032C114 005C+00 r=1 e=0 z=0  None .text      __dt__13J3DAnmClusterFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1028,7 +1028,7 @@ asm J3DAnmCluster::~J3DAnmCluster() {
 #pragma pop
 
 
-/* 8032C114-8032C11C 0008+00 rc=1 efc=0 rfr=False None .text      getKind__13J3DAnmClusterCFv                                  */
+/* 8032C114-8032C11C 0008+00 r=1 e=0 z=0  None .text      getKind__13J3DAnmClusterCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1039,7 +1039,7 @@ asm void J3DAnmCluster::getKind() const {
 #pragma pop
 
 
-/* 8032C11C-8032C124 0008+00 rc=1 efc=0 rfr=False None .text      getWeight__13J3DAnmClusterCFUs                               */
+/* 8032C11C-8032C124 0008+00 r=1 e=0 z=0  None .text      getWeight__13J3DAnmClusterCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1050,7 +1050,7 @@ asm void J3DAnmCluster::getWeight(u16 param_0) const {
 #pragma pop
 
 
-/* 8032C124-8032C190 006C+00 rc=1 efc=0 rfr=False None .text      __dt__17J3DAnmClusterFullFv                                  */
+/* 8032C124-8032C190 006C+00 r=1 e=0 z=0  None .text      __dt__17J3DAnmClusterFullFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1061,7 +1061,7 @@ asm J3DAnmClusterFull::~J3DAnmClusterFull() {
 #pragma pop
 
 
-/* 8032C190-8032C198 0008+00 rc=1 efc=0 rfr=False None .text      getKind__17J3DAnmClusterFullCFv                              */
+/* 8032C190-8032C198 0008+00 r=1 e=0 z=0  None .text      getKind__17J3DAnmClusterFullCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1072,7 +1072,7 @@ asm void J3DAnmClusterFull::getKind() const {
 #pragma pop
 
 
-/* 8032C198-8032C220 0088+00 rc=1 efc=0 rfr=False None .text      __dt__19J3DAnmTextureSRTKeyFv                                */
+/* 8032C198-8032C220 0088+00 r=1 e=0 z=0  None .text      __dt__19J3DAnmTextureSRTKeyFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,7 +1083,7 @@ asm J3DAnmTextureSRTKey::~J3DAnmTextureSRTKey() {
 #pragma pop
 
 
-/* 8032C220-8032C228 0008+00 rc=1 efc=0 rfr=False None .text      getKind__19J3DAnmTextureSRTKeyCFv                            */
+/* 8032C220-8032C228 0008+00 r=1 e=0 z=0  None .text      getKind__19J3DAnmTextureSRTKeyCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1095,7 +1095,7 @@ asm void J3DAnmTextureSRTKey::getKind() const {
 
 
 /* ############################################################################################## */
-/* 803CEE34-803CEE48 0014+00 rc=2 efc=1 rfr=False None .data      __vt__27J3DAnmTransformFullWithLerp                          */
+/* 803CEE34-803CEE48 0014+00 r=2 e=1 z=0  None .data      __vt__27J3DAnmTransformFullWithLerp                          */
 SECTION_DATA void* __vt__27J3DAnmTransformFullWithLerp[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1104,7 +1104,7 @@ SECTION_DATA void* __vt__27J3DAnmTransformFullWithLerp[5] = {
 	/* 4    */ (void*)getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo,
 };
 
-/* 803CEE48-803CEE60 0014+04 rc=3 efc=1 rfr=False None .data      __vt__19J3DAnmTransformFull                                  */
+/* 803CEE48-803CEE60 0014+04 r=3 e=1 z=0  None .data      __vt__19J3DAnmTransformFull                                  */
 SECTION_DATA void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1115,7 +1115,7 @@ SECTION_DATA void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8032C228-8032C2A4 007C+00 rc=1 efc=0 rfr=False None .text      __dt__27J3DAnmTransformFullWithLerpFv                        */
+/* 8032C228-8032C2A4 007C+00 r=1 e=0 z=0  None .text      __dt__27J3DAnmTransformFullWithLerpFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1126,7 +1126,7 @@ asm J3DAnmTransformFullWithLerp::~J3DAnmTransformFullWithLerp() {
 #pragma pop
 
 
-/* 8032C2A4-8032C2AC 0008+00 rc=1 efc=0 rfr=False None .text      getKind__27J3DAnmTransformFullWithLerpCFv                    */
+/* 8032C2A4-8032C2AC 0008+00 r=1 e=0 z=0  None .text      getKind__27J3DAnmTransformFullWithLerpCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1137,7 +1137,7 @@ asm void J3DAnmTransformFullWithLerp::getKind() const {
 #pragma pop
 
 
-/* 8032C2AC-8032C318 006C+00 rc=1 efc=0 rfr=False None .text      __dt__19J3DAnmTransformFullFv                                */
+/* 8032C2AC-8032C318 006C+00 r=1 e=0 z=0  None .text      __dt__19J3DAnmTransformFullFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1148,7 +1148,7 @@ asm J3DAnmTransformFull::~J3DAnmTransformFull() {
 #pragma pop
 
 
-/* 8032C318-8032C320 0008+00 rc=1 efc=0 rfr=False None .text      getKind__19J3DAnmTransformFullCFv                            */
+/* 8032C318-8032C320 0008+00 r=1 e=0 z=0  None .text      getKind__19J3DAnmTransformFullCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

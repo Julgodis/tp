@@ -31,7 +31,7 @@ void fopOvlpM_SceneIsStop(); // 2
 void fopOvlpM_SceneIsStart(); // 2
 void fopOvlpM_IsOutReq(overlap_task_class*); // 2
 void fopOvlpM_Done(overlap_task_class*); // 2
-void fopOvlpM_ToldAboutID(u32); // 2
+void fopOvlpM_ToldAboutID(unsigned int); // 2
 void fopOvlpM_IsPeek(); // 2
 void fopOvlpM_IsDone(); // 2
 void fopOvlpM_IsDoingReq(); // 2
@@ -65,7 +65,7 @@ void fopOvlpReq_Cancel(overlap_request_class*); // 2
 void fopOvlpReq_OverlapClr(overlap_request_class*); // 2
 void fopScnPause_Enable(scene_class*); // 2
 void fopScnPause_Disable(scene_class*); // 2
-void fpcEx_SearchByID(u32); // 2
+void fpcEx_SearchByID(unsigned int); // 2
 void cReq_Is_Done(request_base_class*); // 2
 void cReq_Done(request_base_class*); // 2
 
@@ -84,14 +84,14 @@ extern "C" void cReq_Done__FP18request_base_class(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804505B0-804505B8 0004+04 rc=10 efc=0 rfr=False None .sdata     l_fopOvlpM_overlap                                           */
+/* 804505B0-804505B8 0004+04 r=10 e=0 z=0  None .sdata     l_fopOvlpM_overlap                                           */
 SECTION_SDATA static u8 l_fopOvlpM_overlap[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001E484-8001E4C4 0040+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_SceneIsStop__Fv                                     */
+/* 8001E484-8001E4C4 0040+00 r=1 e=1 z=0  None .text      fopOvlpM_SceneIsStop__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ asm void fopOvlpM_SceneIsStop() {
 #pragma pop
 
 
-/* 8001E4C4-8001E504 0040+00 rc=5 efc=5 rfr=False None .text      fopOvlpM_SceneIsStart__Fv                                    */
+/* 8001E4C4-8001E504 0040+00 r=5 e=5 z=0  None .text      fopOvlpM_SceneIsStart__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm void fopOvlpM_SceneIsStart() {
 #pragma pop
 
 
-/* 8001E504-8001E51C 0018+00 rc=3 efc=3 rfr=False None .text      fopOvlpM_IsOutReq__FP18overlap_task_class                    */
+/* 8001E504-8001E51C 0018+00 r=3 e=3 z=0  None .text      fopOvlpM_IsOutReq__FP18overlap_task_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void fopOvlpM_IsOutReq(overlap_task_class* param_0) {
 #pragma pop
 
 
-/* 8001E51C-8001E540 0024+00 rc=6 efc=6 rfr=False None .text      fopOvlpM_Done__FP18overlap_task_class                        */
+/* 8001E51C-8001E540 0024+00 r=6 e=6 z=0  None .text      fopOvlpM_Done__FP18overlap_task_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,18 +135,18 @@ asm void fopOvlpM_Done(overlap_task_class* param_0) {
 #pragma pop
 
 
-/* 8001E540-8001E558 0018+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_ToldAboutID__FUi                                    */
+/* 8001E540-8001E558 0018+00 r=1 e=1 z=0  None .text      fopOvlpM_ToldAboutID__FUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpM_ToldAboutID(u32 param_0) {
+asm void fopOvlpM_ToldAboutID(unsigned int param_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap_mng/fopOvlpM_ToldAboutID__FUi.s"
 }
 #pragma pop
 
 
-/* 8001E558-8001E574 001C+00 rc=6 efc=6 rfr=False None .text      fopOvlpM_IsPeek__Fv                                          */
+/* 8001E558-8001E574 001C+00 r=13 e=6 z=7  None .text      fopOvlpM_IsPeek__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void fopOvlpM_IsPeek() {
 #pragma pop
 
 
-/* 8001E574-8001E5A8 0034+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_IsDone__Fv                                          */
+/* 8001E574-8001E5A8 0034+00 r=1 e=1 z=0  None .text      fopOvlpM_IsDone__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void fopOvlpM_IsDone() {
 #pragma pop
 
 
-/* 8001E5A8-8001E5D0 0028+00 rc=3 efc=3 rfr=False None .text      fopOvlpM_IsDoingReq__Fv                                      */
+/* 8001E5A8-8001E5D0 0028+00 r=4 e=3 z=1  None .text      fopOvlpM_IsDoingReq__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm void fopOvlpM_IsDoingReq() {
 #pragma pop
 
 
-/* 8001E5D0-8001E604 0034+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_ClearOfReq__Fv                                      */
+/* 8001E5D0-8001E604 0034+00 r=1 e=1 z=0  None .text      fopOvlpM_ClearOfReq__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,10 +191,10 @@ asm void fopOvlpM_ClearOfReq() {
 
 
 /* ############################################################################################## */
-/* 803F1DE8-803F1E10 0028+00 rc=1 efc=0 rfr=False None .bss       l_fopOvlpM_Request                                           */
+/* 803F1DE8-803F1E10 0028+00 r=1 e=0 z=0  None .bss       l_fopOvlpM_Request                                           */
 static u8 l_fopOvlpM_Request[40];
 
-/* 8001E604-8001E650 004C+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_Request__FsUs                                       */
+/* 8001E604-8001E650 004C+00 r=1 e=1 z=0  None .text      fopOvlpM_Request__FsUs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ asm void fopOvlpM_Request(s16 param_0, u16 param_1) {
 #pragma pop
 
 
-/* 8001E650-8001E698 0048+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_Management__Fv                                      */
+/* 8001E650-8001E698 0048+00 r=1 e=1 z=0  None .text      fopOvlpM_Management__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ asm void fopOvlpM_Management() {
 #pragma pop
 
 
-/* 8001E698-8001E6E8 0050+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_Cancel__Fv                                          */
+/* 8001E698-8001E6E8 0050+00 r=1 e=1 z=0  None .text      fopOvlpM_Cancel__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ asm void fopOvlpM_Cancel() {
 #pragma pop
 
 
-/* 8001E6E8-8001E6EC 0004+00 rc=1 efc=1 rfr=False None .text      fopOvlpM_Init__Fv                                            */
+/* 8001E6E8-8001E6EC 0004+00 r=1 e=1 z=0  None .text      fopOvlpM_Init__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

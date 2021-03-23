@@ -54,7 +54,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 802E8730-802E87F8 00C8+00 rc=1 efc=0 rfr=False None .text      fetch32byte__13JUTDirectFileFv                               */
+/* 802E8730-802E87F8 00C8+00 r=1 e=0 z=0  None .text      fetch32byte__13JUTDirectFileFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ asm void JUTDirectFile::fetch32byte() {
 #pragma pop
 
 
-/* 802E87F8-802E881C 0024+00 rc=1 efc=1 rfr=False None .text      __ct__13JUTDirectFileFv                                      */
+/* 802E87F8-802E881C 0024+00 r=1 e=1 z=0  None .text      __ct__13JUTDirectFileFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm JUTDirectFile::JUTDirectFile() {
 #pragma pop
 
 
-/* 802E881C-802E8860 0044+00 rc=1 efc=1 rfr=False None .text      __dt__13JUTDirectFileFv                                      */
+/* 802E881C-802E8860 0044+00 r=1 e=1 z=0  None .text      __dt__13JUTDirectFileFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm JUTDirectFile::~JUTDirectFile() {
 #pragma pop
 
 
-/* 802E8860-802E88FC 009C+00 rc=1 efc=1 rfr=False None .text      fopen__13JUTDirectFileFPCc                                   */
+/* 802E8860-802E88FC 009C+00 r=1 e=1 z=0  None .text      fopen__13JUTDirectFileFPCc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void JUTDirectFile::fopen(char const* param_0) {
 #pragma pop
 
 
-/* 802E88FC-802E8958 005C+00 rc=1 efc=1 rfr=False None .text      fclose__13JUTDirectFileFv                                    */
+/* 802E88FC-802E8958 005C+00 r=1 e=1 z=0  None .text      fclose__13JUTDirectFileFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void JUTDirectFile::fclose() {
 #pragma pop
 
 
-/* 802E8958-802E8B08 01B0+00 rc=1 efc=1 rfr=False None .text      fgets__13JUTDirectFileFPvi                                   */
+/* 802E8958-802E8B08 01B0+00 r=1 e=1 z=0  None .text      fgets__13JUTDirectFileFPvi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

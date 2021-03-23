@@ -17,8 +17,8 @@ struct cBgS_PolyInfo {
 	/* 802680F8 */ void ChkSetInfo() const;
 	/* 80268120 */ void ClearPi();
 	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
-	/* 8026816C */ void SetActorInfo(int, void*, u32);
-	/* 8026817C */ void ChkSafe(void const*, u32) const;
+	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
+	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
 	/* 802681A4 */ void SetPolyIndex(int);
 	/* 802681AC */ void ChkBgIndex() const;
 };
@@ -51,7 +51,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C3FD0-803C3FE0 000C+04 rc=2 efc=0 rfr=False None .data      __vt__13cBgS_PolyInfo                                        */
+/* 803C3FD0-803C3FE0 000C+04 r=2 e=0 z=0  None .data      __vt__13cBgS_PolyInfo                                        */
 SECTION_DATA static void* __vt__13cBgS_PolyInfo[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -60,7 +60,7 @@ SECTION_DATA static void* __vt__13cBgS_PolyInfo[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80268074-802680B0 003C+00 rc=7 efc=7 rfr=False None .text      __ct__13cBgS_PolyInfoFv                                      */
+/* 80268074-802680B0 003C+00 r=16 e=7 z=9  None .text      __ct__13cBgS_PolyInfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm cBgS_PolyInfo::cBgS_PolyInfo() {
 #pragma pop
 
 
-/* 802680B0-802680F8 0048+00 rc=11 efc=10 rfr=False None .text      __dt__13cBgS_PolyInfoFv                                      */
+/* 802680B0-802680F8 0048+00 r=404 e=10 z=393  None .text      __dt__13cBgS_PolyInfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm cBgS_PolyInfo::~cBgS_PolyInfo() {
 #pragma pop
 
 
-/* 802680F8-80268120 0028+00 rc=4 efc=4 rfr=False None .text      ChkSetInfo__13cBgS_PolyInfoCFv                               */
+/* 802680F8-80268120 0028+00 r=4 e=4 z=0  None .text      ChkSetInfo__13cBgS_PolyInfoCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void cBgS_PolyInfo::ChkSetInfo() const {
 #pragma pop
 
 
-/* 80268120-80268148 0028+00 rc=12 efc=11 rfr=False None .text      ClearPi__13cBgS_PolyInfoFv                                   */
+/* 80268120-80268148 0028+00 r=12 e=11 z=0  None .text      ClearPi__13cBgS_PolyInfoFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void cBgS_PolyInfo::ClearPi() {
 #pragma pop
 
 
-/* 80268148-8026816C 0024+00 rc=11 efc=11 rfr=False None .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               */
+/* 80268148-8026816C 0024+00 r=12 e=11 z=1  None .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,29 +115,29 @@ asm void cBgS_PolyInfo::SetPolyInfo(cBgS_PolyInfo const& param_0) {
 #pragma pop
 
 
-/* 8026816C-8026817C 0010+00 rc=6 efc=6 rfr=False None .text      SetActorInfo__13cBgS_PolyInfoFiPvUi                          */
+/* 8026816C-8026817C 0010+00 r=6 e=6 z=0  None .text      SetActorInfo__13cBgS_PolyInfoFiPvUi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_PolyInfo::SetActorInfo(int param_0, void* param_1, u32 param_2) {
+asm void cBgS_PolyInfo::SetActorInfo(int param_0, void* param_1, unsigned int param_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_poly_info/SetActorInfo__13cBgS_PolyInfoFiPvUi.s"
 }
 #pragma pop
 
 
-/* 8026817C-802681A4 0028+00 rc=1 efc=1 rfr=False None .text      ChkSafe__13cBgS_PolyInfoCFPCvUi                              */
+/* 8026817C-802681A4 0028+00 r=1 e=1 z=0  None .text      ChkSafe__13cBgS_PolyInfoCFPCvUi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_PolyInfo::ChkSafe(void const* param_0, u32 param_1) const {
+asm void cBgS_PolyInfo::ChkSafe(void const* param_0, unsigned int param_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_poly_info/ChkSafe__13cBgS_PolyInfoCFPCvUi.s"
 }
 #pragma pop
 
 
-/* 802681A4-802681AC 0008+00 rc=11 efc=11 rfr=False None .text      SetPolyIndex__13cBgS_PolyInfoFi                              */
+/* 802681A4-802681AC 0008+00 r=11 e=11 z=0  None .text      SetPolyIndex__13cBgS_PolyInfoFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm void cBgS_PolyInfo::SetPolyIndex(int param_0) {
 #pragma pop
 
 
-/* 802681AC-802681C0 0014+00 rc=3 efc=3 rfr=False None .text      ChkBgIndex__13cBgS_PolyInfoCFv                               */
+/* 802681AC-802681C0 0014+00 r=3 e=3 z=0  None .text      ChkBgIndex__13cBgS_PolyInfoCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

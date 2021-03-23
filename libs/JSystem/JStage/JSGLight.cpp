@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct Vec {
-};
-
-struct _GXSpotFn {
-};
-
 struct _GXColor {
 };
 
+struct Vec {
+};
+
 struct _GXDistAttnFn {
+};
+
+struct _GXSpotFn {
 };
 
 struct JStage {
@@ -107,7 +107,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4778-803C47E8 006C+04 rc=2 efc=1 rfr=False None .data      __vt__Q26JStage6TLight                                       */
+/* 803C4778-803C47E8 006C+04 r=2 e=1 z=0  None .data      __vt__Q26JStage6TLight                                       */
 SECTION_DATA void* __vt__Q26JStage6TLight[27 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -140,7 +140,7 @@ SECTION_DATA void* __vt__Q26JStage6TLight[27 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80280D28-80280D88 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q26JStage6TLightFv                                     */
+/* 80280D28-80280D88 0060+00 r=1 e=1 z=0  None .text      __dt__Q26JStage6TLightFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm JStage::TLight::~TLight() {
 #pragma pop
 
 
-/* 80280D88-80280D90 0008+00 rc=2 efc=1 rfr=False None .text      JSGFGetType__Q26JStage6TLightCFv                             */
+/* 80280D88-80280D90 0008+00 r=2 e=1 z=0  None .text      JSGFGetType__Q26JStage6TLightCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm void JStage::TLight::JSGFGetType() const {
 #pragma pop
 
 
-/* 80280D90-80280D98 0008+00 rc=2 efc=1 rfr=False None .text      JSGGetLightType__Q26JStage6TLightCFv                         */
+/* 80280D90-80280D98 0008+00 r=2 e=1 z=0  None .text      JSGGetLightType__Q26JStage6TLightCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm void JStage::TLight::JSGGetLightType() const {
 #pragma pop
 
 
-/* 80280D98-80280D9C 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          */
+/* 80280D98-80280D9C 0004+00 r=1 e=0 z=0  None .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,14 +185,14 @@ asm void JStage::TLight::JSGSetLightType(JStage::TELight param_0) {
 
 
 /* ############################################################################################## */
-/* 804553E8-804553F0 0004+04 rc=1 efc=0 rfr=False None .sdata2    @311                                                         */
+/* 804553E8-804553F0 0004+04 r=1 e=0 z=0  None .sdata2    @311                                                         */
 SECTION_SDATA2 static u32 JSGLight__lit_311[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 80280D9C-80280DB0 0014+00 rc=2 efc=1 rfr=False None .text      JSGGetColor__Q26JStage6TLightCFv                             */
+/* 80280D9C-80280DB0 0014+00 r=2 e=1 z=0  None .text      JSGGetColor__Q26JStage6TLightCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ asm void JStage::TLight::JSGGetColor() const {
 #pragma pop
 
 
-/* 80280DB0-80280DB4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      */
+/* 80280DB0-80280DB4 0004+00 r=1 e=0 z=0  None .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ asm void JStage::TLight::JSGSetColor(_GXColor param_0) {
 #pragma pop
 
 
-/* 80280DB4-80280DB8 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn */
+/* 80280DB4-80280DB8 0004+00 r=2 e=1 z=0  None .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm void JStage::TLight::JSGGetDistanceAttenuation(f32* param_0, f32* param_1, _
 #pragma pop
 
 
-/* 80280DB8-80280DBC 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn */
+/* 80280DB8-80280DBC 0004+00 r=1 e=0 z=0  None .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ asm void JStage::TLight::JSGSetDistanceAttenuation(f32 param_0, f32 param_1, _GX
 #pragma pop
 
 
-/* 80280DBC-80280DC0 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      */
+/* 80280DBC-80280DC0 0004+00 r=2 e=1 z=0  None .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm void JStage::TLight::JSGGetAngleAttenuation(f32* param_0, _GXSpotFn* param_1
 #pragma pop
 
 
-/* 80280DC0-80280DC4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         */
+/* 80280DC0-80280DC4 0004+00 r=1 e=0 z=0  None .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ asm void JStage::TLight::JSGSetAngleAttenuation(f32 param_0, _GXSpotFn param_1) 
 #pragma pop
 
 
-/* 80280DC4-80280DC8 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      */
+/* 80280DC4-80280DC8 0004+00 r=2 e=1 z=0  None .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ asm void JStage::TLight::JSGGetPosition(Vec* param_0) const {
 #pragma pop
 
 
-/* 80280DC8-80280DCC 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      */
+/* 80280DC8-80280DCC 0004+00 r=1 e=0 z=0  None .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ asm void JStage::TLight::JSGSetPosition(Vec const& param_0) {
 #pragma pop
 
 
-/* 80280DCC-80280DD0 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     */
+/* 80280DCC-80280DD0 0004+00 r=2 e=1 z=0  None .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void JStage::TLight::JSGGetDirection(Vec* param_0) const {
 #pragma pop
 
 
-/* 80280DD0-80280DD4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     */
+/* 80280DD0-80280DD4 0004+00 r=1 e=0 z=0  None .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

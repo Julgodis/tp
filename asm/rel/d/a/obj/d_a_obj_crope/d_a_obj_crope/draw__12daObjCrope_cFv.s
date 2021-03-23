@@ -1,0 +1,41 @@
+lbl_80BCE9BC:
+/* 80BCE9BC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BCE9C0 00000004  7C 08 02 A6 */	mflr r0
+/* 80BCE9C4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BCE9C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80BCE9CC 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80BCE9D0 00000014  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
+/* 80BCE9D4 00000018  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80BCE9D8 0000001C  38 80 00 00 */	li r4, 0
+/* 80BCE9DC 00000020  38 BF 04 D0 */	addi r5, r31, 0x4d0
+/* 80BCE9E0 00000024  38 DF 01 0C */	addi r6, r31, 0x10c
+/* 80BCE9E4 00000028  4B FF E2 D5 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80BCE9E8 0000002C  38 7F 10 70 */	addi r3, r31, 0x1070
+/* 80BCE9EC 00000030  38 80 00 64 */	li r4, 0x64
+/* 80BCE9F0 00000034  3C A0 00 00 */	lis r5, lit_4407@ha /* 80BCEB28 */
+/* 80BCE9F4 00000038  C0 25 00 00 */	lfs f1, lit_4407@l(r5) /* 80BCEB28 */
+/* 80BCE9F8 0000003C  3C A0 00 00 */	lis r5, data_80BCEB7C@ha /* 80BCEB7C */
+/* 80BCE9FC 00000040  38 A5 00 00 */	addi r5, r5, data_80BCEB7C@l /* 80BCEB7C */
+/* 80BCEA00 00000044  38 C0 00 00 */	li r6, 0
+/* 80BCEA04 00000048  38 FF 01 0C */	addi r7, r31, 0x10c
+/* 80BCEA08 0000004C  4B FF E2 B1 */	bl update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c
+/* 80BCEA0C 00000050  38 7F 10 70 */	addi r3, r31, 0x1070
+/* 80BCEA10 00000054  81 9F 10 70 */	lwz r12, 0x1070(r31)
+/* 80BCEA14 00000058  81 8C 00 08 */	lwz r12, 8(r12)
+/* 80BCEA18 0000005C  7D 89 03 A6 */	mtctr r12
+/* 80BCEA1C 00000060  4E 80 04 21 */	bctrl 
+/* 80BCEA20 00000064  1C 83 00 14 */	mulli r4, r3, 0x14
+/* 80BCEA24 00000068  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 80BCEA28 0000006C  38 03 00 00 */	addi r0, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BCEA2C 00000070  7C 60 22 14 */	add r3, r0, r4
+/* 80BCEA30 00000074  3C 63 00 01 */	addis r3, r3, 1
+/* 80BCEA34 00000078  38 63 61 54 */	addi r3, r3, 0x6154
+/* 80BCEA38 0000007C  38 63 5F 64 */	addi r3, r3, 0x5f64
+/* 80BCEA3C 00000080  38 9F 10 70 */	addi r4, r31, 0x1070
+/* 80BCEA40 00000084  4B FF E2 79 */	bl setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
+/* 80BCEA44 00000088  38 60 00 01 */	li r3, 1
+/* 80BCEA48 0000008C  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80BCEA4C 00000090  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BCEA50 00000094  7C 08 03 A6 */	mtlr r0
+/* 80BCEA54 00000098  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BCEA58 0000009C  4E 80 00 20 */	blr 

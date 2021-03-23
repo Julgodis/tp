@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -47,10 +47,10 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -154,32 +154,32 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BB410-803BB41C 000C+00 rc=1 efc=0 rfr=False None .data      cNullVec__6Z2Calc                                            */
+/* 803BB410-803BB41C 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 d_file_d_file_sel_warning__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB41C-803BB428 000C+00 rc=0 efc=0 rfr=False None .data      @3805                                                        */
+/* 803BB41C-803BB428 000C+00 r=0 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA void* d_file_d_file_sel_warning__lit_3805[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeWait__15dFile_warning_cFv,
 };
 
-/* 803BB428-803BB434 000C+00 rc=0 efc=0 rfr=False None .data      @3806                                                        */
+/* 803BB428-803BB434 000C+00 r=0 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA void* d_file_d_file_sel_warning__lit_3806[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeMove__15dFile_warning_cFv,
 };
 
-/* 803BB434-803BB44C 0018+00 rc=1 efc=0 rfr=False None .data      fileWarningProc                                              */
+/* 803BB434-803BB44C 0018+00 r=1 e=0 z=0  None .data      fileWarningProc                                              */
 SECTION_DATA static u8 d_file_d_file_sel_warning__fileWarningProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB44C-803BB480 0010+24 rc=3 efc=0 rfr=False None .data      __vt__16dDlst_FileWarn_c                                     */
+/* 803BB44C-803BB480 0010+24 r=3 e=0 z=0  None .data      __vt__16dDlst_FileWarn_c                                     */
 SECTION_DATA static void* __vt__16dDlst_FileWarn_c[4 + 9 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -197,7 +197,7 @@ SECTION_DATA static void* __vt__16dDlst_FileWarn_c[4 + 9 /* padding */] = {
 	NULL,
 };
 
-/* 803BB480-803BB498 000C+0C rc=2 efc=0 rfr=False None .data      __vt__15dFile_warning_c                                      */
+/* 803BB480-803BB498 000C+0C r=2 e=0 z=0  None .data      __vt__15dFile_warning_c                                      */
 SECTION_DATA static void* __vt__15dFile_warning_c[3 + 3 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -208,12 +208,12 @@ SECTION_DATA static void* __vt__15dFile_warning_c[3 + 3 /* padding */] = {
 	NULL,
 };
 
-/* 804539D8-804539DC 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3741                                                        */
+/* 804539D8-804539DC 0004+00 r=3 e=0 z=0  None .sdata2    @3741                                                        */
 SECTION_SDATA2 static u8 d_file_d_file_sel_warning__lit_3741[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80191BAC-80191C18 006C+00 rc=3 efc=3 rfr=False None .text      __ct__15dFile_warning_cFP10JKRArchiveUc                      */
+/* 80191BAC-80191C18 006C+00 r=3 e=3 z=0  None .text      __ct__15dFile_warning_cFP10JKRArchiveUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ asm dFile_warning_c::dFile_warning_c(JKRArchive* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80191C18-80191CF4 00DC+00 rc=1 efc=0 rfr=False None .text      __dt__15dFile_warning_cFv                                    */
+/* 80191C18-80191CF4 00DC+00 r=1 e=0 z=0  None .text      __dt__15dFile_warning_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,37 +236,37 @@ asm dFile_warning_c::~dFile_warning_c() {
 
 
 /* ############################################################################################## */
-/* 80394828-803948B8 0089+07 rc=5 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80394828-803948B8 0089+07 r=5 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80394828 = 
+SECTION_DEAD char const* const stringBase_80394828 = 
     "zelda_file_select_warning_window.blo";
-SECTION_DEAD static char const* const stringBase_8039484D = "zelda_option_set_up_window.blo";
-SECTION_DEAD static char const* const stringBase_8039486C = 
+SECTION_DEAD char const* const stringBase_8039484D = "zelda_option_set_up_window.blo";
+SECTION_DEAD char const* const stringBase_8039486C = 
     "zelda_file_select_warning_window.bck";
-SECTION_DEAD static char const* const stringBase_80394891 = "zelda_option_set_up_window.bck";
-SECTION_DEAD static char const* const stringBase_803948B0 = "";
+SECTION_DEAD char const* const stringBase_80394891 = "zelda_option_set_up_window.bck";
+SECTION_DEAD char const* const stringBase_803948B0 = "";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_803948B1 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 804539DC-804539E0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3769                                                        */
+/* 804539DC-804539E0 0004+00 r=1 e=0 z=0  None .sdata2    @3769                                                        */
 SECTION_SDATA2 static void* d_file_d_file_sel_warning__lit_3769 = (void*)&d_file_d_file_sel_warning__stringBase0;
 
-/* 804539E0-804539E4 0004+00 rc=1 efc=0 rfr=False None .sdata2    None                                                         */
+/* 804539E0-804539E4 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static void* data_804539E0 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x25);
 
-/* 804539E4-804539E8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3770                                                        */
+/* 804539E4-804539E8 0004+00 r=1 e=0 z=0  None .sdata2    @3770                                                        */
 SECTION_SDATA2 static void* d_file_d_file_sel_warning__lit_3770 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x44);
 
-/* 804539E8-804539EC 0004+00 rc=1 efc=0 rfr=False None .sdata2    None                                                         */
+/* 804539E8-804539EC 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static void* data_804539E8 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x69);
 
-/* 804539EC-804539F0 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3799                                                        */
+/* 804539EC-804539F0 0004+00 r=2 e=0 z=0  None .sdata2    @3799                                                        */
 SECTION_SDATA2 static f32 d_file_d_file_sel_warning__lit_3799 = 2849.0f;
 
-/* 80191CF4-80191F18 0224+00 rc=1 efc=0 rfr=False None .text      screenSet__15dFile_warning_cFv                               */
+/* 80191CF4-80191F18 0224+00 r=1 e=0 z=0  None .text      screenSet__15dFile_warning_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +277,7 @@ asm void dFile_warning_c::screenSet() {
 #pragma pop
 
 
-/* 80191F18-80191F90 0078+00 rc=6 efc=6 rfr=False None .text      _move__15dFile_warning_cFv                                   */
+/* 80191F18-80191F90 0078+00 r=6 e=6 z=0  None .text      _move__15dFile_warning_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +288,7 @@ asm void dFile_warning_c::_move() {
 #pragma pop
 
 
-/* 80191F90-80191F94 0004+00 rc=1 efc=0 rfr=False None .text      modeWait__15dFile_warning_cFv                                */
+/* 80191F90-80191F94 0004+00 r=1 e=0 z=0  None .text      modeWait__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +299,7 @@ asm void dFile_warning_c::modeWait() {
 #pragma pop
 
 
-/* 80191F94-80191FD4 0040+00 rc=1 efc=0 rfr=False None .text      modeMove__15dFile_warning_cFv                                */
+/* 80191F94-80191FD4 0040+00 r=1 e=0 z=0  None .text      modeMove__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,10 +311,10 @@ asm void dFile_warning_c::modeMove() {
 
 
 /* ############################################################################################## */
-/* 804539F0-804539F8 0008+00 rc=3 efc=0 rfr=False None .sdata2    @3868                                                        */
+/* 804539F0-804539F8 0008+00 r=3 e=0 z=0  None .sdata2    @3868                                                        */
 SECTION_SDATA2 static f64 d_file_d_file_sel_warning__lit_3868 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80191FD4-801920B8 00E4+00 rc=1 efc=0 rfr=False None .text      baseMoveAnm__15dFile_warning_cFv                             */
+/* 80191FD4-801920B8 00E4+00 r=1 e=0 z=0  None .text      baseMoveAnm__15dFile_warning_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ asm void dFile_warning_c::baseMoveAnm() {
 #pragma pop
 
 
-/* 801920B8-8019210C 0054+00 rc=5 efc=5 rfr=False None .text      openInit__15dFile_warning_cFv                                */
+/* 801920B8-8019210C 0054+00 r=5 e=5 z=0  None .text      openInit__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,7 +336,7 @@ asm void dFile_warning_c::openInit() {
 #pragma pop
 
 
-/* 8019210C-80192160 0054+00 rc=6 efc=6 rfr=False None .text      closeInit__15dFile_warning_cFv                               */
+/* 8019210C-80192160 0054+00 r=6 e=6 z=0  None .text      closeInit__15dFile_warning_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +347,7 @@ asm void dFile_warning_c::closeInit() {
 #pragma pop
 
 
-/* 80192160-80192190 0030+00 rc=4 efc=4 rfr=False None .text      init__15dFile_warning_cFv                                    */
+/* 80192160-80192190 0030+00 r=4 e=4 z=0  None .text      init__15dFile_warning_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -358,7 +358,7 @@ asm void dFile_warning_c::init() {
 #pragma pop
 
 
-/* 80192190-801921CC 003C+00 rc=2 efc=2 rfr=False None .text      _draw__15dFile_warning_cFv                                   */
+/* 80192190-801921CC 003C+00 r=2 e=2 z=0  None .text      _draw__15dFile_warning_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,7 +369,7 @@ asm void dFile_warning_c::_draw() {
 #pragma pop
 
 
-/* 801921CC-801921F8 002C+00 rc=1 efc=1 rfr=False None .text      drawSelf__15dFile_warning_cFv                                */
+/* 801921CC-801921F8 002C+00 r=1 e=1 z=0  None .text      drawSelf__15dFile_warning_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +380,7 @@ asm void dFile_warning_c::drawSelf() {
 #pragma pop
 
 
-/* 801921F8-80192240 0048+00 rc=1 efc=1 rfr=False None .text      setText__15dFile_warning_cFUl                                */
+/* 801921F8-80192240 0048+00 r=1 e=1 z=0  None .text      setText__15dFile_warning_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -391,7 +391,7 @@ asm void dFile_warning_c::setText(u32 param_0) {
 #pragma pop
 
 
-/* 80192240-8019230C 00CC+00 rc=1 efc=1 rfr=False None .text      setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80192240-8019230C 00CC+00 r=1 e=1 z=0  None .text      setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,7 +402,7 @@ asm void dFile_warning_c::setFontColor(JUtility::TColor param_0, JUtility::TColo
 #pragma pop
 
 
-/* 8019230C-80192354 0048+00 rc=1 efc=1 rfr=False None .text      setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor */
+/* 8019230C-80192354 0048+00 r=1 e=1 z=0  None .text      setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -413,7 +413,7 @@ asm void J2DTextBox::setBlackWhite(JUtility::TColor param_0, JUtility::TColor pa
 #pragma pop
 
 
-/* 80192354-8019238C 0038+00 rc=1 efc=0 rfr=False None .text      draw__16dDlst_FileWarn_cFv                                   */
+/* 80192354-8019238C 0038+00 r=1 e=0 z=0  None .text      draw__16dDlst_FileWarn_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,7 +424,7 @@ asm void dDlst_FileWarn_c::draw() {
 #pragma pop
 
 
-/* 8019238C-801923CC 0040+00 rc=1 efc=1 rfr=False None .text      __sinit_d_file_sel_warning_cpp                               */
+/* 8019238C-801923CC 0040+00 r=1 e=1 z=0  None .text      __sinit_d_file_sel_warning_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,7 +435,7 @@ extern "C" asm void __sinit_d_file_sel_warning_cpp() {
 #pragma pop
 
 
-/* 801923CC-80192414 0048+00 rc=1 efc=0 rfr=False None .text      __dt__16dDlst_FileWarn_cFv                                   */
+/* 801923CC-80192414 0048+00 r=1 e=0 z=0  None .text      __dt__16dDlst_FileWarn_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,7 +446,7 @@ asm dDlst_FileWarn_c::~dDlst_FileWarn_c() {
 #pragma pop
 
 
-/* 80192414-80192434 0020+00 rc=1 efc=1 rfr=False None .text      setAnimation__9J2DScreenFP15J2DAnmTransform                  */
+/* 80192414-80192434 0020+00 r=1 e=1 z=0  None .text      setAnimation__9J2DScreenFP15J2DAnmTransform                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

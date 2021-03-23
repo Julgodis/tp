@@ -15,28 +15,22 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-struct J3DAnmTransformKeyData {
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J3DAnmTextureSRTKeyData {
 };
 
-struct J3DAnmVtxColorKeyData {
+struct J3DAnmTransformKeyData {
 };
 
 struct J2DAnmColorKey {
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct J2DAnmTransformKey {
-};
-
-struct J3DAnmTevRegKeyData {
-};
-
-struct J3DAnmColorKeyData {
 };
 
 struct J2DScreen {
@@ -46,7 +40,13 @@ struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-struct J2DAnmTevRegKey {
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
 };
 
 struct J2DAnmVtxColorKey {
@@ -69,7 +69,10 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
-struct J2DAnmColorFull {
+struct J3DAnmVisibilityFullData {
+};
+
+struct J3DAnmColorFullData {
 };
 
 struct J3DAnmVtxColorFullData {
@@ -78,26 +81,23 @@ struct J3DAnmVtxColorFullData {
 struct J2DAnmVtxColorFull {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmVisibilityFull {
+	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
-struct J3DAnmTexPatternFullData {
+struct J2DAnmColorFull {
 };
 
 struct J3DAnmTransformFullData {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
-};
-
-struct J3DAnmVisibilityFullData {
-};
-
 struct J2DAnmTransformFull {
 };
 
-struct J3DAnmColorFullData {
+struct J2DAnmTexPattern {
+};
+
+struct J3DAnmTexPatternFullData {
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -241,7 +241,7 @@ extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 // 
 
 /* ############################################################################################## */
-/* 803CD6C8-803CD6DC 0014+00 rc=2 efc=0 rfr=False None .data      __vt__20J2DAnmFullLoader_v15                                 */
+/* 803CD6C8-803CD6DC 0014+00 r=2 e=0 z=0  None .data      __vt__20J2DAnmFullLoader_v15                                 */
 SECTION_DATA static void* __vt__20J2DAnmFullLoader_v15[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -250,7 +250,7 @@ SECTION_DATA static void* __vt__20J2DAnmFullLoader_v15[5] = {
 	/* 4    */ (void*)__dt__20J2DAnmFullLoader_v15Fv,
 };
 
-/* 803CD6DC-803CD6F0 0014+00 rc=2 efc=0 rfr=False None .data      __vt__19J2DAnmKeyLoader_v15                                  */
+/* 803CD6DC-803CD6F0 0014+00 r=2 e=0 z=0  None .data      __vt__19J2DAnmKeyLoader_v15                                  */
 SECTION_DATA static void* __vt__19J2DAnmKeyLoader_v15[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -259,7 +259,7 @@ SECTION_DATA static void* __vt__19J2DAnmKeyLoader_v15[5] = {
 	/* 4    */ (void*)__dt__19J2DAnmKeyLoader_v15Fv,
 };
 
-/* 803CD6F0-803CD704 0014+00 rc=5 efc=0 rfr=False None .data      __vt__12J2DAnmLoader                                         */
+/* 803CD6F0-803CD704 0014+00 r=5 e=0 z=0  None .data      __vt__12J2DAnmLoader                                         */
 SECTION_DATA static void* __vt__12J2DAnmLoader[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -268,7 +268,7 @@ SECTION_DATA static void* __vt__12J2DAnmLoader[5] = {
 	/* 4    */ (void*)__dt__12J2DAnmLoaderFv,
 };
 
-/* 803CD704-803CD714 0010+00 rc=2 efc=0 rfr=False None .data      __vt__20J2DAnmVisibilityFull                                 */
+/* 803CD704-803CD714 0010+00 r=2 e=0 z=0  None .data      __vt__20J2DAnmVisibilityFull                                 */
 SECTION_DATA static void* __vt__20J2DAnmVisibilityFull[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -276,7 +276,7 @@ SECTION_DATA static void* __vt__20J2DAnmVisibilityFull[4] = {
 	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
 };
 
-/* 803CD714-803CD728 0014+00 rc=4 efc=2 rfr=False None .data      __vt__14J2DAnmVtxColor                                       */
+/* 803CD714-803CD728 0014+00 r=4 e=2 z=0  None .data      __vt__14J2DAnmVtxColor                                       */
 SECTION_DATA void* __vt__14J2DAnmVtxColor[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -285,14 +285,14 @@ SECTION_DATA void* __vt__14J2DAnmVtxColor[5] = {
 	/* 4    */ (void*)getColor__14J2DAnmVtxColorCFUcUsP8_GXColor,
 };
 
-/* 804562F8-80456300 0004+04 rc=11 efc=0 rfr=False None .sdata2    @1581                                                        */
+/* 804562F8-80456300 0004+04 r=11 e=0 z=0  None .sdata2    @1581                                                        */
 SECTION_SDATA2 static u8 J2DAnmLoader__lit_1581[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80308A6C-80309290 0824+00 rc=26 efc=26 rfr=False None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
+/* 80308A6C-80309290 0824+00 r=28 e=26 z=2  None .text      load__20J2DAnmLoaderDataBaseFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +303,7 @@ asm void J2DAnmLoaderDataBase::load(void const* param_0) {
 #pragma pop
 
 
-/* 80309290-803092AC 001C+00 rc=1 efc=0 rfr=False None .text      __ct__19J2DAnmKeyLoader_v15Fv                                */
+/* 80309290-803092AC 001C+00 r=1 e=0 z=0  None .text      __ct__19J2DAnmKeyLoader_v15Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,7 +314,7 @@ asm J2DAnmKeyLoader_v15::J2DAnmKeyLoader_v15() {
 #pragma pop
 
 
-/* 803092AC-80309308 005C+00 rc=2 efc=0 rfr=False None .text      __dt__19J2DAnmKeyLoader_v15Fv                                */
+/* 803092AC-80309308 005C+00 r=2 e=0 z=0  None .text      __dt__19J2DAnmKeyLoader_v15Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ asm J2DAnmKeyLoader_v15::~J2DAnmKeyLoader_v15() {
 #pragma pop
 
 
-/* 80309308-80309414 010C+00 rc=2 efc=0 rfr=False None .text      load__19J2DAnmKeyLoader_v15FPCv                              */
+/* 80309308-80309414 010C+00 r=2 e=0 z=0  None .text      load__19J2DAnmKeyLoader_v15FPCv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,7 +336,7 @@ asm void J2DAnmKeyLoader_v15::load(void const* param_0) {
 #pragma pop
 
 
-/* 80309414-80309570 015C+00 rc=1 efc=0 rfr=False None .text      setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv          */
+/* 80309414-80309570 015C+00 r=1 e=0 z=0  None .text      setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +347,7 @@ asm void J2DAnmKeyLoader_v15::setResource(J2DAnmBase* param_0, void const* param
 #pragma pop
 
 
-/* 80309570-80309598 0028+00 rc=1 efc=0 rfr=False None .text      readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData */
+/* 80309570-80309598 0028+00 r=1 e=0 z=0  None .text      readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -358,7 +358,7 @@ asm void J2DAnmKeyLoader_v15::readAnmTransform(J3DAnmTransformKeyData const* par
 #pragma pop
 
 
-/* 80309598-80309634 009C+00 rc=2 efc=0 rfr=False None .text      setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData */
+/* 80309598-80309634 009C+00 r=2 e=0 z=0  None .text      setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,7 +369,7 @@ asm void J2DAnmKeyLoader_v15::setAnmTransform(J2DAnmTransformKey* param_0, J3DAn
 #pragma pop
 
 
-/* 80309634-8030965C 0028+00 rc=1 efc=0 rfr=False None .text      readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData */
+/* 80309634-8030965C 0028+00 r=1 e=0 z=0  None .text      readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +380,7 @@ asm void J2DAnmKeyLoader_v15::readAnmTextureSRT(J3DAnmTextureSRTKeyData const* p
 #pragma pop
 
 
-/* 8030965C-80309848 01EC+00 rc=2 efc=0 rfr=False None .text      setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData */
+/* 8030965C-80309848 01EC+00 r=2 e=0 z=0  None .text      setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -391,7 +391,7 @@ asm void J2DAnmKeyLoader_v15::setAnmTextureSRT(J2DAnmTextureSRTKey* param_0, J3D
 #pragma pop
 
 
-/* 80309848-80309870 0028+00 rc=1 efc=0 rfr=False None .text      readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData   */
+/* 80309848-80309870 0028+00 r=1 e=0 z=0  None .text      readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,7 +402,7 @@ asm void J2DAnmKeyLoader_v15::readAnmColor(J3DAnmColorKeyData const* param_0) {
 #pragma pop
 
 
-/* 80309870-8030995C 00EC+00 rc=2 efc=0 rfr=False None .text      setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData */
+/* 80309870-8030995C 00EC+00 r=2 e=0 z=0  None .text      setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -413,7 +413,7 @@ asm void J2DAnmKeyLoader_v15::setAnmColor(J2DAnmColorKey* param_0, J3DAnmColorKe
 #pragma pop
 
 
-/* 8030995C-80309984 0028+00 rc=1 efc=0 rfr=False None .text      readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData */
+/* 8030995C-80309984 0028+00 r=1 e=0 z=0  None .text      readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,7 +424,7 @@ asm void J2DAnmKeyLoader_v15::readAnmVtxColor(J3DAnmVtxColorKeyData const* param
 #pragma pop
 
 
-/* 80309984-80309A80 00FC+00 rc=2 efc=0 rfr=False None .text      setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData */
+/* 80309984-80309A80 00FC+00 r=2 e=0 z=0  None .text      setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,7 +435,7 @@ asm void J2DAnmKeyLoader_v15::setAnmVtxColor(J2DAnmVtxColorKey* param_0, J3DAnmV
 #pragma pop
 
 
-/* 80309A80-80309B8C 010C+00 rc=2 efc=0 rfr=False None .text      load__20J2DAnmFullLoader_v15FPCv                             */
+/* 80309A80-80309B8C 010C+00 r=2 e=0 z=0  None .text      load__20J2DAnmFullLoader_v15FPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,7 +446,7 @@ asm void J2DAnmFullLoader_v15::load(void const* param_0) {
 #pragma pop
 
 
-/* 80309B8C-80309CE8 015C+00 rc=1 efc=0 rfr=False None .text      setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv         */
+/* 80309B8C-80309CE8 015C+00 r=1 e=0 z=0  None .text      setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +457,7 @@ asm void J2DAnmFullLoader_v15::setResource(J2DAnmBase* param_0, void const* para
 #pragma pop
 
 
-/* 80309CE8-80309D04 001C+00 rc=1 efc=0 rfr=False None .text      __ct__20J2DAnmFullLoader_v15Fv                               */
+/* 80309CE8-80309D04 001C+00 r=1 e=0 z=0  None .text      __ct__20J2DAnmFullLoader_v15Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +468,7 @@ asm J2DAnmFullLoader_v15::J2DAnmFullLoader_v15() {
 #pragma pop
 
 
-/* 80309D04-80309D60 005C+00 rc=2 efc=0 rfr=False None .text      __dt__20J2DAnmFullLoader_v15Fv                               */
+/* 80309D04-80309D60 005C+00 r=2 e=0 z=0  None .text      __dt__20J2DAnmFullLoader_v15Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +479,7 @@ asm J2DAnmFullLoader_v15::~J2DAnmFullLoader_v15() {
 #pragma pop
 
 
-/* 80309D60-80309D88 0028+00 rc=1 efc=0 rfr=False None .text      readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData */
+/* 80309D60-80309D88 0028+00 r=1 e=0 z=0  None .text      readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +490,7 @@ asm void J2DAnmFullLoader_v15::readAnmTransform(J3DAnmTransformFullData const* p
 #pragma pop
 
 
-/* 80309D88-80309E1C 0094+00 rc=2 efc=0 rfr=False None .text      setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData */
+/* 80309D88-80309E1C 0094+00 r=2 e=0 z=0  None .text      setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,7 +501,7 @@ asm void J2DAnmFullLoader_v15::setAnmTransform(J2DAnmTransformFull* param_0, J3D
 #pragma pop
 
 
-/* 80309E1C-80309E44 0028+00 rc=1 efc=0 rfr=False None .text      readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData */
+/* 80309E1C-80309E44 0028+00 r=1 e=0 z=0  None .text      readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +512,7 @@ asm void J2DAnmFullLoader_v15::readAnmColor(J3DAnmColorFullData const* param_0) 
 #pragma pop
 
 
-/* 80309E44-80309F10 00CC+00 rc=2 efc=0 rfr=False None .text      setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData */
+/* 80309E44-80309F10 00CC+00 r=2 e=0 z=0  None .text      setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +523,7 @@ asm void J2DAnmFullLoader_v15::setAnmColor(J2DAnmColorFull* param_0, J3DAnmColor
 #pragma pop
 
 
-/* 80309F10-80309F38 0028+00 rc=1 efc=0 rfr=False None .text      readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData */
+/* 80309F10-80309F38 0028+00 r=1 e=0 z=0  None .text      readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +534,7 @@ asm void J2DAnmFullLoader_v15::readAnmTexPattern(J3DAnmTexPatternFullData const*
 #pragma pop
 
 
-/* 80309F38-80309FDC 00A4+00 rc=2 efc=0 rfr=False None .text      setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData */
+/* 80309F38-80309FDC 00A4+00 r=2 e=0 z=0  None .text      setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +545,7 @@ asm void J2DAnmFullLoader_v15::setAnmTexPattern(J2DAnmTexPattern* param_0, J3DAn
 #pragma pop
 
 
-/* 80309FDC-8030A004 0028+00 rc=1 efc=0 rfr=False None .text      readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData */
+/* 80309FDC-8030A004 0028+00 r=1 e=0 z=0  None .text      readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +556,7 @@ asm void J2DAnmKeyLoader_v15::readAnmTevReg(J3DAnmTevRegKeyData const* param_0) 
 #pragma pop
 
 
-/* 8030A004-8030A190 018C+00 rc=2 efc=0 rfr=False None .text      setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData */
+/* 8030A004-8030A190 018C+00 r=2 e=0 z=0  None .text      setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +567,7 @@ asm void J2DAnmKeyLoader_v15::setAnmTevReg(J2DAnmTevRegKey* param_0, J3DAnmTevRe
 #pragma pop
 
 
-/* 8030A190-8030A1B8 0028+00 rc=1 efc=0 rfr=False None .text      readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData */
+/* 8030A190-8030A1B8 0028+00 r=1 e=0 z=0  None .text      readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,7 +578,7 @@ asm void J2DAnmFullLoader_v15::readAnmVisibility(J3DAnmVisibilityFullData const*
 #pragma pop
 
 
-/* 8030A1B8-8030A234 007C+00 rc=2 efc=0 rfr=False None .text      setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData */
+/* 8030A1B8-8030A234 007C+00 r=2 e=0 z=0  None .text      setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,7 +589,7 @@ asm void J2DAnmFullLoader_v15::setAnmVisibility(J2DAnmVisibilityFull* param_0, J
 #pragma pop
 
 
-/* 8030A234-8030A25C 0028+00 rc=1 efc=0 rfr=False None .text      readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData */
+/* 8030A234-8030A25C 0028+00 r=1 e=0 z=0  None .text      readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,7 +600,7 @@ asm void J2DAnmFullLoader_v15::readAnmVtxColor(J3DAnmVtxColorFullData const* par
 #pragma pop
 
 
-/* 8030A25C-8030A358 00FC+00 rc=2 efc=0 rfr=False None .text      setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData */
+/* 8030A25C-8030A358 00FC+00 r=2 e=0 z=0  None .text      setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,7 +611,7 @@ asm void J2DAnmFullLoader_v15::setAnmVtxColor(J2DAnmVtxColorFull* param_0, J3DAn
 #pragma pop
 
 
-/* 8030A358-8030A3B4 005C+00 rc=1 efc=0 rfr=False None .text      __dt__14J2DAnmVtxColorFv                                     */
+/* 8030A358-8030A3B4 005C+00 r=1 e=0 z=0  None .text      __dt__14J2DAnmVtxColorFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -622,7 +622,7 @@ asm J2DAnmVtxColor::~J2DAnmVtxColor() {
 #pragma pop
 
 
-/* 8030A3B4-8030A410 005C+00 rc=1 efc=0 rfr=False None .text      __dt__20J2DAnmVisibilityFullFv                               */
+/* 8030A3B4-8030A410 005C+00 r=1 e=0 z=0  None .text      __dt__20J2DAnmVisibilityFullFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -633,7 +633,7 @@ asm J2DAnmVisibilityFull::~J2DAnmVisibilityFull() {
 #pragma pop
 
 
-/* 8030A410-8030A458 0048+00 rc=1 efc=0 rfr=False None .text      __dt__12J2DAnmLoaderFv                                       */
+/* 8030A410-8030A458 0048+00 r=1 e=0 z=0  None .text      __dt__12J2DAnmLoaderFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +644,7 @@ asm J2DAnmLoader::~J2DAnmLoader() {
 #pragma pop
 
 
-/* 8030A458-8030A470 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<25J3DAnmVisibilityFullTable>__FPCvPCv  */
+/* 8030A458-8030A470 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<25J3DAnmVisibilityFullTable>__FPCvPCv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -655,7 +655,7 @@ asm void JSUConvertOffsetToPtr__template30(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A470-8030A488 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<18J3DAnmKRegKeyTable>__FPCvPCv         */
+/* 8030A470-8030A488 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<18J3DAnmKRegKeyTable>__FPCvPCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -666,7 +666,7 @@ asm void JSUConvertOffsetToPtr__template31(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A488-8030A4A0 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<18J3DAnmCRegKeyTable>__FPCvPCv         */
+/* 8030A488-8030A4A0 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<18J3DAnmCRegKeyTable>__FPCvPCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +677,7 @@ asm void JSUConvertOffsetToPtr__template32(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A4A0-8030A4B8 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<25J3DAnmTexPatternFullTable>__FPCvPCv  */
+/* 8030A4A0-8030A4B8 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<25J3DAnmTexPatternFullTable>__FPCvPCv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,7 +688,7 @@ asm void JSUConvertOffsetToPtr__template33(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A4B8-8030A4D0 0018+00 rc=4 efc=2 rfr=False None .text      JSUConvertOffsetToPtr<20J3DAnmColorFullTable>__FPCvPCv       */
+/* 8030A4B8-8030A4D0 0018+00 r=4 e=2 z=0  None .text      JSUConvertOffsetToPtr<20J3DAnmColorFullTable>__FPCvPCv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -699,7 +699,7 @@ asm void JSUConvertOffsetToPtr__template34(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A4D0-8030A4E8 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<24J3DAnmTransformFullTable>__FPCvPCv   */
+/* 8030A4D0-8030A4E8 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<24J3DAnmTransformFullTable>__FPCvPCv   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,7 +710,7 @@ asm void JSUConvertOffsetToPtr__template35(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A4E8-8030A500 0018+00 rc=4 efc=2 rfr=False None .text      JSUConvertOffsetToPtr<23J3DAnmVtxColorIndexData>__FPCvPCv    */
+/* 8030A4E8-8030A500 0018+00 r=4 e=2 z=0  None .text      JSUConvertOffsetToPtr<23J3DAnmVtxColorIndexData>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,7 +721,7 @@ asm void JSUConvertOffsetToPtr__template36(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A500-8030A518 0018+00 rc=4 efc=2 rfr=False None .text      JSUConvertOffsetToPtr<19J3DAnmColorKeyTable>__FPCvPCv        */
+/* 8030A500-8030A518 0018+00 r=4 e=2 z=0  None .text      JSUConvertOffsetToPtr<19J3DAnmColorKeyTable>__FPCvPCv        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -732,7 +732,7 @@ asm void JSUConvertOffsetToPtr__template37(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A518-8030A530 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<3Vec>__FPCvPCv                         */
+/* 8030A518-8030A530 0018+00 r=2 e=1 z=0  None .text      JSUConvertOffsetToPtr<3Vec>__FPCvPCv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -743,7 +743,7 @@ asm void JSUConvertOffsetToPtr__template38(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A530-8030A548 0018+00 rc=21 efc=16 rfr=False None .text      JSUConvertOffsetToPtr<7ResNTAB>__FPCvPCv                     */
+/* 8030A530-8030A548 0018+00 r=21 e=16 z=0  None .text      JSUConvertOffsetToPtr<7ResNTAB>__FPCvPCv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -754,7 +754,7 @@ asm void JSUConvertOffsetToPtr__template39(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A548-8030A560 0018+00 rc=12 efc=6 rfr=False None .text      JSUConvertOffsetToPtr<s>__FPCvPCv                            */
+/* 8030A548-8030A560 0018+00 r=12 e=6 z=0  None .text      JSUConvertOffsetToPtr<s>__FPCvPCv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +765,7 @@ asm void JSUConvertOffsetToPtr__template40(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A560-8030A578 0018+00 rc=10 efc=7 rfr=False None .text      JSUConvertOffsetToPtr<f>__FPCvPCv                            */
+/* 8030A560-8030A578 0018+00 r=10 e=7 z=0  None .text      JSUConvertOffsetToPtr<f>__FPCvPCv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +776,7 @@ asm void JSUConvertOffsetToPtr__template41(void const* param_0, void const* para
 #pragma pop
 
 
-/* 8030A578-8030A590 0018+00 rc=4 efc=2 rfr=False None .text      JSUConvertOffsetToPtr<23J3DAnmTransformKeyTable>__FPCvPCv    */
+/* 8030A578-8030A590 0018+00 r=4 e=2 z=0  None .text      JSUConvertOffsetToPtr<23J3DAnmTransformKeyTable>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

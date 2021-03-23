@@ -1,0 +1,29 @@
+lbl_804DDB48:
+/* 804DDB48 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 804DDB4C 00000004  7C 08 02 A6 */	mflr r0
+/* 804DDB50 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 804DDB54 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 804DDB58 00000010  3B E0 00 00 */	li r31, 0
+/* 804DDB5C 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 804DDB60 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 804DDB64 0000001C  38 63 07 F0 */	addi r3, r3, 0x7f0
+/* 804DDB68 00000020  38 80 25 40 */	li r4, 0x2540
+/* 804DDB6C 00000024  4B FF FD CD */	bl isEventBit__11dSv_event_cCFUs
+/* 804DDB70 00000028  2C 03 00 00 */	cmpwi r3, 0
+/* 804DDB74 0000002C  40 82 00 28 */	bne lbl_804DDB9C
+/* 804DDB78 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 804DDB7C 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 804DDB80 00000038  38 63 4E 00 */	addi r3, r3, 0x4e00
+/* 804DDB84 0000003C  3C 80 00 00 */	lis r4, l_spStageName@ha /* 804DF8D4 */
+/* 804DDB88 00000040  38 84 00 00 */	addi r4, r4, l_spStageName@l /* 804DF8D4 */
+/* 804DDB8C 00000044  4B FF FD AD */	bl strcmp
+/* 804DDB90 00000048  2C 03 00 00 */	cmpwi r3, 0
+/* 804DDB94 0000004C  40 82 00 08 */	bne lbl_804DDB9C
+/* 804DDB98 00000050  3B E0 00 01 */	li r31, 1
+lbl_804DDB9C:
+/* 804DDB9C 00000000  57 E3 06 3E */	clrlwi r3, r31, 0x18
+/* 804DDBA0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 804DDBA4 00000008  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 804DDBA8 0000000C  7C 08 03 A6 */	mtlr r0
+/* 804DDBAC 00000010  38 21 00 10 */	addi r1, r1, 0x10
+/* 804DDBB0 00000014  4E 80 00 20 */	blr 

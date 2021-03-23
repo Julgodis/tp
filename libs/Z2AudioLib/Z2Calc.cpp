@@ -62,7 +62,7 @@ extern "C" void pow(); // 1
 // Declarations:
 // 
 
-/* 802A968C-802A96F4 0068+00 rc=17 efc=16 rfr=False None .text      linearTransform__6Z2CalcFfffffb                              */
+/* 802A968C-802A96F4 0068+00 r=17 e=16 z=0  None .text      linearTransform__6Z2CalcFfffffb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,21 +74,21 @@ asm void Z2Calc::linearTransform(f32 param_0, f32 param_1, f32 param_2, f32 para
 
 
 /* ############################################################################################## */
-/* 80455820-80455824 0004+00 rc=1 efc=1 rfr=False None .sdata2    cEqualCSlope__6Z2Calc                                        */
+/* 80455820-80455824 0004+00 r=1 e=1 z=0  None .sdata2    cEqualCSlope__6Z2Calc                                        */
 SECTION_SDATA2 f32 cEqualCSlope__6Z2Calc = 1.0f;
 
-/* 80455824-80455828 0004+00 rc=1 efc=1 rfr=False None .sdata2    cEqualPSlope__6Z2Calc                                        */
+/* 80455824-80455828 0004+00 r=1 e=1 z=0  None .sdata2    cEqualPSlope__6Z2Calc                                        */
 SECTION_SDATA2 f32 cEqualPSlope__6Z2Calc = 0.5f;
 
-/* 80455828-8045582C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @380                                                         */
+/* 80455828-8045582C 0004+00 r=1 e=0 z=0  None .sdata2    @380                                                         */
 SECTION_SDATA2 static u8 lit_380[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045582C-80455830 0004+00 rc=4 efc=0 rfr=False None .sdata2    @381                                                         */
+/* 8045582C-80455830 0004+00 r=4 e=0 z=0  None .sdata2    @381                                                         */
 SECTION_SDATA2 static f32 lit_381 = 1.0f;
 
-/* 802A96F4-802A9814 0120+00 rc=29 efc=29 rfr=False None .text      getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign             */
+/* 802A96F4-802A9814 0120+00 r=29 e=29 z=0  None .text      getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,13 +100,13 @@ asm void Z2Calc::getParamByExp(f32 param_0, f32 param_1, f32 param_2, f32 param_
 
 
 /* ############################################################################################## */
-/* 80455830-80455834 0004+00 rc=1 efc=0 rfr=False None .sdata2    @396                                                         */
+/* 80455830-80455834 0004+00 r=1 e=0 z=0  None .sdata2    @396                                                         */
 SECTION_SDATA2 static f32 lit_396 = 2.0f;
 
-/* 80455834-80455838 0004+00 rc=1 efc=0 rfr=False None .sdata2    @397                                                         */
+/* 80455834-80455838 0004+00 r=1 e=0 z=0  None .sdata2    @397                                                         */
 SECTION_SDATA2 static f32 lit_397 = -2.0f;
 
-/* 802A9814-802A98D4 00C0+00 rc=2 efc=2 rfr=False None .text      getRandom__6Z2CalcFfff                                       */
+/* 802A9814-802A98D4 00C0+00 r=2 e=2 z=0  None .text      getRandom__6Z2CalcFfff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,13 +118,13 @@ asm void Z2Calc::getRandom(f32 param_0, f32 param_1, f32 param_2) {
 
 
 /* ############################################################################################## */
-/* 80451330-80451334 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+/* 80451330-80451334 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451330[4];
 
-/* 80451334-80451338 0004+00 rc=1 efc=0 rfr=False None .sbss      oRandom$401                                                  */
+/* 80451334-80451338 0004+00 r=1 e=0 z=0  None .sbss      oRandom$401                                                  */
 static u8 data_80451334[4];
 
-/* 802A98D4-802A9944 0070+00 rc=2 efc=1 rfr=False None .text      getRandom_0_1__6Z2CalcFv                                     */
+/* 802A98D4-802A9944 0070+00 r=2 e=1 z=0  None .text      getRandom_0_1__6Z2CalcFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void Z2Calc::getRandom_0_1() {
 #pragma pop
 
 
-/* 802A9944-802A9958 0014+00 rc=1 efc=1 rfr=False None .text      setParam__Q26Z2Calc8FNoise1fFfff                             */
+/* 802A9944-802A9958 0014+00 r=1 e=1 z=0  None .text      setParam__Q26Z2Calc8FNoise1fFfff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm void Z2Calc::FNoise1f::setParam(f32 param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 802A9958-802A99A0 0048+00 rc=1 efc=0 rfr=False None .text      tau__Q26Z2Calc8FNoise1fFf                                    */
+/* 802A9958-802A99A0 0048+00 r=1 e=0 z=0  None .text      tau__Q26Z2Calc8FNoise1fFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void Z2Calc::FNoise1f::tau(f32 param_0) {
 #pragma pop
 
 
-/* 802A99A0-802A9A34 0094+00 rc=5 efc=5 rfr=False None .text      calcNoise1f__Q26Z2Calc8FNoise1fFv                            */
+/* 802A99A0-802A9A34 0094+00 r=5 e=5 z=0  None .text      calcNoise1f__Q26Z2Calc8FNoise1fFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

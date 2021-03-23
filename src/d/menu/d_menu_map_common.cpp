@@ -36,10 +36,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct J2DRotateAxis {
+struct J2DBasePosition {
 };
 
-struct J2DBasePosition {
+struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -103,7 +103,7 @@ extern "C" extern u8 g_fmapHIO[1188];
 // 
 
 /* ############################################################################################## */
-/* 803BCF18-803BD02C 0114+00 rc=2 efc=0 rfr=False None .data      map_icon_size                                                */
+/* 803BCF18-803BD02C 0114+00 r=2 e=0 z=0  None .data      map_icon_size                                                */
 SECTION_DATA static u8 map_icon_size[276] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
@@ -125,19 +125,19 @@ SECTION_DATA static u8 map_icon_size[276] = {
 	0x16, 0x00, 0x00, 0x00,
 };
 
-/* 803BD02C-803BD038 000C+00 rc=2 efc=0 rfr=False None .data      __vt__16dMenuMapCommon_c                                     */
+/* 803BD02C-803BD038 000C+00 r=2 e=0 z=0  None .data      __vt__16dMenuMapCommon_c                                     */
 SECTION_DATA static void* __vt__16dMenuMapCommon_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__16dMenuMapCommon_cFv,
 };
 
-/* 804540D8-804540DC 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3703                                                        */
+/* 804540D8-804540DC 0004+00 r=6 e=0 z=0  None .sdata2    @3703                                                        */
 SECTION_SDATA2 static u8 d_menu_d_menu_map_common__lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801C2718-801C27B4 009C+00 rc=2 efc=2 rfr=False None .text      __ct__16dMenuMapCommon_cFv                                   */
+/* 801C2718-801C27B4 009C+00 r=2 e=2 z=0  None .text      __ct__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm dMenuMapCommon_c::dMenuMapCommon_c() {
 #pragma pop
 
 
-/* 801C27B4-801C28D8 0124+00 rc=3 efc=2 rfr=False None .text      __dt__16dMenuMapCommon_cFv                                   */
+/* 801C27B4-801C28D8 0124+00 r=3 e=2 z=0  None .text      __dt__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,64 +160,64 @@ asm dMenuMapCommon_c::~dMenuMapCommon_c() {
 
 
 /* ############################################################################################## */
-/* 803959C0-80395D90 03CF+01 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 803959C0-80395D90 03CF+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_803959C0 = 
+SECTION_DEAD char const* const stringBase_803959C0 = 
     "tt_map_icon_boss_s_ci8_16_00.bti";
-SECTION_DEAD static char const* const stringBase_803959E1 = "tt_map_icon_boss_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395A00 = "im_map_icon_enter_ci8_24_02.bti";
-SECTION_DEAD static char const* const stringBase_80395A20 = "im_map_icon_enter_ci8_02.bti";
-SECTION_DEAD static char const* const stringBase_80395A3D = 
+SECTION_DEAD char const* const stringBase_803959E1 = "tt_map_icon_boss_ci8_32_00.bti";
+SECTION_DEAD char const* const stringBase_80395A00 = "im_map_icon_enter_ci8_24_02.bti";
+SECTION_DEAD char const* const stringBase_80395A20 = "im_map_icon_enter_ci8_02.bti";
+SECTION_DEAD char const* const stringBase_80395A3D = 
     "tt_map_icon_enter_s_ci8_24_00.bti";
-SECTION_DEAD static char const* const stringBase_80395A5F = "tt_map_icon_enter_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395A7F = "im_map_icon_warp_24_ci8_00.bti";
-SECTION_DEAD static char const* const stringBase_80395A9E = "im_map_icon_warp_32_ci8_00.bti";
-SECTION_DEAD static char const* const stringBase_80395ABD = "tt_map_icon_box_s_ci8_24_00.bti";
-SECTION_DEAD static char const* const stringBase_80395ADD = "tt_map_icon_box_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395AFB = 
+SECTION_DEAD char const* const stringBase_80395A5F = "tt_map_icon_enter_ci8_32_00.bti";
+SECTION_DEAD char const* const stringBase_80395A7F = "im_map_icon_warp_24_ci8_00.bti";
+SECTION_DEAD char const* const stringBase_80395A9E = "im_map_icon_warp_32_ci8_00.bti";
+SECTION_DEAD char const* const stringBase_80395ABD = "tt_map_icon_box_s_ci8_24_00.bti";
+SECTION_DEAD char const* const stringBase_80395ADD = "tt_map_icon_box_ci8_32_00.bti";
+SECTION_DEAD char const* const stringBase_80395AFB = 
     "tt_map_icon_s_size_circle_ci4_gray_00.bti";
-SECTION_DEAD static char const* const stringBase_80395B25 = "tt_map_icon_key_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395B43 = 
+SECTION_DEAD char const* const stringBase_80395B25 = "tt_map_icon_key_ci8_32_00.bti";
+SECTION_DEAD char const* const stringBase_80395B43 = 
     "tt_map_icon_s_size_circle_ci4_00.bti";
-SECTION_DEAD static char const* const stringBase_80395B68 = "st_yuki_M.bti";
-SECTION_DEAD static char const* const stringBase_80395B76 = "st_yuki_W.bti";
-SECTION_DEAD static char const* const stringBase_80395B84 = 
+SECTION_DEAD char const* const stringBase_80395B68 = "st_yuki_M.bti";
+SECTION_DEAD char const* const stringBase_80395B76 = "st_yuki_W.bti";
+SECTION_DEAD char const* const stringBase_80395B84 = 
     "tt_map_icon_s_size_circle_ci4_yellow_00.bti";
-SECTION_DEAD static char const* const stringBase_80395BB0 = "st_gold_wolf.bti";
-SECTION_DEAD static char const* const stringBase_80395BC1 = 
+SECTION_DEAD char const* const stringBase_80395BB0 = "st_gold_wolf.bti";
+SECTION_DEAD char const* const stringBase_80395BC1 = 
     "tt_map_icon_monkey_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395BE2 = 
+SECTION_DEAD char const* const stringBase_80395BE2 = 
     "tt_map_icon_s_size_circle_ci4_blue_00.bti";
-SECTION_DEAD static char const* const stringBase_80395C0C = "ni_obacyan.bti";
-SECTION_DEAD static char const* const stringBase_80395C1B = 
+SECTION_DEAD char const* const stringBase_80395C0C = "ni_obacyan.bti";
+SECTION_DEAD char const* const stringBase_80395C1B = 
     "im_zelda_map_icon_copy_stone_statue_snup_try_00_"
     "04.bti";
-SECTION_DEAD static char const* const stringBase_80395C52 = 
+SECTION_DEAD char const* const stringBase_80395C52 = 
     "tt_map_icon_link_s_ci8_24_00.bti";
-SECTION_DEAD static char const* const stringBase_80395C73 = "tt_map_icon_link_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395C92 = 
+SECTION_DEAD char const* const stringBase_80395C73 = "tt_map_icon_link_ci8_32_00.bti";
+SECTION_DEAD char const* const stringBase_80395C92 = 
     "tt_map_icon_penant_s_ci8_24_00.bti";
-SECTION_DEAD static char const* const stringBase_80395CB5 = 
+SECTION_DEAD char const* const stringBase_80395CB5 = 
     "tt_map_icon_penant_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395CD6 = "im_black_32.bti";
-SECTION_DEAD static char const* const stringBase_80395CE6 = 
+SECTION_DEAD char const* const stringBase_80395CD6 = "im_black_32.bti";
+SECTION_DEAD char const* const stringBase_80395CE6 = 
     "im_hikari_no_shizuku_try_10_00_24x24.bti";
-SECTION_DEAD static char const* const stringBase_80395D0F = 
+SECTION_DEAD char const* const stringBase_80395D0F = 
     "im_zelda_map_icon_hikari_ball_03.bti";
-SECTION_DEAD static char const* const stringBase_80395D34 = 
+SECTION_DEAD char const* const stringBase_80395D34 = 
     "im_map_icon_iron_ball_ci8_32_00.bti";
-SECTION_DEAD static char const* const stringBase_80395D58 = "im_map_icon_basha_ci8.bti";
-SECTION_DEAD static char const* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.bti";
+SECTION_DEAD char const* const stringBase_80395D58 = "im_map_icon_basha_ci8.bti";
+SECTION_DEAD char const* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.bti";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80395D8F = "";
 #pragma pop
 
-/* 804540DC-804540E0 0004+00 rc=7 efc=0 rfr=False None .sdata2    @3882                                                        */
+/* 804540DC-804540E0 0004+00 r=7 e=0 z=0  None .sdata2    @3882                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_3882 = 1.0f;
 
-/* 801C28D8-801C38E4 100C+00 rc=2 efc=2 rfr=False None .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
+/* 801C28D8-801C38E4 100C+00 r=2 e=2 z=0  None .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,19 +229,19 @@ asm void dMenuMapCommon_c::initiate(JKRArchive* param_0) {
 
 
 /* ############################################################################################## */
-/* 804540E0-804540E4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4010                                                        */
+/* 804540E0-804540E4 0004+00 r=1 e=0 z=0  None .sdata2    @4010                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4010 = 255.0f;
 
-/* 804540E4-804540E8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4011                                                        */
+/* 804540E4-804540E8 0004+00 r=1 e=0 z=0  None .sdata2    @4011                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4011 = 4.0f / 7.0f;
 
-/* 804540E8-804540EC 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4012                                                        */
+/* 804540E8-804540EC 0004+00 r=3 e=0 z=0  None .sdata2    @4012                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4012 = 0.5f;
 
-/* 804540EC-804540F0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4013                                                        */
+/* 804540EC-804540F0 0004+00 r=1 e=0 z=0  None .sdata2    @4013                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4013 = 180.0f;
 
-/* 801C38E4-801C3EC4 05E0+00 rc=2 efc=2 rfr=False None .text      drawIcon__16dMenuMapCommon_cFffff                            */
+/* 801C38E4-801C3EC4 05E0+00 r=2 e=2 z=0  None .text      drawIcon__16dMenuMapCommon_cFffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,13 +253,13 @@ asm void dMenuMapCommon_c::drawIcon(f32 param_0, f32 param_1, f32 param_2, f32 p
 
 
 /* ############################################################################################## */
-/* 804540F0-804540F4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4072                                                        */
+/* 804540F0-804540F4 0004+00 r=1 e=0 z=0  None .sdata2    @4072                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4072 = 16.0f / 27.0f;
 
-/* 804540F4-804540F8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4073                                                        */
+/* 804540F4-804540F8 0004+00 r=1 e=0 z=0  None .sdata2    @4073                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
 
-/* 801C3EC4-801C43A8 04E4+00 rc=4 efc=4 rfr=False None .text      iconScale__16dMenuMapCommon_cFifff                           */
+/* 801C3EC4-801C43A8 04E4+00 r=4 e=4 z=0  None .text      iconScale__16dMenuMapCommon_cFifff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +270,7 @@ asm void dMenuMapCommon_c::iconScale(int param_0, f32 param_1, f32 param_2, f32 
 #pragma pop
 
 
-/* 801C43A8-801C443C 0094+00 rc=4 efc=3 rfr=False None .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
+/* 801C43A8-801C443C 0094+00 r=4 e=3 z=0  None .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +281,7 @@ asm void dMenuMapCommon_c::setIconInfo(u8 param_0, f32 param_1, f32 param_2, f32
 #pragma pop
 
 
-/* 801C443C-801C4494 0058+00 rc=3 efc=2 rfr=False None .text      clearIconInfo__16dMenuMapCommon_cFv                          */
+/* 801C443C-801C4494 0058+00 r=3 e=2 z=0  None .text      clearIconInfo__16dMenuMapCommon_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ asm void dMenuMapCommon_c::clearIconInfo() {
 #pragma pop
 
 
-/* 801C4494-801C452C 0098+00 rc=1 efc=0 rfr=False None .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
+/* 801C4494-801C452C 0098+00 r=1 e=0 z=0  None .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,10 +304,10 @@ asm void dMenuMapCommon_c::setBlendRatio(u8 param_0, f32 param_1, f32 param_2) {
 
 
 /* ############################################################################################## */
-/* 804540F8-80454100 0008+00 rc=2 efc=0 rfr=False None .sdata2    @4119                                                        */
+/* 804540F8-80454100 0008+00 r=2 e=0 z=0  None .sdata2    @4119                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4119 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801C452C-801C4600 00D4+00 rc=1 efc=1 rfr=False None .text      blinkMove__16dMenuMapCommon_cFs                              */
+/* 801C452C-801C4600 00D4+00 r=1 e=1 z=0  None .text      blinkMove__16dMenuMapCommon_cFs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,10 +319,10 @@ asm void dMenuMapCommon_c::blinkMove(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80454100-80454108 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4140                                                        */
+/* 80454100-80454108 0008+00 r=1 e=0 z=0  None .sdata2    @4140                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4140 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801C4600-801C4738 0138+00 rc=1 efc=1 rfr=False None .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
+/* 801C4600-801C4738 0138+00 r=1 e=1 z=0  None .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ asm void dMenuMapCommon_c::moveLightDropAnime() {
 #pragma pop
 
 
-/* 801C4738-801C4778 0040+00 rc=1 efc=0 rfr=False None .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
+/* 801C4738-801C4778 0040+00 r=1 e=0 z=0  None .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,7 +344,7 @@ asm void dMenuMapCommon_c::getIconSizeX(u8 param_0) {
 #pragma pop
 
 
-/* 801C4778-801C47C4 004C+00 rc=1 efc=0 rfr=False None .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
+/* 801C4778-801C47C4 004C+00 r=1 e=0 z=0  None .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +355,7 @@ asm void dMenuMapCommon_c::getIconSizeY(u8 param_0) {
 #pragma pop
 
 
-/* 801C47C4-801C4D54 0590+00 rc=1 efc=0 rfr=False None .text      debugIcon__16dMenuMapCommon_cFv                              */
+/* 801C47C4-801C4D54 0590+00 r=1 e=0 z=0  None .text      debugIcon__16dMenuMapCommon_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

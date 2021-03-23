@@ -1,0 +1,53 @@
+lbl_80AC7E4C:
+/* 80AC7E4C 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 80AC7E50 00000004  7C 08 02 A6 */	mflr r0
+/* 80AC7E54 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 80AC7E58 0000000C  39 61 00 20 */	addi r11, r1, 0x20
+/* 80AC7E5C 00000010  4B FF F6 5D */	bl _savegpr_29
+/* 80AC7E60 00000014  7C 7D 1B 78 */	mr r29, r3
+/* 80AC7E64 00000018  3B C0 00 00 */	li r30, 0
+/* 80AC7E68 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 80AC7E6C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80AC7E70 00000024  3B E3 4F F8 */	addi r31, r3, 0x4ff8
+/* 80AC7E74 00000028  7F E3 FB 78 */	mr r3, r31
+/* 80AC7E78 0000002C  3C 80 00 00 */	lis r4, struct_80AC92C8+0x0@ha /* 80AC92C8 */
+/* 80AC7E7C 00000030  38 84 00 00 */	addi r4, r4, struct_80AC92C8+0x0@l /* 80AC92C8 */
+/* 80AC7E80 00000034  38 84 00 22 */	addi r4, r4, 0x22
+/* 80AC7E84 00000038  7F A5 EB 78 */	mr r5, r29
+/* 80AC7E88 0000003C  38 C0 FF FF */	li r6, -1
+/* 80AC7E8C 00000040  4B FF F6 2D */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80AC7E90 00000044  2C 03 FF FF */	cmpwi r3, -1
+/* 80AC7E94 00000048  41 82 00 64 */	beq lbl_80AC7EF8
+/* 80AC7E98 0000004C  90 7D 0D AC */	stw r3, 0xdac(r29)
+/* 80AC7E9C 00000050  7F E3 FB 78 */	mr r3, r31
+/* 80AC7EA0 00000054  80 9D 0D AC */	lwz r4, 0xdac(r29)
+/* 80AC7EA4 00000058  3C A0 00 00 */	lis r5, mCutNameList__12daNpc_seiC_c@ha /* 80AC939C */
+/* 80AC7EA8 0000005C  38 A5 00 00 */	addi r5, r5, mCutNameList__12daNpc_seiC_c@l /* 80AC939C */
+/* 80AC7EAC 00000060  38 C0 00 01 */	li r6, 1
+/* 80AC7EB0 00000064  38 E0 00 00 */	li r7, 0
+/* 80AC7EB4 00000068  39 00 00 00 */	li r8, 0
+/* 80AC7EB8 0000006C  4B FF F6 01 */	bl getMyActIdx__16dEvent_manager_cFiPCPCciii
+/* 80AC7EBC 00000070  7C 60 1B 78 */	mr r0, r3
+/* 80AC7EC0 00000074  7F A3 EB 78 */	mr r3, r29
+/* 80AC7EC4 00000078  80 9D 0D AC */	lwz r4, 0xdac(r29)
+/* 80AC7EC8 0000007C  1C C0 00 0C */	mulli r6, r0, 0xc
+/* 80AC7ECC 00000080  3C A0 00 00 */	lis r5, mCutList__12daNpc_seiC_c@ha /* 80AC93A0 */
+/* 80AC7ED0 00000084  38 05 00 00 */	addi r0, r5, mCutList__12daNpc_seiC_c@l /* 80AC93A0 */
+/* 80AC7ED4 00000088  7D 80 32 14 */	add r12, r0, r6
+/* 80AC7ED8 0000008C  4B FF F5 E1 */	bl __ptmf_scall
+/* 80AC7EDC 00000090  60 00 00 00 */	nop 
+/* 80AC7EE0 00000094  2C 03 00 00 */	cmpwi r3, 0
+/* 80AC7EE4 00000098  41 82 00 10 */	beq lbl_80AC7EF4
+/* 80AC7EE8 0000009C  7F E3 FB 78 */	mr r3, r31
+/* 80AC7EEC 000000A0  80 9D 0D AC */	lwz r4, 0xdac(r29)
+/* 80AC7EF0 000000A4  4B FF F5 C9 */	bl cutEnd__16dEvent_manager_cFi
+lbl_80AC7EF4:
+/* 80AC7EF4 00000000  3B C0 00 01 */	li r30, 1
+lbl_80AC7EF8:
+/* 80AC7EF8 00000000  7F C3 F3 78 */	mr r3, r30
+/* 80AC7EFC 00000004  39 61 00 20 */	addi r11, r1, 0x20
+/* 80AC7F00 00000008  4B FF F5 B9 */	bl _restgpr_29
+/* 80AC7F04 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 80AC7F08 00000010  7C 08 03 A6 */	mtlr r0
+/* 80AC7F0C 00000014  38 21 00 20 */	addi r1, r1, 0x20
+/* 80AC7F10 00000018  4E 80 00 20 */	blr 

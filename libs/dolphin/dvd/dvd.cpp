@@ -113,7 +113,7 @@ extern "C" extern u8 __DVDThreadQueue[8];
 // Declarations:
 // 
 
-/* 803490EC-803490F0 0004+00 rc=1 efc=0 rfr=False None .text      defaultOptionalCommandChecker                                */
+/* 803490EC-803490F0 0004+00 r=1 e=0 z=0  None .text      defaultOptionalCommandChecker                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ extern "C" asm static void defaultOptionalCommandChecker() {
 
 
 /* ############################################################################################## */
-/* 803D1520-803D1568 0045+03 rc=1 efc=0 rfr=False None .data      @1                                                           */
+/* 803D1520-803D1568 0045+03 r=1 e=0 z=0  None .data      @1                                                           */
 SECTION_DATA static u8 dvd__lit_1[69 + 3 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
@@ -136,71 +136,71 @@ SECTION_DATA static u8 dvd__lit_1[69 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1568-803D1574 000A+02 rc=1 efc=0 rfr=False None .data      @18                                                          */
+/* 803D1568-803D1574 000A+02 r=1 e=0 z=0  None .data      @18                                                          */
 SECTION_DATA static u8 lit_18[10 + 2 /* padding */] = {
 	0x6C, 0x6F, 0x61, 0x64, 0x20, 0x66, 0x73, 0x74, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 804509E8-804509EC 0004+00 rc=1 efc=0 rfr=False None .sdata     __DVDVersion                                                 */
+/* 804509E8-804509EC 0004+00 r=1 e=0 z=0  None .sdata     __DVDVersion                                                 */
 SECTION_SDATA static void* __DVDVersion = (void*)&dvd__lit_1;
 
-/* 80451778-8045177C 0004+00 rc=24 efc=0 rfr=False None .sbss      executing                                                    */
+/* 80451778-8045177C 0004+00 r=24 e=0 z=0  None .sbss      executing                                                    */
 static u8 executing[4];
 
-/* 8045177C-80451780 0004+00 rc=4 efc=0 rfr=False None .sbss      IDShouldBe                                                   */
+/* 8045177C-80451780 0004+00 r=4 e=0 z=0  None .sbss      IDShouldBe                                                   */
 static u8 IDShouldBe[4];
 
-/* 80451780-80451784 0004+00 rc=3 efc=0 rfr=False None .sbss      bootInfo                                                     */
+/* 80451780-80451784 0004+00 r=3 e=0 z=0  None .sbss      bootInfo                                                     */
 static u8 bootInfo[4];
 
-/* 80451784-80451788 0004+00 rc=8 efc=0 rfr=False None .sbss      PauseFlag                                                    */
+/* 80451784-80451788 0004+00 r=8 e=0 z=0  None .sbss      PauseFlag                                                    */
 static u8 PauseFlag[4];
 
-/* 80451788-8045178C 0004+00 rc=5 efc=0 rfr=False None .sbss      PausingFlag                                                  */
+/* 80451788-8045178C 0004+00 r=5 e=0 z=0  None .sbss      PausingFlag                                                  */
 static u8 PausingFlag[4];
 
-/* 8045178C-80451790 0004+00 rc=2 efc=0 rfr=False None .sbss      AutoFinishing                                                */
+/* 8045178C-80451790 0004+00 r=2 e=0 z=0  None .sbss      AutoFinishing                                                */
 static u8 AutoFinishing[4];
 
-/* 80451790-80451794 0004+00 rc=4 efc=0 rfr=False None .sbss      FatalErrorFlag                                               */
+/* 80451790-80451794 0004+00 r=4 e=0 z=0  None .sbss      FatalErrorFlag                                               */
 static u8 FatalErrorFlag[4];
 
-/* 80451794-80451798 0004+00 rc=6 efc=0 rfr=False None .sbss      CurrCommand                                                  */
+/* 80451794-80451798 0004+00 r=6 e=0 z=0  None .sbss      CurrCommand                                                  */
 static u8 CurrCommand[4];
 
-/* 80451798-8045179C 0004+00 rc=8 efc=0 rfr=False None .sbss      Canceling                                                    */
+/* 80451798-8045179C 0004+00 r=8 e=0 z=0  None .sbss      Canceling                                                    */
 static u8 Canceling[4];
 
-/* 8045179C-804517A0 0004+00 rc=8 efc=0 rfr=False None .sbss      CancelCallback                                               */
+/* 8045179C-804517A0 0004+00 r=8 e=0 z=0  None .sbss      CancelCallback                                               */
 static u8 CancelCallback[4];
 
-/* 804517A0-804517A4 0004+00 rc=9 efc=0 rfr=False None .sbss      ResumeFromHere                                               */
+/* 804517A0-804517A4 0004+00 r=9 e=0 z=0  None .sbss      ResumeFromHere                                               */
 static u8 ResumeFromHere[4];
 
-/* 804517A4-804517A8 0004+00 rc=1 efc=0 rfr=False None .sbss      CancelLastError                                              */
+/* 804517A4-804517A8 0004+00 r=1 e=0 z=0  None .sbss      CancelLastError                                              */
 static u8 CancelLastError[4];
 
-/* 804517A8-804517AC 0004+00 rc=1 efc=0 rfr=False None .sbss      LastError                                                    */
+/* 804517A8-804517AC 0004+00 r=1 e=0 z=0  None .sbss      LastError                                                    */
 static u8 LastError[4];
 
-/* 804517AC-804517B0 0004+00 rc=9 efc=0 rfr=False None .sbss      NumInternalRetry                                             */
+/* 804517AC-804517B0 0004+00 r=9 e=0 z=0  None .sbss      NumInternalRetry                                             */
 static u8 NumInternalRetry[4];
 
-/* 804517B0-804517B4 0004+00 rc=3 efc=0 rfr=False None .sbss      ResetRequired                                                */
+/* 804517B0-804517B4 0004+00 r=3 e=0 z=0  None .sbss      ResetRequired                                                */
 static u8 ResetRequired[4];
 
-/* 804517B4-804517B8 0004+00 rc=1 efc=0 rfr=False None .sbss      FirstTimeInBootrom                                           */
+/* 804517B4-804517B8 0004+00 r=1 e=0 z=0  None .sbss      FirstTimeInBootrom                                           */
 static u8 FirstTimeInBootrom[4];
 
-/* 804517B8-804517BC 0004+00 rc=5 efc=0 rfr=False None .sbss      MotorState                                                   */
+/* 804517B8-804517BC 0004+00 r=5 e=0 z=0  None .sbss      MotorState                                                   */
 static u8 MotorState[4];
 
-/* 804517BC-804517C0 0004+00 rc=1 efc=0 rfr=False None .sbss      DVDInitialized                                               */
+/* 804517BC-804517C0 0004+00 r=1 e=0 z=0  None .sbss      DVDInitialized                                               */
 static u8 DVDInitialized[4];
 
-/* 803490F0-803491C8 00D8+00 rc=3 efc=3 rfr=False None .text      DVDInit                                                      */
+/* 803490F0-803491C8 00D8+00 r=3 e=3 z=0  None .text      DVDInit                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +212,7 @@ extern "C" asm void DVDInit() {
 
 
 /* ############################################################################################## */
-/* 803D1574-803D15A8 0034+00 rc=2 efc=0 rfr=False None .data      @24                                                          */
+/* 803D1574-803D15A8 0034+00 r=2 e=0 z=0  None .data      @24                                                          */
 SECTION_DATA static u8 lit_24[52] = {
 	0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6B, 0x28, 0x29, 0x3A,
 	0x20, 0x46, 0x53, 0x54, 0x20, 0x69, 0x6E, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6E, 0x65, 0x77, 0x20,
@@ -220,26 +220,26 @@ SECTION_DATA static u8 lit_24[52] = {
 	0x20, 0x20, 0x20, 0x00,
 };
 
-/* 8044C900-8044C920 0020+00 rc=8 efc=0 rfr=False None .bss       BB2                                                          */
+/* 8044C900-8044C920 0020+00 r=8 e=0 z=0  None .bss       BB2                                                          */
 static u8 BB2[32];
 
-/* 804509EC-804509F0 0004+00 rc=6 efc=0 rfr=False None .sdata     autoInvalidation                                             */
+/* 804509EC-804509F0 0004+00 r=6 e=0 z=0  None .sdata     autoInvalidation                                             */
 SECTION_SDATA static u32 autoInvalidation = 0x00000001;
 
-/* 804509F0-804509F4 0004+00 rc=1 efc=0 rfr=False None .sdata     checkOptionalCommand                                         */
+/* 804509F0-804509F4 0004+00 r=1 e=0 z=0  None .sdata     checkOptionalCommand                                         */
 SECTION_SDATA static void* checkOptionalCommand = (void*)defaultOptionalCommandChecker;
 
-/* 804509F4-804509FC 0006+02 rc=2 efc=0 rfr=False None .sdata     @23                                                          */
+/* 804509F4-804509FC 0006+02 r=2 e=0 z=0  None .sdata     @23                                                          */
 SECTION_SDATA static u8 lit_23[6 + 2 /* padding */] = {
 	0x64, 0x76, 0x64, 0x2E, 0x63, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 804517C0-804517C8 0004+04 rc=6 efc=0 rfr=False None .sbss      LastState                                                    */
+/* 804517C0-804517C8 0004+04 r=6 e=0 z=0  None .sbss      LastState                                                    */
 static u8 dvd__LastState[4 + 4 /* padding */];
 
-/* 803491C8-8034925C 0094+00 rc=1 efc=0 rfr=False None .text      stateReadingFST                                              */
+/* 803491C8-8034925C 0094+00 r=1 e=0 z=0  None .text      stateReadingFST                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,13 +251,13 @@ extern "C" asm static void stateReadingFST() {
 
 
 /* ############################################################################################## */
-/* 8044C920-8044C940 0020+00 rc=2 efc=0 rfr=False None .bss       CurrDiskID                                                   */
+/* 8044C920-8044C940 0020+00 r=2 e=0 z=0  None .bss       CurrDiskID                                                   */
 static u8 CurrDiskID[32];
 
-/* 8044C940-8044C970 0030+00 rc=10 efc=0 rfr=False None .bss       DummyCommandBlock                                            */
+/* 8044C940-8044C970 0030+00 r=10 e=0 z=0  None .bss       DummyCommandBlock                                            */
 static u8 DummyCommandBlock[48];
 
-/* 8034925C-803492DC 0080+00 rc=2 efc=0 rfr=False None .text      cbForStateReadingFST                                         */
+/* 8034925C-803492DC 0080+00 r=2 e=0 z=0  None .text      cbForStateReadingFST                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ extern "C" asm static void cbForStateReadingFST() {
 #pragma pop
 
 
-/* 803492DC-80349388 00AC+00 rc=12 efc=0 rfr=False None .text      cbForStateError                                              */
+/* 803492DC-80349388 00AC+00 r=12 e=0 z=0  None .text      cbForStateError                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +279,7 @@ extern "C" asm static void cbForStateError() {
 #pragma pop
 
 
-/* 80349388-803493BC 0034+00 rc=2 efc=0 rfr=False None .text      stateTimeout                                                 */
+/* 80349388-803493BC 0034+00 r=2 e=0 z=0  None .text      stateTimeout                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +290,7 @@ extern "C" asm static void stateTimeout() {
 #pragma pop
 
 
-/* 803493BC-803493E4 0028+00 rc=1 efc=0 rfr=False None .text      stateGettingError                                            */
+/* 803493BC-803493E4 0028+00 r=1 e=0 z=0  None .text      stateGettingError                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +301,7 @@ extern "C" asm static void stateGettingError() {
 #pragma pop
 
 
-/* 803493E4-80349498 00B4+00 rc=1 efc=0 rfr=False None .text      CategorizeError                                              */
+/* 803493E4-80349498 00B4+00 r=1 e=0 z=0  None .text      CategorizeError                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +312,7 @@ extern "C" asm static void CategorizeError() {
 #pragma pop
 
 
-/* 80349498-803496FC 0264+00 rc=6 efc=0 rfr=False None .text      cbForStateGettingError                                       */
+/* 80349498-803496FC 0264+00 r=6 e=0 z=0  None .text      cbForStateGettingError                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,7 +323,7 @@ extern "C" asm static void cbForStateGettingError() {
 #pragma pop
 
 
-/* 803496FC-80349758 005C+00 rc=1 efc=0 rfr=False None .text      cbForUnrecoveredError                                        */
+/* 803496FC-80349758 005C+00 r=1 e=0 z=0  None .text      cbForUnrecoveredError                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,7 +334,7 @@ extern "C" asm static void cbForUnrecoveredError() {
 #pragma pop
 
 
-/* 80349758-803497D8 0080+00 rc=1 efc=0 rfr=False None .text      cbForUnrecoveredErrorRetry                                   */
+/* 80349758-803497D8 0080+00 r=1 e=0 z=0  None .text      cbForUnrecoveredErrorRetry                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +345,7 @@ extern "C" asm static void cbForUnrecoveredErrorRetry() {
 #pragma pop
 
 
-/* 803497D8-80349800 0028+00 rc=2 efc=0 rfr=False None .text      stateGoToRetry                                               */
+/* 803497D8-80349800 0028+00 r=2 e=0 z=0  None .text      stateGoToRetry                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ extern "C" asm static void stateGoToRetry() {
 #pragma pop
 
 
-/* 80349800-80349940 0140+00 rc=1 efc=0 rfr=False None .text      cbForStateGoToRetry                                          */
+/* 80349800-80349940 0140+00 r=1 e=0 z=0  None .text      cbForStateGoToRetry                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +367,7 @@ extern "C" asm static void cbForStateGoToRetry() {
 #pragma pop
 
 
-/* 80349940-80349A20 00E0+00 rc=1 efc=0 rfr=False None .text      stateCheckID                                                 */
+/* 80349940-80349A20 00E0+00 r=1 e=0 z=0  None .text      stateCheckID                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +378,7 @@ extern "C" asm static void stateCheckID() {
 #pragma pop
 
 
-/* 80349A20-80349A54 0034+00 rc=1 efc=0 rfr=False None .text      stateCheckID3                                                */
+/* 80349A20-80349A54 0034+00 r=1 e=0 z=0  None .text      stateCheckID3                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +389,7 @@ extern "C" asm static void stateCheckID3() {
 #pragma pop
 
 
-/* 80349A54-80349A88 0034+00 rc=1 efc=0 rfr=False None .text      stateCheckID2a                                               */
+/* 80349A54-80349A88 0034+00 r=1 e=0 z=0  None .text      stateCheckID2a                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +400,7 @@ extern "C" asm static void stateCheckID2a() {
 #pragma pop
 
 
-/* 80349A88-80349AF0 0068+00 rc=1 efc=0 rfr=False None .text      cbForStateCheckID2a                                          */
+/* 80349A88-80349AF0 0068+00 r=1 e=0 z=0  None .text      cbForStateCheckID2a                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +411,7 @@ extern "C" asm static void cbForStateCheckID2a() {
 #pragma pop
 
 
-/* 80349AF0-80349B28 0038+00 rc=1 efc=0 rfr=False None .text      stateCheckID2                                                */
+/* 80349AF0-80349B28 0038+00 r=1 e=0 z=0  None .text      stateCheckID2                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +422,7 @@ extern "C" asm static void stateCheckID2() {
 #pragma pop
 
 
-/* 80349B28-80349C24 00FC+00 rc=1 efc=0 rfr=False None .text      cbForStateCheckID1                                           */
+/* 80349B28-80349C24 00FC+00 r=1 e=0 z=0  None .text      cbForStateCheckID1                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +433,7 @@ extern "C" asm static void cbForStateCheckID1() {
 #pragma pop
 
 
-/* 80349C24-80349CFC 00D8+00 rc=1 efc=0 rfr=False None .text      cbForStateCheckID2                                           */
+/* 80349C24-80349CFC 00D8+00 r=1 e=0 z=0  None .text      cbForStateCheckID2                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +444,7 @@ extern "C" asm static void cbForStateCheckID2() {
 #pragma pop
 
 
-/* 80349CFC-80349DEC 00F0+00 rc=1 efc=0 rfr=False None .text      cbForStateCheckID3                                           */
+/* 80349CFC-80349DEC 00F0+00 r=1 e=0 z=0  None .text      cbForStateCheckID3                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -455,7 +455,7 @@ extern "C" asm static void cbForStateCheckID3() {
 #pragma pop
 
 
-/* 80349DEC-80349E30 0044+00 rc=3 efc=0 rfr=False None .text      AlarmHandler                                                 */
+/* 80349DEC-80349E30 0044+00 r=3 e=0 z=0  None .text      AlarmHandler                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -466,7 +466,7 @@ extern "C" asm static void dvd__AlarmHandler() {
 #pragma pop
 
 
-/* 80349E30-80349F04 00D4+00 rc=1 efc=0 rfr=False None .text      stateCoverClosed                                             */
+/* 80349E30-80349F04 00D4+00 r=1 e=0 z=0  None .text      stateCoverClosed                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -477,7 +477,7 @@ extern "C" asm static void stateCoverClosed() {
 #pragma pop
 
 
-/* 80349F04-80349F34 0030+00 rc=1 efc=0 rfr=False None .text      stateCoverClosed_CMD                                         */
+/* 80349F04-80349F34 0030+00 r=1 e=0 z=0  None .text      stateCoverClosed_CMD                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -488,7 +488,7 @@ extern "C" asm static void stateCoverClosed_CMD() {
 #pragma pop
 
 
-/* 80349F34-80349F98 0064+00 rc=1 efc=0 rfr=False None .text      cbForStateCoverClosed                                        */
+/* 80349F34-80349F98 0064+00 r=1 e=0 z=0  None .text      cbForStateCoverClosed                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -499,7 +499,7 @@ extern "C" asm static void cbForStateCoverClosed() {
 #pragma pop
 
 
-/* 80349F98-80349FC0 0028+00 rc=3 efc=0 rfr=False None .text      stateMotorStopped                                            */
+/* 80349F98-80349FC0 0028+00 r=3 e=0 z=0  None .text      stateMotorStopped                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -510,7 +510,7 @@ extern "C" asm static void stateMotorStopped() {
 #pragma pop
 
 
-/* 80349FC0-8034A0AC 00EC+00 rc=4 efc=0 rfr=False None .text      cbForStateMotorStopped                                       */
+/* 80349FC0-8034A0AC 00EC+00 r=4 e=0 z=0  None .text      cbForStateMotorStopped                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,7 +521,7 @@ extern "C" asm static void cbForStateMotorStopped() {
 #pragma pop
 
 
-/* 8034A0AC-8034A394 02E8+00 rc=18 efc=0 rfr=False None .text      stateReady                                                   */
+/* 8034A0AC-8034A394 02E8+00 r=18 e=0 z=0  None .text      stateReady                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -533,7 +533,7 @@ extern "C" asm static void stateReady() {
 
 
 /* ############################################################################################## */
-/* 803D15A8-803D15EC 0044+00 rc=1 efc=0 rfr=False None .data      @359                                                         */
+/* 803D15A8-803D15EC 0044+00 r=1 e=0 z=0  None .data      @359                                                         */
 SECTION_DATA static void* dvd__lit_359[17] = {
 	/* 0    */ (void*)(((char*)stateBusy)+0x318),
 	/* 1    */ (void*)(((char*)stateBusy)+0x6C),
@@ -554,7 +554,7 @@ SECTION_DATA static void* dvd__lit_359[17] = {
 	/* 16   */ (void*)(((char*)stateBusy)+0x2F8),
 };
 
-/* 8034A394-8034A6D4 0340+00 rc=4 efc=0 rfr=False None .text      stateBusy                                                    */
+/* 8034A394-8034A6D4 0340+00 r=4 e=0 z=0  None .text      stateBusy                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,15 +566,15 @@ extern "C" asm static void stateBusy() {
 
 
 /* ############################################################################################## */
-/* 803D15EC-803D15F8 000C+00 rc=1 efc=0 rfr=False None .data      ImmCommand                                                   */
+/* 803D15EC-803D15F8 000C+00 r=1 e=0 z=0  None .data      ImmCommand                                                   */
 SECTION_DATA static u8 ImmCommand[12] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 804509FC-80450A00 0004+00 rc=1 efc=0 rfr=False None .sdata     DmaCommand                                                   */
+/* 804509FC-80450A00 0004+00 r=1 e=0 z=0  None .sdata     DmaCommand                                                   */
 SECTION_SDATA static u32 DmaCommand = 0xFFFFFFFF;
 
-/* 8034A6D4-8034AD2C 0658+00 rc=1 efc=0 rfr=False None .text      cbForStateBusy                                               */
+/* 8034A6D4-8034AD2C 0658+00 r=1 e=0 z=0  None .text      cbForStateBusy                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,7 +585,7 @@ extern "C" asm static void cbForStateBusy() {
 #pragma pop
 
 
-/* 8034AD2C-8034AE08 00DC+00 rc=5 efc=5 rfr=False None .text      DVDReadAbsAsyncPrio                                          */
+/* 8034AD2C-8034AE08 00DC+00 r=5 e=5 z=0  None .text      DVDReadAbsAsyncPrio                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +596,7 @@ extern "C" asm void DVDReadAbsAsyncPrio() {
 #pragma pop
 
 
-/* 8034AE08-8034AED8 00D0+00 rc=1 efc=1 rfr=False None .text      DVDReadAbsAsyncForBS                                         */
+/* 8034AE08-8034AED8 00D0+00 r=1 e=1 z=0  None .text      DVDReadAbsAsyncForBS                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -607,7 +607,7 @@ extern "C" asm void DVDReadAbsAsyncForBS() {
 #pragma pop
 
 
-/* 8034AED8-8034AFAC 00D4+00 rc=2 efc=2 rfr=False None .text      DVDReadDiskID                                                */
+/* 8034AED8-8034AFAC 00D4+00 r=2 e=2 z=0  None .text      DVDReadDiskID                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -618,7 +618,7 @@ extern "C" asm void DVDReadDiskID() {
 #pragma pop
 
 
-/* 8034AFAC-8034B068 00BC+00 rc=1 efc=1 rfr=False None .text      DVDCancelStreamAsync                                         */
+/* 8034AFAC-8034B068 00BC+00 r=1 e=1 z=0  None .text      DVDCancelStreamAsync                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -629,7 +629,7 @@ extern "C" asm void DVDCancelStreamAsync() {
 #pragma pop
 
 
-/* 8034B068-8034B138 00D0+00 rc=1 efc=1 rfr=False None .text      DVDInquiryAsync                                              */
+/* 8034B068-8034B138 00D0+00 r=1 e=1 z=0  None .text      DVDInquiryAsync                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -640,7 +640,7 @@ extern "C" asm void DVDInquiryAsync() {
 #pragma pop
 
 
-/* 8034B138-8034B17C 0044+00 rc=17 efc=2 rfr=False None .text      DVDReset                                                     */
+/* 8034B138-8034B17C 0044+00 r=17 e=2 z=0  None .text      DVDReset                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -651,7 +651,7 @@ extern "C" asm void DVDReset() {
 #pragma pop
 
 
-/* 8034B17C-8034B1C8 004C+00 rc=6 efc=6 rfr=False None .text      DVDGetCommandBlockStatus                                     */
+/* 8034B17C-8034B1C8 004C+00 r=6 e=6 z=0  None .text      DVDGetCommandBlockStatus                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -662,7 +662,7 @@ extern "C" asm void DVDGetCommandBlockStatus() {
 #pragma pop
 
 
-/* 8034B1C8-8034B274 00AC+00 rc=7 efc=7 rfr=False None .text      DVDGetDriveStatus                                            */
+/* 8034B1C8-8034B274 00AC+00 r=7 e=7 z=0  None .text      DVDGetDriveStatus                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -673,7 +673,7 @@ extern "C" asm void DVDGetDriveStatus() {
 #pragma pop
 
 
-/* 8034B274-8034B284 0010+00 rc=1 efc=1 rfr=False None .text      DVDSetAutoInvalidation                                       */
+/* 8034B274-8034B284 0010+00 r=1 e=1 z=0  None .text      DVDSetAutoInvalidation                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -684,7 +684,7 @@ extern "C" asm void DVDSetAutoInvalidation() {
 #pragma pop
 
 
-/* 8034B284-8034B2D4 0050+00 rc=1 efc=1 rfr=False None .text      DVDResume                                                    */
+/* 8034B284-8034B2D4 0050+00 r=1 e=1 z=0  None .text      DVDResume                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,7 +696,7 @@ extern "C" asm void DVDResume() {
 
 
 /* ############################################################################################## */
-/* 803D15F8-803D163C 0041+03 rc=0 efc=0 rfr=False None .data      @789                                                         */
+/* 803D15F8-803D163C 0041+03 r=0 e=0 z=0  None .data      @789                                                         */
 SECTION_DATA u8 lit_789[65 + 3 /* padding */] = {
 	0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6B, 0x41, 0x73, 0x79,
 	0x6E, 0x63, 0x28, 0x29, 0x3A, 0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20,
@@ -707,7 +707,7 @@ SECTION_DATA u8 lit_789[65 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D163C-803D1670 0034+00 rc=1 efc=0 rfr=False None .data      @956                                                         */
+/* 803D163C-803D1670 0034+00 r=1 e=0 z=0  None .data      @956                                                         */
 SECTION_DATA static void* lit_956[13] = {
 	/* 0    */ (void*)(((char*)DVDCancelAsync)+0x50),
 	/* 1    */ (void*)(((char*)DVDCancelAsync)+0x50),
@@ -724,7 +724,7 @@ SECTION_DATA static void* lit_956[13] = {
 	/* 12   */ (void*)(((char*)DVDCancelAsync)+0x17C),
 };
 
-/* 8034B2D4-8034B550 027C+00 rc=3 efc=0 rfr=False None .text      DVDCancelAsync                                               */
+/* 8034B2D4-8034B550 027C+00 r=3 e=0 z=0  None .text      DVDCancelAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +735,7 @@ extern "C" asm static void DVDCancelAsync() {
 #pragma pop
 
 
-/* 8034B550-8034B5FC 00AC+00 rc=1 efc=1 rfr=False None .text      DVDCancel                                                    */
+/* 8034B550-8034B5FC 00AC+00 r=2 e=1 z=1  None .text      DVDCancel                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -746,7 +746,7 @@ extern "C" asm void DVDCancel() {
 #pragma pop
 
 
-/* 8034B5FC-8034B620 0024+00 rc=1 efc=0 rfr=False None .text      cbForCancelSync                                              */
+/* 8034B5FC-8034B620 0024+00 r=1 e=0 z=0  None .text      cbForCancelSync                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -757,7 +757,7 @@ extern "C" asm static void cbForCancelSync() {
 #pragma pop
 
 
-/* 8034B620-8034B628 0008+00 rc=3 efc=3 rfr=False None .text      DVDGetCurrentDiskID                                          */
+/* 8034B620-8034B628 0008+00 r=3 e=3 z=0  None .text      DVDGetCurrentDiskID                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -769,7 +769,7 @@ extern "C" asm void DVDGetCurrentDiskID() {
 
 
 /* ############################################################################################## */
-/* 803D1670-803D16A8 0034+04 rc=1 efc=0 rfr=False None .data      @1060                                                        */
+/* 803D1670-803D16A8 0034+04 r=1 e=0 z=0  None .data      @1060                                                        */
 SECTION_DATA static void* dvd__lit_1060[13 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)DVDCheckDisk)+0x98),
 	/* 1    */ (void*)(((char*)DVDCheckDisk)+0xA0),
@@ -788,7 +788,7 @@ SECTION_DATA static void* dvd__lit_1060[13 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8034B628-8034B720 00F8+00 rc=5 efc=4 rfr=False None .text      DVDCheckDisk                                                 */
+/* 8034B628-8034B720 00F8+00 r=5 e=4 z=0  None .text      DVDCheckDisk                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +799,7 @@ extern "C" asm void DVDCheckDisk() {
 #pragma pop
 
 
-/* 8034B720-8034B83C 011C+00 rc=1 efc=1 rfr=False None .text      __DVDPrepareResetAsync                                       */
+/* 8034B720-8034B83C 011C+00 r=1 e=1 z=0  None .text      __DVDPrepareResetAsync                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -811,10 +811,10 @@ extern "C" asm void __DVDPrepareResetAsync() {
 
 
 /* ############################################################################################## */
-/* 8044C970-8044C998 0028+00 rc=1 efc=0 rfr=False None .bss       ResetAlarm                                                   */
+/* 8044C970-8044C998 0028+00 r=1 e=0 z=0  None .bss       ResetAlarm                                                   */
 static u8 ResetAlarm[40];
 
-/* 8034B83C-8034B874 0038+00 rc=1 efc=1 rfr=False None .text      __DVDTestAlarm                                               */
+/* 8034B83C-8034B874 0038+00 r=1 e=1 z=0  None .text      __DVDTestAlarm                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

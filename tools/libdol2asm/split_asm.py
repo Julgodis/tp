@@ -49,7 +49,7 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     no_file_generation = False
 
     cpp_group_count = 4
-    asm_group_count = 16
+    asm_group_count = 64
 
     step_count = 1
     print(f"dol2asm {VERSION} for '{settings.GAME_NAME}'")
@@ -156,7 +156,14 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
         gen_modules = [0] + [ x for x in RELS.keys() ]
     else:
         gen_modules = [ int(x) for x in select_modules ]
+
+    if not rel_gen:
+        gen_modules = [ x for x in select_modules if 0 ] 
     gen_modules.sort()
+
+    if len(gen_modules) == 0:
+        error(f"no module selected...")
+        fatal_exit()
 
     # create '.dol' executable sections
     executable_sections = [
@@ -184,11 +191,14 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     module_tasks = []
     module_tasks.append((0, None, framework_path, executable_sections, {}))
 
+    symbol_table = GlobalSymbolTable() 
+    all_relocations = defaultdict(list) # all relocations grouped by module id 
     rels_items = list(RELS.items())
     rels_items.sort(key=lambda x: x[0])
     for index, rel in rels_items:
-        # TODO:
-        break
+        if not rel_gen:
+            break
+
         base_addr = settings.REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
 
         relocations = defaultdict(list)
@@ -198,6 +208,9 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
             section.addr += base_addr
             for relocation in section.relocations:
                 relocations[section.index].append(relocation)
+                all_relocations[relocation.module].append(relocation)
+
+            symbol_table.add_module_section(index, section.index, section.addr)
 
             cs = []
             if section.executable_flag:
@@ -212,10 +225,11 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
         name = rel.path.name.replace(".rel", ".o")
         module_tasks.append((index, name,  rel.map, executable_sections, relocations))
 
+
     print(f"{step_count:2} Search for symbols and build modules")
     step_count += 1
     start_time = time.time()
-    modules = mp.progress(process_count, symbol_finder.search, module_tasks)
+    modules = mp.progress(process_count, symbol_finder.search, module_tasks, shared={'all_relocations': all_relocations})
     end_time = time.time()
     info(f"created {len(modules)} modules in {end_time-start_time:.2f} seconds")
 
@@ -223,7 +237,6 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     step_count += 1
 
     start_time = time.time()
-    symbol_table = GlobalSymbolTable() 
     for module in modules:
         for lib in module.libraries.values():
             for tu in lib.translation_units.values():
@@ -282,9 +295,15 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
                         count = len(symbol.data) // 4
                         values = list(struct.unpack(">" + "I" * count, symbol.data))
                         is_symbols = [not not symbol_table[module.index, x] for x in values]
+
                         if not any(is_symbols):
                             relocations = section.relocations
-                            is_relocations = [x in relocations for x in range(symbol.start, symbol.end, 4)]
+                            is_relocations = [
+                                x in relocations 
+                                for x in range(symbol.start,# - section.addr, 
+                                               symbol.end,# - section.addr,
+                                                4)
+                            ]
                             if not any(is_relocations):
                                 continue
 
@@ -312,6 +331,11 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     print(f"{step_count:2} Validate symbols")
     step_count += 1
     for module in modules:
+        # Validate that symbols are in the correct sections. But because rels only have a .data section
+        # and .bss section this step is unnecessary.
+        if module.index != 0:
+            continue
+
         for lib in module.libraries.values():
             for tu in lib.translation_units.values():
                 for section in tu.sections.values():
@@ -391,6 +415,8 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
 
         total_rc_step_count = 0
         for module in modules:
+            if not module.index in gen_modules:
+                continue
             for lib in module.libraries.values():
                 for tu in lib.translation_units.values():
                     total_rc_step_count += sum([ len(x.symbols) for x in tu.sections.values() ])
@@ -398,14 +424,21 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
         with Progress(console=get_console(), transient=True, refresh_per_second=1) as progress:
             task = progress.add_task(f"processing...", total=total_rc_step_count)
             for module in modules:
+                if not module.index in gen_modules:
+                    continue
                 for lib in module.libraries.values():
                     for tu in lib.translation_units.values():
                         count = 0
                         for section in tu.sections.values():
                             for symbol in section.symbols:
-                                refs = symbol.internal_references(main_context, symbol_table)
-                                for reference in refs:
+                                refs = set(symbol.internal_references(main_context, symbol_table))
+                                relocs = set(symbol.relocation_symbols(main_context, symbol_table, section))
+                                for reference in (refs | relocs):
                                     reference.add_reference(symbol)
+                                if isinstance(symbol, ASMFunction):
+                                    sda_hack_symbols = symbol_table.resolve_set(symbol.sda_hack_references)
+                                    for reference in sda_hack_symbols:
+                                        reference.add_sda_hack(symbol)
                             count += len(section.symbols)
                         progress.update(task, advance=count)    
 
@@ -443,7 +476,7 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
             base = module.libraries[None]
             base.name = rel_name
             base.lib_path = rel_path
-            base.inc_path = rel_path.joinpath(f"rel/")
+            base.inc_path = inc_path.joinpath(f"rel/")
             base.asm_path = asm_path.joinpath("rel/")
             base.mk_path = rel_path
 
@@ -466,12 +499,20 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
                         if len(include_path) > 120 or (include_path.lower() in function_files):
                             include_path = f"{tu.asm_function_path(lib)}/func_{symbol.addr:08X}.s"
 
+                        # when using wine the file paths for daAlink_c::checkUnderMove1BckNoArc:
+                        #   "asm/d/a/d_a_alink/checkUnderMove1BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM.s"
+                        # will somehow not get used. instead the compiler takes the path of another included function file.
+                        # there seems to be a collision within the compiler as by changing this path we get past the problem.
+                        if symbol.identifier.label == "checkUnderMove1BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM":
+                            include_path = f"{tu.asm_function_path(lib)}/func_{symbol.addr:08X}.s"
+
                         symbol.include_path = Path(include_path)
                         function_files.add(include_path.lower())
         if cpp_gen:
             for lib_name,lib in module.libraries.items():
                 for tu_name,tu in lib.translation_units.items():
-                    #if tu_name == "m_Do/m_Do_ext":
+                    #if tu_name != "d/a/d_a_alink":
+                    #    continue
                     cpp_tasks.append((tu,tu.source_path(lib),tu.include_path(lib),tu.include_path(lib).relative_to(inc_path),))
 
         if asm_gen:
@@ -479,14 +520,21 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
             for lib in module.libraries.values():
                 for tu in lib.translation_units.values():
                     for sec in tu.sections.values():
+                        functions = []
                         for symbol in sec.symbols:
                             if not isinstance(symbol, ASMFunction):
                                 continue
                             if no_file_generation:
                                 if symbol.include_path.exists():
                                     continue
+
+                            #if symbol.label != "getE3Zhint__9daAlink_cFv":
+                            #    continue
                             asm_path_tasks.append(util.create_dirs_for_file(symbol.include_path))
-                            asm_tasks.append((symbol,))
+                            functions.append((symbol,))
+                        if functions:
+                            for fs in util.chunks(functions, asm_group_count):
+                                asm_tasks.append((sec, fs))
             asyncio.run(util.wait_all(asm_path_tasks))
             
     if sym_gen:
@@ -531,7 +579,6 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     if len(cpp_tasks) > 0:
         print(f"{step_count:2} Generate C++ files")
         step_count += 1
-        #random.shuffle(cpp_tasks)
         start_time = time.time()
         tasks = [ (x,) for x in util.chunks(cpp_tasks, cpp_group_count) ]
         mp.progress(process_count, cpp.export_translation_unit_group, tasks, shared={
@@ -543,20 +590,21 @@ def main(debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_p
     if len(asm_tasks) > 0:
         print(f"{step_count:2} Generate ASM files")
         step_count += 1
-        random.shuffle(asm_tasks)
         start_time = time.time()
-        tasks = [ (x,) for x in util.chunks(asm_tasks, asm_group_count) ]
+        tasks = asm_tasks#[ (x,) for x in util.chunks(asm_tasks, asm_group_count) ]
         mp.progress(process_count, cpp.export_function, tasks, shared={
             'symbol_table': symbol_table,
             'no_file_generation': no_file_generation,
         })   
         end_time = time.time()
-        info(f"generated {len(asm_tasks)} asm files in {end_time-start_time:.2f} seconds ({(asm_group_count*len(asm_tasks))/(end_time-start_time)} asm/sec)")
+        asm_file_count = 0
+        for sec,funcs in asm_tasks:
+            asm_file_count += len(funcs)
+        info(f"generated {asm_file_count} asm files in {end_time-start_time:.2f} seconds ({(asm_group_count*len(asm_tasks))/(end_time-start_time)} asm/sec)")
 
     if len(symdef_tasks) > 0:
         print(f"{step_count:2} Generate module symbol definition files")
         step_count += 1
-        random.shuffle(symdef_tasks)
         start_time = time.time()
         mp.progress(process_count, definition.export_file, symdef_tasks, shared={
             'symbol_table': symbol_table,

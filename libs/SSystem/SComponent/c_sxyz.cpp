@@ -46,7 +46,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* 802673F4-80267404 0010+00 rc=23 efc=19 rfr=False None .text      __ct__5csXyzFsss                                             */
+/* 802673F4-80267404 0010+00 r=142 e=19 z=119  None .text      __ct__5csXyzFsss                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +57,7 @@ asm csXyz::csXyz(s16 param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80267404-8026745C 0058+00 rc=0 efc=0 rfr=False None .text      __pl__5csXyzFR5csXyz                                         */
+/* 80267404-8026745C 0058+00 r=3 e=0 z=3  None .text      __pl__5csXyzFR5csXyz                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ asm void csXyz::operator+(csXyz& param_0) {
 #pragma pop
 
 
-/* 8026745C-80267490 0034+00 rc=2 efc=2 rfr=False None .text      __apl__5csXyzFR5csXyz                                        */
+/* 8026745C-80267490 0034+00 r=13 e=2 z=11  None .text      __apl__5csXyzFR5csXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void csXyz::operator+=(csXyz& param_0) {
 #pragma pop
 
 
-/* 80267490-802674E8 0058+00 rc=0 efc=0 rfr=False None .text      __mi__5csXyzFR5csXyz                                         */
+/* 80267490-802674E8 0058+00 r=1 e=0 z=1  None .text      __mi__5csXyzFR5csXyz                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,10 +91,10 @@ asm void csXyz::operator-(csXyz& param_0) {
 
 
 /* ############################################################################################## */
-/* 804550A0-804550A8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @151                                                         */
+/* 804550A0-804550A8 0008+00 r=1 e=0 z=0  None .sdata2    @151                                                         */
 SECTION_SDATA2 static f64 c_sxyz__lit_151 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802674E8-8026758C 00A4+00 rc=0 efc=0 rfr=False None .text      __ml__5csXyzFf                                               */
+/* 802674E8-8026758C 00A4+00 r=1 e=0 z=1  None .text      __ml__5csXyzFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,16 +106,16 @@ asm void csXyz::operator*(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 80430DA8-80430DB8 000C+04 rc=1 efc=0 rfr=False None .bss       @262                                                         */
+/* 80430DA8-80430DB8 000C+04 r=1 e=0 z=0  None .bss       @262                                                         */
 static u8 lit_262[12 + 4 /* padding */];
 
-/* 80451160-80451164 0004+00 rc=14 efc=13 rfr=False None .sbss      Zero__5csXyz                                                 */
+/* 80451160-80451164 0004+00 r=17 e=13 z=3  None .sbss      Zero__5csXyz                                                 */
 u8 Zero__5csXyz[4];
 
-/* 80451164-80451168 0004+00 rc=7 efc=6 rfr=False None .sbss      None                                                         */
+/* 80451164-80451168 0004+00 r=7 e=6 z=0  None .sbss      None                                                         */
 u8 data_80451164[4];
 
-/* 8026758C-802675E4 0058+00 rc=1 efc=1 rfr=False None .text      __sinit_c_sxyz_cpp                                           */
+/* 8026758C-802675E4 0058+00 r=1 e=1 z=0  None .text      __sinit_c_sxyz_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

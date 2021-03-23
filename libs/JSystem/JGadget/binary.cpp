@@ -50,7 +50,7 @@ extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 // Declarations:
 // 
 
-/* 802DC864-802DC8C8 0064+00 rc=2 efc=2 rfr=False None .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
+/* 802DC864-802DC8C8 0064+00 r=2 e=2 z=0  None .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ asm void JGadget::binary::parseVariableUInt_16_32_following(void const* param_0,
 #pragma pop
 
 
-/* 802DC8C8-802DC910 0048+00 rc=4 efc=4 rfr=False None .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
+/* 802DC8C8-802DC910 0048+00 r=4 e=4 z=0  None .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm JGadget::binary::TParse_header_block::~TParse_header_block() {
 #pragma pop
 
 
-/* 802DC910-802DCA1C 010C+00 rc=9 efc=9 rfr=False None .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
+/* 802DC910-802DCA1C 010C+00 r=9 e=9 z=0  None .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

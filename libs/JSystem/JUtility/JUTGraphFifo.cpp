@@ -52,7 +52,7 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC590-803CC5A0 000C+04 rc=2 efc=0 rfr=False None .data      __vt__12JUTGraphFifo                                         */
+/* 803CC590-803CC5A0 000C+04 r=2 e=0 z=0  None .data      __vt__12JUTGraphFifo                                         */
 SECTION_DATA static void* __vt__12JUTGraphFifo[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -61,13 +61,13 @@ SECTION_DATA static void* __vt__12JUTGraphFifo[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 804514B8-804514BC 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+/* 804514B8-804514BC 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804514B8[4];
 
-/* 804514BC-804514C0 0004+00 rc=2 efc=0 rfr=False None .sbss      sCurrentFifo__12JUTGraphFifo                                 */
+/* 804514BC-804514C0 0004+00 r=2 e=0 z=0  None .sbss      sCurrentFifo__12JUTGraphFifo                                 */
 static u8 sCurrentFifo__12JUTGraphFifo[4];
 
-/* 802DEB58-802DEC34 00DC+00 rc=1 efc=1 rfr=False None .text      __ct__12JUTGraphFifoFUl                                      */
+/* 802DEB58-802DEC34 00DC+00 r=1 e=1 z=0  None .text      __ct__12JUTGraphFifoFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,10 +79,10 @@ asm JUTGraphFifo::JUTGraphFifo(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 804514C0-804514C8 0005+03 rc=1 efc=0 rfr=False None .sbss      mGpStatus__12JUTGraphFifo                                    */
+/* 804514C0-804514C8 0005+03 r=1 e=0 z=0  None .sbss      mGpStatus__12JUTGraphFifo                                    */
 static u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 
-/* 802DEC34-802DECF8 00C4+00 rc=1 efc=0 rfr=False None .text      __dt__12JUTGraphFifoFv                                       */
+/* 802DEC34-802DECF8 00C4+00 r=1 e=0 z=0  None .text      __dt__12JUTGraphFifoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

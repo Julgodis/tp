@@ -11,7 +11,7 @@ from typing import Any, Tuple, List, Dict
 from multiprocessing import Manager, Queue, Process
 from queue import Empty
 
-from . import globals as g
+from .globals import *
 from .context import Context, MainContext
 
 class TimeCode:
@@ -122,7 +122,7 @@ def execute_tasks(process_count: int,
             temp_file = tempfile.NamedTemporaryFile(
                 "wb", suffix='.dump', prefix="mp_shared", delete=True)
             shared_file = temp_file.name
-            g.LOG.debug(f"shared file: '{temp_file.name}'")
+            debug(f"shared file: '{temp_file.name}'")
             pickle_data = pickle.dumps(shared)
             temp_file.write(pickle_data)
             temp_file.flush()
@@ -156,23 +156,24 @@ def execute_tasks(process_count: int,
                 processing = callback(command[0], *command[1])
             if processing:
                 if command[0] == 'debug':
-                    g.LOG.debug(*command[1])
+                    debug(*command[1])
                 elif command[0] == 'warning':
-                    g.LOG.warning(*command[1])
+                    warning(*command[1])
                 elif command[0] == 'error':
-                    g.LOG.error(*command[1])
+                    error(*command[1])
+                elif command[0] == 'info':
+                    info(*command[1])
                 elif command[0] == 'complete':
                     results[command[1][0]] = command[1][1]
                     waiting -= 1
                 elif command[0] == 'exception':
                     waiting -= 1
-                    g.CONSOLE.print(command[1][1])
+                    print(command[1][1])
                 else:
-                    g.LOG.warning(f"unknown command: {command}")
+                    warning(f"unknown command: {command}")
         except Empty:
-            g.LOG.error(f"task took to long to complete (+{timeout} seconds)")
-            g.LOG.error(f"exiting...")
-            sys.exit(1)
+            error(f"task took to long to complete (+{timeout} seconds)")
+            fatal_exit()
 
     # wait for all processes to finish
     for process in processors:
@@ -181,7 +182,7 @@ def execute_tasks(process_count: int,
     # TODO: Maybe we don't need to clear the queue
     while not output.empty():
         command = output.get(block=False)
-        g.LOG.warning(f"skipped command: {command}")
+        warning(f"skipped command: {command}")
 
     if temp_file:
         temp_file.close()
@@ -200,7 +201,7 @@ def progress(process_count: int, func: Any, data: List[Any], shared: Dict[str, A
     Displays a progress bar with tasks completed.
     """
 
-    with Progress(console=g.CONSOLE, transient=True, refresh_per_second=1) as progress:
+    with Progress(console=get_console(), transient=True, refresh_per_second=1) as progress:
         task = progress.add_task(f"processing...", total=len(data))
 
         def callback(command, *args):

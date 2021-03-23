@@ -1,0 +1,3 @@
+lbl_80480EFC:
+/* 80480EFC 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 80480F00 00000004  4B FF EF E4 */	b __dt__14dBgS_ObjGndChkFv

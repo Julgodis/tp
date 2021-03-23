@@ -14,6 +14,7 @@
 void fpcPf_Get(s16); // 2
 
 extern "C" void fpcPf_Get__Fs(); // 1
+extern "C" extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -26,10 +27,10 @@ extern "C" void fpcPf_Get__Fs(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80450D50-80450D58 0004+04 rc=1 efc=0 rfr=False None .sbss      g_fpcPf_ProfileList_p                                        */
-static u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
+/* 80450D50-80450D58 0004+04 r=3 e=0 z=2  None .sbss      g_fpcPf_ProfileList_p                                        */
+u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
-/* 80023564-80023578 0014+00 rc=1 efc=1 rfr=False None .text      fpcPf_Get__Fs                                                */
+/* 80023564-80023578 0014+00 r=1 e=1 z=0  None .text      fpcPf_Get__Fs                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -75,7 +75,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4638-803C4680 0044+04 rc=2 efc=1 rfr=False None .data      __vt__Q26JStage13TAmbientLight                               */
+/* 803C4638-803C4680 0044+04 r=2 e=1 z=0  None .data      __vt__Q26JStage13TAmbientLight                               */
 SECTION_DATA void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -98,7 +98,7 @@ SECTION_DATA void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80280B20-80280B80 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q26JStage13TAmbientLightFv                             */
+/* 80280B20-80280B80 0060+00 r=1 e=1 z=0  None .text      __dt__Q26JStage13TAmbientLightFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm JStage::TAmbientLight::~TAmbientLight() {
 #pragma pop
 
 
-/* 80280B80-80280B88 0008+00 rc=2 efc=1 rfr=False None .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
+/* 80280B80-80280B88 0008+00 r=2 e=1 z=0  None .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,14 +121,14 @@ asm void JStage::TAmbientLight::JSGFGetType() const {
 
 
 /* ############################################################################################## */
-/* 804553D0-804553D8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @302                                                         */
+/* 804553D0-804553D8 0004+04 r=1 e=0 z=0  None .sdata2    @302                                                         */
 SECTION_SDATA2 static u32 lit_302[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 80280B88-80280B9C 0014+00 rc=2 efc=1 rfr=False None .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
+/* 80280B88-80280B9C 0014+00 r=2 e=1 z=0  None .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ asm void JStage::TAmbientLight::JSGGetColor() const {
 #pragma pop
 
 
-/* 80280B9C-80280BA0 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
+/* 80280B9C-80280BA0 0004+00 r=1 e=0 z=0  None .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

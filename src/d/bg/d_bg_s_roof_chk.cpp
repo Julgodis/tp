@@ -69,7 +69,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803ABA50-803ABA80 0030+00 rc=2 efc=0 rfr=False None .data      __vt__12dBgS_RoofChk                                         */
+/* 803ABA50-803ABA80 0030+00 r=2 e=0 z=0  None .data      __vt__12dBgS_RoofChk                                         */
 SECTION_DATA static void* __vt__12dBgS_RoofChk[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -85,12 +85,12 @@ SECTION_DATA static void* __vt__12dBgS_RoofChk[12] = {
 	/* 11   */ (void*)func_80079154,
 };
 
-/* 804526F0-804526F4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @316                                                         */
+/* 804526F0-804526F4 0004+00 r=1 e=0 z=0  None .sdata2    @316                                                         */
 SECTION_SDATA2 static u8 lit_316[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80078FF4-80079090 009C+00 rc=10 efc=10 rfr=False None .text      __ct__12dBgS_RoofChkFv                                       */
+/* 80078FF4-80079090 009C+00 r=11 e=10 z=1  None .text      __ct__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm dBgS_RoofChk::dBgS_RoofChk() {
 #pragma pop
 
 
-/* 80079090-80079124 0094+00 rc=15 efc=11 rfr=False None .text      __dt__12dBgS_RoofChkFv                                       */
+/* 80079090-80079124 0094+00 r=16 e=11 z=1  None .text      __dt__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,10 +113,10 @@ asm dBgS_RoofChk::~dBgS_RoofChk() {
 
 
 /* ############################################################################################## */
-/* 804526F4-804526F8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @333                                                         */
+/* 804526F4-804526F8 0004+00 r=1 e=0 z=0  None .sdata2    @333                                                         */
 SECTION_SDATA2 static f32 d_bg_d_bg_s_roof_chk__lit_333 = 1000000000.0f;
 
-/* 80079124-8007914C 0028+00 rc=1 efc=1 rfr=False None .text      Init__12dBgS_RoofChkFv                                       */
+/* 80079124-8007914C 0028+00 r=1 e=1 z=0  None .text      Init__12dBgS_RoofChkFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm void dBgS_RoofChk::Init() {
 #pragma pop
 
 
-/* 8007914C-80079154 0008+00 rc=1 efc=0 rfr=False None .text      @16@__dt__12dBgS_RoofChkFv                                   */
+/* 8007914C-80079154 0008+00 r=1 e=0 z=0  None .text      @16@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ extern "C" asm static void func_8007914C() {
 #pragma pop
 
 
-/* 80079154-8007915C 0008+00 rc=1 efc=0 rfr=False None .text      @52@__dt__12dBgS_RoofChkFv                                   */
+/* 80079154-8007915C 0008+00 r=1 e=0 z=0  None .text      @52@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ extern "C" asm static void func_80079154() {
 #pragma pop
 
 
-/* 8007915C-80079164 0008+00 rc=1 efc=0 rfr=False None .text      @36@__dt__12dBgS_RoofChkFv                                   */
+/* 8007915C-80079164 0008+00 r=1 e=0 z=0  None .text      @36@__dt__12dBgS_RoofChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

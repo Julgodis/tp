@@ -59,12 +59,12 @@ extern "C" void fopOvlpReq_OverlapClr__FP21overlap_request_class(); // 1
 // External References:
 // 
 
-void fpcEx_SearchByID(u32); // 2
+void fpcEx_SearchByID(unsigned int); // 2
 void fpcLy_RootLayer(); // 2
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
-void fpcM_IsCreating(u32); // 2
+void fpcM_IsCreating(unsigned int); // 2
 void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
@@ -93,7 +93,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 8001E6EC-8001E748 005C+00 rc=2 efc=0 rfr=False None .text      fopOvlpReq_phase_Done__FP21overlap_request_class             */
+/* 8001E6EC-8001E748 005C+00 r=2 e=0 z=0  None .text      fopOvlpReq_phase_Done__FP21overlap_request_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm static void fopOvlpReq_phase_Done(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001E748-8001E794 004C+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_IsDone__FP21overlap_request_class           */
+/* 8001E748-8001E794 004C+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_IsDone__FP21overlap_request_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm static void fopOvlpReq_phase_IsDone(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001E794-8001E7E4 0050+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class  */
+/* 8001E794-8001E7E4 0050+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_IsWaitOfFadeout__FP21overlap_request_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ asm static void fopOvlpReq_phase_IsWaitOfFadeout(overlap_request_class* param_0)
 #pragma pop
 
 
-/* 8001E7E4-8001E854 0070+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class    */
+/* 8001E7E4-8001E854 0070+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_WaitOfFadeout__FP21overlap_request_class    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm static void fopOvlpReq_phase_WaitOfFadeout(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001E854-8001E8A4 0050+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_IsComplete__FP21overlap_request_class       */
+/* 8001E854-8001E8A4 0050+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_IsComplete__FP21overlap_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm static void fopOvlpReq_phase_IsComplete(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001E8A4-8001E904 0060+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_IsCreated__FP21overlap_request_class        */
+/* 8001E8A4-8001E904 0060+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_IsCreated__FP21overlap_request_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ asm static void fopOvlpReq_phase_IsCreated(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001E904-8001E954 0050+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_phase_Create__FP21overlap_request_class           */
+/* 8001E904-8001E954 0050+00 r=1 e=0 z=0  None .text      fopOvlpReq_phase_Create__FP21overlap_request_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm static void fopOvlpReq_phase_Create(overlap_request_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3890-803A38B0 0020+00 rc=1 efc=0 rfr=False None .data      phaseMethod$2260                                             */
+/* 803A3890-803A38B0 0020+00 r=1 e=0 z=0  None .data      phaseMethod$2260                                             */
 SECTION_DATA static void* data_803A3890[8] = {
 	/* 0    */ (void*)fopOvlpReq_phase_Create__FP21overlap_request_class,
 	/* 1    */ (void*)fopOvlpReq_phase_IsCreated__FP21overlap_request_class,
@@ -183,7 +183,7 @@ SECTION_DATA static void* data_803A3890[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 8001E954-8001E9F0 009C+00 rc=1 efc=1 rfr=False None .text      fopOvlpReq_Request__FP21overlap_request_classsUs             */
+/* 8001E954-8001E9F0 009C+00 r=1 e=1 z=0  None .text      fopOvlpReq_Request__FP21overlap_request_classsUs             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ asm void fopOvlpReq_Request(overlap_request_class* param_0, s16 param_1, u16 par
 #pragma pop
 
 
-/* 8001E9F0-8001EA88 0098+00 rc=1 efc=1 rfr=False None .text      fopOvlpReq_Handler__FP21overlap_request_class                */
+/* 8001E9F0-8001EA88 0098+00 r=1 e=1 z=0  None .text      fopOvlpReq_Handler__FP21overlap_request_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ asm void fopOvlpReq_Handler(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EA88-8001EAB4 002C+00 rc=1 efc=1 rfr=False None .text      fopOvlpReq_Cancel__FP21overlap_request_class                 */
+/* 8001EA88-8001EAB4 002C+00 r=1 e=1 z=0  None .text      fopOvlpReq_Cancel__FP21overlap_request_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ asm void fopOvlpReq_Cancel(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EAB4-8001EAC4 0010+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class       */
+/* 8001EAB4-8001EAC4 0010+00 r=1 e=0 z=0  None .text      fopOvlpReq_Is_PeektimeLimit__FP21overlap_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ asm static void fopOvlpReq_Is_PeektimeLimit(overlap_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EAC4-8001EAD8 0014+00 rc=1 efc=0 rfr=False None .text      fopOvlpReq_SetPeektime__FP21overlap_request_classUs          */
+/* 8001EAC4-8001EAD8 0014+00 r=1 e=0 z=0  None .text      fopOvlpReq_SetPeektime__FP21overlap_request_classUs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm static void fopOvlpReq_SetPeektime(overlap_request_class* param_0, u16 param
 #pragma pop
 
 
-/* 8001EAD8-8001EB34 005C+00 rc=1 efc=1 rfr=False None .text      fopOvlpReq_OverlapClr__FP21overlap_request_class             */
+/* 8001EAD8-8001EB34 005C+00 r=1 e=1 z=0  None .text      fopOvlpReq_OverlapClr__FP21overlap_request_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

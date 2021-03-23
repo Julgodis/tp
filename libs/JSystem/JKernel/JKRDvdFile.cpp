@@ -120,7 +120,7 @@ extern "C" extern void* __vt__7JKRFile[8];
 // 
 
 /* ############################################################################################## */
-/* 803CC438-803CC460 0024+04 rc=4 efc=0 rfr=False None .data      __vt__10JKRDvdFile                                           */
+/* 803CC438-803CC460 0024+04 r=4 e=0 z=0  None .data      __vt__10JKRDvdFile                                           */
 SECTION_DATA static void* __vt__10JKRDvdFile[9 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -135,7 +135,7 @@ SECTION_DATA static void* __vt__10JKRDvdFile[9 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802D9584-802D95F8 0074+00 rc=3 efc=3 rfr=False None .text      __ct__10JKRDvdFileFv                                         */
+/* 802D9584-802D95F8 0074+00 r=3 e=3 z=0  None .text      __ct__10JKRDvdFileFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm JKRDvdFile::JKRDvdFile() {
 #pragma pop
 
 
-/* 802D95F8-802D96A0 00A8+00 rc=2 efc=2 rfr=False None .text      __ct__10JKRDvdFileFPCc                                       */
+/* 802D95F8-802D96A0 00A8+00 r=2 e=2 z=0  None .text      __ct__10JKRDvdFileFPCc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm JKRDvdFile::JKRDvdFile(char const* param_0) {
 #pragma pop
 
 
-/* 802D96A0-802D9748 00A8+00 rc=3 efc=3 rfr=False None .text      __ct__10JKRDvdFileFl                                         */
+/* 802D96A0-802D9748 00A8+00 r=3 e=3 z=0  None .text      __ct__10JKRDvdFileFl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm JKRDvdFile::JKRDvdFile(s32 param_0) {
 #pragma pop
 
 
-/* 802D9748-802D97E4 009C+00 rc=6 efc=5 rfr=False None .text      __dt__10JKRDvdFileFv                                         */
+/* 802D9748-802D97E4 009C+00 r=6 e=5 z=0  None .text      __dt__10JKRDvdFileFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm JKRDvdFile::~JKRDvdFile() {
 #pragma pop
 
 
-/* 802D97E4-802D9850 006C+00 rc=3 efc=0 rfr=False None .text      initiate__10JKRDvdFileFv                                     */
+/* 802D97E4-802D9850 006C+00 r=3 e=0 z=0  None .text      initiate__10JKRDvdFileFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,13 +191,13 @@ asm void JKRDvdFile::initiate() {
 
 
 /* ############################################################################################## */
-/* 80434360-8043436C 000C+00 rc=1 efc=0 rfr=False None .bss       @657                                                         */
+/* 80434360-8043436C 000C+00 r=1 e=0 z=0  None .bss       @657                                                         */
 static u8 lit_657[12];
 
-/* 8043436C-80434378 000C+00 rc=4 efc=0 rfr=False None .bss       sDvdList__10JKRDvdFile                                       */
+/* 8043436C-80434378 000C+00 r=4 e=0 z=0  None .bss       sDvdList__10JKRDvdFile                                       */
 static u8 sDvdList__10JKRDvdFile[12];
 
-/* 802D9850-802D98C4 0074+00 rc=2 efc=1 rfr=False None .text      open__10JKRDvdFileFPCc                                       */
+/* 802D9850-802D98C4 0074+00 r=2 e=1 z=0  None .text      open__10JKRDvdFileFPCc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +208,7 @@ asm void JKRDvdFile::open(char const* param_0) {
 #pragma pop
 
 
-/* 802D98C4-802D9938 0074+00 rc=3 efc=2 rfr=False None .text      open__10JKRDvdFileFl                                         */
+/* 802D98C4-802D9938 0074+00 r=3 e=2 z=0  None .text      open__10JKRDvdFileFl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,18 +220,18 @@ asm void JKRDvdFile::open(s32 param_0) {
 
 
 /* ############################################################################################## */
-/* 8039D260-8039D290 0029+07 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D260-8039D290 0029+07 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D260 = "JKRDvdFile.cpp";
-SECTION_DEAD static char const* const stringBase_8039D26F = "%s";
-SECTION_DEAD static char const* const stringBase_8039D272 = "cannot close DVD file\n";
+SECTION_DEAD char const* const stringBase_8039D260 = "JKRDvdFile.cpp";
+SECTION_DEAD char const* const stringBase_8039D26F = "%s";
+SECTION_DEAD char const* const stringBase_8039D272 = "cannot close DVD file\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039D289 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 802D9938-802D99B4 007C+00 rc=1 efc=0 rfr=False None .text      close__10JKRDvdFileFv                                        */
+/* 802D9938-802D99B4 007C+00 r=1 e=0 z=0  None .text      close__10JKRDvdFileFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +242,7 @@ asm void JKRDvdFile::close() {
 #pragma pop
 
 
-/* 802D99B4-802D9A68 00B4+00 rc=1 efc=0 rfr=False None .text      readData__10JKRDvdFileFPvll                                  */
+/* 802D99B4-802D9A68 00B4+00 r=1 e=0 z=0  None .text      readData__10JKRDvdFileFPvll                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +253,7 @@ asm void JKRDvdFile::readData(void* param_0, s32 param_1, s32 param_2) {
 #pragma pop
 
 
-/* 802D9A68-802D9A70 0008+00 rc=1 efc=0 rfr=False None .text      writeData__10JKRDvdFileFPCvll                                */
+/* 802D9A68-802D9A70 0008+00 r=1 e=0 z=0  None .text      writeData__10JKRDvdFileFPCvll                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +264,7 @@ asm void JKRDvdFile::writeData(void const* param_0, s32 param_1, s32 param_2) {
 #pragma pop
 
 
-/* 802D9A70-802D9AC4 0054+00 rc=1 efc=0 rfr=False None .text      sync__10JKRDvdFileFv                                         */
+/* 802D9A70-802D9AC4 0054+00 r=1 e=0 z=0  None .text      sync__10JKRDvdFileFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +275,7 @@ asm void JKRDvdFile::sync() {
 #pragma pop
 
 
-/* 802D9AC4-802D9AF8 0034+00 rc=1 efc=0 rfr=False None .text      doneProcess__10JKRDvdFileFlP11DVDFileInfo                    */
+/* 802D9AC4-802D9AF8 0034+00 r=1 e=0 z=0  None .text      doneProcess__10JKRDvdFileFlP11DVDFileInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,7 +286,7 @@ asm void JKRDvdFile::doneProcess(s32 param_0, DVDFileInfo* param_1) {
 #pragma pop
 
 
-/* 802D9AF8-802D9B00 0008+00 rc=1 efc=0 rfr=False None .text      getFileSize__10JKRDvdFileCFv                                 */
+/* 802D9AF8-802D9B00 0008+00 r=1 e=0 z=0  None .text      getFileSize__10JKRDvdFileCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +297,7 @@ asm void JKRDvdFile::getFileSize() const {
 #pragma pop
 
 
-/* 802D9B00-802D9B44 0044+00 rc=1 efc=1 rfr=False None .text      __sinit_JKRDvdFile_cpp                                       */
+/* 802D9B00-802D9B44 0044+00 r=1 e=1 z=0  None .text      __sinit_JKRDvdFile_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,7 +308,7 @@ extern "C" asm void __sinit_JKRDvdFile_cpp() {
 #pragma pop
 
 
-/* 802D9B44-802D9B98 0054+00 rc=1 efc=0 rfr=False None .text      __dt__21JSUList<10JKRDvdFile>Fv                              */
+/* 802D9B44-802D9B98 0054+00 r=1 e=0 z=0  None .text      __dt__21JSUList<10JKRDvdFile>Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

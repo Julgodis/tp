@@ -72,7 +72,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 8001F284-8001F2C0 003C+00 rc=1 efc=0 rfr=False None .text      fopKy_Draw__FPv                                              */
+/* 8001F284-8001F2C0 003C+00 r=1 e=0 z=0  None .text      fopKy_Draw__FPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm static void fopKy_Draw(void* param_0) {
 #pragma pop
 
 
-/* 8001F2C0-8001F314 0054+00 rc=1 efc=0 rfr=False None .text      fopKy_Execute__FPv                                           */
+/* 8001F2C0-8001F314 0054+00 r=1 e=0 z=0  None .text      fopKy_Execute__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm static void fopKy_Execute(void* param_0) {
 #pragma pop
 
 
-/* 8001F314-8001F368 0054+00 rc=1 efc=0 rfr=False None .text      fopKy_IsDelete__FPv                                          */
+/* 8001F314-8001F368 0054+00 r=1 e=0 z=0  None .text      fopKy_IsDelete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm static void fopKy_IsDelete(void* param_0) {
 #pragma pop
 
 
-/* 8001F368-8001F3B4 004C+00 rc=1 efc=0 rfr=False None .text      fopKy_Delete__FPv                                            */
+/* 8001F368-8001F3B4 004C+00 r=1 e=0 z=0  None .text      fopKy_Delete__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,10 +117,10 @@ asm static void fopKy_Delete(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CE8-80450CF0 0004+04 rc=1 efc=0 rfr=False None .sbss      fopKy_KANKYO_TYPE                                            */
+/* 80450CE8-80450CF0 0004+04 r=1 e=0 z=0  None .sbss      fopKy_KANKYO_TYPE                                            */
 static u8 fopKy_KANKYO_TYPE[4 + 4 /* padding */];
 
-/* 8001F3B4-8001F488 00D4+00 rc=1 efc=0 rfr=False None .text      fopKy_Create__FPv                                            */
+/* 8001F3B4-8001F488 00D4+00 r=1 e=0 z=0  None .text      fopKy_Create__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ asm static void fopKy_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3940-803A3958 0014+04 rc=7 efc=7 rfr=False None .data      g_fopKy_Method                                               */
+/* 803A3940-803A3958 0014+04 r=7 e=7 z=0  None .data      g_fopKy_Method                                               */
 SECTION_DATA void* g_fopKy_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fopKy_Create__FPv,
 	/* 1    */ (void*)fopKy_Delete__FPv,

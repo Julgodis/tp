@@ -27,7 +27,7 @@ extern "C" extern void* __GXData;
 // Declarations:
 // 
 
-/* 8035FEF0-8035FF60 0070+00 rc=20 efc=20 rfr=False None .text      GXCallDisplayList                                            */
+/* 8035FEF0-8035FF60 0070+00 r=24 e=20 z=4  None .text      GXCallDisplayList                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

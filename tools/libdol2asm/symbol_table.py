@@ -1,8 +1,10 @@
 
 from intervaltree import Interval, IntervalTree
 from dataclasses import dataclass, field
+from typing import Dict, Tuple
 
-from . import librel 
+from . import librel
+from .globals import *
 
 class AIT(IntervalTree):
     def __reduce__(self):
@@ -25,25 +27,61 @@ import traceback
 @dataclass()
 class GlobalSymbolTable:
     symbols: AIT = field(default_factory=AIT)
+    section_addrs: Dict[Tuple[int,int], int] = field(default_factory=dict)
 
-    def at(self, module, addr):
-        if isinstance(addr, librel.Relocation):
-            #if relocation.module != 0:
-            #    addr = symbol.section.addr + relocation.addend
-            #else:
-            #    addr = relocation.addend
-            return 0, None
+    def at_relocation(self, relocation, at):
+        assert isinstance(relocation, librel.Relocation)
+       
+        section_addr = 0
+        if relocation.module != 0:
+            key = (relocation.module, relocation.section)
+            if not key in self.section_addrs:
+                error(f"relocation failed! looking for module={relocation.module}, section={relocation.section}")
+                error(relocation)
+                fatal_exit()
+            section_addr = self.section_addrs[key]
+            addr = section_addr + relocation.addend
         else:
-            symbol = self.symbols.get_one_or_none(addr)
-            if symbol:
-                if symbol._module == module:
-                    if symbol.valid_reference(addr):
-                        return symbol
+            addr = relocation.addend
+        
+        symbol = self.symbols.get_one_or_none(addr)
+        if not symbol:
+            error(f"relocation failed!")
+            error(f"address={addr:08x} not in module={relocation.module}, section={section_addr:08X}")
+            fatal_exit()
 
-            return None
+        if symbol._module != relocation.module:
+            error(f"relocation failed!")
+            error(f"symbol found is in the wrong module. got={symbol._module}, expected={relocation.module}")
+            fatal_exit()
 
-    def __getitem__(self, key):
-        return self.at(key[0], key[1])
+        if not symbol.valid_reference(addr):
+            error(f"relocation failed!")
+            error(f"illegal access to symbol... the address={addr:08X} cannot be used to access symbol of type='{type(symbol).__name__}'")
+            fatal_exit()
+
+        return addr, symbol  
+    
+    def at_addr(self, module, addr):
+        assert module >= 0
+        symbol = self.symbols.get_one_or_none(addr)
+        if symbol:
+            if symbol._module == module:
+                if symbol.valid_reference(addr):
+                    return symbol
+
+        return None
+
+
+    def at(self, module, addr, at = 0):
+        if isinstance(addr, librel.Relocation):
+            assert module < 0
+            return self.at_relocation(addr, at)
+        else:
+            return self.at_addr(module, addr)
+
+    def __getitem__(self, key, at = 0):
+        return self.at(key[0], key[1], at)
 
     def resolve_set(self, addrs):
         return [ self.at(*x) for x in addrs ]
@@ -62,4 +100,9 @@ class GlobalSymbolTable:
 
         for symbol in section.symbols:
             self.add_symbol(symbol)
+
+    def add_module_section(self, module: int, section: int, addr: int):
+        key = (module, section)
+        assert not key in self.section_addrs
+        self.section_addrs[key] = addr
 

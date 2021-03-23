@@ -43,7 +43,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9A30-803C9A78 0044+04 rc=2 efc=0 rfr=False None .data      __vt__22JAUAudioArcInterpreter                               */
+/* 803C9A30-803C9A78 0044+04 r=2 e=0 z=0  None .data      __vt__22JAUAudioArcInterpreter                               */
 SECTION_DATA static void* __vt__22JAUAudioArcInterpreter[17 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -66,7 +66,7 @@ SECTION_DATA static void* __vt__22JAUAudioArcInterpreter[17 + 1 /* padding */] =
 	NULL,
 };
 
-/* 802A4244-802A4260 001C+00 rc=1 efc=1 rfr=False None .text      __ct__22JAUAudioArcInterpreterFv                             */
+/* 802A4244-802A4260 001C+00 r=1 e=1 z=0  None .text      __ct__22JAUAudioArcInterpreterFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm JAUAudioArcInterpreter::JAUAudioArcInterpreter() {
 #pragma pop
 
 
-/* 802A4260-802A42A8 0048+00 rc=4 efc=3 rfr=False None .text      __dt__22JAUAudioArcInterpreterFv                             */
+/* 802A4260-802A42A8 0048+00 r=4 e=3 z=0  None .text      __dt__22JAUAudioArcInterpreterFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm JAUAudioArcInterpreter::~JAUAudioArcInterpreter() {
 #pragma pop
 
 
-/* 802A42A8-802A4314 006C+00 rc=1 efc=1 rfr=False None .text      parse__22JAUAudioArcInterpreterFPCv                          */
+/* 802A42A8-802A4314 006C+00 r=1 e=1 z=0  None .text      parse__22JAUAudioArcInterpreterFPCv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm void JAUAudioArcInterpreter::parse(void const* param_0) {
 #pragma pop
 
 
-/* 802A4314-802A431C 0008+00 rc=2 efc=1 rfr=False None .text      readCommandMore__22JAUAudioArcInterpreterFUl                 */
+/* 802A4314-802A431C 0008+00 r=2 e=1 z=0  None .text      readCommandMore__22JAUAudioArcInterpreterFUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm void JAUAudioArcInterpreter::readCommandMore(u32 param_0) {
 #pragma pop
 
 
-/* 802A431C-802A4740 0424+00 rc=1 efc=0 rfr=False None .text      readCommand___22JAUAudioArcInterpreterFv                     */
+/* 802A431C-802A4740 0424+00 r=1 e=0 z=0  None .text      readCommand___22JAUAudioArcInterpreterFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

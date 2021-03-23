@@ -1,0 +1,3 @@
+lbl_80D23DAC:
+/* 80D23DAC 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 80D23DB0 00000004  4B FF E5 38 */	b __dt__12dBgS_ObjAcchFv

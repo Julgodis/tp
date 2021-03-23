@@ -21,7 +21,7 @@ struct create_request {
 // Forward References:
 // 
 
-void fpcCt_IsCreatingByID(u32); // 2
+void fpcCt_IsCreatingByID(unsigned int); // 2
 void fpcCt_IsDoing(base_process_class*); // 2
 void fpcCt_Abort(base_process_class*); // 2
 void fpcCt_Handler(); // 2
@@ -35,7 +35,7 @@ extern "C" void fpcCt_Handler__Fv(); // 1
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(u32); // 2
+void fpcCtRq_IsCreatingByID(unsigned int); // 2
 void fpcCtRq_Cancel(create_request*); // 2
 void fpcCtRq_IsDoing(create_request*); // 2
 void fpcCtRq_Handler(); // 2
@@ -49,18 +49,18 @@ extern "C" void fpcCtRq_Handler__Fv(); // 1
 // Declarations:
 // 
 
-/* 80020EA8-80020EC8 0020+00 rc=1 efc=1 rfr=False None .text      fpcCt_IsCreatingByID__FUi                                    */
+/* 80020EA8-80020EC8 0020+00 r=1 e=1 z=0  None .text      fpcCt_IsCreatingByID__FUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCt_IsCreatingByID(u32 param_0) {
+asm void fpcCt_IsCreatingByID(unsigned int param_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_IsCreatingByID__FUi.s"
 }
 #pragma pop
 
 
-/* 80020EC8-80020EEC 0024+00 rc=1 efc=1 rfr=False None .text      fpcCt_IsDoing__FP18base_process_class                        */
+/* 80020EC8-80020EEC 0024+00 r=1 e=1 z=0  None .text      fpcCt_IsDoing__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void fpcCt_IsDoing(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80020EEC-80020F10 0024+00 rc=1 efc=1 rfr=False None .text      fpcCt_Abort__FP18base_process_class                          */
+/* 80020EEC-80020F10 0024+00 r=1 e=1 z=0  None .text      fpcCt_Abort__FP18base_process_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm void fpcCt_Abort(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80020F10-80020F30 0020+00 rc=1 efc=1 rfr=False None .text      fpcCt_Handler__Fv                                            */
+/* 80020F10-80020F30 0020+00 r=1 e=1 z=0  None .text      fpcCt_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -37,7 +37,7 @@ extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 // Declarations:
 // 
 
-/* 80023764-80023788 0024+00 rc=1 efc=1 rfr=False None .text      fpcMtdIt_Method__FP15node_list_classPFPv_i                   */
+/* 80023764-80023788 0024+00 r=1 e=1 z=0  None .text      fpcMtdIt_Method__FP15node_list_classPFPv_i                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

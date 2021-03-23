@@ -66,7 +66,7 @@ extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 8001EB34-8001EB5C 0028+00 rc=1 efc=0 rfr=False None .text      fopScn_Draw__FP11scene_class                                 */
+/* 8001EB34-8001EB5C 0028+00 r=1 e=0 z=0  None .text      fopScn_Draw__FP11scene_class                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm static void fopScn_Draw(scene_class* param_0) {
 #pragma pop
 
 
-/* 8001EB5C-8001EB84 0028+00 rc=1 efc=0 rfr=False None .text      fopScn_Execute__FP11scene_class                              */
+/* 8001EB5C-8001EB84 0028+00 r=1 e=0 z=0  None .text      fopScn_Execute__FP11scene_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm static void fopScn_Execute(scene_class* param_0) {
 #pragma pop
 
 
-/* 8001EB84-8001EBAC 0028+00 rc=1 efc=0 rfr=False None .text      fopScn_IsDelete__FPv                                         */
+/* 8001EB84-8001EBAC 0028+00 r=1 e=0 z=0  None .text      fopScn_IsDelete__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm static void fopScn_IsDelete(void* param_0) {
 #pragma pop
 
 
-/* 8001EBAC-8001EC00 0054+00 rc=1 efc=0 rfr=False None .text      fopScn_Delete__FPv                                           */
+/* 8001EBAC-8001EC00 0054+00 r=1 e=0 z=0  None .text      fopScn_Delete__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm static void fopScn_Delete(void* param_0) {
 #pragma pop
 
 
-/* 8001EC00-8001EC74 0074+00 rc=1 efc=0 rfr=False None .text      fopScn_Create__FPv                                           */
+/* 8001EC00-8001EC74 0074+00 r=1 e=0 z=0  None .text      fopScn_Create__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +122,7 @@ asm static void fopScn_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A38B0-803A38C8 0014+04 rc=9 efc=9 rfr=False None .data      g_fopScn_Method                                              */
+/* 803A38B0-803A38C8 0014+04 r=9 e=9 z=0  None .data      g_fopScn_Method                                              */
 SECTION_DATA void* g_fopScn_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fopScn_Create__FPv,
 	/* 1    */ (void*)fopScn_Delete__FPv,

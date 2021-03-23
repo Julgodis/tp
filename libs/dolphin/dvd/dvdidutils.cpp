@@ -25,7 +25,7 @@ extern "C" void strncmp(); // 1
 // Declarations:
 // 
 
-/* 8034BC04-8034BCFC 00F8+00 rc=1 efc=1 rfr=False None .text      DVDCompareDiskID                                             */
+/* 8034BC04-8034BCFC 00F8+00 r=1 e=1 z=0  None .text      DVDCompareDiskID                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -35,7 +35,7 @@ extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
 // Declarations:
 // 
 
-/* 802CE0D0-802CE138 0068+00 rc=0 efc=0 rfr=False None .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                */
+/* 802CE0D0-802CE138 0068+00 r=1 e=0 z=1  None .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

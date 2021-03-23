@@ -42,21 +42,21 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803AB7A8-803AB7B4 000C+00 rc=2 efc=0 rfr=False None .data      __vt__15dBgS_GrpPassChk                                      */
+/* 803AB7A8-803AB7B4 000C+00 r=2 e=0 z=0  None .data      __vt__15dBgS_GrpPassChk                                      */
 SECTION_DATA static void* __vt__15dBgS_GrpPassChk[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__15dBgS_GrpPassChkFv,
 };
 
-/* 803AB7B4-803AB7C0 000C+00 rc=3 efc=0 rfr=False None .data      __vt__15cBgS_GrpPassChk                                      */
+/* 803AB7B4-803AB7C0 000C+00 r=3 e=0 z=0  None .data      __vt__15cBgS_GrpPassChk                                      */
 SECTION_DATA static void* __vt__15cBgS_GrpPassChk[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__15cBgS_GrpPassChkFv,
 };
 
-/* 80077BA0-80077BC4 0024+00 rc=1 efc=1 rfr=False None .text      __ct__15dBgS_GrpPassChkFv                                    */
+/* 80077BA0-80077BC4 0024+00 r=1 e=1 z=0  None .text      __ct__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +67,7 @@ asm dBgS_GrpPassChk::dBgS_GrpPassChk() {
 #pragma pop
 
 
-/* 80077BC4-80077C20 005C+00 rc=2 efc=1 rfr=False None .text      __dt__15dBgS_GrpPassChkFv                                    */
+/* 80077BC4-80077C20 005C+00 r=2 e=1 z=0  None .text      __dt__15dBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +78,7 @@ asm dBgS_GrpPassChk::~dBgS_GrpPassChk() {
 #pragma pop
 
 
-/* 80077C20-80077C68 0048+00 rc=1 efc=0 rfr=False None .text      __dt__15cBgS_GrpPassChkFv                                    */
+/* 80077C20-80077C68 0048+00 r=1 e=0 z=0  None .text      __dt__15cBgS_GrpPassChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -72,7 +72,7 @@ extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 80021A00-80021A24 0024+00 rc=4 efc=4 rfr=False None .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
+/* 80021A00-80021A24 0024+00 r=6 e=4 z=2  None .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void fpcLf_GetPriority(leafdraw_class const* param_0) {
 #pragma pop
 
 
-/* 80021A24-80021A48 0024+00 rc=7 efc=6 rfr=False None .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                */
+/* 80021A24-80021A48 0024+00 r=7 e=6 z=0  None .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm void fpcLf_DrawMethod(leafdraw_method_class* param_0, void* param_1) {
 #pragma pop
 
 
-/* 80021A48-80021A80 0038+00 rc=1 efc=0 rfr=False None .text      fpcLf_Draw__FP14leafdraw_class                               */
+/* 80021A48-80021A80 0038+00 r=1 e=0 z=0  None .text      fpcLf_Draw__FP14leafdraw_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm static void fpcLf_Draw(leafdraw_class* param_0) {
 #pragma pop
 
 
-/* 80021A80-80021AA8 0028+00 rc=1 efc=0 rfr=False None .text      fpcLf_Execute__FP14leafdraw_class                            */
+/* 80021A80-80021AA8 0028+00 r=1 e=0 z=0  None .text      fpcLf_Execute__FP14leafdraw_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm static void fpcLf_Execute(leafdraw_class* param_0) {
 #pragma pop
 
 
-/* 80021AA8-80021AD0 0028+00 rc=1 efc=0 rfr=False None .text      fpcLf_IsDelete__FP14leafdraw_class                           */
+/* 80021AA8-80021AD0 0028+00 r=1 e=0 z=0  None .text      fpcLf_IsDelete__FP14leafdraw_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm static void fpcLf_IsDelete(leafdraw_class* param_0) {
 #pragma pop
 
 
-/* 80021AD0-80021B14 0044+00 rc=1 efc=0 rfr=False None .text      fpcLf_Delete__FP14leafdraw_class                             */
+/* 80021AD0-80021B14 0044+00 r=1 e=0 z=0  None .text      fpcLf_Delete__FP14leafdraw_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,10 +139,10 @@ asm static void fpcLf_Delete(leafdraw_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450D30-80450D38 0004+04 rc=2 efc=1 rfr=False None .sbss      g_fpcLf_type                                                 */
+/* 80450D30-80450D38 0004+04 r=2 e=1 z=0  None .sbss      g_fpcLf_type                                                 */
 u8 g_fpcLf_type[4 + 4 /* padding */];
 
-/* 80021B14-80021B88 0074+00 rc=1 efc=0 rfr=False None .text      fpcLf_Create__FP14leafdraw_class                             */
+/* 80021B14-80021B88 0074+00 r=1 e=0 z=0  None .text      fpcLf_Create__FP14leafdraw_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ asm static void fpcLf_Create(leafdraw_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A39E8-803A3A00 0014+04 rc=27 efc=27 rfr=False None .data      g_fpcLf_Method                                               */
+/* 803A39E8-803A3A00 0014+04 r=783 e=27 z=756  None .data      g_fpcLf_Method                                               */
 SECTION_DATA void* g_fpcLf_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fpcLf_Create__FP14leafdraw_class,
 	/* 1    */ (void*)fpcLf_Delete__FP14leafdraw_class,
@@ -165,6 +165,6 @@ SECTION_DATA void* g_fpcLf_Method[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80450D38-80450D40 0008+00 rc=1 efc=1 rfr=False None .sbss      None                                                         */
+/* 80450D38-80450D40 0008+00 r=1 e=1 z=0  None .sbss      None                                                         */
 u8 struct_80450D38[8];
 

@@ -73,7 +73,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 8001F488-8001F4B0 0028+00 rc=1 efc=0 rfr=False None .text      fopMsg_Draw__FPv                                             */
+/* 8001F488-8001F4B0 0028+00 r=1 e=0 z=0  None .text      fopMsg_Draw__FPv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ asm static void fopMsg_Draw(void* param_0) {
 #pragma pop
 
 
-/* 8001F4B0-8001F4E8 0038+00 rc=1 efc=0 rfr=False None .text      fopMsg_Execute__FPv                                          */
+/* 8001F4B0-8001F4E8 0038+00 r=1 e=0 z=0  None .text      fopMsg_Execute__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ asm static void fopMsg_Execute(void* param_0) {
 #pragma pop
 
 
-/* 8001F4E8-8001F53C 0054+00 rc=1 efc=0 rfr=False None .text      fopMsg_IsDelete__FPv                                         */
+/* 8001F4E8-8001F53C 0054+00 r=1 e=0 z=0  None .text      fopMsg_IsDelete__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ asm static void fopMsg_IsDelete(void* param_0) {
 #pragma pop
 
 
-/* 8001F53C-8001F588 004C+00 rc=1 efc=0 rfr=False None .text      fopMsg_Delete__FPv                                           */
+/* 8001F53C-8001F588 004C+00 r=1 e=0 z=0  None .text      fopMsg_Delete__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,10 +118,10 @@ asm static void fopMsg_Delete(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CF0-80450CF8 0004+04 rc=1 efc=0 rfr=False None .sbss      fopMsg_MSG_TYPE                                              */
+/* 80450CF0-80450CF8 0004+04 r=1 e=0 z=0  None .sbss      fopMsg_MSG_TYPE                                              */
 static u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
 
-/* 8001F588-8001F660 00D8+00 rc=1 efc=0 rfr=False None .text      fopMsg_Create__FPv                                           */
+/* 8001F588-8001F660 00D8+00 r=1 e=0 z=0  None .text      fopMsg_Create__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm static void fopMsg_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3958-803A3970 0014+04 rc=5 efc=5 rfr=False None .data      g_fopMsg_Method                                              */
+/* 803A3958-803A3970 0014+04 r=5 e=5 z=0  None .data      g_fopMsg_Method                                              */
 SECTION_DATA void* g_fopMsg_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fopMsg_Create__FPv,
 	/* 1    */ (void*)fopMsg_Delete__FPv,

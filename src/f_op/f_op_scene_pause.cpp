@@ -28,7 +28,7 @@ extern "C" void fopScnPause_Disable__FP11scene_class(); // 1
 // External References:
 // 
 
-void fpcEx_IsExist(u32); // 2
+void fpcEx_IsExist(unsigned int); // 2
 void fpcM_IsPause(void*, u8); // 2
 void fpcM_PauseEnable(void*, u8); // 2
 void fpcM_PauseDisable(void*, u8); // 2
@@ -42,7 +42,7 @@ extern "C" void fpcM_PauseDisable__FPvUc(); // 1
 // Declarations:
 // 
 
-/* 80020548-80020594 004C+00 rc=2 efc=2 rfr=False None .text      fopScnPause_Enable__FP11scene_class                          */
+/* 80020548-80020594 004C+00 r=2 e=2 z=0  None .text      fopScnPause_Enable__FP11scene_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ asm void fopScnPause_Enable(scene_class* param_0) {
 #pragma pop
 
 
-/* 80020594-8002064C 00B8+00 rc=2 efc=2 rfr=False None .text      fopScnPause_Disable__FP11scene_class                         */
+/* 80020594-8002064C 00B8+00 r=2 e=2 z=0  None .text      fopScnPause_Disable__FP11scene_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

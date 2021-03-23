@@ -48,7 +48,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803BA088-803BA0A0 0014+04 rc=2 efc=0 rfr=False None .data      __vt__14daObj_SSBase_c                                       */
+/* 803BA088-803BA0A0 0014+04 r=2 e=0 z=0  None .data      __vt__14daObj_SSBase_c                                       */
 SECTION_DATA static void* __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -59,7 +59,7 @@ SECTION_DATA static void* __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8015E3F8-8015E450 0058+00 rc=0 efc=0 rfr=False None .text      __ct__14daObj_SSBase_cFv                                     */
+/* 8015E3F8-8015E450 0058+00 r=3 e=0 z=3  None .text      __ct__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm daObj_SSBase_c::daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E450-8015E4B0 0060+00 rc=1 efc=0 rfr=False None .text      __dt__14daObj_SSBase_cFv                                     */
+/* 8015E450-8015E4B0 0060+00 r=4 e=0 z=3  None .text      __dt__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm daObj_SSBase_c::~daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 rc=1 efc=0 rfr=False None .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 r=3 e=0 z=2  None .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void daObj_SSBase_c::getProcessID() {
 #pragma pop
 
 
-/* 8015E4C8-8015E4CC 0004+00 rc=1 efc=0 rfr=False None .text      setSoldOut__14daObj_SSBase_cFv                               */
+/* 8015E4C8-8015E4CC 0004+00 r=1 e=0 z=0  None .text      setSoldOut__14daObj_SSBase_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

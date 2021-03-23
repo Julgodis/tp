@@ -69,7 +69,7 @@ extern "C" extern void* __vt__8cM3dGSph[3];
 // 
 
 /* ############################################################################################## */
-/* 803AB9C8-803ABA08 003C+04 rc=2 efc=0 rfr=False None .data      __vt__11dBgS_SphChk                                          */
+/* 803AB9C8-803ABA08 003C+04 r=2 e=0 z=0  None .data      __vt__11dBgS_SphChk                                          */
 SECTION_DATA static void* __vt__11dBgS_SphChk[15 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -90,7 +90,7 @@ SECTION_DATA static void* __vt__11dBgS_SphChk[15 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80078A14-80078AC0 00AC+00 rc=1 efc=1 rfr=False None .text      __ct__11dBgS_SphChkFv                                        */
+/* 80078A14-80078AC0 00AC+00 r=2 e=1 z=1  None .text      __ct__11dBgS_SphChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm dBgS_SphChk::dBgS_SphChk() {
 #pragma pop
 
 
-/* 80078AC0-80078B70 00B0+00 rc=7 efc=2 rfr=False None .text      __dt__11dBgS_SphChkFv                                        */
+/* 80078AC0-80078B70 00B0+00 r=7 e=2 z=0  None .text      __dt__11dBgS_SphChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm dBgS_SphChk::~dBgS_SphChk() {
 #pragma pop
 
 
-/* 80078B70-80078B78 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__11dBgS_SphChkFv                                    */
+/* 80078B70-80078B78 0008+00 r=1 e=0 z=0  None .text      @20@__dt__11dBgS_SphChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ extern "C" asm static void func_80078B70() {
 #pragma pop
 
 
-/* 80078B78-80078B80 0008+00 rc=1 efc=0 rfr=False None .text      @36@__dt__11dBgS_SphChkFv                                    */
+/* 80078B78-80078B80 0008+00 r=1 e=0 z=0  None .text      @36@__dt__11dBgS_SphChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +134,7 @@ extern "C" asm static void func_80078B78() {
 #pragma pop
 
 
-/* 80078B80-80078B88 0008+00 rc=1 efc=0 rfr=False None .text      @72@__dt__11dBgS_SphChkFv                                    */
+/* 80078B80-80078B88 0008+00 r=1 e=0 z=0  None .text      @72@__dt__11dBgS_SphChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ extern "C" asm static void func_80078B80() {
 #pragma pop
 
 
-/* 80078B88-80078B90 0008+00 rc=1 efc=0 rfr=False None .text      @56@__dt__11dBgS_SphChkFv                                    */
+/* 80078B88-80078B90 0008+00 r=1 e=0 z=0  None .text      @56@__dt__11dBgS_SphChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

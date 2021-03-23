@@ -24,7 +24,7 @@ extern "C" void __copy(); // 1
 // Declarations:
 // 
 
-/* 80361C3C-80361C6C 0030+00 rc=0 efc=0 rfr=False None .text      __copy                                                       */
+/* 80361C3C-80361C6C 0030+00 r=4 e=0 z=4  None .text      __copy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

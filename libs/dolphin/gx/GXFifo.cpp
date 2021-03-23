@@ -61,28 +61,28 @@ extern "C" extern void* __GXData;
 // 
 
 /* ############################################################################################## */
-/* 80451948-8045194C 0004+00 rc=4 efc=0 rfr=False None .sbss      CPUFifo                                                      */
+/* 80451948-8045194C 0004+00 r=4 e=0 z=0  None .sbss      CPUFifo                                                      */
 static u8 CPUFifo[4];
 
-/* 8045194C-80451950 0004+00 rc=4 efc=0 rfr=False None .sbss      GPFifo                                                       */
+/* 8045194C-80451950 0004+00 r=4 e=0 z=0  None .sbss      GPFifo                                                       */
 static u8 GPFifo[4];
 
-/* 80451950-80451954 0004+00 rc=4 efc=0 rfr=False None .sbss      __GXCurrentThread                                            */
+/* 80451950-80451954 0004+00 r=4 e=0 z=0  None .sbss      __GXCurrentThread                                            */
 static u8 __GXCurrentThread[4];
 
-/* 80451954-80451958 0004+00 rc=3 efc=0 rfr=False None .sbss      None                                                         */
+/* 80451954-80451958 0004+00 r=3 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451954[4];
 
-/* 80451958-8045195C 0004+00 rc=2 efc=0 rfr=False None .sbss      GXOverflowSuspendInProgress                                  */
+/* 80451958-8045195C 0004+00 r=2 e=0 z=0  None .sbss      GXOverflowSuspendInProgress                                  */
 static u8 GXOverflowSuspendInProgress[4];
 
-/* 8045195C-80451960 0004+00 rc=2 efc=0 rfr=False None .sbss      BreakPointCB                                                 */
+/* 8045195C-80451960 0004+00 r=2 e=0 z=0  None .sbss      BreakPointCB                                                 */
 static u8 BreakPointCB[4];
 
-/* 80451960-80451968 0004+04 rc=1 efc=0 rfr=False None .sbss      __GXOverflowCount                                            */
+/* 80451960-80451968 0004+04 r=1 e=0 z=0  None .sbss      __GXOverflowCount                                            */
 static u8 __GXOverflowCount[4 + 4 /* padding */];
 
-/* 8035A5A8-8035A6DC 0134+00 rc=1 efc=0 rfr=False None .text      GXCPInterruptHandler                                         */
+/* 8035A5A8-8035A6DC 0134+00 r=1 e=0 z=0  None .text      GXCPInterruptHandler                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ extern "C" asm static void GXCPInterruptHandler() {
 #pragma pop
 
 
-/* 8035A6DC-8035A748 006C+00 rc=2 efc=2 rfr=False None .text      GXInitFifoBase                                               */
+/* 8035A6DC-8035A748 006C+00 r=2 e=2 z=0  None .text      GXInitFifoBase                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ extern "C" asm void GXInitFifoBase() {
 #pragma pop
 
 
-/* 8035A748-8035A7B8 0070+00 rc=2 efc=1 rfr=False None .text      GXInitFifoPtrs                                               */
+/* 8035A748-8035A7B8 0070+00 r=2 e=1 z=0  None .text      GXInitFifoPtrs                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ extern "C" asm void GXInitFifoPtrs() {
 #pragma pop
 
 
-/* 8035A7B8-8035A7C4 000C+00 rc=1 efc=0 rfr=False None .text      GXInitFifoLimits                                             */
+/* 8035A7B8-8035A7C4 000C+00 r=1 e=0 z=0  None .text      GXInitFifoLimits                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ extern "C" asm static void GXInitFifoLimits() {
 #pragma pop
 
 
-/* 8035A7C4-8035A8EC 0128+00 rc=2 efc=1 rfr=False None .text      GXSetCPUFifo                                                 */
+/* 8035A7C4-8035A8EC 0128+00 r=2 e=1 z=0  None .text      GXSetCPUFifo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ extern "C" asm void GXSetCPUFifo() {
 #pragma pop
 
 
-/* 8035A8EC-8035AA8C 01A0+00 rc=2 efc=1 rfr=False None .text      GXSetGPFifo                                                  */
+/* 8035A8EC-8035AA8C 01A0+00 r=2 e=1 z=0  None .text      GXSetGPFifo                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ extern "C" asm void GXSetGPFifo() {
 #pragma pop
 
 
-/* 8035AA8C-8035AAC0 0034+00 rc=1 efc=1 rfr=False None .text      GXSaveCPUFifo                                                */
+/* 8035AA8C-8035AAC0 0034+00 r=1 e=1 z=0  None .text      GXSaveCPUFifo                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ extern "C" asm void GXSaveCPUFifo() {
 #pragma pop
 
 
-/* 8035AAC0-8035AB88 00C8+00 rc=1 efc=0 rfr=False None .text      __GXSaveCPUFifoAux                                           */
+/* 8035AAC0-8035AB88 00C8+00 r=1 e=0 z=0  None .text      __GXSaveCPUFifoAux                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +170,7 @@ extern "C" asm static void __GXSaveCPUFifoAux() {
 #pragma pop
 
 
-/* 8035AB88-8035ABD8 0050+00 rc=2 efc=2 rfr=False None .text      GXGetGPStatus                                                */
+/* 8035AB88-8035ABD8 0050+00 r=2 e=2 z=0  None .text      GXGetGPStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ extern "C" asm void GXGetGPStatus() {
 #pragma pop
 
 
-/* 8035ABD8-8035ABE0 0008+00 rc=1 efc=1 rfr=False None .text      GXGetFifoBase                                                */
+/* 8035ABD8-8035ABE0 0008+00 r=1 e=1 z=0  None .text      GXGetFifoBase                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ extern "C" asm void GXGetFifoBase() {
 #pragma pop
 
 
-/* 8035ABE0-8035ABE8 0008+00 rc=1 efc=1 rfr=False None .text      GXGetFifoSize                                                */
+/* 8035ABE0-8035ABE8 0008+00 r=1 e=1 z=0  None .text      GXGetFifoSize                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ extern "C" asm void GXGetFifoSize() {
 #pragma pop
 
 
-/* 8035ABE8-8035AC2C 0044+00 rc=1 efc=1 rfr=False None .text      GXSetBreakPtCallback                                         */
+/* 8035ABE8-8035AC2C 0044+00 r=1 e=1 z=0  None .text      GXSetBreakPtCallback                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ extern "C" asm void GXSetBreakPtCallback() {
 #pragma pop
 
 
-/* 8035AC2C-8035AC78 004C+00 rc=1 efc=1 rfr=False None .text      __GXFifoInit                                                 */
+/* 8035AC2C-8035AC78 004C+00 r=1 e=1 z=0  None .text      __GXFifoInit                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ extern "C" asm void __GXFifoInit() {
 #pragma pop
 
 
-/* 8035AC78-8035AC9C 0024+00 rc=1 efc=0 rfr=False None .text      __GXFifoReadEnable                                           */
+/* 8035AC78-8035AC9C 0024+00 r=1 e=0 z=0  None .text      __GXFifoReadEnable                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ extern "C" asm static void __GXFifoReadEnable() {
 #pragma pop
 
 
-/* 8035AC9C-8035ACC0 0024+00 rc=1 efc=0 rfr=False None .text      __GXFifoReadDisable                                          */
+/* 8035AC9C-8035ACC0 0024+00 r=1 e=0 z=0  None .text      __GXFifoReadDisable                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ extern "C" asm static void __GXFifoReadDisable() {
 #pragma pop
 
 
-/* 8035ACC0-8035ACF4 0034+00 rc=2 efc=0 rfr=False None .text      __GXFifoLink                                                 */
+/* 8035ACC0-8035ACF4 0034+00 r=2 e=0 z=0  None .text      __GXFifoLink                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ extern "C" asm static void __GXFifoLink() {
 #pragma pop
 
 
-/* 8035ACF4-8035AD24 0030+00 rc=3 efc=0 rfr=False None .text      __GXWriteFifoIntEnable                                       */
+/* 8035ACF4-8035AD24 0030+00 r=3 e=0 z=0  None .text      __GXWriteFifoIntEnable                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ extern "C" asm static void __GXWriteFifoIntEnable() {
 #pragma pop
 
 
-/* 8035AD24-8035AD54 0030+00 rc=3 efc=0 rfr=False None .text      __GXWriteFifoIntReset                                        */
+/* 8035AD24-8035AD54 0030+00 r=3 e=0 z=0  None .text      __GXWriteFifoIntReset                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ extern "C" asm static void __GXWriteFifoIntReset() {
 #pragma pop
 
 
-/* 8035AD54-8035AE54 0100+00 rc=1 efc=1 rfr=False None .text      __GXCleanGPFifo                                              */
+/* 8035AD54-8035AE54 0100+00 r=1 e=1 z=0  None .text      __GXCleanGPFifo                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ extern "C" asm void __GXCleanGPFifo() {
 #pragma pop
 
 
-/* 8035AE54-8035AEA0 004C+00 rc=1 efc=1 rfr=False None .text      GXSetCurrentGXThread                                         */
+/* 8035AE54-8035AEA0 004C+00 r=1 e=1 z=0  None .text      GXSetCurrentGXThread                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ extern "C" asm void GXSetCurrentGXThread() {
 #pragma pop
 
 
-/* 8035AEA0-8035AEA8 0008+00 rc=1 efc=1 rfr=False None .text      GXGetCurrentGXThread                                         */
+/* 8035AEA0-8035AEA8 0008+00 r=1 e=1 z=0  None .text      GXGetCurrentGXThread                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ extern "C" asm void GXGetCurrentGXThread() {
 #pragma pop
 
 
-/* 8035AEA8-8035AEB0 0008+00 rc=2 efc=1 rfr=False None .text      GXGetCPUFifo                                                 */
+/* 8035AEA8-8035AEB0 0008+00 r=2 e=1 z=0  None .text      GXGetCPUFifo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +324,7 @@ extern "C" asm void GXGetCPUFifo() {
 #pragma pop
 
 
-/* 8035AEB0-8035AEB8 0008+00 rc=3 efc=2 rfr=False None .text      GXGetGPFifo                                                  */
+/* 8035AEB0-8035AEB8 0008+00 r=3 e=2 z=0  None .text      GXGetGPFifo                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

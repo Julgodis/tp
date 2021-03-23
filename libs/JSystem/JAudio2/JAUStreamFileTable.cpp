@@ -57,7 +57,7 @@ extern "C" void DVDConvertPathToEntrynum(); // 1
 // Declarations:
 // 
 
-/* 802A7420-802A742C 000C+00 rc=1 efc=1 rfr=False None .text      __ct__18JAUStreamFileTableFv                                 */
+/* 802A7420-802A742C 000C+00 r=1 e=1 z=0  None .text      __ct__18JAUStreamFileTableFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ asm JAUStreamFileTable::JAUStreamFileTable() {
 #pragma pop
 
 
-/* 802A742C-802A7478 004C+00 rc=1 efc=1 rfr=False None .text      init__18JAUStreamFileTableFPCv                               */
+/* 802A742C-802A7478 004C+00 r=1 e=1 z=0  None .text      init__18JAUStreamFileTableFPCv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void JAUStreamFileTable::init(void const* param_0) {
 #pragma pop
 
 
-/* 802A7478-802A7484 000C+00 rc=1 efc=1 rfr=False None .text      getNumFiles__18JAUStreamFileTableCFv                         */
+/* 802A7478-802A7484 000C+00 r=1 e=1 z=0  None .text      getNumFiles__18JAUStreamFileTableCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void JAUStreamFileTable::getNumFiles() const {
 #pragma pop
 
 
-/* 802A7484-802A74AC 0028+00 rc=2 efc=1 rfr=False None .text      getFilePath__18JAUStreamFileTableCFi                         */
+/* 802A7484-802A74AC 0028+00 r=2 e=1 z=0  None .text      getFilePath__18JAUStreamFileTableCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void JAUStreamFileTable::getFilePath(int param_0) const {
 #pragma pop
 
 
-/* 802A74AC-802A74E8 003C+00 rc=1 efc=0 rfr=False None .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID */
+/* 802A74AC-802A74E8 003C+00 r=1 e=0 z=0  None .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm void JAUStreamDataMgr_StreamFileTable::getStreamFileEntry(JAISoundID param_0
 
 
 /* ############################################################################################## */
-/* 803C9B50-803C9B60 0010+00 rc=2 efc=1 rfr=False None .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
+/* 803C9B50-803C9B60 0010+00 r=2 e=1 z=0  None .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
 SECTION_DATA void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -121,7 +121,7 @@ SECTION_DATA void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 	/* 3    */ (void*)__dt__32JAUStreamDataMgr_StreamFileTableFv,
 };
 
-/* 802A74E8-802A7548 0060+00 rc=1 efc=0 rfr=False None .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */
+/* 802A74E8-802A7548 0060+00 r=1 e=0 z=0  None .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

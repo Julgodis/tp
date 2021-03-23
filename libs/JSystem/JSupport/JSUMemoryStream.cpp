@@ -54,7 +54,7 @@ extern "C" void skip__20JSURandomInputStreamFl(); // 1
 // Declarations:
 // 
 
-/* 802DC520-802DC534 0014+00 rc=3 efc=3 rfr=False None .text      setBuffer__20JSUMemoryInputStreamFPCvl                       */
+/* 802DC520-802DC534 0014+00 r=3 e=3 z=0  None .text      setBuffer__20JSUMemoryInputStreamFPCvl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ asm void JSUMemoryInputStream::setBuffer(void const* param_0, s32 param_1) {
 #pragma pop
 
 
-/* 802DC534-802DC5AC 0078+00 rc=1 efc=0 rfr=False None .text      readData__20JSUMemoryInputStreamFPvl                         */
+/* 802DC534-802DC5AC 0078+00 r=1 e=0 z=0  None .text      readData__20JSUMemoryInputStreamFPvl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void JSUMemoryInputStream::readData(void* param_0, s32 param_1) {
 #pragma pop
 
 
-/* 802DC5AC-802DC628 007C+00 rc=1 efc=0 rfr=False None .text      seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom         */
+/* 802DC5AC-802DC628 007C+00 r=1 e=0 z=0  None .text      seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void JSUMemoryInputStream::seekPos(s32 param_0, JSUStreamSeekFrom param_1) {
 #pragma pop
 
 
-/* 802DC628-802DC630 0008+00 rc=1 efc=0 rfr=False None .text      getLength__20JSUMemoryInputStreamCFv                         */
+/* 802DC628-802DC630 0008+00 r=1 e=0 z=0  None .text      getLength__20JSUMemoryInputStreamCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void JSUMemoryInputStream::getLength() const {
 #pragma pop
 
 
-/* 802DC630-802DC638 0008+00 rc=1 efc=0 rfr=False None .text      getPosition__20JSUMemoryInputStreamCFv                       */
+/* 802DC630-802DC638 0008+00 r=1 e=0 z=0  None .text      getPosition__20JSUMemoryInputStreamCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm void JSUMemoryInputStream::getPosition() const {
 
 
 /* ############################################################################################## */
-/* 803CC4F0-803CC518 0024+04 rc=4 efc=4 rfr=False None .data      __vt__20JSUMemoryInputStream                                 */
+/* 803CC4F0-803CC518 0024+04 r=4 e=4 z=0  None .data      __vt__20JSUMemoryInputStream                                 */
 SECTION_DATA void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,

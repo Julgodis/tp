@@ -37,7 +37,7 @@ struct dSv_event_c {
 
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
-	/* 800436EC */ void setPtI_Id(u32);
+	/* 800436EC */ void setPtI_Id(unsigned int);
 };
 
 struct dEvent_manager_c {
@@ -97,7 +97,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BA078-803BA088 000C+04 rc=1 efc=0 rfr=False None .data      __vt__9dInsect_c                                             */
+/* 803BA078-803BA088 000C+04 r=1 e=0 z=0  None .data      __vt__9dInsect_c                                             */
 SECTION_DATA static void* __vt__9dInsect_c[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -106,7 +106,7 @@ SECTION_DATA static void* __vt__9dInsect_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8015E010-8015E078 0068+00 rc=0 efc=0 rfr=False None .text      __ct__9dInsect_cFv                                           */
+/* 8015E010-8015E078 0068+00 r=13 e=0 z=13  None .text      __ct__9dInsect_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,14 +118,14 @@ asm dInsect_c::dInsect_c() {
 
 
 /* ############################################################################################## */
-/* 80393D98-80393DA8 0010+00 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80393D98-80393DA8 0010+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80393D98 = "DEFAULT_GETITEM";
+SECTION_DEAD char const* const stringBase_80393D98 = "DEFAULT_GETITEM";
 #pragma pop
 
-/* 8015E078-8015E26C 01F4+00 rc=0 efc=0 rfr=False None .text      Insect_GetDemoMain__9dInsect_cFv                             */
+/* 8015E078-8015E26C 01F4+00 r=24 e=0 z=24  None .text      Insect_GetDemoMain__9dInsect_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,34 +137,34 @@ asm void dInsect_c::Insect_GetDemoMain() {
 
 
 /* ############################################################################################## */
-/* 804535E0-804535E4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3871                                                        */
+/* 804535E0-804535E4 0004+00 r=1 e=0 z=0  None .sdata2    @3871                                                        */
 SECTION_SDATA2 static f32 d_d_insect__lit_3871 = 20.0f;
 
-/* 804535E4-804535E8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3872                                                        */
+/* 804535E4-804535E8 0004+00 r=1 e=0 z=0  None .sdata2    @3872                                                        */
 SECTION_SDATA2 static u8 lit_3872[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804535E8-804535EC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3873                                                        */
+/* 804535E8-804535EC 0004+00 r=1 e=0 z=0  None .sdata2    @3873                                                        */
 SECTION_SDATA2 static f32 d_d_insect__lit_3873 = 608.0f;
 
-/* 804535EC-804535F0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3874                                                        */
+/* 804535EC-804535F0 0004+00 r=1 e=0 z=0  None .sdata2    @3874                                                        */
 SECTION_SDATA2 static f32 lit_3874 = 448.0f;
 
-/* 804535F0-804535F4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3875                                                        */
+/* 804535F0-804535F4 0004+00 r=1 e=0 z=0  None .sdata2    @3875                                                        */
 SECTION_SDATA2 static f32 lit_3875 = -10.0f;
 
-/* 804535F4-804535F8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3876                                                        */
+/* 804535F4-804535F8 0004+00 r=1 e=0 z=0  None .sdata2    @3876                                                        */
 SECTION_SDATA2 static f32 d_d_insect__lit_3876 = 16777215.0f;
 
-/* 804535F8-80453600 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3877                                                        */
+/* 804535F8-80453600 0004+04 r=1 e=0 z=0  None .sdata2    @3877                                                        */
 SECTION_SDATA2 static f32 d_d_insect__lit_3877[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8015E26C-8015E3F8 018C+00 rc=0 efc=0 rfr=False None .text      CalcZBuffer__9dInsect_cFf                                    */
+/* 8015E26C-8015E3F8 018C+00 r=3 e=0 z=3  None .text      CalcZBuffer__9dInsect_cFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

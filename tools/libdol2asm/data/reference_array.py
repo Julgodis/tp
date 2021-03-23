@@ -7,6 +7,7 @@ from ..builder import AsyncBuilder
 from .. import util
 from .base import *
 from .identifier import *
+from ..globals import *
 
 
 @dataclass(eq=False)
@@ -38,13 +39,14 @@ class ReferenceArray(ArbitraryData):
 
     def resolve_references(self, context, symbol_table, section):
         self.references = []
+        self.relocations = []
 
         relocations = section.relocations
-        offset = self.addr
+        offset = self.addr# - section.addr
         for addr in self.values:
             if offset in relocations:
                 relocation = relocations[offset]
-                addr, symbol = symbol_table[-1, relocation]
+                addr, symbol = symbol_table[-1, relocation, section.addr + offset]
                 self.relocations.append((symbol._module, symbol.addr))
                 self.references.append((symbol._module, symbol.addr, addr))
             elif addr == 0:
@@ -65,7 +67,7 @@ class ReferenceArray(ArbitraryData):
         ])
 
     def relocation_symbols(self, context, symbol_table, section):
-        return self.relocations
+        return symbol_table.resolve_set(set(self.relocations))
 
     def export_reference_value(self, symbol_table, index, reference) -> str:
         module = reference[0]
@@ -91,8 +93,7 @@ class ReferenceArray(ArbitraryData):
         else:
             await builder.write(f" = {{")
             for index, reference in enumerate(self.references):
-                value = self.export_reference_value(
-                    exporter.gst, index, reference)
+                value = self.export_reference_value(exporter.gst, index, reference)
                 await builder.write(f"\t/* {index:<4} */ (void*){value},")
 
             if self.padding > 0:

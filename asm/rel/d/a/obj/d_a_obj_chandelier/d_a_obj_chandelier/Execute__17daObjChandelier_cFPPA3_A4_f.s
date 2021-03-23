@@ -1,0 +1,36 @@
+lbl_80BC8238:
+/* 80BC8238 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80BC823C 00000004  7C 08 02 A6 */	mflr r0
+/* 80BC8240 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80BC8244 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80BC8248 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80BC824C 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 80BC8250 00000018  7C 9F 23 78 */	mr r31, r4
+/* 80BC8254 0000001C  88 03 06 09 */	lbz r0, 0x609(r3)
+/* 80BC8258 00000020  1C 80 00 0C */	mulli r4, r0, 0xc
+/* 80BC825C 00000024  3C 60 00 00 */	lis r3, s_exeProc__17daObjChandelier_c@ha /* 80BC8DA4 */
+/* 80BC8260 00000028  38 03 00 00 */	addi r0, r3, s_exeProc__17daObjChandelier_c@l /* 80BC8DA4 */
+/* 80BC8264 0000002C  7C 60 22 14 */	add r3, r0, r4
+/* 80BC8268 00000030  4B FF FC B1 */	bl __ptmf_test
+/* 80BC826C 00000034  2C 03 00 00 */	cmpwi r3, 0
+/* 80BC8270 00000038  41 82 00 24 */	beq lbl_80BC8294
+/* 80BC8274 0000003C  7F C3 F3 78 */	mr r3, r30
+/* 80BC8278 00000040  88 1E 06 09 */	lbz r0, 0x609(r30)
+/* 80BC827C 00000044  1C A0 00 0C */	mulli r5, r0, 0xc
+/* 80BC8280 00000048  3C 80 00 00 */	lis r4, s_exeProc__17daObjChandelier_c@ha /* 80BC8DA4 */
+/* 80BC8284 0000004C  38 04 00 00 */	addi r0, r4, s_exeProc__17daObjChandelier_c@l /* 80BC8DA4 */
+/* 80BC8288 00000050  7D 80 2A 14 */	add r12, r0, r5
+/* 80BC828C 00000054  4B FF FC 8D */	bl __ptmf_scall
+/* 80BC8290 00000058  60 00 00 00 */	nop 
+lbl_80BC8294:
+/* 80BC8294 00000000  7F C3 F3 78 */	mr r3, r30
+/* 80BC8298 00000004  48 00 04 65 */	bl setModelMtx__17daObjChandelier_cFv
+/* 80BC829C 00000008  38 1E 05 B4 */	addi r0, r30, 0x5b4
+/* 80BC82A0 0000000C  90 1F 00 00 */	stw r0, 0(r31)
+/* 80BC82A4 00000010  38 60 00 01 */	li r3, 1
+/* 80BC82A8 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80BC82AC 00000018  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80BC82B0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80BC82B4 00000020  7C 08 03 A6 */	mtlr r0
+/* 80BC82B8 00000024  38 21 00 10 */	addi r1, r1, 0x10
+/* 80BC82BC 00000028  4E 80 00 20 */	blr 

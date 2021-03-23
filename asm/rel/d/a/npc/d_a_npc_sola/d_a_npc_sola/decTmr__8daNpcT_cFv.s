@@ -1,0 +1,7 @@
+lbl_80AEEE3C:
+/* 80AEEE3C 00000000  80 83 0D BC */	lwz r4, 0xdbc(r3)
+/* 80AEEE40 00000004  2C 04 00 00 */	cmpwi r4, 0
+/* 80AEEE44 00000008  4D 82 00 20 */	beqlr 
+/* 80AEEE48 0000000C  38 04 FF FF */	addi r0, r4, -1
+/* 80AEEE4C 00000010  90 03 0D BC */	stw r0, 0xdbc(r3)
+/* 80AEEE50 00000014  4E 80 00 20 */	blr 

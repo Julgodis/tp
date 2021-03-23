@@ -18,7 +18,7 @@ struct scene_class {
 // Forward References:
 // 
 
-void fopScnM_SearchByID(u32); // 2
+void fopScnM_SearchByID(unsigned int); // 2
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
 void fopScnM_DeleteReq(scene_class*); // 2
 void fopScnM_CreateReq(s16, s16, u16, u32); // 2
@@ -40,7 +40,7 @@ extern "C" void fopScnM_Init__Fv(); // 1
 
 void fopScnIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16); // 2
-void fopScnRq_ReRequest(u32, s16, void*); // 2
+void fopScnRq_ReRequest(unsigned int, s16, void*); // 2
 void fopScnRq_Handler(); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 
@@ -54,11 +54,11 @@ extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 // Declarations:
 // 
 
-/* 8001ECB0-8001ECE0 0030+00 rc=7 efc=7 rfr=False None .text      fopScnM_SearchByID__FUi                                      */
+/* 8001ECB0-8001ECE0 0030+00 r=8 e=7 z=1  None .text      fopScnM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnM_SearchByID(u32 param_0) {
+asm void fopScnM_SearchByID(unsigned int param_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_SearchByID__FUi.s"
 }
@@ -66,14 +66,14 @@ asm void fopScnM_SearchByID(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 804505B8-804505C0 0004+04 rc=2 efc=0 rfr=False None .sdata     l_scnRqID                                                    */
+/* 804505B8-804505C0 0004+04 r=2 e=0 z=0  None .sdata     l_scnRqID                                                    */
 SECTION_SDATA static u32 l_scnRqID[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 8001ECE0-8001ED3C 005C+00 rc=4 efc=4 rfr=False None .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
+/* 8001ECE0-8001ED3C 005C+00 r=5 e=4 z=1  None .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ asm void fopScnM_ChangeReq(scene_class* param_0, s16 param_1, s16 param_2, u16 p
 #pragma pop
 
 
-/* 8001ED3C-8001ED84 0048+00 rc=1 efc=1 rfr=False None .text      fopScnM_DeleteReq__FP11scene_class                           */
+/* 8001ED3C-8001ED84 0048+00 r=1 e=1 z=0  None .text      fopScnM_DeleteReq__FP11scene_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ asm void fopScnM_DeleteReq(scene_class* param_0) {
 #pragma pop
 
 
-/* 8001ED84-8001EDCC 0048+00 rc=2 efc=2 rfr=False None .text      fopScnM_CreateReq__FssUsUl                                   */
+/* 8001ED84-8001EDCC 0048+00 r=2 e=2 z=0  None .text      fopScnM_CreateReq__FssUsUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ asm void fopScnM_CreateReq(s16 param_0, s16 param_1, u16 param_2, u32 param_3) {
 #pragma pop
 
 
-/* 8001EDCC-8001EE10 0044+00 rc=1 efc=1 rfr=False None .text      fopScnM_ReRequest__FsUl                                      */
+/* 8001EDCC-8001EE10 0044+00 r=1 e=1 z=0  None .text      fopScnM_ReRequest__FsUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ asm void fopScnM_ReRequest(s16 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 8001EE10-8001EE30 0020+00 rc=1 efc=1 rfr=False None .text      fopScnM_Management__Fv                                       */
+/* 8001EE10-8001EE30 0020+00 r=1 e=1 z=0  None .text      fopScnM_Management__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm void fopScnM_Management() {
 #pragma pop
 
 
-/* 8001EE30-8001EE34 0004+00 rc=1 efc=1 rfr=False None .text      fopScnM_Init__Fv                                             */
+/* 8001EE30-8001EE34 0004+00 r=1 e=1 z=0  None .text      fopScnM_Init__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

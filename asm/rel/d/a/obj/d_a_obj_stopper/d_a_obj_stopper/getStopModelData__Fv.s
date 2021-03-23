@@ -1,0 +1,11 @@
+lbl_80CECF0C:
+/* 80CECF0C 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80CECF10 00000004  7C 08 02 A6 */	mflr r0
+/* 80CECF14 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80CECF18 0000000C  3C 60 00 00 */	lis r3, stringBase0@ha /* 80CEEFF0 */
+/* 80CECF1C 00000010  38 63 00 00 */	addi r3, r3, stringBase0@l /* 80CEEFF0 */
+/* 80CECF20 00000014  4B FF FF 59 */	bl dComIfG_getStageRes__FPCc
+/* 80CECF24 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80CECF28 0000001C  7C 08 03 A6 */	mtlr r0
+/* 80CECF2C 00000020  38 21 00 10 */	addi r1, r1, 0x10
+/* 80CECF30 00000024  4E 80 00 20 */	blr 

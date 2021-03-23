@@ -1,0 +1,3 @@
+lbl_80B74C40:
+/* 80B74C40 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 80B74C44 00000004  4B FF F9 88 */	b __dt__12dBgS_ObjAcchFv

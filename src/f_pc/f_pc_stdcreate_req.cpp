@@ -57,7 +57,7 @@ extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
 // 
 
 void fpcBs_Is_JustOfType(int, int); // 2
-void fpcBs_Create(s16, u32, void*); // 2
+void fpcBs_Create(s16, unsigned int, void*); // 2
 void fpcBs_SubCreate(base_process_class*); // 2
 void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
 void fpcLy_IsCreatingMesg(layer_class*); // 2
@@ -85,7 +85,7 @@ extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80023B70-80023BC4 0054+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_Load__FP29standard_create_request_class       */
+/* 80023B70-80023BC4 0054+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_Load__FP29standard_create_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ asm static void fpcSCtRq_phase_Load(standard_create_request_class* param_0) {
 #pragma pop
 
 
-/* 80023BC4-80023C2C 0068+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class */
+/* 80023BC4-80023C2C 0068+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ asm static void fpcSCtRq_phase_CreateProcess(standard_create_request_class* para
 #pragma pop
 
 
-/* 80023C2C-80023C64 0038+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_SubCreateProcess__FP29standard_create_request_class */
+/* 80023C2C-80023C64 0038+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_SubCreateProcess__FP29standard_create_request_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ asm static void fpcSCtRq_phase_SubCreateProcess(standard_create_request_class* p
 #pragma pop
 
 
-/* 80023C64-80023CBC 0058+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_IsComplete__FP29standard_create_request_class */
+/* 80023C64-80023CBC 0058+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_IsComplete__FP29standard_create_request_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm static void fpcSCtRq_phase_IsComplete(standard_create_request_class* param_0
 #pragma pop
 
 
-/* 80023CBC-80023D0C 0050+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_PostMethod__FP29standard_create_request_class */
+/* 80023CBC-80023D0C 0050+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_PostMethod__FP29standard_create_request_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm static void fpcSCtRq_phase_PostMethod(standard_create_request_class* param_0
 #pragma pop
 
 
-/* 80023D0C-80023D14 0008+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_phase_Done__FP29standard_create_request_class       */
+/* 80023D0C-80023D14 0008+00 r=1 e=0 z=0  None .text      fpcSCtRq_phase_Done__FP29standard_create_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm static void fpcSCtRq_phase_Done(standard_create_request_class* param_0) {
 #pragma pop
 
 
-/* 80023D14-80023D84 0070+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_Handler__FP29standard_create_request_class          */
+/* 80023D14-80023D84 0070+00 r=1 e=0 z=0  None .text      fpcSCtRq_Handler__FP29standard_create_request_class          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm static void fpcSCtRq_Handler(standard_create_request_class* param_0) {
 #pragma pop
 
 
-/* 80023D84-80023D8C 0008+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_Delete__FP29standard_create_request_class           */
+/* 80023D84-80023D8C 0008+00 r=1 e=0 z=0  None .text      fpcSCtRq_Delete__FP29standard_create_request_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm static void fpcSCtRq_Delete(standard_create_request_class* param_0) {
 #pragma pop
 
 
-/* 80023D8C-80023D94 0008+00 rc=1 efc=0 rfr=False None .text      fpcSCtRq_Cancel__FP29standard_create_request_class           */
+/* 80023D8C-80023D94 0008+00 r=1 e=0 z=0  None .text      fpcSCtRq_Cancel__FP29standard_create_request_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,14 +185,14 @@ asm static void fpcSCtRq_Cancel(standard_create_request_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3AF0-803A3AFC 000C+00 rc=1 efc=0 rfr=False None .data      submethod$2261                                               */
+/* 803A3AF0-803A3AFC 000C+00 r=1 e=0 z=0  None .data      submethod$2261                                               */
 SECTION_DATA static void* data_803A3AF0[3] = {
 	/* 0    */ (void*)fpcSCtRq_Handler__FP29standard_create_request_class,
 	/* 1    */ (void*)fpcSCtRq_Cancel__FP29standard_create_request_class,
 	/* 2    */ (void*)fpcSCtRq_Delete__FP29standard_create_request_class,
 };
 
-/* 803A3AFC-803A3B18 001C+00 rc=1 efc=0 rfr=False None .data      method$2262                                                  */
+/* 803A3AFC-803A3B18 001C+00 r=1 e=0 z=0  None .data      method$2262                                                  */
 SECTION_DATA static void* data_803A3AFC[7] = {
 	/* 0    */ (void*)fpcSCtRq_phase_Load__FP29standard_create_request_class,
 	/* 1    */ (void*)fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class,
@@ -203,7 +203,7 @@ SECTION_DATA static void* data_803A3AFC[7] = {
 	/* 6    */ (void*)NULL,
 };
 
-/* 80023D94-80023E28 0094+00 rc=12 efc=12 rfr=False None .text      fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023D94-80023E28 0094+00 r=12 e=12 z=0  None .text      fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

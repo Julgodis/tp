@@ -194,7 +194,7 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC328-803CC348 0020+00 rc=5 efc=4 rfr=False None .data      __vt__7JKRFile                                               */
+/* 803CC328-803CC348 0020+00 r=5 e=4 z=0  None .data      __vt__7JKRFile                                               */
 SECTION_DATA void* __vt__7JKRFile[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -206,7 +206,7 @@ SECTION_DATA void* __vt__7JKRFile[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803CC348-803CC398 0050+00 rc=2 efc=0 rfr=False None .data      __vt__14JKRAramArchive                                       */
+/* 803CC348-803CC398 0050+00 r=2 e=0 z=0  None .data      __vt__14JKRAramArchive                                       */
 SECTION_DATA static void* __vt__14JKRAramArchive[20] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -230,7 +230,7 @@ SECTION_DATA static void* __vt__14JKRAramArchive[20] = {
 	/* 19   */ (void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
-/* 802D70C0-802D7168 00A8+00 rc=1 efc=1 rfr=False None .text      __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection      */
+/* 802D70C0-802D7168 00A8+00 r=1 e=1 z=0  None .text      __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +241,7 @@ asm JKRAramArchive::JKRAramArchive(s32 param_0, JKRArchive::EMountDirection para
 #pragma pop
 
 
-/* 802D7168-802D72A8 0140+00 rc=1 efc=0 rfr=False None .text      __dt__14JKRAramArchiveFv                                     */
+/* 802D7168-802D72A8 0140+00 r=1 e=0 z=0  None .text      __dt__14JKRAramArchiveFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ asm JKRAramArchive::~JKRAramArchive() {
 #pragma pop
 
 
-/* 802D72A8-802D75E0 0338+00 rc=1 efc=0 rfr=False None .text      open__14JKRAramArchiveFl                                     */
+/* 802D72A8-802D75E0 0338+00 r=1 e=0 z=0  None .text      open__14JKRAramArchiveFl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +263,7 @@ asm void JKRAramArchive::open(s32 param_0) {
 #pragma pop
 
 
-/* 802D75E0-802D76F4 0114+00 rc=1 efc=0 rfr=False None .text      fetchResource__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D75E0-802D76F4 0114+00 r=1 e=0 z=0  None .text      fetchResource__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ asm void JKRAramArchive::fetchResource(JKRArchive::SDIFileEntry* param_0, u32* p
 #pragma pop
 
 
-/* 802D76F4-802D77F8 0104+00 rc=1 efc=0 rfr=False None .text      fetchResource__14JKRAramArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D76F4-802D77F8 0104+00 r=1 e=0 z=0  None .text      fetchResource__14JKRAramArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +285,7 @@ asm void JKRAramArchive::fetchResource(void* param_0, u32 param_1, JKRArchive::S
 #pragma pop
 
 
-/* 802D77F8-802D781C 0024+00 rc=1 efc=0 rfr=False None .text      getAramAddress_Entry__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntry */
+/* 802D77F8-802D781C 0024+00 r=1 e=0 z=0  None .text      getAramAddress_Entry__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntry */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ asm void JKRAramArchive::getAramAddress_Entry(JKRArchive::SDIFileEntry* param_0)
 #pragma pop
 
 
-/* 802D781C-802D7858 003C+00 rc=1 efc=1 rfr=False None .text      getAramAddress__14JKRAramArchiveFPCc                         */
+/* 802D781C-802D7858 003C+00 r=1 e=1 z=0  None .text      getAramAddress__14JKRAramArchiveFPCc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,16 +308,16 @@ asm void JKRAramArchive::getAramAddress(char const* param_0) {
 
 
 /* ############################################################################################## */
-/* 8039D188-8039D1B0 0028+00 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D188-8039D1B0 0028+00 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D188 = "JKRAramArchive.cpp";
-SECTION_DEAD static char const* const stringBase_8039D19B = "%s";
-SECTION_DEAD static char const* const stringBase_8039D19E = "??? bad sequence\n";
+SECTION_DEAD char const* const stringBase_8039D188 = "JKRAramArchive.cpp";
+SECTION_DEAD char const* const stringBase_8039D19B = "%s";
+SECTION_DEAD char const* const stringBase_8039D19E = "??? bad sequence\n";
 #pragma pop
 
-/* 802D7858-802D7914 00BC+00 rc=2 efc=1 rfr=False None .text      fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli        */
+/* 802D7858-802D7914 00BC+00 r=2 e=1 z=0  None .text      fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +328,7 @@ asm void JKRAramArchive::fetchResource_subroutine(u32 param_0, u32 param_1, u8* 
 #pragma pop
 
 
-/* 802D7914-802D7A64 0150+00 rc=2 efc=1 rfr=False None .text      fetchResource_subroutine__14JKRAramArchiveFUlUlP7JKRHeapiPPUc */
+/* 802D7914-802D7A64 0150+00 r=2 e=1 z=0  None .text      fetchResource_subroutine__14JKRAramArchiveFUlUlP7JKRHeapiPPUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +339,7 @@ asm void JKRAramArchive::fetchResource_subroutine(u32 param_0, u32 param_1, JKRH
 #pragma pop
 
 
-/* 802D7A64-802D7B90 012C+00 rc=1 efc=0 rfr=False None .text      getExpandedResSize__14JKRAramArchiveCFPCv                    */
+/* 802D7A64-802D7B90 012C+00 r=1 e=0 z=0  None .text      getExpandedResSize__14JKRAramArchiveCFPCv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,7 +350,7 @@ asm void JKRAramArchive::getExpandedResSize(void const* param_0) const {
 #pragma pop
 
 
-/* 802D7B90-802D7BF0 0060+00 rc=1 efc=0 rfr=False None .text      __dt__7JKRFileFv                                             */
+/* 802D7B90-802D7BF0 0060+00 r=1 e=0 z=0  None .text      __dt__7JKRFileFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

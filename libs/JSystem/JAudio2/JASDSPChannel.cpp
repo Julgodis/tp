@@ -91,7 +91,7 @@ extern "C" extern u8 JASDram[4];
 // Declarations:
 // 
 
-/* 8029D2F4-8029D320 002C+00 rc=1 efc=0 rfr=False None .text      __ct__13JASDSPChannelFv                                      */
+/* 8029D2F4-8029D320 002C+00 r=1 e=0 z=0  None .text      __ct__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ asm JASDSPChannel::JASDSPChannel() {
 #pragma pop
 
 
-/* 8029D320-8029D330 0010+00 rc=3 efc=3 rfr=False None .text      free__13JASDSPChannelFv                                      */
+/* 8029D320-8029D330 0010+00 r=3 e=3 z=0  None .text      free__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm void JASDSPChannel::free() {
 #pragma pop
 
 
-/* 8029D330-8029D340 0010+00 rc=2 efc=2 rfr=False None .text      start__13JASDSPChannelFv                                     */
+/* 8029D330-8029D340 0010+00 r=2 e=2 z=0  None .text      start__13JASDSPChannelFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void JASDSPChannel::start() {
 #pragma pop
 
 
-/* 8029D340-8029D3C8 0088+00 rc=5 efc=2 rfr=False None .text      drop__13JASDSPChannelFv                                      */
+/* 8029D340-8029D3C8 0088+00 r=5 e=2 z=0  None .text      drop__13JASDSPChannelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,10 +136,10 @@ asm void JASDSPChannel::drop() {
 
 
 /* ############################################################################################## */
-/* 804512E0-804512E8 0004+04 rc=5 efc=0 rfr=False None .sbss      sDspChannels__13JASDSPChannel                                */
+/* 804512E0-804512E8 0004+04 r=5 e=0 z=0  None .sbss      sDspChannels__13JASDSPChannel                                */
 static u8 sDspChannels__13JASDSPChannel[4 + 4 /* padding */];
 
-/* 8029D3C8-8029D44C 0084+00 rc=1 efc=1 rfr=False None .text      initAll__13JASDSPChannelFv                                   */
+/* 8029D3C8-8029D44C 0084+00 r=1 e=1 z=0  None .text      initAll__13JASDSPChannelFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +150,7 @@ asm void JASDSPChannel::initAll() {
 #pragma pop
 
 
-/* 8029D44C-8029D4BC 0070+00 rc=1 efc=1 rfr=False None .text      alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv       */
+/* 8029D44C-8029D4BC 0070+00 r=1 e=1 z=0  None .text      alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ asm void JASDSPChannel::alloc(u8 param_0, s32 (*)(u32, JASDsp::TChannel*, void*)
 #pragma pop
 
 
-/* 8029D4BC-8029D534 0078+00 rc=1 efc=1 rfr=False None .text      allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv  */
+/* 8029D4BC-8029D534 0078+00 r=1 e=1 z=0  None .text      allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +172,7 @@ asm void JASDSPChannel::allocForce(u8 param_0, s32 (*)(u32, JASDsp::TChannel*, v
 #pragma pop
 
 
-/* 8029D534-8029D540 000C+00 rc=1 efc=1 rfr=False None .text      setPriority__13JASDSPChannelFUc                              */
+/* 8029D534-8029D540 000C+00 r=1 e=1 z=0  None .text      setPriority__13JASDSPChannelFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ asm void JASDSPChannel::setPriority(u8 param_0) {
 #pragma pop
 
 
-/* 8029D540-8029D5D0 0090+00 rc=2 efc=0 rfr=False None .text      getLowestChannel__13JASDSPChannelFi                          */
+/* 8029D540-8029D5D0 0090+00 r=2 e=0 z=0  None .text      getLowestChannel__13JASDSPChannelFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ asm void JASDSPChannel::getLowestChannel(int param_0) {
 #pragma pop
 
 
-/* 8029D5D0-8029D65C 008C+00 rc=1 efc=0 rfr=False None .text      getLowestActiveChannel__13JASDSPChannelFv                    */
+/* 8029D5D0-8029D65C 008C+00 r=1 e=0 z=0  None .text      getLowestActiveChannel__13JASDSPChannelFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ asm void JASDSPChannel::getLowestActiveChannel() {
 #pragma pop
 
 
-/* 8029D65C-8029D89C 0240+00 rc=1 efc=0 rfr=False None .text      updateProc__13JASDSPChannelFv                                */
+/* 8029D65C-8029D89C 0240+00 r=1 e=0 z=0  None .text      updateProc__13JASDSPChannelFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ asm void JASDSPChannel::updateProc() {
 #pragma pop
 
 
-/* 8029D89C-8029D910 0074+00 rc=1 efc=1 rfr=False None .text      updateAll__13JASDSPChannelFv                                 */
+/* 8029D89C-8029D910 0074+00 r=1 e=1 z=0  None .text      updateAll__13JASDSPChannelFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ asm void JASDSPChannel::updateAll() {
 #pragma pop
 
 
-/* 8029D910-8029D948 0038+00 rc=1 efc=1 rfr=False None .text      killActiveChannel__13JASDSPChannelFv                         */
+/* 8029D910-8029D948 0038+00 r=1 e=1 z=0  None .text      killActiveChannel__13JASDSPChannelFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm void JASDSPChannel::killActiveChannel() {
 #pragma pop
 
 
-/* 8029D948-8029D958 0010+00 rc=1 efc=1 rfr=False None .text      getHandle__13JASDSPChannelFUl                                */
+/* 8029D948-8029D958 0010+00 r=1 e=1 z=0  None .text      getHandle__13JASDSPChannelFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

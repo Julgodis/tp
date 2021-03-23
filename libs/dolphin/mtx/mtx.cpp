@@ -45,15 +45,15 @@ extern "C" void cosf(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456508-8045650C 0004+00 rc=6 efc=0 rfr=False None .sdata2    @96                                                          */
+/* 80456508-8045650C 0004+00 r=6 e=0 z=0  None .sdata2    @96                                                          */
 SECTION_SDATA2 static f32 mtx__lit_96 = 1.0f;
 
-/* 8045650C-80456510 0004+00 rc=6 efc=0 rfr=False None .sdata2    @97                                                          */
+/* 8045650C-80456510 0004+00 r=6 e=0 z=0  None .sdata2    @97                                                          */
 SECTION_SDATA2 static u8 mtx__lit_97[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80346484-803464B0 002C+00 rc=27 efc=27 rfr=False None .text      PSMTXIdentity                                                */
+/* 80346484-803464B0 002C+00 r=40 e=27 z=13  None .text      PSMTXIdentity                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ extern "C" asm void PSMTXIdentity() {
 #pragma pop
 
 
-/* 803464B0-803464E4 0034+00 rc=119 efc=119 rfr=False None .text      PSMTXCopy                                                    */
+/* 803464B0-803464E4 0034+00 r=1555 e=119 z=1436  None .text      PSMTXCopy                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,12 +76,12 @@ extern "C" asm void PSMTXCopy() {
 
 
 /* ############################################################################################## */
-/* 804509D0-804509D8 0008+00 rc=1 efc=0 rfr=False None .sdata     Unit01                                                       */
+/* 804509D0-804509D8 0008+00 r=1 e=0 z=0  None .sdata     Unit01                                                       */
 SECTION_SDATA static u8 mtx__Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803464E4-803465B0 00CC+00 rc=109 efc=109 rfr=False None .text      PSMTXConcat                                                  */
+/* 803464E4-803465B0 00CC+00 r=139 e=109 z=30  None .text      PSMTXConcat                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ extern "C" asm void PSMTXConcat() {
 #pragma pop
 
 
-/* 803465B0-803466A8 00F8+00 rc=43 efc=43 rfr=False None .text      PSMTXInverse                                                 */
+/* 803465B0-803466A8 00F8+00 r=82 e=43 z=39  None .text      PSMTXInverse                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ extern "C" asm void PSMTXInverse() {
 #pragma pop
 
 
-/* 803466A8-80346718 0070+00 rc=17 efc=17 rfr=False None .text      PSMTXRotRad                                                  */
+/* 803466A8-80346718 0070+00 r=17 e=17 z=0  None .text      PSMTXRotRad                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ extern "C" asm void PSMTXRotRad() {
 #pragma pop
 
 
-/* 80346718-803467C8 00B0+00 rc=1 efc=0 rfr=False None .text      PSMTXRotTrig                                                 */
+/* 80346718-803467C8 00B0+00 r=1 e=0 z=0  None .text      PSMTXRotTrig                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,13 +126,13 @@ extern "C" asm static void PSMTXRotTrig() {
 
 
 /* ############################################################################################## */
-/* 80456510-80456514 0004+00 rc=2 efc=0 rfr=False None .sdata2    @190                                                         */
+/* 80456510-80456514 0004+00 r=2 e=0 z=0  None .sdata2    @190                                                         */
 SECTION_SDATA2 static f32 lit_190 = 0.5f;
 
-/* 80456514-80456518 0004+00 rc=1 efc=0 rfr=False None .sdata2    @191                                                         */
+/* 80456514-80456518 0004+00 r=1 e=0 z=0  None .sdata2    @191                                                         */
 SECTION_SDATA2 static f32 lit_191 = 3.0f;
 
-/* 803467C8-80346878 00B0+00 rc=1 efc=0 rfr=False None .text      __PSMTXRotAxisRadInternal                                    */
+/* 803467C8-80346878 00B0+00 r=1 e=0 z=0  None .text      __PSMTXRotAxisRadInternal                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ extern "C" asm static void __PSMTXRotAxisRadInternal() {
 #pragma pop
 
 
-/* 80346878-803468E8 0070+00 rc=6 efc=6 rfr=False None .text      PSMTXRotAxisRad                                              */
+/* 80346878-803468E8 0070+00 r=14 e=6 z=8  None .text      PSMTXRotAxisRad                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ extern "C" asm void PSMTXRotAxisRad() {
 #pragma pop
 
 
-/* 803468E8-8034691C 0034+00 rc=38 efc=38 rfr=False None .text      PSMTXTrans                                                   */
+/* 803468E8-8034691C 0034+00 r=509 e=38 z=471  None .text      PSMTXTrans                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ extern "C" asm void PSMTXTrans() {
 #pragma pop
 
 
-/* 8034691C-80346968 004C+00 rc=3 efc=3 rfr=False None .text      PSMTXTransApply                                              */
+/* 8034691C-80346968 004C+00 r=3 e=3 z=0  None .text      PSMTXTransApply                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ extern "C" asm void PSMTXTransApply() {
 #pragma pop
 
 
-/* 80346968-80346990 0028+00 rc=14 efc=14 rfr=False None .text      PSMTXScale                                                   */
+/* 80346968-80346990 0028+00 r=22 e=14 z=8  None .text      PSMTXScale                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ extern "C" asm void PSMTXScale() {
 #pragma pop
 
 
-/* 80346990-803469E8 0058+00 rc=1 efc=1 rfr=False None .text      PSMTXScaleApply                                              */
+/* 80346990-803469E8 0058+00 r=1 e=1 z=0  None .text      PSMTXScaleApply                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ extern "C" asm void PSMTXScaleApply() {
 #pragma pop
 
 
-/* 803469E8-80346A8C 00A4+00 rc=8 efc=8 rfr=False None .text      PSMTXQuat                                                    */
+/* 803469E8-80346A8C 00A4+00 r=10 e=8 z=2  None .text      PSMTXQuat                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ extern "C" asm void PSMTXQuat() {
 #pragma pop
 
 
-/* 80346A8C-80346C18 018C+00 rc=2 efc=2 rfr=False None .text      C_MTXLookAt                                                  */
+/* 80346A8C-80346C18 018C+00 r=2 e=2 z=0  None .text      C_MTXLookAt                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,20 +221,20 @@ extern "C" asm void C_MTXLookAt() {
 
 
 /* ############################################################################################## */
-/* 80456518-8045651C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @206                                                         */
+/* 80456518-8045651C 0004+00 r=1 e=0 z=0  None .sdata2    @206                                                         */
 SECTION_SDATA2 static f32 mtx__lit_206 = 2.0f;
 
-/* 8045651C-80456520 0004+00 rc=1 efc=0 rfr=False None .sdata2    @227                                                         */
+/* 8045651C-80456520 0004+00 r=1 e=0 z=0  None .sdata2    @227                                                         */
 SECTION_SDATA2 static f32 lit_227 = -1.0f;
 
-/* 80456520-80456528 0004+04 rc=1 efc=0 rfr=False None .sdata2    @230                                                         */
+/* 80456520-80456528 0004+04 r=1 e=0 z=0  None .sdata2    @230                                                         */
 SECTION_SDATA2 static f32 lit_230[1 + 1 /* padding */] = {
 	0.01745329238474369f,
 	/* padding */
 	0.0f,
 };
 
-/* 80346C18-80346CE4 00CC+00 rc=4 efc=4 rfr=False None .text      C_MTXLightPerspective                                        */
+/* 80346C18-80346CE4 00CC+00 r=11 e=4 z=7  None .text      C_MTXLightPerspective                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ extern "C" asm void C_MTXLightPerspective() {
 #pragma pop
 
 
-/* 80346CE4-80346D6C 0088+00 rc=2 efc=2 rfr=False None .text      C_MTXLightOrtho                                              */
+/* 80346CE4-80346D6C 0088+00 r=7 e=2 z=5  None .text      C_MTXLightOrtho                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

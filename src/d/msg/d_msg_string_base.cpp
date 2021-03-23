@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct J2DTextBox {
@@ -159,7 +159,7 @@ extern "C" extern u8 g_meter2_info[248];
 // 
 
 /* ############################################################################################## */
-/* 803C1478-803C1498 0020+00 rc=2 efc=0 rfr=False None .data      __vt__16dMsgStringBase_c                                     */
+/* 803C1478-803C1498 0020+00 r=2 e=0 z=0  None .data      __vt__16dMsgStringBase_c                                     */
 SECTION_DATA static void* __vt__16dMsgStringBase_c[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -171,7 +171,7 @@ SECTION_DATA static void* __vt__16dMsgStringBase_c[8] = {
 	/* 7    */ (void*)drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc,
 };
 
-/* 802493B4-80249528 0174+00 rc=2 efc=2 rfr=False None .text      __ct__16dMsgStringBase_cFv                                   */
+/* 802493B4-80249528 0174+00 r=2 e=2 z=0  None .text      __ct__16dMsgStringBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm dMsgStringBase_c::dMsgStringBase_c() {
 #pragma pop
 
 
-/* 80249528-80249700 01D8+00 rc=1 efc=1 rfr=False None .text      __dt__16dMsgStringBase_cFv                                   */
+/* 80249528-80249700 01D8+00 r=1 e=1 z=0  None .text      __dt__16dMsgStringBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,17 +194,17 @@ asm dMsgStringBase_c::~dMsgStringBase_c() {
 
 
 /* ############################################################################################## */
-/* 80399C98-80399CB0 0013+05 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80399C98-80399CB0 0013+05 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80399C98 = "zel_00.bmg";
-SECTION_DEAD static char const* const stringBase_80399CA3 = """\x1B""CR[%d]";
+SECTION_DEAD char const* const stringBase_80399C98 = "zel_00.bmg";
+SECTION_DEAD char const* const stringBase_80399CA3 = """\x1B""CR[%d]";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80399CAB = "\0\0\0\0";
 #pragma pop
 
-/* 80249700-80249768 0068+00 rc=3 efc=2 rfr=False None .text      getResource__16dMsgStringBase_cFv                            */
+/* 80249700-80249768 0068+00 r=3 e=2 z=0  None .text      getResource__16dMsgStringBase_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void dMsgStringBase_c::getResource() {
 #pragma pop
 
 
-/* 80249768-802498D8 0170+00 rc=2 efc=1 rfr=False None .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249768-802498D8 0170+00 r=2 e=1 z=0  None .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,14 +227,14 @@ asm void dMsgStringBase_c::getStringLocal(u32 param_0, J2DTextBox* param_1, J2DT
 
 
 /* ############################################################################################## */
-/* 80454D70-80454D78 0004+04 rc=2 efc=0 rfr=False None .sdata2    @4046                                                        */
+/* 80454D70-80454D78 0004+04 r=2 e=0 z=0  None .sdata2    @4046                                                        */
 SECTION_SDATA2 static u8 d_msg_d_msg_string_base__lit_4046[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802498D8-80249A48 0170+00 rc=2 efc=1 rfr=False None .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 802498D8-80249A48 0170+00 r=2 e=1 z=0  None .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ asm void dMsgStringBase_c::getStringPageLocal(u32 param_0, u8 param_1, u8 param_
 #pragma pop
 
 
-/* 80249A48-80249A70 0028+00 rc=1 efc=1 rfr=False None .text      getPageMax__16dMsgStringBase_cFi                             */
+/* 80249A48-80249A70 0028+00 r=1 e=1 z=0  None .text      getPageMax__16dMsgStringBase_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,7 +256,7 @@ asm void dMsgStringBase_c::getPageMax(int param_0) {
 #pragma pop
 
 
-/* 80249A70-80249BAC 013C+00 rc=1 efc=0 rfr=False None .text      getMessageLocal__16dMsgStringBase_cFUlPc                     */
+/* 80249A70-80249BAC 013C+00 r=1 e=0 z=0  None .text      getMessageLocal__16dMsgStringBase_cFUlPc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -267,7 +267,7 @@ asm void dMsgStringBase_c::getMessageLocal(u32 param_0, char* param_1) {
 #pragma pop
 
 
-/* 80249BAC-80249BB0 0004+00 rc=1 efc=0 rfr=False None .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
+/* 80249BAC-80249BB0 0004+00 r=1 e=0 z=0  None .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +278,7 @@ asm void dMsgStringBase_c::drawFontLocal(J2DTextBox* param_0, u8 param_1, f32 pa
 #pragma pop
 
 
-/* 80249BB0-80249BD0 0020+00 rc=1 efc=0 rfr=False None .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BB0-80249BD0 0020+00 r=1 e=0 z=0  None .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +289,7 @@ asm void dMsgStringBase_c::getString(u32 param_0, J2DTextBox* param_1, J2DTextBo
 #pragma pop
 
 
-/* 80249BD0-80249BF8 0028+00 rc=1 efc=0 rfr=False None .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BD0-80249BF8 0028+00 r=1 e=0 z=0  None .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +300,7 @@ asm void dMsgStringBase_c::getStringPage(u32 param_0, u8 param_1, u8 param_2, J2
 #pragma pop
 
 
-/* 80249BF8-80249C18 0020+00 rc=2 efc=1 rfr=False None .text      getMessage__16dMsgStringBase_cFUlPc                          */
+/* 80249BF8-80249C18 0020+00 r=2 e=1 z=0  None .text      getMessage__16dMsgStringBase_cFUlPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,7 +311,7 @@ asm void dMsgStringBase_c::getMessage(u32 param_0, char* param_1) {
 #pragma pop
 
 
-/* 80249C18-80249C1C 0004+00 rc=1 efc=0 rfr=False None .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
+/* 80249C18-80249C1C 0004+00 r=1 e=0 z=0  None .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ asm void dMsgStringBase_c::resetStringLocal(J2DTextBox* param_0) {
 #pragma pop
 
 
-/* 80249C1C-80249C20 0004+00 rc=1 efc=0 rfr=False None .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
+/* 80249C1C-80249C20 0004+00 r=1 e=0 z=0  None .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

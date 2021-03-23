@@ -28,7 +28,7 @@ extern "C" void OSRestoreInterrupts(); // 1
 // Declarations:
 // 
 
-/* 80372CA4-80372CC8 0024+00 rc=2 efc=2 rfr=False None .text      MWExitCriticalSection                                        */
+/* 80372CA4-80372CC8 0024+00 r=2 e=2 z=0  None .text      MWExitCriticalSection                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +39,7 @@ extern "C" asm void MWExitCriticalSection() {
 #pragma pop
 
 
-/* 80372CC8-80372CF8 0030+00 rc=2 efc=2 rfr=False None .text      MWEnterCriticalSection                                       */
+/* 80372CC8-80372CF8 0030+00 r=2 e=2 z=0  None .text      MWEnterCriticalSection                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -50,7 +50,7 @@ extern "C" asm void MWEnterCriticalSection() {
 #pragma pop
 
 
-/* 80372CF8-80372CFC 0004+00 rc=1 efc=1 rfr=False None .text      MWInitializeCriticalSection                                  */
+/* 80372CF8-80372CFC 0004+00 r=1 e=1 z=0  None .text      MWInitializeCriticalSection                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

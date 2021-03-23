@@ -131,24 +131,24 @@ extern "C" extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399B98-80399BB0 0016+02 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80399B98-80399BB0 0016+02 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80399B98 = "zelda_staff_roll.blo";
-SECTION_DEAD static char const* const stringBase_80399BAD = "";
+SECTION_DEAD char const* const stringBase_80399B98 = "zelda_staff_roll.blo";
+SECTION_DEAD char const* const stringBase_80399BAD = "";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80399BAE = "\0";
 #pragma pop
 
-/* 803C1340-803C1370 0030+00 rc=1 efc=0 rfr=False None .data      t_tag$3752                                                   */
+/* 803C1340-803C1370 0030+00 r=1 e=0 z=0  None .data      t_tag$3752                                                   */
 SECTION_DATA static u8 data_803C1340[48] = {
 	0x00, 0x72, 0x69, 0x67, 0x68, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x00, 0x72, 0x69, 0x67, 0x68, 0x74,
 	0x63, 0x65, 0x6E, 0x74, 0x65, 0x72, 0x5F, 0x73, 0x00, 0x00, 0x63, 0x65, 0x6E, 0x74, 0x65, 0x72,
 	0x00, 0x00, 0x6C, 0x65, 0x66, 0x74, 0x5F, 0x73, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x65, 0x66, 0x74,
 };
 
-/* 803C1370-803C13C8 0058+00 rc=2 efc=0 rfr=False None .data      __vt__15dMsgScrnStaff_c                                      */
+/* 803C1370-803C13C8 0058+00 r=2 e=0 z=0  None .data      __vt__15dMsgScrnStaff_c                                      */
 SECTION_DATA static void* __vt__15dMsgScrnStaff_c[22] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -174,12 +174,12 @@ SECTION_DATA static void* __vt__15dMsgScrnStaff_c[22] = {
 	/* 21   */ (void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454CF8-80454CFC 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3842                                                        */
+/* 80454CF8-80454CFC 0004+00 r=2 e=0 z=0  None .sdata2    @3842                                                        */
 SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_staff__lit_3842[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80246B34-80246DD8 02A4+00 rc=1 efc=1 rfr=False None .text      __ct__15dMsgScrnStaff_cFUc                                   */
+/* 80246B34-80246DD8 02A4+00 r=1 e=1 z=0  None .text      __ct__15dMsgScrnStaff_cFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ asm dMsgScrnStaff_c::dMsgScrnStaff_c(u8 param_0) {
 #pragma pop
 
 
-/* 80246DD8-80246EE8 0110+00 rc=1 efc=0 rfr=False None .text      __dt__15dMsgScrnStaff_cFv                                    */
+/* 80246DD8-80246EE8 0110+00 r=1 e=0 z=0  None .text      __dt__15dMsgScrnStaff_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,10 +202,10 @@ asm dMsgScrnStaff_c::~dMsgScrnStaff_c() {
 
 
 /* ############################################################################################## */
-/* 80454CFC-80454D00 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3877                                                        */
+/* 80454CFC-80454D00 0004+00 r=2 e=0 z=0  None .sdata2    @3877                                                        */
 SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_staff__lit_3877 = 1.0f;
 
-/* 80246EE8-80246F68 0080+00 rc=1 efc=0 rfr=False None .text      exec__15dMsgScrnStaff_cFv                                    */
+/* 80246EE8-80246F68 0080+00 r=1 e=0 z=0  None .text      exec__15dMsgScrnStaff_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ asm void dMsgScrnStaff_c::exec() {
 #pragma pop
 
 
-/* 80246F68-80246FC0 0058+00 rc=1 efc=0 rfr=False None .text      drawSelf__15dMsgScrnStaff_cFv                                */
+/* 80246F68-80246FC0 0058+00 r=1 e=0 z=0  None .text      drawSelf__15dMsgScrnStaff_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ asm void dMsgScrnStaff_c::drawSelf() {
 #pragma pop
 
 
-/* 80246FC0-80246FE4 0024+00 rc=1 efc=0 rfr=False None .text      fukiAlpha__15dMsgScrnStaff_cFf                               */
+/* 80246FC0-80246FE4 0024+00 r=1 e=0 z=0  None .text      fukiAlpha__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm void dMsgScrnStaff_c::fukiAlpha(f32 param_0) {
 #pragma pop
 
 
-/* 80246FE4-80246FE8 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__15dMsgScrnStaff_cFf                               */
+/* 80246FE4-80246FE8 0004+00 r=1 e=0 z=0  None .text      fukiScale__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +249,7 @@ asm void dMsgScrnStaff_c::fukiScale(f32 param_0) {
 #pragma pop
 
 
-/* 80246FE8-80246FEC 0004+00 rc=1 efc=0 rfr=False None .text      fukiTrans__15dMsgScrnStaff_cFff                              */
+/* 80246FE8-80246FEC 0004+00 r=1 e=0 z=0  None .text      fukiTrans__15dMsgScrnStaff_cFff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +260,7 @@ asm void dMsgScrnStaff_c::fukiTrans(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80246FEC-80246FF0 0004+00 rc=1 efc=0 rfr=False None .text      fontAlpha__15dMsgScrnStaff_cFf                               */
+/* 80246FEC-80246FF0 0004+00 r=1 e=0 z=0  None .text      fontAlpha__15dMsgScrnStaff_cFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

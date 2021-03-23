@@ -65,7 +65,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 80265E64-80265E78 0014+00 rc=1 efc=0 rfr=False None .text      cLs_Init__FP15node_list_class                                */
+/* 80265E64-80265E78 0014+00 r=1 e=0 z=0  None .text      cLs_Init__FP15node_list_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm static void cLs_Init(node_list_class* param_0) {
 #pragma pop
 
 
-/* 80265E78-80265EFC 0084+00 rc=5 efc=4 rfr=False None .text      cLs_SingleCut__FP10node_class                                */
+/* 80265E78-80265EFC 0084+00 r=5 e=4 z=0  None .text      cLs_SingleCut__FP10node_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void cLs_SingleCut(node_class* param_0) {
 #pragma pop
 
 
-/* 80265EFC-80265F70 0074+00 rc=5 efc=4 rfr=False None .text      cLs_Addition__FP15node_list_classP10node_class               */
+/* 80265EFC-80265F70 0074+00 r=5 e=4 z=0  None .text      cLs_Addition__FP15node_list_classP10node_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void cLs_Addition(node_list_class* param_0, node_class* param_1) {
 #pragma pop
 
 
-/* 80265F70-80265FF8 0088+00 rc=1 efc=1 rfr=False None .text      cLs_Insert__FP15node_list_classiP10node_class                */
+/* 80265F70-80265FF8 0088+00 r=1 e=1 z=0  None .text      cLs_Insert__FP15node_list_classiP10node_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void cLs_Insert(node_list_class* param_0, int param_1, node_class* param_2) 
 #pragma pop
 
 
-/* 80265FF8-80266040 0048+00 rc=1 efc=1 rfr=False None .text      cLs_GetFirst__FP15node_list_class                            */
+/* 80265FF8-80266040 0048+00 r=1 e=1 z=0  None .text      cLs_GetFirst__FP15node_list_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ asm void cLs_GetFirst(node_list_class* param_0) {
 #pragma pop
 
 
-/* 80266040-80266060 0020+00 rc=4 efc=4 rfr=False None .text      cLs_Create__FP15node_list_class                              */
+/* 80266040-80266060 0020+00 r=4 e=4 z=0  None .text      cLs_Create__FP15node_list_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

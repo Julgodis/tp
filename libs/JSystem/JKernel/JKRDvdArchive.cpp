@@ -160,7 +160,7 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC398-803CC3E8 0050+00 rc=2 efc=0 rfr=False None .data      __vt__13JKRDvdArchive                                        */
+/* 803CC398-803CC3E8 0050+00 r=2 e=0 z=0  None .data      __vt__13JKRDvdArchive                                        */
 SECTION_DATA static void* __vt__13JKRDvdArchive[20] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -184,7 +184,7 @@ SECTION_DATA static void* __vt__13JKRDvdArchive[20] = {
 	/* 19   */ (void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
-/* 802D7BF0-802D7C98 00A8+00 rc=1 efc=1 rfr=False None .text      __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection       */
+/* 802D7BF0-802D7C98 00A8+00 r=1 e=1 z=0  None .text      __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +195,7 @@ asm JKRDvdArchive::JKRDvdArchive(s32 param_0, JKRArchive::EMountDirection param_
 #pragma pop
 
 
-/* 802D7C98-802D7DB4 011C+00 rc=1 efc=0 rfr=False None .text      __dt__13JKRDvdArchiveFv                                      */
+/* 802D7C98-802D7DB4 011C+00 r=1 e=0 z=0  None .text      __dt__13JKRDvdArchiveFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +206,7 @@ asm JKRDvdArchive::~JKRDvdArchive() {
 #pragma pop
 
 
-/* 802D7DB4-802D8050 029C+00 rc=1 efc=0 rfr=False None .text      open__13JKRDvdArchiveFl                                      */
+/* 802D7DB4-802D8050 029C+00 r=1 e=0 z=0  None .text      open__13JKRDvdArchiveFl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +217,7 @@ asm void JKRDvdArchive::open(s32 param_0) {
 #pragma pop
 
 
-/* 802D8050-802D8168 0118+00 rc=1 efc=0 rfr=False None .text      fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D8050-802D8168 0118+00 r=1 e=0 z=0  None .text      fetchResource__13JKRDvdArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm void JKRDvdArchive::fetchResource(JKRArchive::SDIFileEntry* param_0, u32* pa
 #pragma pop
 
 
-/* 802D8168-802D826C 0104+00 rc=1 efc=0 rfr=False None .text      fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D8168-802D826C 0104+00 r=1 e=0 z=0  None .text      fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,22 +240,22 @@ asm void JKRDvdArchive::fetchResource(void* param_0, u32 param_1, JKRArchive::SD
 
 
 /* ############################################################################################## */
-/* 8039D1B0-8039D220 006D+03 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D1B0-8039D220 006D+03 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D1B0 = "JKRDvdArchive.cpp";
-SECTION_DEAD static char const* const stringBase_8039D1C2 = "%s";
-SECTION_DEAD static char const* const stringBase_8039D1C5 = 
+SECTION_DEAD char const* const stringBase_8039D1B0 = "JKRDvdArchive.cpp";
+SECTION_DEAD char const* const stringBase_8039D1C2 = "%s";
+SECTION_DEAD char const* const stringBase_8039D1C5 = 
     "Sorry, not applied for SZP archive.\n";
-SECTION_DEAD static char const* const stringBase_8039D1EA = "??? bad sequence\n";
-SECTION_DEAD static char const* const stringBase_8039D1FC = 
+SECTION_DEAD char const* const stringBase_8039D1EA = "??? bad sequence\n";
+SECTION_DEAD char const* const stringBase_8039D1FC = 
     "Sorry, not applied SZP archive.\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039D21D = "\0\0";
 #pragma pop
 
-/* 802D826C-802D8474 0208+00 rc=2 efc=1 rfr=False None .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii       */
+/* 802D826C-802D8474 0208+00 r=2 e=1 z=0  None .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +266,7 @@ asm void JKRDvdArchive::fetchResource_subroutine(s32 param_0, u32 param_1, u32 p
 #pragma pop
 
 
-/* 802D8474-802D8698 0224+00 rc=2 efc=1 rfr=False None .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc */
+/* 802D8474-802D8698 0224+00 r=2 e=1 z=0  None .text      fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +277,7 @@ asm void JKRDvdArchive::fetchResource_subroutine(s32 param_0, u32 param_1, u32 p
 #pragma pop
 
 
-/* 802D8698-802D87D4 013C+00 rc=1 efc=0 rfr=False None .text      getExpandedResSize__13JKRDvdArchiveCFPCv                     */
+/* 802D8698-802D87D4 013C+00 r=1 e=0 z=0  None .text      getExpandedResSize__13JKRDvdArchiveCFPCv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

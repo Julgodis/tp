@@ -120,7 +120,7 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 // Declarations:
 // 
 
-/* 802D3574-802D35F4 0080+00 rc=1 efc=0 rfr=False None .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  */
+/* 802D3574-802D35F4 0080+00 r=1 e=0 z=0  None .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +131,7 @@ asm void JKRAramPiece::prepareCommand(int param_0, u32 param_1, u32 param_2, u32
 #pragma pop
 
 
-/* 802D35F4-802D3614 0020+00 rc=1 efc=1 rfr=False None .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  */
+/* 802D35F4-802D3614 0020+00 r=1 e=1 z=0  None .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,29 +143,29 @@ asm void JKRAramPiece::sendCommand(JKRAMCommand* param_0) {
 
 
 /* ############################################################################################## */
-/* 8039D0B8-8039D120 0068+00 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039D0B8-8039D120 0068+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039D0B8 = "direction = %x\n";
-SECTION_DEAD static char const* const stringBase_8039D0C8 = "source = %x\n";
-SECTION_DEAD static char const* const stringBase_8039D0D5 = "destination = %x\n";
-SECTION_DEAD static char const* const stringBase_8039D0E7 = "length = %x\n";
-SECTION_DEAD static char const* const stringBase_8039D0F4 = "JKRAramPiece.cpp";
-SECTION_DEAD static char const* const stringBase_8039D105 = "%s";
-SECTION_DEAD static char const* const stringBase_8039D108 = "illegal address. abort.";
+SECTION_DEAD char const* const stringBase_8039D0B8 = "direction = %x\n";
+SECTION_DEAD char const* const stringBase_8039D0C8 = "source = %x\n";
+SECTION_DEAD char const* const stringBase_8039D0D5 = "destination = %x\n";
+SECTION_DEAD char const* const stringBase_8039D0E7 = "length = %x\n";
+SECTION_DEAD char const* const stringBase_8039D0F4 = "JKRAramPiece.cpp";
+SECTION_DEAD char const* const stringBase_8039D105 = "%s";
+SECTION_DEAD char const* const stringBase_8039D108 = "illegal address. abort.";
 #pragma pop
 
-/* 80434318-80434324 000C+00 rc=1 efc=0 rfr=False None .bss       @492                                                         */
+/* 80434318-80434324 000C+00 r=1 e=0 z=0  None .bss       @492                                                         */
 static u8 JKRAramPiece__lit_492[12];
 
-/* 80434324-80434330 000C+00 rc=3 efc=0 rfr=False None .bss       sAramPieceCommandList__12JKRAramPiece                        */
+/* 80434324-80434330 000C+00 r=3 e=0 z=0  None .bss       sAramPieceCommandList__12JKRAramPiece                        */
 static u8 sAramPieceCommandList__12JKRAramPiece[12];
 
-/* 80434330-80434348 0018+00 rc=3 efc=0 rfr=False None .bss       mMutex__12JKRAramPiece                                       */
+/* 80434330-80434348 0018+00 r=3 e=0 z=0  None .bss       mMutex__12JKRAramPiece                                       */
 static u8 mMutex__12JKRAramPiece[24];
 
-/* 802D3614-802D3770 015C+00 rc=1 efc=0 rfr=False None .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v      */
+/* 802D3614-802D3770 015C+00 r=1 e=0 z=0  None .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ asm void JKRAramPiece::orderAsync(int param_0, u32 param_1, u32 param_2, u32 par
 #pragma pop
 
 
-/* 802D3770-802D3838 00C8+00 rc=1 efc=0 rfr=False None .text      sync__12JKRAramPieceFP12JKRAMCommandi                        */
+/* 802D3770-802D3838 00C8+00 r=1 e=0 z=0  None .text      sync__12JKRAramPieceFP12JKRAMCommandi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ asm void JKRAramPiece::sync(JKRAMCommand* param_0, int param_1) {
 #pragma pop
 
 
-/* 802D3838-802D38CC 0094+00 rc=6 efc=6 rfr=False None .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock             */
+/* 802D3838-802D38CC 0094+00 r=6 e=6 z=0  None .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void JKRAramPiece::orderSync(int param_0, u32 param_1, u32 param_2, u32 para
 #pragma pop
 
 
-/* 802D38CC-802D3944 0078+00 rc=2 efc=1 rfr=False None .text      startDMA__12JKRAramPieceFP12JKRAMCommand                     */
+/* 802D38CC-802D3944 0078+00 r=2 e=1 z=0  None .text      startDMA__12JKRAramPieceFP12JKRAMCommand                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm void JKRAramPiece::startDMA(JKRAMCommand* param_0) {
 #pragma pop
 
 
-/* 802D3944-802D39EC 00A8+00 rc=1 efc=0 rfr=False None .text      doneDMA__12JKRAramPieceFUl                                   */
+/* 802D3944-802D39EC 00A8+00 r=1 e=0 z=0  None .text      doneDMA__12JKRAramPieceFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void JKRAramPiece::doneDMA(u32 param_0) {
 #pragma pop
 
 
-/* 802D39EC-802D3A5C 0070+00 rc=1 efc=0 rfr=False None .text      __ct__12JKRAMCommandFv                                       */
+/* 802D39EC-802D3A5C 0070+00 r=1 e=0 z=0  None .text      __ct__12JKRAMCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +231,7 @@ asm JKRAMCommand::JKRAMCommand() {
 #pragma pop
 
 
-/* 802D3A5C-802D3B04 00A8+00 rc=1 efc=0 rfr=False None .text      __dt__12JKRAMCommandFv                                       */
+/* 802D3A5C-802D3B04 00A8+00 r=1 e=0 z=0  None .text      __dt__12JKRAMCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +242,7 @@ asm JKRAMCommand::~JKRAMCommand() {
 #pragma pop
 
 
-/* 802D3B04-802D3B48 0044+00 rc=1 efc=1 rfr=False None .text      __sinit_JKRAramPiece_cpp                                     */
+/* 802D3B04-802D3B48 0044+00 r=1 e=1 z=0  None .text      __sinit_JKRAramPiece_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -62,14 +62,14 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 // 
 
 /* ############################################################################################## */
-/* 804552E0-804552E8 0004+04 rc=6 efc=0 rfr=False None .sdata2    @2270                                                        */
+/* 804552E0-804552E8 0004+04 r=6 e=0 z=0  None .sdata2    @2270                                                        */
 SECTION_SDATA2 static f32 JPAExtraShape__lit_2270[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8027A918-8027A990 0078+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle      */
+/* 8027A918-8027A990 0078+00 r=1 e=1 z=0  None .text      JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void JPACalcScaleX(JPAEmitterWorkData* param_0, JPABaseParticle* param_1) {
 #pragma pop
 
 
-/* 8027A990-8027AA08 0078+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle      */
+/* 8027A990-8027AA08 0078+00 r=1 e=1 z=0  None .text      JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +91,7 @@ asm void JPACalcScaleY(JPAEmitterWorkData* param_0, JPABaseParticle* param_1) {
 #pragma pop
 
 
-/* 8027AA08-8027AA14 000C+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle   */
+/* 8027AA08-8027AA14 000C+00 r=1 e=1 z=0  None .text      JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ asm void JPACalcScaleCopy(JPAEmitterWorkData* param_0, JPABaseParticle* param_1)
 #pragma pop
 
 
-/* 8027AA14-8027AA20 000C+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA14-8027AA20 000C+00 r=1 e=1 z=0  None .text      JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,10 +114,10 @@ asm void JPACalcScaleAnmNormal(JPAEmitterWorkData* param_0, JPABaseParticle* par
 
 
 /* ############################################################################################## */
-/* 804552E8-804552F0 0008+00 rc=5 efc=0 rfr=False None .sdata2    @2312                                                        */
+/* 804552E8-804552F0 0008+00 r=5 e=0 z=0  None .sdata2    @2312                                                        */
 SECTION_SDATA2 static f64 JPAExtraShape__lit_2312 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8027AA20-8027AA84 0064+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA20-8027AA84 0064+00 r=1 e=1 z=0  None .text      JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm void JPACalcScaleAnmRepeatX(JPAEmitterWorkData* param_0, JPABaseParticle* pa
 #pragma pop
 
 
-/* 8027AA84-8027AAE8 0064+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AA84-8027AAE8 0064+00 r=1 e=1 z=0  None .text      JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,10 +140,10 @@ asm void JPACalcScaleAnmRepeatY(JPAEmitterWorkData* param_0, JPABaseParticle* pa
 
 
 /* ############################################################################################## */
-/* 804552F0-804552F4 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2339                                                        */
+/* 804552F0-804552F4 0004+00 r=2 e=0 z=0  None .sdata2    @2339                                                        */
 SECTION_SDATA2 static f32 lit_2339 = 2.0f;
 
-/* 8027AAE8-8027AB7C 0094+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AAE8-8027AB7C 0094+00 r=1 e=1 z=0  None .text      JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ asm void JPACalcScaleAnmReverseX(JPAEmitterWorkData* param_0, JPABaseParticle* p
 #pragma pop
 
 
-/* 8027AB7C-8027AC10 0094+00 rc=1 efc=1 rfr=False None .text      JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AB7C-8027AC10 0094+00 r=1 e=1 z=0  None .text      JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,10 +166,10 @@ asm void JPACalcScaleAnmReverseY(JPAEmitterWorkData* param_0, JPABaseParticle* p
 
 
 /* ############################################################################################## */
-/* 804552F4-804552F8 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2390                                                        */
+/* 804552F4-804552F8 0004+00 r=2 e=0 z=0  None .sdata2    @2390                                                        */
 SECTION_SDATA2 static f32 lit_2390 = 255.0f;
 
-/* 8027AC10-8027AC98 0088+00 rc=1 efc=1 rfr=False None .text      JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle    */
+/* 8027AC10-8027AC98 0088+00 r=1 e=1 z=0  None .text      JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,13 +181,13 @@ asm void JPACalcAlphaAnm(JPAEmitterWorkData* param_0, JPABaseParticle* param_1) 
 
 
 /* ############################################################################################## */
-/* 804552F8-804552FC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2433                                                        */
+/* 804552F8-804552FC 0004+00 r=1 e=0 z=0  None .sdata2    @2433                                                        */
 SECTION_SDATA2 static f32 lit_2433 = 16384.0f;
 
-/* 804552FC-80455300 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2434                                                        */
+/* 804552FC-80455300 0004+00 r=1 e=0 z=0  None .sdata2    @2434                                                        */
 SECTION_SDATA2 static f32 lit_2434 = 0.5f;
 
-/* 8027AC98-8027AD88 00F0+00 rc=1 efc=1 rfr=False None .text      JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AC98-8027AD88 00F0+00 r=1 e=1 z=0  None .text      JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void JPACalcAlphaFlickAnm(JPAEmitterWorkData* param_0, JPABaseParticle* para
 #pragma pop
 
 
-/* 8027AD88-8027ADBC 0034+00 rc=1 efc=1 rfr=False None .text      __ct__13JPAExtraShapeFPCUc                                   */
+/* 8027AD88-8027ADBC 0034+00 r=1 e=1 z=0  None .text      __ct__13JPAExtraShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,14 +210,14 @@ asm JPAExtraShape::JPAExtraShape(u8 const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80455300-80455308 0004+04 rc=1 efc=0 rfr=False None .sdata2    @2503                                                        */
+/* 80455300-80455308 0004+04 r=1 e=0 z=0  None .sdata2    @2503                                                        */
 SECTION_SDATA2 static u8 JPAExtraShape__lit_2503[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8027ADBC-8027AEBC 0100+00 rc=1 efc=0 rfr=False None .text      init__13JPAExtraShapeFv                                      */
+/* 8027ADBC-8027AEBC 0100+00 r=1 e=0 z=0  None .text      init__13JPAExtraShapeFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

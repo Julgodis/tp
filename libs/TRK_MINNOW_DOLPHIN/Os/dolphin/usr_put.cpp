@@ -28,7 +28,7 @@ extern "C" void GetTRKConnected(); // 1
 // Declarations:
 // 
 
-/* 8036DB10-8036DB14 0004+00 rc=1 efc=1 rfr=False None .text      usr_put_initialize                                           */
+/* 8036DB10-8036DB14 0004+00 r=1 e=1 z=0  None .text      usr_put_initialize                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +39,7 @@ extern "C" asm void usr_put_initialize() {
 #pragma pop
 
 
-/* 8036DB14-8036DB9C 0088+00 rc=2 efc=2 rfr=False None .text      usr_puts_serial                                              */
+/* 8036DB14-8036DB9C 0088+00 r=2 e=2 z=0  None .text      usr_puts_serial                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

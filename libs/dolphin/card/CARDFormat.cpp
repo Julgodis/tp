@@ -45,7 +45,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80357484-803575C8 0144+00 rc=1 efc=0 rfr=False None .text      FormatCallback                                               */
+/* 80357484-803575C8 0144+00 r=1 e=0 z=0  None .text      FormatCallback                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +56,7 @@ extern "C" asm static void FormatCallback() {
 #pragma pop
 
 
-/* 803575C8-80357C20 0658+00 rc=1 efc=0 rfr=False None .text      __CARDFormatRegionAsync                                      */
+/* 803575C8-80357C20 0658+00 r=1 e=0 z=0  None .text      __CARDFormatRegionAsync                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +67,7 @@ extern "C" asm static void __CARDFormatRegionAsync() {
 #pragma pop
 
 
-/* 80357C20-80357C74 0054+00 rc=1 efc=1 rfr=False None .text      CARDFormat                                                   */
+/* 80357C20-80357C74 0054+00 r=1 e=1 z=0  None .text      CARDFormat                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

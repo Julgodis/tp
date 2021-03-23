@@ -64,7 +64,7 @@ extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CC518-803CC540 0024+04 rc=2 efc=1 rfr=False None .data      __vt__18JSUFileInputStream                                   */
+/* 803CC518-803CC540 0024+04 r=2 e=1 z=0  None .data      __vt__18JSUFileInputStream                                   */
 SECTION_DATA void* __vt__18JSUFileInputStream[9 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -79,7 +79,7 @@ SECTION_DATA void* __vt__18JSUFileInputStream[9 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802DC638-802DC67C 0044+00 rc=1 efc=1 rfr=False None .text      __ct__18JSUFileInputStreamFP7JKRFile                         */
+/* 802DC638-802DC67C 0044+00 r=1 e=1 z=0  None .text      __ct__18JSUFileInputStreamFP7JKRFile                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm JSUFileInputStream::JSUFileInputStream(JKRFile* param_0) {
 #pragma pop
 
 
-/* 802DC67C-802DC74C 00D0+00 rc=1 efc=0 rfr=False None .text      readData__18JSUFileInputStreamFPvl                           */
+/* 802DC67C-802DC74C 00D0+00 r=1 e=0 z=0  None .text      readData__18JSUFileInputStreamFPvl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void JSUFileInputStream::readData(void* param_0, s32 param_1) {
 #pragma pop
 
 
-/* 802DC74C-802DC82C 00E0+00 rc=1 efc=0 rfr=False None .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           */
+/* 802DC74C-802DC82C 00E0+00 r=1 e=0 z=0  None .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm void JSUFileInputStream::seekPos(s32 param_0, JSUStreamSeekFrom param_1) {
 #pragma pop
 
 
-/* 802DC82C-802DC85C 0030+00 rc=1 efc=0 rfr=False None .text      getLength__18JSUFileInputStreamCFv                           */
+/* 802DC82C-802DC85C 0030+00 r=1 e=0 z=0  None .text      getLength__18JSUFileInputStreamCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm void JSUFileInputStream::getLength() const {
 #pragma pop
 
 
-/* 802DC85C-802DC864 0008+00 rc=1 efc=0 rfr=False None .text      getPosition__18JSUFileInputStreamCFv                         */
+/* 802DC85C-802DC864 0008+00 r=1 e=0 z=0  None .text      getPosition__18JSUFileInputStreamCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

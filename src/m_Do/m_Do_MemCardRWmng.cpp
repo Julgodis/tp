@@ -69,10 +69,10 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803ECF40-803F0F40 4000+00 rc=2 efc=0 rfr=False None .bss       sTmpBuf                                                      */
+/* 803ECF40-803F0F40 4000+00 r=2 e=0 z=0  None .bss       sTmpBuf                                                      */
 static u8 sTmpBuf[16384];
 
-/* 80017498-8001769C 0204+00 rc=1 efc=1 rfr=False None .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      */
+/* 80017498-8001769C 0204+00 r=1 e=1 z=0  None .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void mDoMemCdRWm_Store(CARDFileInfo* param_0, void* param_1, u32 param_2) {
 #pragma pop
 
 
-/* 8001769C-8001787C 01E0+00 rc=1 efc=1 rfr=False None .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    */
+/* 8001769C-8001787C 01E0+00 r=1 e=1 z=0  None .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,19 +95,19 @@ asm void mDoMemCdRWm_Restore(CARDFileInfo* param_0, void* param_1, u32 param_2) 
 
 
 /* ############################################################################################## */
-/* 80374408-80374460 0051+07 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80374408-80374460 0051+07 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80374408 = "Zelda: Twilight Princess";
-SECTION_DEAD static char const* const stringBase_80374421 = "%d/%d Save Data";
-SECTION_DEAD static char const* const stringBase_80374431 = "zelda2_gc_banner.bti";
-SECTION_DEAD static char const* const stringBase_80374446 = "zelda2_gc_icon.bti";
+SECTION_DEAD char const* const stringBase_80374408 = "Zelda: Twilight Princess";
+SECTION_DEAD char const* const stringBase_80374421 = "%d/%d Save Data";
+SECTION_DEAD char const* const stringBase_80374431 = "zelda2_gc_banner.bti";
+SECTION_DEAD char const* const stringBase_80374446 = "zelda2_gc_icon.bti";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80374459 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 8001787C-800179E4 0168+00 rc=1 efc=0 rfr=False None .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData          */
+/* 8001787C-800179E4 0168+00 r=1 e=0 z=0  None .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ asm static void mDoMemCdRWm_BuildHeader(mDoMemCdRWm_HeaderData* param_0) {
 #pragma pop
 
 
-/* 800179E4-80017B4C 0168+00 rc=1 efc=0 rfr=False None .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo                    */
+/* 800179E4-80017B4C 0168+00 r=1 e=0 z=0  None .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm static void mDoMemCdRWm_SetCardStat(CARDFileInfo* param_0) {
 #pragma pop
 
 
-/* 80017B4C-80017C74 0128+00 rc=2 efc=0 rfr=False None .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo                  */
+/* 80017B4C-80017C74 0128+00 r=2 e=0 z=0  None .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm static void mDoMemCdRWm_CheckCardStat(CARDFileInfo* param_0) {
 #pragma pop
 
 
-/* 80017C74-80017CB4 0040+00 rc=1 efc=0 rfr=False None .text      mDoMemCdRWm_CalcCheckSum__FPvUl                              */
+/* 80017C74-80017CB4 0040+00 r=1 e=0 z=0  None .text      mDoMemCdRWm_CalcCheckSum__FPvUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm static void mDoMemCdRWm_CalcCheckSum(void* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80017CB4-80017CEC 0038+00 rc=2 efc=0 rfr=False None .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl                      */
+/* 80017CB4-80017CEC 0038+00 r=2 e=0 z=0  None .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm static void mDoMemCdRWm_CalcCheckSumGameData(void* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80017CEC-80017D38 004C+00 rc=5 efc=4 rfr=False None .text      mDoMemCdRWm_TestCheckSumGameData__FPv                        */
+/* 80017CEC-80017D38 004C+00 r=5 e=4 z=0  None .text      mDoMemCdRWm_TestCheckSumGameData__FPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm void mDoMemCdRWm_TestCheckSumGameData(void* param_0) {
 #pragma pop
 
 
-/* 80017D38-80017D7C 0044+00 rc=4 efc=4 rfr=False None .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc                      */
+/* 80017D38-80017D7C 0044+00 r=4 e=4 z=0  None .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -27,7 +27,7 @@ extern "C" void sBs_ClearArea__FPvUl(); // 1
 // Declarations:
 // 
 
-/* 80271C8C-80271CAC 0020+00 rc=1 efc=0 rfr=False None .text      sBs_FillArea_s__FPvUls                                       */
+/* 80271C8C-80271CAC 0020+00 r=1 e=0 z=0  None .text      sBs_FillArea_s__FPvUls                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ asm static void sBs_FillArea_s(void* param_0, u32 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80271CAC-80271CD0 0024+00 rc=2 efc=2 rfr=False None .text      sBs_ClearArea__FPvUl                                         */
+/* 80271CAC-80271CD0 0024+00 r=2 e=2 z=0  None .text      sBs_ClearArea__FPvUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

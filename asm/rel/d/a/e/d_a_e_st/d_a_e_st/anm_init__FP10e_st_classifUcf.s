@@ -1,0 +1,44 @@
+lbl_8079DE4C:
+/* 8079DE4C 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
+/* 8079DE50 00000004  7C 08 02 A6 */	mflr r0
+/* 8079DE54 00000008  90 01 00 44 */	stw r0, 0x44(r1)
+/* 8079DE58 0000000C  DB E1 00 30 */	stfd f31, 0x30(r1)
+/* 8079DE5C 00000010  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
+/* 8079DE60 00000014  DB C1 00 20 */	stfd f30, 0x20(r1)
+/* 8079DE64 00000018  F3 C1 00 28 */	psq_st f30, 40(r1), 0, 0 /* qr0 */
+/* 8079DE68 00000000  39 61 00 20 */	addi r11, r1, 0x20
+/* 8079DE6C 00000004  4B FF FE ED */	bl _savegpr_29
+/* 8079DE70 00000008  7C 7D 1B 78 */	mr r29, r3
+/* 8079DE74 0000000C  7C 9E 23 78 */	mr r30, r4
+/* 8079DE78 00000010  FF C0 08 90 */	fmr f30, f1
+/* 8079DE7C 00000014  7C BF 2B 78 */	mr r31, r5
+/* 8079DE80 00000018  FF E0 10 90 */	fmr f31, f2
+/* 8079DE84 0000001C  3C 60 00 00 */	lis r3, stringBase0@ha /* 807A69E0 */
+/* 8079DE88 00000020  38 63 00 00 */	addi r3, r3, stringBase0@l /* 807A69E0 */
+/* 8079DE8C 00000024  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 8079DE90 00000028  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8079DE94 0000002C  3C A5 00 02 */	addis r5, r5, 2
+/* 8079DE98 00000030  38 C0 00 80 */	li r6, 0x80
+/* 8079DE9C 00000034  38 A5 C2 F8 */	addi r5, r5, -15624
+/* 8079DEA0 00000038  4B FF FE B9 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 8079DEA4 0000003C  7C 64 1B 78 */	mr r4, r3
+/* 8079DEA8 00000040  80 7D 05 CC */	lwz r3, 0x5cc(r29)
+/* 8079DEAC 00000044  57 E5 06 3E */	clrlwi r5, r31, 0x18
+/* 8079DEB0 00000048  FC 20 F0 90 */	fmr f1, f30
+/* 8079DEB4 0000004C  FC 40 F8 90 */	fmr f2, f31
+/* 8079DEB8 00000050  3C C0 00 00 */	lis r6, lit_3904@ha /* 807A6828 */
+/* 8079DEBC 00000054  C0 66 00 00 */	lfs f3, lit_3904@l(r6) /* 807A6828 */
+/* 8079DEC0 00000058  3C C0 00 00 */	lis r6, lit_3928@ha /* 807A6860 */
+/* 8079DEC4 0000005C  C0 86 00 00 */	lfs f4, lit_3928@l(r6) /* 807A6860 */
+/* 8079DEC8 00000060  4B FF FE 91 */	bl setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
+/* 8079DECC 00000064  93 DD 06 74 */	stw r30, 0x674(r29)
+/* 8079DED0 00000084  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */
+/* 8079DED4 00000000  CB E1 00 30 */	lfd f31, 0x30(r1)
+/* 8079DED8 0000008C  E3 C1 00 28 */	psq_l f30, 40(r1), 0, 0 /* qr0 */
+/* 8079DEDC 00000000  CB C1 00 20 */	lfd f30, 0x20(r1)
+/* 8079DEE0 00000004  39 61 00 20 */	addi r11, r1, 0x20
+/* 8079DEE4 00000008  4B FF FE 75 */	bl _restgpr_29
+/* 8079DEE8 0000000C  80 01 00 44 */	lwz r0, 0x44(r1)
+/* 8079DEEC 00000010  7C 08 03 A6 */	mtlr r0
+/* 8079DEF0 00000014  38 21 00 40 */	addi r1, r1, 0x40
+/* 8079DEF4 00000018  4E 80 00 20 */	blr 

@@ -55,10 +55,10 @@ extern "C" void PSVECAdd(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80452BC8-80452BD0 0008+00 rc=4 efc=0 rfr=False None .sdata2    @3632                                                        */
+/* 80452BC8-80452BD0 0008+00 r=4 e=0 z=0  None .sdata2    @3632                                                        */
 SECTION_SDATA2 static f64 lit_3632 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80097878-80097904 008C+00 rc=7 efc=7 rfr=False None .text      Init__14d2DBSplinePathFll                                    */
+/* 80097878-80097904 008C+00 r=7 e=7 z=0  None .text      Init__14d2DBSplinePathFll                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,13 +70,13 @@ asm void d2DBSplinePath::Init(s32 param_0, s32 param_1) {
 
 
 /* ############################################################################################## */
-/* 80452BD0-80452BD4 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3684                                                        */
+/* 80452BD0-80452BD4 0004+00 r=3 e=0 z=0  None .sdata2    @3684                                                        */
 SECTION_SDATA2 static f32 d_d_spline_path__lit_3684 = 1.0f;
 
-/* 80452BD4-80452BD8 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3685                                                        */
+/* 80452BD4-80452BD8 0004+00 r=3 e=0 z=0  None .sdata2    @3685                                                        */
 SECTION_SDATA2 static f32 d_d_spline_path__lit_3685 = 0.5f;
 
-/* 80097904-80097A6C 0168+00 rc=5 efc=5 rfr=False None .text      Step__14d2DBSplinePathFv                                     */
+/* 80097904-80097A6C 0168+00 r=5 e=5 z=0  None .text      Step__14d2DBSplinePathFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void d2DBSplinePath::Step() {
 #pragma pop
 
 
-/* 80097A6C-80097B20 00B4+00 rc=1 efc=1 rfr=False None .text      Calc__14d2DBSplinePathFP4cXyz                                */
+/* 80097A6C-80097B20 00B4+00 r=1 e=1 z=0  None .text      Calc__14d2DBSplinePathFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void d2DBSplinePath::Calc(cXyz* param_0) {
 #pragma pop
 
 
-/* 80097B20-80097B68 0048+00 rc=5 efc=5 rfr=False None .text      Calc__14d2DBSplinePathFPf                                    */
+/* 80097B20-80097B68 0048+00 r=5 e=5 z=0  None .text      Calc__14d2DBSplinePathFPf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void d2DBSplinePath::Calc(f32* param_0) {
 #pragma pop
 
 
-/* 80097B68-80097C5C 00F4+00 rc=1 efc=1 rfr=False None .text      Spot__14d2DBSplinePathFPff                                   */
+/* 80097B68-80097C5C 00F4+00 r=1 e=1 z=0  None .text      Spot__14d2DBSplinePathFPff                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ asm void d2DBSplinePath::Spot(f32* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80097C5C-80097C74 0018+00 rc=0 efc=0 rfr=False None .text      Init__10dPathCurveFP5dPath                                   */
+/* 80097C5C-80097C74 0018+00 r=1 e=0 z=1  None .text      Init__10dPathCurveFP5dPath                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +131,7 @@ asm void dPathCurve::Init(dPath* param_0) {
 #pragma pop
 
 
-/* 80097C74-80097E8C 0218+00 rc=0 efc=0 rfr=False None .text      bSpline2__10dPathCurveFf                                     */
+/* 80097C74-80097E8C 0218+00 r=1 e=0 z=1  None .text      bSpline2__10dPathCurveFf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

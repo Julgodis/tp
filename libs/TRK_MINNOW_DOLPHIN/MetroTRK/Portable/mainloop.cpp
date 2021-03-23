@@ -34,7 +34,7 @@ extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8036CB20-8036CC18 00F8+00 rc=1 efc=1 rfr=False None .text      TRKNubMainLoop                                               */
+/* 8036CB20-8036CC18 00F8+00 r=1 e=1 z=0  None .text      TRKNubMainLoop                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -72,7 +72,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 802DCCC8-802DCCD0 0008+00 rc=1 efc=0 rfr=False None .text      extend_default__Q27JGadget6vectorFUlUlUl                     */
+/* 802DCCC8-802DCCD0 0008+00 r=1 e=0 z=0  None .text      extend_default__Q27JGadget6vectorFUlUlUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void JGadget::vector::extend_default(u32 param_0, u32 param_1, u32 param_2) 
 #pragma pop
 
 
-/* 802DCCD0-802DCCFC 002C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
+/* 802DCCD0-802DCCFC 002C+00 r=1 e=1 z=0  None .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm JGadget::TVector_pointer_void::TVector_pointer_void(JGadget::TAllocator<void
 #pragma pop
 
 
-/* 802DCCFC-802DCDA4 00A8+00 rc=2 efc=2 rfr=False None .text      __dt__Q27JGadget20TVector_pointer_voidFv                     */
+/* 802DCCFC-802DCDA4 00A8+00 r=2 e=2 z=0  None .text      __dt__Q27JGadget20TVector_pointer_voidFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm JGadget::TVector_pointer_void::~TVector_pointer_void() {
 #pragma pop
 
 
-/* 802DCDA4-802DCDC4 0020+00 rc=1 efc=1 rfr=False None .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             */
+/* 802DCDA4-802DCDC4 0020+00 r=1 e=1 z=0  None .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm void JGadget::TVector_pointer_void::insert(void** param_0, void const*& para
 #pragma pop
 
 
-/* 802DCDC4-802DCE1C 0058+00 rc=1 efc=1 rfr=False None .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               */
+/* 802DCDC4-802DCE1C 0058+00 r=1 e=1 z=0  None .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm void JGadget::TVector_pointer_void::erase(void** param_0, void** param_1) {
 #pragma pop
 
 
-/* 802DCE1C-802DCE8C 0070+00 rc=1 efc=0 rfr=False None .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
+/* 802DCE1C-802DCE8C 0070+00 r=1 e=0 z=0  None .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm void JGadget::TVector__template0::insert(void** param_0, u32 param_1, void c
 #pragma pop
 
 
-/* 802DCE8C-802DD130 02A4+00 rc=1 efc=0 rfr=False None .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
+/* 802DCE8C-802DD130 02A4+00 r=1 e=0 z=0  None .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm void JGadget::TVector__template0::Insert_raw(void** param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802DD130-802DD188 0058+00 rc=1 efc=0 rfr=False None .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
+/* 802DD130-802DD188 0058+00 r=1 e=0 z=0  None .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

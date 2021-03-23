@@ -6,6 +6,34 @@ from ..builder import AsyncBuilder
 from ..types import *
 from .identifier import *
 
+
+@dataclass
+class ReferenceCount:
+    total: int = 0
+    static: int = 0
+    extern: int = 0
+    rel: int = 0
+
+    def add_reference(self, referencee, referencer):
+        self.total += 1
+        if referencer:
+            if referencee._module != referencer._module:
+                self.rel += 1
+            elif (referencee._library == referencer._library and
+                  referencee._translation_unit == referencer._translation_unit):
+                self.static += 1
+            else:
+                self.extern += 1
+        else:
+            self.extern += 1
+
+    def make_static(self):
+        self.total = 1
+        self.static = 1
+        self.extern = 0
+        self.rel = 0
+
+
 @dataclass(eq=False)
 class Symbol:
     identifier: Identifier
@@ -13,8 +41,9 @@ class Symbol:
     size: int
     padding: int = 0
     alignment: int = 0
-    reference_count: int = 0
-    external_reference_count: int = 0
+    reference_count: ReferenceCount = field(default_factory=ReferenceCount)
+    sda_hack_reference_count: ReferenceCount = field(
+        default_factory=ReferenceCount)
     require_forward_reference: bool = False
     data_type: Type = None
     source: str = None
@@ -32,17 +61,6 @@ class Symbol:
         if not hasattr(self, 'addr'):
             return True
         return self.addr == other.addr and self.size == other.size
-
-    """
-    def __getstate__(self):
-        state = self.__dict__.copy()
-        if self.label == "setDemoName__11Z2StatusMgrFPc":
-            globals.LOG.debug(state)
-        return state
-
-    def __setstate__(self, state):
-        self.__dict__.update(state)
-    """
 
     @property
     def start(self):
@@ -62,16 +80,13 @@ class Symbol:
 
     @property
     def is_static(self):
-        return self.reference_count > 0 and self.external_reference_count == 0
+        return self.reference_count.static > 0 and self.reference_count.extern == 0 and self.reference_count.rel == 0
 
     def add_reference(self, referencer):
-        self.reference_count += 1
-        self.external_reference_count += 1
-        if referencer:
-            if self._module == referencer._module:
-                if self._library == referencer._library:
-                    if self._translation_unit == referencer._translation_unit:
-                        self.external_reference_count -= 1
+        self.reference_count.add_reference(self, referencer)
+
+    def add_sda_hack(self, referencer):
+        self.sda_hack_reference_count.add_reference(self, referencer)
 
     def valid_reference(self, addr):
         return addr == self.addr
@@ -162,9 +177,9 @@ class Symbol:
             section = "SECTION_SDATA "
         elif self._section == ".sdata2":
             section = "SECTION_SDATA2 "
-        #elif self._section == ".bss":
+        # elif self._section == ".bss":
         #    section = "SECTION_BSS "
-        #elif self._section == ".sbss":
+        # elif self._section == ".sbss":
         #    section = "SECTION_SBSS "
         elif self._section == ".sbss2":
             section = "SECTION_SBSS2 "
@@ -215,7 +230,7 @@ class Symbol:
     async def export_declaration(self, exporter, builder: AsyncBuilder):
         await self.export_declaration_head(exporter, builder)
         await self.export_declaration_body(exporter, builder)
-    
+
     async def export_u8_data(self, builder: AsyncBuilder, data: bytearray):
         for chunk in util.chunks(data, 16):
             line = ", ".join([f"0x{x:02X}" for x in chunk])

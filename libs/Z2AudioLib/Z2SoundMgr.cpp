@@ -17,6 +17,12 @@ struct JASTrack {
 	/* 80292918 */ void writePort(u32, u16);
 };
 
+struct JAISoundHandle {
+};
+
+struct JAISoundID {
+};
+
 struct JAISound {
 };
 
@@ -27,12 +33,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundID {
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2SoundMgr {
@@ -217,7 +217,7 @@ extern "C" extern u8 struct_80451340[8];
 // 
 
 /* ############################################################################################## */
-/* 803C9D18-803C9D70 0058+00 rc=1 efc=0 rfr=False None .data      @3690                                                        */
+/* 803C9D18-803C9D70 0058+00 r=1 e=0 z=0  None .data      @3690                                                        */
 SECTION_DATA static void* Z2SoundMgr__lit_3690[22] = {
 	/* 0    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
 	/* 1    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
@@ -243,13 +243,13 @@ SECTION_DATA static void* Z2SoundMgr__lit_3690[22] = {
 	/* 21   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x148),
 };
 
-/* 80455838-8045583C 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3688                                                        */
+/* 80455838-8045583C 0004+00 r=5 e=0 z=0  None .sdata2    @3688                                                        */
 SECTION_SDATA2 static f32 Z2SoundMgr__lit_3688 = 1.0f;
 
-/* 8045583C-80455840 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3689                                                        */
+/* 8045583C-80455840 0004+00 r=1 e=0 z=0  None .sdata2    @3689                                                        */
 SECTION_SDATA2 static f32 Z2SoundMgr__lit_3689 = -1.0f;
 
-/* 802A9BC8-802A9E80 02B8+00 rc=2 efc=1 rfr=False None .text      seqCallback__FP8JASTrackUs                                   */
+/* 802A9BC8-802A9E80 02B8+00 r=2 e=1 z=0  None .text      seqCallback__FP8JASTrackUs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm void seqCallback(JASTrack* param_0, u16 param_1) {
 
 
 /* ############################################################################################## */
-/* 803C9D70-803C9D80 000C+04 rc=2 efc=1 rfr=False None .data      __vt__10Z2SoundMgr                                           */
+/* 803C9D70-803C9D80 000C+04 r=2 e=1 z=0  None .data      __vt__10Z2SoundMgr                                           */
 SECTION_DATA void* __vt__10Z2SoundMgr[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -270,7 +270,7 @@ SECTION_DATA void* __vt__10Z2SoundMgr[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A9E80-802A9EE8 0068+00 rc=1 efc=1 rfr=False None .text      __ct__10Z2SoundMgrFv                                         */
+/* 802A9E80-802A9EE8 0068+00 r=1 e=1 z=0  None .text      __ct__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,32 +282,32 @@ asm Z2SoundMgr::Z2SoundMgr() {
 
 
 /* ############################################################################################## */
-/* 8039B9C0-8039B9D0 0010+00 rc=1 efc=0 rfr=False None .rodata    cResetFilterTable                                            */
+/* 8039B9C0-8039B9D0 0010+00 r=1 e=0 z=0  None .rodata    cResetFilterTable                                            */
 SECTION_RODATA static u8 const cResetFilterTable[16] = {
 	0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B9D0-8039B9F0 001D+03 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039B9D0-8039B9F0 001D+03 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039B9D0 = "Unknown Sound-Type id :%08x\n";
+SECTION_DEAD char const* const stringBase_8039B9D0 = "Unknown Sound-Type id :%08x\n";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039B9ED = "\0\0";
 #pragma pop
 
-/* 80455840-80455844 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3904                                                        */
+/* 80455840-80455844 0004+00 r=1 e=0 z=0  None .sdata2    @3904                                                        */
 SECTION_SDATA2 static f32 Z2SoundMgr__lit_3904 = 3.0f / 10.0f;
 
-/* 80455844-80455848 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3905                                                        */
+/* 80455844-80455848 0004+00 r=3 e=0 z=0  None .sdata2    @3905                                                        */
 SECTION_SDATA2 static u8 Z2SoundMgr__lit_3905[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455848-80455850 0008+00 rc=2 efc=0 rfr=False None .sdata2    @3909                                                        */
+/* 80455848-80455850 0008+00 r=2 e=0 z=0  None .sdata2    @3909                                                        */
 SECTION_SDATA2 static f64 Z2SoundMgr__lit_3909 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802A9EE8-802AA1B0 02C8+00 rc=1 efc=0 rfr=False None .text      startSound__10Z2SoundMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802A9EE8-802AA1B0 02C8+00 r=1 e=0 z=0  None .text      startSound__10Z2SoundMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,7 +318,7 @@ asm void Z2SoundMgr::startSound(JAISoundID param_0, JAISoundHandle* param_1, JGe
 #pragma pop
 
 
-/* 802AA1B0-802AA270 00C0+00 rc=2 efc=0 rfr=False None .text      calc__10Z2SoundMgrFv                                         */
+/* 802AA1B0-802AA270 00C0+00 r=2 e=0 z=0  None .text      calc__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,7 +329,7 @@ asm void Z2SoundMgr::calc() {
 #pragma pop
 
 
-/* 802AA270-802AA33C 00CC+00 rc=3 efc=2 rfr=False None .text      setIIR__10Z2SoundMgrFP8JAISoundPCs                           */
+/* 802AA270-802AA33C 00CC+00 r=3 e=2 z=0  None .text      setIIR__10Z2SoundMgrFP8JAISoundPCs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,7 +340,7 @@ asm void Z2SoundMgr::setIIR(JAISound* param_0, s16 const* param_1) {
 #pragma pop
 
 
-/* 802AA33C-802AA430 00F4+00 rc=1 efc=0 rfr=False None .text      setFilterOff__10Z2SoundMgrFP8JAISound                        */
+/* 802AA33C-802AA430 00F4+00 r=1 e=0 z=0  None .text      setFilterOff__10Z2SoundMgrFP8JAISound                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,7 +351,7 @@ asm void Z2SoundMgr::setFilterOff(JAISound* param_0) {
 #pragma pop
 
 
-/* 802AA430-802AA528 00F8+00 rc=1 efc=1 rfr=False None .text      resetFilterAll__10Z2SoundMgrFv                               */
+/* 802AA430-802AA528 00F8+00 r=1 e=1 z=0  None .text      resetFilterAll__10Z2SoundMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +362,7 @@ asm void Z2SoundMgr::resetFilterAll() {
 #pragma pop
 
 
-/* 802AA528-802AA67C 0154+00 rc=2 efc=0 rfr=False None .text      mixOut__10Z2SoundMgrFv                                       */
+/* 802AA528-802AA67C 0154+00 r=2 e=0 z=0  None .text      mixOut__10Z2SoundMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,7 +373,7 @@ asm void Z2SoundMgr::mixOut() {
 #pragma pop
 
 
-/* 802AA67C-802AA6B0 0034+00 rc=1 efc=1 rfr=False None .text      framework__10Z2SoundMgrFv                                    */
+/* 802AA67C-802AA6B0 0034+00 r=1 e=1 z=0  None .text      framework__10Z2SoundMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,7 +384,7 @@ asm void Z2SoundMgr::framework() {
 #pragma pop
 
 
-/* 802AA6B0-802AA7DC 012C+00 rc=1 efc=1 rfr=False None .text      pauseAllGameSound__10Z2SoundMgrFb                            */
+/* 802AA6B0-802AA7DC 012C+00 r=1 e=1 z=0  None .text      pauseAllGameSound__10Z2SoundMgrFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,7 +395,7 @@ asm void Z2SoundMgr::pauseAllGameSound(bool param_0) {
 #pragma pop
 
 
-/* 802AA7DC-802AA84C 0070+00 rc=1 efc=1 rfr=False None .text      stopSoundID__10Z2SoundMgrF10JAISoundID                       */
+/* 802AA7DC-802AA84C 0070+00 r=1 e=1 z=0  None .text      stopSoundID__10Z2SoundMgrF10JAISoundID                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +406,7 @@ asm void Z2SoundMgr::stopSoundID(JAISoundID param_0) {
 #pragma pop
 
 
-/* 802AA84C-802AA8C8 007C+00 rc=1 efc=1 rfr=False None .text      stopSync__10Z2SoundMgrFv                                     */
+/* 802AA84C-802AA8C8 007C+00 r=1 e=1 z=0  None .text      stopSync__10Z2SoundMgrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -417,7 +417,7 @@ asm void Z2SoundMgr::stopSync() {
 #pragma pop
 
 
-/* 802AA8C8-802AA908 0040+00 rc=1 efc=0 rfr=False None .text      stop__10Z2SoundMgrFv                                         */
+/* 802AA8C8-802AA908 0040+00 r=1 e=0 z=0  None .text      stop__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,14 +429,14 @@ asm void Z2SoundMgr::stop() {
 
 
 /* ############################################################################################## */
-/* 80455850-80455858 0004+04 rc=1 efc=0 rfr=False None .sdata2    @4313                                                        */
+/* 80455850-80455858 0004+04 r=1 e=0 z=0  None .sdata2    @4313                                                        */
 SECTION_SDATA2 static f32 Z2SoundMgr__lit_4313[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 802AA908-802AA9E8 00E0+00 rc=1 efc=1 rfr=False None .text      initParams__10Z2SoundMgrFv                                   */
+/* 802AA908-802AA9E8 00E0+00 r=1 e=1 z=0  None .text      initParams__10Z2SoundMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,7 +447,7 @@ asm void Z2SoundMgr::initParams() {
 #pragma pop
 
 
-/* 802AA9E8-802AAAC4 00DC+00 rc=1 efc=1 rfr=False None .text      multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf               */
+/* 802AA9E8-802AAAC4 00DC+00 r=1 e=1 z=0  None .text      multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +458,7 @@ asm void Z2SoundMgr::multiVolumeSoundID(JAISoundID param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802AAAC4-802AAB94 00D0+00 rc=1 efc=0 rfr=False None .text      isPlayingSoundID__10Z2SoundMgrF10JAISoundID                  */
+/* 802AAAC4-802AAB94 00D0+00 r=1 e=0 z=0  None .text      isPlayingSoundID__10Z2SoundMgrF10JAISoundID                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

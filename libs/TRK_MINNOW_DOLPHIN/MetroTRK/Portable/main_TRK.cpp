@@ -31,17 +31,17 @@ extern "C" void MWTRACE(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A2BF8-803A2C08 000B+05 rc=1 efc=0 rfr=False None .rodata    @80                                                          */
+/* 803A2BF8-803A2C08 000B+05 r=1 e=0 z=0  None .rodata    @80                                                          */
 SECTION_RODATA static u8 const MetroTRK_Portable_main_TRK__lit_80[11 + 5 /* padding */] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x4D, 0x61, 0x69, 0x6E, 0x20, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8044F818-8044F820 0004+04 rc=1 efc=0 rfr=False .bss .bss       TRK_mainError                                                */
+/* 8044F818-8044F820 0004+04 r=1 e=0 z=0  .bss .bss       TRK_mainError                                                */
 static u8 TRK_mainError[4 + 4 /* padding */];
 
-/* 80371B9C-80371BF4 0058+00 rc=2 efc=2 rfr=False None .text      TRK_main                                                     */
+/* 80371B9C-80371BF4 0058+00 r=2 e=2 z=0  None .text      TRK_main                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

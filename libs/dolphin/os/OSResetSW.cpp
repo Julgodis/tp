@@ -34,28 +34,28 @@ extern "C" extern u8 data_80451634[4];
 // 
 
 /* ############################################################################################## */
-/* 804516A0-804516A4 0004+00 rc=1 efc=0 rfr=False None .sbss      ResetCallback                                                */
+/* 804516A0-804516A4 0004+00 r=1 e=0 z=0  None .sbss      ResetCallback                                                */
 static u8 ResetCallback[4];
 
-/* 804516A4-804516A8 0004+00 rc=2 efc=0 rfr=False None .sbss      Down                                                         */
+/* 804516A4-804516A8 0004+00 r=2 e=0 z=0  None .sbss      Down                                                         */
 static u8 Down[4];
 
-/* 804516A8-804516B0 0004+04 rc=2 efc=0 rfr=False None .sbss      LastState                                                    */
+/* 804516A8-804516B0 0004+04 r=2 e=0 z=0  None .sbss      LastState                                                    */
 static u8 OSResetSW__LastState[4 + 4 /* padding */];
 
-/* 804516B0-804516B4 0004+00 rc=1 efc=0 rfr=False None .sbss      HoldUp                                                       */
+/* 804516B0-804516B4 0004+00 r=1 e=0 z=0  None .sbss      HoldUp                                                       */
 static u8 HoldUp[4];
 
-/* 804516B4-804516B8 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+/* 804516B4-804516B8 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804516B4[4];
 
-/* 804516B8-804516BC 0004+00 rc=2 efc=0 rfr=False None .sbss      HoldDown                                                     */
+/* 804516B8-804516BC 0004+00 r=2 e=0 z=0  None .sbss      HoldDown                                                     */
 static u8 HoldDown[4];
 
-/* 804516BC-804516C0 0004+00 rc=2 efc=0 rfr=False None .sbss      None                                                         */
+/* 804516BC-804516C0 0004+00 r=2 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804516BC[4];
 
-/* 8033FAE4-8033FBD8 00F4+00 rc=1 efc=1 rfr=False None .text      __OSResetSWInterruptHandler                                  */
+/* 8033FAE4-8033FBD8 00F4+00 r=1 e=1 z=0  None .text      __OSResetSWInterruptHandler                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm void __OSResetSWInterruptHandler() {
 #pragma pop
 
 
-/* 8033FBD8-8033FE70 0298+00 rc=1 efc=0 rfr=False None .text      OSGetResetButtonState                                        */
+/* 8033FBD8-8033FE70 0298+00 r=1 e=0 z=0  None .text      OSGetResetButtonState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ extern "C" asm static void OSGetResetButtonState() {
 #pragma pop
 
 
-/* 8033FE70-8033FE90 0020+00 rc=1 efc=1 rfr=False None .text      OSGetResetSwitchState                                        */
+/* 8033FE70-8033FE90 0020+00 r=1 e=1 z=0  None .text      OSGetResetSwitchState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

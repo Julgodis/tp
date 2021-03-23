@@ -1,0 +1,36 @@
+lbl_80A82878:
+/* 80A82878 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80A8287C 00000004  7C 08 02 A6 */	mflr r0
+/* 80A82880 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80A82884 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80A82888 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80A8288C 00000014  88 03 0E 0A */	lbz r0, 0xe0a(r3)
+/* 80A82890 00000018  28 00 00 00 */	cmplwi r0, 0
+/* 80A82894 0000001C  40 82 00 58 */	bne lbl_80A828EC
+/* 80A82898 00000020  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
+/* 80A8289C 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80A828A0 00000028  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
+/* 80A828A4 0000002C  80 84 00 04 */	lwz r4, 4(r4)
+/* 80A828A8 00000030  38 BF 01 0C */	addi r5, r31, 0x10c
+/* 80A828AC 00000034  4B FF 98 2D */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80A828B0 00000038  80 7F 05 68 */	lwz r3, 0x568(r31)
+/* 80A828B4 0000003C  80 63 00 04 */	lwz r3, 4(r3)
+/* 80A828B8 00000040  80 63 00 84 */	lwz r3, 0x84(r3)
+/* 80A828BC 00000044  80 63 00 0C */	lwz r3, 0xc(r3)
+/* 80A828C0 00000048  38 63 03 30 */	addi r3, r3, 0x330
+/* 80A828C4 0000004C  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha /* 803DD470 */
+/* 80A828C8 00000050  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80A828CC 00000054  4B FF 98 0D */	bl PSMTXCopy
+/* 80A828D0 00000058  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
+/* 80A828D4 0000005C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80A828D8 00000060  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
+/* 80A828DC 00000064  38 84 00 24 */	addi r4, r4, 0x24
+/* 80A828E0 00000068  4B FF 97 F9 */	bl PSMTXCopy
+/* 80A828E4 0000006C  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
+/* 80A828E8 00000070  4B FF 97 F1 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+lbl_80A828EC:
+/* 80A828EC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80A828F0 00000004  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80A828F4 00000008  7C 08 03 A6 */	mtlr r0
+/* 80A828F8 0000000C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80A828FC 00000010  4E 80 00 20 */	blr 

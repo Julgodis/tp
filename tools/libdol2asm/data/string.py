@@ -125,9 +125,8 @@ class StringBase(ArbitraryData):
         for string in self.strings:
             # if the @stringBase0 is static (which it will almost always be), setup 
             # so that the sub-strings are static.
-            if self.reference_count > 0 and self.external_reference_count == 0:
-                string.reference_count = 1
-                string.external_reference_count = 0
+            if self.is_static:
+                string.reference_count.make_static()
             await string.export_declaration(exporter, builder)
 
         if self.padding > 0:

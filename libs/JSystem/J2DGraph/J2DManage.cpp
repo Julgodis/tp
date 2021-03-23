@@ -49,7 +49,7 @@ extern "C" void strcmp(); // 1
 // Declarations:
 // 
 
-/* 8030CE18-8030CE7C 0064+00 rc=4 efc=3 rfr=False None .text      get__13J2DDataManageFPCc                                     */
+/* 8030CE18-8030CE7C 0064+00 r=4 e=3 z=0  None .text      get__13J2DDataManageFPCc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ asm void J2DDataManage::get(char const* param_0) {
 #pragma pop
 
 
-/* 8030CE7C-8030CF10 0094+00 rc=1 efc=1 rfr=False None .text      get__13J2DDataManageFP14JSUInputStream                       */
+/* 8030CE7C-8030CF10 0094+00 r=1 e=1 z=0  None .text      get__13J2DDataManageFP14JSUInputStream                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void J2DDataManage::get(JSUInputStream* param_0) {
 #pragma pop
 
 
-/* 8030CF10-8030CF44 0034+00 rc=3 efc=2 rfr=False None .text      getResReference__15J2DResReferenceCFUs                       */
+/* 8030CF10-8030CF44 0034+00 r=3 e=2 z=0  None .text      getResReference__15J2DResReferenceCFUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,10 +83,10 @@ asm void J2DResReference::getResReference(u16 param_0) const {
 
 
 /* ############################################################################################## */
-/* 804349C0-80434AC8 0101+07 rc=1 efc=0 rfr=False None .bss       p_name$494                                                   */
+/* 804349C0-80434AC8 0101+07 r=1 e=0 z=0  None .bss       p_name$494                                                   */
 static u8 data_804349C0[257 + 7 /* padding */];
 
-/* 8030CF44-8030D098 0154+00 rc=2 efc=2 rfr=False None .text      getName__15J2DResReferenceCFUs                               */
+/* 8030CF44-8030D098 0154+00 r=2 e=2 z=0  None .text      getName__15J2DResReferenceCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

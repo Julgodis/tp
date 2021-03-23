@@ -42,16 +42,16 @@ struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-struct J3DTexMtxAnm {
-};
-
-struct J3DTexNoAnm {
+struct J3DTevKColorAnm {
 };
 
 struct J3DMatColorAnm {
 };
 
-struct J3DTevKColorAnm {
+struct J3DTexNoAnm {
+};
+
+struct J3DTexMtxAnm {
 };
 
 struct J3DTevColorAnm {
@@ -113,7 +113,7 @@ extern "C" extern void* __vt__11J3DTexNoAnm[3];
 // Declarations:
 // 
 
-/* 8032F5A8-8032F5D0 0028+00 rc=1 efc=1 rfr=False None .text      clear__16J3DMaterialTableFv                                  */
+/* 8032F5A8-8032F5D0 0028+00 r=1 e=1 z=0  None .text      clear__16J3DMaterialTableFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm void J3DMaterialTable::clear() {
 
 
 /* ############################################################################################## */
-/* 803CEE80-803CEE90 000C+04 rc=2 efc=0 rfr=False None .data      __vt__16J3DMaterialTable                                     */
+/* 803CEE80-803CEE90 000C+04 r=2 e=0 z=0  None .data      __vt__16J3DMaterialTable                                     */
 SECTION_DATA static void* __vt__16J3DMaterialTable[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -134,7 +134,7 @@ SECTION_DATA static void* __vt__16J3DMaterialTable[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8032F5D0-8032F604 0034+00 rc=2 efc=2 rfr=False None .text      __ct__16J3DMaterialTableFv                                   */
+/* 8032F5D0-8032F604 0034+00 r=2 e=2 z=0  None .text      __ct__16J3DMaterialTableFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ asm J3DMaterialTable::J3DMaterialTable() {
 #pragma pop
 
 
-/* 8032F604-8032F64C 0048+00 rc=2 efc=1 rfr=False None .text      __dt__16J3DMaterialTableFv                                   */
+/* 8032F604-8032F64C 0048+00 r=2 e=1 z=0  None .text      __dt__16J3DMaterialTableFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ asm J3DMaterialTable::~J3DMaterialTable() {
 #pragma pop
 
 
-/* 8032F64C-8032F6F8 00AC+00 rc=1 efc=1 rfr=False None .text      removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor    */
+/* 8032F64C-8032F6F8 00AC+00 r=6 e=1 z=5  None .text      removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ asm void J3DMaterialTable::removeMatColorAnimator(J3DAnmColor* param_0) {
 #pragma pop
 
 
-/* 8032F6F8-8032F7B4 00BC+00 rc=5 efc=5 rfr=False None .text      removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern  */
+/* 8032F6F8-8032F7B4 00BC+00 r=15 e=5 z=10  None .text      removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +178,7 @@ asm void J3DMaterialTable::removeTexNoAnimator(J3DAnmTexPattern* param_0) {
 #pragma pop
 
 
-/* 8032F7B4-8032F880 00CC+00 rc=4 efc=4 rfr=False None .text      removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032F7B4-8032F880 00CC+00 r=30 e=4 z=26  None .text      removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void J3DMaterialTable::removeTexMtxAnimator(J3DAnmTextureSRTKey* param_0) {
 #pragma pop
 
 
-/* 8032F880-8032F9C0 0140+00 rc=7 efc=7 rfr=False None .text      removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey  */
+/* 8032F880-8032F9C0 0140+00 r=31 e=7 z=24  None .text      removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ asm void J3DMaterialTable::removeTevRegAnimator(J3DAnmTevRegKey* param_0) {
 #pragma pop
 
 
-/* 8032F9C0-8032FAF4 0134+00 rc=1 efc=0 rfr=False None .text      createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032F9C0-8032FAF4 0134+00 r=1 e=0 z=0  None .text      createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ asm void J3DMaterialTable::createTexMtxForAnimator(J3DAnmTextureSRTKey* param_0)
 #pragma pop
 
 
-/* 8032FAF4-8032FBC8 00D4+00 rc=1 efc=1 rfr=False None .text      entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor     */
+/* 8032FAF4-8032FBC8 00D4+00 r=1 e=1 z=0  None .text      entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +222,7 @@ asm void J3DMaterialTable::entryMatColorAnimator(J3DAnmColor* param_0) {
 #pragma pop
 
 
-/* 8032FBC8-8032FCC4 00FC+00 rc=7 efc=7 rfr=False None .text      entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern   */
+/* 8032FBC8-8032FCC4 00FC+00 r=8 e=7 z=1  None .text      entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +233,7 @@ asm void J3DMaterialTable::entryTexNoAnimator(J3DAnmTexPattern* param_0) {
 #pragma pop
 
 
-/* 8032FCC4-8032FE70 01AC+00 rc=14 efc=14 rfr=False None .text      entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032FCC4-8032FE70 01AC+00 r=20 e=14 z=6  None .text      entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +244,7 @@ asm void J3DMaterialTable::entryTexMtxAnimator(J3DAnmTextureSRTKey* param_0) {
 #pragma pop
 
 
-/* 8032FE70-8032FFEC 017C+00 rc=10 efc=10 rfr=False None .text      entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey   */
+/* 8032FE70-8032FFEC 017C+00 r=14 e=10 z=4  None .text      entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

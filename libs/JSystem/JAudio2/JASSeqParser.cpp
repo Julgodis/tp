@@ -345,7 +345,7 @@ extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80293CF4-80293DC4 00D0+00 rc=3 efc=0 rfr=False None .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
+/* 80293CF4-80293DC4 00D0+00 r=3 e=0 z=0  None .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,399 +357,399 @@ asm void JASSeqParser::conditionCheck(JASTrack* param_0, JASSeqParser::BranchCon
 
 
 /* ############################################################################################## */
-/* 803C5BE0-803C5BEC 000C+00 rc=1 efc=0 rfr=False None .data      @486                                                         */
+/* 803C5BE0-803C5BEC 000C+00 r=1 e=0 z=0  None .data      @486                                                         */
 SECTION_DATA static void* JASSeqParser__lit_486[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNoteOn__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BEC-803C5BF8 000C+00 rc=0 efc=0 rfr=False None .data      @487                                                         */
+/* 803C5BEC-803C5BF8 000C+00 r=0 e=0 z=0  None .data      @487                                                         */
 SECTION_DATA void* JASSeqParser__lit_487[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNoteOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BF8-803C5C04 000C+00 rc=0 efc=0 rfr=False None .data      @488                                                         */
+/* 803C5BF8-803C5C04 000C+00 r=0 e=0 z=0  None .data      @488                                                         */
 SECTION_DATA void* JASSeqParser__lit_488[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C04-803C5C10 000C+00 rc=0 efc=0 rfr=False None .data      @489                                                         */
+/* 803C5C04-803C5C10 000C+00 r=0 e=0 z=0  None .data      @489                                                         */
 SECTION_DATA void* JASSeqParser__lit_489[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetLastNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C10-803C5C1C 000C+00 rc=0 efc=0 rfr=False None .data      @490                                                         */
+/* 803C5C10-803C5C1C 000C+00 r=0 e=0 z=0  None .data      @490                                                         */
 SECTION_DATA void* JASSeqParser__lit_490[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C1C-803C5C28 000C+00 rc=0 efc=0 rfr=False None .data      @491                                                         */
+/* 803C5C1C-803C5C28 000C+00 r=0 e=0 z=0  None .data      @491                                                         */
 SECTION_DATA void* JASSeqParser__lit_491[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C28-803C5C34 000C+00 rc=0 efc=0 rfr=False None .data      @492                                                         */
+/* 803C5C28-803C5C34 000C+00 r=0 e=0 z=0  None .data      @492                                                         */
 SECTION_DATA void* JASSeqParser__lit_492[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamEI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C34-803C5C40 000C+00 rc=0 efc=0 rfr=False None .data      @493                                                         */
+/* 803C5C34-803C5C40 000C+00 r=0 e=0 z=0  None .data      @493                                                         */
 SECTION_DATA void* JASSeqParser__lit_493[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamII__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C40-803C5C4C 000C+00 rc=0 efc=0 rfr=False None .data      @494                                                         */
+/* 803C5C40-803C5C4C 000C+00 r=0 e=0 z=0  None .data      @494                                                         */
 SECTION_DATA void* lit_494[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdOpenTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C4C-803C5C58 000C+00 rc=0 efc=0 rfr=False None .data      @495                                                         */
+/* 803C5C4C-803C5C58 000C+00 r=0 e=0 z=0  None .data      @495                                                         */
 SECTION_DATA void* lit_495[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCloseTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C58-803C5C64 000C+00 rc=0 efc=0 rfr=False None .data      @496                                                         */
+/* 803C5C58-803C5C64 000C+00 r=0 e=0 z=0  None .data      @496                                                         */
 SECTION_DATA void* lit_496[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCall__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C64-803C5C70 000C+00 rc=0 efc=0 rfr=False None .data      @497                                                         */
+/* 803C5C64-803C5C70 000C+00 r=0 e=0 z=0  None .data      @497                                                         */
 SECTION_DATA void* lit_497[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCallF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C70-803C5C7C 000C+00 rc=0 efc=0 rfr=False None .data      @498                                                         */
+/* 803C5C70-803C5C7C 000C+00 r=0 e=0 z=0  None .data      @498                                                         */
 SECTION_DATA void* JASSeqParser__lit_498[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C7C-803C5C88 000C+00 rc=0 efc=0 rfr=False None .data      @499                                                         */
+/* 803C5C7C-803C5C88 000C+00 r=0 e=0 z=0  None .data      @499                                                         */
 SECTION_DATA void* JASSeqParser__lit_499[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRetF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C88-803C5C94 000C+00 rc=0 efc=0 rfr=False None .data      @500                                                         */
+/* 803C5C88-803C5C94 000C+00 r=0 e=0 z=0  None .data      @500                                                         */
 SECTION_DATA void* lit_500[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmp__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C94-803C5CA0 000C+00 rc=0 efc=0 rfr=False None .data      @501                                                         */
+/* 803C5C94-803C5CA0 000C+00 r=0 e=0 z=0  None .data      @501                                                         */
 SECTION_DATA void* lit_501[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmpF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CA0-803C5CAC 000C+00 rc=0 efc=0 rfr=False None .data      @502                                                         */
+/* 803C5CA0-803C5CAC 000C+00 r=0 e=0 z=0  None .data      @502                                                         */
 SECTION_DATA void* lit_502[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmpTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CAC-803C5CB8 000C+00 rc=0 efc=0 rfr=False None .data      @503                                                         */
+/* 803C5CAC-803C5CB8 000C+00 r=0 e=0 z=0  None .data      @503                                                         */
 SECTION_DATA void* JASSeqParser__lit_503[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCallTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CB8-803C5CC4 000C+00 rc=0 efc=0 rfr=False None .data      @504                                                         */
+/* 803C5CB8-803C5CC4 000C+00 r=0 e=0 z=0  None .data      @504                                                         */
 SECTION_DATA void* JASSeqParser__lit_504[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdLoopS__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CC4-803C5CD0 000C+00 rc=0 efc=0 rfr=False None .data      @505                                                         */
+/* 803C5CC4-803C5CD0 000C+00 r=0 e=0 z=0  None .data      @505                                                         */
 SECTION_DATA void* JASSeqParser__lit_505[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdLoopE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CD0-803C5CDC 000C+00 rc=0 efc=0 rfr=False None .data      @506                                                         */
+/* 803C5CD0-803C5CDC 000C+00 r=0 e=0 z=0  None .data      @506                                                         */
 SECTION_DATA void* JASSeqParser__lit_506[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CDC-803C5CE8 000C+00 rc=0 efc=0 rfr=False None .data      @507                                                         */
+/* 803C5CDC-803C5CE8 000C+00 r=0 e=0 z=0  None .data      @507                                                         */
 SECTION_DATA void* JASSeqParser__lit_507[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CE8-803C5CF4 000C+00 rc=0 efc=0 rfr=False None .data      @508                                                         */
+/* 803C5CE8-803C5CF4 000C+00 r=0 e=0 z=0  None .data      @508                                                         */
 SECTION_DATA void* JASSeqParser__lit_508[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CF4-803C5D00 000C+00 rc=0 efc=0 rfr=False None .data      @509                                                         */
+/* 803C5CF4-803C5D00 000C+00 r=0 e=0 z=0  None .data      @509                                                         */
 SECTION_DATA void* JASSeqParser__lit_509[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D00-803C5D0C 000C+00 rc=0 efc=0 rfr=False None .data      @510                                                         */
+/* 803C5D00-803C5D0C 000C+00 r=0 e=0 z=0  None .data      @510                                                         */
 SECTION_DATA void* JASSeqParser__lit_510[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParentWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D0C-803C5D18 000C+00 rc=0 efc=0 rfr=False None .data      @511                                                         */
+/* 803C5D0C-803C5D18 000C+00 r=0 e=0 z=0  None .data      @511                                                         */
 SECTION_DATA void* JASSeqParser__lit_511[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdChildWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D18-803C5D24 000C+00 rc=0 efc=0 rfr=False None .data      @512                                                         */
+/* 803C5D18-803C5D24 000C+00 r=0 e=0 z=0  None .data      @512                                                         */
 SECTION_DATA void* JASSeqParser__lit_512[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParentReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D24-803C5D30 000C+00 rc=0 efc=0 rfr=False None .data      @513                                                         */
+/* 803C5D24-803C5D30 000C+00 r=0 e=0 z=0  None .data      @513                                                         */
 SECTION_DATA void* lit_513[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdChildReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D30-803C5D3C 000C+00 rc=0 efc=0 rfr=False None .data      @514                                                         */
+/* 803C5D30-803C5D3C 000C+00 r=0 e=0 z=0  None .data      @514                                                         */
 SECTION_DATA void* JASSeqParser__lit_514[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D3C-803C5D48 000C+00 rc=0 efc=0 rfr=False None .data      @515                                                         */
+/* 803C5D3C-803C5D48 000C+00 r=0 e=0 z=0  None .data      @515                                                         */
 SECTION_DATA void* lit_515[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D48-803C5D54 000C+00 rc=0 efc=0 rfr=False None .data      @516                                                         */
+/* 803C5D48-803C5D54 000C+00 r=0 e=0 z=0  None .data      @516                                                         */
 SECTION_DATA void* lit_516[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D54-803C5D60 000C+00 rc=0 efc=0 rfr=False None .data      @517                                                         */
+/* 803C5D54-803C5D60 000C+00 r=0 e=0 z=0  None .data      @517                                                         */
 SECTION_DATA void* lit_517[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegUni__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D60-803C5D6C 000C+00 rc=0 efc=0 rfr=False None .data      @518                                                         */
+/* 803C5D60-803C5D6C 000C+00 r=0 e=0 z=0  None .data      @518                                                         */
 SECTION_DATA void* lit_518[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D6C-803C5D78 000C+00 rc=0 efc=0 rfr=False None .data      @519                                                         */
+/* 803C5D6C-803C5D78 000C+00 r=0 e=0 z=0  None .data      @519                                                         */
 SECTION_DATA void* lit_519[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdTempo__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D78-803C5D84 000C+00 rc=0 efc=0 rfr=False None .data      @520                                                         */
+/* 803C5D78-803C5D84 000C+00 r=0 e=0 z=0  None .data      @520                                                         */
 SECTION_DATA void* lit_520[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBankPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D84-803C5D90 000C+00 rc=0 efc=0 rfr=False None .data      @521                                                         */
+/* 803C5D84-803C5D90 000C+00 r=0 e=0 z=0  None .data      @521                                                         */
 SECTION_DATA void* lit_521[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBank__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D90-803C5D9C 000C+00 rc=0 efc=0 rfr=False None .data      @522                                                         */
+/* 803C5D90-803C5D9C 000C+00 r=0 e=0 z=0  None .data      @522                                                         */
 SECTION_DATA void* JASSeqParser__lit_522[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D9C-803C5DA8 000C+00 rc=0 efc=0 rfr=False None .data      @523                                                         */
+/* 803C5D9C-803C5DA8 000C+00 r=0 e=0 z=0  None .data      @523                                                         */
 SECTION_DATA void* lit_523[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DA8-803C5DB4 000C+00 rc=0 efc=0 rfr=False None .data      @524                                                         */
+/* 803C5DA8-803C5DB4 000C+00 r=0 e=0 z=0  None .data      @524                                                         */
 SECTION_DATA void* lit_524[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdEnvSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DB4-803C5DC0 000C+00 rc=0 efc=0 rfr=False None .data      @525                                                         */
+/* 803C5DB4-803C5DC0 000C+00 r=0 e=0 z=0  None .data      @525                                                         */
 SECTION_DATA void* JASSeqParser__lit_525[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DC0-803C5DCC 000C+00 rc=0 efc=0 rfr=False None .data      @526                                                         */
+/* 803C5DC0-803C5DCC 000C+00 r=0 e=0 z=0  None .data      @526                                                         */
 SECTION_DATA void* JASSeqParser__lit_526[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBusConnect__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DCC-803C5DD8 000C+00 rc=0 efc=0 rfr=False None .data      @527                                                         */
+/* 803C5DCC-803C5DD8 000C+00 r=0 e=0 z=0  None .data      @527                                                         */
 SECTION_DATA void* lit_527[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DD8-803C5DE4 000C+00 rc=0 efc=0 rfr=False None .data      @528                                                         */
+/* 803C5DD8-803C5DE4 000C+00 r=0 e=0 z=0  None .data      @528                                                         */
 SECTION_DATA void* lit_528[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DE4-803C5DF0 000C+00 rc=0 efc=0 rfr=False None .data      @529                                                         */
+/* 803C5DE4-803C5DF0 000C+00 r=0 e=0 z=0  None .data      @529                                                         */
 SECTION_DATA void* lit_529[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdFIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DF0-803C5DFC 000C+00 rc=0 efc=0 rfr=False None .data      @530                                                         */
+/* 803C5DF0-803C5DFC 000C+00 r=0 e=0 z=0  None .data      @530                                                         */
 SECTION_DATA void* lit_530[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWait__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DFC-803C5E08 000C+00 rc=0 efc=0 rfr=False None .data      @531                                                         */
+/* 803C5DFC-803C5E08 000C+00 r=0 e=0 z=0  None .data      @531                                                         */
 SECTION_DATA void* JASSeqParser__lit_531[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWaitByte__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E08-803C5E14 000C+00 rc=0 efc=0 rfr=False None .data      @532                                                         */
+/* 803C5E08-803C5E14 000C+00 r=0 e=0 z=0  None .data      @532                                                         */
 SECTION_DATA void* lit_532[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetIntTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E14-803C5E20 000C+00 rc=0 efc=0 rfr=False None .data      @533                                                         */
+/* 803C5E14-803C5E20 000C+00 r=0 e=0 z=0  None .data      @533                                                         */
 SECTION_DATA void* JASSeqParser__lit_533[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E20-803C5E2C 000C+00 rc=0 efc=0 rfr=False None .data      @534                                                         */
+/* 803C5E20-803C5E2C 000C+00 r=0 e=0 z=0  None .data      @534                                                         */
 SECTION_DATA void* lit_534[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E2C-803C5E38 000C+00 rc=0 efc=0 rfr=False None .data      @535                                                         */
+/* 803C5E2C-803C5E38 000C+00 r=0 e=0 z=0  None .data      @535                                                         */
 SECTION_DATA void* JASSeqParser__lit_535[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRetI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E38-803C5E44 000C+00 rc=0 efc=0 rfr=False None .data      @536                                                         */
+/* 803C5E38-803C5E44 000C+00 r=0 e=0 z=0  None .data      @536                                                         */
 SECTION_DATA void* JASSeqParser__lit_536[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdClrI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E44-803C5E50 000C+00 rc=0 efc=0 rfr=False None .data      @537                                                         */
+/* 803C5E44-803C5E50 000C+00 r=0 e=0 z=0  None .data      @537                                                         */
 SECTION_DATA void* JASSeqParser__lit_537[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIntTimer__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E50-803C5E5C 000C+00 rc=0 efc=0 rfr=False None .data      @538                                                         */
+/* 803C5E50-803C5E5C 000C+00 r=0 e=0 z=0  None .data      @538                                                         */
 SECTION_DATA void* JASSeqParser__lit_538[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSyncCPU__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E5C-803C5E68 000C+00 rc=0 efc=0 rfr=False None .data      @539                                                         */
+/* 803C5E5C-803C5E68 000C+00 r=0 e=0 z=0  None .data      @539                                                         */
 SECTION_DATA void* lit_539[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdPrintf__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E68-803C5E74 000C+00 rc=0 efc=0 rfr=False None .data      @540                                                         */
+/* 803C5E68-803C5E74 000C+00 r=0 e=0 z=0  None .data      @540                                                         */
 SECTION_DATA void* lit_540[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNop__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E74-803C5E80 000C+00 rc=0 efc=0 rfr=False None .data      @541                                                         */
+/* 803C5E74-803C5E80 000C+00 r=0 e=0 z=0  None .data      @541                                                         */
 SECTION_DATA void* lit_541[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdFinish__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E80-803C6480 0600+00 rc=1 efc=0 rfr=False None .data      sCmdInfo__12JASSeqParser                                     */
+/* 803C5E80-803C6480 0600+00 r=1 e=0 z=0  None .data      sCmdInfo__12JASSeqParser                                     */
 SECTION_DATA static u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -849,14 +849,14 @@ SECTION_DATA static u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C6480-803C648C 000C+00 rc=0 efc=0 rfr=False None .data      @542                                                         */
+/* 803C6480-803C648C 000C+00 r=0 e=0 z=0  None .data      @542                                                         */
 SECTION_DATA void* lit_542[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdDump__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C648C-803C747C 0FF0+00 rc=1 efc=0 rfr=False None .data      sExtCmdInfo__12JASSeqParser                                  */
+/* 803C648C-803C747C 0FF0+00 r=1 e=0 z=0  None .data      sExtCmdInfo__12JASSeqParser                                  */
 SECTION_DATA static u8 sExtCmdInfo__12JASSeqParser[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1115,7 +1115,7 @@ SECTION_DATA static u8 sExtCmdInfo__12JASSeqParser[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C747C-803C7550 00D4+00 rc=1 efc=0 rfr=False None .data      @632                                                         */
+/* 803C747C-803C7550 00D4+00 r=1 e=0 z=0  None .data      @632                                                         */
 SECTION_DATA static void* JASSeqParser__lit_632[53] = {
 	/* 0    */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
 	/* 1    */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
@@ -1172,29 +1172,29 @@ SECTION_DATA static void* JASSeqParser__lit_632[53] = {
 	/* 52   */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x1E8),
 };
 
-/* 804555D8-804555DC 0004+00 rc=6 efc=0 rfr=False None .sdata2    @627                                                         */
+/* 804555D8-804555DC 0004+00 r=6 e=0 z=0  None .sdata2    @627                                                         */
 SECTION_SDATA2 static f32 JASSeqParser__lit_627 = 32767.0f;
 
-/* 804555DC-804555E0 0004+00 rc=2 efc=0 rfr=False None .sdata2    @628                                                         */
+/* 804555DC-804555E0 0004+00 r=2 e=0 z=0  None .sdata2    @628                                                         */
 SECTION_SDATA2 static f32 JASSeqParser__lit_628 = 1524.0f;
 
-/* 804555E0-804555E4 0004+00 rc=2 efc=0 rfr=False None .sdata2    @629                                                         */
+/* 804555E0-804555E4 0004+00 r=2 e=0 z=0  None .sdata2    @629                                                         */
 SECTION_SDATA2 static f32 lit_629 = 12192.0f;
 
-/* 804555E4-804555E8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @630                                                         */
+/* 804555E4-804555E8 0004+00 r=1 e=0 z=0  None .sdata2    @630                                                         */
 SECTION_SDATA2 static f32 lit_630 = 0.00390625f;
 
-/* 804555E8-804555F0 0004+04 rc=1 efc=0 rfr=False None .sdata2    @631                                                         */
+/* 804555E8-804555F0 0004+04 r=1 e=0 z=0  None .sdata2    @631                                                         */
 SECTION_SDATA2 static f32 lit_631[1 + 1 /* padding */] = {
 	0.015625f,
 	/* padding */
 	0.0f,
 };
 
-/* 804555F0-804555F8 0008+00 rc=3 efc=0 rfr=False None .sdata2    @634                                                         */
+/* 804555F0-804555F8 0008+00 r=3 e=0 z=0  None .sdata2    @634                                                         */
 SECTION_SDATA2 static f64 lit_634 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80293DC4-80293FC8 0204+00 rc=8 efc=0 rfr=False None .text      writeReg__12JASSeqParserFP8JASTrackUlUl                      */
+/* 80293DC4-80293FC8 0204+00 r=8 e=0 z=0  None .text      writeReg__12JASSeqParserFP8JASTrackUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1206,7 +1206,7 @@ asm void JASSeqParser::writeReg(JASTrack* param_0, u32 param_1, u32 param_2) {
 
 
 /* ############################################################################################## */
-/* 803C7550-803C7624 00D4+00 rc=1 efc=0 rfr=False None .data      @720                                                         */
+/* 803C7550-803C7624 00D4+00 r=1 e=0 z=0  None .data      @720                                                         */
 SECTION_DATA static void* lit_720[53] = {
 	/* 0    */ (void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x4C),
 	/* 1    */ (void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x4C),
@@ -1263,13 +1263,13 @@ SECTION_DATA static void* lit_720[53] = {
 	/* 52   */ (void*)(((char*)readReg__12JASSeqParserCFP8JASTrackUl)+0x1AC),
 };
 
-/* 804555F8-804555FC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @718                                                         */
+/* 804555F8-804555FC 0004+00 r=1 e=0 z=0  None .sdata2    @718                                                         */
 SECTION_SDATA2 static f32 lit_718 = 256.0f;
 
-/* 804555FC-80455600 0004+00 rc=1 efc=0 rfr=False None .sdata2    @719                                                         */
+/* 804555FC-80455600 0004+00 r=1 e=0 z=0  None .sdata2    @719                                                         */
 SECTION_SDATA2 static f32 lit_719 = 64.0f;
 
-/* 80293FC8-80294188 01C0+00 rc=7 efc=0 rfr=False None .text      readReg__12JASSeqParserCFP8JASTrackUl                        */
+/* 80293FC8-80294188 01C0+00 r=7 e=0 z=0  None .text      readReg__12JASSeqParserCFP8JASTrackUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,7 +1280,7 @@ asm void JASSeqParser::readReg(JASTrack* param_0, u32 param_1) const {
 #pragma pop
 
 
-/* 80294188-802941F0 0068+00 rc=1 efc=0 rfr=False None .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294188-802941F0 0068+00 r=1 e=0 z=0  None .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1291,7 +1291,7 @@ asm void JASSeqParser::cmdOpenTrack(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802941F0-8029421C 002C+00 rc=1 efc=0 rfr=False None .text      cmdCloseTrack__12JASSeqParserFP8JASTrackPUl                  */
+/* 802941F0-8029421C 002C+00 r=1 e=0 z=0  None .text      cmdCloseTrack__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1302,7 +1302,7 @@ asm void JASSeqParser::cmdCloseTrack(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029421C-80294248 002C+00 rc=1 efc=0 rfr=False None .text      cmdCall__12JASSeqParserFP8JASTrackPUl                        */
+/* 8029421C-80294248 002C+00 r=1 e=0 z=0  None .text      cmdCall__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1313,7 +1313,7 @@ asm void JASSeqParser::cmdCall(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294248-8029429C 0054+00 rc=1 efc=0 rfr=False None .text      cmdCallF__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294248-8029429C 0054+00 r=1 e=0 z=0  None .text      cmdCallF__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1324,7 +1324,7 @@ asm void JASSeqParser::cmdCallF(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029429C-802942D4 0038+00 rc=1 efc=0 rfr=False None .text      cmdRet__12JASSeqParserFP8JASTrackPUl                         */
+/* 8029429C-802942D4 0038+00 r=1 e=0 z=0  None .text      cmdRet__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1335,7 +1335,7 @@ asm void JASSeqParser::cmdRet(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802942D4-80294328 0054+00 rc=1 efc=0 rfr=False None .text      cmdRetF__12JASSeqParserFP8JASTrackPUl                        */
+/* 802942D4-80294328 0054+00 r=1 e=0 z=0  None .text      cmdRetF__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1346,7 +1346,7 @@ asm void JASSeqParser::cmdRetF(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294328-80294340 0018+00 rc=1 efc=0 rfr=False None .text      cmdJmp__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294328-80294340 0018+00 r=1 e=0 z=0  None .text      cmdJmp__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1357,7 +1357,7 @@ asm void JASSeqParser::cmdJmp(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294340-80294398 0058+00 rc=1 efc=0 rfr=False None .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294340-80294398 0058+00 r=1 e=0 z=0  None .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1368,7 +1368,7 @@ asm void JASSeqParser::cmdJmpF(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294398-802943CC 0034+00 rc=1 efc=0 rfr=False None .text      cmdJmpTable__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294398-802943CC 0034+00 r=1 e=0 z=0  None .text      cmdJmpTable__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1379,7 +1379,7 @@ asm void JASSeqParser::cmdJmpTable(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802943CC-8029441C 0050+00 rc=1 efc=0 rfr=False None .text      cmdCallTable__12JASSeqParserFP8JASTrackPUl                   */
+/* 802943CC-8029441C 0050+00 r=1 e=0 z=0  None .text      cmdCallTable__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1390,7 +1390,7 @@ asm void JASSeqParser::cmdCallTable(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029441C-80294448 002C+00 rc=1 efc=0 rfr=False None .text      cmdLoopS__12JASSeqParserFP8JASTrackPUl                       */
+/* 8029441C-80294448 002C+00 r=1 e=0 z=0  None .text      cmdLoopS__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1401,7 +1401,7 @@ asm void JASSeqParser::cmdLoopS(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294448-80294470 0028+00 rc=1 efc=0 rfr=False None .text      cmdLoopE__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294448-80294470 0028+00 r=1 e=0 z=0  None .text      cmdLoopE__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1412,7 +1412,7 @@ asm void JASSeqParser::cmdLoopE(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294470-802944B4 0044+00 rc=1 efc=0 rfr=False None .text      cmdNote__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294470-802944B4 0044+00 r=1 e=0 z=0  None .text      cmdNote__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1423,7 +1423,7 @@ asm void JASSeqParser::cmdNote(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802944B4-802944F4 0040+00 rc=1 efc=0 rfr=False None .text      cmdNoteOn__12JASSeqParserFP8JASTrackPUl                      */
+/* 802944B4-802944F4 0040+00 r=1 e=0 z=0  None .text      cmdNoteOn__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1434,7 +1434,7 @@ asm void JASSeqParser::cmdNoteOn(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802944F4-80294528 0034+00 rc=1 efc=0 rfr=False None .text      cmdNoteOff__12JASSeqParserFP8JASTrackPUl                     */
+/* 802944F4-80294528 0034+00 r=1 e=0 z=0  None .text      cmdNoteOff__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1445,7 +1445,7 @@ asm void JASSeqParser::cmdNoteOff(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294528-80294588 0060+00 rc=1 efc=0 rfr=False None .text      cmdReadPort__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294528-80294588 0060+00 r=1 e=0 z=0  None .text      cmdReadPort__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1456,7 +1456,7 @@ asm void JASSeqParser::cmdReadPort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294588-802945BC 0034+00 rc=1 efc=0 rfr=False None .text      cmdWritePort__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294588-802945BC 0034+00 r=1 e=0 z=0  None .text      cmdWritePort__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1467,7 +1467,7 @@ asm void JASSeqParser::cmdWritePort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802945BC-802945F8 003C+00 rc=1 efc=0 rfr=False None .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl             */
+/* 802945BC-802945F8 003C+00 r=1 e=0 z=0  None .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1478,7 +1478,7 @@ asm void JASSeqParser::cmdParentWritePort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802945F8-80294644 004C+00 rc=1 efc=0 rfr=False None .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl              */
+/* 802945F8-80294644 004C+00 r=1 e=0 z=0  None .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1489,7 +1489,7 @@ asm void JASSeqParser::cmdChildWritePort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294644-802946AC 0068+00 rc=1 efc=0 rfr=False None .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl              */
+/* 80294644-802946AC 0068+00 r=1 e=0 z=0  None .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1500,7 +1500,7 @@ asm void JASSeqParser::cmdParentReadPort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802946AC-80294724 0078+00 rc=1 efc=0 rfr=False None .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl               */
+/* 802946AC-80294724 0078+00 r=1 e=0 z=0  None .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1511,7 +1511,7 @@ asm void JASSeqParser::cmdChildReadPort(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294724-80294770 004C+00 rc=1 efc=0 rfr=False None .text      cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl             */
+/* 80294724-80294770 004C+00 r=1 e=0 z=0  None .text      cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1522,7 +1522,7 @@ asm void JASSeqParser::cmdCheckPortImport(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294770-802947BC 004C+00 rc=1 efc=0 rfr=False None .text      cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl             */
+/* 80294770-802947BC 004C+00 r=1 e=0 z=0  None .text      cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1533,7 +1533,7 @@ asm void JASSeqParser::cmdCheckPortExport(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802947BC-802947F4 0038+00 rc=1 efc=0 rfr=False None .text      cmdWait__12JASSeqParserFP8JASTrackPUl                        */
+/* 802947BC-802947F4 0038+00 r=1 e=0 z=0  None .text      cmdWait__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1544,7 +1544,7 @@ asm void JASSeqParser::cmdWait(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802947F4-80294804 0010+00 rc=1 efc=0 rfr=False None .text      cmdWaitByte__12JASSeqParserFP8JASTrackPUl                    */
+/* 802947F4-80294804 0010+00 r=1 e=0 z=0  None .text      cmdWaitByte__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1555,7 +1555,7 @@ asm void JASSeqParser::cmdWaitByte(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294804-8029483C 0038+00 rc=1 efc=0 rfr=False None .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl                 */
+/* 80294804-8029483C 0038+00 r=1 e=0 z=0  None .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1567,14 +1567,14 @@ asm void JASSeqParser::cmdSetLastNote(JASTrack* param_0, u32* param_1) {
 
 
 /* ############################################################################################## */
-/* 80455600-80455608 0004+04 rc=1 efc=0 rfr=False None .sdata2    @931                                                         */
+/* 80455600-80455608 0004+04 r=1 e=0 z=0  None .sdata2    @931                                                         */
 SECTION_SDATA2 static f32 JASSeqParser__lit_931[1 + 1 /* padding */] = {
 	16383.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8029483C-8029488C 0050+00 rc=1 efc=0 rfr=False None .text      cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl                 */
+/* 8029483C-8029488C 0050+00 r=1 e=0 z=0  None .text      cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1585,7 +1585,7 @@ asm void JASSeqParser::cmdEnvScaleSet(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029488C-802948C8 003C+00 rc=1 efc=0 rfr=False None .text      cmdEnvSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 8029488C-802948C8 003C+00 r=1 e=0 z=0  None .text      cmdEnvSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1596,7 +1596,7 @@ asm void JASSeqParser::cmdEnvSet(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802948C8-8029491C 0054+00 rc=1 efc=0 rfr=False None .text      cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl                  */
+/* 802948C8-8029491C 0054+00 r=1 e=0 z=0  None .text      cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1607,7 +1607,7 @@ asm void JASSeqParser::cmdSimpleADSR(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029491C-8029494C 0030+00 rc=1 efc=0 rfr=False None .text      cmdBusConnect__12JASSeqParserFP8JASTrackPUl                  */
+/* 8029491C-8029494C 0030+00 r=1 e=0 z=0  None .text      cmdBusConnect__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1618,7 +1618,7 @@ asm void JASSeqParser::cmdBusConnect(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029494C-8029495C 0010+00 rc=1 efc=0 rfr=False None .text      cmdSetIntTable__12JASSeqParserFP8JASTrackPUl                 */
+/* 8029494C-8029495C 0010+00 r=1 e=0 z=0  None .text      cmdSetIntTable__12JASSeqParserFP8JASTrackPUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1629,7 +1629,7 @@ asm void JASSeqParser::cmdSetIntTable(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029495C-80294988 002C+00 rc=1 efc=0 rfr=False None .text      cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl                */
+/* 8029495C-80294988 002C+00 r=1 e=0 z=0  None .text      cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1640,7 +1640,7 @@ asm void JASSeqParser::cmdSetInterrupt(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294988-802949B4 002C+00 rc=1 efc=0 rfr=False None .text      cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl                */
+/* 80294988-802949B4 002C+00 r=1 e=0 z=0  None .text      cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1651,7 +1651,7 @@ asm void JASSeqParser::cmdDisInterrupt(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802949B4-802949E4 0030+00 rc=1 efc=0 rfr=False None .text      cmdClrI__12JASSeqParserFP8JASTrackPUl                        */
+/* 802949B4-802949E4 0030+00 r=1 e=0 z=0  None .text      cmdClrI__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1662,7 +1662,7 @@ asm void JASSeqParser::cmdClrI(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802949E4-80294A20 003C+00 rc=1 efc=0 rfr=False None .text      cmdRetI__12JASSeqParserFP8JASTrackPUl                        */
+/* 802949E4-80294A20 003C+00 r=1 e=0 z=0  None .text      cmdRetI__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1673,7 +1673,7 @@ asm void JASSeqParser::cmdRetI(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294A20-80294A3C 001C+00 rc=1 efc=0 rfr=False None .text      cmdIntTimer__12JASSeqParserFP8JASTrackPUl                    */
+/* 80294A20-80294A3C 001C+00 r=1 e=0 z=0  None .text      cmdIntTimer__12JASSeqParserFP8JASTrackPUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1685,10 +1685,10 @@ asm void JASSeqParser::cmdIntTimer(JASTrack* param_0, u32* param_1) {
 
 
 /* ############################################################################################## */
-/* 80451240-80451244 0004+00 rc=2 efc=1 rfr=False None .sbss      sCallBackFunc__12JASSeqParser                                */
+/* 80451240-80451244 0004+00 r=2 e=1 z=0  None .sbss      sCallBackFunc__12JASSeqParser                                */
 u8 sCallBackFunc__12JASSeqParser[4];
 
-/* 80294A3C-80294AA4 0068+00 rc=1 efc=0 rfr=False None .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294A3C-80294AA4 0068+00 r=1 e=0 z=0  None .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1699,7 +1699,7 @@ asm void JASSeqParser::cmdSyncCPU(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294AA4-80294AD4 0030+00 rc=1 efc=0 rfr=False None .text      cmdTempo__12JASSeqParserFP8JASTrackPUl                       */
+/* 80294AA4-80294AD4 0030+00 r=1 e=0 z=0  None .text      cmdTempo__12JASSeqParserFP8JASTrackPUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1710,7 +1710,7 @@ asm void JASSeqParser::cmdTempo(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294AD4-80294ADC 0008+00 rc=1 efc=0 rfr=False None .text      cmdFinish__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294AD4-80294ADC 0008+00 r=1 e=0 z=0  None .text      cmdFinish__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1721,7 +1721,7 @@ asm void JASSeqParser::cmdFinish(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294ADC-80294AE4 0008+00 rc=1 efc=0 rfr=False None .text      cmdNop__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294ADC-80294AE4 0008+00 r=1 e=0 z=0  None .text      cmdNop__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1732,7 +1732,7 @@ asm void JASSeqParser::cmdNop(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294AE4-80294B1C 0038+00 rc=1 efc=0 rfr=False None .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294AE4-80294B1C 0038+00 r=1 e=0 z=0  None .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1743,7 +1743,7 @@ asm void JASSeqParser::cmdFIRSet(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294B1C-80294B70 0054+00 rc=1 efc=0 rfr=False None .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294B1C-80294B70 0054+00 r=1 e=0 z=0  None .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1754,7 +1754,7 @@ asm void JASSeqParser::cmdIIRSet(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294B70-80294BB4 0044+00 rc=1 efc=0 rfr=False None .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl                   */
+/* 80294B70-80294BB4 0044+00 r=1 e=0 z=0  None .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1765,7 +1765,7 @@ asm void JASSeqParser::cmdIIRCutOff(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294BB4-80294BD0 001C+00 rc=1 efc=0 rfr=False None .text      cmdBankPrg__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294BB4-80294BD0 001C+00 r=1 e=0 z=0  None .text      cmdBankPrg__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1776,7 +1776,7 @@ asm void JASSeqParser::cmdBankPrg(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294BD0-80294BE4 0014+00 rc=1 efc=0 rfr=False None .text      cmdBank__12JASSeqParserFP8JASTrackPUl                        */
+/* 80294BD0-80294BE4 0014+00 r=1 e=0 z=0  None .text      cmdBank__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1787,7 +1787,7 @@ asm void JASSeqParser::cmdBank(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294BE4-80294BF8 0014+00 rc=1 efc=0 rfr=False None .text      cmdPrg__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294BE4-80294BF8 0014+00 r=1 e=0 z=0  None .text      cmdPrg__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1799,10 +1799,10 @@ asm void JASSeqParser::cmdPrg(JASTrack* param_0, u32* param_1) {
 
 
 /* ############################################################################################## */
-/* 80455608-80455610 0008+00 rc=4 efc=0 rfr=False None .sdata2    @1064                                                        */
+/* 80455608-80455610 0008+00 r=4 e=0 z=0  None .sdata2    @1064                                                        */
 SECTION_SDATA2 static f64 JASSeqParser__lit_1064 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80294BF8-80294C54 005C+00 rc=1 efc=0 rfr=False None .text      cmdParamI__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294BF8-80294C54 005C+00 r=1 e=0 z=0  None .text      cmdParamI__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1813,7 +1813,7 @@ asm void JASSeqParser::cmdParamI(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294C54-80294CB0 005C+00 rc=1 efc=0 rfr=False None .text      cmdParamII__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294C54-80294CB0 005C+00 r=1 e=0 z=0  None .text      cmdParamII__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1824,7 +1824,7 @@ asm void JASSeqParser::cmdParamII(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294CB0-80294D2C 007C+00 rc=1 efc=0 rfr=False None .text      cmdParamE__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294CB0-80294D2C 007C+00 r=1 e=0 z=0  None .text      cmdParamE__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1835,7 +1835,7 @@ asm void JASSeqParser::cmdParamE(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294D2C-80294DA8 007C+00 rc=1 efc=0 rfr=False None .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294D2C-80294DA8 007C+00 r=1 e=0 z=0  None .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1847,7 +1847,7 @@ asm void JASSeqParser::cmdParamEI(JASTrack* param_0, u32* param_1) {
 
 
 /* ############################################################################################## */
-/* 803C7624-803C7650 002C+00 rc=1 efc=0 rfr=False None .data      @1124                                                        */
+/* 803C7624-803C7650 002C+00 r=1 e=0 z=0  None .data      @1124                                                        */
 SECTION_DATA static void* lit_1124[11] = {
 	/* 0    */ (void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x138),
 	/* 1    */ (void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x48),
@@ -1862,13 +1862,13 @@ SECTION_DATA static void* lit_1124[11] = {
 	/* 10   */ (void*)(((char*)cmdReg__12JASSeqParserFP8JASTrackPUl)+0x120),
 };
 
-/* 80451244-80451248 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+/* 80451244-80451248 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451244[4];
 
-/* 80451248-80451250 0004+04 rc=1 efc=0 rfr=False None .sbss      oRandom$1099                                                 */
+/* 80451248-80451250 0004+04 r=1 e=0 z=0  None .sbss      oRandom$1099                                                 */
 static u8 data_80451248[4 + 4 /* padding */];
 
-/* 80294DA8-80294F10 0168+00 rc=3 efc=0 rfr=False None .text      cmdReg__12JASSeqParserFP8JASTrackPUl                         */
+/* 80294DA8-80294F10 0168+00 r=3 e=0 z=0  None .text      cmdReg__12JASSeqParserFP8JASTrackPUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1879,7 +1879,7 @@ asm void JASSeqParser::cmdReg(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294F10-80294F40 0030+00 rc=1 efc=0 rfr=False None .text      cmdRegLoad__12JASSeqParserFP8JASTrackPUl                     */
+/* 80294F10-80294F40 0030+00 r=1 e=0 z=0  None .text      cmdRegLoad__12JASSeqParserFP8JASTrackPUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1890,7 +1890,7 @@ asm void JASSeqParser::cmdRegLoad(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294F40-80294FB4 0074+00 rc=1 efc=0 rfr=False None .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl                      */
+/* 80294F40-80294FB4 0074+00 r=1 e=0 z=0  None .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1901,7 +1901,7 @@ asm void JASSeqParser::cmdRegUni(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80294FB4-80295088 00D4+00 rc=1 efc=0 rfr=False None .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl                  */
+/* 80294FB4-80295088 00D4+00 r=1 e=0 z=0  None .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1913,33 +1913,33 @@ asm void JASSeqParser::cmdRegTblLoad(JASTrack* param_0, u32* param_1) {
 
 
 /* ############################################################################################## */
-/* 8039B018-8039B168 014A+06 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 8039B018-8039B168 014A+06 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_8039B018 = 
+SECTION_DEAD char const* const stringBase_8039B018 = 
     "--------------- JASTrack (%8x) dump ------------"
     "----";
-SECTION_DEAD static char const* const stringBase_8039B04D = 
+SECTION_DEAD char const* const stringBase_8039B04D = 
     " Base: 0x%08x Cur: 0x%08x(0x%06x)";
-SECTION_DEAD static char const* const stringBase_8039B06F = "";
-SECTION_DEAD static char const* const stringBase_8039B070 = 
+SECTION_DEAD char const* const stringBase_8039B06F = "";
+SECTION_DEAD char const* const stringBase_8039B070 = 
     " REG_A: 0x%04x REG_B: 0x%04x REG_S: 0x%04x";
-SECTION_DEAD static char const* const stringBase_8039B09B = 
+SECTION_DEAD char const* const stringBase_8039B09B = 
     " REG_X: 0x%04x REG_Y: 0x%04x REG_F: 0x%04x";
-SECTION_DEAD static char const* const stringBase_8039B0C6 = 
+SECTION_DEAD char const* const stringBase_8039B0C6 = 
     " PORT 0-3: 0x%04x 0x%04x 0x%04x 0x%04x";
-SECTION_DEAD static char const* const stringBase_8039B0ED = 
+SECTION_DEAD char const* const stringBase_8039B0ED = 
     " PORT 4-7: 0x%04x 0x%04x 0x%04x 0x%04x";
-SECTION_DEAD static char const* const stringBase_8039B114 = 
+SECTION_DEAD char const* const stringBase_8039B114 = 
     " PORT 8-B: 0x%04x 0x%04x 0x%04x 0x%04x";
-SECTION_DEAD static char const* const stringBase_8039B13B = 
+SECTION_DEAD char const* const stringBase_8039B13B = 
     " PORT C-F: 0x%04x 0x%04x 0x%04x 0x%04x";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_8039B162 = "\0\0\0\0\0";
 #pragma pop
 
-/* 80295088-8029526C 01E4+00 rc=1 efc=0 rfr=False None .text      cmdDump__12JASSeqParserFP8JASTrackPUl                        */
+/* 80295088-8029526C 01E4+00 r=1 e=0 z=0  None .text      cmdDump__12JASSeqParserFP8JASTrackPUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1950,7 +1950,7 @@ asm void JASSeqParser::cmdDump(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8029526C-80295498 022C+00 rc=1 efc=0 rfr=False None .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl                      */
+/* 8029526C-80295498 022C+00 r=1 e=0 z=0  None .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1961,7 +1961,7 @@ asm void JASSeqParser::cmdPrintf(JASTrack* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 80295498-80295540 00A8+00 rc=1 efc=0 rfr=False None .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl            */
+/* 80295498-80295540 00A8+00 r=1 e=0 z=0  None .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1972,7 +1972,7 @@ asm void JASSeqParser::execNoteOnGate(JASTrack* param_0, u32 param_1, u32 param_
 #pragma pop
 
 
-/* 80295540-80295570 0030+00 rc=1 efc=0 rfr=False None .text      execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl              */
+/* 80295540-80295570 0030+00 r=1 e=0 z=0  None .text      execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1983,7 +1983,7 @@ asm void JASSeqParser::execNoteOnMidi(JASTrack* param_0, u32 param_1, u32 param_
 #pragma pop
 
 
-/* 80295570-8029559C 002C+00 rc=1 efc=0 rfr=False None .text      execNoteOff__12JASSeqParserFP8JASTrackUl                     */
+/* 80295570-8029559C 002C+00 r=1 e=0 z=0  None .text      execNoteOff__12JASSeqParserFP8JASTrackUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1994,7 +1994,7 @@ asm void JASSeqParser::execNoteOff(JASTrack* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 8029559C-802955C8 002C+00 rc=1 efc=0 rfr=False None .text      execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl */
+/* 8029559C-802955C8 002C+00 r=1 e=0 z=0  None .text      execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2005,7 +2005,7 @@ extern "C" asm static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParser
 #pragma pop
 
 
-/* 802955C8-80295600 0038+00 rc=1 efc=0 rfr=False None .text      parseNoteOff__12JASSeqParserFP8JASTrackUc                    */
+/* 802955C8-80295600 0038+00 r=1 e=0 z=0  None .text      parseNoteOff__12JASSeqParserFP8JASTrackUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2016,7 +2016,7 @@ asm void JASSeqParser::parseNoteOff(JASTrack* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80295600-802956B0 00B0+00 rc=1 efc=0 rfr=False None .text      parseNoteOn__12JASSeqParserFP8JASTrackUc                     */
+/* 80295600-802956B0 00B0+00 r=1 e=0 z=0  None .text      parseNoteOn__12JASSeqParserFP8JASTrackUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2027,7 +2027,7 @@ asm void JASSeqParser::parseNoteOn(JASTrack* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802956B0-80295864 01B4+00 rc=2 efc=0 rfr=False None .text      parseCommand__12JASSeqParserFP8JASTrackUcUs                  */
+/* 802956B0-80295864 01B4+00 r=2 e=0 z=0  None .text      parseCommand__12JASSeqParserFP8JASTrackUcUs                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2038,7 +2038,7 @@ asm void JASSeqParser::parseCommand(JASTrack* param_0, u8 param_1, u16 param_2) 
 #pragma pop
 
 
-/* 80295864-802958D4 0070+00 rc=1 efc=0 rfr=False None .text      parseRegCommand__12JASSeqParserFP8JASTracki                  */
+/* 80295864-802958D4 0070+00 r=1 e=0 z=0  None .text      parseRegCommand__12JASSeqParserFP8JASTracki                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2049,7 +2049,7 @@ asm void JASSeqParser::parseRegCommand(JASTrack* param_0, int param_1) {
 #pragma pop
 
 
-/* 802958D4-80295950 007C+00 rc=1 efc=0 rfr=False None .text      parse__12JASSeqParserFP8JASTrack                             */
+/* 802958D4-80295950 007C+00 r=1 e=0 z=0  None .text      parse__12JASSeqParserFP8JASTrack                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2060,7 +2060,7 @@ asm void JASSeqParser::parse(JASTrack* param_0) {
 #pragma pop
 
 
-/* 80295950-80296108 07B8+00 rc=1 efc=1 rfr=False None .text      __sinit_JASSeqParser_cpp                                     */
+/* 80295950-80296108 07B8+00 r=1 e=1 z=0  None .text      __sinit_JASSeqParser_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2072,7 +2072,7 @@ extern "C" asm void __sinit_JASSeqParser_cpp() {
 
 
 /* ############################################################################################## */
-/* 803C7650-803C7670 0020+00 rc=2 efc=2 rfr=False None .data      __vt__12JASSeqParser                                         */
+/* 803C7650-803C7670 0020+00 r=2 e=2 z=0  None .data      __vt__12JASSeqParser                                         */
 SECTION_DATA void* __vt__12JASSeqParser[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,

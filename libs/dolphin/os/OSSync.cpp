@@ -29,7 +29,7 @@ extern "C" void ICInvalidateRange(); // 1
 // Declarations:
 // 
 
-/* 80340A20-80340A3C 001C+00 rc=1 efc=0 rfr=False None .text      SystemCallVector                                             */
+/* 80340A20-80340A3C 001C+00 r=1 e=0 z=0  None .text      SystemCallVector                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -40,7 +40,7 @@ extern "C" asm static void SystemCallVector() {
 #pragma pop
 
 
-/* 80340A3C-80340A40 0004+00 rc=1 efc=0 rfr=False None .text      __OSSystemCallVectorEnd                                      */
+/* 80340A3C-80340A40 0004+00 r=1 e=0 z=0  None .text      __OSSystemCallVectorEnd                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ extern "C" asm static void __OSSystemCallVectorEnd() {
 #pragma pop
 
 
-/* 80340A40-80340AA4 0064+00 rc=1 efc=1 rfr=False None .text      __OSInitSystemCall                                           */
+/* 80340A40-80340AA4 0064+00 r=1 e=1 z=0  None .text      __OSInitSystemCall                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

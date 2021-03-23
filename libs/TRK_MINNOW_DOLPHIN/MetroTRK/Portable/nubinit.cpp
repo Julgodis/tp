@@ -41,7 +41,7 @@ extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A2688-803A26A4 001B+01 rc=1 efc=0 rfr=False None .rodata    @133                                                         */
+/* 803A2688-803A26A4 001B+01 r=1 e=0 z=0  None .rodata    @133                                                         */
 SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x47, 0x41, 0x4D,
 	0x45, 0x43, 0x55, 0x42, 0x45, 0x20, 0x76, 0x32, 0x2E, 0x36, 0x00,
@@ -49,7 +49,7 @@ SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padd
 	0x00,
 };
 
-/* 8036CE40-8036CE68 0028+00 rc=1 efc=1 rfr=False None .text      TRKNubWelcome                                                */
+/* 8036CE40-8036CE68 0028+00 r=1 e=1 z=0  None .text      TRKNubWelcome                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ extern "C" asm void TRKNubWelcome() {
 #pragma pop
 
 
-/* 8036CE68-8036CE8C 0024+00 rc=1 efc=1 rfr=False None .text      TRKTerminateNub                                              */
+/* 8036CE68-8036CE8C 0024+00 r=1 e=1 z=0  None .text      TRKTerminateNub                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,17 +72,17 @@ extern "C" asm void TRKTerminateNub() {
 
 
 /* ############################################################################################## */
-/* 803A26A4-803A26B8 0010+04 rc=1 efc=0 rfr=False None .rodata    @154                                                         */
+/* 803A26A4-803A26B8 0010+04 r=1 e=0 z=0  None .rodata    @154                                                         */
 SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_154[16 + 4 /* padding */] = {
 	0x49, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x20, 0x4E, 0x55, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8044D8B8-8044D8C0 0004+04 rc=5 efc=4 rfr=False .bss .bss       gTRKBigEndian                                                */
+/* 8044D8B8-8044D8C0 0004+04 r=5 e=4 z=0  .bss .bss       gTRKBigEndian                                                */
 u8 gTRKBigEndian[4 + 4 /* padding */];
 
-/* 8036CE8C-8036CFD8 014C+00 rc=1 efc=1 rfr=False None .text      TRKInitializeNub                                             */
+/* 8036CE8C-8036CFD8 014C+00 r=1 e=1 z=0  None .text      TRKInitializeNub                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

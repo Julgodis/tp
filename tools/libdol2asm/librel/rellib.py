@@ -41,12 +41,12 @@ RELOCATION_NAMES = {
 
 @dataclass
 class Relocation:
-    module: int
-    section: int
+    module: int # reference module
+    section: int # reference section
     type: int
     offset: int
-    addend: int
-    parent: "Section" = field(default=None,repr=False)
+    addend: int # reference offset
+    parent: "Section" = field(default=None, repr=False)
     access: "disassembler.Access" = None
 
     @property
@@ -55,7 +55,7 @@ class Relocation:
 
     @property
     def replace_addr(self):
-        return self.parent.offset + self.offset
+        return self.offset #self.parent.offset +
 
     @property
     def addr(self):
@@ -63,7 +63,7 @@ class Relocation:
         if (self.type == R_PPC_ADDR16 or self.type == R_PPC_ADDR16_LO or 
             self.type == R_PPC_ADDR16_HI or self.type == R_PPC_ADDR16_HA):
             shift -= 2
-        return self.parent.offset + self.offset + shift
+        return self.offset + shift #self.parent.offset
 
 
 @dataclass

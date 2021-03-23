@@ -35,7 +35,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80355414-8035541C 0008+00 rc=5 efc=5 rfr=False None .text      __CARDGetFatBlock                                            */
+/* 80355414-8035541C 0008+00 r=5 e=5 z=0  None .text      __CARDGetFatBlock                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +46,7 @@ extern "C" asm void __CARDGetFatBlock() {
 #pragma pop
 
 
-/* 8035541C-803554F0 00D4+00 rc=1 efc=0 rfr=False None .text      WriteCallback                                                */
+/* 8035541C-803554F0 00D4+00 r=1 e=0 z=0  None .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +57,7 @@ extern "C" asm static void CARDBlock__WriteCallback() {
 #pragma pop
 
 
-/* 803554F0-803555B8 00C8+00 rc=1 efc=0 rfr=False None .text      EraseCallback                                                */
+/* 803554F0-803555B8 00C8+00 r=1 e=0 z=0  None .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm static void CARDBlock__EraseCallback() {
 #pragma pop
 
 
-/* 803555B8-803556D0 0118+00 rc=1 efc=1 rfr=False None .text      __CARDAllocBlock                                             */
+/* 803555B8-803556D0 0118+00 r=1 e=1 z=0  None .text      __CARDAllocBlock                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ extern "C" asm void __CARDAllocBlock() {
 #pragma pop
 
 
-/* 803556D0-8035577C 00AC+00 rc=2 efc=1 rfr=False None .text      __CARDUpdateFatBlock                                         */
+/* 803556D0-8035577C 00AC+00 r=2 e=1 z=0  None .text      __CARDUpdateFatBlock                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

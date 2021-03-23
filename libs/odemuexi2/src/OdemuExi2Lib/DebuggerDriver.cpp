@@ -43,7 +43,7 @@ extern "C" extern u32 data_80450AF0;
 // Declarations:
 // 
 
-/* 80372D2C-80372D30 0004+00 rc=1 efc=1 rfr=False None .text      DBClose                                                      */
+/* 80372D2C-80372D30 0004+00 r=1 e=1 z=0  None .text      DBClose                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +54,7 @@ extern "C" asm void DBClose() {
 #pragma pop
 
 
-/* 80372D30-80372D34 0004+00 rc=1 efc=1 rfr=False None .text      DBOpen                                                       */
+/* 80372D30-80372D34 0004+00 r=1 e=1 z=0  None .text      DBOpen                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ extern "C" asm void DBOpen() {
 #pragma pop
 
 
-/* 80372D34-80372F94 0260+00 rc=1 efc=1 rfr=False None .text      DBWrite                                                      */
+/* 80372D34-80372F94 0260+00 r=1 e=1 z=0  None .text      DBWrite                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,25 +77,25 @@ extern "C" asm void DBWrite() {
 
 
 /* ############################################################################################## */
-/* 804519D0-804519D4 0004+00 rc=2 efc=0 rfr=False None .sbss      MTRCallback                                                  */
+/* 804519D0-804519D4 0004+00 r=2 e=0 z=0  None .sbss      MTRCallback                                                  */
 static u8 MTRCallback[4];
 
-/* 804519D4-804519D8 0004+00 rc=2 efc=0 rfr=False None .sbss      DBGCallback                                                  */
+/* 804519D4-804519D8 0004+00 r=2 e=0 z=0  None .sbss      DBGCallback                                                  */
 static u8 DBGCallback[4];
 
-/* 804519D8-804519DC 0004+00 rc=2 efc=0 rfr=False None .sbss      SendMailData                                                 */
+/* 804519D8-804519DC 0004+00 r=2 e=0 z=0  None .sbss      SendMailData                                                 */
 static u8 SendMailData[4];
 
-/* 804519DC-804519E0 0004+00 rc=2 efc=0 rfr=False None .sbss      RecvDataLeng                                                 */
+/* 804519DC-804519E0 0004+00 r=2 e=0 z=0  None .sbss      RecvDataLeng                                                 */
 static u8 RecvDataLeng[4];
 
-/* 804519E0-804519E4 0004+00 rc=1 efc=0 rfr=False None .sbss      pEXIInputFlag                                                */
+/* 804519E0-804519E4 0004+00 r=1 e=0 z=0  None .sbss      pEXIInputFlag                                                */
 static u8 pEXIInputFlag[4];
 
-/* 804519E4-804519E8 0004+00 rc=4 efc=0 rfr=False None .sbss      None                                                         */
+/* 804519E4-804519E8 0004+00 r=4 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804519E4[4];
 
-/* 80372F94-80373020 008C+00 rc=2 efc=2 rfr=False None .text      DBRead                                                       */
+/* 80372F94-80373020 008C+00 r=2 e=2 z=0  None .text      DBRead                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ extern "C" asm void DBRead() {
 #pragma pop
 
 
-/* 80373020-803730BC 009C+00 rc=2 efc=2 rfr=False None .text      DBQueryData                                                  */
+/* 80373020-803730BC 009C+00 r=2 e=2 z=0  None .text      DBQueryData                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ extern "C" asm void DBQueryData() {
 #pragma pop
 
 
-/* 803730BC-80373110 0054+00 rc=1 efc=1 rfr=False None .text      DBInitInterrupts                                             */
+/* 803730BC-80373110 0054+00 r=1 e=1 z=0  None .text      DBInitInterrupts                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ extern "C" asm void DBInitInterrupts() {
 #pragma pop
 
 
-/* 80373110-80373188 0078+00 rc=1 efc=1 rfr=False None .text      DBInitComm                                                   */
+/* 80373110-80373188 0078+00 r=1 e=1 z=0  None .text      DBInitComm                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ extern "C" asm void DBInitComm() {
 #pragma pop
 
 
-/* 80373188-803731C8 0040+00 rc=1 efc=0 rfr=False None .text      DBGHandler                                                   */
+/* 80373188-803731C8 0040+00 r=1 e=0 z=0  None .text      DBGHandler                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +150,7 @@ extern "C" asm static void DBGHandler() {
 #pragma pop
 
 
-/* 803731C8-80373204 003C+00 rc=1 efc=0 rfr=False None .text      MWCallback                                                   */
+/* 803731C8-80373204 003C+00 r=1 e=0 z=0  None .text      MWCallback                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ extern "C" asm static void MWCallback() {
 #pragma pop
 
 
-/* 80373204-803732B0 00AC+00 rc=1 efc=0 rfr=False None .text      DBGReadStatus                                                */
+/* 80373204-803732B0 00AC+00 r=1 e=0 z=0  None .text      DBGReadStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +172,7 @@ extern "C" asm static void DBGReadStatus() {
 #pragma pop
 
 
-/* 803732B0-8037338C 00DC+00 rc=1 efc=0 rfr=False None .text      DBGWrite                                                     */
+/* 803732B0-8037338C 00DC+00 r=1 e=0 z=0  None .text      DBGWrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ extern "C" asm static void DBGWrite() {
 #pragma pop
 
 
-/* 8037338C-80373468 00DC+00 rc=1 efc=0 rfr=False None .text      DBGRead                                                      */
+/* 8037338C-80373468 00DC+00 r=1 e=0 z=0  None .text      DBGRead                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ extern "C" asm static void DBGRead() {
 #pragma pop
 
 
-/* 80373468-80373514 00AC+00 rc=1 efc=0 rfr=False None .text      DBGReadMailbox                                               */
+/* 80373468-80373514 00AC+00 r=1 e=0 z=0  None .text      DBGReadMailbox                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ extern "C" asm static void DBGReadMailbox() {
 #pragma pop
 
 
-/* 80373514-803737AC 0298+00 rc=5 efc=0 rfr=False None .text      DBGEXIImm                                                    */
+/* 80373514-803737AC 0298+00 r=5 e=0 z=0  None .text      DBGEXIImm                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

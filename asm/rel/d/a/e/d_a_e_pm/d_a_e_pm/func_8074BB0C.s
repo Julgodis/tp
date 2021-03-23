@@ -1,0 +1,3 @@
+lbl_8074BB0C:
+/* 8074BB0C 00000000  38 63 FF EC */	addi r3, r3, -20
+/* 8074BB10 00000004  4B FF FE 10 */	b __dt__12dBgS_ObjAcchFv

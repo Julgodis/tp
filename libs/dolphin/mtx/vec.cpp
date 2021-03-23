@@ -35,7 +35,7 @@ extern "C" void PSVECDistance(); // 1
 // Declarations:
 // 
 
-/* 80347090-803470B4 0024+00 rc=104 efc=103 rfr=False None .text      PSVECAdd                                                     */
+/* 80347090-803470B4 0024+00 r=783 e=103 z=679  None .text      PSVECAdd                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +46,7 @@ extern "C" asm void PSVECAdd() {
 #pragma pop
 
 
-/* 803470B4-803470D8 0024+00 rc=60 efc=60 rfr=False None .text      PSVECSubtract                                                */
+/* 803470B4-803470D8 0024+00 r=119 e=60 z=59  None .text      PSVECSubtract                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +57,7 @@ extern "C" asm void PSVECSubtract() {
 #pragma pop
 
 
-/* 803470D8-803470F4 001C+00 rc=58 efc=58 rfr=False None .text      PSVECScale                                                   */
+/* 803470D8-803470F4 001C+00 r=159 e=58 z=101  None .text      PSVECScale                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,18 +69,18 @@ extern "C" asm void PSVECScale() {
 
 
 /* ############################################################################################## */
-/* 80456540-80456544 0004+00 rc=1 efc=0 rfr=False None .sdata2    @113                                                         */
+/* 80456540-80456544 0004+00 r=1 e=0 z=0  None .sdata2    @113                                                         */
 SECTION_SDATA2 static u8 vec__lit_113[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456544-80456548 0004+00 rc=3 efc=0 rfr=False None .sdata2    @118                                                         */
+/* 80456544-80456548 0004+00 r=3 e=0 z=0  None .sdata2    @118                                                         */
 SECTION_SDATA2 static f32 vec__lit_118 = 0.5f;
 
-/* 80456548-8045654C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @119                                                         */
+/* 80456548-8045654C 0004+00 r=3 e=0 z=0  None .sdata2    @119                                                         */
 SECTION_SDATA2 static f32 vec__lit_119 = 3.0f;
 
-/* 803470F4-80347138 0044+00 rc=18 efc=16 rfr=False None .text      PSVECNormalize                                               */
+/* 803470F4-80347138 0044+00 r=18 e=16 z=0  None .text      PSVECNormalize                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +91,7 @@ extern "C" asm void PSVECNormalize() {
 #pragma pop
 
 
-/* 80347138-80347150 0018+00 rc=140 efc=140 rfr=False None .text      PSVECSquareMag                                               */
+/* 80347138-80347150 0018+00 r=867 e=140 z=727  None .text      PSVECSquareMag                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ extern "C" asm void PSVECSquareMag() {
 #pragma pop
 
 
-/* 80347150-80347194 0044+00 rc=24 efc=24 rfr=False None .text      PSVECMag                                                     */
+/* 80347150-80347194 0044+00 r=24 e=24 z=0  None .text      PSVECMag                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ extern "C" asm void PSVECMag() {
 #pragma pop
 
 
-/* 80347194-803471B4 0020+00 rc=41 efc=39 rfr=False None .text      PSVECDotProduct                                              */
+/* 80347194-803471B4 0020+00 r=56 e=39 z=15  None .text      PSVECDotProduct                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ extern "C" asm void PSVECDotProduct() {
 #pragma pop
 
 
-/* 803471B4-803471F0 003C+00 rc=20 efc=20 rfr=False None .text      PSVECCrossProduct                                            */
+/* 803471B4-803471F0 003C+00 r=23 e=20 z=3  None .text      PSVECCrossProduct                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ extern "C" asm void PSVECCrossProduct() {
 #pragma pop
 
 
-/* 803471F0-803472C8 00D8+00 rc=1 efc=1 rfr=False None .text      C_VECHalfAngle                                               */
+/* 803471F0-803472C8 00D8+00 r=1 e=1 z=0  None .text      C_VECHalfAngle                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,10 +147,10 @@ extern "C" asm void C_VECHalfAngle() {
 
 
 /* ############################################################################################## */
-/* 8045654C-80456550 0004+00 rc=1 efc=0 rfr=False None .sdata2    @161                                                         */
+/* 8045654C-80456550 0004+00 r=1 e=0 z=0  None .sdata2    @161                                                         */
 SECTION_SDATA2 static f32 vec__lit_161 = 2.0f;
 
-/* 803472C8-8034739C 00D4+00 rc=1 efc=1 rfr=False None .text      C_VECReflect                                                 */
+/* 803472C8-8034739C 00D4+00 r=12 e=1 z=11  None .text      C_VECReflect                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ extern "C" asm void C_VECReflect() {
 #pragma pop
 
 
-/* 8034739C-803473C4 0028+00 rc=107 efc=107 rfr=False None .text      PSVECSquareDistance                                          */
+/* 8034739C-803473C4 0028+00 r=553 e=107 z=446  None .text      PSVECSquareDistance                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +172,7 @@ extern "C" asm void PSVECSquareDistance() {
 #pragma pop
 
 
-/* 803473C4-80347418 0054+00 rc=4 efc=4 rfr=False None .text      PSVECDistance                                                */
+/* 803473C4-80347418 0054+00 r=4 e=4 z=0  None .text      PSVECDistance                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

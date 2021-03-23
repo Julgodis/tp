@@ -93,7 +93,7 @@ extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
 // 
 
 /* ############################################################################################## */
-/* 803C5888-803C58A8 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight              */
+/* 803C5888-803C58A8 0020+00 r=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight              */
 SECTION_DATA static void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -105,7 +105,7 @@ SECTION_DATA static void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
 	/* 7    */ (void*)adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl,
 };
 
-/* 8028B610-8028B6AC 009C+00 rc=1 efc=1 rfr=False None .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */
+/* 8028B610-8028B6AC 009C+00 r=1 e=1 z=0  None .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm JStudio_JStage::TAdaptor_ambientLight::TAdaptor_ambientLight(JStage::TSystem
 #pragma pop
 
 
-/* 8028B6AC-8028B720 0074+00 rc=1 efc=0 rfr=False None .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv            */
+/* 8028B6AC-8028B720 0074+00 r=1 e=0 z=0  None .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm JStudio_JStage::TAdaptor_ambientLight::~TAdaptor_ambientLight() {
 #pragma pop
 
 
-/* 8028B720-8028B724 0004+00 rc=1 efc=0 rfr=False None .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+/* 8028B720-8028B724 0004+00 r=1 e=0 z=0  None .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_prepare() {
 #pragma pop
 
 
-/* 8028B724-8028B7B0 008C+00 rc=1 efc=0 rfr=False None .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+/* 8028B724-8028B7B0 008C+00 r=1 e=0 z=0  None .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_begin() {
 #pragma pop
 
 
-/* 8028B7B0-8028B804 0054+00 rc=1 efc=0 rfr=False None .text      adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv  */
+/* 8028B7B0-8028B804 0054+00 r=1 e=0 z=0  None .text      adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_end() {
 #pragma pop
 
 
-/* 8028B804-8028B87C 0078+00 rc=1 efc=0 rfr=False None .text      adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl */
+/* 8028B804-8028B87C 0078+00 r=1 e=0 z=0  None .text      adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_update(u32 param_0) {
 #pragma pop
 
 
-/* 8028B87C-8028B8A0 0024+00 rc=1 efc=0 rfr=False None .text      adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl */
+/* 8028B87C-8028B8A0 0024+00 r=1 e=0 z=0  None .text      adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

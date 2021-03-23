@@ -90,7 +90,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 800224F0-80022514 0024+00 rc=2 efc=1 rfr=False None .text      fpcNd_DrawMethod__FP21nodedraw_method_classPv                */
+/* 800224F0-80022514 0024+00 r=2 e=1 z=0  None .text      fpcNd_DrawMethod__FP21nodedraw_method_classPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void fpcNd_DrawMethod(nodedraw_method_class* param_0, void* param_1) {
 #pragma pop
 
 
-/* 80022514-80022580 006C+00 rc=1 efc=0 rfr=False None .text      fpcNd_Draw__FP18process_node_class                           */
+/* 80022514-80022580 006C+00 r=1 e=0 z=0  None .text      fpcNd_Draw__FP18process_node_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm static void fpcNd_Draw(process_node_class* param_0) {
 #pragma pop
 
 
-/* 80022580-800225DC 005C+00 rc=1 efc=0 rfr=False None .text      fpcNd_Execute__FP18process_node_class                        */
+/* 80022580-800225DC 005C+00 r=1 e=0 z=0  None .text      fpcNd_Execute__FP18process_node_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,10 +124,10 @@ asm static void fpcNd_Execute(process_node_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450D40-80450D48 0004+04 rc=13 efc=11 rfr=False None .sbss      g_fpcNd_type                                                 */
+/* 80450D40-80450D48 0004+04 r=13 e=11 z=0  None .sbss      g_fpcNd_type                                                 */
 u8 g_fpcNd_type[4 + 4 /* padding */];
 
-/* 800225DC-8002265C 0080+00 rc=1 efc=0 rfr=False None .text      fpcNd_IsCreatingFromUnder__FPv                               */
+/* 800225DC-8002265C 0080+00 r=1 e=0 z=0  None .text      fpcNd_IsCreatingFromUnder__FPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,14 +139,14 @@ asm static void fpcNd_IsCreatingFromUnder(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 804505E0-804505E8 0004+04 rc=1 efc=0 rfr=False None .sdata     g_fpcNd_IsCheckOfDeleteTiming                                */
+/* 804505E0-804505E8 0004+04 r=1 e=0 z=0  None .sdata     g_fpcNd_IsCheckOfDeleteTiming                                */
 SECTION_SDATA static u32 g_fpcNd_IsCheckOfDeleteTiming[1 + 1 /* padding */] = {
 	0x00000001,
 	/* padding */
 	0x00000000,
 };
 
-/* 8002265C-8002269C 0040+00 rc=2 efc=2 rfr=False None .text      fpcNd_IsDeleteTiming__FP18process_node_class                 */
+/* 8002265C-8002269C 0040+00 r=2 e=2 z=0  None .text      fpcNd_IsDeleteTiming__FP18process_node_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void fpcNd_IsDeleteTiming(process_node_class* param_0) {
 #pragma pop
 
 
-/* 8002269C-800226C4 0028+00 rc=1 efc=0 rfr=False None .text      fpcNd_IsDelete__FP18process_node_class                       */
+/* 8002269C-800226C4 0028+00 r=1 e=0 z=0  None .text      fpcNd_IsDelete__FP18process_node_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm static void fpcNd_IsDelete(process_node_class* param_0) {
 #pragma pop
 
 
-/* 800226C4-80022728 0064+00 rc=1 efc=0 rfr=False None .text      fpcNd_Delete__FP18process_node_class                         */
+/* 800226C4-80022728 0064+00 r=1 e=0 z=0  None .text      fpcNd_Delete__FP18process_node_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm static void fpcNd_Delete(process_node_class* param_0) {
 #pragma pop
 
 
-/* 80022728-800227C4 009C+00 rc=1 efc=0 rfr=False None .text      fpcNd_Create__FP18process_node_class                         */
+/* 80022728-800227C4 009C+00 r=1 e=0 z=0  None .text      fpcNd_Create__FP18process_node_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm static void fpcNd_Create(process_node_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3A20-803A3A38 0014+04 rc=9 efc=9 rfr=False None .data      g_fpcNd_Method                                               */
+/* 803A3A20-803A3A38 0014+04 r=9 e=9 z=0  None .data      g_fpcNd_Method                                               */
 SECTION_DATA void* g_fpcNd_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fpcNd_Create__FP18process_node_class,
 	/* 1    */ (void*)fpcNd_Delete__FP18process_node_class,

@@ -34,7 +34,7 @@ extern "C" void modf(); // 1
 // Declarations:
 // 
 
-/* 80363124-803632C8 01A4+00 rc=2 efc=2 rfr=False None .text      __num2dec                                                    */
+/* 80363124-803632C8 01A4+00 r=2 e=2 z=0  None .text      __num2dec                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,12 +46,12 @@ extern "C" asm void __num2dec() {
 
 
 /* ############################################################################################## */
-/* 80456660-80456668 0008+00 rc=1 efc=0 rfr=False None .sdata2    @824                                                         */
+/* 80456660-80456668 0008+00 r=1 e=0 z=0  None .sdata2    @824                                                         */
 SECTION_SDATA2 static u8 lit_824[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803632C8-8036367C 03B4+00 rc=1 efc=0 rfr=False None .text      __num2dec_internal                                           */
+/* 803632C8-8036367C 03B4+00 r=1 e=0 z=0  None .text      __num2dec_internal                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,40 +63,40 @@ extern "C" asm static void __num2dec_internal() {
 
 
 /* ############################################################################################## */
-/* 803A2238-803A2318 00DD+03 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 803A2238-803A2318 00DD+03 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_803A2238 = 
+SECTION_DEAD char const* const stringBase_803A2238 = 
     "179769313486231580793729011405303420";
-SECTION_DEAD static char const* const stringBase_803A225D = 
+SECTION_DEAD char const* const stringBase_803A225D = 
     "542101086242752217003726400434970855712890625";
-SECTION_DEAD static char const* const stringBase_803A228B = 
+SECTION_DEAD char const* const stringBase_803A228B = 
     "11102230246251565404236316680908203125";
-SECTION_DEAD static char const* const stringBase_803A22B2 = "23283064365386962890625";
-SECTION_DEAD static char const* const stringBase_803A22CA = "152587890625";
-SECTION_DEAD static char const* const stringBase_803A22D7 = "390625";
-SECTION_DEAD static char const* const stringBase_803A22DE = "78125";
-SECTION_DEAD static char const* const stringBase_803A22E4 = "15625";
-SECTION_DEAD static char const* const stringBase_803A22EA = "3125";
-SECTION_DEAD static char const* const stringBase_803A22EF = "625";
-SECTION_DEAD static char const* const stringBase_803A22F3 = "125";
-SECTION_DEAD static char const* const stringBase_803A22F7 = "25";
-SECTION_DEAD static char const* const stringBase_803A22FA = "5";
-SECTION_DEAD static char const* const stringBase_803A22FC = "1";
-SECTION_DEAD static char const* const stringBase_803A22FE = "2";
-SECTION_DEAD static char const* const stringBase_803A2300 = "4";
-SECTION_DEAD static char const* const stringBase_803A2302 = "8";
-SECTION_DEAD static char const* const stringBase_803A2304 = "16";
-SECTION_DEAD static char const* const stringBase_803A2307 = "32";
-SECTION_DEAD static char const* const stringBase_803A230A = "64";
-SECTION_DEAD static char const* const stringBase_803A230D = "128";
-SECTION_DEAD static char const* const stringBase_803A2311 = "256";
+SECTION_DEAD char const* const stringBase_803A22B2 = "23283064365386962890625";
+SECTION_DEAD char const* const stringBase_803A22CA = "152587890625";
+SECTION_DEAD char const* const stringBase_803A22D7 = "390625";
+SECTION_DEAD char const* const stringBase_803A22DE = "78125";
+SECTION_DEAD char const* const stringBase_803A22E4 = "15625";
+SECTION_DEAD char const* const stringBase_803A22EA = "3125";
+SECTION_DEAD char const* const stringBase_803A22EF = "625";
+SECTION_DEAD char const* const stringBase_803A22F3 = "125";
+SECTION_DEAD char const* const stringBase_803A22F7 = "25";
+SECTION_DEAD char const* const stringBase_803A22FA = "5";
+SECTION_DEAD char const* const stringBase_803A22FC = "1";
+SECTION_DEAD char const* const stringBase_803A22FE = "2";
+SECTION_DEAD char const* const stringBase_803A2300 = "4";
+SECTION_DEAD char const* const stringBase_803A2302 = "8";
+SECTION_DEAD char const* const stringBase_803A2304 = "16";
+SECTION_DEAD char const* const stringBase_803A2307 = "32";
+SECTION_DEAD char const* const stringBase_803A230A = "64";
+SECTION_DEAD char const* const stringBase_803A230D = "128";
+SECTION_DEAD char const* const stringBase_803A2311 = "256";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_803A2315 = "\0\0";
 #pragma pop
 
-/* 803D2AF0-803D2C18 0124+04 rc=1 efc=0 rfr=False None .data      @1710                                                        */
+/* 803D2AF0-803D2C18 0124+04 r=1 e=0 z=0  None .data      @1710                                                        */
 SECTION_DATA static void* lit_1710[73 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)__two_exp)+0x40),
 	/* 1    */ (void*)(((char*)__two_exp)+0x14DC),
@@ -175,7 +175,7 @@ SECTION_DATA static void* lit_1710[73 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8036367C-80364E00 1784+00 rc=2 efc=0 rfr=False None .text      __two_exp                                                    */
+/* 8036367C-80364E00 1784+00 r=2 e=0 z=0  None .text      __two_exp                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ extern "C" asm static void __two_exp() {
 #pragma pop
 
 
-/* 80364E00-80365078 0278+00 rc=2 efc=0 rfr=False None .text      __timesdec                                                   */
+/* 80364E00-80365078 0278+00 r=2 e=0 z=0  None .text      __timesdec                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

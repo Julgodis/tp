@@ -37,7 +37,7 @@ extern "C" void getFreeHandle__15JAISoundHandlesFv(); // 1
 // Declarations:
 // 
 
-/* 802A2C98-802A2CF4 005C+00 rc=1 efc=1 rfr=False None .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
+/* 802A2C98-802A2CF4 005C+00 r=1 e=1 z=0  None .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ asm void JAISoundHandles::getHandleSoundID(JAISoundID param_0) {
 #pragma pop
 
 
-/* 802A2CF4-802A2D34 0040+00 rc=2 efc=2 rfr=False None .text      getFreeHandle__15JAISoundHandlesFv                           */
+/* 802A2CF4-802A2D34 0040+00 r=2 e=2 z=0  None .text      getFreeHandle__15JAISoundHandlesFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

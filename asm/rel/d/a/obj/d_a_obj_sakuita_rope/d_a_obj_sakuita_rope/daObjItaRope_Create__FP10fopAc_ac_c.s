@@ -1,0 +1,73 @@
+lbl_80CC6738:
+/* 80CC6738 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80CC673C 00000004  7C 08 02 A6 */	mflr r0
+/* 80CC6740 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80CC6744 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80CC6748 00000010  93 C1 00 08 */	stw r30, 8(r1)
+/* 80CC674C 00000014  7C 7F 1B 78 */	mr r31, r3
+/* 80CC6750 00000018  80 03 04 A0 */	lwz r0, 0x4a0(r3)
+/* 80CC6754 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
+/* 80CC6758 00000020  40 82 00 60 */	bne lbl_80CC67B8
+/* 80CC675C 00000024  7F E0 FB 79 */	or. r0, r31, r31
+/* 80CC6760 00000028  41 82 00 4C */	beq lbl_80CC67AC
+/* 80CC6764 0000002C  7C 1E 03 78 */	mr r30, r0
+/* 80CC6768 00000030  4B FF EA B1 */	bl __ct__10fopAc_ac_cFv
+/* 80CC676C 00000034  3C 60 00 00 */	lis r3, __vt__18mDoExt_3DlineMat_c@ha /* 80CC69F0 */
+/* 80CC6770 00000038  38 03 00 00 */	addi r0, r3, __vt__18mDoExt_3DlineMat_c@l /* 80CC69F0 */
+/* 80CC6774 0000003C  90 1E 05 68 */	stw r0, 0x568(r30)
+/* 80CC6778 00000040  3C 60 00 00 */	lis r3, __vt__19mDoExt_3DlineMat1_c@ha /* 803A3248 */
+/* 80CC677C 00000044  38 03 00 00 */	addi r0, r3, __vt__19mDoExt_3DlineMat1_c@l /* 803A3248 */
+/* 80CC6780 00000048  90 1E 05 68 */	stw r0, 0x568(r30)
+/* 80CC6784 0000004C  3C 60 00 00 */	lis r3, __vt__9cCcD_Stts@ha /* 803C3728 */
+/* 80CC6788 00000050  38 03 00 00 */	addi r0, r3, __vt__9cCcD_Stts@l /* 803C3728 */
+/* 80CC678C 00000054  90 1E 05 F4 */	stw r0, 0x5f4(r30)
+/* 80CC6790 00000058  38 7E 05 F8 */	addi r3, r30, 0x5f8
+/* 80CC6794 0000005C  4B FF EA 85 */	bl __ct__10dCcD_GSttsFv
+/* 80CC6798 00000060  3C 60 00 00 */	lis r3, __vt__9dCcD_Stts@ha /* 803AC2E4 */
+/* 80CC679C 00000064  38 63 00 00 */	addi r3, r3, __vt__9dCcD_Stts@l /* 803AC2E4 */
+/* 80CC67A0 00000068  90 7E 05 F4 */	stw r3, 0x5f4(r30)
+/* 80CC67A4 0000006C  38 03 00 20 */	addi r0, r3, 0x20
+/* 80CC67A8 00000070  90 1E 05 F8 */	stw r0, 0x5f8(r30)
+lbl_80CC67AC:
+/* 80CC67AC 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
+/* 80CC67B0 00000004  60 00 00 08 */	ori r0, r0, 8
+/* 80CC67B4 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
+lbl_80CC67B8:
+/* 80CC67B8 00000000  38 7F 05 A4 */	addi r3, r31, 0x5a4
+/* 80CC67BC 00000004  3C 80 00 00 */	lis r4, l_arcName@ha /* 80CC6998 */
+/* 80CC67C0 00000008  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80CC6998 */
+/* 80CC67C4 0000000C  80 84 00 00 */	lwz r4, 0(r4)
+/* 80CC67C8 00000010  4B FF EA 51 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80CC67CC 00000014  7C 7E 1B 78 */	mr r30, r3
+/* 80CC67D0 00000018  2C 1E 00 04 */	cmpwi r30, 4
+/* 80CC67D4 0000001C  40 82 00 54 */	bne lbl_80CC6828
+/* 80CC67D8 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
+/* 80CC67DC 00000024  54 03 06 3E */	clrlwi r3, r0, 0x18
+/* 80CC67E0 00000028  38 03 00 02 */	addi r0, r3, 2
+/* 80CC67E4 0000002C  98 1F 06 35 */	stb r0, 0x635(r31)
+/* 80CC67E8 00000030  88 1F 06 35 */	lbz r0, 0x635(r31)
+/* 80CC67EC 00000034  28 00 00 03 */	cmplwi r0, 3
+/* 80CC67F0 00000038  40 80 00 0C */	bge lbl_80CC67FC
+/* 80CC67F4 0000003C  38 00 00 03 */	li r0, 3
+/* 80CC67F8 00000040  98 1F 06 35 */	stb r0, 0x635(r31)
+lbl_80CC67FC:
+/* 80CC67FC 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80CC6800 00000004  3C 80 00 00 */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha /* 80CC622C */
+/* 80CC6804 00000008  38 84 00 00 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l /* 80CC622C */
+/* 80CC6808 0000000C  38 A0 14 20 */	li r5, 0x1420
+/* 80CC680C 00000010  4B FF EA 0D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80CC6810 00000014  54 60 06 3F */	clrlwi. r0, r3, 0x18
+/* 80CC6814 00000018  40 82 00 0C */	bne lbl_80CC6820
+/* 80CC6818 0000001C  3B C0 00 05 */	li r30, 5
+/* 80CC681C 00000020  48 00 00 0C */	b lbl_80CC6828
+lbl_80CC6820:
+/* 80CC6820 00000000  7F E3 FB 78 */	mr r3, r31
+/* 80CC6824 00000004  4B FF EF C1 */	bl create_init__14daObjItaRope_cFv
+lbl_80CC6828:
+/* 80CC6828 00000000  7F C3 F3 78 */	mr r3, r30
+/* 80CC682C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80CC6830 00000008  83 C1 00 08 */	lwz r30, 8(r1)
+/* 80CC6834 0000000C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80CC6838 00000010  7C 08 03 A6 */	mtlr r0
+/* 80CC683C 00000014  38 21 00 10 */	addi r1, r1, 0x10
+/* 80CC6840 00000018  4E 80 00 20 */	blr 

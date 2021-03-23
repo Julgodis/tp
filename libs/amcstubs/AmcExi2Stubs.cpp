@@ -31,7 +31,7 @@ extern "C" void AMC_IsStub(); // 1
 // Declarations:
 // 
 
-/* 80372CFC-80372D00 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Init                                                    */
+/* 80372CFC-80372D00 0004+00 r=1 e=1 z=0  None .text      EXI2_Init                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +42,7 @@ extern "C" asm void EXI2_Init() {
 #pragma pop
 
 
-/* 80372D00-80372D04 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_EnableInterrupts                                        */
+/* 80372D00-80372D04 0004+00 r=1 e=1 z=0  None .text      EXI2_EnableInterrupts                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ extern "C" asm void EXI2_EnableInterrupts() {
 #pragma pop
 
 
-/* 80372D04-80372D0C 0008+00 rc=2 efc=2 rfr=False None .text      EXI2_Poll                                                    */
+/* 80372D04-80372D0C 0008+00 r=2 e=2 z=0  None .text      EXI2_Poll                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ extern "C" asm void EXI2_Poll() {
 #pragma pop
 
 
-/* 80372D0C-80372D14 0008+00 rc=2 efc=2 rfr=False None .text      EXI2_ReadN                                                   */
+/* 80372D0C-80372D14 0008+00 r=2 e=2 z=0  None .text      EXI2_ReadN                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +75,7 @@ extern "C" asm void EXI2_ReadN() {
 #pragma pop
 
 
-/* 80372D14-80372D1C 0008+00 rc=1 efc=1 rfr=False None .text      EXI2_WriteN                                                  */
+/* 80372D14-80372D1C 0008+00 r=1 e=1 z=0  None .text      EXI2_WriteN                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ extern "C" asm void EXI2_WriteN() {
 #pragma pop
 
 
-/* 80372D1C-80372D20 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Reserve                                                 */
+/* 80372D1C-80372D20 0004+00 r=1 e=1 z=0  None .text      EXI2_Reserve                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ extern "C" asm void EXI2_Reserve() {
 #pragma pop
 
 
-/* 80372D20-80372D24 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Unreserve                                               */
+/* 80372D20-80372D24 0004+00 r=1 e=1 z=0  None .text      EXI2_Unreserve                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ extern "C" asm void EXI2_Unreserve() {
 #pragma pop
 
 
-/* 80372D24-80372D2C 0008+00 rc=1 efc=1 rfr=False None .text      AMC_IsStub                                                   */
+/* 80372D24-80372D2C 0008+00 r=1 e=1 z=0  None .text      AMC_IsStub                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

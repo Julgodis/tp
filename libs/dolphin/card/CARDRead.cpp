@@ -38,7 +38,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 803584A0-80358658 01B8+00 rc=2 efc=1 rfr=False None .text      __CARDSeek                                                   */
+/* 803584A0-80358658 01B8+00 r=2 e=1 z=0  None .text      __CARDSeek                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +49,7 @@ extern "C" asm void __CARDSeek() {
 #pragma pop
 
 
-/* 80358658-80358788 0130+00 rc=1 efc=0 rfr=False None .text      ReadCallback                                                 */
+/* 80358658-80358788 0130+00 r=1 e=0 z=0  None .text      ReadCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ extern "C" asm static void ReadCallback() {
 #pragma pop
 
 
-/* 80358788-803588CC 0144+00 rc=1 efc=0 rfr=False None .text      CARDReadAsync                                                */
+/* 80358788-803588CC 0144+00 r=1 e=0 z=0  None .text      CARDReadAsync                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ extern "C" asm static void CARDReadAsync() {
 #pragma pop
 
 
-/* 803588CC-80358914 0048+00 rc=2 efc=2 rfr=False None .text      CARDRead                                                     */
+/* 803588CC-80358914 0048+00 r=2 e=2 z=0  None .text      CARDRead                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

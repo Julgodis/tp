@@ -29,7 +29,7 @@ extern "C" extern u8 __GDCurrentDL[4];
 // 
 
 /* ############################################################################################## */
-/* 803D2948-803D29B0 0068+00 rc=1 efc=0 rfr=False None .data      @121                                                         */
+/* 803D2948-803D29B0 0068+00 r=1 e=0 z=0  None .data      @121                                                         */
 SECTION_DATA static void* GDGeometry__lit_121[26] = {
 	/* 0    */ (void*)(((char*)GDSetVtxDescv)+0x78),
 	/* 1    */ (void*)(((char*)GDSetVtxDescv)+0x80),
@@ -59,7 +59,7 @@ SECTION_DATA static void* GDGeometry__lit_121[26] = {
 	/* 25   */ (void*)(((char*)GDSetVtxDescv)+0x13C),
 };
 
-/* 80361104-80361700 05FC+00 rc=2 efc=1 rfr=False None .text      GDSetVtxDescv                                                */
+/* 80361104-80361700 05FC+00 r=2 e=1 z=0  None .text      GDSetVtxDescv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void GDSetVtxDescv() {
 #pragma pop
 
 
-/* 80361700-8036190C 020C+00 rc=1 efc=1 rfr=False None .text      GDSetArray                                                   */
+/* 80361700-8036190C 020C+00 r=1 e=1 z=0  None .text      GDSetArray                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ extern "C" asm void GDSetArray() {
 #pragma pop
 
 
-/* 8036190C-80361B14 0208+00 rc=1 efc=1 rfr=False None .text      GDSetArrayRaw                                                */
+/* 8036190C-80361B14 0208+00 r=1 e=1 z=0  None .text      GDSetArrayRaw                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -29,7 +29,7 @@ extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 8033B078-8033B124 00AC+00 rc=1 efc=0 rfr=False None .text      DLInsert                                                     */
+/* 8033B078-8033B124 00AC+00 r=1 e=0 z=0  None .text      DLInsert                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,10 +41,10 @@ extern "C" asm static void DLInsert() {
 
 
 /* ############################################################################################## */
-/* 80451640-80451644 0004+00 rc=3 efc=0 rfr=False None .sbss      HeapArray                                                    */
+/* 80451640-80451644 0004+00 r=3 e=0 z=0  None .sbss      HeapArray                                                    */
 static u8 HeapArray[4];
 
-/* 8033B124-8033B1A0 007C+00 rc=1 efc=1 rfr=False None .text      OSFreeToHeap                                                 */
+/* 8033B124-8033B1A0 007C+00 r=1 e=1 z=0  None .text      OSFreeToHeap                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,14 +56,14 @@ extern "C" asm void OSFreeToHeap() {
 
 
 /* ############################################################################################## */
-/* 80450990-80450998 0004+04 rc=3 efc=1 rfr=False None .sdata     __OSCurrHeap                                                 */
+/* 80450990-80450998 0004+04 r=3 e=1 z=0  None .sdata     __OSCurrHeap                                                 */
 SECTION_SDATA u32 __OSCurrHeap[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 8033B1A0-8033B1B0 0010+00 rc=1 efc=1 rfr=False None .text      OSSetCurrentHeap                                             */
+/* 8033B1A0-8033B1B0 0010+00 r=1 e=1 z=0  None .text      OSSetCurrentHeap                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,16 +75,16 @@ extern "C" asm void OSSetCurrentHeap() {
 
 
 /* ############################################################################################## */
-/* 80451644-80451648 0004+00 rc=2 efc=0 rfr=False None .sbss      NumHeaps                                                     */
+/* 80451644-80451648 0004+00 r=2 e=0 z=0  None .sbss      NumHeaps                                                     */
 static u8 NumHeaps[4];
 
-/* 80451648-8045164C 0004+00 rc=1 efc=0 rfr=False None .sbss      ArenaStart                                                   */
+/* 80451648-8045164C 0004+00 r=1 e=0 z=0  None .sbss      ArenaStart                                                   */
 static u8 ArenaStart[4];
 
-/* 8045164C-80451650 0004+00 rc=1 efc=0 rfr=False None .sbss      ArenaEnd                                                     */
+/* 8045164C-80451650 0004+00 r=1 e=0 z=0  None .sbss      ArenaEnd                                                     */
 static u8 ArenaEnd[4];
 
-/* 8033B1B0-8033B220 0070+00 rc=2 efc=2 rfr=False None .text      OSInitAlloc                                                  */
+/* 8033B1B0-8033B220 0070+00 r=2 e=2 z=0  None .text      OSInitAlloc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ extern "C" asm void OSInitAlloc() {
 #pragma pop
 
 
-/* 8033B220-8033B28C 006C+00 rc=1 efc=1 rfr=False None .text      OSCreateHeap                                                 */
+/* 8033B220-8033B28C 006C+00 r=1 e=1 z=0  None .text      OSCreateHeap                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -45,22 +45,22 @@ extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804557D8-804557DC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @689                                                         */
+/* 804557D8-804557DC 0004+00 r=1 e=0 z=0  None .sdata2    @689                                                         */
 SECTION_SDATA2 static f32 lit_689 = 1.0f;
 
-/* 804557DC-804557E0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @690                                                         */
+/* 804557DC-804557E0 0004+00 r=1 e=0 z=0  None .sdata2    @690                                                         */
 SECTION_SDATA2 static u8 JAISoundChild__lit_690[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804557E0-804557E8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @691                                                         */
+/* 804557E0-804557E8 0004+04 r=1 e=0 z=0  None .sdata2    @691                                                         */
 SECTION_SDATA2 static f32 JAISoundChild__lit_691[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 802A2AB0-802A2B28 0078+00 rc=2 efc=2 rfr=False None .text      init__13JAISoundChildFv                                      */
+/* 802A2AB0-802A2B28 0078+00 r=2 e=2 z=0  None .text      init__13JAISoundChildFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void JAISoundChild::init() {
 #pragma pop
 
 
-/* 802A2B28-802A2B7C 0054+00 rc=1 efc=1 rfr=False None .text      mixOut__13JAISoundChildFP8JASTrack                           */
+/* 802A2B28-802A2B7C 0054+00 r=1 e=1 z=0  None .text      mixOut__13JAISoundChildFP8JASTrack                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm void JAISoundChild::mixOut(JASTrack* param_0) {
 #pragma pop
 
 
-/* 802A2B7C-802A2C98 011C+00 rc=2 efc=2 rfr=False None .text      calc__13JAISoundChildFv                                      */
+/* 802A2B7C-802A2C98 011C+00 r=2 e=2 z=0  None .text      calc__13JAISoundChildFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -41,6 +41,7 @@ class Section:
         default_factory=dict, repr=False)
     base_addr: int = None
     index: int = None
+    offset: int = None
 
     @property
     def start(self):
@@ -76,7 +77,7 @@ class Section:
             if addr < start or addr >= end:
                 continue
 
-            symbol = symbol_table[-1, relocation]
+            access_addr, symbol = symbol_table[-1, relocation, addr]
             symbols.add(symbol)
         return symbols
 

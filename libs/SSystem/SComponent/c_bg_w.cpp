@@ -42,7 +42,7 @@ extern "C" void cBgW_CheckBWall__Ff(); // 1
 // Declarations:
 // 
 
-/* 802681C0-802681C8 0008+00 rc=1 efc=1 rfr=False None .text      Regist__9cBgW_BgIdFi                                         */
+/* 802681C0-802681C8 0008+00 r=1 e=1 z=0  None .text      Regist__9cBgW_BgIdFi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ asm void cBgW_BgId::Regist(int param_0) {
 #pragma pop
 
 
-/* 802681C8-802681D4 000C+00 rc=2 efc=2 rfr=False None .text      Release__9cBgW_BgIdFv                                        */
+/* 802681C8-802681D4 000C+00 r=2 e=2 z=0  None .text      Release__9cBgW_BgIdFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void cBgW_BgId::Release() {
 #pragma pop
 
 
-/* 802681D4-802681E4 0010+00 rc=7 efc=7 rfr=False None .text      ChkUsed__9cBgW_BgIdCFv                                       */
+/* 802681D4-802681E4 0010+00 r=128 e=7 z=121  None .text      ChkUsed__9cBgW_BgIdCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,10 +76,10 @@ asm void cBgW_BgId::ChkUsed() const {
 
 
 /* ############################################################################################## */
-/* 804550E8-804550EC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2242                                                        */
+/* 804550E8-804550EC 0004+00 r=1 e=0 z=0  None .sdata2    @2242                                                        */
 SECTION_SDATA2 static f32 c_bg_w__lit_2242 = 0.5f;
 
-/* 802681E4-802681FC 0018+00 rc=23 efc=22 rfr=False None .text      cBgW_CheckBGround__Ff                                        */
+/* 802681E4-802681FC 0018+00 r=31 e=22 z=8  None .text      cBgW_CheckBGround__Ff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,10 +91,10 @@ asm void cBgW_CheckBGround(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 804550EC-804550F0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2249                                                        */
+/* 804550EC-804550F0 0004+00 r=1 e=0 z=0  None .sdata2    @2249                                                        */
 SECTION_SDATA2 static f32 lit_2249 = -4.0f / 5.0f;
 
-/* 802681FC-80268210 0014+00 rc=7 efc=6 rfr=False None .text      cBgW_CheckBRoof__Ff                                          */
+/* 802681FC-80268210 0014+00 r=7 e=6 z=0  None .text      cBgW_CheckBRoof__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void cBgW_CheckBRoof(f32 param_0) {
 #pragma pop
 
 
-/* 80268210-80268260 0050+00 rc=16 efc=16 rfr=False None .text      cBgW_CheckBWall__Ff                                          */
+/* 80268210-80268260 0050+00 r=20 e=16 z=4  None .text      cBgW_CheckBWall__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -56,15 +56,15 @@ extern "C" extern u32 __float_epsilon;
 // 
 
 /* ############################################################################################## */
-/* 80455468-8045546C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @488                                                         */
+/* 80455468-8045546C 0004+00 r=1 e=0 z=0  None .sdata2    @488                                                         */
 SECTION_SDATA2 static f32 jstudio_math__lit_488 = 0.01745329238474369f;
 
-/* 8045546C-80455470 0004+00 rc=2 efc=0 rfr=False None .sdata2    @489                                                         */
+/* 8045546C-80455470 0004+00 r=2 e=0 z=0  None .sdata2    @489                                                         */
 SECTION_SDATA2 static u8 jstudio_math__lit_489[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802859DC-80285B44 0168+00 rc=1 efc=0 rfr=False None .text      getRotation_xyz__Q27JStudio4mathFPA4_ffff                    */
+/* 802859DC-80285B44 0168+00 r=1 e=0 z=0  None .text      getRotation_xyz__Q27JStudio4mathFPA4_ffff                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +75,7 @@ asm void JStudio::math::getRotation_xyz(f32 (* param_0)[4], f32 param_1, f32 par
 #pragma pop
 
 
-/* 80285B44-80285BCC 0088+00 rc=2 efc=2 rfr=False None .text      getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec */
+/* 80285B44-80285BCC 0088+00 r=2 e=2 z=0  None .text      getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,31 +87,31 @@ asm void JStudio::math::getTransformation_SRxyzT(f32 (* param_0)[4], Vec const& 
 
 
 /* ############################################################################################## */
-/* 80455470-80455478 0008+00 rc=1 efc=0 rfr=False None .sdata2    @623                                                         */
+/* 80455470-80455478 0008+00 r=1 e=0 z=0  None .sdata2    @623                                                         */
 SECTION_SDATA2 static u8 lit_623[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455478-80455480 0008+00 rc=1 efc=0 rfr=False None .sdata2    @624                                                         */
+/* 80455478-80455480 0008+00 r=1 e=0 z=0  None .sdata2    @624                                                         */
 SECTION_SDATA2 static f64 lit_624 = 1.0;
 
-/* 80455480-80455488 0004+04 rc=1 efc=0 rfr=False None .sdata2    @625                                                         */
+/* 80455480-80455488 0004+04 r=1 e=0 z=0  None .sdata2    @625                                                         */
 SECTION_SDATA2 static f32 lit_625[1 + 1 /* padding */] = {
 	32.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455488-80455490 0008+00 rc=1 efc=0 rfr=False None .sdata2    @626                                                         */
+/* 80455488-80455490 0008+00 r=1 e=0 z=0  None .sdata2    @626                                                         */
 SECTION_SDATA2 static f64 jstudio_math__lit_626 = -1.5707963267948966;
 
-/* 80455490-80455498 0008+00 rc=1 efc=0 rfr=False None .sdata2    @627                                                         */
+/* 80455490-80455498 0008+00 r=1 e=0 z=0  None .sdata2    @627                                                         */
 SECTION_SDATA2 static f64 jstudio_math__lit_627 = 1.5707963267948966;
 
-/* 80455498-804554A0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @628                                                         */
+/* 80455498-804554A0 0008+00 r=1 e=0 z=0  None .sdata2    @628                                                         */
 SECTION_SDATA2 static f64 jstudio_math__lit_628 = 57.29577951308232;
 
-/* 80285BCC-80285E0C 0240+00 rc=2 efc=2 rfr=False None .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
+/* 80285BCC-80285E0C 0240+00 r=2 e=2 z=0  None .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

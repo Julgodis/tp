@@ -26,14 +26,14 @@ extern "C" void strncpy(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456668-80456670 0004+04 rc=1 efc=0 rfr=False None .sdata2    @74                                                          */
+/* 80456668-80456670 0004+04 r=1 e=0 z=0  None .sdata2    @74                                                          */
 SECTION_SDATA2 static u32 MSL_Common_Src_mbstring__lit_74[1 + 1 /* padding */] = {
 	0x0000C0E0,
 	/* padding */
 	0x00000000,
 };
 
-/* 80365F74-8036608C 0118+00 rc=1 efc=1 rfr=False None .text      wcstombs                                                     */
+/* 80365F74-8036608C 0118+00 r=1 e=1 z=0  None .text      wcstombs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

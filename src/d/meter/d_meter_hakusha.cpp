@@ -54,6 +54,9 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
+struct J2DPane {
+};
+
 struct JKRArchive {
 };
 
@@ -64,9 +67,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DPane {
 };
 
 struct JKRExpHeap {
@@ -142,14 +142,14 @@ extern "C" extern u8 g_meter2_info[248];
 // 
 
 /* ############################################################################################## */
-/* 803BF288-803BF2B8 0030+00 rc=1 efc=0 rfr=False None .data      haku_tag$3719                                                */
+/* 803BF288-803BF2B8 0030+00 r=1 e=0 z=0  None .data      haku_tag$3719                                                */
 SECTION_DATA static u8 data_803BF288[48] = {
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x30, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x31,
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x32, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x33,
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x34, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x35,
 };
 
-/* 803BF2B8-803BF2D8 0020+00 rc=2 efc=0 rfr=False None .data      __vt__15dMeterHakusha_c                                      */
+/* 803BF2B8-803BF2D8 0020+00 r=2 e=0 z=0  None .data      __vt__15dMeterHakusha_c                                      */
 SECTION_DATA static void* __vt__15dMeterHakusha_c[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -161,7 +161,7 @@ SECTION_DATA static void* __vt__15dMeterHakusha_c[8] = {
 	/* 7    */ (void*)isDead__11dMeterSub_cFv,
 };
 
-/* 8020C320-8020C384 0064+00 rc=1 efc=1 rfr=False None .text      __ct__15dMeterHakusha_cFPv                                   */
+/* 8020C320-8020C384 0064+00 r=1 e=1 z=0  None .text      __ct__15dMeterHakusha_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +172,7 @@ asm dMeterHakusha_c::dMeterHakusha_c(void* param_0) {
 #pragma pop
 
 
-/* 8020C384-8020C400 007C+00 rc=1 efc=0 rfr=False None .text      __dt__15dMeterHakusha_cFv                                    */
+/* 8020C384-8020C400 007C+00 r=1 e=0 z=0  None .text      __dt__15dMeterHakusha_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,29 +184,29 @@ asm dMeterHakusha_c::~dMeterHakusha_c() {
 
 
 /* ############################################################################################## */
-/* 803981B0-80398208 0055+03 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 803981B0-80398208 0055+03 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_803981B0 = 
+SECTION_DEAD char const* const stringBase_803981B0 = 
     "zelda_game_image_hakusha_parts.blo";
-SECTION_DEAD static char const* const stringBase_803981D3 = 
+SECTION_DEAD char const* const stringBase_803981D3 = 
     "zelda_game_image_hakusha_a_btn.blo";
-SECTION_DEAD static char const* const stringBase_803981F6 = "F_SP108";
-SECTION_DEAD static char const* const stringBase_803981FE = "F_SP00";
+SECTION_DEAD char const* const stringBase_803981F6 = "F_SP108";
+SECTION_DEAD char const* const stringBase_803981FE = "F_SP00";
 /* @stringBase0 padding */
 SECTION_DEAD static char const* const pad_80398205 = "\0\0";
 #pragma pop
 
-/* 80454800-80454804 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3793                                                        */
+/* 80454800-80454804 0004+00 r=6 e=0 z=0  None .sdata2    @3793                                                        */
 SECTION_SDATA2 static u8 d_meter_d_meter_hakusha__lit_3793[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454804-80454808 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3794                                                        */
+/* 80454804-80454808 0004+00 r=2 e=0 z=0  None .sdata2    @3794                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_3794 = 28.399999618530273f;
 
-/* 8020C400-8020C808 0408+00 rc=1 efc=0 rfr=False None .text      _create__15dMeterHakusha_cFv                                 */
+/* 8020C400-8020C808 0408+00 r=1 e=0 z=0  None .text      _create__15dMeterHakusha_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +217,7 @@ asm void dMeterHakusha_c::_create() {
 #pragma pop
 
 
-/* 8020C808-8020C850 0048+00 rc=1 efc=0 rfr=False None .text      _execute__15dMeterHakusha_cFUl                               */
+/* 8020C808-8020C850 0048+00 r=1 e=0 z=0  None .text      _execute__15dMeterHakusha_cFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm void dMeterHakusha_c::_execute(u32 param_0) {
 #pragma pop
 
 
-/* 8020C850-8020CABC 026C+00 rc=1 efc=0 rfr=False None .text      draw__15dMeterHakusha_cFv                                    */
+/* 8020C850-8020CABC 026C+00 r=1 e=0 z=0  None .text      draw__15dMeterHakusha_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,10 +240,10 @@ asm void dMeterHakusha_c::draw() {
 
 
 /* ############################################################################################## */
-/* 80454808-8045480C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3936                                                        */
+/* 80454808-8045480C 0004+00 r=3 e=0 z=0  None .sdata2    @3936                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_3936 = 1.0f;
 
-/* 8020CABC-8020CC58 019C+00 rc=1 efc=0 rfr=False None .text      _delete__15dMeterHakusha_cFv                                 */
+/* 8020CABC-8020CC58 019C+00 r=1 e=0 z=0  None .text      _delete__15dMeterHakusha_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +254,7 @@ asm void dMeterHakusha_c::_delete() {
 #pragma pop
 
 
-/* 8020CC58-8020CD6C 0114+00 rc=1 efc=0 rfr=False None .text      alphaAnimeHakusha__15dMeterHakusha_cFUl                      */
+/* 8020CC58-8020CD6C 0114+00 r=1 e=0 z=0  None .text      alphaAnimeHakusha__15dMeterHakusha_cFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,19 +266,19 @@ asm void dMeterHakusha_c::alphaAnimeHakusha(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 8045480C-80454810 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4094                                                        */
+/* 8045480C-80454810 0004+00 r=1 e=0 z=0  None .sdata2    @4094                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4094 = 18.0f;
 
-/* 80454810-80454814 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4095                                                        */
+/* 80454810-80454814 0004+00 r=1 e=0 z=0  None .sdata2    @4095                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4095 = 28.0f;
 
-/* 80454814-80454818 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4096                                                        */
+/* 80454814-80454818 0004+00 r=1 e=0 z=0  None .sdata2    @4096                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4096 = 20.0f;
 
-/* 80454818-80454820 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4098                                                        */
+/* 80454818-80454820 0008+00 r=1 e=0 z=0  None .sdata2    @4098                                                        */
 SECTION_SDATA2 static f64 d_meter_d_meter_hakusha__lit_4098 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8020CD6C-8020D258 04EC+00 rc=1 efc=0 rfr=False None .text      updateHakusha__15dMeterHakusha_cFv                           */
+/* 8020CD6C-8020D258 04EC+00 r=1 e=0 z=0  None .text      updateHakusha__15dMeterHakusha_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +289,7 @@ asm void dMeterHakusha_c::updateHakusha() {
 #pragma pop
 
 
-/* 8020D258-8020D308 00B0+00 rc=1 efc=0 rfr=False None .text      setAlphaHakushaAnimeMin__15dMeterHakusha_cFv                 */
+/* 8020D258-8020D308 00B0+00 r=1 e=0 z=0  None .text      setAlphaHakushaAnimeMin__15dMeterHakusha_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +300,7 @@ asm void dMeterHakusha_c::setAlphaHakushaAnimeMin() {
 #pragma pop
 
 
-/* 8020D308-8020D3B8 00B0+00 rc=1 efc=0 rfr=False None .text      setAlphaHakushaAnimeMax__15dMeterHakusha_cFv                 */
+/* 8020D308-8020D3B8 00B0+00 r=1 e=0 z=0  None .text      setAlphaHakushaAnimeMax__15dMeterHakusha_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,7 +311,7 @@ asm void dMeterHakusha_c::setAlphaHakushaAnimeMax() {
 #pragma pop
 
 
-/* 8020D3B8-8020D41C 0064+00 rc=1 efc=0 rfr=False None .text      setAlphaButtonAnimeMin__15dMeterHakusha_cFv                  */
+/* 8020D3B8-8020D41C 0064+00 r=1 e=0 z=0  None .text      setAlphaButtonAnimeMin__15dMeterHakusha_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ asm void dMeterHakusha_c::setAlphaButtonAnimeMin() {
 #pragma pop
 
 
-/* 8020D41C-8020D480 0064+00 rc=1 efc=0 rfr=False None .text      setAlphaButtonAnimeMax__15dMeterHakusha_cFv                  */
+/* 8020D41C-8020D480 0064+00 r=1 e=0 z=0  None .text      setAlphaButtonAnimeMax__15dMeterHakusha_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ asm void dMeterHakusha_c::setAlphaButtonAnimeMax() {
 #pragma pop
 
 
-/* 8020D480-8020D49C 001C+00 rc=2 efc=0 rfr=False None .text      getHakushaNum__15dMeterHakusha_cFv                           */
+/* 8020D480-8020D49C 001C+00 r=2 e=0 z=0  None .text      getHakushaNum__15dMeterHakusha_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

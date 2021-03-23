@@ -1,0 +1,38 @@
+lbl_80C52D70:
+/* 80C52D70 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80C52D74 00000004  7C 08 02 A6 */	mflr r0
+/* 80C52D78 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80C52D7C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
+/* 80C52D80 00000010  7C 7F 1B 78 */	mr r31, r3
+/* 80C52D84 00000014  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
+/* 80C52D88 00000018  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80C52D8C 0000001C  38 80 00 10 */	li r4, 0x10
+/* 80C52D90 00000020  38 BF 04 D0 */	addi r5, r31, 0x4d0
+/* 80C52D94 00000024  38 DF 01 0C */	addi r6, r31, 0x10c
+/* 80C52D98 00000028  4B FF F4 41 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80C52D9C 0000002C  38 7F 05 68 */	addi r3, r31, 0x568
+/* 80C52DA0 00000030  38 80 00 0F */	li r4, 0xf
+/* 80C52DA4 00000034  3C A0 00 00 */	lis r5, data_80C533D0@ha /* 80C533D0 */
+/* 80C52DA8 00000038  38 A5 00 00 */	addi r5, r5, data_80C533D0@l /* 80C533D0 */
+/* 80C52DAC 0000003C  38 DF 01 0C */	addi r6, r31, 0x10c
+/* 80C52DB0 00000040  4B FF F4 29 */	bl update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c
+/* 80C52DB4 00000044  38 7F 05 68 */	addi r3, r31, 0x568
+/* 80C52DB8 00000048  81 9F 05 68 */	lwz r12, 0x568(r31)
+/* 80C52DBC 0000004C  81 8C 00 08 */	lwz r12, 8(r12)
+/* 80C52DC0 00000050  7D 89 03 A6 */	mtctr r12
+/* 80C52DC4 00000054  4E 80 04 21 */	bctrl 
+/* 80C52DC8 00000058  1C 83 00 14 */	mulli r4, r3, 0x14
+/* 80C52DCC 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
+/* 80C52DD0 00000060  38 03 00 00 */	addi r0, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C52DD4 00000064  7C 60 22 14 */	add r3, r0, r4
+/* 80C52DD8 00000068  3C 63 00 01 */	addis r3, r3, 1
+/* 80C52DDC 0000006C  38 63 61 54 */	addi r3, r3, 0x6154
+/* 80C52DE0 00000070  38 63 5F 64 */	addi r3, r3, 0x5f64
+/* 80C52DE4 00000074  38 9F 05 68 */	addi r4, r31, 0x568
+/* 80C52DE8 00000078  4B FF F3 F1 */	bl setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
+/* 80C52DEC 0000007C  38 60 00 01 */	li r3, 1
+/* 80C52DF0 00000080  83 E1 00 0C */	lwz r31, 0xc(r1)
+/* 80C52DF4 00000084  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80C52DF8 00000088  7C 08 03 A6 */	mtlr r0
+/* 80C52DFC 0000008C  38 21 00 10 */	addi r1, r1, 0x10
+/* 80C52E00 00000090  4E 80 00 20 */	blr 

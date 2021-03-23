@@ -82,10 +82,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -190,7 +190,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8020D49C-8020D528 008C+00 rc=1 efc=0 rfr=False None .text      isEnableDispMap__11dMeterMap_cFv                             */
+/* 8020D49C-8020D528 008C+00 r=1 e=0 z=0  None .text      isEnableDispMap__11dMeterMap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ asm void dMeterMap_c::isEnableDispMap() {
 #pragma pop
 
 
-/* 8020D528-8020D650 0128+00 rc=3 efc=0 rfr=False None .text      getMapDispSizeTypeNo__11dMeterMap_cFv                        */
+/* 8020D528-8020D650 0128+00 r=3 e=0 z=0  None .text      getMapDispSizeTypeNo__11dMeterMap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +212,7 @@ asm void dMeterMap_c::getMapDispSizeTypeNo() {
 #pragma pop
 
 
-/* 8020D650-8020D690 0040+00 rc=8 efc=3 rfr=False None .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv         */
+/* 8020D650-8020D690 0040+00 r=8 e=3 z=0  None .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,14 +224,14 @@ asm void dMeterMap_c::isEnableDispMapAndMapDispSizeTypeNo() {
 
 
 /* ############################################################################################## */
-/* 80454820-80454828 0004+04 rc=1 efc=0 rfr=False None .sdata2    @4076                                                        */
+/* 80454820-80454828 0004+04 r=1 e=0 z=0  None .sdata2    @4076                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4076[1 + 1 /* padding */] = {
 	421.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8020D690-8020D698 0008+00 rc=2 efc=0 rfr=False None .text      getMapDispEdgeBottomY_Layout__11dMeterMap_cFv                */
+/* 8020D690-8020D698 0008+00 r=2 e=0 z=0  None .text      getMapDispEdgeBottomY_Layout__11dMeterMap_cFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +242,7 @@ asm void dMeterMap_c::getMapDispEdgeBottomY_Layout() {
 #pragma pop
 
 
-/* 8020D698-8020D72C 0094+00 rc=2 efc=0 rfr=False None .text      isEventRunCheck__11dMeterMap_cFv                             */
+/* 8020D698-8020D72C 0094+00 r=2 e=0 z=0  None .text      isEventRunCheck__11dMeterMap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,10 +254,10 @@ asm void dMeterMap_c::isEventRunCheck() {
 
 
 /* ############################################################################################## */
-/* 80454828-80454830 0008+00 rc=3 efc=0 rfr=False None .sdata2    @4100                                                        */
+/* 80454828-80454830 0008+00 r=3 e=0 z=0  None .sdata2    @4100                                                        */
 SECTION_SDATA2 static f64 d_meter_d_meter_map__lit_4100 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8020D72C-8020D75C 0030+00 rc=2 efc=0 rfr=False None .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv                  */
+/* 8020D72C-8020D75C 0030+00 r=2 e=0 z=0  None .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,18 +269,18 @@ asm void dMeterMap_c::getMapDispEdgeLeftX_Layout() {
 
 
 /* ############################################################################################## */
-/* 80454830-80454834 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4128                                                        */
+/* 80454830-80454834 0004+00 r=2 e=0 z=0  None .sdata2    @4128                                                        */
 SECTION_SDATA2 static u8 d_meter_d_meter_map__lit_4128[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454834-80454838 0004+00 rc=5 efc=0 rfr=False None .sdata2    @4129                                                        */
+/* 80454834-80454838 0004+00 r=5 e=0 z=0  None .sdata2    @4129                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4129 = 1.0f;
 
-/* 80454838-80454840 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4131                                                        */
+/* 80454838-80454840 0008+00 r=1 e=0 z=0  None .sdata2    @4131                                                        */
 SECTION_SDATA2 static f64 d_meter_d_meter_map__lit_4131 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8020D75C-8020D7E4 0088+00 rc=1 efc=1 rfr=False None .text      getMapDispEdgeTop__11dMeterMap_cFv                           */
+/* 8020D75C-8020D7E4 0088+00 r=1 e=1 z=0  None .text      getMapDispEdgeTop__11dMeterMap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void dMeterMap_c::getMapDispEdgeTop() {
 #pragma pop
 
 
-/* 8020D7E4-8020D7EC 0008+00 rc=2 efc=0 rfr=False None .text      getDispPosInside_OffsetX__11dMeterMap_cFv                    */
+/* 8020D7E4-8020D7EC 0008+00 r=2 e=0 z=0  None .text      getDispPosInside_OffsetX__11dMeterMap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,10 +303,10 @@ asm void dMeterMap_c::getDispPosInside_OffsetX() {
 
 
 /* ############################################################################################## */
-/* 80454840-80454844 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4159                                                        */
+/* 80454840-80454844 0004+00 r=1 e=0 z=0  None .sdata2    @4159                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4159 = -36.0f;
 
-/* 8020D7EC-8020D874 0088+00 rc=2 efc=0 rfr=False None .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv                   */
+/* 8020D7EC-8020D874 0088+00 r=2 e=0 z=0  None .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void dMeterMap_c::getDispPosOutSide_OffsetX() {
 #pragma pop
 
 
-/* 8020D874-8020D8BC 0048+00 rc=4 efc=2 rfr=False None .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv                   */
+/* 8020D874-8020D8BC 0048+00 r=4 e=2 z=0  None .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +328,7 @@ asm void dMeterMap_c::setDispPosInsideFlg_SE_On() {
 #pragma pop
 
 
-/* 8020D8BC-8020D8F8 003C+00 rc=3 efc=2 rfr=False None .text      setDispPosOutsideFlg_SE_On__11dMeterMap_cFv                  */
+/* 8020D8BC-8020D8F8 003C+00 r=3 e=2 z=0  None .text      setDispPosOutsideFlg_SE_On__11dMeterMap_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +339,7 @@ asm void dMeterMap_c::setDispPosOutsideFlg_SE_On() {
 #pragma pop
 
 
-/* 8020D8F8-8020D900 0008+00 rc=1 efc=1 rfr=False None .text      setMapAlpha__11dMeterMap_cFUc                                */
+/* 8020D8F8-8020D900 0008+00 r=1 e=1 z=0  None .text      setMapAlpha__11dMeterMap_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,7 +350,7 @@ asm void dMeterMap_c::setMapAlpha(u8 param_0) {
 #pragma pop
 
 
-/* 8020D900-8020D948 0048+00 rc=4 efc=1 rfr=False None .text      isMapOpenCheck__11dMeterMap_cFv                              */
+/* 8020D900-8020D948 0048+00 r=4 e=1 z=0  None .text      isMapOpenCheck__11dMeterMap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +362,7 @@ asm void dMeterMap_c::isMapOpenCheck() {
 
 
 /* ############################################################################################## */
-/* 803BF2D8-803BF2F8 0020+00 rc=1 efc=0 rfr=False None .data      @4516                                                        */
+/* 803BF2D8-803BF2F8 0020+00 r=1 e=0 z=0  None .data      @4516                                                        */
 SECTION_DATA static void* d_meter_d_meter_map__lit_4516[8] = {
 	/* 0    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
 	/* 1    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x184),
@@ -374,7 +374,7 @@ SECTION_DATA static void* d_meter_d_meter_map__lit_4516[8] = {
 	/* 7    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x190),
 };
 
-/* 803BF2F8-803BF308 0010+00 rc=2 efc=0 rfr=False None .data      __vt__11dMeterMap_c                                          */
+/* 803BF2F8-803BF308 0010+00 r=2 e=0 z=0  None .data      __vt__11dMeterMap_c                                          */
 SECTION_DATA static void* __vt__11dMeterMap_c[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -382,7 +382,7 @@ SECTION_DATA static void* __vt__11dMeterMap_c[4] = {
 	/* 3    */ (void*)__dt__11dMeterMap_cFv,
 };
 
-/* 8020D948-8020D990 0048+00 rc=1 efc=1 rfr=False None .text      __ct__11dMeterMap_cFP9J2DScreen                              */
+/* 8020D948-8020D990 0048+00 r=1 e=1 z=0  None .text      __ct__11dMeterMap_cFP9J2DScreen                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm dMeterMap_c::dMeterMap_c(J2DScreen* param_0) {
 #pragma pop
 
 
-/* 8020D990-8020D9EC 005C+00 rc=1 efc=0 rfr=False None .text      __dt__11dMeterMap_cFv                                        */
+/* 8020D990-8020D9EC 005C+00 r=1 e=0 z=0  None .text      __dt__11dMeterMap_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ asm dMeterMap_c::~dMeterMap_c() {
 #pragma pop
 
 
-/* 8020D9EC-8020DC50 0264+00 rc=1 efc=0 rfr=False None .text      _create__11dMeterMap_cFP9J2DScreen                           */
+/* 8020D9EC-8020DC50 0264+00 r=1 e=0 z=0  None .text      _create__11dMeterMap_cFP9J2DScreen                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +415,7 @@ asm void dMeterMap_c::_create(J2DScreen* param_0) {
 #pragma pop
 
 
-/* 8020DC50-8020DCE4 0094+00 rc=1 efc=0 rfr=False None .text      _delete__11dMeterMap_cFv                                     */
+/* 8020DC50-8020DCE4 0094+00 r=1 e=0 z=0  None .text      _delete__11dMeterMap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,14 +427,14 @@ asm void dMeterMap_c::_delete() {
 
 
 /* ############################################################################################## */
-/* 80398208-80398210 0008+00 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+/* 80398208-80398210 0008+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD static char const* const stringBase_80398208 = "F_SP115";
+SECTION_DEAD char const* const stringBase_80398208 = "F_SP115";
 #pragma pop
 
-/* 8020DCE4-8020DF1C 0238+00 rc=1 efc=1 rfr=False None .text      _move__11dMeterMap_cFUl                                      */
+/* 8020DCE4-8020DF1C 0238+00 r=1 e=1 z=0  None .text      _move__11dMeterMap_cFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +445,7 @@ asm void dMeterMap_c::_move(u32 param_0) {
 #pragma pop
 
 
-/* 8020DF1C-8020DF68 004C+00 rc=1 efc=1 rfr=False None .text      _draw__11dMeterMap_cFv                                       */
+/* 8020DF1C-8020DF68 004C+00 r=1 e=1 z=0  None .text      _draw__11dMeterMap_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +456,7 @@ asm void dMeterMap_c::_draw() {
 #pragma pop
 
 
-/* 8020DF68-8020E070 0108+00 rc=1 efc=0 rfr=False None .text      draw__11dMeterMap_cFv                                        */
+/* 8020DF68-8020E070 0108+00 r=1 e=0 z=0  None .text      draw__11dMeterMap_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,10 +468,10 @@ asm void dMeterMap_c::draw() {
 
 
 /* ############################################################################################## */
-/* 80454844-80454848 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4515                                                        */
+/* 80454844-80454848 0004+00 r=3 e=0 z=0  None .sdata2    @4515                                                        */
 SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4515 = -1.0f;
 
-/* 8020E070-8020E45C 03EC+00 rc=2 efc=0 rfr=False None .text      ctrlShowMap__11dMeterMap_cFv                                 */
+/* 8020E070-8020E45C 03EC+00 r=2 e=0 z=0  None .text      ctrlShowMap__11dMeterMap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,7 +482,7 @@ asm void dMeterMap_c::ctrlShowMap() {
 #pragma pop
 
 
-/* 8020E45C-8020E4C8 006C+00 rc=1 efc=0 rfr=False None .text      checkMoveStatus__11dMeterMap_cFv                             */
+/* 8020E45C-8020E4C8 006C+00 r=1 e=0 z=0  None .text      checkMoveStatus__11dMeterMap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +493,7 @@ asm void dMeterMap_c::checkMoveStatus() {
 #pragma pop
 
 
-/* 8020E4C8-8020E620 0158+00 rc=2 efc=0 rfr=False None .text      isShow__11dMeterMap_cFUl                                     */
+/* 8020E4C8-8020E620 0158+00 r=2 e=0 z=0  None .text      isShow__11dMeterMap_cFUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -504,7 +504,7 @@ asm void dMeterMap_c::isShow(u32 param_0) {
 #pragma pop
 
 
-/* 8020E620-8020E70C 00EC+00 rc=3 efc=0 rfr=False None .text      isFmapScreen__11dMeterMap_cFv                                */
+/* 8020E620-8020E70C 00EC+00 r=3 e=0 z=0  None .text      isFmapScreen__11dMeterMap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -515,7 +515,7 @@ asm void dMeterMap_c::isFmapScreen() {
 #pragma pop
 
 
-/* 8020E70C-8020E754 0048+00 rc=3 efc=0 rfr=False None .text      isDmapScreen__11dMeterMap_cFv                                */
+/* 8020E70C-8020E754 0048+00 r=3 e=0 z=0  None .text      isDmapScreen__11dMeterMap_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,7 +526,7 @@ asm void dMeterMap_c::isDmapScreen() {
 #pragma pop
 
 
-/* 8020E754-8020E9CC 0278+00 rc=1 efc=1 rfr=False None .text      meter_map_move__11dMeterMap_cFUl                             */
+/* 8020E754-8020E9CC 0278+00 r=1 e=1 z=0  None .text      meter_map_move__11dMeterMap_cFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,7 +537,7 @@ asm void dMeterMap_c::meter_map_move(u32 param_0) {
 #pragma pop
 
 
-/* 8020E9CC-8020ED60 0394+00 rc=1 efc=0 rfr=False None .text      keyCheck__11dMeterMap_cFv                                    */
+/* 8020E9CC-8020ED60 0394+00 r=1 e=0 z=0  None .text      keyCheck__11dMeterMap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

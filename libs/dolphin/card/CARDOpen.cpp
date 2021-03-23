@@ -35,7 +35,7 @@ extern "C" extern u8 struct_80450A70[8];
 // Declarations:
 // 
 
-/* 80357C74-80357CDC 0068+00 rc=2 efc=1 rfr=False None .text      __CARDCompareFileName                                        */
+/* 80357C74-80357CDC 0068+00 r=2 e=1 z=0  None .text      __CARDCompareFileName                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +46,7 @@ extern "C" asm void __CARDCompareFileName() {
 #pragma pop
 
 
-/* 80357CDC-80357D70 0094+00 rc=2 efc=0 rfr=False None .text      __CARDAccess                                                 */
+/* 80357CDC-80357D70 0094+00 r=2 e=0 z=0  None .text      __CARDAccess                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +57,7 @@ extern "C" asm static void __CARDAccess() {
 #pragma pop
 
 
-/* 80357D70-80357EA4 0134+00 rc=2 efc=2 rfr=False None .text      __CARDIsWritable                                             */
+/* 80357D70-80357EA4 0134+00 r=2 e=2 z=0  None .text      __CARDIsWritable                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm void __CARDIsWritable() {
 #pragma pop
 
 
-/* 80357EA4-80357F98 00F4+00 rc=2 efc=2 rfr=False None .text      __CARDIsReadable                                             */
+/* 80357EA4-80357F98 00F4+00 r=2 e=2 z=0  None .text      __CARDIsReadable                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ extern "C" asm void __CARDIsReadable() {
 #pragma pop
 
 
-/* 80357F98-803580B4 011C+00 rc=3 efc=3 rfr=False None .text      CARDOpen                                                     */
+/* 80357F98-803580B4 011C+00 r=3 e=3 z=0  None .text      CARDOpen                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ extern "C" asm void CARDOpen() {
 #pragma pop
 
 
-/* 803580B4-80358108 0054+00 rc=3 efc=3 rfr=False None .text      CARDClose                                                    */
+/* 803580B4-80358108 0054+00 r=3 e=3 z=0  None .text      CARDClose                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
