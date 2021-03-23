@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BE8F20[2];
+extern u8 data_80BE8F20[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_fireWood2_cpp(); // 1
 
 // 
 // Declarations:

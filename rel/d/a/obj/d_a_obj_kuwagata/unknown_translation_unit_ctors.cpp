@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C4D47C[2];
+extern u8 data_80C4D47C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_kuwagata_cpp(); // 1
 
 // 
 // Declarations:

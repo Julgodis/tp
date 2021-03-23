@@ -2,8 +2,8 @@ lbl_80CBD7B4:
 /* 80CBD7B4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80CBD7B8 00000004  7C 08 02 A6 */	mflr r0
 /* 80CBD7BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80CBD7C0 0000000C  3C 80 00 00 */	lis r4, lit_3631@ha /* 80CBDA5C */
-/* 80CBD7C4 00000010  38 84 00 00 */	addi r4, r4, lit_3631@l /* 80CBDA5C */
+/* 80CBD7C0 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CBD7C4 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CBD7C8 00000014  C0 E3 05 CC */	lfs f7, 0x5cc(r3)
 /* 80CBD7CC 00000018  C0 A3 05 C8 */	lfs f5, 0x5c8(r3)
 /* 80CBD7D0 0000001C  C0 83 05 C4 */	lfs f4, 0x5c4(r3)
@@ -17,7 +17,7 @@ lbl_80CBD7B4:
 /* 80CBD7F0 0000003C  C0 04 00 B4 */	lfs f0, 0xb4(r4)
 /* 80CBD7F4 00000040  EC A0 01 72 */	fmuls f5, f0, f5
 /* 80CBD7F8 00000044  EC C6 01 F2 */	fmuls f6, f6, f7
-/* 80CBD7FC 00000048  4B FF EE 3D */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80CBD7FC 00000048  4B FF EE 3D */	bl _unresolved
 /* 80CBD800 0000004C  38 60 00 04 */	li r3, 4
 /* 80CBD804 00000050  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CBD808 00000054  7C 08 03 A6 */	mtlr r0

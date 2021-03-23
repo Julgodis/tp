@@ -3,8 +3,8 @@ lbl_807F2BD4:
 /* 807F2BD8 00000004  7C 08 02 A6 */	mflr r0
 /* 807F2BDC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 807F2BE0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 807F2BE4 00000010  3C 60 00 00 */	lis r3, __global_destructor_chain@ha /* 807F7D60 */
-/* 807F2BE8 00000014  3B E3 00 00 */	addi r31, r3, __global_destructor_chain@l /* 807F7D60 */
+/* 807F2BE4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807F2BE8 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 807F2BEC 00000018  48 00 00 20 */	b lbl_807F2C0C
 lbl_807F2BF0:
 /* 807F2BF0 00000000  80 05 00 00 */	lwz r0, 0(r5)

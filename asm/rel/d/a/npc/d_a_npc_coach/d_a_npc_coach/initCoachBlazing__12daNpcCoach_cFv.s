@@ -9,19 +9,19 @@ lbl_809A46C4:
 /* 809A46E0 0000001C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 809A46E4 00000020  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 809A46E8 00000024  38 63 00 C0 */	addi r3, r3, 0xc0
-/* 809A46EC 00000028  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 809A46F0 0000002C  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l /* 803DD470 */
-/* 809A46F4 00000030  4B FF 8F C5 */	bl PSMTXCopy
-/* 809A46F8 00000034  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 809A46FC 00000038  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 809A46EC 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809A46F0 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809A46F4 00000030  4B FF 8F C5 */	bl _unresolved
+/* 809A46F8 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A46FC 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809A4700 0000003C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 809A4704 00000040  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 809A4708 00000044  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 809A470C 00000048  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 809A4710 0000004C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 809A4714 00000050  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 809A4718 00000054  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 809A471C 00000058  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 809A4718 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A471C 00000058  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 809A4720 0000005C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 809A4724 00000060  38 80 00 00 */	li r4, 0
 /* 809A4728 00000064  90 81 00 08 */	stw r4, 8(r1)
@@ -38,9 +38,9 @@ lbl_809A46C4:
 /* 809A4754 00000090  39 1E 1D 6A */	addi r8, r30, 0x1d6a
 /* 809A4758 00000094  39 20 00 00 */	li r9, 0
 /* 809A475C 00000098  39 40 00 FF */	li r10, 0xff
-/* 809A4760 0000009C  3D 60 00 00 */	lis r11, lit_5111@ha /* 809A502C */
-/* 809A4764 000000A0  C0 2B 00 00 */	lfs f1, lit_5111@l(r11) /* 809A502C */
-/* 809A4768 000000A4  4B FF 8F 51 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 809A4760 0000009C  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 809A4764 000000A0  C0 2B 00 00 */	lfs f1, 0x0000(r11)
+/* 809A4768 000000A4  4B FF 8F 51 */	bl _unresolved
 /* 809A476C 000000A8  90 7E 1B C8 */	stw r3, 0x1bc8(r30)
 /* 809A4770 000000AC  80 BE 1B C8 */	lwz r5, 0x1bc8(r30)
 /* 809A4774 000000B0  28 05 00 00 */	cmplwi r5, 0
@@ -51,16 +51,16 @@ lbl_809A46C4:
 /* 809A4788 000000C4  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 809A478C 000000C8  38 85 00 68 */	addi r4, r5, 0x68
 /* 809A4790 000000CC  38 A5 00 A4 */	addi r5, r5, 0xa4
-/* 809A4794 000000D0  4B FF 8F 25 */	bl func_802807E0
+/* 809A4794 000000D0  4B FF 8F 25 */	bl _unresolved
 /* 809A4798 000000D4  38 00 00 00 */	li r0, 0
 /* 809A479C 000000D8  80 7E 1B C8 */	lwz r3, 0x1bc8(r30)
 /* 809A47A0 000000DC  98 03 00 BB */	stb r0, 0xbb(r3)
-/* 809A47A4 000000E0  3C 60 00 00 */	lis r3, lit_4121@ha /* 809A4F70 */
-/* 809A47A8 000000E4  C0 03 00 00 */	lfs f0, lit_4121@l(r3) /* 809A4F70 */
+/* 809A47A4 000000E0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A47A8 000000E4  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 809A47AC 000000E8  80 7E 1B C8 */	lwz r3, 0x1bc8(r30)
 /* 809A47B0 000000EC  D0 03 00 28 */	stfs f0, 0x28(r3)
-/* 809A47B4 000000F0  3C 60 00 00 */	lis r3, mParticleTracePCB__13dPa_control_c@ha /* 80450EC8 */
-/* 809A47B8 000000F4  38 03 00 00 */	addi r0, r3, mParticleTracePCB__13dPa_control_c@l /* 80450EC8 */
+/* 809A47B4 000000F0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A47B8 000000F4  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809A47BC 000000F8  80 7E 1B C8 */	lwz r3, 0x1bc8(r30)
 /* 809A47C0 000000FC  90 03 00 F0 */	stw r0, 0xf0(r3)
 lbl_809A47C4:
@@ -80,9 +80,9 @@ lbl_809A47C4:
 /* 809A47F8 00000034  39 1E 1D 6A */	addi r8, r30, 0x1d6a
 /* 809A47FC 00000038  39 20 00 00 */	li r9, 0
 /* 809A4800 0000003C  39 40 00 FF */	li r10, 0xff
-/* 809A4804 00000040  3D 60 00 00 */	lis r11, lit_5111@ha /* 809A502C */
-/* 809A4808 00000044  C0 2B 00 00 */	lfs f1, lit_5111@l(r11) /* 809A502C */
-/* 809A480C 00000048  4B FF 8E AD */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 809A4804 00000040  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 809A4808 00000044  C0 2B 00 00 */	lfs f1, 0x0000(r11)
+/* 809A480C 00000048  4B FF 8E AD */	bl _unresolved
 /* 809A4810 0000004C  90 7E 1B CC */	stw r3, 0x1bcc(r30)
 /* 809A4814 00000050  80 BE 1B CC */	lwz r5, 0x1bcc(r30)
 /* 809A4818 00000054  28 05 00 00 */	cmplwi r5, 0
@@ -93,16 +93,16 @@ lbl_809A47C4:
 /* 809A482C 00000068  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 809A4830 0000006C  38 85 00 68 */	addi r4, r5, 0x68
 /* 809A4834 00000070  38 A5 00 A4 */	addi r5, r5, 0xa4
-/* 809A4838 00000074  4B FF 8E 81 */	bl func_802807E0
+/* 809A4838 00000074  4B FF 8E 81 */	bl _unresolved
 /* 809A483C 00000078  38 00 00 00 */	li r0, 0
 /* 809A4840 0000007C  80 7E 1B CC */	lwz r3, 0x1bcc(r30)
 /* 809A4844 00000080  98 03 00 BB */	stb r0, 0xbb(r3)
-/* 809A4848 00000084  3C 60 00 00 */	lis r3, lit_4121@ha /* 809A4F70 */
-/* 809A484C 00000088  C0 03 00 00 */	lfs f0, lit_4121@l(r3) /* 809A4F70 */
+/* 809A4848 00000084  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A484C 00000088  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 809A4850 0000008C  80 7E 1B CC */	lwz r3, 0x1bcc(r30)
 /* 809A4854 00000090  D0 03 00 28 */	stfs f0, 0x28(r3)
-/* 809A4858 00000094  3C 60 00 00 */	lis r3, mParticleTracePCB__13dPa_control_c@ha /* 80450EC8 */
-/* 809A485C 00000098  38 03 00 00 */	addi r0, r3, mParticleTracePCB__13dPa_control_c@l /* 80450EC8 */
+/* 809A4858 00000094  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809A485C 00000098  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809A4860 0000009C  80 7E 1B CC */	lwz r3, 0x1bcc(r30)
 /* 809A4864 000000A0  90 03 00 F0 */	stw r0, 0xf0(r3)
 lbl_809A4868:

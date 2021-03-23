@@ -269,7 +269,7 @@ extern "C" extern u8 sManager__17JUTConsoleManager[4];
 // 
 
 /* ############################################################################################## */
-/* 80373DE8-803740C0 02D8+00 r=7 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80373DE8-803740C0 02D8+00 s=7 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -318,34 +318,34 @@ SECTION_DEAD char const* const stringBase_8037409E =
     "/map/Final/Release/frameworkF.map";
 #pragma pop
 
-/* 80450BF0-80450BF4 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450BF0-80450BF4 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450BF0[4];
 
-/* 80450BF4-80450BF8 0004+00 r=1 e=0 z=0  None .sbss      solidHeapErrors                                              */
+/* 80450BF4-80450BF8 0004+00 s=1 e=0 z=0  None .sbss      solidHeapErrors                                              */
 static u8 solidHeapErrors[4];
 
-/* 80450BF8-80450BFC 0004+00 r=1 e=0 z=0  None .sbss      gameHeapErrors                                               */
+/* 80450BF8-80450BFC 0004+00 s=1 e=0 z=0  None .sbss      gameHeapErrors                                               */
 static u8 gameHeapErrors[4];
 
-/* 80450BFC-80450C00 0004+00 r=1 e=0 z=0  None .sbss      zeldaHeapErrors                                              */
+/* 80450BFC-80450C00 0004+00 s=1 e=0 z=0  None .sbss      zeldaHeapErrors                                              */
 static u8 zeldaHeapErrors[4];
 
-/* 80450C00-80450C04 0004+00 r=1 e=0 z=0  None .sbss      commandHeapErrors                                            */
+/* 80450C00-80450C04 0004+00 s=1 e=0 z=0  None .sbss      commandHeapErrors                                            */
 static u8 commandHeapErrors[4];
 
-/* 80450C04-80450C08 0004+00 r=1 e=0 z=0  None .sbss      archiveHeapErrors                                            */
+/* 80450C04-80450C08 0004+00 s=1 e=0 z=0  None .sbss      archiveHeapErrors                                            */
 static u8 archiveHeapErrors[4];
 
-/* 80450C08-80450C0C 0004+00 r=1 e=0 z=0  None .sbss      unknownHeapErrors                                            */
+/* 80450C08-80450C0C 0004+00 s=1 e=0 z=0  None .sbss      unknownHeapErrors                                            */
 static u8 unknownHeapErrors[4];
 
-/* 80450C0C-80450C10 0004+00 r=1 e=0 z=0  None .sbss      heapErrors                                                   */
+/* 80450C0C-80450C10 0004+00 s=1 e=0 z=0  None .sbss      heapErrors                                                   */
 static u8 heapErrors[4];
 
-/* 80450C10-80450C18 0008+00 r=2 e=0 z=0  None .sbss      None                                                         */
+/* 80450C10-80450C18 0008+00 s=2 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450C10[8];
 
-/* 8000B1EC-8000B3EC 0200+00 r=2 e=0 z=0  None .text      myGetHeapTypeByString__FP7JKRHeap                            */
+/* 8000B1EC-8000B3EC 0200+00 s=2 e=0 z=0  None .text      myGetHeapTypeByString__FP7JKRHeap                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ asm static void myGetHeapTypeByString(JKRHeap* param_0) {
 #pragma pop
 
 
-/* 8000B3EC-8000B5C8 01DC+00 r=1 e=0 z=0  None .text      myMemoryErrorRoutine__FPvUli                                 */
+/* 8000B3EC-8000B5C8 01DC+00 s=1 e=0 z=0  None .text      myMemoryErrorRoutine__FPvUli                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +367,7 @@ asm static void myMemoryErrorRoutine(void* param_0, u32 param_1, int param_2) {
 #pragma pop
 
 
-/* 8000B5C8-8000B668 00A0+00 r=1 e=0 z=0  None .text      myHeapCheckRecursive__FP7JKRHeap                             */
+/* 8000B5C8-8000B668 00A0+00 s=1 e=0 z=0  None .text      myHeapCheckRecursive__FP7JKRHeap                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +378,7 @@ asm static void myHeapCheckRecursive(JKRHeap* param_0) {
 #pragma pop
 
 
-/* 8000B668-8000B68C 0024+00 r=2 e=2 z=0  None .text      mDoMch_HeapCheckAll__Fv                                      */
+/* 8000B668-8000B68C 0024+00 s=0 e=2 z=0  None .text      mDoMch_HeapCheckAll__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +389,7 @@ asm void mDoMch_HeapCheckAll() {
 #pragma pop
 
 
-/* 8000B68C-8000B73C 00B0+00 r=1 e=0 z=0  None .text      developKeyCheck__FUlUl                                       */
+/* 8000B68C-8000B73C 00B0+00 s=1 e=0 z=0  None .text      developKeyCheck__FUlUl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +400,7 @@ asm static void developKeyCheck(u32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 8000B73C-8000B768 002C+00 r=1 e=0 z=0  None .text      mDoMch_IsProgressiveMode__Fv                                 */
+/* 8000B73C-8000B768 002C+00 s=1 e=0 z=0  None .text      mDoMch_IsProgressiveMode__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +411,7 @@ asm static void mDoMch_IsProgressiveMode() {
 #pragma pop
 
 
-/* 8000B768-8000B798 0030+00 r=2 e=0 z=0  None .text      exceptionReadPad__FPUlPUl                                    */
+/* 8000B768-8000B798 0030+00 s=2 e=0 z=0  None .text      exceptionReadPad__FPUlPUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +422,7 @@ asm static void exceptionReadPad(u32* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 8000B798-8000B7C8 0030+00 r=1 e=0 z=0  None .text      exceptionRestart__Fv                                         */
+/* 8000B798-8000B7C8 0030+00 s=1 e=0 z=0  None .text      exceptionRestart__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +433,7 @@ asm static void exceptionRestart() {
 #pragma pop
 
 
-/* 8000B7C8-8000B95C 0194+00 r=1 e=0 z=0  None .text      myExceptionCallback__FUsP9OSContextUlUl                      */
+/* 8000B7C8-8000B95C 0194+00 s=1 e=0 z=0  None .text      myExceptionCallback__FUsP9OSContextUlUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,13 +445,13 @@ asm static void myExceptionCallback(u16 param_0, OSContext* param_1, u32 param_2
 
 
 /* ############################################################################################## */
-/* 80451B00-80451B04 0004+00 r=1 e=0 z=0  None .sdata2    @3940                                                        */
+/* 80451B00-80451B04 0004+00 s=1 e=0 z=0  None .sdata2    @3940                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_machine__lit_3940 = 8.0f;
 
-/* 80451B04-80451B08 0004+00 r=1 e=0 z=0  None .sdata2    @3941                                                        */
+/* 80451B04-80451B08 0004+00 s=1 e=0 z=0  None .sdata2    @3941                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_machine__lit_3941 = 6.0f;
 
-/* 8000B95C-8000BCF4 0398+00 r=1 e=0 z=0  None .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
+/* 8000B95C-8000BCF4 0398+00 s=1 e=0 z=0  None .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +462,7 @@ asm static void fault_callback_scroll(u16 param_0, OSContext* param_1, u32 param
 #pragma pop
 
 
-/* 8000BCF4-8000BCF8 0004+00 r=1 e=0 z=0  None .text      my_PrintHeap__FPCcUl                                         */
+/* 8000BCF4-8000BCF8 0004+00 s=1 e=0 z=0  None .text      my_PrintHeap__FPCcUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +473,7 @@ asm static void my_PrintHeap(char const* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 8000BCF8-8000BD44 004C+00 r=1 e=0 z=0  None .text      my_SysPrintHeap__FPCcPvUl                                    */
+/* 8000BCF8-8000BD44 004C+00 s=1 e=0 z=0  None .text      my_SysPrintHeap__FPCcPvUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +485,7 @@ asm static void my_SysPrintHeap(char const* param_0, void* param_1, u32 param_2)
 
 
 /* ############################################################################################## */
-/* 803A2F60-803A2F9C 003C+00 r=1 e=0 z=0  None .data      g_ntscZeldaIntDf                                             */
+/* 803A2F60-803A2F9C 003C+00 s=1 e=0 z=0  None .data      g_ntscZeldaIntDf                                             */
 SECTION_DATA static u8 g_ntscZeldaIntDf[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -493,7 +493,7 @@ SECTION_DATA static u8 g_ntscZeldaIntDf[60] = {
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803A2F9C-803A2FD8 003C+00 r=2 e=1 z=0  None .data      g_ntscZeldaProg                                              */
+/* 803A2F9C-803A2FD8 003C+00 s=1 e=1 z=0  None .data      g_ntscZeldaProg                                              */
 SECTION_DATA u8 g_ntscZeldaProg[60] = {
 	0x00, 0x00, 0x00, 0x02, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -501,14 +501,14 @@ SECTION_DATA u8 g_ntscZeldaProg[60] = {
 	0x06, 0x06, 0x00, 0x00, 0x15, 0x16, 0x15, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804505A0-804505A8 0004+04 r=4 e=3 z=0  None .sdata     mRenderModeObj__15mDoMch_render_c                            */
+/* 804505A0-804505A8 0004+04 s=1 e=3 z=0  None .sdata     mRenderModeObj__15mDoMch_render_c                            */
 SECTION_SDATA void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */] = {
 	/* 0    */ (void*)&g_ntscZeldaIntDf,
 	/* padding */
 	NULL,
 };
 
-/* 8000BD44-8000C0CC 0388+00 r=2 e=2 z=0  None .text      mDoMch_Create__Fv                                            */
+/* 8000BD44-8000C0CC 0388+00 s=0 e=2 z=0  None .text      mDoMch_Create__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

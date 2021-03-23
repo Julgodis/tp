@@ -4,8 +4,8 @@ lbl_8059D3B4:
 /* 8059D3BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8059D3C0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8059D3C4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8059D3C8 00000014  3C 80 00 00 */	lis r4, M_attr__15daObjYobikusa_c@ha /* 8059DE7C */
-/* 8059D3CC 00000018  38 84 00 00 */	addi r4, r4, M_attr__15daObjYobikusa_c@l /* 8059DE7C */
+/* 8059D3C8 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059D3CC 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8059D3D0 0000001C  C0 24 00 5C */	lfs f1, 0x5c(r4)
 /* 8059D3D4 00000020  C0 03 07 40 */	lfs f0, 0x740(r3)
 /* 8059D3D8 00000024  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -20,10 +20,10 @@ lbl_8059D3B4:
 /* 8059D3FC 00000048  C0 04 00 30 */	lfs f0, 0x30(r4)
 /* 8059D400 0000004C  D0 1F 07 48 */	stfs f0, 0x748(r31)
 /* 8059D404 00000050  B0 1F 07 6A */	sth r0, 0x76a(r31)
-/* 8059D408 00000054  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8059D40C 00000058  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8059D408 00000054  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059D40C 00000058  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8059D410 0000005C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8059D414 00000060  4B FF F5 C5 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8059D414 00000060  4B FF F5 C5 */	bl _unresolved
 /* 8059D418 00000064  B0 7F 07 6C */	sth r3, 0x76c(r31)
 /* 8059D41C 00000068  A8 7F 07 6C */	lha r3, 0x76c(r31)
 /* 8059D420 0000006C  38 03 E0 00 */	addi r0, r3, -8192

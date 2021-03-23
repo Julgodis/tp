@@ -244,7 +244,7 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 803739A0-80373CB0 0310+00 r=8 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803739A0-80373CB0 0310+00 s=8 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -305,7 +305,7 @@ SECTION_DEAD char const* const stringBase_80373C9F = "Command";
 SECTION_DEAD char const* const stringBase_80373CA7 = "コマンド";
 #pragma pop
 
-/* 800056C0-80005728 0068+00 r=1 e=0 z=0  None .text      version_check__Fv                                            */
+/* 800056C0-80005728 0068+00 s=1 e=0 z=0  None .text      version_check__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +316,7 @@ asm static void version_check() {
 #pragma pop
 
 
-/* 80005728-8000578C 0064+00 r=1 e=0 z=0  None .text      CheckHeap1__9HeapCheckFv                                     */
+/* 80005728-8000578C 0064+00 s=1 e=0 z=0  None .text      CheckHeap1__9HeapCheckFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,31 +328,31 @@ asm void HeapCheck::CheckHeap1() {
 
 
 /* ############################################################################################## */
-/* 803D32E0-803D3308 0028+00 r=3 e=0 z=0  None .bss       RootHeapCheck                                                */
+/* 803D32E0-803D3308 0028+00 s=3 e=0 z=0  None .bss       RootHeapCheck                                                */
 extern "C" u8 RootHeapCheck[40];
 
-/* 803D3308-803D3330 0028+00 r=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
+/* 803D3308-803D3330 0028+00 s=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
 extern "C" u8 SystemHeapCheck[40];
 
-/* 803D3330-803D3358 0028+00 r=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
+/* 803D3330-803D3358 0028+00 s=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
 extern "C" u8 ZeldaHeapCheck[40];
 
-/* 803D3358-803D3380 0028+00 r=1 e=0 z=0  None .bss       GameHeapCheck                                                */
+/* 803D3358-803D3380 0028+00 s=1 e=0 z=0  None .bss       GameHeapCheck                                                */
 extern "C" u8 GameHeapCheck[40];
 
-/* 803D3380-803D33A8 0028+00 r=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
+/* 803D3380-803D33A8 0028+00 s=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
 extern "C" u8 ArchiveHeapCheck[40];
 
-/* 803D33A8-803D33D0 0028+00 r=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
+/* 803D33A8-803D33D0 0028+00 s=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
 extern "C" u8 J2dHeapCheck[40];
 
-/* 803D33D0-803D33F8 0028+00 r=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
+/* 803D33D0-803D33F8 0028+00 s=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
 extern "C" u8 HostioHeapCheck[40];
 
-/* 803D33F8-803D3420 0028+00 r=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
+/* 803D33F8-803D3420 0028+00 s=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
 extern "C" u8 CommandHeapCheck[40];
 
-/* 803A2EE0-803A2EF4 0012+02 r=3 e=1 z=0  None .data      COPYDATE_STRING__7mDoMain                                    */
+/* 803A2EE0-803A2EF4 0012+02 s=2 e=1 z=0  None .data      COPYDATE_STRING__7mDoMain                                    */
 SECTION_DATA u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */] = {
 	0x3F, 0x3F, 0x2F, 0x3F, 0x3F, 0x2F, 0x3F, 0x3F, 0x20, 0x3F, 0x3F, 0x3A, 0x3F, 0x3F, 0x3A, 0x3F,
 	0x3F, 0x00,
@@ -360,7 +360,7 @@ SECTION_DATA u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 803A2EF4-803A2F14 0020+00 r=1 e=0 z=0  None .data      HeapCheckTable                                               */
+/* 803A2EF4-803A2F14 0020+00 s=1 e=0 z=0  None .data      HeapCheckTable                                               */
 SECTION_DATA static void* HeapCheckTable[8] = {
 	/* 0    */ (void*)&RootHeapCheck,
 	/* 1    */ (void*)&SystemHeapCheck,
@@ -372,31 +372,31 @@ SECTION_DATA static void* HeapCheckTable[8] = {
 	/* 7    */ (void*)&CommandHeapCheck,
 };
 
-/* 803D32E0-803D3308 0028+00 r=3 e=0 z=0  None .bss       RootHeapCheck                                                */
+/* 803D32E0-803D3308 0028+00 s=3 e=0 z=0  None .bss       RootHeapCheck                                                */
 static u8 RootHeapCheck[40];
 
-/* 803D3308-803D3330 0028+00 r=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
+/* 803D3308-803D3330 0028+00 s=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
 static u8 SystemHeapCheck[40];
 
-/* 803D3330-803D3358 0028+00 r=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
+/* 803D3330-803D3358 0028+00 s=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
 static u8 ZeldaHeapCheck[40];
 
-/* 803D3358-803D3380 0028+00 r=1 e=0 z=0  None .bss       GameHeapCheck                                                */
+/* 803D3358-803D3380 0028+00 s=1 e=0 z=0  None .bss       GameHeapCheck                                                */
 static u8 GameHeapCheck[40];
 
-/* 803D3380-803D33A8 0028+00 r=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
+/* 803D3380-803D33A8 0028+00 s=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
 static u8 ArchiveHeapCheck[40];
 
-/* 803D33A8-803D33D0 0028+00 r=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
+/* 803D33A8-803D33D0 0028+00 s=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
 static u8 J2dHeapCheck[40];
 
-/* 803D33D0-803D33F8 0028+00 r=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
+/* 803D33D0-803D33F8 0028+00 s=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
 static u8 HostioHeapCheck[40];
 
-/* 803D33F8-803D3420 0028+00 r=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
+/* 803D33F8-803D3420 0028+00 s=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
 static u8 CommandHeapCheck[40];
 
-/* 8000578C-80005848 00BC+00 r=1 e=0 z=0  None .text      CheckHeap__FUl                                               */
+/* 8000578C-80005848 00BC+00 s=1 e=0 z=0  None .text      CheckHeap__FUl                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -407,7 +407,7 @@ asm static void CheckHeap(u32 param_0) {
 #pragma pop
 
 
-/* 80005848-800058A0 0058+00 r=2 e=0 z=0  None .text      countUsed__FP10JKRExpHeap                                    */
+/* 80005848-800058A0 0058+00 s=2 e=0 z=0  None .text      countUsed__FP10JKRExpHeap                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,7 +418,7 @@ asm static void countUsed(JKRExpHeap* param_0) {
 #pragma pop
 
 
-/* 800058A0-800058C4 0024+00 r=2 e=0 z=0  None .text      getUsedCount__9HeapCheckCFv                                  */
+/* 800058A0-800058C4 0024+00 s=2 e=0 z=0  None .text      getUsedCount__9HeapCheckCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,7 +429,7 @@ asm void HeapCheck::getUsedCount() const {
 #pragma pop
 
 
-/* 800058C4-80005AD8 0214+00 r=1 e=0 z=0  None .text      heapDisplay__9HeapCheckCFv                                   */
+/* 800058C4-80005AD8 0214+00 s=1 e=0 z=0  None .text      heapDisplay__9HeapCheckCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,36 +441,36 @@ asm void HeapCheck::heapDisplay() const {
 
 
 /* ############################################################################################## */
-/* 80450580-80450584 0004+00 r=9 e=6 z=0  None .sdata     None                                                         */
+/* 80450580-80450584 0004+00 s=3 e=6 z=0  None .sdata     None                                                         */
 SECTION_SDATA u32 data_80450580 = 0xFF000000;
 
-/* 80450584-80450588 0004+00 r=1 e=1 z=0  None .sdata     memMargin__7mDoMain                                          */
+/* 80450584-80450588 0004+00 s=0 e=1 z=0  None .sdata     memMargin__7mDoMain                                          */
 SECTION_SDATA u32 memMargin__7mDoMain = 0xFFFFFFFF;
 
-/* 80450588-80450590 0008+00 r=2 e=0 z=0  None .sdata     None                                                         */
+/* 80450588-80450590 0008+00 s=2 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 data_80450588[8] = {
 	0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450B00-80450B08 0008+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450B00-80450B08 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B00[8];
 
-/* 80450B08-80450B0C 0004+00 r=2 e=1 z=0  None .sbss      sPowerOnTime__7mDoMain                                       */
+/* 80450B08-80450B0C 0004+00 s=1 e=1 z=0  None .sbss      sPowerOnTime__7mDoMain                                       */
 u8 sPowerOnTime__7mDoMain[4];
 
-/* 80450B0C-80450B10 0004+00 r=2 e=1 z=0  None .sbss      None                                                         */
+/* 80450B0C-80450B10 0004+00 s=1 e=1 z=0  None .sbss      None                                                         */
 u8 data_80450B0C[4];
 
-/* 80450B10-80450B14 0004+00 r=2 e=2 z=0  None .sbss      sHungUpTime__7mDoMain                                        */
+/* 80450B10-80450B14 0004+00 s=0 e=2 z=0  None .sbss      sHungUpTime__7mDoMain                                        */
 u8 sHungUpTime__7mDoMain[4];
 
-/* 80450B14-80450B18 0004+00 r=2 e=2 z=0  None .sbss      None                                                         */
+/* 80450B14-80450B18 0004+00 s=0 e=2 z=0  None .sbss      None                                                         */
 u8 data_80450B14[4];
 
-/* 80450B18-80450B1C 0004+00 r=3 e=0 z=0  None .sbss      None                                                         */
+/* 80450B18-80450B1C 0004+00 s=3 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450B18[4];
 
-/* 80005AD8-80005D4C 0274+00 r=1 e=0 z=0  None .text      debugDisplay__Fv                                             */
+/* 80005AD8-80005D4C 0274+00 s=1 e=0 z=0  None .text      debugDisplay__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,49 +482,49 @@ asm static void debugDisplay() {
 
 
 /* ############################################################################################## */
-/* 80450B1C-80450B20 0004+00 r=1 e=0 z=0  None .sbss      console_position_x$3776                                      */
+/* 80450B1C-80450B20 0004+00 s=1 e=0 z=0  None .sbss      console_position_x$3776                                      */
 static f32 data_80450B1C;
 
-/* 80450B20-80450B24 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450B20-80450B24 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B20[4];
 
-/* 80450B24-80450B28 0004+00 r=1 e=0 z=0  None .sbss      console_position_y$3779                                      */
+/* 80450B24-80450B28 0004+00 s=1 e=0 z=0  None .sbss      console_position_y$3779                                      */
 static f32 data_80450B24;
 
-/* 80450B28-80450B2C 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450B28-80450B2C 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B28[4];
 
-/* 80450B2C-80450B30 0004+00 r=1 e=0 z=0  None .sbss      console_scroll$3782                                          */
+/* 80450B2C-80450B30 0004+00 s=1 e=0 z=0  None .sbss      console_scroll$3782                                          */
 static u8 data_80450B2C[4];
 
-/* 80450B30-80450B34 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450B30-80450B34 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450B30[4];
 
-/* 80451A00-80451A04 0004+00 r=1 e=0 z=0  None .sdata2    @3884                                                        */
+/* 80451A00-80451A04 0004+00 s=1 e=0 z=0  None .sdata2    @3884                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3884 = 20.0f;
 
-/* 80451A04-80451A08 0004+00 r=1 e=0 z=0  None .sdata2    @3885                                                        */
+/* 80451A04-80451A08 0004+00 s=1 e=0 z=0  None .sdata2    @3885                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3885 = 30.0f;
 
-/* 80451A08-80451A0C 0004+00 r=1 e=0 z=0  None .sdata2    @3886                                                        */
+/* 80451A08-80451A0C 0004+00 s=1 e=0 z=0  None .sdata2    @3886                                                        */
 SECTION_SDATA2 static u8 m_Do_m_Do_main__lit_3886[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A0C-80451A10 0004+00 r=1 e=0 z=0  None .sdata2    @3887                                                        */
+/* 80451A0C-80451A10 0004+00 s=1 e=0 z=0  None .sdata2    @3887                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3887 = 1.0f;
 
-/* 80451A10-80451A18 0004+04 r=1 e=0 z=0  None .sdata2    @3888                                                        */
+/* 80451A10-80451A18 0004+04 s=1 e=0 z=0  None .sdata2    @3888                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3888[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451A18-80451A20 0008+00 r=1 e=0 z=0  None .sdata2    @3890                                                        */
+/* 80451A18-80451A20 0008+00 s=1 e=0 z=0  None .sdata2    @3890                                                        */
 SECTION_SDATA2 static f64 m_Do_m_Do_main__lit_3890 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80005D4C-8000614C 0400+00 r=1 e=0 z=0  None .text      Debug_console__FUl                                           */
+/* 80005D4C-8000614C 0400+00 s=1 e=0 z=0  None .text      Debug_console__FUl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -535,7 +535,7 @@ asm static void Debug_console(u32 param_0) {
 #pragma pop
 
 
-/* 8000614C-800061C8 007C+00 r=1 e=0 z=0  None .text      LOAD_COPYDATE__FPv                                           */
+/* 8000614C-800061C8 007C+00 s=1 e=0 z=0  None .text      LOAD_COPYDATE__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -546,7 +546,7 @@ asm static void LOAD_COPYDATE(void* param_0) {
 #pragma pop
 
 
-/* 800061C8-8000628C 00C4+00 r=1 e=0 z=0  None .text      debug__Fv                                                    */
+/* 800061C8-8000628C 00C4+00 s=1 e=0 z=0  None .text      debug__Fv                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -558,10 +558,10 @@ asm static void debug() {
 
 
 /* ############################################################################################## */
-/* 80450B34-80450B38 0004+00 r=1 e=0 z=0  None .sbss      frame$3939                                                   */
+/* 80450B34-80450B38 0004+00 s=1 e=0 z=0  None .sbss      frame$3939                                                   */
 static u8 data_80450B34[4];
 
-/* 8000628C-80006454 01C8+00 r=1 e=0 z=0  None .text      main01__Fv                                                   */
+/* 8000628C-80006454 01C8+00 s=1 e=0 z=0  None .text      main01__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,13 +573,13 @@ asm static void main01() {
 
 
 /* ############################################################################################## */
-/* 803D3420-803DB420 8000+00 r=1 e=0 z=0  None .bss       mainThreadStack                                              */
+/* 803D3420-803DB420 8000+00 s=1 e=0 z=0  None .bss       mainThreadStack                                              */
 static u8 mainThreadStack[32768];
 
-/* 803DB420-803DB740 0318+08 r=1 e=0 z=0  None .bss       mainThread                                                   */
+/* 803DB420-803DB740 0318+08 s=1 e=0 z=0  None .bss       mainThread                                                   */
 static u8 mainThread[792 + 8 /* padding */];
 
-/* 80006454-800065D8 0184+00 r=1 e=1 z=0  None .text      main                                                         */
+/* 80006454-800065D8 0184+00 s=0 e=1 z=0  None .text      main                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -590,7 +590,7 @@ extern "C" asm void main() {
 #pragma pop
 
 
-/* 800065D8-800065E0 0008+00 r=2 e=2 z=0  None .text      dump_sort__7JKRHeapFv                                        */
+/* 800065D8-800065E0 0008+00 s=0 e=2 z=0  None .text      dump_sort__7JKRHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -601,7 +601,7 @@ asm void JKRHeap::dump_sort() {
 #pragma pop
 
 
-/* 800065E0-80006798 01B8+00 r=1 e=1 z=0  None .text      __sinit_m_Do_main_cpp                                        */
+/* 800065E0-80006798 01B8+00 s=0 e=1 z=0  None .text      __sinit_m_Do_main_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -613,7 +613,7 @@ extern "C" asm void __sinit_m_Do_main_cpp() {
 
 
 /* ############################################################################################## */
-/* 803A2F14-803A2F28 0014+00 r=0 e=0 z=0  None .data      desc1$3717                                                   */
+/* 803A2F14-803A2F28 0014+00 s=0 e=0 z=0  None .data      desc1$3717                                                   */
 SECTION_DATA void* data_803A2F14[5] = {
 	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
 	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
@@ -622,7 +622,7 @@ SECTION_DATA void* data_803A2F14[5] = {
 	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
 };
 
-/* 803A2F28-803A2F40 0014+04 r=0 e=0 z=0  None .data      desc2$3718                                                   */
+/* 803A2F28-803A2F40 0014+04 s=0 e=0 z=0  None .data      desc2$3718                                                   */
 SECTION_DATA void* data_803A2F28[5 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
 	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
@@ -633,78 +633,78 @@ SECTION_DATA void* data_803A2F28[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80450B38-80450B3C 0004+00 r=2 e=2 z=0  None .sbss      sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
+/* 80450B38-80450B3C 0004+00 s=0 e=2 z=0  None .sbss      sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
 u8 data_80450B38[4];
 
-/* 80450B3C-80450B40 0004+00 r=6 e=6 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
+/* 80450B3C-80450B40 0004+00 s=0 e=6 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
 u8 data_80450B3C[4];
 
-/* 80450B40-80450B44 0004+00 r=6 e=6 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
+/* 80450B40-80450B44 0004+00 s=0 e=6 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
 u8 data_80450B40[4];
 
-/* 80450B44-80450B48 0004+00 r=18 e=18 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2Audience>                 */
+/* 80450B44-80450B48 0004+00 s=0 e=18 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2Audience>                 */
 u8 data_80450B44[4];
 
-/* 80450B48-80450B4C 0004+00 r=17 e=17 z=0  None .sbss      sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
+/* 80450B48-80450B4C 0004+00 s=0 e=17 z=0  None .sbss      sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
 u8 data_80450B48[4];
 
-/* 80450B4C-80450B50 0004+00 r=10 e=10 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
+/* 80450B4C-80450B50 0004+00 s=0 e=10 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
 u8 data_80450B4C[4];
 
-/* 80450B50-80450B54 0004+00 r=5 e=5 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
+/* 80450B50-80450B54 0004+00 s=0 e=5 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
 u8 data_80450B50[4];
 
-/* 80450B54-80450B58 0004+00 r=2 e=2 z=0  None .sbss      sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
+/* 80450B54-80450B58 0004+00 s=0 e=2 z=0  None .sbss      sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
 u8 data_80450B54[4];
 
-/* 80450B58-80450B5C 0004+00 r=12 e=12 z=0  None .sbss      sInstance__34JASGlobalInstance<13JAUSoundTable>              */
+/* 80450B58-80450B5C 0004+00 s=0 e=12 z=0  None .sbss      sInstance__34JASGlobalInstance<13JAUSoundTable>              */
 u8 data_80450B58[4];
 
-/* 80450B5C-80450B60 0004+00 r=6 e=6 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAISoundInfo>               */
+/* 80450B5C-80450B60 0004+00 s=0 e=6 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAISoundInfo>               */
 u8 data_80450B5C[4];
 
-/* 80450B60-80450B64 0004+00 r=29 e=29 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
+/* 80450B60-80450B64 0004+00 s=0 e=29 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
 u8 data_80450B60[4];
 
-/* 80450B64-80450B68 0004+00 r=2 e=2 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
+/* 80450B64-80450B68 0004+00 s=0 e=2 z=0  None .sbss      sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
 u8 data_80450B64[4];
 
-/* 80450B68-80450B6C 0004+00 r=3 e=3 z=0  None .sbss      sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
+/* 80450B68-80450B6C 0004+00 s=0 e=3 z=0  None .sbss      sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
 u8 data_80450B68[4];
 
-/* 80450B6C-80450B70 0004+00 r=4 e=4 z=0  None .sbss      sInstance__28JASGlobalInstance<8JAISeMgr>                    */
+/* 80450B6C-80450B70 0004+00 s=0 e=4 z=0  None .sbss      sInstance__28JASGlobalInstance<8JAISeMgr>                    */
 u8 data_80450B6C[4];
 
-/* 80450B70-80450B74 0004+00 r=9 e=9 z=0  None .sbss      sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
+/* 80450B70-80450B74 0004+00 s=0 e=9 z=0  None .sbss      sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
 u8 data_80450B70[4];
 
-/* 80450B74-80450B78 0004+00 r=22 e=22 z=0  None .sbss      sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
+/* 80450B74-80450B78 0004+00 s=0 e=22 z=0  None .sbss      sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
 u8 data_80450B74[4];
 
-/* 80450B78-80450B7C 0004+00 r=2 e=2 z=0  None .sbss      sInstance__36JASGlobalInstance<15JAISoundStarter>            */
+/* 80450B78-80450B7C 0004+00 s=0 e=2 z=0  None .sbss      sInstance__36JASGlobalInstance<15JAISoundStarter>            */
 u8 data_80450B78[4];
 
-/* 80450B7C-80450B80 0004+00 r=34 e=34 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
+/* 80450B7C-80450B80 0004+00 s=0 e=34 z=0  None .sbss      sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
 u8 data_80450B7C[4];
 
-/* 80450B80-80450B84 0004+00 r=46 e=46 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
+/* 80450B80-80450B84 0004+00 s=0 e=46 z=0  None .sbss      sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
 u8 data_80450B80[4];
 
-/* 80450B84-80450B88 0004+00 r=38 e=38 z=0  None .sbss      sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
+/* 80450B84-80450B88 0004+00 s=0 e=38 z=0  None .sbss      sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
 u8 data_80450B84[4];
 
-/* 80450B88-80450B8C 0004+00 r=25 e=25 z=0  None .sbss      sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
+/* 80450B88-80450B8C 0004+00 s=0 e=25 z=0  None .sbss      sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
 u8 data_80450B88[4];
 
-/* 80450B8C-80450B90 0004+00 r=6 e=6 z=0  None .sbss      sInstance__35JASGlobalInstance<14JASAudioThread>             */
+/* 80450B8C-80450B90 0004+00 s=0 e=6 z=0  None .sbss      sInstance__35JASGlobalInstance<14JASAudioThread>             */
 u8 data_80450B8C[4];
 
-/* 80450B90-80450B98 0004+04 r=4 e=4 z=0  None .sbss      sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
+/* 80450B90-80450B98 0004+04 s=0 e=4 z=0  None .sbss      sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
 u8 data_80450B90[4 + 4 /* padding */];
 
-/* 80450B98-80450B9C 0004+00 r=6 e=6 z=0  None .sbss      None                                                         */
+/* 80450B98-80450B9C 0004+00 s=0 e=6 z=0  None .sbss      None                                                         */
 u8 struct_80450B98[4];
 
-/* 80450B9C-80450BA0 0004+00 r=3 e=3 z=0  None .sbss      None                                                         */
+/* 80450B9C-80450BA0 0004+00 s=0 e=3 z=0  None .sbss      None                                                         */
 u8 data_80450B9C[4];
 

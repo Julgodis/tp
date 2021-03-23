@@ -3,18 +3,18 @@ lbl_80A94CAC:
 /* 80A94CB0 00000004  7C 08 02 A6 */	mflr r0
 /* 80A94CB4 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A94CB8 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A94CBC 00000010  4B FF E0 1D */	bl _savegpr_28
+/* 80A94CBC 00000010  4B FF E0 1D */	bl _unresolved
 /* 80A94CC0 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 80A94CC4 00000018  7C 9D 23 78 */	mr r29, r4
-/* 80A94CC8 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A94CCC 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A94CC8 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A94CCC 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A94CD0 00000024  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80A94CD4 00000028  7F C3 F3 78 */	mr r3, r30
-/* 80A94CD8 0000002C  3C A0 00 00 */	lis r5, struct_80A96B60+0x0@ha /* 80A96B60 */
-/* 80A94CDC 00000030  38 A5 00 00 */	addi r5, r5, struct_80A96B60+0x0@l /* 80A96B60 */
+/* 80A94CD8 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80A94CDC 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80A94CE0 00000034  38 A5 00 D8 */	addi r5, r5, 0xd8
 /* 80A94CE4 00000038  38 C0 00 03 */	li r6, 3
-/* 80A94CE8 0000003C  4B FF DF F1 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
+/* 80A94CE8 0000003C  4B FF DF F1 */	bl _unresolved
 /* 80A94CEC 00000040  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80A94CF0 00000044  40 82 00 0C */	bne lbl_80A94CFC
 /* 80A94CF4 00000048  38 60 00 01 */	li r3, 1
@@ -22,7 +22,7 @@ lbl_80A94CAC:
 lbl_80A94CFC:
 /* 80A94CFC 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80A94D00 00000004  7F A4 EB 78 */	mr r4, r29
-/* 80A94D04 00000008  4B FF DF D5 */	bl getIsAddvance__16dEvent_manager_cFi
+/* 80A94D04 00000008  4B FF DF D5 */	bl _unresolved
 /* 80A94D08 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A94D0C 00000010  41 82 00 10 */	beq lbl_80A94D1C
 /* 80A94D10 00000014  7F 83 E3 78 */	mr r3, r28
@@ -34,7 +34,7 @@ lbl_80A94D1C:
 /* 80A94D24 00000008  48 00 01 15 */	bl _cutTutrialClear_Main__18daNpc_Pachi_Besu_cFRCi
 lbl_80A94D28:
 /* 80A94D28 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A94D2C 00000004  4B FF DF AD */	bl _restgpr_28
+/* 80A94D2C 00000004  4B FF DF AD */	bl _unresolved
 /* 80A94D30 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A94D34 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80A94D38 00000010  38 21 00 20 */	addi r1, r1, 0x20

@@ -25,7 +25,7 @@ extern "C" void setInitEventBit__Fv(); // 1
 // Declarations:
 // 
 
-/* 80035C88-80035C8C 0004+00 r=1 e=1 z=0  None .text      setInitEventBit__Fv                                          */
+/* 80035C88-80035C8C 0004+00 s=0 e=1 z=0  None .text      setInitEventBit__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -16,17 +16,17 @@ lbl_80B7B91C:
 /* 80B7B954 00000038  38 61 00 08 */	addi r3, r1, 8
 /* 80B7B958 0000003C  38 9E 15 60 */	addi r4, r30, 0x1560
 /* 80B7B95C 00000040  7C 65 1B 78 */	mr r5, r3
-/* 80B7B960 00000044  4B FF CB 19 */	bl PSVECAdd
+/* 80B7B960 00000044  4B FF CB 19 */	bl _unresolved
 /* 80B7B964 00000048  38 61 00 08 */	addi r3, r1, 8
-/* 80B7B968 0000004C  4B FF CB 11 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 80B7B968 0000004C  4B FF CB 11 */	bl _unresolved
 /* 80B7B96C 00000050  38 7E 08 F0 */	addi r3, r30, 0x8f0
-/* 80B7B970 00000054  4B FF CB 09 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 80B7B970 00000054  4B FF CB 09 */	bl _unresolved
 /* 80B7B974 00000058  38 7E 04 EC */	addi r3, r30, 0x4ec
-/* 80B7B978 0000005C  4B FF CB 01 */	bl scaleM__14mDoMtx_stack_cFRC4cXyz
-/* 80B7B97C 00000060  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80B7B980 00000064  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80B7B978 0000005C  4B FF CB 01 */	bl _unresolved
+/* 80B7B97C 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B7B980 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B7B984 00000068  38 9F 00 24 */	addi r4, r31, 0x24
-/* 80B7B988 0000006C  4B FF CA F1 */	bl PSMTXCopy
+/* 80B7B988 0000006C  4B FF CA F1 */	bl _unresolved
 /* 80B7B98C 00000070  93 DF 00 14 */	stw r30, 0x14(r31)
 /* 80B7B990 00000074  80 1E 09 9C */	lwz r0, 0x99c(r30)
 /* 80B7B994 00000078  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
@@ -35,11 +35,11 @@ lbl_80B7B91C:
 /* 80B7B9A0 00000084  80 7E 05 80 */	lwz r3, 0x580(r30)
 /* 80B7B9A4 00000088  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80B7B9A8 0000008C  80 7E 05 68 */	lwz r3, 0x568(r30)
-/* 80B7B9AC 00000090  4B FF CA CD */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 80B7B9AC 00000090  4B FF CA CD */	bl _unresolved
 /* 80B7B9B0 00000094  48 00 00 0C */	b lbl_80B7B9BC
 lbl_80B7B9B4:
 /* 80B7B9B4 00000000  80 7E 05 68 */	lwz r3, 0x568(r30)
-/* 80B7B9B8 00000004  4B FF CA C1 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 80B7B9B8 00000004  4B FF CA C1 */	bl _unresolved
 lbl_80B7B9BC:
 /* 80B7B9BC 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80B7B9C0 00000004  83 C1 00 18 */	lwz r30, 0x18(r1)

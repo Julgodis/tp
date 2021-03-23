@@ -17,15 +17,15 @@ lbl_80B95BB8:
 /* 80B95BF4 0000003C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80B95BF8 00000040  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80B95BFC 00000044  38 61 00 08 */	addi r3, r1, 8
-/* 80B95C00 00000048  4B FF E1 39 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 80B95C00 00000048  4B FF E1 39 */	bl _unresolved
 /* 80B95C04 0000004C  38 7E 08 F0 */	addi r3, r30, 0x8f0
-/* 80B95C08 00000050  4B FF E1 31 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 80B95C08 00000050  4B FF E1 31 */	bl _unresolved
 /* 80B95C0C 00000054  38 7E 04 EC */	addi r3, r30, 0x4ec
-/* 80B95C10 00000058  4B FF E1 29 */	bl scaleM__14mDoMtx_stack_cFRC4cXyz
-/* 80B95C14 0000005C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80B95C18 00000060  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80B95C10 00000058  4B FF E1 29 */	bl _unresolved
+/* 80B95C14 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B95C18 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B95C1C 00000064  38 9F 00 24 */	addi r4, r31, 0x24
-/* 80B95C20 00000068  4B FF E1 19 */	bl PSMTXCopy
+/* 80B95C20 00000068  4B FF E1 19 */	bl _unresolved
 /* 80B95C24 0000006C  93 DF 00 14 */	stw r30, 0x14(r31)
 /* 80B95C28 00000070  80 1E 09 9C */	lwz r0, 0x99c(r30)
 /* 80B95C2C 00000074  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
@@ -34,11 +34,11 @@ lbl_80B95BB8:
 /* 80B95C38 00000080  80 7E 05 80 */	lwz r3, 0x580(r30)
 /* 80B95C3C 00000084  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80B95C40 00000088  80 7E 05 68 */	lwz r3, 0x568(r30)
-/* 80B95C44 0000008C  4B FF E0 F5 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 80B95C44 0000008C  4B FF E0 F5 */	bl _unresolved
 /* 80B95C48 00000090  48 00 00 0C */	b lbl_80B95C54
 lbl_80B95C4C:
 /* 80B95C4C 00000000  80 7E 05 68 */	lwz r3, 0x568(r30)
-/* 80B95C50 00000004  4B FF E0 E9 */	bl modelCalc__16mDoExt_McaMorfSOFv
+/* 80B95C50 00000004  4B FF E0 E9 */	bl _unresolved
 lbl_80B95C54:
 /* 80B95C54 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80B95C58 00000004  83 C1 00 18 */	lwz r30, 0x18(r1)

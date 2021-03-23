@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_804DF8AC[2];
+extern u8 data_804DF8AC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_cstaF_cpp(); // 1
 
 // 
 // Declarations:

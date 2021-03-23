@@ -320,14 +320,14 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 // 
 
 /* ############################################################################################## */
-/* 80453600-80453608 0004+04 r=6 e=0 z=0  None .sdata2    @4215                                                        */
+/* 80453600-80453608 0004+04 s=6 e=0 z=0  None .sdata2    @4215                                                        */
 SECTION_SDATA2 static u8 d_a_d_a_player__lit_4215[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8015E4CC-8015E510 0044+00 r=241 e=235 z=6  None .text      checkAnmEnd__16daPy_frameCtrl_cFv                            */
+/* 8015E4CC-8015E510 0044+00 s=0 e=235 z=0  None .text      checkAnmEnd__16daPy_frameCtrl_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,7 +338,7 @@ asm void daPy_frameCtrl_c::checkAnmEnd() {
 #pragma pop
 
 
-/* 8015E510-8015E544 0034+00 r=3 e=1 z=2  None .text      updateFrame__16daPy_frameCtrl_cFv                            */
+/* 8015E510-8015E544 0034+00 s=0 e=1 z=0  None .text      updateFrame__16daPy_frameCtrl_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,10 +350,10 @@ asm void daPy_frameCtrl_c::updateFrame() {
 
 
 /* ############################################################################################## */
-/* 80453608-80453610 0008+00 r=2 e=0 z=0  None .sdata2    @4237                                                        */
+/* 80453608-80453610 0008+00 s=2 e=0 z=0  None .sdata2    @4237                                                        */
 SECTION_SDATA2 static f64 d_a_d_a_player__lit_4237 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8015E544-8015E5B0 006C+00 r=7 e=1 z=6  None .text      setFrameCtrl__16daPy_frameCtrl_cFUcssff                      */
+/* 8015E544-8015E5B0 006C+00 s=0 e=1 z=0  None .text      setFrameCtrl__16daPy_frameCtrl_cFUcssff                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,19 +365,19 @@ asm void daPy_frameCtrl_c::setFrameCtrl(u8 param_0, s16 param_1, s16 param_2, f3
 
 
 /* ############################################################################################## */
-/* 80453610-80453614 0004+00 r=1 e=0 z=0  None .sdata2    @4247                                                        */
+/* 80453610-80453614 0004+00 s=1 e=0 z=0  None .sdata2    @4247                                                        */
 SECTION_SDATA2 static f32 lit_4247 = 30.0f;
 
-/* 80453614-80453618 0004+00 r=1 e=0 z=0  None .sdata2    @4248                                                        */
+/* 80453614-80453618 0004+00 s=1 e=0 z=0  None .sdata2    @4248                                                        */
 SECTION_SDATA2 static f32 lit_4248 = 70.0f;
 
-/* 80453618-8045361C 0004+00 r=2 e=0 z=0  None .sdata2    @4249                                                        */
+/* 80453618-8045361C 0004+00 s=2 e=0 z=0  None .sdata2    @4249                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4249 = 50.0f;
 
-/* 8045361C-80453620 0004+00 r=1 e=0 z=0  None .sdata2    @4250                                                        */
+/* 8045361C-80453620 0004+00 s=1 e=0 z=0  None .sdata2    @4250                                                        */
 SECTION_SDATA2 static f32 lit_4250 = 65536.0f;
 
-/* 8015E5B0-8015E654 00A4+00 r=19 e=1 z=18  None .text      initOffset__20daPy_boomerangMove_cFPC4cXyz                   */
+/* 8015E5B0-8015E654 00A4+00 s=0 e=1 z=0  None .text      initOffset__20daPy_boomerangMove_cFPC4cXyz                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,26 +389,26 @@ asm void daPy_boomerangMove_c::initOffset(cXyz const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451018-8045101C 0004+00 r=138 e=33 z=103  None .sbss      m_midnaActor__9daPy_py_c                                     */
+/* 80451018-8045101C 0004+00 s=2 e=33 z=0  None .sbss      m_midnaActor__9daPy_py_c                                     */
 u8 m_midnaActor__9daPy_py_c[4];
 
-/* 8045101C-80451020 0004+00 r=3 e=1 z=1  None .sbss      None                                                         */
+/* 8045101C-80451020 0004+00 s=1 e=1 z=0  None .sbss      None                                                         */
 u8 struct_8045101C[4];
 
-/* 80453620-80453624 0004+00 r=1 e=0 z=0  None .sdata2    @4332                                                        */
+/* 80453620-80453624 0004+00 s=1 e=0 z=0  None .sdata2    @4332                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4332 = 300.0f;
 
-/* 80453624-80453628 0004+00 r=1 e=0 z=0  None .sdata2    @4333                                                        */
+/* 80453624-80453628 0004+00 s=1 e=0 z=0  None .sdata2    @4333                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4333 = -700.0f;
 
-/* 80453628-80453630 0004+04 r=1 e=0 z=0  None .sdata2    @4334                                                        */
+/* 80453628-80453630 0004+04 s=1 e=0 z=0  None .sdata2    @4334                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4334[1 + 1 /* padding */] = {
 	2048.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8015E654-8015E87C 0228+00 r=18 e=1 z=17  None .text      posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs       */
+/* 8015E654-8015E87C 0228+00 s=0 e=1 z=0  None .text      posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -420,18 +420,18 @@ asm void daPy_boomerangMove_c::posMove(cXyz* param_0, s16* param_1, fopAc_ac_c* 
 
 
 /* ############################################################################################## */
-/* 80453630-80453638 0008+00 r=1 e=0 z=0  None .sdata2    @4379                                                        */
+/* 80453630-80453638 0008+00 s=1 e=0 z=0  None .sdata2    @4379                                                        */
 SECTION_SDATA2 static f64 d_a_d_a_player__lit_4379 = 0.5;
 
-/* 80453638-80453640 0008+00 r=1 e=0 z=0  None .sdata2    @4380                                                        */
+/* 80453638-80453640 0008+00 s=1 e=0 z=0  None .sdata2    @4380                                                        */
 SECTION_SDATA2 static f64 lit_4380 = 3.0;
 
-/* 80453640-80453648 0008+00 r=1 e=0 z=0  None .sdata2    @4381                                                        */
+/* 80453640-80453648 0008+00 s=1 e=0 z=0  None .sdata2    @4381                                                        */
 SECTION_SDATA2 static u8 lit_4381[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8015E87C-8015EA0C 0190+00 r=19 e=1 z=17  None .text      bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz           */
+/* 8015E87C-8015EA0C 0190+00 s=1 e=1 z=0  None .text      bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +442,7 @@ asm void daPy_boomerangMove_c::bgCheckAfterOffset(cXyz const* param_0) {
 #pragma pop
 
 
-/* 8015EA0C-8015EA20 0014+00 r=3 e=3 z=0  None .text      setParamData__9daPy_py_cFiiii                                */
+/* 8015EA0C-8015EA20 0014+00 s=0 e=3 z=0  None .text      setParamData__9daPy_py_cFiiii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +453,7 @@ asm void daPy_py_c::setParamData(int param_0, int param_1, int param_2, int para
 #pragma pop
 
 
-/* 8015EA20-8015EA48 0028+00 r=13 e=10 z=3  None .text      checkFishingRodItem__9daPy_py_cFi                            */
+/* 8015EA20-8015EA48 0028+00 s=0 e=10 z=0  None .text      checkFishingRodItem__9daPy_py_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -464,7 +464,7 @@ asm void daPy_py_c::checkFishingRodItem(int param_0) {
 #pragma pop
 
 
-/* 8015EA48-8015EA88 0040+00 r=3 e=3 z=0  None .text      checkBombItem__9daPy_py_cFi                                  */
+/* 8015EA48-8015EA88 0040+00 s=0 e=3 z=0  None .text      checkBombItem__9daPy_py_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -475,7 +475,7 @@ asm void daPy_py_c::checkBombItem(int param_0) {
 #pragma pop
 
 
-/* 8015EA88-8015EAD8 0050+00 r=5 e=5 z=0  None .text      checkBottleItem__9daPy_py_cFi                                */
+/* 8015EA88-8015EAD8 0050+00 s=0 e=5 z=0  None .text      checkBottleItem__9daPy_py_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -486,7 +486,7 @@ asm void daPy_py_c::checkBottleItem(int param_0) {
 #pragma pop
 
 
-/* 8015EAD8-8015EB40 0068+00 r=3 e=3 z=0  None .text      checkDrinkBottleItem__9daPy_py_cFi                           */
+/* 8015EAD8-8015EB40 0068+00 s=0 e=3 z=0  None .text      checkDrinkBottleItem__9daPy_py_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +497,7 @@ asm void daPy_py_c::checkDrinkBottleItem(int param_0) {
 #pragma pop
 
 
-/* 8015EB40-8015EB68 0028+00 r=4 e=4 z=0  None .text      checkOilBottleItem__9daPy_py_cFi                             */
+/* 8015EB40-8015EB68 0028+00 s=0 e=4 z=0  None .text      checkOilBottleItem__9daPy_py_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -508,7 +508,7 @@ asm void daPy_py_c::checkOilBottleItem(int param_0) {
 #pragma pop
 
 
-/* 8015EB68-8015EB90 0028+00 r=2 e=2 z=0  None .text      checkOpenBottleItem__9daPy_py_cFi                            */
+/* 8015EB68-8015EB90 0028+00 s=0 e=2 z=0  None .text      checkOpenBottleItem__9daPy_py_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -519,7 +519,7 @@ asm void daPy_py_c::checkOpenBottleItem(int param_0) {
 #pragma pop
 
 
-/* 8015EB90-8015EBB8 0028+00 r=11 e=11 z=0  None .text      checkBowItem__9daPy_py_cFi                                   */
+/* 8015EB90-8015EBB8 0028+00 s=0 e=11 z=0  None .text      checkBowItem__9daPy_py_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -530,7 +530,7 @@ asm void daPy_py_c::checkBowItem(int param_0) {
 #pragma pop
 
 
-/* 8015EBB8-8015EBD8 0020+00 r=23 e=23 z=0  None .text      checkHookshotItem__9daPy_py_cFi                              */
+/* 8015EBB8-8015EBD8 0020+00 s=0 e=23 z=0  None .text      checkHookshotItem__9daPy_py_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,7 +541,7 @@ asm void daPy_py_c::checkHookshotItem(int param_0) {
 #pragma pop
 
 
-/* 8015EBD8-8015EC28 0050+00 r=3 e=3 z=0  None .text      checkTradeItem__9daPy_py_cFi                                 */
+/* 8015EBD8-8015EC28 0050+00 s=0 e=3 z=0  None .text      checkTradeItem__9daPy_py_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -552,7 +552,7 @@ asm void daPy_py_c::checkTradeItem(int param_0) {
 #pragma pop
 
 
-/* 8015EC28-8015EC48 0020+00 r=2 e=2 z=0  None .text      checkDungeonWarpItem__9daPy_py_cFi                           */
+/* 8015EC28-8015EC48 0020+00 s=0 e=2 z=0  None .text      checkDungeonWarpItem__9daPy_py_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +563,7 @@ asm void daPy_py_c::checkDungeonWarpItem(int param_0) {
 #pragma pop
 
 
-/* 8015EC48-8015ECB8 0070+00 r=13 e=10 z=3  None .text      setActor__16daPy_actorKeep_cFv                               */
+/* 8015EC48-8015ECB8 0070+00 s=0 e=10 z=0  None .text      setActor__16daPy_actorKeep_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -574,7 +574,7 @@ asm void daPy_actorKeep_c::setActor() {
 #pragma pop
 
 
-/* 8015ECB8-8015ECFC 0044+00 r=63 e=59 z=4  None .text      setData__16daPy_actorKeep_cFP10fopAc_ac_c                    */
+/* 8015ECB8-8015ECFC 0044+00 s=0 e=59 z=0  None .text      setData__16daPy_actorKeep_cFP10fopAc_ac_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,7 +585,7 @@ asm void daPy_actorKeep_c::setData(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8015ECFC-8015ED10 0014+00 r=55 e=41 z=12  None .text      clearData__16daPy_actorKeep_cFv                              */
+/* 8015ECFC-8015ED10 0014+00 s=2 e=41 z=0  None .text      clearData__16daPy_actorKeep_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +596,7 @@ asm void daPy_actorKeep_c::clearData() {
 #pragma pop
 
 
-/* 8015ED10-8015ED50 0040+00 r=4 e=2 z=2  None .text      __ct__14daPy_anmHeap_cFUl                                    */
+/* 8015ED10-8015ED50 0040+00 s=0 e=2 z=0  None .text      __ct__14daPy_anmHeap_cFUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -607,7 +607,7 @@ asm daPy_anmHeap_c::daPy_anmHeap_c(u32 param_0) {
 #pragma pop
 
 
-/* 8015ED50-8015EDAC 005C+00 r=4 e=2 z=2  None .text      __dt__14daPy_anmHeap_cFv                                     */
+/* 8015ED50-8015EDAC 005C+00 s=0 e=2 z=0  None .text      __dt__14daPy_anmHeap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -618,7 +618,7 @@ asm daPy_anmHeap_c::~daPy_anmHeap_c() {
 #pragma pop
 
 
-/* 8015EDAC-8015EDC4 0018+00 r=2 e=0 z=1  None .text      initData__14daPy_anmHeap_cFv                                 */
+/* 8015EDAC-8015EDC4 0018+00 s=1 e=0 z=0  None .text      initData__14daPy_anmHeap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -629,7 +629,7 @@ asm void daPy_anmHeap_c::initData() {
 #pragma pop
 
 
-/* 8015EDC4-8015EE00 003C+00 r=2 e=1 z=1  None .text      mallocBuffer__14daPy_anmHeap_cFv                             */
+/* 8015EDC4-8015EE00 003C+00 s=0 e=1 z=0  None .text      mallocBuffer__14daPy_anmHeap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -640,7 +640,7 @@ asm void daPy_anmHeap_c::mallocBuffer() {
 #pragma pop
 
 
-/* 8015EE00-8015EF84 0184+00 r=2 e=1 z=1  None .text      createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE */
+/* 8015EE00-8015EF84 0184+00 s=0 e=1 z=0  None .text      createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -652,39 +652,39 @@ asm void daPy_anmHeap_c::createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE param_0) {
 
 
 /* ############################################################################################## */
-/* 80453648-80453650 0008+00 r=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
+/* 80453648-80453650 0008+00 s=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
 extern "C" u8 data_80453648[8];
 
-/* 80453650-80453658 0005+03 r=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
+/* 80453650-80453658 0005+03 s=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
 extern "C" u8 data_80453650[5 + 3 /* padding */];
 
-/* 80453658-80453660 0005+03 r=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
+/* 80453658-80453660 0005+03 s=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
 extern "C" u8 data_80453658[5 + 3 /* padding */];
 
-/* 80453660-80453668 0008+00 r=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
+/* 80453660-80453668 0008+00 s=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
 extern "C" u8 data_80453660[8];
 
-/* 80453668-80453670 0006+02 r=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
+/* 80453668-80453670 0006+02 s=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
 extern "C" u8 data_80453668[6 + 2 /* padding */];
 
-/* 80453670-80453678 0006+02 r=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
+/* 80453670-80453678 0006+02 s=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
 extern "C" u8 data_80453670[6 + 2 /* padding */];
 
-/* 80393DA8-80393DB4 000A+02 r=1 e=0 z=0  None .rodata    twglArcName$4616                                             */
+/* 80393DA8-80393DB4 000A+02 s=1 e=0 z=0  None .rodata    twglArcName$4616                                             */
 SECTION_RODATA static u8 const data_80393DA8[10 + 2 /* padding */] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x4C, 0x6B, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 80393DB4-80393DC0 000A+02 r=1 e=0 z=0  None .rodata    twgwArcName$4617                                             */
+/* 80393DB4-80393DC0 000A+02 s=1 e=0 z=0  None .rodata    twgwArcName$4617                                             */
 SECTION_RODATA static u8 const data_80393DB4[10 + 2 /* padding */] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x57, 0x66, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803BA0A0-803BA0C0 0020+00 r=1 e=0 z=0  None .data      arcName$4622                                                 */
+/* 803BA0A0-803BA0C0 0020+00 s=1 e=0 z=0  None .data      arcName$4622                                                 */
 SECTION_DATA static void* data_803BA0A0[8] = {
 	/* 0    */ (void*)&data_80453648,
 	/* 1    */ (void*)&data_80453650,
@@ -696,45 +696,45 @@ SECTION_DATA static void* data_803BA0A0[8] = {
 	/* 7    */ (void*)&data_80453670,
 };
 
-/* 80453648-80453650 0008+00 r=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
+/* 80453648-80453650 0008+00 s=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
 SECTION_SDATA2 static u8 data_80453648[8] = {
 	0x61, 0x6C, 0x53, 0x75, 0x6D, 0x6F, 0x75, 0x00,
 };
 
-/* 80453650-80453658 0005+03 r=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
+/* 80453650-80453658 0005+03 s=1 e=0 z=0  None .sdata2    ocArcName$4615                                               */
 SECTION_SDATA2 static u8 data_80453650[5 + 3 /* padding */] = {
 	0x42, 0x5F, 0x6F, 0x68, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 80453658-80453660 0005+03 r=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
+/* 80453658-80453660 0005+03 s=1 e=0 z=0  None .sdata2    drArcName$4618                                               */
 SECTION_SDATA2 static u8 data_80453658[5 + 3 /* padding */] = {
 	0x42, 0x5F, 0x44, 0x52, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 80453660-80453668 0008+00 r=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
+/* 80453660-80453668 0008+00 s=1 e=0 z=0  None .sdata2    msDemoArcName$4619                                           */
 SECTION_SDATA2 static u8 data_80453660[8] = {
 	0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00,
 };
 
-/* 80453668-80453670 0006+02 r=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
+/* 80453668-80453670 0006+02 s=1 e=0 z=0  None .sdata2    lastGanonArcName$4620                                        */
 SECTION_SDATA2 static u8 data_80453668[6 + 2 /* padding */] = {
 	0x42, 0x5F, 0x67, 0x6E, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 80453670-80453678 0006+02 r=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
+/* 80453670-80453678 0006+02 s=1 e=0 z=0  None .sdata2    pigGanonArcName$4621                                         */
 SECTION_SDATA2 static u8 data_80453670[6 + 2 /* padding */] = {
 	0x42, 0x5F, 0x6D, 0x67, 0x6E, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 8015EF84-8015F068 00E4+00 r=3 e=0 z=0  None .text      loadData__14daPy_anmHeap_cFUs                                */
+/* 8015EF84-8015F068 00E4+00 s=3 e=0 z=0  None .text      loadData__14daPy_anmHeap_cFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -745,7 +745,7 @@ asm void daPy_anmHeap_c::loadData(u16 param_0) {
 #pragma pop
 
 
-/* 8015F068-8015F0D0 0068+00 r=14 e=9 z=5  None .text      loadDataIdx__14daPy_anmHeap_cFUs                             */
+/* 8015F068-8015F0D0 0068+00 s=0 e=9 z=0  None .text      loadDataIdx__14daPy_anmHeap_cFUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -756,7 +756,7 @@ asm void daPy_anmHeap_c::loadDataIdx(u16 param_0) {
 #pragma pop
 
 
-/* 8015F0D0-8015F118 0048+00 r=3 e=3 z=0  None .text      loadDataPriIdx__14daPy_anmHeap_cFUs                          */
+/* 8015F0D0-8015F118 0048+00 s=0 e=3 z=0  None .text      loadDataPriIdx__14daPy_anmHeap_cFUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -767,7 +767,7 @@ asm void daPy_anmHeap_c::loadDataPriIdx(u16 param_0) {
 #pragma pop
 
 
-/* 8015F118-8015F168 0050+00 r=10 e=5 z=5  None .text      loadDataDemoRID__14daPy_anmHeap_cFUsUs                       */
+/* 8015F118-8015F168 0050+00 s=0 e=5 z=0  None .text      loadDataDemoRID__14daPy_anmHeap_cFUsUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -778,7 +778,7 @@ asm void daPy_anmHeap_c::loadDataDemoRID(u16 param_0, u16 param_1) {
 #pragma pop
 
 
-/* 8015F168-8015F1A0 0038+00 r=5 e=4 z=0  None .text      setAnimeHeap__14daPy_anmHeap_cFv                             */
+/* 8015F168-8015F1A0 0038+00 s=1 e=4 z=0  None .text      setAnimeHeap__14daPy_anmHeap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -790,7 +790,7 @@ asm void daPy_anmHeap_c::setAnimeHeap() {
 
 
 /* ############################################################################################## */
-/* 803BA0C0-803BA14C 0089+03 r=1 e=0 z=0  None .data      l_sightDL                                                    */
+/* 803BA0C0-803BA14C 0089+03 s=1 e=0 z=0  None .data      l_sightDL                                                    */
 SECTION_DATA static u8 l_sightDL[137 + 3 /* padding */] = {
 	0x10, 0x00, 0x00, 0x10, 0x40, 0xFF, 0xFF, 0x42, 0x80, 0x08, 0x30, 0x3C, 0xF3, 0xCF, 0x00, 0x10,
 	0x00, 0x00, 0x10, 0x18, 0x3C, 0xF3, 0xCF, 0x00, 0x61, 0x28, 0x38, 0x03, 0xC0, 0x61, 0xC0, 0x08,
@@ -805,13 +805,13 @@ SECTION_DATA static u8 l_sightDL[137 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 80453678-8045367C 0004+00 r=1 e=0 z=0  None .sdata2    @4668                                                        */
+/* 80453678-8045367C 0004+00 s=1 e=0 z=0  None .sdata2    @4668                                                        */
 SECTION_SDATA2 static u32 d_a_d_a_player__lit_4668 = 0xFF8000FF;
 
-/* 8045367C-80453680 0004+00 r=1 e=0 z=0  None .sdata2    @4669                                                        */
+/* 8045367C-80453680 0004+00 s=1 e=0 z=0  None .sdata2    @4669                                                        */
 SECTION_SDATA2 static u32 d_a_d_a_player__lit_4669 = 0x321400FF;
 
-/* 8015F1A0-8015F2FC 015C+00 r=2 e=1 z=0  None .text      draw__18daPy_sightPacket_cFv                                 */
+/* 8015F1A0-8015F2FC 015C+00 s=1 e=1 z=0  None .text      draw__18daPy_sightPacket_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -823,10 +823,10 @@ asm void daPy_sightPacket_c::draw() {
 
 
 /* ############################################################################################## */
-/* 80453680-80453684 0004+00 r=1 e=0 z=0  None .sdata2    @4699                                                        */
+/* 80453680-80453684 0004+00 s=1 e=0 z=0  None .sdata2    @4699                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4699 = 32.0f;
 
-/* 8015F2FC-8015F384 0088+00 r=1 e=1 z=0  None .text      setSight__18daPy_sightPacket_cFv                             */
+/* 8015F2FC-8015F384 0088+00 s=0 e=1 z=0  None .text      setSight__18daPy_sightPacket_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +837,7 @@ asm void daPy_sightPacket_c::setSight() {
 #pragma pop
 
 
-/* 8015F384-8015F398 0014+00 r=1 e=1 z=0  None .text      setSightImage__18daPy_sightPacket_cFP7ResTIMG                */
+/* 8015F384-8015F398 0014+00 s=0 e=1 z=0  None .text      setSightImage__18daPy_sightPacket_cFP7ResTIMG                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +848,7 @@ asm void daPy_sightPacket_c::setSightImage(ResTIMG* param_0) {
 #pragma pop
 
 
-/* 8015F398-8015F3C4 002C+00 r=18 e=8 z=10  None .text      checkMasterSwordEquip__9daPy_py_cFv                          */
+/* 8015F398-8015F3C4 002C+00 s=0 e=8 z=0  None .text      checkMasterSwordEquip__9daPy_py_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +859,7 @@ asm void daPy_py_c::checkMasterSwordEquip() {
 #pragma pop
 
 
-/* 8015F3C4-8015F3FC 0038+00 r=4 e=4 z=0  None .text      checkWoodShieldEquip__9daPy_py_cFv                           */
+/* 8015F3C4-8015F3FC 0038+00 s=0 e=4 z=0  None .text      checkWoodShieldEquip__9daPy_py_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,17 +871,17 @@ asm void daPy_py_c::checkWoodShieldEquip() {
 
 
 /* ############################################################################################## */
-/* 80453684-80453688 0004+00 r=1 e=0 z=0  None .sdata2    @4741                                                        */
+/* 80453684-80453688 0004+00 s=1 e=0 z=0  None .sdata2    @4741                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4741 = -12.5f;
 
-/* 80453688-80453690 0004+04 r=1 e=0 z=0  None .sdata2    @4742                                                        */
+/* 80453688-80453690 0004+04 s=1 e=0 z=0  None .sdata2    @4742                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_player__lit_4742[1 + 1 /* padding */] = {
 	57.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 8015F3FC-8015F424 0028+00 r=7 e=4 z=3  None .text      getAttentionOffsetY__9daPy_py_cFv                            */
+/* 8015F3FC-8015F424 0028+00 s=0 e=4 z=0  None .text      getAttentionOffsetY__9daPy_py_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -892,7 +892,7 @@ asm void daPy_py_c::getAttentionOffsetY() {
 #pragma pop
 
 
-/* 8015F424-8015F438 0014+00 r=50 e=17 z=33  None .text      checkNowWolfEyeUp__9daPy_py_cFv                              */
+/* 8015F424-8015F438 0014+00 s=0 e=17 z=0  None .text      checkNowWolfEyeUp__9daPy_py_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,7 +903,7 @@ asm void daPy_py_c::checkNowWolfEyeUp() {
 #pragma pop
 
 
-/* 8015F438-8015F478 0040+00 r=1 e=0 z=1  None .text      forceRestartRoom__9daPy_py_cFiUli                            */
+/* 8015F438-8015F478 0040+00 s=0 e=0 z=0  None .text      forceRestartRoom__9daPy_py_cFiUli                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +914,7 @@ asm void daPy_py_c::forceRestartRoom(int param_0, u32 param_1, int param_2) {
 #pragma pop
 
 
-/* 8015F478-8015F4B8 0040+00 r=3 e=0 z=3  None .text      setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi               */
+/* 8015F478-8015F4B8 0040+00 s=0 e=0 z=0  None .text      setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm void daPy_py_c::setFmChainPos(fopAc_ac_c* param_0, cXyz* param_1, int param_
 #pragma pop
 
 
-/* 8015F4B8-8015F4F0 0038+00 r=1 e=0 z=1  None .text      cancelFmChainGrab__9daPy_py_cFv                              */
+/* 8015F4B8-8015F4F0 0038+00 s=0 e=0 z=0  None .text      cancelFmChainGrab__9daPy_py_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void daPy_py_c::cancelFmChainGrab() {
 #pragma pop
 
 
-/* 8015F4F0-8015F520 0030+00 r=17 e=0 z=17  None .text      setLookPos__9daPy_py_cFP4cXyz                                */
+/* 8015F4F0-8015F520 0030+00 s=0 e=0 z=0  None .text      setLookPos__9daPy_py_cFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void daPy_py_c::setLookPos(cXyz* param_0) {
 #pragma pop
 
 
-/* 8015F520-8015F55C 003C+00 r=4 e=0 z=4  None .text      setPlayerSe__9daPy_py_cFUl                                   */
+/* 8015F520-8015F55C 003C+00 s=0 e=0 z=0  None .text      setPlayerSe__9daPy_py_cFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +958,7 @@ asm void daPy_py_c::setPlayerSe(u32 param_0) {
 #pragma pop
 
 
-/* 8015F55C-8015F60C 00B0+00 r=3 e=0 z=2  None .text      linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
+/* 8015F55C-8015F60C 00B0+00 s=1 e=0 z=0  None .text      linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +969,7 @@ asm void daPy_py_c::linkGrabSubjectNoDraw(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8015F60C-8015F660 0054+00 r=2 e=0 z=2  None .text      wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
+/* 8015F60C-8015F660 0054+00 s=0 e=0 z=0  None .text      wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,7 +980,7 @@ asm void daPy_py_c::wolfGrabSubjectNoDraw(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8015F660-8015F698 0038+00 r=4 e=1 z=1  None .text      checkRoomRestartStart__9daPy_py_cFv                          */
+/* 8015F660-8015F698 0038+00 s=2 e=1 z=0  None .text      checkRoomRestartStart__9daPy_py_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -991,7 +991,7 @@ asm void daPy_py_c::checkRoomRestartStart() {
 #pragma pop
 
 
-/* 8015F698-8015F730 0098+00 r=3 e=2 z=1  None .text      checkCarryStartLightBallA__9daPy_py_cFv                      */
+/* 8015F698-8015F730 0098+00 s=0 e=2 z=0  None .text      checkCarryStartLightBallA__9daPy_py_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1002,7 +1002,7 @@ asm void daPy_py_c::checkCarryStartLightBallA() {
 #pragma pop
 
 
-/* 8015F730-8015F7C8 0098+00 r=3 e=2 z=1  None .text      checkCarryStartLightBallB__9daPy_py_cFv                      */
+/* 8015F730-8015F7C8 0098+00 s=0 e=2 z=0  None .text      checkCarryStartLightBallB__9daPy_py_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1013,7 +1013,7 @@ asm void daPy_py_c::checkCarryStartLightBallB() {
 #pragma pop
 
 
-/* 8015F7C8-8015F814 004C+00 r=2 e=0 z=2  None .text      getSpinnerRideSpeed__9daPy_py_cCFv                           */
+/* 8015F7C8-8015F814 004C+00 s=0 e=0 z=0  None .text      getSpinnerRideSpeed__9daPy_py_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1024,7 +1024,7 @@ asm void daPy_py_c::getSpinnerRideSpeed() const {
 #pragma pop
 
 
-/* 8015F814-8015F89C 0088+00 r=1 e=0 z=1  None .text      checkSpinnerReflectEffect__9daPy_py_cFv                      */
+/* 8015F814-8015F89C 0088+00 s=0 e=0 z=0  None .text      checkSpinnerReflectEffect__9daPy_py_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1035,7 +1035,7 @@ asm void daPy_py_c::checkSpinnerReflectEffect() {
 #pragma pop
 
 
-/* 8015F89C-8015F8C8 002C+00 r=7 e=0 z=7  None .text      checkBoomerangCharge__9daPy_py_cFv                           */
+/* 8015F89C-8015F8C8 002C+00 s=0 e=0 z=0  None .text      checkBoomerangCharge__9daPy_py_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1046,7 +1046,7 @@ asm void daPy_py_c::checkBoomerangCharge() {
 #pragma pop
 
 
-/* 8015F8C8-8015F8D0 0008+00 r=1 e=0 z=1  None .text      checkBoomerangChargeTime__9daPy_py_cFv                       */
+/* 8015F8C8-8015F8D0 0008+00 s=0 e=0 z=0  None .text      checkBoomerangChargeTime__9daPy_py_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1057,7 +1057,7 @@ asm void daPy_py_c::checkBoomerangChargeTime() {
 #pragma pop
 
 
-/* 8015F8D0-8015F8E4 0014+00 r=9 e=1 z=5  None .text      getThrowBoomerangActor__9daPy_py_cFv                         */
+/* 8015F8D0-8015F8E4 0014+00 s=3 e=1 z=0  None .text      getThrowBoomerangActor__9daPy_py_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1068,7 +1068,7 @@ asm void daPy_py_c::getThrowBoomerangActor() {
 #pragma pop
 
 
-/* 8015F8E4-8015F914 0030+00 r=2 e=0 z=2  None .text      cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c           */
+/* 8015F8E4-8015F914 0030+00 s=0 e=0 z=0  None .text      cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,7 +1079,7 @@ asm void daPy_py_c::cancelBoomerangLockActor(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8015F914-8015F954 0040+00 r=2 e=0 z=2  None .text      setPlayerDamage__9daPy_py_cFii                               */
+/* 8015F914-8015F954 0040+00 s=0 e=0 z=0  None .text      setPlayerDamage__9daPy_py_cFii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1090,7 +1090,7 @@ asm void daPy_py_c::setPlayerDamage(int param_0, int param_1) {
 #pragma pop
 
 
-/* 8015F954-8015F968 0014+00 r=3 e=3 z=0  None .text      setMidnaMotionNum__9daPy_py_cFi                              */
+/* 8015F954-8015F968 0014+00 s=0 e=3 z=0  None .text      setMidnaMotionNum__9daPy_py_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1101,7 +1101,7 @@ asm void daPy_py_c::setMidnaMotionNum(int param_0) {
 #pragma pop
 
 
-/* 8015F968-8015F97C 0014+00 r=3 e=3 z=0  None .text      setMidnaFaceNum__9daPy_py_cFi                                */
+/* 8015F968-8015F97C 0014+00 s=0 e=3 z=0  None .text      setMidnaFaceNum__9daPy_py_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1112,7 +1112,7 @@ asm void daPy_py_c::setMidnaFaceNum(int param_0) {
 #pragma pop
 
 
-/* 8015F97C-8015FA2C 00B0+00 r=9 e=7 z=2  None .text      daPy_addCalcShort__FPsssss                                   */
+/* 8015F97C-8015FA2C 00B0+00 s=0 e=7 z=0  None .text      daPy_addCalcShort__FPsssss                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1124,7 +1124,7 @@ asm void daPy_addCalcShort(s16* param_0, s16 param_1, s16 param_2, s16 param_3, 
 
 
 /* ############################################################################################## */
-/* 803BA14C-803BA160 0010+04 r=4 e=4 z=0  None .data      __vt__18daPy_sightPacket_c                                   */
+/* 803BA14C-803BA160 0010+04 s=0 e=4 z=0  None .data      __vt__18daPy_sightPacket_c                                   */
 SECTION_DATA void* __vt__18daPy_sightPacket_c[4 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,

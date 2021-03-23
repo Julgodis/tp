@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80D41588[2];
+extern u8 data_80D41588[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_zrTurara_cpp(); // 1
 
 // 
 // Declarations:

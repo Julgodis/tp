@@ -3,12 +3,12 @@ lbl_80A97DC4:
 /* 80A97DC8 00000004  7C 08 02 A6 */	mflr r0
 /* 80A97DCC 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80A97DD0 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A97DD4 00000010  4B FF FE 25 */	bl _savegpr_29
+/* 80A97DD4 00000010  4B FF FE 25 */	bl _unresolved
 /* 80A97DD8 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80A97DDC 00000018  3C 80 00 00 */	lis r4, m__24daNpc_Pachi_Maro_Param_c@ha /* 80A9B88C */
-/* 80A97DE0 0000001C  3B E4 00 00 */	addi r31, r4, m__24daNpc_Pachi_Maro_Param_c@l /* 80A9B88C */
-/* 80A97DE4 00000020  3C 80 00 00 */	lis r4, cNullVec__6Z2Calc@ha /* 80A9BA78 */
-/* 80A97DE8 00000024  3B C4 00 00 */	addi r30, r4, cNullVec__6Z2Calc@l /* 80A9BA78 */
+/* 80A97DDC 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A97DE0 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80A97DE4 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A97DE8 00000024  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80A97DEC 00000028  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80A97DF0 0000002C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80A97DF4 00000030  40 82 00 40 */	bne lbl_80A97E34
@@ -48,15 +48,15 @@ lbl_80A97E58:
 /* 80A97E70 00000018  38 9E 00 84 */	addi r4, r30, 0x84
 /* 80A97E74 0000001C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80A97E78 00000020  38 BE 00 40 */	addi r5, r30, 0x40
-/* 80A97E7C 00000024  4B FF FD 7D */	bl loadRes__8daNpcT_cFPCScPPCc
+/* 80A97E7C 00000024  4B FF FD 7D */	bl _unresolved
 /* 80A97E80 00000028  7C 7E 1B 78 */	mr r30, r3
 /* 80A97E84 0000002C  2C 1E 00 04 */	cmpwi r30, 4
 /* 80A97E88 00000030  40 82 01 F8 */	bne lbl_80A98080
 /* 80A97E8C 00000034  7F A3 EB 78 */	mr r3, r29
-/* 80A97E90 00000038  3C 80 00 00 */	lis r4, createHeapCallBack__18daNpc_Pachi_Maro_cFP10fopAc_ac_c@ha /* 80A985C4 */
-/* 80A97E94 0000003C  38 84 00 00 */	addi r4, r4, createHeapCallBack__18daNpc_Pachi_Maro_cFP10fopAc_ac_c@l /* 80A985C4 */
+/* 80A97E90 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A97E94 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80A97E98 00000040  38 A0 33 10 */	li r5, 0x3310
-/* 80A97E9C 00000044  4B FF FD 5D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80A97E9C 00000044  4B FF FD 5D */	bl _unresolved
 /* 80A97EA0 00000048  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80A97EA4 0000004C  40 82 00 0C */	bne lbl_80A97EB0
 /* 80A97EA8 00000050  38 60 00 05 */	li r3, 5
@@ -80,13 +80,13 @@ lbl_80A97EC8:
 /* 80A97EE8 00000020  C0 9F 00 98 */	lfs f4, 0x98(r31)
 /* 80A97EEC 00000024  C0 BF 00 9C */	lfs f5, 0x9c(r31)
 /* 80A97EF0 00000028  FC C0 20 90 */	fmr f6, f4
-/* 80A97EF4 0000002C  4B FF FD 05 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80A97EF4 0000002C  4B FF FD 05 */	bl _unresolved
 /* 80A97EF8 00000030  38 7D 05 80 */	addi r3, r29, 0x580
 /* 80A97EFC 00000034  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80A97F00 00000038  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80A97F04 0000003C  38 C0 00 03 */	li r6, 3
 /* 80A97F08 00000040  38 E0 00 01 */	li r7, 1
-/* 80A97F0C 00000044  4B FF FC ED */	bl init__10Z2CreatureFP3VecP3VecUcUc
+/* 80A97F0C 00000044  4B FF FC ED */	bl _unresolved
 /* 80A97F10 00000048  38 1D 04 E4 */	addi r0, r29, 0x4e4
 /* 80A97F14 0000004C  90 01 00 08 */	stw r0, 8(r1)
 /* 80A97F18 00000050  38 7D 06 8C */	addi r3, r29, 0x68c
@@ -97,7 +97,7 @@ lbl_80A97EC8:
 /* 80A97F2C 00000064  39 1D 08 A0 */	addi r8, r29, 0x8a0
 /* 80A97F30 00000068  39 3D 04 F8 */	addi r9, r29, 0x4f8
 /* 80A97F34 0000006C  39 5D 04 DC */	addi r10, r29, 0x4dc
-/* 80A97F38 00000070  4B FF FC C1 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 80A97F38 00000070  4B FF FC C1 */	bl _unresolved
 /* 80A97F3C 00000074  38 7D 08 64 */	addi r3, r29, 0x864
 /* 80A97F40 00000078  38 9F 00 00 */	addi r4, r31, 0
 /* 80A97F44 0000007C  C0 04 00 10 */	lfs f0, 0x10(r4)
@@ -106,21 +106,21 @@ lbl_80A97EC8:
 /* 80A97F50 00000088  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 80A97F54 0000008C  38 A0 00 00 */	li r5, 0
 /* 80A97F58 00000090  7F A6 EB 78 */	mr r6, r29
-/* 80A97F5C 00000094  4B FF FC 9D */	bl Init__9dCcD_SttsFiiP10fopAc_ac_c
+/* 80A97F5C 00000094  4B FF FC 9D */	bl _unresolved
 /* 80A97F60 00000098  38 7D 0E 44 */	addi r3, r29, 0xe44
-/* 80A97F64 0000009C  3C 80 00 00 */	lis r4, mCcDCyl__8daNpcT_c@ha /* 803B36D8 */
-/* 80A97F68 000000A0  38 84 00 00 */	addi r4, r4, mCcDCyl__8daNpcT_c@l /* 803B36D8 */
-/* 80A97F6C 000000A4  4B FF FC 8D */	bl Set__8dCcD_CylFRC11dCcD_SrcCyl
+/* 80A97F64 0000009C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A97F68 000000A0  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80A97F6C 000000A4  4B FF FC 8D */	bl _unresolved
 /* 80A97F70 000000A8  38 1D 08 64 */	addi r0, r29, 0x864
 /* 80A97F74 000000AC  90 1D 0E 88 */	stw r0, 0xe88(r29)
-/* 80A97F78 000000B0  3C 60 00 00 */	lis r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@ha /* 80147FA4 */
-/* 80A97F7C 000000B4  38 03 00 00 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l /* 80147FA4 */
+/* 80A97F78 000000B0  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A97F7C 000000B4  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80A97F80 000000B8  90 1D 0E E8 */	stw r0, 0xee8(r29)
 /* 80A97F84 000000BC  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80A97F88 000000C0  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A97F8C 000000C4  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A97F88 000000C0  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A97F8C 000000C4  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80A97F90 000000C8  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80A97F94 000000CC  4B FF FC 65 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80A97F94 000000CC  4B FF FC 65 */	bl _unresolved
 /* 80A97F98 000000D0  80 1D 07 68 */	lwz r0, 0x768(r29)
 /* 80A97F9C 000000D4  90 1D 09 30 */	stw r0, 0x930(r29)
 /* 80A97FA0 000000D8  80 1D 07 6C */	lwz r0, 0x76c(r29)
@@ -156,9 +156,9 @@ lbl_80A97EC8:
 /* 80A98018 00000150  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80A9801C 00000154  41 82 00 14 */	beq lbl_80A98030
 /* 80A98020 00000158  7F A3 EB 78 */	mr r3, r29
-/* 80A98024 0000015C  4B FF FB D5 */	bl setEnvTevColor__8daNpcT_cFv
+/* 80A98024 0000015C  4B FF FB D5 */	bl _unresolved
 /* 80A98028 00000160  7F A3 EB 78 */	mr r3, r29
-/* 80A9802C 00000164  4B FF FB CD */	bl setRoomNo__8daNpcT_cFv
+/* 80A9802C 00000164  4B FF FB CD */	bl _unresolved
 lbl_80A98030:
 /* 80A98030 00000000  C0 1D 04 A8 */	lfs f0, 0x4a8(r29)
 /* 80A98034 00000004  D0 1D 04 D0 */	stfs f0, 0x4d0(r29)
@@ -184,7 +184,7 @@ lbl_80A98080:
 /* 80A98080 00000000  7F C3 F3 78 */	mr r3, r30
 lbl_80A98084:
 /* 80A98084 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A98088 00000004  4B FF FB 71 */	bl _restgpr_29
+/* 80A98088 00000004  4B FF FB 71 */	bl _unresolved
 /* 80A9808C 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80A98090 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80A98094 00000010  38 21 00 30 */	addi r1, r1, 0x30

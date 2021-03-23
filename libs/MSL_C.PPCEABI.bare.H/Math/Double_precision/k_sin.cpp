@@ -25,28 +25,28 @@ extern "C" void __kernel_sin(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456A48-80456A50 0008+00 r=1 e=0 z=0  None .sdata2    @60                                                          */
+/* 80456A48-80456A50 0008+00 s=1 e=0 z=0  None .sdata2    @60                                                          */
 SECTION_SDATA2 static f64 lit_60 = 0.00833333333332249;
 
-/* 80456A50-80456A58 0008+00 r=1 e=0 z=0  None .sdata2    @61                                                          */
+/* 80456A50-80456A58 0008+00 s=1 e=0 z=0  None .sdata2    @61                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_61 = -0.0001984126982985795;
 
-/* 80456A58-80456A60 0008+00 r=1 e=0 z=0  None .sdata2    @62                                                          */
+/* 80456A58-80456A60 0008+00 s=1 e=0 z=0  None .sdata2    @62                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_62 = 2.7557313707070068e-06;
 
-/* 80456A60-80456A68 0008+00 r=1 e=0 z=0  None .sdata2    @63                                                          */
+/* 80456A60-80456A68 0008+00 s=1 e=0 z=0  None .sdata2    @63                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_63 = -2.5050760253406863e-08;
 
-/* 80456A68-80456A70 0008+00 r=1 e=0 z=0  None .sdata2    @64                                                          */
+/* 80456A68-80456A70 0008+00 s=1 e=0 z=0  None .sdata2    @64                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_64 = 1.58969099521155e-10;
 
-/* 80456A70-80456A78 0008+00 r=1 e=0 z=0  None .sdata2    @65                                                          */
+/* 80456A70-80456A78 0008+00 s=1 e=0 z=0  None .sdata2    @65                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_65 = -0.16666666666666632;
 
-/* 80456A78-80456A80 0008+00 r=1 e=0 z=0  None .sdata2    @66                                                          */
+/* 80456A78-80456A80 0008+00 s=1 e=0 z=0  None .sdata2    @66                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_sin__lit_66 = 0.5;
 
-/* 8036B9F0-8036BA90 00A0+00 r=2 e=2 z=0  None .text      __kernel_sin                                                 */
+/* 8036B9F0-8036BA90 00A0+00 s=0 e=2 z=0  None .text      __kernel_sin                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

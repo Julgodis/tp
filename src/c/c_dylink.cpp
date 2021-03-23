@@ -127,7 +127,7 @@ extern "C" extern void* __vt__20DynamicModuleControl[13];
 // 
 
 /* ############################################################################################## */
-/* 80374640-80375DE8 17A8+00 r=1 e=0 z=0  None .rodata    DynamicNameTable                                             */
+/* 80374640-80375DE8 17A8+00 s=1 e=0 z=0  None .rodata    DynamicNameTable                                             */
 SECTION_RODATA static void* const DynamicNameTable[1514] = {
 	/* 0    */ (void*)0x00140000,
 	/* 1    */ (void*)&c_c_dylink__stringBase0,
@@ -1645,7 +1645,7 @@ SECTION_RODATA static void* const DynamicNameTable[1514] = {
 	/* 1513 */ (void*)NULL,
 };
 
-/* 80375DE8-80378878 2A8F+01 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80375DE8-80378878 2A8F+01 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -2416,13 +2416,13 @@ SECTION_DEAD char const* const stringBase_80378866 = "f_pc_profile_lst";
 SECTION_DEAD static char const* const pad_80378877 = "";
 #pragma pop
 
-/* 803F0F50-803F1BB0 0C60+00 r=4 e=0 z=0  None .bss       DMC                                                          */
+/* 803F0F50-803F1BB0 0C60+00 s=4 e=0 z=0  None .bss       DMC                                                          */
 static u8 DMC[3168];
 
-/* 80450CA8-80450CAC 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450CA8-80450CAC 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450CA8[4];
 
-/* 800183DC-80018544 0168+00 r=1 e=0 z=0  None .text      cCc_Init__Fv                                                 */
+/* 800183DC-80018544 0168+00 s=1 e=0 z=0  None .text      cCc_Init__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2433,7 +2433,7 @@ asm static void cCc_Init() {
 #pragma pop
 
 
-/* 80018544-8001857C 0038+00 r=1 e=1 z=0  None .text      cDyl_IsLinked__Fs                                            */
+/* 80018544-8001857C 0038+00 s=0 e=1 z=0  None .text      cDyl_IsLinked__Fs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2444,7 +2444,7 @@ asm void cDyl_IsLinked(s16 param_0) {
 #pragma pop
 
 
-/* 8001857C-800185C0 0044+00 r=2 e=1 z=0  None .text      cDyl_Unlink__Fs                                              */
+/* 8001857C-800185C0 0044+00 s=1 e=1 z=0  None .text      cDyl_Unlink__Fs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2456,10 +2456,10 @@ asm void cDyl_Unlink(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CAC-80450CB0 0004+00 r=2 e=0 z=0  None .sbss      cDyl_Initialized                                             */
+/* 80450CAC-80450CB0 0004+00 s=2 e=0 z=0  None .sbss      cDyl_Initialized                                             */
 static u8 cDyl_Initialized[4];
 
-/* 800185C0-80018688 00C8+00 r=2 e=1 z=0  None .text      cDyl_LinkASync__Fs                                           */
+/* 800185C0-80018688 00C8+00 s=1 e=1 z=0  None .text      cDyl_LinkASync__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2470,7 +2470,7 @@ asm void cDyl_LinkASync(s16 param_0) {
 #pragma pop
 
 
-/* 80018688-80018764 00DC+00 r=1 e=0 z=0  None .text      cDyl_InitCallback__FPv                                       */
+/* 80018688-80018764 00DC+00 s=1 e=0 z=0  None .text      cDyl_InitCallback__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2482,10 +2482,10 @@ asm static void cDyl_InitCallback(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CB0-80450CB8 0004+04 r=2 e=0 z=0  None .sbss      cDyl_DVD                                                     */
+/* 80450CB0-80450CB8 0004+04 s=2 e=0 z=0  None .sbss      cDyl_DVD                                                     */
 static u8 cDyl_DVD[4 + 4 /* padding */];
 
-/* 80018764-80018798 0034+00 r=1 e=1 z=0  None .text      cDyl_InitAsync__Fv                                           */
+/* 80018764-80018798 0034+00 s=0 e=1 z=0  None .text      cDyl_InitAsync__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2496,7 +2496,7 @@ asm void cDyl_InitAsync() {
 #pragma pop
 
 
-/* 80018798-80018804 006C+00 r=2 e=2 z=0  None .text      cDyl_InitAsyncIsDone__Fv                                     */
+/* 80018798-80018804 006C+00 s=0 e=2 z=0  None .text      cDyl_InitAsyncIsDone__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2507,7 +2507,7 @@ asm void cDyl_InitAsyncIsDone() {
 #pragma pop
 
 
-/* 80018804-8001880C 0008+00 r=1 e=0 z=0  None .text      phase_01__7cDylPhsFPv                                        */
+/* 80018804-8001880C 0008+00 s=1 e=0 z=0  None .text      phase_01__7cDylPhsFPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2518,7 +2518,7 @@ asm void cDylPhs::phase_01(void* param_0) {
 #pragma pop
 
 
-/* 8001880C-80018844 0038+00 r=1 e=0 z=0  None .text      phase_02__7cDylPhsFPs                                        */
+/* 8001880C-80018844 0038+00 s=1 e=0 z=0  None .text      phase_02__7cDylPhsFPs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2529,7 +2529,7 @@ asm void cDylPhs::phase_02(s16* param_0) {
 #pragma pop
 
 
-/* 80018844-8001884C 0008+00 r=1 e=0 z=0  None .text      phase_03__7cDylPhsFPv                                        */
+/* 80018844-8001884C 0008+00 s=1 e=0 z=0  None .text      phase_03__7cDylPhsFPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2541,7 +2541,7 @@ asm void cDylPhs::phase_03(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3590-803A35A0 000C+04 r=1 e=0 z=0  None .data      l_method$3807                                                */
+/* 803A3590-803A35A0 000C+04 s=1 e=0 z=0  None .data      l_method$3807                                                */
 SECTION_DATA static void* data_803A3590[3 + 1 /* padding */] = {
 	/* 0    */ (void*)phase_01__7cDylPhsFPv,
 	/* 1    */ (void*)phase_02__7cDylPhsFPs,
@@ -2550,7 +2550,7 @@ SECTION_DATA static void* data_803A3590[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8001884C-80018890 0044+00 r=2 e=2 z=0  None .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
+/* 8001884C-80018890 0044+00 s=0 e=2 z=0  None .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2561,7 +2561,7 @@ asm void cDylPhs::Link(request_of_phase_process_class* param_0, s16 param_1) {
 #pragma pop
 
 
-/* 80018890-800188DC 004C+00 r=1 e=1 z=0  None .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
+/* 80018890-800188DC 004C+00 s=0 e=1 z=0  None .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2572,7 +2572,7 @@ asm void cDylPhs::Unlink(request_of_phase_process_class* param_0, s16 param_1) {
 #pragma pop
 
 
-/* 800188DC-800188E4 0008+00 r=1 e=1 z=0  None .text      getModuleName__24DynamicModuleControlBaseCFv                 */
+/* 800188DC-800188E4 0008+00 s=0 e=1 z=0  None .text      getModuleName__24DynamicModuleControlBaseCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2583,7 +2583,7 @@ asm void DynamicModuleControlBase::getModuleName() const {
 #pragma pop
 
 
-/* 800188E4-80018944 0060+00 r=1 e=1 z=0  None .text      __dt__20DynamicModuleControlFv                               */
+/* 800188E4-80018944 0060+00 s=0 e=1 z=0  None .text      __dt__20DynamicModuleControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -13,38 +13,38 @@ lbl_80A6BEE4:
 /* 80A6BF10 0000002C  48 00 00 80 */	b lbl_80A6BF90
 lbl_80A6BF14:
 /* 80A6BF14 00000000  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A6BF18 00000004  4B FF EC 01 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A6BF18 00000004  4B FF EC 01 */	bl _unresolved
 /* 80A6BF1C 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A6BF20 0000000C  40 82 00 70 */	bne lbl_80A6BF90
 /* 80A6BF24 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A6BF28 00000014  38 80 02 50 */	li r4, 0x250
-/* 80A6BF2C 00000018  4B FF EB ED */	bl getNearestActorP__8daNpcT_cFs
+/* 80A6BF2C 00000018  4B FF EB ED */	bl _unresolved
 /* 80A6BF30 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A6BF34 00000020  38 7F 0F A0 */	addi r3, r31, 0xfa0
-/* 80A6BF38 00000024  4B FF EB E1 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A6BF38 00000024  4B FF EB E1 */	bl _unresolved
 /* 80A6BF3C 00000028  48 00 00 54 */	b lbl_80A6BF90
 lbl_80A6BF40:
 /* 80A6BF40 00000000  38 7F 0F 90 */	addi r3, r31, 0xf90
-/* 80A6BF44 00000004  4B FF EB D5 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A6BF44 00000004  4B FF EB D5 */	bl _unresolved
 /* 80A6BF48 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A6BF4C 0000000C  40 82 00 1C */	bne lbl_80A6BF68
 /* 80A6BF50 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A6BF54 00000014  38 80 02 45 */	li r4, 0x245
-/* 80A6BF58 00000018  4B FF EB C1 */	bl getNearestActorP__8daNpcT_cFs
+/* 80A6BF58 00000018  4B FF EB C1 */	bl _unresolved
 /* 80A6BF5C 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A6BF60 00000020  38 7F 0F 90 */	addi r3, r31, 0xf90
-/* 80A6BF64 00000024  4B FF EB B5 */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A6BF64 00000024  4B FF EB B5 */	bl _unresolved
 lbl_80A6BF68:
 /* 80A6BF68 00000000  38 7F 0F 98 */	addi r3, r31, 0xf98
-/* 80A6BF6C 00000004  4B FF EB AD */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80A6BF6C 00000004  4B FF EB AD */	bl _unresolved
 /* 80A6BF70 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 80A6BF74 0000000C  40 82 00 1C */	bne lbl_80A6BF90
 /* 80A6BF78 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80A6BF7C 00000014  38 80 02 5E */	li r4, 0x25e
-/* 80A6BF80 00000018  4B FF EB 99 */	bl getNearestActorP__8daNpcT_cFs
+/* 80A6BF80 00000018  4B FF EB 99 */	bl _unresolved
 /* 80A6BF84 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 80A6BF88 00000020  38 7F 0F 98 */	addi r3, r31, 0xf98
-/* 80A6BF8C 00000024  4B FF EB 8D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 80A6BF8C 00000024  4B FF EB 8D */	bl _unresolved
 lbl_80A6BF90:
 /* 80A6BF90 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A6BF94 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

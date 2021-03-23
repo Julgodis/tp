@@ -4,15 +4,15 @@ lbl_80BDD1BC:
 /* 80BDD1C4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BDD1C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BDD1CC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BDD1D0 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80BDD1D4 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BDD1D0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BDD1D4 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BDD1D8 0000001C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BDD1DC 00000020  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BDD1E0 00000024  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80BDD1E4 00000028  7C 05 07 74 */	extsb r5, r0
-/* 80BDD1E8 0000002C  4B FF FA 51 */	bl onSwitch__10dSv_info_cFii
+/* 80BDD1E8 0000002C  4B FF FA 51 */	bl _unresolved
 /* 80BDD1EC 00000030  7F E3 FB 78 */	mr r3, r31
-/* 80BDD1F0 00000034  4B FF FA 49 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80BDD1F0 00000034  4B FF FA 49 */	bl _unresolved
 /* 80BDD1F4 00000038  38 00 00 02 */	li r0, 2
 /* 80BDD1F8 0000003C  98 1F 09 3D */	stb r0, 0x93d(r31)
 /* 80BDD1FC 00000040  83 E1 00 0C */	lwz r31, 0xc(r1)

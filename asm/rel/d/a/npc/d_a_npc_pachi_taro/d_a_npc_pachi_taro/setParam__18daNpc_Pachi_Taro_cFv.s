@@ -3,29 +3,29 @@ lbl_80A9CF9C:
 /* 80A9CFA0 00000004  7C 08 02 A6 */	mflr r0
 /* 80A9CFA4 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A9CFA8 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9CFAC 00000010  4B FF F2 4D */	bl _savegpr_29
+/* 80A9CFAC 00000010  4B FF F2 4D */	bl _unresolved
 /* 80A9CFB0 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80A9CFB4 00000018  48 00 0D 71 */	bl selectAction__18daNpc_Pachi_Taro_cFv
 /* 80A9CFB8 0000001C  7F A3 EB 78 */	mr r3, r29
 /* 80A9CFBC 00000020  48 00 01 A9 */	bl srchActors__18daNpc_Pachi_Taro_cFv
-/* 80A9CFC0 00000024  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha /* 80AA1604 */
-/* 80A9CFC4 00000028  38 83 00 00 */	addi r4, r3, m__24daNpc_Pachi_Taro_Param_c@l /* 80AA1604 */
+/* 80A9CFC0 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9CFC4 00000028  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80A9CFC8 0000002C  AB C4 00 48 */	lha r30, 0x48(r4)
 /* 80A9CFCC 00000030  AB E4 00 4A */	lha r31, 0x4a(r4)
 /* 80A9CFD0 00000034  A8 64 00 4C */	lha r3, 0x4c(r4)
 /* 80A9CFD4 00000038  A8 84 00 4E */	lha r4, 0x4e(r4)
-/* 80A9CFD8 0000003C  4B FF F2 21 */	bl daNpcT_getDistTableIdx__Fii
+/* 80A9CFD8 0000003C  4B FF F2 21 */	bl _unresolved
 /* 80A9CFDC 00000040  98 7D 05 44 */	stb r3, 0x544(r29)
 /* 80A9CFE0 00000044  88 1D 05 44 */	lbz r0, 0x544(r29)
 /* 80A9CFE4 00000048  98 1D 05 45 */	stb r0, 0x545(r29)
 /* 80A9CFE8 0000004C  7F C3 07 34 */	extsh r3, r30
 /* 80A9CFEC 00000050  7F E4 07 34 */	extsh r4, r31
-/* 80A9CFF0 00000054  4B FF F2 09 */	bl daNpcT_getDistTableIdx__Fii
+/* 80A9CFF0 00000054  4B FF F2 09 */	bl _unresolved
 /* 80A9CFF4 00000058  98 7D 05 47 */	stb r3, 0x547(r29)
 /* 80A9CFF8 0000005C  38 00 00 0A */	li r0, 0xa
 /* 80A9CFFC 00000060  90 1D 05 5C */	stw r0, 0x55c(r29)
-/* 80A9D000 00000064  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha /* 80AA1604 */
-/* 80A9D004 00000068  38 63 00 00 */	addi r3, r3, m__24daNpc_Pachi_Taro_Param_c@l /* 80AA1604 */
+/* 80A9D000 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9D004 00000068  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9D008 0000006C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80A9D00C 00000070  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80A9D010 00000074  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
@@ -43,9 +43,9 @@ lbl_80A9CF9C:
 /* 80A9D040 000000A4  D0 1D 0D F8 */	stfs f0, 0xdf8(r29)
 /* 80A9D044 000000A8  38 7D 08 A0 */	addi r3, r29, 0x8a0
 /* 80A9D048 000000AC  C0 3D 0D F0 */	lfs f1, 0xdf0(r29)
-/* 80A9D04C 000000B0  4B FF F1 AD */	bl SetWallR__12dBgS_AcchCirFf
-/* 80A9D050 000000B4  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha /* 80AA1604 */
-/* 80A9D054 000000B8  38 63 00 00 */	addi r3, r3, m__24daNpc_Pachi_Taro_Param_c@l /* 80AA1604 */
+/* 80A9D04C 000000B0  4B FF F1 AD */	bl _unresolved
+/* 80A9D050 000000B4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9D054 000000B8  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9D058 000000BC  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A9D05C 000000C0  D0 1D 08 D0 */	stfs f0, 0x8d0(r29)
 /* 80A9D060 000000C4  C0 03 00 0C */	lfs f0, 0xc(r3)
@@ -57,7 +57,7 @@ lbl_80A9CF9C:
 /* 80A9D078 000000DC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80A9D07C 000000E0  D0 1D 05 30 */	stfs f0, 0x530(r29)
 /* 80A9D080 000000E4  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9D084 000000E8  4B FF F1 75 */	bl _restgpr_29
+/* 80A9D084 000000E8  4B FF F1 75 */	bl _unresolved
 /* 80A9D088 000000EC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A9D08C 000000F0  7C 08 03 A6 */	mtlr r0
 /* 80A9D090 000000F4  38 21 00 20 */	addi r1, r1, 0x20

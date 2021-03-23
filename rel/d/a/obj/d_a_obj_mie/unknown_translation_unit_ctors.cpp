@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C95A98[2];
+extern u8 data_80C95A98[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_mie_cpp(); // 1
 
 // 
 // Declarations:

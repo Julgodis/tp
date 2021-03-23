@@ -65,7 +65,7 @@ extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 800209C8-80020A04 003C+00 r=1 e=1 z=0  None .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
+/* 800209C8-80020A04 003C+00 s=0 e=1 z=0  None .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void fpcCtIt_Method(int (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80020A04-80020A40 003C+00 r=3 e=2 z=0  None .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
+/* 80020A04-80020A40 003C+00 s=1 e=2 z=0  None .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void fpcCtIt_Judge(void* (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80020A40-80020A94 0054+00 r=1 e=0 z=0  None .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
+/* 80020A40-80020A94 0054+00 s=1 e=0 z=0  None .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm static void fpcCtIt_filter_JudgeInLayer(create_tag* param_0, fpcCtIt_jilprm_
 #pragma pop
 
 
-/* 80020A94-80020ACC 0038+00 r=1 e=1 z=0  None .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
+/* 80020A94-80020ACC 0038+00 s=0 e=1 z=0  None .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

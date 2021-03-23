@@ -37,7 +37,7 @@ extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
 // Declarations:
 // 
 
-/* 802A4A5C-802A4A80 0024+00 r=1 e=1 z=0  None .text      __defctor__7JASHeapFv                                        */
+/* 802A4A5C-802A4A80 0024+00 s=0 e=1 z=0  None .text      __defctor__7JASHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

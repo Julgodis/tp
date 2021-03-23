@@ -172,7 +172,7 @@ extern "C" void sqrt(); // 1
 // Declarations:
 // 
 
-/* 80270F68-80270F98 0030+00 r=35 e=33 z=2  None .text      __ct__7cSAngleFRC7cSAngle                                    */
+/* 80270F68-80270F98 0030+00 s=0 e=33 z=0  None .text      __ct__7cSAngleFRC7cSAngle                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ asm cSAngle::cSAngle(cSAngle const& param_0) {
 #pragma pop
 
 
-/* 80270F98-80270FC8 0030+00 r=68 e=50 z=4  None .text      __ct__7cSAngleFs                                             */
+/* 80270F98-80270FC8 0030+00 s=14 e=50 z=0  None .text      __ct__7cSAngleFs                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ asm cSAngle::cSAngle(s16 param_0) {
 #pragma pop
 
 
-/* 80270FC8-80270FF8 0030+00 r=22 e=22 z=0  None .text      __ct__7cSAngleFf                                             */
+/* 80270FC8-80270FF8 0030+00 s=0 e=22 z=0  None .text      __ct__7cSAngleFf                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ asm cSAngle::cSAngle(f32 param_0) {
 #pragma pop
 
 
-/* 80270FF8-80271004 000C+00 r=8 e=6 z=0  None .text      Val__7cSAngleFRC7cSAngle                                     */
+/* 80270FF8-80271004 000C+00 s=2 e=6 z=0  None .text      Val__7cSAngleFRC7cSAngle                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ asm void cSAngle::Val(cSAngle const& param_0) {
 #pragma pop
 
 
-/* 80271004-8027100C 0008+00 r=11 e=7 z=0  None .text      Val__7cSAngleFs                                              */
+/* 80271004-8027100C 0008+00 s=4 e=7 z=0  None .text      Val__7cSAngleFs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,10 +228,10 @@ asm void cSAngle::Val(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80455208-8045520C 0004+00 r=1 e=0 z=0  None .sdata2    @2248                                                        */
+/* 80455208-8045520C 0004+00 s=1 e=0 z=0  None .sdata2    @2248                                                        */
 SECTION_SDATA2 static f32 lit_2248 = 182.04444885253906f;
 
-/* 8027100C-80271030 0024+00 r=9 e=8 z=0  None .text      Val__7cSAngleFf                                              */
+/* 8027100C-80271030 0024+00 s=1 e=8 z=0  None .text      Val__7cSAngleFf                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,13 +243,13 @@ asm void cSAngle::Val(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 8045520C-80455210 0004+00 r=1 e=0 z=0  None .sdata2    @2260                                                        */
+/* 8045520C-80455210 0004+00 s=1 e=0 z=0  None .sdata2    @2260                                                        */
 SECTION_SDATA2 static f32 lit_2260 = 0.0054931640625f;
 
-/* 80455210-80455218 0008+00 r=5 e=0 z=0  None .sdata2    @2263                                                        */
+/* 80455210-80455218 0008+00 s=5 e=0 z=0  None .sdata2    @2263                                                        */
 SECTION_SDATA2 static f64 lit_2263 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80271030-80271064 0034+00 r=11 e=11 z=0  None .text      Degree__7cSAngleCFv                                          */
+/* 80271030-80271064 0034+00 s=0 e=11 z=0  None .text      Degree__7cSAngleCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,10 +261,10 @@ asm void cSAngle::Degree() const {
 
 
 /* ############################################################################################## */
-/* 80455218-8045521C 0004+00 r=1 e=0 z=0  None .sdata2    @2269                                                        */
+/* 80455218-8045521C 0004+00 s=1 e=0 z=0  None .sdata2    @2269                                                        */
 SECTION_SDATA2 static f32 c_angle__lit_2269 = 9.58738019107841e-05f;
 
-/* 80271064-80271098 0034+00 r=3 e=0 z=0  None .text      Radian__7cSAngleCFv                                          */
+/* 80271064-80271098 0034+00 s=3 e=0 z=0  None .text      Radian__7cSAngleCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,10 +276,10 @@ asm void cSAngle::Radian() const {
 
 
 /* ############################################################################################## */
-/* 8045521C-80455220 0004+00 r=1 e=0 z=0  None .sdata2    @2277                                                        */
+/* 8045521C-80455220 0004+00 s=1 e=0 z=0  None .sdata2    @2277                                                        */
 SECTION_SDATA2 static f32 c_angle__lit_2277 = 3.0517578125e-05f;
 
-/* 80271098-802710CC 0034+00 r=1 e=1 z=0  None .text      Norm__7cSAngleCFv                                            */
+/* 80271098-802710CC 0034+00 s=0 e=1 z=0  None .text      Norm__7cSAngleCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +290,7 @@ asm void cSAngle::Norm() const {
 #pragma pop
 
 
-/* 802710CC-802710E8 001C+00 r=6 e=5 z=1  None .text      Abs__7cSAngleCFv                                             */
+/* 802710CC-802710E8 001C+00 s=0 e=5 z=0  None .text      Abs__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +301,7 @@ asm void cSAngle::Abs() const {
 #pragma pop
 
 
-/* 802710E8-802710F8 0010+00 r=26 e=22 z=2  None .text      Inv__7cSAngleCFv                                             */
+/* 802710E8-802710F8 0010+00 s=2 e=22 z=0  None .text      Inv__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +312,7 @@ asm void cSAngle::Inv() const {
 #pragma pop
 
 
-/* 802710F8-80271120 0028+00 r=7 e=6 z=1  None .text      Sin__7cSAngleCFv                                             */
+/* 802710F8-80271120 0028+00 s=0 e=6 z=0  None .text      Sin__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,7 +323,7 @@ asm void cSAngle::Sin() const {
 #pragma pop
 
 
-/* 80271120-80271148 0028+00 r=9 e=8 z=1  None .text      Cos__7cSAngleCFv                                             */
+/* 80271120-80271148 0028+00 s=0 e=8 z=0  None .text      Cos__7cSAngleCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,7 +334,7 @@ asm void cSAngle::Cos() const {
 #pragma pop
 
 
-/* 80271148-80271174 002C+00 r=10 e=8 z=0  None .text      __mi__7cSAngleCFv                                            */
+/* 80271148-80271174 002C+00 s=2 e=8 z=0  None .text      __mi__7cSAngleCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +345,7 @@ asm void cSAngle::operator-() const {
 #pragma pop
 
 
-/* 80271174-802711A4 0030+00 r=31 e=30 z=1  None .text      __pl__7cSAngleCFRC7cSAngle                                   */
+/* 80271174-802711A4 0030+00 s=0 e=30 z=0  None .text      __pl__7cSAngleCFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ asm void cSAngle::operator+(cSAngle const& param_0) const {
 #pragma pop
 
 
-/* 802711A4-802711D4 0030+00 r=39 e=37 z=0  None .text      __mi__7cSAngleCFRC7cSAngle                                   */
+/* 802711A4-802711D4 0030+00 s=2 e=37 z=0  None .text      __mi__7cSAngleCFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +367,7 @@ asm void cSAngle::operator-(cSAngle const& param_0) const {
 #pragma pop
 
 
-/* 802711D4-802711E8 0014+00 r=15 e=15 z=0  None .text      __apl__7cSAngleFRC7cSAngle                                   */
+/* 802711D4-802711E8 0014+00 s=0 e=15 z=0  None .text      __apl__7cSAngleFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +378,7 @@ asm void cSAngle::operator+=(cSAngle const& param_0) {
 #pragma pop
 
 
-/* 802711E8-802711FC 0014+00 r=3 e=3 z=0  None .text      __ami__7cSAngleFRC7cSAngle                                   */
+/* 802711E8-802711FC 0014+00 s=0 e=3 z=0  None .text      __ami__7cSAngleFRC7cSAngle                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +389,7 @@ asm void cSAngle::operator-=(cSAngle const& param_0) {
 #pragma pop
 
 
-/* 802711FC-80271228 002C+00 r=5 e=5 z=0  None .text      __pl__7cSAngleCFs                                            */
+/* 802711FC-80271228 002C+00 s=0 e=5 z=0  None .text      __pl__7cSAngleCFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +400,7 @@ asm void cSAngle::operator+(s16 param_0) const {
 #pragma pop
 
 
-/* 80271228-80271254 002C+00 r=12 e=9 z=3  None .text      __mi__7cSAngleCFs                                            */
+/* 80271228-80271254 002C+00 s=0 e=9 z=0  None .text      __mi__7cSAngleCFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +411,7 @@ asm void cSAngle::operator-(s16 param_0) const {
 #pragma pop
 
 
-/* 80271254-80271264 0010+00 r=1 e=1 z=0  None .text      __apl__7cSAngleFs                                            */
+/* 80271254-80271264 0010+00 s=0 e=1 z=0  None .text      __apl__7cSAngleFs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +422,7 @@ asm void cSAngle::operator+=(s16 param_0) {
 #pragma pop
 
 
-/* 80271264-802712B4 0050+00 r=31 e=31 z=0  None .text      __ml__7cSAngleCFf                                            */
+/* 80271264-802712B4 0050+00 s=0 e=31 z=0  None .text      __ml__7cSAngleCFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +433,7 @@ asm void cSAngle::operator*(f32 param_0) const {
 #pragma pop
 
 
-/* 802712B4-802712F4 0040+00 r=3 e=3 z=0  None .text      __amu__7cSAngleFf                                            */
+/* 802712B4-802712F4 0040+00 s=0 e=3 z=0  None .text      __amu__7cSAngleFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +444,7 @@ asm void cSAngle::operator*=(f32 param_0) {
 #pragma pop
 
 
-/* 802712F4-80271320 002C+00 r=2 e=2 z=0  None .text      __pl__FsRC7cSAngle                                           */
+/* 802712F4-80271320 002C+00 s=0 e=2 z=0  None .text      __pl__FsRC7cSAngle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -455,7 +455,7 @@ asm void operator+(s16 param_0, cSAngle const& param_1) {
 #pragma pop
 
 
-/* 80271320-8027134C 002C+00 r=5 e=5 z=0  None .text      __mi__FsRC7cSAngle                                           */
+/* 80271320-8027134C 002C+00 s=0 e=5 z=0  None .text      __mi__FsRC7cSAngle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -466,7 +466,7 @@ asm void operator-(s16 param_0, cSAngle const& param_1) {
 #pragma pop
 
 
-/* 8027134C-8027137C 0030+00 r=3 e=3 z=0  None .text      __ct__7cDegreeFf                                             */
+/* 8027134C-8027137C 0030+00 s=0 e=3 z=0  None .text      __ct__7cDegreeFf                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,13 +478,13 @@ asm cDegree::cDegree(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 80455220-80455224 0004+00 r=1 e=0 z=0  None .sdata2    @2440                                                        */
+/* 80455220-80455224 0004+00 s=1 e=0 z=0  None .sdata2    @2440                                                        */
 SECTION_SDATA2 static f32 c_angle__lit_2440 = -180.0f;
 
-/* 80455224-80455228 0004+00 r=1 e=0 z=0  None .sdata2    @2441                                                        */
+/* 80455224-80455228 0004+00 s=1 e=0 z=0  None .sdata2    @2441                                                        */
 SECTION_SDATA2 static f32 c_angle__lit_2441 = 180.0f;
 
-/* 8027137C-802713BC 0040+00 r=1 e=0 z=0  None .text      Formal__7cDegreeFv                                           */
+/* 8027137C-802713BC 0040+00 s=1 e=0 z=0  None .text      Formal__7cDegreeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +495,7 @@ asm void cDegree::Formal() {
 #pragma pop
 
 
-/* 802713BC-802713E0 0024+00 r=1 e=0 z=0  None .text      Val__7cDegreeFf                                              */
+/* 802713BC-802713E0 0024+00 s=1 e=0 z=0  None .text      Val__7cDegreeFf                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,10 +507,10 @@ asm void cDegree::Val(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 80455228-8045522C 0004+00 r=1 e=0 z=0  None .sdata2    @2474                                                        */
+/* 80455228-8045522C 0004+00 s=1 e=0 z=0  None .sdata2    @2474                                                        */
 SECTION_SDATA2 static f32 lit_2474 = 0.01745329238474369f;
 
-/* 802713E0-802713F0 0010+00 r=3 e=0 z=0  None .text      Radian__7cDegreeCFv                                          */
+/* 802713E0-802713F0 0010+00 s=3 e=0 z=0  None .text      Radian__7cDegreeCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,7 +521,7 @@ asm void cDegree::Radian() const {
 #pragma pop
 
 
-/* 802713F0-80271418 0028+00 r=1 e=1 z=0  None .text      Sin__7cDegreeCFv                                             */
+/* 802713F0-80271418 0028+00 s=0 e=1 z=0  None .text      Sin__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -532,7 +532,7 @@ asm void cDegree::Sin() const {
 #pragma pop
 
 
-/* 80271418-80271440 0028+00 r=2 e=2 z=0  None .text      Cos__7cDegreeCFv                                             */
+/* 80271418-80271440 0028+00 s=0 e=2 z=0  None .text      Cos__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -543,7 +543,7 @@ asm void cDegree::Cos() const {
 #pragma pop
 
 
-/* 80271440-80271468 0028+00 r=1 e=1 z=0  None .text      Tan__7cDegreeCFv                                             */
+/* 80271440-80271468 0028+00 s=0 e=1 z=0  None .text      Tan__7cDegreeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -554,7 +554,7 @@ asm void cDegree::Tan() const {
 #pragma pop
 
 
-/* 80271468-80271498 0030+00 r=1 e=0 z=0  None .text      __ct__7cSPolarFRC4cXyz                                       */
+/* 80271468-80271498 0030+00 s=1 e=0 z=0  None .text      __ct__7cSPolarFRC4cXyz                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,12 +566,12 @@ asm cSPolar::cSPolar(cXyz const& param_0) {
 
 
 /* ############################################################################################## */
-/* 8045522C-80455230 0004+00 r=3 e=0 z=0  None .sdata2    @2491                                                        */
+/* 8045522C-80455230 0004+00 s=3 e=0 z=0  None .sdata2    @2491                                                        */
 SECTION_SDATA2 static u8 lit_2491[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80271498-80271558 00C0+00 r=2 e=0 z=0  None .text      Formal__7cSPolarFv                                           */
+/* 80271498-80271558 00C0+00 s=2 e=0 z=0  None .text      Formal__7cSPolarFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -582,7 +582,7 @@ asm void cSPolar::Formal() {
 #pragma pop
 
 
-/* 80271558-802715BC 0064+00 r=1 e=0 z=0  None .text      Val__7cSPolarFfss                                            */
+/* 80271558-802715BC 0064+00 s=1 e=0 z=0  None .text      Val__7cSPolarFfss                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -594,15 +594,15 @@ asm void cSPolar::Val(f32 param_0, s16 param_1, s16 param_2) {
 
 
 /* ############################################################################################## */
-/* 80455230-80455238 0008+00 r=1 e=0 z=0  None .sdata2    @2671                                                        */
+/* 80455230-80455238 0008+00 s=1 e=0 z=0  None .sdata2    @2671                                                        */
 SECTION_SDATA2 static u8 lit_2671[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455238-8045523C 0004+00 r=1 e=0 z=0  None .sdata2    @2672                                                        */
+/* 80455238-8045523C 0004+00 s=1 e=0 z=0  None .sdata2    @2672                                                        */
 SECTION_SDATA2 static f32 lit_2672 = 10430.3779296875f;
 
-/* 802715BC-802716EC 0130+00 r=1 e=0 z=0  None .text      Val__7cSPolarFRC4cXyz                                        */
+/* 802715BC-802716EC 0130+00 s=1 e=0 z=0  None .text      Val__7cSPolarFRC4cXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -613,7 +613,7 @@ asm void cSPolar::Val(cXyz const& param_0) {
 #pragma pop
 
 
-/* 802716EC-802717B4 00C8+00 r=2 e=1 z=0  None .text      Xyz__7cSPolarCFv                                             */
+/* 802716EC-802717B4 00C8+00 s=1 e=1 z=0  None .text      Xyz__7cSPolarCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -624,7 +624,7 @@ asm void cSPolar::Xyz() const {
 #pragma pop
 
 
-/* 802717B4-802717F0 003C+00 r=1 e=0 z=0  None .text      Globe__7cSPolarCFP7cSGlobe                                   */
+/* 802717B4-802717F0 003C+00 s=1 e=0 z=0  None .text      Globe__7cSPolarCFP7cSGlobe                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -635,7 +635,7 @@ asm void cSPolar::Globe(cSGlobe* param_0) const {
 #pragma pop
 
 
-/* 802717F0-80271820 0030+00 r=6 e=6 z=0  None .text      __ct__7cSGlobeFRC7cSGlobe                                    */
+/* 802717F0-80271820 0030+00 s=0 e=6 z=0  None .text      __ct__7cSGlobeFRC7cSGlobe                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -646,7 +646,7 @@ asm cSGlobe::cSGlobe(cSGlobe const& param_0) {
 #pragma pop
 
 
-/* 80271820-80271850 0030+00 r=3 e=3 z=0  None .text      __ct__7cSGlobeFfss                                           */
+/* 80271820-80271850 0030+00 s=0 e=3 z=0  None .text      __ct__7cSGlobeFfss                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -657,7 +657,7 @@ asm cSGlobe::cSGlobe(f32 param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80271850-80271880 0030+00 r=5 e=4 z=0  None .text      __ct__7cSGlobeFfRC7cSAngleRC7cSAngle                         */
+/* 80271850-80271880 0030+00 s=1 e=4 z=0  None .text      __ct__7cSGlobeFfRC7cSAngleRC7cSAngle                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -668,7 +668,7 @@ asm cSGlobe::cSGlobe(f32 param_0, cSAngle const& param_1, cSAngle const& param_2
 #pragma pop
 
 
-/* 80271880-802718B0 0030+00 r=38 e=35 z=3  None .text      __ct__7cSGlobeFRC4cXyz                                       */
+/* 80271880-802718B0 0030+00 s=0 e=35 z=0  None .text      __ct__7cSGlobeFRC4cXyz                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -679,7 +679,7 @@ asm cSGlobe::cSGlobe(cXyz const& param_0) {
 #pragma pop
 
 
-/* 802718B0-8027196C 00BC+00 r=5 e=0 z=0  None .text      Formal__7cSGlobeFv                                           */
+/* 802718B0-8027196C 00BC+00 s=5 e=0 z=0  None .text      Formal__7cSGlobeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -690,7 +690,7 @@ asm void cSGlobe::Formal() {
 #pragma pop
 
 
-/* 8027196C-802719A4 0038+00 r=1 e=0 z=0  None .text      Val__7cSGlobeFRC7cSGlobe                                     */
+/* 8027196C-802719A4 0038+00 s=1 e=0 z=0  None .text      Val__7cSGlobeFRC7cSGlobe                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -701,7 +701,7 @@ asm void cSGlobe::Val(cSGlobe const& param_0) {
 #pragma pop
 
 
-/* 802719A4-80271A08 0064+00 r=5 e=3 z=0  None .text      Val__7cSGlobeFfss                                            */
+/* 802719A4-80271A08 0064+00 s=2 e=3 z=0  None .text      Val__7cSGlobeFfss                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,7 +712,7 @@ asm void cSGlobe::Val(f32 param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 80271A08-80271A70 0068+00 r=12 e=11 z=0  None .text      Val__7cSGlobeFfRC7cSAngleRC7cSAngle                          */
+/* 80271A08-80271A70 0068+00 s=1 e=11 z=0  None .text      Val__7cSGlobeFfRC7cSAngleRC7cSAngle                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -723,7 +723,7 @@ asm void cSGlobe::Val(f32 param_0, cSAngle const& param_1, cSAngle const& param_
 #pragma pop
 
 
-/* 80271A70-80271AB4 0044+00 r=39 e=38 z=0  None .text      Val__7cSGlobeFRC4cXyz                                        */
+/* 80271A70-80271AB4 0044+00 s=1 e=38 z=0  None .text      Val__7cSGlobeFRC4cXyz                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -734,7 +734,7 @@ asm void cSGlobe::Val(cXyz const& param_0) {
 #pragma pop
 
 
-/* 80271AB4-80271AF4 0040+00 r=39 e=38 z=0  None .text      Xyz__7cSGlobeCFv                                             */
+/* 80271AB4-80271AF4 0040+00 s=1 e=38 z=0  None .text      Xyz__7cSGlobeCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -745,7 +745,7 @@ asm void cSGlobe::Xyz() const {
 #pragma pop
 
 
-/* 80271AF4-80271B30 003C+00 r=1 e=0 z=0  None .text      Polar__7cSGlobeCFP7cSPolar                                   */
+/* 80271AF4-80271B30 003C+00 s=1 e=0 z=0  None .text      Polar__7cSGlobeCFP7cSPolar                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -757,10 +757,10 @@ asm void cSGlobe::Polar(cSPolar* param_0) const {
 
 
 /* ############################################################################################## */
-/* 8045523C-80455240 0004+00 r=1 e=0 z=0  None .sdata2    @2744                                                        */
+/* 8045523C-80455240 0004+00 s=1 e=0 z=0  None .sdata2    @2744                                                        */
 SECTION_SDATA2 static f32 c_angle__lit_2744 = 1.0f;
 
-/* 80271B30-80271B7C 004C+00 r=3 e=3 z=0  None .text      Norm__7cSGlobeCFv                                            */
+/* 80271B30-80271B7C 004C+00 s=0 e=3 z=0  None .text      Norm__7cSGlobeCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,7 +771,7 @@ asm void cSGlobe::Norm() const {
 #pragma pop
 
 
-/* 80271B7C-80271BA8 002C+00 r=2 e=2 z=0  None .text      Invert__7cSGlobeFv                                           */
+/* 80271B7C-80271BA8 002C+00 s=0 e=2 z=0  None .text      Invert__7cSGlobeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -782,7 +782,7 @@ asm void cSGlobe::Invert() {
 #pragma pop
 
 
-/* 80271BA8-80271BD4 002C+00 r=1 e=0 z=0  None .text      Adjust<f>__6cAngleFfff                                       */
+/* 80271BA8-80271BD4 002C+00 s=1 e=0 z=0  None .text      Adjust<f>__6cAngleFfff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -794,25 +794,25 @@ asm void cAngle::Adjust__template0(f32 param_0, f32 param_1, f32 param_2) {
 
 
 /* ############################################################################################## */
-/* 80430F98-80430FA4 000C+00 r=1 e=0 z=0  None .bss       @2401                                                        */
+/* 80430F98-80430FA4 000C+00 s=1 e=0 z=0  None .bss       @2401                                                        */
 static u8 lit_2401[12];
 
-/* 80451188-8045118C 0002+02 r=23 e=22 z=0  None .sbss      _0__7cSAngle                                                 */
+/* 80451188-8045118C 0002+02 s=1 e=22 z=0  None .sbss      _0__7cSAngle                                                 */
 u8 _0__7cSAngle[2 + 2 /* padding */];
 
-/* 8045118C-80451190 0002+02 r=1 e=0 z=0  None .sbss      _1__7cSAngle                                                 */
+/* 8045118C-80451190 0002+02 s=1 e=0 z=0  None .sbss      _1__7cSAngle                                                 */
 static u8 _1__7cSAngle[2 + 2 /* padding */];
 
-/* 80451190-80451194 0002+02 r=7 e=6 z=0  None .sbss      _90__7cSAngle                                                */
+/* 80451190-80451194 0002+02 s=1 e=6 z=0  None .sbss      _90__7cSAngle                                                */
 u8 _90__7cSAngle[2 + 2 /* padding */];
 
-/* 80451194-80451198 0002+02 r=3 e=2 z=0  None .sbss      _180__7cSAngle                                               */
+/* 80451194-80451198 0002+02 s=1 e=2 z=0  None .sbss      _180__7cSAngle                                               */
 u8 _180__7cSAngle[2 + 2 /* padding */];
 
-/* 80451198-804511A0 0002+06 r=4 e=3 z=0  None .sbss      _270__7cSAngle                                               */
+/* 80451198-804511A0 0002+06 s=1 e=3 z=0  None .sbss      _270__7cSAngle                                               */
 u8 _270__7cSAngle[2 + 6 /* padding */];
 
-/* 80271BD4-80271C8C 00B8+00 r=1 e=1 z=0  None .text      __sinit_c_angle_cpp                                          */
+/* 80271BD4-80271C8C 00B8+00 s=0 e=1 z=0  None .text      __sinit_c_angle_cpp                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -824,15 +824,15 @@ extern "C" asm void __sinit_c_angle_cpp() {
 
 
 /* ############################################################################################## */
-/* 80430FA4-80430FB0 000C+00 r=0 e=0 z=0  None .bss       @2402                                                        */
+/* 80430FA4-80430FB0 000C+00 s=0 e=0 z=0  None .bss       @2402                                                        */
 u8 lit_2402[12];
 
-/* 80430FB0-80430FBC 000C+00 r=0 e=0 z=0  None .bss       @2403                                                        */
+/* 80430FB0-80430FBC 000C+00 s=0 e=0 z=0  None .bss       @2403                                                        */
 u8 lit_2403[12];
 
-/* 80430FBC-80430FC8 000C+00 r=0 e=0 z=0  None .bss       @2404                                                        */
+/* 80430FBC-80430FC8 000C+00 s=0 e=0 z=0  None .bss       @2404                                                        */
 u8 lit_2404[12];
 
-/* 80430FC8-80430FD8 000C+04 r=0 e=0 z=0  None .bss       @2405                                                        */
+/* 80430FC8-80430FD8 000C+04 s=0 e=0 z=0  None .bss       @2405                                                        */
 u8 c_angle__lit_2405[12 + 4 /* padding */];
 

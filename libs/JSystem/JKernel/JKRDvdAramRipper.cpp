@@ -11,10 +11,7 @@
 // Types:
 // 
 
-struct JKRDvdFile {
-	/* 802D9584 */ JKRDvdFile();
-	/* 802D9748 */ ~JKRDvdFile();
-	/* 802D98C4 */ void open(s32);
+struct JKRExpandSwitch {
 };
 
 struct JKRADCommand {
@@ -22,7 +19,10 @@ struct JKRADCommand {
 	/* 802DAF5C */ ~JKRADCommand();
 };
 
-struct JKRExpandSwitch {
+struct JKRDvdFile {
+	/* 802D9584 */ JKRDvdFile();
+	/* 802D9748 */ ~JKRDvdFile();
+	/* 802D98C4 */ void open(s32);
 };
 
 struct JKRDvdAramRipper {
@@ -179,7 +179,7 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // Declarations:
 // 
 
-/* 802DA874-802DA918 00A4+00 r=3 e=3 z=0  None .text      loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl   */
+/* 802DA874-802DA918 00A4+00 s=0 e=3 z=0  None .text      loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ asm void JKRDvdAramRipper::loadToAram(s32 param_0, u32 param_1, JKRExpandSwitch 
 #pragma pop
 
 
-/* 802DA918-802DA9C0 00A8+00 r=1 e=0 z=0  None .text      loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl */
+/* 802DA918-802DA9C0 00A8+00 s=1 e=0 z=0  None .text      loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ asm void JKRDvdAramRipper::loadToAram(JKRDvdFile* param_0, u32 param_1, JKRExpan
 #pragma pop
 
 
-/* 802DA9C0-802DAA74 00B4+00 r=1 e=0 z=0  None .text      loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl */
+/* 802DA9C0-802DAA74 00B4+00 s=1 e=0 z=0  None .text      loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,16 +213,16 @@ asm void JKRDvdAramRipper::loadToAram_Async(JKRDvdFile* param_0, u32 param_1, JK
 
 
 /* ############################################################################################## */
-/* 804343A8-804343B4 000C+00 r=1 e=0 z=0  None .bss       @301                                                         */
+/* 804343A8-804343B4 000C+00 s=1 e=0 z=0  None .bss       @301                                                         */
 static u8 JKRDvdAramRipper__lit_301[12];
 
-/* 804343B4-804343C0 000C+00 r=3 e=0 z=0  None .bss       sDvdAramAsyncList__16JKRDvdAramRipper                        */
+/* 804343B4-804343C0 000C+00 s=3 e=0 z=0  None .bss       sDvdAramAsyncList__16JKRDvdAramRipper                        */
 static u8 sDvdAramAsyncList__16JKRDvdAramRipper[12];
 
-/* 804508D0-804508D4 0004+00 r=3 e=0 z=0  None .sdata     None                                                         */
+/* 804508D0-804508D4 0004+00 s=3 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u32 data_804508D0 = 0x01000000;
 
-/* 802DAA74-802DADD8 0364+00 r=1 e=0 z=0  None .text      callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand        */
+/* 802DAA74-802DADD8 0364+00 s=1 e=0 z=0  None .text      callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +233,7 @@ asm void JKRDvdAramRipper::callCommand_Async(JKRADCommand* param_0) {
 #pragma pop
 
 
-/* 802DADD8-802DAE48 0070+00 r=1 e=1 z=0  None .text      __dt__18JSUFileInputStreamFv                                 */
+/* 802DADD8-802DAE48 0070+00 s=0 e=1 z=0  None .text      __dt__18JSUFileInputStreamFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +244,7 @@ asm JSUFileInputStream::~JSUFileInputStream() {
 #pragma pop
 
 
-/* 802DAE48-802DAF1C 00D4+00 r=1 e=0 z=0  None .text      syncAram__16JKRDvdAramRipperFP12JKRADCommandi                */
+/* 802DAE48-802DAF1C 00D4+00 s=1 e=0 z=0  None .text      syncAram__16JKRDvdAramRipperFP12JKRADCommandi                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +255,7 @@ asm void JKRDvdAramRipper::syncAram(JKRADCommand* param_0, int param_1) {
 #pragma pop
 
 
-/* 802DAF1C-802DAF5C 0040+00 r=1 e=0 z=0  None .text      __ct__12JKRADCommandFv                                       */
+/* 802DAF1C-802DAF5C 0040+00 s=1 e=0 z=0  None .text      __ct__12JKRADCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +266,7 @@ asm JKRADCommand::JKRADCommand() {
 #pragma pop
 
 
-/* 802DAF5C-802DAFE8 008C+00 r=2 e=0 z=0  None .text      __dt__12JKRADCommandFv                                       */
+/* 802DAF5C-802DAFE8 008C+00 s=2 e=0 z=0  None .text      __dt__12JKRADCommandFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,67 +278,67 @@ asm JKRADCommand::~JKRADCommand() {
 
 
 /* ############################################################################################## */
-/* 804343C0-804343D8 0018+00 r=1 e=0 z=0  None .bss       decompMutex                                                  */
+/* 804343C0-804343D8 0018+00 s=1 e=0 z=0  None .bss       decompMutex                                                  */
 static u8 JKRDvdAramRipper__decompMutex[24];
 
-/* 804508D4-804508D8 0004+00 r=2 e=1 z=0  None .sdata     sSZSBufferSize__16JKRDvdAramRipper                           */
+/* 804508D4-804508D8 0004+00 s=1 e=1 z=0  None .sdata     sSZSBufferSize__16JKRDvdAramRipper                           */
 SECTION_SDATA u32 sSZSBufferSize__16JKRDvdAramRipper = 0x00000400;
 
-/* 80451468-8045146C 0004+00 r=3 e=0 z=0  None .sbss      szpBuf                                                       */
+/* 80451468-8045146C 0004+00 s=3 e=0 z=0  None .sbss      szpBuf                                                       */
 static u8 JKRDvdAramRipper__szpBuf[4];
 
-/* 8045146C-80451470 0004+00 r=3 e=0 z=0  None .sbss      szpEnd                                                       */
+/* 8045146C-80451470 0004+00 s=3 e=0 z=0  None .sbss      szpEnd                                                       */
 static u8 JKRDvdAramRipper__szpEnd[4];
 
-/* 80451470-80451474 0004+00 r=2 e=0 z=0  None .sbss      refBuf                                                       */
+/* 80451470-80451474 0004+00 s=2 e=0 z=0  None .sbss      refBuf                                                       */
 static u8 JKRDvdAramRipper__refBuf[4];
 
-/* 80451474-80451478 0004+00 r=2 e=0 z=0  None .sbss      refEnd                                                       */
+/* 80451474-80451478 0004+00 s=2 e=0 z=0  None .sbss      refEnd                                                       */
 static u8 JKRDvdAramRipper__refEnd[4];
 
-/* 80451478-8045147C 0004+00 r=2 e=0 z=0  None .sbss      refCurrent                                                   */
+/* 80451478-8045147C 0004+00 s=2 e=0 z=0  None .sbss      refCurrent                                                   */
 static u8 JKRDvdAramRipper__refCurrent[4];
 
-/* 8045147C-80451480 0004+00 r=2 e=0 z=0  None .sbss      dmaBuf                                                       */
+/* 8045147C-80451480 0004+00 s=2 e=0 z=0  None .sbss      dmaBuf                                                       */
 static u8 dmaBuf[4];
 
-/* 80451480-80451484 0004+00 r=2 e=0 z=0  None .sbss      dmaEnd                                                       */
+/* 80451480-80451484 0004+00 s=2 e=0 z=0  None .sbss      dmaEnd                                                       */
 static u8 dmaEnd[4];
 
-/* 80451484-80451488 0004+00 r=3 e=0 z=0  None .sbss      dmaCurrent                                                   */
+/* 80451484-80451488 0004+00 s=3 e=0 z=0  None .sbss      dmaCurrent                                                   */
 static u8 dmaCurrent[4];
 
-/* 80451488-8045148C 0004+00 r=3 e=0 z=0  None .sbss      srcOffset                                                    */
+/* 80451488-8045148C 0004+00 s=3 e=0 z=0  None .sbss      srcOffset                                                    */
 static u8 JKRDvdAramRipper__srcOffset[4];
 
-/* 8045148C-80451490 0004+00 r=4 e=0 z=0  None .sbss      transLeft                                                    */
+/* 8045148C-80451490 0004+00 s=4 e=0 z=0  None .sbss      transLeft                                                    */
 static u8 JKRDvdAramRipper__transLeft[4];
 
-/* 80451490-80451494 0004+00 r=3 e=0 z=0  None .sbss      srcLimit                                                     */
+/* 80451490-80451494 0004+00 s=3 e=0 z=0  None .sbss      srcLimit                                                     */
 static u8 JKRDvdAramRipper__srcLimit[4];
 
-/* 80451494-80451498 0004+00 r=3 e=0 z=0  None .sbss      srcFile                                                      */
+/* 80451494-80451498 0004+00 s=3 e=0 z=0  None .sbss      srcFile                                                      */
 static u8 JKRDvdAramRipper__srcFile[4];
 
-/* 80451498-8045149C 0004+00 r=2 e=0 z=0  None .sbss      fileOffset                                                   */
+/* 80451498-8045149C 0004+00 s=2 e=0 z=0  None .sbss      fileOffset                                                   */
 static u8 JKRDvdAramRipper__fileOffset[4];
 
-/* 8045149C-804514A0 0004+00 r=2 e=0 z=0  None .sbss      readCount                                                    */
+/* 8045149C-804514A0 0004+00 s=2 e=0 z=0  None .sbss      readCount                                                    */
 static u8 JKRDvdAramRipper__readCount[4];
 
-/* 804514A0-804514A4 0004+00 r=2 e=0 z=0  None .sbss      maxDest                                                      */
+/* 804514A0-804514A4 0004+00 s=2 e=0 z=0  None .sbss      maxDest                                                      */
 static u8 JKRDvdAramRipper__maxDest[4];
 
-/* 804514A4-804514A8 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 804514A4-804514A8 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804514A4[4];
 
-/* 804514A8-804514AC 0004+00 r=2 e=0 z=0  None .sbss      tsPtr                                                        */
+/* 804514A8-804514AC 0004+00 s=2 e=0 z=0  None .sbss      tsPtr                                                        */
 static u8 JKRDvdAramRipper__tsPtr[4];
 
-/* 804514AC-804514B0 0004+00 r=1 e=0 z=0  None .sbss      tsArea                                                       */
+/* 804514AC-804514B0 0004+00 s=1 e=0 z=0  None .sbss      tsArea                                                       */
 static u8 JKRDvdAramRipper__tsArea[4];
 
-/* 802DAFE8-802DB160 0178+00 r=1 e=0 z=0  None .text      JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl      */
+/* 802DAFE8-802DB160 0178+00 s=1 e=0 z=0  None .text      JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,7 +349,7 @@ asm static void JKRDecompressFromDVDToAram(JKRDvdFile* param_0, u32 param_1, u32
 #pragma pop
 
 
-/* 802DB160-802DB3E8 0288+00 r=1 e=0 z=0  None .text      decompSZS_subroutine__FPUcUl                                 */
+/* 802DB160-802DB3E8 0288+00 s=1 e=0 z=0  None .text      decompSZS_subroutine__FPUcUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,7 +360,7 @@ asm static void decompSZS_subroutine(u8* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802DB3E8-802DB49C 00B4+00 r=1 e=0 z=0  None .text      firstSrcData__Fv                                             */
+/* 802DB3E8-802DB49C 00B4+00 s=1 e=0 z=0  None .text      firstSrcData__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm static void firstSrcData() {
 #pragma pop
 
 
-/* 802DB49C-802DB580 00E4+00 r=1 e=0 z=0  None .text      nextSrcData__FPUc                                            */
+/* 802DB49C-802DB580 00E4+00 s=1 e=0 z=0  None .text      nextSrcData__FPUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm static void nextSrcData(u8* param_0) {
 #pragma pop
 
 
-/* 802DB580-802DB5E8 0068+00 r=1 e=0 z=0  None .text      dmaBufferFlush__FUl                                          */
+/* 802DB580-802DB5E8 0068+00 s=1 e=0 z=0  None .text      dmaBufferFlush__FUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm static void dmaBufferFlush(u32 param_0) {
 #pragma pop
 
 
-/* 802DB5E8-802DB62C 0044+00 r=1 e=1 z=0  None .text      __sinit_JKRDvdAramRipper_cpp                                 */
+/* 802DB5E8-802DB62C 0044+00 s=0 e=1 z=0  None .text      __sinit_JKRDvdAramRipper_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ extern "C" asm void __sinit_JKRDvdAramRipper_cpp() {
 #pragma pop
 
 
-/* 802DB62C-802DB680 0054+00 r=1 e=0 z=0  None .text      __dt__23JSUList<12JKRADCommand>Fv                            */
+/* 802DB62C-802DB680 0054+00 s=1 e=0 z=0  None .text      __dt__23JSUList<12JKRADCommand>Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

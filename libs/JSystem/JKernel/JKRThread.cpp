@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct OSThread {
-};
-
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
+};
+
+struct OSThread {
 };
 
 struct JKRThread {
@@ -34,13 +34,13 @@ struct JKRThread {
 	/* 802D1E14 */ void run();
 };
 
-struct JKRThreadName_ {
-};
-
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
+};
+
+struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {
@@ -168,7 +168,7 @@ extern "C" extern u8 sRootHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC100-803CC114 0014+00 r=2 e=0 z=0  None .data      __vt__15JKRThreadSwitch                                      */
+/* 803CC100-803CC114 0014+00 s=2 e=0 z=0  None .data      __vt__15JKRThreadSwitch                                      */
 SECTION_DATA static void* __vt__15JKRThreadSwitch[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -177,7 +177,7 @@ SECTION_DATA static void* __vt__15JKRThreadSwitch[5] = {
 	/* 4    */ (void*)__dt__15JKRThreadSwitchFv,
 };
 
-/* 803CC114-803CC128 0010+04 r=4 e=0 z=0  None .data      __vt__9JKRThread                                             */
+/* 803CC114-803CC128 0010+04 s=4 e=0 z=0  None .data      __vt__9JKRThread                                             */
 SECTION_DATA static void* __vt__9JKRThread[4 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -187,7 +187,7 @@ SECTION_DATA static void* __vt__9JKRThread[4 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802D1568-802D1610 00A8+00 r=4 e=4 z=0  None .text      __ct__9JKRThreadFUlii                                        */
+/* 802D1568-802D1610 00A8+00 s=0 e=4 z=0  None .text      __ct__9JKRThreadFUlii                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm JKRThread::JKRThread(u32 param_0, int param_1, int param_2) {
 #pragma pop
 
 
-/* 802D1610-802D16B8 00A8+00 r=2 e=2 z=0  None .text      __ct__9JKRThreadFP7JKRHeapUlii                               */
+/* 802D1610-802D16B8 00A8+00 s=0 e=2 z=0  None .text      __ct__9JKRThreadFP7JKRHeapUlii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm JKRThread::JKRThread(JKRHeap* param_0, u32 param_1, int param_2, int param_3
 #pragma pop
 
 
-/* 802D16B8-802D1758 00A0+00 r=5 e=5 z=0  None .text      __ct__9JKRThreadFP8OSThreadi                                 */
+/* 802D16B8-802D1758 00A0+00 s=0 e=5 z=0  None .text      __ct__9JKRThreadFP8OSThreadi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,13 +221,13 @@ asm JKRThread::JKRThread(OSThread* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80434280-8043428C 000C+00 r=1 e=0 z=0  None .bss       @481                                                         */
+/* 80434280-8043428C 000C+00 s=1 e=0 z=0  None .bss       @481                                                         */
 static u8 lit_481[12];
 
-/* 8043428C-80434298 000C+00 r=5 e=0 z=0  None .bss       sThreadList__9JKRThread                                      */
+/* 8043428C-80434298 000C+00 s=5 e=0 z=0  None .bss       sThreadList__9JKRThread                                      */
 static u8 sThreadList__9JKRThread[12];
 
-/* 802D1758-802D1830 00D8+00 r=10 e=9 z=0  None .text      __dt__9JKRThreadFv                                           */
+/* 802D1758-802D1830 00D8+00 s=1 e=9 z=0  None .text      __dt__9JKRThreadFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm JKRThread::~JKRThread() {
 #pragma pop
 
 
-/* 802D1830-802D18A4 0074+00 r=3 e=0 z=0  None .text      setCommon_mesgQueue__9JKRThreadFP7JKRHeapi                   */
+/* 802D1830-802D18A4 0074+00 s=3 e=0 z=0  None .text      setCommon_mesgQueue__9JKRThreadFP7JKRHeapi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +249,7 @@ asm void JKRThread::setCommon_mesgQueue(JKRHeap* param_0, int param_1) {
 #pragma pop
 
 
-/* 802D18A4-802D1934 0090+00 r=2 e=0 z=0  None .text      setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli             */
+/* 802D18A4-802D1934 0090+00 s=2 e=0 z=0  None .text      setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +260,7 @@ asm void JKRThread::setCommon_heapSpecified(JKRHeap* param_0, u32 param_1, int p
 #pragma pop
 
 
-/* 802D1934-802D1960 002C+00 r=1 e=0 z=0  None .text      start__9JKRThreadFPv                                         */
+/* 802D1934-802D1960 002C+00 s=1 e=0 z=0  None .text      start__9JKRThreadFPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,7 +271,7 @@ asm void JKRThread::start(void* param_0) {
 #pragma pop
 
 
-/* 802D1960-802D199C 003C+00 r=1 e=0 z=0  None .text      searchThread__9JKRThreadFP8OSThread                          */
+/* 802D1960-802D199C 003C+00 s=1 e=0 z=0  None .text      searchThread__9JKRThreadFP8OSThread                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,19 +283,19 @@ asm void JKRThread::searchThread(OSThread* param_0) {
 
 
 /* ############################################################################################## */
-/* 804513B0-804513B4 0004+00 r=3 e=1 z=0  None .sbss      sManager__15JKRThreadSwitch                                  */
+/* 804513B0-804513B4 0004+00 s=2 e=1 z=0  None .sbss      sManager__15JKRThreadSwitch                                  */
 u8 sManager__15JKRThreadSwitch[4];
 
-/* 804513B4-804513B8 0004+00 r=3 e=0 z=0  None .sbss      sTotalCount__15JKRThreadSwitch                               */
+/* 804513B4-804513B8 0004+00 s=3 e=0 z=0  None .sbss      sTotalCount__15JKRThreadSwitch                               */
 static u8 sTotalCount__15JKRThreadSwitch[4];
 
-/* 804513B8-804513BC 0004+00 r=1 e=0 z=0  None .sbss      sTotalStart__15JKRThreadSwitch                               */
+/* 804513B8-804513BC 0004+00 s=1 e=0 z=0  None .sbss      sTotalStart__15JKRThreadSwitch                               */
 static u8 sTotalStart__15JKRThreadSwitch[4];
 
-/* 804513BC-804513C0 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 804513BC-804513C0 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804513BC[4];
 
-/* 802D199C-802D1A14 0078+00 r=1 e=0 z=0  None .text      __ct__15JKRThreadSwitchFP7JKRHeap                            */
+/* 802D199C-802D1A14 0078+00 s=1 e=0 z=0  None .text      __ct__15JKRThreadSwitchFP7JKRHeap                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ asm JKRThreadSwitch::JKRThreadSwitch(JKRHeap* param_0) {
 #pragma pop
 
 
-/* 802D1A14-802D1A70 005C+00 r=1 e=1 z=0  None .text      createManager__15JKRThreadSwitchFP7JKRHeap                   */
+/* 802D1A14-802D1A70 005C+00 s=0 e=1 z=0  None .text      createManager__15JKRThreadSwitchFP7JKRHeap                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void JKRThreadSwitch::createManager(JKRHeap* param_0) {
 #pragma pop
 
 
-/* 802D1A70-802D1AE4 0074+00 r=1 e=1 z=0  None .text      enter__15JKRThreadSwitchFP9JKRThreadi                        */
+/* 802D1A70-802D1AE4 0074+00 s=0 e=1 z=0  None .text      enter__15JKRThreadSwitchFP9JKRThreadi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,7 +329,7 @@ asm void JKRThreadSwitch::enter(JKRThread* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 8039CFA8-8039D078 00CD+03 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039CFA8-8039D078 00CD+03 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -350,13 +350,13 @@ SECTION_DEAD char const* const stringBase_8039D052 =
 SECTION_DEAD static char const* const pad_8039D075 = "\0\0";
 #pragma pop
 
-/* 804513C0-804513C4 0004+00 r=1 e=0 z=0  None .sbss      mUserPreCallback__15JKRThreadSwitch                          */
+/* 804513C0-804513C4 0004+00 s=1 e=0 z=0  None .sbss      mUserPreCallback__15JKRThreadSwitch                          */
 static u8 mUserPreCallback__15JKRThreadSwitch[4];
 
-/* 804513C4-804513C8 0004+00 r=1 e=0 z=0  None .sbss      mUserPostCallback__15JKRThreadSwitch                         */
+/* 804513C4-804513C8 0004+00 s=1 e=0 z=0  None .sbss      mUserPostCallback__15JKRThreadSwitch                         */
 static u8 mUserPostCallback__15JKRThreadSwitch[4];
 
-/* 802D1AE4-802D1C74 0190+00 r=1 e=0 z=0  None .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread             */
+/* 802D1AE4-802D1C74 0190+00 s=1 e=0 z=0  None .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,16 +368,16 @@ asm void JKRThreadSwitch::callback(OSThread* param_0, OSThread* param_1) {
 
 
 /* ############################################################################################## */
-/* 80455FC0-80455FC4 0004+00 r=1 e=0 z=0  None .sdata2    @934                                                         */
+/* 80455FC0-80455FC4 0004+00 s=1 e=0 z=0  None .sdata2    @934                                                         */
 SECTION_SDATA2 static f32 JKRThread__lit_934 = 100.0f;
 
-/* 80455FC4-80455FC8 0004+00 r=1 e=0 z=0  None .sdata2    @935                                                         */
+/* 80455FC4-80455FC8 0004+00 s=1 e=0 z=0  None .sdata2    @935                                                         */
 SECTION_SDATA2 static f32 JKRThread__lit_935 = 1000.0f;
 
-/* 80455FC8-80455FD0 0008+00 r=1 e=0 z=0  None .sdata2    @937                                                         */
+/* 80455FC8-80455FD0 0008+00 s=1 e=0 z=0  None .sdata2    @937                                                         */
 SECTION_SDATA2 static f64 JKRThread__lit_937 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802D1C74-802D1E14 01A0+00 r=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole       */
+/* 802D1C74-802D1E14 01A0+00 s=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,7 +388,7 @@ asm void JKRThreadSwitch::draw(JKRThreadName_* param_0, JUTConsole* param_1) {
 #pragma pop
 
 
-/* 802D1E14-802D1E1C 0008+00 r=1 e=0 z=0  None .text      run__9JKRThreadFv                                            */
+/* 802D1E14-802D1E1C 0008+00 s=1 e=0 z=0  None .text      run__9JKRThreadFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,7 +399,7 @@ asm void JKRThread::run() {
 #pragma pop
 
 
-/* 802D1E1C-802D1E4C 0030+00 r=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_                    */
+/* 802D1E1C-802D1E4C 0030+00 s=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +410,7 @@ asm void JKRThreadSwitch::draw(JKRThreadName_* param_0) {
 #pragma pop
 
 
-/* 802D1E4C-802D1E94 0048+00 r=1 e=0 z=0  None .text      __dt__15JKRThreadSwitchFv                                    */
+/* 802D1E4C-802D1E94 0048+00 s=1 e=0 z=0  None .text      __dt__15JKRThreadSwitchFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +421,7 @@ asm JKRThreadSwitch::~JKRThreadSwitch() {
 #pragma pop
 
 
-/* 802D1E94-802D1EFC 0068+00 r=1 e=1 z=0  None .text      __sinit_JKRThread_cpp                                        */
+/* 802D1E94-802D1EFC 0068+00 s=0 e=1 z=0  None .text      __sinit_JKRThread_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +432,7 @@ extern "C" asm void __sinit_JKRThread_cpp() {
 #pragma pop
 
 
-/* 802D1EFC-802D1F50 0054+00 r=1 e=0 z=0  None .text      __dt__17JSUList<7JKRTask>Fv                                  */
+/* 802D1EFC-802D1F50 0054+00 s=1 e=0 z=0  None .text      __dt__17JSUList<7JKRTask>Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +443,7 @@ asm JSUList__template3::~JSUList__template3() {
 #pragma pop
 
 
-/* 802D1F50-802D1FA4 0054+00 r=1 e=0 z=0  None .text      __dt__19JSUList<9JKRThread>Fv                                */
+/* 802D1F50-802D1FA4 0054+00 s=1 e=0 z=0  None .text      __dt__19JSUList<9JKRThread>Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -455,12 +455,12 @@ asm JSUList__template4::~JSUList__template4() {
 
 
 /* ############################################################################################## */
-/* 80434298-804342A4 000C+00 r=0 e=0 z=0  None .bss       @989                                                         */
+/* 80434298-804342A4 000C+00 s=0 e=0 z=0  None .bss       @989                                                         */
 u8 lit_989[12];
 
-/* 804342A4-804342B0 000C+00 r=0 e=0 z=0  None .bss       sTaskList__7JKRTask                                          */
+/* 804342A4-804342B0 000C+00 s=0 e=0 z=0  None .bss       sTaskList__7JKRTask                                          */
 u8 sTaskList__7JKRTask[12];
 
-/* 804342B0-804342D0 0020+00 r=0 e=0 z=0  None .bss       sEndMesgQueue__7JKRTask                                      */
+/* 804342B0-804342D0 0020+00 s=0 e=0 z=0  None .bss       sEndMesgQueue__7JKRTask                                      */
 u8 sEndMesgQueue__7JKRTask[32];
 

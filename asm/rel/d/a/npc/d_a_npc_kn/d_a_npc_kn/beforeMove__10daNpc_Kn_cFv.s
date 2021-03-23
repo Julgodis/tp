@@ -9,7 +9,7 @@ lbl_80A2C484:
 /* 80A2C4A0 0000001C  88 03 0E 2C */	lbz r0, 0xe2c(r3)
 /* 80A2C4A4 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80A2C4A8 00000024  40 82 00 1C */	bne lbl_80A2C4C4
-/* 80A2C4AC 00000028  4B FF E4 CD */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80A2C4AC 00000028  4B FF E4 CD */	bl _unresolved
 /* 80A2C4B0 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2C4B4 00000030  40 82 00 14 */	bne lbl_80A2C4C8
 /* 80A2C4B8 00000034  88 1E 0A BD */	lbz r0, 0xabd(r30)

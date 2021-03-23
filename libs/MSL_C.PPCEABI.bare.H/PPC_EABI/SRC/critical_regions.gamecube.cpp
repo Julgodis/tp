@@ -26,7 +26,7 @@ extern "C" void __kill_critical_regions(); // 1
 // Declarations:
 // 
 
-/* 80365464-80365468 0004+00 r=12 e=12 z=0  None .text      __end_critical_region                                        */
+/* 80365464-80365468 0004+00 s=0 e=12 z=0  None .text      __end_critical_region                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -37,7 +37,7 @@ extern "C" asm void __end_critical_region() {
 #pragma pop
 
 
-/* 80365468-8036546C 0004+00 r=12 e=12 z=0  None .text      __begin_critical_region                                      */
+/* 80365468-8036546C 0004+00 s=0 e=12 z=0  None .text      __begin_critical_region                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void __begin_critical_region() {
 #pragma pop
 
 
-/* 8036546C-80365470 0004+00 r=2 e=2 z=0  None .text      __kill_critical_regions                                      */
+/* 8036546C-80365470 0004+00 s=0 e=2 z=0  None .text      __kill_critical_regions                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

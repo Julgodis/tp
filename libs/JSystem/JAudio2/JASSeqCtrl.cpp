@@ -78,10 +78,10 @@ extern "C" extern void* __vt__12JASSeqParser[8];
 // 
 
 /* ############################################################################################## */
-/* 80451238-80451240 0004+04 r=3 e=0 z=0  None .sbss      sDefaultParser__10JASSeqCtrl                                 */
+/* 80451238-80451240 0004+04 s=3 e=0 z=0  None .sbss      sDefaultParser__10JASSeqCtrl                                 */
 static u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 
-/* 802938BC-80293924 0068+00 r=1 e=1 z=0  None .text      __ct__10JASSeqCtrlFv                                         */
+/* 802938BC-80293924 0068+00 s=0 e=1 z=0  None .text      __ct__10JASSeqCtrlFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm JASSeqCtrl::JASSeqCtrl() {
 #pragma pop
 
 
-/* 80293924-80293980 005C+00 r=1 e=1 z=0  None .text      init__10JASSeqCtrlFv                                         */
+/* 80293924-80293980 005C+00 s=0 e=1 z=0  None .text      init__10JASSeqCtrlFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void JASSeqCtrl::init() {
 #pragma pop
 
 
-/* 80293980-802939C4 0044+00 r=1 e=1 z=0  None .text      start__10JASSeqCtrlFPvUl                                     */
+/* 80293980-802939C4 0044+00 s=0 e=1 z=0  None .text      start__10JASSeqCtrlFPvUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ asm void JASSeqCtrl::start(void* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802939C4-80293ABC 00F8+00 r=1 e=1 z=0  None .text      tickProc__10JASSeqCtrlFP8JASTrack                            */
+/* 802939C4-80293ABC 00F8+00 s=0 e=1 z=0  None .text      tickProc__10JASSeqCtrlFP8JASTrack                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm void JASSeqCtrl::tickProc(JASTrack* param_0) {
 #pragma pop
 
 
-/* 80293ABC-80293AE0 0024+00 r=4 e=2 z=0  None .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              */
+/* 80293ABC-80293AE0 0024+00 s=2 e=2 z=0  None .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm void JASSeqCtrl::interrupt(JASSeqCtrl::IntrType param_0) {
 #pragma pop
 
 
-/* 80293AE0-80293AF0 0010+00 r=1 e=1 z=0  None .text      setIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AE0-80293AF0 0010+00 s=0 e=1 z=0  None .text      setIntrMask__10JASSeqCtrlFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void JASSeqCtrl::setIntrMask(u32 param_0) {
 #pragma pop
 
 
-/* 80293AF0-80293B00 0010+00 r=1 e=1 z=0  None .text      clrIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AF0-80293B00 0010+00 s=0 e=1 z=0  None .text      clrIntrMask__10JASSeqCtrlFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void JASSeqCtrl::clrIntrMask(u32 param_0) {
 #pragma pop
 
 
-/* 80293B00-80293B28 0028+00 r=1 e=1 z=0  None .text      retIntr__10JASSeqCtrlFv                                      */
+/* 80293B00-80293B28 0028+00 s=0 e=1 z=0  None .text      retIntr__10JASSeqCtrlFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm void JASSeqCtrl::retIntr() {
 #pragma pop
 
 
-/* 80293B28-80293B78 0050+00 r=1 e=0 z=0  None .text      findIntr__10JASSeqCtrlFv                                     */
+/* 80293B28-80293B78 0050+00 s=1 e=0 z=0  None .text      findIntr__10JASSeqCtrlFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +180,7 @@ asm void JASSeqCtrl::findIntr() {
 #pragma pop
 
 
-/* 80293B78-80293BE8 0070+00 r=3 e=2 z=0  None .text      checkIntr__10JASSeqCtrlFv                                    */
+/* 80293B78-80293BE8 0070+00 s=1 e=2 z=0  None .text      checkIntr__10JASSeqCtrlFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm void JASSeqCtrl::checkIntr() {
 #pragma pop
 
 
-/* 80293BE8-80293C6C 0084+00 r=1 e=0 z=0  None .text      timerProcess__10JASSeqCtrlFv                                 */
+/* 80293BE8-80293C6C 0084+00 s=1 e=0 z=0  None .text      timerProcess__10JASSeqCtrlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,10 +203,10 @@ asm void JASSeqCtrl::timerProcess() {
 
 
 /* ############################################################################################## */
-/* 80431B18-80431B28 000C+04 r=1 e=0 z=0  None .bss       @433                                                         */
+/* 80431B18-80431B28 000C+04 s=1 e=0 z=0  None .bss       @433                                                         */
 static u8 JASSeqCtrl__lit_433[12 + 4 /* padding */];
 
-/* 80293C6C-80293CAC 0040+00 r=1 e=1 z=0  None .text      __sinit_JASSeqCtrl_cpp                                       */
+/* 80293C6C-80293CAC 0040+00 s=0 e=1 z=0  None .text      __sinit_JASSeqCtrl_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +217,7 @@ extern "C" asm void __sinit_JASSeqCtrl_cpp() {
 #pragma pop
 
 
-/* 80293CAC-80293CF4 0048+00 r=2 e=1 z=0  None .text      __dt__12JASSeqParserFv                                       */
+/* 80293CAC-80293CF4 0048+00 s=1 e=1 z=0  None .text      __dt__12JASSeqParserFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

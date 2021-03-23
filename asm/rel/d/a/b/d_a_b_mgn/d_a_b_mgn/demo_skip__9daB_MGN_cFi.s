@@ -3,12 +3,12 @@ lbl_8060BE6C:
 /* 8060BE70 00000004  7C 08 02 A6 */	mflr r0
 /* 8060BE74 00000008  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8060BE78 0000000C  39 61 00 40 */	addi r11, r1, 0x40
-/* 8060BE7C 00000010  4B FF 98 1D */	bl _savegpr_27
+/* 8060BE7C 00000010  4B FF 98 1D */	bl _unresolved
 /* 8060BE80 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8060BE84 00000018  3C 60 00 00 */	lis r3, lit_3928@ha /* 8060FDE0 */
-/* 8060BE88 0000001C  3B A3 00 00 */	addi r29, r3, lit_3928@l /* 8060FDE0 */
-/* 8060BE8C 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8060BE90 00000024  3B C3 00 00 */	addi r30, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8060BE84 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060BE88 0000001C  3B A3 00 00 */	addi r29, r3, 0x0000 /* 0x00000000@l */
+/* 8060BE8C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060BE90 00000024  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 8060BE94 00000028  88 1E 5D B0 */	lbz r0, 0x5db0(r30)
 /* 8060BE98 0000002C  7C 00 07 74 */	extsb r0, r0
 /* 8060BE9C 00000030  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -18,24 +18,24 @@ lbl_8060BE6C:
 /* 8060BEAC 00000040  D0 1F 0A F0 */	stfs f0, 0xaf0(r31)
 /* 8060BEB0 00000044  38 7E 5B D4 */	addi r3, r30, 0x5bd4
 /* 8060BEB4 00000048  38 80 00 1F */	li r4, 0x1f
-/* 8060BEB8 0000004C  4B FF 97 E1 */	bl StopQuake__12dVibration_cFi
+/* 8060BEB8 0000004C  4B FF 97 E1 */	bl _unresolved
 /* 8060BEBC 00000050  80 7F 05 BC */	lwz r3, 0x5bc(r31)
 /* 8060BEC0 00000054  80 63 00 04 */	lwz r3, 4(r3)
 /* 8060BEC4 00000058  83 63 00 04 */	lwz r27, 4(r3)
 /* 8060BEC8 0000005C  38 7B 00 58 */	addi r3, r27, 0x58
 /* 8060BECC 00000060  80 9F 05 C0 */	lwz r4, 0x5c0(r31)
 /* 8060BED0 00000064  80 84 00 14 */	lwz r4, 0x14(r4)
-/* 8060BED4 00000068  4B FF 97 C5 */	bl removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 8060BED8 0000006C  3C 60 00 00 */	lis r3, stringBase0@ha /* 80610084 */
-/* 8060BEDC 00000070  38 63 00 00 */	addi r3, r3, stringBase0@l /* 80610084 */
+/* 8060BED4 00000068  4B FF 97 C5 */	bl _unresolved
+/* 8060BED8 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060BEDC 00000070  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060BEE0 00000074  38 63 00 07 */	addi r3, r3, 7
 /* 8060BEE4 00000078  38 80 00 33 */	li r4, 0x33
-/* 8060BEE8 0000007C  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8060BEEC 00000080  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8060BEE8 0000007C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 8060BEEC 00000080  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 8060BEF0 00000084  3C A5 00 02 */	addis r5, r5, 2
 /* 8060BEF4 00000088  38 C0 00 80 */	li r6, 0x80
 /* 8060BEF8 0000008C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 8060BEFC 00000090  4B FF 97 9D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 8060BEFC 00000090  4B FF 97 9D */	bl _unresolved
 /* 8060BF00 00000094  7C 65 1B 78 */	mr r5, r3
 /* 8060BF04 00000098  80 7F 05 C0 */	lwz r3, 0x5c0(r31)
 /* 8060BF08 0000009C  38 9B 00 58 */	addi r4, r27, 0x58
@@ -44,7 +44,7 @@ lbl_8060BE6C:
 /* 8060BF14 000000A8  C0 3D 00 08 */	lfs f1, 8(r29)
 /* 8060BF18 000000AC  39 00 00 00 */	li r8, 0
 /* 8060BF1C 000000B0  39 20 FF FF */	li r9, -1
-/* 8060BF20 000000B4  4B FF 97 79 */	bl init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss
+/* 8060BF20 000000B4  4B FF 97 79 */	bl _unresolved
 /* 8060BF24 000000B8  C0 3D 00 04 */	lfs f1, 4(r29)
 /* 8060BF28 000000BC  D0 3F 04 D0 */	stfs f1, 0x4d0(r31)
 /* 8060BF2C 000000C0  D0 3F 04 D4 */	stfs f1, 0x4d4(r31)
@@ -76,39 +76,39 @@ lbl_8060BE6C:
 /* 8060BF94 00000128  38 7C 02 48 */	addi r3, r28, 0x248
 /* 8060BF98 0000012C  38 81 00 14 */	addi r4, r1, 0x14
 /* 8060BF9C 00000130  38 A1 00 08 */	addi r5, r1, 8
-/* 8060BFA0 00000134  4B FF 96 F9 */	bl Reset__9dCamera_cF4cXyz4cXyz
+/* 8060BFA0 00000134  4B FF 96 F9 */	bl _unresolved
 /* 8060BFA4 00000138  38 7C 02 48 */	addi r3, r28, 0x248
-/* 8060BFA8 0000013C  4B FF 96 F1 */	bl Start__9dCamera_cFv
+/* 8060BFA8 0000013C  4B FF 96 F1 */	bl _unresolved
 /* 8060BFAC 00000140  38 7C 02 48 */	addi r3, r28, 0x248
 /* 8060BFB0 00000144  38 80 00 00 */	li r4, 0
-/* 8060BFB4 00000148  4B FF 96 E5 */	bl SetTrimSize__9dCamera_cFl
+/* 8060BFB4 00000148  4B FF 96 E5 */	bl _unresolved
 /* 8060BFB8 0000014C  38 7E 4E C8 */	addi r3, r30, 0x4ec8
-/* 8060BFBC 00000150  4B FF 96 DD */	bl reset__14dEvt_control_cFv
+/* 8060BFBC 00000150  4B FF 96 DD */	bl _unresolved
 /* 8060BFC0 00000154  38 00 00 01 */	li r0, 1
 /* 8060BFC4 00000158  98 1F 0A F8 */	stb r0, 0xaf8(r31)
 /* 8060BFC8 0000015C  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 8060BFCC 00000160  D0 1F 0A F4 */	stfs f0, 0xaf4(r31)
-/* 8060BFD0 00000164  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 8060BFD4 00000168  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 8060BFD0 00000164  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060BFD4 00000168  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060BFD8 0000016C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8060BFDC 00000170  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8060BFE0 00000174  38 80 00 1E */	li r4, 0x1e
-/* 8060BFE4 00000178  4B FF 96 B5 */	bl bgmStreamStop__8Z2SeqMgrFUl
-/* 8060BFE8 0000017C  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 8060BFEC 00000180  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 8060BFE4 00000178  4B FF 96 B5 */	bl _unresolved
+/* 8060BFE8 0000017C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060BFEC 00000180  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8060BFF0 00000184  80 63 00 00 */	lwz r3, 0(r3)
 /* 8060BFF4 00000188  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8060BFF8 0000018C  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000087@ha */
 /* 8060BFFC 00000190  38 84 00 87 */	addi r4, r4, 0x0087 /* 0x01000087@l */
 /* 8060C000 00000194  38 A0 00 00 */	li r5, 0
 /* 8060C004 00000198  38 C0 00 00 */	li r6, 0
-/* 8060C008 0000019C  4B FF 96 91 */	bl bgmStart__8Z2SeqMgrFUlUll
+/* 8060C008 0000019C  4B FF 96 91 */	bl _unresolved
 /* 8060C00C 000001A0  7F E3 FB 78 */	mr r3, r31
 /* 8060C010 000001A4  38 80 00 02 */	li r4, 2
 /* 8060C014 000001A8  38 A0 00 00 */	li r5, 0
 /* 8060C018 000001AC  4B FF BA 15 */	bl setActionMode__9daB_MGN_cFii
 /* 8060C01C 000001B0  39 61 00 40 */	addi r11, r1, 0x40
-/* 8060C020 000001B4  4B FF 96 79 */	bl _restgpr_27
+/* 8060C020 000001B4  4B FF 96 79 */	bl _unresolved
 /* 8060C024 000001B8  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 8060C028 000001BC  7C 08 03 A6 */	mtlr r0
 /* 8060C02C 000001C0  38 21 00 40 */	addi r1, r1, 0x40

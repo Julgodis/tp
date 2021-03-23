@@ -5,8 +5,8 @@ lbl_80AB4674:
 /* 80AB4680 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AB4684 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80AB4688 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80AB468C 00000018  3C 80 00 00 */	lis r4, m__17daNpcPray_Param_c@ha /* 80AB5808 */
-/* 80AB4690 0000001C  3B E4 00 00 */	addi r31, r4, m__17daNpcPray_Param_c@l /* 80AB5808 */
+/* 80AB468C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AB4690 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80AB4694 00000020  A0 03 0E 0C */	lhz r0, 0xe0c(r3)
 /* 80AB4698 00000024  2C 00 00 02 */	cmpwi r0, 2
 /* 80AB469C 00000028  41 82 00 68 */	beq lbl_80AB4704
@@ -27,12 +27,12 @@ lbl_80AB46B4:
 /* 80AB46D4 00000020  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80AB46D8 00000024  38 7E 0B 48 */	addi r3, r30, 0xb48
 /* 80AB46DC 00000028  38 80 00 02 */	li r4, 2
-/* 80AB46E0 0000002C  4B FF E6 79 */	bl playVoice__17Z2CreatureCitizenFi
-/* 80AB46E4 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80AB46E8 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80AB46E0 0000002C  4B FF E6 79 */	bl _unresolved
+/* 80AB46E4 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AB46E8 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AB46EC 00000038  38 63 09 78 */	addi r3, r3, 0x978
 /* 80AB46F0 0000003C  38 80 00 3C */	li r4, 0x3c
-/* 80AB46F4 00000040  4B FF E6 65 */	bl onSwitch__12dSv_danBit_cFi
+/* 80AB46F4 00000040  4B FF E6 65 */	bl _unresolved
 /* 80AB46F8 00000044  38 00 00 02 */	li r0, 2
 /* 80AB46FC 00000048  B0 1E 0E 0C */	sth r0, 0xe0c(r30)
 /* 80AB4700 0000004C  48 00 00 24 */	b lbl_80AB4724
@@ -44,7 +44,7 @@ lbl_80AB4704:
 /* 80AB4714 00000010  40 82 00 10 */	bne lbl_80AB4724
 /* 80AB4718 00000014  38 7E 0B 48 */	addi r3, r30, 0xb48
 /* 80AB471C 00000018  38 80 00 02 */	li r4, 2
-/* 80AB4720 0000001C  4B FF E6 39 */	bl playVoice__17Z2CreatureCitizenFi
+/* 80AB4720 0000001C  4B FF E6 39 */	bl _unresolved
 lbl_80AB4724:
 /* 80AB4724 00000000  38 60 00 01 */	li r3, 1
 /* 80AB4728 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

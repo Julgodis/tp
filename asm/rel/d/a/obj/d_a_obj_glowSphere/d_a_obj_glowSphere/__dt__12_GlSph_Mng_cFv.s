@@ -11,15 +11,15 @@ lbl_80BFA890:
 /* 80BFA8B4 00000024  90 1E 00 00 */	stw r0, 0(r30)
 /* 80BFA8B8 00000028  4B FF FC 01 */	bl _clrLstBuf__12_GlSph_Mng_cFv
 /* 80BFA8BC 0000002C  38 7E 00 04 */	addi r3, r30, 4
-/* 80BFA8C0 00000030  3C 80 00 00 */	lis r4, __dt__16_GlSph_LstInfo_cFv@ha /* 80BFA900 */
-/* 80BFA8C4 00000034  38 84 00 00 */	addi r4, r4, __dt__16_GlSph_LstInfo_cFv@l /* 80BFA900 */
+/* 80BFA8C0 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BFA8C4 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BFA8C8 00000038  38 A0 00 08 */	li r5, 8
 /* 80BFA8CC 0000003C  38 C0 00 78 */	li r6, 0x78
-/* 80BFA8D0 00000040  4B FF E9 E9 */	bl __destroy_arr
+/* 80BFA8D0 00000040  4B FF E9 E9 */	bl _unresolved
 /* 80BFA8D4 00000044  7F E0 07 35 */	extsh. r0, r31
 /* 80BFA8D8 00000048  40 81 00 0C */	ble lbl_80BFA8E4
 /* 80BFA8DC 0000004C  7F C3 F3 78 */	mr r3, r30
-/* 80BFA8E0 00000050  4B FF E9 D9 */	bl __dl__FPv
+/* 80BFA8E0 00000050  4B FF E9 D9 */	bl _unresolved
 lbl_80BFA8E4:
 /* 80BFA8E4 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80BFA8E8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

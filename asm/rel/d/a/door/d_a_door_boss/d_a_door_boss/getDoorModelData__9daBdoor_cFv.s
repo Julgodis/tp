@@ -6,7 +6,7 @@ lbl_8066F454:
 /* 8066F464 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8066F468 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8066F46C 00000018  4B FF FF D9 */	bl getBmd2__9daBdoor_cFv
-/* 8066F470 0000001C  4B FF FF 89 */	bl dComIfG_getStageRes__FPCc
+/* 8066F470 0000001C  4B FF FF 89 */	bl _unresolved
 /* 8066F474 00000020  28 03 00 00 */	cmplwi r3, 0
 /* 8066F478 00000024  40 82 00 34 */	bne lbl_8066F4AC
 /* 8066F47C 00000028  7F C3 F3 78 */	mr r3, r30
@@ -15,12 +15,12 @@ lbl_8066F454:
 /* 8066F488 00000034  7F C3 F3 78 */	mr r3, r30
 /* 8066F48C 00000038  4B FF FF 8D */	bl getArcName__9daBdoor_cFv
 /* 8066F490 0000003C  7F E4 FB 78 */	mr r4, r31
-/* 8066F494 00000040  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8066F498 00000044  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8066F494 00000040  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 8066F498 00000044  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 8066F49C 00000048  3C A5 00 02 */	addis r5, r5, 2
 /* 8066F4A0 0000004C  38 C0 00 80 */	li r6, 0x80
 /* 8066F4A4 00000050  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 8066F4A8 00000054  4B FF FF 51 */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 8066F4A8 00000054  4B FF FF 51 */	bl _unresolved
 lbl_8066F4AC:
 /* 8066F4AC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8066F4B0 00000004  83 C1 00 08 */	lwz r30, 8(r1)

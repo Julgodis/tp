@@ -11,80 +11,79 @@
 // Forward References:
 // 
 
-static void daNpc_P2Create(void*); // 2
-static void daNpc_P2Delete(void*); // 2
-static void daNpc_P2Execute(void*); // 2
-static void daNpc_P2Draw(void*); // 2
-static void daNpc_P2IsDelete(void*); // 2
+void daNpc_P2Create(void*); // 2
+void daNpc_P2Delete(void*); // 2
+void daNpc_P2Execute(void*); // 2
+void daNpc_P2Draw(void*); // 2
+void daNpc_P2IsDelete(void*); // 2
 
-extern "C" static void daNpc_P2Create__FPv(); // 1
-extern "C" static void daNpc_P2Delete__FPv(); // 1
-extern "C" static void daNpc_P2Execute__FPv(); // 1
-extern "C" static void daNpc_P2Draw__FPv(); // 1
-extern "C" static void daNpc_P2IsDelete__FPv(); // 1
-extern "C" extern void* g_profile_NPC_P2[12];
+extern "C" void daNpc_P2Create__FPv(); // 1
+extern "C" void daNpc_P2Delete__FPv(); // 1
+extern "C" void daNpc_P2Execute__FPv(); // 1
+extern "C" void daNpc_P2Draw__FPv(); // 1
+extern "C" void daNpc_P2IsDelete__FPv(); // 1
+extern "C" extern u8 daNpc_P2MethodTable[32];
+extern "C" extern u8 g_profile_NPC_P2[48];
 
 // 
 // External References:
 // 
 
 
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80A92BF8-80A92C00 0008+00 r=1 e=0 z=0  None .text      daNpc_P2Create__FPv                                          */
+/* 80A92BF8-80A92C00 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_P2Create(void* param_0) {
+asm void daNpc_P2Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_p2/d_a_npc_p2/daNpc_P2Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80A92C00-80A92C08 0008+00 r=1 e=0 z=0  None .text      daNpc_P2Delete__FPv                                          */
+/* 80A92C00-80A92C08 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Delete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_P2Delete(void* param_0) {
+asm void daNpc_P2Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_p2/d_a_npc_p2/daNpc_P2Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80A92C08-80A92C10 0008+00 r=1 e=0 z=0  None .text      daNpc_P2Execute__FPv                                         */
+/* 80A92C08-80A92C10 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Execute__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_P2Execute(void* param_0) {
+asm void daNpc_P2Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_p2/d_a_npc_p2/daNpc_P2Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80A92C10-80A92C18 0008+00 r=1 e=0 z=0  None .text      daNpc_P2Draw__FPv                                            */
+/* 80A92C10-80A92C18 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Draw__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_P2Draw(void* param_0) {
+asm void daNpc_P2Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_p2/d_a_npc_p2/daNpc_P2Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80A92C18-80A92C20 0008+00 r=1 e=0 z=0  None .text      daNpc_P2IsDelete__FPv                                        */
+/* 80A92C18-80A92C20 0008+00 s=0 e=0 z=0  None .text      daNpc_P2IsDelete__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_P2IsDelete(void* param_0) {
+asm void daNpc_P2IsDelete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_p2/d_a_npc_p2/daNpc_P2IsDelete__FPv.s"
 }
@@ -92,31 +91,16 @@ asm static void daNpc_P2IsDelete(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80A92C28-80A92C48 0020+00 r=1 e=0 z=0  None .data      daNpc_P2MethodTable                                          */
-SECTION_DATA static void* daNpc_P2MethodTable[8] = {
-	/* 0    */ (void*)daNpc_P2Create__FPv,
-	/* 1    */ (void*)daNpc_P2Delete__FPv,
-	/* 2    */ (void*)daNpc_P2Execute__FPv,
-	/* 3    */ (void*)daNpc_P2IsDelete__FPv,
-	/* 4    */ (void*)daNpc_P2Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80A92C28-80A92C48 0020+00 s=0 e=0 z=0  None .data      daNpc_P2MethodTable                                          */
+SECTION_DATA u8 daNpc_P2MethodTable[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80A92C48-80A92C78 0030+00 r=1 e=0 z=1  None .data      g_profile_NPC_P2                                             */
-SECTION_DATA void* g_profile_NPC_P2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02A90000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000001,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01AC0000,
-	/* 9    */ (void*)&daNpc_P2MethodTable,
-	/* 10   */ (void*)0x020C4407,
-	/* 11   */ (void*)NULL,
+/* 80A92C48-80A92C78 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_P2                                             */
+SECTION_DATA u8 g_profile_NPC_P2[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xA9, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0xAC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x0C, 0x44, 0x07, 0x00, 0x00, 0x00, 0x00,
 };
 

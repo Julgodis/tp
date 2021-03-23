@@ -4,17 +4,17 @@ lbl_80467A80:
 /* 80467A88 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80467A8C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80467A90 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80467A94 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80467A98 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80467A94 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80467A98 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80467A9C 0000001C  88 9F 05 BA */	lbz r4, 0x5ba(r31)
 /* 80467AA0 00000020  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80467AA4 00000024  7C 05 07 74 */	extsb r5, r0
-/* 80467AA8 00000028  4B FF F9 D1 */	bl isSwitch__10dSv_info_cCFii
+/* 80467AA8 00000028  4B FF F9 D1 */	bl _unresolved
 /* 80467AAC 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80467AB0 00000030  40 82 00 14 */	bne lbl_80467AC4
 /* 80467AB4 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80467AB8 00000038  3C 80 00 00 */	lis r4, l_closeAction@ha /* 804680F8 */
-/* 80467ABC 0000003C  38 84 00 00 */	addi r4, r4, l_closeAction@l /* 804680F8 */
+/* 80467AB8 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80467ABC 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80467AC0 00000040  4B FF FC 49 */	bl setAction__7daDsh_cFPQ27daDsh_c8action_c
 lbl_80467AC4:
 /* 80467AC4 00000000  38 60 00 01 */	li r3, 1

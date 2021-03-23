@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C8CBDC[2];
+extern u8 data_80C8CBDC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv8UdFloor_cpp(); // 1
 
 // 
 // Declarations:

@@ -5,23 +5,23 @@ lbl_80BA7370:
 /* 80BA737C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BA7380 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80BA7384 00000014  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80BA7388 00000018  3C 80 00 00 */	lis r4, l_arcName@ha /* 80BA7D90 */
-/* 80BA738C 0000001C  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80BA7D90 */
+/* 80BA7388 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BA738C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BA7390 00000020  80 84 00 00 */	lwz r4, 0(r4)
-/* 80BA7394 00000024  4B FF FB 25 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80BA7394 00000024  4B FF FB 25 */	bl _unresolved
 /* 80BA7398 00000028  7C 60 1B 78 */	mr r0, r3
 /* 80BA739C 0000002C  2C 00 00 04 */	cmpwi r0, 4
 /* 80BA73A0 00000030  40 82 00 3C */	bne lbl_80BA73DC
 /* 80BA73A4 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80BA73A8 00000038  3C 80 00 00 */	lis r4, l_arcName@ha /* 80BA7D90 */
-/* 80BA73AC 0000003C  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80BA7D90 */
+/* 80BA73A8 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BA73AC 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BA73B0 00000040  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BA73B4 00000044  38 A0 00 0D */	li r5, 0xd
-/* 80BA73B8 00000048  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha /* 80075B44 */
-/* 80BA73BC 0000004C  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l /* 80075B44 */
+/* 80BA73B8 00000048  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80BA73BC 0000004C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80BA73C0 00000050  38 E0 29 20 */	li r7, 0x2920
 /* 80BA73C4 00000054  39 00 00 00 */	li r8, 0
-/* 80BA73C8 00000058  4B FF FA F1 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80BA73C8 00000058  4B FF FA F1 */	bl _unresolved
 /* 80BA73CC 0000005C  7C 60 1B 78 */	mr r0, r3
 /* 80BA73D0 00000060  2C 00 00 05 */	cmpwi r0, 5
 /* 80BA73D4 00000064  40 82 00 08 */	bne lbl_80BA73DC

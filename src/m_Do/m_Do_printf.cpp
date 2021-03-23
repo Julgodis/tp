@@ -61,7 +61,7 @@ extern "C" extern u8 data_80450B9C[4];
 // Declarations:
 // 
 
-/* 80006798-800067C8 0030+00 r=1 e=0 z=0  None .text      OSSwitchFiberEx__FUlUlUlUlUlUl                               */
+/* 80006798-800067C8 0030+00 s=1 e=0 z=0  None .text      OSSwitchFiberEx__FUlUlUlUlUlUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm static void OSSwitchFiberEx(u32 param_0, u32 param_1, u32 param_2, u32 param
 #pragma pop
 
 
-/* 800067C8-800067F4 002C+00 r=3 e=0 z=0  None .text      my_PutString__FPCc                                           */
+/* 800067C8-800067F4 002C+00 s=3 e=0 z=0  None .text      my_PutString__FPCc                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm static void my_PutString(char const* param_0) {
 #pragma pop
 
 
-/* 800067F4-80006814 0020+00 r=3 e=0 z=0  None .text      OSVAttention__FPCcP16__va_list_struct                        */
+/* 800067F4-80006814 0020+00 s=3 e=0 z=0  None .text      OSVAttention__FPCcP16__va_list_struct                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ extern "C" asm static void OSVAttention__FPCcP16__va_list_struct() {
 #pragma pop
 
 
-/* 80006814-80006894 0080+00 r=2 e=1 z=0  None .text      OSAttention                                                  */
+/* 80006814-80006894 0080+00 s=1 e=1 z=0  None .text      OSAttention                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ extern "C" asm void OSAttention() {
 #pragma pop
 
 
-/* 80006894-800068A0 000C+00 r=1 e=1 z=0  None .text      OSReportDisable                                              */
+/* 80006894-800068A0 000C+00 s=0 e=1 z=0  None .text      OSReportDisable                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ extern "C" asm void OSReportDisable() {
 #pragma pop
 
 
-/* 800068A0-800068AC 000C+00 r=1 e=1 z=0  None .text      OSReportEnable                                               */
+/* 800068A0-800068AC 000C+00 s=0 e=1 z=0  None .text      OSReportEnable                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ extern "C" asm void OSReportEnable() {
 #pragma pop
 
 
-/* 800068AC-800068B8 000C+00 r=4 e=0 z=0  None .text      OSReportForceEnableOn                                        */
+/* 800068AC-800068B8 000C+00 s=4 e=0 z=0  None .text      OSReportForceEnableOn                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ extern "C" asm static void OSReportForceEnableOn() {
 #pragma pop
 
 
-/* 800068B8-800068C4 000C+00 r=4 e=0 z=0  None .text      OSReportForceEnableOff                                       */
+/* 800068B8-800068C4 000C+00 s=4 e=0 z=0  None .text      OSReportForceEnableOff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,25 +150,25 @@ extern "C" asm static void OSReportForceEnableOff() {
 
 
 /* ############################################################################################## */
-/* 80450BA0-80450BA4 0004+00 r=1 e=0 z=0  None .sbss      __OSReport_MonopolyThread                                    */
+/* 80450BA0-80450BA4 0004+00 s=1 e=0 z=0  None .sbss      __OSReport_MonopolyThread                                    */
 static u8 __OSReport_MonopolyThread[4];
 
-/* 80450BA4-80450BA8 0004+00 r=1 e=0 z=0  None .sbss      print_counts                                                 */
+/* 80450BA4-80450BA8 0004+00 s=1 e=0 z=0  None .sbss      print_counts                                                 */
 static u8 print_counts[4];
 
-/* 80450BA8-80450BAC 0004+00 r=2 e=0 z=0  None .sbss      print_errors                                                 */
+/* 80450BA8-80450BAC 0004+00 s=2 e=0 z=0  None .sbss      print_errors                                                 */
 static u8 print_errors[4];
 
-/* 80450BAC-80450BB0 0004+00 r=1 e=0 z=0  None .sbss      print_warings                                                */
+/* 80450BAC-80450BB0 0004+00 s=1 e=0 z=0  None .sbss      print_warings                                                */
 static u8 print_warings[4];
 
-/* 80450BB0-80450BB4 0004+00 r=1 e=0 z=0  None .sbss      print_systems                                                */
+/* 80450BB0-80450BB4 0004+00 s=1 e=0 z=0  None .sbss      print_systems                                                */
 static u8 print_systems[4];
 
-/* 80450BB4-80450BB8 0004+00 r=3 e=0 z=0  None .sbss      None                                                         */
+/* 80450BB4-80450BB8 0004+00 s=3 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450BB4[4];
 
-/* 800068C4-800068DC 0018+00 r=2 e=1 z=0  None .text      OSReportInit__Fv                                             */
+/* 800068C4-800068DC 0018+00 s=1 e=1 z=0  None .text      OSReportInit__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,10 +180,10 @@ asm void OSReportInit() {
 
 
 /* ############################################################################################## */
-/* 803DB740-803DBF40 0800+00 r=1 e=0 z=0  None .bss       mDoPrintf_FiberStack                                         */
+/* 803DB740-803DBF40 0800+00 s=1 e=0 z=0  None .bss       mDoPrintf_FiberStack                                         */
 static u8 mDoPrintf_FiberStack[2048];
 
-/* 800068DC-80006964 0088+00 r=1 e=0 z=0  None .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct         */
+/* 800068DC-80006964 0088+00 s=1 e=0 z=0  None .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ extern "C" asm static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct(
 #pragma pop
 
 
-/* 80006964-80006984 0020+00 r=1 e=0 z=0  None .text      mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct            */
+/* 80006964-80006984 0020+00 s=1 e=0 z=0  None .text      mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ extern "C" asm static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct() {
 #pragma pop
 
 
-/* 80006984-80006A10 008C+00 r=4 e=0 z=0  None .text      mDoPrintf_vprintf__FPCcP16__va_list_struct                   */
+/* 80006984-80006A10 008C+00 s=4 e=0 z=0  None .text      mDoPrintf_vprintf__FPCcP16__va_list_struct                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ extern "C" asm static void mDoPrintf_vprintf__FPCcP16__va_list_struct() {
 #pragma pop
 
 
-/* 80006A10-80006A9C 008C+00 r=1 e=0 z=0  None .text      mDoPrintf_VReport                                            */
+/* 80006A10-80006A9C 008C+00 s=1 e=0 z=0  None .text      mDoPrintf_VReport                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ extern "C" asm static void mDoPrintf_VReport() {
 #pragma pop
 
 
-/* 80006A9C-80006ABC 0020+00 r=2 e=0 z=0  None .text      OSVReport                                                    */
+/* 80006A9C-80006ABC 0020+00 s=2 e=0 z=0  None .text      OSVReport                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ extern "C" asm static void OSVReport() {
 #pragma pop
 
 
-/* 80006ABC-80006B3C 0080+00 r=107 e=97 z=10  None .text      OSReport                                                     */
+/* 80006ABC-80006B3C 0080+00 s=0 e=97 z=0  None .text      OSReport                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ extern "C" asm void OSReport() {
 
 
 /* ############################################################################################## */
-/* 80373CB0-80373D68 00B8+00 r=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80373CB0-80373D68 00B8+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -266,7 +266,7 @@ SECTION_DEAD char const* const stringBase_80373D26 =
 SECTION_DEAD char const* const stringBase_80373D4C = "0x%08x:   0x%08x    0x%08x\n";
 #pragma pop
 
-/* 80006B3C-80006C0C 00D0+00 r=2 e=2 z=0  None .text      OSReport_FatalError                                          */
+/* 80006B3C-80006C0C 00D0+00 s=0 e=2 z=0  None .text      OSReport_FatalError                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +277,7 @@ extern "C" asm void OSReport_FatalError() {
 #pragma pop
 
 
-/* 80006C0C-80006CEC 00E0+00 r=41 e=31 z=10  None .text      OSReport_Error                                               */
+/* 80006C0C-80006CEC 00E0+00 s=0 e=31 z=0  None .text      OSReport_Error                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +288,7 @@ extern "C" asm void OSReport_Error() {
 #pragma pop
 
 
-/* 80006CEC-80006DCC 00E0+00 r=6 e=6 z=0  None .text      OSReport_Warning                                             */
+/* 80006CEC-80006DCC 00E0+00 s=0 e=6 z=0  None .text      OSReport_Warning                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +299,7 @@ extern "C" asm void OSReport_Warning() {
 #pragma pop
 
 
-/* 80006DCC-80006E7C 00B0+00 r=1 e=1 z=0  None .text      OSReport_System                                              */
+/* 80006DCC-80006E7C 00B0+00 s=0 e=1 z=0  None .text      OSReport_System                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +310,7 @@ extern "C" asm void OSReport_System() {
 #pragma pop
 
 
-/* 80006E7C-80006FB4 0138+00 r=9 e=9 z=0  None .text      OSPanic                                                      */
+/* 80006E7C-80006FB4 0138+00 s=0 e=9 z=0  None .text      OSPanic                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

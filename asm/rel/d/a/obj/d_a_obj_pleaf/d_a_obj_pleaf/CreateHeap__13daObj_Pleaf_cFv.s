@@ -6,12 +6,12 @@ lbl_80CB134C:
 /* 80CB135C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CB1360 00000014  48 00 02 59 */	bl getResName__13daObj_Pleaf_cFv
 /* 80CB1364 00000018  38 80 00 03 */	li r4, 3
-/* 80CB1368 0000001C  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CB136C 00000020  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CB1368 0000001C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CB136C 00000020  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80CB1370 00000024  3C A5 00 02 */	addis r5, r5, 2
 /* 80CB1374 00000028  38 C0 00 80 */	li r6, 0x80
 /* 80CB1378 0000002C  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80CB137C 00000030  4B FF F9 3D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 80CB137C 00000030  4B FF F9 3D */	bl _unresolved
 /* 80CB1380 00000034  28 03 00 00 */	cmplwi r3, 0
 /* 80CB1384 00000038  40 82 00 0C */	bne lbl_80CB1390
 /* 80CB1388 0000003C  38 60 00 00 */	li r3, 0
@@ -20,7 +20,7 @@ lbl_80CB1390:
 /* 80CB1390 00000000  3C 80 00 08 */	lis r4, 8
 /* 80CB1394 00000004  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80CB1398 00000008  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80CB139C 0000000C  4B FF F9 1D */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80CB139C 0000000C  4B FF F9 1D */	bl _unresolved
 /* 80CB13A0 00000010  90 7F 05 74 */	stw r3, 0x574(r31)
 /* 80CB13A4 00000014  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80CB13A8 00000018  30 03 FF FF */	addic r0, r3, -1

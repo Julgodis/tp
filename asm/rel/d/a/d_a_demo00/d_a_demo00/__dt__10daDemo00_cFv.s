@@ -13,24 +13,24 @@ lbl_804A4388:
 /* 804A43B4 0000002C  80 7E 05 D0 */	lwz r3, 0x5d0(r30)
 /* 804A43B8 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 804A43BC 00000034  41 82 00 08 */	beq lbl_804A43C4
-/* 804A43C0 00000038  4B FF FE B9 */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 804A43C0 00000038  4B FF FE B9 */	bl _unresolved
 lbl_804A43C4:
 /* 804A43C4 00000000  38 7E 06 F8 */	addi r3, r30, 0x6f8
-/* 804A43C8 00000004  3C 80 00 00 */	lis r4, __dt__12demo_s1_ke_sFv@ha /* 804A4420 */
-/* 804A43CC 00000008  38 84 00 00 */	addi r4, r4, __dt__12demo_s1_ke_sFv@l /* 804A4420 */
+/* 804A43C8 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804A43CC 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 804A43D0 0000000C  38 A0 01 8C */	li r5, 0x18c
 /* 804A43D4 00000010  38 C0 00 16 */	li r6, 0x16
-/* 804A43D8 00000014  4B FF FE A1 */	bl __destroy_arr
+/* 804A43D8 00000014  4B FF FE A1 */	bl _unresolved
 /* 804A43DC 00000018  38 7E 05 FC */	addi r3, r30, 0x5fc
 /* 804A43E0 0000001C  38 80 FF FF */	li r4, -1
-/* 804A43E4 00000020  4B FF FE 95 */	bl __dt__10Z2CreatureFv
+/* 804A43E4 00000020  4B FF FE 95 */	bl _unresolved
 /* 804A43E8 00000024  7F C3 F3 78 */	mr r3, r30
 /* 804A43EC 00000028  38 80 00 00 */	li r4, 0
-/* 804A43F0 0000002C  4B FF FE 89 */	bl __dt__10fopAc_ac_cFv
+/* 804A43F0 0000002C  4B FF FE 89 */	bl _unresolved
 /* 804A43F4 00000030  7F E0 07 35 */	extsh. r0, r31
 /* 804A43F8 00000034  40 81 00 0C */	ble lbl_804A4404
 /* 804A43FC 00000038  7F C3 F3 78 */	mr r3, r30
-/* 804A4400 0000003C  4B FF FE 79 */	bl __dl__FPv
+/* 804A4400 0000003C  4B FF FE 79 */	bl _unresolved
 lbl_804A4404:
 /* 804A4404 00000000  7F C3 F3 78 */	mr r3, r30
 /* 804A4408 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

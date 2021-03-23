@@ -10,7 +10,7 @@ lbl_80D43314:
 /* 80D43334 00000020  54 03 1D 78 */	rlwinm r3, r0, 3, 0x15, 0x1c
 /* 80D43338 00000024  38 63 07 1C */	addi r3, r3, 0x71c
 /* 80D4333C 00000028  7C 7F 1A 14 */	add r3, r31, r3
-/* 80D43340 0000002C  4B FF F2 F9 */	bl entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c
+/* 80D43340 0000002C  4B FF F2 F9 */	bl _unresolved
 /* 80D43344 00000030  88 7F 07 2C */	lbz r3, 0x72c(r31)
 /* 80D43348 00000034  38 03 00 01 */	addi r0, r3, 1
 /* 80D4334C 00000038  98 1F 07 2C */	stb r0, 0x72c(r31)

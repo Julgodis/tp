@@ -56,7 +56,7 @@ extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 801ADEA0-801ADEC4 0024+00 r=1 e=0 z=0  None .text      dKyeff2_Draw__FP9dKyeff2_c                                   */
+/* 801ADEA0-801ADEC4 0024+00 s=1 e=0 z=0  None .text      dKyeff2_Draw__FP9dKyeff2_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +67,7 @@ asm static void dKyeff2_Draw(dKyeff2_c* param_0) {
 #pragma pop
 
 
-/* 801ADEC4-801ADEE8 0024+00 r=1 e=0 z=0  None .text      execute__9dKyeff2_cFv                                        */
+/* 801ADEC4-801ADEE8 0024+00 s=1 e=0 z=0  None .text      execute__9dKyeff2_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +78,7 @@ asm void dKyeff2_c::execute() {
 #pragma pop
 
 
-/* 801ADEE8-801ADF08 0020+00 r=1 e=0 z=0  None .text      dKyeff2_Execute__FP9dKyeff2_c                                */
+/* 801ADEE8-801ADF08 0020+00 s=1 e=0 z=0  None .text      dKyeff2_Execute__FP9dKyeff2_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +89,7 @@ asm static void dKyeff2_Execute(dKyeff2_c* param_0) {
 #pragma pop
 
 
-/* 801ADF08-801ADF10 0008+00 r=1 e=0 z=0  None .text      dKyeff2_IsDelete__FP9dKyeff2_c                               */
+/* 801ADF08-801ADF10 0008+00 s=1 e=0 z=0  None .text      dKyeff2_IsDelete__FP9dKyeff2_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +100,7 @@ asm static void dKyeff2_IsDelete(dKyeff2_c* param_0) {
 #pragma pop
 
 
-/* 801ADF10-801ADF34 0024+00 r=1 e=0 z=0  None .text      dKyeff2_Delete__FP9dKyeff2_c                                 */
+/* 801ADF10-801ADF34 0024+00 s=1 e=0 z=0  None .text      dKyeff2_Delete__FP9dKyeff2_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +111,7 @@ asm static void dKyeff2_Delete(dKyeff2_c* param_0) {
 #pragma pop
 
 
-/* 801ADF34-801ADF58 0024+00 r=1 e=0 z=0  None .text      dKyeff2_Create__FP12kankyo_class                             */
+/* 801ADF34-801ADF58 0024+00 s=1 e=0 z=0  None .text      dKyeff2_Create__FP12kankyo_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm static void dKyeff2_Create(kankyo_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803BC198-803BC1AC 0014+00 r=1 e=0 z=0  None .data      l_dKyeff2_Method                                             */
+/* 803BC198-803BC1AC 0014+00 s=1 e=0 z=0  None .data      l_dKyeff2_Method                                             */
 SECTION_DATA static void* l_dKyeff2_Method[5] = {
 	/* 0    */ (void*)dKyeff2_Create__FP12kankyo_class,
 	/* 1    */ (void*)dKyeff2_Delete__FP9dKyeff2_c,
@@ -132,7 +132,7 @@ SECTION_DATA static void* l_dKyeff2_Method[5] = {
 	/* 4    */ (void*)dKyeff2_Draw__FP9dKyeff2_c,
 };
 
-/* 803BC1AC-803BC1D8 0028+04 r=1 e=0 z=1  None .data      g_profile_KYEFF2                                             */
+/* 803BC1AC-803BC1D8 0028+04 s=0 e=0 z=0  None .data      g_profile_KYEFF2                                             */
 SECTION_DATA void* g_profile_KYEFF2[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x000CFFFD,

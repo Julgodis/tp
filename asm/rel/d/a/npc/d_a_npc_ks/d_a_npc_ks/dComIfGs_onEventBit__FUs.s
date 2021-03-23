@@ -3,10 +3,10 @@ lbl_80A5DEB8:
 /* 80A5DEBC 00000004  7C 08 02 A6 */	mflr r0
 /* 80A5DEC0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A5DEC4 0000000C  7C 64 1B 78 */	mr r4, r3
-/* 80A5DEC8 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A5DECC 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A5DEC8 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A5DECC 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A5DED0 00000018  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 80A5DED4 0000001C  4B FE B0 25 */	bl onEventBit__11dSv_event_cFUs
+/* 80A5DED4 0000001C  4B FE B0 25 */	bl _unresolved
 /* 80A5DED8 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80A5DEDC 00000024  7C 08 03 A6 */	mtlr r0
 /* 80A5DEE0 00000028  38 21 00 10 */	addi r1, r1, 0x10

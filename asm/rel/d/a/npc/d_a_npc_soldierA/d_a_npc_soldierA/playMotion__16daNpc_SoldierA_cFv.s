@@ -2,8 +2,8 @@ lbl_80AF0D34:
 /* 80AF0D34 00000000  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 80AF0D38 00000004  7C 08 02 A6 */	mflr r0
 /* 80AF0D3C 00000008  90 01 00 B4 */	stw r0, 0xb4(r1)
-/* 80AF0D40 0000000C  3C 80 00 00 */	lis r4, m__22daNpc_SoldierA_Param_c@ha /* 80AF26E8 */
-/* 80AF0D44 00000010  38 84 00 00 */	addi r4, r4, m__22daNpc_SoldierA_Param_c@l /* 80AF26E8 */
+/* 80AF0D40 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AF0D44 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80AF0D48 00000014  80 A4 00 B8 */	lwz r5, 0xb8(r4)
 /* 80AF0D4C 00000018  80 04 00 BC */	lwz r0, 0xbc(r4)
 /* 80AF0D50 0000001C  90 A1 00 8C */	stw r5, 0x8c(r1)
@@ -130,7 +130,7 @@ lbl_80AF0EE0:
 /* 80AF0F30 00000050  2C 04 00 06 */	cmpwi r4, 6
 /* 80AF0F34 00000054  40 80 00 0C */	bge lbl_80AF0F40
 /* 80AF0F38 00000058  38 81 00 98 */	addi r4, r1, 0x98
-/* 80AF0F3C 0000005C  4B FF E5 BD */	bl playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80AF0F3C 0000005C  4B FF E5 BD */	bl _unresolved
 lbl_80AF0F40:
 /* 80AF0F40 00000000  80 01 00 B4 */	lwz r0, 0xb4(r1)
 /* 80AF0F44 00000004  7C 08 03 A6 */	mtlr r0

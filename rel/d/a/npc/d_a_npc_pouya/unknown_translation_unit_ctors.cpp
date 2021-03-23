@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80AB1FEC[2];
+extern u8 data_80AB1FEC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_pouya_cpp(); // 1
 
 // 
 // Declarations:

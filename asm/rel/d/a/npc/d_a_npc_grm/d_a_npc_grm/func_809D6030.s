@@ -6,15 +6,15 @@ lbl_809D6030:
 /* 809D6040 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 809D6044 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 809D6048 00000018  80 01 00 28 */	lwz r0, 0x28(r1)
-/* 809D604C 0000001C  3D 60 00 00 */	lis r11, m__17daNpc_grM_Param_c@ha /* 809D6D70 */
-/* 809D6050 00000020  3B EB 00 00 */	addi r31, r11, m__17daNpc_grM_Param_c@l /* 809D6D70 */
+/* 809D604C 0000001C  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 809D6050 00000020  3B EB 00 00 */	addi r31, r11, 0x0000 /* 0x00000000@l */
 /* 809D6054 00000024  90 01 00 08 */	stw r0, 8(r1)
 /* 809D6058 00000028  48 00 01 45 */	bl __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc
-/* 809D605C 0000002C  3C 60 00 00 */	lis r3, __vt__13dShopSystem_c@ha /* 803BBA7C */
-/* 809D6060 00000030  38 03 00 00 */	addi r0, r3, __vt__13dShopSystem_c@l /* 803BBA7C */
+/* 809D605C 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809D6060 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809D6064 00000034  90 1E 0E 3C */	stw r0, 0xe3c(r30)
 /* 809D6068 00000038  38 7E 0E 48 */	addi r3, r30, 0xe48
-/* 809D606C 0000003C  4B FF DF 6D */	bl __ct__15dShopItemCtrl_cFv
+/* 809D606C 0000003C  4B FF DF 6D */	bl _unresolved
 /* 809D6070 00000040  C0 3F 00 9C */	lfs f1, 0x9c(r31)
 /* 809D6074 00000044  D0 3E 0F 38 */	stfs f1, 0xf38(r30)
 /* 809D6078 00000048  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
@@ -52,8 +52,8 @@ lbl_809D6030:
 /* 809D60F8 000000C8  90 7E 0E A4 */	stw r3, 0xea4(r30)
 /* 809D60FC 000000CC  90 7E 0E A0 */	stw r3, 0xea0(r30)
 /* 809D6100 000000D0  90 7E 0E AC */	stw r3, 0xeac(r30)
-/* 809D6104 000000D4  3C 60 00 00 */	lis r3, __ptmf_null@ha /* 803A2180 */
-/* 809D6108 000000D8  38 83 00 00 */	addi r4, r3, __ptmf_null@l /* 803A2180 */
+/* 809D6104 000000D4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809D6108 000000D8  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 809D610C 000000DC  80 64 00 00 */	lwz r3, 0(r4)
 /* 809D6110 000000E0  80 04 00 04 */	lwz r0, 4(r4)
 /* 809D6114 000000E4  90 7E 0E 78 */	stw r3, 0xe78(r30)
@@ -61,7 +61,7 @@ lbl_809D6030:
 /* 809D611C 000000EC  80 04 00 08 */	lwz r0, 8(r4)
 /* 809D6120 000000F0  90 1E 0E 80 */	stw r0, 0xe80(r30)
 /* 809D6124 000000F4  7F C3 F3 78 */	mr r3, r30
-/* 809D6128 000000F8  4B FF DE B1 */	bl initShopSystem__13dShopSystem_cFv
+/* 809D6128 000000F8  4B FF DE B1 */	bl _unresolved
 /* 809D612C 000000FC  7F C3 F3 78 */	mr r3, r30
 /* 809D6130 00000100  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 809D6134 00000104  83 C1 00 18 */	lwz r30, 0x18(r1)

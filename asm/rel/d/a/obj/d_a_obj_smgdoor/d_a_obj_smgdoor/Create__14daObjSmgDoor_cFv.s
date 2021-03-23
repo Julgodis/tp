@@ -5,8 +5,8 @@ lbl_80CDBD38:
 /* 80CDBD44 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CDBD48 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CDBD4C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CDBD50 00000018  3C 80 00 00 */	lis r4, cNullVec__6Z2Calc@ha /* 80CDCCC4 */
-/* 80CDBD54 0000001C  3B C4 00 00 */	addi r30, r4, cNullVec__6Z2Calc@l /* 80CDCCC4 */
+/* 80CDBD50 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CDBD54 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80CDBD58 00000020  4B FF FE 05 */	bl initBaseMtx__14daObjSmgDoor_cFv
 /* 80CDBD5C 00000024  38 1F 05 B8 */	addi r0, r31, 0x5b8
 /* 80CDBD60 00000028  90 1F 05 04 */	stw r0, 0x504(r31)
@@ -18,10 +18,10 @@ lbl_80CDBD38:
 /* 80CDBD78 00000040  C0 84 00 0C */	lfs f4, 0xc(r4)
 /* 80CDBD7C 00000044  C0 A4 00 10 */	lfs f5, 0x10(r4)
 /* 80CDBD80 00000048  C0 C4 00 14 */	lfs f6, 0x14(r4)
-/* 80CDBD84 0000004C  4B FF FD 95 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80CDBD84 0000004C  4B FF FD 95 */	bl _unresolved
 /* 80CDBD88 00000050  C0 1F 05 54 */	lfs f0, 0x554(r31)
-/* 80CDBD8C 00000054  3C 60 00 00 */	lis r3, lit_3722@ha /* 80CDCC00 */
-/* 80CDBD90 00000058  C0 23 00 00 */	lfs f1, lit_3722@l(r3) /* 80CDCC00 */
+/* 80CDBD8C 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDBD90 00000058  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 80CDBD94 0000005C  EC 00 08 2A */	fadds f0, f0, f1
 /* 80CDBD98 00000060  D0 1F 05 54 */	stfs f0, 0x554(r31)
 /* 80CDBD9C 00000064  C0 1F 05 3C */	lfs f0, 0x53c(r31)
@@ -38,8 +38,8 @@ lbl_80CDBD38:
 /* 80CDBDC8 00000090  90 1F 01 00 */	stw r0, 0x100(r31)
 /* 80CDBDCC 00000094  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDBDD0 00000098  98 1F 05 EB */	stb r0, 0x5eb(r31)
-/* 80CDBDD4 0000009C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CDBDD8 000000A0  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CDBDD4 0000009C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDBDD8 000000A0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDBDDC 000000A4  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CDBDE0 000000A8  7F E4 FB 78 */	mr r4, r31
 /* 80CDBDE4 000000AC  88 1F 05 E8 */	lbz r0, 0x5e8(r31)
@@ -47,7 +47,7 @@ lbl_80CDBD38:
 /* 80CDBDEC 000000B4  38 BE 00 38 */	addi r5, r30, 0x38
 /* 80CDBDF0 000000B8  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80CDBDF4 000000BC  38 C0 00 FF */	li r6, 0xff
-/* 80CDBDF8 000000C0  4B FF FD 21 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
+/* 80CDBDF8 000000C0  4B FF FD 21 */	bl _unresolved
 /* 80CDBDFC 000000C4  B0 7F 05 EC */	sth r3, 0x5ec(r31)
 /* 80CDBE00 000000C8  38 60 00 01 */	li r3, 1
 /* 80CDBE04 000000CC  83 E1 00 0C */	lwz r31, 0xc(r1)

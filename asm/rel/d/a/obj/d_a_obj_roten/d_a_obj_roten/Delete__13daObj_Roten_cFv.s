@@ -30,7 +30,7 @@ lbl_80CC12B0:
 /* 80CC12BC 0000000C  48 00 00 29 */	bl getResName__13daObj_Roten_cFv
 /* 80CC12C0 00000010  7C 64 1B 78 */	mr r4, r3
 /* 80CC12C4 00000014  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80CC12C8 00000018  4B FF F8 71 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80CC12C8 00000018  4B FF F8 71 */	bl _unresolved
 /* 80CC12CC 0000001C  38 60 00 01 */	li r3, 1
 /* 80CC12D0 00000020  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CC12D4 00000024  80 01 00 14 */	lwz r0, 0x14(r1)

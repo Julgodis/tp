@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_806F5500[2];
+extern u8 data_806F5500[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_e_hzelda_cpp(); // 1
 
 // 
 // Declarations:

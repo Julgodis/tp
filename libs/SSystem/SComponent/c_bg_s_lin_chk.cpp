@@ -72,7 +72,7 @@ extern "C" extern f32 Zero__4cXyz[3];
 // 
 
 /* ############################################################################################## */
-/* 803C3FA8-803C3FC0 0018+00 r=2 e=0 z=0  None .data      __vt__11cBgS_LinChk                                          */
+/* 803C3FA8-803C3FC0 0018+00 s=2 e=0 z=0  None .data      __vt__11cBgS_LinChk                                          */
 SECTION_DATA static void* __vt__11cBgS_LinChk[6] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -82,7 +82,7 @@ SECTION_DATA static void* __vt__11cBgS_LinChk[6] = {
 	/* 5    */ (void*)func_80267F80,
 };
 
-/* 80267D5C-80267DBC 0060+00 r=2 e=2 z=0  None .text      __ct__11cBgS_LinChkFv                                        */
+/* 80267D5C-80267DBC 0060+00 s=0 e=2 z=0  None .text      __ct__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm cBgS_LinChk::cBgS_LinChk() {
 #pragma pop
 
 
-/* 80267DBC-80267E48 008C+00 r=4 e=2 z=0  None .text      __dt__11cBgS_LinChkFv                                        */
+/* 80267DBC-80267E48 008C+00 s=2 e=2 z=0  None .text      __dt__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm cBgS_LinChk::~cBgS_LinChk() {
 #pragma pop
 
 
-/* 80267E48-80267ED0 0088+00 r=1 e=0 z=0  None .text      ct__11cBgS_LinChkFv                                          */
+/* 80267E48-80267ED0 0088+00 s=1 e=0 z=0  None .text      ct__11cBgS_LinChkFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm void cBgS_LinChk::ct() {
 #pragma pop
 
 
-/* 80267ED0-80267F40 0070+00 r=2 e=2 z=0  None .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
+/* 80267ED0-80267F40 0070+00 s=0 e=2 z=0  None .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ asm void cBgS_LinChk::Set2(cXyz const* param_0, cXyz const* param_1, unsigned in
 #pragma pop
 
 
-/* 80267F40-80267F80 0040+00 r=1 e=1 z=0  None .text      PreCalc__11cBgS_LinChkFv                                     */
+/* 80267F40-80267F80 0040+00 s=0 e=1 z=0  None .text      PreCalc__11cBgS_LinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm void cBgS_LinChk::PreCalc() {
 #pragma pop
 
 
-/* 80267F80-80267F88 0008+00 r=1 e=0 z=0  None .text      @20@__dt__11cBgS_LinChkFv                                    */
+/* 80267F80-80267F88 0008+00 s=1 e=0 z=0  None .text      @20@__dt__11cBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

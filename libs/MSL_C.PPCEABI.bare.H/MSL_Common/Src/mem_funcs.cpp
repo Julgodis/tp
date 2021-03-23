@@ -27,7 +27,7 @@ extern "C" void __copy_longs_aligned(); // 1
 // Declarations:
 // 
 
-/* 803661FC-803662A8 00AC+00 r=1 e=1 z=0  None .text      __copy_longs_rev_unaligned                                   */
+/* 803661FC-803662A8 00AC+00 s=0 e=1 z=0  None .text      __copy_longs_rev_unaligned                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ extern "C" asm void __copy_longs_rev_unaligned() {
 #pragma pop
 
 
-/* 803662A8-80366368 00C0+00 r=1 e=1 z=0  None .text      __copy_longs_unaligned                                       */
+/* 803662A8-80366368 00C0+00 s=0 e=1 z=0  None .text      __copy_longs_unaligned                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +49,7 @@ extern "C" asm void __copy_longs_unaligned() {
 #pragma pop
 
 
-/* 80366368-80366410 00A8+00 r=1 e=1 z=0  None .text      __copy_longs_rev_aligned                                     */
+/* 80366368-80366410 00A8+00 s=0 e=1 z=0  None .text      __copy_longs_rev_aligned                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ extern "C" asm void __copy_longs_rev_aligned() {
 #pragma pop
 
 
-/* 80366410-803664CC 00BC+00 r=1 e=1 z=0  None .text      __copy_longs_aligned                                         */
+/* 80366410-803664CC 00BC+00 s=0 e=1 z=0  None .text      __copy_longs_aligned                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

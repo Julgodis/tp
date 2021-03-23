@@ -8,20 +8,20 @@ lbl_80670804:
 /* 8067081C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80670820 0000001C  41 82 00 28 */	beq lbl_80670848
 /* 80670824 00000020  80 7F 05 7C */	lwz r3, 0x57c(r31)
-/* 80670828 00000024  4B FF EB D1 */	bl ChkUsed__9cBgW_BgIdCFv
+/* 80670828 00000024  4B FF EB D1 */	bl _unresolved
 /* 8067082C 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80670830 0000002C  41 82 00 18 */	beq lbl_80670848
-/* 80670834 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80670838 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80670834 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80670838 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8067083C 00000038  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80670840 0000003C  80 9F 05 7C */	lwz r4, 0x57c(r31)
-/* 80670844 00000040  4B FF EB B5 */	bl Release__4cBgSFP9dBgW_Base
+/* 80670844 00000040  4B FF EB B5 */	bl _unresolved
 lbl_80670848:
 /* 80670848 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8067084C 00000004  4B FF EB CD */	bl getArcName__9daBdoor_cFv
 /* 80670850 00000008  7C 64 1B 78 */	mr r4, r3
 /* 80670854 0000000C  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80670858 00000010  4B FF EB A1 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80670858 00000010  4B FF EB A1 */	bl _unresolved
 /* 8067085C 00000014  38 60 00 01 */	li r3, 1
 /* 80670860 00000018  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80670864 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

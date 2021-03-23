@@ -6,10 +6,10 @@ lbl_8059B1AC:
 /* 8059B1BC 00000010  38 64 05 68 */	addi r3, r4, 0x568
 /* 8059B1C0 00000014  88 04 08 3E */	lbz r0, 0x83e(r4)
 /* 8059B1C4 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 8059B1C8 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha /* 8059B380 */
-/* 8059B1CC 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l /* 8059B380 */
+/* 8059B1C8 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059B1CC 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8059B1D0 00000024  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8059B1D4 00000028  4B FF F3 25 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8059B1D4 00000028  4B FF F3 25 */	bl _unresolved
 /* 8059B1D8 0000002C  38 60 00 01 */	li r3, 1
 /* 8059B1DC 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8059B1E0 00000034  7C 08 03 A6 */	mtlr r0

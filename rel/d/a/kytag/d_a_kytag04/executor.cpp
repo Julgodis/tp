@@ -21,19 +21,12 @@ extern "C" void _unresolved(); // 1
 // 
 
 
-extern "C" void ModuleProlog(); // 1
-extern "C" void ModuleEpilog(); // 1
-extern "C" void ModuleUnresolved(); // 1
-extern "C" void ModuleConstructorsX(); // 1
-extern "C" void ModuleDestructorsX(); // 1
-extern u8 data_8046DA10[4];
-extern u8 data_8046DA14[4];
 
 // 
 // Declarations:
 // 
 
-/* 8046CAE0-8046CB0C 002C+00 r=0 e=0 z=0  None .text      _prolog                                                      */
+/* 8046CAE0-8046CB0C 002C+00 s=0 e=0 z=0  None .text      _prolog                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +37,7 @@ extern "C" asm void _prolog() {
 #pragma pop
 
 
-/* 8046CB0C-8046CB38 002C+00 r=0 e=0 z=0  None .text      _epilog                                                      */
+/* 8046CB0C-8046CB38 002C+00 s=0 e=0 z=0  None .text      _epilog                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +48,7 @@ extern "C" asm void _epilog() {
 #pragma pop
 
 
-/* 8046CB38-8046CB58 0020+00 r=8 e=6 z=0  None .text      _unresolved                                                  */
+/* 8046CB38-8046CB58 0020+00 s=2 e=6 z=0  None .text      _unresolved                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

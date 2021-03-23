@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8048D7DC[2];
+extern u8 data_8048D7DC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_tag_evtmsg_cpp(); // 1
 
 // 
 // Declarations:

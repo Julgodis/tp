@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct ResFONT {
-};
-
 struct ResTLUT {
 };
 
@@ -24,45 +21,13 @@ struct JUTPalette {
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
-struct J2DAnmTextureSRTKey {
+struct ResFONT {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DBinding {
 };
 
-struct ResTIMG {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct JKRArchive {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmTransform {
-};
-
-struct _GXCullMode {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmTexPattern {
+struct _GXTexMapID {
 };
 
 struct JGeometry {
@@ -79,6 +44,69 @@ struct JGeometry {
 		/* 802FF204 */ TVec2__template0();
 	};
 
+};
+
+struct ResTIMG {
+};
+
+struct JKRArchive {
+};
+
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct J2DMirror {
+};
+
+struct J2DMaterial {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct _GXCullMode {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
 };
 
 struct J2DPane {
@@ -120,34 +148,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct J2DBinding {
-};
-
-struct _GXTexMapID {
-};
-
-struct J2DMaterial {
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-struct J2DMirror {
 };
 
 struct J2DPicture {
@@ -412,7 +412,7 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CD1D8-803CD328 014C+04 r=6 e=0 z=0  None .data      __vt__10J2DPicture                                           */
+/* 803CD1D8-803CD328 014C+04 s=6 e=0 z=0  None .data      __vt__10J2DPicture                                           */
 SECTION_DATA static void* __vt__10J2DPicture[83 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -501,7 +501,7 @@ SECTION_DATA static void* __vt__10J2DPicture[83 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802FC050-802FC118 00C8+00 r=2 e=2 z=0  None .text      __ct__10J2DPictureFv                                         */
+/* 802FC050-802FC118 00C8+00 s=0 e=2 z=0  None .text      __ct__10J2DPictureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +512,7 @@ asm J2DPicture::J2DPicture() {
 #pragma pop
 
 
-/* 802FC118-802FC1D4 00BC+00 r=1 e=1 z=0  None .text      __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
+/* 802FC118-802FC1D4 00BC+00 s=0 e=1 z=0  None .text      __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,10 +524,10 @@ asm J2DPicture::J2DPicture(J2DPane* param_0, JSURandomInputStream* param_1, JKRA
 
 
 /* ############################################################################################## */
-/* 80456260-80456268 0008+00 r=1 e=0 z=0  None .sdata2    @1739                                                        */
+/* 80456260-80456268 0008+00 s=1 e=0 z=0  None .sdata2    @1739                                                        */
 SECTION_SDATA2 static f64 lit_1739 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802FC1D4-802FC708 0534+00 r=1 e=1 z=0  None .text      __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial */
+/* 802FC1D4-802FC708 0534+00 s=0 e=1 z=0  None .text      __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,10 +539,10 @@ asm J2DPicture::J2DPicture(J2DPane* param_0, JSURandomInputStream* param_1, J2DM
 
 
 /* ############################################################################################## */
-/* 80456268-8045626C 0004+00 r=9 e=0 z=0  None .sdata2    @1767                                                        */
+/* 80456268-8045626C 0004+00 s=9 e=0 z=0  None .sdata2    @1767                                                        */
 SECTION_SDATA2 static f32 lit_1767 = 1.0f;
 
-/* 802FC708-802FC800 00F8+00 r=21 e=20 z=1  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
+/* 802FC708-802FC800 00F8+00 s=0 e=20 z=0  None .text      __ct__10J2DPictureFPC7ResTIMG                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -553,7 +553,7 @@ asm J2DPicture::J2DPicture(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 802FC800-802FC8E8 00E8+00 r=5 e=5 z=0  None .text      __ct__10J2DPictureFUxRCQ29JGeometry8TBox2<f>PC7ResTIMGPC7ResTLUT */
+/* 802FC800-802FC8E8 00E8+00 s=0 e=5 z=0  None .text      __ct__10J2DPictureFUxRCQ29JGeometry8TBox2<f>PC7ResTIMGPC7ResTLUT */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -564,7 +564,7 @@ asm J2DPicture::J2DPicture(u64 param_0, JGeometry::TBox2<f32> const& param_1, Re
 #pragma pop
 
 
-/* 802FC8E8-802FCCDC 03F4+00 r=1 e=0 z=0  None .text      private_readStream__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
+/* 802FC8E8-802FCCDC 03F4+00 s=1 e=0 z=0  None .text      private_readStream__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,15 +576,15 @@ asm void J2DPicture::private_readStream(J2DPane* param_0, JSURandomInputStream* 
 
 
 /* ############################################################################################## */
-/* 8045626C-80456270 0004+00 r=9 e=0 z=0  None .sdata2    @2017                                                        */
+/* 8045626C-80456270 0004+00 s=9 e=0 z=0  None .sdata2    @2017                                                        */
 SECTION_SDATA2 static u8 lit_2017[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456270-80456278 0008+00 r=7 e=0 z=0  None .sdata2    @2021                                                        */
+/* 80456270-80456278 0008+00 s=7 e=0 z=0  None .sdata2    @2021                                                        */
 SECTION_SDATA2 static f64 lit_2021 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802FCCDC-802FCD70 0094+00 r=1 e=0 z=0  None .text      initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT                  */
+/* 802FCCDC-802FCD70 0094+00 s=1 e=0 z=0  None .text      initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ asm void J2DPicture::initiate(ResTIMG const* param_0, ResTLUT const* param_1) {
 #pragma pop
 
 
-/* 802FCD70-802FCE9C 012C+00 r=2 e=0 z=0  None .text      private_initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT          */
+/* 802FCD70-802FCE9C 012C+00 s=2 e=0 z=0  None .text      private_initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +606,7 @@ asm void J2DPicture::private_initiate(ResTIMG const* param_0, ResTLUT const* par
 #pragma pop
 
 
-/* 802FCE9C-802FCFF0 0154+00 r=3 e=0 z=0  None .text      initinfo__10J2DPictureFv                                     */
+/* 802FCE9C-802FCFF0 0154+00 s=3 e=0 z=0  None .text      initinfo__10J2DPictureFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +617,7 @@ asm void J2DPicture::initinfo() {
 #pragma pop
 
 
-/* 802FCFF0-802FD098 00A8+00 r=4 e=3 z=0  None .text      __dt__10J2DPictureFv                                         */
+/* 802FCFF0-802FD098 00A8+00 s=1 e=3 z=0  None .text      __dt__10J2DPictureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +628,7 @@ asm J2DPicture::~J2DPicture() {
 #pragma pop
 
 
-/* 802FD098-802FD168 00D0+00 r=1 e=0 z=0  None .text      prepareTexture__10J2DPictureFUc                              */
+/* 802FD098-802FD168 00D0+00 s=1 e=0 z=0  None .text      prepareTexture__10J2DPictureFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -639,7 +639,7 @@ asm void J2DPicture::prepareTexture(u8 param_0) {
 #pragma pop
 
 
-/* 802FD168-802FD4B4 034C+00 r=1 e=0 z=0  None .text      insert__10J2DPictureFPC7ResTIMGP10JUTPaletteUcf              */
+/* 802FD168-802FD4B4 034C+00 s=1 e=0 z=0  None .text      insert__10J2DPictureFPC7ResTIMGP10JUTPaletteUcf              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -650,7 +650,7 @@ asm void J2DPicture::insert(ResTIMG const* param_0, JUTPalette* param_1, u8 para
 #pragma pop
 
 
-/* 802FD4B4-802FD524 0070+00 r=1 e=0 z=0  None .text      insert__10J2DPictureFPCcP10JUTPaletteUcf                     */
+/* 802FD4B4-802FD524 0070+00 s=1 e=0 z=0  None .text      insert__10J2DPictureFPCcP10JUTPaletteUcf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -661,7 +661,7 @@ asm void J2DPicture::insert(char const* param_0, JUTPalette* param_1, u8 param_2
 #pragma pop
 
 
-/* 802FD524-802FD6F4 01D0+00 r=1 e=0 z=0  None .text      insert__10J2DPictureFP10JUTTextureUcf                        */
+/* 802FD524-802FD6F4 01D0+00 s=1 e=0 z=0  None .text      insert__10J2DPictureFP10JUTTextureUcf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -672,7 +672,7 @@ asm void J2DPicture::insert(JUTTexture* param_0, u8 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 802FD6F4-802FD814 0120+00 r=1 e=0 z=0  None .text      remove__10J2DPictureFUc                                      */
+/* 802FD6F4-802FD814 0120+00 s=1 e=0 z=0  None .text      remove__10J2DPictureFUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -683,7 +683,7 @@ asm void J2DPicture::remove(u8 param_0) {
 #pragma pop
 
 
-/* 802FD814-802FD874 0060+00 r=1 e=0 z=0  None .text      remove__10J2DPictureFP10JUTTexture                           */
+/* 802FD814-802FD874 0060+00 s=1 e=0 z=0  None .text      remove__10J2DPictureFP10JUTTexture                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -694,7 +694,7 @@ asm void J2DPicture::remove(JUTTexture* param_0) {
 #pragma pop
 
 
-/* 802FD874-802FD964 00F0+00 r=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPC7ResTIMGUc                     */
+/* 802FD874-802FD964 00F0+00 s=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPC7ResTIMGUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -705,7 +705,7 @@ asm void J2DPicture::changeTexture(ResTIMG const* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802FD964-802FD9BC 0058+00 r=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPCcUc                            */
+/* 802FD964-802FD9BC 0058+00 s=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPCcUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -716,7 +716,7 @@ asm void J2DPicture::changeTexture(char const* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802FD9BC-802FDAC8 010C+00 r=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPC7ResTIMGUcP10JUTPalette        */
+/* 802FD9BC-802FDAC8 010C+00 s=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPC7ResTIMGUcP10JUTPalette        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -727,7 +727,7 @@ asm void J2DPicture::changeTexture(ResTIMG const* param_0, u8 param_1, JUTPalett
 #pragma pop
 
 
-/* 802FDAC8-802FDB28 0060+00 r=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPCcUcP10JUTPalette               */
+/* 802FDAC8-802FDB28 0060+00 s=1 e=0 z=0  None .text      changeTexture__10J2DPictureFPCcUcP10JUTPalette               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,7 +738,7 @@ asm void J2DPicture::changeTexture(char const* param_0, u8 param_1, JUTPalette* 
 #pragma pop
 
 
-/* 802FDB28-802FDB90 0068+00 r=2 e=1 z=0  None .text      drawSelf__10J2DPictureFff                                    */
+/* 802FDB28-802FDB90 0068+00 s=1 e=1 z=0  None .text      drawSelf__10J2DPictureFff                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -749,7 +749,7 @@ asm void J2DPicture::drawSelf(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FDB90-802FDBFC 006C+00 r=1 e=0 z=0  None .text      drawSelf__10J2DPictureFffPA3_A4_f                            */
+/* 802FDB90-802FDBFC 006C+00 s=1 e=0 z=0  None .text      drawSelf__10J2DPictureFffPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -760,7 +760,7 @@ asm void J2DPicture::drawSelf(f32 param_0, f32 param_1, f32 (* param_2)[3][4]) {
 #pragma pop
 
 
-/* 802FDBFC-802FDC70 0074+00 r=1 e=0 z=0  None .text      drawFullSet__10J2DPictureFffffPA3_A4_f                       */
+/* 802FDBFC-802FDC70 0074+00 s=1 e=0 z=0  None .text      drawFullSet__10J2DPictureFffffPA3_A4_f                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,7 +771,7 @@ asm void J2DPicture::drawFullSet(f32 param_0, f32 param_1, f32 param_2, f32 para
 #pragma pop
 
 
-/* 802FDC70-802FDF88 0318+00 r=2 e=1 z=0  None .text      draw__10J2DPictureFffffbbb                                   */
+/* 802FDC70-802FDF88 0318+00 s=1 e=1 z=0  None .text      draw__10J2DPictureFffffbbb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -782,7 +782,7 @@ asm void J2DPicture::draw(f32 param_0, f32 param_1, f32 param_2, f32 param_3, bo
 #pragma pop
 
 
-/* 802FDF88-802FE380 03F8+00 r=1 e=0 z=0  None .text      drawOut__10J2DPictureFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 802FDF88-802FE380 03F8+00 s=1 e=0 z=0  None .text      drawOut__10J2DPictureFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -793,7 +793,7 @@ asm void J2DPicture::drawOut(JGeometry::TBox2<f32> const& param_0, JGeometry::TB
 #pragma pop
 
 
-/* 802FE380-802FE5D0 0250+00 r=1 e=0 z=0  None .text      drawTexCoord__10J2DPictureFffffssssssssPA3_A4_f              */
+/* 802FE380-802FE5D0 0250+00 s=1 e=0 z=0  None .text      drawTexCoord__10J2DPictureFffffssssssssPA3_A4_f              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -804,7 +804,7 @@ asm void J2DPicture::drawTexCoord(f32 param_0, f32 param_1, f32 param_2, f32 par
 #pragma pop
 
 
-/* 802FE5D0-802FEA60 0490+00 r=3 e=0 z=0  None .text      setTevMode__10J2DPictureFv                                   */
+/* 802FE5D0-802FEA60 0490+00 s=3 e=0 z=0  None .text      setTevMode__10J2DPictureFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -815,7 +815,7 @@ asm void J2DPicture::setTevMode() {
 #pragma pop
 
 
-/* 802FEA60-802FEA74 0014+00 r=1 e=0 z=0  None .text      swap__10J2DPictureFRfRf                                      */
+/* 802FEA60-802FEA74 0014+00 s=1 e=0 z=0  None .text      swap__10J2DPictureFRfRf                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,7 +826,7 @@ asm void J2DPicture::swap(f32& param_0, f32& param_1) {
 #pragma pop
 
 
-/* 802FEA74-802FEA9C 0028+00 r=1 e=0 z=0  None .text      setBlendColorRatio__10J2DPictureFff                          */
+/* 802FEA74-802FEA9C 0028+00 s=1 e=0 z=0  None .text      setBlendColorRatio__10J2DPictureFff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +837,7 @@ asm void J2DPicture::setBlendColorRatio(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FEA9C-802FEAC4 0028+00 r=1 e=0 z=0  None .text      setBlendAlphaRatio__10J2DPictureFff                          */
+/* 802FEA9C-802FEAC4 0028+00 s=1 e=0 z=0  None .text      setBlendAlphaRatio__10J2DPictureFff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -849,10 +849,10 @@ asm void J2DPicture::setBlendAlphaRatio(f32 param_0, f32 param_1) {
 
 
 /* ############################################################################################## */
-/* 80456278-8045627C 0004+00 r=2 e=0 z=0  None .sdata2    @2758                                                        */
+/* 80456278-8045627C 0004+00 s=2 e=0 z=0  None .sdata2    @2758                                                        */
 SECTION_SDATA2 static f32 lit_2758 = 255.0f;
 
-/* 802FEAC4-802FEB94 00D0+00 r=4 e=0 z=0  None .text      setBlendKonstColor__10J2DPictureFv                           */
+/* 802FEAC4-802FEB94 00D0+00 s=4 e=0 z=0  None .text      setBlendKonstColor__10J2DPictureFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -863,7 +863,7 @@ asm void J2DPicture::setBlendKonstColor() {
 #pragma pop
 
 
-/* 802FEB94-802FEC64 00D0+00 r=4 e=0 z=0  None .text      setBlendKonstAlpha__10J2DPictureFv                           */
+/* 802FEB94-802FEC64 00D0+00 s=4 e=0 z=0  None .text      setBlendKonstAlpha__10J2DPictureFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -874,7 +874,7 @@ asm void J2DPicture::setBlendKonstAlpha() {
 #pragma pop
 
 
-/* 802FEC64-802FED44 00E0+00 r=3 e=0 z=0  None .text      getNewColor__10J2DPictureFPQ28JUtility6TColor                */
+/* 802FEC64-802FED44 00E0+00 s=3 e=0 z=0  None .text      getNewColor__10J2DPictureFPQ28JUtility6TColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,7 +885,7 @@ asm void J2DPicture::getNewColor(JUtility::TColor* param_0) {
 #pragma pop
 
 
-/* 802FED44-802FED84 0040+00 r=4 e=0 z=0  None .text      setTexCoord__10J2DPictureFPC10JUTTexture10J2DBinding9J2DMirrorb */
+/* 802FED44-802FED84 0040+00 s=4 e=0 z=0  None .text      setTexCoord__10J2DPictureFPC10JUTTexture10J2DBinding9J2DMirrorb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -897,10 +897,10 @@ asm void J2DPicture::setTexCoord(JUTTexture const* param_0, J2DBinding param_1, 
 
 
 /* ############################################################################################## */
-/* 8045627C-80456280 0004+00 r=1 e=0 z=0  None .sdata2    @2933                                                        */
+/* 8045627C-80456280 0004+00 s=1 e=0 z=0  None .sdata2    @2933                                                        */
 SECTION_SDATA2 static f32 J2DPicture__lit_2933 = 0.5f;
 
-/* 802FED84-802FF09C 0318+00 r=2 e=0 z=0  None .text      setTexCoord__10J2DPictureFPQ29JGeometry8TVec2<s>PC10JUTTexture10J2DBinding9J2DMirrorb */
+/* 802FED84-802FF09C 0318+00 s=2 e=0 z=0  None .text      setTexCoord__10J2DPictureFPQ29JGeometry8TVec2<s>PC10JUTTexture10J2DBinding9J2DMirrorb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -911,7 +911,7 @@ asm void J2DPicture::setTexCoord(JGeometry::TVec2<s16>* param_0, JUTTexture cons
 #pragma pop
 
 
-/* 802FF09C-802FF100 0064+00 r=1 e=0 z=0  None .text      isUsed__10J2DPictureFPC7ResTIMG                              */
+/* 802FF09C-802FF100 0064+00 s=1 e=0 z=0  None .text      isUsed__10J2DPictureFPC7ResTIMG                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -922,7 +922,7 @@ asm void J2DPicture::isUsed(ResTIMG const* param_0) {
 #pragma pop
 
 
-/* 802FF100-802FF1D0 00D0+00 r=1 e=0 z=0  None .text      getUsableTlut__10J2DPictureFUc                               */
+/* 802FF100-802FF1D0 00D0+00 s=1 e=0 z=0  None .text      getUsableTlut__10J2DPictureFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -933,7 +933,7 @@ asm void J2DPicture::getUsableTlut(u8 param_0) {
 #pragma pop
 
 
-/* 802FF1D0-802FF204 0034+00 r=2 e=1 z=0  None .text      getTlutID__10J2DPictureFPC7ResTIMGUc                         */
+/* 802FF1D0-802FF204 0034+00 s=1 e=1 z=0  None .text      getTlutID__10J2DPictureFPC7ResTIMGUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +944,7 @@ asm void J2DPicture::getTlutID(ResTIMG const* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802FF204-802FF208 0004+00 r=6 e=1 z=0  None .text      __ct__Q29JGeometry8TVec2<s>Fv                                */
+/* 802FF204-802FF208 0004+00 s=5 e=1 z=0  None .text      __ct__Q29JGeometry8TVec2<s>Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -955,7 +955,7 @@ asm JGeometry::TVec2__template0::TVec2__template0() {
 #pragma pop
 
 
-/* 802FF208-802FF238 0030+00 r=1 e=0 z=0  None .text      append__10J2DPictureFP10JUTTexturef                          */
+/* 802FF208-802FF238 0030+00 s=1 e=0 z=0  None .text      append__10J2DPictureFP10JUTTexturef                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -966,7 +966,7 @@ asm void J2DPicture::append(JUTTexture* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FF238-802FF268 0030+00 r=1 e=0 z=0  None .text      append__10J2DPictureFPC7ResTIMGP10JUTPalettef                */
+/* 802FF238-802FF268 0030+00 s=1 e=0 z=0  None .text      append__10J2DPictureFPC7ResTIMGP10JUTPalettef                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -977,7 +977,7 @@ asm void J2DPicture::append(ResTIMG const* param_0, JUTPalette* param_1, f32 par
 #pragma pop
 
 
-/* 802FF268-802FF29C 0034+00 r=1 e=0 z=0  None .text      load__10J2DPictureFUc                                        */
+/* 802FF268-802FF29C 0034+00 s=1 e=0 z=0  None .text      load__10J2DPictureFUc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -988,7 +988,7 @@ asm void J2DPicture::load(u8 param_0) {
 #pragma pop
 
 
-/* 802FF29C-802FF2E8 004C+00 r=1 e=0 z=0  None .text      load__10J2DPictureF11_GXTexMapIDUc                           */
+/* 802FF29C-802FF2E8 004C+00 s=1 e=0 z=0  None .text      load__10J2DPictureF11_GXTexMapIDUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -999,7 +999,7 @@ asm void J2DPicture::load(_GXTexMapID param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802FF2E8-802FF2F0 0008+00 r=2 e=1 z=0  None .text      getTypeID__10J2DPictureCFv                                   */
+/* 802FF2E8-802FF2F0 0008+00 s=1 e=1 z=0  None .text      getTypeID__10J2DPictureCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1010,7 +1010,7 @@ asm void J2DPicture::getTypeID() const {
 #pragma pop
 
 
-/* 802FF2F0-802FF320 0030+00 r=1 e=0 z=0  None .text      append__10J2DPictureFPCcP10JUTPalettef                       */
+/* 802FF2F0-802FF320 0030+00 s=1 e=0 z=0  None .text      append__10J2DPictureFPCcP10JUTPalettef                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1021,7 +1021,7 @@ asm void J2DPicture::append(char const* param_0, JUTPalette* param_1, f32 param_
 #pragma pop
 
 
-/* 802FF320-802FF350 0030+00 r=1 e=0 z=0  None .text      prepend__10J2DPictureFP10JUTTexturef                         */
+/* 802FF320-802FF350 0030+00 s=1 e=0 z=0  None .text      prepend__10J2DPictureFP10JUTTexturef                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1032,7 +1032,7 @@ asm void J2DPicture::prepend(JUTTexture* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FF350-802FF380 0030+00 r=1 e=0 z=0  None .text      prepend__10J2DPictureFPCcP10JUTPalettef                      */
+/* 802FF350-802FF380 0030+00 s=1 e=0 z=0  None .text      prepend__10J2DPictureFPCcP10JUTPalettef                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1043,7 +1043,7 @@ asm void J2DPicture::prepend(char const* param_0, JUTPalette* param_1, f32 param
 #pragma pop
 
 
-/* 802FF380-802FF3B0 0030+00 r=1 e=0 z=0  None .text      prepend__10J2DPictureFPCcf                                   */
+/* 802FF380-802FF3B0 0030+00 s=1 e=0 z=0  None .text      prepend__10J2DPictureFPCcf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1054,7 +1054,7 @@ asm void J2DPicture::prepend(char const* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FF3B0-802FF3E0 0030+00 r=1 e=0 z=0  None .text      prepend__10J2DPictureFPC7ResTIMGP10JUTPalettef               */
+/* 802FF3B0-802FF3E0 0030+00 s=1 e=0 z=0  None .text      prepend__10J2DPictureFPC7ResTIMGP10JUTPalettef               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1065,7 +1065,7 @@ asm void J2DPicture::prepend(ResTIMG const* param_0, JUTPalette* param_1, f32 pa
 #pragma pop
 
 
-/* 802FF3E0-802FF410 0030+00 r=1 e=0 z=0  None .text      prepend__10J2DPictureFPC7ResTIMGf                            */
+/* 802FF3E0-802FF410 0030+00 s=1 e=0 z=0  None .text      prepend__10J2DPictureFPC7ResTIMGf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1076,7 +1076,7 @@ asm void J2DPicture::prepend(ResTIMG const* param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802FF410-802FF448 0038+00 r=1 e=0 z=0  None .text      remove__10J2DPictureFv                                       */
+/* 802FF410-802FF448 0038+00 s=1 e=0 z=0  None .text      remove__10J2DPictureFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1087,7 +1087,7 @@ asm void J2DPicture::remove() {
 #pragma pop
 
 
-/* 802FF448-802FF4E0 0098+00 r=1 e=0 z=0  None .text      draw__10J2DPictureFffUcbbb                                   */
+/* 802FF448-802FF4E0 0098+00 s=1 e=0 z=0  None .text      draw__10J2DPictureFffUcbbb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1098,7 +1098,7 @@ asm void J2DPicture::draw(f32 param_0, f32 param_1, u8 param_2, bool param_3, bo
 #pragma pop
 
 
-/* 802FF4E0-802FF524 0044+00 r=1 e=0 z=0  None .text      draw__10J2DPictureFffbbb                                     */
+/* 802FF4E0-802FF524 0044+00 s=1 e=0 z=0  None .text      draw__10J2DPictureFffbbb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1109,7 +1109,7 @@ asm void J2DPicture::draw(f32 param_0, f32 param_1, bool param_2, bool param_3, 
 #pragma pop
 
 
-/* 802FF524-802FF588 0064+00 r=1 e=0 z=0  None .text      drawOut__10J2DPictureFffffffff                               */
+/* 802FF524-802FF588 0064+00 s=1 e=0 z=0  None .text      drawOut__10J2DPictureFffffffff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1120,7 +1120,7 @@ asm void J2DPicture::drawOut(f32 param_0, f32 param_1, f32 param_2, f32 param_3,
 #pragma pop
 
 
-/* 802FF588-802FF634 00AC+00 r=1 e=0 z=0  None .text      drawOut__10J2DPictureFffffff                                 */
+/* 802FF588-802FF634 00AC+00 s=1 e=0 z=0  None .text      drawOut__10J2DPictureFffffff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1131,7 +1131,7 @@ asm void J2DPicture::drawOut(f32 param_0, f32 param_1, f32 param_2, f32 param_3,
 #pragma pop
 
 
-/* 802FF634-802FF63C 0008+00 r=1 e=0 z=0  None .text      getTextureCount__10J2DPictureCFv                             */
+/* 802FF634-802FF63C 0008+00 s=1 e=0 z=0  None .text      getTextureCount__10J2DPictureCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1142,7 +1142,7 @@ asm void J2DPicture::getTextureCount() const {
 #pragma pop
 
 
-/* 802FF63C-802FF65C 0020+00 r=1 e=0 z=0  None .text      isUsed__10J2DPictureFPC7ResFONT                              */
+/* 802FF63C-802FF65C 0020+00 s=1 e=0 z=0  None .text      isUsed__10J2DPictureFPC7ResFONT                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1153,7 +1153,7 @@ asm void J2DPicture::isUsed(ResFONT const* param_0) {
 #pragma pop
 
 
-/* 802FF65C-802FF660 0004+00 r=1 e=0 z=0  None .text      rewriteAlpha__10J2DPictureFv                                 */
+/* 802FF65C-802FF660 0004+00 s=1 e=0 z=0  None .text      rewriteAlpha__10J2DPictureFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

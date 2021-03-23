@@ -3,7 +3,7 @@ lbl_80AB73B0:
 /* 80AB73B4 00000004  7C 08 02 A6 */	mflr r0
 /* 80AB73B8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80AB73BC 0000000C  38 63 0F 98 */	addi r3, r3, 0xf98
-/* 80AB73C0 00000010  4B FF E8 59 */	bl __ptmf_cmpr
+/* 80AB73C0 00000010  4B FF E8 59 */	bl _unresolved
 /* 80AB73C4 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 80AB73C8 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 80AB73CC 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

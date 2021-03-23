@@ -21,20 +21,12 @@ extern "C" void _unresolved(); // 1
 // 
 
 
-extern "C" void ModuleProlog(); // 1
-extern "C" void ModuleEpilog(); // 1
-extern "C" void ModuleUnresolved(); // 1
-extern "C" void ModuleConstructorsX(); // 1
-extern "C" void ModuleDestructorsX(); // 1
-extern void* data_806CCFEC[2];
-#pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
 
 // 
 // Declarations:
 // 
 
-/* 806C7960-806C798C 002C+00 r=0 e=0 z=0  None .text      _prolog                                                      */
+/* 806C7960-806C798C 002C+00 s=0 e=0 z=0  None .text      _prolog                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +37,7 @@ extern "C" asm void _prolog() {
 #pragma pop
 
 
-/* 806C798C-806C79B8 002C+00 r=0 e=0 z=0  None .text      _epilog                                                      */
+/* 806C798C-806C79B8 002C+00 s=0 e=0 z=0  None .text      _epilog                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +48,7 @@ extern "C" asm void _epilog() {
 #pragma pop
 
 
-/* 806C79B8-806C79D8 0020+00 r=43 e=41 z=0  None .text      _unresolved                                                  */
+/* 806C79B8-806C79D8 0020+00 s=2 e=41 z=0  None .text      _unresolved                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

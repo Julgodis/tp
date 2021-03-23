@@ -5,22 +5,22 @@ lbl_80D22944:
 /* 80D22950 0000000C  DB E1 00 50 */	stfd f31, 0x50(r1)
 /* 80D22954 00000010  F3 E1 00 58 */	psq_st f31, 88(r1), 0, 0 /* qr0 */
 /* 80D22958 00000000  39 61 00 50 */	addi r11, r1, 0x50
-/* 80D2295C 00000004  4B FF F1 9D */	bl _savegpr_26
+/* 80D2295C 00000004  4B FF F1 9D */	bl _unresolved
 /* 80D22960 00000008  7C 7B 1B 78 */	mr r27, r3
-/* 80D22964 0000000C  3C 60 00 00 */	lis r3, l_sph_src@ha /* 80D23DCC */
-/* 80D22968 00000010  3B E3 00 00 */	addi r31, r3, l_sph_src@l /* 80D23DCC */
-/* 80D2296C 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D22970 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D22964 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D22968 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80D2296C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D22970 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D22974 0000001C  3B A3 5B D4 */	addi r29, r3, 0x5bd4
 /* 80D22978 00000020  7F A3 EB 78 */	mr r3, r29
-/* 80D2297C 00000024  4B FF F1 7D */	bl CheckQuake__12dVibration_cFv
+/* 80D2297C 00000024  4B FF F1 7D */	bl _unresolved
 /* 80D22980 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D22984 0000002C  40 82 00 0C */	bne lbl_80D22990
 /* 80D22988 00000030  7F 63 DB 78 */	mr r3, r27
 /* 80D2298C 00000034  48 00 0E DD */	bl startQuake__15daObjVolcBall_cFv
 lbl_80D22990:
-/* 80D22990 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D22994 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D22990 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D22994 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D22998 00000008  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 80D2299C 0000000C  38 7B 06 04 */	addi r3, r27, 0x604
 /* 80D229A0 00000010  48 00 13 E9 */	bl func_80D23D88
@@ -32,11 +32,11 @@ lbl_80D22990:
 /* 80D229B8 00000028  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D229BC 0000002C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D229C0 00000030  41 82 00 24 */	beq lbl_80D229E4
-/* 80D229C4 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D229C8 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D229C4 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D229C8 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D229CC 0000003C  88 1B 04 BA */	lbz r0, 0x4ba(r27)
 /* 80D229D0 00000040  7C 05 07 74 */	extsb r5, r0
-/* 80D229D4 00000044  4B FF F1 25 */	bl isSwitch__10dSv_info_cCFii
+/* 80D229D4 00000044  4B FF F1 25 */	bl _unresolved
 /* 80D229D8 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 80D229DC 0000004C  40 82 00 08 */	bne lbl_80D229E4
 /* 80D229E0 00000050  3B 40 00 01 */	li r26, 1
@@ -96,7 +96,7 @@ lbl_80D22A8C:
 /* 80D22AA4 00000018  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80D22AA8 0000001C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80D22AAC 00000020  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80D22AB0 00000024  4B FF F0 49 */	bl cLib_chaseF__FPfff
+/* 80D22AB0 00000024  4B FF F0 49 */	bl _unresolved
 /* 80D22AB4 00000028  C0 3B 29 1C */	lfs f1, 0x291c(r27)
 /* 80D22AB8 0000002C  38 7B 25 2C */	addi r3, r27, 0x252c
 /* 80D22ABC 00000030  C8 5F 00 68 */	lfd f2, 0x68(r31)
@@ -106,7 +106,7 @@ lbl_80D22A8C:
 /* 80D22ACC 00000040  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 80D22AD0 00000044  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80D22AD4 00000048  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80D22AD8 0000004C  4B FF F0 21 */	bl cLib_chaseF__FPfff
+/* 80D22AD8 0000004C  4B FF F0 21 */	bl _unresolved
 /* 80D22ADC 00000050  C0 3B 29 1C */	lfs f1, 0x291c(r27)
 /* 80D22AE0 00000054  38 7B 25 30 */	addi r3, r27, 0x2530
 /* 80D22AE4 00000058  C8 5F 00 68 */	lfd f2, 0x68(r31)
@@ -116,7 +116,7 @@ lbl_80D22A8C:
 /* 80D22AF4 00000068  C8 01 00 20 */	lfd f0, 0x20(r1)
 /* 80D22AF8 0000006C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80D22AFC 00000070  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80D22B00 00000074  4B FF EF F9 */	bl cLib_chaseF__FPfff
+/* 80D22B00 00000074  4B FF EF F9 */	bl _unresolved
 /* 80D22B04 00000078  38 7B 25 5C */	addi r3, r27, 0x255c
 /* 80D22B08 0000007C  FC 20 F8 90 */	fmr f1, f31
 /* 80D22B0C 00000080  C8 5F 00 68 */	lfd f2, 0x68(r31)
@@ -126,7 +126,7 @@ lbl_80D22A8C:
 /* 80D22B1C 00000090  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 80D22B20 00000094  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80D22B24 00000098  EC 5F 00 24 */	fdivs f2, f31, f0
-/* 80D22B28 0000009C  4B FF EF D1 */	bl cLib_chaseF__FPfff
+/* 80D22B28 0000009C  4B FF EF D1 */	bl _unresolved
 /* 80D22B2C 000000A0  C0 1B 25 28 */	lfs f0, 0x2528(r27)
 /* 80D22B30 000000A4  D0 1B 25 34 */	stfs f0, 0x2534(r27)
 /* 80D22B34 000000A8  C0 1B 25 2C */	lfs f0, 0x252c(r27)
@@ -137,15 +137,15 @@ lbl_80D22A8C:
 /* 80D22B48 000000BC  C0 3F 00 60 */	lfs f1, 0x60(r31)
 /* 80D22B4C 000000C0  C0 1B 29 1C */	lfs f0, 0x291c(r27)
 /* 80D22B50 000000C4  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80D22B54 000000C8  4B FF EF A5 */	bl SetR__8cM3dGSphFf
+/* 80D22B54 000000C8  4B FF EF A5 */	bl _unresolved
 /* 80D22B58 000000CC  38 7B 28 5C */	addi r3, r27, 0x285c
 /* 80D22B5C 000000D0  38 9B 25 10 */	addi r4, r27, 0x2510
-/* 80D22B60 000000D4  4B FF EF 99 */	bl SetC__8cM3dGSphFRC4cXyz
-/* 80D22B64 000000D8  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D22B68 000000DC  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D22B60 000000D4  4B FF EF 99 */	bl _unresolved
+/* 80D22B64 000000D8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D22B68 000000DC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D22B6C 000000E0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80D22B70 000000E4  38 9B 27 38 */	addi r4, r27, 0x2738
-/* 80D22B74 000000E8  4B FF EF 85 */	bl Set__4cCcSFP8cCcD_Obj
+/* 80D22B74 000000E8  4B FF EF 85 */	bl _unresolved
 lbl_80D22B78:
 /* 80D22B78 00000000  7F 63 DB 78 */	mr r3, r27
 /* 80D22B7C 00000004  48 00 08 BD */	bl executeBall__15daObjVolcBall_cFv
@@ -163,7 +163,7 @@ lbl_80D22B78:
 /* 80D22BAC 00000034  C0 23 00 28 */	lfs f1, 0x28(r3)
 /* 80D22BB0 00000038  C0 1F 00 40 */	lfs f0, 0x40(r31)
 /* 80D22BB4 0000003C  EC 20 00 72 */	fmuls f1, f0, f1
-/* 80D22BB8 00000040  4B FF EF 41 */	bl cM_rndFX__Ff
+/* 80D22BB8 00000040  4B FF EF 41 */	bl _unresolved
 /* 80D22BBC 00000044  FF E0 08 90 */	fmr f31, f1
 /* 80D22BC0 00000048  7F 63 DB 78 */	mr r3, r27
 /* 80D22BC4 0000004C  4B FF EF 55 */	bl getData__15daObjVolcBall_cFv
@@ -171,7 +171,7 @@ lbl_80D22B78:
 /* 80D22BCC 00000054  C0 1F 00 40 */	lfs f0, 0x40(r31)
 /* 80D22BD0 00000058  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80D22BD4 0000005C  EC 20 F8 2A */	fadds f1, f0, f31
-/* 80D22BD8 00000060  4B FF EF 21 */	bl __cvt_fp2unsigned
+/* 80D22BD8 00000060  4B FF EF 21 */	bl _unresolved
 /* 80D22BDC 00000064  90 7B 06 04 */	stw r3, 0x604(r27)
 /* 80D22BE0 00000068  48 00 00 14 */	b lbl_80D22BF4
 lbl_80D22BE4:
@@ -182,17 +182,17 @@ lbl_80D22BE4:
 lbl_80D22BF4:
 /* 80D22BF4 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80D22BF8 00000004  38 80 00 1F */	li r4, 0x1f
-/* 80D22BFC 00000008  4B FF EE FD */	bl StopQuake__12dVibration_cFi
+/* 80D22BFC 00000008  4B FF EE FD */	bl _unresolved
 lbl_80D22C00:
 /* 80D22C00 00000000  88 1B 04 E2 */	lbz r0, 0x4e2(r27)
 /* 80D22C04 00000004  7C 03 07 74 */	extsb r3, r0
-/* 80D22C08 00000008  4B FF EE F1 */	bl dComIfGp_getReverb__Fi
+/* 80D22C08 00000008  4B FF EE F1 */	bl _unresolved
 /* 80D22C0C 0000000C  7C 67 1B 78 */	mr r7, r3
 /* 80D22C10 00000010  3C 60 00 09 */	lis r3, 0x0009 /* 0x0009000E@ha */
 /* 80D22C14 00000014  38 03 00 0E */	addi r0, r3, 0x000E /* 0x0009000E@l */
 /* 80D22C18 00000018  90 01 00 08 */	stw r0, 8(r1)
-/* 80D22C1C 0000001C  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 80D22C20 00000020  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 80D22C1C 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D22C20 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D22C24 00000024  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D22C28 00000028  38 81 00 08 */	addi r4, r1, 8
 /* 80D22C2C 0000002C  38 A0 00 00 */	li r5, 0
@@ -202,11 +202,11 @@ lbl_80D22C00:
 /* 80D22C3C 0000003C  C0 7F 00 5C */	lfs f3, 0x5c(r31)
 /* 80D22C40 00000040  FC 80 18 90 */	fmr f4, f3
 /* 80D22C44 00000044  39 00 00 00 */	li r8, 0
-/* 80D22C48 00000048  4B FF EE B1 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80D22C48 00000048  4B FF EE B1 */	bl _unresolved
 /* 80D22C4C 0000004C  E3 E1 00 58 */	psq_l f31, 88(r1), 0, 0 /* qr0 */
 /* 80D22C50 00000000  CB E1 00 50 */	lfd f31, 0x50(r1)
 /* 80D22C54 00000004  39 61 00 50 */	addi r11, r1, 0x50
-/* 80D22C58 00000008  4B FF EE A1 */	bl _restgpr_26
+/* 80D22C58 00000008  4B FF EE A1 */	bl _unresolved
 /* 80D22C5C 0000000C  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 80D22C60 00000010  7C 08 03 A6 */	mtlr r0
 /* 80D22C64 00000014  38 21 00 60 */	addi r1, r1, 0x60

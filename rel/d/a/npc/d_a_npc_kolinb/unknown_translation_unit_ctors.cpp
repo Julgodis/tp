@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80A486FC[2];
+extern u8 data_80A486FC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_kolinb_cpp(); // 1
 
 // 
 // Declarations:

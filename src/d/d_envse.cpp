@@ -131,7 +131,7 @@ extern "C" extern u8 struct_80450D64[4];
 // Declarations:
 // 
 
-/* 80182DD4-80182DDC 0008+00 r=1 e=0 z=0  None .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
+/* 80182DD4-80182DDC 0008+00 s=1 e=0 z=0  None .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,13 +143,13 @@ asm static void dEnvSe_Draw(dEnvSe_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80456B80-80456B84 0004+00 r=1 e=0 z=0  None .sbss2     @3752                                                        */
+/* 80456B80-80456B84 0004+00 s=1 e=0 z=0  None .sbss2     @3752                                                        */
 SECTION_SBSS2 static u8 d_d_envse__lit_3752[4];
 
-/* 80456B84-80456B88 0004+00 r=1 e=0 z=0  None .sbss2     None                                                         */
+/* 80456B84-80456B88 0004+00 s=1 e=0 z=0  None .sbss2     None                                                         */
 SECTION_SBSS2 static u8 data_80456B84[4];
 
-/* 80182DDC-80182FD8 01FC+00 r=1 e=0 z=0  None .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  */
+/* 80182DDC-80182FD8 01FC+00 s=1 e=0 z=0  None .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ asm static void dEnvSe_getNearPathPos(cXyz* param_0, cXyz* param_1, dPath* param
 
 
 /* ############################################################################################## */
-/* 80394308-80394310 0007+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80394308-80394310 0007+01 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -170,7 +170,7 @@ SECTION_DEAD char const* const stringBase_80394308 = "sndtag";
 SECTION_DEAD static char const* const pad_8039430F = "";
 #pragma pop
 
-/* 80182FD8-80183480 04A8+00 r=1 e=0 z=0  None .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
+/* 80182FD8-80183480 04A8+00 s=1 e=0 z=0  None .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ asm void dEnvSe_c::execute_common(dStage_SoundInfo_c* param_0, s8* param_1, u8 p
 #pragma pop
 
 
-/* 80183480-801835A0 0120+00 r=1 e=0 z=0  None .text      execute__8dEnvSe_cFv                                         */
+/* 80183480-801835A0 0120+00 s=1 e=0 z=0  None .text      execute__8dEnvSe_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ asm void dEnvSe_c::execute() {
 #pragma pop
 
 
-/* 801835A0-801835C0 0020+00 r=1 e=0 z=0  None .text      dEnvSe_Execute__FP8dEnvSe_c                                  */
+/* 801835A0-801835C0 0020+00 s=1 e=0 z=0  None .text      dEnvSe_Execute__FP8dEnvSe_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ asm static void dEnvSe_Execute(dEnvSe_c* param_0) {
 #pragma pop
 
 
-/* 801835C0-801835C8 0008+00 r=1 e=0 z=0  None .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
+/* 801835C0-801835C8 0008+00 s=1 e=0 z=0  None .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ asm static void dEnvSe_IsDelete(dEnvSe_c* param_0) {
 #pragma pop
 
 
-/* 801835C8-801835D0 0008+00 r=1 e=0 z=0  None .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
+/* 801835C8-801835D0 0008+00 s=1 e=0 z=0  None .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm static void dEnvSe_Delete(dEnvSe_c* param_0) {
 #pragma pop
 
 
-/* 801835D0-801835F8 0028+00 r=1 e=0 z=0  None .text      dEnvSe_Create__FP8dEnvSe_c                                   */
+/* 801835D0-801835F8 0028+00 s=1 e=0 z=0  None .text      dEnvSe_Create__FP8dEnvSe_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm static void dEnvSe_Create(dEnvSe_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 803BA808-803BA81C 0014+00 r=1 e=0 z=0  None .data      l_dEnvSe_Method                                              */
+/* 803BA808-803BA81C 0014+00 s=1 e=0 z=0  None .data      l_dEnvSe_Method                                              */
 SECTION_DATA static void* l_dEnvSe_Method[5] = {
 	/* 0    */ (void*)dEnvSe_Create__FP8dEnvSe_c,
 	/* 1    */ (void*)dEnvSe_Delete__FP8dEnvSe_c,
@@ -246,7 +246,7 @@ SECTION_DATA static void* l_dEnvSe_Method[5] = {
 	/* 4    */ (void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
 
-/* 803BA81C-803BA848 0028+04 r=1 e=0 z=1  None .data      g_profile_ENVSE                                              */
+/* 803BA81C-803BA848 0028+04 s=0 e=0 z=0  None .data      g_profile_ENVSE                                              */
 SECTION_DATA void* g_profile_ENVSE[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0002FFFD,

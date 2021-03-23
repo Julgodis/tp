@@ -5,26 +5,26 @@ lbl_80BF2720:
 /* 80BF272C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BF2730 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80BF2734 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 80BF2738 00000018  3C 80 00 00 */	lis r4, stringBase0@ha /* 80BF2BA4 */
-/* 80BF273C 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l /* 80BF2BA4 */
-/* 80BF2740 00000020  4B FF F8 79 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80BF2738 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BF273C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BF2740 00000020  4B FF F8 79 */	bl _unresolved
 /* 80BF2744 00000024  88 1F 06 24 */	lbz r0, 0x624(r31)
 /* 80BF2748 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80BF274C 0000002C  41 82 00 10 */	beq lbl_80BF275C
 /* 80BF2750 00000030  38 00 00 00 */	li r0, 0
-/* 80BF2754 00000034  3C 60 00 00 */	lis r3, data_80BF2C20@ha /* 80BF2C20 */
-/* 80BF2758 00000038  98 03 00 00 */	stb r0, data_80BF2C20@l(r3) /* 80BF2C20 */
+/* 80BF2754 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BF2758 00000038  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_80BF275C:
-/* 80BF275C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80BF2760 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BF275C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BF2760 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BF2764 00000008  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BF2768 0000000C  80 9F 05 E8 */	lwz r4, 0x5e8(r31)
-/* 80BF276C 00000010  4B FF F8 4D */	bl Release__4cBgSFP9dBgW_Base
+/* 80BF276C 00000010  4B FF F8 4D */	bl _unresolved
 /* 80BF2770 00000014  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 80BF2774 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80BF2778 0000001C  41 82 00 0C */	beq lbl_80BF2784
 /* 80BF277C 00000020  38 7F 05 EC */	addi r3, r31, 0x5ec
-/* 80BF2780 00000024  4B FF F8 39 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80BF2780 00000024  4B FF F8 39 */	bl _unresolved
 lbl_80BF2784:
 /* 80BF2784 00000000  38 60 00 01 */	li r3, 1
 /* 80BF2788 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

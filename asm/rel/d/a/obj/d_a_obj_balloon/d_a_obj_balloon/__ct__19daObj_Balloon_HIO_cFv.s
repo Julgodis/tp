@@ -1,8 +1,8 @@
 lbl_80BA7FAC:
-/* 80BA7FAC 00000000  3C 80 00 00 */	lis r4, lit_3656@ha /* 80BA8E0C */
-/* 80BA7FB0 00000004  38 A4 00 00 */	addi r5, r4, lit_3656@l /* 80BA8E0C */
-/* 80BA7FB4 00000008  3C 80 00 00 */	lis r4, __vt__19daObj_Balloon_HIO_c@ha /* 80BA8F98 */
-/* 80BA7FB8 0000000C  38 04 00 00 */	addi r0, r4, __vt__19daObj_Balloon_HIO_c@l /* 80BA8F98 */
+/* 80BA7FAC 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BA7FB0 00000004  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
+/* 80BA7FB4 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BA7FB8 0000000C  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80BA7FBC 00000010  90 03 00 00 */	stw r0, 0(r3)
 /* 80BA7FC0 00000014  38 00 FF FF */	li r0, -1
 /* 80BA7FC4 00000018  98 03 00 04 */	stb r0, 4(r3)

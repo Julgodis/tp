@@ -17,7 +17,7 @@ lbl_80B78CA0:
 /* 80B78CDC 0000003C  A0 C6 00 00 */	lhz r6, 0(r6)
 /* 80B78CE0 00000040  88 E8 00 03 */	lbz r7, 3(r8)
 /* 80B78CE4 00000044  89 08 00 02 */	lbz r8, 2(r8)
-/* 80B78CE8 00000048  4B FF F7 91 */	bl daNpcF_chkPassed__F4cXyzP4dPntUsUsii
+/* 80B78CE8 00000048  4B FF F7 91 */	bl _unresolved
 /* 80B78CEC 0000004C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80B78CF0 00000050  7C 08 03 A6 */	mtlr r0
 /* 80B78CF4 00000054  38 21 00 20 */	addi r1, r1, 0x20

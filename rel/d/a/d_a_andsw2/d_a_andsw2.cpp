@@ -28,38 +28,21 @@ struct daAndsw2_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct dEvent_manager_c {
-	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
-	/* 80047A78 */ void endCheck(s16);
 };
 
 // 
 // Forward References:
 // 
 
-static void daAndsw2_actionOnAll(daAndsw2_c*); // 2
-static void daAndsw2_actionTimer(daAndsw2_c*); // 2
-static void daAndsw2_actionOrder(daAndsw2_c*); // 2
-static void daAndsw2_actionEvent(daAndsw2_c*); // 2
-static void daAndsw2_actionOff(daAndsw2_c*); // 2
-static void daAndsw2_actionWait(daAndsw2_c*); // 2
-static void daAndsw2_Execute(daAndsw2_c*); // 2
-static void daAndsw2_Delete(daAndsw2_c*); // 2
-static void daAndsw2_Create(fopAc_ac_c*); // 2
+void daAndsw2_actionOnAll(daAndsw2_c*); // 2
+void daAndsw2_actionTimer(daAndsw2_c*); // 2
+void daAndsw2_actionOrder(daAndsw2_c*); // 2
+void daAndsw2_actionEvent(daAndsw2_c*); // 2
+void daAndsw2_actionOff(daAndsw2_c*); // 2
+void daAndsw2_actionWait(daAndsw2_c*); // 2
+void daAndsw2_Execute(daAndsw2_c*); // 2
+void daAndsw2_Delete(daAndsw2_c*); // 2
+void daAndsw2_Create(fopAc_ac_c*); // 2
 
 extern "C" void getEventNo__10daAndsw2_cFv(); // 1
 extern "C" void getSwbit__10daAndsw2_cFv(); // 1
@@ -74,52 +57,32 @@ extern "C" void chkSwStatus__10daAndsw2_cFv(); // 1
 extern "C" void chkSwStatus2__10daAndsw2_cFv(); // 1
 extern "C" void __dt__10daAndsw2_cFv(); // 1
 extern "C" void create__10daAndsw2_cFv(); // 1
-extern "C" static void daAndsw2_actionOnAll__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionWait__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Execute__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Delete__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern void* g_profile_ANDSW2[12];
+extern "C" void daAndsw2_actionOnAll__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_actionWait__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_Execute__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_Delete__FP10daAndsw2_c(); // 1
+extern "C" void daAndsw2_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern u8 lit_3821[28];
+extern "C" extern u8 data_804D6AE4[24];
+extern "C" extern u8 l_daAndsw2_Method[32];
+extern "C" extern u8 g_profile_ANDSW2[48];
 
 // 
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dLib_getEventSwitchNo(int); // 2
-void operator delete(void*); // 2
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dLib_getEventSwitchNo__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 804D5DF8-804D5E04 000C+00 r=2 e=0 z=0  None .text      getEventNo__10daAndsw2_cFv                                   */
+/* 804D5DF8-804D5E04 000C+00 s=2 e=0 z=0  None .text      getEventNo__10daAndsw2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +93,7 @@ asm void daAndsw2_c::getEventNo() {
 #pragma pop
 
 
-/* 804D5E04-804D5E10 000C+00 r=6 e=0 z=0  None .text      getSwbit__10daAndsw2_cFv                                     */
+/* 804D5E04-804D5E10 000C+00 s=6 e=0 z=0  None .text      getSwbit__10daAndsw2_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +104,7 @@ asm void daAndsw2_c::getSwbit() {
 #pragma pop
 
 
-/* 804D5E10-804D5E1C 000C+00 r=1 e=0 z=0  None .text      getSwbit2__10daAndsw2_cFv                                    */
+/* 804D5E10-804D5E1C 000C+00 s=1 e=0 z=0  None .text      getSwbit2__10daAndsw2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +115,7 @@ asm void daAndsw2_c::getSwbit2() {
 #pragma pop
 
 
-/* 804D5E1C-804D5E28 000C+00 r=6 e=0 z=0  None .text      getType__10daAndsw2_cFv                                      */
+/* 804D5E1C-804D5E28 000C+00 s=6 e=0 z=0  None .text      getType__10daAndsw2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,7 +126,7 @@ asm void daAndsw2_c::getType() {
 #pragma pop
 
 
-/* 804D5E28-804D5E34 000C+00 r=1 e=0 z=0  None .text      getTimer__10daAndsw2_cFv                                     */
+/* 804D5E28-804D5E34 000C+00 s=1 e=0 z=0  None .text      getTimer__10daAndsw2_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +137,7 @@ asm void daAndsw2_c::getTimer() {
 #pragma pop
 
 
-/* 804D5E34-804D5E40 000C+00 r=3 e=0 z=0  None .text      getNum__10daAndsw2_cFv                                       */
+/* 804D5E34-804D5E40 000C+00 s=3 e=0 z=0  None .text      getNum__10daAndsw2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +148,7 @@ asm void daAndsw2_c::getNum() {
 #pragma pop
 
 
-/* 804D5E40-804D5EB0 0070+00 r=3 e=0 z=0  None .text      getTopSw__10daAndsw2_cFv                                     */
+/* 804D5E40-804D5EB0 0070+00 s=3 e=0 z=0  None .text      getTopSw__10daAndsw2_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +159,7 @@ asm void daAndsw2_c::getTopSw() {
 #pragma pop
 
 
-/* 804D5EB0-804D5EBC 000C+00 r=1 e=0 z=0  None .text      getSwAns__10daAndsw2_cFv                                     */
+/* 804D5EB0-804D5EBC 000C+00 s=1 e=0 z=0  None .text      getSwAns__10daAndsw2_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +170,7 @@ asm void daAndsw2_c::getSwAns() {
 #pragma pop
 
 
-/* 804D5EBC-804D5F64 00A8+00 r=4 e=0 z=0  None .text      chkAllSw2__10daAndsw2_cFv                                    */
+/* 804D5EBC-804D5F64 00A8+00 s=4 e=0 z=0  None .text      chkAllSw2__10daAndsw2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,7 +181,7 @@ asm void daAndsw2_c::chkAllSw2() {
 #pragma pop
 
 
-/* 804D5F64-804D6024 00C0+00 r=4 e=0 z=0  None .text      chkSwStatus__10daAndsw2_cFv                                  */
+/* 804D5F64-804D6024 00C0+00 s=4 e=0 z=0  None .text      chkSwStatus__10daAndsw2_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +192,7 @@ asm void daAndsw2_c::chkSwStatus() {
 #pragma pop
 
 
-/* 804D6024-804D60CC 00A8+00 r=1 e=0 z=0  None .text      chkSwStatus2__10daAndsw2_cFv                                 */
+/* 804D6024-804D60CC 00A8+00 s=1 e=0 z=0  None .text      chkSwStatus2__10daAndsw2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +203,7 @@ asm void daAndsw2_c::chkSwStatus2() {
 #pragma pop
 
 
-/* 804D60CC-804D6120 0054+00 r=1 e=0 z=0  None .text      __dt__10daAndsw2_cFv                                         */
+/* 804D60CC-804D6120 0054+00 s=1 e=0 z=0  None .text      __dt__10daAndsw2_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,19 +214,7 @@ asm daAndsw2_c::~daAndsw2_c() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 804D6AC8-804D6AE4 001C+00 r=1 e=0 z=0  None .data      @3821                                                        */
-SECTION_DATA static void* lit_3821[7] = {
-	/* 0    */ (void*)(((char*)create__10daAndsw2_cFv)+0x74),
-	/* 1    */ (void*)(((char*)create__10daAndsw2_cFv)+0xD8),
-	/* 2    */ (void*)(((char*)create__10daAndsw2_cFv)+0x148),
-	/* 3    */ (void*)(((char*)create__10daAndsw2_cFv)+0x1AC),
-	/* 4    */ (void*)(((char*)create__10daAndsw2_cFv)+0x210),
-	/* 5    */ (void*)(((char*)create__10daAndsw2_cFv)+0x21C),
-	/* 6    */ (void*)(((char*)create__10daAndsw2_cFv)+0xD8),
-};
-
-/* 804D6120-804D63A4 0284+00 r=2 e=0 z=0  None .text      create__10daAndsw2_cFv                                       */
+/* 804D6120-804D63A4 0284+00 s=1 e=0 z=0  None .text      create__10daAndsw2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,110 +225,99 @@ asm void daAndsw2_c::create() {
 #pragma pop
 
 
-/* 804D63A4-804D6580 01DC+00 r=1 e=0 z=0  None .text      daAndsw2_actionOnAll__FP10daAndsw2_c                         */
+/* 804D63A4-804D6580 01DC+00 s=0 e=0 z=0  None .text      daAndsw2_actionOnAll__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionOnAll(daAndsw2_c* param_0) {
+asm void daAndsw2_actionOnAll(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOnAll__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6580-804D6704 0184+00 r=1 e=0 z=0  None .text      daAndsw2_actionTimer__FP10daAndsw2_c                         */
+/* 804D6580-804D6704 0184+00 s=0 e=0 z=0  None .text      daAndsw2_actionTimer__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionTimer(daAndsw2_c* param_0) {
+asm void daAndsw2_actionTimer(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionTimer__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6704-804D68A4 01A0+00 r=1 e=0 z=0  None .text      daAndsw2_actionOrder__FP10daAndsw2_c                         */
+/* 804D6704-804D68A4 01A0+00 s=0 e=0 z=0  None .text      daAndsw2_actionOrder__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionOrder(daAndsw2_c* param_0) {
+asm void daAndsw2_actionOrder(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOrder__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D68A4-804D6960 00BC+00 r=1 e=0 z=0  None .text      daAndsw2_actionEvent__FP10daAndsw2_c                         */
+/* 804D68A4-804D6960 00BC+00 s=0 e=0 z=0  None .text      daAndsw2_actionEvent__FP10daAndsw2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionEvent(daAndsw2_c* param_0) {
+asm void daAndsw2_actionEvent(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionEvent__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6960-804D6A34 00D4+00 r=1 e=0 z=0  None .text      daAndsw2_actionOff__FP10daAndsw2_c                           */
+/* 804D6960-804D6A34 00D4+00 s=0 e=0 z=0  None .text      daAndsw2_actionOff__FP10daAndsw2_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionOff(daAndsw2_c* param_0) {
+asm void daAndsw2_actionOff(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionOff__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6A34-804D6A3C 0008+00 r=1 e=0 z=0  None .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
+/* 804D6A34-804D6A3C 0008+00 s=0 e=0 z=0  None .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_actionWait(daAndsw2_c* param_0) {
+asm void daAndsw2_actionWait(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionWait__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 804D6AE4-804D6AFC 0018+00 r=1 e=0 z=0  None .data      l_action$localstatic3$execute__10daAndsw2_cFv                */
-SECTION_DATA static void* data_804D6AE4[6] = {
-	/* 0    */ (void*)daAndsw2_actionOnAll__FP10daAndsw2_c,
-	/* 1    */ (void*)daAndsw2_actionTimer__FP10daAndsw2_c,
-	/* 2    */ (void*)daAndsw2_actionOrder__FP10daAndsw2_c,
-	/* 3    */ (void*)daAndsw2_actionEvent__FP10daAndsw2_c,
-	/* 4    */ (void*)daAndsw2_actionOff__FP10daAndsw2_c,
-	/* 5    */ (void*)daAndsw2_actionWait__FP10daAndsw2_c,
-};
-
-/* 804D6A3C-804D6A78 003C+00 r=1 e=0 z=0  None .text      daAndsw2_Execute__FP10daAndsw2_c                             */
+/* 804D6A3C-804D6A78 003C+00 s=0 e=0 z=0  None .text      daAndsw2_Execute__FP10daAndsw2_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_Execute(daAndsw2_c* param_0) {
+asm void daAndsw2_Execute(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Execute__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6A78-804D6AA0 0028+00 r=1 e=0 z=0  None .text      daAndsw2_Delete__FP10daAndsw2_c                              */
+/* 804D6A78-804D6AA0 0028+00 s=0 e=0 z=0  None .text      daAndsw2_Delete__FP10daAndsw2_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_Delete(daAndsw2_c* param_0) {
+asm void daAndsw2_Delete(daAndsw2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Delete__FP10daAndsw2_c.s"
 }
 #pragma pop
 
 
-/* 804D6AA0-804D6AC0 0020+00 r=1 e=0 z=0  None .text      daAndsw2_Create__FP10fopAc_ac_c                              */
+/* 804D6AA0-804D6AC0 0020+00 s=0 e=0 z=0  None .text      daAndsw2_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAndsw2_Create(fopAc_ac_c* param_0) {
+asm void daAndsw2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_Create__FP10fopAc_ac_c.s"
 }
@@ -385,31 +325,28 @@ asm static void daAndsw2_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804D6AFC-804D6B1C 0020+00 r=1 e=0 z=0  None .data      l_daAndsw2_Method                                            */
-SECTION_DATA static void* l_daAndsw2_Method[8] = {
-	/* 0    */ (void*)daAndsw2_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daAndsw2_Delete__FP10daAndsw2_c,
-	/* 2    */ (void*)daAndsw2_Execute__FP10daAndsw2_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804D6AC8-804D6AE4 001C+00 s=0 e=0 z=0  None .data      @3821                                                        */
+SECTION_DATA u8 lit_3821[28] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804D6B1C-804D6B4C 0030+00 r=1 e=0 z=1  None .data      g_profile_ANDSW2                                             */
-SECTION_DATA void* g_profile_ANDSW2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02310000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x012F0000,
-	/* 9    */ (void*)&l_daAndsw2_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+/* 804D6AE4-804D6AFC 0018+00 s=0 e=0 z=0  None .data      l_action$localstatic3$execute__10daAndsw2_cFv                */
+SECTION_DATA u8 data_804D6AE4[24] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804D6AFC-804D6B1C 0020+00 s=0 e=0 z=0  None .data      l_daAndsw2_Method                                            */
+SECTION_DATA u8 l_daAndsw2_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804D6B1C-804D6B4C 0030+00 s=0 e=0 z=0  None .data      g_profile_ANDSW2                                             */
+SECTION_DATA u8 g_profile_ANDSW2[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x31, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x2F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x06, 0x00, 0x00,
 };
 

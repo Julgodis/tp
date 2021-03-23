@@ -4,13 +4,13 @@ lbl_80CBB308:
 /* 80CBB310 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CBB314 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CBB318 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CBB31C 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CBB320 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CBB31C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CBB320 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CBB324 0000001C  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 80CBB328 00000020  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha /* 803A7288 */
-/* 80CBB32C 00000024  38 84 00 00 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l /* 803A7288 */
+/* 80CBB328 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CBB32C 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CBB330 00000028  A0 84 00 88 */	lhz r4, 0x88(r4)
-/* 80CBB334 0000002C  4B FF E9 45 */	bl isEventBit__11dSv_event_cCFUs
+/* 80CBB334 0000002C  4B FF E9 45 */	bl _unresolved
 /* 80CBB338 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80CBB33C 00000034  41 82 00 18 */	beq lbl_80CBB354
 /* 80CBB340 00000038  38 00 40 00 */	li r0, 0x4000

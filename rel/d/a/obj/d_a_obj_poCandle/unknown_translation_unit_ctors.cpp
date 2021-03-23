@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CB26A4[2];
+extern u8 data_80CB26A4[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_poCandle_cpp(); // 1
 
 // 
 // Declarations:

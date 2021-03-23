@@ -33,7 +33,7 @@ extern "C" extern void* __GXData;
 // Declarations:
 // 
 
-/* 8035ECC0-8035ED2C 006C+00 r=4 e=3 z=0  None .text      GXSetTevIndirect                                             */
+/* 8035ECC0-8035ED2C 006C+00 s=1 e=3 z=0  None .text      GXSetTevIndirect                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,14 +45,14 @@ extern "C" asm void GXSetTevIndirect() {
 
 
 /* ############################################################################################## */
-/* 80456610-80456618 0004+04 r=1 e=0 z=0  None .sdata2    @149                                                         */
+/* 80456610-80456618 0004+04 s=1 e=0 z=0  None .sdata2    @149                                                         */
 SECTION_SDATA2 static f32 GXBump__lit_149[1 + 1 /* padding */] = {
 	1024.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8035ED2C-8035EEA4 0178+00 r=5 e=4 z=1  None .text      GXSetIndTexMtx                                               */
+/* 8035ED2C-8035EEA4 0178+00 s=0 e=4 z=0  None .text      GXSetIndTexMtx                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ extern "C" asm void GXSetIndTexMtx() {
 #pragma pop
 
 
-/* 8035EEA4-8035EFE8 0144+00 r=5 e=5 z=0  None .text      GXSetIndTexCoordScale                                        */
+/* 8035EEA4-8035EFE8 0144+00 s=0 e=5 z=0  None .text      GXSetIndTexCoordScale                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ extern "C" asm void GXSetIndTexCoordScale() {
 #pragma pop
 
 
-/* 8035EFE8-8035F0D4 00EC+00 r=3 e=3 z=0  None .text      GXSetIndTexOrder                                             */
+/* 8035EFE8-8035F0D4 00EC+00 s=0 e=3 z=0  None .text      GXSetIndTexOrder                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ extern "C" asm void GXSetIndTexOrder() {
 #pragma pop
 
 
-/* 8035F0D4-8035F0F8 0024+00 r=50 e=43 z=7  None .text      GXSetNumIndStages                                            */
+/* 8035F0D4-8035F0F8 0024+00 s=0 e=43 z=0  None .text      GXSetNumIndStages                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ extern "C" asm void GXSetNumIndStages() {
 #pragma pop
 
 
-/* 8035F0F8-8035F140 0048+00 r=16 e=16 z=0  None .text      GXSetTevDirect                                               */
+/* 8035F0F8-8035F140 0048+00 s=0 e=16 z=0  None .text      GXSetTevDirect                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ extern "C" asm void GXSetTevDirect() {
 #pragma pop
 
 
-/* 8035F140-8035F144 0004+00 r=2 e=2 z=0  None .text      __GXUpdateBPMask                                             */
+/* 8035F140-8035F144 0004+00 s=0 e=2 z=0  None .text      __GXUpdateBPMask                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ extern "C" asm void __GXUpdateBPMask() {
 #pragma pop
 
 
-/* 8035F144-8035F174 0030+00 r=1 e=1 z=0  None .text      __GXSetIndirectMask                                          */
+/* 8035F144-8035F174 0030+00 s=0 e=1 z=0  None .text      __GXSetIndirectMask                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ extern "C" asm void __GXSetIndirectMask() {
 #pragma pop
 
 
-/* 8035F174-8035F198 0024+00 r=4 e=4 z=0  None .text      __GXFlushTextureState                                        */
+/* 8035F174-8035F198 0024+00 s=0 e=4 z=0  None .text      __GXFlushTextureState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

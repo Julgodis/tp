@@ -3,15 +3,15 @@ lbl_80A1B884:
 /* 80A1B888 00000004  7C 08 02 A6 */	mflr r0
 /* 80A1B88C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A1B890 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A1B894 00000010  4B FF F6 85 */	bl _savegpr_29
+/* 80A1B894 00000010  4B FF F6 85 */	bl _unresolved
 /* 80A1B898 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80A1B89C 00000018  4B FF F6 7D */	bl getActorP__18daNpcF_ActorMngr_cFv
+/* 80A1B89C 00000018  4B FF F6 7D */	bl _unresolved
 /* 80A1B8A0 0000001C  7C 7E 1B 78 */	mr r30, r3
 /* 80A1B8A4 00000020  38 7D 00 08 */	addi r3, r29, 8
-/* 80A1B8A8 00000024  4B FF F6 71 */	bl getActorP__18daNpcF_ActorMngr_cFv
+/* 80A1B8A8 00000024  4B FF F6 71 */	bl _unresolved
 /* 80A1B8AC 00000028  7C 7F 1B 78 */	mr r31, r3
 /* 80A1B8B0 0000002C  38 7D 00 10 */	addi r3, r29, 0x10
-/* 80A1B8B4 00000030  4B FF F6 65 */	bl getActorP__18daNpcF_ActorMngr_cFv
+/* 80A1B8B4 00000030  4B FF F6 65 */	bl _unresolved
 /* 80A1B8B8 00000034  28 1E 00 00 */	cmplwi r30, 0
 /* 80A1B8BC 00000038  41 82 00 14 */	beq lbl_80A1B8D0
 /* 80A1B8C0 0000003C  28 1F 00 00 */	cmplwi r31, 0
@@ -37,7 +37,7 @@ lbl_80A1B904:
 /* 80A1B904 00000000  54 83 06 3E */	clrlwi r3, r4, 0x18
 lbl_80A1B908:
 /* 80A1B908 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A1B90C 00000004  4B FF F6 0D */	bl _restgpr_29
+/* 80A1B90C 00000004  4B FF F6 0D */	bl _unresolved
 /* 80A1B910 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A1B914 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80A1B918 00000010  38 21 00 20 */	addi r1, r1, 0x20

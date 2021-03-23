@@ -29,7 +29,7 @@ extern "C" void __TRK_write_console(); // 1
 // Declarations:
 // 
 
-/* 8036919C-803691A4 0008+00 r=1 e=1 z=0  None .text      __close_console                                              */
+/* 8036919C-803691A4 0008+00 s=0 e=1 z=0  None .text      __close_console                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,10 +41,10 @@ extern "C" asm void __close_console() {
 
 
 /* ############################################################################################## */
-/* 804519B0-804519B8 0004+04 r=1 e=0 z=0  None .sbss      initialized$60                                               */
+/* 804519B0-804519B8 0004+04 s=1 e=0 z=0  None .sbss      initialized$60                                               */
 static u8 data_804519B0[4 + 4 /* padding */];
 
-/* 803691A4-80369274 00D0+00 r=1 e=1 z=0  None .text      __write_console                                              */
+/* 803691A4-80369274 00D0+00 s=0 e=1 z=0  None .text      __write_console                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

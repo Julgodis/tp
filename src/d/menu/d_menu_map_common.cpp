@@ -103,7 +103,7 @@ extern "C" extern u8 g_fmapHIO[1188];
 // 
 
 /* ############################################################################################## */
-/* 803BCF18-803BD02C 0114+00 r=2 e=0 z=0  None .data      map_icon_size                                                */
+/* 803BCF18-803BD02C 0114+00 s=2 e=0 z=0  None .data      map_icon_size                                                */
 SECTION_DATA static u8 map_icon_size[276] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
@@ -125,19 +125,19 @@ SECTION_DATA static u8 map_icon_size[276] = {
 	0x16, 0x00, 0x00, 0x00,
 };
 
-/* 803BD02C-803BD038 000C+00 r=2 e=0 z=0  None .data      __vt__16dMenuMapCommon_c                                     */
+/* 803BD02C-803BD038 000C+00 s=2 e=0 z=0  None .data      __vt__16dMenuMapCommon_c                                     */
 SECTION_DATA static void* __vt__16dMenuMapCommon_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__16dMenuMapCommon_cFv,
 };
 
-/* 804540D8-804540DC 0004+00 r=6 e=0 z=0  None .sdata2    @3703                                                        */
+/* 804540D8-804540DC 0004+00 s=6 e=0 z=0  None .sdata2    @3703                                                        */
 SECTION_SDATA2 static u8 d_menu_d_menu_map_common__lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801C2718-801C27B4 009C+00 r=2 e=2 z=0  None .text      __ct__16dMenuMapCommon_cFv                                   */
+/* 801C2718-801C27B4 009C+00 s=0 e=2 z=0  None .text      __ct__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm dMenuMapCommon_c::dMenuMapCommon_c() {
 #pragma pop
 
 
-/* 801C27B4-801C28D8 0124+00 r=3 e=2 z=0  None .text      __dt__16dMenuMapCommon_cFv                                   */
+/* 801C27B4-801C28D8 0124+00 s=1 e=2 z=0  None .text      __dt__16dMenuMapCommon_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm dMenuMapCommon_c::~dMenuMapCommon_c() {
 
 
 /* ############################################################################################## */
-/* 803959C0-80395D90 03CF+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803959C0-80395D90 03CF+01 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -214,10 +214,10 @@ SECTION_DEAD char const* const stringBase_80395D72 = "im_nijumaru_40x40_ind_01.b
 SECTION_DEAD static char const* const pad_80395D8F = "";
 #pragma pop
 
-/* 804540DC-804540E0 0004+00 r=7 e=0 z=0  None .sdata2    @3882                                                        */
+/* 804540DC-804540E0 0004+00 s=7 e=0 z=0  None .sdata2    @3882                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_3882 = 1.0f;
 
-/* 801C28D8-801C38E4 100C+00 r=2 e=2 z=0  None .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
+/* 801C28D8-801C38E4 100C+00 s=0 e=2 z=0  None .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,19 +229,19 @@ asm void dMenuMapCommon_c::initiate(JKRArchive* param_0) {
 
 
 /* ############################################################################################## */
-/* 804540E0-804540E4 0004+00 r=1 e=0 z=0  None .sdata2    @4010                                                        */
+/* 804540E0-804540E4 0004+00 s=1 e=0 z=0  None .sdata2    @4010                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4010 = 255.0f;
 
-/* 804540E4-804540E8 0004+00 r=1 e=0 z=0  None .sdata2    @4011                                                        */
+/* 804540E4-804540E8 0004+00 s=1 e=0 z=0  None .sdata2    @4011                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4011 = 4.0f / 7.0f;
 
-/* 804540E8-804540EC 0004+00 r=3 e=0 z=0  None .sdata2    @4012                                                        */
+/* 804540E8-804540EC 0004+00 s=3 e=0 z=0  None .sdata2    @4012                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4012 = 0.5f;
 
-/* 804540EC-804540F0 0004+00 r=1 e=0 z=0  None .sdata2    @4013                                                        */
+/* 804540EC-804540F0 0004+00 s=1 e=0 z=0  None .sdata2    @4013                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4013 = 180.0f;
 
-/* 801C38E4-801C3EC4 05E0+00 r=2 e=2 z=0  None .text      drawIcon__16dMenuMapCommon_cFffff                            */
+/* 801C38E4-801C3EC4 05E0+00 s=0 e=2 z=0  None .text      drawIcon__16dMenuMapCommon_cFffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,13 +253,13 @@ asm void dMenuMapCommon_c::drawIcon(f32 param_0, f32 param_1, f32 param_2, f32 p
 
 
 /* ############################################################################################## */
-/* 804540F0-804540F4 0004+00 r=1 e=0 z=0  None .sdata2    @4072                                                        */
+/* 804540F0-804540F4 0004+00 s=1 e=0 z=0  None .sdata2    @4072                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4072 = 16.0f / 27.0f;
 
-/* 804540F4-804540F8 0004+00 r=1 e=0 z=0  None .sdata2    @4073                                                        */
+/* 804540F4-804540F8 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
 
-/* 801C3EC4-801C43A8 04E4+00 r=4 e=4 z=0  None .text      iconScale__16dMenuMapCommon_cFifff                           */
+/* 801C3EC4-801C43A8 04E4+00 s=0 e=4 z=0  None .text      iconScale__16dMenuMapCommon_cFifff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +270,7 @@ asm void dMenuMapCommon_c::iconScale(int param_0, f32 param_1, f32 param_2, f32 
 #pragma pop
 
 
-/* 801C43A8-801C443C 0094+00 r=4 e=3 z=0  None .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
+/* 801C43A8-801C443C 0094+00 s=1 e=3 z=0  None .text      setIconInfo__16dMenuMapCommon_cFUcfffffUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +281,7 @@ asm void dMenuMapCommon_c::setIconInfo(u8 param_0, f32 param_1, f32 param_2, f32
 #pragma pop
 
 
-/* 801C443C-801C4494 0058+00 r=3 e=2 z=0  None .text      clearIconInfo__16dMenuMapCommon_cFv                          */
+/* 801C443C-801C4494 0058+00 s=1 e=2 z=0  None .text      clearIconInfo__16dMenuMapCommon_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ asm void dMenuMapCommon_c::clearIconInfo() {
 #pragma pop
 
 
-/* 801C4494-801C452C 0098+00 r=1 e=0 z=0  None .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
+/* 801C4494-801C452C 0098+00 s=1 e=0 z=0  None .text      setBlendRatio__16dMenuMapCommon_cFUcff                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,10 +304,10 @@ asm void dMenuMapCommon_c::setBlendRatio(u8 param_0, f32 param_1, f32 param_2) {
 
 
 /* ############################################################################################## */
-/* 804540F8-80454100 0008+00 r=2 e=0 z=0  None .sdata2    @4119                                                        */
+/* 804540F8-80454100 0008+00 s=2 e=0 z=0  None .sdata2    @4119                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4119 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801C452C-801C4600 00D4+00 r=1 e=1 z=0  None .text      blinkMove__16dMenuMapCommon_cFs                              */
+/* 801C452C-801C4600 00D4+00 s=0 e=1 z=0  None .text      blinkMove__16dMenuMapCommon_cFs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,10 +319,10 @@ asm void dMenuMapCommon_c::blinkMove(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80454100-80454108 0008+00 r=1 e=0 z=0  None .sdata2    @4140                                                        */
+/* 80454100-80454108 0008+00 s=1 e=0 z=0  None .sdata2    @4140                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4140 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801C4600-801C4738 0138+00 r=1 e=1 z=0  None .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
+/* 801C4600-801C4738 0138+00 s=0 e=1 z=0  None .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +333,7 @@ asm void dMenuMapCommon_c::moveLightDropAnime() {
 #pragma pop
 
 
-/* 801C4738-801C4778 0040+00 r=1 e=0 z=0  None .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
+/* 801C4738-801C4778 0040+00 s=1 e=0 z=0  None .text      getIconSizeX__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,7 +344,7 @@ asm void dMenuMapCommon_c::getIconSizeX(u8 param_0) {
 #pragma pop
 
 
-/* 801C4778-801C47C4 004C+00 r=1 e=0 z=0  None .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
+/* 801C4778-801C47C4 004C+00 s=1 e=0 z=0  None .text      getIconSizeY__16dMenuMapCommon_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +355,7 @@ asm void dMenuMapCommon_c::getIconSizeY(u8 param_0) {
 #pragma pop
 
 
-/* 801C47C4-801C4D54 0590+00 r=1 e=0 z=0  None .text      debugIcon__16dMenuMapCommon_cFv                              */
+/* 801C47C4-801C4D54 0590+00 s=1 e=0 z=0  None .text      debugIcon__16dMenuMapCommon_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

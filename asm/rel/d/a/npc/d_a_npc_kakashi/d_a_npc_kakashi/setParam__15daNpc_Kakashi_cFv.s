@@ -19,8 +19,8 @@ lbl_8054BEA8:
 /* 8054BEEC 00000044  38 60 00 00 */	li r3, 0
 lbl_8054BEF0:
 /* 8054BEF0 00000000  90 7F 05 5C */	stw r3, 0x55c(r31)
-/* 8054BEF4 00000004  3C 60 00 00 */	lis r3, m__21daNpc_Kakashi_Param_c@ha /* 8054EAC4 */
-/* 8054BEF8 00000008  38 63 00 00 */	addi r3, r3, m__21daNpc_Kakashi_Param_c@l /* 8054EAC4 */
+/* 8054BEF4 00000004  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8054BEF8 00000008  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8054BEFC 0000000C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8054BF00 00000010  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 8054BF04 00000014  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
@@ -38,9 +38,9 @@ lbl_8054BEF0:
 /* 8054BF34 00000044  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 8054BF38 00000048  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 8054BF3C 0000004C  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
-/* 8054BF40 00000050  4B FF F3 99 */	bl SetWallR__12dBgS_AcchCirFf
-/* 8054BF44 00000054  3C 60 00 00 */	lis r3, m__21daNpc_Kakashi_Param_c@ha /* 8054EAC4 */
-/* 8054BF48 00000058  38 63 00 00 */	addi r3, r3, m__21daNpc_Kakashi_Param_c@l /* 8054EAC4 */
+/* 8054BF40 00000050  4B FF F3 99 */	bl _unresolved
+/* 8054BF44 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8054BF48 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8054BF4C 0000005C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8054BF50 00000060  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
 /* 8054BF54 00000064  C0 03 00 0C */	lfs f0, 0xc(r3)

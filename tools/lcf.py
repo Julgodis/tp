@@ -153,7 +153,6 @@ def lcf(output_path):
             # when Nintendo did the first compile. Most be reference which we currently cannot
             # determine.
             if static_rc == 0 and extern_rc == 0 and rels_rc == 0:
-                print(rc, k)
                 require_force_active = True
 
             # generate the force active.

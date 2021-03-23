@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CBDA48[2];
+extern u8 data_80CBDA48[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_riverrock_cpp(); // 1
 
 // 
 // Declarations:

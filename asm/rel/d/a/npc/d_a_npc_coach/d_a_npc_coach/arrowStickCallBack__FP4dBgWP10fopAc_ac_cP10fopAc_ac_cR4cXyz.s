@@ -7,8 +7,8 @@ lbl_8099D9AC:
 /* 8099D9C0 00000014  A8 05 00 08 */	lha r0, 8(r5)
 /* 8099D9C4 00000018  2C 00 02 E5 */	cmpwi r0, 0x2e5
 /* 8099D9C8 0000001C  40 82 00 48 */	bne lbl_8099DA10
-/* 8099D9CC 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8099D9D0 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8099D9CC 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8099D9D0 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8099D9D4 00000028  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8099D9D8 0000002C  80 03 05 78 */	lwz r0, 0x578(r3)
 /* 8099D9DC 00000030  54 00 01 CF */	rlwinm. r0, r0, 0, 7, 7
@@ -23,7 +23,7 @@ lbl_8099D9AC:
 /* 8099DA00 00000054  38 81 00 08 */	addi r4, r1, 8
 /* 8099DA04 00000058  48 00 00 5D */	bl hitFireArrow__12daNpcCoach_cF4cXyz
 /* 8099DA08 0000005C  7F E3 FB 78 */	mr r3, r31
-/* 8099DA0C 00000060  4B FF FC AD */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 8099DA0C 00000060  4B FF FC AD */	bl _unresolved
 lbl_8099DA10:
 /* 8099DA10 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8099DA14 00000004  80 01 00 24 */	lwz r0, 0x24(r1)

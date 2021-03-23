@@ -3,13 +3,13 @@ lbl_809FA050:
 /* 809FA054 00000004  7C 08 02 A6 */	mflr r0
 /* 809FA058 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 809FA05C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 809FA060 00000010  4B FF EF 99 */	bl _savegpr_27
+/* 809FA060 00000010  4B FF EF 99 */	bl _unresolved
 /* 809FA064 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 809FA068 00000018  48 00 15 35 */	bl selectAction__13daNpc_Hanjo_cFv
 /* 809FA06C 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 809FA070 00000020  48 00 03 ED */	bl srchActors__13daNpc_Hanjo_cFv
-/* 809FA074 00000024  3C 60 00 00 */	lis r3, m__19daNpc_Hanjo_Param_c@ha /* 80A00600 */
-/* 809FA078 00000028  38 63 00 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l /* 80A00600 */
+/* 809FA074 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA078 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FA07C 0000002C  AB A3 00 48 */	lha r29, 0x48(r3)
 /* 809FA080 00000030  AB 83 00 4A */	lha r28, 0x4a(r3)
 /* 809FA084 00000034  AB 63 00 4C */	lha r27, 0x4c(r3)
@@ -27,8 +27,8 @@ lbl_809FA0A4:
 /* 809FA0B0 0000000C  3B A0 00 04 */	li r29, 4
 /* 809FA0B4 00000010  3B 80 00 06 */	li r28, 6
 lbl_809FA0B8:
-/* 809FA0B8 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 809FA0BC 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 809FA0B8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA0BC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FA0C0 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 809FA0C4 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809FA0C8 00000010  81 8C 01 88 */	lwz r12, 0x188(r12)
@@ -48,18 +48,18 @@ lbl_809FA0EC:
 lbl_809FA0FC:
 /* 809FA0FC 00000000  7F 63 07 34 */	extsh r3, r27
 /* 809FA100 00000004  7F C4 07 34 */	extsh r4, r30
-/* 809FA104 00000008  4B FF EE F5 */	bl daNpcT_getDistTableIdx__Fii
+/* 809FA104 00000008  4B FF EE F5 */	bl _unresolved
 /* 809FA108 0000000C  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 809FA10C 00000010  88 1F 05 44 */	lbz r0, 0x544(r31)
 /* 809FA110 00000014  98 1F 05 45 */	stb r0, 0x545(r31)
 /* 809FA114 00000018  7F A3 07 34 */	extsh r3, r29
 /* 809FA118 0000001C  7F 84 07 34 */	extsh r4, r28
-/* 809FA11C 00000020  4B FF EE DD */	bl daNpcT_getDistTableIdx__Fii
+/* 809FA11C 00000020  4B FF EE DD */	bl _unresolved
 /* 809FA120 00000024  98 7F 05 47 */	stb r3, 0x547(r31)
 /* 809FA124 00000028  38 00 00 0A */	li r0, 0xa
 /* 809FA128 0000002C  90 1F 05 5C */	stw r0, 0x55c(r31)
-/* 809FA12C 00000030  3C 60 00 00 */	lis r3, m__19daNpc_Hanjo_Param_c@ha /* 80A00600 */
-/* 809FA130 00000034  38 63 00 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l /* 80A00600 */
+/* 809FA12C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA130 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FA134 00000038  C0 03 00 08 */	lfs f0, 8(r3)
 /* 809FA138 0000003C  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 809FA13C 00000040  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
@@ -77,9 +77,9 @@ lbl_809FA0FC:
 /* 809FA16C 00000070  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 809FA170 00000074  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 809FA174 00000078  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
-/* 809FA178 0000007C  4B FF EE 81 */	bl SetWallR__12dBgS_AcchCirFf
-/* 809FA17C 00000080  3C 60 00 00 */	lis r3, m__19daNpc_Hanjo_Param_c@ha /* 80A00600 */
-/* 809FA180 00000084  38 63 00 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l /* 80A00600 */
+/* 809FA178 0000007C  4B FF EE 81 */	bl _unresolved
+/* 809FA17C 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FA180 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FA184 00000088  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 809FA188 0000008C  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
 /* 809FA18C 00000090  C0 03 00 0C */	lfs f0, 0xc(r3)
@@ -91,7 +91,7 @@ lbl_809FA0FC:
 /* 809FA1A4 000000A8  C0 03 00 04 */	lfs f0, 4(r3)
 /* 809FA1A8 000000AC  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 809FA1AC 000000B0  39 61 00 30 */	addi r11, r1, 0x30
-/* 809FA1B0 000000B4  4B FF EE 49 */	bl _restgpr_27
+/* 809FA1B0 000000B4  4B FF EE 49 */	bl _unresolved
 /* 809FA1B4 000000B8  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 809FA1B8 000000BC  7C 08 03 A6 */	mtlr r0
 /* 809FA1BC 000000C0  38 21 00 30 */	addi r1, r1, 0x30

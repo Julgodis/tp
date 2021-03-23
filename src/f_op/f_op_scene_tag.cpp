@@ -49,7 +49,7 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // Declarations:
 // 
 
-/* 8001F13C-8001F15C 0020+00 r=1 e=1 z=0  None .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
+/* 8001F13C-8001F15C 0020+00 s=0 e=1 z=0  None .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,14 +61,14 @@ asm void fopScnTg_QueueTo(scene_tag_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3918-803A3928 000C+04 r=2 e=1 z=0  None .data      g_fopScnTg_SceneList                                         */
+/* 803A3918-803A3928 000C+04 s=1 e=1 z=0  None .data      g_fopScnTg_SceneList                                         */
 SECTION_DATA u8 g_fopScnTg_SceneList[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001F15C-8001F188 002C+00 r=1 e=1 z=0  None .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
+/* 8001F15C-8001F188 002C+00 s=0 e=1 z=0  None .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void fopScnTg_ToQueue(scene_tag_class* param_0) {
 #pragma pop
 
 
-/* 8001F188-8001F1A8 0020+00 r=1 e=1 z=0  None .text      fopScnTg_Init__FP15scene_tag_classPv                         */
+/* 8001F188-8001F1A8 0020+00 s=0 e=1 z=0  None .text      fopScnTg_Init__FP15scene_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

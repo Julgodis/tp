@@ -5,10 +5,10 @@ lbl_80540B28:
 /* 80540B34 0000000C  DB E1 00 60 */	stfd f31, 0x60(r1)
 /* 80540B38 00000010  F3 E1 00 68 */	psq_st f31, 104(r1), 0, 0 /* qr0 */
 /* 80540B3C 00000000  39 61 00 60 */	addi r11, r1, 0x60
-/* 80540B40 00000004  4B FF F3 99 */	bl _savegpr_24
+/* 80540B40 00000004  4B FF F3 99 */	bl _unresolved
 /* 80540B44 00000008  7C 78 1B 78 */	mr r24, r3
-/* 80540B48 0000000C  3C 60 00 00 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha /* 80541D8C */
-/* 80540B4C 00000010  3B 63 00 00 */	addi r27, r3, m__25daNpc_FairySeirei_Param_c@l /* 80541D8C */
+/* 80540B48 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80540B4C 00000010  3B 63 00 00 */	addi r27, r3, 0x0000 /* 0x00000000@l */
 /* 80540B50 00000014  C0 1B 00 B4 */	lfs f0, 0xb4(r27)
 /* 80540B54 00000018  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80540B58 0000001C  D0 01 00 24 */	stfs f0, 0x24(r1)
@@ -16,8 +16,8 @@ lbl_80540B28:
 /* 80540B60 00000024  3B 20 00 00 */	li r25, 0
 /* 80540B64 00000028  3B E0 00 00 */	li r31, 0
 /* 80540B68 0000002C  3B C0 00 00 */	li r30, 0
-/* 80540B6C 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80540B70 00000034  3B 83 00 00 */	addi r28, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80540B6C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80540B70 00000034  3B 83 00 00 */	addi r28, r3, 0x0000 /* 0x00000000@l */
 /* 80540B74 00000038  C3 FB 00 B8 */	lfs f31, 0xb8(r27)
 /* 80540B78 0000003C  3B BB 00 AC */	addi r29, r27, 0xac
 lbl_80540B7C:
@@ -48,12 +48,12 @@ lbl_80540B7C:
 /* 80540BDC 00000060  39 38 0D 78 */	addi r9, r24, 0xd78
 /* 80540BE0 00000064  39 41 00 20 */	addi r10, r1, 0x20
 /* 80540BE4 00000068  C0 3B 00 B4 */	lfs f1, 0xb4(r27)
-/* 80540BE8 0000006C  4B FF F2 F1 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80540BE8 0000006C  4B FF F2 F1 */	bl _unresolved
 /* 80540BEC 00000070  7C 78 D1 2E */	stwx r3, r24, r26
 /* 80540BF0 00000074  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 80540BF4 00000078  38 63 02 10 */	addi r3, r3, 0x210
 /* 80540BF8 0000007C  7C 98 D0 2E */	lwzx r4, r24, r26
-/* 80540BFC 00000080  4B FF F2 DD */	bl getEmitter__Q213dPa_control_c7level_cFUl
+/* 80540BFC 00000080  4B FF F2 DD */	bl _unresolved
 /* 80540C00 00000084  28 03 00 00 */	cmplwi r3, 0
 /* 80540C04 00000088  41 82 00 1C */	beq lbl_80540C20
 /* 80540C08 0000008C  C0 41 00 34 */	lfs f2, 0x34(r1)
@@ -71,7 +71,7 @@ lbl_80540C20:
 /* 80540C34 00000014  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */
 /* 80540C38 00000000  CB E1 00 60 */	lfd f31, 0x60(r1)
 /* 80540C3C 00000004  39 61 00 60 */	addi r11, r1, 0x60
-/* 80540C40 00000008  4B FF F2 99 */	bl _restgpr_24
+/* 80540C40 00000008  4B FF F2 99 */	bl _unresolved
 /* 80540C44 0000000C  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 80540C48 00000010  7C 08 03 A6 */	mtlr r0
 /* 80540C4C 00000014  38 21 00 70 */	addi r1, r1, 0x70

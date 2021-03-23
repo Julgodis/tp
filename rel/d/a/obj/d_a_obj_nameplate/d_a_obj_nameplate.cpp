@@ -24,16 +24,9 @@ struct daObjNameplate_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct cXyz {
 };
 
 struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
 	/* 80594D38 */ ~cM3dGSph();
 };
 
@@ -42,7 +35,6 @@ struct cM3dGAab {
 };
 
 struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
 	/* 80594DC8 */ ~dCcD_GStts();
 };
 
@@ -50,84 +42,16 @@ struct cCcD_GStts {
 	/* 80594E24 */ ~cCcD_GStts();
 };
 
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 80084658 */ void ChkCoHit();
-};
-
-struct daObj {
-	/* 80037900 */ void HitSeStart(cXyz const*, int, dCcD_GObjInf const*, u32);
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
 // 
 // Forward References:
 // 
 
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjNameplate_Draw(daObjNameplate_c*); // 2
-static void daObjNameplate_Execute(daObjNameplate_c*); // 2
-static void daObjNameplate_IsDelete(daObjNameplate_c*); // 2
-static void daObjNameplate_Delete(daObjNameplate_c*); // 2
-static void daObjNameplate_Create(fopAc_ac_c*); // 2
+void createSolidHeap(fopAc_ac_c*); // 2
+void daObjNameplate_Draw(daObjNameplate_c*); // 2
+void daObjNameplate_Execute(daObjNameplate_c*); // 2
+void daObjNameplate_IsDelete(daObjNameplate_c*); // 2
+void daObjNameplate_Delete(daObjNameplate_c*); // 2
+void daObjNameplate_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__16daObjNameplate_cFv(); // 1
 extern "C" void initBaseMtx__16daObjNameplate_cFv(); // 1
@@ -138,16 +62,17 @@ extern "C" void calcAngle__16daObjNameplate_cFv(); // 1
 extern "C" void calcSpring__16daObjNameplate_cFv(); // 1
 extern "C" void checkHitAngle__16daObjNameplate_cFv(); // 1
 extern "C" void messageProc__16daObjNameplate_cFv(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjNameplate_Draw__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Execute__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_IsDelete__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Delete__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Create__FP10fopAc_ac_c(); // 1
+extern "C" void createSolidHeap__FP10fopAc_ac_c(); // 1
+extern "C" void daObjNameplate_Draw__FP16daObjNameplate_c(); // 1
+extern "C" void daObjNameplate_Execute__FP16daObjNameplate_c(); // 1
+extern "C" void daObjNameplate_IsDelete__FP16daObjNameplate_c(); // 1
+extern "C" void daObjNameplate_Delete__FP16daObjNameplate_c(); // 1
+extern "C" void daObjNameplate_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" extern u8 const M_attr__16daObjNameplate_c[32];
 extern "C" extern u32 const lit_3659;
 extern "C" extern u32 const lit_3660;
 extern "C" extern u32 const lit_3661;
@@ -156,95 +81,32 @@ extern "C" extern u32 const lit_3663;
 extern "C" extern u32 const lit_3664;
 extern "C" extern u32 const lit_3665;
 extern "C" extern u32 const lit_3666;
+extern "C" extern u8 const data_80594EB4[64];
+extern "C" extern u8 const lit_3718[4];
+extern "C" extern u32 const lit_3719;
 extern "C" extern u32 const lit_3769[1 + 1 /* padding */];
+extern "C" extern u8 const lit_3791[8];
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* g_profile_Obj_NamePlate[12];
+extern "C" extern u8 l_arcName[4];
+extern "C" extern u8 l_daObjNameplate_Method[32];
+extern "C" extern u8 g_profile_Obj_NamePlate[48];
+extern "C" extern void* __vt__10cCcD_GStts[3];
+extern "C" extern void* __vt__10dCcD_GStts[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__8cM3dGSph[3];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Sph[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_SphAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 j3dSys[284];
-extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 80594E74-80594E94 0020+00 r=5 e=0 z=0  None .rodata    M_attr__16daObjNameplate_c                                   */
-SECTION_RODATA static u8 const M_attr__16daObjNameplate_c[32] = {
-	0x42, 0x48, 0x00, 0x00, 0x45, 0x1C, 0x40, 0x00, 0x43, 0xC8, 0x00, 0x00, 0x40, 0xC0, 0x00, 0x00,
-	0xBC, 0xA3, 0xD7, 0x0A, 0x3F, 0x73, 0x33, 0x33, 0x00, 0xAA, 0x07, 0xD0, 0x00, 0x0A, 0x00, 0x00,
-};
-
-/* 80594098-8059415C 00C4+00 r=1 e=0 z=0  None .text      create_init__16daObjNameplate_cFv                            */
+/* 80594098-8059415C 00C4+00 s=1 e=0 z=0  None .text      create_init__16daObjNameplate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +117,7 @@ asm void daObjNameplate_c::create_init() {
 #pragma pop
 
 
-/* 8059415C-8059417C 0020+00 r=1 e=0 z=0  None .text      initBaseMtx__16daObjNameplate_cFv                            */
+/* 8059415C-8059417C 0020+00 s=1 e=0 z=0  None .text      initBaseMtx__16daObjNameplate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +128,7 @@ asm void daObjNameplate_c::initBaseMtx() {
 #pragma pop
 
 
-/* 8059417C-80594248 00CC+00 r=2 e=0 z=0  None .text      setBaseMtx__16daObjNameplate_cFv                             */
+/* 8059417C-80594248 00CC+00 s=2 e=0 z=0  None .text      setBaseMtx__16daObjNameplate_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,40 +139,7 @@ asm void daObjNameplate_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80594E94-80594E98 0004+00 r=0 e=0 z=0  None .rodata    @3659                                                        */
-SECTION_RODATA u32 const lit_3659 = 0xC2960000;
-
-/* 80594E98-80594E9C 0004+00 r=0 e=0 z=0  None .rodata    @3660                                                        */
-SECTION_RODATA u32 const lit_3660 = 0xC3340000;
-
-/* 80594E9C-80594EA0 0004+00 r=0 e=0 z=0  None .rodata    @3661                                                        */
-SECTION_RODATA u32 const lit_3661 = 0xC1C80000;
-
-/* 80594EA0-80594EA4 0004+00 r=0 e=0 z=0  None .rodata    @3662                                                        */
-SECTION_RODATA u32 const lit_3662 = 0x42960000;
-
-/* 80594EA4-80594EA8 0004+00 r=0 e=0 z=0  None .rodata    @3663                                                        */
-SECTION_RODATA u32 const lit_3663 = 0x41A00000;
-
-/* 80594EA8-80594EAC 0004+00 r=0 e=0 z=0  None .rodata    @3664                                                        */
-SECTION_RODATA u32 const lit_3664 = 0x41C80000;
-
-/* 80594EAC-80594EB0 0004+00 r=0 e=0 z=0  None .rodata    @3665                                                        */
-SECTION_RODATA u32 const lit_3665 = 0xC2D20000;
-
-/* 80594EB0-80594EB4 0004+00 r=0 e=0 z=0  None .rodata    @3666                                                        */
-SECTION_RODATA u32 const lit_3666 = 0x42F00000;
-
-/* 80594EB4-80594EF4 0040+00 r=1 e=0 z=0  None .rodata    ccSphSrc$3700                                                */
-SECTION_RODATA static u8 const data_80594EB4[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x01, 0x60, 0x7A, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x99, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0xC2, 0xE6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-};
-
-/* 80594248-805942B8 0070+00 r=1 e=0 z=0  None .text      initCcSphere__16daObjNameplate_cFv                           */
+/* 80594248-805942B8 0070+00 s=1 e=0 z=0  None .text      initCcSphere__16daObjNameplate_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,16 +150,7 @@ asm void daObjNameplate_c::initCcSphere() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80594EF4-80594EF8 0004+00 r=2 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA static u8 const lit_3718[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80594EF8-80594EFC 0004+00 r=1 e=0 z=0  None .rodata    @3719                                                        */
-SECTION_RODATA static u32 const lit_3719 = 0xC2E60000;
-
-/* 805942B8-8059434C 0094+00 r=1 e=0 z=0  None .text      setCcSphere__16daObjNameplate_cFv                            */
+/* 805942B8-8059434C 0094+00 s=1 e=0 z=0  None .text      setCcSphere__16daObjNameplate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -341,7 +161,7 @@ asm void daObjNameplate_c::setCcSphere() {
 #pragma pop
 
 
-/* 8059434C-805945CC 0280+00 r=1 e=0 z=0  None .text      calcAngle__16daObjNameplate_cFv                              */
+/* 8059434C-805945CC 0280+00 s=1 e=0 z=0  None .text      calcAngle__16daObjNameplate_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,20 +172,7 @@ asm void daObjNameplate_c::calcAngle() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80594EFC-80594F04 0004+04 r=0 e=0 z=0  None .rodata    @3769                                                        */
-SECTION_RODATA u32 const lit_3769[1 + 1 /* padding */] = {
-	0x43480000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80594F04-80594F0C 0008+00 r=1 e=0 z=0  None .rodata    @3791                                                        */
-SECTION_RODATA static u8 const lit_3791[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 805945CC-80594754 0188+00 r=1 e=0 z=0  None .text      calcSpring__16daObjNameplate_cFv                             */
+/* 805945CC-80594754 0188+00 s=1 e=0 z=0  None .text      calcSpring__16daObjNameplate_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +183,7 @@ asm void daObjNameplate_c::calcSpring() {
 #pragma pop
 
 
-/* 80594754-805947F8 00A4+00 r=1 e=0 z=0  None .text      checkHitAngle__16daObjNameplate_cFv                          */
+/* 80594754-805947F8 00A4+00 s=1 e=0 z=0  None .text      checkHitAngle__16daObjNameplate_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +194,7 @@ asm void daObjNameplate_c::checkHitAngle() {
 #pragma pop
 
 
-/* 805947F8-80594950 0158+00 r=1 e=0 z=0  None .text      messageProc__16daObjNameplate_cFv                            */
+/* 805947F8-80594950 0158+00 s=1 e=0 z=0  None .text      messageProc__16daObjNameplate_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,142 +205,73 @@ asm void daObjNameplate_c::messageProc() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80594F0C-80594F25 0019+00 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80594F0C = "J_Hyosatu";
-SECTION_DEAD char const* const stringBase_80594F16 = "J_Hyousatu.bmd";
-#pragma pop
-
-/* 80594F28-80594F2C 0004+00 r=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80594950-805949C8 0078+00 r=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
+/* 80594950-805949C8 0078+00 s=0 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createSolidHeap(fopAc_ac_c* param_0) {
+asm void createSolidHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/createSolidHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 805949C8-80594A6C 00A4+00 r=1 e=0 z=0  None .text      daObjNameplate_Draw__FP16daObjNameplate_c                    */
+/* 805949C8-80594A6C 00A4+00 s=0 e=0 z=0  None .text      daObjNameplate_Draw__FP16daObjNameplate_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjNameplate_Draw(daObjNameplate_c* param_0) {
+asm void daObjNameplate_Draw(daObjNameplate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Draw__FP16daObjNameplate_c.s"
 }
 #pragma pop
 
 
-/* 80594A6C-80594AB4 0048+00 r=1 e=0 z=0  None .text      daObjNameplate_Execute__FP16daObjNameplate_c                 */
+/* 80594A6C-80594AB4 0048+00 s=0 e=0 z=0  None .text      daObjNameplate_Execute__FP16daObjNameplate_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjNameplate_Execute(daObjNameplate_c* param_0) {
+asm void daObjNameplate_Execute(daObjNameplate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Execute__FP16daObjNameplate_c.s"
 }
 #pragma pop
 
 
-/* 80594AB4-80594ABC 0008+00 r=1 e=0 z=0  None .text      daObjNameplate_IsDelete__FP16daObjNameplate_c                */
+/* 80594AB4-80594ABC 0008+00 s=0 e=0 z=0  None .text      daObjNameplate_IsDelete__FP16daObjNameplate_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjNameplate_IsDelete(daObjNameplate_c* param_0) {
+asm void daObjNameplate_IsDelete(daObjNameplate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_IsDelete__FP16daObjNameplate_c.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80594F2C-80594F4C 0020+00 r=1 e=0 z=0  None .data      l_daObjNameplate_Method                                      */
-SECTION_DATA static void* l_daObjNameplate_Method[8] = {
-	/* 0    */ (void*)daObjNameplate_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjNameplate_Delete__FP16daObjNameplate_c,
-	/* 2    */ (void*)daObjNameplate_Execute__FP16daObjNameplate_c,
-	/* 3    */ (void*)daObjNameplate_IsDelete__FP16daObjNameplate_c,
-	/* 4    */ (void*)daObjNameplate_Draw__FP16daObjNameplate_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80594F4C-80594F7C 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_NamePlate                                      */
-SECTION_DATA void* g_profile_Obj_NamePlate[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01500000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000780,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00200000,
-	/* 9    */ (void*)&l_daObjNameplate_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80594F7C-80594F88 000C+00 r=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
-};
-
-/* 80594F88-80594F94 000C+00 r=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
-};
-
-/* 80594F94-80594FA0 000C+00 r=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80594FA0-80594FAC 000C+00 r=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
-};
-
-/* 80594ABC-80594BF8 013C+00 r=1 e=0 z=0  None .text      daObjNameplate_Delete__FP16daObjNameplate_c                  */
+/* 80594ABC-80594BF8 013C+00 s=0 e=0 z=0  None .text      daObjNameplate_Delete__FP16daObjNameplate_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjNameplate_Delete(daObjNameplate_c* param_0) {
+asm void daObjNameplate_Delete(daObjNameplate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Delete__FP16daObjNameplate_c.s"
 }
 #pragma pop
 
 
-/* 80594BF8-80594D38 0140+00 r=1 e=0 z=0  None .text      daObjNameplate_Create__FP10fopAc_ac_c                        */
+/* 80594BF8-80594D38 0140+00 s=0 e=0 z=0  None .text      daObjNameplate_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjNameplate_Create(fopAc_ac_c* param_0) {
+asm void daObjNameplate_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80594D38-80594D80 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80594D38-80594D80 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +282,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80594D80-80594DC8 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80594D80-80594DC8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -555,7 +293,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80594DC8-80594E24 005C+00 r=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80594DC8-80594E24 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,7 +304,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80594E24-80594E6C 0048+00 r=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80594E24-80594E6C 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,4 +314,117 @@ asm cCcD_GStts::~cCcD_GStts() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80594E74-80594E94 0020+00 s=0 e=0 z=0  None .rodata    M_attr__16daObjNameplate_c                                   */
+SECTION_RODATA u8 const M_attr__16daObjNameplate_c[32] = {
+	0x42, 0x48, 0x00, 0x00, 0x45, 0x1C, 0x40, 0x00, 0x43, 0xC8, 0x00, 0x00, 0x40, 0xC0, 0x00, 0x00,
+	0xBC, 0xA3, 0xD7, 0x0A, 0x3F, 0x73, 0x33, 0x33, 0x00, 0xAA, 0x07, 0xD0, 0x00, 0x0A, 0x00, 0x00,
+};
+
+/* 80594E94-80594E98 0004+00 s=0 e=0 z=0  None .rodata    @3659                                                        */
+SECTION_RODATA u32 const lit_3659 = 0xC2960000;
+
+/* 80594E98-80594E9C 0004+00 s=0 e=0 z=0  None .rodata    @3660                                                        */
+SECTION_RODATA u32 const lit_3660 = 0xC3340000;
+
+/* 80594E9C-80594EA0 0004+00 s=0 e=0 z=0  None .rodata    @3661                                                        */
+SECTION_RODATA u32 const lit_3661 = 0xC1C80000;
+
+/* 80594EA0-80594EA4 0004+00 s=0 e=0 z=0  None .rodata    @3662                                                        */
+SECTION_RODATA u32 const lit_3662 = 0x42960000;
+
+/* 80594EA4-80594EA8 0004+00 s=0 e=0 z=0  None .rodata    @3663                                                        */
+SECTION_RODATA u32 const lit_3663 = 0x41A00000;
+
+/* 80594EA8-80594EAC 0004+00 s=0 e=0 z=0  None .rodata    @3664                                                        */
+SECTION_RODATA u32 const lit_3664 = 0x41C80000;
+
+/* 80594EAC-80594EB0 0004+00 s=0 e=0 z=0  None .rodata    @3665                                                        */
+SECTION_RODATA u32 const lit_3665 = 0xC2D20000;
+
+/* 80594EB0-80594EB4 0004+00 s=0 e=0 z=0  None .rodata    @3666                                                        */
+SECTION_RODATA u32 const lit_3666 = 0x42F00000;
+
+/* 80594EB4-80594EF4 0040+00 s=0 e=0 z=0  None .rodata    ccSphSrc$3700                                                */
+SECTION_RODATA u8 const data_80594EB4[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x01, 0x60, 0x7A, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x99, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0xC2, 0xE6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+};
+
+/* 80594EF4-80594EF8 0004+00 s=0 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA u8 const lit_3718[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80594EF8-80594EFC 0004+00 s=0 e=0 z=0  None .rodata    @3719                                                        */
+SECTION_RODATA u32 const lit_3719 = 0xC2E60000;
+
+/* 80594EFC-80594F04 0004+04 s=0 e=0 z=0  None .rodata    @3769                                                        */
+SECTION_RODATA u32 const lit_3769[1 + 1 /* padding */] = {
+	0x43480000,
+	/* padding */
+	0x00000000,
+};
+
+/* 80594F04-80594F0C 0008+00 s=0 e=0 z=0  None .rodata    @3791                                                        */
+SECTION_RODATA u8 const lit_3791[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80594F0C-80594F25 0019+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80594F0C = "J_Hyosatu";
+SECTION_DEAD char const* const stringBase_80594F16 = "J_Hyousatu.bmd";
+#pragma pop
+
+/* 80594F28-80594F2C 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA u8 l_arcName[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80594F2C-80594F4C 0020+00 s=0 e=0 z=0  None .data      l_daObjNameplate_Method                                      */
+SECTION_DATA u8 l_daObjNameplate_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80594F4C-80594F7C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_NamePlate                                      */
+SECTION_DATA u8 g_profile_Obj_NamePlate[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x80, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80594F7C-80594F88 000C+00 s=0 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA void* __vt__10cCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80594F88-80594F94 000C+00 s=0 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA void* __vt__10dCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80594F94-80594FA0 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80594FA0-80594FAC 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA void* __vt__8cM3dGSph[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
 

@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80267128 */ void atan2sX_Z() const;
@@ -24,9 +27,6 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
-};
-
-struct csXyz {
 };
 
 struct dPa_followEcallBack {
@@ -73,12 +73,12 @@ struct dPa_modelPcallBack {
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -121,6 +121,9 @@ struct JGeometry {
 
 };
 
+struct JPADrawInfo {
+};
+
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
@@ -133,9 +136,6 @@ struct JPAResourceManager {
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
-};
-
-struct JPADrawInfo {
 };
 
 struct JPAParticleCallBack {
@@ -182,7 +182,8 @@ struct dPa_windPcallBack {
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-struct fopAc_ac_c {
+struct mDoDvdThd_toMainRam_c {
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
 struct dPa_levelEcallBack {
@@ -190,8 +191,7 @@ struct dPa_levelEcallBack {
 	/* 8004FB8C */ void cleanup();
 };
 
-struct mDoDvdThd_toMainRam_c {
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+struct fopAc_ac_c {
 };
 
 struct cBgS_PolyInfo {
@@ -525,7 +525,6 @@ extern "C" void __dt__25dPa_gen_d_light8EcallBackFv(); // 1
 extern "C" void __sinit_d_particle_cpp(); // 1
 extern "C" extern char const* const d_particle_d_particle__stringBase0;
 extern "C" extern void* __vt__22dPa_hermiteEcallBack_c[9];
-extern "C" extern void* __vt__19dPa_followEcallBack[10];
 extern "C" extern void* __vt__18dPa_levelEcallBack[9];
 extern "C" extern void* __vt__18JPAEmitterCallBack[7];
 extern "C" extern u8 d_particle_d_particle__lit_4054[12];
@@ -554,7 +553,6 @@ extern "C" extern u8 d_particle_d_particle__lit_4742[12];
 extern "C" extern u8 mEcallback__18dPa_modelEcallBack[4];
 extern "C" extern u8 mEmitterMng__13dPa_control_c[4];
 extern "C" extern u8 mWaterBubblePcallBack__13dPa_control_c[4];
-extern "C" extern u8 mLight8EcallBack__13dPa_control_c[4];
 extern "C" extern u8 data_80450EC4[4];
 extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 
@@ -772,7 +770,7 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 // Declarations:
 // 
 
-/* 80049420-80049580 0160+00 r=4 e=0 z=0  None .text      dPa_cleanupGX__Fv                                            */
+/* 80049420-80049580 0160+00 s=4 e=0 z=0  None .text      dPa_cleanupGX__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -784,32 +782,32 @@ asm static void dPa_cleanupGX() {
 
 
 /* ############################################################################################## */
-/* 803A8308-803A8314 000C+00 r=1 e=0 z=0  None .data      l_lifeBallColor                                              */
+/* 803A8308-803A8314 000C+00 s=1 e=0 z=0  None .data      l_lifeBallColor                                              */
 SECTION_DATA static u8 l_lifeBallColor[12] = {
 	0xEB, 0x20, 0x78, 0xFF, 0x20, 0xF1, 0x9B, 0xFF, 0xEB, 0xD7, 0x2F, 0xFF,
 };
 
-/* 803A8314-803A832C 0018+00 r=1 e=0 z=0  None .data      effectIDTable$5499                                           */
+/* 803A8314-803A832C 0018+00 s=1 e=0 z=0  None .data      effectIDTable$5499                                           */
 SECTION_DATA static u8 data_803A8314[24] = {
 	0x00, 0xE6, 0x00, 0xE7, 0x01, 0x43, 0x01, 0x46, 0x01, 0xAF, 0x01, 0xB8, 0x88, 0x1B, 0x88, 0x1E,
 	0x88, 0x1C, 0x88, 0x1F, 0x86, 0xAE, 0x86, 0xAF,
 };
 
-/* 803A832C-803A835C 0030+00 r=1 e=0 z=0  None .data      ringID$5531                                                  */
+/* 803A832C-803A835C 0030+00 s=1 e=0 z=0  None .data      ringID$5531                                                  */
 SECTION_DATA static u8 data_803A832C[48] = {
 	0x00, 0xE7, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x46, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xAF, 0x01, 0xB0, 0x01, 0xB1, 0xFF, 0xFF, 0x88, 0x1E, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1F, 0x88, 0x20, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 803A835C-803A838C 0030+00 r=1 e=0 z=0  None .data      normalID$5532                                                */
+/* 803A835C-803A838C 0030+00 s=1 e=0 z=0  None .data      normalID$5532                                                */
 SECTION_DATA static u8 data_803A835C[48] = {
 	0x00, 0xE6, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x43, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB, 0x88, 0x1B, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1C, 0x88, 0x1D, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 803A838C-803A83A0 0014+00 r=1 e=0 z=0  None .data      __vt__28dPa_particleTracePcallBack_c                         */
+/* 803A838C-803A83A0 0014+00 s=1 e=0 z=0  None .data      __vt__28dPa_particleTracePcallBack_c                         */
 SECTION_DATA static void* __vt__28dPa_particleTracePcallBack_c[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -818,7 +816,7 @@ SECTION_DATA static void* __vt__28dPa_particleTracePcallBack_c[5] = {
 	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A83A0-803A83C4 0024+00 r=6 e=2 z=3  None .data      __vt__22dPa_hermiteEcallBack_c                               */
+/* 803A83A0-803A83C4 0024+00 s=1 e=2 z=0  None .data      __vt__22dPa_hermiteEcallBack_c                               */
 SECTION_DATA void* __vt__22dPa_hermiteEcallBack_c[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -831,7 +829,7 @@ SECTION_DATA void* __vt__22dPa_hermiteEcallBack_c[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A83C4-803A83D8 0014+00 r=1 e=0 z=0  None .data      __vt__25dPa_gen_d_light8PcallBack                            */
+/* 803A83C4-803A83D8 0014+00 s=1 e=0 z=0  None .data      __vt__25dPa_gen_d_light8PcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_d_light8PcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -840,7 +838,7 @@ SECTION_DATA static void* __vt__25dPa_gen_d_light8PcallBack[5] = {
 	/* 4    */ (void*)draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A83D8-803A83EC 0014+00 r=1 e=0 z=0  None .data      __vt__25dPa_gen_b_light8PcallBack                            */
+/* 803A83D8-803A83EC 0014+00 s=1 e=0 z=0  None .data      __vt__25dPa_gen_b_light8PcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_b_light8PcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -849,7 +847,7 @@ SECTION_DATA static void* __vt__25dPa_gen_b_light8PcallBack[5] = {
 	/* 4    */ (void*)draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A83EC-803A8400 0014+00 r=1 e=0 z=0  None .data      __vt__19dPa_light8PcallBack                                  */
+/* 803A83EC-803A8400 0014+00 s=1 e=0 z=0  None .data      __vt__19dPa_light8PcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_light8PcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -858,7 +856,7 @@ SECTION_DATA static void* __vt__19dPa_light8PcallBack[5] = {
 	/* 4    */ (void*)draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A8400-803A8414 0014+00 r=1 e=0 z=0  None .data      __vt__19dPa_fsenthPcallBack                                  */
+/* 803A8400-803A8414 0014+00 s=1 e=0 z=0  None .data      __vt__19dPa_fsenthPcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_fsenthPcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -867,7 +865,7 @@ SECTION_DATA static void* __vt__19dPa_fsenthPcallBack[5] = {
 	/* 4    */ (void*)draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A8414-803A8434 0014+0C r=1 e=0 z=0  None .data      __vt__17dPa_wbPcallBack_c                                    */
+/* 803A8414-803A8434 0014+0C s=1 e=0 z=0  None .data      __vt__17dPa_wbPcallBack_c                                    */
 SECTION_DATA static void* __vt__17dPa_wbPcallBack_c[5 + 3 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -880,7 +878,7 @@ SECTION_DATA static void* __vt__17dPa_wbPcallBack_c[5 + 3 /* padding */] = {
 	NULL,
 };
 
-/* 803A8434-803A8448 0014+00 r=1 e=0 z=0  None .data      __vt__17dPa_windPcallBack                                    */
+/* 803A8434-803A8448 0014+00 s=1 e=0 z=0  None .data      __vt__17dPa_windPcallBack                                    */
 SECTION_DATA static void* __vt__17dPa_windPcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -889,7 +887,7 @@ SECTION_DATA static void* __vt__17dPa_windPcallBack[5] = {
 	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A8448-803A8464 001C+00 r=2 e=0 z=0  None .data      __vt__19dPa_simpleEcallBack                                  */
+/* 803A8448-803A8464 001C+00 s=2 e=0 z=0  None .data      __vt__19dPa_simpleEcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_simpleEcallBack[7] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -900,7 +898,7 @@ SECTION_DATA static void* __vt__19dPa_simpleEcallBack[7] = {
 	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
 
-/* 803A8464-803A8488 0024+00 r=1 e=0 z=0  None .data      __vt__22dPa_selectTexEcallBack                               */
+/* 803A8464-803A8488 0024+00 s=1 e=0 z=0  None .data      __vt__22dPa_selectTexEcallBack                               */
 SECTION_DATA static void* __vt__22dPa_selectTexEcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -913,7 +911,7 @@ SECTION_DATA static void* __vt__22dPa_selectTexEcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A8488-803A84AC 0024+00 r=1 e=0 z=0  None .data      __vt__18dPa_modelEcallBack                                   */
+/* 803A8488-803A84AC 0024+00 s=1 e=0 z=0  None .data      __vt__18dPa_modelEcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_modelEcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -926,7 +924,7 @@ SECTION_DATA static void* __vt__18dPa_modelEcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A84AC-803A84C0 0014+00 r=1 e=0 z=0  None .data      __vt__18dPa_modelPcallBack                                   */
+/* 803A84AC-803A84C0 0014+00 s=1 e=0 z=0  None .data      __vt__18dPa_modelPcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_modelPcallBack[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -935,7 +933,7 @@ SECTION_DATA static void* __vt__18dPa_modelPcallBack[5] = {
 	/* 4    */ (void*)draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
-/* 803A84C0-803A84E4 0024+00 r=1 e=0 z=0  None .data      __vt__25dPa_gen_d_light8EcallBack                            */
+/* 803A84C0-803A84E4 0024+00 s=1 e=0 z=0  None .data      __vt__25dPa_gen_d_light8EcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_d_light8EcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -948,7 +946,7 @@ SECTION_DATA static void* __vt__25dPa_gen_d_light8EcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A84E4-803A8508 0024+00 r=1 e=0 z=0  None .data      __vt__25dPa_gen_b_light8EcallBack                            */
+/* 803A84E4-803A8508 0024+00 s=1 e=0 z=0  None .data      __vt__25dPa_gen_b_light8EcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_b_light8EcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -961,7 +959,7 @@ SECTION_DATA static void* __vt__25dPa_gen_b_light8EcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A8508-803A852C 0024+00 r=1 e=0 z=0  None .data      __vt__19dPa_light8EcallBack                                  */
+/* 803A8508-803A852C 0024+00 s=1 e=0 z=0  None .data      __vt__19dPa_light8EcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_light8EcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -974,8 +972,8 @@ SECTION_DATA static void* __vt__19dPa_light8EcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A852C-803A8554 0028+00 r=8 e=0 z=6  None .data      __vt__19dPa_followEcallBack                                  */
-SECTION_DATA void* __vt__19dPa_followEcallBack[10] = {
+/* 803A852C-803A8554 0028+00 s=2 e=0 z=0  None .data      __vt__19dPa_followEcallBack                                  */
+SECTION_DATA static void* __vt__19dPa_followEcallBack[10] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__19dPa_followEcallBackFv,
@@ -988,7 +986,7 @@ SECTION_DATA void* __vt__19dPa_followEcallBack[10] = {
 	/* 9    */ (void*)end__19dPa_followEcallBackFv,
 };
 
-/* 803A8554-803A8578 0024+00 r=13 e=2 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
+/* 803A8554-803A8578 0024+00 s=11 e=2 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
 SECTION_DATA void* __vt__18dPa_levelEcallBack[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1001,7 +999,7 @@ SECTION_DATA void* __vt__18dPa_levelEcallBack[9] = {
 	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
 };
 
-/* 803A8578-803A8594 001C+00 r=6 e=3 z=0  None .data      __vt__18JPAEmitterCallBack                                   */
+/* 803A8578-803A8594 001C+00 s=3 e=3 z=0  None .data      __vt__18JPAEmitterCallBack                                   */
 SECTION_DATA void* __vt__18JPAEmitterCallBack[7] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1012,7 +1010,7 @@ SECTION_DATA void* __vt__18JPAEmitterCallBack[7] = {
 	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
 
-/* 80049580-800495BC 003C+00 r=9 e=1 z=8  None .text      __ct__19dPa_followEcallBackFUcUc                             */
+/* 80049580-800495BC 003C+00 s=0 e=1 z=0  None .text      __ct__19dPa_followEcallBackFUcUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1023,7 +1021,7 @@ asm dPa_followEcallBack::dPa_followEcallBack(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 800495BC-800496B0 00F4+00 r=1 e=0 z=0  None .text      execute__19dPa_followEcallBackFP14JPABaseEmitter             */
+/* 800495BC-800496B0 00F4+00 s=1 e=0 z=0  None .text      execute__19dPa_followEcallBackFP14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1034,7 +1032,7 @@ asm void dPa_followEcallBack::execute(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 800496B0-800496B4 0004+00 r=1 e=0 z=0  None .text      draw__19dPa_followEcallBackFP14JPABaseEmitter                */
+/* 800496B0-800496B4 0004+00 s=1 e=0 z=0  None .text      draw__19dPa_followEcallBackFP14JPABaseEmitter                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1045,7 +1043,7 @@ asm void dPa_followEcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 800496B4-8004974C 0098+00 r=1 e=0 z=0  None .text      setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800496B4-8004974C 0098+00 s=1 e=0 z=0  None .text      setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1056,7 +1054,7 @@ asm void dPa_followEcallBack::setup(JPABaseEmitter* param_0, cXyz const* param_1
 #pragma pop
 
 
-/* 8004974C-8004979C 0050+00 r=1 e=0 z=0  None .text      end__19dPa_followEcallBackFv                                 */
+/* 8004974C-8004979C 0050+00 s=1 e=0 z=0  None .text      end__19dPa_followEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1068,34 +1066,34 @@ asm void dPa_followEcallBack::end() {
 
 
 /* ############################################################################################## */
-/* 80450E90-80450E94 0004+00 r=14 e=1 z=11  None .sbss      mEcallback__18dPa_modelEcallBack                             */
+/* 80450E90-80450E94 0004+00 s=2 e=1 z=0  None .sbss      mEcallback__18dPa_modelEcallBack                             */
 u8 mEcallback__18dPa_modelEcallBack[4];
 
-/* 80450E94-80450E98 0004+00 r=2 e=0 z=0  None .sbss      mPcallback__18dPa_modelEcallBack                             */
+/* 80450E94-80450E98 0004+00 s=2 e=0 z=0  None .sbss      mPcallback__18dPa_modelEcallBack                             */
 static u8 mPcallback__18dPa_modelEcallBack[4];
 
-/* 80450E98-80450E9C 0004+00 r=5 e=0 z=0  None .sbss      mModel__18dPa_modelEcallBack                                 */
+/* 80450E98-80450E9C 0004+00 s=5 e=0 z=0  None .sbss      mModel__18dPa_modelEcallBack                                 */
 static u8 mModel__18dPa_modelEcallBack[4];
 
-/* 80450E9C-80450EA0 0004+00 r=3 e=0 z=0  None .sbss      None                                                         */
+/* 80450E9C-80450EA0 0004+00 s=3 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450E9C[4];
 
-/* 80450EA0-80450EA4 0004+00 r=15 e=1 z=0  None .sbss      mEmitterMng__13dPa_control_c                                 */
+/* 80450EA0-80450EA4 0004+00 s=14 e=1 z=0  None .sbss      mEmitterMng__13dPa_control_c                                 */
 u8 mEmitterMng__13dPa_control_c[4];
 
-/* 80450EA4-80450EA8 0004+00 r=2 e=1 z=0  None .sbss      mWaterBubblePcallBack__13dPa_control_c                       */
+/* 80450EA4-80450EA8 0004+00 s=1 e=1 z=0  None .sbss      mWaterBubblePcallBack__13dPa_control_c                       */
 u8 mWaterBubblePcallBack__13dPa_control_c[4];
 
-/* 80450EA8-80450EAC 0004+00 r=3 e=0 z=0  None .sbss      mFsenthPcallBack__13dPa_control_c                            */
+/* 80450EA8-80450EAC 0004+00 s=3 e=0 z=0  None .sbss      mFsenthPcallBack__13dPa_control_c                            */
 static u8 mFsenthPcallBack__13dPa_control_c[4];
 
-/* 80450EAC-80450EB0 0004+00 r=3 e=0 z=1  None .sbss      mLight8EcallBack__13dPa_control_c                            */
-u8 mLight8EcallBack__13dPa_control_c[4];
+/* 80450EAC-80450EB0 0004+00 s=2 e=0 z=0  None .sbss      mLight8EcallBack__13dPa_control_c                            */
+static u8 mLight8EcallBack__13dPa_control_c[4];
 
-/* 80450EB0-80450EB4 0004+00 r=2 e=0 z=0  None .sbss      mLight8PcallBack__13dPa_control_c                            */
+/* 80450EB0-80450EB4 0004+00 s=2 e=0 z=0  None .sbss      mLight8PcallBack__13dPa_control_c                            */
 static u8 mLight8PcallBack__13dPa_control_c[4];
 
-/* 8004979C-800497B0 0014+00 r=1 e=0 z=0  None .text      setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004979C-800497B0 0014+00 s=1 e=0 z=0  None .text      setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1107,13 +1105,13 @@ asm void dPa_light8EcallBack::setup(JPABaseEmitter* param_0, cXyz const* param_1
 
 
 /* ############################################################################################## */
-/* 80450EB4-80450EB8 0004+00 r=3 e=0 z=0  None .sbss      m_b_Light8EcallBack__13dPa_control_c                         */
+/* 80450EB4-80450EB8 0004+00 s=3 e=0 z=0  None .sbss      m_b_Light8EcallBack__13dPa_control_c                         */
 static u8 m_b_Light8EcallBack__13dPa_control_c[4];
 
-/* 80450EB8-80450EBC 0004+00 r=2 e=0 z=0  None .sbss      m_b_Light8PcallBack__13dPa_control_c                         */
+/* 80450EB8-80450EBC 0004+00 s=2 e=0 z=0  None .sbss      m_b_Light8PcallBack__13dPa_control_c                         */
 static u8 m_b_Light8PcallBack__13dPa_control_c[4];
 
-/* 800497B0-800497CC 001C+00 r=1 e=0 z=0  None .text      setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800497B0-800497CC 001C+00 s=1 e=0 z=0  None .text      setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1125,13 +1123,13 @@ asm void dPa_gen_b_light8EcallBack::setup(JPABaseEmitter* param_0, cXyz const* p
 
 
 /* ############################################################################################## */
-/* 80450EBC-80450EC0 0004+00 r=3 e=0 z=0  None .sbss      m_d_Light8EcallBack__13dPa_control_c                         */
+/* 80450EBC-80450EC0 0004+00 s=3 e=0 z=0  None .sbss      m_d_Light8EcallBack__13dPa_control_c                         */
 static u8 m_d_Light8EcallBack__13dPa_control_c[4];
 
-/* 80450EC0-80450EC4 0004+00 r=2 e=0 z=0  None .sbss      m_d_Light8PcallBack__13dPa_control_c                         */
+/* 80450EC0-80450EC4 0004+00 s=2 e=0 z=0  None .sbss      m_d_Light8PcallBack__13dPa_control_c                         */
 static u8 m_d_Light8PcallBack__13dPa_control_c[4];
 
-/* 800497CC-800497E8 001C+00 r=1 e=0 z=0  None .text      setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800497CC-800497E8 001C+00 s=1 e=0 z=0  None .text      setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1142,7 +1140,7 @@ asm void dPa_gen_d_light8EcallBack::setup(JPABaseEmitter* param_0, cXyz const* p
 #pragma pop
 
 
-/* 800497E8-80049934 014C+00 r=3 e=0 z=0  None .text      dPa_group_id_change__FPUlPUc                                 */
+/* 800497E8-80049934 014C+00 s=3 e=0 z=0  None .text      dPa_group_id_change__FPUlPUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1154,16 +1152,16 @@ asm static void dPa_group_id_change(u32* param_0, u8* param_1) {
 
 
 /* ############################################################################################## */
-/* 80451F40-80451F44 0004+00 r=2 e=0 z=0  None .sdata2    @3880                                                        */
+/* 80451F40-80451F44 0004+00 s=2 e=0 z=0  None .sdata2    @3880                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_3880 = 255.0f;
 
-/* 80451F44-80451F48 0004+00 r=1 e=0 z=0  None .sdata2    @3881                                                        */
+/* 80451F44-80451F48 0004+00 s=1 e=0 z=0  None .sdata2    @3881                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_3881 = 4.0f;
 
-/* 80451F48-80451F50 0008+00 r=2 e=0 z=0  None .sdata2    @3883                                                        */
+/* 80451F48-80451F50 0008+00 s=2 e=0 z=0  None .sdata2    @3883                                                        */
 SECTION_SDATA2 static f64 d_particle_d_particle__lit_3883 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80049934-80049B30 01FC+00 r=1 e=0 z=0  None .text      initiateLighting8__FR8_GXColors                              */
+/* 80049934-80049B30 01FC+00 s=1 e=0 z=0  None .text      initiateLighting8__FR8_GXColors                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1174,7 +1172,7 @@ asm static void initiateLighting8(_GXColor& param_0, s16 param_1) {
 #pragma pop
 
 
-/* 80049B30-80049BC0 0090+00 r=1 e=0 z=0  None .text      initiate_b_Lighting8__FR8_GXColor                            */
+/* 80049B30-80049BC0 0090+00 s=1 e=0 z=0  None .text      initiate_b_Lighting8__FR8_GXColor                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1185,7 +1183,7 @@ asm static void initiate_b_Lighting8(_GXColor& param_0) {
 #pragma pop
 
 
-/* 80049BC0-80049C20 0060+00 r=1 e=0 z=0  None .text      drawFirst__FP14JPABaseEmitter                                */
+/* 80049BC0-80049C20 0060+00 s=1 e=0 z=0  None .text      drawFirst__FP14JPABaseEmitter                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1196,7 +1194,7 @@ asm static void drawFirst(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80049C20-80049C44 0024+00 r=2 e=0 z=0  None .text      drawFirst_l8__FP14JPABaseEmitter                             */
+/* 80049C20-80049C44 0024+00 s=2 e=0 z=0  None .text      drawFirst_l8__FP14JPABaseEmitter                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1208,12 +1206,12 @@ asm static void drawFirst_l8(JPABaseEmitter* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451F50-80451F54 0004+00 r=9 e=0 z=0  None .sdata2    @3964                                                        */
+/* 80451F50-80451F54 0004+00 s=9 e=0 z=0  None .sdata2    @3964                                                        */
 SECTION_SDATA2 static u8 d_particle_d_particle__lit_3964[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80049C44-80049E40 01FC+00 r=1 e=0 z=0  None .text      drawSecond_light8__FP14JPABaseEmitter                        */
+/* 80049C44-80049E40 01FC+00 s=1 e=0 z=0  None .text      drawSecond_light8__FP14JPABaseEmitter                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1224,7 +1222,7 @@ asm static void drawSecond_light8(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80049E40-80049FEC 01AC+00 r=2 e=0 z=0  None .text      drawSecond_b_light8__FP14JPABaseEmitter                      */
+/* 80049E40-80049FEC 01AC+00 s=2 e=0 z=0  None .text      drawSecond_b_light8__FP14JPABaseEmitter                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1235,7 +1233,7 @@ asm static void drawSecond_b_light8(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80049FEC-8004A108 011C+00 r=1 e=0 z=0  None .text      static_light8EcallBack__FP14JPABaseEmitter                   */
+/* 80049FEC-8004A108 011C+00 s=1 e=0 z=0  None .text      static_light8EcallBack__FP14JPABaseEmitter                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1246,7 +1244,7 @@ asm static void static_light8EcallBack(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004A108-8004A224 011C+00 r=1 e=0 z=0  None .text      static_gen_b_light8EcallBack__FP14JPABaseEmitter             */
+/* 8004A108-8004A224 011C+00 s=1 e=0 z=0  None .text      static_gen_b_light8EcallBack__FP14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1257,7 +1255,7 @@ asm static void static_gen_b_light8EcallBack(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004A224-8004A340 011C+00 r=1 e=0 z=0  None .text      static_gen_d_light8EcallBack__FP14JPABaseEmitter             */
+/* 8004A224-8004A340 011C+00 s=1 e=0 z=0  None .text      static_gen_d_light8EcallBack__FP14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1268,7 +1266,7 @@ asm static void static_gen_d_light8EcallBack(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004A340-8004A364 0024+00 r=1 e=0 z=0  None .text      draw__19dPa_light8EcallBackFP14JPABaseEmitter                */
+/* 8004A340-8004A364 0024+00 s=1 e=0 z=0  None .text      draw__19dPa_light8EcallBackFP14JPABaseEmitter                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1279,7 +1277,7 @@ asm void dPa_light8EcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004A364-8004A388 0024+00 r=1 e=0 z=0  None .text      draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter          */
+/* 8004A364-8004A388 0024+00 s=1 e=0 z=0  None .text      draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1290,7 +1288,7 @@ asm void dPa_gen_b_light8EcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004A388-8004A3AC 0024+00 r=1 e=0 z=0  None .text      draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter          */
+/* 8004A388-8004A3AC 0024+00 s=1 e=0 z=0  None .text      draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1302,13 +1300,13 @@ asm void dPa_gen_d_light8EcallBack::draw(JPABaseEmitter* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451F54-80451F58 0004+00 r=1 e=0 z=0  None .sdata2    @4048                                                        */
+/* 80451F54-80451F58 0004+00 s=1 e=0 z=0  None .sdata2    @4048                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4048 = 13.0f / 20.0f;
 
-/* 80451F58-80451F5C 0004+00 r=1 e=0 z=0  None .sdata2    @4049                                                        */
+/* 80451F58-80451F5C 0004+00 s=1 e=0 z=0  None .sdata2    @4049                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4049 = 9.0f;
 
-/* 8004A3AC-8004A460 00B4+00 r=2 e=0 z=0  None .text      dPa_setWindPower__FP15JPABaseParticle                        */
+/* 8004A3AC-8004A460 00B4+00 s=2 e=0 z=0  None .text      dPa_setWindPower__FP15JPABaseParticle                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1320,25 +1318,25 @@ asm static void dPa_setWindPower(JPABaseParticle* param_0) {
 
 
 /* ############################################################################################## */
-/* 8037A108-8037A114 000C+00 r=1 e=0 z=0  None .rodata    @4065                                                        */
+/* 8037A108-8037A114 000C+00 s=1 e=0 z=0  None .rodata    @4065                                                        */
 SECTION_RODATA static u8 const d_particle_d_particle__lit_4065[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 80451F5C-80451F60 0004+00 r=3 e=0 z=0  None .sdata2    @4090                                                        */
+/* 80451F5C-80451F60 0004+00 s=3 e=0 z=0  None .sdata2    @4090                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4090 = -0.0054931640625f;
 
-/* 80451F60-80451F68 0004+04 r=3 e=0 z=0  None .sdata2    @4091                                                        */
+/* 80451F60-80451F68 0004+04 s=3 e=0 z=0  None .sdata2    @4091                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4091[1 + 1 /* padding */] = {
 	0.01745329238474369f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451F68-80451F70 0008+00 r=7 e=0 z=0  None .sdata2    @4093                                                        */
+/* 80451F68-80451F70 0008+00 s=7 e=0 z=0  None .sdata2    @4093                                                        */
 SECTION_SDATA2 static f64 d_particle_d_particle__lit_4093 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8004A460-8004A608 01A8+00 r=1 e=0 z=0  None .text      draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004A460-8004A608 01A8+00 s=1 e=0 z=0  None .text      draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1349,7 +1347,7 @@ asm void dPa_modelPcallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* para
 #pragma pop
 
 
-/* 8004A608-8004A7AC 01A4+00 r=1 e=0 z=0  None .text      set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
+/* 8004A608-8004A7AC 01A4+00 s=1 e=0 z=0  None .text      set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1360,7 +1358,7 @@ asm void dPa_modelEcallBack::model_c::set(J3DModelData* param_0, dKy_tevstr_c co
 #pragma pop
 
 
-/* 8004A7AC-8004A88C 00E0+00 r=1 e=0 z=0  None .text      setup__Q218dPa_modelEcallBack7model_cFv                      */
+/* 8004A7AC-8004A88C 00E0+00 s=1 e=0 z=0  None .text      setup__Q218dPa_modelEcallBack7model_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1371,7 +1369,7 @@ asm void dPa_modelEcallBack::model_c::setup() {
 #pragma pop
 
 
-/* 8004A88C-8004A8DC 0050+00 r=1 e=0 z=0  None .text      cleanup__Q218dPa_modelEcallBack7model_cFv                    */
+/* 8004A88C-8004A8DC 0050+00 s=1 e=0 z=0  None .text      cleanup__Q218dPa_modelEcallBack7model_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1382,7 +1380,7 @@ asm void dPa_modelEcallBack::model_c::cleanup() {
 #pragma pop
 
 
-/* 8004A8DC-8004AA34 0158+00 r=1 e=0 z=0  None .text      draw__Q218dPa_modelEcallBack7model_cFPA4_f                   */
+/* 8004A8DC-8004AA34 0158+00 s=1 e=0 z=0  None .text      draw__Q218dPa_modelEcallBack7model_cFPA4_f                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1393,7 +1391,7 @@ asm void dPa_modelEcallBack::model_c::draw(f32 (* param_0)[4]) {
 #pragma pop
 
 
-/* 8004AA34-8004AAA8 0074+00 r=1 e=0 z=0  None .text      draw__18dPa_modelEcallBackFP14JPABaseEmitter                 */
+/* 8004AA34-8004AAA8 0074+00 s=1 e=0 z=0  None .text      draw__18dPa_modelEcallBackFP14JPABaseEmitter                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1404,7 +1402,7 @@ asm void dPa_modelEcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004AAA8-8004AB1C 0074+00 r=1 e=0 z=0  None .text      setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004AAA8-8004AB1C 0074+00 s=1 e=0 z=0  None .text      setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1415,7 +1413,7 @@ asm void dPa_modelEcallBack::setup(JPABaseEmitter* param_0, cXyz const* param_1,
 #pragma pop
 
 
-/* 8004AB1C-8004AB88 006C+00 r=1 e=0 z=0  None .text      create__18dPa_modelEcallBackFUc                              */
+/* 8004AB1C-8004AB88 006C+00 s=1 e=0 z=0  None .text      create__18dPa_modelEcallBackFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1426,7 +1424,7 @@ asm void dPa_modelEcallBack::create(u8 param_0) {
 #pragma pop
 
 
-/* 8004AB88-8004ABC4 003C+00 r=2 e=0 z=0  None .text      __dt__Q218dPa_modelEcallBack7model_cFv                       */
+/* 8004AB88-8004ABC4 003C+00 s=2 e=0 z=0  None .text      __dt__Q218dPa_modelEcallBack7model_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1437,7 +1435,7 @@ asm dPa_modelEcallBack::model_c::~model_c() {
 #pragma pop
 
 
-/* 8004ABC4-8004AC00 003C+00 r=1 e=0 z=0  None .text      remove__18dPa_modelEcallBackFv                               */
+/* 8004ABC4-8004AC00 003C+00 s=1 e=0 z=0  None .text      remove__18dPa_modelEcallBackFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1448,7 +1446,7 @@ asm void dPa_modelEcallBack::remove() {
 #pragma pop
 
 
-/* 8004AC00-8004AC90 0090+00 r=12 e=1 z=11  None .text      setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
+/* 8004AC00-8004AC90 0090+00 s=0 e=1 z=0  None .text      setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1459,7 +1457,7 @@ asm void dPa_modelEcallBack::setModel(JPABaseEmitter* param_0, J3DModelData* par
 #pragma pop
 
 
-/* 8004AC90-8004ACC0 0030+00 r=1 e=0 z=0  None .text      resetModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004AC90-8004ACC0 0030+00 s=1 e=0 z=0  None .text      resetModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1470,7 +1468,7 @@ asm void dPa_modelEcallBack::resetModel(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004ACC0-8004ACEC 002C+00 r=1 e=0 z=0  None .text      setupModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004ACC0-8004ACEC 002C+00 s=1 e=0 z=0  None .text      setupModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1481,7 +1479,7 @@ asm void dPa_modelEcallBack::setupModel(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004ACEC-8004AD28 003C+00 r=1 e=0 z=0  None .text      drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f       */
+/* 8004ACEC-8004AD28 003C+00 s=1 e=0 z=0  None .text      drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1492,7 +1490,7 @@ asm void dPa_modelEcallBack::drawModel(JPABaseEmitter* param_0, f32 (* param_1)[
 #pragma pop
 
 
-/* 8004AD28-8004AD58 0030+00 r=1 e=0 z=0  None .text      cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter         */
+/* 8004AD28-8004AD58 0030+00 s=1 e=0 z=0  None .text      cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1503,7 +1501,7 @@ asm void dPa_modelEcallBack::cleanupModel(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004AD58-8004AD90 0038+00 r=6 e=0 z=0  None .text      getModel__18dPa_modelEcallBackFP14JPABaseEmitter             */
+/* 8004AD58-8004AD90 0038+00 s=6 e=0 z=0  None .text      getModel__18dPa_modelEcallBackFP14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1514,7 +1512,7 @@ asm void dPa_modelEcallBack::getModel(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004AD90-8004ADC4 0034+00 r=1 e=0 z=0  None .text      getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004AD90-8004ADC4 0034+00 s=1 e=0 z=0  None .text      getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1525,7 +1523,7 @@ asm void dPa_modelEcallBack::getRotAxis(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004ADC4-8004ADF4 0030+00 r=1 e=0 z=0  None .text      draw__22dPa_selectTexEcallBackFP14JPABaseEmitter             */
+/* 8004ADC4-8004ADF4 0030+00 s=1 e=0 z=0  None .text      draw__22dPa_selectTexEcallBackFP14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1536,7 +1534,7 @@ asm void dPa_selectTexEcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004ADF4-8004AE1C 0028+00 r=1 e=0 z=0  None .text      __ct__19dPa_simpleEcallBackFv                                */
+/* 8004ADF4-8004AE1C 0028+00 s=1 e=0 z=0  None .text      __ct__19dPa_simpleEcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1548,10 +1546,10 @@ asm dPa_simpleEcallBack::dPa_simpleEcallBack() {
 
 
 /* ############################################################################################## */
-/* 80451F70-80451F74 0004+00 r=1 e=0 z=0  None .sdata2    @4391                                                        */
+/* 80451F70-80451F74 0004+00 s=1 e=0 z=0  None .sdata2    @4391                                                        */
 SECTION_SDATA2 static f32 lit_4391 = 200.0f;
 
-/* 8004AE1C-8004AF94 0178+00 r=1 e=0 z=0  None .text      executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter        */
+/* 8004AE1C-8004AF94 0178+00 s=1 e=0 z=0  None .text      executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1562,7 +1560,7 @@ asm void dPa_simpleEcallBack::executeAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004AF94-8004AF98 0004+00 r=1 e=0 z=0  None .text      draw__19dPa_simpleEcallBackFP14JPABaseEmitter                */
+/* 8004AF94-8004AF98 0004+00 s=1 e=0 z=0  None .text      draw__19dPa_simpleEcallBackFP14JPABaseEmitter                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1573,7 +1571,7 @@ asm void dPa_simpleEcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004AF98-8004B024 008C+00 r=1 e=0 z=0  None .text      create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc       */
+/* 8004AF98-8004B024 008C+00 s=1 e=0 z=0  None .text      create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1584,7 +1582,7 @@ asm void dPa_simpleEcallBack::create(JPAEmitterManager* param_0, u16 param_1, u8
 #pragma pop
 
 
-/* 8004B024-8004B060 003C+00 r=1 e=0 z=0  None .text      __dt__16dPa_simpleData_cFv                                   */
+/* 8004B024-8004B060 003C+00 s=1 e=0 z=0  None .text      __dt__16dPa_simpleData_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1595,7 +1593,7 @@ asm dPa_simpleData_c::~dPa_simpleData_c() {
 #pragma pop
 
 
-/* 8004B060-8004B064 0004+00 r=1 e=0 z=0  None .text      __ct__16dPa_simpleData_cFv                                   */
+/* 8004B060-8004B064 0004+00 s=1 e=0 z=0  None .text      __ct__16dPa_simpleData_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1607,16 +1605,16 @@ asm dPa_simpleData_c::dPa_simpleData_c() {
 
 
 /* ############################################################################################## */
-/* 80424710-8042471C 000C+00 r=1 e=0 z=0  None .bss       @4053                                                        */
+/* 80424710-8042471C 000C+00 s=1 e=0 z=0  None .bss       @4053                                                        */
 static u8 d_particle_d_particle__lit_4053[12];
 
-/* 8042471C-80424728 000C+00 r=0 e=0 z=0  None .bss       @4054                                                        */
+/* 8042471C-80424728 000C+00 s=0 e=0 z=0  None .bss       @4054                                                        */
 u8 d_particle_d_particle__lit_4054[12];
 
-/* 80424728-80424734 000C+00 r=1 e=0 z=0  None .bss       pos$4424                                                     */
+/* 80424728-80424734 000C+00 s=1 e=0 z=0  None .bss       pos$4424                                                     */
 static u8 data_80424728[12];
 
-/* 8004B064-8004B168 0104+00 r=2 e=0 z=0  None .text      createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager    */
+/* 8004B064-8004B168 0104+00 s=2 e=0 z=0  None .text      createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1628,25 +1626,25 @@ asm void dPa_simpleEcallBack::createEmitter(JPAEmitterManager* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451F74-80451F78 0004+00 r=1 e=0 z=0  None .sdata2    @4473                                                        */
+/* 80451F74-80451F78 0004+00 s=1 e=0 z=0  None .sdata2    @4473                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_4473 = 0xFFFFFFFF;
 
-/* 80451F78-80451F7C 0004+00 r=1 e=0 z=0  None .sdata2    @4474                                                        */
+/* 80451F78-80451F7C 0004+00 s=1 e=0 z=0  None .sdata2    @4474                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_4474 = 0xFFFFFFFF;
 
-/* 80451F7C-80451F80 0004+00 r=1 e=0 z=0  None .sdata2    @4482                                                        */
+/* 80451F7C-80451F80 0004+00 s=1 e=0 z=0  None .sdata2    @4482                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_4482 = 0xFFFFFFFF;
 
-/* 80451F80-80451F84 0004+00 r=1 e=0 z=0  None .sdata2    @4483                                                        */
+/* 80451F80-80451F84 0004+00 s=1 e=0 z=0  None .sdata2    @4483                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_4483 = 0xFFFFFFFF;
 
-/* 80451F84-80451F88 0004+00 r=3 e=0 z=0  None .sdata2    @4518                                                        */
+/* 80451F84-80451F88 0004+00 s=3 e=0 z=0  None .sdata2    @4518                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4518 = 99.0f;
 
-/* 80451F88-80451F8C 0004+00 r=10 e=0 z=0  None .sdata2    @4519                                                        */
+/* 80451F88-80451F8C 0004+00 s=10 e=0 z=0  None .sdata2    @4519                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_4519 = 1.0f;
 
-/* 8004B168-8004B4E0 0378+00 r=1 e=0 z=0  None .text      set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
+/* 8004B168-8004B4E0 0378+00 s=1 e=0 z=0  None .text      set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1657,7 +1655,7 @@ asm void dPa_simpleEcallBack::set(cXyz const* param_0, dKy_tevstr_c const* param
 #pragma pop
 
 
-/* 8004B4E0-8004B504 0024+00 r=1 e=0 z=0  None .text      execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004B4E0-8004B504 0024+00 s=1 e=0 z=0  None .text      execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1668,7 +1666,7 @@ asm void dPa_windPcallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* pa
 #pragma pop
 
 
-/* 8004B504-8004B544 0040+00 r=3 e=0 z=0  None .text      onActive__Q313dPa_control_c7level_c9emitter_cFv              */
+/* 8004B504-8004B544 0040+00 s=3 e=0 z=0  None .text      onActive__Q313dPa_control_c7level_c9emitter_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1679,7 +1677,7 @@ asm void dPa_control_c::level_c::emitter_c::onActive() {
 #pragma pop
 
 
-/* 8004B544-8004B5AC 0068+00 r=1 e=0 z=0  None .text      entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack */
+/* 8004B544-8004B5AC 0068+00 s=1 e=0 z=0  None .text      entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1691,13 +1689,13 @@ asm void dPa_control_c::level_c::emitter_c::entry(u32 param_0, u16 param_1, JPAB
 
 
 /* ############################################################################################## */
-/* 80450EC4-80450EC8 0004+00 r=3 e=2 z=0  None .sbss      None                                                         */
+/* 80450EC4-80450EC8 0004+00 s=1 e=2 z=0  None .sbss      None                                                         */
 u8 data_80450EC4[4];
 
-/* 80450EC8-80450ED0 0004+04 r=20 e=1 z=17  None .sbss      mParticleTracePCB__13dPa_control_c                           */
+/* 80450EC8-80450ED0 0004+04 s=2 e=1 z=0  None .sbss      mParticleTracePCB__13dPa_control_c                           */
 u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 
-/* 8004B5AC-8004B688 00DC+00 r=1 e=0 z=0  None .text      cleanup__Q313dPa_control_c7level_c9emitter_cFv               */
+/* 8004B5AC-8004B688 00DC+00 s=1 e=0 z=0  None .text      cleanup__Q313dPa_control_c7level_c9emitter_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1708,7 +1706,7 @@ asm void dPa_control_c::level_c::emitter_c::cleanup() {
 #pragma pop
 
 
-/* 8004B688-8004B6F8 0070+00 r=1 e=0 z=0  None .text      __ct__Q213dPa_control_c7level_cFv                            */
+/* 8004B688-8004B6F8 0070+00 s=1 e=0 z=0  None .text      __ct__Q213dPa_control_c7level_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1719,7 +1717,7 @@ asm dPa_control_c::level_c::level_c() {
 #pragma pop
 
 
-/* 8004B6F8-8004B7A8 00B0+00 r=1 e=0 z=0  None .text      execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004B6F8-8004B7A8 00B0+00 s=1 e=0 z=0  None .text      execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1730,7 +1728,7 @@ asm void dPa_control_c::level_c::execute(dPa_control_c::level_c::emitter_c* para
 #pragma pop
 
 
-/* 8004B7A8-8004B808 0060+00 r=1 e=0 z=0  None .text      execute__Q213dPa_control_c7level_cFv                         */
+/* 8004B7A8-8004B808 0060+00 s=1 e=0 z=0  None .text      execute__Q213dPa_control_c7level_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1741,7 +1739,7 @@ asm void dPa_control_c::level_c::execute() {
 #pragma pop
 
 
-/* 8004B808-8004B874 006C+00 r=2 e=0 z=0  None .text      cleanup__Q213dPa_control_c7level_cFv                         */
+/* 8004B808-8004B874 006C+00 s=2 e=0 z=0  None .text      cleanup__Q213dPa_control_c7level_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1752,7 +1750,7 @@ asm void dPa_control_c::level_c::cleanup() {
 #pragma pop
 
 
-/* 8004B874-8004B8B4 0040+00 r=4 e=0 z=0  None .text      get__Q213dPa_control_c7level_cFUl                            */
+/* 8004B874-8004B8B4 0040+00 s=4 e=0 z=0  None .text      get__Q213dPa_control_c7level_cFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1763,7 +1761,7 @@ asm void dPa_control_c::level_c::get(u32 param_0) {
 #pragma pop
 
 
-/* 8004B8B4-8004B8E8 0034+00 r=46 e=5 z=40  None .text      forceOnEventMove__Q213dPa_control_c7level_cFUl               */
+/* 8004B8B4-8004B8E8 0034+00 s=1 e=5 z=0  None .text      forceOnEventMove__Q213dPa_control_c7level_cFUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1774,7 +1772,7 @@ asm void dPa_control_c::level_c::forceOnEventMove(u32 param_0) {
 #pragma pop
 
 
-/* 8004B8E8-8004B918 0030+00 r=1 e=1 z=0  None .text      allForceOnEventMove__Q213dPa_control_c7level_cFv             */
+/* 8004B8E8-8004B918 0030+00 s=0 e=1 z=0  None .text      allForceOnEventMove__Q213dPa_control_c7level_cFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1785,7 +1783,7 @@ asm void dPa_control_c::level_c::allForceOnEventMove() {
 #pragma pop
 
 
-/* 8004B918-8004B94C 0034+00 r=204 e=22 z=181  None .text      getEmitter__Q213dPa_control_c7level_cFUl                     */
+/* 8004B918-8004B94C 0034+00 s=1 e=22 z=0  None .text      getEmitter__Q213dPa_control_c7level_cFUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1796,7 +1794,7 @@ asm void dPa_control_c::level_c::getEmitter(u32 param_0) {
 #pragma pop
 
 
-/* 8004B94C-8004BA40 00F4+00 r=1 e=0 z=0  None .text      entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack */
+/* 8004B94C-8004BA40 00F4+00 s=1 e=0 z=0  None .text      entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1807,7 +1805,7 @@ asm void dPa_control_c::level_c::entry(u16 param_0, JPABaseEmitter* param_1, dPa
 #pragma pop
 
 
-/* 8004BA40-8004BA74 0034+00 r=1 e=0 z=0  None .text      addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004BA40-8004BA74 0034+00 s=1 e=0 z=0  None .text      addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1818,7 +1816,7 @@ asm void dPa_control_c::level_c::addTable(dPa_control_c::level_c::emitter_c* par
 #pragma pop
 
 
-/* 8004BA74-8004BACC 0058+00 r=3 e=0 z=0  None .text      cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004BA74-8004BACC 0058+00 s=3 e=0 z=0  None .text      cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1830,73 +1828,73 @@ asm void dPa_control_c::level_c::cutTable(dPa_control_c::level_c::emitter_c* par
 
 
 /* ############################################################################################## */
-/* 80424734-80424740 000C+00 r=0 e=0 z=0  None .bss       @4723                                                        */
+/* 80424734-80424740 000C+00 s=0 e=0 z=0  None .bss       @4723                                                        */
 u8 d_particle_d_particle__lit_4723[12];
 
-/* 80424740-8042474C 000C+00 r=0 e=0 z=0  None .bss       @4724                                                        */
+/* 80424740-8042474C 000C+00 s=0 e=0 z=0  None .bss       @4724                                                        */
 u8 d_particle_d_particle__lit_4724[12];
 
-/* 8042474C-80424758 000C+00 r=0 e=0 z=0  None .bss       @4725                                                        */
+/* 8042474C-80424758 000C+00 s=0 e=0 z=0  None .bss       @4725                                                        */
 u8 d_particle_d_particle__lit_4725[12];
 
-/* 80424758-80424764 000C+00 r=0 e=0 z=0  None .bss       @4726                                                        */
+/* 80424758-80424764 000C+00 s=0 e=0 z=0  None .bss       @4726                                                        */
 u8 d_particle_d_particle__lit_4726[12];
 
-/* 80424764-80424770 000C+00 r=0 e=0 z=0  None .bss       @4727                                                        */
+/* 80424764-80424770 000C+00 s=0 e=0 z=0  None .bss       @4727                                                        */
 u8 d_particle_d_particle__lit_4727[12];
 
-/* 80424770-8042477C 000C+00 r=0 e=0 z=0  None .bss       @4728                                                        */
+/* 80424770-8042477C 000C+00 s=0 e=0 z=0  None .bss       @4728                                                        */
 u8 d_particle_d_particle__lit_4728[12];
 
-/* 8042477C-80424788 000C+00 r=0 e=0 z=0  None .bss       @4729                                                        */
+/* 8042477C-80424788 000C+00 s=0 e=0 z=0  None .bss       @4729                                                        */
 u8 d_particle_d_particle__lit_4729[12];
 
-/* 80424788-80424794 000C+00 r=0 e=0 z=0  None .bss       @4730                                                        */
+/* 80424788-80424794 000C+00 s=0 e=0 z=0  None .bss       @4730                                                        */
 u8 d_particle_d_particle__lit_4730[12];
 
-/* 80424794-804247D4 0040+00 r=2 e=1 z=1  None .bss       mTsubo__13dPa_control_c                                      */
+/* 80424794-804247D4 0040+00 s=0 e=1 z=0  None .bss       mTsubo__13dPa_control_c                                      */
 u8 mTsubo__13dPa_control_c[64];
 
-/* 804247D4-804247E0 000C+00 r=0 e=0 z=0  None .bss       @4731                                                        */
+/* 804247D4-804247E0 000C+00 s=0 e=0 z=0  None .bss       @4731                                                        */
 u8 d_particle_d_particle__lit_4731[12];
 
-/* 804247E0-804247EC 000C+00 r=0 e=0 z=0  None .bss       @4732                                                        */
+/* 804247E0-804247EC 000C+00 s=0 e=0 z=0  None .bss       @4732                                                        */
 u8 d_particle_d_particle__lit_4732[12];
 
-/* 804247EC-804247F8 000C+00 r=0 e=0 z=0  None .bss       @4733                                                        */
+/* 804247EC-804247F8 000C+00 s=0 e=0 z=0  None .bss       @4733                                                        */
 u8 d_particle_d_particle__lit_4733[12];
 
-/* 804247F8-80424810 0018+00 r=0 e=0 z=0  None .bss       mLifeBall__13dPa_control_c                                   */
+/* 804247F8-80424810 0018+00 s=0 e=0 z=0  None .bss       mLifeBall__13dPa_control_c                                   */
 u8 mLifeBall__13dPa_control_c[24];
 
-/* 80424810-8042481C 000C+00 r=0 e=0 z=0  None .bss       @4734                                                        */
+/* 80424810-8042481C 000C+00 s=0 e=0 z=0  None .bss       @4734                                                        */
 u8 d_particle_d_particle__lit_4734[12];
 
-/* 8042481C-80424828 000C+00 r=0 e=0 z=0  None .bss       @4735                                                        */
+/* 8042481C-80424828 000C+00 s=0 e=0 z=0  None .bss       @4735                                                        */
 u8 d_particle_d_particle__lit_4735[12];
 
-/* 80424828-80424834 000C+00 r=0 e=0 z=0  None .bss       @4736                                                        */
+/* 80424828-80424834 000C+00 s=0 e=0 z=0  None .bss       @4736                                                        */
 u8 d_particle_d_particle__lit_4736[12];
 
-/* 80424834-80424840 000C+00 r=0 e=0 z=0  None .bss       @4737                                                        */
+/* 80424834-80424840 000C+00 s=0 e=0 z=0  None .bss       @4737                                                        */
 u8 d_particle_d_particle__lit_4737[12];
 
-/* 80424840-8042484C 000C+00 r=0 e=0 z=0  None .bss       @4738                                                        */
+/* 80424840-8042484C 000C+00 s=0 e=0 z=0  None .bss       @4738                                                        */
 u8 d_particle_d_particle__lit_4738[12];
 
-/* 8042484C-80424858 000C+00 r=0 e=0 z=0  None .bss       @4739                                                        */
+/* 8042484C-80424858 000C+00 s=0 e=0 z=0  None .bss       @4739                                                        */
 u8 d_particle_d_particle__lit_4739[12];
 
-/* 80424858-80424864 000C+00 r=0 e=0 z=0  None .bss       @4740                                                        */
+/* 80424858-80424864 000C+00 s=0 e=0 z=0  None .bss       @4740                                                        */
 u8 d_particle_d_particle__lit_4740[12];
 
-/* 80424864-80424870 000C+00 r=0 e=0 z=0  None .bss       @4741                                                        */
+/* 80424864-80424870 000C+00 s=0 e=0 z=0  None .bss       @4741                                                        */
 u8 d_particle_d_particle__lit_4741[12];
 
-/* 80424870-804248A0 0030+00 r=1 e=0 z=0  None .bss       mWindViewMatrix__13dPa_control_c                             */
+/* 80424870-804248A0 0030+00 s=1 e=0 z=0  None .bss       mWindViewMatrix__13dPa_control_c                             */
 static u8 mWindViewMatrix__13dPa_control_c[48];
 
-/* 8004BACC-8004BB70 00A4+00 r=1 e=1 z=0  None .text      __ct__13dPa_control_cFv                                      */
+/* 8004BACC-8004BB70 00A4+00 s=0 e=1 z=0  None .text      __ct__13dPa_control_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1907,7 +1905,7 @@ asm dPa_control_c::dPa_control_c() {
 #pragma pop
 
 
-/* 8004BB70-8004BB78 0008+00 r=4 e=0 z=0  None .text      getRM_ID__13dPa_control_cFUs                                 */
+/* 8004BB70-8004BB78 0008+00 s=4 e=0 z=0  None .text      getRM_ID__13dPa_control_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1919,17 +1917,17 @@ asm void dPa_control_c::getRM_ID(u16 param_0) {
 
 
 /* ############################################################################################## */
-/* 8037A114-8037A120 000C+00 r=1 e=0 z=0  None .rodata    @5691                                                        */
+/* 8037A114-8037A120 000C+00 s=1 e=0 z=0  None .rodata    @5691                                                        */
 SECTION_RODATA static u8 const d_particle_d_particle__lit_5691[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8037A120-8037A12C 000C+00 r=1 e=0 z=0  None .rodata    @6363                                                        */
+/* 8037A120-8037A12C 000C+00 s=1 e=0 z=0  None .rodata    @6363                                                        */
 SECTION_RODATA static u8 const d_particle_d_particle__lit_6363[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8037A12C-8037A178 004B+01 r=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8037A12C-8037A178 004B+01 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -1940,7 +1938,7 @@ SECTION_DEAD char const* const stringBase_8037A14F = """\x1B""[43;30m１エミ�
 SECTION_DEAD static char const* const pad_8037A177 = "";
 #pragma pop
 
-/* 8004BB78-8004BCDC 0164+00 r=1 e=1 z=0  None .text      createCommon__13dPa_control_cFPCv                            */
+/* 8004BB78-8004BCDC 0164+00 s=0 e=1 z=0  None .text      createCommon__13dPa_control_cFPCv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1951,7 +1949,7 @@ asm void dPa_control_c::createCommon(void const* param_0) {
 #pragma pop
 
 
-/* 8004BCDC-8004BDFC 0120+00 r=1 e=0 z=0  None .text      createRoomScene__13dPa_control_cFv                           */
+/* 8004BCDC-8004BDFC 0120+00 s=1 e=0 z=0  None .text      createRoomScene__13dPa_control_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1963,13 +1961,13 @@ asm void dPa_control_c::createRoomScene() {
 
 
 /* ############################################################################################## */
-/* 804248A0-804248AC 000C+00 r=0 e=0 z=0  None .bss       @4742                                                        */
+/* 804248A0-804248AC 000C+00 s=0 e=0 z=0  None .bss       @4742                                                        */
 u8 d_particle_d_particle__lit_4742[12];
 
-/* 804248AC-804248D0 0020+04 r=1 e=0 z=0  None .bss       jpcName$4821                                                 */
+/* 804248AC-804248D0 0020+04 s=1 e=0 z=0  None .bss       jpcName$4821                                                 */
 static u8 data_804248AC[32 + 4 /* padding */];
 
-/* 8004BDFC-8004BEB0 00B4+00 r=1 e=1 z=0  None .text      readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c       */
+/* 8004BDFC-8004BEB0 00B4+00 s=0 e=1 z=0  None .text      readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1980,7 +1978,7 @@ asm void dPa_control_c::readScene(u8 param_0, mDoDvdThd_toMainRam_c** param_1) {
 #pragma pop
 
 
-/* 8004BEB0-8004BF3C 008C+00 r=1 e=1 z=0  None .text      createScene__13dPa_control_cFPCv                             */
+/* 8004BEB0-8004BF3C 008C+00 s=0 e=1 z=0  None .text      createScene__13dPa_control_cFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1991,7 +1989,7 @@ asm void dPa_control_c::createScene(void const* param_0) {
 #pragma pop
 
 
-/* 8004BF3C-8004BFD4 0098+00 r=1 e=0 z=0  None .text      removeRoomScene__13dPa_control_cFb                           */
+/* 8004BF3C-8004BFD4 0098+00 s=1 e=0 z=0  None .text      removeRoomScene__13dPa_control_cFb                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2002,7 +2000,7 @@ asm void dPa_control_c::removeRoomScene(bool param_0) {
 #pragma pop
 
 
-/* 8004BFD4-8004C054 0080+00 r=1 e=1 z=0  None .text      removeScene__13dPa_control_cFb                               */
+/* 8004BFD4-8004C054 0080+00 s=0 e=1 z=0  None .text      removeScene__13dPa_control_cFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2013,7 +2011,7 @@ asm void dPa_control_c::removeScene(bool param_0) {
 #pragma pop
 
 
-/* 8004C054-8004C078 0024+00 r=2 e=2 z=0  None .text      cleanup__13dPa_control_cFv                                   */
+/* 8004C054-8004C078 0024+00 s=0 e=2 z=0  None .text      cleanup__13dPa_control_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2024,7 +2022,7 @@ asm void dPa_control_c::cleanup() {
 #pragma pop
 
 
-/* 8004C078-8004C0EC 0074+00 r=1 e=1 z=0  None .text      calc3D__13dPa_control_cFv                                    */
+/* 8004C078-8004C0EC 0074+00 s=0 e=1 z=0  None .text      calc3D__13dPa_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2035,7 +2033,7 @@ asm void dPa_control_c::calc3D() {
 #pragma pop
 
 
-/* 8004C0EC-8004C134 0048+00 r=1 e=1 z=0  None .text      calc2D__13dPa_control_cFv                                    */
+/* 8004C0EC-8004C134 0048+00 s=0 e=1 z=0  None .text      calc2D__13dPa_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2046,7 +2044,7 @@ asm void dPa_control_c::calc2D() {
 #pragma pop
 
 
-/* 8004C134-8004C188 0054+00 r=1 e=1 z=0  None .text      calcMenu__13dPa_control_cFv                                  */
+/* 8004C134-8004C188 0054+00 s=0 e=1 z=0  None .text      calcMenu__13dPa_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2057,7 +2055,7 @@ asm void dPa_control_c::calcMenu() {
 #pragma pop
 
 
-/* 8004C188-8004C218 0090+00 r=1 e=1 z=0  None .text      draw__13dPa_control_cFP11JPADrawInfoUc                       */
+/* 8004C188-8004C218 0090+00 s=0 e=1 z=0  None .text      draw__13dPa_control_cFP11JPADrawInfoUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2069,10 +2067,10 @@ asm void dPa_control_c::draw(JPADrawInfo* param_0, u8 param_1) {
 
 
 /* ############################################################################################## */
-/* 80451F8C-80451F90 0004+00 r=5 e=0 z=0  None .sdata2    @5066                                                        */
+/* 80451F8C-80451F90 0004+00 s=5 e=0 z=0  None .sdata2    @5066                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_5066 = 0.5f;
 
-/* 8004C218-8004C838 0620+00 r=61 e=7 z=54  None .text      setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl */
+/* 8004C218-8004C838 0620+00 s=0 e=7 z=0  None .text      setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2084,32 +2082,32 @@ asm void dPa_control_c::setHitMark(u16 param_0, fopAc_ac_c* param_1, cXyz const*
 
 
 /* ############################################################################################## */
-/* 80451F90-80451F94 0004+00 r=1 e=0 z=0  None .sdata2    particleID$5076                                              */
+/* 80451F90-80451F94 0004+00 s=1 e=0 z=0  None .sdata2    particleID$5076                                              */
 SECTION_SDATA2 static u8 data_80451F90[4] = {
 	0x01, 0xB3, 0x01, 0xB2,
 };
 
-/* 80451F94-80451F98 0004+00 r=1 e=0 z=0  None .sdata2    @5140                                                        */
+/* 80451F94-80451F98 0004+00 s=1 e=0 z=0  None .sdata2    @5140                                                        */
 SECTION_SDATA2 static f32 lit_5140 = 1.0f / 20.0f;
 
-/* 80451F98-80451F9C 0004+00 r=1 e=0 z=0  None .sdata2    @5141                                                        */
+/* 80451F98-80451F9C 0004+00 s=1 e=0 z=0  None .sdata2    @5141                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_5141 = 3.0f / 20.0f;
 
-/* 80451F9C-80451FA0 0004+00 r=2 e=0 z=0  None .sdata2    @5142                                                        */
+/* 80451F9C-80451FA0 0004+00 s=2 e=0 z=0  None .sdata2    @5142                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_5142 = 1.0f / 10.0f;
 
-/* 80451FA0-80451FA8 0008+00 r=2 e=0 z=0  None .sdata2    @5143                                                        */
+/* 80451FA0-80451FA8 0008+00 s=2 e=0 z=0  None .sdata2    @5143                                                        */
 SECTION_SDATA2 static f64 d_particle_d_particle__lit_5143 = 0.5;
 
-/* 80451FA8-80451FB0 0008+00 r=2 e=0 z=0  None .sdata2    @5144                                                        */
+/* 80451FA8-80451FB0 0008+00 s=2 e=0 z=0  None .sdata2    @5144                                                        */
 SECTION_SDATA2 static f64 d_particle_d_particle__lit_5144 = 3.0;
 
-/* 80451FB0-80451FB8 0008+00 r=2 e=0 z=0  None .sdata2    @5145                                                        */
+/* 80451FB0-80451FB8 0008+00 s=2 e=0 z=0  None .sdata2    @5145                                                        */
 SECTION_SDATA2 static u8 d_particle_d_particle__lit_5145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8004C838-8004CA90 0258+00 r=5 e=2 z=3  None .text      setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc */
+/* 8004C838-8004CA90 0258+00 s=0 e=2 z=0  None .text      setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2121,19 +2119,19 @@ asm void dPa_control_c::setWaterRipple(u32* param_0, cBgS_PolyInfo& param_1, cXy
 
 
 /* ############################################################################################## */
-/* 80451FB8-80451FBC 0004+00 r=1 e=0 z=0  None .sdata2    @5189                                                        */
+/* 80451FB8-80451FBC 0004+00 s=1 e=0 z=0  None .sdata2    @5189                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_5189 = 0xFFFFFFFF;
 
-/* 80451FBC-80451FC0 0004+00 r=1 e=0 z=0  None .sdata2    @5190                                                        */
+/* 80451FBC-80451FC0 0004+00 s=1 e=0 z=0  None .sdata2    @5190                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_5190 = 0xFFFFFFFF;
 
-/* 80451FC0-80451FC4 0004+00 r=1 e=0 z=0  None .sdata2    @5198                                                        */
+/* 80451FC0-80451FC4 0004+00 s=1 e=0 z=0  None .sdata2    @5198                                                        */
 SECTION_SDATA2 static u32 lit_5198 = 0xFFFFFFFF;
 
-/* 80451FC4-80451FC8 0004+00 r=1 e=0 z=0  None .sdata2    @5199                                                        */
+/* 80451FC4-80451FC8 0004+00 s=1 e=0 z=0  None .sdata2    @5199                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_5199 = 0xFFFFFFFF;
 
-/* 8004CA90-8004CF90 0500+00 r=441 e=20 z=418  None .text      set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
+/* 8004CA90-8004CF90 0500+00 s=3 e=20 z=0  None .text      set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2144,7 +2142,7 @@ asm void dPa_control_c::set(u8 param_0, u16 param_1, cXyz const* param_2, dKy_te
 #pragma pop
 
 
-/* 8004CF90-8004D068 00D8+00 r=5 e=1 z=0  None .text      getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf */
+/* 8004CF90-8004D068 00D8+00 s=4 e=1 z=0  None .text      getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2155,7 +2153,7 @@ asm void dPa_control_c::getPolyColor(cBgS_PolyInfo& param_0, int param_1, _GXCol
 #pragma pop
 
 
-/* 8004D068-8004D128 00C0+00 r=18 e=1 z=17  None .text      setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D068-8004D128 00C0+00 s=0 e=1 z=0  None .text      setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2166,7 +2164,7 @@ asm void dPa_control_c::setPoly(u16 param_0, cBgS_PolyInfo& param_1, cXyz const*
 #pragma pop
 
 
-/* 8004D128-8004D1B8 0090+00 r=2 e=0 z=0  None .text      newSimple__13dPa_control_cFUsUcPUl                           */
+/* 8004D128-8004D1B8 0090+00 s=2 e=0 z=0  None .text      newSimple__13dPa_control_cFUsUcPUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2177,7 +2175,7 @@ asm void dPa_control_c::newSimple(u16 param_0, u8 param_1, u32* param_2) {
 #pragma pop
 
 
-/* 8004D1B8-8004D23C 0084+00 r=9 e=0 z=9  None .text      setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
+/* 8004D1B8-8004D23C 0084+00 s=0 e=0 z=0  None .text      setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2188,7 +2186,7 @@ asm void dPa_control_c::setSimple(u16 param_0, cXyz const* param_1, dKy_tevstr_c
 #pragma pop
 
 
-/* 8004D23C-8004D278 003C+00 r=1 e=0 z=0  None .text      getSimple__13dPa_control_cFUs                                */
+/* 8004D23C-8004D278 003C+00 s=1 e=0 z=0  None .text      getSimple__13dPa_control_cFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2200,19 +2198,19 @@ asm void dPa_control_c::getSimple(u16 param_0) {
 
 
 /* ############################################################################################## */
-/* 80451FC8-80451FCC 0004+00 r=1 e=0 z=0  None .sdata2    @5374                                                        */
+/* 80451FC8-80451FCC 0004+00 s=1 e=0 z=0  None .sdata2    @5374                                                        */
 SECTION_SDATA2 static u32 lit_5374 = 0xFFFFFFFF;
 
-/* 80451FCC-80451FD0 0004+00 r=1 e=0 z=0  None .sdata2    @5375                                                        */
+/* 80451FCC-80451FD0 0004+00 s=1 e=0 z=0  None .sdata2    @5375                                                        */
 SECTION_SDATA2 static u32 d_particle_d_particle__lit_5375 = 0xFFFFFFFF;
 
-/* 80451FD0-80451FD4 0004+00 r=1 e=0 z=0  None .sdata2    @5383                                                        */
+/* 80451FD0-80451FD4 0004+00 s=1 e=0 z=0  None .sdata2    @5383                                                        */
 SECTION_SDATA2 static u32 lit_5383 = 0xFFFFFFFF;
 
-/* 80451FD4-80451FD8 0004+00 r=1 e=0 z=0  None .sdata2    @5384                                                        */
+/* 80451FD4-80451FD8 0004+00 s=1 e=0 z=0  None .sdata2    @5384                                                        */
 SECTION_SDATA2 static u32 lit_5384 = 0xFFFFFFFF;
 
-/* 8004D278-8004D4CC 0254+00 r=1 e=0 z=0  None .text      dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor */
+/* 8004D278-8004D4CC 0254+00 s=1 e=0 z=0  None .text      dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2223,7 +2221,7 @@ asm static void dPa_kankyocolor_set(f32 param_0, JPABaseEmitter* param_1, dKy_te
 #pragma pop
 
 
-/* 8004D4CC-8004D6A4 01D8+00 r=378 e=11 z=364  None .text      set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
+/* 8004D4CC-8004D6A4 01D8+00 s=3 e=11 z=0  None .text      set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2234,7 +2232,7 @@ asm void dPa_control_c::set(u32 param_0, u8 param_1, u16 param_2, cXyz const* pa
 #pragma pop
 
 
-/* 8004D6A4-8004D770 00CC+00 r=14 e=3 z=10  None .text      setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D6A4-8004D770 00CC+00 s=1 e=3 z=0  None .text      setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2245,7 +2243,7 @@ asm void dPa_control_c::setPoly(u32 param_0, u16 param_1, cBgS_PolyInfo& param_2
 #pragma pop
 
 
-/* 8004D770-8004D7C4 0054+00 r=1 e=1 z=0  None .text      setStopContinue__13dPa_control_cFUl                          */
+/* 8004D770-8004D7C4 0054+00 s=0 e=1 z=0  None .text      setStopContinue__13dPa_control_cFUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2256,7 +2254,7 @@ asm void dPa_control_c::setStopContinue(u32 param_0) {
 #pragma pop
 
 
-/* 8004D7C4-8004D988 01C4+00 r=1 e=1 z=0  None .text      setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D7C4-8004D988 01C4+00 s=0 e=1 z=0  None .text      setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2267,7 +2265,7 @@ asm void dPa_control_c::setSimpleFoot(u32 param_0, u32* param_1, cBgS_PolyInfo& 
 #pragma pop
 
 
-/* 8004D988-8004DC28 02A0+00 r=1 e=1 z=0  None .text      setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc */
+/* 8004D988-8004DC28 02A0+00 s=0 e=1 z=0  None .text      setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2278,7 +2276,7 @@ asm void dPa_control_c::setCommonPoly(u32* param_0, cBgS_PolyInfo* param_1, cXyz
 #pragma pop
 
 
-/* 8004DC28-8004DCA0 0078+00 r=1 e=0 z=0  None .text      execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DC28-8004DCA0 0078+00 s=1 e=0 z=0  None .text      execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2289,7 +2287,7 @@ asm void dPa_wbPcallBack_c::execute(JPABaseEmitter* param_0, JPABaseParticle* pa
 #pragma pop
 
 
-/* 8004DCA0-8004DD0C 006C+00 r=1 e=0 z=0  None .text      execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DCA0-8004DD0C 006C+00 s=1 e=0 z=0  None .text      execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2300,7 +2298,7 @@ asm void dPa_fsenthPcallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* 
 #pragma pop
 
 
-/* 8004DD0C-8004DD10 0004+00 r=1 e=0 z=0  None .text      draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD0C-8004DD10 0004+00 s=1 e=0 z=0  None .text      draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2311,7 +2309,7 @@ asm void dPa_fsenthPcallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* par
 #pragma pop
 
 
-/* 8004DD10-8004DD14 0004+00 r=1 e=0 z=0  None .text      execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD10-8004DD14 0004+00 s=1 e=0 z=0  None .text      execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2322,7 +2320,7 @@ asm void dPa_light8PcallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* 
 #pragma pop
 
 
-/* 8004DD14-8004DD18 0004+00 r=1 e=0 z=0  None .text      execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD14-8004DD18 0004+00 s=1 e=0 z=0  None .text      execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2333,7 +2331,7 @@ asm void dPa_gen_b_light8PcallBack::execute(JPABaseEmitter* param_0, JPABasePart
 #pragma pop
 
 
-/* 8004DD18-8004DD1C 0004+00 r=1 e=0 z=0  None .text      execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD18-8004DD1C 0004+00 s=1 e=0 z=0  None .text      execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2345,22 +2343,22 @@ asm void dPa_gen_d_light8PcallBack::execute(JPABaseEmitter* param_0, JPABasePart
 
 
 /* ############################################################################################## */
-/* 80451FD8-80451FDC 0004+00 r=3 e=0 z=0  None .sdata2    @6075                                                        */
+/* 80451FD8-80451FDC 0004+00 s=3 e=0 z=0  None .sdata2    @6075                                                        */
 SECTION_SDATA2 static f32 lit_6075 = 32.0f;
 
-/* 80451FDC-80451FE0 0004+00 r=4 e=0 z=0  None .sdata2    @6076                                                        */
+/* 80451FDC-80451FE0 0004+00 s=4 e=0 z=0  None .sdata2    @6076                                                        */
 SECTION_SDATA2 static f32 lit_6076 = 3.0f;
 
-/* 80451FE0-80451FE4 0004+00 r=1 e=0 z=0  None .sdata2    @6077                                                        */
+/* 80451FE0-80451FE4 0004+00 s=1 e=0 z=0  None .sdata2    @6077                                                        */
 SECTION_SDATA2 static f32 lit_6077 = 10.0f;
 
-/* 80451FE4-80451FE8 0004+00 r=2 e=0 z=0  None .sdata2    @6078                                                        */
+/* 80451FE4-80451FE8 0004+00 s=2 e=0 z=0  None .sdata2    @6078                                                        */
 SECTION_SDATA2 static f32 lit_6078 = 2.0f;
 
-/* 80451FE8-80451FEC 0004+00 r=3 e=0 z=0  None .sdata2    @6079                                                        */
+/* 80451FE8-80451FEC 0004+00 s=3 e=0 z=0  None .sdata2    @6079                                                        */
 SECTION_SDATA2 static f32 lit_6079 = -1.0f;
 
-/* 8004DD1C-8004E6A8 098C+00 r=1 e=0 z=0  None .text      draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD1C-8004E6A8 098C+00 s=1 e=0 z=0  None .text      draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2372,13 +2370,13 @@ asm void dPa_light8PcallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* par
 
 
 /* ############################################################################################## */
-/* 80451FEC-80451FF0 0004+00 r=2 e=0 z=0  None .sdata2    @6350                                                        */
+/* 80451FEC-80451FF0 0004+00 s=2 e=0 z=0  None .sdata2    @6350                                                        */
 SECTION_SDATA2 static f32 lit_6350 = 12.5f;
 
-/* 80451FF0-80451FF4 0004+00 r=2 e=0 z=0  None .sdata2    @6351                                                        */
+/* 80451FF0-80451FF4 0004+00 s=2 e=0 z=0  None .sdata2    @6351                                                        */
 SECTION_SDATA2 static f32 lit_6351 = -12.5f;
 
-/* 8004E6A8-8004ED44 069C+00 r=1 e=0 z=0  None .text      draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004E6A8-8004ED44 069C+00 s=1 e=0 z=0  None .text      draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2389,7 +2387,7 @@ asm void dPa_gen_b_light8PcallBack::draw(JPABaseEmitter* param_0, JPABaseParticl
 #pragma pop
 
 
-/* 8004ED44-8004F6B8 0974+00 r=1 e=0 z=0  None .text      draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004ED44-8004F6B8 0974+00 s=1 e=0 z=0  None .text      draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2400,7 +2398,7 @@ asm void dPa_gen_d_light8PcallBack::draw(JPABaseEmitter* param_0, JPABaseParticl
 #pragma pop
 
 
-/* 8004F6B8-8004F6C4 000C+00 r=5 e=2 z=3  None .text      setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz          */
+/* 8004F6B8-8004F6C4 000C+00 s=0 e=2 z=0  None .text      setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2412,10 +2410,10 @@ asm void dPa_hermiteEcallBack_c::setOldPosP(cXyz const* param_0, cXyz const* par
 
 
 /* ############################################################################################## */
-/* 80451FF4-80451FF8 0004+00 r=1 e=0 z=0  None .sdata2    @6846                                                        */
+/* 80451FF4-80451FF8 0004+00 s=1 e=0 z=0  None .sdata2    @6846                                                        */
 SECTION_SDATA2 static f32 d_particle_d_particle__lit_6846 = -2.0f;
 
-/* 8004F6C4-8004FABC 03F8+00 r=1 e=0 z=0  None .text      executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter     */
+/* 8004F6C4-8004FABC 03F8+00 s=1 e=0 z=0  None .text      executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2426,7 +2424,7 @@ asm void dPa_hermiteEcallBack_c::executeAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8004FABC-8004FAD4 0018+00 r=1 e=0 z=0  None .text      setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004FABC-8004FAD4 0018+00 s=1 e=0 z=0  None .text      setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2437,7 +2435,7 @@ asm void dPa_hermiteEcallBack_c::setup(JPABaseEmitter* param_0, cXyz const* para
 #pragma pop
 
 
-/* 8004FAD4-8004FB18 0044+00 r=1 e=0 z=0  None .text      execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004FAD4-8004FB18 0044+00 s=1 e=0 z=0  None .text      execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2448,7 +2446,7 @@ asm void dPa_particleTracePcallBack_c::execute(JPABaseEmitter* param_0, JPABaseP
 #pragma pop
 
 
-/* 8004FB18-8004FB8C 0074+00 r=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
+/* 8004FB18-8004FB8C 0074+00 s=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2459,7 +2457,7 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 #pragma pop
 
 
-/* 8004FB8C-8004FB90 0004+00 r=8 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
+/* 8004FB8C-8004FB90 0004+00 s=8 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2470,7 +2468,7 @@ asm void dPa_levelEcallBack::cleanup() {
 #pragma pop
 
 
-/* 8004FB90-8004FBFC 006C+00 r=1 e=0 z=0  None .text      __ct__Q218dPa_modelEcallBack7model_cFv                       */
+/* 8004FB90-8004FBFC 006C+00 s=1 e=0 z=0  None .text      __ct__Q218dPa_modelEcallBack7model_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2481,7 +2479,7 @@ asm dPa_modelEcallBack::model_c::model_c() {
 #pragma pop
 
 
-/* 8004FBFC-8004FC08 000C+00 r=1 e=0 z=0  None .text      __ct__Q313dPa_control_c7level_c9emitter_cFv                  */
+/* 8004FBFC-8004FC08 000C+00 s=1 e=0 z=0  None .text      __ct__Q313dPa_control_c7level_c9emitter_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2492,7 +2490,7 @@ asm dPa_control_c::level_c::emitter_c::emitter_c() {
 #pragma pop
 
 
-/* 8004FC08-8004FC68 0060+00 r=2 e=0 z=0  None .text      __dt__19dPa_simpleEcallBackFv                                */
+/* 8004FC08-8004FC68 0060+00 s=2 e=0 z=0  None .text      __dt__19dPa_simpleEcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2503,7 +2501,7 @@ asm dPa_simpleEcallBack::~dPa_simpleEcallBack() {
 #pragma pop
 
 
-/* 8004FC68-8004FCC8 0060+00 r=2 e=0 z=0  None .text      __dt__28dPa_particleTracePcallBack_cFv                       */
+/* 8004FC68-8004FCC8 0060+00 s=2 e=0 z=0  None .text      __dt__28dPa_particleTracePcallBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2514,7 +2512,7 @@ asm dPa_particleTracePcallBack_c::~dPa_particleTracePcallBack_c() {
 #pragma pop
 
 
-/* 8004FCC8-8004FD4C 0084+00 r=1 e=0 z=0  None .text      __dt__22dPa_hermiteEcallBack_cFv                             */
+/* 8004FCC8-8004FD4C 0084+00 s=1 e=0 z=0  None .text      __dt__22dPa_hermiteEcallBack_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2525,7 +2523,7 @@ asm dPa_hermiteEcallBack_c::~dPa_hermiteEcallBack_c() {
 #pragma pop
 
 
-/* 8004FD4C-8004FDAC 0060+00 r=2 e=0 z=0  None .text      __dt__25dPa_gen_d_light8PcallBackFv                          */
+/* 8004FD4C-8004FDAC 0060+00 s=2 e=0 z=0  None .text      __dt__25dPa_gen_d_light8PcallBackFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2536,7 +2534,7 @@ asm dPa_gen_d_light8PcallBack::~dPa_gen_d_light8PcallBack() {
 #pragma pop
 
 
-/* 8004FDAC-8004FE0C 0060+00 r=2 e=0 z=0  None .text      __dt__25dPa_gen_b_light8PcallBackFv                          */
+/* 8004FDAC-8004FE0C 0060+00 s=2 e=0 z=0  None .text      __dt__25dPa_gen_b_light8PcallBackFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2547,7 +2545,7 @@ asm dPa_gen_b_light8PcallBack::~dPa_gen_b_light8PcallBack() {
 #pragma pop
 
 
-/* 8004FE0C-8004FE6C 0060+00 r=2 e=0 z=0  None .text      __dt__19dPa_light8PcallBackFv                                */
+/* 8004FE0C-8004FE6C 0060+00 s=2 e=0 z=0  None .text      __dt__19dPa_light8PcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2558,7 +2556,7 @@ asm dPa_light8PcallBack::~dPa_light8PcallBack() {
 #pragma pop
 
 
-/* 8004FE6C-8004FECC 0060+00 r=2 e=0 z=0  None .text      __dt__19dPa_fsenthPcallBackFv                                */
+/* 8004FE6C-8004FECC 0060+00 s=2 e=0 z=0  None .text      __dt__19dPa_fsenthPcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2569,7 +2567,7 @@ asm dPa_fsenthPcallBack::~dPa_fsenthPcallBack() {
 #pragma pop
 
 
-/* 8004FECC-8004FF2C 0060+00 r=2 e=0 z=0  None .text      __dt__17dPa_wbPcallBack_cFv                                  */
+/* 8004FECC-8004FF2C 0060+00 s=2 e=0 z=0  None .text      __dt__17dPa_wbPcallBack_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2580,7 +2578,7 @@ asm dPa_wbPcallBack_c::~dPa_wbPcallBack_c() {
 #pragma pop
 
 
-/* 8004FF2C-8004FF8C 0060+00 r=1 e=0 z=0  None .text      __dt__17dPa_windPcallBackFv                                  */
+/* 8004FF2C-8004FF8C 0060+00 s=1 e=0 z=0  None .text      __dt__17dPa_windPcallBackFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2591,7 +2589,7 @@ asm dPa_windPcallBack::~dPa_windPcallBack() {
 #pragma pop
 
 
-/* 8004FF8C-80050010 0084+00 r=2 e=0 z=0  None .text      __dt__22dPa_selectTexEcallBackFv                             */
+/* 8004FF8C-80050010 0084+00 s=2 e=0 z=0  None .text      __dt__22dPa_selectTexEcallBackFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2602,7 +2600,7 @@ asm dPa_selectTexEcallBack::~dPa_selectTexEcallBack() {
 #pragma pop
 
 
-/* 80050010-80050014 0004+00 r=1 e=0 z=0  None .text      setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 80050010-80050014 0004+00 s=1 e=0 z=0  None .text      setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2613,7 +2611,7 @@ asm void dPa_selectTexEcallBack::setup(JPABaseEmitter* param_0, cXyz const* para
 #pragma pop
 
 
-/* 80050014-80050038 0024+00 r=1 e=0 z=0  None .text      drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter            */
+/* 80050014-80050038 0024+00 s=1 e=0 z=0  None .text      drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2624,7 +2622,7 @@ asm void dPa_modelEcallBack::drawAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80050038-80050098 0060+00 r=2 e=0 z=0  None .text      __dt__18dPa_modelPcallBackFv                                 */
+/* 80050038-80050098 0060+00 s=2 e=0 z=0  None .text      __dt__18dPa_modelPcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2635,7 +2633,7 @@ asm dPa_modelPcallBack::~dPa_modelPcallBack() {
 #pragma pop
 
 
-/* 80050098-800500B8 0020+00 r=1 e=0 z=0  None .text      drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter     */
+/* 80050098-800500B8 0020+00 s=1 e=0 z=0  None .text      drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2646,7 +2644,7 @@ asm void dPa_gen_d_light8EcallBack::drawAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 800500B8-8005013C 0084+00 r=2 e=0 z=0  None .text      __dt__25dPa_gen_b_light8EcallBackFv                          */
+/* 800500B8-8005013C 0084+00 s=2 e=0 z=0  None .text      __dt__25dPa_gen_b_light8EcallBackFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2657,7 +2655,7 @@ asm dPa_gen_b_light8EcallBack::~dPa_gen_b_light8EcallBack() {
 #pragma pop
 
 
-/* 8005013C-8005015C 0020+00 r=1 e=0 z=0  None .text      drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter     */
+/* 8005013C-8005015C 0020+00 s=1 e=0 z=0  None .text      drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2668,7 +2666,7 @@ asm void dPa_gen_b_light8EcallBack::drawAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8005015C-800501E0 0084+00 r=2 e=0 z=0  None .text      __dt__19dPa_light8EcallBackFv                                */
+/* 8005015C-800501E0 0084+00 s=2 e=0 z=0  None .text      __dt__19dPa_light8EcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2679,7 +2677,7 @@ asm dPa_light8EcallBack::~dPa_light8EcallBack() {
 #pragma pop
 
 
-/* 800501E0-80050200 0020+00 r=1 e=0 z=0  None .text      drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter           */
+/* 800501E0-80050200 0020+00 s=1 e=0 z=0  None .text      drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2690,7 +2688,7 @@ asm void dPa_light8EcallBack::drawAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80050200-80050284 0084+00 r=1 e=0 z=0  None .text      __dt__19dPa_followEcallBackFv                                */
+/* 80050200-80050284 0084+00 s=1 e=0 z=0  None .text      __dt__19dPa_followEcallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2701,7 +2699,7 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 #pragma pop
 
 
-/* 80050284-800502B0 002C+00 r=1 e=0 z=0  None .text      cleanup__19dPa_followEcallBackFv                             */
+/* 80050284-800502B0 002C+00 s=1 e=0 z=0  None .text      cleanup__19dPa_followEcallBackFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2712,7 +2710,7 @@ asm void dPa_followEcallBack::cleanup() {
 #pragma pop
 
 
-/* 800502B0-800502E0 0030+00 r=1 e=0 z=0  None .text      draw__21dPa_setColorEcallBackFP14JPABaseEmitter              */
+/* 800502B0-800502E0 0030+00 s=1 e=0 z=0  None .text      draw__21dPa_setColorEcallBackFP14JPABaseEmitter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2723,7 +2721,7 @@ asm void dPa_setColorEcallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 800502E0-800502E4 0004+00 r=1 e=0 z=0  None .text      setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800502E0-800502E4 0004+00 s=1 e=0 z=0  None .text      setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2735,7 +2733,7 @@ asm void dPa_setColorEcallBack::setup(JPABaseEmitter* param_0, cXyz const* param
 
 
 /* ############################################################################################## */
-/* 803A8594-803A85D0 0024+18 r=2 e=0 z=0  None .data      __vt__21dPa_setColorEcallBack                                */
+/* 803A8594-803A85D0 0024+18 s=2 e=0 z=0  None .data      __vt__21dPa_setColorEcallBack                                */
 SECTION_DATA static void* __vt__21dPa_setColorEcallBack[9 + 6 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -2755,7 +2753,7 @@ SECTION_DATA static void* __vt__21dPa_setColorEcallBack[9 + 6 /* padding */] = {
 	NULL,
 };
 
-/* 800502E4-80050368 0084+00 r=2 e=0 z=0  None .text      __dt__21dPa_setColorEcallBackFv                              */
+/* 800502E4-80050368 0084+00 s=2 e=0 z=0  None .text      __dt__21dPa_setColorEcallBackFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2766,7 +2764,7 @@ asm dPa_setColorEcallBack::~dPa_setColorEcallBack() {
 #pragma pop
 
 
-/* 80050368-8005036C 0004+00 r=10 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
+/* 80050368-8005036C 0004+00 s=10 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2777,7 +2775,7 @@ asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 8005036C-80050370 0004+00 r=3 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
+/* 8005036C-80050370 0004+00 s=3 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2788,7 +2786,7 @@ asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80050370-80050374 0004+00 r=7 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
+/* 80050370-80050374 0004+00 s=7 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2799,7 +2797,7 @@ asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80050374-80050378 0004+00 r=9 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
+/* 80050374-80050378 0004+00 s=9 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2810,7 +2808,7 @@ asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
 #pragma pop
 
 
-/* 80050378-800503FC 0084+00 r=2 e=0 z=0  None .text      __dt__18dPa_modelEcallBackFv                                 */
+/* 80050378-800503FC 0084+00 s=2 e=0 z=0  None .text      __dt__18dPa_modelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2821,7 +2819,7 @@ asm dPa_modelEcallBack::~dPa_modelEcallBack() {
 #pragma pop
 
 
-/* 800503FC-80050480 0084+00 r=2 e=0 z=0  None .text      __dt__25dPa_gen_d_light8EcallBackFv                          */
+/* 800503FC-80050480 0084+00 s=2 e=0 z=0  None .text      __dt__25dPa_gen_d_light8EcallBackFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2832,7 +2830,7 @@ asm dPa_gen_d_light8EcallBack::~dPa_gen_d_light8EcallBack() {
 #pragma pop
 
 
-/* 80050480-80050C9C 081C+00 r=1 e=1 z=0  None .text      __sinit_d_particle_cpp                                       */
+/* 80050480-80050C9C 081C+00 s=0 e=1 z=0  None .text      __sinit_d_particle_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

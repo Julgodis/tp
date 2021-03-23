@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct dMdl_obj_c {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
+};
+
+struct dMdl_obj_c {
 };
 
 struct dMdl_c {
@@ -66,7 +66,6 @@ extern "C" void remove__10dMdl_mng_cFv(); // 1
 extern "C" void reset__10dMdl_mng_cFv(); // 1
 extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsi(); // 1
 extern "C" void __ct__6dMdl_cFv(); // 1
-extern "C" extern void* __vt__6dMdl_c[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -109,10 +108,10 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 // 
 
 /* ############################################################################################## */
-/* 80456B70-80456B78 0004+04 r=1 e=0 z=0  None .sbss2     @3621                                                        */
+/* 80456B70-80456B78 0004+04 s=1 e=0 z=0  None .sbss2     @3621                                                        */
 SECTION_SBSS2 static u8 d_d_model__lit_3621[4 + 4 /* padding */];
 
-/* 8009C4FC-8009C650 0154+00 r=1 e=0 z=0  None .text      draw__6dMdl_cFv                                              */
+/* 8009C4FC-8009C650 0154+00 s=1 e=0 z=0  None .text      draw__6dMdl_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +122,7 @@ asm void dMdl_c::draw() {
 #pragma pop
 
 
-/* 8009C650-8009C668 0018+00 r=2 e=0 z=1  None .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
+/* 8009C650-8009C668 0018+00 s=1 e=0 z=0  None .text      create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +133,7 @@ asm void dMdl_c::create(J3DModelData* param_0, u16 param_1, dKy_tevstr_c* param_
 #pragma pop
 
 
-/* 8009C668-8009C6DC 0074+00 r=5 e=0 z=5  None .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
+/* 8009C668-8009C6DC 0074+00 s=0 e=0 z=0  None .text      entryObj__6dMdl_cFP10dMdl_obj_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +144,7 @@ asm void dMdl_c::entryObj(dMdl_obj_c* param_0) {
 #pragma pop
 
 
-/* 8009C6DC-8009C724 0048+00 r=1 e=0 z=0  None .text      search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c        */
+/* 8009C6DC-8009C724 0048+00 s=1 e=0 z=0  None .text      search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +155,7 @@ asm void dMdl_mng_c::search(J3DModelData* param_0, u16 param_1, dKy_tevstr_c* pa
 #pragma pop
 
 
-/* 8009C724-8009C7AC 0088+00 r=1 e=0 z=0  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c         */
+/* 8009C724-8009C7AC 0088+00 s=1 e=0 z=0  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,10 +167,10 @@ asm void dMdl_mng_c::entry(J3DModelData* param_0, u16 param_1, dKy_tevstr_c* par
 
 
 /* ############################################################################################## */
-/* 80450FA0-80450FA8 0004+04 r=4 e=0 z=0  None .sbss      m_myObj__10dMdl_mng_c                                        */
+/* 80450FA0-80450FA8 0004+04 s=4 e=0 z=0  None .sbss      m_myObj__10dMdl_mng_c                                        */
 static u8 m_myObj__10dMdl_mng_c[4 + 4 /* padding */];
 
-/* 8009C7AC-8009C808 005C+00 r=1 e=1 z=0  None .text      create__10dMdl_mng_cFv                                       */
+/* 8009C7AC-8009C808 005C+00 s=0 e=1 z=0  None .text      create__10dMdl_mng_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,8 +182,8 @@ asm void dMdl_mng_c::create() {
 
 
 /* ############################################################################################## */
-/* 803AF978-803AF990 0014+04 r=3 e=0 z=1  None .data      __vt__6dMdl_c                                                */
-SECTION_DATA void* __vt__6dMdl_c[5 + 1 /* padding */] = {
+/* 803AF978-803AF990 0014+04 s=2 e=0 z=0  None .data      __vt__6dMdl_c                                                */
+SECTION_DATA static void* __vt__6dMdl_c[5 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
@@ -194,7 +193,7 @@ SECTION_DATA void* __vt__6dMdl_c[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8009C808-8009C864 005C+00 r=3 e=0 z=0  None .text      __dt__6dMdl_cFv                                              */
+/* 8009C808-8009C864 005C+00 s=3 e=0 z=0  None .text      __dt__6dMdl_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +204,7 @@ asm dMdl_c::~dMdl_c() {
 #pragma pop
 
 
-/* 8009C864-8009C8C0 005C+00 r=1 e=1 z=0  None .text      remove__10dMdl_mng_cFv                                       */
+/* 8009C864-8009C8C0 005C+00 s=0 e=1 z=0  None .text      remove__10dMdl_mng_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +215,7 @@ asm void dMdl_mng_c::remove() {
 #pragma pop
 
 
-/* 8009C8C0-8009C8D8 0018+00 r=1 e=1 z=0  None .text      reset__10dMdl_mng_cFv                                        */
+/* 8009C8C0-8009C8D8 0018+00 s=0 e=1 z=0  None .text      reset__10dMdl_mng_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +226,7 @@ asm void dMdl_mng_c::reset() {
 #pragma pop
 
 
-/* 8009C8D8-8009C930 0058+00 r=4 e=0 z=4  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsi                       */
+/* 8009C8D8-8009C930 0058+00 s=0 e=0 z=0  None .text      entry__10dMdl_mng_cFP12J3DModelDataUsi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +237,7 @@ asm void dMdl_mng_c::entry(J3DModelData* param_0, u16 param_1, int param_2) {
 #pragma pop
 
 
-/* 8009C930-8009C964 0034+00 r=1 e=0 z=0  None .text      __ct__6dMdl_cFv                                              */
+/* 8009C930-8009C964 0034+00 s=1 e=0 z=0  None .text      __ct__6dMdl_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -133,11 +133,11 @@ struct dPa_control_c {
 	/* 8004D7C4 */ void setSimpleFoot(u32, u32*, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, int, csXyz const*, cXyz const*, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -147,14 +147,14 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
 struct dBgS_SplGrpChk {
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078C78 */ ~dBgS_SplGrpChk();
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
 };
 
 struct dBgS {
@@ -203,7 +203,7 @@ struct J3DTexMtxInfo {
 
 void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
 void fopAcM_setStageLayer(void*); // 2
-void fopAcM_setRoomLayer(void*, int); // 2
+static void fopAcM_setRoomLayer(void*, int); // 2
 void fopAcM_SearchByID(unsigned int, fopAc_ac_c**); // 2
 void fopAcM_SearchByName(s16, fopAc_ac_c**); // 2
 void fopAcM_CreateAppend(); // 2
@@ -223,11 +223,11 @@ static void fopAcM_entrySolidHeap_(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
 void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
+static void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
 void fopAcM_setCullSizeSphere(fopAc_ac_c*, f32, f32, f32, f32); // 2
 void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
 void fopAcM_addAngleY(fopAc_ac_c*, s16, s16); // 2
-void fopAcM_calcSpeed(fopAc_ac_c*); // 2
+static void fopAcM_calcSpeed(fopAc_ac_c*); // 2
 void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
@@ -262,15 +262,15 @@ void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const
 void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*); // 2
 static void fopAcM_getItemNoFromTableNo(u8); // 2
 void fopAcM_createItemFromEnemyID(u8, cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*); // 2
-void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool); // 2
+static void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool); // 2
 static void fopAcM_createDemoItem(cXyz const*, int, int, csXyz const*, int, cXyz const*, u8); // 2
 void fopAcM_createItemForBoss(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32, int); // 2
 void fopAcM_createItemForMidBoss(cXyz const*, int, int, csXyz const*, cXyz const*, int, int); // 2
-void fopAcM_createItemForDirectGet(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32); // 2
+static void fopAcM_createItemForDirectGet(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32); // 2
 void fopAcM_createItemForSimpleDemo(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32); // 2
 void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int); // 2
 static void fopAcM_fastCreateItem2(cXyz const*, int, int, int, int, csXyz const*, cXyz const*); // 2
-void fopAcM_fastCreateItem(cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*, int, int, int (*)(void*)); // 2
+static void fopAcM_fastCreateItem(cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*, int, int, int (*)(void*)); // 2
 void fopAcM_createBokkuri(u16, cXyz const*, int, int, int, cXyz const*, int, int); // 2
 void fopAcM_createWarpHole(cXyz const*, csXyz const*, int, u8, u8, u8); // 2
 static void enemySearchJugge(void*, void*); // 2
@@ -303,7 +303,7 @@ void fopAcM_initManager(); // 2
 
 extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv(); // 1
 extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_setRoomLayer__FPvi(); // 1
+extern "C" static void fopAcM_setRoomLayer__FPvi(); // 1
 extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_SearchByName__FsPP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_CreateAppend__Fv(); // 1
@@ -323,11 +323,11 @@ extern "C" static void fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
 extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
 extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
+extern "C" static void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
 extern "C" void fopAcM_setCullSizeSphere__FP10fopAc_ac_cffff(); // 1
 extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
 extern "C" void fopAcM_addAngleY__FP10fopAc_ac_css(); // 1
-extern "C" void fopAcM_calcSpeed__FP10fopAc_ac_c(); // 1
+extern "C" static void fopAcM_calcSpeed__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
 extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
 extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
@@ -362,15 +362,15 @@ extern "C" void fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz();
 extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz(); // 1
 extern "C" static void fopAcM_getItemNoFromTableNo__FUc(); // 1
 extern "C" void fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf(); // 1
-extern "C" void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb(); // 1
+extern "C" static void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb(); // 1
 extern "C" static void fopAcM_createDemoItem__FPC4cXyziiPC5csXyziPC4cXyzUc(); // 1
 extern "C" void fopAcM_createItemForBoss__FPC4cXyziiPC5csXyzPC4cXyzffi(); // 1
 extern "C" void fopAcM_createItemForMidBoss__FPC4cXyziiPC5csXyzPC4cXyzii(); // 1
-extern "C" void fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff(); // 1
+extern "C" static void fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff(); // 1
 extern "C" void fopAcM_createItemForSimpleDemo__FPC4cXyziiPC5csXyzPC4cXyzff(); // 1
 extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi(); // 1
 extern "C" static void fopAcM_fastCreateItem2__FPC4cXyziiiiPC5csXyzPC4cXyz(); // 1
-extern "C" void fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i(); // 1
+extern "C" static void fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i(); // 1
 extern "C" void fopAcM_createBokkuri__FUsPC4cXyziiiPC4cXyzii(); // 1
 extern "C" void fopAcM_createWarpHole__FPC4cXyzPC5csXyziUcUcUc(); // 1
 extern "C" static void enemySearchJugge__FPvPv(); // 1
@@ -441,7 +441,6 @@ extern "C" extern u8 mRoofCheck__11fopAcM_rc_c[80];
 extern "C" extern u8 lit_6519[12];
 extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
-extern "C" extern u8 mRoofY__11fopAcM_rc_c[4];
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 
 // 
@@ -615,7 +614,7 @@ extern "C" extern u8 data_80451164[4];
 // Declarations:
 // 
 
-/* 800198A4-800198C4 0020+00 r=1 e=1 z=0  None .text      fopAcM_FastCreate__FsPFPv_iPvPv                              */
+/* 800198A4-800198C4 0020+00 s=0 e=1 z=0  None .text      fopAcM_FastCreate__FsPFPv_iPvPv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -626,7 +625,7 @@ asm void fopAcM_FastCreate(s16 param_0, int (*)(void*), void* param_2, void* par
 #pragma pop
 
 
-/* 800198C4-80019934 0070+00 r=24 e=5 z=18  None .text      fopAcM_setStageLayer__FPv                                    */
+/* 800198C4-80019934 0070+00 s=1 e=5 z=0  None .text      fopAcM_setStageLayer__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -637,18 +636,18 @@ asm void fopAcM_setStageLayer(void* param_0) {
 #pragma pop
 
 
-/* 80019934-800199BC 0088+00 r=3 e=0 z=2  None .text      fopAcM_setRoomLayer__FPvi                                    */
+/* 80019934-800199BC 0088+00 s=1 e=0 z=0  None .text      fopAcM_setRoomLayer__FPvi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_setRoomLayer(void* param_0, int param_1) {
+asm static void fopAcM_setRoomLayer(void* param_0, int param_1) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_setRoomLayer__FPvi.s"
 }
 #pragma pop
 
 
-/* 800199BC-80019A2C 0070+00 r=118 e=4 z=114  None .text      fopAcM_SearchByID__FUiPP10fopAc_ac_c                         */
+/* 800199BC-80019A2C 0070+00 s=0 e=4 z=0  None .text      fopAcM_SearchByID__FUiPP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -659,7 +658,7 @@ asm void fopAcM_SearchByID(unsigned int param_0, fopAc_ac_c** param_1) {
 #pragma pop
 
 
-/* 80019A2C-80019AA8 007C+00 r=28 e=0 z=28  None .text      fopAcM_SearchByName__FsPP10fopAc_ac_c                        */
+/* 80019A2C-80019AA8 007C+00 s=0 e=0 z=0  None .text      fopAcM_SearchByName__FsPP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -670,7 +669,7 @@ asm void fopAcM_SearchByName(s16 param_0, fopAc_ac_c** param_1) {
 #pragma pop
 
 
-/* 80019AA8-80019B1C 0074+00 r=8 e=7 z=0  None .text      fopAcM_CreateAppend__Fv                                      */
+/* 80019AA8-80019B1C 0074+00 s=1 e=7 z=0  None .text      fopAcM_CreateAppend__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,10 +681,10 @@ asm void fopAcM_CreateAppend() {
 
 
 /* ############################################################################################## */
-/* 80451C00-80451C04 0004+00 r=1 e=0 z=0  None .sdata2    @4263                                                        */
+/* 80451C00-80451C04 0004+00 s=1 e=0 z=0  None .sdata2    @4263                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4263 = 10.0f;
 
-/* 80019B1C-80019C78 015C+00 r=4 e=0 z=0  None .text      createAppend__FUsUlPC4cXyziPC5csXyzPC4cXyzScUi               */
+/* 80019B1C-80019C78 015C+00 s=4 e=0 z=0  None .text      createAppend__FUsUlPC4cXyziPC5csXyzPC4cXyzScUi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,7 +695,7 @@ asm static void createAppend(u16 param_0, u32 param_1, cXyz const* param_2, int 
 #pragma pop
 
 
-/* 80019C78-80019C7C 0004+00 r=3 e=0 z=0  None .text      fopAcM_Log__FPC10fopAc_ac_cPCc                               */
+/* 80019C78-80019C7C 0004+00 s=3 e=0 z=0  None .text      fopAcM_Log__FPC10fopAc_ac_cPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -708,24 +707,24 @@ asm static void fopAcM_Log(fopAc_ac_c const* param_0, char const* param_1) {
 
 
 /* ############################################################################################## */
-/* 80378880-8037888C 000C+00 r=1 e=0 z=0  None .rodata    @4932                                                        */
+/* 80378880-8037888C 000C+00 s=1 e=0 z=0  None .rodata    @4932                                                        */
 SECTION_RODATA static u8 const lit_4932[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037888C-80378898 000C+00 r=1 e=0 z=0  None .rodata    @4933                                                        */
+/* 8037888C-80378898 000C+00 s=1 e=0 z=0  None .rodata    @4933                                                        */
 SECTION_RODATA static u8 const lit_4933[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80378898-803788C8 0030+00 r=1 e=0 z=0  None .rodata    mtx_adj$6195                                                 */
+/* 80378898-803788C8 0030+00 s=1 e=0 z=0  None .rodata    mtx_adj$6195                                                 */
 SECTION_RODATA static u8 const data_80378898[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803788C8-80378A50 0181+07 r=5 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803788C8-80378A50 0181+07 s=5 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -748,7 +747,7 @@ SECTION_DEAD char const* const stringBase_80378A42 = "UNKOWN";
 SECTION_DEAD static char const* const pad_80378A49 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 80019C7C-80019CB8 003C+00 r=493 e=10 z=483  None .text      fopAcM_delete__FP10fopAc_ac_c                                */
+/* 80019C7C-80019CB8 003C+00 s=0 e=10 z=0  None .text      fopAcM_delete__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -759,7 +758,7 @@ asm void fopAcM_delete(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80019CB8-80019D18 0060+00 r=15 e=3 z=12  None .text      fopAcM_delete__FUi                                           */
+/* 80019CB8-80019D18 0060+00 s=0 e=3 z=0  None .text      fopAcM_delete__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -770,7 +769,7 @@ asm void fopAcM_delete(unsigned int param_0) {
 #pragma pop
 
 
-/* 80019D18-80019D98 0080+00 r=2 e=0 z=0  None .text      fopAcM_create__FsUsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i         */
+/* 80019D18-80019D98 0080+00 s=2 e=0 z=0  None .text      fopAcM_create__FsUsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -781,7 +780,7 @@ asm static void fopAcM_create(s16 param_0, u16 param_1, u32 param_2, cXyz const*
 #pragma pop
 
 
-/* 80019D98-80019E04 006C+00 r=84 e=11 z=70  None .text      fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc                 */
+/* 80019D98-80019E04 006C+00 s=3 e=11 z=0  None .text      fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,7 +791,7 @@ asm void fopAcM_create(s16 param_0, u32 param_1, cXyz const* param_2, int param_
 #pragma pop
 
 
-/* 80019E04-80019E6C 0068+00 r=29 e=6 z=18  None .text      fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv     */
+/* 80019E04-80019E6C 0068+00 s=5 e=6 z=0  None .text      fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -803,7 +802,7 @@ asm void fopAcM_fastCreate(s16 param_0, u32 param_1, cXyz const* param_2, int pa
 #pragma pop
 
 
-/* 80019E6C-80019EF0 0084+00 r=1 e=1 z=0  None .text      fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv     */
+/* 80019E6C-80019EF0 0084+00 s=0 e=1 z=0  None .text      fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +813,7 @@ asm void fopAcM_fastCreate(char const* param_0, u32 param_1, cXyz const* param_2
 #pragma pop
 
 
-/* 80019EF0-80019F78 0088+00 r=106 e=1 z=105  None .text      fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i    */
+/* 80019EF0-80019F78 0088+00 s=0 e=1 z=0  None .text      fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -825,7 +824,7 @@ asm void fopAcM_createChild(s16 param_0, unsigned int param_1, u32 param_2, cXyz
 #pragma pop
 
 
-/* 80019F78-8001A138 01C0+00 r=6 e=0 z=6  None .text      fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i */
+/* 80019F78-8001A138 01C0+00 s=0 e=0 z=0  None .text      fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +835,7 @@ asm void fopAcM_createChildFromOffset(s16 param_0, unsigned int param_1, u32 par
 #pragma pop
 
 
-/* 8001A138-8001A188 0050+00 r=2 e=1 z=1  None .text      fopAcM_DeleteHeap__FP10fopAc_ac_c                            */
+/* 8001A138-8001A188 0050+00 s=0 e=1 z=0  None .text      fopAcM_DeleteHeap__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -847,7 +846,7 @@ asm void fopAcM_DeleteHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8001A188-8001A1E8 0060+00 r=1 e=0 z=0  None .text      fopAcM_callCallback__FP10fopAc_ac_cPFP10fopAc_ac_c_iP7JKRHeap */
+/* 8001A188-8001A1E8 0060+00 s=1 e=0 z=0  None .text      fopAcM_callCallback__FP10fopAc_ac_cPFP10fopAc_ac_c_iP7JKRHeap */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,10 +858,10 @@ asm static void fopAcM_callCallback(fopAc_ac_c* param_0, int (*)(fopAc_ac_c*), J
 
 
 /* ############################################################################################## */
-/* 80450CC8-80450CCC 0004+00 r=2 e=0 z=0  None .sbss      None                                                         */
+/* 80450CC8-80450CCC 0004+00 s=2 e=0 z=0  None .sbss      None                                                         */
 static u8 struct_80450CC8[4];
 
-/* 8001A1E8-8001A4B0 02C8+00 r=1 e=0 z=0  None .text      fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl    */
+/* 8001A1E8-8001A4B0 02C8+00 s=1 e=0 z=0  None .text      fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,7 +872,7 @@ asm static void fopAcM_entrySolidHeap_(fopAc_ac_c* param_0, int (*)(fopAc_ac_c*)
 #pragma pop
 
 
-/* 8001A4B0-8001A528 0078+00 r=450 e=4 z=446  None .text      fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl     */
+/* 8001A4B0-8001A528 0078+00 s=0 e=4 z=0  None .text      fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -884,7 +883,7 @@ asm void fopAcM_entrySolidHeap(fopAc_ac_c* param_0, int (*)(fopAc_ac_c*), u32 pa
 #pragma pop
 
 
-/* 8001A528-8001A538 0010+00 r=136 e=0 z=136  None .text      fopAcM_SetMin__FP10fopAc_ac_cfff                             */
+/* 8001A528-8001A538 0010+00 s=0 e=0 z=0  None .text      fopAcM_SetMin__FP10fopAc_ac_cfff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -895,7 +894,7 @@ asm void fopAcM_SetMin(fopAc_ac_c* param_0, f32 param_1, f32 param_2, f32 param_
 #pragma pop
 
 
-/* 8001A538-8001A548 0010+00 r=136 e=0 z=136  None .text      fopAcM_SetMax__FP10fopAc_ac_cfff                             */
+/* 8001A538-8001A548 0010+00 s=0 e=0 z=0  None .text      fopAcM_SetMax__FP10fopAc_ac_cfff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -906,18 +905,18 @@ asm void fopAcM_SetMax(fopAc_ac_c* param_0, f32 param_1, f32 param_2, f32 param_
 #pragma pop
 
 
-/* 8001A548-8001A564 001C+00 r=261 e=0 z=260  None .text      fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff                  */
+/* 8001A548-8001A564 001C+00 s=1 e=0 z=0  None .text      fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_setCullSizeBox(fopAc_ac_c* param_0, f32 param_1, f32 param_2, f32 param_3, f32 param_4, f32 param_5, f32 param_6) {
+asm static void fopAcM_setCullSizeBox(fopAc_ac_c* param_0, f32 param_1, f32 param_2, f32 param_3, f32 param_4, f32 param_5, f32 param_6) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff.s"
 }
 #pragma pop
 
 
-/* 8001A564-8001A578 0014+00 r=4 e=0 z=4  None .text      fopAcM_setCullSizeSphere__FP10fopAc_ac_cffff                 */
+/* 8001A564-8001A578 0014+00 s=0 e=0 z=0  None .text      fopAcM_setCullSizeSphere__FP10fopAc_ac_cffff                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -928,7 +927,7 @@ asm void fopAcM_setCullSizeSphere(fopAc_ac_c* param_0, f32 param_1, f32 param_2,
 #pragma pop
 
 
-/* 8001A578-8001A5DC 0064+00 r=123 e=0 z=123  None .text      fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData        */
+/* 8001A578-8001A5DC 0064+00 s=0 e=0 z=0  None .text      fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -939,7 +938,7 @@ asm void fopAcM_setCullSizeBox2(fopAc_ac_c* param_0, J3DModelData* param_1) {
 #pragma pop
 
 
-/* 8001A5DC-8001A60C 0030+00 r=1 e=0 z=1  None .text      fopAcM_addAngleY__FP10fopAc_ac_css                           */
+/* 8001A5DC-8001A60C 0030+00 s=0 e=0 z=0  None .text      fopAcM_addAngleY__FP10fopAc_ac_css                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -950,18 +949,18 @@ asm void fopAcM_addAngleY(fopAc_ac_c* param_0, s16 param_1, s16 param_2) {
 #pragma pop
 
 
-/* 8001A60C-8001A660 0054+00 r=9 e=0 z=8  None .text      fopAcM_calcSpeed__FP10fopAc_ac_c                             */
+/* 8001A60C-8001A660 0054+00 s=1 e=0 z=0  None .text      fopAcM_calcSpeed__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_calcSpeed(fopAc_ac_c* param_0) {
+asm static void fopAcM_calcSpeed(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_calcSpeed__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8001A660-8001A6CC 006C+00 r=19 e=1 z=17  None .text      fopAcM_posMove__FP10fopAc_ac_cPC4cXyz                        */
+/* 8001A660-8001A6CC 006C+00 s=1 e=1 z=0  None .text      fopAcM_posMove__FP10fopAc_ac_cPC4cXyz                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -972,7 +971,7 @@ asm void fopAcM_posMove(fopAc_ac_c* param_0, cXyz const* param_1) {
 #pragma pop
 
 
-/* 8001A6CC-8001A710 0044+00 r=142 e=5 z=137  None .text      fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz                       */
+/* 8001A6CC-8001A710 0044+00 s=0 e=5 z=0  None .text      fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -983,7 +982,7 @@ asm void fopAcM_posMoveF(fopAc_ac_c* param_0, cXyz const* param_1) {
 #pragma pop
 
 
-/* 8001A710-8001A738 0028+00 r=623 e=26 z=596  None .text      fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c      */
+/* 8001A710-8001A738 0028+00 s=1 e=26 z=0  None .text      fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -995,12 +994,12 @@ asm void fopAcM_searchActorAngleY(fopAc_ac_c const* param_0, fopAc_ac_c const* p
 
 
 /* ############################################################################################## */
-/* 80451C04-80451C08 0004+00 r=13 e=0 z=0  None .sdata2    @4645                                                        */
+/* 80451C04-80451C08 0004+00 s=13 e=0 z=0  None .sdata2    @4645                                                        */
 SECTION_SDATA2 static u8 f_op_f_op_actor_mng__lit_4645[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001A738-8001A79C 0064+00 r=13 e=0 z=13  None .text      fopAcM_searchActorAngleX__FPC10fopAc_ac_cPC10fopAc_ac_c      */
+/* 8001A738-8001A79C 0064+00 s=0 e=0 z=0  None .text      fopAcM_searchActorAngleX__FPC10fopAc_ac_cPC10fopAc_ac_c      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1011,7 +1010,7 @@ asm void fopAcM_searchActorAngleX(fopAc_ac_c const* param_0, fopAc_ac_c const* p
 #pragma pop
 
 
-/* 8001A79C-8001A7E0 0044+00 r=18 e=3 z=15  None .text      fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c        */
+/* 8001A79C-8001A7E0 0044+00 s=0 e=3 z=0  None .text      fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1023,18 +1022,18 @@ asm void fopAcM_seenActorAngleY(fopAc_ac_c const* param_0, fopAc_ac_c const* par
 
 
 /* ############################################################################################## */
-/* 80451C08-80451C10 0008+00 r=3 e=0 z=0  None .sdata2    @4745                                                        */
+/* 80451C08-80451C10 0008+00 s=3 e=0 z=0  None .sdata2    @4745                                                        */
 SECTION_SDATA2 static f64 f_op_f_op_actor_mng__lit_4745 = 0.5;
 
-/* 80451C10-80451C18 0008+00 r=3 e=0 z=0  None .sdata2    @4746                                                        */
+/* 80451C10-80451C18 0008+00 s=3 e=0 z=0  None .sdata2    @4746                                                        */
 SECTION_SDATA2 static f64 f_op_f_op_actor_mng__lit_4746 = 3.0;
 
-/* 80451C18-80451C20 0008+00 r=4 e=0 z=0  None .sdata2    @4747                                                        */
+/* 80451C18-80451C20 0008+00 s=4 e=0 z=0  None .sdata2    @4747                                                        */
 SECTION_SDATA2 static u8 f_op_f_op_actor_mng__lit_4747[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001A7E0-8001A914 0134+00 r=193 e=5 z=188  None .text      fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c    */
+/* 8001A7E0-8001A914 0134+00 s=0 e=5 z=0  None .text      fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1045,7 +1044,7 @@ asm void fopAcM_searchActorDistance(fopAc_ac_c const* param_0, fopAc_ac_c const*
 #pragma pop
 
 
-/* 8001A914-8001A964 0050+00 r=2 e=0 z=2  None .text      fopAcM_searchActorDistance2__FPC10fopAc_ac_cPC10fopAc_ac_c   */
+/* 8001A914-8001A964 0050+00 s=0 e=0 z=0  None .text      fopAcM_searchActorDistance2__FPC10fopAc_ac_cPC10fopAc_ac_c   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1056,7 +1055,7 @@ asm void fopAcM_searchActorDistance2(fopAc_ac_c const* param_0, fopAc_ac_c const
 #pragma pop
 
 
-/* 8001A964-8001AA94 0130+00 r=128 e=3 z=125  None .text      fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c  */
+/* 8001A964-8001AA94 0130+00 s=0 e=3 z=0  None .text      fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1067,7 +1066,7 @@ asm void fopAcM_searchActorDistanceXZ(fopAc_ac_c const* param_0, fopAc_ac_c cons
 #pragma pop
 
 
-/* 8001AA94-8001AAE0 004C+00 r=35 e=4 z=30  None .text      fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c */
+/* 8001AA94-8001AAE0 004C+00 s=1 e=4 z=0  None .text      fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1079,13 +1078,13 @@ asm void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const* param_0, fopAc_ac_c con
 
 
 /* ############################################################################################## */
-/* 80451C20-80451C24 0004+00 r=1 e=0 z=0  None .sdata2    @4922                                                        */
+/* 80451C20-80451C24 0004+00 s=1 e=0 z=0  None .sdata2    @4922                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4922 = 40.0f;
 
-/* 80451C24-80451C28 0004+00 r=1 e=0 z=0  None .sdata2    @4923                                                        */
+/* 80451C24-80451C28 0004+00 s=1 e=0 z=0  None .sdata2    @4923                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4923 = 55.0f;
 
-/* 8001AAE0-8001AC40 0160+00 r=2 e=0 z=2  None .text      fopAcM_rollPlayerCrash__FPC10fopAc_ac_cfUlffif               */
+/* 8001AAE0-8001AC40 0160+00 s=0 e=0 z=0  None .text      fopAcM_rollPlayerCrash__FPC10fopAc_ac_cfUlffif               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1096,7 +1095,7 @@ asm void fopAcM_rollPlayerCrash(fopAc_ac_c const* param_0, f32 param_1, u32 para
 #pragma pop
 
 
-/* 8001AC40-8001ACEC 00AC+00 r=2 e=0 z=2  None .text      fopAcM_checkCullingBox__FPA4_fffffff                         */
+/* 8001AC40-8001ACEC 00AC+00 s=0 e=0 z=0  None .text      fopAcM_checkCullingBox__FPA4_fffffff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1108,7 +1107,7 @@ asm void fopAcM_checkCullingBox(f32 (* param_0)[4], f32 param_1, f32 param_2, f3
 
 
 /* ############################################################################################## */
-/* 803A35F0-803A3740 0150+00 r=1 e=0 z=0  None .data      l_cullSizeBox                                                */
+/* 803A35F0-803A3740 0150+00 s=1 e=0 z=0  None .data      l_cullSizeBox                                                */
 SECTION_DATA static u8 l_cullSizeBox[336] = {
 	0xC2, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x20, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 	0x42, 0xFA, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00, 0xC1, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1133,7 +1132,7 @@ SECTION_DATA static u8 l_cullSizeBox[336] = {
 	0xC2, 0x70, 0x00, 0x00, 0x42, 0x70, 0x00, 0x00, 0x43, 0x20, 0x00, 0x00, 0x42, 0x70, 0x00, 0x00,
 };
 
-/* 803A3740-803A37C0 0080+00 r=1 e=0 z=0  None .data      l_cullSizeSphere                                             */
+/* 803A3740-803A37C0 0080+00 s=1 e=0 z=0  None .data      l_cullSizeSphere                                             */
 SECTION_DATA static u8 l_cullSizeSphere[128] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0xA0, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
@@ -1145,7 +1144,7 @@ SECTION_DATA static u8 l_cullSizeSphere[128] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00,
 };
 
-/* 8001ACEC-8001B058 036C+00 r=2 e=1 z=1  None .text      fopAcM_cullingCheck__FPC10fopAc_ac_c                         */
+/* 8001ACEC-8001B058 036C+00 s=0 e=1 z=0  None .text      fopAcM_cullingCheck__FPC10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1156,7 +1155,7 @@ asm void fopAcM_cullingCheck(fopAc_ac_c const* param_0) {
 #pragma pop
 
 
-/* 8001B058-8001B068 0010+00 r=5 e=0 z=0  None .text      event_second_actor__FUs                                      */
+/* 8001B058-8001B068 0010+00 s=5 e=0 z=0  None .text      event_second_actor__FUs                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1167,7 +1166,7 @@ asm static void event_second_actor(u16 param_0) {
 #pragma pop
 
 
-/* 8001B068-8001B0FC 0094+00 r=3 e=3 z=0  None .text      fopAcM_orderTalkEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs       */
+/* 8001B068-8001B0FC 0094+00 s=0 e=3 z=0  None .text      fopAcM_orderTalkEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1178,7 +1177,7 @@ asm void fopAcM_orderTalkEvent(fopAc_ac_c* param_0, fopAc_ac_c* param_1, u16 par
 #pragma pop
 
 
-/* 8001B0FC-8001B19C 00A0+00 r=1 e=1 z=0  None .text      fopAcM_orderTalkItemBtnEvent__FUsP10fopAc_ac_cP10fopAc_ac_cUsUs */
+/* 8001B0FC-8001B19C 00A0+00 s=0 e=1 z=0  None .text      fopAcM_orderTalkItemBtnEvent__FUsP10fopAc_ac_cP10fopAc_ac_cUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1189,7 +1188,7 @@ asm void fopAcM_orderTalkItemBtnEvent(u16 param_0, fopAc_ac_c* param_1, fopAc_ac
 #pragma pop
 
 
-/* 8001B19C-8001B244 00A8+00 r=19 e=3 z=16  None .text      fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs                   */
+/* 8001B19C-8001B244 00A8+00 s=0 e=3 z=0  None .text      fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1200,7 +1199,7 @@ asm void fopAcM_orderSpeakEvent(fopAc_ac_c* param_0, u16 param_1, u16 param_2) {
 #pragma pop
 
 
-/* 8001B244-8001B334 00F0+00 r=2 e=2 z=0  None .text      fopAcM_orderDoorEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs       */
+/* 8001B244-8001B334 00F0+00 s=0 e=2 z=0  None .text      fopAcM_orderDoorEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1211,7 +1210,7 @@ asm void fopAcM_orderDoorEvent(fopAc_ac_c* param_0, fopAc_ac_c* param_1, u16 par
 #pragma pop
 
 
-/* 8001B334-8001B3CC 0098+00 r=1 e=1 z=0  None .text      fopAcM_orderCatchEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs      */
+/* 8001B334-8001B3CC 0098+00 s=0 e=1 z=0  None .text      fopAcM_orderCatchEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1222,7 +1221,7 @@ asm void fopAcM_orderCatchEvent(fopAc_ac_c* param_0, fopAc_ac_c* param_1, u16 pa
 #pragma pop
 
 
-/* 8001B3CC-8001B4E0 0114+00 r=8 e=2 z=6  None .text      fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs              */
+/* 8001B3CC-8001B4E0 0114+00 s=0 e=2 z=0  None .text      fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1233,7 +1232,7 @@ asm void fopAcM_orderOtherEvent(fopAc_ac_c* param_0, char const* param_1, u16 pa
 #pragma pop
 
 
-/* 8001B4E0-8001B5E4 0104+00 r=3 e=1 z=2  None .text      fopAcM_orderOtherEvent__FP10fopAc_ac_cP10fopAc_ac_cPCcUsUsUs */
+/* 8001B4E0-8001B5E4 0104+00 s=0 e=1 z=0  None .text      fopAcM_orderOtherEvent__FP10fopAc_ac_cP10fopAc_ac_cPCcUsUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1244,7 +1243,7 @@ asm void fopAcM_orderOtherEvent(fopAc_ac_c* param_0, fopAc_ac_c* param_1, char c
 #pragma pop
 
 
-/* 8001B5E4-8001B67C 0098+00 r=43 e=2 z=41  None .text      fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs               */
+/* 8001B5E4-8001B67C 0098+00 s=0 e=2 z=0  None .text      fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1255,7 +1254,7 @@ asm void fopAcM_orderChangeEventId(fopAc_ac_c* param_0, s16 param_1, u16 param_2
 #pragma pop
 
 
-/* 8001B67C-8001B7B4 0138+00 r=111 e=10 z=101  None .text      fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs            */
+/* 8001B67C-8001B7B4 0138+00 s=0 e=10 z=0  None .text      fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1266,7 +1265,7 @@ asm void fopAcM_orderOtherEventId(fopAc_ac_c* param_0, s16 param_1, u8 param_2, 
 #pragma pop
 
 
-/* 8001B7B4-8001B8E0 012C+00 r=6 e=1 z=4  None .text      fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs            */
+/* 8001B7B4-8001B8E0 012C+00 s=1 e=1 z=0  None .text      fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1277,7 +1276,7 @@ asm void fopAcM_orderMapToolEvent(fopAc_ac_c* param_0, u8 param_1, s16 param_2, 
 #pragma pop
 
 
-/* 8001B8E0-8001B908 0028+00 r=2 e=1 z=1  None .text      fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs    */
+/* 8001B8E0-8001B908 0028+00 s=0 e=1 z=0  None .text      fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1288,7 +1287,7 @@ asm void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c* param_0, u8 param_1, s16 p
 #pragma pop
 
 
-/* 8001B908-8001B9D0 00C8+00 r=106 e=0 z=106  None .text      fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs             */
+/* 8001B908-8001B9D0 00C8+00 s=0 e=0 z=0  None .text      fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1299,7 +1298,7 @@ asm void fopAcM_orderPotentialEvent(fopAc_ac_c* param_0, u16 param_1, u16 param_
 #pragma pop
 
 
-/* 8001B9D0-8001BA7C 00AC+00 r=15 e=3 z=12  None .text      fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs                    */
+/* 8001B9D0-8001BA7C 00AC+00 s=0 e=3 z=0  None .text      fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1310,7 +1309,7 @@ asm void fopAcM_orderItemEvent(fopAc_ac_c* param_0, u16 param_1, u16 param_2) {
 #pragma pop
 
 
-/* 8001BA7C-8001BB14 0098+00 r=1 e=1 z=0  None .text      fopAcM_orderTreasureEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs   */
+/* 8001BA7C-8001BB14 0098+00 s=0 e=1 z=0  None .text      fopAcM_orderTreasureEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1321,7 +1320,7 @@ asm void fopAcM_orderTreasureEvent(fopAc_ac_c* param_0, fopAc_ac_c* param_1, u16
 #pragma pop
 
 
-/* 8001BB14-8001BB44 0030+00 r=21 e=11 z=10  None .text      fopAcM_getTalkEventPartner__FPC10fopAc_ac_c                  */
+/* 8001BB14-8001BB44 0030+00 s=0 e=11 z=0  None .text      fopAcM_getTalkEventPartner__FPC10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1332,7 +1331,7 @@ asm void fopAcM_getTalkEventPartner(fopAc_ac_c const* param_0) {
 #pragma pop
 
 
-/* 8001BB44-8001BB74 0030+00 r=5 e=5 z=0  None .text      fopAcM_getItemEventPartner__FPC10fopAc_ac_c                  */
+/* 8001BB44-8001BB74 0030+00 s=0 e=5 z=0  None .text      fopAcM_getItemEventPartner__FPC10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1343,7 +1342,7 @@ asm void fopAcM_getItemEventPartner(fopAc_ac_c const* param_0) {
 #pragma pop
 
 
-/* 8001BB74-8001BBE8 0074+00 r=1 e=1 z=0  None .text      fopAcM_getEventPartner__FPC10fopAc_ac_c                      */
+/* 8001BB74-8001BBE8 0074+00 s=0 e=1 z=0  None .text      fopAcM_getEventPartner__FPC10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1354,7 +1353,7 @@ asm void fopAcM_getEventPartner(fopAc_ac_c const* param_0) {
 #pragma pop
 
 
-/* 8001BBE8-8001BC74 008C+00 r=48 e=5 z=43  None .text      fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz */
+/* 8001BBE8-8001BC74 008C+00 s=0 e=5 z=0  None .text      fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1365,7 +1364,7 @@ asm void fopAcM_createItemForPresentDemo(cXyz const* param_0, int param_1, u8 pa
 #pragma pop
 
 
-/* 8001BC74-8001BCFC 0088+00 r=12 e=2 z=10  None .text      fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz    */
+/* 8001BC74-8001BCFC 0088+00 s=0 e=2 z=0  None .text      fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1377,10 +1376,10 @@ asm void fopAcM_createItemForTrBoxDemo(cXyz const* param_0, int param_1, int par
 
 
 /* ############################################################################################## */
-/* 80451C28-80451C2C 0004+00 r=1 e=0 z=0  None .sdata2    @5584                                                        */
+/* 80451C28-80451C2C 0004+00 s=1 e=0 z=0  None .sdata2    @5584                                                        */
 SECTION_SDATA2 static f32 lit_5584 = 15.999899864196777f;
 
-/* 8001BCFC-8001BE14 0118+00 r=2 e=0 z=0  None .text      fopAcM_getItemNoFromTableNo__FUc                             */
+/* 8001BCFC-8001BE14 0118+00 s=2 e=0 z=0  None .text      fopAcM_getItemNoFromTableNo__FUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1391,7 +1390,7 @@ asm static void fopAcM_getItemNoFromTableNo(u8 param_0) {
 #pragma pop
 
 
-/* 8001BE14-8001BF64 0150+00 r=9 e=0 z=9  None .text      fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf */
+/* 8001BE14-8001BF64 0150+00 s=0 e=0 z=0  None .text      fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1402,18 +1401,18 @@ asm void fopAcM_createItemFromEnemyID(u8 param_0, cXyz const* param_1, int param
 #pragma pop
 
 
-/* 8001BF64-8001C078 0114+00 r=12 e=0 z=11  None .text      fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb */
+/* 8001BF64-8001C078 0114+00 s=1 e=0 z=0  None .text      fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_createItemFromTable(cXyz const* param_0, int param_1, int param_2, int param_3, csXyz const* param_4, int param_5, cXyz const* param_6, f32* param_7, f32* param_8, bool param_9) {
+asm static void fopAcM_createItemFromTable(cXyz const* param_0, int param_1, int param_2, int param_3, csXyz const* param_4, int param_5, cXyz const* param_6, f32* param_7, f32* param_8, bool param_9) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb.s"
 }
 #pragma pop
 
 
-/* 8001C078-8001C0D4 005C+00 r=2 e=0 z=0  None .text      fopAcM_createDemoItem__FPC4cXyziiPC5csXyziPC4cXyzUc          */
+/* 8001C078-8001C0D4 005C+00 s=2 e=0 z=0  None .text      fopAcM_createDemoItem__FPC4cXyziiPC5csXyziPC4cXyzUc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1424,7 +1423,7 @@ asm static void fopAcM_createDemoItem(cXyz const* param_0, int param_1, int para
 #pragma pop
 
 
-/* 8001C0D4-8001C174 00A0+00 r=18 e=0 z=18  None .text      fopAcM_createItemForBoss__FPC4cXyziiPC5csXyzPC4cXyzffi       */
+/* 8001C0D4-8001C174 00A0+00 s=0 e=0 z=0  None .text      fopAcM_createItemForBoss__FPC4cXyziiPC5csXyzPC4cXyzffi       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1435,7 +1434,7 @@ asm void fopAcM_createItemForBoss(cXyz const* param_0, int param_1, int param_2,
 #pragma pop
 
 
-/* 8001C174-8001C1B8 0044+00 r=2 e=0 z=2  None .text      fopAcM_createItemForMidBoss__FPC4cXyziiPC5csXyzPC4cXyzii     */
+/* 8001C174-8001C1B8 0044+00 s=0 e=0 z=0  None .text      fopAcM_createItemForMidBoss__FPC4cXyziiPC5csXyzPC4cXyzii     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1446,18 +1445,18 @@ asm void fopAcM_createItemForMidBoss(cXyz const* param_0, int param_1, int param
 #pragma pop
 
 
-/* 8001C1B8-8001C1FC 0044+00 r=3 e=0 z=1  None .text      fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff   */
+/* 8001C1B8-8001C1FC 0044+00 s=2 e=0 z=0  None .text      fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_createItemForDirectGet(cXyz const* param_0, int param_1, int param_2, csXyz const* param_3, cXyz const* param_4, f32 param_5, f32 param_6) {
+asm static void fopAcM_createItemForDirectGet(cXyz const* param_0, int param_1, int param_2, csXyz const* param_3, cXyz const* param_4, f32 param_5, f32 param_6) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff.s"
 }
 #pragma pop
 
 
-/* 8001C1FC-8001C240 0044+00 r=5 e=2 z=3  None .text      fopAcM_createItemForSimpleDemo__FPC4cXyziiPC5csXyzPC4cXyzff  */
+/* 8001C1FC-8001C240 0044+00 s=0 e=2 z=0  None .text      fopAcM_createItemForSimpleDemo__FPC4cXyziiPC5csXyzPC4cXyzff  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1469,10 +1468,10 @@ asm void fopAcM_createItemForSimpleDemo(cXyz const* param_0, int param_1, int pa
 
 
 /* ############################################################################################## */
-/* 80451C2C-80451C30 0004+00 r=2 e=0 z=0  None .sdata2    @5711                                                        */
+/* 80451C2C-80451C30 0004+00 s=2 e=0 z=0  None .sdata2    @5711                                                        */
 SECTION_SDATA2 static f32 lit_5711 = 32767.0f;
 
-/* 8001C240-8001C3E0 01A0+00 r=19 e=1 z=17  None .text      fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi               */
+/* 8001C240-8001C3E0 01A0+00 s=1 e=1 z=0  None .text      fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1483,7 +1482,7 @@ asm void fopAcM_createItem(cXyz const* param_0, int param_1, int param_2, int pa
 #pragma pop
 
 
-/* 8001C3E0-8001C5B0 01D0+00 r=1 e=0 z=0  None .text      fopAcM_fastCreateItem2__FPC4cXyziiiiPC5csXyzPC4cXyz          */
+/* 8001C3E0-8001C5B0 01D0+00 s=1 e=0 z=0  None .text      fopAcM_fastCreateItem2__FPC4cXyziiiiPC5csXyzPC4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1495,26 +1494,26 @@ asm static void fopAcM_fastCreateItem2(cXyz const* param_0, int param_1, int par
 
 
 /* ############################################################################################## */
-/* 80451C30-80451C34 0004+00 r=1 e=0 z=0  None .sdata2    @5808                                                        */
+/* 80451C30-80451C34 0004+00 s=1 e=0 z=0  None .sdata2    @5808                                                        */
 SECTION_SDATA2 static f32 lit_5808 = 2.0f;
 
-/* 80451C34-80451C38 0004+00 r=1 e=0 z=0  None .sdata2    @5809                                                        */
+/* 80451C34-80451C38 0004+00 s=1 e=0 z=0  None .sdata2    @5809                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5809 = 8192.0f;
 
-/* 80451C38-80451C3C 0004+00 r=4 e=0 z=0  None .sdata2    @5810                                                        */
+/* 80451C38-80451C3C 0004+00 s=4 e=0 z=0  None .sdata2    @5810                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5810 = 1.0f;
 
-/* 80451C3C-80451C40 0004+00 r=1 e=0 z=0  None .sdata2    @5811                                                        */
+/* 80451C3C-80451C40 0004+00 s=1 e=0 z=0  None .sdata2    @5811                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5811 = 3.0f / 10.0f;
 
-/* 80451C40-80451C44 0004+00 r=1 e=0 z=0  None .sdata2    @5812                                                        */
+/* 80451C40-80451C44 0004+00 s=1 e=0 z=0  None .sdata2    @5812                                                        */
 SECTION_SDATA2 static f32 lit_5812 = 1.0f / 5.0f;
 
-/* 8001C5B0-8001C870 02C0+00 r=7 e=0 z=4  None .text      fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i */
+/* 8001C5B0-8001C870 02C0+00 s=3 e=0 z=0  None .text      fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopAcM_fastCreateItem(cXyz const* param_0, int param_1, int param_2, csXyz const* param_3, cXyz const* param_4, f32* param_5, f32* param_6, int param_7, int param_8, int (*)(void*)) {
+asm static void fopAcM_fastCreateItem(cXyz const* param_0, int param_1, int param_2, csXyz const* param_3, cXyz const* param_4, f32* param_5, f32* param_6, int param_7, int param_8, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i.s"
 }
@@ -1522,10 +1521,10 @@ asm void fopAcM_fastCreateItem(cXyz const* param_0, int param_1, int param_2, cs
 
 
 /* ############################################################################################## */
-/* 80451C44-80451C48 0004+00 r=1 e=0 z=0  None .sdata2    @5845                                                        */
+/* 80451C44-80451C48 0004+00 s=1 e=0 z=0  None .sdata2    @5845                                                        */
 SECTION_SDATA2 static f32 lit_5845 = 2048.0f;
 
-/* 8001C870-8001C95C 00EC+00 r=1 e=0 z=1  None .text      fopAcM_createBokkuri__FUsPC4cXyziiiPC4cXyzii                 */
+/* 8001C870-8001C95C 00EC+00 s=0 e=0 z=0  None .text      fopAcM_createBokkuri__FUsPC4cXyziiiPC4cXyzii                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1536,7 +1535,7 @@ asm void fopAcM_createBokkuri(u16 param_0, cXyz const* param_1, int param_2, int
 #pragma pop
 
 
-/* 8001C95C-8001C9CC 0070+00 r=12 e=0 z=12  None .text      fopAcM_createWarpHole__FPC4cXyzPC5csXyziUcUcUc               */
+/* 8001C95C-8001C9CC 0070+00 s=0 e=0 z=0  None .text      fopAcM_createWarpHole__FPC4cXyzPC5csXyziUcUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1547,7 +1546,7 @@ asm void fopAcM_createWarpHole(cXyz const* param_0, csXyz const* param_1, int pa
 #pragma pop
 
 
-/* 8001C9CC-8001CA1C 0050+00 r=1 e=0 z=0  None .text      enemySearchJugge__FPvPv                                      */
+/* 8001C9CC-8001CA1C 0050+00 s=1 e=0 z=0  None .text      enemySearchJugge__FPvPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1558,7 +1557,7 @@ asm static void enemySearchJugge(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 8001CA1C-8001CAD8 00BC+00 r=6 e=0 z=6  None .text      fopAcM_myRoomSearchEnemy__FSc                                */
+/* 8001CA1C-8001CAD8 00BC+00 s=0 e=0 z=0  None .text      fopAcM_myRoomSearchEnemy__FSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1569,7 +1568,7 @@ asm void fopAcM_myRoomSearchEnemy(s8 param_0) {
 #pragma pop
 
 
-/* 8001CAD8-8001CB48 0070+00 r=81 e=0 z=81  None .text      fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc         */
+/* 8001CAD8-8001CB48 0070+00 s=0 e=0 z=0  None .text      fopAcM_createDisappear__FPC10fopAc_ac_cPC4cXyzUcUcUc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1580,7 +1579,7 @@ asm void fopAcM_createDisappear(fopAc_ac_c const* param_0, cXyz const* param_1, 
 #pragma pop
 
 
-/* 8001CB48-8001CBA0 0058+00 r=13 e=6 z=7  None .text      fopAcM_setCarryNow__FP10fopAc_ac_ci                          */
+/* 8001CB48-8001CBA0 0058+00 s=0 e=6 z=0  None .text      fopAcM_setCarryNow__FP10fopAc_ac_ci                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1591,7 +1590,7 @@ asm void fopAcM_setCarryNow(fopAc_ac_c* param_0, int param_1) {
 #pragma pop
 
 
-/* 8001CBA0-8001CC5C 00BC+00 r=26 e=5 z=21  None .text      fopAcM_cancelCarryNow__FP10fopAc_ac_c                        */
+/* 8001CBA0-8001CC5C 00BC+00 s=0 e=5 z=0  None .text      fopAcM_cancelCarryNow__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1602,7 +1601,7 @@ asm void fopAcM_cancelCarryNow(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8001CC5C-8001CDFC 01A0+00 r=9 e=0 z=9  None .text      fopAcM_otoCheck__FPC10fopAc_ac_cf                            */
+/* 8001CC5C-8001CDFC 01A0+00 s=0 e=0 z=0  None .text      fopAcM_otoCheck__FPC10fopAc_ac_cf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1614,10 +1613,10 @@ asm void fopAcM_otoCheck(fopAc_ac_c const* param_0, f32 param_1) {
 
 
 /* ############################################################################################## */
-/* 80451C48-80451C4C 0004+00 r=2 e=0 z=0  None .sdata2    @6035                                                        */
+/* 80451C48-80451C4C 0004+00 s=2 e=0 z=0  None .sdata2    @6035                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_6035 = 100.0f;
 
-/* 8001CDFC-8001CED0 00D4+00 r=49 e=0 z=49  None .text      fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c           */
+/* 8001CDFC-8001CED0 00D4+00 s=0 e=0 z=0  None .text      fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1629,10 +1628,10 @@ asm void fopAcM_otherBgCheck(fopAc_ac_c const* param_0, fopAc_ac_c const* param_
 
 
 /* ############################################################################################## */
-/* 80451C4C-80451C50 0004+00 r=1 e=0 z=0  None .sdata2    @6068                                                        */
+/* 80451C4C-80451C50 0004+00 s=1 e=0 z=0  None .sdata2    @6068                                                        */
 SECTION_SDATA2 static f32 lit_6068 = 50.0f;
 
-/* 8001CED0-8001CFD8 0108+00 r=18 e=0 z=18  None .text      fopAcM_wayBgCheck__FPC10fopAc_ac_cff                         */
+/* 8001CED0-8001CFD8 0108+00 s=0 e=0 z=0  None .text      fopAcM_wayBgCheck__FPC10fopAc_ac_cff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1643,7 +1642,7 @@ asm void fopAcM_wayBgCheck(fopAc_ac_c const* param_0, f32 param_1, f32 param_2) 
 #pragma pop
 
 
-/* 8001CFD8-8001D020 0048+00 r=2 e=0 z=2  None .text      fopAcM_plAngleCheck__FPC10fopAc_ac_cs                        */
+/* 8001CFD8-8001D020 0048+00 s=0 e=0 z=0  None .text      fopAcM_plAngleCheck__FPC10fopAc_ac_cs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1655,40 +1654,40 @@ asm void fopAcM_plAngleCheck(fopAc_ac_c const* param_0, s16 param_1) {
 
 
 /* ############################################################################################## */
-/* 803F1C00-803F1C0C 000C+00 r=1 e=0 z=0  None .bss       @4176                                                        */
+/* 803F1C00-803F1C0C 000C+00 s=1 e=0 z=0  None .bss       @4176                                                        */
 static u8 f_op_f_op_actor_mng__lit_4176[12];
 
-/* 803F1C0C-803F1C18 000C+00 r=0 e=0 z=0  None .bss       @5078                                                        */
+/* 803F1C0C-803F1C18 000C+00 s=0 e=0 z=0  None .bss       @5078                                                        */
 u8 lit_5078[12];
 
-/* 803F1C18-803F1C24 000C+00 r=0 e=0 z=0  None .bss       min$5077                                                     */
+/* 803F1C18-803F1C24 000C+00 s=0 e=0 z=0  None .bss       min$5077                                                     */
 u8 data_803F1C18[12];
 
-/* 803F1C24-803F1C30 000C+00 r=0 e=0 z=0  None .bss       @5115                                                        */
+/* 803F1C24-803F1C30 000C+00 s=0 e=0 z=0  None .bss       @5115                                                        */
 u8 f_op_f_op_actor_mng__lit_5115[12];
 
-/* 803F1C30-803F1C3C 000C+00 r=0 e=0 z=0  None .bss       max$5114                                                     */
+/* 803F1C30-803F1C3C 000C+00 s=0 e=0 z=0  None .bss       max$5114                                                     */
 u8 data_803F1C30[12];
 
-/* 803F1C3C-803F1C48 000C+00 r=0 e=0 z=0  None .bss       @6481                                                        */
+/* 803F1C3C-803F1C48 000C+00 s=0 e=0 z=0  None .bss       @6481                                                        */
 u8 lit_6481[12];
 
-/* 803F1C48-803F1CB8 0070+00 r=14 e=4 z=9  None .bss       mLineCheck__11fopAcM_lc_c                                    */
+/* 803F1C48-803F1CB8 0070+00 s=1 e=4 z=0  None .bss       mLineCheck__11fopAcM_lc_c                                    */
 u8 mLineCheck__11fopAcM_lc_c[112];
 
-/* 803F1CB8-803F1CC4 000C+00 r=0 e=0 z=0  None .bss       @6503                                                        */
+/* 803F1CB8-803F1CC4 000C+00 s=0 e=0 z=0  None .bss       @6503                                                        */
 u8 f_op_f_op_actor_mng__lit_6503[12];
 
-/* 803F1CC4-803F1D18 0054+00 r=34 e=6 z=26  None .bss       mGndCheck__11fopAcM_gc_c                                     */
+/* 803F1CC4-803F1D18 0054+00 s=2 e=6 z=0  None .bss       mGndCheck__11fopAcM_gc_c                                     */
 u8 mGndCheck__11fopAcM_gc_c[84];
 
-/* 80450CCC-80450CD0 0001+03 r=1 e=0 z=0  None .sbss      l_hio                                                        */
+/* 80450CCC-80450CD0 0001+03 s=1 e=0 z=0  None .sbss      l_hio                                                        */
 static u8 l_hio[1 + 3 /* padding */];
 
-/* 80450CD0-80450CD4 0004+00 r=112 e=7 z=103  None .sbss      mGroundY__11fopAcM_gc_c                                      */
+/* 80450CD0-80450CD4 0004+00 s=2 e=7 z=0  None .sbss      mGroundY__11fopAcM_gc_c                                      */
 f32 mGroundY__11fopAcM_gc_c;
 
-/* 8001D020-8001D10C 00EC+00 r=96 e=0 z=96  None .text      fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci */
+/* 8001D020-8001D10C 00EC+00 s=0 e=0 z=0  None .text      fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1700,12 +1699,12 @@ asm void fopAcM_effSmokeSet1(u32* param_0, u32* param_1, cXyz const* param_2, cs
 
 
 /* ############################################################################################## */
-/* 80451C50-80451C54 0004+00 r=1 e=0 z=0  None .sdata2    hamon_name$6107                                              */
+/* 80451C50-80451C54 0004+00 s=1 e=0 z=0  None .sdata2    hamon_name$6107                                              */
 SECTION_SDATA2 static u8 data_80451C50[4] = {
 	0x01, 0xB2, 0x01, 0xB3,
 };
 
-/* 8001D10C-8001D1F4 00E8+00 r=42 e=1 z=41  None .text      fopAcM_effHamonSet__FPUlPC4cXyzff                            */
+/* 8001D10C-8001D1F4 00E8+00 s=0 e=1 z=0  None .text      fopAcM_effHamonSet__FPUlPC4cXyzff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1716,7 +1715,7 @@ asm void fopAcM_effHamonSet(u32* param_0, cXyz const* param_1, f32 param_2, f32 
 #pragma pop
 
 
-/* 8001D1F4-8001D1FC 0008+00 r=7 e=0 z=7  None .text      fopAcM_riverStream__FP4cXyzPsPff                             */
+/* 8001D1F4-8001D1FC 0008+00 s=0 e=0 z=0  None .text      fopAcM_riverStream__FP4cXyzPsPff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1728,10 +1727,10 @@ asm void fopAcM_riverStream(cXyz* param_0, s16* param_1, f32* param_2, f32 param
 
 
 /* ############################################################################################## */
-/* 80451C54-80451C58 0004+00 r=1 e=0 z=0  None .sdata2    @6174                                                        */
+/* 80451C54-80451C58 0004+00 s=1 e=0 z=0  None .sdata2    @6174                                                        */
 SECTION_SDATA2 static f32 lit_6174 = 150.0f;
 
-/* 8001D1FC-8001D32C 0130+00 r=12 e=0 z=12  None .text      fopAcM_carryOffRevise__FP10fopAc_ac_c                        */
+/* 8001D1FC-8001D32C 0130+00 s=0 e=0 z=0  None .text      fopAcM_carryOffRevise__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1742,7 +1741,7 @@ asm void fopAcM_carryOffRevise(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8001D32C-8001D3D4 00A8+00 r=1 e=0 z=0  None .text      vectle_calc__FPC10DOUBLE_POSP4cXyz                           */
+/* 8001D32C-8001D3D4 00A8+00 s=1 e=0 z=0  None .text      vectle_calc__FPC10DOUBLE_POSP4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1753,7 +1752,7 @@ asm static void vectle_calc(DOUBLE_POS const* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 8001D3D4-8001D42C 0058+00 r=1 e=0 z=0  None .text      get_vectle_calc__FPC4cXyzPC4cXyzP4cXyz                       */
+/* 8001D3D4-8001D42C 0058+00 s=1 e=0 z=0  None .text      get_vectle_calc__FPC4cXyzPC4cXyzP4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1764,7 +1763,7 @@ asm static void get_vectle_calc(cXyz const* param_0, cXyz const* param_1, cXyz* 
 #pragma pop
 
 
-/* 8001D42C-8001D5A4 0178+00 r=43 e=3 z=40  None .text      fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData         */
+/* 8001D42C-8001D5A4 0178+00 s=0 e=3 z=0  None .text      fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1775,7 +1774,7 @@ asm void fopAcM_setEffectMtx(fopAc_ac_c const* param_0, J3DModelData const* para
 #pragma pop
 
 
-/* 8001D5A4-8001D5EC 0048+00 r=1 e=0 z=0  None .text      fopAcM_getProcNameString__FPC10fopAc_ac_c                    */
+/* 8001D5A4-8001D5EC 0048+00 s=1 e=0 z=0  None .text      fopAcM_getProcNameString__FPC10fopAc_ac_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1786,7 +1785,7 @@ asm static void fopAcM_getProcNameString(fopAc_ac_c const* param_0) {
 #pragma pop
 
 
-/* 8001D5EC-8001D698 00AC+00 r=1 e=0 z=0  None .text      fopAcM_findObjectCB__FPC10fopAc_ac_cPv                       */
+/* 8001D5EC-8001D698 00AC+00 s=1 e=0 z=0  None .text      fopAcM_findObjectCB__FPC10fopAc_ac_cPv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1797,7 +1796,7 @@ asm static void fopAcM_findObjectCB(fopAc_ac_c const* param_0, void* param_1) {
 #pragma pop
 
 
-/* 8001D698-8001D6F0 0058+00 r=2 e=1 z=1  None .text      fopAcM_searchFromName__FPCcUlUl                              */
+/* 8001D698-8001D6F0 0058+00 s=0 e=1 z=0  None .text      fopAcM_searchFromName__FPCcUlUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1808,7 +1807,7 @@ asm void fopAcM_searchFromName(char const* param_0, u32 param_1, u32 param_2) {
 #pragma pop
 
 
-/* 8001D6F0-8001D7A0 00B0+00 r=1 e=0 z=0  None .text      fopAcM_findObject4EventCB__FP10fopAc_ac_cPv                  */
+/* 8001D6F0-8001D7A0 00B0+00 s=1 e=0 z=0  None .text      fopAcM_findObject4EventCB__FP10fopAc_ac_cPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1819,7 +1818,7 @@ asm static void fopAcM_findObject4EventCB(fopAc_ac_c* param_0, void* param_1) {
 #pragma pop
 
 
-/* 8001D7A0-8001D890 00F0+00 r=7 e=7 z=0  None .text      fopAcM_searchFromName4Event__FPCcs                           */
+/* 8001D7A0-8001D890 00F0+00 s=0 e=7 z=0  None .text      fopAcM_searchFromName4Event__FPCcs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1831,28 +1830,28 @@ asm void fopAcM_searchFromName4Event(char const* param_0, s16 param_1) {
 
 
 /* ############################################################################################## */
-/* 803F1D18-803F1D24 000C+00 r=0 e=0 z=0  None .bss       @6509                                                        */
+/* 803F1D18-803F1D24 000C+00 s=0 e=0 z=0  None .bss       @6509                                                        */
 u8 f_op_f_op_actor_mng__lit_6509[12];
 
-/* 803F1D24-803F1D74 0050+00 r=3 e=1 z=1  None .bss       mRoofCheck__11fopAcM_rc_c                                    */
+/* 803F1D24-803F1D74 0050+00 s=1 e=1 z=0  None .bss       mRoofCheck__11fopAcM_rc_c                                    */
 u8 mRoofCheck__11fopAcM_rc_c[80];
 
-/* 803F1D74-803F1D80 000C+00 r=0 e=0 z=0  None .bss       @6519                                                        */
+/* 803F1D74-803F1D80 000C+00 s=0 e=0 z=0  None .bss       @6519                                                        */
 u8 lit_6519[12];
 
-/* 803F1D80-803F1DD8 0054+04 r=9 e=3 z=4  None .bss       mWaterCheck__11fopAcM_wt_c                                   */
+/* 803F1D80-803F1DD8 0054+04 s=2 e=3 z=0  None .bss       mWaterCheck__11fopAcM_wt_c                                   */
 u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
 
-/* 80450CD4-80450CD8 0004+00 r=4 e=0 z=3  None .sbss      mRoofY__11fopAcM_rc_c                                        */
-u8 mRoofY__11fopAcM_rc_c[4];
+/* 80450CD4-80450CD8 0004+00 s=1 e=0 z=0  None .sbss      mRoofY__11fopAcM_rc_c                                        */
+static u8 mRoofY__11fopAcM_rc_c[4];
 
-/* 80450CD8-80450CE0 0004+04 r=25 e=4 z=19  None .sbss      mWaterY__11fopAcM_wt_c                                       */
+/* 80450CD8-80450CE0 0004+04 s=2 e=4 z=0  None .sbss      mWaterY__11fopAcM_wt_c                                       */
 f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 
-/* 80451C58-80451C5C 0004+00 r=2 e=0 z=0  None .sdata2    @6353                                                        */
+/* 80451C58-80451C5C 0004+00 s=2 e=0 z=0  None .sdata2    @6353                                                        */
 SECTION_SDATA2 static f32 lit_6353 = -1000000000.0f;
 
-/* 8001D890-8001D900 0070+00 r=21 e=2 z=19  None .text      fopAcM_getWaterY__FPC4cXyzPf                                 */
+/* 8001D890-8001D900 0070+00 s=0 e=2 z=0  None .text      fopAcM_getWaterY__FPC4cXyzPf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1863,7 +1862,7 @@ asm void fopAcM_getWaterY(cXyz const* param_0, f32* param_1) {
 #pragma pop
 
 
-/* 8001D900-8001D9A8 00A8+00 r=4 e=2 z=2  None .text      fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz             */
+/* 8001D900-8001D9A8 00A8+00 s=0 e=2 z=0  None .text      fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1874,7 +1873,7 @@ asm void fpoAcM_relativePos(fopAc_ac_c const* param_0, cXyz const* param_1, cXyz
 #pragma pop
 
 
-/* 8001D9A8-8001DAE4 013C+00 r=10 e=1 z=9  None .text      fopAcM_getWaterStream__FPC4cXyzRC13cBgS_PolyInfoP4cXyzPii    */
+/* 8001D9A8-8001DAE4 013C+00 s=0 e=1 z=0  None .text      fopAcM_getWaterStream__FPC4cXyzRC13cBgS_PolyInfoP4cXyzPii    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1886,14 +1885,14 @@ asm void fopAcM_getWaterStream(cXyz const* param_0, cBgS_PolyInfo const& param_1
 
 
 /* ############################################################################################## */
-/* 803A37C0-803A37CC 000C+00 r=95 e=93 z=0  None .data      __vt__8cM3dGPla                                              */
+/* 803A37C0-803A37CC 000C+00 s=2 e=93 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA void* __vt__8cM3dGPla[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8cM3dGPlaFv,
 };
 
-/* 8001DAE4-8001DB90 00AC+00 r=10 e=2 z=8  None .text      fopAcM_getPolygonAngle__FRC13cBgS_PolyInfos                  */
+/* 8001DAE4-8001DB90 00AC+00 s=0 e=2 z=0  None .text      fopAcM_getPolygonAngle__FRC13cBgS_PolyInfos                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1904,7 +1903,7 @@ asm void fopAcM_getPolygonAngle(cBgS_PolyInfo const& param_0, s16 param_1) {
 #pragma pop
 
 
-/* 8001DB90-8001DBD8 0048+00 r=10 e=9 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 8001DB90-8001DBD8 0048+00 s=1 e=9 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1915,7 +1914,7 @@ asm cM3dGPla::~cM3dGPla() {
 #pragma pop
 
 
-/* 8001DBD8-8001DC68 0090+00 r=24 e=5 z=18  None .text      fopAcM_getPolygonAngle__FPC8cM3dGPlas                        */
+/* 8001DBD8-8001DC68 0090+00 s=1 e=5 z=0  None .text      fopAcM_getPolygonAngle__FPC8cM3dGPlas                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1926,7 +1925,7 @@ asm void fopAcM_getPolygonAngle(cM3dGPla const* param_0, s16 param_1) {
 #pragma pop
 
 
-/* 8001DC68-8001DCBC 0054+00 r=26 e=5 z=21  None .text      lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c        */
+/* 8001DC68-8001DCBC 0054+00 s=0 e=5 z=0  None .text      lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1937,7 +1936,7 @@ asm void fopAcM_lc_c::lineCheck(cXyz const* param_0, cXyz const* param_1, fopAc_
 #pragma pop
 
 
-/* 8001DCBC-8001DD1C 0060+00 r=119 e=10 z=108  None .text      gndCheck__11fopAcM_gc_cFPC4cXyz                              */
+/* 8001DCBC-8001DD1C 0060+00 s=1 e=10 z=0  None .text      gndCheck__11fopAcM_gc_cFPC4cXyz                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1949,10 +1948,10 @@ asm void fopAcM_gc_c::gndCheck(cXyz const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451C5C-80451C60 0004+00 r=1 e=0 z=0  None .sdata2    @6517                                                        */
+/* 80451C5C-80451C60 0004+00 s=1 e=0 z=0  None .sdata2    @6517                                                        */
 SECTION_SDATA2 static f32 lit_6517 = 1000000000.0f;
 
-/* 8001DD1C-8001DD84 0068+00 r=3 e=0 z=3  None .text      roofCheck__11fopAcM_rc_cFPC4cXyz                             */
+/* 8001DD1C-8001DD84 0068+00 s=0 e=0 z=0  None .text      roofCheck__11fopAcM_rc_cFPC4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1964,14 +1963,14 @@ asm void fopAcM_rc_c::roofCheck(cXyz const* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451C60-80451C68 0004+04 r=1 e=0 z=0  None .sdata2    @6538                                                        */
+/* 80451C60-80451C68 0004+04 s=1 e=0 z=0  None .sdata2    @6538                                                        */
 SECTION_SDATA2 static f32 lit_6538[1 + 1 /* padding */] = {
 	500.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8001DD84-8001DE10 008C+00 r=27 e=4 z=22  None .text      waterCheck__11fopAcM_wt_cFPC4cXyz                            */
+/* 8001DD84-8001DE10 008C+00 s=1 e=4 z=0  None .text      waterCheck__11fopAcM_wt_cFPC4cXyz                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1982,7 +1981,7 @@ asm void fopAcM_wt_c::waterCheck(cXyz const* param_0) {
 #pragma pop
 
 
-/* 8001DE10-8001DE14 0004+00 r=1 e=1 z=0  None .text      fopAcM_initManager__Fv                                       */
+/* 8001DE10-8001DE14 0004+00 s=0 e=1 z=0  None .text      fopAcM_initManager__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1994,7 +1993,7 @@ asm void fopAcM_initManager() {
 
 
 /* ############################################################################################## */
-/* 803A37CC-803A37FC 0030+00 r=2 e=0 z=0  None .data      __vt__15dBgS_ObjRoofChk                                      */
+/* 803A37CC-803A37FC 0030+00 s=2 e=0 z=0  None .data      __vt__15dBgS_ObjRoofChk                                      */
 SECTION_DATA static void* __vt__15dBgS_ObjRoofChk[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -2010,7 +2009,7 @@ SECTION_DATA static void* __vt__15dBgS_ObjRoofChk[12] = {
 	/* 11   */ (void*)func_8001E10C,
 };
 
-/* 803A37FC-803A382C 0030+00 r=3 e=2 z=0  None .data      __vt__11dBgS_WtrChk                                          */
+/* 803A37FC-803A382C 0030+00 s=1 e=2 z=0  None .data      __vt__11dBgS_WtrChk                                          */
 SECTION_DATA void* __vt__11dBgS_WtrChk[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -2026,7 +2025,7 @@ SECTION_DATA void* __vt__11dBgS_WtrChk[12] = {
 	/* 11   */ (void*)func_8001E0F4,
 };
 
-/* 803A382C-803A3860 0030+04 r=12 e=10 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
+/* 803A382C-803A3860 0030+04 s=2 e=10 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -2044,7 +2043,7 @@ SECTION_DATA void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8001DE14-8001DF30 011C+00 r=1 e=1 z=0  None .text      __sinit_f_op_actor_mng_cpp                                   */
+/* 8001DE14-8001DF30 011C+00 s=0 e=1 z=0  None .text      __sinit_f_op_actor_mng_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2055,7 +2054,7 @@ extern "C" asm void __sinit_f_op_actor_mng_cpp() {
 #pragma pop
 
 
-/* 8001DF30-8001DFA8 0078+00 r=5 e=0 z=0  None .text      __dt__11dBgS_WtrChkFv                                        */
+/* 8001DF30-8001DFA8 0078+00 s=5 e=0 z=0  None .text      __dt__11dBgS_WtrChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2066,7 +2065,7 @@ asm dBgS_WtrChk::~dBgS_WtrChk() {
 #pragma pop
 
 
-/* 8001DFA8-8001E020 0078+00 r=5 e=0 z=0  None .text      __dt__15dBgS_ObjRoofChkFv                                    */
+/* 8001DFA8-8001E020 0078+00 s=5 e=0 z=0  None .text      __dt__15dBgS_ObjRoofChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2077,7 +2076,7 @@ asm dBgS_ObjRoofChk::~dBgS_ObjRoofChk() {
 #pragma pop
 
 
-/* 8001E020-8001E098 0078+00 r=5 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 8001E020-8001E098 0078+00 s=5 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2088,7 +2087,7 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* 8001E098-8001E0D4 003C+00 r=1 e=0 z=0  None .text      __dt__5l_HIOFv                                               */
+/* 8001E098-8001E0D4 003C+00 s=1 e=0 z=0  None .text      __dt__5l_HIOFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2099,7 +2098,7 @@ asm l_HIO::~l_HIO() {
 #pragma pop
 
 
-/* 8001E0D4-8001E0DC 0008+00 r=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 8001E0D4-8001E0DC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2110,7 +2109,7 @@ extern "C" asm static void func_8001E0D4() {
 #pragma pop
 
 
-/* 8001E0DC-8001E0E4 0008+00 r=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 8001E0DC-8001E0E4 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2121,7 +2120,7 @@ extern "C" asm static void func_8001E0DC() {
 #pragma pop
 
 
-/* 8001E0E4-8001E0EC 0008+00 r=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 8001E0E4-8001E0EC 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2132,7 +2131,7 @@ extern "C" asm static void func_8001E0E4() {
 #pragma pop
 
 
-/* 8001E0EC-8001E0F4 0008+00 r=1 e=0 z=0  None .text      @16@__dt__11dBgS_WtrChkFv                                    */
+/* 8001E0EC-8001E0F4 0008+00 s=1 e=0 z=0  None .text      @16@__dt__11dBgS_WtrChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2143,7 +2142,7 @@ extern "C" asm static void func_8001E0EC() {
 #pragma pop
 
 
-/* 8001E0F4-8001E0FC 0008+00 r=1 e=0 z=0  None .text      @52@__dt__11dBgS_WtrChkFv                                    */
+/* 8001E0F4-8001E0FC 0008+00 s=1 e=0 z=0  None .text      @52@__dt__11dBgS_WtrChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2154,7 +2153,7 @@ extern "C" asm static void func_8001E0F4() {
 #pragma pop
 
 
-/* 8001E0FC-8001E104 0008+00 r=1 e=0 z=0  None .text      @36@__dt__11dBgS_WtrChkFv                                    */
+/* 8001E0FC-8001E104 0008+00 s=1 e=0 z=0  None .text      @36@__dt__11dBgS_WtrChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2165,7 +2164,7 @@ extern "C" asm static void func_8001E0FC() {
 #pragma pop
 
 
-/* 8001E104-8001E10C 0008+00 r=1 e=0 z=0  None .text      @16@__dt__15dBgS_ObjRoofChkFv                                */
+/* 8001E104-8001E10C 0008+00 s=1 e=0 z=0  None .text      @16@__dt__15dBgS_ObjRoofChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2176,7 +2175,7 @@ extern "C" asm static void func_8001E104() {
 #pragma pop
 
 
-/* 8001E10C-8001E114 0008+00 r=1 e=0 z=0  None .text      @52@__dt__15dBgS_ObjRoofChkFv                                */
+/* 8001E10C-8001E114 0008+00 s=1 e=0 z=0  None .text      @52@__dt__15dBgS_ObjRoofChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2187,7 +2186,7 @@ extern "C" asm static void func_8001E10C() {
 #pragma pop
 
 
-/* 8001E114-8001E11C 0008+00 r=1 e=0 z=0  None .text      @36@__dt__15dBgS_ObjRoofChkFv                                */
+/* 8001E114-8001E11C 0008+00 s=1 e=0 z=0  None .text      @36@__dt__15dBgS_ObjRoofChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2198,7 +2197,7 @@ extern "C" asm static void func_8001E114() {
 #pragma pop
 
 
-/* 8001E11C-8001E120 0004+00 r=1 e=1 z=0  None .text      onFrollCrashFlg__9daPy_py_cFUci                              */
+/* 8001E11C-8001E120 0004+00 s=0 e=1 z=0  None .text      onFrollCrashFlg__9daPy_py_cFUci                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2209,7 +2208,7 @@ asm void daPy_py_c::onFrollCrashFlg(u8 param_0, int param_1) {
 #pragma pop
 
 
-/* 8001E120-8001E128 0008+00 r=1 e=1 z=0  None .text      checkWolfDash__9daPy_py_cCFv                                 */
+/* 8001E120-8001E128 0008+00 s=0 e=1 z=0  None .text      checkWolfDash__9daPy_py_cCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2220,7 +2219,7 @@ asm void daPy_py_c::checkWolfDash() const {
 #pragma pop
 
 
-/* 8001E128-8001E130 0008+00 r=1 e=1 z=0  None .text      checkFrontRoll__9daPy_py_cCFv                                */
+/* 8001E128-8001E130 0008+00 s=0 e=1 z=0  None .text      checkFrontRoll__9daPy_py_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2231,7 +2230,7 @@ asm void daPy_py_c::checkFrontRoll() const {
 #pragma pop
 
 
-/* 8001E130-8001E138 0008+00 r=1 e=1 z=0  None .text      checkHorseRide__9daPy_py_cCFv                                */
+/* 8001E130-8001E138 0008+00 s=0 e=1 z=0  None .text      checkHorseRide__9daPy_py_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2242,7 +2241,7 @@ asm void daPy_py_c::checkHorseRide() const {
 #pragma pop
 
 
-/* 8001E138-8001E140 0008+00 r=1 e=1 z=0  None .text      getGrabActorID__9daPy_py_cCFv                                */
+/* 8001E138-8001E140 0008+00 s=0 e=1 z=0  None .text      getGrabActorID__9daPy_py_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_805A8FA8[2];
+extern u8 data_805A8FA8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_ykgr_cpp(); // 1
 
 // 
 // Declarations:

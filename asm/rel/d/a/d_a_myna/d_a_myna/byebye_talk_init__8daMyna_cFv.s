@@ -5,11 +5,11 @@ lbl_80947794:
 /* 809477A0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809477A4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 809477A8 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 809477AC 00000018  4B FF E4 2D */	bl dMsgObject_getTotalPayment__Fv
+/* 809477AC 00000018  4B FF E4 2D */	bl _unresolved
 /* 809477B0 0000001C  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 809477B4 00000020  A8 1F 09 22 */	lha r0, 0x922(r31)
 /* 809477B8 00000024  7F C0 18 50 */	subf r30, r0, r3
-/* 809477BC 00000028  4B FF E4 1D */	bl dMsgObject_getTotalPrice__Fv
+/* 809477BC 00000028  4B FF E4 1D */	bl _unresolved
 /* 809477C0 0000002C  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 809477C4 00000030  A8 1F 09 20 */	lha r0, 0x920(r31)
 /* 809477C8 00000034  7C 00 18 50 */	subf r0, r0, r3
@@ -60,12 +60,12 @@ lbl_8094785C:
 /* 8094785C 00000000  88 1F 09 33 */	lbz r0, 0x933(r31)
 /* 80947860 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80947864 00000008  40 82 00 3C */	bne lbl_809478A0
-/* 80947868 0000000C  4B FF E3 71 */	bl dMsgObject_getTotalPayment__Fv
+/* 80947868 0000000C  4B FF E3 71 */	bl _unresolved
 /* 8094786C 00000010  B0 7F 09 22 */	sth r3, 0x922(r31)
-/* 80947870 00000014  4B FF E3 69 */	bl dMsgObject_getTotalPrice__Fv
+/* 80947870 00000014  4B FF E3 69 */	bl _unresolved
 /* 80947874 00000018  B0 7F 09 20 */	sth r3, 0x920(r31)
-/* 80947878 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8094787C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80947878 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8094787C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80947880 00000024  80 83 5D BC */	lwz r4, 0x5dbc(r3)
 /* 80947884 00000028  38 00 00 00 */	li r0, 0
 /* 80947888 0000002C  B0 04 01 7A */	sth r0, 0x17a(r4)
@@ -80,7 +80,7 @@ lbl_809478A0:
 /* 809478A8 00000008  A0 BF 09 1C */	lhz r5, 0x91c(r31)
 /* 809478AC 0000000C  38 C0 00 00 */	li r6, 0
 /* 809478B0 00000010  38 E0 00 00 */	li r7, 0
-/* 809478B4 00000014  4B FF E3 25 */	bl init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
+/* 809478B4 00000014  4B FF E3 25 */	bl _unresolved
 /* 809478B8 00000018  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 809478BC 0000001C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 809478C0 00000020  80 01 00 14 */	lwz r0, 0x14(r1)

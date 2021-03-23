@@ -27,7 +27,7 @@ extern "C" void __dt__26__partial_array_destructorFv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80005600-80005648 0048+00 r=5 e=5 z=0  None .extab     _section_symbol_extab                                        */
+/* 80005600-80005648 0048+00 s=0 e=5 z=0  None .extab     _section_symbol_extab                                        */
 SECTION_EXTAB void* _section_symbol_extab[18] = {
 	/* 0    */ (void*)0x30080000,
 	/* 1    */ (void*)NULL,

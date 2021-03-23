@@ -9,7 +9,7 @@ lbl_80ACA0DC:
 /* 80ACA0F8 0000001C  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80ACA0FC 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80ACA100 00000024  40 82 00 1C */	bne lbl_80ACA11C
-/* 80ACA104 00000028  4B FF F4 F5 */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80ACA104 00000028  4B FF F4 F5 */	bl _unresolved
 /* 80ACA108 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACA10C 00000030  40 82 00 14 */	bne lbl_80ACA120
 /* 80ACA110 00000034  88 1E 0A 89 */	lbz r0, 0xa89(r30)

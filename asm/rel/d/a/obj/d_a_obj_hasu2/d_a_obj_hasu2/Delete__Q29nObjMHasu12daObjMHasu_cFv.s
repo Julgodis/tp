@@ -6,10 +6,10 @@ lbl_80C186A4:
 /* 80C186B4 00000010  41 82 00 08 */	beq lbl_80C186BC
 /* 80C186B8 00000014  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_80C186BC:
-/* 80C186BC 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C18AA8 */
-/* 80C186C0 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C18AA8 */
+/* 80C186BC 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C186C0 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C186C4 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C186C8 0000000C  4B FF FB B1 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C186C8 0000000C  4B FF FB B1 */	bl _unresolved
 /* 80C186CC 00000010  38 60 00 01 */	li r3, 1
 /* 80C186D0 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C186D4 00000018  7C 08 03 A6 */	mtlr r0

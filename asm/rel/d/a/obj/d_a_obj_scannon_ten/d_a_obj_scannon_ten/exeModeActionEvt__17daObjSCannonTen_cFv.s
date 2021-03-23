@@ -5,25 +5,25 @@ lbl_80CCBD4C:
 /* 80CCBD58 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CCBD5C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CCBD60 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CCBD64 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CCBD68 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CCBD64 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCBD68 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80CCBD6C 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80CCBD70 00000024  A8 9E 05 EC */	lha r4, 0x5ec(r30)
-/* 80CCBD74 00000028  4B FF F5 85 */	bl endCheck__16dEvent_manager_cFs
+/* 80CCBD74 00000028  4B FF F5 85 */	bl _unresolved
 /* 80CCBD78 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CCBD7C 00000030  41 82 00 18 */	beq lbl_80CCBD94
 /* 80CCBD80 00000034  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80CCBD84 00000038  4B FF F5 75 */	bl reset__14dEvt_control_cFv
+/* 80CCBD84 00000038  4B FF F5 75 */	bl _unresolved
 /* 80CCBD88 0000003C  38 00 00 03 */	li r0, 3
 /* 80CCBD8C 00000040  98 1E 05 F0 */	stb r0, 0x5f0(r30)
 /* 80CCBD90 00000044  48 00 00 24 */	b lbl_80CCBDB4
 lbl_80CCBD94:
 /* 80CCBD94 00000000  38 7F 4E C8 */	addi r3, r31, 0x4ec8
 /* 80CCBD98 00000004  7F C4 F3 78 */	mr r4, r30
-/* 80CCBD9C 00000008  3C A0 00 00 */	lis r5, eventCallBack__FPvi@ha /* 80CCB318 */
-/* 80CCBDA0 0000000C  38 A5 00 00 */	addi r5, r5, eventCallBack__FPvi@l /* 80CCB318 */
+/* 80CCBD9C 00000008  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CCBDA0 0000000C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80CCBDA4 00000010  38 C0 00 00 */	li r6, 0
-/* 80CCBDA8 00000014  4B FF F5 51 */	bl setSkipProc__14dEvt_control_cFPvPFPvi_ii
+/* 80CCBDA8 00000014  4B FF F5 51 */	bl _unresolved
 /* 80CCBDAC 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80CCBDB0 0000001C  48 00 00 21 */	bl demoExe__17daObjSCannonTen_cFv
 lbl_80CCBDB4:

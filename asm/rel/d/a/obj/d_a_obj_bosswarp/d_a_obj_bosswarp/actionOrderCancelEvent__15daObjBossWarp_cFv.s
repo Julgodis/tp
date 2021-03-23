@@ -9,15 +9,15 @@ lbl_8057A994:
 /* 8057A9B0 0000001C  40 82 00 40 */	bne lbl_8057A9F0
 /* 8057A9B4 00000020  38 00 00 0A */	li r0, 0xa
 /* 8057A9B8 00000024  98 1F 05 90 */	stb r0, 0x590(r31)
-/* 8057A9BC 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8057A9C0 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8057A9BC 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8057A9C0 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8057A9C4 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 8057A9C8 00000034  3C 80 00 00 */	lis r4, struct_8057B4EC+0x0@ha /* 8057B4EC */
-/* 8057A9CC 00000038  38 84 00 00 */	addi r4, r4, struct_8057B4EC+0x0@l /* 8057B4EC */
+/* 8057A9C8 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8057A9CC 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8057A9D0 0000003C  38 84 00 C3 */	addi r4, r4, 0xc3
 /* 8057A9D4 00000040  38 A0 00 00 */	li r5, 0
 /* 8057A9D8 00000044  38 C0 00 00 */	li r6, 0
-/* 8057A9DC 00000048  4B FF EC 3D */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 8057A9DC 00000048  4B FF EC 3D */	bl _unresolved
 /* 8057A9E0 0000004C  90 7F 05 9C */	stw r3, 0x59c(r31)
 /* 8057A9E4 00000050  7F E3 FB 78 */	mr r3, r31
 /* 8057A9E8 00000054  48 00 00 AD */	bl demoProc__15daObjBossWarp_cFv
@@ -29,7 +29,7 @@ lbl_8057A9F0:
 /* 8057A9FC 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057AA00 00000010  38 E0 00 00 */	li r7, 0
 /* 8057AA04 00000014  39 00 00 01 */	li r8, 1
-/* 8057AA08 00000018  4B FF EC 11 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 8057AA08 00000018  4B FF EC 11 */	bl _unresolved
 /* 8057AA0C 0000001C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 8057AA10 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 8057AA14 00000024  B0 1F 00 FA */	sth r0, 0xfa(r31)

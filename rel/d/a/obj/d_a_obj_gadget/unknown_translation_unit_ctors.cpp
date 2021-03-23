@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BF4930[2];
+extern u8 data_80BF4930[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_gadget_cpp(); // 1
 
 // 
 // Declarations:

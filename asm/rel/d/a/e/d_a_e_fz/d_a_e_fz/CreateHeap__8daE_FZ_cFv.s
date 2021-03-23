@@ -4,19 +4,19 @@ lbl_806C0C28:
 /* 806C0C30 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806C0C34 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 806C0C38 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 806C0C3C 00000014  3C 60 00 00 */	lis r3, stringBase0@ha /* 806C19F4 */
-/* 806C0C40 00000018  38 63 00 00 */	addi r3, r3, stringBase0@l /* 806C19F4 */
+/* 806C0C3C 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806C0C40 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806C0C44 0000001C  38 80 00 03 */	li r4, 3
-/* 806C0C48 00000020  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 806C0C4C 00000024  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 806C0C48 00000020  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 806C0C4C 00000024  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 806C0C50 00000028  3C A5 00 02 */	addis r5, r5, 2
 /* 806C0C54 0000002C  38 C0 00 80 */	li r6, 0x80
 /* 806C0C58 00000030  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 806C0C5C 00000034  4B FF DC 5D */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 806C0C5C 00000034  4B FF DC 5D */	bl _unresolved
 /* 806C0C60 00000038  38 80 00 00 */	li r4, 0
 /* 806C0C64 0000003C  3C A0 11 02 */	lis r5, 0x1102 /* 0x11020203@ha */
 /* 806C0C68 00000040  38 A5 02 03 */	addi r5, r5, 0x0203 /* 0x11020203@l */
-/* 806C0C6C 00000044  4B FF DC 4D */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 806C0C6C 00000044  4B FF DC 4D */	bl _unresolved
 /* 806C0C70 00000048  90 7F 05 B4 */	stw r3, 0x5b4(r31)
 /* 806C0C74 0000004C  80 9F 05 B4 */	lwz r4, 0x5b4(r31)
 /* 806C0C78 00000050  28 04 00 00 */	cmplwi r4, 0
@@ -26,7 +26,7 @@ lbl_806C0C28:
 lbl_806C0C88:
 /* 806C0C88 00000000  38 7F 05 B8 */	addi r3, r31, 0x5b8
 /* 806C0C8C 00000004  38 A0 00 01 */	li r5, 1
-/* 806C0C90 00000008  4B FF DC 29 */	bl create__21mDoExt_invisibleModelFP8J3DModelUc
+/* 806C0C90 00000008  4B FF DC 29 */	bl _unresolved
 /* 806C0C94 0000000C  30 03 FF FF */	addic r0, r3, -1
 /* 806C0C98 00000010  7C 60 19 10 */	subfe r3, r0, r3
 lbl_806C0C9C:

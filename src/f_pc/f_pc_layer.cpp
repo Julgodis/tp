@@ -113,7 +113,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80021588-800215A8 0020+00 r=4 e=4 z=0  None .text      fpcLy_CancelQTo__FP24process_method_tag_class                */
+/* 80021588-800215A8 0020+00 s=0 e=4 z=0  None .text      fpcLy_CancelQTo__FP24process_method_tag_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void fpcLy_CancelQTo(process_method_tag_class* param_0) {
 #pragma pop
 
 
-/* 800215A8-800215CC 0024+00 r=3 e=3 z=0  None .text      fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class  */
+/* 800215A8-800215CC 0024+00 s=0 e=3 z=0  None .text      fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void fpcLy_ToCancelQ(layer_class* param_0, process_method_tag_class* param_1
 #pragma pop
 
 
-/* 800215CC-800215F8 002C+00 r=1 e=0 z=0  None .text      fpcLy_CancelMethod__FP24process_method_tag_class             */
+/* 800215CC-800215F8 002C+00 s=1 e=0 z=0  None .text      fpcLy_CancelMethod__FP24process_method_tag_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm static void fpcLy_CancelMethod(process_method_tag_class* param_0) {
 #pragma pop
 
 
-/* 800215F8-8002161C 0024+00 r=1 e=1 z=0  None .text      fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi        */
+/* 800215F8-8002161C 0024+00 s=0 e=1 z=0  None .text      fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void fpcLy_IntoQueue(layer_class* param_0, int param_1, create_tag_class* pa
 #pragma pop
 
 
-/* 8002161C-80021640 0024+00 r=1 e=1 z=0  None .text      fpcLy_ToQueue__FP11layer_classiP16create_tag_class           */
+/* 8002161C-80021640 0024+00 s=0 e=1 z=0  None .text      fpcLy_ToQueue__FP11layer_classiP16create_tag_class           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void fpcLy_ToQueue(layer_class* param_0, int param_1, create_tag_class* para
 #pragma pop
 
 
-/* 80021640-80021664 0024+00 r=1 e=1 z=0  None .text      fpcLy_QueueTo__FP11layer_classP16create_tag_class            */
+/* 80021640-80021664 0024+00 s=0 e=1 z=0  None .text      fpcLy_QueueTo__FP11layer_classP16create_tag_class            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm void fpcLy_QueueTo(layer_class* param_0, create_tag_class* param_1) {
 #pragma pop
 
 
-/* 80021664-80021678 0014+00 r=1 e=1 z=0  None .text      fpcLy_IsDeletingMesg__FP11layer_class                        */
+/* 80021664-80021678 0014+00 s=0 e=1 z=0  None .text      fpcLy_IsDeletingMesg__FP11layer_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ asm void fpcLy_IsDeletingMesg(layer_class* param_0) {
 #pragma pop
 
 
-/* 80021678-80021688 0010+00 r=1 e=1 z=0  None .text      fpcLy_DeletingMesg__FP11layer_class                          */
+/* 80021678-80021688 0010+00 s=0 e=1 z=0  None .text      fpcLy_DeletingMesg__FP11layer_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ asm void fpcLy_DeletingMesg(layer_class* param_0) {
 #pragma pop
 
 
-/* 80021688-800216A0 0018+00 r=1 e=1 z=0  None .text      fpcLy_DeletedMesg__FP11layer_class                           */
+/* 80021688-800216A0 0018+00 s=0 e=1 z=0  None .text      fpcLy_DeletedMesg__FP11layer_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +212,7 @@ asm void fpcLy_DeletedMesg(layer_class* param_0) {
 #pragma pop
 
 
-/* 800216A0-800216B4 0014+00 r=2 e=2 z=0  None .text      fpcLy_IsCreatingMesg__FP11layer_class                        */
+/* 800216A0-800216B4 0014+00 s=0 e=2 z=0  None .text      fpcLy_IsCreatingMesg__FP11layer_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,7 +223,7 @@ asm void fpcLy_IsCreatingMesg(layer_class* param_0) {
 #pragma pop
 
 
-/* 800216B4-800216C4 0010+00 r=2 e=2 z=0  None .text      fpcLy_CreatingMesg__FP11layer_class                          */
+/* 800216B4-800216C4 0010+00 s=0 e=2 z=0  None .text      fpcLy_CreatingMesg__FP11layer_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +234,7 @@ asm void fpcLy_CreatingMesg(layer_class* param_0) {
 #pragma pop
 
 
-/* 800216C4-800216DC 0018+00 r=2 e=2 z=0  None .text      fpcLy_CreatedMesg__FP11layer_class                           */
+/* 800216C4-800216DC 0018+00 s=0 e=2 z=0  None .text      fpcLy_CreatedMesg__FP11layer_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,19 +246,19 @@ asm void fpcLy_CreatedMesg(layer_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A39B0-803A39DC 002C+00 r=2 e=0 z=0  None .data      l_fpcLy_Crear                                                */
+/* 803A39B0-803A39DC 002C+00 s=2 e=0 z=0  None .data      l_fpcLy_Crear                                                */
 SECTION_DATA static u8 l_fpcLy_Crear[44] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A39DC-803A39E8 000C+00 r=3 e=0 z=0  None .data      l_fpcLy_LayerList                                            */
+/* 803A39DC-803A39E8 000C+00 s=3 e=0 z=0  None .data      l_fpcLy_LayerList                                            */
 SECTION_DATA static u8 l_fpcLy_LayerList[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800216DC-800216EC 0010+00 r=5 e=3 z=0  None .text      fpcLy_RootLayer__Fv                                          */
+/* 800216DC-800216EC 0010+00 s=2 e=3 z=0  None .text      fpcLy_RootLayer__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,10 +270,10 @@ asm void fpcLy_RootLayer() {
 
 
 /* ############################################################################################## */
-/* 80450D18-80450D1C 0004+00 r=2 e=0 z=0  None .sbss      l_fpcLy_CurrLayer_p                                          */
+/* 80450D18-80450D1C 0004+00 s=2 e=0 z=0  None .sbss      l_fpcLy_CurrLayer_p                                          */
 static u8 l_fpcLy_CurrLayer_p[4];
 
-/* 800216EC-800216F4 0008+00 r=14 e=13 z=0  None .text      fpcLy_SetCurrentLayer__FP11layer_class                       */
+/* 800216EC-800216F4 0008+00 s=1 e=13 z=0  None .text      fpcLy_SetCurrentLayer__FP11layer_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +284,7 @@ asm void fpcLy_SetCurrentLayer(layer_class* param_0) {
 #pragma pop
 
 
-/* 800216F4-800216FC 0008+00 r=22 e=21 z=0  None .text      fpcLy_CurrentLayer__Fv                                       */
+/* 800216F4-800216FC 0008+00 s=1 e=21 z=0  None .text      fpcLy_CurrentLayer__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +295,7 @@ asm void fpcLy_CurrentLayer() {
 #pragma pop
 
 
-/* 800216FC-8002174C 0050+00 r=1 e=0 z=0  None .text      fpcLy_Search__FUi                                            */
+/* 800216FC-8002174C 0050+00 s=1 e=0 z=0  None .text      fpcLy_Search__FUi                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ asm static void fpcLy_Search(unsigned int param_0) {
 #pragma pop
 
 
-/* 8002174C-800217BC 0070+00 r=5 e=5 z=0  None .text      fpcLy_Layer__FUi                                             */
+/* 8002174C-800217BC 0070+00 s=0 e=5 z=0  None .text      fpcLy_Layer__FUi                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void fpcLy_Layer(unsigned int param_0) {
 #pragma pop
 
 
-/* 800217BC-800217E8 002C+00 r=1 e=0 z=0  None .text      fpcLy_Regist__FP11layer_class                                */
+/* 800217BC-800217E8 002C+00 s=1 e=0 z=0  None .text      fpcLy_Regist__FP11layer_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +328,7 @@ asm static void fpcLy_Regist(layer_class* param_0) {
 #pragma pop
 
 
-/* 800217E8-8002189C 00B4+00 r=1 e=1 z=0  None .text      fpcLy_Delete__FP11layer_class                                */
+/* 800217E8-8002189C 00B4+00 s=0 e=1 z=0  None .text      fpcLy_Delete__FP11layer_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +339,7 @@ asm void fpcLy_Delete(layer_class* param_0) {
 #pragma pop
 
 
-/* 8002189C-800218C8 002C+00 r=1 e=1 z=0  None .text      fpcLy_Cancel__FP11layer_class                                */
+/* 8002189C-800218C8 002C+00 s=0 e=1 z=0  None .text      fpcLy_Cancel__FP11layer_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,19 +351,19 @@ asm void fpcLy_Cancel(layer_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450D1C-80450D20 0004+00 r=1 e=0 z=0  None .sbss      IsInitOfLayerList$2308                                       */
+/* 80450D1C-80450D20 0004+00 s=1 e=0 z=0  None .sbss      IsInitOfLayerList$2308                                       */
 static u8 data_80450D1C[4];
 
-/* 80450D20-80450D24 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450D20-80450D24 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D20[4];
 
-/* 80450D24-80450D28 0004+00 r=1 e=0 z=0  None .sbss      layer_id$2311                                                */
+/* 80450D24-80450D28 0004+00 s=1 e=0 z=0  None .sbss      layer_id$2311                                                */
 static u8 data_80450D24[4];
 
-/* 80450D28-80450D30 0008+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450D28-80450D30 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450D28[8];
 
-/* 800218C8-80021A00 0138+00 r=2 e=2 z=0  None .text      fpcLy_Create__FP11layer_classPvP15node_list_classi           */
+/* 800218C8-80021A00 0138+00 s=0 e=2 z=0  None .text      fpcLy_Create__FP11layer_classPvP15node_list_classi           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

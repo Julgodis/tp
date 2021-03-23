@@ -4,9 +4,9 @@ lbl_80BB3708:
 /* 80BB3710 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BB3714 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BB3718 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BB371C 00000014  4B FF AB BD */	bl __ct__11dBgS_GndChkFv
-/* 80BB3720 00000018  3C 60 00 00 */	lis r3, __vt__14dBgS_ObjGndChk@ha /* 80BB3E80 */
-/* 80BB3724 0000001C  38 63 00 00 */	addi r3, r3, __vt__14dBgS_ObjGndChk@l /* 80BB3E80 */
+/* 80BB371C 00000014  4B FF AB BD */	bl _unresolved
+/* 80BB3720 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BB3724 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BB3728 00000020  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80BB372C 00000024  38 03 00 0C */	addi r0, r3, 0xc
 /* 80BB3730 00000028  90 1F 00 20 */	stw r0, 0x20(r31)
@@ -15,7 +15,7 @@ lbl_80BB3708:
 /* 80BB373C 00000034  38 03 00 24 */	addi r0, r3, 0x24
 /* 80BB3740 00000038  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BB3744 0000003C  38 7F 00 3C */	addi r3, r31, 0x3c
-/* 80BB3748 00000040  4B FF AB 91 */	bl SetObj__16dBgS_PolyPassChkFv
+/* 80BB3748 00000040  4B FF AB 91 */	bl _unresolved
 /* 80BB374C 00000044  7F E3 FB 78 */	mr r3, r31
 /* 80BB3750 00000048  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BB3754 0000004C  80 01 00 14 */	lwz r0, 0x14(r1)

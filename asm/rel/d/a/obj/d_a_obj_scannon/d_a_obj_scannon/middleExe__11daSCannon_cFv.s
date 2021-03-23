@@ -6,19 +6,19 @@ lbl_80CC7970:
 /* 80CC7980 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CC7984 00000014  88 03 06 16 */	lbz r0, 0x616(r3)
 /* 80CC7988 00000018  1C 80 00 0C */	mulli r4, r0, 0xc
-/* 80CC798C 0000001C  3C 60 00 00 */	lis r3, s_exeProc__11daSCannon_c@ha /* 80CC9378 */
-/* 80CC7990 00000020  38 03 00 00 */	addi r0, r3, s_exeProc__11daSCannon_c@l /* 80CC9378 */
+/* 80CC798C 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC7990 00000020  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CC7994 00000024  7C 60 22 14 */	add r3, r0, r4
-/* 80CC7998 00000028  4B FF F0 E1 */	bl __ptmf_test
+/* 80CC7998 00000028  4B FF F0 E1 */	bl _unresolved
 /* 80CC799C 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC79A0 00000030  41 82 00 24 */	beq lbl_80CC79C4
 /* 80CC79A4 00000034  7F E3 FB 78 */	mr r3, r31
 /* 80CC79A8 00000038  88 1F 06 16 */	lbz r0, 0x616(r31)
 /* 80CC79AC 0000003C  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80CC79B0 00000040  3C 80 00 00 */	lis r4, s_exeProc__11daSCannon_c@ha /* 80CC9378 */
-/* 80CC79B4 00000044  38 04 00 00 */	addi r0, r4, s_exeProc__11daSCannon_c@l /* 80CC9378 */
+/* 80CC79B0 00000040  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CC79B4 00000044  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80CC79B8 00000048  7D 80 2A 14 */	add r12, r0, r5
-/* 80CC79BC 0000004C  4B FF F0 BD */	bl __ptmf_scall
+/* 80CC79BC 0000004C  4B FF F0 BD */	bl _unresolved
 /* 80CC79C0 00000050  60 00 00 00 */	nop 
 lbl_80CC79C4:
 /* 80CC79C4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -30,7 +30,7 @@ lbl_80CC79C4:
 /* 80CC79DC 00000018  40 82 00 10 */	bne lbl_80CC79EC
 lbl_80CC79E0:
 /* 80CC79E0 00000000  38 7F 05 84 */	addi r3, r31, 0x584
-/* 80CC79E4 00000004  4B FF F0 95 */	bl play__14mDoExt_baseAnmFv
+/* 80CC79E4 00000004  4B FF F0 95 */	bl _unresolved
 /* 80CC79E8 00000008  48 00 00 14 */	b lbl_80CC79FC
 lbl_80CC79EC:
 /* 80CC79EC 00000000  2C 00 00 01 */	cmpwi r0, 1

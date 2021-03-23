@@ -12,14 +12,14 @@ lbl_804CCC04:
 /* 804CCC2C 00000028  C0 1F 04 F4 */	lfs f0, 0x4f4(r31)
 /* 804CCC30 0000002C  D0 03 00 20 */	stfs f0, 0x20(r3)
 /* 804CCC34 00000030  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 804CCC38 00000034  4B FF FB 81 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 804CCC38 00000034  4B FF FB 81 */	bl _unresolved
 /* 804CCC3C 00000038  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 804CCC40 0000003C  4B FF FB 79 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 804CCC44 00000040  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 804CCC48 00000044  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 804CCC40 0000003C  4B FF FB 79 */	bl _unresolved
+/* 804CCC44 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804CCC48 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804CCC4C 00000048  80 9F 05 74 */	lwz r4, 0x574(r31)
 /* 804CCC50 0000004C  38 84 00 24 */	addi r4, r4, 0x24
-/* 804CCC54 00000050  4B FF FB 65 */	bl PSMTXCopy
+/* 804CCC54 00000050  4B FF FB 65 */	bl _unresolved
 /* 804CCC58 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804CCC5C 00000058  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804CCC60 0000005C  7C 08 03 A6 */	mtlr r0

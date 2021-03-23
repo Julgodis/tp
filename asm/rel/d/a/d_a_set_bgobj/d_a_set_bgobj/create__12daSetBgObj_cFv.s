@@ -9,23 +9,23 @@ lbl_80485DFC:
 /* 80485E18 0000001C  40 82 00 1C */	bne lbl_80485E34
 /* 80485E1C 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80485E20 00000024  41 82 00 08 */	beq lbl_80485E28
-/* 80485E24 00000028  4B FF FF 35 */	bl __ct__10fopAc_ac_cFv
+/* 80485E24 00000028  4B FF FF 35 */	bl _unresolved
 lbl_80485E28:
 /* 80485E28 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80485E2C 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80485E30 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80485E34:
 /* 80485E34 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80485E38 00000004  4B FF FF 21 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
+/* 80485E38 00000004  4B FF FF 21 */	bl _unresolved
 /* 80485E3C 00000008  7C 65 1B 78 */	mr r5, r3
 /* 80485E40 0000000C  38 7F 05 70 */	addi r3, r31, 0x570
-/* 80485E44 00000010  3C 80 00 00 */	lis r4, stringBase0@ha /* 80485F0C */
-/* 80485E48 00000014  38 84 00 00 */	addi r4, r4, stringBase0@l /* 80485F0C */
+/* 80485E44 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80485E48 00000014  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80485E4C 00000018  4C C6 31 82 */	crclr 6
-/* 80485E50 0000001C  4B FF FF 09 */	bl sprintf
+/* 80485E50 0000001C  4B FF FF 09 */	bl _unresolved
 /* 80485E54 00000020  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80485E58 00000024  38 9F 05 70 */	addi r4, r31, 0x570
-/* 80485E5C 00000028  4B FF FE FD */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80485E5C 00000028  4B FF FE FD */	bl _unresolved
 /* 80485E60 0000002C  2C 03 00 04 */	cmpwi r3, 4
 /* 80485E64 00000030  40 82 00 10 */	bne lbl_80485E74
 /* 80485E68 00000034  7F E3 FB 78 */	mr r3, r31

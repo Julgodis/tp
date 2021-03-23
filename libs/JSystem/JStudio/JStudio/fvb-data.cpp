@@ -25,7 +25,7 @@ extern "C" extern u32 ga4cSignature__Q37JStudio3fvb4data[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80455450-80455458 0004+04 r=1 e=1 z=0  None .sdata2    ga4cSignature__Q37JStudio3fvb4data                           */
+/* 80455450-80455458 0004+04 s=0 e=1 z=0  None .sdata2    ga4cSignature__Q37JStudio3fvb4data                           */
 SECTION_SDATA2 u32 ga4cSignature__Q37JStudio3fvb4data[1 + 1 /* padding */] = {
 	0x46564200,
 	/* padding */

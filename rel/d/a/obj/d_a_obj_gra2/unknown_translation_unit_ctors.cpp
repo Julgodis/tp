@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C0FA68[2];
+extern u8 data_80C0FA68[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_gra2_cpp(); // 1
 
 // 
 // Declarations:

@@ -64,7 +64,7 @@ extern "C" extern void* __vt__10JSUIosBase[3];
 // 
 
 /* ############################################################################################## */
-/* 803CC4B0-803CC4D4 0024+00 r=7 e=7 z=0  None .data      __vt__20JSURandomInputStream                                 */
+/* 803CC4B0-803CC4D4 0024+00 s=0 e=7 z=0  None .data      __vt__20JSURandomInputStream                                 */
 SECTION_DATA void* __vt__20JSURandomInputStream[9] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -77,7 +77,7 @@ SECTION_DATA void* __vt__20JSURandomInputStream[9] = {
 	/* 8    */ (void*)NULL,
 };
 
-/* 803CC4D4-803CC4F0 0018+04 r=5 e=4 z=0  None .data      __vt__14JSUInputStream                                       */
+/* 803CC4D4-803CC4F0 0018+04 s=1 e=4 z=0  None .data      __vt__14JSUInputStream                                       */
 SECTION_DATA void* __vt__14JSUInputStream[6 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -89,7 +89,7 @@ SECTION_DATA void* __vt__14JSUInputStream[6 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802DC23C-802DC298 005C+00 r=7 e=6 z=0  None .text      __dt__14JSUInputStreamFv                                     */
+/* 802DC23C-802DC298 005C+00 s=1 e=6 z=0  None .text      __dt__14JSUInputStreamFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +100,7 @@ asm JSUInputStream::~JSUInputStream() {
 #pragma pop
 
 
-/* 802DC298-802DC2F0 0058+00 r=21 e=20 z=0  None .text      read__14JSUInputStreamFPvl                                   */
+/* 802DC298-802DC2F0 0058+00 s=1 e=20 z=0  None .text      read__14JSUInputStreamFPvl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +111,7 @@ asm void JSUInputStream::read(void* param_0, s32 param_1) {
 #pragma pop
 
 
-/* 802DC2F0-802DC370 0080+00 r=1 e=0 z=0  None .text      skip__14JSUInputStreamFl                                     */
+/* 802DC2F0-802DC370 0080+00 s=1 e=0 z=0  None .text      skip__14JSUInputStreamFl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +122,7 @@ asm void JSUInputStream::skip(s32 param_0) {
 #pragma pop
 
 
-/* 802DC370-802DC3FC 008C+00 r=1 e=1 z=0  None .text      align__20JSURandomInputStreamFl                              */
+/* 802DC370-802DC3FC 008C+00 s=0 e=1 z=0  None .text      align__20JSURandomInputStreamFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm void JSURandomInputStream::align(s32 param_0) {
 #pragma pop
 
 
-/* 802DC3FC-802DC458 005C+00 r=3 e=2 z=0  None .text      skip__20JSURandomInputStreamFl                               */
+/* 802DC3FC-802DC458 005C+00 s=1 e=2 z=0  None .text      skip__20JSURandomInputStreamFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm void JSURandomInputStream::skip(s32 param_0) {
 #pragma pop
 
 
-/* 802DC458-802DC4DC 0084+00 r=8 e=8 z=0  None .text      peek__20JSURandomInputStreamFPvl                             */
+/* 802DC458-802DC4DC 0084+00 s=0 e=8 z=0  None .text      peek__20JSURandomInputStreamFPvl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm void JSURandomInputStream::peek(void* param_0, s32 param_1) {
 #pragma pop
 
 
-/* 802DC4DC-802DC520 0044+00 r=16 e=16 z=0  None .text      seek__20JSURandomInputStreamFl17JSUStreamSeekFrom            */
+/* 802DC4DC-802DC520 0044+00 s=0 e=16 z=0  None .text      seek__20JSURandomInputStreamFl17JSUStreamSeekFrom            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

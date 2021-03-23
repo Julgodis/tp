@@ -4,7 +4,7 @@ lbl_805A3E34:
 /* 805A3E3C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 805A3E40 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805A3E44 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 805A3E48 00000014  4B FF FC 51 */	bl MoveBGDelete__16dBgS_MoveBgActorFv
+/* 805A3E48 00000014  4B FF FC 51 */	bl _unresolved
 /* 805A3E4C 00000018  7F E3 FB 78 */	mr r3, r31
 /* 805A3E50 0000001C  38 80 FF FF */	li r4, -1
 /* 805A3E54 00000020  4B FF FF 4D */	bl __dt__12daTagHjump_cFv

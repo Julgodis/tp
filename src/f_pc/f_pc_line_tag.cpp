@@ -51,7 +51,7 @@ extern "C" extern void* g_fpcLn_Queue[2];
 // Declarations:
 // 
 
-/* 800235A8-80023600 0058+00 r=1 e=1 z=0  None .text      fpcLnTg_Move__FP8line_tagi                                   */
+/* 800235A8-80023600 0058+00 s=0 e=1 z=0  None .text      fpcLnTg_Move__FP8line_tagi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +62,7 @@ asm void fpcLnTg_Move(line_tag* param_0, int param_1) {
 #pragma pop
 
 
-/* 80023600-80023634 0034+00 r=2 e=1 z=0  None .text      fpcLnTg_QueueTo__FP8line_tag                                 */
+/* 80023600-80023634 0034+00 s=1 e=1 z=0  None .text      fpcLnTg_QueueTo__FP8line_tag                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +73,7 @@ asm void fpcLnTg_QueueTo(line_tag* param_0) {
 #pragma pop
 
 
-/* 80023634-8002368C 0058+00 r=2 e=1 z=0  None .text      fpcLnTg_ToQueue__FP8line_tagi                                */
+/* 80023634-8002368C 0058+00 s=1 e=1 z=0  None .text      fpcLnTg_ToQueue__FP8line_tagi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ asm void fpcLnTg_ToQueue(line_tag* param_0, int param_1) {
 #pragma pop
 
 
-/* 8002368C-800236C0 0034+00 r=1 e=1 z=0  None .text      fpcLnTg_Init__FP8line_tagPv                                  */
+/* 8002368C-800236C0 0034+00 s=0 e=1 z=0  None .text      fpcLnTg_Init__FP8line_tagPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

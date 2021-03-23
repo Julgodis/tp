@@ -27,7 +27,7 @@ extern "C" extern u8 __lower_map[256];
 // Declarations:
 // 
 
-/* 8036CA74-8036CA94 0020+00 r=1 e=1 z=0  None .text      strnicmp                                                     */
+/* 8036CA74-8036CA94 0020+00 s=0 e=1 z=0  None .text      strnicmp                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ extern "C" asm void strnicmp() {
 #pragma pop
 
 
-/* 8036CA94-8036CB20 008C+00 r=1 e=1 z=0  None .text      stricmp                                                      */
+/* 8036CA94-8036CB20 008C+00 s=0 e=1 z=0  None .text      stricmp                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

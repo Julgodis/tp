@@ -246,7 +246,7 @@ extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 802B6840-802B68B0 0070+00 r=1 e=1 z=0  None .text      __ct__10Z2SceneMgrFv                                         */
+/* 802B6840-802B68B0 0070+00 s=0 e=1 z=0  None .text      __ct__10Z2SceneMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +257,7 @@ asm Z2SceneMgr::Z2SceneMgr() {
 #pragma pop
 
 
-/* 802B68B0-802B68E0 0030+00 r=1 e=1 z=0  None .text      setInDarkness__10Z2SceneMgrFb                                */
+/* 802B68B0-802B68E0 0030+00 s=0 e=1 z=0  None .text      setInDarkness__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,15 +269,15 @@ asm void Z2SceneMgr::setInDarkness(bool param_0) {
 
 
 /* ############################################################################################## */
-/* 80455A38-80455A3C 0004+00 r=8 e=0 z=0  None .sdata2    @3511                                                        */
+/* 80455A38-80455A3C 0004+00 s=8 e=0 z=0  None .sdata2    @3511                                                        */
 SECTION_SDATA2 static u8 lit_3511[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455A3C-80455A40 0004+00 r=6 e=0 z=0  None .sdata2    @3512                                                        */
+/* 80455A3C-80455A40 0004+00 s=6 e=0 z=0  None .sdata2    @3512                                                        */
 SECTION_SDATA2 static f32 lit_3512 = 1.0f;
 
-/* 802B68E0-802B697C 009C+00 r=7 e=2 z=2  None .text      setSceneExist__10Z2SceneMgrFb                                */
+/* 802B68E0-802B697C 009C+00 s=3 e=2 z=0  None .text      setSceneExist__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,17 +289,17 @@ asm void Z2SceneMgr::setSceneExist(bool param_0) {
 
 
 /* ############################################################################################## */
-/* 80455A40-80455A48 0004+04 r=1 e=0 z=0  None .sdata2    @3529                                                        */
+/* 80455A40-80455A48 0004+04 s=1 e=0 z=0  None .sdata2    @3529                                                        */
 SECTION_SDATA2 static f32 lit_3529[1 + 1 /* padding */] = {
 	3.0f / 10.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455A48-80455A50 0008+00 r=5 e=0 z=0  None .sdata2    @3531                                                        */
+/* 80455A48-80455A50 0008+00 s=5 e=0 z=0  None .sdata2    @3531                                                        */
 SECTION_SDATA2 static f64 lit_3531 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802B697C-802B6A18 009C+00 r=1 e=1 z=0  None .text      setFadeOutStart__10Z2SceneMgrFUc                             */
+/* 802B697C-802B6A18 009C+00 s=0 e=1 z=0  None .text      setFadeOutStart__10Z2SceneMgrFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +310,7 @@ asm void Z2SceneMgr::setFadeOutStart(u8 param_0) {
 #pragma pop
 
 
-/* 802B6A18-802B6AF8 00E0+00 r=1 e=1 z=0  None .text      setFadeInStart__10Z2SceneMgrFUc                              */
+/* 802B6A18-802B6AF8 00E0+00 s=0 e=1 z=0  None .text      setFadeInStart__10Z2SceneMgrFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +322,7 @@ asm void Z2SceneMgr::setFadeInStart(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 8039BFA8-8039C220 0274+04 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039BFA8-8039C220 0274+04 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -412,7 +412,7 @@ SECTION_DEAD char const* const stringBase_8039C212 = "force_end";
 SECTION_DEAD static char const* const pad_8039C21C = "\0\0\0";
 #pragma pop
 
-/* 803CA5C0-803CA704 0144+00 r=1 e=0 z=0  None .data      sSpotName                                                    */
+/* 803CA5C0-803CA704 0144+00 s=1 e=0 z=0  None .data      sSpotName                                                    */
 SECTION_DATA static void* sSpotName[81] = {
 	/* 0    */ (void*)&Z2SceneMgr__stringBase0,
 	/* 1    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x7),
@@ -497,7 +497,7 @@ SECTION_DATA static void* sSpotName[81] = {
 	/* 80   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x263),
 };
 
-/* 803CA704-803CA744 0040+00 r=1 e=0 z=0  None .data      @5354                                                        */
+/* 803CA704-803CA744 0040+00 s=1 e=0 z=0  None .data      @5354                                                        */
 SECTION_DATA static void* lit_5354[16] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
@@ -517,7 +517,7 @@ SECTION_DATA static void* lit_5354[16] = {
 	/* 15   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
 };
 
-/* 803CA744-803CA784 0040+00 r=1 e=0 z=0  None .data      @5353                                                        */
+/* 803CA744-803CA784 0040+00 s=1 e=0 z=0  None .data      @5353                                                        */
 SECTION_DATA static void* lit_5353[16] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
@@ -537,7 +537,7 @@ SECTION_DATA static void* lit_5353[16] = {
 	/* 15   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
 };
 
-/* 803CA784-803CA7BC 0038+00 r=1 e=0 z=0  None .data      @5352                                                        */
+/* 803CA784-803CA7BC 0038+00 s=1 e=0 z=0  None .data      @5352                                                        */
 SECTION_DATA static void* lit_5352[14] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC48),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC78),
@@ -555,7 +555,7 @@ SECTION_DATA static void* lit_5352[14] = {
 	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC3C),
 };
 
-/* 803CA7BC-803CA7F4 0038+00 r=1 e=0 z=0  None .data      @5351                                                        */
+/* 803CA7BC-803CA7F4 0038+00 s=1 e=0 z=0  None .data      @5351                                                        */
 SECTION_DATA static void* lit_5351[14] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAF4),
@@ -573,7 +573,7 @@ SECTION_DATA static void* lit_5351[14] = {
 	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAEC),
 };
 
-/* 803CA7F4-803CA824 0030+00 r=1 e=0 z=0  None .data      @5350                                                        */
+/* 803CA7F4-803CA824 0030+00 s=1 e=0 z=0  None .data      @5350                                                        */
 SECTION_DATA static void* lit_5350[12] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7B0),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x72C),
@@ -589,7 +589,7 @@ SECTION_DATA static void* lit_5350[12] = {
 	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
 };
 
-/* 803CA824-803CA844 0020+00 r=1 e=0 z=0  None .data      @5349                                                        */
+/* 803CA824-803CA844 0020+00 s=1 e=0 z=0  None .data      @5349                                                        */
 SECTION_DATA static void* Z2SceneMgr__lit_5349[8] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x430),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x45C),
@@ -601,7 +601,7 @@ SECTION_DATA static void* Z2SceneMgr__lit_5349[8] = {
 	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
 };
 
-/* 803CA844-803CA878 0034+00 r=1 e=0 z=0  None .data      @5348                                                        */
+/* 803CA844-803CA878 0034+00 s=1 e=0 z=0  None .data      @5348                                                        */
 SECTION_DATA static void* Z2SceneMgr__lit_5348[13] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2E0),
@@ -618,7 +618,7 @@ SECTION_DATA static void* Z2SceneMgr__lit_5348[13] = {
 	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x328),
 };
 
-/* 803CA878-803CA9BC 0144+00 r=1 e=0 z=0  None .data      @5347                                                        */
+/* 803CA878-803CA9BC 0144+00 s=1 e=0 z=0  None .data      @5347                                                        */
 SECTION_DATA static void* Z2SceneMgr__lit_5347[81] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E0),
@@ -703,25 +703,25 @@ SECTION_DATA static void* Z2SceneMgr__lit_5347[81] = {
 	/* 80   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B6C),
 };
 
-/* 80455A50-80455A54 0004+00 r=1 e=0 z=0  None .sdata2    @5341                                                        */
+/* 80455A50-80455A54 0004+00 s=1 e=0 z=0  None .sdata2    @5341                                                        */
 SECTION_SDATA2 static f32 lit_5341 = -1.0f;
 
-/* 80455A54-80455A58 0004+00 r=2 e=0 z=0  None .sdata2    @5342                                                        */
+/* 80455A54-80455A58 0004+00 s=2 e=0 z=0  None .sdata2    @5342                                                        */
 SECTION_SDATA2 static f32 lit_5342 = 0.5f;
 
-/* 80455A58-80455A5C 0004+00 r=1 e=0 z=0  None .sdata2    @5343                                                        */
+/* 80455A58-80455A5C 0004+00 s=1 e=0 z=0  None .sdata2    @5343                                                        */
 SECTION_SDATA2 static f32 Z2SceneMgr__lit_5343 = 7.0f / 10.0f;
 
-/* 80455A5C-80455A60 0004+00 r=1 e=0 z=0  None .sdata2    @5344                                                        */
+/* 80455A5C-80455A60 0004+00 s=1 e=0 z=0  None .sdata2    @5344                                                        */
 SECTION_SDATA2 static f32 Z2SceneMgr__lit_5344 = 4.0f / 5.0f;
 
-/* 80455A60-80455A64 0004+00 r=1 e=0 z=0  None .sdata2    @5345                                                        */
+/* 80455A60-80455A64 0004+00 s=1 e=0 z=0  None .sdata2    @5345                                                        */
 SECTION_SDATA2 static f32 Z2SceneMgr__lit_5345 = 1.0f / 10.0f;
 
-/* 80455A64-80455A68 0004+00 r=1 e=0 z=0  None .sdata2    @5346                                                        */
+/* 80455A64-80455A68 0004+00 s=1 e=0 z=0  None .sdata2    @5346                                                        */
 SECTION_SDATA2 static f32 Z2SceneMgr__lit_5346 = 2.0f / 25.0f;
 
-/* 802B6AF8-802B995C 2E64+00 r=9 e=1 z=0  None .text      setSceneName__10Z2SceneMgrFPcll                              */
+/* 802B6AF8-802B995C 2E64+00 s=8 e=1 z=0  None .text      setSceneName__10Z2SceneMgrFPcll                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -732,7 +732,7 @@ asm void Z2SceneMgr::setSceneName(char* param_0, s32 param_1, s32 param_2) {
 #pragma pop
 
 
-/* 802B995C-802B9968 000C+00 r=1 e=0 z=0  None .text      __ct__10JAISoundIDFRC10JAISoundID                            */
+/* 802B995C-802B9968 000C+00 s=1 e=0 z=0  None .text      __ct__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -743,7 +743,7 @@ asm JAISoundID::JAISoundID(JAISoundID const& param_0) {
 #pragma pop
 
 
-/* 802B9968-802B9978 0010+00 r=1 e=0 z=0  None .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
+/* 802B9968-802B9978 0010+00 s=1 e=0 z=0  None .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -754,7 +754,7 @@ asm void Z2SeqMgr::setFieldBgmPlay(bool param_0) {
 #pragma pop
 
 
-/* 802B9978-802B9988 0010+00 r=1 e=0 z=0  None .text      isActive__12JAIStreamMgrCFv                                  */
+/* 802B9978-802B9988 0010+00 s=1 e=0 z=0  None .text      isActive__12JAIStreamMgrCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +765,7 @@ asm void JAIStreamMgr::isActive() const {
 #pragma pop
 
 
-/* 802B9988-802B9994 000C+00 r=1 e=0 z=0  None .text      getID__8JAISoundCFv                                          */
+/* 802B9988-802B9994 000C+00 s=1 e=0 z=0  None .text      getID__8JAISoundCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +776,7 @@ asm void JAISound::getID() const {
 #pragma pop
 
 
-/* 802B9994-802B999C 0008+00 r=1 e=0 z=0  None .text      getFirst__19JSUList<9JAIStream>CFv                           */
+/* 802B9994-802B999C 0008+00 s=1 e=0 z=0  None .text      getFirst__19JSUList<9JAIStream>CFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,7 +787,7 @@ asm void JSUList__template2::getFirst() const {
 #pragma pop
 
 
-/* 802B999C-802B99AC 0010+00 r=1 e=0 z=0  None .text      dComIfGs_getStartPoint__Fv                                   */
+/* 802B999C-802B99AC 0010+00 s=1 e=0 z=0  None .text      dComIfGs_getStartPoint__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -798,7 +798,7 @@ asm static void dComIfGs_getStartPoint() {
 #pragma pop
 
 
-/* 802B99AC-802B9A24 0078+00 r=1 e=0 z=0  None .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
+/* 802B99AC-802B9A24 0078+00 s=1 e=0 z=0  None .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -809,7 +809,7 @@ asm void Z2SeqMgr::unMuteSceneBgm(u32 param_0) {
 #pragma pop
 
 
-/* 802B9A24-802B9A88 0064+00 r=1 e=0 z=0  None .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
+/* 802B9A24-802B9A88 0064+00 s=1 e=0 z=0  None .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -820,7 +820,7 @@ asm void Z2SeqMgr::muteSceneBgm(u32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802B9A88-802B9A94 000C+00 r=1 e=0 z=0  None .text      __as__10JAISoundIDFRC10JAISoundID                            */
+/* 802B9A88-802B9A94 000C+00 s=1 e=0 z=0  None .text      __as__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -831,7 +831,7 @@ asm void JAISoundID::operator=(JAISoundID const& param_0) {
 #pragma pop
 
 
-/* 802B9A94-802B9AC4 0030+00 r=1 e=0 z=0  None .text      dComIfGs_isSaveSwitch__Fi                                    */
+/* 802B9A94-802B9AC4 0030+00 s=1 e=0 z=0  None .text      dComIfGs_isSaveSwitch__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,7 +842,7 @@ asm static void dComIfGs_isSaveSwitch(int param_0) {
 #pragma pop
 
 
-/* 802B9AC4-802B9AD0 000C+00 r=1 e=0 z=0  None .text      resetCrowdSize__7Z2SeMgrFv                                   */
+/* 802B9AC4-802B9AD0 000C+00 s=1 e=0 z=0  None .text      resetCrowdSize__7Z2SeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -853,7 +853,7 @@ asm void Z2SeMgr::resetCrowdSize() {
 #pragma pop
 
 
-/* 802B9AD0-802B9AFC 002C+00 r=1 e=0 z=0  None .text      setTwilightGateVol__8Z2SeqMgrFf                              */
+/* 802B9AD0-802B9AFC 002C+00 s=1 e=0 z=0  None .text      setTwilightGateVol__8Z2SeqMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -864,7 +864,7 @@ asm void Z2SeqMgr::setTwilightGateVol(f32 param_0) {
 #pragma pop
 
 
-/* 802B9AFC-802B9B60 0064+00 r=1 e=0 z=0  None .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
+/* 802B9AFC-802B9B60 0064+00 s=1 e=0 z=0  None .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -875,7 +875,7 @@ asm void Z2SeqMgr::setWindStoneVol(f32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802B9B60-802B9B68 0008+00 r=1 e=0 z=0  None .text      __ct__10JAISoundIDFUl                                        */
+/* 802B9B60-802B9B68 0008+00 s=1 e=0 z=0  None .text      __ct__10JAISoundIDFUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -886,7 +886,7 @@ asm JAISoundID::JAISoundID(u32 param_0) {
 #pragma pop
 
 
-/* 802B9B68-802B9C50 00E8+00 r=1 e=0 z=0  None .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
+/* 802B9B68-802B9C50 00E8+00 s=1 e=0 z=0  None .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -897,7 +897,7 @@ asm void Z2SceneMgr::sceneChange(JAISoundID param_0, u8 param_1, u8 param_2, u8 
 #pragma pop
 
 
-/* 802B9C50-802B9D40 00F0+00 r=1 e=1 z=0  None .text      framework__10Z2SceneMgrFv                                    */
+/* 802B9C50-802B9D40 00F0+00 s=0 e=1 z=0  None .text      framework__10Z2SceneMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -908,7 +908,7 @@ asm void Z2SceneMgr::framework() {
 #pragma pop
 
 
-/* 802B9D40-802B9D98 0058+00 r=1 e=1 z=0  None .text      load1stDynamicWave__10Z2SceneMgrFv                           */
+/* 802B9D40-802B9D98 0058+00 s=0 e=1 z=0  None .text      load1stDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,7 +919,7 @@ asm void Z2SceneMgr::load1stDynamicWave() {
 #pragma pop
 
 
-/* 802B9D98-802B9FC8 0230+00 r=2 e=0 z=0  None .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
+/* 802B9D98-802B9FC8 0230+00 s=2 e=0 z=0  None .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -930,7 +930,7 @@ asm void Z2SceneMgr::_load1stWaveInner_1() {
 #pragma pop
 
 
-/* 802B9FC8-802BA09C 00D4+00 r=2 e=0 z=0  None .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
+/* 802B9FC8-802BA09C 00D4+00 s=2 e=0 z=0  None .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -941,7 +941,7 @@ asm void Z2SceneMgr::_load1stWaveInner_2() {
 #pragma pop
 
 
-/* 802BA09C-802BA120 0084+00 r=1 e=1 z=0  None .text      check1stDynamicWave__10Z2SceneMgrFv                          */
+/* 802BA09C-802BA120 0084+00 s=0 e=1 z=0  None .text      check1stDynamicWave__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -952,7 +952,7 @@ asm void Z2SceneMgr::check1stDynamicWave() {
 #pragma pop
 
 
-/* 802BA120-802BA294 0174+00 r=2 e=2 z=0  None .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
+/* 802BA120-802BA294 0174+00 s=0 e=2 z=0  None .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -964,7 +964,7 @@ asm void Z2SceneMgr::load2ndDynamicWave() {
 
 
 /* ############################################################################################## */
-/* 803CA9BC-803CAB18 015C+00 r=1 e=0 z=0  None .data      @5852                                                        */
+/* 803CA9BC-803CAB18 015C+00 s=1 e=0 z=0  None .data      @5852                                                        */
 SECTION_DATA static void* Z2SceneMgr__lit_5852[87] = {
 	/* 0    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
 	/* 1    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
@@ -1055,7 +1055,7 @@ SECTION_DATA static void* Z2SceneMgr__lit_5852[87] = {
 	/* 86   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x1B8),
 };
 
-/* 802BA294-802BA56C 02D8+00 r=3 e=2 z=0  None .text      sceneBgmStart__10Z2SceneMgrFv                                */
+/* 802BA294-802BA56C 02D8+00 s=1 e=2 z=0  None .text      sceneBgmStart__10Z2SceneMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1066,7 +1066,7 @@ asm void Z2SceneMgr::sceneBgmStart() {
 #pragma pop
 
 
-/* 802BA56C-802BA5C0 0054+00 r=1 e=1 z=0  None .text      loadStaticWaves__10Z2SceneMgrFv                              */
+/* 802BA56C-802BA5C0 0054+00 s=0 e=1 z=0  None .text      loadStaticWaves__10Z2SceneMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1077,7 +1077,7 @@ asm void Z2SceneMgr::loadStaticWaves() {
 #pragma pop
 
 
-/* 802BA5C0-802BA5C8 0008+00 r=1 e=1 z=0  None .text      checkFirstWaves__10Z2SceneMgrFv                              */
+/* 802BA5C0-802BA5C8 0008+00 s=0 e=1 z=0  None .text      checkFirstWaves__10Z2SceneMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1088,7 +1088,7 @@ asm void Z2SceneMgr::checkFirstWaves() {
 #pragma pop
 
 
-/* 802BA5C8-802BA630 0068+00 r=2 e=0 z=0  None .text      eraseSeWave__10Z2SceneMgrFUl                                 */
+/* 802BA5C8-802BA630 0068+00 s=2 e=0 z=0  None .text      eraseSeWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1099,7 +1099,7 @@ asm void Z2SceneMgr::eraseSeWave(u32 param_0) {
 #pragma pop
 
 
-/* 802BA630-802BA698 0068+00 r=2 e=0 z=0  None .text      eraseBgmWave__10Z2SceneMgrFUl                                */
+/* 802BA630-802BA698 0068+00 s=2 e=0 z=0  None .text      eraseBgmWave__10Z2SceneMgrFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1110,7 +1110,7 @@ asm void Z2SceneMgr::eraseBgmWave(u32 param_0) {
 #pragma pop
 
 
-/* 802BA698-802BA704 006C+00 r=1 e=0 z=0  None .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
+/* 802BA698-802BA704 006C+00 s=1 e=0 z=0  None .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1121,7 +1121,7 @@ asm void Z2SceneMgr::getWaveLoadStatus(u32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802BA704-802BA770 006C+00 r=3 e=0 z=0  None .text      loadSeWave__10Z2SceneMgrFUl                                  */
+/* 802BA704-802BA770 006C+00 s=3 e=0 z=0  None .text      loadSeWave__10Z2SceneMgrFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1132,7 +1132,7 @@ asm void Z2SceneMgr::loadSeWave(u32 param_0) {
 #pragma pop
 
 
-/* 802BA770-802BA7DC 006C+00 r=3 e=0 z=0  None .text      loadBgmWave__10Z2SceneMgrFUl                                 */
+/* 802BA770-802BA7DC 006C+00 s=3 e=0 z=0  None .text      loadBgmWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

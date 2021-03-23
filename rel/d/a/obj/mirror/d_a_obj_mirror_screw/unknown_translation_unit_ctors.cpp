@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C99750[2];
+extern u8 data_80C99750[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_mirror_screw_cpp(); // 1
 
 // 
 // Declarations:

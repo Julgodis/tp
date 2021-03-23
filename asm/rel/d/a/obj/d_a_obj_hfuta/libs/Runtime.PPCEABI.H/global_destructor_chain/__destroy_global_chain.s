@@ -3,8 +3,8 @@ lbl_80C1DD34:
 /* 80C1DD38 00000004  7C 08 02 A6 */	mflr r0
 /* 80C1DD3C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C1DD40 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80C1DD44 00000010  3C 60 00 00 */	lis r3, __global_destructor_chain@ha /* 80C1EF88 */
-/* 80C1DD48 00000014  3B E3 00 00 */	addi r31, r3, __global_destructor_chain@l /* 80C1EF88 */
+/* 80C1DD44 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C1DD48 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80C1DD4C 00000018  48 00 00 20 */	b lbl_80C1DD6C
 lbl_80C1DD50:
 /* 80C1DD50 00000000  80 05 00 00 */	lwz r0, 0(r5)

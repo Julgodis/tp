@@ -4,10 +4,10 @@ lbl_8054B93C:
 /* 8054B944 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8054B948 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8054B94C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8054B950 00000014  4B FF F9 89 */	bl execute__8daNpcT_cFv
+/* 8054B950 00000014  4B FF F9 89 */	bl _unresolved
 /* 8054B954 00000018  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8054B958 0000001C  7C 03 07 74 */	extsb r3, r0
-/* 8054B95C 00000020  4B FF F9 7D */	bl dComIfGp_getReverb__Fi
+/* 8054B95C 00000020  4B FF F9 7D */	bl _unresolved
 /* 8054B960 00000024  7C 65 1B 78 */	mr r5, r3
 /* 8054B964 00000028  38 7F 0E 44 */	addi r3, r31, 0xe44
 /* 8054B968 0000002C  38 80 00 00 */	li r4, 0

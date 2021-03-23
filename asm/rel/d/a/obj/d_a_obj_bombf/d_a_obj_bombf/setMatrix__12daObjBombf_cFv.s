@@ -4,25 +4,25 @@ lbl_80BBAC4C:
 /* 80BBAC54 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BBAC58 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BBAC5C 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BBAC60 00000014  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BBAC64 00000018  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BBAC60 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BBAC64 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BBAC68 0000001C  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
 /* 80BBAC6C 00000020  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80BBAC70 00000024  C0 1F 05 84 */	lfs f0, 0x584(r31)
 /* 80BBAC74 00000028  EC 42 00 2A */	fadds f2, f2, f0
 /* 80BBAC78 0000002C  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80BBAC7C 00000030  4B FF FD 5D */	bl PSMTXTrans
-/* 80BBAC80 00000034  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BBAC84 00000038  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BBAC7C 00000030  4B FF FD 5D */	bl _unresolved
+/* 80BBAC80 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BBAC84 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BBAC88 0000003C  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 80BBAC8C 00000040  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80BBAC90 00000044  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80BBAC94 00000048  4B FF FD 45 */	bl mDoMtx_ZXYrotM__FPA4_fsss
-/* 80BBAC98 0000004C  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BBAC9C 00000050  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BBAC94 00000048  4B FF FD 45 */	bl _unresolved
+/* 80BBAC98 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BBAC9C 00000050  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BBACA0 00000054  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 80BBACA4 00000058  38 84 00 24 */	addi r4, r4, 0x24
-/* 80BBACA8 0000005C  4B FF FD 31 */	bl PSMTXCopy
+/* 80BBACA8 0000005C  4B FF FD 31 */	bl _unresolved
 /* 80BBACAC 00000060  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BBACB0 00000064  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BBACB4 00000068  7C 08 03 A6 */	mtlr r0

@@ -6,12 +6,12 @@ lbl_80CB214C:
 /* 80CB215C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CB2160 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80CB2164 00000018  8B E3 05 D7 */	lbz r31, 0x5d7(r3)
-/* 80CB2168 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CB216C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CB2168 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB216C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CB2170 00000024  88 9E 05 D4 */	lbz r4, 0x5d4(r30)
 /* 80CB2174 00000028  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80CB2178 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80CB217C 00000030  4B FF F8 5D */	bl isSwitch__10dSv_info_cCFii
+/* 80CB217C 00000030  4B FF F8 5D */	bl _unresolved
 /* 80CB2180 00000034  98 7E 05 D7 */	stb r3, 0x5d7(r30)
 /* 80CB2184 00000038  88 1E 05 D7 */	lbz r0, 0x5d7(r30)
 /* 80CB2188 0000003C  7C 1F 00 40 */	cmplw r31, r0

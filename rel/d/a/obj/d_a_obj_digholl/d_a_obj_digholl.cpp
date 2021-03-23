@@ -19,49 +19,26 @@ struct daObjDigholl_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct _GXColor {
-};
-
-struct cXyz {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dPa_control_c {
-	/* 8004D1B8 */ void setSimple(u16, cXyz const*, dKy_tevstr_c const*, u8, _GXColor const&, _GXColor const&, int, f32);
-};
-
-struct daPy_py_c {
-	/* 8015F4F0 */ void setLookPos(cXyz*);
 };
 
 // 
 // Forward References:
 // 
 
-static void daObjDigholl_Create(fopAc_ac_c*); // 2
-static void daObjDigholl_Delete(daObjDigholl_c*); // 2
-static void daObjDigholl_Execute(daObjDigholl_c*); // 2
-static void daObjDigholl_Draw(daObjDigholl_c*); // 2
+void daObjDigholl_Create(fopAc_ac_c*); // 2
+void daObjDigholl_Delete(daObjDigholl_c*); // 2
+void daObjDigholl_Execute(daObjDigholl_c*); // 2
+void daObjDigholl_Draw(daObjDigholl_c*); // 2
 
 extern "C" void create__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjDigholl_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Delete__FP14daObjDigholl_c(); // 1
+extern "C" void daObjDigholl_Delete__FP14daObjDigholl_c(); // 1
 extern "C" void execute__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Execute__FP14daObjDigholl_c(); // 1
+extern "C" void daObjDigholl_Execute__FP14daObjDigholl_c(); // 1
 extern "C" void draw__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Draw__FP14daObjDigholl_c(); // 1
+extern "C" void daObjDigholl_Draw__FP14daObjDigholl_c(); // 1
+extern "C" extern u32 const lit_3678;
 extern "C" extern u8 const lit_3679[4];
 extern "C" extern u32 const lit_3680;
 extern "C" extern u32 const lit_3681;
@@ -75,46 +52,21 @@ extern "C" extern u8 const lit_3797[8];
 extern "C" extern u8 const lit_3798[8];
 extern "C" extern u8 const lit_3799[8];
 extern "C" extern u32 const lit_3800;
-extern "C" extern void* g_profile_Obj_Digholl[12];
+extern "C" extern u8 l_daObjDigholl_Method[32];
+extern "C" extern u8 g_profile_Obj_Digholl[48];
 
 // 
 // External References:
 // 
 
-void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
-void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
-extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
-extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u32 g_whiteColor;
-extern "C" extern u32 __float_nan;
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 80BDCB3C-80BDCB40 0004+00 r=2 e=0 z=0  None .rodata    @3678                                                        */
-SECTION_RODATA static u32 const lit_3678 = 0xC2700000;
-
-/* 80BDC618-80BDC73C 0124+00 r=1 e=0 z=0  None .text      create__14daObjDigholl_cFv                                   */
+/* 80BDC618-80BDC73C 0124+00 s=1 e=0 z=0  None .text      create__14daObjDigholl_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,18 +77,18 @@ asm void daObjDigholl_c::create() {
 #pragma pop
 
 
-/* 80BDC73C-80BDC75C 0020+00 r=1 e=0 z=0  None .text      daObjDigholl_Create__FP10fopAc_ac_c                          */
+/* 80BDC73C-80BDC75C 0020+00 s=0 e=0 z=0  None .text      daObjDigholl_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigholl_Create(fopAc_ac_c* param_0) {
+asm void daObjDigholl_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BDC75C-80BDC7B0 0054+00 r=1 e=0 z=0  None .text      __dt__14daObjDigholl_cFv                                     */
+/* 80BDC75C-80BDC7B0 0054+00 s=1 e=0 z=0  None .text      __dt__14daObjDigholl_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,18 +99,18 @@ asm daObjDigholl_c::~daObjDigholl_c() {
 #pragma pop
 
 
-/* 80BDC7B0-80BDC7D8 0028+00 r=1 e=0 z=0  None .text      daObjDigholl_Delete__FP14daObjDigholl_c                      */
+/* 80BDC7B0-80BDC7D8 0028+00 s=0 e=0 z=0  None .text      daObjDigholl_Delete__FP14daObjDigholl_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigholl_Delete(daObjDigholl_c* param_0) {
+asm void daObjDigholl_Delete(daObjDigholl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Delete__FP14daObjDigholl_c.s"
 }
 #pragma pop
 
 
-/* 80BDC7D8-80BDCAEC 0314+00 r=1 e=0 z=0  None .text      execute__14daObjDigholl_cFv                                  */
+/* 80BDC7D8-80BDCAEC 0314+00 s=1 e=0 z=0  None .text      execute__14daObjDigholl_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,18 +121,18 @@ asm void daObjDigholl_c::execute() {
 #pragma pop
 
 
-/* 80BDCAEC-80BDCB0C 0020+00 r=1 e=0 z=0  None .text      daObjDigholl_Execute__FP14daObjDigholl_c                     */
+/* 80BDCAEC-80BDCB0C 0020+00 s=0 e=0 z=0  None .text      daObjDigholl_Execute__FP14daObjDigholl_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigholl_Execute(daObjDigholl_c* param_0) {
+asm void daObjDigholl_Execute(daObjDigholl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Execute__FP14daObjDigholl_c.s"
 }
 #pragma pop
 
 
-/* 80BDCB0C-80BDCB14 0008+00 r=1 e=0 z=0  None .text      draw__14daObjDigholl_cFv                                     */
+/* 80BDCB0C-80BDCB14 0008+00 s=1 e=0 z=0  None .text      draw__14daObjDigholl_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,11 +143,11 @@ asm void daObjDigholl_c::draw() {
 #pragma pop
 
 
-/* 80BDCB14-80BDCB34 0020+00 r=1 e=0 z=0  None .text      daObjDigholl_Draw__FP14daObjDigholl_c                        */
+/* 80BDCB14-80BDCB34 0020+00 s=0 e=0 z=0  None .text      daObjDigholl_Draw__FP14daObjDigholl_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigholl_Draw(daObjDigholl_c* param_0) {
+asm void daObjDigholl_Draw(daObjDigholl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/daObjDigholl_Draw__FP14daObjDigholl_c.s"
 }
@@ -203,78 +155,66 @@ asm static void daObjDigholl_Draw(daObjDigholl_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80BDCB40-80BDCB44 0004+00 r=0 e=0 z=0  None .rodata    @3679                                                        */
+/* 80BDCB3C-80BDCB40 0004+00 s=0 e=0 z=0  None .rodata    @3678                                                        */
+SECTION_RODATA u32 const lit_3678 = 0xC2700000;
+
+/* 80BDCB40-80BDCB44 0004+00 s=0 e=0 z=0  None .rodata    @3679                                                        */
 SECTION_RODATA u8 const lit_3679[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BDCB44-80BDCB48 0004+00 r=0 e=0 z=0  None .rodata    @3680                                                        */
+/* 80BDCB44-80BDCB48 0004+00 s=0 e=0 z=0  None .rodata    @3680                                                        */
 SECTION_RODATA u32 const lit_3680 = 0xC2C80000;
 
-/* 80BDCB48-80BDCB4C 0004+00 r=0 e=0 z=0  None .rodata    @3681                                                        */
+/* 80BDCB48-80BDCB4C 0004+00 s=0 e=0 z=0  None .rodata    @3681                                                        */
 SECTION_RODATA u32 const lit_3681 = 0x42700000;
 
-/* 80BDCB4C-80BDCB50 0004+00 r=0 e=0 z=0  None .rodata    @3682                                                        */
+/* 80BDCB4C-80BDCB50 0004+00 s=0 e=0 z=0  None .rodata    @3682                                                        */
 SECTION_RODATA u32 const lit_3682 = 0x41200000;
 
-/* 80BDCB50-80BDCB54 0004+00 r=0 e=0 z=0  None .rodata    @3683                                                        */
+/* 80BDCB50-80BDCB54 0004+00 s=0 e=0 z=0  None .rodata    @3683                                                        */
 SECTION_RODATA u32 const lit_3683 = 0x42C80000;
 
-/* 80BDCB54-80BDCB58 0004+00 r=0 e=0 z=0  None .rodata    @3793                                                        */
+/* 80BDCB54-80BDCB58 0004+00 s=0 e=0 z=0  None .rodata    @3793                                                        */
 SECTION_RODATA u32 const lit_3793 = 0x42200000;
 
-/* 80BDCB58-80BDCB5C 0004+00 r=0 e=0 z=0  None .rodata    @3794                                                        */
+/* 80BDCB58-80BDCB5C 0004+00 s=0 e=0 z=0  None .rodata    @3794                                                        */
 SECTION_RODATA u32 const lit_3794 = 0x420C0000;
 
-/* 80BDCB5C-80BDCB60 0004+00 r=0 e=0 z=0  None .rodata    @3795                                                        */
+/* 80BDCB5C-80BDCB60 0004+00 s=0 e=0 z=0  None .rodata    @3795                                                        */
 SECTION_RODATA u32 const lit_3795 = 0x48742400;
 
-/* 80BDCB60-80BDCB64 0004+00 r=0 e=0 z=0  None .rodata    @3796                                                        */
+/* 80BDCB60-80BDCB64 0004+00 s=0 e=0 z=0  None .rodata    @3796                                                        */
 SECTION_RODATA u32 const lit_3796 = 0x43480000;
 
-/* 80BDCB64-80BDCB6C 0008+00 r=0 e=0 z=0  None .rodata    @3797                                                        */
+/* 80BDCB64-80BDCB6C 0008+00 s=0 e=0 z=0  None .rodata    @3797                                                        */
 SECTION_RODATA u8 const lit_3797[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BDCB6C-80BDCB74 0008+00 r=0 e=0 z=0  None .rodata    @3798                                                        */
+/* 80BDCB6C-80BDCB74 0008+00 s=0 e=0 z=0  None .rodata    @3798                                                        */
 SECTION_RODATA u8 const lit_3798[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BDCB74-80BDCB7C 0008+00 r=0 e=0 z=0  None .rodata    @3799                                                        */
+/* 80BDCB74-80BDCB7C 0008+00 s=0 e=0 z=0  None .rodata    @3799                                                        */
 SECTION_RODATA u8 const lit_3799[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BDCB7C-80BDCB80 0004+00 r=0 e=0 z=0  None .rodata    @3800                                                        */
+/* 80BDCB7C-80BDCB80 0004+00 s=0 e=0 z=0  None .rodata    @3800                                                        */
 SECTION_RODATA u32 const lit_3800 = 0x447A0000;
 
-/* 80BDCB80-80BDCBA0 0020+00 r=1 e=0 z=0  None .data      l_daObjDigholl_Method                                        */
-SECTION_DATA static void* l_daObjDigholl_Method[8] = {
-	/* 0    */ (void*)daObjDigholl_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjDigholl_Delete__FP14daObjDigholl_c,
-	/* 2    */ (void*)daObjDigholl_Execute__FP14daObjDigholl_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjDigholl_Draw__FP14daObjDigholl_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BDCB80-80BDCBA0 0020+00 s=0 e=0 z=0  None .data      l_daObjDigholl_Method                                        */
+SECTION_DATA u8 l_daObjDigholl_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BDCBA0-80BDCBD0 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_Digholl                                        */
-SECTION_DATA void* g_profile_Obj_Digholl[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00520000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00F90000,
-	/* 9    */ (void*)&l_daObjDigholl_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x030E0000,
+/* 80BDCBA0-80BDCBD0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Digholl                                        */
+SECTION_DATA u8 g_profile_Obj_Digholl[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x52, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0xF9, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x41, 0x00, 0x03, 0x0E, 0x00, 0x00,
 };
 

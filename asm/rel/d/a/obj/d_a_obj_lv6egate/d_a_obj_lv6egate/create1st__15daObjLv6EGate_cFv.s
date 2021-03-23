@@ -7,25 +7,25 @@ lbl_80C82078:
 /* 80C8208C 00000014  41 82 00 08 */	beq lbl_80C82094
 /* 80C82090 00000018  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_80C82094:
-/* 80C82094 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C82BB0 */
-/* 80C82098 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C82BB0 */
+/* 80C82094 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C82098 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C8209C 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C820A0 0000000C  4B FF FF B9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C820A0 0000000C  4B FF FF B9 */	bl _unresolved
 /* 80C820A4 00000010  7C 60 1B 78 */	mr r0, r3
 /* 80C820A8 00000014  2C 00 00 04 */	cmpwi r0, 4
 /* 80C820AC 00000018  40 82 00 44 */	bne lbl_80C820F0
 /* 80C820B0 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 80C820B4 00000020  48 00 00 55 */	bl setMtx__15daObjLv6EGate_cFv
 /* 80C820B8 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80C820BC 00000028  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C82BB0 */
-/* 80C820C0 0000002C  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C82BB0 */
+/* 80C820BC 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C820C0 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C820C4 00000030  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C820C8 00000034  38 A0 00 03 */	li r5, 3
-/* 80C820CC 00000038  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha /* 80075AD8 */
-/* 80C820D0 0000003C  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l /* 80075AD8 */
+/* 80C820CC 00000038  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80C820D0 0000003C  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80C820D4 00000040  38 E0 07 B0 */	li r7, 0x7b0
 /* 80C820D8 00000044  39 1F 05 A8 */	addi r8, r31, 0x5a8
-/* 80C820DC 00000048  4B FF FF 7D */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80C820DC 00000048  4B FF FF 7D */	bl _unresolved
 /* 80C820E0 0000004C  7C 60 1B 78 */	mr r0, r3
 /* 80C820E4 00000050  2C 00 00 05 */	cmpwi r0, 5
 /* 80C820E8 00000054  40 82 00 08 */	bne lbl_80C820F0

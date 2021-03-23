@@ -4,10 +4,10 @@ lbl_80C93198:
 /* 80C931A0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C931A4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C931A8 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80C931AC 00000014  3C 60 00 00 */	lis r3, searchParentSub__FPvPv@ha /* 80C92E58 */
-/* 80C931B0 00000018  38 63 00 00 */	addi r3, r3, searchParentSub__FPvPv@l /* 80C92E58 */
+/* 80C931AC 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C931B0 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C931B4 0000001C  7F E4 FB 78 */	mr r4, r31
-/* 80C931B8 00000020  4B FF FC 81 */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80C931B8 00000020  4B FF FC 81 */	bl _unresolved
 /* 80C931BC 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 80C931C0 00000028  41 82 00 0C */	beq lbl_80C931CC
 /* 80C931C4 0000002C  80 03 00 04 */	lwz r0, 4(r3)

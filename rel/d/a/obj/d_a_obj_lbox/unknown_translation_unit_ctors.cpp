@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C53FA8[2];
+extern u8 data_80C53FA8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_lbox_cpp(); // 1
 
 // 
 // Declarations:

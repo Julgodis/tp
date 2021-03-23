@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8066EDD4[2];
+extern u8 data_8066EDD4[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_do_cpp(); // 1
 
 // 
 // Declarations:

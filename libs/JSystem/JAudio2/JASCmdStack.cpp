@@ -63,19 +63,19 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80431678-80431684 000C+00 r=1 e=0 z=0  None .bss       @80                                                          */
+/* 80431678-80431684 000C+00 s=1 e=0 z=0  None .bss       @80                                                          */
 static u8 JASCmdStack__lit_80[12];
 
-/* 80431684-80431690 000C+00 r=1 e=0 z=0  None .bss       sCommandListOnce__10JASPortCmd                               */
+/* 80431684-80431690 000C+00 s=1 e=0 z=0  None .bss       sCommandListOnce__10JASPortCmd                               */
 static u8 sCommandListOnce__10JASPortCmd[12];
 
-/* 80431690-8043169C 000C+00 r=0 e=0 z=0  None .bss       @82                                                          */
+/* 80431690-8043169C 000C+00 s=0 e=0 z=0  None .bss       @82                                                          */
 u8 JASCmdStack__lit_82[12];
 
-/* 8043169C-804316A8 000C+00 r=1 e=0 z=0  None .bss       sCommandListStay__10JASPortCmd                               */
+/* 8043169C-804316A8 000C+00 s=1 e=0 z=0  None .bss       sCommandListStay__10JASPortCmd                               */
 static u8 sCommandListStay__10JASPortCmd[12];
 
-/* 80291060-80291094 0034+00 r=1 e=1 z=0  None .text      execAllCommand__10JASPortCmdFv                               */
+/* 80291060-80291094 0034+00 s=0 e=1 z=0  None .text      execAllCommand__10JASPortCmdFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ asm void JASPortCmd::execAllCommand() {
 #pragma pop
 
 
-/* 80291094-8029110C 0078+00 r=1 e=0 z=0  None .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
+/* 80291094-8029110C 0078+00 s=1 e=0 z=0  None .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ asm void JASPortCmd::TPortHead::execCommandOnce() {
 #pragma pop
 
 
-/* 8029110C-8029116C 0060+00 r=1 e=0 z=0  None .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
+/* 8029110C-8029116C 0060+00 s=1 e=0 z=0  None .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm void JASPortCmd::TPortHead::execCommandStay() {
 #pragma pop
 
 
-/* 8029116C-802911D0 0064+00 r=1 e=1 z=0  None .text      __sinit_JASCmdStack_cpp                                      */
+/* 8029116C-802911D0 0064+00 s=0 e=1 z=0  None .text      __sinit_JASCmdStack_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +119,7 @@ extern "C" asm void __sinit_JASCmdStack_cpp() {
 #pragma pop
 
 
-/* 802911D0-80291228 0058+00 r=1 e=0 z=0  None .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
+/* 802911D0-80291228 0058+00 s=1 e=0 z=0  None .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

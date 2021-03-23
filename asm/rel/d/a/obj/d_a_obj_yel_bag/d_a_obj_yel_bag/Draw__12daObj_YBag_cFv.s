@@ -5,37 +5,37 @@ lbl_80D3D32C:
 /* 80D3D338 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D3D33C 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80D3D340 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D3D344 00000018  3C 60 00 00 */	lis r3, mCcDObjInfo__12daObj_YBag_c@ha /* 80D3DC8C */
-/* 80D3D348 0000001C  3B E3 00 00 */	addi r31, r3, mCcDObjInfo__12daObj_YBag_c@l /* 80D3DC8C */
-/* 80D3D34C 00000020  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80D3D350 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80D3D344 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D3D348 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80D3D34C 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D3D350 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D3D354 00000028  38 80 00 00 */	li r4, 0
 /* 80D3D358 0000002C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D3D35C 00000030  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 80D3D360 00000034  4B FF EC F9 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80D3D364 00000038  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80D3D368 0000003C  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80D3D360 00000034  4B FF EC F9 */	bl _unresolved
+/* 80D3D364 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D3D368 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D3D36C 00000040  80 9E 05 80 */	lwz r4, 0x580(r30)
 /* 80D3D370 00000044  80 84 00 04 */	lwz r4, 4(r4)
 /* 80D3D374 00000048  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 80D3D378 0000004C  4B FF EC E1 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80D3D378 0000004C  4B FF EC E1 */	bl _unresolved
 /* 80D3D37C 00000050  80 7E 05 80 */	lwz r3, 0x580(r30)
-/* 80D3D380 00000054  4B FF EC D9 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80D3D380 00000054  4B FF EC D9 */	bl _unresolved
 /* 80D3D384 00000058  C0 3F 00 74 */	lfs f1, 0x74(r31)
 /* 80D3D388 0000005C  C0 1E 09 F0 */	lfs f0, 0x9f0(r30)
 /* 80D3D38C 00000060  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80D3D390 00000064  41 82 00 8C */	beq lbl_80D3D41C
 /* 80D3D394 00000068  38 00 00 00 */	li r0, 0
 /* 80D3D398 0000006C  90 01 00 08 */	stw r0, 8(r1)
-/* 80D3D39C 00000070  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D3D3A0 00000074  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D3D39C 00000070  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D3D3A0 00000074  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D3D3A4 00000078  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80D3D3A8 0000007C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80D3D3AC 00000080  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 80D3D3B0 00000084  7D 89 03 A6 */	mtctr r12
 /* 80D3D3B4 00000088  4E 80 04 21 */	bctrl 
 /* 80D3D3B8 0000008C  38 81 00 08 */	addi r4, r1, 8
-/* 80D3D3BC 00000090  4B FF EC 9D */	bl fopAcM_SearchByID__FUiPP10fopAc_ac_c
+/* 80D3D3BC 00000090  4B FF EC 9D */	bl _unresolved
 /* 80D3D3C0 00000094  80 01 00 08 */	lwz r0, 8(r1)
 /* 80D3D3C4 00000098  7C 1E 00 40 */	cmplw r30, r0
 /* 80D3D3C8 0000009C  40 82 00 10 */	bne lbl_80D3D3D8
@@ -56,9 +56,9 @@ lbl_80D3D3D8:
 /* 80D3D400 00000028  39 1E 01 0C */	addi r8, r30, 0x10c
 /* 80D3D404 0000002C  39 20 00 00 */	li r9, 0
 /* 80D3D408 00000030  C0 BF 00 94 */	lfs f5, 0x94(r31)
-/* 80D3D40C 00000034  3D 40 00 00 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha /* 804248D0 */
-/* 80D3D410 00000038  39 4A 00 00 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l /* 804248D0 */
-/* 80D3D414 0000003C  4B FF EC 45 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
+/* 80D3D40C 00000034  3D 40 00 00 */	lis r10, 0x0000 /* 0x00000000@ha */
+/* 80D3D410 00000038  39 4A 00 00 */	addi r10, r10, 0x0000 /* 0x00000000@l */
+/* 80D3D414 0000003C  4B FF EC 45 */	bl _unresolved
 /* 80D3D418 00000040  90 7E 0A 0C */	stw r3, 0xa0c(r30)
 lbl_80D3D41C:
 /* 80D3D41C 00000000  38 60 00 01 */	li r3, 1

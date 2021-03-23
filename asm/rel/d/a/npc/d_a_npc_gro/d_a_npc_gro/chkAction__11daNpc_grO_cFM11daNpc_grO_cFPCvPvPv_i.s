@@ -3,7 +3,7 @@ lbl_809DCDA4:
 /* 809DCDA8 00000004  7C 08 02 A6 */	mflr r0
 /* 809DCDAC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809DCDB0 0000000C  38 63 0D E0 */	addi r3, r3, 0xde0
-/* 809DCDB4 00000010  4B FF D7 25 */	bl __ptmf_cmpr
+/* 809DCDB4 00000010  4B FF D7 25 */	bl _unresolved
 /* 809DCDB8 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 809DCDBC 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 809DCDC0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

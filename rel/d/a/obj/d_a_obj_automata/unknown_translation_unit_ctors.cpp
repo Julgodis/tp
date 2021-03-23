@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BA6BFC[2];
+extern u8 data_80BA6BFC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_automata_cpp(); // 1
 
 // 
 // Declarations:

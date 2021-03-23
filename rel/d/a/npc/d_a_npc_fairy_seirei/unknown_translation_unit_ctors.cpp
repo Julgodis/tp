@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80541D78[2];
+extern u8 data_80541D78[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_fairy_seirei_cpp(); // 1
 
 // 
 // Declarations:

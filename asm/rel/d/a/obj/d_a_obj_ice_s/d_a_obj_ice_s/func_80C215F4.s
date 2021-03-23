@@ -5,8 +5,8 @@ lbl_80C215F4:
 /* 80C21600 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C21604 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C21608 00000014  4B FF F8 B9 */	bl initBaseMtx__12daObjIce_s_cFv
-/* 80C2160C 00000018  3C 60 00 00 */	lis r3, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@ha /* 80C20F48 */
-/* 80C21610 0000001C  38 03 00 00 */	addi r0, r3, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@l /* 80C20F48 */
+/* 80C2160C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C21610 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80C21614 00000020  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80C21618 00000024  90 03 00 B4 */	stw r0, 0xb4(r3)
 /* 80C2161C 00000028  38 60 00 04 */	li r3, 4

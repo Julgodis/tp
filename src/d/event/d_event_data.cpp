@@ -282,7 +282,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A7FB0-803A8238 0288+00 r=2 e=0 z=0  None .data      TelopData                                                    */
+/* 803A7FB0-803A8238 0288+00 s=2 e=0 z=0  None .data      TelopData                                                    */
 SECTION_DATA static u8 TelopData[648] = {
 	0x44, 0x30, 0x35, 0x00, 0x04, 0x4D, 0x10, 0x69, 0x00, 0x03, 0x00, 0x00, 0x44, 0x30, 0x35, 0x41,
 	0x04, 0x4D, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x44, 0x30, 0x35, 0x42, 0x04, 0x4D, 0xFF, 0xFF,
@@ -327,14 +327,14 @@ SECTION_DATA static u8 TelopData[648] = {
 	0x04, 0x75, 0xFF, 0xFF, 0x00, 0x01, 0x00, 0x00,
 };
 
-/* 80450640-80450648 0004+04 r=2 e=0 z=0  None .sdata     numTelopData                                                 */
+/* 80450640-80450648 0004+04 s=2 e=0 z=0  None .sdata     numTelopData                                                 */
 SECTION_SDATA static u32 numTelopData[1 + 1 /* padding */] = {
 	0x00000036,
 	/* padding */
 	0x00000000,
 };
 
-/* 8004372C-800437C4 0098+00 r=2 e=0 z=0  None .text      getTelopNo__FPCc                                             */
+/* 8004372C-800437C4 0098+00 s=2 e=0 z=0  None .text      getTelopNo__FPCc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +345,7 @@ asm static void getTelopNo(char const* param_0) {
 #pragma pop
 
 
-/* 800437C4-800437F0 002C+00 r=1 e=0 z=0  None .text      getTelopNo__Fv                                               */
+/* 800437C4-800437F0 002C+00 s=1 e=0 z=0  None .text      getTelopNo__Fv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ asm static void getTelopNo() {
 #pragma pop
 
 
-/* 800437F0-80043A14 0224+00 r=1 e=0 z=0  None .text      getStartTelopNo__Fv                                          */
+/* 800437F0-80043A14 0224+00 s=1 e=0 z=0  None .text      getStartTelopNo__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +368,7 @@ asm static void getStartTelopNo() {
 
 
 /* ############################################################################################## */
-/* 80379DD0-80379F50 017E+02 r=10 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80379DD0-80379F50 017E+02 s=10 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -429,18 +429,18 @@ SECTION_DEAD char const* const stringBase_80379F48 = "Scale";
 SECTION_DEAD static char const* const pad_80379F4E = "\0";
 #pragma pop
 
-/* 80451ED0-80451ED4 0004+00 r=4 e=0 z=0  None .sdata2    @4264                                                        */
+/* 80451ED0-80451ED4 0004+00 s=4 e=0 z=0  None .sdata2    @4264                                                        */
 SECTION_SDATA2 static u8 d_event_d_event_data__lit_4264[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451ED4-80451ED8 0004+00 r=2 e=0 z=0  None .sdata2    @4265                                                        */
+/* 80451ED4-80451ED8 0004+00 s=2 e=0 z=0  None .sdata2    @4265                                                        */
 SECTION_SDATA2 static f32 d_event_d_event_data__lit_4265 = 15.0f;
 
-/* 80451ED8-80451EE0 0008+00 r=1 e=0 z=0  None .sdata2    @4267                                                        */
+/* 80451ED8-80451EE0 0008+00 s=1 e=0 z=0  None .sdata2    @4267                                                        */
 SECTION_SDATA2 static f64 d_event_d_event_data__lit_4267 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80043A14-80043D60 034C+00 r=1 e=0 z=0  None .text      dEvDt_Next_Stage__Fii                                        */
+/* 80043A14-80043D60 034C+00 s=1 e=0 z=0  None .text      dEvDt_Next_Stage__Fii                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,7 +451,7 @@ asm static void dEvDt_Next_Stage(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80043D60-80043DC8 0068+00 r=3 e=0 z=0  None .text      flagCheck__11dEvDtFlag_cFi                                   */
+/* 80043D60-80043DC8 0068+00 s=3 e=0 z=0  None .text      flagCheck__11dEvDtFlag_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +462,7 @@ asm void dEvDtFlag_c::flagCheck(int param_0) {
 #pragma pop
 
 
-/* 80043DC8-80043E30 0068+00 r=3 e=1 z=0  None .text      flagSet__11dEvDtFlag_cFi                                     */
+/* 80043DC8-80043E30 0068+00 s=2 e=1 z=0  None .text      flagSet__11dEvDtFlag_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +473,7 @@ asm void dEvDtFlag_c::flagSet(int param_0) {
 #pragma pop
 
 
-/* 80043E30-80043E58 0028+00 r=2 e=0 z=0  None .text      flagMaxCheck__11dEvDtFlag_cFi                                */
+/* 80043E30-80043E58 0028+00 s=2 e=0 z=0  None .text      flagMaxCheck__11dEvDtFlag_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +484,7 @@ asm void dEvDtFlag_c::flagMaxCheck(int param_0) {
 #pragma pop
 
 
-/* 80043E58-80043E78 0020+00 r=3 e=3 z=0  None .text      init__11dEvDtFlag_cFv                                        */
+/* 80043E58-80043E78 0020+00 s=0 e=3 z=0  None .text      init__11dEvDtFlag_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +495,7 @@ asm void dEvDtFlag_c::init() {
 #pragma pop
 
 
-/* 80043E78-80043EFC 0084+00 r=1 e=1 z=0  None .text      finishCheck__12dEvDtEvent_cFv                                */
+/* 80043E78-80043EFC 0084+00 s=0 e=1 z=0  None .text      finishCheck__12dEvDtEvent_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,7 +506,7 @@ asm void dEvDtEvent_c::finishCheck() {
 #pragma pop
 
 
-/* 80043EFC-80043F70 0074+00 r=1 e=1 z=0  None .text      forceFinish__12dEvDtEvent_cFv                                */
+/* 80043EFC-80043F70 0074+00 s=0 e=1 z=0  None .text      forceFinish__12dEvDtEvent_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +517,7 @@ asm void dEvDtEvent_c::forceFinish() {
 #pragma pop
 
 
-/* 80043F70-80043FD8 0068+00 r=1 e=1 z=0  None .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             */
+/* 80043F70-80043FD8 0068+00 s=0 e=1 z=0  None .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -528,7 +528,7 @@ asm void dEvDtEvent_c::specialStaffProc(dEvDtStaff_c* param_0) {
 #pragma pop
 
 
-/* 80043FD8-8004403C 0064+00 r=4 e=0 z=0  None .text      specialProc_WaitStart__12dEvDtStaff_cFi                      */
+/* 80043FD8-8004403C 0064+00 s=4 e=0 z=0  None .text      specialProc_WaitStart__12dEvDtStaff_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +539,7 @@ asm void dEvDtStaff_c::specialProc_WaitStart(int param_0) {
 #pragma pop
 
 
-/* 8004403C-80044080 0044+00 r=4 e=0 z=0  None .text      specialProc_WaitProc__12dEvDtStaff_cFi                       */
+/* 8004403C-80044080 0044+00 s=4 e=0 z=0  None .text      specialProc_WaitProc__12dEvDtStaff_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +551,7 @@ asm void dEvDtStaff_c::specialProc_WaitProc(int param_0) {
 
 
 /* ############################################################################################## */
-/* 803A8238-803A8270 0034+04 r=1 e=0 z=0  None .data      @4398                                                        */
+/* 803A8238-803A8270 0034+04 s=1 e=0 z=0  None .data      @4398                                                        */
 SECTION_DATA static void* d_event_d_event_data__lit_4398[13 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
 	/* 1    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x50),
@@ -570,7 +570,7 @@ SECTION_DATA static void* d_event_d_event_data__lit_4398[13 + 1 /* padding */] =
 	NULL,
 };
 
-/* 80044080-80044134 00B4+00 r=2 e=0 z=0  None .text      specialProc__12dEvDtStaff_cFv                                */
+/* 80044080-80044134 00B4+00 s=2 e=0 z=0  None .text      specialProc__12dEvDtStaff_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +581,7 @@ asm void dEvDtStaff_c::specialProc() {
 #pragma pop
 
 
-/* 80044134-80044170 003C+00 r=1 e=1 z=0  None .text      init__12dEvDtStaff_cFv                                       */
+/* 80044134-80044170 003C+00 s=0 e=1 z=0  None .text      init__12dEvDtStaff_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,7 +592,7 @@ asm void dEvDtStaff_c::init() {
 #pragma pop
 
 
-/* 80044170-80044190 0020+00 r=1 e=0 z=0  None .text      advanceCut__12dEvDtStaff_cFi                                 */
+/* 80044170-80044190 0020+00 s=1 e=0 z=0  None .text      advanceCut__12dEvDtStaff_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -604,17 +604,17 @@ asm void dEvDtStaff_c::advanceCut(int param_0) {
 
 
 /* ############################################################################################## */
-/* 80451EE0-80451EE8 0004+04 r=1 e=0 z=0  None .sdata2    @4460                                                        */
+/* 80451EE0-80451EE8 0004+04 s=1 e=0 z=0  None .sdata2    @4460                                                        */
 SECTION_SDATA2 static f32 d_event_d_event_data__lit_4460[1 + 1 /* padding */] = {
 	1.0f / 15.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451EE8-80451EF0 0008+00 r=1 e=0 z=0  None .sdata2    @4461                                                        */
+/* 80451EE8-80451EF0 0008+00 s=1 e=0 z=0  None .sdata2    @4461                                                        */
 SECTION_SDATA2 static f64 d_event_d_event_data__lit_4461 = 24.0;
 
-/* 80044190-80044324 0194+00 r=1 e=0 z=0  None .text      specialProcLight__12dEvDtStaff_cFv                           */
+/* 80044190-80044324 0194+00 s=1 e=0 z=0  None .text      specialProcLight__12dEvDtStaff_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +625,7 @@ asm void dEvDtStaff_c::specialProcLight() {
 #pragma pop
 
 
-/* 80044324-80044A58 0734+00 r=1 e=0 z=0  None .text      specialProcMessage__12dEvDtStaff_cFv                         */
+/* 80044324-80044A58 0734+00 s=1 e=0 z=0  None .text      specialProcMessage__12dEvDtStaff_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -637,13 +637,13 @@ asm void dEvDtStaff_c::specialProcMessage() {
 
 
 /* ############################################################################################## */
-/* 80451EF0-80451EF4 0004+00 r=4 e=0 z=0  None .sdata2    @4668                                                        */
+/* 80451EF0-80451EF4 0004+00 s=4 e=0 z=0  None .sdata2    @4668                                                        */
 SECTION_SDATA2 static f32 d_event_d_event_data__lit_4668 = 1.0f;
 
-/* 80451EF4-80451EF8 0004+00 r=2 e=0 z=0  None .sdata2    @4669                                                        */
+/* 80451EF4-80451EF8 0004+00 s=2 e=0 z=0  None .sdata2    @4669                                                        */
 SECTION_SDATA2 static f32 d_event_d_event_data__lit_4669 = -1.0f;
 
-/* 80044A58-80044CB8 0260+00 r=1 e=0 z=0  None .text      specialProcSound__12dEvDtStaff_cFv                           */
+/* 80044A58-80044CB8 0260+00 s=1 e=0 z=0  None .text      specialProcSound__12dEvDtStaff_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +654,7 @@ asm void dEvDtStaff_c::specialProcSound() {
 #pragma pop
 
 
-/* 80044CB8-80044EE4 022C+00 r=1 e=0 z=0  None .text      specialProcCreate__12dEvDtStaff_cFv                          */
+/* 80044CB8-80044EE4 022C+00 s=1 e=0 z=0  None .text      specialProcCreate__12dEvDtStaff_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +665,7 @@ asm void dEvDtStaff_c::specialProcCreate() {
 #pragma pop
 
 
-/* 80044EE4-80045878 0994+00 r=1 e=0 z=0  None .text      specialProcDirector__12dEvDtStaff_cFv                        */
+/* 80044EE4-80045878 0994+00 s=1 e=0 z=0  None .text      specialProcDirector__12dEvDtStaff_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,10 +677,10 @@ asm void dEvDtStaff_c::specialProcDirector() {
 
 
 /* ############################################################################################## */
-/* 80451EF8-80451EFC 0004+00 r=1 e=0 z=0  None .sdata2    @5057                                                        */
+/* 80451EF8-80451EFC 0004+00 s=1 e=0 z=0  None .sdata2    @5057                                                        */
 SECTION_SDATA2 static f32 d_event_d_event_data__lit_5057 = 10.0f;
 
-/* 80045878-80045AFC 0284+00 r=1 e=0 z=0  None .text      specialProcPackage__12dEvDtStaff_cFv                         */
+/* 80045878-80045AFC 0284+00 s=1 e=0 z=0  None .text      specialProcPackage__12dEvDtStaff_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +691,7 @@ asm void dEvDtStaff_c::specialProcPackage() {
 #pragma pop
 
 
-/* 80045AFC-80045C34 0138+00 r=1 e=0 z=0  None .text      specialProcTimekeeper__12dEvDtStaff_cFv                      */
+/* 80045AFC-80045C34 0138+00 s=1 e=0 z=0  None .text      specialProcTimekeeper__12dEvDtStaff_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -703,10 +703,10 @@ asm void dEvDtStaff_c::specialProcTimekeeper() {
 
 
 /* ############################################################################################## */
-/* 80451EFC-80451F00 0004+00 r=1 e=0 z=0  None .sdata2    @5200                                                        */
+/* 80451EFC-80451F00 0004+00 s=1 e=0 z=0  None .sdata2    @5200                                                        */
 SECTION_SDATA2 static f32 lit_5200 = 4.0f / 5.0f;
 
-/* 80045C34-800460A8 0474+00 r=1 e=0 z=0  None .text      specialProcEffect__12dEvDtStaff_cFv                          */
+/* 80045C34-800460A8 0474+00 s=1 e=0 z=0  None .text      specialProcEffect__12dEvDtStaff_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -717,7 +717,7 @@ asm void dEvDtStaff_c::specialProcEffect() {
 #pragma pop
 
 
-/* 800460A8-80046138 0090+00 r=1 e=0 z=0  None .text      startCheck__10dEvDtCut_cFv                                   */
+/* 800460A8-80046138 0090+00 s=1 e=0 z=0  None .text      startCheck__10dEvDtCut_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -728,7 +728,7 @@ asm void dEvDtCut_c::startCheck() {
 #pragma pop
 
 
-/* 80046138-8004616C 0034+00 r=8 e=7 z=0  None .text      init__11dEvDtBase_cFv                                        */
+/* 80046138-8004616C 0034+00 s=1 e=7 z=0  None .text      init__11dEvDtBase_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -739,7 +739,7 @@ asm void dEvDtBase_c::init() {
 #pragma pop
 
 
-/* 8004616C-8004628C 0120+00 r=6 e=6 z=0  None .text      init__11dEvDtBase_cFPci                                      */
+/* 8004616C-8004628C 0120+00 s=0 e=6 z=0  None .text      init__11dEvDtBase_cFPci                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -750,7 +750,7 @@ asm void dEvDtBase_c::init(char* param_0, int param_1) {
 #pragma pop
 
 
-/* 8004628C-800462FC 0070+00 r=1 e=1 z=0  None .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    */
+/* 8004628C-800462FC 0070+00 s=0 e=1 z=0  None .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -761,7 +761,7 @@ asm void dEvDtBase_c::advanceCut(dEvDtEvent_c* param_0) {
 #pragma pop
 
 
-/* 800462FC-800463DC 00E0+00 r=1 e=0 z=0  None .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               */
+/* 800462FC-800463DC 00E0+00 s=1 e=0 z=0  None .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

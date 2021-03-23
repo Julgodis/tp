@@ -92,7 +92,7 @@ extern "C" extern u8 data_80450D68[4];
 // Declarations:
 // 
 
-/* 801451EC-801452DC 00F0+00 r=1 e=0 z=0  None .text      isLoadRoom__Fi                                               */
+/* 801451EC-801452DC 00F0+00 s=1 e=0 z=0  None .text      isLoadRoom__Fi                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,12 +104,12 @@ asm static void isLoadRoom(int param_0) {
 
 
 /* ############################################################################################## */
-/* 804533C8-804533CC 0004+00 r=2 e=0 z=0  None .sdata2    @3762                                                        */
+/* 804533C8-804533CC 0004+00 s=2 e=0 z=0  None .sdata2    @3762                                                        */
 SECTION_SDATA2 static u8 d_a_d_a_no_chg_room__lit_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801452DC-80145508 022C+00 r=1 e=0 z=0  None .text      execute__9daNocrm_cFv                                        */
+/* 801452DC-80145508 022C+00 s=1 e=0 z=0  None .text      execute__9daNocrm_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ asm void daNocrm_c::execute() {
 #pragma pop
 
 
-/* 80145508-801455A8 00A0+00 r=1 e=0 z=0  None .text      getRoomNo__9daNocrm_cFi                                      */
+/* 80145508-801455A8 00A0+00 s=1 e=0 z=0  None .text      getRoomNo__9daNocrm_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ asm void daNocrm_c::getRoomNo(int param_0) {
 
 
 /* ############################################################################################## */
-/* 80392640-80392680 003C+04 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80392640-80392680 003C+04 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -141,17 +141,17 @@ SECTION_DEAD char const* const stringBase_80392640 = "部屋読み込み矩形�
 SECTION_DEAD static char const* const pad_8039267C = "\0\0\0";
 #pragma pop
 
-/* 804533CC-804533D0 0004+00 r=1 e=0 z=0  None .sdata2    @3832                                                        */
+/* 804533CC-804533D0 0004+00 s=1 e=0 z=0  None .sdata2    @3832                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_no_chg_room__lit_3832 = 1000.0f;
 
-/* 804533D0-804533D8 0004+04 r=1 e=0 z=0  None .sdata2    @3833                                                        */
+/* 804533D0-804533D8 0004+04 s=1 e=0 z=0  None .sdata2    @3833                                                        */
 SECTION_SDATA2 static f32 d_a_d_a_no_chg_room__lit_3833[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 801455A8-801456A4 00FC+00 r=1 e=0 z=0  None .text      daNocrm_create__FP9daNocrm_c                                 */
+/* 801455A8-801456A4 00FC+00 s=1 e=0 z=0  None .text      daNocrm_create__FP9daNocrm_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm static void daNocrm_create(daNocrm_c* param_0) {
 #pragma pop
 
 
-/* 801456A4-801456AC 0008+00 r=1 e=0 z=0  None .text      daNocrm_Delete__FP9daNocrm_c                                 */
+/* 801456A4-801456AC 0008+00 s=1 e=0 z=0  None .text      daNocrm_Delete__FP9daNocrm_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm static void daNocrm_Delete(daNocrm_c* param_0) {
 #pragma pop
 
 
-/* 801456AC-801456CC 0020+00 r=1 e=0 z=0  None .text      daNocrm_execute__FP9daNocrm_c                                */
+/* 801456AC-801456CC 0020+00 s=1 e=0 z=0  None .text      daNocrm_execute__FP9daNocrm_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm static void daNocrm_execute(daNocrm_c* param_0) {
 #pragma pop
 
 
-/* 801456CC-801456D4 0008+00 r=1 e=0 z=0  None .text      daNocrm_draw__FP9daNocrm_c                                   */
+/* 801456CC-801456D4 0008+00 s=1 e=0 z=0  None .text      daNocrm_draw__FP9daNocrm_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm static void daNocrm_draw(daNocrm_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 803B3658-803B3678 0020+00 r=1 e=0 z=0  None .data      daNocrm_METHODS                                              */
+/* 803B3658-803B3678 0020+00 s=1 e=0 z=0  None .data      daNocrm_METHODS                                              */
 SECTION_DATA static void* daNocrm_METHODS[8] = {
 	/* 0    */ (void*)daNocrm_create__FP9daNocrm_c,
 	/* 1    */ (void*)daNocrm_Delete__FP9daNocrm_c,
@@ -208,7 +208,7 @@ SECTION_DATA static void* daNocrm_METHODS[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803B3678-803B36A8 0030+00 r=1 e=0 z=1  None .data      g_profile_NO_CHG_ROOM                                        */
+/* 803B3678-803B36A8 0030+00 s=0 e=0 z=0  None .data      g_profile_NO_CHG_ROOM                                        */
 SECTION_DATA void* g_profile_NO_CHG_ROOM[12] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0002FFFD,

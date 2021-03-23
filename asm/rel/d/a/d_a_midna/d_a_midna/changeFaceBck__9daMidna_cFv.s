@@ -12,7 +12,7 @@ lbl_804BC614:
 /* 804BC63C 00000028  80 7E 05 78 */	lwz r3, 0x578(r30)
 /* 804BC640 0000002C  80 83 00 08 */	lwz r4, 8(r3)
 /* 804BC644 00000030  38 7E 05 A0 */	addi r3, r30, 0x5a0
-/* 804BC648 00000034  4B FF FB B1 */	bl changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform
+/* 804BC648 00000034  4B FF FB B1 */	bl _unresolved
 /* 804BC64C 00000038  80 7E 05 78 */	lwz r3, 0x578(r30)
 /* 804BC650 0000003C  93 E3 00 08 */	stw r31, 8(r3)
 lbl_804BC654:

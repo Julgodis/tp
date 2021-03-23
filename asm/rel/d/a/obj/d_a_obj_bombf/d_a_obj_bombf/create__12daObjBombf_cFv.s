@@ -3,16 +3,16 @@ lbl_80BBAA84:
 /* 80BBAA88 00000004  7C 08 02 A6 */	mflr r0
 /* 80BBAA8C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BBAA90 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BBAA94 00000010  4B FF FF 45 */	bl _savegpr_29
+/* 80BBAA94 00000010  4B FF FF 45 */	bl _unresolved
 /* 80BBAA98 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80BBAA9C 00000018  3C 80 00 00 */	lis r4, l_arcName@ha /* 80BBAE84 */
-/* 80BBAAA0 0000001C  3B E4 00 00 */	addi r31, r4, l_arcName@l /* 80BBAE84 */
+/* 80BBAA9C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BBAAA0 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80BBAAA4 00000020  80 03 04 A0 */	lwz r0, 0x4a0(r3)
 /* 80BBAAA8 00000024  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80BBAAAC 00000028  40 82 00 1C */	bne lbl_80BBAAC8
 /* 80BBAAB0 0000002C  28 1D 00 00 */	cmplwi r29, 0
 /* 80BBAAB4 00000030  41 82 00 08 */	beq lbl_80BBAABC
-/* 80BBAAB8 00000034  4B FF FF 21 */	bl __ct__10fopAc_ac_cFv
+/* 80BBAAB8 00000034  4B FF FF 21 */	bl _unresolved
 lbl_80BBAABC:
 /* 80BBAABC 00000000  80 1D 04 A0 */	lwz r0, 0x4a0(r29)
 /* 80BBAAC0 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -20,15 +20,15 @@ lbl_80BBAABC:
 lbl_80BBAAC8:
 /* 80BBAAC8 00000000  38 7D 05 68 */	addi r3, r29, 0x568
 /* 80BBAACC 00000004  38 9F 00 00 */	addi r4, r31, 0
-/* 80BBAAD0 00000008  4B FF FF 09 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80BBAAD0 00000008  4B FF FF 09 */	bl _unresolved
 /* 80BBAAD4 0000000C  7C 7E 1B 78 */	mr r30, r3
 /* 80BBAAD8 00000010  2C 1E 00 04 */	cmpwi r30, 4
 /* 80BBAADC 00000014  40 82 00 A4 */	bne lbl_80BBAB80
 /* 80BBAAE0 00000018  7F A3 EB 78 */	mr r3, r29
-/* 80BBAAE4 0000001C  3C 80 00 00 */	lis r4, daObjBombf_createHeap__FP10fopAc_ac_c@ha /* 80BBAA64 */
-/* 80BBAAE8 00000020  38 84 00 00 */	addi r4, r4, daObjBombf_createHeap__FP10fopAc_ac_c@l /* 80BBAA64 */
+/* 80BBAAE4 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BBAAE8 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80BBAAEC 00000024  38 A0 08 20 */	li r5, 0x820
-/* 80BBAAF0 00000028  4B FF FE E9 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80BBAAF0 00000028  4B FF FE E9 */	bl _unresolved
 /* 80BBAAF4 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80BBAAF8 00000030  40 82 00 0C */	bne lbl_80BBAB04
 /* 80BBAAFC 00000034  38 60 00 05 */	li r3, 5
@@ -59,17 +59,17 @@ lbl_80BBAB04:
 /* 80BBAB5C 00000058  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80BBAB60 0000005C  C0 5F 00 0C */	lfs f2, 0xc(r31)
 /* 80BBAB64 00000060  FC 60 08 90 */	fmr f3, f1
-/* 80BBAB68 00000064  4B FF FE 71 */	bl fopAcM_SetMin__FP10fopAc_ac_cfff
+/* 80BBAB68 00000064  4B FF FE 71 */	bl _unresolved
 /* 80BBAB6C 00000068  7F A3 EB 78 */	mr r3, r29
 /* 80BBAB70 0000006C  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80BBAB74 00000070  C0 5F 00 14 */	lfs f2, 0x14(r31)
 /* 80BBAB78 00000074  FC 60 08 90 */	fmr f3, f1
-/* 80BBAB7C 00000078  4B FF FE 5D */	bl fopAcM_SetMax__FP10fopAc_ac_cfff
+/* 80BBAB7C 00000078  4B FF FE 5D */	bl _unresolved
 lbl_80BBAB80:
 /* 80BBAB80 00000000  7F C3 F3 78 */	mr r3, r30
 lbl_80BBAB84:
 /* 80BBAB84 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80BBAB88 00000004  4B FF FE 51 */	bl _restgpr_29
+/* 80BBAB88 00000004  4B FF FE 51 */	bl _unresolved
 /* 80BBAB8C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80BBAB90 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80BBAB94 00000010  38 21 00 20 */	addi r1, r1, 0x20

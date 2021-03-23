@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80587D70[2];
+extern u8 data_80587D70[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_kbacket_cpp(); // 1
 
 // 
 // Declarations:

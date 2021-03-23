@@ -41,7 +41,7 @@ extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 // Declarations:
 // 
 
-/* 80266060-80266098 0038+00 r=5 e=5 z=0  None .text      cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv       */
+/* 80266060-80266098 0038+00 s=0 e=5 z=0  None .text      cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ asm void cLsIt_Method(node_list_class* param_0, int (*)(node_class*, void*), voi
 #pragma pop
 
 
-/* 80266098-802660D0 0038+00 r=4 e=4 z=0  None .text      cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv       */
+/* 80266098-802660D0 0038+00 s=0 e=4 z=0  None .text      cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

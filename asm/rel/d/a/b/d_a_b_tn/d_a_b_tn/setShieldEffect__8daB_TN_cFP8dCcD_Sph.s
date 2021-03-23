@@ -10,17 +10,17 @@ lbl_8062138C:
 /* 806213AC 00000020  80 9E 3E B8 */	lwz r4, 0x3eb8(r30)
 /* 806213B0 00000024  38 A0 00 2A */	li r5, 0x2a
 /* 806213B4 00000028  7F C6 F3 78 */	mr r6, r30
-/* 806213B8 0000002C  4B FF D7 A1 */	bl def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c
+/* 806213B8 0000002C  4B FF D7 A1 */	bl _unresolved
 /* 806213BC 00000030  38 DF 00 D4 */	addi r6, r31, 0xd4
-/* 806213C0 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 806213C4 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 806213C0 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806213C4 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 806213C8 0000003C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 806213CC 00000040  38 80 00 02 */	li r4, 2
 /* 806213D0 00000044  7F C5 F3 78 */	mr r5, r30
 /* 806213D4 00000048  38 E0 00 00 */	li r7, 0
 /* 806213D8 0000004C  39 00 00 00 */	li r8, 0
 /* 806213DC 00000050  39 20 00 00 */	li r9, 0
-/* 806213E0 00000054  4B FF D7 79 */	bl setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl
+/* 806213E0 00000054  4B FF D7 79 */	bl _unresolved
 /* 806213E4 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 806213E8 0000005C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 806213EC 00000060  80 01 00 14 */	lwz r0, 0x14(r1)

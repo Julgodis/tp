@@ -7,7 +7,7 @@ lbl_8059F394:
 /* 8059F3A8 00000014  4B FF F6 11 */	bl getShopArcname__12daShopItem_cFv
 /* 8059F3AC 00000018  7C 64 1B 78 */	mr r4, r3
 /* 8059F3B0 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 8059F3B4 00000020  4B FF F5 E5 */	bl DeleteBase__12daItemBase_cFPCc
+/* 8059F3B4 00000020  4B FF F5 E5 */	bl _unresolved
 /* 8059F3B8 00000024  38 60 00 01 */	li r3, 1
 /* 8059F3BC 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8059F3C0 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)

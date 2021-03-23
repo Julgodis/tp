@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CD5CE8[2];
+extern u8 data_80CD5CE8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_sekizoa_cpp(); // 1
 
 // 
 // Declarations:

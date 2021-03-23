@@ -3,8 +3,8 @@ lbl_809ADE14:
 /* 809ADE18 00000004  7C 08 02 A6 */	mflr r0
 /* 809ADE1C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809ADE20 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 809ADE24 00000010  3C 60 00 00 */	lis r3, __global_destructor_chain@ha /* 809AFC38 */
-/* 809ADE28 00000014  3B E3 00 00 */	addi r31, r3, __global_destructor_chain@l /* 809AFC38 */
+/* 809ADE24 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADE28 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 809ADE2C 00000018  48 00 00 20 */	b lbl_809ADE4C
 lbl_809ADE30:
 /* 809ADE30 00000000  80 05 00 00 */	lwz r0, 0(r5)

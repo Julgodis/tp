@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_806FA390[2];
+extern u8 data_806FA390[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_e_kg_cpp(); // 1
 
 // 
 // Declarations:

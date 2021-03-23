@@ -5,23 +5,23 @@ lbl_80A43B40:
 /* 80A43B4C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80A43B50 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80A43B54 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80A43B58 00000018  3C 60 00 00 */	lis r3, m__17daNpc_Knj_Param_c@ha /* 80A45510 */
-/* 80A43B5C 0000001C  3B E3 00 00 */	addi r31, r3, m__17daNpc_Knj_Param_c@l /* 80A45510 */
+/* 80A43B58 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A43B5C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80A43B60 00000020  38 7E 0D 24 */	addi r3, r30, 0xd24
 /* 80A43B64 00000024  38 80 00 00 */	li r4, 0
 /* 80A43B68 00000028  38 1E 0E 38 */	addi r0, r30, 0xe38
 /* 80A43B6C 0000002C  7C A3 00 50 */	subf r5, r3, r0
-/* 80A43B70 00000030  4B FF F9 69 */	bl memset
+/* 80A43B70 00000030  4B FF F9 69 */	bl _unresolved
 /* 80A43B74 00000034  38 7E 0B 50 */	addi r3, r30, 0xb50
-/* 80A43B78 00000038  4B FF F9 61 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A43B78 00000038  4B FF F9 61 */	bl _unresolved
 /* 80A43B7C 0000003C  38 7E 0B 74 */	addi r3, r30, 0xb74
-/* 80A43B80 00000040  4B FF F9 59 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A43B80 00000040  4B FF F9 59 */	bl _unresolved
 /* 80A43B84 00000044  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 80A43B88 00000048  4B FF F9 51 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A43B88 00000048  4B FF F9 51 */	bl _unresolved
 /* 80A43B8C 0000004C  38 7E 0B A0 */	addi r3, r30, 0xba0
-/* 80A43B90 00000050  4B FF F9 49 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A43B90 00000050  4B FF F9 49 */	bl _unresolved
 /* 80A43B94 00000054  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 80A43B98 00000058  4B FF F9 41 */	bl initialize__15daNpcT_JntAnm_cFv
+/* 80A43B98 00000058  4B FF F9 41 */	bl _unresolved
 /* 80A43B9C 0000005C  38 A0 00 00 */	li r5, 0
 /* 80A43BA0 00000060  38 60 00 00 */	li r3, 0
 /* 80A43BA4 00000064  7C A4 2B 78 */	mr r4, r5
@@ -47,7 +47,7 @@ lbl_80A43BB4:
 /* 80A43BF0 0000003C  38 00 00 01 */	li r0, 1
 /* 80A43BF4 00000040  98 1E 0E 26 */	stb r0, 0xe26(r30)
 /* 80A43BF8 00000044  C0 3F 00 90 */	lfs f1, 0x90(r31)
-/* 80A43BFC 00000048  4B FF F8 DD */	bl cM_rndF__Ff
+/* 80A43BFC 00000048  4B FF F8 DD */	bl _unresolved
 /* 80A43C00 0000004C  FC 00 08 1E */	fctiwz f0, f1
 /* 80A43C04 00000050  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80A43C08 00000054  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -59,15 +59,15 @@ lbl_80A43BB4:
 /* 80A43C20 0000006C  38 80 00 00 */	li r4, 0
 /* 80A43C24 00000070  38 1E 0E 64 */	addi r0, r30, 0xe64
 /* 80A43C28 00000074  7C A3 00 50 */	subf r5, r3, r0
-/* 80A43C2C 00000078  4B FF F8 AD */	bl memset
+/* 80A43C2C 00000078  4B FF F8 AD */	bl _unresolved
 /* 80A43C30 0000007C  80 7E 09 6C */	lwz r3, 0x96c(r30)
 /* 80A43C34 00000080  28 03 00 00 */	cmplwi r3, 0
 /* 80A43C38 00000084  41 82 00 08 */	beq lbl_80A43C40
-/* 80A43C3C 00000088  4B FF F8 9D */	bl initialize__15daNpcT_MatAnm_cFv
+/* 80A43C3C 00000088  4B FF F8 9D */	bl _unresolved
 lbl_80A43C40:
 /* 80A43C40 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80A43C44 00000004  A8 9E 04 B6 */	lha r4, 0x4b6(r30)
-/* 80A43C48 00000008  4B FF F8 91 */	bl setAngle__8daNpcT_cFs
+/* 80A43C48 00000008  4B FF F8 91 */	bl _unresolved
 /* 80A43C4C 0000000C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80A43C50 00000010  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80A43C54 00000014  80 01 00 24 */	lwz r0, 0x24(r1)

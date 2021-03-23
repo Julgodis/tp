@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct JKRExpHeap {
 };
 
 struct CSTControl {
@@ -95,6 +95,9 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
+struct JUTFont {
+};
+
 struct JMSMesgEntry_c {
 };
 
@@ -103,9 +106,6 @@ struct ResTIMG {
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -322,7 +322,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80396690-80396750 00C0+00 r=1 e=0 z=0  None .rodata    insect_tag$4249                                              */
+/* 80396690-80396750 00C0+00 s=1 e=0 z=0  None .rodata    insect_tag$4249                                              */
 SECTION_RODATA static u8 const data_80396690[192] = {
 	0x00, 0x00, 0x61, 0x72, 0x69, 0x5F, 0x6F, 0x73, 0x00, 0x00, 0x61, 0x72, 0x69, 0x5F, 0x6D, 0x73,
 	0x00, 0x00, 0x6B, 0x61, 0x67, 0x5F, 0x6F, 0x73, 0x00, 0x00, 0x6B, 0x61, 0x67, 0x5F, 0x6D, 0x73,
@@ -338,7 +338,7 @@ SECTION_RODATA static u8 const data_80396690[192] = {
 	0x00, 0x74, 0x6F, 0x6E, 0x62, 0x5F, 0x6F, 0x73, 0x74, 0x6F, 0x6E, 0x62, 0x5F, 0x6D, 0x65, 0x73,
 };
 
-/* 80396750-80396810 00C0+00 r=1 e=0 z=0  None .rodata    ageha_tag$4250                                               */
+/* 80396750-80396810 00C0+00 s=1 e=0 z=0  None .rodata    ageha_tag$4250                                               */
 SECTION_RODATA static u8 const data_80396750[192] = {
 	0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x30, 0x30, 0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x30, 0x31,
 	0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x30, 0x32, 0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x30, 0x33,
@@ -354,21 +354,21 @@ SECTION_RODATA static u8 const data_80396750[192] = {
 	0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x32, 0x32, 0x00, 0x61, 0x67, 0x65, 0x68, 0x61, 0x32, 0x33,
 };
 
-/* 80396810-80396838 0028+00 r=1 e=0 z=0  None .rodata    text_a_tag$4328                                              */
+/* 80396810-80396838 0028+00 s=1 e=0 z=0  None .rodata    text_a_tag$4328                                              */
 SECTION_RODATA static u8 const data_80396810[40] = {
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x61, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396838-80396860 0028+00 r=1 e=0 z=0  None .rodata    text_b_tag$4329                                              */
+/* 80396838-80396860 0028+00 s=1 e=0 z=0  None .rodata    text_b_tag$4329                                              */
 SECTION_RODATA static u8 const data_80396838[40] = {
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x31, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x32,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x33, 0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x34,
 	0x62, 0x74, 0x65, 0x78, 0x74, 0x31, 0x5F, 0x35,
 };
 
-/* 80396860-803968C0 0060+00 r=1 e=0 z=0  None .rodata    i_evtID$4383                                                 */
+/* 80396860-803968C0 0060+00 s=1 e=0 z=0  None .rodata    i_evtID$4383                                                 */
 SECTION_RODATA static u8 const data_80396860[96] = {
 	0x00, 0x00, 0x01, 0xA5, 0x00, 0x00, 0x01, 0xA6, 0x00, 0x00, 0x01, 0xA7, 0x00, 0x00, 0x01, 0xA8,
 	0x00, 0x00, 0x01, 0x91, 0x00, 0x00, 0x01, 0x92, 0x00, 0x00, 0x01, 0x9D, 0x00, 0x00, 0x01, 0x9E,
@@ -378,7 +378,7 @@ SECTION_RODATA static u8 const data_80396860[96] = {
 	0x00, 0x00, 0x01, 0x97, 0x00, 0x00, 0x01, 0x98, 0x00, 0x00, 0x01, 0xA3, 0x00, 0x00, 0x01, 0xA4,
 };
 
-/* 803968C0-80396950 008C+04 r=8 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803968C0-80396950 008C+04 s=8 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -394,47 +394,47 @@ SECTION_DEAD char const* const stringBase_80396926 =
 SECTION_DEAD static char const* const pad_8039694C = "\0\0\0";
 #pragma pop
 
-/* 803BD780-803BD78C 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+/* 803BD780-803BD78C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 d_menu_d_menu_insect__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD78C-803BD798 000C+00 r=0 e=0 z=0  None .data      @3797                                                        */
+/* 803BD78C-803BD798 000C+00 s=0 e=0 z=0  None .data      @3797                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3797[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_init__14dMenu_Insect_cFv,
 };
 
-/* 803BD798-803BD7A4 000C+00 r=0 e=0 z=0  None .data      @3798                                                        */
+/* 803BD798-803BD7A4 000C+00 s=0 e=0 z=0  None .data      @3798                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3798[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_open_init__14dMenu_Insect_cFv,
 };
 
-/* 803BD7A4-803BD7B0 000C+00 r=0 e=0 z=0  None .data      @3799                                                        */
+/* 803BD7A4-803BD7B0 000C+00 s=0 e=0 z=0  None .data      @3799                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3799[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_move_init__14dMenu_Insect_cFv,
 };
 
-/* 803BD7B0-803BD7BC 000C+00 r=0 e=0 z=0  None .data      @3800                                                        */
+/* 803BD7B0-803BD7BC 000C+00 s=0 e=0 z=0  None .data      @3800                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3800[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)select_move_init__14dMenu_Insect_cFv,
 };
 
-/* 803BD7BC-803BD7C8 000C+00 r=0 e=0 z=0  None .data      @3801                                                        */
+/* 803BD7BC-803BD7C8 000C+00 s=0 e=0 z=0  None .data      @3801                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3801[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_close_init__14dMenu_Insect_cFv,
 };
 
-/* 803BD7C8-803BD804 003C+00 r=2 e=0 z=0  None .data      map_init_process                                             */
+/* 803BD7C8-803BD804 003C+00 s=2 e=0 z=0  None .data      map_init_process                                             */
 SECTION_DATA static u8 d_menu_d_menu_insect__map_init_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -442,42 +442,42 @@ SECTION_DATA static u8 d_menu_d_menu_insect__map_init_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD804-803BD810 000C+00 r=0 e=0 z=0  None .data      @3802                                                        */
+/* 803BD804-803BD810 000C+00 s=0 e=0 z=0  None .data      @3802                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3802[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_move__14dMenu_Insect_cFv,
 };
 
-/* 803BD810-803BD81C 000C+00 r=0 e=0 z=0  None .data      @3803                                                        */
+/* 803BD810-803BD81C 000C+00 s=0 e=0 z=0  None .data      @3803                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3803[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_open_move__14dMenu_Insect_cFv,
 };
 
-/* 803BD81C-803BD828 000C+00 r=0 e=0 z=0  None .data      @3804                                                        */
+/* 803BD81C-803BD828 000C+00 s=0 e=0 z=0  None .data      @3804                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3804[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_move_move__14dMenu_Insect_cFv,
 };
 
-/* 803BD828-803BD834 000C+00 r=0 e=0 z=0  None .data      @3805                                                        */
+/* 803BD828-803BD834 000C+00 s=0 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3805[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)select_move_move__14dMenu_Insect_cFv,
 };
 
-/* 803BD834-803BD840 000C+00 r=0 e=0 z=0  None .data      @3806                                                        */
+/* 803BD834-803BD840 000C+00 s=0 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA void* d_menu_d_menu_insect__lit_3806[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)explain_close_move__14dMenu_Insect_cFv,
 };
 
-/* 803BD840-803BD87C 003C+00 r=1 e=0 z=0  None .data      map_move_process                                             */
+/* 803BD840-803BD87C 003C+00 s=1 e=0 z=0  None .data      map_move_process                                             */
 SECTION_DATA static u8 d_menu_d_menu_insect__map_move_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -485,19 +485,19 @@ SECTION_DATA static u8 d_menu_d_menu_insect__map_move_process[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD87C-803BD894 0018+00 r=1 e=0 z=0  None .data      l_itemno$4346                                                */
+/* 803BD87C-803BD894 0018+00 s=1 e=0 z=0  None .data      l_itemno$4346                                                */
 SECTION_DATA static u8 data_803BD87C[24] = {
 	0xC0, 0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF,
 	0xD0, 0xD1, 0xD2, 0xD3, 0xD4, 0xD5, 0xD6, 0xD7,
 };
 
-/* 803BD894-803BD8AC 0018+00 r=1 e=0 z=0  None .data      l_itemno$4364                                                */
+/* 803BD894-803BD8AC 0018+00 s=1 e=0 z=0  None .data      l_itemno$4364                                                */
 SECTION_DATA static u8 data_803BD894[24] = {
 	0xD4, 0xD5, 0xD6, 0xD7, 0xC0, 0xC1, 0xCC, 0xCD, 0xC4, 0xC5, 0xCA, 0xCB, 0xC2, 0xC3, 0xCE, 0xCF,
 	0xD0, 0xD1, 0xC8, 0xC9, 0xC6, 0xC7, 0xD2, 0xD3,
 };
 
-/* 803BD8AC-803BD8C8 0010+0C r=2 e=0 z=0  None .data      __vt__14dMenu_Insect_c                                       */
+/* 803BD8AC-803BD8C8 0010+0C s=2 e=0 z=0  None .data      __vt__14dMenu_Insect_c                                       */
 SECTION_DATA static void* __vt__14dMenu_Insect_c[4 + 3 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -509,21 +509,21 @@ SECTION_DATA static void* __vt__14dMenu_Insect_c[4 + 3 /* padding */] = {
 	NULL,
 };
 
-/* 80454238-8045423C 0004+00 r=6 e=0 z=0  None .sdata2    @3834                                                        */
+/* 80454238-8045423C 0004+00 s=6 e=0 z=0  None .sdata2    @3834                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3834 = 1.0f;
 
-/* 8045423C-80454240 0004+00 r=1 e=0 z=0  None .sdata2    @3835                                                        */
+/* 8045423C-80454240 0004+00 s=1 e=0 z=0  None .sdata2    @3835                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3835 = 1.0f / 10.0f;
 
-/* 80454240-80454244 0004+00 r=1 e=0 z=0  None .sdata2    @3836                                                        */
+/* 80454240-80454244 0004+00 s=1 e=0 z=0  None .sdata2    @3836                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3836 = 7.0f / 10.0f;
 
-/* 80454244-80454248 0004+00 r=5 e=0 z=0  None .sdata2    @3837                                                        */
+/* 80454244-80454248 0004+00 s=5 e=0 z=0  None .sdata2    @3837                                                        */
 SECTION_SDATA2 static u8 d_menu_d_menu_insect__lit_3837[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801D8114-801D82F4 01E0+00 r=2 e=2 z=0  None .text      __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc */
+/* 801D8114-801D82F4 01E0+00 s=0 e=2 z=0  None .text      __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +534,7 @@ asm dMenu_Insect_c::dMenu_Insect_c(JKRExpHeap* param_0, STControl* param_1, CSTC
 #pragma pop
 
 
-/* 801D82F4-801D8658 0364+00 r=1 e=0 z=0  None .text      __dt__14dMenu_Insect_cFv                                     */
+/* 801D82F4-801D8658 0364+00 s=1 e=0 z=0  None .text      __dt__14dMenu_Insect_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +545,7 @@ asm dMenu_Insect_c::~dMenu_Insect_c() {
 #pragma pop
 
 
-/* 801D8658-801D86C8 0070+00 r=1 e=0 z=0  None .text      _create__14dMenu_Insect_cFv                                  */
+/* 801D8658-801D86C8 0070+00 s=1 e=0 z=0  None .text      _create__14dMenu_Insect_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +556,7 @@ asm void dMenu_Insect_c::_create() {
 #pragma pop
 
 
-/* 801D86C8-801D8760 0098+00 r=3 e=3 z=0  None .text      _move__14dMenu_Insect_cFv                                    */
+/* 801D86C8-801D8760 0098+00 s=0 e=3 z=0  None .text      _move__14dMenu_Insect_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -568,26 +568,26 @@ asm void dMenu_Insect_c::_move() {
 
 
 /* ############################################################################################## */
-/* 80454248-8045424C 0004+00 r=1 e=0 z=0  None .sdata2    @3961                                                        */
+/* 80454248-8045424C 0004+00 s=1 e=0 z=0  None .sdata2    @3961                                                        */
 SECTION_SDATA2 static f32 lit_3961 = 608.0f;
 
-/* 8045424C-80454250 0004+00 r=1 e=0 z=0  None .sdata2    @3962                                                        */
+/* 8045424C-80454250 0004+00 s=1 e=0 z=0  None .sdata2    @3962                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3962 = 448.0f;
 
-/* 80454250-80454254 0004+00 r=1 e=0 z=0  None .sdata2    @3963                                                        */
+/* 80454250-80454254 0004+00 s=1 e=0 z=0  None .sdata2    @3963                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3963 = 150.0f;
 
-/* 80454254-80454258 0004+00 r=1 e=0 z=0  None .sdata2    @3964                                                        */
+/* 80454254-80454258 0004+00 s=1 e=0 z=0  None .sdata2    @3964                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3964 = 486.0f;
 
-/* 80454258-80454260 0004+04 r=1 e=0 z=0  None .sdata2    @3965                                                        */
+/* 80454258-80454260 0004+04 s=1 e=0 z=0  None .sdata2    @3965                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_3965[1 + 1 /* padding */] = {
 	209.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 801D8760-801D88EC 018C+00 r=2 e=1 z=0  None .text      _draw__14dMenu_Insect_cFv                                    */
+/* 801D8760-801D88EC 018C+00 s=1 e=1 z=0  None .text      _draw__14dMenu_Insect_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -598,7 +598,7 @@ asm void dMenu_Insect_c::_draw() {
 #pragma pop
 
 
-/* 801D88EC-801D8914 0028+00 r=3 e=3 z=0  None .text      isSync__14dMenu_Insect_cFv                                   */
+/* 801D88EC-801D8914 0028+00 s=0 e=3 z=0  None .text      isSync__14dMenu_Insect_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,7 +609,7 @@ asm void dMenu_Insect_c::isSync() {
 #pragma pop
 
 
-/* 801D8914-801D894C 0038+00 r=1 e=0 z=0  None .text      init__14dMenu_Insect_cFv                                     */
+/* 801D8914-801D894C 0038+00 s=1 e=0 z=0  None .text      init__14dMenu_Insect_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,10 +621,10 @@ asm void dMenu_Insect_c::init() {
 
 
 /* ############################################################################################## */
-/* 80454260-80454268 0008+00 r=2 e=0 z=0  None .sdata2    @4020                                                        */
+/* 80454260-80454268 0008+00 s=2 e=0 z=0  None .sdata2    @4020                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_insect__lit_4020 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801D894C-801D8B2C 01E0+00 r=3 e=3 z=0  None .text      _open__14dMenu_Insect_cFv                                    */
+/* 801D894C-801D8B2C 01E0+00 s=0 e=3 z=0  None .text      _open__14dMenu_Insect_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -635,7 +635,7 @@ asm void dMenu_Insect_c::_open() {
 #pragma pop
 
 
-/* 801D8B2C-801D8C68 013C+00 r=1 e=1 z=0  None .text      _close__14dMenu_Insect_cFv                                   */
+/* 801D8B2C-801D8C68 013C+00 s=0 e=1 z=0  None .text      _close__14dMenu_Insect_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -646,7 +646,7 @@ asm void dMenu_Insect_c::_close() {
 #pragma pop
 
 
-/* 801D8C68-801D8CCC 0064+00 r=1 e=0 z=0  None .text      wait_init__14dMenu_Insect_cFv                                */
+/* 801D8C68-801D8CCC 0064+00 s=1 e=0 z=0  None .text      wait_init__14dMenu_Insect_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,10 +658,10 @@ asm void dMenu_Insect_c::wait_init() {
 
 
 /* ############################################################################################## */
-/* 80454268-8045426C 0004+00 r=4 e=0 z=0  None .sdata2    @4089                                                        */
+/* 80454268-8045426C 0004+00 s=4 e=0 z=0  None .sdata2    @4089                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_4089 = -1.0f;
 
-/* 801D8CCC-801D8E00 0134+00 r=1 e=0 z=0  None .text      wait_move__14dMenu_Insect_cFv                                */
+/* 801D8CCC-801D8E00 0134+00 s=1 e=0 z=0  None .text      wait_move__14dMenu_Insect_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -673,20 +673,20 @@ asm void dMenu_Insect_c::wait_move() {
 
 
 /* ############################################################################################## */
-/* 8045426C-80454270 0004+00 r=1 e=0 z=0  None .sdata2    @4135                                                        */
+/* 8045426C-80454270 0004+00 s=1 e=0 z=0  None .sdata2    @4135                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_4135 = 48.0f;
 
-/* 80454270-80454278 0004+04 r=1 e=0 z=0  None .sdata2    @4136                                                        */
+/* 80454270-80454278 0004+04 s=1 e=0 z=0  None .sdata2    @4136                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_4136[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80454278-80454280 0008+00 r=1 e=0 z=0  None .sdata2    @4138                                                        */
+/* 80454278-80454280 0008+00 s=1 e=0 z=0  None .sdata2    @4138                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_insect__lit_4138 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801D8E00-801D91E4 03E4+00 r=1 e=0 z=0  None .text      explain_open_init__14dMenu_Insect_cFv                        */
+/* 801D8E00-801D91E4 03E4+00 s=1 e=0 z=0  None .text      explain_open_init__14dMenu_Insect_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -697,7 +697,7 @@ asm void dMenu_Insect_c::explain_open_init() {
 #pragma pop
 
 
-/* 801D91E4-801D9264 0080+00 r=1 e=0 z=0  None .text      explain_open_move__14dMenu_Insect_cFv                        */
+/* 801D91E4-801D9264 0080+00 s=1 e=0 z=0  None .text      explain_open_move__14dMenu_Insect_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -708,7 +708,7 @@ asm void dMenu_Insect_c::explain_open_move() {
 #pragma pop
 
 
-/* 801D9264-801D9268 0004+00 r=1 e=0 z=0  None .text      explain_move_init__14dMenu_Insect_cFv                        */
+/* 801D9264-801D9268 0004+00 s=1 e=0 z=0  None .text      explain_move_init__14dMenu_Insect_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -719,7 +719,7 @@ asm void dMenu_Insect_c::explain_move_init() {
 #pragma pop
 
 
-/* 801D9268-801D9290 0028+00 r=1 e=0 z=0  None .text      explain_move_move__14dMenu_Insect_cFv                        */
+/* 801D9268-801D9290 0028+00 s=1 e=0 z=0  None .text      explain_move_move__14dMenu_Insect_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -730,7 +730,7 @@ asm void dMenu_Insect_c::explain_move_move() {
 #pragma pop
 
 
-/* 801D9290-801D92DC 004C+00 r=1 e=0 z=0  None .text      select_move_init__14dMenu_Insect_cFv                         */
+/* 801D9290-801D92DC 004C+00 s=1 e=0 z=0  None .text      select_move_init__14dMenu_Insect_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -741,7 +741,7 @@ asm void dMenu_Insect_c::select_move_init() {
 #pragma pop
 
 
-/* 801D92DC-801D9504 0228+00 r=1 e=0 z=0  None .text      select_move_move__14dMenu_Insect_cFv                         */
+/* 801D92DC-801D9504 0228+00 s=1 e=0 z=0  None .text      select_move_move__14dMenu_Insect_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +752,7 @@ asm void dMenu_Insect_c::select_move_move() {
 #pragma pop
 
 
-/* 801D9504-801D95AC 00A8+00 r=1 e=0 z=0  None .text      explain_close_init__14dMenu_Insect_cFv                       */
+/* 801D9504-801D95AC 00A8+00 s=1 e=0 z=0  None .text      explain_close_init__14dMenu_Insect_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -763,7 +763,7 @@ asm void dMenu_Insect_c::explain_close_init() {
 #pragma pop
 
 
-/* 801D95AC-801D9644 0098+00 r=1 e=0 z=0  None .text      explain_close_move__14dMenu_Insect_cFv                       */
+/* 801D95AC-801D9644 0098+00 s=1 e=0 z=0  None .text      explain_close_move__14dMenu_Insect_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -774,7 +774,7 @@ asm void dMenu_Insect_c::explain_close_move() {
 #pragma pop
 
 
-/* 801D9644-801D98F0 02AC+00 r=1 e=0 z=0  None .text      screenSetBase__14dMenu_Insect_cFv                            */
+/* 801D9644-801D98F0 02AC+00 s=1 e=0 z=0  None .text      screenSetBase__14dMenu_Insect_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -785,7 +785,7 @@ asm void dMenu_Insect_c::screenSetBase() {
 #pragma pop
 
 
-/* 801D98F0-801D9BD0 02E0+00 r=1 e=0 z=0  None .text      screenSetExplain__14dMenu_Insect_cFv                         */
+/* 801D98F0-801D9BD0 02E0+00 s=1 e=0 z=0  None .text      screenSetExplain__14dMenu_Insect_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -796,7 +796,7 @@ asm void dMenu_Insect_c::screenSetExplain() {
 #pragma pop
 
 
-/* 801D9BD0-801D9D4C 017C+00 r=1 e=0 z=0  None .text      screenSetDoIcon__14dMenu_Insect_cFv                          */
+/* 801D9BD0-801D9D4C 017C+00 s=1 e=0 z=0  None .text      screenSetDoIcon__14dMenu_Insect_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -807,7 +807,7 @@ asm void dMenu_Insect_c::screenSetDoIcon() {
 #pragma pop
 
 
-/* 801D9D4C-801D9DCC 0080+00 r=1 e=1 z=0  None .text      getGetInsectNum__14dMenu_Insect_cFv                          */
+/* 801D9D4C-801D9DCC 0080+00 s=0 e=1 z=0  None .text      getGetInsectNum__14dMenu_Insect_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -818,7 +818,7 @@ asm void dMenu_Insect_c::getGetInsectNum() {
 #pragma pop
 
 
-/* 801D9DCC-801D9DE4 0018+00 r=3 e=0 z=0  None .text      getInsectItemID__14dMenu_Insect_cFii                         */
+/* 801D9DCC-801D9DE4 0018+00 s=3 e=0 z=0  None .text      getInsectItemID__14dMenu_Insect_cFii                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -829,7 +829,7 @@ asm void dMenu_Insect_c::getInsectItemID(int param_0, int param_1) {
 #pragma pop
 
 
-/* 801D9DE4-801D9E20 003C+00 r=4 e=0 z=0  None .text      isGetInsect__14dMenu_Insect_cFii                             */
+/* 801D9DE4-801D9E20 003C+00 s=4 e=0 z=0  None .text      isGetInsect__14dMenu_Insect_cFii                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -840,7 +840,7 @@ asm void dMenu_Insect_c::isGetInsect(int param_0, int param_1) {
 #pragma pop
 
 
-/* 801D9E20-801D9E7C 005C+00 r=4 e=0 z=0  None .text      isGiveInsect__14dMenu_Insect_cFii                            */
+/* 801D9E20-801D9E7C 005C+00 s=4 e=0 z=0  None .text      isGiveInsect__14dMenu_Insect_cFii                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -851,7 +851,7 @@ asm void dMenu_Insect_c::isGiveInsect(int param_0, int param_1) {
 #pragma pop
 
 
-/* 801D9E7C-801D9ED4 0058+00 r=1 e=0 z=0  None .text      isCatchInsect__14dMenu_Insect_cFUc                           */
+/* 801D9E7C-801D9ED4 0058+00 s=1 e=0 z=0  None .text      isCatchInsect__14dMenu_Insect_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -862,7 +862,7 @@ asm void dMenu_Insect_c::isCatchInsect(u8 param_0) {
 #pragma pop
 
 
-/* 801D9ED4-801D9F3C 0068+00 r=1 e=0 z=0  None .text      isGiveInsect__14dMenu_Insect_cFUc                            */
+/* 801D9ED4-801D9F3C 0068+00 s=1 e=0 z=0  None .text      isGiveInsect__14dMenu_Insect_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,7 +873,7 @@ asm void dMenu_Insect_c::isGiveInsect(u8 param_0) {
 #pragma pop
 
 
-/* 801D9F3C-801D9F8C 0050+00 r=13 e=1 z=12  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
+/* 801D9F3C-801D9F8C 0050+00 s=0 e=1 z=0  None .text      isCatchNotGiveInsect__14dMenu_Insect_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,14 +885,14 @@ asm void dMenu_Insect_c::isCatchNotGiveInsect(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 80454280-80454288 0004+04 r=1 e=0 z=0  None .sdata2    @4474                                                        */
+/* 80454280-80454288 0004+04 s=1 e=0 z=0  None .sdata2    @4474                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_insect__lit_4474[1 + 1 /* padding */] = {
 	0.75f,
 	/* padding */
 	0.0f,
 };
 
-/* 801D9F8C-801DA1EC 0260+00 r=1 e=0 z=0  None .text      cursorMove__14dMenu_Insect_cFv                               */
+/* 801D9F8C-801DA1EC 0260+00 s=1 e=0 z=0  None .text      cursorMove__14dMenu_Insect_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,7 +903,7 @@ asm void dMenu_Insect_c::cursorMove() {
 #pragma pop
 
 
-/* 801DA1EC-801DA2FC 0110+00 r=3 e=0 z=0  None .text      setCursorPos__14dMenu_Insect_cFv                             */
+/* 801DA1EC-801DA2FC 0110+00 s=3 e=0 z=0  None .text      setCursorPos__14dMenu_Insect_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +914,7 @@ asm void dMenu_Insect_c::setCursorPos() {
 #pragma pop
 
 
-/* 801DA2FC-801DA304 0008+00 r=1 e=0 z=0  None .text      dpdMove__14dMenu_Insect_cFv                                  */
+/* 801DA2FC-801DA304 0008+00 s=1 e=0 z=0  None .text      dpdMove__14dMenu_Insect_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm void dMenu_Insect_c::dpdMove() {
 #pragma pop
 
 
-/* 801DA304-801DA3B4 00B0+00 r=5 e=0 z=0  None .text      setAButtonString__14dMenu_Insect_cFUs                        */
+/* 801DA304-801DA3B4 00B0+00 s=5 e=0 z=0  None .text      setAButtonString__14dMenu_Insect_cFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void dMenu_Insect_c::setAButtonString(u16 param_0) {
 #pragma pop
 
 
-/* 801DA3B4-801DA464 00B0+00 r=4 e=0 z=0  None .text      setBButtonString__14dMenu_Insect_cFUs                        */
+/* 801DA3B4-801DA464 00B0+00 s=4 e=0 z=0  None .text      setBButtonString__14dMenu_Insect_cFUs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void dMenu_Insect_c::setBButtonString(u16 param_0) {
 #pragma pop
 
 
-/* 801DA464-801DA630 01CC+00 r=2 e=0 z=0  None .text      setHIO__14dMenu_Insect_cFb                                   */
+/* 801DA464-801DA630 01CC+00 s=2 e=0 z=0  None .text      setHIO__14dMenu_Insect_cFb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +958,7 @@ asm void dMenu_Insect_c::setHIO(bool param_0) {
 #pragma pop
 
 
-/* 801DA630-801DA650 0020+00 r=1 e=0 z=0  None .text      draw__14dMenu_Insect_cFv                                     */
+/* 801DA630-801DA650 0020+00 s=1 e=0 z=0  None .text      draw__14dMenu_Insect_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +969,7 @@ asm void dMenu_Insect_c::draw() {
 #pragma pop
 
 
-/* 801DA650-801DA754 0104+00 r=1 e=1 z=0  None .text      __sinit_d_menu_insect_cpp                                    */
+/* 801DA650-801DA754 0104+00 s=0 e=1 z=0  None .text      __sinit_d_menu_insect_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

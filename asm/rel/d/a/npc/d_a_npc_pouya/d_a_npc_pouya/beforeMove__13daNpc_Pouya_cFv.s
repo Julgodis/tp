@@ -12,7 +12,7 @@ lbl_80AAF4F8:
 /* 80AAF520 00000028  88 03 0E 25 */	lbz r0, 0xe25(r3)
 /* 80AAF524 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80AAF528 00000030  40 82 00 1C */	bne lbl_80AAF544
-/* 80AAF52C 00000034  4B FF E7 ED */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80AAF52C 00000034  4B FF E7 ED */	bl _unresolved
 /* 80AAF530 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80AAF534 0000003C  40 82 00 14 */	bne lbl_80AAF548
 /* 80AAF538 00000040  88 1E 0A 89 */	lbz r0, 0xa89(r30)
@@ -31,7 +31,7 @@ lbl_80AAF55C:
 /* 80AAF560 00000004  88 1E 0E 25 */	lbz r0, 0xe25(r30)
 /* 80AAF564 00000008  28 00 00 00 */	cmplwi r0, 0
 /* 80AAF568 0000000C  40 82 00 1C */	bne lbl_80AAF584
-/* 80AAF56C 00000010  4B FF E7 AD */	bl dComIfGs_wolfeye_effect_check__Fv
+/* 80AAF56C 00000010  4B FF E7 AD */	bl _unresolved
 /* 80AAF570 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80AAF574 00000018  40 82 00 14 */	bne lbl_80AAF588
 /* 80AAF578 0000001C  88 1E 0A 89 */	lbz r0, 0xa89(r30)

@@ -10,8 +10,8 @@ lbl_8054048C:
 /* 805404AC 0000000C  48 00 05 8D */	bl selectAction__19daNpc_FairySeirei_cFv
 /* 805404B0 00000010  7F C3 F3 78 */	mr r3, r30
 /* 805404B4 00000014  48 00 00 FD */	bl srchActors__19daNpc_FairySeirei_cFv
-/* 805404B8 00000018  3C 60 00 00 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha /* 80541D8C */
-/* 805404BC 0000001C  3B E3 00 00 */	addi r31, r3, m__25daNpc_FairySeirei_Param_c@l /* 80541D8C */
+/* 805404B8 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805404BC 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 805404C0 00000020  C3 FF 00 90 */	lfs f31, 0x90(r31)
 /* 805404C4 00000024  38 60 00 28 */	li r3, 0x28
 /* 805404C8 00000028  48 00 00 D5 */	bl getDistTable__12dAttention_cFi
@@ -31,8 +31,8 @@ lbl_8054048C:
 /* 80540500 00000060  98 1E 05 47 */	stb r0, 0x547(r30)
 /* 80540504 00000064  38 00 00 08 */	li r0, 8
 /* 80540508 00000068  90 1E 05 5C */	stw r0, 0x55c(r30)
-/* 8054050C 0000006C  3C 60 00 00 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha /* 80541D8C */
-/* 80540510 00000070  38 63 00 00 */	addi r3, r3, m__25daNpc_FairySeirei_Param_c@l /* 80541D8C */
+/* 8054050C 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80540510 00000070  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80540514 00000074  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80540518 00000078  FC 00 00 1E */	fctiwz f0, f0
 /* 8054051C 0000007C  D8 01 00 08 */	stfd f0, 8(r1)
@@ -46,9 +46,9 @@ lbl_8054048C:
 /* 8054053C 0000009C  D0 1E 0D F8 */	stfs f0, 0xdf8(r30)
 /* 80540540 000000A0  38 7E 08 A0 */	addi r3, r30, 0x8a0
 /* 80540544 000000A4  C0 3E 0D F0 */	lfs f1, 0xdf0(r30)
-/* 80540548 000000A8  4B FF F9 91 */	bl SetWallR__12dBgS_AcchCirFf
-/* 8054054C 000000AC  3C 60 00 00 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha /* 80541D8C */
-/* 80540550 000000B0  38 63 00 00 */	addi r3, r3, m__25daNpc_FairySeirei_Param_c@l /* 80541D8C */
+/* 80540548 000000A8  4B FF F9 91 */	bl _unresolved
+/* 8054054C 000000AC  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80540550 000000B0  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80540554 000000B4  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80540558 000000B8  D0 1E 08 D0 */	stfs f0, 0x8d0(r30)
 /* 8054055C 000000BC  C0 03 00 0C */	lfs f0, 0xc(r3)

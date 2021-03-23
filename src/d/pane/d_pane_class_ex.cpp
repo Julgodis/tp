@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
+struct J2DAnmVtxColor {
 };
 
-struct J2DAnmVtxColor {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmTexPattern {
@@ -79,7 +79,7 @@ extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
 // Declarations:
 // 
 
-/* 80256018-8025601C 0004+00 r=4 e=4 z=0  None .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
+/* 80256018-8025601C 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void J2DPane::setAnimation(J2DAnmVtxColor* param_0) {
 #pragma pop
 
 
-/* 8025601C-80256020 0004+00 r=4 e=4 z=0  None .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
+/* 8025601C-80256020 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void J2DPane::setAnimation(J2DAnmVisibilityFull* param_0) {
 #pragma pop
 
 
-/* 80256020-80256024 0004+00 r=4 e=4 z=0  None .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
+/* 80256020-80256024 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm void J2DPane::setAnimation(J2DAnmTexPattern* param_0) {
 #pragma pop
 
 
-/* 80256024-8025602C 0008+00 r=1 e=1 z=0  None .text      getMaterial__12J2DTextBoxExCFv                               */
+/* 80256024-8025602C 0008+00 s=0 e=1 z=0  None .text      getMaterial__12J2DTextBoxExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm void J2DTextBoxEx::getMaterial() const {
 #pragma pop
 
 
-/* 8025602C-80256034 0008+00 r=1 e=1 z=0  None .text      getMaterial__10J2DTextBoxCFv                                 */
+/* 8025602C-80256034 0008+00 s=0 e=1 z=0  None .text      getMaterial__10J2DTextBoxCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +134,7 @@ asm void J2DTextBox::getMaterial() const {
 #pragma pop
 
 
-/* 80256034-8025603C 0008+00 r=1 e=1 z=0  None .text      getMaterial__12J2DPictureExCFv                               */
+/* 80256034-8025603C 0008+00 s=0 e=1 z=0  None .text      getMaterial__12J2DPictureExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ asm void J2DPictureEx::getMaterial() const {
 #pragma pop
 
 
-/* 8025603C-80256044 0008+00 r=1 e=1 z=0  None .text      getMaterial__10J2DPictureCFv                                 */
+/* 8025603C-80256044 0008+00 s=0 e=1 z=0  None .text      getMaterial__10J2DPictureCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ asm void J2DPicture::getMaterial() const {
 #pragma pop
 
 
-/* 80256044-80256064 0020+00 r=1 e=1 z=0  None .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
+/* 80256044-80256064 0020+00 s=0 e=1 z=0  None .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ asm void J2DTextBoxEx::setAnimation(J2DAnmTransform* param_0) {
 #pragma pop
 
 
-/* 80256064-80256084 0020+00 r=1 e=1 z=0  None .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
+/* 80256064-80256084 0020+00 s=0 e=1 z=0  None .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +178,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmTransform* param_0) {
 #pragma pop
 
 
-/* 80256084-802560A4 0020+00 r=1 e=1 z=0  None .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
+/* 80256084-802560A4 0020+00 s=0 e=1 z=0  None .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

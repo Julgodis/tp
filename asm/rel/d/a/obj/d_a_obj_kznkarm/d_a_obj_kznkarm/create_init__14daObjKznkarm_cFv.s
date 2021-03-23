@@ -5,15 +5,15 @@ lbl_80C505F8:
 /* 80C50604 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80C50608 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80C5060C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80C50610 00000018  3C 80 00 00 */	lis r4, M_attr__14daObjKznkarm_c@ha /* 80C50D08 */
-/* 80C50614 0000001C  3B E4 00 00 */	addi r31, r4, M_attr__14daObjKznkarm_c@l /* 80C50D08 */
+/* 80C50610 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C50614 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80C50618 00000020  C0 3F 00 68 */	lfs f1, 0x68(r31)
 /* 80C5061C 00000024  C0 5F 00 6C */	lfs f2, 0x6c(r31)
 /* 80C50620 00000028  FC 60 10 90 */	fmr f3, f2
 /* 80C50624 0000002C  C0 9F 00 70 */	lfs f4, 0x70(r31)
 /* 80C50628 00000030  C0 BF 00 74 */	lfs f5, 0x74(r31)
 /* 80C5062C 00000034  C0 DF 00 78 */	lfs f6, 0x78(r31)
-/* 80C50630 00000038  4B FF F2 09 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80C50630 00000038  4B FF F2 09 */	bl _unresolved
 /* 80C50634 0000003C  88 1E 04 9A */	lbz r0, 0x49a(r30)
 /* 80C50638 00000040  60 00 00 30 */	ori r0, r0, 0x30
 /* 80C5063C 00000044  98 1E 04 9A */	stb r0, 0x49a(r30)
@@ -32,7 +32,7 @@ lbl_80C505F8:
 /* 80C50670 00000078  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80C50674 0000007C  C0 3F 00 3C */	lfs f1, 0x3c(r31)
 /* 80C50678 00000080  C0 5F 00 7C */	lfs f2, 0x7c(r31)
-/* 80C5067C 00000084  4B FF F1 BD */	bl SetWall__12dBgS_AcchCirFff
+/* 80C5067C 00000084  4B FF F1 BD */	bl _unresolved
 /* 80C50680 00000088  38 1E 04 E4 */	addi r0, r30, 0x4e4
 /* 80C50684 0000008C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C50688 00000090  38 7E 05 B4 */	addi r3, r30, 0x5b4
@@ -43,7 +43,7 @@ lbl_80C505F8:
 /* 80C5069C 000000A4  39 1E 05 74 */	addi r8, r30, 0x574
 /* 80C506A0 000000A8  39 3E 04 F8 */	addi r9, r30, 0x4f8
 /* 80C506A4 000000AC  39 5E 04 DC */	addi r10, r30, 0x4dc
-/* 80C506A8 000000B0  4B FF F1 91 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 80C506A8 000000B0  4B FF F1 91 */	bl _unresolved
 /* 80C506AC 000000B4  80 1E 05 E0 */	lwz r0, 0x5e0(r30)
 /* 80C506B0 000000B8  60 00 00 08 */	ori r0, r0, 8
 /* 80C506B4 000000BC  90 1E 05 E0 */	stw r0, 0x5e0(r30)

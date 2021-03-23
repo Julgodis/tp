@@ -5,25 +5,25 @@ lbl_80CCEE30:
 /* 80CCEE3C 0000000C  DB E1 00 30 */	stfd f31, 0x30(r1)
 /* 80CCEE40 00000010  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
 /* 80CCEE44 00000014  39 61 00 30 */	addi r11, r1, 0x30
-/* 80CCEE48 00000018  4B FF F4 71 */	bl _savegpr_25
+/* 80CCEE48 00000018  4B FF F4 71 */	bl _unresolved
 /* 80CCEE4C 0000001C  7C 7D 1B 78 */	mr r29, r3
 /* 80CCEE50 00000020  7C 9E 23 78 */	mr r30, r4
 /* 80CCEE54 00000024  3B E0 00 00 */	li r31, 0
-/* 80CCEE58 00000028  3C 60 00 00 */	lis r3, lit_4636@ha /* 80CD5DCC */
-/* 80CCEE5C 0000002C  C3 E3 00 00 */	lfs f31, lit_4636@l(r3) /* 80CD5DCC */
+/* 80CCEE58 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCEE5C 0000002C  C3 E3 00 00 */	lfs f31, 0x0000(r3)
 /* 80CCEE60 00000030  38 00 00 00 */	li r0, 0
-/* 80CCEE64 00000034  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha /* 80450FDC */
-/* 80CCEE68 00000038  90 03 00 00 */	stw r0, mFindCount__8daNpcT_c@l(r3) /* 80450FDC */
-/* 80CCEE6C 0000003C  3C 60 00 00 */	lis r3, srchSekizoa__15daObj_Sekizoa_cFPvPv@ha /* 80CCED94 */
-/* 80CCEE70 00000040  38 63 00 00 */	addi r3, r3, srchSekizoa__15daObj_Sekizoa_cFPvPv@l /* 80CCED94 */
+/* 80CCEE64 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCEE68 00000038  90 03 00 00 */	stw r0, 0x0000(r3)
+/* 80CCEE6C 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCEE70 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CCEE74 00000044  7F A4 EB 78 */	mr r4, r29
-/* 80CCEE78 00000048  4B FF F4 41 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80CCEE78 00000048  4B FF F4 41 */	bl _unresolved
 /* 80CCEE7C 0000004C  3B 20 00 00 */	li r25, 0
 /* 80CCEE80 00000050  3B 80 00 00 */	li r28, 0
-/* 80CCEE84 00000054  3C 60 00 00 */	lis r3, mFindActorPtrs__8daNpcT_c@ha /* 80425708 */
-/* 80CCEE88 00000058  3B 43 00 00 */	addi r26, r3, mFindActorPtrs__8daNpcT_c@l /* 80425708 */
-/* 80CCEE8C 0000005C  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha /* 80450FDC */
-/* 80CCEE90 00000060  3B 63 00 00 */	addi r27, r3, mFindCount__8daNpcT_c@l /* 80450FDC */
+/* 80CCEE84 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCEE88 00000058  3B 43 00 00 */	addi r26, r3, 0x0000 /* 0x00000000@l */
+/* 80CCEE8C 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CCEE90 00000060  3B 63 00 00 */	addi r27, r3, 0x0000 /* 0x00000000@l */
 /* 80CCEE94 00000064  48 00 00 E0 */	b lbl_80CCEF74
 lbl_80CCEE98:
 /* 80CCEE98 00000000  7C 9A E0 2E */	lwzx r4, r26, r28
@@ -83,12 +83,12 @@ lbl_80CCEF3C:
 /* 80CCEF40 00000004  7C 1E 00 00 */	cmpw r30, r0
 /* 80CCEF44 00000008  40 82 00 28 */	bne lbl_80CCEF6C
 /* 80CCEF48 0000000C  7F A3 EB 78 */	mr r3, r29
-/* 80CCEF4C 00000010  4B FF F3 6D */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80CCEF4C 00000010  4B FF F3 6D */	bl _unresolved
 /* 80CCEF50 00000014  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 80CCEF54 00000000  40 80 00 18 */	bge lbl_80CCEF6C
 /* 80CCEF58 00000004  7F A3 EB 78 */	mr r3, r29
 /* 80CCEF5C 00000008  7C 9A E0 2E */	lwzx r4, r26, r28
-/* 80CCEF60 0000000C  4B FF F3 59 */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80CCEF60 0000000C  4B FF F3 59 */	bl _unresolved
 /* 80CCEF64 00000010  FF E0 08 90 */	fmr f31, f1
 /* 80CCEF68 00000014  7F FA E0 2E */	lwzx r31, r26, r28
 lbl_80CCEF6C:
@@ -102,7 +102,7 @@ lbl_80CCEF74:
 /* 80CCEF84 00000010  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */
 /* 80CCEF88 00000000  CB E1 00 30 */	lfd f31, 0x30(r1)
 /* 80CCEF8C 00000004  39 61 00 30 */	addi r11, r1, 0x30
-/* 80CCEF90 00000008  4B FF F3 29 */	bl _restgpr_25
+/* 80CCEF90 00000008  4B FF F3 29 */	bl _unresolved
 /* 80CCEF94 0000000C  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 80CCEF98 00000010  7C 08 03 A6 */	mtlr r0
 /* 80CCEF9C 00000014  38 21 00 40 */	addi r1, r1, 0x40

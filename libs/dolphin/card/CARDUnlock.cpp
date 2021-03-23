@@ -44,7 +44,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80353F24-80354090 016C+00 r=1 e=0 z=0  None .text      bitrev                                                       */
+/* 80353F24-80354090 016C+00 s=1 e=0 z=0  None .text      bitrev                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ extern "C" asm static void bitrev() {
 #pragma pop
 
 
-/* 80354090-803541D4 0144+00 r=2 e=0 z=0  None .text      ReadArrayUnlock                                              */
+/* 80354090-803541D4 0144+00 s=2 e=0 z=0  None .text      ReadArrayUnlock                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,14 +67,14 @@ extern "C" asm static void ReadArrayUnlock() {
 
 
 /* ############################################################################################## */
-/* 80450A68-80450A70 0004+04 r=2 e=0 z=0  None .sdata     next                                                         */
+/* 80450A68-80450A70 0004+04 s=2 e=0 z=0  None .sdata     next                                                         */
 SECTION_SDATA static u32 next[1 + 1 /* padding */] = {
 	0x00000001,
 	/* padding */
 	0x00000000,
 };
 
-/* 803541D4-80354298 00C4+00 r=2 e=0 z=0  None .text      DummyLen                                                     */
+/* 803541D4-80354298 00C4+00 s=2 e=0 z=0  None .text      DummyLen                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ extern "C" asm static void DummyLen() {
 
 
 /* ############################################################################################## */
-/* 803D1EA0-803D2000 0160+00 r=1 e=0 z=0  None .data      CardData                                                     */
+/* 803D1EA0-803D2000 0160+00 s=1 e=0 z=0  None .data      CardData                                                     */
 SECTION_DATA static u8 CardData[352] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x02, 0xFF, 0x00, 0x21,
@@ -112,7 +112,7 @@ SECTION_DATA static u8 CardData[352] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80354298-80354DF0 0B58+00 r=1 e=1 z=0  None .text      __CARDUnlock                                                 */
+/* 80354298-80354DF0 0B58+00 s=0 e=1 z=0  None .text      __CARDUnlock                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ extern "C" asm void __CARDUnlock() {
 #pragma pop
 
 
-/* 80354DF0-80354E60 0070+00 r=1 e=0 z=0  None .text      InitCallback                                                 */
+/* 80354DF0-80354E60 0070+00 s=1 e=0 z=0  None .text      InitCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +134,7 @@ extern "C" asm static void InitCallback() {
 #pragma pop
 
 
-/* 80354E60-80355184 0324+00 r=1 e=0 z=0  None .text      DoneCallback                                                 */
+/* 80354E60-80355184 0324+00 s=1 e=0 z=0  None .text      DoneCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

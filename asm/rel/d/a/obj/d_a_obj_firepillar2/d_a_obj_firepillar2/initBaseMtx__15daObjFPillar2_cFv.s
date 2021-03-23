@@ -9,24 +9,24 @@ lbl_80BE9CD8:
 /* 80BE9CF4 0000001C  28 00 00 01 */	cmplwi r0, 1
 /* 80BE9CF8 00000020  40 82 00 18 */	bne lbl_80BE9D10
 /* 80BE9CFC 00000024  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80BE9D00 00000028  4B FF FF 99 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 80BE9D00 00000028  4B FF FF 99 */	bl _unresolved
 /* 80BE9D04 0000002C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 80BE9D08 00000030  4B FF FF 91 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 80BE9D08 00000030  4B FF FF 91 */	bl _unresolved
 /* 80BE9D0C 00000034  48 00 00 24 */	b lbl_80BE9D30
 lbl_80BE9D10:
 /* 80BE9D10 00000000  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80BE9D14 00000004  4B FF FF 85 */	bl transS__14mDoMtx_stack_cFRC4cXyz
-/* 80BE9D18 00000008  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BE9D1C 0000000C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BE9D14 00000004  4B FF FF 85 */	bl _unresolved
+/* 80BE9D18 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE9D1C 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BE9D20 00000010  38 80 40 00 */	li r4, 0x4000
 /* 80BE9D24 00000014  A8 BF 04 E6 */	lha r5, 0x4e6(r31)
 /* 80BE9D28 00000018  A8 DF 04 E8 */	lha r6, 0x4e8(r31)
-/* 80BE9D2C 0000001C  4B FF FF 6D */	bl mDoMtx_ZXYrotM__FPA4_fsss
+/* 80BE9D2C 0000001C  4B FF FF 6D */	bl _unresolved
 lbl_80BE9D30:
-/* 80BE9D30 00000000  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BE9D34 00000004  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BE9D30 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE9D34 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BE9D38 00000008  38 9F 09 14 */	addi r4, r31, 0x914
-/* 80BE9D3C 0000000C  4B FF FF 5D */	bl PSMTXCopy
+/* 80BE9D3C 0000000C  4B FF FF 5D */	bl _unresolved
 /* 80BE9D40 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80BE9D44 00000014  48 00 00 19 */	bl setBaseMtx__15daObjFPillar2_cFv
 /* 80BE9D48 00000018  83 E1 00 0C */	lwz r31, 0xc(r1)

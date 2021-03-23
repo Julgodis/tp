@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8095D62C[2];
+extern u8 data_8095D62C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_ash_cpp(); // 1
 
 // 
 // Declarations:

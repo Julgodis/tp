@@ -7,24 +7,24 @@ lbl_80CB5234:
 /* 80CB5248 00000014  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80CB524C 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80CB5250 0000001C  41 82 00 48 */	beq lbl_80CB5298
-/* 80CB5254 00000020  3C 60 00 00 */	lis r3, __vt__11daObjProp_c@ha /* 80CB567C */
-/* 80CB5258 00000024  38 03 00 00 */	addi r0, r3, __vt__11daObjProp_c@l /* 80CB567C */
+/* 80CB5254 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB5258 00000024  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CB525C 00000028  90 1E 05 70 */	stw r0, 0x570(r30)
 /* 80CB5260 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 80CB5264 00000030  41 82 00 08 */	beq lbl_80CB526C
 /* 80CB5268 00000034  38 63 05 68 */	addi r3, r3, 0x568
 lbl_80CB526C:
-/* 80CB526C 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80CB5628 */
-/* 80CB5270 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80CB5628 */
+/* 80CB526C 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CB5270 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CB5274 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80CB5278 0000000C  4B FF FF 41 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80CB5278 0000000C  4B FF FF 41 */	bl _unresolved
 /* 80CB527C 00000010  7F C3 F3 78 */	mr r3, r30
 /* 80CB5280 00000014  38 80 00 00 */	li r4, 0
-/* 80CB5284 00000018  4B FF FF 35 */	bl __dt__10fopAc_ac_cFv
+/* 80CB5284 00000018  4B FF FF 35 */	bl _unresolved
 /* 80CB5288 0000001C  7F E0 07 35 */	extsh. r0, r31
 /* 80CB528C 00000020  40 81 00 0C */	ble lbl_80CB5298
 /* 80CB5290 00000024  7F C3 F3 78 */	mr r3, r30
-/* 80CB5294 00000028  4B FF FF 25 */	bl __dl__FPv
+/* 80CB5294 00000028  4B FF FF 25 */	bl _unresolved
 lbl_80CB5298:
 /* 80CB5298 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80CB529C 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

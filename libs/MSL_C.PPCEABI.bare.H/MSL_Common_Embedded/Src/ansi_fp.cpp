@@ -34,7 +34,7 @@ extern "C" void modf(); // 1
 // Declarations:
 // 
 
-/* 80363124-803632C8 01A4+00 r=2 e=2 z=0  None .text      __num2dec                                                    */
+/* 80363124-803632C8 01A4+00 s=0 e=2 z=0  None .text      __num2dec                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,12 +46,12 @@ extern "C" asm void __num2dec() {
 
 
 /* ############################################################################################## */
-/* 80456660-80456668 0008+00 r=1 e=0 z=0  None .sdata2    @824                                                         */
+/* 80456660-80456668 0008+00 s=1 e=0 z=0  None .sdata2    @824                                                         */
 SECTION_SDATA2 static u8 lit_824[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803632C8-8036367C 03B4+00 r=1 e=0 z=0  None .text      __num2dec_internal                                           */
+/* 803632C8-8036367C 03B4+00 s=1 e=0 z=0  None .text      __num2dec_internal                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ extern "C" asm static void __num2dec_internal() {
 
 
 /* ############################################################################################## */
-/* 803A2238-803A2318 00DD+03 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803A2238-803A2318 00DD+03 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -96,7 +96,7 @@ SECTION_DEAD char const* const stringBase_803A2311 = "256";
 SECTION_DEAD static char const* const pad_803A2315 = "\0\0";
 #pragma pop
 
-/* 803D2AF0-803D2C18 0124+04 r=1 e=0 z=0  None .data      @1710                                                        */
+/* 803D2AF0-803D2C18 0124+04 s=1 e=0 z=0  None .data      @1710                                                        */
 SECTION_DATA static void* lit_1710[73 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)__two_exp)+0x40),
 	/* 1    */ (void*)(((char*)__two_exp)+0x14DC),
@@ -175,7 +175,7 @@ SECTION_DATA static void* lit_1710[73 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8036367C-80364E00 1784+00 r=2 e=0 z=0  None .text      __two_exp                                                    */
+/* 8036367C-80364E00 1784+00 s=2 e=0 z=0  None .text      __two_exp                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ extern "C" asm static void __two_exp() {
 #pragma pop
 
 
-/* 80364E00-80365078 0278+00 r=2 e=0 z=0  None .text      __timesdec                                                   */
+/* 80364E00-80365078 0278+00 s=2 e=0 z=0  None .text      __timesdec                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

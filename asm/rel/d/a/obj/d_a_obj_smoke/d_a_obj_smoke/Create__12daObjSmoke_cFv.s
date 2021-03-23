@@ -5,17 +5,17 @@ lbl_80CDCEF0:
 /* 80CDCEFC 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80CDCF00 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80CDCF04 00000014  4B FF FF 75 */	bl initBaseMtx__12daObjSmoke_cFv
-/* 80CDCF08 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CDCF0C 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CDCF08 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDCF0C 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDCF10 00000020  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDCF14 00000024  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CDCF18 00000028  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CDCF1C 0000002C  7C 05 07 74 */	extsb r5, r0
-/* 80CDCF20 00000030  4B FF FF 39 */	bl isSwitch__10dSv_info_cCFii
+/* 80CDCF20 00000030  4B FF FF 39 */	bl _unresolved
 /* 80CDCF24 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 80CDCF28 00000038  41 82 00 5C */	beq lbl_80CDCF84
-/* 80CDCF2C 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CDCF30 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CDCF2C 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDCF30 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDCF34 00000044  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80CDCF38 00000048  38 80 00 00 */	li r4, 0
 /* 80CDCF3C 0000004C  90 81 00 08 */	stw r4, 8(r1)
@@ -32,9 +32,9 @@ lbl_80CDCEF0:
 /* 80CDCF68 00000078  39 1F 04 DC */	addi r8, r31, 0x4dc
 /* 80CDCF6C 0000007C  39 3F 04 EC */	addi r9, r31, 0x4ec
 /* 80CDCF70 00000080  39 40 00 FF */	li r10, 0xff
-/* 80CDCF74 00000084  3D 60 00 00 */	lis r11, lit_3655@ha /* 80CDD160 */
-/* 80CDCF78 00000088  C0 2B 00 00 */	lfs f1, lit_3655@l(r11) /* 80CDD160 */
-/* 80CDCF7C 0000008C  4B FF FE DD */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
+/* 80CDCF74 00000084  3D 60 00 00 */	lis r11, 0x0000 /* 0x00000000@ha */
+/* 80CDCF78 00000088  C0 2B 00 00 */	lfs f1, 0x0000(r11)
+/* 80CDCF7C 0000008C  4B FF FE DD */	bl _unresolved
 /* 80CDCF80 00000090  90 7F 05 68 */	stw r3, 0x568(r31)
 lbl_80CDCF84:
 /* 80CDCF84 00000000  38 60 00 01 */	li r3, 1

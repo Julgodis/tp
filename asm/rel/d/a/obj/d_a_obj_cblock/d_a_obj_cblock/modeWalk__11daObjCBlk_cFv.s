@@ -7,12 +7,12 @@ lbl_80BC6430:
 /* 80BC6444 00000014  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BC6448 00000018  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80BC644C 0000001C  7C 7E 1B 78 */	mr r30, r3
-/* 80BC6450 00000020  3C 60 00 00 */	lis r3, l_cull_box@ha /* 80BC6A38 */
-/* 80BC6454 00000024  3B E3 00 00 */	addi r31, r3, l_cull_box@l /* 80BC6A38 */
+/* 80BC6450 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC6454 00000024  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80BC6458 00000028  38 7E 0C A4 */	addi r3, r30, 0xca4
 /* 80BC645C 0000002C  48 00 05 1D */	bl func_80BC6978
-/* 80BC6460 00000030  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha /* 80439A20 */
-/* 80BC6464 00000034  38 83 00 00 */	addi r4, r3, sincosTable___5JMath@l /* 80439A20 */
+/* 80BC6460 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC6464 00000034  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80BC6468 00000038  A8 7E 0C A6 */	lha r3, 0xca6(r30)
 /* 80BC646C 0000003C  A8 1E 0C A4 */	lha r0, 0xca4(r30)
 /* 80BC6470 00000040  20 00 00 0D */	subfic r0, r0, 0xd
@@ -28,15 +28,15 @@ lbl_80BC6430:
 /* 80BC6498 00000068  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BC649C 0000006C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BC64A0 00000070  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80BC64A4 00000074  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BC64A8 00000078  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BC64A4 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC64A8 00000078  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BC64AC 0000007C  A8 9E 04 B6 */	lha r4, 0x4b6(r30)
-/* 80BC64B0 00000080  4B FF F4 C9 */	bl mDoMtx_YrotS__FPA4_fs
-/* 80BC64B4 00000084  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80BC64B8 00000088  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80BC64B0 00000080  4B FF F4 C9 */	bl _unresolved
+/* 80BC64B4 00000084  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC64B8 00000088  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BC64BC 0000008C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BC64C0 00000090  7C 85 23 78 */	mr r5, r4
-/* 80BC64C4 00000094  4B FF F4 B5 */	bl PSMTXMultVec
+/* 80BC64C4 00000094  4B FF F4 B5 */	bl _unresolved
 /* 80BC64C8 00000098  C0 5E 04 A8 */	lfs f2, 0x4a8(r30)
 /* 80BC64CC 0000009C  C0 21 00 0C */	lfs f1, 0xc(r1)
 /* 80BC64D0 000000A0  C0 9F 00 1C */	lfs f4, 0x1c(r31)
@@ -69,13 +69,13 @@ lbl_80BC6430:
 /* 80BC653C 0000010C  48 00 01 0D */	bl setPower__11daObjCBlk_cFf
 /* 80BC6540 00000110  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BC6544 00000114  7C 03 07 74 */	extsb r3, r0
-/* 80BC6548 00000118  4B FF F4 31 */	bl dComIfGp_getReverb__Fi
+/* 80BC6548 00000118  4B FF F4 31 */	bl _unresolved
 /* 80BC654C 0000011C  7C 67 1B 78 */	mr r7, r3
 /* 80BC6550 00000120  3C 60 00 08 */	lis r3, 0x0008 /* 0x0008011B@ha */
 /* 80BC6554 00000124  38 03 01 1B */	addi r0, r3, 0x011B /* 0x0008011B@l */
 /* 80BC6558 00000128  90 01 00 08 */	stw r0, 8(r1)
-/* 80BC655C 0000012C  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 80BC6560 00000130  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 80BC655C 0000012C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BC6560 00000130  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BC6564 00000134  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC6568 00000138  38 81 00 08 */	addi r4, r1, 8
 /* 80BC656C 0000013C  38 BE 05 38 */	addi r5, r30, 0x538
@@ -85,7 +85,7 @@ lbl_80BC6430:
 /* 80BC657C 0000014C  C0 7F 00 34 */	lfs f3, 0x34(r31)
 /* 80BC6580 00000150  FC 80 18 90 */	fmr f4, f3
 /* 80BC6584 00000154  39 00 00 00 */	li r8, 0
-/* 80BC6588 00000158  4B FF F3 F1 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
+/* 80BC6588 00000158  4B FF F3 F1 */	bl _unresolved
 /* 80BC658C 0000015C  A8 1E 0C A4 */	lha r0, 0xca4(r30)
 /* 80BC6590 00000160  2C 00 00 00 */	cmpwi r0, 0
 /* 80BC6594 00000164  40 82 00 18 */	bne lbl_80BC65AC

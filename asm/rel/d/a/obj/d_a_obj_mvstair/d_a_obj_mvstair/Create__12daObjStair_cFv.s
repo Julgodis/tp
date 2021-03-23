@@ -10,23 +10,23 @@ lbl_80C9D148:
 /* 80C9D168 00000020  90 03 05 04 */	stw r0, 0x504(r3)
 /* 80C9D16C 00000024  80 83 05 A8 */	lwz r4, 0x5a8(r3)
 /* 80C9D170 00000028  80 84 00 04 */	lwz r4, 4(r4)
-/* 80C9D174 0000002C  4B FF FF 05 */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
-/* 80C9D178 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80C9D17C 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C9D174 0000002C  4B FF FF 05 */	bl _unresolved
+/* 80C9D178 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D17C 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D180 00000038  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80C9D184 0000003C  7F E4 FB 78 */	mr r4, r31
 /* 80C9D188 00000040  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D18C 00000044  54 05 86 3E */	rlwinm r5, r0, 0x10, 0x18, 0x1f
-/* 80C9D190 00000048  4B FF FE E9 */	bl getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc
+/* 80C9D190 00000048  4B FF FE E9 */	bl _unresolved
 /* 80C9D194 0000004C  B0 7F 06 40 */	sth r3, 0x640(r31)
 /* 80C9D198 00000050  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D19C 00000054  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 80C9D1A0 00000058  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80C9D1A4 0000005C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80C9D1A8 00000060  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C9D1A4 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D1A8 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D1AC 00000064  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D1B0 00000068  7C 05 07 74 */	extsb r5, r0
-/* 80C9D1B4 0000006C  4B FF FE C5 */	bl isSwitch__10dSv_info_cCFii
+/* 80C9D1B4 0000006C  4B FF FE C5 */	bl _unresolved
 /* 80C9D1B8 00000070  2C 03 00 00 */	cmpwi r3, 0
 /* 80C9D1BC 00000074  41 82 00 18 */	beq lbl_80C9D1D4
 /* 80C9D1C0 00000078  38 00 00 03 */	li r0, 3
@@ -46,12 +46,12 @@ lbl_80C9D1F0:
 /* 80C9D1F0 00000000  38 00 00 00 */	li r0, 0
 /* 80C9D1F4 00000004  98 1F 06 3D */	stb r0, 0x63d(r31)
 lbl_80C9D1F8:
-/* 80C9D1F8 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80C9D1FC 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C9D1F8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D1FC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D200 00000008  7F C4 F3 78 */	mr r4, r30
 /* 80C9D204 0000000C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D208 00000010  7C 05 07 74 */	extsb r5, r0
-/* 80C9D20C 00000014  4B FF FE 6D */	bl isSwitch__10dSv_info_cCFii
+/* 80C9D20C 00000014  4B FF FE 6D */	bl _unresolved
 /* 80C9D210 00000018  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D214 0000001C  54 00 27 FF */	rlwinm. r0, r0, 4, 0x1f, 0x1f
 /* 80C9D218 00000020  40 82 00 0C */	bne lbl_80C9D224
@@ -72,13 +72,13 @@ lbl_80C9D240:
 lbl_80C9D248:
 /* 80C9D248 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80C9D24C 00000004  4B FF FE 4D */	bl initBaseMtx__12daObjStair_cFv
-/* 80C9D250 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80C9D254 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C9D250 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D254 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C9D258 00000010  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D25C 00000014  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C9D260 00000018  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D264 0000001C  7C 05 07 74 */	extsb r5, r0
-/* 80C9D268 00000020  4B FF FE 11 */	bl isSwitch__10dSv_info_cCFii
+/* 80C9D268 00000020  4B FF FE 11 */	bl _unresolved
 /* 80C9D26C 00000024  98 7F 06 3F */	stb r3, 0x63f(r31)
 /* 80C9D270 00000028  C0 1F 04 A8 */	lfs f0, 0x4a8(r31)
 /* 80C9D274 0000002C  D0 1F 06 30 */	stfs f0, 0x630(r31)
@@ -86,8 +86,8 @@ lbl_80C9D248:
 /* 80C9D27C 00000034  D0 1F 06 34 */	stfs f0, 0x634(r31)
 /* 80C9D280 00000038  C0 1F 04 B0 */	lfs f0, 0x4b0(r31)
 /* 80C9D284 0000003C  D0 1F 06 38 */	stfs f0, 0x638(r31)
-/* 80C9D288 00000040  3C 60 00 00 */	lis r3, lit_3709@ha /* 80C9E8DC */
-/* 80C9D28C 00000044  C0 23 00 00 */	lfs f1, lit_3709@l(r3) /* 80C9E8DC */
+/* 80C9D288 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C9D28C 00000044  C0 23 00 00 */	lfs f1, 0x0000(r3)
 /* 80C9D290 00000048  C0 1F 04 AC */	lfs f0, 0x4ac(r31)
 /* 80C9D294 0000004C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C9D298 00000050  D0 1F 06 34 */	stfs f0, 0x634(r31)

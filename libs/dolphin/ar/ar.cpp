@@ -45,10 +45,10 @@ extern "C" void __OSUnmaskInterrupts(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804518B8-804518BC 0004+00 r=3 e=0 z=0  None .sbss      __AR_Callback                                                */
+/* 804518B8-804518BC 0004+00 s=3 e=0 z=0  None .sbss      __AR_Callback                                                */
 static u8 __AR_Callback[4];
 
-/* 80350554-80350598 0044+00 r=1 e=1 z=0  None .text      ARRegisterDMACallback                                        */
+/* 80350554-80350598 0044+00 s=0 e=1 z=0  None .text      ARRegisterDMACallback                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void ARRegisterDMACallback() {
 #pragma pop
 
 
-/* 80350598-803505D4 003C+00 r=2 e=2 z=0  None .text      ARGetDMAStatus                                               */
+/* 80350598-803505D4 003C+00 s=0 e=2 z=0  None .text      ARGetDMAStatus                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void ARGetDMAStatus() {
 #pragma pop
 
 
-/* 803505D4-803506C4 00F0+00 r=5 e=5 z=0  None .text      ARStartDMA                                                   */
+/* 803505D4-803506C4 00F0+00 s=0 e=5 z=0  None .text      ARStartDMA                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,25 +82,25 @@ extern "C" asm void ARStartDMA() {
 
 
 /* ############################################################################################## */
-/* 804518BC-804518C0 0004+00 r=2 e=0 z=0  None .sbss      __AR_Size                                                    */
+/* 804518BC-804518C0 0004+00 s=2 e=0 z=0  None .sbss      __AR_Size                                                    */
 static u8 __AR_Size[4];
 
-/* 804518C0-804518C4 0004+00 r=1 e=0 z=0  None .sbss      __AR_InternalSize                                            */
+/* 804518C0-804518C4 0004+00 s=1 e=0 z=0  None .sbss      __AR_InternalSize                                            */
 static u8 __AR_InternalSize[4];
 
-/* 804518C4-804518C8 0004+00 r=1 e=0 z=0  None .sbss      __AR_ExpansionSize                                           */
+/* 804518C4-804518C8 0004+00 s=1 e=0 z=0  None .sbss      __AR_ExpansionSize                                           */
 static u8 __AR_ExpansionSize[4];
 
-/* 804518C8-804518CC 0004+00 r=2 e=0 z=0  None .sbss      __AR_StackPointer                                            */
+/* 804518C8-804518CC 0004+00 s=2 e=0 z=0  None .sbss      __AR_StackPointer                                            */
 static u8 __AR_StackPointer[4];
 
-/* 804518CC-804518D0 0004+00 r=2 e=0 z=0  None .sbss      __AR_FreeBlocks                                              */
+/* 804518CC-804518D0 0004+00 s=2 e=0 z=0  None .sbss      __AR_FreeBlocks                                              */
 static u8 __AR_FreeBlocks[4];
 
-/* 804518D0-804518D4 0004+00 r=2 e=0 z=0  None .sbss      __AR_BlockLength                                             */
+/* 804518D0-804518D4 0004+00 s=2 e=0 z=0  None .sbss      __AR_BlockLength                                             */
 static u8 __AR_BlockLength[4];
 
-/* 803506C4-8035072C 0068+00 r=1 e=1 z=0  None .text      ARAlloc                                                      */
+/* 803506C4-8035072C 0068+00 s=0 e=1 z=0  None .text      ARAlloc                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ extern "C" asm void ARAlloc() {
 
 
 /* ############################################################################################## */
-/* 803D1BE8-803D1C30 0044+04 r=1 e=0 z=0  None .data      @1                                                           */
+/* 803D1BE8-803D1C30 0044+04 s=1 e=0 z=0  None .data      @1                                                           */
 SECTION_DATA static u8 ar__lit_1[68 + 4 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x52, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
@@ -123,17 +123,17 @@ SECTION_DATA static u8 ar__lit_1[68 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450A48-80450A50 0004+04 r=1 e=0 z=0  None .sdata     __ARVersion                                                  */
+/* 80450A48-80450A50 0004+04 s=1 e=0 z=0  None .sdata     __ARVersion                                                  */
 SECTION_SDATA static void* __ARVersion[1 + 1 /* padding */] = {
 	/* 0    */ (void*)&ar__lit_1,
 	/* padding */
 	NULL,
 };
 
-/* 804518D4-804518D8 0004+00 r=1 e=0 z=0  None .sbss      __AR_init_flag                                               */
+/* 804518D4-804518D8 0004+00 s=1 e=0 z=0  None .sbss      __AR_init_flag                                               */
 static u8 __AR_init_flag[4];
 
-/* 8035072C-803507F0 00C4+00 r=1 e=1 z=0  None .text      ARInit                                                       */
+/* 8035072C-803507F0 00C4+00 s=0 e=1 z=0  None .text      ARInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ extern "C" asm void ARInit() {
 #pragma pop
 
 
-/* 803507F0-803507F8 0008+00 r=1 e=1 z=0  None .text      ARGetSize                                                    */
+/* 803507F0-803507F8 0008+00 s=0 e=1 z=0  None .text      ARGetSize                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ extern "C" asm void ARGetSize() {
 #pragma pop
 
 
-/* 803507F8-80350870 0078+00 r=1 e=0 z=0  None .text      __ARHandler                                                  */
+/* 803507F8-80350870 0078+00 s=1 e=0 z=0  None .text      __ARHandler                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ extern "C" asm static void __ARHandler() {
 #pragma pop
 
 
-/* 80350870-80350890 0020+00 r=2 e=2 z=0  None .text      __ARClearInterrupt                                           */
+/* 80350870-80350890 0020+00 s=0 e=2 z=0  None .text      __ARClearInterrupt                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +177,7 @@ extern "C" asm void __ARClearInterrupt() {
 #pragma pop
 
 
-/* 80350890-803508A0 0010+00 r=2 e=2 z=0  None .text      __ARGetInterruptStatus                                       */
+/* 80350890-803508A0 0010+00 s=0 e=2 z=0  None .text      __ARGetInterruptStatus                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +188,7 @@ extern "C" asm void __ARGetInterruptStatus() {
 #pragma pop
 
 
-/* 803508A0-80352094 17F4+00 r=1 e=0 z=0  None .text      __ARChecksize                                                */
+/* 803508A0-80352094 17F4+00 s=1 e=0 z=0  None .text      __ARChecksize                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

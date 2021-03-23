@@ -31,13 +31,7 @@ struct daKtOnFire_c {
 	/* 8058CE00 */ void Delete();
 };
 
-struct cXyz {
-};
-
 struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
 	/* 8058C8D0 */ ~cM3dGCyl();
 };
 
@@ -46,81 +40,16 @@ struct cM3dGAab {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct LIGHT_INFLUENCE {
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 
 // Forward References:
 // 
 
-static void daKtOnFire_Draw(daKtOnFire_c*); // 2
-static void daKtOnFire_Execute(daKtOnFire_c*); // 2
-static void daKtOnFire_Delete(daKtOnFire_c*); // 2
-static void daKtOnFire_Create(fopAc_ac_c*); // 2
+void daKtOnFire_Draw(daKtOnFire_c*); // 2
+void daKtOnFire_Execute(daKtOnFire_c*); // 2
+void daKtOnFire_Delete(daKtOnFire_c*); // 2
+void daKtOnFire_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daKtOnFire_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -134,66 +63,36 @@ extern "C" void cutLight__12daKtOnFire_cFv(); // 1
 extern "C" void Execute__12daKtOnFire_cFv(); // 1
 extern "C" void Draw__12daKtOnFire_cFv(); // 1
 extern "C" void Delete__12daKtOnFire_cFv(); // 1
-extern "C" static void daKtOnFire_Draw__FP12daKtOnFire_c(); // 1
-extern "C" static void daKtOnFire_Execute__FP12daKtOnFire_c(); // 1
-extern "C" static void daKtOnFire_Delete__FP12daKtOnFire_c(); // 1
-extern "C" static void daKtOnFire_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daKtOnFire_Draw__FP12daKtOnFire_c(); // 1
+extern "C" void daKtOnFire_Execute__FP12daKtOnFire_c(); // 1
+extern "C" void daKtOnFire_Delete__FP12daKtOnFire_c(); // 1
+extern "C" void daKtOnFire_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daKtOnFire_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_ktOnFire_cpp(); // 1
+extern "C" extern u8 const mCcDObjInfo__12daKtOnFire_c[48];
+extern "C" extern u32 const lit_3710[1 + 1 /* padding */];
+extern "C" extern u8 const lit_3712[8];
 extern "C" extern u32 const lit_3797;
 extern "C" extern u32 const lit_3798;
 extern "C" extern u32 const lit_3913;
 extern "C" extern u32 const lit_3914;
 extern "C" extern u32 const lit_3915;
-extern "C" extern void* g_profile_Tag_KtOnFire[12];
+extern "C" extern u8 l_cull_box[24];
+extern "C" extern u8 mCcDCyl__12daKtOnFire_c[68];
+extern "C" extern u8 l_daKtOnFire_Method[32];
+extern "C" extern u8 g_profile_Tag_KtOnFire[48];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__16daKtOnFire_HIO_c[3];
+extern "C" extern void* __vt__14mDoHIO_entry_c[3];
+extern "C" extern u8 lit_3619[12];
+extern "C" extern u8 l_HIO[8];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfGp_getReverb(int); // 2
-void dKy_plight_set(LIGHT_INFLUENCE*); // 2
-void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_CylAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void _unresolved(); // 1
 extern "C" void __register_global_object(); // 1
 
@@ -201,79 +100,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 8058CFDC-8058CFF4 0018+00 r=1 e=0 z=0  None .data      l_cull_box                                                   */
-SECTION_DATA static u8 l_cull_box[24] = {
-	0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-	0x42, 0xC8, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-};
-
-/* 8058CFF4-8058D038 0044+00 r=2 e=0 z=0  None .data      mCcDCyl__12daKtOnFire_c                                      */
-SECTION_DATA static u8 mCcDCyl__12daKtOnFire_c[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8058D038-8058D058 0020+00 r=1 e=0 z=0  None .data      l_daKtOnFire_Method                                          */
-SECTION_DATA static void* l_daKtOnFire_Method[8] = {
-	/* 0    */ (void*)daKtOnFire_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daKtOnFire_Delete__FP12daKtOnFire_c,
-	/* 2    */ (void*)daKtOnFire_Execute__FP12daKtOnFire_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daKtOnFire_Draw__FP12daKtOnFire_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 8058D058-8058D088 0030+00 r=1 e=0 z=1  None .data      g_profile_Tag_KtOnFire                                       */
-SECTION_DATA void* g_profile_Tag_KtOnFire[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01680000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000728,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01F60000,
-	/* 9    */ (void*)&l_daKtOnFire_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 8058D088-8058D094 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 8058D094-8058D0A0 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 8058D0A0-8058D0AC 000C+00 r=2 e=0 z=0  None .data      __vt__16daKtOnFire_HIO_c                                     */
-SECTION_DATA static void* __vt__16daKtOnFire_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daKtOnFire_HIO_cFv,
-};
-
-/* 8058D0AC-8058D0B8 000C+00 r=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
-};
-
-/* 8058C60C-8058C630 0024+00 r=1 e=0 z=0  None .text      __ct__16daKtOnFire_HIO_cFv                                   */
+/* 8058C60C-8058C630 0024+00 s=1 e=0 z=0  None .text      __ct__16daKtOnFire_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +111,7 @@ asm daKtOnFire_HIO_c::daKtOnFire_HIO_c() {
 #pragma pop
 
 
-/* 8058C630-8058C678 0048+00 r=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 8058C630-8058C678 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +122,7 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 #pragma pop
 
 
-/* 8058C678-8058C6D0 0058+00 r=1 e=0 z=0  None .text      setBaseMtx__12daKtOnFire_cFv                                 */
+/* 8058C678-8058C6D0 0058+00 s=1 e=0 z=0  None .text      setBaseMtx__12daKtOnFire_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,27 +133,7 @@ asm void daKtOnFire_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8058CF88-8058CFB8 0030+00 r=3 e=0 z=0  None .rodata    mCcDObjInfo__12daKtOnFire_c                                  */
-SECTION_RODATA static u8 const mCcDObjInfo__12daKtOnFire_c[48] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x13,
-	0xD8, 0xFB, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8058CFB8-8058CFC0 0004+04 r=1 e=0 z=0  None .rodata    @3710                                                        */
-SECTION_RODATA static u32 const lit_3710[1 + 1 /* padding */] = {
-	0x41200000,
-	/* padding */
-	0x00000000,
-};
-
-/* 8058CFC0-8058CFC8 0008+00 r=1 e=0 z=0  None .rodata    @3712                                                        */
-SECTION_RODATA static u8 const lit_3712[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8058C6D0-8058C8D0 0200+00 r=1 e=0 z=0  None .text      create__12daKtOnFire_cFv                                     */
+/* 8058C6D0-8058C8D0 0200+00 s=1 e=0 z=0  None .text      create__12daKtOnFire_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +144,7 @@ asm void daKtOnFire_c::create() {
 #pragma pop
 
 
-/* 8058C8D0-8058C918 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 8058C8D0-8058C918 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +155,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 8058C918-8058C960 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8058C918-8058C960 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +166,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8058C960-8058C9D4 0074+00 r=1 e=0 z=0  None .text      lightInit__12daKtOnFire_cFv                                  */
+/* 8058C960-8058C9D4 0074+00 s=1 e=0 z=0  None .text      lightInit__12daKtOnFire_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +177,7 @@ asm void daKtOnFire_c::lightInit() {
 #pragma pop
 
 
-/* 8058C9D4-8058C9F8 0024+00 r=2 e=0 z=0  None .text      setLight__12daKtOnFire_cFv                                   */
+/* 8058C9D4-8058C9F8 0024+00 s=2 e=0 z=0  None .text      setLight__12daKtOnFire_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -381,7 +188,7 @@ asm void daKtOnFire_c::setLight() {
 #pragma pop
 
 
-/* 8058C9F8-8058CA1C 0024+00 r=1 e=0 z=0  None .text      cutLight__12daKtOnFire_cFv                                   */
+/* 8058C9F8-8058CA1C 0024+00 s=1 e=0 z=0  None .text      cutLight__12daKtOnFire_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,14 +199,7 @@ asm void daKtOnFire_c::cutLight() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8058D0C0-8058D0CC 000C+00 r=1 e=0 z=0  None .bss       @3619                                                        */
-static u8 lit_3619[12];
-
-/* 8058D0CC-8058D0D4 0008+00 r=2 e=0 z=0  None .bss       l_HIO                                                        */
-static u8 l_HIO[8];
-
-/* 8058CA1C-8058CDF8 03DC+00 r=1 e=0 z=0  None .text      Execute__12daKtOnFire_cFv                                    */
+/* 8058CA1C-8058CDF8 03DC+00 s=1 e=0 z=0  None .text      Execute__12daKtOnFire_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +210,7 @@ asm void daKtOnFire_c::Execute() {
 #pragma pop
 
 
-/* 8058CDF8-8058CE00 0008+00 r=1 e=0 z=0  None .text      Draw__12daKtOnFire_cFv                                       */
+/* 8058CDF8-8058CE00 0008+00 s=1 e=0 z=0  None .text      Draw__12daKtOnFire_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +221,7 @@ asm void daKtOnFire_c::Draw() {
 #pragma pop
 
 
-/* 8058CE00-8058CE28 0028+00 r=1 e=0 z=0  None .text      Delete__12daKtOnFire_cFv                                     */
+/* 8058CE00-8058CE28 0028+00 s=1 e=0 z=0  None .text      Delete__12daKtOnFire_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,51 +232,51 @@ asm void daKtOnFire_c::Delete() {
 #pragma pop
 
 
-/* 8058CE28-8058CE48 0020+00 r=1 e=0 z=0  None .text      daKtOnFire_Draw__FP12daKtOnFire_c                            */
+/* 8058CE28-8058CE48 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Draw__FP12daKtOnFire_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKtOnFire_Draw(daKtOnFire_c* param_0) {
+asm void daKtOnFire_Draw(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Draw__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE48-8058CE68 0020+00 r=1 e=0 z=0  None .text      daKtOnFire_Execute__FP12daKtOnFire_c                         */
+/* 8058CE48-8058CE68 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Execute__FP12daKtOnFire_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKtOnFire_Execute(daKtOnFire_c* param_0) {
+asm void daKtOnFire_Execute(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Execute__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE68-8058CE88 0020+00 r=1 e=0 z=0  None .text      daKtOnFire_Delete__FP12daKtOnFire_c                          */
+/* 8058CE68-8058CE88 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Delete__FP12daKtOnFire_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKtOnFire_Delete(daKtOnFire_c* param_0) {
+asm void daKtOnFire_Delete(daKtOnFire_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Delete__FP12daKtOnFire_c.s"
 }
 #pragma pop
 
 
-/* 8058CE88-8058CEA8 0020+00 r=1 e=0 z=0  None .text      daKtOnFire_Create__FP10fopAc_ac_c                            */
+/* 8058CE88-8058CEA8 0020+00 s=0 e=0 z=0  None .text      daKtOnFire_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKtOnFire_Create(fopAc_ac_c* param_0) {
+asm void daKtOnFire_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/daKtOnFire_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8058CEA8-8058CF04 005C+00 r=2 e=0 z=0  None .text      __dt__16daKtOnFire_HIO_cFv                                   */
+/* 8058CEA8-8058CF04 005C+00 s=0 e=0 z=0  None .text      __dt__16daKtOnFire_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +287,7 @@ asm daKtOnFire_HIO_c::~daKtOnFire_HIO_c() {
 #pragma pop
 
 
-/* 8058CF04-8058CF74 0070+00 r=1 e=1 z=0  None .text      __sinit_d_a_obj_ktOnFire_cpp                                 */
+/* 8058CF04-8058CF74 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_ktOnFire_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -499,18 +299,99 @@ extern "C" asm void __sinit_d_a_obj_ktOnFire_cpp() {
 
 
 /* ############################################################################################## */
-/* 8058CFC8-8058CFCC 0004+00 r=0 e=0 z=0  None .rodata    @3797                                                        */
+/* 8058CF88-8058CFB8 0030+00 s=0 e=0 z=0  None .rodata    mCcDObjInfo__12daKtOnFire_c                                  */
+SECTION_RODATA u8 const mCcDObjInfo__12daKtOnFire_c[48] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x13,
+	0xD8, 0xFB, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8058CFB8-8058CFC0 0004+04 s=0 e=0 z=0  None .rodata    @3710                                                        */
+SECTION_RODATA u32 const lit_3710[1 + 1 /* padding */] = {
+	0x41200000,
+	/* padding */
+	0x00000000,
+};
+
+/* 8058CFC0-8058CFC8 0008+00 s=0 e=0 z=0  None .rodata    @3712                                                        */
+SECTION_RODATA u8 const lit_3712[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8058CFC8-8058CFCC 0004+00 s=0 e=0 z=0  None .rodata    @3797                                                        */
 SECTION_RODATA u32 const lit_3797 = 0x43FA0000;
 
-/* 8058CFCC-8058CFD0 0004+00 r=0 e=0 z=0  None .rodata    @3798                                                        */
+/* 8058CFCC-8058CFD0 0004+00 s=0 e=0 z=0  None .rodata    @3798                                                        */
 SECTION_RODATA u32 const lit_3798 = 0x3F800000;
 
-/* 8058CFD0-8058CFD4 0004+00 r=0 e=0 z=0  None .rodata    @3913                                                        */
+/* 8058CFD0-8058CFD4 0004+00 s=0 e=0 z=0  None .rodata    @3913                                                        */
 SECTION_RODATA u32 const lit_3913 = 0xBF800000;
 
-/* 8058CFD4-8058CFD8 0004+00 r=0 e=0 z=0  None .rodata    @3914                                                        */
+/* 8058CFD4-8058CFD8 0004+00 s=0 e=0 z=0  None .rodata    @3914                                                        */
 SECTION_RODATA u32 const lit_3914 = 0x42480000;
 
-/* 8058CFD8-8058CFDC 0004+00 r=0 e=0 z=0  None .rodata    @3915                                                        */
+/* 8058CFD8-8058CFDC 0004+00 s=0 e=0 z=0  None .rodata    @3915                                                        */
 SECTION_RODATA u32 const lit_3915 = 0x42C80000;
+
+/* 8058CFDC-8058CFF4 0018+00 s=0 e=0 z=0  None .data      l_cull_box                                                   */
+SECTION_DATA u8 l_cull_box[24] = {
+	0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+	0x42, 0xC8, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+};
+
+/* 8058CFF4-8058D038 0044+00 s=0 e=0 z=0  None .data      mCcDCyl__12daKtOnFire_c                                      */
+SECTION_DATA u8 mCcDCyl__12daKtOnFire_c[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8058D038-8058D058 0020+00 s=0 e=0 z=0  None .data      l_daKtOnFire_Method                                          */
+SECTION_DATA u8 l_daKtOnFire_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8058D058-8058D088 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_KtOnFire                                       */
+SECTION_DATA u8 g_profile_Tag_KtOnFire[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0xF6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 8058D088-8058D094 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 8058D094-8058D0A0 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 8058D0A0-8058D0AC 000C+00 s=0 e=0 z=0  None .data      __vt__16daKtOnFire_HIO_c                                     */
+SECTION_DATA void* __vt__16daKtOnFire_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 8058D0AC-8058D0B8 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 8058D0C0-8058D0CC 000C+00 s=0 e=0 z=0  None .bss       @3619                                                        */
+u8 lit_3619[12];
+
+/* 8058D0CC-8058D0D4 0008+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
+u8 l_HIO[8];
 

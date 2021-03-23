@@ -3,7 +3,7 @@ lbl_8099BCE8:
 /* 8099BCEC 00000004  7C 08 02 A6 */	mflr r0
 /* 8099BCF0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8099BCF4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 8099BCF8 00000010  4B FF E3 C1 */	bl _savegpr_29
+/* 8099BCF8 00000010  4B FF E3 C1 */	bl _unresolved
 /* 8099BCFC 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8099BD00 00000018  88 03 10 E9 */	lbz r0, 0x10e9(r3)
 /* 8099BD04 0000001C  28 00 00 00 */	cmplwi r0, 0
@@ -12,11 +12,11 @@ lbl_8099BCE8:
 /* 8099BD10 00000028  2C 00 00 02 */	cmpwi r0, 2
 /* 8099BD14 0000002C  40 82 00 10 */	bne lbl_8099BD24
 /* 8099BD18 00000030  38 7F 0E 78 */	addi r3, r31, 0xe78
-/* 8099BD1C 00000034  4B FF E3 9D */	bl Reset__16ShopCam_action_cFv
+/* 8099BD1C 00000034  4B FF E3 9D */	bl _unresolved
 /* 8099BD20 00000038  48 00 00 0C */	b lbl_8099BD2C
 lbl_8099BD24:
 /* 8099BD24 00000000  38 7F 0E 78 */	addi r3, r31, 0xe78
-/* 8099BD28 00000004  4B FF E3 91 */	bl EventRecoverNotime__16ShopCam_action_cFv
+/* 8099BD28 00000004  4B FF E3 91 */	bl _unresolved
 lbl_8099BD2C:
 /* 8099BD2C 00000000  38 00 00 00 */	li r0, 0
 /* 8099BD30 00000004  98 1F 10 E9 */	stb r0, 0x10e9(r31)
@@ -29,33 +29,33 @@ lbl_8099BD34:
 /* 8099BD48 00000014  48 00 00 28 */	b lbl_8099BD70
 lbl_8099BD4C:
 /* 8099BD4C 00000000  38 7F 10 C0 */	addi r3, r31, 0x10c0
-/* 8099BD50 00000004  4B FF E3 69 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 8099BD50 00000004  4B FF E3 69 */	bl _unresolved
 /* 8099BD54 00000008  28 03 00 00 */	cmplwi r3, 0
 /* 8099BD58 0000000C  40 82 00 18 */	bne lbl_8099BD70
 /* 8099BD5C 00000010  7F E3 FB 78 */	mr r3, r31
-/* 8099BD60 00000014  4B FF E3 59 */	bl getShopItemTagP__8daNpcT_cFv
+/* 8099BD60 00000014  4B FF E3 59 */	bl _unresolved
 /* 8099BD64 00000018  7C 64 1B 78 */	mr r4, r3
 /* 8099BD68 0000001C  38 7F 10 C0 */	addi r3, r31, 0x10c0
-/* 8099BD6C 00000020  4B FF E3 4D */	bl entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
+/* 8099BD6C 00000020  4B FF E3 4D */	bl _unresolved
 lbl_8099BD70:
-/* 8099BD70 00000000  3C 60 00 00 */	lis r3, m__19daNpcClerkt_Param_c@ha /* 8099D244 */
-/* 8099BD74 00000004  38 83 00 00 */	addi r4, r3, m__19daNpcClerkt_Param_c@l /* 8099D244 */
+/* 8099BD70 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8099BD74 00000004  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8099BD78 00000008  AB A4 00 48 */	lha r29, 0x48(r4)
 /* 8099BD7C 0000000C  AB C4 00 4A */	lha r30, 0x4a(r4)
 /* 8099BD80 00000010  A8 64 00 4C */	lha r3, 0x4c(r4)
 /* 8099BD84 00000014  A8 84 00 4E */	lha r4, 0x4e(r4)
-/* 8099BD88 00000018  4B FF E3 31 */	bl daNpcT_getDistTableIdx__Fii
+/* 8099BD88 00000018  4B FF E3 31 */	bl _unresolved
 /* 8099BD8C 0000001C  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 8099BD90 00000020  88 1F 05 44 */	lbz r0, 0x544(r31)
 /* 8099BD94 00000024  98 1F 05 45 */	stb r0, 0x545(r31)
 /* 8099BD98 00000028  7F A3 07 34 */	extsh r3, r29
 /* 8099BD9C 0000002C  7F C4 07 34 */	extsh r4, r30
-/* 8099BDA0 00000030  4B FF E3 19 */	bl daNpcT_getDistTableIdx__Fii
+/* 8099BDA0 00000030  4B FF E3 19 */	bl _unresolved
 /* 8099BDA4 00000034  98 7F 05 47 */	stb r3, 0x547(r31)
 /* 8099BDA8 00000038  38 00 00 0A */	li r0, 0xa
 /* 8099BDAC 0000003C  90 1F 05 5C */	stw r0, 0x55c(r31)
-/* 8099BDB0 00000040  3C 60 00 00 */	lis r3, m__19daNpcClerkt_Param_c@ha /* 8099D244 */
-/* 8099BDB4 00000044  38 63 00 00 */	addi r3, r3, m__19daNpcClerkt_Param_c@l /* 8099D244 */
+/* 8099BDB0 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8099BDB4 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8099BDB8 00000048  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8099BDBC 0000004C  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 8099BDC0 00000050  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
@@ -73,9 +73,9 @@ lbl_8099BD70:
 /* 8099BDF0 00000080  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 8099BDF4 00000084  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 8099BDF8 00000088  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
-/* 8099BDFC 0000008C  4B FF E2 BD */	bl SetWallR__12dBgS_AcchCirFf
-/* 8099BE00 00000090  3C 60 00 00 */	lis r3, m__19daNpcClerkt_Param_c@ha /* 8099D244 */
-/* 8099BE04 00000094  38 63 00 00 */	addi r3, r3, m__19daNpcClerkt_Param_c@l /* 8099D244 */
+/* 8099BDFC 0000008C  4B FF E2 BD */	bl _unresolved
+/* 8099BE00 00000090  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8099BE04 00000094  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8099BE08 00000098  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8099BE0C 0000009C  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
 /* 8099BE10 000000A0  C0 03 00 0C */	lfs f0, 0xc(r3)
@@ -87,7 +87,7 @@ lbl_8099BD70:
 /* 8099BE28 000000B8  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 8099BE2C 000000BC  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
 /* 8099BE30 000000C0  39 61 00 20 */	addi r11, r1, 0x20
-/* 8099BE34 000000C4  4B FF E2 85 */	bl _restgpr_29
+/* 8099BE34 000000C4  4B FF E2 85 */	bl _unresolved
 /* 8099BE38 000000C8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8099BE3C 000000CC  7C 08 03 A6 */	mtlr r0
 /* 8099BE40 000000D0  38 21 00 20 */	addi r1, r1, 0x20

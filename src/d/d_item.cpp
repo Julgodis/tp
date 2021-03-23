@@ -907,7 +907,7 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* ############################################################################################## */
-/* 803AF178-803AF578 0400+00 r=1 e=0 z=0  None .data      item_func_ptr                                                */
+/* 803AF178-803AF578 0400+00 s=1 e=0 z=0  None .data      item_func_ptr                                                */
 SECTION_DATA static void* item_func_ptr[256] = {
 	/* 0    */ (void*)item_func_HEART__Fv,
 	/* 1    */ (void*)item_func_GREEN_RUPEE__Fv,
@@ -1167,7 +1167,7 @@ SECTION_DATA static void* item_func_ptr[256] = {
 	/* 255  */ (void*)item_func_noentry__Fv,
 };
 
-/* 80097E8C-80097EE0 0054+00 r=11 e=4 z=7  None .text      execItemGet__FUc                                             */
+/* 80097E8C-80097EE0 0054+00 s=0 e=4 z=0  None .text      execItemGet__FUc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1179,7 +1179,7 @@ asm void execItemGet(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 803AF578-803AF978 0400+00 r=1 e=0 z=0  None .data      item_getcheck_func_ptr                                       */
+/* 803AF578-803AF978 0400+00 s=1 e=0 z=0  None .data      item_getcheck_func_ptr                                       */
 SECTION_DATA static void* item_getcheck_func_ptr[256] = {
 	/* 0    */ (void*)item_getcheck_func_HEART__Fv,
 	/* 1    */ (void*)item_getcheck_func_GREEN_RUPEE__Fv,
@@ -1439,7 +1439,7 @@ SECTION_DATA static void* item_getcheck_func_ptr[256] = {
 	/* 255  */ (void*)item_getcheck_func_noentry__Fv,
 };
 
-/* 80097EE0-80097F2C 004C+00 r=31 e=14 z=16  None .text      checkItemGet__FUci                                           */
+/* 80097EE0-80097F2C 004C+00 s=1 e=14 z=0  None .text      checkItemGet__FUci                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1451,10 +1451,10 @@ asm void checkItemGet(u8 param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80452BD8-80452BDC 0004+00 r=1 e=0 z=0  None .sdata2    @3655                                                        */
+/* 80452BD8-80452BDC 0004+00 s=1 e=0 z=0  None .sdata2    @3655                                                        */
 SECTION_SDATA2 static f32 d_d_item__lit_3655 = 4.0f;
 
-/* 80097F2C-80097F50 0024+00 r=1 e=0 z=0  None .text      item_func_HEART__Fv                                          */
+/* 80097F2C-80097F50 0024+00 s=1 e=0 z=0  None .text      item_func_HEART__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1465,7 +1465,7 @@ asm static void item_func_HEART() {
 #pragma pop
 
 
-/* 80097F50-80097F68 0018+00 r=1 e=0 z=0  None .text      item_func_GREEN_RUPEE__Fv                                    */
+/* 80097F50-80097F68 0018+00 s=1 e=0 z=0  None .text      item_func_GREEN_RUPEE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1476,7 +1476,7 @@ asm static void item_func_GREEN_RUPEE() {
 #pragma pop
 
 
-/* 80097F68-80097F80 0018+00 r=1 e=0 z=0  None .text      item_func_BLUE_RUPEE__Fv                                     */
+/* 80097F68-80097F80 0018+00 s=1 e=0 z=0  None .text      item_func_BLUE_RUPEE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1487,7 +1487,7 @@ asm static void item_func_BLUE_RUPEE() {
 #pragma pop
 
 
-/* 80097F80-80097F98 0018+00 r=1 e=0 z=0  None .text      item_func_YELLOW_RUPEE__Fv                                   */
+/* 80097F80-80097F98 0018+00 s=1 e=0 z=0  None .text      item_func_YELLOW_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1498,7 +1498,7 @@ asm static void item_func_YELLOW_RUPEE() {
 #pragma pop
 
 
-/* 80097F98-80097FB0 0018+00 r=1 e=0 z=0  None .text      item_func_RED_RUPEE__Fv                                      */
+/* 80097F98-80097FB0 0018+00 s=1 e=0 z=0  None .text      item_func_RED_RUPEE__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1509,7 +1509,7 @@ asm static void item_func_RED_RUPEE() {
 #pragma pop
 
 
-/* 80097FB0-80097FC8 0018+00 r=1 e=0 z=0  None .text      item_func_PURPLE_RUPEE__Fv                                   */
+/* 80097FB0-80097FC8 0018+00 s=1 e=0 z=0  None .text      item_func_PURPLE_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1520,7 +1520,7 @@ asm static void item_func_PURPLE_RUPEE() {
 #pragma pop
 
 
-/* 80097FC8-80097FE0 0018+00 r=1 e=0 z=0  None .text      item_func_ORANGE_RUPEE__Fv                                   */
+/* 80097FC8-80097FE0 0018+00 s=1 e=0 z=0  None .text      item_func_ORANGE_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1531,7 +1531,7 @@ asm static void item_func_ORANGE_RUPEE() {
 #pragma pop
 
 
-/* 80097FE0-80097FF8 0018+00 r=1 e=0 z=0  None .text      item_func_SILVER_RUPEE__Fv                                   */
+/* 80097FE0-80097FF8 0018+00 s=1 e=0 z=0  None .text      item_func_SILVER_RUPEE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1542,7 +1542,7 @@ asm static void item_func_SILVER_RUPEE() {
 #pragma pop
 
 
-/* 80097FF8-80098010 0018+00 r=1 e=0 z=0  None .text      item_func_S_MAGIC__Fv                                        */
+/* 80097FF8-80098010 0018+00 s=1 e=0 z=0  None .text      item_func_S_MAGIC__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1553,7 +1553,7 @@ asm static void item_func_S_MAGIC() {
 #pragma pop
 
 
-/* 80098010-80098028 0018+00 r=1 e=0 z=0  None .text      item_func_L_MAGIC__Fv                                        */
+/* 80098010-80098028 0018+00 s=1 e=0 z=0  None .text      item_func_L_MAGIC__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1564,7 +1564,7 @@ asm static void item_func_L_MAGIC() {
 #pragma pop
 
 
-/* 80098028-80098050 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_5__Fv                                         */
+/* 80098028-80098050 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_5__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1575,7 +1575,7 @@ asm static void item_func_BOMB_5() {
 #pragma pop
 
 
-/* 80098050-80098078 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_10__Fv                                        */
+/* 80098050-80098078 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_10__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1586,7 +1586,7 @@ asm static void item_func_BOMB_10() {
 #pragma pop
 
 
-/* 80098078-800980A0 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_20__Fv                                        */
+/* 80098078-800980A0 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_20__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1597,7 +1597,7 @@ asm static void item_func_BOMB_20() {
 #pragma pop
 
 
-/* 800980A0-800980C8 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_30__Fv                                        */
+/* 800980A0-800980C8 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_30__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1608,7 +1608,7 @@ asm static void item_func_BOMB_30() {
 #pragma pop
 
 
-/* 800980C8-800980E0 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_10__Fv                                       */
+/* 800980C8-800980E0 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_10__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1619,7 +1619,7 @@ asm static void item_func_ARROW_10() {
 #pragma pop
 
 
-/* 800980E0-800980F8 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_20__Fv                                       */
+/* 800980E0-800980F8 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_20__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1630,7 +1630,7 @@ asm static void item_func_ARROW_20() {
 #pragma pop
 
 
-/* 800980F8-80098110 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_30__Fv                                       */
+/* 800980F8-80098110 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_30__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1641,7 +1641,7 @@ asm static void item_func_ARROW_30() {
 #pragma pop
 
 
-/* 80098110-80098128 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_1__Fv                                        */
+/* 80098110-80098128 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_1__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1652,7 +1652,7 @@ asm static void item_func_ARROW_1() {
 #pragma pop
 
 
-/* 80098128-80098140 0018+00 r=1 e=0 z=0  None .text      item_func_PACHINKO_SHOT__Fv                                  */
+/* 80098128-80098140 0018+00 s=1 e=0 z=0  None .text      item_func_PACHINKO_SHOT__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1663,7 +1663,7 @@ asm static void item_func_PACHINKO_SHOT() {
 #pragma pop
 
 
-/* 80098140-80098168 0028+00 r=1 e=0 z=0  None .text      item_func_WATER_BOMB_5__Fv                                   */
+/* 80098140-80098168 0028+00 s=1 e=0 z=0  None .text      item_func_WATER_BOMB_5__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1674,7 +1674,7 @@ asm static void item_func_WATER_BOMB_5() {
 #pragma pop
 
 
-/* 80098168-80098190 0028+00 r=1 e=0 z=0  None .text      item_func_WATER_BOMB_10__Fv                                  */
+/* 80098168-80098190 0028+00 s=1 e=0 z=0  None .text      item_func_WATER_BOMB_10__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1685,7 +1685,7 @@ asm static void item_func_WATER_BOMB_10() {
 #pragma pop
 
 
-/* 80098190-800981B8 0028+00 r=1 e=0 z=0  None .text      item_func_WATER_BOMB_20__Fv                                  */
+/* 80098190-800981B8 0028+00 s=1 e=0 z=0  None .text      item_func_WATER_BOMB_20__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1696,7 +1696,7 @@ asm static void item_func_WATER_BOMB_20() {
 #pragma pop
 
 
-/* 800981B8-800981E0 0028+00 r=1 e=0 z=0  None .text      item_func_WATER_BOMB_30__Fv                                  */
+/* 800981B8-800981E0 0028+00 s=1 e=0 z=0  None .text      item_func_WATER_BOMB_30__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1707,7 +1707,7 @@ asm static void item_func_WATER_BOMB_30() {
 #pragma pop
 
 
-/* 800981E0-80098208 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_INSECT_5__Fv                                  */
+/* 800981E0-80098208 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_INSECT_5__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1718,7 +1718,7 @@ asm static void item_func_BOMB_INSECT_5() {
 #pragma pop
 
 
-/* 80098208-80098230 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_INSECT_10__Fv                                 */
+/* 80098208-80098230 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_INSECT_10__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1729,7 +1729,7 @@ asm static void item_func_BOMB_INSECT_10() {
 #pragma pop
 
 
-/* 80098230-80098258 0028+00 r=1 e=0 z=0  None .text      item_func_BOMB_INSECT_20__Fv                                 */
+/* 80098230-80098258 0028+00 s=1 e=0 z=0  None .text      item_func_BOMB_INSECT_20__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1740,7 +1740,7 @@ asm static void item_func_BOMB_INSECT_20() {
 #pragma pop
 
 
-/* 80098258-8009825C 0004+00 r=1 e=0 z=0  None .text      item_func_BOMB_INSECT_30__Fv                                 */
+/* 80098258-8009825C 0004+00 s=1 e=0 z=0  None .text      item_func_BOMB_INSECT_30__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1752,10 +1752,10 @@ asm static void item_func_BOMB_INSECT_30() {
 
 
 /* ############################################################################################## */
-/* 80452BDC-80452BE0 0004+00 r=1 e=0 z=0  None .sdata2    @3794                                                        */
+/* 80452BDC-80452BE0 0004+00 s=1 e=0 z=0  None .sdata2    @3794                                                        */
 SECTION_SDATA2 static f32 d_d_item__lit_3794 = 32.0f;
 
-/* 8009825C-80098280 0024+00 r=1 e=0 z=0  None .text      item_func_RECOVER_FAILY__Fv                                  */
+/* 8009825C-80098280 0024+00 s=1 e=0 z=0  None .text      item_func_RECOVER_FAILY__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1766,7 +1766,7 @@ asm static void item_func_RECOVER_FAILY() {
 #pragma pop
 
 
-/* 80098280-80098284 0004+00 r=1 e=0 z=0  None .text      item_func_TRIPLE_HEART__Fv                                   */
+/* 80098280-80098284 0004+00 s=1 e=0 z=0  None .text      item_func_TRIPLE_HEART__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1777,7 +1777,7 @@ asm static void item_func_TRIPLE_HEART() {
 #pragma pop
 
 
-/* 80098284-8009829C 0018+00 r=1 e=0 z=0  None .text      item_func_SMALL_KEY__Fv                                      */
+/* 80098284-8009829C 0018+00 s=1 e=0 z=0  None .text      item_func_SMALL_KEY__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1788,7 +1788,7 @@ asm static void item_func_SMALL_KEY() {
 #pragma pop
 
 
-/* 8009829C-800982B4 0018+00 r=1 e=0 z=0  None .text      item_func_KAKERA_HEART__Fv                                   */
+/* 8009829C-800982B4 0018+00 s=1 e=0 z=0  None .text      item_func_KAKERA_HEART__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1800,10 +1800,10 @@ asm static void item_func_KAKERA_HEART() {
 
 
 /* ############################################################################################## */
-/* 80452BE0-80452BE8 0008+00 r=1 e=0 z=0  None .sdata2    @3828                                                        */
+/* 80452BE0-80452BE8 0008+00 s=1 e=0 z=0  None .sdata2    @3828                                                        */
 SECTION_SDATA2 static f64 d_d_item__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 800982B4-80098344 0090+00 r=1 e=0 z=0  None .text      item_func_UTUWA_HEART__Fv                                    */
+/* 800982B4-80098344 0090+00 s=1 e=0 z=0  None .text      item_func_UTUWA_HEART__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1814,7 +1814,7 @@ asm static void item_func_UTUWA_HEART() {
 #pragma pop
 
 
-/* 80098344-80098374 0030+00 r=1 e=0 z=0  None .text      item_func_MAP__Fv                                            */
+/* 80098344-80098374 0030+00 s=1 e=0 z=0  None .text      item_func_MAP__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1825,7 +1825,7 @@ asm static void item_func_MAP() {
 #pragma pop
 
 
-/* 80098374-800983A4 0030+00 r=1 e=0 z=0  None .text      item_func_COMPUS__Fv                                         */
+/* 80098374-800983A4 0030+00 s=1 e=0 z=0  None .text      item_func_COMPUS__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1836,7 +1836,7 @@ asm static void item_func_COMPUS() {
 #pragma pop
 
 
-/* 800983A4-800983EC 0048+00 r=1 e=0 z=0  None .text      item_func_DUNGEON_EXIT__Fv                                   */
+/* 800983A4-800983EC 0048+00 s=1 e=0 z=0  None .text      item_func_DUNGEON_EXIT__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1847,7 +1847,7 @@ asm static void item_func_DUNGEON_EXIT() {
 #pragma pop
 
 
-/* 800983EC-8009841C 0030+00 r=1 e=0 z=0  None .text      item_func_BOSS_KEY__Fv                                       */
+/* 800983EC-8009841C 0030+00 s=1 e=0 z=0  None .text      item_func_BOSS_KEY__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1858,7 +1858,7 @@ asm static void item_func_BOSS_KEY() {
 #pragma pop
 
 
-/* 8009841C-80098450 0034+00 r=1 e=0 z=0  None .text      item_func_DUNGEON_BACK__Fv                                   */
+/* 8009841C-80098450 0034+00 s=1 e=0 z=0  None .text      item_func_DUNGEON_BACK__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1869,7 +1869,7 @@ asm static void item_func_DUNGEON_BACK() {
 #pragma pop
 
 
-/* 80098450-8009848C 003C+00 r=1 e=0 z=0  None .text      item_func_SWORD__Fv                                          */
+/* 80098450-8009848C 003C+00 s=1 e=0 z=0  None .text      item_func_SWORD__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1880,7 +1880,7 @@ asm static void item_func_SWORD() {
 #pragma pop
 
 
-/* 8009848C-800984C8 003C+00 r=1 e=0 z=0  None .text      item_func_MASTER_SWORD__Fv                                   */
+/* 8009848C-800984C8 003C+00 s=1 e=0 z=0  None .text      item_func_MASTER_SWORD__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1891,7 +1891,7 @@ asm static void item_func_MASTER_SWORD() {
 #pragma pop
 
 
-/* 800984C8-80098504 003C+00 r=1 e=0 z=0  None .text      item_func_WOOD_SHIELD__Fv                                    */
+/* 800984C8-80098504 003C+00 s=1 e=0 z=0  None .text      item_func_WOOD_SHIELD__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1902,7 +1902,7 @@ asm static void item_func_WOOD_SHIELD() {
 #pragma pop
 
 
-/* 80098504-80098508 0004+00 r=1 e=0 z=0  None .text      item_func_SHIELD__Fv                                         */
+/* 80098504-80098508 0004+00 s=1 e=0 z=0  None .text      item_func_SHIELD__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1913,7 +1913,7 @@ asm static void item_func_SHIELD() {
 #pragma pop
 
 
-/* 80098508-8009850C 0004+00 r=1 e=0 z=0  None .text      item_func_HYLIA_SHIELD__Fv                                   */
+/* 80098508-8009850C 0004+00 s=1 e=0 z=0  None .text      item_func_HYLIA_SHIELD__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1924,7 +1924,7 @@ asm static void item_func_HYLIA_SHIELD() {
 #pragma pop
 
 
-/* 8009850C-80098540 0034+00 r=1 e=0 z=0  None .text      item_func_TKS_LETTER__Fv                                     */
+/* 8009850C-80098540 0034+00 s=1 e=0 z=0  None .text      item_func_TKS_LETTER__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1935,7 +1935,7 @@ asm static void item_func_TKS_LETTER() {
 #pragma pop
 
 
-/* 80098540-80098564 0024+00 r=1 e=0 z=0  None .text      item_func_WEAR_CASUAL__Fv                                    */
+/* 80098540-80098564 0024+00 s=1 e=0 z=0  None .text      item_func_WEAR_CASUAL__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1946,7 +1946,7 @@ asm static void item_func_WEAR_CASUAL() {
 #pragma pop
 
 
-/* 80098564-800985A0 003C+00 r=1 e=0 z=0  None .text      item_func_WEAR_KOKIRI__Fv                                    */
+/* 80098564-800985A0 003C+00 s=1 e=0 z=0  None .text      item_func_WEAR_KOKIRI__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1957,7 +1957,7 @@ asm static void item_func_WEAR_KOKIRI() {
 #pragma pop
 
 
-/* 800985A0-800985A4 0004+00 r=1 e=0 z=0  None .text      item_func_ARMOR__Fv                                          */
+/* 800985A0-800985A4 0004+00 s=1 e=0 z=0  None .text      item_func_ARMOR__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1968,7 +1968,7 @@ asm static void item_func_ARMOR() {
 #pragma pop
 
 
-/* 800985A4-800985A8 0004+00 r=1 e=0 z=0  None .text      item_func_WEAR_ZORA__Fv                                      */
+/* 800985A4-800985A8 0004+00 s=1 e=0 z=0  None .text      item_func_WEAR_ZORA__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1979,7 +1979,7 @@ asm static void item_func_WEAR_ZORA() {
 #pragma pop
 
 
-/* 800985A8-800985CC 0024+00 r=1 e=0 z=0  None .text      item_func_MAGIC_LV1__Fv                                      */
+/* 800985A8-800985CC 0024+00 s=1 e=0 z=0  None .text      item_func_MAGIC_LV1__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1990,7 +1990,7 @@ asm static void item_func_MAGIC_LV1() {
 #pragma pop
 
 
-/* 800985CC-80098600 0034+00 r=1 e=0 z=0  None .text      item_func_DUNGEON_EXIT_2__Fv                                 */
+/* 800985CC-80098600 0034+00 s=1 e=0 z=0  None .text      item_func_DUNGEON_EXIT_2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2001,7 +2001,7 @@ asm static void item_func_DUNGEON_EXIT_2() {
 #pragma pop
 
 
-/* 80098600-80098614 0014+00 r=1 e=0 z=0  None .text      item_func_WALLET_LV1__Fv                                     */
+/* 80098600-80098614 0014+00 s=1 e=0 z=0  None .text      item_func_WALLET_LV1__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2012,7 +2012,7 @@ asm static void item_func_WALLET_LV1() {
 #pragma pop
 
 
-/* 80098614-80098628 0014+00 r=1 e=0 z=0  None .text      item_func_WALLET_LV2__Fv                                     */
+/* 80098614-80098628 0014+00 s=1 e=0 z=0  None .text      item_func_WALLET_LV2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2023,7 +2023,7 @@ asm static void item_func_WALLET_LV2() {
 #pragma pop
 
 
-/* 80098628-8009863C 0014+00 r=1 e=0 z=0  None .text      item_func_WALLET_LV3__Fv                                     */
+/* 80098628-8009863C 0014+00 s=1 e=0 z=0  None .text      item_func_WALLET_LV3__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2034,7 +2034,7 @@ asm static void item_func_WALLET_LV3() {
 #pragma pop
 
 
-/* 8009863C-80098690 0054+00 r=1 e=0 z=0  None .text      item_func_ZORAS_JEWEL__Fv                                    */
+/* 8009863C-80098690 0054+00 s=1 e=0 z=0  None .text      item_func_ZORAS_JEWEL__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2045,7 +2045,7 @@ asm static void item_func_ZORAS_JEWEL() {
 #pragma pop
 
 
-/* 80098690-800986C4 0034+00 r=1 e=0 z=0  None .text      item_func_HAWK_EYE__Fv                                       */
+/* 80098690-800986C4 0034+00 s=1 e=0 z=0  None .text      item_func_HAWK_EYE__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2056,7 +2056,7 @@ asm static void item_func_HAWK_EYE() {
 #pragma pop
 
 
-/* 800986C4-80098718 0054+00 r=1 e=0 z=0  None .text      item_func_WOOD_STICK__Fv                                     */
+/* 800986C4-80098718 0054+00 s=1 e=0 z=0  None .text      item_func_WOOD_STICK__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2067,7 +2067,7 @@ asm static void item_func_WOOD_STICK() {
 #pragma pop
 
 
-/* 80098718-8009874C 0034+00 r=1 e=0 z=0  None .text      item_func_BOOMERANG__Fv                                      */
+/* 80098718-8009874C 0034+00 s=1 e=0 z=0  None .text      item_func_BOOMERANG__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2078,7 +2078,7 @@ asm static void item_func_BOOMERANG() {
 #pragma pop
 
 
-/* 8009874C-80098780 0034+00 r=1 e=0 z=0  None .text      item_func_SPINNER__Fv                                        */
+/* 8009874C-80098780 0034+00 s=1 e=0 z=0  None .text      item_func_SPINNER__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2089,7 +2089,7 @@ asm static void item_func_SPINNER() {
 #pragma pop
 
 
-/* 80098780-800987B4 0034+00 r=1 e=0 z=0  None .text      item_func_IRONBALL__Fv                                       */
+/* 80098780-800987B4 0034+00 s=1 e=0 z=0  None .text      item_func_IRONBALL__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2100,7 +2100,7 @@ asm static void item_func_IRONBALL() {
 #pragma pop
 
 
-/* 800987B4-800987FC 0048+00 r=1 e=0 z=0  None .text      item_func_BOW__Fv                                            */
+/* 800987B4-800987FC 0048+00 s=1 e=0 z=0  None .text      item_func_BOW__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2111,7 +2111,7 @@ asm static void item_func_BOW() {
 #pragma pop
 
 
-/* 800987FC-80098830 0034+00 r=1 e=0 z=0  None .text      item_func_HOOKSHOT__Fv                                       */
+/* 800987FC-80098830 0034+00 s=1 e=0 z=0  None .text      item_func_HOOKSHOT__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2122,7 +2122,7 @@ asm static void item_func_HOOKSHOT() {
 #pragma pop
 
 
-/* 80098830-80098864 0034+00 r=1 e=0 z=0  None .text      item_func_HVY_BOOTS__Fv                                      */
+/* 80098830-80098864 0034+00 s=1 e=0 z=0  None .text      item_func_HVY_BOOTS__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2133,7 +2133,7 @@ asm static void item_func_HVY_BOOTS() {
 #pragma pop
 
 
-/* 80098864-80098898 0034+00 r=1 e=0 z=0  None .text      item_func_COPY_ROD__Fv                                       */
+/* 80098864-80098898 0034+00 s=1 e=0 z=0  None .text      item_func_COPY_ROD__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2144,7 +2144,7 @@ asm static void item_func_COPY_ROD() {
 #pragma pop
 
 
-/* 80098898-800988E8 0050+00 r=1 e=0 z=0  None .text      item_func_W_HOOKSHOT__Fv                                     */
+/* 80098898-800988E8 0050+00 s=1 e=0 z=0  None .text      item_func_W_HOOKSHOT__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2155,7 +2155,7 @@ asm static void item_func_W_HOOKSHOT() {
 #pragma pop
 
 
-/* 800988E8-80098928 0040+00 r=1 e=0 z=0  None .text      item_func_KANTERA__Fv                                        */
+/* 800988E8-80098928 0040+00 s=1 e=0 z=0  None .text      item_func_KANTERA__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2166,7 +2166,7 @@ asm static void item_func_KANTERA() {
 #pragma pop
 
 
-/* 80098928-80098968 0040+00 r=1 e=0 z=0  None .text      item_func_LIGHT_SWORD__Fv                                    */
+/* 80098928-80098968 0040+00 s=1 e=0 z=0  None .text      item_func_LIGHT_SWORD__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2177,7 +2177,7 @@ asm static void item_func_LIGHT_SWORD() {
 #pragma pop
 
 
-/* 80098968-8009899C 0034+00 r=1 e=0 z=0  None .text      item_func_FISHING_ROD_1__Fv                                  */
+/* 80098968-8009899C 0034+00 s=1 e=0 z=0  None .text      item_func_FISHING_ROD_1__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2188,7 +2188,7 @@ asm static void item_func_FISHING_ROD_1() {
 #pragma pop
 
 
-/* 8009899C-800989DC 0040+00 r=1 e=0 z=0  None .text      item_func_PACHINKO__Fv                                       */
+/* 8009899C-800989DC 0040+00 s=1 e=0 z=0  None .text      item_func_PACHINKO__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2199,7 +2199,7 @@ asm static void item_func_PACHINKO() {
 #pragma pop
 
 
-/* 800989DC-80098A10 0034+00 r=1 e=0 z=0  None .text      item_func_COPY_ROD_2__Fv                                     */
+/* 800989DC-80098A10 0034+00 s=1 e=0 z=0  None .text      item_func_COPY_ROD_2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2210,7 +2210,7 @@ asm static void item_func_COPY_ROD_2() {
 #pragma pop
 
 
-/* 80098A10-80098A14 0004+00 r=1 e=0 z=0  None .text      item_func_BOMB_BAG_LV2__Fv                                   */
+/* 80098A10-80098A14 0004+00 s=1 e=0 z=0  None .text      item_func_BOMB_BAG_LV2__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2221,7 +2221,7 @@ asm static void item_func_BOMB_BAG_LV2() {
 #pragma pop
 
 
-/* 80098A14-80098A48 0034+00 r=1 e=0 z=0  None .text      item_func_BOMB_BAG_LV1__Fv                                   */
+/* 80098A14-80098A48 0034+00 s=1 e=0 z=0  None .text      item_func_BOMB_BAG_LV1__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2232,7 +2232,7 @@ asm static void item_func_BOMB_BAG_LV1() {
 #pragma pop
 
 
-/* 80098A48-80098A7C 0034+00 r=1 e=0 z=0  None .text      item_func_BOMB_IN_BAG__Fv                                    */
+/* 80098A48-80098A7C 0034+00 s=1 e=0 z=0  None .text      item_func_BOMB_IN_BAG__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2243,7 +2243,7 @@ asm static void item_func_BOMB_IN_BAG() {
 #pragma pop
 
 
-/* 80098A7C-80098AB0 0034+00 r=1 e=0 z=0  None .text      item_func_LIGHT_ARROW__Fv                                    */
+/* 80098A7C-80098AB0 0034+00 s=1 e=0 z=0  None .text      item_func_LIGHT_ARROW__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2254,7 +2254,7 @@ asm static void item_func_LIGHT_ARROW() {
 #pragma pop
 
 
-/* 80098AB0-80098AC8 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_LV1__Fv                                      */
+/* 80098AB0-80098AC8 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_LV1__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2265,7 +2265,7 @@ asm static void item_func_ARROW_LV1() {
 #pragma pop
 
 
-/* 80098AC8-80098AE0 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_LV2__Fv                                      */
+/* 80098AC8-80098AE0 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_LV2__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2276,7 +2276,7 @@ asm static void item_func_ARROW_LV2() {
 #pragma pop
 
 
-/* 80098AE0-80098AF8 0018+00 r=1 e=0 z=0  None .text      item_func_ARROW_LV3__Fv                                      */
+/* 80098AE0-80098AF8 0018+00 s=1 e=0 z=0  None .text      item_func_ARROW_LV3__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2287,7 +2287,7 @@ asm static void item_func_ARROW_LV3() {
 #pragma pop
 
 
-/* 80098AF8-80098AFC 0004+00 r=1 e=0 z=0  None .text      item_func_LURE_ROD__Fv                                       */
+/* 80098AF8-80098AFC 0004+00 s=1 e=0 z=0  None .text      item_func_LURE_ROD__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2298,7 +2298,7 @@ asm static void item_func_LURE_ROD() {
 #pragma pop
 
 
-/* 80098AFC-80098B00 0004+00 r=1 e=0 z=0  None .text      item_func_BOMB_ARROW__Fv                                     */
+/* 80098AFC-80098B00 0004+00 s=1 e=0 z=0  None .text      item_func_BOMB_ARROW__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2309,7 +2309,7 @@ asm static void item_func_BOMB_ARROW() {
 #pragma pop
 
 
-/* 80098B00-80098B04 0004+00 r=1 e=0 z=0  None .text      item_func_HAWK_ARROW__Fv                                     */
+/* 80098B00-80098B04 0004+00 s=1 e=0 z=0  None .text      item_func_HAWK_ARROW__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2320,7 +2320,7 @@ asm static void item_func_HAWK_ARROW() {
 #pragma pop
 
 
-/* 80098B04-80098B08 0004+00 r=1 e=0 z=0  None .text      item_func_BEE_ROD__Fv                                        */
+/* 80098B04-80098B08 0004+00 s=1 e=0 z=0  None .text      item_func_BEE_ROD__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2331,7 +2331,7 @@ asm static void item_func_BEE_ROD() {
 #pragma pop
 
 
-/* 80098B08-80098B0C 0004+00 r=1 e=0 z=0  None .text      item_func_JEWEL_ROD__Fv                                      */
+/* 80098B08-80098B0C 0004+00 s=1 e=0 z=0  None .text      item_func_JEWEL_ROD__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2342,7 +2342,7 @@ asm static void item_func_JEWEL_ROD() {
 #pragma pop
 
 
-/* 80098B0C-80098B10 0004+00 r=1 e=0 z=0  None .text      item_func_WORM_ROD__Fv                                       */
+/* 80098B0C-80098B10 0004+00 s=1 e=0 z=0  None .text      item_func_WORM_ROD__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2353,7 +2353,7 @@ asm static void item_func_WORM_ROD() {
 #pragma pop
 
 
-/* 80098B10-80098B14 0004+00 r=1 e=0 z=0  None .text      item_func_JEWEL_BEE_ROD__Fv                                  */
+/* 80098B10-80098B14 0004+00 s=1 e=0 z=0  None .text      item_func_JEWEL_BEE_ROD__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2364,7 +2364,7 @@ asm static void item_func_JEWEL_BEE_ROD() {
 #pragma pop
 
 
-/* 80098B14-80098B18 0004+00 r=1 e=0 z=0  None .text      item_func_JEWEL_WORM_ROD__Fv                                 */
+/* 80098B14-80098B18 0004+00 s=1 e=0 z=0  None .text      item_func_JEWEL_WORM_ROD__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2375,7 +2375,7 @@ asm static void item_func_JEWEL_WORM_ROD() {
 #pragma pop
 
 
-/* 80098B18-80098B44 002C+00 r=1 e=0 z=0  None .text      item_func_EMPTY_BOTTLE__Fv                                   */
+/* 80098B18-80098B44 002C+00 s=1 e=0 z=0  None .text      item_func_EMPTY_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2386,7 +2386,7 @@ asm static void item_func_EMPTY_BOTTLE() {
 #pragma pop
 
 
-/* 80098B44-80098B74 0030+00 r=1 e=0 z=0  None .text      item_func_RED_BOTTLE__Fv                                     */
+/* 80098B44-80098B74 0030+00 s=1 e=0 z=0  None .text      item_func_RED_BOTTLE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2397,7 +2397,7 @@ asm static void item_func_RED_BOTTLE() {
 #pragma pop
 
 
-/* 80098B74-80098BA4 0030+00 r=1 e=0 z=0  None .text      item_func_GREEN_BOTTLE__Fv                                   */
+/* 80098B74-80098BA4 0030+00 s=1 e=0 z=0  None .text      item_func_GREEN_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2408,7 +2408,7 @@ asm static void item_func_GREEN_BOTTLE() {
 #pragma pop
 
 
-/* 80098BA4-80098BD4 0030+00 r=1 e=0 z=0  None .text      item_func_BLUE_BOTTLE__Fv                                    */
+/* 80098BA4-80098BD4 0030+00 s=1 e=0 z=0  None .text      item_func_BLUE_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2419,7 +2419,7 @@ asm static void item_func_BLUE_BOTTLE() {
 #pragma pop
 
 
-/* 80098BD4-80098C04 0030+00 r=1 e=0 z=0  None .text      item_func_MILK_BOTTLE__Fv                                    */
+/* 80098BD4-80098C04 0030+00 s=1 e=0 z=0  None .text      item_func_MILK_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2430,7 +2430,7 @@ asm static void item_func_MILK_BOTTLE() {
 #pragma pop
 
 
-/* 80098C04-80098C34 0030+00 r=1 e=0 z=0  None .text      item_func_HALF_MILK_BOTTLE__Fv                               */
+/* 80098C04-80098C34 0030+00 s=1 e=0 z=0  None .text      item_func_HALF_MILK_BOTTLE__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2441,7 +2441,7 @@ asm static void item_func_HALF_MILK_BOTTLE() {
 #pragma pop
 
 
-/* 80098C34-80098C64 0030+00 r=1 e=0 z=0  None .text      item_func_OIL_BOTTLE__Fv                                     */
+/* 80098C34-80098C64 0030+00 s=1 e=0 z=0  None .text      item_func_OIL_BOTTLE__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2452,7 +2452,7 @@ asm static void item_func_OIL_BOTTLE() {
 #pragma pop
 
 
-/* 80098C64-80098C94 0030+00 r=1 e=0 z=0  None .text      item_func_WATER_BOTTLE__Fv                                   */
+/* 80098C64-80098C94 0030+00 s=1 e=0 z=0  None .text      item_func_WATER_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2463,7 +2463,7 @@ asm static void item_func_WATER_BOTTLE() {
 #pragma pop
 
 
-/* 80098C94-80098CC4 0030+00 r=1 e=0 z=0  None .text      item_func_OIL_BOTTLE2__Fv                                    */
+/* 80098C94-80098CC4 0030+00 s=1 e=0 z=0  None .text      item_func_OIL_BOTTLE2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2474,7 +2474,7 @@ asm static void item_func_OIL_BOTTLE2() {
 #pragma pop
 
 
-/* 80098CC4-80098CF4 0030+00 r=1 e=0 z=0  None .text      item_func_RED_BOTTLE2__Fv                                    */
+/* 80098CC4-80098CF4 0030+00 s=1 e=0 z=0  None .text      item_func_RED_BOTTLE2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2485,7 +2485,7 @@ asm static void item_func_RED_BOTTLE2() {
 #pragma pop
 
 
-/* 80098CF4-80098D24 0030+00 r=1 e=0 z=0  None .text      item_func_UGLY_SOUP__Fv                                      */
+/* 80098CF4-80098D24 0030+00 s=1 e=0 z=0  None .text      item_func_UGLY_SOUP__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2496,7 +2496,7 @@ asm static void item_func_UGLY_SOUP() {
 #pragma pop
 
 
-/* 80098D24-80098D54 0030+00 r=1 e=0 z=0  None .text      item_func_HOT_SPRING__Fv                                     */
+/* 80098D24-80098D54 0030+00 s=1 e=0 z=0  None .text      item_func_HOT_SPRING__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2507,7 +2507,7 @@ asm static void item_func_HOT_SPRING() {
 #pragma pop
 
 
-/* 80098D54-80098D84 0030+00 r=1 e=0 z=0  None .text      item_func_FAIRY_BOTTLE__Fv                                   */
+/* 80098D54-80098D84 0030+00 s=1 e=0 z=0  None .text      item_func_FAIRY_BOTTLE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2518,7 +2518,7 @@ asm static void item_func_FAIRY_BOTTLE() {
 #pragma pop
 
 
-/* 80098D84-80098DB4 0030+00 r=1 e=0 z=0  None .text      item_func_HOT_SPRING2__Fv                                    */
+/* 80098D84-80098DB4 0030+00 s=1 e=0 z=0  None .text      item_func_HOT_SPRING2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2529,7 +2529,7 @@ asm static void item_func_HOT_SPRING2() {
 #pragma pop
 
 
-/* 80098DB4-80098DB8 0004+00 r=1 e=0 z=0  None .text      item_func_OIL2__Fv                                           */
+/* 80098DB4-80098DB8 0004+00 s=1 e=0 z=0  None .text      item_func_OIL2__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2540,7 +2540,7 @@ asm static void item_func_OIL2() {
 #pragma pop
 
 
-/* 80098DB8-80098DBC 0004+00 r=1 e=0 z=0  None .text      item_func_OIL__Fv                                            */
+/* 80098DB8-80098DBC 0004+00 s=1 e=0 z=0  None .text      item_func_OIL__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2551,7 +2551,7 @@ asm static void item_func_OIL() {
 #pragma pop
 
 
-/* 80098DBC-80098DF0 0034+00 r=1 e=0 z=0  None .text      item_func_NORMAL_BOMB__Fv                                    */
+/* 80098DBC-80098DF0 0034+00 s=1 e=0 z=0  None .text      item_func_NORMAL_BOMB__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2562,7 +2562,7 @@ asm static void item_func_NORMAL_BOMB() {
 #pragma pop
 
 
-/* 80098DF0-80098E38 0048+00 r=1 e=0 z=0  None .text      item_func_WATER_BOMB__Fv                                     */
+/* 80098DF0-80098E38 0048+00 s=1 e=0 z=0  None .text      item_func_WATER_BOMB__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2573,7 +2573,7 @@ asm static void item_func_WATER_BOMB() {
 #pragma pop
 
 
-/* 80098E38-80098E80 0048+00 r=1 e=0 z=0  None .text      item_func_POKE_BOMB__Fv                                      */
+/* 80098E38-80098E80 0048+00 s=1 e=0 z=0  None .text      item_func_POKE_BOMB__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2584,7 +2584,7 @@ asm static void item_func_POKE_BOMB() {
 #pragma pop
 
 
-/* 80098E80-80098EB0 0030+00 r=1 e=0 z=0  None .text      item_func_FAIRY_DROP__Fv                                     */
+/* 80098E80-80098EB0 0030+00 s=1 e=0 z=0  None .text      item_func_FAIRY_DROP__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2595,7 +2595,7 @@ asm static void item_func_FAIRY_DROP() {
 #pragma pop
 
 
-/* 80098EB0-80098EB4 0004+00 r=1 e=0 z=0  None .text      item_func_WORM__Fv                                           */
+/* 80098EB0-80098EB4 0004+00 s=1 e=0 z=0  None .text      item_func_WORM__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2606,7 +2606,7 @@ asm static void item_func_WORM() {
 #pragma pop
 
 
-/* 80098EB4-80098EE4 0030+00 r=1 e=0 z=0  None .text      item_func_DROP_BOTTLE__Fv                                    */
+/* 80098EB4-80098EE4 0030+00 s=1 e=0 z=0  None .text      item_func_DROP_BOTTLE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2617,7 +2617,7 @@ asm static void item_func_DROP_BOTTLE() {
 #pragma pop
 
 
-/* 80098EE4-80098F80 009C+00 r=2 e=0 z=0  None .text      item_func_BEE_CHILD__Fv                                      */
+/* 80098EE4-80098F80 009C+00 s=2 e=0 z=0  None .text      item_func_BEE_CHILD__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2628,7 +2628,7 @@ asm static void item_func_BEE_CHILD() {
 #pragma pop
 
 
-/* 80098F80-80098FB0 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_RARE__Fv                                    */
+/* 80098F80-80098FB0 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_RARE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2639,7 +2639,7 @@ asm static void item_func_CHUCHU_RARE() {
 #pragma pop
 
 
-/* 80098FB0-80098FE0 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_RED__Fv                                     */
+/* 80098FB0-80098FE0 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_RED__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2650,7 +2650,7 @@ asm static void item_func_CHUCHU_RED() {
 #pragma pop
 
 
-/* 80098FE0-80099010 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_BLUE__Fv                                    */
+/* 80098FE0-80099010 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_BLUE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2661,7 +2661,7 @@ asm static void item_func_CHUCHU_BLUE() {
 #pragma pop
 
 
-/* 80099010-80099040 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_GREEN__Fv                                   */
+/* 80099010-80099040 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_GREEN__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2672,7 +2672,7 @@ asm static void item_func_CHUCHU_GREEN() {
 #pragma pop
 
 
-/* 80099040-80099070 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_YELLOW__Fv                                  */
+/* 80099040-80099070 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_YELLOW__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2683,7 +2683,7 @@ asm static void item_func_CHUCHU_YELLOW() {
 #pragma pop
 
 
-/* 80099070-800990A0 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_PURPLE__Fv                                  */
+/* 80099070-800990A0 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_PURPLE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2694,7 +2694,7 @@ asm static void item_func_CHUCHU_PURPLE() {
 #pragma pop
 
 
-/* 800990A0-800990D0 0030+00 r=1 e=0 z=0  None .text      item_func_LV1_SOUP__Fv                                       */
+/* 800990A0-800990D0 0030+00 s=1 e=0 z=0  None .text      item_func_LV1_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2705,7 +2705,7 @@ asm static void item_func_LV1_SOUP() {
 #pragma pop
 
 
-/* 800990D0-80099100 0030+00 r=1 e=0 z=0  None .text      item_func_LV2_SOUP__Fv                                       */
+/* 800990D0-80099100 0030+00 s=1 e=0 z=0  None .text      item_func_LV2_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2716,7 +2716,7 @@ asm static void item_func_LV2_SOUP() {
 #pragma pop
 
 
-/* 80099100-80099130 0030+00 r=1 e=0 z=0  None .text      item_func_LV3_SOUP__Fv                                       */
+/* 80099100-80099130 0030+00 s=1 e=0 z=0  None .text      item_func_LV3_SOUP__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2727,7 +2727,7 @@ asm static void item_func_LV3_SOUP() {
 #pragma pop
 
 
-/* 80099130-80099164 0034+00 r=1 e=0 z=0  None .text      item_func_LETTER__Fv                                         */
+/* 80099130-80099164 0034+00 s=1 e=0 z=0  None .text      item_func_LETTER__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2738,7 +2738,7 @@ asm static void item_func_LETTER() {
 #pragma pop
 
 
-/* 80099164-80099198 0034+00 r=1 e=0 z=0  None .text      item_func_BILL__Fv                                           */
+/* 80099164-80099198 0034+00 s=1 e=0 z=0  None .text      item_func_BILL__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2749,7 +2749,7 @@ asm static void item_func_BILL() {
 #pragma pop
 
 
-/* 80099198-800991E8 0050+00 r=1 e=0 z=0  None .text      item_func_WOOD_STATUE__Fv                                    */
+/* 80099198-800991E8 0050+00 s=1 e=0 z=0  None .text      item_func_WOOD_STATUE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2760,7 +2760,7 @@ asm static void item_func_WOOD_STATUE() {
 #pragma pop
 
 
-/* 800991E8-8009921C 0034+00 r=1 e=0 z=0  None .text      item_func_IRIAS_PENDANT__Fv                                  */
+/* 800991E8-8009921C 0034+00 s=1 e=0 z=0  None .text      item_func_IRIAS_PENDANT__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2771,7 +2771,7 @@ asm static void item_func_IRIAS_PENDANT() {
 #pragma pop
 
 
-/* 8009921C-80099250 0034+00 r=1 e=0 z=0  None .text      item_func_HORSE_FLUTE__Fv                                    */
+/* 8009921C-80099250 0034+00 s=1 e=0 z=0  None .text      item_func_HORSE_FLUTE__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2782,7 +2782,7 @@ asm static void item_func_HORSE_FLUTE() {
 #pragma pop
 
 
-/* 80099250-80099284 0034+00 r=1 e=0 z=0  None .text      item_func_RAFRELS_MEMO__Fv                                   */
+/* 80099250-80099284 0034+00 s=1 e=0 z=0  None .text      item_func_RAFRELS_MEMO__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2793,7 +2793,7 @@ asm static void item_func_RAFRELS_MEMO() {
 #pragma pop
 
 
-/* 80099284-800992B8 0034+00 r=1 e=0 z=0  None .text      item_func_ASHS_SCRIBBLING__Fv                                */
+/* 80099284-800992B8 0034+00 s=1 e=0 z=0  None .text      item_func_ASHS_SCRIBBLING__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2804,7 +2804,7 @@ asm static void item_func_ASHS_SCRIBBLING() {
 #pragma pop
 
 
-/* 800992B8-800992E8 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_YELLOW2__Fv                                 */
+/* 800992B8-800992E8 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_YELLOW2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2815,7 +2815,7 @@ asm static void item_func_CHUCHU_YELLOW2() {
 #pragma pop
 
 
-/* 800992E8-80099318 0030+00 r=1 e=0 z=0  None .text      item_func_OIL_BOTTLE3__Fv                                    */
+/* 800992E8-80099318 0030+00 s=1 e=0 z=0  None .text      item_func_OIL_BOTTLE3__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2826,7 +2826,7 @@ asm static void item_func_OIL_BOTTLE3() {
 #pragma pop
 
 
-/* 80099318-80099338 0020+00 r=1 e=0 z=0  None .text      item_func_SHOP_BEE_CHILD__Fv                                 */
+/* 80099318-80099338 0020+00 s=1 e=0 z=0  None .text      item_func_SHOP_BEE_CHILD__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2837,7 +2837,7 @@ asm static void item_func_SHOP_BEE_CHILD() {
 #pragma pop
 
 
-/* 80099338-80099368 0030+00 r=1 e=0 z=0  None .text      item_func_CHUCHU_BLACK__Fv                                   */
+/* 80099338-80099368 0030+00 s=1 e=0 z=0  None .text      item_func_CHUCHU_BLACK__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2848,7 +2848,7 @@ asm static void item_func_CHUCHU_BLACK() {
 #pragma pop
 
 
-/* 80099368-8009936C 0004+00 r=1 e=0 z=0  None .text      item_func_LIGHT_DROP__Fv                                     */
+/* 80099368-8009936C 0004+00 s=1 e=0 z=0  None .text      item_func_LIGHT_DROP__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2859,7 +2859,7 @@ asm static void item_func_LIGHT_DROP() {
 #pragma pop
 
 
-/* 8009936C-8009939C 0030+00 r=1 e=0 z=0  None .text      item_func_DROP_CONTAINER__Fv                                 */
+/* 8009936C-8009939C 0030+00 s=1 e=0 z=0  None .text      item_func_DROP_CONTAINER__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2870,7 +2870,7 @@ asm static void item_func_DROP_CONTAINER() {
 #pragma pop
 
 
-/* 8009939C-800993CC 0030+00 r=1 e=0 z=0  None .text      item_func_DROP_CONTAINER02__Fv                               */
+/* 8009939C-800993CC 0030+00 s=1 e=0 z=0  None .text      item_func_DROP_CONTAINER02__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2881,7 +2881,7 @@ asm static void item_func_DROP_CONTAINER02() {
 #pragma pop
 
 
-/* 800993CC-800993FC 0030+00 r=1 e=0 z=0  None .text      item_func_DROP_CONTAINER03__Fv                               */
+/* 800993CC-800993FC 0030+00 s=1 e=0 z=0  None .text      item_func_DROP_CONTAINER03__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2892,7 +2892,7 @@ asm static void item_func_DROP_CONTAINER03() {
 #pragma pop
 
 
-/* 800993FC-80099400 0004+00 r=1 e=0 z=0  None .text      item_func_FILLED_CONTAINER__Fv                               */
+/* 800993FC-80099400 0004+00 s=1 e=0 z=0  None .text      item_func_FILLED_CONTAINER__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2903,7 +2903,7 @@ asm static void item_func_FILLED_CONTAINER() {
 #pragma pop
 
 
-/* 80099400-80099404 0004+00 r=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_2__Fv                                 */
+/* 80099400-80099404 0004+00 s=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2914,7 +2914,7 @@ asm static void item_func_MIRROR_PIECE_2() {
 #pragma pop
 
 
-/* 80099404-80099408 0004+00 r=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_3__Fv                                 */
+/* 80099404-80099408 0004+00 s=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_3__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2925,7 +2925,7 @@ asm static void item_func_MIRROR_PIECE_3() {
 #pragma pop
 
 
-/* 80099408-8009940C 0004+00 r=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_4__Fv                                 */
+/* 80099408-8009940C 0004+00 s=1 e=0 z=0  None .text      item_func_MIRROR_PIECE_4__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2936,7 +2936,7 @@ asm static void item_func_MIRROR_PIECE_4() {
 #pragma pop
 
 
-/* 8009940C-80099410 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_YELIA_POUCH__Fv                              */
+/* 8009940C-80099410 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_YELIA_POUCH__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2947,7 +2947,7 @@ asm static void item_func_SMELL_YELIA_POUCH() {
 #pragma pop
 
 
-/* 80099410-80099414 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_PUMPKIN__Fv                                  */
+/* 80099410-80099414 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_PUMPKIN__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2958,7 +2958,7 @@ asm static void item_func_SMELL_PUMPKIN() {
 #pragma pop
 
 
-/* 80099414-80099418 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_POH__Fv                                      */
+/* 80099414-80099418 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_POH__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2969,7 +2969,7 @@ asm static void item_func_SMELL_POH() {
 #pragma pop
 
 
-/* 80099418-8009941C 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_FISH__Fv                                     */
+/* 80099418-8009941C 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_FISH__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2980,7 +2980,7 @@ asm static void item_func_SMELL_FISH() {
 #pragma pop
 
 
-/* 8009941C-80099420 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_CHILDREN__Fv                                 */
+/* 8009941C-80099420 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_CHILDREN__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2991,7 +2991,7 @@ asm static void item_func_SMELL_CHILDREN() {
 #pragma pop
 
 
-/* 80099420-80099424 0004+00 r=1 e=0 z=0  None .text      item_func_SMELL_MEDICINE__Fv                                 */
+/* 80099420-80099424 0004+00 s=1 e=0 z=0  None .text      item_func_SMELL_MEDICINE__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3002,7 +3002,7 @@ asm static void item_func_SMELL_MEDICINE() {
 #pragma pop
 
 
-/* 80099424-80099428 0004+00 r=1 e=0 z=0  None .text      item_func_M_BEETLE__Fv                                       */
+/* 80099424-80099428 0004+00 s=1 e=0 z=0  None .text      item_func_M_BEETLE__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3013,7 +3013,7 @@ asm static void item_func_M_BEETLE() {
 #pragma pop
 
 
-/* 80099428-8009942C 0004+00 r=1 e=0 z=0  None .text      item_func_F_BEETLE__Fv                                       */
+/* 80099428-8009942C 0004+00 s=1 e=0 z=0  None .text      item_func_F_BEETLE__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3024,7 +3024,7 @@ asm static void item_func_F_BEETLE() {
 #pragma pop
 
 
-/* 8009942C-80099430 0004+00 r=1 e=0 z=0  None .text      item_func_M_BUTTERFLY__Fv                                    */
+/* 8009942C-80099430 0004+00 s=1 e=0 z=0  None .text      item_func_M_BUTTERFLY__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3035,7 +3035,7 @@ asm static void item_func_M_BUTTERFLY() {
 #pragma pop
 
 
-/* 80099430-80099434 0004+00 r=1 e=0 z=0  None .text      item_func_F_BUTTERFLY__Fv                                    */
+/* 80099430-80099434 0004+00 s=1 e=0 z=0  None .text      item_func_F_BUTTERFLY__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3046,7 +3046,7 @@ asm static void item_func_F_BUTTERFLY() {
 #pragma pop
 
 
-/* 80099434-80099438 0004+00 r=1 e=0 z=0  None .text      item_func_M_STAG_BEETLE__Fv                                  */
+/* 80099434-80099438 0004+00 s=1 e=0 z=0  None .text      item_func_M_STAG_BEETLE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3057,7 +3057,7 @@ asm static void item_func_M_STAG_BEETLE() {
 #pragma pop
 
 
-/* 80099438-8009943C 0004+00 r=1 e=0 z=0  None .text      item_func_F_STAG_BEETLE__Fv                                  */
+/* 80099438-8009943C 0004+00 s=1 e=0 z=0  None .text      item_func_F_STAG_BEETLE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3068,7 +3068,7 @@ asm static void item_func_F_STAG_BEETLE() {
 #pragma pop
 
 
-/* 8009943C-80099440 0004+00 r=1 e=0 z=0  None .text      item_func_M_GRASSHOPPER__Fv                                  */
+/* 8009943C-80099440 0004+00 s=1 e=0 z=0  None .text      item_func_M_GRASSHOPPER__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3079,7 +3079,7 @@ asm static void item_func_M_GRASSHOPPER() {
 #pragma pop
 
 
-/* 80099440-80099444 0004+00 r=1 e=0 z=0  None .text      item_func_F_GRASSHOPPER__Fv                                  */
+/* 80099440-80099444 0004+00 s=1 e=0 z=0  None .text      item_func_F_GRASSHOPPER__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3090,7 +3090,7 @@ asm static void item_func_F_GRASSHOPPER() {
 #pragma pop
 
 
-/* 80099444-80099448 0004+00 r=1 e=0 z=0  None .text      item_func_M_NANAFUSHI__Fv                                    */
+/* 80099444-80099448 0004+00 s=1 e=0 z=0  None .text      item_func_M_NANAFUSHI__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3101,7 +3101,7 @@ asm static void item_func_M_NANAFUSHI() {
 #pragma pop
 
 
-/* 80099448-8009944C 0004+00 r=1 e=0 z=0  None .text      item_func_F_NANAFUSHI__Fv                                    */
+/* 80099448-8009944C 0004+00 s=1 e=0 z=0  None .text      item_func_F_NANAFUSHI__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3112,7 +3112,7 @@ asm static void item_func_F_NANAFUSHI() {
 #pragma pop
 
 
-/* 8009944C-80099450 0004+00 r=1 e=0 z=0  None .text      item_func_M_DANGOMUSHI__Fv                                   */
+/* 8009944C-80099450 0004+00 s=1 e=0 z=0  None .text      item_func_M_DANGOMUSHI__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3123,7 +3123,7 @@ asm static void item_func_M_DANGOMUSHI() {
 #pragma pop
 
 
-/* 80099450-80099454 0004+00 r=1 e=0 z=0  None .text      item_func_F_DANGOMUSHI__Fv                                   */
+/* 80099450-80099454 0004+00 s=1 e=0 z=0  None .text      item_func_F_DANGOMUSHI__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3134,7 +3134,7 @@ asm static void item_func_F_DANGOMUSHI() {
 #pragma pop
 
 
-/* 80099454-80099458 0004+00 r=1 e=0 z=0  None .text      item_func_M_MANTIS__Fv                                       */
+/* 80099454-80099458 0004+00 s=1 e=0 z=0  None .text      item_func_M_MANTIS__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3145,7 +3145,7 @@ asm static void item_func_M_MANTIS() {
 #pragma pop
 
 
-/* 80099458-8009945C 0004+00 r=1 e=0 z=0  None .text      item_func_F_MANTIS__Fv                                       */
+/* 80099458-8009945C 0004+00 s=1 e=0 z=0  None .text      item_func_F_MANTIS__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3156,7 +3156,7 @@ asm static void item_func_F_MANTIS() {
 #pragma pop
 
 
-/* 8009945C-80099460 0004+00 r=1 e=0 z=0  None .text      item_func_M_LADYBUG__Fv                                      */
+/* 8009945C-80099460 0004+00 s=1 e=0 z=0  None .text      item_func_M_LADYBUG__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3167,7 +3167,7 @@ asm static void item_func_M_LADYBUG() {
 #pragma pop
 
 
-/* 80099460-80099464 0004+00 r=1 e=0 z=0  None .text      item_func_F_LADYBUG__Fv                                      */
+/* 80099460-80099464 0004+00 s=1 e=0 z=0  None .text      item_func_F_LADYBUG__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3178,7 +3178,7 @@ asm static void item_func_F_LADYBUG() {
 #pragma pop
 
 
-/* 80099464-80099468 0004+00 r=1 e=0 z=0  None .text      item_func_M_SNAIL__Fv                                        */
+/* 80099464-80099468 0004+00 s=1 e=0 z=0  None .text      item_func_M_SNAIL__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3189,7 +3189,7 @@ asm static void item_func_M_SNAIL() {
 #pragma pop
 
 
-/* 80099468-8009946C 0004+00 r=1 e=0 z=0  None .text      item_func_F_SNAIL__Fv                                        */
+/* 80099468-8009946C 0004+00 s=1 e=0 z=0  None .text      item_func_F_SNAIL__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3200,7 +3200,7 @@ asm static void item_func_F_SNAIL() {
 #pragma pop
 
 
-/* 8009946C-80099470 0004+00 r=1 e=0 z=0  None .text      item_func_M_DRAGONFLY__Fv                                    */
+/* 8009946C-80099470 0004+00 s=1 e=0 z=0  None .text      item_func_M_DRAGONFLY__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3211,7 +3211,7 @@ asm static void item_func_M_DRAGONFLY() {
 #pragma pop
 
 
-/* 80099470-80099474 0004+00 r=1 e=0 z=0  None .text      item_func_F_DRAGONFLY__Fv                                    */
+/* 80099470-80099474 0004+00 s=1 e=0 z=0  None .text      item_func_F_DRAGONFLY__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3222,7 +3222,7 @@ asm static void item_func_F_DRAGONFLY() {
 #pragma pop
 
 
-/* 80099474-80099478 0004+00 r=1 e=0 z=0  None .text      item_func_M_ANT__Fv                                          */
+/* 80099474-80099478 0004+00 s=1 e=0 z=0  None .text      item_func_M_ANT__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3233,7 +3233,7 @@ asm static void item_func_M_ANT() {
 #pragma pop
 
 
-/* 80099478-8009947C 0004+00 r=1 e=0 z=0  None .text      item_func_F_ANT__Fv                                          */
+/* 80099478-8009947C 0004+00 s=1 e=0 z=0  None .text      item_func_F_ANT__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3244,7 +3244,7 @@ asm static void item_func_F_ANT() {
 #pragma pop
 
 
-/* 8009947C-80099480 0004+00 r=1 e=0 z=0  None .text      item_func_M_MAYFLY__Fv                                       */
+/* 8009947C-80099480 0004+00 s=1 e=0 z=0  None .text      item_func_M_MAYFLY__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3255,7 +3255,7 @@ asm static void item_func_M_MAYFLY() {
 #pragma pop
 
 
-/* 80099480-80099484 0004+00 r=1 e=0 z=0  None .text      item_func_F_MAYFLY__Fv                                       */
+/* 80099480-80099484 0004+00 s=1 e=0 z=0  None .text      item_func_F_MAYFLY__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3266,7 +3266,7 @@ asm static void item_func_F_MAYFLY() {
 #pragma pop
 
 
-/* 80099484-80099488 0004+00 r=1 e=0 z=0  None .text      item_func_POU_SPIRIT__Fv                                     */
+/* 80099484-80099488 0004+00 s=1 e=0 z=0  None .text      item_func_POU_SPIRIT__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3277,7 +3277,7 @@ asm static void item_func_POU_SPIRIT() {
 #pragma pop
 
 
-/* 80099488-800994BC 0034+00 r=1 e=0 z=0  None .text      item_func_ANCIENT_DOCUMENT__Fv                               */
+/* 80099488-800994BC 0034+00 s=1 e=0 z=0  None .text      item_func_ANCIENT_DOCUMENT__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3288,7 +3288,7 @@ asm static void item_func_ANCIENT_DOCUMENT() {
 #pragma pop
 
 
-/* 800994BC-800994F0 0034+00 r=1 e=0 z=0  None .text      item_func_AIR_LETTER__Fv                                     */
+/* 800994BC-800994F0 0034+00 s=1 e=0 z=0  None .text      item_func_AIR_LETTER__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3299,7 +3299,7 @@ asm static void item_func_AIR_LETTER() {
 #pragma pop
 
 
-/* 800994F0-80099524 0034+00 r=1 e=0 z=0  None .text      item_func_ANCIENT_DOCUMENT2__Fv                              */
+/* 800994F0-80099524 0034+00 s=1 e=0 z=0  None .text      item_func_ANCIENT_DOCUMENT2__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3310,7 +3310,7 @@ asm static void item_func_ANCIENT_DOCUMENT2() {
 #pragma pop
 
 
-/* 80099524-80099558 0034+00 r=1 e=0 z=0  None .text      item_func_LV7_DUNGEON_EXIT__Fv                               */
+/* 80099524-80099558 0034+00 s=1 e=0 z=0  None .text      item_func_LV7_DUNGEON_EXIT__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3321,7 +3321,7 @@ asm static void item_func_LV7_DUNGEON_EXIT() {
 #pragma pop
 
 
-/* 80099558-80099570 0018+00 r=1 e=0 z=0  None .text      item_func_LINKS_SAVINGS__Fv                                  */
+/* 80099558-80099570 0018+00 s=1 e=0 z=0  None .text      item_func_LINKS_SAVINGS__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3332,7 +3332,7 @@ asm static void item_func_LINKS_SAVINGS() {
 #pragma pop
 
 
-/* 80099570-80099588 0018+00 r=1 e=0 z=0  None .text      item_func_SMALL_KEY2__Fv                                     */
+/* 80099570-80099588 0018+00 s=1 e=0 z=0  None .text      item_func_SMALL_KEY2__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3343,7 +3343,7 @@ asm static void item_func_SMALL_KEY2() {
 #pragma pop
 
 
-/* 80099588-8009958C 0004+00 r=1 e=0 z=0  None .text      item_func_POU_FIRE1__Fv                                      */
+/* 80099588-8009958C 0004+00 s=1 e=0 z=0  None .text      item_func_POU_FIRE1__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3354,7 +3354,7 @@ asm static void item_func_POU_FIRE1() {
 #pragma pop
 
 
-/* 8009958C-80099590 0004+00 r=1 e=0 z=0  None .text      item_func_POU_FIRE2__Fv                                      */
+/* 8009958C-80099590 0004+00 s=1 e=0 z=0  None .text      item_func_POU_FIRE2__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3365,7 +3365,7 @@ asm static void item_func_POU_FIRE2() {
 #pragma pop
 
 
-/* 80099590-80099594 0004+00 r=1 e=0 z=0  None .text      item_func_POU_FIRE3__Fv                                      */
+/* 80099590-80099594 0004+00 s=1 e=0 z=0  None .text      item_func_POU_FIRE3__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3376,7 +3376,7 @@ asm static void item_func_POU_FIRE3() {
 #pragma pop
 
 
-/* 80099594-80099598 0004+00 r=1 e=0 z=0  None .text      item_func_POU_FIRE4__Fv                                      */
+/* 80099594-80099598 0004+00 s=1 e=0 z=0  None .text      item_func_POU_FIRE4__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3387,7 +3387,7 @@ asm static void item_func_POU_FIRE4() {
 #pragma pop
 
 
-/* 80099598-8009959C 0004+00 r=1 e=0 z=0  None .text      item_func_BOSSRIDER_KEY__Fv                                  */
+/* 80099598-8009959C 0004+00 s=1 e=0 z=0  None .text      item_func_BOSSRIDER_KEY__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3398,7 +3398,7 @@ asm static void item_func_BOSSRIDER_KEY() {
 #pragma pop
 
 
-/* 8009959C-800995A0 0004+00 r=1 e=0 z=0  None .text      item_func_TOMATO_PUREE__Fv                                   */
+/* 8009959C-800995A0 0004+00 s=1 e=0 z=0  None .text      item_func_TOMATO_PUREE__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3409,7 +3409,7 @@ asm static void item_func_TOMATO_PUREE() {
 #pragma pop
 
 
-/* 800995A0-800995A4 0004+00 r=1 e=0 z=0  None .text      item_func_TASTE__Fv                                          */
+/* 800995A0-800995A4 0004+00 s=1 e=0 z=0  None .text      item_func_TASTE__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3420,7 +3420,7 @@ asm static void item_func_TASTE() {
 #pragma pop
 
 
-/* 800995A4-800995D4 0030+00 r=1 e=0 z=0  None .text      item_func_LV5_BOSS_KEY__Fv                                   */
+/* 800995A4-800995D4 0030+00 s=1 e=0 z=0  None .text      item_func_LV5_BOSS_KEY__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3431,7 +3431,7 @@ asm static void item_func_LV5_BOSS_KEY() {
 #pragma pop
 
 
-/* 800995D4-800995D8 0004+00 r=1 e=0 z=0  None .text      item_func_SURFBOARD__Fv                                      */
+/* 800995D4-800995D8 0004+00 s=1 e=0 z=0  None .text      item_func_SURFBOARD__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3442,7 +3442,7 @@ asm static void item_func_SURFBOARD() {
 #pragma pop
 
 
-/* 800995D8-800995DC 0004+00 r=1 e=0 z=0  None .text      item_func_KANTERA2__Fv                                       */
+/* 800995D8-800995DC 0004+00 s=1 e=0 z=0  None .text      item_func_KANTERA2__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3453,7 +3453,7 @@ asm static void item_func_KANTERA2() {
 #pragma pop
 
 
-/* 800995DC-800995E0 0004+00 r=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES1__Fv                                 */
+/* 800995DC-800995E0 0004+00 s=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES1__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3464,7 +3464,7 @@ asm static void item_func_L2_KEY_PIECES1() {
 #pragma pop
 
 
-/* 800995E0-800995E4 0004+00 r=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES2__Fv                                 */
+/* 800995E0-800995E4 0004+00 s=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES2__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3475,7 +3475,7 @@ asm static void item_func_L2_KEY_PIECES2() {
 #pragma pop
 
 
-/* 800995E4-800995E8 0004+00 r=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES3__Fv                                 */
+/* 800995E4-800995E8 0004+00 s=1 e=0 z=0  None .text      item_func_L2_KEY_PIECES3__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3486,7 +3486,7 @@ asm static void item_func_L2_KEY_PIECES3() {
 #pragma pop
 
 
-/* 800995E8-800995EC 0004+00 r=1 e=0 z=0  None .text      item_func_KEY_OF_CARAVAN__Fv                                 */
+/* 800995E8-800995EC 0004+00 s=1 e=0 z=0  None .text      item_func_KEY_OF_CARAVAN__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3497,7 +3497,7 @@ asm static void item_func_KEY_OF_CARAVAN() {
 #pragma pop
 
 
-/* 800995EC-8009961C 0030+00 r=1 e=0 z=0  None .text      item_func_LV2_BOSS_KEY__Fv                                   */
+/* 800995EC-8009961C 0030+00 s=1 e=0 z=0  None .text      item_func_LV2_BOSS_KEY__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3508,7 +3508,7 @@ asm static void item_func_LV2_BOSS_KEY() {
 #pragma pop
 
 
-/* 8009961C-80099634 0018+00 r=1 e=0 z=0  None .text      item_func_KEY_OF_FILONE__Fv                                  */
+/* 8009961C-80099634 0018+00 s=1 e=0 z=0  None .text      item_func_KEY_OF_FILONE__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3519,7 +3519,7 @@ asm static void item_func_KEY_OF_FILONE() {
 #pragma pop
 
 
-/* 80099634-80099638 0004+00 r=1 e=0 z=0  None .text      item_func_noentry__Fv                                        */
+/* 80099634-80099638 0004+00 s=1 e=0 z=0  None .text      item_func_noentry__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3530,7 +3530,7 @@ asm static void item_func_noentry() {
 #pragma pop
 
 
-/* 80099638-80099640 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_noentry__Fv                               */
+/* 80099638-80099640 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_noentry__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3541,7 +3541,7 @@ asm static void item_getcheck_func_noentry() {
 #pragma pop
 
 
-/* 80099640-80099648 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_HEART__Fv                                 */
+/* 80099640-80099648 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_HEART__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3552,7 +3552,7 @@ asm static void item_getcheck_func_HEART() {
 #pragma pop
 
 
-/* 80099648-80099678 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_GREEN_RUPEE__Fv                           */
+/* 80099648-80099678 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_GREEN_RUPEE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3563,7 +3563,7 @@ asm static void item_getcheck_func_GREEN_RUPEE() {
 #pragma pop
 
 
-/* 80099678-800996A8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BLUE_RUPEE__Fv                            */
+/* 80099678-800996A8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BLUE_RUPEE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3574,7 +3574,7 @@ asm static void item_getcheck_func_BLUE_RUPEE() {
 #pragma pop
 
 
-/* 800996A8-800996D8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_YELLOW_RUPEE__Fv                          */
+/* 800996A8-800996D8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_YELLOW_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3585,7 +3585,7 @@ asm static void item_getcheck_func_YELLOW_RUPEE() {
 #pragma pop
 
 
-/* 800996D8-80099708 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_RED_RUPEE__Fv                             */
+/* 800996D8-80099708 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_RED_RUPEE__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3596,7 +3596,7 @@ asm static void item_getcheck_func_RED_RUPEE() {
 #pragma pop
 
 
-/* 80099708-80099738 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_PURPLE_RUPEE__Fv                          */
+/* 80099708-80099738 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_PURPLE_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3607,7 +3607,7 @@ asm static void item_getcheck_func_PURPLE_RUPEE() {
 #pragma pop
 
 
-/* 80099738-80099768 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ORANGE_RUPEE__Fv                          */
+/* 80099738-80099768 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ORANGE_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3618,7 +3618,7 @@ asm static void item_getcheck_func_ORANGE_RUPEE() {
 #pragma pop
 
 
-/* 80099768-80099798 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_SILVER_RUPEE__Fv                          */
+/* 80099768-80099798 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_SILVER_RUPEE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3629,7 +3629,7 @@ asm static void item_getcheck_func_SILVER_RUPEE() {
 #pragma pop
 
 
-/* 80099798-800997A0 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_S_MAGIC__Fv                               */
+/* 80099798-800997A0 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_S_MAGIC__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3640,7 +3640,7 @@ asm static void item_getcheck_func_S_MAGIC() {
 #pragma pop
 
 
-/* 800997A0-800997A8 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_L_MAGIC__Fv                               */
+/* 800997A0-800997A8 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_L_MAGIC__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3651,7 +3651,7 @@ asm static void item_getcheck_func_L_MAGIC() {
 #pragma pop
 
 
-/* 800997A8-800997D8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_5__Fv                                */
+/* 800997A8-800997D8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_5__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3662,7 +3662,7 @@ asm static void item_getcheck_func_BOMB_5() {
 #pragma pop
 
 
-/* 800997D8-80099808 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_10__Fv                               */
+/* 800997D8-80099808 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_10__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3673,7 +3673,7 @@ asm static void item_getcheck_func_BOMB_10() {
 #pragma pop
 
 
-/* 80099808-80099838 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_20__Fv                               */
+/* 80099808-80099838 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_20__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3684,7 +3684,7 @@ asm static void item_getcheck_func_BOMB_20() {
 #pragma pop
 
 
-/* 80099838-80099868 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_30__Fv                               */
+/* 80099838-80099868 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_30__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3695,7 +3695,7 @@ asm static void item_getcheck_func_BOMB_30() {
 #pragma pop
 
 
-/* 80099868-80099898 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_10__Fv                              */
+/* 80099868-80099898 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_10__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3706,7 +3706,7 @@ asm static void item_getcheck_func_ARROW_10() {
 #pragma pop
 
 
-/* 80099898-800998C8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_20__Fv                              */
+/* 80099898-800998C8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_20__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3717,7 +3717,7 @@ asm static void item_getcheck_func_ARROW_20() {
 #pragma pop
 
 
-/* 800998C8-800998F8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_30__Fv                              */
+/* 800998C8-800998F8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_30__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3728,7 +3728,7 @@ asm static void item_getcheck_func_ARROW_30() {
 #pragma pop
 
 
-/* 800998F8-80099928 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_1__Fv                               */
+/* 800998F8-80099928 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_1__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3739,7 +3739,7 @@ asm static void item_getcheck_func_ARROW_1() {
 #pragma pop
 
 
-/* 80099928-80099958 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_PACHINKO_SHOT__Fv                         */
+/* 80099928-80099958 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_PACHINKO_SHOT__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3750,7 +3750,7 @@ asm static void item_getcheck_func_PACHINKO_SHOT() {
 #pragma pop
 
 
-/* 80099958-80099960 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_5__Fv                          */
+/* 80099958-80099960 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_5__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3761,7 +3761,7 @@ asm static void item_getcheck_func_WATER_BOMB_5() {
 #pragma pop
 
 
-/* 80099960-80099968 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_10__Fv                         */
+/* 80099960-80099968 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_10__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3772,7 +3772,7 @@ asm static void item_getcheck_func_WATER_BOMB_10() {
 #pragma pop
 
 
-/* 80099968-80099970 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_20__Fv                         */
+/* 80099968-80099970 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_20__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3783,7 +3783,7 @@ asm static void item_getcheck_func_WATER_BOMB_20() {
 #pragma pop
 
 
-/* 80099970-80099978 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_30__Fv                         */
+/* 80099970-80099978 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB_30__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3794,7 +3794,7 @@ asm static void item_getcheck_func_WATER_BOMB_30() {
 #pragma pop
 
 
-/* 80099978-80099980 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_5__Fv                         */
+/* 80099978-80099980 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_5__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3805,7 +3805,7 @@ asm static void item_getcheck_func_BOMB_INSECT_5() {
 #pragma pop
 
 
-/* 80099980-800999B0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_10__Fv                        */
+/* 80099980-800999B0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_10__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3816,7 +3816,7 @@ asm static void item_getcheck_func_BOMB_INSECT_10() {
 #pragma pop
 
 
-/* 800999B0-800999E0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_20__Fv                        */
+/* 800999B0-800999E0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_20__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3827,7 +3827,7 @@ asm static void item_getcheck_func_BOMB_INSECT_20() {
 #pragma pop
 
 
-/* 800999E0-80099A10 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_30__Fv                        */
+/* 800999E0-80099A10 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_INSECT_30__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3838,7 +3838,7 @@ asm static void item_getcheck_func_BOMB_INSECT_30() {
 #pragma pop
 
 
-/* 80099A10-80099A18 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_RECOVER_FAILY__Fv                         */
+/* 80099A10-80099A18 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_RECOVER_FAILY__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3849,7 +3849,7 @@ asm static void item_getcheck_func_RECOVER_FAILY() {
 #pragma pop
 
 
-/* 80099A18-80099A20 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_TRIPLE_HEART__Fv                          */
+/* 80099A18-80099A20 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_TRIPLE_HEART__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3860,7 +3860,7 @@ asm static void item_getcheck_func_TRIPLE_HEART() {
 #pragma pop
 
 
-/* 80099A20-80099A28 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMALL_KEY__Fv                             */
+/* 80099A20-80099A28 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMALL_KEY__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3871,7 +3871,7 @@ asm static void item_getcheck_func_SMALL_KEY() {
 #pragma pop
 
 
-/* 80099A28-80099A30 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_KAKERA_HEART__Fv                          */
+/* 80099A28-80099A30 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_KAKERA_HEART__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3882,7 +3882,7 @@ asm static void item_getcheck_func_KAKERA_HEART() {
 #pragma pop
 
 
-/* 80099A30-80099A38 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_UTUWA_HEART__Fv                           */
+/* 80099A30-80099A38 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_UTUWA_HEART__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3893,7 +3893,7 @@ asm static void item_getcheck_func_UTUWA_HEART() {
 #pragma pop
 
 
-/* 80099A38-80099A68 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_MAP__Fv                                   */
+/* 80099A38-80099A68 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_MAP__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3904,7 +3904,7 @@ asm static void item_getcheck_func_MAP() {
 #pragma pop
 
 
-/* 80099A68-80099A70 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_COMPUS__Fv                                */
+/* 80099A68-80099A70 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_COMPUS__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3915,7 +3915,7 @@ asm static void item_getcheck_func_COMPUS() {
 #pragma pop
 
 
-/* 80099A70-80099AB4 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_EXIT__Fv                          */
+/* 80099A70-80099AB4 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_EXIT__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3926,7 +3926,7 @@ asm static void item_getcheck_func_DUNGEON_EXIT() {
 #pragma pop
 
 
-/* 80099AB4-80099AE4 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOSS_KEY__Fv                              */
+/* 80099AB4-80099AE4 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOSS_KEY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3937,7 +3937,7 @@ asm static void item_getcheck_func_BOSS_KEY() {
 #pragma pop
 
 
-/* 80099AE4-80099B28 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_BACK__Fv                          */
+/* 80099AE4-80099B28 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_BACK__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3948,7 +3948,7 @@ asm static void item_getcheck_func_DUNGEON_BACK() {
 #pragma pop
 
 
-/* 80099B28-80099B5C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_SWORD__Fv                                 */
+/* 80099B28-80099B5C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_SWORD__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3959,7 +3959,7 @@ asm static void item_getcheck_func_SWORD() {
 #pragma pop
 
 
-/* 80099B5C-80099B90 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_MASTER_SWORD__Fv                          */
+/* 80099B5C-80099B90 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_MASTER_SWORD__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3970,7 +3970,7 @@ asm static void item_getcheck_func_MASTER_SWORD() {
 #pragma pop
 
 
-/* 80099B90-80099BC0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_WOOD_SHIELD__Fv                           */
+/* 80099B90-80099BC0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_WOOD_SHIELD__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3981,7 +3981,7 @@ asm static void item_getcheck_func_WOOD_SHIELD() {
 #pragma pop
 
 
-/* 80099BC0-80099BF0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_SHIELD__Fv                                */
+/* 80099BC0-80099BF0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_SHIELD__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3992,7 +3992,7 @@ asm static void item_getcheck_func_SHIELD() {
 #pragma pop
 
 
-/* 80099BF0-80099C20 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_HYLIA_SHIELD__Fv                          */
+/* 80099BF0-80099C20 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_HYLIA_SHIELD__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4003,7 +4003,7 @@ asm static void item_getcheck_func_HYLIA_SHIELD() {
 #pragma pop
 
 
-/* 80099C20-80099C64 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_TKS_LETTER__Fv                            */
+/* 80099C20-80099C64 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_TKS_LETTER__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4014,7 +4014,7 @@ asm static void item_getcheck_func_TKS_LETTER() {
 #pragma pop
 
 
-/* 80099C64-80099C94 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_WEAR_CASUAL__Fv                           */
+/* 80099C64-80099C94 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_WEAR_CASUAL__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4025,7 +4025,7 @@ asm static void item_getcheck_func_WEAR_CASUAL() {
 #pragma pop
 
 
-/* 80099C94-80099CC8 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_WEAR_KOKIRI__Fv                           */
+/* 80099C94-80099CC8 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_WEAR_KOKIRI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4036,7 +4036,7 @@ asm static void item_getcheck_func_WEAR_KOKIRI() {
 #pragma pop
 
 
-/* 80099CC8-80099CF8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARMOR__Fv                                 */
+/* 80099CC8-80099CF8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARMOR__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4047,7 +4047,7 @@ asm static void item_getcheck_func_ARMOR() {
 #pragma pop
 
 
-/* 80099CF8-80099D28 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_WEAR_ZORA__Fv                             */
+/* 80099CF8-80099D28 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_WEAR_ZORA__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4058,7 +4058,7 @@ asm static void item_getcheck_func_WEAR_ZORA() {
 #pragma pop
 
 
-/* 80099D28-80099D30 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_MAGIC_LV1__Fv                             */
+/* 80099D28-80099D30 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_MAGIC_LV1__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4069,7 +4069,7 @@ asm static void item_getcheck_func_MAGIC_LV1() {
 #pragma pop
 
 
-/* 80099D30-80099D74 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_EXIT_2__Fv                        */
+/* 80099D30-80099D74 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_DUNGEON_EXIT_2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4080,7 +4080,7 @@ asm static void item_getcheck_func_DUNGEON_EXIT_2() {
 #pragma pop
 
 
-/* 80099D74-80099D7C 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV1__Fv                            */
+/* 80099D74-80099D7C 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV1__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4091,7 +4091,7 @@ asm static void item_getcheck_func_WALLET_LV1() {
 #pragma pop
 
 
-/* 80099D7C-80099D84 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV2__Fv                            */
+/* 80099D7C-80099D84 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV2__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4102,7 +4102,7 @@ asm static void item_getcheck_func_WALLET_LV2() {
 #pragma pop
 
 
-/* 80099D84-80099D8C 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV3__Fv                            */
+/* 80099D84-80099D8C 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_WALLET_LV3__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4113,7 +4113,7 @@ asm static void item_getcheck_func_WALLET_LV3() {
 #pragma pop
 
 
-/* 80099D8C-80099DD0 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_ZORAS_JEWEL__Fv                           */
+/* 80099D8C-80099DD0 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_ZORAS_JEWEL__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4124,7 +4124,7 @@ asm static void item_getcheck_func_ZORAS_JEWEL() {
 #pragma pop
 
 
-/* 80099DD0-80099E00 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_HAWK_EYE__Fv                              */
+/* 80099DD0-80099E00 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_HAWK_EYE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4135,7 +4135,7 @@ asm static void item_getcheck_func_HAWK_EYE() {
 #pragma pop
 
 
-/* 80099E00-80099E30 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_WOOD_STICK__Fv                            */
+/* 80099E00-80099E30 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_WOOD_STICK__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4146,7 +4146,7 @@ asm static void item_getcheck_func_WOOD_STICK() {
 #pragma pop
 
 
-/* 80099E30-80099E74 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOOMERANG__Fv                             */
+/* 80099E30-80099E74 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOOMERANG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4157,7 +4157,7 @@ asm static void item_getcheck_func_BOOMERANG() {
 #pragma pop
 
 
-/* 80099E74-80099EB8 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_SPINNER__Fv                               */
+/* 80099E74-80099EB8 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_SPINNER__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4168,7 +4168,7 @@ asm static void item_getcheck_func_SPINNER() {
 #pragma pop
 
 
-/* 80099EB8-80099EFC 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_IRONBALL__Fv                              */
+/* 80099EB8-80099EFC 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_IRONBALL__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4179,7 +4179,7 @@ asm static void item_getcheck_func_IRONBALL() {
 #pragma pop
 
 
-/* 80099EFC-80099F40 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOW__Fv                                   */
+/* 80099EFC-80099F40 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOW__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4190,7 +4190,7 @@ asm static void item_getcheck_func_BOW() {
 #pragma pop
 
 
-/* 80099F40-80099F84 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_HOOKSHOT__Fv                              */
+/* 80099F40-80099F84 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_HOOKSHOT__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4201,7 +4201,7 @@ asm static void item_getcheck_func_HOOKSHOT() {
 #pragma pop
 
 
-/* 80099F84-80099FC8 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_HVY_BOOTS__Fv                             */
+/* 80099F84-80099FC8 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_HVY_BOOTS__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4212,7 +4212,7 @@ asm static void item_getcheck_func_HVY_BOOTS() {
 #pragma pop
 
 
-/* 80099FC8-8009A00C 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_COPY_ROD__Fv                              */
+/* 80099FC8-8009A00C 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_COPY_ROD__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4223,7 +4223,7 @@ asm static void item_getcheck_func_COPY_ROD() {
 #pragma pop
 
 
-/* 8009A00C-8009A050 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_W_HOOKSHOT__Fv                            */
+/* 8009A00C-8009A050 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_W_HOOKSHOT__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4234,7 +4234,7 @@ asm static void item_getcheck_func_W_HOOKSHOT() {
 #pragma pop
 
 
-/* 8009A050-8009A094 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_KANTERA__Fv                               */
+/* 8009A050-8009A094 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_KANTERA__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4245,7 +4245,7 @@ asm static void item_getcheck_func_KANTERA() {
 #pragma pop
 
 
-/* 8009A094-8009A0C8 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_SWORD__Fv                           */
+/* 8009A094-8009A0C8 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_SWORD__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4256,7 +4256,7 @@ asm static void item_getcheck_func_LIGHT_SWORD() {
 #pragma pop
 
 
-/* 8009A0C8-8009A1FC 0134+00 r=7 e=0 z=0  None .text      item_getcheck_func_FISHING_ROD_1__Fv                         */
+/* 8009A0C8-8009A1FC 0134+00 s=7 e=0 z=0  None .text      item_getcheck_func_FISHING_ROD_1__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4267,7 +4267,7 @@ asm static void item_getcheck_func_FISHING_ROD_1() {
 #pragma pop
 
 
-/* 8009A1FC-8009A240 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_PACHINKO__Fv                              */
+/* 8009A1FC-8009A240 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_PACHINKO__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4278,7 +4278,7 @@ asm static void item_getcheck_func_PACHINKO() {
 #pragma pop
 
 
-/* 8009A240-8009A248 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_COPY_ROD_2__Fv                            */
+/* 8009A240-8009A248 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_COPY_ROD_2__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4289,7 +4289,7 @@ asm static void item_getcheck_func_COPY_ROD_2() {
 #pragma pop
 
 
-/* 8009A248-8009A278 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_BAG_LV2__Fv                          */
+/* 8009A248-8009A278 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_BAG_LV2__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4300,7 +4300,7 @@ asm static void item_getcheck_func_BOMB_BAG_LV2() {
 #pragma pop
 
 
-/* 8009A278-8009A2A8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_BAG_LV1__Fv                          */
+/* 8009A278-8009A2A8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_BAG_LV1__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4311,7 +4311,7 @@ asm static void item_getcheck_func_BOMB_BAG_LV1() {
 #pragma pop
 
 
-/* 8009A2A8-8009A2D8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_IN_BAG__Fv                           */
+/* 8009A2A8-8009A2D8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_IN_BAG__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4322,7 +4322,7 @@ asm static void item_getcheck_func_BOMB_IN_BAG() {
 #pragma pop
 
 
-/* 8009A2D8-8009A308 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_ARROW__Fv                           */
+/* 8009A2D8-8009A308 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_ARROW__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4333,7 +4333,7 @@ asm static void item_getcheck_func_LIGHT_ARROW() {
 #pragma pop
 
 
-/* 8009A308-8009A378 0070+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV1__Fv                             */
+/* 8009A308-8009A378 0070+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV1__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4344,7 +4344,7 @@ asm static void item_getcheck_func_ARROW_LV1() {
 #pragma pop
 
 
-/* 8009A378-8009A3E8 0070+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV2__Fv                             */
+/* 8009A378-8009A3E8 0070+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV2__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4355,7 +4355,7 @@ asm static void item_getcheck_func_ARROW_LV2() {
 #pragma pop
 
 
-/* 8009A3E8-8009A458 0070+00 r=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV3__Fv                             */
+/* 8009A3E8-8009A458 0070+00 s=1 e=0 z=0  None .text      item_getcheck_func_ARROW_LV3__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4366,7 +4366,7 @@ asm static void item_getcheck_func_ARROW_LV3() {
 #pragma pop
 
 
-/* 8009A458-8009A460 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_LURE_ROD__Fv                              */
+/* 8009A458-8009A460 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_LURE_ROD__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4377,7 +4377,7 @@ asm static void item_getcheck_func_LURE_ROD() {
 #pragma pop
 
 
-/* 8009A460-8009A468 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOMB_ARROW__Fv                            */
+/* 8009A460-8009A468 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOMB_ARROW__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4388,7 +4388,7 @@ asm static void item_getcheck_func_BOMB_ARROW() {
 #pragma pop
 
 
-/* 8009A468-8009A470 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_HAWK_ARROW__Fv                            */
+/* 8009A468-8009A470 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_HAWK_ARROW__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4399,7 +4399,7 @@ asm static void item_getcheck_func_HAWK_ARROW() {
 #pragma pop
 
 
-/* 8009A470-8009A490 0020+00 r=1 e=0 z=0  None .text      item_getcheck_func_BEE_ROD__Fv                               */
+/* 8009A470-8009A490 0020+00 s=1 e=0 z=0  None .text      item_getcheck_func_BEE_ROD__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4410,7 +4410,7 @@ asm static void item_getcheck_func_BEE_ROD() {
 #pragma pop
 
 
-/* 8009A490-8009A4B0 0020+00 r=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_ROD__Fv                             */
+/* 8009A490-8009A4B0 0020+00 s=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_ROD__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4421,7 +4421,7 @@ asm static void item_getcheck_func_JEWEL_ROD() {
 #pragma pop
 
 
-/* 8009A4B0-8009A4D0 0020+00 r=1 e=0 z=0  None .text      item_getcheck_func_WORM_ROD__Fv                              */
+/* 8009A4B0-8009A4D0 0020+00 s=1 e=0 z=0  None .text      item_getcheck_func_WORM_ROD__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4432,7 +4432,7 @@ asm static void item_getcheck_func_WORM_ROD() {
 #pragma pop
 
 
-/* 8009A4D0-8009A4F0 0020+00 r=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_BEE_ROD__Fv                         */
+/* 8009A4D0-8009A4F0 0020+00 s=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_BEE_ROD__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4443,7 +4443,7 @@ asm static void item_getcheck_func_JEWEL_BEE_ROD() {
 #pragma pop
 
 
-/* 8009A4F0-8009A510 0020+00 r=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_WORM_ROD__Fv                        */
+/* 8009A4F0-8009A510 0020+00 s=1 e=0 z=0  None .text      item_getcheck_func_JEWEL_WORM_ROD__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4454,7 +4454,7 @@ asm static void item_getcheck_func_JEWEL_WORM_ROD() {
 #pragma pop
 
 
-/* 8009A510-8009A544 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_EMPTY_BOTTLE__Fv                          */
+/* 8009A510-8009A544 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_EMPTY_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4465,7 +4465,7 @@ asm static void item_getcheck_func_EMPTY_BOTTLE() {
 #pragma pop
 
 
-/* 8009A544-8009A578 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_RED_BOTTLE__Fv                            */
+/* 8009A544-8009A578 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_RED_BOTTLE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4476,7 +4476,7 @@ asm static void item_getcheck_func_RED_BOTTLE() {
 #pragma pop
 
 
-/* 8009A578-8009A5AC 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_GREEN_BOTTLE__Fv                          */
+/* 8009A578-8009A5AC 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_GREEN_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4487,7 +4487,7 @@ asm static void item_getcheck_func_GREEN_BOTTLE() {
 #pragma pop
 
 
-/* 8009A5AC-8009A5E0 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_BLUE_BOTTLE__Fv                           */
+/* 8009A5AC-8009A5E0 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_BLUE_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4498,7 +4498,7 @@ asm static void item_getcheck_func_BLUE_BOTTLE() {
 #pragma pop
 
 
-/* 8009A5E0-8009A614 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_MILK_BOTTLE__Fv                           */
+/* 8009A5E0-8009A614 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_MILK_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4509,7 +4509,7 @@ asm static void item_getcheck_func_MILK_BOTTLE() {
 #pragma pop
 
 
-/* 8009A614-8009A648 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_HALF_MILK_BOTTLE__Fv                      */
+/* 8009A614-8009A648 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_HALF_MILK_BOTTLE__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4520,7 +4520,7 @@ asm static void item_getcheck_func_HALF_MILK_BOTTLE() {
 #pragma pop
 
 
-/* 8009A648-8009A67C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE__Fv                            */
+/* 8009A648-8009A67C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4531,7 +4531,7 @@ asm static void item_getcheck_func_OIL_BOTTLE() {
 #pragma pop
 
 
-/* 8009A67C-8009A6B0 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOTTLE__Fv                          */
+/* 8009A67C-8009A6B0 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4542,7 +4542,7 @@ asm static void item_getcheck_func_WATER_BOTTLE() {
 #pragma pop
 
 
-/* 8009A6B0-8009A6E4 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE2__Fv                           */
+/* 8009A6B0-8009A6E4 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4553,7 +4553,7 @@ asm static void item_getcheck_func_OIL_BOTTLE2() {
 #pragma pop
 
 
-/* 8009A6E4-8009A718 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_RED_BOTTLE2__Fv                           */
+/* 8009A6E4-8009A718 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_RED_BOTTLE2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4564,7 +4564,7 @@ asm static void item_getcheck_func_RED_BOTTLE2() {
 #pragma pop
 
 
-/* 8009A718-8009A74C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_UGLY_SOUP__Fv                             */
+/* 8009A718-8009A74C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_UGLY_SOUP__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4575,7 +4575,7 @@ asm static void item_getcheck_func_UGLY_SOUP() {
 #pragma pop
 
 
-/* 8009A74C-8009A780 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_HOT_SPRING__Fv                            */
+/* 8009A74C-8009A780 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_HOT_SPRING__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4586,7 +4586,7 @@ asm static void item_getcheck_func_HOT_SPRING() {
 #pragma pop
 
 
-/* 8009A780-8009A7B4 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_FAIRY_BOTTLE__Fv                          */
+/* 8009A780-8009A7B4 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_FAIRY_BOTTLE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4597,7 +4597,7 @@ asm static void item_getcheck_func_FAIRY_BOTTLE() {
 #pragma pop
 
 
-/* 8009A7B4-8009A7E8 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_HOT_SPRING2__Fv                           */
+/* 8009A7B4-8009A7E8 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_HOT_SPRING2__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4608,7 +4608,7 @@ asm static void item_getcheck_func_HOT_SPRING2() {
 #pragma pop
 
 
-/* 8009A7E8-8009A81C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_OIL2__Fv                                  */
+/* 8009A7E8-8009A81C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_OIL2__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4619,7 +4619,7 @@ asm static void item_getcheck_func_OIL2() {
 #pragma pop
 
 
-/* 8009A81C-8009A850 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_OIL__Fv                                   */
+/* 8009A81C-8009A850 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_OIL__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4630,7 +4630,7 @@ asm static void item_getcheck_func_OIL() {
 #pragma pop
 
 
-/* 8009A850-8009A880 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_NORMAL_BOMB__Fv                           */
+/* 8009A850-8009A880 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_NORMAL_BOMB__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4641,7 +4641,7 @@ asm static void item_getcheck_func_NORMAL_BOMB() {
 #pragma pop
 
 
-/* 8009A880-8009A8B0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB__Fv                            */
+/* 8009A880-8009A8B0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_WATER_BOMB__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4652,7 +4652,7 @@ asm static void item_getcheck_func_WATER_BOMB() {
 #pragma pop
 
 
-/* 8009A8B0-8009A8E0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_POKE_BOMB__Fv                             */
+/* 8009A8B0-8009A8E0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_POKE_BOMB__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4663,7 +4663,7 @@ asm static void item_getcheck_func_POKE_BOMB() {
 #pragma pop
 
 
-/* 8009A8E0-8009A914 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_FAIRY_DROP__Fv                            */
+/* 8009A8E0-8009A914 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_FAIRY_DROP__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4674,7 +4674,7 @@ asm static void item_getcheck_func_FAIRY_DROP() {
 #pragma pop
 
 
-/* 8009A914-8009A948 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_WORM__Fv                                  */
+/* 8009A914-8009A948 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_WORM__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4685,7 +4685,7 @@ asm static void item_getcheck_func_WORM() {
 #pragma pop
 
 
-/* 8009A948-8009A978 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_DROP_BOTTLE__Fv                           */
+/* 8009A948-8009A978 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_DROP_BOTTLE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4696,7 +4696,7 @@ asm static void item_getcheck_func_DROP_BOTTLE() {
 #pragma pop
 
 
-/* 8009A978-8009A980 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_BEE_CHILD__Fv                             */
+/* 8009A978-8009A980 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_BEE_CHILD__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4707,7 +4707,7 @@ asm static void item_getcheck_func_BEE_CHILD() {
 #pragma pop
 
 
-/* 8009A980-8009A9B4 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_RARE__Fv                           */
+/* 8009A980-8009A9B4 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_RARE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4718,7 +4718,7 @@ asm static void item_getcheck_func_CHUCHU_RARE() {
 #pragma pop
 
 
-/* 8009A9B4-8009A9E8 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_RED__Fv                            */
+/* 8009A9B4-8009A9E8 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_RED__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4729,7 +4729,7 @@ asm static void item_getcheck_func_CHUCHU_RED() {
 #pragma pop
 
 
-/* 8009A9E8-8009AA1C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_BLUE__Fv                           */
+/* 8009A9E8-8009AA1C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_BLUE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4740,7 +4740,7 @@ asm static void item_getcheck_func_CHUCHU_BLUE() {
 #pragma pop
 
 
-/* 8009AA1C-8009AA50 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_GREEN__Fv                          */
+/* 8009AA1C-8009AA50 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_GREEN__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4751,7 +4751,7 @@ asm static void item_getcheck_func_CHUCHU_GREEN() {
 #pragma pop
 
 
-/* 8009AA50-8009AA84 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_YELLOW__Fv                         */
+/* 8009AA50-8009AA84 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_YELLOW__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4762,7 +4762,7 @@ asm static void item_getcheck_func_CHUCHU_YELLOW() {
 #pragma pop
 
 
-/* 8009AA84-8009AAB8 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_PURPLE__Fv                         */
+/* 8009AA84-8009AAB8 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_PURPLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4773,7 +4773,7 @@ asm static void item_getcheck_func_CHUCHU_PURPLE() {
 #pragma pop
 
 
-/* 8009AAB8-8009AAE8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV1_SOUP__Fv                              */
+/* 8009AAB8-8009AAE8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV1_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4784,7 +4784,7 @@ asm static void item_getcheck_func_LV1_SOUP() {
 #pragma pop
 
 
-/* 8009AAE8-8009AB18 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV2_SOUP__Fv                              */
+/* 8009AAE8-8009AB18 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV2_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4795,7 +4795,7 @@ asm static void item_getcheck_func_LV2_SOUP() {
 #pragma pop
 
 
-/* 8009AB18-8009AB48 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV3_SOUP__Fv                              */
+/* 8009AB18-8009AB48 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV3_SOUP__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4806,7 +4806,7 @@ asm static void item_getcheck_func_LV3_SOUP() {
 #pragma pop
 
 
-/* 8009AB48-8009AB8C 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_LETTER__Fv                                */
+/* 8009AB48-8009AB8C 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_LETTER__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4817,7 +4817,7 @@ asm static void item_getcheck_func_LETTER() {
 #pragma pop
 
 
-/* 8009AB8C-8009ABD0 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_BILL__Fv                                  */
+/* 8009AB8C-8009ABD0 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_BILL__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4828,7 +4828,7 @@ asm static void item_getcheck_func_BILL() {
 #pragma pop
 
 
-/* 8009ABD0-8009AC14 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_WOOD_STATUE__Fv                           */
+/* 8009ABD0-8009AC14 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_WOOD_STATUE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4839,7 +4839,7 @@ asm static void item_getcheck_func_WOOD_STATUE() {
 #pragma pop
 
 
-/* 8009AC14-8009AC58 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_IRIAS_PENDANT__Fv                         */
+/* 8009AC14-8009AC58 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_IRIAS_PENDANT__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4850,7 +4850,7 @@ asm static void item_getcheck_func_IRIAS_PENDANT() {
 #pragma pop
 
 
-/* 8009AC58-8009AC9C 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_HORSE_FLUTE__Fv                           */
+/* 8009AC58-8009AC9C 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_HORSE_FLUTE__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4861,7 +4861,7 @@ asm static void item_getcheck_func_HORSE_FLUTE() {
 #pragma pop
 
 
-/* 8009AC9C-8009ACE0 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_RAFRELS_MEMO__Fv                          */
+/* 8009AC9C-8009ACE0 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_RAFRELS_MEMO__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4872,7 +4872,7 @@ asm static void item_getcheck_func_RAFRELS_MEMO() {
 #pragma pop
 
 
-/* 8009ACE0-8009AD24 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_ASHS_SCRIBBLING__Fv                       */
+/* 8009ACE0-8009AD24 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_ASHS_SCRIBBLING__Fv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4883,7 +4883,7 @@ asm static void item_getcheck_func_ASHS_SCRIBBLING() {
 #pragma pop
 
 
-/* 8009AD24-8009AD58 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_YELLOW2__Fv                        */
+/* 8009AD24-8009AD58 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_YELLOW2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4894,7 +4894,7 @@ asm static void item_getcheck_func_CHUCHU_YELLOW2() {
 #pragma pop
 
 
-/* 8009AD58-8009AD60 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE3__Fv                           */
+/* 8009AD58-8009AD60 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_OIL_BOTTLE3__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4905,7 +4905,7 @@ asm static void item_getcheck_func_OIL_BOTTLE3() {
 #pragma pop
 
 
-/* 8009AD60-8009AD68 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_SHOP_BEE_CHILD__Fv                        */
+/* 8009AD60-8009AD68 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_SHOP_BEE_CHILD__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4916,7 +4916,7 @@ asm static void item_getcheck_func_SHOP_BEE_CHILD() {
 #pragma pop
 
 
-/* 8009AD68-8009AD9C 0034+00 r=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_BLACK__Fv                          */
+/* 8009AD68-8009AD9C 0034+00 s=1 e=0 z=0  None .text      item_getcheck_func_CHUCHU_BLACK__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4927,7 +4927,7 @@ asm static void item_getcheck_func_CHUCHU_BLACK() {
 #pragma pop
 
 
-/* 8009AD9C-8009ADCC 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_DROP__Fv                            */
+/* 8009AD9C-8009ADCC 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LIGHT_DROP__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4938,7 +4938,7 @@ asm static void item_getcheck_func_LIGHT_DROP() {
 #pragma pop
 
 
-/* 8009ADCC-8009ADFC 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER__Fv                        */
+/* 8009ADCC-8009ADFC 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4949,7 +4949,7 @@ asm static void item_getcheck_func_DROP_CONTAINER() {
 #pragma pop
 
 
-/* 8009ADFC-8009AE2C 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER02__Fv                      */
+/* 8009ADFC-8009AE2C 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER02__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4960,7 +4960,7 @@ asm static void item_getcheck_func_DROP_CONTAINER02() {
 #pragma pop
 
 
-/* 8009AE2C-8009AE5C 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER03__Fv                      */
+/* 8009AE2C-8009AE5C 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_DROP_CONTAINER03__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4971,7 +4971,7 @@ asm static void item_getcheck_func_DROP_CONTAINER03() {
 #pragma pop
 
 
-/* 8009AE5C-8009AE64 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_FILLED_CONTAINER__Fv                      */
+/* 8009AE5C-8009AE64 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_FILLED_CONTAINER__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4982,7 +4982,7 @@ asm static void item_getcheck_func_FILLED_CONTAINER() {
 #pragma pop
 
 
-/* 8009AE64-8009AE6C 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_2__Fv                        */
+/* 8009AE64-8009AE6C 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4993,7 +4993,7 @@ asm static void item_getcheck_func_MIRROR_PIECE_2() {
 #pragma pop
 
 
-/* 8009AE6C-8009AE74 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_3__Fv                        */
+/* 8009AE6C-8009AE74 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_3__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5004,7 +5004,7 @@ asm static void item_getcheck_func_MIRROR_PIECE_3() {
 #pragma pop
 
 
-/* 8009AE74-8009AE7C 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_4__Fv                        */
+/* 8009AE74-8009AE7C 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_MIRROR_PIECE_4__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5015,7 +5015,7 @@ asm static void item_getcheck_func_MIRROR_PIECE_4() {
 #pragma pop
 
 
-/* 8009AE7C-8009AE98 001C+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_YELIA_POUCH__Fv                     */
+/* 8009AE7C-8009AE98 001C+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_YELIA_POUCH__Fv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5026,7 +5026,7 @@ asm static void item_getcheck_func_SMELL_YELIA_POUCH() {
 #pragma pop
 
 
-/* 8009AE98-8009AEA0 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_PUMPKIN__Fv                         */
+/* 8009AE98-8009AEA0 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_PUMPKIN__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5037,7 +5037,7 @@ asm static void item_getcheck_func_SMELL_PUMPKIN() {
 #pragma pop
 
 
-/* 8009AEA0-8009AEBC 001C+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_POH__Fv                             */
+/* 8009AEA0-8009AEBC 001C+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_POH__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5048,7 +5048,7 @@ asm static void item_getcheck_func_SMELL_POH() {
 #pragma pop
 
 
-/* 8009AEBC-8009AED8 001C+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_FISH__Fv                            */
+/* 8009AEBC-8009AED8 001C+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_FISH__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5059,7 +5059,7 @@ asm static void item_getcheck_func_SMELL_FISH() {
 #pragma pop
 
 
-/* 8009AED8-8009AEF4 001C+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_CHILDREN__Fv                        */
+/* 8009AED8-8009AEF4 001C+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_CHILDREN__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5070,7 +5070,7 @@ asm static void item_getcheck_func_SMELL_CHILDREN() {
 #pragma pop
 
 
-/* 8009AEF4-8009AF10 001C+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMELL_MEDICINE__Fv                        */
+/* 8009AEF4-8009AF10 001C+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMELL_MEDICINE__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5081,7 +5081,7 @@ asm static void item_getcheck_func_SMELL_MEDICINE() {
 #pragma pop
 
 
-/* 8009AF10-8009AF40 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_BEETLE__Fv                              */
+/* 8009AF10-8009AF40 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_BEETLE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5092,7 +5092,7 @@ asm static void item_getcheck_func_M_BEETLE() {
 #pragma pop
 
 
-/* 8009AF40-8009AF70 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_BEETLE__Fv                              */
+/* 8009AF40-8009AF70 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_BEETLE__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5103,7 +5103,7 @@ asm static void item_getcheck_func_F_BEETLE() {
 #pragma pop
 
 
-/* 8009AF70-8009AFA0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_BUTTERFLY__Fv                           */
+/* 8009AF70-8009AFA0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_BUTTERFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5114,7 +5114,7 @@ asm static void item_getcheck_func_M_BUTTERFLY() {
 #pragma pop
 
 
-/* 8009AFA0-8009AFD0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_BUTTERFLY__Fv                           */
+/* 8009AFA0-8009AFD0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_BUTTERFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5125,7 +5125,7 @@ asm static void item_getcheck_func_F_BUTTERFLY() {
 #pragma pop
 
 
-/* 8009AFD0-8009B000 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_STAG_BEETLE__Fv                         */
+/* 8009AFD0-8009B000 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_STAG_BEETLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5136,7 +5136,7 @@ asm static void item_getcheck_func_M_STAG_BEETLE() {
 #pragma pop
 
 
-/* 8009B000-8009B030 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_STAG_BEETLE__Fv                         */
+/* 8009B000-8009B030 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_STAG_BEETLE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5147,7 +5147,7 @@ asm static void item_getcheck_func_F_STAG_BEETLE() {
 #pragma pop
 
 
-/* 8009B030-8009B060 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_GRASSHOPPER__Fv                         */
+/* 8009B030-8009B060 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_GRASSHOPPER__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5158,7 +5158,7 @@ asm static void item_getcheck_func_M_GRASSHOPPER() {
 #pragma pop
 
 
-/* 8009B060-8009B090 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_GRASSHOPPER__Fv                         */
+/* 8009B060-8009B090 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_GRASSHOPPER__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5169,7 +5169,7 @@ asm static void item_getcheck_func_F_GRASSHOPPER() {
 #pragma pop
 
 
-/* 8009B090-8009B0C0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_NANAFUSHI__Fv                           */
+/* 8009B090-8009B0C0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_NANAFUSHI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5180,7 +5180,7 @@ asm static void item_getcheck_func_M_NANAFUSHI() {
 #pragma pop
 
 
-/* 8009B0C0-8009B0F0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_NANAFUSHI__Fv                           */
+/* 8009B0C0-8009B0F0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_NANAFUSHI__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5191,7 +5191,7 @@ asm static void item_getcheck_func_F_NANAFUSHI() {
 #pragma pop
 
 
-/* 8009B0F0-8009B120 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_DANGOMUSHI__Fv                          */
+/* 8009B0F0-8009B120 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_DANGOMUSHI__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5202,7 +5202,7 @@ asm static void item_getcheck_func_M_DANGOMUSHI() {
 #pragma pop
 
 
-/* 8009B120-8009B150 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_DANGOMUSHI__Fv                          */
+/* 8009B120-8009B150 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_DANGOMUSHI__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5213,7 +5213,7 @@ asm static void item_getcheck_func_F_DANGOMUSHI() {
 #pragma pop
 
 
-/* 8009B150-8009B180 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_MANTIS__Fv                              */
+/* 8009B150-8009B180 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_MANTIS__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5224,7 +5224,7 @@ asm static void item_getcheck_func_M_MANTIS() {
 #pragma pop
 
 
-/* 8009B180-8009B1B0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_MANTIS__Fv                              */
+/* 8009B180-8009B1B0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_MANTIS__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5235,7 +5235,7 @@ asm static void item_getcheck_func_F_MANTIS() {
 #pragma pop
 
 
-/* 8009B1B0-8009B1E0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_LADYBUG__Fv                             */
+/* 8009B1B0-8009B1E0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_LADYBUG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5246,7 +5246,7 @@ asm static void item_getcheck_func_M_LADYBUG() {
 #pragma pop
 
 
-/* 8009B1E0-8009B210 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_LADYBUG__Fv                             */
+/* 8009B1E0-8009B210 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_LADYBUG__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5257,7 +5257,7 @@ asm static void item_getcheck_func_F_LADYBUG() {
 #pragma pop
 
 
-/* 8009B210-8009B240 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_SNAIL__Fv                               */
+/* 8009B210-8009B240 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_SNAIL__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5268,7 +5268,7 @@ asm static void item_getcheck_func_M_SNAIL() {
 #pragma pop
 
 
-/* 8009B240-8009B270 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_SNAIL__Fv                               */
+/* 8009B240-8009B270 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_SNAIL__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5279,7 +5279,7 @@ asm static void item_getcheck_func_F_SNAIL() {
 #pragma pop
 
 
-/* 8009B270-8009B2A0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_DRAGONFLY__Fv                           */
+/* 8009B270-8009B2A0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_DRAGONFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5290,7 +5290,7 @@ asm static void item_getcheck_func_M_DRAGONFLY() {
 #pragma pop
 
 
-/* 8009B2A0-8009B2D0 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_DRAGONFLY__Fv                           */
+/* 8009B2A0-8009B2D0 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_DRAGONFLY__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5301,7 +5301,7 @@ asm static void item_getcheck_func_F_DRAGONFLY() {
 #pragma pop
 
 
-/* 8009B2D0-8009B300 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_ANT__Fv                                 */
+/* 8009B2D0-8009B300 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_ANT__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5312,7 +5312,7 @@ asm static void item_getcheck_func_M_ANT() {
 #pragma pop
 
 
-/* 8009B300-8009B330 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_ANT__Fv                                 */
+/* 8009B300-8009B330 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_ANT__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5323,7 +5323,7 @@ asm static void item_getcheck_func_F_ANT() {
 #pragma pop
 
 
-/* 8009B330-8009B360 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_M_MAYFLY__Fv                              */
+/* 8009B330-8009B360 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_M_MAYFLY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5334,7 +5334,7 @@ asm static void item_getcheck_func_M_MAYFLY() {
 #pragma pop
 
 
-/* 8009B360-8009B390 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_F_MAYFLY__Fv                              */
+/* 8009B360-8009B390 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_F_MAYFLY__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5345,7 +5345,7 @@ asm static void item_getcheck_func_F_MAYFLY() {
 #pragma pop
 
 
-/* 8009B390-8009B3A0 0010+00 r=1 e=0 z=0  None .text      item_getcheck_func_POU_SPIRIT__Fv                            */
+/* 8009B390-8009B3A0 0010+00 s=1 e=0 z=0  None .text      item_getcheck_func_POU_SPIRIT__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5356,7 +5356,7 @@ asm static void item_getcheck_func_POU_SPIRIT() {
 #pragma pop
 
 
-/* 8009B3A0-8009B3E4 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_ANCIENT_DOCUMENT__Fv                      */
+/* 8009B3A0-8009B3E4 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_ANCIENT_DOCUMENT__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5367,7 +5367,7 @@ asm static void item_getcheck_func_ANCIENT_DOCUMENT() {
 #pragma pop
 
 
-/* 8009B3E4-8009B428 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_AIR_LETTER__Fv                            */
+/* 8009B3E4-8009B428 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_AIR_LETTER__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5378,7 +5378,7 @@ asm static void item_getcheck_func_AIR_LETTER() {
 #pragma pop
 
 
-/* 8009B428-8009B46C 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_ANCIENT_DOCUMENT2__Fv                     */
+/* 8009B428-8009B46C 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_ANCIENT_DOCUMENT2__Fv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5389,7 +5389,7 @@ asm static void item_getcheck_func_ANCIENT_DOCUMENT2() {
 #pragma pop
 
 
-/* 8009B46C-8009B4B0 0044+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV7_DUNGEON_EXIT__Fv                      */
+/* 8009B46C-8009B4B0 0044+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV7_DUNGEON_EXIT__Fv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5400,7 +5400,7 @@ asm static void item_getcheck_func_LV7_DUNGEON_EXIT() {
 #pragma pop
 
 
-/* 8009B4B0-8009B4B8 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_LINKS_SAVINGS__Fv                         */
+/* 8009B4B0-8009B4B8 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_LINKS_SAVINGS__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5411,7 +5411,7 @@ asm static void item_getcheck_func_LINKS_SAVINGS() {
 #pragma pop
 
 
-/* 8009B4B8-8009B4C0 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_SMALL_KEY2__Fv                            */
+/* 8009B4B8-8009B4C0 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_SMALL_KEY2__Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5422,7 +5422,7 @@ asm static void item_getcheck_func_SMALL_KEY2() {
 #pragma pop
 
 
-/* 8009B4C0-8009B4C8 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE1__Fv                             */
+/* 8009B4C0-8009B4C8 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE1__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5433,7 +5433,7 @@ asm static void item_getcheck_func_POU_FIRE1() {
 #pragma pop
 
 
-/* 8009B4C8-8009B4D0 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE2__Fv                             */
+/* 8009B4C8-8009B4D0 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE2__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5444,7 +5444,7 @@ asm static void item_getcheck_func_POU_FIRE2() {
 #pragma pop
 
 
-/* 8009B4D0-8009B4D8 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE3__Fv                             */
+/* 8009B4D0-8009B4D8 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE3__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5455,7 +5455,7 @@ asm static void item_getcheck_func_POU_FIRE3() {
 #pragma pop
 
 
-/* 8009B4D8-8009B4E0 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE4__Fv                             */
+/* 8009B4D8-8009B4E0 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_POU_FIRE4__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5466,7 +5466,7 @@ asm static void item_getcheck_func_POU_FIRE4() {
 #pragma pop
 
 
-/* 8009B4E0-8009B4E8 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_BOSSRIDER_KEY__Fv                         */
+/* 8009B4E0-8009B4E8 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_BOSSRIDER_KEY__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5477,7 +5477,7 @@ asm static void item_getcheck_func_BOSSRIDER_KEY() {
 #pragma pop
 
 
-/* 8009B4E8-8009B518 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_TOMATO_PUREE__Fv                          */
+/* 8009B4E8-8009B518 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_TOMATO_PUREE__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5488,7 +5488,7 @@ asm static void item_getcheck_func_TOMATO_PUREE() {
 #pragma pop
 
 
-/* 8009B518-8009B548 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_TASTE__Fv                                 */
+/* 8009B518-8009B548 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_TASTE__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5499,7 +5499,7 @@ asm static void item_getcheck_func_TASTE() {
 #pragma pop
 
 
-/* 8009B548-8009B578 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV5_BOSS_KEY__Fv                          */
+/* 8009B548-8009B578 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV5_BOSS_KEY__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5510,7 +5510,7 @@ asm static void item_getcheck_func_LV5_BOSS_KEY() {
 #pragma pop
 
 
-/* 8009B578-8009B580 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_SURFBOARD__Fv                             */
+/* 8009B578-8009B580 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_SURFBOARD__Fv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5521,7 +5521,7 @@ asm static void item_getcheck_func_SURFBOARD() {
 #pragma pop
 
 
-/* 8009B580-8009B588 0008+00 r=1 e=0 z=0  None .text      item_getcheck_func_KANTERA2__Fv                              */
+/* 8009B580-8009B588 0008+00 s=1 e=0 z=0  None .text      item_getcheck_func_KANTERA2__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5532,7 +5532,7 @@ asm static void item_getcheck_func_KANTERA2() {
 #pragma pop
 
 
-/* 8009B588-8009B5B8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES1__Fv                        */
+/* 8009B588-8009B5B8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES1__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5543,7 +5543,7 @@ asm static void item_getcheck_func_L2_KEY_PIECES1() {
 #pragma pop
 
 
-/* 8009B5B8-8009B5E8 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES2__Fv                        */
+/* 8009B5B8-8009B5E8 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES2__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5554,7 +5554,7 @@ asm static void item_getcheck_func_L2_KEY_PIECES2() {
 #pragma pop
 
 
-/* 8009B5E8-8009B618 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES3__Fv                        */
+/* 8009B5E8-8009B618 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_L2_KEY_PIECES3__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5565,7 +5565,7 @@ asm static void item_getcheck_func_L2_KEY_PIECES3() {
 #pragma pop
 
 
-/* 8009B618-8009B648 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_KEY_OF_CARAVAN__Fv                        */
+/* 8009B618-8009B648 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_KEY_OF_CARAVAN__Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5576,7 +5576,7 @@ asm static void item_getcheck_func_KEY_OF_CARAVAN() {
 #pragma pop
 
 
-/* 8009B648-8009B678 0030+00 r=1 e=0 z=0  None .text      item_getcheck_func_LV2_BOSS_KEY__Fv                          */
+/* 8009B648-8009B678 0030+00 s=1 e=0 z=0  None .text      item_getcheck_func_LV2_BOSS_KEY__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5587,7 +5587,7 @@ asm static void item_getcheck_func_LV2_BOSS_KEY() {
 #pragma pop
 
 
-/* 8009B678-8009B688 0010+00 r=1 e=0 z=0  None .text      item_getcheck_func_KEY_OF_FILONE__Fv                         */
+/* 8009B678-8009B688 0010+00 s=1 e=0 z=0  None .text      item_getcheck_func_KEY_OF_FILONE__Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5598,7 +5598,7 @@ asm static void item_getcheck_func_KEY_OF_FILONE() {
 #pragma pop
 
 
-/* 8009B688-8009B6D4 004C+00 r=1 e=0 z=0  None .text      isBomb__FUc                                                  */
+/* 8009B688-8009B6D4 004C+00 s=1 e=0 z=0  None .text      isBomb__FUc                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5609,7 +5609,7 @@ asm static void isBomb(u8 param_0) {
 #pragma pop
 
 
-/* 8009B6D4-8009B708 0034+00 r=1 e=0 z=0  None .text      isArrow__FUc                                                 */
+/* 8009B6D4-8009B708 0034+00 s=1 e=0 z=0  None .text      isArrow__FUc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5620,7 +5620,7 @@ asm static void isArrow(u8 param_0) {
 #pragma pop
 
 
-/* 8009B708-8009B77C 0074+00 r=5 e=4 z=1  None .text      isBottleItem__FUc                                            */
+/* 8009B708-8009B77C 0074+00 s=0 e=4 z=0  None .text      isBottleItem__FUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5631,7 +5631,7 @@ asm void isBottleItem(u8 param_0) {
 #pragma pop
 
 
-/* 8009B77C-8009B79C 0020+00 r=2 e=2 z=0  None .text      isHeart__FUc                                                 */
+/* 8009B77C-8009B79C 0020+00 s=0 e=2 z=0  None .text      isHeart__FUc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5642,7 +5642,7 @@ asm void isHeart(u8 param_0) {
 #pragma pop
 
 
-/* 8009B79C-8009B7C4 0028+00 r=1 e=0 z=1  None .text      isInsect__FUc                                                */
+/* 8009B79C-8009B7C4 0028+00 s=0 e=0 z=0  None .text      isInsect__FUc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5654,7 +5654,7 @@ asm void isInsect(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 8037B0D0-8037B0D8 0007+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8037B0D0-8037B0D8 0007+01 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -5663,7 +5663,7 @@ SECTION_DEAD char const* const stringBase_8037B0D0 = "D_MN08";
 SECTION_DEAD static char const* const pad_8037B0D7 = "";
 #pragma pop
 
-/* 8009B7C4-8009B940 017C+00 r=3 e=3 z=0  None .text      check_itemno__Fi                                             */
+/* 8009B7C4-8009B940 017C+00 s=0 e=3 z=0  None .text      check_itemno__Fi                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5674,7 +5674,7 @@ asm void check_itemno(int param_0) {
 #pragma pop
 
 
-/* 8009B940-8009BBD8 0298+00 r=11 e=0 z=0  None .text      addBombCount__FUcUc                                          */
+/* 8009B940-8009BBD8 0298+00 s=11 e=0 z=0  None .text      addBombCount__FUcUc                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5686,6 +5686,6 @@ asm static void addBombCount(u8 param_0, u8 param_1) {
 
 
 /* ############################################################################################## */
-/* 80450F90-80450F98 0004+04 r=2 e=2 z=0  None .sbss      mData__12dEnemyItem_c                                        */
+/* 80450F90-80450F98 0004+04 s=0 e=2 z=0  None .sbss      mData__12dEnemyItem_c                                        */
 u8 mData__12dEnemyItem_c[4 + 4 /* padding */];
 

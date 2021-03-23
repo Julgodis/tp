@@ -7,7 +7,7 @@ lbl_80D02BE0:
 /* 80D02BF4 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80D02BF8 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80D02BFC 0000001C  38 7E 05 A8 */	addi r3, r30, 0x5a8
-/* 80D02C00 00000020  4B FF F6 19 */	bl eventUpdate__17dEvLib_callback_cFv
+/* 80D02C00 00000020  4B FF F6 19 */	bl _unresolved
 /* 80D02C04 00000024  7F C3 F3 78 */	mr r3, r30
 /* 80D02C08 00000028  48 00 00 4D */	bl move__10daSyRock_cFv
 /* 80D02C0C 0000002C  88 1E 09 9C */	lbz r0, 0x99c(r30)

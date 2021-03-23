@@ -60,7 +60,7 @@ extern "C" extern void* __vt__8cM3dGLin[3];
 // 
 
 /* ############################################################################################## */
-/* 803C3FF8-803C4020 000C+1C r=2 e=0 z=0  None .data      __vt__8cM3dGCps                                              */
+/* 803C3FF8-803C4020 000C+1C s=2 e=0 z=0  None .data      __vt__8cM3dGCps                                              */
 SECTION_DATA static void* __vt__8cM3dGCps[3 + 7 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -75,7 +75,7 @@ SECTION_DATA static void* __vt__8cM3dGCps[3 + 7 /* padding */] = {
 	NULL,
 };
 
-/* 8026EF88-8026EFA4 001C+00 r=25 e=5 z=20  None .text      __ct__8cM3dGCpsFv                                            */
+/* 8026EF88-8026EFA4 001C+00 s=0 e=5 z=0  None .text      __ct__8cM3dGCpsFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ asm cM3dGCps::cM3dGCps() {
 #pragma pop
 
 
-/* 8026EFA4-8026F000 005C+00 r=14 e=7 z=6  None .text      __dt__8cM3dGCpsFv                                            */
+/* 8026EFA4-8026F000 005C+00 s=1 e=7 z=0  None .text      __dt__8cM3dGCpsFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ asm cM3dGCps::~cM3dGCps() {
 #pragma pop
 
 
-/* 8026F000-8026F03C 003C+00 r=13 e=2 z=10  None .text      Set__8cM3dGCpsFRC4cXyzRC4cXyzf                               */
+/* 8026F000-8026F03C 003C+00 s=1 e=2 z=0  None .text      Set__8cM3dGCpsFRC4cXyzRC4cXyzf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm void cM3dGCps::Set(cXyz const& param_0, cXyz const& param_1, f32 param_2) {
 #pragma pop
 
 
-/* 8026F03C-8026F080 0044+00 r=11 e=1 z=10  None .text      Set__8cM3dGCpsFRC9cM3dGCpsS                                  */
+/* 8026F03C-8026F080 0044+00 s=0 e=1 z=0  None .text      Set__8cM3dGCpsFRC9cM3dGCpsS                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +119,7 @@ asm void cM3dGCps::Set(cM3dGCpsS const& param_0) {
 #pragma pop
 
 
-/* 8026F080-8026F0A8 0028+00 r=1 e=1 z=0  None .text      SetCps__8cM3dGCpsFRC8cM3dGCps                                */
+/* 8026F080-8026F0A8 0028+00 s=0 e=1 z=0  None .text      SetCps__8cM3dGCpsFRC8cM3dGCps                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

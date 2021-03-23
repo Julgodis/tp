@@ -5,8 +5,8 @@ lbl_80AAA124:
 /* 80AAA130 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80AAA134 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80AAA138 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80AAA13C 00000018  3C 60 00 00 */	lis r3, m__18daNpc_Post_Param_c@ha /* 80AAD1EC */
-/* 80AAA140 0000001C  3B E3 00 00 */	addi r31, r3, m__18daNpc_Post_Param_c@l /* 80AAD1EC */
+/* 80AAA13C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AAA140 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80AAA144 00000020  C0 3F 00 B8 */	lfs f1, 0xb8(r31)
 /* 80AAA148 00000024  C0 1E 0D F4 */	lfs f0, 0xdf4(r30)
 /* 80AAA14C 00000028  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -22,12 +22,12 @@ lbl_80AAA124:
 /* 80AAA174 00000050  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80AAA178 00000054  38 7E 09 30 */	addi r3, r30, 0x930
 /* 80AAA17C 00000058  38 81 00 08 */	addi r4, r1, 8
-/* 80AAA180 0000005C  4B FF EA 79 */	bl SetPos__11cBgS_GndChkFPC4cXyz
-/* 80AAA184 00000060  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80AAA188 00000064  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80AAA180 0000005C  4B FF EA 79 */	bl _unresolved
+/* 80AAA184 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AAA188 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AAA18C 00000068  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80AAA190 0000006C  38 9E 09 30 */	addi r4, r30, 0x930
-/* 80AAA194 00000070  4B FF EA 65 */	bl GroundCross__4cBgSFP11cBgS_GndChk
+/* 80AAA194 00000070  4B FF EA 65 */	bl _unresolved
 /* 80AAA198 00000074  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80AAA19C 00000078  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 80AAA1A0 0000007C  FC 20 08 18 */	frsp f1, f1

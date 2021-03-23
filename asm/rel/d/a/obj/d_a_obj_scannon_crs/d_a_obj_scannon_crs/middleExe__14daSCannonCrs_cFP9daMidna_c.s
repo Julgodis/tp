@@ -14,20 +14,20 @@ lbl_80CC9CA4:
 lbl_80CC9CD4:
 /* 80CC9CD4 00000000  88 1E 06 4E */	lbz r0, 0x64e(r30)
 /* 80CC9CD8 00000004  1C 80 00 0C */	mulli r4, r0, 0xc
-/* 80CC9CDC 00000008  3C 60 00 00 */	lis r3, s_exeProc__14daSCannonCrs_c@ha /* 80CCB1D0 */
-/* 80CC9CE0 0000000C  38 03 00 00 */	addi r0, r3, s_exeProc__14daSCannonCrs_c@l /* 80CCB1D0 */
+/* 80CC9CDC 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC9CE0 0000000C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CC9CE4 00000010  7C 60 22 14 */	add r3, r0, r4
-/* 80CC9CE8 00000014  4B FF F9 71 */	bl __ptmf_test
+/* 80CC9CE8 00000014  4B FF F9 71 */	bl _unresolved
 /* 80CC9CEC 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC9CF0 0000001C  41 82 00 28 */	beq lbl_80CC9D18
 /* 80CC9CF4 00000020  7F C3 F3 78 */	mr r3, r30
 /* 80CC9CF8 00000024  7F E4 FB 78 */	mr r4, r31
 /* 80CC9CFC 00000028  88 1E 06 4E */	lbz r0, 0x64e(r30)
 /* 80CC9D00 0000002C  1C C0 00 0C */	mulli r6, r0, 0xc
-/* 80CC9D04 00000030  3C A0 00 00 */	lis r5, s_exeProc__14daSCannonCrs_c@ha /* 80CCB1D0 */
-/* 80CC9D08 00000034  38 05 00 00 */	addi r0, r5, s_exeProc__14daSCannonCrs_c@l /* 80CCB1D0 */
+/* 80CC9D04 00000030  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CC9D08 00000034  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 80CC9D0C 00000038  7D 80 32 14 */	add r12, r0, r6
-/* 80CC9D10 0000003C  4B FF F9 49 */	bl __ptmf_scall
+/* 80CC9D10 0000003C  4B FF F9 49 */	bl _unresolved
 /* 80CC9D14 00000040  60 00 00 00 */	nop 
 lbl_80CC9D18:
 /* 80CC9D18 00000000  A0 1E 00 FA */	lhz r0, 0xfa(r30)
@@ -40,9 +40,9 @@ lbl_80CC9D30:
 /* 80CC9D30 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80CC9D34 00000004  48 00 0B 15 */	bl setModelMtx__14daSCannonCrs_cFv
 /* 80CC9D38 00000008  38 7E 05 CC */	addi r3, r30, 0x5cc
-/* 80CC9D3C 0000000C  4B FF F9 1D */	bl play__14mDoExt_baseAnmFv
+/* 80CC9D3C 0000000C  4B FF F9 1D */	bl _unresolved
 /* 80CC9D40 00000010  38 7E 05 E8 */	addi r3, r30, 0x5e8
-/* 80CC9D44 00000014  4B FF F9 15 */	bl play__14mDoExt_baseAnmFv
+/* 80CC9D44 00000014  4B FF F9 15 */	bl _unresolved
 /* 80CC9D48 00000018  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CC9D4C 0000001C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80CC9D50 00000020  80 01 00 14 */	lwz r0, 0x14(r1)

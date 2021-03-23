@@ -9,23 +9,23 @@ lbl_80CA0034:
 /* 80CA0050 0000001C  88 03 02 F0 */	lbz r0, 0x2f0(r3)
 /* 80CA0054 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80CA0058 00000024  40 82 00 48 */	bne lbl_80CA00A0
-/* 80CA005C 00000028  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80CA0060 0000002C  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80CA005C 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CA0060 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CA0064 00000030  C0 3E 00 38 */	lfs f1, 0x38(r30)
 /* 80CA0068 00000034  C0 5E 00 3C */	lfs f2, 0x3c(r30)
 /* 80CA006C 00000038  C0 7E 00 40 */	lfs f3, 0x40(r30)
-/* 80CA0070 0000003C  4B FF F3 29 */	bl PSMTXTrans
-/* 80CA0074 00000040  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80CA0078 00000044  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80CA0070 0000003C  4B FF F3 29 */	bl _unresolved
+/* 80CA0074 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CA0078 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CA007C 00000048  38 80 80 00 */	li r4, -32768
-/* 80CA0080 0000004C  4B FF F3 19 */	bl mDoMtx_YrotM__FPA4_fs
-/* 80CA0084 00000050  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80CA0088 00000054  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80CA0080 0000004C  4B FF F3 19 */	bl _unresolved
+/* 80CA0084 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CA0088 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CA008C 00000058  38 9E 00 04 */	addi r4, r30, 4
-/* 80CA0090 0000005C  4B FF F3 09 */	bl PSMTXCopy
+/* 80CA0090 0000005C  4B FF F3 09 */	bl _unresolved
 /* 80CA0094 00000060  7F E3 FB 78 */	mr r3, r31
 /* 80CA0098 00000064  38 9E 00 04 */	addi r4, r30, 4
-/* 80CA009C 00000068  4B FF F2 FD */	bl entryObj__6dMdl_cFP10dMdl_obj_c
+/* 80CA009C 00000068  4B FF F2 FD */	bl _unresolved
 lbl_80CA00A0:
 /* 80CA00A0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CA00A4 00000004  83 C1 00 08 */	lwz r30, 8(r1)

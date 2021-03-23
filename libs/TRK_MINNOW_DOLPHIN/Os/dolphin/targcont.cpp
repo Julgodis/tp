@@ -28,7 +28,7 @@ extern "C" void ReserveEXI2Port(); // 1
 // Declarations:
 // 
 
-/* 8037214C-80372180 0034+00 r=2 e=2 z=0  None .text      TRKTargetContinue                                            */
+/* 8037214C-80372180 0034+00 s=0 e=2 z=0  None .text      TRKTargetContinue                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

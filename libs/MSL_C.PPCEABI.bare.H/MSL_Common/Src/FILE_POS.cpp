@@ -30,7 +30,7 @@ extern "C" extern u8 errno[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80365BB4-80365C20 006C+00 r=2 e=2 z=0  None .text      fseek                                                        */
+/* 80365BB4-80365C20 006C+00 s=0 e=2 z=0  None .text      fseek                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +41,7 @@ extern "C" asm void fseek() {
 #pragma pop
 
 
-/* 80365C20-80365E90 0270+00 r=1 e=0 z=0  None .text      _fseek                                                       */
+/* 80365C20-80365E90 0270+00 s=1 e=0 z=0  None .text      _fseek                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ extern "C" asm static void _fseek() {
 #pragma pop
 
 
-/* 80365E90-80365F74 00E4+00 r=2 e=2 z=0  None .text      ftell                                                        */
+/* 80365E90-80365F74 00E4+00 s=0 e=2 z=0  None .text      ftell                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

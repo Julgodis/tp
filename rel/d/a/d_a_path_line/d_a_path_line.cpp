@@ -12,35 +12,24 @@
 // 
 
 
-extern "C" extern void* g_profile_PATH_LINE[13];
+extern "C" extern u8 g_profile_PATH_LINE[52];
 
 // 
 // External References:
 // 
 
 
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80485780-804857B4 0034+00 r=1 e=0 z=1  None .data      g_profile_PATH_LINE                                          */
-SECTION_DATA void* g_profile_PATH_LINE[13] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03090000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000574,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02F60000,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
-	/* 12   */ (void*)NULL,
+/* 80485780-804857B4 0034+00 s=0 e=0 z=0  None .data      g_profile_PATH_LINE                                          */
+SECTION_DATA u8 g_profile_PATH_LINE[52] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x09, 0xFF, 0xFD, 0x03, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x74, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0xF6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
 };
 

@@ -6,30 +6,30 @@ lbl_809ADE6C:
 /* 809ADE7C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 809ADE80 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 809ADE84 00000018  48 00 16 51 */	bl __ct__8daNpcF_cFv
-/* 809ADE88 0000001C  3C 60 00 00 */	lis r3, __vt__12daNpcDrSol_c@ha /* 809AFB68 */
-/* 809ADE8C 00000020  38 03 00 00 */	addi r0, r3, __vt__12daNpcDrSol_c@l /* 809AFB68 */
+/* 809ADE88 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADE8C 00000020  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809ADE90 00000024  90 1F 0B 44 */	stw r0, 0xb44(r31)
 /* 809ADE94 00000028  38 7F 0B 48 */	addi r3, r31, 0xb48
-/* 809ADE98 0000002C  4B FF FF 41 */	bl __ct__10Z2CreatureFv
+/* 809ADE98 0000002C  4B FF FF 41 */	bl _unresolved
 /* 809ADE9C 00000030  3B DF 0B E0 */	addi r30, r31, 0xbe0
 /* 809ADEA0 00000034  7F C3 F3 78 */	mr r3, r30
-/* 809ADEA4 00000038  4B FF FF 35 */	bl __ct__12dCcD_GObjInfFv
-/* 809ADEA8 0000003C  3C 60 00 00 */	lis r3, __vt__14cCcD_ShapeAttr@ha /* 803C36D0 */
-/* 809ADEAC 00000040  38 03 00 00 */	addi r0, r3, __vt__14cCcD_ShapeAttr@l /* 803C36D0 */
+/* 809ADEA4 00000038  4B FF FF 35 */	bl _unresolved
+/* 809ADEA8 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADEAC 00000040  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809ADEB0 00000044  90 1E 01 20 */	stw r0, 0x120(r30)
-/* 809ADEB4 00000048  3C 60 00 00 */	lis r3, __vt__8cM3dGAab@ha /* 809AFC1C */
-/* 809ADEB8 0000004C  38 03 00 00 */	addi r0, r3, __vt__8cM3dGAab@l /* 809AFC1C */
+/* 809ADEB4 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADEB8 0000004C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809ADEBC 00000050  90 1E 01 1C */	stw r0, 0x11c(r30)
-/* 809ADEC0 00000054  3C 60 00 00 */	lis r3, __vt__8cM3dGCyl@ha /* 809AFC10 */
-/* 809ADEC4 00000058  38 03 00 00 */	addi r0, r3, __vt__8cM3dGCyl@l /* 809AFC10 */
+/* 809ADEC0 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADEC4 00000058  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 809ADEC8 0000005C  90 1E 01 38 */	stw r0, 0x138(r30)
-/* 809ADECC 00000060  3C 60 00 00 */	lis r3, __vt__12cCcD_CylAttr@ha /* 803C35A4 */
-/* 809ADED0 00000064  38 63 00 00 */	addi r3, r3, __vt__12cCcD_CylAttr@l /* 803C35A4 */
+/* 809ADECC 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADED0 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809ADED4 00000068  90 7E 01 20 */	stw r3, 0x120(r30)
 /* 809ADED8 0000006C  38 03 00 58 */	addi r0, r3, 0x58
 /* 809ADEDC 00000070  90 1E 01 38 */	stw r0, 0x138(r30)
-/* 809ADEE0 00000074  3C 60 00 00 */	lis r3, __vt__8dCcD_Cyl@ha /* 803AC050 */
-/* 809ADEE4 00000078  38 63 00 00 */	addi r3, r3, __vt__8dCcD_Cyl@l /* 803AC050 */
+/* 809ADEE0 00000074  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809ADEE4 00000078  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809ADEE8 0000007C  90 7E 00 3C */	stw r3, 0x3c(r30)
 /* 809ADEEC 00000080  38 03 00 2C */	addi r0, r3, 0x2c
 /* 809ADEF0 00000084  90 1E 01 20 */	stw r0, 0x120(r30)

@@ -22,71 +22,14 @@ struct daObjBoard_c {
 	/* 8057BCC8 */ void Delete();
 };
 
-struct cXyz {
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CE70 */ void scaleM(cXyz const&);
-	/* 8000CF44 */ void ZXYrotM(csXyz const&);
-};
-
-struct fopAc_ac_c {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_control_c {
-	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
-};
-
-struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct dBgW {
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct cBgW_BgId {
-	/* 802681D4 */ void ChkUsed() const;
-};
-
 // 
 // Forward References:
 // 
 
-static void daObjBoard_create1st(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGDelete(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGExecute(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGDraw(daObjBoard_c*); // 2
+void daObjBoard_create1st(daObjBoard_c*); // 2
+void daObjBoard_MoveBGDelete(daObjBoard_c*); // 2
+void daObjBoard_MoveBGExecute(daObjBoard_c*); // 2
+void daObjBoard_MoveBGDraw(daObjBoard_c*); // 2
 
 extern "C" void initBaseMtx__12daObjBoard_cFv(); // 1
 extern "C" void setBaseMtx__12daObjBoard_cFv(); // 1
@@ -96,50 +39,33 @@ extern "C" void create1st__12daObjBoard_cFv(); // 1
 extern "C" void Execute__12daObjBoard_cFPPA3_A4_f(); // 1
 extern "C" void Draw__12daObjBoard_cFv(); // 1
 extern "C" void Delete__12daObjBoard_cFv(); // 1
-extern "C" static void daObjBoard_create1st__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGDelete__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGExecute__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGDraw__FP12daObjBoard_c(); // 1
-extern "C" extern void* g_profile_Obj_Cboard[12];
+extern "C" void daObjBoard_create1st__FP12daObjBoard_c(); // 1
+extern "C" void daObjBoard_MoveBGDelete__FP12daObjBoard_c(); // 1
+extern "C" void daObjBoard_MoveBGExecute__FP12daObjBoard_c(); // 1
+extern "C" void daObjBoard_MoveBGDraw__FP12daObjBoard_c(); // 1
+extern "C" extern u32 const lit_3636;
+extern "C" extern u8 const struct_8057BDD4[36];
+extern "C" extern u8 const struct_8057BDF8[40];
+extern "C" extern u8 l_arcName[4];
+extern "C" extern u8 l_dzbName[20];
+extern "C" extern u8 l_cull_box[24];
+extern "C" extern u8 lit_3712[64];
+extern "C" extern u8 daObjBoard_METHODS[32];
+extern "C" extern u8 g_profile_Obj_Cboard[48];
+extern "C" extern void* __vt__12daObjBoard_c[10];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 8057B958-8057B978 0020+00 r=1 e=0 z=0  None .text      initBaseMtx__12daObjBoard_cFv                                */
+/* 8057B958-8057B978 0020+00 s=1 e=0 z=0  None .text      initBaseMtx__12daObjBoard_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +76,7 @@ asm void daObjBoard_c::initBaseMtx() {
 #pragma pop
 
 
-/* 8057B978-8057B9C8 0050+00 r=1 e=0 z=0  None .text      setBaseMtx__12daObjBoard_cFv                                 */
+/* 8057B978-8057B9C8 0050+00 s=1 e=0 z=0  None .text      setBaseMtx__12daObjBoard_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,49 +87,7 @@ asm void daObjBoard_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8057BDD0-8057BDD4 0004+00 r=1 e=0 z=0  None .rodata    @3636                                                        */
-SECTION_RODATA static u32 const lit_3636 = 0x41200000;
-
-/* 8057BDD4-8057BDF8 0024+00 r=2 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8057BDD4[36] = {
-	/* 8057BDD4 000A stringBase_8057BDD4 @stringBase0 */
-	0x4F, 0x62, 0x6A, 0x5F, 0x42, 0x6F, 0x61, 0x72, 0x64, 0x00,
-	/* 8057BDDE 000D data_8057BDDE None */
-	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x30, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-	/* 8057BDEB 000D data_8057BDEB None */
-	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x31, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-};
-
-/* 8057BDF8-8057BE20 0028+00 r=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8057BDF8[40] = {
-	/* 8057BDF8 000D data_8057BDF8 None */
-	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x32, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-	/* 8057BE05 000D data_8057BE05 None */
-	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x33, 0x2E, 0x64, 0x7A, 0x62, 0x00,
-	/* 8057BE12 000E data_8057BE12 None */
-	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x34, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x00,
-};
-
-/* 8057BE20-8057BE24 0004+00 r=2 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_8057BDD4)+0x0) /* @stringBase0 */;
-
-/* 8057BE24-8057BE38 0014+00 r=1 e=0 z=0  None .data      l_dzbName                                                    */
-SECTION_DATA static void* l_dzbName[5] = {
-	/* 0    */ (void*)(((char*)&struct_8057BDD4)+0xA) /* None */,
-	/* 1    */ (void*)(((char*)&struct_8057BDD4)+0x17) /* None */,
-	/* 2    */ (void*)(((char*)&struct_8057BDF8)+0x0) /* None */,
-	/* 3    */ (void*)(((char*)&struct_8057BDF8)+0xD) /* None */,
-	/* 4    */ (void*)(((char*)&struct_8057BDF8)+0x1A) /* None */,
-};
-
-/* 8057BE38-8057BE50 0018+00 r=1 e=0 z=0  None .data      l_cull_box                                                   */
-SECTION_DATA static u8 l_cull_box[24] = {
-	0xC2, 0xC8, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
-	0x41, 0x20, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
-};
-
-/* 8057B9C8-8057BA70 00A8+00 r=1 e=0 z=0  None .text      Create__12daObjBoard_cFv                                     */
+/* 8057B9C8-8057BA70 00A8+00 s=0 e=0 z=0  None .text      Create__12daObjBoard_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +98,7 @@ asm void daObjBoard_c::Create() {
 #pragma pop
 
 
-/* 8057BA70-8057BA78 0008+00 r=1 e=0 z=0  None .text      CreateHeap__12daObjBoard_cFv                                 */
+/* 8057BA70-8057BA78 0008+00 s=0 e=0 z=0  None .text      CreateHeap__12daObjBoard_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +109,7 @@ asm void daObjBoard_c::CreateHeap() {
 #pragma pop
 
 
-/* 8057BA78-8057BB74 00FC+00 r=1 e=0 z=0  None .text      create1st__12daObjBoard_cFv                                  */
+/* 8057BA78-8057BB74 00FC+00 s=1 e=0 z=0  None .text      create1st__12daObjBoard_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,28 +120,7 @@ asm void daObjBoard_c::create1st() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8057BE50-8057BE90 0040+00 r=1 e=0 z=0  None .data      @3712                                                        */
-SECTION_DATA static void* lit_3712[16] = {
-	/* 0    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0xB8),
-	/* 1    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x44),
-	/* 2    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0xB8),
-	/* 3    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x44),
-	/* 4    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0xB8),
-	/* 5    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x44),
-	/* 6    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0xB8),
-	/* 7    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x44),
-	/* 8    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0xB8),
-	/* 9    */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 10   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 11   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 12   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 13   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 14   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x128),
-	/* 15   */ (void*)(((char*)Execute__12daObjBoard_cFPPA3_A4_f)+0x44),
-};
-
-/* 8057BB74-8057BCC0 014C+00 r=2 e=0 z=0  None .text      Execute__12daObjBoard_cFPPA3_A4_f                            */
+/* 8057BB74-8057BCC0 014C+00 s=0 e=0 z=0  None .text      Execute__12daObjBoard_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +131,7 @@ asm void daObjBoard_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 8057BCC0-8057BCC8 0008+00 r=1 e=0 z=0  None .text      Draw__12daObjBoard_cFv                                       */
+/* 8057BCC0-8057BCC8 0008+00 s=0 e=0 z=0  None .text      Draw__12daObjBoard_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +142,7 @@ asm void daObjBoard_c::Draw() {
 #pragma pop
 
 
-/* 8057BCC8-8057BCFC 0034+00 r=1 e=0 z=0  None .text      Delete__12daObjBoard_cFv                                     */
+/* 8057BCC8-8057BCFC 0034+00 s=0 e=0 z=0  None .text      Delete__12daObjBoard_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,90 +153,123 @@ asm void daObjBoard_c::Delete() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8057BE90-8057BEB0 0020+00 r=1 e=0 z=0  None .data      daObjBoard_METHODS                                           */
-SECTION_DATA static void* daObjBoard_METHODS[8] = {
-	/* 0    */ (void*)daObjBoard_create1st__FP12daObjBoard_c,
-	/* 1    */ (void*)daObjBoard_MoveBGDelete__FP12daObjBoard_c,
-	/* 2    */ (void*)daObjBoard_MoveBGExecute__FP12daObjBoard_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjBoard_MoveBGDraw__FP12daObjBoard_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 8057BEB0-8057BEE0 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_Cboard                                         */
-SECTION_DATA void* g_profile_Obj_Cboard[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00630000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005D8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01C50000,
-	/* 9    */ (void*)&daObjBoard_METHODS,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 8057BEE0-8057BF08 0028+00 r=1 e=0 z=0  None .data      __vt__12daObjBoard_c                                         */
-SECTION_DATA static void* __vt__12daObjBoard_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__12daObjBoard_cFv,
-	/* 3    */ (void*)Create__12daObjBoard_cFv,
-	/* 4    */ (void*)Execute__12daObjBoard_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__12daObjBoard_cFv,
-	/* 6    */ (void*)Delete__12daObjBoard_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-};
-
-/* 8057BCFC-8057BD5C 0060+00 r=1 e=0 z=0  None .text      daObjBoard_create1st__FP12daObjBoard_c                       */
+/* 8057BCFC-8057BD5C 0060+00 s=0 e=0 z=0  None .text      daObjBoard_create1st__FP12daObjBoard_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBoard_create1st(daObjBoard_c* param_0) {
+asm void daObjBoard_create1st(daObjBoard_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_create1st__FP12daObjBoard_c.s"
 }
 #pragma pop
 
 
-/* 8057BD5C-8057BD7C 0020+00 r=1 e=0 z=0  None .text      daObjBoard_MoveBGDelete__FP12daObjBoard_c                    */
+/* 8057BD5C-8057BD7C 0020+00 s=0 e=0 z=0  None .text      daObjBoard_MoveBGDelete__FP12daObjBoard_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBoard_MoveBGDelete(daObjBoard_c* param_0) {
+asm void daObjBoard_MoveBGDelete(daObjBoard_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGDelete__FP12daObjBoard_c.s"
 }
 #pragma pop
 
 
-/* 8057BD7C-8057BD9C 0020+00 r=1 e=0 z=0  None .text      daObjBoard_MoveBGExecute__FP12daObjBoard_c                   */
+/* 8057BD7C-8057BD9C 0020+00 s=0 e=0 z=0  None .text      daObjBoard_MoveBGExecute__FP12daObjBoard_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBoard_MoveBGExecute(daObjBoard_c* param_0) {
+asm void daObjBoard_MoveBGExecute(daObjBoard_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGExecute__FP12daObjBoard_c.s"
 }
 #pragma pop
 
 
-/* 8057BD9C-8057BDC8 002C+00 r=1 e=0 z=0  None .text      daObjBoard_MoveBGDraw__FP12daObjBoard_c                      */
+/* 8057BD9C-8057BDC8 002C+00 s=0 e=0 z=0  None .text      daObjBoard_MoveBGDraw__FP12daObjBoard_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBoard_MoveBGDraw(daObjBoard_c* param_0) {
+asm void daObjBoard_MoveBGDraw(daObjBoard_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/daObjBoard_MoveBGDraw__FP12daObjBoard_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8057BDD0-8057BDD4 0004+00 s=0 e=0 z=0  None .rodata    @3636                                                        */
+SECTION_RODATA u32 const lit_3636 = 0x41200000;
+
+/* 8057BDD4-8057BDF8 0024+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_8057BDD4[36] = {
+	/* 8057BDD4 000A stringBase_8057BDD4 @stringBase0 */
+	0x4F, 0x62, 0x6A, 0x5F, 0x42, 0x6F, 0x61, 0x72, 0x64, 0x00,
+	/* 8057BDDE 000D data_8057BDDE None */
+	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x30, 0x2E, 0x64, 0x7A, 0x62, 0x00,
+	/* 8057BDEB 000D data_8057BDEB None */
+	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x31, 0x2E, 0x64, 0x7A, 0x62, 0x00,
+};
+
+/* 8057BDF8-8057BE20 0028+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_8057BDF8[40] = {
+	/* 8057BDF8 000D data_8057BDF8 None */
+	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x32, 0x2E, 0x64, 0x7A, 0x62, 0x00,
+	/* 8057BE05 000D data_8057BE05 None */
+	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x33, 0x2E, 0x64, 0x7A, 0x62, 0x00,
+	/* 8057BE12 000E data_8057BE12 None */
+	0x43, 0x6C, 0x65, 0x61, 0x72, 0x42, 0x30, 0x34, 0x2E, 0x64, 0x7A, 0x62, 0x00, 0x00,
+};
+
+/* 8057BE20-8057BE24 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA u8 l_arcName[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8057BE24-8057BE38 0014+00 s=0 e=0 z=0  None .data      l_dzbName                                                    */
+SECTION_DATA u8 l_dzbName[20] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8057BE38-8057BE50 0018+00 s=0 e=0 z=0  None .data      l_cull_box                                                   */
+SECTION_DATA u8 l_cull_box[24] = {
+	0xC2, 0xC8, 0x00, 0x00, 0xC1, 0x20, 0x00, 0x00, 0xC2, 0xC8, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
+	0x41, 0x20, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
+};
+
+/* 8057BE50-8057BE90 0040+00 s=0 e=0 z=0  None .data      @3712                                                        */
+SECTION_DATA u8 lit_3712[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8057BE90-8057BEB0 0020+00 s=0 e=0 z=0  None .data      daObjBoard_METHODS                                           */
+SECTION_DATA u8 daObjBoard_METHODS[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8057BEB0-8057BEE0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Cboard                                         */
+SECTION_DATA u8 g_profile_Obj_Cboard[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x63, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0xC5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 8057BEE0-8057BF08 0028+00 s=0 e=0 z=0  None .data      __vt__12daObjBoard_c                                         */
+SECTION_DATA void* __vt__12daObjBoard_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+};
 

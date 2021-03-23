@@ -11,12 +11,12 @@ lbl_80D62DB8:
 /* 80D62DDC 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80D62DE0 00000028  41 82 00 20 */	beq lbl_80D62E00
 /* 80D62DE4 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80D62DE8 00000030  4B FF FF B1 */	bl __ct__14daObj_SSBase_cFv
-/* 80D62DEC 00000034  3C 60 00 00 */	lis r3, __vt__15daTag_SSDrink_c@ha /* 80D63858 */
-/* 80D62DF0 00000038  38 03 00 00 */	addi r0, r3, __vt__15daTag_SSDrink_c@l /* 80D63858 */
+/* 80D62DE8 00000030  4B FF FF B1 */	bl _unresolved
+/* 80D62DEC 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D62DF0 00000038  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D62DF4 0000003C  90 1E 05 68 */	stw r0, 0x568(r30)
 /* 80D62DF8 00000040  38 7E 05 78 */	addi r3, r30, 0x578
-/* 80D62DFC 00000044  4B FF FF 9D */	bl __ct__10dMsgFlow_cFv
+/* 80D62DFC 00000044  4B FF FF 9D */	bl _unresolved
 lbl_80D62E00:
 /* 80D62E00 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80D62E04 00000004  60 00 00 08 */	ori r0, r0, 8

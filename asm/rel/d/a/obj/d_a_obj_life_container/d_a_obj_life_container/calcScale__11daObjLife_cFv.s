@@ -5,12 +5,12 @@ lbl_804CDDAC:
 /* 804CDDB8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804CDDBC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 804CDDC0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 804CDDC4 00000018  3C 60 00 00 */	lis r3, l_cyl_src@ha /* 804CE3F4 */
-/* 804CDDC8 0000001C  3B E3 00 00 */	addi r31, r3, l_cyl_src@l /* 804CE3F4 */
+/* 804CDDC4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804CDDC8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 804CDDCC 00000020  38 7E 09 54 */	addi r3, r30, 0x954
 /* 804CDDD0 00000024  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 804CDDD4 00000028  C0 5F 00 A8 */	lfs f2, 0xa8(r31)
-/* 804CDDD8 0000002C  4B FF E9 E1 */	bl cLib_chaseF__FPfff
+/* 804CDDD8 0000002C  4B FF E9 E1 */	bl _unresolved
 /* 804CDDDC 00000030  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 804CDDE0 00000034  C0 1E 09 54 */	lfs f0, 0x954(r30)
 /* 804CDDE4 00000038  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -18,12 +18,12 @@ lbl_804CDDAC:
 /* 804CDDEC 00000040  38 7E 09 4C */	addi r3, r30, 0x94c
 /* 804CDDF0 00000044  C0 3F 00 44 */	lfs f1, 0x44(r31)
 /* 804CDDF4 00000048  C0 5F 00 94 */	lfs f2, 0x94(r31)
-/* 804CDDF8 0000004C  4B FF E9 C1 */	bl cLib_chaseF__FPfff
+/* 804CDDF8 0000004C  4B FF E9 C1 */	bl _unresolved
 /* 804CDDFC 00000050  A8 1E 09 5E */	lha r0, 0x95e(r30)
 /* 804CDE00 00000054  1C 00 0B B8 */	mulli r0, r0, 0xbb8
 /* 804CDE04 00000058  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 804CDE08 0000005C  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha /* 80439A20 */
-/* 804CDE0C 00000060  38 63 00 00 */	addi r3, r3, sincosTable___5JMath@l /* 80439A20 */
+/* 804CDE08 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804CDE0C 00000060  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804CDE10 00000064  7C 23 04 2E */	lfsx f1, r3, r0
 /* 804CDE14 00000068  C0 1E 09 4C */	lfs f0, 0x94c(r30)
 /* 804CDE18 0000006C  EC 00 00 72 */	fmuls f0, f0, f1

@@ -13,7 +13,7 @@ lbl_80C048F8:
 /* 80C04924 0000002C  7C 05 03 78 */	mr r5, r0
 /* 80C04928 00000030  38 C0 00 00 */	li r6, 0
 /* 80C0492C 00000034  38 E0 00 00 */	li r7, 0
-/* 80C04930 00000038  4B FF B5 49 */	bl init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
+/* 80C04930 00000038  4B FF B5 49 */	bl _unresolved
 /* 80C04934 0000003C  38 00 00 00 */	li r0, 0
 /* 80C04938 00000040  90 1E 0A A0 */	stw r0, 0xaa0(r30)
 lbl_80C0493C:
@@ -21,7 +21,7 @@ lbl_80C0493C:
 /* 80C04940 00000004  7F C4 F3 78 */	mr r4, r30
 /* 80C04944 00000008  38 A0 00 00 */	li r5, 0
 /* 80C04948 0000000C  38 C0 00 00 */	li r6, 0
-/* 80C0494C 00000010  4B FF B5 2D */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
+/* 80C0494C 00000010  4B FF B5 2D */	bl _unresolved
 /* 80C04950 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80C04954 00000018  41 82 00 0C */	beq lbl_80C04960
 /* 80C04958 0000001C  38 60 00 01 */	li r3, 1
@@ -40,11 +40,11 @@ lbl_80C04960:
 /* 80C04988 00000028  41 82 00 28 */	beq lbl_80C049B0
 /* 80C0498C 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 80C04990 00000030  54 00 08 3C */	slwi r0, r0, 1
-/* 80C04994 00000034  3C 80 00 00 */	lis r4, l_eventMotionChangeTable@ha /* 80C1002C */
-/* 80C04998 00000038  38 84 00 00 */	addi r4, r4, l_eventMotionChangeTable@l /* 80C1002C */
+/* 80C04994 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C04998 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C0499C 0000003C  7C 84 02 2E */	lhzx r4, r4, r0
-/* 80C049A0 00000040  3C A0 00 00 */	lis r5, m__17daObj_GrA_Param_c@ha /* 80C0FA7C */
-/* 80C049A4 00000044  38 A5 00 00 */	addi r5, r5, m__17daObj_GrA_Param_c@l /* 80C0FA7C */
+/* 80C049A0 00000040  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C049A4 00000044  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C049A8 00000048  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C049AC 0000004C  4B FF CD E1 */	bl setBaseMotion__11daObj_GrA_cFif
 lbl_80C049B0:
@@ -53,11 +53,11 @@ lbl_80C049B0:
 /* 80C049B8 00000008  41 82 00 38 */	beq lbl_80C049F0
 /* 80C049BC 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 80C049C0 00000010  54 00 08 3C */	slwi r0, r0, 1
-/* 80C049C4 00000014  3C 80 00 00 */	lis r4, l_eventFaceChangeTable@ha /* 80C10044 */
-/* 80C049C8 00000018  38 84 00 00 */	addi r4, r4, l_eventFaceChangeTable@l /* 80C10044 */
+/* 80C049C4 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C049C8 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C049CC 0000001C  7C 84 02 2E */	lhzx r4, r4, r0
-/* 80C049D0 00000020  3C A0 00 00 */	lis r5, lit_4618@ha /* 80C0FBB4 */
-/* 80C049D4 00000024  C0 25 00 00 */	lfs f1, lit_4618@l(r5) /* 80C0FBB4 */
+/* 80C049D0 00000020  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C049D4 00000024  C0 25 00 00 */	lfs f1, 0x0000(r5)
 /* 80C049D8 00000028  4B FF CD D5 */	bl setFaceMotion__11daObj_GrA_cFif
 /* 80C049DC 0000002C  48 00 00 14 */	b lbl_80C049F0
 lbl_80C049E0:

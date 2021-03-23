@@ -22,17 +22,7 @@ struct daObjKnBullet_c {
 	/* 80C477B4 */ void hitPrtclSet();
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266F48 */ void normalizeZP();
-};
-
 struct cM3dGSph {
-	/* 8026F648 */ void SetC(cXyz const&);
-	/* 8026F708 */ void SetR(f32);
 	/* 80C47270 */ ~cM3dGSph();
 };
 
@@ -41,81 +31,17 @@ struct cM3dGAab {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct csXyz {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CED4 */ void XYZrotM(csXyz const&);
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dPa_control_c {
-	struct level_c {
-		/* 8004B918 */ void getEmitter(u32);
-	};
-
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-};
-
-struct dCcD_SrcSph {
-};
-
-struct dCcD_Sph {
-	/* 80084A34 */ void Set(dCcD_SrcSph const&);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct JPABaseEmitter {
-	/* 8027EC60 */ void deleteAllParticle();
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // 
 // Forward References:
 // 
 
-static void daObjKnBullet_Execute(daObjKnBullet_c*); // 2
-static void daObjKnBullet_Draw(daObjKnBullet_c*); // 2
-static void daObjKnBullet_IsDelete(daObjKnBullet_c*); // 2
-static void daObjKnBullet_Delete(daObjKnBullet_c*); // 2
-static void daObjKnBullet_create(fopAc_ac_c*); // 2
+void daObjKnBullet_Execute(daObjKnBullet_c*); // 2
+void daObjKnBullet_Draw(daObjKnBullet_c*); // 2
+void daObjKnBullet_IsDelete(daObjKnBullet_c*); // 2
+void daObjKnBullet_Delete(daObjKnBullet_c*); // 2
+void daObjKnBullet_create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 
 extern "C" void Create__15daObjKnBullet_cFv(); // 1
@@ -128,133 +54,41 @@ extern "C" void setBaseMtx__15daObjKnBullet_cFv(); // 1
 extern "C" void col_init__15daObjKnBullet_cFv(); // 1
 extern "C" void col_chk__15daObjKnBullet_cFv(); // 1
 extern "C" void hitPrtclSet__15daObjKnBullet_cFv(); // 1
-extern "C" static void daObjKnBullet_Execute__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_Draw__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_IsDelete__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_Delete__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjKnBullet_Execute__FP15daObjKnBullet_c(); // 1
+extern "C" void daObjKnBullet_Draw__FP15daObjKnBullet_c(); // 1
+extern "C" void daObjKnBullet_IsDelete__FP15daObjKnBullet_c(); // 1
+extern "C" void daObjKnBullet_Delete__FP15daObjKnBullet_c(); // 1
+extern "C" void daObjKnBullet_create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_80C4792C(); // 1
+extern "C" extern u8 const l_DATA[12];
+extern "C" extern u8 const l_sph_src[64];
 extern "C" extern u32 const lit_3907;
 extern "C" extern u32 const lit_3908;
 extern "C" extern u32 const lit_3909;
 extern "C" extern u32 const lit_3910;
 extern "C" extern u8 const data_80C479AC[6 + 2 /* padding */];
+extern "C" extern u32 const lit_4021;
 extern "C" extern u32 const lit_4022;
 extern "C" extern u8 const lit_4129[4];
 extern "C" extern u32 const lit_4130;
-extern "C" extern void* g_profile_KN_BULLET[12];
+extern "C" extern u8 const data_80C479C4[6];
+extern "C" extern u8 l_daObjKnBullet_Method[32];
+extern "C" extern u8 g_profile_KN_BULLET[48];
+extern "C" extern void* __vt__8cM3dGSph[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void dComIfGp_getReverb(int); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkAtHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Sph[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_SphAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 80C47950-80C4795C 000C+00 r=4 e=0 z=0  None .rodata    l_DATA                                                       */
-SECTION_RODATA static u8 const l_DATA[12] = {
-	0x41, 0xF0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x00, 0x96, 0x00, 0x00,
-};
-
-/* 80C479CC-80C479EC 0020+00 r=1 e=0 z=0  None .data      l_daObjKnBullet_Method                                       */
-SECTION_DATA static void* l_daObjKnBullet_Method[8] = {
-	/* 0    */ (void*)daObjKnBullet_create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjKnBullet_Delete__FP15daObjKnBullet_c,
-	/* 2    */ (void*)daObjKnBullet_Execute__FP15daObjKnBullet_c,
-	/* 3    */ (void*)daObjKnBullet_IsDelete__FP15daObjKnBullet_c,
-	/* 4    */ (void*)daObjKnBullet_Draw__FP15daObjKnBullet_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80C479EC-80C47A1C 0030+00 r=1 e=0 z=1  None .data      g_profile_KN_BULLET                                          */
-SECTION_DATA void* g_profile_KN_BULLET[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x025B0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000071C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x015C0000,
-	/* 9    */ (void*)&l_daObjKnBullet_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80C47A1C-80C47A28 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
-};
-
-/* 80C47A28-80C47A34 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80C47118-80C47270 0158+00 r=1 e=0 z=0  None .text      Create__15daObjKnBullet_cFv                                  */
+/* 80C47118-80C47270 0158+00 s=1 e=0 z=0  None .text      Create__15daObjKnBullet_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +99,7 @@ asm void daObjKnBullet_c::Create() {
 #pragma pop
 
 
-/* 80C47270-80C472B8 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C47270-80C472B8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +110,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C472B8-80C47300 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C472B8-80C47300 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +121,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C47300-80C47480 0180+00 r=1 e=0 z=0  None .text      Execute__15daObjKnBullet_cFv                                 */
+/* 80C47300-80C47480 0180+00 s=1 e=0 z=0  None .text      Execute__15daObjKnBullet_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +132,7 @@ asm void daObjKnBullet_c::Execute() {
 #pragma pop
 
 
-/* 80C47480-80C47488 0008+00 r=1 e=0 z=0  None .text      Draw__15daObjKnBullet_cFv                                    */
+/* 80C47480-80C47488 0008+00 s=1 e=0 z=0  None .text      Draw__15daObjKnBullet_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +143,7 @@ asm void daObjKnBullet_c::Draw() {
 #pragma pop
 
 
-/* 80C47488-80C47490 0008+00 r=1 e=0 z=0  None .text      Delete__15daObjKnBullet_cFv                                  */
+/* 80C47488-80C47490 0008+00 s=1 e=0 z=0  None .text      Delete__15daObjKnBullet_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +154,7 @@ asm void daObjKnBullet_c::Delete() {
 #pragma pop
 
 
-/* 80C47490-80C474E8 0058+00 r=2 e=0 z=0  None .text      setBaseMtx__15daObjKnBullet_cFv                              */
+/* 80C47490-80C474E8 0058+00 s=2 e=0 z=0  None .text      setBaseMtx__15daObjKnBullet_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,16 +165,7 @@ asm void daObjKnBullet_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C4795C-80C4799C 0040+00 r=1 e=0 z=0  None .rodata    l_sph_src                                                    */
-SECTION_RODATA static u8 const l_sph_src[64] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
-	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C474E8-80C47558 0070+00 r=1 e=0 z=0  None .text      col_init__15daObjKnBullet_cFv                                */
+/* 80C474E8-80C47558 0070+00 s=1 e=0 z=0  None .text      col_init__15daObjKnBullet_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,7 +176,7 @@ asm void daObjKnBullet_c::col_init() {
 #pragma pop
 
 
-/* 80C47558-80C477B4 025C+00 r=1 e=0 z=0  None .text      col_chk__15daObjKnBullet_cFv                                 */
+/* 80C47558-80C477B4 025C+00 s=1 e=0 z=0  None .text      col_chk__15daObjKnBullet_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,46 +187,7 @@ asm void daObjKnBullet_c::col_chk() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C4799C-80C479A0 0004+00 r=0 e=0 z=0  None .rodata    @3907                                                        */
-SECTION_RODATA u32 const lit_3907 = 0xC3960000;
-
-/* 80C479A0-80C479A4 0004+00 r=0 e=0 z=0  None .rodata    @3908                                                        */
-SECTION_RODATA u32 const lit_3908 = 0xC2480000;
-
-/* 80C479A4-80C479A8 0004+00 r=0 e=0 z=0  None .rodata    @3909                                                        */
-SECTION_RODATA u32 const lit_3909 = 0x43960000;
-
-/* 80C479A8-80C479AC 0004+00 r=0 e=0 z=0  None .rodata    @3910                                                        */
-SECTION_RODATA u32 const lit_3910 = 0x43E10000;
-
-/* 80C479AC-80C479B4 0006+02 r=0 e=0 z=0  None .rodata    l_prticles_id$3986                                           */
-SECTION_RODATA u8 const data_80C479AC[6 + 2 /* padding */] = {
-	0x8B, 0x7F, 0x8B, 0x80, 0x8B, 0x81,
-	/* padding */
-	0x00, 0x00,
-};
-
-/* 80C479B4-80C479B8 0004+00 r=1 e=0 z=0  None .rodata    @4021                                                        */
-SECTION_RODATA static u32 const lit_4021 = 0x3F800000;
-
-/* 80C479B8-80C479BC 0004+00 r=0 e=0 z=0  None .rodata    @4022                                                        */
-SECTION_RODATA u32 const lit_4022 = 0xBF800000;
-
-/* 80C479BC-80C479C0 0004+00 r=0 e=0 z=0  None .rodata    @4129                                                        */
-SECTION_RODATA u8 const lit_4129[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C479C0-80C479C4 0004+00 r=0 e=0 z=0  None .rodata    @4130                                                        */
-SECTION_RODATA u32 const lit_4130 = 0x43160000;
-
-/* 80C479C4-80C479CA 0006+00 r=1 e=0 z=0  None .rodata    l_prticles_id$4141                                           */
-SECTION_RODATA static u8 const data_80C479C4[6] = {
-	0x8B, 0x82, 0x8B, 0x83, 0x8B, 0x84,
-};
-
-/* 80C477B4-80C478A4 00F0+00 r=1 e=0 z=0  None .text      hitPrtclSet__15daObjKnBullet_cFv                             */
+/* 80C477B4-80C478A4 00F0+00 s=1 e=0 z=0  None .text      hitPrtclSet__15daObjKnBullet_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,62 +198,62 @@ asm void daObjKnBullet_c::hitPrtclSet() {
 #pragma pop
 
 
-/* 80C478A4-80C478C4 0020+00 r=1 e=0 z=0  None .text      daObjKnBullet_Execute__FP15daObjKnBullet_c                   */
+/* 80C478A4-80C478C4 0020+00 s=0 e=0 z=0  None .text      daObjKnBullet_Execute__FP15daObjKnBullet_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKnBullet_Execute(daObjKnBullet_c* param_0) {
+asm void daObjKnBullet_Execute(daObjKnBullet_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Execute__FP15daObjKnBullet_c.s"
 }
 #pragma pop
 
 
-/* 80C478C4-80C478E4 0020+00 r=1 e=0 z=0  None .text      daObjKnBullet_Draw__FP15daObjKnBullet_c                      */
+/* 80C478C4-80C478E4 0020+00 s=0 e=0 z=0  None .text      daObjKnBullet_Draw__FP15daObjKnBullet_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKnBullet_Draw(daObjKnBullet_c* param_0) {
+asm void daObjKnBullet_Draw(daObjKnBullet_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Draw__FP15daObjKnBullet_c.s"
 }
 #pragma pop
 
 
-/* 80C478E4-80C478EC 0008+00 r=1 e=0 z=0  None .text      daObjKnBullet_IsDelete__FP15daObjKnBullet_c                  */
+/* 80C478E4-80C478EC 0008+00 s=0 e=0 z=0  None .text      daObjKnBullet_IsDelete__FP15daObjKnBullet_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKnBullet_IsDelete(daObjKnBullet_c* param_0) {
+asm void daObjKnBullet_IsDelete(daObjKnBullet_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_IsDelete__FP15daObjKnBullet_c.s"
 }
 #pragma pop
 
 
-/* 80C478EC-80C4790C 0020+00 r=1 e=0 z=0  None .text      daObjKnBullet_Delete__FP15daObjKnBullet_c                    */
+/* 80C478EC-80C4790C 0020+00 s=0 e=0 z=0  None .text      daObjKnBullet_Delete__FP15daObjKnBullet_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKnBullet_Delete(daObjKnBullet_c* param_0) {
+asm void daObjKnBullet_Delete(daObjKnBullet_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_Delete__FP15daObjKnBullet_c.s"
 }
 #pragma pop
 
 
-/* 80C4790C-80C4792C 0020+00 r=1 e=0 z=0  None .text      daObjKnBullet_create__FP10fopAc_ac_c                         */
+/* 80C4790C-80C4792C 0020+00 s=0 e=0 z=0  None .text      daObjKnBullet_create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKnBullet_create(fopAc_ac_c* param_0) {
+asm void daObjKnBullet_create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C4792C-80C47948 001C+00 r=1 e=0 z=0  None .text      cLib_calcTimer<s>__FPs                                       */
+/* 80C4792C-80C47948 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<s>__FPs                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -477,4 +263,83 @@ asm static void cLib_calcTimer__template0(s16* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C47950-80C4795C 000C+00 s=0 e=0 z=0  None .rodata    l_DATA                                                       */
+SECTION_RODATA u8 const l_DATA[12] = {
+	0x41, 0xF0, 0x00, 0x00, 0x41, 0xA0, 0x00, 0x00, 0x00, 0x96, 0x00, 0x00,
+};
+
+/* 80C4795C-80C4799C 0040+00 s=0 e=0 z=0  None .rodata    l_sph_src                                                    */
+SECTION_RODATA u8 const l_sph_src[64] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x0D,
+	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C4799C-80C479A0 0004+00 s=0 e=0 z=0  None .rodata    @3907                                                        */
+SECTION_RODATA u32 const lit_3907 = 0xC3960000;
+
+/* 80C479A0-80C479A4 0004+00 s=0 e=0 z=0  None .rodata    @3908                                                        */
+SECTION_RODATA u32 const lit_3908 = 0xC2480000;
+
+/* 80C479A4-80C479A8 0004+00 s=0 e=0 z=0  None .rodata    @3909                                                        */
+SECTION_RODATA u32 const lit_3909 = 0x43960000;
+
+/* 80C479A8-80C479AC 0004+00 s=0 e=0 z=0  None .rodata    @3910                                                        */
+SECTION_RODATA u32 const lit_3910 = 0x43E10000;
+
+/* 80C479AC-80C479B4 0006+02 s=0 e=0 z=0  None .rodata    l_prticles_id$3986                                           */
+SECTION_RODATA u8 const data_80C479AC[6 + 2 /* padding */] = {
+	0x8B, 0x7F, 0x8B, 0x80, 0x8B, 0x81,
+	/* padding */
+	0x00, 0x00,
+};
+
+/* 80C479B4-80C479B8 0004+00 s=0 e=0 z=0  None .rodata    @4021                                                        */
+SECTION_RODATA u32 const lit_4021 = 0x3F800000;
+
+/* 80C479B8-80C479BC 0004+00 s=0 e=0 z=0  None .rodata    @4022                                                        */
+SECTION_RODATA u32 const lit_4022 = 0xBF800000;
+
+/* 80C479BC-80C479C0 0004+00 s=0 e=0 z=0  None .rodata    @4129                                                        */
+SECTION_RODATA u8 const lit_4129[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C479C0-80C479C4 0004+00 s=0 e=0 z=0  None .rodata    @4130                                                        */
+SECTION_RODATA u32 const lit_4130 = 0x43160000;
+
+/* 80C479C4-80C479CA 0006+00 s=0 e=0 z=0  None .rodata    l_prticles_id$4141                                           */
+SECTION_RODATA u8 const data_80C479C4[6] = {
+	0x8B, 0x82, 0x8B, 0x83, 0x8B, 0x84,
+};
+
+/* 80C479CC-80C479EC 0020+00 s=0 e=0 z=0  None .data      l_daObjKnBullet_Method                                       */
+SECTION_DATA u8 l_daObjKnBullet_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C479EC-80C47A1C 0030+00 s=0 e=0 z=0  None .data      g_profile_KN_BULLET                                          */
+SECTION_DATA u8 g_profile_KN_BULLET[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x5B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x1C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x5C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x41, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80C47A1C-80C47A28 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA void* __vt__8cM3dGSph[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C47A28-80C47A34 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
 

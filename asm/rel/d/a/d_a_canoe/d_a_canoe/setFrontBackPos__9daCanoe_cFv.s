@@ -1,14 +1,14 @@
 lbl_804DB7AC:
 /* 804DB7AC 00000000  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 804DB7B0 00000004  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 804DB7B4 00000008  3C 80 00 00 */	lis r4, sincosTable___5JMath@ha /* 80439A20 */
-/* 804DB7B8 0000000C  38 84 00 00 */	addi r4, r4, sincosTable___5JMath@l /* 80439A20 */
+/* 804DB7B4 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804DB7B8 0000000C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 804DB7BC 00000010  7C 84 04 2E */	lfsx f4, r4, r0
 /* 804DB7C0 00000014  7C 84 02 14 */	add r4, r4, r0
 /* 804DB7C4 00000018  C0 A4 00 04 */	lfs f5, 4(r4)
 /* 804DB7C8 0000001C  C0 23 04 D8 */	lfs f1, 0x4d8(r3)
-/* 804DB7CC 00000020  3C 80 00 00 */	lis r4, l_cylOffsetZ@ha /* 804DD600 */
-/* 804DB7D0 00000024  C4 C4 00 00 */	lfsu f6, l_cylOffsetZ@l(r4) /* 804DD600 */
+/* 804DB7CC 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804DB7D0 00000024  C4 C4 00 00 */	lfsu f6, 0x0000(r4)
 /* 804DB7D4 00000028  EC 06 01 72 */	fmuls f0, f6, f5
 /* 804DB7D8 0000002C  EC 61 00 2A */	fadds f3, f1, f0
 /* 804DB7DC 00000030  C0 43 04 D4 */	lfs f2, 0x4d4(r3)

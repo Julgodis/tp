@@ -3,16 +3,16 @@ lbl_80A9E56C:
 /* 80A9E570 00000004  7C 08 02 A6 */	mflr r0
 /* 80A9E574 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A9E578 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9E57C 00000010  4B FF DC 7D */	bl _savegpr_28
+/* 80A9E57C 00000010  4B FF DC 7D */	bl _unresolved
 /* 80A9E580 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 80A9E584 00000018  3B A0 FF FF */	li r29, -1
-/* 80A9E588 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A9E58C 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A9E588 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9E58C 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9E590 00000024  3B C3 0D D8 */	addi r30, r3, 0xdd8
 /* 80A9E594 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80A9E598 0000002C  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F3FF@ha */
 /* 80A9E59C 00000030  38 84 F3 FF */	addi r4, r4, 0xF3FF /* 0x0000F3FF@l */
-/* 80A9E5A0 00000034  4B FF DC 59 */	bl getEventReg__11dSv_event_cCFUs
+/* 80A9E5A0 00000034  4B FF DC 59 */	bl _unresolved
 /* 80A9E5A4 00000038  54 7F 06 3F */	clrlwi. r31, r3, 0x18
 /* 80A9E5A8 0000003C  41 82 00 78 */	beq lbl_80A9E620
 /* 80A9E5AC 00000040  54 60 07 FF */	clrlwi. r0, r3, 0x1f
@@ -27,13 +27,13 @@ lbl_80A9E56C:
 /* 80A9E5D0 00000064  80 1C 0F D4 */	lwz r0, 0xfd4(r28)
 /* 80A9E5D4 00000068  2C 00 00 00 */	cmpwi r0, 0
 /* 80A9E5D8 0000006C  40 82 00 20 */	bne lbl_80A9E5F8
-/* 80A9E5DC 00000070  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A9E5E0 00000074  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A9E5DC 00000070  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9E5E0 00000074  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9E5E4 00000078  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 80A9E5E8 0000007C  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80A9E5EC 00000080  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80A9E5F0 00000084  7C 05 07 74 */	extsb r5, r0
-/* 80A9E5F4 00000088  4B FF DC 05 */	bl onSwitch__10dSv_info_cFii
+/* 80A9E5F4 00000088  4B FF DC 05 */	bl _unresolved
 lbl_80A9E5F8:
 /* 80A9E5F8 00000000  57 E0 07 BD */	rlwinm. r0, r31, 0, 0x1e, 0x1e
 /* 80A9E5FC 00000004  41 82 00 08 */	beq lbl_80A9E604
@@ -52,7 +52,7 @@ lbl_80A9E620:
 /* 80A9E624 00000004  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F3FF@ha */
 /* 80A9E628 00000008  38 84 F3 FF */	addi r4, r4, 0xF3FF /* 0x0000F3FF@l */
 /* 80A9E62C 0000000C  38 A0 00 00 */	li r5, 0
-/* 80A9E630 00000010  4B FF DB C9 */	bl setEventReg__11dSv_event_cFUsUc
+/* 80A9E630 00000010  4B FF DB C9 */	bl _unresolved
 /* 80A9E634 00000014  3B E0 00 00 */	li r31, 0
 /* 80A9E638 00000018  88 1C 0F DF */	lbz r0, 0xfdf(r28)
 /* 80A9E63C 0000001C  28 00 00 00 */	cmplwi r0, 0
@@ -85,7 +85,7 @@ lbl_80A9E698:
 /* 80A9E698 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80A9E69C 00000004  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F4FF@ha */
 /* 80A9E6A0 00000008  38 84 F4 FF */	addi r4, r4, 0xF4FF /* 0x0000F4FF@l */
-/* 80A9E6A4 0000000C  4B FF DB 55 */	bl getEventReg__11dSv_event_cCFUs
+/* 80A9E6A4 0000000C  4B FF DB 55 */	bl _unresolved
 /* 80A9E6A8 00000010  98 7C 0F DE */	stb r3, 0xfde(r28)
 /* 80A9E6AC 00000014  88 1C 0F DE */	lbz r0, 0xfde(r28)
 /* 80A9E6B0 00000018  28 00 00 07 */	cmplwi r0, 7
@@ -95,17 +95,17 @@ lbl_80A9E698:
 lbl_80A9E6C0:
 /* 80A9E6C0 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 80A9E6C4 00000004  41 82 00 20 */	beq lbl_80A9E6E4
-/* 80A9E6C8 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A9E6CC 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A9E6C8 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A9E6CC 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9E6D0 00000010  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 80A9E6D4 00000014  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80A9E6D8 00000018  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80A9E6DC 0000001C  7C 05 07 74 */	extsb r5, r0
-/* 80A9E6E0 00000020  4B FF DB 19 */	bl onSwitch__10dSv_info_cFii
+/* 80A9E6E0 00000020  4B FF DB 19 */	bl _unresolved
 lbl_80A9E6E4:
 /* 80A9E6E4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80A9E6E8 00000004  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A9E6EC 00000008  4B FF DB 0D */	bl _restgpr_28
+/* 80A9E6EC 00000008  4B FF DB 0D */	bl _unresolved
 /* 80A9E6F0 0000000C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A9E6F4 00000010  7C 08 03 A6 */	mtlr r0
 /* 80A9E6F8 00000014  38 21 00 20 */	addi r1, r1, 0x20

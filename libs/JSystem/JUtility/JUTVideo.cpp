@@ -87,10 +87,10 @@ extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451538-8045153C 0004+00 r=23 e=18 z=1  None .sbss      sManager__8JUTVideo                                          */
+/* 80451538-8045153C 0004+00 s=4 e=18 z=0  None .sbss      sManager__8JUTVideo                                          */
 u8 sManager__8JUTVideo[4];
 
-/* 802E4C54-802E4CAC 0058+00 r=1 e=1 z=0  None .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */
+/* 802E4C54-802E4CAC 0058+00 s=0 e=1 z=0  None .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void JUTVideo::createManager(_GXRenderModeObj const* param_0) {
 #pragma pop
 
 
-/* 802E4CAC-802E4CF4 0048+00 r=2 e=2 z=0  None .text      destroyManager__8JUTVideoFv                                  */
+/* 802E4CAC-802E4CF4 0048+00 s=0 e=2 z=0  None .text      destroyManager__8JUTVideoFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm void JUTVideo::destroyManager() {
 
 
 /* ############################################################################################## */
-/* 803CC980-803CC990 000C+04 r=2 e=0 z=0  None .data      __vt__8JUTVideo                                              */
+/* 803CC980-803CC990 000C+04 s=2 e=0 z=0  None .data      __vt__8JUTVideo                                              */
 SECTION_DATA static void* __vt__8JUTVideo[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -122,13 +122,13 @@ SECTION_DATA static void* __vt__8JUTVideo[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8045153C-80451540 0004+00 r=3 e=1 z=0  None .sbss      sVideoLastTick__8JUTVideo                                    */
+/* 8045153C-80451540 0004+00 s=2 e=1 z=0  None .sbss      sVideoLastTick__8JUTVideo                                    */
 u8 sVideoLastTick__8JUTVideo[4];
 
-/* 80451540-80451544 0004+00 r=3 e=1 z=0  None .sbss      sVideoInterval__8JUTVideo                                    */
+/* 80451540-80451544 0004+00 s=2 e=1 z=0  None .sbss      sVideoInterval__8JUTVideo                                    */
 u8 sVideoInterval__8JUTVideo[4];
 
-/* 802E4CF4-802E4DE8 00F4+00 r=1 e=0 z=0  None .text      __ct__8JUTVideoFPC16_GXRenderModeObj                         */
+/* 802E4CF4-802E4DE8 00F4+00 s=1 e=0 z=0  None .text      __ct__8JUTVideoFPC16_GXRenderModeObj                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ asm JUTVideo::JUTVideo(_GXRenderModeObj const* param_0) {
 #pragma pop
 
 
-/* 802E4DE8-802E4E50 0068+00 r=1 e=0 z=0  None .text      __dt__8JUTVideoFv                                            */
+/* 802E4DE8-802E4E50 0068+00 s=1 e=0 z=0  None .text      __dt__8JUTVideoFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,16 +151,16 @@ asm JUTVideo::~JUTVideo() {
 
 
 /* ############################################################################################## */
-/* 80451544-80451548 0004+00 r=4 e=0 z=0  None .sbss      None                                                         */
+/* 80451544-80451548 0004+00 s=4 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451544[4];
 
-/* 80451548-8045154C 0004+00 r=1 e=0 z=0  None .sbss      frameBuffer$2222                                             */
+/* 80451548-8045154C 0004+00 s=1 e=0 z=0  None .sbss      frameBuffer$2222                                             */
 static u8 data_80451548[4];
 
-/* 8045154C-80451550 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 8045154C-80451550 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_8045154C[4];
 
-/* 802E4E50-802E5088 0238+00 r=1 e=0 z=0  None .text      preRetraceProc__8JUTVideoFUl                                 */
+/* 802E4E50-802E5088 0238+00 s=1 e=0 z=0  None .text      preRetraceProc__8JUTVideoFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JUTVideo::preRetraceProc(u32 param_0) {
 #pragma pop
 
 
-/* 802E5088-802E50B0 0028+00 r=1 e=1 z=0  None .text      drawDoneStart__8JUTVideoFv                                   */
+/* 802E5088-802E50B0 0028+00 s=0 e=1 z=0  None .text      drawDoneStart__8JUTVideoFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm void JUTVideo::drawDoneStart() {
 #pragma pop
 
 
-/* 802E50B0-802E50BC 000C+00 r=1 e=1 z=0  None .text      dummyNoDrawWait__8JUTVideoFv                                 */
+/* 802E50B0-802E50BC 000C+00 s=0 e=1 z=0  None .text      dummyNoDrawWait__8JUTVideoFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +193,7 @@ asm void JUTVideo::dummyNoDrawWait() {
 #pragma pop
 
 
-/* 802E50BC-802E5144 0088+00 r=1 e=0 z=0  None .text      drawDoneCallback__8JUTVideoFv                                */
+/* 802E50BC-802E5144 0088+00 s=1 e=0 z=0  None .text      drawDoneCallback__8JUTVideoFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void JUTVideo::drawDoneCallback() {
 #pragma pop
 
 
-/* 802E5144-802E5198 0054+00 r=1 e=0 z=0  None .text      postRetraceProc__8JUTVideoFUl                                */
+/* 802E5144-802E5198 0054+00 s=1 e=0 z=0  None .text      postRetraceProc__8JUTVideoFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void JUTVideo::postRetraceProc(u32 param_0) {
 #pragma pop
 
 
-/* 802E5198-802E5210 0078+00 r=3 e=2 z=0  None .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj                */
+/* 802E5198-802E5210 0078+00 s=1 e=2 z=0  None .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +226,7 @@ asm void JUTVideo::setRenderMode(_GXRenderModeObj const* param_0) {
 #pragma pop
 
 
-/* 802E5210-802E5214 0004+00 r=1 e=1 z=0  None .text      waitRetraceIfNeed__8JUTVideoFv                               */
+/* 802E5210-802E5214 0004+00 s=0 e=1 z=0  None .text      waitRetraceIfNeed__8JUTVideoFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

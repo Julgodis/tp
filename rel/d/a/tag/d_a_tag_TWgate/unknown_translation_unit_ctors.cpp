@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80D557A0[2];
+extern u8 data_80D557A0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_tag_TWgate_cpp(); // 1
 
 // 
 // Declarations:

@@ -12,34 +12,23 @@
 // 
 
 
-extern "C" extern void* g_profile_NPC_HENNA0[12];
+extern "C" extern u8 g_profile_NPC_HENNA0[48];
 
 // 
 // External References:
 // 
 
 
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80A013E0-80A01410 0030+00 r=1 e=0 z=1  None .data      g_profile_NPC_HENNA0                                         */
-SECTION_DATA void* g_profile_NPC_HENNA0[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02560000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000828,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01570000,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x040E0000,
+/* 80A013E0-80A01410 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_HENNA0                                         */
+SECTION_DATA u8 g_profile_NPC_HENNA0[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x56, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x08, 0x28, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x57, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x41, 0x00, 0x04, 0x0E, 0x00, 0x00,
 };
 

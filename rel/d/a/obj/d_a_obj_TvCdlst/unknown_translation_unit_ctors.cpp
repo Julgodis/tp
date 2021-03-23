@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80B9F87C[2];
+extern u8 data_80B9F87C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_TvCdlst_cpp(); // 1
 
 // 
 // Declarations:

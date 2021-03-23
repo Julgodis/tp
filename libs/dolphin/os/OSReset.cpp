@@ -46,10 +46,10 @@ extern "C" extern u8 __OSRebootParams[28 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451690-80451698 0008+00 r=2 e=0 z=0  None .sbss      ResetFunctionQueue                                           */
+/* 80451690-80451698 0008+00 s=2 e=0 z=0  None .sbss      ResetFunctionQueue                                           */
 static u8 ResetFunctionQueue[8];
 
-/* 8033F660-8033F6E4 0084+00 r=5 e=5 z=0  None .text      OSRegisterResetFunction                                      */
+/* 8033F660-8033F6E4 0084+00 s=0 e=5 z=0  None .text      OSRegisterResetFunction                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ extern "C" asm void OSRegisterResetFunction() {
 #pragma pop
 
 
-/* 8033F6E4-8033F78C 00A8+00 r=1 e=0 z=0  None .text      __OSCallResetFunctions                                       */
+/* 8033F6E4-8033F78C 00A8+00 s=1 e=0 z=0  None .text      __OSCallResetFunctions                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ extern "C" asm static void __OSCallResetFunctions() {
 #pragma pop
 
 
-/* 8033F78C-8033F7FC 0070+00 r=2 e=0 z=0  None .text      Reset                                                        */
+/* 8033F78C-8033F7FC 0070+00 s=2 e=0 z=0  None .text      Reset                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ extern "C" asm static void Reset() {
 #pragma pop
 
 
-/* 8033F7FC-8033F864 0068+00 r=1 e=0 z=0  None .text      KillThreads                                                  */
+/* 8033F7FC-8033F864 0068+00 s=1 e=0 z=0  None .text      KillThreads                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ extern "C" asm static void KillThreads() {
 #pragma pop
 
 
-/* 8033F864-8033F8AC 0048+00 r=3 e=3 z=0  None .text      __OSDoHotReset                                               */
+/* 8033F864-8033F8AC 0048+00 s=0 e=3 z=0  None .text      __OSDoHotReset                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ extern "C" asm void __OSDoHotReset() {
 
 
 /* ############################################################################################## */
-/* 803D07E8-803D0838 004E+02 r=1 e=0 z=0  None .data      @153                                                         */
+/* 803D07E8-803D0838 004E+02 s=1 e=0 z=0  None .data      @153                                                         */
 SECTION_DATA static u8 OSReset__lit_153[78 + 2 /* padding */] = {
 	0x4F, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6D, 0x28, 0x29, 0x3A,
 	0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69,
@@ -116,10 +116,10 @@ SECTION_DATA static u8 OSReset__lit_153[78 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80451698-804516A0 0004+04 r=1 e=0 z=0  None .sbss      bootThisDol                                                  */
+/* 80451698-804516A0 0004+04 s=1 e=0 z=0  None .sbss      bootThisDol                                                  */
 static u8 bootThisDol[4 + 4 /* padding */];
 
-/* 8033F8AC-8033FAAC 0200+00 r=5 e=5 z=0  None .text      OSResetSystem                                                */
+/* 8033F8AC-8033FAAC 0200+00 s=0 e=5 z=0  None .text      OSResetSystem                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +130,7 @@ extern "C" asm void OSResetSystem() {
 #pragma pop
 
 
-/* 8033FAAC-8033FAE4 0038+00 r=3 e=3 z=0  None .text      OSGetResetCode                                               */
+/* 8033FAAC-8033FAE4 0038+00 s=0 e=3 z=0  None .text      OSGetResetCode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

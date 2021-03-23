@@ -24,7 +24,7 @@ extern "C" void Hu_IsStub(); // 1
 // Declarations:
 // 
 
-/* 803737AC-803737B4 0008+00 r=1 e=1 z=0  None .text      Hu_IsStub                                                    */
+/* 803737AC-803737B4 0008+00 s=0 e=1 z=0  None .text      Hu_IsStub                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

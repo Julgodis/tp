@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8083789C[2];
+extern u8 data_8083789C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_formation_mng_cpp(); // 1
 
 // 
 // Declarations:

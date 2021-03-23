@@ -105,7 +105,7 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 8001EE34-8001EE64 0030+00 r=1 e=0 z=0  None .text      fopScnRq_phase_ClearOverlap__FP19scene_request_class         */
+/* 8001EE34-8001EE64 0030+00 s=1 e=0 z=0  None .text      fopScnRq_phase_ClearOverlap__FP19scene_request_class         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm static void fopScnRq_phase_ClearOverlap(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EE64-8001EE84 0020+00 r=2 e=0 z=0  None .text      fopScnRq_phase_Execute__FP19scene_request_class              */
+/* 8001EE64-8001EE84 0020+00 s=2 e=0 z=0  None .text      fopScnRq_phase_Execute__FP19scene_request_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm static void fopScnRq_phase_Execute(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EE84-8001EEB4 0030+00 r=1 e=0 z=0  None .text      fopScnRq_phase_IsDoingOverlap__FP19scene_request_class       */
+/* 8001EE84-8001EEB4 0030+00 s=1 e=0 z=0  None .text      fopScnRq_phase_IsDoingOverlap__FP19scene_request_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm static void fopScnRq_phase_IsDoingOverlap(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EEB4-8001EEE4 0030+00 r=1 e=0 z=0  None .text      fopScnRq_phase_IsDoneOverlap__FP19scene_request_class        */
+/* 8001EEB4-8001EEE4 0030+00 s=1 e=0 z=0  None .text      fopScnRq_phase_IsDoneOverlap__FP19scene_request_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,10 +150,10 @@ asm static void fopScnRq_phase_IsDoneOverlap(scene_request_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CE0-80450CE8 0004+04 r=2 e=0 z=0  None .sbss      l_fopScnRq_IsUsingOfOverlap                                  */
+/* 80450CE0-80450CE8 0004+04 s=2 e=0 z=0  None .sbss      l_fopScnRq_IsUsingOfOverlap                                  */
 static u8 l_fopScnRq_IsUsingOfOverlap[4 + 4 /* padding */];
 
-/* 8001EEE4-8001EF24 0040+00 r=2 e=0 z=0  None .text      fopScnRq_phase_Done__FP19scene_request_class                 */
+/* 8001EEE4-8001EF24 0040+00 s=2 e=0 z=0  None .text      fopScnRq_phase_Done__FP19scene_request_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ asm static void fopScnRq_phase_Done(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EF24-8001EF6C 0048+00 r=1 e=0 z=0  None .text      fopScnRq_Execute__FP19scene_request_class                    */
+/* 8001EF24-8001EF6C 0048+00 s=1 e=0 z=0  None .text      fopScnRq_Execute__FP19scene_request_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm static void fopScnRq_Execute(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EF6C-8001EFB0 0044+00 r=1 e=0 z=0  None .text      fopScnRq_PostMethod__FPvP19scene_request_class               */
+/* 8001EF6C-8001EFB0 0044+00 s=1 e=0 z=0  None .text      fopScnRq_PostMethod__FPvP19scene_request_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm static void fopScnRq_PostMethod(void* param_0, scene_request_class* param_1)
 #pragma pop
 
 
-/* 8001EFB0-8001EFF0 0040+00 r=1 e=0 z=0  None .text      fopScnRq_Cancel__FP19scene_request_class                     */
+/* 8001EFB0-8001EFF0 0040+00 s=1 e=0 z=0  None .text      fopScnRq_Cancel__FP19scene_request_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +197,7 @@ asm static void fopScnRq_Cancel(scene_request_class* param_0) {
 #pragma pop
 
 
-/* 8001EFF0-8001F034 0044+00 r=1 e=0 z=0  None .text      fopScnRq_FadeRequest__FsUs                                   */
+/* 8001EFF0-8001F034 0044+00 s=1 e=0 z=0  None .text      fopScnRq_FadeRequest__FsUs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm static void fopScnRq_FadeRequest(s16 param_0, u16 param_1) {
 
 
 /* ############################################################################################## */
-/* 803A38C8-803A38D8 0010+00 r=1 e=0 z=0  None .data      submethod$2274                                               */
+/* 803A38C8-803A38D8 0010+00 s=1 e=0 z=0  None .data      submethod$2274                                               */
 SECTION_DATA static void* data_803A38C8[4] = {
 	/* 0    */ (void*)fopScnRq_Execute__FP19scene_request_class,
 	/* 1    */ (void*)fopScnRq_Cancel__FP19scene_request_class,
@@ -217,7 +217,7 @@ SECTION_DATA static void* data_803A38C8[4] = {
 	/* 3    */ (void*)fopScnRq_PostMethod__FPvP19scene_request_class,
 };
 
-/* 8001F034-8001F0FC 00C8+00 r=3 e=3 z=0  None .text      fopScnRq_Request__FiP11scene_classsPvsUs                     */
+/* 8001F034-8001F0FC 00C8+00 s=0 e=3 z=0  None .text      fopScnRq_Request__FiP11scene_classsPvsUs                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm void fopScnRq_Request(int param_0, scene_class* param_1, s16 param_2, void* 
 #pragma pop
 
 
-/* 8001F0FC-8001F11C 0020+00 r=1 e=1 z=0  None .text      fopScnRq_ReRequest__FUisPv                                   */
+/* 8001F0FC-8001F11C 0020+00 s=0 e=1 z=0  None .text      fopScnRq_ReRequest__FUisPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +239,7 @@ asm void fopScnRq_ReRequest(unsigned int param_0, s16 param_1, void* param_2) {
 #pragma pop
 
 
-/* 8001F11C-8001F13C 0020+00 r=1 e=1 z=0  None .text      fopScnRq_Handler__Fv                                         */
+/* 8001F11C-8001F13C 0020+00 s=0 e=1 z=0  None .text      fopScnRq_Handler__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +251,7 @@ asm void fopScnRq_Handler() {
 
 
 /* ############################################################################################## */
-/* 803A38D8-803A38F8 0020+00 r=0 e=0 z=0  None .data      noFadeFase$2275                                              */
+/* 803A38D8-803A38F8 0020+00 s=0 e=0 z=0  None .data      noFadeFase$2275                                              */
 SECTION_DATA void* data_803A38D8[8] = {
 	/* 0    */ (void*)fopScnRq_phase_Execute__FP19scene_request_class,
 	/* 1    */ (void*)fopScnRq_phase_Done__FP19scene_request_class,
@@ -263,7 +263,7 @@ SECTION_DATA void* data_803A38D8[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803A38F8-803A3918 0020+00 r=0 e=0 z=0  None .data      fadeFase$2276                                                */
+/* 803A38F8-803A3918 0020+00 s=0 e=0 z=0  None .data      fadeFase$2276                                                */
 SECTION_DATA void* data_803A38F8[8] = {
 	/* 0    */ (void*)fopScnRq_phase_IsDoingOverlap__FP19scene_request_class,
 	/* 1    */ (void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,

@@ -1,6 +1,6 @@
 lbl_80A92CF8:
-/* 80A92CF8 00000000  3C C0 00 00 */	lis r6, __global_destructor_chain@ha /* 80A97AC0 */
-/* 80A92CFC 00000004  84 06 00 00 */	lwzu r0, __global_destructor_chain@l(r6) /* 80A97AC0 */
+/* 80A92CF8 00000000  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80A92CFC 00000004  84 06 00 00 */	lwzu r0, 0x0000(r6)
 /* 80A92D00 00000008  90 05 00 00 */	stw r0, 0(r5)
 /* 80A92D04 0000000C  90 85 00 04 */	stw r4, 4(r5)
 /* 80A92D08 00000010  90 65 00 08 */	stw r3, 8(r5)

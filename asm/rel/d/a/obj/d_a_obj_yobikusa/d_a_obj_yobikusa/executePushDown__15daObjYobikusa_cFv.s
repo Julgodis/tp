@@ -3,10 +3,10 @@ lbl_8059CC60:
 /* 8059CC64 00000004  7C 08 02 A6 */	mflr r0
 /* 8059CC68 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8059CC6C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 8059CC70 00000010  4B FF FD 69 */	bl _savegpr_29
+/* 8059CC70 00000010  4B FF FD 69 */	bl _unresolved
 /* 8059CC74 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 8059CC78 00000018  38 7D 05 F0 */	addi r3, r29, 0x5f0
-/* 8059CC7C 0000001C  4B FF FD 5D */	bl ChkCoHit__12dCcD_GObjInfFv
+/* 8059CC7C 0000001C  4B FF FD 5D */	bl _unresolved
 /* 8059CC80 00000020  28 03 00 00 */	cmplwi r3, 0
 /* 8059CC84 00000024  40 82 00 14 */	bne lbl_8059CC98
 /* 8059CC88 00000028  7F A3 EB 78 */	mr r3, r29
@@ -15,26 +15,26 @@ lbl_8059CC60:
 /* 8059CC94 00000034  48 00 00 98 */	b lbl_8059CD2C
 lbl_8059CC98:
 /* 8059CC98 00000000  38 7D 06 D8 */	addi r3, r29, 0x6d8
-/* 8059CC9C 00000004  4B FF FD 3D */	bl GetAc__22dCcD_GAtTgCoCommonBaseFv
+/* 8059CC9C 00000004  4B FF FD 3D */	bl _unresolved
 /* 8059CCA0 00000008  7C 7E 1B 78 */	mr r30, r3
 /* 8059CCA4 0000000C  7F A3 EB 78 */	mr r3, r29
 /* 8059CCA8 00000010  7F C4 F3 78 */	mr r4, r30
-/* 8059CCAC 00000014  4B FF FD 2D */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8059CCAC 00000014  4B FF FD 2D */	bl _unresolved
 /* 8059CCB0 00000018  7C 7F 1B 78 */	mr r31, r3
 /* 8059CCB4 0000001C  7F A3 EB 78 */	mr r3, r29
 /* 8059CCB8 00000020  7F C4 F3 78 */	mr r4, r30
-/* 8059CCBC 00000024  4B FF FD 1D */	bl fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 8059CCC0 00000028  3C 60 00 00 */	lis r3, M_attr__15daObjYobikusa_c@ha /* 8059DE7C */
-/* 8059CCC4 0000002C  38 63 00 00 */	addi r3, r3, M_attr__15daObjYobikusa_c@l /* 8059DE7C */
+/* 8059CCBC 00000024  4B FF FD 1D */	bl _unresolved
+/* 8059CCC0 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059CCC4 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8059CCC8 00000030  C0 43 00 04 */	lfs f2, 4(r3)
-/* 8059CCCC 00000034  3C 60 00 00 */	lis r3, lit_3724@ha /* 8059DEC0 */
-/* 8059CCD0 00000038  C0 03 00 00 */	lfs f0, lit_3724@l(r3) /* 8059DEC0 */
+/* 8059CCCC 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059CCD0 00000038  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 8059CCD4 0000003C  EC 02 00 24 */	fdivs f0, f2, f0
 /* 8059CCD8 00000040  FC 00 00 50 */	fneg f0, f0
 /* 8059CCDC 00000044  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8059CCE0 00000048  EC 20 10 2A */	fadds f1, f0, f2
-/* 8059CCE4 0000004C  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha /* 80439A20 */
-/* 8059CCE8 00000050  38 83 00 00 */	addi r4, r3, sincosTable___5JMath@l /* 80439A20 */
+/* 8059CCE4 0000004C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8059CCE8 00000050  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 8059CCEC 00000054  57 E5 04 38 */	rlwinm r5, r31, 0, 0x10, 0x1c
 /* 8059CCF0 00000058  7C 64 2A 14 */	add r3, r4, r5
 /* 8059CCF4 0000005C  C0 03 00 04 */	lfs f0, 4(r3)
@@ -53,7 +53,7 @@ lbl_8059CC98:
 /* 8059CD28 00000090  48 00 07 2D */	bl setNewLeaf__15daObjYobikusa_cFv
 lbl_8059CD2C:
 /* 8059CD2C 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 8059CD30 00000004  4B FF FC A9 */	bl _restgpr_29
+/* 8059CD30 00000004  4B FF FC A9 */	bl _unresolved
 /* 8059CD34 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8059CD38 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8059CD3C 00000010  38 21 00 30 */	addi r1, r1, 0x30

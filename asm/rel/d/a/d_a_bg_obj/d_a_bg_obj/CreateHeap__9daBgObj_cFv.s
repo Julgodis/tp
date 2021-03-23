@@ -5,16 +5,16 @@ lbl_8045A940:
 /* 8045A94C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045A950 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045A954 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8045A958 00000018  3C 80 00 00 */	lis r4, l_specName@ha /* 8045CB38 */
-/* 8045A95C 0000001C  83 E4 00 00 */	lwz r31, l_specName@l(r4) /* 8045CB38 */
-/* 8045A960 00000020  4B FF EC D9 */	bl getArcName__12daSetBgObj_cFP10fopAc_ac_c
+/* 8045A958 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8045A95C 0000001C  83 E4 00 00 */	lwz r31, 0x0000(r4)
+/* 8045A960 00000020  4B FF EC D9 */	bl _unresolved
 /* 8045A964 00000024  7F E4 FB 78 */	mr r4, r31
-/* 8045A968 00000028  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8045A96C 0000002C  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8045A968 00000028  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 8045A96C 0000002C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 8045A970 00000030  3C A5 00 02 */	addis r5, r5, 2
 /* 8045A974 00000034  38 C0 00 80 */	li r6, 0x80
 /* 8045A978 00000038  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 8045A97C 0000003C  4B FF EC BD */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
+/* 8045A97C 0000003C  4B FF EC BD */	bl _unresolved
 /* 8045A980 00000040  7C 64 1B 78 */	mr r4, r3
 /* 8045A984 00000044  88 1E 0D 02 */	lbz r0, 0xd02(r30)
 /* 8045A988 00000048  28 00 00 00 */	cmplwi r0, 0
@@ -32,10 +32,10 @@ lbl_8045A9B0:
 /* 8045A9B0 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8045A9B4 00000004  A0 1E 0C D0 */	lhz r0, 0xcd0(r30)
 /* 8045A9B8 00000008  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 8045A9BC 0000000C  3C 80 00 00 */	lis r4, mCreateHeapFunc__9daBgObj_c@ha /* 8045CB6C */
-/* 8045A9C0 00000010  38 04 00 00 */	addi r0, r4, mCreateHeapFunc__9daBgObj_c@l /* 8045CB6C */
+/* 8045A9BC 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8045A9C0 00000010  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 8045A9C4 00000014  7D 80 2A 14 */	add r12, r0, r5
-/* 8045A9C8 00000018  4B FF EC 71 */	bl __ptmf_scall
+/* 8045A9C8 00000018  4B FF EC 71 */	bl _unresolved
 /* 8045A9CC 0000001C  60 00 00 00 */	nop 
 lbl_8045A9D0:
 /* 8045A9D0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CE8DA8[2];
+extern u8 data_80CE8DA8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_stairBlock_cpp(); // 1
 
 // 
 // Declarations:

@@ -44,7 +44,7 @@ extern "C" void MWTRACE(); // 1
 // Declarations:
 // 
 
-/* 8036ED84-8036EE94 0110+00 r=1 e=1 z=0  None .text      HandlePositionFileSupportRequest                             */
+/* 8036ED84-8036EE94 0110+00 s=0 e=1 z=0  None .text      HandlePositionFileSupportRequest                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ extern "C" asm void HandlePositionFileSupportRequest() {
 #pragma pop
 
 
-/* 8036EE94-8036EF7C 00E8+00 r=1 e=1 z=0  None .text      HandleCloseFileSupportRequest                                */
+/* 8036EE94-8036EF7C 00E8+00 s=0 e=1 z=0  None .text      HandleCloseFileSupportRequest                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm void HandleCloseFileSupportRequest() {
 #pragma pop
 
 
-/* 8036EF7C-8036F098 011C+00 r=1 e=1 z=0  None .text      HandleOpenFileSupportRequest                                 */
+/* 8036EF7C-8036F098 011C+00 s=0 e=1 z=0  None .text      HandleOpenFileSupportRequest                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +78,7 @@ extern "C" asm void HandleOpenFileSupportRequest() {
 
 
 /* ############################################################################################## */
-/* 803A2AB8-803A2AD0 0015+03 r=1 e=0 z=0  None .rodata    @274                                                         */
+/* 803A2AB8-803A2AD0 0015+03 s=1 e=0 z=0  None .rodata    @274                                                         */
 SECTION_RODATA static u8 const lit_274[21 + 3 /* padding */] = {
 	0x43, 0x61, 0x6C, 0x6C, 0x69, 0x6E, 0x67, 0x20, 0x4D, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x53,
 	0x65, 0x6E, 0x64, 0x0A, 0x00,
@@ -86,7 +86,7 @@ SECTION_RODATA static u8 const lit_274[21 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 8036F098-8036F278 01E0+00 r=5 e=1 z=0  None .text      TRKRequestSend                                               */
+/* 8036F098-8036F278 01E0+00 s=4 e=1 z=0  None .text      TRKRequestSend                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ extern "C" asm void TRKRequestSend() {
 #pragma pop
 
 
-/* 8036F278-8036F498 0220+00 r=1 e=1 z=0  None .text      TRKSuppAccessFile                                            */
+/* 8036F278-8036F498 0220+00 s=0 e=1 z=0  None .text      TRKSuppAccessFile                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,20 +109,20 @@ extern "C" asm void TRKSuppAccessFile() {
 
 
 /* ############################################################################################## */
-/* 803A2AD0-803A2AF8 0028+00 r=0 e=0 z=0  None .rodata    @275                                                         */
+/* 803A2AD0-803A2AF8 0028+00 s=0 e=0 z=0  None .rodata    @275                                                         */
 SECTION_RODATA u8 const MetroTRK_Portable_support__lit_275[40] = {
 	0x6D, 0x73, 0x67, 0x5F, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64, 0x20, 0x3A, 0x20, 0x30, 0x78,
 	0x25, 0x30, 0x32, 0x78, 0x20, 0x68, 0x64, 0x72, 0x2D, 0x3E, 0x63, 0x6D, 0x64, 0x49, 0x44, 0x20,
 	0x30, 0x78, 0x25, 0x30, 0x32, 0x78, 0x0A, 0x00,
 };
 
-/* 803A2AF8-803A2B0C 0014+00 r=0 e=0 z=0  None .rodata    @276                                                         */
+/* 803A2AF8-803A2B0C 0014+00 s=0 e=0 z=0  None .rodata    @276                                                         */
 SECTION_RODATA u8 const MetroTRK_Portable_support__lit_276[20] = {
 	0x6D, 0x73, 0x67, 0x5F, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30,
 	0x32, 0x78, 0x0A, 0x00,
 };
 
-/* 803A2B0C-803A2B60 0051+03 r=0 e=0 z=0  None .rodata    @277                                                         */
+/* 803A2B0C-803A2B60 0051+03 s=0 e=0 z=0  None .rodata    @277                                                         */
 SECTION_RODATA u8 const lit_277[81 + 3 /* padding */] = {
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x53, 0x65, 0x6E, 0x64, 0x20, 0x3A, 0x20, 0x42, 0x61,
 	0x64, 0x20, 0x61, 0x63, 0x6B, 0x20, 0x6F, 0x72, 0x20, 0x6E, 0x6F, 0x6E, 0x20, 0x61, 0x63, 0x6B,

@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
+};
+
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
 struct JUTResReference {
@@ -58,7 +58,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 802DE078-802DE120 00A8+00 r=1 e=1 z=0  None .text      getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive */
+/* 802DE078-802DE120 00A8+00 s=0 e=1 z=0  None .text      getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +69,7 @@ asm void JUTResReference::getResource(JSUInputStream* param_0, u32 param_1, JKRA
 #pragma pop
 
 
-/* 802DE120-802DE1BC 009C+00 r=2 e=2 z=0  None .text      getResource__15JUTResReferenceFPCvUlP10JKRArchive            */
+/* 802DE120-802DE1BC 009C+00 s=0 e=2 z=0  None .text      getResource__15JUTResReferenceFPCvUlP10JKRArchive            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void JUTResReference::getResource(void const* param_0, u32 param_1, JKRArchi
 #pragma pop
 
 
-/* 802DE1BC-802DE234 0078+00 r=2 e=0 z=0  None .text      getResource__15JUTResReferenceFUlP10JKRArchive               */
+/* 802DE1BC-802DE234 0078+00 s=2 e=0 z=0  None .text      getResource__15JUTResReferenceFUlP10JKRArchive               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

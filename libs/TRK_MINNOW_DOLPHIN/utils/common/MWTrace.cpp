@@ -24,7 +24,7 @@ extern "C" void MWTRACE(); // 1
 // Declarations:
 // 
 
-/* 80372C54-80372CA4 0050+00 r=22 e=22 z=0  None .text      MWTRACE                                                      */
+/* 80372C54-80372CA4 0050+00 s=0 e=22 z=0  None .text      MWTRACE                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

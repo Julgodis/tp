@@ -5,41 +5,41 @@ lbl_80B76118:
 /* 80B76124 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80B76128 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80B7612C 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80B76130 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80B76134 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80B76130 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B76134 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B76138 00000020  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80B7613C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 80B76140 00000028  3C 80 00 00 */	lis r4, struct_80B780C4+0x0@ha /* 80B780C4 */
-/* 80B76144 0000002C  38 84 00 00 */	addi r4, r4, struct_80B780C4+0x0@l /* 80B780C4 */
+/* 80B76140 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B76144 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80B76148 00000030  38 84 00 0D */	addi r4, r4, 0xd
 /* 80B7614C 00000034  7F C5 F3 78 */	mr r5, r30
 /* 80B76150 00000038  38 C0 FF FF */	li r6, -1
-/* 80B76154 0000003C  4B FF EF 45 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80B76154 0000003C  4B FF EF 45 */	bl _unresolved
 /* 80B76158 00000040  2C 03 FF FF */	cmpwi r3, -1
 /* 80B7615C 00000044  41 82 00 68 */	beq lbl_80B761C4
 /* 80B76160 00000048  90 7E 0D AC */	stw r3, 0xdac(r30)
 /* 80B76164 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 80B76168 00000050  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80B7616C 00000054  3C A0 00 00 */	lis r5, mCutNameList__13daNpc_Zelda_c@ha /* 80B78200 */
-/* 80B76170 00000058  38 A5 00 00 */	addi r5, r5, mCutNameList__13daNpc_Zelda_c@l /* 80B78200 */
+/* 80B7616C 00000054  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80B76170 00000058  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80B76174 0000005C  38 C0 00 01 */	li r6, 1
 /* 80B76178 00000060  38 E0 00 00 */	li r7, 0
 /* 80B7617C 00000064  39 00 00 00 */	li r8, 0
-/* 80B76180 00000068  4B FF EF 19 */	bl getMyActIdx__16dEvent_manager_cFiPCPCciii
+/* 80B76180 00000068  4B FF EF 19 */	bl _unresolved
 /* 80B76184 0000006C  7C 60 1B 78 */	mr r0, r3
 /* 80B76188 00000070  7F C3 F3 78 */	mr r3, r30
 /* 80B7618C 00000074  80 9E 0D AC */	lwz r4, 0xdac(r30)
 /* 80B76190 00000078  1C C0 00 0C */	mulli r6, r0, 0xc
-/* 80B76194 0000007C  3C A0 00 00 */	lis r5, mCutList__13daNpc_Zelda_c@ha /* 80B78204 */
-/* 80B76198 00000080  38 05 00 00 */	addi r0, r5, mCutList__13daNpc_Zelda_c@l /* 80B78204 */
+/* 80B76194 0000007C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80B76198 00000080  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 80B7619C 00000084  7D 80 32 14 */	add r12, r0, r6
-/* 80B761A0 00000088  4B FF EE F9 */	bl __ptmf_scall
+/* 80B761A0 00000088  4B FF EE F9 */	bl _unresolved
 /* 80B761A4 0000008C  60 00 00 00 */	nop 
 /* 80B761A8 00000090  2C 03 00 00 */	cmpwi r3, 0
 /* 80B761AC 00000094  41 82 00 10 */	beq lbl_80B761BC
 /* 80B761B0 00000098  7F E3 FB 78 */	mr r3, r31
 /* 80B761B4 0000009C  80 9E 0D AC */	lwz r4, 0xdac(r30)
-/* 80B761B8 000000A0  4B FF EE E1 */	bl cutEnd__16dEvent_manager_cFi
+/* 80B761B8 000000A0  4B FF EE E1 */	bl _unresolved
 lbl_80B761BC:
 /* 80B761BC 00000000  38 60 00 01 */	li r3, 1
 /* 80B761C0 00000004  48 00 00 08 */	b lbl_80B761C8

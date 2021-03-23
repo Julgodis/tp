@@ -5,34 +5,34 @@ lbl_80D167BC:
 /* 80D167C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D167CC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D167D0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D167D4 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D167D8 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D167D4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D167D8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80D167DC 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80D167E0 00000024  80 1E 05 D0 */	lwz r0, 0x5d0(r30)
 /* 80D167E4 00000028  54 00 08 3C */	slwi r0, r0, 1
 /* 80D167E8 0000002C  7C 9E 02 14 */	add r4, r30, r0
 /* 80D167EC 00000030  A8 84 05 D4 */	lha r4, 0x5d4(r4)
-/* 80D167F0 00000034  4B FF F2 29 */	bl endCheck__16dEvent_manager_cFs
+/* 80D167F0 00000034  4B FF F2 29 */	bl _unresolved
 /* 80D167F4 00000038  2C 03 00 00 */	cmpwi r3, 0
 /* 80D167F8 0000003C  41 82 00 30 */	beq lbl_80D16828
 /* 80D167FC 00000040  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80D16800 00000044  4B FF F2 19 */	bl reset__14dEvt_control_cFv
+/* 80D16800 00000044  4B FF F2 19 */	bl _unresolved
 /* 80D16804 00000048  38 60 00 05 */	li r3, 5
 /* 80D16808 0000004C  38 80 FF FF */	li r4, -1
-/* 80D1680C 00000050  4B FF F2 0D */	bl dComIfGs_offOneZoneSwitch__Fii
+/* 80D1680C 00000050  4B FF F2 0D */	bl _unresolved
 /* 80D16810 00000054  38 60 00 06 */	li r3, 6
 /* 80D16814 00000058  38 80 FF FF */	li r4, -1
-/* 80D16818 0000005C  4B FF F2 01 */	bl dComIfGs_offOneZoneSwitch__Fii
+/* 80D16818 0000005C  4B FF F2 01 */	bl _unresolved
 /* 80D1681C 00000060  38 00 00 00 */	li r0, 0
 /* 80D16820 00000064  98 1E 05 DD */	stb r0, 0x5dd(r30)
 /* 80D16824 00000068  48 00 00 24 */	b lbl_80D16848
 lbl_80D16828:
 /* 80D16828 00000000  38 7F 4E C8 */	addi r3, r31, 0x4ec8
 /* 80D1682C 00000004  7F C4 F3 78 */	mr r4, r30
-/* 80D16830 00000008  3C A0 00 00 */	lis r5, eventCallBack__FPvi@ha /* 80D15E98 */
-/* 80D16834 0000000C  38 A5 00 00 */	addi r5, r5, eventCallBack__FPvi@l /* 80D15E98 */
+/* 80D16830 00000008  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80D16834 0000000C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80D16838 00000010  38 C0 00 00 */	li r6, 0
-/* 80D1683C 00000014  4B FF F1 DD */	bl setSkipProc__14dEvt_control_cFPvPFPvi_ii
+/* 80D1683C 00000014  4B FF F1 DD */	bl _unresolved
 /* 80D16840 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80D16844 0000001C  48 00 00 21 */	bl demoProc__16daObjTobyHouse_cFv
 lbl_80D16848:

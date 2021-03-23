@@ -46,7 +46,7 @@ extern "C" extern u8 gTRKCPUState[1072];
 // Declarations:
 // 
 
-/* 80371560-803715F8 0098+00 r=1 e=1 z=0  None .text      InitMetroTRK                                                 */
+/* 80371560-803715F8 0098+00 s=0 e=1 z=0  None .text      InitMetroTRK                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +57,7 @@ extern "C" asm void InitMetroTRK() {
 #pragma pop
 
 
-/* 803715F8-8037168C 0094+00 r=1 e=1 z=0  None .text      InitMetroTRK_BBA                                             */
+/* 803715F8-8037168C 0094+00 s=0 e=1 z=0  None .text      InitMetroTRK_BBA                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm void InitMetroTRK_BBA() {
 #pragma pop
 
 
-/* 8037168C-80371878 01EC+00 r=1 e=1 z=0  None .text      TRK__write_aram                                              */
+/* 8037168C-80371878 01EC+00 s=0 e=1 z=0  None .text      TRK__write_aram                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ extern "C" asm void TRK__write_aram() {
 #pragma pop
 
 
-/* 80371878-803719AC 0134+00 r=1 e=1 z=0  None .text      TRK__read_aram                                               */
+/* 80371878-803719AC 0134+00 s=0 e=1 z=0  None .text      TRK__read_aram                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,10 +91,10 @@ extern "C" asm void TRK__read_aram() {
 
 
 /* ############################################################################################## */
-/* 8044F810-8044F818 0004+04 r=3 e=0 z=0  .bss .bss       lc_base                                                      */
+/* 8044F810-8044F818 0004+04 s=3 e=0 z=0  .bss .bss       lc_base                                                      */
 static u8 lc_base[4 + 4 /* padding */];
 
-/* 803719AC-803719F8 004C+00 r=1 e=1 z=0  None .text      TRKInitializeTarget                                          */
+/* 803719AC-803719F8 004C+00 s=0 e=1 z=0  None .text      TRKInitializeTarget                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ extern "C" asm void TRKInitializeTarget() {
 
 
 /* ############################################################################################## */
-/* 803D3268-803D32A8 003C+04 r=1 e=0 z=0  None .data      TRK_ISR_OFFSETS                                              */
+/* 803D3268-803D32A8 003C+04 s=1 e=0 z=0  None .data      TRK_ISR_OFFSETS                                              */
 SECTION_DATA static u8 TRK_ISR_OFFSETS[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,
 	0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,
@@ -116,7 +116,7 @@ SECTION_DATA static u8 TRK_ISR_OFFSETS[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803719F8-80371B24 012C+00 r=1 e=1 z=0  None .text      __TRK_copy_vectors                                           */
+/* 803719F8-80371B24 012C+00 s=0 e=1 z=0  None .text      __TRK_copy_vectors                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ extern "C" asm void __TRK_copy_vectors() {
 #pragma pop
 
 
-/* 80371B24-80371B7C 0058+00 r=1 e=1 z=0  None .text      TRKTargetTranslate                                           */
+/* 80371B24-80371B7C 0058+00 s=0 e=1 z=0  None .text      TRKTargetTranslate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ extern "C" asm void TRKTargetTranslate() {
 #pragma pop
 
 
-/* 80371B7C-80371B9C 0020+00 r=1 e=1 z=0  None .text      EnableMetroTRKInterrupts                                     */
+/* 80371B7C-80371B9C 0020+00 s=0 e=1 z=0  None .text      EnableMetroTRKInterrupts                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

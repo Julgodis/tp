@@ -4,10 +4,10 @@ lbl_8072CBD4:
 /* 8072CBDC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8072CBE0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8072CBE4 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8072CBE8 00000014  4B FF F9 51 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8072CBE8 00000014  4B FF F9 51 */	bl _unresolved
 /* 8072CBEC 00000018  7C 64 1B 78 */	mr r4, r3
 /* 8072CBF0 0000001C  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
-/* 8072CBF4 00000020  4B FF F9 45 */	bl cLib_distanceAngleS__Fss
+/* 8072CBF4 00000020  4B FF F9 45 */	bl _unresolved
 /* 8072CBF8 00000024  7C 63 07 34 */	extsh r3, r3
 /* 8072CBFC 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8072CC00 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)

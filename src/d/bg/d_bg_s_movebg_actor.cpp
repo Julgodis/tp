@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgW {
@@ -98,8 +98,6 @@ extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
-extern "C" extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -133,8 +131,8 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803AB9A0-803AB9C8 0028+00 r=35 e=0 z=34  None .data      __vt__16dBgS_MoveBgActor                                     */
-SECTION_DATA void* __vt__16dBgS_MoveBgActor[10] = {
+/* 803AB9A0-803AB9C8 0028+00 s=1 e=0 z=0  None .data      __vt__16dBgS_MoveBgActor                                     */
+SECTION_DATA static void* __vt__16dBgS_MoveBgActor[10] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)CreateHeap__16dBgS_MoveBgActorFv,
@@ -147,7 +145,7 @@ SECTION_DATA void* __vt__16dBgS_MoveBgActor[10] = {
 	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80078624-80078668 0044+00 r=173 e=0 z=173  None .text      __ct__16dBgS_MoveBgActorFv                                   */
+/* 80078624-80078668 0044+00 s=0 e=0 z=0  None .text      __ct__16dBgS_MoveBgActorFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +156,7 @@ asm dBgS_MoveBgActor::dBgS_MoveBgActor() {
 #pragma pop
 
 
-/* 80078668-80078688 0020+00 r=1 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
+/* 80078668-80078688 0020+00 s=1 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +167,7 @@ asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80078688-80078690 0008+00 r=3 e=0 z=2  None .text      CreateHeap__16dBgS_MoveBgActorFv                             */
+/* 80078688-80078690 0008+00 s=1 e=0 z=0  None .text      CreateHeap__16dBgS_MoveBgActorFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +178,7 @@ asm void dBgS_MoveBgActor::CreateHeap() {
 #pragma pop
 
 
-/* 80078690-80078698 0008+00 r=61 e=0 z=60  None .text      Create__16dBgS_MoveBgActorFv                                 */
+/* 80078690-80078698 0008+00 s=1 e=0 z=0  None .text      Create__16dBgS_MoveBgActorFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +189,7 @@ asm void dBgS_MoveBgActor::Create() {
 #pragma pop
 
 
-/* 80078698-800786A0 0008+00 r=4 e=0 z=3  None .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
+/* 80078698-800786A0 0008+00 s=1 e=0 z=0  None .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +200,7 @@ asm void dBgS_MoveBgActor::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 800786A0-800786A8 0008+00 r=3 e=0 z=2  None .text      Draw__16dBgS_MoveBgActorFv                                   */
+/* 800786A0-800786A8 0008+00 s=1 e=0 z=0  None .text      Draw__16dBgS_MoveBgActorFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +211,7 @@ asm void dBgS_MoveBgActor::Draw() {
 #pragma pop
 
 
-/* 800786A8-800786B0 0008+00 r=7 e=0 z=6  None .text      Delete__16dBgS_MoveBgActorFv                                 */
+/* 800786A8-800786B0 0008+00 s=1 e=0 z=0  None .text      Delete__16dBgS_MoveBgActorFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +222,7 @@ asm void dBgS_MoveBgActor::Delete() {
 #pragma pop
 
 
-/* 800786B0-800786B8 0008+00 r=172 e=0 z=171  None .text      IsDelete__16dBgS_MoveBgActorFv                               */
+/* 800786B0-800786B8 0008+00 s=1 e=0 z=0  None .text      IsDelete__16dBgS_MoveBgActorFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +233,7 @@ asm void dBgS_MoveBgActor::IsDelete() {
 #pragma pop
 
 
-/* 800786B8-800786C0 0008+00 r=172 e=0 z=171  None .text      ToFore__16dBgS_MoveBgActorFv                                 */
+/* 800786B8-800786C0 0008+00 s=1 e=0 z=0  None .text      ToFore__16dBgS_MoveBgActorFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +244,7 @@ asm void dBgS_MoveBgActor::ToFore() {
 #pragma pop
 
 
-/* 800786C0-800786C8 0008+00 r=172 e=0 z=171  None .text      ToBack__16dBgS_MoveBgActorFv                                 */
+/* 800786C0-800786C8 0008+00 s=1 e=0 z=0  None .text      ToBack__16dBgS_MoveBgActorFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,16 +256,16 @@ asm void dBgS_MoveBgActor::ToBack() {
 
 
 /* ############################################################################################## */
-/* 80450F70-80450F74 0004+00 r=2 e=0 z=0  None .sbss      m_name__16dBgS_MoveBgActor                                   */
+/* 80450F70-80450F74 0004+00 s=2 e=0 z=0  None .sbss      m_name__16dBgS_MoveBgActor                                   */
 static u8 m_name__16dBgS_MoveBgActor[4];
 
-/* 80450F74-80450F78 0004+00 r=2 e=0 z=0  None .sbss      m_dzb_id__16dBgS_MoveBgActor                                 */
+/* 80450F74-80450F78 0004+00 s=2 e=0 z=0  None .sbss      m_dzb_id__16dBgS_MoveBgActor                                 */
 static u8 m_dzb_id__16dBgS_MoveBgActor[4];
 
-/* 80450F78-80450F80 0004+04 r=3 e=0 z=1  None .sbss      m_set_func__16dBgS_MoveBgActor                               */
-u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
+/* 80450F78-80450F80 0004+04 s=2 e=0 z=0  None .sbss      m_set_func__16dBgS_MoveBgActor                               */
+static u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
-/* 800786C8-800787BC 00F4+00 r=1 e=0 z=0  None .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       */
+/* 800786C8-800787BC 00F4+00 s=1 e=0 z=0  None .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +276,7 @@ asm void dBgS_MoveBgActor::MoveBGCreateHeap() {
 #pragma pop
 
 
-/* 800787BC-800788DC 0120+00 r=169 e=0 z=169  None .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
+/* 800787BC-800788DC 0120+00 s=0 e=0 z=0  None .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +287,7 @@ asm void dBgS_MoveBgActor::MoveBGCreate(char const* param_0, int param_1, void (
 #pragma pop
 
 
-/* 800788DC-80078950 0074+00 r=169 e=0 z=169  None .text      MoveBGDelete__16dBgS_MoveBgActorFv                           */
+/* 800788DC-80078950 0074+00 s=0 e=0 z=0  None .text      MoveBGDelete__16dBgS_MoveBgActorFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +298,7 @@ asm void dBgS_MoveBgActor::MoveBGDelete() {
 #pragma pop
 
 
-/* 80078950-80078A14 00C4+00 r=183 e=0 z=183  None .text      MoveBGExecute__16dBgS_MoveBgActorFv                          */
+/* 80078950-80078A14 00C4+00 s=0 e=0 z=0  None .text      MoveBGExecute__16dBgS_MoveBgActorFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

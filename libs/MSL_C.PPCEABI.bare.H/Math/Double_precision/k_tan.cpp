@@ -25,7 +25,7 @@ extern "C" void __kernel_tan(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A2588-803A25F0 0068+00 r=1 e=0 z=0  None .rodata    T                                                            */
+/* 803A2588-803A25F0 0068+00 s=1 e=0 z=0  None .rodata    T                                                            */
 SECTION_RODATA static u8 const T[104] = {
 	0x3F, 0xD5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x63, 0x3F, 0xC1, 0x11, 0x11, 0x11, 0x10, 0xFE, 0x7A,
 	0x3F, 0xAB, 0xA1, 0xBA, 0x1B, 0xB3, 0x41, 0xFE, 0x3F, 0x96, 0x64, 0xF4, 0x84, 0x06, 0xD6, 0x37,
@@ -36,30 +36,30 @@ SECTION_RODATA static u8 const T[104] = {
 	0x3E, 0xFB, 0x2A, 0x70, 0x74, 0xBF, 0x7A, 0xD4,
 };
 
-/* 80456A80-80456A88 0008+00 r=1 e=0 z=0  None .sdata2    @94                                                          */
+/* 80456A80-80456A88 0008+00 s=1 e=0 z=0  None .sdata2    @94                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_94 = 1.0;
 
-/* 80456A88-80456A90 0008+00 r=1 e=0 z=0  None .sdata2    @95                                                          */
+/* 80456A88-80456A90 0008+00 s=1 e=0 z=0  None .sdata2    @95                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_95 = -1.0;
 
-/* 80456A90-80456A98 0008+00 r=1 e=0 z=0  None .sdata2    @96                                                          */
+/* 80456A90-80456A98 0008+00 s=1 e=0 z=0  None .sdata2    @96                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_96 = 0.7853981633974483;
 
-/* 80456A98-80456AA0 0008+00 r=1 e=0 z=0  None .sdata2    @97                                                          */
+/* 80456A98-80456AA0 0008+00 s=1 e=0 z=0  None .sdata2    @97                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_97 = 3.061616997868383e-17;
 
-/* 80456AA0-80456AA8 0008+00 r=1 e=0 z=0  None .sdata2    @98                                                          */
+/* 80456AA0-80456AA8 0008+00 s=1 e=0 z=0  None .sdata2    @98                                                          */
 SECTION_SDATA2 static u8 Math_Double_precision_k_tan__lit_98[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456AA8-80456AB0 0008+00 r=1 e=0 z=0  None .sdata2    @99                                                          */
+/* 80456AA8-80456AB0 0008+00 s=1 e=0 z=0  None .sdata2    @99                                                          */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_99 = 2.0;
 
-/* 80456AB0-80456AB8 0008+00 r=1 e=0 z=0  None .sdata2    @101                                                         */
+/* 80456AB0-80456AB8 0008+00 s=1 e=0 z=0  None .sdata2    @101                                                         */
 SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_101 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8036BA90-8036BCA4 0214+00 r=1 e=1 z=0  None .text      __kernel_tan                                                 */
+/* 8036BA90-8036BCA4 0214+00 s=0 e=1 z=0  None .text      __kernel_tan                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

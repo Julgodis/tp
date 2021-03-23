@@ -9,17 +9,17 @@ lbl_80D61974:
 /* 80D61990 0000001C  40 82 00 1C */	bne lbl_80D619AC
 /* 80D61994 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80D61998 00000024  41 82 00 08 */	beq lbl_80D619A0
-/* 80D6199C 00000028  4B FF FD 3D */	bl __ct__10fopAc_ac_cFv
+/* 80D6199C 00000028  4B FF FD 3D */	bl _unresolved
 lbl_80D619A0:
 /* 80D619A0 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80D619A4 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80D619A8 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80D619AC:
 /* 80D619AC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80D619B0 00000004  3C 80 00 00 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha /* 80D616F8 */
-/* 80D619B4 00000008  38 84 00 00 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l /* 80D616F8 */
+/* 80D619B0 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D619B4 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D619B8 0000000C  38 A0 00 00 */	li r5, 0
-/* 80D619BC 00000010  4B FF FD 1D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80D619BC 00000010  4B FF FD 1D */	bl _unresolved
 /* 80D619C0 00000014  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D619C4 00000018  40 82 00 0C */	bne lbl_80D619D0
 /* 80D619C8 0000001C  38 60 00 05 */	li r3, 5

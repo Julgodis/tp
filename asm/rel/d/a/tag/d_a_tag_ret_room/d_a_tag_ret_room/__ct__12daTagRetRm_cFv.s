@@ -4,9 +4,9 @@ lbl_80D5EE98:
 /* 80D5EEA0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D5EEA4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D5EEA8 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80D5EEAC 00000014  4B FF FF CD */	bl __ct__10fopAc_ac_cFv
-/* 80D5EEB0 00000018  3C 60 00 00 */	lis r3, __vt__12daTagRetRm_c@ha /* 80D5F264 */
-/* 80D5EEB4 0000001C  38 03 00 00 */	addi r0, r3, __vt__12daTagRetRm_c@l /* 80D5F264 */
+/* 80D5EEAC 00000014  4B FF FF CD */	bl _unresolved
+/* 80D5EEB0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D5EEB4 0000001C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D5EEB8 00000020  90 1F 05 68 */	stw r0, 0x568(r31)
 /* 80D5EEBC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80D5EEC0 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)

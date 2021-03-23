@@ -27,22 +27,15 @@ struct cXyz {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 800352B0 */ void offSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // 
 // Forward References:
 // 
 
-static void daTagMist_Execute(daTagMist_c*); // 2
-static void daTagMist_Delete(daTagMist_c*); // 2
-static void daTagMist_Create(fopAc_ac_c*); // 2
+void daTagMist_Execute(daTagMist_c*); // 2
+void daTagMist_Delete(daTagMist_c*); // 2
+void daTagMist_Create(fopAc_ac_c*); // 2
 
 extern "C" void offSw__11daTagMist_cFv(); // 1
 extern "C" void onMySw__11daTagMist_cFv(); // 1
@@ -53,43 +46,27 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void execute__11daTagMist_cFv(); // 1
 extern "C" void _delete__11daTagMist_cFv(); // 1
-extern "C" static void daTagMist_Execute__FP11daTagMist_c(); // 1
-extern "C" static void daTagMist_Delete__FP11daTagMist_c(); // 1
-extern "C" static void daTagMist_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagMist_Execute__FP11daTagMist_c(); // 1
+extern "C" void daTagMist_Delete__FP11daTagMist_c(); // 1
+extern "C" void daTagMist_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern u32 const lit_3678;
 extern "C" extern u32 const lit_3679;
 extern "C" extern u8 const lit_3680[4];
-extern "C" extern void* g_profile_Tag_Mist[12];
+extern "C" extern u8 l_daTagMist_Method[32];
+extern "C" extern u8 g_profile_Tag_Mist[48];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 struct_80450DC0[4];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 8048F258-8048F2C4 006C+00 r=1 e=0 z=0  None .text      offSw__11daTagMist_cFv                                       */
+/* 8048F258-8048F2C4 006C+00 s=1 e=0 z=0  None .text      offSw__11daTagMist_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +77,7 @@ asm void daTagMist_c::offSw() {
 #pragma pop
 
 
-/* 8048F2C4-8048F310 004C+00 r=1 e=0 z=0  None .text      onMySw__11daTagMist_cFv                                      */
+/* 8048F2C4-8048F310 004C+00 s=1 e=0 z=0  None .text      onMySw__11daTagMist_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +88,7 @@ asm void daTagMist_c::onMySw() {
 #pragma pop
 
 
-/* 8048F310-8048F370 0060+00 r=1 e=0 z=0  None .text      isMySw__11daTagMist_cFv                                      */
+/* 8048F310-8048F370 0060+00 s=1 e=0 z=0  None .text      isMySw__11daTagMist_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,11 +99,7 @@ asm void daTagMist_c::isMySw() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8048F700-8048F704 0004+00 r=1 e=0 z=0  None .rodata    @3678                                                        */
-SECTION_RODATA static u32 const lit_3678 = 0xC2480000;
-
-/* 8048F370-8048F444 00D4+00 r=1 e=0 z=0  None .text      Create__11daTagMist_cFv                                      */
+/* 8048F370-8048F444 00D4+00 s=1 e=0 z=0  None .text      Create__11daTagMist_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +110,7 @@ asm void daTagMist_c::Create() {
 #pragma pop
 
 
-/* 8048F444-8048F518 00D4+00 r=1 e=0 z=0  None .text      create__11daTagMist_cFv                                      */
+/* 8048F444-8048F518 00D4+00 s=1 e=0 z=0  None .text      create__11daTagMist_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +121,7 @@ asm void daTagMist_c::create() {
 #pragma pop
 
 
-/* 8048F518-8048F554 003C+00 r=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+/* 8048F518-8048F554 003C+00 s=0 e=0 z=0  None .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +132,7 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 8048F554-8048F558 0004+00 r=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
+/* 8048F554-8048F558 0004+00 s=0 e=0 z=0  None .text      __ct__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +143,7 @@ asm cXyz::cXyz() {
 #pragma pop
 
 
-/* 8048F558-8048F690 0138+00 r=1 e=0 z=0  None .text      execute__11daTagMist_cFv                                     */
+/* 8048F558-8048F690 0138+00 s=1 e=0 z=0  None .text      execute__11daTagMist_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +154,7 @@ asm void daTagMist_c::execute() {
 #pragma pop
 
 
-/* 8048F690-8048F698 0008+00 r=1 e=0 z=0  None .text      _delete__11daTagMist_cFv                                     */
+/* 8048F690-8048F698 0008+00 s=1 e=0 z=0  None .text      _delete__11daTagMist_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,33 +165,33 @@ asm void daTagMist_c::_delete() {
 #pragma pop
 
 
-/* 8048F698-8048F6B8 0020+00 r=1 e=0 z=0  None .text      daTagMist_Execute__FP11daTagMist_c                           */
+/* 8048F698-8048F6B8 0020+00 s=0 e=0 z=0  None .text      daTagMist_Execute__FP11daTagMist_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMist_Execute(daTagMist_c* param_0) {
+asm void daTagMist_Execute(daTagMist_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Execute__FP11daTagMist_c.s"
 }
 #pragma pop
 
 
-/* 8048F6B8-8048F6D8 0020+00 r=1 e=0 z=0  None .text      daTagMist_Delete__FP11daTagMist_c                            */
+/* 8048F6B8-8048F6D8 0020+00 s=0 e=0 z=0  None .text      daTagMist_Delete__FP11daTagMist_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMist_Delete(daTagMist_c* param_0) {
+asm void daTagMist_Delete(daTagMist_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Delete__FP11daTagMist_c.s"
 }
 #pragma pop
 
 
-/* 8048F6D8-8048F6F8 0020+00 r=1 e=0 z=0  None .text      daTagMist_Create__FP10fopAc_ac_c                             */
+/* 8048F6D8-8048F6F8 0020+00 s=0 e=0 z=0  None .text      daTagMist_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMist_Create(fopAc_ac_c* param_0) {
+asm void daTagMist_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/daTagMist_Create__FP10fopAc_ac_c.s"
 }
@@ -226,39 +199,27 @@ asm static void daTagMist_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048F704-8048F708 0004+00 r=0 e=0 z=0  None .rodata    @3679                                                        */
+/* 8048F700-8048F704 0004+00 s=0 e=0 z=0  None .rodata    @3678                                                        */
+SECTION_RODATA u32 const lit_3678 = 0xC2480000;
+
+/* 8048F704-8048F708 0004+00 s=0 e=0 z=0  None .rodata    @3679                                                        */
 SECTION_RODATA u32 const lit_3679 = 0x42480000;
 
-/* 8048F708-8048F70C 0004+00 r=0 e=0 z=0  None .rodata    @3680                                                        */
+/* 8048F708-8048F70C 0004+00 s=0 e=0 z=0  None .rodata    @3680                                                        */
 SECTION_RODATA u8 const lit_3680[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8048F70C-8048F72C 0020+00 r=1 e=0 z=0  None .data      l_daTagMist_Method                                           */
-SECTION_DATA static void* l_daTagMist_Method[8] = {
-	/* 0    */ (void*)daTagMist_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagMist_Delete__FP11daTagMist_c,
-	/* 2    */ (void*)daTagMist_Execute__FP11daTagMist_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8048F70C-8048F72C 0020+00 s=0 e=0 z=0  None .data      l_daTagMist_Method                                           */
+SECTION_DATA u8 l_daTagMist_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8048F72C-8048F75C 0030+00 r=1 e=0 z=1  None .data      g_profile_Tag_Mist                                           */
-SECTION_DATA void* g_profile_Tag_Mist[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D70000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005A8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01240000,
-	/* 9    */ (void*)&l_daTagMist_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+/* 8048F72C-8048F75C 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Mist                                           */
+SECTION_DATA u8 g_profile_Tag_Mist[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0xA8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0E, 0x00, 0x00,
 };
 

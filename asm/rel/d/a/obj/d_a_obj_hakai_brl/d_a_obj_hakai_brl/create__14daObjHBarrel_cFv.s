@@ -21,18 +21,18 @@ lbl_80C16B44:
 /* 80C16B4C 00000008  41 82 00 08 */	beq lbl_80C16B54
 /* 80C16B50 0000000C  38 7E 05 68 */	addi r3, r30, 0x568
 lbl_80C16B54:
-/* 80C16B54 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C1737C */
-/* 80C16B58 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C1737C */
+/* 80C16B54 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C16B58 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C16B5C 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C16B60 0000000C  4B FF FB B9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C16B60 0000000C  4B FF FB B9 */	bl _unresolved
 /* 80C16B64 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C16B68 00000014  2C 1F 00 04 */	cmpwi r31, 4
 /* 80C16B6C 00000018  40 82 00 70 */	bne lbl_80C16BDC
 /* 80C16B70 0000001C  7F C3 F3 78 */	mr r3, r30
-/* 80C16B74 00000020  3C 80 00 00 */	lis r4, daObjHBarrel_c_createHeap__FP10fopAc_ac_c@ha /* 80C16738 */
-/* 80C16B78 00000024  38 84 00 00 */	addi r4, r4, daObjHBarrel_c_createHeap__FP10fopAc_ac_c@l /* 80C16738 */
+/* 80C16B74 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C16B78 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C16B7C 00000028  38 A0 10 00 */	li r5, 0x1000
-/* 80C16B80 0000002C  4B FF FB 99 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80C16B80 0000002C  4B FF FB 99 */	bl _unresolved
 /* 80C16B84 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C16B88 00000034  40 82 00 0C */	bne lbl_80C16B94
 /* 80C16B8C 00000038  38 60 00 05 */	li r3, 5
@@ -48,7 +48,7 @@ lbl_80C16B94:
 /* 80C16BB0 0000001C  80 7E 05 74 */	lwz r3, 0x574(r30)
 /* 80C16BB4 00000020  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C16BB8 00000024  7F C3 F3 78 */	mr r3, r30
-/* 80C16BBC 00000028  4B FF FB 5D */	bl fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
+/* 80C16BBC 00000028  4B FF FB 5D */	bl _unresolved
 /* 80C16BC0 0000002C  38 7E 06 F0 */	addi r3, r30, 0x6f0
 /* 80C16BC4 00000030  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80C16BC8 00000034  38 A0 00 01 */	li r5, 1

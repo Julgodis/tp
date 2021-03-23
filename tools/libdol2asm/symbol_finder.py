@@ -182,7 +182,8 @@ def search(context: Context,
            name: str,
            map_path: Path,
            sections: List[ExecutableSection],
-           relocations: Dict[int, "rel.Relocation"]) -> Module:
+           relocations: Dict[int, "rel.Relocation"],
+           all_relocations: Dict[int, "librel.Relocation"]) -> Module:
     """ Search for symbols from executable sections and the linker map. """
 
     # Get symbolsby reading the linker map
@@ -230,48 +231,57 @@ def search(context: Context,
             break
 
     # insert relocation that are not already symbol from the linker map
-    if len(relocations) > 0:
-        aits = {}
+    if len(all_relocations) > 0:
+        table = dict()
         for section in map_sections.values():
-            relocation_symbols = {}
+            if not section.name in table:
+                table[section.name] = dict()
             for symbol in section.symbols:
-                relocation_symbols[symbol.addr] = symbol
+                table[section.name][symbol.addr] = symbol
 
-            aits[section.name] = IntervalTree(
-                [Interval(x.start, x.end, x)
-                 for x in relocation_symbols.values() if x.size > 0]
-            )
+        # iterate over all relocations (from all modules) that wants to relocation something inside _this_ module.
+        for r in all_relocations[module_id]:
+            section = sections[r.section]
+            if section.name in table:
+                addr = r.addend
+                if module_id == 0: # relative address are used for symbols
+                    addr -= section.addr
 
-        for si, relocs in relocations.items():
-            for r in relocs:
-                if r.module == module_id:
-                    section = sections[r.section]
-                    if section.name in aits:
-                        results = list(aits[section.name][r.addend])
-                        if len(results) == 0:
-                            symbol = linker_map.Symbol(
-                                r.addend, 0, 0, None, None, None)
-                            symbol.source = f"relocation/{section.name}/{r.addend:08X}"
-                            symbol.access = r.access
-                            map_sections[section.name].symbols.append(symbol)
+                if not addr in table[section.name]:
+                    symbol = linker_map.Symbol(addr, 0, 0, None, None, None)
+                    symbol.source = f"relocation/{section.name}/{r.addend:08X}"
+                    symbol.access = r.access
+                    table[section.name][addr] = symbol
+                    map_sections[section.name].symbols.append(symbol)
+            else:
+                context.error(f"{section.name} not in module {module_id}")
 
     # build a tree
     section_count = defaultdict(int)
     tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     tree_order = defaultdict(lambda: defaultdict(list))
     for section in map_sections.values():
+
         # .rel will be compiled with some standard libraries, but the linker map for the rel does not included what library these function come from.
         for symbol in section.symbols:
             if module_id != 0:
                 if symbol.obj == "global_destructor_chain.o":
                     symbol.lib = "Runtime.PPCEABI.H.a"
 
-        if not section.name in tree[symbol.lib][symbol.obj]:
-            tree[symbol.lib][symbol.obj][section.name] = []
-
         # calculate the size of symbols and determine where symbols without a library and object file should be located.
         infer_location_from_other_symbols(section, section.symbols)
         calculate_symbol_sizes(section, section.symbols)
+
+        for symbol in section.symbols:
+            if symbol.addr >= 0x80450c90 and symbol.addr < 0x80450ca0:
+                context.debug(f"{symbol.addr:08X} {symbol.size:04X} {symbol.name} ({symbol.source})")
+
+        if section.symbols:
+            for symbol in section.symbols:
+                if not section.name in tree[symbol.lib][symbol.obj]:
+                    tree[symbol.lib][symbol.obj][section.name] = []
+        else:
+            tree[None][None][section.name] = []
 
         #
         for symbol in section.symbols:

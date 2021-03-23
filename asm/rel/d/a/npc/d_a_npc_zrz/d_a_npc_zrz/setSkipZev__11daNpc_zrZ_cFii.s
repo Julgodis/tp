@@ -3,35 +3,35 @@ lbl_80B96DF0:
 /* 80B96DF4 00000004  7C 08 02 A6 */	mflr r0
 /* 80B96DF8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80B96DFC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B96E00 00000010  4B FF CF 39 */	bl _savegpr_28
+/* 80B96E00 00000010  4B FF CF 39 */	bl _unresolved
 /* 80B96E04 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 80B96E08 00000018  7C 9D 23 78 */	mr r29, r4
 /* 80B96E0C 0000001C  7C BE 2B 78 */	mr r30, r5
-/* 80B96E10 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80B96E14 00000024  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80B96E10 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B96E14 00000024  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80B96E18 00000028  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 80B96E1C 0000002C  4B FF CF 1D */	bl getRunEventName__16dEvent_manager_cFv
+/* 80B96E1C 0000002C  4B FF CF 1D */	bl _unresolved
 /* 80B96E20 00000030  57 A0 10 3A */	slwi r0, r29, 2
-/* 80B96E24 00000034  3C 80 00 00 */	lis r4, l_evtNames@ha /* 80B9B39C */
-/* 80B96E28 00000038  38 84 00 00 */	addi r4, r4, l_evtNames@l /* 80B9B39C */
+/* 80B96E24 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80B96E28 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80B96E2C 0000003C  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80B96E30 00000040  4B FF CF 09 */	bl strcmp
+/* 80B96E30 00000040  4B FF CF 09 */	bl _unresolved
 /* 80B96E34 00000044  2C 03 00 00 */	cmpwi r3, 0
 /* 80B96E38 00000048  40 82 00 28 */	bne lbl_80B96E60
 /* 80B96E3C 0000004C  38 7F 4E C8 */	addi r3, r31, 0x4ec8
 /* 80B96E40 00000050  7F 84 E3 78 */	mr r4, r28
 /* 80B96E44 00000054  57 C0 10 3A */	slwi r0, r30, 2
-/* 80B96E48 00000058  3C A0 00 00 */	lis r5, l_evtNames@ha /* 80B9B39C */
-/* 80B96E4C 0000005C  38 A5 00 00 */	addi r5, r5, l_evtNames@l /* 80B9B39C */
+/* 80B96E48 00000058  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80B96E4C 0000005C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80B96E50 00000060  7C A5 00 2E */	lwzx r5, r5, r0
-/* 80B96E54 00000064  4B FF CE E5 */	bl setSkipZev__14dEvt_control_cFPvPc
+/* 80B96E54 00000064  4B FF CE E5 */	bl _unresolved
 /* 80B96E58 00000068  38 60 00 01 */	li r3, 1
 /* 80B96E5C 0000006C  48 00 00 08 */	b lbl_80B96E64
 lbl_80B96E60:
 /* 80B96E60 00000000  38 60 00 00 */	li r3, 0
 lbl_80B96E64:
 /* 80B96E64 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80B96E68 00000004  4B FF CE D1 */	bl _restgpr_28
+/* 80B96E68 00000004  4B FF CE D1 */	bl _unresolved
 /* 80B96E6C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80B96E70 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80B96E74 00000010  38 21 00 20 */	addi r1, r1, 0x20

@@ -146,10 +146,10 @@ extern "C" void __register_fragment(); // 1
 
 /* ############################################################################################## */
 #pragma section ".ctors$10"
-/* 803737C0-803737C4 0004+00 r=1 e=1 z=0  None .ctors     __init_cpp_exceptions_reference                              */
+/* 803737C0-803737C4 0004+00 s=0 e=1 z=0  None .ctors     __init_cpp_exceptions_reference                              */
 __declspec(section ".ctors$10") void* __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
 
-/* 803737C4-8037396C 01A8+00 r=0 e=0 z=0  None .ctors     _ctors                                                       */
+/* 803737C4-8037396C 01A8+00 s=0 e=0 z=0  None .ctors     _ctors                                                       */
 __declspec(section ".ctors$10") void* _ctors[106] = {
 	/* 0    */ (void*)__sinit_m_Do_main_cpp,
 	/* 1    */ (void*)__sinit_m_Do_audio_cpp,
@@ -261,22 +261,22 @@ __declspec(section ".ctors$10") void* _ctors[106] = {
 
 /* ############################################################################################## */
 #pragma section ".dtors$10"
-/* 80373980-80373984 0004+00 r=1 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
+/* 80373980-80373984 0004+00 s=0 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
 __declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
-/* 80373984-80373988 0004+00 r=0 e=0 z=0  None .dtors     __fini_cpp_exceptions_reference                              */
+/* 80373984-80373988 0004+00 s=0 e=0 z=0  None .dtors     __fini_cpp_exceptions_reference                              */
 __declspec(section ".dtors$15") void* __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
 
 /* ############################################################################################## */
-/* 80450AD0-80450AD8 0004+04 r=2 e=0 z=0  None .sdata     fragmentID                                                   */
+/* 80450AD0-80450AD8 0004+04 s=2 e=0 z=0  None .sdata     fragmentID                                                   */
 SECTION_SDATA static u32 fragmentID[1 + 1 /* padding */] = {
 	0xFFFFFFFE,
 	/* padding */
 	0x00000000,
 };
 
-/* 8036283C-80362870 0034+00 r=2 e=1 z=0  None .text      __fini_cpp_exceptions                                        */
+/* 8036283C-80362870 0034+00 s=1 e=1 z=0  None .text      __fini_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +287,7 @@ extern "C" asm void __fini_cpp_exceptions() {
 #pragma pop
 
 
-/* 80362870-803628AC 003C+00 r=2 e=1 z=0  None .text      __init_cpp_exceptions                                        */
+/* 80362870-803628AC 003C+00 s=1 e=1 z=0  None .text      __init_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

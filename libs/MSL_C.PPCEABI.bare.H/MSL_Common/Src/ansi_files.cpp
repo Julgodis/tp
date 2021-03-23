@@ -35,16 +35,16 @@ extern "C" void __read_console(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044D578-8044D678 0100+00 r=1 e=0 z=0  None .bss       stderr_buff                                                  */
+/* 8044D578-8044D678 0100+00 s=1 e=0 z=0  None .bss       stderr_buff                                                  */
 extern "C" u8 stderr_buff[256];
 
-/* 8044D678-8044D778 0100+00 r=1 e=0 z=0  None .bss       stdout_buff                                                  */
+/* 8044D678-8044D778 0100+00 s=1 e=0 z=0  None .bss       stdout_buff                                                  */
 extern "C" u8 stdout_buff[256];
 
-/* 8044D778-8044D878 0100+00 r=1 e=0 z=0  None .bss       stdin_buff                                                   */
+/* 8044D778-8044D878 0100+00 s=1 e=0 z=0  None .bss       stdin_buff                                                   */
 extern "C" u8 stdin_buff[256];
 
-/* 803D29B0-803D2AF0 0140+00 r=17 e=15 z=0  None .data      __files                                                      */
+/* 803D29B0-803D2AF0 0140+00 s=2 e=15 z=0  None .data      __files                                                      */
 SECTION_DATA void* __files[80] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0A800000,
@@ -128,16 +128,16 @@ SECTION_DATA void* __files[80] = {
 	/* 79   */ (void*)NULL,
 };
 
-/* 8044D578-8044D678 0100+00 r=1 e=0 z=0  None .bss       stderr_buff                                                  */
+/* 8044D578-8044D678 0100+00 s=1 e=0 z=0  None .bss       stderr_buff                                                  */
 static u8 stderr_buff[256];
 
-/* 8044D678-8044D778 0100+00 r=1 e=0 z=0  None .bss       stdout_buff                                                  */
+/* 8044D678-8044D778 0100+00 s=1 e=0 z=0  None .bss       stdout_buff                                                  */
 static u8 stdout_buff[256];
 
-/* 8044D778-8044D878 0100+00 r=1 e=0 z=0  None .bss       stdin_buff                                                   */
+/* 8044D778-8044D878 0100+00 s=1 e=0 z=0  None .bss       stdin_buff                                                   */
 static u8 stdin_buff[256];
 
-/* 8036300C-8036307C 0070+00 r=2 e=2 z=0  None .text      __flush_all                                                  */
+/* 8036300C-8036307C 0070+00 s=0 e=2 z=0  None .text      __flush_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ extern "C" asm void __flush_all() {
 #pragma pop
 
 
-/* 8036307C-80363124 00A8+00 r=1 e=1 z=0  None .text      __close_all                                                  */
+/* 8036307C-80363124 00A8+00 s=0 e=1 z=0  None .text      __close_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

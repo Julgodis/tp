@@ -4,20 +4,20 @@ lbl_80CF6200:
 /* 80CF6208 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CF620C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CF6210 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80CF6214 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CF6218 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CF6214 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CF6218 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CF621C 0000001C  38 80 00 3D */	li r4, 0x3d
 /* 80CF6220 00000020  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF6224 00000024  7C 05 07 74 */	extsb r5, r0
-/* 80CF6228 00000028  4B FF F9 51 */	bl isSwitch__10dSv_info_cCFii
+/* 80CF6228 00000028  4B FF F9 51 */	bl _unresolved
 /* 80CF622C 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CF6230 00000030  41 82 00 58 */	beq lbl_80CF6288
-/* 80CF6234 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CF6238 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CF6234 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CF6238 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CF623C 0000003C  38 80 00 3E */	li r4, 0x3e
 /* 80CF6240 00000040  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF6244 00000044  7C 05 07 74 */	extsb r5, r0
-/* 80CF6248 00000048  4B FF F9 31 */	bl isSwitch__10dSv_info_cCFii
+/* 80CF6248 00000048  4B FF F9 31 */	bl _unresolved
 /* 80CF624C 0000004C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CF6250 00000050  41 82 00 38 */	beq lbl_80CF6288
 /* 80CF6254 00000054  38 00 00 01 */	li r0, 1
@@ -29,7 +29,7 @@ lbl_80CF6200:
 /* 80CF626C 0000006C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80CF6270 00000070  38 E0 00 00 */	li r7, 0
 /* 80CF6274 00000074  39 00 00 01 */	li r8, 1
-/* 80CF6278 00000078  4B FF F9 01 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80CF6278 00000078  4B FF F9 01 */	bl _unresolved
 /* 80CF627C 0000007C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CF6280 00000080  60 00 00 02 */	ori r0, r0, 2
 /* 80CF6284 00000084  B0 1F 00 FA */	sth r0, 0xfa(r31)

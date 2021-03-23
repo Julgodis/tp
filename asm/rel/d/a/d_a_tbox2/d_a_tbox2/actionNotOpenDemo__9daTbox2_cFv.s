@@ -6,14 +6,14 @@ lbl_804978E4:
 /* 804978F4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 804978F8 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 804978FC 00000018  A8 83 00 FC */	lha r4, 0xfc(r3)
-/* 80497900 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80497904 00000020  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80497900 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80497904 00000020  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80497908 00000024  38 7F 4F F8 */	addi r3, r31, 0x4ff8
-/* 8049790C 00000028  4B FF F0 ED */	bl endCheck__16dEvent_manager_cFs
+/* 8049790C 00000028  4B FF F0 ED */	bl _unresolved
 /* 80497910 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 80497914 00000030  41 82 00 18 */	beq lbl_8049792C
 /* 80497918 00000034  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 8049791C 00000038  4B FF F0 DD */	bl reset__14dEvt_control_cFv
+/* 8049791C 00000038  4B FF F0 DD */	bl _unresolved
 /* 80497920 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 80497924 00000040  48 00 00 E9 */	bl init_actionOpenWait__9daTbox2_cFv
 /* 80497928 00000044  48 00 00 0C */	b lbl_80497934

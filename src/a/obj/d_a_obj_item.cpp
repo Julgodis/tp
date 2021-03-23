@@ -162,13 +162,13 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -509,25 +509,25 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80453550-80453558 0004+04 r=11 e=0 z=0  None .sdata2    @3857                                                        */
+/* 80453550-80453558 0004+04 s=11 e=0 z=0  None .sdata2    @3857                                                        */
 SECTION_SDATA2 static u8 a_obj_d_a_obj_item__lit_3857[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453558-80453560 0008+00 r=2 e=0 z=0  None .sdata2    @3858                                                        */
+/* 80453558-80453560 0008+00 s=2 e=0 z=0  None .sdata2    @3858                                                        */
 SECTION_SDATA2 static f64 a_obj_d_a_obj_item__lit_3858 = 0.5;
 
-/* 80453560-80453568 0008+00 r=2 e=0 z=0  None .sdata2    @3859                                                        */
+/* 80453560-80453568 0008+00 s=2 e=0 z=0  None .sdata2    @3859                                                        */
 SECTION_SDATA2 static f64 a_obj_d_a_obj_item__lit_3859 = 3.0;
 
-/* 80453568-80453570 0008+00 r=2 e=0 z=0  None .sdata2    @3860                                                        */
+/* 80453568-80453570 0008+00 s=2 e=0 z=0  None .sdata2    @3860                                                        */
 SECTION_SDATA2 static u8 a_obj_d_a_obj_item__lit_3860[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8015ADCC-8015B0B8 02EC+00 r=1 e=0 z=0  None .text      Reflect__FP4cXyzRC13cBgS_PolyInfof                           */
+/* 8015ADCC-8015B0B8 02EC+00 s=1 e=0 z=0  None .text      Reflect__FP4cXyzRC13cBgS_PolyInfof                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +538,7 @@ asm static void Reflect(cXyz* param_0, cBgS_PolyInfo const& param_1, f32 param_2
 #pragma pop
 
 
-/* 8015B0B8-8015B0C4 000C+00 r=12 e=1 z=1  None .text      getData__12daItemBase_cFv                                    */
+/* 8015B0B8-8015B0C4 000C+00 s=10 e=1 z=0  None .text      getData__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +549,7 @@ asm void daItemBase_c::getData() {
 #pragma pop
 
 
-/* 8015B0C4-8015B108 0044+00 r=1 e=0 z=0  None .text      initBaseMtx__8daItem_cFv                                     */
+/* 8015B0C4-8015B108 0044+00 s=1 e=0 z=0  None .text      initBaseMtx__8daItem_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -560,7 +560,7 @@ asm void daItem_c::initBaseMtx() {
 #pragma pop
 
 
-/* 8015B108-8015B190 0088+00 r=2 e=0 z=0  None .text      setBaseMtx__8daItem_cFv                                      */
+/* 8015B108-8015B190 0088+00 s=2 e=0 z=0  None .text      setBaseMtx__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -571,7 +571,7 @@ asm void daItem_c::setBaseMtx() {
 #pragma pop
 
 
-/* 8015B190-8015B1C8 0038+00 r=1 e=0 z=0  None .text      setBaseMtx_0__8daItem_cFv                                    */
+/* 8015B190-8015B1C8 0038+00 s=1 e=0 z=0  None .text      setBaseMtx_0__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -583,10 +583,10 @@ asm void daItem_c::setBaseMtx_0() {
 
 
 /* ############################################################################################## */
-/* 80453570-80453574 0004+00 r=3 e=0 z=0  None .sdata2    @3923                                                        */
+/* 80453570-80453574 0004+00 s=3 e=0 z=0  None .sdata2    @3923                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_3923 = 0.5f;
 
-/* 8015B1C8-8015B254 008C+00 r=1 e=0 z=0  None .text      setBaseMtx_1__8daItem_cFv                                    */
+/* 8015B1C8-8015B254 008C+00 s=1 e=0 z=0  None .text      setBaseMtx_1__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -597,7 +597,7 @@ asm void daItem_c::setBaseMtx_1() {
 #pragma pop
 
 
-/* 8015B254-8015B320 00CC+00 r=2 e=0 z=0  None .text      itemGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
+/* 8015B254-8015B320 00CC+00 s=2 e=0 z=0  None .text      itemGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -608,7 +608,7 @@ asm static void itemGetCoCallBack(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fo
 #pragma pop
 
 
-/* 8015B320-8015B3D8 00B8+00 r=2 e=0 z=0  None .text      itemGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
+/* 8015B320-8015B3D8 00B8+00 s=2 e=0 z=0  None .text      itemGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,32 +620,32 @@ asm static void itemGetTgCallBack(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fo
 
 
 /* ############################################################################################## */
-/* 803B9DA0-803B9DAC 000C+00 r=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+/* 803B9DA0-803B9DAC 000C+00 s=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 a_obj_d_a_obj_item__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803B9DAC-803B9DB8 000C+00 r=0 e=0 z=0  None .data      @4679                                                        */
+/* 803B9DAC-803B9DB8 000C+00 s=0 e=0 z=0  None .data      @4679                                                        */
 SECTION_DATA void* a_obj_d_a_obj_item__lit_4679[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)mode_wait__8daItem_cFv,
 };
 
-/* 803B9DB8-803B9DC4 000C+00 r=0 e=0 z=0  None .data      @4680                                                        */
+/* 803B9DB8-803B9DC4 000C+00 s=0 e=0 z=0  None .data      @4680                                                        */
 SECTION_DATA void* a_obj_d_a_obj_item__lit_4680[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)mode_water__8daItem_cFv,
 };
 
-/* 803B9DC4-803B9DDC 0018+00 r=0 e=0 z=0  None .data      mode_proc$4678                                               */
+/* 803B9DC4-803B9DDC 0018+00 s=0 e=0 z=0  None .data      mode_proc$4678                                               */
 SECTION_DATA u8 data_803B9DC4[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803B9DDC-803B9E04 0028+00 r=1 e=0 z=0  None .data      @5171                                                        */
+/* 803B9DDC-803B9E04 0028+00 s=1 e=0 z=0  None .data      @5171                                                        */
 SECTION_DATA static void* a_obj_d_a_obj_item__lit_5171[10] = {
 	/* 0    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
 	/* 1    */ (void*)(((char*)initFlag__8daItem_cFv)+0x50),
@@ -659,7 +659,7 @@ SECTION_DATA static void* a_obj_d_a_obj_item__lit_5171[10] = {
 	/* 9    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
 };
 
-/* 803B9E04-803B9E2C 0028+00 r=1 e=0 z=0  None .data      @5193                                                        */
+/* 803B9E04-803B9E2C 0028+00 s=1 e=0 z=0  None .data      @5193                                                        */
 SECTION_DATA static void* a_obj_d_a_obj_item__lit_5193[10] = {
 	/* 0    */ (void*)(((char*)initScale__8daItem_cFv)+0x28),
 	/* 1    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
@@ -673,70 +673,70 @@ SECTION_DATA static void* a_obj_d_a_obj_item__lit_5193[10] = {
 	/* 9    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
 };
 
-/* 803B9E2C-803B9E38 000C+00 r=0 e=0 z=0  None .data      @5240                                                        */
+/* 803B9E2C-803B9E38 000C+00 s=0 e=0 z=0  None .data      @5240                                                        */
 SECTION_DATA void* a_obj_d_a_obj_item__lit_5240[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainNormal__8daItem_cFv,
 };
 
-/* 803B9E38-803B9E44 000C+00 r=0 e=0 z=0  None .data      @5241                                                        */
+/* 803B9E38-803B9E44 000C+00 s=0 e=0 z=0  None .data      @5241                                                        */
 SECTION_DATA void* a_obj_d_a_obj_item__lit_5241[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainEnemyCarry__8daItem_cFv,
 };
 
-/* 803B9E44-803B9E50 000C+00 r=0 e=0 z=0  None .data      @5242                                                        */
+/* 803B9E44-803B9E50 000C+00 s=0 e=0 z=0  None .data      @5242                                                        */
 SECTION_DATA void* lit_5242[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainSimpleGetDemo__8daItem_cFv,
 };
 
-/* 803B9E50-803B9E5C 000C+00 r=0 e=0 z=0  None .data      @5243                                                        */
+/* 803B9E50-803B9E5C 000C+00 s=0 e=0 z=0  None .data      @5243                                                        */
 SECTION_DATA void* lit_5243[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procWaitGetDemoEvent__8daItem_cFv,
 };
 
-/* 803B9E5C-803B9E68 000C+00 r=0 e=0 z=0  None .data      @5244                                                        */
+/* 803B9E5C-803B9E68 000C+00 s=0 e=0 z=0  None .data      @5244                                                        */
 SECTION_DATA void* lit_5244[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainGetDemoEvent__8daItem_cFv,
 };
 
-/* 803B9E68-803B9E74 000C+00 r=0 e=0 z=0  None .data      @5245                                                        */
+/* 803B9E68-803B9E74 000C+00 s=0 e=0 z=0  None .data      @5245                                                        */
 SECTION_DATA void* lit_5245[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainBoomerangCarry__8daItem_cFv,
 };
 
-/* 803B9E74-803B9E80 000C+00 r=0 e=0 z=0  None .data      @5246                                                        */
+/* 803B9E74-803B9E80 000C+00 s=0 e=0 z=0  None .data      @5246                                                        */
 SECTION_DATA void* lit_5246[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainSwOnWait__8daItem_cFv,
 };
 
-/* 803B9E80-803B9E8C 000C+00 r=0 e=0 z=0  None .data      @5247                                                        */
+/* 803B9E80-803B9E8C 000C+00 s=0 e=0 z=0  None .data      @5247                                                        */
 SECTION_DATA void* lit_5247[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainBoomHitWait__8daItem_cFv,
 };
 
-/* 803B9E8C-803B9E98 000C+00 r=0 e=0 z=0  None .data      @5248                                                        */
+/* 803B9E8C-803B9E98 000C+00 s=0 e=0 z=0  None .data      @5248                                                        */
 SECTION_DATA void* lit_5248[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)procMainForceGet__8daItem_cFv,
 };
 
-/* 803B9E98-803B9F10 0078+00 r=1 e=0 z=0  None .data      mFuncPtr__8daItem_c                                          */
+/* 803B9E98-803B9F10 0078+00 s=1 e=0 z=0  None .data      mFuncPtr__8daItem_c                                          */
 SECTION_DATA static u8 mFuncPtr__8daItem_c[120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -748,7 +748,7 @@ SECTION_DATA static u8 mFuncPtr__8daItem_c[120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803B9F10-803B9F54 0044+00 r=1 e=0 z=0  None .data      m_cyl_src__8daItem_c                                         */
+/* 803B9F10-803B9F54 0044+00 s=1 e=0 z=0  None .data      m_cyl_src__8daItem_c                                         */
 SECTION_DATA static u8 m_cyl_src__8daItem_c[68] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x59, 0x00, 0x00, 0x00, 0x00,
@@ -757,26 +757,26 @@ SECTION_DATA static u8 m_cyl_src__8daItem_c[68] = {
 	0x42, 0x48, 0x00, 0x00,
 };
 
-/* 80453574-80453578 0004+00 r=1 e=0 z=0  None .sdata2    @4067                                                        */
+/* 80453574-80453578 0004+00 s=1 e=0 z=0  None .sdata2    @4067                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4067 = 30.0f;
 
-/* 80453578-8045357C 0004+00 r=1 e=0 z=0  None .sdata2    @4068                                                        */
+/* 80453578-8045357C 0004+00 s=1 e=0 z=0  None .sdata2    @4068                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4068 = 10000.0f;
 
-/* 8045357C-80453580 0004+00 r=7 e=0 z=0  None .sdata2    @4069                                                        */
+/* 8045357C-80453580 0004+00 s=7 e=0 z=0  None .sdata2    @4069                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4069 = 1.0f;
 
-/* 80453580-80453588 0004+04 r=2 e=0 z=0  None .sdata2    @4070                                                        */
+/* 80453580-80453588 0004+04 s=2 e=0 z=0  None .sdata2    @4070                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4070[1 + 1 /* padding */] = {
 	150.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80453588-80453590 0008+00 r=3 e=0 z=0  None .sdata2    @4072                                                        */
+/* 80453588-80453590 0008+00 s=3 e=0 z=0  None .sdata2    @4072                                                        */
 SECTION_SDATA2 static f64 a_obj_d_a_obj_item__lit_4072 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8015B3D8-8015B7BC 03E4+00 r=1 e=0 z=0  None .text      CreateInit__8daItem_cFv                                      */
+/* 8015B3D8-8015B7BC 03E4+00 s=1 e=0 z=0  None .text      CreateInit__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,7 +787,7 @@ asm void daItem_c::CreateInit() {
 #pragma pop
 
 
-/* 8015B7BC-8015B7D4 0018+00 r=1 e=0 z=0  None .text      setCullInfo__8daItem_cFv                                     */
+/* 8015B7BC-8015B7D4 0018+00 s=1 e=0 z=0  None .text      setCullInfo__8daItem_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +799,7 @@ asm void daItem_c::setCullInfo() {
 
 
 /* ############################################################################################## */
-/* 803B9F54-803B9F74 0020+00 r=1 e=0 z=0  None .data      l_daItem_Method                                              */
+/* 803B9F54-803B9F74 0020+00 s=1 e=0 z=0  None .data      l_daItem_Method                                              */
 SECTION_DATA static void* l_daItem_Method[8] = {
 	/* 0    */ (void*)daItem_Create__FP10fopAc_ac_c,
 	/* 1    */ (void*)daItem_Delete__FP8daItem_c,
@@ -811,7 +811,7 @@ SECTION_DATA static void* l_daItem_Method[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 r=1 e=0 z=1  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0007FFFD,
@@ -827,7 +827,7 @@ SECTION_DATA void* g_profile_ITEM[12] = {
 	/* 11   */ (void*)0x000F0000,
 };
 
-/* 803B9FA4-803BA078 0044+90 r=1 e=0 z=0  None .data      __vt__8daItem_c                                              */
+/* 803B9FA4-803BA078 0044+90 s=1 e=0 z=0  None .data      __vt__8daItem_c                                              */
 SECTION_DATA static void* __vt__8daItem_c[17 + 36 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -885,7 +885,7 @@ SECTION_DATA static void* __vt__8daItem_c[17 + 36 /* padding */] = {
 	NULL,
 };
 
-/* 8015B7D4-8015BA3C 0268+00 r=1 e=0 z=0  None .text      _daItem_create__8daItem_cFv                                  */
+/* 8015B7D4-8015BA3C 0268+00 s=1 e=0 z=0  None .text      _daItem_create__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -896,7 +896,7 @@ asm void daItem_c::_daItem_create() {
 #pragma pop
 
 
-/* 8015BA3C-8015BA9C 0060+00 r=1 e=1 z=0  None .text      __dt__16Z2SoundObjSimpleFv                                   */
+/* 8015BA3C-8015BA9C 0060+00 s=0 e=1 z=0  None .text      __dt__16Z2SoundObjSimpleFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -908,13 +908,13 @@ asm Z2SoundObjSimple::~Z2SoundObjSimple() {
 
 
 /* ############################################################################################## */
-/* 80453590-80453594 0004+00 r=1 e=0 z=0  None .sdata2    @4320                                                        */
+/* 80453590-80453594 0004+00 s=1 e=0 z=0  None .sdata2    @4320                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4320 = 300.0f;
 
-/* 80453594-80453598 0004+00 r=1 e=0 z=0  None .sdata2    @4321                                                        */
+/* 80453594-80453598 0004+00 s=1 e=0 z=0  None .sdata2    @4321                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4321 = 18.0f;
 
-/* 8015BA9C-8015BD84 02E8+00 r=1 e=0 z=0  None .text      _daItem_execute__8daItem_cFv                                 */
+/* 8015BA9C-8015BD84 02E8+00 s=1 e=0 z=0  None .text      _daItem_execute__8daItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm void daItem_c::_daItem_execute() {
 #pragma pop
 
 
-/* 8015BD84-8015BDE8 0064+00 r=1 e=0 z=0  None .text      _daItem_draw__8daItem_cFv                                    */
+/* 8015BD84-8015BDE8 0064+00 s=1 e=0 z=0  None .text      _daItem_draw__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void daItem_c::_daItem_draw() {
 #pragma pop
 
 
-/* 8015BDE8-8015BE60 0078+00 r=1 e=0 z=0  None .text      _daItem_delete__8daItem_cFv                                  */
+/* 8015BDE8-8015BE60 0078+00 s=1 e=0 z=0  None .text      _daItem_delete__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void daItem_c::_daItem_delete() {
 #pragma pop
 
 
-/* 8015BE60-8015BEA4 0044+00 r=4 e=0 z=0  None .text      procInitNormal__8daItem_cFv                                  */
+/* 8015BE60-8015BEA4 0044+00 s=4 e=0 z=0  None .text      procInitNormal__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +958,7 @@ asm void daItem_c::procInitNormal() {
 #pragma pop
 
 
-/* 8015BEA4-8015BFE8 0144+00 r=1 e=0 z=0  None .text      procMainNormal__8daItem_cFv                                  */
+/* 8015BEA4-8015BFE8 0144+00 s=1 e=0 z=0  None .text      procMainNormal__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +969,7 @@ asm void daItem_c::procMainNormal() {
 #pragma pop
 
 
-/* 8015BFE8-8015BFEC 0004+00 r=1 e=0 z=0  None .text      procMainEnemyCarry__8daItem_cFv                              */
+/* 8015BFE8-8015BFEC 0004+00 s=1 e=0 z=0  None .text      procMainEnemyCarry__8daItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,7 +980,7 @@ asm void daItem_c::procMainEnemyCarry() {
 #pragma pop
 
 
-/* 8015BFEC-8015C038 004C+00 r=1 e=0 z=0  None .text      procInitForceGet__8daItem_cFv                                */
+/* 8015BFEC-8015C038 004C+00 s=1 e=0 z=0  None .text      procInitForceGet__8daItem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -991,7 +991,7 @@ asm void daItem_c::procInitForceGet() {
 #pragma pop
 
 
-/* 8015C038-8015C058 0020+00 r=1 e=0 z=0  None .text      procMainForceGet__8daItem_cFv                                */
+/* 8015C038-8015C058 0020+00 s=1 e=0 z=0  None .text      procMainForceGet__8daItem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1003,10 +1003,10 @@ asm void daItem_c::procMainForceGet() {
 
 
 /* ############################################################################################## */
-/* 80453598-8045359C 0004+00 r=3 e=0 z=0  None .sdata2    @4404                                                        */
+/* 80453598-8045359C 0004+00 s=3 e=0 z=0  None .sdata2    @4404                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4404 = 15.0f;
 
-/* 8015C058-8015C134 00DC+00 r=4 e=0 z=0  None .text      procInitSimpleGetDemo__8daItem_cFv                           */
+/* 8015C058-8015C134 00DC+00 s=4 e=0 z=0  None .text      procInitSimpleGetDemo__8daItem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1017,7 +1017,7 @@ asm void daItem_c::procInitSimpleGetDemo() {
 #pragma pop
 
 
-/* 8015C134-8015C200 00CC+00 r=2 e=0 z=0  None .text      procMainSimpleGetDemo__8daItem_cFv                           */
+/* 8015C134-8015C200 00CC+00 s=2 e=0 z=0  None .text      procMainSimpleGetDemo__8daItem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1028,7 +1028,7 @@ asm void daItem_c::procMainSimpleGetDemo() {
 #pragma pop
 
 
-/* 8015C200-8015C2A4 00A4+00 r=1 e=0 z=0  None .text      procInitGetDemoEvent__8daItem_cFv                            */
+/* 8015C200-8015C2A4 00A4+00 s=1 e=0 z=0  None .text      procInitGetDemoEvent__8daItem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1039,7 +1039,7 @@ asm void daItem_c::procInitGetDemoEvent() {
 #pragma pop
 
 
-/* 8015C2A4-8015C3BC 0118+00 r=1 e=0 z=0  None .text      procWaitGetDemoEvent__8daItem_cFv                            */
+/* 8015C2A4-8015C3BC 0118+00 s=1 e=0 z=0  None .text      procWaitGetDemoEvent__8daItem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1051,14 +1051,14 @@ asm void daItem_c::procWaitGetDemoEvent() {
 
 
 /* ############################################################################################## */
-/* 80393D88-80393D98 0010+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80393D88-80393D98 0010+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
 SECTION_DEAD char const* const stringBase_80393D88 = "DEFAULT_GETITEM";
 #pragma pop
 
-/* 8015C3BC-8015C41C 0060+00 r=1 e=0 z=0  None .text      procMainGetDemoEvent__8daItem_cFv                            */
+/* 8015C3BC-8015C41C 0060+00 s=1 e=0 z=0  None .text      procMainGetDemoEvent__8daItem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1070,10 +1070,10 @@ asm void daItem_c::procMainGetDemoEvent() {
 
 
 /* ############################################################################################## */
-/* 8045359C-804535A0 0004+00 r=2 e=0 z=0  None .sdata2    @4506                                                        */
+/* 8045359C-804535A0 0004+00 s=2 e=0 z=0  None .sdata2    @4506                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4506 = 2.0f;
 
-/* 8015C41C-8015C514 00F8+00 r=1 e=0 z=0  None .text      procInitBoomerangCarry__8daItem_cFv                          */
+/* 8015C41C-8015C514 00F8+00 s=1 e=0 z=0  None .text      procInitBoomerangCarry__8daItem_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1085,10 +1085,10 @@ asm void daItem_c::procInitBoomerangCarry() {
 
 
 /* ############################################################################################## */
-/* 804535A0-804535A4 0004+00 r=2 e=0 z=0  None .sdata2    @4524                                                        */
+/* 804535A0-804535A4 0004+00 s=2 e=0 z=0  None .sdata2    @4524                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4524 = 200.0f;
 
-/* 8015C514-8015C5F4 00E0+00 r=1 e=0 z=0  None .text      procMainBoomerangCarry__8daItem_cFv                          */
+/* 8015C514-8015C5F4 00E0+00 s=1 e=0 z=0  None .text      procMainBoomerangCarry__8daItem_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1099,7 +1099,7 @@ asm void daItem_c::procMainBoomerangCarry() {
 #pragma pop
 
 
-/* 8015C5F4-8015C648 0054+00 r=1 e=0 z=0  None .text      procInitSwOnWait__8daItem_cFv                                */
+/* 8015C5F4-8015C648 0054+00 s=1 e=0 z=0  None .text      procInitSwOnWait__8daItem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1110,7 +1110,7 @@ asm void daItem_c::procInitSwOnWait() {
 #pragma pop
 
 
-/* 8015C648-8015C708 00C0+00 r=1 e=0 z=0  None .text      procMainSwOnWait__8daItem_cFv                                */
+/* 8015C648-8015C708 00C0+00 s=1 e=0 z=0  None .text      procMainSwOnWait__8daItem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1121,7 +1121,7 @@ asm void daItem_c::procMainSwOnWait() {
 #pragma pop
 
 
-/* 8015C708-8015C738 0030+00 r=1 e=0 z=0  None .text      procInitBoomHitWait__8daItem_cFv                             */
+/* 8015C708-8015C738 0030+00 s=1 e=0 z=0  None .text      procInitBoomHitWait__8daItem_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1133,20 +1133,20 @@ asm void daItem_c::procInitBoomHitWait() {
 
 
 /* ############################################################################################## */
-/* 804535A4-804535A8 0004+00 r=2 e=0 z=0  None .sdata2    @4665                                                        */
+/* 804535A4-804535A8 0004+00 s=2 e=0 z=0  None .sdata2    @4665                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4665 = 100.0f;
 
-/* 804535A8-804535B0 0004+04 r=2 e=0 z=0  None .sdata2    @4666                                                        */
+/* 804535A8-804535B0 0004+04 s=2 e=0 z=0  None .sdata2    @4666                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4666[1 + 1 /* padding */] = {
 	16383.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804535B0-804535B8 0008+00 r=3 e=0 z=0  None .sdata2    @4668                                                        */
+/* 804535B0-804535B8 0008+00 s=3 e=0 z=0  None .sdata2    @4668                                                        */
 SECTION_SDATA2 static f64 a_obj_d_a_obj_item__lit_4668 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8015C738-8015CAB8 0380+00 r=1 e=0 z=0  None .text      procMainBoomHitWait__8daItem_cFv                             */
+/* 8015C738-8015CAB8 0380+00 s=1 e=0 z=0  None .text      procMainBoomHitWait__8daItem_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,7 +1157,7 @@ asm void daItem_c::procMainBoomHitWait() {
 #pragma pop
 
 
-/* 8015CAB8-8015CC4C 0194+00 r=1 e=0 z=0  None .text      move_proc_call__8daItem_cFv                                  */
+/* 8015CAB8-8015CC4C 0194+00 s=1 e=0 z=0  None .text      move_proc_call__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1168,7 +1168,7 @@ asm void daItem_c::move_proc_call() {
 #pragma pop
 
 
-/* 8015CC4C-8015CC88 003C+00 r=1 e=0 z=0  None .text      mode_wait_init__8daItem_cFv                                  */
+/* 8015CC4C-8015CC88 003C+00 s=1 e=0 z=0  None .text      mode_wait_init__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1179,7 +1179,7 @@ asm void daItem_c::mode_wait_init() {
 #pragma pop
 
 
-/* 8015CC88-8015CCD0 0048+00 r=1 e=0 z=0  None .text      mode_water_init__8daItem_cFv                                 */
+/* 8015CC88-8015CCD0 0048+00 s=1 e=0 z=0  None .text      mode_water_init__8daItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1190,7 +1190,7 @@ asm void daItem_c::mode_water_init() {
 #pragma pop
 
 
-/* 8015CCD0-8015CDCC 00FC+00 r=1 e=0 z=0  None .text      mode_wait__8daItem_cFv                                       */
+/* 8015CCD0-8015CDCC 00FC+00 s=1 e=0 z=0  None .text      mode_wait__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1202,10 +1202,10 @@ asm void daItem_c::mode_wait() {
 
 
 /* ############################################################################################## */
-/* 804535B8-804535BC 0004+00 r=1 e=0 z=0  None .sdata2    @4781                                                        */
+/* 804535B8-804535BC 0004+00 s=1 e=0 z=0  None .sdata2    @4781                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4781 = 1.0f / 10.0f;
 
-/* 8015CDCC-8015CE94 00C8+00 r=1 e=0 z=0  None .text      mode_water__8daItem_cFv                                      */
+/* 8015CDCC-8015CE94 00C8+00 s=1 e=0 z=0  None .text      mode_water__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1216,7 +1216,7 @@ asm void daItem_c::mode_water() {
 #pragma pop
 
 
-/* 8015CE94-8015CEEC 0058+00 r=1 e=0 z=0  None .text      setTevStr__8daItem_cFv                                       */
+/* 8015CE94-8015CEEC 0058+00 s=1 e=0 z=0  None .text      setTevStr__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1227,7 +1227,7 @@ asm void daItem_c::setTevStr() {
 #pragma pop
 
 
-/* 8015CEEC-8015D0A8 01BC+00 r=6 e=0 z=0  None .text      itemGetNextExecute__8daItem_cFv                              */
+/* 8015CEEC-8015D0A8 01BC+00 s=6 e=0 z=0  None .text      itemGetNextExecute__8daItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1239,10 +1239,10 @@ asm void daItem_c::itemGetNextExecute() {
 
 
 /* ############################################################################################## */
-/* 804535BC-804535C0 0004+00 r=3 e=0 z=0  None .sdata2    @4923                                                        */
+/* 804535BC-804535C0 0004+00 s=3 e=0 z=0  None .sdata2    @4923                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_4923 = -1.0f;
 
-/* 8015D0A8-8015D370 02C8+00 r=2 e=0 z=0  None .text      itemGet__8daItem_cFv                                         */
+/* 8015D0A8-8015D370 02C8+00 s=2 e=0 z=0  None .text      itemGet__8daItem_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1253,7 +1253,7 @@ asm void daItem_c::itemGet() {
 #pragma pop
 
 
-/* 8015D370-8015D3CC 005C+00 r=1 e=0 z=0  None .text      checkCountTimer__8daItem_cFv                                 */
+/* 8015D370-8015D3CC 005C+00 s=1 e=0 z=0  None .text      checkCountTimer__8daItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1264,7 +1264,7 @@ asm void daItem_c::checkCountTimer() {
 #pragma pop
 
 
-/* 8015D3CC-8015D410 0044+00 r=2 e=0 z=0  None .text      checkPlayerGet__8daItem_cFv                                  */
+/* 8015D3CC-8015D410 0044+00 s=2 e=0 z=0  None .text      checkPlayerGet__8daItem_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1275,7 +1275,7 @@ asm void daItem_c::checkPlayerGet() {
 #pragma pop
 
 
-/* 8015D410-8015D480 0070+00 r=1 e=0 z=0  None .text      checkYogan__8daItem_cFv                                      */
+/* 8015D410-8015D480 0070+00 s=1 e=0 z=0  None .text      checkYogan__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1286,7 +1286,7 @@ asm void daItem_c::checkYogan() {
 #pragma pop
 
 
-/* 8015D480-8015D4AC 002C+00 r=2 e=0 z=0  None .text      deleteItem__8daItem_cFv                                      */
+/* 8015D480-8015D4AC 002C+00 s=2 e=0 z=0  None .text      deleteItem__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1298,10 +1298,10 @@ asm void daItem_c::deleteItem() {
 
 
 /* ############################################################################################## */
-/* 804535C0-804535C4 0004+00 r=1 e=0 z=0  None .sdata2    @4979                                                        */
+/* 804535C0-804535C4 0004+00 s=1 e=0 z=0  None .sdata2    @4979                                                        */
 SECTION_SDATA2 static f32 lit_4979 = 19.0f / 20.0f;
 
-/* 8015D4AC-8015D56C 00C0+00 r=1 e=0 z=0  None .text      itemActionForRupee__8daItem_cFv                              */
+/* 8015D4AC-8015D56C 00C0+00 s=1 e=0 z=0  None .text      itemActionForRupee__8daItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1312,7 +1312,7 @@ asm void daItem_c::itemActionForRupee() {
 #pragma pop
 
 
-/* 8015D56C-8015D688 011C+00 r=1 e=0 z=0  None .text      itemActionForHeart__8daItem_cFv                              */
+/* 8015D56C-8015D688 011C+00 s=1 e=0 z=0  None .text      itemActionForHeart__8daItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1323,7 +1323,7 @@ asm void daItem_c::itemActionForHeart() {
 #pragma pop
 
 
-/* 8015D688-8015D700 0078+00 r=1 e=0 z=0  None .text      itemActionForArrow__8daItem_cFv                              */
+/* 8015D688-8015D700 0078+00 s=1 e=0 z=0  None .text      itemActionForArrow__8daItem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1334,7 +1334,7 @@ asm void daItem_c::itemActionForArrow() {
 #pragma pop
 
 
-/* 8015D700-8015D734 0034+00 r=1 e=0 z=0  None .text      itemActionForBoomerang__8daItem_cFv                          */
+/* 8015D700-8015D734 0034+00 s=1 e=0 z=0  None .text      itemActionForBoomerang__8daItem_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1346,13 +1346,13 @@ asm void daItem_c::itemActionForBoomerang() {
 
 
 /* ############################################################################################## */
-/* 804535C4-804535C8 0004+00 r=3 e=0 z=0  None .sdata2    @5050                                                        */
+/* 804535C4-804535C8 0004+00 s=3 e=0 z=0  None .sdata2    @5050                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5050 = 5.0f;
 
-/* 804535C8-804535CC 0004+00 r=1 e=0 z=0  None .sdata2    @5051                                                        */
+/* 804535C8-804535CC 0004+00 s=1 e=0 z=0  None .sdata2    @5051                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5051 = 3.0f;
 
-/* 8015D734-8015D834 0100+00 r=2 e=0 z=0  None .text      bg_check__8daItem_cFv                                        */
+/* 8015D734-8015D834 0100+00 s=2 e=0 z=0  None .text      bg_check__8daItem_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1363,7 +1363,7 @@ asm void daItem_c::bg_check() {
 #pragma pop
 
 
-/* 8015D834-8015D95C 0128+00 r=1 e=0 z=0  None .text      set_bound_se__8daItem_cFv                                    */
+/* 8015D834-8015D95C 0128+00 s=1 e=0 z=0  None .text      set_bound_se__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1375,14 +1375,14 @@ asm void daItem_c::set_bound_se() {
 
 
 /* ############################################################################################## */
-/* 804506A8-804506B0 0004+04 r=1 e=0 z=0  None .sdata     m_timer_max__8daItem_c                                       */
+/* 804506A8-804506B0 0004+04 s=1 e=0 z=0  None .sdata     m_timer_max__8daItem_c                                       */
 SECTION_SDATA static u32 m_timer_max__8daItem_c[1 + 1 /* padding */] = {
 	0x00002710,
 	/* padding */
 	0x00000000,
 };
 
-/* 8015D95C-8015D9F0 0094+00 r=1 e=0 z=0  None .text      CountTimer__8daItem_cFv                                      */
+/* 8015D95C-8015D9F0 0094+00 s=1 e=0 z=0  None .text      CountTimer__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1394,10 +1394,10 @@ asm void daItem_c::CountTimer() {
 
 
 /* ############################################################################################## */
-/* 804535CC-804535D0 0004+00 r=1 e=0 z=0  None .sdata2    @5110                                                        */
+/* 804535CC-804535D0 0004+00 s=1 e=0 z=0  None .sdata2    @5110                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5110 = 20.0f;
 
-/* 8015D9F0-8015DAAC 00BC+00 r=1 e=0 z=0  None .text      initAction__8daItem_cFv                                      */
+/* 8015D9F0-8015DAAC 00BC+00 s=1 e=0 z=0  None .text      initAction__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1408,7 +1408,7 @@ asm void daItem_c::initAction() {
 #pragma pop
 
 
-/* 8015DAAC-8015DBF0 0144+00 r=2 e=0 z=0  None .text      initFlag__8daItem_cFv                                        */
+/* 8015DAAC-8015DBF0 0144+00 s=2 e=0 z=0  None .text      initFlag__8daItem_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1419,7 +1419,7 @@ asm void daItem_c::initFlag() {
 #pragma pop
 
 
-/* 8015DBF0-8015DC40 0050+00 r=2 e=0 z=0  None .text      initScale__8daItem_cFv                                       */
+/* 8015DBF0-8015DC40 0050+00 s=2 e=0 z=0  None .text      initScale__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1431,19 +1431,19 @@ asm void daItem_c::initScale() {
 
 
 /* ############################################################################################## */
-/* 804535D0-804535D4 0004+00 r=1 e=0 z=0  None .sdata2    @5230                                                        */
+/* 804535D0-804535D4 0004+00 s=1 e=0 z=0  None .sdata2    @5230                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5230 = 7.0f / 10.0f;
 
-/* 804535D4-804535D8 0004+00 r=1 e=0 z=0  None .sdata2    @5231                                                        */
+/* 804535D4-804535D8 0004+00 s=1 e=0 z=0  None .sdata2    @5231                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5231 = 6.0f / 5.0f;
 
-/* 804535D8-804535DC 0004+00 r=1 e=0 z=0  None .sdata2    @5232                                                        */
+/* 804535D8-804535DC 0004+00 s=1 e=0 z=0  None .sdata2    @5232                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5232 = 11.0f / 20.0f;
 
-/* 804535DC-804535E0 0004+00 r=1 e=0 z=0  None .sdata2    @5233                                                        */
+/* 804535DC-804535E0 0004+00 s=1 e=0 z=0  None .sdata2    @5233                                                        */
 SECTION_SDATA2 static f32 a_obj_d_a_obj_item__lit_5233 = 50.0f;
 
-/* 8015DC40-8015DE38 01F8+00 r=2 e=0 z=0  None .text      initSpeed__8daItem_cFi                                       */
+/* 8015DC40-8015DE38 01F8+00 s=2 e=0 z=0  None .text      initSpeed__8daItem_cFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1454,7 +1454,7 @@ asm void daItem_c::initSpeed(int param_0) {
 #pragma pop
 
 
-/* 8015DE38-8015DE50 0018+00 r=1 e=0 z=0  None .text      initAngle__8daItem_cFv                                       */
+/* 8015DE38-8015DE50 0018+00 s=1 e=0 z=0  None .text      initAngle__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1465,7 +1465,7 @@ asm void daItem_c::initAngle() {
 #pragma pop
 
 
-/* 8015DE50-8015DE70 0020+00 r=1 e=0 z=0  None .text      daItem_Draw__FP8daItem_c                                     */
+/* 8015DE50-8015DE70 0020+00 s=1 e=0 z=0  None .text      daItem_Draw__FP8daItem_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1476,7 +1476,7 @@ asm static void daItem_Draw(daItem_c* param_0) {
 #pragma pop
 
 
-/* 8015DE70-8015DE90 0020+00 r=1 e=0 z=0  None .text      daItem_Execute__FP8daItem_c                                  */
+/* 8015DE70-8015DE90 0020+00 s=1 e=0 z=0  None .text      daItem_Execute__FP8daItem_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1487,7 +1487,7 @@ asm static void daItem_Execute(daItem_c* param_0) {
 #pragma pop
 
 
-/* 8015DE90-8015DEB0 0020+00 r=1 e=0 z=0  None .text      daItem_Delete__FP8daItem_c                                   */
+/* 8015DE90-8015DEB0 0020+00 s=1 e=0 z=0  None .text      daItem_Delete__FP8daItem_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1498,7 +1498,7 @@ asm static void daItem_Delete(daItem_c* param_0) {
 #pragma pop
 
 
-/* 8015DEB0-8015DED0 0020+00 r=1 e=0 z=0  None .text      daItem_Create__FP10fopAc_ac_c                                */
+/* 8015DEB0-8015DED0 0020+00 s=1 e=0 z=0  None .text      daItem_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1509,7 +1509,7 @@ asm static void daItem_Create(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8015DED0-8015DFD8 0108+00 r=1 e=1 z=0  None .text      __sinit_d_a_obj_item_cpp                                     */
+/* 8015DED0-8015DFD8 0108+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_item_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1520,7 +1520,7 @@ extern "C" asm void __sinit_d_a_obj_item_cpp() {
 #pragma pop
 
 
-/* 8015DFD8-8015DFF4 001C+00 r=2 e=0 z=0  None .text      getItemPos__9daPy_py_cCFv                                    */
+/* 8015DFD8-8015DFF4 001C+00 s=2 e=0 z=0  None .text      getItemPos__9daPy_py_cCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1531,7 +1531,7 @@ asm void daPy_py_c::getItemPos() const {
 #pragma pop
 
 
-/* 8015DFF4-8015E010 001C+00 r=2 e=1 z=0  None .text      getLeftHandPos__9daPy_py_cCFv                                */
+/* 8015DFF4-8015E010 001C+00 s=1 e=1 z=0  None .text      getLeftHandPos__9daPy_py_cCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

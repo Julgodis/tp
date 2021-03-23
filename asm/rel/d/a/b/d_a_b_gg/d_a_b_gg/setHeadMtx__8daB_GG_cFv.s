@@ -12,14 +12,14 @@ lbl_805EBAB8:
 /* 805EBAE0 00000028  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 805EBAE4 0000002C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 805EBAE8 00000030  38 63 00 F0 */	addi r3, r3, 0xf0
-/* 805EBAEC 00000034  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 805EBAF0 00000038  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l /* 803DD470 */
-/* 805EBAF4 0000003C  4B FF 28 85 */	bl PSMTXCopy
-/* 805EBAF8 00000040  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 805EBAFC 00000044  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 805EBAEC 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805EBAF0 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805EBAF4 0000003C  4B FF 28 85 */	bl _unresolved
+/* 805EBAF8 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805EBAFC 00000044  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805EBB00 00000048  80 9F 0E 3C */	lwz r4, 0xe3c(r31)
 /* 805EBB04 0000004C  38 84 00 24 */	addi r4, r4, 0x24
-/* 805EBB08 00000050  4B FF 28 71 */	bl PSMTXCopy
+/* 805EBB08 00000050  4B FF 28 71 */	bl _unresolved
 /* 805EBB0C 00000054  48 00 00 10 */	b lbl_805EBB1C
 lbl_805EBB10:
 /* 805EBB10 00000000  28 00 00 01 */	cmplwi r0, 1

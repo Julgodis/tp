@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_809B92D0[2];
+extern u8 data_809B92D0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_fairy_cpp(); // 1
 
 // 
 // Declarations:

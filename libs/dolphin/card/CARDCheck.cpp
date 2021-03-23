@@ -45,7 +45,7 @@ extern "C" extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 803559E0-80355B90 01B0+00 r=3 e=3 z=0  None .text      __CARDCheckSum                                               */
+/* 803559E0-80355B90 01B0+00 s=0 e=3 z=0  None .text      __CARDCheckSum                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +56,7 @@ extern "C" asm void __CARDCheckSum() {
 #pragma pop
 
 
-/* 80355B90-80355E14 0284+00 r=2 e=0 z=0  None .text      VerifyID                                                     */
+/* 80355B90-80355E14 0284+00 s=2 e=0 z=0  None .text      VerifyID                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +67,7 @@ extern "C" asm static void VerifyID() {
 #pragma pop
 
 
-/* 80355E14-80356054 0240+00 r=2 e=0 z=0  None .text      VerifyDir                                                    */
+/* 80355E14-80356054 0240+00 s=2 e=0 z=0  None .text      VerifyDir                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +78,7 @@ extern "C" asm static void VerifyDir() {
 #pragma pop
 
 
-/* 80356054-803562D8 0284+00 r=2 e=0 z=0  None .text      VerifyFAT                                                    */
+/* 80356054-803562D8 0284+00 s=2 e=0 z=0  None .text      VerifyFAT                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +89,7 @@ extern "C" asm static void VerifyFAT() {
 #pragma pop
 
 
-/* 803562D8-80356364 008C+00 r=1 e=1 z=0  None .text      __CARDVerify                                                 */
+/* 803562D8-80356364 008C+00 s=0 e=1 z=0  None .text      __CARDVerify                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +100,7 @@ extern "C" asm void __CARDVerify() {
 #pragma pop
 
 
-/* 80356364-803568F4 0590+00 r=1 e=0 z=0  None .text      CARDCheckExAsync                                             */
+/* 80356364-803568F4 0590+00 s=1 e=0 z=0  None .text      CARDCheckExAsync                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +111,7 @@ extern "C" asm static void CARDCheckExAsync() {
 #pragma pop
 
 
-/* 803568F4-80356948 0054+00 r=2 e=2 z=0  None .text      CARDCheck                                                    */
+/* 803568F4-80356948 0054+00 s=0 e=2 z=0  None .text      CARDCheck                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

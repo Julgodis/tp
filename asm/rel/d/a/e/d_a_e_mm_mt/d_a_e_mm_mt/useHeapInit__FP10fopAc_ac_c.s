@@ -10,18 +10,18 @@ lbl_80724E58:
 /* 80724E78 00000020  40 82 00 08 */	bne lbl_80724E80
 /* 80724E7C 00000024  38 80 00 03 */	li r4, 3
 lbl_80724E80:
-/* 80724E80 00000000  3C 60 00 00 */	lis r3, stringBase0@ha /* 8072592C */
-/* 80724E84 00000004  38 63 00 00 */	addi r3, r3, stringBase0@l /* 8072592C */
-/* 80724E88 00000008  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80724E8C 0000000C  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80724E80 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80724E84 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80724E88 00000008  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80724E8C 0000000C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80724E90 00000010  3C A5 00 02 */	addis r5, r5, 2
 /* 80724E94 00000014  38 C0 00 80 */	li r6, 0x80
 /* 80724E98 00000018  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 80724E9C 0000001C  4B FF E0 BD */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 80724E9C 0000001C  4B FF E0 BD */	bl _unresolved
 /* 80724EA0 00000020  3C 80 00 08 */	lis r4, 8
 /* 80724EA4 00000024  3C A0 11 00 */	lis r5, 0x1100 /* 0x11000084@ha */
 /* 80724EA8 00000028  38 A5 00 84 */	addi r5, r5, 0x0084 /* 0x11000084@l */
-/* 80724EAC 0000002C  4B FF E0 AD */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
+/* 80724EAC 0000002C  4B FF E0 AD */	bl _unresolved
 /* 80724EB0 00000030  90 7F 06 5C */	stw r3, 0x65c(r31)
 /* 80724EB4 00000034  80 1F 06 5C */	lwz r0, 0x65c(r31)
 /* 80724EB8 00000038  28 00 00 00 */	cmplwi r0, 0

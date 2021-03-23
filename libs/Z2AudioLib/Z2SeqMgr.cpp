@@ -233,15 +233,15 @@ extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80455998-8045599C 0004+00 r=23 e=0 z=0  None .sdata2    @3372                                                        */
+/* 80455998-8045599C 0004+00 s=23 e=0 z=0  None .sdata2    @3372                                                        */
 SECTION_SDATA2 static f32 lit_3372 = 1.0f;
 
-/* 8045599C-804559A0 0004+00 r=23 e=0 z=0  None .sdata2    @3373                                                        */
+/* 8045599C-804559A0 0004+00 s=23 e=0 z=0  None .sdata2    @3373                                                        */
 SECTION_SDATA2 static u8 lit_3373[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802AEEA0-802AF010 0170+00 r=1 e=1 z=0  None .text      __ct__8Z2SeqMgrFv                                            */
+/* 802AEEA0-802AF010 0170+00 s=0 e=1 z=0  None .text      __ct__8Z2SeqMgrFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,17 +253,17 @@ asm Z2SeqMgr::Z2SeqMgr() {
 
 
 /* ############################################################################################## */
-/* 804559A0-804559A8 0004+04 r=1 e=0 z=0  None .sdata2    @3559                                                        */
+/* 804559A0-804559A8 0004+04 s=1 e=0 z=0  None .sdata2    @3559                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_3559[1 + 1 /* padding */] = {
 	-10000.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804559A8-804559B0 0008+00 r=22 e=0 z=0  None .sdata2    @3561                                                        */
+/* 804559A8-804559B0 0008+00 s=22 e=0 z=0  None .sdata2    @3561                                                        */
 SECTION_SDATA2 static f64 Z2SeqMgr__lit_3561 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802AF010-802AF408 03F8+00 r=46 e=5 z=38  None .text      bgmStart__8Z2SeqMgrFUlUll                                    */
+/* 802AF010-802AF408 03F8+00 s=3 e=5 z=0  None .text      bgmStart__8Z2SeqMgrFUlUll                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ asm void Z2SeqMgr::bgmStart(u32 param_0, u32 param_1, s32 param_2) {
 #pragma pop
 
 
-/* 802AF408-802AF49C 0094+00 r=38 e=5 z=30  None .text      bgmStop__8Z2SeqMgrFUll                                       */
+/* 802AF408-802AF49C 0094+00 s=3 e=5 z=0  None .text      bgmStop__8Z2SeqMgrFUll                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,7 +286,7 @@ asm void Z2SeqMgr::bgmStop(u32 param_0, s32 param_1) {
 
 
 /* ############################################################################################## */
-/* 8039BA08-8039BC88 0280+00 r=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039BA08-8039BC88 0280+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -375,7 +375,7 @@ SECTION_DEAD char const* const stringBase_8039BC72 = "force_start";
 SECTION_DEAD char const* const stringBase_8039BC7E = "force_end";
 #pragma pop
 
-/* 803C9DF8-803CA08C 0294+00 r=1 e=0 z=0  None .data      @3900                                                        */
+/* 803C9DF8-803CA08C 0294+00 s=1 e=0 z=0  None .data      @3900                                                        */
 SECTION_DATA static void* Z2SeqMgr__lit_3900[165] = {
 	/* 0    */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 	/* 1    */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
@@ -544,7 +544,7 @@ SECTION_DATA static void* Z2SeqMgr__lit_3900[165] = {
 	/* 164  */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 };
 
-/* 802AF49C-802AF884 03E8+00 r=74 e=6 z=65  None .text      subBgmStart__8Z2SeqMgrFUl                                    */
+/* 802AF49C-802AF884 03E8+00 s=3 e=6 z=0  None .text      subBgmStart__8Z2SeqMgrFUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +556,7 @@ asm void Z2SeqMgr::subBgmStart(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803CA08C-803CA308 027C+00 r=1 e=0 z=0  None .data      @3988                                                        */
+/* 803CA08C-803CA308 027C+00 s=1 e=0 z=0  None .data      @3988                                                        */
 SECTION_DATA static void* lit_3988[159] = {
 	/* 0    */ (void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
 	/* 1    */ (void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0x58),
@@ -719,7 +719,7 @@ SECTION_DATA static void* lit_3988[159] = {
 	/* 158  */ (void*)(((char*)subBgmStop__8Z2SeqMgrFv)+0xF4),
 };
 
-/* 802AF884-802AF9D0 014C+00 r=50 e=4 z=42  None .text      subBgmStop__8Z2SeqMgrFv                                      */
+/* 802AF884-802AF9D0 014C+00 s=4 e=4 z=0  None .text      subBgmStop__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -730,7 +730,7 @@ asm void Z2SeqMgr::subBgmStop() {
 #pragma pop
 
 
-/* 802AF9D0-802AFB94 01C4+00 r=2 e=0 z=0  None .text      subBgmStopInner__8Z2SeqMgrFv                                 */
+/* 802AF9D0-802AFB94 01C4+00 s=2 e=0 z=0  None .text      subBgmStopInner__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -741,7 +741,7 @@ asm void Z2SeqMgr::subBgmStopInner() {
 #pragma pop
 
 
-/* 802AFB94-802AFDEC 0258+00 r=50 e=3 z=46  None .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
+/* 802AFB94-802AFDEC 0258+00 s=1 e=3 z=0  None .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +752,7 @@ asm void Z2SeqMgr::bgmStreamPrepare(u32 param_0) {
 #pragma pop
 
 
-/* 802AFDEC-802AFE18 002C+00 r=1 e=1 z=0  None .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
+/* 802AFDEC-802AFE18 002C+00 s=0 e=1 z=0  None .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -763,7 +763,7 @@ asm void Z2SeqMgr::bgmStreamCheckReady() {
 #pragma pop
 
 
-/* 802AFE18-802AFEDC 00C4+00 r=51 e=4 z=46  None .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
+/* 802AFE18-802AFEDC 00C4+00 s=1 e=4 z=0  None .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -774,7 +774,7 @@ asm void Z2SeqMgr::bgmStreamPlay() {
 #pragma pop
 
 
-/* 802AFEDC-802AFF8C 00B0+00 r=30 e=1 z=27  None .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
+/* 802AFEDC-802AFF8C 00B0+00 s=2 e=1 z=0  None .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -786,7 +786,7 @@ asm void Z2SeqMgr::bgmStreamStop(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803CA308-803CA33C 0034+00 r=1 e=0 z=0  None .data      @4739                                                        */
+/* 803CA308-803CA33C 0034+00 s=1 e=0 z=0  None .data      @4739                                                        */
 SECTION_DATA static void* Z2SeqMgr__lit_4739[13] = {
 	/* 0    */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	/* 1    */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
@@ -803,53 +803,53 @@ SECTION_DATA static void* Z2SeqMgr__lit_4739[13] = {
 	/* 12   */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x3C0),
 };
 
-/* 804559B0-804559B4 0004+00 r=1 e=0 z=0  None .sdata2    @4726                                                        */
+/* 804559B0-804559B4 0004+00 s=1 e=0 z=0  None .sdata2    @4726                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4726 = 13.0f / 20.0f;
 
-/* 804559B4-804559B8 0004+00 r=10 e=0 z=0  None .sdata2    @4727                                                        */
+/* 804559B4-804559B8 0004+00 s=10 e=0 z=0  None .sdata2    @4727                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4727 = -1.0f;
 
-/* 804559B8-804559BC 0004+00 r=1 e=0 z=0  None .sdata2    @4728                                                        */
+/* 804559B8-804559BC 0004+00 s=1 e=0 z=0  None .sdata2    @4728                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4728 = 29.0f / 100.0f;
 
-/* 804559BC-804559C0 0004+00 r=1 e=0 z=0  None .sdata2    @4729                                                        */
+/* 804559BC-804559C0 0004+00 s=1 e=0 z=0  None .sdata2    @4729                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4729 = 7.0f / 20.0f;
 
-/* 804559C0-804559C4 0004+00 r=1 e=0 z=0  None .sdata2    @4730                                                        */
+/* 804559C0-804559C4 0004+00 s=1 e=0 z=0  None .sdata2    @4730                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4730 = 3.0f / 5.0f;
 
-/* 804559C4-804559C8 0004+00 r=2 e=0 z=0  None .sdata2    @4731                                                        */
+/* 804559C4-804559C8 0004+00 s=2 e=0 z=0  None .sdata2    @4731                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4731 = 0.5f;
 
-/* 804559C8-804559CC 0004+00 r=3 e=0 z=0  None .sdata2    @4732                                                        */
+/* 804559C8-804559CC 0004+00 s=3 e=0 z=0  None .sdata2    @4732                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4732 = 3.0f / 10.0f;
 
-/* 804559CC-804559D0 0004+00 r=1 e=0 z=0  None .sdata2    @4733                                                        */
+/* 804559CC-804559D0 0004+00 s=1 e=0 z=0  None .sdata2    @4733                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4733 = 3100.0f;
 
-/* 804559D0-804559D4 0004+00 r=1 e=0 z=0  None .sdata2    @4734                                                        */
+/* 804559D0-804559D4 0004+00 s=1 e=0 z=0  None .sdata2    @4734                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4734 = 200.0f;
 
-/* 804559D4-804559D8 0004+00 r=1 e=0 z=0  None .sdata2    @4735                                                        */
+/* 804559D4-804559D8 0004+00 s=1 e=0 z=0  None .sdata2    @4735                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4735 = 1600.0f;
 
-/* 804559D8-804559DC 0004+00 r=1 e=0 z=0  None .sdata2    @4736                                                        */
+/* 804559D8-804559DC 0004+00 s=1 e=0 z=0  None .sdata2    @4736                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4736 = 4.0f / 5.0f;
 
-/* 804559DC-804559E0 0004+00 r=1 e=0 z=0  None .sdata2    @4737                                                        */
+/* 804559DC-804559E0 0004+00 s=1 e=0 z=0  None .sdata2    @4737                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4737 = 3150.0f;
 
-/* 804559E0-804559E8 0004+04 r=1 e=0 z=0  None .sdata2    @4738                                                        */
+/* 804559E0-804559E8 0004+04 s=1 e=0 z=0  None .sdata2    @4738                                                        */
 SECTION_SDATA2 static f32 Z2SeqMgr__lit_4738[1 + 1 /* padding */] = {
 	6150.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804559E8-804559F0 0008+00 r=1 e=0 z=0  None .sdata2    @4741                                                        */
+/* 804559E8-804559F0 0008+00 s=1 e=0 z=0  None .sdata2    @4741                                                        */
 SECTION_SDATA2 static f64 Z2SeqMgr__lit_4741 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802AFF8C-802B1DF4 1E68+00 r=39 e=8 z=26  None .text      changeBgmStatus__8Z2SeqMgrFl                                 */
+/* 802AFF8C-802B1DF4 1E68+00 s=5 e=8 z=0  None .text      changeBgmStatus__8Z2SeqMgrFl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -860,7 +860,7 @@ asm void Z2SeqMgr::changeBgmStatus(s32 param_0) {
 #pragma pop
 
 
-/* 802B1DF4-802B299C 0BA8+00 r=36 e=3 z=31  None .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
+/* 802B1DF4-802B299C 0BA8+00 s=2 e=3 z=0  None .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +871,7 @@ asm void Z2SeqMgr::changeSubBgmStatus(s32 param_0) {
 #pragma pop
 
 
-/* 802B299C-802B2A88 00EC+00 r=1 e=1 z=0  None .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
+/* 802B299C-802B2A88 00EC+00 s=0 e=1 z=0  None .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +882,7 @@ asm void Z2SeqMgr::onVariantBgmJumpEnd(bool param_0) {
 #pragma pop
 
 
-/* 802B2A88-802B2CA4 021C+00 r=10 e=0 z=9  None .text      changeFishingBgm__8Z2SeqMgrFl                                */
+/* 802B2A88-802B2CA4 021C+00 s=1 e=0 z=0  None .text      changeFishingBgm__8Z2SeqMgrFl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -893,7 +893,7 @@ asm void Z2SeqMgr::changeFishingBgm(s32 param_0) {
 #pragma pop
 
 
-/* 802B2CA4-802B2D64 00C0+00 r=1 e=1 z=0  None .text      talkInBgm__8Z2SeqMgrFv                                       */
+/* 802B2CA4-802B2D64 00C0+00 s=0 e=1 z=0  None .text      talkInBgm__8Z2SeqMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -904,7 +904,7 @@ asm void Z2SeqMgr::talkInBgm() {
 #pragma pop
 
 
-/* 802B2D64-802B2DAC 0048+00 r=1 e=1 z=0  None .text      talkOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2D64-802B2DAC 0048+00 s=0 e=1 z=0  None .text      talkOutBgm__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +915,7 @@ asm void Z2SeqMgr::talkOutBgm() {
 #pragma pop
 
 
-/* 802B2DAC-802B2DF4 0048+00 r=1 e=1 z=0  None .text      menuInBgm__8Z2SeqMgrFv                                       */
+/* 802B2DAC-802B2DF4 0048+00 s=0 e=1 z=0  None .text      menuInBgm__8Z2SeqMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +926,7 @@ asm void Z2SeqMgr::menuInBgm() {
 #pragma pop
 
 
-/* 802B2DF4-802B2E3C 0048+00 r=1 e=1 z=0  None .text      menuOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2DF4-802B2E3C 0048+00 s=0 e=1 z=0  None .text      menuOutBgm__8Z2SeqMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -937,7 +937,7 @@ asm void Z2SeqMgr::menuOutBgm() {
 #pragma pop
 
 
-/* 802B2E3C-802B327C 0440+00 r=1 e=0 z=0  None .text      fanfareFramework__8Z2SeqMgrFv                                */
+/* 802B2E3C-802B327C 0440+00 s=1 e=0 z=0  None .text      fanfareFramework__8Z2SeqMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -949,7 +949,7 @@ asm void Z2SeqMgr::fanfareFramework() {
 
 
 /* ############################################################################################## */
-/* 803CA33C-803CA3F8 00BC+00 r=1 e=0 z=0  None .data      @5219                                                        */
+/* 803CA33C-803CA3F8 00BC+00 s=1 e=0 z=0  None .data      @5219                                                        */
 SECTION_DATA static void* lit_5219[47] = {
 	/* 0    */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 	/* 1    */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
@@ -1000,7 +1000,7 @@ SECTION_DATA static void* lit_5219[47] = {
 	/* 46   */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x84),
 };
 
-/* 803CA3F8-803CA4B4 00BC+00 r=1 e=0 z=0  None .data      @5218                                                        */
+/* 803CA3F8-803CA4B4 00BC+00 s=1 e=0 z=0  None .data      @5218                                                        */
 SECTION_DATA static void* lit_5218[47] = {
 	/* 0    */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 	/* 1    */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
@@ -1051,7 +1051,7 @@ SECTION_DATA static void* lit_5218[47] = {
 	/* 46   */ (void*)(((char*)stopWolfHowlSong__8Z2SeqMgrFv)+0x38),
 };
 
-/* 802B327C-802B3318 009C+00 r=3 e=1 z=0  None .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
+/* 802B327C-802B3318 009C+00 s=2 e=1 z=0  None .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1062,7 +1062,7 @@ asm void Z2SeqMgr::stopWolfHowlSong() {
 #pragma pop
 
 
-/* 802B3318-802B3398 0080+00 r=1 e=1 z=0  None .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
+/* 802B3318-802B3398 0080+00 s=0 e=1 z=0  None .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1073,7 +1073,7 @@ asm void Z2SeqMgr::setHeightVolMod(bool param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802B3398-802B33A8 0010+00 r=1 e=1 z=0  None .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
+/* 802B3398-802B33A8 0010+00 s=0 e=1 z=0  None .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1085,47 +1085,47 @@ asm void Z2SeqMgr::setTimeProcVolMod(bool param_0, u32 param_1) {
 
 
 /* ############################################################################################## */
-/* 80450870-80450874 0004+00 r=1 e=0 z=0  None .sdata     sDeathMtBottom                                               */
+/* 80450870-80450874 0004+00 s=1 e=0 z=0  None .sdata     sDeathMtBottom                                               */
 SECTION_SDATA static f32 sDeathMtBottom = -1000.0f;
 
-/* 80450874-80450878 0004+00 r=1 e=0 z=0  None .sdata     sDeathMtTop                                                  */
+/* 80450874-80450878 0004+00 s=1 e=0 z=0  None .sdata     sDeathMtTop                                                  */
 SECTION_SDATA static f32 sDeathMtTop = 3650.0f;
 
-/* 80450878-80450880 0004+04 r=1 e=0 z=0  None .sdata     sUnderWaterDepthMax                                          */
+/* 80450878-80450880 0004+04 s=1 e=0 z=0  None .sdata     sUnderWaterDepthMax                                          */
 SECTION_SDATA static f32 sUnderWaterDepthMax[1 + 1 /* padding */] = {
 	3500.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804559F0-804559F4 0004+00 r=1 e=0 z=0  None .sdata2    @5673                                                        */
+/* 804559F0-804559F4 0004+00 s=1 e=0 z=0  None .sdata2    @5673                                                        */
 SECTION_SDATA2 static f32 lit_5673 = -10500.0f;
 
-/* 804559F4-804559F8 0004+00 r=1 e=0 z=0  None .sdata2    @5674                                                        */
+/* 804559F4-804559F8 0004+00 s=1 e=0 z=0  None .sdata2    @5674                                                        */
 SECTION_SDATA2 static f32 lit_5674 = -7500.0f;
 
-/* 804559F8-804559FC 0004+00 r=1 e=0 z=0  None .sdata2    @5675                                                        */
+/* 804559F8-804559FC 0004+00 s=1 e=0 z=0  None .sdata2    @5675                                                        */
 SECTION_SDATA2 static f32 lit_5675 = 1.0f / 10.0f;
 
-/* 804559FC-80455A00 0004+00 r=1 e=0 z=0  None .sdata2    @5676                                                        */
+/* 804559FC-80455A00 0004+00 s=1 e=0 z=0  None .sdata2    @5676                                                        */
 SECTION_SDATA2 static f32 lit_5676 = -1500.0f;
 
-/* 80455A00-80455A04 0004+00 r=1 e=0 z=0  None .sdata2    @5677                                                        */
+/* 80455A00-80455A04 0004+00 s=1 e=0 z=0  None .sdata2    @5677                                                        */
 SECTION_SDATA2 static f32 lit_5677 = -13000.0f;
 
-/* 80455A04-80455A08 0004+00 r=1 e=0 z=0  None .sdata2    @5678                                                        */
+/* 80455A04-80455A08 0004+00 s=1 e=0 z=0  None .sdata2    @5678                                                        */
 SECTION_SDATA2 static f32 lit_5678 = -4500.0f;
 
-/* 80455A08-80455A0C 0004+00 r=1 e=0 z=0  None .sdata2    @5679                                                        */
+/* 80455A08-80455A0C 0004+00 s=1 e=0 z=0  None .sdata2    @5679                                                        */
 SECTION_SDATA2 static f32 lit_5679 = -45000.0f;
 
-/* 80455A0C-80455A10 0004+00 r=1 e=0 z=0  None .sdata2    @5680                                                        */
+/* 80455A0C-80455A10 0004+00 s=1 e=0 z=0  None .sdata2    @5680                                                        */
 SECTION_SDATA2 static f32 lit_5680 = -3000.0f;
 
-/* 80455A10-80455A14 0004+00 r=1 e=0 z=0  None .sdata2    @5681                                                        */
+/* 80455A10-80455A14 0004+00 s=1 e=0 z=0  None .sdata2    @5681                                                        */
 SECTION_SDATA2 static f32 lit_5681 = 900.0f;
 
-/* 802B33A8-802B3EAC 0B04+00 r=1 e=1 z=0  None .text      processBgmFramework__8Z2SeqMgrFv                             */
+/* 802B33A8-802B3EAC 0B04+00 s=0 e=1 z=0  None .text      processBgmFramework__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1136,7 @@ asm void Z2SeqMgr::processBgmFramework() {
 #pragma pop
 
 
-/* 802B3EAC-802B3F40 0094+00 r=2 e=2 z=0  None .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
+/* 802B3EAC-802B3F40 0094+00 s=0 e=2 z=0  None .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1147,7 +1147,7 @@ asm void Z2SeqMgr::checkBgmIDPlaying(u32 param_0) {
 #pragma pop
 
 
-/* 802B3F40-802B3FEC 00AC+00 r=1 e=0 z=0  None .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
+/* 802B3F40-802B3FEC 00AC+00 s=1 e=0 z=0  None .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1158,7 +1158,7 @@ asm void Z2SeqMgr::getChildTrackVolume(JAISoundHandle* param_0, int param_1) {
 #pragma pop
 
 
-/* 802B3FEC-802B4128 013C+00 r=11 e=2 z=0  None .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
+/* 802B3FEC-802B4128 013C+00 s=9 e=2 z=0  None .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1169,7 +1169,7 @@ asm void Z2SeqMgr::setChildTrackVolume(JAISoundHandle* param_0, int param_1, f32
 #pragma pop
 
 
-/* 802B4128-802B4164 003C+00 r=2 e=1 z=0  None .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
+/* 802B4128-802B4164 003C+00 s=1 e=1 z=0  None .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1180,7 +1180,7 @@ asm void Z2SeqMgr::resetBattleBgmParams() {
 #pragma pop
 
 
-/* 802B4164-802B421C 00B8+00 r=17 e=3 z=10  None .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
+/* 802B4164-802B421C 00B8+00 s=4 e=3 z=0  None .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1191,7 +1191,7 @@ asm void Z2SeqMgr::setBattleBgmOff(bool param_0) {
 #pragma pop
 
 
-/* 802B421C-802B43D0 01B4+00 r=1 e=1 z=0  None .text      setBattleSearched__8Z2SeqMgrFb                               */
+/* 802B421C-802B43D0 01B4+00 s=0 e=1 z=0  None .text      setBattleSearched__8Z2SeqMgrFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1202,7 +1202,7 @@ asm void Z2SeqMgr::setBattleSearched(bool param_0) {
 #pragma pop
 
 
-/* 802B43D0-802B43E0 0010+00 r=3 e=0 z=0  None .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
+/* 802B43D0-802B43E0 0010+00 s=3 e=0 z=0  None .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1214,10 +1214,10 @@ asm void Z2SeqMgr::setBattleDistIgnore(bool param_0) {
 
 
 /* ############################################################################################## */
-/* 80455A14-80455A18 0004+00 r=1 e=0 z=0  None .sdata2    @5913                                                        */
+/* 80455A14-80455A18 0004+00 s=1 e=0 z=0  None .sdata2    @5913                                                        */
 SECTION_SDATA2 static f32 lit_5913 = 2.0f / 5.0f;
 
-/* 802B43E0-802B4498 00B8+00 r=2 e=2 z=0  None .text      setBattleGhostMute__8Z2SeqMgrFb                              */
+/* 802B43E0-802B4498 00B8+00 s=0 e=2 z=0  None .text      setBattleGhostMute__8Z2SeqMgrFb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1228,7 +1228,7 @@ asm void Z2SeqMgr::setBattleGhostMute(bool param_0) {
 #pragma pop
 
 
-/* 802B4498-802B4844 03AC+00 r=1 e=1 z=0  None .text      setBattleDistState__8Z2SeqMgrFUc                             */
+/* 802B4498-802B4844 03AC+00 s=0 e=1 z=0  None .text      setBattleDistState__8Z2SeqMgrFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1239,7 +1239,7 @@ asm void Z2SeqMgr::setBattleDistState(u8 param_0) {
 #pragma pop
 
 
-/* 802B4844-802B4AFC 02B8+00 r=5 e=3 z=1  None .text      setBattleSeqState__8Z2SeqMgrFUc                              */
+/* 802B4844-802B4AFC 02B8+00 s=1 e=3 z=0  None .text      setBattleSeqState__8Z2SeqMgrFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1250,7 +1250,7 @@ asm void Z2SeqMgr::setBattleSeqState(u8 param_0) {
 #pragma pop
 
 
-/* 802B4AFC-802B4BD0 00D4+00 r=4 e=4 z=0  None .text      setBattleLastHit__8Z2SeqMgrFUc                               */
+/* 802B4AFC-802B4BD0 00D4+00 s=0 e=4 z=0  None .text      setBattleLastHit__8Z2SeqMgrFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1261,7 +1261,7 @@ asm void Z2SeqMgr::setBattleLastHit(u8 param_0) {
 #pragma pop
 
 
-/* 802B4BD0-802B4EB0 02E0+00 r=1 e=0 z=0  None .text      battleBgmFramework__8Z2SeqMgrFv                              */
+/* 802B4BD0-802B4EB0 02E0+00 s=1 e=0 z=0  None .text      battleBgmFramework__8Z2SeqMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1272,7 +1272,7 @@ asm void Z2SeqMgr::battleBgmFramework() {
 #pragma pop
 
 
-/* 802B4EB0-802B5204 0354+00 r=1 e=0 z=0  None .text      startBattleBgm__8Z2SeqMgrFb                                  */
+/* 802B4EB0-802B5204 0354+00 s=1 e=0 z=0  None .text      startBattleBgm__8Z2SeqMgrFb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1283,7 +1283,7 @@ asm void Z2SeqMgr::startBattleBgm(bool param_0) {
 #pragma pop
 
 
-/* 802B5204-802B545C 0258+00 r=4 e=1 z=0  None .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
+/* 802B5204-802B545C 0258+00 s=3 e=1 z=0  None .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1294,7 +1294,7 @@ asm void Z2SeqMgr::stopBattleBgm(u8 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 802B545C-802B556C 0110+00 r=1 e=0 z=0  None .text      fieldBgmStart__8Z2SeqMgrFv                                   */
+/* 802B545C-802B556C 0110+00 s=1 e=0 z=0  None .text      fieldBgmStart__8Z2SeqMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1305,7 +1305,7 @@ asm void Z2SeqMgr::fieldBgmStart() {
 #pragma pop
 
 
-/* 802B556C-802B5750 01E4+00 r=3 e=0 z=0  None .text      fieldRidingMute__8Z2SeqMgrFv                                 */
+/* 802B556C-802B5750 01E4+00 s=3 e=0 z=0  None .text      fieldRidingMute__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1316,7 +1316,7 @@ asm void Z2SeqMgr::fieldRidingMute() {
 #pragma pop
 
 
-/* 802B5750-802B579C 004C+00 r=1 e=1 z=0  None .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
+/* 802B5750-802B579C 004C+00 s=0 e=1 z=0  None .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1327,7 +1327,7 @@ asm void Z2SeqMgr::onFieldBgmJumpStart() {
 #pragma pop
 
 
-/* 802B579C-802B594C 01B0+00 r=1 e=1 z=0  None .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
+/* 802B579C-802B594C 01B0+00 s=0 e=1 z=0  None .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1339,7 +1339,7 @@ asm void Z2SeqMgr::onFieldBgmJumpEnd() {
 
 
 /* ############################################################################################## */
-/* 803CA4B4-803CA508 0054+00 r=1 e=0 z=0  None .data      @6877                                                        */
+/* 803CA4B4-803CA508 0054+00 s=1 e=0 z=0  None .data      @6877                                                        */
 SECTION_DATA static void* Z2SeqMgr__lit_6877[21] = {
 	/* 0    */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	/* 1    */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
@@ -1364,7 +1364,7 @@ SECTION_DATA static void* Z2SeqMgr__lit_6877[21] = {
 	/* 20   */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 };
 
-/* 802B594C-802B5E80 0534+00 r=2 e=0 z=0  None .text      fieldBgmFramework__8Z2SeqMgrFv                               */
+/* 802B594C-802B5E80 0534+00 s=2 e=0 z=0  None .text      fieldBgmFramework__8Z2SeqMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1375,7 +1375,7 @@ asm void Z2SeqMgr::fieldBgmFramework() {
 #pragma pop
 
 
-/* 802B5E80-802B5E84 0004+00 r=1 e=0 z=0  None .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
+/* 802B5E80-802B5E84 0004+00 s=1 e=0 z=0  None .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1386,7 +1386,7 @@ asm void Z2SeqMgr::mbossBgmMuteProcess() {
 #pragma pop
 
 
-/* 802B5E84-802B5E88 0004+00 r=2 e=2 z=0  None .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
+/* 802B5E84-802B5E88 0004+00 s=0 e=2 z=0  None .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1397,7 +1397,7 @@ asm void Z2SeqMgr::bgmSetSwordUsing(s32 param_0) {
 #pragma pop
 
 
-/* 802B5E88-802B5E8C 0004+00 r=1 e=1 z=0  None .text      bgmNowBattle__8Z2SeqMgrFf                                    */
+/* 802B5E88-802B5E8C 0004+00 s=0 e=1 z=0  None .text      bgmNowBattle__8Z2SeqMgrFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1408,7 +1408,7 @@ asm void Z2SeqMgr::bgmNowBattle(f32 param_0) {
 #pragma pop
 
 
-/* 802B5E8C-802B5ED4 0048+00 r=1 e=1 z=0  None .text      taktModeMute__8Z2SeqMgrFv                                    */
+/* 802B5E8C-802B5ED4 0048+00 s=0 e=1 z=0  None .text      taktModeMute__8Z2SeqMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1419,7 +1419,7 @@ asm void Z2SeqMgr::taktModeMute() {
 #pragma pop
 
 
-/* 802B5ED4-802B5F1C 0048+00 r=1 e=1 z=0  None .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
+/* 802B5ED4-802B5F1C 0048+00 s=0 e=1 z=0  None .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

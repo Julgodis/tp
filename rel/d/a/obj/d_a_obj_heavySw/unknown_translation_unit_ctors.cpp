@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C1DA80[2];
+extern u8 data_80C1DA80[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_heavySw_cpp(); // 1
 
 // 
 // Declarations:

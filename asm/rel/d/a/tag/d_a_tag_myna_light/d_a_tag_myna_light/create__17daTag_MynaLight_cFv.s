@@ -9,9 +9,9 @@ lbl_80D5CB38:
 /* 80D5CB54 0000001C  40 82 00 28 */	bne lbl_80D5CB7C
 /* 80D5CB58 00000020  28 1F 00 00 */	cmplwi r31, 0
 /* 80D5CB5C 00000024  41 82 00 14 */	beq lbl_80D5CB70
-/* 80D5CB60 00000028  4B FF FF B9 */	bl __ct__10fopAc_ac_cFv
-/* 80D5CB64 0000002C  3C 60 00 00 */	lis r3, __vt__17daTag_MynaLight_c@ha /* 80D5D398 */
-/* 80D5CB68 00000030  38 03 00 00 */	addi r0, r3, __vt__17daTag_MynaLight_c@l /* 80D5D398 */
+/* 80D5CB60 00000028  4B FF FF B9 */	bl _unresolved
+/* 80D5CB64 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D5CB68 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D5CB6C 00000034  90 1F 05 68 */	stw r0, 0x568(r31)
 lbl_80D5CB70:
 /* 80D5CB70 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)

@@ -5,20 +5,20 @@ lbl_8060EA38:
 /* 8060EA44 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8060EA48 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8060EA4C 00000014  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 8060EA50 00000018  3C 80 00 00 */	lis r4, stringBase0@ha /* 80610084 */
-/* 8060EA54 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l /* 80610084 */
+/* 8060EA50 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8060EA54 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8060EA58 00000020  38 84 00 07 */	addi r4, r4, 7
-/* 8060EA5C 00000024  4B FF 6C 3D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8060EA5C 00000024  4B FF 6C 3D */	bl _unresolved
 /* 8060EA60 00000028  38 7F 05 B4 */	addi r3, r31, 0x5b4
-/* 8060EA64 0000002C  3C 80 00 00 */	lis r4, stringBase0@ha /* 80610084 */
-/* 8060EA68 00000030  38 84 00 00 */	addi r4, r4, stringBase0@l /* 80610084 */
-/* 8060EA6C 00000034  4B FF 6C 2D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 8060EA64 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8060EA68 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8060EA6C 00000034  4B FF 6C 2D */	bl _unresolved
 /* 8060EA70 00000038  88 1F 26 C8 */	lbz r0, 0x26c8(r31)
 /* 8060EA74 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 8060EA78 00000040  41 82 00 10 */	beq lbl_8060EA88
 /* 8060EA7C 00000044  38 00 00 00 */	li r0, 0
-/* 8060EA80 00000048  3C 60 00 00 */	lis r3, data_80610440@ha /* 80610440 */
-/* 8060EA84 0000004C  98 03 00 00 */	stb r0, data_80610440@l(r3) /* 80610440 */
+/* 8060EA80 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8060EA84 0000004C  98 03 00 00 */	stb r0, 0x0000(r3)
 lbl_8060EA88:
 /* 8060EA88 00000000  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 8060EA8C 00000004  28 00 00 00 */	cmplwi r0, 0

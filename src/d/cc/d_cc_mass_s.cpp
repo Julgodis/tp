@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct cCcD_Obj {
 };
 
-struct cCcD_Obj {
+struct cXyz {
 };
 
 struct fopAc_ac_c {
@@ -31,13 +31,13 @@ struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
 
-struct Vec {
-};
-
 struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
+};
+
+struct Vec {
 };
 
 struct dCcMassS_Mng {
@@ -164,7 +164,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // Declarations:
 // 
 
-/* 800852E0-800852F0 0010+00 r=1 e=0 z=0  None .text      Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v    */
+/* 800852E0-800852F0 0010+00 s=1 e=0 z=0  None .text      Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm void dCcMassS_Obj::Set(cCcD_Obj* param_0, u8 param_1, void (*)(fopAc_ac_c*, 
 #pragma pop
 
 
-/* 800852F0-80085334 0044+00 r=1 e=0 z=0  None .text      Clear__12dCcMassS_ObjFv                                      */
+/* 800852F0-80085334 0044+00 s=1 e=0 z=0  None .text      Clear__12dCcMassS_ObjFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,12 +187,12 @@ asm void dCcMassS_Obj::Clear() {
 
 
 /* ############################################################################################## */
-/* 80452760-80452764 0004+00 r=5 e=0 z=0  None .sdata2    @3627                                                        */
+/* 80452760-80452764 0004+00 s=5 e=0 z=0  None .sdata2    @3627                                                        */
 SECTION_SDATA2 static u8 lit_3627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80085334-80085350 001C+00 r=1 e=0 z=0  None .text      ClearPointer__15dCcMassS_HitInfFv                            */
+/* 80085334-80085350 001C+00 s=1 e=0 z=0  None .text      ClearPointer__15dCcMassS_HitInfFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ asm void dCcMassS_HitInf::ClearPointer() {
 #pragma pop
 
 
-/* 80085350-80085450 0100+00 r=1 e=1 z=0  None .text      __ct__12dCcMassS_MngFv                                       */
+/* 80085350-80085450 0100+00 s=0 e=1 z=0  None .text      __ct__12dCcMassS_MngFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ asm dCcMassS_Mng::dCcMassS_Mng() {
 #pragma pop
 
 
-/* 80085450-800854E0 0090+00 r=2 e=2 z=0  None .text      __dt__12cCcD_CpsAttrFv                                       */
+/* 80085450-800854E0 0090+00 s=0 e=2 z=0  None .text      __dt__12cCcD_CpsAttrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm cCcD_CpsAttr::~cCcD_CpsAttr() {
 #pragma pop
 
 
-/* 800854E0-8008556C 008C+00 r=2 e=2 z=0  None .text      __dt__12cCcD_CylAttrFv                                       */
+/* 800854E0-8008556C 008C+00 s=0 e=2 z=0  None .text      __dt__12cCcD_CylAttrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ asm cCcD_CylAttr::~cCcD_CylAttr() {
 #pragma pop
 
 
-/* 8008556C-800855C8 005C+00 r=1 e=1 z=0  None .text      __dt__14cCcD_ShapeAttrFv                                     */
+/* 8008556C-800855C8 005C+00 s=0 e=1 z=0  None .text      __dt__14cCcD_ShapeAttrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm cCcD_ShapeAttr::~cCcD_ShapeAttr() {
 #pragma pop
 
 
-/* 800855C8-800855E4 001C+00 r=1 e=0 z=0  None .text      __ct__12dCcMassS_ObjFv                                       */
+/* 800855C8-800855E4 001C+00 s=1 e=0 z=0  None .text      __ct__12dCcMassS_ObjFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,10 +259,10 @@ asm dCcMassS_Obj::dCcMassS_Obj() {
 
 
 /* ############################################################################################## */
-/* 80452764-80452768 0004+00 r=2 e=0 z=0  None .sdata2    @3724                                                        */
+/* 80452764-80452768 0004+00 s=2 e=0 z=0  None .sdata2    @3724                                                        */
 SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3724 = -1000000000.0f;
 
-/* 800855E4-80085630 004C+00 r=2 e=1 z=0  None .text      Ct__12dCcMassS_MngFv                                         */
+/* 800855E4-80085630 004C+00 s=1 e=1 z=0  None .text      Ct__12dCcMassS_MngFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +273,7 @@ asm void dCcMassS_Mng::Ct() {
 #pragma pop
 
 
-/* 80085630-80085690 0060+00 r=2 e=0 z=2  None .text      SetAttr__12dCcMassS_MngFffUcUc                               */
+/* 80085630-80085690 0060+00 s=0 e=0 z=0  None .text      SetAttr__12dCcMassS_MngFffUcUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,10 +285,10 @@ asm void dCcMassS_Mng::SetAttr(f32 param_0, f32 param_1, u8 param_2, u8 param_3)
 
 
 /* ############################################################################################## */
-/* 80452768-8045276C 0004+00 r=1 e=0 z=0  None .sdata2    @3780                                                        */
+/* 80452768-8045276C 0004+00 s=1 e=0 z=0  None .sdata2    @3780                                                        */
 SECTION_SDATA2 static f32 lit_3780 = 1000000000.0f;
 
-/* 80085690-800858AC 021C+00 r=2 e=1 z=1  None .text      Prepare__12dCcMassS_MngFv                                    */
+/* 80085690-800858AC 021C+00 s=0 e=1 z=0  None .text      Prepare__12dCcMassS_MngFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,13 +300,13 @@ asm void dCcMassS_Mng::Prepare() {
 
 
 /* ############################################################################################## */
-/* 8045276C-80452770 0004+00 r=2 e=0 z=0  None .sdata2    @3899                                                        */
+/* 8045276C-80452770 0004+00 s=2 e=0 z=0  None .sdata2    @3899                                                        */
 SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3899 = 1.0f;
 
-/* 80452770-80452774 0004+00 r=1 e=0 z=0  None .sdata2    @3900                                                        */
+/* 80452770-80452774 0004+00 s=1 e=0 z=0  None .sdata2    @3900                                                        */
 SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3900 = 20.0f;
 
-/* 800858AC-80085CF0 0444+00 r=2 e=0 z=2  None .text      Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf   */
+/* 800858AC-80085CF0 0444+00 s=0 e=0 z=0  None .text      Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void dCcMassS_Mng::Chk(cXyz* param_0, fopAc_ac_c** param_1, dCcMassS_HitInf*
 #pragma pop
 
 
-/* 80085CF0-80085D98 00A8+00 r=3 e=2 z=0  None .text      Clear__12dCcMassS_MngFv                                      */
+/* 80085CF0-80085D98 00A8+00 s=1 e=2 z=0  None .text      Clear__12dCcMassS_MngFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,10 +329,10 @@ asm void dCcMassS_Mng::Clear() {
 
 
 /* ############################################################################################## */
-/* 80452774-80452778 0004+00 r=1 e=0 z=0  None .sdata2    @3941                                                        */
+/* 80452774-80452778 0004+00 s=1 e=0 z=0  None .sdata2    @3941                                                        */
 SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3941 = 0.5f;
 
-/* 80085D98-80085E6C 00D4+00 r=11 e=4 z=7  None .text      Set__12dCcMassS_MngFP8cCcD_ObjUc                             */
+/* 80085D98-80085E6C 00D4+00 s=0 e=4 z=0  None .text      Set__12dCcMassS_MngFP8cCcD_ObjUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +343,7 @@ asm void dCcMassS_Mng::Set(cCcD_Obj* param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80085E6C-80085EB0 0044+00 r=1 e=1 z=0  None .text      SetCam__12dCcMassS_MngFRC8cM3dGCps                           */
+/* 80085E6C-80085EB0 0044+00 s=0 e=1 z=0  None .text      SetCam__12dCcMassS_MngFRC8cM3dGCps                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +354,7 @@ asm void dCcMassS_Mng::SetCam(cM3dGCps const& param_0) {
 #pragma pop
 
 
-/* 80085EB0-80085EB8 0008+00 r=1 e=1 z=0  None .text      GetResultCam__12dCcMassS_MngCFv                              */
+/* 80085EB0-80085EB8 0008+00 s=0 e=1 z=0  None .text      GetResultCam__12dCcMassS_MngCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +365,7 @@ asm void dCcMassS_Mng::GetResultCam() const {
 #pragma pop
 
 
-/* 80085EB8-80085ED4 001C+00 r=1 e=1 z=0  None .text      GetCamTopPos__12dCcMassS_MngFP3Vec                           */
+/* 80085EB8-80085ED4 001C+00 s=0 e=1 z=0  None .text      GetCamTopPos__12dCcMassS_MngFP3Vec                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

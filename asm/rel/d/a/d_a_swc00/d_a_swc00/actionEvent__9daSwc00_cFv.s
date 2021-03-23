@@ -5,17 +5,17 @@ lbl_805A1A94:
 /* 805A1AA0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805A1AA4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 805A1AA8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 805A1AAC 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 805A1AB0 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 805A1AAC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805A1AB0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 805A1AB4 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 805A1AB8 00000024  A8 9E 05 80 */	lha r4, 0x580(r30)
-/* 805A1ABC 00000028  4B FF F9 1D */	bl endCheck__16dEvent_manager_cFs
+/* 805A1ABC 00000028  4B FF F9 1D */	bl _unresolved
 /* 805A1AC0 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 805A1AC4 00000030  41 82 00 14 */	beq lbl_805A1AD8
 /* 805A1AC8 00000034  38 00 00 03 */	li r0, 3
 /* 805A1ACC 00000038  98 1E 05 82 */	stb r0, 0x582(r30)
 /* 805A1AD0 0000003C  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 805A1AD4 00000040  4B FF F9 05 */	bl reset__14dEvt_control_cFv
+/* 805A1AD4 00000040  4B FF F9 05 */	bl _unresolved
 lbl_805A1AD8:
 /* 805A1AD8 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 805A1ADC 00000004  83 C1 00 08 */	lwz r30, 8(r1)

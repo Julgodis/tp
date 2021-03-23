@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80A258A4[2];
+extern u8 data_80A258A4[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_kasi_kyu_cpp(); // 1
 
 // 
 // Declarations:

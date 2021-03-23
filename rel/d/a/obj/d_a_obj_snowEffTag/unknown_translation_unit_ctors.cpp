@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CDF70C[2];
+extern u8 data_80CDF70C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_snowEffTag_cpp(); // 1
 
 // 
 // Declarations:

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C439D0[2];
+extern u8 data_80C439D0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_keyhole_cpp(); // 1
 
 // 
 // Declarations:

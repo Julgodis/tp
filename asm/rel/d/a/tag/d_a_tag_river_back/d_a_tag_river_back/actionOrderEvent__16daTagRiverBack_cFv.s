@@ -5,8 +5,8 @@ lbl_80D5F5BC:
 /* 80D5F5C8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D5F5CC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D5F5D0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80D5F5D4 00000018  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D5F5D8 0000001C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D5F5D4 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D5F5D8 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D5F5DC 00000020  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 80D5F5E0 00000024  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80D5F5E4 00000028  28 00 00 02 */	cmplwi r0, 2
@@ -14,12 +14,12 @@ lbl_80D5F5BC:
 /* 80D5F5EC 00000030  38 00 00 02 */	li r0, 2
 /* 80D5F5F0 00000034  98 1E 05 71 */	stb r0, 0x571(r30)
 /* 80D5F5F4 00000038  38 64 4F F8 */	addi r3, r4, 0x4ff8
-/* 80D5F5F8 0000003C  3C 80 00 00 */	lis r4, l_staffName@ha /* 80D5F9A8 */
-/* 80D5F5FC 00000040  38 84 00 00 */	addi r4, r4, l_staffName@l /* 80D5F9A8 */
+/* 80D5F5F8 0000003C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D5F5FC 00000040  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D5F600 00000044  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D5F604 00000048  38 A0 00 00 */	li r5, 0
 /* 80D5F608 0000004C  38 C0 00 00 */	li r6, 0
-/* 80D5F60C 00000050  4B FF FC CD */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80D5F60C 00000050  4B FF FC CD */	bl _unresolved
 /* 80D5F610 00000054  90 7E 05 78 */	stw r3, 0x578(r30)
 /* 80D5F614 00000058  80 1F 05 70 */	lwz r0, 0x570(r31)
 /* 80D5F618 0000005C  64 00 00 01 */	oris r0, r0, 1
@@ -34,7 +34,7 @@ lbl_80D5F62C:
 /* 80D5F638 0000000C  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80D5F63C 00000010  38 E0 00 00 */	li r7, 0
 /* 80D5F640 00000014  39 00 00 01 */	li r8, 1
-/* 80D5F644 00000018  4B FF FC 95 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80D5F644 00000018  4B FF FC 95 */	bl _unresolved
 /* 80D5F648 0000001C  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 80D5F64C 00000020  60 00 00 02 */	ori r0, r0, 2
 /* 80D5F650 00000024  B0 1E 00 FA */	sth r0, 0xfa(r30)

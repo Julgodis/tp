@@ -5,12 +5,12 @@ lbl_80D3353C:
 /* 80D33548 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D3354C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D33550 00000014  38 9F 07 B8 */	addi r4, r31, 0x7b8
-/* 80D33554 00000018  4B FF E5 65 */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 80D33554 00000018  4B FF E5 65 */	bl _unresolved
 /* 80D33558 0000001C  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80D3355C 00000020  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D33560 00000024  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D3355C 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D33560 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D33564 00000028  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80D33568 0000002C  4B FF E5 51 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80D33568 0000002C  4B FF E5 51 */	bl _unresolved
 /* 80D3356C 00000030  7F E3 FB 78 */	mr r3, r31
 /* 80D33570 00000034  4B FF F8 45 */	bl bgCheck__11daWdStick_cFv
 /* 80D33574 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)

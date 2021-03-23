@@ -3,13 +3,13 @@ lbl_80CC4BD4:
 /* 80CC4BD8 00000004  7C 08 02 A6 */	mflr r0
 /* 80CC4BDC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CC4BE0 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 80CC4BE4 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CC4BE8 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CC4BE4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CC4BE8 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CC4BEC 00000018  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC4BF0 0000001C  80 85 05 68 */	lwz r4, 0x568(r5)
 /* 80CC4BF4 00000020  88 05 04 E2 */	lbz r0, 0x4e2(r5)
 /* 80CC4BF8 00000024  7C 05 07 74 */	extsb r5, r0
-/* 80CC4BFC 00000028  4B FF FA DD */	bl entrySimpleModel__14dComIfG_play_cFP8J3DModeli
+/* 80CC4BFC 00000028  4B FF FA DD */	bl _unresolved
 /* 80CC4C00 0000002C  38 60 00 01 */	li r3, 1
 /* 80CC4C04 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CC4C08 00000034  7C 08 03 A6 */	mtlr r0

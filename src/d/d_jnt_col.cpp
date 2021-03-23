@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
+struct dJntColData_c {
+};
+
 struct Vec {
 };
 
@@ -30,12 +36,6 @@ struct cM3dGLin {
 };
 
 struct fopAc_ac_c {
-};
-
-struct dJntColData_c {
-};
-
-struct csXyz {
 };
 
 struct J3DModel {
@@ -154,7 +154,7 @@ extern "C" extern u32 __float_max;
 // Declarations:
 // 
 
-/* 80035C8C-80035CA0 0014+00 r=9 e=1 z=8  None .text      __ct__9dJntCol_cFv                                           */
+/* 80035C8C-80035CA0 0014+00 s=0 e=1 z=0  None .text      __ct__9dJntCol_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ asm dJntCol_c::dJntCol_c() {
 #pragma pop
 
 
-/* 80035CA0-80035CC8 0028+00 r=10 e=2 z=8  None .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
+/* 80035CA0-80035CC8 0028+00 s=0 e=2 z=0  None .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,10 +177,10 @@ asm void dJntCol_c::init(fopAc_ac_c* param_0, dJntColData_c const* param_1, J3DM
 
 
 /* ############################################################################################## */
-/* 80451D60-80451D64 0004+00 r=1 e=0 z=0  None .sdata2    @3655                                                        */
+/* 80451D60-80451D64 0004+00 s=1 e=0 z=0  None .sdata2    @3655                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_3655 = 500.0f;
 
-/* 80035CC8-80035DC8 0100+00 r=2 e=0 z=0  None .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
+/* 80035CC8-80035DC8 0100+00 s=2 e=0 z=0  None .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,54 +192,54 @@ asm void dJntCol_c::setNowLine(cM3dGLin* param_0, cXyz const* param_1, csXyz con
 
 
 /* ############################################################################################## */
-/* 803A78F8-803A7904 000C+00 r=25 e=21 z=0  None .data      __vt__8cM3dGLin                                              */
+/* 803A78F8-803A7904 000C+00 s=4 e=21 z=0  None .data      __vt__8cM3dGLin                                              */
 SECTION_DATA void* __vt__8cM3dGLin[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8cM3dGLinFv,
 };
 
-/* 803A7904-803A7910 000C+00 r=12 e=10 z=0  None .data      __vt__8cM3dGSph                                              */
+/* 803A7904-803A7910 000C+00 s=2 e=10 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA void* __vt__8cM3dGSph[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8cM3dGSphFv,
 };
 
-/* 80451D64-80451D68 0004+00 r=1 e=0 z=0  None .sdata2    @4141                                                        */
+/* 80451D64-80451D68 0004+00 s=1 e=0 z=0  None .sdata2    @4141                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_4141 = -10000000.0f;
 
-/* 80451D68-80451D70 0004+04 r=2 e=0 z=0  None .sdata2    @4142                                                        */
+/* 80451D68-80451D70 0004+04 s=2 e=0 z=0  None .sdata2    @4142                                                        */
 SECTION_SDATA2 static u8 d_d_jnt_col__lit_4142[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451D70-80451D78 0008+00 r=2 e=0 z=0  None .sdata2    @4143                                                        */
+/* 80451D70-80451D78 0008+00 s=2 e=0 z=0  None .sdata2    @4143                                                        */
 SECTION_SDATA2 static f64 d_d_jnt_col__lit_4143 = 0.5;
 
-/* 80451D78-80451D80 0008+00 r=2 e=0 z=0  None .sdata2    @4144                                                        */
+/* 80451D78-80451D80 0008+00 s=2 e=0 z=0  None .sdata2    @4144                                                        */
 SECTION_SDATA2 static f64 d_d_jnt_col__lit_4144 = 3.0;
 
-/* 80451D80-80451D88 0008+00 r=2 e=0 z=0  None .sdata2    @4145                                                        */
+/* 80451D80-80451D88 0008+00 s=2 e=0 z=0  None .sdata2    @4145                                                        */
 SECTION_SDATA2 static u8 d_d_jnt_col__lit_4145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451D88-80451D8C 0004+00 r=1 e=0 z=0  None .sdata2    @4146                                                        */
+/* 80451D88-80451D8C 0004+00 s=1 e=0 z=0  None .sdata2    @4146                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_4146 = 1.0f / 100.0f;
 
-/* 80451D8C-80451D90 0004+00 r=2 e=0 z=0  None .sdata2    @4147                                                        */
+/* 80451D8C-80451D90 0004+00 s=2 e=0 z=0  None .sdata2    @4147                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_4147 = 9.999999747378752e-05f;
 
-/* 80451D90-80451D94 0004+00 r=1 e=0 z=0  None .sdata2    @4148                                                        */
+/* 80451D90-80451D94 0004+00 s=1 e=0 z=0  None .sdata2    @4148                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_4148 = 0.5f;
 
-/* 80451D94-80451D98 0004+00 r=1 e=0 z=0  None .sdata2    @4149                                                        */
+/* 80451D94-80451D98 0004+00 s=1 e=0 z=0  None .sdata2    @4149                                                        */
 SECTION_SDATA2 static f32 d_d_jnt_col__lit_4149 = 1.0f;
 
-/* 80035DC8-80036A5C 0C94+00 r=2 e=0 z=0  None .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
+/* 80035DC8-80036A5C 0C94+00 s=2 e=0 z=0  None .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ asm void dJntCol_c::searchNearPos(cM3dGLin const* param_0, cXyz const* param_1, 
 #pragma pop
 
 
-/* 80036A5C-80036AA4 0048+00 r=4 e=3 z=0  None .text      __dt__8cM3dGLinFv                                            */
+/* 80036A5C-80036AA4 0048+00 s=1 e=3 z=0  None .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm cM3dGLin::~cM3dGLin() {
 #pragma pop
 
 
-/* 80036AA4-80036AEC 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80036AA4-80036AEC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +272,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80036AEC-80036C44 0158+00 r=1 e=0 z=1  None .text      getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
+/* 80036AEC-80036C44 0158+00 s=0 e=0 z=0  None .text      getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +283,7 @@ asm void dJntCol_c::getArrowOffsetPosAndAngle(cXyz const* param_0, csXyz const* 
 #pragma pop
 
 
-/* 80036C44-80036FA8 0364+00 r=3 e=3 z=0  None .text      getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi */
+/* 80036C44-80036FA8 0364+00 s=0 e=3 z=0  None .text      getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,7 +294,7 @@ asm void dJntCol_c::getHitmarkPosAndAngle(cXyz const* param_0, csXyz const* para
 #pragma pop
 
 
-/* 80036FA8-80037038 0090+00 r=1 e=0 z=1  None .text      setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz */
+/* 80036FA8-80037038 0090+00 s=0 e=0 z=0  None .text      setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

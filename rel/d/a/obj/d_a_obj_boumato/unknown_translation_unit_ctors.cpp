@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BBC45C[2];
+extern u8 data_80BBC45C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_boumato_cpp(); // 1
 
 // 
 // Declarations:

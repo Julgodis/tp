@@ -52,7 +52,7 @@ extern "C" void cLs_Create__FP15node_list_class(); // 1
 // Declarations:
 // 
 
-/* 80266440-80266460 0020+00 r=1 e=1 z=0  None .text      cTr_SingleCut__FP10node_class                                */
+/* 80266440-80266460 0020+00 s=0 e=1 z=0  None .text      cTr_SingleCut__FP10node_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ asm void cTr_SingleCut(node_class* param_0) {
 #pragma pop
 
 
-/* 80266460-802664A4 0044+00 r=1 e=1 z=0  None .text      cTr_Addition__FP21node_lists_tree_classiP10node_class        */
+/* 80266460-802664A4 0044+00 s=0 e=1 z=0  None .text      cTr_Addition__FP21node_lists_tree_classiP10node_class        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ asm void cTr_Addition(node_lists_tree_class* param_0, int param_1, node_class* p
 #pragma pop
 
 
-/* 802664A4-802664E8 0044+00 r=1 e=1 z=0  None .text      cTr_Insert__FP21node_lists_tree_classiP10node_classi         */
+/* 802664A4-802664E8 0044+00 s=0 e=1 z=0  None .text      cTr_Insert__FP21node_lists_tree_classiP10node_classi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ asm void cTr_Insert(node_lists_tree_class* param_0, int param_1, node_class* par
 #pragma pop
 
 
-/* 802664E8-80266540 0058+00 r=2 e=2 z=0  None .text      cTr_Create__FP21node_lists_tree_classP15node_list_classi     */
+/* 802664E8-80266540 0058+00 s=0 e=2 z=0  None .text      cTr_Create__FP21node_lists_tree_classP15node_list_classi     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

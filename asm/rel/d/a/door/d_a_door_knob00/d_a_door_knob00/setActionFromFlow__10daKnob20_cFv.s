@@ -13,22 +13,22 @@ lbl_8045EEE4:
 /* 8045EF10 0000002C  40 82 00 08 */	bne lbl_8045EF18
 /* 8045EF14 00000030  48 00 00 A4 */	b lbl_8045EFB8
 lbl_8045EF18:
-/* 8045EF18 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8045EF1C 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8045EF18 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045EF1C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8045EF20 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8045EF24 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8045EF28 00000010  40 82 00 90 */	bne lbl_8045EFB8
-/* 8045EF2C 00000014  4B FF F9 0D */	bl getStatus__12dMsgObject_cFv
+/* 8045EF2C 00000014  4B FF F9 0D */	bl _unresolved
 /* 8045EF30 00000018  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8045EF34 0000001C  20 60 00 01 */	subfic r3, r0, 1
 /* 8045EF38 00000020  30 03 FF FF */	addic r0, r3, -1
 /* 8045EF3C 00000024  7C 00 19 10 */	subfe r0, r0, r3
 /* 8045EF40 00000028  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 8045EF44 0000002C  41 82 00 1C */	beq lbl_8045EF60
-/* 8045EF48 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8045EF4C 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8045EF48 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8045EF4C 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8045EF50 00000038  80 63 5D BC */	lwz r3, 0x5dbc(r3)
-/* 8045EF54 0000003C  4B FF F8 E5 */	bl isPlaceMessage__12dMsgObject_cFv
+/* 8045EF54 0000003C  4B FF F8 E5 */	bl _unresolved
 /* 8045EF58 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8045EF5C 00000044  40 82 00 5C */	bne lbl_8045EFB8
 lbl_8045EF60:

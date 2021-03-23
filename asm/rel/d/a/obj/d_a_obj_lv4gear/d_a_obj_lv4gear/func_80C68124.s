@@ -10,7 +10,7 @@ lbl_80C68124:
 /* 80C68144 00000020  40 82 00 1C */	bne lbl_80C68160
 /* 80C68148 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80C6814C 00000028  41 82 00 08 */	beq lbl_80C68154
-/* 80C68150 0000002C  4B FF FD A9 */	bl __ct__10fopAc_ac_cFv
+/* 80C68150 0000002C  4B FF FD A9 */	bl _unresolved
 lbl_80C68154:
 /* 80C68154 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
 /* 80C68158 00000004  60 00 00 08 */	ori r0, r0, 8
@@ -20,22 +20,22 @@ lbl_80C68160:
 /* 80C68164 00000004  54 00 C7 3E */	rlwinm r0, r0, 0x18, 0x1c, 0x1f
 /* 80C68168 00000008  98 1E 05 82 */	stb r0, 0x582(r30)
 /* 80C6816C 0000000C  38 7E 05 68 */	addi r3, r30, 0x568
-/* 80C68170 00000010  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C6852C */
-/* 80C68174 00000014  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C6852C */
+/* 80C68170 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C68174 00000014  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C68178 00000018  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C6817C 0000001C  4B FF FD 7D */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C6817C 0000001C  4B FF FD 7D */	bl _unresolved
 /* 80C68180 00000020  7C 7F 1B 78 */	mr r31, r3
 /* 80C68184 00000024  2C 1F 00 04 */	cmpwi r31, 4
 /* 80C68188 00000028  40 82 00 50 */	bne lbl_80C681D8
 /* 80C6818C 0000002C  7F C3 F3 78 */	mr r3, r30
-/* 80C68190 00000030  3C 80 00 00 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha /* 80C67F18 */
-/* 80C68194 00000034  38 84 00 00 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l /* 80C67F18 */
+/* 80C68190 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C68194 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C68198 00000038  88 1E 05 82 */	lbz r0, 0x582(r30)
 /* 80C6819C 0000003C  54 00 10 3A */	slwi r0, r0, 2
-/* 80C681A0 00000040  3C A0 00 00 */	lis r5, l_heap_size@ha /* 80C68514 */
-/* 80C681A4 00000044  38 A5 00 00 */	addi r5, r5, l_heap_size@l /* 80C68514 */
+/* 80C681A0 00000040  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C681A4 00000044  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C681A8 00000048  7C A5 00 2E */	lwzx r5, r5, r0
-/* 80C681AC 0000004C  4B FF FD 4D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80C681AC 0000004C  4B FF FD 4D */	bl _unresolved
 /* 80C681B0 00000050  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C681B4 00000054  40 82 00 0C */	bne lbl_80C681C0
 /* 80C681B8 00000058  38 60 00 05 */	li r3, 5

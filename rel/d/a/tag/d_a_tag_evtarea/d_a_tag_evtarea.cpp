@@ -11,12 +11,7 @@
 // Types:
 // 
 
-struct Vec {
-};
-
 struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct daTag_EvtArea_c {
@@ -30,24 +25,15 @@ struct daTag_EvtArea_c {
 	/* 8048CD68 */ ~daTag_EvtArea_c();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 // 
 // Forward References:
 // 
 
-static void daTag_EvtArea_Create(void*); // 2
-static void daTag_EvtArea_Delete(void*); // 2
-static void daTag_EvtArea_Execute(void*); // 2
-static void daTag_EvtArea_Draw(void*); // 2
-static void daTag_EvtArea_IsDelete(void*); // 2
+void daTag_EvtArea_Create(void*); // 2
+void daTag_EvtArea_Delete(void*); // 2
+void daTag_EvtArea_Execute(void*); // 2
+void daTag_EvtArea_Draw(void*); // 2
+void daTag_EvtArea_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_EvtArea_cFv(); // 1
 extern "C" void Delete__15daTag_EvtArea_cFv(); // 1
@@ -55,121 +41,36 @@ extern "C" void Execute__15daTag_EvtArea_cFv(); // 1
 extern "C" void Draw__15daTag_EvtArea_cFv(); // 1
 extern "C" void isDelete__15daTag_EvtArea_cFv(); // 1
 extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz(); // 1
-extern "C" static void daTag_EvtArea_Create__FPv(); // 1
-extern "C" static void daTag_EvtArea_Delete__FPv(); // 1
-extern "C" static void daTag_EvtArea_Execute__FPv(); // 1
-extern "C" static void daTag_EvtArea_Draw__FPv(); // 1
-extern "C" static void daTag_EvtArea_IsDelete__FPv(); // 1
+extern "C" void daTag_EvtArea_Create__FPv(); // 1
+extern "C" void daTag_EvtArea_Delete__FPv(); // 1
+extern "C" void daTag_EvtArea_Execute__FPv(); // 1
+extern "C" void daTag_EvtArea_Draw__FPv(); // 1
+extern "C" void daTag_EvtArea_IsDelete__FPv(); // 1
 extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz(); // 1
 extern "C" void __dt__15daTag_EvtArea_cFv(); // 1
+extern "C" extern u32 const lit_3853;
 extern "C" extern u32 const lit_3854;
 extern "C" extern u32 const lit_3855;
 extern "C" extern u32 const lit_3856;
-extern "C" extern void* g_profile_TAG_EVTAREA[12];
+extern "C" extern u8 const lit_3922[4];
+extern "C" extern u32 const lit_4146;
+extern "C" extern u8 lit_3857[96];
+extern "C" extern u8 daTag_EvtArea_MethodTable[32];
+extern "C" extern u8 g_profile_TAG_EVTAREA[48];
+extern "C" extern void* __vt__15daTag_EvtArea_c[3];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int); // 2
-void daNpcT_chkEvtBit(u32); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi(); // 1
-extern "C" void daNpcT_chkEvtBit__FUl(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 struct_80450D64[4];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 8048CDD0-8048CDD4 0004+00 r=2 e=0 z=0  None .rodata    @3853                                                        */
-SECTION_RODATA static u32 const lit_3853 = 0x42C80000;
-
-/* 8048CDE8-8048CE48 0060+00 r=1 e=0 z=0  None .data      @3857                                                        */
-SECTION_DATA static void* lit_3857[24] = {
-	/* 0    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 1    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 2    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 3    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 4    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 5    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 6    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 7    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 8    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 9    */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 10   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 11   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 12   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x88),
-	/* 13   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0xB4),
-	/* 14   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0xE0),
-	/* 15   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x10C),
-	/* 16   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
-	/* 17   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
-	/* 18   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
-	/* 19   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
-	/* 20   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x154),
-	/* 21   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x180),
-	/* 22   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x1A0),
-	/* 23   */ (void*)(((char*)create__15daTag_EvtArea_cFv)+0x1A0),
-};
-
-/* 8048CE48-8048CE68 0020+00 r=1 e=0 z=0  None .data      daTag_EvtArea_MethodTable                                    */
-SECTION_DATA static void* daTag_EvtArea_MethodTable[8] = {
-	/* 0    */ (void*)daTag_EvtArea_Create__FPv,
-	/* 1    */ (void*)daTag_EvtArea_Delete__FPv,
-	/* 2    */ (void*)daTag_EvtArea_Execute__FPv,
-	/* 3    */ (void*)daTag_EvtArea_IsDelete__FPv,
-	/* 4    */ (void*)daTag_EvtArea_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 8048CE68-8048CE98 0030+00 r=1 e=0 z=1  None .data      g_profile_TAG_EVTAREA                                        */
-SECTION_DATA void* g_profile_TAG_EVTAREA[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02E90000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x011F0000,
-	/* 9    */ (void*)&daTag_EvtArea_MethodTable,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 8048CE98-8048CEA4 000C+00 r=2 e=0 z=0  None .data      __vt__15daTag_EvtArea_c                                      */
-SECTION_DATA static void* __vt__15daTag_EvtArea_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15daTag_EvtArea_cFv,
-};
-
-/* 8048C4F8-8048C728 0230+00 r=2 e=0 z=0  None .text      create__15daTag_EvtArea_cFv                                  */
+/* 8048C4F8-8048C728 0230+00 s=1 e=0 z=0  None .text      create__15daTag_EvtArea_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +81,7 @@ asm void daTag_EvtArea_c::create() {
 #pragma pop
 
 
-/* 8048C728-8048C730 0008+00 r=1 e=0 z=0  None .text      Delete__15daTag_EvtArea_cFv                                  */
+/* 8048C728-8048C730 0008+00 s=1 e=0 z=0  None .text      Delete__15daTag_EvtArea_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +92,7 @@ asm void daTag_EvtArea_c::Delete() {
 #pragma pop
 
 
-/* 8048C730-8048C894 0164+00 r=1 e=0 z=0  None .text      Execute__15daTag_EvtArea_cFv                                 */
+/* 8048C730-8048C894 0164+00 s=1 e=0 z=0  None .text      Execute__15daTag_EvtArea_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +103,7 @@ asm void daTag_EvtArea_c::Execute() {
 #pragma pop
 
 
-/* 8048C894-8048C89C 0008+00 r=1 e=0 z=0  None .text      Draw__15daTag_EvtArea_cFv                                    */
+/* 8048C894-8048C89C 0008+00 s=1 e=0 z=0  None .text      Draw__15daTag_EvtArea_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +114,7 @@ asm void daTag_EvtArea_c::Draw() {
 #pragma pop
 
 
-/* 8048C89C-8048C94C 00B0+00 r=2 e=0 z=0  None .text      isDelete__15daTag_EvtArea_cFv                                */
+/* 8048C89C-8048C94C 00B0+00 s=2 e=0 z=0  None .text      isDelete__15daTag_EvtArea_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,25 +125,7 @@ asm void daTag_EvtArea_c::isDelete() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8048CDD4-8048CDD8 0004+00 r=0 e=0 z=0  None .rodata    @3854                                                        */
-SECTION_RODATA u32 const lit_3854 = 0x43480000;
-
-/* 8048CDD8-8048CDDC 0004+00 r=0 e=0 z=0  None .rodata    @3855                                                        */
-SECTION_RODATA u32 const lit_3855 = 0x3F000000;
-
-/* 8048CDDC-8048CDE0 0004+00 r=0 e=0 z=0  None .rodata    @3856                                                        */
-SECTION_RODATA u32 const lit_3856 = 0x447A0000;
-
-/* 8048CDE0-8048CDE4 0004+00 r=1 e=0 z=0  None .rodata    @3922                                                        */
-SECTION_RODATA static u8 const lit_3922[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8048CDE4-8048CDE8 0004+00 r=1 e=0 z=0  None .rodata    @4146                                                        */
-SECTION_RODATA static u32 const lit_4146 = 0x41200000;
-
-/* 8048C94C-8048CC80 0334+00 r=17 e=0 z=16  None .text      chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz                 */
+/* 8048C94C-8048CC80 0334+00 s=1 e=0 z=0  None .text      chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,62 +136,62 @@ asm void daTag_EvtArea_c::chkPointInArea(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 8048CC80-8048CCA0 0020+00 r=1 e=0 z=0  None .text      daTag_EvtArea_Create__FPv                                    */
+/* 8048CC80-8048CCA0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_EvtArea_Create(void* param_0) {
+asm void daTag_EvtArea_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCA0-8048CCC0 0020+00 r=1 e=0 z=0  None .text      daTag_EvtArea_Delete__FPv                                    */
+/* 8048CCA0-8048CCC0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_EvtArea_Delete(void* param_0) {
+asm void daTag_EvtArea_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCC0-8048CCE0 0020+00 r=1 e=0 z=0  None .text      daTag_EvtArea_Execute__FPv                                   */
+/* 8048CCC0-8048CCE0 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_EvtArea_Execute(void* param_0) {
+asm void daTag_EvtArea_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CCE0-8048CD00 0020+00 r=1 e=0 z=0  None .text      daTag_EvtArea_Draw__FPv                                      */
+/* 8048CCE0-8048CD00 0020+00 s=0 e=0 z=0  None .text      daTag_EvtArea_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_EvtArea_Draw(void* param_0) {
+asm void daTag_EvtArea_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CD00-8048CD08 0008+00 r=1 e=0 z=0  None .text      daTag_EvtArea_IsDelete__FPv                                  */
+/* 8048CD00-8048CD08 0008+00 s=0 e=0 z=0  None .text      daTag_EvtArea_IsDelete__FPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_EvtArea_IsDelete(void* param_0) {
+asm void daTag_EvtArea_IsDelete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_evtarea/d_a_tag_evtarea/daTag_EvtArea_IsDelete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048CD08-8048CD68 0060+00 r=1 e=0 z=0  None .text      chkPointInArea__15daTag_EvtArea_cF4cXyz                      */
+/* 8048CD08-8048CD68 0060+00 s=1 e=0 z=0  None .text      chkPointInArea__15daTag_EvtArea_cF4cXyz                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,7 +202,7 @@ asm void daTag_EvtArea_c::chkPointInArea(cXyz param_0) {
 #pragma pop
 
 
-/* 8048CD68-8048CDC8 0060+00 r=1 e=0 z=0  None .text      __dt__15daTag_EvtArea_cFv                                    */
+/* 8048CD68-8048CDC8 0060+00 s=0 e=0 z=0  None .text      __dt__15daTag_EvtArea_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,4 +212,55 @@ asm daTag_EvtArea_c::~daTag_EvtArea_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8048CDD0-8048CDD4 0004+00 s=0 e=0 z=0  None .rodata    @3853                                                        */
+SECTION_RODATA u32 const lit_3853 = 0x42C80000;
+
+/* 8048CDD4-8048CDD8 0004+00 s=0 e=0 z=0  None .rodata    @3854                                                        */
+SECTION_RODATA u32 const lit_3854 = 0x43480000;
+
+/* 8048CDD8-8048CDDC 0004+00 s=0 e=0 z=0  None .rodata    @3855                                                        */
+SECTION_RODATA u32 const lit_3855 = 0x3F000000;
+
+/* 8048CDDC-8048CDE0 0004+00 s=0 e=0 z=0  None .rodata    @3856                                                        */
+SECTION_RODATA u32 const lit_3856 = 0x447A0000;
+
+/* 8048CDE0-8048CDE4 0004+00 s=0 e=0 z=0  None .rodata    @3922                                                        */
+SECTION_RODATA u8 const lit_3922[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048CDE4-8048CDE8 0004+00 s=0 e=0 z=0  None .rodata    @4146                                                        */
+SECTION_RODATA u32 const lit_4146 = 0x41200000;
+
+/* 8048CDE8-8048CE48 0060+00 s=0 e=0 z=0  None .data      @3857                                                        */
+SECTION_DATA u8 lit_3857[96] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048CE48-8048CE68 0020+00 s=0 e=0 z=0  None .data      daTag_EvtArea_MethodTable                                    */
+SECTION_DATA u8 daTag_EvtArea_MethodTable[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048CE68-8048CE98 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_EVTAREA                                        */
+SECTION_DATA u8 g_profile_TAG_EVTAREA[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x08, 0xFF, 0xFD, 0x02, 0xE9, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x1F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 8048CE98-8048CEA4 000C+00 s=0 e=0 z=0  None .data      __vt__15daTag_EvtArea_c                                      */
+SECTION_DATA void* __vt__15daTag_EvtArea_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
 

@@ -34,62 +34,16 @@ struct dBgS_ObjAcch {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct daItemBase_c {
-	/* 8014474C */ void clothCreate();
-	/* 80144754 */ void __CreateHeap();
-	/* 80144B94 */ void DrawBase();
-	/* 80144C30 */ void RotateYBase();
-	/* 80144C7C */ void setListStart();
-	/* 80144CC4 */ void settingBeforeDraw();
-	/* 80144D18 */ void setTevStr();
-	/* 80144D70 */ void setShadow();
-	/* 80144EDC */ void animEntry();
-	/* 80145144 */ void chkFlag(int);
-	/* 80145164 */ void getTevFrm();
-	/* 80145180 */ void getBtpFrm();
-	/* 8014519C */ void getShadowSize();
-	/* 801451B4 */ void getCollisionH();
-	/* 801451D0 */ void getCollisionR();
 };
 
 // 
 // Forward References:
 // 
 
-static void daObjZCloth_Draw(daObjZCloth_c*); // 2
-static void daObjZCloth_Execute(daObjZCloth_c*); // 2
-static void daObjZCloth_Delete(daObjZCloth_c*); // 2
-static void daObjZCloth_Create(fopAc_ac_c*); // 2
+void daObjZCloth_Draw(daObjZCloth_c*); // 2
+void daObjZCloth_Execute(daObjZCloth_c*); // 2
+void daObjZCloth_Delete(daObjZCloth_c*); // 2
+void daObjZCloth_Create(fopAc_ac_c*); // 2
 
 extern "C" void initBaseMtx__13daObjZCloth_cFv(); // 1
 extern "C" void setBaseMtx__13daObjZCloth_cFv(); // 1
@@ -101,76 +55,31 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void execute__13daObjZCloth_cFv(); // 1
 extern "C" void draw__13daObjZCloth_cFv(); // 1
 extern "C" void _delete__13daObjZCloth_cFv(); // 1
-extern "C" static void daObjZCloth_Draw__FP13daObjZCloth_c(); // 1
-extern "C" static void daObjZCloth_Execute__FP13daObjZCloth_c(); // 1
-extern "C" static void daObjZCloth_Delete__FP13daObjZCloth_c(); // 1
-extern "C" static void daObjZCloth_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80D3F2BC(); // 1
-extern "C" static void func_80D3F2C4(); // 1
-extern "C" extern void* g_profile_Obj_ZoraCloth[12];
+extern "C" void daObjZCloth_Draw__FP13daObjZCloth_c(); // 1
+extern "C" void daObjZCloth_Execute__FP13daObjZCloth_c(); // 1
+extern "C" void daObjZCloth_Delete__FP13daObjZCloth_c(); // 1
+extern "C" void daObjZCloth_Create__FP10fopAc_ac_c(); // 1
+extern "C" void func_80D3F2BC(); // 1
+extern "C" void func_80D3F2C4(); // 1
+extern "C" extern u8 l_daObjZCloth_Method[32];
+extern "C" extern u8 g_profile_Obj_ZoraCloth[48];
+extern "C" extern void* __vt__13daObjZCloth_c[17];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__12dBgS_ObjAcch[9];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void CheckFieldItemCreateHeap(fopAc_ac_c*); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
-extern "C" void __CreateHeap__12daItemBase_cFv(); // 1
-extern "C" void DrawBase__12daItemBase_cFv(); // 1
-extern "C" void RotateYBase__12daItemBase_cFv(); // 1
-extern "C" void setListStart__12daItemBase_cFv(); // 1
-extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
-extern "C" void setTevStr__12daItemBase_cFv(); // 1
-extern "C" void setShadow__12daItemBase_cFv(); // 1
-extern "C" void animEntry__12daItemBase_cFv(); // 1
-extern "C" void chkFlag__12daItemBase_cFi(); // 1
-extern "C" void getTevFrm__12daItemBase_cFv(); // 1
-extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
-extern "C" void getShadowSize__12daItemBase_cFv(); // 1
-extern "C" void getCollisionH__12daItemBase_cFv(); // 1
-extern "C" void getCollisionR__12daItemBase_cFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* field_item_res__10dItem_data[1020];
-extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
-extern "C" extern void* __vt__12cCcD_CylAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 80D3EE18-80D3EE54 003C+00 r=1 e=0 z=0  None .text      initBaseMtx__13daObjZCloth_cFv                               */
+/* 80D3EE18-80D3EE54 003C+00 s=1 e=0 z=0  None .text      initBaseMtx__13daObjZCloth_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +90,7 @@ asm void daObjZCloth_c::initBaseMtx() {
 #pragma pop
 
 
-/* 80D3EE54-80D3EEC0 006C+00 r=2 e=0 z=0  None .text      setBaseMtx__13daObjZCloth_cFv                                */
+/* 80D3EE54-80D3EEC0 006C+00 s=2 e=0 z=0  None .text      setBaseMtx__13daObjZCloth_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +101,7 @@ asm void daObjZCloth_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80D3EEC0-80D3EF0C 004C+00 r=1 e=0 z=0  None .text      Create__13daObjZCloth_cFv                                    */
+/* 80D3EEC0-80D3EF0C 004C+00 s=1 e=0 z=0  None .text      Create__13daObjZCloth_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,84 +112,7 @@ asm void daObjZCloth_c::Create() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80D3F2D4-80D3F2F4 0020+00 r=1 e=0 z=0  None .data      l_daObjZCloth_Method                                         */
-SECTION_DATA static void* l_daObjZCloth_Method[8] = {
-	/* 0    */ (void*)daObjZCloth_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjZCloth_Delete__FP13daObjZCloth_c,
-	/* 2    */ (void*)daObjZCloth_Execute__FP13daObjZCloth_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjZCloth_Draw__FP13daObjZCloth_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80D3F2F4-80D3F324 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_ZoraCloth                                      */
-SECTION_DATA void* g_profile_Obj_ZoraCloth[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01780000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000092C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02200000,
-	/* 9    */ (void*)&l_daObjZCloth_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80D3F324-80D3F368 0044+00 r=1 e=0 z=0  None .data      __vt__13daObjZCloth_c                                        */
-SECTION_DATA static void* __vt__13daObjZCloth_c[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)DrawBase__12daItemBase_cFv,
-	/* 3    */ (void*)setListStart__12daItemBase_cFv,
-	/* 4    */ (void*)settingBeforeDraw__12daItemBase_cFv,
-	/* 5    */ (void*)setTevStr__12daItemBase_cFv,
-	/* 6    */ (void*)setShadow__12daItemBase_cFv,
-	/* 7    */ (void*)animEntry__12daItemBase_cFv,
-	/* 8    */ (void*)RotateYBase__12daItemBase_cFv,
-	/* 9    */ (void*)clothCreate__12daItemBase_cFv,
-	/* 10   */ (void*)__CreateHeap__12daItemBase_cFv,
-	/* 11   */ (void*)chkFlag__12daItemBase_cFi,
-	/* 12   */ (void*)getTevFrm__12daItemBase_cFv,
-	/* 13   */ (void*)getBtpFrm__12daItemBase_cFv,
-	/* 14   */ (void*)getShadowSize__12daItemBase_cFv,
-	/* 15   */ (void*)getCollisionH__12daItemBase_cFv,
-	/* 16   */ (void*)getCollisionR__12daItemBase_cFv,
-};
-
-/* 80D3F368-80D3F374 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80D3F374-80D3F380 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80D3F380-80D3F3A4 0024+00 r=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80D3F2C4,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80D3F2BC,
-};
-
-/* 80D3EF0C-80D3F0AC 01A0+00 r=1 e=0 z=0  None .text      create__13daObjZCloth_cFv                                    */
+/* 80D3EF0C-80D3F0AC 01A0+00 s=1 e=0 z=0  None .text      create__13daObjZCloth_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +123,7 @@ asm void daObjZCloth_c::create() {
 #pragma pop
 
 
-/* 80D3F0AC-80D3F0F4 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80D3F0AC-80D3F0F4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +134,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80D3F0F4-80D3F13C 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D3F0F4-80D3F13C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +145,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D3F13C-80D3F1AC 0070+00 r=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80D3F13C-80D3F1AC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +156,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80D3F1AC-80D3F1D0 0024+00 r=1 e=0 z=0  None .text      execute__13daObjZCloth_cFv                                   */
+/* 80D3F1AC-80D3F1D0 0024+00 s=1 e=0 z=0  None .text      execute__13daObjZCloth_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +167,7 @@ asm void daObjZCloth_c::execute() {
 #pragma pop
 
 
-/* 80D3F1D0-80D3F200 0030+00 r=1 e=0 z=0  None .text      draw__13daObjZCloth_cFv                                      */
+/* 80D3F1D0-80D3F200 0030+00 s=1 e=0 z=0  None .text      draw__13daObjZCloth_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +178,7 @@ asm void daObjZCloth_c::draw() {
 #pragma pop
 
 
-/* 80D3F200-80D3F23C 003C+00 r=1 e=0 z=0  None .text      _delete__13daObjZCloth_cFv                                   */
+/* 80D3F200-80D3F23C 003C+00 s=1 e=0 z=0  None .text      _delete__13daObjZCloth_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,69 +189,131 @@ asm void daObjZCloth_c::_delete() {
 #pragma pop
 
 
-/* 80D3F23C-80D3F25C 0020+00 r=1 e=0 z=0  None .text      daObjZCloth_Draw__FP13daObjZCloth_c                          */
+/* 80D3F23C-80D3F25C 0020+00 s=0 e=0 z=0  None .text      daObjZCloth_Draw__FP13daObjZCloth_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZCloth_Draw(daObjZCloth_c* param_0) {
+asm void daObjZCloth_Draw(daObjZCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Draw__FP13daObjZCloth_c.s"
 }
 #pragma pop
 
 
-/* 80D3F25C-80D3F27C 0020+00 r=1 e=0 z=0  None .text      daObjZCloth_Execute__FP13daObjZCloth_c                       */
+/* 80D3F25C-80D3F27C 0020+00 s=0 e=0 z=0  None .text      daObjZCloth_Execute__FP13daObjZCloth_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZCloth_Execute(daObjZCloth_c* param_0) {
+asm void daObjZCloth_Execute(daObjZCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Execute__FP13daObjZCloth_c.s"
 }
 #pragma pop
 
 
-/* 80D3F27C-80D3F29C 0020+00 r=1 e=0 z=0  None .text      daObjZCloth_Delete__FP13daObjZCloth_c                        */
+/* 80D3F27C-80D3F29C 0020+00 s=0 e=0 z=0  None .text      daObjZCloth_Delete__FP13daObjZCloth_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZCloth_Delete(daObjZCloth_c* param_0) {
+asm void daObjZCloth_Delete(daObjZCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Delete__FP13daObjZCloth_c.s"
 }
 #pragma pop
 
 
-/* 80D3F29C-80D3F2BC 0020+00 r=1 e=0 z=0  None .text      daObjZCloth_Create__FP10fopAc_ac_c                           */
+/* 80D3F29C-80D3F2BC 0020+00 s=0 e=0 z=0  None .text      daObjZCloth_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZCloth_Create(fopAc_ac_c* param_0) {
+asm void daObjZCloth_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/daObjZCloth_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D3F2BC-80D3F2C4 0008+00 r=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D3F2BC-80D3F2C4 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80D3F2BC() {
+extern "C" asm void func_80D3F2BC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3F2BC.s"
 }
 #pragma pop
 
 
-/* 80D3F2C4-80D3F2CC 0008+00 r=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D3F2C4-80D3F2CC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80D3F2C4() {
+extern "C" asm void func_80D3F2C4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zcloth/d_a_obj_zcloth/func_80D3F2C4.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D3F2D4-80D3F2F4 0020+00 s=0 e=0 z=0  None .data      l_daObjZCloth_Method                                         */
+SECTION_DATA u8 l_daObjZCloth_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D3F2F4-80D3F324 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_ZoraCloth                                      */
+SECTION_DATA u8 g_profile_Obj_ZoraCloth[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x78, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x09, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80D3F324-80D3F368 0044+00 s=0 e=0 z=0  None .data      __vt__13daObjZCloth_c                                        */
+SECTION_DATA void* __vt__13daObjZCloth_c[17] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)NULL,
+	/* 15   */ (void*)NULL,
+	/* 16   */ (void*)NULL,
+};
+
+/* 80D3F368-80D3F374 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80D3F374-80D3F380 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80D3F380-80D3F3A4 0024+00 s=0 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA void* __vt__12dBgS_ObjAcch[9] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+};
 

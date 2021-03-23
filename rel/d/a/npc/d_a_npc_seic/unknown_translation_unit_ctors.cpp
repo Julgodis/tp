@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80AC9208[2];
+extern u8 data_80AC9208[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_seic_cpp(); // 1
 
 // 
 // Declarations:

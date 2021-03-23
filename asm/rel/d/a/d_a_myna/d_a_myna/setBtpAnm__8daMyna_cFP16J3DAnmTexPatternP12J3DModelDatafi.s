@@ -10,7 +10,7 @@ lbl_809498B8:
 /* 809498D8 00000020  39 00 00 00 */	li r8, 0
 /* 809498DC 00000024  39 20 FF FF */	li r9, -1
 /* 809498E0 00000028  38 63 05 78 */	addi r3, r3, 0x578
-/* 809498E4 0000002C  4B FF C2 F5 */	bl init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss
+/* 809498E4 0000002C  4B FF C2 F5 */	bl _unresolved
 /* 809498E8 00000030  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 809498EC 00000034  7C 08 03 A6 */	mtlr r0
 /* 809498F0 00000038  38 21 00 10 */	addi r1, r1, 0x10

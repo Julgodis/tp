@@ -81,13 +81,13 @@ extern "C" extern u8 struct_80451500[4];
 // 
 
 /* ############################################################################################## */
-/* 803DD2D8-803DD2E8 0010+00 r=8 e=6 z=0  None .bss       m_gamePad__8mDoCPd_c                                         */
+/* 803DD2D8-803DD2E8 0010+00 s=2 e=6 z=0  None .bss       m_gamePad__8mDoCPd_c                                         */
 u8 m_gamePad__8mDoCPd_c[16];
 
-/* 803DD2E8-803DD3E8 0100+00 r=123 e=84 z=37  None .bss       m_cpadInfo__8mDoCPd_c                                        */
+/* 803DD2E8-803DD3E8 0100+00 s=2 e=84 z=0  None .bss       m_cpadInfo__8mDoCPd_c                                        */
 u8 m_cpadInfo__8mDoCPd_c[256];
 
-/* 80007954-80007A94 0140+00 r=1 e=1 z=0  None .text      create__8mDoCPd_cFv                                          */
+/* 80007954-80007A94 0140+00 s=0 e=1 z=0  None .text      create__8mDoCPd_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void mDoCPd_c::create() {
 #pragma pop
 
 
-/* 80007A94-80007B7C 00E8+00 r=1 e=1 z=0  None .text      read__8mDoCPd_cFv                                            */
+/* 80007A94-80007B7C 00E8+00 s=0 e=1 z=0  None .text      read__8mDoCPd_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,23 +110,23 @@ asm void mDoCPd_c::read() {
 
 
 /* ############################################################################################## */
-/* 80451A20-80451A24 0004+00 r=1 e=0 z=0  None .sdata2    @3709                                                        */
+/* 80451A20-80451A24 0004+00 s=1 e=0 z=0  None .sdata2    @3709                                                        */
 SECTION_SDATA2 static f32 lit_3709 = 1.0f / 15.0f;
 
-/* 80451A24-80451A28 0004+00 r=1 e=0 z=0  None .sdata2    @3710                                                        */
+/* 80451A24-80451A28 0004+00 s=1 e=0 z=0  None .sdata2    @3710                                                        */
 SECTION_SDATA2 static f32 lit_3710 = 1.0f;
 
-/* 80451A28-80451A30 0004+04 r=1 e=0 z=0  None .sdata2    @3711                                                        */
+/* 80451A28-80451A30 0004+04 s=1 e=0 z=0  None .sdata2    @3711                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_controller_pad__lit_3711[1 + 1 /* padding */] = {
 	0.0071428571827709675f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451A30-80451A38 0008+00 r=1 e=0 z=0  None .sdata2    @3713                                                        */
+/* 80451A30-80451A38 0008+00 s=1 e=0 z=0  None .sdata2    @3713                                                        */
 SECTION_SDATA2 static f64 m_Do_m_Do_controller_pad__lit_3713 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80007B7C-80007CD0 0154+00 r=1 e=0 z=0  None .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
+/* 80007B7C-80007CD0 0154+00 s=1 e=0 z=0  None .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm void mDoCPd_c::convert(interface_of_controller_pad* param_0, JUTGamePad* par
 #pragma pop
 
 
-/* 80007CD0-80007D74 00A4+00 r=1 e=0 z=0  None .text      LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad        */
+/* 80007CD0-80007D74 00A4+00 s=1 e=0 z=0  None .text      LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm void mDoCPd_c::LRlockCheck(interface_of_controller_pad* param_0) {
 #pragma pop
 
 
-/* 80007D74-80007D9C 0028+00 r=1 e=1 z=0  None .text      recalibrate__8mDoCPd_cFv                                     */
+/* 80007D74-80007D9C 0028+00 s=0 e=1 z=0  None .text      recalibrate__8mDoCPd_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

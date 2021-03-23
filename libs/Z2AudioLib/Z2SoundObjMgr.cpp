@@ -106,7 +106,7 @@ extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 802BF920-802BF980 0060+00 r=1 e=1 z=0  None .text      __ct__13Z2SoundObjMgrFv                                      */
+/* 802BF920-802BF980 0060+00 s=0 e=1 z=0  None .text      __ct__13Z2SoundObjMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ asm Z2SoundObjMgr::Z2SoundObjMgr() {
 #pragma pop
 
 
-/* 802BF980-802BF994 0014+00 r=7 e=3 z=3  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
+/* 802BF980-802BF994 0014+00 s=1 e=3 z=0  None .text      setForceBattleArea__13Z2SoundObjMgrFbUsUsUs                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,14 +129,14 @@ asm void Z2SoundObjMgr::setForceBattleArea(bool param_0, u16 param_1, u16 param_
 
 
 /* ############################################################################################## */
-/* 8039C240-8039C250 000C+04 r=1 e=0 z=0  None .rodata    @3380                                                        */
+/* 8039C240-8039C250 000C+04 s=1 e=0 z=0  None .rodata    @3380                                                        */
 SECTION_RODATA static u8 const lit_3380[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CAD70-803CB170 0400+00 r=3 e=0 z=0  None .data      mEnemyInfo                                                   */
+/* 803CAD70-803CB170 0400+00 s=3 e=0 z=0  None .data      mEnemyInfo                                                   */
 SECTION_DATA static u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
 	0x44, 0x75, 0x6D, 0x6D, 0x79, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x45, 0x5F, 0x73, 0x31, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0xBC, 0x04, 0xB0, 0x07, 0xD0,
@@ -204,7 +204,7 @@ SECTION_DATA static u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
 	0x42, 0x5F, 0x74, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CB170-803CB230 00C0+00 r=1 e=0 z=0  None .data      @3704                                                        */
+/* 803CB170-803CB230 00C0+00 s=1 e=0 z=0  None .data      @3704                                                        */
 SECTION_DATA static void* Z2SoundObjMgr__lit_3704[48] = {
 	/* 0    */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
 	/* 1    */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
@@ -256,72 +256,72 @@ SECTION_DATA static void* Z2SoundObjMgr__lit_3704[48] = {
 	/* 47   */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1D0),
 };
 
-/* 80455B80-80455B84 0004+00 r=1 e=0 z=0  None .sdata2    sAreaDefault                                                 */
+/* 80455B80-80455B84 0004+00 s=1 e=0 z=0  None .sdata2    sAreaDefault                                                 */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaDefault = 0x010002BC;
 
-/* 80455B84-80455B88 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455B84-80455B88 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B84 = 0x044C05DC;
 
-/* 80455B88-80455B8C 0004+00 r=1 e=0 z=0  None .sdata2    sAreaFloating                                                */
+/* 80455B88-80455B8C 0004+00 s=1 e=0 z=0  None .sdata2    sAreaFloating                                                */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaFloating = 0x000002BC;
 
-/* 80455B8C-80455B90 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455B8C-80455B90 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B8C = 0x044C05DC;
 
-/* 80455B90-80455B94 0004+00 r=1 e=0 z=0  None .sdata2    sAreaWide                                                    */
+/* 80455B90-80455B94 0004+00 s=1 e=0 z=0  None .sdata2    sAreaWide                                                    */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaWide = 0x010002BC;
 
-/* 80455B94-80455B98 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455B94-80455B98 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B94 = 0x05DC0CE4;
 
-/* 80455B98-80455B9C 0004+00 r=1 e=0 z=0  None .sdata2    sAreaWideFloating                                            */
+/* 80455B98-80455B9C 0004+00 s=1 e=0 z=0  None .sdata2    sAreaWideFloating                                            */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaWideFloating = 0x000002BC;
 
-/* 80455B9C-80455BA0 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455B9C-80455BA0 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B9C = 0x05DC0CE4;
 
-/* 80455BA0-80455BA4 0004+00 r=1 e=0 z=0  None .sdata2    sAreaSmall                                                   */
+/* 80455BA0-80455BA4 0004+00 s=1 e=0 z=0  None .sdata2    sAreaSmall                                                   */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaSmall = 0x0100012C;
 
-/* 80455BA4-80455BA8 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455BA4-80455BA8 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455BA4 = 0x02BC03E8;
 
-/* 80455BA8-80455BAC 0004+00 r=1 e=0 z=0  None .sdata2    sAreaSmallFloating                                           */
+/* 80455BA8-80455BAC 0004+00 s=1 e=0 z=0  None .sdata2    sAreaSmallFloating                                           */
 SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaSmallFloating = 0x000001F4;
 
-/* 80455BAC-80455BB0 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80455BAC-80455BB0 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455BAC = 0x032004B0;
 
-/* 80455BB0-80455BB4 0004+00 r=1 e=0 z=0  None .sdata2    @3694                                                        */
+/* 80455BB0-80455BB4 0004+00 s=1 e=0 z=0  None .sdata2    @3694                                                        */
 SECTION_SDATA2 static u8 Z2SoundObjMgr__lit_3694[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455BB4-80455BB8 0004+00 r=1 e=0 z=0  None .sdata2    @3695                                                        */
+/* 80455BB4-80455BB8 0004+00 s=1 e=0 z=0  None .sdata2    @3695                                                        */
 SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3695 = 100.0f;
 
-/* 80455BB8-80455BBC 0004+00 r=1 e=0 z=0  None .sdata2    @3696                                                        */
+/* 80455BB8-80455BBC 0004+00 s=1 e=0 z=0  None .sdata2    @3696                                                        */
 SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3696 = 3.0f / 10.0f;
 
-/* 80455BBC-80455BC0 0004+00 r=1 e=0 z=0  None .sdata2    @3697                                                        */
+/* 80455BBC-80455BC0 0004+00 s=1 e=0 z=0  None .sdata2    @3697                                                        */
 SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3697 = 1.0f;
 
-/* 80455BC0-80455BC4 0004+00 r=1 e=0 z=0  None .sdata2    @3698                                                        */
+/* 80455BC0-80455BC4 0004+00 s=1 e=0 z=0  None .sdata2    @3698                                                        */
 SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3698 = 2.5f;
 
-/* 80455BC4-80455BC8 0004+00 r=1 e=0 z=0  None .sdata2    @3699                                                        */
+/* 80455BC4-80455BC8 0004+00 s=1 e=0 z=0  None .sdata2    @3699                                                        */
 SECTION_SDATA2 static f32 lit_3699 = 5000.0f;
 
-/* 80455BC8-80455BCC 0004+00 r=1 e=0 z=0  None .sdata2    @3700                                                        */
+/* 80455BC8-80455BCC 0004+00 s=1 e=0 z=0  None .sdata2    @3700                                                        */
 SECTION_SDATA2 static f32 lit_3700 = 2.0f;
 
-/* 80455BCC-80455BD0 0004+00 r=1 e=0 z=0  None .sdata2    @3701                                                        */
+/* 80455BCC-80455BD0 0004+00 s=1 e=0 z=0  None .sdata2    @3701                                                        */
 SECTION_SDATA2 static f32 lit_3701 = 4.0f;
 
-/* 80455BD0-80455BD8 0008+00 r=1 e=0 z=0  None .sdata2    @3703                                                        */
+/* 80455BD0-80455BD8 0008+00 s=1 e=0 z=0  None .sdata2    @3703                                                        */
 SECTION_SDATA2 static f64 Z2SoundObjMgr__lit_3703 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802BF994-802BFFEC 0658+00 r=2 e=1 z=0  None .text      searchEnemy__13Z2SoundObjMgrFv                               */
+/* 802BF994-802BFFEC 0658+00 s=1 e=1 z=0  None .text      searchEnemy__13Z2SoundObjMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +332,7 @@ asm void Z2SoundObjMgr::searchEnemy() {
 #pragma pop
 
 
-/* 802BFFEC-802C0074 0088+00 r=3 e=2 z=0  None .text      setGhostEnemyState__13Z2SoundObjMgrFUc                       */
+/* 802BFFEC-802C0074 0088+00 s=1 e=2 z=0  None .text      setGhostEnemyState__13Z2SoundObjMgrFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +343,7 @@ asm void Z2SoundObjMgr::setGhostEnemyState(u8 param_0) {
 #pragma pop
 
 
-/* 802C0074-802C0100 008C+00 r=1 e=1 z=0  None .text      getEnemyID__13Z2SoundObjMgrFPCcP26JSULink<15Z2CreatureEnemy> */
+/* 802C0074-802C0100 008C+00 s=0 e=1 z=0  None .text      getEnemyID__13Z2SoundObjMgrFPCcP26JSULink<15Z2CreatureEnemy> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +354,7 @@ asm void Z2SoundObjMgr::getEnemyID(char const* param_0, JSULink<Z2CreatureEnemy>
 #pragma pop
 
 
-/* 802C0100-802C0120 0020+00 r=2 e=1 z=0  None .text      setBattleInit__13Z2SoundObjMgrFv                             */
+/* 802C0100-802C0120 0020+00 s=1 e=1 z=0  None .text      setBattleInit__13Z2SoundObjMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +365,7 @@ asm void Z2SoundObjMgr::setBattleInit() {
 #pragma pop
 
 
-/* 802C0120-802C013C 001C+00 r=1 e=1 z=0  None .text      checkBattleFinish__13Z2SoundObjMgrFv                         */
+/* 802C0120-802C013C 001C+00 s=0 e=1 z=0  None .text      checkBattleFinish__13Z2SoundObjMgrFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +376,7 @@ asm void Z2SoundObjMgr::checkBattleFinish() {
 #pragma pop
 
 
-/* 802C013C-802C0190 0054+00 r=1 e=1 z=0  None .text      deleteEnemyAll__13Z2SoundObjMgrFv                            */
+/* 802C013C-802C0190 0054+00 s=0 e=1 z=0  None .text      deleteEnemyAll__13Z2SoundObjMgrFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +387,7 @@ asm void Z2SoundObjMgr::deleteEnemyAll() {
 #pragma pop
 
 
-/* 802C0190-802C01E4 0054+00 r=2 e=2 z=0  None .text      removeEnemy__13Z2SoundObjMgrFP26JSULink<15Z2CreatureEnemy>   */
+/* 802C0190-802C01E4 0054+00 s=0 e=2 z=0  None .text      removeEnemy__13Z2SoundObjMgrFP26JSULink<15Z2CreatureEnemy>   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,7 +398,7 @@ asm void Z2SoundObjMgr::removeEnemy(JSULink<Z2CreatureEnemy>* param_0) {
 #pragma pop
 
 
-/* 802C01E4-802C01EC 0008+00 r=4 e=4 z=0  None .text      isTwilightBattle__13Z2SoundObjMgrFv                          */
+/* 802C01E4-802C01EC 0008+00 s=0 e=4 z=0  None .text      isTwilightBattle__13Z2SoundObjMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,7 +409,7 @@ asm void Z2SoundObjMgr::isTwilightBattle() {
 #pragma pop
 
 
-/* 802C01EC-802C03C8 01DC+00 r=1 e=1 z=0  None .text      __sinit_Z2SoundObjMgr_cpp                                    */
+/* 802C01EC-802C03C8 01DC+00 s=0 e=1 z=0  None .text      __sinit_Z2SoundObjMgr_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

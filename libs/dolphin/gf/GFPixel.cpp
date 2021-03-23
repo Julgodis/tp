@@ -55,38 +55,38 @@ extern "C" void _restgpr_28(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80455F68-80455F6C 0004+00 r=1 e=0 z=0  None .sdata2    @293                                                         */
+/* 80455F68-80455F6C 0004+00 s=1 e=0 z=0  None .sdata2    @293                                                         */
 SECTION_SDATA2 static u8 GFPixel__lit_293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455F6C-80455F70 0004+00 r=1 e=0 z=0  None .sdata2    @294                                                         */
+/* 80455F6C-80455F70 0004+00 s=1 e=0 z=0  None .sdata2    @294                                                         */
 SECTION_SDATA2 static f32 GFPixel__lit_294 = 0.5f;
 
-/* 80455F70-80455F78 0008+00 r=1 e=0 z=0  None .sdata2    @295                                                         */
+/* 80455F70-80455F78 0008+00 s=1 e=0 z=0  None .sdata2    @295                                                         */
 SECTION_SDATA2 static f64 lit_295 = 1.0;
 
-/* 80455F78-80455F80 0004+04 r=1 e=0 z=0  None .sdata2    @296                                                         */
+/* 80455F78-80455F80 0004+04 s=1 e=0 z=0  None .sdata2    @296                                                         */
 SECTION_SDATA2 static f32 lit_296[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455F80-80455F88 0008+00 r=1 e=0 z=0  None .sdata2    @297                                                         */
+/* 80455F80-80455F88 0008+00 s=1 e=0 z=0  None .sdata2    @297                                                         */
 SECTION_SDATA2 static f64 GFPixel__lit_297 = 0.5;
 
-/* 80455F88-80455F90 0004+04 r=1 e=0 z=0  None .sdata2    @298                                                         */
+/* 80455F88-80455F90 0004+04 s=1 e=0 z=0  None .sdata2    @298                                                         */
 SECTION_SDATA2 static f32 lit_298[1 + 1 /* padding */] = {
 	8388638.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455F90-80455F98 0008+00 r=1 e=0 z=0  None .sdata2    @301                                                         */
+/* 80455F90-80455F98 0008+00 s=1 e=0 z=0  None .sdata2    @301                                                         */
 SECTION_SDATA2 static f64 GFPixel__lit_301 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802CDE9C-802CE004 0168+00 r=1 e=1 z=0  None .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
+/* 802CDE9C-802CE004 0168+00 s=0 e=1 z=0  None .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ asm void GFSetFog(_GXFogType param_0, f32 param_1, f32 param_2, f32 param_3, f32
 #pragma pop
 
 
-/* 802CE004-802CE0A4 00A0+00 r=1 e=1 z=0  None .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
+/* 802CE004-802CE0A4 00A0+00 s=0 e=1 z=0  None .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm void GFSetBlendModeEtc(_GXBlendMode param_0, _GXBlendFactor param_1, _GXBlen
 #pragma pop
 
 
-/* 802CE0A4-802CE0D0 002C+00 r=1 e=1 z=0  None .text      GFSetZMode__FUc10_GXCompareUc                                */
+/* 802CE0A4-802CE0D0 002C+00 s=0 e=1 z=0  None .text      GFSetZMode__FUc10_GXCompareUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

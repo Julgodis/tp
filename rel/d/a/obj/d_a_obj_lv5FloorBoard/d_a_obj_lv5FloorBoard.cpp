@@ -38,13 +38,7 @@ struct daFlorBoad_c {
 	/* 80C6AF54 */ void Delete();
 };
 
-struct cXyz {
-};
-
 struct cM3dGCyl {
-	/* 8026F1DC */ void SetC(cXyz const&);
-	/* 8026F1F8 */ void SetH(f32);
-	/* 8026F200 */ void SetR(f32);
 	/* 80C6A9C0 */ ~cM3dGCyl();
 };
 
@@ -53,8 +47,6 @@ struct cM3dGAab {
 };
 
 struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
-	/* 80083830 */ void Move();
 	/* 80C6AA50 */ ~dCcD_GStts();
 };
 
@@ -65,107 +57,14 @@ struct cCcD_GStts {
 	/* 80C6B010 */ ~cCcD_GStts();
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct dBgW {
-};
-
-struct cBgS_PolyInfo {
-};
-
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ void Create();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-};
-
-struct dCcD_SrcCyl {
-};
-
-struct dCcD_Cyl {
-	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cCcD_Obj {
-};
-
-struct cCcS {
-	/* 80264BA8 */ void Set(cCcD_Obj*);
-};
-
-struct JAISoundID {
-};
-
-struct Vec {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
 // 
 // Forward References:
 // 
 
-static void daFlorBoad_Draw(daFlorBoad_c*); // 2
-static void daFlorBoad_Execute(daFlorBoad_c*); // 2
-static void daFlorBoad_Delete(daFlorBoad_c*); // 2
-static void daFlorBoad_Create(fopAc_ac_c*); // 2
+void daFlorBoad_Draw(daFlorBoad_c*); // 2
+void daFlorBoad_Execute(daFlorBoad_c*); // 2
+void daFlorBoad_Delete(daFlorBoad_c*); // 2
+void daFlorBoad_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daFlorBoad_HIO_cFv(); // 1
 extern "C" void __dt__18fOpAcm_HIO_entry_cFv(); // 1
@@ -184,91 +83,45 @@ extern "C" void init_modeBreak__12daFlorBoad_cFv(); // 1
 extern "C" void modeBreak__12daFlorBoad_cFv(); // 1
 extern "C" void Draw__12daFlorBoad_cFv(); // 1
 extern "C" void Delete__12daFlorBoad_cFv(); // 1
-extern "C" static void daFlorBoad_Draw__FP12daFlorBoad_c(); // 1
-extern "C" static void daFlorBoad_Execute__FP12daFlorBoad_c(); // 1
-extern "C" static void daFlorBoad_Delete__FP12daFlorBoad_c(); // 1
-extern "C" static void daFlorBoad_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daFlorBoad_Draw__FP12daFlorBoad_c(); // 1
+extern "C" void daFlorBoad_Execute__FP12daFlorBoad_c(); // 1
+extern "C" void daFlorBoad_Delete__FP12daFlorBoad_c(); // 1
+extern "C" void daFlorBoad_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__16daFlorBoad_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv5FloorBoard_cpp(); // 1
+extern "C" extern u32 const lit_3656;
+extern "C" extern u8 const mCcDObjInfo__12daFlorBoad_c[48];
 extern "C" extern u32 const lit_3870;
 extern "C" extern u32 const lit_3871;
 extern "C" extern u32 const lit_3872;
+extern "C" extern u32 const lit_3891;
 extern "C" extern char const* const stringBase0;
+extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* lit_3839[3];
-extern "C" extern void* lit_3840[3];
+extern "C" extern u8 mCcDCyl__12daFlorBoad_c[68];
+extern "C" extern u8 lit_3839[12];
+extern "C" extern u8 lit_3840[12];
 extern "C" extern u8 data_80C6B214[24];
-extern "C" extern void* g_profile_Obj_Lv5FBoard[12];
+extern "C" extern u8 l_daFlorBoad_Method[32];
+extern "C" extern u8 g_profile_Obj_Lv5FBoard[48];
+extern "C" extern void* __vt__10cCcD_GStts[3];
+extern "C" extern void* __vt__10dCcD_GStts[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__12daFlorBoad_c[10];
+extern "C" extern void* __vt__16daFlorBoad_HIO_c[3];
+extern "C" extern void* __vt__18fOpAcm_HIO_entry_c[3];
+extern "C" extern void* __vt__14mDoHIO_entry_c[3];
+extern "C" extern u8 lit_3647[12];
+extern "C" extern u8 l_HIO[20];
+extern "C" extern u8 data_80C6B320[4];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Move__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_CylAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 j3dSys[284];
-extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void _unresolved(); // 1
 extern "C" void __register_global_object(); // 1
 
@@ -276,143 +129,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 80C6B148-80C6B14C 0004+00 r=4 e=0 z=0  None .rodata    @3656                                                        */
-SECTION_RODATA static u32 const lit_3656 = 0x3F800000;
-
-/* 80C6B198-80C6B1A4 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C6B1A4-80C6B1B8 0004+10 r=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80C6B1B8-80C6B1FC 0044+00 r=2 e=0 z=0  None .data      mCcDCyl__12daFlorBoad_c                                      */
-SECTION_DATA static u8 mCcDCyl__12daFlorBoad_c[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C6B1FC-80C6B208 000C+00 r=0 e=0 z=0  None .data      @3839                                                        */
-SECTION_DATA void* lit_3839[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__12daFlorBoad_cFv,
-};
-
-/* 80C6B208-80C6B214 000C+00 r=0 e=0 z=0  None .data      @3840                                                        */
-SECTION_DATA void* lit_3840[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeBreak__12daFlorBoad_cFv,
-};
-
-/* 80C6B214-80C6B22C 0018+00 r=0 e=0 z=0  None .data      mode_proc$3838                                               */
-SECTION_DATA u8 data_80C6B214[24] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C6B22C-80C6B24C 0020+00 r=1 e=0 z=0  None .data      l_daFlorBoad_Method                                          */
-SECTION_DATA static void* l_daFlorBoad_Method[8] = {
-	/* 0    */ (void*)daFlorBoad_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daFlorBoad_Delete__FP12daFlorBoad_c,
-	/* 2    */ (void*)daFlorBoad_Execute__FP12daFlorBoad_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daFlorBoad_Draw__FP12daFlorBoad_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80C6B24C-80C6B27C 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_Lv5FBoard                                      */
-SECTION_DATA void* g_profile_Obj_Lv5FBoard[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x004F0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000734,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x021A0000,
-	/* 9    */ (void*)&l_daFlorBoad_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80C6B27C-80C6B288 000C+00 r=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
-};
-
-/* 80C6B288-80C6B294 000C+00 r=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
-};
-
-/* 80C6B294-80C6B2A0 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80C6B2A0-80C6B2AC 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80C6B2AC-80C6B2D4 0028+00 r=1 e=0 z=0  None .data      __vt__12daFlorBoad_c                                         */
-SECTION_DATA static void* __vt__12daFlorBoad_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__12daFlorBoad_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__12daFlorBoad_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__12daFlorBoad_cFv,
-	/* 6    */ (void*)Delete__12daFlorBoad_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-};
-
-/* 80C6B2D4-80C6B2E0 000C+00 r=2 e=0 z=0  None .data      __vt__16daFlorBoad_HIO_c                                     */
-SECTION_DATA static void* __vt__16daFlorBoad_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daFlorBoad_HIO_cFv,
-};
-
-/* 80C6B2E0-80C6B2EC 000C+00 r=3 e=0 z=0  None .data      __vt__18fOpAcm_HIO_entry_c                                   */
-SECTION_DATA static void* __vt__18fOpAcm_HIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18fOpAcm_HIO_entry_cFv,
-};
-
-/* 80C6B2EC-80C6B2F8 000C+00 r=4 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
-};
-
-/* 80C6A60C-80C6A658 004C+00 r=1 e=0 z=0  None .text      __ct__16daFlorBoad_HIO_cFv                                   */
+/* 80C6A60C-80C6A658 004C+00 s=1 e=0 z=0  None .text      __ct__16daFlorBoad_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +140,7 @@ asm daFlorBoad_HIO_c::daFlorBoad_HIO_c() {
 #pragma pop
 
 
-/* 80C6A658-80C6A6B4 005C+00 r=1 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
+/* 80C6A658-80C6A6B4 005C+00 s=0 e=0 z=0  None .text      __dt__18fOpAcm_HIO_entry_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +151,7 @@ asm fOpAcm_HIO_entry_c::~fOpAcm_HIO_entry_c() {
 #pragma pop
 
 
-/* 80C6A6B4-80C6A6FC 0048+00 r=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C6A6B4-80C6A6FC 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +162,7 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 #pragma pop
 
 
-/* 80C6A6FC-80C6A784 0088+00 r=2 e=0 z=0  None .text      setBaseMtx__12daFlorBoad_cFv                                 */
+/* 80C6A6FC-80C6A784 0088+00 s=2 e=0 z=0  None .text      setBaseMtx__12daFlorBoad_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,34 +173,7 @@ asm void daFlorBoad_c::setBaseMtx() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C6B14C-80C6B17C 0030+00 r=1 e=0 z=0  None .rodata    mCcDObjInfo__12daFlorBoad_c                                  */
-SECTION_RODATA static u8 const mCcDObjInfo__12daFlorBoad_c[48] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x40, 0x00, 0x20, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x02,
-	0x00, 0x00, 0x00, 0x01, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C6B17C-80C6B180 0004+00 r=0 e=0 z=0  None .rodata    @3870                                                        */
-SECTION_RODATA u32 const lit_3870 = 0x438C0000;
-
-/* 80C6B180-80C6B184 0004+00 r=0 e=0 z=0  None .rodata    @3871                                                        */
-SECTION_RODATA u32 const lit_3871 = 0x432A0000;
-
-/* 80C6B184-80C6B188 0004+00 r=0 e=0 z=0  None .rodata    @3872                                                        */
-SECTION_RODATA u32 const lit_3872 = 0x43160000;
-
-/* 80C6B188-80C6B18C 0004+00 r=1 e=0 z=0  None .rodata    @3891                                                        */
-SECTION_RODATA static u32 const lit_3891 = 0xBF800000;
-
-/* 80C6B18C-80C6B195 0009+00 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C6B18C = "L5haYuka";
-#pragma pop
-
-/* 80C6A784-80C6A7F0 006C+00 r=1 e=0 z=0  None .text      CreateHeap__12daFlorBoad_cFv                                 */
+/* 80C6A784-80C6A7F0 006C+00 s=0 e=0 z=0  None .text      CreateHeap__12daFlorBoad_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -494,7 +184,7 @@ asm void daFlorBoad_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C6A7F0-80C6A9C0 01D0+00 r=1 e=0 z=0  None .text      create__12daFlorBoad_cFv                                     */
+/* 80C6A7F0-80C6A9C0 01D0+00 s=1 e=0 z=0  None .text      create__12daFlorBoad_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -505,7 +195,7 @@ asm void daFlorBoad_c::create() {
 #pragma pop
 
 
-/* 80C6A9C0-80C6AA08 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C6A9C0-80C6AA08 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -516,7 +206,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C6AA08-80C6AA50 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C6AA08-80C6AA50 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -527,7 +217,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C6AA50-80C6AAAC 005C+00 r=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C6AA50-80C6AAAC 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +228,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C6AAAC-80C6AB04 0058+00 r=1 e=0 z=0  None .text      Execute__12daFlorBoad_cFPPA3_A4_f                            */
+/* 80C6AAAC-80C6AB04 0058+00 s=0 e=0 z=0  None .text      Execute__12daFlorBoad_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,17 +239,7 @@ asm void daFlorBoad_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80C6B300-80C6B30C 000C+00 r=1 e=0 z=0  None .bss       @3647                                                        */
-static u8 lit_3647[12];
-
-/* 80C6B30C-80C6B320 0014+00 r=2 e=0 z=0  None .bss       l_HIO                                                        */
-static u8 l_HIO[20];
-
-/* 80C6B320-80C6B324 0004+00 r=1 e=0 z=0  None .bss       None                                                         */
-static u8 data_80C6B320[4];
-
-/* 80C6AB04-80C6AB90 008C+00 r=1 e=0 z=0  None .text      procMain__12daFlorBoad_cFv                                   */
+/* 80C6AB04-80C6AB90 008C+00 s=1 e=0 z=0  None .text      procMain__12daFlorBoad_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,7 +250,7 @@ asm void daFlorBoad_c::procMain() {
 #pragma pop
 
 
-/* 80C6AB90-80C6ABAC 001C+00 r=1 e=0 z=0  None .text      init_modeWait__12daFlorBoad_cFv                              */
+/* 80C6AB90-80C6ABAC 001C+00 s=1 e=0 z=0  None .text      init_modeWait__12daFlorBoad_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +261,7 @@ asm void daFlorBoad_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C6ABAC-80C6AC9C 00F0+00 r=1 e=0 z=0  None .text      modeWait__12daFlorBoad_cFv                                   */
+/* 80C6ABAC-80C6AC9C 00F0+00 s=0 e=0 z=0  None .text      modeWait__12daFlorBoad_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,7 +272,7 @@ asm void daFlorBoad_c::modeWait() {
 #pragma pop
 
 
-/* 80C6AC9C-80C6AD40 00A4+00 r=1 e=0 z=0  None .text      init_modeBreak__12daFlorBoad_cFv                             */
+/* 80C6AC9C-80C6AD40 00A4+00 s=1 e=0 z=0  None .text      init_modeBreak__12daFlorBoad_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +283,7 @@ asm void daFlorBoad_c::init_modeBreak() {
 #pragma pop
 
 
-/* 80C6AD40-80C6AEB0 0170+00 r=1 e=0 z=0  None .text      modeBreak__12daFlorBoad_cFv                                  */
+/* 80C6AD40-80C6AEB0 0170+00 s=0 e=0 z=0  None .text      modeBreak__12daFlorBoad_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,7 +294,7 @@ asm void daFlorBoad_c::modeBreak() {
 #pragma pop
 
 
-/* 80C6AEB0-80C6AF54 00A4+00 r=1 e=0 z=0  None .text      Draw__12daFlorBoad_cFv                                       */
+/* 80C6AEB0-80C6AF54 00A4+00 s=0 e=0 z=0  None .text      Draw__12daFlorBoad_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +305,7 @@ asm void daFlorBoad_c::Draw() {
 #pragma pop
 
 
-/* 80C6AF54-80C6AF84 0030+00 r=1 e=0 z=0  None .text      Delete__12daFlorBoad_cFv                                     */
+/* 80C6AF54-80C6AF84 0030+00 s=0 e=0 z=0  None .text      Delete__12daFlorBoad_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,51 +316,51 @@ asm void daFlorBoad_c::Delete() {
 #pragma pop
 
 
-/* 80C6AF84-80C6AFB0 002C+00 r=1 e=0 z=0  None .text      daFlorBoad_Draw__FP12daFlorBoad_c                            */
+/* 80C6AF84-80C6AFB0 002C+00 s=0 e=0 z=0  None .text      daFlorBoad_Draw__FP12daFlorBoad_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daFlorBoad_Draw(daFlorBoad_c* param_0) {
+asm void daFlorBoad_Draw(daFlorBoad_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Draw__FP12daFlorBoad_c.s"
 }
 #pragma pop
 
 
-/* 80C6AFB0-80C6AFD0 0020+00 r=1 e=0 z=0  None .text      daFlorBoad_Execute__FP12daFlorBoad_c                         */
+/* 80C6AFB0-80C6AFD0 0020+00 s=0 e=0 z=0  None .text      daFlorBoad_Execute__FP12daFlorBoad_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daFlorBoad_Execute(daFlorBoad_c* param_0) {
+asm void daFlorBoad_Execute(daFlorBoad_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Execute__FP12daFlorBoad_c.s"
 }
 #pragma pop
 
 
-/* 80C6AFD0-80C6AFF0 0020+00 r=1 e=0 z=0  None .text      daFlorBoad_Delete__FP12daFlorBoad_c                          */
+/* 80C6AFD0-80C6AFF0 0020+00 s=0 e=0 z=0  None .text      daFlorBoad_Delete__FP12daFlorBoad_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daFlorBoad_Delete(daFlorBoad_c* param_0) {
+asm void daFlorBoad_Delete(daFlorBoad_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Delete__FP12daFlorBoad_c.s"
 }
 #pragma pop
 
 
-/* 80C6AFF0-80C6B010 0020+00 r=1 e=0 z=0  None .text      daFlorBoad_Create__FP10fopAc_ac_c                            */
+/* 80C6AFF0-80C6B010 0020+00 s=0 e=0 z=0  None .text      daFlorBoad_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daFlorBoad_Create(fopAc_ac_c* param_0) {
+asm void daFlorBoad_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv5FloorBoard/d_a_obj_lv5FloorBoard/daFlorBoad_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C6B010-80C6B058 0048+00 r=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C6B010-80C6B058 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +371,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80C6B058-80C6B0C4 006C+00 r=2 e=0 z=0  None .text      __dt__16daFlorBoad_HIO_cFv                                   */
+/* 80C6B058-80C6B0C4 006C+00 s=0 e=0 z=0  None .text      __dt__16daFlorBoad_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -702,7 +382,7 @@ asm daFlorBoad_HIO_c::~daFlorBoad_HIO_c() {
 #pragma pop
 
 
-/* 80C6B0C4-80C6B134 0070+00 r=1 e=1 z=0  None .text      __sinit_d_a_obj_lv5FloorBoard_cpp                            */
+/* 80C6B0C4-80C6B134 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv5FloorBoard_cpp                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,4 +392,156 @@ extern "C" asm void __sinit_d_a_obj_lv5FloorBoard_cpp() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C6B148-80C6B14C 0004+00 s=0 e=0 z=0  None .rodata    @3656                                                        */
+SECTION_RODATA u32 const lit_3656 = 0x3F800000;
+
+/* 80C6B14C-80C6B17C 0030+00 s=0 e=0 z=0  None .rodata    mCcDObjInfo__12daFlorBoad_c                                  */
+SECTION_RODATA u8 const mCcDObjInfo__12daFlorBoad_c[48] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x40, 0x00, 0x20, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x02,
+	0x00, 0x00, 0x00, 0x01, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B17C-80C6B180 0004+00 s=0 e=0 z=0  None .rodata    @3870                                                        */
+SECTION_RODATA u32 const lit_3870 = 0x438C0000;
+
+/* 80C6B180-80C6B184 0004+00 s=0 e=0 z=0  None .rodata    @3871                                                        */
+SECTION_RODATA u32 const lit_3871 = 0x432A0000;
+
+/* 80C6B184-80C6B188 0004+00 s=0 e=0 z=0  None .rodata    @3872                                                        */
+SECTION_RODATA u32 const lit_3872 = 0x43160000;
+
+/* 80C6B188-80C6B18C 0004+00 s=0 e=0 z=0  None .rodata    @3891                                                        */
+SECTION_RODATA u32 const lit_3891 = 0xBF800000;
+
+/* 80C6B18C-80C6B195 0009+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C6B18C = "L5haYuka";
+#pragma pop
+
+/* 80C6B198-80C6B1A4 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B1A4-80C6B1B8 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80C6B1B8-80C6B1FC 0044+00 s=0 e=0 z=0  None .data      mCcDCyl__12daFlorBoad_c                                      */
+SECTION_DATA u8 mCcDCyl__12daFlorBoad_c[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B1FC-80C6B208 000C+00 s=0 e=0 z=0  None .data      @3839                                                        */
+SECTION_DATA u8 lit_3839[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B208-80C6B214 000C+00 s=0 e=0 z=0  None .data      @3840                                                        */
+SECTION_DATA u8 lit_3840[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B214-80C6B22C 0018+00 s=0 e=0 z=0  None .data      mode_proc$3838                                               */
+SECTION_DATA u8 data_80C6B214[24] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B22C-80C6B24C 0020+00 s=0 e=0 z=0  None .data      l_daFlorBoad_Method                                          */
+SECTION_DATA u8 l_daFlorBoad_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C6B24C-80C6B27C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv5FBoard                                      */
+SECTION_DATA u8 g_profile_Obj_Lv5FBoard[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x4F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x34, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0x1A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80C6B27C-80C6B288 000C+00 s=0 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA void* __vt__10cCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B288-80C6B294 000C+00 s=0 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA void* __vt__10dCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B294-80C6B2A0 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B2A0-80C6B2AC 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B2AC-80C6B2D4 0028+00 s=0 e=0 z=0  None .data      __vt__12daFlorBoad_c                                         */
+SECTION_DATA void* __vt__12daFlorBoad_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+};
+
+/* 80C6B2D4-80C6B2E0 000C+00 s=0 e=0 z=0  None .data      __vt__16daFlorBoad_HIO_c                                     */
+SECTION_DATA void* __vt__16daFlorBoad_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B2E0-80C6B2EC 000C+00 s=0 e=0 z=0  None .data      __vt__18fOpAcm_HIO_entry_c                                   */
+SECTION_DATA void* __vt__18fOpAcm_HIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B2EC-80C6B2F8 000C+00 s=0 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80C6B300-80C6B30C 000C+00 s=0 e=0 z=0  None .bss       @3647                                                        */
+u8 lit_3647[12];
+
+/* 80C6B30C-80C6B320 0014+00 s=0 e=0 z=0  None .bss       l_HIO                                                        */
+u8 l_HIO[20];
+
+/* 80C6B320-80C6B324 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
+u8 data_80C6B320[4];
 

@@ -41,7 +41,7 @@ extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID(); // 1
 // Declarations:
 // 
 
-/* 80293644-80293664 0020+00 r=1 e=1 z=0  None .text      __ct__16JASRegisterParamFv                                   */
+/* 80293644-80293664 0020+00 s=0 e=1 z=0  None .text      __ct__16JASRegisterParamFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ asm JASRegisterParam::JASRegisterParam() {
 #pragma pop
 
 
-/* 80293664-80293684 0020+00 r=1 e=1 z=0  None .text      init__16JASRegisterParamFv                                   */
+/* 80293664-80293684 0020+00 s=0 e=1 z=0  None .text      init__16JASRegisterParamFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void JASRegisterParam::init() {
 
 
 /* ############################################################################################## */
-/* 803C5B90-803C5BB8 0028+00 r=1 e=0 z=0  None .data      @56                                                          */
+/* 803C5B90-803C5BB8 0028+00 s=1 e=0 z=0  None .data      @56                                                          */
 SECTION_DATA static void* JASRegisterParam__lit_56[10] = {
 	/* 0    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
 	/* 1    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
@@ -78,7 +78,7 @@ SECTION_DATA static void* JASRegisterParam__lit_56[10] = {
 	/* 9    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x124),
 };
 
-/* 80293684-802937B8 0134+00 r=5 e=4 z=0  None .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
+/* 80293684-802937B8 0134+00 s=1 e=4 z=0  None .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void JASRegisterParam::write(JASRegisterParam::RegID param_0, u32 param_1) {
 
 
 /* ############################################################################################## */
-/* 803C5BB8-803C5BE0 0028+00 r=1 e=0 z=0  None .data      @87                                                          */
+/* 803C5BB8-803C5BE0 0028+00 s=1 e=0 z=0  None .data      @87                                                          */
 SECTION_DATA static void* JASRegisterParam__lit_87[10] = {
 	/* 0    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
 	/* 1    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
@@ -104,7 +104,7 @@ SECTION_DATA static void* JASRegisterParam__lit_87[10] = {
 	/* 9    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xEC),
 };
 
-/* 802937B8-802938BC 0104+00 r=2 e=1 z=0  None .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */
+/* 802937B8-802938BC 0104+00 s=1 e=1 z=0  None .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

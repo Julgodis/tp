@@ -11,12 +11,12 @@ lbl_80CB22F4:
 /* 80CB2318 00000024  98 1F 05 D3 */	stb r0, 0x5d3(r31)
 /* 80CB231C 00000028  48 00 00 24 */	b lbl_80CB2340
 lbl_80CB2320:
-/* 80CB2320 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CB2324 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CB2320 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CB2324 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CB2328 00000008  88 9F 05 D4 */	lbz r4, 0x5d4(r31)
 /* 80CB232C 0000000C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CB2330 00000010  7C 05 07 74 */	extsb r5, r0
-/* 80CB2334 00000014  4B FF F6 A5 */	bl onSwitch__10dSv_info_cFii
+/* 80CB2334 00000014  4B FF F6 A5 */	bl _unresolved
 /* 80CB2338 00000018  7F E3 FB 78 */	mr r3, r31
 /* 80CB233C 0000001C  48 00 00 19 */	bl init_modeEnd__12daPoCandle_cFv
 lbl_80CB2340:

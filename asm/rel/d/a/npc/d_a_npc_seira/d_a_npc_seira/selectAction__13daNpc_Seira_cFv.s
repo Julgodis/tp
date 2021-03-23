@@ -5,10 +5,10 @@ lbl_80ACD770:
 /* 80ACD77C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80ACD780 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80ACD784 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80ACD788 00000018  3C 80 00 00 */	lis r4, cNullVec__6Z2Calc@ha /* 80ACFF90 */
-/* 80ACD78C 0000001C  3B E4 00 00 */	addi r31, r4, cNullVec__6Z2Calc@l /* 80ACFF90 */
-/* 80ACD790 00000020  3C 80 00 00 */	lis r4, __ptmf_null@ha /* 803A2180 */
-/* 80ACD794 00000024  38 A4 00 00 */	addi r5, r4, __ptmf_null@l /* 803A2180 */
+/* 80ACD788 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80ACD78C 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
+/* 80ACD790 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80ACD794 00000024  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
 /* 80ACD798 00000028  80 85 00 00 */	lwz r4, 0(r5)
 /* 80ACD79C 0000002C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80ACD7A0 00000030  90 83 10 DC */	stw r4, 0x10dc(r3)
@@ -71,12 +71,12 @@ lbl_80ACD858:
 /* 80ACD86C 00000014  90 1E 10 E4 */	stw r0, 0x10e4(r30)
 /* 80ACD870 00000018  48 00 00 74 */	b lbl_80ACD8E4
 lbl_80ACD874:
-/* 80ACD874 00000000  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80ACD878 00000004  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80ACD874 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80ACD878 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80ACD87C 00000008  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80ACD880 0000000C  4B FF DE B9 */	bl fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 80ACD884 00000010  3C 60 00 00 */	lis r3, lit_5182@ha /* 80ACFEE8 */
-/* 80ACD888 00000014  C0 03 00 00 */	lfs f0, lit_5182@l(r3) /* 80ACFEE8 */
+/* 80ACD880 0000000C  4B FF DE B9 */	bl _unresolved
+/* 80ACD884 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ACD888 00000014  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80ACD88C 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80ACD890 00000000  40 80 00 20 */	bge lbl_80ACD8B0
 /* 80ACD894 00000004  80 7F 09 74 */	lwz r3, 0x974(r31)

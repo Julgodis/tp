@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80870080[2];
+extern u8 data_80870080[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_mg_fshop_cpp(); // 1
 
 // 
 // Declarations:

@@ -86,10 +86,10 @@ struct dDlst_shadowControl_c {
 	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
-struct J3DDrawBuffer {
+struct dDlst_base_c {
 };
 
-struct dDlst_base_c {
+struct J3DDrawBuffer {
 };
 
 struct dDlst_list_c {
@@ -111,13 +111,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
-struct _GXRenderModeObj {
-};
-
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
+};
+
+struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -376,7 +376,7 @@ extern "C" extern u8 sManager__10JUTProcBar[4];
 // Declarations:
 // 
 
-/* 80007D9C-80007E44 00A8+00 r=1 e=0 z=0  None .text      createTimg__FUsUsUl                                          */
+/* 80007D9C-80007E44 00A8+00 s=1 e=0 z=0  None .text      createTimg__FUsUsUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,41 +388,41 @@ asm static void createTimg(u16 param_0, u16 param_1, u32 param_2) {
 
 
 /* ############################################################################################## */
-/* 80450590-80450594 0004+00 r=3 e=1 z=0  None .sdata     mBackColor__13mDoGph_gInf_c                                  */
+/* 80450590-80450594 0004+00 s=2 e=1 z=0  None .sdata     mBackColor__13mDoGph_gInf_c                                  */
 SECTION_SDATA u8 mBackColor__13mDoGph_gInf_c[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450594-80450598 0004+00 r=7 e=3 z=0  None .sdata     mFadeColor__13mDoGph_gInf_c                                  */
+/* 80450594-80450598 0004+00 s=4 e=3 z=0  None .sdata     mFadeColor__13mDoGph_gInf_c                                  */
 SECTION_SDATA u8 mFadeColor__13mDoGph_gInf_c[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450BC8-80450BCC 0004+00 r=41 e=38 z=1  None .sbss      mFader__13mDoGph_gInf_c                                      */
+/* 80450BC8-80450BCC 0004+00 s=2 e=38 z=0  None .sbss      mFader__13mDoGph_gInf_c                                      */
 u8 mFader__13mDoGph_gInf_c[4];
 
-/* 80450BCC-80450BD0 0004+00 r=12 e=8 z=1  None .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
+/* 80450BCC-80450BD0 0004+00 s=3 e=8 z=0  None .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
 u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
 
-/* 80450BD0-80450BD4 0004+00 r=9 e=6 z=0  None .sbss      mFrameBufferTex__13mDoGph_gInf_c                             */
+/* 80450BD0-80450BD4 0004+00 s=3 e=6 z=0  None .sbss      mFrameBufferTex__13mDoGph_gInf_c                             */
 u8 mFrameBufferTex__13mDoGph_gInf_c[4];
 
-/* 80450BD4-80450BD8 0004+00 r=2 e=1 z=0  None .sbss      mZbufferTimg__13mDoGph_gInf_c                                */
+/* 80450BD4-80450BD8 0004+00 s=1 e=1 z=0  None .sbss      mZbufferTimg__13mDoGph_gInf_c                                */
 u8 mZbufferTimg__13mDoGph_gInf_c[4];
 
-/* 80450BD8-80450BDC 0004+00 r=4 e=1 z=0  None .sbss      mZbufferTex__13mDoGph_gInf_c                                 */
+/* 80450BD8-80450BDC 0004+00 s=3 e=1 z=0  None .sbss      mZbufferTex__13mDoGph_gInf_c                                 */
 u8 mZbufferTex__13mDoGph_gInf_c[4];
 
-/* 80450BDC-80450BE0 0004+00 r=7 e=3 z=1  None .sbss      mFadeRate__13mDoGph_gInf_c                                   */
+/* 80450BDC-80450BE0 0004+00 s=3 e=3 z=0  None .sbss      mFadeRate__13mDoGph_gInf_c                                   */
 f32 mFadeRate__13mDoGph_gInf_c;
 
-/* 80450BE0-80450BE4 0004+00 r=3 e=0 z=0  None .sbss      mFadeSpeed__13mDoGph_gInf_c                                  */
+/* 80450BE0-80450BE4 0004+00 s=3 e=0 z=0  None .sbss      mFadeSpeed__13mDoGph_gInf_c                                  */
 static f32 mFadeSpeed__13mDoGph_gInf_c;
 
-/* 80450BE4-80450BE8 0004+00 r=28 e=9 z=11  None .sbss      None                                                         */
+/* 80450BE4-80450BE8 0004+00 s=8 e=9 z=0  None .sbss      None                                                         */
 u8 struct_80450BE4[4];
 
-/* 80007E44-80007F90 014C+00 r=1 e=0 z=0  None .text      create__13mDoGph_gInf_cFv                                    */
+/* 80007E44-80007F90 014C+00 s=1 e=0 z=0  None .text      create__13mDoGph_gInf_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,10 +434,10 @@ asm void mDoGph_gInf_c::create() {
 
 
 /* ############################################################################################## */
-/* 80450BE8-80450BF0 0008+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80450BE8-80450BF0 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450BE8[8];
 
-/* 80007F90-80007FD8 0048+00 r=3 e=2 z=0  None .text      beginRender__13mDoGph_gInf_cFv                               */
+/* 80007F90-80007FD8 0048+00 s=1 e=2 z=0  None .text      beginRender__13mDoGph_gInf_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -449,15 +449,15 @@ asm void mDoGph_gInf_c::beginRender() {
 
 
 /* ############################################################################################## */
-/* 80451A38-80451A3C 0004+00 r=11 e=0 z=0  None .sdata2    @4062                                                        */
+/* 80451A38-80451A3C 0004+00 s=11 e=0 z=0  None .sdata2    @4062                                                        */
 SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4062[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A3C-80451A40 0004+00 r=8 e=0 z=0  None .sdata2    @4063                                                        */
+/* 80451A3C-80451A40 0004+00 s=8 e=0 z=0  None .sdata2    @4063                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4063 = 1.0f;
 
-/* 80007FD8-80008028 0050+00 r=22 e=6 z=15  None .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
+/* 80007FD8-80008028 0050+00 s=1 e=6 z=0  None .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +468,7 @@ asm void mDoGph_gInf_c::fadeOut(f32 param_0, _GXColor& param_1) {
 #pragma pop
 
 
-/* 80008028-80008078 0050+00 r=2 e=0 z=2  None .text      fadeOut_f__13mDoGph_gInf_cFfR8_GXColor                       */
+/* 80008028-80008078 0050+00 s=0 e=0 z=0  None .text      fadeOut_f__13mDoGph_gInf_cFfR8_GXColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +479,7 @@ asm void mDoGph_gInf_c::fadeOut_f(f32 param_0, _GXColor& param_1) {
 #pragma pop
 
 
-/* 80008078-800080A0 0028+00 r=9 e=1 z=8  None .text      onBlure__13mDoGph_gInf_cFv                                   */
+/* 80008078-800080A0 0028+00 s=0 e=1 z=0  None .text      onBlure__13mDoGph_gInf_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,19 +491,19 @@ asm void mDoGph_gInf_c::onBlure() {
 
 
 /* ############################################################################################## */
-/* 803DD3E8-803DD408 0020+00 r=6 e=3 z=0  None .bss       mFrameBufferTexObj__13mDoGph_gInf_c                          */
+/* 803DD3E8-803DD408 0020+00 s=3 e=3 z=0  None .bss       mFrameBufferTexObj__13mDoGph_gInf_c                          */
 u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 
-/* 803DD408-803DD428 0020+00 r=1 e=0 z=0  None .bss       mZbufferTexObj__13mDoGph_gInf_c                              */
+/* 803DD408-803DD428 0020+00 s=1 e=0 z=0  None .bss       mZbufferTexObj__13mDoGph_gInf_c                              */
 static u8 mZbufferTexObj__13mDoGph_gInf_c[32];
 
-/* 803DD428-803DD43C 0014+00 r=5 e=3 z=0  None .bss       m_bloom__13mDoGph_gInf_c                                     */
+/* 803DD428-803DD43C 0014+00 s=2 e=3 z=0  None .bss       m_bloom__13mDoGph_gInf_c                                     */
 u8 m_bloom__13mDoGph_gInf_c[20];
 
-/* 803DD43C-803DD470 0030+04 r=2 e=0 z=0  None .bss       mBlureMtx__13mDoGph_gInf_c                                   */
+/* 803DD43C-803DD470 0030+04 s=2 e=0 z=0  None .bss       mBlureMtx__13mDoGph_gInf_c                                   */
 static u8 mBlureMtx__13mDoGph_gInf_c[48 + 4 /* padding */];
 
-/* 800080A0-800080D0 0030+00 r=2 e=1 z=0  None .text      onBlure__13mDoGph_gInf_cFPA4_Cf                              */
+/* 800080A0-800080D0 0030+00 s=1 e=1 z=0  None .text      onBlure__13mDoGph_gInf_cFPA4_Cf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +514,7 @@ asm void mDoGph_gInf_c::onBlure(f32 const (* param_0)[4]) {
 #pragma pop
 
 
-/* 800080D0-800080F4 0024+00 r=10 e=3 z=7  None .text      fadeOut__13mDoGph_gInf_cFf                                   */
+/* 800080D0-800080F4 0024+00 s=0 e=3 z=0  None .text      fadeOut__13mDoGph_gInf_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,10 +526,10 @@ asm void mDoGph_gInf_c::fadeOut(f32 param_0) {
 
 
 /* ############################################################################################## */
-/* 80451A40-80451A44 0004+00 r=5 e=0 z=0  None .sdata2    @4105                                                        */
+/* 80451A40-80451A44 0004+00 s=5 e=0 z=0  None .sdata2    @4105                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4105 = 10.0f;
 
-/* 800080F4-80008330 023C+00 r=1 e=0 z=0  None .text      darwFilter__F8_GXColor                                       */
+/* 800080F4-80008330 023C+00 s=1 e=0 z=0  None .text      darwFilter__F8_GXColor                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,10 +541,10 @@ asm static void darwFilter(_GXColor param_0) {
 
 
 /* ############################################################################################## */
-/* 80451A44-80451A48 0004+00 r=1 e=0 z=0  None .sdata2    @4131                                                        */
+/* 80451A44-80451A48 0004+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4131 = 255.0f;
 
-/* 80008330-8000841C 00EC+00 r=1 e=0 z=0  None .text      calcFade__13mDoGph_gInf_cFv                                  */
+/* 80008330-8000841C 00EC+00 s=1 e=0 z=0  None .text      calcFade__13mDoGph_gInf_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -555,7 +555,7 @@ asm void mDoGph_gInf_c::calcFade() {
 #pragma pop
 
 
-/* 8000841C-80008420 0004+00 r=1 e=1 z=0  None .text      mDoGph_BlankingON__Fv                                        */
+/* 8000841C-80008420 0004+00 s=0 e=1 z=0  None .text      mDoGph_BlankingON__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,7 +566,7 @@ asm void mDoGph_BlankingON() {
 #pragma pop
 
 
-/* 80008420-80008424 0004+00 r=1 e=1 z=0  None .text      mDoGph_BlankingOFF__Fv                                       */
+/* 80008420-80008424 0004+00 s=0 e=1 z=0  None .text      mDoGph_BlankingOFF__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -577,7 +577,7 @@ asm void mDoGph_BlankingOFF() {
 #pragma pop
 
 
-/* 80008424-80008450 002C+00 r=1 e=0 z=0  None .text      dScnPly_BeforeOfPaint__Fv                                    */
+/* 80008424-80008450 002C+00 s=1 e=0 z=0  None .text      dScnPly_BeforeOfPaint__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,7 +588,7 @@ asm static void dScnPly_BeforeOfPaint() {
 #pragma pop
 
 
-/* 80008450-80008474 0024+00 r=1 e=1 z=0  None .text      mDoGph_BeforeOfDraw__Fv                                      */
+/* 80008450-80008474 0024+00 s=0 e=1 z=0  None .text      mDoGph_BeforeOfDraw__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,7 +599,7 @@ asm void mDoGph_BeforeOfDraw() {
 #pragma pop
 
 
-/* 80008474-80008630 01BC+00 r=1 e=1 z=0  None .text      mDoGph_AfterOfDraw__Fv                                       */
+/* 80008474-80008630 01BC+00 s=0 e=1 z=0  None .text      mDoGph_AfterOfDraw__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,82 +611,82 @@ asm void mDoGph_AfterOfDraw() {
 
 
 /* ############################################################################################## */
-/* 80450598-8045059C 0004+00 r=1 e=0 z=0  None .sdata     l_tevColor0$4208                                             */
+/* 80450598-8045059C 0004+00 s=1 e=0 z=0  None .sdata     l_tevColor0$4208                                             */
 SECTION_SDATA static u8 data_80450598[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045059C-804505A0 0004+00 r=1 e=0 z=0  None .sdata     None                                                         */
+/* 8045059C-804505A0 0004+00 s=1 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 data_8045059C[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A48-80451A4C 0004+00 r=1 e=0 z=0  None .sdata2    @4422                                                        */
+/* 80451A48-80451A4C 0004+00 s=1 e=0 z=0  None .sdata2    @4422                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4422 = -255.0f;
 
-/* 80451A4C-80451A50 0004+00 r=2 e=0 z=0  None .sdata2    @4423                                                        */
+/* 80451A4C-80451A50 0004+00 s=2 e=0 z=0  None .sdata2    @4423                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4423 = 60.0f;
 
-/* 80451A50-80451A54 0004+00 r=1 e=0 z=0  None .sdata2    @4424                                                        */
+/* 80451A50-80451A54 0004+00 s=1 e=0 z=0  None .sdata2    @4424                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4424 = 48.0f;
 
-/* 80451A54-80451A58 0004+00 r=1 e=0 z=0  None .sdata2    @4425                                                        */
+/* 80451A54-80451A58 0004+00 s=1 e=0 z=0  None .sdata2    @4425                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4425 = 400.0f;
 
-/* 80451A58-80451A60 0008+00 r=1 e=0 z=0  None .sdata2    @4426                                                        */
+/* 80451A58-80451A60 0008+00 s=1 e=0 z=0  None .sdata2    @4426                                                        */
 SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4426 = 0.5;
 
-/* 80451A60-80451A68 0008+00 r=1 e=0 z=0  None .sdata2    @4427                                                        */
+/* 80451A60-80451A68 0008+00 s=1 e=0 z=0  None .sdata2    @4427                                                        */
 SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4427 = 3.0;
 
-/* 80451A68-80451A70 0008+00 r=1 e=0 z=0  None .sdata2    @4428                                                        */
+/* 80451A68-80451A70 0008+00 s=1 e=0 z=0  None .sdata2    @4428                                                        */
 SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4428[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A70-80451A74 0004+00 r=1 e=0 z=0  None .sdata2    @4429                                                        */
+/* 80451A70-80451A74 0004+00 s=1 e=0 z=0  None .sdata2    @4429                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4429 = 280.0f;
 
-/* 80451A74-80451A78 0004+00 r=1 e=0 z=0  None .sdata2    @4430                                                        */
+/* 80451A74-80451A78 0004+00 s=1 e=0 z=0  None .sdata2    @4430                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4430 = 4.0f / 5.0f;
 
-/* 80451A78-80451A7C 0004+00 r=1 e=0 z=0  None .sdata2    @4431                                                        */
+/* 80451A78-80451A7C 0004+00 s=1 e=0 z=0  None .sdata2    @4431                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4431 = -180.0f;
 
-/* 80451A7C-80451A80 0004+00 r=1 e=0 z=0  None .sdata2    @4432                                                        */
+/* 80451A7C-80451A80 0004+00 s=1 e=0 z=0  None .sdata2    @4432                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4432 = 75.0f;
 
-/* 80451A80-80451A84 0004+00 r=1 e=0 z=0  None .sdata2    @4433                                                        */
+/* 80451A80-80451A84 0004+00 s=1 e=0 z=0  None .sdata2    @4433                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4433 = 3.0f;
 
-/* 80451A84-80451A88 0004+00 r=1 e=0 z=0  None .sdata2    @4434                                                        */
+/* 80451A84-80451A88 0004+00 s=1 e=0 z=0  None .sdata2    @4434                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4434 = 999999.0f;
 
-/* 80451A88-80451A8C 0004+00 r=1 e=0 z=0  None .sdata2    @4435                                                        */
+/* 80451A88-80451A8C 0004+00 s=1 e=0 z=0  None .sdata2    @4435                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4435 = 80.0f;
 
-/* 80451A8C-80451A90 0004+00 r=1 e=0 z=0  None .sdata2    @4436                                                        */
+/* 80451A8C-80451A90 0004+00 s=1 e=0 z=0  None .sdata2    @4436                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4436 = 1.0f / 10.0f;
 
-/* 80451A90-80451A94 0004+00 r=1 e=0 z=0  None .sdata2    @4437                                                        */
+/* 80451A90-80451A94 0004+00 s=1 e=0 z=0  None .sdata2    @4437                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4437 = 100.0f;
 
-/* 80451A94-80451A98 0004+00 r=1 e=0 z=0  None .sdata2    @4438                                                        */
+/* 80451A94-80451A98 0004+00 s=1 e=0 z=0  None .sdata2    @4438                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4438 = 9.999999747378752e-05f;
 
-/* 80451A98-80451A9C 0004+00 r=1 e=0 z=0  None .sdata2    @4439                                                        */
+/* 80451A98-80451A9C 0004+00 s=1 e=0 z=0  None .sdata2    @4439                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4439 = -254.0f;
 
-/* 80451A9C-80451AA0 0004+00 r=1 e=0 z=0  None .sdata2    @4440                                                        */
+/* 80451A9C-80451AA0 0004+00 s=1 e=0 z=0  None .sdata2    @4440                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4440 = 509.0f;
 
-/* 80451AA0-80451AA4 0004+00 r=1 e=0 z=0  None .sdata2    @4441                                                        */
+/* 80451AA0-80451AA4 0004+00 s=1 e=0 z=0  None .sdata2    @4441                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4441 = 0.0024999999441206455f;
 
-/* 80451AA4-80451AA8 0004+00 r=1 e=0 z=0  None .sdata2    @4442                                                        */
+/* 80451AA4-80451AA8 0004+00 s=1 e=0 z=0  None .sdata2    @4442                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4442 = -0.0024999999441206455f;
 
-/* 80008630-80009184 0B54+00 r=1 e=0 z=0  None .text      drawDepth2__FP10view_classP15view_port_classi                */
+/* 80008630-80009184 0B54+00 s=1 e=0 z=0  None .text      drawDepth2__FP10view_classP15view_port_classi                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -697,7 +697,7 @@ asm static void drawDepth2(view_class* param_0, view_port_class* param_1, int pa
 #pragma pop
 
 
-/* 80009184-800091C0 003C+00 r=53 e=53 z=0  None .text      __dt__4cXyzFv                                                */
+/* 80009184-800091C0 003C+00 s=0 e=53 z=0  None .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -709,13 +709,13 @@ asm cXyz::~cXyz() {
 
 
 /* ############################################################################################## */
-/* 80451AA8-80451AAC 0004+00 r=3 e=0 z=0  None .sdata2    @4480                                                        */
+/* 80451AA8-80451AAC 0004+00 s=3 e=0 z=0  None .sdata2    @4480                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4480 = 448.0f;
 
-/* 80451AAC-80451AB0 0004+00 r=3 e=0 z=0  None .sdata2    @4481                                                        */
+/* 80451AAC-80451AB0 0004+00 s=3 e=0 z=0  None .sdata2    @4481                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4481 = 608.0f;
 
-/* 800091C0-800094B4 02F4+00 r=1 e=0 z=0  None .text      trimming__FP10view_classP15view_port_class                   */
+/* 800091C0-800094B4 02F4+00 s=1 e=0 z=0  None .text      trimming__FP10view_classP15view_port_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -726,7 +726,7 @@ asm static void trimming(view_class* param_0, view_port_class* param_1) {
 #pragma pop
 
 
-/* 800094B4-80009544 0090+00 r=3 e=1 z=0  None .text      mDoGph_drawFilterQuad__FScSc                                 */
+/* 800094B4-80009544 0090+00 s=2 e=1 z=0  None .text      mDoGph_drawFilterQuad__FScSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,10 +738,10 @@ asm void mDoGph_drawFilterQuad(s8 param_0, s8 param_1) {
 
 
 /* ############################################################################################## */
-/* 80451AB0-80451AB4 0004+00 r=1 e=0 z=0  None .sdata2    @4505                                                        */
+/* 80451AB0-80451AB4 0004+00 s=1 e=0 z=0  None .sdata2    @4505                                                        */
 SECTION_SDATA2 static u32 m_Do_m_Do_graphic__lit_4505 = 0xFFFFFFFF;
 
-/* 80009544-800095F8 00B4+00 r=1 e=1 z=0  None .text      create__Q213mDoGph_gInf_c7bloom_cFv                          */
+/* 80009544-800095F8 00B4+00 s=0 e=1 z=0  None .text      create__Q213mDoGph_gInf_c7bloom_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +752,7 @@ asm void mDoGph_gInf_c::bloom_c::create() {
 #pragma pop
 
 
-/* 800095F8-80009650 0058+00 r=1 e=1 z=0  None .text      remove__Q213mDoGph_gInf_c7bloom_cFv                          */
+/* 800095F8-80009650 0058+00 s=0 e=1 z=0  None .text      remove__Q213mDoGph_gInf_c7bloom_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -764,31 +764,31 @@ asm void mDoGph_gInf_c::bloom_c::remove() {
 
 
 /* ############################################################################################## */
-/* 80451AB4-80451AB8 0004+00 r=1 e=0 z=0  None .sdata2    @4528                                                        */
+/* 80451AB4-80451AB8 0004+00 s=1 e=0 z=0  None .sdata2    @4528                                                        */
 SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4528[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451AB8-80451ABC 0004+00 r=1 e=0 z=0  None .sdata2    None                                                         */
+/* 80451AB8-80451ABC 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80451AB8 = 0x00000040;
 
-/* 80451ABC-80451AC0 0004+00 r=1 e=0 z=0  None .sdata2    @4592                                                        */
+/* 80451ABC-80451AC0 0004+00 s=1 e=0 z=0  None .sdata2    @4592                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4592 = 4.0f;
 
-/* 80451AC0-80451AC8 0004+04 r=1 e=0 z=0  None .sdata2    @4593                                                        */
+/* 80451AC0-80451AC8 0004+04 s=1 e=0 z=0  None .sdata2    @4593                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4593[1 + 1 /* padding */] = {
 	0.00015624999650754035f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451AC8-80451AD0 0008+00 r=1 e=0 z=0  None .sdata2    @4595                                                        */
+/* 80451AC8-80451AD0 0008+00 s=1 e=0 z=0  None .sdata2    @4595                                                        */
 SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4595 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80456B60-80456B68 0004+04 r=1 e=0 z=0  None .sbss2     @4530                                                        */
+/* 80456B60-80456B68 0004+04 s=1 e=0 z=0  None .sbss2     @4530                                                        */
 SECTION_SBSS2 static u8 m_Do_m_Do_graphic__lit_4530[4 + 4 /* padding */];
 
-/* 80009650-8000A160 0B10+00 r=1 e=0 z=0  None .text      draw__Q213mDoGph_gInf_c7bloom_cFv                            */
+/* 80009650-8000A160 0B10+00 s=1 e=0 z=0  None .text      draw__Q213mDoGph_gInf_c7bloom_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +799,7 @@ asm void mDoGph_gInf_c::bloom_c::draw() {
 #pragma pop
 
 
-/* 8000A160-8000A290 0130+00 r=1 e=0 z=0  None .text      retry_captue_frame__FP10view_classP15view_port_classi        */
+/* 8000A160-8000A290 0130+00 s=1 e=0 z=0  None .text      retry_captue_frame__FP10view_classP15view_port_classi        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -810,7 +810,7 @@ asm static void retry_captue_frame(view_class* param_0, view_port_class* param_1
 #pragma pop
 
 
-/* 8000A290-8000A504 0274+00 r=1 e=0 z=0  None .text      motionBlure__FP10view_class                                  */
+/* 8000A290-8000A504 0274+00 s=1 e=0 z=0  None .text      motionBlure__FP10view_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -822,13 +822,13 @@ asm static void motionBlure(view_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451AD0-80451AD4 0004+00 r=1 e=0 z=0  None .sdata2    @4641                                                        */
+/* 80451AD0-80451AD4 0004+00 s=1 e=0 z=0  None .sdata2    @4641                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4641 = -35000.0f;
 
-/* 80451AD4-80451AD8 0004+00 r=1 e=0 z=0  None .sdata2    @4642                                                        */
+/* 80451AD4-80451AD8 0004+00 s=1 e=0 z=0  None .sdata2    @4642                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4642 = -30000.0f;
 
-/* 8000A504-8000A58C 0088+00 r=1 e=0 z=0  None .text      setLight__Fv                                                 */
+/* 8000A504-8000A58C 0088+00 s=1 e=0 z=0  None .text      setLight__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -839,7 +839,7 @@ asm static void setLight() {
 #pragma pop
 
 
-/* 8000A58C-8000A604 0078+00 r=1 e=0 z=0  None .text      drawItem3D__Fv                                               */
+/* 8000A58C-8000A604 0078+00 s=1 e=0 z=0  None .text      drawItem3D__Fv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -851,7 +851,7 @@ asm static void drawItem3D() {
 
 
 /* ############################################################################################## */
-/* 80373DD0-80373DE8 0017+01 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80373DD0-80373DE8 0017+01 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -862,38 +862,38 @@ SECTION_DEAD char const* const stringBase_80373DDF = "F_SP127";
 SECTION_DEAD static char const* const pad_80373DE7 = "";
 #pragma pop
 
-/* 80451AD8-80451ADC 0004+00 r=1 e=0 z=0  None .sdata2    @5023                                                        */
+/* 80451AD8-80451ADC 0004+00 s=1 e=0 z=0  None .sdata2    @5023                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5023 = -1.0f;
 
-/* 80451ADC-80451AE0 0004+00 r=1 e=0 z=0  None .sdata2    @5024                                                        */
+/* 80451ADC-80451AE0 0004+00 s=1 e=0 z=0  None .sdata2    @5024                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5024 = 0.5f;
 
-/* 80451AE0-80451AE4 0004+00 r=1 e=0 z=0  None .sdata2    @5025                                                        */
+/* 80451AE0-80451AE4 0004+00 s=1 e=0 z=0  None .sdata2    @5025                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5025 = -0.5f;
 
-/* 80451AE4-80451AE8 0004+00 r=1 e=0 z=0  None .sdata2    @5026                                                        */
+/* 80451AE4-80451AE8 0004+00 s=1 e=0 z=0  None .sdata2    @5026                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5026 = 19.0f / 14.0f;
 
-/* 80451AE8-80451AEC 0004+00 r=1 e=0 z=0  None .sdata2    @5027                                                        */
+/* 80451AE8-80451AEC 0004+00 s=1 e=0 z=0  None .sdata2    @5027                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5027 = 100000.0f;
 
-/* 80451AEC-80451AF0 0004+00 r=1 e=0 z=0  None .sdata2    @5028                                                        */
+/* 80451AEC-80451AF0 0004+00 s=1 e=0 z=0  None .sdata2    @5028                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5028 = -2.0f;
 
-/* 80451AF0-80451AF4 0004+00 r=1 e=0 z=0  None .sdata2    @5029                                                        */
+/* 80451AF0-80451AF4 0004+00 s=1 e=0 z=0  None .sdata2    @5029                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5029 = -100000.0f;
 
-/* 80451AF4-80451AF8 0004+00 r=1 e=0 z=0  None .sdata2    @5030                                                        */
+/* 80451AF4-80451AF8 0004+00 s=1 e=0 z=0  None .sdata2    @5030                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5030 = 304.0f;
 
-/* 80451AF8-80451B00 0004+04 r=1 e=0 z=0  None .sdata2    @5031                                                        */
+/* 80451AF8-80451B00 0004+04 s=1 e=0 z=0  None .sdata2    @5031                                                        */
 SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5031[1 + 1 /* padding */] = {
 	224.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8000A604-8000B118 0B14+00 r=1 e=1 z=0  None .text      mDoGph_Painter__Fv                                           */
+/* 8000A604-8000B118 0B14+00 s=0 e=1 z=0  None .text      mDoGph_Painter__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -904,7 +904,7 @@ asm void mDoGph_Painter() {
 #pragma pop
 
 
-/* 8000B118-8000B174 005C+00 r=1 e=1 z=0  None .text      __dt__13J2DOrthoGraphFv                                      */
+/* 8000B118-8000B174 005C+00 s=0 e=1 z=0  None .text      __dt__13J2DOrthoGraphFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +915,7 @@ asm J2DOrthoGraph::~J2DOrthoGraph() {
 #pragma pop
 
 
-/* 8000B174-8000B1D0 005C+00 r=2 e=2 z=0  None .text      mDoGph_Create__Fv                                            */
+/* 8000B174-8000B1D0 005C+00 s=0 e=2 z=0  None .text      mDoGph_Create__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +926,7 @@ asm void mDoGph_Create() {
 #pragma pop
 
 
-/* 8000B1D0-8000B1E4 0014+00 r=1 e=1 z=0  None .text      __sinit_m_Do_graphic_cpp                                     */
+/* 8000B1D0-8000B1E4 0014+00 s=0 e=1 z=0  None .text      __sinit_m_Do_graphic_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -937,7 +937,7 @@ extern "C" asm void __sinit_m_Do_graphic_cpp() {
 #pragma pop
 
 
-/* 8000B1E4-8000B1EC 0008+00 r=1 e=1 z=0  None .text      getAtnActorID__9daPy_py_cCFv                                 */
+/* 8000B1E4-8000B1EC 0008+00 s=0 e=1 z=0  None .text      getAtnActorID__9daPy_py_cCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

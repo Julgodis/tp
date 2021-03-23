@@ -13,7 +13,7 @@ lbl_80C0F7EC:
 /* 80C0F818 0000002C  A8 05 00 08 */	lha r0, 8(r5)
 /* 80C0F81C 00000030  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 80C0F820 00000034  40 82 00 14 */	bne lbl_80C0F834
-/* 80C0F824 00000038  4B FF 06 55 */	bl getAttentionOffsetY__9daPy_py_cFv
+/* 80C0F824 00000038  4B FF 06 55 */	bl _unresolved
 /* 80C0F828 0000003C  C0 01 00 0C */	lfs f0, 0xc(r1)
 /* 80C0F82C 00000040  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80C0F830 00000044  D0 01 00 0C */	stfs f0, 0xc(r1)

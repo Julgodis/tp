@@ -5,14 +5,14 @@ lbl_8071FBC4:
 /* 8071FBD0 0000000C  C0 03 06 94 */	lfs f0, 0x694(r3)
 /* 8071FBD4 00000010  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8071FBD8 00000000  40 80 00 38 */	bge lbl_8071FC10
-/* 8071FBDC 00000004  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8071FBE0 00000008  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8071FBDC 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8071FBE0 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8071FBE4 0000000C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8071FBE8 00000010  4B FF FD 51 */	bl fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8071FBE8 00000010  4B FF FD 51 */	bl _unresolved
 /* 8071FBEC 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 8071FBF0 00000018  40 82 00 20 */	bne lbl_8071FC10
-/* 8071FBF4 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8071FBF8 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8071FBF4 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8071FBF8 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8071FBFC 00000024  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 8071FC00 00000028  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 8071FC04 0000002C  40 82 00 0C */	bne lbl_8071FC10

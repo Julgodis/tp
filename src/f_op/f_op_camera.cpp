@@ -73,7 +73,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 8001E140-8001E180 0040+00 r=1 e=0 z=0  None .text      fopCam_Draw__FP12camera_class                                */
+/* 8001E140-8001E180 0040+00 s=1 e=0 z=0  None .text      fopCam_Draw__FP12camera_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ asm static void fopCam_Draw(camera_class* param_0) {
 #pragma pop
 
 
-/* 8001E180-8001E1C8 0048+00 r=1 e=0 z=0  None .text      fopCam_Execute__FP12camera_class                             */
+/* 8001E180-8001E1C8 0048+00 s=1 e=0 z=0  None .text      fopCam_Execute__FP12camera_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ asm static void fopCam_Execute(camera_class* param_0) {
 #pragma pop
 
 
-/* 8001E1C8-8001E21C 0054+00 r=1 e=0 z=0  None .text      fopCam_IsDelete__FP12camera_class                            */
+/* 8001E1C8-8001E21C 0054+00 s=1 e=0 z=0  None .text      fopCam_IsDelete__FP12camera_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ asm static void fopCam_IsDelete(camera_class* param_0) {
 #pragma pop
 
 
-/* 8001E21C-8001E270 0054+00 r=1 e=0 z=0  None .text      fopCam_Delete__FP12camera_class                              */
+/* 8001E21C-8001E270 0054+00 s=1 e=0 z=0  None .text      fopCam_Delete__FP12camera_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ asm static void fopCam_Delete(camera_class* param_0) {
 #pragma pop
 
 
-/* 8001E270-8001E308 0098+00 r=1 e=0 z=0  None .text      fopCam_Create__FPv                                           */
+/* 8001E270-8001E308 0098+00 s=1 e=0 z=0  None .text      fopCam_Create__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm static void fopCam_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3860-803A3878 0014+04 r=2 e=2 z=0  None .data      g_fopCam_Method                                              */
+/* 803A3860-803A3878 0014+04 s=0 e=2 z=0  None .data      g_fopCam_Method                                              */
 SECTION_DATA void* g_fopCam_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fopCam_Create__FPv,
 	/* 1    */ (void*)fopCam_Delete__FP12camera_class,

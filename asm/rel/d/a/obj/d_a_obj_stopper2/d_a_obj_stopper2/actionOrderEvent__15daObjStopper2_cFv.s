@@ -9,15 +9,15 @@ lbl_80CEF98C:
 /* 80CEF9A8 0000001C  40 82 00 48 */	bne lbl_80CEF9F0
 /* 80CEF9AC 00000020  38 00 00 02 */	li r0, 2
 /* 80CEF9B0 00000024  98 1F 05 86 */	stb r0, 0x586(r31)
-/* 80CEF9B4 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CEF9B8 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CEF9B4 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CEF9B8 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CEF9BC 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80CEF9C0 00000034  3C 80 00 00 */	lis r4, l_staffName@ha /* 80CEFF38 */
-/* 80CEF9C4 00000038  38 84 00 00 */	addi r4, r4, l_staffName@l /* 80CEFF38 */
+/* 80CEF9C0 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CEF9C4 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CEF9C8 0000003C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CEF9CC 00000040  38 A0 00 00 */	li r5, 0
 /* 80CEF9D0 00000044  38 C0 00 00 */	li r6, 0
-/* 80CEF9D4 00000048  4B FF F9 45 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80CEF9D4 00000048  4B FF F9 45 */	bl _unresolved
 /* 80CEF9D8 0000004C  90 7F 05 78 */	stw r3, 0x578(r31)
 /* 80CEF9DC 00000050  38 00 00 01 */	li r0, 1
 /* 80CEF9E0 00000054  98 1F 05 88 */	stb r0, 0x588(r31)
@@ -37,7 +37,7 @@ lbl_80CEF9F0:
 /* 80CEFA14 00000024  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80CEFA18 00000028  38 E0 00 01 */	li r7, 1
 /* 80CEFA1C 0000002C  39 00 00 00 */	li r8, 0
-/* 80CEFA20 00000030  4B FF F8 F9 */	bl fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs
+/* 80CEFA20 00000030  4B FF F8 F9 */	bl _unresolved
 /* 80CEFA24 00000034  48 00 00 1C */	b lbl_80CEFA40
 lbl_80CEFA28:
 /* 80CEFA28 00000000  88 BF 05 85 */	lbz r5, 0x585(r31)
@@ -45,7 +45,7 @@ lbl_80CEFA28:
 /* 80CEFA30 00000008  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80CEFA34 0000000C  38 E0 00 00 */	li r7, 0
 /* 80CEFA38 00000010  39 00 00 01 */	li r8, 1
-/* 80CEFA3C 00000014  4B FF F8 DD */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80CEFA3C 00000014  4B FF F8 DD */	bl _unresolved
 lbl_80CEFA40:
 /* 80CEFA40 00000000  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80CEFA44 00000004  60 00 00 02 */	ori r0, r0, 2

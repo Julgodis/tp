@@ -18,7 +18,6 @@ struct _GXRenderModeObj {
 };
 
 struct mDoGph_gInf_c {
-	/* 800080D0 */ void fadeOut(f32);
 	/* 80878534 */ void fadeIn(f32);
 	/* 80878558 */ void isFade();
 	/* 80878D10 */ void setFrameRate(u16);
@@ -40,12 +39,9 @@ struct dComIfG_play_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daMP_c {
-	/* 80031A78 */ void daMP_c_Get_MovieRestFrame();
-	/* 80031AA4 */ void daMP_c_Set_PercentMovieVolume(f32);
 	/* 80878BB8 */ void daMP_c_Get_arg_demoNo();
 	/* 80878C04 */ void daMP_c_Get_arg_movieNo();
 	/* 80878C28 */ void daMP_c_Init();
@@ -75,25 +71,7 @@ struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
-	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 	/* 80878E34 */ void set2DOpa(dDlst_base_c*);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct JASMixMode {
-};
-
-struct JASDriver {
-	/* 8029C9DC */ void registerMixCallback(s16* (*)(s32), JASMixMode);
-	/* 8029E180 */ void getOutputMode();
-};
-
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 // 
@@ -108,7 +86,7 @@ static void daMP_PopReadedBuffer2(); // 2
 static void daMP_PushReadedBuffer2(void*); // 2
 static void daMP_ReadThreadStart(); // 2
 static void daMP_ReadThreadCancel(); // 2
-static void daMP_Reader(void*); // 2
+void daMP_Reader(void*); // 2
 static void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer*); // 2
 static void daMP_CreateReadThread(s32); // 2
 static void daMP_PopFreeTextureSet(); // 2
@@ -116,8 +94,8 @@ static void daMP_PushFreeTextureSet(void*); // 2
 static void daMP_PopDecodedTextureSet(s32); // 2
 static void daMP_PushDecodedTextureSet(void*); // 2
 static void daMP_VideoDecode(daMP_THPReadBuffer*); // 2
-static void daMP_VideoDecoder(void*); // 2
-static void daMP_VideoDecoderForOnMemory(void*); // 2
+void daMP_VideoDecoder(void*); // 2
+void daMP_VideoDecoderForOnMemory(void*); // 2
 static void daMP_CreateVideoDecodeThread(s32, u8*); // 2
 static void daMP_VideoDecodeThreadStart(); // 2
 static void daMP_VideoDecodeThreadCancel(); // 2
@@ -126,8 +104,8 @@ static void daMP_PushFreeAudioBuffer(void*); // 2
 static void daMP_PopDecodedAudioBuffer(s32); // 2
 static void daMP_PushDecodedAudioBuffer(void*); // 2
 static void daMP_AudioDecode(daMP_THPReadBuffer*); // 2
-static void daMP_AudioDecoder(void*); // 2
-static void daMP_AudioDecoderForOnMemory(void*); // 2
+void daMP_AudioDecoder(void*); // 2
+void daMP_AudioDecoderForOnMemory(void*); // 2
 static void daMP_CreateAudioDecodeThread(s32, u8*); // 2
 static void daMP_AudioDecodeThreadStart(); // 2
 static void daMP_AudioDecodeThreadCancel(); // 2
@@ -135,7 +113,7 @@ static void daMP_THPGXRestore(); // 2
 static void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const*); // 2
 static void daMP_THPGXYuv2RgbDraw(u8*, u8*, u8*, s16, s16, s16, s16, s16, s16); // 2
 static void daMP_MixAudio(s16*, s16*, u32); // 2
-static void daMP_audioCallbackWithMSound(s32); // 2
+void daMP_audioCallbackWithMSound(s32); // 2
 static void daMP_audioInitWithMSound(); // 2
 static void daMP_audioQuitWithMSound(); // 2
 static void daMP_PushUsedTextureSet(void*); // 2
@@ -149,14 +127,14 @@ static void daMP_THPPlayerSetBuffer(u8*); // 2
 static void daMP_InitAllMessageQueue(); // 2
 static void daMP_ProperTimingForStart(); // 2
 static void daMP_ProperTimingForGettingNextFrame(); // 2
-static void daMP_PlayControl(u32); // 2
+void daMP_PlayControl(u32); // 2
 static void daMP_WaitUntilPrepare(); // 2
 static void daMP_PrepareReady(int); // 2
 static void daMP_THPPlayerPrepare(s32, s32, s32); // 2
 static void daMP_THPPlayerDrawDone(); // 2
-static void daMP_THPPlayerPlay(); // 2
+void daMP_THPPlayerPlay(); // 2
 static void daMP_THPPlayerStop(); // 2
-static void daMP_THPPlayerPause(); // 2
+void daMP_THPPlayerPause(); // 2
 static void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const*, u32, u32, u32, u32); // 2
 static void daMP_THPPlayerGetVideoInfo(THPVideoInfo*); // 2
 static void daMP_THPPlayerGetAudioInfo(THPAudioInfo*); // 2
@@ -169,15 +147,15 @@ static void JKRFree(void*); // 2
 static void daMP_ActivePlayer_Main(); // 2
 static void daMP_ActivePlayer_Draw(); // 2
 static void dComIfGp_event_reset(); // 2
-static void daMP_Get_MovieRestFrame(); // 2
-static void daMP_Set_PercentMovieVolume(f32); // 2
+void daMP_Get_MovieRestFrame(); // 2
+void daMP_Set_PercentMovieVolume(f32); // 2
 static void fopAcM_GetParam(void const*); // 2
 static void fpcM_GetParam(void const*); // 2
 static void dComIfGd_set2DOpa(dDlst_base_c*); // 2
 static void fopAcM_OnCondition(fopAc_ac_c*, u32); // 2
 static void* operator new(u32, void*); // 2
 static void fopAcM_CheckCondition(fopAc_ac_c*, u32); // 2
-static void daMP_Callback_Dummy(daMP_c*); // 2
+void daMP_Callback_Dummy(daMP_c*); // 2
 
 extern "C" static void THPAudioDecode(); // 1
 extern "C" static void __THPAudioGetNewSample(); // 1
@@ -215,7 +193,7 @@ extern "C" static void daMP_PopReadedBuffer2__Fv(); // 1
 extern "C" static void daMP_PushReadedBuffer2__FPv(); // 1
 extern "C" static void daMP_ReadThreadStart__Fv(); // 1
 extern "C" static void daMP_ReadThreadCancel__Fv(); // 1
-extern "C" static void daMP_Reader__FPv(); // 1
+extern "C" void daMP_Reader__FPv(); // 1
 extern "C" static void daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer(); // 1
 extern "C" static void daMP_CreateReadThread__Fl(); // 1
 extern "C" static void daMP_PopFreeTextureSet__Fv(); // 1
@@ -223,8 +201,8 @@ extern "C" static void daMP_PushFreeTextureSet__FPv(); // 1
 extern "C" static void daMP_PopDecodedTextureSet__Fl(); // 1
 extern "C" static void daMP_PushDecodedTextureSet__FPv(); // 1
 extern "C" static void daMP_VideoDecode__FP18daMP_THPReadBuffer(); // 1
-extern "C" static void daMP_VideoDecoder__FPv(); // 1
-extern "C" static void daMP_VideoDecoderForOnMemory__FPv(); // 1
+extern "C" void daMP_VideoDecoder__FPv(); // 1
+extern "C" void daMP_VideoDecoderForOnMemory__FPv(); // 1
 extern "C" static void daMP_CreateVideoDecodeThread__FlPUc(); // 1
 extern "C" static void daMP_VideoDecodeThreadStart__Fv(); // 1
 extern "C" static void daMP_VideoDecodeThreadCancel__Fv(); // 1
@@ -233,8 +211,8 @@ extern "C" static void daMP_PushFreeAudioBuffer__FPv(); // 1
 extern "C" static void daMP_PopDecodedAudioBuffer__Fl(); // 1
 extern "C" static void daMP_PushDecodedAudioBuffer__FPv(); // 1
 extern "C" static void daMP_AudioDecode__FP18daMP_THPReadBuffer(); // 1
-extern "C" static void daMP_AudioDecoder__FPv(); // 1
-extern "C" static void daMP_AudioDecoderForOnMemory__FPv(); // 1
+extern "C" void daMP_AudioDecoder__FPv(); // 1
+extern "C" void daMP_AudioDecoderForOnMemory__FPv(); // 1
 extern "C" static void daMP_CreateAudioDecodeThread__FlPUc(); // 1
 extern "C" static void daMP_AudioDecodeThreadStart__Fv(); // 1
 extern "C" static void daMP_AudioDecodeThreadCancel__Fv(); // 1
@@ -246,7 +224,7 @@ extern "C" static void GXEnd(); // 1
 extern "C" static void GXTexCoord2u16(); // 1
 extern "C" static void GXPosition3s16(); // 1
 extern "C" static void daMP_MixAudio__FPsPsUl(); // 1
-extern "C" static void daMP_audioCallbackWithMSound__Fl(); // 1
+extern "C" void daMP_audioCallbackWithMSound__Fl(); // 1
 extern "C" static void daMP_audioInitWithMSound__Fv(); // 1
 extern "C" static void daMP_audioQuitWithMSound__Fv(); // 1
 extern "C" static void daMP_PushUsedTextureSet__FPv(); // 1
@@ -260,14 +238,14 @@ extern "C" static void daMP_THPPlayerSetBuffer__FPUc(); // 1
 extern "C" static void daMP_InitAllMessageQueue__Fv(); // 1
 extern "C" static void daMP_ProperTimingForStart__Fv(); // 1
 extern "C" static void daMP_ProperTimingForGettingNextFrame__Fv(); // 1
-extern "C" static void daMP_PlayControl__FUl(); // 1
+extern "C" void daMP_PlayControl__FUl(); // 1
 extern "C" static void daMP_WaitUntilPrepare__Fv(); // 1
 extern "C" static void daMP_PrepareReady__Fi(); // 1
 extern "C" static void daMP_THPPlayerPrepare__Flll(); // 1
 extern "C" static void daMP_THPPlayerDrawDone__Fv(); // 1
-extern "C" static void daMP_THPPlayerPlay__Fv(); // 1
+extern "C" void daMP_THPPlayerPlay__Fv(); // 1
 extern "C" static void daMP_THPPlayerStop__Fv(); // 1
-extern "C" static void daMP_THPPlayerPause__Fv(); // 1
+extern "C" void daMP_THPPlayerPause__Fv(); // 1
 extern "C" static void daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl(); // 1
 extern "C" void fadeIn__13mDoGph_gInf_cFf(); // 1
 extern "C" void isFade__13mDoGph_gInf_cFv(); // 1
@@ -285,8 +263,8 @@ extern "C" static void daMP_ActivePlayer_Main__Fv(); // 1
 extern "C" static void daMP_ActivePlayer_Draw__Fv(); // 1
 extern "C" static void dComIfGp_event_reset__Fv(); // 1
 extern "C" void getEvent__14dComIfG_play_cFv(); // 1
-extern "C" static void daMP_Get_MovieRestFrame__Fv(); // 1
-extern "C" static void daMP_Set_PercentMovieVolume__Ff(); // 1
+extern "C" void daMP_Get_MovieRestFrame__Fv(); // 1
+extern "C" void daMP_Set_PercentMovieVolume__Ff(); // 1
 extern "C" void daMP_c_Get_arg_demoNo__6daMP_cFv(); // 1
 extern "C" static void fopAcM_GetParam__FPCv(); // 1
 extern "C" static void fpcM_GetParam__FPCv(); // 1
@@ -309,24 +287,38 @@ extern "C" static void fopAcM_CheckCondition__FP10fopAc_ac_cUl(); // 1
 extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c(); // 1
-extern "C" static void daMP_Callback_Dummy__FP6daMP_c(); // 1
+extern "C" void daMP_Callback_Dummy__FP6daMP_c(); // 1
 extern "C" void __sinit_d_a_movie_player_cpp(); // 1
 extern "C" void __ct__16daMP_Dlst_base_cFv(); // 1
 extern "C" void __ct__12dDlst_base_cFv(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
+extern "C" extern u8 const __THPJpegNaturalOrder[80];
+extern "C" extern u8 const __THPAANScaleFactor[64];
+extern "C" extern u8 const lit_3998[8];
 extern "C" extern u32 const lit_4205;
 extern "C" extern u32 const lit_4206;
 extern "C" extern u32 const lit_4207;
 extern "C" extern u32 const lit_4208;
 extern "C" extern u32 const lit_4209;
+extern "C" extern u32 const lit_4465;
 extern "C" extern u32 const lit_4466;
 extern "C" extern u8 const lit_4779[8];
 extern "C" extern u32 const lit_4782;
 extern "C" extern u32 const lit_4785;
 extern "C" extern u32 const lit_4788;
+extern "C" extern u8 const lit_4809[4];
 extern "C" extern u32 const lit_4810;
+extern "C" extern u32 const lit_4811[1 + 1 /* padding */];
+extern "C" extern u8 const lit_4814[8];
+extern "C" extern u32 const lit_4894;
+extern "C" extern u32 const lit_4983;
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* g_profile_MOVIE_PLAYER[12];
+extern "C" extern u8 daMP_VolumeTable[256];
+extern "C" extern u8 daMP_METHODS[32];
+extern "C" extern u8 g_profile_MOVIE_PLAYER[48];
+extern "C" extern void* __vt__16daMP_Dlst_base_c[3];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 lit_1109[1 + 3 /* padding */];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
 extern "C" extern u8 lit_1104[1 + 3 /* padding */];
@@ -343,28 +335,72 @@ extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
 extern "C" extern u8 lit_1009[1 + 3 /* padding */];
 extern "C" extern u8 THPStatistics[1120];
+extern "C" extern u8 Ydchuff[4];
+extern "C" extern u8 Udchuff[4];
+extern "C" extern u8 Vdchuff[4];
+extern "C" extern u8 Yachuff[4];
+extern "C" extern u8 Uachuff[4];
+extern "C" extern u8 Vachuff[4 + 8 /* padding */];
 extern "C" extern u8 __THPIDCTWorkspace[256];
+extern "C" extern u8 __THPHuffmanBits[4];
+extern "C" extern u8 __THPHuffmanSizeTab[4];
+extern "C" extern u8 __THPHuffmanCodeTab[4];
 extern "C" extern u8 Gbase[4 + 16 /* padding */];
 extern "C" extern u8 Gwid[4];
 extern "C" extern u8 Gq[4];
 extern "C" extern u8 __THPLCWork512[12];
 extern "C" extern u8 __THPLCWork640[12];
+extern "C" extern u8 __THPOldGQR5[4];
+extern "C" extern u8 __THPOldGQR6[4];
+extern "C" extern u8 __THPWorkArea[4];
+extern "C" extern u8 __THPMCUBuffer[24];
+extern "C" extern u8 __THPInfo[4];
 extern "C" extern u8 __THPInitFlag[4 + 4 /* padding */];
+extern "C" extern u8 daMP_ActivePlayer[464];
+extern "C" extern u8 daMP_ReadThreadCreated[4];
+extern "C" extern u8 daMP_FreeReadBufferQueue[32];
+extern "C" extern u8 daMP_ReadedBufferQueue[32];
+extern "C" extern u8 daMP_ReadedBufferQueue2[32];
 extern "C" extern u8 daMP_FreeReadBufferMessage[40];
 extern "C" extern u8 daMP_ReadedBufferMessage[40];
 extern "C" extern u8 daMP_ReadedBufferMessage2[40 + 4 /* padding */];
+extern "C" extern u8 daMP_ReadThread[792];
 extern "C" extern u8 daMP_ReadThreadStack[8192];
+extern "C" extern u8 daMP_VideoDecodeThreadCreated[4 + 4 /* padding */];
+extern "C" extern u8 daMP_VideoDecodeThread[792];
+extern "C" extern u8 daMP_VideoDecodeThreadStack[409600];
+extern "C" extern u8 daMP_FreeTextureSetQueue[32];
+extern "C" extern u8 daMP_DecodedTextureSetQueue[32];
 extern "C" extern u8 daMP_FreeTextureSetMessage[12];
 extern "C" extern u8 daMP_DecodedTextureSetMessage[12];
+extern "C" extern u8 daMP_First[4];
+extern "C" extern u8 daMP_AudioDecodeThreadCreated[4];
+extern "C" extern u8 daMP_AudioDecodeThread[792];
 extern "C" extern u8 daMP_AudioDecodeThreadStack[409600];
+extern "C" extern u8 daMP_FreeAudioBufferQueue[32];
+extern "C" extern u8 daMP_DecodedAudioBufferQueue[32];
 extern "C" extern u8 daMP_FreeAudioBufferMessage[12];
 extern "C" extern u8 daMP_DecodedAudioBufferMessage[12];
+extern "C" extern u8 daMP_Initialized[4 + 20 /* padding */];
+extern "C" extern u8 daMP_WorkBuffer[64];
+extern "C" extern u8 daMP_PrepareReadyQueue[32];
+extern "C" extern u8 daMP_UsedTextureSetQueue[32];
+extern "C" extern u8 daMP_PrepareReadyMessage[4];
 extern "C" extern u8 daMP_UsedTextureSetMessage[12];
+extern "C" extern u8 daMP_OldVIPostCallback[4];
+extern "C" extern u8 daMP_SoundBufferIndex[4];
 extern "C" extern u8 daMP_OldAIDCallback[4];
 extern "C" extern u8 daMP_LastAudioBuffer[4];
 extern "C" extern u8 daMP_CurAudioBuffer[4];
 extern "C" extern u8 daMP_AudioSystem[4 + 24 /* padding */];
+extern "C" extern u8 daMP_SoundBuffer[4480];
+extern "C" extern u8 daMP_videoInfo[12];
 extern "C" extern u8 daMP_audioInfo[16];
+extern "C" extern u8 daMP_DrawPosX[4];
+extern "C" extern u8 daMP_DrawPosY[4];
+extern "C" extern u8 daMP_buffer[4];
+extern "C" extern u8 daMP_Fail_alloc[4];
+extern "C" extern u8 daMP_c_Dlst_base[4];
 extern "C" extern u8 data_80945B10[4];
 extern "C" extern u8 data_80945B14[4];
 extern "C" extern u8 data_80945B18[4];
@@ -395,129 +431,14 @@ extern "C" extern u8 data_80945B70[4];
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void fopOvlpM_IsPeek(); // 2
-void cAPICPad_ANY_BUTTON(u32); // 2
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv(); // 1
-extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
-extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode(); // 1
-extern "C" void getOutputMode__9JASDriverFv(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void PPCMfhid2(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void DCZeroRange(); // 1
-extern "C" void LCEnable(); // 1
-extern "C" void LCDisable(); // 1
-extern "C" void LCStoreData(); // 1
-extern "C" void LCQueueWait(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void DVDCancel(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIGetNextField(); // 1
-extern "C" void VIGetTvFormat(); // 1
-extern "C" void AIGetDSPSampleRate(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetPixelFmt(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_clearColor[4];
-extern "C" extern u8 struct_80450BE4[4];
-extern "C" extern u8 m_myObj__6daMP_c[4];
-extern "C" extern u8 sManager__10JFWDisplay[4];
-extern "C" extern u8 sManager__8JUTVideo[4];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 80872758-80872BF0 0498+00 r=1 e=0 z=0  None .text      THPAudioDecode                                               */
+/* 80872758-80872BF0 0498+00 s=1 e=0 z=0  None .text      THPAudioDecode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -528,7 +449,7 @@ extern "C" asm static void THPAudioDecode() {
 #pragma pop
 
 
-/* 80872BF0-80872C80 0090+00 r=1 e=0 z=0  None .text      __THPAudioGetNewSample                                       */
+/* 80872BF0-80872C80 0090+00 s=1 e=0 z=0  None .text      __THPAudioGetNewSample                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +460,7 @@ extern "C" asm static void __THPAudioGetNewSample() {
 #pragma pop
 
 
-/* 80872C80-80872CBC 003C+00 r=1 e=0 z=0  None .text      __THPAudioInitialize                                         */
+/* 80872C80-80872CBC 003C+00 s=1 e=0 z=0  None .text      __THPAudioInitialize                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,11 +471,7 @@ extern "C" asm static void __THPAudioInitialize() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 808795A0-808795A4 0001+03 r=15 e=0 z=0  None .bss       @1109                                                        */
-static u8 lit_1109[1 + 3 /* padding */];
-
-/* 80872CBC-80872F00 0244+00 r=1 e=0 z=0  None .text      THPVideoDecode                                               */
+/* 80872CBC-80872F00 0244+00 s=1 e=0 z=0  None .text      THPVideoDecode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,113 +482,7 @@ extern "C" asm static void THPVideoDecode() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 808795A4-808795A8 0001+03 r=0 e=0 z=0  None .bss       @1107                                                        */
-u8 lit_1107[1 + 3 /* padding */];
-
-/* 808795A8-808795AC 0001+03 r=0 e=0 z=0  None .bss       @1105                                                        */
-u8 lit_1105[1 + 3 /* padding */];
-
-/* 808795AC-808795B0 0001+03 r=0 e=0 z=0  None .bss       @1104                                                        */
-u8 lit_1104[1 + 3 /* padding */];
-
-/* 808795B0-808795B4 0001+03 r=0 e=0 z=0  None .bss       @1099                                                        */
-u8 lit_1099[1 + 3 /* padding */];
-
-/* 808795B4-808795B8 0001+03 r=0 e=0 z=0  None .bss       @1097                                                        */
-u8 lit_1097[1 + 3 /* padding */];
-
-/* 808795B8-808795BC 0001+03 r=0 e=0 z=0  None .bss       @1095                                                        */
-u8 lit_1095[1 + 3 /* padding */];
-
-/* 808795BC-808795C0 0001+03 r=0 e=0 z=0  None .bss       @1094                                                        */
-u8 lit_1094[1 + 3 /* padding */];
-
-/* 808795C0-808795C4 0001+03 r=0 e=0 z=0  None .bss       @1057                                                        */
-u8 lit_1057[1 + 3 /* padding */];
-
-/* 808795C4-808795C8 0001+03 r=0 e=0 z=0  None .bss       @1055                                                        */
-u8 lit_1055[1 + 3 /* padding */];
-
-/* 808795C8-808795CC 0001+03 r=0 e=0 z=0  None .bss       @1053                                                        */
-u8 lit_1053[1 + 3 /* padding */];
-
-/* 808795CC-808795D0 0001+03 r=0 e=0 z=0  None .bss       @1052                                                        */
-u8 lit_1052[1 + 3 /* padding */];
-
-/* 808795D0-808795D4 0001+03 r=0 e=0 z=0  None .bss       @1014                                                        */
-u8 lit_1014[1 + 3 /* padding */];
-
-/* 808795D4-808795D8 0001+03 r=0 e=0 z=0  None .bss       @1012                                                        */
-u8 lit_1012[1 + 3 /* padding */];
-
-/* 808795D8-808795DC 0001+03 r=0 e=0 z=0  None .bss       @1010                                                        */
-u8 lit_1010[1 + 3 /* padding */];
-
-/* 808795DC-808795E0 0001+03 r=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 3 /* padding */];
-
-/* 808795E0-80879A40 0460+00 r=0 e=0 z=0  None .bss       THPStatistics                                                */
-u8 THPStatistics[1120];
-
-/* 80879A40-80879A44 0004+00 r=1 e=0 z=0  None .bss       Ydchuff                                                      */
-static u8 Ydchuff[4];
-
-/* 80879A44-80879A48 0004+00 r=1 e=0 z=0  None .bss       Udchuff                                                      */
-static u8 Udchuff[4];
-
-/* 80879A48-80879A4C 0004+00 r=1 e=0 z=0  None .bss       Vdchuff                                                      */
-static u8 Vdchuff[4];
-
-/* 80879A4C-80879A50 0004+00 r=1 e=0 z=0  None .bss       Yachuff                                                      */
-static u8 Yachuff[4];
-
-/* 80879A50-80879A54 0004+00 r=1 e=0 z=0  None .bss       Uachuff                                                      */
-static u8 Uachuff[4];
-
-/* 80879A54-80879A60 0004+08 r=1 e=0 z=0  None .bss       Vachuff                                                      */
-static u8 Vachuff[4 + 8 /* padding */];
-
-/* 80879A60-80879B60 0100+00 r=0 e=0 z=0  None .bss       __THPIDCTWorkspace                                           */
-u8 __THPIDCTWorkspace[256];
-
-/* 80879B60-80879B64 0004+00 r=1 e=0 z=0  None .bss       __THPHuffmanBits                                             */
-static u8 __THPHuffmanBits[4];
-
-/* 80879B64-80879B68 0004+00 r=2 e=0 z=0  None .bss       __THPHuffmanSizeTab                                          */
-static u8 __THPHuffmanSizeTab[4];
-
-/* 80879B68-80879B6C 0004+00 r=1 e=0 z=0  None .bss       __THPHuffmanCodeTab                                          */
-static u8 __THPHuffmanCodeTab[4];
-
-/* 80879B6C-80879B80 0004+10 r=0 e=0 z=0  None .bss       Gbase                                                        */
-u8 Gbase[4 + 16 /* padding */];
-
-/* 80879B80-80879B84 0004+00 r=0 e=0 z=0  None .bss       Gwid                                                         */
-u8 Gwid[4];
-
-/* 80879B84-80879B88 0004+00 r=0 e=0 z=0  None .bss       Gq                                                           */
-u8 Gq[4];
-
-/* 80879B88-80879B94 000C+00 r=0 e=0 z=0  None .bss       __THPLCWork512                                               */
-u8 __THPLCWork512[12];
-
-/* 80879B94-80879BA0 000C+00 r=0 e=0 z=0  None .bss       __THPLCWork640                                               */
-u8 __THPLCWork640[12];
-
-/* 80879BA0-80879BA4 0004+00 r=2 e=0 z=0  None .bss       __THPOldGQR5                                                 */
-static u8 __THPOldGQR5[4];
-
-/* 80879BA4-80879BA8 0004+00 r=2 e=0 z=0  None .bss       __THPOldGQR6                                                 */
-static u8 __THPOldGQR6[4];
-
-/* 80879BA8-80879BAC 0004+00 r=1 e=0 z=0  None .bss       __THPWorkArea                                                */
-static u8 __THPWorkArea[4];
-
-/* 80879BAC-80879BC4 0018+00 r=1 e=0 z=0  None .bss       __THPMCUBuffer                                               */
-static u8 __THPMCUBuffer[24];
-
-/* 80872F00-80872F48 0048+00 r=1 e=0 z=0  None .text      __THPSetupBuffers                                            */
+/* 80872F00-80872F48 0048+00 s=1 e=0 z=0  None .text      __THPSetupBuffers                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,11 +493,7 @@ extern "C" asm static void __THPSetupBuffers() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80879BC4-80879BC8 0004+00 r=5 e=0 z=0  None .bss       __THPInfo                                                    */
-static u8 __THPInfo[4];
-
-/* 80872F48-80873088 0140+00 r=1 e=0 z=0  None .text      __THPReadFrameHeader                                         */
+/* 80872F48-80873088 0140+00 s=1 e=0 z=0  None .text      __THPReadFrameHeader                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -697,7 +504,7 @@ extern "C" asm static void __THPReadFrameHeader() {
 #pragma pop
 
 
-/* 80873088-808731B4 012C+00 r=1 e=0 z=0  None .text      __THPReadScaneHeader                                         */
+/* 80873088-808731B4 012C+00 s=1 e=0 z=0  None .text      __THPReadScaneHeader                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -708,30 +515,7 @@ extern "C" asm static void __THPReadScaneHeader() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80879034-80879084 0050+00 r=8 e=0 z=0  None .rodata    __THPJpegNaturalOrder                                        */
-SECTION_RODATA static u8 const __THPJpegNaturalOrder[80] = {
-	0x00, 0x01, 0x08, 0x10, 0x09, 0x02, 0x03, 0x0A, 0x11, 0x18, 0x20, 0x19, 0x12, 0x0B, 0x04, 0x05,
-	0x0C, 0x13, 0x1A, 0x21, 0x28, 0x30, 0x29, 0x22, 0x1B, 0x14, 0x0D, 0x06, 0x07, 0x0E, 0x15, 0x1C,
-	0x23, 0x2A, 0x31, 0x38, 0x39, 0x32, 0x2B, 0x24, 0x1D, 0x16, 0x0F, 0x17, 0x1E, 0x25, 0x2C, 0x33,
-	0x3A, 0x3B, 0x34, 0x2D, 0x26, 0x1F, 0x27, 0x2E, 0x35, 0x3C, 0x3D, 0x36, 0x2F, 0x37, 0x3E, 0x3F,
-	0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F,
-};
-
-/* 80879084-808790C4 0040+00 r=1 e=0 z=0  None .rodata    __THPAANScaleFactor                                          */
-SECTION_RODATA static u8 const __THPAANScaleFactor[64] = {
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xF6, 0x31, 0x50, 0xC0, 0x00, 0x00, 0x00,
-	0x3F, 0xF4, 0xE7, 0xAE, 0xA0, 0x00, 0x00, 0x00, 0x3F, 0xF2, 0xD0, 0x62, 0xE0, 0x00, 0x00, 0x00,
-	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xE9, 0x24, 0x69, 0xC0, 0x00, 0x00, 0x00,
-	0x3F, 0xE1, 0x51, 0x7A, 0x80, 0x00, 0x00, 0x00, 0x3F, 0xD1, 0xA8, 0x55, 0xE0, 0x00, 0x00, 0x00,
-};
-
-/* 808790C4-808790CC 0008+00 r=1 e=0 z=0  None .rodata    @3998                                                        */
-SECTION_RODATA static u8 const lit_3998[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 808731B4-80873574 03C0+00 r=1 e=0 z=0  None .text      __THPReadQuantizationTable                                   */
+/* 808731B4-80873574 03C0+00 s=1 e=0 z=0  None .text      __THPReadQuantizationTable                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -742,7 +526,7 @@ extern "C" asm static void __THPReadQuantizationTable() {
 #pragma pop
 
 
-/* 80873574-8087375C 01E8+00 r=1 e=0 z=0  None .text      __THPReadHuffmanTableSpecification                           */
+/* 80873574-8087375C 01E8+00 s=1 e=0 z=0  None .text      __THPReadHuffmanTableSpecification                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -753,7 +537,7 @@ extern "C" asm static void __THPReadHuffmanTableSpecification() {
 #pragma pop
 
 
-/* 8087375C-8087383C 00E0+00 r=1 e=0 z=0  None .text      __THPHuffGenerateSizeTable                                   */
+/* 8087375C-8087383C 00E0+00 s=1 e=0 z=0  None .text      __THPHuffGenerateSizeTable                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -764,7 +548,7 @@ extern "C" asm static void __THPHuffGenerateSizeTable() {
 #pragma pop
 
 
-/* 8087383C-808738B0 0074+00 r=1 e=0 z=0  None .text      __THPHuffGenerateCodeTable                                   */
+/* 8087383C-808738B0 0074+00 s=1 e=0 z=0  None .text      __THPHuffGenerateCodeTable                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -775,7 +559,7 @@ extern "C" asm static void __THPHuffGenerateCodeTable() {
 #pragma pop
 
 
-/* 808738B0-808739A8 00F8+00 r=1 e=0 z=0  None .text      __THPHuffGenerateDecoderTables                               */
+/* 808738B0-808739A8 00F8+00 s=1 e=0 z=0  None .text      __THPHuffGenerateDecoderTables                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -786,7 +570,7 @@ extern "C" asm static void __THPHuffGenerateDecoderTables() {
 #pragma pop
 
 
-/* 808739A8-80873A04 005C+00 r=1 e=0 z=0  None .text      __THPRestartDefinition                                       */
+/* 808739A8-80873A04 005C+00 s=1 e=0 z=0  None .text      __THPRestartDefinition                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -797,7 +581,7 @@ extern "C" asm static void __THPRestartDefinition() {
 #pragma pop
 
 
-/* 80873A04-80873C44 0240+00 r=1 e=0 z=0  None .text      __THPPrepBitStream                                           */
+/* 80873A04-80873C44 0240+00 s=1 e=0 z=0  None .text      __THPPrepBitStream                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -808,7 +592,7 @@ extern "C" asm static void __THPPrepBitStream() {
 #pragma pop
 
 
-/* 80873C44-80873D28 00E4+00 r=1 e=0 z=0  None .text      __THPDecompressYUV                                           */
+/* 80873C44-80873D28 00E4+00 s=1 e=0 z=0  None .text      __THPDecompressYUV                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -819,7 +603,7 @@ extern "C" asm static void __THPDecompressYUV() {
 #pragma pop
 
 
-/* 80873D28-80873D48 0020+00 r=1 e=0 z=0  None .text      __THPGQRRestore                                              */
+/* 80873D28-80873D48 0020+00 s=1 e=0 z=0  None .text      __THPGQRRestore                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -830,7 +614,7 @@ extern "C" asm static void __THPGQRRestore() {
 #pragma pop
 
 
-/* 80873D48-80873D7C 0034+00 r=1 e=0 z=0  None .text      __THPGQRSetup                                                */
+/* 80873D48-80873D7C 0034+00 s=1 e=0 z=0  None .text      __THPGQRSetup                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -841,7 +625,7 @@ extern "C" asm static void __THPGQRSetup() {
 #pragma pop
 
 
-/* 80873D7C-80873FBC 0240+00 r=1 e=0 z=0  None .text      __THPDecompressiMCURow512x448                                */
+/* 80873D7C-80873FBC 0240+00 s=1 e=0 z=0  None .text      __THPDecompressiMCURow512x448                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -852,7 +636,7 @@ extern "C" asm static void __THPDecompressiMCURow512x448() {
 #pragma pop
 
 
-/* 80873FBC-8087445C 04A0+00 r=3 e=0 z=0  None .text      __THPInverseDCTY8                                            */
+/* 80873FBC-8087445C 04A0+00 s=3 e=0 z=0  None .text      __THPInverseDCTY8                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -863,7 +647,7 @@ extern "C" asm static void __THPInverseDCTY8() {
 #pragma pop
 
 
-/* 8087445C-808748F4 0498+00 r=3 e=0 z=0  None .text      __THPInverseDCTNoYPos                                        */
+/* 8087445C-808748F4 0498+00 s=3 e=0 z=0  None .text      __THPInverseDCTNoYPos                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -874,7 +658,7 @@ extern "C" asm static void __THPInverseDCTNoYPos() {
 #pragma pop
 
 
-/* 808748F4-80874B38 0244+00 r=1 e=0 z=0  None .text      __THPDecompressiMCURow640x480                                */
+/* 808748F4-80874B38 0244+00 s=1 e=0 z=0  None .text      __THPDecompressiMCURow640x480                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -885,7 +669,7 @@ extern "C" asm static void __THPDecompressiMCURow640x480() {
 #pragma pop
 
 
-/* 80874B38-80874D8C 0254+00 r=1 e=0 z=0  None .text      __THPDecompressiMCURowNxN                                    */
+/* 80874B38-80874D8C 0254+00 s=1 e=0 z=0  None .text      __THPDecompressiMCURowNxN                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -896,7 +680,7 @@ extern "C" asm static void __THPDecompressiMCURowNxN() {
 #pragma pop
 
 
-/* 80874D8C-80875198 040C+00 r=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompY                                      */
+/* 80874D8C-80875198 040C+00 s=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompY                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -907,7 +691,7 @@ extern "C" asm static void __THPHuffDecodeDCTCompY() {
 #pragma pop
 
 
-/* 80875198-80875410 0278+00 r=3 e=0 z=0  None .text      __THPHuffDecodeTab                                           */
+/* 80875198-80875410 0278+00 s=3 e=0 z=0  None .text      __THPHuffDecodeTab                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -918,7 +702,7 @@ extern "C" asm static void __THPHuffDecodeTab() {
 #pragma pop
 
 
-/* 80875410-808755F8 01E8+00 r=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompU                                      */
+/* 80875410-808755F8 01E8+00 s=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompU                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -929,7 +713,7 @@ extern "C" asm static void __THPHuffDecodeDCTCompU() {
 #pragma pop
 
 
-/* 808755F8-808757E0 01E8+00 r=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompV                                      */
+/* 808755F8-808757E0 01E8+00 s=3 e=0 z=0  None .text      __THPHuffDecodeDCTCompV                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -940,7 +724,7 @@ extern "C" asm static void __THPHuffDecodeDCTCompV() {
 #pragma pop
 
 
-/* 808757E0-8087584C 006C+00 r=1 e=0 z=0  None .text      THPInit                                                      */
+/* 808757E0-8087584C 006C+00 s=1 e=0 z=0  None .text      THPInit                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -951,7 +735,7 @@ extern "C" asm static void THPInit() {
 #pragma pop
 
 
-/* 8087584C-80875880 0034+00 r=1 e=0 z=0  None .text      OSInitFastCast                                               */
+/* 8087584C-80875880 0034+00 s=1 e=0 z=0  None .text      OSInitFastCast                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,23 +746,7 @@ extern "C" asm static void OSInitFastCast() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80879BC8-80879BD0 0004+04 r=0 e=0 z=0  None .bss       __THPInitFlag                                                */
-u8 __THPInitFlag[4 + 4 /* padding */];
-
-/* 80879BD0-80879DA0 01D0+00 r=28 e=0 z=0  None .bss       daMP_ActivePlayer                                            */
-static u8 daMP_ActivePlayer[464];
-
-/* 80879DA0-80879DA4 0004+00 r=2 e=0 z=0  None .bss       daMP_ReadThreadCreated                                       */
-static u8 daMP_ReadThreadCreated[4];
-
-/* 80879DA4-80879DC4 0020+00 r=2 e=0 z=0  None .bss       daMP_FreeReadBufferQueue                                     */
-static u8 daMP_FreeReadBufferQueue[32];
-
-/* 80879DC4-80879DE4 0020+00 r=2 e=0 z=0  None .bss       daMP_ReadedBufferQueue                                       */
-static u8 daMP_ReadedBufferQueue[32];
-
-/* 80875880-808758B4 0034+00 r=2 e=0 z=0  None .text      daMP_PopReadedBuffer__Fv                                     */
+/* 80875880-808758B4 0034+00 s=2 e=0 z=0  None .text      daMP_PopReadedBuffer__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -989,7 +757,7 @@ asm static void daMP_PopReadedBuffer() {
 #pragma pop
 
 
-/* 808758B4-808758E4 0030+00 r=1 e=0 z=0  None .text      daMP_PushReadedBuffer__FPv                                   */
+/* 808758B4-808758E4 0030+00 s=1 e=0 z=0  None .text      daMP_PushReadedBuffer__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1000,7 +768,7 @@ asm static void daMP_PushReadedBuffer(void* param_0) {
 #pragma pop
 
 
-/* 808758E4-80875918 0034+00 r=1 e=0 z=0  None .text      daMP_PopFreeReadBuffer__Fv                                   */
+/* 808758E4-80875918 0034+00 s=1 e=0 z=0  None .text      daMP_PopFreeReadBuffer__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1011,7 +779,7 @@ asm static void daMP_PopFreeReadBuffer() {
 #pragma pop
 
 
-/* 80875918-80875948 0030+00 r=2 e=0 z=0  None .text      daMP_PushFreeReadBuffer__FPv                                 */
+/* 80875918-80875948 0030+00 s=2 e=0 z=0  None .text      daMP_PushFreeReadBuffer__FPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1022,11 +790,7 @@ asm static void daMP_PushFreeReadBuffer(void* param_0) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80879DE4-80879E04 0020+00 r=2 e=0 z=0  None .bss       daMP_ReadedBufferQueue2                                      */
-static u8 daMP_ReadedBufferQueue2[32];
-
-/* 80875948-8087597C 0034+00 r=1 e=0 z=0  None .text      daMP_PopReadedBuffer2__Fv                                    */
+/* 80875948-8087597C 0034+00 s=1 e=0 z=0  None .text      daMP_PopReadedBuffer2__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1037,7 +801,7 @@ asm static void daMP_PopReadedBuffer2() {
 #pragma pop
 
 
-/* 8087597C-808759AC 0030+00 r=1 e=0 z=0  None .text      daMP_PushReadedBuffer2__FPv                                  */
+/* 8087597C-808759AC 0030+00 s=1 e=0 z=0  None .text      daMP_PushReadedBuffer2__FPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1048,20 +812,7 @@ asm static void daMP_PushReadedBuffer2(void* param_0) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80879E04-80879E2C 0028+00 r=0 e=0 z=0  None .bss       daMP_FreeReadBufferMessage                                   */
-u8 daMP_FreeReadBufferMessage[40];
-
-/* 80879E2C-80879E54 0028+00 r=0 e=0 z=0  None .bss       daMP_ReadedBufferMessage                                     */
-u8 daMP_ReadedBufferMessage[40];
-
-/* 80879E54-80879E80 0028+04 r=0 e=0 z=0  None .bss       daMP_ReadedBufferMessage2                                    */
-u8 daMP_ReadedBufferMessage2[40 + 4 /* padding */];
-
-/* 80879E80-8087A198 0318+00 r=3 e=0 z=0  None .bss       daMP_ReadThread                                              */
-static u8 daMP_ReadThread[792];
-
-/* 808759AC-808759E4 0038+00 r=1 e=0 z=0  None .text      daMP_ReadThreadStart__Fv                                     */
+/* 808759AC-808759E4 0038+00 s=1 e=0 z=0  None .text      daMP_ReadThreadStart__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1072,7 +823,7 @@ asm static void daMP_ReadThreadStart() {
 #pragma pop
 
 
-/* 808759E4-80875A28 0044+00 r=1 e=0 z=0  None .text      daMP_ReadThreadCancel__Fv                                    */
+/* 808759E4-80875A28 0044+00 s=1 e=0 z=0  None .text      daMP_ReadThreadCancel__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,18 +834,18 @@ asm static void daMP_ReadThreadCancel() {
 #pragma pop
 
 
-/* 80875A28-80875B0C 00E4+00 r=1 e=0 z=0  None .text      daMP_Reader__FPv                                             */
+/* 80875A28-80875B0C 00E4+00 s=0 e=0 z=0  None .text      daMP_Reader__FPv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMP_Reader(void* param_0) {
+asm void daMP_Reader(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Reader__FPv.s"
 }
 #pragma pop
 
 
-/* 80875B0C-80875B18 000C+00 r=1 e=0 z=0  None .text      daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer                  */
+/* 80875B0C-80875B18 000C+00 s=1 e=0 z=0  None .text      daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1105,69 +856,1158 @@ asm static void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer* param_0) {
 #pragma pop
 
 
+/* 80875B18-80875BC8 00B0+00 s=1 e=0 z=0  None .text      daMP_CreateReadThread__Fl                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_CreateReadThread(s32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateReadThread__Fl.s"
+}
+#pragma pop
+
+
+/* 80875BC8-80875BFC 0034+00 s=1 e=0 z=0  None .text      daMP_PopFreeTextureSet__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PopFreeTextureSet() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeTextureSet__Fv.s"
+}
+#pragma pop
+
+
+/* 80875BFC-80875C2C 0030+00 s=2 e=0 z=0  None .text      daMP_PushFreeTextureSet__FPv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PushFreeTextureSet(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeTextureSet__FPv.s"
+}
+#pragma pop
+
+
+/* 80875C2C-80875C70 0044+00 s=1 e=0 z=0  None .text      daMP_PopDecodedTextureSet__Fl                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PopDecodedTextureSet(s32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedTextureSet__Fl.s"
+}
+#pragma pop
+
+
+/* 80875C70-80875CA0 0030+00 s=1 e=0 z=0  None .text      daMP_PushDecodedTextureSet__FPv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PushDecodedTextureSet(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedTextureSet__FPv.s"
+}
+#pragma pop
+
+
+/* 80875CA0-80875DD8 0138+00 s=2 e=0 z=0  None .text      daMP_VideoDecode__FP18daMP_THPReadBuffer                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_VideoDecode(daMP_THPReadBuffer* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecode__FP18daMP_THPReadBuffer.s"
+}
+#pragma pop
+
+
+/* 80875DD8-80875EA0 00C8+00 s=0 e=0 z=0  None .text      daMP_VideoDecoder__FPv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_VideoDecoder(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoder__FPv.s"
+}
+#pragma pop
+
+
+/* 80875EA0-80875FD4 0134+00 s=0 e=0 z=0  None .text      daMP_VideoDecoderForOnMemory__FPv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_VideoDecoderForOnMemory(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoderForOnMemory__FPv.s"
+}
+#pragma pop
+
+
+/* 80875FD4-808760EC 0118+00 s=1 e=0 z=0  None .text      daMP_CreateVideoDecodeThread__FlPUc                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_CreateVideoDecodeThread(s32 param_0, u8* param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateVideoDecodeThread__FlPUc.s"
+}
+#pragma pop
+
+
+/* 808760EC-80876124 0038+00 s=1 e=0 z=0  None .text      daMP_VideoDecodeThreadStart__Fv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_VideoDecodeThreadStart() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadStart__Fv.s"
+}
+#pragma pop
+
+
+/* 80876124-80876168 0044+00 s=1 e=0 z=0  None .text      daMP_VideoDecodeThreadCancel__Fv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_VideoDecodeThreadCancel() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadCancel__Fv.s"
+}
+#pragma pop
+
+
+/* 80876168-8087619C 0034+00 s=1 e=0 z=0  None .text      daMP_PopFreeAudioBuffer__Fv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PopFreeAudioBuffer() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeAudioBuffer__Fv.s"
+}
+#pragma pop
+
+
+/* 8087619C-808761CC 0030+00 s=2 e=0 z=0  None .text      daMP_PushFreeAudioBuffer__FPv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PushFreeAudioBuffer(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeAudioBuffer__FPv.s"
+}
+#pragma pop
+
+
+/* 808761CC-80876210 0044+00 s=1 e=0 z=0  None .text      daMP_PopDecodedAudioBuffer__Fl                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PopDecodedAudioBuffer(s32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedAudioBuffer__Fl.s"
+}
+#pragma pop
+
+
+/* 80876210-80876240 0030+00 s=1 e=0 z=0  None .text      daMP_PushDecodedAudioBuffer__FPv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PushDecodedAudioBuffer(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedAudioBuffer__FPv.s"
+}
+#pragma pop
+
+
+/* 80876240-8087631C 00DC+00 s=2 e=0 z=0  None .text      daMP_AudioDecode__FP18daMP_THPReadBuffer                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_AudioDecode(daMP_THPReadBuffer* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecode__FP18daMP_THPReadBuffer.s"
+}
+#pragma pop
+
+
+/* 8087631C-80876344 0028+00 s=0 e=0 z=0  None .text      daMP_AudioDecoder__FPv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_AudioDecoder(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoder__FPv.s"
+}
+#pragma pop
+
+
+/* 80876344-808763EC 00A8+00 s=0 e=0 z=0  None .text      daMP_AudioDecoderForOnMemory__FPv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_AudioDecoderForOnMemory(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoderForOnMemory__FPv.s"
+}
+#pragma pop
+
+
+/* 808763EC-808764E8 00FC+00 s=1 e=0 z=0  None .text      daMP_CreateAudioDecodeThread__FlPUc                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_CreateAudioDecodeThread(s32 param_0, u8* param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateAudioDecodeThread__FlPUc.s"
+}
+#pragma pop
+
+
+/* 808764E8-80876520 0038+00 s=1 e=0 z=0  None .text      daMP_AudioDecodeThreadStart__Fv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_AudioDecodeThreadStart() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadStart__Fv.s"
+}
+#pragma pop
+
+
+/* 80876520-80876564 0044+00 s=1 e=0 z=0  None .text      daMP_AudioDecodeThreadCancel__Fv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_AudioDecodeThreadCancel() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadCancel__Fv.s"
+}
+#pragma pop
+
+
+/* 80876564-8087667C 0118+00 s=1 e=0 z=0  None .text      daMP_THPGXRestore__Fv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPGXRestore() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXRestore__Fv.s"
+}
+#pragma pop
+
+
+/* 8087667C-80876BA8 052C+00 s=1 e=0 z=0  None .text      daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj.s"
+}
+#pragma pop
+
+
+/* 80876BA8-80876BD0 0028+00 s=1 e=0 z=0  None .text      GXSetTexCoordGen                                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void GXSetTexCoordGen() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXSetTexCoordGen.s"
+}
+#pragma pop
+
+
+/* 80876BD0-80876DE4 0214+00 s=1 e=0 z=0  None .text      daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPGXYuv2RgbDraw(u8* param_0, u8* param_1, u8* param_2, s16 param_3, s16 param_4, s16 param_5, s16 param_6, s16 param_7, s16 param_8) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss.s"
+}
+#pragma pop
+
+
+/* 80876DE4-80876DE8 0004+00 s=1 e=0 z=0  None .text      GXEnd                                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void GXEnd() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXEnd.s"
+}
+#pragma pop
+
+
+/* 80876DE8-80876DF8 0010+00 s=1 e=0 z=0  None .text      GXTexCoord2u16                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void GXTexCoord2u16() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXTexCoord2u16.s"
+}
+#pragma pop
+
+
+/* 80876DF8-80876E0C 0014+00 s=1 e=0 z=0  None .text      GXPosition3s16                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void GXPosition3s16() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXPosition3s16.s"
+}
+#pragma pop
+
+
+/* 80876E0C-80877074 0268+00 s=1 e=0 z=0  None .text      daMP_MixAudio__FPsPsUl                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_MixAudio(s16* param_0, s16* param_1, u32 param_2) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_MixAudio__FPsPsUl.s"
+}
+#pragma pop
+
+
+/* 80877074-8087712C 00B8+00 s=0 e=0 z=0  None .text      daMP_audioCallbackWithMSound__Fl                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_audioCallbackWithMSound(s32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioCallbackWithMSound__Fl.s"
+}
+#pragma pop
+
+
+/* 8087712C-80877158 002C+00 s=1 e=0 z=0  None .text      daMP_audioInitWithMSound__Fv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_audioInitWithMSound() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioInitWithMSound__Fv.s"
+}
+#pragma pop
+
+
+/* 80877158-80877180 0028+00 s=2 e=0 z=0  None .text      daMP_audioQuitWithMSound__Fv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_audioQuitWithMSound() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioQuitWithMSound__Fv.s"
+}
+#pragma pop
+
+
+/* 80877180-808771B0 0030+00 s=1 e=0 z=0  None .text      daMP_PushUsedTextureSet__FPv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PushUsedTextureSet(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushUsedTextureSet__FPv.s"
+}
+#pragma pop
+
+
+/* 808771B0-808771F4 0044+00 s=2 e=0 z=0  None .text      daMP_PopUsedTextureSet__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PopUsedTextureSet() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopUsedTextureSet__Fv.s"
+}
+#pragma pop
+
+
+/* 808771F4-808772CC 00D8+00 s=1 e=0 z=0  None .text      daMP_THPPlayerInit__Fl                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerInit(s32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerInit__Fl.s"
+}
+#pragma pop
+
+
+/* 808772CC-8087730C 0040+00 s=1 e=0 z=0  None .text      daMP_THPPlayerQuit__Fv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerQuit() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerQuit__Fv.s"
+}
+#pragma pop
+
+
+/* 8087730C-808776EC 03E0+00 s=1 e=0 z=0  None .text      daMP_THPPlayerOpen__FPCci                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerOpen(char const* param_0, int param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerOpen__FPCci.s"
+}
+#pragma pop
+
+
+/* 808776EC-80877740 0054+00 s=2 e=0 z=0  None .text      daMP_THPPlayerClose__Fv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerClose() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerClose__Fv.s"
+}
+#pragma pop
+
+
+/* 80877740-808777F0 00B0+00 s=1 e=0 z=0  None .text      daMP_THPPlayerCalcNeedMemory__Fv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerCalcNeedMemory() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerCalcNeedMemory__Fv.s"
+}
+#pragma pop
+
+
+/* 808777F0-80877A08 0218+00 s=1 e=0 z=0  None .text      daMP_THPPlayerSetBuffer__FPUc                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerSetBuffer(u8* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetBuffer__FPUc.s"
+}
+#pragma pop
+
+
+/* 80877A08-80877ADC 00D4+00 s=1 e=0 z=0  None .text      daMP_InitAllMessageQueue__Fv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_InitAllMessageQueue() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_InitAllMessageQueue__Fv.s"
+}
+#pragma pop
+
+
+/* 80877ADC-80877B48 006C+00 s=1 e=0 z=0  None .text      daMP_ProperTimingForStart__Fv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ProperTimingForStart() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForStart__Fv.s"
+}
+#pragma pop
+
+
+/* 80877B48-80877C8C 0144+00 s=1 e=0 z=0  None .text      daMP_ProperTimingForGettingNextFrame__Fv                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ProperTimingForGettingNextFrame() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForGettingNextFrame__Fv.s"
+}
+#pragma pop
+
+
+/* 80877C8C-80877F48 02BC+00 s=0 e=0 z=0  None .text      daMP_PlayControl__FUl                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_PlayControl(u32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PlayControl__FUl.s"
+}
+#pragma pop
+
+
+/* 80877F48-80877F88 0040+00 s=1 e=0 z=0  None .text      daMP_WaitUntilPrepare__Fv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_WaitUntilPrepare() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_WaitUntilPrepare__Fv.s"
+}
+#pragma pop
+
+
+/* 80877F88-80877FB8 0030+00 s=2 e=0 z=0  None .text      daMP_PrepareReady__Fi                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_PrepareReady(int param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PrepareReady__Fi.s"
+}
+#pragma pop
+
+
+/* 80877FB8-808782A0 02E8+00 s=1 e=0 z=0  None .text      daMP_THPPlayerPrepare__Flll                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerPrepare(s32 param_0, s32 param_1, s32 param_2) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPrepare__Flll.s"
+}
+#pragma pop
+
+
+/* 808782A0-808782E4 0044+00 s=1 e=0 z=0  None .text      daMP_THPPlayerDrawDone__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerDrawDone() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawDone__Fv.s"
+}
+#pragma pop
+
+
+/* 808782E4-80878344 0060+00 s=0 e=0 z=0  None .text      daMP_THPPlayerPlay__Fv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_THPPlayerPlay() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPlay__Fv.s"
+}
+#pragma pop
+
+
+/* 80878344-808783FC 00B8+00 s=2 e=0 z=0  None .text      daMP_THPPlayerStop__Fv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerStop() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerStop__Fv.s"
+}
+#pragma pop
+
+
+/* 808783FC-80878438 003C+00 s=0 e=0 z=0  None .text      daMP_THPPlayerPause__Fv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_THPPlayerPause() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPause__Fv.s"
+}
+#pragma pop
+
+
+/* 80878438-80878534 00FC+00 s=1 e=0 z=0  None .text      daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const* param_0, u32 param_1, u32 param_2, u32 param_3, u32 param_4) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl.s"
+}
+#pragma pop
+
+
+/* 80878534-80878558 0024+00 s=1 e=0 z=0  None .text      fadeIn__13mDoGph_gInf_cFf                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void mDoGph_gInf_c::fadeIn(f32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fadeIn__13mDoGph_gInf_cFf.s"
+}
+#pragma pop
+
+
+/* 80878558-80878568 0010+00 s=1 e=0 z=0  None .text      isFade__13mDoGph_gInf_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void mDoGph_gInf_c::isFade() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/isFade__13mDoGph_gInf_cFv.s"
+}
+#pragma pop
+
+
+/* 80878568-808785B0 0048+00 s=1 e=0 z=0  None .text      daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerGetVideoInfo(THPVideoInfo* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo.s"
+}
+#pragma pop
+
+
+/* 808785B0-808785F8 0048+00 s=1 e=0 z=0  None .text      daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerGetAudioInfo(THPAudioInfo* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo.s"
+}
+#pragma pop
+
+
+/* 808785F8-8087861C 0024+00 s=1 e=0 z=0  None .text      daMP_THPPlayerGetTotalFrame__Fv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerGetTotalFrame() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetTotalFrame__Fv.s"
+}
+#pragma pop
+
+
+/* 8087861C-8087862C 0010+00 s=2 e=0 z=0  None .text      daMP_THPPlayerGetState__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerGetState() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetState__Fv.s"
+}
+#pragma pop
+
+
+/* 8087862C-80878758 012C+00 s=1 e=0 z=0  None .text      daMP_THPPlayerSetVolume__Fll                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_THPPlayerSetVolume(s32 param_0, s32 param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetVolume__Fll.s"
+}
+#pragma pop
+
+
+/* 80878758-808788BC 0164+00 s=1 e=0 z=0  None .text      daMP_ActivePlayer_Init__FPCc                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ActivePlayer_Init(char const* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Init__FPCc.s"
+}
+#pragma pop
+
+
+/* 808788BC-808788C4 0008+00 s=2 e=0 z=0  None .text      getRenderMode__8JUTVideoCFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JUTVideo::getRenderMode() const {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getRenderMode__8JUTVideoCFv.s"
+}
+#pragma pop
+
+
+/* 808788C4-808788D4 0010+00 s=2 e=0 z=0  None .text      getManager__8JUTVideoFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JUTVideo::getManager() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__8JUTVideoFv.s"
+}
+#pragma pop
+
+
+/* 808788D4-80878914 0040+00 s=1 e=0 z=0  None .text      daMP_ActivePlayer_Finish__Fv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ActivePlayer_Finish() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Finish__Fv.s"
+}
+#pragma pop
+
+
+/* 80878914-80878938 0024+00 s=2 e=0 z=0  None .text      JKRFree__FPv                                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void JKRFree(void* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/JKRFree__FPv.s"
+}
+#pragma pop
+
+
+/* 80878938-80878994 005C+00 s=1 e=0 z=0  None .text      daMP_ActivePlayer_Main__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ActivePlayer_Main() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Main__Fv.s"
+}
+#pragma pop
+
+
+/* 80878994-80878A34 00A0+00 s=1 e=0 z=0  None .text      daMP_ActivePlayer_Draw__Fv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daMP_ActivePlayer_Draw() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Draw__Fv.s"
+}
+#pragma pop
+
+
+/* 80878A34-80878A64 0030+00 s=1 e=0 z=0  None .text      dComIfGp_event_reset__Fv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dComIfGp_event_reset() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGp_event_reset__Fv.s"
+}
+#pragma pop
+
+
+/* 80878A64-80878A6C 0008+00 s=1 e=0 z=0  None .text      getEvent__14dComIfG_play_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dComIfG_play_c::getEvent() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getEvent__14dComIfG_play_cFv.s"
+}
+#pragma pop
+
+
+/* 80878A6C-80878B38 00CC+00 s=0 e=0 z=0  None .text      daMP_Get_MovieRestFrame__Fv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_Get_MovieRestFrame() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Get_MovieRestFrame__Fv.s"
+}
+#pragma pop
+
+
+/* 80878B38-80878BB8 0080+00 s=0 e=0 z=0  None .text      daMP_Set_PercentMovieVolume__Ff                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_Set_PercentMovieVolume(f32 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Set_PercentMovieVolume__Ff.s"
+}
+#pragma pop
+
+
+/* 80878BB8-80878BDC 0024+00 s=1 e=0 z=0  None .text      daMP_c_Get_arg_demoNo__6daMP_cFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Get_arg_demoNo() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_demoNo__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878BDC-80878BFC 0020+00 s=2 e=0 z=0  None .text      fopAcM_GetParam__FPCv                                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void fopAcM_GetParam(void const* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_GetParam__FPCv.s"
+}
+#pragma pop
+
+
+/* 80878BFC-80878C04 0008+00 s=1 e=0 z=0  None .text      fpcM_GetParam__FPCv                                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void fpcM_GetParam(void const* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fpcM_GetParam__FPCv.s"
+}
+#pragma pop
+
+
+/* 80878C04-80878C28 0024+00 s=1 e=0 z=0  None .text      daMP_c_Get_arg_movieNo__6daMP_cFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Get_arg_movieNo() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_movieNo__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878C28-80878D10 00E8+00 s=1 e=0 z=0  None .text      daMP_c_Init__6daMP_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Init() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Init__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878D10-80878D44 0034+00 s=1 e=0 z=0  None .text      setFrameRate__13mDoGph_gInf_cFUs                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void mDoGph_gInf_c::setFrameRate(u16 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__13mDoGph_gInf_cFUs.s"
+}
+#pragma pop
+
+
+/* 80878D44-80878D54 0010+00 s=1 e=0 z=0  None .text      setFrameRate__10JFWDisplayFUs                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JFWDisplay::setFrameRate(u16 param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__10JFWDisplayFUs.s"
+}
+#pragma pop
+
+
+/* 80878D54-80878D64 0010+00 s=1 e=0 z=0  None .text      getManager__10JFWDisplayFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JFWDisplay::getManager() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__10JFWDisplayFv.s"
+}
+#pragma pop
+
+
+/* 80878D64-80878D94 0030+00 s=1 e=0 z=0  None .text      daMP_c_Finish__6daMP_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Finish() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Finish__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878D94-80878DB8 0024+00 s=1 e=0 z=0  None .text      daMP_c_Main__6daMP_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Main() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Main__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878DB8-80878DD8 0020+00 s=0 e=0 z=0  None .text      draw__16daMP_Dlst_base_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_Dlst_base_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__16daMP_Dlst_base_cFv.s"
+}
+#pragma pop
+
+
+/* 80878DD8-80878E04 002C+00 s=1 e=0 z=0  None .text      daMP_c_Draw__6daMP_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Draw() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Draw__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878E04-80878E34 0030+00 s=1 e=0 z=0  None .text      dComIfGd_set2DOpa__FP12dDlst_base_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dComIfGd_set2DOpa(dDlst_base_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGd_set2DOpa__FP12dDlst_base_c.s"
+}
+#pragma pop
+
+
+/* 80878E34-80878E60 002C+00 s=1 e=0 z=0  None .text      set2DOpa__12dDlst_list_cFP12dDlst_base_c                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dDlst_list_c::set2DOpa(dDlst_base_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/set2DOpa__12dDlst_list_cFP12dDlst_base_c.s"
+}
+#pragma pop
+
+
+/* 80878E60-80878EC4 0064+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Callback_Init(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80878EC4-80878ED4 0010+00 s=1 e=0 z=0  None .text      fopAcM_OnCondition__FP10fopAc_ac_cUl                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void fopAcM_OnCondition(fopAc_ac_c* param_0, u32 param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_OnCondition__FP10fopAc_ac_cUl.s"
+}
+#pragma pop
+
+
+/* 80878ED4-80878F04 0030+00 s=1 e=0 z=0  None .text      __ct__6daMP_cFv                                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daMP_c::daMP_c() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__6daMP_cFv.s"
+}
+#pragma pop
+
+
+/* 80878F04-80878F0C 0008+00 s=1 e=0 z=0  None .text      __nw__FUlPv                                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void* operator new(u32 param_0, void* param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__nw__FUlPv.s"
+}
+#pragma pop
+
+
+/* 80878F0C-80878F18 000C+00 s=1 e=0 z=0  None .text      fopAcM_CheckCondition__FP10fopAc_ac_cUl                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void fopAcM_CheckCondition(fopAc_ac_c* param_0, u32 param_1) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_CheckCondition__FP10fopAc_ac_cUl.s"
+}
+#pragma pop
+
+
+/* 80878F18-80878F38 0020+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Finish__6daMP_cFP6daMP_c                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Callback_Finish(daMP_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Finish__6daMP_cFP6daMP_c.s"
+}
+#pragma pop
+
+
+/* 80878F38-80878F70 0038+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Main__6daMP_cFP6daMP_c                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Callback_Main(daMP_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Main__6daMP_cFP6daMP_c.s"
+}
+#pragma pop
+
+
+/* 80878F70-80878FA8 0038+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Draw__6daMP_cFP6daMP_c                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_c::daMP_c_Callback_Draw(daMP_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Draw__6daMP_cFP6daMP_c.s"
+}
+#pragma pop
+
+
+/* 80878FA8-80878FB0 0008+00 s=0 e=0 z=0  None .text      daMP_Callback_Dummy__FP6daMP_c                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daMP_Callback_Dummy(daMP_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Callback_Dummy__FP6daMP_c.s"
+}
+#pragma pop
+
+
+/* 80878FB0-80878FD8 0028+00 s=0 e=0 z=0  None .text      __sinit_d_a_movie_player_cpp                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __sinit_d_a_movie_player_cpp() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__sinit_d_a_movie_player_cpp.s"
+}
+#pragma pop
+
+
+/* 80878FD8-80879014 003C+00 s=1 e=0 z=0  None .text      __ct__16daMP_Dlst_base_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daMP_Dlst_base_c::daMP_Dlst_base_c() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__16daMP_Dlst_base_cFv.s"
+}
+#pragma pop
+
+
+/* 80879014-80879024 0010+00 s=1 e=0 z=0  None .text      __ct__12dDlst_base_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dDlst_base_c::dDlst_base_c() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__12dDlst_base_cFv.s"
+}
+#pragma pop
+
+
+/* 80879024-80879028 0004+00 s=0 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dDlst_base_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__12dDlst_base_cFv.s"
+}
+#pragma pop
+
+
 /* ############################################################################################## */
-/* 808790CC-808790D0 0004+00 r=0 e=0 z=0  None .rodata    @4205                                                        */
+/* 80879034-80879084 0050+00 s=0 e=0 z=0  None .rodata    __THPJpegNaturalOrder                                        */
+SECTION_RODATA u8 const __THPJpegNaturalOrder[80] = {
+	0x00, 0x01, 0x08, 0x10, 0x09, 0x02, 0x03, 0x0A, 0x11, 0x18, 0x20, 0x19, 0x12, 0x0B, 0x04, 0x05,
+	0x0C, 0x13, 0x1A, 0x21, 0x28, 0x30, 0x29, 0x22, 0x1B, 0x14, 0x0D, 0x06, 0x07, 0x0E, 0x15, 0x1C,
+	0x23, 0x2A, 0x31, 0x38, 0x39, 0x32, 0x2B, 0x24, 0x1D, 0x16, 0x0F, 0x17, 0x1E, 0x25, 0x2C, 0x33,
+	0x3A, 0x3B, 0x34, 0x2D, 0x26, 0x1F, 0x27, 0x2E, 0x35, 0x3C, 0x3D, 0x36, 0x2F, 0x37, 0x3E, 0x3F,
+	0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F, 0x3F,
+};
+
+/* 80879084-808790C4 0040+00 s=0 e=0 z=0  None .rodata    __THPAANScaleFactor                                          */
+SECTION_RODATA u8 const __THPAANScaleFactor[64] = {
+	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xF6, 0x31, 0x50, 0xC0, 0x00, 0x00, 0x00,
+	0x3F, 0xF4, 0xE7, 0xAE, 0xA0, 0x00, 0x00, 0x00, 0x3F, 0xF2, 0xD0, 0x62, 0xE0, 0x00, 0x00, 0x00,
+	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xE9, 0x24, 0x69, 0xC0, 0x00, 0x00, 0x00,
+	0x3F, 0xE1, 0x51, 0x7A, 0x80, 0x00, 0x00, 0x00, 0x3F, 0xD1, 0xA8, 0x55, 0xE0, 0x00, 0x00, 0x00,
+};
+
+/* 808790C4-808790CC 0008+00 s=0 e=0 z=0  None .rodata    @3998                                                        */
+SECTION_RODATA u8 const lit_3998[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 808790CC-808790D0 0004+00 s=0 e=0 z=0  None .rodata    @4205                                                        */
 SECTION_RODATA u32 const lit_4205 = 0x3FB504F3;
 
-/* 808790D0-808790D4 0004+00 r=0 e=0 z=0  None .rodata    @4206                                                        */
+/* 808790D0-808790D4 0004+00 s=0 e=0 z=0  None .rodata    @4206                                                        */
 SECTION_RODATA u32 const lit_4206 = 0x3FEC835E;
 
-/* 808790D4-808790D8 0004+00 r=0 e=0 z=0  None .rodata    @4207                                                        */
+/* 808790D4-808790D8 0004+00 s=0 e=0 z=0  None .rodata    @4207                                                        */
 SECTION_RODATA u32 const lit_4207 = 0x3F8A8BD4;
 
-/* 808790D8-808790DC 0004+00 r=0 e=0 z=0  None .rodata    @4208                                                        */
+/* 808790D8-808790DC 0004+00 s=0 e=0 z=0  None .rodata    @4208                                                        */
 SECTION_RODATA u32 const lit_4208 = 0xC0273D75;
 
-/* 808790DC-808790E0 0004+00 r=0 e=0 z=0  None .rodata    @4209                                                        */
+/* 808790DC-808790E0 0004+00 s=0 e=0 z=0  None .rodata    @4209                                                        */
 SECTION_RODATA u32 const lit_4209 = 0x44800000;
 
-/* 808790E0-808790E4 0004+00 r=1 e=0 z=0  None .rodata    @4465                                                        */
-SECTION_RODATA static u32 const lit_4465 = 0x42C80000;
+/* 808790E0-808790E4 0004+00 s=0 e=0 z=0  None .rodata    @4465                                                        */
+SECTION_RODATA u32 const lit_4465 = 0x42C80000;
 
-/* 808790E4-808790E8 0004+00 r=0 e=0 z=0  None .rodata    @4466                                                        */
+/* 808790E4-808790E8 0004+00 s=0 e=0 z=0  None .rodata    @4466                                                        */
 SECTION_RODATA u32 const lit_4466 = 0x42700000;
 
-/* 808790E8-808790F0 0008+00 r=0 e=0 z=0  None .rodata    @4779                                                        */
+/* 808790E8-808790F0 0008+00 s=0 e=0 z=0  None .rodata    @4779                                                        */
 SECTION_RODATA u8 const lit_4779[8] = {
 	0xFF, 0xA6, 0x00, 0x00, 0xFF, 0x8E, 0x00, 0x87,
 };
 
-/* 808790F0-808790F4 0004+00 r=0 e=0 z=0  None .rodata    @4782                                                        */
+/* 808790F0-808790F4 0004+00 s=0 e=0 z=0  None .rodata    @4782                                                        */
 SECTION_RODATA u32 const lit_4782 = 0x0000E258;
 
-/* 808790F4-808790F8 0004+00 r=0 e=0 z=0  None .rodata    @4785                                                        */
+/* 808790F4-808790F8 0004+00 s=0 e=0 z=0  None .rodata    @4785                                                        */
 SECTION_RODATA u32 const lit_4785 = 0xB30000B6;
 
-/* 808790F8-808790FC 0004+00 r=0 e=0 z=0  None .rodata    @4788                                                        */
+/* 808790F8-808790FC 0004+00 s=0 e=0 z=0  None .rodata    @4788                                                        */
 SECTION_RODATA u32 const lit_4788 = 0xFF00FF80;
 
-/* 808790FC-80879100 0004+00 r=2 e=0 z=0  None .rodata    @4809                                                        */
-SECTION_RODATA static u8 const lit_4809[4] = {
+/* 808790FC-80879100 0004+00 s=0 e=0 z=0  None .rodata    @4809                                                        */
+SECTION_RODATA u8 const lit_4809[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80879100-80879104 0004+00 r=0 e=0 z=0  None .rodata    @4810                                                        */
+/* 80879100-80879104 0004+00 s=0 e=0 z=0  None .rodata    @4810                                                        */
 SECTION_RODATA u32 const lit_4810 = 0xBF800000;
 
-/* 80879104-8087910C 0004+04 r=1 e=0 z=0  None .rodata    @4811                                                        */
-SECTION_RODATA static u32 const lit_4811[1 + 1 /* padding */] = {
+/* 80879104-8087910C 0004+04 s=0 e=0 z=0  None .rodata    @4811                                                        */
+SECTION_RODATA u32 const lit_4811[1 + 1 /* padding */] = {
 	0x3F800000,
 	/* padding */
 	0x00000000,
 };
 
-/* 8087910C-80879114 0008+00 r=2 e=0 z=0  None .rodata    @4814                                                        */
-SECTION_RODATA static u8 const lit_4814[8] = {
+/* 8087910C-80879114 0008+00 s=0 e=0 z=0  None .rodata    @4814                                                        */
+SECTION_RODATA u8 const lit_4814[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80879114-80879118 0004+00 r=1 e=0 z=0  None .rodata    @4894                                                        */
-SECTION_RODATA static u32 const lit_4894 = 0x3F333333;
+/* 80879114-80879118 0004+00 s=0 e=0 z=0  None .rodata    @4894                                                        */
+SECTION_RODATA u32 const lit_4894 = 0x3F333333;
 
-/* 80879118-8087911C 0004+00 r=1 e=0 z=0  None .rodata    @4983                                                        */
-SECTION_RODATA static u32 const lit_4983 = 0x42FE0000;
+/* 80879118-8087911C 0004+00 s=0 e=0 z=0  None .rodata    @4983                                                        */
+SECTION_RODATA u32 const lit_4983 = 0x42FE0000;
 
-/* 8087911C-80879434 0318+00 r=8 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8087911C-80879434 0318+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -1213,364 +2053,8 @@ SECTION_DEAD char const* const stringBase_80879408 = "Error happen";
 SECTION_DEAD char const* const stringBase_80879415 = "/Movie/demo_movie%02d_%02d.thp";
 #pragma pop
 
-/* 80875B18-80875BC8 00B0+00 r=1 e=0 z=0  None .text      daMP_CreateReadThread__Fl                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_CreateReadThread(s32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateReadThread__Fl.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8087A198-8087C198 2000+00 r=0 e=0 z=0  None .bss       daMP_ReadThreadStack                                         */
-u8 daMP_ReadThreadStack[8192];
-
-/* 8087C198-8087C1A0 0004+04 r=2 e=0 z=0  None .bss       daMP_VideoDecodeThreadCreated                                */
-static u8 daMP_VideoDecodeThreadCreated[4 + 4 /* padding */];
-
-/* 8087C1A0-8087C4B8 0318+00 r=4 e=0 z=0  None .bss       daMP_VideoDecodeThread                                       */
-static u8 daMP_VideoDecodeThread[792];
-
-/* 8087C4B8-808E04B8 64000+00 r=1 e=0 z=0  None .bss       daMP_VideoDecodeThreadStack                                  */
-static u8 daMP_VideoDecodeThreadStack[409600];
-
-/* 808E04B8-808E04D8 0020+00 r=2 e=0 z=0  None .bss       daMP_FreeTextureSetQueue                                     */
-static u8 daMP_FreeTextureSetQueue[32];
-
-/* 80875BC8-80875BFC 0034+00 r=1 e=0 z=0  None .text      daMP_PopFreeTextureSet__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PopFreeTextureSet() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeTextureSet__Fv.s"
-}
-#pragma pop
-
-
-/* 80875BFC-80875C2C 0030+00 r=2 e=0 z=0  None .text      daMP_PushFreeTextureSet__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PushFreeTextureSet(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeTextureSet__FPv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 808E04D8-808E04F8 0020+00 r=2 e=0 z=0  None .bss       daMP_DecodedTextureSetQueue                                  */
-static u8 daMP_DecodedTextureSetQueue[32];
-
-/* 80875C2C-80875C70 0044+00 r=1 e=0 z=0  None .text      daMP_PopDecodedTextureSet__Fl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PopDecodedTextureSet(s32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedTextureSet__Fl.s"
-}
-#pragma pop
-
-
-/* 80875C70-80875CA0 0030+00 r=1 e=0 z=0  None .text      daMP_PushDecodedTextureSet__FPv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PushDecodedTextureSet(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedTextureSet__FPv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 808E04F8-808E0504 000C+00 r=0 e=0 z=0  None .bss       daMP_FreeTextureSetMessage                                   */
-u8 daMP_FreeTextureSetMessage[12];
-
-/* 808E0504-808E0510 000C+00 r=0 e=0 z=0  None .bss       daMP_DecodedTextureSetMessage                                */
-u8 daMP_DecodedTextureSetMessage[12];
-
-/* 808E0510-808E0514 0004+00 r=1 e=0 z=0  None .bss       daMP_First                                                   */
-static u8 daMP_First[4];
-
-/* 80875CA0-80875DD8 0138+00 r=2 e=0 z=0  None .text      daMP_VideoDecode__FP18daMP_THPReadBuffer                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_VideoDecode(daMP_THPReadBuffer* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecode__FP18daMP_THPReadBuffer.s"
-}
-#pragma pop
-
-
-/* 80875DD8-80875EA0 00C8+00 r=1 e=0 z=0  None .text      daMP_VideoDecoder__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_VideoDecoder(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoder__FPv.s"
-}
-#pragma pop
-
-
-/* 80875EA0-80875FD4 0134+00 r=1 e=0 z=0  None .text      daMP_VideoDecoderForOnMemory__FPv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_VideoDecoderForOnMemory(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecoderForOnMemory__FPv.s"
-}
-#pragma pop
-
-
-/* 80875FD4-808760EC 0118+00 r=1 e=0 z=0  None .text      daMP_CreateVideoDecodeThread__FlPUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_CreateVideoDecodeThread(s32 param_0, u8* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateVideoDecodeThread__FlPUc.s"
-}
-#pragma pop
-
-
-/* 808760EC-80876124 0038+00 r=1 e=0 z=0  None .text      daMP_VideoDecodeThreadStart__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_VideoDecodeThreadStart() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadStart__Fv.s"
-}
-#pragma pop
-
-
-/* 80876124-80876168 0044+00 r=1 e=0 z=0  None .text      daMP_VideoDecodeThreadCancel__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_VideoDecodeThreadCancel() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_VideoDecodeThreadCancel__Fv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 808E0514-808E0518 0004+00 r=2 e=0 z=0  None .bss       daMP_AudioDecodeThreadCreated                                */
-static u8 daMP_AudioDecodeThreadCreated[4];
-
-/* 808E0518-808E0830 0318+00 r=3 e=0 z=0  None .bss       daMP_AudioDecodeThread                                       */
-static u8 daMP_AudioDecodeThread[792];
-
-/* 808E0830-80944830 64000+00 r=0 e=0 z=0  None .bss       daMP_AudioDecodeThreadStack                                  */
-u8 daMP_AudioDecodeThreadStack[409600];
-
-/* 80944830-80944850 0020+00 r=2 e=0 z=0  None .bss       daMP_FreeAudioBufferQueue                                    */
-static u8 daMP_FreeAudioBufferQueue[32];
-
-/* 80876168-8087619C 0034+00 r=1 e=0 z=0  None .text      daMP_PopFreeAudioBuffer__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PopFreeAudioBuffer() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopFreeAudioBuffer__Fv.s"
-}
-#pragma pop
-
-
-/* 8087619C-808761CC 0030+00 r=2 e=0 z=0  None .text      daMP_PushFreeAudioBuffer__FPv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PushFreeAudioBuffer(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushFreeAudioBuffer__FPv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80944850-80944870 0020+00 r=2 e=0 z=0  None .bss       daMP_DecodedAudioBufferQueue                                 */
-static u8 daMP_DecodedAudioBufferQueue[32];
-
-/* 808761CC-80876210 0044+00 r=1 e=0 z=0  None .text      daMP_PopDecodedAudioBuffer__Fl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PopDecodedAudioBuffer(s32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopDecodedAudioBuffer__Fl.s"
-}
-#pragma pop
-
-
-/* 80876210-80876240 0030+00 r=1 e=0 z=0  None .text      daMP_PushDecodedAudioBuffer__FPv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PushDecodedAudioBuffer(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushDecodedAudioBuffer__FPv.s"
-}
-#pragma pop
-
-
-/* 80876240-8087631C 00DC+00 r=2 e=0 z=0  None .text      daMP_AudioDecode__FP18daMP_THPReadBuffer                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_AudioDecode(daMP_THPReadBuffer* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecode__FP18daMP_THPReadBuffer.s"
-}
-#pragma pop
-
-
-/* 8087631C-80876344 0028+00 r=1 e=0 z=0  None .text      daMP_AudioDecoder__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_AudioDecoder(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoder__FPv.s"
-}
-#pragma pop
-
-
-/* 80876344-808763EC 00A8+00 r=1 e=0 z=0  None .text      daMP_AudioDecoderForOnMemory__FPv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_AudioDecoderForOnMemory(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecoderForOnMemory__FPv.s"
-}
-#pragma pop
-
-
-/* 808763EC-808764E8 00FC+00 r=1 e=0 z=0  None .text      daMP_CreateAudioDecodeThread__FlPUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_CreateAudioDecodeThread(s32 param_0, u8* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_CreateAudioDecodeThread__FlPUc.s"
-}
-#pragma pop
-
-
-/* 808764E8-80876520 0038+00 r=1 e=0 z=0  None .text      daMP_AudioDecodeThreadStart__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_AudioDecodeThreadStart() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadStart__Fv.s"
-}
-#pragma pop
-
-
-/* 80876520-80876564 0044+00 r=1 e=0 z=0  None .text      daMP_AudioDecodeThreadCancel__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_AudioDecodeThreadCancel() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_AudioDecodeThreadCancel__Fv.s"
-}
-#pragma pop
-
-
-/* 80876564-8087667C 0118+00 r=1 e=0 z=0  None .text      daMP_THPGXRestore__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPGXRestore() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXRestore__Fv.s"
-}
-#pragma pop
-
-
-/* 8087667C-80876BA8 052C+00 r=1 e=0 z=0  None .text      daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj.s"
-}
-#pragma pop
-
-
-/* 80876BA8-80876BD0 0028+00 r=1 e=0 z=0  None .text      GXSetTexCoordGen                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void GXSetTexCoordGen() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXSetTexCoordGen.s"
-}
-#pragma pop
-
-
-/* 80876BD0-80876DE4 0214+00 r=1 e=0 z=0  None .text      daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPGXYuv2RgbDraw(u8* param_0, u8* param_1, u8* param_2, s16 param_3, s16 param_4, s16 param_5, s16 param_6, s16 param_7, s16 param_8) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss.s"
-}
-#pragma pop
-
-
-/* 80876DE4-80876DE8 0004+00 r=1 e=0 z=0  None .text      GXEnd                                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void GXEnd() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXEnd.s"
-}
-#pragma pop
-
-
-/* 80876DE8-80876DF8 0010+00 r=1 e=0 z=0  None .text      GXTexCoord2u16                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void GXTexCoord2u16() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXTexCoord2u16.s"
-}
-#pragma pop
-
-
-/* 80876DF8-80876E0C 0014+00 r=1 e=0 z=0  None .text      GXPosition3s16                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void GXPosition3s16() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXPosition3s16.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80879434-80879534 0100+00 r=1 e=0 z=0  None .data      daMP_VolumeTable                                             */
-SECTION_DATA static u8 daMP_VolumeTable[256] = {
+/* 80879434-80879534 0100+00 s=0 e=0 z=0  None .data      daMP_VolumeTable                                             */
+SECTION_DATA u8 daMP_VolumeTable[256] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x08, 0x00, 0x12, 0x00, 0x20, 0x00, 0x32, 0x00, 0x49, 0x00, 0x63,
 	0x00, 0x82, 0x00, 0xA4, 0x00, 0xCB, 0x00, 0xF5, 0x01, 0x24, 0x01, 0x57, 0x01, 0x8E, 0x01, 0xC9,
 	0x02, 0x08, 0x02, 0x4B, 0x02, 0x92, 0x02, 0xDD, 0x03, 0x2C, 0x03, 0x7F, 0x03, 0xD7, 0x04, 0x32,
@@ -1589,952 +2073,354 @@ SECTION_DATA static u8 daMP_VolumeTable[256] = {
 	0x72, 0x47, 0x74, 0x30, 0x76, 0x1E, 0x78, 0x10, 0x7A, 0x06, 0x7C, 0x00, 0x7D, 0xFE, 0x80, 0x00,
 };
 
-/* 80876E0C-80877074 0268+00 r=1 e=0 z=0  None .text      daMP_MixAudio__FPsPsUl                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_MixAudio(s16* param_0, s16* param_1, u32 param_2) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_MixAudio__FPsPsUl.s"
-}
-#pragma pop
+/* 80879534-80879554 0020+00 s=0 e=0 z=0  None .data      daMP_METHODS                                                 */
+SECTION_DATA u8 daMP_METHODS[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
+/* 80879554-80879584 0030+00 s=0 e=0 z=0  None .data      g_profile_MOVIE_PLAYER                                       */
+SECTION_DATA u8 g_profile_MOVIE_PLAYER[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0xC0, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
 
-/* ############################################################################################## */
-/* 80944870-8094487C 000C+00 r=0 e=0 z=0  None .bss       daMP_FreeAudioBufferMessage                                  */
+/* 80879584-80879590 000C+00 s=0 e=0 z=0  None .data      __vt__16daMP_Dlst_base_c                                     */
+SECTION_DATA void* __vt__16daMP_Dlst_base_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80879590-8087959C 000C+00 s=0 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
+SECTION_DATA void* __vt__12dDlst_base_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 808795A0-808795A4 0001+03 s=0 e=0 z=0  None .bss       @1109                                                        */
+u8 lit_1109[1 + 3 /* padding */];
+
+/* 808795A4-808795A8 0001+03 s=0 e=0 z=0  None .bss       @1107                                                        */
+u8 lit_1107[1 + 3 /* padding */];
+
+/* 808795A8-808795AC 0001+03 s=0 e=0 z=0  None .bss       @1105                                                        */
+u8 lit_1105[1 + 3 /* padding */];
+
+/* 808795AC-808795B0 0001+03 s=0 e=0 z=0  None .bss       @1104                                                        */
+u8 lit_1104[1 + 3 /* padding */];
+
+/* 808795B0-808795B4 0001+03 s=0 e=0 z=0  None .bss       @1099                                                        */
+u8 lit_1099[1 + 3 /* padding */];
+
+/* 808795B4-808795B8 0001+03 s=0 e=0 z=0  None .bss       @1097                                                        */
+u8 lit_1097[1 + 3 /* padding */];
+
+/* 808795B8-808795BC 0001+03 s=0 e=0 z=0  None .bss       @1095                                                        */
+u8 lit_1095[1 + 3 /* padding */];
+
+/* 808795BC-808795C0 0001+03 s=0 e=0 z=0  None .bss       @1094                                                        */
+u8 lit_1094[1 + 3 /* padding */];
+
+/* 808795C0-808795C4 0001+03 s=0 e=0 z=0  None .bss       @1057                                                        */
+u8 lit_1057[1 + 3 /* padding */];
+
+/* 808795C4-808795C8 0001+03 s=0 e=0 z=0  None .bss       @1055                                                        */
+u8 lit_1055[1 + 3 /* padding */];
+
+/* 808795C8-808795CC 0001+03 s=0 e=0 z=0  None .bss       @1053                                                        */
+u8 lit_1053[1 + 3 /* padding */];
+
+/* 808795CC-808795D0 0001+03 s=0 e=0 z=0  None .bss       @1052                                                        */
+u8 lit_1052[1 + 3 /* padding */];
+
+/* 808795D0-808795D4 0001+03 s=0 e=0 z=0  None .bss       @1014                                                        */
+u8 lit_1014[1 + 3 /* padding */];
+
+/* 808795D4-808795D8 0001+03 s=0 e=0 z=0  None .bss       @1012                                                        */
+u8 lit_1012[1 + 3 /* padding */];
+
+/* 808795D8-808795DC 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
+u8 lit_1010[1 + 3 /* padding */];
+
+/* 808795DC-808795E0 0001+03 s=0 e=0 z=0  None .bss       @1009                                                        */
+u8 lit_1009[1 + 3 /* padding */];
+
+/* 808795E0-80879A40 0460+00 s=0 e=0 z=0  None .bss       THPStatistics                                                */
+u8 THPStatistics[1120];
+
+/* 80879A40-80879A44 0004+00 s=0 e=0 z=0  None .bss       Ydchuff                                                      */
+u8 Ydchuff[4];
+
+/* 80879A44-80879A48 0004+00 s=0 e=0 z=0  None .bss       Udchuff                                                      */
+u8 Udchuff[4];
+
+/* 80879A48-80879A4C 0004+00 s=0 e=0 z=0  None .bss       Vdchuff                                                      */
+u8 Vdchuff[4];
+
+/* 80879A4C-80879A50 0004+00 s=0 e=0 z=0  None .bss       Yachuff                                                      */
+u8 Yachuff[4];
+
+/* 80879A50-80879A54 0004+00 s=0 e=0 z=0  None .bss       Uachuff                                                      */
+u8 Uachuff[4];
+
+/* 80879A54-80879A60 0004+08 s=0 e=0 z=0  None .bss       Vachuff                                                      */
+u8 Vachuff[4 + 8 /* padding */];
+
+/* 80879A60-80879B60 0100+00 s=0 e=0 z=0  None .bss       __THPIDCTWorkspace                                           */
+u8 __THPIDCTWorkspace[256];
+
+/* 80879B60-80879B64 0004+00 s=0 e=0 z=0  None .bss       __THPHuffmanBits                                             */
+u8 __THPHuffmanBits[4];
+
+/* 80879B64-80879B68 0004+00 s=0 e=0 z=0  None .bss       __THPHuffmanSizeTab                                          */
+u8 __THPHuffmanSizeTab[4];
+
+/* 80879B68-80879B6C 0004+00 s=0 e=0 z=0  None .bss       __THPHuffmanCodeTab                                          */
+u8 __THPHuffmanCodeTab[4];
+
+/* 80879B6C-80879B80 0004+10 s=0 e=0 z=0  None .bss       Gbase                                                        */
+u8 Gbase[4 + 16 /* padding */];
+
+/* 80879B80-80879B84 0004+00 s=0 e=0 z=0  None .bss       Gwid                                                         */
+u8 Gwid[4];
+
+/* 80879B84-80879B88 0004+00 s=0 e=0 z=0  None .bss       Gq                                                           */
+u8 Gq[4];
+
+/* 80879B88-80879B94 000C+00 s=0 e=0 z=0  None .bss       __THPLCWork512                                               */
+u8 __THPLCWork512[12];
+
+/* 80879B94-80879BA0 000C+00 s=0 e=0 z=0  None .bss       __THPLCWork640                                               */
+u8 __THPLCWork640[12];
+
+/* 80879BA0-80879BA4 0004+00 s=0 e=0 z=0  None .bss       __THPOldGQR5                                                 */
+u8 __THPOldGQR5[4];
+
+/* 80879BA4-80879BA8 0004+00 s=0 e=0 z=0  None .bss       __THPOldGQR6                                                 */
+u8 __THPOldGQR6[4];
+
+/* 80879BA8-80879BAC 0004+00 s=0 e=0 z=0  None .bss       __THPWorkArea                                                */
+u8 __THPWorkArea[4];
+
+/* 80879BAC-80879BC4 0018+00 s=0 e=0 z=0  None .bss       __THPMCUBuffer                                               */
+u8 __THPMCUBuffer[24];
+
+/* 80879BC4-80879BC8 0004+00 s=0 e=0 z=0  None .bss       __THPInfo                                                    */
+u8 __THPInfo[4];
+
+/* 80879BC8-80879BD0 0004+04 s=0 e=0 z=0  None .bss       __THPInitFlag                                                */
+u8 __THPInitFlag[4 + 4 /* padding */];
+
+/* 80879BD0-80879DA0 01D0+00 s=0 e=0 z=0  None .bss       daMP_ActivePlayer                                            */
+u8 daMP_ActivePlayer[464];
+
+/* 80879DA0-80879DA4 0004+00 s=0 e=0 z=0  None .bss       daMP_ReadThreadCreated                                       */
+u8 daMP_ReadThreadCreated[4];
+
+/* 80879DA4-80879DC4 0020+00 s=0 e=0 z=0  None .bss       daMP_FreeReadBufferQueue                                     */
+u8 daMP_FreeReadBufferQueue[32];
+
+/* 80879DC4-80879DE4 0020+00 s=0 e=0 z=0  None .bss       daMP_ReadedBufferQueue                                       */
+u8 daMP_ReadedBufferQueue[32];
+
+/* 80879DE4-80879E04 0020+00 s=0 e=0 z=0  None .bss       daMP_ReadedBufferQueue2                                      */
+u8 daMP_ReadedBufferQueue2[32];
+
+/* 80879E04-80879E2C 0028+00 s=0 e=0 z=0  None .bss       daMP_FreeReadBufferMessage                                   */
+u8 daMP_FreeReadBufferMessage[40];
+
+/* 80879E2C-80879E54 0028+00 s=0 e=0 z=0  None .bss       daMP_ReadedBufferMessage                                     */
+u8 daMP_ReadedBufferMessage[40];
+
+/* 80879E54-80879E80 0028+04 s=0 e=0 z=0  None .bss       daMP_ReadedBufferMessage2                                    */
+u8 daMP_ReadedBufferMessage2[40 + 4 /* padding */];
+
+/* 80879E80-8087A198 0318+00 s=0 e=0 z=0  None .bss       daMP_ReadThread                                              */
+u8 daMP_ReadThread[792];
+
+/* 8087A198-8087C198 2000+00 s=0 e=0 z=0  None .bss       daMP_ReadThreadStack                                         */
+u8 daMP_ReadThreadStack[8192];
+
+/* 8087C198-8087C1A0 0004+04 s=0 e=0 z=0  None .bss       daMP_VideoDecodeThreadCreated                                */
+u8 daMP_VideoDecodeThreadCreated[4 + 4 /* padding */];
+
+/* 8087C1A0-8087C4B8 0318+00 s=0 e=0 z=0  None .bss       daMP_VideoDecodeThread                                       */
+u8 daMP_VideoDecodeThread[792];
+
+/* 8087C4B8-808E04B8 64000+00 s=0 e=0 z=0  None .bss       daMP_VideoDecodeThreadStack                                  */
+u8 daMP_VideoDecodeThreadStack[409600];
+
+/* 808E04B8-808E04D8 0020+00 s=0 e=0 z=0  None .bss       daMP_FreeTextureSetQueue                                     */
+u8 daMP_FreeTextureSetQueue[32];
+
+/* 808E04D8-808E04F8 0020+00 s=0 e=0 z=0  None .bss       daMP_DecodedTextureSetQueue                                  */
+u8 daMP_DecodedTextureSetQueue[32];
+
+/* 808E04F8-808E0504 000C+00 s=0 e=0 z=0  None .bss       daMP_FreeTextureSetMessage                                   */
+u8 daMP_FreeTextureSetMessage[12];
+
+/* 808E0504-808E0510 000C+00 s=0 e=0 z=0  None .bss       daMP_DecodedTextureSetMessage                                */
+u8 daMP_DecodedTextureSetMessage[12];
+
+/* 808E0510-808E0514 0004+00 s=0 e=0 z=0  None .bss       daMP_First                                                   */
+u8 daMP_First[4];
+
+/* 808E0514-808E0518 0004+00 s=0 e=0 z=0  None .bss       daMP_AudioDecodeThreadCreated                                */
+u8 daMP_AudioDecodeThreadCreated[4];
+
+/* 808E0518-808E0830 0318+00 s=0 e=0 z=0  None .bss       daMP_AudioDecodeThread                                       */
+u8 daMP_AudioDecodeThread[792];
+
+/* 808E0830-80944830 64000+00 s=0 e=0 z=0  None .bss       daMP_AudioDecodeThreadStack                                  */
+u8 daMP_AudioDecodeThreadStack[409600];
+
+/* 80944830-80944850 0020+00 s=0 e=0 z=0  None .bss       daMP_FreeAudioBufferQueue                                    */
+u8 daMP_FreeAudioBufferQueue[32];
+
+/* 80944850-80944870 0020+00 s=0 e=0 z=0  None .bss       daMP_DecodedAudioBufferQueue                                 */
+u8 daMP_DecodedAudioBufferQueue[32];
+
+/* 80944870-8094487C 000C+00 s=0 e=0 z=0  None .bss       daMP_FreeAudioBufferMessage                                  */
 u8 daMP_FreeAudioBufferMessage[12];
 
-/* 8094487C-80944888 000C+00 r=0 e=0 z=0  None .bss       daMP_DecodedAudioBufferMessage                               */
+/* 8094487C-80944888 000C+00 s=0 e=0 z=0  None .bss       daMP_DecodedAudioBufferMessage                               */
 u8 daMP_DecodedAudioBufferMessage[12];
 
-/* 80944888-809448A0 0004+14 r=3 e=0 z=0  None .bss       daMP_Initialized                                             */
-static u8 daMP_Initialized[4 + 20 /* padding */];
+/* 80944888-809448A0 0004+14 s=0 e=0 z=0  None .bss       daMP_Initialized                                             */
+u8 daMP_Initialized[4 + 20 /* padding */];
 
-/* 809448A0-809448E0 0040+00 r=2 e=0 z=0  None .bss       daMP_WorkBuffer                                              */
-static u8 daMP_WorkBuffer[64];
+/* 809448A0-809448E0 0040+00 s=0 e=0 z=0  None .bss       daMP_WorkBuffer                                              */
+u8 daMP_WorkBuffer[64];
 
-/* 809448E0-80944900 0020+00 r=3 e=0 z=0  None .bss       daMP_PrepareReadyQueue                                       */
-static u8 daMP_PrepareReadyQueue[32];
+/* 809448E0-80944900 0020+00 s=0 e=0 z=0  None .bss       daMP_PrepareReadyQueue                                       */
+u8 daMP_PrepareReadyQueue[32];
 
-/* 80944900-80944920 0020+00 r=2 e=0 z=0  None .bss       daMP_UsedTextureSetQueue                                     */
-static u8 daMP_UsedTextureSetQueue[32];
+/* 80944900-80944920 0020+00 s=0 e=0 z=0  None .bss       daMP_UsedTextureSetQueue                                     */
+u8 daMP_UsedTextureSetQueue[32];
 
-/* 80944920-80944924 0004+00 r=1 e=0 z=0  None .bss       daMP_PrepareReadyMessage                                     */
-static u8 daMP_PrepareReadyMessage[4];
+/* 80944920-80944924 0004+00 s=0 e=0 z=0  None .bss       daMP_PrepareReadyMessage                                     */
+u8 daMP_PrepareReadyMessage[4];
 
-/* 80944924-80944930 000C+00 r=0 e=0 z=0  None .bss       daMP_UsedTextureSetMessage                                   */
+/* 80944924-80944930 000C+00 s=0 e=0 z=0  None .bss       daMP_UsedTextureSetMessage                                   */
 u8 daMP_UsedTextureSetMessage[12];
 
-/* 80944930-80944934 0004+00 r=3 e=0 z=0  None .bss       daMP_OldVIPostCallback                                       */
-static u8 daMP_OldVIPostCallback[4];
+/* 80944930-80944934 0004+00 s=0 e=0 z=0  None .bss       daMP_OldVIPostCallback                                       */
+u8 daMP_OldVIPostCallback[4];
 
-/* 80944934-80944938 0004+00 r=1 e=0 z=0  None .bss       daMP_SoundBufferIndex                                        */
-static u8 daMP_SoundBufferIndex[4];
+/* 80944934-80944938 0004+00 s=0 e=0 z=0  None .bss       daMP_SoundBufferIndex                                        */
+u8 daMP_SoundBufferIndex[4];
 
-/* 80944938-8094493C 0004+00 r=0 e=0 z=0  None .bss       daMP_OldAIDCallback                                          */
+/* 80944938-8094493C 0004+00 s=0 e=0 z=0  None .bss       daMP_OldAIDCallback                                          */
 u8 daMP_OldAIDCallback[4];
 
-/* 8094493C-80944940 0004+00 r=0 e=0 z=0  None .bss       daMP_LastAudioBuffer                                         */
+/* 8094493C-80944940 0004+00 s=0 e=0 z=0  None .bss       daMP_LastAudioBuffer                                         */
 u8 daMP_LastAudioBuffer[4];
 
-/* 80944940-80944944 0004+00 r=0 e=0 z=0  None .bss       daMP_CurAudioBuffer                                          */
+/* 80944940-80944944 0004+00 s=0 e=0 z=0  None .bss       daMP_CurAudioBuffer                                          */
 u8 daMP_CurAudioBuffer[4];
 
-/* 80944944-80944960 0004+18 r=0 e=0 z=0  None .bss       daMP_AudioSystem                                             */
+/* 80944944-80944960 0004+18 s=0 e=0 z=0  None .bss       daMP_AudioSystem                                             */
 u8 daMP_AudioSystem[4 + 24 /* padding */];
 
-/* 80944960-80945AE0 1180+00 r=1 e=0 z=0  None .bss       daMP_SoundBuffer                                             */
-static u8 daMP_SoundBuffer[4480];
+/* 80944960-80945AE0 1180+00 s=0 e=0 z=0  None .bss       daMP_SoundBuffer                                             */
+u8 daMP_SoundBuffer[4480];
 
-/* 80877074-8087712C 00B8+00 r=1 e=0 z=0  None .text      daMP_audioCallbackWithMSound__Fl                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_audioCallbackWithMSound(s32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioCallbackWithMSound__Fl.s"
-}
-#pragma pop
+/* 80945AE0-80945AEC 000C+00 s=0 e=0 z=0  None .bss       daMP_videoInfo                                               */
+u8 daMP_videoInfo[12];
 
-
-/* 8087712C-80877158 002C+00 r=1 e=0 z=0  None .text      daMP_audioInitWithMSound__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_audioInitWithMSound() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioInitWithMSound__Fv.s"
-}
-#pragma pop
-
-
-/* 80877158-80877180 0028+00 r=2 e=0 z=0  None .text      daMP_audioQuitWithMSound__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_audioQuitWithMSound() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_audioQuitWithMSound__Fv.s"
-}
-#pragma pop
-
-
-/* 80877180-808771B0 0030+00 r=1 e=0 z=0  None .text      daMP_PushUsedTextureSet__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PushUsedTextureSet(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PushUsedTextureSet__FPv.s"
-}
-#pragma pop
-
-
-/* 808771B0-808771F4 0044+00 r=2 e=0 z=0  None .text      daMP_PopUsedTextureSet__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PopUsedTextureSet() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PopUsedTextureSet__Fv.s"
-}
-#pragma pop
-
-
-/* 808771F4-808772CC 00D8+00 r=1 e=0 z=0  None .text      daMP_THPPlayerInit__Fl                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerInit(s32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerInit__Fl.s"
-}
-#pragma pop
-
-
-/* 808772CC-8087730C 0040+00 r=1 e=0 z=0  None .text      daMP_THPPlayerQuit__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerQuit() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerQuit__Fv.s"
-}
-#pragma pop
-
-
-/* 8087730C-808776EC 03E0+00 r=1 e=0 z=0  None .text      daMP_THPPlayerOpen__FPCci                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerOpen(char const* param_0, int param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerOpen__FPCci.s"
-}
-#pragma pop
-
-
-/* 808776EC-80877740 0054+00 r=2 e=0 z=0  None .text      daMP_THPPlayerClose__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerClose() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerClose__Fv.s"
-}
-#pragma pop
-
-
-/* 80877740-808777F0 00B0+00 r=1 e=0 z=0  None .text      daMP_THPPlayerCalcNeedMemory__Fv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerCalcNeedMemory() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerCalcNeedMemory__Fv.s"
-}
-#pragma pop
-
-
-/* 808777F0-80877A08 0218+00 r=1 e=0 z=0  None .text      daMP_THPPlayerSetBuffer__FPUc                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerSetBuffer(u8* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetBuffer__FPUc.s"
-}
-#pragma pop
-
-
-/* 80877A08-80877ADC 00D4+00 r=1 e=0 z=0  None .text      daMP_InitAllMessageQueue__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_InitAllMessageQueue() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_InitAllMessageQueue__Fv.s"
-}
-#pragma pop
-
-
-/* 80877ADC-80877B48 006C+00 r=1 e=0 z=0  None .text      daMP_ProperTimingForStart__Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ProperTimingForStart() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForStart__Fv.s"
-}
-#pragma pop
-
-
-/* 80877B48-80877C8C 0144+00 r=1 e=0 z=0  None .text      daMP_ProperTimingForGettingNextFrame__Fv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ProperTimingForGettingNextFrame() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ProperTimingForGettingNextFrame__Fv.s"
-}
-#pragma pop
-
-
-/* 80877C8C-80877F48 02BC+00 r=1 e=0 z=0  None .text      daMP_PlayControl__FUl                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PlayControl(u32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PlayControl__FUl.s"
-}
-#pragma pop
-
-
-/* 80877F48-80877F88 0040+00 r=1 e=0 z=0  None .text      daMP_WaitUntilPrepare__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_WaitUntilPrepare() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_WaitUntilPrepare__Fv.s"
-}
-#pragma pop
-
-
-/* 80877F88-80877FB8 0030+00 r=2 e=0 z=0  None .text      daMP_PrepareReady__Fi                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_PrepareReady(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_PrepareReady__Fi.s"
-}
-#pragma pop
-
-
-/* 80877FB8-808782A0 02E8+00 r=1 e=0 z=0  None .text      daMP_THPPlayerPrepare__Flll                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerPrepare(s32 param_0, s32 param_1, s32 param_2) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPrepare__Flll.s"
-}
-#pragma pop
-
-
-/* 808782A0-808782E4 0044+00 r=1 e=0 z=0  None .text      daMP_THPPlayerDrawDone__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerDrawDone() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawDone__Fv.s"
-}
-#pragma pop
-
-
-/* 808782E4-80878344 0060+00 r=1 e=0 z=0  None .text      daMP_THPPlayerPlay__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerPlay() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPlay__Fv.s"
-}
-#pragma pop
-
-
-/* 80878344-808783FC 00B8+00 r=3 e=0 z=0  None .text      daMP_THPPlayerStop__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerStop() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerStop__Fv.s"
-}
-#pragma pop
-
-
-/* 808783FC-80878438 003C+00 r=1 e=0 z=0  None .text      daMP_THPPlayerPause__Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerPause() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerPause__Fv.s"
-}
-#pragma pop
-
-
-/* 80878438-80878534 00FC+00 r=1 e=0 z=0  None .text      daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const* param_0, u32 param_1, u32 param_2, u32 param_3, u32 param_4) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl.s"
-}
-#pragma pop
-
-
-/* 80878534-80878558 0024+00 r=1 e=0 z=0  None .text      fadeIn__13mDoGph_gInf_cFf                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoGph_gInf_c::fadeIn(f32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fadeIn__13mDoGph_gInf_cFf.s"
-}
-#pragma pop
-
-
-/* 80878558-80878568 0010+00 r=1 e=0 z=0  None .text      isFade__13mDoGph_gInf_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoGph_gInf_c::isFade() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/isFade__13mDoGph_gInf_cFv.s"
-}
-#pragma pop
-
-
-/* 80878568-808785B0 0048+00 r=1 e=0 z=0  None .text      daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerGetVideoInfo(THPVideoInfo* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo.s"
-}
-#pragma pop
-
-
-/* 808785B0-808785F8 0048+00 r=1 e=0 z=0  None .text      daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerGetAudioInfo(THPAudioInfo* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo.s"
-}
-#pragma pop
-
-
-/* 808785F8-8087861C 0024+00 r=2 e=0 z=0  None .text      daMP_THPPlayerGetTotalFrame__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerGetTotalFrame() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetTotalFrame__Fv.s"
-}
-#pragma pop
-
-
-/* 8087861C-8087862C 0010+00 r=2 e=0 z=0  None .text      daMP_THPPlayerGetState__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerGetState() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerGetState__Fv.s"
-}
-#pragma pop
-
-
-/* 8087862C-80878758 012C+00 r=1 e=0 z=0  None .text      daMP_THPPlayerSetVolume__Fll                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_THPPlayerSetVolume(s32 param_0, s32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_THPPlayerSetVolume__Fll.s"
-}
-#pragma pop
-
-
-/* 80878758-808788BC 0164+00 r=1 e=0 z=0  None .text      daMP_ActivePlayer_Init__FPCc                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ActivePlayer_Init(char const* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Init__FPCc.s"
-}
-#pragma pop
-
-
-/* 808788BC-808788C4 0008+00 r=2 e=0 z=0  None .text      getRenderMode__8JUTVideoCFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JUTVideo::getRenderMode() const {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getRenderMode__8JUTVideoCFv.s"
-}
-#pragma pop
-
-
-/* 808788C4-808788D4 0010+00 r=2 e=0 z=0  None .text      getManager__8JUTVideoFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JUTVideo::getManager() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__8JUTVideoFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80945AE0-80945AEC 000C+00 r=1 e=0 z=0  None .bss       daMP_videoInfo                                               */
-static u8 daMP_videoInfo[12];
-
-/* 80945AEC-80945AFC 0010+00 r=0 e=0 z=0  None .bss       daMP_audioInfo                                               */
+/* 80945AEC-80945AFC 0010+00 s=0 e=0 z=0  None .bss       daMP_audioInfo                                               */
 u8 daMP_audioInfo[16];
 
-/* 80945AFC-80945B00 0004+00 r=1 e=0 z=0  None .bss       daMP_DrawPosX                                                */
-static u8 daMP_DrawPosX[4];
+/* 80945AFC-80945B00 0004+00 s=0 e=0 z=0  None .bss       daMP_DrawPosX                                                */
+u8 daMP_DrawPosX[4];
 
-/* 80945B00-80945B04 0004+00 r=1 e=0 z=0  None .bss       daMP_DrawPosY                                                */
-static u8 daMP_DrawPosY[4];
+/* 80945B00-80945B04 0004+00 s=0 e=0 z=0  None .bss       daMP_DrawPosY                                                */
+u8 daMP_DrawPosY[4];
 
-/* 80945B04-80945B08 0004+00 r=2 e=0 z=0  None .bss       daMP_buffer                                                  */
-static u8 daMP_buffer[4];
+/* 80945B04-80945B08 0004+00 s=0 e=0 z=0  None .bss       daMP_buffer                                                  */
+u8 daMP_buffer[4];
 
-/* 808788D4-80878914 0040+00 r=1 e=0 z=0  None .text      daMP_ActivePlayer_Finish__Fv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ActivePlayer_Finish() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Finish__Fv.s"
-}
-#pragma pop
+/* 80945B08-80945B0C 0004+00 s=0 e=0 z=0  None .bss       daMP_Fail_alloc                                              */
+u8 daMP_Fail_alloc[4];
 
+/* 80945B0C-80945B10 0004+00 s=0 e=0 z=0  None .bss       daMP_c_Dlst_base                                             */
+u8 daMP_c_Dlst_base[4];
 
-/* 80878914-80878938 0024+00 r=2 e=0 z=0  None .text      JKRFree__FPv                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void JKRFree(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/JKRFree__FPv.s"
-}
-#pragma pop
-
-
-/* 80878938-80878994 005C+00 r=1 e=0 z=0  None .text      daMP_ActivePlayer_Main__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ActivePlayer_Main() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Main__Fv.s"
-}
-#pragma pop
-
-
-/* 80878994-80878A34 00A0+00 r=1 e=0 z=0  None .text      daMP_ActivePlayer_Draw__Fv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_ActivePlayer_Draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_ActivePlayer_Draw__Fv.s"
-}
-#pragma pop
-
-
-/* 80878A34-80878A64 0030+00 r=1 e=0 z=0  None .text      dComIfGp_event_reset__Fv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dComIfGp_event_reset() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGp_event_reset__Fv.s"
-}
-#pragma pop
-
-
-/* 80878A64-80878A6C 0008+00 r=1 e=0 z=0  None .text      getEvent__14dComIfG_play_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dComIfG_play_c::getEvent() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getEvent__14dComIfG_play_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80945B08-80945B0C 0004+00 r=5 e=0 z=0  None .bss       daMP_Fail_alloc                                              */
-static u8 daMP_Fail_alloc[4];
-
-/* 80878A6C-80878B38 00CC+00 r=1 e=0 z=0  None .text      daMP_Get_MovieRestFrame__Fv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_Get_MovieRestFrame() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Get_MovieRestFrame__Fv.s"
-}
-#pragma pop
-
-
-/* 80878B38-80878BB8 0080+00 r=1 e=0 z=0  None .text      daMP_Set_PercentMovieVolume__Ff                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_Set_PercentMovieVolume(f32 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Set_PercentMovieVolume__Ff.s"
-}
-#pragma pop
-
-
-/* 80878BB8-80878BDC 0024+00 r=1 e=0 z=0  None .text      daMP_c_Get_arg_demoNo__6daMP_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Get_arg_demoNo() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_demoNo__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878BDC-80878BFC 0020+00 r=2 e=0 z=0  None .text      fopAcM_GetParam__FPCv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void fopAcM_GetParam(void const* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_GetParam__FPCv.s"
-}
-#pragma pop
-
-
-/* 80878BFC-80878C04 0008+00 r=1 e=0 z=0  None .text      fpcM_GetParam__FPCv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void fpcM_GetParam(void const* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fpcM_GetParam__FPCv.s"
-}
-#pragma pop
-
-
-/* 80878C04-80878C28 0024+00 r=1 e=0 z=0  None .text      daMP_c_Get_arg_movieNo__6daMP_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Get_arg_movieNo() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Get_arg_movieNo__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878C28-80878D10 00E8+00 r=1 e=0 z=0  None .text      daMP_c_Init__6daMP_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Init() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Init__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878D10-80878D44 0034+00 r=1 e=0 z=0  None .text      setFrameRate__13mDoGph_gInf_cFUs                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoGph_gInf_c::setFrameRate(u16 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__13mDoGph_gInf_cFUs.s"
-}
-#pragma pop
-
-
-/* 80878D44-80878D54 0010+00 r=1 e=0 z=0  None .text      setFrameRate__10JFWDisplayFUs                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JFWDisplay::setFrameRate(u16 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/setFrameRate__10JFWDisplayFUs.s"
-}
-#pragma pop
-
-
-/* 80878D54-80878D64 0010+00 r=1 e=0 z=0  None .text      getManager__10JFWDisplayFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JFWDisplay::getManager() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/getManager__10JFWDisplayFv.s"
-}
-#pragma pop
-
-
-/* 80878D64-80878D94 0030+00 r=1 e=0 z=0  None .text      daMP_c_Finish__6daMP_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Finish() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Finish__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878D94-80878DB8 0024+00 r=1 e=0 z=0  None .text      daMP_c_Main__6daMP_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Main() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Main__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878DB8-80878DD8 0020+00 r=1 e=0 z=0  None .text      draw__16daMP_Dlst_base_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_Dlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__16daMP_Dlst_base_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80945B0C-80945B10 0004+00 r=2 e=0 z=0  None .bss       daMP_c_Dlst_base                                             */
-static u8 daMP_c_Dlst_base[4];
-
-/* 80878DD8-80878E04 002C+00 r=1 e=0 z=0  None .text      daMP_c_Draw__6daMP_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Draw__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878E04-80878E34 0030+00 r=1 e=0 z=0  None .text      dComIfGd_set2DOpa__FP12dDlst_base_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dComIfGd_set2DOpa(dDlst_base_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/dComIfGd_set2DOpa__FP12dDlst_base_c.s"
-}
-#pragma pop
-
-
-/* 80878E34-80878E60 002C+00 r=1 e=0 z=0  None .text      set2DOpa__12dDlst_list_cFP12dDlst_base_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_list_c::set2DOpa(dDlst_base_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/set2DOpa__12dDlst_list_cFP12dDlst_base_c.s"
-}
-#pragma pop
-
-
-/* 80878E60-80878EC4 0064+00 r=1 e=0 z=0  None .text      daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Callback_Init(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80878EC4-80878ED4 0010+00 r=1 e=0 z=0  None .text      fopAcM_OnCondition__FP10fopAc_ac_cUl                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void fopAcM_OnCondition(fopAc_ac_c* param_0, u32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_OnCondition__FP10fopAc_ac_cUl.s"
-}
-#pragma pop
-
-
-/* 80878ED4-80878F04 0030+00 r=1 e=0 z=0  None .text      __ct__6daMP_cFv                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daMP_c::daMP_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__6daMP_cFv.s"
-}
-#pragma pop
-
-
-/* 80878F04-80878F0C 0008+00 r=1 e=0 z=0  None .text      __nw__FUlPv                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void* operator new(u32 param_0, void* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__nw__FUlPv.s"
-}
-#pragma pop
-
-
-/* 80878F0C-80878F18 000C+00 r=1 e=0 z=0  None .text      fopAcM_CheckCondition__FP10fopAc_ac_cUl                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void fopAcM_CheckCondition(fopAc_ac_c* param_0, u32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/fopAcM_CheckCondition__FP10fopAc_ac_cUl.s"
-}
-#pragma pop
-
-
-/* 80878F18-80878F38 0020+00 r=1 e=0 z=0  None .text      daMP_c_Callback_Finish__6daMP_cFP6daMP_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Callback_Finish(daMP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Finish__6daMP_cFP6daMP_c.s"
-}
-#pragma pop
-
-
-/* 80878F38-80878F70 0038+00 r=1 e=0 z=0  None .text      daMP_c_Callback_Main__6daMP_cFP6daMP_c                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Callback_Main(daMP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Main__6daMP_cFP6daMP_c.s"
-}
-#pragma pop
-
-
-/* 80878F70-80878FA8 0038+00 r=1 e=0 z=0  None .text      daMP_c_Callback_Draw__6daMP_cFP6daMP_c                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMP_c::daMP_c_Callback_Draw(daMP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_c_Callback_Draw__6daMP_cFP6daMP_c.s"
-}
-#pragma pop
-
-
-/* 80878FA8-80878FB0 0008+00 r=1 e=0 z=0  None .text      daMP_Callback_Dummy__FP6daMP_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_Callback_Dummy(daMP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Callback_Dummy__FP6daMP_c.s"
-}
-#pragma pop
-
-
-/* 80878FB0-80878FD8 0028+00 r=1 e=1 z=0  None .text      __sinit_d_a_movie_player_cpp                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void __sinit_d_a_movie_player_cpp() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__sinit_d_a_movie_player_cpp.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80879534-80879554 0020+00 r=1 e=0 z=0  None .data      daMP_METHODS                                                 */
-SECTION_DATA static void* daMP_METHODS[8] = {
-	/* 0    */ (void*)daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c,
-	/* 1    */ (void*)daMP_c_Callback_Finish__6daMP_cFP6daMP_c,
-	/* 2    */ (void*)daMP_c_Callback_Main__6daMP_cFP6daMP_c,
-	/* 3    */ (void*)daMP_Callback_Dummy__FP6daMP_c,
-	/* 4    */ (void*)daMP_c_Callback_Draw__6daMP_cFP6daMP_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80879554-80879584 0030+00 r=1 e=0 z=1  None .data      g_profile_MOVIE_PLAYER                                       */
-SECTION_DATA void* g_profile_MOVIE_PLAYER[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02E00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000580,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00090000,
-	/* 9    */ (void*)&daMP_METHODS,
-	/* 10   */ (void*)0x0006C000,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80879584-80879590 000C+00 r=1 e=0 z=0  None .data      __vt__16daMP_Dlst_base_c                                     */
-SECTION_DATA static void* __vt__16daMP_Dlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__16daMP_Dlst_base_cFv,
-};
-
-/* 80878FD8-80879014 003C+00 r=1 e=0 z=0  None .text      __ct__16daMP_Dlst_base_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daMP_Dlst_base_c::daMP_Dlst_base_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__16daMP_Dlst_base_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80879590-8087959C 000C+00 r=1 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
-SECTION_DATA static void* __vt__12dDlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_base_cFv,
-};
-
-/* 80879014-80879024 0010+00 r=1 e=0 z=0  None .text      __ct__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dDlst_base_c::dDlst_base_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/__ct__12dDlst_base_cFv.s"
-}
-#pragma pop
-
-
-/* 80879024-80879028 0004+00 r=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__12dDlst_base_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80945B10-80945B14 0004+00 r=0 e=0 z=0  None .bss       sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
+/* 80945B10-80945B14 0004+00 s=0 e=0 z=0  None .bss       sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
 u8 data_80945B10[4];
 
-/* 80945B14-80945B18 0004+00 r=0 e=0 z=0  None .bss       sInstance__35JASGlobalInstance<14JASAudioThread>             */
+/* 80945B14-80945B18 0004+00 s=0 e=0 z=0  None .bss       sInstance__35JASGlobalInstance<14JASAudioThread>             */
 u8 data_80945B14[4];
 
-/* 80945B18-80945B1C 0004+00 r=0 e=0 z=0  None .bss       sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
+/* 80945B18-80945B1C 0004+00 s=0 e=0 z=0  None .bss       sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
 u8 data_80945B18[4];
 
-/* 80945B1C-80945B20 0004+00 r=0 e=0 z=0  None .bss       sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
+/* 80945B1C-80945B20 0004+00 s=0 e=0 z=0  None .bss       sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
 u8 data_80945B1C[4];
 
-/* 80945B20-80945B24 0004+00 r=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
+/* 80945B20-80945B24 0004+00 s=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
 u8 data_80945B20[4];
 
-/* 80945B24-80945B28 0004+00 r=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
+/* 80945B24-80945B28 0004+00 s=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
 u8 data_80945B24[4];
 
-/* 80945B28-80945B2C 0004+00 r=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2DebugSys>                 */
+/* 80945B28-80945B2C 0004+00 s=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2DebugSys>                 */
 u8 data_80945B28[4];
 
-/* 80945B2C-80945B30 0004+00 r=0 e=0 z=0  None .bss       sInstance__36JASGlobalInstance<15JAISoundStarter>            */
+/* 80945B2C-80945B30 0004+00 s=0 e=0 z=0  None .bss       sInstance__36JASGlobalInstance<15JAISoundStarter>            */
 u8 data_80945B2C[4];
 
-/* 80945B30-80945B34 0004+00 r=0 e=0 z=0  None .bss       sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
+/* 80945B30-80945B34 0004+00 s=0 e=0 z=0  None .bss       sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
 u8 data_80945B30[4];
 
-/* 80945B34-80945B38 0004+00 r=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
+/* 80945B34-80945B38 0004+00 s=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
 u8 data_80945B34[4];
 
-/* 80945B38-80945B3C 0004+00 r=0 e=0 z=0  None .bss       sInstance__28JASGlobalInstance<8JAISeMgr>                    */
+/* 80945B38-80945B3C 0004+00 s=0 e=0 z=0  None .bss       sInstance__28JASGlobalInstance<8JAISeMgr>                    */
 u8 data_80945B38[4];
 
-/* 80945B3C-80945B40 0004+00 r=0 e=0 z=0  None .bss       sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
+/* 80945B3C-80945B40 0004+00 s=0 e=0 z=0  None .bss       sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
 u8 data_80945B3C[4];
 
-/* 80945B40-80945B44 0004+00 r=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
+/* 80945B40-80945B44 0004+00 s=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
 u8 data_80945B40[4];
 
-/* 80945B44-80945B48 0004+00 r=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
+/* 80945B44-80945B48 0004+00 s=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
 u8 data_80945B44[4];
 
-/* 80945B48-80945B4C 0004+00 r=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAISoundInfo>               */
+/* 80945B48-80945B4C 0004+00 s=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAISoundInfo>               */
 u8 data_80945B48[4];
 
-/* 80945B4C-80945B50 0004+00 r=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13JAUSoundTable>              */
+/* 80945B4C-80945B50 0004+00 s=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13JAUSoundTable>              */
 u8 data_80945B4C[4];
 
-/* 80945B50-80945B54 0004+00 r=0 e=0 z=0  None .bss       sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
+/* 80945B50-80945B54 0004+00 s=0 e=0 z=0  None .bss       sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
 u8 data_80945B50[4];
 
-/* 80945B54-80945B58 0004+00 r=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
+/* 80945B54-80945B58 0004+00 s=0 e=0 z=0  None .bss       sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
 u8 data_80945B54[4];
 
-/* 80945B58-80945B5C 0004+00 r=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
+/* 80945B58-80945B5C 0004+00 s=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
 u8 data_80945B58[4];
 
-/* 80945B5C-80945B60 0004+00 r=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
+/* 80945B5C-80945B60 0004+00 s=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
 u8 data_80945B5C[4];
 
-/* 80945B60-80945B64 0004+00 r=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2Audience>                 */
+/* 80945B60-80945B64 0004+00 s=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2Audience>                 */
 u8 data_80945B60[4];
 
-/* 80945B64-80945B68 0004+00 r=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
+/* 80945B64-80945B68 0004+00 s=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
 u8 data_80945B64[4];
 
-/* 80945B68-80945B6C 0004+00 r=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
+/* 80945B68-80945B6C 0004+00 s=0 e=0 z=0  None .bss       sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
 u8 data_80945B68[4];
 
-/* 80945B6C-80945B70 0004+00 r=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2SpeechMgr>                */
+/* 80945B6C-80945B70 0004+00 s=0 e=0 z=0  None .bss       sInstance__32JASGlobalInstance<11Z2SpeechMgr>                */
 u8 data_80945B6C[4];
 
-/* 80945B70-80945B74 0004+00 r=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
+/* 80945B70-80945B74 0004+00 s=0 e=0 z=0  None .bss       sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
 u8 data_80945B70[4];
 

@@ -79,14 +79,14 @@ lbl_80C817C4:
 /* 80C817C4 00000000  38 63 00 04 */	addi r3, r3, 4
 /* 80C817C8 00000004  42 00 FF C8 */	bdnz lbl_80C81790
 /* 80C817CC 00000008  38 7F 0A 7C */	addi r3, r31, 0xa7c
-/* 80C817D0 0000000C  4B FF C9 C9 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80C817D0 0000000C  4B FF C9 C9 */	bl _unresolved
 /* 80C817D4 00000010  38 7F 0A 9C */	addi r3, r31, 0xa9c
-/* 80C817D8 00000014  4B FF C9 C1 */	bl deleteObject__14Z2SoundObjBaseFv
+/* 80C817D8 00000014  4B FF C9 C1 */	bl _unresolved
 /* 80C817DC 00000018  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80C817E0 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C81D24 */
-/* 80C817E4 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C81D24 */
+/* 80C817E0 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C817E4 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C817E8 00000024  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C817EC 00000028  4B FF C9 AD */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C817EC 00000028  4B FF C9 AD */	bl _unresolved
 /* 80C817F0 0000002C  38 60 00 01 */	li r3, 1
 /* 80C817F4 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C817F8 00000034  80 01 00 14 */	lwz r0, 0x14(r1)

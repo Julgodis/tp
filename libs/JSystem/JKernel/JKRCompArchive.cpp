@@ -199,7 +199,7 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC3E8-803CC438 0050+00 r=2 e=0 z=0  None .data      __vt__14JKRCompArchive                                       */
+/* 803CC3E8-803CC438 0050+00 s=2 e=0 z=0  None .data      __vt__14JKRCompArchive                                       */
 SECTION_DATA static void* __vt__14JKRCompArchive[20] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -223,7 +223,7 @@ SECTION_DATA static void* __vt__14JKRCompArchive[20] = {
 	/* 19   */ (void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
-/* 802D87D4-802D887C 00A8+00 r=1 e=1 z=0  None .text      __ct__14JKRCompArchiveFlQ210JKRArchive15EMountDirection      */
+/* 802D87D4-802D887C 00A8+00 s=0 e=1 z=0  None .text      __ct__14JKRCompArchiveFlQ210JKRArchive15EMountDirection      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +234,7 @@ asm JKRCompArchive::JKRCompArchive(s32 param_0, JKRArchive::EMountDirection para
 #pragma pop
 
 
-/* 802D887C-802D89BC 0140+00 r=1 e=0 z=0  None .text      __dt__14JKRCompArchiveFv                                     */
+/* 802D887C-802D89BC 0140+00 s=1 e=0 z=0  None .text      __dt__14JKRCompArchiveFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ asm JKRCompArchive::~JKRCompArchive() {
 #pragma pop
 
 
-/* 802D89BC-802D8F40 0584+00 r=1 e=0 z=0  None .text      open__14JKRCompArchiveFl                                     */
+/* 802D89BC-802D8F40 0584+00 s=1 e=0 z=0  None .text      open__14JKRCompArchiveFl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,7 +256,7 @@ asm void JKRCompArchive::open(s32 param_0) {
 #pragma pop
 
 
-/* 802D8F40-802D90C0 0180+00 r=1 e=0 z=0  None .text      fetchResource__14JKRCompArchiveFPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D8F40-802D90C0 0180+00 s=1 e=0 z=0  None .text      fetchResource__14JKRCompArchiveFPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ asm void JKRCompArchive::fetchResource(JKRArchive::SDIFileEntry* param_0, u32* p
 
 
 /* ############################################################################################## */
-/* 8039D220-8039D260 0039+07 r=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039D220-8039D260 0039+07 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -280,7 +280,7 @@ SECTION_DEAD char const* const stringBase_8039D247 = "illegal resource.";
 SECTION_DEAD static char const* const pad_8039D259 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 802D90C0-802D9260 01A0+00 r=1 e=0 z=0  None .text      fetchResource__14JKRCompArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
+/* 802D90C0-802D9260 01A0+00 s=1 e=0 z=0  None .text      fetchResource__14JKRCompArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void JKRCompArchive::fetchResource(void* param_0, u32 param_1, JKRArchive::S
 #pragma pop
 
 
-/* 802D9260-802D92F4 0094+00 r=1 e=0 z=0  None .text      removeResourceAll__14JKRCompArchiveFv                        */
+/* 802D9260-802D92F4 0094+00 s=1 e=0 z=0  None .text      removeResourceAll__14JKRCompArchiveFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ asm void JKRCompArchive::removeResourceAll() {
 #pragma pop
 
 
-/* 802D92F4-802D9360 006C+00 r=1 e=0 z=0  None .text      removeResource__14JKRCompArchiveFPv                          */
+/* 802D92F4-802D9360 006C+00 s=1 e=0 z=0  None .text      removeResource__14JKRCompArchiveFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void JKRCompArchive::removeResource(void* param_0) {
 #pragma pop
 
 
-/* 802D9360-802D9518 01B8+00 r=1 e=0 z=0  None .text      getExpandedResSize__14JKRCompArchiveCFPCv                    */
+/* 802D9360-802D9518 01B8+00 s=1 e=0 z=0  None .text      getExpandedResSize__14JKRCompArchiveCFPCv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -2,10 +2,10 @@ lbl_809FFEC4:
 /* 809FFEC4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 809FFEC8 00000004  7C 08 02 A6 */	mflr r0
 /* 809FFECC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 809FFED0 0000000C  3C 60 00 00 */	lis r3, cNullVec__6Z2Calc@ha /* 80A00940 */
-/* 809FFED4 00000010  38 A3 00 00 */	addi r5, r3, cNullVec__6Z2Calc@l /* 80A00940 */
-/* 809FFED8 00000014  3C 60 00 00 */	lis r3, __ptmf_null@ha /* 803A2180 */
-/* 809FFEDC 00000018  38 83 00 00 */	addi r4, r3, __ptmf_null@l /* 803A2180 */
+/* 809FFED0 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FFED4 00000010  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
+/* 809FFED8 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FFEDC 00000018  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 809FFEE0 0000001C  80 64 00 00 */	lwz r3, 0(r4)
 /* 809FFEE4 00000020  80 04 00 04 */	lwz r0, 4(r4)
 /* 809FFEE8 00000024  90 65 06 8C */	stw r3, 0x68c(r5)
@@ -44,8 +44,8 @@ lbl_809FFEC4:
 /* 809FFF6C 000000A8  80 05 06 88 */	lwz r0, 0x688(r5)
 /* 809FFF70 000000AC  90 04 00 44 */	stw r0, 0x44(r4)
 /* 809FFF74 000000B0  38 A5 06 D0 */	addi r5, r5, 0x6d0
-/* 809FFF78 000000B4  3C 60 00 00 */	lis r3, mStoneCcDObjInfo__13daNpc_Hanjo_c@ha /* 80A006B4 */
-/* 809FFF7C 000000B8  38 63 00 00 */	addi r3, r3, mStoneCcDObjInfo__13daNpc_Hanjo_c@l /* 80A006B4 */
+/* 809FFF78 000000B4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FFF7C 000000B8  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 809FFF80 000000BC  38 83 FF FC */	addi r4, r3, -4
 /* 809FFF84 000000C0  38 00 00 06 */	li r0, 6
 /* 809FFF88 000000C4  7C 09 03 A6 */	mtctr r0
@@ -55,14 +55,14 @@ lbl_809FFF8C:
 /* 809FFF94 00000008  90 65 00 04 */	stw r3, 4(r5)
 /* 809FFF98 0000000C  94 05 00 08 */	stwu r0, 8(r5)
 /* 809FFF9C 00000010  42 00 FF F0 */	bdnz lbl_809FFF8C
-/* 809FFFA0 00000014  3C 60 00 00 */	lis r3, __vt__19daNpc_Hanjo_Param_c@ha /* 80A01270 */
-/* 809FFFA4 00000018  38 03 00 00 */	addi r0, r3, __vt__19daNpc_Hanjo_Param_c@l /* 80A01270 */
-/* 809FFFA8 0000001C  3C 60 00 00 */	lis r3, l_HIO@ha /* 80A012D4 */
-/* 809FFFAC 00000020  94 03 00 00 */	stwu r0, l_HIO@l(r3) /* 80A012D4 */
-/* 809FFFB0 00000024  3C 80 00 00 */	lis r4, __dt__19daNpc_Hanjo_Param_cFv@ha /* 80A00534 */
-/* 809FFFB4 00000028  38 84 00 00 */	addi r4, r4, __dt__19daNpc_Hanjo_Param_cFv@l /* 80A00534 */
-/* 809FFFB8 0000002C  3C A0 00 00 */	lis r5, lit_3859@ha /* 80A012C8 */
-/* 809FFFBC 00000030  38 A5 00 00 */	addi r5, r5, lit_3859@l /* 80A012C8 */
+/* 809FFFA0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FFFA4 00000018  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
+/* 809FFFA8 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809FFFAC 00000020  94 03 00 00 */	stwu r0, 0x0000(r3)
+/* 809FFFB0 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 809FFFB4 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 809FFFB8 0000002C  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 809FFFBC 00000030  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 809FFFC0 00000034  4B FF 90 59 */	bl __register_global_object
 /* 809FFFC4 00000038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 809FFFC8 0000003C  7C 08 03 A6 */	mtlr r0

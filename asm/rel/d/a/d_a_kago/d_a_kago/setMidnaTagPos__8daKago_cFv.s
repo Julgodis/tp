@@ -13,11 +13,11 @@ lbl_8084AAAC:
 /* 8084AAD8 0000002C  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 8084AADC 00000030  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8084AAE0 00000034  38 63 00 C0 */	addi r3, r3, 0xc0
-/* 8084AAE4 00000038  3C 80 00 00 */	lis r4, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 8084AAE8 0000003C  38 84 00 00 */	addi r4, r4, now__14mDoMtx_stack_c@l /* 803DD470 */
-/* 8084AAEC 00000040  4B FF EA 2D */	bl PSMTXCopy
-/* 8084AAF0 00000044  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 8084AAF4 00000048  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 8084AAE4 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8084AAE8 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8084AAEC 00000040  4B FF EA 2D */	bl _unresolved
+/* 8084AAF0 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084AAF4 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084AAF8 0000004C  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 8084AAFC 00000050  D0 41 00 08 */	stfs f2, 8(r1)
 /* 8084AB00 00000054  C0 23 00 1C */	lfs f1, 0x1c(r3)

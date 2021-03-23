@@ -60,7 +60,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803ABCC8-803ABDB8 00F0+00 r=2 e=0 z=0  None .data      __vt__9dBgW_Base                                             */
+/* 803ABCC8-803ABDB8 00F0+00 s=2 e=0 z=0  None .data      __vt__9dBgW_Base                                             */
 SECTION_DATA static void* __vt__9dBgW_Base[60] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -124,7 +124,7 @@ SECTION_DATA static void* __vt__9dBgW_Base[60] = {
 	/* 59   */ (void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
-/* 803ABDB8-803ABDC8 000C+04 r=3 e=0 z=0  None .data      __vt__9cBgW_BgId                                             */
+/* 803ABDB8-803ABDC8 000C+04 s=3 e=0 z=0  None .data      __vt__9cBgW_BgId                                             */
 SECTION_DATA static void* __vt__9cBgW_BgId[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -133,7 +133,7 @@ SECTION_DATA static void* __vt__9cBgW_BgId[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 8007E5A8-8007E5F8 0050+00 r=2 e=2 z=0  None .text      __ct__9dBgW_BaseFv                                           */
+/* 8007E5A8-8007E5F8 0050+00 s=0 e=2 z=0  None .text      __ct__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm dBgW_Base::dBgW_Base() {
 #pragma pop
 
 
-/* 8007E5F8-8007E640 0048+00 r=1 e=0 z=0  None .text      __dt__9cBgW_BgIdFv                                           */
+/* 8007E5F8-8007E640 0048+00 s=1 e=0 z=0  None .text      __dt__9cBgW_BgIdFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm cBgW_BgId::~cBgW_BgId() {
 #pragma pop
 
 
-/* 8007E640-8007E69C 005C+00 r=3 e=2 z=0  None .text      __dt__9dBgW_BaseFv                                           */
+/* 8007E640-8007E69C 005C+00 s=1 e=2 z=0  None .text      __dt__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ asm dBgW_Base::~dBgW_Base() {
 #pragma pop
 
 
-/* 8007E69C-8007E6D0 0034+00 r=2 e=1 z=0  None .text      ClrDBgWBase__9dBgW_BaseFv                                    */
+/* 8007E69C-8007E6D0 0034+00 s=1 e=1 z=0  None .text      ClrDBgWBase__9dBgW_BaseFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +177,7 @@ asm void dBgW_Base::ClrDBgWBase() {
 #pragma pop
 
 
-/* 8007E6D0-8007E6D8 0008+00 r=2 e=1 z=0  None .text      ChkMemoryError__9dBgW_BaseFv                                 */
+/* 8007E6D0-8007E6D8 0008+00 s=1 e=1 z=0  None .text      ChkMemoryError__9dBgW_BaseFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +188,7 @@ asm void dBgW_Base::ChkMemoryError() {
 #pragma pop
 
 
-/* 8007E6D8-8007E6DC 0004+00 r=3 e=2 z=0  None .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
+/* 8007E6D8-8007E6DC 0004+00 s=1 e=2 z=0  None .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +199,7 @@ asm void dBgW_Base::CallRideCallBack(fopAc_ac_c* param_0, fopAc_ac_c* param_1) {
 #pragma pop
 
 
-/* 8007E6DC-8007E6E0 0004+00 r=3 e=2 z=0  None .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
+/* 8007E6DC-8007E6E0 0004+00 s=1 e=2 z=0  None .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +210,7 @@ asm void dBgW_Base::CallArrowStickCallBack(fopAc_ac_c* param_0, fopAc_ac_c* para
 #pragma pop
 
 
-/* 8007E6E0-8007E6F4 0014+00 r=1 e=1 z=0  None .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
+/* 8007E6E0-8007E6F4 0014+00 s=0 e=1 z=0  None .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

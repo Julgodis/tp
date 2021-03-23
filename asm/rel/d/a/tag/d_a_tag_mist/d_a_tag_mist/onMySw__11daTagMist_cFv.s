@@ -8,12 +8,12 @@ lbl_8048F2C4:
 /* 8048F2DC 00000018  54 00 C6 3E */	rlwinm r0, r0, 0x18, 0x18, 0x1f
 /* 8048F2E0 0000001C  28 00 00 FF */	cmplwi r0, 0xff
 /* 8048F2E4 00000020  41 82 00 1C */	beq lbl_8048F300
-/* 8048F2E8 00000024  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8048F2EC 00000028  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8048F2E8 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8048F2EC 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8048F2F0 0000002C  7C 84 02 14 */	add r4, r4, r0
 /* 8048F2F4 00000030  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 8048F2F8 00000034  7C 05 07 74 */	extsb r5, r0
-/* 8048F2FC 00000038  4B FF FF 3D */	bl onSwitch__10dSv_info_cFii
+/* 8048F2FC 00000038  4B FF FF 3D */	bl _unresolved
 lbl_8048F300:
 /* 8048F300 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8048F304 00000004  7C 08 03 A6 */	mtlr r0

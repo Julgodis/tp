@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80ACFDDC[2];
+extern u8 data_80ACFDDC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_seira_cpp(); // 1
 
 // 
 // Declarations:

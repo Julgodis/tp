@@ -30,7 +30,7 @@ extern "C" extern u8 errno[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80368C00-80368CF0 00F0+00 r=3 e=3 z=0  None .text      strtol                                                       */
+/* 80368C00-80368CF0 00F0+00 s=0 e=3 z=0  None .text      strtol                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +41,7 @@ extern "C" asm void strtol() {
 #pragma pop
 
 
-/* 80368CF0-80368D9C 00AC+00 r=2 e=2 z=0  None .text      strtoul                                                      */
+/* 80368CF0-80368D9C 00AC+00 s=0 e=2 z=0  None .text      strtoul                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ extern "C" asm void strtoul() {
 
 
 /* ############################################################################################## */
-/* 803D3148-803D3190 0044+04 r=1 e=0 z=0  None .data      @431                                                         */
+/* 803D3148-803D3190 0044+04 s=1 e=0 z=0  None .data      @431                                                         */
 SECTION_DATA static void* MSL_Common_Src_strtoul__lit_431[17 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)__strtoul)+0x310),
 	/* 1    */ (void*)(((char*)__strtoul)+0xC4),
@@ -76,7 +76,7 @@ SECTION_DATA static void* MSL_Common_Src_strtoul__lit_431[17 + 1 /* padding */] 
 	NULL,
 };
 
-/* 80368D9C-80369114 0378+00 r=3 e=0 z=0  None .text      __strtoul                                                    */
+/* 80368D9C-80369114 0378+00 s=3 e=0 z=0  None .text      __strtoul                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

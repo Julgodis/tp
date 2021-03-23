@@ -51,7 +51,7 @@ extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
 // Declarations:
 // 
 
-/* 802A4A80-802A4AA0 0020+00 r=1 e=1 z=0  None .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
+/* 802A4A80-802A4AA0 0020+00 s=0 e=1 z=0  None .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +62,7 @@ asm void JAUBankTableDictionary::appendBankTable(JSULink<JAUBankTable>* param_0)
 #pragma pop
 
 
-/* 802A4AA0-802A4AC4 0024+00 r=2 e=2 z=0  None .text      getBank__12JAUBankTableCFUl                                  */
+/* 802A4AA0-802A4AC4 0024+00 s=0 e=2 z=0  None .text      getBank__12JAUBankTableCFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C5D204[2];
+extern u8 data_80C5D204[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv4CandleDemoTag_cpp(); // 1
 
 // 
 // Declarations:

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80AD7C94[2];
+extern u8 data_80AD7C94[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_seirei_cpp(); // 1
 
 // 
 // Declarations:

@@ -11,21 +11,21 @@
 // Types:
 // 
 
-struct JPABaseEmitter {
-	/* 8027EDD4 */ void processTillStartFrame();
-	/* 8027EE14 */ void processTermination();
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 struct JPAEmitterWorkData {
 };
 
+struct JPABaseEmitter {
+	/* 8027EDD4 */ void processTillStartFrame();
+	/* 8027EE14 */ void processTermination();
+};
+
 struct JPABaseParticle {
 	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
 	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
-};
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 struct JPAResource {
@@ -302,7 +302,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80274010-80274080 0070+00 r=1 e=1 z=0  None .text      __ct__11JPAResourceFv                                        */
+/* 80274010-80274080 0070+00 s=0 e=1 z=0  None .text      __ct__11JPAResourceFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,7 +314,7 @@ asm JPAResource::JPAResource() {
 
 
 /* ############################################################################################## */
-/* 803C40C0-803C4220 0144+1C r=2 e=0 z=0  None .data      jpa_pos                                                      */
+/* 803C40C0-803C4220 0144+1C s=2 e=0 z=0  None .data      jpa_pos                                                      */
 SECTION_DATA static u8 jpa_pos[324 + 28 /* padding */] = {
 	0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x32, 0xCE, 0x00, 0x00, 0xCE, 0x00, 0xE7, 0x00, 0x00, 0x19,
 	0x00, 0x00, 0x19, 0xCE, 0x00, 0xE7, 0xCE, 0x00, 0xCE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xCE,
@@ -342,13 +342,13 @@ SECTION_DATA static u8 jpa_pos[324 + 28 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4220-803C4240 0020+00 r=2 e=0 z=0  None .data      jpa_crd                                                      */
+/* 803C4220-803C4240 0020+00 s=2 e=0 z=0  None .data      jpa_crd                                                      */
 SECTION_DATA static u8 jpa_crd[32] = {
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01, 0x00, 0x00, 0x02, 0x00, 0x02, 0x01, 0x00, 0x01,
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x02, 0x00, 0x02, 0x00, 0x00, 0x02, 0x00, 0x02, 0x02, 0x00, 0x02,
 };
 
-/* 803C4240-803C426C 002C+00 r=1 e=0 z=0  None .data      @2829                                                        */
+/* 803C4240-803C426C 002C+00 s=1 e=0 z=0  None .data      @2829                                                        */
 SECTION_DATA static void* lit_2829[11] = {
 	/* 0    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1488),
 	/* 1    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x149C),
@@ -363,7 +363,7 @@ SECTION_DATA static void* lit_2829[11] = {
 	/* 10   */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1400),
 };
 
-/* 803C426C-803C4298 002C+00 r=1 e=0 z=0  None .data      @2828                                                        */
+/* 803C426C-803C4298 002C+00 s=1 e=0 z=0  None .data      @2828                                                        */
 SECTION_DATA static void* lit_2828[11] = {
 	/* 0    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x112C),
 	/* 1    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1140),
@@ -378,7 +378,7 @@ SECTION_DATA static void* lit_2828[11] = {
 	/* 10   */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10A4),
 };
 
-/* 80274080-802755E8 1568+00 r=3 e=1 z=0  None .text      init__11JPAResourceFP7JKRHeap                                */
+/* 80274080-802755E8 1568+00 s=2 e=1 z=0  None .text      init__11JPAResourceFP7JKRHeap                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +389,7 @@ asm void JPAResource::init(JKRHeap* param_0) {
 #pragma pop
 
 
-/* 802755E8-80275A94 04AC+00 r=1 e=1 z=0  None .text      calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter   */
+/* 802755E8-80275A94 04AC+00 s=0 e=1 z=0  None .text      calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +400,7 @@ asm void JPAResource::calc(JPAEmitterWorkData* param_0, JPABaseEmitter* param_1)
 #pragma pop
 
 
-/* 80275A94-80275B74 00E0+00 r=1 e=1 z=0  None .text      draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter   */
+/* 80275A94-80275B74 00E0+00 s=0 e=1 z=0  None .text      draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,24 +412,24 @@ asm void JPAResource::draw(JPAEmitterWorkData* param_0, JPABaseEmitter* param_1)
 
 
 /* ############################################################################################## */
-/* 80455290-80455294 0004+00 r=2 e=0 z=0  None .sdata2    @3189                                                        */
+/* 80455290-80455294 0004+00 s=2 e=0 z=0  None .sdata2    @3189                                                        */
 SECTION_SDATA2 static f32 lit_3189 = 51.0f / 50.0f;
 
-/* 80455294-80455298 0004+00 r=2 e=0 z=0  None .sdata2    @3190                                                        */
+/* 80455294-80455298 0004+00 s=2 e=0 z=0  None .sdata2    @3190                                                        */
 SECTION_SDATA2 static f32 lit_3190 = 2.0f / 5.0f;
 
-/* 80455298-8045529C 0004+00 r=1 e=0 z=0  None .sdata2    @3191                                                        */
+/* 80455298-8045529C 0004+00 s=1 e=0 z=0  None .sdata2    @3191                                                        */
 SECTION_SDATA2 static f32 lit_3191 = 1.0f;
 
-/* 8045529C-804552A0 0004+00 r=2 e=0 z=0  None .sdata2    @3192                                                        */
+/* 8045529C-804552A0 0004+00 s=2 e=0 z=0  None .sdata2    @3192                                                        */
 SECTION_SDATA2 static u8 lit_3192[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804552A0-804552A8 0008+00 r=3 e=0 z=0  None .sdata2    @3194                                                        */
+/* 804552A0-804552A8 0008+00 s=3 e=0 z=0  None .sdata2    @3194                                                        */
 SECTION_SDATA2 static f64 lit_3194 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80275B74-80275EB0 033C+00 r=1 e=0 z=0  None .text      drawP__11JPAResourceFP18JPAEmitterWorkData                   */
+/* 80275B74-80275EB0 033C+00 s=1 e=0 z=0  None .text      drawP__11JPAResourceFP18JPAEmitterWorkData                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,7 +440,7 @@ asm void JPAResource::drawP(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 80275EB0-802761A8 02F8+00 r=1 e=0 z=0  None .text      drawC__11JPAResourceFP18JPAEmitterWorkData                   */
+/* 80275EB0-802761A8 02F8+00 s=1 e=0 z=0  None .text      drawC__11JPAResourceFP18JPAEmitterWorkData                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,7 +451,7 @@ asm void JPAResource::drawC(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 802761A8-8027642C 0284+00 r=1 e=0 z=0  None .text      setPTev__11JPAResourceFv                                     */
+/* 802761A8-8027642C 0284+00 s=1 e=0 z=0  None .text      setPTev__11JPAResourceFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +462,7 @@ asm void JPAResource::setPTev() {
 #pragma pop
 
 
-/* 8027642C-8027658C 0160+00 r=1 e=0 z=0  None .text      setCTev__11JPAResourceFP18JPAEmitterWorkData                 */
+/* 8027642C-8027658C 0160+00 s=1 e=0 z=0  None .text      setCTev__11JPAResourceFP18JPAEmitterWorkData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +473,7 @@ asm void JPAResource::setCTev(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 8027658C-80276608 007C+00 r=1 e=1 z=0  None .text      calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027658C-80276608 007C+00 s=0 e=1 z=0  None .text      calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +484,7 @@ asm void JPAResource::calc_p(JPAEmitterWorkData* param_0, JPABaseParticle* param
 #pragma pop
 
 
-/* 80276608-80276684 007C+00 r=1 e=1 z=0  None .text      calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 80276608-80276684 007C+00 s=0 e=1 z=0  None .text      calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +495,7 @@ asm void JPAResource::calc_c(JPAEmitterWorkData* param_0, JPABaseParticle* param
 #pragma pop
 
 
-/* 80276684-80276700 007C+00 r=2 e=2 z=0  None .text      calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 80276684-80276700 007C+00 s=0 e=2 z=0  None .text      calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,7 +507,7 @@ asm void JPAResource::calcField(JPAEmitterWorkData* param_0, JPABaseParticle* pa
 
 
 /* ############################################################################################## */
-/* 803C4298-803C42E0 002C+1C r=1 e=0 z=0  None .data      @3454                                                        */
+/* 803C4298-803C42E0 002C+1C s=1 e=0 z=0  None .data      @3454                                                        */
 SECTION_DATA static void* lit_3454[11 + 7 /* padding */] = {
 	/* 0    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x90),
 	/* 1    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x9C),
@@ -530,7 +530,7 @@ SECTION_DATA static void* lit_3454[11 + 7 /* padding */] = {
 	NULL,
 };
 
-/* 80276700-80276840 0140+00 r=2 e=0 z=0  None .text      calcKey__11JPAResourceFP18JPAEmitterWorkData                 */
+/* 80276700-80276840 0140+00 s=2 e=0 z=0  None .text      calcKey__11JPAResourceFP18JPAEmitterWorkData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,7 +541,7 @@ asm void JPAResource::calcKey(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 80276840-80276A0C 01CC+00 r=1 e=0 z=0  None .text      calcWorkData_c__11JPAResourceFP18JPAEmitterWorkData          */
+/* 80276840-80276A0C 01CC+00 s=1 e=0 z=0  None .text      calcWorkData_c__11JPAResourceFP18JPAEmitterWorkData          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -552,7 +552,7 @@ asm void JPAResource::calcWorkData_c(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 80276A0C-80276A8C 0080+00 r=1 e=0 z=0  None .text      calcWorkData_d__11JPAResourceFP18JPAEmitterWorkData          */
+/* 80276A0C-80276A8C 0080+00 s=1 e=0 z=0  None .text      calcWorkData_d__11JPAResourceFP18JPAEmitterWorkData          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +563,7 @@ asm void JPAResource::calcWorkData_d(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 80276A8C-80276A90 0004+00 r=3 e=3 z=0  None .text      prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 80276A8C-80276A90 0004+00 s=0 e=3 z=0  None .text      prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

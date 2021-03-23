@@ -7,27 +7,27 @@ lbl_80AD153C:
 /* 80AD1550 00000014  88 03 0A 88 */	lbz r0, 0xa88(r3)
 /* 80AD1554 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80AD1558 0000001C  40 82 00 74 */	bne lbl_80AD15CC
-/* 80AD155C 00000020  4B FF F6 1D */	bl checkShopOpen__13dShopSystem_cFv
+/* 80AD155C 00000020  4B FF F6 1D */	bl _unresolved
 /* 80AD1560 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 80AD1564 00000028  40 82 00 68 */	bne lbl_80AD15CC
 /* 80AD1568 0000002C  88 1F 10 ED */	lbz r0, 0x10ed(r31)
 /* 80AD156C 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 80AD1570 00000034  40 82 00 5C */	bne lbl_80AD15CC
 /* 80AD1574 00000038  7F E3 FB 78 */	mr r3, r31
-/* 80AD1578 0000003C  4B FF F6 01 */	bl initShopSystem__13dShopSystem_cFv
+/* 80AD1578 0000003C  4B FF F6 01 */	bl _unresolved
 /* 80AD157C 00000040  7F E3 FB 78 */	mr r3, r31
 /* 80AD1580 00000044  48 00 02 39 */	bl getMaxNumItem__14daNpc_Seira2_cFv
 /* 80AD1584 00000048  7C 64 1B 78 */	mr r4, r3
 /* 80AD1588 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 80AD158C 00000050  4B FF F5 ED */	bl setSellItemMax__13dShopSystem_cFUc
+/* 80AD158C 00000050  4B FF F5 ED */	bl _unresolved
 /* 80AD1590 00000054  38 00 FF FF */	li r0, -1
 /* 80AD1594 00000058  90 1F 0F 60 */	stw r0, 0xf60(r31)
 /* 80AD1598 0000005C  38 A0 00 01 */	li r5, 1
 /* 80AD159C 00000060  98 BF 0F 77 */	stb r5, 0xf77(r31)
 /* 80AD15A0 00000064  38 00 00 00 */	li r0, 0
 /* 80AD15A4 00000068  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
-/* 80AD15A8 0000006C  3C 60 00 00 */	lis r3, __ptmf_null@ha /* 803A2180 */
-/* 80AD15AC 00000070  38 83 00 00 */	addi r4, r3, __ptmf_null@l /* 803A2180 */
+/* 80AD15A8 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AD15AC 00000070  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80AD15B0 00000074  80 64 00 00 */	lwz r3, 0(r4)
 /* 80AD15B4 00000078  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AD15B8 0000007C  90 7F 0E 78 */	stw r3, 0xe78(r31)
@@ -37,16 +37,16 @@ lbl_80AD153C:
 /* 80AD15C8 0000008C  98 BF 10 ED */	stb r5, 0x10ed(r31)
 lbl_80AD15CC:
 /* 80AD15CC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80AD15D0 00000004  4B FF F5 A9 */	bl execute__8daNpcT_cFv
+/* 80AD15D0 00000004  4B FF F5 A9 */	bl _unresolved
 /* 80AD15D4 00000008  88 1F 10 ED */	lbz r0, 0x10ed(r31)
 /* 80AD15D8 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80AD15DC 00000010  41 82 00 1C */	beq lbl_80AD15F8
 /* 80AD15E0 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80AD15E4 00000018  4B FF F5 95 */	bl searchItemActor__13dShopSystem_cFv
+/* 80AD15E4 00000018  4B FF F5 95 */	bl _unresolved
 /* 80AD15E8 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AD15EC 00000020  41 82 00 0C */	beq lbl_80AD15F8
 /* 80AD15F0 00000024  38 7F 0E 78 */	addi r3, r31, 0xe78
-/* 80AD15F4 00000028  4B FF F5 85 */	bl move__16ShopCam_action_cFv
+/* 80AD15F4 00000028  4B FF F5 85 */	bl _unresolved
 lbl_80AD15F8:
 /* 80AD15F8 00000000  38 60 00 01 */	li r3, 1
 /* 80AD15FC 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

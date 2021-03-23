@@ -35,7 +35,7 @@ extern "C" void setCode__5dBgPcFR5sBgPc(); // 1
 // Declarations:
 // 
 
-/* 80074048-80074074 002C+00 r=1 e=1 z=0  None .text      setCode__5dBgPcFR5sBgPc                                      */
+/* 80074048-80074074 002C+00 s=0 e=1 z=0  None .text      setCode__5dBgPcFR5sBgPc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

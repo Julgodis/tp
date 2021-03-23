@@ -25,12 +25,12 @@ extern "C" void __ieee754_fmod(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A2370-803A2380 0010+00 r=1 e=0 z=0  None .rodata    Zero                                                         */
+/* 803A2370-803A2380 0010+00 s=1 e=0 z=0  None .rodata    Zero                                                         */
 SECTION_RODATA static u8 const Zero[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80369B9C-80369ED8 033C+00 r=1 e=1 z=0  None .text      __ieee754_fmod                                               */
+/* 80369B9C-80369ED8 033C+00 s=0 e=1 z=0  None .text      __ieee754_fmod                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

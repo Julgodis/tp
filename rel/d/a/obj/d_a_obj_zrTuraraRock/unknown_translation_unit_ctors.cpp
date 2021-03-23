@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80D423AC[2];
+extern u8 data_80D423AC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_zrTuraraRock_cpp(); // 1
 
 // 
 // Declarations:

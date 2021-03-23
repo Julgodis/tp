@@ -75,7 +75,7 @@ extern "C" void _restgpr_28(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9B60-803C9B70 000C+04 r=2 e=0 z=0  None .data      __vt__Q28JMessage8TControl                                   */
+/* 803C9B60-803C9B70 000C+04 s=2 e=0 z=0  None .data      __vt__Q28JMessage8TControl                                   */
 SECTION_DATA static void* __vt__Q28JMessage8TControl[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -84,7 +84,7 @@ SECTION_DATA static void* __vt__Q28JMessage8TControl[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A7548-802A758C 0044+00 r=2 e=2 z=0  None .text      __ct__Q28JMessage8TControlFv                                 */
+/* 802A7548-802A758C 0044+00 s=0 e=2 z=0  None .text      __ct__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ asm JMessage::TControl::TControl() {
 #pragma pop
 
 
-/* 802A758C-802A75D4 0048+00 r=3 e=2 z=0  None .text      __dt__Q28JMessage8TControlFv                                 */
+/* 802A758C-802A75D4 0048+00 s=1 e=2 z=0  None .text      __dt__Q28JMessage8TControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +106,7 @@ asm JMessage::TControl::~TControl() {
 #pragma pop
 
 
-/* 802A75D4-802A7634 0060+00 r=9 e=9 z=0  None .text      reset__Q28JMessage8TControlFv                                */
+/* 802A75D4-802A7634 0060+00 s=0 e=9 z=0  None .text      reset__Q28JMessage8TControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +117,7 @@ asm void JMessage::TControl::reset() {
 #pragma pop
 
 
-/* 802A7634-802A76BC 0088+00 r=4 e=4 z=0  None .text      update__Q28JMessage8TControlFv                               */
+/* 802A7634-802A76BC 0088+00 s=0 e=4 z=0  None .text      update__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm void JMessage::TControl::update() {
 #pragma pop
 
 
-/* 802A76BC-802A77E8 012C+00 r=5 e=5 z=0  None .text      render__Q28JMessage8TControlFv                               */
+/* 802A76BC-802A77E8 012C+00 s=0 e=5 z=0  None .text      render__Q28JMessage8TControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ asm void JMessage::TControl::render() {
 #pragma pop
 
 
-/* 802A77E8-802A78F4 010C+00 r=1 e=1 z=0  None .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
+/* 802A77E8-802A78F4 010C+00 s=0 e=1 z=0  None .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +150,7 @@ asm void JMessage::TControl::setMessageCode(u16 param_0, u16 param_1) {
 #pragma pop
 
 
-/* 802A78F4-802A7A20 012C+00 r=6 e=6 z=0  None .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
+/* 802A78F4-802A7A20 012C+00 s=0 e=6 z=0  None .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +161,7 @@ asm void JMessage::TControl::setMessageID(u32 param_0, u32 param_1, bool* param_
 #pragma pop
 
 
-/* 802A7A20-802A7AF8 00D8+00 r=3 e=1 z=0  None .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
+/* 802A7A20-802A7AF8 00D8+00 s=2 e=1 z=0  None .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

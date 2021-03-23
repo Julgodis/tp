@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_804CC32C[2];
+extern u8 data_804CC32C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_nbomb_cpp(); // 1
 
 // 
 // Declarations:

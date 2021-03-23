@@ -11,19 +11,19 @@ lbl_807D1F40:
 /* 807D1F64 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 807D1F68 00000028  41 82 00 14 */	beq lbl_807D1F7C
 /* 807D1F6C 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 807D1F70 00000030  4B FF D8 49 */	bl __ct__10fopAc_ac_cFv
+/* 807D1F70 00000030  4B FF D8 49 */	bl _unresolved
 /* 807D1F74 00000034  38 7E 06 00 */	addi r3, r30, 0x600
-/* 807D1F78 00000038  4B FF D8 41 */	bl __ct__10dMsgFlow_cFv
+/* 807D1F78 00000038  4B FF D8 41 */	bl _unresolved
 lbl_807D1F7C:
 /* 807D1F7C 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 807D1F80 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 807D1F84 00000008  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_807D1F88:
 /* 807D1F88 00000000  38 7F 05 68 */	addi r3, r31, 0x568
-/* 807D1F8C 00000004  3C 80 00 00 */	lis r4, stringBase0@ha /* 807D2280 */
-/* 807D1F90 00000008  38 84 00 00 */	addi r4, r4, stringBase0@l /* 807D2280 */
+/* 807D1F8C 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 807D1F90 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 807D1F94 0000000C  38 84 00 08 */	addi r4, r4, 8
-/* 807D1F98 00000010  4B FF D8 21 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 807D1F98 00000010  4B FF D8 21 */	bl _unresolved
 /* 807D1F9C 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 807D1FA0 00000018  2C 1E 00 04 */	cmpwi r30, 4
 /* 807D1FA4 0000001C  40 82 00 AC */	bne lbl_807D2050
@@ -34,13 +34,13 @@ lbl_807D1F88:
 /* 807D1FB8 00000030  41 82 00 6C */	beq lbl_807D2024
 /* 807D1FBC 00000034  28 00 00 FF */	cmplwi r0, 0xff
 /* 807D1FC0 00000038  40 82 00 30 */	bne lbl_807D1FF0
-/* 807D1FC4 0000003C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 807D1FC8 00000040  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 807D1FC4 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807D1FC8 00000040  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 807D1FCC 00000044  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 807D1FD0 00000048  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha /* 803A7288 */
-/* 807D1FD4 0000004C  38 84 00 00 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l /* 803A7288 */
+/* 807D1FD0 00000048  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 807D1FD4 0000004C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 807D1FD8 00000050  A0 84 01 2E */	lhz r4, 0x12e(r4)
-/* 807D1FDC 00000054  4B FF D7 DD */	bl isEventBit__11dSv_event_cCFUs
+/* 807D1FDC 00000054  4B FF D7 DD */	bl _unresolved
 /* 807D1FE0 00000058  2C 03 00 00 */	cmpwi r3, 0
 /* 807D1FE4 0000005C  41 82 00 14 */	beq lbl_807D1FF8
 /* 807D1FE8 00000060  38 60 00 05 */	li r3, 5
@@ -49,23 +49,23 @@ lbl_807D1FF0:
 /* 807D1FF0 00000000  38 00 00 78 */	li r0, 0x78
 /* 807D1FF4 00000004  B0 1F 05 9A */	sth r0, 0x59a(r31)
 lbl_807D1FF8:
-/* 807D1FF8 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 807D1FFC 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 807D1FF8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 807D1FFC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 807D2000 00000008  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 807D2004 0000000C  54 04 46 3E */	srwi r4, r0, 0x18
 /* 807D2008 00000010  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 807D200C 00000014  7C 05 07 74 */	extsb r5, r0
-/* 807D2010 00000018  4B FF D7 A9 */	bl isSwitch__10dSv_info_cCFii
+/* 807D2010 00000018  4B FF D7 A9 */	bl _unresolved
 /* 807D2014 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 807D2018 00000020  41 82 00 0C */	beq lbl_807D2024
 /* 807D201C 00000024  38 60 00 05 */	li r3, 5
 /* 807D2020 00000028  48 00 00 34 */	b lbl_807D2054
 lbl_807D2024:
 /* 807D2024 00000000  7F E3 FB 78 */	mr r3, r31
-/* 807D2028 00000004  3C 80 00 00 */	lis r4, useHeapInit__FP10fopAc_ac_c@ha /* 807D1C8C */
-/* 807D202C 00000008  38 84 00 00 */	addi r4, r4, useHeapInit__FP10fopAc_ac_c@l /* 807D1C8C */
+/* 807D2028 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 807D202C 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 807D2030 0000000C  38 A0 20 80 */	li r5, 0x2080
-/* 807D2034 00000010  4B FF D7 85 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 807D2034 00000010  4B FF D7 85 */	bl _unresolved
 /* 807D2038 00000014  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 807D203C 00000018  40 82 00 0C */	bne lbl_807D2048
 /* 807D2040 0000001C  38 60 00 05 */	li r3, 5

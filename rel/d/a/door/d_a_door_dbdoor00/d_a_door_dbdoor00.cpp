@@ -42,128 +42,28 @@ struct daDbDoor00_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CCC8 */ void push();
-	/* 8000CD14 */ void pop();
-	/* 8000CD9C */ void transM(f32, f32, f32);
-};
-
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct dStage_roomControl_c {
-	/* 800244E8 */ void checkRoomDisp(int) const;
-};
-
-struct request_of_phase_process_class {
-};
-
-struct door_param2_c {
-	/* 8003A194 */ void getDoorModel(fopAc_ac_c*);
-	/* 8003A1B8 */ void getFRoomNo(fopAc_ac_c*);
-	/* 8003A224 */ void getExitNo(fopAc_ac_c*);
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct dEvt_info_c {
-	/* 80043428 */ void setEventName(char*);
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dEvent_manager_c {
-	/* 80047ADC */ void endCheckOld(char const*);
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
-	/* 800480EC */ void getMySubstanceP(int, char const*, int);
-	/* 8004817C */ void cutEnd(int);
-	/* 800483C4 */ void setGoal(cXyz*);
-};
-
-struct dBgW_Base {
-};
-
-struct cBgS {
-	/* 80074250 */ void Release(dBgW_Base*);
-};
-
-struct dBgS {
-	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct cBgD_t {
-};
-
-struct cBgW {
-	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
-};
-
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct JAISoundID {
-};
-
-struct Z2SeMgr {
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
-};
-
-struct JUTNameTab {
-	/* 802DEA58 */ void getIndex(char const*) const;
 };
 
 // 
 // Forward References:
 // 
 
-static void nodeCallBack(J3DJoint*, int); // 2
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daDbdoor00_Draw(daDbDoor00_c*); // 2
-static void daDbdoor00_Execute(daDbDoor00_c*); // 2
-static void daDbdoor00_IsDelete(daDbDoor00_c*); // 2
-static void daDbdoor00_Delete(daDbDoor00_c*); // 2
-static void daDbdoor00_Create(fopAc_ac_c*); // 2
+void nodeCallBack(J3DJoint*, int); // 2
+void CheckCreateHeap(fopAc_ac_c*); // 2
+void daDbdoor00_Draw(daDbDoor00_c*); // 2
+void daDbdoor00_Execute(daDbDoor00_c*); // 2
+void daDbdoor00_IsDelete(daDbDoor00_c*); // 2
+void daDbdoor00_Delete(daDbDoor00_c*); // 2
+void daDbdoor00_Create(fopAc_ac_c*); // 2
 
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
+extern "C" void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" void getAlwaysArcName__12daDbDoor00_cFv(); // 1
 extern "C" void getDzb__12daDbDoor00_cFv(); // 1
 extern "C" void getDummyBmdName__12daDbDoor00_cFv(); // 1
 extern "C" void getBmdArcName__12daDbDoor00_cFv(); // 1
 extern "C" void getBmdName__12daDbDoor00_cFv(); // 1
 extern "C" void getDoorModelData__12daDbDoor00_cFv(); // 1
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__12daDbDoor00_cFv(); // 1
 extern "C" void calcMtx__12daDbDoor00_cFv(); // 1
 extern "C" void CreateInit__12daDbDoor00_cFv(); // 1
@@ -182,16 +82,18 @@ extern "C" void execute__12daDbDoor00_cFv(); // 1
 extern "C" void checkDraw__12daDbDoor00_cFv(); // 1
 extern "C" void draw__12daDbDoor00_cFv(); // 1
 extern "C" void Delete__12daDbDoor00_cFv(); // 1
-extern "C" static void daDbdoor00_Draw__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Execute__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_IsDelete__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Delete__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daDbdoor00_Draw__FP12daDbDoor00_c(); // 1
+extern "C" void daDbdoor00_Execute__FP12daDbDoor00_c(); // 1
+extern "C" void daDbdoor00_IsDelete__FP12daDbDoor00_c(); // 1
+extern "C" void daDbdoor00_Delete__FP12daDbDoor00_c(); // 1
+extern "C" void daDbdoor00_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern u8 const lit_3806[4];
 extern "C" extern u32 const lit_3807;
 extern "C" extern u32 const lit_3808;
 extern "C" extern u32 const lit_3809;
 extern "C" extern u32 const lit_3810;
 extern "C" extern u32 const lit_3811;
+extern "C" extern u32 const lit_3826;
 extern "C" extern u32 const lit_3953;
 extern "C" extern u32 const lit_3954;
 extern "C" extern u32 const lit_3955;
@@ -199,159 +101,424 @@ extern "C" extern u32 const lit_3956;
 extern "C" extern u32 const lit_4032;
 extern "C" extern u32 const lit_4033;
 extern "C" extern u32 const lit_4034;
+extern "C" extern u8 const struct_8045E56C[144];
+extern "C" extern u8 const struct_8045E5FC[104];
+extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* lit_4092[3];
-extern "C" extern void* lit_4093[3];
-extern "C" extern void* lit_4094[3];
-extern "C" extern void* lit_4095[3];
-extern "C" extern void* lit_4096[3];
-extern "C" extern void* lit_4097[3];
+extern "C" extern u8 l_bmd_base_name[4];
+extern "C" extern u8 data_8045E688[36];
+extern "C" extern u8 lit_3957[36];
+extern "C" extern u8 lit_4092[12];
+extern "C" extern u8 lit_4093[12];
+extern "C" extern u8 lit_4094[12];
+extern "C" extern u8 lit_4095[12];
+extern "C" extern u8 lit_4096[12];
+extern "C" extern u8 lit_4097[12];
 extern "C" extern u8 data_8045E718[72];
-extern "C" extern void* g_profile_DBDOOR[12];
+extern "C" extern u8 l_daDbdoor00_Method[32];
+extern "C" extern u8 g_profile_DBDOOR[48];
+extern "C" extern u8 data_8045E7B0[32];
+extern "C" extern u8 data_8045E7D0[4];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderOtherEvent(fopAc_ac_c*, char const*, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void* operator new(u32); // 2
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void push__14mDoMtx_stack_cFv(); // 1
-extern "C" void pop__14mDoMtx_stack_cFv(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs(); // 1
-extern "C" void checkRoomDisp__20dStage_roomControl_cCFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setEventName__11dEvt_info_cFPc(); // 1
-extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void setGoal__16dEvent_manager_cFP4cXyz(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 j3dSys[284];
-extern "C" extern u8 mCurrentMtx__6J3DSys[48];
-extern "C" extern u8 sincosTable___5JMath[65536];
-extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 8045D378-8045D470 00F8+00 r=1 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
+/* 8045D378-8045D470 00F8+00 s=0 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
+asm void nodeCallBack(J3DJoint* param_0, int param_1) {
 	nofralloc
 #include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/nodeCallBack__FP8J3DJointi.s"
 }
 #pragma pop
 
 
+/* 8045D470-8045D480 0010+00 s=3 e=0 z=0  None .text      getAlwaysArcName__12daDbDoor00_cFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getAlwaysArcName() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getAlwaysArcName__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D480-8045D490 0010+00 s=1 e=0 z=0  None .text      getDzb__12daDbDoor00_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getDzb() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDzb__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D490-8045D4A0 0010+00 s=1 e=0 z=0  None .text      getDummyBmdName__12daDbDoor00_cFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getDummyBmdName() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDummyBmdName__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D4A0-8045D4B0 0010+00 s=3 e=0 z=0  None .text      getBmdArcName__12daDbDoor00_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getBmdArcName() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getBmdArcName__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D4B0-8045D504 0054+00 s=1 e=0 z=0  None .text      getBmdName__12daDbDoor00_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getBmdName() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getBmdName__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D504-8045D574 0070+00 s=1 e=0 z=0  None .text      getDoorModelData__12daDbDoor00_cFv                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getDoorModelData() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDoorModelData__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D574-8045D594 0020+00 s=0 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void CheckCreateHeap(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CheckCreateHeap__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 8045D594-8045D744 01B0+00 s=1 e=0 z=0  None .text      CreateHeap__12daDbDoor00_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CreateHeap__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D744-8045D8F4 01B0+00 s=4 e=0 z=0  None .text      calcMtx__12daDbDoor00_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::calcMtx() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/calcMtx__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D8F4-8045D9A8 00B4+00 s=1 e=0 z=0  None .text      CreateInit__12daDbDoor00_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::CreateInit() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CreateInit__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045D9A8-8045DA68 00C0+00 s=1 e=0 z=0  None .text      create__12daDbDoor00_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::create() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/create__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DA68-8045DAB0 0048+00 s=1 e=0 z=0  None .text      getDemoAction__12daDbDoor00_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::getDemoAction() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDemoAction__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DAB0-8045DE44 0394+00 s=4 e=0 z=0  None .text      demoProc__12daDbDoor00_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::demoProc() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/demoProc__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DE44-8045DF70 012C+00 s=1 e=0 z=0  None .text      checkArea__12daDbDoor00_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::checkArea() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkArea__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DF70-8045DF78 0008+00 s=1 e=0 z=0  None .text      checkUnlock__12daDbDoor00_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::checkUnlock() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkUnlock__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DF78-8045DF9C 0024+00 s=0 e=0 z=0  None .text      actionWait__12daDbDoor00_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionWait() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionWait__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045DF9C-8045E000 0064+00 s=0 e=0 z=0  None .text      actionLockWait__12daDbDoor00_cFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionLockWait() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockWait__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E000-8045E094 0094+00 s=0 e=0 z=0  None .text      actionLockOff__12daDbDoor00_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionLockOff() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockOff__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E094-8045E108 0074+00 s=0 e=0 z=0  None .text      actionLockDemo__12daDbDoor00_cFv                             */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionLockDemo() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockDemo__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E108-8045E1C8 00C0+00 s=0 e=0 z=0  None .text      actionCloseWait__12daDbDoor00_cFv                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionCloseWait() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionCloseWait__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E1C8-8045E1EC 0024+00 s=0 e=0 z=0  None .text      actionOpen__12daDbDoor00_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::actionOpen() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionOpen__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E1EC-8045E2DC 00F0+00 s=1 e=0 z=0  None .text      execute__12daDbDoor00_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::execute() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/execute__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E2DC-8045E31C 0040+00 s=1 e=0 z=0  None .text      checkDraw__12daDbDoor00_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::checkDraw() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkDraw__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E31C-8045E428 010C+00 s=1 e=0 z=0  None .text      draw__12daDbDoor00_cFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::draw() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/draw__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E428-8045E49C 0074+00 s=1 e=0 z=0  None .text      Delete__12daDbDoor00_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbDoor00_c::Delete() {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/Delete__12daDbDoor00_cFv.s"
+}
+#pragma pop
+
+
+/* 8045E49C-8045E4BC 0020+00 s=0 e=0 z=0  None .text      daDbdoor00_Draw__FP12daDbDoor00_c                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbdoor00_Draw(daDbDoor00_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Draw__FP12daDbDoor00_c.s"
+}
+#pragma pop
+
+
+/* 8045E4BC-8045E4E0 0024+00 s=0 e=0 z=0  None .text      daDbdoor00_Execute__FP12daDbDoor00_c                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbdoor00_Execute(daDbDoor00_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Execute__FP12daDbDoor00_c.s"
+}
+#pragma pop
+
+
+/* 8045E4E0-8045E4E8 0008+00 s=0 e=0 z=0  None .text      daDbdoor00_IsDelete__FP12daDbDoor00_c                        */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbdoor00_IsDelete(daDbDoor00_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_IsDelete__FP12daDbDoor00_c.s"
+}
+#pragma pop
+
+
+/* 8045E4E8-8045E50C 0024+00 s=0 e=0 z=0  None .text      daDbdoor00_Delete__FP12daDbDoor00_c                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbdoor00_Delete(daDbDoor00_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Delete__FP12daDbDoor00_c.s"
+}
+#pragma pop
+
+
+/* 8045E50C-8045E52C 0020+00 s=0 e=0 z=0  None .text      daDbdoor00_Create__FP10fopAc_ac_c                            */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daDbdoor00_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
 /* ############################################################################################## */
-/* 8045E534-8045E538 0004+00 r=3 e=0 z=0  None .rodata    @3806                                                        */
-SECTION_RODATA static u8 const lit_3806[4] = {
+/* 8045E534-8045E538 0004+00 s=0 e=0 z=0  None .rodata    @3806                                                        */
+SECTION_RODATA u8 const lit_3806[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E538-8045E53C 0004+00 r=0 e=0 z=0  None .rodata    @3807                                                        */
+/* 8045E538-8045E53C 0004+00 s=0 e=0 z=0  None .rodata    @3807                                                        */
 SECTION_RODATA u32 const lit_3807 = 0xC3160000;
 
-/* 8045E53C-8045E540 0004+00 r=0 e=0 z=0  None .rodata    @3808                                                        */
+/* 8045E53C-8045E540 0004+00 s=0 e=0 z=0  None .rodata    @3808                                                        */
 SECTION_RODATA u32 const lit_3808 = 0xC3C80000;
 
-/* 8045E540-8045E544 0004+00 r=0 e=0 z=0  None .rodata    @3809                                                        */
+/* 8045E540-8045E544 0004+00 s=0 e=0 z=0  None .rodata    @3809                                                        */
 SECTION_RODATA u32 const lit_3809 = 0x42A00000;
 
-/* 8045E544-8045E548 0004+00 r=0 e=0 z=0  None .rodata    @3810                                                        */
+/* 8045E544-8045E548 0004+00 s=0 e=0 z=0  None .rodata    @3810                                                        */
 SECTION_RODATA u32 const lit_3810 = 0x428C0000;
 
-/* 8045E548-8045E54C 0004+00 r=0 e=0 z=0  None .rodata    @3811                                                        */
+/* 8045E548-8045E54C 0004+00 s=0 e=0 z=0  None .rodata    @3811                                                        */
 SECTION_RODATA u32 const lit_3811 = 0xC2A00000;
 
-/* 8045E54C-8045E550 0004+00 r=1 e=0 z=0  None .rodata    @3826                                                        */
-SECTION_RODATA static u32 const lit_3826 = 0x437A0000;
+/* 8045E54C-8045E550 0004+00 s=0 e=0 z=0  None .rodata    @3826                                                        */
+SECTION_RODATA u32 const lit_3826 = 0x437A0000;
 
-/* 8045E550-8045E554 0004+00 r=0 e=0 z=0  None .rodata    @3953                                                        */
+/* 8045E550-8045E554 0004+00 s=0 e=0 z=0  None .rodata    @3953                                                        */
 SECTION_RODATA u32 const lit_3953 = 0x3F800000;
 
-/* 8045E554-8045E558 0004+00 r=0 e=0 z=0  None .rodata    @3954                                                        */
+/* 8045E554-8045E558 0004+00 s=0 e=0 z=0  None .rodata    @3954                                                        */
 SECTION_RODATA u32 const lit_3954 = 0xBF800000;
 
-/* 8045E558-8045E55C 0004+00 r=0 e=0 z=0  None .rodata    @3955                                                        */
+/* 8045E558-8045E55C 0004+00 s=0 e=0 z=0  None .rodata    @3955                                                        */
 SECTION_RODATA u32 const lit_3955 = 0x3F666666;
 
-/* 8045E55C-8045E560 0004+00 r=0 e=0 z=0  None .rodata    @3956                                                        */
+/* 8045E55C-8045E560 0004+00 s=0 e=0 z=0  None .rodata    @3956                                                        */
 SECTION_RODATA u32 const lit_3956 = 0x3DCCCCCD;
 
-/* 8045E560-8045E564 0004+00 r=0 e=0 z=0  None .rodata    @4032                                                        */
+/* 8045E560-8045E564 0004+00 s=0 e=0 z=0  None .rodata    @4032                                                        */
 SECTION_RODATA u32 const lit_4032 = 0x43200000;
 
-/* 8045E564-8045E568 0004+00 r=0 e=0 z=0  None .rodata    @4033                                                        */
+/* 8045E564-8045E568 0004+00 s=0 e=0 z=0  None .rodata    @4033                                                        */
 SECTION_RODATA u32 const lit_4033 = 0x43480000;
 
-/* 8045E568-8045E56C 0004+00 r=0 e=0 z=0  None .rodata    @4034                                                        */
+/* 8045E568-8045E56C 0004+00 s=0 e=0 z=0  None .rodata    @4034                                                        */
 SECTION_RODATA u32 const lit_4034 = 0xC3480000;
 
-/* 8045E56C-8045E5FC 0090+00 r=13 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8045E56C[144] = {
+/* 8045E56C-8045E5FC 0090+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_8045E56C[144] = {
 	/* 8045E56C 006E stringBase_8045E56C @stringBase0 */
 	0x64, 0x6F, 0x6F, 0x72, 0x2D, 0x70, 0x75, 0x73, 0x68, 0x44, 0x6F, 0x75, 0x62, 0x6C, 0x65, 0x5F,
 	0x00, 0x73, 0x74, 0x61, 0x74, 0x69, 0x63, 0x00, 0x64, 0x6F, 0x6F, 0x72, 0x2D, 0x70, 0x75, 0x73,
@@ -372,149 +539,8 @@ SECTION_RODATA static u8 const struct_8045E56C[144] = {
 	0x4F, 0x50, 0x45, 0x4E, 0x00,
 };
 
-/* 8045D470-8045D480 0010+00 r=3 e=0 z=0  None .text      getAlwaysArcName__12daDbDoor00_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getAlwaysArcName() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getAlwaysArcName__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D480-8045D490 0010+00 r=1 e=0 z=0  None .text      getDzb__12daDbDoor00_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getDzb() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDzb__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D490-8045D4A0 0010+00 r=1 e=0 z=0  None .text      getDummyBmdName__12daDbDoor00_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getDummyBmdName() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDummyBmdName__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D4A0-8045D4B0 0010+00 r=3 e=0 z=0  None .text      getBmdArcName__12daDbDoor00_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getBmdArcName() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getBmdArcName__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8045E664-8045E670 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8045E670-8045E684 0004+10 r=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 8045E684-8045E688 0004+00 r=1 e=0 z=0  None .data      l_bmd_base_name                                              */
-SECTION_DATA static void* l_bmd_base_name = (void*)(((char*)&struct_8045E56C)+0x0) /* @stringBase0 */;
-
-/* 8045E7B0-8045E7D0 0020+00 r=1 e=0 z=0  None .bss       l_bmdName$3699                                               */
-static u8 data_8045E7B0[32];
-
-/* 8045D4B0-8045D504 0054+00 r=1 e=0 z=0  None .text      getBmdName__12daDbDoor00_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getBmdName() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getBmdName__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D504-8045D574 0070+00 r=1 e=0 z=0  None .text      getDoorModelData__12daDbDoor00_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getDoorModelData() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDoorModelData__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D574-8045D594 0020+00 r=1 e=0 z=0  None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CheckCreateHeap__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 8045D594-8045D744 01B0+00 r=1 e=0 z=0  None .text      CreateHeap__12daDbDoor00_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CreateHeap__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D744-8045D8F4 01B0+00 r=4 e=0 z=0  None .text      calcMtx__12daDbDoor00_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::calcMtx() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/calcMtx__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D8F4-8045D9A8 00B4+00 r=1 e=0 z=0  None .text      CreateInit__12daDbDoor00_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::CreateInit() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/CreateInit__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045D9A8-8045DA68 00C0+00 r=1 e=0 z=0  None .text      create__12daDbDoor00_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::create() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/create__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8045E5FC-8045E664 0068+00 r=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8045E5FC[104] = {
+/* 8045E5FC-8045E664 0068+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_8045E5FC[104] = {
 	/* 8045E5FC 000A data_8045E5FC None */
 	0x53, 0x54, 0x4F, 0x50, 0x5F, 0x4F, 0x50, 0x45, 0x4E, 0x00,
 	/* 8045E606 0009 data_8045E606 None */
@@ -529,290 +555,68 @@ SECTION_RODATA static u8 const struct_8045E5FC[104] = {
 	0x4F, 0x4F, 0x52, 0x5F, 0x4F, 0x50, 0x45, 0x4E, 0x00, 0x00, 0x00,
 };
 
-/* 8045E688-8045E6AC 0024+00 r=1 e=0 z=0  None .data      action_table$3865                                            */
-SECTION_DATA static void* data_8045E688[9] = {
-	/* 0    */ (void*)(((char*)&struct_8045E56C)+0x6E) /* None */,
-	/* 1    */ (void*)(((char*)&struct_8045E56C)+0x73) /* None */,
-	/* 2    */ (void*)(((char*)&struct_8045E56C)+0x7D) /* None */,
-	/* 3    */ (void*)(((char*)&struct_8045E56C)+0x87) /* None */,
-	/* 4    */ (void*)(((char*)&struct_8045E56C)+0x8B) /* None */,
-	/* 5    */ (void*)(((char*)&struct_8045E5FC)+0x0) /* None */,
-	/* 6    */ (void*)(((char*)&struct_8045E5FC)+0xA) /* None */,
-	/* 7    */ (void*)(((char*)&struct_8045E5FC)+0x13) /* None */,
-	/* 8    */ (void*)(((char*)&struct_8045E5FC)+0x1D) /* None */,
+/* 8045E664-8045E670 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045DA68-8045DAB0 0048+00 r=1 e=0 z=0  None .text      getDemoAction__12daDbDoor00_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::getDemoAction() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/getDemoAction__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8045E6AC-8045E6D0 0024+00 r=1 e=0 z=0  None .data      @3957                                                        */
-SECTION_DATA static void* lit_3957[9] = {
-	/* 0    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x1A4),
-	/* 1    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x74),
-	/* 2    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0xA4),
-	/* 3    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x1A4),
-	/* 4    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0xB8),
-	/* 5    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x1A4),
-	/* 6    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x118),
-	/* 7    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x140),
-	/* 8    */ (void*)(((char*)demoProc__12daDbDoor00_cFv)+0x168),
+/* 8045E670-8045E684 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
 };
 
-/* 8045DAB0-8045DE44 0394+00 r=5 e=0 z=0  None .text      demoProc__12daDbDoor00_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::demoProc() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/demoProc__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045DE44-8045DF70 012C+00 r=1 e=0 z=0  None .text      checkArea__12daDbDoor00_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::checkArea() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkArea__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045DF70-8045DF78 0008+00 r=1 e=0 z=0  None .text      checkUnlock__12daDbDoor00_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::checkUnlock() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkUnlock__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045DF78-8045DF9C 0024+00 r=1 e=0 z=0  None .text      actionWait__12daDbDoor00_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionWait__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045DF9C-8045E000 0064+00 r=1 e=0 z=0  None .text      actionLockWait__12daDbDoor00_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionLockWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockWait__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E000-8045E094 0094+00 r=1 e=0 z=0  None .text      actionLockOff__12daDbDoor00_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionLockOff() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockOff__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E094-8045E108 0074+00 r=1 e=0 z=0  None .text      actionLockDemo__12daDbDoor00_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionLockDemo() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionLockDemo__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E108-8045E1C8 00C0+00 r=1 e=0 z=0  None .text      actionCloseWait__12daDbDoor00_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionCloseWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionCloseWait__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E1C8-8045E1EC 0024+00 r=1 e=0 z=0  None .text      actionOpen__12daDbDoor00_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::actionOpen() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/actionOpen__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8045E7D0-8045E7D4 0004+00 r=1 e=0 z=0  None .bss       None                                                         */
-static u8 data_8045E7D0[4];
-
-/* 8045E1EC-8045E2DC 00F0+00 r=1 e=0 z=0  None .text      execute__12daDbDoor00_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/execute__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E2DC-8045E31C 0040+00 r=1 e=0 z=0  None .text      checkDraw__12daDbDoor00_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::checkDraw() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkDraw__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E31C-8045E428 010C+00 r=1 e=0 z=0  None .text      draw__12daDbDoor00_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/draw__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E428-8045E49C 0074+00 r=1 e=0 z=0  None .text      Delete__12daDbDoor00_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/Delete__12daDbDoor00_cFv.s"
-}
-#pragma pop
-
-
-/* 8045E49C-8045E4BC 0020+00 r=1 e=0 z=0  None .text      daDbdoor00_Draw__FP12daDbDoor00_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_Draw(daDbDoor00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Draw__FP12daDbDoor00_c.s"
-}
-#pragma pop
-
-
-/* 8045E4BC-8045E4E0 0024+00 r=1 e=0 z=0  None .text      daDbdoor00_Execute__FP12daDbDoor00_c                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_Execute(daDbDoor00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Execute__FP12daDbDoor00_c.s"
-}
-#pragma pop
-
-
-/* 8045E4E0-8045E4E8 0008+00 r=1 e=0 z=0  None .text      daDbdoor00_IsDelete__FP12daDbDoor00_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_IsDelete(daDbDoor00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_IsDelete__FP12daDbDoor00_c.s"
-}
-#pragma pop
-
-
-/* 8045E4E8-8045E50C 0024+00 r=1 e=0 z=0  None .text      daDbdoor00_Delete__FP12daDbDoor00_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_Delete(daDbDoor00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Delete__FP12daDbDoor00_c.s"
-}
-#pragma pop
-
-
-/* 8045E50C-8045E52C 0020+00 r=1 e=0 z=0  None .text      daDbdoor00_Create__FP10fopAc_ac_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 8045E6D0-8045E6DC 000C+00 r=0 e=0 z=0  None .data      @4092                                                        */
-SECTION_DATA void* lit_4092[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionWait__12daDbDoor00_cFv,
+/* 8045E684-8045E688 0004+00 s=0 e=0 z=0  None .data      l_bmd_base_name                                              */
+SECTION_DATA u8 l_bmd_base_name[4] = {
+	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E6DC-8045E6E8 000C+00 r=0 e=0 z=0  None .data      @4093                                                        */
-SECTION_DATA void* lit_4093[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionLockWait__12daDbDoor00_cFv,
+/* 8045E688-8045E6AC 0024+00 s=0 e=0 z=0  None .data      action_table$3865                                            */
+SECTION_DATA u8 data_8045E688[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E6E8-8045E6F4 000C+00 r=0 e=0 z=0  None .data      @4094                                                        */
-SECTION_DATA void* lit_4094[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionLockOff__12daDbDoor00_cFv,
+/* 8045E6AC-8045E6D0 0024+00 s=0 e=0 z=0  None .data      @3957                                                        */
+SECTION_DATA u8 lit_3957[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E6F4-8045E700 000C+00 r=0 e=0 z=0  None .data      @4095                                                        */
-SECTION_DATA void* lit_4095[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionLockDemo__12daDbDoor00_cFv,
+/* 8045E6D0-8045E6DC 000C+00 s=0 e=0 z=0  None .data      @4092                                                        */
+SECTION_DATA u8 lit_4092[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E700-8045E70C 000C+00 r=0 e=0 z=0  None .data      @4096                                                        */
-SECTION_DATA void* lit_4096[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionCloseWait__12daDbDoor00_cFv,
+/* 8045E6DC-8045E6E8 000C+00 s=0 e=0 z=0  None .data      @4093                                                        */
+SECTION_DATA u8 lit_4093[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E70C-8045E718 000C+00 r=0 e=0 z=0  None .data      @4097                                                        */
-SECTION_DATA void* lit_4097[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionOpen__12daDbDoor00_cFv,
+/* 8045E6E8-8045E6F4 000C+00 s=0 e=0 z=0  None .data      @4094                                                        */
+SECTION_DATA u8 lit_4094[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E718-8045E760 0048+00 r=0 e=0 z=0  None .data      l_action$4091                                                */
+/* 8045E6F4-8045E700 000C+00 s=0 e=0 z=0  None .data      @4095                                                        */
+SECTION_DATA u8 lit_4095[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045E700-8045E70C 000C+00 s=0 e=0 z=0  None .data      @4096                                                        */
+SECTION_DATA u8 lit_4096[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045E70C-8045E718 000C+00 s=0 e=0 z=0  None .data      @4097                                                        */
+SECTION_DATA u8 lit_4097[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8045E718-8045E760 0048+00 s=0 e=0 z=0  None .data      l_action$4091                                                */
 SECTION_DATA u8 data_8045E718[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -821,31 +625,22 @@ SECTION_DATA u8 data_8045E718[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E760-8045E780 0020+00 r=1 e=0 z=0  None .data      l_daDbdoor00_Method                                          */
-SECTION_DATA static void* l_daDbdoor00_Method[8] = {
-	/* 0    */ (void*)daDbdoor00_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daDbdoor00_Delete__FP12daDbDoor00_c,
-	/* 2    */ (void*)daDbdoor00_Execute__FP12daDbDoor00_c,
-	/* 3    */ (void*)daDbdoor00_IsDelete__FP12daDbDoor00_c,
-	/* 4    */ (void*)daDbdoor00_Draw__FP12daDbDoor00_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8045E760-8045E780 0020+00 s=0 e=0 z=0  None .data      l_daDbdoor00_Method                                          */
+SECTION_DATA u8 l_daDbdoor00_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045E780-8045E7B0 0030+00 r=1 e=0 z=1  None .data      g_profile_DBDOOR                                             */
-SECTION_DATA void* g_profile_DBDOOR[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02270000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01270000,
-	/* 9    */ (void*)&l_daDbdoor00_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+/* 8045E780-8045E7B0 0030+00 s=0 e=0 z=0  None .data      g_profile_DBDOOR                                             */
+SECTION_DATA u8 g_profile_DBDOOR[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x27, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0xC4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x27, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x06, 0x00, 0x00,
 };
+
+/* 8045E7B0-8045E7D0 0020+00 s=0 e=0 z=0  None .bss       l_bmdName$3699                                               */
+u8 data_8045E7B0[32];
+
+/* 8045E7D0-8045E7D4 0004+00 s=0 e=0 z=0  None .bss       None                                                         */
+u8 data_8045E7D0[4];
 

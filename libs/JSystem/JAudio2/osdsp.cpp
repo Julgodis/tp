@@ -40,7 +40,7 @@ extern "C" extern u8 DSP_prior_task[4];
 // 
 
 /* ############################################################################################## */
-/* 8039B8B8-8039B8D4 001A+02 r=1 e=0 z=0  None .rodata    @81                                                          */
+/* 8039B8B8-8039B8D4 001A+02 s=1 e=0 z=0  None .rodata    @81                                                          */
 SECTION_RODATA static u8 const osdsp__lit_81[26 + 2 /* padding */] = {
 	0x50, 0x72, 0x69, 0x6F, 0x72, 0x20, 0x54, 0x61, 0x73, 0x6B, 0x20, 0x69, 0x73, 0x20, 0x6E, 0x6F,
 	0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x0A, 0x00,
@@ -48,7 +48,7 @@ SECTION_RODATA static u8 const osdsp__lit_81[26 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 8029EA00-8029EA84 0084+00 r=1 e=1 z=0  None .text      DSPAddTask                                                   */
+/* 8029EA00-8029EA84 0084+00 s=0 e=1 z=0  None .text      DSPAddTask                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ extern "C" asm void DSPAddTask() {
 
 
 /* ############################################################################################## */
-/* 8039B8D4-8039B8F8 001F+05 r=1 e=0 z=0  None .rodata    @88                                                          */
+/* 8039B8D4-8039B8F8 001F+05 s=1 e=0 z=0  None .rodata    @88                                                          */
 SECTION_RODATA static u8 const osdsp__lit_88[31 + 5 /* padding */] = {
 	0x41, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70,
 	0x72, 0x69, 0x6F, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x0A, 0x00,
@@ -69,7 +69,7 @@ SECTION_RODATA static u8 const osdsp__lit_88[31 + 5 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029EAA0-8029EB1C 007C+00 r=1 e=1 z=0  None .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
+/* 8029EAA0-8029EB1C 007C+00 s=0 e=1 z=0  None .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

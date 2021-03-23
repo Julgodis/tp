@@ -27,7 +27,7 @@ extern "C" extern u8 gTRKCPUState[1072];
 // Declarations:
 // 
 
-/* 803711F0-803713A8 01B8+00 r=3 e=3 z=0  None .text      TRKSaveExtended1Block                                        */
+/* 803711F0-803713A8 01B8+00 s=0 e=3 z=0  None .text      TRKSaveExtended1Block                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ extern "C" asm void TRKSaveExtended1Block() {
 #pragma pop
 
 
-/* 803713A8-80371560 01B8+00 r=1 e=1 z=0  None .text      TRKRestoreExtended1Block                                     */
+/* 803713A8-80371560 01B8+00 s=0 e=1 z=0  None .text      TRKRestoreExtended1Block                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

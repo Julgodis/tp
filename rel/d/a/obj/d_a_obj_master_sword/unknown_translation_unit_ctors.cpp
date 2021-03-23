@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C91934[2];
+extern u8 data_80C91934[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_master_sword_cpp(); // 1
 
 // 
 // Declarations:

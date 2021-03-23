@@ -7,12 +7,12 @@ lbl_80497790:
 /* 804977A4 00000014  48 00 00 69 */	bl action__9daTbox2_cFv
 /* 804977A8 00000018  7F E3 FB 78 */	mr r3, r31
 /* 804977AC 0000001C  38 80 00 00 */	li r4, 0
-/* 804977B0 00000020  4B FF F2 49 */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 804977B0 00000020  4B FF F2 49 */	bl _unresolved
 /* 804977B4 00000024  38 7F 07 2C */	addi r3, r31, 0x72c
-/* 804977B8 00000028  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 804977BC 0000002C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 804977B8 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 804977BC 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 804977C0 00000030  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 804977C4 00000034  4B FF F2 35 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 804977C4 00000034  4B FF F2 35 */	bl _unresolved
 /* 804977C8 00000038  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 804977CC 0000003C  D0 1F 05 50 */	stfs f0, 0x550(r31)
 /* 804977D0 00000040  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)

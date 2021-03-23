@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_809F2C44[2];
+extern u8 data_809F2C44[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_guard_cpp(); // 1
 
 // 
 // Declarations:

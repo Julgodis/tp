@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8064EB08[2];
+extern u8 data_8064EB08[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_b_zant_cpp(); // 1
 
 // 
 // Declarations:

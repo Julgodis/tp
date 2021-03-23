@@ -57,7 +57,7 @@ extern "C" extern void* g_fpcLn_Queue[2];
 // Declarations:
 // 
 
-/* 800236C0-80023728 0068+00 r=1 e=0 z=0  None .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
+/* 800236C0-80023728 0068+00 s=1 e=0 z=0  None .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ asm static void fpcLnIt_MethodCall(create_tag_class* param_0, method_filter* par
 #pragma pop
 
 
-/* 80023728-80023764 003C+00 r=1 e=1 z=0  None .text      fpcLnIt_Queue__FPFPvPv_i                                     */
+/* 80023728-80023764 003C+00 s=0 e=1 z=0  None .text      fpcLnIt_Queue__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

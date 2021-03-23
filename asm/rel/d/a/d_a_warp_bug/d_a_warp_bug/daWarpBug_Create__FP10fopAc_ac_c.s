@@ -10,25 +10,25 @@ lbl_80D68130:
 /* 80D68150 00000020  40 82 00 1C */	bne lbl_80D6816C
 /* 80D68154 00000024  28 1E 00 00 */	cmplwi r30, 0
 /* 80D68158 00000028  41 82 00 08 */	beq lbl_80D68160
-/* 80D6815C 0000002C  4B FF FC BD */	bl __ct__10fopAc_ac_cFv
+/* 80D6815C 0000002C  4B FF FC BD */	bl _unresolved
 lbl_80D68160:
 /* 80D68160 00000000  80 1E 04 A0 */	lwz r0, 0x4a0(r30)
 /* 80D68164 00000004  60 00 00 08 */	ori r0, r0, 8
 /* 80D68168 00000008  90 1E 04 A0 */	stw r0, 0x4a0(r30)
 lbl_80D6816C:
 /* 80D6816C 00000000  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80D68170 00000004  3C 80 00 00 */	lis r4, l_arcName@ha /* 80D68208 */
-/* 80D68174 00000008  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80D68208 */
+/* 80D68170 00000004  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D68174 00000008  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D68178 0000000C  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D6817C 00000010  4B FF FC 9D */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80D6817C 00000010  4B FF FC 9D */	bl _unresolved
 /* 80D68180 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80D68184 00000018  2C 1F 00 04 */	cmpwi r31, 4
 /* 80D68188 0000001C  40 82 00 30 */	bne lbl_80D681B8
 /* 80D6818C 00000020  7F C3 F3 78 */	mr r3, r30
-/* 80D68190 00000024  3C 80 00 00 */	lis r4, createSolidHeap__FP10fopAc_ac_c@ha /* 80D67E3C */
-/* 80D68194 00000028  38 84 00 00 */	addi r4, r4, createSolidHeap__FP10fopAc_ac_c@l /* 80D67E3C */
+/* 80D68190 00000024  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D68194 00000028  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D68198 0000002C  38 A0 40 00 */	li r5, 0x4000
-/* 80D6819C 00000030  4B FF FC 7D */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
+/* 80D6819C 00000030  4B FF FC 7D */	bl _unresolved
 /* 80D681A0 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D681A4 00000038  40 82 00 0C */	bne lbl_80D681B0
 /* 80D681A8 0000003C  3B E0 00 05 */	li r31, 5

@@ -8,24 +8,24 @@ lbl_80D25DEC:
 /* 80D25E04 00000018  7F E4 FB 78 */	mr r4, r31
 /* 80D25E08 0000001C  38 A0 00 00 */	li r5, 0
 /* 80D25E0C 00000020  38 C0 00 00 */	li r6, 0
-/* 80D25E10 00000024  4B FF E3 69 */	bl doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
+/* 80D25E10 00000024  4B FF E3 69 */	bl _unresolved
 /* 80D25E14 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80D25E18 0000002C  41 82 00 4C */	beq lbl_80D25E64
-/* 80D25E1C 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D25E20 00000034  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D25E1C 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D25E20 00000034  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D25E24 00000038  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80D25E28 0000003C  4B FF E3 51 */	bl reset__14dEvt_control_cFv
+/* 80D25E28 0000003C  4B FF E3 51 */	bl _unresolved
 /* 80D25E2C 00000040  38 00 00 01 */	li r0, 1
 /* 80D25E30 00000044  98 1F 05 C9 */	stb r0, 0x5c9(r31)
 /* 80D25E34 00000048  38 7F 09 A4 */	addi r3, r31, 0x9a4
 /* 80D25E38 0000004C  38 81 00 08 */	addi r4, r1, 8
-/* 80D25E3C 00000050  4B FF E3 3D */	bl getEventId__10dMsgFlow_cFPi
+/* 80D25E3C 00000050  4B FF E3 3D */	bl _unresolved
 /* 80D25E40 00000054  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 80D25E44 00000058  28 00 00 0B */	cmplwi r0, 0xb
 /* 80D25E48 0000005C  40 82 00 14 */	bne lbl_80D25E5C
 /* 80D25E4C 00000060  38 00 00 06 */	li r0, 6
-/* 80D25E50 00000064  3C 60 00 00 */	lis r3, g_meter2_info@ha /* 80430188 */
-/* 80D25E54 00000068  38 63 00 00 */	addi r3, r3, g_meter2_info@l /* 80430188 */
+/* 80D25E50 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D25E54 00000068  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D25E58 0000006C  98 03 00 C1 */	stb r0, 0xc1(r3)
 lbl_80D25E5C:
 /* 80D25E5C 00000000  38 00 00 04 */	li r0, 4

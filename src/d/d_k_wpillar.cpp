@@ -44,10 +44,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -79,16 +79,16 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct _GXColor {
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -198,23 +198,23 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* ############################################################################################## */
-/* 80454FF0-80454FF8 0007+01 r=1 e=0 z=0  None .sdata2    l_arcName                                                    */
+/* 80454FF0-80454FF8 0007+01 s=1 e=0 z=0  None .sdata2    l_arcName                                                    */
 SECTION_SDATA2 static u8 d_d_k_wpillar__l_arcName[7 + 1 /* padding */] = {
 	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
 	/* padding */
 	0x00,
 };
 
-/* 80454FF8-80454FFC 0004+00 r=1 e=0 z=0  None .sdata2    @3838                                                        */
+/* 80454FF8-80454FFC 0004+00 s=1 e=0 z=0  None .sdata2    @3838                                                        */
 SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3838 = 1.0f;
 
-/* 80454FFC-80455000 0004+00 r=1 e=0 z=0  None .sdata2    @3839                                                        */
+/* 80454FFC-80455000 0004+00 s=1 e=0 z=0  None .sdata2    @3839                                                        */
 SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3839 = 0.5f;
 
-/* 80455000-80455004 0004+00 r=1 e=0 z=0  None .sdata2    @3840                                                        */
+/* 80455000-80455004 0004+00 s=1 e=0 z=0  None .sdata2    @3840                                                        */
 SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3840 = 0.25f;
 
-/* 80261B54-80261F04 03B0+00 r=1 e=0 z=0  None .text      create__11dkWpillar_cFv                                      */
+/* 80261B54-80261F04 03B0+00 s=1 e=0 z=0  None .text      create__11dkWpillar_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm void dkWpillar_c::create() {
 #pragma pop
 
 
-/* 80261F04-80261F24 0020+00 r=1 e=0 z=0  None .text      dkWpillar_Create__FP12kankyo_class                           */
+/* 80261F04-80261F24 0020+00 s=1 e=0 z=0  None .text      dkWpillar_Create__FP12kankyo_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ asm static void dkWpillar_Create(kankyo_class* param_0) {
 #pragma pop
 
 
-/* 80261F24-80261FEC 00C8+00 r=1 e=0 z=0  None .text      __dt__11dkWpillar_cFv                                        */
+/* 80261F24-80261FEC 00C8+00 s=1 e=0 z=0  None .text      __dt__11dkWpillar_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm dkWpillar_c::~dkWpillar_c() {
 #pragma pop
 
 
-/* 80261FEC-80262014 0028+00 r=1 e=0 z=0  None .text      dkWpillar_Delete__FP11dkWpillar_c                            */
+/* 80261FEC-80262014 0028+00 s=1 e=0 z=0  None .text      dkWpillar_Delete__FP11dkWpillar_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,12 +259,12 @@ asm static void dkWpillar_Delete(dkWpillar_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80455004-80455008 0004+00 r=1 e=0 z=0  None .sdata2    @3946                                                        */
+/* 80455004-80455008 0004+00 s=1 e=0 z=0  None .sdata2    @3946                                                        */
 SECTION_SDATA2 static u8 d_d_k_wpillar__lit_3946[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80262014-802620A8 0094+00 r=1 e=0 z=0  None .text      execute__11dkWpillar_cFv                                     */
+/* 80262014-802620A8 0094+00 s=1 e=0 z=0  None .text      execute__11dkWpillar_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +275,7 @@ asm void dkWpillar_c::execute() {
 #pragma pop
 
 
-/* 802620A8-802620C8 0020+00 r=1 e=0 z=0  None .text      dkWpillar_Execute__FP11dkWpillar_c                           */
+/* 802620A8-802620C8 0020+00 s=1 e=0 z=0  None .text      dkWpillar_Execute__FP11dkWpillar_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,7 +286,7 @@ asm static void dkWpillar_Execute(dkWpillar_c* param_0) {
 #pragma pop
 
 
-/* 802620C8-802621AC 00E4+00 r=1 e=0 z=0  None .text      draw__11dkWpillar_cFv                                        */
+/* 802620C8-802621AC 00E4+00 s=1 e=0 z=0  None .text      draw__11dkWpillar_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +297,7 @@ asm void dkWpillar_c::draw() {
 #pragma pop
 
 
-/* 802621AC-802621CC 0020+00 r=1 e=0 z=0  None .text      dkWpillar_Draw__FP11dkWpillar_c                              */
+/* 802621AC-802621CC 0020+00 s=1 e=0 z=0  None .text      dkWpillar_Draw__FP11dkWpillar_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +309,7 @@ asm static void dkWpillar_Draw(dkWpillar_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 803C3470-803C3484 0014+00 r=1 e=0 z=0  None .data      l_dkWpillar_Method                                           */
+/* 803C3470-803C3484 0014+00 s=1 e=0 z=0  None .data      l_dkWpillar_Method                                           */
 SECTION_DATA static void* l_dkWpillar_Method[5] = {
 	/* 0    */ (void*)dkWpillar_Create__FP12kankyo_class,
 	/* 1    */ (void*)dkWpillar_Delete__FP11dkWpillar_c,
@@ -318,7 +318,7 @@ SECTION_DATA static void* l_dkWpillar_Method[5] = {
 	/* 4    */ (void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
-/* 803C3484-803C34B0 0028+04 r=1 e=0 z=1  None .data      g_profile_WPILLAR                                            */
+/* 803C3484-803C34B0 0028+04 s=0 e=0 z=0  None .data      g_profile_WPILLAR                                            */
 SECTION_DATA void* g_profile_WPILLAR[10 + 1 /* padding */] = {
 	/* 0    */ (void*)0xFFFFFFFD,
 	/* 1    */ (void*)0x0009FFFD,

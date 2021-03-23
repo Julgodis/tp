@@ -15,10 +15,10 @@ struct Vec {
 };
 
 struct JStage {
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -122,7 +122,7 @@ extern "C" extern u32 __float_max;
 // 
 
 /* ############################################################################################## */
-/* 803C4680-803C4718 0094+04 r=2 e=1 z=0  None .data      __vt__Q26JStage7TCamera                                      */
+/* 803C4680-803C4718 0094+04 s=1 e=1 z=0  None .data      __vt__Q26JStage7TCamera                                      */
 SECTION_DATA void* __vt__Q26JStage7TCamera[37 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -165,7 +165,7 @@ SECTION_DATA void* __vt__Q26JStage7TCamera[37 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80280BA0-80280C00 0060+00 r=1 e=1 z=0  None .text      __dt__Q26JStage7TCameraFv                                    */
+/* 80280BA0-80280C00 0060+00 s=0 e=1 z=0  None .text      __dt__Q26JStage7TCameraFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ asm JStage::TCamera::~TCamera() {
 #pragma pop
 
 
-/* 80280C00-80280C08 0008+00 r=2 e=1 z=0  None .text      JSGFGetType__Q26JStage7TCameraCFv                            */
+/* 80280C00-80280C08 0008+00 s=1 e=1 z=0  None .text      JSGFGetType__Q26JStage7TCameraCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ asm void JStage::TCamera::JSGFGetType() const {
 #pragma pop
 
 
-/* 80280C08-80280C10 0008+00 r=2 e=1 z=0  None .text      JSGGetProjectionType__Q26JStage7TCameraCFv                   */
+/* 80280C08-80280C10 0008+00 s=1 e=1 z=0  None .text      JSGGetProjectionType__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void JStage::TCamera::JSGGetProjectionType() const {
 #pragma pop
 
 
-/* 80280C10-80280C14 0004+00 r=2 e=1 z=0  None .text      JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection */
+/* 80280C10-80280C14 0004+00 s=1 e=1 z=0  None .text      JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,14 +210,14 @@ asm void JStage::TCamera::JSGSetProjectionType(JStage::TECameraProjection param_
 
 
 /* ############################################################################################## */
-/* 804553D8-804553E0 0004+04 r=4 e=0 z=0  None .sdata2    @319                                                         */
+/* 804553D8-804553E0 0004+04 s=4 e=0 z=0  None .sdata2    @319                                                         */
 SECTION_SDATA2 static u8 JSGCamera__lit_319[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80280C14-80280C1C 0008+00 r=1 e=0 z=0  None .text      JSGGetProjectionNear__Q26JStage7TCameraCFv                   */
+/* 80280C14-80280C1C 0008+00 s=1 e=0 z=0  None .text      JSGGetProjectionNear__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm void JStage::TCamera::JSGGetProjectionNear() const {
 #pragma pop
 
 
-/* 80280C1C-80280C20 0004+00 r=1 e=0 z=0  None .text      JSGSetProjectionNear__Q26JStage7TCameraFf                    */
+/* 80280C1C-80280C20 0004+00 s=1 e=0 z=0  None .text      JSGSetProjectionNear__Q26JStage7TCameraFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +239,7 @@ asm void JStage::TCamera::JSGSetProjectionNear(f32 param_0) {
 #pragma pop
 
 
-/* 80280C20-80280C2C 000C+00 r=1 e=0 z=0  None .text      JSGGetProjectionFar__Q26JStage7TCameraCFv                    */
+/* 80280C20-80280C2C 000C+00 s=1 e=0 z=0  None .text      JSGGetProjectionFar__Q26JStage7TCameraCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ asm void JStage::TCamera::JSGGetProjectionFar() const {
 #pragma pop
 
 
-/* 80280C2C-80280C30 0004+00 r=1 e=0 z=0  None .text      JSGSetProjectionFar__Q26JStage7TCameraFf                     */
+/* 80280C2C-80280C30 0004+00 s=1 e=0 z=0  None .text      JSGSetProjectionFar__Q26JStage7TCameraFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm void JStage::TCamera::JSGSetProjectionFar(f32 param_0) {
 #pragma pop
 
 
-/* 80280C30-80280C38 0008+00 r=1 e=0 z=0  None .text      JSGGetProjectionFovy__Q26JStage7TCameraCFv                   */
+/* 80280C30-80280C38 0008+00 s=1 e=0 z=0  None .text      JSGGetProjectionFovy__Q26JStage7TCameraCFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +272,7 @@ asm void JStage::TCamera::JSGGetProjectionFovy() const {
 #pragma pop
 
 
-/* 80280C38-80280C3C 0004+00 r=1 e=0 z=0  None .text      JSGSetProjectionFovy__Q26JStage7TCameraFf                    */
+/* 80280C38-80280C3C 0004+00 s=1 e=0 z=0  None .text      JSGSetProjectionFovy__Q26JStage7TCameraFf                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +283,7 @@ asm void JStage::TCamera::JSGSetProjectionFovy(f32 param_0) {
 #pragma pop
 
 
-/* 80280C3C-80280C44 0008+00 r=1 e=0 z=0  None .text      JSGGetProjectionAspect__Q26JStage7TCameraCFv                 */
+/* 80280C3C-80280C44 0008+00 s=1 e=0 z=0  None .text      JSGGetProjectionAspect__Q26JStage7TCameraCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,7 +294,7 @@ asm void JStage::TCamera::JSGGetProjectionAspect() const {
 #pragma pop
 
 
-/* 80280C44-80280C48 0004+00 r=1 e=0 z=0  None .text      JSGSetProjectionAspect__Q26JStage7TCameraFf                  */
+/* 80280C44-80280C48 0004+00 s=1 e=0 z=0  None .text      JSGSetProjectionAspect__Q26JStage7TCameraFf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,7 +305,7 @@ asm void JStage::TCamera::JSGSetProjectionAspect(f32 param_0) {
 #pragma pop
 
 
-/* 80280C48-80280C4C 0004+00 r=2 e=1 z=0  None .text      JSGGetProjectionField__Q26JStage7TCameraCFPf                 */
+/* 80280C48-80280C4C 0004+00 s=1 e=1 z=0  None .text      JSGGetProjectionField__Q26JStage7TCameraCFPf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +316,7 @@ asm void JStage::TCamera::JSGGetProjectionField(f32* param_0) const {
 #pragma pop
 
 
-/* 80280C4C-80280C50 0004+00 r=2 e=1 z=0  None .text      JSGSetProjectionField__Q26JStage7TCameraFPCf                 */
+/* 80280C4C-80280C50 0004+00 s=1 e=1 z=0  None .text      JSGSetProjectionField__Q26JStage7TCameraFPCf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +327,7 @@ asm void JStage::TCamera::JSGSetProjectionField(f32 const* param_0) {
 #pragma pop
 
 
-/* 80280C50-80280C58 0008+00 r=2 e=1 z=0  None .text      JSGGetViewType__Q26JStage7TCameraCFv                         */
+/* 80280C50-80280C58 0008+00 s=1 e=1 z=0  None .text      JSGGetViewType__Q26JStage7TCameraCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,7 +338,7 @@ asm void JStage::TCamera::JSGGetViewType() const {
 #pragma pop
 
 
-/* 80280C58-80280C5C 0004+00 r=2 e=1 z=0  None .text      JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView    */
+/* 80280C58-80280C5C 0004+00 s=1 e=1 z=0  None .text      JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,7 +349,7 @@ asm void JStage::TCamera::JSGSetViewType(JStage::TECameraView param_0) {
 #pragma pop
 
 
-/* 80280C5C-80280C60 0004+00 r=1 e=0 z=0  None .text      JSGGetViewPosition__Q26JStage7TCameraCFP3Vec                 */
+/* 80280C5C-80280C60 0004+00 s=1 e=0 z=0  None .text      JSGGetViewPosition__Q26JStage7TCameraCFP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,7 +360,7 @@ asm void JStage::TCamera::JSGGetViewPosition(Vec* param_0) const {
 #pragma pop
 
 
-/* 80280C60-80280C64 0004+00 r=1 e=0 z=0  None .text      JSGSetViewPosition__Q26JStage7TCameraFRC3Vec                 */
+/* 80280C60-80280C64 0004+00 s=1 e=0 z=0  None .text      JSGSetViewPosition__Q26JStage7TCameraFRC3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm void JStage::TCamera::JSGSetViewPosition(Vec const& param_0) {
 #pragma pop
 
 
-/* 80280C64-80280C68 0004+00 r=1 e=0 z=0  None .text      JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec                 */
+/* 80280C64-80280C68 0004+00 s=1 e=0 z=0  None .text      JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm void JStage::TCamera::JSGGetViewUpVector(Vec* param_0) const {
 #pragma pop
 
 
-/* 80280C68-80280C6C 0004+00 r=1 e=0 z=0  None .text      JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec                 */
+/* 80280C68-80280C6C 0004+00 s=1 e=0 z=0  None .text      JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void JStage::TCamera::JSGSetViewUpVector(Vec const& param_0) {
 #pragma pop
 
 
-/* 80280C6C-80280C70 0004+00 r=1 e=0 z=0  None .text      JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec           */
+/* 80280C6C-80280C70 0004+00 s=1 e=0 z=0  None .text      JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ asm void JStage::TCamera::JSGGetViewTargetPosition(Vec* param_0) const {
 #pragma pop
 
 
-/* 80280C70-80280C74 0004+00 r=1 e=0 z=0  None .text      JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec           */
+/* 80280C70-80280C74 0004+00 s=1 e=0 z=0  None .text      JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +415,7 @@ asm void JStage::TCamera::JSGSetViewTargetPosition(Vec const& param_0) {
 #pragma pop
 
 
-/* 80280C74-80280C7C 0008+00 r=1 e=0 z=0  None .text      JSGGetViewRoll__Q26JStage7TCameraCFv                         */
+/* 80280C74-80280C7C 0008+00 s=1 e=0 z=0  None .text      JSGGetViewRoll__Q26JStage7TCameraCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +426,7 @@ asm void JStage::TCamera::JSGGetViewRoll() const {
 #pragma pop
 
 
-/* 80280C7C-80280C80 0004+00 r=1 e=0 z=0  None .text      JSGSetViewRoll__Q26JStage7TCameraFf                          */
+/* 80280C7C-80280C80 0004+00 s=1 e=0 z=0  None .text      JSGSetViewRoll__Q26JStage7TCameraFf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

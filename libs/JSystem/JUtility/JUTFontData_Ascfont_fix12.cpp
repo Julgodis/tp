@@ -25,7 +25,7 @@ extern "C" extern u8 const JUTResFONT_Ascfont_fix12[16736];
 // 
 
 /* ############################################################################################## */
-/* 8039DA20-803A1B80 4160+00 r=1 e=1 z=0  None .rodata    JUTResFONT_Ascfont_fix12                                     */
+/* 8039DA20-803A1B80 4160+00 s=0 e=1 z=0  None .rodata    JUTResFONT_Ascfont_fix12                                     */
 SECTION_RODATA u8 const JUTResFONT_Ascfont_fix12[16736] = {
 	0x46, 0x4F, 0x4E, 0x54, 0x62, 0x66, 0x6E, 0x31, 0x00, 0x00, 0x41, 0x60, 0x00, 0x00, 0x00, 0x04,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

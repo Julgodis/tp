@@ -5,8 +5,8 @@ lbl_805CD8D8:
 /* 805CD8E4 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 805CD8E8 00000010  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 805CD8EC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 805CD8F0 00000018  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 805CD8F4 0000001C  38 A4 00 00 */	addi r5, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 805CD8F0 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805CD8F4 0000001C  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
 /* 805CD8F8 00000020  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 805CD8FC 00000024  7C 00 07 74 */	extsb r0, r0
 /* 805CD900 00000028  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -26,31 +26,31 @@ lbl_805CD924:
 /* 805CD934 00000010  3C A0 00 01 */	lis r5, 0x0001 /* 0x0000FFFF@ha */
 /* 805CD938 00000014  38 A5 FF FF */	addi r5, r5, 0xFFFF /* 0x0000FFFF@l */
 /* 805CD93C 00000018  38 C0 00 00 */	li r6, 0
-/* 805CD940 0000001C  4B FF D8 59 */	bl fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs
+/* 805CD940 0000001C  4B FF D8 59 */	bl _unresolved
 /* 805CD944 00000020  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 805CD948 00000024  60 00 00 02 */	ori r0, r0, 2
 /* 805CD94C 00000028  B0 1E 00 FA */	sth r0, 0xfa(r30)
-/* 805CD950 0000002C  4B FF D8 49 */	bl dCam_getBody__Fv
+/* 805CD950 0000002C  4B FF D8 49 */	bl _unresolved
 /* 805CD954 00000030  7C 64 1B 78 */	mr r4, r3
 /* 805CD958 00000034  38 61 00 14 */	addi r3, r1, 0x14
-/* 805CD95C 00000038  4B FF D8 3D */	bl Center__9dCamera_cFv
+/* 805CD95C 00000038  4B FF D8 3D */	bl _unresolved
 /* 805CD960 0000003C  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 805CD964 00000040  D0 1E 2D 14 */	stfs f0, 0x2d14(r30)
 /* 805CD968 00000044  C0 01 00 18 */	lfs f0, 0x18(r1)
 /* 805CD96C 00000048  D0 1E 2D 18 */	stfs f0, 0x2d18(r30)
 /* 805CD970 0000004C  C0 01 00 1C */	lfs f0, 0x1c(r1)
 /* 805CD974 00000050  D0 1E 2D 1C */	stfs f0, 0x2d1c(r30)
-/* 805CD978 00000054  4B FF D8 21 */	bl dCam_getBody__Fv
+/* 805CD978 00000054  4B FF D8 21 */	bl _unresolved
 /* 805CD97C 00000058  7C 64 1B 78 */	mr r4, r3
 /* 805CD980 0000005C  38 61 00 08 */	addi r3, r1, 8
-/* 805CD984 00000060  4B FF D8 15 */	bl Eye__9dCamera_cFv
+/* 805CD984 00000060  4B FF D8 15 */	bl _unresolved
 /* 805CD988 00000064  C0 01 00 08 */	lfs f0, 8(r1)
 /* 805CD98C 00000068  D0 1E 2D 20 */	stfs f0, 0x2d20(r30)
 /* 805CD990 0000006C  C0 01 00 0C */	lfs f0, 0xc(r1)
 /* 805CD994 00000070  D0 1E 2D 24 */	stfs f0, 0x2d24(r30)
 /* 805CD998 00000074  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 805CD99C 00000078  D0 1E 2D 28 */	stfs f0, 0x2d28(r30)
-/* 805CD9A0 0000007C  4B FF D7 F9 */	bl dCam_getBody__Fv
+/* 805CD9A0 0000007C  4B FF D7 F9 */	bl _unresolved
 /* 805CD9A4 00000080  C0 23 00 58 */	lfs f1, 0x58(r3)
 /* 805CD9A8 00000084  C0 03 06 F4 */	lfs f0, 0x6f4(r3)
 /* 805CD9AC 00000088  EC 01 00 2A */	fadds f0, f1, f0
@@ -59,12 +59,12 @@ lbl_805CD924:
 /* 805CD9B8 00000094  48 00 00 38 */	b lbl_805CD9F0
 lbl_805CD9BC:
 /* 805CD9BC 00000000  38 7F 02 48 */	addi r3, r31, 0x248
-/* 805CD9C0 00000004  4B FF D7 D9 */	bl Stop__9dCamera_cFv
+/* 805CD9C0 00000004  4B FF D7 D9 */	bl _unresolved
 /* 805CD9C4 00000008  38 7F 02 48 */	addi r3, r31, 0x248
 /* 805CD9C8 0000000C  38 80 00 03 */	li r4, 3
-/* 805CD9CC 00000010  4B FF D7 CD */	bl SetTrimSize__9dCamera_cFl
-/* 805CD9D0 00000014  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 805CD9D4 00000018  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 805CD9CC 00000010  4B FF D7 CD */	bl _unresolved
+/* 805CD9D0 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805CD9D4 00000018  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805CD9D8 0000001C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 805CD9DC 00000020  38 00 00 03 */	li r0, 3
 /* 805CD9E0 00000024  B0 03 06 04 */	sth r0, 0x604(r3)

@@ -5,22 +5,22 @@ lbl_80BADDF4:
 /* 80BADE00 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BADE04 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80BADE08 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BADE0C 00000018  3C 60 00 00 */	lis r3, m__17daObj_Bed_Param_c@ha /* 80BAE168 */
-/* 80BADE10 0000001C  3B E3 00 00 */	addi r31, r3, m__17daObj_Bed_Param_c@l /* 80BAE168 */
-/* 80BADE14 00000020  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80BADE18 00000024  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80BADE0C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BADE10 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80BADE14 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BADE18 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BADE1C 00000028  38 80 00 00 */	li r4, 0
 /* 80BADE20 0000002C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BADE24 00000030  38 DE 01 0C */	addi r6, r30, 0x10c
-/* 80BADE28 00000034  4B FF F7 B1 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80BADE2C 00000038  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80BADE30 0000003C  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80BADE28 00000034  4B FF F7 B1 */	bl _unresolved
+/* 80BADE2C 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BADE30 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BADE34 00000040  80 9E 05 74 */	lwz r4, 0x574(r30)
 /* 80BADE38 00000044  80 84 00 04 */	lwz r4, 4(r4)
 /* 80BADE3C 00000048  38 BE 01 0C */	addi r5, r30, 0x10c
-/* 80BADE40 0000004C  4B FF F7 99 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80BADE40 0000004C  4B FF F7 99 */	bl _unresolved
 /* 80BADE44 00000050  80 7E 05 74 */	lwz r3, 0x574(r30)
-/* 80BADE48 00000054  4B FF F7 91 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80BADE48 00000054  4B FF F7 91 */	bl _unresolved
 /* 80BADE4C 00000058  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 80BADE50 0000005C  C0 9E 08 34 */	lfs f4, 0x834(r30)
 /* 80BADE54 00000060  FC 00 20 00 */	fcmpu cr0, f0, f4
@@ -37,9 +37,9 @@ lbl_80BADDF4:
 /* 80BADE80 0000008C  39 1E 01 0C */	addi r8, r30, 0x10c
 /* 80BADE84 00000090  39 20 00 00 */	li r9, 0
 /* 80BADE88 00000094  C0 BF 00 24 */	lfs f5, 0x24(r31)
-/* 80BADE8C 00000098  3D 40 00 00 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha /* 804248D0 */
-/* 80BADE90 0000009C  39 4A 00 00 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l /* 804248D0 */
-/* 80BADE94 000000A0  4B FF F7 45 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
+/* 80BADE8C 00000098  3D 40 00 00 */	lis r10, 0x0000 /* 0x00000000@ha */
+/* 80BADE90 0000009C  39 4A 00 00 */	addi r10, r10, 0x0000 /* 0x00000000@l */
+/* 80BADE94 000000A0  4B FF F7 45 */	bl _unresolved
 /* 80BADE98 000000A4  90 7E 08 38 */	stw r3, 0x838(r30)
 lbl_80BADE9C:
 /* 80BADE9C 00000000  38 60 00 01 */	li r3, 1

@@ -21,8 +21,6 @@ struct daObjSakuita_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct cM3dGCyl {
@@ -34,7 +32,6 @@ struct cM3dGAab {
 };
 
 struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
 	/* 80CC5008 */ ~dCcD_GStts();
 };
 
@@ -42,74 +39,34 @@ struct cCcD_GStts {
 	/* 80CC5064 */ ~cCcD_GStts();
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80266F48 */ void normalizeZP();
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-};
-
-struct J3DModelData {
-};
-
-struct J3DModel {
-};
-
-struct dComIfG_play_c {
-	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
-	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
-	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
 // 
 // Forward References:
 // 
 
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjSakuita_Draw(daObjSakuita_c*); // 2
-static void daObjSakuita_Execute(daObjSakuita_c*); // 2
-static void daObjSakuita_IsDelete(daObjSakuita_c*); // 2
-static void daObjSakuita_Delete(daObjSakuita_c*); // 2
-static void daObjSakuita_Create(fopAc_ac_c*); // 2
+void createSolidHeap(fopAc_ac_c*); // 2
+void daObjSakuita_Draw(daObjSakuita_c*); // 2
+void daObjSakuita_Execute(daObjSakuita_c*); // 2
+void daObjSakuita_IsDelete(daObjSakuita_c*); // 2
+void daObjSakuita_Delete(daObjSakuita_c*); // 2
+void daObjSakuita_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__14daObjSakuita_cFv(); // 1
 extern "C" void initBaseMtx__14daObjSakuita_cFv(); // 1
 extern "C" void setBaseMtx__14daObjSakuita_cFv(); // 1
 extern "C" void setPlatePos__14daObjSakuita_cFv(); // 1
 extern "C" void calcAngle__14daObjSakuita_cFv(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjSakuita_Draw__FP14daObjSakuita_c(); // 1
-extern "C" static void daObjSakuita_Execute__FP14daObjSakuita_c(); // 1
-extern "C" static void daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
-extern "C" static void daObjSakuita_Delete__FP14daObjSakuita_c(); // 1
+extern "C" void createSolidHeap__FP10fopAc_ac_c(); // 1
+extern "C" void daObjSakuita_Draw__FP14daObjSakuita_c(); // 1
+extern "C" void daObjSakuita_Execute__FP14daObjSakuita_c(); // 1
+extern "C" void daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
+extern "C" void daObjSakuita_Delete__FP14daObjSakuita_c(); // 1
 extern "C" void __dt__14daObjSakuita_cFv(); // 1
-extern "C" static void daObjSakuita_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjSakuita_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" extern u8 const M_attr__14daObjSakuita_c[44];
 extern "C" extern u32 const lit_3658;
 extern "C" extern u32 const lit_3659;
 extern "C" extern u32 const lit_3660;
@@ -121,133 +78,28 @@ extern "C" extern u32 const lit_3761;
 extern "C" extern u8 const lit_3762[4];
 extern "C" extern u32 const lit_3763;
 extern "C" extern u32 const lit_3764;
+extern "C" extern u8 const lit_3781[8];
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* g_profile_Obj_Sakuita[12];
+extern "C" extern u8 l_arcName[4];
+extern "C" extern u8 l_daObjSakuita_Method[32];
+extern "C" extern u8 g_profile_Obj_Sakuita[48];
+extern "C" extern void* __vt__10cCcD_GStts[3];
+extern "C" extern void* __vt__10dCcD_GStts[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
 
 // 
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rnd(); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc(); // 1
-extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai(); // 1
-extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_CylAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 80CC50B4-80CC50E0 002C+00 r=3 e=0 z=0  None .rodata    M_attr__14daObjSakuita_c                                     */
-SECTION_RODATA static u8 const M_attr__14daObjSakuita_c[44] = {
-	0x41, 0xA0, 0x00, 0x00, 0x41, 0x40, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
-	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x00, 0x00, 0x00, 0xC0, 0xC0, 0x00, 0x00, 0x44, 0x61, 0x00, 0x00,
-	0x46, 0x9C, 0x40, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x14, 0x00, 0x14, 0x00,
-};
-
-/* 80CC50E0-80CC50E4 0004+00 r=0 e=0 z=0  None .rodata    @3658                                                        */
-SECTION_RODATA u32 const lit_3658 = 0xC1F00000;
-
-/* 80CC50E4-80CC50E8 0004+00 r=0 e=0 z=0  None .rodata    @3659                                                        */
-SECTION_RODATA u32 const lit_3659 = 0xC2B40000;
-
-/* 80CC50E8-80CC50EC 0004+00 r=0 e=0 z=0  None .rodata    @3660                                                        */
-SECTION_RODATA u32 const lit_3660 = 0xC1200000;
-
-/* 80CC50EC-80CC50F0 0004+00 r=0 e=0 z=0  None .rodata    @3661                                                        */
-SECTION_RODATA u32 const lit_3661 = 0x41F00000;
-
-/* 80CC50F0-80CC50F4 0004+00 r=0 e=0 z=0  None .rodata    @3662                                                        */
-SECTION_RODATA u32 const lit_3662 = 0x41A00000;
-
-/* 80CC50F4-80CC50F8 0004+00 r=0 e=0 z=0  None .rodata    @3663                                                        */
-SECTION_RODATA u32 const lit_3663 = 0x41200000;
-
-/* 80CC50F8-80CC50FC 0004+00 r=0 e=0 z=0  None .rodata    @3704                                                        */
-SECTION_RODATA u32 const lit_3704 = 0x3F000000;
-
-/* 80CC50FC-80CC5100 0004+00 r=0 e=0 z=0  None .rodata    @3761                                                        */
-SECTION_RODATA u32 const lit_3761 = 0x3DCCCCCD;
-
-/* 80CC5100-80CC5104 0004+00 r=0 e=0 z=0  None .rodata    @3762                                                        */
-SECTION_RODATA u8 const lit_3762[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CC5104-80CC5108 0004+00 r=0 e=0 z=0  None .rodata    @3763                                                        */
-SECTION_RODATA u32 const lit_3763 = 0x3ECCCCCD;
-
-/* 80CC5108-80CC510C 0004+00 r=0 e=0 z=0  None .rodata    @3764                                                        */
-SECTION_RODATA u32 const lit_3764 = 0x46000000;
-
-/* 80CC510C-80CC5114 0008+00 r=1 e=0 z=0  None .rodata    @3781                                                        */
-SECTION_RODATA static u8 const lit_3781[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80CC5114-80CC512C 0018+00 r=4 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CC5114 = "A_Sakuita";
-SECTION_DEAD char const* const stringBase_80CC511E = "A_Sakuita.bmd";
-#pragma pop
-
-/* 80CC512C-80CC5130 0004+00 r=4 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80CC46F8-80CC47F8 0100+00 r=1 e=0 z=0  None .text      create_init__14daObjSakuita_cFv                              */
+/* 80CC46F8-80CC47F8 0100+00 s=1 e=0 z=0  None .text      create_init__14daObjSakuita_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +110,7 @@ asm void daObjSakuita_c::create_init() {
 #pragma pop
 
 
-/* 80CC47F8-80CC4818 0020+00 r=1 e=0 z=0  None .text      initBaseMtx__14daObjSakuita_cFv                              */
+/* 80CC47F8-80CC4818 0020+00 s=1 e=0 z=0  None .text      initBaseMtx__14daObjSakuita_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +121,7 @@ asm void daObjSakuita_c::initBaseMtx() {
 #pragma pop
 
 
-/* 80CC4818-80CC489C 0084+00 r=2 e=0 z=0  None .text      setBaseMtx__14daObjSakuita_cFv                               */
+/* 80CC4818-80CC489C 0084+00 s=2 e=0 z=0  None .text      setBaseMtx__14daObjSakuita_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +132,7 @@ asm void daObjSakuita_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80CC489C-80CC4A98 01FC+00 r=1 e=0 z=0  None .text      setPlatePos__14daObjSakuita_cFv                              */
+/* 80CC489C-80CC4A98 01FC+00 s=1 e=0 z=0  None .text      setPlatePos__14daObjSakuita_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +143,7 @@ asm void daObjSakuita_c::setPlatePos() {
 #pragma pop
 
 
-/* 80CC4A98-80CC4B5C 00C4+00 r=1 e=0 z=0  None .text      calcAngle__14daObjSakuita_cFv                                */
+/* 80CC4A98-80CC4B5C 00C4+00 s=1 e=0 z=0  None .text      calcAngle__14daObjSakuita_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,119 +154,62 @@ asm void daObjSakuita_c::calcAngle() {
 #pragma pop
 
 
-/* 80CC4B5C-80CC4BD4 0078+00 r=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
+/* 80CC4B5C-80CC4BD4 0078+00 s=0 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createSolidHeap(fopAc_ac_c* param_0) {
+asm void createSolidHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/createSolidHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CC4BD4-80CC4C14 0040+00 r=1 e=0 z=0  None .text      daObjSakuita_Draw__FP14daObjSakuita_c                        */
+/* 80CC4BD4-80CC4C14 0040+00 s=0 e=0 z=0  None .text      daObjSakuita_Draw__FP14daObjSakuita_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSakuita_Draw(daObjSakuita_c* param_0) {
+asm void daObjSakuita_Draw(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Draw__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* 80CC4C14-80CC4C6C 0058+00 r=1 e=0 z=0  None .text      daObjSakuita_Execute__FP14daObjSakuita_c                     */
+/* 80CC4C14-80CC4C6C 0058+00 s=0 e=0 z=0  None .text      daObjSakuita_Execute__FP14daObjSakuita_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSakuita_Execute(daObjSakuita_c* param_0) {
+asm void daObjSakuita_Execute(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Execute__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* 80CC4C6C-80CC4C74 0008+00 r=1 e=0 z=0  None .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
+/* 80CC4C6C-80CC4C74 0008+00 s=0 e=0 z=0  None .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
+asm void daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_IsDelete__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* 80CC4C74-80CC4C9C 0028+00 r=1 e=0 z=0  None .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */
+/* 80CC4C74-80CC4C9C 0028+00 s=0 e=0 z=0  None .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSakuita_Delete(daObjSakuita_c* param_0) {
+asm void daObjSakuita_Delete(daObjSakuita_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Delete__FP14daObjSakuita_c.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80CC5130-80CC5150 0020+00 r=1 e=0 z=0  None .data      l_daObjSakuita_Method                                        */
-SECTION_DATA static void* l_daObjSakuita_Method[8] = {
-	/* 0    */ (void*)daObjSakuita_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjSakuita_Delete__FP14daObjSakuita_c,
-	/* 2    */ (void*)daObjSakuita_Execute__FP14daObjSakuita_c,
-	/* 3    */ (void*)daObjSakuita_IsDelete__FP14daObjSakuita_c,
-	/* 4    */ (void*)daObjSakuita_Draw__FP14daObjSakuita_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80CC5150-80CC5180 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_Sakuita                                        */
-SECTION_DATA void* g_profile_Obj_Sakuita[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01540000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000750,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00240000,
-	/* 9    */ (void*)&l_daObjSakuita_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80CC5180-80CC518C 000C+00 r=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
-};
-
-/* 80CC518C-80CC5198 000C+00 r=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
-};
-
-/* 80CC5198-80CC51A4 000C+00 r=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80CC51A4-80CC51B0 000C+00 r=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80CC4C9C-80CC4E40 01A4+00 r=1 e=0 z=0  None .text      __dt__14daObjSakuita_cFv                                     */
+/* 80CC4C9C-80CC4E40 01A4+00 s=1 e=0 z=0  None .text      __dt__14daObjSakuita_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,18 +220,18 @@ asm daObjSakuita_c::~daObjSakuita_c() {
 #pragma pop
 
 
-/* 80CC4E40-80CC4F78 0138+00 r=1 e=0 z=0  None .text      daObjSakuita_Create__FP10fopAc_ac_c                          */
+/* 80CC4E40-80CC4F78 0138+00 s=0 e=0 z=0  None .text      daObjSakuita_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSakuita_Create(fopAc_ac_c* param_0) {
+asm void daObjSakuita_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CC4F78-80CC4FC0 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CC4F78-80CC4FC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,7 +242,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CC4FC0-80CC5008 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CC4FC0-80CC5008 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +253,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CC5008-80CC5064 005C+00 r=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CC5008-80CC5064 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -469,7 +264,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CC5064-80CC50AC 0048+00 r=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CC5064-80CC50AC 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,4 +274,106 @@ asm cCcD_GStts::~cCcD_GStts() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CC50B4-80CC50E0 002C+00 s=0 e=0 z=0  None .rodata    M_attr__14daObjSakuita_c                                     */
+SECTION_RODATA u8 const M_attr__14daObjSakuita_c[44] = {
+	0x41, 0xA0, 0x00, 0x00, 0x41, 0x40, 0x00, 0x00, 0x42, 0x8C, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
+	0x3F, 0x4C, 0xCC, 0xCD, 0x3F, 0x00, 0x00, 0x00, 0xC0, 0xC0, 0x00, 0x00, 0x44, 0x61, 0x00, 0x00,
+	0x46, 0x9C, 0x40, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x14, 0x00, 0x14, 0x00,
+};
+
+/* 80CC50E0-80CC50E4 0004+00 s=0 e=0 z=0  None .rodata    @3658                                                        */
+SECTION_RODATA u32 const lit_3658 = 0xC1F00000;
+
+/* 80CC50E4-80CC50E8 0004+00 s=0 e=0 z=0  None .rodata    @3659                                                        */
+SECTION_RODATA u32 const lit_3659 = 0xC2B40000;
+
+/* 80CC50E8-80CC50EC 0004+00 s=0 e=0 z=0  None .rodata    @3660                                                        */
+SECTION_RODATA u32 const lit_3660 = 0xC1200000;
+
+/* 80CC50EC-80CC50F0 0004+00 s=0 e=0 z=0  None .rodata    @3661                                                        */
+SECTION_RODATA u32 const lit_3661 = 0x41F00000;
+
+/* 80CC50F0-80CC50F4 0004+00 s=0 e=0 z=0  None .rodata    @3662                                                        */
+SECTION_RODATA u32 const lit_3662 = 0x41A00000;
+
+/* 80CC50F4-80CC50F8 0004+00 s=0 e=0 z=0  None .rodata    @3663                                                        */
+SECTION_RODATA u32 const lit_3663 = 0x41200000;
+
+/* 80CC50F8-80CC50FC 0004+00 s=0 e=0 z=0  None .rodata    @3704                                                        */
+SECTION_RODATA u32 const lit_3704 = 0x3F000000;
+
+/* 80CC50FC-80CC5100 0004+00 s=0 e=0 z=0  None .rodata    @3761                                                        */
+SECTION_RODATA u32 const lit_3761 = 0x3DCCCCCD;
+
+/* 80CC5100-80CC5104 0004+00 s=0 e=0 z=0  None .rodata    @3762                                                        */
+SECTION_RODATA u8 const lit_3762[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CC5104-80CC5108 0004+00 s=0 e=0 z=0  None .rodata    @3763                                                        */
+SECTION_RODATA u32 const lit_3763 = 0x3ECCCCCD;
+
+/* 80CC5108-80CC510C 0004+00 s=0 e=0 z=0  None .rodata    @3764                                                        */
+SECTION_RODATA u32 const lit_3764 = 0x46000000;
+
+/* 80CC510C-80CC5114 0008+00 s=0 e=0 z=0  None .rodata    @3781                                                        */
+SECTION_RODATA u8 const lit_3781[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80CC5114-80CC512C 0018+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CC5114 = "A_Sakuita";
+SECTION_DEAD char const* const stringBase_80CC511E = "A_Sakuita.bmd";
+#pragma pop
+
+/* 80CC512C-80CC5130 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA u8 l_arcName[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CC5130-80CC5150 0020+00 s=0 e=0 z=0  None .data      l_daObjSakuita_Method                                        */
+SECTION_DATA u8 l_daObjSakuita_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CC5150-80CC5180 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Sakuita                                        */
+SECTION_DATA u8 g_profile_Obj_Sakuita[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x54, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x80, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80CC5180-80CC518C 000C+00 s=0 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA void* __vt__10cCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80CC518C-80CC5198 000C+00 s=0 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA void* __vt__10dCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80CC5198-80CC51A4 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80CC51A4-80CC51B0 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
 

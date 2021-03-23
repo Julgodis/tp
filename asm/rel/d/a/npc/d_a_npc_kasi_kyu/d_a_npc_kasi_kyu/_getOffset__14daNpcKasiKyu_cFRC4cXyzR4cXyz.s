@@ -15,12 +15,12 @@ lbl_80A24E44:
 /* 80A24E78 00000034  A0 03 04 E8 */	lhz r0, 0x4e8(r3)
 /* 80A24E7C 00000038  B0 01 00 0C */	sth r0, 0xc(r1)
 /* 80A24E80 0000003C  38 61 00 08 */	addi r3, r1, 8
-/* 80A24E84 00000040  4B FF CA B5 */	bl ZXYrotS__14mDoMtx_stack_cFRC5csXyz
-/* 80A24E88 00000044  3C 60 00 00 */	lis r3, now__14mDoMtx_stack_c@ha /* 803DD470 */
-/* 80A24E8C 00000048  38 63 00 00 */	addi r3, r3, now__14mDoMtx_stack_c@l /* 803DD470 */
+/* 80A24E84 00000040  4B FF CA B5 */	bl _unresolved
+/* 80A24E88 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A24E8C 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A24E90 0000004C  7F E4 FB 78 */	mr r4, r31
 /* 80A24E94 00000050  7F E5 FB 78 */	mr r5, r31
-/* 80A24E98 00000054  4B FF CA A1 */	bl PSMTXMultVec
+/* 80A24E98 00000054  4B FF CA A1 */	bl _unresolved
 /* 80A24E9C 00000058  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80A24EA0 0000005C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A24EA4 00000060  7C 08 03 A6 */	mtlr r0

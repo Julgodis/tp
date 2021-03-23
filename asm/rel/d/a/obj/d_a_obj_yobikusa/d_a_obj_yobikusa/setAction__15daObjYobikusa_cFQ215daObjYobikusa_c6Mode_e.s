@@ -3,8 +3,8 @@ lbl_8059C9F8:
 /* 8059C9FC 00000004  7C 08 02 A6 */	mflr r0
 /* 8059CA00 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8059CA04 0000000C  1C A4 00 18 */	mulli r5, r4, 0x18
-/* 8059CA08 00000010  3C 80 00 00 */	lis r4, ActionTable__15daObjYobikusa_c@ha /* 8059DFD8 */
-/* 8059CA0C 00000014  38 04 00 00 */	addi r0, r4, ActionTable__15daObjYobikusa_c@l /* 8059DFD8 */
+/* 8059CA08 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8059CA0C 00000014  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 8059CA10 00000018  7C 00 2A 14 */	add r0, r0, r5
 /* 8059CA14 0000001C  90 03 05 AC */	stw r0, 0x5ac(r3)
 /* 8059CA18 00000020  48 00 00 15 */	bl callInit__15daObjYobikusa_cFv

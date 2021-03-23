@@ -50,7 +50,7 @@ extern "C" extern u8 g_env_light[4880];
 // 
 
 /* ############################################################################################## */
-/* 8037A1C0-8037A368 01A4+04 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8037A1C0-8037A368 01A4+04 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -112,7 +112,7 @@ SECTION_DEAD char const* const stringBase_8037A35D = "D_SB03";
 SECTION_DEAD static char const* const pad_8037A364 = "\0\0\0";
 #pragma pop
 
-/* 803A8E98-803A9198 0300+00 r=1 e=0 z=0  None .data      l_kydata_BloomInf_tbl                                        */
+/* 803A8E98-803A9198 0300+00 s=1 e=0 z=0  None .data      l_kydata_BloomInf_tbl                                        */
 SECTION_DATA static u8 l_kydata_BloomInf_tbl[768] = {
 	0x01, 0xFF, 0x40, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x28, 0x46, 0x87,
 	0xCF, 0xB1, 0x38, 0xD2, 0xFF, 0xFF, 0xFF, 0x60, 0x00, 0x2D, 0x46, 0x73, 0xCF, 0xB1, 0x38, 0xD2,
@@ -164,7 +164,7 @@ SECTION_DATA static u8 l_kydata_BloomInf_tbl[768] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A9198-803A92A8 0110+00 r=1 e=0 z=0  None .data      l_darkworld_tbl                                              */
+/* 803A9198-803A92A8 0110+00 s=1 e=0 z=0  None .data      l_darkworld_tbl                                              */
 SECTION_DATA static void* l_darkworld_tbl[68] = {
 	/* 0    */ (void*)&d_kankyo_d_kankyo_data__stringBase0,
 	/* 1    */ (void*)0x06000000,
@@ -236,7 +236,7 @@ SECTION_DATA static void* l_darkworld_tbl[68] = {
 	/* 67   */ (void*)NULL,
 };
 
-/* 803A92A8-803A93C8 0120+00 r=1 e=0 z=0  None .data      l_light_size_tbl                                             */
+/* 803A92A8-803A93C8 0120+00 s=1 e=0 z=0  None .data      l_light_size_tbl                                             */
 SECTION_DATA static void* l_light_size_tbl[72] = {
 	/* 0    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xF8),
 	/* 1    */ (void*)NULL,
@@ -312,7 +312,7 @@ SECTION_DATA static void* l_light_size_tbl[72] = {
 	/* 71   */ (void*)NULL,
 };
 
-/* 803A93C8-803A9410 0048+00 r=1 e=0 z=0  None .data      l_light_size_tbl_tw                                          */
+/* 803A93C8-803A9410 0048+00 s=1 e=0 z=0  None .data      l_light_size_tbl_tw                                          */
 SECTION_DATA static void* l_light_size_tbl_tw[18] = {
 	/* 0    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x6A),
 	/* 1    */ (void*)0x02000000,
@@ -334,14 +334,14 @@ SECTION_DATA static void* l_light_size_tbl_tw[18] = {
 	/* 17   */ (void*)0x03000000,
 };
 
-/* 803A9410-803A9434 0024+00 r=1 e=0 z=0  None .data      l_maple_col                                                  */
+/* 803A9410-803A9434 0024+00 s=1 e=0 z=0  None .data      l_maple_col                                                  */
 SECTION_DATA static u8 l_maple_col[36] = {
 	0x56, 0x4B, 0x39, 0x37, 0x28, 0x1E, 0x6E, 0x32, 0x0F, 0x64, 0x64, 0x80, 0x52, 0x41, 0x66, 0x19,
 	0x0F, 0x00, 0x46, 0x00, 0x0F, 0x64, 0x64, 0x80, 0x65, 0x5E, 0x69, 0x0E, 0x23, 0x0B, 0x28, 0x14,
 	0x05, 0x5A, 0x5A, 0x6E,
 };
 
-/* 803A9434-803A94B8 0084+00 r=1 e=0 z=0  None .data      l_time_attribute                                             */
+/* 803A9434-803A94B8 0084+00 s=1 e=0 z=0  None .data      l_time_attribute                                             */
 SECTION_DATA static u8 l_time_attribute[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x05, 0x05, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00,
@@ -354,7 +354,7 @@ SECTION_DATA static u8 l_time_attribute[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A94B8-803A953C 0084+00 r=1 e=0 z=0  None .data      l_time_attribute_boss                                        */
+/* 803A94B8-803A953C 0084+00 s=1 e=0 z=0  None .data      l_time_attribute_boss                                        */
 SECTION_DATA static u8 l_time_attribute_boss[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x01, 0x02, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x43, 0x34, 0x00, 0x00,
@@ -367,7 +367,7 @@ SECTION_DATA static u8 l_time_attribute_boss[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A953C-803A987C 0340+00 r=1 e=0 z=0  None .data      l_field_data                                                 */
+/* 803A953C-803A987C 0340+00 s=1 e=0 z=0  None .data      l_field_data                                                 */
 SECTION_DATA static u8 l_field_data[832] = {
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
@@ -423,7 +423,7 @@ SECTION_DATA static u8 l_field_data[832] = {
 	0xC5, 0x9C, 0x40, 0x00, 0x46, 0xEA, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569DC-800569E8 000C+00 r=1 e=1 z=0  None .text      dKyd_dmpalet_getp__Fv                                        */
+/* 800569DC-800569E8 000C+00 s=0 e=1 z=0  None .text      dKyd_dmpalet_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,13 +435,13 @@ asm void dKyd_dmpalet_getp() {
 
 
 /* ############################################################################################## */
-/* 803A987C-803A9894 0018+00 r=1 e=0 z=0  None .data      l_pselect_default                                            */
+/* 803A987C-803A9894 0018+00 s=1 e=0 z=0  None .data      l_pselect_default                                            */
 SECTION_DATA static u8 l_pselect_default[24] = {
 	0x00, 0x00, 0x01, 0x02, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x05, 0x06,
 	0x06, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569E8-800569F4 000C+00 r=1 e=1 z=0  None .text      dKyd_dmpselect_getp__Fv                                      */
+/* 800569E8-800569F4 000C+00 s=0 e=1 z=0  None .text      dKyd_dmpselect_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +453,7 @@ asm void dKyd_dmpselect_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9894-803A9918 0082+02 r=1 e=0 z=0  None .data      l_envr_default                                               */
+/* 803A9894-803A9918 0082+02 s=1 e=0 z=0  None .data      l_envr_default                                               */
 SECTION_DATA static u8 l_envr_default[130 + 2 /* padding */] = {
 	0x00, 0x01, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -468,7 +468,7 @@ SECTION_DATA static u8 l_envr_default[130 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 800569F4-80056A00 000C+00 r=1 e=1 z=0  None .text      dKyd_dmenvr_getp__Fv                                         */
+/* 800569F4-80056A00 000C+00 s=0 e=1 z=0  None .text      dKyd_dmenvr_getp__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -480,7 +480,7 @@ asm void dKyd_dmenvr_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9918-803A9A94 017A+02 r=1 e=0 z=0  None .data      l_vr_box_data                                                */
+/* 803A9918-803A9A94 017A+02 s=1 e=0 z=0  None .data      l_vr_box_data                                                */
 SECTION_DATA static u8 l_vr_box_data[378 + 2 /* padding */] = {
 	0x2F, 0x1A, 0x07, 0x44, 0x1E, 0x10, 0xF5, 0xA5, 0x6C, 0x9A, 0x5C, 0x3B, 0xFF, 0x44, 0x1E, 0x10,
 	0xA3, 0xFF, 0x5B, 0x49, 0x72, 0x39, 0x5B, 0xA7, 0xFF, 0xF7, 0xF7, 0x83, 0x7E, 0x7D, 0x1D, 0x1E,
@@ -510,7 +510,7 @@ SECTION_DATA static u8 l_vr_box_data[378 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80056A00-80056A0C 000C+00 r=1 e=1 z=0  None .text      dKyd_dmvrbox_getp__Fv                                        */
+/* 80056A00-80056A0C 000C+00 s=0 e=1 z=0  None .text      dKyd_dmvrbox_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,7 +521,7 @@ asm void dKyd_dmvrbox_getp() {
 #pragma pop
 
 
-/* 80056A0C-80056A18 000C+00 r=1 e=1 z=0  None .text      dKyd_schejule_getp__Fv                                       */
+/* 80056A0C-80056A18 000C+00 s=0 e=1 z=0  None .text      dKyd_schejule_getp__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -532,7 +532,7 @@ asm void dKyd_schejule_getp() {
 #pragma pop
 
 
-/* 80056A18-80056A24 000C+00 r=1 e=1 z=0  None .text      dKyd_schejule_boss_getp__Fv                                  */
+/* 80056A18-80056A24 000C+00 s=0 e=1 z=0  None .text      dKyd_schejule_boss_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +544,7 @@ asm void dKyd_schejule_boss_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9A94-803A9AC0 0028+04 r=1 e=0 z=0  None .data      S_xfog_table_data                                            */
+/* 803A9A94-803A9AC0 0028+04 s=1 e=0 z=0  None .data      S_xfog_table_data                                            */
 SECTION_DATA static u8 S_xfog_table_data[40 + 4 /* padding */] = {
 	0x01, 0x04, 0x01, 0x04, 0x01, 0x0E, 0x01, 0x18, 0x01, 0x22, 0x01, 0x2C, 0x01, 0x36, 0x01, 0x40,
 	0x01, 0x4A, 0x01, 0x54, 0x00, 0xFA, 0x01, 0x04, 0x01, 0x18, 0x01, 0x40, 0x01, 0x5E, 0x01, 0x90,
@@ -553,7 +553,7 @@ SECTION_DATA static u8 S_xfog_table_data[40 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80056A24-80056A64 0040+00 r=2 e=2 z=0  None .text      dKyd_xfog_table_set__FUc                                     */
+/* 80056A24-80056A64 0040+00 s=0 e=2 z=0  None .text      dKyd_xfog_table_set__FUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -564,7 +564,7 @@ asm void dKyd_xfog_table_set(u8 param_0) {
 #pragma pop
 
 
-/* 80056A64-80056A70 000C+00 r=1 e=1 z=0  None .text      dKyd_maple_col_getp__Fv                                      */
+/* 80056A64-80056A70 000C+00 s=0 e=1 z=0  None .text      dKyd_maple_col_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -575,7 +575,7 @@ asm void dKyd_maple_col_getp() {
 #pragma pop
 
 
-/* 80056A70-80056A7C 000C+00 r=4 e=4 z=0  None .text      dKyd_darkworld_tbl_getp__Fv                                  */
+/* 80056A70-80056A7C 000C+00 s=0 e=4 z=0  None .text      dKyd_darkworld_tbl_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -586,7 +586,7 @@ asm void dKyd_darkworld_tbl_getp() {
 #pragma pop
 
 
-/* 80056A7C-80056A88 000C+00 r=1 e=1 z=0  None .text      dKyd_light_size_tbl_getp__Fv                                 */
+/* 80056A7C-80056A88 000C+00 s=0 e=1 z=0  None .text      dKyd_light_size_tbl_getp__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -597,7 +597,7 @@ asm void dKyd_light_size_tbl_getp() {
 #pragma pop
 
 
-/* 80056A88-80056A94 000C+00 r=1 e=1 z=0  None .text      dKyd_light_tw_size_tbl_getp__Fv                              */
+/* 80056A88-80056A94 000C+00 s=0 e=1 z=0  None .text      dKyd_light_tw_size_tbl_getp__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -608,7 +608,7 @@ asm void dKyd_light_tw_size_tbl_getp() {
 #pragma pop
 
 
-/* 80056A94-80056AA8 0014+00 r=1 e=1 z=0  None .text      dKyd_BloomInf_tbl_getp__Fi                                   */
+/* 80056A94-80056AA8 0014+00 s=0 e=1 z=0  None .text      dKyd_BloomInf_tbl_getp__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

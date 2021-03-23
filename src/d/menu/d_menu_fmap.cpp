@@ -16,10 +16,6 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-};
-
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -30,10 +26,14 @@ struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-struct CSTControl {
+struct dMenu_Fmap_stage_data_c {
 };
 
-struct dMenu_Fmap_stage_data_c {
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Fmap_c {
@@ -714,13 +714,13 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803960D0-803960E8 0018+00 r=1 e=0 z=0  None .rodata    i_swBit$7362                                                 */
+/* 803960D0-803960E8 0018+00 s=1 e=0 z=0  None .rodata    i_swBit$7362                                                 */
 SECTION_RODATA static u8 const data_803960D0[24] = {
 	0x00, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x29, 0x00, 0x00, 0x00, 0x2A, 0x00, 0x00, 0x00, 0x32,
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x32,
 };
 
-/* 803960E8-803961B0 00C7+01 r=9 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803960E8-803961B0 00C7+01 s=9 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -746,222 +746,222 @@ SECTION_DEAD char const* const stringBase_803961A7 = "F_SP116";
 SECTION_DEAD static char const* const pad_803961AF = "";
 #pragma pop
 
-/* 803BD090-803BD09C 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+/* 803BD090-803BD09C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 d_menu_d_menu_fmap__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD09C-803BD0A8 000C+00 r=0 e=0 z=0  None .data      @4019                                                        */
+/* 803BD09C-803BD0A8 000C+00 s=0 e=0 z=0  None .data      @4019                                                        */
 SECTION_DATA void* lit_4019[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)all_map_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0A8-803BD0B4 000C+00 r=0 e=0 z=0  None .data      @4020                                                        */
+/* 803BD0A8-803BD0B4 000C+00 s=0 e=0 z=0  None .data      @4020                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4020[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo2_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0B4-803BD0C0 000C+00 r=0 e=0 z=0  None .data      @4021                                                        */
+/* 803BD0B4-803BD0C0 000C+00 s=0 e=0 z=0  None .data      @4021                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4021[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo3_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0C0-803BD0CC 000C+00 r=0 e=0 z=0  None .data      @4022                                                        */
+/* 803BD0C0-803BD0CC 000C+00 s=0 e=0 z=0  None .data      @4022                                                        */
 SECTION_DATA void* lit_4022[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo1_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0CC-803BD0D8 000C+00 r=0 e=0 z=0  None .data      @4023                                                        */
+/* 803BD0CC-803BD0D8 000C+00 s=0 e=0 z=0  None .data      @4023                                                        */
 SECTION_DATA void* lit_4023[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_all_to_region_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0D8-803BD0E4 000C+00 r=0 e=0 z=0  None .data      @4024                                                        */
+/* 803BD0D8-803BD0E4 000C+00 s=0 e=0 z=0  None .data      @4024                                                        */
 SECTION_DATA void* lit_4024[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_region_to_all_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0E4-803BD0F0 000C+00 r=0 e=0 z=0  None .data      @4025                                                        */
+/* 803BD0E4-803BD0F0 000C+00 s=0 e=0 z=0  None .data      @4025                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4025[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)region_map_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0F0-803BD0FC 000C+00 r=0 e=0 z=0  None .data      @4026                                                        */
+/* 803BD0F0-803BD0FC 000C+00 s=0 e=0 z=0  None .data      @4026                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4026[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)to_portal_warp_map_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD0FC-803BD108 000C+00 r=0 e=0 z=0  None .data      @4027                                                        */
+/* 803BD0FC-803BD108 000C+00 s=0 e=0 z=0  None .data      @4027                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4027[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_map_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD108-803BD114 000C+00 r=0 e=0 z=0  None .data      @4028                                                        */
+/* 803BD108-803BD114 000C+00 s=0 e=0 z=0  None .data      @4028                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4028[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_select_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD114-803BD120 000C+00 r=0 e=0 z=0  None .data      @4029                                                        */
+/* 803BD114-803BD120 000C+00 s=0 e=0 z=0  None .data      @4029                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4029[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_forbid_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD120-803BD12C 000C+00 r=0 e=0 z=0  None .data      @4030                                                        */
+/* 803BD120-803BD12C 000C+00 s=0 e=0 z=0  None .data      @4030                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4030[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_region_to_spot_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD12C-803BD138 000C+00 r=0 e=0 z=0  None .data      @4031                                                        */
+/* 803BD12C-803BD138 000C+00 s=0 e=0 z=0  None .data      @4031                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4031[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_spot_to_region_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD138-803BD144 000C+00 r=0 e=0 z=0  None .data      @4032                                                        */
+/* 803BD138-803BD144 000C+00 s=0 e=0 z=0  None .data      @4032                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4032[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)spot_map_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD144-803BD150 000C+00 r=0 e=0 z=0  None .data      @4033                                                        */
+/* 803BD144-803BD150 000C+00 s=0 e=0 z=0  None .data      @4033                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4033[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo1_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD150-803BD15C 000C+00 r=0 e=0 z=0  None .data      @4034                                                        */
+/* 803BD150-803BD15C 000C+00 s=0 e=0 z=0  None .data      @4034                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4034[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo4_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD15C-803BD168 000C+00 r=0 e=0 z=0  None .data      @4035                                                        */
+/* 803BD15C-803BD168 000C+00 s=0 e=0 z=0  None .data      @4035                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4035[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo5_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD168-803BD174 000C+00 r=0 e=0 z=0  None .data      @4036                                                        */
+/* 803BD168-803BD174 000C+00 s=0 e=0 z=0  None .data      @4036                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4036[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo6_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD174-803BD180 000C+00 r=0 e=0 z=0  None .data      @4037                                                        */
+/* 803BD174-803BD180 000C+00 s=0 e=0 z=0  None .data      @4037                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4037[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo1_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD180-803BD18C 000C+00 r=0 e=0 z=0  None .data      @4038                                                        */
+/* 803BD180-803BD18C 000C+00 s=0 e=0 z=0  None .data      @4038                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4038[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo2_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD18C-803BD198 000C+00 r=0 e=0 z=0  None .data      @4039                                                        */
+/* 803BD18C-803BD198 000C+00 s=0 e=0 z=0  None .data      @4039                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4039[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo3_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD198-803BD1A4 000C+00 r=0 e=0 z=0  None .data      @4040                                                        */
+/* 803BD198-803BD1A4 000C+00 s=0 e=0 z=0  None .data      @4040                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4040[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo4_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1A4-803BD1B0 000C+00 r=0 e=0 z=0  None .data      @4041                                                        */
+/* 803BD1A4-803BD1B0 000C+00 s=0 e=0 z=0  None .data      @4041                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4041[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo5_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1B0-803BD1BC 000C+00 r=0 e=0 z=0  None .data      @4042                                                        */
+/* 803BD1B0-803BD1BC 000C+00 s=0 e=0 z=0  None .data      @4042                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4042[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)light_demo1_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1BC-803BD1C8 000C+00 r=0 e=0 z=0  None .data      @4043                                                        */
+/* 803BD1BC-803BD1C8 000C+00 s=0 e=0 z=0  None .data      @4043                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4043[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)light_demo2_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1C8-803BD1D4 000C+00 r=0 e=0 z=0  None .data      @4044                                                        */
+/* 803BD1C8-803BD1D4 000C+00 s=0 e=0 z=0  None .data      @4044                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4044[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo2_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1D4-803BD1E0 000C+00 r=0 e=0 z=0  None .data      @4045                                                        */
+/* 803BD1D4-803BD1E0 000C+00 s=0 e=0 z=0  None .data      @4045                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4045[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo3_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1E0-803BD1EC 000C+00 r=0 e=0 z=0  None .data      @4046                                                        */
+/* 803BD1E0-803BD1EC 000C+00 s=0 e=0 z=0  None .data      @4046                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4046[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo1_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1EC-803BD1F8 000C+00 r=0 e=0 z=0  None .data      @4047                                                        */
+/* 803BD1EC-803BD1F8 000C+00 s=0 e=0 z=0  None .data      @4047                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4047[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo2_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD1F8-803BD204 000C+00 r=0 e=0 z=0  None .data      @4048                                                        */
+/* 803BD1F8-803BD204 000C+00 s=0 e=0 z=0  None .data      @4048                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4048[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo3_init__12dMenu_Fmap_cFv,
 };
 
-/* 803BD204-803BD36C 0168+00 r=2 e=0 z=0  None .data      init_process                                                 */
+/* 803BD204-803BD36C 0168+00 s=2 e=0 z=0  None .data      init_process                                                 */
 SECTION_DATA static u8 d_menu_d_menu_fmap__init_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -988,217 +988,217 @@ SECTION_DATA static u8 d_menu_d_menu_fmap__init_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD36C-803BD378 000C+00 r=0 e=0 z=0  None .data      @4049                                                        */
+/* 803BD36C-803BD378 000C+00 s=0 e=0 z=0  None .data      @4049                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4049[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)all_map_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD378-803BD384 000C+00 r=0 e=0 z=0  None .data      @4050                                                        */
+/* 803BD378-803BD384 000C+00 s=0 e=0 z=0  None .data      @4050                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4050[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo2_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD384-803BD390 000C+00 r=0 e=0 z=0  None .data      @4051                                                        */
+/* 803BD384-803BD390 000C+00 s=0 e=0 z=0  None .data      @4051                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4051[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo3_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD390-803BD39C 000C+00 r=0 e=0 z=0  None .data      @4052                                                        */
+/* 803BD390-803BD39C 000C+00 s=0 e=0 z=0  None .data      @4052                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4052[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo1_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD39C-803BD3A8 000C+00 r=0 e=0 z=0  None .data      @4053                                                        */
+/* 803BD39C-803BD3A8 000C+00 s=0 e=0 z=0  None .data      @4053                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4053[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_all_to_region_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3A8-803BD3B4 000C+00 r=0 e=0 z=0  None .data      @4054                                                        */
+/* 803BD3A8-803BD3B4 000C+00 s=0 e=0 z=0  None .data      @4054                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4054[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_region_to_all_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3B4-803BD3C0 000C+00 r=0 e=0 z=0  None .data      @4055                                                        */
+/* 803BD3B4-803BD3C0 000C+00 s=0 e=0 z=0  None .data      @4055                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4055[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)region_map_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3C0-803BD3CC 000C+00 r=0 e=0 z=0  None .data      @4056                                                        */
+/* 803BD3C0-803BD3CC 000C+00 s=0 e=0 z=0  None .data      @4056                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4056[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)to_portal_warp_map_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3CC-803BD3D8 000C+00 r=0 e=0 z=0  None .data      @4057                                                        */
+/* 803BD3CC-803BD3D8 000C+00 s=0 e=0 z=0  None .data      @4057                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4057[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_map_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3D8-803BD3E4 000C+00 r=0 e=0 z=0  None .data      @4058                                                        */
+/* 803BD3D8-803BD3E4 000C+00 s=0 e=0 z=0  None .data      @4058                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4058[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_select_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3E4-803BD3F0 000C+00 r=0 e=0 z=0  None .data      @4059                                                        */
+/* 803BD3E4-803BD3F0 000C+00 s=0 e=0 z=0  None .data      @4059                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4059[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_warp_forbid_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3F0-803BD3FC 000C+00 r=0 e=0 z=0  None .data      @4060                                                        */
+/* 803BD3F0-803BD3FC 000C+00 s=0 e=0 z=0  None .data      @4060                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4060[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_region_to_spot_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD3FC-803BD408 000C+00 r=0 e=0 z=0  None .data      @4061                                                        */
+/* 803BD3FC-803BD408 000C+00 s=0 e=0 z=0  None .data      @4061                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4061[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)zoom_spot_to_region_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD408-803BD414 000C+00 r=0 e=0 z=0  None .data      @4062                                                        */
+/* 803BD408-803BD414 000C+00 s=0 e=0 z=0  None .data      @4062                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4062[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)spot_map_proc__12dMenu_Fmap_cFv,
 };
 
-/* 803BD414-803BD420 000C+00 r=0 e=0 z=0  None .data      @4063                                                        */
+/* 803BD414-803BD420 000C+00 s=0 e=0 z=0  None .data      @4063                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4063[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo1_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD420-803BD42C 000C+00 r=0 e=0 z=0  None .data      @4064                                                        */
+/* 803BD420-803BD42C 000C+00 s=0 e=0 z=0  None .data      @4064                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4064[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo4_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD42C-803BD438 000C+00 r=0 e=0 z=0  None .data      @4065                                                        */
+/* 803BD42C-803BD438 000C+00 s=0 e=0 z=0  None .data      @4065                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4065[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo5_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD438-803BD444 000C+00 r=0 e=0 z=0  None .data      @4066                                                        */
+/* 803BD438-803BD444 000C+00 s=0 e=0 z=0  None .data      @4066                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4066[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)portal_demo6_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD444-803BD450 000C+00 r=0 e=0 z=0  None .data      @4067                                                        */
+/* 803BD444-803BD450 000C+00 s=0 e=0 z=0  None .data      @4067                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4067[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo1_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD450-803BD45C 000C+00 r=0 e=0 z=0  None .data      @4068                                                        */
+/* 803BD450-803BD45C 000C+00 s=0 e=0 z=0  None .data      @4068                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4068[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo2_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD45C-803BD468 000C+00 r=0 e=0 z=0  None .data      @4069                                                        */
+/* 803BD45C-803BD468 000C+00 s=0 e=0 z=0  None .data      @4069                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4069[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo3_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD468-803BD474 000C+00 r=0 e=0 z=0  None .data      @4070                                                        */
+/* 803BD468-803BD474 000C+00 s=0 e=0 z=0  None .data      @4070                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4070[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo4_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD474-803BD480 000C+00 r=0 e=0 z=0  None .data      @4071                                                        */
+/* 803BD474-803BD480 000C+00 s=0 e=0 z=0  None .data      @4071                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4071[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)yamiboss_demo5_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD480-803BD48C 000C+00 r=0 e=0 z=0  None .data      @4072                                                        */
+/* 803BD480-803BD48C 000C+00 s=0 e=0 z=0  None .data      @4072                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4072[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)light_demo1_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD48C-803BD498 000C+00 r=0 e=0 z=0  None .data      @4073                                                        */
+/* 803BD48C-803BD498 000C+00 s=0 e=0 z=0  None .data      @4073                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4073[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)light_demo2_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD498-803BD4A4 000C+00 r=0 e=0 z=0  None .data      @4074                                                        */
+/* 803BD498-803BD4A4 000C+00 s=0 e=0 z=0  None .data      @4074                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4074[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo2_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD4A4-803BD4B0 000C+00 r=0 e=0 z=0  None .data      @4075                                                        */
+/* 803BD4A4-803BD4B0 000C+00 s=0 e=0 z=0  None .data      @4075                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4075[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)table_demo3_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD4B0-803BD4BC 000C+00 r=0 e=0 z=0  None .data      @4076                                                        */
+/* 803BD4B0-803BD4BC 000C+00 s=0 e=0 z=0  None .data      @4076                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4076[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo1_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD4BC-803BD4C8 000C+00 r=0 e=0 z=0  None .data      @4077                                                        */
+/* 803BD4BC-803BD4C8 000C+00 s=0 e=0 z=0  None .data      @4077                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4077[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo2_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD4C8-803BD4D4 000C+00 r=0 e=0 z=0  None .data      @4078                                                        */
+/* 803BD4C8-803BD4D4 000C+00 s=0 e=0 z=0  None .data      @4078                                                        */
 SECTION_DATA void* d_menu_d_menu_fmap__lit_4078[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)howl_demo3_move__12dMenu_Fmap_cFv,
 };
 
-/* 803BD4D4-803BD63C 0168+00 r=1 e=0 z=0  None .data      move_process                                                 */
+/* 803BD4D4-803BD63C 0168+00 s=1 e=0 z=0  None .data      move_process                                                 */
 SECTION_DATA static u8 d_menu_d_menu_fmap__move_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1225,7 +1225,7 @@ SECTION_DATA static u8 d_menu_d_menu_fmap__move_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD63C-803BD64C 0010+00 r=1 e=0 z=0  None .data      stage_name$7304                                              */
+/* 803BD63C-803BD64C 0010+00 s=1 e=0 z=0  None .data      stage_name$7304                                              */
 SECTION_DATA static void* data_803BD63C[4] = {
 	/* 0    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x87),
 	/* 1    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x8F),
@@ -1233,7 +1233,7 @@ SECTION_DATA static void* data_803BD63C[4] = {
 	/* 3    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0x9F),
 };
 
-/* 803BD64C-803BD664 0018+00 r=1 e=0 z=0  None .data      stage_name$7361                                              */
+/* 803BD64C-803BD664 0018+00 s=1 e=0 z=0  None .data      stage_name$7361                                              */
 SECTION_DATA static void* data_803BD64C[6] = {
 	/* 0    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xA7),
 	/* 1    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xAF),
@@ -1243,14 +1243,14 @@ SECTION_DATA static void* data_803BD64C[6] = {
 	/* 5    */ (void*)(((char*)&d_menu_d_menu_fmap__stringBase0)+0xBF),
 };
 
-/* 803BD664-803BD670 000C+00 r=2 e=0 z=0  None .data      __vt__12dMenu_Fmap_c                                         */
+/* 803BD664-803BD670 000C+00 s=2 e=0 z=0  None .data      __vt__12dMenu_Fmap_c                                         */
 SECTION_DATA static void* __vt__12dMenu_Fmap_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__12dMenu_Fmap_cFv,
 };
 
-/* 803BD670-803BD680 000C+04 r=2 e=0 z=0  None .data      __vt__9dMf_HIO_c                                             */
+/* 803BD670-803BD680 000C+04 s=2 e=0 z=0  None .data      __vt__9dMf_HIO_c                                             */
 SECTION_DATA static void* __vt__9dMf_HIO_c[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1259,16 +1259,16 @@ SECTION_DATA static void* __vt__9dMf_HIO_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 804510A0-804510A4 0004+00 r=1 e=0 z=0  None .sbss      mMySelfPointer__9dMf_HIO_c                                   */
+/* 804510A0-804510A4 0004+00 s=1 e=0 z=0  None .sbss      mMySelfPointer__9dMf_HIO_c                                   */
 static u8 mMySelfPointer__9dMf_HIO_c[4];
 
-/* 80454120-80454124 0004+00 r=1 e=0 z=0  None .sdata2    @3994                                                        */
+/* 80454120-80454124 0004+00 s=1 e=0 z=0  None .sdata2    @3994                                                        */
 SECTION_SDATA2 static f32 lit_3994 = 1.0f / 5.0f;
 
-/* 80454124-80454128 0004+00 r=26 e=0 z=0  None .sdata2    @3995                                                        */
+/* 80454124-80454128 0004+00 s=26 e=0 z=0  None .sdata2    @3995                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_3995 = 1.0f;
 
-/* 801C65F8-801C662C 0034+00 r=1 e=0 z=0  None .text      __ct__9dMf_HIO_cFv                                           */
+/* 801C65F8-801C662C 0034+00 s=1 e=0 z=0  None .text      __ct__9dMf_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,10 +1280,10 @@ asm dMf_HIO_c::dMf_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 804510A4-804510AC 0008+00 r=1 e=0 z=0  None .sbss      virtual_stage$3999                                           */
+/* 804510A4-804510AC 0008+00 s=1 e=0 z=0  None .sbss      virtual_stage$3999                                           */
 static u8 data_804510A4[8];
 
-/* 801C662C-801C66E4 00B8+00 r=7 e=2 z=0  None .text      dMenuFmap_getStartStageName__FPv                             */
+/* 801C662C-801C66E4 00B8+00 s=5 e=2 z=0  None .text      dMenuFmap_getStartStageName__FPv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1295,27 +1295,27 @@ asm void dMenuFmap_getStartStageName(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 804510AC-804510B0 0004+00 r=2 e=0 z=0  None .sbss      MyClass__12dMenu_Fmap_c                                      */
+/* 804510AC-804510B0 0004+00 s=2 e=0 z=0  None .sbss      MyClass__12dMenu_Fmap_c                                      */
 static u8 MyClass__12dMenu_Fmap_c[4];
 
-/* 80454128-8045412C 0004+00 r=31 e=0 z=0  None .sdata2    @4158                                                        */
+/* 80454128-8045412C 0004+00 s=31 e=0 z=0  None .sdata2    @4158                                                        */
 SECTION_SDATA2 static u8 d_menu_d_menu_fmap__lit_4158[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045412C-80454130 0004+00 r=3 e=0 z=0  None .sdata2    @4159                                                        */
+/* 8045412C-80454130 0004+00 s=3 e=0 z=0  None .sdata2    @4159                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4159 = -608.0f;
 
-/* 80454130-80454134 0004+00 r=3 e=0 z=0  None .sdata2    @4160                                                        */
+/* 80454130-80454134 0004+00 s=3 e=0 z=0  None .sdata2    @4160                                                        */
 SECTION_SDATA2 static f32 lit_4160 = 608.0f;
 
-/* 80454134-80454138 0004+00 r=3 e=0 z=0  None .sdata2    @4161                                                        */
+/* 80454134-80454138 0004+00 s=3 e=0 z=0  None .sdata2    @4161                                                        */
 SECTION_SDATA2 static f32 lit_4161 = -448.0f;
 
-/* 80454138-8045413C 0004+00 r=3 e=0 z=0  None .sdata2    @4162                                                        */
+/* 80454138-8045413C 0004+00 s=3 e=0 z=0  None .sdata2    @4162                                                        */
 SECTION_SDATA2 static f32 lit_4162 = 448.0f;
 
-/* 801C66E4-801C6AC8 03E4+00 r=1 e=1 z=0  None .text      __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc */
+/* 801C66E4-801C6AC8 03E4+00 s=0 e=1 z=0  None .text      __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1326,7 +1326,7 @@ asm dMenu_Fmap_c::dMenu_Fmap_c(JKRExpHeap* param_0, STControl* param_1, CSTContr
 #pragma pop
 
 
-/* 801C6AC8-801C6D64 029C+00 r=1 e=0 z=0  None .text      __dt__12dMenu_Fmap_cFv                                       */
+/* 801C6AC8-801C6D64 029C+00 s=1 e=0 z=0  None .text      __dt__12dMenu_Fmap_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1338,13 +1338,13 @@ asm dMenu_Fmap_c::~dMenu_Fmap_c() {
 
 
 /* ############################################################################################## */
-/* 8045413C-80454140 0004+00 r=12 e=0 z=0  None .sdata2    @4353                                                        */
+/* 8045413C-80454140 0004+00 s=12 e=0 z=0  None .sdata2    @4353                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4353 = 10.0f;
 
-/* 80454140-80454148 0008+00 r=16 e=0 z=0  None .sdata2    @4358                                                        */
+/* 80454140-80454148 0008+00 s=16 e=0 z=0  None .sdata2    @4358                                                        */
 SECTION_SDATA2 static f64 d_menu_d_menu_fmap__lit_4358 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801C6D64-801C74A4 0740+00 r=1 e=0 z=0  None .text      _create__12dMenu_Fmap_cFv                                    */
+/* 801C6D64-801C74A4 0740+00 s=1 e=0 z=0  None .text      _create__12dMenu_Fmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1355,7 +1355,7 @@ asm void dMenu_Fmap_c::_create() {
 #pragma pop
 
 
-/* 801C74A4-801C74A8 0004+00 r=1 e=1 z=0  None .text      _delete__12dMenu_Fmap_cFv                                    */
+/* 801C74A4-801C74A8 0004+00 s=0 e=1 z=0  None .text      _delete__12dMenu_Fmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1367,22 +1367,22 @@ asm void dMenu_Fmap_c::_delete() {
 
 
 /* ############################################################################################## */
-/* 8042E820-8042E82C 000C+00 r=1 e=0 z=0  None .bss       @3989                                                        */
+/* 8042E820-8042E82C 000C+00 s=1 e=0 z=0  None .bss       @3989                                                        */
 static u8 lit_3989[12];
 
-/* 8042E82C-8042E840 0014+00 r=2 e=0 z=0  None .bss       g_fmHIO                                                      */
+/* 8042E82C-8042E840 0014+00 s=2 e=0 z=0  None .bss       g_fmHIO                                                      */
 static u8 g_fmHIO[20];
 
-/* 80454148-8045414C 0004+00 r=1 e=0 z=0  None .sdata2    @4397                                                        */
+/* 80454148-8045414C 0004+00 s=1 e=0 z=0  None .sdata2    @4397                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4397 = 2.0f / 5.0f;
 
-/* 8045414C-80454150 0004+00 r=2 e=0 z=0  None .sdata2    @4398                                                        */
+/* 8045414C-80454150 0004+00 s=2 e=0 z=0  None .sdata2    @4398                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4398 = 0.5f;
 
-/* 80454150-80454154 0004+00 r=1 e=0 z=0  None .sdata2    @4399                                                        */
+/* 80454150-80454154 0004+00 s=1 e=0 z=0  None .sdata2    @4399                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4399 = 1.0f / 10.0f;
 
-/* 801C74A8-801C7650 01A8+00 r=1 e=1 z=0  None .text      _move__12dMenu_Fmap_cFv                                      */
+/* 801C74A8-801C7650 01A8+00 s=0 e=1 z=0  None .text      _move__12dMenu_Fmap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1393,7 +1393,7 @@ asm void dMenu_Fmap_c::_move() {
 #pragma pop
 
 
-/* 801C7650-801C77F0 01A0+00 r=1 e=1 z=0  None .text      _draw__12dMenu_Fmap_cFv                                      */
+/* 801C7650-801C77F0 01A0+00 s=0 e=1 z=0  None .text      _draw__12dMenu_Fmap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1405,10 +1405,10 @@ asm void dMenu_Fmap_c::_draw() {
 
 
 /* ############################################################################################## */
-/* 80454154-80454158 0004+00 r=19 e=0 z=0  None .sdata2    @4541                                                        */
+/* 80454154-80454158 0004+00 s=19 e=0 z=0  None .sdata2    @4541                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_4541 = -1.0f;
 
-/* 801C77F0-801C7AFC 030C+00 r=1 e=1 z=0  None .text      getNextStatus__12dMenu_Fmap_cFPUc                            */
+/* 801C77F0-801C7AFC 030C+00 s=0 e=1 z=0  None .text      getNextStatus__12dMenu_Fmap_cFPUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1419,7 +1419,7 @@ asm void dMenu_Fmap_c::getNextStatus(u8* param_0) {
 #pragma pop
 
 
-/* 801C7AFC-801C7B24 0028+00 r=2 e=1 z=0  None .text      isSync__12dMenu_Fmap_cFv                                     */
+/* 801C7AFC-801C7B24 0028+00 s=1 e=1 z=0  None .text      isSync__12dMenu_Fmap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1430,7 +1430,7 @@ asm void dMenu_Fmap_c::isSync() {
 #pragma pop
 
 
-/* 801C7B24-801C7C2C 0108+00 r=1 e=0 z=0  None .text      all_map_init__12dMenu_Fmap_cFv                               */
+/* 801C7B24-801C7C2C 0108+00 s=1 e=0 z=0  None .text      all_map_init__12dMenu_Fmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1441,7 +1441,7 @@ asm void dMenu_Fmap_c::all_map_init() {
 #pragma pop
 
 
-/* 801C7C2C-801C8230 0604+00 r=1 e=0 z=0  None .text      all_map_proc__12dMenu_Fmap_cFv                               */
+/* 801C7C2C-801C8230 0604+00 s=1 e=0 z=0  None .text      all_map_proc__12dMenu_Fmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1452,7 +1452,7 @@ asm void dMenu_Fmap_c::all_map_proc() {
 #pragma pop
 
 
-/* 801C8230-801C8308 00D8+00 r=1 e=0 z=0  None .text      zoom_all_to_region_init__12dMenu_Fmap_cFv                    */
+/* 801C8230-801C8308 00D8+00 s=1 e=0 z=0  None .text      zoom_all_to_region_init__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1463,7 +1463,7 @@ asm void dMenu_Fmap_c::zoom_all_to_region_init() {
 #pragma pop
 
 
-/* 801C8308-801C83E0 00D8+00 r=1 e=0 z=0  None .text      zoom_all_to_region_proc__12dMenu_Fmap_cFv                    */
+/* 801C8308-801C83E0 00D8+00 s=1 e=0 z=0  None .text      zoom_all_to_region_proc__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1474,7 +1474,7 @@ asm void dMenu_Fmap_c::zoom_all_to_region_proc() {
 #pragma pop
 
 
-/* 801C83E0-801C8438 0058+00 r=1 e=0 z=0  None .text      zoom_region_to_all_init__12dMenu_Fmap_cFv                    */
+/* 801C83E0-801C8438 0058+00 s=1 e=0 z=0  None .text      zoom_region_to_all_init__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1485,7 +1485,7 @@ asm void dMenu_Fmap_c::zoom_region_to_all_init() {
 #pragma pop
 
 
-/* 801C8438-801C8518 00E0+00 r=1 e=0 z=0  None .text      zoom_region_to_all_proc__12dMenu_Fmap_cFv                    */
+/* 801C8438-801C8518 00E0+00 s=1 e=0 z=0  None .text      zoom_region_to_all_proc__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1496,7 +1496,7 @@ asm void dMenu_Fmap_c::zoom_region_to_all_proc() {
 #pragma pop
 
 
-/* 801C8518-801C8600 00E8+00 r=1 e=0 z=0  None .text      region_map_init__12dMenu_Fmap_cFv                            */
+/* 801C8518-801C8600 00E8+00 s=1 e=0 z=0  None .text      region_map_init__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1508,13 +1508,13 @@ asm void dMenu_Fmap_c::region_map_init() {
 
 
 /* ############################################################################################## */
-/* 80454158-8045415C 0004+00 r=2 e=0 z=0  None .sdata2    @4939                                                        */
+/* 80454158-8045415C 0004+00 s=2 e=0 z=0  None .sdata2    @4939                                                        */
 SECTION_SDATA2 static f32 lit_4939 = 304.0f;
 
-/* 8045415C-80454160 0004+00 r=2 e=0 z=0  None .sdata2    @4940                                                        */
+/* 8045415C-80454160 0004+00 s=2 e=0 z=0  None .sdata2    @4940                                                        */
 SECTION_SDATA2 static f32 lit_4940 = 224.0f;
 
-/* 801C8600-801C8B00 0500+00 r=1 e=0 z=0  None .text      region_map_proc__12dMenu_Fmap_cFv                            */
+/* 801C8600-801C8B00 0500+00 s=1 e=0 z=0  None .text      region_map_proc__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1525,7 +1525,7 @@ asm void dMenu_Fmap_c::region_map_proc() {
 #pragma pop
 
 
-/* 801C8B00-801C8B0C 000C+00 r=1 e=0 z=0  None .text      to_portal_warp_map_init__12dMenu_Fmap_cFv                    */
+/* 801C8B00-801C8B0C 000C+00 s=1 e=0 z=0  None .text      to_portal_warp_map_init__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1536,7 +1536,7 @@ asm void dMenu_Fmap_c::to_portal_warp_map_init() {
 #pragma pop
 
 
-/* 801C8B0C-801C8B48 003C+00 r=1 e=0 z=0  None .text      to_portal_warp_map_proc__12dMenu_Fmap_cFv                    */
+/* 801C8B0C-801C8B48 003C+00 s=1 e=0 z=0  None .text      to_portal_warp_map_proc__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1547,7 +1547,7 @@ asm void dMenu_Fmap_c::to_portal_warp_map_proc() {
 #pragma pop
 
 
-/* 801C8B48-801C8C0C 00C4+00 r=1 e=0 z=0  None .text      portal_warp_map_init__12dMenu_Fmap_cFv                       */
+/* 801C8B48-801C8C0C 00C4+00 s=1 e=0 z=0  None .text      portal_warp_map_init__12dMenu_Fmap_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1558,7 +1558,7 @@ asm void dMenu_Fmap_c::portal_warp_map_init() {
 #pragma pop
 
 
-/* 801C8C0C-801C90A4 0498+00 r=1 e=0 z=0  None .text      portal_warp_map_proc__12dMenu_Fmap_cFv                       */
+/* 801C8C0C-801C90A4 0498+00 s=1 e=0 z=0  None .text      portal_warp_map_proc__12dMenu_Fmap_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1569,7 +1569,7 @@ asm void dMenu_Fmap_c::portal_warp_map_proc() {
 #pragma pop
 
 
-/* 801C90A4-801C90A8 0004+00 r=1 e=0 z=0  None .text      portal_warp_select_init__12dMenu_Fmap_cFv                    */
+/* 801C90A4-801C90A8 0004+00 s=1 e=0 z=0  None .text      portal_warp_select_init__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1580,7 +1580,7 @@ asm void dMenu_Fmap_c::portal_warp_select_init() {
 #pragma pop
 
 
-/* 801C90A8-801C91D8 0130+00 r=1 e=0 z=0  None .text      portal_warp_select_proc__12dMenu_Fmap_cFv                    */
+/* 801C90A8-801C91D8 0130+00 s=1 e=0 z=0  None .text      portal_warp_select_proc__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1591,7 +1591,7 @@ asm void dMenu_Fmap_c::portal_warp_select_proc() {
 #pragma pop
 
 
-/* 801C91D8-801C9238 0060+00 r=1 e=0 z=0  None .text      portal_warp_forbid_init__12dMenu_Fmap_cFv                    */
+/* 801C91D8-801C9238 0060+00 s=1 e=0 z=0  None .text      portal_warp_forbid_init__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1602,7 +1602,7 @@ asm void dMenu_Fmap_c::portal_warp_forbid_init() {
 #pragma pop
 
 
-/* 801C9238-801C92A4 006C+00 r=1 e=0 z=0  None .text      portal_warp_forbid_proc__12dMenu_Fmap_cFv                    */
+/* 801C9238-801C92A4 006C+00 s=1 e=0 z=0  None .text      portal_warp_forbid_proc__12dMenu_Fmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1613,7 +1613,7 @@ asm void dMenu_Fmap_c::portal_warp_forbid_proc() {
 #pragma pop
 
 
-/* 801C92A4-801C9304 0060+00 r=1 e=0 z=0  None .text      zoom_region_to_spot_init__12dMenu_Fmap_cFv                   */
+/* 801C92A4-801C9304 0060+00 s=1 e=0 z=0  None .text      zoom_region_to_spot_init__12dMenu_Fmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1624,7 +1624,7 @@ asm void dMenu_Fmap_c::zoom_region_to_spot_init() {
 #pragma pop
 
 
-/* 801C9304-801C93CC 00C8+00 r=1 e=0 z=0  None .text      zoom_region_to_spot_proc__12dMenu_Fmap_cFv                   */
+/* 801C9304-801C93CC 00C8+00 s=1 e=0 z=0  None .text      zoom_region_to_spot_proc__12dMenu_Fmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1635,7 +1635,7 @@ asm void dMenu_Fmap_c::zoom_region_to_spot_proc() {
 #pragma pop
 
 
-/* 801C93CC-801C9428 005C+00 r=1 e=0 z=0  None .text      zoom_spot_to_region_init__12dMenu_Fmap_cFv                   */
+/* 801C93CC-801C9428 005C+00 s=1 e=0 z=0  None .text      zoom_spot_to_region_init__12dMenu_Fmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1646,7 +1646,7 @@ asm void dMenu_Fmap_c::zoom_spot_to_region_init() {
 #pragma pop
 
 
-/* 801C9428-801C950C 00E4+00 r=1 e=0 z=0  None .text      zoom_spot_to_region_proc__12dMenu_Fmap_cFv                   */
+/* 801C9428-801C950C 00E4+00 s=1 e=0 z=0  None .text      zoom_spot_to_region_proc__12dMenu_Fmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1657,7 +1657,7 @@ asm void dMenu_Fmap_c::zoom_spot_to_region_proc() {
 #pragma pop
 
 
-/* 801C950C-801C9618 010C+00 r=1 e=0 z=0  None .text      spot_map_init__12dMenu_Fmap_cFv                              */
+/* 801C950C-801C9618 010C+00 s=1 e=0 z=0  None .text      spot_map_init__12dMenu_Fmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1668,7 +1668,7 @@ asm void dMenu_Fmap_c::spot_map_init() {
 #pragma pop
 
 
-/* 801C9618-801C9A4C 0434+00 r=1 e=0 z=0  None .text      spot_map_proc__12dMenu_Fmap_cFv                              */
+/* 801C9618-801C9A4C 0434+00 s=1 e=0 z=0  None .text      spot_map_proc__12dMenu_Fmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1679,7 +1679,7 @@ asm void dMenu_Fmap_c::spot_map_proc() {
 #pragma pop
 
 
-/* 801C9A4C-801C9B64 0118+00 r=1 e=0 z=0  None .text      portal_demo1_init__12dMenu_Fmap_cFv                          */
+/* 801C9A4C-801C9B64 0118+00 s=1 e=0 z=0  None .text      portal_demo1_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1690,7 +1690,7 @@ asm void dMenu_Fmap_c::portal_demo1_init() {
 #pragma pop
 
 
-/* 801C9B64-801C9C7C 0118+00 r=1 e=0 z=0  None .text      portal_demo1_move__12dMenu_Fmap_cFv                          */
+/* 801C9B64-801C9C7C 0118+00 s=1 e=0 z=0  None .text      portal_demo1_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1701,7 +1701,7 @@ asm void dMenu_Fmap_c::portal_demo1_move() {
 #pragma pop
 
 
-/* 801C9C7C-801C9CC8 004C+00 r=1 e=0 z=0  None .text      portal_demo2_init__12dMenu_Fmap_cFv                          */
+/* 801C9C7C-801C9CC8 004C+00 s=1 e=0 z=0  None .text      portal_demo2_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1712,7 +1712,7 @@ asm void dMenu_Fmap_c::portal_demo2_init() {
 #pragma pop
 
 
-/* 801C9CC8-801C9D60 0098+00 r=1 e=0 z=0  None .text      portal_demo2_move__12dMenu_Fmap_cFv                          */
+/* 801C9CC8-801C9D60 0098+00 s=1 e=0 z=0  None .text      portal_demo2_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1723,7 +1723,7 @@ asm void dMenu_Fmap_c::portal_demo2_move() {
 #pragma pop
 
 
-/* 801C9D60-801C9DB4 0054+00 r=1 e=0 z=0  None .text      portal_demo3_init__12dMenu_Fmap_cFv                          */
+/* 801C9D60-801C9DB4 0054+00 s=1 e=0 z=0  None .text      portal_demo3_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1734,7 +1734,7 @@ asm void dMenu_Fmap_c::portal_demo3_init() {
 #pragma pop
 
 
-/* 801C9DB4-801C9EB8 0104+00 r=1 e=0 z=0  None .text      portal_demo3_move__12dMenu_Fmap_cFv                          */
+/* 801C9DB4-801C9EB8 0104+00 s=1 e=0 z=0  None .text      portal_demo3_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1745,7 +1745,7 @@ asm void dMenu_Fmap_c::portal_demo3_move() {
 #pragma pop
 
 
-/* 801C9EB8-801C9F14 005C+00 r=1 e=0 z=0  None .text      portal_demo4_init__12dMenu_Fmap_cFv                          */
+/* 801C9EB8-801C9F14 005C+00 s=1 e=0 z=0  None .text      portal_demo4_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1756,7 +1756,7 @@ asm void dMenu_Fmap_c::portal_demo4_init() {
 #pragma pop
 
 
-/* 801C9F14-801C9F7C 0068+00 r=1 e=0 z=0  None .text      portal_demo4_move__12dMenu_Fmap_cFv                          */
+/* 801C9F14-801C9F7C 0068+00 s=1 e=0 z=0  None .text      portal_demo4_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1767,7 +1767,7 @@ asm void dMenu_Fmap_c::portal_demo4_move() {
 #pragma pop
 
 
-/* 801C9F7C-801C9FBC 0040+00 r=1 e=0 z=0  None .text      portal_demo5_init__12dMenu_Fmap_cFv                          */
+/* 801C9F7C-801C9FBC 0040+00 s=1 e=0 z=0  None .text      portal_demo5_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1778,7 +1778,7 @@ asm void dMenu_Fmap_c::portal_demo5_init() {
 #pragma pop
 
 
-/* 801C9FBC-801CA158 019C+00 r=1 e=0 z=0  None .text      portal_demo5_move__12dMenu_Fmap_cFv                          */
+/* 801C9FBC-801CA158 019C+00 s=1 e=0 z=0  None .text      portal_demo5_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1789,7 +1789,7 @@ asm void dMenu_Fmap_c::portal_demo5_move() {
 #pragma pop
 
 
-/* 801CA158-801CA15C 0004+00 r=1 e=0 z=0  None .text      portal_demo6_init__12dMenu_Fmap_cFv                          */
+/* 801CA158-801CA15C 0004+00 s=1 e=0 z=0  None .text      portal_demo6_init__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1800,7 +1800,7 @@ asm void dMenu_Fmap_c::portal_demo6_init() {
 #pragma pop
 
 
-/* 801CA15C-801CA1E8 008C+00 r=1 e=0 z=0  None .text      portal_demo6_move__12dMenu_Fmap_cFv                          */
+/* 801CA15C-801CA1E8 008C+00 s=1 e=0 z=0  None .text      portal_demo6_move__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1811,7 +1811,7 @@ asm void dMenu_Fmap_c::portal_demo6_move() {
 #pragma pop
 
 
-/* 801CA1E8-801CA2F4 010C+00 r=1 e=0 z=0  None .text      yamiboss_demo1_init__12dMenu_Fmap_cFv                        */
+/* 801CA1E8-801CA2F4 010C+00 s=1 e=0 z=0  None .text      yamiboss_demo1_init__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1822,7 +1822,7 @@ asm void dMenu_Fmap_c::yamiboss_demo1_init() {
 #pragma pop
 
 
-/* 801CA2F4-801CA34C 0058+00 r=1 e=0 z=0  None .text      yamiboss_demo1_move__12dMenu_Fmap_cFv                        */
+/* 801CA2F4-801CA34C 0058+00 s=1 e=0 z=0  None .text      yamiboss_demo1_move__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1833,7 +1833,7 @@ asm void dMenu_Fmap_c::yamiboss_demo1_move() {
 #pragma pop
 
 
-/* 801CA34C-801CA35C 0010+00 r=1 e=0 z=0  None .text      yamiboss_demo2_init__12dMenu_Fmap_cFv                        */
+/* 801CA34C-801CA35C 0010+00 s=1 e=0 z=0  None .text      yamiboss_demo2_init__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1844,7 +1844,7 @@ asm void dMenu_Fmap_c::yamiboss_demo2_init() {
 #pragma pop
 
 
-/* 801CA35C-801CA40C 00B0+00 r=1 e=0 z=0  None .text      yamiboss_demo2_move__12dMenu_Fmap_cFv                        */
+/* 801CA35C-801CA40C 00B0+00 s=1 e=0 z=0  None .text      yamiboss_demo2_move__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1855,7 +1855,7 @@ asm void dMenu_Fmap_c::yamiboss_demo2_move() {
 #pragma pop
 
 
-/* 801CA40C-801CA410 0004+00 r=1 e=0 z=0  None .text      yamiboss_demo3_init__12dMenu_Fmap_cFv                        */
+/* 801CA40C-801CA410 0004+00 s=1 e=0 z=0  None .text      yamiboss_demo3_init__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1866,7 +1866,7 @@ asm void dMenu_Fmap_c::yamiboss_demo3_init() {
 #pragma pop
 
 
-/* 801CA410-801CA468 0058+00 r=1 e=0 z=0  None .text      yamiboss_demo3_move__12dMenu_Fmap_cFv                        */
+/* 801CA410-801CA468 0058+00 s=1 e=0 z=0  None .text      yamiboss_demo3_move__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1877,7 +1877,7 @@ asm void dMenu_Fmap_c::yamiboss_demo3_move() {
 #pragma pop
 
 
-/* 801CA468-801CA4C0 0058+00 r=1 e=0 z=0  None .text      yamiboss_demo4_init__12dMenu_Fmap_cFv                        */
+/* 801CA468-801CA4C0 0058+00 s=1 e=0 z=0  None .text      yamiboss_demo4_init__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1888,7 +1888,7 @@ asm void dMenu_Fmap_c::yamiboss_demo4_init() {
 #pragma pop
 
 
-/* 801CA4C0-801CA544 0084+00 r=1 e=0 z=0  None .text      yamiboss_demo4_move__12dMenu_Fmap_cFv                        */
+/* 801CA4C0-801CA544 0084+00 s=1 e=0 z=0  None .text      yamiboss_demo4_move__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1899,7 +1899,7 @@ asm void dMenu_Fmap_c::yamiboss_demo4_move() {
 #pragma pop
 
 
-/* 801CA544-801CA548 0004+00 r=1 e=0 z=0  None .text      yamiboss_demo5_init__12dMenu_Fmap_cFv                        */
+/* 801CA544-801CA548 0004+00 s=1 e=0 z=0  None .text      yamiboss_demo5_init__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1910,7 +1910,7 @@ asm void dMenu_Fmap_c::yamiboss_demo5_init() {
 #pragma pop
 
 
-/* 801CA548-801CA5CC 0084+00 r=1 e=0 z=0  None .text      yamiboss_demo5_move__12dMenu_Fmap_cFv                        */
+/* 801CA548-801CA5CC 0084+00 s=1 e=0 z=0  None .text      yamiboss_demo5_move__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1921,7 +1921,7 @@ asm void dMenu_Fmap_c::yamiboss_demo5_move() {
 #pragma pop
 
 
-/* 801CA5CC-801CA7A4 01D8+00 r=1 e=0 z=0  None .text      light_demo1_init__12dMenu_Fmap_cFv                           */
+/* 801CA5CC-801CA7A4 01D8+00 s=1 e=0 z=0  None .text      light_demo1_init__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1932,7 +1932,7 @@ asm void dMenu_Fmap_c::light_demo1_init() {
 #pragma pop
 
 
-/* 801CA7A4-801CA7E0 003C+00 r=1 e=0 z=0  None .text      light_demo1_move__12dMenu_Fmap_cFv                           */
+/* 801CA7A4-801CA7E0 003C+00 s=1 e=0 z=0  None .text      light_demo1_move__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1943,7 +1943,7 @@ asm void dMenu_Fmap_c::light_demo1_move() {
 #pragma pop
 
 
-/* 801CA7E0-801CA814 0034+00 r=1 e=0 z=0  None .text      light_demo2_init__12dMenu_Fmap_cFv                           */
+/* 801CA7E0-801CA814 0034+00 s=1 e=0 z=0  None .text      light_demo2_init__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1954,7 +1954,7 @@ asm void dMenu_Fmap_c::light_demo2_init() {
 #pragma pop
 
 
-/* 801CA814-801CA874 0060+00 r=1 e=0 z=0  None .text      light_demo2_move__12dMenu_Fmap_cFv                           */
+/* 801CA814-801CA874 0060+00 s=1 e=0 z=0  None .text      light_demo2_move__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1965,7 +1965,7 @@ asm void dMenu_Fmap_c::light_demo2_move() {
 #pragma pop
 
 
-/* 801CA874-801CA9B4 0140+00 r=1 e=0 z=0  None .text      table_demo1_init__12dMenu_Fmap_cFv                           */
+/* 801CA874-801CA9B4 0140+00 s=1 e=0 z=0  None .text      table_demo1_init__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1976,7 +1976,7 @@ asm void dMenu_Fmap_c::table_demo1_init() {
 #pragma pop
 
 
-/* 801CA9B4-801CAA78 00C4+00 r=1 e=0 z=0  None .text      table_demo1_move__12dMenu_Fmap_cFv                           */
+/* 801CA9B4-801CAA78 00C4+00 s=1 e=0 z=0  None .text      table_demo1_move__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1987,7 +1987,7 @@ asm void dMenu_Fmap_c::table_demo1_move() {
 #pragma pop
 
 
-/* 801CAA78-801CAABC 0044+00 r=1 e=0 z=0  None .text      table_demo2_init__12dMenu_Fmap_cFv                           */
+/* 801CAA78-801CAABC 0044+00 s=1 e=0 z=0  None .text      table_demo2_init__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1998,7 +1998,7 @@ asm void dMenu_Fmap_c::table_demo2_init() {
 #pragma pop
 
 
-/* 801CAABC-801CAB88 00CC+00 r=1 e=0 z=0  None .text      table_demo2_move__12dMenu_Fmap_cFv                           */
+/* 801CAABC-801CAB88 00CC+00 s=1 e=0 z=0  None .text      table_demo2_move__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2009,7 +2009,7 @@ asm void dMenu_Fmap_c::table_demo2_move() {
 #pragma pop
 
 
-/* 801CAB88-801CABD0 0048+00 r=1 e=0 z=0  None .text      table_demo3_init__12dMenu_Fmap_cFv                           */
+/* 801CAB88-801CABD0 0048+00 s=1 e=0 z=0  None .text      table_demo3_init__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2020,7 +2020,7 @@ asm void dMenu_Fmap_c::table_demo3_init() {
 #pragma pop
 
 
-/* 801CABD0-801CAC30 0060+00 r=1 e=0 z=0  None .text      table_demo3_move__12dMenu_Fmap_cFv                           */
+/* 801CABD0-801CAC30 0060+00 s=1 e=0 z=0  None .text      table_demo3_move__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2031,7 +2031,7 @@ asm void dMenu_Fmap_c::table_demo3_move() {
 #pragma pop
 
 
-/* 801CAC30-801CAC7C 004C+00 r=1 e=0 z=0  None .text      howl_demo1_init__12dMenu_Fmap_cFv                            */
+/* 801CAC30-801CAC7C 004C+00 s=1 e=0 z=0  None .text      howl_demo1_init__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2042,7 +2042,7 @@ asm void dMenu_Fmap_c::howl_demo1_init() {
 #pragma pop
 
 
-/* 801CAC7C-801CAD48 00CC+00 r=1 e=0 z=0  None .text      howl_demo1_move__12dMenu_Fmap_cFv                            */
+/* 801CAC7C-801CAD48 00CC+00 s=1 e=0 z=0  None .text      howl_demo1_move__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2053,7 +2053,7 @@ asm void dMenu_Fmap_c::howl_demo1_move() {
 #pragma pop
 
 
-/* 801CAD48-801CAD54 000C+00 r=1 e=0 z=0  None .text      howl_demo2_init__12dMenu_Fmap_cFv                            */
+/* 801CAD48-801CAD54 000C+00 s=1 e=0 z=0  None .text      howl_demo2_init__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2064,7 +2064,7 @@ asm void dMenu_Fmap_c::howl_demo2_init() {
 #pragma pop
 
 
-/* 801CAD54-801CAD9C 0048+00 r=1 e=0 z=0  None .text      howl_demo2_move__12dMenu_Fmap_cFv                            */
+/* 801CAD54-801CAD9C 0048+00 s=1 e=0 z=0  None .text      howl_demo2_move__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2075,7 +2075,7 @@ asm void dMenu_Fmap_c::howl_demo2_move() {
 #pragma pop
 
 
-/* 801CAD9C-801CADA0 0004+00 r=1 e=0 z=0  None .text      howl_demo3_init__12dMenu_Fmap_cFv                            */
+/* 801CAD9C-801CADA0 0004+00 s=1 e=0 z=0  None .text      howl_demo3_init__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2086,7 +2086,7 @@ asm void dMenu_Fmap_c::howl_demo3_init() {
 #pragma pop
 
 
-/* 801CADA0-801CADC4 0024+00 r=1 e=0 z=0  None .text      howl_demo3_move__12dMenu_Fmap_cFv                            */
+/* 801CADA0-801CADC4 0024+00 s=1 e=0 z=0  None .text      howl_demo3_move__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2097,7 +2097,7 @@ asm void dMenu_Fmap_c::howl_demo3_move() {
 #pragma pop
 
 
-/* 801CADC4-801CB038 0274+00 r=1 e=1 z=0  None .text      isOpen__12dMenu_Fmap_cFv                                     */
+/* 801CADC4-801CB038 0274+00 s=0 e=1 z=0  None .text      isOpen__12dMenu_Fmap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2108,7 +2108,7 @@ asm void dMenu_Fmap_c::isOpen() {
 #pragma pop
 
 
-/* 801CB038-801CB1DC 01A4+00 r=1 e=1 z=0  None .text      isClose__12dMenu_Fmap_cFv                                    */
+/* 801CB038-801CB1DC 01A4+00 s=0 e=1 z=0  None .text      isClose__12dMenu_Fmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2119,7 +2119,7 @@ asm void dMenu_Fmap_c::isClose() {
 #pragma pop
 
 
-/* 801CB1DC-801CB200 0024+00 r=1 e=1 z=0  None .text      getProcess__12dMenu_Fmap_cFv                                 */
+/* 801CB1DC-801CB200 0024+00 s=0 e=1 z=0  None .text      getProcess__12dMenu_Fmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2130,7 +2130,7 @@ asm void dMenu_Fmap_c::getProcess() {
 #pragma pop
 
 
-/* 801CB200-801CB230 0030+00 r=1 e=1 z=0  None .text      getRegionCursor__12dMenu_Fmap_cFv                            */
+/* 801CB200-801CB230 0030+00 s=0 e=1 z=0  None .text      getRegionCursor__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2141,7 +2141,7 @@ asm void dMenu_Fmap_c::getRegionCursor() {
 #pragma pop
 
 
-/* 801CB230-801CB260 0030+00 r=1 e=1 z=0  None .text      getStageCursor__12dMenu_Fmap_cFv                             */
+/* 801CB230-801CB260 0030+00 s=0 e=1 z=0  None .text      getStageCursor__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2152,7 +2152,7 @@ asm void dMenu_Fmap_c::getStageCursor() {
 #pragma pop
 
 
-/* 801CB260-801CB290 0030+00 r=1 e=1 z=0  None .text      getStageTransX__12dMenu_Fmap_cFv                             */
+/* 801CB260-801CB290 0030+00 s=0 e=1 z=0  None .text      getStageTransX__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2163,7 +2163,7 @@ asm void dMenu_Fmap_c::getStageTransX() {
 #pragma pop
 
 
-/* 801CB290-801CB2C0 0030+00 r=1 e=1 z=0  None .text      getStageTransZ__12dMenu_Fmap_cFv                             */
+/* 801CB290-801CB2C0 0030+00 s=0 e=1 z=0  None .text      getStageTransZ__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2174,7 +2174,7 @@ asm void dMenu_Fmap_c::getStageTransZ() {
 #pragma pop
 
 
-/* 801CB2C0-801CB570 02B0+00 r=4 e=0 z=0  None .text      isRoomCheck__12dMenu_Fmap_cFii                               */
+/* 801CB2C0-801CB570 02B0+00 s=4 e=0 z=0  None .text      isRoomCheck__12dMenu_Fmap_cFii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2185,7 +2185,7 @@ asm void dMenu_Fmap_c::isRoomCheck(int param_0, int param_1) {
 #pragma pop
 
 
-/* 801CB570-801CB664 00F4+00 r=2 e=0 z=0  None .text      checkStRoomData__12dMenu_Fmap_cFv                            */
+/* 801CB570-801CB664 00F4+00 s=2 e=0 z=0  None .text      checkStRoomData__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2196,7 +2196,7 @@ asm void dMenu_Fmap_c::checkStRoomData() {
 #pragma pop
 
 
-/* 801CB664-801CB6D0 006C+00 r=10 e=0 z=0  None .text      talkButton__12dMenu_Fmap_cFv                                 */
+/* 801CB664-801CB6D0 006C+00 s=10 e=0 z=0  None .text      talkButton__12dMenu_Fmap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2207,7 +2207,7 @@ asm void dMenu_Fmap_c::talkButton() {
 #pragma pop
 
 
-/* 801CB6D0-801CB6E0 0010+00 r=31 e=0 z=0  None .text      setProcess__12dMenu_Fmap_cFUc                                */
+/* 801CB6D0-801CB6E0 0010+00 s=31 e=0 z=0  None .text      setProcess__12dMenu_Fmap_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2218,7 +2218,7 @@ asm void dMenu_Fmap_c::setProcess(u8 param_0) {
 #pragma pop
 
 
-/* 801CB6E0-801CB770 0090+00 r=10 e=0 z=0  None .text      setFlash__12dMenu_Fmap_cFUcb                                 */
+/* 801CB6E0-801CB770 0090+00 s=10 e=0 z=0  None .text      setFlash__12dMenu_Fmap_cFUcb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2229,7 +2229,7 @@ asm void dMenu_Fmap_c::setFlash(u8 param_0, bool param_1) {
 #pragma pop
 
 
-/* 801CB770-801CB938 01C8+00 r=6 e=0 z=0  None .text      readWorldData__12dMenu_Fmap_cFUc                             */
+/* 801CB770-801CB938 01C8+00 s=6 e=0 z=0  None .text      readWorldData__12dMenu_Fmap_cFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2240,7 +2240,7 @@ asm void dMenu_Fmap_c::readWorldData(u8 param_0) {
 #pragma pop
 
 
-/* 801CB938-801CBF04 05CC+00 r=1 e=0 z=0  None .text      readAreaData__12dMenu_Fmap_cFUcb                             */
+/* 801CB938-801CBF04 05CC+00 s=1 e=0 z=0  None .text      readAreaData__12dMenu_Fmap_cFUcb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2251,7 +2251,7 @@ asm void dMenu_Fmap_c::readAreaData(u8 param_0, bool param_1) {
 #pragma pop
 
 
-/* 801CBF04-801CC094 0190+00 r=1 e=0 z=0  None .text      readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc */
+/* 801CBF04-801CC094 0190+00 s=1 e=0 z=0  None .text      readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2262,7 +2262,7 @@ asm void dMenu_Fmap_c::readRoomData(char const* param_0, dMenu_Fmap_stage_data_c
 #pragma pop
 
 
-/* 801CC094-801CC284 01F0+00 r=3 e=0 z=0  None .text      readFieldMapData__12dMenu_Fmap_cFPPvPCcbb                    */
+/* 801CC094-801CC284 01F0+00 s=3 e=0 z=0  None .text      readFieldMapData__12dMenu_Fmap_cFPPvPCcbb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2273,7 +2273,7 @@ asm void dMenu_Fmap_c::readFieldMapData(void** param_0, char const* param_1, boo
 #pragma pop
 
 
-/* 801CC284-801CC2B0 002C+00 r=1 e=1 z=0  None .text      getExpandedResSize__10JKRArchiveCFPCv                        */
+/* 801CC284-801CC2B0 002C+00 s=0 e=1 z=0  None .text      getExpandedResSize__10JKRArchiveCFPCv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2284,7 +2284,7 @@ asm void JKRArchive::getExpandedResSize(void const* param_0) const {
 #pragma pop
 
 
-/* 801CC2B0-801CC4EC 023C+00 r=1 e=0 z=0  None .text      decodeFieldMapData__12dMenu_Fmap_cFv                         */
+/* 801CC2B0-801CC4EC 023C+00 s=1 e=0 z=0  None .text      decodeFieldMapData__12dMenu_Fmap_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2295,7 +2295,7 @@ asm void dMenu_Fmap_c::decodeFieldMapData() {
 #pragma pop
 
 
-/* 801CC4EC-801CC51C 0030+00 r=1 e=0 z=0  None .text      decodePortalData__12dMenu_Fmap_cFv                           */
+/* 801CC4EC-801CC51C 0030+00 s=1 e=0 z=0  None .text      decodePortalData__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2306,7 +2306,7 @@ asm void dMenu_Fmap_c::decodePortalData() {
 #pragma pop
 
 
-/* 801CC51C-801CC61C 0100+00 r=1 e=0 z=0  None .text      readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc                     */
+/* 801CC51C-801CC61C 0100+00 s=1 e=0 z=0  None .text      readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2317,7 +2317,7 @@ asm void dMenu_Fmap_c::readRoomDzsData(void** param_0, u32 param_1, char const* 
 #pragma pop
 
 
-/* 801CC61C-801CC7A8 018C+00 r=4 e=0 z=0  None .text      removeAreaData__12dMenu_Fmap_cFv                             */
+/* 801CC61C-801CC7A8 018C+00 s=4 e=0 z=0  None .text      removeAreaData__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2328,7 +2328,7 @@ asm void dMenu_Fmap_c::removeAreaData() {
 #pragma pop
 
 
-/* 801CC7A8-801CC85C 00B4+00 r=1 e=0 z=0  None .text      removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c    */
+/* 801CC7A8-801CC85C 00B4+00 s=1 e=0 z=0  None .text      removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2339,7 +2339,7 @@ asm void dMenu_Fmap_c::removeRoomData(dMenu_Fmap_stage_data_c* param_0) {
 #pragma pop
 
 
-/* 801CC85C-801CC880 0024+00 r=11 e=0 z=0  None .text      setTitleName__12dMenu_Fmap_cFUl                              */
+/* 801CC85C-801CC880 0024+00 s=11 e=0 z=0  None .text      setTitleName__12dMenu_Fmap_cFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2350,7 +2350,7 @@ asm void dMenu_Fmap_c::setTitleName(u32 param_0) {
 #pragma pop
 
 
-/* 801CC880-801CC8AC 002C+00 r=13 e=0 z=0  None .text      setAreaName__12dMenu_Fmap_cFUl                               */
+/* 801CC880-801CC8AC 002C+00 s=13 e=0 z=0  None .text      setAreaName__12dMenu_Fmap_cFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2361,7 +2361,7 @@ asm void dMenu_Fmap_c::setAreaName(u32 param_0) {
 #pragma pop
 
 
-/* 801CC8AC-801CC8DC 0030+00 r=8 e=0 z=0  None .text      setAreaNameZero__12dMenu_Fmap_cFv                            */
+/* 801CC8AC-801CC8DC 0030+00 s=8 e=0 z=0  None .text      setAreaNameZero__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2373,10 +2373,10 @@ asm void dMenu_Fmap_c::setAreaNameZero() {
 
 
 /* ############################################################################################## */
-/* 80454160-80454164 0004+00 r=1 e=0 z=0  None .sdata2    @6855                                                        */
+/* 80454160-80454164 0004+00 s=1 e=0 z=0  None .sdata2    @6855                                                        */
 SECTION_SDATA2 static f32 lit_6855 = 500.0f;
 
-/* 801CC8DC-801CCA70 0194+00 r=2 e=0 z=0  None .text      portalWarpMapMove__12dMenu_Fmap_cFP9STControl                */
+/* 801CC8DC-801CCA70 0194+00 s=2 e=0 z=0  None .text      portalWarpMapMove__12dMenu_Fmap_cFP9STControl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2387,7 +2387,7 @@ asm void dMenu_Fmap_c::portalWarpMapMove(STControl* param_0) {
 #pragma pop
 
 
-/* 801CCA70-801CCA98 0028+00 r=1 e=0 z=0  None .text      onRoomDataBit__12dMenu_Fmap_cFi                              */
+/* 801CCA70-801CCA98 0028+00 s=1 e=0 z=0  None .text      onRoomDataBit__12dMenu_Fmap_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2398,7 +2398,7 @@ asm void dMenu_Fmap_c::onRoomDataBit(int param_0) {
 #pragma pop
 
 
-/* 801CCA98-801CCAC4 002C+00 r=1 e=0 z=0  None .text      isRoomDataBit__12dMenu_Fmap_cFi                              */
+/* 801CCA98-801CCAC4 002C+00 s=1 e=0 z=0  None .text      isRoomDataBit__12dMenu_Fmap_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2409,7 +2409,7 @@ asm void dMenu_Fmap_c::isRoomDataBit(int param_0) {
 #pragma pop
 
 
-/* 801CCAC4-801CCB08 0044+00 r=2 e=0 z=0  None .text      resetRoomDataBit__12dMenu_Fmap_cFv                           */
+/* 801CCAC4-801CCB08 0044+00 s=2 e=0 z=0  None .text      resetRoomDataBit__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2421,10 +2421,10 @@ asm void dMenu_Fmap_c::resetRoomDataBit() {
 
 
 /* ############################################################################################## */
-/* 80454164-80454168 0004+00 r=2 e=0 z=0  None .sdata2    @6987                                                        */
+/* 80454164-80454168 0004+00 s=2 e=0 z=0  None .sdata2    @6987                                                        */
 SECTION_SDATA2 static f32 lit_6987 = 0.0054931640625f;
 
-/* 801CCB08-801CCD98 0290+00 r=2 e=0 z=0  None .text      drawIcon__12dMenu_Fmap_cFfb                                  */
+/* 801CCB08-801CCD98 0290+00 s=2 e=0 z=0  None .text      drawIcon__12dMenu_Fmap_cFfb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2435,7 +2435,7 @@ asm void dMenu_Fmap_c::drawIcon(f32 param_0, bool param_1) {
 #pragma pop
 
 
-/* 801CCD98-801CCDDC 0044+00 r=1 e=0 z=0  None .text      drawLightDropIcon__12dMenu_Fmap_cFv                          */
+/* 801CCD98-801CCDDC 0044+00 s=1 e=0 z=0  None .text      drawLightDropIcon__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2446,7 +2446,7 @@ asm void dMenu_Fmap_c::drawLightDropIcon() {
 #pragma pop
 
 
-/* 801CCDDC-801CCE04 0028+00 r=1 e=0 z=0  None .text      drawBatsumarkIcon__12dMenu_Fmap_cFv                          */
+/* 801CCDDC-801CCE04 0028+00 s=1 e=0 z=0  None .text      drawBatsumarkIcon__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2457,7 +2457,7 @@ asm void dMenu_Fmap_c::drawBatsumarkIcon() {
 #pragma pop
 
 
-/* 801CCE04-801CCE48 0044+00 r=1 e=0 z=0  None .text      drawSnowmanIcon__12dMenu_Fmap_cFv                            */
+/* 801CCE04-801CCE48 0044+00 s=1 e=0 z=0  None .text      drawSnowmanIcon__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2468,7 +2468,7 @@ asm void dMenu_Fmap_c::drawSnowmanIcon() {
 #pragma pop
 
 
-/* 801CCE48-801CCE70 0028+00 r=1 e=0 z=0  None .text      drawGoldWolfIcon__12dMenu_Fmap_cFv                           */
+/* 801CCE48-801CCE70 0028+00 s=1 e=0 z=0  None .text      drawGoldWolfIcon__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2479,7 +2479,7 @@ asm void dMenu_Fmap_c::drawGoldWolfIcon() {
 #pragma pop
 
 
-/* 801CCE70-801CCE98 0028+00 r=1 e=0 z=0  None .text      drawCoachIcon__12dMenu_Fmap_cFv                              */
+/* 801CCE70-801CCE98 0028+00 s=1 e=0 z=0  None .text      drawCoachIcon__12dMenu_Fmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2490,7 +2490,7 @@ asm void dMenu_Fmap_c::drawCoachIcon() {
 #pragma pop
 
 
-/* 801CCE98-801CCFB0 0118+00 r=1 e=0 z=0  None .text      drawPlayEnterIcon__12dMenu_Fmap_cFv                          */
+/* 801CCE98-801CCFB0 0118+00 s=1 e=0 z=0  None .text      drawPlayEnterIcon__12dMenu_Fmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2501,7 +2501,7 @@ asm void dMenu_Fmap_c::drawPlayEnterIcon() {
 #pragma pop
 
 
-/* 801CCFB0-801CD000 0050+00 r=3 e=0 z=0  None .text      checkDrawPortalIcon__12dMenu_Fmap_cFii                       */
+/* 801CCFB0-801CD000 0050+00 s=3 e=0 z=0  None .text      checkDrawPortalIcon__12dMenu_Fmap_cFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2512,7 +2512,7 @@ asm void dMenu_Fmap_c::checkDrawPortalIcon(int param_0, int param_1) {
 #pragma pop
 
 
-/* 801CD000-801CD10C 010C+00 r=3 e=0 z=0  None .text      searchIcon__12dMenu_Fmap_cFUciPfPf                           */
+/* 801CD000-801CD10C 010C+00 s=3 e=0 z=0  None .text      searchIcon__12dMenu_Fmap_cFUciPfPf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2523,7 +2523,7 @@ asm void dMenu_Fmap_c::searchIcon(u8 param_0, int param_1, f32* param_2, f32* pa
 #pragma pop
 
 
-/* 801CD10C-801CD210 0104+00 r=6 e=0 z=0  None .text      drawIcon__12dMenu_Fmap_cFUci                                 */
+/* 801CD10C-801CD210 0104+00 s=6 e=0 z=0  None .text      drawIcon__12dMenu_Fmap_cFUci                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2534,7 +2534,7 @@ asm void dMenu_Fmap_c::drawIcon(u8 param_0, int param_1) {
 #pragma pop
 
 
-/* 801CD210-801CD254 0044+00 r=1 e=0 z=0  None .text      drawEnterIcon__12dMenu_Fmap_cFv                              */
+/* 801CD210-801CD254 0044+00 s=1 e=0 z=0  None .text      drawEnterIcon__12dMenu_Fmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2545,7 +2545,7 @@ asm void dMenu_Fmap_c::drawEnterIcon() {
 #pragma pop
 
 
-/* 801CD254-801CD2FC 00A8+00 r=1 e=0 z=0  None .text      drawPortalIcon__12dMenu_Fmap_cFv                             */
+/* 801CD254-801CD2FC 00A8+00 s=1 e=0 z=0  None .text      drawPortalIcon__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2556,7 +2556,7 @@ asm void dMenu_Fmap_c::drawPortalIcon() {
 #pragma pop
 
 
-/* 801CD2FC-801CD350 0054+00 r=1 e=0 z=0  None .text      getRegionStageNum__12dMenu_Fmap_cFi                          */
+/* 801CD2FC-801CD350 0054+00 s=1 e=0 z=0  None .text      getRegionStageNum__12dMenu_Fmap_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2567,7 +2567,7 @@ asm void dMenu_Fmap_c::getRegionStageNum(int param_0) {
 #pragma pop
 
 
-/* 801CD350-801CD368 0018+00 r=6 e=0 z=0  None .text      getNowFmapRegionData__12dMenu_Fmap_cFv                       */
+/* 801CD350-801CD368 0018+00 s=6 e=0 z=0  None .text      getNowFmapRegionData__12dMenu_Fmap_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2578,7 +2578,7 @@ asm void dMenu_Fmap_c::getNowFmapRegionData() {
 #pragma pop
 
 
-/* 801CD368-801CD380 0018+00 r=2 e=0 z=0  None .text      getNowFmapStageData__12dMenu_Fmap_cFv                        */
+/* 801CD368-801CD380 0018+00 s=2 e=0 z=0  None .text      getNowFmapStageData__12dMenu_Fmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2589,7 +2589,7 @@ asm void dMenu_Fmap_c::getNowFmapStageData() {
 #pragma pop
 
 
-/* 801CD380-801CD3F0 0070+00 r=1 e=0 z=0  None .text      searchPortalStageID__12dMenu_Fmap_cFPc                       */
+/* 801CD380-801CD3F0 0070+00 s=1 e=0 z=0  None .text      searchPortalStageID__12dMenu_Fmap_cFPc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2600,7 +2600,7 @@ asm void dMenu_Fmap_c::searchPortalStageID(char* param_0) {
 #pragma pop
 
 
-/* 801CD3F0-801CD460 0070+00 r=1 e=0 z=0  None .text      drawDebugStage__12dMenu_Fmap_cFv                             */
+/* 801CD3F0-801CD460 0070+00 s=1 e=0 z=0  None .text      drawDebugStage__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2612,10 +2612,10 @@ asm void dMenu_Fmap_c::drawDebugStage() {
 
 
 /* ############################################################################################## */
-/* 80454168-8045416C 0004+00 r=1 e=0 z=0  None .sdata2    @7300                                                        */
+/* 80454168-8045416C 0004+00 s=1 e=0 z=0  None .sdata2    @7300                                                        */
 SECTION_SDATA2 static f32 lit_7300 = -50.0f;
 
-/* 801CD460-801CD5CC 016C+00 r=1 e=0 z=0  None .text      arrowPosInit__12dMenu_Fmap_cFv                               */
+/* 801CD460-801CD5CC 016C+00 s=1 e=0 z=0  None .text      arrowPosInit__12dMenu_Fmap_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2627,10 +2627,10 @@ asm void dMenu_Fmap_c::arrowPosInit() {
 
 
 /* ############################################################################################## */
-/* 8045416C-80454170 0004+00 r=2 e=0 z=0  None .sdata2    @7348                                                        */
+/* 8045416C-80454170 0004+00 s=2 e=0 z=0  None .sdata2    @7348                                                        */
 SECTION_SDATA2 static f32 lit_7348 = -20.0f;
 
-/* 801CD5CC-801CD770 01A4+00 r=2 e=0 z=0  None .text      tableArrowPosInit__12dMenu_Fmap_cFb                          */
+/* 801CD5CC-801CD770 01A4+00 s=2 e=0 z=0  None .text      tableArrowPosInit__12dMenu_Fmap_cFb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2642,13 +2642,13 @@ asm void dMenu_Fmap_c::tableArrowPosInit(bool param_0) {
 
 
 /* ############################################################################################## */
-/* 80454170-80454174 0004+00 r=1 e=0 z=0  None .sdata2    @7356                                                        */
+/* 80454170-80454174 0004+00 s=1 e=0 z=0  None .sdata2    @7356                                                        */
 SECTION_SDATA2 static f32 lit_7356 = -38552.46875f;
 
-/* 80454174-80454178 0004+00 r=1 e=0 z=0  None .sdata2    @7357                                                        */
+/* 80454174-80454178 0004+00 s=1 e=0 z=0  None .sdata2    @7357                                                        */
 SECTION_SDATA2 static f32 d_menu_d_menu_fmap__lit_7357 = 38647.58984375f;
 
-/* 801CD770-801CD814 00A4+00 r=1 e=0 z=0  None .text      yamibossArrowPosInit__12dMenu_Fmap_cFv                       */
+/* 801CD770-801CD814 00A4+00 s=1 e=0 z=0  None .text      yamibossArrowPosInit__12dMenu_Fmap_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2659,7 +2659,7 @@ asm void dMenu_Fmap_c::yamibossArrowPosInit() {
 #pragma pop
 
 
-/* 801CD814-801CD8B4 00A0+00 r=1 e=0 z=0  None .text      howlArrowPosInit__12dMenu_Fmap_cFv                           */
+/* 801CD814-801CD8B4 00A0+00 s=1 e=0 z=0  None .text      howlArrowPosInit__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2670,7 +2670,7 @@ asm void dMenu_Fmap_c::howlArrowPosInit() {
 #pragma pop
 
 
-/* 801CD8B4-801CD92C 0078+00 r=1 e=0 z=0  None .text      getHowlRegionID__12dMenu_Fmap_cFv                            */
+/* 801CD8B4-801CD92C 0078+00 s=1 e=0 z=0  None .text      getHowlRegionID__12dMenu_Fmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2681,7 +2681,7 @@ asm void dMenu_Fmap_c::getHowlRegionID() {
 #pragma pop
 
 
-/* 801CD92C-801CD95C 0030+00 r=1 e=0 z=0  None .text      isLightVesselGet__12dMenu_Fmap_cFv                           */
+/* 801CD92C-801CD95C 0030+00 s=1 e=0 z=0  None .text      isLightVesselGet__12dMenu_Fmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2692,7 +2692,7 @@ asm void dMenu_Fmap_c::isLightVesselGet() {
 #pragma pop
 
 
-/* 801CD95C-801CDA2C 00D0+00 r=1 e=0 z=0  None .text      getPlayerPos2D__12dMenu_Fmap_cFv                             */
+/* 801CD95C-801CDA2C 00D0+00 s=1 e=0 z=0  None .text      getPlayerPos2D__12dMenu_Fmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2703,7 +2703,7 @@ asm void dMenu_Fmap_c::getPlayerPos2D() {
 #pragma pop
 
 
-/* 801CDA2C-801CDA74 0048+00 r=2 e=0 z=0  None .text      __dt__9dMf_HIO_cFv                                           */
+/* 801CDA2C-801CDA74 0048+00 s=2 e=0 z=0  None .text      __dt__9dMf_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2714,7 +2714,7 @@ asm dMf_HIO_c::~dMf_HIO_c() {
 #pragma pop
 
 
-/* 801CDA74-801CE068 05F4+00 r=1 e=1 z=0  None .text      __sinit_d_menu_fmap_cpp                                      */
+/* 801CDA74-801CE068 05F4+00 s=0 e=1 z=0  None .text      __sinit_d_menu_fmap_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

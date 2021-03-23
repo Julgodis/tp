@@ -3,15 +3,15 @@ lbl_80C92584:
 /* 80C92588 00000004  7C 08 02 A6 */	mflr r0
 /* 80C9258C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80C92590 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C92594 00000010  4B FF F5 A5 */	bl _savegpr_26
+/* 80C92594 00000010  4B FF F5 A5 */	bl _unresolved
 /* 80C92598 00000014  7C 7A 1B 78 */	mr r26, r3
 /* 80C9259C 00000018  3B A0 00 00 */	li r29, 0
 /* 80C925A0 0000001C  7F BF EB 78 */	mr r31, r29
-/* 80C925A4 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80C925A8 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80C925A4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C925A8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80C925AC 00000028  3B 83 0F 38 */	addi r28, r3, 0xf38
-/* 80C925B0 0000002C  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80C925B4 00000030  3B C3 00 00 */	addi r30, r3, g_env_light@l /* 8042CA54 */
+/* 80C925B0 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80C925B4 00000030  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80C925B8 00000034  48 00 00 4C */	b lbl_80C92604
 lbl_80C925BC:
 /* 80C925BC 00000000  7F C3 F3 78 */	mr r3, r30
@@ -19,17 +19,17 @@ lbl_80C925BC:
 /* 80C925C4 00000008  7F 7A FA 14 */	add r27, r26, r31
 /* 80C925C8 0000000C  38 BB 06 F0 */	addi r5, r27, 0x6f0
 /* 80C925CC 00000010  38 DA 01 0C */	addi r6, r26, 0x10c
-/* 80C925D0 00000014  4B FF F5 69 */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
+/* 80C925D0 00000014  4B FF F5 69 */	bl _unresolved
 /* 80C925D4 00000018  7F C3 F3 78 */	mr r3, r30
 /* 80C925D8 0000001C  80 9B 05 74 */	lwz r4, 0x574(r27)
 /* 80C925DC 00000020  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C925E0 00000024  38 BA 01 0C */	addi r5, r26, 0x10c
-/* 80C925E4 00000028  4B FF F5 55 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80C925E4 00000028  4B FF F5 55 */	bl _unresolved
 /* 80C925E8 0000002C  7F 83 E3 78 */	mr r3, r28
 /* 80C925EC 00000030  80 9B 05 74 */	lwz r4, 0x574(r27)
 /* 80C925F0 00000034  88 1A 04 E2 */	lbz r0, 0x4e2(r26)
 /* 80C925F4 00000038  7C 05 07 74 */	extsb r5, r0
-/* 80C925F8 0000003C  4B FF F5 41 */	bl entrySimpleModel__14dComIfG_play_cFP8J3DModeli
+/* 80C925F8 0000003C  4B FF F5 41 */	bl _unresolved
 /* 80C925FC 00000040  3B BD 00 01 */	addi r29, r29, 1
 /* 80C92600 00000044  3B FF 01 C0 */	addi r31, r31, 0x1c0
 lbl_80C92604:
@@ -39,7 +39,7 @@ lbl_80C92604:
 /* 80C92610 0000000C  41 80 FF AC */	blt lbl_80C925BC
 /* 80C92614 00000010  38 60 00 01 */	li r3, 1
 /* 80C92618 00000014  39 61 00 20 */	addi r11, r1, 0x20
-/* 80C9261C 00000018  4B FF F5 1D */	bl _restgpr_26
+/* 80C9261C 00000018  4B FF F5 1D */	bl _unresolved
 /* 80C92620 0000001C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80C92624 00000020  7C 08 03 A6 */	mtlr r0
 /* 80C92628 00000024  38 21 00 20 */	addi r1, r1, 0x20

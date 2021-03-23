@@ -42,12 +42,10 @@ struct cM3dGAab {
 };
 
 struct dCcD_GStts {
-	/* 80083760 */ dCcD_GStts();
 	/* 80BDD4A8 */ ~dCcD_GStts();
 };
 
 struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
 	/* 80BDD504 */ ~dBgS_AcchCir();
 };
 
@@ -59,99 +57,14 @@ struct cCcD_GStts {
 	/* 80BDD650 */ ~cCcD_GStts();
 };
 
-struct J3DModel {
-};
-
-struct J3DModelData {
-};
-
-struct fopAc_ac_c {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct cXyz {
-};
-
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cBgS {
-	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-};
-
-struct dBgW {
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
-struct csXyz {
-};
-
-struct dBgS_Acch {
-	/* 80075F94 */ ~dBgS_Acch();
-	/* 800760A0 */ dBgS_Acch();
-};
-
-struct dBgS_GndChk {
-	/* 8007757C */ dBgS_GndChk();
-	/* 800775F0 */ ~dBgS_GndChk();
-};
-
-struct dBgS_MoveBgActor {
-	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
-	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
-	/* 800788DC */ void MoveBGDelete();
-	/* 80078950 */ void MoveBGExecute();
-};
-
-struct dBgS_PolyPassChk {
-	/* 80078E68 */ void SetObj();
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct cM3dGCir {
-	/* 8026EF18 */ ~cM3dGCir();
-};
-
 // 
 // Forward References:
 // 
 
-static void daObjDigSnow_create1st(daObjDigSnow_c*); // 2
-static void daObjDigSnow_MoveBGDelete(daObjDigSnow_c*); // 2
-static void daObjDigSnow_MoveBGExecute(daObjDigSnow_c*); // 2
-static void daObjDigSnow_MoveBGDraw(daObjDigSnow_c*); // 2
+void daObjDigSnow_create1st(daObjDigSnow_c*); // 2
+void daObjDigSnow_MoveBGDelete(daObjDigSnow_c*); // 2
+void daObjDigSnow_MoveBGExecute(daObjDigSnow_c*); // 2
+void daObjDigSnow_MoveBGDraw(daObjDigSnow_c*); // 2
 
 extern "C" void initBaseMtx__14daObjDigSnow_cFv(); // 1
 extern "C" void setBaseMtx__14daObjDigSnow_cFv(); // 1
@@ -169,108 +82,57 @@ extern "C" void mode_init_end__14daObjDigSnow_cFv(); // 1
 extern "C" void mode_end__14daObjDigSnow_cFv(); // 1
 extern "C" void Draw__14daObjDigSnow_cFv(); // 1
 extern "C" void Delete__14daObjDigSnow_cFv(); // 1
-extern "C" static void daObjDigSnow_create1st__FP14daObjDigSnow_c(); // 1
+extern "C" void daObjDigSnow_create1st__FP14daObjDigSnow_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c(); // 1
-extern "C" static void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c(); // 1
-extern "C" static void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c(); // 1
+extern "C" void daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c(); // 1
+extern "C" void daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c(); // 1
+extern "C" void daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_80BDD698(); // 1
-extern "C" static void func_80BDD6A0(); // 1
-extern "C" static void func_80BDD6A8(); // 1
-extern "C" static void func_80BDD6B0(); // 1
-extern "C" static void func_80BDD6B8(); // 1
+extern "C" void func_80BDD698(); // 1
+extern "C" void func_80BDD6A0(); // 1
+extern "C" void func_80BDD6A8(); // 1
+extern "C" void func_80BDD6B0(); // 1
+extern "C" void func_80BDD6B8(); // 1
+extern "C" extern u32 const lit_3744;
 extern "C" extern u32 const lit_3761;
 extern "C" extern u32 const lit_3762;
 extern "C" extern u32 const lit_3763;
 extern "C" extern u32 const lit_3764;
 extern "C" extern char const* const stringBase0;
+extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
-extern "C" extern void* lit_3713[3];
-extern "C" extern void* lit_3714[3];
-extern "C" extern void* lit_3715[3];
+extern "C" extern u8 l_arcName[4];
+extern "C" extern u8 lit_3713[12];
+extern "C" extern u8 lit_3714[12];
+extern "C" extern u8 lit_3715[12];
 extern "C" extern u8 data_80BDD730[36];
-extern "C" extern void* g_profile_Obj_DigSnow[12];
+extern "C" extern u8 daObjDigSnow_METHODS[32];
+extern "C" extern u8 g_profile_Obj_DigSnow[48];
+extern "C" extern void* __vt__12dBgS_AcchCir[3];
+extern "C" extern void* __vt__10cCcD_GStts[3];
+extern "C" extern void* __vt__10dCcD_GStts[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__12dBgS_ObjAcch[9];
+extern "C" extern void* __vt__14dBgS_ObjGndChk[12];
+extern "C" extern void* __vt__14daObjDigSnow_c[10];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__9dCcD_Stts[11];
-extern "C" extern void* __vt__12cCcD_CylAttr[25];
-extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
-extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 j3dSys[284];
 extern "C" void _unresolved(); // 1
-extern "C" extern u8 data_80BDD860[4];
 
 // 
 // Declarations:
 // 
 
-/* 80BDCC58-80BDCC94 003C+00 r=1 e=0 z=0  None .text      initBaseMtx__14daObjDigSnow_cFv                              */
+/* 80BDCC58-80BDCC94 003C+00 s=1 e=0 z=0  None .text      initBaseMtx__14daObjDigSnow_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +143,7 @@ asm void daObjDigSnow_c::initBaseMtx() {
 #pragma pop
 
 
-/* 80BDCC94-80BDCD08 0074+00 r=2 e=0 z=0  None .text      setBaseMtx__14daObjDigSnow_cFv                               */
+/* 80BDCC94-80BDCD08 0074+00 s=2 e=0 z=0  None .text      setBaseMtx__14daObjDigSnow_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +154,7 @@ asm void daObjDigSnow_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BDCD08-80BDCD64 005C+00 r=1 e=0 z=0  None .text      Create__14daObjDigSnow_cFv                                   */
+/* 80BDCD08-80BDCD64 005C+00 s=0 e=0 z=0  None .text      Create__14daObjDigSnow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,45 +165,7 @@ asm void daObjDigSnow_c::Create() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BDD6C8-80BDD6CC 0004+00 r=2 e=0 z=0  None .rodata    @3744                                                        */
-SECTION_RODATA static u32 const lit_3744 = 0xCE6E6B28;
-
-/* 80BDD6CC-80BDD6D0 0004+00 r=0 e=0 z=0  None .rodata    @3761                                                        */
-SECTION_RODATA u32 const lit_3761 = 0x41200000;
-
-/* 80BDD6D0-80BDD6D4 0004+00 r=0 e=0 z=0  None .rodata    @3762                                                        */
-SECTION_RODATA u32 const lit_3762 = 0x420C0000;
-
-/* 80BDD6D4-80BDD6D8 0004+00 r=0 e=0 z=0  None .rodata    @3763                                                        */
-SECTION_RODATA u32 const lit_3763 = 0x3F800000;
-
-/* 80BDD6D8-80BDD6DC 0004+00 r=0 e=0 z=0  None .rodata    @3764                                                        */
-SECTION_RODATA u32 const lit_3764 = 0x41F00000;
-
-/* 80BDD6DC-80BDD6E6 000A+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BDD6DC = "Y_horiyuk";
-#pragma pop
-
-/* 80BDD6E8-80BDD6F4 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BDD6F4-80BDD708 0004+10 r=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80BDD708-80BDD70C 0004+00 r=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80BDCD64-80BDCDD4 0070+00 r=1 e=0 z=0  None .text      CreateHeap__14daObjDigSnow_cFv                               */
+/* 80BDCD64-80BDCDD4 0070+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjDigSnow_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,7 +176,7 @@ asm void daObjDigSnow_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BDCDD4-80BDCE84 00B0+00 r=1 e=0 z=0  None .text      create1st__14daObjDigSnow_cFv                                */
+/* 80BDCDD4-80BDCE84 00B0+00 s=1 e=0 z=0  None .text      create1st__14daObjDigSnow_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +187,7 @@ asm void daObjDigSnow_c::create1st() {
 #pragma pop
 
 
-/* 80BDCE84-80BDCF00 007C+00 r=1 e=0 z=0  None .text      Execute__14daObjDigSnow_cFPPA3_A4_f                          */
+/* 80BDCE84-80BDCF00 007C+00 s=0 e=0 z=0  None .text      Execute__14daObjDigSnow_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -374,7 +198,7 @@ asm void daObjDigSnow_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BDCF00-80BDCFA4 00A4+00 r=1 e=0 z=0  None .text      action__14daObjDigSnow_cFv                                   */
+/* 80BDCF00-80BDCFA4 00A4+00 s=1 e=0 z=0  None .text      action__14daObjDigSnow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,7 +209,7 @@ asm void daObjDigSnow_c::action() {
 #pragma pop
 
 
-/* 80BDCFA4-80BDCFB0 000C+00 r=1 e=0 z=0  None .text      mode_init_wait__14daObjDigSnow_cFv                           */
+/* 80BDCFA4-80BDCFB0 000C+00 s=1 e=0 z=0  None .text      mode_init_wait__14daObjDigSnow_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -396,7 +220,7 @@ asm void daObjDigSnow_c::mode_init_wait() {
 #pragma pop
 
 
-/* 80BDCFB0-80BDCFDC 002C+00 r=1 e=0 z=0  None .text      mode_wait__14daObjDigSnow_cFv                                */
+/* 80BDCFB0-80BDCFDC 002C+00 s=0 e=0 z=0  None .text      mode_wait__14daObjDigSnow_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -407,128 +231,7 @@ asm void daObjDigSnow_c::mode_wait() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BDD70C-80BDD718 000C+00 r=0 e=0 z=0  None .data      @3713                                                        */
-SECTION_DATA void* lit_3713[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_wait__14daObjDigSnow_cFv,
-};
-
-/* 80BDD718-80BDD724 000C+00 r=0 e=0 z=0  None .data      @3714                                                        */
-SECTION_DATA void* lit_3714[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_dig__14daObjDigSnow_cFv,
-};
-
-/* 80BDD724-80BDD730 000C+00 r=0 e=0 z=0  None .data      @3715                                                        */
-SECTION_DATA void* lit_3715[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_end__14daObjDigSnow_cFv,
-};
-
-/* 80BDD730-80BDD754 0024+00 r=0 e=0 z=0  None .data      l_func$3712                                                  */
-SECTION_DATA u8 data_80BDD730[36] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BDD754-80BDD774 0020+00 r=1 e=0 z=0  None .data      daObjDigSnow_METHODS                                         */
-SECTION_DATA static void* daObjDigSnow_METHODS[8] = {
-	/* 0    */ (void*)daObjDigSnow_create1st__FP14daObjDigSnow_c,
-	/* 1    */ (void*)daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c,
-	/* 2    */ (void*)daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80BDD774-80BDD7A4 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_DigSnow                                        */
-SECTION_DATA void* g_profile_Obj_DigSnow[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00900000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000944,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x027A0000,
-	/* 9    */ (void*)&daObjDigSnow_METHODS,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80BDD7A4-80BDD7B0 000C+00 r=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_AcchCirFv,
-};
-
-/* 80BDD7B0-80BDD7BC 000C+00 r=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
-};
-
-/* 80BDD7BC-80BDD7C8 000C+00 r=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
-};
-
-/* 80BDD7C8-80BDD7D4 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80BDD7D4-80BDD7E0 000C+00 r=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80BDD7E0-80BDD804 0024+00 r=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BDD6B8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BDD6B0,
-};
-
-/* 80BDD804-80BDD834 0030+00 r=2 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
-SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dBgS_ObjGndChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BDD698,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BDD6A8,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_80BDD6A0,
-};
-
-/* 80BDCFDC-80BDD0AC 00D0+00 r=1 e=0 z=0  None .text      mode_init_dig__14daObjDigSnow_cFv                            */
+/* 80BDCFDC-80BDD0AC 00D0+00 s=1 e=0 z=0  None .text      mode_init_dig__14daObjDigSnow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +242,7 @@ asm void daObjDigSnow_c::mode_init_dig() {
 #pragma pop
 
 
-/* 80BDD0AC-80BDD124 0078+00 r=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 80BDD0AC-80BDD124 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,7 +253,7 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* 80BDD124-80BDD1BC 0098+00 r=1 e=0 z=0  None .text      mode_dig__14daObjDigSnow_cFv                                 */
+/* 80BDD124-80BDD1BC 0098+00 s=0 e=0 z=0  None .text      mode_dig__14daObjDigSnow_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,7 +264,7 @@ asm void daObjDigSnow_c::mode_dig() {
 #pragma pop
 
 
-/* 80BDD1BC-80BDD210 0054+00 r=1 e=0 z=0  None .text      mode_init_end__14daObjDigSnow_cFv                            */
+/* 80BDD1BC-80BDD210 0054+00 s=1 e=0 z=0  None .text      mode_init_end__14daObjDigSnow_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -572,7 +275,7 @@ asm void daObjDigSnow_c::mode_init_end() {
 #pragma pop
 
 
-/* 80BDD210-80BDD214 0004+00 r=1 e=0 z=0  None .text      mode_end__14daObjDigSnow_cFv                                 */
+/* 80BDD210-80BDD214 0004+00 s=0 e=0 z=0  None .text      mode_end__14daObjDigSnow_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -583,7 +286,7 @@ asm void daObjDigSnow_c::mode_end() {
 #pragma pop
 
 
-/* 80BDD214-80BDD2B8 00A4+00 r=1 e=0 z=0  None .text      Draw__14daObjDigSnow_cFv                                     */
+/* 80BDD214-80BDD2B8 00A4+00 s=0 e=0 z=0  None .text      Draw__14daObjDigSnow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -594,7 +297,7 @@ asm void daObjDigSnow_c::Draw() {
 #pragma pop
 
 
-/* 80BDD2B8-80BDD2EC 0034+00 r=1 e=0 z=0  None .text      Delete__14daObjDigSnow_cFv                                   */
+/* 80BDD2B8-80BDD2EC 0034+00 s=0 e=0 z=0  None .text      Delete__14daObjDigSnow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -605,33 +308,18 @@ asm void daObjDigSnow_c::Delete() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80BDD834-80BDD85C 0028+00 r=1 e=0 z=0  None .data      __vt__14daObjDigSnow_c                                       */
-SECTION_DATA static void* __vt__14daObjDigSnow_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__14daObjDigSnow_cFv,
-	/* 3    */ (void*)Create__14daObjDigSnow_cFv,
-	/* 4    */ (void*)Execute__14daObjDigSnow_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__14daObjDigSnow_cFv,
-	/* 6    */ (void*)Delete__14daObjDigSnow_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-};
-
-/* 80BDD2EC-80BDD418 012C+00 r=1 e=0 z=0  None .text      daObjDigSnow_create1st__FP14daObjDigSnow_c                   */
+/* 80BDD2EC-80BDD418 012C+00 s=0 e=0 z=0  None .text      daObjDigSnow_create1st__FP14daObjDigSnow_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigSnow_create1st(daObjDigSnow_c* param_0) {
+asm void daObjDigSnow_create1st(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_create1st__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD418-80BDD460 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BDD418-80BDD460 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,7 +330,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BDD460-80BDD4A8 0048+00 r=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BDD460-80BDD4A8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -653,7 +341,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BDD4A8-80BDD504 005C+00 r=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BDD4A8-80BDD504 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -664,7 +352,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80BDD504-80BDD574 0070+00 r=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BDD504-80BDD574 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -675,7 +363,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80BDD574-80BDD5E4 0070+00 r=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BDD574-80BDD5E4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -686,40 +374,40 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BDD5E4-80BDD604 0020+00 r=1 e=0 z=0  None .text      daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c                */
+/* 80BDD5E4-80BDD604 0020+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigSnow_MoveBGDelete(daObjDigSnow_c* param_0) {
+asm void daObjDigSnow_MoveBGDelete(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDelete__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD604-80BDD624 0020+00 r=1 e=0 z=0  None .text      daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c               */
+/* 80BDD604-80BDD624 0020+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigSnow_MoveBGExecute(daObjDigSnow_c* param_0) {
+asm void daObjDigSnow_MoveBGExecute(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGExecute__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD624-80BDD650 002C+00 r=1 e=0 z=0  None .text      daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c                  */
+/* 80BDD624-80BDD650 002C+00 s=0 e=0 z=0  None .text      daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigSnow_MoveBGDraw(daObjDigSnow_c* param_0) {
+asm void daObjDigSnow_MoveBGDraw(daObjDigSnow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/daObjDigSnow_MoveBGDraw__FP14daObjDigSnow_c.s"
 }
 #pragma pop
 
 
-/* 80BDD650-80BDD698 0048+00 r=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BDD650-80BDD698 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -730,58 +418,211 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BDD698-80BDD6A0 0008+00 r=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD698-80BDD6A0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BDD698() {
+extern "C" asm void func_80BDD698() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD698.s"
 }
 #pragma pop
 
 
-/* 80BDD6A0-80BDD6A8 0008+00 r=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD6A0-80BDD6A8 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BDD6A0() {
+extern "C" asm void func_80BDD6A0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A0.s"
 }
 #pragma pop
 
 
-/* 80BDD6A8-80BDD6B0 0008+00 r=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 80BDD6A8-80BDD6B0 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BDD6A8() {
+extern "C" asm void func_80BDD6A8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6A8.s"
 }
 #pragma pop
 
 
-/* 80BDD6B0-80BDD6B8 0008+00 r=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BDD6B0-80BDD6B8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BDD6B0() {
+extern "C" asm void func_80BDD6B0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B0.s"
 }
 #pragma pop
 
 
-/* 80BDD6B8-80BDD6C0 0008+00 r=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BDD6B8-80BDD6C0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BDD6B8() {
+extern "C" asm void func_80BDD6B8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digsnow/d_a_obj_digsnow/func_80BDD6B8.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BDD6C8-80BDD6CC 0004+00 s=0 e=0 z=0  None .rodata    @3744                                                        */
+SECTION_RODATA u32 const lit_3744 = 0xCE6E6B28;
+
+/* 80BDD6CC-80BDD6D0 0004+00 s=0 e=0 z=0  None .rodata    @3761                                                        */
+SECTION_RODATA u32 const lit_3761 = 0x41200000;
+
+/* 80BDD6D0-80BDD6D4 0004+00 s=0 e=0 z=0  None .rodata    @3762                                                        */
+SECTION_RODATA u32 const lit_3762 = 0x420C0000;
+
+/* 80BDD6D4-80BDD6D8 0004+00 s=0 e=0 z=0  None .rodata    @3763                                                        */
+SECTION_RODATA u32 const lit_3763 = 0x3F800000;
+
+/* 80BDD6D8-80BDD6DC 0004+00 s=0 e=0 z=0  None .rodata    @3764                                                        */
+SECTION_RODATA u32 const lit_3764 = 0x41F00000;
+
+/* 80BDD6DC-80BDD6E6 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BDD6DC = "Y_horiyuk";
+#pragma pop
+
+/* 80BDD6E8-80BDD6F4 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD6F4-80BDD708 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80BDD708-80BDD70C 0004+00 s=0 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA u8 l_arcName[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD70C-80BDD718 000C+00 s=0 e=0 z=0  None .data      @3713                                                        */
+SECTION_DATA u8 lit_3713[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD718-80BDD724 000C+00 s=0 e=0 z=0  None .data      @3714                                                        */
+SECTION_DATA u8 lit_3714[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD724-80BDD730 000C+00 s=0 e=0 z=0  None .data      @3715                                                        */
+SECTION_DATA u8 lit_3715[12] = {
+	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD730-80BDD754 0024+00 s=0 e=0 z=0  None .data      l_func$3712                                                  */
+SECTION_DATA u8 data_80BDD730[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD754-80BDD774 0020+00 s=0 e=0 z=0  None .data      daObjDigSnow_METHODS                                         */
+SECTION_DATA u8 daObjDigSnow_METHODS[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BDD774-80BDD7A4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_DigSnow                                        */
+SECTION_DATA u8 g_profile_Obj_DigSnow[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x03, 0xFF, 0xFD, 0x00, 0x90, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x09, 0x44, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0x7A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x41, 0x00, 0x00, 0x0E, 0x00, 0x00,
+};
+
+/* 80BDD7A4-80BDD7B0 000C+00 s=0 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA void* __vt__12dBgS_AcchCir[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80BDD7B0-80BDD7BC 000C+00 s=0 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA void* __vt__10cCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80BDD7BC-80BDD7C8 000C+00 s=0 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA void* __vt__10dCcD_GStts[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80BDD7C8-80BDD7D4 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA void* __vt__8cM3dGCyl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80BDD7D4-80BDD7E0 000C+00 s=0 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA void* __vt__8cM3dGAab[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80BDD7E0-80BDD804 0024+00 s=0 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA void* __vt__12dBgS_ObjAcch[9] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+};
+
+/* 80BDD804-80BDD834 0030+00 s=0 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
+SECTION_DATA void* __vt__14dBgS_ObjGndChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+};
+
+/* 80BDD834-80BDD85C 0028+00 s=0 e=0 z=0  None .data      __vt__14daObjDigSnow_c                                       */
+SECTION_DATA void* __vt__14daObjDigSnow_c[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+};
 

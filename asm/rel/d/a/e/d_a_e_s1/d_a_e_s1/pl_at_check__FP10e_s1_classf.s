@@ -4,10 +4,10 @@ lbl_8077AEFC:
 /* 8077AF04 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8077AF08 0000000C  DB E1 00 08 */	stfd f31, 8(r1)
 /* 8077AF0C 00000010  FF E0 08 90 */	fmr f31, f1
-/* 8077AF10 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8077AF14 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8077AF10 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8077AF14 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8077AF18 0000001C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 8077AF1C 00000020  4B FF FB DD */	bl fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8077AF1C 00000020  4B FF FB DD */	bl _unresolved
 /* 8077AF20 00000024  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 8077AF24 00000000  7C 00 00 26 */	mfcr r0
 /* 8077AF28 00000004  54 03 0F FE */	srwi r3, r0, 0x1f

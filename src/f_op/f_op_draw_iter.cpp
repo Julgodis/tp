@@ -38,10 +38,10 @@ extern "C" extern u8 g_fopDwTg_Queue[8];
 // 
 
 /* ############################################################################################## */
-/* 80450CF8-80450D00 0004+04 r=2 e=0 z=0  None .sbss      l_fopDwTg_id                                                 */
+/* 80450CF8-80450D00 0004+04 s=2 e=0 z=0  None .sbss      l_fopDwTg_id                                                 */
 static u8 l_fopDwTg_id[4 + 4 /* padding */];
 
-/* 80020400-80020444 0044+00 r=2 e=0 z=0  None .text      fopDwIt_GetTag__Fv                                           */
+/* 80020400-80020444 0044+00 s=2 e=0 z=0  None .text      fopDwIt_GetTag__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ asm static void fopDwIt_GetTag() {
 #pragma pop
 
 
-/* 80020444-80020480 003C+00 r=1 e=1 z=0  None .text      fopDwIt_Begin__Fv                                            */
+/* 80020444-80020480 003C+00 s=0 e=1 z=0  None .text      fopDwIt_Begin__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ asm void fopDwIt_Begin() {
 #pragma pop
 
 
-/* 80020480-800204AC 002C+00 r=1 e=1 z=0  None .text      fopDwIt_Next__FP16create_tag_class                           */
+/* 80020480-800204AC 002C+00 s=0 e=1 z=0  None .text      fopDwIt_Next__FP16create_tag_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

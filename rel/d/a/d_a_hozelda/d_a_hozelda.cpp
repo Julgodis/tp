@@ -12,8 +12,6 @@
 // 
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct J3DMaterial {
@@ -25,13 +23,7 @@ struct daHoZelda_matAnm_c {
 	/* 80848D54 */ ~daHoZelda_matAnm_c();
 };
 
-struct Vec {
-};
-
 struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80267128 */ void atan2sX_Z() const;
-	/* 80267150 */ void atan2sY_XZ() const;
 };
 
 struct daHoZelda_c {
@@ -60,6 +52,9 @@ struct daHoZelda_c {
 	/* 80848774 */ void searchBodyAngle();
 	/* 808489CC */ void execute();
 	/* 80848B64 */ void draw();
+};
+
+struct Vec {
 };
 
 template <typename A0, typename B0>
@@ -118,9 +113,6 @@ struct J3DJoint {
 };
 
 struct daPy_frameCtrl_c {
-	/* 8015E4CC */ void checkAnmEnd();
-	/* 8015E510 */ void updateFrame();
-	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 	/* 80846C4C */ ~daPy_frameCtrl_c();
 	/* 80846CA8 */ daPy_frameCtrl_c();
 };
@@ -131,134 +123,23 @@ struct mDoExt_AnmRatioPack {
 };
 
 struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
 	/* 80846D48 */ ~J3DFrameCtrl();
-};
-
-struct Quaternion {
-};
-
-struct mDoMtx_stack_c {
-	/* 8000CD64 */ void transS(cXyz const&);
-	/* 8000CD9C */ void transM(f32, f32, f32);
-	/* 8000CF7C */ void quatM(Quaternion const*);
-};
-
-struct mDoExt_baseAnm {
-	/* 8000D428 */ void play();
-};
-
-struct J3DMaterialTable {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
-struct mDoExt_btpAnm {
-	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
-	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct mDoExt_btkAnm {
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
-	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DModel {
-};
-
-struct mDoExt_MtxCalcOldFrame {
-	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
-};
-
-struct csXyz {
-};
-
-struct request_of_phase_process_class {
-};
-
-struct dRes_info_c {
-};
-
-struct dRes_control_c {
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
-};
-
-struct dDlst_shadowControl_c {
-	/* 80055F1C */ void addReal(u32, J3DModel*);
-};
-
-struct dAttention_c {
-	/* 80070844 */ void GetLockonList(s32);
-	/* 800737E4 */ void LockonTruth();
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct daPy_actorKeep_c {
-	/* 8015EC48 */ void setActor();
-	/* 8015ECB8 */ void setData(fopAc_ac_c*);
-	/* 8015ECFC */ void clearData();
-};
-
-struct dKy_tevstr_c {
-};
-
-struct dScnKy_env_light_c {
-	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
-	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct J3DMaterialAnm {
-	/* 8032C320 */ void initialize();
-	/* 8032C3C4 */ void calc(J3DMaterial*) const;
-};
-
-struct J3DMtxCalcJ3DSysInitMaya {
-	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
-};
-
-struct J3DTransformInfo {
-};
-
-struct J3DMtxCalcCalcTransformMaya {
-	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
 };
 
 // 
 // Forward References:
 // 
 
-static void daHoZelda_searchGanon(fopAc_ac_c*, void*); // 2
-static void daHoZelda_createHeap(fopAc_ac_c*); // 2
-static void daHoZelda_modelCallBack(J3DJoint*, int); // 2
-static void daHoZelda_Create(fopAc_ac_c*); // 2
-static void daHoZelda_Delete(daHoZelda_c*); // 2
-static void daHoZelda_Execute(daHoZelda_c*); // 2
-static void daHoZelda_Draw(daHoZelda_c*); // 2
+void daHoZelda_searchGanon(fopAc_ac_c*, void*); // 2
+void daHoZelda_createHeap(fopAc_ac_c*); // 2
+void daHoZelda_modelCallBack(J3DJoint*, int); // 2
+void daHoZelda_Create(fopAc_ac_c*); // 2
+void daHoZelda_Delete(daHoZelda_c*); // 2
+void daHoZelda_Execute(daHoZelda_c*); // 2
+void daHoZelda_Draw(daHoZelda_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
-extern "C" static void daHoZelda_searchGanon__FP10fopAc_ac_cPv(); // 1
+extern "C" void daHoZelda_searchGanon__FP10fopAc_ac_cPv(); // 1
 extern "C" void init__18daHoZelda_matAnm_cFv(); // 1
 extern "C" void calc__18daHoZelda_matAnm_cCFP11J3DMaterial(); // 1
 extern "C" void createHeap__11daHoZelda_cFv(); // 1
@@ -275,18 +156,18 @@ extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
 extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
 extern "C" void __dt__14J3DMatColorAnmFv(); // 1
 extern "C" void __ct__14J3DMatColorAnmFv(); // 1
-extern "C" static void daHoZelda_createHeap__FP10fopAc_ac_c(); // 1
+extern "C" void daHoZelda_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void modelCallBack__11daHoZelda_cFUs(); // 1
-extern "C" static void daHoZelda_modelCallBack__FP8J3DJointi(); // 1
+extern "C" void daHoZelda_modelCallBack__FP8J3DJointi(); // 1
 extern "C" void create__11daHoZelda_cFv(); // 1
 extern "C" void __dt__16daPy_frameCtrl_cFv(); // 1
 extern "C" void __ct__16daPy_frameCtrl_cFv(); // 1
 extern "C" void __dt__19mDoExt_AnmRatioPackFv(); // 1
 extern "C" void __ct__19mDoExt_AnmRatioPackFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daHoZelda_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daHoZelda_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__11daHoZelda_cFv(); // 1
-extern "C" static void daHoZelda_Delete__FP11daHoZelda_c(); // 1
+extern "C" void daHoZelda_Delete__FP11daHoZelda_c(); // 1
 extern "C" void setDoubleAnime__11daHoZelda_cFfffUsUsf(); // 1
 extern "C" void setUpperAnime__11daHoZelda_cFUs(); // 1
 extern "C" void resetUpperAnime__11daHoZelda_cFv(); // 1
@@ -307,9 +188,9 @@ extern "C" void setEyeMove__11daHoZelda_cFPC4cXyzss(); // 1
 extern "C" void setNeckAngle__11daHoZelda_cFv(); // 1
 extern "C" void searchBodyAngle__11daHoZelda_cFv(); // 1
 extern "C" void execute__11daHoZelda_cFv(); // 1
-extern "C" static void daHoZelda_Execute__FP11daHoZelda_c(); // 1
+extern "C" void daHoZelda_Execute__FP11daHoZelda_c(); // 1
 extern "C" void draw__11daHoZelda_cFv(); // 1
-extern "C" static void daHoZelda_Draw__FP11daHoZelda_c(); // 1
+extern "C" void daHoZelda_Draw__FP11daHoZelda_c(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform(); // 1
@@ -321,8 +202,13 @@ extern "C" void func_80848CE0(); // 1
 extern "C" void func_80848D08(); // 1
 extern "C" static void func_80848D38(); // 1
 extern "C" void __dt__18daHoZelda_matAnm_cFv(); // 1
+extern "C" extern u8 const l_arcName[8];
 extern "C" extern u8 const m__16daHoZelda_hio_c0[16];
+extern "C" extern u8 const lit_3697[4];
+extern "C" extern u32 const lit_3722;
+extern "C" extern u8 const lit_3724[8];
 extern "C" extern u32 const lit_4062;
+extern "C" extern u32 const lit_4209;
 extern "C" extern u32 const lit_4283;
 extern "C" extern u32 const lit_4530;
 extern "C" extern u8 const data_80848E74[12];
@@ -330,6 +216,10 @@ extern "C" extern u8 const data_80848E80[12];
 extern "C" extern u32 const lit_4580;
 extern "C" extern u32 const lit_4581;
 extern "C" extern u32 const lit_4582;
+extern "C" extern u8 const data_80848E98[12];
+extern "C" extern u8 const data_80848EA4[12];
+extern "C" extern u8 const data_80848EB0[12];
+extern "C" extern u8 const data_80848EBC[12];
 extern "C" extern u32 const lit_4752;
 extern "C" extern u32 const lit_4753;
 extern "C" extern u32 const lit_4754;
@@ -342,164 +232,39 @@ extern "C" extern u32 const lit_4938;
 extern "C" extern u8 const lit_4939[8];
 extern "C" extern u8 const lit_4940[8];
 extern "C" extern u8 const lit_4941[8];
-extern "C" extern void* g_profile_HOZELDA[12];
+extern "C" extern u8 l_daHoZelda_Method[32];
+extern "C" extern u8 g_profile_HOZELDA[48];
+extern "C" extern void* __vt__16daPy_frameCtrl_c[3];
+extern "C" extern void* __vt__12J3DFrameCtrl[3];
+extern "C" extern void* __vt__11J3DTexNoAnm[3];
+extern "C" extern void* data_80848F78[11];
+extern "C" extern void* __vt__19J3DMtxCalcNoAnmBase[11];
+extern "C" extern void* __vt__10J3DMtxCalc[11];
+extern "C" extern void* __vt__18daHoZelda_matAnm_c[4];
 
 // 
 // External References:
 // 
 
-void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelEntryDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void daPy_addCalcShort(s16*, s16, s16, s16, s16); // 2
-void cM_rnd(); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
 
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss(); // 1
-extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelEntryDL__FP8J3DModel(); // 1
-extern "C" void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void addReal__21dDlst_shadowControl_cFUlP8J3DModel(); // 1
-extern "C" void GetLockonList__12dAttention_cFl(); // 1
-extern "C" void LockonTruth__12dAttention_cFv(); // 1
-extern "C" void getActor__10dAttList_cFv(); // 1
-extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv(); // 1
-extern "C" void updateFrame__16daPy_frameCtrl_cFv(); // 1
-extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff(); // 1
-extern "C" void setActor__16daPy_actorKeep_cFv(); // 1
-extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c(); // 1
-extern "C" void clearData__16daPy_actorKeep_cFv(); // 1
-extern "C" void daPy_addCalcShort__FPsssss(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void __dt__10Z2CreatureFv(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecUcUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs(); // 1
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial(); // 1
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf(); // 1
-extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11];
-extern "C" extern void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern void* __vt__14J3DMaterialAnm[4];
-extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 j3dSys[284];
-extern "C" extern u8 mCurrentMtx__6J3DSys[48];
-extern "C" extern u32 __float_nan;
-extern "C" extern u8 mJoint__10J3DMtxCalc[4];
 extern "C" void _unresolved(); // 1
-extern "C" extern u8 struct_80849010[4];
 
 // 
 // Declarations:
 // 
 
-/* 80845E98-80845EAC 0014+00 r=1 e=0 z=0  None .text      daHoZelda_searchGanon__FP10fopAc_ac_cPv                      */
+/* 80845E98-80845EAC 0014+00 s=0 e=0 z=0  None .text      daHoZelda_searchGanon__FP10fopAc_ac_cPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_searchGanon(fopAc_ac_c* param_0, void* param_1) {
+asm void daHoZelda_searchGanon(fopAc_ac_c* param_0, void* param_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_searchGanon__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848E3C-80848E44 0008+00 r=15 e=0 z=0  None .rodata    l_arcName                                                    */
-SECTION_RODATA static u8 const l_arcName[8] = {
-	0x48, 0x6F, 0x5A, 0x65, 0x6C, 0x64, 0x61, 0x00,
-};
-
-/* 80848E44-80848E54 0010+00 r=0 e=0 z=0  None .rodata    m__16daHoZelda_hio_c0                                        */
-SECTION_RODATA u8 const m__16daHoZelda_hio_c0[16] = {
-	0x03, 0x8E, 0x2A, 0xAA, 0x40, 0x00, 0x00, 0x00, 0x45, 0x5A, 0xC0, 0x00, 0x45, 0x7A, 0x00, 0x00,
-};
-
-/* 80848E54-80848E58 0004+00 r=6 e=0 z=0  None .rodata    @3697                                                        */
-SECTION_RODATA static u8 const lit_3697[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80845EAC-80845EDC 0030+00 r=2 e=0 z=0  None .text      init__18daHoZelda_matAnm_cFv                                 */
+/* 80845EAC-80845EDC 0030+00 s=2 e=0 z=0  None .text      init__18daHoZelda_matAnm_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -510,16 +275,7 @@ asm void daHoZelda_matAnm_c::init() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848E58-80848E5C 0004+00 r=5 e=0 z=0  None .rodata    @3722                                                        */
-SECTION_RODATA static u32 const lit_3722 = 0x3F800000;
-
-/* 80848E5C-80848E64 0008+00 r=1 e=0 z=0  None .rodata    @3724                                                        */
-SECTION_RODATA static u8 const lit_3724[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80845EDC-80846000 0124+00 r=1 e=0 z=0  None .text      calc__18daHoZelda_matAnm_cCFP11J3DMaterial                   */
+/* 80845EDC-80846000 0124+00 s=0 e=0 z=0  None .text      calc__18daHoZelda_matAnm_cCFP11J3DMaterial                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -530,110 +286,7 @@ asm void daHoZelda_matAnm_c::calc(J3DMaterial* param_0) const {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848F04-80848F24 0020+00 r=1 e=0 z=0  None .data      l_daHoZelda_Method                                           */
-SECTION_DATA static void* l_daHoZelda_Method[8] = {
-	/* 0    */ (void*)daHoZelda_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daHoZelda_Delete__FP11daHoZelda_c,
-	/* 2    */ (void*)daHoZelda_Execute__FP11daHoZelda_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daHoZelda_Draw__FP11daHoZelda_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80848F24-80848F54 0030+00 r=1 e=0 z=1  None .data      g_profile_HOZELDA                                            */
-SECTION_DATA void* g_profile_HOZELDA[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02240000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000708,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01130000,
-	/* 9    */ (void*)&l_daHoZelda_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x04000000,
-};
-
-/* 80848F54-80848F60 000C+00 r=2 e=0 z=0  None .data      __vt__16daPy_frameCtrl_c                                     */
-SECTION_DATA static void* __vt__16daPy_frameCtrl_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daPy_frameCtrl_cFv,
-};
-
-/* 80848F60-80848F6C 000C+00 r=5 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
-};
-
-/* 80848F6C-80848F78 000C+00 r=2 e=0 z=0  None .data      __vt__11J3DTexNoAnm                                          */
-SECTION_DATA static void* __vt__11J3DTexNoAnm[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)calc__11J3DTexNoAnmCFPUs,
-};
-
-/* 80848F78-80848FA4 002C+00 r=2 e=0 z=0  None .data      __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
-SECTION_DATA static void* data_80848F78[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_8084642C,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_80848CE0,
-	/* 10   */ (void*)func_80848D08,
-};
-
-/* 80848FA4-80848FD0 002C+00 r=3 e=0 z=0  None .data      __vt__19J3DMtxCalcNoAnmBase                                  */
-SECTION_DATA static void* __vt__19J3DMtxCalcNoAnmBase[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J3DMtxCalcNoAnmBaseFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-};
-
-/* 80848FD0-80848FFC 002C+00 r=4 e=0 z=0  None .data      __vt__10J3DMtxCalc                                           */
-SECTION_DATA static void* __vt__10J3DMtxCalc[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J3DMtxCalcFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-};
-
-/* 80848FFC-8084900C 0010+00 r=2 e=0 z=0  None .data      __vt__18daHoZelda_matAnm_c                                   */
-SECTION_DATA static void* __vt__18daHoZelda_matAnm_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18daHoZelda_matAnm_cFv,
-	/* 3    */ (void*)calc__18daHoZelda_matAnm_cCFP11J3DMaterial,
-};
-
-/* 80846000-8084642C 042C+00 r=1 e=0 z=0  None .text      createHeap__11daHoZelda_cFv                                  */
+/* 80846000-8084642C 042C+00 s=1 e=0 z=0  None .text      createHeap__11daHoZelda_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +297,7 @@ asm void daHoZelda_c::createHeap() {
 #pragma pop
 
 
-/* 8084642C-80846498 006C+00 r=1 e=0 z=0  None .text      __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
+/* 8084642C-80846498 006C+00 s=0 e=0 z=0  None .text      __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -655,7 +308,7 @@ asm J3DMtxCalcNoAnm__template0::~J3DMtxCalcNoAnm__template0() {
 #pragma pop
 
 
-/* 80846498-808464F4 005C+00 r=1 e=0 z=0  None .text      __dt__19J3DMtxCalcNoAnmBaseFv                                */
+/* 80846498-808464F4 005C+00 s=0 e=0 z=0  None .text      __dt__19J3DMtxCalcNoAnmBaseFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -666,7 +319,7 @@ asm J3DMtxCalcNoAnmBase::~J3DMtxCalcNoAnmBase() {
 #pragma pop
 
 
-/* 808464F4-8084653C 0048+00 r=1 e=0 z=0  None .text      __dt__10J3DMtxCalcFv                                         */
+/* 808464F4-8084653C 0048+00 s=0 e=0 z=0  None .text      __dt__10J3DMtxCalcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +330,7 @@ asm J3DMtxCalc::~J3DMtxCalc() {
 #pragma pop
 
 
-/* 8084653C-80846578 003C+00 r=2 e=0 z=0  None .text      __dt__15J3DTevKColorAnmFv                                    */
+/* 8084653C-80846578 003C+00 s=0 e=0 z=0  None .text      __dt__15J3DTevKColorAnmFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,7 +341,7 @@ asm J3DTevKColorAnm::~J3DTevKColorAnm() {
 #pragma pop
 
 
-/* 80846578-80846590 0018+00 r=1 e=0 z=0  None .text      __ct__15J3DTevKColorAnmFv                                    */
+/* 80846578-80846590 0018+00 s=0 e=0 z=0  None .text      __ct__15J3DTevKColorAnmFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -699,7 +352,7 @@ asm J3DTevKColorAnm::J3DTevKColorAnm() {
 #pragma pop
 
 
-/* 80846590-808465CC 003C+00 r=2 e=0 z=0  None .text      __dt__14J3DTevColorAnmFv                                     */
+/* 80846590-808465CC 003C+00 s=0 e=0 z=0  None .text      __dt__14J3DTevColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,7 +363,7 @@ asm J3DTevColorAnm::~J3DTevColorAnm() {
 #pragma pop
 
 
-/* 808465CC-808465E4 0018+00 r=1 e=0 z=0  None .text      __ct__14J3DTevColorAnmFv                                     */
+/* 808465CC-808465E4 0018+00 s=0 e=0 z=0  None .text      __ct__14J3DTevColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,7 +374,7 @@ asm J3DTevColorAnm::J3DTevColorAnm() {
 #pragma pop
 
 
-/* 808465E4-8084662C 0048+00 r=2 e=0 z=0  None .text      __dt__11J3DTexNoAnmFv                                        */
+/* 808465E4-8084662C 0048+00 s=0 e=0 z=0  None .text      __dt__11J3DTexNoAnmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -732,7 +385,7 @@ asm J3DTexNoAnm::~J3DTexNoAnm() {
 #pragma pop
 
 
-/* 8084662C-80846650 0024+00 r=1 e=0 z=0  None .text      __ct__11J3DTexNoAnmFv                                        */
+/* 8084662C-80846650 0024+00 s=0 e=0 z=0  None .text      __ct__11J3DTexNoAnmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -743,7 +396,7 @@ asm J3DTexNoAnm::J3DTexNoAnm() {
 #pragma pop
 
 
-/* 80846650-8084668C 003C+00 r=2 e=0 z=0  None .text      __dt__12J3DTexMtxAnmFv                                       */
+/* 80846650-8084668C 003C+00 s=0 e=0 z=0  None .text      __dt__12J3DTexMtxAnmFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -754,7 +407,7 @@ asm J3DTexMtxAnm::~J3DTexMtxAnm() {
 #pragma pop
 
 
-/* 8084668C-808466A4 0018+00 r=1 e=0 z=0  None .text      __ct__12J3DTexMtxAnmFv                                       */
+/* 8084668C-808466A4 0018+00 s=0 e=0 z=0  None .text      __ct__12J3DTexMtxAnmFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +418,7 @@ asm J3DTexMtxAnm::J3DTexMtxAnm() {
 #pragma pop
 
 
-/* 808466A4-808466E0 003C+00 r=2 e=0 z=0  None .text      __dt__14J3DMatColorAnmFv                                     */
+/* 808466A4-808466E0 003C+00 s=0 e=0 z=0  None .text      __dt__14J3DMatColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +429,7 @@ asm J3DMatColorAnm::~J3DMatColorAnm() {
 #pragma pop
 
 
-/* 808466E0-808466F8 0018+00 r=1 e=0 z=0  None .text      __ct__14J3DMatColorAnmFv                                     */
+/* 808466E0-808466F8 0018+00 s=0 e=0 z=0  None .text      __ct__14J3DMatColorAnmFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,18 +440,18 @@ asm J3DMatColorAnm::J3DMatColorAnm() {
 #pragma pop
 
 
-/* 808466F8-80846718 0020+00 r=1 e=0 z=0  None .text      daHoZelda_createHeap__FP10fopAc_ac_c                         */
+/* 808466F8-80846718 0020+00 s=0 e=0 z=0  None .text      daHoZelda_createHeap__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_createHeap(fopAc_ac_c* param_0) {
+asm void daHoZelda_createHeap(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_createHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80846718-8084696C 0254+00 r=1 e=0 z=0  None .text      modelCallBack__11daHoZelda_cFUs                              */
+/* 80846718-8084696C 0254+00 s=1 e=0 z=0  None .text      modelCallBack__11daHoZelda_cFUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -809,18 +462,18 @@ asm void daHoZelda_c::modelCallBack(u16 param_0) {
 #pragma pop
 
 
-/* 8084696C-808469B0 0044+00 r=1 e=0 z=0  None .text      daHoZelda_modelCallBack__FP8J3DJointi                        */
+/* 8084696C-808469B0 0044+00 s=0 e=0 z=0  None .text      daHoZelda_modelCallBack__FP8J3DJointi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_modelCallBack(J3DJoint* param_0, int param_1) {
+asm void daHoZelda_modelCallBack(J3DJoint* param_0, int param_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_modelCallBack__FP8J3DJointi.s"
 }
 #pragma pop
 
 
-/* 808469B0-80846C4C 029C+00 r=1 e=0 z=0  None .text      create__11daHoZelda_cFv                                      */
+/* 808469B0-80846C4C 029C+00 s=1 e=0 z=0  None .text      create__11daHoZelda_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -831,7 +484,7 @@ asm void daHoZelda_c::create() {
 #pragma pop
 
 
-/* 80846C4C-80846CA8 005C+00 r=3 e=0 z=0  None .text      __dt__16daPy_frameCtrl_cFv                                   */
+/* 80846C4C-80846CA8 005C+00 s=0 e=0 z=0  None .text      __dt__16daPy_frameCtrl_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,7 +495,7 @@ asm daPy_frameCtrl_c::~daPy_frameCtrl_c() {
 #pragma pop
 
 
-/* 80846CA8-80846CF4 004C+00 r=1 e=0 z=0  None .text      __ct__16daPy_frameCtrl_cFv                                   */
+/* 80846CA8-80846CF4 004C+00 s=0 e=0 z=0  None .text      __ct__16daPy_frameCtrl_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -853,7 +506,7 @@ asm daPy_frameCtrl_c::daPy_frameCtrl_c() {
 #pragma pop
 
 
-/* 80846CF4-80846D30 003C+00 r=2 e=0 z=0  None .text      __dt__19mDoExt_AnmRatioPackFv                                */
+/* 80846CF4-80846D30 003C+00 s=0 e=0 z=0  None .text      __dt__19mDoExt_AnmRatioPackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -864,7 +517,7 @@ asm mDoExt_AnmRatioPack::~mDoExt_AnmRatioPack() {
 #pragma pop
 
 
-/* 80846D30-80846D48 0018+00 r=1 e=0 z=0  None .text      __ct__19mDoExt_AnmRatioPackFv                                */
+/* 80846D30-80846D48 0018+00 s=0 e=0 z=0  None .text      __ct__19mDoExt_AnmRatioPackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -875,7 +528,7 @@ asm mDoExt_AnmRatioPack::mDoExt_AnmRatioPack() {
 #pragma pop
 
 
-/* 80846D48-80846D90 0048+00 r=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80846D48-80846D90 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -886,18 +539,18 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80846D90-80846DB0 0020+00 r=1 e=0 z=0  None .text      daHoZelda_Create__FP10fopAc_ac_c                             */
+/* 80846D90-80846DB0 0020+00 s=0 e=0 z=0  None .text      daHoZelda_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_Create(fopAc_ac_c* param_0) {
+asm void daHoZelda_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80846DB0-80846F24 0174+00 r=1 e=0 z=0  None .text      __dt__11daHoZelda_cFv                                        */
+/* 80846DB0-80846F24 0174+00 s=1 e=0 z=0  None .text      __dt__11daHoZelda_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -908,18 +561,18 @@ asm daHoZelda_c::~daHoZelda_c() {
 #pragma pop
 
 
-/* 80846F24-80846F4C 0028+00 r=1 e=0 z=0  None .text      daHoZelda_Delete__FP11daHoZelda_c                            */
+/* 80846F24-80846F4C 0028+00 s=0 e=0 z=0  None .text      daHoZelda_Delete__FP11daHoZelda_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_Delete(daHoZelda_c* param_0) {
+asm void daHoZelda_Delete(daHoZelda_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_Delete__FP11daHoZelda_c.s"
 }
 #pragma pop
 
 
-/* 80846F4C-8084718C 0240+00 r=1 e=0 z=0  None .text      setDoubleAnime__11daHoZelda_cFfffUsUsf                       */
+/* 80846F4C-8084718C 0240+00 s=1 e=0 z=0  None .text      setDoubleAnime__11daHoZelda_cFfffUsUsf                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -930,7 +583,7 @@ asm void daHoZelda_c::setDoubleAnime(f32 param_0, f32 param_1, f32 param_2, u16 
 #pragma pop
 
 
-/* 8084718C-80847234 00A8+00 r=1 e=0 z=0  None .text      setUpperAnime__11daHoZelda_cFUs                              */
+/* 8084718C-80847234 00A8+00 s=1 e=0 z=0  None .text      setUpperAnime__11daHoZelda_cFUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -941,14 +594,7 @@ asm void daHoZelda_c::setUpperAnime(u16 param_0) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848E64-80848E68 0004+00 r=0 e=0 z=0  None .rodata    @4062                                                        */
-SECTION_RODATA u32 const lit_4062 = 0xBF800000;
-
-/* 80848E68-80848E6C 0004+00 r=1 e=0 z=0  None .rodata    @4209                                                        */
-SECTION_RODATA static u32 const lit_4209 = 0x40400000;
-
-/* 80847234-808472C0 008C+00 r=3 e=0 z=0  None .text      resetUpperAnime__11daHoZelda_cFv                             */
+/* 80847234-808472C0 008C+00 s=3 e=0 z=0  None .text      resetUpperAnime__11daHoZelda_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,7 +605,7 @@ asm void daHoZelda_c::resetUpperAnime() {
 #pragma pop
 
 
-/* 808472C0-80847430 0170+00 r=2 e=0 z=0  None .text      setSingleAnime__11daHoZelda_cFUsffsf                         */
+/* 808472C0-80847430 0170+00 s=2 e=0 z=0  None .text      setSingleAnime__11daHoZelda_cFUsffsf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -970,7 +616,7 @@ asm void daHoZelda_c::setSingleAnime(u16 param_0, f32 param_1, f32 param_2, s16 
 #pragma pop
 
 
-/* 80847430-80847574 0144+00 r=1 e=0 z=0  None .text      animePlay__11daHoZelda_cFv                                   */
+/* 80847430-80847574 0144+00 s=1 e=0 z=0  None .text      animePlay__11daHoZelda_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -981,7 +627,7 @@ asm void daHoZelda_c::animePlay() {
 #pragma pop
 
 
-/* 80847574-808475F0 007C+00 r=2 e=0 z=0  None .text      setEyeBtp__11daHoZelda_cFUs                                  */
+/* 80847574-808475F0 007C+00 s=2 e=0 z=0  None .text      setEyeBtp__11daHoZelda_cFUs                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -992,7 +638,7 @@ asm void daHoZelda_c::setEyeBtp(u16 param_0) {
 #pragma pop
 
 
-/* 808475F0-80847670 0080+00 r=2 e=0 z=0  None .text      setEyeBtk__11daHoZelda_cFUsUc                                */
+/* 808475F0-80847670 0080+00 s=2 e=0 z=0  None .text      setEyeBtk__11daHoZelda_cFUsUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1003,7 +649,7 @@ asm void daHoZelda_c::setEyeBtk(u16 param_0, u8 param_1) {
 #pragma pop
 
 
-/* 80847670-808476B0 0040+00 r=2 e=0 z=0  None .text      setNormalFace__11daHoZelda_cFv                               */
+/* 80847670-808476B0 0040+00 s=2 e=0 z=0  None .text      setNormalFace__11daHoZelda_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1014,7 +660,7 @@ asm void daHoZelda_c::setNormalFace() {
 #pragma pop
 
 
-/* 808476B0-80847E44 0794+00 r=1 e=0 z=0  None .text      setAnm__11daHoZelda_cFv                                      */
+/* 808476B0-80847E44 0794+00 s=1 e=0 z=0  None .text      setAnm__11daHoZelda_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1025,7 +671,7 @@ asm void daHoZelda_c::setAnm() {
 #pragma pop
 
 
-/* 80847E44-80847F54 0110+00 r=2 e=0 z=0  None .text      setBowModel__11daHoZelda_cFv                                 */
+/* 80847E44-80847F54 0110+00 s=2 e=0 z=0  None .text      setBowModel__11daHoZelda_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1036,43 +682,7 @@ asm void daHoZelda_c::setBowModel() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848E6C-80848E70 0004+00 r=0 e=0 z=0  None .rodata    @4283                                                        */
-SECTION_RODATA u32 const lit_4283 = 0x3C449BA6;
-
-/* 80848E70-80848E74 0004+00 r=0 e=0 z=0  None .rodata    @4530                                                        */
-SECTION_RODATA u32 const lit_4530 = 0x40800000;
-
-/* 80848E74-80848E80 000C+00 r=0 e=0 z=0  None .rodata    localEyePos$4537                                             */
-SECTION_RODATA u8 const data_80848E74[12] = {
-	0x41, 0x00, 0x00, 0x00, 0xC1, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80848E80-80848E8C 000C+00 r=0 e=0 z=0  None .rodata    localHeadCenterPos$4538                                      */
-SECTION_RODATA u8 const data_80848E80[12] = {
-	0x41, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80848E8C-80848E90 0004+00 r=0 e=0 z=0  None .rodata    @4580                                                        */
-SECTION_RODATA u32 const lit_4580 = 0x42A00000;
-
-/* 80848E90-80848E94 0004+00 r=0 e=0 z=0  None .rodata    @4581                                                        */
-SECTION_RODATA u32 const lit_4581 = 0x41200000;
-
-/* 80848E94-80848E98 0004+00 r=0 e=0 z=0  None .rodata    @4582                                                        */
-SECTION_RODATA u32 const lit_4582 = 0xC0000000;
-
-/* 80848E98-80848EA4 000C+00 r=1 e=0 z=0  None .rodata    localHorseRidePos$4586                                       */
-SECTION_RODATA static u8 const data_80848E98[12] = {
-	0xC0, 0xBC, 0x9B, 0xA6, 0x42, 0x52, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
-};
-
-/* 80848EA4-80848EB0 000C+00 r=1 e=0 z=0  None .rodata    localFrontHorseRidePos$4587                                  */
-SECTION_RODATA static u8 const data_80848EA4[12] = {
-	0xC2, 0x97, 0xC9, 0xBA, 0x42, 0x66, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
-};
-
-/* 80847F54-80848058 0104+00 r=2 e=0 z=0  None .text      setMatrix__11daHoZelda_cFv                                   */
+/* 80847F54-80848058 0104+00 s=2 e=0 z=0  None .text      setMatrix__11daHoZelda_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,7 +693,7 @@ asm void daHoZelda_c::setMatrix() {
 #pragma pop
 
 
-/* 80848058-80848090 0038+00 r=1 e=0 z=0  None .text      shootArrow__11daHoZelda_cFv                                  */
+/* 80848058-80848090 0038+00 s=1 e=0 z=0  None .text      shootArrow__11daHoZelda_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1094,7 +704,7 @@ asm void daHoZelda_c::shootArrow() {
 #pragma pop
 
 
-/* 80848090-80848118 0088+00 r=1 e=0 z=0  None .text      deleteArrow__11daHoZelda_cFv                                 */
+/* 80848090-80848118 0088+00 s=1 e=0 z=0  None .text      deleteArrow__11daHoZelda_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1105,7 +715,7 @@ asm void daHoZelda_c::deleteArrow() {
 #pragma pop
 
 
-/* 80848118-8084819C 0084+00 r=2 e=0 z=0  None .text      setBowBck__11daHoZelda_cFUs                                  */
+/* 80848118-8084819C 0084+00 s=2 e=0 z=0  None .text      setBowBck__11daHoZelda_cFUs                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1116,18 +726,7 @@ asm void daHoZelda_c::setBowBck(u16 param_0) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 80848EB0-80848EBC 000C+00 r=1 e=0 z=0  None .rodata    baseRidePos$4672                                             */
-SECTION_RODATA static u8 const data_80848EB0[12] = {
-	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x6C, 0xB3, 0x33, 0xC2, 0x7E, 0x37, 0x4C,
-};
-
-/* 80848EBC-80848EC8 000C+00 r=1 e=0 z=0  None .rodata    frontRidePos$4673                                            */
-SECTION_RODATA static u8 const data_80848EBC[12] = {
-	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x71, 0xB3, 0x33, 0x40, 0xCE, 0x45, 0xA0,
-};
-
-/* 8084819C-80848204 0068+00 r=2 e=0 z=0  None .text      setRideOffset__11daHoZelda_cFv                               */
+/* 8084819C-80848204 0068+00 s=2 e=0 z=0  None .text      setRideOffset__11daHoZelda_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1138,7 +737,7 @@ asm void daHoZelda_c::setRideOffset() {
 #pragma pop
 
 
-/* 80848204-80848254 0050+00 r=2 e=0 z=0  None .text      clearEyeMove__11daHoZelda_cFv                                */
+/* 80848204-80848254 0050+00 s=2 e=0 z=0  None .text      clearEyeMove__11daHoZelda_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1149,7 +748,7 @@ asm void daHoZelda_c::clearEyeMove() {
 #pragma pop
 
 
-/* 80848254-808484B8 0264+00 r=1 e=0 z=0  None .text      setEyeMove__11daHoZelda_cFPC4cXyzss                          */
+/* 80848254-808484B8 0264+00 s=1 e=0 z=0  None .text      setEyeMove__11daHoZelda_cFPC4cXyzss                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1160,7 +759,7 @@ asm void daHoZelda_c::setEyeMove(cXyz const* param_0, s16 param_1, s16 param_2) 
 #pragma pop
 
 
-/* 808484B8-80848774 02BC+00 r=1 e=0 z=0  None .text      setNeckAngle__11daHoZelda_cFv                                */
+/* 808484B8-80848774 02BC+00 s=1 e=0 z=0  None .text      setNeckAngle__11daHoZelda_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1171,7 +770,7 @@ asm void daHoZelda_c::setNeckAngle() {
 #pragma pop
 
 
-/* 80848774-808489CC 0258+00 r=1 e=0 z=0  None .text      searchBodyAngle__11daHoZelda_cFv                             */
+/* 80848774-808489CC 0258+00 s=1 e=0 z=0  None .text      searchBodyAngle__11daHoZelda_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1182,7 +781,7 @@ asm void daHoZelda_c::searchBodyAngle() {
 #pragma pop
 
 
-/* 808489CC-80848B44 0178+00 r=1 e=0 z=0  None .text      execute__11daHoZelda_cFv                                     */
+/* 808489CC-80848B44 0178+00 s=1 e=0 z=0  None .text      execute__11daHoZelda_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1193,18 +792,18 @@ asm void daHoZelda_c::execute() {
 #pragma pop
 
 
-/* 80848B44-80848B64 0020+00 r=1 e=0 z=0  None .text      daHoZelda_Execute__FP11daHoZelda_c                           */
+/* 80848B44-80848B64 0020+00 s=0 e=0 z=0  None .text      daHoZelda_Execute__FP11daHoZelda_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_Execute(daHoZelda_c* param_0) {
+asm void daHoZelda_Execute(daHoZelda_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_Execute__FP11daHoZelda_c.s"
 }
 #pragma pop
 
 
-/* 80848B64-80848C68 0104+00 r=1 e=0 z=0  None .text      draw__11daHoZelda_cFv                                        */
+/* 80848B64-80848C68 0104+00 s=1 e=0 z=0  None .text      draw__11daHoZelda_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1215,18 +814,18 @@ asm void daHoZelda_c::draw() {
 #pragma pop
 
 
-/* 80848C68-80848C88 0020+00 r=1 e=0 z=0  None .text      daHoZelda_Draw__FP11daHoZelda_c                              */
+/* 80848C68-80848C88 0020+00 s=0 e=0 z=0  None .text      daHoZelda_Draw__FP11daHoZelda_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daHoZelda_Draw(daHoZelda_c* param_0) {
+asm void daHoZelda_Draw(daHoZelda_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/daHoZelda_Draw__FP11daHoZelda_c.s"
 }
 #pragma pop
 
 
-/* 80848C88-80848CB8 0030+00 r=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
+/* 80848C88-80848CB8 0030+00 s=0 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1237,7 +836,7 @@ asm void J3DTexNoAnm::calc(u16* param_0) const {
 #pragma pop
 
 
-/* 80848CB8-80848CBC 0004+00 r=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
+/* 80848CB8-80848CBC 0004+00 s=0 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1248,7 +847,7 @@ asm void J3DMtxCalc::setAnmTransform(u8 param_0, J3DAnmTransform* param_1) {
 #pragma pop
 
 
-/* 80848CBC-80848CC0 0004+00 r=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
+/* 80848CBC-80848CC0 0004+00 s=0 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1259,7 +858,7 @@ asm void J3DMtxCalc::setAnmTransform(J3DAnmTransform* param_0) {
 #pragma pop
 
 
-/* 80848CC0-80848CC8 0008+00 r=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFUc                             */
+/* 80848CC0-80848CC8 0008+00 s=0 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1270,7 +869,7 @@ asm void J3DMtxCalc::getAnmTransform(u8 param_0) {
 #pragma pop
 
 
-/* 80848CC8-80848CD0 0008+00 r=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFv                              */
+/* 80848CC8-80848CD0 0008+00 s=0 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1281,7 +880,7 @@ asm void J3DMtxCalc::getAnmTransform() {
 #pragma pop
 
 
-/* 80848CD0-80848CD4 0004+00 r=3 e=0 z=0  None .text      setWeight__10J3DMtxCalcFUcf                                  */
+/* 80848CD0-80848CD4 0004+00 s=0 e=0 z=0  None .text      setWeight__10J3DMtxCalcFUcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1292,7 +891,7 @@ asm void J3DMtxCalc::setWeight(u8 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 80848CD4-80848CE0 000C+00 r=3 e=0 z=0  None .text      getWeight__10J3DMtxCalcCFUc                                  */
+/* 80848CD4-80848CE0 000C+00 s=0 e=0 z=0  None .text      getWeight__10J3DMtxCalcCFUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1303,7 +902,7 @@ asm void J3DMtxCalc::getWeight(u8 param_0) const {
 #pragma pop
 
 
-/* 80848CE0-80848D08 0028+00 r=1 e=0 z=0  None .text      init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
+/* 80848CE0-80848D08 0028+00 s=0 e=0 z=0  None .text      init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1314,7 +913,7 @@ asm void J3DMtxCalcNoAnm__template0::init(Vec const& param_0, f32 const (& param
 #pragma pop
 
 
-/* 80848D08-80848D38 0030+00 r=1 e=0 z=0  None .text      calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
+/* 80848D08-80848D38 0030+00 s=0 e=0 z=0  None .text      calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1325,7 +924,7 @@ asm void J3DMtxCalcNoAnm__template0::calc() {
 #pragma pop
 
 
-/* 80848D38-80848D54 001C+00 r=1 e=0 z=0  None .text      cLib_calcTimer<Uc>__FPUc                                     */
+/* 80848D38-80848D54 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<Uc>__FPUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1336,7 +935,7 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 #pragma pop
 
 
-/* 80848D54-80848E34 00E0+00 r=1 e=0 z=0  None .text      __dt__18daHoZelda_matAnm_cFv                                 */
+/* 80848D54-80848E34 00E0+00 s=0 e=0 z=0  None .text      __dt__18daHoZelda_matAnm_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1348,45 +947,206 @@ asm daHoZelda_matAnm_c::~daHoZelda_matAnm_c() {
 
 
 /* ############################################################################################## */
-/* 80848EC8-80848ECC 0004+00 r=0 e=0 z=0  None .rodata    @4752                                                        */
+/* 80848E3C-80848E44 0008+00 s=0 e=0 z=0  None .rodata    l_arcName                                                    */
+SECTION_RODATA u8 const l_arcName[8] = {
+	0x48, 0x6F, 0x5A, 0x65, 0x6C, 0x64, 0x61, 0x00,
+};
+
+/* 80848E44-80848E54 0010+00 s=0 e=0 z=0  None .rodata    m__16daHoZelda_hio_c0                                        */
+SECTION_RODATA u8 const m__16daHoZelda_hio_c0[16] = {
+	0x03, 0x8E, 0x2A, 0xAA, 0x40, 0x00, 0x00, 0x00, 0x45, 0x5A, 0xC0, 0x00, 0x45, 0x7A, 0x00, 0x00,
+};
+
+/* 80848E54-80848E58 0004+00 s=0 e=0 z=0  None .rodata    @3697                                                        */
+SECTION_RODATA u8 const lit_3697[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80848E58-80848E5C 0004+00 s=0 e=0 z=0  None .rodata    @3722                                                        */
+SECTION_RODATA u32 const lit_3722 = 0x3F800000;
+
+/* 80848E5C-80848E64 0008+00 s=0 e=0 z=0  None .rodata    @3724                                                        */
+SECTION_RODATA u8 const lit_3724[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80848E64-80848E68 0004+00 s=0 e=0 z=0  None .rodata    @4062                                                        */
+SECTION_RODATA u32 const lit_4062 = 0xBF800000;
+
+/* 80848E68-80848E6C 0004+00 s=0 e=0 z=0  None .rodata    @4209                                                        */
+SECTION_RODATA u32 const lit_4209 = 0x40400000;
+
+/* 80848E6C-80848E70 0004+00 s=0 e=0 z=0  None .rodata    @4283                                                        */
+SECTION_RODATA u32 const lit_4283 = 0x3C449BA6;
+
+/* 80848E70-80848E74 0004+00 s=0 e=0 z=0  None .rodata    @4530                                                        */
+SECTION_RODATA u32 const lit_4530 = 0x40800000;
+
+/* 80848E74-80848E80 000C+00 s=0 e=0 z=0  None .rodata    localEyePos$4537                                             */
+SECTION_RODATA u8 const data_80848E74[12] = {
+	0x41, 0x00, 0x00, 0x00, 0xC1, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80848E80-80848E8C 000C+00 s=0 e=0 z=0  None .rodata    localHeadCenterPos$4538                                      */
+SECTION_RODATA u8 const data_80848E80[12] = {
+	0x41, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80848E8C-80848E90 0004+00 s=0 e=0 z=0  None .rodata    @4580                                                        */
+SECTION_RODATA u32 const lit_4580 = 0x42A00000;
+
+/* 80848E90-80848E94 0004+00 s=0 e=0 z=0  None .rodata    @4581                                                        */
+SECTION_RODATA u32 const lit_4581 = 0x41200000;
+
+/* 80848E94-80848E98 0004+00 s=0 e=0 z=0  None .rodata    @4582                                                        */
+SECTION_RODATA u32 const lit_4582 = 0xC0000000;
+
+/* 80848E98-80848EA4 000C+00 s=0 e=0 z=0  None .rodata    localHorseRidePos$4586                                       */
+SECTION_RODATA u8 const data_80848E98[12] = {
+	0xC0, 0xBC, 0x9B, 0xA6, 0x42, 0x52, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
+};
+
+/* 80848EA4-80848EB0 000C+00 s=0 e=0 z=0  None .rodata    localFrontHorseRidePos$4587                                  */
+SECTION_RODATA u8 const data_80848EA4[12] = {
+	0xC2, 0x97, 0xC9, 0xBA, 0x42, 0x66, 0x70, 0xA4, 0x40, 0x82, 0x87, 0x2B,
+};
+
+/* 80848EB0-80848EBC 000C+00 s=0 e=0 z=0  None .rodata    baseRidePos$4672                                             */
+SECTION_RODATA u8 const data_80848EB0[12] = {
+	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x6C, 0xB3, 0x33, 0xC2, 0x7E, 0x37, 0x4C,
+};
+
+/* 80848EBC-80848EC8 000C+00 s=0 e=0 z=0  None .rodata    frontRidePos$4673                                            */
+SECTION_RODATA u8 const data_80848EBC[12] = {
+	0x3D, 0xCC, 0xCC, 0xCD, 0x43, 0x71, 0xB3, 0x33, 0x40, 0xCE, 0x45, 0xA0,
+};
+
+/* 80848EC8-80848ECC 0004+00 s=0 e=0 z=0  None .rodata    @4752                                                        */
 SECTION_RODATA u32 const lit_4752 = 0x39000000;
 
-/* 80848ECC-80848ED0 0004+00 r=0 e=0 z=0  None .rodata    @4753                                                        */
+/* 80848ECC-80848ED0 0004+00 s=0 e=0 z=0  None .rodata    @4753                                                        */
 SECTION_RODATA u32 const lit_4753 = 0xBE4CCCCD;
 
-/* 80848ED0-80848ED4 0004+00 r=0 e=0 z=0  None .rodata    @4754                                                        */
+/* 80848ED0-80848ED4 0004+00 s=0 e=0 z=0  None .rodata    @4754                                                        */
 SECTION_RODATA u32 const lit_4754 = 0x3E4CCCCD;
 
-/* 80848ED4-80848ED8 0004+00 r=0 e=0 z=0  None .rodata    @4755                                                        */
+/* 80848ED4-80848ED8 0004+00 s=0 e=0 z=0  None .rodata    @4755                                                        */
 SECTION_RODATA u32 const lit_4755 = 0x3F000000;
 
-/* 80848ED8-80848EDC 0004+00 r=0 e=0 z=0  None .rodata    @4756                                                        */
+/* 80848ED8-80848EDC 0004+00 s=0 e=0 z=0  None .rodata    @4756                                                        */
 SECTION_RODATA u32 const lit_4756 = 0x3DCCCCCD;
 
-/* 80848EDC-80848EE0 0004+00 r=0 e=0 z=0  None .rodata    @4757                                                        */
+/* 80848EDC-80848EE0 0004+00 s=0 e=0 z=0  None .rodata    @4757                                                        */
 SECTION_RODATA u32 const lit_4757 = 0x3CF5C28F;
 
-/* 80848EE0-80848EE4 0004+00 r=0 e=0 z=0  None .rodata    @4861                                                        */
+/* 80848EE0-80848EE4 0004+00 s=0 e=0 z=0  None .rodata    @4861                                                        */
 SECTION_RODATA u32 const lit_4861 = 0x48742400;
 
-/* 80848EE4-80848EE8 0004+00 r=0 e=0 z=0  None .rodata    @4862                                                        */
+/* 80848EE4-80848EE8 0004+00 s=0 e=0 z=0  None .rodata    @4862                                                        */
 SECTION_RODATA u32 const lit_4862 = 0x47AFC800;
 
-/* 80848EE8-80848EEC 0004+00 r=0 e=0 z=0  None .rodata    @4938                                                        */
+/* 80848EE8-80848EEC 0004+00 s=0 e=0 z=0  None .rodata    @4938                                                        */
 SECTION_RODATA u32 const lit_4938 = 0x42200000;
 
-/* 80848EEC-80848EF4 0008+00 r=0 e=0 z=0  None .rodata    @4939                                                        */
+/* 80848EEC-80848EF4 0008+00 s=0 e=0 z=0  None .rodata    @4939                                                        */
 SECTION_RODATA u8 const lit_4939[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80848EF4-80848EFC 0008+00 r=0 e=0 z=0  None .rodata    @4940                                                        */
+/* 80848EF4-80848EFC 0008+00 s=0 e=0 z=0  None .rodata    @4940                                                        */
 SECTION_RODATA u8 const lit_4940[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80848EFC-80848F04 0008+00 r=0 e=0 z=0  None .rodata    @4941                                                        */
+/* 80848EFC-80848F04 0008+00 s=0 e=0 z=0  None .rodata    @4941                                                        */
 SECTION_RODATA u8 const lit_4941[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80848F04-80848F24 0020+00 s=0 e=0 z=0  None .data      l_daHoZelda_Method                                           */
+SECTION_DATA u8 l_daHoZelda_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80848F24-80848F54 0030+00 s=0 e=0 z=0  None .data      g_profile_HOZELDA                                            */
+SECTION_DATA u8 g_profile_HOZELDA[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x07, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x13, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
+};
+
+/* 80848F54-80848F60 000C+00 s=0 e=0 z=0  None .data      __vt__16daPy_frameCtrl_c                                     */
+SECTION_DATA void* __vt__16daPy_frameCtrl_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80848F60-80848F6C 000C+00 s=0 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA void* __vt__12J3DFrameCtrl[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80848F6C-80848F78 000C+00 s=0 e=0 z=0  None .data      __vt__11J3DTexNoAnm                                          */
+SECTION_DATA void* __vt__11J3DTexNoAnm[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+};
+
+/* 80848F78-80848FA4 002C+00 s=0 e=0 z=0  None .data      __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
+SECTION_DATA void* data_80848F78[11] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+};
+
+/* 80848FA4-80848FD0 002C+00 s=0 e=0 z=0  None .data      __vt__19J3DMtxCalcNoAnmBase                                  */
+SECTION_DATA void* __vt__19J3DMtxCalcNoAnmBase[11] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+};
+
+/* 80848FD0-80848FFC 002C+00 s=0 e=0 z=0  None .data      __vt__10J3DMtxCalc                                           */
+SECTION_DATA void* __vt__10J3DMtxCalc[11] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+};
+
+/* 80848FFC-8084900C 0010+00 s=0 e=0 z=0  None .data      __vt__18daHoZelda_matAnm_c                                   */
+SECTION_DATA void* __vt__18daHoZelda_matAnm_c[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 };
 

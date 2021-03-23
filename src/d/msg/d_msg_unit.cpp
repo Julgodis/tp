@@ -56,7 +56,7 @@ extern "C" extern u8 g_meter2_info[248];
 // 
 
 /* ############################################################################################## */
-/* 803C0BF0-803C0C00 000C+04 r=2 e=0 z=0  None .data      __vt__10dMsgUnit_c                                           */
+/* 803C0BF0-803C0C00 000C+04 s=2 e=0 z=0  None .data      __vt__10dMsgUnit_c                                           */
 SECTION_DATA static void* __vt__10dMsgUnit_c[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -65,7 +65,7 @@ SECTION_DATA static void* __vt__10dMsgUnit_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80238C94-80238CA4 0010+00 r=1 e=0 z=0  None .text      __ct__10dMsgUnit_cFv                                         */
+/* 80238C94-80238CA4 0010+00 s=1 e=0 z=0  None .text      __ct__10dMsgUnit_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm dMsgUnit_c::dMsgUnit_c() {
 #pragma pop
 
 
-/* 80238CA4-80238CEC 0048+00 r=2 e=0 z=0  None .text      __dt__10dMsgUnit_cFv                                         */
+/* 80238CA4-80238CEC 0048+00 s=2 e=0 z=0  None .text      __dt__10dMsgUnit_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm dMsgUnit_c::~dMsgUnit_c() {
 
 
 /* ############################################################################################## */
-/* 803996E8-80399708 001D+03 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803996E8-80399708 001D+03 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -102,23 +102,23 @@ SECTION_DEAD char const* const stringBase_803996FF = "%d %s";
 SECTION_DEAD static char const* const pad_80399705 = "\0\0";
 #pragma pop
 
-/* 80454B40-80454B44 0004+00 r=1 e=0 z=0  None .sdata2    @3702                                                        */
+/* 80454B40-80454B44 0004+00 s=1 e=0 z=0  None .sdata2    @3702                                                        */
 SECTION_SDATA2 static f32 d_msg_d_msg_unit__lit_3702 = 1000000.0f;
 
-/* 80454B44-80454B48 0004+00 r=1 e=0 z=0  None .sdata2    @3703                                                        */
+/* 80454B44-80454B48 0004+00 s=1 e=0 z=0  None .sdata2    @3703                                                        */
 SECTION_SDATA2 static f32 d_msg_d_msg_unit__lit_3703 = 60.0f;
 
-/* 80454B48-80454B50 0004+04 r=1 e=0 z=0  None .sdata2    @3704                                                        */
+/* 80454B48-80454B50 0004+04 s=1 e=0 z=0  None .sdata2    @3704                                                        */
 SECTION_SDATA2 static f32 d_msg_d_msg_unit__lit_3704[1 + 1 /* padding */] = {
 	15.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80454B50-80454B58 0008+00 r=1 e=0 z=0  None .sdata2    @3707                                                        */
+/* 80454B50-80454B58 0008+00 s=1 e=0 z=0  None .sdata2    @3707                                                        */
 SECTION_SDATA2 static f64 lit_3707 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80238CEC-8023907C 0390+00 r=5 e=5 z=0  None .text      setTag__10dMsgUnit_cFiiPcb                                   */
+/* 80238CEC-8023907C 0390+00 s=0 e=5 z=0  None .text      setTag__10dMsgUnit_cFiiPcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,13 +130,13 @@ asm void dMsgUnit_c::setTag(int param_0, int param_1, char* param_2, bool param_
 
 
 /* ############################################################################################## */
-/* 804306B8-804306C8 000C+04 r=1 e=0 z=0  None .bss       @3640                                                        */
+/* 804306B8-804306C8 000C+04 s=1 e=0 z=0  None .bss       @3640                                                        */
 static u8 lit_3640[12 + 4 /* padding */];
 
-/* 804510D0-804510D8 0004+04 r=6 e=5 z=0  None .sbss      g_msg_unit                                                   */
+/* 804510D0-804510D8 0004+04 s=1 e=5 z=0  None .sbss      g_msg_unit                                                   */
 u8 g_msg_unit[4 + 4 /* padding */];
 
-/* 8023907C-802390B4 0038+00 r=1 e=1 z=0  None .text      __sinit_d_msg_unit_cpp                                       */
+/* 8023907C-802390B4 0038+00 s=0 e=1 z=0  None .text      __sinit_d_msg_unit_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,6 +148,6 @@ extern "C" asm void __sinit_d_msg_unit_cpp() {
 
 
 /* ############################################################################################## */
-/* 804510D8-804510E0 0008+00 r=2 e=2 z=0  None .sbss      None                                                         */
+/* 804510D8-804510E0 0008+00 s=0 e=2 z=0  None .sbss      None                                                         */
 u8 data_804510D8[8];
 

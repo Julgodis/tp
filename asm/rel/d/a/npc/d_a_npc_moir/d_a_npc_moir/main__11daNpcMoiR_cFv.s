@@ -5,20 +5,20 @@ lbl_80A81274:
 /* 80A81280 0000000C  93 E1 01 0C */	stw r31, 0x10c(r1)
 /* 80A81284 00000010  93 C1 01 08 */	stw r30, 0x108(r1)
 /* 80A81288 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80A8128C 00000018  3C 60 00 00 */	lis r3, m__17daNpcMoiR_Param_c@ha /* 80A832AC */
-/* 80A81290 0000001C  3B E3 00 00 */	addi r31, r3, m__17daNpcMoiR_Param_c@l /* 80A832AC */
+/* 80A8128C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A81290 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80A81294 00000020  38 7E 0D DC */	addi r3, r30, 0xddc
-/* 80A81298 00000024  4B FF AE 41 */	bl __ptmf_test
+/* 80A81298 00000024  4B FF AE 41 */	bl _unresolved
 /* 80A8129C 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80A812A0 0000002C  41 82 00 18 */	beq lbl_80A812B8
 /* 80A812A4 00000030  7F C3 F3 78 */	mr r3, r30
 /* 80A812A8 00000034  38 80 00 00 */	li r4, 0
 /* 80A812AC 00000038  39 9E 0D DC */	addi r12, r30, 0xddc
-/* 80A812B0 0000003C  4B FF AE 29 */	bl __ptmf_scall
+/* 80A812B0 0000003C  4B FF AE 29 */	bl _unresolved
 /* 80A812B4 00000040  60 00 00 00 */	nop 
 lbl_80A812B8:
-/* 80A812B8 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80A812BC 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80A812B8 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A812BC 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A812C0 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A812C4 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80A812C8 00000010  41 82 00 30 */	beq lbl_80A812F8
@@ -30,7 +30,7 @@ lbl_80A812B8:
 /* 80A812E0 00000028  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80A812E4 0000002C  41 82 00 14 */	beq lbl_80A812F8
 /* 80A812E8 00000030  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80A812EC 00000034  4B FF AD ED */	bl setPtI_Id__14dEvt_control_cFUi
+/* 80A812EC 00000034  4B FF AD ED */	bl _unresolved
 /* 80A812F0 00000038  38 00 FF FF */	li r0, -1
 /* 80A812F4 0000003C  90 1E 0D F8 */	stw r0, 0xdf8(r30)
 lbl_80A812F8:
@@ -206,7 +206,7 @@ lbl_80A814F0:
 /* 80A81598 000000A8  40 80 00 10 */	bge lbl_80A815A8
 /* 80A8159C 000000AC  7F C3 F3 78 */	mr r3, r30
 /* 80A815A0 000000B0  38 81 00 BC */	addi r4, r1, 0xbc
-/* 80A815A4 000000B4  4B FF AB 35 */	bl playExpressionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80A815A4 000000B4  4B FF AB 35 */	bl _unresolved
 lbl_80A815A8:
 /* 80A815A8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80A815AC 00000004  48 00 03 09 */	bl playMotion__11daNpcMoiR_cFv

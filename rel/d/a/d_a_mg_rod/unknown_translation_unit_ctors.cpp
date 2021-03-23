@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_804BB520[2];
+extern u8 data_804BB520[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_mg_rod_cpp(); // 1
 
 // 
 // Declarations:

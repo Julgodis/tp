@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C9F274[2];
+extern u8 data_80C9F274[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_myogan_cpp(); // 1
 
 // 
 // Declarations:

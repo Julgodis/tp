@@ -114,7 +114,7 @@ extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803AB688-803AB6B8 0030+00 r=2 e=0 z=0  None .data      __vt__18dBgS_CamGndChk_Wtr                                   */
+/* 803AB688-803AB6B8 0030+00 s=2 e=0 z=0  None .data      __vt__18dBgS_CamGndChk_Wtr                                   */
 SECTION_DATA static void* __vt__18dBgS_CamGndChk_Wtr[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -130,7 +130,7 @@ SECTION_DATA static void* __vt__18dBgS_CamGndChk_Wtr[12] = {
 	/* 11   */ (void*)func_80077B90,
 };
 
-/* 803AB6B8-803AB6E8 0030+00 r=4 e=2 z=0  None .data      __vt__14dBgS_CamGndChk                                       */
+/* 803AB6B8-803AB6E8 0030+00 s=2 e=2 z=0  None .data      __vt__14dBgS_CamGndChk                                       */
 SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -146,7 +146,7 @@ SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
 	/* 11   */ (void*)func_80077B78,
 };
 
-/* 803AB6E8-803AB718 0030+00 r=12 e=3 z=8  None .data      __vt__18dBgS_ObjGndChk_All                                   */
+/* 803AB6E8-803AB718 0030+00 s=1 e=3 z=0  None .data      __vt__18dBgS_ObjGndChk_All                                   */
 SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -162,7 +162,7 @@ SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
 	/* 11   */ (void*)func_80077B60,
 };
 
-/* 803AB718-803AB748 0030+00 r=2 e=0 z=0  None .data      __vt__18dBgS_ObjGndChk_Spl                                   */
+/* 803AB718-803AB748 0030+00 s=2 e=0 z=0  None .data      __vt__18dBgS_ObjGndChk_Spl                                   */
 SECTION_DATA static void* __vt__18dBgS_ObjGndChk_Spl[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -178,7 +178,7 @@ SECTION_DATA static void* __vt__18dBgS_ObjGndChk_Spl[12] = {
 	/* 11   */ (void*)func_80077B48,
 };
 
-/* 803AB748-803AB778 0030+00 r=2 e=0 z=0  None .data      __vt__18dBgS_ObjGndChk_Wtr                                   */
+/* 803AB748-803AB778 0030+00 s=2 e=0 z=0  None .data      __vt__18dBgS_ObjGndChk_Wtr                                   */
 SECTION_DATA static void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -194,7 +194,7 @@ SECTION_DATA static void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	/* 11   */ (void*)func_80077B30,
 };
 
-/* 803AB778-803AB7A8 0030+00 r=2 e=0 z=0  None .data      __vt__11dBgS_GndChk                                          */
+/* 803AB778-803AB7A8 0030+00 s=2 e=0 z=0  None .data      __vt__11dBgS_GndChk                                          */
 SECTION_DATA static void* __vt__11dBgS_GndChk[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -210,7 +210,7 @@ SECTION_DATA static void* __vt__11dBgS_GndChk[12] = {
 	/* 11   */ (void*)func_80077B18,
 };
 
-/* 8007757C-800775F0 0074+00 r=307 e=15 z=289  None .text      __ct__11dBgS_GndChkFv                                        */
+/* 8007757C-800775F0 0074+00 s=3 e=15 z=0  None .text      __ct__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +221,7 @@ asm dBgS_GndChk::dBgS_GndChk() {
 #pragma pop
 
 
-/* 800775F0-80077678 0088+00 r=316 e=13 z=295  None .text      __dt__11dBgS_GndChkFv                                        */
+/* 800775F0-80077678 0088+00 s=8 e=13 z=0  None .text      __dt__11dBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +232,7 @@ asm dBgS_GndChk::~dBgS_GndChk() {
 #pragma pop
 
 
-/* 80077678-80077710 0098+00 r=1 e=0 z=1  None .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077678-80077710 0098+00 s=0 e=0 z=0  None .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ asm dBgS_ObjGndChk_Wtr::dBgS_ObjGndChk_Wtr() {
 #pragma pop
 
 
-/* 80077710-800777B0 00A0+00 r=5 e=0 z=1  None .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077710-800777B0 00A0+00 s=4 e=0 z=0  None .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +254,7 @@ asm dBgS_ObjGndChk_Wtr::~dBgS_ObjGndChk_Wtr() {
 #pragma pop
 
 
-/* 800777B0-80077848 0098+00 r=61 e=0 z=61  None .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
+/* 800777B0-80077848 0098+00 s=0 e=0 z=0  None .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +265,7 @@ asm dBgS_ObjGndChk_Spl::dBgS_ObjGndChk_Spl() {
 #pragma pop
 
 
-/* 80077848-800778E8 00A0+00 r=65 e=0 z=61  None .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
+/* 80077848-800778E8 00A0+00 s=4 e=0 z=0  None .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +276,7 @@ asm dBgS_ObjGndChk_Spl::~dBgS_ObjGndChk_Spl() {
 #pragma pop
 
 
-/* 800778E8-80077988 00A0+00 r=14 e=3 z=7  None .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
+/* 800778E8-80077988 00A0+00 s=4 e=3 z=0  None .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +287,7 @@ asm dBgS_ObjGndChk_All::~dBgS_ObjGndChk_All() {
 #pragma pop
 
 
-/* 80077988-80077A00 0078+00 r=7 e=2 z=0  None .text      __dt__14dBgS_CamGndChkFv                                     */
+/* 80077988-80077A00 0078+00 s=5 e=2 z=0  None .text      __dt__14dBgS_CamGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +298,7 @@ asm dBgS_CamGndChk::~dBgS_CamGndChk() {
 #pragma pop
 
 
-/* 80077A00-80077A98 0098+00 r=6 e=5 z=1  None .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A00-80077A98 0098+00 s=0 e=5 z=0  None .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +309,7 @@ asm dBgS_CamGndChk_Wtr::dBgS_CamGndChk_Wtr() {
 #pragma pop
 
 
-/* 80077A98-80077B10 0078+00 r=10 e=5 z=1  None .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A98-80077B10 0078+00 s=4 e=5 z=0  None .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +320,7 @@ asm dBgS_CamGndChk_Wtr::~dBgS_CamGndChk_Wtr() {
 #pragma pop
 
 
-/* 80077B10-80077B18 0008+00 r=1 e=0 z=0  None .text      @20@__dt__11dBgS_GndChkFv                                    */
+/* 80077B10-80077B18 0008+00 s=1 e=0 z=0  None .text      @20@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +331,7 @@ extern "C" asm static void func_80077B10() {
 #pragma pop
 
 
-/* 80077B18-80077B20 0008+00 r=1 e=0 z=0  None .text      @76@__dt__11dBgS_GndChkFv                                    */
+/* 80077B18-80077B20 0008+00 s=1 e=0 z=0  None .text      @76@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,7 +342,7 @@ extern "C" asm static void func_80077B18() {
 #pragma pop
 
 
-/* 80077B20-80077B28 0008+00 r=1 e=0 z=0  None .text      @60@__dt__11dBgS_GndChkFv                                    */
+/* 80077B20-80077B28 0008+00 s=1 e=0 z=0  None .text      @60@__dt__11dBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,7 +353,7 @@ extern "C" asm static void func_80077B20() {
 #pragma pop
 
 
-/* 80077B28-80077B30 0008+00 r=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B28-80077B30 0008+00 s=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,7 +364,7 @@ extern "C" asm static void func_80077B28() {
 #pragma pop
 
 
-/* 80077B30-80077B38 0008+00 r=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B30-80077B38 0008+00 s=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -375,7 +375,7 @@ extern "C" asm static void func_80077B30() {
 #pragma pop
 
 
-/* 80077B38-80077B40 0008+00 r=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B38-80077B40 0008+00 s=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +386,7 @@ extern "C" asm static void func_80077B38() {
 #pragma pop
 
 
-/* 80077B40-80077B48 0008+00 r=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B40-80077B48 0008+00 s=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,7 +397,7 @@ extern "C" asm static void func_80077B40() {
 #pragma pop
 
 
-/* 80077B48-80077B50 0008+00 r=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B48-80077B50 0008+00 s=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +408,7 @@ extern "C" asm static void func_80077B48() {
 #pragma pop
 
 
-/* 80077B50-80077B58 0008+00 r=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B50-80077B58 0008+00 s=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_SplFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +419,7 @@ extern "C" asm static void func_80077B50() {
 #pragma pop
 
 
-/* 80077B58-80077B60 0008+00 r=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B58-80077B60 0008+00 s=1 e=0 z=0  None .text      @20@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +430,7 @@ extern "C" asm static void func_80077B58() {
 #pragma pop
 
 
-/* 80077B60-80077B68 0008+00 r=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B60-80077B68 0008+00 s=1 e=0 z=0  None .text      @76@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +441,7 @@ extern "C" asm static void func_80077B60() {
 #pragma pop
 
 
-/* 80077B68-80077B70 0008+00 r=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B68-80077B70 0008+00 s=1 e=0 z=0  None .text      @60@__dt__18dBgS_ObjGndChk_AllFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +452,7 @@ extern "C" asm static void func_80077B68() {
 #pragma pop
 
 
-/* 80077B70-80077B78 0008+00 r=1 e=0 z=0  None .text      @20@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B70-80077B78 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +463,7 @@ extern "C" asm static void func_80077B70() {
 #pragma pop
 
 
-/* 80077B78-80077B80 0008+00 r=1 e=0 z=0  None .text      @76@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B78-80077B80 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +474,7 @@ extern "C" asm static void func_80077B78() {
 #pragma pop
 
 
-/* 80077B80-80077B88 0008+00 r=1 e=0 z=0  None .text      @60@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B80-80077B88 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_CamGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +485,7 @@ extern "C" asm static void func_80077B80() {
 #pragma pop
 
 
-/* 80077B88-80077B90 0008+00 r=1 e=0 z=0  None .text      @20@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B88-80077B90 0008+00 s=1 e=0 z=0  None .text      @20@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +496,7 @@ extern "C" asm static void func_80077B88() {
 #pragma pop
 
 
-/* 80077B90-80077B98 0008+00 r=1 e=0 z=0  None .text      @76@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B90-80077B98 0008+00 s=1 e=0 z=0  None .text      @76@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,7 +507,7 @@ extern "C" asm static void func_80077B90() {
 #pragma pop
 
 
-/* 80077B98-80077BA0 0008+00 r=1 e=0 z=0  None .text      @60@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B98-80077BA0 0008+00 s=1 e=0 z=0  None .text      @60@__dt__18dBgS_CamGndChk_WtrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

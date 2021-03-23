@@ -5,15 +5,15 @@ lbl_80CDAA28:
 /* 80CDAA34 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CDAA38 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CDAA3C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CDAA40 00000018  3C 80 00 00 */	lis r4, l_cyl_src@ha /* 80CDB7F4 */
-/* 80CDAA44 0000001C  3B C4 00 00 */	addi r30, r4, l_cyl_src@l /* 80CDB7F4 */
+/* 80CDAA40 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CDAA44 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80CDAA48 00000020  38 9F 07 A4 */	addi r4, r31, 0x7a4
-/* 80CDAA4C 00000024  4B FF ED 4D */	bl fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
+/* 80CDAA4C 00000024  4B FF ED 4D */	bl _unresolved
 /* 80CDAA50 00000028  38 7F 05 8C */	addi r3, r31, 0x58c
-/* 80CDAA54 0000002C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CDAA58 00000030  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CDAA54 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CDAA58 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CDAA5C 00000034  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80CDAA60 00000038  4B FF ED 39 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80CDAA60 00000038  4B FF ED 39 */	bl _unresolved
 /* 80CDAA64 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80CDAA68 00000040  4B FF FC 19 */	bl bg_check__7daKey_cFv
 /* 80CDAA6C 00000044  80 1F 05 B8 */	lwz r0, 0x5b8(r31)
@@ -38,8 +38,8 @@ lbl_80CDAAB0:
 /* 80CDAAB4 00000004  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 80CDAAB8 00000008  90 1F 05 5C */	stw r0, 0x55c(r31)
 lbl_80CDAABC:
-/* 80CDAABC 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CDAAC0 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CDAABC 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CDAAC0 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CDAAC4 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CDAAC8 0000000C  80 1F 04 9C */	lwz r0, 0x49c(r31)
 /* 80CDAACC 00000010  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
@@ -51,7 +51,7 @@ lbl_80CDAABC:
 /* 80CDAAE4 00000028  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
 /* 80CDAAE8 0000002C  41 82 00 24 */	beq lbl_80CDAB0C
 /* 80CDAAEC 00000030  7F E3 FB 78 */	mr r3, r31
-/* 80CDAAF0 00000034  4B FF EC A9 */	bl fopAcM_cancelCarryNow__FP10fopAc_ac_c
+/* 80CDAAF0 00000034  4B FF EC A9 */	bl _unresolved
 /* 80CDAAF4 00000038  7F E3 FB 78 */	mr r3, r31
 /* 80CDAAF8 0000003C  48 00 00 7D */	bl initActionOrderGetDemo__7daKey_cFv
 /* 80CDAAFC 00000040  48 00 00 10 */	b lbl_80CDAB0C

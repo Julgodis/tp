@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CA78E8[2];
+extern u8 data_80CA78E8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_oiltubo_cpp(); // 1
 
 // 
 // Declarations:

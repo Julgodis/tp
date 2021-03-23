@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BFD318[2];
+extern u8 data_80BFD318[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_gm_cpp(); // 1
 
 // 
 // Declarations:

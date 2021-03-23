@@ -9,15 +9,15 @@ lbl_80D2814C:
 /* 80D28168 0000001C  40 82 00 40 */	bne lbl_80D281A8
 /* 80D2816C 00000020  38 00 00 09 */	li r0, 9
 /* 80D28170 00000024  98 1F 05 CA */	stb r0, 0x5ca(r31)
-/* 80D28174 00000028  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D28178 0000002C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D28174 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D28178 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D2817C 00000030  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80D28180 00000034  3C 80 00 00 */	lis r4, l_staff_name@ha /* 80D29744 */
-/* 80D28184 00000038  38 84 00 00 */	addi r4, r4, l_staff_name@l /* 80D29744 */
+/* 80D28180 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D28184 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D28188 0000003C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D2818C 00000040  38 A0 00 00 */	li r5, 0
 /* 80D28190 00000044  38 C0 00 00 */	li r6, 0
-/* 80D28194 00000048  4B FF ED 85 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80D28194 00000048  4B FF ED 85 */	bl _unresolved
 /* 80D28198 0000004C  90 7F 05 D4 */	stw r3, 0x5d4(r31)
 /* 80D2819C 00000050  7F E3 FB 78 */	mr r3, r31
 /* 80D281A0 00000054  48 00 00 AD */	bl demoProc__15daObjWarpKBrg_cFv
@@ -32,7 +32,7 @@ lbl_80D281A8:
 /* 80D281C0 00000018  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 80D281C4 0000001C  38 E0 00 02 */	li r7, 2
 /* 80D281C8 00000020  39 00 00 01 */	li r8, 1
-/* 80D281CC 00000024  4B FF ED 4D */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 80D281CC 00000024  4B FF ED 4D */	bl _unresolved
 lbl_80D281D0:
 /* 80D281D0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80D281D4 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

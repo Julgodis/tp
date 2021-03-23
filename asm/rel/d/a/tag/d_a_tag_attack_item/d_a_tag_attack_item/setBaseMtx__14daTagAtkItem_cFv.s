@@ -5,9 +5,9 @@ lbl_805A2958:
 /* 805A2964 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805A2968 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 805A296C 00000014  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 805A2970 00000018  4B FF FF C9 */	bl transS__14mDoMtx_stack_cFRC4cXyz
+/* 805A2970 00000018  4B FF FF C9 */	bl _unresolved
 /* 805A2974 0000001C  38 7F 04 E4 */	addi r3, r31, 0x4e4
-/* 805A2978 00000020  4B FF FF C1 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
+/* 805A2978 00000020  4B FF FF C1 */	bl _unresolved
 /* 805A297C 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 805A2980 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 805A2984 0000002C  7C 08 03 A6 */	mtlr r0

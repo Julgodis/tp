@@ -66,7 +66,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // Declarations:
 // 
 
-/* 800517B0-800517EC 003C+00 r=70 e=7 z=63  None .text      dPath_GetPnt__FPC5dPathi                                     */
+/* 800517B0-800517EC 003C+00 s=0 e=7 z=0  None .text      dPath_GetPnt__FPC5dPathi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm void dPath_GetPnt(dPath const* param_0, int param_1) {
 #pragma pop
 
 
-/* 800517EC-80051898 00AC+00 r=95 e=12 z=82  None .text      dPath_GetRoomPath__Fii                                       */
+/* 800517EC-80051898 00AC+00 s=1 e=12 z=0  None .text      dPath_GetRoomPath__Fii                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm void dPath_GetRoomPath(int param_0, int param_1) {
 #pragma pop
 
 
-/* 80051898-8005195C 00C4+00 r=4 e=1 z=3  None .text      dPath_GetNextRoomPath__FPC5dPathi                            */
+/* 80051898-8005195C 00C4+00 s=0 e=1 z=0  None .text      dPath_GetNextRoomPath__FPC5dPathi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,14 +100,14 @@ asm void dPath_GetNextRoomPath(dPath const* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80452000-80452008 0004+04 r=1 e=0 z=0  None .sdata2    @3685                                                        */
+/* 80452000-80452008 0004+04 s=1 e=0 z=0  None .sdata2    @3685                                                        */
 SECTION_SDATA2 static u8 d_d_path__lit_3685[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8005195C-80051AC0 0164+00 r=5 e=1 z=4  None .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
+/* 8005195C-80051AC0 0164+00 s=0 e=1 z=0  None .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

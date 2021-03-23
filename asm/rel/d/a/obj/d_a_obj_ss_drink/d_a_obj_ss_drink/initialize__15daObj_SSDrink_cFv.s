@@ -5,8 +5,8 @@ lbl_80CE5BF0:
 /* 80CE5BFC 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CE5C00 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CE5C04 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CE5C08 00000018  3C 80 00 00 */	lis r4, mCcDObjInfo__15daObj_SSDrink_c@ha /* 80CE6930 */
-/* 80CE5C0C 0000001C  3B C4 00 00 */	addi r30, r4, mCcDObjInfo__15daObj_SSDrink_c@l /* 80CE6930 */
+/* 80CE5C08 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CE5C0C 0000001C  3B C4 00 00 */	addi r30, r4, 0x0000 /* 0x00000000@l */
 /* 80CE5C10 00000020  80 83 05 8C */	lwz r4, 0x58c(r3)
 /* 80CE5C14 00000024  38 04 00 24 */	addi r0, r4, 0x24
 /* 80CE5C18 00000028  90 03 05 04 */	stw r0, 0x504(r3)
@@ -16,7 +16,7 @@ lbl_80CE5BF0:
 /* 80CE5C28 00000038  C0 9E 00 3C */	lfs f4, 0x3c(r30)
 /* 80CE5C2C 0000003C  C0 BE 00 48 */	lfs f5, 0x48(r30)
 /* 80CE5C30 00000040  FC C0 20 90 */	fmr f6, f4
-/* 80CE5C34 00000044  4B FF F3 25 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80CE5C34 00000044  4B FF F3 25 */	bl _unresolved
 /* 80CE5C38 00000048  7F E3 FB 78 */	mr r3, r31
 /* 80CE5C3C 0000004C  4B FF FE 15 */	bl getResName__15daObj_SSDrink_cFv
 /* 80CE5C40 00000050  90 7F 01 00 */	stw r3, 0x100(r31)
@@ -33,7 +33,7 @@ lbl_80CE5BF0:
 /* 80CE5C6C 0000007C  38 7F 07 A4 */	addi r3, r31, 0x7a4
 /* 80CE5C70 00000080  C0 3E 00 4C */	lfs f1, 0x4c(r30)
 /* 80CE5C74 00000084  C0 5E 00 50 */	lfs f2, 0x50(r30)
-/* 80CE5C78 00000088  4B FF F2 E1 */	bl SetWall__12dBgS_AcchCirFff
+/* 80CE5C78 00000088  4B FF F2 E1 */	bl _unresolved
 lbl_80CE5C7C:
 /* 80CE5C7C 00000000  38 1F 04 E4 */	addi r0, r31, 0x4e4
 /* 80CE5C80 00000004  90 01 00 08 */	stw r0, 8(r1)
@@ -45,29 +45,29 @@ lbl_80CE5C7C:
 /* 80CE5C98 0000001C  39 1F 07 A4 */	addi r8, r31, 0x7a4
 /* 80CE5C9C 00000020  39 3F 04 F8 */	addi r9, r31, 0x4f8
 /* 80CE5CA0 00000024  39 5F 04 DC */	addi r10, r31, 0x4dc
-/* 80CE5CA4 00000028  4B FF F2 B5 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 80CE5CA4 00000028  4B FF F2 B5 */	bl _unresolved
 /* 80CE5CA8 0000002C  38 7F 07 68 */	addi r3, r31, 0x768
 /* 80CE5CAC 00000030  38 80 00 FF */	li r4, 0xff
 /* 80CE5CB0 00000034  38 A0 00 00 */	li r5, 0
 /* 80CE5CB4 00000038  7F E6 FB 78 */	mr r6, r31
-/* 80CE5CB8 0000003C  4B FF F2 A1 */	bl Init__9dCcD_SttsFiiP10fopAc_ac_c
+/* 80CE5CB8 0000003C  4B FF F2 A1 */	bl _unresolved
 /* 80CE5CBC 00000040  38 7F 07 E4 */	addi r3, r31, 0x7e4
-/* 80CE5CC0 00000044  3C 80 00 00 */	lis r4, mCcDCyl__15daObj_SSDrink_c@ha /* 80CE69EC */
-/* 80CE5CC4 00000048  38 84 00 00 */	addi r4, r4, mCcDCyl__15daObj_SSDrink_c@l /* 80CE69EC */
-/* 80CE5CC8 0000004C  4B FF F2 91 */	bl Set__8dCcD_CylFRC11dCcD_SrcCyl
+/* 80CE5CC0 00000044  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CE5CC4 00000048  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80CE5CC8 0000004C  4B FF F2 91 */	bl _unresolved
 /* 80CE5CCC 00000050  38 1F 07 68 */	addi r0, r31, 0x768
 /* 80CE5CD0 00000054  90 1F 08 28 */	stw r0, 0x828(r31)
 /* 80CE5CD4 00000058  38 7F 09 20 */	addi r3, r31, 0x920
-/* 80CE5CD8 0000005C  3C 80 00 00 */	lis r4, mCcDCyl__15daObj_SSDrink_c@ha /* 80CE69EC */
-/* 80CE5CDC 00000060  38 84 00 00 */	addi r4, r4, mCcDCyl__15daObj_SSDrink_c@l /* 80CE69EC */
-/* 80CE5CE0 00000064  4B FF F2 79 */	bl Set__8dCcD_CylFRC11dCcD_SrcCyl
+/* 80CE5CD8 0000005C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CE5CDC 00000060  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80CE5CE0 00000064  4B FF F2 79 */	bl _unresolved
 /* 80CE5CE4 00000068  38 1F 07 68 */	addi r0, r31, 0x768
 /* 80CE5CE8 0000006C  90 1F 09 64 */	stw r0, 0x964(r31)
 /* 80CE5CEC 00000070  38 7F 05 90 */	addi r3, r31, 0x590
-/* 80CE5CF0 00000074  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CE5CF4 00000078  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CE5CF0 00000074  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CE5CF4 00000078  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CE5CF8 0000007C  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80CE5CFC 00000080  4B FF F2 5D */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80CE5CFC 00000080  4B FF F2 5D */	bl _unresolved
 /* 80CE5D00 00000084  80 1F 06 6C */	lwz r0, 0x66c(r31)
 /* 80CE5D04 00000088  90 1F 0A 5C */	stw r0, 0xa5c(r31)
 /* 80CE5D08 0000008C  80 1F 06 70 */	lwz r0, 0x670(r31)

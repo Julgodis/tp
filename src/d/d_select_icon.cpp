@@ -61,7 +61,7 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803BB7B8-803BB7C8 000C+04 r=2 e=0 z=0  None .data      __vt__9dSi_HIO_c                                             */
+/* 803BB7B8-803BB7C8 000C+04 s=2 e=0 z=0  None .data      __vt__9dSi_HIO_c                                             */
 SECTION_DATA static void* __vt__9dSi_HIO_c[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -70,7 +70,7 @@ SECTION_DATA static void* __vt__9dSi_HIO_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80195A2C-80195A3C 0010+00 r=1 e=0 z=0  None .text      __ct__9dSi_HIO_cFv                                           */
+/* 80195A2C-80195A3C 0010+00 s=1 e=0 z=0  None .text      __ct__9dSi_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,17 +82,17 @@ asm dSi_HIO_c::dSi_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 80453A70-80453A78 0004+04 r=1 e=0 z=0  None .sdata2    @3740                                                        */
+/* 80453A70-80453A78 0004+04 s=1 e=0 z=0  None .sdata2    @3740                                                        */
 SECTION_SDATA2 static u8 d_d_select_icon__lit_3740[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453A78-80453A80 0008+00 r=1 e=0 z=0  None .sdata2    @3773                                                        */
+/* 80453A78-80453A80 0008+00 s=1 e=0 z=0  None .sdata2    @3773                                                        */
 SECTION_SDATA2 static f64 d_d_select_icon__lit_3773 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80195A3C-80195B40 0104+00 r=1 e=1 z=0  None .text      animation__14dSelect_icon_cFv                                */
+/* 80195A3C-80195B40 0104+00 s=0 e=1 z=0  None .text      animation__14dSelect_icon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void dSelect_icon_c::animation() {
 #pragma pop
 
 
-/* 80195B40-80195B70 0030+00 r=1 e=1 z=0  None .text      setAlpha__14dSelect_icon_cFUc                                */
+/* 80195B40-80195B70 0030+00 s=0 e=1 z=0  None .text      setAlpha__14dSelect_icon_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,14 +115,14 @@ asm void dSelect_icon_c::setAlpha(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 80453A80-80453A88 0004+04 r=1 e=0 z=0  None .sdata2    @3814                                                        */
+/* 80453A80-80453A88 0004+04 s=1 e=0 z=0  None .sdata2    @3814                                                        */
 SECTION_SDATA2 static f32 lit_3814[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80195B70-80195C1C 00AC+00 r=1 e=1 z=0  None .text      setPos__14dSelect_icon_cFP7J2DPaneff                         */
+/* 80195B70-80195C1C 00AC+00 s=0 e=1 z=0  None .text      setPos__14dSelect_icon_cFP7J2DPaneff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm void dSelect_icon_c::setPos(J2DPane* param_0, f32 param_1, f32 param_2) {
 #pragma pop
 
 
-/* 80195C1C-80195C64 0048+00 r=2 e=0 z=0  None .text      __dt__9dSi_HIO_cFv                                           */
+/* 80195C1C-80195C64 0048+00 s=2 e=0 z=0  None .text      __dt__9dSi_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,13 +145,13 @@ asm dSi_HIO_c::~dSi_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 8042CA10-8042CA20 000C+04 r=1 e=0 z=0  None .bss       @3648                                                        */
+/* 8042CA10-8042CA20 000C+04 s=1 e=0 z=0  None .bss       @3648                                                        */
 static u8 lit_3648[12 + 4 /* padding */];
 
-/* 80451050-80451058 0008+00 r=1 e=0 z=0  None .sbss      g_siHIO                                                      */
+/* 80451050-80451058 0008+00 s=1 e=0 z=0  None .sbss      g_siHIO                                                      */
 static u8 g_siHIO[8];
 
-/* 80195C64-80195C9C 0038+00 r=1 e=1 z=0  None .text      __sinit_d_select_icon_cpp                                    */
+/* 80195C64-80195C9C 0038+00 s=0 e=1 z=0  None .text      __sinit_d_select_icon_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

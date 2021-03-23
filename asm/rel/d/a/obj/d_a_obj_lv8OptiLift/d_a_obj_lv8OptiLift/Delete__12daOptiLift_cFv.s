@@ -5,14 +5,14 @@ lbl_80C8B824:
 /* 80C8B830 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C8B834 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C8B838 00000014  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80C8B83C 00000018  3C 80 00 00 */	lis r4, stringBase0@ha /* 80C8BA3C */
-/* 80C8B840 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l /* 80C8BA3C */
-/* 80C8B844 00000020  4B FF EA 35 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C8B83C 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C8B840 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80C8B844 00000020  4B FF EA 35 */	bl _unresolved
 /* 80C8B848 00000024  88 1F 06 14 */	lbz r0, 0x614(r31)
 /* 80C8B84C 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80C8B850 0000002C  41 82 00 0C */	beq lbl_80C8B85C
 /* 80C8B854 00000030  38 7F 05 F4 */	addi r3, r31, 0x5f4
-/* 80C8B858 00000034  4B FF EA 21 */	bl dKy_plight_cut__FP15LIGHT_INFLUENCE
+/* 80C8B858 00000034  4B FF EA 21 */	bl _unresolved
 lbl_80C8B85C:
 /* 80C8B85C 00000000  38 60 00 01 */	li r3, 1
 /* 80C8B860 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

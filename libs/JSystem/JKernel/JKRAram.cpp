@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JKRAramBlock {
+struct JKRExpandSwitch {
 };
 
 struct JKRHeap {
@@ -20,7 +20,7 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-struct JKRExpandSwitch {
+struct JKRAramBlock {
 };
 
 struct JKRAram {
@@ -169,10 +169,10 @@ extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 804513C8-804513CC 0004+00 r=12 e=9 z=0  None .sbss      sAramObject__7JKRAram                                        */
+/* 804513C8-804513CC 0004+00 s=3 e=9 z=0  None .sbss      sAramObject__7JKRAram                                        */
 u8 sAramObject__7JKRAram[4];
 
-/* 802D1FA4-802D2040 009C+00 r=1 e=1 z=0  None .text      create__7JKRAramFUlUllll                                     */
+/* 802D1FA4-802D2040 009C+00 s=0 e=1 z=0  None .text      create__7JKRAramFUlUllll                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,18 +184,18 @@ asm void JKRAram::create(u32 param_0, u32 param_1, s32 param_2, s32 param_3, s32
 
 
 /* ############################################################################################## */
-/* 803CC128-803CC138 0010+00 r=1 e=0 z=0  None .data      sMessageBuffer__7JKRAram                                     */
+/* 803CC128-803CC138 0010+00 s=1 e=0 z=0  None .data      sMessageBuffer__7JKRAram                                     */
 SECTION_DATA static u8 sMessageBuffer__7JKRAram[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC138-803CC158 0020+00 r=2 e=1 z=0  None .data      sMessageQueue__7JKRAram                                      */
+/* 803CC138-803CC158 0020+00 s=1 e=1 z=0  None .data      sMessageQueue__7JKRAram                                      */
 SECTION_DATA u8 sMessageQueue__7JKRAram[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC158-803CC168 0010+00 r=2 e=0 z=0  None .data      __vt__7JKRAram                                               */
+/* 803CC158-803CC168 0010+00 s=2 e=0 z=0  None .data      __vt__7JKRAram                                               */
 SECTION_DATA static void* __vt__7JKRAram[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -203,7 +203,7 @@ SECTION_DATA static void* __vt__7JKRAram[4] = {
 	/* 3    */ (void*)run__7JKRAramFv,
 };
 
-/* 802D2040-802D214C 010C+00 r=1 e=0 z=0  None .text      __ct__7JKRAramFUlUll                                         */
+/* 802D2040-802D214C 010C+00 s=1 e=0 z=0  None .text      __ct__7JKRAramFUlUll                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ asm JKRAram::JKRAram(u32 param_0, u32 param_1, s32 param_2) {
 #pragma pop
 
 
-/* 802D214C-802D21DC 0090+00 r=1 e=0 z=0  None .text      __dt__7JKRAramFv                                             */
+/* 802D214C-802D21DC 0090+00 s=1 e=0 z=0  None .text      __dt__7JKRAramFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm JKRAram::~JKRAram() {
 #pragma pop
 
 
-/* 802D21DC-802D2248 006C+00 r=1 e=0 z=0  None .text      run__7JKRAramFv                                              */
+/* 802D21DC-802D2248 006C+00 s=1 e=0 z=0  None .text      run__7JKRAramFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm void JKRAram::run() {
 
 
 /* ############################################################################################## */
-/* 8039D078-8039D0B8 003C+04 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039D078-8039D0B8 003C+04 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -249,7 +249,7 @@ SECTION_DEAD char const* const stringBase_8039D0A6 = "bad aramSync\n";
 SECTION_DEAD static char const* const pad_8039D0B4 = "\0\0\0";
 #pragma pop
 
-/* 802D2248-802D22DC 0094+00 r=2 e=0 z=0  None .text      checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl              */
+/* 802D2248-802D22DC 0094+00 s=2 e=0 z=0  None .text      checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +260,7 @@ asm void JKRAram::checkOkAddress(u8* param_0, u32 param_1, JKRAramBlock* param_2
 #pragma pop
 
 
-/* 802D22DC-802D233C 0060+00 r=1 e=0 z=0  None .text      changeGroupIdIfNeed__7JKRAramFPUci                           */
+/* 802D22DC-802D233C 0060+00 s=1 e=0 z=0  None .text      changeGroupIdIfNeed__7JKRAramFPUci                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,7 +271,7 @@ asm void JKRAram::changeGroupIdIfNeed(u8* param_0, int param_1) {
 #pragma pop
 
 
-/* 802D233C-802D25B4 0278+00 r=3 e=3 z=0  None .text      mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl */
+/* 802D233C-802D25B4 0278+00 s=0 e=3 z=0  None .text      mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +282,7 @@ asm void JKRAram::mainRamToAram(u8* param_0, u32 param_1, u32 param_2, JKRExpand
 #pragma pop
 
 
-/* 802D25B4-802D2830 027C+00 r=6 e=6 z=0  None .text      aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl */
+/* 802D25B4-802D2830 027C+00 s=0 e=6 z=0  None .text      aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,68 +294,68 @@ asm void JKRAram::aramToMainRam(u32 param_0, u8* param_1, u32 param_2, JKRExpand
 
 
 /* ############################################################################################## */
-/* 804342D0-804342DC 000C+00 r=1 e=0 z=0  None .bss       @492                                                         */
+/* 804342D0-804342DC 000C+00 s=1 e=0 z=0  None .bss       @492                                                         */
 static u8 JKRAram__lit_492[12];
 
-/* 804342DC-804342E8 000C+00 r=1 e=0 z=0  None .bss       sAramCommandList__7JKRAram                                   */
+/* 804342DC-804342E8 000C+00 s=1 e=0 z=0  None .bss       sAramCommandList__7JKRAram                                   */
 static u8 sAramCommandList__7JKRAram[12];
 
-/* 804342E8-80434300 0018+00 r=1 e=0 z=0  None .bss       decompMutex                                                  */
+/* 804342E8-80434300 0018+00 s=1 e=0 z=0  None .bss       decompMutex                                                  */
 static u8 JKRAram__decompMutex[24];
 
-/* 804508B8-804508C0 0004+04 r=2 e=1 z=0  None .sdata     sSZSBufferSize__7JKRAram                                     */
+/* 804508B8-804508C0 0004+04 s=1 e=1 z=0  None .sdata     sSZSBufferSize__7JKRAram                                     */
 SECTION_SDATA u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */] = {
 	0x00000400,
 	/* padding */
 	0x00000000,
 };
 
-/* 804513CC-804513D0 0004+00 r=3 e=0 z=0  None .sbss      szpBuf                                                       */
+/* 804513CC-804513D0 0004+00 s=3 e=0 z=0  None .sbss      szpBuf                                                       */
 static u8 JKRAram__szpBuf[4];
 
-/* 804513D0-804513D4 0004+00 r=3 e=0 z=0  None .sbss      szpEnd                                                       */
+/* 804513D0-804513D4 0004+00 s=3 e=0 z=0  None .sbss      szpEnd                                                       */
 static u8 JKRAram__szpEnd[4];
 
-/* 804513D4-804513D8 0004+00 r=2 e=0 z=0  None .sbss      refBuf                                                       */
+/* 804513D4-804513D8 0004+00 s=2 e=0 z=0  None .sbss      refBuf                                                       */
 static u8 JKRAram__refBuf[4];
 
-/* 804513D8-804513DC 0004+00 r=2 e=0 z=0  None .sbss      refEnd                                                       */
+/* 804513D8-804513DC 0004+00 s=2 e=0 z=0  None .sbss      refEnd                                                       */
 static u8 JKRAram__refEnd[4];
 
-/* 804513DC-804513E0 0004+00 r=2 e=0 z=0  None .sbss      refCurrent                                                   */
+/* 804513DC-804513E0 0004+00 s=2 e=0 z=0  None .sbss      refCurrent                                                   */
 static u8 JKRAram__refCurrent[4];
 
-/* 804513E0-804513E4 0004+00 r=3 e=0 z=0  None .sbss      srcOffset                                                    */
+/* 804513E0-804513E4 0004+00 s=3 e=0 z=0  None .sbss      srcOffset                                                    */
 static u8 JKRAram__srcOffset[4];
 
-/* 804513E4-804513E8 0004+00 r=4 e=0 z=0  None .sbss      transLeft                                                    */
+/* 804513E4-804513E8 0004+00 s=4 e=0 z=0  None .sbss      transLeft                                                    */
 static u8 JKRAram__transLeft[4];
 
-/* 804513E8-804513EC 0004+00 r=3 e=0 z=0  None .sbss      srcLimit                                                     */
+/* 804513E8-804513EC 0004+00 s=3 e=0 z=0  None .sbss      srcLimit                                                     */
 static u8 JKRAram__srcLimit[4];
 
-/* 804513EC-804513F0 0004+00 r=3 e=0 z=0  None .sbss      srcAddress                                                   */
+/* 804513EC-804513F0 0004+00 s=3 e=0 z=0  None .sbss      srcAddress                                                   */
 static u8 srcAddress[4];
 
-/* 804513F0-804513F4 0004+00 r=2 e=0 z=0  None .sbss      fileOffset                                                   */
+/* 804513F0-804513F4 0004+00 s=2 e=0 z=0  None .sbss      fileOffset                                                   */
 static u8 JKRAram__fileOffset[4];
 
-/* 804513F4-804513F8 0004+00 r=2 e=0 z=0  None .sbss      readCount                                                    */
+/* 804513F4-804513F8 0004+00 s=2 e=0 z=0  None .sbss      readCount                                                    */
 static u8 JKRAram__readCount[4];
 
-/* 804513F8-804513FC 0004+00 r=2 e=0 z=0  None .sbss      maxDest                                                      */
+/* 804513F8-804513FC 0004+00 s=2 e=0 z=0  None .sbss      maxDest                                                      */
 static u8 JKRAram__maxDest[4];
 
-/* 804513FC-80451400 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 804513FC-80451400 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804513FC[4];
 
-/* 80451400-80451404 0004+00 r=2 e=0 z=0  None .sbss      tsPtr                                                        */
+/* 80451400-80451404 0004+00 s=2 e=0 z=0  None .sbss      tsPtr                                                        */
 static u8 JKRAram__tsPtr[4];
 
-/* 80451404-80451408 0004+00 r=1 e=0 z=0  None .sbss      tsArea                                                       */
+/* 80451404-80451408 0004+00 s=1 e=0 z=0  None .sbss      tsArea                                                       */
 static u8 JKRAram__tsArea[4];
 
-/* 802D2830-802D29A0 0170+00 r=1 e=0 z=0  None .text      JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl               */
+/* 802D2830-802D29A0 0170+00 s=1 e=0 z=0  None .text      JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +366,7 @@ asm static void JKRDecompressFromAramToMainRam(u32 param_0, void* param_1, u32 p
 #pragma pop
 
 
-/* 802D29A0-802D2C40 02A0+00 r=1 e=0 z=0  None .text      decompSZS_subroutine__FPUcPUc                                */
+/* 802D29A0-802D2C40 02A0+00 s=1 e=0 z=0  None .text      decompSZS_subroutine__FPUcPUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,7 +377,7 @@ asm static void decompSZS_subroutine(u8* param_0, u8* param_1) {
 #pragma pop
 
 
-/* 802D2C40-802D2CE4 00A4+00 r=1 e=0 z=0  None .text      firstSrcData__Fv                                             */
+/* 802D2C40-802D2CE4 00A4+00 s=1 e=0 z=0  None .text      firstSrcData__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,7 +388,7 @@ asm static void firstSrcData() {
 #pragma pop
 
 
-/* 802D2CE4-802D2DAC 00C8+00 r=1 e=0 z=0  None .text      nextSrcData__FPUc                                            */
+/* 802D2CE4-802D2DAC 00C8+00 s=1 e=0 z=0  None .text      nextSrcData__FPUc                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,7 +399,7 @@ asm static void nextSrcData(u8* param_0) {
 #pragma pop
 
 
-/* 802D2DAC-802D2DF0 0044+00 r=1 e=1 z=0  None .text      __sinit_JKRAram_cpp                                          */
+/* 802D2DAC-802D2DF0 0044+00 s=0 e=1 z=0  None .text      __sinit_JKRAram_cpp                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +410,7 @@ extern "C" asm void __sinit_JKRAram_cpp() {
 #pragma pop
 
 
-/* 802D2DF0-802D2E44 0054+00 r=2 e=1 z=0  None .text      __dt__23JSUList<12JKRAMCommand>Fv                            */
+/* 802D2DF0-802D2E44 0054+00 s=1 e=1 z=0  None .text      __dt__23JSUList<12JKRAMCommand>Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

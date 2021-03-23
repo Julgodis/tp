@@ -3,7 +3,7 @@ lbl_80ACD900:
 /* 80ACD904 00000004  7C 08 02 A6 */	mflr r0
 /* 80ACD908 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80ACD90C 0000000C  38 63 10 E8 */	addi r3, r3, 0x10e8
-/* 80ACD910 00000010  4B FF DE 29 */	bl __ptmf_cmpr
+/* 80ACD910 00000010  4B FF DE 29 */	bl _unresolved
 /* 80ACD914 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 80ACD918 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 80ACD91C 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

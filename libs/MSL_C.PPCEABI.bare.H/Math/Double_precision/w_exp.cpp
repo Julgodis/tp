@@ -25,7 +25,7 @@ extern "C" void __ieee754_exp(); // 1
 // Declarations:
 // 
 
-/* 8036C740-8036C760 0020+00 r=1 e=1 z=0  None .text      exp                                                          */
+/* 8036C740-8036C760 0020+00 s=0 e=1 z=0  None .text      exp                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

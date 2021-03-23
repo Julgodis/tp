@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_805A4B0C[2];
+extern u8 data_805A4B0C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_tag_hstop_cpp(); // 1
 
 // 
 // Declarations:

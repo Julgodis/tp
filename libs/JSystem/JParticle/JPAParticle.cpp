@@ -84,7 +84,7 @@ extern "C" extern u32 __float_epsilon;
 // Declarations:
 // 
 
-/* 8027EFA4-8027EFEC 0048+00 r=12 e=11 z=1  None .text      __dt__19JPAParticleCallBackFv                                */
+/* 8027EFA4-8027EFEC 0048+00 s=0 e=11 z=0  None .text      __dt__19JPAParticleCallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,33 +96,33 @@ asm JPAParticleCallBack::~JPAParticleCallBack() {
 
 
 /* ############################################################################################## */
-/* 80455388-8045538C 0004+00 r=2 e=0 z=0  None .sdata2    @2565                                                        */
+/* 80455388-8045538C 0004+00 s=2 e=0 z=0  None .sdata2    @2565                                                        */
 SECTION_SDATA2 static f32 lit_2565 = 1.0f;
 
-/* 8045538C-80455390 0004+00 r=4 e=0 z=0  None .sdata2    @2566                                                        */
+/* 8045538C-80455390 0004+00 s=4 e=0 z=0  None .sdata2    @2566                                                        */
 SECTION_SDATA2 static u8 lit_2566[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455390-80455394 0004+00 r=2 e=0 z=0  None .sdata2    @2567                                                        */
+/* 80455390-80455394 0004+00 s=2 e=0 z=0  None .sdata2    @2567                                                        */
 SECTION_SDATA2 static f32 lit_2567 = 32.0f;
 
-/* 80455394-80455398 0004+00 r=2 e=0 z=0  None .sdata2    @2568                                                        */
+/* 80455394-80455398 0004+00 s=2 e=0 z=0  None .sdata2    @2568                                                        */
 SECTION_SDATA2 static f32 lit_2568 = 0.5f;
 
-/* 80455398-8045539C 0004+00 r=2 e=0 z=0  None .sdata2    @2569                                                        */
+/* 80455398-8045539C 0004+00 s=2 e=0 z=0  None .sdata2    @2569                                                        */
 SECTION_SDATA2 static f32 lit_2569 = 3.0f;
 
-/* 8045539C-804553A0 0004+00 r=1 e=0 z=0  None .sdata2    @2570                                                        */
+/* 8045539C-804553A0 0004+00 s=1 e=0 z=0  None .sdata2    @2570                                                        */
 SECTION_SDATA2 static f32 lit_2570 = 32768.0f;
 
-/* 804553A0-804553A8 0008+00 r=4 e=0 z=0  None .sdata2    @2572                                                        */
+/* 804553A0-804553A8 0008+00 s=4 e=0 z=0  None .sdata2    @2572                                                        */
 SECTION_SDATA2 static f64 lit_2572 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 804553A8-804553B0 0008+00 r=2 e=0 z=0  None .sdata2    @2574                                                        */
+/* 804553A8-804553B0 0008+00 s=2 e=0 z=0  None .sdata2    @2574                                                        */
 SECTION_SDATA2 static f64 lit_2574 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8027EFEC-8027F8C8 08DC+00 r=1 e=1 z=0  None .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027EFEC-8027F8C8 08DC+00 s=0 e=1 z=0  None .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm void JPABaseParticle::init_p(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 8027F8C8-8027FFD0 0708+00 r=1 e=1 z=0  None .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027F8C8-8027FFD0 0708+00 s=0 e=1 z=0  None .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm void JPABaseParticle::init_c(JPAEmitterWorkData* param_0, JPABaseParticle* p
 #pragma pop
 
 
-/* 8027FFD0-80280260 0290+00 r=1 e=1 z=0  None .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027FFD0-80280260 0290+00 s=0 e=1 z=0  None .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm void JPABaseParticle::calc_p(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 80280260-802804C8 0268+00 r=1 e=1 z=0  None .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 80280260-802804C8 0268+00 s=0 e=1 z=0  None .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ asm void JPABaseParticle::calc_c(JPAEmitterWorkData* param_0) {
 #pragma pop
 
 
-/* 802804C8-80280548 0080+00 r=1 e=0 z=0  None .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
+/* 802804C8-80280548 0080+00 s=1 e=0 z=0  None .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,14 +178,14 @@ asm void JPABaseParticle::canCreateChild(JPAEmitterWorkData* param_0) {
 
 
 /* ############################################################################################## */
-/* 804553B0-804553B8 0004+04 r=2 e=0 z=0  None .sdata2    @3010                                                        */
+/* 804553B0-804553B8 0004+04 s=2 e=0 z=0  None .sdata2    @3010                                                        */
 SECTION_SDATA2 static f32 lit_3010[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80280548-80280568 0020+00 r=3 e=3 z=0  None .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
+/* 80280548-80280568 0020+00 s=0 e=3 z=0  None .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm void JPABaseParticle::getWidth(JPABaseEmitter const* param_0) const {
 #pragma pop
 
 
-/* 80280568-80280588 0020+00 r=3 e=3 z=0  None .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
+/* 80280568-80280588 0020+00 s=0 e=3 z=0  None .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

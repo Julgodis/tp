@@ -5,14 +5,14 @@ lbl_805AA748:
 /* 805AA754 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805AA758 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 805AA75C 00000014  38 7F 05 68 */	addi r3, r31, 0x568
-/* 805AA760 00000018  3C 80 00 00 */	lis r4, stringBase0@ha /* 805AAFB0 */
-/* 805AA764 0000001C  38 84 00 00 */	addi r4, r4, stringBase0@l /* 805AAFB0 */
-/* 805AA768 00000020  4B FF FE 71 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 805AA760 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 805AA764 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 805AA768 00000020  4B FF FE 71 */	bl _unresolved
 /* 805AA76C 00000024  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 805AA770 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 805AA774 0000002C  41 82 00 0C */	beq lbl_805AA780
 /* 805AA778 00000030  80 7F 05 70 */	lwz r3, 0x570(r31)
-/* 805AA77C 00000034  4B FF FE 5D */	bl stopZelAnime__16mDoExt_McaMorfSOFv
+/* 805AA77C 00000034  4B FF FE 5D */	bl _unresolved
 lbl_805AA780:
 /* 805AA780 00000000  38 60 00 01 */	li r3, 1
 /* 805AA784 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -4,19 +4,19 @@ lbl_80964EB0:
 /* 80964EB8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80964EBC 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80964EC0 00000010  38 00 00 00 */	li r0, 0
-/* 80964EC4 00000014  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha /* 80450FDC */
-/* 80964EC8 00000018  90 03 00 00 */	stw r0, mFindCount__8daNpcT_c@l(r3) /* 80450FDC */
+/* 80964EC4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80964EC8 00000018  90 03 00 00 */	stw r0, 0x0000(r3)
 /* 80964ECC 0000001C  38 00 02 EB */	li r0, 0x2eb
-/* 80964ED0 00000020  3C 60 00 00 */	lis r3, mSrchName__8daNpcT_c@ha /* 80450FD8 */
-/* 80964ED4 00000024  B0 03 00 00 */	sth r0, mSrchName__8daNpcT_c@l(r3) /* 80450FD8 */
-/* 80964ED8 00000028  3C 60 00 00 */	lis r3, srchActor__8daNpcT_cFPvPv@ha /* 80147FD4 */
-/* 80964EDC 0000002C  38 63 00 00 */	addi r3, r3, srchActor__8daNpcT_cFPvPv@l /* 80147FD4 */
-/* 80964EE0 00000030  4B FF D9 59 */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80964ED0 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80964ED4 00000024  B0 03 00 00 */	sth r0, 0x0000(r3)
+/* 80964ED8 00000028  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80964EDC 0000002C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80964EE0 00000030  4B FF D9 59 */	bl _unresolved
 /* 80964EE4 00000034  38 80 00 00 */	li r4, 0
-/* 80964EE8 00000038  3C 60 00 00 */	lis r3, mFindCount__8daNpcT_c@ha /* 80450FDC */
-/* 80964EEC 0000003C  80 03 00 00 */	lwz r0, mFindCount__8daNpcT_c@l(r3) /* 80450FDC */
-/* 80964EF0 00000040  3C 60 00 00 */	lis r3, mFindActorPtrs__8daNpcT_c@ha /* 80425708 */
-/* 80964EF4 00000044  38 A3 00 00 */	addi r5, r3, mFindActorPtrs__8daNpcT_c@l /* 80425708 */
+/* 80964EE8 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80964EEC 0000003C  80 03 00 00 */	lwz r0, 0x0000(r3)
+/* 80964EF0 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80964EF4 00000044  38 A3 00 00 */	addi r5, r3, 0x0000 /* 0x00000000@l */
 /* 80964EF8 00000048  7C 09 03 A6 */	mtctr r0
 /* 80964EFC 0000004C  2C 00 00 00 */	cmpwi r0, 0
 /* 80964F00 00000050  40 81 00 34 */	ble lbl_80964F34

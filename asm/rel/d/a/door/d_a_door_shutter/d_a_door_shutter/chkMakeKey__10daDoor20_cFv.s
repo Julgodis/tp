@@ -4,12 +4,12 @@ lbl_8046609C:
 /* 804660A4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804660A8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804660AC 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 804660B0 00000014  4B FF AA 69 */	bl getFrontOption__13door_param2_cFP10fopAc_ac_c
+/* 804660B0 00000014  4B FF AA 69 */	bl _unresolved
 /* 804660B4 00000018  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804660B8 0000001C  28 00 00 02 */	cmplwi r0, 2
 /* 804660BC 00000020  41 82 00 18 */	beq lbl_804660D4
 /* 804660C0 00000024  7F E3 FB 78 */	mr r3, r31
-/* 804660C4 00000028  4B FF AA 55 */	bl getBackOption__13door_param2_cFP10fopAc_ac_c
+/* 804660C4 00000028  4B FF AA 55 */	bl _unresolved
 /* 804660C8 0000002C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 804660CC 00000030  28 00 00 02 */	cmplwi r0, 2
 /* 804660D0 00000034  40 82 00 0C */	bne lbl_804660DC

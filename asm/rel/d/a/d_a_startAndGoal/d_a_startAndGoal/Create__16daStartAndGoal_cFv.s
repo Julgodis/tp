@@ -11,22 +11,22 @@ lbl_80D4D884:
 /* 80D4D8A8 00000024  7F E0 FB 79 */	or. r0, r31, r31
 /* 80D4D8AC 00000028  41 82 00 4C */	beq lbl_80D4D8F8
 /* 80D4D8B0 0000002C  7C 1E 03 78 */	mr r30, r0
-/* 80D4D8B4 00000030  4B FF FE E5 */	bl __ct__10fopAc_ac_cFv
+/* 80D4D8B4 00000030  4B FF FE E5 */	bl _unresolved
 /* 80D4D8B8 00000034  3B DE 05 68 */	addi r30, r30, 0x568
-/* 80D4D8BC 00000038  3C 60 00 00 */	lis r3, __vt__13daNpcF_Path_c@ha /* 80D4DF4C */
-/* 80D4D8C0 0000003C  38 03 00 00 */	addi r0, r3, __vt__13daNpcF_Path_c@l /* 80D4DF4C */
+/* 80D4D8BC 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4D8C0 0000003C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D4D8C4 00000040  90 1E 06 2C */	stw r0, 0x62c(r30)
-/* 80D4D8C8 00000044  3C 60 00 00 */	lis r3, __vt__16daNpcF_SPCurve_c@ha /* 80D4DF40 */
-/* 80D4D8CC 00000048  38 03 00 00 */	addi r0, r3, __vt__16daNpcF_SPCurve_c@l /* 80D4DF40 */
+/* 80D4D8C8 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4D8CC 00000048  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D4D8D0 0000004C  90 1E 06 28 */	stw r0, 0x628(r30)
 /* 80D4D8D4 00000050  38 7E 00 20 */	addi r3, r30, 0x20
 /* 80D4D8D8 00000054  38 80 00 00 */	li r4, 0
 /* 80D4D8DC 00000058  38 A0 00 00 */	li r5, 0
-/* 80D4D8E0 0000005C  4B FF FE B9 */	bl initialize__16daNpcF_SPCurve_cFP5dPathi
+/* 80D4D8E0 0000005C  4B FF FE B9 */	bl _unresolved
 /* 80D4D8E4 00000060  7F C3 F3 78 */	mr r3, r30
-/* 80D4D8E8 00000064  4B FF FE B1 */	bl initialize__13daNpcF_Path_cFv
-/* 80D4D8EC 00000068  3C 60 00 00 */	lis r3, __vt__21daStartAndGoal_Path_c@ha /* 80D4DF34 */
-/* 80D4D8F0 0000006C  38 03 00 00 */	addi r0, r3, __vt__21daStartAndGoal_Path_c@l /* 80D4DF34 */
+/* 80D4D8E8 00000064  4B FF FE B1 */	bl _unresolved
+/* 80D4D8EC 00000068  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D4D8F0 0000006C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80D4D8F4 00000070  90 1E 06 2C */	stw r0, 0x62c(r30)
 lbl_80D4D8F8:
 /* 80D4D8F8 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)

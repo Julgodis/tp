@@ -84,7 +84,7 @@ extern "C" void Hu_IsStub(); // 1
 // Declarations:
 // 
 
-/* 80371BF4-80371C7C 0088+00 r=1 e=0 z=0  None .text      TRKLoadContext                                               */
+/* 80371BF4-80371C7C 0088+00 s=1 e=0 z=0  None .text      TRKLoadContext                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ extern "C" asm static void TRKLoadContext() {
 #pragma pop
 
 
-/* 80371C7C-80371C80 0004+00 r=1 e=1 z=0  None .text      TRKUARTInterruptHandler                                      */
+/* 80371C7C-80371C80 0004+00 s=0 e=1 z=0  None .text      TRKUARTInterruptHandler                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,12 +107,12 @@ extern "C" asm void TRKUARTInterruptHandler() {
 
 
 /* ############################################################################################## */
-/* 803A2C08-803A2C0C 0004+00 r=2 e=0 z=0  None .rodata    EndofProgramInstruction$162                                  */
+/* 803A2C08-803A2C0C 0004+00 s=2 e=0 z=0  None .rodata    EndofProgramInstruction$162                                  */
 SECTION_RODATA static u8 const data_803A2C08[4] = {
 	0x00, 0x45, 0x4E, 0x44,
 };
 
-/* 80371C80-80371CD8 0058+00 r=1 e=1 z=0  None .text      InitializeProgramEndTrap                                     */
+/* 80371C80-80371CD8 0058+00 s=0 e=1 z=0  None .text      InitializeProgramEndTrap                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,10 +124,10 @@ extern "C" asm void InitializeProgramEndTrap() {
 
 
 /* ############################################################################################## */
-/* 803A2C0C-803A2C10 0004+00 r=1 e=0 z=0  None .rodata    @165                                                         */
+/* 803A2C0C-803A2C10 0004+00 s=1 e=0 z=0  None .rodata    @165                                                         */
 SECTION_RODATA static u32 const lit_165 = 0x25730A00;
 
-/* 80371CD8-80371D08 0030+00 r=1 e=1 z=0  None .text      TRK_board_display                                            */
+/* 80371CD8-80371D08 0030+00 s=0 e=1 z=0  None .text      TRK_board_display                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,14 +139,14 @@ extern "C" asm void TRK_board_display() {
 
 
 /* ############################################################################################## */
-/* 803D32A8-803D32D0 0028+00 r=8 e=0 z=0  None .data      gDBCommTable                                                 */
+/* 803D32A8-803D32D0 0028+00 s=8 e=0 z=0  None .data      gDBCommTable                                                 */
 SECTION_DATA static u8 gDBCommTable[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80371D08-80371D38 0030+00 r=1 e=1 z=0  None .text      UnreserveEXI2Port                                            */
+/* 80371D08-80371D38 0030+00 s=0 e=1 z=0  None .text      UnreserveEXI2Port                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ extern "C" asm void UnreserveEXI2Port() {
 #pragma pop
 
 
-/* 80371D38-80371D68 0030+00 r=1 e=1 z=0  None .text      ReserveEXI2Port                                              */
+/* 80371D38-80371D68 0030+00 s=0 e=1 z=0  None .text      ReserveEXI2Port                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ extern "C" asm void ReserveEXI2Port() {
 #pragma pop
 
 
-/* 80371D68-80371DA4 003C+00 r=13 e=13 z=0  None .text      TRKWriteUARTN                                                */
+/* 80371D68-80371DA4 003C+00 s=0 e=13 z=0  None .text      TRKWriteUARTN                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ extern "C" asm void TRKWriteUARTN() {
 #pragma pop
 
 
-/* 80371DA4-80371DE0 003C+00 r=1 e=1 z=0  None .text      TRKReadUARTN                                                 */
+/* 80371DA4-80371DE0 003C+00 s=0 e=1 z=0  None .text      TRKReadUARTN                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ extern "C" asm void TRKReadUARTN() {
 #pragma pop
 
 
-/* 80371DE0-80371E10 0030+00 r=1 e=1 z=0  None .text      TRKPollUART                                                  */
+/* 80371DE0-80371E10 0030+00 s=0 e=1 z=0  None .text      TRKPollUART                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,10 +202,10 @@ extern "C" asm void TRKPollUART() {
 
 
 /* ############################################################################################## */
-/* 8044F820-8044F824 0004+00 r=2 e=0 z=0  .bss .bss       None                                                         */
+/* 8044F820-8044F824 0004+00 s=2 e=0 z=0  .bss .bss       None                                                         */
 static u8 data_8044F820[4];
 
-/* 80371E10-80371E58 0048+00 r=1 e=1 z=0  None .text      EnableEXI2Interrupts                                         */
+/* 80371E10-80371E58 0048+00 s=0 e=1 z=0  None .text      EnableEXI2Interrupts                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +216,7 @@ extern "C" asm void EnableEXI2Interrupts() {
 #pragma pop
 
 
-/* 80371E58-80371EA8 0050+00 r=1 e=1 z=0  None .text      TRKInitializeIntDrivenUART                                   */
+/* 80371E58-80371EA8 0050+00 s=0 e=1 z=0  None .text      TRKInitializeIntDrivenUART                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +227,7 @@ extern "C" asm void TRKInitializeIntDrivenUART() {
 #pragma pop
 
 
-/* 80371EA8-80372114 026C+00 r=2 e=2 z=0  None .text      InitMetroTRKCommTable                                        */
+/* 80371EA8-80372114 026C+00 s=0 e=2 z=0  None .text      InitMetroTRKCommTable                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ extern "C" asm void InitMetroTRKCommTable() {
 #pragma pop
 
 
-/* 80372114-8037214C 0038+00 r=1 e=0 z=0  None .text      TRKEXICallBack                                               */
+/* 80372114-8037214C 0038+00 s=1 e=0 z=0  None .text      TRKEXICallBack                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +250,7 @@ extern "C" asm static void TRKEXICallBack() {
 
 
 /* ############################################################################################## */
-/* 803A2C10-803A2C28 0015+03 r=0 e=0 z=0  None .rodata    @215                                                         */
+/* 803A2C10-803A2C28 0015+03 s=0 e=0 z=0  None .rodata    @215                                                         */
 SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding */] = {
 	0x44, 0x65, 0x76, 0x6B, 0x69, 0x74, 0x20, 0x73, 0x65, 0x74, 0x20, 0x74, 0x6F, 0x20, 0x3A, 0x20,
 	0x25, 0x6C, 0x64, 0x0A, 0x00,
@@ -258,7 +258,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding *
 	0x00, 0x00, 0x00,
 };
 
-/* 803A2C28-803A2C40 0017+01 r=0 e=0 z=0  None .rodata    @216                                                         */
+/* 803A2C28-803A2C40 0017+01 s=0 e=0 z=0  None .rodata    @216                                                         */
 SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_216[23 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x42, 0x42, 0x41, 0x0A, 0x00,
@@ -266,7 +266,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_216[23 + 1 /* padding *
 	0x00,
 };
 
-/* 803A2C40-803A2C64 0021+03 r=0 e=0 z=0  None .rodata    @217                                                         */
+/* 803A2C40-803A2C64 0021+03 s=0 e=0 z=0  None .rodata    @217                                                         */
 SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_217[33 + 3 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A,
@@ -275,14 +275,14 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_217[33 + 3 /* padding *
 	0x00, 0x00, 0x00,
 };
 
-/* 803A2C64-803A2C88 0024+00 r=0 e=0 z=0  None .rodata    @218                                                         */
+/* 803A2C64-803A2C88 0024+00 s=0 e=0 z=0  None .rodata    @218                                                         */
 SECTION_RODATA u8 const lit_218[36] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x41, 0x4D, 0x43, 0x20, 0x44, 0x44, 0x48, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,
 	0x72, 0x65, 0x0A, 0x00,
 };
 
-/* 803A2C88-803A2CB4 002B+01 r=0 e=0 z=0  None .rodata    @219                                                         */
+/* 803A2C88-803A2CB4 002B+01 s=0 e=0 z=0  None .rodata    @219                                                         */
 SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_219[43 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x55, 0x4E, 0x4B, 0x4E, 0x4F, 0x57, 0x4E, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,
@@ -291,7 +291,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_219[43 + 1 /* padding *
 	0x00,
 };
 
-/* 803A2CB4-803A2CE4 002F+01 r=0 e=0 z=0  None .rodata    @220                                                         */
+/* 803A2CB4-803A2CE4 002F+01 s=0 e=0 z=0  None .rodata    @220                                                         */
 SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_220[47 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x49, 0x6E, 0x76, 0x61, 0x6C,
 	0x69, 0x64, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x20, 0x49, 0x44, 0x20, 0x70,
@@ -300,7 +300,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_220[47 + 1 /* padding *
 	0x00,
 };
 
-/* 803A2CE4-803A2D10 0028+04 r=0 e=0 z=0  None .rodata    @221                                                         */
+/* 803A2CE4-803A2D10 0028+04 s=0 e=0 z=0  None .rodata    @221                                                         */
 SECTION_RODATA u8 const lit_221[40 + 4 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x44, 0x65, 0x66, 0x61, 0x75,
 	0x6C, 0x74, 0x69, 0x6E, 0x67, 0x20, 0x74, 0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x48, 0x61,
@@ -309,9 +309,9 @@ SECTION_RODATA u8 const lit_221[40 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8044F824-8044F828 0004+00 r=0 e=0 z=0  .bss .bss       _MetroTRK_Has_Framing                                        */
+/* 8044F824-8044F828 0004+00 s=0 e=0 z=0  .bss .bss       _MetroTRK_Has_Framing                                        */
 u8 _MetroTRK_Has_Framing[4];
 
-/* 8044F828-8044F830 0008+00 r=2 e=2 z=0  .bss .bss       None                                                         */
+/* 8044F828-8044F830 0008+00 s=0 e=2 z=0  .bss .bss       None                                                         */
 u8 data_8044F828[8];
 

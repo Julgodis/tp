@@ -14,12 +14,12 @@ lbl_80ABA3D8:
 /* 80ABA408 00000030  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 80ABA40C 00000034  38 80 00 00 */	li r4, 0
 /* 80ABA410 00000038  38 A0 00 00 */	li r5, 0
-/* 80ABA414 0000003C  3C C0 00 00 */	lis r6, m__19daNpcRafrel_Param_c@ha /* 80ABF9E0 */
-/* 80ABA418 00000040  38 C6 00 00 */	addi r6, r6, m__19daNpcRafrel_Param_c@l /* 80ABF9E0 */
+/* 80ABA414 0000003C  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 80ABA418 00000040  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 80ABA41C 00000044  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80ABA420 00000048  38 C0 00 00 */	li r6, 0
 /* 80ABA424 0000004C  38 E0 00 00 */	li r7, 0
-/* 80ABA428 00000050  4B FF F1 71 */	bl draw__8daNpcF_cFiifP11_GXColorS10i
+/* 80ABA428 00000050  4B FF F1 71 */	bl _unresolved
 /* 80ABA42C 00000054  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 80ABA430 00000058  28 04 00 00 */	cmplwi r4, 0
 /* 80ABA434 0000005C  41 82 00 58 */	beq lbl_80ABA48C
@@ -29,11 +29,11 @@ lbl_80ABA3D8:
 /* 80ABA444 0000006C  40 82 00 08 */	bne lbl_80ABA44C
 /* 80ABA448 00000070  3B C0 00 14 */	li r30, 0x14
 lbl_80ABA44C:
-/* 80ABA44C 00000000  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80ABA450 00000004  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80ABA44C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80ABA450 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80ABA454 00000008  80 84 00 04 */	lwz r4, 4(r4)
 /* 80ABA458 0000000C  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80ABA45C 00000010  4B FF F1 3D */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
+/* 80ABA45C 00000010  4B FF F1 3D */	bl _unresolved
 /* 80ABA460 00000014  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80ABA464 00000018  80 63 00 04 */	lwz r3, 4(r3)
 /* 80ABA468 0000001C  80 63 00 84 */	lwz r3, 0x84(r3)
@@ -42,9 +42,9 @@ lbl_80ABA44C:
 /* 80ABA474 00000028  7C 63 02 14 */	add r3, r3, r0
 /* 80ABA478 0000002C  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 80ABA47C 00000030  38 84 00 24 */	addi r4, r4, 0x24
-/* 80ABA480 00000034  4B FF F1 19 */	bl PSMTXCopy
+/* 80ABA480 00000034  4B FF F1 19 */	bl _unresolved
 /* 80ABA484 00000038  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
-/* 80ABA488 0000003C  4B FF F1 11 */	bl mDoExt_modelUpdateDL__FP8J3DModel
+/* 80ABA488 0000003C  4B FF F1 11 */	bl _unresolved
 lbl_80ABA48C:
 /* 80ABA48C 00000000  38 60 00 01 */	li r3, 1
 /* 80ABA490 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

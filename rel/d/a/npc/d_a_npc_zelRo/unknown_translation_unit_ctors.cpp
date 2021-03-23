@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80B74C48[2];
+extern u8 data_80B74C48[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_zelRo_cpp(); // 1
 
 // 
 // Declarations:

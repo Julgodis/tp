@@ -24,7 +24,7 @@ extern "C" void __va_arg(); // 1
 // Declarations:
 // 
 
-/* 80361B14-80361BDC 00C8+00 r=3 e=3 z=0  None .text      __va_arg                                                     */
+/* 80361B14-80361BDC 00C8+00 s=0 e=3 z=0  None .text      __va_arg                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

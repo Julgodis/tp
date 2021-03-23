@@ -61,7 +61,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C47E8-803C4828 003C+04 r=7 e=6 z=0  None .data      __vt__Q26JStage7TObject                                      */
+/* 803C47E8-803C4828 003C+04 s=1 e=6 z=0  None .data      __vt__Q26JStage7TObject                                      */
 SECTION_DATA void* __vt__Q26JStage7TObject[15 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -82,7 +82,7 @@ SECTION_DATA void* __vt__Q26JStage7TObject[15 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80280DD4-80280E1C 0048+00 r=6 e=6 z=0  None .text      __dt__Q26JStage7TObjectFv                                    */
+/* 80280DD4-80280E1C 0048+00 s=0 e=6 z=0  None .text      __dt__Q26JStage7TObjectFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm JStage::TObject::~TObject() {
 #pragma pop
 
 
-/* 80280E1C-80280E24 0008+00 r=13 e=12 z=0  None .text      JSGGetName__Q26JStage7TObjectCFv                             */
+/* 80280E1C-80280E24 0008+00 s=1 e=12 z=0  None .text      JSGGetName__Q26JStage7TObjectCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void JStage::TObject::JSGGetName() const {
 #pragma pop
 
 
-/* 80280E24-80280E28 0004+00 r=13 e=12 z=0  None .text      JSGUpdate__Q26JStage7TObjectFv                               */
+/* 80280E24-80280E28 0004+00 s=1 e=12 z=0  None .text      JSGUpdate__Q26JStage7TObjectFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm void JStage::TObject::JSGUpdate() {
 #pragma pop
 
 
-/* 80280E28-80280E30 0008+00 r=13 e=12 z=0  None .text      JSGGetFlag__Q26JStage7TObjectCFv                             */
+/* 80280E28-80280E30 0008+00 s=1 e=12 z=0  None .text      JSGGetFlag__Q26JStage7TObjectCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ asm void JStage::TObject::JSGGetFlag() const {
 #pragma pop
 
 
-/* 80280E30-80280E34 0004+00 r=13 e=12 z=0  None .text      JSGSetFlag__Q26JStage7TObjectFUl                             */
+/* 80280E30-80280E34 0004+00 s=1 e=12 z=0  None .text      JSGSetFlag__Q26JStage7TObjectFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm void JStage::TObject::JSGSetFlag(u32 param_0) {
 #pragma pop
 
 
-/* 80280E34-80280E3C 0008+00 r=13 e=12 z=0  None .text      JSGGetData__Q26JStage7TObjectCFUlPvUl                        */
+/* 80280E34-80280E3C 0008+00 s=1 e=12 z=0  None .text      JSGGetData__Q26JStage7TObjectCFUlPvUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm void JStage::TObject::JSGGetData(u32 param_0, void* param_1, u32 param_2) co
 #pragma pop
 
 
-/* 80280E3C-80280E40 0004+00 r=12 e=11 z=0  None .text      JSGSetData__Q26JStage7TObjectFUlPCvUl                        */
+/* 80280E3C-80280E40 0004+00 s=1 e=11 z=0  None .text      JSGSetData__Q26JStage7TObjectFUlPCvUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ asm void JStage::TObject::JSGSetData(u32 param_0, void const* param_1, u32 param
 #pragma pop
 
 
-/* 80280E40-80280E44 0004+00 r=13 e=12 z=0  None .text      JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl      */
+/* 80280E40-80280E44 0004+00 s=1 e=12 z=0  None .text      JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +170,7 @@ asm void JStage::TObject::JSGGetParent(JStage::TObject** param_0, u32* param_1) 
 #pragma pop
 
 
-/* 80280E44-80280E48 0004+00 r=13 e=12 z=0  None .text      JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl         */
+/* 80280E44-80280E48 0004+00 s=1 e=12 z=0  None .text      JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ asm void JStage::TObject::JSGSetParent(JStage::TObject* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80280E48-80280E4C 0004+00 r=13 e=12 z=0  None .text      JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl      */
+/* 80280E48-80280E4C 0004+00 s=1 e=12 z=0  None .text      JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ asm void JStage::TObject::JSGSetRelation(bool param_0, JStage::TObject* param_1,
 #pragma pop
 
 
-/* 80280E4C-80280E54 0008+00 r=12 e=11 z=0  None .text      JSGFindNodeID__Q26JStage7TObjectCFPCc                        */
+/* 80280E4C-80280E54 0008+00 s=1 e=11 z=0  None .text      JSGFindNodeID__Q26JStage7TObjectCFPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,14 +204,14 @@ asm void JStage::TObject::JSGFindNodeID(char const* param_0) const {
 
 
 /* ############################################################################################## */
-/* 804553F0-804553F8 0004+04 r=1 e=0 z=0  None .sdata2    @338                                                         */
+/* 804553F0-804553F8 0004+04 s=1 e=0 z=0  None .sdata2    @338                                                         */
 SECTION_SDATA2 static u8 JSGObject__lit_338[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80280E54-80280E90 003C+00 r=12 e=11 z=0  None .text      JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f         */
+/* 80280E54-80280E90 003C+00 s=1 e=11 z=0  None .text      JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

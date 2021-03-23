@@ -5,7 +5,7 @@ lbl_80CA7EEC:
 /* 80CA7EF8 0000000C  38 03 05 6C */	addi r0, r3, 0x56c
 /* 80CA7EFC 00000010  90 04 00 00 */	stw r0, 0(r4)
 /* 80CA7F00 00000014  80 63 05 B0 */	lwz r3, 0x5b0(r3)
-/* 80CA7F04 00000018  4B FF FC 35 */	bl play__14mDoExt_baseAnmFv
+/* 80CA7F04 00000018  4B FF FC 35 */	bl _unresolved
 /* 80CA7F08 0000001C  38 60 00 01 */	li r3, 1
 /* 80CA7F0C 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CA7F10 00000024  7C 08 03 A6 */	mtlr r0

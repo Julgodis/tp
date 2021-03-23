@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CA31A8[2];
+extern u8 data_80CA31A8[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_nan_cpp(); // 1
 
 // 
 // Declarations:

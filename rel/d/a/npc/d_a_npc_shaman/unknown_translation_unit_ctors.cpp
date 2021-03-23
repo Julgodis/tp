@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80AE6BB4[2];
+extern u8 data_80AE6BB4[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_shaman_cpp(); // 1
 
 // 
 // Declarations:

@@ -29,10 +29,10 @@ lbl_806E1A58:
 /* 806E1A60 00000008  90 1F 09 28 */	stw r0, 0x928(r31)
 /* 806E1A64 0000000C  4B FF F9 0D */	bl W_DeathMotion__8daE_HM_cFv
 /* 806E1A68 00000010  38 7F 07 14 */	addi r3, r31, 0x714
-/* 806E1A6C 00000014  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 806E1A70 00000018  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 806E1A6C 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 806E1A70 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 806E1A74 0000001C  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 806E1A78 00000020  4B FF E8 E1 */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 806E1A78 00000020  4B FF E8 E1 */	bl _unresolved
 /* 806E1A7C 00000024  48 00 00 10 */	b lbl_806E1A8C
 lbl_806E1A80:
 /* 806E1A80 00000000  48 00 11 01 */	bl ShieldMotion__8daE_HM_cFv

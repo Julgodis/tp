@@ -19,10 +19,10 @@ lbl_80AF14AC:
 /* 80AF14F0 00000008  DB 01 00 60 */	stfd f24, 0x60(r1)
 /* 80AF14F4 00000048  F3 01 00 68 */	psq_st f24, 104(r1), 0, 0 /* qr0 */
 /* 80AF14F8 00000000  39 61 00 60 */	addi r11, r1, 0x60
-/* 80AF14FC 00000004  4B FF DF FD */	bl _savegpr_27
+/* 80AF14FC 00000004  4B FF DF FD */	bl _unresolved
 /* 80AF1500 00000008  7C 7B 1B 78 */	mr r27, r3
-/* 80AF1504 0000000C  3C 60 00 00 */	lis r3, m__22daNpc_SoldierA_Param_c@ha /* 80AF26E8 */
-/* 80AF1508 00000010  3B E3 00 00 */	addi r31, r3, m__22daNpc_SoldierA_Param_c@l /* 80AF26E8 */
+/* 80AF1504 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AF1508 00000010  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80AF150C 00000014  38 60 00 00 */	li r3, 0
 /* 80AF1510 00000018  80 9B 05 68 */	lwz r4, 0x568(r27)
 /* 80AF1514 0000001C  83 C4 00 04 */	lwz r30, 4(r4)
@@ -84,8 +84,8 @@ lbl_80AF15EC:
 /* 80AF15EC 00000000  3B A0 00 01 */	li r29, 1
 /* 80AF15F0 00000004  48 00 00 2C */	b lbl_80AF161C
 lbl_80AF15F4:
-/* 80AF15F4 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80AF15F8 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80AF15F4 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AF15F8 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AF15FC 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80AF1600 0000000C  2C 00 00 03 */	cmpwi r0, 3
 /* 80AF1604 00000010  40 82 00 18 */	bne lbl_80AF161C
@@ -94,7 +94,7 @@ lbl_80AF15F4:
 /* 80AF1610 0000001C  48 00 00 0C */	b lbl_80AF161C
 lbl_80AF1614:
 /* 80AF1614 00000000  38 7B 0C 80 */	addi r3, r27, 0xc80
-/* 80AF1618 00000004  4B FF DE E1 */	bl getActorP__18daNpcF_ActorMngr_cFv
+/* 80AF1618 00000004  4B FF DE E1 */	bl _unresolved
 lbl_80AF161C:
 /* 80AF161C 00000000  28 03 00 00 */	cmplwi r3, 0
 /* 80AF1620 00000004  41 82 00 54 */	beq lbl_80AF1674
@@ -138,7 +138,7 @@ lbl_80AF167C:
 /* 80AF16AC 00000030  FD 00 28 90 */	fmr f8, f5
 /* 80AF16B0 00000034  A8 9B 08 F2 */	lha r4, 0x8f2(r27)
 /* 80AF16B4 00000038  38 A1 00 24 */	addi r5, r1, 0x24
-/* 80AF16B8 0000003C  4B FF DE 41 */	bl setParam__15daNpcF_Lookat_cFffffffffffffsP4cXyz
+/* 80AF16B8 0000003C  4B FF DE 41 */	bl _unresolved
 /* 80AF16BC 00000040  38 7B 0B DC */	addi r3, r27, 0xbdc
 /* 80AF16C0 00000044  7F 64 DB 78 */	mr r4, r27
 /* 80AF16C4 00000048  38 BE 00 24 */	addi r5, r30, 0x24
@@ -146,7 +146,7 @@ lbl_80AF167C:
 /* 80AF16CC 00000050  7F A7 EB 78 */	mr r7, r29
 /* 80AF16D0 00000054  7F 88 E3 78 */	mr r8, r28
 /* 80AF16D4 00000058  39 20 00 00 */	li r9, 0
-/* 80AF16D8 0000005C  4B FF DE 21 */	bl calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii
+/* 80AF16D8 0000005C  4B FF DE 21 */	bl _unresolved
 /* 80AF16DC 00000060  E3 E1 00 D8 */	psq_l f31, 216(r1), 0, 0 /* qr0 */
 /* 80AF16E0 00000000  CB E1 00 D0 */	lfd f31, 0xd0(r1)
 /* 80AF16E4 00000068  E3 C1 00 C8 */	psq_l f30, 200(r1), 0, 0 /* qr0 */
@@ -164,7 +164,7 @@ lbl_80AF167C:
 /* 80AF1714 00000098  E3 01 00 68 */	psq_l f24, 104(r1), 0, 0 /* qr0 */
 /* 80AF1718 00000000  CB 01 00 60 */	lfd f24, 0x60(r1)
 /* 80AF171C 00000004  39 61 00 60 */	addi r11, r1, 0x60
-/* 80AF1720 00000008  4B FF DD D9 */	bl _restgpr_27
+/* 80AF1720 00000008  4B FF DD D9 */	bl _unresolved
 /* 80AF1724 0000000C  80 01 00 E4 */	lwz r0, 0xe4(r1)
 /* 80AF1728 00000010  7C 08 03 A6 */	mtlr r0
 /* 80AF172C 00000014  38 21 00 E0 */	addi r1, r1, 0xe0

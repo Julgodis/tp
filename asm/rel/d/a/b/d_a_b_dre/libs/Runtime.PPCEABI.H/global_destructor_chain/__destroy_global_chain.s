@@ -3,8 +3,8 @@ lbl_805C7AD4:
 /* 805C7AD8 00000004  7C 08 02 A6 */	mflr r0
 /* 805C7ADC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 805C7AE0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 805C7AE4 00000010  3C 60 00 00 */	lis r3, __global_destructor_chain@ha /* 805CB038 */
-/* 805C7AE8 00000014  3B E3 00 00 */	addi r31, r3, __global_destructor_chain@l /* 805CB038 */
+/* 805C7AE4 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805C7AE8 00000014  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 805C7AEC 00000018  48 00 00 20 */	b lbl_805C7B0C
 lbl_805C7AF0:
 /* 805C7AF0 00000000  80 05 00 00 */	lwz r0, 0(r5)

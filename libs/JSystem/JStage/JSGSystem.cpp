@@ -12,9 +12,6 @@
 // 
 
 struct JStage {
-	struct TEObject {
-	};
-
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ void JSGGetName() const;
@@ -28,6 +25,9 @@ struct JStage {
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ void JSGFindNodeID(char const*) const;
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
+	};
+
+	struct TEObject {
 	};
 
 	struct TSystem {
@@ -81,7 +81,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4828-803C4878 0050+00 r=2 e=1 z=0  None .data      __vt__Q26JStage7TSystem                                      */
+/* 803C4828-803C4878 0050+00 s=1 e=1 z=0  None .data      __vt__Q26JStage7TSystem                                      */
 SECTION_DATA void* __vt__Q26JStage7TSystem[20] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -105,7 +105,7 @@ SECTION_DATA void* __vt__Q26JStage7TSystem[20] = {
 	/* 19   */ (void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
-/* 80280E90-80280EF0 0060+00 r=1 e=1 z=0  None .text      __dt__Q26JStage7TSystemFv                                    */
+/* 80280E90-80280EF0 0060+00 s=0 e=1 z=0  None .text      __dt__Q26JStage7TSystemFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm JStage::TSystem::~TSystem() {
 #pragma pop
 
 
-/* 80280EF0-80280EF8 0008+00 r=2 e=1 z=0  None .text      JSGFGetType__Q26JStage7TSystemCFv                            */
+/* 80280EF0-80280EF8 0008+00 s=1 e=1 z=0  None .text      JSGFGetType__Q26JStage7TSystemCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm void JStage::TSystem::JSGFGetType() const {
 #pragma pop
 
 
-/* 80280EF8-80280F00 0008+00 r=1 e=0 z=0  None .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+/* 80280EF8-80280F00 0008+00 s=1 e=0 z=0  None .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm void JStage::TSystem::JSGFindObject(JStage::TObject** param_0, char const* p
 #pragma pop
 
 
-/* 80280F00-80280F08 0008+00 r=2 e=1 z=0  None .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
+/* 80280F00-80280F08 0008+00 s=1 e=1 z=0  None .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm void JStage::TSystem::JSGCreateObject(char const* param_0, JStage::TEObject 
 #pragma pop
 
 
-/* 80280F08-80280F0C 0004+00 r=2 e=1 z=0  None .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
+/* 80280F08-80280F0C 0004+00 s=1 e=1 z=0  None .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void JStage::TSystem::JSGDestroyObject(JStage::TObject* param_0) {
 #pragma pop
 
 
-/* 80280F0C-80280F14 0008+00 r=2 e=1 z=0  None .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
+/* 80280F0C-80280F14 0008+00 s=1 e=1 z=0  None .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JStage::TSystem::JSGGetSystemData(u32 param_0) {
 #pragma pop
 
 
-/* 80280F14-80280F18 0004+00 r=2 e=1 z=0  None .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
+/* 80280F14-80280F18 0004+00 s=1 e=1 z=0  None .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

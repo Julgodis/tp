@@ -25,10 +25,10 @@ extern "C" void __DVDPrintFatalMessage(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804517C8-804517D0 0004+04 r=1 e=0 z=0  None .sbss      FatalFunc                                                    */
+/* 804517C8-804517D0 0004+04 s=1 e=0 z=0  None .sbss      FatalFunc                                                    */
 static u8 FatalFunc[4 + 4 /* padding */];
 
-/* 8034BCFC-8034BD2C 0030+00 r=1 e=1 z=0  None .text      __DVDPrintFatalMessage                                       */
+/* 8034BCFC-8034BD2C 0030+00 s=0 e=1 z=0  None .text      __DVDPrintFatalMessage                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

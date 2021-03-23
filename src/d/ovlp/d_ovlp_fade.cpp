@@ -81,7 +81,7 @@ extern "C" extern u8 sManager__10JFWDisplay[4];
 // Declarations:
 // 
 
-/* 8025217C-80252184 0008+00 r=1 e=0 z=0  None .text      dOvlpFd_Draw__FP14overlap1_class                             */
+/* 8025217C-80252184 0008+00 s=1 e=0 z=0  None .text      dOvlpFd_Draw__FP14overlap1_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm static void dOvlpFd_Draw(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 80252184-802521F4 0070+00 r=1 e=0 z=0  None .text      dOvlpFd_startFadeIn__Fi                                      */
+/* 80252184-802521F4 0070+00 s=1 e=0 z=0  None .text      dOvlpFd_startFadeIn__Fi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm static void dOvlpFd_startFadeIn(int param_0) {
 #pragma pop
 
 
-/* 802521F4-802522C8 00D4+00 r=1 e=0 z=0  None .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
+/* 802521F4-802522C8 00D4+00 s=1 e=0 z=0  None .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,10 +115,10 @@ asm static void dOvlpFd_FadeOut(overlap1_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 804510E0-804510E8 0004+04 r=4 e=0 z=0  None .sbss      dOvlpFd_execute_f                                            */
+/* 804510E0-804510E8 0004+04 s=4 e=0 z=0  None .sbss      dOvlpFd_execute_f                                            */
 static u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 
-/* 802522C8-80252300 0038+00 r=1 e=0 z=0  None .text      dOvlpFd_Wait__FP14overlap1_class                             */
+/* 802522C8-80252300 0038+00 s=1 e=0 z=0  None .text      dOvlpFd_Wait__FP14overlap1_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm static void dOvlpFd_Wait(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 80252300-8025242C 012C+00 r=1 e=0 z=0  None .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
+/* 80252300-8025242C 012C+00 s=1 e=0 z=0  None .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm static void dOvlpFd_FadeIn(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 8025242C-80252458 002C+00 r=1 e=0 z=0  None .text      dOvlpFd_Execute__FP14overlap1_class                          */
+/* 8025242C-80252458 002C+00 s=1 e=0 z=0  None .text      dOvlpFd_Execute__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm static void dOvlpFd_Execute(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 80252458-80252460 0008+00 r=1 e=0 z=0  None .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
+/* 80252458-80252460 0008+00 s=1 e=0 z=0  None .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm static void dOvlpFd_IsDelete(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 80252460-80252468 0008+00 r=1 e=0 z=0  None .text      dOvlpFd_Delete__FP14overlap1_class                           */
+/* 80252460-80252468 0008+00 s=1 e=0 z=0  None .text      dOvlpFd_Delete__FP14overlap1_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm static void dOvlpFd_Delete(overlap1_class* param_0) {
 #pragma pop
 
 
-/* 80252468-8025247C 0014+00 r=1 e=0 z=0  None .text      dOvlpFd_Create__FPv                                          */
+/* 80252468-8025247C 0014+00 s=1 e=0 z=0  None .text      dOvlpFd_Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +185,7 @@ asm static void dOvlpFd_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803C2B98-803C2BAC 0014+00 r=8 e=0 z=0  None .data      l_dOvlpFd_Method                                             */
+/* 803C2B98-803C2BAC 0014+00 s=8 e=0 z=0  None .data      l_dOvlpFd_Method                                             */
 SECTION_DATA static void* l_dOvlpFd_Method[5] = {
 	/* 0    */ (void*)dOvlpFd_Create__FPv,
 	/* 1    */ (void*)dOvlpFd_Delete__FP14overlap1_class,
@@ -194,7 +194,7 @@ SECTION_DATA static void* l_dOvlpFd_Method[5] = {
 	/* 4    */ (void*)dOvlpFd_Draw__FP14overlap1_class,
 };
 
-/* 803C2BAC-803C2BD4 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP0                                           */
+/* 803C2BAC-803C2BD4 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP0                                           */
 SECTION_DATA void* g_profile_OVERLAP0[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -208,7 +208,7 @@ SECTION_DATA void* g_profile_OVERLAP0[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BD4-803C2BFC 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP1                                           */
+/* 803C2BD4-803C2BFC 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP1                                           */
 SECTION_DATA void* g_profile_OVERLAP1[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -222,7 +222,7 @@ SECTION_DATA void* g_profile_OVERLAP1[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BFC-803C2C24 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP6                                           */
+/* 803C2BFC-803C2C24 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP6                                           */
 SECTION_DATA void* g_profile_OVERLAP6[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -236,7 +236,7 @@ SECTION_DATA void* g_profile_OVERLAP6[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C24-803C2C4C 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP7                                           */
+/* 803C2C24-803C2C4C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP7                                           */
 SECTION_DATA void* g_profile_OVERLAP7[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -250,7 +250,7 @@ SECTION_DATA void* g_profile_OVERLAP7[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C4C-803C2C74 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP8                                           */
+/* 803C2C4C-803C2C74 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP8                                           */
 SECTION_DATA void* g_profile_OVERLAP8[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -264,7 +264,7 @@ SECTION_DATA void* g_profile_OVERLAP8[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C74-803C2C9C 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP9                                           */
+/* 803C2C74-803C2C9C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP9                                           */
 SECTION_DATA void* g_profile_OVERLAP9[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -278,7 +278,7 @@ SECTION_DATA void* g_profile_OVERLAP9[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C9C-803C2CC4 0028+00 r=1 e=0 z=1  None .data      g_profile_OVERLAP10                                          */
+/* 803C2C9C-803C2CC4 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP10                                          */
 SECTION_DATA void* g_profile_OVERLAP10[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,
@@ -292,7 +292,7 @@ SECTION_DATA void* g_profile_OVERLAP10[10] = {
 	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2CC4-803C2CF0 0028+04 r=1 e=0 z=1  None .data      g_profile_OVERLAP11                                          */
+/* 803C2CC4-803C2CF0 0028+04 s=0 e=0 z=0  None .data      g_profile_OVERLAP11                                          */
 SECTION_DATA void* g_profile_OVERLAP11[10 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0000FFFD,

@@ -15,40 +15,29 @@ struct npc_fish_class {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct fish_data_s {
-};
-
-struct cXyz {
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct dSv_event_c {
-	/* 800349BC */ void isEventBit(u16) const;
 };
 
 // 
 // Forward References:
 // 
 
-static void daNpc_Fish_Draw(npc_fish_class*); // 2
-static void daNpc_Fish_Execute(npc_fish_class*); // 2
-static void daNpc_Fish_IsDelete(npc_fish_class*); // 2
-static void daNpc_Fish_Delete(npc_fish_class*); // 2
+void daNpc_Fish_Draw(npc_fish_class*); // 2
+void daNpc_Fish_Execute(npc_fish_class*); // 2
+void daNpc_Fish_IsDelete(npc_fish_class*); // 2
+void daNpc_Fish_Delete(npc_fish_class*); // 2
 static void fish_set(fopAc_ac_c*, fish_data_s*); // 2
-static void daNpc_Fish_Create(fopAc_ac_c*); // 2
+void daNpc_Fish_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daNpc_Fish_Draw__FP14npc_fish_class(); // 1
-extern "C" static void daNpc_Fish_Execute__FP14npc_fish_class(); // 1
-extern "C" static void daNpc_Fish_IsDelete__FP14npc_fish_class(); // 1
-extern "C" static void daNpc_Fish_Delete__FP14npc_fish_class(); // 1
+extern "C" void daNpc_Fish_Draw__FP14npc_fish_class(); // 1
+extern "C" void daNpc_Fish_Execute__FP14npc_fish_class(); // 1
+extern "C" void daNpc_Fish_IsDelete__FP14npc_fish_class(); // 1
+extern "C" void daNpc_Fish_Delete__FP14npc_fish_class(); // 1
 extern "C" static void fish_set__FP10fopAc_ac_cP11fish_data_s(); // 1
-extern "C" static void daNpc_Fish_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daNpc_Fish_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern u32 const lit_3787;
 extern "C" extern u8 const lit_3788[4];
 extern "C" extern u32 const lit_3789;
 extern "C" extern u32 const lit_3790;
@@ -56,85 +45,70 @@ extern "C" extern u32 const lit_3791;
 extern "C" extern u32 const lit_3792;
 extern "C" extern u32 const lit_3793;
 extern "C" extern char const* const stringBase0;
+extern "C" extern u8 cNullVec__6Z2Calc[12];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern u8 fish_d127_S[980];
 extern "C" extern u8 fish_d127[1120];
 extern "C" extern u8 lf_pos[144];
-extern "C" extern void* g_profile_NPC_FISH[12];
+extern "C" extern u8 l_daNpc_Fish_Method[32];
+extern "C" extern u8 g_profile_NPC_FISH[48];
 
 // 
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void cM_rndFX(f32); // 2
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" extern u8 g_env_light[4880];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 80542178-80542180 0008+00 r=1 e=0 z=0  None .text      daNpc_Fish_Draw__FP14npc_fish_class                          */
+/* 80542178-80542180 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Draw__FP14npc_fish_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_Fish_Draw(npc_fish_class* param_0) {
+asm void daNpc_Fish_Draw(npc_fish_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_Draw__FP14npc_fish_class.s"
 }
 #pragma pop
 
 
-/* 80542180-80542188 0008+00 r=1 e=0 z=0  None .text      daNpc_Fish_Execute__FP14npc_fish_class                       */
+/* 80542180-80542188 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Execute__FP14npc_fish_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_Fish_Execute(npc_fish_class* param_0) {
+asm void daNpc_Fish_Execute(npc_fish_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_Execute__FP14npc_fish_class.s"
 }
 #pragma pop
 
 
-/* 80542188-80542190 0008+00 r=1 e=0 z=0  None .text      daNpc_Fish_IsDelete__FP14npc_fish_class                      */
+/* 80542188-80542190 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_IsDelete__FP14npc_fish_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_Fish_IsDelete(npc_fish_class* param_0) {
+asm void daNpc_Fish_IsDelete(npc_fish_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_IsDelete__FP14npc_fish_class.s"
 }
 #pragma pop
 
 
-/* 80542190-80542198 0008+00 r=1 e=0 z=0  None .text      daNpc_Fish_Delete__FP14npc_fish_class                        */
+/* 80542190-80542198 0008+00 s=0 e=0 z=0  None .text      daNpc_Fish_Delete__FP14npc_fish_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_Fish_Delete(npc_fish_class* param_0) {
+asm void daNpc_Fish_Delete(npc_fish_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_Delete__FP14npc_fish_class.s"
 }
 #pragma pop
 
 
-/* 80542198-80542254 00BC+00 r=1 e=0 z=0  None .text      fish_set__FP10fopAc_ac_cP11fish_data_s                       */
+/* 80542198-80542254 00BC+00 s=1 e=0 z=0  None .text      fish_set__FP10fopAc_ac_cP11fish_data_s                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,47 +119,11 @@ asm static void fish_set(fopAc_ac_c* param_0, fish_data_s* param_1) {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 805424C0-805424C4 0004+00 r=1 e=0 z=0  None .rodata    @3787                                                        */
-SECTION_RODATA static u32 const lit_3787 = 0xC5536000;
-
-/* 805424C4-805424C8 0004+00 r=0 e=0 z=0  None .rodata    @3788                                                        */
-SECTION_RODATA u8 const lit_3788[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805424C8-805424CC 0004+00 r=0 e=0 z=0  None .rodata    @3789                                                        */
-SECTION_RODATA u32 const lit_3789 = 0xC5E98800;
-
-/* 805424CC-805424D0 0004+00 r=0 e=0 z=0  None .rodata    @3790                                                        */
-SECTION_RODATA u32 const lit_3790 = 0xC5F5C800;
-
-/* 805424D0-805424D4 0004+00 r=0 e=0 z=0  None .rodata    @3791                                                        */
-SECTION_RODATA u32 const lit_3791 = 0x442F0000;
-
-/* 805424D4-805424D8 0004+00 r=0 e=0 z=0  None .rodata    @3792                                                        */
-SECTION_RODATA u32 const lit_3792 = 0xC5378000;
-
-/* 805424D8-805424DC 0004+00 r=0 e=0 z=0  None .rodata    @3793                                                        */
-SECTION_RODATA u32 const lit_3793 = 0xC3340000;
-
-/* 805424DC-805424E4 0008+00 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_805424DC = "F_SP127";
-#pragma pop
-
-/* 805424E4-805424F0 000C+00 r=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80542254-805424B8 0264+00 r=1 e=0 z=0  None .text      daNpc_Fish_Create__FP10fopAc_ac_c                            */
+/* 80542254-805424B8 0264+00 s=0 e=0 z=0  None .text      daNpc_Fish_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpc_Fish_Create(fopAc_ac_c* param_0) {
+asm void daNpc_Fish_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fish/d_a_npc_fish/daNpc_Fish_Create__FP10fopAc_ac_c.s"
 }
@@ -193,14 +131,49 @@ asm static void daNpc_Fish_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 805424F0-80542504 0004+10 r=0 e=0 z=0  None .data      @1787                                                        */
+/* 805424C0-805424C4 0004+00 s=0 e=0 z=0  None .rodata    @3787                                                        */
+SECTION_RODATA u32 const lit_3787 = 0xC5536000;
+
+/* 805424C4-805424C8 0004+00 s=0 e=0 z=0  None .rodata    @3788                                                        */
+SECTION_RODATA u8 const lit_3788[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805424C8-805424CC 0004+00 s=0 e=0 z=0  None .rodata    @3789                                                        */
+SECTION_RODATA u32 const lit_3789 = 0xC5E98800;
+
+/* 805424CC-805424D0 0004+00 s=0 e=0 z=0  None .rodata    @3790                                                        */
+SECTION_RODATA u32 const lit_3790 = 0xC5F5C800;
+
+/* 805424D0-805424D4 0004+00 s=0 e=0 z=0  None .rodata    @3791                                                        */
+SECTION_RODATA u32 const lit_3791 = 0x442F0000;
+
+/* 805424D4-805424D8 0004+00 s=0 e=0 z=0  None .rodata    @3792                                                        */
+SECTION_RODATA u32 const lit_3792 = 0xC5378000;
+
+/* 805424D8-805424DC 0004+00 s=0 e=0 z=0  None .rodata    @3793                                                        */
+SECTION_RODATA u32 const lit_3793 = 0xC3340000;
+
+/* 805424DC-805424E4 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_805424DC = "F_SP127";
+#pragma pop
+
+/* 805424E4-805424F0 000C+00 s=0 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805424F0-80542504 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
 SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 	0x02000201,
 	/* padding */
 	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
 };
 
-/* 80542504-805428D8 03D4+00 r=0 e=0 z=0  None .data      fish_d127_S                                                  */
+/* 80542504-805428D8 03D4+00 s=0 e=0 z=0  None .data      fish_d127_S                                                  */
 SECTION_DATA u8 fish_d127_S[980] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -266,7 +239,7 @@ SECTION_DATA u8 fish_d127_S[980] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805428D8-80542D38 0460+00 r=0 e=0 z=0  None .data      fish_d127                                                    */
+/* 805428D8-80542D38 0460+00 s=0 e=0 z=0  None .data      fish_d127                                                    */
 SECTION_DATA u8 fish_d127[1120] = {
 	0x00, 0x00, 0x00, 0x00, 0xC5, 0x8F, 0xE8, 0x00, 0xC2, 0xA0, 0x00, 0x00, 0x45, 0x5C, 0x60, 0x00,
 	0x2D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC5, 0xA5, 0xA0, 0x00, 0xC2, 0xA0, 0x00, 0x00,
@@ -340,7 +313,7 @@ SECTION_DATA u8 fish_d127[1120] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80542D38-80542DC8 0090+00 r=0 e=0 z=0  None .data      lf_pos                                                       */
+/* 80542D38-80542DC8 0090+00 s=0 e=0 z=0  None .data      lf_pos                                                       */
 SECTION_DATA u8 lf_pos[144] = {
 	0x0A, 0x00, 0x00, 0x00, 0xC5, 0x22, 0xA0, 0x00, 0x45, 0x9C, 0x40, 0x00, 0x0A, 0x00, 0x00, 0x00,
 	0xC4, 0x57, 0xC0, 0x00, 0x45, 0x9F, 0x38, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x44, 0x0D, 0x80, 0x00,
@@ -353,31 +326,16 @@ SECTION_DATA u8 lf_pos[144] = {
 	0xC4, 0x2F, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0xC6, 0x0B, 0x84, 0x00, 0xC4, 0x1D, 0x80, 0x00,
 };
 
-/* 80542DC8-80542DE8 0020+00 r=1 e=0 z=0  None .data      l_daNpc_Fish_Method                                          */
-SECTION_DATA static void* l_daNpc_Fish_Method[8] = {
-	/* 0    */ (void*)daNpc_Fish_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daNpc_Fish_Delete__FP14npc_fish_class,
-	/* 2    */ (void*)daNpc_Fish_Execute__FP14npc_fish_class,
-	/* 3    */ (void*)daNpc_Fish_IsDelete__FP14npc_fish_class,
-	/* 4    */ (void*)daNpc_Fish_Draw__FP14npc_fish_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80542DC8-80542DE8 0020+00 s=0 e=0 z=0  None .data      l_daNpc_Fish_Method                                          */
+SECTION_DATA u8 l_daNpc_Fish_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80542DE8-80542E18 0030+00 r=1 e=0 z=1  None .data      g_profile_NPC_FISH                                           */
-SECTION_DATA void* g_profile_NPC_FISH[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01350000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005B4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02CF0000,
-	/* 9    */ (void*)&l_daNpc_Fish_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x00060000,
+/* 80542DE8-80542E18 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_FISH                                           */
+SECTION_DATA u8 g_profile_NPC_FISH[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0x35, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0xB4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0xCF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x06, 0x00, 0x00,
 };
 

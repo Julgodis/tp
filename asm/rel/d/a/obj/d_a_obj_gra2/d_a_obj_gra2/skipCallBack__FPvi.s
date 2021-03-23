@@ -6,7 +6,7 @@ lbl_80C0D3A8:
 /* 80C0D3B8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80C0D3BC 00000014  4B FF FF 41 */	bl skipDemoGra__11daObj_GrA_cFv
 /* 80C0D3C0 00000018  7F E3 FB 78 */	mr r3, r31
-/* 80C0D3C4 0000001C  4B FF 2A B5 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80C0D3C4 0000001C  4B FF 2A B5 */	bl _unresolved
 /* 80C0D3C8 00000020  38 60 00 01 */	li r3, 1
 /* 80C0D3CC 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C0D3D0 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

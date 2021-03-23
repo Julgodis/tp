@@ -5,8 +5,8 @@ lbl_80CABF50:
 /* 80CABF5C 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CABF60 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CABF64 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80CABF68 00000018  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CABF6C 0000001C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CABF68 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CABF6C 0000001C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CABF70 00000020  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80CABF74 00000024  80 03 06 10 */	lwz r0, 0x610(r3)
 /* 80CABF78 00000028  2C 00 00 04 */	cmpwi r0, 4
@@ -25,8 +25,8 @@ lbl_80CABF50:
 /* 80CABFAC 0000005C  EC 03 00 28 */	fsubs f0, f3, f0
 /* 80CABFB0 00000060  FC 00 02 10 */	fabs f0, f0
 /* 80CABFB4 00000064  FC 00 00 18 */	frsp f0, f0
-/* 80CABFB8 00000068  3C 80 00 00 */	lis r4, lit_4256@ha /* 80CAC57C */
-/* 80CABFBC 0000006C  C0 24 00 00 */	lfs f1, lit_4256@l(r4) /* 80CAC57C */
+/* 80CABFB8 00000068  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CABFBC 0000006C  C0 24 00 00 */	lfs f1, 0x0000(r4)
 /* 80CABFC0 00000070  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 80CABFC4 00000000  40 80 00 3C */	bge lbl_80CAC000
 /* 80CABFC8 00000004  FC 00 22 10 */	fabs f0, f4
@@ -47,30 +47,30 @@ lbl_80CAC000:
 /* 80CAC000 00000000  38 00 00 00 */	li r0, 0
 /* 80CAC004 00000004  98 1F 07 D0 */	stb r0, 0x7d0(r31)
 lbl_80CAC008:
-/* 80CAC008 00000000  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80CAC00C 00000004  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80CAC008 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC00C 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC010 00000008  38 80 00 10 */	li r4, 0x10
 /* 80CAC014 0000000C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80CAC018 00000010  38 DF 01 0C */	addi r6, r31, 0x10c
-/* 80CAC01C 00000014  4B FF EC 7D */	bl settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80CAC020 00000018  3C 60 00 00 */	lis r3, g_env_light@ha /* 8042CA54 */
-/* 80CAC024 0000001C  38 63 00 00 */	addi r3, r3, g_env_light@l /* 8042CA54 */
+/* 80CAC01C 00000014  4B FF EC 7D */	bl _unresolved
+/* 80CAC020 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC024 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC028 00000020  80 9F 06 08 */	lwz r4, 0x608(r31)
 /* 80CAC02C 00000024  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CAC030 00000028  38 BF 01 0C */	addi r5, r31, 0x10c
-/* 80CAC034 0000002C  4B FF EC 65 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80CAC038 00000030  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CAC03C 00000034  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CAC034 0000002C  4B FF EC 65 */	bl _unresolved
+/* 80CAC038 00000030  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC03C 00000034  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC040 00000038  80 04 5F 70 */	lwz r0, 0x5f70(r4)
-/* 80CAC044 0000003C  3C 60 00 00 */	lis r3, j3dSys@ha /* 80434AC8 */
-/* 80CAC048 00000040  3B C3 00 00 */	addi r30, r3, j3dSys@l /* 80434AC8 */
+/* 80CAC044 0000003C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC048 00000040  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC04C 00000044  90 1E 00 48 */	stw r0, 0x48(r30)
 /* 80CAC050 00000048  80 04 5F 74 */	lwz r0, 0x5f74(r4)
 /* 80CAC054 0000004C  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80CAC058 00000050  80 7F 06 08 */	lwz r3, 0x608(r31)
-/* 80CAC05C 00000054  4B FF EC 3D */	bl mDoExt_modelUpdateDL__FP8J3DModel
-/* 80CAC060 00000058  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CAC064 0000005C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CAC05C 00000054  4B FF EC 3D */	bl _unresolved
+/* 80CAC060 00000058  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CAC064 0000005C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CAC068 00000060  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CAC06C 00000064  90 1E 00 48 */	stw r0, 0x48(r30)
 /* 80CAC070 00000068  80 03 5F 84 */	lwz r0, 0x5f84(r3)

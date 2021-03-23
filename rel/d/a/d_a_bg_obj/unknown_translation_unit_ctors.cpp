@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8045C9AC[2];
+extern u8 data_8045C9AC[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_bg_obj_cpp(); // 1
 
 // 
 // Declarations:

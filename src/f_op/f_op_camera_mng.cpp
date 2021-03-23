@@ -47,7 +47,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 8001E308-8001E310 0008+00 r=14 e=12 z=2  None .text      fopCamM_GetParam__FP12camera_class                           */
+/* 8001E308-8001E310 0008+00 s=0 e=12 z=0  None .text      fopCamM_GetParam__FP12camera_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,10 +59,10 @@ asm void fopCamM_GetParam(camera_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803F1DD8-803F1DE8 0010+00 r=1 e=0 z=0  None .bss       l_fopCamM_id                                                 */
+/* 803F1DD8-803F1DE8 0010+00 s=1 e=0 z=0  None .bss       l_fopCamM_id                                                 */
 static u8 l_fopCamM_id[16];
 
-/* 8001E310-8001E374 0064+00 r=1 e=1 z=0  None .text      fopCamM_Create__FisPv                                        */
+/* 8001E310-8001E374 0064+00 s=0 e=1 z=0  None .text      fopCamM_Create__FisPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +73,7 @@ asm void fopCamM_Create(int param_0, s16 param_1, void* param_2) {
 #pragma pop
 
 
-/* 8001E374-8001E378 0004+00 r=1 e=1 z=0  None .text      fopCamM_Management__Fv                                       */
+/* 8001E374-8001E378 0004+00 s=0 e=1 z=0  None .text      fopCamM_Management__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ asm void fopCamM_Management() {
 #pragma pop
 
 
-/* 8001E378-8001E37C 0004+00 r=1 e=1 z=0  None .text      fopCamM_Init__Fv                                             */
+/* 8001E378-8001E37C 0004+00 s=0 e=1 z=0  None .text      fopCamM_Init__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

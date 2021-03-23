@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80CBF654[2];
+extern u8 data_80CBF654[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_rotBridge_cpp(); // 1
 
 // 
 // Declarations:

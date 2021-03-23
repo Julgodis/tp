@@ -12,27 +12,27 @@ lbl_8047DD88:
 /* 8047DDB0 00000028  D0 41 00 0C */	stfs f2, 0xc(r1)
 /* 8047DDB4 0000002C  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8047DDB8 00000030  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8047DDBC 00000034  3C 60 00 00 */	lis r3, lit_3754@ha /* 804810F0 */
-/* 8047DDC0 00000038  C0 03 00 00 */	lfs f0, lit_3754@l(r3) /* 804810F0 */
+/* 8047DDBC 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8047DDC0 00000038  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 8047DDC4 0000003C  EC 20 10 2A */	fadds f1, f0, f2
-/* 8047DDC8 00000040  3C 60 00 00 */	lis r3, lit_3755@ha /* 804810F4 */
-/* 8047DDCC 00000044  C0 03 00 00 */	lfs f0, lit_3755@l(r3) /* 804810F4 */
+/* 8047DDC8 00000040  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8047DDCC 00000044  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 8047DDD0 00000048  EC 02 00 28 */	fsubs f0, f2, f0
 /* 8047DDD4 0000004C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8047DDD8 00000050  3C 60 00 00 */	lis r3, M_wrt_work__Q212daObjMovebox5Bgc_c@ha /* 8048206C */
-/* 8047DDDC 00000054  38 63 00 00 */	addi r3, r3, M_wrt_work__Q212daObjMovebox5Bgc_c@l /* 8048206C */
+/* 8047DDD8 00000050  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8047DDDC 00000054  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8047DDE0 00000058  38 81 00 08 */	addi r4, r1, 8
-/* 8047DDE4 0000005C  4B FF FC 75 */	bl Set__14dBgS_SplGrpChkFR4cXyzf
-/* 8047DDE8 00000060  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8047DDEC 00000064  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8047DDE4 0000005C  4B FF FC 75 */	bl _unresolved
+/* 8047DDE8 00000060  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8047DDEC 00000064  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8047DDF0 00000068  38 63 0F 38 */	addi r3, r3, 0xf38
-/* 8047DDF4 0000006C  3C 80 00 00 */	lis r4, M_wrt_work__Q212daObjMovebox5Bgc_c@ha /* 8048206C */
-/* 8047DDF8 00000070  38 84 00 00 */	addi r4, r4, M_wrt_work__Q212daObjMovebox5Bgc_c@l /* 8048206C */
-/* 8047DDFC 00000074  4B FF FC 5D */	bl SplGrpChk__4dBgSFP14dBgS_SplGrpChk
+/* 8047DDF4 0000006C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8047DDF8 00000070  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 8047DDFC 00000074  4B FF FC 5D */	bl _unresolved
 /* 8047DE00 00000078  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8047DE04 0000007C  41 82 00 3C */	beq lbl_8047DE40
-/* 8047DE08 00000080  3C 60 00 00 */	lis r3, M_wrt_work__Q212daObjMovebox5Bgc_c@ha /* 8048206C */
-/* 8047DE0C 00000084  38 63 00 00 */	addi r3, r3, M_wrt_work__Q212daObjMovebox5Bgc_c@l /* 8048206C */
+/* 8047DE08 00000080  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8047DE0C 00000084  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8047DE10 00000088  C0 03 00 4C */	lfs f0, 0x4c(r3)
 /* 8047DE14 0000008C  D0 1F 00 60 */	stfs f0, 0x60(r31)
 /* 8047DE18 00000090  80 1F 01 80 */	lwz r0, 0x180(r31)

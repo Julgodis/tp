@@ -198,7 +198,7 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9B70-803C9B94 0024+00 r=1 e=0 z=0  None .data      @1418                                                        */
+/* 803C9B70-803C9B94 0024+00 s=1 e=0 z=0  None .data      @1418                                                        */
 SECTION_DATA static void* lit_1418[9] = {
 	/* 0    */ (void*)(((char*)do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl)+0x104),
 	/* 1    */ (void*)(((char*)do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl)+0xE0),
@@ -211,7 +211,7 @@ SECTION_DATA static void* lit_1418[9] = {
 	/* 8    */ (void*)(((char*)do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl)+0x48),
 };
 
-/* 803C9B94-803C9BD4 0040+00 r=2 e=0 z=0  None .data      __vt__Q28JMessage19TRenderingProcessor                       */
+/* 803C9B94-803C9BD4 0040+00 s=2 e=0 z=0  None .data      __vt__Q28JMessage19TRenderingProcessor                       */
 SECTION_DATA static void* __vt__Q28JMessage19TRenderingProcessor[16] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -231,7 +231,7 @@ SECTION_DATA static void* __vt__Q28JMessage19TRenderingProcessor[16] = {
 	/* 15   */ (void*)do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl,
 };
 
-/* 803C9BD4-803C9C2C 0058+00 r=2 e=0 z=0  None .data      __vt__Q28JMessage18TSequenceProcessor                        */
+/* 803C9BD4-803C9C2C 0058+00 s=2 e=0 z=0  None .data      __vt__Q28JMessage18TSequenceProcessor                        */
 SECTION_DATA static void* __vt__Q28JMessage18TSequenceProcessor[22] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -257,7 +257,7 @@ SECTION_DATA static void* __vt__Q28JMessage18TSequenceProcessor[22] = {
 	/* 21   */ (void*)do_branch__Q28JMessage18TSequenceProcessorFPCvPCc,
 };
 
-/* 803C9C2C-803C9C6C 0040+00 r=3 e=0 z=0  None .data      __vt__Q28JMessage10TProcessor                                */
+/* 803C9C2C-803C9C6C 0040+00 s=3 e=0 z=0  None .data      __vt__Q28JMessage10TProcessor                                */
 SECTION_DATA static void* __vt__Q28JMessage10TProcessor[16] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -277,7 +277,7 @@ SECTION_DATA static void* __vt__Q28JMessage10TProcessor[16] = {
 	/* 15   */ (void*)NULL,
 };
 
-/* 803C9C6C-803C9C80 0010+04 r=3 e=2 z=0  None .data      __vt__Q28JMessage10TReference                                */
+/* 803C9C6C-803C9C80 0010+04 s=1 e=2 z=0  None .data      __vt__Q28JMessage10TReference                                */
 SECTION_DATA void* __vt__Q28JMessage10TReference[4 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -287,7 +287,7 @@ SECTION_DATA void* __vt__Q28JMessage10TReference[4 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A7AF8-802A7B40 0048+00 r=3 e=2 z=0  None .text      __dt__Q28JMessage10TReferenceFv                              */
+/* 802A7AF8-802A7B40 0048+00 s=1 e=2 z=0  None .text      __dt__Q28JMessage10TReferenceFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +298,7 @@ asm JMessage::TReference::~TReference() {
 #pragma pop
 
 
-/* 802A7B40-802A7B48 0008+00 r=3 e=2 z=0  None .text      do_word__Q28JMessage10TReferenceCFUl                         */
+/* 802A7B40-802A7B48 0008+00 s=1 e=2 z=0  None .text      do_word__Q28JMessage10TReferenceCFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -309,7 +309,7 @@ asm void JMessage::TReference::do_word(u32 param_0) const {
 #pragma pop
 
 
-/* 802A7B48-802A7B90 0048+00 r=3 e=0 z=0  None .text      __dt__Q28JMessage10TProcessorFv                              */
+/* 802A7B48-802A7B90 0048+00 s=3 e=0 z=0  None .text      __dt__Q28JMessage10TProcessorFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +320,7 @@ asm JMessage::TProcessor::~TProcessor() {
 #pragma pop
 
 
-/* 802A7B90-802A7BF8 0068+00 r=1 e=1 z=0  None .text      reset__Q28JMessage10TProcessorFv                             */
+/* 802A7B90-802A7BF8 0068+00 s=0 e=1 z=0  None .text      reset__Q28JMessage10TProcessorFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +331,7 @@ asm void JMessage::TProcessor::reset() {
 #pragma pop
 
 
-/* 802A7BF8-802A7C30 0038+00 r=9 e=8 z=0  None .text      stack_pushCurrent__Q28JMessage10TProcessorFPCc               */
+/* 802A7BF8-802A7C30 0038+00 s=1 e=8 z=0  None .text      stack_pushCurrent__Q28JMessage10TProcessorFPCc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,7 +342,7 @@ asm void JMessage::TProcessor::stack_pushCurrent(char const* param_0) {
 #pragma pop
 
 
-/* 802A7C30-802A7C54 0024+00 r=1 e=0 z=0  None .text      stack_popCurrent__Q28JMessage10TProcessorFv                  */
+/* 802A7C30-802A7C54 0024+00 s=1 e=0 z=0  None .text      stack_popCurrent__Q28JMessage10TProcessorFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,7 +353,7 @@ asm void JMessage::TProcessor::stack_popCurrent() {
 #pragma pop
 
 
-/* 802A7C54-802A7CD4 0080+00 r=2 e=1 z=0  None .text      getResource_groupID__Q28JMessage10TProcessorCFUs             */
+/* 802A7C54-802A7CD4 0080+00 s=1 e=1 z=0  None .text      getResource_groupID__Q28JMessage10TProcessorCFUs             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,7 +364,7 @@ asm void JMessage::TProcessor::getResource_groupID(u16 param_0) const {
 #pragma pop
 
 
-/* 802A7CD4-802A7E38 0164+00 r=1 e=1 z=0  None .text      toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb     */
+/* 802A7CD4-802A7E38 0164+00 s=0 e=1 z=0  None .text      toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -375,7 +375,7 @@ asm void JMessage::TProcessor::toMessageCode_messageID(u32 param_0, u32 param_1,
 #pragma pop
 
 
-/* 802A7E38-802A7EDC 00A4+00 r=1 e=0 z=0  None .text      on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl */
+/* 802A7E38-802A7EDC 00A4+00 s=1 e=0 z=0  None .text      on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +386,7 @@ asm void JMessage::TProcessor::on_select_begin(char const* (*)(JMessage::TProces
 #pragma pop
 
 
-/* 802A7EDC-802A7F34 0058+00 r=1 e=0 z=0  None .text      on_select_end__Q28JMessage10TProcessorFv                     */
+/* 802A7EDC-802A7F34 0058+00 s=1 e=0 z=0  None .text      on_select_end__Q28JMessage10TProcessorFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,7 +397,7 @@ asm void JMessage::TProcessor::on_select_end() {
 #pragma pop
 
 
-/* 802A7F34-802A7FC0 008C+00 r=1 e=0 z=0  None .text      on_select_separate__Q28JMessage10TProcessorFv                */
+/* 802A7F34-802A7FC0 008C+00 s=1 e=0 z=0  None .text      on_select_separate__Q28JMessage10TProcessorFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +408,7 @@ asm void JMessage::TProcessor::on_select_separate() {
 #pragma pop
 
 
-/* 802A7FC0-802A7FC4 0004+00 r=5 e=2 z=0  None .text      do_reset__Q28JMessage10TProcessorFv                          */
+/* 802A7FC0-802A7FC4 0004+00 s=3 e=2 z=0  None .text      do_reset__Q28JMessage10TProcessorFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +419,7 @@ asm void JMessage::TProcessor::do_reset() {
 #pragma pop
 
 
-/* 802A7FC4-802A7FC8 0004+00 r=3 e=0 z=0  None .text      do_begin__Q28JMessage10TProcessorFPCvPCc                     */
+/* 802A7FC4-802A7FC8 0004+00 s=3 e=0 z=0  None .text      do_begin__Q28JMessage10TProcessorFPCvPCc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +430,7 @@ asm void JMessage::TProcessor::do_begin(void const* param_0, char const* param_1
 #pragma pop
 
 
-/* 802A7FC8-802A7FCC 0004+00 r=3 e=0 z=0  None .text      do_end__Q28JMessage10TProcessorFv                            */
+/* 802A7FC8-802A7FCC 0004+00 s=3 e=0 z=0  None .text      do_end__Q28JMessage10TProcessorFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +441,7 @@ asm void JMessage::TProcessor::do_end() {
 #pragma pop
 
 
-/* 802A7FCC-802A7FD0 0004+00 r=3 e=0 z=0  None .text      do_character__Q28JMessage10TProcessorFi                      */
+/* 802A7FCC-802A7FD0 0004+00 s=3 e=0 z=0  None .text      do_character__Q28JMessage10TProcessorFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +452,7 @@ asm void JMessage::TProcessor::do_character(int param_0) {
 #pragma pop
 
 
-/* 802A7FD0-802A7FD8 0008+00 r=3 e=0 z=0  None .text      do_tag__Q28JMessage10TProcessorFUlPCvUl                      */
+/* 802A7FD0-802A7FD8 0008+00 s=3 e=0 z=0  None .text      do_tag__Q28JMessage10TProcessorFUlPCvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +463,7 @@ asm void JMessage::TProcessor::do_tag(u32 param_0, void const* param_1, u32 para
 #pragma pop
 
 
-/* 802A7FD8-802A7FDC 0004+00 r=9 e=6 z=0  None .text      do_select_begin__Q28JMessage10TProcessorFUl                  */
+/* 802A7FD8-802A7FDC 0004+00 s=3 e=6 z=0  None .text      do_select_begin__Q28JMessage10TProcessorFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +474,7 @@ asm void JMessage::TProcessor::do_select_begin(u32 param_0) {
 #pragma pop
 
 
-/* 802A7FDC-802A7FE0 0004+00 r=9 e=6 z=0  None .text      do_select_end__Q28JMessage10TProcessorFv                     */
+/* 802A7FDC-802A7FE0 0004+00 s=3 e=6 z=0  None .text      do_select_end__Q28JMessage10TProcessorFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +485,7 @@ asm void JMessage::TProcessor::do_select_end() {
 #pragma pop
 
 
-/* 802A7FE0-802A7FE4 0004+00 r=9 e=6 z=0  None .text      do_select_separate__Q28JMessage10TProcessorFv                */
+/* 802A7FE0-802A7FE4 0004+00 s=3 e=6 z=0  None .text      do_select_separate__Q28JMessage10TProcessorFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +496,7 @@ asm void JMessage::TProcessor::do_select_separate() {
 #pragma pop
 
 
-/* 802A7FE4-802A8084 00A0+00 r=1 e=0 z=0  None .text      on_tag___Q28JMessage10TProcessorFv                           */
+/* 802A7FE4-802A8084 00A0+00 s=1 e=0 z=0  None .text      on_tag___Q28JMessage10TProcessorFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,7 +507,7 @@ asm void JMessage::TProcessor::on_tag_() {
 #pragma pop
 
 
-/* 802A8084-802A8088 0004+00 r=6 e=4 z=0  None .text      do_resetStatus___Q28JMessage10TProcessorFPCc                 */
+/* 802A8084-802A8088 0004+00 s=2 e=4 z=0  None .text      do_resetStatus___Q28JMessage10TProcessorFPCc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +518,7 @@ asm void JMessage::TProcessor::do_resetStatus_(char const* param_0) {
 #pragma pop
 
 
-/* 802A8088-802A8090 0008+00 r=6 e=4 z=0  None .text      do_setBegin_isReady___Q28JMessage10TProcessorCFv             */
+/* 802A8088-802A8090 0008+00 s=2 e=4 z=0  None .text      do_setBegin_isReady___Q28JMessage10TProcessorCFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +529,7 @@ asm void JMessage::TProcessor::do_setBegin_isReady_() const {
 #pragma pop
 
 
-/* 802A8090-802A81EC 015C+00 r=2 e=0 z=0  None .text      do_tag___Q28JMessage10TProcessorFUlPCvUl                     */
+/* 802A8090-802A81EC 015C+00 s=2 e=0 z=0  None .text      do_tag___Q28JMessage10TProcessorFUlPCvUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +540,7 @@ asm void JMessage::TProcessor::do_tag_(u32 param_0, void const* param_1, u32 par
 #pragma pop
 
 
-/* 802A81EC-802A828C 00A0+00 r=2 e=0 z=0  None .text      process_character___Q28JMessage10TProcessorFv                */
+/* 802A81EC-802A828C 00A0+00 s=2 e=0 z=0  None .text      process_character___Q28JMessage10TProcessorFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +551,7 @@ asm void JMessage::TProcessor::process_character_() {
 #pragma pop
 
 
-/* 802A828C-802A82F4 0068+00 r=12 e=6 z=0  None .text      process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
+/* 802A828C-802A82F4 0068+00 s=6 e=6 z=0  None .text      process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,7 +562,7 @@ asm void JMessage::TProcessor::process_onCharacterEnd_normal_(JMessage::TProcess
 #pragma pop
 
 
-/* 802A82F4-802A833C 0048+00 r=1 e=0 z=0  None .text      process_onCharacterEnd_select___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
+/* 802A82F4-802A833C 0048+00 s=1 e=0 z=0  None .text      process_onCharacterEnd_select___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +573,7 @@ asm void JMessage::TProcessor::process_onCharacterEnd_select_(JMessage::TProcess
 #pragma pop
 
 
-/* 802A833C-802A8358 001C+00 r=1 e=0 z=0  None .text      process_onSelect_limited___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
+/* 802A833C-802A8358 001C+00 s=1 e=0 z=0  None .text      process_onSelect_limited___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,7 +584,7 @@ asm void JMessage::TProcessor::process_onSelect_limited_(JMessage::TProcessor* p
 #pragma pop
 
 
-/* 802A8358-802A8374 001C+00 r=1 e=0 z=0  None .text      process_onSelect___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
+/* 802A8358-802A8374 001C+00 s=1 e=0 z=0  None .text      process_onSelect___Q28JMessage10TProcessorFPQ28JMessage10TProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +595,7 @@ asm void JMessage::TProcessor::process_onSelect_(JMessage::TProcessor* param_0) 
 #pragma pop
 
 
-/* 802A8374-802A83B8 0044+00 r=2 e=2 z=0  None .text      __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl */
+/* 802A8374-802A83B8 0044+00 s=0 e=2 z=0  None .text      __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +606,7 @@ asm JMessage::TSequenceProcessor::TSequenceProcessor(JMessage::TReference const*
 #pragma pop
 
 
-/* 802A83B8-802A8418 0060+00 r=3 e=2 z=0  None .text      __dt__Q28JMessage18TSequenceProcessorFv                      */
+/* 802A83B8-802A8418 0060+00 s=1 e=2 z=0  None .text      __dt__Q28JMessage18TSequenceProcessorFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +617,7 @@ asm JMessage::TSequenceProcessor::~TSequenceProcessor() {
 #pragma pop
 
 
-/* 802A8418-802A85A4 018C+00 r=1 e=1 z=0  None .text      process__Q28JMessage18TSequenceProcessorFPCc                 */
+/* 802A8418-802A85A4 018C+00 s=0 e=1 z=0  None .text      process__Q28JMessage18TSequenceProcessorFPCc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +628,7 @@ asm void JMessage::TSequenceProcessor::process(char const* param_0) {
 #pragma pop
 
 
-/* 802A85A4-802A85D0 002C+00 r=1 e=0 z=0  None .text      on_isReady__Q28JMessage18TSequenceProcessorFv                */
+/* 802A85A4-802A85D0 002C+00 s=1 e=0 z=0  None .text      on_isReady__Q28JMessage18TSequenceProcessorFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -639,7 +639,7 @@ asm void JMessage::TSequenceProcessor::on_isReady() {
 #pragma pop
 
 
-/* 802A85D0-802A85E4 0014+00 r=1 e=0 z=0  None .text      on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl */
+/* 802A85D0-802A85E4 0014+00 s=1 e=0 z=0  None .text      on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -650,7 +650,7 @@ asm void JMessage::TSequenceProcessor::on_jump_register(void const* (*)(JMessage
 #pragma pop
 
 
-/* 802A85E4-802A8610 002C+00 r=1 e=0 z=0  None .text      on_jump_isReady__Q28JMessage18TSequenceProcessorFv           */
+/* 802A85E4-802A8610 002C+00 s=1 e=0 z=0  None .text      on_jump_isReady__Q28JMessage18TSequenceProcessorFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -661,7 +661,7 @@ asm void JMessage::TSequenceProcessor::on_jump_isReady() {
 #pragma pop
 
 
-/* 802A8610-802A8690 0080+00 r=1 e=0 z=0  None .text      on_jump__Q28JMessage18TSequenceProcessorFPCvPCc              */
+/* 802A8610-802A8690 0080+00 s=1 e=0 z=0  None .text      on_jump__Q28JMessage18TSequenceProcessorFPCvPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -672,7 +672,7 @@ asm void JMessage::TSequenceProcessor::on_jump(void const* param_0, char const* 
 #pragma pop
 
 
-/* 802A8690-802A86A0 0010+00 r=1 e=0 z=0  None .text      on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl */
+/* 802A8690-802A86A0 0010+00 s=1 e=0 z=0  None .text      on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -683,7 +683,7 @@ asm void JMessage::TSequenceProcessor::on_branch_register(void const* (*)(JMessa
 #pragma pop
 
 
-/* 802A86A0-802A86D4 0034+00 r=1 e=0 z=0  None .text      on_branch_query__Q28JMessage18TSequenceProcessorFUl          */
+/* 802A86A0-802A86D4 0034+00 s=1 e=0 z=0  None .text      on_branch_query__Q28JMessage18TSequenceProcessorFUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -694,7 +694,7 @@ asm void JMessage::TSequenceProcessor::on_branch_query(u32 param_0) {
 #pragma pop
 
 
-/* 802A86D4-802A8700 002C+00 r=1 e=0 z=0  None .text      on_branch_queryResult__Q28JMessage18TSequenceProcessorFv     */
+/* 802A86D4-802A8700 002C+00 s=1 e=0 z=0  None .text      on_branch_queryResult__Q28JMessage18TSequenceProcessorFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -705,7 +705,7 @@ asm void JMessage::TSequenceProcessor::on_branch_queryResult() {
 #pragma pop
 
 
-/* 802A8700-802A8780 0080+00 r=1 e=0 z=0  None .text      on_branch__Q28JMessage18TSequenceProcessorFPCvPCc            */
+/* 802A8700-802A8780 0080+00 s=1 e=0 z=0  None .text      on_branch__Q28JMessage18TSequenceProcessorFPCvPCc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -716,7 +716,7 @@ asm void JMessage::TSequenceProcessor::on_branch(void const* param_0, char const
 #pragma pop
 
 
-/* 802A8780-802A8788 0008+00 r=1 e=0 z=0  None .text      do_isReady__Q28JMessage18TSequenceProcessorFv                */
+/* 802A8780-802A8788 0008+00 s=1 e=0 z=0  None .text      do_isReady__Q28JMessage18TSequenceProcessorFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -727,7 +727,7 @@ asm void JMessage::TSequenceProcessor::do_isReady() {
 #pragma pop
 
 
-/* 802A8788-802A8790 0008+00 r=1 e=0 z=0  None .text      do_jump_isReady__Q28JMessage18TSequenceProcessorFv           */
+/* 802A8788-802A8790 0008+00 s=1 e=0 z=0  None .text      do_jump_isReady__Q28JMessage18TSequenceProcessorFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,7 +738,7 @@ asm void JMessage::TSequenceProcessor::do_jump_isReady() {
 #pragma pop
 
 
-/* 802A8790-802A8794 0004+00 r=1 e=0 z=0  None .text      do_jump__Q28JMessage18TSequenceProcessorFPCvPCc              */
+/* 802A8790-802A8794 0004+00 s=1 e=0 z=0  None .text      do_jump__Q28JMessage18TSequenceProcessorFPCvPCc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -749,7 +749,7 @@ asm void JMessage::TSequenceProcessor::do_jump(void const* param_0, char const* 
 #pragma pop
 
 
-/* 802A8794-802A8798 0004+00 r=3 e=2 z=0  None .text      do_branch_query__Q28JMessage18TSequenceProcessorFUl          */
+/* 802A8794-802A8798 0004+00 s=1 e=2 z=0  None .text      do_branch_query__Q28JMessage18TSequenceProcessorFUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -760,7 +760,7 @@ asm void JMessage::TSequenceProcessor::do_branch_query(u32 param_0) {
 #pragma pop
 
 
-/* 802A8798-802A87A0 0008+00 r=3 e=2 z=0  None .text      do_branch_queryResult__Q28JMessage18TSequenceProcessorFv     */
+/* 802A8798-802A87A0 0008+00 s=1 e=2 z=0  None .text      do_branch_queryResult__Q28JMessage18TSequenceProcessorFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,7 +771,7 @@ asm void JMessage::TSequenceProcessor::do_branch_queryResult() {
 #pragma pop
 
 
-/* 802A87A0-802A87A4 0004+00 r=3 e=2 z=0  None .text      do_branch__Q28JMessage18TSequenceProcessorFPCvPCc            */
+/* 802A87A0-802A87A4 0004+00 s=1 e=2 z=0  None .text      do_branch__Q28JMessage18TSequenceProcessorFPCvPCc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -782,7 +782,7 @@ asm void JMessage::TSequenceProcessor::do_branch(void const* param_0, char const
 #pragma pop
 
 
-/* 802A87A4-802A87C0 001C+00 r=3 e=2 z=0  None .text      do_resetStatus___Q28JMessage18TSequenceProcessorFPCc         */
+/* 802A87A4-802A87C0 001C+00 s=1 e=2 z=0  None .text      do_resetStatus___Q28JMessage18TSequenceProcessorFPCc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -793,7 +793,7 @@ asm void JMessage::TSequenceProcessor::do_resetStatus_(char const* param_0) {
 #pragma pop
 
 
-/* 802A87C0-802A87D0 0010+00 r=3 e=2 z=0  None .text      do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv     */
+/* 802A87C0-802A87D0 0010+00 s=1 e=2 z=0  None .text      do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -804,7 +804,7 @@ asm void JMessage::TSequenceProcessor::do_setBegin_isReady_() const {
 #pragma pop
 
 
-/* 802A87D0-802A87D4 0004+00 r=3 e=2 z=0  None .text      do_begin___Q28JMessage18TSequenceProcessorFPCvPCc            */
+/* 802A87D0-802A87D4 0004+00 s=1 e=2 z=0  None .text      do_begin___Q28JMessage18TSequenceProcessorFPCvPCc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -815,7 +815,7 @@ asm void JMessage::TSequenceProcessor::do_begin_(void const* param_0, char const
 #pragma pop
 
 
-/* 802A87D4-802A87E0 000C+00 r=3 e=2 z=0  None .text      do_end___Q28JMessage18TSequenceProcessorFv                   */
+/* 802A87D4-802A87E0 000C+00 s=1 e=2 z=0  None .text      do_end___Q28JMessage18TSequenceProcessorFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,7 +826,7 @@ asm void JMessage::TSequenceProcessor::do_end_() {
 #pragma pop
 
 
-/* 802A87E0-802A892C 014C+00 r=4 e=2 z=0  None .text      do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl             */
+/* 802A87E0-802A892C 014C+00 s=2 e=2 z=0  None .text      do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -837,7 +837,7 @@ asm void JMessage::TSequenceProcessor::do_tag_(u32 param_0, void const* param_1,
 #pragma pop
 
 
-/* 802A892C-802A8944 0018+00 r=1 e=0 z=0  None .text      process_setMessageIndex_reserved___Q28JMessage18TSequenceProcessorFUs */
+/* 802A892C-802A8944 0018+00 s=1 e=0 z=0  None .text      process_setMessageIndex_reserved___Q28JMessage18TSequenceProcessorFUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -848,7 +848,7 @@ asm void JMessage::TSequenceProcessor::process_setMessageIndex_reserved_(u16 par
 #pragma pop
 
 
-/* 802A8944-802A89B8 0074+00 r=4 e=0 z=0  None .text      process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs */
+/* 802A8944-802A89B8 0074+00 s=4 e=0 z=0  None .text      process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +859,7 @@ asm void JMessage::TSequenceProcessor::process_setMessageCode_(JMessage::TSequen
 #pragma pop
 
 
-/* 802A89B8-802A89EC 0034+00 r=1 e=0 z=0  None .text      process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor */
+/* 802A89B8-802A89EC 0034+00 s=1 e=0 z=0  None .text      process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +870,7 @@ asm void JMessage::TSequenceProcessor::process_onJump_limited_(JMessage::TSequen
 #pragma pop
 
 
-/* 802A89EC-802A8A18 002C+00 r=1 e=0 z=0  None .text      process_onJump___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor */
+/* 802A89EC-802A8A18 002C+00 s=1 e=0 z=0  None .text      process_onJump___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +881,7 @@ asm void JMessage::TSequenceProcessor::process_onJump_(JMessage::TSequenceProces
 #pragma pop
 
 
-/* 802A8A18-802A8A50 0038+00 r=1 e=0 z=0  None .text      process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl */
+/* 802A8A18-802A8A50 0038+00 s=1 e=0 z=0  None .text      process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -892,7 +892,7 @@ asm void JMessage::TSequenceProcessor::process_onBranch_limited_(JMessage::TSequ
 #pragma pop
 
 
-/* 802A8A50-802A8A84 0034+00 r=1 e=0 z=0  None .text      process_onBranch___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl */
+/* 802A8A50-802A8A84 0034+00 s=1 e=0 z=0  None .text      process_onBranch___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,7 +903,7 @@ asm void JMessage::TSequenceProcessor::process_onBranch_(JMessage::TSequenceProc
 #pragma pop
 
 
-/* 802A8A84-802A8AC0 003C+00 r=4 e=4 z=0  None .text      __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference */
+/* 802A8A84-802A8AC0 003C+00 s=0 e=4 z=0  None .text      __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +914,7 @@ asm JMessage::TRenderingProcessor::TRenderingProcessor(JMessage::TReference cons
 #pragma pop
 
 
-/* 802A8AC0-802A8B20 0060+00 r=7 e=6 z=0  None .text      __dt__Q28JMessage19TRenderingProcessorFv                     */
+/* 802A8AC0-802A8B20 0060+00 s=1 e=6 z=0  None .text      __dt__Q28JMessage19TRenderingProcessorFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm JMessage::TRenderingProcessor::~TRenderingProcessor() {
 #pragma pop
 
 
-/* 802A8B20-802A8BA4 0084+00 r=4 e=4 z=0  None .text      process__Q28JMessage19TRenderingProcessorFPCc                */
+/* 802A8B20-802A8BA4 0084+00 s=0 e=4 z=0  None .text      process__Q28JMessage19TRenderingProcessorFPCc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void JMessage::TRenderingProcessor::process(char const* param_0) {
 #pragma pop
 
 
-/* 802A8BA4-802A8BA8 0004+00 r=5 e=4 z=0  None .text      do_begin___Q28JMessage19TRenderingProcessorFPCvPCc           */
+/* 802A8BA4-802A8BA8 0004+00 s=1 e=4 z=0  None .text      do_begin___Q28JMessage19TRenderingProcessorFPCvPCc           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void JMessage::TRenderingProcessor::do_begin_(void const* param_0, char cons
 #pragma pop
 
 
-/* 802A8BA8-802A8BAC 0004+00 r=5 e=4 z=0  None .text      do_end___Q28JMessage19TRenderingProcessorFv                  */
+/* 802A8BA8-802A8BAC 0004+00 s=1 e=4 z=0  None .text      do_end___Q28JMessage19TRenderingProcessorFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +958,7 @@ asm void JMessage::TRenderingProcessor::do_end_() {
 #pragma pop
 
 
-/* 802A8BAC-802A8C24 0078+00 r=5 e=4 z=0  None .text      do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl            */
+/* 802A8BAC-802A8C24 0078+00 s=1 e=4 z=0  None .text      do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +969,7 @@ asm void JMessage::TRenderingProcessor::do_tag_(u32 param_0, void const* param_1
 #pragma pop
 
 
-/* 802A8C24-802A8C44 0020+00 r=1 e=0 z=0  None .text      on_message__Q28JMessage10TProcessorCFUl                      */
+/* 802A8C24-802A8C44 0020+00 s=1 e=0 z=0  None .text      on_message__Q28JMessage10TProcessorCFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,7 +980,7 @@ asm void JMessage::TProcessor::on_message(u32 param_0) const {
 #pragma pop
 
 
-/* 802A8C44-802A8CDC 0098+00 r=1 e=0 z=0  None .text      getMessageText_messageCode__Q28JMessage10TProcessorCFUl      */
+/* 802A8C44-802A8CDC 0098+00 s=1 e=0 z=0  None .text      getMessageText_messageCode__Q28JMessage10TProcessorCFUl      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

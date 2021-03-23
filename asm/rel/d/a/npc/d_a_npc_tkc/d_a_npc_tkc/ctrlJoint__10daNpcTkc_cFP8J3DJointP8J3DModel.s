@@ -18,7 +18,7 @@ lbl_80B0D288:
 /* 80B0D298 00000010  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 80B0D29C 00000014  80 83 00 08 */	lwz r4, 8(r3)
 /* 80B0D2A0 00000018  38 7E 05 6C */	addi r3, r30, 0x56c
-/* 80B0D2A4 0000001C  4B FF F4 95 */	bl changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform
+/* 80B0D2A4 0000001C  4B FF F4 95 */	bl _unresolved
 /* 80B0D2A8 00000020  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 80B0D2AC 00000024  93 E3 00 08 */	stw r31, 8(r3)
 lbl_80B0D2B0:

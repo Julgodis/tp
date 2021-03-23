@@ -52,7 +52,7 @@ extern "C" extern u8 g_fpcLf_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80023954-800239F4 00A0+00 r=1 e=1 z=0  None .text      fpcDw_Execute__FP18base_process_class                        */
+/* 80023954-800239F4 00A0+00 s=0 e=1 z=0  None .text      fpcDw_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ asm void fpcDw_Execute(base_process_class* param_0) {
 #pragma pop
 
 
-/* 800239F4-80023A48 0054+00 r=1 e=1 z=0  None .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
+/* 800239F4-80023A48 0054+00 s=0 e=1 z=0  None .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

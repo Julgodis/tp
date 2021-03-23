@@ -13,7 +13,7 @@ lbl_80C8E31C:
 /* 80C8E348 0000002C  88 7E 05 AE */	lbz r3, 0x5ae(r30)
 /* 80C8E34C 00000030  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80C8E350 00000034  7C 04 07 74 */	extsb r4, r0
-/* 80C8E354 00000038  4B FF F6 45 */	bl dPath_GetRoomPath__Fii
+/* 80C8E354 00000038  4B FF F6 45 */	bl _unresolved
 /* 80C8E358 0000003C  88 03 00 05 */	lbz r0, 5(r3)
 /* 80C8E35C 00000040  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80C8E360 00000044  41 82 00 30 */	beq lbl_80C8E390

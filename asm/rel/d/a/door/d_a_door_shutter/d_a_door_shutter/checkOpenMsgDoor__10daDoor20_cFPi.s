@@ -6,14 +6,14 @@ lbl_804616EC:
 /* 804616FC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80461700 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80461704 00000018  7C 9F 23 78 */	mr r31, r4
-/* 80461708 0000001C  4B FF F4 11 */	bl isMsgDoor__13door_param2_cFP10fopAc_ac_c
+/* 80461708 0000001C  4B FF F4 11 */	bl _unresolved
 /* 8046170C 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 80461710 00000024  40 82 00 0C */	bne lbl_8046171C
 /* 80461714 00000028  38 60 00 01 */	li r3, 1
 /* 80461718 0000002C  48 00 00 5C */	b lbl_80461774
 lbl_8046171C:
 /* 8046171C 00000000  7F C3 F3 78 */	mr r3, r30
-/* 80461720 00000004  4B FF F3 F9 */	bl getMsgNo__13door_param2_cFP10fopAc_ac_c
+/* 80461720 00000004  4B FF F3 F9 */	bl _unresolved
 /* 80461724 00000008  54 65 04 3E */	clrlwi r5, r3, 0x10
 /* 80461728 0000000C  3C 05 00 00 */	addis r0, r5, 0
 /* 8046172C 00000010  28 00 FF FF */	cmplwi r0, 0xffff
@@ -27,13 +27,13 @@ lbl_80461744:
 /* 80461748 00000004  38 80 00 00 */	li r4, 0
 /* 8046174C 00000008  38 C0 00 00 */	li r6, 0
 /* 80461750 0000000C  38 E0 00 00 */	li r7, 0
-/* 80461754 00000010  4B FF F3 C5 */	bl init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
+/* 80461754 00000010  4B FF F3 C5 */	bl _unresolved
 /* 80461758 00000014  38 7E 06 24 */	addi r3, r30, 0x624
 /* 8046175C 00000018  7F C4 F3 78 */	mr r4, r30
 /* 80461760 0000001C  7F E5 FB 78 */	mr r5, r31
-/* 80461764 00000020  4B FF F3 B5 */	bl checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi
+/* 80461764 00000020  4B FF F3 B5 */	bl _unresolved
 /* 80461768 00000024  7C 7F 1B 78 */	mr r31, r3
-/* 8046176C 00000028  4B FF F3 AD */	bl endFlowGroup__12dMsgObject_cFv
+/* 8046176C 00000028  4B FF F3 AD */	bl _unresolved
 /* 80461770 0000002C  7F E3 FB 78 */	mr r3, r31
 lbl_80461774:
 /* 80461774 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

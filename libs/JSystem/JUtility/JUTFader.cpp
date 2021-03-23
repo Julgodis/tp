@@ -79,7 +79,7 @@ extern "C" extern void* __vt__13J2DOrthoGraph[10];
 // 
 
 /* ############################################################################################## */
-/* 803CC990-803CC9A8 0018+00 r=2 e=0 z=0  None .data      __vt__8JUTFader                                              */
+/* 803CC990-803CC9A8 0018+00 s=2 e=0 z=0  None .data      __vt__8JUTFader                                              */
 SECTION_DATA static void* __vt__8JUTFader[6] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -89,10 +89,10 @@ SECTION_DATA static void* __vt__8JUTFader[6] = {
 	/* 5    */ (void*)draw__8JUTFaderFv,
 };
 
-/* 804560D0-804560D8 0008+00 r=1 e=0 z=0  None .sdata2    @2196                                                        */
+/* 804560D0-804560D8 0008+00 s=1 e=0 z=0  None .sdata2    @2196                                                        */
 SECTION_SDATA2 static f64 lit_2196 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E5530-802E55DC 00AC+00 r=1 e=1 z=0  None .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
+/* 802E5530-802E55DC 00AC+00 s=0 e=1 z=0  None .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm JUTFader::JUTFader(int param_0, int param_1, int param_2, int param_3, JUtil
 #pragma pop
 
 
-/* 802E55DC-802E56DC 0100+00 r=1 e=1 z=0  None .text      control__8JUTFaderFv                                         */
+/* 802E55DC-802E56DC 0100+00 s=0 e=1 z=0  None .text      control__8JUTFaderFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ asm void JUTFader::control() {
 #pragma pop
 
 
-/* 802E56DC-802E576C 0090+00 r=1 e=0 z=0  None .text      draw__8JUTFaderFv                                            */
+/* 802E56DC-802E576C 0090+00 s=1 e=0 z=0  None .text      draw__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm void JUTFader::draw() {
 #pragma pop
 
 
-/* 802E576C-802E579C 0030+00 r=1 e=0 z=0  None .text      startFadeIn__8JUTFaderFi                                     */
+/* 802E576C-802E579C 0030+00 s=1 e=0 z=0  None .text      startFadeIn__8JUTFaderFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm void JUTFader::startFadeIn(int param_0) {
 #pragma pop
 
 
-/* 802E579C-802E57D0 0034+00 r=1 e=0 z=0  None .text      startFadeOut__8JUTFaderFi                                    */
+/* 802E579C-802E57D0 0034+00 s=1 e=0 z=0  None .text      startFadeOut__8JUTFaderFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void JUTFader::startFadeOut(int param_0) {
 #pragma pop
 
 
-/* 802E57D0-802E5840 0070+00 r=1 e=1 z=0  None .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
+/* 802E57D0-802E5840 0070+00 s=0 e=1 z=0  None .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void JUTFader::setStatus(JUTFader::EStatus param_0, int param_1) {
 #pragma pop
 
 
-/* 802E5840-802E5888 0048+00 r=1 e=0 z=0  None .text      __dt__8JUTFaderFv                                            */
+/* 802E5840-802E5888 0048+00 s=1 e=0 z=0  None .text      __dt__8JUTFaderFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

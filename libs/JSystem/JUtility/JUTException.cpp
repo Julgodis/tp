@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct OSContext {
-};
-
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+};
+
+struct OSContext {
 };
 
 struct JUTException {
@@ -260,7 +260,7 @@ extern "C" extern u8 sManager__17JUTConsoleManager[4];
 // 
 
 /* ############################################################################################## */
-/* 8039D490-8039D9A0 050E+02 r=14 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039D490-8039D9A0 050E+02 s=14 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -343,19 +343,19 @@ SECTION_DEAD char const* const stringBase_8039D97E = "  [%08X]: .%s [%08X: %XH]\
 SECTION_DEAD static char const* const pad_8039D99E = "\0";
 #pragma pop
 
-/* 803CC620-803CC640 0020+00 r=3 e=0 z=0  None .data      sMessageQueue__12JUTException                                */
+/* 803CC620-803CC640 0020+00 s=3 e=0 z=0  None .data      sMessageQueue__12JUTException                                */
 SECTION_DATA static u8 sMessageQueue__12JUTException[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC640-803CC660 0020+00 r=1 e=0 z=0  None .data      c3bcnt                                                       */
+/* 803CC640-803CC660 0020+00 s=1 e=0 z=0  None .data      c3bcnt                                                       */
 SECTION_DATA static u8 c3bcnt[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC660-803CC6A4 0044+00 r=1 e=0 z=0  None .data      sCpuExpName__12JUTException                                  */
+/* 803CC660-803CC6A4 0044+00 s=1 e=0 z=0  None .data      sCpuExpName__12JUTException                                  */
 SECTION_DATA static void* sCpuExpName__12JUTException[17] = {
 	/* 0    */ (void*)&JUTException__stringBase0,
 	/* 1    */ (void*)(((char*)&JUTException__stringBase0)+0xD),
@@ -376,7 +376,7 @@ SECTION_DATA static void* sCpuExpName__12JUTException[17] = {
 	/* 16   */ (void*)(((char*)&JUTException__stringBase0)+0x48),
 };
 
-/* 803CC6A4-803CC6B8 0010+04 r=2 e=0 z=0  None .data      __vt__12JUTException                                         */
+/* 803CC6A4-803CC6B8 0010+04 s=2 e=0 z=0  None .data      __vt__12JUTException                                         */
 SECTION_DATA static void* __vt__12JUTException[4 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -386,16 +386,16 @@ SECTION_DATA static void* __vt__12JUTException[4 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80451508-8045150C 0004+00 r=7 e=3 z=0  None .sbss      sErrorManager__12JUTException                                */
+/* 80451508-8045150C 0004+00 s=4 e=3 z=0  None .sbss      sErrorManager__12JUTException                                */
 u8 sErrorManager__12JUTException[4];
 
-/* 8045150C-80451510 0004+00 r=4 e=0 z=0  None .sbss      sPreUserCallback__12JUTException                             */
+/* 8045150C-80451510 0004+00 s=4 e=0 z=0  None .sbss      sPreUserCallback__12JUTException                             */
 static u8 sPreUserCallback__12JUTException[4];
 
-/* 80451510-80451514 0004+00 r=3 e=0 z=0  None .sbss      sPostUserCallback__12JUTException                            */
+/* 80451510-80451514 0004+00 s=3 e=0 z=0  None .sbss      sPostUserCallback__12JUTException                            */
 static u8 sPostUserCallback__12JUTException[4];
 
-/* 802E1D5C-802E1E40 00E4+00 r=1 e=0 z=0  None .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
+/* 802E1D5C-802E1E40 00E4+00 s=1 e=0 z=0  None .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +406,7 @@ asm JUTException::JUTException(JUTDirectPrint* param_0) {
 #pragma pop
 
 
-/* 802E1E40-802E1EA8 0068+00 r=1 e=1 z=0  None .text      create__12JUTExceptionFP14JUTDirectPrint                     */
+/* 802E1E40-802E1EA8 0068+00 s=0 e=1 z=0  None .text      create__12JUTExceptionFP14JUTDirectPrint                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,14 +418,14 @@ asm void JUTException::create(JUTDirectPrint* param_0) {
 
 
 /* ############################################################################################## */
-/* 804508F0-804508F8 0004+04 r=1 e=0 z=0  None .sdata     sMessageBuffer__12JUTException                               */
+/* 804508F0-804508F8 0004+04 s=1 e=0 z=0  None .sdata     sMessageBuffer__12JUTException                               */
 SECTION_SDATA static u8 sMessageBuffer__12JUTException[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802E1EA8-802E1FCC 0124+00 r=1 e=0 z=0  None .text      run__12JUTExceptionFv                                        */
+/* 802E1EA8-802E1FCC 0124+00 s=1 e=0 z=0  None .text      run__12JUTExceptionFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,25 +437,25 @@ asm void JUTException::run() {
 
 
 /* ############################################################################################## */
-/* 80434578-8043458C 0014+00 r=2 e=0 z=0  None .bss       exCallbackObject                                             */
+/* 80434578-8043458C 0014+00 s=2 e=0 z=0  None .bss       exCallbackObject                                             */
 static u8 exCallbackObject[20];
 
-/* 80451514-80451518 0004+00 r=1 e=0 z=0  None .sbss      sConsoleBuffer__12JUTException                               */
+/* 80451514-80451518 0004+00 s=1 e=0 z=0  None .sbss      sConsoleBuffer__12JUTException                               */
 static u8 sConsoleBuffer__12JUTException[4];
 
-/* 80451518-8045151C 0004+00 r=1 e=0 z=0  None .sbss      sConsoleBufferSize__12JUTException                           */
+/* 80451518-8045151C 0004+00 s=1 e=0 z=0  None .sbss      sConsoleBufferSize__12JUTException                           */
 static u8 sConsoleBufferSize__12JUTException[4];
 
-/* 8045151C-80451520 0004+00 r=14 e=1 z=0  None .sbss      sConsole__12JUTException                                     */
+/* 8045151C-80451520 0004+00 s=13 e=1 z=0  None .sbss      sConsole__12JUTException                                     */
 u8 sConsole__12JUTException[4];
 
-/* 80451520-80451524 0004+00 r=2 e=0 z=0  None .sbss      msr__12JUTException                                          */
+/* 80451520-80451524 0004+00 s=2 e=0 z=0  None .sbss      msr__12JUTException                                          */
 static u8 msr__12JUTException[4];
 
-/* 80451524-80451528 0004+00 r=3 e=0 z=0  None .sbss      fpscr__12JUTException                                        */
+/* 80451524-80451528 0004+00 s=3 e=0 z=0  None .sbss      fpscr__12JUTException                                        */
 static u8 fpscr__12JUTException[4];
 
-/* 802E1FCC-802E20C0 00F4+00 r=2 e=0 z=0  None .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E1FCC-802E20C0 00F4+00 s=2 e=0 z=0  None .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -467,16 +467,16 @@ asm void JUTException::errorHandler(u16 param_0, OSContext* param_1, u32 param_2
 
 
 /* ############################################################################################## */
-/* 8043458C-80434598 000C+00 r=1 e=0 z=0  None .bss       @2182                                                        */
+/* 8043458C-80434598 000C+00 s=1 e=0 z=0  None .bss       @2182                                                        */
 static u8 JUTException__lit_2182[12];
 
-/* 80434598-804345A8 000C+04 r=4 e=0 z=0  None .bss       sMapFileList__12JUTException                                 */
+/* 80434598-804345A8 000C+04 s=4 e=0 z=0  None .bss       sMapFileList__12JUTException                                 */
 static u8 sMapFileList__12JUTException[12 + 4 /* padding */];
 
-/* 804345A8-80434870 02C8+00 r=1 e=0 z=0  None .bss       context$2230                                                 */
+/* 804345A8-80434870 02C8+00 s=1 e=0 z=0  None .bss       context$2230                                                 */
 static u8 data_804345A8[712];
 
-/* 802E20C0-802E21FC 013C+00 r=1 e=0 z=0  None .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
+/* 802E20C0-802E21FC 013C+00 s=1 e=0 z=0  None .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +487,7 @@ extern "C" asm static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct
 #pragma pop
 
 
-/* 802E21FC-802E227C 0080+00 r=16 e=16 z=0  None .text      panic_f__12JUTExceptionFPCciPCce                             */
+/* 802E21FC-802E227C 0080+00 s=0 e=16 z=0  None .text      panic_f__12JUTExceptionFPCciPCce                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,7 +498,7 @@ asm void JUTException::panic_f(char const* param_0, int param_1, char const* par
 #pragma pop
 
 
-/* 802E227C-802E22C4 0048+00 r=1 e=0 z=0  None .text      setFPException__12JUTExceptionFUl                            */
+/* 802E227C-802E22C4 0048+00 s=1 e=0 z=0  None .text      setFPException__12JUTExceptionFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -510,12 +510,12 @@ asm void JUTException::setFPException(u32 param_0) {
 
 
 /* ############################################################################################## */
-/* 80456050-80456054 0004+00 r=1 e=0 z=0  None .sdata2    @2293                                                        */
+/* 80456050-80456054 0004+00 s=1 e=0 z=0  None .sdata2    @2293                                                        */
 SECTION_SDATA2 static u8 lit_2293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802E22C4-802E2454 0190+00 r=1 e=0 z=0  None .text      showFloatSub__12JUTExceptionFif                              */
+/* 802E22C4-802E2454 0190+00 s=1 e=0 z=0  None .text      showFloatSub__12JUTExceptionFif                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,7 +526,7 @@ asm void JUTException::showFloatSub(int param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802E2454-802E2578 0124+00 r=1 e=0 z=0  None .text      showFloat__12JUTExceptionFP9OSContext                        */
+/* 802E2454-802E2578 0124+00 s=1 e=0 z=0  None .text      showFloat__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,7 +537,7 @@ asm void JUTException::showFloat(OSContext* param_0) {
 #pragma pop
 
 
-/* 802E2578-802E2638 00C0+00 r=1 e=0 z=0  None .text      searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl           */
+/* 802E2578-802E2638 00C0+00 s=1 e=0 z=0  None .text      searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,7 +548,7 @@ asm void JUTException::searchPartialModule(u32 param_0, u32* param_1, u32* param
 #pragma pop
 
 
-/* 802E2638-802E26B0 0078+00 r=1 e=0 z=0  None .text      search_name_part__FPUcPUci                                   */
+/* 802E2638-802E26B0 0078+00 s=1 e=0 z=0  None .text      search_name_part__FPUcPUci                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -559,7 +559,7 @@ asm static void search_name_part(u8* param_0, u8* param_1, int param_2) {
 #pragma pop
 
 
-/* 802E26B0-802E27B0 0100+00 r=1 e=0 z=0  None .text      showStack__12JUTExceptionFP9OSContext                        */
+/* 802E26B0-802E27B0 0100+00 s=1 e=0 z=0  None .text      showStack__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,7 +570,7 @@ asm void JUTException::showStack(OSContext* param_0) {
 #pragma pop
 
 
-/* 802E27B0-802E2A84 02D4+00 r=1 e=0 z=0  None .text      showMainInfo__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E27B0-802E2A84 02D4+00 s=1 e=0 z=0  None .text      showMainInfo__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +581,7 @@ asm void JUTException::showMainInfo(u16 param_0, OSContext* param_1, u32 param_2
 #pragma pop
 
 
-/* 802E2A84-802E2B44 00C0+00 r=1 e=0 z=0  None .text      showGPR__12JUTExceptionFP9OSContext                          */
+/* 802E2A84-802E2B44 00C0+00 s=1 e=0 z=0  None .text      showGPR__12JUTExceptionFP9OSContext                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,7 +592,7 @@ asm void JUTException::showGPR(OSContext* param_0) {
 #pragma pop
 
 
-/* 802E2B44-802E2CA0 015C+00 r=3 e=0 z=0  None .text      showMapInfo_subroutine__12JUTExceptionFUlb                   */
+/* 802E2B44-802E2CA0 015C+00 s=3 e=0 z=0  None .text      showMapInfo_subroutine__12JUTExceptionFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +603,7 @@ asm void JUTException::showMapInfo_subroutine(u32 param_0, bool param_1) {
 #pragma pop
 
 
-/* 802E2CA0-802E2DAC 010C+00 r=1 e=0 z=0  None .text      showGPRMap__12JUTExceptionFP9OSContext                       */
+/* 802E2CA0-802E2DAC 010C+00 s=1 e=0 z=0  None .text      showGPRMap__12JUTExceptionFP9OSContext                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,7 +614,7 @@ asm void JUTException::showGPRMap(OSContext* param_0) {
 #pragma pop
 
 
-/* 802E2DAC-802E2E70 00C4+00 r=1 e=0 z=0  None .text      showSRR0Map__12JUTExceptionFP9OSContext                      */
+/* 802E2DAC-802E2E70 00C4+00 s=1 e=0 z=0  None .text      showSRR0Map__12JUTExceptionFP9OSContext                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +625,7 @@ asm void JUTException::showSRR0Map(OSContext* param_0) {
 #pragma pop
 
 
-/* 802E2E70-802E2F18 00A8+00 r=1 e=0 z=0  None .text      printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl */
+/* 802E2E70-802E2F18 00A8+00 s=1 e=0 z=0  None .text      printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,7 +636,7 @@ asm void JUTException::printDebugInfo(JUTException::EInfoPage param_0, u16 param
 #pragma pop
 
 
-/* 802E2F18-802E2F54 003C+00 r=2 e=1 z=0  None .text      isEnablePad__12JUTExceptionCFv                               */
+/* 802E2F18-802E2F54 003C+00 s=1 e=1 z=0  None .text      isEnablePad__12JUTExceptionCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -647,7 +647,7 @@ asm void JUTException::isEnablePad() const {
 #pragma pop
 
 
-/* 802E2F54-802E34C0 056C+00 r=2 e=1 z=0  None .text      readPad__12JUTExceptionFPUlPUl                               */
+/* 802E2F54-802E34C0 056C+00 s=1 e=1 z=0  None .text      readPad__12JUTExceptionFPUlPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +658,7 @@ asm void JUTException::readPad(u32* param_0, u32* param_1) {
 #pragma pop
 
 
-/* 802E34C0-802E3980 04C0+00 r=1 e=0 z=0  None .text      printContext__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E34C0-802E3980 04C0+00 s=1 e=0 z=0  None .text      printContext__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +669,7 @@ asm void JUTException::printContext(u16 param_0, OSContext* param_1, u32 param_2
 #pragma pop
 
 
-/* 802E3980-802E3A08 0088+00 r=5 e=2 z=0  None .text      waitTime__12JUTExceptionFl                                   */
+/* 802E3980-802E3A08 0088+00 s=3 e=2 z=0  None .text      waitTime__12JUTExceptionFl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -680,7 +680,7 @@ asm void JUTException::waitTime(s32 param_0) {
 #pragma pop
 
 
-/* 802E3A08-802E3AEC 00E4+00 r=1 e=0 z=0  None .text      createFB__12JUTExceptionFv                                   */
+/* 802E3A08-802E3AEC 00E4+00 s=1 e=0 z=0  None .text      createFB__12JUTExceptionFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +691,7 @@ asm void JUTException::createFB() {
 #pragma pop
 
 
-/* 802E3AEC-802E3AFC 0010+00 r=1 e=1 z=0  None .text      setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v     */
+/* 802E3AEC-802E3AFC 0010+00 s=0 e=1 z=0  None .text      setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -702,7 +702,7 @@ asm void JUTException::setPreUserCallback(void (*)(u16, OSContext*, u32, u32)) {
 #pragma pop
 
 
-/* 802E3AFC-802E3B0C 0010+00 r=1 e=1 z=0  None .text      setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v    */
+/* 802E3AFC-802E3B0C 0010+00 s=0 e=1 z=0  None .text      setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -713,7 +713,7 @@ asm void JUTException::setPostUserCallback(void (*)(u16, OSContext*, u32, u32)) 
 #pragma pop
 
 
-/* 802E3B0C-802E3BA0 0094+00 r=1 e=1 z=0  None .text      appendMapFile__12JUTExceptionFPCc                            */
+/* 802E3B0C-802E3BA0 0094+00 s=0 e=1 z=0  None .text      appendMapFile__12JUTExceptionFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -724,7 +724,7 @@ asm void JUTException::appendMapFile(char const* param_0) {
 #pragma pop
 
 
-/* 802E3BA0-802E3C90 00F0+00 r=1 e=0 z=0  None .text      queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb            */
+/* 802E3BA0-802E3C90 00F0+00 s=1 e=0 z=0  None .text      queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -735,7 +735,7 @@ asm void JUTException::queryMapAddress(char* param_0, u32 param_1, s32 param_2, 
 #pragma pop
 
 
-/* 802E3C90-802E3FEC 035C+00 r=1 e=0 z=0  None .text      queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb     */
+/* 802E3C90-802E3FEC 035C+00 s=1 e=0 z=0  None .text      queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -747,17 +747,17 @@ asm void JUTException::queryMapAddress_single(char* param_0, u32 param_1, s32 pa
 
 
 /* ############################################################################################## */
-/* 80456054-80456058 0004+00 r=1 e=0 z=0  None .sdata2    @3034                                                        */
+/* 80456054-80456058 0004+00 s=1 e=0 z=0  None .sdata2    @3034                                                        */
 SECTION_SDATA2 static f32 lit_3034 = 10.0f;
 
-/* 80456058-80456060 0004+04 r=1 e=0 z=0  None .sdata2    @3035                                                        */
+/* 80456058-80456060 0004+04 s=1 e=0 z=0  None .sdata2    @3035                                                        */
 SECTION_SDATA2 static f32 lit_3035[1 + 1 /* padding */] = {
 	6.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 802E3FEC-802E40CC 00E0+00 r=1 e=1 z=0  None .text      createConsole__12JUTExceptionFPvUl                           */
+/* 802E3FEC-802E40CC 00E0+00 s=0 e=1 z=0  None .text      createConsole__12JUTExceptionFPvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -768,7 +768,7 @@ asm void JUTException::createConsole(void* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802E40CC-802E40EC 0020+00 r=1 e=0 z=0  None .text      __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl       */
+/* 802E40CC-802E40EC 0020+00 s=1 e=0 z=0  None .text      __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -779,7 +779,7 @@ asm JUTExternalFB::JUTExternalFB(_GXRenderModeObj* param_0, _GXGamma param_1, vo
 #pragma pop
 
 
-/* 802E40EC-802E414C 0060+00 r=1 e=0 z=0  None .text      __dt__12JUTExceptionFv                                       */
+/* 802E40EC-802E414C 0060+00 s=1 e=0 z=0  None .text      __dt__12JUTExceptionFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -790,7 +790,7 @@ asm JUTException::~JUTException() {
 #pragma pop
 
 
-/* 802E414C-802E4194 0048+00 r=1 e=1 z=0  None .text      __sinit_JUTException_cpp                                     */
+/* 802E414C-802E4194 0048+00 s=0 e=1 z=0  None .text      __sinit_JUTException_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -801,7 +801,7 @@ extern "C" asm void __sinit_JUTException_cpp() {
 #pragma pop
 
 
-/* 802E4194-802E41E8 0054+00 r=1 e=0 z=0  None .text      __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv            */
+/* 802E4194-802E41E8 0054+00 s=1 e=0 z=0  None .text      __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -813,7 +813,7 @@ asm JSUList__template13::~JSUList__template13() {
 
 
 /* ############################################################################################## */
-/* 804508F8-80450900 0008+00 r=3 e=3 z=0  None .sdata     None                                                         */
+/* 804508F8-80450900 0008+00 s=0 e=3 z=0  None .sdata     None                                                         */
 SECTION_SDATA u8 data_804508F8[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

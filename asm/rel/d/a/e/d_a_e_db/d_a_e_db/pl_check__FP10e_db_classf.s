@@ -2,13 +2,13 @@ lbl_8069AFB4:
 /* 8069AFB4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8069AFB8 00000004  7C 08 02 A6 */	mflr r0
 /* 8069AFBC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8069AFC0 0000000C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8069AFC4 00000010  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8069AFC0 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8069AFC4 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8069AFC8 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8069AFCC 00000018  C0 03 06 88 */	lfs f0, 0x688(r3)
 /* 8069AFD0 0000001C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8069AFD4 00000000  40 80 00 18 */	bge lbl_8069AFEC
-/* 8069AFD8 00000004  4B FF FA 81 */	bl fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 8069AFD8 00000004  4B FF FA 81 */	bl _unresolved
 /* 8069AFDC 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 8069AFE0 0000000C  40 82 00 0C */	bne lbl_8069AFEC
 /* 8069AFE4 00000010  38 60 00 01 */	li r3, 1

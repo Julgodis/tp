@@ -12,10 +12,10 @@ lbl_80C4D6F8:
 lbl_80C4D720:
 /* 80C4D720 00000000  80 1F 06 20 */	lwz r0, 0x620(r31)
 /* 80C4D724 00000004  54 00 10 3A */	slwi r0, r0, 2
-/* 80C4D728 00000008  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C4E870 */
-/* 80C4D72C 0000000C  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C4E870 */
+/* 80C4D728 00000008  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C4D72C 0000000C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C4D730 00000010  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C4D734 00000014  4B FF FF A5 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 80C4D734 00000014  4B FF FF A5 */	bl _unresolved
 /* 80C4D738 00000018  7C 60 1B 78 */	mr r0, r3
 /* 80C4D73C 0000001C  2C 00 00 04 */	cmpwi r0, 4
 /* 80C4D740 00000020  40 82 00 50 */	bne lbl_80C4D790
@@ -24,16 +24,16 @@ lbl_80C4D720:
 /* 80C4D74C 0000002C  80 1F 06 20 */	lwz r0, 0x620(r31)
 /* 80C4D750 00000030  54 00 10 3A */	slwi r0, r0, 2
 /* 80C4D754 00000034  7F E3 FB 78 */	mr r3, r31
-/* 80C4D758 00000038  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C4E870 */
-/* 80C4D75C 0000003C  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C4E870 */
+/* 80C4D758 00000038  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C4D75C 0000003C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C4D760 00000040  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C4D764 00000044  3C A0 00 00 */	lis r5, l_dzbidx@ha /* 80C4E800 */
-/* 80C4D768 00000048  38 A5 00 00 */	addi r5, r5, l_dzbidx@l /* 80C4E800 */
+/* 80C4D764 00000044  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80C4D768 00000048  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 80C4D76C 0000004C  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80C4D770 00000050  38 C0 00 00 */	li r6, 0
 /* 80C4D774 00000054  38 E0 40 00 */	li r7, 0x4000
 /* 80C4D778 00000058  39 1F 05 B8 */	addi r8, r31, 0x5b8
-/* 80C4D77C 0000005C  4B FF FF 5D */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 80C4D77C 0000005C  4B FF FF 5D */	bl _unresolved
 /* 80C4D780 00000060  7C 60 1B 78 */	mr r0, r3
 /* 80C4D784 00000064  2C 00 00 05 */	cmpwi r0, 5
 /* 80C4D788 00000068  40 82 00 08 */	bne lbl_80C4D790

@@ -27,7 +27,7 @@ extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 // Declarations:
 // 
 
-/* 80023578-80023590 0018+00 r=80 e=3 z=77  None .text      fpcSch_JudgeForPName__FPvPv                                  */
+/* 80023578-80023590 0018+00 s=0 e=3 z=0  None .text      fpcSch_JudgeForPName__FPvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ asm void fpcSch_JudgeForPName(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 80023590-800235A8 0018+00 r=314 e=44 z=270  None .text      fpcSch_JudgeByID__FPvPv                                      */
+/* 80023590-800235A8 0018+00 s=0 e=44 z=0  None .text      fpcSch_JudgeByID__FPvPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

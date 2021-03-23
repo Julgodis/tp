@@ -49,7 +49,7 @@ extern "C" void _restgpr_18(); // 1
 // Declarations:
 // 
 
-/* 80314924-80314974 0050+00 r=1 e=0 z=0  None .text      countVertex__12J3DShapeDrawFUl                               */
+/* 80314924-80314974 0050+00 s=1 e=0 z=0  None .text      countVertex__12J3DShapeDrawFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ asm void J3DShapeDraw::countVertex(u32 param_0) {
 #pragma pop
 
 
-/* 80314974-80314ABC 0148+00 r=1 e=1 z=0  None .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
+/* 80314974-80314ABC 0148+00 s=0 e=1 z=0  None .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm void J3DShapeDraw::addTexMtxIndexInDL(u32 param_0, u32 param_1, u32 param_2)
 
 
 /* ############################################################################################## */
-/* 803CDC68-803CDC78 000C+04 r=2 e=0 z=0  None .data      __vt__12J3DShapeDraw                                         */
+/* 803CDC68-803CDC78 000C+04 s=2 e=0 z=0  None .data      __vt__12J3DShapeDraw                                         */
 SECTION_DATA static void* __vt__12J3DShapeDraw[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -81,7 +81,7 @@ SECTION_DATA static void* __vt__12J3DShapeDraw[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80314ABC-80314AD4 0018+00 r=1 e=1 z=0  None .text      __ct__12J3DShapeDrawFPCUcUl                                  */
+/* 80314ABC-80314AD4 0018+00 s=0 e=1 z=0  None .text      __ct__12J3DShapeDrawFPCUcUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm J3DShapeDraw::J3DShapeDraw(u8 const* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80314AD4-80314B00 002C+00 r=3 e=3 z=0  None .text      draw__12J3DShapeDrawCFv                                      */
+/* 80314AD4-80314B00 002C+00 s=0 e=3 z=0  None .text      draw__12J3DShapeDrawCFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void J3DShapeDraw::draw() const {
 #pragma pop
 
 
-/* 80314B00-80314B48 0048+00 r=1 e=0 z=0  None .text      __dt__12J3DShapeDrawFv                                       */
+/* 80314B00-80314B48 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DShapeDrawFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -3,7 +3,7 @@ lbl_8045E91C:
 /* 8045E920 00000004  7C 08 02 A6 */	mflr r0
 /* 8045E924 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045E928 0000000C  4B FF FF A1 */	bl getBmd__10daKnob20_cFv
-/* 8045E92C 00000010  4B FF FF 0D */	bl dComIfG_getStageRes__FPCc
+/* 8045E92C 00000010  4B FF FF 0D */	bl _unresolved
 /* 8045E930 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045E934 00000018  7C 08 03 A6 */	mtlr r0
 /* 8045E938 0000001C  38 21 00 10 */	addi r1, r1, 0x10

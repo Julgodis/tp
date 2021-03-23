@@ -27,7 +27,7 @@ extern "C" void TRKPositionFile(); // 1
 // Declarations:
 // 
 
-/* 803711D0-803711D8 0008+00 r=2 e=2 z=0  None .text      TRKAccessFile                                                */
+/* 803711D0-803711D8 0008+00 s=0 e=2 z=0  None .text      TRKAccessFile                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +39,7 @@ extern "C" asm void TRKAccessFile() {
 #pragma pop
 
 
-/* 803711D8-803711E0 0008+00 r=0 e=0 z=0  None .text      TRKOpenFile                                                  */
+/* 803711D8-803711E0 0008+00 s=0 e=0 z=0  None .text      TRKOpenFile                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -50,7 +50,7 @@ extern "C" asm void TRKOpenFile() {
 #pragma pop
 
 
-/* 803711E0-803711E8 0008+00 r=0 e=0 z=0  None .text      TRKCloseFile                                                 */
+/* 803711E0-803711E8 0008+00 s=0 e=0 z=0  None .text      TRKCloseFile                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ extern "C" asm void TRKCloseFile() {
 #pragma pop
 
 
-/* 803711E8-803711F0 0008+00 r=0 e=0 z=0  None .text      TRKPositionFile                                              */
+/* 803711E8-803711F0 0008+00 s=0 e=0 z=0  None .text      TRKPositionFile                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

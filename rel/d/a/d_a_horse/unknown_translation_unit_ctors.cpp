@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80845498[2];
+extern u8 data_80845498[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_horse_cpp(); // 1
 
 // 
 // Declarations:

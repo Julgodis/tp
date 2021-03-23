@@ -55,10 +55,10 @@ struct dEvt_control_c {
 	/* 800434D8 */ void searchMapEventData(u8);
 };
 
-struct JKRHeap {
+struct JKRExpandSwitch {
 };
 
-struct JKRExpandSwitch {
+struct JKRHeap {
 };
 
 struct JKRAram {
@@ -127,12 +127,12 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A7240-803A7250 0010+00 r=6 e=0 z=6  None .data      ZeroQuat                                                     */
+/* 803A7240-803A7250 0010+00 s=0 e=0 z=0  None .data      ZeroQuat                                                     */
 SECTION_DATA u8 ZeroQuat[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803A7250-803A7260 0010+00 r=1 e=1 z=0  None .data      __vt__10CSTControl                                           */
+/* 803A7250-803A7260 0010+00 s=0 e=1 z=0  None .data      __vt__10CSTControl                                           */
 SECTION_DATA void* __vt__10CSTControl[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -140,7 +140,7 @@ SECTION_DATA void* __vt__10CSTControl[4] = {
 	/* 3    */ (void*)getAngleStick__10CSTControlFv,
 };
 
-/* 803A7260-803A7270 0010+00 r=2 e=1 z=0  None .data      __vt__9STControl                                             */
+/* 803A7260-803A7270 0010+00 s=1 e=1 z=0  None .data      __vt__9STControl                                             */
 SECTION_DATA void* __vt__9STControl[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -148,7 +148,7 @@ SECTION_DATA void* __vt__9STControl[4] = {
 	/* 3    */ (void*)getAngleStick__9STControlFv,
 };
 
-/* 80032044-80032088 0044+00 r=6 e=6 z=0  None .text      __ct__9STControlFssssffss                                    */
+/* 80032044-80032088 0044+00 s=0 e=6 z=0  None .text      __ct__9STControlFssssffss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ asm STControl::STControl(s16 param_0, s16 param_1, s16 param_2, s16 param_3, f32
 #pragma pop
 
 
-/* 80032088-800320AC 0024+00 r=4 e=3 z=0  None .text      setWaitParm__9STControlFssssffss                             */
+/* 80032088-800320AC 0024+00 s=1 e=3 z=0  None .text      setWaitParm__9STControlFssssffss                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +170,7 @@ asm void STControl::setWaitParm(s16 param_0, s16 param_1, s16 param_2, s16 param
 #pragma pop
 
 
-/* 800320AC-800320FC 0050+00 r=2 e=1 z=0  None .text      init__9STControlFv                                           */
+/* 800320AC-800320FC 0050+00 s=1 e=1 z=0  None .text      init__9STControlFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ asm void STControl::init() {
 #pragma pop
 
 
-/* 800320FC-8003212C 0030+00 r=1 e=0 z=0  None .text      Xinit__9STControlFv                                          */
+/* 800320FC-8003212C 0030+00 s=1 e=0 z=0  None .text      Xinit__9STControlFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ asm void STControl::Xinit() {
 #pragma pop
 
 
-/* 8003212C-8003215C 0030+00 r=1 e=0 z=0  None .text      Yinit__9STControlFv                                          */
+/* 8003212C-8003215C 0030+00 s=1 e=0 z=0  None .text      Yinit__9STControlFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ asm void STControl::Yinit() {
 #pragma pop
 
 
-/* 8003215C-8003216C 0010+00 r=1 e=0 z=0  None .text      getValueStick__9STControlFv                                  */
+/* 8003215C-8003216C 0010+00 s=1 e=0 z=0  None .text      getValueStick__9STControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +214,7 @@ asm void STControl::getValueStick() {
 #pragma pop
 
 
-/* 8003216C-8003217C 0010+00 r=1 e=0 z=0  None .text      getAngleStick__9STControlFv                                  */
+/* 8003216C-8003217C 0010+00 s=1 e=0 z=0  None .text      getAngleStick__9STControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ asm void STControl::getAngleStick() {
 #pragma pop
 
 
-/* 8003217C-8003218C 0010+00 r=1 e=0 z=0  None .text      getValueStick__10CSTControlFv                                */
+/* 8003217C-8003218C 0010+00 s=1 e=0 z=0  None .text      getValueStick__10CSTControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ asm void CSTControl::getValueStick() {
 #pragma pop
 
 
-/* 8003218C-8003219C 0010+00 r=1 e=0 z=0  None .text      getAngleStick__10CSTControlFv                                */
+/* 8003218C-8003219C 0010+00 s=1 e=0 z=0  None .text      getAngleStick__10CSTControlFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ asm void CSTControl::getAngleStick() {
 #pragma pop
 
 
-/* 8003219C-8003242C 0290+00 r=24 e=24 z=0  None .text      checkTrigger__9STControlFv                                   */
+/* 8003219C-8003242C 0290+00 s=0 e=24 z=0  None .text      checkTrigger__9STControlFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ asm void STControl::checkTrigger() {
 #pragma pop
 
 
-/* 8003242C-800324A8 007C+00 r=14 e=14 z=0  None .text      checkLeftTrigger__9STControlFv                               */
+/* 8003242C-800324A8 007C+00 s=0 e=14 z=0  None .text      checkLeftTrigger__9STControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ asm void STControl::checkLeftTrigger() {
 #pragma pop
 
 
-/* 800324A8-80032524 007C+00 r=14 e=14 z=0  None .text      checkRightTrigger__9STControlFv                              */
+/* 800324A8-80032524 007C+00 s=0 e=14 z=0  None .text      checkRightTrigger__9STControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ asm void STControl::checkRightTrigger() {
 #pragma pop
 
 
-/* 80032524-800325A0 007C+00 r=20 e=20 z=0  None .text      checkUpTrigger__9STControlFv                                 */
+/* 80032524-800325A0 007C+00 s=0 e=20 z=0  None .text      checkUpTrigger__9STControlFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void STControl::checkUpTrigger() {
 #pragma pop
 
 
-/* 800325A0-8003261C 007C+00 r=21 e=21 z=0  None .text      checkDownTrigger__9STControlFv                               */
+/* 800325A0-8003261C 007C+00 s=0 e=21 z=0  None .text      checkDownTrigger__9STControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ asm void STControl::checkDownTrigger() {
 #pragma pop
 
 
-/* 8003261C-80032654 0038+00 r=1 e=0 z=1  None .text      dLib_getEventSwitchNo__Fi                                    */
+/* 8003261C-80032654 0038+00 s=0 e=0 z=0  None .text      dLib_getEventSwitchNo__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void dLib_getEventSwitchNo(int param_0) {
 #pragma pop
 
 
-/* 80032654-80032738 00E4+00 r=8 e=0 z=8  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
+/* 80032654-80032738 00E4+00 s=0 e=0 z=0  None .text      dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +324,7 @@ asm void dLib_checkActorInRectangle(fopAc_ac_c* param_0, fopAc_ac_c* param_1, cX
 #pragma pop
 
 
-/* 80032738-80032804 00CC+00 r=4 e=4 z=0  None .text      dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc     */
+/* 80032738-80032804 00CC+00 s=0 e=4 z=0  None .text      dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,22 +336,22 @@ asm void dLib_getExpandSizeFromAramArchive(JKRAramArchive* param_0, char const* 
 
 
 /* ############################################################################################## */
-/* 80450DD8-80450DDC 0004+00 r=2 e=0 z=0  None .sbss      m_diffTime__11dLib_time_c                                    */
+/* 80450DD8-80450DDC 0004+00 s=2 e=0 z=0  None .sbss      m_diffTime__11dLib_time_c                                    */
 static u8 m_diffTime__11dLib_time_c[4];
 
-/* 80450DDC-80450DE0 0004+00 r=2 e=0 z=0  None .sbss      None                                                         */
+/* 80450DDC-80450DE0 0004+00 s=2 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450DDC[4];
 
-/* 80450DE0-80450DE4 0004+00 r=3 e=0 z=0  None .sbss      m_stopTime__11dLib_time_c                                    */
+/* 80450DE0-80450DE4 0004+00 s=3 e=0 z=0  None .sbss      m_stopTime__11dLib_time_c                                    */
 static u8 m_stopTime__11dLib_time_c[4];
 
-/* 80450DE4-80450DE8 0004+00 r=3 e=0 z=0  None .sbss      None                                                         */
+/* 80450DE4-80450DE8 0004+00 s=3 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450DE4[4];
 
-/* 80450DE8-80450DF0 0008+00 r=3 e=0 z=0  None .sbss      None                                                         */
+/* 80450DE8-80450DF0 0008+00 s=3 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450DE8[8];
 
-/* 80032804-80032880 007C+00 r=8 e=8 z=0  None .text      getTime__11dLib_time_cFv                                     */
+/* 80032804-80032880 007C+00 s=0 e=8 z=0  None .text      getTime__11dLib_time_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +362,7 @@ asm void dLib_time_c::getTime() {
 #pragma pop
 
 
-/* 80032880-800328BC 003C+00 r=1 e=1 z=0  None .text      stopTime__11dLib_time_cFv                                    */
+/* 80032880-800328BC 003C+00 s=0 e=1 z=0  None .text      stopTime__11dLib_time_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,7 +373,7 @@ asm void dLib_time_c::stopTime() {
 #pragma pop
 
 
-/* 800328BC-80032918 005C+00 r=1 e=1 z=0  None .text      startTime__11dLib_time_cFv                                   */
+/* 800328BC-80032918 005C+00 s=0 e=1 z=0  None .text      startTime__11dLib_time_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,6 +385,6 @@ asm void dLib_time_c::startTime() {
 
 
 /* ############################################################################################## */
-/* 80450DF0-80450DF8 0008+00 r=4 e=4 z=0  None .sbss      None                                                         */
+/* 80450DF0-80450DF8 0008+00 s=0 e=4 z=0  None .sbss      None                                                         */
 u8 struct_80450DF0[8];
 

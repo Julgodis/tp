@@ -34,7 +34,7 @@ extern "C" void fwide(); // 1
 // Declarations:
 // 
 
-/* 80365494-803657A0 030C+00 r=1 e=0 z=0  None .text      __fwrite                                                     */
+/* 80365494-803657A0 030C+00 s=1 e=0 z=0  None .text      __fwrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +45,7 @@ extern "C" asm static void __fwrite() {
 #pragma pop
 
 
-/* 803657A0-8036581C 007C+00 r=1 e=1 z=0  None .text      fwrite                                                       */
+/* 803657A0-8036581C 007C+00 s=0 e=1 z=0  None .text      fwrite                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -3,7 +3,7 @@ lbl_809EBA3C:
 /* 809EBA40 00000004  7C 08 02 A6 */	mflr r0
 /* 809EBA44 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809EBA48 0000000C  38 63 1A 30 */	addi r3, r3, 0x1a30
-/* 809EBA4C 00000010  4B FF C9 2D */	bl __ptmf_cmpr
+/* 809EBA4C 00000010  4B FF C9 2D */	bl _unresolved
 /* 809EBA50 00000014  7C 60 00 34 */	cntlzw r0, r3
 /* 809EBA54 00000018  54 03 D9 7E */	srwi r3, r0, 5
 /* 809EBA58 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)

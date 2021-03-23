@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80854AF0[2];
+extern u8 data_80854AF0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_kago_cpp(); // 1
 
 // 
 // Declarations:

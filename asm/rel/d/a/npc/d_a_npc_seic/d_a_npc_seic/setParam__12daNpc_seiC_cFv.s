@@ -10,8 +10,8 @@ lbl_80AC7C1C:
 /* 80AC7C3C 0000000C  48 00 05 DD */	bl selectAction__12daNpc_seiC_cFv
 /* 80AC7C40 00000010  7F C3 F3 78 */	mr r3, r30
 /* 80AC7C44 00000014  48 00 01 05 */	bl srchActors__12daNpc_seiC_cFv
-/* 80AC7C48 00000018  3C 60 00 00 */	lis r3, m__18daNpc_seiC_Param_c@ha /* 80AC921C */
-/* 80AC7C4C 0000001C  3B E3 00 00 */	addi r31, r3, m__18daNpc_seiC_Param_c@l /* 80AC921C */
+/* 80AC7C48 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AC7C4C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80AC7C50 00000020  C3 FF 00 90 */	lfs f31, 0x90(r31)
 /* 80AC7C54 00000024  38 60 00 28 */	li r3, 0x28
 /* 80AC7C58 00000028  48 00 00 DD */	bl getDistTable__12dAttention_cFi
@@ -31,8 +31,8 @@ lbl_80AC7C1C:
 /* 80AC7C90 00000060  98 1E 05 47 */	stb r0, 0x547(r30)
 /* 80AC7C94 00000064  38 00 00 00 */	li r0, 0
 /* 80AC7C98 00000068  90 1E 05 5C */	stw r0, 0x55c(r30)
-/* 80AC7C9C 0000006C  3C 60 00 00 */	lis r3, m__18daNpc_seiC_Param_c@ha /* 80AC921C */
-/* 80AC7CA0 00000070  38 63 00 00 */	addi r3, r3, m__18daNpc_seiC_Param_c@l /* 80AC921C */
+/* 80AC7C9C 0000006C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AC7CA0 00000070  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AC7CA4 00000074  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80AC7CA8 00000078  D0 1E 04 EC */	stfs f0, 0x4ec(r30)
 /* 80AC7CAC 0000007C  D0 1E 04 F0 */	stfs f0, 0x4f0(r30)
@@ -48,9 +48,9 @@ lbl_80AC7C1C:
 /* 80AC7CD4 000000A4  D0 1E 0D F0 */	stfs f0, 0xdf0(r30)
 /* 80AC7CD8 000000A8  38 7E 08 A0 */	addi r3, r30, 0x8a0
 /* 80AC7CDC 000000AC  C0 3E 0D F0 */	lfs f1, 0xdf0(r30)
-/* 80AC7CE0 000000B0  4B FF F7 D9 */	bl SetWallR__12dBgS_AcchCirFf
-/* 80AC7CE4 000000B4  3C 60 00 00 */	lis r3, m__18daNpc_seiC_Param_c@ha /* 80AC921C */
-/* 80AC7CE8 000000B8  38 63 00 00 */	addi r3, r3, m__18daNpc_seiC_Param_c@l /* 80AC921C */
+/* 80AC7CE0 000000B0  4B FF F7 D9 */	bl _unresolved
+/* 80AC7CE4 000000B4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80AC7CE8 000000B8  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80AC7CEC 000000BC  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80AC7CF0 000000C0  D0 1E 08 D0 */	stfs f0, 0x8d0(r30)
 /* 80AC7CF4 000000C4  C0 03 00 0C */	lfs f0, 0xc(r3)

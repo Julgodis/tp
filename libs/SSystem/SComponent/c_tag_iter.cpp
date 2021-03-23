@@ -40,7 +40,7 @@ extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
 // Declarations:
 // 
 
-/* 80266A7C-80266AB0 0034+00 r=4 e=4 z=0  None .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter       */
+/* 80266A7C-80266AB0 0034+00 s=0 e=4 z=0  None .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ asm void cTgIt_MethodCall(create_tag_class* param_0, method_filter* param_1) {
 #pragma pop
 
 
-/* 80266AB0-80266AE4 0034+00 r=5 e=5 z=0  None .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter       */
+/* 80266AB0-80266AE4 0034+00 s=0 e=5 z=0  None .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

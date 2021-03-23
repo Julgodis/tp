@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80986988[2];
+extern u8 data_80986988[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_chat_cpp(); // 1
 
 // 
 // Declarations:

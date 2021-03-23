@@ -49,12 +49,12 @@ extern "C" void __cvt_fp2unsigned(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804556F8-804556FC 0004+00 r=3 e=0 z=0  None .sdata2    @77                                                          */
+/* 804556F8-804556FC 0004+00 s=3 e=0 z=0  None .sdata2    @77                                                          */
 SECTION_SDATA2 static u8 JASOscillator__lit_77[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029BE94-8029BEC4 0030+00 r=1 e=1 z=0  None .text      __ct__13JASOscillatorFv                                      */
+/* 8029BE94-8029BEC4 0030+00 s=0 e=1 z=0  None .text      __ct__13JASOscillatorFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,20 +66,20 @@ asm JASOscillator::JASOscillator() {
 
 
 /* ############################################################################################## */
-/* 804556FC-80455700 0004+00 r=2 e=0 z=0  None .sdata2    @87                                                          */
+/* 804556FC-80455700 0004+00 s=2 e=0 z=0  None .sdata2    @87                                                          */
 SECTION_SDATA2 static f32 JASOscillator__lit_87 = 1.0f;
 
-/* 80455700-80455708 0004+04 r=3 e=0 z=0  None .sdata2    @88                                                          */
+/* 80455700-80455708 0004+04 s=3 e=0 z=0  None .sdata2    @88                                                          */
 SECTION_SDATA2 static f32 JASOscillator__lit_88[1 + 1 /* padding */] = {
 	32768.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455708-80455710 0008+00 r=3 e=0 z=0  None .sdata2    @91                                                          */
+/* 80455708-80455710 0008+00 s=3 e=0 z=0  None .sdata2    @91                                                          */
 SECTION_SDATA2 static f64 JASOscillator__lit_91 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8029BEC4-8029BF68 00A4+00 r=1 e=1 z=0  None .text      initStart__13JASOscillatorFPCQ213JASOscillator4Data          */
+/* 8029BEC4-8029BF68 00A4+00 s=0 e=1 z=0  None .text      initStart__13JASOscillatorFPCQ213JASOscillator4Data          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void JASOscillator::initStart(JASOscillator::Data const* param_0) {
 #pragma pop
 
 
-/* 8029BF68-8029BFC8 0060+00 r=1 e=1 z=0  None .text      incCounter__13JASOscillatorFf                                */
+/* 8029BF68-8029BFC8 0060+00 s=0 e=1 z=0  None .text      incCounter__13JASOscillatorFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm void JASOscillator::incCounter(f32 param_0) {
 #pragma pop
 
 
-/* 8029BFC8-8029BFE4 001C+00 r=1 e=1 z=0  None .text      getValue__13JASOscillatorCFv                                 */
+/* 8029BFC8-8029BFE4 001C+00 s=0 e=1 z=0  None .text      getValue__13JASOscillatorCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm void JASOscillator::getValue() const {
 #pragma pop
 
 
-/* 8029BFE4-8029C0E0 00FC+00 r=1 e=1 z=0  None .text      release__13JASOscillatorFv                                   */
+/* 8029BFE4-8029C0E0 00FC+00 s=0 e=1 z=0  None .text      release__13JASOscillatorFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm void JASOscillator::release() {
 #pragma pop
 
 
-/* 8029C0E0-8029C2C0 01E0+00 r=3 e=1 z=0  None .text      update__13JASOscillatorFv                                    */
+/* 8029C0E0-8029C2C0 01E0+00 s=2 e=1 z=0  None .text      update__13JASOscillatorFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void JASOscillator::update() {
 
 
 /* ############################################################################################## */
-/* 8039B1D0-8039B214 0044+00 r=1 e=0 z=0  None .rodata    sCurveTableLinear__13JASOscillator                           */
+/* 8039B1D0-8039B214 0044+00 s=1 e=0 z=0  None .rodata    sCurveTableLinear__13JASOscillator                           */
 SECTION_RODATA static u8 const sCurveTableLinear__13JASOscillator[68] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x70, 0x00, 0x00, 0x3F, 0x60, 0x00, 0x00, 0x3F, 0x50, 0x00, 0x00,
 	0x3F, 0x40, 0x00, 0x00, 0x3F, 0x30, 0x00, 0x00, 0x3F, 0x20, 0x00, 0x00, 0x3F, 0x10, 0x00, 0x00,
@@ -144,7 +144,7 @@ SECTION_RODATA static u8 const sCurveTableLinear__13JASOscillator[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B214-8039B258 0044+00 r=1 e=0 z=0  None .rodata    sCurveTableSampleCell__13JASOscillator                       */
+/* 8039B214-8039B258 0044+00 s=1 e=0 z=0  None .rodata    sCurveTableSampleCell__13JASOscillator                       */
 SECTION_RODATA static u8 const sCurveTableSampleCell__13JASOscillator[68] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x78, 0x71, 0xF8, 0x3F, 0x48, 0x01, 0x93, 0x3F, 0x0B, 0xD9, 0x12,
 	0x3E, 0xCC, 0xB1, 0x89, 0x3E, 0x94, 0x21, 0x18, 0x3E, 0x59, 0x31, 0xCA, 0x3E, 0x21, 0x41, 0x63,
@@ -153,7 +153,7 @@ SECTION_RODATA static u8 const sCurveTableSampleCell__13JASOscillator[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B258-8039B29C 0044+00 r=1 e=0 z=0  None .rodata    sCurveTableSqRoot__13JASOscillator                           */
+/* 8039B258-8039B29C 0044+00 s=1 e=0 z=0  None .rodata    sCurveTableSqRoot__13JASOscillator                           */
 SECTION_RODATA static u8 const sCurveTableSqRoot__13JASOscillator[68] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x60, 0xFF, 0xFC, 0x3F, 0x44, 0x00, 0x00, 0x3F, 0x28, 0xFF, 0xFC,
 	0x3F, 0x10, 0x00, 0x00, 0x3E, 0xF1, 0xFF, 0xF8, 0x3E, 0xC8, 0x00, 0x00, 0x3E, 0xA1, 0xFF, 0xF8,
@@ -162,7 +162,7 @@ SECTION_RODATA static u8 const sCurveTableSqRoot__13JASOscillator[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B29C-8039B2E0 0044+00 r=1 e=0 z=0  None .rodata    sCurveTableSquare__13JASOscillator                           */
+/* 8039B29C-8039B2E0 0044+00 s=1 e=0 z=0  None .rodata    sCurveTableSquare__13JASOscillator                           */
 SECTION_RODATA static u8 const sCurveTableSquare__13JASOscillator[68] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x77, 0xDE, 0xF8, 0x3F, 0x6F, 0x77, 0x4B, 0x3F, 0x66, 0xC1, 0x5D,
 	0x3F, 0x5D, 0xB3, 0xD0, 0x3F, 0x54, 0x43, 0x91, 0x3F, 0x4A, 0x62, 0xBB, 0x3F, 0x40, 0x00, 0x00,
@@ -171,7 +171,7 @@ SECTION_RODATA static u8 const sCurveTableSquare__13JASOscillator[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C78A8-803C78B8 0010+00 r=1 e=0 z=0  None .data      table_list$151                                               */
+/* 803C78A8-803C78B8 0010+00 s=1 e=0 z=0  None .data      table_list$151                                               */
 SECTION_DATA static void* data_803C78A8[4] = {
 	/* 0    */ (void*)&sCurveTableLinear__13JASOscillator,
 	/* 1    */ (void*)&sCurveTableSquare__13JASOscillator,
@@ -179,17 +179,17 @@ SECTION_DATA static void* data_803C78A8[4] = {
 	/* 3    */ (void*)&sCurveTableSampleCell__13JASOscillator,
 };
 
-/* 80455710-80455718 0004+04 r=1 e=0 z=0  None .sdata2    @154                                                         */
+/* 80455710-80455718 0004+04 s=1 e=0 z=0  None .sdata2    @154                                                         */
 SECTION_SDATA2 static f32 JASOscillator__lit_154[1 + 1 /* padding */] = {
 	16.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455718-80455720 0008+00 r=1 e=0 z=0  None .sdata2    @156                                                         */
+/* 80455718-80455720 0008+00 s=1 e=0 z=0  None .sdata2    @156                                                         */
 SECTION_SDATA2 static f64 JASOscillator__lit_156 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8029C2C0-8029C388 00C8+00 r=1 e=0 z=0  None .text      updateCurrentValue__13JASOscillatorFf                        */
+/* 8029C2C0-8029C388 00C8+00 s=1 e=0 z=0  None .text      updateCurrentValue__13JASOscillatorFf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

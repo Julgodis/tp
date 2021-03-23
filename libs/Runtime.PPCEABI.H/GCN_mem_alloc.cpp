@@ -34,7 +34,7 @@ extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803A21A8-803A21E0 0036+02 r=1 e=0 z=0  None .rodata    @55                                                          */
+/* 803A21A8-803A21E0 0036+02 s=1 e=0 z=0  None .rodata    @55                                                          */
 SECTION_RODATA static u8 const lit_55[54 + 2 /* padding */] = {
 	0x47, 0x43, 0x4E, 0x5F, 0x4D, 0x65, 0x6D, 0x5F, 0x41, 0x6C, 0x6C, 0x6F, 0x63, 0x2E, 0x63, 0x20,
 	0x3A, 0x20, 0x49, 0x6E, 0x69, 0x74, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6C, 0x74, 0x48, 0x65, 0x61,
@@ -44,7 +44,7 @@ SECTION_RODATA static u8 const lit_55[54 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 803A21E0-803A2220 0039+07 r=1 e=0 z=0  None .rodata    @56                                                          */
+/* 803A21E0-803A2220 0039+07 s=1 e=0 z=0  None .rodata    @56                                                          */
 SECTION_RODATA static u8 const GCN_mem_alloc__lit_56[57 + 7 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x77, 0x65, 0x72, 0x6B, 0x73, 0x20, 0x43, 0x57, 0x20, 0x72, 0x75,
 	0x6E, 0x74, 0x69, 0x6D, 0x65, 0x20, 0x6C, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x20, 0x69, 0x6E,
@@ -54,7 +54,7 @@ SECTION_RODATA static u8 const GCN_mem_alloc__lit_56[57 + 7 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80362914-803629CC 00B8+00 r=1 e=1 z=0  None .text      __sys_free                                                   */
+/* 80362914-803629CC 00B8+00 s=0 e=1 z=0  None .text      __sys_free                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

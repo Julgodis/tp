@@ -5,12 +5,12 @@ lbl_80BE05DC:
 /* 80BE05E8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BE05EC 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80BE05F0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80BE05F4 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80BE05F8 0000001C  38 83 00 00 */	addi r4, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BE05F4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE05F8 0000001C  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80BE05FC 00000020  8B E4 5E A1 */	lbz r31, 0x5ea1(r4)
 /* 80BE0600 00000024  38 64 01 14 */	addi r3, r4, 0x114
 /* 80BE0604 00000028  88 84 4E 0C */	lbz r4, 0x4e0c(r4)
-/* 80BE0608 0000002C  4B FF F6 B1 */	bl getLightDropNum__16dSv_light_drop_cCFUc
+/* 80BE0608 0000002C  4B FF F6 B1 */	bl _unresolved
 /* 80BE060C 00000030  38 9F FF FF */	addi r4, r31, -1
 /* 80BE0610 00000034  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80BE0614 00000038  7C 04 00 00 */	cmpw r4, r0

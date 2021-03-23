@@ -7,19 +7,19 @@ lbl_80969C90:
 /* 80969CA4 00000014  80 03 0D F0 */	lwz r0, 0xdf0(r3)
 /* 80969CA8 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80969CAC 0000001C  40 82 00 18 */	bne lbl_80969CC4
-/* 80969CB0 00000020  3C 60 00 00 */	lis r3, _search_HollyBall_Y__13daNpcBlueNS_cFPvPv@ha /* 80969DE4 */
-/* 80969CB4 00000024  38 63 00 00 */	addi r3, r3, _search_HollyBall_Y__13daNpcBlueNS_cFPvPv@l /* 80969DE4 */
+/* 80969CB0 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80969CB4 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80969CB8 00000028  7F E4 FB 78 */	mr r4, r31
-/* 80969CBC 0000002C  4B FF EC 1D */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80969CBC 0000002C  4B FF EC 1D */	bl _unresolved
 /* 80969CC0 00000030  90 7F 0D F0 */	stw r3, 0xdf0(r31)
 lbl_80969CC4:
 /* 80969CC4 00000000  80 1F 0D F4 */	lwz r0, 0xdf4(r31)
 /* 80969CC8 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80969CCC 00000008  40 82 00 18 */	bne lbl_80969CE4
-/* 80969CD0 0000000C  3C 60 00 00 */	lis r3, _search_HollyBall_G__13daNpcBlueNS_cFPvPv@ha /* 80969E9C */
-/* 80969CD4 00000010  38 63 00 00 */	addi r3, r3, _search_HollyBall_G__13daNpcBlueNS_cFPvPv@l /* 80969E9C */
+/* 80969CD0 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80969CD4 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80969CD8 00000014  7F E4 FB 78 */	mr r4, r31
-/* 80969CDC 00000018  4B FF EB FD */	bl fpcEx_Search__FPFPvPv_PvPv
+/* 80969CDC 00000018  4B FF EB FD */	bl _unresolved
 /* 80969CE0 0000001C  90 7F 0D F4 */	stw r3, 0xdf4(r31)
 lbl_80969CE4:
 /* 80969CE4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

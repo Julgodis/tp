@@ -5,15 +5,15 @@ lbl_8057A8B4:
 /* 8057A8C0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057A8C4 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8057A8C8 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8057A8CC 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8057A8D0 0000001C  3B E3 00 00 */	addi r31, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8057A8CC 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8057A8D0 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 8057A8D4 00000020  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 8057A8D8 00000024  A8 9E 05 C8 */	lha r4, 0x5c8(r30)
-/* 8057A8DC 00000028  4B FF ED 3D */	bl endCheck__16dEvent_manager_cFs
+/* 8057A8DC 00000028  4B FF ED 3D */	bl _unresolved
 /* 8057A8E0 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 8057A8E4 00000030  41 82 00 90 */	beq lbl_8057A974
 /* 8057A8E8 00000034  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 8057A8EC 00000038  4B FF ED 2D */	bl reset__14dEvt_control_cFv
+/* 8057A8EC 00000038  4B FF ED 2D */	bl _unresolved
 /* 8057A8F0 0000003C  A0 1E 06 1C */	lhz r0, 0x61c(r30)
 /* 8057A8F4 00000040  28 00 00 00 */	cmplwi r0, 0
 /* 8057A8F8 00000044  40 82 00 3C */	bne lbl_8057A934
@@ -26,7 +26,7 @@ lbl_8057A8B4:
 /* 8057A914 00000060  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057A918 00000064  38 E0 00 00 */	li r7, 0
 /* 8057A91C 00000068  39 00 00 01 */	li r8, 1
-/* 8057A920 0000006C  4B FF EC F9 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 8057A920 0000006C  4B FF EC F9 */	bl _unresolved
 /* 8057A924 00000070  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 8057A928 00000074  60 00 00 02 */	ori r0, r0, 2
 /* 8057A92C 00000078  B0 1E 00 FA */	sth r0, 0xfa(r30)
@@ -43,7 +43,7 @@ lbl_8057A934:
 /* 8057A954 00000020  38 C6 FF FF */	addi r6, r6, 0xFFFF /* 0x0000FFFF@l */
 /* 8057A958 00000024  38 E0 00 00 */	li r7, 0
 /* 8057A95C 00000028  39 00 00 01 */	li r8, 1
-/* 8057A960 0000002C  4B FF EC B9 */	bl fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
+/* 8057A960 0000002C  4B FF EC B9 */	bl _unresolved
 /* 8057A964 00000030  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 8057A968 00000034  60 00 00 02 */	ori r0, r0, 2
 /* 8057A96C 00000038  B0 1E 00 FA */	sth r0, 0xfa(r30)

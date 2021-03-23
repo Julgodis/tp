@@ -55,7 +55,7 @@ extern "C" extern u8 __ctype_map[256];
 // Declarations:
 // 
 
-/* 803664DC-803665BC 00E0+00 r=46 e=32 z=14  None .text      sprintf                                                      */
+/* 803664DC-803665BC 00E0+00 s=0 e=32 z=0  None .text      sprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm void sprintf() {
 #pragma pop
 
 
-/* 803665BC-80366690 00D4+00 r=19 e=19 z=0  None .text      snprintf                                                     */
+/* 803665BC-80366690 00D4+00 s=0 e=19 z=0  None .text      snprintf                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ extern "C" asm void snprintf() {
 #pragma pop
 
 
-/* 80366690-80366704 0074+00 r=8 e=8 z=0  None .text      vsnprintf                                                    */
+/* 80366690-80366704 0074+00 s=0 e=8 z=0  None .text      vsnprintf                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void vsnprintf() {
 #pragma pop
 
 
-/* 80366704-8036679C 0098+00 r=2 e=2 z=0  None .text      vprintf                                                      */
+/* 80366704-8036679C 0098+00 s=0 e=2 z=0  None .text      vprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ extern "C" asm void vprintf() {
 #pragma pop
 
 
-/* 8036679C-8036687C 00E0+00 r=9 e=9 z=0  None .text      fprintf                                                      */
+/* 8036679C-8036687C 00E0+00 s=0 e=9 z=0  None .text      fprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ extern "C" asm void fprintf() {
 #pragma pop
 
 
-/* 8036687C-80366964 00E8+00 r=4 e=4 z=0  None .text      printf                                                       */
+/* 8036687C-80366964 00E8+00 s=0 e=4 z=0  None .text      printf                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ extern "C" asm void printf() {
 #pragma pop
 
 
-/* 80366964-803669D0 006C+00 r=3 e=0 z=0  None .text      __StringWrite                                                */
+/* 80366964-803669D0 006C+00 s=3 e=0 z=0  None .text      __StringWrite                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ extern "C" asm static void __StringWrite() {
 #pragma pop
 
 
-/* 803669D0-80366A28 0058+00 r=3 e=0 z=0  None .text      __FileWrite                                                  */
+/* 803669D0-80366A28 0058+00 s=3 e=0 z=0  None .text      __FileWrite                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ extern "C" asm static void __FileWrite() {
 
 
 /* ############################################################################################## */
-/* 803A2318-803A2340 0025+03 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 803A2318-803A2340 0025+03 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -161,14 +161,14 @@ SECTION_DEAD char const* const stringBase_803A2339 = "nan";
 SECTION_DEAD static char const* const pad_803A233D = "\0\0";
 #pragma pop
 
-/* 80450AD8-80450AE0 0002+06 r=1 e=0 z=0  None .sdata     @wstringBase0                                                */
+/* 80450AD8-80450AE0 0002+06 s=1 e=0 z=0  None .sdata     @wstringBase0                                                */
 SECTION_SDATA static u8 data_80450AD8[2 + 6 /* padding */] = {
 	0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80366A28-8036719C 0774+00 r=6 e=0 z=0  None .text      __pformatter                                                 */
+/* 80366A28-8036719C 0774+00 s=6 e=0 z=0  None .text      __pformatter                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,12 +180,12 @@ extern "C" asm static void __pformatter() {
 
 
 /* ############################################################################################## */
-/* 80456670-80456678 0008+00 r=1 e=0 z=0  None .sdata2    @1089                                                        */
+/* 80456670-80456678 0008+00 s=1 e=0 z=0  None .sdata2    @1089                                                        */
 SECTION_SDATA2 static u8 MSL_Common_Src_printf__lit_1089[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036719C-803678B8 071C+00 r=1 e=0 z=0  None .text      float2str                                                    */
+/* 8036719C-803678B8 071C+00 s=1 e=0 z=0  None .text      float2str                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ extern "C" asm static void float2str() {
 #pragma pop
 
 
-/* 803678B8-803679E4 012C+00 r=1 e=0 z=0  None .text      round_decimal                                                */
+/* 803678B8-803679E4 012C+00 s=1 e=0 z=0  None .text      round_decimal                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +207,7 @@ extern "C" asm static void round_decimal() {
 #pragma pop
 
 
-/* 803679E4-80367D1C 0338+00 r=1 e=0 z=0  None .text      double2hex                                                   */
+/* 803679E4-80367D1C 0338+00 s=1 e=0 z=0  None .text      double2hex                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +219,7 @@ extern "C" asm static void double2hex() {
 
 
 /* ############################################################################################## */
-/* 803D2F18-803D2F9C 0084+00 r=1 e=0 z=0  None .data      @1248                                                        */
+/* 803D2F18-803D2F9C 0084+00 s=1 e=0 z=0  None .data      @1248                                                        */
 SECTION_DATA static void* lit_1248[33] = {
 	/* 0    */ (void*)(((char*)longlong2str)+0xF8),
 	/* 1    */ (void*)(((char*)longlong2str)+0x108),
@@ -256,7 +256,7 @@ SECTION_DATA static void* lit_1248[33] = {
 	/* 32   */ (void*)(((char*)longlong2str)+0xF8),
 };
 
-/* 80367D1C-80368030 0314+00 r=2 e=0 z=0  None .text      longlong2str                                                 */
+/* 80367D1C-80368030 0314+00 s=2 e=0 z=0  None .text      longlong2str                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ extern "C" asm static void longlong2str() {
 
 
 /* ############################################################################################## */
-/* 803D2F9C-803D3020 0084+00 r=1 e=0 z=0  None .data      @1307                                                        */
+/* 803D2F9C-803D3020 0084+00 s=1 e=0 z=0  None .data      @1307                                                        */
 SECTION_DATA static void* lit_1307[33] = {
 	/* 0    */ (void*)(((char*)long2str)+0xA8),
 	/* 1    */ (void*)(((char*)long2str)+0xB4),
@@ -305,7 +305,7 @@ SECTION_DATA static void* lit_1307[33] = {
 	/* 32   */ (void*)(((char*)long2str)+0xA8),
 };
 
-/* 80368030-80368288 0258+00 r=3 e=0 z=0  None .text      long2str                                                     */
+/* 80368030-80368288 0258+00 s=3 e=0 z=0  None .text      long2str                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ extern "C" asm static void long2str() {
 
 
 /* ############################################################################################## */
-/* 803D3020-803D3100 00E0+00 r=1 e=0 z=0  None .data      @1443                                                        */
+/* 803D3020-803D3100 00E0+00 s=1 e=0 z=0  None .data      @1443                                                        */
 SECTION_DATA static void* lit_1443[56] = {
 	/* 0    */ (void*)(((char*)parse_format)+0x38C),
 	/* 1    */ (void*)(((char*)parse_format)+0x4BC),
@@ -377,7 +377,7 @@ SECTION_DATA static void* lit_1443[56] = {
 	/* 55   */ (void*)(((char*)parse_format)+0x30C),
 };
 
-/* 803D3100-803D3148 0044+04 r=1 e=0 z=0  None .data      @1442                                                        */
+/* 803D3100-803D3148 0044+04 s=1 e=0 z=0  None .data      @1442                                                        */
 SECTION_DATA static void* lit_1442[17 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)parse_format)+0xBC),
 	/* 1    */ (void*)(((char*)parse_format)+0xF8),
@@ -400,7 +400,7 @@ SECTION_DATA static void* lit_1442[17 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80368288-8036878C 0504+00 r=3 e=0 z=0  None .text      parse_format                                                 */
+/* 80368288-8036878C 0504+00 s=3 e=0 z=0  None .text      parse_format                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

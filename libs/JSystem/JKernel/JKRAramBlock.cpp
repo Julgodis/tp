@@ -67,7 +67,7 @@ extern "C" void _restgpr_27(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CC178-803CC188 000C+04 r=2 e=0 z=0  None .data      __vt__12JKRAramBlock                                         */
+/* 803CC178-803CC188 000C+04 s=2 e=0 z=0  None .data      __vt__12JKRAramBlock                                         */
 SECTION_DATA static void* __vt__12JKRAramBlock[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -76,7 +76,7 @@ SECTION_DATA static void* __vt__12JKRAramBlock[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802D3304-802D3378 0074+00 r=3 e=1 z=0  None .text      __ct__12JKRAramBlockFUlUlUlUcb                               */
+/* 802D3304-802D3378 0074+00 s=2 e=1 z=0  None .text      __ct__12JKRAramBlockFUlUlUlUcb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm JKRAramBlock::JKRAramBlock(u32 param_0, u32 param_1, u32 param_2, u8 param_3
 #pragma pop
 
 
-/* 802D3378-802D3434 00BC+00 r=1 e=0 z=0  None .text      __dt__12JKRAramBlockFv                                       */
+/* 802D3378-802D3434 00BC+00 s=1 e=0 z=0  None .text      __dt__12JKRAramBlockFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm JKRAramBlock::~JKRAramBlock() {
 #pragma pop
 
 
-/* 802D3434-802D34D0 009C+00 r=1 e=1 z=0  None .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap                 */
+/* 802D3434-802D34D0 009C+00 s=0 e=1 z=0  None .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void JKRAramBlock::allocHead(u32 param_0, u8 param_1, JKRAramHeap* param_2) 
 #pragma pop
 
 
-/* 802D34D0-802D3574 00A4+00 r=1 e=1 z=0  None .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap                 */
+/* 802D34D0-802D3574 00A4+00 s=0 e=1 z=0  None .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

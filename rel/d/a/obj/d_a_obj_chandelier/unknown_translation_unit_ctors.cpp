@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80BC8CD0[2];
+extern u8 data_80BC8CD0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_chandelier_cpp(); // 1
 
 // 
 // Declarations:

@@ -14,23 +14,23 @@ lbl_8058B02C:
 /* 8058B05C 00000030  41 82 00 08 */	beq lbl_8058B064
 /* 8058B060 00000034  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_8058B064:
-/* 8058B064 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 8058C3F4 */
-/* 8058B068 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 8058C3F4 */
+/* 8058B064 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8058B068 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8058B06C 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 8058B070 0000000C  4B FF FE A9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
+/* 8058B070 0000000C  4B FF FE A9 */	bl _unresolved
 /* 8058B074 00000010  7C 60 1B 78 */	mr r0, r3
 /* 8058B078 00000014  2C 00 00 04 */	cmpwi r0, 4
 /* 8058B07C 00000018  40 82 00 3C */	bne lbl_8058B0B8
 /* 8058B080 0000001C  7F E3 FB 78 */	mr r3, r31
-/* 8058B084 00000020  3C 80 00 00 */	lis r4, l_arcName@ha /* 8058C3F4 */
-/* 8058B088 00000024  38 84 00 00 */	addi r4, r4, l_arcName@l /* 8058C3F4 */
+/* 8058B084 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8058B088 00000024  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8058B08C 00000028  80 84 00 00 */	lwz r4, 0(r4)
 /* 8058B090 0000002C  38 A0 00 09 */	li r5, 9
-/* 8058B094 00000030  3C C0 00 00 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha /* 80075AD8 */
-/* 8058B098 00000034  38 C6 00 00 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l /* 80075AD8 */
+/* 8058B094 00000030  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 8058B098 00000034  38 C6 00 00 */	addi r6, r6, 0x0000 /* 0x00000000@l */
 /* 8058B09C 00000038  38 E0 20 00 */	li r7, 0x2000
 /* 8058B0A0 0000003C  39 00 00 00 */	li r8, 0
-/* 8058B0A4 00000040  4B FF FE 75 */	bl MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+/* 8058B0A4 00000040  4B FF FE 75 */	bl _unresolved
 /* 8058B0A8 00000044  7C 60 1B 78 */	mr r0, r3
 /* 8058B0AC 00000048  2C 00 00 05 */	cmpwi r0, 5
 /* 8058B0B0 0000004C  40 82 00 08 */	bne lbl_8058B0B8

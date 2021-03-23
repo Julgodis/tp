@@ -55,7 +55,7 @@ extern "C" void Set__8cM3dGPlaFPC8cM3dGPla(); // 1
 // Declarations:
 // 
 
-/* 8026F7B0-8026F7DC 002C+00 r=1 e=1 z=0  None .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec                           */
+/* 8026F7B0-8026F7DC 002C+00 s=0 e=1 z=0  None .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm void cM3dGTri::cross(cM3dGCyl const* param_0, Vec* param_1) const {
 #pragma pop
 
 
-/* 8026F7DC-8026F85C 0080+00 r=6 e=0 z=6  None .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
+/* 8026F7DC-8026F85C 0080+00 s=0 e=0 z=0  None .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm void cM3dGTri::setPos(Vec const* param_0, Vec const* param_1, Vec const* par
 #pragma pop
 
 
-/* 8026F85C-8026F8C8 006C+00 r=2 e=2 z=0  None .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla               */
+/* 8026F85C-8026F8C8 006C+00 s=0 e=2 z=0  None .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm void cM3dGTri::setBg(Vec const* param_0, Vec const* param_1, Vec const* para
 #pragma pop
 
 
-/* 8026F8C8-8026F93C 0074+00 r=1 e=1 z=0  None .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec                      */
+/* 8026F8C8-8026F93C 0074+00 s=0 e=1 z=0  None .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

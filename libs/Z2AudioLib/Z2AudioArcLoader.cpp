@@ -108,7 +108,7 @@ extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803C9CD0-803C9D18 0044+04 r=3 e=1 z=0  None .data      __vt__16Z2AudioArcLoader                                     */
+/* 803C9CD0-803C9D18 0044+04 s=2 e=1 z=0  None .data      __vt__16Z2AudioArcLoader                                     */
 SECTION_DATA void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -131,7 +131,7 @@ SECTION_DATA void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A9A34-802A9A70 003C+00 r=1 e=1 z=0  None .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
+/* 802A9A34-802A9A70 003C+00 s=0 e=1 z=0  None .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +142,7 @@ asm Z2AudioArcLoader::Z2AudioArcLoader(JAUSection* param_0) {
 #pragma pop
 
 
-/* 802A9A70-802A9AC8 0058+00 r=1 e=0 z=0  None .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
+/* 802A9A70-802A9AC8 0058+00 s=1 e=0 z=0  None .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,7 +153,7 @@ asm void Z2AudioArcLoader::readCommandMore(u32 param_0) {
 #pragma pop
 
 
-/* 802A9AC8-802A9B54 008C+00 r=1 e=0 z=0  None .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
+/* 802A9AC8-802A9B54 008C+00 s=1 e=0 z=0  None .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ asm void Z2AudioArcLoader::readBFCA(void const* param_0) {
 #pragma pop
 
 
-/* 802A9B54-802A9B58 0004+00 r=1 e=0 z=0  None .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
+/* 802A9B54-802A9B58 0004+00 s=1 e=0 z=0  None .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm void Z2AudioArcLoader::readBSTN(void const* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802A9B58-802A9BC8 0070+00 r=1 e=0 z=0  None .text      __dt__16Z2AudioArcLoaderFv                                   */
+/* 802A9B58-802A9BC8 0070+00 s=1 e=0 z=0  None .text      __dt__16Z2AudioArcLoaderFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

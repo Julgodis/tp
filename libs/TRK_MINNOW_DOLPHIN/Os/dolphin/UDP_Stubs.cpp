@@ -32,7 +32,7 @@ extern "C" void udp_cc_initialize(); // 1
 // Declarations:
 // 
 
-/* 80372314-8037231C 0008+00 r=1 e=1 z=0  None .text      udp_cc_post_stop                                             */
+/* 80372314-8037231C 0008+00 s=0 e=1 z=0  None .text      udp_cc_post_stop                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +43,7 @@ extern "C" asm void udp_cc_post_stop() {
 #pragma pop
 
 
-/* 8037231C-80372324 0008+00 r=1 e=1 z=0  None .text      udp_cc_pre_continue                                          */
+/* 8037231C-80372324 0008+00 s=0 e=1 z=0  None .text      udp_cc_pre_continue                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +54,7 @@ extern "C" asm void udp_cc_pre_continue() {
 #pragma pop
 
 
-/* 80372324-8037232C 0008+00 r=1 e=1 z=0  None .text      udp_cc_peek                                                  */
+/* 80372324-8037232C 0008+00 s=0 e=1 z=0  None .text      udp_cc_peek                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ extern "C" asm void udp_cc_peek() {
 #pragma pop
 
 
-/* 8037232C-80372334 0008+00 r=1 e=1 z=0  None .text      udp_cc_write                                                 */
+/* 8037232C-80372334 0008+00 s=0 e=1 z=0  None .text      udp_cc_write                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ extern "C" asm void udp_cc_write() {
 #pragma pop
 
 
-/* 80372334-8037233C 0008+00 r=1 e=1 z=0  None .text      udp_cc_read                                                  */
+/* 80372334-8037233C 0008+00 s=0 e=1 z=0  None .text      udp_cc_read                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ extern "C" asm void udp_cc_read() {
 #pragma pop
 
 
-/* 8037233C-80372344 0008+00 r=1 e=1 z=0  None .text      udp_cc_close                                                 */
+/* 8037233C-80372344 0008+00 s=0 e=1 z=0  None .text      udp_cc_close                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ extern "C" asm void udp_cc_close() {
 #pragma pop
 
 
-/* 80372344-8037234C 0008+00 r=1 e=1 z=0  None .text      udp_cc_open                                                  */
+/* 80372344-8037234C 0008+00 s=0 e=1 z=0  None .text      udp_cc_open                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ extern "C" asm void udp_cc_open() {
 #pragma pop
 
 
-/* 8037234C-80372354 0008+00 r=1 e=1 z=0  None .text      udp_cc_shutdown                                              */
+/* 8037234C-80372354 0008+00 s=0 e=1 z=0  None .text      udp_cc_shutdown                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ extern "C" asm void udp_cc_shutdown() {
 #pragma pop
 
 
-/* 80372354-8037235C 0008+00 r=1 e=1 z=0  None .text      udp_cc_initialize                                            */
+/* 80372354-8037235C 0008+00 s=0 e=1 z=0  None .text      udp_cc_initialize                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -166,14 +166,14 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 80455810-80455818 0004+04 r=1 e=0 z=0  None .sdata2    @730                                                         */
+/* 80455810-80455818 0004+04 s=1 e=0 z=0  None .sdata2    @730                                                         */
 SECTION_SDATA2 static f32 JAUInitializer__lit_730[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 802A4AD0-802A4B28 0058+00 r=1 e=1 z=0  None .text      __ct__18JAU_JASInitializerFv                                 */
+/* 802A4AD0-802A4B28 0058+00 s=0 e=1 z=0  None .text      __ct__18JAU_JASInitializerFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,13 +185,13 @@ asm JAU_JASInitializer::JAU_JASInitializer() {
 
 
 /* ############################################################################################## */
-/* 80434110-8043411C 000C+00 r=2 e=0 z=0  None .bss       @757                                                         */
+/* 80434110-8043411C 000C+00 s=2 e=0 z=0  None .bss       @757                                                         */
 static u8 JAUInitializer__lit_757[12];
 
-/* 8043411C-80434128 000C+00 r=1 e=0 z=0  None .bss       @763                                                         */
+/* 8043411C-80434128 000C+00 s=1 e=0 z=0  None .bss       @763                                                         */
 static u8 JAUInitializer__lit_763[12];
 
-/* 802A4B28-802A4D3C 0214+00 r=1 e=1 z=0  None .text      initJASystem__18JAU_JASInitializerFP12JKRSolidHeap           */
+/* 802A4B28-802A4D3C 0214+00 s=0 e=1 z=0  None .text      initJASystem__18JAU_JASInitializerFP12JKRSolidHeap           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +202,7 @@ asm void JAU_JASInitializer::initJASystem(JKRSolidHeap* param_0) {
 #pragma pop
 
 
-/* 802A4D3C-802A4D60 0024+00 r=1 e=1 z=0  None .text      __ct__18JAU_JAIInitializerFv                                 */
+/* 802A4D3C-802A4D60 0024+00 s=0 e=1 z=0  None .text      __ct__18JAU_JAIInitializerFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +213,7 @@ asm JAU_JAIInitializer::JAU_JAIInitializer() {
 #pragma pop
 
 
-/* 802A4D60-802A4EE8 0188+00 r=1 e=1 z=0  None .text      initJAInterface__18JAU_JAIInitializerFv                      */
+/* 802A4D60-802A4EE8 0188+00 s=0 e=1 z=0  None .text      initJAInterface__18JAU_JAIInitializerFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,15 +225,15 @@ asm void JAU_JAIInitializer::initJAInterface() {
 
 
 /* ############################################################################################## */
-/* 80434128-80434134 000C+00 r=0 e=0 z=0  None .bss       @855                                                         */
+/* 80434128-80434134 000C+00 s=0 e=0 z=0  None .bss       @855                                                         */
 u8 JAUInitializer__lit_855[12];
 
-/* 80434134-80434140 000C+00 r=0 e=0 z=0  None .bss       @859                                                         */
+/* 80434134-80434140 000C+00 s=0 e=0 z=0  None .bss       @859                                                         */
 u8 lit_859[12];
 
-/* 80434140-8043414C 000C+00 r=0 e=0 z=0  None .bss       @863                                                         */
+/* 80434140-8043414C 000C+00 s=0 e=0 z=0  None .bss       @863                                                         */
 u8 lit_863[12];
 
-/* 8043414C-804341B8 000C+60 r=0 e=0 z=0  None .bss       @867                                                         */
+/* 8043414C-804341B8 000C+60 s=0 e=0 z=0  None .bss       @867                                                         */
 u8 JAUInitializer__lit_867[12 + 96 /* padding */];
 

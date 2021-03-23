@@ -8,14 +8,14 @@ lbl_80671E78:
 /* 80671E90 00000018  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80671E94 0000001C  28 00 00 03 */	cmplwi r0, 3
 /* 80671E98 00000020  40 82 00 3C */	bne lbl_80671ED4
-/* 80671E9C 00000024  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80671EA0 00000028  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80671E9C 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80671EA0 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80671EA4 0000002C  38 63 4F F8 */	addi r3, r3, 0x4ff8
-/* 80671EA8 00000030  3C 80 00 00 */	lis r4, l_staff_name@ha /* 806724FC */
-/* 80671EAC 00000034  38 84 00 00 */	addi r4, r4, l_staff_name@l /* 806724FC */
+/* 80671EA8 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80671EAC 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80671EB0 00000038  38 A0 00 00 */	li r5, 0
 /* 80671EB4 0000003C  38 C0 00 00 */	li r6, 0
-/* 80671EB8 00000040  4B FF ED 61 */	bl getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
+/* 80671EB8 00000040  4B FF ED 61 */	bl _unresolved
 /* 80671EBC 00000044  90 7F 05 9C */	stw r3, 0x59c(r31)
 /* 80671EC0 00000048  7F E3 FB 78 */	mr r3, r31
 /* 80671EC4 0000004C  4B FF F4 61 */	bl demoProc__11daBdoorL5_cFv
@@ -29,12 +29,12 @@ lbl_80671ED4:
 /* 80671EE0 0000000C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80671EE4 00000010  7C 1E 07 74 */	extsb r30, r0
 /* 80671EE8 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80671EEC 00000018  4B FF ED 2D */	bl getSwbit__13door_param2_cFP10fopAc_ac_c
+/* 80671EEC 00000018  4B FF ED 2D */	bl _unresolved
 /* 80671EF0 0000001C  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80671EF4 00000020  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80671EF8 00000024  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80671EF4 00000020  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80671EF8 00000024  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80671EFC 00000028  7F C5 F3 78 */	mr r5, r30
-/* 80671F00 0000002C  4B FF ED 19 */	bl isSwitch__10dSv_info_cCFii
+/* 80671F00 0000002C  4B FF ED 19 */	bl _unresolved
 /* 80671F04 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 80671F08 00000034  41 82 00 18 */	beq lbl_80671F20
 /* 80671F0C 00000038  A8 1F 05 9A */	lha r0, 0x59a(r31)

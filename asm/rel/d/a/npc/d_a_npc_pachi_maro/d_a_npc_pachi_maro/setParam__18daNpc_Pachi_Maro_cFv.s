@@ -3,29 +3,29 @@ lbl_80A98870:
 /* 80A98874 00000004  7C 08 02 A6 */	mflr r0
 /* 80A98878 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A9887C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A98880 00000010  4B FF F3 79 */	bl _savegpr_29
+/* 80A98880 00000010  4B FF F3 79 */	bl _unresolved
 /* 80A98884 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80A98888 00000018  48 00 0C 2D */	bl selectAction__18daNpc_Pachi_Maro_cFv
 /* 80A9888C 0000001C  7F A3 EB 78 */	mr r3, r29
 /* 80A98890 00000020  48 00 01 81 */	bl srchActors__18daNpc_Pachi_Maro_cFv
-/* 80A98894 00000024  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Maro_Param_c@ha /* 80A9B88C */
-/* 80A98898 00000028  38 83 00 00 */	addi r4, r3, m__24daNpc_Pachi_Maro_Param_c@l /* 80A9B88C */
+/* 80A98894 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A98898 00000028  38 83 00 00 */	addi r4, r3, 0x0000 /* 0x00000000@l */
 /* 80A9889C 0000002C  AB C4 00 48 */	lha r30, 0x48(r4)
 /* 80A988A0 00000030  AB E4 00 4A */	lha r31, 0x4a(r4)
 /* 80A988A4 00000034  A8 64 00 4C */	lha r3, 0x4c(r4)
 /* 80A988A8 00000038  A8 84 00 4E */	lha r4, 0x4e(r4)
-/* 80A988AC 0000003C  4B FF F3 4D */	bl daNpcT_getDistTableIdx__Fii
+/* 80A988AC 0000003C  4B FF F3 4D */	bl _unresolved
 /* 80A988B0 00000040  98 7D 05 44 */	stb r3, 0x544(r29)
 /* 80A988B4 00000044  88 1D 05 44 */	lbz r0, 0x544(r29)
 /* 80A988B8 00000048  98 1D 05 45 */	stb r0, 0x545(r29)
 /* 80A988BC 0000004C  7F C3 07 34 */	extsh r3, r30
 /* 80A988C0 00000050  7F E4 07 34 */	extsh r4, r31
-/* 80A988C4 00000054  4B FF F3 35 */	bl daNpcT_getDistTableIdx__Fii
+/* 80A988C4 00000054  4B FF F3 35 */	bl _unresolved
 /* 80A988C8 00000058  98 7D 05 47 */	stb r3, 0x547(r29)
 /* 80A988CC 0000005C  38 00 00 0A */	li r0, 0xa
 /* 80A988D0 00000060  90 1D 05 5C */	stw r0, 0x55c(r29)
-/* 80A988D4 00000064  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Maro_Param_c@ha /* 80A9B88C */
-/* 80A988D8 00000068  38 63 00 00 */	addi r3, r3, m__24daNpc_Pachi_Maro_Param_c@l /* 80A9B88C */
+/* 80A988D4 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A988D8 00000068  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A988DC 0000006C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80A988E0 00000070  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80A988E4 00000074  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
@@ -43,9 +43,9 @@ lbl_80A98870:
 /* 80A98914 000000A4  D0 1D 0D F8 */	stfs f0, 0xdf8(r29)
 /* 80A98918 000000A8  38 7D 08 A0 */	addi r3, r29, 0x8a0
 /* 80A9891C 000000AC  C0 3D 0D F0 */	lfs f1, 0xdf0(r29)
-/* 80A98920 000000B0  4B FF F2 D9 */	bl SetWallR__12dBgS_AcchCirFf
-/* 80A98924 000000B4  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Maro_Param_c@ha /* 80A9B88C */
-/* 80A98928 000000B8  38 63 00 00 */	addi r3, r3, m__24daNpc_Pachi_Maro_Param_c@l /* 80A9B88C */
+/* 80A98920 000000B0  4B FF F2 D9 */	bl _unresolved
+/* 80A98924 000000B4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A98928 000000B8  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80A9892C 000000BC  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A98930 000000C0  D0 1D 08 D0 */	stfs f0, 0x8d0(r29)
 /* 80A98934 000000C4  C0 03 00 0C */	lfs f0, 0xc(r3)
@@ -57,7 +57,7 @@ lbl_80A98870:
 /* 80A9894C 000000DC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80A98950 000000E0  D0 1D 05 30 */	stfs f0, 0x530(r29)
 /* 80A98954 000000E4  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A98958 000000E8  4B FF F2 A1 */	bl _restgpr_29
+/* 80A98958 000000E8  4B FF F2 A1 */	bl _unresolved
 /* 80A9895C 000000EC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A98960 000000F0  7C 08 03 A6 */	mtlr r0
 /* 80A98964 000000F4  38 21 00 20 */	addi r1, r1, 0x20

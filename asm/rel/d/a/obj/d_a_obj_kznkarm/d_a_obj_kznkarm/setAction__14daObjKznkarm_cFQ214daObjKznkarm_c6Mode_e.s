@@ -3,8 +3,8 @@ lbl_80C4F858:
 /* 80C4F85C 00000004  7C 08 02 A6 */	mflr r0
 /* 80C4F860 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C4F864 0000000C  1C A4 00 18 */	mulli r5, r4, 0x18
-/* 80C4F868 00000010  3C 80 00 00 */	lis r4, ActionTable__14daObjKznkarm_c@ha /* 80C50E28 */
-/* 80C4F86C 00000014  38 04 00 00 */	addi r0, r4, ActionTable__14daObjKznkarm_c@l /* 80C50E28 */
+/* 80C4F868 00000010  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C4F86C 00000014  38 04 00 00 */	addi r0, r4, 0x0000 /* 0x00000000@l */
 /* 80C4F870 00000018  7C 00 2A 14 */	add r0, r0, r5
 /* 80C4F874 0000001C  90 03 07 8C */	stw r0, 0x78c(r3)
 /* 80C4F878 00000020  48 00 00 15 */	bl callInit__14daObjKznkarm_cFv

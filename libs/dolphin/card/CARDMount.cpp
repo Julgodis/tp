@@ -66,13 +66,13 @@ extern "C" extern u8 struct_80450A70[8];
 // 
 
 /* ############################################################################################## */
-/* 803D2000-803D2020 0020+00 r=3 e=0 z=0  None .data      SectorSizeTable                                              */
+/* 803D2000-803D2020 0020+00 s=3 e=0 z=0  None .data      SectorSizeTable                                              */
 SECTION_DATA static u8 SectorSizeTable[32] = {
 	0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80356948-80356A14 00CC+00 r=2 e=0 z=0  None .text      IsCard                                                       */
+/* 80356948-80356A14 00CC+00 s=2 e=0 z=0  None .text      IsCard                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ extern "C" asm static void IsCard() {
 #pragma pop
 
 
-/* 80356A14-80356A4C 0038+00 r=1 e=1 z=0  None .text      CARDProbe                                                    */
+/* 80356A14-80356A4C 0038+00 s=0 e=1 z=0  None .text      CARDProbe                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ extern "C" asm void CARDProbe() {
 #pragma pop
 
 
-/* 80356A4C-80356BC8 017C+00 r=1 e=1 z=0  None .text      CARDProbeEx                                                  */
+/* 80356A4C-80356BC8 017C+00 s=0 e=1 z=0  None .text      CARDProbeEx                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,13 +106,13 @@ extern "C" asm void CARDProbeEx() {
 
 
 /* ############################################################################################## */
-/* 803D2020-803D2040 0020+00 r=1 e=0 z=0  None .data      LatencyTable                                                 */
+/* 803D2020-803D2040 0020+00 s=1 e=0 z=0  None .data      LatencyTable                                                 */
 SECTION_DATA static u8 LatencyTable[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00,
 };
 
-/* 80356BC8-8035701C 0454+00 r=2 e=0 z=0  None .text      DoMount                                                      */
+/* 80356BC8-8035701C 0454+00 s=2 e=0 z=0  None .text      DoMount                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ extern "C" asm static void DoMount() {
 #pragma pop
 
 
-/* 8035701C-80357154 0138+00 r=3 e=1 z=0  None .text      __CARDMountCallback                                          */
+/* 8035701C-80357154 0138+00 s=2 e=1 z=0  None .text      __CARDMountCallback                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +134,7 @@ extern "C" asm void __CARDMountCallback() {
 #pragma pop
 
 
-/* 80357154-803572F4 01A0+00 r=1 e=0 z=0  None .text      CARDMountAsync                                               */
+/* 80357154-803572F4 01A0+00 s=1 e=0 z=0  None .text      CARDMountAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ extern "C" asm static void CARDMountAsync() {
 #pragma pop
 
 
-/* 803572F4-8035733C 0048+00 r=1 e=1 z=0  None .text      CARDMount                                                    */
+/* 803572F4-8035733C 0048+00 s=0 e=1 z=0  None .text      CARDMount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ extern "C" asm void CARDMount() {
 #pragma pop
 
 
-/* 8035733C-803573D8 009C+00 r=2 e=0 z=0  None .text      DoUnmount                                                    */
+/* 8035733C-803573D8 009C+00 s=2 e=0 z=0  None .text      DoUnmount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ extern "C" asm static void DoUnmount() {
 #pragma pop
 
 
-/* 803573D8-80357484 00AC+00 r=2 e=2 z=0  None .text      CARDUnmount                                                  */
+/* 803573D8-80357484 00AC+00 s=0 e=2 z=0  None .text      CARDUnmount                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

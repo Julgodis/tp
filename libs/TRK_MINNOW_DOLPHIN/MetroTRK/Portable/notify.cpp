@@ -29,7 +29,7 @@ extern "C" void TRKTargetAddStopInfo(); // 1
 // Declarations:
 // 
 
-/* 8036F4B0-8036F548 0098+00 r=1 e=1 z=0  None .text      TRKDoNotifyStopped                                           */
+/* 8036F4B0-8036F548 0098+00 s=0 e=1 z=0  None .text      TRKDoNotifyStopped                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -69,7 +69,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80021B88-80021BC0 0038+00 r=5 e=4 z=0  None .text      fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv                  */
+/* 80021B88-80021BC0 0038+00 s=1 e=4 z=0  None .text      fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void fpcLyIt_OnlyHere(layer_class* param_0, int (*)(void*, void*), void* par
 #pragma pop
 
 
-/* 80021BC0-80021C28 0068+00 r=1 e=1 z=0  None .text      fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv                */
+/* 80021BC0-80021C28 0068+00 s=0 e=1 z=0  None .text      fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +91,7 @@ asm void fpcLyIt_OnlyHereLY(layer_class* param_0, int (*)(void*, void*), void* p
 #pragma pop
 
 
-/* 80021C28-80021C60 0038+00 r=3 e=3 z=0  None .text      fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv                    */
+/* 80021C28-80021C60 0038+00 s=0 e=3 z=0  None .text      fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +102,7 @@ asm void fpcLyIt_Judge(layer_class* param_0, void* (*)(void*, void*), void* para
 #pragma pop
 
 
-/* 80021C60-80021CD4 0074+00 r=5 e=1 z=4  None .text      fpcLyIt_AllJudge__FPFPvPv_PvPv                               */
+/* 80021C60-80021CD4 0074+00 s=0 e=1 z=0  None .text      fpcLyIt_AllJudge__FPFPvPv_PvPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

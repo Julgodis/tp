@@ -29,7 +29,7 @@ __declspec(section ".ctors$10") extern void* __init_cpp_exceptions_reference;
 // Declarations:
 // 
 
-/* 80342B78-80342B98 0020+00 r=1 e=1 z=0  None .text      __init_user                                                  */
+/* 80342B78-80342B98 0020+00 s=0 e=1 z=0  None .text      __init_user                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -40,7 +40,7 @@ extern "C" asm void __init_user() {
 #pragma pop
 
 
-/* 80342B98-80342BEC 0054+00 r=1 e=0 z=0  None .text      __init_cpp                                                   */
+/* 80342B98-80342BEC 0054+00 s=1 e=0 z=0  None .text      __init_cpp                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ extern "C" asm static void __init_cpp() {
 #pragma pop
 
 
-/* 80342BEC-80342C0C 0020+00 r=2 e=2 z=0  None .text      _ExitProcess                                                 */
+/* 80342BEC-80342C0C 0020+00 s=0 e=2 z=0  None .text      _ExitProcess                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

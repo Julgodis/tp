@@ -65,7 +65,7 @@ extern "C" extern f32 Zero__4cXyz[3];
 // 
 
 /* ############################################################################################## */
-/* 803C3F90-803C3FA8 0018+00 r=2 e=0 z=0  None .data      __vt__11cBgS_GndChk                                          */
+/* 803C3F90-803C3FA8 0018+00 s=2 e=0 z=0  None .data      __vt__11cBgS_GndChk                                          */
 SECTION_DATA static void* __vt__11cBgS_GndChk[6] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -75,7 +75,7 @@ SECTION_DATA static void* __vt__11cBgS_GndChk[6] = {
 	/* 5    */ (void*)func_80267D54,
 };
 
-/* 80267C1C-80267C94 0078+00 r=125 e=2 z=123  None .text      __ct__11cBgS_GndChkFv                                        */
+/* 80267C1C-80267C94 0078+00 s=0 e=2 z=0  None .text      __ct__11cBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ asm cBgS_GndChk::cBgS_GndChk() {
 #pragma pop
 
 
-/* 80267C94-80267D0C 0078+00 r=116 e=4 z=110  None .text      __dt__11cBgS_GndChkFv                                        */
+/* 80267C94-80267D0C 0078+00 s=2 e=4 z=0  None .text      __dt__11cBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ asm cBgS_GndChk::~cBgS_GndChk() {
 #pragma pop
 
 
-/* 80267D0C-80267D28 001C+00 r=62 e=0 z=62  None .text      SetPos__11cBgS_GndChkFPC3Vec                                 */
+/* 80267D0C-80267D28 001C+00 s=0 e=0 z=0  None .text      SetPos__11cBgS_GndChkFPC3Vec                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm void cBgS_GndChk::SetPos(Vec const* param_0) {
 #pragma pop
 
 
-/* 80267D28-80267D44 001C+00 r=236 e=51 z=185  None .text      SetPos__11cBgS_GndChkFPC4cXyz                                */
+/* 80267D28-80267D44 001C+00 s=0 e=51 z=0  None .text      SetPos__11cBgS_GndChkFPC4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +119,7 @@ asm void cBgS_GndChk::SetPos(cXyz const* param_0) {
 #pragma pop
 
 
-/* 80267D44-80267D54 0010+00 r=1 e=1 z=0  None .text      PreCheck__11cBgS_GndChkFv                                    */
+/* 80267D44-80267D54 0010+00 s=0 e=1 z=0  None .text      PreCheck__11cBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +130,7 @@ asm void cBgS_GndChk::PreCheck() {
 #pragma pop
 
 
-/* 80267D54-80267D5C 0008+00 r=1 e=0 z=0  None .text      @20@__dt__11cBgS_GndChkFv                                    */
+/* 80267D54-80267D5C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__11cBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

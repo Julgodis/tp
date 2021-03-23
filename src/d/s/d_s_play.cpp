@@ -483,37 +483,37 @@ extern "C" extern u8 struct_80451500[4];
 // 
 
 /* ############################################################################################## */
-/* 804510F8-80451100 0008+00 r=2 e=0 z=0  None .sbss      resPhase                                                     */
+/* 804510F8-80451100 0008+00 s=2 e=0 z=0  None .sbss      resPhase                                                     */
 static u8 resPhase[8];
 
-/* 80451100-80451108 0008+00 r=2 e=0 z=0  None .sbss      dylPhase                                                     */
+/* 80451100-80451108 0008+00 s=2 e=0 z=0  None .sbss      dylPhase                                                     */
 static u8 dylPhase[8];
 
-/* 80451108-8045110C 0004+00 r=1 e=0 z=0  None .sbss      dylPreLoadTime1                                              */
+/* 80451108-8045110C 0004+00 s=1 e=0 z=0  None .sbss      dylPreLoadTime1                                              */
 static u8 dylPreLoadTime1[4];
 
-/* 8045110C-80451110 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 8045110C-80451110 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_8045110C[4];
 
-/* 80451110-80451114 0004+00 r=1 e=0 z=0  None .sbss      resPreLoadTime0                                              */
+/* 80451110-80451114 0004+00 s=1 e=0 z=0  None .sbss      resPreLoadTime0                                              */
 static u8 resPreLoadTime0[4];
 
-/* 80451114-80451118 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80451114-80451118 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451114[4];
 
-/* 80451118-8045111C 0004+00 r=1 e=0 z=0  None .sbss      resPreLoadTime1                                              */
+/* 80451118-8045111C 0004+00 s=1 e=0 z=0  None .sbss      resPreLoadTime1                                              */
 static u8 resPreLoadTime1[4];
 
-/* 8045111C-80451120 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 8045111C-80451120 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_8045111C[4];
 
-/* 80451120-80451124 0004+00 r=1 e=0 z=0  None .sbss      g_preLoadHIO                                                 */
+/* 80451120-80451124 0004+00 s=1 e=0 z=0  None .sbss      g_preLoadHIO                                                 */
 static u8 g_preLoadHIO[4];
 
-/* 80451124-80451128 0004+00 r=48 e=7 z=38  None .sbss      None                                                         */
+/* 80451124-80451128 0004+00 s=3 e=7 z=0  None .sbss      None                                                         */
 u8 struct_80451124[4];
 
-/* 80259400-80259440 0040+00 r=1 e=0 z=0  None .text      calcPauseTimer__9dScnPly_cFv                                 */
+/* 80259400-80259440 0040+00 s=1 e=0 z=0  None .text      calcPauseTimer__9dScnPly_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -525,7 +525,7 @@ asm void dScnPly_c::calcPauseTimer() {
 
 
 /* ############################################################################################## */
-/* 803C3158-803C3188 002E+02 r=1 e=0 z=0  None .data      l_wipeType$4081                                              */
+/* 803C3158-803C3188 002E+02 s=1 e=0 z=0  None .data      l_wipeType$4081                                              */
 SECTION_DATA static u8 data_803C3158[46 + 2 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x02, 0x00, 0x02, 0x00, 0x01, 0x00, 0x03, 0x00, 0x01,
 	0x00, 0x04, 0x00, 0x04, 0x00, 0x05, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
@@ -534,14 +534,14 @@ SECTION_DATA static u8 data_803C3158[46 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 803C3188-803C3194 000A+02 r=1 e=0 z=0  None .data      camparamarc$4608                                             */
+/* 803C3188-803C3194 000A+02 s=1 e=0 z=0  None .data      camparamarc$4608                                             */
 SECTION_DATA static u8 data_803C3188[10 + 2 /* padding */] = {
 	0x43, 0x61, 0x6D, 0x50, 0x61, 0x72, 0x61, 0x6D, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803C3194-803C31C0 002C+00 r=1 e=0 z=0  None .data      l_method$4860                                                */
+/* 803C3194-803C31C0 002C+00 s=1 e=0 z=0  None .data      l_method$4860                                                */
 SECTION_DATA static void* data_803C3194[11] = {
 	/* 0    */ (void*)phase_00__FP9dScnPly_c,
 	/* 1    */ (void*)phase_1__FP9dScnPly_c,
@@ -556,7 +556,7 @@ SECTION_DATA static void* data_803C3194[11] = {
 	/* 10   */ (void*)phase_compleate__FPv,
 };
 
-/* 803C31C0-803C31D4 0014+00 r=2 e=0 z=0  None .data      l_dScnPly_Method                                             */
+/* 803C31C0-803C31D4 0014+00 s=2 e=0 z=0  None .data      l_dScnPly_Method                                             */
 SECTION_DATA static void* l_dScnPly_Method[5] = {
 	/* 0    */ (void*)dScnPly_Create__FP11scene_class,
 	/* 1    */ (void*)dScnPly_Delete__FP9dScnPly_c,
@@ -565,7 +565,7 @@ SECTION_DATA static void* l_dScnPly_Method[5] = {
 	/* 4    */ (void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 r=1 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -579,7 +579,7 @@ SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 r=1 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0x0001FFFD,
@@ -593,31 +593,31 @@ SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
 	/* 9    */ (void*)NULL,
 };
 
-/* 803C3224-803C3230 000C+00 r=3 e=0 z=0  None .data      __vt__22dScnPly_env_debugHIO_c                               */
+/* 803C3224-803C3230 000C+00 s=3 e=0 z=0  None .data      __vt__22dScnPly_env_debugHIO_c                               */
 SECTION_DATA static void* __vt__22dScnPly_env_debugHIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__22dScnPly_env_debugHIO_cFv,
 };
 
-/* 803C3230-803C323C 000C+00 r=3 e=0 z=0  None .data      __vt__22dScnPly_env_otherHIO_c                               */
+/* 803C3230-803C323C 000C+00 s=3 e=0 z=0  None .data      __vt__22dScnPly_env_otherHIO_c                               */
 SECTION_DATA static void* __vt__22dScnPly_env_otherHIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__22dScnPly_env_otherHIO_cFv,
 };
 
-/* 80454F18-80454F1C 0002+02 r=1 e=0 z=0  None .sdata2    T_JOINT_dylKeyTbl                                            */
+/* 80454F18-80454F1C 0002+02 s=1 e=0 z=0  None .sdata2    T_JOINT_dylKeyTbl                                            */
 SECTION_SDATA2 static u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */] = {
 	0x0106,
 	/* padding */
 	0x0000,
 };
 
-/* 80454F1C-80454F20 0004+00 r=1 e=0 z=0  None .sdata2    @4055                                                        */
+/* 80454F1C-80454F20 0004+00 s=1 e=0 z=0  None .sdata2    @4055                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4055 = 255.0f;
 
-/* 80259440-80259468 0028+00 r=1 e=0 z=0  None .text      __ct__22dScnPly_env_otherHIO_cFv                             */
+/* 80259440-80259468 0028+00 s=1 e=0 z=0  None .text      __ct__22dScnPly_env_otherHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -629,18 +629,18 @@ asm dScnPly_env_otherHIO_c::dScnPly_env_otherHIO_c() {
 
 
 /* ############################################################################################## */
-/* 80454F20-80454F24 0004+00 r=1 e=0 z=0  None .sdata2    @4066                                                        */
+/* 80454F20-80454F24 0004+00 s=1 e=0 z=0  None .sdata2    @4066                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4066 = -100.0f;
 
-/* 80454F24-80454F28 0004+00 r=1 e=0 z=0  None .sdata2    @4067                                                        */
+/* 80454F24-80454F28 0004+00 s=1 e=0 z=0  None .sdata2    @4067                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4067 = 100.0f;
 
-/* 80454F28-80454F2C 0004+00 r=2 e=0 z=0  None .sdata2    @4068                                                        */
+/* 80454F28-80454F2C 0004+00 s=2 e=0 z=0  None .sdata2    @4068                                                        */
 SECTION_SDATA2 static u8 d_s_d_s_play__lit_4068[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80259468-802594AC 0044+00 r=1 e=0 z=0  None .text      __ct__22dScnPly_env_debugHIO_cFv                             */
+/* 80259468-802594AC 0044+00 s=1 e=0 z=0  None .text      __ct__22dScnPly_env_debugHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -652,10 +652,10 @@ asm dScnPly_env_debugHIO_c::dScnPly_env_debugHIO_c() {
 
 
 /* ############################################################################################## */
-/* 80454F2C-80454F30 0004+00 r=1 e=0 z=0  None .sdata2    @4100                                                        */
+/* 80454F2C-80454F30 0004+00 s=1 e=0 z=0  None .sdata2    @4100                                                        */
 SECTION_SDATA2 static u32 d_s_d_s_play__lit_4100 = 0x2A1E46FF;
 
-/* 802594AC-802597B8 030C+00 r=1 e=0 z=0  None .text      dScnPly_Draw__FP9dScnPly_c                                   */
+/* 802594AC-802597B8 030C+00 s=1 e=0 z=0  None .text      dScnPly_Draw__FP9dScnPly_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -666,7 +666,7 @@ asm static void dScnPly_Draw(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 802597B8-8025987C 00C4+00 r=1 e=0 z=0  None .text      dScnPly_Execute__FP9dScnPly_c                                */
+/* 802597B8-8025987C 00C4+00 s=1 e=0 z=0  None .text      dScnPly_Execute__FP9dScnPly_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +677,7 @@ asm static void dScnPly_Execute(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025987C-802598AC 0030+00 r=1 e=0 z=0  None .text      dScnPly_IsDelete__F9dScnPly_c                                */
+/* 8025987C-802598AC 0030+00 s=1 e=0 z=0  None .text      dScnPly_IsDelete__F9dScnPly_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -689,13 +689,13 @@ asm static void dScnPly_IsDelete(dScnPly_c param_0) {
 
 
 /* ############################################################################################## */
-/* 80450760-80450764 0004+00 r=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
+/* 80450760-80450764 0004+00 s=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
 extern "C" void* T_JOINT_resName;
 
-/* 80454F18-80454F1C 0002+02 r=1 e=0 z=0  None .sdata2    T_JOINT_dylKeyTbl                                            */
+/* 80454F18-80454F1C 0002+02 s=1 e=0 z=0  None .sdata2    T_JOINT_dylKeyTbl                                            */
 extern "C" u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */];
 
-/* 8039A2C8-8039A2D8 0010+00 r=4 e=0 z=0  None .rodata    PreLoadInfoT                                                 */
+/* 8039A2C8-8039A2D8 0010+00 s=4 e=0 z=0  None .rodata    PreLoadInfoT                                                 */
 SECTION_RODATA static void* const PreLoadInfoT[4] = {
 	/* 0    */ (void*)(((char*)&d_s_d_s_play__stringBase0)+0x7),
 	/* 1    */ (void*)&T_JOINT_dylKeyTbl,
@@ -703,7 +703,7 @@ SECTION_RODATA static void* const PreLoadInfoT[4] = {
 	/* 3    */ (void*)0x01010000,
 };
 
-/* 8039A2D8-8039A388 00A9+07 r=5 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039A2D8-8039A388 00A9+07 s=5 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -729,10 +729,10 @@ SECTION_DEAD char const* const stringBase_8039A378 = "CamParam";
 SECTION_DEAD static char const* const pad_8039A381 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 80450760-80450764 0004+00 r=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
+/* 80450760-80450764 0004+00 s=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
 SECTION_SDATA static void* T_JOINT_resName = (void*)&d_s_d_s_play__stringBase0;
 
-/* 80450764-80450768 0004+00 r=4 e=0 z=0  None .sdata     None                                                         */
+/* 80450764-80450768 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_80450764[4] = {
 	/* 80450764 0001 data_80450764 None */
 	0xFF,
@@ -740,7 +740,7 @@ SECTION_SDATA static u8 struct_80450764[4] = {
 	0x01, 0x00, 0x00,
 };
 
-/* 802598AC-80259AC4 0218+00 r=1 e=0 z=0  None .text      dScnPly_Delete__FP9dScnPly_c                                 */
+/* 802598AC-80259AC4 0218+00 s=1 e=0 z=0  None .text      dScnPly_Delete__FP9dScnPly_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -751,7 +751,7 @@ asm static void dScnPly_Delete(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 80259AC4-80259BFC 0138+00 r=1 e=0 z=0  None .text      resetGame__9dScnPly_cFv                                      */
+/* 80259AC4-80259BFC 0138+00 s=1 e=0 z=0  None .text      resetGame__9dScnPly_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -762,7 +762,7 @@ asm void dScnPly_c::resetGame() {
 #pragma pop
 
 
-/* 80259BFC-80259C70 0074+00 r=1 e=0 z=0  None .text      offReset__9dScnPly_cFv                                       */
+/* 80259BFC-80259C70 0074+00 s=1 e=0 z=0  None .text      offReset__9dScnPly_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -773,7 +773,7 @@ asm void dScnPly_c::offReset() {
 #pragma pop
 
 
-/* 80259C70-80259CAC 003C+00 r=1 e=0 z=0  None .text      phase_00__FP9dScnPly_c                                       */
+/* 80259C70-80259CAC 003C+00 s=1 e=0 z=0  None .text      phase_00__FP9dScnPly_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -784,7 +784,7 @@ asm static void phase_00(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 80259CAC-80259D7C 00D0+00 r=1 e=0 z=0  None .text      phase_01__FP9dScnPly_c                                       */
+/* 80259CAC-80259D7C 00D0+00 s=1 e=0 z=0  None .text      phase_01__FP9dScnPly_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -795,7 +795,7 @@ asm static void phase_01(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 80259D7C-80259D84 0008+00 r=1 e=0 z=0  None .text      phase_0__FP9dScnPly_c                                        */
+/* 80259D7C-80259D84 0008+00 s=1 e=0 z=0  None .text      phase_0__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -806,7 +806,7 @@ asm static void phase_0(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 80259D84-8025A438 06B4+00 r=1 e=0 z=0  None .text      phase_1__FP9dScnPly_c                                        */
+/* 80259D84-8025A438 06B4+00 s=1 e=0 z=0  None .text      phase_1__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -817,7 +817,7 @@ asm static void phase_1(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025A438-8025A4F8 00C0+00 r=1 e=0 z=0  None .text      phase_1_0__FP9dScnPly_c                                      */
+/* 8025A438-8025A4F8 00C0+00 s=1 e=0 z=0  None .text      phase_1_0__FP9dScnPly_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -828,7 +828,7 @@ asm static void phase_1_0(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025A4F8-8025A5D4 00DC+00 r=1 e=0 z=0  None .text      phase_2__FP9dScnPly_c                                        */
+/* 8025A4F8-8025A5D4 00DC+00 s=1 e=0 z=0  None .text      phase_2__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -839,7 +839,7 @@ asm static void phase_2(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025A5D4-8025A654 0080+00 r=1 e=0 z=0  None .text      phase_3__FP9dScnPly_c                                        */
+/* 8025A5D4-8025A654 0080+00 s=1 e=0 z=0  None .text      phase_3__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -851,32 +851,32 @@ asm static void phase_3(dScnPly_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80430778-80430784 000C+00 r=1 e=0 z=0  None .bss       @4041                                                        */
+/* 80430778-80430784 000C+00 s=1 e=0 z=0  None .bss       @4041                                                        */
 static u8 d_s_d_s_play__lit_4041[12];
 
-/* 80430784-80430790 000C+00 r=0 e=0 z=0  None .bss       @4049                                                        */
+/* 80430784-80430790 000C+00 s=0 e=0 z=0  None .bss       @4049                                                        */
 u8 d_s_d_s_play__lit_4049[12];
 
-/* 80430790-8043079C 000C+00 r=0 e=0 z=0  None .bss       @4050                                                        */
+/* 80430790-8043079C 000C+00 s=0 e=0 z=0  None .bss       @4050                                                        */
 u8 d_s_d_s_play__lit_4050[12];
 
-/* 8043079C-804307E0 0044+00 r=4 e=3 z=0  None .bss       g_envHIO                                                     */
+/* 8043079C-804307E0 0044+00 s=1 e=3 z=0  None .bss       g_envHIO                                                     */
 u8 g_envHIO[68];
 
-/* 80454F30-80454F34 0004+00 r=1 e=0 z=0  None .sdata2    @4804                                                        */
+/* 80454F30-80454F34 0004+00 s=1 e=0 z=0  None .sdata2    @4804                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4804 = 608.0f;
 
-/* 80454F34-80454F38 0004+00 r=1 e=0 z=0  None .sdata2    @4805                                                        */
+/* 80454F34-80454F38 0004+00 s=1 e=0 z=0  None .sdata2    @4805                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4805 = 448.0f;
 
-/* 80454F38-80454F40 0004+04 r=1 e=0 z=0  None .sdata2    @4806                                                        */
+/* 80454F38-80454F40 0004+04 s=1 e=0 z=0  None .sdata2    @4806                                                        */
 SECTION_SDATA2 static f32 d_s_d_s_play__lit_4806[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8025A654-8025A9F4 03A0+00 r=1 e=0 z=0  None .text      phase_4__FP9dScnPly_c                                        */
+/* 8025A654-8025A9F4 03A0+00 s=1 e=0 z=0  None .text      phase_4__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,7 +887,7 @@ asm static void phase_4(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025A9F4-8025AAC0 00CC+00 r=1 e=0 z=0  None .text      phase_5__FP9dScnPly_c                                        */
+/* 8025A9F4-8025AAC0 00CC+00 s=1 e=0 z=0  None .text      phase_5__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -898,7 +898,7 @@ asm static void phase_5(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025AAC0-8025AB8C 00CC+00 r=1 e=0 z=0  None .text      phase_6__FP9dScnPly_c                                        */
+/* 8025AAC0-8025AB8C 00CC+00 s=1 e=0 z=0  None .text      phase_6__FP9dScnPly_c                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -909,7 +909,7 @@ asm static void phase_6(dScnPly_c* param_0) {
 #pragma pop
 
 
-/* 8025AB8C-8025AB94 0008+00 r=1 e=0 z=0  None .text      phase_compleate__FPv                                         */
+/* 8025AB8C-8025AB94 0008+00 s=1 e=0 z=0  None .text      phase_compleate__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -920,7 +920,7 @@ asm static void phase_compleate(void* param_0) {
 #pragma pop
 
 
-/* 8025AB94-8025ABC4 0030+00 r=1 e=0 z=0  None .text      dScnPly_Create__FP11scene_class                              */
+/* 8025AB94-8025ABC4 0030+00 s=1 e=0 z=0  None .text      dScnPly_Create__FP11scene_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -931,7 +931,7 @@ asm static void dScnPly_Create(scene_class* param_0) {
 #pragma pop
 
 
-/* 8025ABC4-8025AC0C 0048+00 r=1 e=0 z=0  None .text      __dt__22dScnPly_env_debugHIO_cFv                             */
+/* 8025ABC4-8025AC0C 0048+00 s=1 e=0 z=0  None .text      __dt__22dScnPly_env_debugHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -942,7 +942,7 @@ asm dScnPly_env_debugHIO_c::~dScnPly_env_debugHIO_c() {
 #pragma pop
 
 
-/* 8025AC0C-8025AC54 0048+00 r=1 e=0 z=0  None .text      __dt__22dScnPly_env_otherHIO_cFv                             */
+/* 8025AC0C-8025AC54 0048+00 s=1 e=0 z=0  None .text      __dt__22dScnPly_env_otherHIO_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -954,31 +954,31 @@ asm dScnPly_env_otherHIO_c::~dScnPly_env_otherHIO_c() {
 
 
 /* ############################################################################################## */
-/* 803C323C-803C3248 000C+00 r=2 e=0 z=0  None .data      __vt__17dScnPly_env_HIO_c                                    */
+/* 803C323C-803C3248 000C+00 s=2 e=0 z=0  None .data      __vt__17dScnPly_env_HIO_c                                    */
 SECTION_DATA static void* __vt__17dScnPly_env_HIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__17dScnPly_env_HIO_cFv,
 };
 
-/* 803C3248-803C3254 000C+00 r=2 e=0 z=0  None .data      __vt__17dScnPly_reg_HIO_c                                    */
+/* 803C3248-803C3254 000C+00 s=2 e=0 z=0  None .data      __vt__17dScnPly_reg_HIO_c                                    */
 SECTION_DATA static void* __vt__17dScnPly_reg_HIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__17dScnPly_reg_HIO_cFv,
 };
 
-/* 803C3254-803C3260 000C+00 r=2 e=0 z=0  None .data      __vt__21dScnPly_preLoad_HIO_c                                */
+/* 803C3254-803C3260 000C+00 s=2 e=0 z=0  None .data      __vt__21dScnPly_preLoad_HIO_c                                */
 SECTION_DATA static void* __vt__21dScnPly_preLoad_HIO_c[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__21dScnPly_preLoad_HIO_cFv,
 };
 
-/* 80451128-80451130 0004+04 r=1 e=0 z=0  None .sbss      g_regHIO                                                     */
+/* 80451128-80451130 0004+04 s=1 e=0 z=0  None .sbss      g_regHIO                                                     */
 static u8 g_regHIO[4 + 4 /* padding */];
 
-/* 8025AC54-8025AD04 00B0+00 r=1 e=1 z=0  None .text      __sinit_d_s_play_cpp                                         */
+/* 8025AC54-8025AD04 00B0+00 s=0 e=1 z=0  None .text      __sinit_d_s_play_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -989,7 +989,7 @@ extern "C" asm void __sinit_d_s_play_cpp() {
 #pragma pop
 
 
-/* 8025AD04-8025AD78 0074+00 r=2 e=0 z=0  None .text      __dt__17dScnPly_env_HIO_cFv                                  */
+/* 8025AD04-8025AD78 0074+00 s=2 e=0 z=0  None .text      __dt__17dScnPly_env_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1000,7 +1000,7 @@ asm dScnPly_env_HIO_c::~dScnPly_env_HIO_c() {
 #pragma pop
 
 
-/* 8025AD78-8025ADC0 0048+00 r=2 e=0 z=0  None .text      __dt__17dScnPly_reg_HIO_cFv                                  */
+/* 8025AD78-8025ADC0 0048+00 s=2 e=0 z=0  None .text      __dt__17dScnPly_reg_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1011,7 +1011,7 @@ asm dScnPly_reg_HIO_c::~dScnPly_reg_HIO_c() {
 #pragma pop
 
 
-/* 8025ADC0-8025AE1C 005C+00 r=2 e=0 z=0  None .text      __dt__21dScnPly_preLoad_HIO_cFv                              */
+/* 8025ADC0-8025AE1C 005C+00 s=2 e=0 z=0  None .text      __dt__21dScnPly_preLoad_HIO_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -22,7 +22,6 @@ struct daObjEff {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct daObj {
@@ -33,62 +32,34 @@ struct daObj {
 
 };
 
-struct _GXColor {
-};
-
-struct cXyz {
-};
-
-struct dPa_levelEcallBack {
-};
-
-struct dKy_tevstr_c {
-};
-
-struct csXyz {
-};
-
-struct dPa_control_c {
-	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
 // 
 // Forward References:
 // 
 
 
 extern "C" void _create__Q28daObjEff5Act_cFv(); // 1
-extern "C" static void func_8057CA94(); // 1
-extern "C" static void func_8057CAB4(); // 1
-extern "C" static void func_8057CABC(); // 1
-extern "C" static void func_8057CAC4(); // 1
-extern "C" static void func_8057CACC(); // 1
+extern "C" void func_8057CA94(); // 1
+extern "C" void func_8057CAB4(); // 1
+extern "C" void func_8057CABC(); // 1
+extern "C" void func_8057CAC4(); // 1
+extern "C" void func_8057CACC(); // 1
 extern "C" void func_8057CAD4(); // 1
-extern "C" extern void* g_profile_Obj_Eff[12];
+extern "C" extern u8 const lit_3648[4];
+extern "C" extern u8 data_8057CAFC[32];
+extern "C" extern u8 g_profile_Obj_Eff[48];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* ############################################################################################## */
-/* 8057CAF8-8057CAFC 0004+00 r=1 e=0 z=0  None .rodata    @3648                                                        */
-SECTION_RODATA static u8 const lit_3648[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8057C9D8-8057CA94 00BC+00 r=1 e=0 z=0  None .text      _create__Q28daObjEff5Act_cFv                                 */
+/* 8057C9D8-8057CA94 00BC+00 s=1 e=0 z=0  None .text      _create__Q28daObjEff5Act_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,62 +70,62 @@ asm void daObjEff::Act_c::_create() {
 #pragma pop
 
 
-/* 8057CA94-8057CAB4 0020+00 r=1 e=0 z=0  None .text      Mthd_Create__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
+/* 8057CA94-8057CAB4 0020+00 s=0 e=0 z=0  None .text      Mthd_Create__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8057CA94() {
+extern "C" asm void func_8057CA94() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CA94.s"
 }
 #pragma pop
 
 
-/* 8057CAB4-8057CABC 0008+00 r=1 e=0 z=0  None .text      Mthd_Delete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
+/* 8057CAB4-8057CABC 0008+00 s=0 e=0 z=0  None .text      Mthd_Delete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8057CAB4() {
+extern "C" asm void func_8057CAB4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAB4.s"
 }
 #pragma pop
 
 
-/* 8057CABC-8057CAC4 0008+00 r=1 e=0 z=0  None .text      Mthd_Execute__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv      */
+/* 8057CABC-8057CAC4 0008+00 s=0 e=0 z=0  None .text      Mthd_Execute__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8057CABC() {
+extern "C" asm void func_8057CABC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CABC.s"
 }
 #pragma pop
 
 
-/* 8057CAC4-8057CACC 0008+00 r=1 e=0 z=0  None .text      Mthd_Draw__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv         */
+/* 8057CAC4-8057CACC 0008+00 s=0 e=0 z=0  None .text      Mthd_Draw__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8057CAC4() {
+extern "C" asm void func_8057CAC4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAC4.s"
 }
 #pragma pop
 
 
-/* 8057CACC-8057CAD4 0008+00 r=1 e=0 z=0  None .text      Mthd_IsDelete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv     */
+/* 8057CACC-8057CAD4 0008+00 s=0 e=0 z=0  None .text      Mthd_IsDelete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8057CACC() {
+extern "C" asm void func_8057CACC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CACC.s"
 }
 #pragma pop
 
 
-/* 8057CAD4-8057CAF0 001C+00 r=1 e=0 z=0  None .text      PrmAbstract<Q38daObjEff5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ38daObjEff5Act_c5Prm_eQ38daObjEff5Act_c5Prm_e */
+/* 8057CAD4-8057CAF0 001C+00 s=1 e=0 z=0  None .text      PrmAbstract<Q38daObjEff5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ38daObjEff5Act_c5Prm_eQ38daObjEff5Act_c5Prm_e */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,31 +137,21 @@ asm void daObj::PrmAbstract__template0(fopAc_ac_c const* param_0, daObjEff::Act_
 
 
 /* ############################################################################################## */
-/* 8057CAFC-8057CB1C 0020+00 r=1 e=0 z=0  None .data      Mthd_Table__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@           */
-SECTION_DATA static void* data_8057CAFC[8] = {
-	/* 0    */ (void*)func_8057CA94,
-	/* 1    */ (void*)func_8057CAB4,
-	/* 2    */ (void*)func_8057CABC,
-	/* 3    */ (void*)func_8057CACC,
-	/* 4    */ (void*)func_8057CAC4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8057CAF8-8057CAFC 0004+00 s=0 e=0 z=0  None .rodata    @3648                                                        */
+SECTION_RODATA u8 const lit_3648[4] = {
+	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8057CB1C-8057CB4C 0030+00 r=1 e=0 z=1  None .data      g_profile_Obj_Eff                                            */
-SECTION_DATA void* g_profile_Obj_Eff[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03010000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000568,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x010B0000,
-	/* 9    */ (void*)&data_8057CAFC,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)NULL,
+/* 8057CAFC-8057CB1C 0020+00 s=0 e=0 z=0  None .data      Mthd_Table__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@           */
+SECTION_DATA u8 data_8057CAFC[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8057CB1C-8057CB4C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Eff                                            */
+SECTION_DATA u8 g_profile_Obj_Eff[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x09, 0xFF, 0xFD, 0x03, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x68, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x01, 0x0B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

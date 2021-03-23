@@ -16,7 +16,7 @@ lbl_80476B04:
 /* 80476B3C 00000038  38 C0 00 01 */	li r6, 1
 /* 80476B40 0000003C  4B FF FE 01 */	bl obj_break__12daObjCarry_cFbbb
 /* 80476B44 00000040  7F C3 F3 78 */	mr r3, r30
-/* 80476B48 00000044  4B FF 84 91 */	bl fopAcM_delete__FP10fopAc_ac_c
+/* 80476B48 00000044  4B FF 84 91 */	bl _unresolved
 lbl_80476B4C:
 /* 80476B4C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80476B50 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C6B134[2];
+extern u8 data_80C6B134[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv5FloorBoard_cpp(); // 1
 
 // 
 // Declarations:

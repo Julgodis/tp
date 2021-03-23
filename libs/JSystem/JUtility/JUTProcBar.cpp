@@ -102,7 +102,7 @@ extern "C" extern u8 sManager__8JUTVideo[4];
 // Declarations:
 // 
 
-/* 802E5888-802E599C 0114+00 r=1 e=0 z=0  None .text      __ct__10JUTProcBarFv                                         */
+/* 802E5888-802E599C 0114+00 s=1 e=0 z=0  None .text      __ct__10JUTProcBarFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,10 +114,10 @@ asm JUTProcBar::JUTProcBar() {
 
 
 /* ############################################################################################## */
-/* 80451558-8045155C 0004+00 r=10 e=6 z=0  None .sbss      sManager__10JUTProcBar                                       */
+/* 80451558-8045155C 0004+00 s=4 e=6 z=0  None .sbss      sManager__10JUTProcBar                                       */
 u8 sManager__10JUTProcBar[4];
 
-/* 802E599C-802E59E0 0044+00 r=1 e=0 z=0  None .text      __dt__10JUTProcBarFv                                         */
+/* 802E599C-802E59E0 0044+00 s=1 e=0 z=0  None .text      __dt__10JUTProcBarFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +128,7 @@ asm JUTProcBar::~JUTProcBar() {
 #pragma pop
 
 
-/* 802E59E0-802E5A28 0048+00 r=1 e=1 z=0  None .text      create__10JUTProcBarFv                                       */
+/* 802E59E0-802E5A28 0048+00 s=0 e=1 z=0  None .text      create__10JUTProcBarFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +139,7 @@ asm void JUTProcBar::create() {
 #pragma pop
 
 
-/* 802E5A28-802E5A60 0038+00 r=1 e=1 z=0  None .text      destroy__10JUTProcBarFv                                      */
+/* 802E5A28-802E5A60 0038+00 s=0 e=1 z=0  None .text      destroy__10JUTProcBarFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,19 +151,19 @@ asm void JUTProcBar::destroy() {
 
 
 /* ############################################################################################## */
-/* 80450900-80450904 0004+00 r=2 e=0 z=0  None .sdata     oneFrameRate                                                 */
+/* 80450900-80450904 0004+00 s=2 e=0 z=0  None .sdata     oneFrameRate                                                 */
 SECTION_SDATA static f32 oneFrameRate = 8.0f;
 
-/* 80450904-80450908 0004+00 r=2 e=0 z=0  None .sdata     oneFrameRateUser                                             */
+/* 80450904-80450908 0004+00 s=2 e=0 z=0  None .sdata     oneFrameRateUser                                             */
 SECTION_SDATA static f32 oneFrameRateUser = 10.0f;
 
-/* 804560D8-804560DC 0004+00 r=1 e=0 z=0  None .sdata2    @2258                                                        */
+/* 804560D8-804560DC 0004+00 s=1 e=0 z=0  None .sdata2    @2258                                                        */
 SECTION_SDATA2 static f32 JUTProcBar__lit_2258 = 8.0f;
 
-/* 804560DC-804560E0 0004+00 r=2 e=0 z=0  None .sdata2    @2259                                                        */
+/* 804560DC-804560E0 0004+00 s=2 e=0 z=0  None .sdata2    @2259                                                        */
 SECTION_SDATA2 static f32 JUTProcBar__lit_2259 = 10.0f;
 
-/* 802E5A60-802E5B30 00D0+00 r=1 e=1 z=0  None .text      clear__10JUTProcBarFv                                        */
+/* 802E5A60-802E5B30 00D0+00 s=0 e=1 z=0  None .text      clear__10JUTProcBarFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,17 +175,17 @@ asm void JUTProcBar::clear() {
 
 
 /* ############################################################################################## */
-/* 804560E0-804560E8 0004+04 r=1 e=0 z=0  None .sdata2    @2279                                                        */
+/* 804560E0-804560E8 0004+04 s=1 e=0 z=0  None .sdata2    @2279                                                        */
 SECTION_SDATA2 static f32 lit_2279[1 + 1 /* padding */] = {
 	6.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804560E8-804560F0 0008+00 r=7 e=0 z=0  None .sdata2    @2281                                                        */
+/* 804560E8-804560F0 0008+00 s=7 e=0 z=0  None .sdata2    @2281                                                        */
 SECTION_SDATA2 static f64 lit_2281 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E5B30-802E5CC4 0194+00 r=1 e=0 z=0  None .text      bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor */
+/* 802E5B30-802E5CC4 0194+00 s=1 e=0 z=0  None .text      bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,28 +197,28 @@ asm void JUTProcBar::bar_subroutine(int param_0, int param_1, int param_2, int p
 
 
 /* ############################################################################################## */
-/* 804560F0-804560F4 0004+00 r=2 e=0 z=0  None .sdata2    @2308                                                        */
+/* 804560F0-804560F4 0004+00 s=2 e=0 z=0  None .sdata2    @2308                                                        */
 SECTION_SDATA2 static f32 lit_2308 = 20.0f;
 
-/* 804560F4-804560F8 0004+00 r=1 e=0 z=0  None .sdata2    @2309                                                        */
+/* 804560F4-804560F8 0004+00 s=1 e=0 z=0  None .sdata2    @2309                                                        */
 SECTION_SDATA2 static f32 lit_2309 = 16666.0f;
 
-/* 804560F8-804560FC 0004+00 r=1 e=0 z=0  None .sdata2    @2310                                                        */
+/* 804560F8-804560FC 0004+00 s=1 e=0 z=0  None .sdata2    @2310                                                        */
 SECTION_SDATA2 static f32 lit_2310 = 30.0f;
 
-/* 804560FC-80456100 0004+00 r=1 e=0 z=0  None .sdata2    @2311                                                        */
+/* 804560FC-80456100 0004+00 s=1 e=0 z=0  None .sdata2    @2311                                                        */
 SECTION_SDATA2 static f32 JUTProcBar__lit_2311 = 1.0f / 10.0f;
 
-/* 80456100-80456104 0004+00 r=1 e=0 z=0  None .sdata2    @2312                                                        */
+/* 80456100-80456104 0004+00 s=1 e=0 z=0  None .sdata2    @2312                                                        */
 SECTION_SDATA2 static f32 JUTProcBar__lit_2312 = 1.0f / 5.0f;
 
-/* 80456104-80456108 0004+00 r=1 e=0 z=0  None .sdata2    @2313                                                        */
+/* 80456104-80456108 0004+00 s=1 e=0 z=0  None .sdata2    @2313                                                        */
 SECTION_SDATA2 static f32 lit_2313 = 60.0f;
 
-/* 80456108-80456110 0008+00 r=3 e=0 z=0  None .sdata2    @2315                                                        */
+/* 80456108-80456110 0008+00 s=3 e=0 z=0  None .sdata2    @2315                                                        */
 SECTION_SDATA2 static f64 lit_2315 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802E5CC4-802E5E08 0144+00 r=1 e=0 z=0  None .text      adjustMeterLength__10JUTProcBarFUlPfffPi                     */
+/* 802E5CC4-802E5E08 0144+00 s=1 e=0 z=0  None .text      adjustMeterLength__10JUTProcBarFUlPfffPi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +229,7 @@ asm void JUTProcBar::adjustMeterLength(u32 param_0, f32* param_1, f32 param_2, f
 #pragma pop
 
 
-/* 802E5E08-802E5E3C 0034+00 r=1 e=1 z=0  None .text      draw__10JUTProcBarFv                                         */
+/* 802E5E08-802E5E3C 0034+00 s=0 e=1 z=0  None .text      draw__10JUTProcBarFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,25 +241,25 @@ asm void JUTProcBar::draw() {
 
 
 /* ############################################################################################## */
-/* 8045155C-80451560 0004+00 r=1 e=0 z=0  None .sbss      cnt$2330                                                     */
+/* 8045155C-80451560 0004+00 s=1 e=0 z=0  None .sbss      cnt$2330                                                     */
 static u8 data_8045155C[4];
 
-/* 80451560-80451564 0004+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80451560-80451564 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451560[4];
 
-/* 80451564-80451568 0004+00 r=1 e=0 z=0  None .sbss      cntUser$2379                                                 */
+/* 80451564-80451568 0004+00 s=1 e=0 z=0  None .sbss      cntUser$2379                                                 */
 static u8 data_80451564[4];
 
-/* 80451568-80451570 0008+00 r=1 e=0 z=0  None .sbss      None                                                         */
+/* 80451568-80451570 0008+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80451568[8];
 
-/* 80456110-80456114 0004+00 r=1 e=0 z=0  None .sdata2    @2580                                                        */
+/* 80456110-80456114 0004+00 s=1 e=0 z=0  None .sdata2    @2580                                                        */
 SECTION_SDATA2 static f32 lit_2580 = 1.0f;
 
-/* 80456114-80456118 0004+00 r=1 e=0 z=0  None .sdata2    @2581                                                        */
+/* 80456114-80456118 0004+00 s=1 e=0 z=0  None .sdata2    @2581                                                        */
 SECTION_SDATA2 static f32 lit_2581 = 3.0f;
 
-/* 802E5E3C-802E6D3C 0F00+00 r=1 e=0 z=0  None .text      drawProcessBar__10JUTProcBarFv                               */
+/* 802E5E3C-802E6D3C 0F00+00 s=1 e=0 z=0  None .text      drawProcessBar__10JUTProcBarFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +270,7 @@ asm void JUTProcBar::drawProcessBar() {
 #pragma pop
 
 
-/* 802E6D3C-802E6DA4 0068+00 r=2 e=0 z=0  None .text      addrToXPos__FPvi                                             */
+/* 802E6D3C-802E6DA4 0068+00 s=2 e=0 z=0  None .text      addrToXPos__FPvi                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +281,7 @@ asm static void addrToXPos(void* param_0, int param_1) {
 #pragma pop
 
 
-/* 802E6DA4-802E6E0C 0068+00 r=2 e=0 z=0  None .text      byteToXLen__Fii                                              */
+/* 802E6DA4-802E6E0C 0068+00 s=2 e=0 z=0  None .text      byteToXLen__Fii                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ asm static void byteToXLen(int param_0, int param_1) {
 #pragma pop
 
 
-/* 802E6E0C-802E6FA0 0194+00 r=1 e=0 z=0  None .text      heapBar__FP7JKRHeapiiiii                                     */
+/* 802E6E0C-802E6FA0 0194+00 s=1 e=0 z=0  None .text      heapBar__FP7JKRHeapiiiii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +303,7 @@ asm static void heapBar(JKRHeap* param_0, int param_1, int param_2, int param_3,
 #pragma pop
 
 
-/* 802E6FA0-802E7340 03A0+00 r=1 e=0 z=0  None .text      drawHeapBar__10JUTProcBarFv                                  */
+/* 802E6FA0-802E7340 03A0+00 s=1 e=0 z=0  None .text      drawHeapBar__10JUTProcBarFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,7 +314,7 @@ asm void JUTProcBar::drawHeapBar() {
 #pragma pop
 
 
-/* 802E7340-802E7354 0014+00 r=1 e=0 z=0  None .text      __ct__Q210JUTProcBar5CTimeFv                                 */
+/* 802E7340-802E7354 0014+00 s=1 e=0 z=0  None .text      __ct__Q210JUTProcBar5CTimeFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

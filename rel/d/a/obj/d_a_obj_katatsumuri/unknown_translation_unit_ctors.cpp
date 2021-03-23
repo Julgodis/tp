@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80C3C660[2];
+extern u8 data_80C3C660[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_katatsumuri_cpp(); // 1
 
 // 
 // Declarations:

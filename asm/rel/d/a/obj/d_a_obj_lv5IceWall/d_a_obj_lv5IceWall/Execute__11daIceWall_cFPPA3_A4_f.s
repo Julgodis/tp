@@ -16,7 +16,7 @@ lbl_80C6BB60:
 /* 80C6BB98 00000038  7F C3 F3 78 */	mr r3, r30
 /* 80C6BB9C 0000003C  4B FF F9 81 */	bl setBaseMtx__11daIceWall_cFv
 /* 80C6BBA0 00000040  38 7E 05 BC */	addi r3, r30, 0x5bc
-/* 80C6BBA4 00000044  4B FF F7 F5 */	bl Move__10dCcD_GSttsFv
+/* 80C6BBA4 00000044  4B FF F7 F5 */	bl _unresolved
 /* 80C6BBA8 00000048  38 60 00 01 */	li r3, 1
 /* 80C6BBAC 0000004C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C6BBB0 00000050  83 C1 00 08 */	lwz r30, 8(r1)

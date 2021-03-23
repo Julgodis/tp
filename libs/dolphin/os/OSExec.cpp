@@ -61,7 +61,7 @@ extern "C" extern u8 __OSIsGcam[4];
 // Declarations:
 // 
 
-/* 8033CA80-8033CC08 0188+00 r=1 e=0 z=0  None .text      PackArgs                                                     */
+/* 8033CA80-8033CC08 0188+00 s=1 e=0 z=0  None .text      PackArgs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ extern "C" asm static void PackArgs() {
 #pragma pop
 
 
-/* 8033CC08-8033CC44 003C+00 r=1 e=0 z=0  None .text      Run                                                          */
+/* 8033CC08-8033CC44 003C+00 s=1 e=0 z=0  None .text      Run                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ extern "C" asm static void Run() {
 #pragma pop
 
 
-/* 8033CC44-8033CCB0 006C+00 r=1 e=0 z=0  None .text      ReadDisc                                                     */
+/* 8033CC44-8033CCB0 006C+00 s=1 e=0 z=0  None .text      ReadDisc                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,10 +95,10 @@ extern "C" asm static void ReadDisc() {
 
 
 /* ############################################################################################## */
-/* 80451658-8045165C 0004+00 r=2 e=0 z=0  None .sbss      Prepared                                                     */
+/* 80451658-8045165C 0004+00 s=2 e=0 z=0  None .sbss      Prepared                                                     */
 static u8 Prepared[4];
 
-/* 8033CCB0-8033CCBC 000C+00 r=1 e=0 z=0  None .text      Callback                                                     */
+/* 8033CCB0-8033CCBC 000C+00 s=1 e=0 z=0  None .text      Callback                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ extern "C" asm static void OSExec__Callback() {
 #pragma pop
 
 
-/* 8033CCBC-8033CCFC 0040+00 r=1 e=1 z=0  None .text      __OSGetExecParams                                            */
+/* 8033CCBC-8033CCFC 0040+00 s=0 e=1 z=0  None .text      __OSGetExecParams                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,10 +121,10 @@ extern "C" asm void __OSGetExecParams() {
 
 
 /* ############################################################################################## */
-/* 8045165C-80451660 0004+00 r=2 e=0 z=0  None .sbss      apploaderPosition$69                                         */
+/* 8045165C-80451660 0004+00 s=2 e=0 z=0  None .sbss      apploaderPosition$69                                         */
 static u8 data_8045165C[4];
 
-/* 8033CCFC-8033CDC0 00C4+00 r=1 e=0 z=0  None .text      GetApploaderPosition                                         */
+/* 8033CCFC-8033CDC0 00C4+00 s=1 e=0 z=0  None .text      GetApploaderPosition                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,14 +136,14 @@ extern "C" asm static void GetApploaderPosition() {
 
 
 /* ############################################################################################## */
-/* 803CFC38-803CFC48 000B+05 r=1 e=0 z=0  None .data      @115                                                         */
+/* 803CFC38-803CFC48 000B+05 s=1 e=0 z=0  None .data      @115                                                         */
 SECTION_DATA static u8 OSExec__lit_115[11 + 5 /* padding */] = {
 	0x32, 0x30, 0x30, 0x34, 0x2F, 0x30, 0x32, 0x2F, 0x30, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033CDC0-8033D244 0484+00 r=1 e=0 z=0  None .text      __OSBootDolSimple                                            */
+/* 8033CDC0-8033D244 0484+00 s=1 e=0 z=0  None .text      __OSBootDolSimple                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,14 +155,14 @@ extern "C" asm static void __OSBootDolSimple() {
 
 
 /* ############################################################################################## */
-/* 804509A8-804509B0 0003+05 r=1 e=0 z=0  None .sdata     @213                                                         */
+/* 804509A8-804509B0 0003+05 s=1 e=0 z=0  None .sdata     @213                                                         */
 SECTION_SDATA static u8 OSExec__lit_213[3 + 5 /* padding */] = {
 	0x25, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033D244-8033D3E0 019C+00 r=1 e=1 z=0  None .text      __OSBootDol                                                  */
+/* 8033D244-8033D3E0 019C+00 s=0 e=1 z=0  None .text      __OSBootDol                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

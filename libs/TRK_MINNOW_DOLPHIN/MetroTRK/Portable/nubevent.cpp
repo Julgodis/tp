@@ -33,7 +33,7 @@ extern "C" void TRKInitializeMutex(); // 1
 // Declarations:
 // 
 
-/* 8036CC18-8036CC3C 0024+00 r=1 e=1 z=0  None .text      TRKDestructEvent                                             */
+/* 8036CC18-8036CC3C 0024+00 s=0 e=1 z=0  None .text      TRKDestructEvent                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +44,7 @@ extern "C" asm void TRKDestructEvent() {
 #pragma pop
 
 
-/* 8036CC3C-8036CC54 0018+00 r=5 e=5 z=0  None .text      TRKConstructEvent                                            */
+/* 8036CC3C-8036CC54 0018+00 s=0 e=5 z=0  None .text      TRKConstructEvent                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,10 +56,10 @@ extern "C" asm void TRKConstructEvent() {
 
 
 /* ############################################################################################## */
-/* 8044D890-8044D8B8 0028+00 r=3 e=0 z=0  None .bss       gTRKEventQueue                                               */
+/* 8044D890-8044D8B8 0028+00 s=3 e=0 z=0  None .bss       gTRKEventQueue                                               */
 static u8 gTRKEventQueue[40];
 
-/* 8036CC54-8036CD34 00E0+00 r=5 e=5 z=0  None .text      TRKPostEvent                                                 */
+/* 8036CC54-8036CD34 00E0+00 s=0 e=5 z=0  None .text      TRKPostEvent                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void TRKPostEvent() {
 #pragma pop
 
 
-/* 8036CD34-8036CDE8 00B4+00 r=1 e=1 z=0  None .text      TRKGetNextEvent                                              */
+/* 8036CD34-8036CDE8 00B4+00 s=0 e=1 z=0  None .text      TRKGetNextEvent                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ extern "C" asm void TRKGetNextEvent() {
 #pragma pop
 
 
-/* 8036CDE8-8036CE40 0058+00 r=1 e=1 z=0  None .text      TRKInitializeEventQueue                                      */
+/* 8036CDE8-8036CE40 0058+00 s=0 e=1 z=0  None .text      TRKInitializeEventQueue                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

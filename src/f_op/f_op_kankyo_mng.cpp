@@ -17,16 +17,16 @@ struct cXyz {
 struct layer_class {
 };
 
-struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct _GXColor {
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -87,14 +87,14 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 80451C68-80451C70 0004+04 r=2 e=0 z=0  None .sdata2    @3713                                                        */
+/* 80451C68-80451C70 0004+04 s=2 e=0 z=0  None .sdata2    @3713                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_kankyo_mng__lit_3713[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8001F660-8001F6B8 0058+00 r=2 e=0 z=0  None .text      fopKyM_CreateAppend__Fv                                      */
+/* 8001F660-8001F6B8 0058+00 s=2 e=0 z=0  None .text      fopKyM_CreateAppend__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm static void fopKyM_CreateAppend() {
 #pragma pop
 
 
-/* 8001F6B8-8001F748 0090+00 r=2 e=0 z=0  None .text      createAppend__FiP4cXyzP4cXyz                                 */
+/* 8001F6B8-8001F748 0090+00 s=2 e=0 z=0  None .text      createAppend__FiP4cXyzP4cXyz                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm static void createAppend(int param_0, cXyz* param_1, cXyz* param_2) {
 #pragma pop
 
 
-/* 8001F748-8001F768 0020+00 r=4 e=3 z=1  None .text      fopKyM_Delete__FPv                                           */
+/* 8001F748-8001F768 0020+00 s=0 e=3 z=0  None .text      fopKyM_Delete__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm void fopKyM_Delete(void* param_0) {
 #pragma pop
 
 
-/* 8001F768-8001F7B8 0050+00 r=2 e=0 z=0  None .text      fopKyM_Create__FsPFPv_iPv                                    */
+/* 8001F768-8001F7B8 0050+00 s=2 e=0 z=0  None .text      fopKyM_Create__FsPFPv_iPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm static void fopKyM_Create(s16 param_0, int (*)(void*), void* param_2) {
 #pragma pop
 
 
-/* 8001F7B8-8001F818 0060+00 r=4 e=3 z=1  None .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         */
+/* 8001F7B8-8001F818 0060+00 s=0 e=3 z=0  None .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm void fopKyM_create(s16 param_0, int param_1, cXyz* param_2, cXyz* param_3, i
 #pragma pop
 
 
-/* 8001F818-8001F87C 0064+00 r=1 e=1 z=0  None .text      fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i                     */
+/* 8001F818-8001F87C 0064+00 s=0 e=1 z=0  None .text      fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void fopKyM_fastCreate(s16 param_0, int param_1, cXyz* param_2, cXyz* param_
 #pragma pop
 
 
-/* 8001F87C-8001F90C 0090+00 r=43 e=6 z=37  None .text      fopKyM_createWpillar__FPC4cXyzfi                             */
+/* 8001F87C-8001F90C 0090+00 s=0 e=6 z=0  None .text      fopKyM_createWpillar__FPC4cXyzfi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,14 +172,14 @@ asm void fopKyM_createWpillar(cXyz const* param_0, f32 param_1, int param_2) {
 
 
 /* ############################################################################################## */
-/* 804505C0-804505C8 0004+04 r=1 e=0 z=0  None .sdata     m_name$3788                                                  */
+/* 804505C0-804505C8 0004+04 s=1 e=0 z=0  None .sdata     m_name$3788                                                  */
 SECTION_SDATA static u8 data_804505C0[4 + 4 /* padding */] = {
 	0x87, 0x57, 0x87, 0x58,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001F90C-8001F9B4 00A8+00 r=3 e=0 z=3  None .text      fopKyM_createMpillar__FPC4cXyzf                              */
+/* 8001F90C-8001F9B4 00A8+00 s=0 e=0 z=0  None .text      fopKyM_createMpillar__FPC4cXyzf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

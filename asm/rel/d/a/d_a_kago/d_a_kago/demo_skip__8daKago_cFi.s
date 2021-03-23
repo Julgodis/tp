@@ -3,17 +3,17 @@ lbl_8084A6E4:
 /* 8084A6E8 00000004  7C 08 02 A6 */	mflr r0
 /* 8084A6EC 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 8084A6F0 0000000C  39 61 00 50 */	addi r11, r1, 0x50
-/* 8084A6F4 00000010  4B FF EE 25 */	bl _savegpr_28
+/* 8084A6F4 00000010  4B FF EE 25 */	bl _unresolved
 /* 8084A6F8 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8084A6FC 00000018  7C 9C 23 78 */	mr r28, r4
-/* 8084A700 0000001C  3C 60 00 00 */	lis r3, lit_3929@ha /* 80854B04 */
-/* 8084A704 00000020  3B C3 00 00 */	addi r30, r3, lit_3929@l /* 80854B04 */
-/* 8084A708 00000024  4B FF EE 11 */	bl dCam_getBody__Fv
+/* 8084A700 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A704 00000020  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 8084A708 00000024  4B FF EE 11 */	bl _unresolved
 /* 8084A70C 00000028  7C 7D 1B 78 */	mr r29, r3
 /* 8084A710 0000002C  28 1C 00 0A */	cmplwi r28, 0xa
 /* 8084A714 00000030  41 81 03 38 */	bgt lbl_8084AA4C
-/* 8084A718 00000034  3C 60 00 00 */	lis r3, lit_4496@ha /* 80854DC8 */
-/* 8084A71C 00000038  38 63 00 00 */	addi r3, r3, lit_4496@l /* 80854DC8 */
+/* 8084A718 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A71C 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A720 0000003C  57 80 10 3A */	slwi r0, r28, 2
 /* 8084A724 00000040  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8084A728 00000044  7C 09 03 A6 */	mtctr r0
@@ -30,7 +30,7 @@ lbl_8084A744:
 /* 8084A74C 00000008  48 00 03 00 */	b lbl_8084AA4C
 lbl_8084A750:
 /* 8084A750 00000000  38 7F 0B 58 */	addi r3, r31, 0xb58
-/* 8084A754 00000004  4B FF ED C5 */	bl remove__10dMsgFlow_cFv
+/* 8084A754 00000004  4B FF ED C5 */	bl _unresolved
 lbl_8084A758:
 /* 8084A758 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8084A75C 00000004  48 00 03 E5 */	bl setMidnaRideOn__8daKago_cFv
@@ -39,13 +39,13 @@ lbl_8084A758:
 /* 8084A768 00000010  38 00 00 00 */	li r0, 0
 /* 8084A76C 00000014  B0 1F 07 1A */	sth r0, 0x71a(r31)
 /* 8084A770 00000018  B0 1F 07 18 */	sth r0, 0x718(r31)
-/* 8084A774 0000001C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8084A778 00000020  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8084A774 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A778 00000020  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A77C 00000024  38 63 07 F0 */	addi r3, r3, 0x7f0
-/* 8084A780 00000028  3C 80 00 00 */	lis r4, saveBitLabels__16dSv_event_flag_c@ha /* 803A7288 */
-/* 8084A784 0000002C  38 84 00 00 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l /* 803A7288 */
+/* 8084A780 00000028  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 8084A784 0000002C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 8084A788 00000030  A0 84 00 A8 */	lhz r4, 0xa8(r4)
-/* 8084A78C 00000034  4B FF ED 8D */	bl onEventBit__11dSv_event_cFUs
+/* 8084A78C 00000034  4B FF ED 8D */	bl _unresolved
 /* 8084A790 00000038  38 00 00 07 */	li r0, 7
 /* 8084A794 0000003C  90 1F 07 48 */	stw r0, 0x748(r31)
 /* 8084A798 00000040  38 00 00 00 */	li r0, 0
@@ -97,8 +97,8 @@ lbl_8084A800:
 /* 8084A83C 0000003C  D0 1F 06 A8 */	stfs f0, 0x6a8(r31)
 /* 8084A840 00000040  C0 1E 00 9C */	lfs f0, 0x9c(r30)
 /* 8084A844 00000044  D0 1F 06 AC */	stfs f0, 0x6ac(r31)
-/* 8084A848 00000048  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8084A84C 0000004C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8084A848 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A84C 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A850 00000050  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8084A854 00000054  38 9F 06 A4 */	addi r4, r31, 0x6a4
 /* 8084A858 00000058  38 A0 00 00 */	li r5, 0
@@ -133,24 +133,24 @@ lbl_8084A800:
 /* 8084A8CC 000000CC  38 A1 00 20 */	addi r5, r1, 0x20
 /* 8084A8D0 000000D0  C0 3E 00 14 */	lfs f1, 0x14(r30)
 /* 8084A8D4 000000D4  38 C0 00 00 */	li r6, 0
-/* 8084A8D8 000000D8  4B FF EC 41 */	bl Set__9dCamera_cF4cXyz4cXyzfs
+/* 8084A8D8 000000D8  4B FF EC 41 */	bl _unresolved
 /* 8084A8DC 000000DC  7F A3 EB 78 */	mr r3, r29
-/* 8084A8E0 000000E0  4B FF EC 39 */	bl Reset__9dCamera_cFv
+/* 8084A8E0 000000E0  4B FF EC 39 */	bl _unresolved
 /* 8084A8E4 000000E4  7F A3 EB 78 */	mr r3, r29
-/* 8084A8E8 000000E8  4B FF EC 31 */	bl Start__9dCamera_cFv
+/* 8084A8E8 000000E8  4B FF EC 31 */	bl _unresolved
 /* 8084A8EC 000000EC  7F A3 EB 78 */	mr r3, r29
 /* 8084A8F0 000000F0  38 80 00 00 */	li r4, 0
-/* 8084A8F4 000000F4  4B FF EC 25 */	bl SetTrimSize__9dCamera_cFl
-/* 8084A8F8 000000F8  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8084A8FC 000000FC  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8084A8F4 000000F4  4B FF EC 25 */	bl _unresolved
+/* 8084A8F8 000000F8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A8FC 000000FC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A900 00000100  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 8084A904 00000104  4B FF EC 15 */	bl reset__14dEvt_control_cFv
-/* 8084A908 00000108  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 8084A90C 0000010C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 8084A904 00000104  4B FF EC 15 */	bl _unresolved
+/* 8084A908 00000108  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A90C 0000010C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A910 00000110  80 63 00 00 */	lwz r3, 0(r3)
 /* 8084A914 00000114  38 63 04 C4 */	addi r3, r3, 0x4c4
 /* 8084A918 00000118  38 80 00 00 */	li r4, 0
-/* 8084A91C 0000011C  4B FF EB FD */	bl setDemoName__11Z2StatusMgrFPc
+/* 8084A91C 0000011C  4B FF EB FD */	bl _unresolved
 /* 8084A920 00000120  48 00 01 2C */	b lbl_8084AA4C
 lbl_8084A924:
 /* 8084A924 00000000  7F E3 FB 78 */	mr r3, r31
@@ -174,8 +174,8 @@ lbl_8084A92C:
 /* 8084A968 0000003C  D0 1F 06 A8 */	stfs f0, 0x6a8(r31)
 /* 8084A96C 00000040  C0 1E 00 C0 */	lfs f0, 0xc0(r30)
 /* 8084A970 00000044  D0 1F 06 AC */	stfs f0, 0x6ac(r31)
-/* 8084A974 00000048  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8084A978 0000004C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8084A974 00000048  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084A978 0000004C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084A97C 00000050  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8084A980 00000054  38 9F 06 A4 */	addi r4, r31, 0x6a4
 /* 8084A984 00000058  38 A0 00 00 */	li r5, 0
@@ -210,27 +210,27 @@ lbl_8084A92C:
 /* 8084A9F8 000000CC  38 A1 00 08 */	addi r5, r1, 8
 /* 8084A9FC 000000D0  C0 3E 00 14 */	lfs f1, 0x14(r30)
 /* 8084AA00 000000D4  38 C0 00 00 */	li r6, 0
-/* 8084AA04 000000D8  4B FF EB 15 */	bl Set__9dCamera_cF4cXyz4cXyzfs
+/* 8084AA04 000000D8  4B FF EB 15 */	bl _unresolved
 /* 8084AA08 000000DC  7F A3 EB 78 */	mr r3, r29
-/* 8084AA0C 000000E0  4B FF EB 0D */	bl Reset__9dCamera_cFv
+/* 8084AA0C 000000E0  4B FF EB 0D */	bl _unresolved
 /* 8084AA10 000000E4  7F A3 EB 78 */	mr r3, r29
-/* 8084AA14 000000E8  4B FF EB 05 */	bl Start__9dCamera_cFv
+/* 8084AA14 000000E8  4B FF EB 05 */	bl _unresolved
 /* 8084AA18 000000EC  7F A3 EB 78 */	mr r3, r29
 /* 8084AA1C 000000F0  38 80 00 00 */	li r4, 0
-/* 8084AA20 000000F4  4B FF EA F9 */	bl SetTrimSize__9dCamera_cFl
-/* 8084AA24 000000F8  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 8084AA28 000000FC  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 8084AA20 000000F4  4B FF EA F9 */	bl _unresolved
+/* 8084AA24 000000F8  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084AA28 000000FC  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084AA2C 00000100  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 8084AA30 00000104  4B FF EA E9 */	bl reset__14dEvt_control_cFv
-/* 8084AA34 00000108  3C 60 00 00 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha /* 80451368 */
-/* 8084AA38 0000010C  38 63 00 00 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l /* 80451368 */
+/* 8084AA30 00000104  4B FF EA E9 */	bl _unresolved
+/* 8084AA34 00000108  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 8084AA38 0000010C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 8084AA3C 00000110  80 63 00 00 */	lwz r3, 0(r3)
 /* 8084AA40 00000114  38 63 04 C4 */	addi r3, r3, 0x4c4
 /* 8084AA44 00000118  38 80 00 00 */	li r4, 0
-/* 8084AA48 0000011C  4B FF EA D1 */	bl setDemoName__11Z2StatusMgrFPc
+/* 8084AA48 0000011C  4B FF EA D1 */	bl _unresolved
 lbl_8084AA4C:
 /* 8084AA4C 00000000  39 61 00 50 */	addi r11, r1, 0x50
-/* 8084AA50 00000004  4B FF EA C9 */	bl _restgpr_28
+/* 8084AA50 00000004  4B FF EA C9 */	bl _unresolved
 /* 8084AA54 00000008  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 8084AA58 0000000C  7C 08 03 A6 */	mtlr r0
 /* 8084AA5C 00000010  38 21 00 50 */	addi r1, r1, 0x50

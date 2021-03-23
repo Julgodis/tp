@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80B2CE00[2];
+extern u8 data_80B2CE00[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_uri_cpp(); // 1
 
 // 
 // Declarations:

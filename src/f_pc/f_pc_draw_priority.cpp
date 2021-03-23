@@ -36,7 +36,7 @@ extern "C" void fpcDwPi_Init__FP19draw_priority_classs(); // 1
 // Declarations:
 // 
 
-/* 80021308-80021310 0008+00 r=1 e=1 z=0  None .text      fpcDwPi_Get__FPC19draw_priority_class                        */
+/* 80021308-80021310 0008+00 s=0 e=1 z=0  None .text      fpcDwPi_Get__FPC19draw_priority_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +47,7 @@ asm void fpcDwPi_Get(draw_priority_class const* param_0) {
 #pragma pop
 
 
-/* 80021310-80021318 0008+00 r=1 e=0 z=0  None .text      fpcDwPi_Set__FP19draw_priority_classs                        */
+/* 80021310-80021318 0008+00 s=1 e=0 z=0  None .text      fpcDwPi_Set__FP19draw_priority_classs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +58,7 @@ asm static void fpcDwPi_Set(draw_priority_class* param_0, s16 param_1) {
 #pragma pop
 
 
-/* 80021318-80021338 0020+00 r=1 e=1 z=0  None .text      fpcDwPi_Init__FP19draw_priority_classs                       */
+/* 80021318-80021338 0020+00 s=0 e=1 z=0  None .text      fpcDwPi_Init__FP19draw_priority_classs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JAISoundHandle {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -24,6 +18,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
 };
 
 struct JAISoundStarter {
@@ -55,7 +55,7 @@ extern "C" extern u8 data_80450B78[4];
 // 
 
 /* ############################################################################################## */
-/* 803C99C8-803C99D8 0010+00 r=2 e=0 z=0  None .data      __vt__15JAISoundStarter                                      */
+/* 803C99C8-803C99D8 0010+00 s=2 e=0 z=0  None .data      __vt__15JAISoundStarter                                      */
 SECTION_DATA static void* __vt__15JAISoundStarter[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -63,7 +63,7 @@ SECTION_DATA static void* __vt__15JAISoundStarter[4] = {
 	/* 3    */ (void*)NULL,
 };
 
-/* 802A2F6C-802A2F88 001C+00 r=1 e=1 z=0  None .text      __ct__15JAISoundStarterFb                                    */
+/* 802A2F6C-802A2F88 001C+00 s=0 e=1 z=0  None .text      __ct__15JAISoundStarterFb                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ asm JAISoundStarter::JAISoundStarter(bool param_0) {
 #pragma pop
 
 
-/* 802A2F88-802A2FEC 0064+00 r=8 e=7 z=0  None .text      __dt__15JAISoundStarterFv                                    */
+/* 802A2F88-802A2FEC 0064+00 s=1 e=7 z=0  None .text      __dt__15JAISoundStarterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ asm JAISoundStarter::~JAISoundStarter() {
 #pragma pop
 
 
-/* 802A2FEC-802A30D4 00E8+00 r=4 e=4 z=0  None .text      startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802A2FEC-802A30D4 00E8+00 s=0 e=4 z=0  None .text      startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80655598[2];
+extern u8 data_80655598[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_balloon_2D_cpp(); // 1
 
 // 
 // Declarations:

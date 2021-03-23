@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8059DE70[2];
+extern u8 data_8059DE70[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_obj_yobikusa_cpp(); // 1
 
 // 
 // Declarations:

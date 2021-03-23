@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_805716B4[2];
+extern u8 data_805716B4[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_taro_cpp(); // 1
 
 // 
 // Declarations:

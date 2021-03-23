@@ -34,34 +34,34 @@ extern "C" void ARStartDMA(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804518D8-804518DC 0004+00 r=3 e=0 z=0  None .sbss      __ARQRequestQueueHi                                          */
+/* 804518D8-804518DC 0004+00 s=3 e=0 z=0  None .sbss      __ARQRequestQueueHi                                          */
 static u8 __ARQRequestQueueHi[4];
 
-/* 804518DC-804518E0 0004+00 r=1 e=0 z=0  None .sbss      __ARQRequestTailHi                                           */
+/* 804518DC-804518E0 0004+00 s=1 e=0 z=0  None .sbss      __ARQRequestTailHi                                           */
 static u8 __ARQRequestTailHi[4];
 
-/* 804518E0-804518E4 0004+00 r=3 e=0 z=0  None .sbss      __ARQRequestQueueLo                                          */
+/* 804518E0-804518E4 0004+00 s=3 e=0 z=0  None .sbss      __ARQRequestQueueLo                                          */
 static u8 __ARQRequestQueueLo[4];
 
-/* 804518E4-804518E8 0004+00 r=1 e=0 z=0  None .sbss      __ARQRequestTailLo                                           */
+/* 804518E4-804518E8 0004+00 s=1 e=0 z=0  None .sbss      __ARQRequestTailLo                                           */
 static u8 __ARQRequestTailLo[4];
 
-/* 804518E8-804518EC 0004+00 r=3 e=0 z=0  None .sbss      __ARQRequestPendingHi                                        */
+/* 804518E8-804518EC 0004+00 s=3 e=0 z=0  None .sbss      __ARQRequestPendingHi                                        */
 static u8 __ARQRequestPendingHi[4];
 
-/* 804518EC-804518F0 0004+00 r=4 e=0 z=0  None .sbss      __ARQRequestPendingLo                                        */
+/* 804518EC-804518F0 0004+00 s=4 e=0 z=0  None .sbss      __ARQRequestPendingLo                                        */
 static u8 __ARQRequestPendingLo[4];
 
-/* 804518F0-804518F4 0004+00 r=3 e=0 z=0  None .sbss      __ARQCallbackHi                                              */
+/* 804518F0-804518F4 0004+00 s=3 e=0 z=0  None .sbss      __ARQCallbackHi                                              */
 static u8 __ARQCallbackHi[4];
 
-/* 804518F4-804518F8 0004+00 r=3 e=0 z=0  None .sbss      __ARQCallbackLo                                              */
+/* 804518F4-804518F8 0004+00 s=3 e=0 z=0  None .sbss      __ARQCallbackLo                                              */
 static u8 __ARQCallbackLo[4];
 
-/* 804518F8-804518FC 0004+00 r=2 e=0 z=0  None .sbss      __ARQChunkSize                                               */
+/* 804518F8-804518FC 0004+00 s=2 e=0 z=0  None .sbss      __ARQChunkSize                                               */
 static u8 __ARQChunkSize[4];
 
-/* 80352094-80352194 0100+00 r=2 e=0 z=0  None .text      __ARQServiceQueueLo                                          */
+/* 80352094-80352194 0100+00 s=2 e=0 z=0  None .text      __ARQServiceQueueLo                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ extern "C" asm static void __ARQServiceQueueLo() {
 #pragma pop
 
 
-/* 80352194-80352198 0004+00 r=1 e=0 z=0  None .text      __ARQCallbackHack                                            */
+/* 80352194-80352198 0004+00 s=1 e=0 z=0  None .text      __ARQCallbackHack                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ extern "C" asm static void __ARQCallbackHack() {
 #pragma pop
 
 
-/* 80352198-80352264 00CC+00 r=1 e=0 z=0  None .text      __ARQInterruptServiceRoutine                                 */
+/* 80352198-80352264 00CC+00 s=1 e=0 z=0  None .text      __ARQInterruptServiceRoutine                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +95,7 @@ extern "C" asm static void __ARQInterruptServiceRoutine() {
 
 
 /* ############################################################################################## */
-/* 803D1C30-803D1C78 0045+03 r=1 e=0 z=0  None .data      @1                                                           */
+/* 803D1C30-803D1C78 0045+03 s=1 e=0 z=0  None .data      @1                                                           */
 SECTION_DATA static u8 arq__lit_1[69 + 3 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x52, 0x51, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
@@ -106,17 +106,17 @@ SECTION_DATA static u8 arq__lit_1[69 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 80450A50-80450A58 0004+04 r=1 e=0 z=0  None .sdata     __ARQVersion                                                 */
+/* 80450A50-80450A58 0004+04 s=1 e=0 z=0  None .sdata     __ARQVersion                                                 */
 SECTION_SDATA static void* __ARQVersion[1 + 1 /* padding */] = {
 	/* 0    */ (void*)&arq__lit_1,
 	/* padding */
 	NULL,
 };
 
-/* 804518FC-80451900 0004+00 r=1 e=0 z=0  None .sbss      __ARQ_init_flag                                              */
+/* 804518FC-80451900 0004+00 s=1 e=0 z=0  None .sbss      __ARQ_init_flag                                              */
 static u8 __ARQ_init_flag[4];
 
-/* 80352264-803522D4 0070+00 r=1 e=1 z=0  None .text      ARQInit                                                      */
+/* 80352264-803522D4 0070+00 s=0 e=1 z=0  None .text      ARQInit                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ extern "C" asm void ARQInit() {
 #pragma pop
 
 
-/* 803522D4-80352430 015C+00 r=1 e=1 z=0  None .text      ARQPostRequest                                               */
+/* 803522D4-80352430 015C+00 s=0 e=1 z=0  None .text      ARQPostRequest                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

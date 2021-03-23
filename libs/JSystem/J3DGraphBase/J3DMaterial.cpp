@@ -80,15 +80,15 @@ struct J3DColorBlockLightOff {
 	/* 8031747C */ void initialize();
 };
 
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
 struct J3DLightObj {
 };
 
 struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
 };
 
 struct J3DColorBlock {
@@ -132,11 +132,11 @@ struct J3DTexGenBlockPatched {
 	/* 80317644 */ void initialize();
 };
 
-struct J3DTexCoord {
-	/* 8000E464 */ J3DTexCoord();
+struct J3DTexMtx {
 };
 
-struct J3DTexMtx {
+struct J3DTexCoord {
+	/* 8000E464 */ J3DTexCoord();
 };
 
 struct J3DNBTScale {
@@ -167,6 +167,11 @@ struct J3DTevBlock {
 	/* 80317350 */ void reset(J3DTevBlock*);
 };
 
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+	/* 8000E0E4 */ J3DIndTexCoordScale();
+};
+
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 	/* 8000E0F0 */ J3DIndTexMtx();
@@ -174,11 +179,6 @@ struct J3DIndTexMtx {
 
 struct J3DIndTexOrder {
 	/* 8000E128 */ J3DIndTexOrder();
-};
-
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
 struct J3DIndBlock {
@@ -198,7 +198,7 @@ struct J3DIndBlock {
 	/* 80317410 */ void setIndTexOrder(u32, J3DIndTexOrder);
 };
 
-struct J3DZMode {
+struct J3DFog {
 };
 
 struct J3DAlphaComp {
@@ -207,7 +207,7 @@ struct J3DAlphaComp {
 struct J3DBlend {
 };
 
-struct J3DFog {
+struct J3DZMode {
 };
 
 struct J3DPEBlock {
@@ -573,7 +573,7 @@ extern "C" extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CDC90-803CDCC0 0030+00 r=1 e=1 z=0  None .data      __vt__17J3DLockedMaterial                                    */
+/* 803CDC90-803CDCC0 0030+00 s=0 e=1 z=0  None .data      __vt__17J3DLockedMaterial                                    */
 SECTION_DATA void* __vt__17J3DLockedMaterial[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -589,7 +589,7 @@ SECTION_DATA void* __vt__17J3DLockedMaterial[12] = {
 	/* 11   */ (void*)change__17J3DLockedMaterialFv,
 };
 
-/* 803CDCC0-803CDCF0 0030+00 r=1 e=1 z=0  None .data      __vt__18J3DPatchedMaterial                                   */
+/* 803CDCC0-803CDCF0 0030+00 s=0 e=1 z=0  None .data      __vt__18J3DPatchedMaterial                                   */
 SECTION_DATA void* __vt__18J3DPatchedMaterial[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -605,7 +605,7 @@ SECTION_DATA void* __vt__18J3DPatchedMaterial[12] = {
 	/* 11   */ (void*)change__18J3DPatchedMaterialFv,
 };
 
-/* 803CDCF0-803CDD20 0030+00 r=6 e=6 z=0  None .data      __vt__11J3DMaterial                                          */
+/* 803CDCF0-803CDD20 0030+00 s=0 e=6 z=0  None .data      __vt__11J3DMaterial                                          */
 SECTION_DATA void* __vt__11J3DMaterial[12] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -621,7 +621,7 @@ SECTION_DATA void* __vt__11J3DMaterial[12] = {
 	/* 11   */ (void*)change__11J3DMaterialFv,
 };
 
-/* 803CDD20-803CDD9C 007C+00 r=9 e=7 z=0  None .data      __vt__10J3DPEBlock                                           */
+/* 803CDD20-803CDD9C 007C+00 s=2 e=7 z=0  None .data      __vt__10J3DPEBlock                                           */
 SECTION_DATA void* __vt__10J3DPEBlock[31] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -656,7 +656,7 @@ SECTION_DATA void* __vt__10J3DPEBlock[31] = {
 	/* 30   */ (void*)__dt__10J3DPEBlockFv,
 };
 
-/* 803CDD9C-803CDDE8 004C+00 r=3 e=1 z=0  None .data      __vt__15J3DIndBlockNull                                      */
+/* 803CDD9C-803CDDE8 004C+00 s=2 e=1 z=0  None .data      __vt__15J3DIndBlockNull                                      */
 SECTION_DATA void* __vt__15J3DIndBlockNull[19] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -679,7 +679,7 @@ SECTION_DATA void* __vt__15J3DIndBlockNull[19] = {
 	/* 18   */ (void*)__dt__15J3DIndBlockNullFv,
 };
 
-/* 803CDDE8-803CDE34 004C+00 r=5 e=2 z=0  None .data      __vt__11J3DIndBlock                                          */
+/* 803CDDE8-803CDE34 004C+00 s=3 e=2 z=0  None .data      __vt__11J3DIndBlock                                          */
 SECTION_DATA void* __vt__11J3DIndBlock[19] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -702,7 +702,7 @@ SECTION_DATA void* __vt__11J3DIndBlock[19] = {
 	/* 18   */ (void*)__dt__11J3DIndBlockFv,
 };
 
-/* 803CDE34-803CDEA0 006C+00 r=8 e=5 z=0  None .data      __vt__14J3DTexGenBlock                                       */
+/* 803CDE34-803CDEA0 006C+00 s=3 e=5 z=0  None .data      __vt__14J3DTexGenBlock                                       */
 SECTION_DATA void* __vt__14J3DTexGenBlock[27] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -733,7 +733,7 @@ SECTION_DATA void* __vt__14J3DTexGenBlock[27] = {
 	/* 26   */ (void*)__dt__14J3DTexGenBlockFv,
 };
 
-/* 803CDEA0-803CDF30 0090+00 r=7 e=4 z=0  None .data      __vt__13J3DColorBlock                                        */
+/* 803CDEA0-803CDF30 0090+00 s=3 e=4 z=0  None .data      __vt__13J3DColorBlock                                        */
 SECTION_DATA void* __vt__13J3DColorBlock[36] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -773,7 +773,7 @@ SECTION_DATA void* __vt__13J3DColorBlock[36] = {
 	/* 35   */ (void*)__dt__13J3DColorBlockFv,
 };
 
-/* 803157A0-803159A0 0200+00 r=3 e=3 z=0  None .text      createColorBlock__11J3DMaterialFUl                           */
+/* 803157A0-803159A0 0200+00 s=0 e=3 z=0  None .text      createColorBlock__11J3DMaterialFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -784,7 +784,7 @@ asm void J3DMaterial::createColorBlock(u32 param_0) {
 #pragma pop
 
 
-/* 803159A0-80315B04 0164+00 r=2 e=2 z=0  None .text      createTexGenBlock__11J3DMaterialFUl                          */
+/* 803159A0-80315B04 0164+00 s=0 e=2 z=0  None .text      createTexGenBlock__11J3DMaterialFUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -795,7 +795,7 @@ asm void J3DMaterial::createTexGenBlock(u32 param_0) {
 #pragma pop
 
 
-/* 80315B04-80315E78 0374+00 r=2 e=2 z=0  None .text      createTevBlock__11J3DMaterialFi                              */
+/* 80315B04-80315E78 0374+00 s=0 e=2 z=0  None .text      createTevBlock__11J3DMaterialFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -806,7 +806,7 @@ asm void J3DMaterial::createTevBlock(int param_0) {
 #pragma pop
 
 
-/* 80315E78-80315F60 00E8+00 r=3 e=3 z=0  None .text      createIndBlock__11J3DMaterialFi                              */
+/* 80315E78-80315F60 00E8+00 s=0 e=3 z=0  None .text      createIndBlock__11J3DMaterialFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -817,7 +817,7 @@ asm void J3DMaterial::createIndBlock(int param_0) {
 #pragma pop
 
 
-/* 80315F60-80316100 01A0+00 r=3 e=3 z=0  None .text      createPEBlock__11J3DMaterialFUlUl                            */
+/* 80315F60-80316100 01A0+00 s=0 e=3 z=0  None .text      createPEBlock__11J3DMaterialFUlUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -828,7 +828,7 @@ asm void J3DMaterial::createPEBlock(u32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80316100-80316150 0050+00 r=2 e=2 z=0  None .text      calcSizeColorBlock__11J3DMaterialFUl                         */
+/* 80316100-80316150 0050+00 s=0 e=2 z=0  None .text      calcSizeColorBlock__11J3DMaterialFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -839,7 +839,7 @@ asm void J3DMaterial::calcSizeColorBlock(u32 param_0) {
 #pragma pop
 
 
-/* 80316150-8031617C 002C+00 r=1 e=1 z=0  None .text      calcSizeTexGenBlock__11J3DMaterialFUl                        */
+/* 80316150-8031617C 002C+00 s=0 e=1 z=0  None .text      calcSizeTexGenBlock__11J3DMaterialFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -850,7 +850,7 @@ asm void J3DMaterial::calcSizeTexGenBlock(u32 param_0) {
 #pragma pop
 
 
-/* 8031617C-803161C4 0048+00 r=1 e=1 z=0  None .text      calcSizeTevBlock__11J3DMaterialFi                            */
+/* 8031617C-803161C4 0048+00 s=0 e=1 z=0  None .text      calcSizeTevBlock__11J3DMaterialFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -861,7 +861,7 @@ asm void J3DMaterial::calcSizeTevBlock(int param_0) {
 #pragma pop
 
 
-/* 803161C4-803161D8 0014+00 r=2 e=2 z=0  None .text      calcSizeIndBlock__11J3DMaterialFi                            */
+/* 803161C4-803161D8 0014+00 s=0 e=2 z=0  None .text      calcSizeIndBlock__11J3DMaterialFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -872,7 +872,7 @@ asm void J3DMaterial::calcSizeIndBlock(int param_0) {
 #pragma pop
 
 
-/* 803161D8-80316240 0068+00 r=2 e=2 z=0  None .text      calcSizePEBlock__11J3DMaterialFUlUl                          */
+/* 803161D8-80316240 0068+00 s=0 e=2 z=0  None .text      calcSizePEBlock__11J3DMaterialFUlUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -883,7 +883,7 @@ asm void J3DMaterial::calcSizePEBlock(u32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80316240-80316290 0050+00 r=7 e=5 z=0  None .text      initialize__11J3DMaterialFv                                  */
+/* 80316240-80316290 0050+00 s=2 e=5 z=0  None .text      initialize__11J3DMaterialFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -894,7 +894,7 @@ asm void J3DMaterial::initialize() {
 #pragma pop
 
 
-/* 80316290-80316344 00B4+00 r=2 e=2 z=0  None .text      countDLSize__11J3DMaterialFv                                 */
+/* 80316290-80316344 00B4+00 s=0 e=2 z=0  None .text      countDLSize__11J3DMaterialFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -905,7 +905,7 @@ asm void J3DMaterial::countDLSize() {
 #pragma pop
 
 
-/* 80316344-80316620 02DC+00 r=2 e=0 z=0  None .text      makeDisplayList_private__11J3DMaterialFP17J3DDisplayListObj  */
+/* 80316344-80316620 02DC+00 s=2 e=0 z=0  None .text      makeDisplayList_private__11J3DMaterialFP17J3DDisplayListObj  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -916,7 +916,7 @@ asm void J3DMaterial::makeDisplayList_private(J3DDisplayListObj* param_0) {
 #pragma pop
 
 
-/* 80316620-80316668 0048+00 r=1 e=0 z=0  None .text      makeDisplayList__11J3DMaterialFv                             */
+/* 80316620-80316668 0048+00 s=1 e=0 z=0  None .text      makeDisplayList__11J3DMaterialFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -927,7 +927,7 @@ asm void J3DMaterial::makeDisplayList() {
 #pragma pop
 
 
-/* 80316668-8031668C 0024+00 r=1 e=0 z=0  None .text      makeSharedDisplayList__11J3DMaterialFv                       */
+/* 80316668-8031668C 0024+00 s=1 e=0 z=0  None .text      makeSharedDisplayList__11J3DMaterialFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -938,7 +938,7 @@ asm void J3DMaterial::makeSharedDisplayList() {
 #pragma pop
 
 
-/* 8031668C-803166DC 0050+00 r=1 e=0 z=0  None .text      load__11J3DMaterialFv                                        */
+/* 8031668C-803166DC 0050+00 s=1 e=0 z=0  None .text      load__11J3DMaterialFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -949,7 +949,7 @@ asm void J3DMaterial::load() {
 #pragma pop
 
 
-/* 803166DC-80316740 0064+00 r=1 e=0 z=0  None .text      loadSharedDL__11J3DMaterialFv                                */
+/* 803166DC-80316740 0064+00 s=1 e=0 z=0  None .text      loadSharedDL__11J3DMaterialFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -960,7 +960,7 @@ asm void J3DMaterial::loadSharedDL() {
 #pragma pop
 
 
-/* 80316740-803167D8 0098+00 r=2 e=0 z=0  None .text      patch__11J3DMaterialFv                                       */
+/* 80316740-803167D8 0098+00 s=2 e=0 z=0  None .text      patch__11J3DMaterialFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -971,7 +971,7 @@ asm void J3DMaterial::patch() {
 #pragma pop
 
 
-/* 803167D8-803169DC 0204+00 r=2 e=0 z=0  None .text      diff__11J3DMaterialFUl                                       */
+/* 803167D8-803169DC 0204+00 s=2 e=0 z=0  None .text      diff__11J3DMaterialFUl                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -982,7 +982,7 @@ asm void J3DMaterial::diff(u32 param_0) {
 #pragma pop
 
 
-/* 803169DC-80316A54 0078+00 r=2 e=0 z=0  None .text      calc__11J3DMaterialFPA4_Cf                                   */
+/* 803169DC-80316A54 0078+00 s=2 e=0 z=0  None .text      calc__11J3DMaterialFPA4_Cf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -993,7 +993,7 @@ asm void J3DMaterial::calc(f32 const (* param_0)[4]) {
 #pragma pop
 
 
-/* 80316A54-80316AB0 005C+00 r=3 e=0 z=0  None .text      calcDiffTexMtx__11J3DMaterialFPA4_Cf                         */
+/* 80316A54-80316AB0 005C+00 s=3 e=0 z=0  None .text      calcDiffTexMtx__11J3DMaterialFPA4_Cf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1004,7 +1004,7 @@ asm void J3DMaterial::calcDiffTexMtx(f32 const (* param_0)[4]) {
 #pragma pop
 
 
-/* 80316AB0-80316AC8 0018+00 r=2 e=1 z=0  None .text      setCurrentMtx__11J3DMaterialFv                               */
+/* 80316AB0-80316AC8 0018+00 s=1 e=1 z=0  None .text      setCurrentMtx__11J3DMaterialFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1015,7 +1015,7 @@ asm void J3DMaterial::setCurrentMtx() {
 #pragma pop
 
 
-/* 80316AC8-80316D68 02A0+00 r=1 e=0 z=0  None .text      calcCurrentMtx__11J3DMaterialFv                              */
+/* 80316AC8-80316D68 02A0+00 s=1 e=0 z=0  None .text      calcCurrentMtx__11J3DMaterialFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1026,7 +1026,7 @@ asm void J3DMaterial::calcCurrentMtx() {
 #pragma pop
 
 
-/* 80316D68-80316E14 00AC+00 r=1 e=0 z=0  None .text      copy__11J3DMaterialFP11J3DMaterial                           */
+/* 80316D68-80316E14 00AC+00 s=1 e=0 z=0  None .text      copy__11J3DMaterialFP11J3DMaterial                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1037,7 +1037,7 @@ asm void J3DMaterial::copy(J3DMaterial* param_0) {
 #pragma pop
 
 
-/* 80316E14-80316E70 005C+00 r=1 e=0 z=0  None .text      reset__11J3DMaterialFv                                       */
+/* 80316E14-80316E70 005C+00 s=1 e=0 z=0  None .text      reset__11J3DMaterialFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1048,7 +1048,7 @@ asm void J3DMaterial::reset() {
 #pragma pop
 
 
-/* 80316E70-80316E90 0020+00 r=1 e=0 z=0  None .text      change__11J3DMaterialFv                                      */
+/* 80316E70-80316E90 0020+00 s=1 e=0 z=0  None .text      change__11J3DMaterialFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1059,7 +1059,7 @@ asm void J3DMaterial::change() {
 #pragma pop
 
 
-/* 80316E90-80316F24 0094+00 r=2 e=2 z=0  None .text      newSharedDisplayList__11J3DMaterialFUl                       */
+/* 80316E90-80316F24 0094+00 s=0 e=2 z=0  None .text      newSharedDisplayList__11J3DMaterialFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1070,7 +1070,7 @@ asm void J3DMaterial::newSharedDisplayList(u32 param_0) {
 #pragma pop
 
 
-/* 80316F24-80316FB8 0094+00 r=2 e=2 z=0  None .text      newSingleSharedDisplayList__11J3DMaterialFUl                 */
+/* 80316F24-80316FB8 0094+00 s=0 e=2 z=0  None .text      newSingleSharedDisplayList__11J3DMaterialFUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1081,7 +1081,7 @@ asm void J3DMaterial::newSingleSharedDisplayList(u32 param_0) {
 #pragma pop
 
 
-/* 80316FB8-80316FD8 0020+00 r=1 e=1 z=0  None .text      initialize__18J3DPatchedMaterialFv                           */
+/* 80316FB8-80316FD8 0020+00 s=0 e=1 z=0  None .text      initialize__18J3DPatchedMaterialFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1092,7 +1092,7 @@ asm void J3DPatchedMaterial::initialize() {
 #pragma pop
 
 
-/* 80316FD8-80316FDC 0004+00 r=1 e=0 z=0  None .text      makeDisplayList__18J3DPatchedMaterialFv                      */
+/* 80316FD8-80316FDC 0004+00 s=1 e=0 z=0  None .text      makeDisplayList__18J3DPatchedMaterialFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1103,7 +1103,7 @@ asm void J3DPatchedMaterial::makeDisplayList() {
 #pragma pop
 
 
-/* 80316FDC-80316FE0 0004+00 r=1 e=0 z=0  None .text      makeSharedDisplayList__18J3DPatchedMaterialFv                */
+/* 80316FDC-80316FE0 0004+00 s=1 e=0 z=0  None .text      makeSharedDisplayList__18J3DPatchedMaterialFv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1114,7 +1114,7 @@ asm void J3DPatchedMaterial::makeSharedDisplayList() {
 #pragma pop
 
 
-/* 80316FE0-80316FFC 001C+00 r=1 e=0 z=0  None .text      load__18J3DPatchedMaterialFv                                 */
+/* 80316FE0-80316FFC 001C+00 s=1 e=0 z=0  None .text      load__18J3DPatchedMaterialFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1125,7 +1125,7 @@ asm void J3DPatchedMaterial::load() {
 #pragma pop
 
 
-/* 80316FFC-8031703C 0040+00 r=1 e=0 z=0  None .text      loadSharedDL__18J3DPatchedMaterialFv                         */
+/* 80316FFC-8031703C 0040+00 s=1 e=0 z=0  None .text      loadSharedDL__18J3DPatchedMaterialFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1136,7 @@ asm void J3DPatchedMaterial::loadSharedDL() {
 #pragma pop
 
 
-/* 8031703C-80317040 0004+00 r=1 e=0 z=0  None .text      reset__18J3DPatchedMaterialFv                                */
+/* 8031703C-80317040 0004+00 s=1 e=0 z=0  None .text      reset__18J3DPatchedMaterialFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1147,7 +1147,7 @@ asm void J3DPatchedMaterial::reset() {
 #pragma pop
 
 
-/* 80317040-80317044 0004+00 r=1 e=0 z=0  None .text      change__18J3DPatchedMaterialFv                               */
+/* 80317040-80317044 0004+00 s=1 e=0 z=0  None .text      change__18J3DPatchedMaterialFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1158,7 +1158,7 @@ asm void J3DPatchedMaterial::change() {
 #pragma pop
 
 
-/* 80317044-80317064 0020+00 r=1 e=1 z=0  None .text      initialize__17J3DLockedMaterialFv                            */
+/* 80317044-80317064 0020+00 s=0 e=1 z=0  None .text      initialize__17J3DLockedMaterialFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1169,7 +1169,7 @@ asm void J3DLockedMaterial::initialize() {
 #pragma pop
 
 
-/* 80317064-80317068 0004+00 r=1 e=0 z=0  None .text      makeDisplayList__17J3DLockedMaterialFv                       */
+/* 80317064-80317068 0004+00 s=1 e=0 z=0  None .text      makeDisplayList__17J3DLockedMaterialFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1180,7 +1180,7 @@ asm void J3DLockedMaterial::makeDisplayList() {
 #pragma pop
 
 
-/* 80317068-8031706C 0004+00 r=1 e=0 z=0  None .text      makeSharedDisplayList__17J3DLockedMaterialFv                 */
+/* 80317068-8031706C 0004+00 s=1 e=0 z=0  None .text      makeSharedDisplayList__17J3DLockedMaterialFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1191,7 +1191,7 @@ asm void J3DLockedMaterial::makeSharedDisplayList() {
 #pragma pop
 
 
-/* 8031706C-80317088 001C+00 r=1 e=0 z=0  None .text      load__17J3DLockedMaterialFv                                  */
+/* 8031706C-80317088 001C+00 s=1 e=0 z=0  None .text      load__17J3DLockedMaterialFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1202,7 +1202,7 @@ asm void J3DLockedMaterial::load() {
 #pragma pop
 
 
-/* 80317088-803170C8 0040+00 r=1 e=0 z=0  None .text      loadSharedDL__17J3DLockedMaterialFv                          */
+/* 80317088-803170C8 0040+00 s=1 e=0 z=0  None .text      loadSharedDL__17J3DLockedMaterialFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1213,7 +1213,7 @@ asm void J3DLockedMaterial::loadSharedDL() {
 #pragma pop
 
 
-/* 803170C8-803170CC 0004+00 r=1 e=0 z=0  None .text      patch__17J3DLockedMaterialFv                                 */
+/* 803170C8-803170CC 0004+00 s=1 e=0 z=0  None .text      patch__17J3DLockedMaterialFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1224,7 +1224,7 @@ asm void J3DLockedMaterial::patch() {
 #pragma pop
 
 
-/* 803170CC-803170D0 0004+00 r=1 e=0 z=0  None .text      diff__17J3DLockedMaterialFUl                                 */
+/* 803170CC-803170D0 0004+00 s=1 e=0 z=0  None .text      diff__17J3DLockedMaterialFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1235,7 +1235,7 @@ asm void J3DLockedMaterial::diff(u32 param_0) {
 #pragma pop
 
 
-/* 803170D0-803170D4 0004+00 r=1 e=0 z=0  None .text      calc__17J3DLockedMaterialFPA4_Cf                             */
+/* 803170D0-803170D4 0004+00 s=1 e=0 z=0  None .text      calc__17J3DLockedMaterialFPA4_Cf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1246,7 +1246,7 @@ asm void J3DLockedMaterial::calc(f32 const (* param_0)[4]) {
 #pragma pop
 
 
-/* 803170D4-803170D8 0004+00 r=1 e=0 z=0  None .text      reset__17J3DLockedMaterialFv                                 */
+/* 803170D4-803170D8 0004+00 s=1 e=0 z=0  None .text      reset__17J3DLockedMaterialFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1257,7 +1257,7 @@ asm void J3DLockedMaterial::reset() {
 #pragma pop
 
 
-/* 803170D8-803170DC 0004+00 r=1 e=0 z=0  None .text      change__17J3DLockedMaterialFv                                */
+/* 803170D8-803170DC 0004+00 s=1 e=0 z=0  None .text      change__17J3DLockedMaterialFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1268,7 +1268,7 @@ asm void J3DLockedMaterial::change() {
 #pragma pop
 
 
-/* 803170DC-80317138 005C+00 r=1 e=1 z=0  None .text      __dt__21J3DColorBlockLightOffFv                              */
+/* 803170DC-80317138 005C+00 s=0 e=1 z=0  None .text      __dt__21J3DColorBlockLightOffFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1279,7 +1279,7 @@ asm J3DColorBlockLightOff::~J3DColorBlockLightOff() {
 #pragma pop
 
 
-/* 80317138-80317180 0048+00 r=1 e=0 z=0  None .text      __dt__13J3DColorBlockFv                                      */
+/* 80317138-80317180 0048+00 s=1 e=0 z=0  None .text      __dt__13J3DColorBlockFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1290,7 +1290,7 @@ asm J3DColorBlock::~J3DColorBlock() {
 #pragma pop
 
 
-/* 80317180-803171DC 005C+00 r=1 e=1 z=0  None .text      __dt__21J3DTexGenBlockPatchedFv                              */
+/* 80317180-803171DC 005C+00 s=0 e=1 z=0  None .text      __dt__21J3DTexGenBlockPatchedFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1301,7 +1301,7 @@ asm J3DTexGenBlockPatched::~J3DTexGenBlockPatched() {
 #pragma pop
 
 
-/* 803171DC-80317224 0048+00 r=1 e=0 z=0  None .text      __dt__14J3DTexGenBlockFv                                     */
+/* 803171DC-80317224 0048+00 s=1 e=0 z=0  None .text      __dt__14J3DTexGenBlockFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1312,7 +1312,7 @@ asm J3DTexGenBlock::~J3DTexGenBlock() {
 #pragma pop
 
 
-/* 80317224-8031726C 0048+00 r=1 e=1 z=0  None .text      __dt__11J3DTevBlockFv                                        */
+/* 80317224-8031726C 0048+00 s=0 e=1 z=0  None .text      __dt__11J3DTevBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1323,7 +1323,7 @@ asm J3DTevBlock::~J3DTevBlock() {
 #pragma pop
 
 
-/* 8031726C-803172B4 0048+00 r=1 e=0 z=0  None .text      __dt__11J3DIndBlockFv                                        */
+/* 8031726C-803172B4 0048+00 s=1 e=0 z=0  None .text      __dt__11J3DIndBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1334,7 +1334,7 @@ asm J3DIndBlock::~J3DIndBlock() {
 #pragma pop
 
 
-/* 803172B4-803172FC 0048+00 r=1 e=0 z=0  None .text      __dt__10J3DPEBlockFv                                         */
+/* 803172B4-803172FC 0048+00 s=1 e=0 z=0  None .text      __dt__10J3DPEBlockFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1345,7 +1345,7 @@ asm J3DPEBlock::~J3DPEBlock() {
 #pragma pop
 
 
-/* 803172FC-80317304 0008+00 r=2 e=1 z=0  None .text      countDLSize__14J3DTexGenBlockFv                              */
+/* 803172FC-80317304 0008+00 s=1 e=1 z=0  None .text      countDLSize__14J3DTexGenBlockFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1356,7 +1356,7 @@ asm void J3DTexGenBlock::countDLSize() {
 #pragma pop
 
 
-/* 80317304-8031730C 0008+00 r=2 e=1 z=0  None .text      countDLSize__13J3DColorBlockFv                               */
+/* 80317304-8031730C 0008+00 s=1 e=1 z=0  None .text      countDLSize__13J3DColorBlockFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1367,7 +1367,7 @@ asm void J3DColorBlock::countDLSize() {
 #pragma pop
 
 
-/* 8031730C-80317314 0008+00 r=2 e=2 z=0  None .text      countDLSize__11J3DTevBlockFv                                 */
+/* 8031730C-80317314 0008+00 s=0 e=2 z=0  None .text      countDLSize__11J3DTevBlockFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1378,7 +1378,7 @@ asm void J3DTevBlock::countDLSize() {
 #pragma pop
 
 
-/* 80317314-8031731C 0008+00 r=2 e=0 z=0  None .text      countDLSize__11J3DIndBlockFv                                 */
+/* 80317314-8031731C 0008+00 s=2 e=0 z=0  None .text      countDLSize__11J3DIndBlockFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1389,7 +1389,7 @@ asm void J3DIndBlock::countDLSize() {
 #pragma pop
 
 
-/* 8031731C-80317324 0008+00 r=2 e=1 z=0  None .text      countDLSize__10J3DPEBlockFv                                  */
+/* 8031731C-80317324 0008+00 s=1 e=1 z=0  None .text      countDLSize__10J3DPEBlockFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1400,7 +1400,7 @@ asm void J3DPEBlock::countDLSize() {
 #pragma pop
 
 
-/* 80317324-80317328 0004+00 r=2 e=1 z=0  None .text      load__13J3DColorBlockFv                                      */
+/* 80317324-80317328 0004+00 s=1 e=1 z=0  None .text      load__13J3DColorBlockFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1411,7 +1411,7 @@ asm void J3DColorBlock::load() {
 #pragma pop
 
 
-/* 80317328-80317330 0008+00 r=2 e=1 z=0  None .text      getCullMode__13J3DColorBlockCFv                              */
+/* 80317328-80317330 0008+00 s=1 e=1 z=0  None .text      getCullMode__13J3DColorBlockCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1422,7 +1422,7 @@ asm void J3DColorBlock::getCullMode() const {
 #pragma pop
 
 
-/* 80317330-80317334 0004+00 r=2 e=2 z=0  None .text      load__11J3DTevBlockFv                                        */
+/* 80317330-80317334 0004+00 s=0 e=2 z=0  None .text      load__11J3DTevBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1433,7 +1433,7 @@ asm void J3DTevBlock::load() {
 #pragma pop
 
 
-/* 80317334-8031733C 0008+00 r=3 e=2 z=0  None .text      getNBTScale__14J3DTexGenBlockFv                              */
+/* 80317334-8031733C 0008+00 s=1 e=2 z=0  None .text      getNBTScale__14J3DTexGenBlockFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1444,7 +1444,7 @@ asm void J3DTexGenBlock::getNBTScale() {
 #pragma pop
 
 
-/* 8031733C-80317340 0004+00 r=2 e=1 z=0  None .text      patch__13J3DColorBlockFv                                     */
+/* 8031733C-80317340 0004+00 s=1 e=1 z=0  None .text      patch__13J3DColorBlockFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1455,7 +1455,7 @@ asm void J3DColorBlock::patch() {
 #pragma pop
 
 
-/* 80317340-80317344 0004+00 r=2 e=1 z=0  None .text      diff__13J3DColorBlockFUl                                     */
+/* 80317340-80317344 0004+00 s=1 e=1 z=0  None .text      diff__13J3DColorBlockFUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1466,7 +1466,7 @@ asm void J3DColorBlock::diff(u32 param_0) {
 #pragma pop
 
 
-/* 80317344-80317348 0004+00 r=5 e=4 z=0  None .text      diff__10J3DPEBlockFUl                                        */
+/* 80317344-80317348 0004+00 s=1 e=4 z=0  None .text      diff__10J3DPEBlockFUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1477,7 +1477,7 @@ asm void J3DPEBlock::diff(u32 param_0) {
 #pragma pop
 
 
-/* 80317348-8031734C 0004+00 r=5 e=4 z=0  None .text      reset__10J3DPEBlockFP10J3DPEBlock                            */
+/* 80317348-8031734C 0004+00 s=1 e=4 z=0  None .text      reset__10J3DPEBlockFP10J3DPEBlock                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,7 +1488,7 @@ asm void J3DPEBlock::reset(J3DPEBlock* param_0) {
 #pragma pop
 
 
-/* 8031734C-80317350 0004+00 r=1 e=0 z=0  None .text      reset__11J3DIndBlockFP11J3DIndBlock                          */
+/* 8031734C-80317350 0004+00 s=1 e=0 z=0  None .text      reset__11J3DIndBlockFP11J3DIndBlock                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1499,7 +1499,7 @@ asm void J3DIndBlock::reset(J3DIndBlock* param_0) {
 #pragma pop
 
 
-/* 80317350-80317354 0004+00 r=1 e=1 z=0  None .text      reset__11J3DTevBlockFP11J3DTevBlock                          */
+/* 80317350-80317354 0004+00 s=0 e=1 z=0  None .text      reset__11J3DTevBlockFP11J3DTevBlock                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1510,7 +1510,7 @@ asm void J3DTevBlock::reset(J3DTevBlock* param_0) {
 #pragma pop
 
 
-/* 80317354-80317358 0004+00 r=2 e=1 z=0  None .text      reset__14J3DTexGenBlockFP14J3DTexGenBlock                    */
+/* 80317354-80317358 0004+00 s=1 e=1 z=0  None .text      reset__14J3DTexGenBlockFP14J3DTexGenBlock                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1521,7 +1521,7 @@ asm void J3DTexGenBlock::reset(J3DTexGenBlock* param_0) {
 #pragma pop
 
 
-/* 80317358-8031735C 0004+00 r=2 e=1 z=0  None .text      reset__13J3DColorBlockFP13J3DColorBlock                      */
+/* 80317358-8031735C 0004+00 s=1 e=1 z=0  None .text      reset__13J3DColorBlockFP13J3DColorBlock                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1532,7 +1532,7 @@ asm void J3DColorBlock::reset(J3DColorBlock* param_0) {
 #pragma pop
 
 
-/* 8031735C-80317360 0004+00 r=6 e=5 z=0  None .text      diffFog__10J3DPEBlockFv                                      */
+/* 8031735C-80317360 0004+00 s=1 e=5 z=0  None .text      diffFog__10J3DPEBlockFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1543,7 +1543,7 @@ asm void J3DPEBlock::diffFog() {
 #pragma pop
 
 
-/* 80317360-80317364 0004+00 r=5 e=4 z=0  None .text      diffBlend__10J3DPEBlockFv                                    */
+/* 80317360-80317364 0004+00 s=1 e=4 z=0  None .text      diffBlend__10J3DPEBlockFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1554,7 +1554,7 @@ asm void J3DPEBlock::diffBlend() {
 #pragma pop
 
 
-/* 80317364-80317368 0004+00 r=6 e=5 z=0  None .text      setFog__10J3DPEBlockFP6J3DFog                                */
+/* 80317364-80317368 0004+00 s=1 e=5 z=0  None .text      setFog__10J3DPEBlockFP6J3DFog                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1565,7 +1565,7 @@ asm void J3DPEBlock::setFog(J3DFog* param_0) {
 #pragma pop
 
 
-/* 80317368-8031736C 0004+00 r=6 e=5 z=0  None .text      setFog__10J3DPEBlockF6J3DFog                                 */
+/* 80317368-8031736C 0004+00 s=1 e=5 z=0  None .text      setFog__10J3DPEBlockF6J3DFog                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1576,7 +1576,7 @@ asm void J3DPEBlock::setFog(J3DFog param_0) {
 #pragma pop
 
 
-/* 8031736C-80317370 0004+00 r=5 e=4 z=0  None .text      setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp                  */
+/* 8031736C-80317370 0004+00 s=1 e=4 z=0  None .text      setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1587,7 +1587,7 @@ asm void J3DPEBlock::setAlphaComp(J3DAlphaComp const* param_0) {
 #pragma pop
 
 
-/* 80317370-80317374 0004+00 r=5 e=4 z=0  None .text      setBlend__10J3DPEBlockFPC8J3DBlend                           */
+/* 80317370-80317374 0004+00 s=1 e=4 z=0  None .text      setBlend__10J3DPEBlockFPC8J3DBlend                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1598,7 +1598,7 @@ asm void J3DPEBlock::setBlend(J3DBlend const* param_0) {
 #pragma pop
 
 
-/* 80317374-80317378 0004+00 r=5 e=4 z=0  None .text      setZMode__10J3DPEBlockFPC8J3DZMode                           */
+/* 80317374-80317378 0004+00 s=1 e=4 z=0  None .text      setZMode__10J3DPEBlockFPC8J3DZMode                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1609,7 +1609,7 @@ asm void J3DPEBlock::setZMode(J3DZMode const* param_0) {
 #pragma pop
 
 
-/* 80317378-8031737C 0004+00 r=5 e=4 z=0  None .text      setZCompLoc__10J3DPEBlockFPCUc                               */
+/* 80317378-8031737C 0004+00 s=1 e=4 z=0  None .text      setZCompLoc__10J3DPEBlockFPCUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1620,7 +1620,7 @@ asm void J3DPEBlock::setZCompLoc(u8 const* param_0) {
 #pragma pop
 
 
-/* 8031737C-80317380 0004+00 r=5 e=4 z=0  None .text      setDither__10J3DPEBlockFUc                                   */
+/* 8031737C-80317380 0004+00 s=1 e=4 z=0  None .text      setDither__10J3DPEBlockFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1631,7 +1631,7 @@ asm void J3DPEBlock::setDither(u8 param_0) {
 #pragma pop
 
 
-/* 80317380-80317384 0004+00 r=5 e=4 z=0  None .text      setDither__10J3DPEBlockFPCUc                                 */
+/* 80317380-80317384 0004+00 s=1 e=4 z=0  None .text      setDither__10J3DPEBlockFPCUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1642,7 +1642,7 @@ asm void J3DPEBlock::setDither(u8 const* param_0) {
 #pragma pop
 
 
-/* 80317384-8031738C 0008+00 r=5 e=4 z=0  None .text      getDither__10J3DPEBlockCFv                                   */
+/* 80317384-8031738C 0008+00 s=1 e=4 z=0  None .text      getDither__10J3DPEBlockCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1653,7 +1653,7 @@ asm void J3DPEBlock::getDither() const {
 #pragma pop
 
 
-/* 8031738C-80317394 0008+00 r=6 e=5 z=0  None .text      getFogOffset__10J3DPEBlockCFv                                */
+/* 8031738C-80317394 0008+00 s=1 e=5 z=0  None .text      getFogOffset__10J3DPEBlockCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1664,7 +1664,7 @@ asm void J3DPEBlock::getFogOffset() const {
 #pragma pop
 
 
-/* 80317394-80317398 0004+00 r=6 e=5 z=0  None .text      setFogOffset__10J3DPEBlockFUl                                */
+/* 80317394-80317398 0004+00 s=1 e=5 z=0  None .text      setFogOffset__10J3DPEBlockFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1675,7 +1675,7 @@ asm void J3DPEBlock::setFogOffset(u32 param_0) {
 #pragma pop
 
 
-/* 80317398-8031739C 0004+00 r=1 e=0 z=0  None .text      diff__15J3DIndBlockNullFUl                                   */
+/* 80317398-8031739C 0004+00 s=1 e=0 z=0  None .text      diff__15J3DIndBlockNullFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1686,7 +1686,7 @@ asm void J3DIndBlockNull::diff(u32 param_0) {
 #pragma pop
 
 
-/* 8031739C-803173A0 0004+00 r=1 e=0 z=0  None .text      load__15J3DIndBlockNullFv                                    */
+/* 8031739C-803173A0 0004+00 s=1 e=0 z=0  None .text      load__15J3DIndBlockNullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1697,7 +1697,7 @@ asm void J3DIndBlockNull::load() {
 #pragma pop
 
 
-/* 803173A0-803173A4 0004+00 r=1 e=0 z=0  None .text      reset__15J3DIndBlockNullFP11J3DIndBlock                      */
+/* 803173A0-803173A4 0004+00 s=1 e=0 z=0  None .text      reset__15J3DIndBlockNullFP11J3DIndBlock                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1708,7 +1708,7 @@ asm void J3DIndBlockNull::reset(J3DIndBlock* param_0) {
 #pragma pop
 
 
-/* 803173A4-803173B0 000C+00 r=1 e=0 z=0  None .text      getType__15J3DIndBlockNullFv                                 */
+/* 803173A4-803173B0 000C+00 s=1 e=0 z=0  None .text      getType__15J3DIndBlockNullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1719,7 +1719,7 @@ asm void J3DIndBlockNull::getType() {
 #pragma pop
 
 
-/* 803173B0-8031740C 005C+00 r=1 e=0 z=0  None .text      __dt__15J3DIndBlockNullFv                                    */
+/* 803173B0-8031740C 005C+00 s=1 e=0 z=0  None .text      __dt__15J3DIndBlockNullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1730,7 +1730,7 @@ asm J3DIndBlockNull::~J3DIndBlockNull() {
 #pragma pop
 
 
-/* 8031740C-80317410 0004+00 r=2 e=0 z=0  None .text      setIndTexOrder__11J3DIndBlockFUlPC14J3DIndTexOrder           */
+/* 8031740C-80317410 0004+00 s=2 e=0 z=0  None .text      setIndTexOrder__11J3DIndBlockFUlPC14J3DIndTexOrder           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1741,7 +1741,7 @@ asm void J3DIndBlock::setIndTexOrder(u32 param_0, J3DIndTexOrder const* param_1)
 #pragma pop
 
 
-/* 80317410-80317414 0004+00 r=2 e=0 z=0  None .text      setIndTexOrder__11J3DIndBlockFUl14J3DIndTexOrder             */
+/* 80317410-80317414 0004+00 s=2 e=0 z=0  None .text      setIndTexOrder__11J3DIndBlockFUl14J3DIndTexOrder             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1752,7 +1752,7 @@ asm void J3DIndBlock::setIndTexOrder(u32 param_0, J3DIndTexOrder param_1) {
 #pragma pop
 
 
-/* 80317414-80317418 0004+00 r=2 e=0 z=0  None .text      setIndTexMtx__11J3DIndBlockFUlPC12J3DIndTexMtx               */
+/* 80317414-80317418 0004+00 s=2 e=0 z=0  None .text      setIndTexMtx__11J3DIndBlockFUlPC12J3DIndTexMtx               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1763,7 +1763,7 @@ asm void J3DIndBlock::setIndTexMtx(u32 param_0, J3DIndTexMtx const* param_1) {
 #pragma pop
 
 
-/* 80317418-8031741C 0004+00 r=2 e=0 z=0  None .text      setIndTexCoordScale__11J3DIndBlockFUlPC19J3DIndTexCoordScale */
+/* 80317418-8031741C 0004+00 s=2 e=0 z=0  None .text      setIndTexCoordScale__11J3DIndBlockFUlPC19J3DIndTexCoordScale */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1774,7 +1774,7 @@ asm void J3DIndBlock::setIndTexCoordScale(u32 param_0, J3DIndTexCoordScale const
 #pragma pop
 
 
-/* 8031741C-80317420 0004+00 r=2 e=1 z=0  None .text      setTexGenNum__14J3DTexGenBlockFPCUl                          */
+/* 8031741C-80317420 0004+00 s=1 e=1 z=0  None .text      setTexGenNum__14J3DTexGenBlockFPCUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1785,7 +1785,7 @@ asm void J3DTexGenBlock::setTexGenNum(u32 const* param_0) {
 #pragma pop
 
 
-/* 80317420-80317424 0004+00 r=3 e=2 z=0  None .text      setNBTScale__14J3DTexGenBlockF11J3DNBTScale                  */
+/* 80317420-80317424 0004+00 s=1 e=2 z=0  None .text      setNBTScale__14J3DTexGenBlockF11J3DNBTScale                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1796,7 +1796,7 @@ asm void J3DTexGenBlock::setNBTScale(J3DNBTScale param_0) {
 #pragma pop
 
 
-/* 80317424-80317428 0004+00 r=3 e=2 z=0  None .text      setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale                */
+/* 80317424-80317428 0004+00 s=1 e=2 z=0  None .text      setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1807,7 +1807,7 @@ asm void J3DTexGenBlock::setNBTScale(J3DNBTScale const* param_0) {
 #pragma pop
 
 
-/* 80317428-80317430 0008+00 r=2 e=1 z=0  None .text      getTexMtxOffset__14J3DTexGenBlockCFv                         */
+/* 80317428-80317430 0008+00 s=1 e=1 z=0  None .text      getTexMtxOffset__14J3DTexGenBlockCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1818,7 +1818,7 @@ asm void J3DTexGenBlock::getTexMtxOffset() const {
 #pragma pop
 
 
-/* 80317430-80317434 0004+00 r=2 e=1 z=0  None .text      setTexMtxOffset__14J3DTexGenBlockFUl                         */
+/* 80317430-80317434 0004+00 s=1 e=1 z=0  None .text      setTexMtxOffset__14J3DTexGenBlockFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1829,7 +1829,7 @@ asm void J3DTexGenBlock::setTexMtxOffset(u32 param_0) {
 #pragma pop
 
 
-/* 80317434-80317438 0004+00 r=2 e=1 z=0  None .text      patchMatColor__13J3DColorBlockFv                             */
+/* 80317434-80317438 0004+00 s=1 e=1 z=0  None .text      patchMatColor__13J3DColorBlockFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1840,7 +1840,7 @@ asm void J3DColorBlock::patchMatColor() {
 #pragma pop
 
 
-/* 80317438-8031743C 0004+00 r=4 e=3 z=0  None .text      diffAmbColor__13J3DColorBlockFv                              */
+/* 80317438-8031743C 0004+00 s=1 e=3 z=0  None .text      diffAmbColor__13J3DColorBlockFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1851,7 +1851,7 @@ asm void J3DColorBlock::diffAmbColor() {
 #pragma pop
 
 
-/* 8031743C-80317440 0004+00 r=2 e=1 z=0  None .text      diffMatColor__13J3DColorBlockFv                              */
+/* 8031743C-80317440 0004+00 s=1 e=1 z=0  None .text      diffMatColor__13J3DColorBlockFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1862,7 +1862,7 @@ asm void J3DColorBlock::diffMatColor() {
 #pragma pop
 
 
-/* 80317440-80317444 0004+00 r=2 e=1 z=0  None .text      diffColorChan__13J3DColorBlockFv                             */
+/* 80317440-80317444 0004+00 s=1 e=1 z=0  None .text      diffColorChan__13J3DColorBlockFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1873,7 +1873,7 @@ asm void J3DColorBlock::diffColorChan() {
 #pragma pop
 
 
-/* 80317444-80317448 0004+00 r=4 e=3 z=0  None .text      diffLightObj__13J3DColorBlockFUl                             */
+/* 80317444-80317448 0004+00 s=1 e=3 z=0  None .text      diffLightObj__13J3DColorBlockFUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1884,7 +1884,7 @@ asm void J3DColorBlock::diffLightObj(u32 param_0) {
 #pragma pop
 
 
-/* 80317448-8031744C 0004+00 r=2 e=1 z=0  None .text      setMatColor__13J3DColorBlockFUlPC10J3DGXColor                */
+/* 80317448-8031744C 0004+00 s=1 e=1 z=0  None .text      setMatColor__13J3DColorBlockFUlPC10J3DGXColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1895,7 +1895,7 @@ asm void J3DColorBlock::setMatColor(u32 param_0, J3DGXColor const* param_1) {
 #pragma pop
 
 
-/* 8031744C-80317450 0004+00 r=2 e=1 z=0  None .text      setColorChanNum__13J3DColorBlockFPCUc                        */
+/* 8031744C-80317450 0004+00 s=1 e=1 z=0  None .text      setColorChanNum__13J3DColorBlockFPCUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1906,7 +1906,7 @@ asm void J3DColorBlock::setColorChanNum(u8 const* param_0) {
 #pragma pop
 
 
-/* 80317450-80317454 0004+00 r=2 e=1 z=0  None .text      setColorChan__13J3DColorBlockFUlPC12J3DColorChan             */
+/* 80317450-80317454 0004+00 s=1 e=1 z=0  None .text      setColorChan__13J3DColorBlockFUlPC12J3DColorChan             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1917,7 +1917,7 @@ asm void J3DColorBlock::setColorChan(u32 param_0, J3DColorChan const* param_1) {
 #pragma pop
 
 
-/* 80317454-8031745C 0008+00 r=4 e=3 z=0  None .text      getLight__13J3DColorBlockFUl                                 */
+/* 80317454-8031745C 0008+00 s=1 e=3 z=0  None .text      getLight__13J3DColorBlockFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1928,7 +1928,7 @@ asm void J3DColorBlock::getLight(u32 param_0) {
 #pragma pop
 
 
-/* 8031745C-80317460 0004+00 r=2 e=1 z=0  None .text      setCullMode__13J3DColorBlockFUc                              */
+/* 8031745C-80317460 0004+00 s=1 e=1 z=0  None .text      setCullMode__13J3DColorBlockFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1939,7 +1939,7 @@ asm void J3DColorBlock::setCullMode(u8 param_0) {
 #pragma pop
 
 
-/* 80317460-80317464 0004+00 r=2 e=1 z=0  None .text      setCullMode__13J3DColorBlockFPCUc                            */
+/* 80317460-80317464 0004+00 s=1 e=1 z=0  None .text      setCullMode__13J3DColorBlockFPCUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1950,7 +1950,7 @@ asm void J3DColorBlock::setCullMode(u8 const* param_0) {
 #pragma pop
 
 
-/* 80317464-8031746C 0008+00 r=2 e=1 z=0  None .text      getMatColorOffset__13J3DColorBlockCFv                        */
+/* 80317464-8031746C 0008+00 s=1 e=1 z=0  None .text      getMatColorOffset__13J3DColorBlockCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1961,7 +1961,7 @@ asm void J3DColorBlock::getMatColorOffset() const {
 #pragma pop
 
 
-/* 8031746C-80317474 0008+00 r=2 e=1 z=0  None .text      getColorChanOffset__13J3DColorBlockCFv                       */
+/* 8031746C-80317474 0008+00 s=1 e=1 z=0  None .text      getColorChanOffset__13J3DColorBlockCFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1972,7 +1972,7 @@ asm void J3DColorBlock::getColorChanOffset() const {
 #pragma pop
 
 
-/* 80317474-80317478 0004+00 r=2 e=1 z=0  None .text      setMatColorOffset__13J3DColorBlockFUl                        */
+/* 80317474-80317478 0004+00 s=1 e=1 z=0  None .text      setMatColorOffset__13J3DColorBlockFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1983,7 +1983,7 @@ asm void J3DColorBlock::setMatColorOffset(u32 param_0) {
 #pragma pop
 
 
-/* 80317478-8031747C 0004+00 r=2 e=1 z=0  None .text      setColorChanOffset__13J3DColorBlockFUl                       */
+/* 80317478-8031747C 0004+00 s=1 e=1 z=0  None .text      setColorChanOffset__13J3DColorBlockFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

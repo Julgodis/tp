@@ -4,9 +4,9 @@ lbl_80BF0020:
 /* 80BF0028 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BF002C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BF0030 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 80BF0034 00000014  3C 80 00 00 */	lis r4, j3dDefaultLightInfo@ha /* 803A1EC8 */
-/* 80BF0038 00000018  38 84 00 00 */	addi r4, r4, j3dDefaultLightInfo@l /* 803A1EC8 */
-/* 80BF003C 0000001C  4B FF EA 1D */	bl __as__12J3DLightInfoFRC12J3DLightInfo
+/* 80BF0034 00000014  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80BF0038 00000018  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
+/* 80BF003C 0000001C  4B FF EA 1D */	bl _unresolved
 /* 80BF0040 00000020  7F E3 FB 78 */	mr r3, r31
 /* 80BF0044 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80BF0048 00000028  80 01 00 14 */	lwz r0, 0x14(r1)

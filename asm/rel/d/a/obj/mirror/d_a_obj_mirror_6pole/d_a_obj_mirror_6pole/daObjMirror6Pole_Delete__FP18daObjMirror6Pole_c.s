@@ -6,13 +6,13 @@ lbl_80C96328:
 /* 80C96338 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80C9633C 00000014  41 82 00 24 */	beq lbl_80C96360
 /* 80C96340 00000018  38 7F 05 70 */	addi r3, r31, 0x570
-/* 80C96344 0000001C  3C 80 00 00 */	lis r4, l_arcName@ha /* 80C9654C */
-/* 80C96348 00000020  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80C9654C */
+/* 80C96344 0000001C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80C96348 00000020  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80C9634C 00000024  80 84 00 00 */	lwz r4, 0(r4)
-/* 80C96350 00000028  4B FF FA A9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80C96350 00000028  4B FF FA A9 */	bl _unresolved
 /* 80C96354 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 80C96358 00000030  38 80 00 00 */	li r4, 0
-/* 80C9635C 00000034  4B FF FA 9D */	bl __dt__10fopAc_ac_cFv
+/* 80C9635C 00000034  4B FF FA 9D */	bl _unresolved
 lbl_80C96360:
 /* 80C96360 00000000  38 60 00 01 */	li r3, 1
 /* 80C96364 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

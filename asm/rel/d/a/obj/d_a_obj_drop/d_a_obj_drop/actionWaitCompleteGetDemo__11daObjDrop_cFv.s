@@ -13,21 +13,21 @@ lbl_80BE1ACC:
 /* 80BE1AF8 0000002C  3C 04 00 01 */	addis r0, r4, 1
 /* 80BE1AFC 00000030  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80BE1B00 00000034  41 82 00 14 */	beq lbl_80BE1B14
-/* 80BE1B04 00000038  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80BE1B08 0000003C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BE1B04 00000038  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE1B08 0000003C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BE1B0C 00000040  38 63 4E C8 */	addi r3, r3, 0x4ec8
-/* 80BE1B10 00000044  4B FF E1 A9 */	bl setPtI_Id__14dEvt_control_cFUi
+/* 80BE1B10 00000044  4B FF E1 A9 */	bl _unresolved
 lbl_80BE1B14:
-/* 80BE1B14 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80BE1B18 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80BE1B14 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80BE1B18 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80BE1B1C 00000008  38 63 09 58 */	addi r3, r3, 0x958
 /* 80BE1B20 0000000C  38 80 00 0D */	li r4, 0xd
-/* 80BE1B24 00000010  4B FF E1 95 */	bl onSwitch__12dSv_memBit_cFi
+/* 80BE1B24 00000010  4B FF E1 95 */	bl _unresolved
 /* 80BE1B28 00000014  48 00 00 1C */	b lbl_80BE1B44
 lbl_80BE1B2C:
 /* 80BE1B2C 00000000  38 80 00 00 */	li r4, 0
 /* 80BE1B30 00000004  38 A0 00 00 */	li r5, 0
-/* 80BE1B34 00000008  4B FF E1 85 */	bl fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs
+/* 80BE1B34 00000008  4B FF E1 85 */	bl _unresolved
 /* 80BE1B38 0000000C  A0 1F 00 FA */	lhz r0, 0xfa(r31)
 /* 80BE1B3C 00000010  60 00 00 08 */	ori r0, r0, 8
 /* 80BE1B40 00000014  B0 1F 00 FA */	sth r0, 0xfa(r31)

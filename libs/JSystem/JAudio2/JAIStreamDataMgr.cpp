@@ -42,7 +42,7 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9A08-803C9A1C 0014+00 r=2 e=1 z=0  None .data      __vt__16JAIStreamAramMgr                                     */
+/* 803C9A08-803C9A1C 0014+00 s=1 e=1 z=0  None .data      __vt__16JAIStreamAramMgr                                     */
 SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -51,7 +51,7 @@ SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
 	/* 4    */ (void*)__dt__16JAIStreamAramMgrFv,
 };
 
-/* 803C9A1C-803C9A30 0010+04 r=3 e=2 z=0  None .data      __vt__16JAIStreamDataMgr                                     */
+/* 803C9A1C-803C9A30 0010+04 s=1 e=2 z=0  None .data      __vt__16JAIStreamDataMgr                                     */
 SECTION_DATA void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -61,7 +61,7 @@ SECTION_DATA void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802A3AD8-802A3B20 0048+00 r=5 e=4 z=0  None .text      __dt__16JAIStreamDataMgrFv                                   */
+/* 802A3AD8-802A3B20 0048+00 s=1 e=4 z=0  None .text      __dt__16JAIStreamDataMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm JAIStreamDataMgr::~JAIStreamDataMgr() {
 #pragma pop
 
 
-/* 802A3B20-802A3B68 0048+00 r=3 e=2 z=0  None .text      __dt__16JAIStreamAramMgrFv                                   */
+/* 802A3B20-802A3B68 0048+00 s=1 e=2 z=0  None .text      __dt__16JAIStreamAramMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

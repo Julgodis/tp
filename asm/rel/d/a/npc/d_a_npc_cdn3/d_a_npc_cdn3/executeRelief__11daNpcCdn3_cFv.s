@@ -15,20 +15,20 @@ lbl_8097A9E4:
 /* 8097AA18 00000034  88 1F 0A C6 */	lbz r0, 0xac6(r31)
 /* 8097AA1C 00000038  28 00 00 00 */	cmplwi r0, 0
 /* 8097AA20 0000003C  41 82 00 10 */	beq lbl_8097AA30
-/* 8097AA24 00000040  4B FF E2 95 */	bl dKy_getDarktime_minute__Fv
+/* 8097AA24 00000040  4B FF E2 95 */	bl _unresolved
 /* 8097AA28 00000044  7C 7E 1B 78 */	mr r30, r3
 /* 8097AA2C 00000048  48 00 00 0C */	b lbl_8097AA38
 lbl_8097AA30:
-/* 8097AA30 00000000  4B FF E2 89 */	bl dKy_getdaytime_minute__Fv
+/* 8097AA30 00000000  4B FF E2 89 */	bl _unresolved
 /* 8097AA34 00000004  7C 7E 1B 78 */	mr r30, r3
 lbl_8097AA38:
 /* 8097AA38 00000000  88 1F 0A C6 */	lbz r0, 0xac6(r31)
 /* 8097AA3C 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 8097AA40 00000008  41 82 00 0C */	beq lbl_8097AA4C
-/* 8097AA44 0000000C  4B FF E2 75 */	bl dKy_getDarktime_hour__Fv
+/* 8097AA44 0000000C  4B FF E2 75 */	bl _unresolved
 /* 8097AA48 00000010  48 00 00 08 */	b lbl_8097AA50
 lbl_8097AA4C:
-/* 8097AA4C 00000000  4B FF E2 6D */	bl dKy_getdaytime_hour__Fv
+/* 8097AA4C 00000000  4B FF E2 6D */	bl _unresolved
 lbl_8097AA50:
 /* 8097AA50 00000000  1C 03 00 3C */	mulli r0, r3, 0x3c
 /* 8097AA54 00000004  7C 7E 02 14 */	add r3, r30, r0
@@ -77,7 +77,7 @@ lbl_8097AA50:
 /* 8097AB00 000000B0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8097AB04 000000B4  38 61 00 14 */	addi r3, r1, 0x14
 /* 8097AB08 000000B8  38 81 00 08 */	addi r4, r1, 8
-/* 8097AB0C 000000BC  4B FF E1 AD */	bl cLib_targetAngleY__FRC3VecRC3Vec
+/* 8097AB0C 000000BC  4B FF E1 AD */	bl _unresolved
 /* 8097AB10 000000C0  B0 7F 04 DE */	sth r3, 0x4de(r31)
 /* 8097AB14 000000C4  A8 1F 04 DE */	lha r0, 0x4de(r31)
 /* 8097AB18 000000C8  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
@@ -93,7 +93,7 @@ lbl_8097AA50:
 /* 8097AB40 000000F0  38 C0 00 01 */	li r6, 1
 /* 8097AB44 000000F4  38 FF 04 D0 */	addi r7, r31, 0x4d0
 /* 8097AB48 000000F8  39 00 00 00 */	li r8, 0
-/* 8097AB4C 000000FC  4B FF E1 6D */	bl setPath__11PathTrace_cFiiiP4cXyzb
+/* 8097AB4C 000000FC  4B FF E1 6D */	bl _unresolved
 /* 8097AB50 00000100  7F E3 FB 78 */	mr r3, r31
 /* 8097AB54 00000104  38 80 00 01 */	li r4, 1
 /* 8097AB58 00000108  4B FF E2 7D */	bl setAction__11daNpcCdn3_cFQ211daNpcCdn3_c6Mode_e
@@ -101,7 +101,7 @@ lbl_8097AA50:
 /* 8097AB60 00000110  98 1F 0B 95 */	stb r0, 0xb95(r31)
 lbl_8097AB64:
 /* 8097AB64 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8097AB68 00000004  4B FF E1 51 */	bl checkFearSituation__10daNpcCd2_cFv
+/* 8097AB68 00000004  4B FF E1 51 */	bl _unresolved
 /* 8097AB6C 00000008  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8097AB70 0000000C  41 82 00 40 */	beq lbl_8097ABB0
 /* 8097AB74 00000010  80 1F 0B 58 */	lwz r0, 0xb58(r31)
@@ -126,7 +126,7 @@ lbl_8097ABB0:
 /* 8097ABB4 00000004  A8 9F 0B 92 */	lha r4, 0xb92(r31)
 /* 8097ABB8 00000008  38 A0 00 03 */	li r5, 3
 /* 8097ABBC 0000000C  38 C0 06 00 */	li r6, 0x600
-/* 8097ABC0 00000010  4B FF E0 F9 */	bl cLib_addCalcAngleS2__FPssss
+/* 8097ABC0 00000010  4B FF E0 F9 */	bl _unresolved
 /* 8097ABC4 00000014  83 E1 00 3C */	lwz r31, 0x3c(r1)
 /* 8097ABC8 00000018  83 C1 00 38 */	lwz r30, 0x38(r1)
 /* 8097ABCC 0000001C  80 01 00 44 */	lwz r0, 0x44(r1)

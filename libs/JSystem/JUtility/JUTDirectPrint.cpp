@@ -81,7 +81,7 @@ extern "C" void vsnprintf(); // 1
 // Declarations:
 // 
 
-/* 802E41E8-802E4240 0058+00 r=1 e=0 z=0  None .text      __ct__14JUTDirectPrintFv                                     */
+/* 802E41E8-802E4240 0058+00 s=1 e=0 z=0  None .text      __ct__14JUTDirectPrintFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,10 +93,10 @@ asm JUTDirectPrint::JUTDirectPrint() {
 
 
 /* ############################################################################################## */
-/* 80451528-80451530 0004+04 r=5 e=4 z=0  None .sbss      sDirectPrint__14JUTDirectPrint                               */
+/* 80451528-80451530 0004+04 s=1 e=4 z=0  None .sbss      sDirectPrint__14JUTDirectPrint                               */
 u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
-/* 802E4240-802E4288 0048+00 r=1 e=1 z=0  None .text      start__14JUTDirectPrintFv                                    */
+/* 802E4240-802E4288 0048+00 s=0 e=1 z=0  None .text      start__14JUTDirectPrintFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ asm void JUTDirectPrint::start() {
 #pragma pop
 
 
-/* 802E4288-802E431C 0094+00 r=2 e=1 z=0  None .text      erase__14JUTDirectPrintFiiii                                 */
+/* 802E4288-802E431C 0094+00 s=1 e=1 z=0  None .text      erase__14JUTDirectPrintFiiii                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +119,7 @@ asm void JUTDirectPrint::erase(int param_0, int param_1, int param_2, int param_
 
 
 /* ############################################################################################## */
-/* 803CC6B8-803CC738 0080+00 r=2 e=0 z=0  None .data      sAsciiTable__14JUTDirectPrint                                */
+/* 803CC6B8-803CC738 0080+00 s=2 e=0 z=0  None .data      sAsciiTable__14JUTDirectPrint                                */
 SECTION_DATA static u8 sAsciiTable__14JUTDirectPrint[128] = {
 	0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A, 0xFD, 0xFE, 0x7A, 0x7A, 0x7A, 0x7A, 0x7A,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -131,7 +131,7 @@ SECTION_DATA static u8 sAsciiTable__14JUTDirectPrint[128] = {
 	0x8C, 0x8D, 0x8E, 0x8F, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x76, 0x77, 0x78, 0x79, 0x7A,
 };
 
-/* 802E431C-802E456C 0250+00 r=1 e=0 z=0  None .text      drawChar__14JUTDirectPrintFiii                               */
+/* 802E431C-802E456C 0250+00 s=1 e=0 z=0  None .text      drawChar__14JUTDirectPrintFiii                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +142,7 @@ asm void JUTDirectPrint::drawChar(int param_0, int param_1, int param_2) {
 #pragma pop
 
 
-/* 802E456C-802E45A4 0038+00 r=5 e=4 z=0  None .text      changeFrameBuffer__14JUTDirectPrintFPvUsUs                   */
+/* 802E456C-802E45A4 0038+00 s=1 e=4 z=0  None .text      changeFrameBuffer__14JUTDirectPrintFPvUsUs                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,7 +153,7 @@ asm void JUTDirectPrint::changeFrameBuffer(void* param_0, u16 param_1, u16 param
 #pragma pop
 
 
-/* 802E45A4-802E46D8 0134+00 r=1 e=0 z=0  None .text      printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb       */
+/* 802E45A4-802E46D8 0134+00 s=1 e=0 z=0  None .text      printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ extern "C" asm static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_struct
 
 
 /* ############################################################################################## */
-/* 8039D9A0-8039D9A8 0003+05 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039D9A0-8039D9A8 0003+05 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -174,7 +174,7 @@ SECTION_DEAD char const* const stringBase_8039D9A0 = "%s";
 SECTION_DEAD static char const* const pad_8039D9A3 = "\0\0\0\0";
 #pragma pop
 
-/* 802E46D8-802E4708 0030+00 r=2 e=2 z=0  None .text      drawString__14JUTDirectPrintFUsUsPc                          */
+/* 802E46D8-802E4708 0030+00 s=0 e=2 z=0  None .text      drawString__14JUTDirectPrintFUsUsPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +185,7 @@ asm void JUTDirectPrint::drawString(u16 param_0, u16 param_1, char* param_2) {
 #pragma pop
 
 
-/* 802E4708-802E4798 0090+00 r=1 e=0 z=0  None .text      drawString_f__14JUTDirectPrintFUsUsPCce                      */
+/* 802E4708-802E4798 0090+00 s=1 e=0 z=0  None .text      drawString_f__14JUTDirectPrintFUsUsPCce                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm void JUTDirectPrint::drawString_f(u16 param_0, u16 param_1, char const* para
 #pragma pop
 
 
-/* 802E4798-802E47C8 0030+00 r=2 e=2 z=0  None .text      setCharColor__14JUTDirectPrintFQ28JUtility6TColor            */
+/* 802E4798-802E47C8 0030+00 s=0 e=2 z=0  None .text      setCharColor__14JUTDirectPrintFQ28JUtility6TColor            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,40 +208,40 @@ asm void JUTDirectPrint::setCharColor(JUtility::TColor param_0) {
 
 
 /* ############################################################################################## */
-/* 80456060-80456068 0008+00 r=1 e=0 z=0  None .sdata2    @503                                                         */
+/* 80456060-80456068 0008+00 s=1 e=0 z=0  None .sdata2    @503                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_503 = 128.0;
 
-/* 80456068-80456070 0008+00 r=1 e=0 z=0  None .sdata2    @504                                                         */
+/* 80456068-80456070 0008+00 s=1 e=0 z=0  None .sdata2    @504                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_504 = 0.439;
 
-/* 80456070-80456078 0008+00 r=1 e=0 z=0  None .sdata2    @505                                                         */
+/* 80456070-80456078 0008+00 s=1 e=0 z=0  None .sdata2    @505                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_505 = -0.148;
 
-/* 80456078-80456080 0008+00 r=1 e=0 z=0  None .sdata2    @506                                                         */
+/* 80456078-80456080 0008+00 s=1 e=0 z=0  None .sdata2    @506                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_506 = 0.291;
 
-/* 80456080-80456088 0008+00 r=1 e=0 z=0  None .sdata2    @507                                                         */
+/* 80456080-80456088 0008+00 s=1 e=0 z=0  None .sdata2    @507                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_507 = 0.368;
 
-/* 80456088-80456090 0008+00 r=1 e=0 z=0  None .sdata2    @508                                                         */
+/* 80456088-80456090 0008+00 s=1 e=0 z=0  None .sdata2    @508                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_508 = 0.071;
 
-/* 80456090-80456098 0008+00 r=1 e=0 z=0  None .sdata2    @509                                                         */
+/* 80456090-80456098 0008+00 s=1 e=0 z=0  None .sdata2    @509                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_509 = 16.0;
 
-/* 80456098-804560A0 0008+00 r=1 e=0 z=0  None .sdata2    @510                                                         */
+/* 80456098-804560A0 0008+00 s=1 e=0 z=0  None .sdata2    @510                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_510 = 0.098;
 
-/* 804560A0-804560A8 0008+00 r=1 e=0 z=0  None .sdata2    @511                                                         */
+/* 804560A0-804560A8 0008+00 s=1 e=0 z=0  None .sdata2    @511                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_511 = 0.257;
 
-/* 804560A8-804560B0 0008+00 r=1 e=0 z=0  None .sdata2    @512                                                         */
+/* 804560A8-804560B0 0008+00 s=1 e=0 z=0  None .sdata2    @512                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_512 = 0.504;
 
-/* 804560B0-804560B8 0008+00 r=1 e=0 z=0  None .sdata2    @514                                                         */
+/* 804560B0-804560B8 0008+00 s=1 e=0 z=0  None .sdata2    @514                                                         */
 SECTION_SDATA2 static f64 JUTDirectPrint__lit_514 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E47C8-802E495C 0194+00 r=2 e=0 z=0  None .text      setCharColor__14JUTDirectPrintFUcUcUc                        */
+/* 802E47C8-802E495C 0194+00 s=2 e=0 z=0  None .text      setCharColor__14JUTDirectPrintFUcUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +253,7 @@ asm void JUTDirectPrint::setCharColor(u8 param_0, u8 param_1, u8 param_2) {
 
 
 /* ############################################################################################## */
-/* 803CC738-803CC838 0100+00 r=0 e=0 z=0  None .data      sFontData__14JUTDirectPrint                                  */
+/* 803CC738-803CC838 0100+00 s=0 e=0 z=0  None .data      sFontData__14JUTDirectPrint                                  */
 SECTION_DATA void* sFontData__14JUTDirectPrint[64] = {
 	/* 0    */ (void*)0x70871C30,
 	/* 1    */ (void*)0x8988A250,
@@ -321,7 +321,7 @@ SECTION_DATA void* sFontData__14JUTDirectPrint[64] = {
 	/* 63   */ (void*)NULL,
 };
 
-/* 803CC838-803CC96C 0134+00 r=0 e=0 z=0  None .data      sFontData2__14JUTDirectPrint                                 */
+/* 803CC838-803CC96C 0134+00 s=0 e=0 z=0  None .data      sFontData2__14JUTDirectPrint                                 */
 SECTION_DATA void* sFontData2__14JUTDirectPrint[77] = {
 	/* 0    */ (void*)0x51421820,
 	/* 1    */ (void*)0x53E7A420,
@@ -402,7 +402,7 @@ SECTION_DATA void* sFontData2__14JUTDirectPrint[77] = {
 	/* 76   */ (void*)0xF8000000,
 };
 
-/* 803CC96C-803CC980 0010+04 r=0 e=0 z=0  None .data      twiceBit$371                                                 */
+/* 803CC96C-803CC980 0010+04 s=0 e=0 z=0  None .data      twiceBit$371                                                 */
 SECTION_DATA u8 data_803CC96C[16 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0F,
 	/* padding */

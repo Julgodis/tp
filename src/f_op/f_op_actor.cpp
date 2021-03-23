@@ -93,10 +93,10 @@ struct dEvt_control_c {
 	/* 80042FA8 */ void moveApproval(void*);
 };
 
-struct _GXColor {
+struct cXyz {
 };
 
-struct cXyz {
+struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
@@ -244,7 +244,7 @@ extern "C" extern u8 struct_80451124[4];
 // Declarations:
 // 
 
-/* 80018B64-80018BD0 006C+00 r=569 e=7 z=562  None .text      __ct__10fopAc_ac_cFv                                         */
+/* 80018B64-80018BD0 006C+00 s=0 e=7 z=0  None .text      __ct__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +255,7 @@ asm fopAc_ac_c::fopAc_ac_c() {
 #pragma pop
 
 
-/* 80018BD0-80018C0C 003C+00 r=12 e=12 z=0  None .text      __dt__5csXyzFv                                               */
+/* 80018BD0-80018C0C 003C+00 s=0 e=12 z=0  None .text      __dt__5csXyzFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +266,7 @@ asm csXyz::~csXyz() {
 #pragma pop
 
 
-/* 80018C0C-80018C44 0038+00 r=7 e=6 z=0  None .text      __ct__11J3DLightObjFv                                        */
+/* 80018C0C-80018C44 0038+00 s=1 e=6 z=0  None .text      __ct__11J3DLightObjFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,7 +278,7 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 r=759 e=3 z=756  None .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=0  None .data      g_fopAc_Method                                               */
 SECTION_DATA void* g_fopAc_Method[8] = {
 	/* 0    */ (void*)fopAc_Create__FPv,
 	/* 1    */ (void*)fopAc_Delete__FPv,
@@ -290,7 +290,7 @@ SECTION_DATA void* g_fopAc_Method[8] = {
 	/* 7    */ (void*)NULL,
 };
 
-/* 803A35D0-803A35E0 000C+04 r=3 e=1 z=0  None .data      __vt__11dEvt_info_c                                          */
+/* 803A35D0-803A35E0 000C+04 s=2 e=1 z=0  None .data      __vt__11dEvt_info_c                                          */
 SECTION_DATA void* __vt__11dEvt_info_c[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -299,7 +299,7 @@ SECTION_DATA void* __vt__11dEvt_info_c[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80018C44-80018C8C 0048+00 r=1 e=0 z=0  None .text      __dt__11dEvt_info_cFv                                        */
+/* 80018C44-80018C8C 0048+00 s=1 e=0 z=0  None .text      __dt__11dEvt_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +310,7 @@ asm dEvt_info_c::~dEvt_info_c() {
 #pragma pop
 
 
-/* 80018C8C-80018CE0 0054+00 r=275 e=5 z=270  None .text      __dt__10fopAc_ac_cFv                                         */
+/* 80018C8C-80018CE0 0054+00 s=0 e=5 z=0  None .text      __dt__10fopAc_ac_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,10 +322,10 @@ asm fopAc_ac_c::~fopAc_ac_c() {
 
 
 /* ############################################################################################## */
-/* 80450CB8-80450CBC 0004+00 r=2 e=0 z=0  None .sbss      g_fopAc_type                                                 */
+/* 80450CB8-80450CBC 0004+00 s=2 e=0 z=0  None .sbss      g_fopAc_type                                                 */
 static u8 g_fopAc_type[4];
 
-/* 80018CE0-80018D0C 002C+00 r=403 e=12 z=391  None .text      fopAc_IsActor__FPv                                           */
+/* 80018CE0-80018D0C 002C+00 s=0 e=12 z=0  None .text      fopAc_IsActor__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,10 +337,10 @@ asm void fopAc_IsActor(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CBC-80450CC0 0004+00 r=3 e=1 z=0  None .sbss      stopStatus__10fopAc_ac_c                                     */
+/* 80450CBC-80450CC0 0004+00 s=2 e=1 z=0  None .sbss      stopStatus__10fopAc_ac_c                                     */
 u8 stopStatus__10fopAc_ac_c[4];
 
-/* 80018D0C-80018DD8 00CC+00 r=1 e=0 z=0  None .text      fopAc_Draw__FPv                                              */
+/* 80018D0C-80018DD8 00CC+00 s=1 e=0 z=0  None .text      fopAc_Draw__FPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,13 +352,13 @@ asm static void fopAc_Draw(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451BC8-80451BCC 0004+00 r=1 e=0 z=0  None .sdata2    @4324                                                        */
+/* 80451BC8-80451BCC 0004+00 s=1 e=0 z=0  None .sdata2    @4324                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4324 = 5000.0f;
 
-/* 80451BCC-80451BD0 0004+00 r=1 e=0 z=0  None .sdata2    @4325                                                        */
+/* 80451BCC-80451BD0 0004+00 s=1 e=0 z=0  None .sdata2    @4325                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4325 = -9.999999848243207e+30f;
 
-/* 80018DD8-80018F78 01A0+00 r=1 e=0 z=0  None .text      fopAc_Execute__FPv                                           */
+/* 80018DD8-80018F78 01A0+00 s=1 e=0 z=0  None .text      fopAc_Execute__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,7 +369,7 @@ asm static void fopAc_Execute(void* param_0) {
 #pragma pop
 
 
-/* 80018F78-80018FCC 0054+00 r=1 e=0 z=0  None .text      fopAc_IsDelete__FPv                                          */
+/* 80018F78-80018FCC 0054+00 s=1 e=0 z=0  None .text      fopAc_IsDelete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +380,7 @@ asm static void fopAc_IsDelete(void* param_0) {
 #pragma pop
 
 
-/* 80018FCC-8001904C 0080+00 r=1 e=0 z=0  None .text      fopAc_Delete__FPv                                            */
+/* 80018FCC-8001904C 0080+00 s=1 e=0 z=0  None .text      fopAc_Delete__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,16 +392,16 @@ asm static void fopAc_Delete(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451BD0-80451BD4 0004+00 r=2 e=0 z=0  None .sdata2    @4431                                                        */
+/* 80451BD0-80451BD4 0004+00 s=2 e=0 z=0  None .sdata2    @4431                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4431 = 1.0f / 10.0f;
 
-/* 80451BD4-80451BD8 0004+00 r=1 e=0 z=0  None .sdata2    @4432                                                        */
+/* 80451BD4-80451BD8 0004+00 s=1 e=0 z=0  None .sdata2    @4432                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4432 = -100.0f;
 
-/* 80451BD8-80451BE0 0008+00 r=1 e=0 z=0  None .sdata2    @4434                                                        */
+/* 80451BD8-80451BE0 0008+00 s=1 e=0 z=0  None .sdata2    @4434                                                        */
 SECTION_SDATA2 static f64 f_op_f_op_actor__lit_4434 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8001904C-800193FC 03B0+00 r=1 e=0 z=0  None .text      fopAc_Create__FPv                                            */
+/* 8001904C-800193FC 03B0+00 s=1 e=0 z=0  None .text      fopAc_Create__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +412,7 @@ asm static void fopAc_Create(void* param_0) {
 #pragma pop
 
 
-/* 800193FC-80019404 0008+00 r=1 e=1 z=0  None .text      getFileListInfo__15dStage_roomDt_cCFv                        */
+/* 800193FC-80019404 0008+00 s=0 e=1 z=0  None .text      getFileListInfo__15dStage_roomDt_cCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,7 +424,7 @@ asm void dStage_roomDt_c::getFileListInfo() const {
 
 
 /* ############################################################################################## */
-/* 80378878-80378880 0006+02 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80378878-80378880 0006+02 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -433,7 +433,7 @@ SECTION_DEAD char const* const stringBase_80378878 = "Alink";
 SECTION_DEAD static char const* const pad_8037887E = "\0";
 #pragma pop
 
-/* 80019404-800194FC 00F8+00 r=2 e=0 z=2  None .text      initBallModel__13fopEn_enemy_cFv                             */
+/* 80019404-800194FC 00F8+00 s=0 e=0 z=0  None .text      initBallModel__13fopEn_enemy_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +444,7 @@ asm void fopEn_enemy_c::initBallModel() {
 #pragma pop
 
 
-/* 800194FC-80019520 0024+00 r=4 e=0 z=2  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
+/* 800194FC-80019520 0024+00 s=2 e=0 z=0  None .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,17 +456,17 @@ asm void fopEn_enemy_c::checkBallModelDraw() {
 
 
 /* ############################################################################################## */
-/* 80451BE0-80451BE8 0004+04 r=2 e=0 z=0  None .sdata2    @4505                                                        */
+/* 80451BE0-80451BE8 0004+04 s=2 e=0 z=0  None .sdata2    @4505                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4505[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451BE8-80451BF0 0008+00 r=1 e=0 z=0  None .sdata2    @4507                                                        */
+/* 80451BE8-80451BF0 0008+00 s=1 e=0 z=0  None .sdata2    @4507                                                        */
 SECTION_SDATA2 static f64 f_op_f_op_actor__lit_4507 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80019520-800196A0 0180+00 r=2 e=0 z=2  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
+/* 80019520-800196A0 0180+00 s=0 e=0 z=0  None .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,22 +478,22 @@ asm void fopEn_enemy_c::setBallModelEffect(dKy_tevstr_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80451BF0-80451BF4 0004+00 r=1 e=0 z=0  None .sdata2    @4555                                                        */
+/* 80451BF0-80451BF4 0004+00 s=1 e=0 z=0  None .sdata2    @4555                                                        */
 SECTION_SDATA2 static u8 f_op_f_op_actor__lit_4555[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451BF4-80451BF8 0004+00 r=1 e=0 z=0  None .sdata2    @4556                                                        */
+/* 80451BF4-80451BF8 0004+00 s=1 e=0 z=0  None .sdata2    @4556                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4556 = 1.0f / 20.0f;
 
-/* 80451BF8-80451C00 0004+04 r=1 e=0 z=0  None .sdata2    @4557                                                        */
+/* 80451BF8-80451C00 0004+04 s=1 e=0 z=0  None .sdata2    @4557                                                        */
 SECTION_SDATA2 static f32 f_op_f_op_actor__lit_4557[1 + 1 /* padding */] = {
 	1.0f / 100.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 800196A0-800197BC 011C+00 r=2 e=0 z=2  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
+/* 800196A0-800197BC 011C+00 s=0 e=0 z=0  None .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -505,6 +505,6 @@ asm void fopEn_enemy_c::drawBallModel(dKy_tevstr_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80450CC0-80450CC8 0004+04 r=9 e=9 z=0  None .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             */
+/* 80450CC0-80450CC8 0004+04 s=0 e=9 z=0  None .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             */
 u8 data_80450CC0[4 + 4 /* padding */];
 

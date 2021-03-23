@@ -5,12 +5,12 @@ lbl_80AD787C:
 /* 80AD7888 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AD788C 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80AD7890 00000014  41 82 00 1C */	beq lbl_80AD78AC
-/* 80AD7894 00000018  3C A0 00 00 */	lis r5, __vt__22daNpcT_MotionSeqMngr_c@ha /* 80AD7FF8 */
-/* 80AD7898 0000001C  38 05 00 00 */	addi r0, r5, __vt__22daNpcT_MotionSeqMngr_c@l /* 80AD7FF8 */
+/* 80AD7894 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80AD7898 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 80AD789C 00000020  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80AD78A0 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80AD78A4 00000028  40 81 00 08 */	ble lbl_80AD78AC
-/* 80AD78A8 0000002C  4B FF DD F1 */	bl __dl__FPv
+/* 80AD78A8 0000002C  4B FF DD F1 */	bl _unresolved
 lbl_80AD78AC:
 /* 80AD78AC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80AD78B0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

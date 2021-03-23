@@ -3,33 +3,33 @@ lbl_80A64FBC:
 /* 80A64FC0 00000004  7C 08 02 A6 */	mflr r0
 /* 80A64FC4 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80A64FC8 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A64FCC 00000010  4B FF F2 CD */	bl _savegpr_28
+/* 80A64FCC 00000010  4B FF F2 CD */	bl _unresolved
 /* 80A64FD0 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80A64FD4 00000018  3C 60 00 00 */	lis r3, m__17daNpc_Len_Param_c@ha /* 80A68EA4 */
-/* 80A64FD8 0000001C  3B E3 00 00 */	addi r31, r3, m__17daNpc_Len_Param_c@l /* 80A68EA4 */
+/* 80A64FD4 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A64FD8 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
 /* 80A64FDC 00000020  38 7D 0F CC */	addi r3, r29, 0xfcc
 /* 80A64FE0 00000024  38 1D 0F F0 */	addi r0, r29, 0xff0
 /* 80A64FE4 00000028  7F C3 00 50 */	subf r30, r3, r0
 /* 80A64FE8 0000002C  80 7D 09 6C */	lwz r3, 0x96c(r29)
 /* 80A64FEC 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80A64FF0 00000034  41 82 00 08 */	beq lbl_80A64FF8
-/* 80A64FF4 00000038  4B FF F2 A5 */	bl initialize__15daNpcT_MatAnm_cFv
+/* 80A64FF4 00000038  4B FF F2 A5 */	bl _unresolved
 lbl_80A64FF8:
 /* 80A64FF8 00000000  38 7D 0D 24 */	addi r3, r29, 0xd24
 /* 80A64FFC 00000004  38 80 00 00 */	li r4, 0
 /* 80A65000 00000008  38 1D 0E 38 */	addi r0, r29, 0xe38
 /* 80A65004 0000000C  7C A3 00 50 */	subf r5, r3, r0
-/* 80A65008 00000010  4B FF F2 91 */	bl memset
+/* 80A65008 00000010  4B FF F2 91 */	bl _unresolved
 /* 80A6500C 00000014  38 7D 0B 50 */	addi r3, r29, 0xb50
-/* 80A65010 00000018  4B FF F2 89 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A65010 00000018  4B FF F2 89 */	bl _unresolved
 /* 80A65014 0000001C  38 7D 0B 74 */	addi r3, r29, 0xb74
-/* 80A65018 00000020  4B FF F2 81 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A65018 00000020  4B FF F2 81 */	bl _unresolved
 /* 80A6501C 00000024  38 7D 0B 98 */	addi r3, r29, 0xb98
-/* 80A65020 00000028  4B FF F2 79 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A65020 00000028  4B FF F2 79 */	bl _unresolved
 /* 80A65024 0000002C  38 7D 0B A0 */	addi r3, r29, 0xba0
-/* 80A65028 00000030  4B FF F2 71 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A65028 00000030  4B FF F2 71 */	bl _unresolved
 /* 80A6502C 00000034  38 7D 0B A8 */	addi r3, r29, 0xba8
-/* 80A65030 00000038  4B FF F2 69 */	bl initialize__15daNpcT_JntAnm_cFv
+/* 80A65030 00000038  4B FF F2 69 */	bl _unresolved
 /* 80A65034 0000003C  38 60 00 00 */	li r3, 0
 /* 80A65038 00000040  38 80 00 00 */	li r4, 0
 /* 80A6503C 00000044  7C 87 23 78 */	mr r7, r4
@@ -57,7 +57,7 @@ lbl_80A65054:
 /* 80A65090 0000003C  38 00 00 01 */	li r0, 1
 /* 80A65094 00000040  98 1D 0E 26 */	stb r0, 0xe26(r29)
 /* 80A65098 00000044  C0 3F 00 D4 */	lfs f1, 0xd4(r31)
-/* 80A6509C 00000048  4B FF F1 FD */	bl cM_rndF__Ff
+/* 80A6509C 00000048  4B FF F1 FD */	bl _unresolved
 /* 80A650A0 0000004C  FC 00 08 1E */	fctiwz f0, f1
 /* 80A650A4 00000050  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 80A650A8 00000054  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -70,7 +70,7 @@ lbl_80A65054:
 lbl_80A650C4:
 /* 80A650C4 00000000  38 7F 0F 84 */	addi r3, r31, 0xf84
 /* 80A650C8 00000004  7C 7D 1A 14 */	add r3, r29, r3
-/* 80A650CC 00000008  4B FF F1 CD */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A650CC 00000008  4B FF F1 CD */	bl _unresolved
 /* 80A650D0 0000000C  3B 9C 00 01 */	addi r28, r28, 1
 /* 80A650D4 00000010  2C 1C 00 04 */	cmpwi r28, 4
 /* 80A650D8 00000014  3B FF 00 08 */	addi r31, r31, 8
@@ -80,19 +80,19 @@ lbl_80A650C4:
 /* 80A650E8 00000024  28 00 00 FF */	cmplwi r0, 0xff
 /* 80A650EC 00000028  41 82 00 28 */	beq lbl_80A65114
 /* 80A650F0 0000002C  38 7D 0F A4 */	addi r3, r29, 0xfa4
-/* 80A650F4 00000030  4B FF F1 A5 */	bl initialize__13daNpcT_Path_cFv
+/* 80A650F4 00000030  4B FF F1 A5 */	bl _unresolved
 /* 80A650F8 00000034  38 7D 0F A4 */	addi r3, r29, 0xfa4
 /* 80A650FC 00000038  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 80A65100 0000003C  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80A65104 00000040  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80A65108 00000044  7C 05 07 74 */	extsb r5, r0
 /* 80A6510C 00000048  38 C0 00 00 */	li r6, 0
-/* 80A65110 0000004C  4B FF F1 89 */	bl setPathInfo__13daNpcT_Path_cFUcScUc
+/* 80A65110 0000004C  4B FF F1 89 */	bl _unresolved
 lbl_80A65114:
 /* 80A65114 00000000  38 7D 0F CC */	addi r3, r29, 0xfcc
 /* 80A65118 00000004  38 80 00 00 */	li r4, 0
 /* 80A6511C 00000008  7F C5 F3 78 */	mr r5, r30
-/* 80A65120 0000000C  4B FF F1 79 */	bl memset
+/* 80A65120 0000000C  4B FF F1 79 */	bl _unresolved
 /* 80A65124 00000010  38 60 00 00 */	li r3, 0
 /* 80A65128 00000014  B0 61 00 10 */	sth r3, 0x10(r1)
 /* 80A6512C 00000018  B0 61 00 12 */	sth r3, 0x12(r1)
@@ -104,9 +104,9 @@ lbl_80A65114:
 /* 80A65144 00000030  B0 61 00 0C */	sth r3, 0xc(r1)
 /* 80A65148 00000034  7F A3 EB 78 */	mr r3, r29
 /* 80A6514C 00000038  38 81 00 08 */	addi r4, r1, 8
-/* 80A65150 0000003C  4B FF F1 49 */	bl setAngle__8daNpcT_cF5csXyz
+/* 80A65150 0000003C  4B FF F1 49 */	bl _unresolved
 /* 80A65154 00000040  39 61 00 30 */	addi r11, r1, 0x30
-/* 80A65158 00000044  4B FF F1 41 */	bl _restgpr_28
+/* 80A65158 00000044  4B FF F1 41 */	bl _unresolved
 /* 80A6515C 00000048  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80A65160 0000004C  7C 08 03 A6 */	mtlr r0
 /* 80A65164 00000050  38 21 00 30 */	addi r1, r1, 0x30

@@ -19,12 +19,12 @@ lbl_80D44E68:
 /* 80D44EAC 00000044  C0 84 00 48 */	lfs f4, 0x48(r4)
 /* 80D44EB0 00000048  C0 A4 00 4C */	lfs f5, 0x4c(r4)
 /* 80D44EB4 0000004C  C0 C4 00 50 */	lfs f6, 0x50(r4)
-/* 80D44EB8 00000050  4B FF FD E1 */	bl fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
+/* 80D44EB8 00000050  4B FF FD E1 */	bl _unresolved
 /* 80D44EBC 00000054  38 7F 07 A0 */	addi r3, r31, 0x7a0
-/* 80D44EC0 00000058  3C 80 00 00 */	lis r4, lit_3816@ha /* 80D455CC */
-/* 80D44EC4 0000005C  C0 24 00 00 */	lfs f1, lit_3816@l(r4) /* 80D455CC */
+/* 80D44EC0 00000058  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D44EC4 0000005C  C0 24 00 00 */	lfs f1, 0x0000(r4)
 /* 80D44EC8 00000060  FC 40 08 90 */	fmr f2, f1
-/* 80D44ECC 00000064  4B FF FD CD */	bl SetWall__12dBgS_AcchCirFff
+/* 80D44ECC 00000064  4B FF FD CD */	bl _unresolved
 /* 80D44ED0 00000068  38 1F 04 E4 */	addi r0, r31, 0x4e4
 /* 80D44ED4 0000006C  90 01 00 08 */	stw r0, 8(r1)
 /* 80D44ED8 00000070  38 7F 05 C8 */	addi r3, r31, 0x5c8
@@ -35,12 +35,12 @@ lbl_80D44E68:
 /* 80D44EEC 00000084  39 1F 07 A0 */	addi r8, r31, 0x7a0
 /* 80D44EF0 00000088  39 3F 04 F8 */	addi r9, r31, 0x4f8
 /* 80D44EF4 0000008C  39 5F 04 DC */	addi r10, r31, 0x4dc
-/* 80D44EF8 00000090  4B FF FD A1 */	bl Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
+/* 80D44EF8 00000090  4B FF FD A1 */	bl _unresolved
 /* 80D44EFC 00000094  38 7F 05 C8 */	addi r3, r31, 0x5c8
-/* 80D44F00 00000098  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D44F04 0000009C  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D44F00 00000098  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D44F04 0000009C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D44F08 000000A0  38 84 0F 38 */	addi r4, r4, 0xf38
-/* 80D44F0C 000000A4  4B FF FD 8D */	bl CrrPos__9dBgS_AcchFR4dBgS
+/* 80D44F0C 000000A4  4B FF FD 8D */	bl _unresolved
 /* 80D44F10 000000A8  80 1F 06 A4 */	lwz r0, 0x6a4(r31)
 /* 80D44F14 000000AC  90 1F 07 E0 */	stw r0, 0x7e0(r31)
 /* 80D44F18 000000B0  80 1F 06 A8 */	lwz r0, 0x6a8(r31)

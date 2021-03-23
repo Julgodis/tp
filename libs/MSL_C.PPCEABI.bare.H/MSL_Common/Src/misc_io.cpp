@@ -26,7 +26,7 @@ extern "C" extern u8 __stdio_exit[4];
 // Declarations:
 // 
 
-/* 803664CC-803664DC 0010+00 r=2 e=2 z=0  None .text      __stdio_atexit                                               */
+/* 803664CC-803664DC 0010+00 s=0 e=2 z=0  None .text      __stdio_atexit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

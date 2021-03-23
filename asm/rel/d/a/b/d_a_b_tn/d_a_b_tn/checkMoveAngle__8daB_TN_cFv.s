@@ -9,16 +9,16 @@ lbl_80622B60:
 /* 80622B7C 0000001C  FC 20 00 50 */	fneg f1, f0
 /* 80622B80 00000020  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80622B84 00000024  FC 40 00 50 */	fneg f2, f0
-/* 80622B88 00000028  4B FF BF D1 */	bl cM_atan2s__Fff
+/* 80622B88 00000028  4B FF BF D1 */	bl _unresolved
 /* 80622B8C 0000002C  7C 7F 1B 78 */	mr r31, r3
 /* 80622B90 00000030  7F C3 F3 78 */	mr r3, r30
-/* 80622B94 00000034  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80622B98 00000038  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80622B94 00000034  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80622B98 00000038  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80622B9C 0000003C  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80622BA0 00000040  4B FF BF B9 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80622BA0 00000040  4B FF BF B9 */	bl _unresolved
 /* 80622BA4 00000044  7C 1F 18 50 */	subf r0, r31, r3
 /* 80622BA8 00000048  7C 03 07 34 */	extsh r3, r0
-/* 80622BAC 0000004C  4B FF BF AD */	bl abs
+/* 80622BAC 0000004C  4B FF BF AD */	bl _unresolved
 /* 80622BB0 00000050  38 80 40 00 */	li r4, 0x4000
 /* 80622BB4 00000054  7C 80 1A 78 */	xor r0, r4, r3
 /* 80622BB8 00000058  7C 03 0E 70 */	srawi r3, r0, 1

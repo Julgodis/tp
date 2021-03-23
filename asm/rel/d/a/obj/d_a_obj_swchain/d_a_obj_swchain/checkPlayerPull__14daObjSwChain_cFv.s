@@ -5,8 +5,8 @@ lbl_80CFB464:
 /* 80CFB470 0000000C  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 80CFB474 00000010  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80CFB478 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CFB47C 00000018  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80CFB480 0000001C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80CFB47C 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CFB480 0000001C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CFB484 00000020  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80CFB488 00000024  80 DE 0A 74 */	lwz r6, 0xa74(r30)
 /* 80CFB48C 00000028  38 61 00 08 */	addi r3, r1, 8
@@ -15,7 +15,7 @@ lbl_80CFB464:
 /* 80CFB498 00000034  1C A0 00 50 */	mulli r5, r0, 0x50
 /* 80CFB49C 00000038  38 A5 00 34 */	addi r5, r5, 0x34
 /* 80CFB4A0 0000003C  7C A6 2A 14 */	add r5, r6, r5
-/* 80CFB4A4 00000040  4B FF D1 F5 */	bl __mi__4cXyzCFRC3Vec
+/* 80CFB4A4 00000040  4B FF D1 F5 */	bl _unresolved
 /* 80CFB4A8 00000044  C0 61 00 08 */	lfs f3, 8(r1)
 /* 80CFB4AC 00000048  D0 61 00 14 */	stfs f3, 0x14(r1)
 /* 80CFB4B0 0000004C  C0 01 00 0C */	lfs f0, 0xc(r1)
@@ -24,8 +24,8 @@ lbl_80CFB464:
 /* 80CFB4BC 00000058  D0 41 00 1C */	stfs f2, 0x1c(r1)
 /* 80CFB4C0 0000005C  A8 1F 04 DE */	lha r0, 0x4de(r31)
 /* 80CFB4C4 00000060  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
-/* 80CFB4C8 00000064  3C 60 00 00 */	lis r3, sincosTable___5JMath@ha /* 80439A20 */
-/* 80CFB4CC 00000068  38 63 00 00 */	addi r3, r3, sincosTable___5JMath@l /* 80439A20 */
+/* 80CFB4C8 00000064  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CFB4CC 00000068  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80CFB4D0 0000006C  7C 23 04 2E */	lfsx f1, r3, r0
 /* 80CFB4D4 00000070  C0 1F 05 2C */	lfs f0, 0x52c(r31)
 /* 80CFB4D8 00000074  EC 20 00 72 */	fmuls f1, f0, f1
@@ -40,8 +40,8 @@ lbl_80CFB464:
 /* 80CFB4FC 00000098  EC 23 00 72 */	fmuls f1, f3, f1
 /* 80CFB500 0000009C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80CFB504 000000A0  EC 21 00 2A */	fadds f1, f1, f0
-/* 80CFB508 000000A4  3C 60 00 00 */	lis r3, lit_3734@ha /* 80CFB6EC */
-/* 80CFB50C 000000A8  C0 03 00 00 */	lfs f0, lit_3734@l(r3) /* 80CFB6EC */
+/* 80CFB508 000000A4  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CFB50C 000000A8  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80CFB510 000000AC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80CFB514 00000000  40 80 00 0C */	bge lbl_80CFB520
 /* 80CFB518 00000004  38 60 00 01 */	li r3, 1

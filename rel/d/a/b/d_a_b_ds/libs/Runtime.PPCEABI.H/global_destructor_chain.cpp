@@ -13,10 +13,11 @@
 
 
 extern "C" void __register_global_object(); // 1
-extern "C" static void __destroy_global_chain(); // 1
+extern "C" void __destroy_global_chain(); // 1
 #pragma section ".dtors$10"
 __declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
-extern void* pad_805DCA4C[2];
+extern u8 pad_805DCA4C[8];
+extern "C" extern u8 __global_destructor_chain[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -30,15 +31,11 @@ extern void* pad_805DCA4C[2];
 
 /* ############################################################################################## */
 #pragma section ".dtors$10"
-/* 805DCA48-805DCA4C 0004+00 r=1 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+/* 805DCA48-805DCA4C 0004+00 s=0 e=0 z=0  None .dtors     __destroy_global_chain_reference                             */
+__declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)NULL;
 
 #pragma section ".dtors$15"
-/* ############################################################################################## */
-/* 805DDA68-805DDA70 0004+04 r=2 e=0 z=0  None .bss       __global_destructor_chain                                    */
-static u8 __global_destructor_chain[4 + 4 /* padding */];
-
-/* 805CB1B8-805CB1D4 001C+00 r=7 e=7 z=0  None .text      __register_global_object                                     */
+/* 805CB1B8-805CB1D4 001C+00 s=0 e=7 z=0  None .text      __register_global_object                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,14 +46,18 @@ extern "C" asm void __register_global_object() {
 #pragma pop
 
 
-/* 805CB1D4-805CB22C 0058+00 r=2 e=0 z=0  None .text      __destroy_global_chain                                       */
+/* 805CB1D4-805CB22C 0058+00 s=0 e=0 z=0  None .text      __destroy_global_chain                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __destroy_global_chain() {
+extern "C" asm void __destroy_global_chain() {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_ds/libs/Runtime.PPCEABI.H/global_destructor_chain/__destroy_global_chain.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 805DDA68-805DDA70 0004+04 s=0 e=0 z=0  None .bss       __global_destructor_chain                                    */
+u8 __global_destructor_chain[4 + 4 /* padding */];
 

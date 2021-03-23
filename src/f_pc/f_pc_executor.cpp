@@ -81,7 +81,7 @@ extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80021338-80021358 0020+00 r=301 e=9 z=291  None .text      fpcEx_Search__FPFPvPv_PvPv                                   */
+/* 80021338-80021358 0020+00 s=1 e=9 z=0  None .text      fpcEx_Search__FPFPvPv_PvPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void fpcEx_Search(void* (*)(void*, void*), void* param_1) {
 #pragma pop
 
 
-/* 80021358-8002139C 0044+00 r=36 e=5 z=30  None .text      fpcEx_SearchByID__FUi                                        */
+/* 80021358-8002139C 0044+00 s=1 e=5 z=0  None .text      fpcEx_SearchByID__FUi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void fpcEx_SearchByID(unsigned int param_0) {
 #pragma pop
 
 
-/* 8002139C-800213C4 0028+00 r=49 e=7 z=42  None .text      fpcEx_IsExist__FUi                                           */
+/* 8002139C-800213C4 0028+00 s=0 e=7 z=0  None .text      fpcEx_IsExist__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ asm void fpcEx_IsExist(unsigned int param_0) {
 #pragma pop
 
 
-/* 800213C4-80021418 0054+00 r=1 e=1 z=0  None .text      fpcEx_Execute__FP18base_process_class                        */
+/* 800213C4-80021418 0054+00 s=0 e=1 z=0  None .text      fpcEx_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +125,7 @@ asm void fpcEx_Execute(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80021418-800214C4 00AC+00 r=1 e=0 z=0  None .text      fpcEx_ToLineQ__FP18base_process_class                        */
+/* 80021418-800214C4 00AC+00 s=1 e=0 z=0  None .text      fpcEx_ToLineQ__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm static void fpcEx_ToLineQ(base_process_class* param_0) {
 #pragma pop
 
 
-/* 800214C4-80021510 004C+00 r=1 e=1 z=0  None .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
+/* 800214C4-80021510 004C+00 s=0 e=1 z=0  None .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void fpcEx_ExecuteQTo(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80021510-80021568 0058+00 r=1 e=1 z=0  None .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
+/* 80021510-80021568 0058+00 s=0 e=1 z=0  None .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void fpcEx_ToExecuteQ(base_process_class* param_0) {
 #pragma pop
 
 
-/* 80021568-80021588 0020+00 r=1 e=1 z=0  None .text      fpcEx_Handler__FPFPvPv_i                                     */
+/* 80021568-80021588 0020+00 s=0 e=1 z=0  None .text      fpcEx_Handler__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

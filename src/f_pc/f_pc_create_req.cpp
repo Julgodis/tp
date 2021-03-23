@@ -102,7 +102,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 80020ACC-80020AE8 001C+00 r=1 e=0 z=0  None .text      fpcCtRq_isCreatingByID__FP10create_tagPUi                    */
+/* 80020ACC-80020AE8 001C+00 s=1 e=0 z=0  None .text      fpcCtRq_isCreatingByID__FP10create_tagPUi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +113,7 @@ asm static void fpcCtRq_isCreatingByID(create_tag* param_0, unsigned int* param_
 #pragma pop
 
 
-/* 80020AE8-80020B20 0038+00 r=2 e=2 z=0  None .text      fpcCtRq_IsCreatingByID__FUi                                  */
+/* 80020AE8-80020B20 0038+00 s=0 e=2 z=0  None .text      fpcCtRq_IsCreatingByID__FUi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void fpcCtRq_IsCreatingByID(unsigned int param_0) {
 #pragma pop
 
 
-/* 80020B20-80020B5C 003C+00 r=1 e=0 z=0  None .text      fpcCtRq_CreateQTo__FP14create_request                        */
+/* 80020B20-80020B5C 003C+00 s=1 e=0 z=0  None .text      fpcCtRq_CreateQTo__FP14create_request                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm static void fpcCtRq_CreateQTo(create_request* param_0) {
 #pragma pop
 
 
-/* 80020B5C-80020BA0 0044+00 r=1 e=0 z=0  None .text      fpcCtRq_ToCreateQ__FP14create_request                        */
+/* 80020B5C-80020BA0 0044+00 s=1 e=0 z=0  None .text      fpcCtRq_ToCreateQ__FP14create_request                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm static void fpcCtRq_ToCreateQ(create_request* param_0) {
 #pragma pop
 
 
-/* 80020BA0-80020C14 0074+00 r=2 e=0 z=0  None .text      fpcCtRq_Delete__FP14create_request                           */
+/* 80020BA0-80020C14 0074+00 s=2 e=0 z=0  None .text      fpcCtRq_Delete__FP14create_request                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm static void fpcCtRq_Delete(create_request* param_0) {
 #pragma pop
 
 
-/* 80020C14-80020CAC 0098+00 r=4 e=2 z=0  None .text      fpcCtRq_Cancel__FP14create_request                           */
+/* 80020C14-80020CAC 0098+00 s=2 e=2 z=0  None .text      fpcCtRq_Cancel__FP14create_request                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ asm void fpcCtRq_Cancel(create_request* param_0) {
 #pragma pop
 
 
-/* 80020CAC-80020CC8 001C+00 r=1 e=1 z=0  None .text      fpcCtRq_IsDoing__FP14create_request                          */
+/* 80020CAC-80020CC8 001C+00 s=0 e=1 z=0  None .text      fpcCtRq_IsDoing__FP14create_request                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +179,7 @@ asm void fpcCtRq_IsDoing(create_request* param_0) {
 #pragma pop
 
 
-/* 80020CC8-80020D84 00BC+00 r=1 e=0 z=0  None .text      fpcCtRq_Do__FP14create_request                               */
+/* 80020CC8-80020D84 00BC+00 s=1 e=0 z=0  None .text      fpcCtRq_Do__FP14create_request                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +190,7 @@ asm static void fpcCtRq_Do(create_request* param_0) {
 #pragma pop
 
 
-/* 80020D84-80020DB0 002C+00 r=1 e=1 z=0  None .text      fpcCtRq_Handler__Fv                                          */
+/* 80020D84-80020DB0 002C+00 s=0 e=1 z=0  None .text      fpcCtRq_Handler__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +201,7 @@ asm void fpcCtRq_Handler() {
 #pragma pop
 
 
-/* 80020DB0-80020E38 0088+00 r=2 e=2 z=0  None .text      fpcCtRq_Create__FP11layer_classUlP27create_request_method_class */
+/* 80020DB0-80020E38 0088+00 s=0 e=2 z=0  None .text      fpcCtRq_Create__FP11layer_classUlP27create_request_method_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80602650[2];
+extern u8 data_80602650[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_b_gnd_cpp(); // 1
 
 // 
 // Declarations:

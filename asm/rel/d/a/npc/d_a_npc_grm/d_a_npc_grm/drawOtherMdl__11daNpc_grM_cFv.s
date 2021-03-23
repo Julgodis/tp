@@ -7,17 +7,17 @@ lbl_809D5600:
 /* 809D5614 00000014  88 03 10 DD */	lbz r0, 0x10dd(r3)
 /* 809D5618 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 809D561C 0000001C  41 82 00 30 */	beq lbl_809D564C
-/* 809D5620 00000020  4B FF E9 B9 */	bl itemRotate__13dShopSystem_cFv
-/* 809D5624 00000024  3C 60 00 00 */	lis r3, lit_4009@ha /* 809D6E18 */
-/* 809D5628 00000028  C0 03 00 00 */	lfs f0, lit_4009@l(r3) /* 809D6E18 */
+/* 809D5620 00000020  4B FF E9 B9 */	bl _unresolved
+/* 809D5624 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 809D5628 00000028  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 809D562C 0000002C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 809D5630 00000030  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 809D5634 00000034  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 809D5638 00000038  7F E3 FB 78 */	mr r3, r31
 /* 809D563C 0000003C  38 81 00 08 */	addi r4, r1, 8
-/* 809D5640 00000040  4B FF E9 99 */	bl itemZoom__13dShopSystem_cFP4cXyz
+/* 809D5640 00000040  4B FF E9 99 */	bl _unresolved
 /* 809D5644 00000044  7F E3 FB 78 */	mr r3, r31
-/* 809D5648 00000048  4B FF E9 91 */	bl drawCursor__13dShopSystem_cFv
+/* 809D5648 00000048  4B FF E9 91 */	bl _unresolved
 lbl_809D564C:
 /* 809D564C 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 809D5650 00000004  80 01 00 24 */	lwz r0, 0x24(r1)

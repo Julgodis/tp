@@ -56,7 +56,7 @@ extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CC0F0-803CC100 000C+04 r=2 e=0 z=0  None .data      __vt__11JKRDisposer                                          */
+/* 803CC0F0-803CC100 000C+04 s=2 e=0 z=0  None .data      __vt__11JKRDisposer                                          */
 SECTION_DATA static void* __vt__11JKRDisposer[3 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -65,7 +65,7 @@ SECTION_DATA static void* __vt__11JKRDisposer[3 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 802D147C-802D14E4 0068+00 r=12 e=12 z=0  None .text      __ct__11JKRDisposerFv                                        */
+/* 802D147C-802D14E4 0068+00 s=0 e=12 z=0  None .text      __ct__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm JKRDisposer::JKRDisposer() {
 #pragma pop
 
 
-/* 802D14E4-802D1568 0084+00 r=11 e=10 z=0  None .text      __dt__11JKRDisposerFv                                        */
+/* 802D14E4-802D1568 0084+00 s=1 e=10 z=0  None .text      __dt__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

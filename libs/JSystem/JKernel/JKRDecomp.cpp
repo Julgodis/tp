@@ -95,10 +95,10 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 804514B0-804514B8 0004+04 r=1 e=0 z=0  None .sbss      sDecompObject__9JKRDecomp                                    */
+/* 804514B0-804514B8 0004+04 s=1 e=0 z=0  None .sbss      sDecompObject__9JKRDecomp                                    */
 static u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
 
-/* 802DB680-802DB6E0 0060+00 r=1 e=1 z=0  None .text      create__9JKRDecompFl                                         */
+/* 802DB680-802DB6E0 0060+00 s=0 e=1 z=0  None .text      create__9JKRDecompFl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,19 +110,19 @@ asm void JKRDecomp::create(s32 param_0) {
 
 
 /* ############################################################################################## */
-/* 803CC460-803CC480 0020+00 r=1 e=0 z=0  None .data      sMessageBuffer__9JKRDecomp                                   */
+/* 803CC460-803CC480 0020+00 s=1 e=0 z=0  None .data      sMessageBuffer__9JKRDecomp                                   */
 SECTION_DATA static u8 sMessageBuffer__9JKRDecomp[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC480-803CC4A0 0020+00 r=2 e=0 z=0  None .data      sMessageQueue__9JKRDecomp                                    */
+/* 803CC480-803CC4A0 0020+00 s=2 e=0 z=0  None .data      sMessageQueue__9JKRDecomp                                    */
 SECTION_DATA static u8 sMessageQueue__9JKRDecomp[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC4A0-803CC4B0 0010+00 r=2 e=0 z=0  None .data      __vt__9JKRDecomp                                             */
+/* 803CC4A0-803CC4B0 0010+00 s=2 e=0 z=0  None .data      __vt__9JKRDecomp                                             */
 SECTION_DATA static void* __vt__9JKRDecomp[4] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -130,7 +130,7 @@ SECTION_DATA static void* __vt__9JKRDecomp[4] = {
 	/* 3    */ (void*)run__9JKRDecompFv,
 };
 
-/* 802DB6E0-802DB730 0050+00 r=1 e=0 z=0  None .text      __ct__9JKRDecompFl                                           */
+/* 802DB6E0-802DB730 0050+00 s=1 e=0 z=0  None .text      __ct__9JKRDecompFl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +141,7 @@ asm JKRDecomp::JKRDecomp(s32 param_0) {
 #pragma pop
 
 
-/* 802DB730-802DB790 0060+00 r=1 e=0 z=0  None .text      __dt__9JKRDecompFv                                           */
+/* 802DB730-802DB790 0060+00 s=1 e=0 z=0  None .text      __dt__9JKRDecompFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +152,7 @@ asm JKRDecomp::~JKRDecomp() {
 #pragma pop
 
 
-/* 802DB790-802DB858 00C8+00 r=1 e=0 z=0  None .text      run__9JKRDecompFv                                            */
+/* 802DB790-802DB858 00C8+00 s=1 e=0 z=0  None .text      run__9JKRDecompFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,7 +163,7 @@ asm void JKRDecomp::run() {
 #pragma pop
 
 
-/* 802DB858-802DB8D0 0078+00 r=1 e=0 z=0  None .text      prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v                  */
+/* 802DB858-802DB8D0 0078+00 s=1 e=0 z=0  None .text      prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +174,7 @@ asm void JKRDecomp::prepareCommand(u8* param_0, u8* param_1, u32 param_2, u32 pa
 #pragma pop
 
 
-/* 802DB8D0-802DB900 0030+00 r=2 e=1 z=0  None .text      sendCommand__9JKRDecompFP16JKRDecompCommand                  */
+/* 802DB8D0-802DB900 0030+00 s=1 e=1 z=0  None .text      sendCommand__9JKRDecompFP16JKRDecompCommand                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +185,7 @@ asm void JKRDecomp::sendCommand(JKRDecompCommand* param_0) {
 #pragma pop
 
 
-/* 802DB900-802DB934 0034+00 r=1 e=0 z=0  None .text      orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v                      */
+/* 802DB900-802DB934 0034+00 s=1 e=0 z=0  None .text      orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm void JKRDecomp::orderAsync(u8* param_0, u8* param_1, u32 param_2, u32 param_
 #pragma pop
 
 
-/* 802DB934-802DB988 0054+00 r=1 e=0 z=0  None .text      sync__9JKRDecompFP16JKRDecompCommandi                        */
+/* 802DB934-802DB988 0054+00 s=1 e=0 z=0  None .text      sync__9JKRDecompFP16JKRDecompCommandi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +207,7 @@ asm void JKRDecomp::sync(JKRDecompCommand* param_0, int param_1) {
 #pragma pop
 
 
-/* 802DB988-802DB9DC 0054+00 r=5 e=5 z=0  None .text      orderSync__9JKRDecompFPUcPUcUlUl                             */
+/* 802DB988-802DB9DC 0054+00 s=0 e=5 z=0  None .text      orderSync__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,7 +218,7 @@ asm void JKRDecomp::orderSync(u8* param_0, u8* param_1, u32 param_2, u32 param_3
 #pragma pop
 
 
-/* 802DB9DC-802DBA58 007C+00 r=1 e=0 z=0  None .text      decode__9JKRDecompFPUcPUcUlUl                                */
+/* 802DB9DC-802DBA58 007C+00 s=1 e=0 z=0  None .text      decode__9JKRDecompFPUcPUcUlUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +229,7 @@ asm void JKRDecomp::decode(u8* param_0, u8* param_1, u32 param_2, u32 param_3) {
 #pragma pop
 
 
-/* 802DBA58-802DBC14 01BC+00 r=1 e=0 z=0  None .text      decodeSZP__9JKRDecompFPUcPUcUlUl                             */
+/* 802DBA58-802DBC14 01BC+00 s=1 e=0 z=0  None .text      decodeSZP__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +240,7 @@ asm void JKRDecomp::decodeSZP(u8* param_0, u8* param_1, u32 param_2, u32 param_3
 #pragma pop
 
 
-/* 802DBC14-802DBCF8 00E4+00 r=1 e=0 z=0  None .text      decodeSZS__9JKRDecompFPUcPUcUlUl                             */
+/* 802DBC14-802DBCF8 00E4+00 s=1 e=0 z=0  None .text      decodeSZS__9JKRDecompFPUcPUcUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +251,7 @@ asm void JKRDecomp::decodeSZS(u8* param_0, u8* param_1, u32 param_2, u32 param_3
 #pragma pop
 
 
-/* 802DBCF8-802DBD70 0078+00 r=5 e=4 z=0  None .text      checkCompressed__9JKRDecompFPUc                              */
+/* 802DBCF8-802DBD70 0078+00 s=1 e=4 z=0  None .text      checkCompressed__9JKRDecompFPUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +262,7 @@ asm void JKRDecomp::checkCompressed(u8* param_0) {
 #pragma pop
 
 
-/* 802DBD70-802DBDC0 0050+00 r=1 e=0 z=0  None .text      __ct__16JKRDecompCommandFv                                   */
+/* 802DBD70-802DBDC0 0050+00 s=1 e=0 z=0  None .text      __ct__16JKRDecompCommandFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +273,7 @@ asm JKRDecompCommand::JKRDecompCommand() {
 #pragma pop
 
 
-/* 802DBDC0-802DBDFC 003C+00 r=1 e=0 z=0  None .text      __dt__16JKRDecompCommandFv                                   */
+/* 802DBDC0-802DBDFC 003C+00 s=1 e=0 z=0  None .text      __dt__16JKRDecompCommandFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

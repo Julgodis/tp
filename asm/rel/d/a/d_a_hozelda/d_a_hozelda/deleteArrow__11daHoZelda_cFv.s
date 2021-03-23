@@ -10,7 +10,7 @@ lbl_80848090:
 /* 808480B0 00000020  38 00 00 01 */	li r0, 1
 /* 808480B4 00000024  98 03 09 3F */	stb r0, 0x93f(r3)
 /* 808480B8 00000028  38 7F 06 C4 */	addi r3, r31, 0x6c4
-/* 808480BC 0000002C  4B FF DD BD */	bl clearData__16daPy_actorKeep_cFv
+/* 808480BC 0000002C  4B FF DD BD */	bl _unresolved
 lbl_808480C0:
 /* 808480C0 00000000  A0 1F 06 EA */	lhz r0, 0x6ea(r31)
 /* 808480C4 00000004  28 00 00 0C */	cmplwi r0, 0xc

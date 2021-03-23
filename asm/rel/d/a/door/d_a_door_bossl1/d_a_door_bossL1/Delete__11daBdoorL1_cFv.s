@@ -9,30 +9,30 @@ lbl_804E48BC:
 /* 804E48D8 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 804E48DC 00000020  41 82 00 28 */	beq lbl_804E4904
 /* 804E48E0 00000024  80 7F 05 90 */	lwz r3, 0x590(r31)
-/* 804E48E4 00000028  4B FF D4 95 */	bl ChkUsed__9cBgW_BgIdCFv
+/* 804E48E4 00000028  4B FF D4 95 */	bl _unresolved
 /* 804E48E8 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 804E48EC 00000030  41 82 00 18 */	beq lbl_804E4904
-/* 804E48F0 00000034  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 804E48F4 00000038  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 804E48F0 00000034  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804E48F4 00000038  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804E48F8 0000003C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804E48FC 00000040  80 9F 05 90 */	lwz r4, 0x590(r31)
-/* 804E4900 00000044  4B FF D4 79 */	bl Release__4cBgSFP9dBgW_Base
+/* 804E4900 00000044  4B FF D4 79 */	bl _unresolved
 lbl_804E4904:
 /* 804E4904 00000000  7F E3 FB 78 */	mr r3, r31
 /* 804E4908 00000004  4B FF D6 9D */	bl getArcName__11daBdoorL1_cFv
 /* 804E490C 00000008  7C 64 1B 78 */	mr r4, r3
 /* 804E4910 0000000C  38 7F 05 68 */	addi r3, r31, 0x568
-/* 804E4914 00000010  4B FF D4 65 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 804E4914 00000010  4B FF D4 65 */	bl _unresolved
 /* 804E4918 00000014  7F E3 FB 78 */	mr r3, r31
 /* 804E491C 00000018  4B FF D8 91 */	bl getAlwaysArcName__11daBdoorL1_cFv
 /* 804E4920 0000001C  7C 64 1B 78 */	mr r4, r3
 /* 804E4924 00000020  38 7F 05 70 */	addi r3, r31, 0x570
-/* 804E4928 00000024  4B FF D4 51 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 804E4928 00000024  4B FF D4 51 */	bl _unresolved
 /* 804E492C 00000028  7F E3 FB 78 */	mr r3, r31
 /* 804E4930 0000002C  4B FF D7 31 */	bl getAnmArcName__11daBdoorL1_cFv
 /* 804E4934 00000030  7C 64 1B 78 */	mr r4, r3
 /* 804E4938 00000034  38 7F 05 78 */	addi r3, r31, 0x578
-/* 804E493C 00000038  4B FF D4 3D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 804E493C 00000038  4B FF D4 3D */	bl _unresolved
 /* 804E4940 0000003C  38 60 00 01 */	li r3, 1
 /* 804E4944 00000040  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804E4948 00000044  80 01 00 14 */	lwz r0, 0x14(r1)

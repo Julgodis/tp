@@ -2,10 +2,10 @@ lbl_80D55E98:
 /* 80D55E98 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80D55E9C 00000004  7C 08 02 A6 */	mflr r0
 /* 80D55EA0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D55EA4 0000000C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D55EA8 00000010  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D55EA4 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D55EA8 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D55EAC 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)
-/* 80D55EB0 00000018  4B FF FF 69 */	bl fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
+/* 80D55EB0 00000018  4B FF FF 69 */	bl _unresolved
 /* 80D55EB4 0000001C  38 60 00 01 */	li r3, 1
 /* 80D55EB8 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D55EBC 00000024  7C 08 03 A6 */	mtlr r0

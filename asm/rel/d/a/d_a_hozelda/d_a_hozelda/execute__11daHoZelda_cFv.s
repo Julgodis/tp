@@ -7,34 +7,34 @@ lbl_808489CC:
 /* 808489E0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 808489E4 00000018  88 03 04 E2 */	lbz r0, 0x4e2(r3)
 /* 808489E8 0000001C  7C 03 07 74 */	extsb r3, r0
-/* 808489EC 00000020  4B FF D4 8D */	bl dComIfGp_getReverb__Fi
+/* 808489EC 00000020  4B FF D4 8D */	bl _unresolved
 /* 808489F0 00000024  98 7E 06 E0 */	stb r3, 0x6e0(r30)
 /* 808489F4 00000028  38 7E 06 C4 */	addi r3, r30, 0x6c4
-/* 808489F8 0000002C  4B FF D4 81 */	bl setActor__16daPy_actorKeep_cFv
+/* 808489F8 0000002C  4B FF D4 81 */	bl _unresolved
 /* 808489FC 00000030  38 7E 06 CC */	addi r3, r30, 0x6cc
-/* 80848A00 00000034  4B FF D4 79 */	bl setActor__16daPy_actorKeep_cFv
+/* 80848A00 00000034  4B FF D4 79 */	bl _unresolved
 /* 80848A04 00000038  80 1E 06 D0 */	lwz r0, 0x6d0(r30)
 /* 80848A08 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 80848A0C 00000040  40 82 00 20 */	bne lbl_80848A2C
-/* 80848A10 00000044  3C 60 00 00 */	lis r3, daHoZelda_searchGanon__FP10fopAc_ac_cPv@ha /* 80845E98 */
-/* 80848A14 00000048  38 63 00 00 */	addi r3, r3, daHoZelda_searchGanon__FP10fopAc_ac_cPv@l /* 80845E98 */
+/* 80848A10 00000044  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80848A14 00000048  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80848A18 0000004C  38 80 00 00 */	li r4, 0
-/* 80848A1C 00000050  4B FF D4 5D */	bl fopAcIt_Judge__FPFPvPv_PvPv
+/* 80848A1C 00000050  4B FF D4 5D */	bl _unresolved
 /* 80848A20 00000054  7C 64 1B 78 */	mr r4, r3
 /* 80848A24 00000058  38 7E 06 CC */	addi r3, r30, 0x6cc
-/* 80848A28 0000005C  4B FF D4 51 */	bl setData__16daPy_actorKeep_cFP10fopAc_ac_c
+/* 80848A28 0000005C  4B FF D4 51 */	bl _unresolved
 lbl_80848A2C:
-/* 80848A2C 00000000  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80848A30 00000004  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80848A2C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80848A30 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80848A34 00000008  83 E3 5D B8 */	lwz r31, 0x5db8(r3)
 /* 80848A38 0000000C  28 1F 00 00 */	cmplwi r31, 0
 /* 80848A3C 00000010  41 82 00 10 */	beq lbl_80848A4C
 /* 80848A40 00000014  38 7F 12 54 */	addi r3, r31, 0x1254
 /* 80848A44 00000018  7F C4 F3 78 */	mr r4, r30
-/* 80848A48 0000001C  4B FF D4 31 */	bl setData__16daPy_actorKeep_cFP10fopAc_ac_c
+/* 80848A48 0000001C  4B FF D4 31 */	bl _unresolved
 lbl_80848A4C:
-/* 80848A4C 00000000  3C 60 00 00 */	lis r3, struct_80849010+0x1@ha /* 80849011 */
-/* 80848A50 00000004  38 63 00 00 */	addi r3, r3, struct_80849010+0x1@l /* 80849011 */
+/* 80848A4C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80848A50 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80848A54 00000008  48 00 02 E5 */	bl func_80848D38
 /* 80848A58 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 80848A5C 00000010  4B FF F7 41 */	bl setRideOffset__11daHoZelda_cFv
@@ -65,8 +65,8 @@ lbl_80848A74:
 /* 80848ABC 00000048  98 1E 06 DB */	stb r0, 0x6db(r30)
 /* 80848AC0 0000004C  28 1F 00 00 */	cmplwi r31, 0
 /* 80848AC4 00000050  41 82 00 48 */	beq lbl_80848B0C
-/* 80848AC8 00000054  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80848ACC 00000058  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80848AC8 00000054  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80848ACC 00000058  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80848AD0 0000005C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80848AD4 00000060  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80848AD8 00000064  81 8C 01 88 */	lwz r12, 0x188(r12)
@@ -80,7 +80,7 @@ lbl_80848A74:
 /* 80848AF8 00000084  7F E3 FB 78 */	mr r3, r31
 /* 80848AFC 00000088  38 80 00 06 */	li r4, 6
 /* 80848B00 0000008C  39 9F 18 BC */	addi r12, r31, 0x18bc
-/* 80848B04 00000090  4B FF D3 75 */	bl __ptmf_scall
+/* 80848B04 00000090  4B FF D3 75 */	bl _unresolved
 /* 80848B08 00000094  60 00 00 00 */	nop 
 lbl_80848B0C:
 /* 80848B0C 00000000  38 7E 06 18 */	addi r3, r30, 0x618

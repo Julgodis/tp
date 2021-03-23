@@ -5,13 +5,13 @@ lbl_80D486A0:
 /* 80D486AC 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D486B0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80D486B4 00000014  38 7F 0E 40 */	addi r3, r31, 0xe40
-/* 80D486B8 00000018  4B FF E7 A1 */	bl getActorP__18daNpcT_ActorMngr_cFv
+/* 80D486B8 00000018  4B FF E7 A1 */	bl _unresolved
 /* 80D486BC 0000001C  28 03 00 00 */	cmplwi r3, 0
 /* 80D486C0 00000020  41 82 00 48 */	beq lbl_80D48708
 /* 80D486C4 00000024  38 7F 0E 40 */	addi r3, r31, 0xe40
-/* 80D486C8 00000028  4B FF E7 91 */	bl getActorP__18daNpcT_ActorMngr_cFv
-/* 80D486CC 0000002C  3C 80 00 00 */	lis r4, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D486D0 00000030  38 84 00 00 */	addi r4, r4, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D486C8 00000028  4B FF E7 91 */	bl _unresolved
+/* 80D486CC 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D486D0 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D486D4 00000034  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80D486D8 00000038  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
 /* 80D486DC 0000003C  D0 01 00 08 */	stfs f0, 8(r1)

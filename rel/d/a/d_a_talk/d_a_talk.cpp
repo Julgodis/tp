@@ -22,38 +22,16 @@ struct daTalk_c {
 };
 
 struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dEvt_control_c {
-	/* 80042468 */ void reset();
-};
-
-struct dMsgObject_c {
-	/* 80238188 */ void setProcessID(unsigned int);
-	/* 802381C0 */ void getpTalkActor();
-	/* 802381D4 */ void getIdx();
-	/* 802381E8 */ void getNodeIdx();
-	/* 802381FC */ void setStatus(u16);
-	/* 8023822C */ void getStatus();
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 // 
 // Forward References:
 // 
 
-static void daTalk_Create(fopAc_ac_c*); // 2
-static void daTalk_Delete(daTalk_c*); // 2
-static void daTalk_Execute(daTalk_c*); // 2
-static void daTalk_Draw(daTalk_c*); // 2
+void daTalk_Create(fopAc_ac_c*); // 2
+void daTalk_Delete(daTalk_c*); // 2
+void daTalk_Execute(daTalk_c*); // 2
+void daTalk_Draw(daTalk_c*); // 2
 
 extern "C" void __dt__8daTalk_cFv(); // 1
 extern "C" void create__8daTalk_cFv(); // 1
@@ -62,52 +40,25 @@ extern "C" void draw__8daTalk_cFv(); // 1
 extern "C" void setStatus__8daTalk_cFUs(); // 1
 extern "C" void getStatus__8daTalk_cFv(); // 1
 extern "C" void messageSet__8daTalk_cFv(); // 1
-extern "C" static void daTalk_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTalk_Delete__FP8daTalk_c(); // 1
-extern "C" static void daTalk_Execute__FP8daTalk_c(); // 1
-extern "C" static void daTalk_Draw__FP8daTalk_c(); // 1
-extern "C" extern void* g_profile_TALK[12];
+extern "C" void daTalk_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTalk_Delete__FP8daTalk_c(); // 1
+extern "C" void daTalk_Execute__FP8daTalk_c(); // 1
+extern "C" void daTalk_Draw__FP8daTalk_c(); // 1
+extern "C" extern u8 l_daTalk_Method[32];
+extern "C" extern u8 g_profile_TALK[48];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
-void operator delete(void*); // 2
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setProcessID__12dMsgObject_cFUi(); // 1
-extern "C" void getpTalkActor__12dMsgObject_cFv(); // 1
-extern "C" void getIdx__12dMsgObject_cFv(); // 1
-extern "C" void getNodeIdx__12dMsgObject_cFv(); // 1
-extern "C" void setStatus__12dMsgObject_cFUs(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __copy(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 dist_table__12dAttention_c[6552];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 80D66378-80D663E4 006C+00 r=1 e=0 z=0  None .text      __dt__8daTalk_cFv                                            */
+/* 80D66378-80D663E4 006C+00 s=1 e=0 z=0  None .text      __dt__8daTalk_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +69,7 @@ asm daTalk_c::~daTalk_c() {
 #pragma pop
 
 
-/* 80D663E4-80D664AC 00C8+00 r=1 e=0 z=0  None .text      create__8daTalk_cFv                                          */
+/* 80D663E4-80D664AC 00C8+00 s=1 e=0 z=0  None .text      create__8daTalk_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +80,7 @@ asm void daTalk_c::create() {
 #pragma pop
 
 
-/* 80D664AC-80D6665C 01B0+00 r=1 e=0 z=0  None .text      execute__8daTalk_cFv                                         */
+/* 80D664AC-80D6665C 01B0+00 s=1 e=0 z=0  None .text      execute__8daTalk_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +91,7 @@ asm void daTalk_c::execute() {
 #pragma pop
 
 
-/* 80D6665C-80D66664 0008+00 r=1 e=0 z=0  None .text      draw__8daTalk_cFv                                            */
+/* 80D6665C-80D66664 0008+00 s=1 e=0 z=0  None .text      draw__8daTalk_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +102,7 @@ asm void daTalk_c::draw() {
 #pragma pop
 
 
-/* 80D66664-80D66688 0024+00 r=1 e=0 z=0  None .text      setStatus__8daTalk_cFUs                                      */
+/* 80D66664-80D66688 0024+00 s=1 e=0 z=0  None .text      setStatus__8daTalk_cFUs                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +113,7 @@ asm void daTalk_c::setStatus(u16 param_0) {
 #pragma pop
 
 
-/* 80D66688-80D666A8 0020+00 r=2 e=0 z=0  None .text      getStatus__8daTalk_cFv                                       */
+/* 80D66688-80D666A8 0020+00 s=2 e=0 z=0  None .text      getStatus__8daTalk_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +124,7 @@ asm void daTalk_c::getStatus() {
 #pragma pop
 
 
-/* 80D666A8-80D666E4 003C+00 r=1 e=0 z=0  None .text      messageSet__8daTalk_cFv                                      */
+/* 80D666A8-80D666E4 003C+00 s=1 e=0 z=0  None .text      messageSet__8daTalk_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,44 +135,44 @@ asm void daTalk_c::messageSet() {
 #pragma pop
 
 
-/* 80D666E4-80D66704 0020+00 r=1 e=0 z=0  None .text      daTalk_Create__FP10fopAc_ac_c                                */
+/* 80D666E4-80D66704 0020+00 s=0 e=0 z=0  None .text      daTalk_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTalk_Create(fopAc_ac_c* param_0) {
+asm void daTalk_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_talk/d_a_talk/daTalk_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D66704-80D6672C 0028+00 r=1 e=0 z=0  None .text      daTalk_Delete__FP8daTalk_c                                   */
+/* 80D66704-80D6672C 0028+00 s=0 e=0 z=0  None .text      daTalk_Delete__FP8daTalk_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTalk_Delete(daTalk_c* param_0) {
+asm void daTalk_Delete(daTalk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_talk/d_a_talk/daTalk_Delete__FP8daTalk_c.s"
 }
 #pragma pop
 
 
-/* 80D6672C-80D6674C 0020+00 r=1 e=0 z=0  None .text      daTalk_Execute__FP8daTalk_c                                  */
+/* 80D6672C-80D6674C 0020+00 s=0 e=0 z=0  None .text      daTalk_Execute__FP8daTalk_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTalk_Execute(daTalk_c* param_0) {
+asm void daTalk_Execute(daTalk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_talk/d_a_talk/daTalk_Execute__FP8daTalk_c.s"
 }
 #pragma pop
 
 
-/* 80D6674C-80D6676C 0020+00 r=1 e=0 z=0  None .text      daTalk_Draw__FP8daTalk_c                                     */
+/* 80D6674C-80D6676C 0020+00 s=0 e=0 z=0  None .text      daTalk_Draw__FP8daTalk_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTalk_Draw(daTalk_c* param_0) {
+asm void daTalk_Draw(daTalk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_talk/d_a_talk/daTalk_Draw__FP8daTalk_c.s"
 }
@@ -229,31 +180,16 @@ asm static void daTalk_Draw(daTalk_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D66774-80D66794 0020+00 r=1 e=0 z=0  None .data      l_daTalk_Method                                              */
-SECTION_DATA static void* l_daTalk_Method[8] = {
-	/* 0    */ (void*)daTalk_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTalk_Delete__FP8daTalk_c,
-	/* 2    */ (void*)daTalk_Execute__FP8daTalk_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTalk_Draw__FP8daTalk_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D66774-80D66794 0020+00 s=0 e=0 z=0  None .data      l_daTalk_Method                                              */
+SECTION_DATA u8 l_daTalk_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D66794-80D667C4 0030+00 r=1 e=0 z=1  None .data      g_profile_TALK                                               */
-SECTION_DATA void* g_profile_TALK[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02BD0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005B8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02FE0000,
-	/* 9    */ (void*)&l_daTalk_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+/* 80D66794-80D667C4 0030+00 s=0 e=0 z=0  None .data      g_profile_TALK                                               */
+SECTION_DATA u8 g_profile_TALK[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x02, 0xBD, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0xB8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0xFE, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x40, 0x00, 0x00, 0x06, 0x00, 0x00,
 };
 

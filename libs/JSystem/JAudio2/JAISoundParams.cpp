@@ -41,10 +41,10 @@ extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804557E8-804557F0 0008+00 r=5 e=0 z=0  None .sdata2    @292                                                         */
+/* 804557E8-804557F0 0008+00 s=5 e=0 z=0  None .sdata2    @292                                                         */
 SECTION_SDATA2 static f64 JAISoundParams__lit_292 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802A2DB4-802A2E0C 0058+00 r=40 e=40 z=0  None .text      moveVolume__18JAISoundParamsMoveFfUl                         */
+/* 802A2DB4-802A2E0C 0058+00 s=0 e=40 z=0  None .text      moveVolume__18JAISoundParamsMoveFfUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ asm void JAISoundParamsMove::moveVolume(f32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802A2E0C-802A2E64 0058+00 r=25 e=25 z=0  None .text      movePitch__18JAISoundParamsMoveFfUl                          */
+/* 802A2E0C-802A2E64 0058+00 s=0 e=25 z=0  None .text      movePitch__18JAISoundParamsMoveFfUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm void JAISoundParamsMove::movePitch(f32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802A2E64-802A2EBC 0058+00 r=6 e=6 z=0  None .text      moveFxMix__18JAISoundParamsMoveFfUl                          */
+/* 802A2E64-802A2EBC 0058+00 s=0 e=6 z=0  None .text      moveFxMix__18JAISoundParamsMoveFfUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm void JAISoundParamsMove::moveFxMix(f32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802A2EBC-802A2F14 0058+00 r=8 e=8 z=0  None .text      movePan__18JAISoundParamsMoveFfUl                            */
+/* 802A2EBC-802A2F14 0058+00 s=0 e=8 z=0  None .text      movePan__18JAISoundParamsMoveFfUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ asm void JAISoundParamsMove::movePan(f32 param_0, u32 param_1) {
 #pragma pop
 
 
-/* 802A2F14-802A2F6C 0058+00 r=7 e=7 z=0  None .text      moveDolby__18JAISoundParamsMoveFfUl                          */
+/* 802A2F14-802A2F6C 0058+00 s=0 e=7 z=0  None .text      moveDolby__18JAISoundParamsMoveFfUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

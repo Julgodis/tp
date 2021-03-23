@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8096C90C[2];
+extern u8 data_8096C90C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_blue_ns_cpp(); // 1
 
 // 
 // Declarations:

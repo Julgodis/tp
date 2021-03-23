@@ -5,12 +5,12 @@ lbl_80CD52AC:
 /* 80CD52B8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CD52BC 00000010  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80CD52C0 00000014  41 82 00 1C */	beq lbl_80CD52DC
-/* 80CD52C4 00000018  3C A0 00 00 */	lis r5, __vt__22daNpcT_MotionSeqMngr_c@ha /* 80CD67C0 */
-/* 80CD52C8 0000001C  38 05 00 00 */	addi r0, r5, __vt__22daNpcT_MotionSeqMngr_c@l /* 80CD67C0 */
+/* 80CD52C4 00000018  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 80CD52C8 0000001C  38 05 00 00 */	addi r0, r5, 0x0000 /* 0x00000000@l */
 /* 80CD52CC 00000020  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80CD52D0 00000024  7C 80 07 35 */	extsh. r0, r4
 /* 80CD52D4 00000028  40 81 00 08 */	ble lbl_80CD52DC
-/* 80CD52D8 0000002C  4B FF 8F E1 */	bl __dl__FPv
+/* 80CD52D8 0000002C  4B FF 8F E1 */	bl _unresolved
 lbl_80CD52DC:
 /* 80CD52DC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80CD52E0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -141,15 +141,15 @@ extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80455A18-80455A1C 0004+00 r=1 e=0 z=0  None .sdata2    @3395                                                        */
+/* 80455A18-80455A1C 0004+00 s=1 e=0 z=0  None .sdata2    @3395                                                        */
 SECTION_SDATA2 static f32 lit_3395 = 10000000.0f;
 
-/* 80455A1C-80455A20 0004+00 r=3 e=0 z=0  None .sdata2    @3396                                                        */
+/* 80455A1C-80455A20 0004+00 s=3 e=0 z=0  None .sdata2    @3396                                                        */
 SECTION_SDATA2 static u8 lit_3396[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802B5F1C-802B5F70 0054+00 r=1 e=1 z=0  None .text      __ct__11Z2StatusMgrFv                                        */
+/* 802B5F1C-802B5F70 0054+00 s=0 e=1 z=0  None .text      __ct__11Z2StatusMgrFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm Z2StatusMgr::Z2StatusMgr() {
 #pragma pop
 
 
-/* 802B5F70-802B5F7C 000C+00 r=1 e=1 z=0  None .text      heartGaugeOn__11Z2StatusMgrFv                                */
+/* 802B5F70-802B5F7C 000C+00 s=0 e=1 z=0  None .text      heartGaugeOn__11Z2StatusMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,13 +172,13 @@ asm void Z2StatusMgr::heartGaugeOn() {
 
 
 /* ############################################################################################## */
-/* 80455A20-80455A24 0004+00 r=3 e=0 z=0  None .sdata2    @3467                                                        */
+/* 80455A20-80455A24 0004+00 s=3 e=0 z=0  None .sdata2    @3467                                                        */
 SECTION_SDATA2 static f32 lit_3467 = 1.0f;
 
-/* 80455A24-80455A28 0004+00 r=1 e=0 z=0  None .sdata2    @3468                                                        */
+/* 80455A24-80455A28 0004+00 s=1 e=0 z=0  None .sdata2    @3468                                                        */
 SECTION_SDATA2 static f32 lit_3468 = -1.0f;
 
-/* 802B5F7C-802B60CC 0150+00 r=1 e=1 z=0  None .text      processHeartGaugeSound__11Z2StatusMgrFv                      */
+/* 802B5F7C-802B60CC 0150+00 s=0 e=1 z=0  None .text      processHeartGaugeSound__11Z2StatusMgrFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void Z2StatusMgr::processHeartGaugeSound() {
 #pragma pop
 
 
-/* 802B60CC-802B6104 0038+00 r=1 e=1 z=0  None .text      talkIn__11Z2StatusMgrFv                                      */
+/* 802B60CC-802B6104 0038+00 s=0 e=1 z=0  None .text      talkIn__11Z2StatusMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ asm void Z2StatusMgr::talkIn() {
 #pragma pop
 
 
-/* 802B6104-802B613C 0038+00 r=1 e=1 z=0  None .text      talkOut__11Z2StatusMgrFv                                     */
+/* 802B6104-802B613C 0038+00 s=0 e=1 z=0  None .text      talkOut__11Z2StatusMgrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ asm void Z2StatusMgr::talkOut() {
 #pragma pop
 
 
-/* 802B613C-802B617C 0040+00 r=1 e=1 z=0  None .text      menuIn__11Z2StatusMgrFv                                      */
+/* 802B613C-802B617C 0040+00 s=0 e=1 z=0  None .text      menuIn__11Z2StatusMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +222,7 @@ asm void Z2StatusMgr::menuIn() {
 #pragma pop
 
 
-/* 802B617C-802B61BC 0040+00 r=3 e=3 z=0  None .text      menuOut__11Z2StatusMgrFv                                     */
+/* 802B617C-802B61BC 0040+00 s=0 e=3 z=0  None .text      menuOut__11Z2StatusMgrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +233,7 @@ asm void Z2StatusMgr::menuOut() {
 #pragma pop
 
 
-/* 802B61BC-802B61E8 002C+00 r=3 e=1 z=0  None .text      isMovieDemo__11Z2StatusMgrFv                                 */
+/* 802B61BC-802B61E8 002C+00 s=2 e=1 z=0  None .text      isMovieDemo__11Z2StatusMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ asm void Z2StatusMgr::isMovieDemo() {
 
 
 /* ############################################################################################## */
-/* 8039BC88-8039BFA8 0319+07 r=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039BC88-8039BFA8 0319+07 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -352,7 +352,7 @@ SECTION_DEAD char const* const stringBase_8039BF98 = "LV3R00OP";
 SECTION_DEAD static char const* const pad_8039BFA1 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 803CA508-803CA5C0 00B8+00 r=1 e=0 z=0  None .data      @3732                                                        */
+/* 803CA508-803CA5C0 00B8+00 s=1 e=0 z=0  None .data      @3732                                                        */
 SECTION_DATA static void* Z2StatusMgr__lit_3732[46] = {
 	/* 0    */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x438),
 	/* 1    */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x3F8),
@@ -402,10 +402,10 @@ SECTION_DATA static void* Z2StatusMgr__lit_3732[46] = {
 	/* 45   */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x4C8),
 };
 
-/* 80455A28-80455A30 0008+00 r=1 e=0 z=0  None .sdata2    @3731                                                        */
+/* 80455A28-80455A30 0008+00 s=1 e=0 z=0  None .sdata2    @3731                                                        */
 SECTION_SDATA2 static f64 Z2StatusMgr__lit_3731 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802B61E8-802B671C 0534+00 r=19 e=7 z=11  None .text      setDemoName__11Z2StatusMgrFPc                                */
+/* 802B61E8-802B671C 0534+00 s=1 e=7 z=0  None .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -416,7 +416,7 @@ asm void Z2StatusMgr::setDemoName(char* param_0) {
 #pragma pop
 
 
-/* 802B671C-802B6734 0018+00 r=1 e=1 z=0  None .text      processTime__11Z2StatusMgrFv                                 */
+/* 802B671C-802B6734 0018+00 s=0 e=1 z=0  None .text      processTime__11Z2StatusMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,7 +427,7 @@ asm void Z2StatusMgr::processTime() {
 #pragma pop
 
 
-/* 802B6734-802B6758 0024+00 r=5 e=5 z=0  None .text      checkDayTime__11Z2StatusMgrFv                                */
+/* 802B6734-802B6758 0024+00 s=0 e=5 z=0  None .text      checkDayTime__11Z2StatusMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -438,7 +438,7 @@ asm void Z2StatusMgr::checkDayTime() {
 #pragma pop
 
 
-/* 802B6758-802B6760 0008+00 r=1 e=1 z=0  None .text      setEventBit__11Z2StatusMgrFPv                                */
+/* 802B6758-802B6760 0008+00 s=0 e=1 z=0  None .text      setEventBit__11Z2StatusMgrFPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -449,7 +449,7 @@ asm void Z2StatusMgr::setEventBit(void* param_0) {
 #pragma pop
 
 
-/* 802B6760-802B6784 0024+00 r=1 e=1 z=0  None .text      setCameraPolygonPos__11Z2StatusMgrFP3Vec                     */
+/* 802B6760-802B6784 0024+00 s=0 e=1 z=0  None .text      setCameraPolygonPos__11Z2StatusMgrFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +460,7 @@ asm void Z2StatusMgr::setCameraPolygonPos(Vec* param_0) {
 #pragma pop
 
 
-/* 802B6784-802B6788 0004+00 r=1 e=1 z=0  None .text      setCameraGroupInfo__11Z2StatusMgrFUc                         */
+/* 802B6784-802B6788 0004+00 s=0 e=1 z=0  None .text      setCameraGroupInfo__11Z2StatusMgrFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,13 +472,13 @@ asm void Z2StatusMgr::setCameraGroupInfo(u8 param_0) {
 
 
 /* ############################################################################################## */
-/* 80455A30-80455A34 0004+00 r=1 e=0 z=0  None .sdata2    @3798                                                        */
+/* 80455A30-80455A34 0004+00 s=1 e=0 z=0  None .sdata2    @3798                                                        */
 SECTION_SDATA2 static f32 Z2StatusMgr__lit_3798 = 2000.0f;
 
-/* 80455A34-80455A38 0004+00 r=1 e=0 z=0  None .sdata2    @3799                                                        */
+/* 80455A34-80455A38 0004+00 s=1 e=0 z=0  None .sdata2    @3799                                                        */
 SECTION_SDATA2 static f32 Z2StatusMgr__lit_3799 = 1.0f / 5.0f;
 
-/* 802B6788-802B6840 00B8+00 r=2 e=2 z=0  None .text      setCameraInWaterDepth__11Z2StatusMgrFf                       */
+/* 802B6788-802B6840 00B8+00 s=0 e=2 z=0  None .text      setCameraInWaterDepth__11Z2StatusMgrFf                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

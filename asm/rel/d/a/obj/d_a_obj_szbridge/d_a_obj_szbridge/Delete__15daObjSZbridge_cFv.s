@@ -6,10 +6,10 @@ lbl_80D04A88:
 /* 80D04A98 00000010  41 82 00 08 */	beq lbl_80D04AA0
 /* 80D04A9C 00000014  38 63 05 A0 */	addi r3, r3, 0x5a0
 lbl_80D04AA0:
-/* 80D04AA0 00000000  3C 80 00 00 */	lis r4, l_arcName@ha /* 80D04C8C */
-/* 80D04AA4 00000004  38 84 00 00 */	addi r4, r4, l_arcName@l /* 80D04C8C */
+/* 80D04AA0 00000000  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80D04AA4 00000004  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80D04AA8 00000008  80 84 00 00 */	lwz r4, 0(r4)
-/* 80D04AAC 0000000C  4B FF F8 6D */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80D04AAC 0000000C  4B FF F8 6D */	bl _unresolved
 /* 80D04AB0 00000010  38 60 00 01 */	li r3, 1
 /* 80D04AB4 00000014  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D04AB8 00000018  7C 08 03 A6 */	mtlr r0

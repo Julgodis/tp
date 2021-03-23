@@ -3,31 +3,31 @@ lbl_80836E20:
 /* 80836E24 00000004  7C 08 02 A6 */	mflr r0
 /* 80836E28 00000008  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80836E2C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
-/* 80836E30 00000010  4B FF E7 09 */	bl _savegpr_26
+/* 80836E30 00000010  4B FF E7 09 */	bl _unresolved
 /* 80836E34 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80836E38 00000018  3C 60 00 00 */	lis r3, M_attr__10daFmtMng_c@ha /* 808378A8 */
-/* 80836E3C 0000001C  3B E3 00 00 */	addi r31, r3, M_attr__10daFmtMng_c@l /* 808378A8 */
-/* 80836E40 00000020  4B FF E6 F9 */	bl dKy_get_dayofweek__Fv
+/* 80836E38 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80836E3C 0000001C  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80836E40 00000020  4B FF E6 F9 */	bl _unresolved
 /* 80836E44 00000024  80 1E 05 94 */	lwz r0, 0x594(r30)
 /* 80836E48 00000028  7C 00 18 00 */	cmpw r0, r3
 /* 80836E4C 0000002C  40 82 01 14 */	bne lbl_80836F60
-/* 80836E50 00000030  4B FF E6 E9 */	bl dKy_darkworld_check__Fv
+/* 80836E50 00000030  4B FF E6 E9 */	bl _unresolved
 /* 80836E54 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80836E58 00000038  41 82 00 10 */	beq lbl_80836E68
-/* 80836E5C 0000003C  4B FF E6 DD */	bl dKy_getDarktime_minute__Fv
+/* 80836E5C 0000003C  4B FF E6 DD */	bl _unresolved
 /* 80836E60 00000040  7C 7D 1B 78 */	mr r29, r3
 /* 80836E64 00000044  48 00 00 0C */	b lbl_80836E70
 lbl_80836E68:
-/* 80836E68 00000000  4B FF E6 D1 */	bl dKy_getdaytime_minute__Fv
+/* 80836E68 00000000  4B FF E6 D1 */	bl _unresolved
 /* 80836E6C 00000004  7C 7D 1B 78 */	mr r29, r3
 lbl_80836E70:
-/* 80836E70 00000000  4B FF E6 C9 */	bl dKy_darkworld_check__Fv
+/* 80836E70 00000000  4B FF E6 C9 */	bl _unresolved
 /* 80836E74 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80836E78 00000008  41 82 00 0C */	beq lbl_80836E84
-/* 80836E7C 0000000C  4B FF E6 BD */	bl dKy_getDarktime_hour__Fv
+/* 80836E7C 0000000C  4B FF E6 BD */	bl _unresolved
 /* 80836E80 00000010  48 00 00 08 */	b lbl_80836E88
 lbl_80836E84:
-/* 80836E84 00000000  4B FF E6 B5 */	bl dKy_getdaytime_hour__Fv
+/* 80836E84 00000000  4B FF E6 B5 */	bl _unresolved
 lbl_80836E88:
 /* 80836E88 00000000  80 9E 05 9C */	lwz r4, 0x59c(r30)
 /* 80836E8C 00000004  1C 03 00 3C */	mulli r0, r3, 0x3c
@@ -42,19 +42,19 @@ lbl_80836E88:
 lbl_80836EB0:
 /* 80836EB0 00000000  80 7B 00 00 */	lwz r3, 0(r27)
 /* 80836EB4 00000004  38 81 00 08 */	addi r4, r1, 8
-/* 80836EB8 00000008  4B FF E6 81 */	bl fopAcM_SearchByID__FUiPP10fopAc_ac_c
+/* 80836EB8 00000008  4B FF E6 81 */	bl _unresolved
 /* 80836EBC 0000000C  83 81 00 08 */	lwz r28, 8(r1)
 /* 80836EC0 00000010  28 1C 00 00 */	cmplwi r28, 0
 /* 80836EC4 00000014  41 82 00 48 */	beq lbl_80836F0C
 /* 80836EC8 00000018  C0 3F 00 20 */	lfs f1, 0x20(r31)
-/* 80836ECC 0000001C  4B FF E6 6D */	bl cM_rndF__Ff
+/* 80836ECC 0000001C  4B FF E6 6D */	bl _unresolved
 /* 80836ED0 00000020  FC 00 08 1E */	fctiwz f0, f1
 /* 80836ED4 00000024  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80836ED8 00000028  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 80836EDC 0000002C  7F 83 E3 78 */	mr r3, r28
 /* 80836EE0 00000030  38 80 00 02 */	li r4, 2
 /* 80836EE4 00000034  80 BC 0A CC */	lwz r5, 0xacc(r28)
-/* 80836EE8 00000038  4B FF E6 51 */	bl getAnmP__10daNpcCd2_cFii
+/* 80836EE8 00000038  4B FF E6 51 */	bl _unresolved
 /* 80836EEC 0000003C  7C 64 1B 78 */	mr r4, r3
 /* 80836EF0 00000040  7F 83 E3 78 */	mr r3, r28
 /* 80836EF4 00000044  C0 3F 00 18 */	lfs f1, 0x18(r31)
@@ -62,7 +62,7 @@ lbl_80836EB0:
 /* 80836EFC 0000004C  38 A0 00 02 */	li r5, 2
 /* 80836F00 00000050  7F A6 EB 78 */	mr r6, r29
 /* 80836F04 00000054  38 E0 FF FF */	li r7, -1
-/* 80836F08 00000058  4B FF E6 31 */	bl setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
+/* 80836F08 00000058  4B FF E6 31 */	bl _unresolved
 lbl_80836F0C:
 /* 80836F0C 00000000  3B 5A 00 01 */	addi r26, r26, 1
 /* 80836F10 00000004  3B 7B 00 20 */	addi r27, r27, 0x20
@@ -78,17 +78,17 @@ lbl_80836F14:
 /* 80836F34 00000020  90 1E 05 78 */	stw r0, 0x578(r30)
 /* 80836F38 00000024  80 1E 05 78 */	lwz r0, 0x578(r30)
 /* 80836F3C 00000028  1C 80 00 18 */	mulli r4, r0, 0x18
-/* 80836F40 0000002C  3C 60 00 00 */	lis r3, ActionTable__10daFmtMng_c@ha /* 808379C4 */
-/* 80836F44 00000030  38 03 00 00 */	addi r0, r3, ActionTable__10daFmtMng_c@l /* 808379C4 */
+/* 80836F40 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80836F44 00000030  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80836F48 00000034  7C 00 22 14 */	add r0, r0, r4
 /* 80836F4C 00000038  90 1E 05 74 */	stw r0, 0x574(r30)
 /* 80836F50 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 80836F54 00000040  81 9E 05 74 */	lwz r12, 0x574(r30)
-/* 80836F58 00000044  4B FF E5 E1 */	bl __ptmf_scall
+/* 80836F58 00000044  4B FF E5 E1 */	bl _unresolved
 /* 80836F5C 00000048  60 00 00 00 */	nop 
 lbl_80836F60:
 /* 80836F60 00000000  39 61 00 30 */	addi r11, r1, 0x30
-/* 80836F64 00000004  4B FF E5 D5 */	bl _restgpr_26
+/* 80836F64 00000004  4B FF E5 D5 */	bl _unresolved
 /* 80836F68 00000008  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 80836F6C 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80836F70 00000010  38 21 00 30 */	addi r1, r1, 0x30

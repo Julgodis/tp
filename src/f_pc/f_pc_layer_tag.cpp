@@ -58,7 +58,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80021CD4-80021DCC 00F8+00 r=2 e=1 z=0  None .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
+/* 80021CD4-80021DCC 00F8+00 s=1 e=1 z=0  None .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +69,7 @@ asm void fpcLyTg_ToQueue(layer_management_tag_class* param_0, unsigned int param
 #pragma pop
 
 
-/* 80021DCC-80021E2C 0060+00 r=3 e=2 z=0  None .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
+/* 80021DCC-80021E2C 0060+00 s=1 e=2 z=0  None .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void fpcLyTg_QueueTo(layer_management_tag_class* param_0) {
 #pragma pop
 
 
-/* 80021E2C-80021EB0 0084+00 r=1 e=1 z=0  None .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
+/* 80021E2C-80021EB0 0084+00 s=0 e=1 z=0  None .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void fpcLyTg_Move(layer_management_tag_class* param_0, unsigned int param_1,
 
 
 /* ############################################################################################## */
-/* 803A3A00-803A3A20 001C+04 r=1 e=0 z=0  None .data      crear$2239                                                   */
+/* 803A3A00-803A3A20 001C+04 s=1 e=0 z=0  None .data      crear$2239                                                   */
 SECTION_DATA static u8 data_803A3A00[28 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -100,7 +100,7 @@ SECTION_DATA static u8 data_803A3A00[28 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80021EB0-80021F64 00B4+00 r=1 e=1 z=0  None .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
+/* 80021EB0-80021F64 00B4+00 s=0 e=1 z=0  None .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

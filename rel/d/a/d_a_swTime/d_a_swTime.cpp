@@ -18,54 +18,36 @@ struct daSwTime_c {
 	/* 80D4F758 */ void _delete();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct dSv_info_c {
-	/* 80035200 */ void onSwitch(int, int);
-	/* 80035360 */ void isSwitch(int, int) const;
-};
-
 // 
 // Forward References:
 // 
 
-static void daSwTime_Execute(daSwTime_c*); // 2
-static void daSwTime_Delete(daSwTime_c*); // 2
-static void daSwTime_Create(daSwTime_c*); // 2
+void daSwTime_Execute(daSwTime_c*); // 2
+void daSwTime_Delete(daSwTime_c*); // 2
+void daSwTime_Create(daSwTime_c*); // 2
 
 extern "C" void Create__10daSwTime_cFv(); // 1
 extern "C" void create__10daSwTime_cFv(); // 1
 extern "C" void execute__10daSwTime_cFv(); // 1
 extern "C" void _delete__10daSwTime_cFv(); // 1
-extern "C" static void daSwTime_Execute__FP10daSwTime_c(); // 1
-extern "C" static void daSwTime_Delete__FP10daSwTime_c(); // 1
-extern "C" static void daSwTime_Create__FP10daSwTime_c(); // 1
-extern "C" extern void* g_profile_SwTime[12];
+extern "C" void daSwTime_Execute__FP10daSwTime_c(); // 1
+extern "C" void daSwTime_Delete__FP10daSwTime_c(); // 1
+extern "C" void daSwTime_Create__FP10daSwTime_c(); // 1
+extern "C" extern u8 l_daSwTime_Method[32];
+extern "C" extern u8 g_profile_SwTime[48];
 
 // 
 // External References:
 // 
 
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void _unresolved(); // 1
 
 // 
 // Declarations:
 // 
 
-/* 80D4F638-80D4F660 0028+00 r=1 e=0 z=0  None .text      Create__10daSwTime_cFv                                       */
+/* 80D4F638-80D4F660 0028+00 s=1 e=0 z=0  None .text      Create__10daSwTime_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +58,7 @@ asm void daSwTime_c::Create() {
 #pragma pop
 
 
-/* 80D4F660-80D4F6C8 0068+00 r=1 e=0 z=0  None .text      create__10daSwTime_cFv                                       */
+/* 80D4F660-80D4F6C8 0068+00 s=1 e=0 z=0  None .text      create__10daSwTime_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +69,7 @@ asm void daSwTime_c::create() {
 #pragma pop
 
 
-/* 80D4F6C8-80D4F758 0090+00 r=1 e=0 z=0  None .text      execute__10daSwTime_cFv                                      */
+/* 80D4F6C8-80D4F758 0090+00 s=1 e=0 z=0  None .text      execute__10daSwTime_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +80,7 @@ asm void daSwTime_c::execute() {
 #pragma pop
 
 
-/* 80D4F758-80D4F760 0008+00 r=1 e=0 z=0  None .text      _delete__10daSwTime_cFv                                      */
+/* 80D4F758-80D4F760 0008+00 s=1 e=0 z=0  None .text      _delete__10daSwTime_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,33 +91,33 @@ asm void daSwTime_c::_delete() {
 #pragma pop
 
 
-/* 80D4F760-80D4F780 0020+00 r=1 e=0 z=0  None .text      daSwTime_Execute__FP10daSwTime_c                             */
+/* 80D4F760-80D4F780 0020+00 s=0 e=0 z=0  None .text      daSwTime_Execute__FP10daSwTime_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSwTime_Execute(daSwTime_c* param_0) {
+asm void daSwTime_Execute(daSwTime_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Execute__FP10daSwTime_c.s"
 }
 #pragma pop
 
 
-/* 80D4F780-80D4F7A0 0020+00 r=1 e=0 z=0  None .text      daSwTime_Delete__FP10daSwTime_c                              */
+/* 80D4F780-80D4F7A0 0020+00 s=0 e=0 z=0  None .text      daSwTime_Delete__FP10daSwTime_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSwTime_Delete(daSwTime_c* param_0) {
+asm void daSwTime_Delete(daSwTime_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Delete__FP10daSwTime_c.s"
 }
 #pragma pop
 
 
-/* 80D4F7A0-80D4F7C0 0020+00 r=1 e=0 z=0  None .text      daSwTime_Create__FP10daSwTime_c                              */
+/* 80D4F7A0-80D4F7C0 0020+00 s=0 e=0 z=0  None .text      daSwTime_Create__FP10daSwTime_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSwTime_Create(daSwTime_c* param_0) {
+asm void daSwTime_Create(daSwTime_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_swTime/d_a_swTime/daSwTime_Create__FP10daSwTime_c.s"
 }
@@ -143,31 +125,16 @@ asm static void daSwTime_Create(daSwTime_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D4F7C8-80D4F7E8 0020+00 r=1 e=0 z=0  None .data      l_daSwTime_Method                                            */
-SECTION_DATA static void* l_daSwTime_Method[8] = {
-	/* 0    */ (void*)daSwTime_Create__FP10daSwTime_c,
-	/* 1    */ (void*)daSwTime_Delete__FP10daSwTime_c,
-	/* 2    */ (void*)daSwTime_Execute__FP10daSwTime_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D4F7C8-80D4F7E8 0020+00 s=0 e=0 z=0  None .data      l_daSwTime_Method                                            */
+SECTION_DATA u8 l_daSwTime_Method[32] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D4F7E8-80D4F818 0030+00 r=1 e=0 z=1  None .data      g_profile_SwTime                                             */
-SECTION_DATA void* g_profile_SwTime[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01A10000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000056C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02400000,
-	/* 9    */ (void*)&l_daSwTime_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+/* 80D4F7E8-80D4F818 0030+00 s=0 e=0 z=0  None .data      g_profile_SwTime                                             */
+SECTION_DATA u8 g_profile_SwTime[48] = {
+	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x07, 0xFF, 0xFD, 0x01, 0xA1, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x05, 0x6C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x02, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x01, 0x00, 0x00, 0x0E, 0x00, 0x00,
 };
 

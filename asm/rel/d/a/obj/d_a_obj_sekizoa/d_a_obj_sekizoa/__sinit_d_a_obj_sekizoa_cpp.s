@@ -4,14 +4,14 @@ lbl_80CD58A0:
 /* 80CD58A8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CD58AC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CD58B0 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80CD58B4 00000014  3C 60 00 00 */	lis r3, lit_1109@ha /* 80CD68E0 */
-/* 80CD58B8 00000018  3B C3 00 00 */	addi r30, r3, lit_1109@l /* 80CD68E0 */
-/* 80CD58BC 0000001C  3C 60 00 00 */	lis r3, m__21daObj_Sekizoa_Param_c@ha /* 80CD5CFC */
-/* 80CD58C0 00000020  3B E3 00 00 */	addi r31, r3, m__21daObj_Sekizoa_Param_c@l /* 80CD5CFC */
-/* 80CD58C4 00000024  3C 60 00 00 */	lis r3, cNullVec__6Z2Calc@ha /* 80CD5ED8 */
-/* 80CD58C8 00000028  38 63 00 00 */	addi r3, r3, cNullVec__6Z2Calc@l /* 80CD5ED8 */
-/* 80CD58CC 0000002C  3C 80 00 00 */	lis r4, __ptmf_null@ha /* 803A2180 */
-/* 80CD58D0 00000030  38 A4 00 00 */	addi r5, r4, __ptmf_null@l /* 803A2180 */
+/* 80CD58B4 00000014  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CD58B8 00000018  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
+/* 80CD58BC 0000001C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CD58C0 00000020  3B E3 00 00 */	addi r31, r3, 0x0000 /* 0x00000000@l */
+/* 80CD58C4 00000024  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CD58C8 00000028  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 80CD58CC 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CD58D0 00000030  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
 /* 80CD58D4 00000034  80 85 00 00 */	lwz r4, 0(r5)
 /* 80CD58D8 00000038  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CD58DC 0000003C  90 83 05 BC */	stw r4, 0x5bc(r3)
@@ -74,8 +74,8 @@ lbl_80CD58A0:
 /* 80CD59C0 00000120  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80CD59C4 00000124  C0 1F 01 60 */	lfs f0, 0x160(r31)
 /* 80CD59C8 00000128  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80CD59CC 0000012C  3C 80 00 00 */	lis r4, __dt__4cXyzFv@ha /* 80CD4BD0 */
-/* 80CD59D0 00000130  38 84 00 00 */	addi r4, r4, __dt__4cXyzFv@l /* 80CD4BD0 */
+/* 80CD59CC 0000012C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CD59D0 00000130  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CD59D4 00000134  38 BE 00 40 */	addi r5, r30, 0x40
 /* 80CD59D8 00000138  4B FF 89 01 */	bl __register_global_object
 /* 80CD59DC 0000013C  C0 1F 01 64 */	lfs f0, 0x164(r31)
@@ -85,16 +85,16 @@ lbl_80CD58A0:
 /* 80CD59EC 0000014C  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80CD59F0 00000150  C0 1F 01 60 */	lfs f0, 0x160(r31)
 /* 80CD59F4 00000154  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80CD59F8 00000158  3C 80 00 00 */	lis r4, __dt__4cXyzFv@ha /* 80CD4BD0 */
-/* 80CD59FC 0000015C  38 84 00 00 */	addi r4, r4, __dt__4cXyzFv@l /* 80CD4BD0 */
+/* 80CD59F8 00000158  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CD59FC 0000015C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CD5A00 00000160  38 BE 00 58 */	addi r5, r30, 0x58
 /* 80CD5A04 00000164  4B FF 88 D5 */	bl __register_global_object
-/* 80CD5A08 00000168  3C 60 00 00 */	lis r3, __vt__21daObj_Sekizoa_Param_c@ha /* 80CD68CC */
-/* 80CD5A0C 0000016C  38 03 00 00 */	addi r0, r3, __vt__21daObj_Sekizoa_Param_c@l /* 80CD68CC */
+/* 80CD5A08 00000168  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80CD5A0C 0000016C  38 03 00 00 */	addi r0, r3, 0x0000 /* 0x00000000@l */
 /* 80CD5A10 00000170  90 1E 00 7C */	stw r0, 0x7c(r30)
 /* 80CD5A14 00000174  38 7E 00 7C */	addi r3, r30, 0x7c
-/* 80CD5A18 00000178  3C 80 00 00 */	lis r4, __dt__21daObj_Sekizoa_Param_cFv@ha /* 80CD5C30 */
-/* 80CD5A1C 0000017C  38 84 00 00 */	addi r4, r4, __dt__21daObj_Sekizoa_Param_cFv@l /* 80CD5C30 */
+/* 80CD5A18 00000178  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CD5A1C 0000017C  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80CD5A20 00000180  38 BE 00 70 */	addi r5, r30, 0x70
 /* 80CD5A24 00000184  4B FF 88 B5 */	bl __register_global_object
 /* 80CD5A28 00000188  83 E1 00 0C */	lwz r31, 0xc(r1)

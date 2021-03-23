@@ -3,33 +3,33 @@ lbl_80A937A8:
 /* 80A937AC 00000004  7C 08 02 A6 */	mflr r0
 /* 80A937B0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A937B4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A937B8 00000010  4B FF F5 21 */	bl _savegpr_28
+/* 80A937B8 00000010  4B FF F5 21 */	bl _unresolved
 /* 80A937BC 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80A937C0 00000018  3C 60 00 00 */	lis r3, m__24daNpc_Pachi_Besu_Param_c@ha /* 80A96A6C */
-/* 80A937C4 0000001C  3B C3 00 00 */	addi r30, r3, m__24daNpc_Pachi_Besu_Param_c@l /* 80A96A6C */
+/* 80A937C0 00000018  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80A937C4 0000001C  3B C3 00 00 */	addi r30, r3, 0x0000 /* 0x00000000@l */
 /* 80A937C8 00000020  38 7F 0F B0 */	addi r3, r31, 0xfb0
 /* 80A937CC 00000024  38 1F 0F C8 */	addi r0, r31, 0xfc8
 /* 80A937D0 00000028  7F A3 00 50 */	subf r29, r3, r0
 /* 80A937D4 0000002C  80 7F 09 6C */	lwz r3, 0x96c(r31)
 /* 80A937D8 00000030  28 03 00 00 */	cmplwi r3, 0
 /* 80A937DC 00000034  41 82 00 08 */	beq lbl_80A937E4
-/* 80A937E0 00000038  4B FF F4 F9 */	bl initialize__15daNpcT_MatAnm_cFv
+/* 80A937E0 00000038  4B FF F4 F9 */	bl _unresolved
 lbl_80A937E4:
 /* 80A937E4 00000000  38 7F 0D 24 */	addi r3, r31, 0xd24
 /* 80A937E8 00000004  38 80 00 00 */	li r4, 0
 /* 80A937EC 00000008  38 1F 0E 38 */	addi r0, r31, 0xe38
 /* 80A937F0 0000000C  7C A3 00 50 */	subf r5, r3, r0
-/* 80A937F4 00000010  4B FF F4 E5 */	bl memset
+/* 80A937F4 00000010  4B FF F4 E5 */	bl _unresolved
 /* 80A937F8 00000014  38 7F 0B 50 */	addi r3, r31, 0xb50
-/* 80A937FC 00000018  4B FF F4 DD */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A937FC 00000018  4B FF F4 DD */	bl _unresolved
 /* 80A93800 0000001C  38 7F 0B 74 */	addi r3, r31, 0xb74
-/* 80A93804 00000020  4B FF F4 D5 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
+/* 80A93804 00000020  4B FF F4 D5 */	bl _unresolved
 /* 80A93808 00000024  38 7F 0B 98 */	addi r3, r31, 0xb98
-/* 80A9380C 00000028  4B FF F4 CD */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A9380C 00000028  4B FF F4 CD */	bl _unresolved
 /* 80A93810 0000002C  38 7F 0B A0 */	addi r3, r31, 0xba0
-/* 80A93814 00000030  4B FF F4 C5 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A93814 00000030  4B FF F4 C5 */	bl _unresolved
 /* 80A93818 00000034  38 7F 0B A8 */	addi r3, r31, 0xba8
-/* 80A9381C 00000038  4B FF F4 BD */	bl initialize__15daNpcT_JntAnm_cFv
+/* 80A9381C 00000038  4B FF F4 BD */	bl _unresolved
 /* 80A93820 0000003C  38 A0 00 00 */	li r5, 0
 /* 80A93824 00000040  38 60 00 00 */	li r3, 0
 /* 80A93828 00000044  7C A4 2B 78 */	mr r4, r5
@@ -55,7 +55,7 @@ lbl_80A93838:
 /* 80A93874 0000003C  38 00 00 01 */	li r0, 1
 /* 80A93878 00000040  98 1F 0E 26 */	stb r0, 0xe26(r31)
 /* 80A9387C 00000044  C0 3E 00 A4 */	lfs f1, 0xa4(r30)
-/* 80A93880 00000048  4B FF F4 59 */	bl cM_rndF__Ff
+/* 80A93880 00000048  4B FF F4 59 */	bl _unresolved
 /* 80A93884 0000004C  FC 00 08 1E */	fctiwz f0, f1
 /* 80A93888 00000050  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80A9388C 00000054  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -68,7 +68,7 @@ lbl_80A93838:
 lbl_80A938A8:
 /* 80A938A8 00000000  38 7E 0F A0 */	addi r3, r30, 0xfa0
 /* 80A938AC 00000004  7C 7F 1A 14 */	add r3, r31, r3
-/* 80A938B0 00000008  4B FF F4 29 */	bl initialize__18daNpcT_ActorMngr_cFv
+/* 80A938B0 00000008  4B FF F4 29 */	bl _unresolved
 /* 80A938B4 0000000C  3B 9C 00 01 */	addi r28, r28, 1
 /* 80A938B8 00000010  2C 1C 00 02 */	cmpwi r28, 2
 /* 80A938BC 00000014  3B DE 00 08 */	addi r30, r30, 8
@@ -76,7 +76,7 @@ lbl_80A938A8:
 /* 80A938C4 0000001C  38 7F 0F B0 */	addi r3, r31, 0xfb0
 /* 80A938C8 00000020  38 80 00 00 */	li r4, 0
 /* 80A938CC 00000024  7F A5 EB 78 */	mr r5, r29
-/* 80A938D0 00000028  4B FF F4 09 */	bl memset
+/* 80A938D0 00000028  4B FF F4 09 */	bl _unresolved
 /* 80A938D4 0000002C  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 80A938D8 00000030  2C 00 00 00 */	cmpwi r0, 0
 /* 80A938DC 00000034  41 82 00 08 */	beq lbl_80A938E4
@@ -87,9 +87,9 @@ lbl_80A938E4:
 lbl_80A938EC:
 /* 80A938EC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80A938F0 00000004  A8 9F 04 B6 */	lha r4, 0x4b6(r31)
-/* 80A938F4 00000008  4B FF F3 E5 */	bl setAngle__8daNpcT_cFs
+/* 80A938F4 00000008  4B FF F3 E5 */	bl _unresolved
 /* 80A938F8 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80A938FC 00000010  4B FF F3 DD */	bl _restgpr_28
+/* 80A938FC 00000010  4B FF F3 DD */	bl _unresolved
 /* 80A93900 00000014  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80A93904 00000018  7C 08 03 A6 */	mtlr r0
 /* 80A93908 0000001C  38 21 00 20 */	addi r1, r1, 0x20

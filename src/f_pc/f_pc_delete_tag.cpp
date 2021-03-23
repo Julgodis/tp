@@ -54,14 +54,14 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A39A0-803A39B0 000C+04 r=3 e=1 z=0  None .data      g_fpcDtTg_Queue                                              */
+/* 803A39A0-803A39B0 000C+04 s=2 e=1 z=0  None .data      g_fpcDtTg_Queue                                              */
 SECTION_DATA u8 g_fpcDtTg_Queue[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80020F30-80020F48 0018+00 r=1 e=1 z=0  None .text      fpcDtTg_IsEmpty__Fv                                          */
+/* 80020F30-80020F48 0018+00 s=0 e=1 z=0  None .text      fpcDtTg_IsEmpty__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm void fpcDtTg_IsEmpty() {
 #pragma pop
 
 
-/* 80020F48-80020F7C 0034+00 r=2 e=1 z=0  None .text      fpcDtTg_ToDeleteQ__FP16delete_tag_class                      */
+/* 80020F48-80020F7C 0034+00 s=1 e=1 z=0  None .text      fpcDtTg_ToDeleteQ__FP16delete_tag_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void fpcDtTg_ToDeleteQ(delete_tag_class* param_0) {
 #pragma pop
 
 
-/* 80020F7C-80020F9C 0020+00 r=1 e=0 z=0  None .text      fpcDtTg_DeleteQTo__FP16delete_tag_class                      */
+/* 80020F7C-80020F9C 0020+00 s=1 e=0 z=0  None .text      fpcDtTg_DeleteQTo__FP16delete_tag_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm static void fpcDtTg_DeleteQTo(delete_tag_class* param_0) {
 #pragma pop
 
 
-/* 80020F9C-8002101C 0080+00 r=1 e=1 z=0  None .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i                       */
+/* 80020F9C-8002101C 0080+00 s=0 e=1 z=0  None .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void fpcDtTg_Do(delete_tag_class* param_0, int (*)(void*)) {
 #pragma pop
 
 
-/* 8002101C-80021040 0024+00 r=1 e=1 z=0  None .text      fpcDtTg_Init__FP16delete_tag_classPv                         */
+/* 8002101C-80021040 0024+00 s=0 e=1 z=0  None .text      fpcDtTg_Init__FP16delete_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

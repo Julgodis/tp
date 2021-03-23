@@ -12,13 +12,13 @@ lbl_804A35FC:
 lbl_804A3624:
 /* 804A3624 00000000  38 00 00 05 */	li r0, 5
 /* 804A3628 00000004  90 1F 00 B0 */	stw r0, 0xb0(r31)
-/* 804A362C 00000008  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 804A3630 0000000C  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 804A362C 00000008  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 804A3630 0000000C  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 804A3634 00000010  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 804A3638 00000014  4B FF F7 E1 */	bl getCopyRodBallReturnSpeed__9daAlink_cCFv
+/* 804A3638 00000014  4B FF F7 E1 */	bl _unresolved
 /* 804A363C 00000018  D0 3F 05 2C */	stfs f1, 0x52c(r31)
 /* 804A3640 0000001C  38 7F 07 40 */	addi r3, r31, 0x740
-/* 804A3644 00000020  4B FF F7 D5 */	bl clearData__16daPy_actorKeep_cFv
+/* 804A3644 00000020  4B FF F7 D5 */	bl _unresolved
 /* 804A3648 00000024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804A364C 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804A3650 0000002C  7C 08 03 A6 */	mtlr r0

@@ -105,10 +105,10 @@ struct cCcD_GObjInf {
 	/* 8008517C */ void ClrCoHit();
 };
 
-struct _GXColor {
+struct cCcD_SrcObj {
 };
 
-struct cCcD_SrcObj {
+struct _GXColor {
 };
 
 struct cCcD_Obj {
@@ -199,6 +199,8 @@ struct dCcD_Sph {
 struct cCcD_PntAttr {
 };
 
+struct cCcD_CpsAttr;
+struct cCcD_SphAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -208,12 +210,10 @@ struct cCcD_ShapeAttr {
 	/* 80263A64 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
-struct cCcD_CpsAttr;
 struct cCcD_CylAttr;
 struct cCcD_AabAttr {
 };
 
-struct cCcD_SphAttr;
 struct cCcD_TriAttr {
 	/* 80084E44 */ void CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
 	/* 80263A88 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
@@ -461,7 +461,6 @@ extern "C" static void func_800852D0(); // 1
 extern "C" static void func_800852D8(); // 1
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
-extern "C" extern void* __vt__8dCcD_Tri[36];
 extern "C" extern void* __vt__8dCcD_Cps[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__10dCcD_GStts[3];
@@ -554,7 +553,7 @@ extern "C" extern f32 Zero__4cXyz[3];
 // Declarations:
 // 
 
-/* 8008364C-80083660 0014+00 r=3 e=0 z=0  None .text      ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv                     */
+/* 8008364C-80083660 0014+00 s=3 e=0 z=0  None .text      ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,7 +564,7 @@ asm void dCcD_GAtTgCoCommonBase::ClrActorInfo() {
 #pragma pop
 
 
-/* 80083660-80083678 0018+00 r=1 e=0 z=0  None .text      ct__22dCcD_GAtTgCoCommonBaseFv                               */
+/* 80083660-80083678 0018+00 s=1 e=0 z=0  None .text      ct__22dCcD_GAtTgCoCommonBaseFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,7 +575,7 @@ asm void dCcD_GAtTgCoCommonBase::ct() {
 #pragma pop
 
 
-/* 80083678-80083688 0010+00 r=2 e=2 z=0  None .text      SetHitApid__22dCcD_GAtTgCoCommonBaseFUi                      */
+/* 80083678-80083688 0010+00 s=0 e=2 z=0  None .text      SetHitApid__22dCcD_GAtTgCoCommonBaseFUi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -587,7 +586,7 @@ asm void dCcD_GAtTgCoCommonBase::SetHitApid(unsigned int param_0) {
 #pragma pop
 
 
-/* 80083688-80083704 007C+00 r=66 e=17 z=43  None .text      GetAc__22dCcD_GAtTgCoCommonBaseFv                            */
+/* 80083688-80083704 007C+00 s=6 e=17 z=0  None .text      GetAc__22dCcD_GAtTgCoCommonBaseFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -598,7 +597,7 @@ asm void dCcD_GAtTgCoCommonBase::GetAc() {
 #pragma pop
 
 
-/* 80083704-80083718 0014+00 r=3 e=0 z=0  None .text      Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase  */
+/* 80083704-80083718 0014+00 s=3 e=0 z=0  None .text      Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,7 +608,7 @@ asm void dCcD_GAtTgCoCommonBase::Set(dCcD_SrcGAtTgCoCommonBase const& param_0) {
 #pragma pop
 
 
-/* 80083718-80083724 000C+00 r=1 e=1 z=0  None .text      SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv               */
+/* 80083718-80083724 000C+00 s=0 e=1 z=0  None .text      SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,7 +619,7 @@ asm void dCcD_GAtTgCoCommonBase::SetEffCounterTimer() {
 #pragma pop
 
 
-/* 80083724-80083748 0024+00 r=3 e=0 z=0  None .text      SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv               */
+/* 80083724-80083748 0024+00 s=3 e=0 z=0  None .text      SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -631,7 +630,7 @@ asm void dCcD_GAtTgCoCommonBase::SubtractEffCounter() {
 #pragma pop
 
 
-/* 80083748-80083760 0018+00 r=1 e=1 z=0  None .text      ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv                    */
+/* 80083748-80083760 0018+00 s=0 e=1 z=0  None .text      ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,7 +642,7 @@ asm void dCcD_GAtTgCoCommonBase::ChkEffCounter() {
 
 
 /* ############################################################################################## */
-/* 803ABFC0-803AC050 0090+00 r=335 e=2 z=332  None .data      __vt__8dCcD_Sph                                              */
+/* 803ABFC0-803AC050 0090+00 s=1 e=2 z=0  None .data      __vt__8dCcD_Sph                                              */
 SECTION_DATA void* __vt__8dCcD_Sph[36] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -683,7 +682,7 @@ SECTION_DATA void* __vt__8dCcD_Sph[36] = {
 	/* 35   */ (void*)func_800852D0,
 };
 
-/* 803AC050-803AC0E0 0090+00 r=453 e=4 z=448  None .data      __vt__8dCcD_Cyl                                              */
+/* 803AC050-803AC0E0 0090+00 s=1 e=4 z=0  None .data      __vt__8dCcD_Cyl                                              */
 SECTION_DATA void* __vt__8dCcD_Cyl[36] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -723,8 +722,8 @@ SECTION_DATA void* __vt__8dCcD_Cyl[36] = {
 	/* 35   */ (void*)func_800852C0,
 };
 
-/* 803AC0E0-803AC170 0090+00 r=6 e=0 z=5  None .data      __vt__8dCcD_Tri                                              */
-SECTION_DATA void* __vt__8dCcD_Tri[36] = {
+/* 803AC0E0-803AC170 0090+00 s=1 e=0 z=0  None .data      __vt__8dCcD_Tri                                              */
+SECTION_DATA static void* __vt__8dCcD_Tri[36] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__8dCcD_TriFv,
@@ -763,7 +762,7 @@ SECTION_DATA void* __vt__8dCcD_Tri[36] = {
 	/* 35   */ (void*)func_800852B0,
 };
 
-/* 803AC170-803AC200 0090+00 r=30 e=3 z=26  None .data      __vt__8dCcD_Cps                                              */
+/* 803AC170-803AC200 0090+00 s=1 e=3 z=0  None .data      __vt__8dCcD_Cps                                              */
 SECTION_DATA void* __vt__8dCcD_Cps[36] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -803,7 +802,7 @@ SECTION_DATA void* __vt__8dCcD_Cps[36] = {
 	/* 35   */ (void*)func_800852A0,
 };
 
-/* 803AC200-803AC22C 002C+00 r=2 e=0 z=0  None .data      __vt__12dCcD_GObjInf                                         */
+/* 803AC200-803AC22C 002C+00 s=2 e=0 z=0  None .data      __vt__12dCcD_GObjInf                                         */
 SECTION_DATA static void* __vt__12dCcD_GObjInf[11] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -818,35 +817,35 @@ SECTION_DATA static void* __vt__12dCcD_GObjInf[11] = {
 	/* 10   */ (void*)ClrCoHit__12dCcD_GObjInfFv,
 };
 
-/* 803AC22C-803AC238 000C+00 r=3 e=0 z=0  None .data      __vt__11dCcD_GObjCo                                          */
+/* 803AC22C-803AC238 000C+00 s=3 e=0 z=0  None .data      __vt__11dCcD_GObjCo                                          */
 SECTION_DATA static void* __vt__11dCcD_GObjCo[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__11dCcD_GObjCoFv,
 };
 
-/* 803AC238-803AC244 000C+00 r=3 e=0 z=0  None .data      __vt__11dCcD_GObjTg                                          */
+/* 803AC238-803AC244 000C+00 s=3 e=0 z=0  None .data      __vt__11dCcD_GObjTg                                          */
 SECTION_DATA static void* __vt__11dCcD_GObjTg[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__11dCcD_GObjTgFv,
 };
 
-/* 803AC244-803AC250 000C+00 r=3 e=0 z=0  None .data      __vt__11dCcD_GObjAt                                          */
+/* 803AC244-803AC250 000C+00 s=3 e=0 z=0  None .data      __vt__11dCcD_GObjAt                                          */
 SECTION_DATA static void* __vt__11dCcD_GObjAt[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__11dCcD_GObjAtFv,
 };
 
-/* 803AC250-803AC25C 000C+00 r=6 e=0 z=0  None .data      __vt__22dCcD_GAtTgCoCommonBase                               */
+/* 803AC250-803AC25C 000C+00 s=6 e=0 z=0  None .data      __vt__22dCcD_GAtTgCoCommonBase                               */
 SECTION_DATA static void* __vt__22dCcD_GAtTgCoCommonBase[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__22dCcD_GAtTgCoCommonBaseFv,
 };
 
-/* 803AC25C-803AC288 002C+00 r=3 e=0 z=0  None .data      __vt__12cCcD_GObjInf                                         */
+/* 803AC25C-803AC288 002C+00 s=3 e=0 z=0  None .data      __vt__12cCcD_GObjInf                                         */
 SECTION_DATA static void* __vt__12cCcD_GObjInf[11] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -861,7 +860,7 @@ SECTION_DATA static void* __vt__12cCcD_GObjInf[11] = {
 	/* 10   */ (void*)ClrCoHit__12cCcD_GObjInfFv,
 };
 
-/* 803AC288-803AC2A8 0020+00 r=4 e=0 z=0  None .data      __vt__8cCcD_Obj                                              */
+/* 803AC288-803AC2A8 0020+00 s=4 e=0 z=0  None .data      __vt__8cCcD_Obj                                              */
 SECTION_DATA static void* __vt__8cCcD_Obj[8] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -873,42 +872,42 @@ SECTION_DATA static void* __vt__8cCcD_Obj[8] = {
 	/* 7    */ (void*)Draw__8cCcD_ObjFRC8_GXColor,
 };
 
-/* 803AC2A8-803AC2B4 000C+00 r=6 e=0 z=0  None .data      __vt__10cCcD_ObjCo                                           */
+/* 803AC2A8-803AC2B4 000C+00 s=6 e=0 z=0  None .data      __vt__10cCcD_ObjCo                                           */
 SECTION_DATA static void* __vt__10cCcD_ObjCo[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__10cCcD_ObjCoFv,
 };
 
-/* 803AC2B4-803AC2C0 000C+00 r=6 e=0 z=0  None .data      __vt__10cCcD_ObjTg                                           */
+/* 803AC2B4-803AC2C0 000C+00 s=6 e=0 z=0  None .data      __vt__10cCcD_ObjTg                                           */
 SECTION_DATA static void* __vt__10cCcD_ObjTg[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__10cCcD_ObjTgFv,
 };
 
-/* 803AC2C0-803AC2CC 000C+00 r=6 e=0 z=0  None .data      __vt__10cCcD_ObjAt                                           */
+/* 803AC2C0-803AC2CC 000C+00 s=6 e=0 z=0  None .data      __vt__10cCcD_ObjAt                                           */
 SECTION_DATA static void* __vt__10cCcD_ObjAt[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__10cCcD_ObjAtFv,
 };
 
-/* 803AC2CC-803AC2D8 000C+00 r=9 e=0 z=0  None .data      __vt__18cCcD_ObjCommonBase                                   */
+/* 803AC2CC-803AC2D8 000C+00 s=9 e=0 z=0  None .data      __vt__18cCcD_ObjCommonBase                                   */
 SECTION_DATA static void* __vt__18cCcD_ObjCommonBase[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__18cCcD_ObjCommonBaseFv,
 };
 
-/* 803AC2D8-803AC2E4 000C+00 r=5 e=0 z=0  None .data      __vt__14cCcD_ObjHitInf                                       */
+/* 803AC2D8-803AC2E4 000C+00 s=5 e=0 z=0  None .data      __vt__14cCcD_ObjHitInf                                       */
 SECTION_DATA static void* __vt__14cCcD_ObjHitInf[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__14cCcD_ObjHitInfFv,
 };
 
-/* 803AC2E4-803AC310 002C+00 r=619 e=7 z=611  None .data      __vt__9dCcD_Stts                                             */
+/* 803AC2E4-803AC310 002C+00 s=1 e=7 z=0  None .data      __vt__9dCcD_Stts                                             */
 SECTION_DATA void* __vt__9dCcD_Stts[11] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -923,21 +922,21 @@ SECTION_DATA void* __vt__9dCcD_Stts[11] = {
 	/* 10   */ (void*)func_80085298,
 };
 
-/* 803AC310-803AC31C 000C+00 r=7 e=4 z=0  None .data      __vt__10dCcD_GStts                                           */
+/* 803AC310-803AC31C 000C+00 s=3 e=4 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA void* __vt__10dCcD_GStts[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
 };
 
-/* 803AC31C-803AC328 000C+00 r=8 e=4 z=0  None .data      __vt__10cCcD_GStts                                           */
+/* 803AC31C-803AC328 000C+00 s=4 e=4 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA void* __vt__10cCcD_GStts[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
 };
 
-/* 80083760-800837B0 0050+00 r=449 e=3 z=446  None .text      __ct__10dCcD_GSttsFv                                         */
+/* 80083760-800837B0 0050+00 s=0 e=3 z=0  None .text      __ct__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -948,7 +947,7 @@ asm dCcD_GStts::dCcD_GStts() {
 #pragma pop
 
 
-/* 800837B0-800837F8 0048+00 r=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 800837B0-800837F8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,7 +958,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 800837F8-80083830 0038+00 r=1 e=0 z=0  None .text      Ct__10dCcD_GSttsFv                                           */
+/* 800837F8-80083830 0038+00 s=1 e=0 z=0  None .text      Ct__10dCcD_GSttsFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -970,7 +969,7 @@ asm void dCcD_GStts::Ct() {
 #pragma pop
 
 
-/* 80083830-80083850 0020+00 r=163 e=3 z=160  None .text      Move__10dCcD_GSttsFv                                         */
+/* 80083830-80083850 0020+00 s=0 e=3 z=0  None .text      Move__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -981,7 +980,7 @@ asm void dCcD_GStts::Move() {
 #pragma pop
 
 
-/* 80083850-80083860 0010+00 r=1 e=0 z=0  None .text      GetGStts__9dCcD_SttsFv                                       */
+/* 80083850-80083860 0010+00 s=1 e=0 z=0  None .text      GetGStts__9dCcD_SttsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -992,7 +991,7 @@ asm void dCcD_Stts::GetGStts() {
 #pragma pop
 
 
-/* 80083860-800838F4 0094+00 r=419 e=3 z=416  None .text      Init__9dCcD_SttsFiiP10fopAc_ac_c                             */
+/* 80083860-800838F4 0094+00 s=0 e=3 z=0  None .text      Init__9dCcD_SttsFiiP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1003,7 +1002,7 @@ asm void dCcD_Stts::Init(int param_0, int param_1, fopAc_ac_c* param_2) {
 #pragma pop
 
 
-/* 800838F4-80083928 0034+00 r=1 e=0 z=0  None .text      Ct__9dCcD_SttsFv                                             */
+/* 800838F4-80083928 0034+00 s=1 e=0 z=0  None .text      Ct__9dCcD_SttsFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1014,7 +1013,7 @@ asm void dCcD_Stts::Ct() {
 #pragma pop
 
 
-/* 80083928-80083934 000C+00 r=1 e=0 z=0  None .text      ClrAt__9dCcD_SttsFv                                          */
+/* 80083928-80083934 000C+00 s=1 e=0 z=0  None .text      ClrAt__9dCcD_SttsFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1025,7 +1024,7 @@ asm void dCcD_Stts::ClrAt() {
 #pragma pop
 
 
-/* 80083934-80083944 0010+00 r=1 e=0 z=0  None .text      ClrTg__9dCcD_SttsFv                                          */
+/* 80083934-80083944 0010+00 s=1 e=0 z=0  None .text      ClrTg__9dCcD_SttsFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1036,7 +1035,7 @@ asm void dCcD_Stts::ClrTg() {
 #pragma pop
 
 
-/* 80083944-800839A0 005C+00 r=1 e=0 z=0  None .text      Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt                        */
+/* 80083944-800839A0 005C+00 s=1 e=0 z=0  None .text      Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1047,7 +1046,7 @@ asm void dCcD_GObjAt::Set(dCcD_SrcGObjAt const& param_0) {
 #pragma pop
 
 
-/* 800839A0-80083A28 0088+00 r=1 e=0 z=0  None .text      Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg                        */
+/* 800839A0-80083A28 0088+00 s=1 e=0 z=0  None .text      Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1058,7 +1057,7 @@ asm void dCcD_GObjTg::Set(dCcD_SrcGObjTg const& param_0) {
 #pragma pop
 
 
-/* 80083A28-80083B8C 0164+00 r=500 e=4 z=496  None .text      __ct__12dCcD_GObjInfFv                                       */
+/* 80083A28-80083B8C 0164+00 s=0 e=4 z=0  None .text      __ct__12dCcD_GObjInfFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1069,7 +1068,7 @@ asm dCcD_GObjInf::dCcD_GObjInf() {
 #pragma pop
 
 
-/* 80083B8C-80083BE8 005C+00 r=1 e=0 z=0  None .text      __dt__11dCcD_GObjCoFv                                        */
+/* 80083B8C-80083BE8 005C+00 s=1 e=0 z=0  None .text      __dt__11dCcD_GObjCoFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1080,7 +1079,7 @@ asm dCcD_GObjCo::~dCcD_GObjCo() {
 #pragma pop
 
 
-/* 80083BE8-80083C44 005C+00 r=1 e=0 z=0  None .text      __dt__11dCcD_GObjTgFv                                        */
+/* 80083BE8-80083C44 005C+00 s=1 e=0 z=0  None .text      __dt__11dCcD_GObjTgFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1091,7 +1090,7 @@ asm dCcD_GObjTg::~dCcD_GObjTg() {
 #pragma pop
 
 
-/* 80083C44-80083CA0 005C+00 r=1 e=0 z=0  None .text      __dt__11dCcD_GObjAtFv                                        */
+/* 80083C44-80083CA0 005C+00 s=1 e=0 z=0  None .text      __dt__11dCcD_GObjAtFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1102,7 +1101,7 @@ asm dCcD_GObjAt::~dCcD_GObjAt() {
 #pragma pop
 
 
-/* 80083CA0-80083CE8 0048+00 r=1 e=0 z=0  None .text      __dt__22dCcD_GAtTgCoCommonBaseFv                             */
+/* 80083CA0-80083CE8 0048+00 s=1 e=0 z=0  None .text      __dt__22dCcD_GAtTgCoCommonBaseFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1113,7 +1112,7 @@ asm dCcD_GAtTgCoCommonBase::~dCcD_GAtTgCoCommonBase() {
 #pragma pop
 
 
-/* 80083CE8-80083DE0 00F8+00 r=1 e=0 z=0  None .text      __dt__12cCcD_GObjInfFv                                       */
+/* 80083CE8-80083DE0 00F8+00 s=1 e=0 z=0  None .text      __dt__12cCcD_GObjInfFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1124,7 +1123,7 @@ asm cCcD_GObjInf::~cCcD_GObjInf() {
 #pragma pop
 
 
-/* 80083DE0-80083EC8 00E8+00 r=1 e=0 z=0  None .text      __dt__8cCcD_ObjFv                                            */
+/* 80083DE0-80083EC8 00E8+00 s=1 e=0 z=0  None .text      __dt__8cCcD_ObjFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1135,7 +1134,7 @@ asm cCcD_Obj::~cCcD_Obj() {
 #pragma pop
 
 
-/* 80083EC8-80083F88 00C0+00 r=1 e=0 z=0  None .text      __dt__14cCcD_ObjHitInfFv                                     */
+/* 80083EC8-80083F88 00C0+00 s=1 e=0 z=0  None .text      __dt__14cCcD_ObjHitInfFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1146,7 +1145,7 @@ asm cCcD_ObjHitInf::~cCcD_ObjHitInf() {
 #pragma pop
 
 
-/* 80083F88-80083FE4 005C+00 r=1 e=0 z=0  None .text      __dt__10cCcD_ObjCoFv                                         */
+/* 80083F88-80083FE4 005C+00 s=1 e=0 z=0  None .text      __dt__10cCcD_ObjCoFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1157,7 +1156,7 @@ asm cCcD_ObjCo::~cCcD_ObjCo() {
 #pragma pop
 
 
-/* 80083FE4-80084040 005C+00 r=1 e=0 z=0  None .text      __dt__10cCcD_ObjTgFv                                         */
+/* 80083FE4-80084040 005C+00 s=1 e=0 z=0  None .text      __dt__10cCcD_ObjTgFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1168,7 +1167,7 @@ asm cCcD_ObjTg::~cCcD_ObjTg() {
 #pragma pop
 
 
-/* 80084040-8008409C 005C+00 r=1 e=0 z=0  None .text      __dt__10cCcD_ObjAtFv                                         */
+/* 80084040-8008409C 005C+00 s=1 e=0 z=0  None .text      __dt__10cCcD_ObjAtFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1179,7 +1178,7 @@ asm cCcD_ObjAt::~cCcD_ObjAt() {
 #pragma pop
 
 
-/* 8008409C-800840E4 0048+00 r=1 e=0 z=0  None .text      __dt__18cCcD_ObjCommonBaseFv                                 */
+/* 8008409C-800840E4 0048+00 s=1 e=0 z=0  None .text      __dt__18cCcD_ObjCommonBaseFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1190,7 +1189,7 @@ asm cCcD_ObjCommonBase::~cCcD_ObjCommonBase() {
 #pragma pop
 
 
-/* 800840E4-80084268 0184+00 r=274 e=1 z=268  None .text      __dt__12dCcD_GObjInfFv                                       */
+/* 800840E4-80084268 0184+00 s=5 e=1 z=0  None .text      __dt__12dCcD_GObjInfFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1201,7 +1200,7 @@ asm dCcD_GObjInf::~dCcD_GObjInf() {
 #pragma pop
 
 
-/* 80084268-8008426C 0004+00 r=5 e=0 z=0  None .text      GetGObjInf__12dCcD_GObjInfFv                                 */
+/* 80084268-8008426C 0004+00 s=5 e=0 z=0  None .text      GetGObjInf__12dCcD_GObjInfFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1212,7 +1211,7 @@ asm void dCcD_GObjInf::GetGObjInf() {
 #pragma pop
 
 
-/* 8008426C-800842C0 0054+00 r=5 e=0 z=0  None .text      ClrAtHit__12dCcD_GObjInfFv                                   */
+/* 8008426C-800842C0 0054+00 s=5 e=0 z=0  None .text      ClrAtHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1223,7 +1222,7 @@ asm void dCcD_GObjInf::ClrAtHit() {
 #pragma pop
 
 
-/* 800842C0-80084318 0058+00 r=90 e=12 z=78  None .text      ChkAtHit__12dCcD_GObjInfFv                                   */
+/* 800842C0-80084318 0058+00 s=0 e=12 z=0  None .text      ChkAtHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1234,7 +1233,7 @@ asm void dCcD_GObjInf::ChkAtHit() {
 #pragma pop
 
 
-/* 80084318-80084358 0040+00 r=17 e=10 z=7  None .text      ResetAtHit__12dCcD_GObjInfFv                                 */
+/* 80084318-80084358 0040+00 s=0 e=10 z=0  None .text      ResetAtHit__12dCcD_GObjInfFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1245,7 +1244,7 @@ asm void dCcD_GObjInf::ResetAtHit() {
 #pragma pop
 
 
-/* 80084358-800843A8 0050+00 r=32 e=0 z=31  None .text      GetAtHitObj__12dCcD_GObjInfFv                                */
+/* 80084358-800843A8 0050+00 s=1 e=0 z=0  None .text      GetAtHitObj__12dCcD_GObjInfFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1256,7 +1255,7 @@ asm void dCcD_GObjInf::GetAtHitObj() {
 #pragma pop
 
 
-/* 800843A8-800843DC 0034+00 r=5 e=2 z=3  None .text      GetAtHitGObj__12dCcD_GObjInfFv                               */
+/* 800843A8-800843DC 0034+00 s=0 e=2 z=0  None .text      GetAtHitGObj__12dCcD_GObjInfFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1267,7 +1266,7 @@ asm void dCcD_GObjInf::GetAtHitGObj() {
 #pragma pop
 
 
-/* 800843DC-800843FC 0020+00 r=1 e=1 z=0  None .text      ChkAtNoGuard__12dCcD_GObjInfFv                               */
+/* 800843DC-800843FC 0020+00 s=0 e=1 z=0  None .text      ChkAtNoGuard__12dCcD_GObjInfFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1278,7 +1277,7 @@ asm void dCcD_GObjInf::ChkAtNoGuard() {
 #pragma pop
 
 
-/* 800843FC-80084460 0064+00 r=5 e=0 z=0  None .text      ClrTgHit__12dCcD_GObjInfFv                                   */
+/* 800843FC-80084460 0064+00 s=5 e=0 z=0  None .text      ClrTgHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1289,7 +1288,7 @@ asm void dCcD_GObjInf::ClrTgHit() {
 #pragma pop
 
 
-/* 80084460-800844B8 0058+00 r=311 e=6 z=305  None .text      ChkTgHit__12dCcD_GObjInfFv                                   */
+/* 80084460-800844B8 0058+00 s=0 e=6 z=0  None .text      ChkTgHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1300,7 +1299,7 @@ asm void dCcD_GObjInf::ChkTgHit() {
 #pragma pop
 
 
-/* 800844B8-800844F8 0040+00 r=6 e=1 z=5  None .text      ResetTgHit__12dCcD_GObjInfFv                                 */
+/* 800844B8-800844F8 0040+00 s=0 e=1 z=0  None .text      ResetTgHit__12dCcD_GObjInfFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1311,7 +1310,7 @@ asm void dCcD_GObjInf::ResetTgHit() {
 #pragma pop
 
 
-/* 800844F8-80084548 0050+00 r=232 e=3 z=228  None .text      GetTgHitObj__12dCcD_GObjInfFv                                */
+/* 800844F8-80084548 0050+00 s=1 e=3 z=0  None .text      GetTgHitObj__12dCcD_GObjInfFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1322,7 +1321,7 @@ asm void dCcD_GObjInf::GetTgHitObj() {
 #pragma pop
 
 
-/* 80084548-8008457C 0034+00 r=69 e=5 z=63  None .text      GetTgHitGObj__12dCcD_GObjInfFv                               */
+/* 80084548-8008457C 0034+00 s=1 e=5 z=0  None .text      GetTgHitGObj__12dCcD_GObjInfFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1333,7 +1332,7 @@ asm void dCcD_GObjInf::GetTgHitGObj() {
 #pragma pop
 
 
-/* 8008457C-800845B0 0034+00 r=20 e=2 z=18  None .text      GetTgHitObjSe__12dCcD_GObjInfFv                              */
+/* 8008457C-800845B0 0034+00 s=0 e=2 z=0  None .text      GetTgHitObjSe__12dCcD_GObjInfFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1345,7 +1344,7 @@ asm void dCcD_GObjInf::GetTgHitObjSe() {
 
 
 /* ############################################################################################## */
-/* 8037A780-8037A7E0 0060+00 r=1 e=0 z=0  None .rodata    m_hitSeID__12dCcD_GObjInf                                    */
+/* 8037A780-8037A7E0 0060+00 s=1 e=0 z=0  None .rodata    m_hitSeID__12dCcD_GObjInf                                    */
 SECTION_RODATA static u8 const m_hitSeID__12dCcD_GObjInf[96] = {
 	0x00, 0x04, 0x00, 0x0F, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x04, 0x00, 0x04,
 	0x00, 0x04, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x04, 0x00, 0x06, 0x00, 0x04, 0x00, 0x07,
@@ -1355,7 +1354,7 @@ SECTION_RODATA static u8 const m_hitSeID__12dCcD_GObjInf[96] = {
 	0x00, 0x04, 0x00, 0x14, 0x00, 0x04, 0x00, 0x15, 0x00, 0x04, 0x00, 0x18, 0x00, 0x04, 0x00, 0x16,
 };
 
-/* 800845B0-8008460C 005C+00 r=35 e=3 z=32  None .text      getHitSeID__12dCcD_GObjInfFUci                               */
+/* 800845B0-8008460C 005C+00 s=0 e=3 z=0  None .text      getHitSeID__12dCcD_GObjInfFUci                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1366,7 +1365,7 @@ asm void dCcD_GObjInf::getHitSeID(u8 param_0, int param_1) {
 #pragma pop
 
 
-/* 8008460C-80084658 004C+00 r=5 e=0 z=0  None .text      ClrCoHit__12dCcD_GObjInfFv                                   */
+/* 8008460C-80084658 004C+00 s=5 e=0 z=0  None .text      ClrCoHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1377,7 +1376,7 @@ asm void dCcD_GObjInf::ClrCoHit() {
 #pragma pop
 
 
-/* 80084658-800846B0 0058+00 r=79 e=5 z=74  None .text      ChkCoHit__12dCcD_GObjInfFv                                   */
+/* 80084658-800846B0 0058+00 s=0 e=5 z=0  None .text      ChkCoHit__12dCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1388,7 +1387,7 @@ asm void dCcD_GObjInf::ChkCoHit() {
 #pragma pop
 
 
-/* 800846B0-800846F0 0040+00 r=3 e=1 z=2  None .text      ResetCoHit__12dCcD_GObjInfFv                                 */
+/* 800846B0-800846F0 0040+00 s=0 e=1 z=0  None .text      ResetCoHit__12dCcD_GObjInfFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1399,7 +1398,7 @@ asm void dCcD_GObjInf::ResetCoHit() {
 #pragma pop
 
 
-/* 800846F0-80084740 0050+00 r=36 e=0 z=36  None .text      GetCoHitObj__12dCcD_GObjInfFv                                */
+/* 800846F0-80084740 0050+00 s=0 e=0 z=0  None .text      GetCoHitObj__12dCcD_GObjInfFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1410,7 +1409,7 @@ asm void dCcD_GObjInf::GetCoHitObj() {
 #pragma pop
 
 
-/* 80084740-8008479C 005C+00 r=4 e=0 z=0  None .text      Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf                      */
+/* 80084740-8008479C 005C+00 s=4 e=0 z=0  None .text      Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1421,7 +1420,7 @@ asm void dCcD_GObjInf::Set(dCcD_SrcGObjInf const& param_0) {
 #pragma pop
 
 
-/* 8008479C-800847C8 002C+00 r=6 e=1 z=3  None .text      dCcD_GetGObjInf__FP8cCcD_Obj                                 */
+/* 8008479C-800847C8 002C+00 s=2 e=1 z=0  None .text      dCcD_GetGObjInf__FP8cCcD_Obj                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1432,7 +1431,7 @@ asm void dCcD_GetGObjInf(cCcD_Obj* param_0) {
 #pragma pop
 
 
-/* 800847C8-800847D0 0008+00 r=1 e=0 z=0  None .text      GetGObjInf__8cCcD_ObjFv                                      */
+/* 800847C8-800847D0 0008+00 s=1 e=0 z=0  None .text      GetGObjInf__8cCcD_ObjFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1443,7 +1442,7 @@ asm void cCcD_Obj::GetGObjInf() {
 #pragma pop
 
 
-/* 800847D0-80084814 0044+00 r=21 e=1 z=20  None .text      Set__8dCcD_CpsFRC11dCcD_SrcCps                               */
+/* 800847D0-80084814 0044+00 s=0 e=1 z=0  None .text      Set__8dCcD_CpsFRC11dCcD_SrcCps                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1454,7 +1453,7 @@ asm void dCcD_Cps::Set(dCcD_SrcCps const& param_0) {
 #pragma pop
 
 
-/* 80084814-80084824 0010+00 r=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_CpsFv                                    */
+/* 80084814-80084824 0010+00 s=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_CpsFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1465,7 +1464,7 @@ asm void dCcD_Cps::GetShapeAttr() {
 #pragma pop
 
 
-/* 80084824-80084854 0030+00 r=6 e=0 z=6  None .text      CalcAtVec__8dCcD_CpsFv                                       */
+/* 80084824-80084854 0030+00 s=0 e=0 z=0  None .text      CalcAtVec__8dCcD_CpsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1476,7 +1475,7 @@ asm void dCcD_Cps::CalcAtVec() {
 #pragma pop
 
 
-/* 80084854-80084884 0030+00 r=2 e=0 z=2  None .text      CalcTgVec__8dCcD_CpsFv                                       */
+/* 80084854-80084884 0030+00 s=0 e=0 z=0  None .text      CalcTgVec__8dCcD_CpsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1487,7 +1486,7 @@ asm void dCcD_Cps::CalcTgVec() {
 #pragma pop
 
 
-/* 80084884-800848A4 0020+00 r=5 e=0 z=5  None .text      Set__8dCcD_TriFRC11dCcD_SrcTri                               */
+/* 80084884-800848A4 0020+00 s=0 e=0 z=0  None .text      Set__8dCcD_TriFRC11dCcD_SrcTri                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1498,7 +1497,7 @@ asm void dCcD_Tri::Set(dCcD_SrcTri const& param_0) {
 #pragma pop
 
 
-/* 800848A4-800848B4 0010+00 r=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_TriFv                                    */
+/* 800848A4-800848B4 0010+00 s=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_TriFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1509,7 +1508,7 @@ asm void dCcD_Tri::GetShapeAttr() {
 #pragma pop
 
 
-/* 800848B4-800848F8 0044+00 r=247 e=2 z=245  None .text      Set__8dCcD_CylFRC11dCcD_SrcCyl                               */
+/* 800848B4-800848F8 0044+00 s=0 e=2 z=0  None .text      Set__8dCcD_CylFRC11dCcD_SrcCyl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1520,7 +1519,7 @@ asm void dCcD_Cyl::Set(dCcD_SrcCyl const& param_0) {
 #pragma pop
 
 
-/* 800848F8-80084908 0010+00 r=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_CylFv                                    */
+/* 800848F8-80084908 0010+00 s=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_CylFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1531,7 +1530,7 @@ asm void dCcD_Cyl::GetShapeAttr() {
 #pragma pop
 
 
-/* 80084908-80084954 004C+00 r=6 e=3 z=3  None .text      StartCAt__8dCcD_CylFR4cXyz                                   */
+/* 80084908-80084954 004C+00 s=0 e=3 z=0  None .text      StartCAt__8dCcD_CylFR4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1542,7 +1541,7 @@ asm void dCcD_Cyl::StartCAt(cXyz& param_0) {
 #pragma pop
 
 
-/* 80084954-800849C4 0070+00 r=7 e=3 z=4  None .text      MoveCAt__8dCcD_CylFR4cXyz                                    */
+/* 80084954-800849C4 0070+00 s=0 e=3 z=0  None .text      MoveCAt__8dCcD_CylFR4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1553,7 +1552,7 @@ asm void dCcD_Cyl::MoveCAt(cXyz& param_0) {
 #pragma pop
 
 
-/* 800849C4-80084A34 0070+00 r=1 e=0 z=1  None .text      MoveCTg__8dCcD_CylFR4cXyz                                    */
+/* 800849C4-80084A34 0070+00 s=0 e=0 z=0  None .text      MoveCTg__8dCcD_CylFR4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1564,7 +1563,7 @@ asm void dCcD_Cyl::MoveCTg(cXyz& param_0) {
 #pragma pop
 
 
-/* 80084A34-80084A78 0044+00 r=198 e=2 z=196  None .text      Set__8dCcD_SphFRC11dCcD_SrcSph                               */
+/* 80084A34-80084A78 0044+00 s=0 e=2 z=0  None .text      Set__8dCcD_SphFRC11dCcD_SrcSph                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1575,7 +1574,7 @@ asm void dCcD_Sph::Set(dCcD_SrcSph const& param_0) {
 #pragma pop
 
 
-/* 80084A78-80084AC4 004C+00 r=28 e=3 z=25  None .text      StartCAt__8dCcD_SphFR4cXyz                                   */
+/* 80084A78-80084AC4 004C+00 s=0 e=3 z=0  None .text      StartCAt__8dCcD_SphFR4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1586,7 +1585,7 @@ asm void dCcD_Sph::StartCAt(cXyz& param_0) {
 #pragma pop
 
 
-/* 80084AC4-80084B34 0070+00 r=25 e=2 z=23  None .text      MoveCAt__8dCcD_SphFR4cXyz                                    */
+/* 80084AC4-80084B34 0070+00 s=0 e=2 z=0  None .text      MoveCAt__8dCcD_SphFR4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1597,7 +1596,7 @@ asm void dCcD_Sph::MoveCAt(cXyz& param_0) {
 #pragma pop
 
 
-/* 80084B34-80084B44 0010+00 r=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_SphFv                                    */
+/* 80084B34-80084B44 0010+00 s=1 e=0 z=0  None .text      GetShapeAttr__8dCcD_SphFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1608,7 +1607,7 @@ asm void dCcD_Sph::GetShapeAttr() {
 #pragma pop
 
 
-/* 80084B44-80084B4C 0008+00 r=2 e=1 z=0  None .text      GetCoCP__12cCcD_SphAttrCFv                                   */
+/* 80084B44-80084B4C 0008+00 s=1 e=1 z=0  None .text      GetCoCP__12cCcD_SphAttrCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1619,7 +1618,7 @@ asm void cCcD_SphAttr::GetCoCP() const {
 #pragma pop
 
 
-/* 80084B4C-80084B54 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084B4C-80084B54 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1630,7 +1629,7 @@ asm void cCcD_SphAttr::CrossAtTg(cCcD_AabAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084B54-80084B5C 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084B54-80084B5C 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1641,7 +1640,7 @@ asm void cCcD_SphAttr::CrossAtTg(cCcD_PntAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084B5C-80084B94 0038+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084B5C-80084B94 0038+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1652,7 +1651,7 @@ asm void cCcD_SphAttr::CrossAtTg(cCcD_ShapeAttr const& param_0, cXyz* param_1) c
 #pragma pop
 
 
-/* 80084B94-80084B9C 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084B94-80084B9C 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1663,7 +1662,7 @@ asm void cCcD_SphAttr::CrossCo(cCcD_AabAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084B9C-80084BA4 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084B9C-80084BA4 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1674,7 +1673,7 @@ asm void cCcD_SphAttr::CrossCo(cCcD_TriAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084BA4-80084BAC 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084BA4-80084BAC 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1685,7 +1684,7 @@ asm void cCcD_SphAttr::CrossCo(cCcD_PntAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084BAC-80084BE4 0038+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084BAC-80084BE4 0038+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1696,7 +1695,7 @@ asm void cCcD_SphAttr::CrossCo(cCcD_ShapeAttr const& param_0, f32* param_1) cons
 #pragma pop
 
 
-/* 80084BE4-80084BE8 0004+00 r=6 e=0 z=0  None .text      GetGObjInf__12cCcD_GObjInfCFv                                */
+/* 80084BE4-80084BE8 0004+00 s=6 e=0 z=0  None .text      GetGObjInf__12cCcD_GObjInfCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1707,7 +1706,7 @@ asm void cCcD_GObjInf::GetGObjInf() const {
 #pragma pop
 
 
-/* 80084BE8-80084BF0 0008+00 r=7 e=0 z=0  None .text      GetShapeAttr__8cCcD_ObjCFv                                   */
+/* 80084BE8-80084BF0 0008+00 s=7 e=0 z=0  None .text      GetShapeAttr__8cCcD_ObjCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1718,7 +1717,7 @@ asm void cCcD_Obj::GetShapeAttr() const {
 #pragma pop
 
 
-/* 80084BF0-80084BF4 0004+00 r=7 e=0 z=0  None .text      Draw__8cCcD_ObjFRC8_GXColor                                  */
+/* 80084BF0-80084BF4 0004+00 s=7 e=0 z=0  None .text      Draw__8cCcD_ObjFRC8_GXColor                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1729,7 +1728,7 @@ asm void cCcD_Obj::Draw(_GXColor const& param_0) {
 #pragma pop
 
 
-/* 80084BF4-80084CC0 00CC+00 r=3 e=0 z=0  None .text      __dt__8dCcD_SphFv                                            */
+/* 80084BF4-80084CC0 00CC+00 s=3 e=0 z=0  None .text      __dt__8dCcD_SphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1740,7 +1739,7 @@ asm dCcD_Sph::~dCcD_Sph() {
 #pragma pop
 
 
-/* 80084CC0-80084CC8 0008+00 r=2 e=1 z=0  None .text      GetCoCP__12cCcD_CylAttrCFv                                   */
+/* 80084CC0-80084CC8 0008+00 s=1 e=1 z=0  None .text      GetCoCP__12cCcD_CylAttrCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1751,7 +1750,7 @@ asm void cCcD_CylAttr::GetCoCP() const {
 #pragma pop
 
 
-/* 80084CC8-80084CD0 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084CC8-80084CD0 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1762,7 +1761,7 @@ asm void cCcD_CylAttr::CrossAtTg(cCcD_AabAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084CD0-80084CD8 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084CD0-80084CD8 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1773,7 +1772,7 @@ asm void cCcD_CylAttr::CrossAtTg(cCcD_PntAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084CD8-80084D10 0038+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084CD8-80084D10 0038+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1784,7 +1783,7 @@ asm void cCcD_CylAttr::CrossAtTg(cCcD_ShapeAttr const& param_0, cXyz* param_1) c
 #pragma pop
 
 
-/* 80084D10-80084D18 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084D10-80084D18 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1795,7 +1794,7 @@ asm void cCcD_CylAttr::CrossCo(cCcD_AabAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084D18-80084D20 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084D18-80084D20 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1806,7 +1805,7 @@ asm void cCcD_CylAttr::CrossCo(cCcD_TriAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084D20-80084D28 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084D20-80084D28 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1817,7 +1816,7 @@ asm void cCcD_CylAttr::CrossCo(cCcD_PntAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084D28-80084D60 0038+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084D28-80084D60 0038+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1828,7 +1827,7 @@ asm void cCcD_CylAttr::CrossCo(cCcD_ShapeAttr const& param_0, f32* param_1) cons
 #pragma pop
 
 
-/* 80084D60-80084E2C 00CC+00 r=5 e=2 z=0  None .text      __dt__8dCcD_CylFv                                            */
+/* 80084D60-80084E2C 00CC+00 s=3 e=2 z=0  None .text      __dt__8dCcD_CylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1839,7 +1838,7 @@ asm dCcD_Cyl::~dCcD_Cyl() {
 #pragma pop
 
 
-/* 80084E2C-80084E38 000C+00 r=5 e=3 z=0  None .text      GetCoCP__14cCcD_ShapeAttrFv                                  */
+/* 80084E2C-80084E38 000C+00 s=2 e=3 z=0  None .text      GetCoCP__14cCcD_ShapeAttrFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1850,7 +1849,7 @@ asm void cCcD_ShapeAttr::GetCoCP() {
 #pragma pop
 
 
-/* 80084E38-80084E44 000C+00 r=5 e=3 z=0  None .text      GetCoCP__14cCcD_ShapeAttrCFv                                 */
+/* 80084E38-80084E44 000C+00 s=2 e=3 z=0  None .text      GetCoCP__14cCcD_ShapeAttrCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1861,7 +1860,7 @@ asm void cCcD_ShapeAttr::GetCoCP() const {
 #pragma pop
 
 
-/* 80084E44-80084E4C 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084E44-80084E4C 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1872,7 +1871,7 @@ asm void cCcD_TriAttr::CrossAtTg(cCcD_AabAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084E4C-80084E54 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084E4C-80084E54 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1883,7 +1882,7 @@ asm void cCcD_TriAttr::CrossAtTg(cCcD_PntAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084E54-80084E8C 0038+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084E54-80084E8C 0038+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1894,7 +1893,7 @@ asm void cCcD_TriAttr::CrossAtTg(cCcD_ShapeAttr const& param_0, cXyz* param_1) c
 #pragma pop
 
 
-/* 80084E8C-80084E94 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf                  */
+/* 80084E8C-80084E94 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1905,7 +1904,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_SphAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084E94-80084E9C 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf                  */
+/* 80084E94-80084E9C 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1916,7 +1915,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_CylAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084E9C-80084EA4 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084E9C-80084EA4 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1927,7 +1926,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_AabAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084EA4-80084EAC 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084EA4-80084EAC 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1938,7 +1937,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_TriAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084EAC-80084EB4 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf                  */
+/* 80084EAC-80084EB4 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1949,7 +1948,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_CpsAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084EB4-80084EBC 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084EB4-80084EBC 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1960,7 +1959,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_PntAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80084EBC-80084EF4 0038+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084EBC-80084EF4 0038+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1971,7 +1970,7 @@ asm void cCcD_TriAttr::CrossCo(cCcD_ShapeAttr const& param_0, f32* param_1) cons
 #pragma pop
 
 
-/* 80084EF4-80084FD4 00E0+00 r=3 e=0 z=0  None .text      __dt__8dCcD_TriFv                                            */
+/* 80084EF4-80084FD4 00E0+00 s=3 e=0 z=0  None .text      __dt__8dCcD_TriFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1982,7 +1981,7 @@ asm dCcD_Tri::~dCcD_Tri() {
 #pragma pop
 
 
-/* 80084FD4-80084FDC 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084FD4-80084FDC 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1993,7 +1992,7 @@ asm void cCcD_CpsAttr::CrossAtTg(cCcD_AabAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084FDC-80084FE4 0008+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084FDC-80084FE4 0008+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2004,7 +2003,7 @@ asm void cCcD_CpsAttr::CrossAtTg(cCcD_PntAttr const& param_0, cXyz* param_1) con
 #pragma pop
 
 
-/* 80084FE4-8008501C 0038+00 r=2 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084FE4-8008501C 0038+00 s=1 e=1 z=0  None .text      CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2015,7 +2014,7 @@ asm void cCcD_CpsAttr::CrossAtTg(cCcD_ShapeAttr const& param_0, cXyz* param_1) c
 #pragma pop
 
 
-/* 8008501C-80085024 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf                  */
+/* 8008501C-80085024 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2026,7 +2025,7 @@ asm void cCcD_CpsAttr::CrossCo(cCcD_AabAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80085024-8008502C 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf                  */
+/* 80085024-8008502C 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2037,7 +2036,7 @@ asm void cCcD_CpsAttr::CrossCo(cCcD_TriAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 8008502C-80085034 0008+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf                  */
+/* 8008502C-80085034 0008+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2048,7 +2047,7 @@ asm void cCcD_CpsAttr::CrossCo(cCcD_PntAttr const& param_0, f32* param_1) const 
 #pragma pop
 
 
-/* 80085034-8008506C 0038+00 r=2 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80085034-8008506C 0038+00 s=1 e=1 z=0  None .text      CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2059,7 +2058,7 @@ asm void cCcD_CpsAttr::CrossCo(cCcD_ShapeAttr const& param_0, f32* param_1) cons
 #pragma pop
 
 
-/* 8008506C-80085130 00C4+00 r=5 e=2 z=0  None .text      __dt__8dCcD_CpsFv                                            */
+/* 8008506C-80085130 00C4+00 s=3 e=2 z=0  None .text      __dt__8dCcD_CpsFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2070,7 +2069,7 @@ asm dCcD_Cps::~dCcD_Cps() {
 #pragma pop
 
 
-/* 80085130-80085138 0008+00 r=3 e=0 z=0  None .text      GetShapeAttr__8cCcD_ObjFv                                    */
+/* 80085130-80085138 0008+00 s=3 e=0 z=0  None .text      GetShapeAttr__8cCcD_ObjFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2081,7 +2080,7 @@ asm void cCcD_Obj::GetShapeAttr() {
 #pragma pop
 
 
-/* 80085138-80085158 0020+00 r=1 e=0 z=0  None .text      ClrAtHit__12cCcD_GObjInfFv                                   */
+/* 80085138-80085158 0020+00 s=1 e=0 z=0  None .text      ClrAtHit__12cCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2092,7 +2091,7 @@ asm void cCcD_GObjInf::ClrAtHit() {
 #pragma pop
 
 
-/* 80085158-8008517C 0024+00 r=1 e=0 z=0  None .text      ClrTgHit__12cCcD_GObjInfFv                                   */
+/* 80085158-8008517C 0024+00 s=1 e=0 z=0  None .text      ClrTgHit__12cCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2103,7 +2102,7 @@ asm void cCcD_GObjInf::ClrTgHit() {
 #pragma pop
 
 
-/* 8008517C-800851A0 0024+00 r=1 e=0 z=0  None .text      ClrCoHit__12cCcD_GObjInfFv                                   */
+/* 8008517C-800851A0 0024+00 s=1 e=0 z=0  None .text      ClrCoHit__12cCcD_GObjInfFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2114,7 +2113,7 @@ asm void cCcD_GObjInf::ClrCoHit() {
 #pragma pop
 
 
-/* 800851A0-800851A4 0004+00 r=1 e=0 z=0  None .text      GetGObjInf__12cCcD_GObjInfFv                                 */
+/* 800851A0-800851A4 0004+00 s=1 e=0 z=0  None .text      GetGObjInf__12cCcD_GObjInfFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2125,7 +2124,7 @@ asm void cCcD_GObjInf::GetGObjInf() {
 #pragma pop
 
 
-/* 800851A4-800851AC 0008+00 r=1 e=0 z=0  None .text      GetGObjInf__8cCcD_ObjCFv                                     */
+/* 800851A4-800851AC 0008+00 s=1 e=0 z=0  None .text      GetGObjInf__8cCcD_ObjCFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2136,7 +2135,7 @@ asm void cCcD_Obj::GetGObjInf() const {
 #pragma pop
 
 
-/* 800851AC-8008523C 0090+00 r=2 e=0 z=0  None .text      __dt__9dCcD_SttsFv                                           */
+/* 800851AC-8008523C 0090+00 s=2 e=0 z=0  None .text      __dt__9dCcD_SttsFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2147,7 +2146,7 @@ asm dCcD_Stts::~dCcD_Stts() {
 #pragma pop
 
 
-/* 8008523C-80085298 005C+00 r=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 8008523C-80085298 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2158,7 +2157,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80085298-800852A0 0008+00 r=1 e=0 z=0  None .text      @28@__dt__9dCcD_SttsFv                                       */
+/* 80085298-800852A0 0008+00 s=1 e=0 z=0  None .text      @28@__dt__9dCcD_SttsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2169,7 +2168,7 @@ extern "C" asm static void func_80085298() {
 #pragma pop
 
 
-/* 800852A0-800852A8 0008+00 r=1 e=0 z=0  None .text      @292@__dt__8dCcD_CpsFv                                       */
+/* 800852A0-800852A8 0008+00 s=1 e=0 z=0  None .text      @292@__dt__8dCcD_CpsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2180,7 +2179,7 @@ extern "C" asm static void func_800852A0() {
 #pragma pop
 
 
-/* 800852A8-800852B0 0008+00 r=1 e=0 z=0  None .text      @260@__dt__8dCcD_CpsFv                                       */
+/* 800852A8-800852B0 0008+00 s=1 e=0 z=0  None .text      @260@__dt__8dCcD_CpsFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2191,7 +2190,7 @@ extern "C" asm static void func_800852A8() {
 #pragma pop
 
 
-/* 800852B0-800852B8 0008+00 r=1 e=0 z=0  None .text      @292@__dt__8dCcD_TriFv                                       */
+/* 800852B0-800852B8 0008+00 s=1 e=0 z=0  None .text      @292@__dt__8dCcD_TriFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2202,7 +2201,7 @@ extern "C" asm static void func_800852B0() {
 #pragma pop
 
 
-/* 800852B8-800852C0 0008+00 r=1 e=0 z=0  None .text      @260@__dt__8dCcD_TriFv                                       */
+/* 800852B8-800852C0 0008+00 s=1 e=0 z=0  None .text      @260@__dt__8dCcD_TriFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2213,7 +2212,7 @@ extern "C" asm static void func_800852B8() {
 #pragma pop
 
 
-/* 800852C0-800852C8 0008+00 r=1 e=0 z=0  None .text      @292@__dt__8dCcD_CylFv                                       */
+/* 800852C0-800852C8 0008+00 s=1 e=0 z=0  None .text      @292@__dt__8dCcD_CylFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2224,7 +2223,7 @@ extern "C" asm static void func_800852C0() {
 #pragma pop
 
 
-/* 800852C8-800852D0 0008+00 r=1 e=0 z=0  None .text      @260@__dt__8dCcD_CylFv                                       */
+/* 800852C8-800852D0 0008+00 s=1 e=0 z=0  None .text      @260@__dt__8dCcD_CylFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2235,7 +2234,7 @@ extern "C" asm static void func_800852C8() {
 #pragma pop
 
 
-/* 800852D0-800852D8 0008+00 r=1 e=0 z=0  None .text      @292@__dt__8dCcD_SphFv                                       */
+/* 800852D0-800852D8 0008+00 s=1 e=0 z=0  None .text      @292@__dt__8dCcD_SphFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2246,7 +2245,7 @@ extern "C" asm static void func_800852D0() {
 #pragma pop
 
 
-/* 800852D8-800852E0 0008+00 r=1 e=0 z=0  None .text      @260@__dt__8dCcD_SphFv                                       */
+/* 800852D8-800852E0 0008+00 s=1 e=0 z=0  None .text      @260@__dt__8dCcD_SphFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

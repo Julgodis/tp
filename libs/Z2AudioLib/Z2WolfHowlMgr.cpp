@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Z2WolfHowlData {
+struct Vec {
 };
 
-struct Vec {
+struct Z2WolfHowlData {
 };
 
 struct Z2WolfHowlMgr {
@@ -45,12 +45,6 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct JAISoundHandle {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -58,6 +52,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
 };
 
 struct JAISoundStarter {
@@ -138,47 +138,47 @@ extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 804508A0-804508A8 0008+00 r=1 e=0 z=0  None .sdata     sHowlTobikusa                                                */
+/* 804508A0-804508A8 0008+00 s=1 e=0 z=0  None .sdata     sHowlTobikusa                                                */
 extern "C" u8 sHowlTobikusa[8];
 
-/* 803CBC50-803CBC5C 000C+00 r=1 e=0 z=0  None .data      sHowlUmakusa                                                 */
+/* 803CBC50-803CBC5C 000C+00 s=1 e=0 z=0  None .data      sHowlUmakusa                                                 */
 SECTION_DATA static u8 sHowlUmakusa[12] = {
 	0x01, 0x0F, 0x02, 0x0F, 0x03, 0x3C, 0x01, 0x0F, 0x02, 0x0F, 0x03, 0x3C,
 };
 
-/* 803CBC5C-803CBC68 000C+00 r=1 e=0 z=0  None .data      sHowlZeldaSong                                               */
+/* 803CBC5C-803CBC68 000C+00 s=1 e=0 z=0  None .data      sHowlZeldaSong                                               */
 SECTION_DATA static u8 sHowlZeldaSong[12] = {
 	0x02, 0x1E, 0x01, 0x0F, 0x03, 0x2D, 0x02, 0x1E, 0x01, 0x0F, 0x03, 0x2D,
 };
 
-/* 803CBC68-803CBC74 000C+00 r=1 e=0 z=0  None .data      sHowlLightPrelude                                            */
+/* 803CBC68-803CBC74 000C+00 s=1 e=0 z=0  None .data      sHowlLightPrelude                                            */
 SECTION_DATA static u8 sHowlLightPrelude[12] = {
 	0x01, 0x14, 0x03, 0x28, 0x01, 0x14, 0x03, 0x14, 0x02, 0x14, 0x01, 0x1E,
 };
 
-/* 803CBC74-803CBC80 000C+00 r=1 e=0 z=0  None .data      sHowlSoulRequiem                                             */
+/* 803CBC74-803CBC80 000C+00 s=1 e=0 z=0  None .data      sHowlSoulRequiem                                             */
 SECTION_DATA static u8 sHowlSoulRequiem[12] = {
 	0x03, 0x1E, 0x02, 0x0F, 0x03, 0x0F, 0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E,
 };
 
-/* 803CBC80-803CBC8C 000C+00 r=1 e=0 z=0  None .data      sHealingSong                                                 */
+/* 803CBC80-803CBC8C 000C+00 s=1 e=0 z=0  None .data      sHealingSong                                                 */
 SECTION_DATA static u8 sHealingSong[12] = {
 	0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E, 0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E,
 };
 
-/* 803CBC8C-803CBC9C 000E+02 r=1 e=0 z=0  None .data      sNewSong1                                                    */
+/* 803CBC8C-803CBC9C 000E+02 s=1 e=0 z=0  None .data      sNewSong1                                                    */
 SECTION_DATA static u8 sNewSong1[14 + 2 /* padding */] = {
 	0x03, 0x1E, 0x02, 0x1E, 0x01, 0x1E, 0x03, 0x28, 0x02, 0x14, 0x03, 0x1E, 0x01, 0x1E,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803CBC9C-803CBCAC 0010+00 r=1 e=0 z=0  None .data      sNewSong2                                                    */
+/* 803CBC9C-803CBCAC 0010+00 s=1 e=0 z=0  None .data      sNewSong2                                                    */
 SECTION_DATA static u8 sNewSong2[16] = {
 	0x01, 0x14, 0x02, 0x14, 0x03, 0x14, 0x02, 0x3C, 0x03, 0x14, 0x01, 0x14, 0x02, 0x14, 0x03, 0x1E,
 };
 
-/* 803CBCAC-803CBCC0 0012+02 r=1 e=0 z=0  None .data      sNewSong3                                                    */
+/* 803CBCAC-803CBCC0 0012+02 s=1 e=0 z=0  None .data      sNewSong3                                                    */
 SECTION_DATA static u8 sNewSong3[18 + 2 /* padding */] = {
 	0x02, 0x1E, 0x03, 0x3C, 0x02, 0x28, 0x01, 0x14, 0x03, 0x3C, 0x01, 0x14, 0x02, 0x14, 0x01, 0x14,
 	0x02, 0x2D,
@@ -186,7 +186,7 @@ SECTION_DATA static u8 sNewSong3[18 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 803CBCC0-803CBD08 0048+00 r=1 e=0 z=0  None .data      sGuideData                                                   */
+/* 803CBCC0-803CBD08 0048+00 s=1 e=0 z=0  None .data      sGuideData                                                   */
 SECTION_DATA static void* sGuideData[18] = {
 	/* 0    */ (void*)0x04000000,
 	/* 1    */ (void*)&sHowlTobikusa,
@@ -208,16 +208,16 @@ SECTION_DATA static void* sGuideData[18] = {
 	/* 17   */ (void*)&sNewSong3,
 };
 
-/* 80450880-80450884 0004+00 r=2 e=0 z=0  None .sdata     cPitchDown                                                   */
+/* 80450880-80450884 0004+00 s=2 e=0 z=0  None .sdata     cPitchDown                                                   */
 SECTION_SDATA static u32 cPitchDown = 0x3F641206;
 
-/* 80450884-80450888 0004+00 r=4 e=0 z=0  None .sdata     cPitchCenter                                                 */
+/* 80450884-80450888 0004+00 s=4 e=0 z=0  None .sdata     cPitchCenter                                                 */
 SECTION_SDATA static u32 cPitchCenter = 0x3F800000;
 
-/* 80450888-8045088C 0004+00 r=2 e=0 z=0  None .sdata     cPitchUp                                                     */
+/* 80450888-8045088C 0004+00 s=2 e=0 z=0  None .sdata     cPitchUp                                                     */
 SECTION_SDATA static u32 cPitchUp = 0x3F9837B5;
 
-/* 8045088C-80450890 0004+00 r=4 e=0 z=0  None .sdata     None                                                         */
+/* 8045088C-80450890 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_8045088C[4] = {
 	/* 8045088C 0001 data_8045088C None */
 	0x07,
@@ -227,10 +227,10 @@ SECTION_SDATA static u8 struct_8045088C[4] = {
 	0x1E, 0x00,
 };
 
-/* 80450890-80450894 0004+00 r=1 e=0 z=0  None .sdata     cR_FlatWidth                                                 */
+/* 80450890-80450894 0004+00 s=1 e=0 z=0  None .sdata     cR_FlatWidth                                                 */
 SECTION_SDATA static f32 cR_FlatWidth = 0.9438700079917908f;
 
-/* 80450894-80450898 0004+00 r=3 e=0 z=0  None .sdata     None                                                         */
+/* 80450894-80450898 0004+00 s=3 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_80450894[4] = {
 	/* 80450894 0001 data_80450894 None */
 	0x05,
@@ -238,26 +238,26 @@ SECTION_SDATA static u8 struct_80450894[4] = {
 	0x1E, 0x00, 0x00,
 };
 
-/* 80450898-8045089C 0004+00 r=1 e=0 z=0  None .sdata     sStickHigh                                                   */
+/* 80450898-8045089C 0004+00 s=1 e=0 z=0  None .sdata     sStickHigh                                                   */
 SECTION_SDATA static f32 sStickHigh = 0.5f;
 
-/* 8045089C-804508A0 0004+00 r=1 e=0 z=0  None .sdata     sStickCenter                                                 */
+/* 8045089C-804508A0 0004+00 s=1 e=0 z=0  None .sdata     sStickCenter                                                 */
 SECTION_SDATA static f32 sStickCenter = 1.0f / 5.0f;
 
-/* 804508A0-804508A8 0008+00 r=1 e=0 z=0  None .sdata     sHowlTobikusa                                                */
+/* 804508A0-804508A8 0008+00 s=1 e=0 z=0  None .sdata     sHowlTobikusa                                                */
 SECTION_SDATA static u8 sHowlTobikusa[8] = {
 	0x01, 0x1E, 0x03, 0x1E, 0x01, 0x1E, 0x03, 0x1E,
 };
 
-/* 80455E60-80455E64 0004+00 r=8 e=0 z=0  None .sdata2    @3485                                                        */
+/* 80455E60-80455E64 0004+00 s=8 e=0 z=0  None .sdata2    @3485                                                        */
 SECTION_SDATA2 static u8 lit_3485[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455E64-80455E68 0004+00 r=11 e=0 z=0  None .sdata2    @3486                                                        */
+/* 80455E64-80455E68 0004+00 s=11 e=0 z=0  None .sdata2    @3486                                                        */
 SECTION_SDATA2 static f32 lit_3486 = 1.0f;
 
-/* 802CAAC0-802CAB8C 00CC+00 r=1 e=1 z=0  None .text      __ct__13Z2WolfHowlMgrFv                                      */
+/* 802CAAC0-802CAB8C 00CC+00 s=0 e=1 z=0  None .text      __ct__13Z2WolfHowlMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +268,7 @@ asm Z2WolfHowlMgr::Z2WolfHowlMgr() {
 #pragma pop
 
 
-/* 802CAB8C-802CABEC 0060+00 r=1 e=0 z=0  None .text      resetState__13Z2WolfHowlMgrFv                                */
+/* 802CAB8C-802CABEC 0060+00 s=1 e=0 z=0  None .text      resetState__13Z2WolfHowlMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,16 +280,16 @@ asm void Z2WolfHowlMgr::resetState() {
 
 
 /* ############################################################################################## */
-/* 80455E68-80455E6C 0004+00 r=2 e=0 z=0  None .sdata2    @3527                                                        */
+/* 80455E68-80455E6C 0004+00 s=2 e=0 z=0  None .sdata2    @3527                                                        */
 SECTION_SDATA2 static f32 lit_3527 = 30.0f;
 
-/* 80455E6C-80455E70 0004+00 r=1 e=0 z=0  None .sdata2    @3528                                                        */
+/* 80455E6C-80455E70 0004+00 s=1 e=0 z=0  None .sdata2    @3528                                                        */
 SECTION_SDATA2 static f32 lit_3528 = 2.0f;
 
-/* 80455E70-80455E78 0008+00 r=2 e=0 z=0  None .sdata2    @3530                                                        */
+/* 80455E70-80455E78 0008+00 s=2 e=0 z=0  None .sdata2    @3530                                                        */
 SECTION_SDATA2 static f64 lit_3530 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802CABEC-802CACB0 00C4+00 r=1 e=0 z=0  None .text      calcVolumeMod__13Z2WolfHowlMgrFf                             */
+/* 802CABEC-802CACB0 00C4+00 s=1 e=0 z=0  None .text      calcVolumeMod__13Z2WolfHowlMgrFf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +300,7 @@ asm void Z2WolfHowlMgr::calcVolumeMod(f32 param_0) {
 #pragma pop
 
 
-/* 802CACB0-802CACCC 001C+00 r=1 e=0 z=0  None .text      getNowPitch__13Z2WolfHowlMgrFv                               */
+/* 802CACB0-802CACCC 001C+00 s=1 e=0 z=0  None .text      getNowPitch__13Z2WolfHowlMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,7 +311,7 @@ asm void Z2WolfHowlMgr::getNowPitch() {
 #pragma pop
 
 
-/* 802CACCC-802CACD4 0008+00 r=2 e=2 z=0  None .text      getNowInputValue__13Z2WolfHowlMgrFv                          */
+/* 802CACCC-802CACD4 0008+00 s=0 e=2 z=0  None .text      getNowInputValue__13Z2WolfHowlMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,13 +323,13 @@ asm void Z2WolfHowlMgr::getNowInputValue() {
 
 
 /* ############################################################################################## */
-/* 80455E78-80455E7C 0004+00 r=1 e=0 z=0  None .sdata2    @3589                                                        */
+/* 80455E78-80455E7C 0004+00 s=1 e=0 z=0  None .sdata2    @3589                                                        */
 SECTION_SDATA2 static f32 lit_3589 = 97.0f / 100.0f;
 
-/* 80455E7C-80455E80 0004+00 r=4 e=0 z=0  None .sdata2    @3590                                                        */
+/* 80455E7C-80455E80 0004+00 s=4 e=0 z=0  None .sdata2    @3590                                                        */
 SECTION_SDATA2 static f32 lit_3590 = -1.0f;
 
-/* 802CACD4-802CAED4 0200+00 r=1 e=0 z=0  None .text      calcPitchMod__13Z2WolfHowlMgrFff                             */
+/* 802CACD4-802CAED4 0200+00 s=1 e=0 z=0  None .text      calcPitchMod__13Z2WolfHowlMgrFff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,7 +340,7 @@ asm void Z2WolfHowlMgr::calcPitchMod(f32 param_0, f32 param_1) {
 #pragma pop
 
 
-/* 802CAED4-802CB100 022C+00 r=1 e=1 z=0  None .text      startWolfHowlSound__13Z2WolfHowlMgrFffbf                     */
+/* 802CAED4-802CB100 022C+00 s=0 e=1 z=0  None .text      startWolfHowlSound__13Z2WolfHowlMgrFffbf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,37 +352,37 @@ asm void Z2WolfHowlMgr::startWolfHowlSound(f32 param_0, f32 param_1, bool param_
 
 
 /* ############################################################################################## */
-/* 80455E80-80455E84 0004+00 r=1 e=0 z=0  None .sdata2    @3711                                                        */
+/* 80455E80-80455E84 0004+00 s=1 e=0 z=0  None .sdata2    @3711                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3711 = 1.1224600076675415f;
 
-/* 80455E84-80455E88 0004+00 r=1 e=0 z=0  None .sdata2    @3712                                                        */
+/* 80455E84-80455E88 0004+00 s=1 e=0 z=0  None .sdata2    @3712                                                        */
 SECTION_SDATA2 static f32 lit_3712 = 1.0594600439071655f;
 
-/* 80455E88-80455E8C 0004+00 r=1 e=0 z=0  None .sdata2    @3713                                                        */
+/* 80455E88-80455E8C 0004+00 s=1 e=0 z=0  None .sdata2    @3713                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3713 = 0.7936859726905823f;
 
-/* 80455E8C-80455E90 0004+00 r=1 e=0 z=0  None .sdata2    @3714                                                        */
+/* 80455E8C-80455E90 0004+00 s=1 e=0 z=0  None .sdata2    @3714                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3714 = 1.2599060535430908f;
 
-/* 80455E90-80455E94 0004+00 r=1 e=0 z=0  None .sdata2    @3715                                                        */
+/* 80455E90-80455E94 0004+00 s=1 e=0 z=0  None .sdata2    @3715                                                        */
 SECTION_SDATA2 static f32 lit_3715 = 0.9438700079917908f;
 
-/* 80455E94-80455E98 0004+00 r=1 e=0 z=0  None .sdata2    @3716                                                        */
+/* 80455E94-80455E98 0004+00 s=1 e=0 z=0  None .sdata2    @3716                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3716 = 0.8408849835395813f;
 
-/* 80455E98-80455E9C 0004+00 r=1 e=0 z=0  None .sdata2    @3717                                                        */
+/* 80455E98-80455E9C 0004+00 s=1 e=0 z=0  None .sdata2    @3717                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3717 = 1.3348400592803955f;
 
-/* 80455E9C-80455EA0 0004+00 r=1 e=0 z=0  None .sdata2    @3718                                                        */
+/* 80455E9C-80455EA0 0004+00 s=1 e=0 z=0  None .sdata2    @3718                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3718 = 0.8909000158309937f;
 
-/* 80455EA0-80455EA4 0004+00 r=1 e=0 z=0  None .sdata2    @3719                                                        */
+/* 80455EA0-80455EA4 0004+00 s=1 e=0 z=0  None .sdata2    @3719                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3719 = 0.7491499781608582f;
 
-/* 80455EA4-80455EA8 0004+00 r=1 e=0 z=0  None .sdata2    @3720                                                        */
+/* 80455EA4-80455EA8 0004+00 s=1 e=0 z=0  None .sdata2    @3720                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3720 = 1.1892000436782837f;
 
-/* 802CB100-802CB320 0220+00 r=1 e=1 z=0  None .text      setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData          */
+/* 802CB100-802CB320 0220+00 s=0 e=1 z=0  None .text      setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void Z2WolfHowlMgr::setCorrectData(s8 param_0, Z2WolfHowlData* param_1) {
 #pragma pop
 
 
-/* 802CB320-802CB370 0050+00 r=5 e=2 z=0  None .text      getCorrectLine__13Z2WolfHowlMgrFUc                           */
+/* 802CB320-802CB370 0050+00 s=3 e=2 z=0  None .text      getCorrectLine__13Z2WolfHowlMgrFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ asm void Z2WolfHowlMgr::getCorrectLine(u8 param_0) {
 #pragma pop
 
 
-/* 802CB370-802CB38C 001C+00 r=3 e=1 z=0  None .text      getCorrectLineNum__13Z2WolfHowlMgrFv                         */
+/* 802CB370-802CB38C 001C+00 s=2 e=1 z=0  None .text      getCorrectLineNum__13Z2WolfHowlMgrFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -416,16 +416,16 @@ asm void Z2WolfHowlMgr::getCorrectLineNum() {
 
 
 /* ############################################################################################## */
-/* 804341F8-8043421C 0024+00 r=2 e=0 z=0  None .bss       sCorrectPhrase                                               */
+/* 804341F8-8043421C 0024+00 s=2 e=0 z=0  None .bss       sCorrectPhrase                                               */
 static u8 sCorrectPhrase[36];
 
-/* 8043421C-80434240 0024+00 r=2 e=0 z=0  None .bss       sWindStoneSound                                              */
+/* 8043421C-80434240 0024+00 s=2 e=0 z=0  None .bss       sWindStoneSound                                              */
 static u8 sWindStoneSound[36];
 
-/* 80434240-80434268 0024+04 r=1 e=0 z=0  None .bss       sCorrectDuo                                                  */
+/* 80434240-80434268 0024+04 s=1 e=0 z=0  None .bss       sCorrectDuo                                                  */
 static u8 sCorrectDuo[36 + 4 /* padding */];
 
-/* 802CB38C-802CB650 02C4+00 r=1 e=0 z=0  None .text      checkLine__13Z2WolfHowlMgrFv                                 */
+/* 802CB38C-802CB650 02C4+00 s=1 e=0 z=0  None .text      checkLine__13Z2WolfHowlMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -436,7 +436,7 @@ asm void Z2WolfHowlMgr::checkLine() {
 #pragma pop
 
 
-/* 802CB650-802CB6EC 009C+00 r=2 e=1 z=0  None .text      getOnLineNum__13Z2WolfHowlMgrFv                              */
+/* 802CB650-802CB6EC 009C+00 s=1 e=1 z=0  None .text      getOnLineNum__13Z2WolfHowlMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -448,43 +448,43 @@ asm void Z2WolfHowlMgr::getOnLineNum() {
 
 
 /* ############################################################################################## */
-/* 80455EA8-80455EB0 0008+00 r=1 e=0 z=0  None .sdata2    @4032                                                        */
+/* 80455EA8-80455EB0 0008+00 s=1 e=0 z=0  None .sdata2    @4032                                                        */
 SECTION_SDATA2 static f64 Z2WolfHowlMgr__lit_4032 = 0.5;
 
-/* 80455EB0-80455EB8 0008+00 r=1 e=0 z=0  None .sdata2    @4033                                                        */
+/* 80455EB0-80455EB8 0008+00 s=1 e=0 z=0  None .sdata2    @4033                                                        */
 SECTION_SDATA2 static f64 Z2WolfHowlMgr__lit_4033 = 3.0;
 
-/* 80455EB8-80455EC0 0008+00 r=1 e=0 z=0  None .sdata2    @4034                                                        */
+/* 80455EB8-80455EC0 0008+00 s=1 e=0 z=0  None .sdata2    @4034                                                        */
 SECTION_SDATA2 static u8 Z2WolfHowlMgr__lit_4034[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455EC0-80455EC4 0004+00 r=1 e=0 z=0  None .sdata2    @4035                                                        */
+/* 80455EC0-80455EC4 0004+00 s=1 e=0 z=0  None .sdata2    @4035                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4035 = 2100.0f;
 
-/* 80455EC4-80455EC8 0004+00 r=1 e=0 z=0  None .sdata2    @4036                                                        */
+/* 80455EC4-80455EC8 0004+00 s=1 e=0 z=0  None .sdata2    @4036                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4036 = 150.0f;
 
-/* 80455EC8-80455ECC 0004+00 r=1 e=0 z=0  None .sdata2    @4037                                                        */
+/* 80455EC8-80455ECC 0004+00 s=1 e=0 z=0  None .sdata2    @4037                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4037 = 2000.0f;
 
-/* 80455ECC-80455ED0 0004+00 r=1 e=0 z=0  None .sdata2    @4038                                                        */
+/* 80455ECC-80455ED0 0004+00 s=1 e=0 z=0  None .sdata2    @4038                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4038 = 9.0f / 20.0f;
 
-/* 80455ED0-80455ED4 0004+00 r=1 e=0 z=0  None .sdata2    @4039                                                        */
+/* 80455ED0-80455ED4 0004+00 s=1 e=0 z=0  None .sdata2    @4039                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4039 = 1.0f / 20.0f;
 
-/* 80455ED4-80455ED8 0004+00 r=1 e=0 z=0  None .sdata2    @4040                                                        */
+/* 80455ED4-80455ED8 0004+00 s=1 e=0 z=0  None .sdata2    @4040                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4040 = 2.0f / 5.0f;
 
-/* 80455ED8-80455EE0 0004+04 r=1 e=0 z=0  None .sdata2    @4041                                                        */
+/* 80455ED8-80455EE0 0004+04 s=1 e=0 z=0  None .sdata2    @4041                                                        */
 SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4041[1 + 1 /* padding */] = {
 	1.0f / 25.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 802CB6EC-802CBA88 039C+00 r=2 e=0 z=2  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
+/* 802CB6EC-802CBA88 039C+00 s=0 e=0 z=0  None .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +495,7 @@ asm void Z2WolfHowlMgr::startWindStoneSound(s8 param_0, Vec* param_1) {
 #pragma pop
 
 
-/* 802CBA88-802CBB58 00D0+00 r=1 e=1 z=0  None .text      startGuideMelody__13Z2WolfHowlMgrFb                          */
+/* 802CBA88-802CBB58 00D0+00 s=0 e=1 z=0  None .text      startGuideMelody__13Z2WolfHowlMgrFb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,7 +506,7 @@ asm void Z2WolfHowlMgr::startGuideMelody(bool param_0) {
 #pragma pop
 
 
-/* 802CBB58-802CBB7C 0024+00 r=1 e=1 z=0  None .text      skipCorrectDemo__13Z2WolfHowlMgrFv                           */
+/* 802CBB58-802CBB7C 0024+00 s=0 e=1 z=0  None .text      skipCorrectDemo__13Z2WolfHowlMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +517,7 @@ asm void Z2WolfHowlMgr::skipCorrectDemo() {
 #pragma pop
 
 
-/* 802CBB7C-802CBC60 00E4+00 r=1 e=1 z=0  None .text      __sinit_Z2WolfHowlMgr_cpp                                    */
+/* 802CBB7C-802CBC60 00E4+00 s=0 e=1 z=0  None .text      __sinit_Z2WolfHowlMgr_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

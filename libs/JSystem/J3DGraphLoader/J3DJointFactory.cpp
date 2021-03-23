@@ -48,7 +48,7 @@ extern "C" void func_8033677C(); // 1
 // Declarations:
 // 
 
-/* 80337178-803371D0 0058+00 r=1 e=1 z=0  None .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    */
+/* 80337178-803371D0 0058+00 s=0 e=1 z=0  None .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ asm J3DJointFactory::J3DJointFactory(J3DJointBlock const& param_0) {
 #pragma pop
 
 
-/* 803371D0-80337338 0168+00 r=1 e=1 z=0  None .text      create__15J3DJointFactoryFi                                  */
+/* 803371D0-80337338 0168+00 s=0 e=1 z=0  None .text      create__15J3DJointFactoryFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm void J3DJointFactory::create(int param_0) {
 #pragma pop
 
 
-/* 80337338-80337350 0018+00 r=1 e=0 z=0  None .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            */
+/* 80337338-80337350 0018+00 s=1 e=0 z=0  None .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

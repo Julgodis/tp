@@ -2,8 +2,8 @@ lbl_80A274D8:
 /* 80A274D8 00000000  94 21 FE 90 */	stwu r1, -0x170(r1)
 /* 80A274DC 00000004  7C 08 02 A6 */	mflr r0
 /* 80A274E0 00000008  90 01 01 74 */	stw r0, 0x174(r1)
-/* 80A274E4 0000000C  3C 80 00 00 */	lis r4, m__21daNpcKasiMich_Param_c@ha /* 80A2A04C */
-/* 80A274E8 00000010  38 84 00 00 */	addi r4, r4, m__21daNpcKasiMich_Param_c@l /* 80A2A04C */
+/* 80A274E4 0000000C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80A274E8 00000010  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80A274EC 00000014  80 A4 00 A8 */	lwz r5, 0xa8(r4)
 /* 80A274F0 00000018  80 04 00 AC */	lwz r0, 0xac(r4)
 /* 80A274F4 0000001C  90 A1 01 14 */	stw r5, 0x114(r1)
@@ -266,7 +266,7 @@ lbl_80A2783C:
 /* 80A278F0 000000B4  48 00 00 0C */	b lbl_80A278FC
 lbl_80A278F4:
 /* 80A278F4 00000000  38 81 01 38 */	addi r4, r1, 0x138
-/* 80A278F8 00000004  4B FF E8 41 */	bl playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData
+/* 80A278F8 00000004  4B FF E8 41 */	bl _unresolved
 lbl_80A278FC:
 /* 80A278FC 00000000  80 01 01 74 */	lwz r0, 0x174(r1)
 /* 80A27900 00000004  7C 08 03 A6 */	mtlr r0

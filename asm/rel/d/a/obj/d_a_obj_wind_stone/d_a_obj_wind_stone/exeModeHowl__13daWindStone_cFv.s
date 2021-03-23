@@ -16,12 +16,12 @@ lbl_80D382F8:
 /* 80D382F8 00000000  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D382FC 00000004  54 00 E7 3E */	rlwinm r0, r0, 0x1c, 0x1c, 0x1f
 /* 80D38300 00000008  7C 04 07 74 */	extsb r4, r0
-/* 80D38304 0000000C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80D38308 00000010  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80D38304 0000000C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80D38308 00000010  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80D3830C 00000014  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80D38310 00000018  38 63 2D 84 */	addi r3, r3, 0x2d84
 /* 80D38314 0000001C  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 80D38318 00000020  4B FF F6 C1 */	bl startWindStoneSound__13Z2WolfHowlMgrFScP3Vec
+/* 80D38318 00000020  4B FF F6 C1 */	bl _unresolved
 /* 80D3831C 00000024  38 00 00 00 */	li r0, 0
 /* 80D38320 00000028  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80D38324 0000002C  7F E3 FB 78 */	mr r3, r31

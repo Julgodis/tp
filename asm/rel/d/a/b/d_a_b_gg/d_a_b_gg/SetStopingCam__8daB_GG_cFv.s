@@ -3,8 +3,8 @@ lbl_805DFD78:
 /* 805DFD7C 00000004  7C 08 02 A6 */	mflr r0
 /* 805DFD80 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805DFD84 0000000C  7C 66 1B 78 */	mr r6, r3
-/* 805DFD88 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 805DFD8C 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 805DFD88 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 805DFD8C 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 805DFD90 00000018  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805DFD94 0000001C  7C 00 07 74 */	extsb r0, r0
 /* 805DFD98 00000020  1C 00 00 38 */	mulli r0, r0, 0x38
@@ -27,7 +27,7 @@ lbl_805DFD78:
 /* 805DFDDC 00000064  38 A1 00 08 */	addi r5, r1, 8
 /* 805DFDE0 00000068  C0 26 06 3C */	lfs f1, 0x63c(r6)
 /* 805DFDE4 0000006C  38 C0 00 00 */	li r6, 0
-/* 805DFDE8 00000070  4B FF E5 91 */	bl Set__9dCamera_cF4cXyz4cXyzfs
+/* 805DFDE8 00000070  4B FF E5 91 */	bl _unresolved
 /* 805DFDEC 00000074  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 805DFDF0 00000078  7C 08 03 A6 */	mtlr r0
 /* 805DFDF4 0000007C  38 21 00 20 */	addi r1, r1, 0x20

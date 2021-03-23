@@ -5,15 +5,15 @@ lbl_80480BC0:
 /* 80480BCC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80480BD0 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80480BD4 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80480BD8 00000018  4B FF CE 81 */	bl MoveBGDelete__16dBgS_MoveBgActorFv
+/* 80480BD8 00000018  4B FF CE 81 */	bl _unresolved
 /* 80480BDC 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 80480BE0 00000020  38 7E 05 A0 */	addi r3, r30, 0x5a0
 /* 80480BE4 00000024  80 1E 08 AC */	lwz r0, 0x8ac(r30)
 /* 80480BE8 00000028  54 00 10 3A */	slwi r0, r0, 2
-/* 80480BEC 0000002C  3C 80 00 00 */	lis r4, M_arcname__Q212daObjMovebox5Act_c@ha /* 80481104 */
-/* 80480BF0 00000030  38 84 00 00 */	addi r4, r4, M_arcname__Q212daObjMovebox5Act_c@l /* 80481104 */
+/* 80480BEC 0000002C  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80480BF0 00000030  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80480BF4 00000034  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80480BF8 00000038  4B FF CE 61 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
+/* 80480BF8 00000038  4B FF CE 61 */	bl _unresolved
 /* 80480BFC 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80480C00 00000040  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80480C04 00000044  83 C1 00 08 */	lwz r30, 8(r1)

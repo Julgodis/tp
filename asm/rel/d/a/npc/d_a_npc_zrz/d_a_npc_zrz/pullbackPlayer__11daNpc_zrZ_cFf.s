@@ -5,7 +5,7 @@ lbl_80B98C34:
 /* 80B98C40 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80B98C44 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80B98C48 00000014  38 7F 0C 90 */	addi r3, r31, 0xc90
-/* 80B98C4C 00000018  4B FF B0 ED */	bl getBeforeIdx__13daNpcF_Path_cFv
+/* 80B98C4C 00000018  4B FF B0 ED */	bl _unresolved
 /* 80B98C50 0000001C  80 9F 0C 94 */	lwz r4, 0xc94(r31)
 /* 80B98C54 00000020  80 84 00 08 */	lwz r4, 8(r4)
 /* 80B98C58 00000024  54 60 20 36 */	slwi r0, r3, 4
@@ -22,24 +22,24 @@ lbl_80B98C34:
 /* 80B98C84 00000050  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80B98C88 00000054  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 80B98C8C 00000058  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80B98C90 0000005C  3C 60 00 00 */	lis r3, lit_6287@ha /* 80B9B20C */
-/* 80B98C94 00000060  C0 03 00 00 */	lfs f0, lit_6287@l(r3) /* 80B9B20C */
+/* 80B98C90 0000005C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B98C94 00000060  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80B98C98 00000064  EC 01 00 2A */	fadds f0, f1, f0
 /* 80B98C9C 00000068  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80B98CA0 0000006C  38 61 00 14 */	addi r3, r1, 0x14
-/* 80B98CA4 00000070  4B FF B0 95 */	bl gndCheck__11fopAcM_gc_cFPC4cXyz
+/* 80B98CA4 00000070  4B FF B0 95 */	bl _unresolved
 /* 80B98CA8 00000074  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80B98CAC 00000078  41 82 00 10 */	beq lbl_80B98CBC
-/* 80B98CB0 0000007C  3C 60 00 00 */	lis r3, mGroundY__11fopAcM_gc_c@ha /* 80450CD0 */
-/* 80B98CB4 00000080  C0 03 00 00 */	lfs f0, mGroundY__11fopAcM_gc_c@l(r3) /* 80450CD0 */
+/* 80B98CB0 0000007C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B98CB4 00000080  C0 03 00 00 */	lfs f0, 0x0000(r3)
 /* 80B98CB8 00000084  D0 01 00 18 */	stfs f0, 0x18(r1)
 lbl_80B98CBC:
 /* 80B98CBC 00000000  38 61 00 14 */	addi r3, r1, 0x14
 /* 80B98CC0 00000004  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 80B98CC4 00000008  4B FF B0 75 */	bl cLib_targetAngleY__FPC3VecPC3Vec
+/* 80B98CC4 00000008  4B FF B0 75 */	bl _unresolved
 /* 80B98CC8 0000000C  7C 65 1B 78 */	mr r5, r3
-/* 80B98CCC 00000010  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80B98CD0 00000014  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80B98CCC 00000010  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80B98CD0 00000014  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80B98CD4 00000018  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80B98CD8 0000001C  38 81 00 14 */	addi r4, r1, 0x14
 /* 80B98CDC 00000020  38 C0 00 00 */	li r6, 0

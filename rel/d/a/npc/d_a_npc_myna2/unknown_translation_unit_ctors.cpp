@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80A88420[2];
+extern u8 data_80A88420[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_myna2_cpp(); // 1
 
 // 
 // Declarations:

@@ -20,23 +20,23 @@ lbl_80AE825C:
 /* 80AE825C 00000000  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80AE8260 00000004  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80AE8264 00000008  41 82 00 74 */	beq lbl_80AE82D8
-/* 80AE8268 0000000C  4B FF F6 51 */	bl dKy_darkworld_check__Fv
+/* 80AE8268 0000000C  4B FF F6 51 */	bl _unresolved
 /* 80AE826C 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AE8270 00000014  41 82 00 10 */	beq lbl_80AE8280
-/* 80AE8274 00000018  4B FF F6 45 */	bl dKy_getDarktime_minute__Fv
+/* 80AE8274 00000018  4B FF F6 45 */	bl _unresolved
 /* 80AE8278 0000001C  7C 7E 1B 78 */	mr r30, r3
 /* 80AE827C 00000020  48 00 00 0C */	b lbl_80AE8288
 lbl_80AE8280:
-/* 80AE8280 00000000  4B FF F6 39 */	bl dKy_getdaytime_minute__Fv
+/* 80AE8280 00000000  4B FF F6 39 */	bl _unresolved
 /* 80AE8284 00000004  7C 7E 1B 78 */	mr r30, r3
 lbl_80AE8288:
-/* 80AE8288 00000000  4B FF F6 31 */	bl dKy_darkworld_check__Fv
+/* 80AE8288 00000000  4B FF F6 31 */	bl _unresolved
 /* 80AE828C 00000004  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AE8290 00000008  41 82 00 0C */	beq lbl_80AE829C
-/* 80AE8294 0000000C  4B FF F6 25 */	bl dKy_getDarktime_hour__Fv
+/* 80AE8294 0000000C  4B FF F6 25 */	bl _unresolved
 /* 80AE8298 00000010  48 00 00 08 */	b lbl_80AE82A0
 lbl_80AE829C:
-/* 80AE829C 00000000  4B FF F6 1D */	bl dKy_getdaytime_hour__Fv
+/* 80AE829C 00000000  4B FF F6 1D */	bl _unresolved
 lbl_80AE82A0:
 /* 80AE82A0 00000000  1C 03 00 3C */	mulli r0, r3, 0x3c
 /* 80AE82A4 00000004  7C 7E 02 14 */	add r3, r30, r0
@@ -58,7 +58,7 @@ lbl_80AE82D8:
 /* 80AE82DC 00000004  28 00 00 00 */	cmplwi r0, 0
 /* 80AE82E0 00000008  41 82 00 0C */	beq lbl_80AE82EC
 /* 80AE82E4 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 80AE82E8 00000010  4B FF F5 D1 */	bl execute__8daNpcF_cFv
+/* 80AE82E8 00000010  4B FF F5 D1 */	bl _unresolved
 lbl_80AE82EC:
 /* 80AE82EC 00000000  38 60 00 01 */	li r3, 1
 /* 80AE82F0 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

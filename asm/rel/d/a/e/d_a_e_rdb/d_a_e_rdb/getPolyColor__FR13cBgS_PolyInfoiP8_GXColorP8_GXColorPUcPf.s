@@ -3,18 +3,18 @@ lbl_80765A98:
 /* 80765A9C 00000004  7C 08 02 A6 */	mflr r0
 /* 80765AA0 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80765AA4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
-/* 80765AA8 00000010  4B FF F5 91 */	bl _savegpr_26
+/* 80765AA8 00000010  4B FF F5 91 */	bl _unresolved
 /* 80765AAC 00000014  7C 7A 1B 78 */	mr r26, r3
 /* 80765AB0 00000018  7C 9B 23 78 */	mr r27, r4
 /* 80765AB4 0000001C  7C BC 2B 78 */	mr r28, r5
 /* 80765AB8 00000020  7C DD 33 78 */	mr r29, r6
 /* 80765ABC 00000024  7C FE 3B 78 */	mr r30, r7
 /* 80765AC0 00000028  7D 1F 43 78 */	mr r31, r8
-/* 80765AC4 0000002C  3C 60 00 00 */	lis r3, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 80765AC8 00000030  38 63 00 00 */	addi r3, r3, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 80765AC4 0000002C  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 80765AC8 00000030  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
 /* 80765ACC 00000034  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80765AD0 00000038  7F 44 D3 78 */	mr r4, r26
-/* 80765AD4 0000003C  4B FF F5 65 */	bl ChkPolySafe__4cBgSFRC13cBgS_PolyInfo
+/* 80765AD4 0000003C  4B FF F5 65 */	bl _unresolved
 /* 80765AD8 00000040  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80765ADC 00000044  40 82 00 0C */	bne lbl_80765AE8
 /* 80765AE0 00000048  38 60 00 00 */	li r3, 0
@@ -24,35 +24,35 @@ lbl_80765AE8:
 /* 80765AEC 00000004  40 82 00 38 */	bne lbl_80765B24
 /* 80765AF0 00000008  7F 43 D3 78 */	mr r3, r26
 /* 80765AF4 0000000C  7F 84 E3 78 */	mr r4, r28
-/* 80765AF8 00000010  4B FF F5 41 */	bl dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor
+/* 80765AF8 00000010  4B FF F5 41 */	bl _unresolved
 /* 80765AFC 00000014  7F 43 D3 78 */	mr r3, r26
 /* 80765B00 00000018  7F A4 EB 78 */	mr r4, r29
-/* 80765B04 0000001C  4B FF F5 35 */	bl dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor
+/* 80765B04 0000001C  4B FF F5 35 */	bl _unresolved
 /* 80765B08 00000020  7F 43 D3 78 */	mr r3, r26
-/* 80765B0C 00000024  4B FF F5 2D */	bl dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo
+/* 80765B0C 00000024  4B FF F5 2D */	bl _unresolved
 /* 80765B10 00000028  98 7E 00 00 */	stb r3, 0(r30)
 /* 80765B14 0000002C  7F 43 D3 78 */	mr r3, r26
-/* 80765B18 00000030  4B FF F5 21 */	bl dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo
+/* 80765B18 00000030  4B FF F5 21 */	bl _unresolved
 /* 80765B1C 00000034  D0 3F 00 00 */	stfs f1, 0(r31)
 /* 80765B20 00000038  48 00 00 34 */	b lbl_80765B54
 lbl_80765B24:
 /* 80765B24 00000000  7F 43 D3 78 */	mr r3, r26
 /* 80765B28 00000004  7F 84 E3 78 */	mr r4, r28
-/* 80765B2C 00000008  4B FF F5 0D */	bl dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor
+/* 80765B2C 00000008  4B FF F5 0D */	bl _unresolved
 /* 80765B30 0000000C  7F 43 D3 78 */	mr r3, r26
 /* 80765B34 00000010  7F A4 EB 78 */	mr r4, r29
-/* 80765B38 00000014  4B FF F5 01 */	bl dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor
+/* 80765B38 00000014  4B FF F5 01 */	bl _unresolved
 /* 80765B3C 00000018  7F 43 D3 78 */	mr r3, r26
-/* 80765B40 0000001C  4B FF F4 F9 */	bl dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo
+/* 80765B40 0000001C  4B FF F4 F9 */	bl _unresolved
 /* 80765B44 00000020  98 7E 00 00 */	stb r3, 0(r30)
 /* 80765B48 00000024  7F 43 D3 78 */	mr r3, r26
-/* 80765B4C 00000028  4B FF F4 ED */	bl dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo
+/* 80765B4C 00000028  4B FF F4 ED */	bl _unresolved
 /* 80765B50 0000002C  D0 3F 00 00 */	stfs f1, 0(r31)
 lbl_80765B54:
 /* 80765B54 00000000  38 60 00 01 */	li r3, 1
 lbl_80765B58:
 /* 80765B58 00000000  39 61 00 20 */	addi r11, r1, 0x20
-/* 80765B5C 00000004  4B FF F4 DD */	bl _restgpr_26
+/* 80765B5C 00000004  4B FF F4 DD */	bl _unresolved
 /* 80765B60 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80765B64 0000000C  7C 08 03 A6 */	mtlr r0
 /* 80765B68 00000010  38 21 00 20 */	addi r1, r1, 0x20

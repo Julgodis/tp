@@ -24,7 +24,7 @@ extern "C" void fwide(); // 1
 // Declarations:
 // 
 
-/* 80369114-8036919C 0088+00 r=5 e=5 z=0  None .text      fwide                                                        */
+/* 80369114-8036919C 0088+00 s=0 e=5 z=0  None .text      fwide                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

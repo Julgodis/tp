@@ -96,10 +96,10 @@ extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451420-80451428 0004+04 r=6 e=5 z=0  None .sbss      sCurrentDirID__10JKRArchive                                  */
+/* 80451420-80451428 0004+04 s=1 e=5 z=0  None .sbss      sCurrentDirID__10JKRArchive                                  */
 u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
-/* 802D6294-802D6334 00A0+00 r=5 e=5 z=0  None .text      __ct__10JKRArchiveFlQ210JKRArchive10EMountMode               */
+/* 802D6294-802D6334 00A0+00 s=0 e=5 z=0  None .text      __ct__10JKRArchiveFlQ210JKRArchive10EMountMode               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm JKRArchive::JKRArchive(s32 param_0, JKRArchive::EMountMode param_1) {
 #pragma pop
 
 
-/* 802D6334-802D6394 0060+00 r=5 e=5 z=0  None .text      __dt__10JKRArchiveFv                                         */
+/* 802D6334-802D6394 0060+00 s=0 e=5 z=0  None .text      __dt__10JKRArchiveFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ asm JKRArchive::~JKRArchive() {
 #pragma pop
 
 
-/* 802D6394-802D63E0 004C+00 r=4 e=0 z=0  None .text      isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs       */
+/* 802D6394-802D63E0 004C+00 s=4 e=0 z=0  None .text      isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ asm void JKRArchive::isSameName(JKRArchive::CArcName& param_0, u32 param_1, u16 
 #pragma pop
 
 
-/* 802D63E0-802D641C 003C+00 r=1 e=0 z=0  None .text      findResType__10JKRArchiveCFUl                                */
+/* 802D63E0-802D641C 003C+00 s=1 e=0 z=0  None .text      findResType__10JKRArchiveCFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ asm void JKRArchive::findResType(u32 param_0) const {
 #pragma pop
 
 
-/* 802D641C-802D64F4 00D8+00 r=3 e=3 z=0  None .text      findDirectory__10JKRArchiveCFPCcUl                           */
+/* 802D641C-802D64F4 00D8+00 s=0 e=3 z=0  None .text      findDirectory__10JKRArchiveCFPCcUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ asm void JKRArchive::findDirectory(char const* param_0, u32 param_1) const {
 #pragma pop
 
 
-/* 802D64F4-802D65A4 00B0+00 r=2 e=2 z=0  None .text      findTypeResource__10JKRArchiveCFUlPCc                        */
+/* 802D64F4-802D65A4 00B0+00 s=0 e=2 z=0  None .text      findTypeResource__10JKRArchiveCFUlPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ asm void JKRArchive::findTypeResource(u32 param_0, char const* param_1) const {
 #pragma pop
 
 
-/* 802D65A4-802D6684 00E0+00 r=4 e=4 z=0  None .text      findFsResource__10JKRArchiveCFPCcUl                          */
+/* 802D65A4-802D6684 00E0+00 s=0 e=4 z=0  None .text      findFsResource__10JKRArchiveCFPCcUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ asm void JKRArchive::findFsResource(char const* param_0, u32 param_1) const {
 #pragma pop
 
 
-/* 802D6684-802D66AC 0028+00 r=7 e=7 z=0  None .text      findIdxResource__10JKRArchiveCFUl                            */
+/* 802D6684-802D66AC 0028+00 s=0 e=7 z=0  None .text      findIdxResource__10JKRArchiveCFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ asm void JKRArchive::findIdxResource(u32 param_0) const {
 #pragma pop
 
 
-/* 802D66AC-802D6734 0088+00 r=4 e=4 z=0  None .text      findNameResource__10JKRArchiveCFPCc                          */
+/* 802D66AC-802D6734 0088+00 s=0 e=4 z=0  None .text      findNameResource__10JKRArchiveCFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void JKRArchive::findNameResource(char const* param_0) const {
 #pragma pop
 
 
-/* 802D6734-802D6770 003C+00 r=9 e=9 z=0  None .text      findPtrResource__10JKRArchiveCFPCv                           */
+/* 802D6734-802D6770 003C+00 s=0 e=9 z=0  None .text      findPtrResource__10JKRArchiveCFPCv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm void JKRArchive::findPtrResource(void const* param_0) const {
 #pragma pop
 
 
-/* 802D6770-802D67F4 0084+00 r=4 e=4 z=0  None .text      findIdResource__10JKRArchiveCFUs                             */
+/* 802D6770-802D67F4 0084+00 s=0 e=4 z=0  None .text      findIdResource__10JKRArchiveCFUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void JKRArchive::findIdResource(u16 param_0) const {
 #pragma pop
 
 
-/* 802D67F4-802D6884 0090+00 r=2 e=0 z=0  None .text      store__Q210JKRArchive8CArcNameFPCc                           */
+/* 802D67F4-802D6884 0090+00 s=2 e=0 z=0  None .text      store__Q210JKRArchive8CArcNameFPCc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +231,7 @@ asm void JKRArchive::CArcName::store(char const* param_0) {
 #pragma pop
 
 
-/* 802D6884-802D693C 00B8+00 r=2 e=0 z=0  None .text      store__Q210JKRArchive8CArcNameFPCcc                          */
+/* 802D6884-802D693C 00B8+00 s=2 e=0 z=0  None .text      store__Q210JKRArchive8CArcNameFPCcc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +242,7 @@ asm void JKRArchive::CArcName::store(char const* param_0, char param_1) {
 #pragma pop
 
 
-/* 802D693C-802D6978 003C+00 r=5 e=5 z=0  None .text      setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl  */
+/* 802D693C-802D6978 003C+00 s=0 e=5 z=0  None .text      setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +253,7 @@ asm void JKRArchive::setExpandSize(JKRArchive::SDIFileEntry* param_0, u32 param_
 #pragma pop
 
 
-/* 802D6978-802D69B8 0040+00 r=5 e=5 z=0  None .text      getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry   */
+/* 802D6978-802D69B8 0040+00 s=0 e=5 z=0  None .text      getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -20,16 +20,16 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
-};
-
-struct JKRArchive {
-};
-
 struct JKRSolidHeap {
 };
 
 struct JAISoundHandle {
+};
+
+struct JAISoundID {
+};
+
+struct JKRArchive {
 };
 
 struct Z2AudioMgr {
@@ -76,13 +76,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
+struct JAISeqDataMgr {
+};
+
 struct JAIAudience {
 };
 
 struct JAISeCategoryArrangement {
-};
-
-struct JAISeqDataMgr {
 };
 
 struct JAISeMgr {
@@ -336,17 +336,17 @@ extern "C" extern u8 data_80451354[4];
 // 
 
 /* ############################################################################################## */
-/* 803CBF38-803CBF44 000C+00 r=2 e=1 z=0  None .data      __vt__10Z2AudioMgr                                           */
+/* 803CBF38-803CBF44 000C+00 s=1 e=1 z=0  None .data      __vt__10Z2AudioMgr                                           */
 SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
 	/* 2    */ (void*)func_802CDB1C,
 };
 
-/* 80451368-80451370 0004+04 r=1152 e=251 z=900  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+/* 80451368-80451370 0004+04 s=1 e=251 z=0  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
 u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-/* 802CD248-802CD34C 0104+00 r=1 e=1 z=0  None .text      __ct__10Z2AudioMgrFv                                         */
+/* 802CD248-802CD34C 0104+00 s=0 e=1 z=0  None .text      __ct__10Z2AudioMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -358,7 +358,7 @@ asm Z2AudioMgr::Z2AudioMgr() {
 
 
 /* ############################################################################################## */
-/* 8039CA58-8039CAD8 0079+07 r=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 8039CA58-8039CAD8 0079+07 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -373,7 +373,7 @@ SECTION_DEAD char const* const stringBase_8039CAAF =
 SECTION_DEAD static char const* const pad_8039CAD1 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 803CBF44-803CBF58 0014+00 r=2 e=0 z=0  None .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
+/* 803CBF44-803CBF58 0014+00 s=2 e=0 z=0  None .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
 SECTION_DATA static void* data_803CBF44[5] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -382,7 +382,7 @@ SECTION_DATA static void* data_803CBF44[5] = {
 	/* 4    */ (void*)func_802CDB68,
 };
 
-/* 803CBF58-803CBF70 0014+04 r=3 e=0 z=0  None .data      __vt__24JAUStreamAramMgrBase_<1>                             */
+/* 803CBF58-803CBF70 0014+04 s=3 e=0 z=0  None .data      __vt__24JAUStreamAramMgrBase_<1>                             */
 SECTION_DATA static void* data_803CBF58[5 + 1 /* padding */] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -393,19 +393,19 @@ SECTION_DATA static void* data_803CBF58[5 + 1 /* padding */] = {
 	NULL,
 };
 
-/* 80434268-80434274 000C+00 r=1 e=0 z=0  None .bss       @3779                                                        */
+/* 80434268-80434274 000C+00 s=1 e=0 z=0  None .bss       @3779                                                        */
 static u8 Z2AudioMgr__lit_3779[12];
 
-/* 80434274-80434280 000C+00 r=1 e=0 z=0  None .bss       @3783                                                        */
+/* 80434274-80434280 000C+00 s=1 e=0 z=0  None .bss       @3783                                                        */
 static u8 lit_3783[12];
 
-/* 80455F58-80455F5C 0004+00 r=1 e=0 z=0  None .sdata2    @3931                                                        */
+/* 80455F58-80455F5C 0004+00 s=1 e=0 z=0  None .sdata2    @3931                                                        */
 SECTION_SDATA2 static f32 lit_3931 = 13.0f / 10.0f;
 
-/* 80455F5C-80455F60 0004+00 r=2 e=0 z=0  None .sdata2    @3932                                                        */
+/* 80455F5C-80455F60 0004+00 s=2 e=0 z=0  None .sdata2    @3932                                                        */
 SECTION_SDATA2 static f32 lit_3932 = 1.0f;
 
-/* 802CD34C-802CD7F8 04AC+00 r=1 e=1 z=0  None .text      init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive          */
+/* 802CD34C-802CD7F8 04AC+00 s=0 e=1 z=0  None .text      init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -416,7 +416,7 @@ asm void Z2AudioMgr::init(JKRSolidHeap* param_0, u32 param_1, void* param_2, JKR
 #pragma pop
 
 
-/* 802CD7F8-802CD888 0090+00 r=1 e=0 z=0  None .text      __dt__24JAUStreamAramMgrBase_<1>Fv                           */
+/* 802CD7F8-802CD888 0090+00 s=1 e=0 z=0  None .text      __dt__24JAUStreamAramMgrBase_<1>Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,7 +427,7 @@ extern "C" asm static void func_802CD7F8() {
 #pragma pop
 
 
-/* 802CD888-802CD8B4 002C+00 r=5 e=5 z=0  None .text      setOutputMode__10Z2AudioMgrFUl                               */
+/* 802CD888-802CD8B4 002C+00 s=0 e=5 z=0  None .text      setOutputMode__10Z2AudioMgrFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -438,7 +438,7 @@ asm void Z2AudioMgr::setOutputMode(u32 param_0) {
 #pragma pop
 
 
-/* 802CD8B4-802CD904 0050+00 r=1 e=0 z=0  None .text      zeldaGFrameWork__10Z2AudioMgrFv                              */
+/* 802CD8B4-802CD904 0050+00 s=1 e=0 z=0  None .text      zeldaGFrameWork__10Z2AudioMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -449,7 +449,7 @@ asm void Z2AudioMgr::zeldaGFrameWork() {
 #pragma pop
 
 
-/* 802CD904-802CD974 0070+00 r=1 e=1 z=0  None .text      gframeProcess__10Z2AudioMgrFv                                */
+/* 802CD904-802CD974 0070+00 s=0 e=1 z=0  None .text      gframeProcess__10Z2AudioMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +460,7 @@ asm void Z2AudioMgr::gframeProcess() {
 #pragma pop
 
 
-/* 802CD974-802CD9CC 0058+00 r=3 e=3 z=0  None .text      resetProcess__10Z2AudioMgrFUlb                               */
+/* 802CD974-802CD9CC 0058+00 s=0 e=3 z=0  None .text      resetProcess__10Z2AudioMgrFUlb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,14 +472,14 @@ asm void Z2AudioMgr::resetProcess(u32 param_0, bool param_1) {
 
 
 /* ############################################################################################## */
-/* 80455F60-80455F68 0004+04 r=1 e=0 z=0  None .sdata2    @4035                                                        */
+/* 80455F60-80455F68 0004+04 s=1 e=0 z=0  None .sdata2    @4035                                                        */
 SECTION_SDATA2 static u8 Z2AudioMgr__lit_4035[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802CD9CC-802CDA6C 00A0+00 r=1 e=1 z=0  None .text      resetRecover__10Z2AudioMgrFv                                 */
+/* 802CD9CC-802CDA6C 00A0+00 s=0 e=1 z=0  None .text      resetRecover__10Z2AudioMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +490,7 @@ asm void Z2AudioMgr::resetRecover() {
 #pragma pop
 
 
-/* 802CDA6C-802CDB1C 00B0+00 r=2 e=2 z=0  None .text      hasReset__10Z2AudioMgrCFv                                    */
+/* 802CDA6C-802CDB1C 00B0+00 s=0 e=2 z=0  None .text      hasReset__10Z2AudioMgrCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,7 +501,7 @@ asm void Z2AudioMgr::hasReset() const {
 #pragma pop
 
 
-/* 802CDB1C-802CDB68 004C+00 r=2 e=1 z=0  None .text      startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802CDB1C-802CDB68 004C+00 s=1 e=1 z=0  None .text      startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +512,7 @@ asm void Z2AudioMgr::startSound(JAISoundID param_0, JAISoundHandle* param_1, JGe
 #pragma pop
 
 
-/* 802CDB68-802CDC08 00A0+00 r=1 e=0 z=0  None .text      __dt__26JAUStreamStaticAramMgr_<1>Fv                         */
+/* 802CDB68-802CDC08 00A0+00 s=1 e=0 z=0  None .text      __dt__26JAUStreamStaticAramMgr_<1>Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +523,7 @@ extern "C" asm static void func_802CDB68() {
 #pragma pop
 
 
-/* 802CDC08-802CDCEC 00E4+00 r=1 e=0 z=0  None .text      deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl            */
+/* 802CDC08-802CDCEC 00E4+00 s=1 e=0 z=0  None .text      deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +534,7 @@ extern "C" asm static void func_802CDC08() {
 #pragma pop
 
 
-/* 802CDCEC-802CDDC8 00DC+00 r=1 e=0 z=0  None .text      newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl              */
+/* 802CDCEC-802CDDC8 00DC+00 s=1 e=0 z=0  None .text      newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

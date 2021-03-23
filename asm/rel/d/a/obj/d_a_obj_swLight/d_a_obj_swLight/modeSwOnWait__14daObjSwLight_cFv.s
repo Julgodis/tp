@@ -5,8 +5,8 @@ lbl_80CF766C:
 /* 80CF7678 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80CF767C 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80CF7680 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80CF7684 00000018  3C 80 00 00 */	lis r4, l_sph_src_at@ha /* 80CF83A0 */
-/* 80CF7688 0000001C  3B E4 00 00 */	addi r31, r4, l_sph_src_at@l /* 80CF83A0 */
+/* 80CF7684 00000018  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80CF7688 0000001C  3B E4 00 00 */	addi r31, r4, 0x0000 /* 0x00000000@l */
 /* 80CF768C 00000020  48 00 02 ED */	bl checkHit__14daObjSwLight_cFv
 /* 80CF7690 00000024  88 7E 0A E6 */	lbz r3, 0xae6(r30)
 /* 80CF7694 00000028  54 60 07 FF */	clrlwi. r0, r3, 0x1f

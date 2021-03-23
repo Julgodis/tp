@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80AF5AC0[2];
+extern u8 data_80AF5AC0[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_soldierB_cpp(); // 1
 
 // 
 // Declarations:

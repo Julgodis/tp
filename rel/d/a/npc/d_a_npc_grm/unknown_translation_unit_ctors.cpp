@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_809D6D5C[2];
+extern u8 data_809D6D5C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_grm_cpp(); // 1
 
 // 
 // Declarations:

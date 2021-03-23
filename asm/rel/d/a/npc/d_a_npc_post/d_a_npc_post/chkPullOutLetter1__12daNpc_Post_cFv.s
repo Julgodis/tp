@@ -7,15 +7,15 @@ lbl_80AAAAB8:
 /* 80AAAACC 00000014  88 03 0F 8C */	lbz r0, 0xf8c(r3)
 /* 80AAAAD0 00000018  28 00 00 01 */	cmplwi r0, 1
 /* 80AAAAD4 0000001C  40 82 00 40 */	bne lbl_80AAAB14
-/* 80AAAAD8 00000020  3C 80 00 00 */	lis r4, l_motionAnmData@ha /* 80AAD5E4 */
-/* 80AAAADC 00000024  38 A4 00 00 */	addi r5, r4, l_motionAnmData@l /* 80AAD5E4 */
+/* 80AAAAD8 00000020  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AAAADC 00000024  38 A4 00 00 */	addi r5, r4, 0x0000 /* 0x00000000@l */
 /* 80AAAAE0 00000028  80 05 00 5C */	lwz r0, 0x5c(r5)
 /* 80AAAAE4 0000002C  54 00 10 3A */	slwi r0, r0, 2
-/* 80AAAAE8 00000030  3C 80 00 00 */	lis r4, l_resNameList@ha /* 80AAD414 */
-/* 80AAAAEC 00000034  38 84 00 00 */	addi r4, r4, l_resNameList@l /* 80AAD414 */
+/* 80AAAAE8 00000030  3C 80 00 00 */	lis r4, 0x0000 /* 0x00000000@ha */
+/* 80AAAAEC 00000034  38 84 00 00 */	addi r4, r4, 0x0000 /* 0x00000000@l */
 /* 80AAAAF0 00000038  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80AAAAF4 0000003C  80 A5 00 54 */	lwz r5, 0x54(r5)
-/* 80AAAAF8 00000040  4B FF E1 01 */	bl getTrnsfrmAnmP__8daNpcT_cFPCci
+/* 80AAAAF8 00000040  4B FF E1 01 */	bl _unresolved
 /* 80AAAAFC 00000044  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 80AAAB00 00000048  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AAAB04 0000004C  7C 03 00 50 */	subf r0, r3, r0

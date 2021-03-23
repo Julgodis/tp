@@ -30,7 +30,7 @@ extern "C" extern void* g_cAPI_Interface[6];
 // Declarations:
 // 
 
-/* 802632C8-802632F8 0030+00 r=1 e=1 z=0  None .text      cAPIGph_Painter__Fv                                          */
+/* 802632C8-802632F8 0030+00 s=0 e=1 z=0  None .text      cAPIGph_Painter__Fv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +41,7 @@ asm void cAPIGph_Painter() {
 #pragma pop
 
 
-/* 802632F8-80263328 0030+00 r=1 e=1 z=0  None .text      cAPIGph_BeforeOfDraw__Fv                                     */
+/* 802632F8-80263328 0030+00 s=0 e=1 z=0  None .text      cAPIGph_BeforeOfDraw__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ asm void cAPIGph_BeforeOfDraw() {
 #pragma pop
 
 
-/* 80263328-80263358 0030+00 r=1 e=1 z=0  None .text      cAPIGph_AfterOfDraw__Fv                                      */
+/* 80263328-80263358 0030+00 s=0 e=1 z=0  None .text      cAPIGph_AfterOfDraw__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

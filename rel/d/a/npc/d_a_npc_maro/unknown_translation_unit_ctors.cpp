@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80564B98[2];
+extern u8 data_80564B98[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_maro_cpp(); // 1
 
 // 
 // Declarations:

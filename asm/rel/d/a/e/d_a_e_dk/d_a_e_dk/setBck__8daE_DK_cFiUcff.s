@@ -22,24 +22,24 @@ lbl_806AA614:
 /* 806AA614 00000000  38 00 00 01 */	li r0, 1
 /* 806AA618 00000004  98 1E 06 A0 */	stb r0, 0x6a0(r30)
 lbl_806AA61C:
-/* 806AA61C 00000000  3C 60 00 00 */	lis r3, stringBase0@ha /* 806AD628 */
-/* 806AA620 00000004  38 63 00 00 */	addi r3, r3, stringBase0@l /* 806AD628 */
-/* 806AA624 00000008  3C A0 00 00 */	lis r5, g_dComIfG_gameInfo@ha /* 804061C0 */
-/* 806AA628 0000000C  38 A5 00 00 */	addi r5, r5, g_dComIfG_gameInfo@l /* 804061C0 */
+/* 806AA61C 00000000  3C 60 00 00 */	lis r3, 0x0000 /* 0x00000000@ha */
+/* 806AA620 00000004  38 63 00 00 */	addi r3, r3, 0x0000 /* 0x00000000@l */
+/* 806AA624 00000008  3C A0 00 00 */	lis r5, 0x0000 /* 0x00000000@ha */
+/* 806AA628 0000000C  38 A5 00 00 */	addi r5, r5, 0x0000 /* 0x00000000@l */
 /* 806AA62C 00000010  3C A5 00 02 */	addis r5, r5, 2
 /* 806AA630 00000014  38 C0 00 80 */	li r6, 0x80
 /* 806AA634 00000018  38 A5 C2 F8 */	addi r5, r5, -15624
-/* 806AA638 0000001C  4B FF FB 21 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
+/* 806AA638 0000001C  4B FF FB 21 */	bl _unresolved
 /* 806AA63C 00000020  7C 64 1B 78 */	mr r4, r3
 /* 806AA640 00000024  80 7E 05 B4 */	lwz r3, 0x5b4(r30)
 /* 806AA644 00000028  57 E5 06 3E */	clrlwi r5, r31, 0x18
 /* 806AA648 0000002C  FC 20 F0 90 */	fmr f1, f30
 /* 806AA64C 00000030  FC 40 F8 90 */	fmr f2, f31
-/* 806AA650 00000034  3C C0 00 00 */	lis r6, lit_3873@ha /* 806AD558 */
-/* 806AA654 00000038  C0 66 00 00 */	lfs f3, lit_3873@l(r6) /* 806AD558 */
-/* 806AA658 0000003C  3C C0 00 00 */	lis r6, lit_3893@ha /* 806AD560 */
-/* 806AA65C 00000040  C0 86 00 00 */	lfs f4, lit_3893@l(r6) /* 806AD560 */
-/* 806AA660 00000044  4B FF FA F9 */	bl setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
+/* 806AA650 00000034  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 806AA654 00000038  C0 66 00 00 */	lfs f3, 0x0000(r6)
+/* 806AA658 0000003C  3C C0 00 00 */	lis r6, 0x0000 /* 0x00000000@ha */
+/* 806AA65C 00000040  C0 86 00 00 */	lfs f4, 0x0000(r6)
+/* 806AA660 00000044  4B FF FA F9 */	bl _unresolved
 /* 806AA664 00000048  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 806AA668 00000000  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 806AA66C 00000050  E3 C1 00 18 */	psq_l f30, 24(r1), 0, 0 /* qr0 */

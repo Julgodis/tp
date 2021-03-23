@@ -52,10 +52,10 @@ extern "C" void EXIUnlock(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044BB20-8044BB78 0054+04 r=14 e=0 z=0  None .bss       Scb                                                          */
+/* 8044BB20-8044BB78 0054+04 s=14 e=0 z=0  None .bss       Scb                                                          */
 static u8 Scb[84 + 4 /* padding */];
 
-/* 8033FE90-8033FEF0 0060+00 r=2 e=0 z=0  None .text      WriteSramCallback                                            */
+/* 8033FE90-8033FEF0 0060+00 s=2 e=0 z=0  None .text      WriteSramCallback                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ extern "C" asm static void WriteSramCallback() {
 #pragma pop
 
 
-/* 8033FEF0-80340008 0118+00 r=1 e=0 z=0  None .text      WriteSram                                                    */
+/* 8033FEF0-80340008 0118+00 s=1 e=0 z=0  None .text      WriteSram                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ extern "C" asm static void WriteSram() {
 #pragma pop
 
 
-/* 80340008-80340144 013C+00 r=1 e=1 z=0  None .text      __OSInitSram                                                 */
+/* 80340008-80340144 013C+00 s=0 e=1 z=0  None .text      __OSInitSram                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void __OSInitSram() {
 #pragma pop
 
 
-/* 80340144-803401A0 005C+00 r=3 e=3 z=0  None .text      __OSLockSram                                                 */
+/* 80340144-803401A0 005C+00 s=0 e=3 z=0  None .text      __OSLockSram                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ extern "C" asm void __OSLockSram() {
 #pragma pop
 
 
-/* 803401A0-803401FC 005C+00 r=4 e=4 z=0  None .text      __OSLockSramEx                                               */
+/* 803401A0-803401FC 005C+00 s=0 e=4 z=0  None .text      __OSLockSramEx                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ extern "C" asm void __OSLockSramEx() {
 #pragma pop
 
 
-/* 803401FC-80340538 033C+00 r=10 e=0 z=0  None .text      UnlockSram                                                   */
+/* 803401FC-80340538 033C+00 s=10 e=0 z=0  None .text      UnlockSram                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ extern "C" asm static void UnlockSram() {
 #pragma pop
 
 
-/* 80340538-8034055C 0024+00 r=3 e=3 z=0  None .text      __OSUnlockSram                                               */
+/* 80340538-8034055C 0024+00 s=0 e=3 z=0  None .text      __OSUnlockSram                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ extern "C" asm void __OSUnlockSram() {
 #pragma pop
 
 
-/* 8034055C-80340580 0024+00 r=4 e=4 z=0  None .text      __OSUnlockSramEx                                             */
+/* 8034055C-80340580 0024+00 s=0 e=4 z=0  None .text      __OSUnlockSramEx                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ extern "C" asm void __OSUnlockSramEx() {
 #pragma pop
 
 
-/* 80340580-80340590 0010+00 r=2 e=2 z=0  None .text      __OSSyncSram                                                 */
+/* 80340580-80340590 0010+00 s=0 e=2 z=0  None .text      __OSSyncSram                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ extern "C" asm void __OSSyncSram() {
 #pragma pop
 
 
-/* 80340590-80340610 0080+00 r=4 e=4 z=0  None .text      OSGetSoundMode                                               */
+/* 80340590-80340610 0080+00 s=0 e=4 z=0  None .text      OSGetSoundMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +165,7 @@ extern "C" asm void OSGetSoundMode() {
 #pragma pop
 
 
-/* 80340610-803406B4 00A4+00 r=1 e=1 z=0  None .text      OSSetSoundMode                                               */
+/* 80340610-803406B4 00A4+00 s=0 e=1 z=0  None .text      OSSetSoundMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ extern "C" asm void OSSetSoundMode() {
 #pragma pop
 
 
-/* 803406B4-80340724 0070+00 r=3 e=3 z=0  None .text      OSGetProgressiveMode                                         */
+/* 803406B4-80340724 0070+00 s=0 e=3 z=0  None .text      OSGetProgressiveMode                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ extern "C" asm void OSGetProgressiveMode() {
 #pragma pop
 
 
-/* 80340724-803407C8 00A4+00 r=2 e=2 z=0  None .text      OSSetProgressiveMode                                         */
+/* 80340724-803407C8 00A4+00 s=0 e=2 z=0  None .text      OSSetProgressiveMode                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ extern "C" asm void OSSetProgressiveMode() {
 #pragma pop
 
 
-/* 803407C8-8034084C 0084+00 r=1 e=1 z=0  None .text      OSGetWirelessID                                              */
+/* 803407C8-8034084C 0084+00 s=0 e=1 z=0  None .text      OSGetWirelessID                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ extern "C" asm void OSGetWirelessID() {
 #pragma pop
 
 
-/* 8034084C-803408F8 00AC+00 r=4 e=4 z=0  None .text      OSSetWirelessID                                              */
+/* 8034084C-803408F8 00AC+00 s=0 e=4 z=0  None .text      OSSetWirelessID                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ extern "C" asm void OSSetWirelessID() {
 #pragma pop
 
 
-/* 803408F8-80340968 0070+00 r=1 e=0 z=0  None .text      OSGetGbsMode                                                 */
+/* 803408F8-80340968 0070+00 s=1 e=0 z=0  None .text      OSGetGbsMode                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +231,7 @@ extern "C" asm static void OSGetGbsMode() {
 #pragma pop
 
 
-/* 80340968-80340A20 00B8+00 r=1 e=0 z=0  None .text      OSSetGbsMode                                                 */
+/* 80340968-80340A20 00B8+00 s=1 e=0 z=0  None .text      OSSetGbsMode                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

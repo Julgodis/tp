@@ -38,7 +38,7 @@ extern "C" void __div2i(); // 1
 // Declarations:
 // 
 
-/* 80358C90-80358E88 01F8+00 r=2 e=0 z=0  None .text      UpdateIconOffsets                                            */
+/* 80358C90-80358E88 01F8+00 s=2 e=0 z=0  None .text      UpdateIconOffsets                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +49,7 @@ extern "C" asm static void UpdateIconOffsets() {
 #pragma pop
 
 
-/* 80358E88-80358F9C 0114+00 r=2 e=2 z=0  None .text      CARDGetStatus                                                */
+/* 80358E88-80358F9C 0114+00 s=0 e=2 z=0  None .text      CARDGetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ extern "C" asm void CARDGetStatus() {
 #pragma pop
 
 
-/* 80358F9C-80359110 0174+00 r=1 e=0 z=0  None .text      CARDSetStatusAsync                                           */
+/* 80358F9C-80359110 0174+00 s=1 e=0 z=0  None .text      CARDSetStatusAsync                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ extern "C" asm static void CARDSetStatusAsync() {
 #pragma pop
 
 
-/* 80359110-80359158 0048+00 r=1 e=1 z=0  None .text      CARDSetStatus                                                */
+/* 80359110-80359158 0048+00 s=0 e=1 z=0  None .text      CARDSetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

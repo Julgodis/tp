@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct dStage_FileList2_dt_c {
 };
 
-struct dStage_FileList2_dt_c {
+struct Vec {
 };
 
 struct dMapInfo_n {
@@ -355,7 +355,7 @@ extern "C" extern u8 struct_80450D64[4];
 // Declarations:
 // 
 
-/* 8003ECA0-8003ECD8 0038+00 r=3 e=3 z=0  None .text      chkGetCompass__10dMapInfo_nFv                                */
+/* 8003ECA0-8003ECD8 0038+00 s=0 e=3 z=0  None .text      chkGetCompass__10dMapInfo_nFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +366,7 @@ asm void dMapInfo_n::chkGetCompass() {
 #pragma pop
 
 
-/* 8003ECD8-8003ED10 0038+00 r=4 e=4 z=0  None .text      chkGetMap__10dMapInfo_nFv                                    */
+/* 8003ECD8-8003ED10 0038+00 s=0 e=4 z=0  None .text      chkGetMap__10dMapInfo_nFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,7 +377,7 @@ asm void dMapInfo_n::chkGetMap() {
 #pragma pop
 
 
-/* 8003ED10-8003ED60 0050+00 r=9 e=7 z=0  None .text      isVisitedRoom__10dMapInfo_nFi                                */
+/* 8003ED10-8003ED60 0050+00 s=2 e=7 z=0  None .text      isVisitedRoom__10dMapInfo_nFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,7 +388,7 @@ asm void dMapInfo_n::isVisitedRoom(int param_0) {
 #pragma pop
 
 
-/* 8003ED60-8003EDC0 0060+00 r=3 e=2 z=0  None .text      correctionOriginPos__10dMapInfo_nFScP3Vec                    */
+/* 8003ED60-8003EDC0 0060+00 s=1 e=2 z=0  None .text      correctionOriginPos__10dMapInfo_nFScP3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,7 +399,7 @@ asm void dMapInfo_n::correctionOriginPos(s8 param_0, Vec* param_1) {
 #pragma pop
 
 
-/* 8003EDC0-8003EDEC 002C+00 r=3 e=0 z=0  None .text      offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec      */
+/* 8003EDC0-8003EDEC 002C+00 s=3 e=0 z=0  None .text      offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +410,7 @@ asm void dMapInfo_n::offsetPlus(dStage_FileList2_dt_c const* param_0, Vec* param
 #pragma pop
 
 
-/* 8003EDEC-8003EE5C 0070+00 r=3 e=0 z=0  None .text      rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec        */
+/* 8003EDEC-8003EE5C 0070+00 s=3 e=0 z=0  None .text      rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,12 +422,12 @@ asm void dMapInfo_n::rotAngle(dStage_FileList2_dt_c const* param_0, Vec* param_1
 
 
 /* ############################################################################################## */
-/* 80451E28-80451E2C 0004+00 r=6 e=0 z=0  None .sdata2    @3796                                                        */
+/* 80451E28-80451E2C 0004+00 s=6 e=0 z=0  None .sdata2    @3796                                                        */
 SECTION_SDATA2 static u8 d_map_d_map_path_dmap__lit_3796[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8003EE5C-8003EF20 00C4+00 r=7 e=6 z=0  None .text      getMapPlayerPos__10dMapInfo_nFv                              */
+/* 8003EE5C-8003EF20 00C4+00 s=1 e=6 z=0  None .text      getMapPlayerPos__10dMapInfo_nFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -438,7 +438,7 @@ asm void dMapInfo_n::getMapPlayerPos() {
 #pragma pop
 
 
-/* 8003EF20-8003EF70 0050+00 r=2 e=1 z=0  None .text      getMapPlayerAngleY__10dMapInfo_nFv                           */
+/* 8003EF20-8003EF70 0050+00 s=1 e=1 z=0  None .text      getMapPlayerAngleY__10dMapInfo_nFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -449,7 +449,7 @@ asm void dMapInfo_n::getMapPlayerAngleY() {
 #pragma pop
 
 
-/* 8003EF70-8003F02C 00BC+00 r=2 e=0 z=0  None .text      getConstRestartIconPointer__10dMapInfo_nFv                   */
+/* 8003EF70-8003F02C 00BC+00 s=2 e=0 z=0  None .text      getConstRestartIconPointer__10dMapInfo_nFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +460,7 @@ asm void dMapInfo_n::getConstRestartIconPointer() {
 #pragma pop
 
 
-/* 8003F02C-8003F0F8 00CC+00 r=3 e=2 z=0  None .text      getMapRestartPos__10dMapInfo_nFv                             */
+/* 8003F02C-8003F0F8 00CC+00 s=1 e=2 z=0  None .text      getMapRestartPos__10dMapInfo_nFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,7 +471,7 @@ asm void dMapInfo_n::getMapRestartPos() {
 #pragma pop
 
 
-/* 8003F0F8-8003F19C 00A4+00 r=2 e=1 z=0  None .text      getMapRestartAngleY__10dMapInfo_nFv                          */
+/* 8003F0F8-8003F19C 00A4+00 s=1 e=1 z=0  None .text      getMapRestartAngleY__10dMapInfo_nFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,10 +483,10 @@ asm void dMapInfo_n::getMapRestartAngleY() {
 
 
 /* ############################################################################################## */
-/* 80451E2C-80451E30 0004+00 r=4 e=0 z=0  None .sdata2    @3887                                                        */
+/* 80451E2C-80451E30 0004+00 s=4 e=0 z=0  None .sdata2    @3887                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_3887 = 0.5f;
 
-/* 8003F19C-8003F1F4 0058+00 r=1 e=1 z=0  None .text      getRoomCenter__10dMapInfo_nFiPfPf                            */
+/* 8003F19C-8003F1F4 0058+00 s=0 e=1 z=0  None .text      getRoomCenter__10dMapInfo_nFiPfPf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +497,7 @@ asm void dMapInfo_n::getRoomCenter(int param_0, f32* param_1, f32* param_2) {
 #pragma pop
 
 
-/* 8003F1F4-8003F24C 0058+00 r=3 e=2 z=0  None .text      getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf                      */
+/* 8003F1F4-8003F24C 0058+00 s=1 e=2 z=0  None .text      getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -509,10 +509,10 @@ asm void dMapInfo_n::getRoomMinMaxXZ(int param_0, f32* param_1, f32* param_2, f3
 
 
 /* ############################################################################################## */
-/* 80451E30-80451E38 0008+00 r=1 e=0 z=0  None .sdata2    @3957                                                        */
+/* 80451E30-80451E38 0008+00 s=1 e=0 z=0  None .sdata2    @3957                                                        */
 SECTION_SDATA2 static f64 d_map_d_map_path_dmap__lit_3957 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8003F24C-8003F40C 01C0+00 r=2 e=0 z=0  None .text      getFloorParameter__10dMapInfo_nFfPScPfPfPfPf                 */
+/* 8003F24C-8003F40C 01C0+00 s=2 e=0 z=0  None .text      getFloorParameter__10dMapInfo_nFfPScPfPfPfPf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,16 +524,16 @@ asm void dMapInfo_n::getFloorParameter(f32 param_0, s8* param_1, f32* param_2, f
 
 
 /* ############################################################################################## */
-/* 80450E58-80450E5C 0004+00 r=7 e=3 z=0  None .sbss      None                                                         */
+/* 80450E58-80450E5C 0004+00 s=4 e=3 z=0  None .sbss      None                                                         */
 u8 data_80450E58[4];
 
-/* 80450E5C-80450E60 0004+00 r=4 e=0 z=0  None .sbss      mNowStayRoomNo__10dMapInfo_c                                 */
+/* 80450E5C-80450E60 0004+00 s=4 e=0 z=0  None .sbss      mNowStayRoomNo__10dMapInfo_c                                 */
 static u8 mNowStayRoomNo__10dMapInfo_c[4];
 
-/* 80450E60-80450E64 0004+00 r=7 e=3 z=0  None .sbss      None                                                         */
+/* 80450E60-80450E64 0004+00 s=4 e=3 z=0  None .sbss      None                                                         */
 u8 data_80450E60[4];
 
-/* 8003F40C-8003F570 0164+00 r=3 e=1 z=0  None .text      calcFloorNo__10dMapInfo_cFfbi                                */
+/* 8003F40C-8003F570 0164+00 s=2 e=1 z=0  None .text      calcFloorNo__10dMapInfo_cFfbi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +544,7 @@ asm void dMapInfo_c::calcFloorNo(f32 param_0, bool param_1, int param_2) {
 #pragma pop
 
 
-/* 8003F570-8003F6C8 0158+00 r=2 e=1 z=0  None .text      calcNowStayFloorNo__10dMapInfo_cFfb                          */
+/* 8003F570-8003F6C8 0158+00 s=1 e=1 z=0  None .text      calcNowStayFloorNo__10dMapInfo_cFfb                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -555,7 +555,7 @@ asm void dMapInfo_c::calcNowStayFloorNo(f32 param_0, bool param_1) {
 #pragma pop
 
 
-/* 8003F6C8-8003F6FC 0034+00 r=1 e=1 z=0  None .text      move__10dMapInfo_cFif                                        */
+/* 8003F6C8-8003F6FC 0034+00 s=0 e=1 z=0  None .text      move__10dMapInfo_cFif                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,7 +566,7 @@ asm void dMapInfo_c::move(int param_0, f32 param_1) {
 #pragma pop
 
 
-/* 8003F6FC-8003F714 0018+00 r=2 e=0 z=0  None .text      init__10dMapInfo_cFv                                         */
+/* 8003F6FC-8003F714 0018+00 s=2 e=0 z=0  None .text      init__10dMapInfo_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -577,7 +577,7 @@ asm void dMapInfo_c::init() {
 #pragma pop
 
 
-/* 8003F714-8003F734 0020+00 r=1 e=0 z=0  None .text      reset__10dMapInfo_cFv                                        */
+/* 8003F714-8003F734 0020+00 s=1 e=0 z=0  None .text      reset__10dMapInfo_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,7 +588,7 @@ asm void dMapInfo_c::reset() {
 #pragma pop
 
 
-/* 8003F734-8003F754 0020+00 r=1 e=0 z=0  None .text      create__10dMapInfo_cFv                                       */
+/* 8003F734-8003F754 0020+00 s=1 e=0 z=0  None .text      create__10dMapInfo_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,7 +599,7 @@ asm void dMapInfo_c::create() {
 #pragma pop
 
 
-/* 8003F754-8003F758 0004+00 r=1 e=0 z=0  None .text      remove__10dMapInfo_cFv                                       */
+/* 8003F754-8003F758 0004+00 s=1 e=0 z=0  None .text      remove__10dMapInfo_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,37 +611,37 @@ asm void dMapInfo_c::remove() {
 
 
 /* ############################################################################################## */
-/* 80450E64-80450E68 0004+00 r=6 e=1 z=0  None .sbss      mLayerList__8dMpath_c                                        */
+/* 80450E64-80450E68 0004+00 s=5 e=1 z=0  None .sbss      mLayerList__8dMpath_c                                        */
 u8 mLayerList__8dMpath_c[4];
 
-/* 80450E68-80450E6C 0004+00 r=4 e=1 z=0  None .sbss      mMinX__8dMpath_c                                             */
+/* 80450E68-80450E6C 0004+00 s=3 e=1 z=0  None .sbss      mMinX__8dMpath_c                                             */
 u8 mMinX__8dMpath_c[4];
 
-/* 80450E6C-80450E70 0004+00 r=4 e=1 z=0  None .sbss      mMaxX__8dMpath_c                                             */
+/* 80450E6C-80450E70 0004+00 s=3 e=1 z=0  None .sbss      mMaxX__8dMpath_c                                             */
 u8 mMaxX__8dMpath_c[4];
 
-/* 80450E70-80450E74 0004+00 r=5 e=2 z=0  None .sbss      mMinZ__8dMpath_c                                             */
+/* 80450E70-80450E74 0004+00 s=3 e=2 z=0  None .sbss      mMinZ__8dMpath_c                                             */
 u8 mMinZ__8dMpath_c[4];
 
-/* 80450E74-80450E78 0004+00 r=4 e=1 z=0  None .sbss      mMaxZ__8dMpath_c                                             */
+/* 80450E74-80450E78 0004+00 s=3 e=1 z=0  None .sbss      mMaxZ__8dMpath_c                                             */
 u8 mMaxZ__8dMpath_c[4];
 
-/* 80450E78-80450E7C 0004+00 r=3 e=2 z=0  None .sbss      mAllCenterX__8dMpath_c                                       */
+/* 80450E78-80450E7C 0004+00 s=1 e=2 z=0  None .sbss      mAllCenterX__8dMpath_c                                       */
 f32 mAllCenterX__8dMpath_c;
 
-/* 80450E7C-80450E80 0004+00 r=3 e=2 z=0  None .sbss      mAllCenterZ__8dMpath_c                                       */
+/* 80450E7C-80450E80 0004+00 s=1 e=2 z=0  None .sbss      mAllCenterZ__8dMpath_c                                       */
 f32 mAllCenterZ__8dMpath_c;
 
-/* 80450E80-80450E84 0004+00 r=5 e=4 z=0  None .sbss      mAllSizeX__8dMpath_c                                         */
+/* 80450E80-80450E84 0004+00 s=1 e=4 z=0  None .sbss      mAllSizeX__8dMpath_c                                         */
 f32 mAllSizeX__8dMpath_c;
 
-/* 80450E84-80450E88 0004+00 r=5 e=4 z=0  None .sbss      mAllSizeZ__8dMpath_c                                         */
+/* 80450E84-80450E88 0004+00 s=1 e=4 z=0  None .sbss      mAllSizeZ__8dMpath_c                                         */
 f32 mAllSizeZ__8dMpath_c;
 
-/* 80450E88-80450E90 0008+00 r=4 e=0 z=0  None .sbss      None                                                         */
+/* 80450E88-80450E90 0008+00 s=4 e=0 z=0  None .sbss      None                                                         */
 static u8 data_80450E88[8];
 
-/* 8003F758-8003F760 0008+00 r=3 e=1 z=0  None .text      isExistMapPathData__8dMpath_cFv                              */
+/* 8003F758-8003F760 0008+00 s=2 e=1 z=0  None .text      isExistMapPathData__8dMpath_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -653,10 +653,10 @@ asm void dMpath_c::isExistMapPathData() {
 
 
 /* ############################################################################################## */
-/* 80450630-80450634 0004+00 r=3 e=1 z=2  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
+/* 80450630-80450634 0004+00 s=0 e=1 z=0  None .sdata     mNextRoomNo__10dMapInfo_c                                    */
 SECTION_SDATA u32 mNextRoomNo__10dMapInfo_c = 0xFFFFFFFF;
 
-/* 80450634-80450638 0004+00 r=4 e=0 z=0  None .sdata     None                                                         */
+/* 80450634-80450638 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_80450634[4] = {
 	/* 80450634 0001 data_80450634 None */
 	0x7F,
@@ -666,7 +666,7 @@ SECTION_SDATA static u8 struct_80450634[4] = {
 	0x01, 0x00,
 };
 
-/* 8003F760-8003F7E8 0088+00 r=1 e=1 z=0  None .text      getTopBottomFloorNo__8dMpath_cFPScPSc                        */
+/* 8003F760-8003F7E8 0088+00 s=0 e=1 z=0  None .text      getTopBottomFloorNo__8dMpath_cFPScPSc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +677,7 @@ asm void dMpath_c::getTopBottomFloorNo(s8* param_0, s8* param_1) {
 #pragma pop
 
 
-/* 8003F7E8-8003F810 0028+00 r=1 e=1 z=0  None .text      createWork__8dMpath_cFv                                      */
+/* 8003F7E8-8003F810 0028+00 s=0 e=1 z=0  None .text      createWork__8dMpath_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,7 +688,7 @@ asm void dMpath_c::createWork() {
 #pragma pop
 
 
-/* 8003F810-8003FA40 0230+00 r=2 e=1 z=0  None .text      setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc     */
+/* 8003F810-8003FA40 0230+00 s=1 e=1 z=0  None .text      setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -699,7 +699,7 @@ asm void dMpath_c::setPointer(dDrawPath_c::room_class* param_0, s8* param_1, s8*
 #pragma pop
 
 
-/* 8003FA40-8003FB70 0130+00 r=2 e=2 z=0  None .text      setPointer__8dMpath_cFScPvi                                  */
+/* 8003FA40-8003FB70 0130+00 s=0 e=2 z=0  None .text      setPointer__8dMpath_cFScPvi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,7 +710,7 @@ asm void dMpath_c::setPointer(s8 param_0, void* param_1, int param_2) {
 #pragma pop
 
 
-/* 8003FB70-8003FBD0 0060+00 r=1 e=1 z=0  None .text      create__8dMpath_cFv                                          */
+/* 8003FB70-8003FBD0 0060+00 s=0 e=1 z=0  None .text      create__8dMpath_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,7 +721,7 @@ asm void dMpath_c::create() {
 #pragma pop
 
 
-/* 8003FBD0-8003FC70 00A0+00 r=2 e=0 z=0  None .text      reset__8dMpath_cFv                                           */
+/* 8003FBD0-8003FC70 00A0+00 s=2 e=0 z=0  None .text      reset__8dMpath_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -732,7 +732,7 @@ asm void dMpath_c::reset() {
 #pragma pop
 
 
-/* 8003FC70-8003FCA4 0034+00 r=1 e=1 z=0  None .text      remove__8dMpath_cFv                                          */
+/* 8003FC70-8003FCA4 0034+00 s=0 e=1 z=0  None .text      remove__8dMpath_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -743,7 +743,7 @@ asm void dMpath_c::remove() {
 #pragma pop
 
 
-/* 8003FCA4-8003FCC8 0024+00 r=2 e=0 z=0  None .text      calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi    */
+/* 8003FCA4-8003FCC8 0024+00 s=2 e=0 z=0  None .text      calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -755,14 +755,14 @@ asm void renderingDAmap_c::calcFloorNoForObjectByMapPathRend(f32 param_0, int pa
 
 
 /* ############################################################################################## */
-/* 80451E38-80451E40 0004+04 r=3 e=0 z=0  None .sdata2    @4202                                                        */
+/* 80451E38-80451E40 0004+04 s=3 e=0 z=0  None .sdata2    @4202                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4202[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8003FCC8-8003FD08 0040+00 r=2 e=2 z=0  None .text      init__16renderingDAmap_cFPUcUsUsUsUs                         */
+/* 8003FCC8-8003FD08 0040+00 s=0 e=2 z=0  None .text      init__16renderingDAmap_cFPUcUsUsUsUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -774,10 +774,10 @@ asm void renderingDAmap_c::init(u8* param_0, u16 param_1, u16 param_2, u16 param
 
 
 /* ############################################################################################## */
-/* 80451E40-80451E48 0008+00 r=2 e=0 z=0  None .sdata2    @4211                                                        */
+/* 80451E40-80451E48 0008+00 s=2 e=0 z=0  None .sdata2    @4211                                                        */
 SECTION_SDATA2 static f64 d_map_d_map_path_dmap__lit_4211 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8003FD08-8003FD9C 0094+00 r=2 e=2 z=0  None .text      entry__16renderingDAmap_cFfffiSc                             */
+/* 8003FD08-8003FD9C 0094+00 s=0 e=2 z=0  None .text      entry__16renderingDAmap_cFfffiSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +788,7 @@ asm void renderingDAmap_c::entry(f32 param_0, f32 param_1, f32 param_2, int para
 #pragma pop
 
 
-/* 8003FD9C-8003FE18 007C+00 r=6 e=3 z=0  None .text      isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class  */
+/* 8003FD9C-8003FE18 007C+00 s=3 e=3 z=0  None .text      isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +799,7 @@ asm void renderingDAmap_c::isSwitch(dDrawPath_c::group_class const* param_0) {
 #pragma pop
 
 
-/* 8003FE18-8003FE4C 0034+00 r=5 e=2 z=0  None .text      draw__16renderingDAmap_cFv                                   */
+/* 8003FE18-8003FE4C 0034+00 s=3 e=2 z=0  None .text      draw__16renderingDAmap_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -811,12 +811,12 @@ asm void renderingDAmap_c::draw() {
 
 
 /* ############################################################################################## */
-/* 80451E48-80451E4C 0004+00 r=1 e=0 z=0  None .sdata2    l_mapBaseColor$4239                                          */
+/* 80451E48-80451E4C 0004+00 s=1 e=0 z=0  None .sdata2    l_mapBaseColor$4239                                          */
 SECTION_SDATA2 static u8 data_80451E48[4] = {
 	0x04, 0x00, 0x00, 0x00,
 };
 
-/* 8003FE4C-8003FE54 0008+00 r=6 e=3 z=0  None .text      getBackColor__16renderingDAmap_cCFv                          */
+/* 8003FE4C-8003FE54 0008+00 s=3 e=3 z=0  None .text      getBackColor__16renderingDAmap_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -827,7 +827,7 @@ asm void renderingDAmap_c::getBackColor() const {
 #pragma pop
 
 
-/* 8003FE54-8003FE6C 0018+00 r=6 e=3 z=0  None .text      isRenderingFloor__16renderingDAmap_cFi                       */
+/* 8003FE54-8003FE6C 0018+00 s=3 e=3 z=0  None .text      isRenderingFloor__16renderingDAmap_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -838,7 +838,7 @@ asm void renderingDAmap_c::isRenderingFloor(int param_0) {
 #pragma pop
 
 
-/* 8003FE6C-8003FE70 0004+00 r=2 e=0 z=0  None .text      setSingleRoomSetting__16renderingDAmap_cFv                   */
+/* 8003FE6C-8003FE70 0004+00 s=2 e=0 z=0  None .text      setSingleRoomSetting__16renderingDAmap_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -849,7 +849,7 @@ asm void renderingDAmap_c::setSingleRoomSetting() {
 #pragma pop
 
 
-/* 8003FE70-8003FF14 00A4+00 r=6 e=3 z=0  None .text      isDrawRoom__16renderingDAmap_cCFii                           */
+/* 8003FE70-8003FF14 00A4+00 s=3 e=3 z=0  None .text      isDrawRoom__16renderingDAmap_cCFii                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -861,16 +861,16 @@ asm void renderingDAmap_c::isDrawRoom(int param_0, int param_1) const {
 
 
 /* ############################################################################################## */
-/* 80451E4C-80451E50 0004+00 r=1 e=0 z=0  None .sdata2    @4264                                                        */
+/* 80451E4C-80451E50 0004+00 s=1 e=0 z=0  None .sdata2    @4264                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4264 = -5000.0f;
 
-/* 80451E50-80451E54 0004+00 r=1 e=0 z=0  None .sdata2    @4265                                                        */
+/* 80451E50-80451E54 0004+00 s=1 e=0 z=0  None .sdata2    @4265                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4265 = 5000.0f;
 
-/* 80451E54-80451E58 0004+00 r=1 e=0 z=0  None .sdata2    @4266                                                        */
+/* 80451E54-80451E58 0004+00 s=1 e=0 z=0  None .sdata2    @4266                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4266 = -1.0f;
 
-/* 8003FF14-8003FFC4 00B0+00 r=6 e=3 z=0  None .text      preDrawPath__16renderingDAmap_cFv                            */
+/* 8003FF14-8003FFC4 00B0+00 s=3 e=3 z=0  None .text      preDrawPath__16renderingDAmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +881,7 @@ asm void renderingDAmap_c::preDrawPath() {
 #pragma pop
 
 
-/* 8003FFC4-8003FFEC 0028+00 r=6 e=3 z=0  None .text      postDrawPath__16renderingDAmap_cFv                           */
+/* 8003FFC4-8003FFEC 0028+00 s=3 e=3 z=0  None .text      postDrawPath__16renderingDAmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -892,7 +892,7 @@ asm void renderingDAmap_c::postDrawPath() {
 #pragma pop
 
 
-/* 8003FFEC-8003FFF4 0008+00 r=6 e=3 z=0  None .text      getRoomNoSingle__16renderingDAmap_cFv                        */
+/* 8003FFEC-8003FFF4 0008+00 s=3 e=3 z=0  None .text      getRoomNoSingle__16renderingDAmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -903,7 +903,7 @@ asm void renderingDAmap_c::getRoomNoSingle() {
 #pragma pop
 
 
-/* 8003FFF4-80040094 00A0+00 r=2 e=0 z=0  None .text      getFirstDrawRoomNo__16renderingDAmap_cFv                     */
+/* 8003FFF4-80040094 00A0+00 s=2 e=0 z=0  None .text      getFirstDrawRoomNo__16renderingDAmap_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -914,7 +914,7 @@ asm void renderingDAmap_c::getFirstDrawRoomNo() {
 #pragma pop
 
 
-/* 80040094-80040134 00A0+00 r=2 e=0 z=0  None .text      getNextDrawRoomNo__16renderingDAmap_cFi                      */
+/* 80040094-80040134 00A0+00 s=2 e=0 z=0  None .text      getNextDrawRoomNo__16renderingDAmap_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -925,7 +925,7 @@ asm void renderingDAmap_c::getNextDrawRoomNo(int param_0) {
 #pragma pop
 
 
-/* 80040134-800401E8 00B4+00 r=6 e=3 z=0  None .text      getFirstRoomPointer__16renderingDAmap_cFv                    */
+/* 80040134-800401E8 00B4+00 s=3 e=3 z=0  None .text      getFirstRoomPointer__16renderingDAmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -936,7 +936,7 @@ asm void renderingDAmap_c::getFirstRoomPointer() {
 #pragma pop
 
 
-/* 800401E8-800402C0 00D8+00 r=6 e=3 z=0  None .text      getNextRoomPointer__16renderingDAmap_cFv                     */
+/* 800401E8-800402C0 00D8+00 s=3 e=3 z=0  None .text      getNextRoomPointer__16renderingDAmap_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,7 +947,7 @@ asm void renderingDAmap_c::getNextRoomPointer() {
 #pragma pop
 
 
-/* 800402C0-800402E0 0020+00 r=6 e=3 z=0  None .text      isDrawPath__16renderingDAmap_cFv                             */
+/* 800402C0-800402E0 0020+00 s=3 e=3 z=0  None .text      isDrawPath__16renderingDAmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -958,7 +958,7 @@ asm void renderingDAmap_c::isDrawPath() {
 #pragma pop
 
 
-/* 800402E0-800402E8 0008+00 r=6 e=3 z=0  None .text      getFirstDrawLayerNo__16renderingDAmap_cFv                    */
+/* 800402E0-800402E8 0008+00 s=3 e=3 z=0  None .text      getFirstDrawLayerNo__16renderingDAmap_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -969,7 +969,7 @@ asm void renderingDAmap_c::getFirstDrawLayerNo() {
 #pragma pop
 
 
-/* 800402E8-800402FC 0014+00 r=6 e=3 z=0  None .text      getNextDrawLayerNo__16renderingDAmap_cFi                     */
+/* 800402E8-800402FC 0014+00 s=3 e=3 z=0  None .text      getNextDrawLayerNo__16renderingDAmap_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -980,7 +980,7 @@ asm void renderingDAmap_c::getNextDrawLayerNo(int param_0) {
 #pragma pop
 
 
-/* 800402FC-80040518 021C+00 r=2 e=1 z=0  None .text      afterDrawPath__28renderingPlusDoorAndCursor_cFv              */
+/* 800402FC-80040518 021C+00 s=1 e=1 z=0  None .text      afterDrawPath__28renderingPlusDoorAndCursor_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -991,7 +991,7 @@ asm void renderingPlusDoorAndCursor_c::afterDrawPath() {
 #pragma pop
 
 
-/* 80040518-80040574 005C+00 r=3 e=1 z=0  None .text      afterDrawPath__19renderingPlusDoor_cFv                       */
+/* 80040518-80040574 005C+00 s=2 e=1 z=0  None .text      afterDrawPath__19renderingPlusDoor_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1002,7 +1002,7 @@ asm void renderingPlusDoor_c::afterDrawPath() {
 #pragma pop
 
 
-/* 80040574-800405B8 0044+00 r=1 e=0 z=0  None .text      drawDoor1__19renderingPlusDoor_cFv                           */
+/* 80040574-800405B8 0044+00 s=1 e=0 z=0  None .text      drawDoor1__19renderingPlusDoor_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1013,7 +1013,7 @@ asm void renderingPlusDoor_c::drawDoor1() {
 #pragma pop
 
 
-/* 800405B8-800405FC 0044+00 r=1 e=0 z=0  None .text      drawDoor2__19renderingPlusDoor_cFv                           */
+/* 800405B8-800405FC 0044+00 s=1 e=0 z=0  None .text      drawDoor2__19renderingPlusDoor_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1025,24 +1025,24 @@ asm void renderingPlusDoor_c::drawDoor2() {
 
 
 /* ############################################################################################## */
-/* 80451E58-80451E5C 0004+00 r=1 e=0 z=0  None .sdata2    l_doorWhite                                                  */
+/* 80451E58-80451E5C 0004+00 s=1 e=0 z=0  None .sdata2    l_doorWhite                                                  */
 SECTION_SDATA2 static u32 l_doorWhite = 0x64000000;
 
-/* 80451E5C-80451E60 0004+00 r=1 e=0 z=0  None .sdata2    l_doorWhiteNoStay                                            */
+/* 80451E5C-80451E60 0004+00 s=1 e=0 z=0  None .sdata2    l_doorWhiteNoStay                                            */
 SECTION_SDATA2 static u32 l_doorWhiteNoStay = 0x6C000000;
 
-/* 80451E60-80451E64 0004+00 r=1 e=0 z=0  None .sdata2    l_doorWhite2                                                 */
+/* 80451E60-80451E64 0004+00 s=1 e=0 z=0  None .sdata2    l_doorWhite2                                                 */
 SECTION_SDATA2 static u32 l_doorWhite2 = 0x64000000;
 
-/* 80451E64-80451E68 0004+00 r=1 e=0 z=0  None .sdata2    l_doorWhiteNoStay2                                           */
+/* 80451E64-80451E68 0004+00 s=1 e=0 z=0  None .sdata2    l_doorWhiteNoStay2                                           */
 SECTION_SDATA2 static u32 l_doorWhiteNoStay2 = 0x6C000000;
 
-/* 80451E68-80451E70 0008+00 r=1 e=0 z=0  None .sdata2    l_tex0$4406                                                  */
+/* 80451E68-80451E70 0008+00 s=1 e=0 z=0  None .sdata2    l_tex0$4406                                                  */
 SECTION_SDATA2 static u8 data_80451E68[8] = {
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
 };
 
-/* 800405FC-80040710 0114+00 r=2 e=0 z=0  None .text      drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib */
+/* 800405FC-80040710 0114+00 s=2 e=0 z=0  None .text      drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1053,7 +1053,7 @@ asm void renderingPlusDoor_c::drawDoorCommon(stage_tgsc_data_class const* param_
 #pragma pop
 
 
-/* 80040710-80040838 0128+00 r=1 e=0 z=0  None .text      checkDispDoorS__19renderingPlusDoor_cFiif                    */
+/* 80040710-80040838 0128+00 s=1 e=0 z=0  None .text      checkDispDoorS__19renderingPlusDoor_cFiif                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1065,17 +1065,17 @@ asm void renderingPlusDoor_c::checkDispDoorS(int param_0, int param_1, f32 param
 
 
 /* ############################################################################################## */
-/* 80379C58-80379C88 0030+00 r=1 e=0 z=0  None .rodata    l_100x100BoxVertexList                                       */
+/* 80379C58-80379C88 0030+00 s=1 e=0 z=0  None .rodata    l_100x100BoxVertexList                                       */
 SECTION_RODATA static u8 const l_100x100BoxVertexList[48] = {
 	0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451E70-80451E74 0004+00 r=1 e=0 z=0  None .sdata2    @4484                                                        */
+/* 80451E70-80451E74 0004+00 s=1 e=0 z=0  None .sdata2    @4484                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4484 = 6.0f;
 
-/* 80040838-800409B4 017C+00 r=1 e=0 z=0  None .text      drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib */
+/* 80040838-800409B4 017C+00 s=1 e=0 z=0  None .text      drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1086,7 +1086,7 @@ asm void renderingPlusDoor_c::drawNormalDoorS(stage_tgsc_data_class const* param
 #pragma pop
 
 
-/* 800409B4-800409E0 002C+00 r=5 e=2 z=0  None .text      isDrawRoomIcon__16renderingDAmap_cCFii                       */
+/* 800409B4-800409E0 002C+00 s=3 e=2 z=0  None .text      isDrawRoomIcon__16renderingDAmap_cCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1097,7 +1097,7 @@ asm void renderingDAmap_c::isDrawRoomIcon(int param_0, int param_1) const {
 #pragma pop
 
 
-/* 800409E0-80040A94 00B4+00 r=6 e=3 z=0  None .text      isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec */
+/* 800409E0-80040A94 00B4+00 s=3 e=3 z=0  None .text      isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1108,7 +1108,7 @@ asm void renderingDAmap_c::isDrawIconSingle(dTres_c::data_s const* param_0, int 
 #pragma pop
 
 
-/* 80040A94-80040AB8 0024+00 r=3 e=2 z=0  None .text      getFirstData__28renderingPlusDoorAndCursor_cFUc              */
+/* 80040A94-80040AB8 0024+00 s=1 e=2 z=0  None .text      getFirstData__28renderingPlusDoorAndCursor_cFUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1119,7 +1119,7 @@ asm void renderingPlusDoorAndCursor_c::getFirstData(u8 param_0) {
 #pragma pop
 
 
-/* 80040AB8-80040ADC 0024+00 r=3 e=2 z=0  None .text      getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c */
+/* 80040AB8-80040ADC 0024+00 s=1 e=2 z=0  None .text      getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1130,7 +1130,7 @@ asm void renderingPlusDoorAndCursor_c::getNextData(dTres_c::typeGroupData_c* par
 #pragma pop
 
 
-/* 80040ADC-80040AE4 0008+00 r=3 e=2 z=0  None .text      getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c */
+/* 80040ADC-80040AE4 0008+00 s=1 e=2 z=0  None .text      getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1141,7 +1141,7 @@ asm void renderingPlusDoorAndCursor_c::getIconPosition(dTres_c::typeGroupData_c*
 #pragma pop
 
 
-/* 80040AE4-80040B00 001C+00 r=5 e=2 z=0  None .text      getIconGroupNumber__16renderingDAmap_cCFUc                   */
+/* 80040AE4-80040B00 001C+00 s=3 e=2 z=0  None .text      getIconGroupNumber__16renderingDAmap_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1153,19 +1153,19 @@ asm void renderingDAmap_c::getIconGroupNumber(u8 param_0) const {
 
 
 /* ############################################################################################## */
-/* 80451E74-80451E78 0004+00 r=1 e=0 z=0  None .sdata2    l_entranceStartColor                                         */
+/* 80451E74-80451E78 0004+00 s=1 e=0 z=0  None .sdata2    l_entranceStartColor                                         */
 extern "C" u32 l_entranceStartColor;
 
-/* 80451E78-80451E7C 0004+00 r=1 e=0 z=0  None .sdata2    l_entranceLv8StartColor                                      */
+/* 80451E78-80451E7C 0004+00 s=1 e=0 z=0  None .sdata2    l_entranceLv8StartColor                                      */
 extern "C" u32 l_entranceLv8StartColor;
 
-/* 80451E7C-80451E80 0004+00 r=3 e=0 z=0  None .sdata2    l_treasureStartColor                                         */
+/* 80451E7C-80451E80 0004+00 s=3 e=0 z=0  None .sdata2    l_treasureStartColor                                         */
 extern "C" u32 l_treasureStartColor;
 
-/* 80451E8C-80451E90 0004+00 r=1 e=0 z=0  None .sdata2    l_destinationStartColor                                      */
+/* 80451E8C-80451E90 0004+00 s=1 e=0 z=0  None .sdata2    l_destinationStartColor                                      */
 extern "C" u32 l_destinationStartColor;
 
-/* 80379C88-80379CB8 0030+00 r=1 e=0 z=0  None .rodata    l_treasureDispList$4524                                      */
+/* 80379C88-80379CB8 0030+00 s=1 e=0 z=0  None .rodata    l_treasureDispList$4524                                      */
 SECTION_RODATA static void* const data_80379C88[12] = {
 	/* 0    */ (void*)0x01000000,
 	/* 1    */ (void*)0x00000002,
@@ -1181,50 +1181,50 @@ SECTION_RODATA static void* const data_80379C88[12] = {
 	/* 11   */ (void*)&l_destinationStartColor,
 };
 
-/* 80451E74-80451E78 0004+00 r=1 e=0 z=0  None .sdata2    l_entranceStartColor                                         */
+/* 80451E74-80451E78 0004+00 s=1 e=0 z=0  None .sdata2    l_entranceStartColor                                         */
 SECTION_SDATA2 static u32 l_entranceStartColor = 0x94000000;
 
-/* 80451E78-80451E7C 0004+00 r=1 e=0 z=0  None .sdata2    l_entranceLv8StartColor                                      */
+/* 80451E78-80451E7C 0004+00 s=1 e=0 z=0  None .sdata2    l_entranceLv8StartColor                                      */
 SECTION_SDATA2 static u32 l_entranceLv8StartColor = 0x9C000000;
 
-/* 80451E7C-80451E80 0004+00 r=3 e=0 z=0  None .sdata2    l_treasureStartColor                                         */
+/* 80451E7C-80451E80 0004+00 s=3 e=0 z=0  None .sdata2    l_treasureStartColor                                         */
 SECTION_SDATA2 static u32 l_treasureStartColor = 0x7C000000;
 
-/* 80451E80-80451E84 0004+00 r=1 e=0 z=0  None .sdata2    l_smallKeyStartColor                                         */
+/* 80451E80-80451E84 0004+00 s=1 e=0 z=0  None .sdata2    l_smallKeyStartColor                                         */
 SECTION_SDATA2 static u32 l_smallKeyStartColor = 0x84000000;
 
-/* 80451E84-80451E88 0004+00 r=1 e=0 z=0  None .sdata2    l_bossStartColor                                             */
+/* 80451E84-80451E88 0004+00 s=1 e=0 z=0  None .sdata2    l_bossStartColor                                             */
 SECTION_SDATA2 static u32 l_bossStartColor = 0x88000000;
 
-/* 80451E88-80451E8C 0004+00 r=1 e=0 z=0  None .sdata2    l_npc0StartColor                                             */
+/* 80451E88-80451E8C 0004+00 s=1 e=0 z=0  None .sdata2    l_npc0StartColor                                             */
 SECTION_SDATA2 static u32 l_npc0StartColor = 0x8C000000;
 
-/* 80451E8C-80451E90 0004+00 r=1 e=0 z=0  None .sdata2    l_destinationStartColor                                      */
+/* 80451E8C-80451E90 0004+00 s=1 e=0 z=0  None .sdata2    l_destinationStartColor                                      */
 SECTION_SDATA2 static u32 l_destinationStartColor = 0x90000000;
 
-/* 80451E90-80451E94 0004+00 r=1 e=0 z=0  None .sdata2    l_npcYkmStartColor                                           */
+/* 80451E90-80451E94 0004+00 s=1 e=0 z=0  None .sdata2    l_npcYkmStartColor                                           */
 SECTION_SDATA2 static u32 l_npcYkmStartColor = 0x8C000000;
 
-/* 80451E94-80451E98 0004+00 r=1 e=0 z=0  None .sdata2    l_npcYkwStartColor                                           */
+/* 80451E94-80451E98 0004+00 s=1 e=0 z=0  None .sdata2    l_npcYkwStartColor                                           */
 SECTION_SDATA2 static u32 l_npcYkwStartColor = 0x8C000000;
 
-/* 80451E98-80451E9C 0004+00 r=1 e=0 z=0  None .sdata2    l_tksStartColor                                              */
+/* 80451E98-80451E9C 0004+00 s=1 e=0 z=0  None .sdata2    l_tksStartColor                                              */
 SECTION_SDATA2 static u32 l_tksStartColor = 0xA4000000;
 
-/* 80451E9C-80451EA4 0008+00 r=1 e=0 z=0  None .sdata2    l_iconTex0$4523                                              */
+/* 80451E9C-80451EA4 0008+00 s=1 e=0 z=0  None .sdata2    l_iconTex0$4523                                              */
 SECTION_SDATA2 static u8 data_80451E9C[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
 
-/* 80451EA4-80451EA8 0004+00 r=1 e=0 z=0  None .sdata2    tboxNotStayColor$4542                                        */
+/* 80451EA4-80451EA8 0004+00 s=1 e=0 z=0  None .sdata2    tboxNotStayColor$4542                                        */
 SECTION_SDATA2 static u8 data_80451EA4[4] = {
 	0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80451EA8-80451EAC 0004+00 r=2 e=0 z=0  None .sdata2    @4600                                                        */
+/* 80451EA8-80451EAC 0004+00 s=2 e=0 z=0  None .sdata2    @4600                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4600 = 2.0f;
 
-/* 80040B00-80040E84 0384+00 r=1 e=0 z=0  None .text      drawTreasure__28renderingPlusDoorAndCursor_cFv               */
+/* 80040B00-80040E84 0384+00 s=1 e=0 z=0  None .text      drawTreasure__28renderingPlusDoorAndCursor_cFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1236,25 +1236,25 @@ asm void renderingPlusDoorAndCursor_c::drawTreasure() {
 
 
 /* ############################################################################################## */
-/* 80451E80-80451E84 0004+00 r=1 e=0 z=0  None .sdata2    l_smallKeyStartColor                                         */
+/* 80451E80-80451E84 0004+00 s=1 e=0 z=0  None .sdata2    l_smallKeyStartColor                                         */
 extern "C" u32 l_smallKeyStartColor;
 
-/* 80451E84-80451E88 0004+00 r=1 e=0 z=0  None .sdata2    l_bossStartColor                                             */
+/* 80451E84-80451E88 0004+00 s=1 e=0 z=0  None .sdata2    l_bossStartColor                                             */
 extern "C" u32 l_bossStartColor;
 
-/* 80451E88-80451E8C 0004+00 r=1 e=0 z=0  None .sdata2    l_npc0StartColor                                             */
+/* 80451E88-80451E8C 0004+00 s=1 e=0 z=0  None .sdata2    l_npc0StartColor                                             */
 extern "C" u32 l_npc0StartColor;
 
-/* 80451E90-80451E94 0004+00 r=1 e=0 z=0  None .sdata2    l_npcYkmStartColor                                           */
+/* 80451E90-80451E94 0004+00 s=1 e=0 z=0  None .sdata2    l_npcYkmStartColor                                           */
 extern "C" u32 l_npcYkmStartColor;
 
-/* 80451E94-80451E98 0004+00 r=1 e=0 z=0  None .sdata2    l_npcYkwStartColor                                           */
+/* 80451E94-80451E98 0004+00 s=1 e=0 z=0  None .sdata2    l_npcYkwStartColor                                           */
 extern "C" u32 l_npcYkwStartColor;
 
-/* 80451E98-80451E9C 0004+00 r=1 e=0 z=0  None .sdata2    l_tksStartColor                                              */
+/* 80451E98-80451E9C 0004+00 s=1 e=0 z=0  None .sdata2    l_tksStartColor                                              */
 extern "C" u32 l_tksStartColor;
 
-/* 80379CB8-80379D3C 0084+00 r=1 e=0 z=0  None .rodata    l_treasureDispList$4606                                      */
+/* 80379CB8-80379D3C 0084+00 s=1 e=0 z=0  None .rodata    l_treasureDispList$4606                                      */
 SECTION_RODATA static void* const data_80379CB8[33] = {
 	/* 0    */ (void*)0x10000000,
 	/* 1    */ (void*)0x00000004,
@@ -1291,17 +1291,17 @@ SECTION_RODATA static void* const data_80379CB8[33] = {
 	/* 32   */ (void*)&l_bossStartColor,
 };
 
-/* 80451EAC-80451EB4 0008+00 r=1 e=0 z=0  None .sdata2    l_iconTex0$4605                                              */
+/* 80451EAC-80451EB4 0008+00 s=1 e=0 z=0  None .sdata2    l_iconTex0$4605                                              */
 SECTION_SDATA2 static u8 data_80451EAC[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
 
-/* 80451EB4-80451EB8 0004+00 r=1 e=0 z=0  None .sdata2    tboxNotStayColor$4624                                        */
+/* 80451EB4-80451EB8 0004+00 s=1 e=0 z=0  None .sdata2    tboxNotStayColor$4624                                        */
 SECTION_SDATA2 static u8 data_80451EB4[4] = {
 	0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80040E84-80041208 0384+00 r=1 e=0 z=0  None .text      drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv    */
+/* 80040E84-80041208 0384+00 s=1 e=0 z=0  None .text      drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1313,13 +1313,13 @@ asm void renderingPlusDoorAndCursor_c::drawTreasureAfterPlayer() {
 
 
 /* ############################################################################################## */
-/* 80379D3C-80379D5C 0020+00 r=1 e=0 z=0  None .rodata    l_iconPosData$4686                                           */
+/* 80379D3C-80379D5C 0020+00 s=1 e=0 z=0  None .rodata    l_iconPosData$4686                                           */
 SECTION_RODATA static u8 const data_80379D3C[32] = {
 	0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x42, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
 
-/* 80041208-800412C0 00B8+00 r=2 e=0 z=0  None .text      drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff      */
+/* 80041208-800412C0 00B8+00 s=2 e=0 z=0  None .text      drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1331,28 +1331,28 @@ asm void renderingPlusDoorAndCursor_c::drawIconSingle(Vec const& param_0, f32 pa
 
 
 /* ############################################################################################## */
-/* 80379D5C-80379D80 0024+00 r=1 e=0 z=0  None .rodata    l_offset$4703                                                */
+/* 80379D5C-80379D80 0024+00 s=1 e=0 z=0  None .rodata    l_offset$4703                                                */
 SECTION_RODATA static u8 const data_80379D5C[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xC3, 0x70, 0x00, 0x00,
 };
 
-/* 80450638-80450640 0004+04 r=1 e=0 z=0  None .sdata     l_cursorColor$4709                                           */
+/* 80450638-80450640 0004+04 s=1 e=0 z=0  None .sdata     l_cursorColor$4709                                           */
 SECTION_SDATA static u8 data_80450638[4 + 4 /* padding */] = {
 	0x78, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451EB8-80451EC0 0004+04 r=1 e=0 z=0  None .sdata2    @4731                                                        */
+/* 80451EB8-80451EC0 0004+04 s=1 e=0 z=0  None .sdata2    @4731                                                        */
 SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4731[1 + 1 /* padding */] = {
 	640.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 800412C0-8004145C 019C+00 r=1 e=0 z=0  None .text      drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif         */
+/* 800412C0-8004145C 019C+00 s=1 e=0 z=0  None .text      drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1363,7 +1363,7 @@ asm void renderingPlusDoorAndCursor_c::drawCursor(Vec const& param_0, s16 param_
 #pragma pop
 
 
-/* 8004145C-80041460 0004+00 r=2 e=0 z=0  None .text      beforeDrawPath__19renderingPlusDoor_cFv                      */
+/* 8004145C-80041460 0004+00 s=2 e=0 z=0  None .text      beforeDrawPath__19renderingPlusDoor_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1374,7 +1374,7 @@ asm void renderingPlusDoor_c::beforeDrawPath() {
 #pragma pop
 
 
-/* 80041460-80041480 0020+00 r=1 e=1 z=0  None .text      __sinit_d_map_path_dmap_cpp                                  */
+/* 80041460-80041480 0020+00 s=0 e=1 z=0  None .text      __sinit_d_map_path_dmap_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1386,7 +1386,7 @@ extern "C" asm void __sinit_d_map_path_dmap_cpp() {
 
 
 /* ############################################################################################## */
-/* 803A7D80-803A7E24 00A4+00 r=7 e=7 z=0  None .data      __vt__19renderingPlusDoor_c                                  */
+/* 803A7D80-803A7E24 00A4+00 s=0 e=7 z=0  None .data      __vt__19renderingPlusDoor_c                                  */
 SECTION_DATA void* __vt__19renderingPlusDoor_c[41] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1431,7 +1431,7 @@ SECTION_DATA void* __vt__19renderingPlusDoor_c[41] = {
 	/* 40   */ (void*)NULL,
 };
 
-/* 803A7E24-803A7EE0 00BC+00 r=4 e=4 z=0  None .data      __vt__28renderingPlusDoorAndCursor_c                         */
+/* 803A7E24-803A7EE0 00BC+00 s=0 e=4 z=0  None .data      __vt__28renderingPlusDoorAndCursor_c                         */
 SECTION_DATA void* __vt__28renderingPlusDoorAndCursor_c[47] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,
@@ -1482,7 +1482,7 @@ SECTION_DATA void* __vt__28renderingPlusDoorAndCursor_c[47] = {
 	/* 46   */ (void*)NULL,
 };
 
-/* 803A7EE0-803A7F78 0098+00 r=8 e=8 z=0  None .data      __vt__16renderingDAmap_c                                     */
+/* 803A7EE0-803A7F78 0098+00 s=0 e=8 z=0  None .data      __vt__16renderingDAmap_c                                     */
 SECTION_DATA void* __vt__16renderingDAmap_c[38] = {
 	/* 0    */ (void*)NULL /* RTTI */,
 	/* 1    */ (void*)NULL,

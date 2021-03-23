@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_8099585C[2];
+extern u8 data_8099585C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_clerka_cpp(); // 1
 
 // 
 // Declarations:

@@ -12,14 +12,13 @@
 // 
 
 
-extern void* data_80B4969C[2];
+extern u8 data_80B4969C[8];
 
 // 
 // External References:
 // 
 
 
-extern "C" void __sinit_d_a_npc_yamis_cpp(); // 1
 
 // 
 // Declarations:

@@ -59,7 +59,7 @@ extern "C" void cReq_Create__FP18request_base_classUc(); // 1
 // Declarations:
 // 
 
-/* 8001E37C-8001E3A4 0028+00 r=1 e=0 z=0  None .text      fopOvlp_Draw__FPv                                            */
+/* 8001E37C-8001E3A4 0028+00 s=1 e=0 z=0  None .text      fopOvlp_Draw__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm static void fopOvlp_Draw(void* param_0) {
 #pragma pop
 
 
-/* 8001E3A4-8001E3CC 0028+00 r=1 e=0 z=0  None .text      fopOvlp_Execute__FPv                                         */
+/* 8001E3A4-8001E3CC 0028+00 s=1 e=0 z=0  None .text      fopOvlp_Execute__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm static void fopOvlp_Execute(void* param_0) {
 #pragma pop
 
 
-/* 8001E3CC-8001E3F4 0028+00 r=1 e=0 z=0  None .text      fopOvlp_IsDelete__FPv                                        */
+/* 8001E3CC-8001E3F4 0028+00 s=1 e=0 z=0  None .text      fopOvlp_IsDelete__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm static void fopOvlp_IsDelete(void* param_0) {
 #pragma pop
 
 
-/* 8001E3F4-8001E41C 0028+00 r=1 e=0 z=0  None .text      fopOvlp_Delete__FPv                                          */
+/* 8001E3F4-8001E41C 0028+00 s=1 e=0 z=0  None .text      fopOvlp_Delete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm static void fopOvlp_Delete(void* param_0) {
 #pragma pop
 
 
-/* 8001E41C-8001E484 0068+00 r=1 e=0 z=0  None .text      fopOvlp_Create__FPv                                          */
+/* 8001E41C-8001E484 0068+00 s=1 e=0 z=0  None .text      fopOvlp_Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm static void fopOvlp_Create(void* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A3878-803A3890 0014+04 r=10 e=10 z=0  None .data      g_fopOvlp_Method                                             */
+/* 803A3878-803A3890 0014+04 s=0 e=10 z=0  None .data      g_fopOvlp_Method                                             */
 SECTION_DATA void* g_fopOvlp_Method[5 + 1 /* padding */] = {
 	/* 0    */ (void*)fopOvlp_Create__FPv,
 	/* 1    */ (void*)fopOvlp_Delete__FPv,
