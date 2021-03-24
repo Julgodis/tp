@@ -100,7 +100,7 @@ $(function() {
 <code>#include &quot;asm/dolphin/si/SIBios/SIDisablePolling.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SIBios/SIGetResponseRaw.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SIBios/SIGetResponse.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/si/SIBios/SIBios__AlarmHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/si/SIBios/AlarmHandler.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SIBios/SITransfer.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SIBios/GetTypeCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/si/SIBios/SIGetType.s&quot;</code><br />
@@ -150,8 +150,8 @@ Functions</h2></td></tr>
 <tr class="separator:a583c8bff8dbbcdc45f528de4a4d7ecb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4bc57fc087e716e1277832401212097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ad4bc57fc087e716e1277832401212097">SIGetResponse</a> ()</td></tr>
 <tr class="separator:ad4bc57fc087e716e1277832401212097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c21ff8642c6ee1067eff54fd4f09f28"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a9c21ff8642c6ee1067eff54fd4f09f28">SIBios__AlarmHandler</a> ()</td></tr>
-<tr class="separator:a9c21ff8642c6ee1067eff54fd4f09f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a4dd6f3034ead4aca934d65ff1d220d81">AlarmHandler</a> ()</td></tr>
+<tr class="separator:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac624e4565762c15b0f01fd6db27b0a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ac624e4565762c15b0f01fd6db27b0a3f">SITransfer</a> ()</td></tr>
 <tr class="separator:ac624e4565762c15b0f01fd6db27b0a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365af7a5b7ac485f99754fc4307d8946"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a365af7a5b7ac485f99754fc4307d8946">GetTypeCallback</a> ()</td></tr>
@@ -187,24 +187,24 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a28ba154caf752fb717800b6dc3ee7fd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a28ba154caf752fb717800b6dc3ee7fd8">SIBios__lit_457</a> [12]</td></tr>
-<tr class="separator:a28ba154caf752fb717800b6dc3ee7fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af329bbea2476033514dc42b09cd17d05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#af329bbea2476033514dc42b09cd17d05">SIBios__lit_459</a> [15+1]</td></tr>
-<tr class="separator:af329bbea2476033514dc42b09cd17d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c80d81a1fc715f05ec2ef62a870625a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a4c80d81a1fc715f05ec2ef62a870625a">lit_457</a> [12]</td></tr>
+<tr class="separator:a4c80d81a1fc715f05ec2ef62a870625a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ef0ca509a1787adf76c7ebe592cac9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ae9ef0ca509a1787adf76c7ebe592cac9">lit_459</a> [15+1]</td></tr>
+<tr class="separator:ae9ef0ca509a1787adf76c7ebe592cac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e4726afe245f59e96aec6340aadfc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a73e4726afe245f59e96aec6340aadfc7">lit_460</a> [15+1]</td></tr>
 <tr class="separator:a73e4726afe245f59e96aec6340aadfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72d9d0d7d2734368b2b948a3ada9356a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a72d9d0d7d2734368b2b948a3ada9356a">lit_461</a> [13+3]</td></tr>
 <tr class="separator:a72d9d0d7d2734368b2b948a3ada9356a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55cf96a6ce8d2085649670df6306e5a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a55cf96a6ce8d2085649670df6306e5a4">SIBios__lit_462</a> [10+2]</td></tr>
-<tr class="separator:a55cf96a6ce8d2085649670df6306e5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac699919d2e96516fa48c819ced12bb68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ac699919d2e96516fa48c819ced12bb68">SIBios__lit_463</a> [16]</td></tr>
-<tr class="separator:ac699919d2e96516fa48c819ced12bb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fa74f9187d9d078b165044514433809"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a3fa74f9187d9d078b165044514433809">SIBios__lit_464</a> [20]</td></tr>
-<tr class="separator:a3fa74f9187d9d078b165044514433809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d6589455c5abb1cc89954e74f65410"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a58d6589455c5abb1cc89954e74f65410">SIBios__lit_465</a> [18+2]</td></tr>
-<tr class="separator:a58d6589455c5abb1cc89954e74f65410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7e3755892078d4f8a8f44121f1e51cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#af7e3755892078d4f8a8f44121f1e51cd">SIBios__lit_466</a> [20]</td></tr>
-<tr class="separator:af7e3755892078d4f8a8f44121f1e51cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c712d93d217d1e7c97dce69e6492ec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a2c712d93d217d1e7c97dce69e6492ec2">lit_462</a> [10+2]</td></tr>
+<tr class="separator:a2c712d93d217d1e7c97dce69e6492ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c665ead6a4644959adfba3a9e06a335"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a5c665ead6a4644959adfba3a9e06a335">lit_463</a> [16]</td></tr>
+<tr class="separator:a5c665ead6a4644959adfba3a9e06a335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfe9a312ead208c49f04889173258c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#afcfe9a312ead208c49f04889173258c0">lit_464</a> [20]</td></tr>
+<tr class="separator:afcfe9a312ead208c49f04889173258c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf14774cd7bf058082191e35c4741fdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#acf14774cd7bf058082191e35c4741fdc">lit_465</a> [18+2]</td></tr>
+<tr class="separator:acf14774cd7bf058082191e35c4741fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a6331469b4bab2dee9def0521332ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a63a6331469b4bab2dee9def0521332ad">lit_466</a> [20]</td></tr>
+<tr class="separator:a63a6331469b4bab2dee9def0521332ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a769577670fca7a194fe51297a7a5f433"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a769577670fca7a194fe51297a7a5f433">lit_467</a> [9+3]</td></tr>
 <tr class="separator:a769577670fca7a194fe51297a7a5f433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc011e235e583ae77f1823a6c3d72e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#afc011e235e583ae77f1823a6c3d72e4e">lit_468</a> [9+7]</td></tr>
@@ -219,14 +219,14 @@ Variables</h2></td></tr>
 <tr class="separator:ae778553828da6ce09ceb4d413afde1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7760ce9878dff2212659c26dd2b486b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ac7760ce9878dff2212659c26dd2b486b">__PADFixBits</a> [4+4]</td></tr>
 <tr class="separator:ac7760ce9878dff2212659c26dd2b486b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b38d04fd33fdf961baa27de75e4556"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a68b38d04fd33fdf961baa27de75e4556">SIBios__lit_1</a> [68]</td></tr>
-<tr class="separator:a68b38d04fd33fdf961baa27de75e4556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb43fabbe700338c605d9ffc224a9983"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#aeb43fabbe700338c605d9ffc224a9983">lit_1</a> [68]</td></tr>
+<tr class="separator:aeb43fabbe700338c605d9ffc224a9983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb40494fbb16b4d77818a57d48e036f3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#aeb40494fbb16b4d77818a57d48e036f3">Si</a> [20]</td></tr>
 <tr class="separator:aeb40494fbb16b4d77818a57d48e036f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb062c51fdd6550b5ac09df027a7299f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#adb062c51fdd6550b5ac09df027a7299f">Packet</a> [128]</td></tr>
 <tr class="separator:adb062c51fdd6550b5ac09df027a7299f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08619612231fd6d2f8867482d548ac4c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a08619612231fd6d2f8867482d548ac4c">SIBios__Alarm</a> [160]</td></tr>
-<tr class="separator:a08619612231fd6d2f8867482d548ac4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedefc5c10e18fb89351ebb19389af8fd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#aedefc5c10e18fb89351ebb19389af8fd">Alarm</a> [160]</td></tr>
+<tr class="separator:aedefc5c10e18fb89351ebb19389af8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae396679fb616de5f2f49038d662665e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#ae396679fb616de5f2f49038d662665e5">TypeTime</a> [32]</td></tr>
 <tr class="separator:ae396679fb616de5f2f49038d662665e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bebd1f4757ec83b33663e231cc83404"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a6bebd1f4757ec83b33663e231cc83404">XferTime</a> [32]</td></tr>
@@ -239,8 +239,8 @@ Variables</h2></td></tr>
 <tr class="separator:a72c5e5f644ed2358a51059aa2aa8a0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec08c0a788d3ed79052d59556ee80bd4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#aec08c0a788d3ed79052d59556ee80bd4">__SIVersion</a> [1+1]</td></tr>
 <tr class="separator:aec08c0a788d3ed79052d59556ee80bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8be8e0064fffd8e8c26a00af8a2027a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a8be8e0064fffd8e8c26a00af8a2027a0">SIBios__Type</a> [16]</td></tr>
-<tr class="separator:a8be8e0064fffd8e8c26a00af8a2027a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717c7dff78d44f3cdd9acc0d3a7dec41"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a717c7dff78d44f3cdd9acc0d3a7dec41">Type</a> [16]</td></tr>
+<tr class="separator:a717c7dff78d44f3cdd9acc0d3a7dec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f68332e1743a32ee2a3646a671ae64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SIBios_8cpp.html#a33f68332e1743a32ee2a3646a671ae64">data_804516F4</a> [4]</td></tr>
 <tr class="separator:a33f68332e1743a32ee2a3646a671ae64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -307,6 +307,31 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">static asm void __SITransfer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dd6f3034ead4aca934d65ff1d220d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd6f3034ead4aca934d65ff1d220d81">&#9670;&nbsp;</a></span>AlarmHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void AlarmHandler </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -486,31 +511,6 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9c21ff8642c6ee1067eff54fd4f09f28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c21ff8642c6ee1067eff54fd4f09f28">&#9670;&nbsp;</a></span>SIBios__AlarmHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void SIBios__AlarmHandler </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -914,13 +914,35 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="SIBios_8cpp.html#a68b38d04fd33fdf961baa27de75e4556">SIBios__lit_1</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="SIBios_8cpp.html#aeb43fabbe700338c605d9ffc224a9983">lit_1</a>,</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aSIBios_8cpp_html_a68b38d04fd33fdf961baa27de75e4556"><div class="ttname"><a href="SIBios_8cpp.html#a68b38d04fd33fdf961baa27de75e4556">SIBios__lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 SIBios__lit_1[68]</div><div class="ttdef"><b>Definition:</b> SIBios.cpp:78</div></div>
+<div class="ttc" id="aSIBios_8cpp_html_aeb43fabbe700338c605d9ffc224a9983"><div class="ttname"><a href="SIBios_8cpp.html#aeb43fabbe700338c605d9ffc224a9983">lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 lit_1[68]</div><div class="ttdef"><b>Definition:</b> SIBios.cpp:78</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="aedefc5c10e18fb89351ebb19389af8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedefc5c10e18fb89351ebb19389af8fd">&#9670;&nbsp;</a></span>Alarm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> Alarm[160]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="ae778553828da6ce09ceb4d413afde1f2"></a>
@@ -1023,6 +1045,71 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aeb43fabbe700338c605d9ffc224a9983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb43fabbe700338c605d9ffc224a9983">&#9670;&nbsp;</a></span>lit_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1[68]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x53, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,</div>
+<div class="line">    0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,</div>
+<div class="line">    0x34, 0x3A, 0x31, 0x34, 0x3A, 0x31, 0x36, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,</div>
+<div class="line">    0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c80d81a1fc715f05ec2ef62a870625a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c80d81a1fc715f05ec2ef62a870625a">&#9670;&nbsp;</a></span>lit_457</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_457</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4E, 0x6F, 0x20, 0x72, 0x65, 0x73, 0x70, 0x6F, 0x6E, 0x73, 0x65, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae9ef0ca509a1787adf76c7ebe592cac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ef0ca509a1787adf76c7ebe592cac9">&#9670;&nbsp;</a></span>lit_459</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_459</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4E, 0x36, 0x34, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C, 0x6C, 0x65, 0x72, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a73e4726afe245f59e96aec6340aadfc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73e4726afe245f59e96aec6340aadfc7">&#9670;&nbsp;</a></span>lit_460</h2>
 
@@ -1057,6 +1144,98 @@ Variables</h2></td></tr>
 <div class="line">    0x4E, 0x36, 0x34, 0x20, 0x6B, 0x65, 0x79, 0x62, 0x6F, 0x61, 0x72, 0x64, 0x00,</div>
 <div class="line">    </div>
 <div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2c712d93d217d1e7c97dce69e6492ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c712d93d217d1e7c97dce69e6492ec2">&#9670;&nbsp;</a></span>lit_462</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const lit_462</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x4E, 0x36, 0x34, 0x20, 0x6D, 0x6F, 0x75, 0x73, 0x65, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5c665ead6a4644959adfba3a9e06a335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c665ead6a4644959adfba3a9e06a335">&#9670;&nbsp;</a></span>lit_463</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const lit_463</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x47, 0x61, 0x6D, 0x65, 0x42, 0x6F, 0x79, 0x20, 0x41, 0x64, 0x76, 0x61, 0x6E, 0x63, 0x65, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afcfe9a312ead208c49f04889173258c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcfe9a312ead208c49f04889173258c0">&#9670;&nbsp;</a></span>lit_464</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const lit_464</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x53, 0x74, 0x61, 0x6E, 0x64, 0x61, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,</div>
+<div class="line">    0x6C, 0x65, 0x72, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acf14774cd7bf058082191e35c4741fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf14774cd7bf058082191e35c4741fdc">&#9670;&nbsp;</a></span>lit_465</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const lit_465</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x57, 0x69, 0x72, 0x65, 0x6C, 0x65, 0x73, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65,</div>
+<div class="line">    0x72, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63a6331469b4bab2dee9def0521332ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a6331469b4bab2dee9def0521332ad">&#9670;&nbsp;</a></span>lit_466</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a4b9935e85afcb3a8dd9bb8636b23ce3b">SECTION_RODATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> const lit_466</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x57, 0x61, 0x76, 0x65, 0x42, 0x69, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,</div>
+<div class="line">    0x6C, 0x65, 0x72, 0x00,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>
@@ -1169,8 +1348,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a08619612231fd6d2f8867482d548ac4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08619612231fd6d2f8867482d548ac4c">&#9670;&nbsp;</a></span>SIBios__Alarm</h2>
+<a id="a717c7dff78d44f3cdd9acc0d3a7dec41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717c7dff78d44f3cdd9acc0d3a7dec41">&#9670;&nbsp;</a></span>Type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1179,186 +1358,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__Alarm[160]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a68b38d04fd33fdf961baa27de75e4556"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68b38d04fd33fdf961baa27de75e4556">&#9670;&nbsp;</a></span>SIBios__lit_1</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_1[68]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
-<div class="line">    0x20, 0x53, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,</div>
-<div class="line">    0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,</div>
-<div class="line">    0x34, 0x3A, 0x31, 0x34, 0x3A, 0x31, 0x36, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29,</div>
-<div class="line">    0x20, 0x3E, 0x3E, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a28ba154caf752fb717800b6dc3ee7fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28ba154caf752fb717800b6dc3ee7fd8">&#9670;&nbsp;</a></span>SIBios__lit_457</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_457</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4E, 0x6F, 0x20, 0x72, 0x65, 0x73, 0x70, 0x6F, 0x6E, 0x73, 0x65, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af329bbea2476033514dc42b09cd17d05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af329bbea2476033514dc42b09cd17d05">&#9670;&nbsp;</a></span>SIBios__lit_459</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_459</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4E, 0x36, 0x34, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C, 0x6C, 0x65, 0x72, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a55cf96a6ce8d2085649670df6306e5a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55cf96a6ce8d2085649670df6306e5a4">&#9670;&nbsp;</a></span>SIBios__lit_462</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_462</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x4E, 0x36, 0x34, 0x20, 0x6D, 0x6F, 0x75, 0x73, 0x65, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ac699919d2e96516fa48c819ced12bb68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac699919d2e96516fa48c819ced12bb68">&#9670;&nbsp;</a></span>SIBios__lit_463</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_463</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x47, 0x61, 0x6D, 0x65, 0x42, 0x6F, 0x79, 0x20, 0x41, 0x64, 0x76, 0x61, 0x6E, 0x63, 0x65, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3fa74f9187d9d078b165044514433809"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fa74f9187d9d078b165044514433809">&#9670;&nbsp;</a></span>SIBios__lit_464</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_464</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x53, 0x74, 0x61, 0x6E, 0x64, 0x61, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,</div>
-<div class="line">    0x6C, 0x65, 0x72, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a58d6589455c5abb1cc89954e74f65410"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58d6589455c5abb1cc89954e74f65410">&#9670;&nbsp;</a></span>SIBios__lit_465</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_465</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x57, 0x69, 0x72, 0x65, 0x6C, 0x65, 0x73, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65,</div>
-<div class="line">    0x72, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af7e3755892078d4f8a8f44121f1e51cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7e3755892078d4f8a8f44121f1e51cd">&#9670;&nbsp;</a></span>SIBios__lit_466</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__lit_466</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x57, 0x61, 0x76, 0x65, 0x42, 0x69, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,</div>
-<div class="line">    0x6C, 0x65, 0x72, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a8be8e0064fffd8e8c26a00af8a2027a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8be8e0064fffd8e8c26a00af8a2027a0">&#9670;&nbsp;</a></span>SIBios__Type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> SIBios__Type[16]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> Type[16]</td>
         </tr>
       </table>
   </td>

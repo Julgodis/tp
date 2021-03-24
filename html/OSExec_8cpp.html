@@ -86,7 +86,7 @@ $(function() {
 <code>#include &quot;asm/dolphin/os/OSExec/PackArgs.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSExec/Run.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSExec/ReadDisc.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/os/OSExec/OSExec__Callback.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSExec/Callback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSExec/__OSGetExecParams.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSExec/GetApploaderPosition.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSExec/__OSBootDolSimple.s&quot;</code><br />
@@ -108,8 +108,8 @@ Functions</h2></td></tr>
 <tr class="separator:af5aa78b4398f2e1db62121d813d78c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade89801eacb5969bfd243c0a92471312"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#ade89801eacb5969bfd243c0a92471312">ReadDisc</a> ()</td></tr>
 <tr class="separator:ade89801eacb5969bfd243c0a92471312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcf6d38ca78c81cee337e75484c0dc85"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#adcf6d38ca78c81cee337e75484c0dc85">OSExec__Callback</a> ()</td></tr>
-<tr class="separator:adcf6d38ca78c81cee337e75484c0dc85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fbe0be4f33818c2824ffb9fe37fe3e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a96fbe0be4f33818c2824ffb9fe37fe3e">Callback</a> ()</td></tr>
+<tr class="separator:a96fbe0be4f33818c2824ffb9fe37fe3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c64ab1f576afda3c2fe3599edd1ffd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#ac0c64ab1f576afda3c2fe3599edd1ffd">__OSGetExecParams</a> ()</td></tr>
 <tr class="separator:ac0c64ab1f576afda3c2fe3599edd1ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e54a166bfe63c83aef3284e3e243eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a69e54a166bfe63c83aef3284e3e243eb">GetApploaderPosition</a> ()</td></tr>
@@ -185,10 +185,10 @@ Variables</h2></td></tr>
 <tr class="separator:a9c049b4864128bf1c2d5c7fd287aef76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecd6c351ad6fada05318fbeadd1bc52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#adecd6c351ad6fada05318fbeadd1bc52">data_8045165C</a> [4]</td></tr>
 <tr class="separator:adecd6c351ad6fada05318fbeadd1bc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16ed08ef30dbc138916b7f68bed42e6d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a16ed08ef30dbc138916b7f68bed42e6d">OSExec__lit_115</a> [11+5]</td></tr>
-<tr class="separator:a16ed08ef30dbc138916b7f68bed42e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ce7122e292ed6a4dee1bcc682082e14"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a2ce7122e292ed6a4dee1bcc682082e14">OSExec__lit_213</a> [3+5]</td></tr>
-<tr class="separator:a2ce7122e292ed6a4dee1bcc682082e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c1ee9a69dc4681158b1d14e6c2aa7c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a51c1ee9a69dc4681158b1d14e6c2aa7c">lit_115</a> [11+5]</td></tr>
+<tr class="separator:a51c1ee9a69dc4681158b1d14e6c2aa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8468946288ba63159931a4a5bbd26ae0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSExec_8cpp.html#a8468946288ba63159931a4a5bbd26ae0">lit_213</a> [3+5]</td></tr>
+<tr class="separator:a8468946288ba63159931a4a5bbd26ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a5171791a360a98750171a8894e3dc4e9"></a>
@@ -365,6 +365,31 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96fbe0be4f33818c2824ffb9fe37fe3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96fbe0be4f33818c2824ffb9fe37fe3e">&#9670;&nbsp;</a></span>Callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void Callback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -649,31 +674,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adcf6d38ca78c81cee337e75484c0dc85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcf6d38ca78c81cee337e75484c0dc85">&#9670;&nbsp;</a></span>OSExec__Callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void OSExec__Callback </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a19db298d1a55ea8eb3255d27003cdac0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19db298d1a55ea8eb3255d27003cdac0">&#9670;&nbsp;</a></span>OSGetSaveRegion()</h2>
 
@@ -913,8 +913,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a16ed08ef30dbc138916b7f68bed42e6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16ed08ef30dbc138916b7f68bed42e6d">&#9670;&nbsp;</a></span>OSExec__lit_115</h2>
+<a id="a51c1ee9a69dc4681158b1d14e6c2aa7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c1ee9a69dc4681158b1d14e6c2aa7c">&#9670;&nbsp;</a></span>lit_115</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -923,7 +923,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSExec__lit_115[11+5]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_115[11+5]</td>
         </tr>
       </table>
   </td>
@@ -940,8 +940,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2ce7122e292ed6a4dee1bcc682082e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ce7122e292ed6a4dee1bcc682082e14">&#9670;&nbsp;</a></span>OSExec__lit_213</h2>
+<a id="a8468946288ba63159931a4a5bbd26ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8468946288ba63159931a4a5bbd26ae0">&#9670;&nbsp;</a></span>lit_213</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -950,7 +950,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> OSExec__lit_213[3+5]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_213[3+5]</td>
         </tr>
       </table>
   </td>

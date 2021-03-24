@@ -85,7 +85,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="dvdlow_8h_source.html">dolphin/dvd/dvdlow.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvdlow/__DVDInitWA.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvdlow/__DVDInterruptHandler.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/dvd/dvdlow/dvdlow__AlarmHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/dvd/dvdlow/AlarmHandler.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvdlow/AlarmHandlerForTimeout.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvdlow/Read.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvdlow/SeekTwiceBeforeRead.s&quot;</code><br />
@@ -119,8 +119,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad541f0dc9b439de821121de85c6c5f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e1c3ed92ca35bf544649060167a3f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#ac1e1c3ed92ca35bf544649060167a3f1">__DVDInterruptHandler</a> ()</td></tr>
 <tr class="separator:ac1e1c3ed92ca35bf544649060167a3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d81e83dc0654c4bf9240c869da8286"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#ad9d81e83dc0654c4bf9240c869da8286">dvdlow__AlarmHandler</a> ()</td></tr>
-<tr class="separator:ad9d81e83dc0654c4bf9240c869da8286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a4dd6f3034ead4aca934d65ff1d220d81">AlarmHandler</a> ()</td></tr>
+<tr class="separator:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5c5c0a46df2d6f9fcbf2b3c7c46e49"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a9a5c5c0a46df2d6f9fcbf2b3c7c46e49">AlarmHandlerForTimeout</a> ()</td></tr>
 <tr class="separator:a9a5c5c0a46df2d6f9fcbf2b3c7c46e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae38c8ff46b3e52847a226c65968ef154"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#ae38c8ff46b3e52847a226c65968ef154">Read</a> ()</td></tr>
@@ -186,16 +186,14 @@ Variables</h2></td></tr>
 <tr class="separator:a6a4263be7baabca7962eb4e35cb92ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51bfc395a15f5c2d434dbda85e6cf1d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a51bfc395a15f5c2d434dbda85e6cf1d7">Prev</a> [12]</td></tr>
 <tr class="separator:a51bfc395a15f5c2d434dbda85e6cf1d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa0911b9cfb1e3846f13bb7921a903bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#aaa0911b9cfb1e3846f13bb7921a903bc">Curr</a> [12]</td></tr>
-<tr class="separator:aaa0911b9cfb1e3846f13bb7921a903bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c83af9e9fc19aee1c64ecc76e422ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a05c83af9e9fc19aee1c64ecc76e422ba">CommandList</a> [60+4]</td></tr>
 <tr class="separator:a05c83af9e9fc19aee1c64ecc76e422ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf47d3f9beac01acd8adf272b4e9a79f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#adf47d3f9beac01acd8adf272b4e9a79f">StopAtNextInt</a> [4]</td></tr>
 <tr class="separator:adf47d3f9beac01acd8adf272b4e9a79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8dad1335c48d70a183d116d049c017d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#af8dad1335c48d70a183d116d049c017d">LastLength</a> [4]</td></tr>
 <tr class="separator:af8dad1335c48d70a183d116d049c017d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cf9a7931970d2d4872211ae3de121be"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a0cf9a7931970d2d4872211ae3de121be">dvdlow__Callback</a> [4]</td></tr>
-<tr class="separator:a0cf9a7931970d2d4872211ae3de121be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbfaf86ed0deb7baa57d1b9782e0d30"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a9fbfaf86ed0deb7baa57d1b9782e0d30">Callback</a> [4]</td></tr>
+<tr class="separator:a9fbfaf86ed0deb7baa57d1b9782e0d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0727c1e8c7353d03e02f94d4d391304a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a0727c1e8c7353d03e02f94d4d391304a">ResetCoverCallback</a> [4]</td></tr>
 <tr class="separator:a0727c1e8c7353d03e02f94d4d391304a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a472586865e635e09caea5176d9c30f9c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a472586865e635e09caea5176d9c30f9c">LastResetEnd</a> [4]</td></tr>
@@ -230,6 +228,8 @@ Variables</h2></td></tr>
 <tr class="separator:a2411ed1a42e36fd87c36944856a2e036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c9eec72373c79e5eed0e2a0ec0c6259"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a3c9eec72373c79e5eed0e2a0ec0c6259">AlarmForBreak</a> [40]</td></tr>
 <tr class="separator:a3c9eec72373c79e5eed0e2a0ec0c6259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5784a60932f94199b7edc15143b5838a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvdlow_8cpp.html#a5784a60932f94199b7edc15143b5838a">Curr</a> [12]</td></tr>
+<tr class="separator:a5784a60932f94199b7edc15143b5838a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad541f0dc9b439de821121de85c6c5f11"></a>
@@ -342,6 +342,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4dd6f3034ead4aca934d65ff1d220d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd6f3034ead4aca934d65ff1d220d81">&#9670;&nbsp;</a></span>AlarmHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void AlarmHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9a5c5c0a46df2d6f9fcbf2b3c7c46e49"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a5c5c0a46df2d6f9fcbf2b3c7c46e49">&#9670;&nbsp;</a></span>AlarmHandlerForTimeout()</h2>
 
@@ -380,31 +405,6 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad9d81e83dc0654c4bf9240c869da8286"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9d81e83dc0654c4bf9240c869da8286">&#9670;&nbsp;</a></span>dvdlow__AlarmHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void dvdlow__AlarmHandler </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -897,6 +897,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a9fbfaf86ed0deb7baa57d1b9782e0d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fbfaf86ed0deb7baa57d1b9782e0d30">&#9670;&nbsp;</a></span>Callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> Callback[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a05c83af9e9fc19aee1c64ecc76e422ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05c83af9e9fc19aee1c64ecc76e422ba">&#9670;&nbsp;</a></span>CommandList</h2>
 
@@ -919,16 +941,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa0911b9cfb1e3846f13bb7921a903bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa0911b9cfb1e3846f13bb7921a903bc">&#9670;&nbsp;</a></span>Curr</h2>
+<a id="a5784a60932f94199b7edc15143b5838a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5784a60932f94199b7edc15143b5838a">&#9670;&nbsp;</a></span>Curr</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> Curr</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> Curr[12]</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -988,28 +1018,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data_8045174C[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0cf9a7931970d2d4872211ae3de121be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cf9a7931970d2d4872211ae3de121be">&#9670;&nbsp;</a></span>dvdlow__Callback</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dvdlow__Callback[4]</td>
         </tr>
       </table>
   </td>

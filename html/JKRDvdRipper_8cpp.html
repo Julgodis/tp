@@ -88,9 +88,9 @@ $(function() {
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/func_802D9C54.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/func_802D9D10.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/JKRDvdRipper__decompSZS_subroutine__FPUcPUc.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/JKRDvdRipper__firstSrcData__Fv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/JKRDvdRipper__nextSrcData__FPUc.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/decompSZS_subroutine__FPUcPUc.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/firstSrcData__Fv.s&quot;</code><br />
+<code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/nextSrcData__FPUc.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/isErrorRetry__12JKRDvdRipperFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/__sinit_JKRDvdRipper_cpp.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRDvdRipper/func_802DA820.s&quot;</code><br />
@@ -105,11 +105,11 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRDvdFile.html">JKRDvdFile</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRExpandSwitch.html">JKRExpandSwitch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRDvdFile.html">JKRDvdFile</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRDvdRipper.html">JKRDvdRipper</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,12 +144,12 @@ Functions</h2></td></tr>
 <tr class="separator:ab2b72d1ea536f0ff2a8e87a28be1e609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9ad8cc496c11a61b2367e6e0ca488ec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ac9ad8cc496c11a61b2367e6e0ca488ec">JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl</a> ()</td></tr>
 <tr class="separator:ac9ad8cc496c11a61b2367e6e0ca488ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1134aaf592804ad0f310ffe6acc880bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a1134aaf592804ad0f310ffe6acc880bc">JKRDvdRipper__decompSZS_subroutine__FPUcPUc</a> ()</td></tr>
-<tr class="separator:a1134aaf592804ad0f310ffe6acc880bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0efc002c65d48e06e3e5c1a6fce85fd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a0efc002c65d48e06e3e5c1a6fce85fd7">JKRDvdRipper__firstSrcData__Fv</a> ()</td></tr>
-<tr class="separator:a0efc002c65d48e06e3e5c1a6fce85fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc72fa5438fe01672dac5948e2d8935c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#afc72fa5438fe01672dac5948e2d8935c">JKRDvdRipper__nextSrcData__FPUc</a> ()</td></tr>
-<tr class="separator:afc72fa5438fe01672dac5948e2d8935c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb9216f2c4a131c261972cbb443fe2b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#acbb9216f2c4a131c261972cbb443fe2b">decompSZS_subroutine__FPUcPUc</a> ()</td></tr>
+<tr class="separator:acbb9216f2c4a131c261972cbb443fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa347eb74c6b7e70cac8c2fe6e35fa4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aefa347eb74c6b7e70cac8c2fe6e35fa4">firstSrcData__Fv</a> ()</td></tr>
+<tr class="separator:aefa347eb74c6b7e70cac8c2fe6e35fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeceffb15c7d752177429769ca5e5943"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#afeceffb15c7d752177429769ca5e5943">nextSrcData__FPUc</a> ()</td></tr>
+<tr class="separator:afeceffb15c7d752177429769ca5e5943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9086fbcfa3cb31e66b554c6452c370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a1c9086fbcfa3cb31e66b554c6452c370">isErrorRetry__12JKRDvdRipperFv</a> ()</td></tr>
 <tr class="separator:a1c9086fbcfa3cb31e66b554c6452c370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7fc911d3831b2c3b171a67442320305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aa7fc911d3831b2c3b171a67442320305">__sinit_JKRDvdRipper_cpp</a> ()</td></tr>
@@ -229,8 +229,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a568c21a7bb8ede15102287b87779c511"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a568c21a7bb8ede15102287b87779c511">JKRDvdRipper__stringBase0</a></td></tr>
-<tr class="separator:a568c21a7bb8ede15102287b87779c511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee936da761ff950248b5b54ffe7f99b1"><td class="memItemLeft" align="right" valign="top">char const  *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aee936da761ff950248b5b54ffe7f99b1">stringBase0</a></td></tr>
+<tr class="separator:aee936da761ff950248b5b54ffe7f99b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e43b6f8bacbe04c4c888d28ff0eec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a04e43b6f8bacbe04c4c888d28ff0eec2">sSZSBufferSize__12JKRDvdRipper</a> = 0x00000400</td></tr>
 <tr class="separator:a04e43b6f8bacbe04c4c888d28ff0eec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2560338b58a7b440b0e94ea6217fef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ab2560338b58a7b440b0e94ea6217fef7">sSystemHeap__7JKRHeap</a> [4]</td></tr>
@@ -247,42 +247,42 @@ Variables</h2></td></tr>
 <tr class="separator:aa14d08f91c5fd7c9d304e5134529eae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad597134a171db4f8c2ebf2082400052d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ad597134a171db4f8c2ebf2082400052d">data_804508C8</a> = 0x01000000</td></tr>
 <tr class="separator:ad597134a171db4f8c2ebf2082400052d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43e985510420b9e42bec263a7f478186"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a43e985510420b9e42bec263a7f478186">JKRDvdRipper__lit_491</a> [12]</td></tr>
-<tr class="separator:a43e985510420b9e42bec263a7f478186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53eeab1accff0d7ebbaa21ac4ac9ea6a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a53eeab1accff0d7ebbaa21ac4ac9ea6a">lit_491</a> [12]</td></tr>
+<tr class="separator:a53eeab1accff0d7ebbaa21ac4ac9ea6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebdc21663b536bfbc4350848ed4938cf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aebdc21663b536bfbc4350848ed4938cf">sDvdAsyncList__12JKRDvdRipper</a> [12]</td></tr>
 <tr class="separator:aebdc21663b536bfbc4350848ed4938cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0fee8254a894ba712ff9e81b7234e8d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ac0fee8254a894ba712ff9e81b7234e8d">JKRDvdRipper__decompMutex</a> [24]</td></tr>
-<tr class="separator:ac0fee8254a894ba712ff9e81b7234e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a468a8167920817f1e06a59440c314e77"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a468a8167920817f1e06a59440c314e77">JKRDvdRipper__szpBuf</a> [4]</td></tr>
-<tr class="separator:a468a8167920817f1e06a59440c314e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b07047dcd05ef041ce7f47a735e1de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aa7b07047dcd05ef041ce7f47a735e1de">JKRDvdRipper__szpEnd</a> [4]</td></tr>
-<tr class="separator:aa7b07047dcd05ef041ce7f47a735e1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98b3adbf72ea567c133d500e3df4f67f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a98b3adbf72ea567c133d500e3df4f67f">JKRDvdRipper__refBuf</a> [4]</td></tr>
-<tr class="separator:a98b3adbf72ea567c133d500e3df4f67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6712017c48c26189f375fca8c72fc49a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a6712017c48c26189f375fca8c72fc49a">JKRDvdRipper__refEnd</a> [4]</td></tr>
-<tr class="separator:a6712017c48c26189f375fca8c72fc49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208f69be65f13c370c445134c6e2a2c9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a208f69be65f13c370c445134c6e2a2c9">JKRDvdRipper__refCurrent</a> [4]</td></tr>
-<tr class="separator:a208f69be65f13c370c445134c6e2a2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f1e7834ac4a34624af873821e6c4004"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a4f1e7834ac4a34624af873821e6c4004">JKRDvdRipper__srcOffset</a> [4]</td></tr>
-<tr class="separator:a4f1e7834ac4a34624af873821e6c4004"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60427aecee4abb94c0651d7c2881d8d9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a60427aecee4abb94c0651d7c2881d8d9">JKRDvdRipper__transLeft</a> [4]</td></tr>
-<tr class="separator:a60427aecee4abb94c0651d7c2881d8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae96a584ca987e69ce9c904d738c15690"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ae96a584ca987e69ce9c904d738c15690">JKRDvdRipper__srcLimit</a> [4]</td></tr>
-<tr class="separator:ae96a584ca987e69ce9c904d738c15690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d281c250f2f3110d31c16ea346e98fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a8d281c250f2f3110d31c16ea346e98fa">JKRDvdRipper__srcFile</a> [4]</td></tr>
-<tr class="separator:a8d281c250f2f3110d31c16ea346e98fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b84bec817f917a344d4dbe1fdc117ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a5b84bec817f917a344d4dbe1fdc117ed">JKRDvdRipper__fileOffset</a> [4]</td></tr>
-<tr class="separator:a5b84bec817f917a344d4dbe1fdc117ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8da81d9ee1df0a1938e89fa05d7999f8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a8da81d9ee1df0a1938e89fa05d7999f8">JKRDvdRipper__readCount</a> [4]</td></tr>
-<tr class="separator:a8da81d9ee1df0a1938e89fa05d7999f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3dfbc20e00aa7def7f81ac74c03902"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a2a3dfbc20e00aa7def7f81ac74c03902">JKRDvdRipper__maxDest</a> [4]</td></tr>
-<tr class="separator:a2a3dfbc20e00aa7def7f81ac74c03902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfff2a6e95bed0f818f961264a3e3b54"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#acfff2a6e95bed0f818f961264a3e3b54">decompMutex</a> [24]</td></tr>
+<tr class="separator:acfff2a6e95bed0f818f961264a3e3b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3d8cad33f578a1876f9d85ff0b6059"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a6f3d8cad33f578a1876f9d85ff0b6059">szpBuf</a> [4]</td></tr>
+<tr class="separator:a6f3d8cad33f578a1876f9d85ff0b6059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335b4ea16f5085ce32f0a7f29c6c4ad0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a335b4ea16f5085ce32f0a7f29c6c4ad0">szpEnd</a> [4]</td></tr>
+<tr class="separator:a335b4ea16f5085ce32f0a7f29c6c4ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa4221f0e7d98e7b215e5203c33e9e3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aefa4221f0e7d98e7b215e5203c33e9e3">refBuf</a> [4]</td></tr>
+<tr class="separator:aefa4221f0e7d98e7b215e5203c33e9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664730bac91356137fad0a22b0e3c8ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a664730bac91356137fad0a22b0e3c8ed">refEnd</a> [4]</td></tr>
+<tr class="separator:a664730bac91356137fad0a22b0e3c8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2664546ce7dacd1952c56127edab0f18"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a2664546ce7dacd1952c56127edab0f18">refCurrent</a> [4]</td></tr>
+<tr class="separator:a2664546ce7dacd1952c56127edab0f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a0472363ee5b0827e10c761ded4f4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aa3a0472363ee5b0827e10c761ded4f4b">srcOffset</a> [4]</td></tr>
+<tr class="separator:aa3a0472363ee5b0827e10c761ded4f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417cabfe3644e2ae7ad0e7e1abce868d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a417cabfe3644e2ae7ad0e7e1abce868d">transLeft</a> [4]</td></tr>
+<tr class="separator:a417cabfe3644e2ae7ad0e7e1abce868d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70939631a2827cb68aa468c0ed21b60d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a70939631a2827cb68aa468c0ed21b60d">srcLimit</a> [4]</td></tr>
+<tr class="separator:a70939631a2827cb68aa468c0ed21b60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752941baa8157a5c055f0d31cb85fa99"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a752941baa8157a5c055f0d31cb85fa99">srcFile</a> [4]</td></tr>
+<tr class="separator:a752941baa8157a5c055f0d31cb85fa99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13732a83b3549e4da7c77f0acc21ec33"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a13732a83b3549e4da7c77f0acc21ec33">fileOffset</a> [4]</td></tr>
+<tr class="separator:a13732a83b3549e4da7c77f0acc21ec33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9f9ca5f153510dff43921d374e3998"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#afb9f9ca5f153510dff43921d374e3998">readCount</a> [4]</td></tr>
+<tr class="separator:afb9f9ca5f153510dff43921d374e3998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0c9236cbe062e6749450a8f23e640f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#abe0c9236cbe062e6749450a8f23e640f">maxDest</a> [4]</td></tr>
+<tr class="separator:abe0c9236cbe062e6749450a8f23e640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ff408335d5679665811591c3ce7704b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a5ff408335d5679665811591c3ce7704b">data_80451458</a> [4]</td></tr>
 <tr class="separator:a5ff408335d5679665811591c3ce7704b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2ecd4397686ebe735191cf5b3c08905"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#ae2ecd4397686ebe735191cf5b3c08905">JKRDvdRipper__tsPtr</a> [4]</td></tr>
-<tr class="separator:ae2ecd4397686ebe735191cf5b3c08905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab5beb0ef88973cea2c0890debd338c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a5ab5beb0ef88973cea2c0890debd338c">JKRDvdRipper__tsArea</a> [4+4]</td></tr>
-<tr class="separator:a5ab5beb0ef88973cea2c0890debd338c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1326a317e7ec94e7e8c966c4335dc3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#aad1326a317e7ec94e7e8c966c4335dc3">tsPtr</a> [4]</td></tr>
+<tr class="separator:aad1326a317e7ec94e7e8c966c4335dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c0f12cc8a693e9ee586bf06cd010b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRDvdRipper_8cpp.html#a76c0f12cc8a693e9ee586bf06cd010b8">tsArea</a> [4+4]</td></tr>
+<tr class="separator:a76c0f12cc8a693e9ee586bf06cd010b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8d6b5cfa9c3b3fbecdae7ee73d3e7630"></a>
@@ -678,6 +678,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acbb9216f2c4a131c261972cbb443fe2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb9216f2c4a131c261972cbb443fe2b">&#9670;&nbsp;</a></span>decompSZS_subroutine__FPUcPUc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void decompSZS_subroutine__FPUcPUc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad835d0f5b9fcfd6b64e485594eaca490"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad835d0f5b9fcfd6b64e485594eaca490">&#9670;&nbsp;</a></span>DVDReadPrio()</h2>
 
@@ -706,6 +731,31 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">static asm void firstSrcData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa347eb74c6b7e70cac8c2fe6e35fa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa347eb74c6b7e70cac8c2fe6e35fa4">&#9670;&nbsp;</a></span>firstSrcData__Fv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void firstSrcData__Fv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -879,81 +929,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1134aaf592804ad0f310ffe6acc880bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1134aaf592804ad0f310ffe6acc880bc">&#9670;&nbsp;</a></span>JKRDvdRipper__decompSZS_subroutine__FPUcPUc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void JKRDvdRipper__decompSZS_subroutine__FPUcPUc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0efc002c65d48e06e3e5c1a6fce85fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0efc002c65d48e06e3e5c1a6fce85fd7">&#9670;&nbsp;</a></span>JKRDvdRipper__firstSrcData__Fv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void JKRDvdRipper__firstSrcData__Fv </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afc72fa5438fe01672dac5948e2d8935c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc72fa5438fe01672dac5948e2d8935c">&#9670;&nbsp;</a></span>JKRDvdRipper__nextSrcData__FPUc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void JKRDvdRipper__nextSrcData__FPUc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6234bf67f446610772fa994b8d5e617c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6234bf67f446610772fa994b8d5e617c">&#9670;&nbsp;</a></span>loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl()</h2>
 
@@ -1036,6 +1011,31 @@ Variables</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
           <td class="paramname"><em>param_0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afeceffb15c7d752177429769ca5e5943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeceffb15c7d752177429769ca5e5943">&#9670;&nbsp;</a></span>nextSrcData__FPUc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void nextSrcData__FPUc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1281,8 +1281,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac0fee8254a894ba712ff9e81b7234e8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0fee8254a894ba712ff9e81b7234e8d">&#9670;&nbsp;</a></span>JKRDvdRipper__decompMutex</h2>
+<a id="acfff2a6e95bed0f818f961264a3e3b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfff2a6e95bed0f818f961264a3e3b54">&#9670;&nbsp;</a></span>decompMutex</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1291,7 +1291,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__decompMutex[24]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> decompMutex[24]</td>
         </tr>
       </table>
   </td>
@@ -1303,8 +1303,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5b84bec817f917a344d4dbe1fdc117ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b84bec817f917a344d4dbe1fdc117ed">&#9670;&nbsp;</a></span>JKRDvdRipper__fileOffset</h2>
+<a id="a13732a83b3549e4da7c77f0acc21ec33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13732a83b3549e4da7c77f0acc21ec33">&#9670;&nbsp;</a></span>fileOffset</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1313,7 +1313,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__fileOffset[4]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> fileOffset[4]</td>
         </tr>
       </table>
   </td>
@@ -1325,8 +1325,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a43e985510420b9e42bec263a7f478186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43e985510420b9e42bec263a7f478186">&#9670;&nbsp;</a></span>JKRDvdRipper__lit_491</h2>
+<a id="a53eeab1accff0d7ebbaa21ac4ac9ea6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53eeab1accff0d7ebbaa21ac4ac9ea6a">&#9670;&nbsp;</a></span>lit_491</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1335,7 +1335,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__lit_491[12]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_491[12]</td>
         </tr>
       </table>
   </td>
@@ -1347,8 +1347,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a3dfbc20e00aa7def7f81ac74c03902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a3dfbc20e00aa7def7f81ac74c03902">&#9670;&nbsp;</a></span>JKRDvdRipper__maxDest</h2>
+<a id="abe0c9236cbe062e6749450a8f23e640f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0c9236cbe062e6749450a8f23e640f">&#9670;&nbsp;</a></span>maxDest</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1357,293 +1357,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__maxDest[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8da81d9ee1df0a1938e89fa05d7999f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8da81d9ee1df0a1938e89fa05d7999f8">&#9670;&nbsp;</a></span>JKRDvdRipper__readCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__readCount[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a98b3adbf72ea567c133d500e3df4f67f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98b3adbf72ea567c133d500e3df4f67f">&#9670;&nbsp;</a></span>JKRDvdRipper__refBuf</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__refBuf[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a208f69be65f13c370c445134c6e2a2c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a208f69be65f13c370c445134c6e2a2c9">&#9670;&nbsp;</a></span>JKRDvdRipper__refCurrent</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__refCurrent[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6712017c48c26189f375fca8c72fc49a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6712017c48c26189f375fca8c72fc49a">&#9670;&nbsp;</a></span>JKRDvdRipper__refEnd</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__refEnd[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8d281c250f2f3110d31c16ea346e98fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d281c250f2f3110d31c16ea346e98fa">&#9670;&nbsp;</a></span>JKRDvdRipper__srcFile</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__srcFile[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae96a584ca987e69ce9c904d738c15690"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae96a584ca987e69ce9c904d738c15690">&#9670;&nbsp;</a></span>JKRDvdRipper__srcLimit</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__srcLimit[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4f1e7834ac4a34624af873821e6c4004"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f1e7834ac4a34624af873821e6c4004">&#9670;&nbsp;</a></span>JKRDvdRipper__srcOffset</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__srcOffset[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a568c21a7bb8ede15102287b87779c511"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a568c21a7bb8ede15102287b87779c511">&#9670;&nbsp;</a></span>JKRDvdRipper__stringBase0</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char const* const JKRDvdRipper__stringBase0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a468a8167920817f1e06a59440c314e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a468a8167920817f1e06a59440c314e77">&#9670;&nbsp;</a></span>JKRDvdRipper__szpBuf</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__szpBuf[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa7b07047dcd05ef041ce7f47a735e1de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7b07047dcd05ef041ce7f47a735e1de">&#9670;&nbsp;</a></span>JKRDvdRipper__szpEnd</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__szpEnd[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a60427aecee4abb94c0651d7c2881d8d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60427aecee4abb94c0651d7c2881d8d9">&#9670;&nbsp;</a></span>JKRDvdRipper__transLeft</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__transLeft[4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5ab5beb0ef88973cea2c0890debd338c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ab5beb0ef88973cea2c0890debd338c">&#9670;&nbsp;</a></span>JKRDvdRipper__tsArea</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__tsArea[4+4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae2ecd4397686ebe735191cf5b3c08905"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2ecd4397686ebe735191cf5b3c08905">&#9670;&nbsp;</a></span>JKRDvdRipper__tsPtr</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> JKRDvdRipper__tsPtr[4]</td>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> maxDest[4]</td>
         </tr>
       </table>
   </td>
@@ -1677,6 +1391,94 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afb9f9ca5f153510dff43921d374e3998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9f9ca5f153510dff43921d374e3998">&#9670;&nbsp;</a></span>readCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> readCount[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa4221f0e7d98e7b215e5203c33e9e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa4221f0e7d98e7b215e5203c33e9e3">&#9670;&nbsp;</a></span>refBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> refBuf[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2664546ce7dacd1952c56127edab0f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2664546ce7dacd1952c56127edab0f18">&#9670;&nbsp;</a></span>refCurrent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> refCurrent[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a664730bac91356137fad0a22b0e3c8ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664730bac91356137fad0a22b0e3c8ed">&#9670;&nbsp;</a></span>refEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> refEnd[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aebdc21663b536bfbc4350848ed4938cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aebdc21663b536bfbc4350848ed4938cf">&#9670;&nbsp;</a></span>sDvdAsyncList__12JKRDvdRipper</h2>
 
@@ -1688,6 +1490,72 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> sDvdAsyncList__12JKRDvdRipper[12]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a752941baa8157a5c055f0d31cb85fa99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752941baa8157a5c055f0d31cb85fa99">&#9670;&nbsp;</a></span>srcFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> srcFile[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70939631a2827cb68aa468c0ed21b60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70939631a2827cb68aa468c0ed21b60d">&#9670;&nbsp;</a></span>srcLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> srcLimit[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3a0472363ee5b0827e10c761ded4f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a0472363ee5b0827e10c761ded4f4b">&#9670;&nbsp;</a></span>srcOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> srcOffset[4]</td>
         </tr>
       </table>
   </td>
@@ -1731,6 +1599,28 @@ Variables</h2></td></tr>
           <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a> sSZSBufferSize__12JKRDvdRipper = 0x00000400</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee936da761ff950248b5b54ffe7f99b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee936da761ff950248b5b54ffe7f99b1">&#9670;&nbsp;</a></span>stringBase0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const* const stringBase0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1793,6 +1683,116 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= </div>
 <div class="line">    <span class="stringliteral">&quot;Not support SZP with offset read&quot;</span></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a6f3d8cad33f578a1876f9d85ff0b6059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3d8cad33f578a1876f9d85ff0b6059">&#9670;&nbsp;</a></span>szpBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> szpBuf[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a335b4ea16f5085ce32f0a7f29c6c4ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335b4ea16f5085ce32f0a7f29c6c4ad0">&#9670;&nbsp;</a></span>szpEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> szpEnd[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a417cabfe3644e2ae7ad0e7e1abce868d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417cabfe3644e2ae7ad0e7e1abce868d">&#9670;&nbsp;</a></span>transLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> transLeft[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76c0f12cc8a693e9ee586bf06cd010b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c0f12cc8a693e9ee586bf06cd010b8">&#9670;&nbsp;</a></span>tsArea</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tsArea[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad1326a317e7ec94e7e8c966c4335dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1326a317e7ec94e7e8c966c4335dc3">&#9670;&nbsp;</a></span>tsPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tsPtr[4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

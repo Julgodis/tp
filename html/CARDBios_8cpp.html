@@ -107,7 +107,7 @@ $(function() {
 <code>#include &quot;asm/dolphin/card/CARDBios/__CARDPutControlBlock.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBios/CARDFreeBlocks.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBios/__CARDSync.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/card/CARDBios/CARDBios__OnReset.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/card/CARDBios/OnReset.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBios/CARDGetFastMode.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for CARDBios.cpp:</div>
@@ -168,8 +168,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad7a705491478380a5bfc2af57d0d8633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a2d50af1666a4e6480e1c962020555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a26a2d50af1666a4e6480e1c962020555">__CARDSync</a> ()</td></tr>
 <tr class="separator:a26a2d50af1666a4e6480e1c962020555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c74ad286bc61ab8a1d9283669baf3d1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a3c74ad286bc61ab8a1d9283669baf3d1">CARDBios__OnReset</a> ()</td></tr>
-<tr class="separator:a3c74ad286bc61ab8a1d9283669baf3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9462ff26e8664066b54c1969eb75668d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a> ()</td></tr>
+<tr class="separator:a9462ff26e8664066b54c1969eb75668d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacaa9844dd25e3aafa9a527b84ea605f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#aacaa9844dd25e3aafa9a527b84ea605f">CARDGetFastMode</a> ()</td></tr>
 <tr class="separator:aacaa9844dd25e3aafa9a527b84ea605f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688d1c86f609bd2033df6f4d22094f42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a688d1c86f609bd2033df6f4d22094f42">OSRegisterVersion</a> ()</td></tr>
@@ -231,10 +231,10 @@ Variables</h2></td></tr>
 <tr class="separator:a63b9d4a99060578067847d5fa40afe7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88eef48dbdc3ee7dd041fe7c6f5b8bc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a88eef48dbdc3ee7dd041fe7c6f5b8bc7">__CARDDiskNone</a> [32]</td></tr>
 <tr class="separator:a88eef48dbdc3ee7dd041fe7c6f5b8bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7fb71322df5b1d42d77632284a757ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#ad7fb71322df5b1d42d77632284a757ab">CARDBios__lit_1</a> [70+2]</td></tr>
-<tr class="separator:ad7fb71322df5b1d42d77632284a757ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab64bd825b618d9eb5de814f5ae3eec1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#ab64bd825b618d9eb5de814f5ae3eec1b">CARDBios__ResetFunctionInfo</a> [4+4]</td></tr>
-<tr class="separator:ab64bd825b618d9eb5de814f5ae3eec1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d309742ef5f75741b5305be6d98ecf3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a8d309742ef5f75741b5305be6d98ecf3">lit_1</a> [70+2]</td></tr>
+<tr class="separator:a8d309742ef5f75741b5305be6d98ecf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad711ab98ac1f0455cd8863ea30277d18"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#ad711ab98ac1f0455cd8863ea30277d18">ResetFunctionInfo</a> [4+4]</td></tr>
+<tr class="separator:ad711ab98ac1f0455cd8863ea30277d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af57b205b6a9e6f78473c9b6eff351d74"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#af57b205b6a9e6f78473c9b6eff351d74">__CARDVersion</a> [1+1]</td></tr>
 <tr class="separator:af57b205b6a9e6f78473c9b6eff351d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94626c984e53168b716994f3da1609bd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBios_8cpp.html#a94626c984e53168b716994f3da1609bd">struct_80451918</a> [4+4]</td></tr>
@@ -622,31 +622,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3c74ad286bc61ab8a1d9283669baf3d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c74ad286bc61ab8a1d9283669baf3d1">&#9670;&nbsp;</a></span>CARDBios__OnReset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void CARDBios__OnReset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad7a705491478380a5bfc2af57d0d8633"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7a705491478380a5bfc2af57d0d8633">&#9670;&nbsp;</a></span>CARDFreeBlocks()</h2>
 
@@ -898,6 +873,31 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9462ff26e8664066b54c1969eb75668d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9462ff26e8664066b54c1969eb75668d">&#9670;&nbsp;</a></span>OnReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void OnReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1230,17 +1230,17 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="CARDBios_8cpp.html#ad7fb71322df5b1d42d77632284a757ab">CARDBios__lit_1</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)&amp;<a class="code" href="CARDBios_8cpp.html#a8d309742ef5f75741b5305be6d98ecf3">lit_1</a>,</div>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aCARDBios_8cpp_html_ad7fb71322df5b1d42d77632284a757ab"><div class="ttname"><a href="CARDBios_8cpp.html#ad7fb71322df5b1d42d77632284a757ab">CARDBios__lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 CARDBios__lit_1[70+2]</div><div class="ttdef"><b>Definition:</b> CARDBios.cpp:273</div></div>
+<div class="ttc" id="aCARDBios_8cpp_html_a8d309742ef5f75741b5305be6d98ecf3"><div class="ttname"><a href="CARDBios_8cpp.html#a8d309742ef5f75741b5305be6d98ecf3">lit_1</a></div><div class="ttdeci">static SECTION_DATA u8 lit_1[70+2]</div><div class="ttdef"><b>Definition:</b> CARDBios.cpp:273</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ad7fb71322df5b1d42d77632284a757ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7fb71322df5b1d42d77632284a757ab">&#9670;&nbsp;</a></span>CARDBios__lit_1</h2>
+<a id="a8d309742ef5f75741b5305be6d98ecf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d309742ef5f75741b5305be6d98ecf3">&#9670;&nbsp;</a></span>lit_1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1249,7 +1249,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> CARDBios__lit_1[70+2]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1[70+2]</td>
         </tr>
       </table>
   </td>
@@ -1270,8 +1270,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ab64bd825b618d9eb5de814f5ae3eec1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab64bd825b618d9eb5de814f5ae3eec1b">&#9670;&nbsp;</a></span>CARDBios__ResetFunctionInfo</h2>
+<a id="ad711ab98ac1f0455cd8863ea30277d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad711ab98ac1f0455cd8863ea30277d18">&#9670;&nbsp;</a></span>ResetFunctionInfo</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1280,7 +1280,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* CARDBios__ResetFunctionInfo[4+4]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* ResetFunctionInfo[4+4]</td>
         </tr>
       </table>
   </td>
@@ -1290,7 +1290,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="CARDBios_8cpp.html#a3c74ad286bc61ab8a1d9283669baf3d1">CARDBios__OnReset</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="CARDBios_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)0x0000007F,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
@@ -1300,7 +1300,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aCARDBios_8cpp_html_a3c74ad286bc61ab8a1d9283669baf3d1"><div class="ttname"><a href="CARDBios_8cpp.html#a3c74ad286bc61ab8a1d9283669baf3d1">CARDBios__OnReset</a></div><div class="ttdeci">static void CARDBios__OnReset()</div><div class="ttdef"><b>Definition:</b> CARDBios.cpp:387</div></div>
+<div class="ttc" id="aCARDBios_8cpp_html_a9462ff26e8664066b54c1969eb75668d"><div class="ttname"><a href="CARDBios_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a></div><div class="ttdeci">static void OnReset()</div><div class="ttdef"><b>Definition:</b> CARDBios.cpp:387</div></div>
 </div><!-- fragment -->
 </div>
 </div>

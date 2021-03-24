@@ -91,7 +91,7 @@ $(function() {
 <code>#include &quot;asm/dolphin/os/OSAlarm/OSCancelAlarm.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSAlarm/DecrementerExceptionCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSAlarm/DecrementerExceptionHandler.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/os/OSAlarm/OSAlarm__OnReset.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/os/OSAlarm/OnReset.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for OSAlarm.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -119,8 +119,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab6460168ea5aab346dfc6e9be333fae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2a68331d938364dfdb9658ba20e9eba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#ad2a68331d938364dfdb9658ba20e9eba">DecrementerExceptionHandler</a> ()</td></tr>
 <tr class="separator:ad2a68331d938364dfdb9658ba20e9eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83455d738a9a9008e6d7afdc9db4c86b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a83455d738a9a9008e6d7afdc9db4c86b">OSAlarm__OnReset</a> ()</td></tr>
-<tr class="separator:a83455d738a9a9008e6d7afdc9db4c86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9462ff26e8664066b54c1969eb75668d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a> ()</td></tr>
+<tr class="separator:a9462ff26e8664066b54c1969eb75668d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34177118dcb93e79f810ca449e9ce943"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a34177118dcb93e79f810ca449e9ce943">PPCMtdec</a> ()</td></tr>
 <tr class="separator:a34177118dcb93e79f810ca449e9ce943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f302fd1c9473e4f4190032939b958da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a4f302fd1c9473e4f4190032939b958da">__OSSetExceptionHandler</a> ()</td></tr>
@@ -156,8 +156,8 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a12ac2a556aa0e9afea6a12e032926840"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a12ac2a556aa0e9afea6a12e032926840">OSAlarm__ResetFunctionInfo</a> [4]</td></tr>
-<tr class="separator:a12ac2a556aa0e9afea6a12e032926840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9df7ae202123e8b5397d2937b5d1a1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#aeb9df7ae202123e8b5397d2937b5d1a1">ResetFunctionInfo</a> [4]</td></tr>
+<tr class="separator:aeb9df7ae202123e8b5397d2937b5d1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af9fa63370f0719befef419eadc241c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSAlarm_8cpp.html#a9af9fa63370f0719befef419eadc241c">AlarmQueue</a> [8]</td></tr>
 <tr class="separator:a9af9fa63370f0719befef419eadc241c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -356,8 +356,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a83455d738a9a9008e6d7afdc9db4c86b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83455d738a9a9008e6d7afdc9db4c86b">&#9670;&nbsp;</a></span>OSAlarm__OnReset()</h2>
+<a id="a9462ff26e8664066b54c1969eb75668d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9462ff26e8664066b54c1969eb75668d">&#9670;&nbsp;</a></span>OnReset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +366,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm void OSAlarm__OnReset </td>
+          <td class="memname">static asm void OnReset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -642,8 +642,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a12ac2a556aa0e9afea6a12e032926840"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12ac2a556aa0e9afea6a12e032926840">&#9670;&nbsp;</a></span>OSAlarm__ResetFunctionInfo</h2>
+<a id="aeb9df7ae202123e8b5397d2937b5d1a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9df7ae202123e8b5397d2937b5d1a1">&#9670;&nbsp;</a></span>ResetFunctionInfo</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,7 +652,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* OSAlarm__ResetFunctionInfo[4]</td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* ResetFunctionInfo[4]</td>
         </tr>
       </table>
   </td>
@@ -662,12 +662,12 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="OSAlarm_8cpp.html#a83455d738a9a9008e6d7afdc9db4c86b">OSAlarm__OnReset</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="OSAlarm_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)0xFFFFFFFF,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aOSAlarm_8cpp_html_a83455d738a9a9008e6d7afdc9db4c86b"><div class="ttname"><a href="OSAlarm_8cpp.html#a83455d738a9a9008e6d7afdc9db4c86b">OSAlarm__OnReset</a></div><div class="ttdeci">static void OSAlarm__OnReset()</div><div class="ttdef"><b>Definition:</b> OSAlarm.cpp:155</div></div>
+<div class="ttc" id="aOSAlarm_8cpp_html_a9462ff26e8664066b54c1969eb75668d"><div class="ttname"><a href="OSAlarm_8cpp.html#a9462ff26e8664066b54c1969eb75668d">OnReset</a></div><div class="ttdeci">static void OnReset()</div><div class="ttdef"><b>Definition:</b> OSAlarm.cpp:155</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

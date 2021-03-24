@@ -104,7 +104,7 @@ $(function() {
 <code>#include &quot;asm/dolphin/dvd/dvd/cbForStateCheckID1.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/cbForStateCheckID2.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/cbForStateCheckID3.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/dvd/dvd/dvd__AlarmHandler.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/dvd/dvd/AlarmHandler.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/stateCoverClosed.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/stateCoverClosed_CMD.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/cbForStateCoverClosed.s&quot;</code><br />
@@ -175,8 +175,8 @@ Functions</h2></td></tr>
 <tr class="separator:afd2a76aabf82e83ad32a841a109e1da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7452bf2fb809d060c6db5d7412b9905"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ae7452bf2fb809d060c6db5d7412b9905">cbForStateCheckID3</a> ()</td></tr>
 <tr class="separator:ae7452bf2fb809d060c6db5d7412b9905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dd28fcafe441c4c86fc83198b15362d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a7dd28fcafe441c4c86fc83198b15362d">dvd__AlarmHandler</a> ()</td></tr>
-<tr class="separator:a7dd28fcafe441c4c86fc83198b15362d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a4dd6f3034ead4aca934d65ff1d220d81">AlarmHandler</a> ()</td></tr>
+<tr class="separator:a4dd6f3034ead4aca934d65ff1d220d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4807247f7705ade8f3c193f9aed55a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ac4807247f7705ade8f3c193f9aed55a1">stateCoverClosed</a> ()</td></tr>
 <tr class="separator:ac4807247f7705ade8f3c193f9aed55a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac6e47f98b3a446e7a98b1edf945af84"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#aac6e47f98b3a446e7a98b1edf945af84">stateCoverClosed_CMD</a> ()</td></tr>
@@ -316,11 +316,11 @@ Variables</h2></td></tr>
 <tr class="separator:a5040fc731e7c28662ef9bf8d3ae6c0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0712b25c11b0340e11c85143887a29b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a0712b25c11b0340e11c85143887a29b6">__DVDThreadQueue</a> [8]</td></tr>
 <tr class="separator:a0712b25c11b0340e11c85143887a29b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac320bdd787e8615bb11ce6ecb8653bd8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ac320bdd787e8615bb11ce6ecb8653bd8">dvd__lit_1</a> [69+3]</td></tr>
-<tr class="separator:ac320bdd787e8615bb11ce6ecb8653bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4206dc78cfda8a2399c38898497852"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a2f4206dc78cfda8a2399c38898497852">lit_1</a> [69+3]</td></tr>
+<tr class="separator:a2f4206dc78cfda8a2399c38898497852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4964cd4749a2185bce72721c35332de5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a4964cd4749a2185bce72721c35332de5">lit_18</a> [10+2]</td></tr>
 <tr class="separator:a4964cd4749a2185bce72721c35332de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a664f13fdb0fffa39dcc1c6fcb2ae04ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a664f13fdb0fffa39dcc1c6fcb2ae04ab">__DVDVersion</a> = (void*)&amp;<a class="el" href="dvd_8cpp.html#ac320bdd787e8615bb11ce6ecb8653bd8">dvd__lit_1</a></td></tr>
+<tr class="memitem:a664f13fdb0fffa39dcc1c6fcb2ae04ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a664f13fdb0fffa39dcc1c6fcb2ae04ab">__DVDVersion</a> = (void*)&amp;<a class="el" href="EXIBios_8cpp.html#a2f4206dc78cfda8a2399c38898497852">lit_1</a></td></tr>
 <tr class="separator:a664f13fdb0fffa39dcc1c6fcb2ae04ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af01545db0338ae3c3af064293965c2c2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#af01545db0338ae3c3af064293965c2c2">executing</a> [4]</td></tr>
 <tr class="separator:af01545db0338ae3c3af064293965c2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,22 +368,22 @@ Variables</h2></td></tr>
 <tr class="separator:ab18b3578c87674ebbab4b628c39e9102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5b573c69a67891bd74c710015c7fde9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ac5b573c69a67891bd74c710015c7fde9">lit_23</a> [6+2]</td></tr>
 <tr class="separator:ac5b573c69a67891bd74c710015c7fde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33bfadc2ff8056be2cfe03bc965dc8f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a33bfadc2ff8056be2cfe03bc965dc8f2">dvd__LastState</a> [4+4]</td></tr>
-<tr class="separator:a33bfadc2ff8056be2cfe03bc965dc8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78308d1ab53e6a475eff6a7dc01160ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a78308d1ab53e6a475eff6a7dc01160ba">LastState</a> [4+4]</td></tr>
+<tr class="separator:a78308d1ab53e6a475eff6a7dc01160ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17966373ce492a91607cb248a1c1883"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#aa17966373ce492a91607cb248a1c1883">CurrDiskID</a> [32]</td></tr>
 <tr class="separator:aa17966373ce492a91607cb248a1c1883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14db6616395216e3071ec6992055ac58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a14db6616395216e3071ec6992055ac58">DummyCommandBlock</a> [48]</td></tr>
 <tr class="separator:a14db6616395216e3071ec6992055ac58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29fda530b05cc70ee4ec8a9449415abf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a29fda530b05cc70ee4ec8a9449415abf">dvd__lit_359</a> [17]</td></tr>
-<tr class="separator:a29fda530b05cc70ee4ec8a9449415abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7172feb4379e5614a8a757d1aa59fff8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a7172feb4379e5614a8a757d1aa59fff8">lit_359</a> [17]</td></tr>
+<tr class="separator:a7172feb4379e5614a8a757d1aa59fff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa50290155300170beedd421e55705fba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#aa50290155300170beedd421e55705fba">ImmCommand</a> [12]</td></tr>
 <tr class="separator:aa50290155300170beedd421e55705fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2578c56ff19ff5349514ec03e0f9251"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ab2578c56ff19ff5349514ec03e0f9251">DmaCommand</a> = 0xFFFFFFFF</td></tr>
 <tr class="separator:ab2578c56ff19ff5349514ec03e0f9251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbc8dca5211ada5175194f4423333837"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#acbc8dca5211ada5175194f4423333837">lit_956</a> [13]</td></tr>
 <tr class="separator:acbc8dca5211ada5175194f4423333837"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f1fba512adcf250e0c98a5337828b15"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a4f1fba512adcf250e0c98a5337828b15">dvd__lit_1060</a> [13+1]</td></tr>
-<tr class="separator:a4f1fba512adcf250e0c98a5337828b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a57a2fe2101e6cc601893142b8765ef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a2a57a2fe2101e6cc601893142b8765ef">lit_1060</a> [13+1]</td></tr>
+<tr class="separator:a2a57a2fe2101e6cc601893142b8765ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9434bc2e05b7fd2f32ef09b9227b81be"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a9434bc2e05b7fd2f32ef09b9227b81be">ResetAlarm</a> [40]</td></tr>
 <tr class="separator:a9434bc2e05b7fd2f32ef09b9227b81be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -656,6 +656,31 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dd6f3034ead4aca934d65ff1d220d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd6f3034ead4aca934d65ff1d220d81">&#9670;&nbsp;</a></span>AlarmHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void AlarmHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1063,31 +1088,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">static asm void defaultOptionalCommandChecker </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7dd28fcafe441c4c86fc83198b15362d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dd28fcafe441c4c86fc83198b15362d">&#9670;&nbsp;</a></span>dvd__AlarmHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void dvd__AlarmHandler </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2165,7 +2165,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* __DVDVersion = (void*)&amp;<a class="el" href="dvd_8cpp.html#ac320bdd787e8615bb11ce6ecb8653bd8">dvd__lit_1</a></td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* __DVDVersion = (void*)&amp;<a class="el" href="EXIBios_8cpp.html#a2f4206dc78cfda8a2399c38898497852">lit_1</a></td>
         </tr>
       </table>
   </td>
@@ -2441,142 +2441,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a33bfadc2ff8056be2cfe03bc965dc8f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33bfadc2ff8056be2cfe03bc965dc8f2">&#9670;&nbsp;</a></span>dvd__LastState</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dvd__LastState[4+4]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac320bdd787e8615bb11ce6ecb8653bd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac320bdd787e8615bb11ce6ecb8653bd8">&#9670;&nbsp;</a></span>dvd__lit_1</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dvd__lit_1[69+3]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
-<div class="line">    0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,</div>
-<div class="line">    0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,</div>
-<div class="line">    0x30, 0x34, 0x3A, 0x31, 0x34, 0x3A, 0x35, 0x31, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,</div>
-<div class="line">    0x29, 0x20, 0x3E, 0x3E, 0x00,</div>
-<div class="line">    </div>
-<div class="line">    0x00, 0x00, 0x00,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a4f1fba512adcf250e0c98a5337828b15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f1fba512adcf250e0c98a5337828b15">&#9670;&nbsp;</a></span>dvd__lit_1060</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* dvd__lit_1060[13+1]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0xA0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0xA0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
-<div class="line">    </div>
-<div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">}</div>
-<div class="ttc" id="advd_8cpp_html_a6f565d9ceb2f251f8ea88337293d056b"><div class="ttname"><a href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a></div><div class="ttdeci">void DVDCheckDisk()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:795</div></div>
-<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a29fda530b05cc70ee4ec8a9449415abf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29fda530b05cc70ee4ec8a9449415abf">&#9670;&nbsp;</a></span>dvd__lit_359</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* dvd__lit_359[17]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x318),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x6C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x10C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x130),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x6C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x40),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x150),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x1B4),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x1E0),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x214),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x238),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x25C),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x280),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2A4),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2CC),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x140),</div>
-<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2F8),</div>
-<div class="line">}</div>
-<div class="ttc" id="advd_8cpp_html_a1b7526621b195f5dd21993a1c99be2fa"><div class="ttname"><a href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a></div><div class="ttdeci">static void stateBusy()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:561</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="aed468647f5f3e3ad20cb84cec4b9169c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed468647f5f3e3ad20cb84cec4b9169c">&#9670;&nbsp;</a></span>DVDInitialized</h2>
 
@@ -2734,6 +2598,100 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a78308d1ab53e6a475eff6a7dc01160ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78308d1ab53e6a475eff6a7dc01160ba">&#9670;&nbsp;</a></span>LastState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> LastState[4+4]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f4206dc78cfda8a2399c38898497852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4206dc78cfda8a2399c38898497852">&#9670;&nbsp;</a></span>lit_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> lit_1[69+3]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,</div>
+<div class="line">    0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,</div>
+<div class="line">    0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,</div>
+<div class="line">    0x30, 0x34, 0x3A, 0x31, 0x34, 0x3A, 0x35, 0x31, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,</div>
+<div class="line">    0x29, 0x20, 0x3E, 0x3E, 0x00,</div>
+<div class="line">    </div>
+<div class="line">    0x00, 0x00, 0x00,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2a57a2fe2101e6cc601893142b8765ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a57a2fe2101e6cc601893142b8765ef">&#9670;&nbsp;</a></span>lit_1060</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* lit_1060[13+1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0xA0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0xA0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x90),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a>)+0x98),</div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="advd_8cpp_html_a6f565d9ceb2f251f8ea88337293d056b"><div class="ttname"><a href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a></div><div class="ttdeci">void DVDCheckDisk()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:795</div></div>
+<div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a4964cd4749a2185bce72721c35332de5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4964cd4749a2185bce72721c35332de5">&#9670;&nbsp;</a></span>lit_18</h2>
 
@@ -2813,6 +2771,48 @@ Variables</h2></td></tr>
 <div class="line">    0x64, 0x69, 0x73, 0x63, 0x20, 0x69, 0x73, 0x20, 0x74, 0x6F, 0x6F, 0x20, 0x62, 0x69, 0x67, 0x2E,</div>
 <div class="line">    0x20, 0x20, 0x20, 0x00,</div>
 <div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7172feb4379e5614a8a757d1aa59fff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7172feb4379e5614a8a757d1aa59fff8">&#9670;&nbsp;</a></span>lit_359</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a9d99eb16c89214979b98ba942a455e7b">SECTION_DATA</a> void* lit_359[17]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x318),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x6C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x10C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x130),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x6C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x40),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x150),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x1B4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x1E0),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x214),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x238),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x25C),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x280),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2A4),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2CC),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x140),</div>
+<div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2F8),</div>
+<div class="line">}</div>
+<div class="ttc" id="advd_8cpp_html_a1b7526621b195f5dd21993a1c99be2fa"><div class="ttname"><a href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a></div><div class="ttdeci">static void stateBusy()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:561</div></div>
 </div><!-- fragment -->
 </div>
 </div>

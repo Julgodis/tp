@@ -84,8 +84,8 @@ $(function() {
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CARDBlock_8h_source.html">dolphin/card/CARDBlock.h</a>&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBlock/__CARDGetFatBlock.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/card/CARDBlock/CARDBlock__WriteCallback.s&quot;</code><br />
-<code>#include &quot;asm/dolphin/card/CARDBlock/CARDBlock__EraseCallback.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/card/CARDBlock/WriteCallback.s&quot;</code><br />
+<code>#include &quot;asm/dolphin/card/CARDBlock/EraseCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBlock/__CARDAllocBlock.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/card/CARDBlock/__CARDUpdateFatBlock.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -101,10 +101,10 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:a8a68b67a5d0c9136261967f3e3105e7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#a8a68b67a5d0c9136261967f3e3105e7c">__CARDGetFatBlock</a> ()</td></tr>
 <tr class="separator:a8a68b67a5d0c9136261967f3e3105e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1ae4ec34d2df01711db915d5749b30c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#ad1ae4ec34d2df01711db915d5749b30c">CARDBlock__WriteCallback</a> ()</td></tr>
-<tr class="separator:ad1ae4ec34d2df01711db915d5749b30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f25ea3da411b7dc573d6a308042b61"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#a99f25ea3da411b7dc573d6a308042b61">CARDBlock__EraseCallback</a> ()</td></tr>
-<tr class="separator:a99f25ea3da411b7dc573d6a308042b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb03a880103806f8c195dd1cf118aee5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#afb03a880103806f8c195dd1cf118aee5">WriteCallback</a> ()</td></tr>
+<tr class="separator:afb03a880103806f8c195dd1cf118aee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd40b835a741b1739a172ac9f446c80"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#aadd40b835a741b1739a172ac9f446c80">EraseCallback</a> ()</td></tr>
+<tr class="separator:aadd40b835a741b1739a172ac9f446c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b9c22d5fb0aab41549b18c861aac191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#a4b9c22d5fb0aab41549b18c861aac191">__CARDAllocBlock</a> ()</td></tr>
 <tr class="separator:a4b9c22d5fb0aab41549b18c861aac191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a8a74fe1fc486d3f8d5b93c6b22167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CARDBlock_8cpp.html#a28a8a74fe1fc486d3f8d5b93c6b22167">__CARDUpdateFatBlock</a> ()</td></tr>
@@ -247,56 +247,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a99f25ea3da411b7dc573d6a308042b61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99f25ea3da411b7dc573d6a308042b61">&#9670;&nbsp;</a></span>CARDBlock__EraseCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void CARDBlock__EraseCallback </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad1ae4ec34d2df01711db915d5749b30c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1ae4ec34d2df01711db915d5749b30c">&#9670;&nbsp;</a></span>CARDBlock__WriteCallback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static asm void CARDBlock__WriteCallback </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0440acad7d135008a79a898fb9e03f45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0440acad7d135008a79a898fb9e03f45">&#9670;&nbsp;</a></span>DCStoreRange()</h2>
 
@@ -314,6 +264,31 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aadd40b835a741b1739a172ac9f446c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd40b835a741b1739a172ac9f446c80">&#9670;&nbsp;</a></span>EraseCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void EraseCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afc6bb37288ea54f2151b2ecd4d4ccf3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc6bb37288ea54f2151b2ecd4d4ccf3b">&#9670;&nbsp;</a></span>memcpy()</h2>
 
@@ -327,6 +302,31 @@ Variables</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb03a880103806f8c195dd1cf118aee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb03a880103806f8c195dd1cf118aee5">&#9670;&nbsp;</a></span>WriteCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static asm void WriteCallback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
