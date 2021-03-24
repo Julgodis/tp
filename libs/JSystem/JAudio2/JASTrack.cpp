@@ -11,16 +11,6 @@
 // Types:
 // 
 
-struct JASDsp {
-	struct TChannel {
-		/* 8029E00C */ void setFilterMode(u16);
-		/* 8029E044 */ void setIIRFilterParam(s16*);
-		/* 8029E06C */ void setFIR8FilterParam(s16*);
-		/* 8029E094 */ void setDistFilter(s16);
-	};
-
-};
-
 struct JASOscillator {
 	struct Point {
 	};
@@ -28,6 +18,9 @@ struct JASOscillator {
 	struct Data {
 	};
 
+};
+
+struct JASSoundParams {
 };
 
 struct JASChannel {
@@ -38,7 +31,14 @@ struct JASChannel {
 	/* 8029BBFC */ void free();
 };
 
-struct JASSoundParams {
+struct JASDsp {
+	struct TChannel {
+		/* 8029E00C */ void setFilterMode(u16);
+		/* 8029E044 */ void setIIRFilterParam(s16*);
+		/* 8029E06C */ void setFIR8FilterParam(s16*);
+		/* 8029E094 */ void setDistFilter(s16);
+	};
+
 };
 
 struct JASTrack {
@@ -129,6 +129,13 @@ struct JASMemPool_MultiThreaded__template1 {
 
 struct JASDefaultBankTable {
 	/* 802934B4 */ ~JASDefaultBankTable();
+};
+
+template <typename A0>
+struct JASBankTable { };
+/* JASBankTable<256> */
+struct JASBankTable__template0 {
+	/* 80293528 */ void getBank(u32) const;
 };
 
 struct JASGenericMemPool {
@@ -258,7 +265,7 @@ extern "C" void func_80293334(); // 1
 extern "C" void __sinit_JASTrack_cpp(); // 1
 extern "C" void __dt__Q28JASTrack5TListFv(); // 1
 extern "C" void __dt__19JASDefaultBankTableFv(); // 1
-extern "C" static void func_80293528(); // 1
+extern "C" void func_80293528(); // 1
 extern "C" extern u8 const sPitchEnvOsc__8JASTrack[24];
 extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
 extern "C" extern u8 JASTrack__lit_433[12];
@@ -1168,7 +1175,7 @@ asm JASDefaultBankTable::~JASDefaultBankTable() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80293528() {
+asm void JASBankTable__template0::getBank(u32 param_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTrack/func_80293528.s"
 }

@@ -22,8 +22,8 @@ struct J3DAnmLoaderDataBase {
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-struct J3DAnmVtxColorFull {
-	/* 8032A30C */ J3DAnmVtxColorFull();
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
 };
 
 struct J3DAnmColorFullData {
@@ -32,35 +32,35 @@ struct J3DAnmColorFullData {
 struct J3DAnmTransformFull {
 };
 
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-struct J3DAnmVisibilityFullData {
-};
-
-struct J3DAnmVisibilityFull {
-	/* 8033979C */ ~J3DAnmVisibilityFull();
-	/* 803397F8 */ void getKind() const;
-};
-
-struct J3DAnmTexPatternFullData {
-};
-
-struct J3DAnmTransformFullData {
-};
-
 struct J3DAnmClusterFullData {
 };
 
-struct J3DAnmClusterFull {
+struct J3DAnmTransformFullData {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
+struct J3DAnmVisibilityFullData {
+};
+
 struct J3DAnmVtxColorFullData {
+};
+
+struct J3DAnmTexPatternFullData {
+};
+
+struct J3DAnmClusterFull {
+};
+
+struct J3DAnmVtxColorFull {
+	/* 8032A30C */ J3DAnmVtxColorFull();
+};
+
+struct J3DAnmVisibilityFull {
+	/* 8033979C */ ~J3DAnmVisibilityFull();
+	/* 803397F8 */ void getKind() const;
 };
 
 struct J3DAnmFullLoader_v15 {
@@ -82,44 +82,44 @@ struct J3DAnmFullLoader_v15 {
 	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTevRegKeyData {
-};
-
-struct J3DAnmVtxColorKeyData {
-};
-
-struct J3DAnmTransformKeyData {
+struct J3DAnmVtxColorKey {
+	/* 8032A4E0 */ J3DAnmVtxColorKey();
 };
 
 struct J3DAnmColorKey {
 	/* 8032AB00 */ J3DAnmColorKey();
 };
 
+struct J3DAnmTransformKey {
+};
+
+struct J3DAnmClusterKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
 struct J3DAnmTextureSRTKeyData {
 };
 
-struct J3DAnmClusterKey {
+struct J3DAnmTransformKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032AE18 */ J3DAnmTevRegKey();
 };
 
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmClusterKey {
+};
+
 struct J3DAnmTextureSRTKey {
 	/* 80329E5C */ J3DAnmTextureSRTKey();
-};
-
-struct J3DAnmVtxColorKey {
-	/* 8032A4E0 */ J3DAnmVtxColorKey();
-};
-
-struct J3DAnmClusterKeyData {
-};
-
-struct J3DAnmColorKeyData {
 };
 
 struct J3DAnmKeyLoader_v15 {
@@ -160,8 +160,8 @@ struct J3DAnmTransform {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template77(void const*, void const*); // 2
 static void JSUConvertOffsetToPtr__template78(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template79(void const*, void const*); // 2
 
 extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
 extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv(); // 1
@@ -738,7 +738,7 @@ asm J3DAnmLoader::~J3DAnmLoader() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template77(void const* param_0, void const* param_1) {
+asm static void JSUConvertOffsetToPtr__template78(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339848.s"
 }
@@ -749,7 +749,7 @@ asm static void JSUConvertOffsetToPtr__template77(void const* param_0, void cons
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template78(void const* param_0, void const* param_1) {
+asm static void JSUConvertOffsetToPtr__template79(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339860.s"
 }

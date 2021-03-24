@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -20,15 +29,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_DmapBg_c {
@@ -60,10 +60,7 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
-struct J2DOrthoGraph {
-};
-
-struct CSTControl {
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -79,14 +76,17 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct CSTControl {
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMenu_Dmap_c {

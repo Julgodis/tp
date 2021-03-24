@@ -115,11 +115,11 @@ void JPADrawBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawRotBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawYBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawRotYBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-static void dirTypeVel(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3<f32>*); // 2
-static void dirTypePos(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3<f32>*); // 2
-static void dirTypePosInv(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3<f32>*); // 2
-static void dirTypeEmtrDir(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3<f32>*); // 2
-static void dirTypePrevPtcl(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3<f32>*); // 2
+static void dirTypeVel(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3__template0*); // 2
+static void dirTypePos(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3__template0*); // 2
+static void dirTypePosInv(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3__template0*); // 2
+static void dirTypeEmtrDir(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3__template0*); // 2
+static void dirTypePrevPtcl(JPAEmitterWorkData const*, JPABaseParticle const*, JGeometry::TVec3__template0*); // 2
 static void rotTypeY(f32, f32, f32 (& )[3][4]); // 2
 static void rotTypeX(f32, f32, f32 (& )[3][4]); // 2
 static void rotTypeZ(f32, f32, f32 (& )[3][4]); // 2
@@ -133,8 +133,8 @@ void JPADrawDBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawRotation(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawPoint(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPADrawLine(JPAEmitterWorkData*, JPABaseParticle*); // 2
-static void getNext(JPANode<JPABaseParticle>*); // 2
-static void getPrev(JPANode<JPABaseParticle>*); // 2
+static void getNext(JPANode__template0*); // 2
+static void getPrev(JPANode__template0*); // 2
 void JPADrawStripe(JPAEmitterWorkData*); // 2
 void JPADrawStripeX(JPAEmitterWorkData*); // 2
 void JPADrawEmitterCallBackB(JPAEmitterWorkData*); // 2

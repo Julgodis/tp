@@ -121,18 +121,19 @@ class Function(Symbol):
                 await builder.write_nonewline(f"static ")
 
         if not self.special_func_name in special_func_no_return or original:
+            return_type = self.return_type
             if not self.return_type:
-                await builder.write_nonewline(f"{VOID.type()} ")
-            else:
-                await builder.write_nonewline(f"{self.return_type.type()} ")
+                return_type = VOID
+
+            await builder.write_nonewline(f"{return_type.type(specialize_templates,without_template)} ")
         await builder.write_nonewline(f"{self.function_name(original, full_qualified_name, without_template, specialize_templates)}")
 
         arg_type = ""
         if not original and self.is_demangled():
             if forward:
-                arg_type = ", ".join([x.type() for x in self.argument_types])
+                arg_type = ", ".join([x.type(specialize_templates,without_template) for x in self.argument_types])
             else:
-                arg_type = ", ".join([x.decl(f"param_{i}") for i, x in zip(
+                arg_type = ", ".join([x.decl(f"param_{i}",specialize_templates,without_template) for i, x in zip(
                     range(len(self.argument_types)), self.argument_types)])
 
         if template_args:

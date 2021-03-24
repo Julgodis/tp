@@ -47,9 +47,6 @@ struct dBgS_LinChk {
 struct stage_camera2_data_class {
 };
 
-struct camera_class {
-};
-
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -80,6 +77,9 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
+};
+
+struct camera_class {
 };
 
 struct dCamera_c {
@@ -525,12 +525,12 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct csXyz {
-};
-
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct csXyz {
 };
 
 struct dBgS {

@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct J2DOrthoGraph {
+struct JKRArchive {
 };
 
 struct JKRExpHeap {
 };
 
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
+struct J2DOrthoGraph {
 };
 
 struct dMenu_ItemExplain_c {
@@ -73,6 +73,12 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
+struct ResTIMG {
+};
+
+struct ResTLUT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -82,21 +88,15 @@ struct JGeometry {
 
 };
 
-struct ResTIMG {
-};
-
-struct ResTLUT {
-};
-
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {

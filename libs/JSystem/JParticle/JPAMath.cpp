@@ -24,11 +24,11 @@ struct JGeometry {
 // Forward References:
 // 
 
-void JPAGetDirMtx(JGeometry::TVec3<f32> const&, f32 (* )[4]); // 2
+void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]); // 2
 void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]); // 2
 void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*); // 2
-void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*, JGeometry::TVec3<f32>*); // 2
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
+void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*, JGeometry::TVec3__template0*); // 2
 void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
 
 extern "C" void func_80280588(); // 1

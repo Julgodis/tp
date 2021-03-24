@@ -88,7 +88,8 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct JKRArchive {
@@ -99,8 +100,7 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct STControl {
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct CSTControl {
 };
 
 struct JKRExpHeap {
-};
-
-struct STControl {
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_Letter_c {
@@ -115,11 +115,11 @@ struct JUtility {
 
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {

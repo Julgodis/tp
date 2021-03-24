@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TObject {
-	};
-
-};
-
 struct Vec {
 };
 
@@ -67,6 +55,18 @@ namespace JStudio {
 
 };
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
+	};
+
+};
+
 struct JStudio_JStage {
 	struct TAdaptor_actor {
 		struct TVVOutput_ANIMATION_FRAME_ {
@@ -93,6 +93,7 @@ struct JStudio_JStage {
 		/* 8028AC04 */ void adaptor_do_RELATION(JStudio::data::TEOperationData, void const*, u32);
 		/* 8028AC48 */ void adaptor_do_RELATION_NODE(JStudio::data::TEOperationData, void const*, u32);
 		/* 8028ACA4 */ void adaptor_do_RELATION_ENABLE(JStudio::data::TEOperationData, void const*, u32);
+		/* 8028ACFC */ void setJSG_ID_(void (JStage::TActor::*)(u32), JStudio::data::TEOperationData, void const*, u32);
 		/* 8028AD38 */ void setJSG_SRT_(JStudio::TControl const*);
 		/* 8028AECC */ void getJSG_SRT_(JStudio::TControl const*);
 	};
@@ -139,7 +140,7 @@ extern "C" void adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ
 extern "C" void adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
 extern "C" void adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
 extern "C" void adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl(); // 1
 extern "C" void setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl(); // 1
 extern "C" void getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl(); // 1
 extern "C" void __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor(); // 1
@@ -547,7 +548,7 @@ asm void JStudio_JStage::TAdaptor_actor::adaptor_do_RELATION_ENABLE(JStudio::dat
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl() {
+asm void JStudio_JStage::TAdaptor_actor::setJSG_ID_(void (JStage::TActor::*)(u32), JStudio::data::TEOperationData param_1, void const* param_2, u32 param_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028ACFC.s"
 }

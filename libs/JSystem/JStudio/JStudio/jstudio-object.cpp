@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXColor {
+struct Vec {
 };
 
-struct Vec {
+struct _GXColor {
 };
 
 namespace JStudio {

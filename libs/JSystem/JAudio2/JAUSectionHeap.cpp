@@ -24,13 +24,13 @@ struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
+struct JAISeqDataUser {
+};
+
 struct JKRArchive {
 };
 
 struct JAISeqData {
-};
-
-struct JAISeqDataUser {
 };
 
 struct JAUSectionHeap {
@@ -75,6 +75,19 @@ struct JAUSection {
 	/* 802A5CAC */ void beginNewBankTable(u32, u32);
 	/* 802A5D9C */ void endNewBankTable();
 	/* 802A6468 */ ~JAUSection();
+};
+
+namespace std {
+	template <typename A1>
+	struct __bitset_base { };
+	/* __bitset_base<8> */
+	struct __bitset_base__template0 {
+		/* 802A65D4 */ void set(u32, bool);
+		/* 802A6614 */ void reset(u32);
+		/* 802A6634 */ void test(u32) const;
+		/* 802A665C */ __bitset_base__template0();
+	};
+
 };
 
 struct JASResArcLoader {
@@ -213,10 +226,10 @@ extern "C" void __dt__14JAUSectionHeapFv(); // 1
 extern "C" static void func_802A6440(); // 1
 extern "C" void __dt__10JAUSectionFv(); // 1
 extern "C" static void func_802A6574(); // 1
-extern "C" static void func_802A65D4(); // 1
-extern "C" static void func_802A6614(); // 1
-extern "C" static void func_802A6634(); // 1
-extern "C" static void func_802A665C(); // 1
+extern "C" void func_802A65D4(); // 1
+extern "C" void func_802A6614(); // 1
+extern "C" void func_802A6634(); // 1
+extern "C" void func_802A665C(); // 1
 extern "C" static void func_802A6680(); // 1
 extern "C" static void func_802A6688(); // 1
 extern "C" static void func_802A6690(); // 1
@@ -772,7 +785,7 @@ extern "C" asm static void func_802A6574() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A65D4() {
+asm void std::__bitset_base__template0::set(u32 param_0, bool param_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A65D4.s"
 }
@@ -783,7 +796,7 @@ extern "C" asm static void func_802A65D4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A6614() {
+asm void std::__bitset_base__template0::reset(u32 param_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6614.s"
 }
@@ -794,7 +807,7 @@ extern "C" asm static void func_802A6614() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A6634() {
+asm void std::__bitset_base__template0::test(u32 param_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A6634.s"
 }
@@ -813,7 +826,7 @@ SECTION_SDATA static u8 lit_2588[4 + 4 /* padding */] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A665C() {
+asm std::__bitset_base__template0::__bitset_base__template0() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSectionHeap/func_802A665C.s"
 }

@@ -2,7 +2,7 @@
 from collections import defaultdict
 
 from .data import *
-from .types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType
+from .types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType, ValueType
 from . import util
 from . import demangle
 
@@ -64,8 +64,10 @@ def named_type_from_qulified_name(qname):
     ])
 
 def type_from_demangled_param(param):
+    if not param:
+        return None
+
     if isinstance(param, demangle.FuncParam):
-        # TODO: check for None from type_from_demangled_param
         return FunctionType(
             inner = type_from_demangled_param(param.inner_type),
             return_type = type_from_demangled_param(param.ret_type),
@@ -73,12 +75,13 @@ def type_from_demangled_param(param):
             inner_class= named_type_from_qulified_name(param.class_name)
         )
     elif isinstance(param, demangle.ArrayParam):
-        # TODO: check for None from type_from_demangled_param
         return ArrayType(
             base = type_from_demangled_param(param.base_type),
             inner = type_from_demangled_param(param.inner_type),
             sizes = param.sizes
         )
+    elif isinstance(param, demangle.IntegerParam):
+        return ValueType(param.value)
 
     if not param.name:
         # used for making types like: A (*)[3] easier to work with. 

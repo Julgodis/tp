@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPAEmitterWorkData {
 };
 
 struct JKRHeap {
@@ -22,7 +22,7 @@ struct JPAFieldBlock {
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-struct JPAEmitterWorkData {
+struct JPABaseParticle {
 };
 
 struct JPAFieldBase {

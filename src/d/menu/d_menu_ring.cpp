@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct STControl {
+};
+
 struct CSTControl {
 };
 
 struct JKRExpHeap {
-};
-
-struct STControl {
 };
 
 struct dMenu_Ring_c {
@@ -153,19 +153,19 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
 struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {

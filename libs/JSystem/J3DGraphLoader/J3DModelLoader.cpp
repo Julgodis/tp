@@ -11,16 +11,13 @@
 // Types:
 // 
 
+struct J3DShapeBlock {
+};
+
+struct J3DTextureBlock {
+};
+
 struct J3DMaterialBlock_v21 {
-};
-
-struct J3DMaterialBlock {
-};
-
-struct J3DMaterialDLBlock {
-};
-
-struct J3DDrawBlock {
 };
 
 struct J3DEnvelopeBlock {
@@ -29,16 +26,19 @@ struct J3DEnvelopeBlock {
 struct J3DModelInfoBlock {
 };
 
-struct J3DVertexBlock {
+struct J3DMaterialDLBlock {
 };
 
-struct J3DShapeBlock {
+struct J3DDrawBlock {
 };
 
-struct J3DTextureBlock {
+struct J3DMaterialBlock {
 };
 
 struct J3DJointBlock {
+};
+
+struct J3DVertexBlock {
 };
 
 struct J3DModelLoader {
@@ -147,10 +147,10 @@ struct JUTNameTab {
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-struct J3DDrawMtxData {
+struct J3DVertexData {
 };
 
-struct J3DVertexData {
+struct J3DDrawMtxData {
 };
 
 struct J3DShapeTable {
@@ -158,10 +158,10 @@ struct J3DShapeTable {
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-struct J3DJoint {
+struct J3DModelHierarchy {
 };
 
-struct J3DModelHierarchy {
+struct J3DJoint {
 };
 
 struct J3DMaterialTable {
@@ -234,9 +234,10 @@ static void getFmtType(_GXVtxAttrFmtList*, _GXAttr); // 2
 static void JSUConvertOffsetToPtr__template66(void const*, void const*); // 2
 static void JSUConvertOffsetToPtr__template67(void const*, void const*); // 2
 static void JSUConvertOffsetToPtr__template68(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template70(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template70(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
+void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
 
 extern "C" void __ct__14J3DModelLoaderFv(); // 1
 extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
@@ -929,7 +930,7 @@ asm static void JSUConvertOffsetToPtr__template66(void const* param_0, void cons
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80336704() {
+asm static void JSUConvertOffsetToPtr__template67(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_80336704.s"
 }
@@ -940,7 +941,7 @@ extern "C" asm static void func_80336704() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template67(void const* param_0, void const* param_1) {
+asm static void JSUConvertOffsetToPtr__template68(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_8033671C.s"
 }
@@ -951,7 +952,7 @@ asm static void JSUConvertOffsetToPtr__template67(void const* param_0, void cons
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template68(void const* param_0, void const* param_1) {
+asm static void JSUConvertOffsetToPtr__template69(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_80336734.s"
 }
@@ -962,7 +963,7 @@ asm static void JSUConvertOffsetToPtr__template68(void const* param_0, void cons
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template69(void const* param_0, void const* param_1) {
+asm void JSUConvertOffsetToPtr__template70(void const* param_0, void const* param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_8033674C.s"
 }
@@ -973,7 +974,7 @@ asm void JSUConvertOffsetToPtr__template69(void const* param_0, void const* para
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template70(void const* param_0, u32 param_1) {
+asm void JSUConvertOffsetToPtr__template71(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_80336764.s"
 }
@@ -984,7 +985,7 @@ asm void JSUConvertOffsetToPtr__template70(void const* param_0, u32 param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template71(void const* param_0, u32 param_1) {
+asm void JSUConvertOffsetToPtr__template72(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DModelLoader/func_8033677C.s"
 }

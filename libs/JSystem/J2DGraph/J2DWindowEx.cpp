@@ -11,11 +11,43 @@
 // Types:
 // 
 
-struct _GXColor {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct _GXCullMode {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct J2DTevStage {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct JGeometry {
@@ -25,12 +57,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DTevStage {
 };
 
 struct ResFONT {
@@ -44,20 +70,11 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct _GXCullMode {
+struct _GXColor {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct J2DPane {
@@ -86,21 +103,10 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DAnmTextureSRTKey {
-};
+struct JUtility {
+	struct TColor {
+	};
 
-struct J2DAnmColor {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct J2DWindow {
@@ -112,12 +118,6 @@ struct J2DWindow {
 	/* 802FB000 */ void resize(f32, f32);
 	/* 802FB1D8 */ void drawSelf(f32, f32);
 	/* 802FBF98 */ void getTypeID() const;
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct J2DWindowEx {

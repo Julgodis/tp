@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JSUFileInputStream {
-};
-
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -22,6 +19,9 @@ struct JKRHeap {
 
 struct JKRAramStreamCommand {
 	/* 802D4088 */ JKRAramStreamCommand();
+};
+
+struct JSUFileInputStream {
 };
 
 struct JKRAramStream {

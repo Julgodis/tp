@@ -11,16 +11,16 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+};
+
 struct JPAEmitterWorkData {
 };
 
 struct JPABaseParticle {
 	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
 	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
-};
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 struct JPABaseEmitter {
@@ -179,7 +179,7 @@ void JPARegistChildPrmEnv(JPAEmitterWorkData*); // 2
 void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPALoadExTex(JPAEmitterWorkData*); // 2
-void JPAGetDirMtx(JGeometry::TVec3<f32> const&, f32 (* )[4]); // 2
+void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]); // 2
 void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
 
 extern "C" void JPASetPointSize__FP18JPAEmitterWorkData(); // 1

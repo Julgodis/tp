@@ -11,18 +11,18 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
-struct JKRExpHeap {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMenu_Insect_c {
@@ -81,10 +81,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -102,10 +102,10 @@ struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {

@@ -17,16 +17,7 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
-struct dEvDtStaff_c {
-	/* 80044134 */ void init();
-};
-
-struct dEvDtEvent_c {
-	/* 80043E78 */ void finishCheck();
-	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
-};
-
-struct fopAc_ac_c {
+struct dEvDtData_c {
 };
 
 struct Vec {
@@ -36,7 +27,16 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dEvDtData_c {
+struct fopAc_ac_c {
+};
+
+struct dEvDtStaff_c {
+	/* 80044134 */ void init();
+};
+
+struct dEvDtEvent_c {
+	/* 80043E78 */ void finishCheck();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
 struct dEvent_manager_c {

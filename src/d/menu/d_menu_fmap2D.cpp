@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct STControl {
 };
 
-struct STControl {
+struct ResTIMG {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -87,7 +87,13 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
 struct JKRExpHeap {
+};
+
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -103,9 +109,6 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
@@ -118,9 +121,6 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-};
-
-struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Fmap2DTop_c {

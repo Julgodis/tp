@@ -139,6 +139,12 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
+struct ResTIMG {
+};
+
+struct ResTLUT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -146,12 +152,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTIMG {
-};
-
-struct ResTLUT {
 };
 
 struct J2DPicture {

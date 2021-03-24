@@ -28,10 +28,10 @@ struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-struct ResFONT {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct ResFONT {
 };
 
 struct JUTResFont {
@@ -66,10 +66,10 @@ struct J2DPicture {
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-struct J2DTextBoxHBinding {
+struct J2DTextBoxVBinding {
 };
 
-struct J2DTextBoxVBinding {
+struct J2DTextBoxHBinding {
 };
 
 struct J2DTextBox {

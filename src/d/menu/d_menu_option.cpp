@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct JKRArchive {
 };
 
 struct dMenu_Option_c {
@@ -174,9 +174,6 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -185,6 +182,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

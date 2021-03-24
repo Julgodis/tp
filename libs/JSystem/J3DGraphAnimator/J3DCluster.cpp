@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DVertexBuffer {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DVertexBuffer {
 };
 
 struct J3DAnmCluster {

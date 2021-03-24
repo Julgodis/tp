@@ -17,6 +17,9 @@ struct JAISoundID {
 struct JAIAudience {
 };
 
+struct JASSoundParams {
+};
+
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
@@ -26,6 +29,9 @@ struct JAISoundStrategyMgr__template1 {
 struct JAISeqMgr {
 };
 
+struct JAISoundActivity {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -33,12 +39,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
 };
 
 struct JAISeq {

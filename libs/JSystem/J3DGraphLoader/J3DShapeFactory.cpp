@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXVtxDescList {
+struct J3DShapeBlock {
 };
 
-struct J3DShapeBlock {
+struct _GXVtxDescList {
 };
 
 struct J3DShapeFactory {
@@ -40,10 +40,10 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template73(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template74(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template75(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template76(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template77(void const*, u32); // 2
 
 extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock(); // 1
 extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList(); // 1
@@ -66,8 +66,8 @@ extern "C" extern char const* const J3DShapeFactory__stringBase0;
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
-void JSUConvertOffsetToPtr__template70(void const*, u32); // 2
 void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
+void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
 
 extern "C" void OSReport(); // 1
 extern "C" void* __nw__FUl(); // 1
@@ -196,7 +196,7 @@ asm void J3DShapeFactory::calcSizeShapeMtx(u32 param_0, int param_1, int param_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template73(void const* param_0, u32 param_1) {
+asm static void JSUConvertOffsetToPtr__template74(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337AE0.s"
 }
@@ -207,7 +207,7 @@ asm static void JSUConvertOffsetToPtr__template73(void const* param_0, u32 param
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template74(void const* param_0, u32 param_1) {
+asm static void JSUConvertOffsetToPtr__template75(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337AF8.s"
 }
@@ -218,7 +218,7 @@ asm static void JSUConvertOffsetToPtr__template74(void const* param_0, u32 param
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template75(void const* param_0, u32 param_1) {
+asm static void JSUConvertOffsetToPtr__template76(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337B10.s"
 }
@@ -229,7 +229,7 @@ asm static void JSUConvertOffsetToPtr__template75(void const* param_0, u32 param
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template76(void const* param_0, u32 param_1) {
+asm static void JSUConvertOffsetToPtr__template77(void const* param_0, u32 param_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337B28.s"
 }

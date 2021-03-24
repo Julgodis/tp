@@ -11,10 +11,34 @@
 // Types:
 // 
 
-struct dBgW_Base {
-	struct PushPullLabel {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846B0 */ void ResetCoHit();
+};
+
+struct daPy_anmHeap_c {
+	struct daAlinkHEAP_TYPE {
 	};
 
+	/* 80140DCC */ void __defctor();
+	/* 8015ED10 */ daPy_anmHeap_c(u32);
+	/* 8015ED50 */ ~daPy_anmHeap_c();
+	/* 8015EDC4 */ void mallocBuffer();
+	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
+	/* 8015F068 */ void loadDataIdx(u16);
+	/* 8015F0D0 */ void loadDataPriIdx(u16);
+	/* 8015F118 */ void loadDataDemoRID(u16, u16);
+	/* 8015F168 */ void setAnimeHeap();
 };
 
 struct cBgS_PolyInfo {
@@ -22,6 +46,14 @@ struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 	/* 80268120 */ void ClearPi();
 	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+};
+
+struct J3DModelData {
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 };
 
 struct Vec {
@@ -46,15 +78,61 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct daAlinkHIO_anm_c {
+};
+
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+};
+
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct dCcG_At_Spl {
+};
+
+struct fopEn_enemy_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
+struct daAlink_footData_c {
+	/* 800CFCB8 */ ~daAlink_footData_c();
+	/* 800CFCF4 */ daAlink_footData_c();
+};
+
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daPy_py_c {
@@ -287,85 +365,6 @@ struct daPy_py_c {
 	/* 8015F730 */ void checkCarryStartLightBallB();
 };
 
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct J3DAnmBase {
-};
-
-struct daAlinkHIO_anm_c {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct daPy_anmHeap_c {
-	struct daAlinkHEAP_TYPE {
-	};
-
-	/* 80140DCC */ void __defctor();
-	/* 8015ED10 */ daPy_anmHeap_c(u32);
-	/* 8015ED50 */ ~daPy_anmHeap_c();
-	/* 8015EDC4 */ void mallocBuffer();
-	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
-	/* 8015F068 */ void loadDataIdx(u16);
-	/* 8015F0D0 */ void loadDataPriIdx(u16);
-	/* 8015F118 */ void loadDataDemoRID(u16, u16);
-	/* 8015F168 */ void setAnimeHeap();
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct JPABaseEmitter {
-};
-
-struct fopEn_enemy_c {
-};
-
 struct daPy_frameCtrl_c {
 	/* 80140D24 */ ~daPy_frameCtrl_c();
 	/* 80140D80 */ daPy_frameCtrl_c();
@@ -374,19 +373,20 @@ struct daPy_frameCtrl_c {
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844B8 */ void ResetTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846B0 */ void ResetCoHit();
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct JPABaseEmitter {
+};
+
+struct J3DAnmBase {
 };
 
 struct J3DDeformData {
@@ -400,12 +400,12 @@ struct J3DModel {
 	/* 80327C58 */ void calcWeightEnvelopeMtx();
 };
 
-struct dCcG_At_Spl {
+struct _GXColorS10 {
 };
 
-struct daAlink_footData_c {
-	/* 800CFCB8 */ ~daAlink_footData_c();
-	/* 800CFCF4 */ daAlink_footData_c();
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct daAlink_c {
@@ -2361,13 +2361,6 @@ struct mDoExt_MtxCalcAnmBlendTbl {
 	/* 800D00BC */ void getAnm(int);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80077414 */ ~dBgS_AcchCir();
-};
-
 struct dBgS {
 	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
 	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
@@ -2390,6 +2383,13 @@ struct dBgS {
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075880 */ void MoveBgTransPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 	/* 80075C6C */ void PushPullCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80077414 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -2422,10 +2422,10 @@ struct J3DTevBlock {
 	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
 struct J2DPane {
@@ -3036,11 +3036,11 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct J2DGrafContext {
-};
-
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -6205,7 +6205,7 @@ void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
 void cLib_chaseAngleS(s16*, s16, s16); // 2
 void cLib_targetAngleY(Vec const*, Vec const*); // 2
 void cLib_distanceAngleS(s16, s16); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*); // 2
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
 void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
 void* operator new(u32); // 2
 void* operator new[](u32); // 2

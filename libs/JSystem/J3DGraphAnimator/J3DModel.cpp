@@ -11,14 +11,14 @@
 // Types:
 // 
 
+struct J3DModelData {
+	/* 803260F8 */ void syncJ3DSysFlags() const;
+};
+
 struct J3DModel;
 struct J3DDeformData {
 	/* 8032E230 */ void offAllFlag(u32);
 	/* 8032E274 */ void deform(J3DModel*);
-};
-
-struct J3DModelData {
-	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
 struct J3DSkinDeform {

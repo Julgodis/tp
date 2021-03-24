@@ -12,6 +12,15 @@
 // 
 
 namespace JGadget {
+	template <typename A1, typename B1>
+	struct TLinkList { };
+	/* TLinkList<JStudio::fvb::TObject, 12> */
+	struct TLinkList__template1 {
+		struct iterator {
+		};
+
+	};
+
 	template <typename A1>
 	struct TVector_pointer { };
 	/* TVector_pointer<JStudio::TFunctionValue*> */
@@ -46,18 +55,6 @@ namespace JGadget {
 
 namespace JStudio {
 	namespace fvb {
-		struct TObject;
-		struct TControl {
-			/* 80284668 */ TControl();
-			/* 80284698 */ ~TControl();
-			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
-			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
-			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
-			/* 802847D0 */ void destroyObject_all();
-			/* 80284834 */ void getObject(void const*, u32);
-			/* 802848D4 */ void getObject_index(u32);
-		};
-
 		struct data {
 			struct TParse_TBlock {
 			};
@@ -69,6 +66,18 @@ namespace JStudio {
 				/* 802850AC */ void getData(JStudio::fvb::data::TParse_TParagraph::TData*) const;
 			};
 
+		};
+
+		struct TObject;
+		struct TControl {
+			/* 80284668 */ TControl();
+			/* 80284698 */ ~TControl();
+			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
+			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
+			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
+			/* 802847D0 */ void destroyObject_all();
+			/* 80284834 */ void getObject(void const*, u32);
+			/* 802848D4 */ void getObject_index(u32);
 		};
 
 		struct TObject {
@@ -127,6 +136,16 @@ namespace JStudio {
 
 	};
 
+	struct object {
+		struct TPRObject_ID_equal {
+		};
+
+		struct TIDData {
+			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
+		};
+
+	};
+
 	struct TFunctionValue {
 		/* 802816A0 */ ~TFunctionValue();
 	};
@@ -171,12 +190,13 @@ namespace JStudio {
 		/* 8028336C */ void data_set(f32 const*, u32, u32);
 	};
 
-	struct object {
-		struct TIDData {
-			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
-		};
+};
 
-	};
+namespace std {
+	/*          */ template <typename A1, typename B1>
+	/*          */ void find_if(/* JGadget::TLinkList::iterator, JGadget::TLinkList::iterator, JStudio::object::TPRObject_ID_equal */);
+	/* 80285018 */ /* find_if<JGadget::TLinkList<JStudio::fvb::TObject, 12>::iterator, JStudio::object::TPRObject_ID_equal> */
+	void find_if__template1(JGadget::TLinkList__template1::iterator, JGadget::TLinkList__template1::iterator, JStudio::object::TPRObject_ID_equal);
 
 };
 
@@ -228,7 +248,7 @@ extern "C" void __dt__Q37JStudio3fvb12TObject_listFv(); // 1
 extern "C" void __dt__Q37JStudio3fvb18TObject_transitionFv(); // 1
 extern "C" void __dt__Q37JStudio3fvb16TObject_constantFv(); // 1
 extern "C" void __dt__Q37JStudio3fvb17TObject_compositeFv(); // 1
-extern "C" static void func_80285018(); // 1
+extern "C" void func_80285018(); // 1
 extern "C" extern void* __vt__Q37JStudio3fvb8TFactory[5];
 
 // 
@@ -892,7 +912,7 @@ asm JStudio::fvb::TObject_composite::~TObject_composite() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80285018() {
+asm void std::find_if__template1(JGadget::TLinkList__template1::iterator param_0, JGadget::TLinkList__template1::iterator param_1, JStudio::object::TPRObject_ID_equal param_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/fvb/func_80285018.s"
 }

@@ -11,11 +11,15 @@
 // Types:
 // 
 
-struct cCcD_GStts {
-};
-
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
+struct cCcD_GStts {
 };
 
 struct cCcD_Stts {
@@ -26,10 +30,6 @@ struct cCcD_Stts {
 };
 
 struct cCcD_GObjInf {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
 };
 
 struct cCcS {

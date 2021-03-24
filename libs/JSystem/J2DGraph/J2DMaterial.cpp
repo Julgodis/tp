@@ -14,16 +14,6 @@
 struct _GXColor {
 };
 
-struct J2DAnmColor {
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-};
-
-struct J2DAnmTexPattern {
-	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
-	/* 8030BF9C */ void getResTIMG(u16) const;
-	/* 8030BFF0 */ void getPalette(u16) const;
-};
-
 struct _GXColorS10 {
 };
 
@@ -32,11 +22,21 @@ struct J2DAnmTevRegKey {
 	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
 };
 
+struct J2DAnmTexPattern {
+	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
+	/* 8030BF9C */ void getResTIMG(u16) const;
+	/* 8030BFF0 */ void getPalette(u16) const;
+};
+
 struct J3DTextureSRTInfo {
 };
 
 struct J2DAnmTextureSRTKey {
 	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
+};
+
+struct J2DAnmColor {
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
 };
 
 struct J2DMaterial {
@@ -63,6 +63,11 @@ struct J2DColorBlock {
 	/* 802EB424 */ void setGX();
 };
 
+struct J2DIndTexMtx {
+	/* 802EB2E4 */ ~J2DIndTexMtx();
+	/* 802EB320 */ J2DIndTexMtx();
+};
+
 struct J2DIndTexOrder {
 	/* 802EB378 */ J2DIndTexOrder();
 };
@@ -70,11 +75,6 @@ struct J2DIndTexOrder {
 struct J2DIndTexCoordScale {
 	/* 802EB290 */ ~J2DIndTexCoordScale();
 	/* 802EB2CC */ J2DIndTexCoordScale();
-};
-
-struct J2DIndTexMtx {
-	/* 802EB2E4 */ ~J2DIndTexMtx();
-	/* 802EB320 */ J2DIndTexMtx();
 };
 
 struct J2DIndBlock {
@@ -123,13 +123,13 @@ struct J2DColorChan {
 	/* 802EB280 */ J2DColorChan();
 };
 
-struct JUTPalette {
-};
-
 struct ResTIMG {
 };
 
 struct _GXTlut {
+};
+
+struct JUTPalette {
 };
 
 struct JUTTexture {

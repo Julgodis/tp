@@ -8,6 +8,14 @@
 #include "unknown_translation_unit.h"
 
 // 
+// Types:
+// 
+
+struct __partial_array_destructor {
+	/* 80361E5C */ ~__partial_array_destructor();
+};
+
+// 
 // Forward References:
 // 
 

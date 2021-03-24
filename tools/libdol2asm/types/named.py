@@ -4,6 +4,7 @@ from typing import List, Set
 
 from .base import *
 
+
 @dataclass(eq=True)
 class ClassName:
     name: str
@@ -17,7 +18,7 @@ class ClassName:
         if specialize_templates and self.template_index >= 0:
             return f"{self.name}__template{self.template_index}"
         elif not without_template and self.templates:
-            args = ", ".join([ x.type() for x in self.templates ])
+            args = ", ".join([x.type() for x in self.templates])
             return f"{self.name}<{args}>"
         return self.name
 
@@ -25,18 +26,24 @@ class ClassName:
         for template in self.templates:
             template.traverse(callback, depth)
 
-@dataclass(frozen=True,eq=True)
+
+@dataclass(frozen=True, eq=True)
 class NamedType(Type):
     names: List[ClassName]
 
     def __hash__(self):
         return hash(tuple(self.names))
 
-    def type(self, specialize_templates: bool = False, without_template: bool = False) -> str:
-        return "::".join([ x.to_str(specialize_templates = specialize_templates, without_template = without_template) for x in self.names ])
+    def type(self,
+             specialize_templates: bool = False,
+             without_template: bool = False) -> str:
+        return "::".join([x.to_str(specialize_templates=specialize_templates, without_template=without_template) for x in self.names])
 
-    def to_str(self, specialize_templates: bool = False, without_template: bool = False) -> str:
-        return self.type(specialize_templates=specialize_templates,without_template = without_template)
+    def to_str(self,
+               specialize_templates: bool = False,
+               without_template: bool = False) -> str:
+        return self.type(specialize_templates=specialize_templates,
+                         without_template=without_template)
 
     def traverse(self, callback, depth):
         should_exit = callback(self, depth)

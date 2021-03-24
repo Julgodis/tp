@@ -215,6 +215,9 @@ struct J2DTextBox {
 struct ResTIMG {
 };
 
+struct ResTLUT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -222,9 +225,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -308,14 +308,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {

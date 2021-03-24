@@ -3,7 +3,8 @@ from typing import List
 from .base import *
 from .empty import *
 
-@dataclass(frozen=True,eq=True)
+
+@dataclass(frozen=True, eq=True)
 class ArrayType(Type):
     base: Type
     inner: Type
@@ -12,15 +13,24 @@ class ArrayType(Type):
     def __hash__(self):
         return hash((self.base, self.inner, tuple(self.sizes)))
 
-    def type(self) -> str:
-        return self.decl("")
+    def type(self,
+             specialize_templates: bool = False,
+             without_template: bool = False) -> str:
+        return self.decl("",
+                         specialize_templates=specialize_templates,
+                         without_template=without_template)
 
-    def decl(self, label: str) -> str:
+    def decl(self,
+             label: str,
+             specialize_templates: bool = False,
+             without_template: bool = False) -> str:
         size = ''.join(f'[{i}]' for i in self.sizes)
+        base = self.base.type(specialize_templates=specialize_templates,without_template=without_template)
         if isinstance(self.inner, EmptyType):
-            return f"{self.base.type()} {label}{size}"
+            return f"{base} {label}{size}"
         else:
-            return f"{self.base.type()} ({self.inner.decl(label)}){size}"
+            inner = self.inner.decl(label,specialize_templates=specialize_templates,without_template=without_template)
+            return f"{base} ({inner}){size}"
 
     def traverse(self, callback, depth):
         should_exit = callback(self, depth)
@@ -32,7 +42,8 @@ class ArrayType(Type):
     def create(base: Type, count: int) -> "ArrayType":
         return ArrayType(base, EmptyType(), [count])
 
-@dataclass(frozen=True,eq=True)
+
+@dataclass(frozen=True, eq=True)
 class PaddingArrayType(Type):
     """
         Type which is used for exporting symbols of raw data with padding.
@@ -61,4 +72,3 @@ class PaddingArrayType(Type):
     @staticmethod
     def create(base: Type, size: int, padding: int) -> "PaddingArrayType":
         return PaddingArrayType(base, size, padding)
-

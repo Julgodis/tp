@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cSAngle {
+struct cXyz {
 };
 
-struct cXyz {
+struct cSAngle {
 };
 
 struct dCamMath {

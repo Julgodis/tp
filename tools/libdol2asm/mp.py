@@ -17,39 +17,6 @@ from .globals import *
 from .context import Context, MainContext
 from .symbol_table import GlobalSymbolTable
 
-
-def _mp_entrypoint(input: Queue, output: Queue):
-
-
-class MPManager(m.BaseManager):
-    def __init__():
-        super().__init__()
-        self.start()
-
-        self.input = self.Queue()
-        self.output = self.Queue()
-
-        # create the processes
-        self.processors = [
-            Process(target=_mp_entrypoint, args=(input, output))
-            for i in range(process_count)
-        ]
-
-        # start the processes
-        for process in self.processors:
-            process.start()       
-
-MPManager.register('SymbolTable', GlobalSymbolTable)
-
-
-
-
-
-
-
-
-
-
 class TimeCode:
     def __init__(self, context: Context, text: str):
         self.context = context

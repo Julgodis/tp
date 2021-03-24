@@ -17,10 +17,10 @@ struct JAISoundID {
 struct JAISoundParamsMove {
 };
 
-struct JAISoundActivity {
+struct JAISeqDataRegion {
 };
 
-struct JAISeqDataRegion {
+struct JAISoundActivity {
 };
 
 struct JAISeCategoryMgr {
@@ -46,13 +46,16 @@ struct JASMemPool__template0 {
 	/* 8029FC34 */ ~JASMemPool__template0();
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
 struct JAISoundHandle {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
+};
+
+struct JAISeqDataMgr {
 };
 
 struct JGeometry {
@@ -62,9 +65,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISeqDataMgr {
 };
 
 struct JAISeMgr {

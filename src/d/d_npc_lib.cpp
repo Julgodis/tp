@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -26,12 +32,6 @@ struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 8026745C */ void operator+=(csXyz&);
-};
-
-struct J3DModel {
-};
-
-struct fopAc_ac_c {
 };
 
 struct dNpcLib_lookat_c {

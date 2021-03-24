@@ -112,22 +112,27 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JPADrawInfo {
+};
+
 struct JPAParticleCallBack {
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct ResTIMG {
 };
 
-struct JPADrawInfo {
+struct JPAResourceManager {
+	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
+	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
+	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
+	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
 struct JPAEmitterCallBack {
@@ -138,18 +143,13 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct ResTIMG {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JPAResourceManager {
-	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
-	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
-	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
-	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
 struct JPAEmitterManager {

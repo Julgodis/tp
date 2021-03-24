@@ -25,10 +25,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -44,10 +44,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -79,16 +79,16 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

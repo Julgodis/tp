@@ -11,13 +11,10 @@
 // Types:
 // 
 
-struct J3DMaterialBlock {
+struct J3DShapeBlock {
 };
 
-struct J3DMaterialDLBlock {
-};
-
-struct J3DDrawBlock {
+struct J3DTextureBlock {
 };
 
 struct J3DEnvelopeBlock {
@@ -26,10 +23,13 @@ struct J3DEnvelopeBlock {
 struct J3DModelInfoBlock {
 };
 
-struct J3DShapeBlock {
+struct J3DMaterialDLBlock {
 };
 
-struct J3DTextureBlock {
+struct J3DDrawBlock {
+};
+
+struct J3DMaterialBlock {
 };
 
 struct J3DJointBlock {
@@ -101,7 +101,7 @@ extern "C" extern char const* const J3DModelLoaderCalcSize__stringBase0;
 // External References:
 // 
 
-void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template70(void const*, void const*); // 2
 
 extern "C" void OSReport(); // 1
 extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock(); // 1

@@ -43,6 +43,11 @@ from .sha1 import *
 from .symbol_table import GlobalSymbolTable
 from .data.section import ExecutableSection
 
+"""
+from . import demangle
+demangle.test()
+sys.exit(1)
+"""
 
 class Dol2AsmSplitter:
 
@@ -520,7 +525,7 @@ class Dol2AsmSplitter:
             self.gen_modules = [ int(x) for x in self.select_modules ]
 
         if not self.rel_gen:
-            self.gen_modules = [ x for x in self.select_modules if 0 ] 
+            self.gen_modules = [ x for x in self.gen_modules if x == 0 ] 
         self.gen_modules.sort()
 
         if len(self.gen_modules) == 0:

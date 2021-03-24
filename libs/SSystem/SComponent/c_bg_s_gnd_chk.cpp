@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct cXyz {
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct cBgS_GndChk {

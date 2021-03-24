@@ -46,13 +46,15 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DGrafContext {
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
 };
 
 struct JKRArchive {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -61,9 +63,7 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

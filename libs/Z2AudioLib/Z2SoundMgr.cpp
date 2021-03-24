@@ -20,9 +20,6 @@ struct JASTrack {
 struct JAISoundID {
 };
 
-struct JAISound {
-};
-
 struct JAISoundHandle {
 };
 
@@ -33,6 +30,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISound {
 };
 
 struct Z2SoundMgr {

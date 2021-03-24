@@ -58,6 +58,12 @@ struct JAISound {
 	/* 802A24DC */ void stop(u32);
 };
 
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAIStream> */
+struct JAISoundStrategyMgr__template2 {
+};
+
 struct JAIAudience {
 };
 
@@ -65,12 +71,6 @@ struct JASSoundParams {
 };
 
 struct JAISoundActivity {
-};
-
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAIStream> */
-struct JAISoundStrategyMgr__template2 {
 };
 
 struct JAIStream {

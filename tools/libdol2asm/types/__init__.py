@@ -9,6 +9,7 @@ from .named import *
 from .array import *
 from .function import *
 from .var import *
+from .value import *
 
 
 VOID = BuiltinType(name="void")

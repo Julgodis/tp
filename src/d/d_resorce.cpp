@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
+};
+
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
@@ -25,11 +30,6 @@ struct J3DModelData {
 };
 
 struct cXyz {
-};
-
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
 };
 
 struct dRes_info_c {

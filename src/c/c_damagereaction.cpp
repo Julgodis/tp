@@ -46,7 +46,9 @@ extern "C" void __sinit_c_damagereaction_cpp(); // 1
 extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" extern void* __vt__19JPAParticleCallBack[5];
-extern "C" extern u8 data_80450CA0[4];
+extern "C" extern u8 sConsole[4];
+extern "C" extern u8 pad_80450C94[8];
+extern "C" extern u8 pad_80450C9C[8];
 extern "C" extern u8 JPTracePCB4[4];
 
 // 
@@ -151,8 +153,14 @@ SECTION_DATA void* __vt__19JPAParticleCallBack[5] = {
 /* 803F0F40-803F0F50 000C+04 s=1 e=0 z=0  None .bss       @3741                                                        */
 static u8 c_c_damagereaction__lit_3741[12 + 4 /* padding */];
 
-/* 80450CA0-80450CA4 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
-u8 data_80450CA0[4];
+/* 80450C90-80450C94 0004+00 s=0 e=3 z=0  None .sbss      sConsole                                                     */
+u8 sConsole[4];
+
+/* 80450C94-80450C9C 0008+00 s=0 e=0 z=0  None .sbss      None                                                         */
+u8 pad_80450C94[8];
+
+/* 80450C9C-80450CA4 0008+00 s=0 e=0 z=0  None .sbss      None                                                         */
+u8 pad_80450C9C[8];
 
 /* 80450CA4-80450CA8 0004+00 s=1 e=1 z=0  None .sbss      JPTracePCB4                                                  */
 u8 JPTracePCB4[4];

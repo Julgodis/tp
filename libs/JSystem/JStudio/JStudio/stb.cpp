@@ -91,6 +91,9 @@ namespace JStudio {
 	};
 
 	struct object {
+		struct TPRObject_ID_equal {
+		};
+
 		struct TIDData {
 			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
 		};
@@ -100,6 +103,15 @@ namespace JStudio {
 };
 
 namespace JGadget {
+	template <typename A1, typename B1>
+	struct TLinkList { };
+	/* TLinkList<JStudio::stb::TObject, 12> */
+	struct TLinkList__template2 {
+		struct iterator {
+		};
+
+	};
+
 	struct binary {
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
@@ -118,6 +130,14 @@ namespace JGadget {
 		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
+
+};
+
+namespace std {
+	/*          */ template <typename A1, typename B1>
+	/*          */ void find_if(/* JGadget::TLinkList::iterator, JGadget::TLinkList::iterator, JStudio::object::TPRObject_ID_equal */);
+	/* 80289928 */ /* find_if<JGadget::TLinkList<JStudio::stb::TObject, 12>::iterator, JStudio::object::TPRObject_ID_equal> */
+	void find_if__template2(JGadget::TLinkList__template2::iterator, JGadget::TLinkList__template2::iterator, JStudio::object::TPRObject_ID_equal);
 
 };
 
@@ -160,7 +180,7 @@ extern "C" void parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl(); // 1
 extern "C" void parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl(); // 1
 extern "C" void parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
 extern "C" void parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl(); // 1
-extern "C" static void func_80289928(); // 1
+extern "C" void func_80289928(); // 1
 extern "C" extern void* __vt__Q37JStudio3stb8TFactory[5];
 
 // 
@@ -630,7 +650,7 @@ asm void JStudio::stb::TParse::parseBlock_object(JStudio::stb::data::TParse_TBlo
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80289928() {
+asm void std::find_if__template2(JGadget::TLinkList__template2::iterator param_0, JGadget::TLinkList__template2::iterator param_1, JStudio::object::TPRObject_ID_equal param_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/stb/func_80289928.s"
 }

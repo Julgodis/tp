@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct _GXAttr {
 };
 
-struct _GXAttr {
+struct Vec {
 };
 
 struct J3DShape {

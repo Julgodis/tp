@@ -14,10 +14,10 @@
 struct COutFont_c {
 };
 
-struct J2DTextBox {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct J2DTextBox {
 };
 
 struct dMsgStringBase_c {

@@ -29,23 +29,31 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-struct J2DTevSwapModeTable {
-	/* 802F1934 */ J2DTevSwapModeTable();
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+struct ResTLUT {
 };
 
 struct J2DTevOrder {
 	/* 802F1B70 */ J2DTevOrder();
 };
 
-struct J2DTevStageInfo {
+struct J2DTevSwapModeInfo {
 };
 
-struct J2DTevStage {
-	/* 802F1940 */ J2DTevStage();
-	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
+struct ResTIMG {
 };
 
-struct ResTLUT {
+struct _GXTexMapID {
 };
 
 struct _GXTlut {
@@ -53,18 +61,6 @@ struct _GXTlut {
 
 struct JUTPalette {
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-struct JUTFont {
-};
-
-struct ResFONT {
-};
-
-struct ResTIMG {
-};
-
-struct _GXTexMapID {
 };
 
 struct JUTTexture {
@@ -80,18 +76,22 @@ struct J2DIndTevStage {
 	/* 802F18A0 */ J2DIndTevStage();
 };
 
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
+struct ResFONT {
 };
 
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
+struct J2DTevSwapModeTable {
+	/* 802F1934 */ J2DTevSwapModeTable();
 };
 
-struct J2DTevSwapModeInfo {
+struct J2DTevStageInfo {
+};
+
+struct J2DTevStage {
+	/* 802F1940 */ J2DTevStage();
+	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
+};
+
+struct JUTFont {
 };
 
 struct J2DTevBlock {
@@ -385,6 +385,11 @@ struct J2DTevBlock16 {
 	/* 802F1FAC */ void setFontUndeleteFlag();
 };
 
+struct J2DIndTexMtx {
+	/* 802EA098 */ void load(u8);
+	/* 802EB2E4 */ ~J2DIndTexMtx();
+};
+
 struct J2DIndTexOrder {
 	/* 802EA0FC */ void load(u8);
 };
@@ -392,11 +397,6 @@ struct J2DIndTexOrder {
 struct J2DIndTexCoordScale {
 	/* 802EA0CC */ void load(u8);
 	/* 802EB290 */ ~J2DIndTexCoordScale();
-};
-
-struct J2DIndTexMtx {
-	/* 802EA098 */ void load(u8);
-	/* 802EB2E4 */ ~J2DIndTexMtx();
 };
 
 struct J2DIndBlockFull {

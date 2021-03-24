@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
+struct JPADrawInfo {
+};
+
 struct JPAParticleCallBack {
 };
 
@@ -31,14 +37,11 @@ struct JPABaseEmitter {
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
-struct JPADrawInfo {
+struct JPAResourceManager {
+	/* 80273E68 */ void getResource(u16) const;
 };
 
 struct JPAEmitterCallBack {
-};
-
-struct JPAResourceManager {
-	/* 80273E68 */ void getResource(u16) const;
 };
 
 struct JGeometry {
@@ -48,9 +51,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRHeap {
 };
 
 struct JPAEmitterManager {

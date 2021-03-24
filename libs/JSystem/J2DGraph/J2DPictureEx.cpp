@@ -11,38 +11,52 @@
 // Types:
 // 
 
-struct J2DAnmVtxColor {
+struct J2DAnmTevRegKey {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
 
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template0 {
-		/* 802FF204 */ TVec2__template0();
-	};
+struct ResTLUT {
+};
 
+struct _GXCullMode {
+};
+
+struct ResTIMG {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct JUTPalette {
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct J2DTevStage {
 };
 
-struct ResFONT {
+struct _GXTexMapID {
 };
 
-struct ResTLUT {
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
+};
+
+struct ResFONT {
 };
 
 struct JSUStreamSeekFrom {
@@ -53,20 +67,7 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct _GXCullMode {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -94,33 +95,32 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct _GXTexMapID {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
 };
 
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
+};
+
 struct _GXTlut {
+};
+
+struct JUTPalette {
 };
 
 struct JUTTexture {

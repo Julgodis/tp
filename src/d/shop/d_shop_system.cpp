@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct mesg_flow_node_branch {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dMsgFlow_c {
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
 struct Vec {
 };
 
@@ -38,6 +26,18 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct fopAc_ac_c {
+};
+
+struct mesg_flow_node_branch {
+};
+
+struct dMsgFlow_c {
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
 };
 
 struct dShopSystem_c {
@@ -116,10 +116,10 @@ struct daNpcT_faceMotionAnmData_c {
 struct J3DModel {
 };
 
-struct J3DJoint {
+struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
+struct J3DJoint {
 };
 
 struct daNpcT_c {

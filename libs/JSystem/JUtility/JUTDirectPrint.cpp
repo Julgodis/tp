@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct __va_list_struct {
+};
+
 struct JUtility {
 	struct TColor {
 	};
@@ -23,6 +26,7 @@ struct JUTDirectPrint {
 	/* 802E4288 */ void erase(int, int, int, int);
 	/* 802E431C */ void drawChar(int, int, int);
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+	/* 802E45A4 */ void printSub(u16, u16, char const*, __va_list_struct*, bool);
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4708 */ void drawString_f(u16, u16, char const*, ...);
 	/* 802E47C8 */ void setCharColor(u8, u8, u8);
@@ -49,7 +53,7 @@ extern "C" void start__14JUTDirectPrintFv(); // 1
 extern "C" void erase__14JUTDirectPrintFiiii(); // 1
 extern "C" void drawChar__14JUTDirectPrintFiii(); // 1
 extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
-extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
+extern "C" void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
 extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
 extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce(); // 1
 extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
@@ -157,7 +161,7 @@ asm void JUTDirectPrint::changeFrameBuffer(void* param_0, u16 param_1, u16 param
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb() {
+asm void JUTDirectPrint::printSub(u16 param_0, u16 param_1, char const* param_2, __va_list_struct* param_3, bool param_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb.s"
 }

@@ -120,11 +120,11 @@ struct COutFont_c {
 	/* 80226CF8 */ void initialize();
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
+struct JUTFont {
 };
 
-struct JUTFont {
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
 };
 
 struct jmessage_string_tReference {

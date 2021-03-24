@@ -147,14 +147,14 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS_SplGrpChk {
-	/* 80078B90 */ void Set(cXyz&, f32);
-	/* 80078C78 */ ~dBgS_SplGrpChk();
-};
-
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_SplGrpChk {
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
 struct dBgS {

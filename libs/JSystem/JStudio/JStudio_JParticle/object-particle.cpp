@@ -146,7 +146,7 @@ extern "C" void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFU
 // 
 
 void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*, JGeometry::TVec3<f32>*); // 2
+void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*, JGeometry::TVec3__template0*); // 2
 void operator delete(void*); // 2
 
 extern "C" void __dt__18JPAEmitterCallBackFv(); // 1

@@ -15,12 +15,13 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct JPAEmitterWorkData {
+struct JPAEmitterManager {
 };
 
-struct JPABaseParticle {
-	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
-	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
+struct _GXTexMapID {
+};
+
+struct JPAResource {
 };
 
 struct JGeometry {
@@ -32,13 +33,12 @@ struct JGeometry {
 
 };
 
-struct JPAEmitterManager {
+struct JPAEmitterWorkData {
 };
 
-struct JPAResource {
-};
-
-struct _GXTexMapID {
+struct JPABaseParticle {
+	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
+	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
 struct JPABaseEmitter {

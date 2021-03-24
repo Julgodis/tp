@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -33,12 +24,21 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
+struct J3DModel {
+};
+
+struct dJntColData_c {
+};
+
 struct cM3dGLin {
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-struct dJntColData_c {
+struct fopAc_ac_c {
+};
+
+struct csXyz {
 };
 
 struct dJntCol_c {

@@ -21,7 +21,15 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
+struct cXyz {
+};
+
 struct fopAc_ac_c {
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
 };
 
 struct cBgS_PolyInfo {
@@ -32,15 +40,6 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct dBgS_Acch;
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-struct cXyz {
-};
-
 struct dBgS_SplGrpChk {
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078C78 */ ~dBgS_SplGrpChk();
@@ -49,6 +48,7 @@ struct dBgS_SplGrpChk {
 struct csXyz {
 };
 
+struct dBgS_Acch;
 struct dBgS {
 	/* 8007524C */ void WallCorrect(dBgS_Acch*);
 	/* 80075374 */ void WallCorrectSort(dBgS_Acch*);
@@ -98,6 +98,10 @@ struct daPy_py_c {
 	/* 80077494 */ void checkPlayerFly() const;
 };
 
+struct cM3dGPla {
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
+};
+
 struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
@@ -106,10 +110,6 @@ struct cBgS_LinChk {
 
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cM3dGPla {
-	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
 struct cBgS {

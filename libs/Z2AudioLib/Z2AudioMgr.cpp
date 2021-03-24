@@ -11,10 +11,16 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JKRSolidHeap {
 };
 
 struct JAISoundHandle {
+};
+
+struct JAISoundID {
+};
+
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -24,12 +30,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRSolidHeap {
-};
-
-struct JKRArchive {
 };
 
 struct Z2AudioMgr {
@@ -42,6 +42,22 @@ struct Z2AudioMgr {
 	/* 802CD9CC */ void resetRecover();
 	/* 802CDA6C */ void hasReset() const;
 	/* 802CDB1C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
+};
+
+template <typename A0>
+struct JAUStreamAramMgrBase_ { };
+/* JAUStreamAramMgrBase_<1> */
+struct JAUStreamAramMgrBase___template0 {
+	/* 802CD7F8 */ ~JAUStreamAramMgrBase___template0();
+};
+
+template <typename A0>
+struct JAUStreamStaticAramMgr_ { };
+/* JAUStreamStaticAramMgr_<1> */
+struct JAUStreamStaticAramMgr___template0 {
+	/* 802CDB68 */ ~JAUStreamStaticAramMgr___template0();
+	/* 802CDC08 */ void deleteStreamAram(u32);
+	/* 802CDCEC */ void newStreamAram(u32*);
 };
 
 struct JASHeap {
@@ -211,7 +227,7 @@ struct JKRHeap {
 
 extern "C" void __ct__10Z2AudioMgrFv(); // 1
 extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
-extern "C" static void func_802CD7F8(); // 1
+extern "C" void func_802CD7F8(); // 1
 extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
 extern "C" void zeldaGFrameWork__10Z2AudioMgrFv(); // 1
 extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
@@ -219,9 +235,9 @@ extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
 extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
 extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
 extern "C" void func_802CDB1C(); // 1
-extern "C" static void func_802CDB68(); // 1
-extern "C" static void func_802CDC08(); // 1
-extern "C" static void func_802CDCEC(); // 1
+extern "C" void func_802CDB68(); // 1
+extern "C" void func_802CDC08(); // 1
+extern "C" void func_802CDCEC(); // 1
 extern "C" extern char const* const Z2AudioMgr__stringBase0;
 extern "C" extern void* __vt__10Z2AudioMgr[3];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -420,7 +436,7 @@ asm void Z2AudioMgr::init(JKRSolidHeap* param_0, u32 param_1, void* param_2, JKR
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CD7F8() {
+asm JAUStreamAramMgrBase___template0::~JAUStreamAramMgrBase___template0() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CD7F8.s"
 }
@@ -516,7 +532,7 @@ asm void Z2AudioMgr::startSound(JAISoundID param_0, JAISoundHandle* param_1, JGe
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDB68() {
+asm JAUStreamStaticAramMgr___template0::~JAUStreamStaticAramMgr___template0() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDB68.s"
 }
@@ -527,7 +543,7 @@ extern "C" asm static void func_802CDB68() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDC08() {
+asm void JAUStreamStaticAramMgr___template0::deleteStreamAram(u32 param_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDC08.s"
 }
@@ -538,7 +554,7 @@ extern "C" asm static void func_802CDC08() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDCEC() {
+asm void JAUStreamStaticAramMgr___template0::newStreamAram(u32* param_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDCEC.s"
 }

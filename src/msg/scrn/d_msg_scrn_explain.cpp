@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DOrthoGraph {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -43,10 +43,10 @@ struct dMsgScrnExplain_c {
 	/* 8023E654 */ void checkTriggerB();
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -94,13 +94,14 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DGrafContext {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct JKRArchive {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -109,8 +110,7 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

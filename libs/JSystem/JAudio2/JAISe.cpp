@@ -17,13 +17,10 @@ struct JAISoundID {
 struct JAIAudience {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct JAISeMgr {
+};
 
+struct JASSoundParams {
 };
 
 struct JAISoundActivity {
@@ -35,10 +32,13 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template0 {
 };
 
-struct JASSoundParams {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JAISeMgr {
 };
 
 struct JAISe {

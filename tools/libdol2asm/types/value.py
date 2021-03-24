@@ -1,18 +1,18 @@
-from dataclasses import dataclass, field
 
+from dataclasses import dataclass, field
 from .base import *
 
 @dataclass(frozen=True,eq=True)
-class BuiltinType(Type):
-    name: str
+class ValueType(Type):
+    value: int
 
     def __hash__(self):
-        return hash(self.name)
+        return hash(self.value)
 
     def type(self,
              specialize_templates: bool = False,
              without_template: bool = False) -> str:
-        return self.name
+        return f"{self.value}"
 
     @property
     def is_builtin(self):

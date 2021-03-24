@@ -11,13 +11,14 @@
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
-struct J2DGrafContext {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct JKRArchive {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -26,8 +27,7 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -145,17 +145,17 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct dMeter2Draw_c {

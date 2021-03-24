@@ -11,18 +11,8 @@
 // Types:
 // 
 
-struct JASInst {
-};
-
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
-};
-
-struct JASBasicBank {
-	/* 80297D78 */ JASBasicBank();
-	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
-	/* 80297E68 */ void setInst(int, JASInst*);
-	/* 80297E80 */ void getInst(int) const;
 };
 
 struct JASOscillator {
@@ -32,6 +22,16 @@ struct JASOscillator {
 	struct Data {
 	};
 
+};
+
+struct JASInst {
+};
+
+struct JASBasicBank {
+	/* 80297D78 */ JASBasicBank();
+	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
+	/* 80297E68 */ void setInst(int, JASInst*);
+	/* 80297E80 */ void getInst(int) const;
 };
 
 struct JASBNKParser {

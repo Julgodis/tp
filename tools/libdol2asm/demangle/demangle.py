@@ -5,6 +5,9 @@ import re
 
 operator_func_re = re.compile(r'^__([a-z]+)')
 
+find_double_underscore = re.compile(r'__[0-9FQ]')
+
+
 types = {
     'i': 'int',
     'l': 'long',
@@ -148,6 +151,13 @@ class ArrayParam:
     def to_str(self) -> str:
         return self.base_type.to_str() + " " + f"({self.inner_type.to_str()})" + ''.join(f'[{i}]' for i in self.sizes)
 
+@dataclass
+class IntegerParam:
+    value: int
+
+    def to_str(self) -> str:
+        return f"{self.value}"
+
 class ParseError(Exception):
     ...
 
@@ -165,7 +175,12 @@ class ParseCtx:
 
     def demangle(self):
         # this split is still not accurate, but good enough for most cases
-        split_pos = self.mangled.rfind('__')
+        match = None
+        for match in find_double_underscore.finditer(self.mangled):
+            pass
+        if not match:
+            return
+        split_pos =match.start()
         if split_pos == -1 or split_pos == 0:
             return
         self.func_name = self.mangled[:split_pos]
@@ -186,7 +201,8 @@ class ParseCtx:
                         self.func_name = '.dtor'
         self.demangle_first_class()
         while self.index < len(self.mangled):
-            self.demangled.append(self.demangle_next_type())
+            t = self.demangle_next_type()
+            self.demangled.append(t)
         if self.func_name == '.ctor':
             self.func_name = self.class_name.last.to_str(without_template=True)
         if self.func_name == '.dtor':
@@ -259,13 +275,13 @@ class ParseCtx:
                 qual_type.name = self.demangle_qualified_name()
                 return qual_type
             elif cur_char == 'A':
-                if cur_type.pointer_lvl < 1 and not cur_type.is_ref:
-                    raise ParseError("pointer level for array is wrong!")
+                #if cur_type.pointer_lvl < 1 and not cur_type.is_ref:
+                #    raise ParseError("pointer level for array is wrong!")
                 return self.demangle_array(cur_type)
             elif cur_char == 'M':
                 self.index += 1
 
-                if self.peek_next_char() != 'Q':
+                if self.peek_next_char() == 'Q':
                     self.index += 1
                     class_name = self.demangle_qualified_name()
                 else:
@@ -364,7 +380,22 @@ class ParseCtx:
 
         types = []
         while True:
-            types.append(self.demangle_next_type())
+            last_index = self.index
+            next_type = None
+            if self.peek_next_char().isdecimal() or self.peek_next_char() == '-':
+                is_negative = False
+                if self.peek_next_char() == '-':
+                    is_negative = True
+                    self.index += 1
+                integer = self.read_next_int()
+                if self.peek_next_char() == '>' or self.peek_next_char() == ',':
+                    next_type = IntegerParam(integer)
+                else:
+                    self.index = last_index
+            if next_type == None:
+                next_type = self.demangle_next_type()
+            types.append(next_type)
+
             if self.peek_next_char() == '>':
                 self.index += 1
                 break
@@ -394,8 +425,9 @@ class ParseCtx:
     def demangle_class(self) -> ClassName:
         if not self.peek_next_char().isdecimal():
             raise ParseError(f'class mangling must start with number')
+        index = self.index
         class_len = self.read_next_int()
-        full_class_name = self.mangled[self.index : self.index + class_len]
+        full_class_name = self.mangled[self.index:][:class_len]
         class_name, argument_types = self.demangle_template(full_class_name)
         self.index += class_len
         """

@@ -8,6 +8,14 @@
 #include "Runtime.PPCEABI.H/NMWException.h"
 
 // 
+// Types:
+// 
+
+struct __partial_array_destructor {
+	/* 80361E5C */ ~__partial_array_destructor();
+};
+
+// 
 // Forward References:
 // 
 
@@ -81,7 +89,7 @@ extern "C" asm void __construct_array() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __dt__26__partial_array_destructorFv() {
+asm __partial_array_destructor::~__partial_array_destructor() {
 	nofralloc
 #include "asm/Runtime.PPCEABI.H/NMWException/__dt__26__partial_array_destructorFv.s"
 }

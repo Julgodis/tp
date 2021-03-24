@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct _GXDistAttnFn {
-};
-
 struct _GXColor {
 };
 
@@ -21,6 +18,9 @@ struct Vec {
 };
 
 struct _GXSpotFn {
+};
+
+struct _GXDistAttnFn {
 };
 
 struct JStage {

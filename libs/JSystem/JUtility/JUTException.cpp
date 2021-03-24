@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct __va_list_struct {
+};
+
 struct OSContext {
 };
 
@@ -26,6 +29,7 @@ struct JUTException {
 	/* 802E1E40 */ void create(JUTDirectPrint*);
 	/* 802E1EA8 */ void run();
 	/* 802E1FCC */ void errorHandler(u16, OSContext*, u32, u32);
+	/* 802E20C0 */ void panic_f_va(char const*, int, char const*, __va_list_struct*);
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 	/* 802E227C */ void setFPException(u32);
 	/* 802E22C4 */ void showFloatSub(int, f32);
@@ -130,7 +134,7 @@ extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint(); // 1
 extern "C" void create__12JUTExceptionFP14JUTDirectPrint(); // 1
 extern "C" void run__12JUTExceptionFv(); // 1
 extern "C" void errorHandler__12JUTExceptionFUsP9OSContextUlUl(); // 1
-extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
+extern "C" void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
 extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
 extern "C" void setFPException__12JUTExceptionFUl(); // 1
 extern "C" void showFloatSub__12JUTExceptionFif(); // 1
@@ -480,7 +484,7 @@ static u8 data_804345A8[712];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct() {
+asm void JUTException::panic_f_va(char const* param_0, int param_1, char const* param_2, __va_list_struct* param_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct.s"
 }

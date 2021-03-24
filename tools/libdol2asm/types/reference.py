@@ -10,8 +10,10 @@ class ReferenceType(Type):
     def __hash__(self):
         return hash(("reference", self.of))
 
-    def type(self) -> str:
-        return f"{self.of.type()}&"
+    def type(self,
+             specialize_templates: bool = False,
+             without_template: bool = False) -> str:
+        return f"{self.of.type(specialize_templates=specialize_templates,without_template=without_template)}&"
 
     def traverse(self, callback, depth):
         should_exit = callback(self, depth)

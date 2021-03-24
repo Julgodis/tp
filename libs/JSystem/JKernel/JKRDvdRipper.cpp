@@ -17,14 +17,14 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-struct JKRExpandSwitch {
-};
-
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D9850 */ void open(char const*);
 	/* 802D98C4 */ void open(s32);
+};
+
+struct JKRExpandSwitch {
 };
 
 struct JKRDvdRipper {

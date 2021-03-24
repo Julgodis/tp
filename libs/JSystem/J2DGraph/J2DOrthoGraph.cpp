@@ -63,9 +63,9 @@ struct J2DGrafContext {
 
 void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
-static void J2DFillBox(JGeometry::TBox2<f32> const&, JUtility::TColor); // 2
+static void J2DFillBox(JGeometry::TBox2__template0 const&, JUtility::TColor); // 2
 void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
-static void J2DDrawFrame(JGeometry::TBox2<f32> const&, JUtility::TColor, u8); // 2
+static void J2DDrawFrame(JGeometry::TBox2__template0 const&, JUtility::TColor, u8); // 2
 
 extern "C" void __ct__13J2DOrthoGraphFv(); // 1
 extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1

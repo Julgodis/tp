@@ -35,17 +35,17 @@ struct dMeterSub_c {
 	/* 80194138 */ void isDead();
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct dMeter2Draw_c {
@@ -54,13 +54,13 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DGrafContext {
+struct J2DPane {
 };
 
 struct JKRArchive {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -69,7 +69,7 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct J2DPane {
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

@@ -31,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -109,6 +109,9 @@ struct J3DColorBlock {
 	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 };
 
+struct sub_kankyo__class {
+};
+
 struct stage_pure_lightvec_info_class {
 };
 
@@ -129,10 +132,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -176,10 +179,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -299,6 +302,10 @@ static void cLib_addCalcU8(u8*, u8, s16, s16); // 2
 static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int); // 2
 static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int); // 2
 void dKy_undwater_filter_draw(); // 2
+static void dKy_Draw(sub_kankyo__class*); // 2
+static void dKy_Execute(sub_kankyo__class*); // 2
+static void dKy_IsDelete(sub_kankyo__class*); // 2
+static void dKy_Delete(sub_kankyo__class*); // 2
 static void dKy_Create(void*); // 2
 void dKy_setLight_init(); // 2
 void dKy_setLight(); // 2
@@ -2402,7 +2409,7 @@ asm void dKy_undwater_filter_draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKy_Draw__FP17sub_kankyo__class() {
+asm static void dKy_Draw(sub_kankyo__class* param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_Draw__FP17sub_kankyo__class.s"
 }
@@ -2413,7 +2420,7 @@ extern "C" asm static void dKy_Draw__FP17sub_kankyo__class() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKy_Execute__FP17sub_kankyo__class() {
+asm static void dKy_Execute(sub_kankyo__class* param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_Execute__FP17sub_kankyo__class.s"
 }
@@ -2424,7 +2431,7 @@ extern "C" asm static void dKy_Execute__FP17sub_kankyo__class() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKy_IsDelete__FP17sub_kankyo__class() {
+asm static void dKy_IsDelete(sub_kankyo__class* param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_IsDelete__FP17sub_kankyo__class.s"
 }
@@ -2435,7 +2442,7 @@ extern "C" asm static void dKy_IsDelete__FP17sub_kankyo__class() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKy_Delete__FP17sub_kankyo__class() {
+asm static void dKy_Delete(sub_kankyo__class* param_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_Delete__FP17sub_kankyo__class.s"
 }

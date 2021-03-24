@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct Z2CreatureEnemy {
-};
-
 template <typename A0>
 struct JSULink { };
 /* JSULink<Z2CreatureEnemy> */
 struct JSULink__template2 {
+};
+
+struct Z2CreatureEnemy {
 };
 
 struct Z2SoundObjMgr {

@@ -17,16 +17,16 @@ struct cXyz {
 struct layer_class {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct ResFONT {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct ResFONT {
 };
 
 struct _GXTexMapID {

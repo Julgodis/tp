@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
 struct CSTControl {
 };
 
@@ -21,17 +32,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Collect2D_c {
@@ -157,14 +157,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -250,10 +250,10 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {

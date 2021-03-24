@@ -8,12 +8,23 @@
 #include "m_Do/m_Do_printf.h"
 
 // 
+// Types:
+// 
+
+struct __va_list_struct {
+};
+
+// 
 // Forward References:
 // 
 
 static void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32); // 2
 static void my_PutString(char const*); // 2
+static void OSVAttention(char const*, __va_list_struct*); // 2
 void OSReportInit(); // 2
+static void mDoPrintf_vprintf_Interrupt(char const*, __va_list_struct*); // 2
+static void mDoPrintf_vprintf_Thread(char const*, __va_list_struct*); // 2
+static void mDoPrintf_vprintf(char const*, __va_list_struct*); // 2
 
 extern "C" static void OSSwitchFiberEx__FUlUlUlUlUlUl(); // 1
 extern "C" static void my_PutString__FPCc(); // 1
@@ -87,7 +98,7 @@ asm static void my_PutString(char const* param_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSVAttention__FPCcP16__va_list_struct() {
+asm static void OSVAttention(char const* param_0, __va_list_struct* param_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_printf/OSVAttention__FPCcP16__va_list_struct.s"
 }
@@ -187,7 +198,7 @@ static u8 mDoPrintf_FiberStack[2048];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct() {
+asm static void mDoPrintf_vprintf_Interrupt(char const* param_0, __va_list_struct* param_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_printf/mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct.s"
 }
@@ -198,7 +209,7 @@ extern "C" asm static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct(
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct() {
+asm static void mDoPrintf_vprintf_Thread(char const* param_0, __va_list_struct* param_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_printf/mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct.s"
 }
@@ -209,7 +220,7 @@ extern "C" asm static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mDoPrintf_vprintf__FPCcP16__va_list_struct() {
+asm static void mDoPrintf_vprintf(char const* param_0, __va_list_struct* param_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_printf/mDoPrintf_vprintf__FPCcP16__va_list_struct.s"
 }
