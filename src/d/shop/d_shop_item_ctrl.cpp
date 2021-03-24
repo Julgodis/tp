@@ -107,7 +107,7 @@ asm dShopItemCtrl_c::~dShopItemCtrl_c() {
 
 /* ############################################################################################## */
 /* 80453AD0-80453AD8 0004+04 s=2 e=0 z=0  None .sdata2    @3659                                                        */
-SECTION_SDATA2 static u8 d_shop_d_shop_item_ctrl__lit_3659[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3659[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -148,27 +148,27 @@ asm void dShopItemCtrl_c::setRotateAnime(int param_0) {
 
 /* ############################################################################################## */
 /* 80453AD8-80453AE0 0008+00 s=1 e=0 z=0  None .sdata2    @3838                                                        */
-SECTION_SDATA2 static f64 d_shop_d_shop_item_ctrl__lit_3838 = 0.5;
+SECTION_SDATA2 static f64 lit_3838 = 0.5;
 
 /* 80453AE0-80453AE8 0008+00 s=1 e=0 z=0  None .sdata2    @3839                                                        */
-SECTION_SDATA2 static f64 d_shop_d_shop_item_ctrl__lit_3839 = 3.0;
+SECTION_SDATA2 static f64 lit_3839 = 3.0;
 
 /* 80453AE8-80453AF0 0008+00 s=1 e=0 z=0  None .sdata2    @3840                                                        */
-SECTION_SDATA2 static u8 d_shop_d_shop_item_ctrl__lit_3840[8] = {
+SECTION_SDATA2 static u8 lit_3840[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453AF0-80453AF4 0004+00 s=1 e=0 z=0  None .sdata2    @3841                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_item_ctrl__lit_3841 = 0.5f;
+SECTION_SDATA2 static f32 lit_3841 = 0.5f;
 
 /* 80453AF4-80453AF8 0004+00 s=1 e=0 z=0  None .sdata2    @3842                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_item_ctrl__lit_3842 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_3842 = 1.0f / 20.0f;
 
 /* 80453AF8-80453AFC 0004+00 s=1 e=0 z=0  None .sdata2    @3843                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_item_ctrl__lit_3843 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3843 = 1.0f / 10.0f;
 
 /* 80453AFC-80453B00 0004+00 s=1 e=0 z=0  None .sdata2    @3844                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_item_ctrl__lit_3844 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_3844 = 1.0f / 100.0f;
 
 /* 80196BA4-80197098 04F4+00 s=0 e=1 z=0  None .text      setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb                    */
 #pragma push

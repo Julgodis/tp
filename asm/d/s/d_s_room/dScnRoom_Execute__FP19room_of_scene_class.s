@@ -38,7 +38,7 @@ lbl_8025B5D8:
 /* 8025B5EC 00000014  41 82 00 6C */	beq lbl_8025B658
 /* 8025B5F0 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B5F4 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B5F8 00000020  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8025B5F8 00000020  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8025B5FC 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 8025B600 00000028  40 82 00 58 */	bne lbl_8025B658
 /* 8025B604 0000002C  80 7F 00 B0 */	lwz r3, 0xb0(r31)

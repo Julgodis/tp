@@ -34,7 +34,7 @@ lbl_800CE8A0:
 lbl_800CE920:
 /* 800CE920 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CE924 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CE928 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800CE928 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800CE92C 0000000C  54 00 02 95 */	rlwinm. r0, r0, 0, 0xa, 0xa
 /* 800CE930 00000010  41 82 00 18 */	beq lbl_800CE948
 /* 800CE934 00000014  80 1F 31 7C */	lwz r0, 0x317c(r31)
@@ -110,7 +110,7 @@ lbl_800CEA0C:
 lbl_800CEA40:
 /* 800CEA40 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CEA44 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CEA48 00000008  80 83 5F 18 */	lwz r4, 0x5f18(r3)
+/* 800CEA48 00000008  80 83 5F 18 */	lwz r4, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800CEA4C 0000000C  3C 60 00 20 */	lis r3, 0x0020 /* 0x00202000@ha */
 /* 800CEA50 00000010  38 03 20 00 */	addi r0, r3, 0x2000 /* 0x00202000@l */
 /* 800CEA54 00000014  7C 80 00 39 */	and. r0, r4, r0
@@ -123,11 +123,11 @@ lbl_800CEA40:
 lbl_800CEA70:
 /* 800CEA70 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_item_c0@ha
 /* 800CEA74 00000004  38 63 EB 50 */	addi r3, r3, m__18daAlinkHIO_item_c0@l
-/* 800CEA78 00000008  A8 C3 00 2C */	lha r6, 0x2c(r3)
+/* 800CEA78 00000008  A8 C3 00 2C */	lha r6, 0x2c(r3)	/* effective address: 8038EB7C */
 lbl_800CEA7C:
 /* 800CEA7C 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_item_c0@ha
 /* 800CEA80 00000004  38 63 EB 50 */	addi r3, r3, m__18daAlinkHIO_item_c0@l
-/* 800CEA84 00000008  A8 A3 00 2A */	lha r5, 0x2a(r3)
+/* 800CEA84 00000008  A8 A3 00 2A */	lha r5, 0x2a(r3)	/* effective address: 8038EB7A */
 /* 800CEA88 0000000C  A8 81 00 08 */	lha r4, 8(r1)
 /* 800CEA8C 00000010  7C C0 07 34 */	extsh r0, r6
 /* 800CEA90 00000014  7C 04 00 00 */	cmpw r4, r0

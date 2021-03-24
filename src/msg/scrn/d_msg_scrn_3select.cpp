@@ -44,12 +44,12 @@ struct J2DAnmColorKey {
 	/* 80239BE0 */ ~J2DAnmColorKey();
 };
 
+struct JKRArchive {
+};
+
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -57,6 +57,9 @@ struct dSelect_cursor_c {
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -67,9 +70,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -132,13 +132,7 @@ extern "C" void selectScale__17dMsgScrn3Select_cFv(); // 1
 extern "C" void selectTrans__17dMsgScrn3Select_cFv(); // 1
 extern "C" void selectAnimeTransform__17dMsgScrn3Select_cFi(); // 1
 extern "C" void __sinit_d_msg_scrn_3select_cpp(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_3select__stringBase0;
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3754[3];
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3755[3];
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3756[3];
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3757[3];
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3758[3];
-extern "C" extern void* msg_scrn_d_msg_scrn_3select__lit_3759[3];
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 data_803C0CA0[24 + 48 /* padding */];
 
 // 
@@ -225,12 +219,12 @@ SECTION_RODATA static u8 const data_80399708[288] = {
 };
 
 /* 80399828-80399834 000C+00 s=1 e=0 z=0  None .rodata    @4497                                                        */
-SECTION_RODATA static u8 const msg_scrn_d_msg_scrn_3select__lit_4497[12] = {
+SECTION_RODATA static u8 const lit_4497[12] = {
 	0x43, 0x4C, 0x00, 0x00, 0x43, 0x98, 0x00, 0x00, 0x43, 0xCA, 0x00, 0x00,
 };
 
 /* 80399834-80399840 000C+00 s=1 e=0 z=0  None .rodata    @4520                                                        */
-SECTION_RODATA static u8 const msg_scrn_d_msg_scrn_3select__lit_4520[12] = {
+SECTION_RODATA static u8 const lit_4520[12] = {
 	0x43, 0x4C, 0x00, 0x00, 0x43, 0x98, 0x00, 0x00, 0x43, 0xCA, 0x00, 0x00,
 };
 
@@ -248,54 +242,54 @@ SECTION_DEAD static char const* const pad_8039989D = "\0\0";
 #pragma pop
 
 /* 803C0C00-803C0C0C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 msg_scrn_d_msg_scrn_3select__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C0C0C-803C0C18 000C+00 s=0 e=0 z=0  None .data      @3754                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3754[3] = {
+/* 803C0C0C-803C0C18 000C+00 s=1 e=0 z=0  None .data      @3754                                                        */
+SECTION_DATA static void* lit_3754[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)open1Proc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C18-803C0C24 000C+00 s=0 e=0 z=0  None .data      @3755                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3755[3] = {
+/* 803C0C18-803C0C24 000C+00 s=1 e=0 z=0  None .data      @3755                                                        */
+SECTION_DATA static void* lit_3755[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)open2Proc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C24-803C0C30 000C+00 s=0 e=0 z=0  None .data      @3756                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3756[3] = {
+/* 803C0C24-803C0C30 000C+00 s=1 e=0 z=0  None .data      @3756                                                        */
+SECTION_DATA static void* lit_3756[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)waitProc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C30-803C0C3C 000C+00 s=0 e=0 z=0  None .data      @3757                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3757[3] = {
+/* 803C0C30-803C0C3C 000C+00 s=1 e=0 z=0  None .data      @3757                                                        */
+SECTION_DATA static void* lit_3757[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)selectProc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C3C-803C0C48 000C+00 s=0 e=0 z=0  None .data      @3758                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3758[3] = {
+/* 803C0C3C-803C0C48 000C+00 s=1 e=0 z=0  None .data      @3758                                                        */
+SECTION_DATA static void* lit_3758[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)changeProc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C48-803C0C54 000C+00 s=0 e=0 z=0  None .data      @3759                                                        */
-SECTION_DATA void* msg_scrn_d_msg_scrn_3select__lit_3759[3] = {
+/* 803C0C48-803C0C54 000C+00 s=1 e=0 z=0  None .data      @3759                                                        */
+SECTION_DATA static void* lit_3759[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)closeProc__17dMsgScrn3Select_cFv,
 };
 
-/* 803C0C54-803C0CA0 0048+04 s=2 e=0 z=0  None .data      process                                                      */
-SECTION_DATA static u8 msg_scrn_d_msg_scrn_3select__process[72 + 4 /* padding */] = {
+/* 803C0C54-803C0CA0 0048+04 s=3 e=0 z=0  None .data      process                                                      */
+SECTION_DATA static u8 process[72 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -325,7 +319,7 @@ SECTION_DATA static void* __vt__17dMsgScrn3Select_c[3 + 1 /* padding */] = {
 };
 
 /* 80454B58-80454B5C 0004+00 s=8 e=0 z=0  None .sdata2    @3909                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_3select__lit_3909[4] = {
+SECTION_SDATA2 static u8 lit_3909[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -333,7 +327,7 @@ SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_3select__lit_3909[4] = {
 SECTION_SDATA2 static f32 lit_3910 = 190.0f;
 
 /* 80454B60-80454B64 0004+00 s=10 e=0 z=0  None .sdata2    @3911                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_3911 = 1.0f;
+SECTION_SDATA2 static f32 lit_3911 = 1.0f;
 
 /* 802390B4-802398CC 0818+00 s=0 e=4 z=0  None .text      __ct__17dMsgScrn3Select_cFv                                  */
 #pragma push
@@ -423,10 +417,10 @@ SECTION_SDATA2 static f32 lit_4155 = 3.0f;
 SECTION_SDATA2 static f32 lit_4156 = 9.0f / 10.0f;
 
 /* 80454B70-80454B74 0004+00 s=1 e=0 z=0  None .sdata2    @4157                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4157 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4157 = 7.0f / 10.0f;
 
 /* 80454B74-80454B78 0004+00 s=1 e=0 z=0  None .sdata2    @4158                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4158 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4158 = 1.0f / 20.0f;
 
 /* 80239DD4-8023A094 02C0+00 s=0 e=5 z=0  None .text      draw__17dMsgScrn3Select_cFff                                 */
 #pragma push
@@ -452,7 +446,7 @@ asm void dMsgScrn3Select_c::selAnimeInit(u8 param_0, u8 param_1, u8 param_2, f32
 
 /* ############################################################################################## */
 /* 80454B78-80454B80 0008+00 s=2 e=0 z=0  None .sdata2    @4345                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_3select__lit_4345 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4345 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8023A398-8023A680 02E8+00 s=0 e=5 z=0  None .text      selAnimeMove__17dMsgScrn3Select_cFUcUcb                      */
 #pragma push
@@ -467,7 +461,7 @@ asm void dMsgScrn3Select_c::selAnimeMove(u8 param_0, u8 param_1, bool param_2) {
 
 /* ############################################################################################## */
 /* 80454B80-80454B84 0004+00 s=2 e=0 z=0  None .sdata2    @4434                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4434 = 199.0f;
+SECTION_SDATA2 static f32 lit_4434 = 199.0f;
 
 /* 8023A680-8023A934 02B4+00 s=0 e=9 z=0  None .text      selAnimeEnd__17dMsgScrn3Select_cFv                           */
 #pragma push
@@ -592,16 +586,16 @@ asm void dMsgScrn3Select_c::waitProc() {
 
 /* ############################################################################################## */
 /* 80454B84-80454B88 0004+00 s=2 e=0 z=0  None .sdata2    @4604                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4604 = 303.0f;
+SECTION_SDATA2 static f32 lit_4604 = 303.0f;
 
 /* 80454B88-80454B8C 0004+00 s=2 e=0 z=0  None .sdata2    @4605                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4605 = 300.0f;
+SECTION_SDATA2 static f32 lit_4605 = 300.0f;
 
 /* 80454B8C-80454B90 0004+00 s=2 e=0 z=0  None .sdata2    @4606                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4606 = 403.0f;
+SECTION_SDATA2 static f32 lit_4606 = 403.0f;
 
 /* 80454B90-80454B98 0004+04 s=2 e=0 z=0  None .sdata2    @4607                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_3select__lit_4607[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4607[1 + 1 /* padding */] = {
 	400.0f,
 	/* padding */
 	0.0f,

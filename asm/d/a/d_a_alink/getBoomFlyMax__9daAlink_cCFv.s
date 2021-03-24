@@ -13,12 +13,12 @@ lbl_800E00C0:
 /* 800E00EC 0000002C  40 82 00 14 */	bne lbl_800E0100
 /* 800E00F0 00000030  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E00F4 00000034  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E00F8 00000038  C0 23 00 40 */	lfs f1, 0x40(r3)
+/* 800E00F8 00000038  C0 23 00 40 */	lfs f1, 0x40(r3)	/* effective address: 8038E708 */
 /* 800E00FC 0000003C  48 00 00 10 */	b lbl_800E010C
 lbl_800E0100:
 /* 800E0100 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E0104 00000004  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E0108 00000008  C0 23 00 3C */	lfs f1, 0x3c(r3)
+/* 800E0108 00000008  C0 23 00 3C */	lfs f1, 0x3c(r3)	/* effective address: 8038E704 */
 lbl_800E010C:
 /* 800E010C 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800E0110 00000004  7C 08 03 A6 */	mtlr r0

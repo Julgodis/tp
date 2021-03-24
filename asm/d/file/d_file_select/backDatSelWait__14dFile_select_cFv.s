@@ -27,7 +27,7 @@ lbl_8018AC6C:
 /* 8018AC9C 00000030  38 C0 00 00 */	li r6, 0
 /* 8018ACA0 00000034  3C E0 80 43 */	lis r7, g_fsHIO@ha
 /* 8018ACA4 00000038  3B E7 C9 EC */	addi r31, r7, g_fsHIO@l
-/* 8018ACA8 0000003C  88 FF 00 08 */	lbz r7, 8(r31)
+/* 8018ACA8 0000003C  88 FF 00 08 */	lbz r7, 8(r31)	/* effective address: 8042C9F4 */
 /* 8018ACAC 00000040  48 00 29 A5 */	bl selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 8018ACB0 00000044  7F C3 F3 78 */	mr r3, r30
 /* 8018ACB4 00000048  88 9E 02 65 */	lbz r4, 0x265(r30)
@@ -42,11 +42,11 @@ lbl_8018AC6C:
 /* 8018ACD8 0000006C  88 1E 02 65 */	lbz r0, 0x265(r30)
 /* 8018ACDC 00000070  54 00 10 3A */	slwi r0, r0, 2
 /* 8018ACE0 00000074  7F C3 F3 78 */	mr r3, r30
-/* 8018ACE4 00000078  3C 80 80 3C */	lis r4, d_file_d_file_select__SelOpenStartFrameTbl@ha
-/* 8018ACE8 0000007C  38 84 A8 6C */	addi r4, r4, d_file_d_file_select__SelOpenStartFrameTbl@l
+/* 8018ACE4 00000078  3C 80 80 3C */	lis r4, SelOpenStartFrameTbl@ha
+/* 8018ACE8 0000007C  38 84 A8 6C */	addi r4, r4, SelOpenStartFrameTbl@l
 /* 8018ACEC 00000080  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8018ACF0 00000084  3C A0 80 3C */	lis r5, d_file_d_file_select__SelOpenEndFrameTbl@ha
-/* 8018ACF4 00000088  38 A5 A8 78 */	addi r5, r5, d_file_d_file_select__SelOpenEndFrameTbl@l
+/* 8018ACF0 00000084  3C A0 80 3C */	lis r5, SelOpenEndFrameTbl@ha
+/* 8018ACF4 00000088  38 A5 A8 78 */	addi r5, r5, SelOpenEndFrameTbl@l
 /* 8018ACF8 0000008C  7C A5 00 2E */	lwzx r5, r5, r0
 /* 8018ACFC 00000090  4B FF AC 99 */	bl selectDataMoveAnmInitSet__14dFile_select_cFii
 /* 8018AD00 00000094  7F C3 F3 78 */	mr r3, r30

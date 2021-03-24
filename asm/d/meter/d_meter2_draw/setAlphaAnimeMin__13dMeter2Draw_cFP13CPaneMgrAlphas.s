@@ -19,7 +19,7 @@ lbl_8021AA04:
 /* 8021AA08 00000004  41 81 00 28 */	bgt lbl_8021AA30
 /* 8021AA0C 00000008  7F C3 F3 78 */	mr r3, r30
 /* 8021AA10 0000000C  48 03 AE 19 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8021AA14 00000010  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 8021AA14 00000010  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 8021AA18 00000014  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8021AA1C 00000018  41 82 00 70 */	beq lbl_8021AA8C
 /* 8021AA20 0000001C  7F C3 F3 78 */	mr r3, r30

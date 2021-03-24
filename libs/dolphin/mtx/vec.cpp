@@ -70,15 +70,15 @@ extern "C" asm void PSVECScale() {
 
 /* ############################################################################################## */
 /* 80456540-80456544 0004+00 s=1 e=0 z=0  None .sdata2    @113                                                         */
-SECTION_SDATA2 static u8 vec__lit_113[4] = {
+SECTION_SDATA2 static u8 lit_113[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456544-80456548 0004+00 s=3 e=0 z=0  None .sdata2    @118                                                         */
-SECTION_SDATA2 static f32 vec__lit_118 = 0.5f;
+SECTION_SDATA2 static f32 lit_118 = 0.5f;
 
 /* 80456548-8045654C 0004+00 s=3 e=0 z=0  None .sdata2    @119                                                         */
-SECTION_SDATA2 static f32 vec__lit_119 = 3.0f;
+SECTION_SDATA2 static f32 lit_119 = 3.0f;
 
 /* 803470F4-80347138 0044+00 s=2 e=16 z=0  None .text      PSVECNormalize                                               */
 #pragma push
@@ -148,7 +148,7 @@ extern "C" asm void C_VECHalfAngle() {
 
 /* ############################################################################################## */
 /* 8045654C-80456550 0004+00 s=1 e=0 z=0  None .sdata2    @161                                                         */
-SECTION_SDATA2 static f32 vec__lit_161 = 2.0f;
+SECTION_SDATA2 static f32 lit_161 = 2.0f;
 
 /* 803472C8-8034739C 00D4+00 s=0 e=1 z=0  None .text      C_VECReflect                                                 */
 #pragma push

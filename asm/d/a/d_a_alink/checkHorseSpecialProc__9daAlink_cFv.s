@@ -7,7 +7,7 @@ lbl_800EDD6C:
 /* 800EDD80 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800EDD84 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800EDD88 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800EDD8C 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)
+/* 800EDD8C 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)	/* effective address: 8040BF78 */
 /* 800EDD90 00000024  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 800EDD94 00000028  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 800EDD98 0000002C  7D 89 03 A6 */	mtctr r12

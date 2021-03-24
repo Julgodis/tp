@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DMaterialBlock {
+};
+
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -24,9 +27,6 @@ struct J3DMaterial {
 	/* 803161D8 */ void calcSizePEBlock(u32, u32);
 	/* 80316240 */ void initialize();
 	/* 80332B94 */ ~J3DMaterial();
-};
-
-struct J3DMaterialBlock {
 };
 
 struct J3DMaterialDLBlock {
@@ -85,12 +85,15 @@ struct J3DPEBlockNull {
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
 struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevStageInfo {
@@ -101,18 +104,15 @@ struct J3DTevStage {
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-struct J3DTevSwapModeInfo {
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
 struct J3DTevSwapModeTable {
 };
 
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
 };
 
 struct J3DTevBlock {
@@ -195,16 +195,16 @@ struct J3DColorBlockNull {
 	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
-struct J3DZMode {
+struct J3DAlphaComp {
 };
 
 struct J3DBlend {
 };
 
-struct J3DFog {
+struct J3DZMode {
 };
 
-struct J3DAlphaComp {
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -277,14 +277,14 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
-struct J3DTexCoord {
-	/* 8000E464 */ J3DTexCoord();
+struct J3DNBTScale {
 };
 
 struct J3DTexMtx {
 };
 
-struct J3DNBTScale {
+struct J3DTexCoord {
+	/* 8000E464 */ J3DTexCoord();
 };
 
 struct J3DTexGenBlock {
@@ -1012,7 +1012,7 @@ asm void J3DMaterialFactory::newColorChan(int param_0, int param_1) const {
 
 /* ############################################################################################## */
 /* 804564AC-804564B0 0004+00 s=1 e=0 z=0  None .sdata2    @1798                                                        */
-SECTION_SDATA2 static u32 J3DMaterialFactory__lit_1798 = 0x32323232;
+SECTION_SDATA2 static u32 lit_1798 = 0x32323232;
 
 /* 80331F50-80331FAC 005C+00 s=1 e=0 z=0  None .text      newAmbColor__18J3DMaterialFactoryCFii                        */
 #pragma push

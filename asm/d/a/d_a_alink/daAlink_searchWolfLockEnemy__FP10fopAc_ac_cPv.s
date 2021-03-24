@@ -6,7 +6,7 @@ lbl_801392A8:
 /* 801392B8 00000010  7C 85 23 78 */	mr r5, r4
 /* 801392BC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801392C0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801392C4 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801392C4 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801392C8 00000020  7C 04 03 78 */	mr r4, r0
 /* 801392CC 00000024  4B FF FF 19 */	bl searchWolfLockEnemy__9daAlink_cFP10fopAc_ac_cPv
 /* 801392D0 00000028  38 60 00 00 */	li r3, 0

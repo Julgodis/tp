@@ -246,7 +246,7 @@ SECTION_DATA static u8 data_803CEAF8[48] = {
 };
 
 /* 803CEB28-803CEB58 0030+00 s=1 e=0 z=0  None .data      @1059                                                        */
-SECTION_DATA static void* J3DTevs__lit_1059[12] = {
+SECTION_DATA static void* lit_1059[12] = {
 	/* 0    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x2A4),
 	/* 1    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x1C8),
 	/* 2    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),

@@ -4,7 +4,7 @@ lbl_8034DB40:
 /* 8034DB48 00000008  38 E7 CB 18 */	addi r7, r7, HorVer@l
 /* 8034DB4C 0000000C  A0 09 00 1A */	lhz r0, 0x1a(r9)
 /* 8034DB50 00000010  39 03 FF FF */	addi r8, r3, -1
-/* 8034DB54 00000014  80 E7 00 24 */	lwz r7, 0x24(r7)
+/* 8034DB54 00000014  80 E7 00 24 */	lwz r7, 0x24(r7)	/* effective address: 8044CB3C */
 /* 8034DB58 00000018  38 84 FF FF */	addi r4, r4, -1
 /* 8034DB5C 0000001C  7C 08 03 96 */	divwu r0, r8, r0
 /* 8034DB60 00000020  54 84 08 3C */	slwi r4, r4, 1

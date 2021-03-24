@@ -17,7 +17,7 @@ lbl_800E202C:
 /* 800E2034 00000008  4B FD 80 9D */	bl checkNextAction__9daAlink_cFi
 /* 800E2038 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 800E203C 00000010  40 82 00 6C */	bne lbl_800E20A8
-/* 800E2040 00000014  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__lit_6041(r2)
+/* 800E2040 00000014  C3 E2 92 BC */	lfs f31, lit_6041(r2)
 /* 800E2044 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800E2048 0000001C  4B FD 18 BD */	bl checkZeroSpeedF__9daAlink_cCFv
 /* 800E204C 00000020  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -32,7 +32,7 @@ lbl_800E202C:
 /* 800E2070 00000044  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 800E2074 00000048  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 800E2078 0000004C  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 800E207C 00000050  C3 E3 00 18 */	lfs f31, 0x18(r3)
+/* 800E207C 00000050  C3 E3 00 18 */	lfs f31, 0x18(r3)	/* effective address: 8038D67C */
 /* 800E2080 00000054  48 00 00 10 */	b lbl_800E2090
 lbl_800E2084:
 /* 800E2084 00000000  80 1F 31 A0 */	lwz r0, 0x31a0(r31)

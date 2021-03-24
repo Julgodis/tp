@@ -6,7 +6,7 @@ lbl_800BFDFC:
 /* 800BFE0C 00000010  40 82 00 1C */	bne lbl_800BFE28
 /* 800BFE10 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800BFE14 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800BFE18 0000001C  88 04 00 13 */	lbz r0, 0x13(r4)
+/* 800BFE18 0000001C  88 04 00 13 */	lbz r0, 0x13(r4)	/* effective address: 804061D3 */
 /* 800BFE1C 00000020  28 00 00 30 */	cmplwi r0, 0x30
 /* 800BFE20 00000024  40 82 00 08 */	bne lbl_800BFE28
 /* 800BFE24 00000028  38 C0 00 01 */	li r6, 1

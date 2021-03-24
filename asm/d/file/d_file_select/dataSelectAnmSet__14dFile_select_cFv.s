@@ -18,8 +18,8 @@ lbl_80185C2C:
 /* 80185C6C 00000040  4E 80 04 21 */	bctrl 
 /* 80185C70 00000044  88 1F 02 65 */	lbz r0, 0x265(r31)
 /* 80185C74 00000048  54 04 10 3A */	slwi r4, r0, 2
-/* 80185C78 0000004C  3C 60 80 3C */	lis r3, d_file_d_file_select__SelStartFrameTbl@ha
-/* 80185C7C 00000050  38 63 A8 54 */	addi r3, r3, d_file_d_file_select__SelStartFrameTbl@l
+/* 80185C78 0000004C  3C 60 80 3C */	lis r3, SelStartFrameTbl@ha
+/* 80185C7C 00000050  38 63 A8 54 */	addi r3, r3, SelStartFrameTbl@l
 /* 80185C80 00000054  7C 03 20 2E */	lwzx r0, r3, r4
 /* 80185C84 00000058  7C 7F 22 14 */	add r3, r31, r4
 /* 80185C88 0000005C  90 03 00 E0 */	stw r0, 0xe0(r3)
@@ -27,7 +27,7 @@ lbl_80185C2C:
 /* 80185C90 00000064  54 00 10 3A */	slwi r0, r0, 2
 /* 80185C94 00000068  7C 7F 02 14 */	add r3, r31, r0
 /* 80185C98 0000006C  80 03 00 E0 */	lwz r0, 0xe0(r3)
-/* 80185C9C 00000070  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
+/* 80185C9C 00000070  C8 22 9F 38 */	lfd f1, lit_4342(r2)
 /* 80185CA0 00000074  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80185CA4 00000078  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80185CA8 0000007C  3C 00 43 30 */	lis r0, 0x4330
@@ -57,7 +57,7 @@ lbl_80185CF0:
 /* 80185D04 00000014  38 C0 00 00 */	li r6, 0
 /* 80185D08 00000018  3C E0 80 43 */	lis r7, g_fsHIO@ha
 /* 80185D0C 0000001C  38 E7 C9 EC */	addi r7, r7, g_fsHIO@l
-/* 80185D10 00000020  88 E7 00 08 */	lbz r7, 8(r7)
+/* 80185D10 00000020  88 E7 00 08 */	lbz r7, 8(r7)	/* effective address: 8042C9F4 */
 /* 80185D14 00000024  48 00 79 3D */	bl selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 80185D18 00000028  88 1F 02 64 */	lbz r0, 0x264(r31)
 /* 80185D1C 0000002C  54 00 10 3A */	slwi r0, r0, 2
@@ -71,8 +71,8 @@ lbl_80185CF0:
 /* 80185D3C 0000004C  4E 80 04 21 */	bctrl 
 /* 80185D40 00000050  88 1F 02 64 */	lbz r0, 0x264(r31)
 /* 80185D44 00000054  54 04 10 3A */	slwi r4, r0, 2
-/* 80185D48 00000058  3C 60 80 3C */	lis r3, d_file_d_file_select__SelEndFrameTbl@ha
-/* 80185D4C 0000005C  38 63 A8 60 */	addi r3, r3, d_file_d_file_select__SelEndFrameTbl@l
+/* 80185D48 00000058  3C 60 80 3C */	lis r3, SelEndFrameTbl@ha
+/* 80185D4C 0000005C  38 63 A8 60 */	addi r3, r3, SelEndFrameTbl@l
 /* 80185D50 00000060  7C 03 20 2E */	lwzx r0, r3, r4
 /* 80185D54 00000064  7C 7F 22 14 */	add r3, r31, r4
 /* 80185D58 00000068  90 03 00 E0 */	stw r0, 0xe0(r3)
@@ -80,7 +80,7 @@ lbl_80185CF0:
 /* 80185D60 00000070  54 00 10 3A */	slwi r0, r0, 2
 /* 80185D64 00000074  7C 7F 02 14 */	add r3, r31, r0
 /* 80185D68 00000078  80 03 00 E0 */	lwz r0, 0xe0(r3)
-/* 80185D6C 0000007C  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
+/* 80185D6C 0000007C  C8 22 9F 38 */	lfd f1, lit_4342(r2)
 /* 80185D70 00000080  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80185D74 00000084  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80185D78 00000088  3C 00 43 30 */	lis r0, 0x4330
@@ -102,7 +102,7 @@ lbl_80185CF0:
 /* 80185DB8 000000C8  80 63 01 88 */	lwz r3, 0x188(r3)
 /* 80185DBC 000000CC  B0 83 00 16 */	sth r4, 0x16(r3)
 /* 80185DC0 000000D0  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 80185DC4 000000D4  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
+/* 80185DC4 000000D4  C0 22 9F 48 */	lfs f1, lit_4778(r2)
 /* 80185DC8 000000D8  48 00 F4 D9 */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_80185DCC:
 /* 80185DCC 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

@@ -73,7 +73,7 @@ lbl_80111B9C:
 /* 80111BA4 00000008  4B F9 A8 AD */	bl getMainBckData__9daAlink_cCFQ29daAlink_c11daAlink_ANM
 /* 80111BA8 0000000C  A0 83 00 00 */	lhz r4, 0(r3)
 /* 80111BAC 00000010  7F 23 CB 78 */	mr r3, r25
-/* 80111BB0 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 80111BB0 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 80111BB4 00000018  4B F9 B7 C1 */	bl setUpperAnimeBaseMorf__9daAlink_cFUsf
 /* 80111BB8 0000001C  7F 23 CB 78 */	mr r3, r25
 /* 80111BBC 00000020  38 80 01 0F */	li r4, 0x10f
@@ -128,9 +128,9 @@ lbl_80111C68:
 lbl_80111C74:
 /* 80111C74 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111C78 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80111C7C 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 80111C7C 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80111C80 0000000C  64 00 04 00 */	oris r0, r0, 0x400
-/* 80111C84 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 80111C84 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80111C88 00000014  38 60 00 01 */	li r3, 1
 lbl_80111C8C:
 /* 80111C8C 00000000  39 61 00 30 */	addi r11, r1, 0x30

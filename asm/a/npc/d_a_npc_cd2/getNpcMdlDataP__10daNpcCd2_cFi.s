@@ -5,12 +5,12 @@ lbl_801598E8:
 /* 801598F4 0000000C  88 03 0A C6 */	lbz r0, 0xac6(r3)
 /* 801598F8 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 801598FC 00000014  54 84 18 38 */	slwi r4, r4, 3
-/* 80159900 00000018  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd2__l_bmdTbl@ha
-/* 80159904 0000001C  38 03 62 44 */	addi r0, r3, a_npc_d_a_npc_cd2__l_bmdTbl@l
+/* 80159900 00000018  3C 60 80 3B */	lis r3, l_bmdTbl@ha
+/* 80159904 0000001C  38 03 62 44 */	addi r0, r3, l_bmdTbl@l
 /* 80159908 00000020  7C A0 22 14 */	add r5, r0, r4
 /* 8015990C 00000024  41 82 00 10 */	beq lbl_8015991C
-/* 80159910 00000028  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd2__l_bmdTWTbl@ha
-/* 80159914 0000002C  38 03 63 34 */	addi r0, r3, a_npc_d_a_npc_cd2__l_bmdTWTbl@l
+/* 80159910 00000028  3C 60 80 3B */	lis r3, l_bmdTWTbl@ha
+/* 80159914 0000002C  38 03 63 34 */	addi r0, r3, l_bmdTWTbl@l
 /* 80159918 00000030  7C A0 22 14 */	add r5, r0, r4
 lbl_8015991C:
 /* 8015991C 00000000  80 65 00 00 */	lwz r3, 0(r5)

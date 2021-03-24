@@ -11,10 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE72C */ void getFreeSize();
-};
-
 struct JASOscillator {
 	struct Point {
 	};
@@ -22,6 +18,10 @@ struct JASOscillator {
 	struct Data {
 	};
 
+};
+
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
 };
 
 struct JASInst {
@@ -197,14 +197,14 @@ asm void JASBNKParser::Ver1::findChunk(void const* param_0, u32 param_1) {
 
 /* ############################################################################################## */
 /* 80455658-80455660 0004+04 s=2 e=0 z=0  None .sdata2    @835                                                         */
-SECTION_SDATA2 static f32 JASBNKParser__lit_835[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_835[1 + 1 /* padding */] = {
 	127.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455660-80455668 0008+00 s=1 e=0 z=0  None .sdata2    @838                                                         */
-SECTION_SDATA2 static f64 JASBNKParser__lit_838 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_838 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8029963C-80299A3C 0400+00 s=1 e=0 z=0  None .text      createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap          */
 #pragma push
@@ -242,7 +242,7 @@ SECTION_SDATA2 static u8 lit_1046[4] = {
 };
 
 /* 80455678-80455680 0004+04 s=1 e=0 z=0  None .sdata2    @1047                                                        */
-SECTION_SDATA2 static f32 JASBNKParser__lit_1047[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_1047[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
@@ -349,7 +349,7 @@ asm static void JSUConvertOffsetToPtr__template13(void const* param_0, u32 param
 
 /* ############################################################################################## */
 /* 80431B70-80431B7C 000C+00 s=1 e=0 z=0  None .bss       @1065                                                        */
-static u8 JASBNKParser__lit_1065[12];
+static u8 lit_1065[12];
 
 /* 80431B7C-80431B90 0010+04 s=1 e=0 z=0  None .bss       memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>   */
 static u8 data_80431B7C[16 + 4 /* padding */];

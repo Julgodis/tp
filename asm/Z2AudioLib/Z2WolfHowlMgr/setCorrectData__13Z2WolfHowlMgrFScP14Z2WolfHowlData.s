@@ -50,50 +50,50 @@ lbl_802CB1A8:
 /* 802CB1B0 00000008  40 80 00 90 */	bge lbl_802CB240
 /* 802CB1B4 0000000C  48 00 00 54 */	b lbl_802CB208
 lbl_802CB1B8:
-/* 802CB1B8 00000000  C0 02 C4 80 */	lfs f0, Z2WolfHowlMgr__lit_3711(r2)
+/* 802CB1B8 00000000  C0 02 C4 80 */	lfs f0, lit_3711(r2)
 /* 802CB1BC 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
 /* 802CB1C0 00000008  C0 02 C4 84 */	lfs f0, lit_3712(r2)
 /* 802CB1C4 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
-/* 802CB1C8 00000010  C0 02 C4 88 */	lfs f0, Z2WolfHowlMgr__lit_3713(r2)
+/* 802CB1C8 00000010  C0 02 C4 88 */	lfs f0, lit_3713(r2)
 /* 802CB1CC 00000014  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 /* 802CB1D0 00000018  48 00 00 88 */	b lbl_802CB258
 lbl_802CB1D4:
-/* 802CB1D4 00000000  C0 02 C4 8C */	lfs f0, Z2WolfHowlMgr__lit_3714(r2)
+/* 802CB1D4 00000000  C0 02 C4 8C */	lfs f0, lit_3714(r2)
 /* 802CB1D8 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
 /* 802CB1DC 00000008  C0 02 C4 90 */	lfs f0, lit_3715(r2)
 /* 802CB1E0 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
-/* 802CB1E4 00000010  C0 02 C4 94 */	lfs f0, Z2WolfHowlMgr__lit_3716(r2)
+/* 802CB1E4 00000010  C0 02 C4 94 */	lfs f0, lit_3716(r2)
 /* 802CB1E8 00000014  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 /* 802CB1EC 00000018  48 00 00 6C */	b lbl_802CB258
 lbl_802CB1F0:
-/* 802CB1F0 00000000  C0 02 C4 98 */	lfs f0, Z2WolfHowlMgr__lit_3717(r2)
+/* 802CB1F0 00000000  C0 02 C4 98 */	lfs f0, lit_3717(r2)
 /* 802CB1F4 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
-/* 802CB1F8 00000008  C0 02 C4 9C */	lfs f0, Z2WolfHowlMgr__lit_3718(r2)
+/* 802CB1F8 00000008  C0 02 C4 9C */	lfs f0, lit_3718(r2)
 /* 802CB1FC 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
 /* 802CB200 00000010  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 /* 802CB204 00000014  48 00 00 54 */	b lbl_802CB258
 lbl_802CB208:
-/* 802CB208 00000000  C0 02 C4 8C */	lfs f0, Z2WolfHowlMgr__lit_3714(r2)
+/* 802CB208 00000000  C0 02 C4 8C */	lfs f0, lit_3714(r2)
 /* 802CB20C 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
 /* 802CB210 00000008  C0 02 C4 90 */	lfs f0, lit_3715(r2)
 /* 802CB214 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
-/* 802CB218 00000010  C0 02 C4 9C */	lfs f0, Z2WolfHowlMgr__lit_3718(r2)
+/* 802CB218 00000010  C0 02 C4 9C */	lfs f0, lit_3718(r2)
 /* 802CB21C 00000014  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 /* 802CB220 00000018  48 00 00 38 */	b lbl_802CB258
 lbl_802CB224:
-/* 802CB224 00000000  C0 02 C4 80 */	lfs f0, Z2WolfHowlMgr__lit_3711(r2)
+/* 802CB224 00000000  C0 02 C4 80 */	lfs f0, lit_3711(r2)
 /* 802CB228 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
 /* 802CB22C 00000008  C0 02 C4 90 */	lfs f0, lit_3715(r2)
 /* 802CB230 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
-/* 802CB234 00000010  C0 02 C4 A0 */	lfs f0, Z2WolfHowlMgr__lit_3719(r2)
+/* 802CB234 00000010  C0 02 C4 A0 */	lfs f0, lit_3719(r2)
 /* 802CB238 00000014  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 /* 802CB23C 00000018  48 00 00 1C */	b lbl_802CB258
 lbl_802CB240:
-/* 802CB240 00000000  C0 02 C4 A4 */	lfs f0, Z2WolfHowlMgr__lit_3720(r2)
+/* 802CB240 00000000  C0 02 C4 A4 */	lfs f0, lit_3720(r2)
 /* 802CB244 00000004  D0 0D 83 08 */	stfs f0, cPitchUp(r13)
 /* 802CB248 00000008  C0 02 C4 64 */	lfs f0, lit_3486(r2)
 /* 802CB24C 0000000C  D0 0D 83 04 */	stfs f0, cPitchCenter(r13)
-/* 802CB250 00000010  C0 02 C4 9C */	lfs f0, Z2WolfHowlMgr__lit_3718(r2)
+/* 802CB250 00000010  C0 02 C4 9C */	lfs f0, lit_3718(r2)
 /* 802CB254 00000014  D0 0D 83 00 */	stfs f0, cPitchDown(r13)
 lbl_802CB258:
 /* 802CB258 00000000  38 00 00 00 */	li r0, 0

@@ -11,19 +11,6 @@
 // Types:
 // 
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
-struct cXyz {
-};
-
-struct cCcD_ShapeAttr {
-	struct Shape {
-	};
-
-};
-
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 80263970 */ void PlusDmg(int);
@@ -33,19 +20,32 @@ struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
 };
 
+struct dCcD_GStts {
+};
+
+struct cCcD_ShapeAttr {
+	struct Shape {
+	};
+
+};
+
+struct cXyz {
+};
+
 struct cCcD_GStts {
 };
 
 struct fopAc_ac_c {
 };
 
-struct dCcD_GStts {
+struct csXyz {
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct cCcD_GObjInf {
-};
-
-struct csXyz {
 };
 
 struct dCcS {
@@ -266,7 +266,7 @@ asm void dCcS::Dt() {
 
 /* ############################################################################################## */
 /* 80452778-8045277C 0004+00 s=3 e=0 z=0  None .sdata2    @3705                                                        */
-SECTION_SDATA2 static u8 d_cc_d_cc_s__lit_3705[4] = {
+SECTION_SDATA2 static u8 lit_3705[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -363,17 +363,17 @@ SECTION_DATA static u8 rank_tbl[121 + 3 /* padding */] = {
 };
 
 /* 8045277C-80452780 0004+00 s=1 e=0 z=0  None .sdata2    @3924                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_s__lit_3924 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_3924 = 1.0f / 100.0f;
 
 /* 80452780-80452788 0004+04 s=2 e=0 z=0  None .sdata2    @3925                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_s__lit_3925[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3925[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80452788-80452790 0008+00 s=1 e=0 z=0  None .sdata2    @3927                                                        */
-SECTION_SDATA2 static f64 d_cc_d_cc_s__lit_3927 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3927 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8008640C-80086754 0348+00 s=1 e=0 z=0  None .text      SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf       */
 #pragma push
@@ -432,7 +432,7 @@ asm void dCcS::ChkCamera(cXyz& param_0, cXyz& param_1, f32 param_2, fopAc_ac_c* 
 
 /* ############################################################################################## */
 /* 80452790-80452798 0004+04 s=1 e=0 z=0  None .sdata2    @4336                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_s__lit_4336[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4336[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

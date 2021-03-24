@@ -140,7 +140,7 @@ asm void cLib_memSet(void* param_0, int param_1, u32 param_2) {
 
 /* ############################################################################################## */
 /* 804551E0-804551E8 0004+04 s=9 e=0 z=0  None .sdata2    @2262                                                        */
-SECTION_SDATA2 static u8 c_lib__lit_2262[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_2262[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -181,7 +181,7 @@ asm void cLib_addCalc0(f32* param_0, f32 param_1, f32 param_2) {
 
 /* ############################################################################################## */
 /* 804551E8-804551F0 0008+00 s=7 e=0 z=0  None .sdata2    @2379                                                        */
-SECTION_SDATA2 static f64 c_lib__lit_2379 = 0.5;
+SECTION_SDATA2 static f64 lit_2379 = 0.5;
 
 /* 804551F0-804551F8 0008+00 s=7 e=0 z=0  None .sdata2    @2380                                                        */
 SECTION_SDATA2 static f64 lit_2380 = 3.0;

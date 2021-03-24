@@ -46,10 +46,10 @@ extern "C" void cosf(); // 1
 
 /* ############################################################################################## */
 /* 80456508-8045650C 0004+00 s=6 e=0 z=0  None .sdata2    @96                                                          */
-SECTION_SDATA2 static f32 mtx__lit_96 = 1.0f;
+SECTION_SDATA2 static f32 lit_96 = 1.0f;
 
 /* 8045650C-80456510 0004+00 s=6 e=0 z=0  None .sdata2    @97                                                          */
-SECTION_SDATA2 static u8 mtx__lit_97[4] = {
+SECTION_SDATA2 static u8 lit_97[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -77,7 +77,7 @@ extern "C" asm void PSMTXCopy() {
 
 /* ############################################################################################## */
 /* 804509D0-804509D8 0008+00 s=1 e=0 z=0  None .sdata     Unit01                                                       */
-SECTION_SDATA static u8 mtx__Unit01[8] = {
+SECTION_SDATA static u8 Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
@@ -222,7 +222,7 @@ extern "C" asm void C_MTXLookAt() {
 
 /* ############################################################################################## */
 /* 80456518-8045651C 0004+00 s=1 e=0 z=0  None .sdata2    @206                                                         */
-SECTION_SDATA2 static f32 mtx__lit_206 = 2.0f;
+SECTION_SDATA2 static f32 lit_206 = 2.0f;
 
 /* 8045651C-80456520 0004+00 s=1 e=0 z=0  None .sdata2    @227                                                         */
 SECTION_SDATA2 static f32 lit_227 = -1.0f;

@@ -5,7 +5,7 @@ lbl_80017B4C:
 /* 80017B58 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80017B5C 00000010  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 80017B60 00000014  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l
-/* 80017B64 00000018  88 63 1F BC */	lbz r3, 0x1fbc(r3)
+/* 80017B64 00000018  88 63 1F BC */	lbz r3, 0x1fbc(r3)	/* effective address: 803ECEFC */
 /* 80017B68 0000001C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80017B6C 00000020  38 A1 00 08 */	addi r5, r1, 8
 /* 80017B70 00000024  48 34 13 19 */	bl CARDGetStatus

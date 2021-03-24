@@ -17,7 +17,7 @@ lbl_800DBC98:
 /* 800DBCD4 0000003C  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800DBCD8 00000040  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DBCDC 00000044  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DBCE0 00000048  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800DBCE0 00000048  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800DBCE4 0000004C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DBCE8 00000050  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DBCEC 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

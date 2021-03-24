@@ -77,7 +77,7 @@ extern "C" static void dEnvSe_Execute__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_IsDelete__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_Delete__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_Create__FP8dEnvSe_c(); // 1
-extern "C" extern char const* const d_d_envse__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_ENVSE[10 + 1 /* padding */];
 
 // 
@@ -144,7 +144,7 @@ asm static void dEnvSe_Draw(dEnvSe_c* param_0) {
 
 /* ############################################################################################## */
 /* 80456B80-80456B84 0004+00 s=1 e=0 z=0  None .sbss2     @3752                                                        */
-SECTION_SBSS2 static u8 d_d_envse__lit_3752[4];
+SECTION_SBSS2 static u8 lit_3752[4];
 
 /* 80456B84-80456B88 0004+00 s=1 e=0 z=0  None .sbss2     None                                                         */
 SECTION_SBSS2 static u8 data_80456B84[4];

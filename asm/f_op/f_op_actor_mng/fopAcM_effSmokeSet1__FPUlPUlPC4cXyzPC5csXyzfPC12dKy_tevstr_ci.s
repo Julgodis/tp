@@ -13,7 +13,7 @@ lbl_8001D020:
 /* 8001D04C 00000018  7C FE 3B 78 */	mr r30, r7
 /* 8001D050 0000001C  7D 1F 43 78 */	mr r31, r8
 /* 8001D054 00000020  C0 45 00 08 */	lfs f2, 8(r5)
-/* 8001D058 00000024  C0 22 82 48 */	lfs f1, f_op_f_op_actor_mng__lit_6035(r2)
+/* 8001D058 00000024  C0 22 82 48 */	lfs f1, lit_6035(r2)
 /* 8001D05C 00000028  C0 05 00 04 */	lfs f0, 4(r5)
 /* 8001D060 0000002C  EC 21 00 2A */	fadds f1, f1, f0
 /* 8001D064 00000030  C0 05 00 00 */	lfs f0, 0(r5)
@@ -38,7 +38,7 @@ lbl_8001D020:
 /* 8001D0B0 0000007C  90 61 00 14 */	stw r3, 0x14(r1)
 /* 8001D0B4 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001D0B8 00000084  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001D0BC 00000088  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8001D0BC 00000088  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8001D0C0 0000008C  80 9B 00 00 */	lwz r4, 0(r27)
 /* 8001D0C4 00000090  7F 85 E3 78 */	mr r5, r28
 /* 8001D0C8 00000094  3C C0 80 3F */	lis r6, mGndCheck__11fopAcM_gc_c@ha

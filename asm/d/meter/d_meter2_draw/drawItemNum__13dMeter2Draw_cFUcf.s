@@ -8,7 +8,7 @@ lbl_8021AEC8:
 /* 8021AEE0 00000004  48 14 72 F9 */	bl _savegpr_28
 /* 8021AEE4 00000008  7C 7C 1B 78 */	mr r28, r3
 /* 8021AEE8 0000000C  7C 9E 23 78 */	mr r30, r4
-/* 8021AEEC 00000010  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__lit_4183(r2)
+/* 8021AEEC 00000010  C0 02 AE 84 */	lfs f0, lit_4183(r2)
 /* 8021AEF0 00000014  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8021AEF4 00000018  40 82 00 14 */	bne lbl_8021AF08
 /* 8021AEF8 0000001C  57 C0 15 BA */	rlwinm r0, r30, 2, 0x16, 0x1d
@@ -18,7 +18,7 @@ lbl_8021AEC8:
 lbl_8021AF08:
 /* 8021AF08 00000000  3B A0 00 00 */	li r29, 0
 /* 8021AF0C 00000004  3B E0 00 00 */	li r31, 0
-/* 8021AF10 00000008  C0 02 AE CC */	lfs f0, d_meter_d_meter2_draw__lit_8207(r2)
+/* 8021AF10 00000008  C0 02 AE CC */	lfs f0, lit_8207(r2)
 /* 8021AF14 0000000C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8021AF18 00000010  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 8021AF1C 00000014  1C 00 00 0C */	mulli r0, r0, 0xc

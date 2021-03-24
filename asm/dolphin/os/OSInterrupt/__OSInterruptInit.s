@@ -17,7 +17,7 @@ lbl_8033D770:
 /* 8033D7AC 0000003C  90 1F 00 C8 */	stw r0, 0xc8(r31)
 /* 8033D7B0 00000040  38 00 00 F0 */	li r0, 0xf0
 /* 8033D7B4 00000044  38 60 FF E0 */	li r3, -32
-/* 8033D7B8 00000048  90 04 00 04 */	stw r0, 4(r4)
+/* 8033D7B8 00000048  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC003004 */
 /* 8033D7BC 0000004C  48 00 03 01 */	bl __OSMaskInterrupts
 /* 8033D7C0 00000050  3C 60 80 34 */	lis r3, ExternalInterruptHandler@ha
 /* 8033D7C4 00000054  38 83 DF 10 */	addi r4, r3, ExternalInterruptHandler@l

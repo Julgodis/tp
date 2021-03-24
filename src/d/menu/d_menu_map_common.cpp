@@ -73,7 +73,7 @@ extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
 extern "C" void getIconSizeX__16dMenuMapCommon_cFUc(); // 1
 extern "C" void getIconSizeY__16dMenuMapCommon_cFUc(); // 1
 extern "C" void debugIcon__16dMenuMapCommon_cFv(); // 1
-extern "C" extern char const* const d_menu_d_menu_map_common__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -133,7 +133,7 @@ SECTION_DATA static void* __vt__16dMenuMapCommon_c[3] = {
 };
 
 /* 804540D8-804540DC 0004+00 s=6 e=0 z=0  None .sdata2    @3703                                                        */
-SECTION_SDATA2 static u8 d_menu_d_menu_map_common__lit_3703[4] = {
+SECTION_SDATA2 static u8 lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -215,7 +215,7 @@ SECTION_DEAD static char const* const pad_80395D8F = "";
 #pragma pop
 
 /* 804540DC-804540E0 0004+00 s=7 e=0 z=0  None .sdata2    @3882                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_3882 = 1.0f;
+SECTION_SDATA2 static f32 lit_3882 = 1.0f;
 
 /* 801C28D8-801C38E4 100C+00 s=0 e=2 z=0  None .text      initiate__16dMenuMapCommon_cFP10JKRArchive                   */
 #pragma push
@@ -230,16 +230,16 @@ asm void dMenuMapCommon_c::initiate(JKRArchive* param_0) {
 
 /* ############################################################################################## */
 /* 804540E0-804540E4 0004+00 s=1 e=0 z=0  None .sdata2    @4010                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4010 = 255.0f;
+SECTION_SDATA2 static f32 lit_4010 = 255.0f;
 
 /* 804540E4-804540E8 0004+00 s=1 e=0 z=0  None .sdata2    @4011                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4011 = 4.0f / 7.0f;
+SECTION_SDATA2 static f32 lit_4011 = 4.0f / 7.0f;
 
 /* 804540E8-804540EC 0004+00 s=3 e=0 z=0  None .sdata2    @4012                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4012 = 0.5f;
+SECTION_SDATA2 static f32 lit_4012 = 0.5f;
 
 /* 804540EC-804540F0 0004+00 s=1 e=0 z=0  None .sdata2    @4013                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4013 = 180.0f;
+SECTION_SDATA2 static f32 lit_4013 = 180.0f;
 
 /* 801C38E4-801C3EC4 05E0+00 s=0 e=2 z=0  None .text      drawIcon__16dMenuMapCommon_cFffff                            */
 #pragma push
@@ -254,10 +254,10 @@ asm void dMenuMapCommon_c::drawIcon(f32 param_0, f32 param_1, f32 param_2, f32 p
 
 /* ############################################################################################## */
 /* 804540F0-804540F4 0004+00 s=1 e=0 z=0  None .sdata2    @4072                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4072 = 16.0f / 27.0f;
+SECTION_SDATA2 static f32 lit_4072 = 16.0f / 27.0f;
 
 /* 804540F4-804540F8 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
+SECTION_SDATA2 static f32 lit_4073 = 11.0f / 27.0f;
 
 /* 801C3EC4-801C43A8 04E4+00 s=0 e=4 z=0  None .text      iconScale__16dMenuMapCommon_cFifff                           */
 #pragma push
@@ -305,7 +305,7 @@ asm void dMenuMapCommon_c::setBlendRatio(u8 param_0, f32 param_1, f32 param_2) {
 
 /* ############################################################################################## */
 /* 804540F8-80454100 0008+00 s=2 e=0 z=0  None .sdata2    @4119                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4119 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4119 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 801C452C-801C4600 00D4+00 s=0 e=1 z=0  None .text      blinkMove__16dMenuMapCommon_cFs                              */
 #pragma push
@@ -320,7 +320,7 @@ asm void dMenuMapCommon_c::blinkMove(s16 param_0) {
 
 /* ############################################################################################## */
 /* 80454100-80454108 0008+00 s=1 e=0 z=0  None .sdata2    @4140                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_map_common__lit_4140 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4140 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 801C4600-801C4738 0138+00 s=0 e=1 z=0  None .text      moveLightDropAnime__16dMenuMapCommon_cFv                     */
 #pragma push

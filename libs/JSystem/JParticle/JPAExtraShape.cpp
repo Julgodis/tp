@@ -63,7 +63,7 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 
 /* ############################################################################################## */
 /* 804552E0-804552E8 0004+04 s=6 e=0 z=0  None .sdata2    @2270                                                        */
-SECTION_SDATA2 static f32 JPAExtraShape__lit_2270[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_2270[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
@@ -115,7 +115,7 @@ asm void JPACalcScaleAnmNormal(JPAEmitterWorkData* param_0, JPABaseParticle* par
 
 /* ############################################################################################## */
 /* 804552E8-804552F0 0008+00 s=5 e=0 z=0  None .sdata2    @2312                                                        */
-SECTION_SDATA2 static f64 JPAExtraShape__lit_2312 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_2312 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8027AA20-8027AA84 0064+00 s=0 e=1 z=0  None .text      JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
@@ -211,7 +211,7 @@ asm JPAExtraShape::JPAExtraShape(u8 const* param_0) {
 
 /* ############################################################################################## */
 /* 80455300-80455308 0004+04 s=1 e=0 z=0  None .sdata2    @2503                                                        */
-SECTION_SDATA2 static u8 JPAExtraShape__lit_2503[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_2503[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

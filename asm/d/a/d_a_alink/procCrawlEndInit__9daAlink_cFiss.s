@@ -21,15 +21,15 @@ lbl_800F9D7C:
 /* 800F9DC8 00000038  3B C3 E0 1C */	addi r30, r3, m__20daAlinkHIO_crouch_c0@l
 /* 800F9DCC 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 800F9DD0 00000040  38 80 00 34 */	li r4, 0x34
-/* 800F9DD4 00000044  C0 3E 00 18 */	lfs f1, 0x18(r30)
-/* 800F9DD8 00000048  C0 5E 00 1C */	lfs f2, 0x1c(r30)
-/* 800F9DDC 0000004C  A8 BE 00 14 */	lha r5, 0x14(r30)
+/* 800F9DD4 00000044  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 8038E034 */
+/* 800F9DD8 00000048  C0 5E 00 1C */	lfs f2, 0x1c(r30)	/* effective address: 8038E038 */
+/* 800F9DDC 0000004C  A8 BE 00 14 */	lha r5, 0x14(r30)	/* effective address: 8038E030 */
 /* 800F9DE0 00000050  2C 1B 00 00 */	cmpwi r27, 0
 /* 800F9DE4 00000054  41 82 00 0C */	beq lbl_800F9DF0
 /* 800F9DE8 00000058  C0 7E 00 20 */	lfs f3, 0x20(r30)
 /* 800F9DEC 0000005C  48 00 00 08 */	b lbl_800F9DF4
 lbl_800F9DF0:
-/* 800F9DF0 00000000  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800F9DF0 00000000  C0 62 92 BC */	lfs f3, lit_6041(r2)
 lbl_800F9DF4:
 /* 800F9DF4 00000000  4B FB 32 19 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800F9DF8 00000004  2C 1B 00 00 */	cmpwi r27, 0
@@ -86,7 +86,7 @@ lbl_800F9E5C:
 lbl_800F9EB8:
 /* 800F9EB8 00000000  D0 3F 34 7C */	stfs f1, 0x347c(r31)
 lbl_800F9EBC:
-/* 800F9EBC 00000000  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800F9EBC 00000000  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800F9EC0 00000004  A8 1E 00 14 */	lha r0, 0x14(r30)
 /* 800F9EC4 00000008  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800F9EC8 0000000C  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -102,9 +102,9 @@ lbl_800F9EBC:
 /* 800F9EF0 00000034  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F9EF4 00000038  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800F9EF8 0000003C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800F9EFC 00000040  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F9EFC 00000040  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800F9F00 00000044  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800F9F04 00000048  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F9F04 00000048  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800F9F08 0000004C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800F9F0C 00000050  38 60 00 01 */	li r3, 1
 /* 800F9F10 00000054  E3 E1 00 58 */	psq_l f31, 88(r1), 0, 0 /* qr0 */

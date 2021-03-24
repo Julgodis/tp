@@ -25,12 +25,12 @@ extern "C" void EnableEXI2Interrupts(); // 1
 extern "C" void TRKInitializeIntDrivenUART(); // 1
 extern "C" void InitMetroTRKCommTable(); // 1
 extern "C" static void TRKEXICallBack(); // 1
-extern "C" extern u8 const Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding */];
-extern "C" extern u8 const Os_dolphin_dolphin_trk_glue__lit_216[23 + 1 /* padding */];
-extern "C" extern u8 const Os_dolphin_dolphin_trk_glue__lit_217[33 + 3 /* padding */];
+extern "C" extern u8 const lit_215[21 + 3 /* padding */];
+extern "C" extern u8 const lit_216[23 + 1 /* padding */];
+extern "C" extern u8 const lit_217[33 + 3 /* padding */];
 extern "C" extern u8 const lit_218[36];
-extern "C" extern u8 const Os_dolphin_dolphin_trk_glue__lit_219[43 + 1 /* padding */];
-extern "C" extern u8 const Os_dolphin_dolphin_trk_glue__lit_220[47 + 1 /* padding */];
+extern "C" extern u8 const lit_219[43 + 1 /* padding */];
+extern "C" extern u8 const lit_220[47 + 1 /* padding */];
 extern "C" extern u8 const lit_221[40 + 4 /* padding */];
 SECTION_BSS u8 data_8044F820[4];
 SECTION_BSS extern u8 _MetroTRK_Has_Framing[4];
@@ -251,7 +251,7 @@ extern "C" asm static void TRKEXICallBack() {
 
 /* ############################################################################################## */
 /* 803A2C10-803A2C28 0015+03 s=0 e=0 z=0  None .rodata    @215                                                         */
-SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding */] = {
+SECTION_RODATA u8 const lit_215[21 + 3 /* padding */] = {
 	0x44, 0x65, 0x76, 0x6B, 0x69, 0x74, 0x20, 0x73, 0x65, 0x74, 0x20, 0x74, 0x6F, 0x20, 0x3A, 0x20,
 	0x25, 0x6C, 0x64, 0x0A, 0x00,
 	/* padding */
@@ -259,7 +259,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding *
 };
 
 /* 803A2C28-803A2C40 0017+01 s=0 e=0 z=0  None .rodata    @216                                                         */
-SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_216[23 + 1 /* padding */] = {
+SECTION_RODATA u8 const lit_216[23 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x42, 0x42, 0x41, 0x0A, 0x00,
 	/* padding */
@@ -267,7 +267,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_216[23 + 1 /* padding *
 };
 
 /* 803A2C40-803A2C64 0021+03 s=0 e=0 z=0  None .rodata    @217                                                         */
-SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_217[33 + 3 /* padding */] = {
+SECTION_RODATA u8 const lit_217[33 + 3 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A,
 	0x00,
@@ -283,7 +283,7 @@ SECTION_RODATA u8 const lit_218[36] = {
 };
 
 /* 803A2C88-803A2CB4 002B+01 s=0 e=0 z=0  None .rodata    @219                                                         */
-SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_219[43 + 1 /* padding */] = {
+SECTION_RODATA u8 const lit_219[43 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x55, 0x4E, 0x4B, 0x4E, 0x4F, 0x57, 0x4E, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,
 	0x72, 0x65, 0x2E, 0x20, 0x28, 0x25, 0x6C, 0x64, 0x29, 0x0A, 0x00,
@@ -292,7 +292,7 @@ SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_219[43 + 1 /* padding *
 };
 
 /* 803A2CB4-803A2CE4 002F+01 s=0 e=0 z=0  None .rodata    @220                                                         */
-SECTION_RODATA u8 const Os_dolphin_dolphin_trk_glue__lit_220[47 + 1 /* padding */] = {
+SECTION_RODATA u8 const lit_220[47 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x49, 0x6E, 0x76, 0x61, 0x6C,
 	0x69, 0x64, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x20, 0x49, 0x44, 0x20, 0x70,
 	0x61, 0x73, 0x73, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x4F, 0x53, 0x0A, 0x00,

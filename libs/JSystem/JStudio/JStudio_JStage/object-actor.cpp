@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
+	};
+
+};
+
 struct Vec {
 };
 
@@ -51,18 +63,6 @@ namespace JStudio {
 
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TObject {
 	};
 
 };
@@ -149,16 +149,14 @@ extern "C" void func_8028B198(); // 1
 extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
 extern "C" void func_8028B580(); // 1
 extern "C" void func_8028B5E0(); // 1
-extern "C" extern u8 lit_1083[12];
-extern "C" extern u8 lit_1084[12];
-extern "C" extern u8 object_actor__lit_1089[12];
+extern "C" extern u8 lit_1089[12];
 extern "C" extern u8 lit_1090[12];
 extern "C" extern u8 lit_1091[12];
 extern "C" extern u8 lit_1096[12];
 extern "C" extern u8 lit_1097[12];
 extern "C" extern u8 lit_1098[12];
 extern "C" extern u8 lit_1088[12];
-extern "C" extern u8 object_actor__lit_1095[12];
+extern "C" extern u8 lit_1095[12];
 extern "C" extern u8 lit_1102[12];
 extern "C" extern u8 lit_1103[12];
 
@@ -211,7 +209,7 @@ SECTION_DATA static u8 lit_890[12] = {
 };
 
 /* 803C573C-803C5748 000C+00 s=1 e=0 z=0  None .data      @899                                                         */
-SECTION_DATA static u8 object_actor__lit_899[12] = {
+SECTION_DATA static u8 lit_899[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -220,18 +218,18 @@ SECTION_DATA static u8 lit_916[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5754-803C5760 000C+00 s=0 e=0 z=0  None .data      @1083                                                        */
-SECTION_DATA u8 lit_1083[12] = {
+/* 803C5754-803C5760 000C+00 s=1 e=0 z=0  None .data      @1083                                                        */
+SECTION_DATA static u8 lit_1083[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x74, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5760-803C576C 000C+00 s=0 e=0 z=0  None .data      @1084                                                        */
-SECTION_DATA u8 lit_1084[12] = {
+/* 803C5760-803C576C 000C+00 s=1 e=0 z=0  None .data      @1084                                                        */
+SECTION_DATA static u8 lit_1084[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x70, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C576C-803C5778 000C+00 s=0 e=0 z=0  None .data      @1089                                                        */
-SECTION_DATA u8 object_actor__lit_1089[12] = {
+SECTION_DATA u8 lit_1089[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x68, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -342,11 +340,11 @@ static u8 lit_1087[12];
 /* 80431194-804311A0 000C+00 s=0 e=0 z=0  None .bss       @1088                                                        */
 u8 lit_1088[12];
 
-/* 804311A0-804311E0 0040+00 s=2 e=0 z=0  None .bss       saoVVOutput___Q214JStudio_JStage14TAdaptor_actor             */
+/* 804311A0-804311E0 0040+00 s=3 e=0 z=0  None .bss       saoVVOutput___Q214JStudio_JStage14TAdaptor_actor             */
 static u8 saoVVOutput___Q214JStudio_JStage14TAdaptor_actor[64];
 
 /* 804311E0-804311EC 000C+00 s=0 e=0 z=0  None .bss       @1095                                                        */
-u8 object_actor__lit_1095[12];
+u8 lit_1095[12];
 
 /* 804311EC-804311F8 000C+00 s=0 e=0 z=0  None .bss       @1102                                                        */
 u8 lit_1102[12];

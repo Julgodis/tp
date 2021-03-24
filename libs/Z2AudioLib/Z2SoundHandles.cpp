@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -21,6 +18,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundHandles {
@@ -156,7 +156,7 @@ asm void Z2SoundHandles::initHandlesPool(u8 param_0) {
 
 /* ############################################################################################## */
 /* 804341B8-804341C4 000C+00 s=3 e=0 z=0  None .bss       @632                                                         */
-static u8 Z2SoundHandles__lit_632[12];
+static u8 lit_632[12];
 
 /* 804341C4-804341D8 0010+04 s=3 e=1 z=0  None .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv */
 u8 data_804341C4[16 + 4 /* padding */];

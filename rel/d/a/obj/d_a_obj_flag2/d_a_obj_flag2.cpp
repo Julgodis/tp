@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct cXyz {
 	/* 80BEC790 */ ~cXyz();
 	/* 80BEDB70 */ cXyz();
-};
-
-struct fopAc_ac_c {
 };
 
 struct FlagCloth_c {

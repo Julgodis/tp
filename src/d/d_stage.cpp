@@ -49,91 +49,91 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct stage_arrow_class {
-};
-
-struct stage_vrboxcol_info_class {
-};
-
-struct stage_pure_lightvec_info_class {
-};
-
-struct stage_envr_info_class {
-};
-
-struct dStage_MemoryMap_c {
-};
-
-struct dStage_DMap_c {
-};
-
-struct dStage_Multi_c {
-};
-
-struct dStage_dPath_c {
-};
-
-struct stage_vrbox_info_class {
-};
-
-struct dStage_Lbnk_c {
-};
-
-struct stage_actor_class {
-};
-
-struct dStage_FileList2_dt_c {
-};
-
-struct stage_palette_info_class {
-};
-
-struct stage_camera_class {
-};
-
-struct stage_map_info_class {
-};
-
-struct dStage_SoundInfo_c {
-};
-
-struct stage_scls_info_dummy_class {
-};
-
-struct stage_map_info_dummy_class {
-};
-
-struct stage_plight_info_class {
-};
-
-struct stage_pselect_info_class {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct dStage_dPnt_c {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct dStage_FileList_dt_c {
-};
-
-struct dStage_MemoryConfig_c {
-};
-
 struct dStage_Elst_c {
 };
 
 struct roomRead_class {
 };
 
+struct stage_envr_info_class {
+};
+
+struct dStage_DMap_c {
+};
+
+struct dStage_FileList2_dt_c {
+};
+
+struct stage_map_info_dummy_class {
+};
+
+struct dStage_FileList_dt_c {
+};
+
+struct dStage_MemoryMap_c {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct stage_actor_class {
+};
+
+struct stage_palette_info_class {
+};
+
+struct stage_arrow_class {
+};
+
+struct stage_pure_lightvec_info_class {
+};
+
+struct stage_map_info_class {
+};
+
+struct dStage_FloorInfo_c {
+};
+
+struct dStage_Lbnk_c {
+};
+
+struct dStage_dPath_c {
+};
+
+struct stage_camera_class {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
 struct stage_stag_info_class {
 };
 
+struct stage_vrbox_info_class {
+};
+
+struct dStage_dPnt_c {
+};
+
+struct stage_pselect_info_class {
+};
+
+struct dStage_MemoryConfig_c {
+};
+
+struct stage_vrboxcol_info_class {
+};
+
 struct stage_tresure_class {
+};
+
+struct stage_plight_info_class {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct dStage_Multi_c {
 };
 
 struct dStage_stageDt_c {
@@ -848,11 +848,11 @@ extern "C" void __ct__19dStage_roomStatus_cFv(); // 1
 extern "C" void __dt__19dStage_KeepDoorInfoFv(); // 1
 extern "C" void __dt__21stage_tgsc_data_classFv(); // 1
 extern "C" void __ct__21stage_tgsc_data_classFv(); // 1
-extern "C" extern char const* const d_d_stage__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__16dStage_stageDt_c[93];
 extern "C" extern void* __vt__11dStage_dt_c[93];
-extern "C" extern u8 d_d_stage__lit_3981[12];
-extern "C" extern u8 d_d_stage__lit_5376[12];
+extern "C" extern u8 lit_3981[12];
+extern "C" extern u8 lit_5376[12];
 extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
 extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 extern "C" extern u8 mProcID__20dStage_roomControl_c[4];
@@ -1061,7 +1061,7 @@ asm static void dStage_SetErrorStage() {
 
 /* ############################################################################################## */
 /* 803F4E68-803F4E74 000C+00 s=1 e=0 z=0  None .bss       @3926                                                        */
-static u8 d_d_stage__lit_3926[12];
+static u8 lit_3926[12];
 
 /* 803F4E74-803F5778 0904+00 s=3 e=0 z=0  None .bss       DoorInfo                                                     */
 static u8 DoorInfo[2308];
@@ -1112,7 +1112,7 @@ asm static void dStage_KeepDoorInfoProc(dStage_dt_c* param_0, stage_tgsc_class* 
 
 /* ############################################################################################## */
 /* 803F5778-803F5784 000C+00 s=0 e=0 z=0  None .bss       @3981                                                        */
-u8 d_d_stage__lit_3981[12];
+u8 lit_3981[12];
 
 /* 803F5784-803F6088 0904+00 s=3 e=0 z=0  None .bss       l_RoomKeepDoorInfo                                           */
 static u8 l_RoomKeepDoorInfo[2308];
@@ -1174,7 +1174,7 @@ asm void dStage_startStage_c::set(char const* param_0, s8 param_1, s16 param_2, 
 
 /* ############################################################################################## */
 /* 803F6088-803F6094 000C+00 s=0 e=0 z=0  None .bss       @5376                                                        */
-u8 d_d_stage__lit_5376[12];
+u8 lit_5376[12];
 
 /* 803F6094-80406194 10100+00 s=12 e=31 z=0  None .bss       mStatus__20dStage_roomControl_c                              */
 u8 mStatus__20dStage_roomControl_c[65792];
@@ -2509,7 +2509,7 @@ asm static void dStage_actorCreate(stage_actor_data_class* param_0, fopAcM_prm_c
 
 /* ############################################################################################## */
 /* 80451C90-80451C94 0004+00 s=2 e=0 z=0  None .sdata2    @4270                                                        */
-SECTION_SDATA2 static u8 d_d_stage__lit_4270[4] = {
+SECTION_SDATA2 static u8 lit_4270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

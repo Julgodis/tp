@@ -40,9 +40,9 @@ lbl_8015D120:
 /* 8015D130 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D134 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D138 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D13C 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D13C 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D140 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D144 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D144 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D148 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D14C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D150 00000030  48 14 E8 35 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -57,9 +57,9 @@ lbl_8015D160:
 /* 8015D170 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D174 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D178 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D17C 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D17C 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D180 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D184 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D184 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D188 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D18C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D190 00000030  48 14 E7 F5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -74,9 +74,9 @@ lbl_8015D1A0:
 /* 8015D1B0 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D1B4 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D1B8 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D1BC 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D1BC 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D1C0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D1C4 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D1C4 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D1C8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D1CC 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D1D0 00000030  48 14 E7 B5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -91,9 +91,9 @@ lbl_8015D1E0:
 /* 8015D1F0 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D1F4 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D1F8 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D1FC 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D1FC 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D200 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D204 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D204 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D208 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D20C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D210 00000030  48 14 E7 75 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -108,9 +108,9 @@ lbl_8015D220:
 /* 8015D230 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D234 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D238 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D23C 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D23C 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D240 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D244 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D244 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D248 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D24C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D250 00000030  48 14 E7 35 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -125,9 +125,9 @@ lbl_8015D260:
 /* 8015D270 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D274 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D278 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D27C 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D27C 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D280 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D284 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D284 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D288 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D28C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D290 00000030  48 14 E6 F5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -142,9 +142,9 @@ lbl_8015D2A0:
 /* 8015D2B0 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D2B4 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D2B8 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D2BC 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D2BC 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D2C0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D2C4 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D2C4 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D2C8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D2CC 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D2D0 00000030  48 14 E6 B5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -159,9 +159,9 @@ lbl_8015D2E0:
 /* 8015D2F0 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D2F4 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D2F8 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D2FC 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D2FC 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D300 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D304 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D304 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D308 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D30C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D310 00000030  48 14 E6 75 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -176,9 +176,9 @@ lbl_8015D320:
 /* 8015D330 00000010  38 A0 00 00 */	li r5, 0
 /* 8015D334 00000014  38 C0 00 00 */	li r6, 0
 /* 8015D338 00000018  38 E0 00 00 */	li r7, 0
-/* 8015D33C 0000001C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D33C 0000001C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D340 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8015D344 00000024  C0 62 9B BC */	lfs f3, a_obj_d_a_obj_item__lit_4923(r2)
+/* 8015D344 00000024  C0 62 9B BC */	lfs f3, lit_4923(r2)
 /* 8015D348 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8015D34C 0000002C  39 00 00 00 */	li r8, 0
 /* 8015D350 00000030  48 14 E6 35 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

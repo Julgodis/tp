@@ -2,8 +2,8 @@ lbl_802D1004:
 /* 802D1004 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1008 00000004  7C 08 02 A6 */	mflr r0
 /* 802D100C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802D1010 0000000C  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D1014 00000010  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D1010 0000000C  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1014 00000010  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D1018 00000014  38 63 00 89 */	addi r3, r3, 0x89
 /* 802D101C 00000018  4C C6 31 82 */	crclr 6
 /* 802D1020 0000001C  48 01 76 5D */	bl JUTWarningConsole_f

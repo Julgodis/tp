@@ -8,7 +8,7 @@ lbl_8014C5E0:
 /* 8014C5F8 00000018  3B C0 00 00 */	li r30, 0
 /* 8014C5FC 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8014C600 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8014C604 00000024  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 8014C604 00000024  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 8014C608 00000028  28 00 00 1C */	cmplwi r0, 0x1c
 /* 8014C60C 0000002C  40 82 00 D8 */	bne lbl_8014C6E4
 /* 8014C610 00000030  80 63 5D AC */	lwz r3, 0x5dac(r3)

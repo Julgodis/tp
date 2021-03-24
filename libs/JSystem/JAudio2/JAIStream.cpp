@@ -21,6 +21,15 @@ struct JASAramStream {
 	/* 802966CC */ void cancel();
 };
 
+struct JAISoundActivity {
+};
+
+struct JAIStreamMgr {
+};
+
+struct JAIAudience {
+};
+
 struct JAISoundID {
 };
 
@@ -30,16 +39,7 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template2 {
 };
 
-struct JAIAudience {
-};
-
 struct JASSoundParams {
-};
-
-struct JAISoundActivity {
-};
-
-struct JAIStreamMgr {
 };
 
 struct JGeometry {
@@ -263,7 +263,7 @@ SECTION_SDATA2 static u8 lit_865[4] = {
 };
 
 /* 804557F8-80455800 0004+04 s=2 e=0 z=0  None .sdata2    @866                                                         */
-SECTION_SDATA2 static f32 JAIStream__lit_866[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_866[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

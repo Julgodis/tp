@@ -47,7 +47,7 @@ lbl_800BA738:
 /* 800BA740 00000008  40 82 00 3C */	bne lbl_800BA77C
 /* 800BA744 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800BA748 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800BA74C 00000014  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800BA74C 00000014  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800BA750 00000018  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800BA754 0000001C  40 82 00 18 */	bne lbl_800BA76C
 /* 800BA758 00000020  7F C3 F3 78 */	mr r3, r30
@@ -151,7 +151,7 @@ lbl_800BA8A8:
 /* 800BA8B0 00000008  40 82 00 44 */	bne lbl_800BA8F4
 /* 800BA8B4 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800BA8B8 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800BA8BC 00000014  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800BA8BC 00000014  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800BA8C0 00000018  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800BA8C4 0000001C  40 82 00 18 */	bne lbl_800BA8DC
 /* 800BA8C8 00000020  7F C3 F3 78 */	mr r3, r30

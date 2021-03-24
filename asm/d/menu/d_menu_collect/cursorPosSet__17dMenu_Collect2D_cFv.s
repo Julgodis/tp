@@ -99,7 +99,7 @@ lbl_801B2940:
 /* 801B2950 00000010  2C 1D 00 07 */	cmpwi r29, 7
 /* 801B2954 00000014  41 80 FE BC */	blt lbl_801B2810
 /* 801B2958 00000018  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 801B295C 0000001C  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B295C 0000001C  C0 22 A5 2C */	lfs f1, lit_4482(r2)
 /* 801B2960 00000020  4B FE 29 41 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801B2964 00000024  88 1F 02 57 */	lbz r0, 0x257(r31)
 /* 801B2968 00000028  1C 00 00 18 */	mulli r0, r0, 0x18
@@ -138,7 +138,7 @@ lbl_801B2940:
 /* 801B29EC 000000AC  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 801B29F0 000000B0  C0 22 A5 64 */	lfs f1, lit_5611(r2)
 /* 801B29F4 000000B4  C0 42 A5 68 */	lfs f2, lit_5612(r2)
-/* 801B29F8 000000B8  C0 62 A5 6C */	lfs f3, d_menu_d_menu_collect__lit_5613(r2)
+/* 801B29F8 000000B8  C0 62 A5 6C */	lfs f3, lit_5613(r2)
 /* 801B29FC 000000BC  C0 82 A5 30 */	lfs f4, lit_5173(r2)
 /* 801B2A00 000000C0  FC A0 20 90 */	fmr f5, f4
 /* 801B2A04 000000C4  4B FE 27 AD */	bl setParam__16dSelect_cursor_cFfffff
@@ -150,19 +150,19 @@ lbl_801B2A0C:
 /* 801B2A18 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801B2A1C 00000010  40 82 00 24 */	bne lbl_801B2A40
 /* 801B2A20 00000014  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 801B2A24 00000018  C0 22 A5 70 */	lfs f1, d_menu_d_menu_collect__lit_5614(r2)
+/* 801B2A24 00000018  C0 22 A5 70 */	lfs f1, lit_5614(r2)
 /* 801B2A28 0000001C  C0 42 A5 68 */	lfs f2, lit_5612(r2)
-/* 801B2A2C 00000020  C0 62 A5 74 */	lfs f3, d_menu_d_menu_collect__lit_5615(r2)
+/* 801B2A2C 00000020  C0 62 A5 74 */	lfs f3, lit_5615(r2)
 /* 801B2A30 00000024  FC 80 08 90 */	fmr f4, f1
 /* 801B2A34 00000028  FC A0 08 90 */	fmr f5, f1
 /* 801B2A38 0000002C  4B FE 27 79 */	bl setParam__16dSelect_cursor_cFfffff
 /* 801B2A3C 00000030  48 00 00 20 */	b lbl_801B2A5C
 lbl_801B2A40:
 /* 801B2A40 00000000  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 801B2A44 00000004  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B2A44 00000004  C0 22 A5 2C */	lfs f1, lit_4482(r2)
 /* 801B2A48 00000008  FC 40 08 90 */	fmr f2, f1
-/* 801B2A4C 0000000C  C0 62 A5 78 */	lfs f3, d_menu_d_menu_collect__lit_5616(r2)
-/* 801B2A50 00000010  C0 82 A5 7C */	lfs f4, d_menu_d_menu_collect__lit_5617(r2)
+/* 801B2A4C 0000000C  C0 62 A5 78 */	lfs f3, lit_5616(r2)
+/* 801B2A50 00000010  C0 82 A5 7C */	lfs f4, lit_5617(r2)
 /* 801B2A54 00000014  FC A0 20 90 */	fmr f5, f4
 /* 801B2A58 00000018  4B FE 27 59 */	bl setParam__16dSelect_cursor_cFfffff
 lbl_801B2A5C:

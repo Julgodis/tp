@@ -7,7 +7,7 @@ lbl_801BA7F0:
 /* 801BA804 00000000  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801BA808 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 801BA80C 00000008  FF E0 08 90 */	fmr f31, f1
-/* 801BA810 0000000C  C0 02 A5 E8 */	lfs f0, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BA810 0000000C  C0 02 A5 E8 */	lfs f0, lit_3962(r2)
 /* 801BA814 00000010  FC 00 F8 00 */	fcmpu cr0, f0, f31
 /* 801BA818 00000014  40 82 00 60 */	bne lbl_801BA878
 /* 801BA81C 00000018  80 7F 0C A8 */	lwz r3, 0xca8(r31)
@@ -65,7 +65,7 @@ lbl_801BA878:
 /* 801BA8E8 00000070  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 801BA8EC 00000074  7D 89 03 A6 */	mtctr r12
 /* 801BA8F0 00000078  4E 80 04 21 */	bctrl 
-/* 801BA8F4 0000007C  C0 02 A6 20 */	lfs f0, d_menu_d_menu_dmap__lit_4643(r2)
+/* 801BA8F4 0000007C  C0 02 A6 20 */	lfs f0, lit_4643(r2)
 /* 801BA8F8 00000080  EF E0 07 F2 */	fmuls f31, f0, f31
 /* 801BA8FC 00000084  FC 00 F8 1E */	fctiwz f0, f31
 /* 801BA900 00000088  D8 01 00 08 */	stfd f0, 8(r1)

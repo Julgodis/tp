@@ -14,19 +14,19 @@ lbl_801354C8:
 /* 801354F8 00000000  40 81 00 1C */	ble lbl_80135514
 /* 801354FC 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlSwim_c0@ha
 /* 80135500 00000008  38 63 F8 B4 */	addi r3, r3, m__20daAlinkHIO_wlSwim_c0@l
-/* 80135504 0000000C  C0 23 00 48 */	lfs f1, 0x48(r3)
-/* 80135508 00000010  C0 03 00 94 */	lfs f0, 0x94(r3)
+/* 80135504 0000000C  C0 23 00 48 */	lfs f1, 0x48(r3)	/* effective address: 8038F8FC */
+/* 80135508 00000010  C0 03 00 94 */	lfs f0, 0x94(r3)	/* effective address: 8038F948 */
 /* 8013550C 00000014  EC 21 00 2A */	fadds f1, f1, f0
 /* 80135510 00000018  48 00 00 10 */	b lbl_80135520
 lbl_80135514:
 /* 80135514 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 80135518 00000004  38 63 F1 A0 */	addi r3, r3, m__24daAlinkHIO_wlWallHang_c0@l
-/* 8013551C 00000008  C0 23 00 88 */	lfs f1, 0x88(r3)
+/* 8013551C 00000008  C0 23 00 88 */	lfs f1, 0x88(r3)	/* effective address: 8038F228 */
 lbl_80135520:
 /* 80135520 00000000  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80135524 00000004  C0 1F 33 D8 */	lfs f0, 0x33d8(r31)
 /* 80135528 00000008  EC 20 08 2A */	fadds f1, f0, f1
-/* 8013552C 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013552C 0000000C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80135530 00000010  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80135534 00000014  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80135538 00000000  40 80 00 10 */	bge lbl_80135548
@@ -65,7 +65,7 @@ lbl_80135548:
 /* 801355B8 00000070  38 80 00 02 */	li r4, 2
 /* 801355BC 00000074  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 801355C0 00000078  38 A5 F1 A0 */	addi r5, r5, m__24daAlinkHIO_wlWallHang_c0@l
-/* 801355C4 0000007C  C0 25 00 98 */	lfs f1, 0x98(r5)
+/* 801355C4 0000007C  C0 25 00 98 */	lfs f1, 0x98(r5)	/* effective address: 8038F238 */
 /* 801355C8 00000080  4B FF 98 09 */	bl procWolfFallInit__9daAlink_cFif
 /* 801355CC 00000084  38 60 00 01 */	li r3, 1
 /* 801355D0 00000088  48 00 00 08 */	b lbl_801355D8

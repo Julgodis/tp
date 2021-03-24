@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct dPath {
 };
 
-struct dPath {
+struct cXyz {
 };
 
 struct daTagSppath_c {

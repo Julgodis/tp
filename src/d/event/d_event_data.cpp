@@ -124,10 +124,10 @@ struct dMsgObject_c {
 	/* 8023806C */ void demoMessageGroup();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -177,7 +177,7 @@ extern "C" void init__11dEvDtBase_cFv(); // 1
 extern "C" void init__11dEvDtBase_cFPci(); // 1
 extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c(); // 1
 extern "C" void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c(); // 1
-extern "C" extern char const* const d_event_d_event_data__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -430,15 +430,15 @@ SECTION_DEAD static char const* const pad_80379F4E = "\0";
 #pragma pop
 
 /* 80451ED0-80451ED4 0004+00 s=4 e=0 z=0  None .sdata2    @4264                                                        */
-SECTION_SDATA2 static u8 d_event_d_event_data__lit_4264[4] = {
+SECTION_SDATA2 static u8 lit_4264[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451ED4-80451ED8 0004+00 s=2 e=0 z=0  None .sdata2    @4265                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_data__lit_4265 = 15.0f;
+SECTION_SDATA2 static f32 lit_4265 = 15.0f;
 
 /* 80451ED8-80451EE0 0008+00 s=1 e=0 z=0  None .sdata2    @4267                                                        */
-SECTION_SDATA2 static f64 d_event_d_event_data__lit_4267 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4267 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80043A14-80043D60 034C+00 s=1 e=0 z=0  None .text      dEvDt_Next_Stage__Fii                                        */
 #pragma push
@@ -552,7 +552,7 @@ asm void dEvDtStaff_c::specialProc_WaitProc(int param_0) {
 
 /* ############################################################################################## */
 /* 803A8238-803A8270 0034+04 s=1 e=0 z=0  None .data      @4398                                                        */
-SECTION_DATA static void* d_event_d_event_data__lit_4398[13 + 1 /* padding */] = {
+SECTION_DATA static void* lit_4398[13 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
 	/* 1    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x50),
 	/* 2    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
@@ -605,14 +605,14 @@ asm void dEvDtStaff_c::advanceCut(int param_0) {
 
 /* ############################################################################################## */
 /* 80451EE0-80451EE8 0004+04 s=1 e=0 z=0  None .sdata2    @4460                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_data__lit_4460[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4460[1 + 1 /* padding */] = {
 	1.0f / 15.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451EE8-80451EF0 0008+00 s=1 e=0 z=0  None .sdata2    @4461                                                        */
-SECTION_SDATA2 static f64 d_event_d_event_data__lit_4461 = 24.0;
+SECTION_SDATA2 static f64 lit_4461 = 24.0;
 
 /* 80044190-80044324 0194+00 s=1 e=0 z=0  None .text      specialProcLight__12dEvDtStaff_cFv                           */
 #pragma push
@@ -638,10 +638,10 @@ asm void dEvDtStaff_c::specialProcMessage() {
 
 /* ############################################################################################## */
 /* 80451EF0-80451EF4 0004+00 s=4 e=0 z=0  None .sdata2    @4668                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_data__lit_4668 = 1.0f;
+SECTION_SDATA2 static f32 lit_4668 = 1.0f;
 
 /* 80451EF4-80451EF8 0004+00 s=2 e=0 z=0  None .sdata2    @4669                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_data__lit_4669 = -1.0f;
+SECTION_SDATA2 static f32 lit_4669 = -1.0f;
 
 /* 80044A58-80044CB8 0260+00 s=1 e=0 z=0  None .text      specialProcSound__12dEvDtStaff_cFv                           */
 #pragma push
@@ -678,7 +678,7 @@ asm void dEvDtStaff_c::specialProcDirector() {
 
 /* ############################################################################################## */
 /* 80451EF8-80451EFC 0004+00 s=1 e=0 z=0  None .sdata2    @5057                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_data__lit_5057 = 10.0f;
+SECTION_SDATA2 static f32 lit_5057 = 10.0f;
 
 /* 80045878-80045AFC 0284+00 s=1 e=0 z=0  None .text      specialProcPackage__12dEvDtStaff_cFv                         */
 #pragma push

@@ -5,7 +5,7 @@ lbl_801C55A8:
 /* 801C55B4 0000000C  4C 82 00 20 */	bnelr 
 /* 801C55B8 00000010  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 801C55BC 00000014  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801C55C0 00000018  80 04 00 34 */	lwz r0, 0x34(r4)
+/* 801C55C0 00000018  80 04 00 34 */	lwz r0, 0x34(r4)	/* effective address: 803DD31C */
 /* 801C55C4 0000001C  54 00 05 AD */	rlwinm. r0, r0, 0, 0x16, 0x16
 /* 801C55C8 00000020  4D 82 00 20 */	beqlr 
 /* 801C55CC 00000024  38 00 00 03 */	li r0, 3

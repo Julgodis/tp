@@ -22,13 +22,13 @@ lbl_800E5EF4:
 /* 800E5F14 00000020  38 80 00 B3 */	li r4, 0xb3
 /* 800E5F18 00000024  3C A0 80 39 */	lis r5, m__18daAlinkHIO_grab_c0@ha
 /* 800E5F1C 00000028  38 C5 EC 48 */	addi r6, r5, m__18daAlinkHIO_grab_c0@l
-/* 800E5F20 0000002C  C0 26 00 7C */	lfs f1, 0x7c(r6)
-/* 800E5F24 00000030  C0 46 00 80 */	lfs f2, 0x80(r6)
-/* 800E5F28 00000034  C0 06 00 88 */	lfs f0, 0x88(r6)
+/* 800E5F20 0000002C  C0 26 00 7C */	lfs f1, 0x7c(r6)	/* effective address: 8038ECC4 */
+/* 800E5F24 00000030  C0 46 00 80 */	lfs f2, 0x80(r6)	/* effective address: 8038ECC8 */
+/* 800E5F28 00000034  C0 06 00 88 */	lfs f0, 0x88(r6)	/* effective address: 8038ECD0 */
 /* 800E5F2C 00000038  FC 00 00 1E */	fctiwz f0, f0
 /* 800E5F30 0000003C  D8 01 00 08 */	stfd f0, 8(r1)
 /* 800E5F34 00000040  80 A1 00 0C */	lwz r5, 0xc(r1)
-/* 800E5F38 00000044  C0 66 00 84 */	lfs f3, 0x84(r6)
+/* 800E5F38 00000044  C0 66 00 84 */	lfs f3, 0x84(r6)	/* effective address: 8038ECCC */
 /* 800E5F3C 00000048  4B FC 70 D1 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800E5F40 0000004C  38 00 00 00 */	li r0, 0
 /* 800E5F44 00000050  90 1F 31 98 */	stw r0, 0x3198(r31)
@@ -46,7 +46,7 @@ lbl_800E5F58:
 /* 800E5F6C 00000014  C0 3F 1F E0 */	lfs f1, 0x1fe0(r31)
 /* 800E5F70 00000018  3C 80 80 39 */	lis r4, m__18daAlinkHIO_grab_c0@ha
 /* 800E5F74 0000001C  38 84 EC 48 */	addi r4, r4, m__18daAlinkHIO_grab_c0@l
-/* 800E5F78 00000020  C0 04 00 94 */	lfs f0, 0x94(r4)
+/* 800E5F78 00000020  C0 04 00 94 */	lfs f0, 0x94(r4)	/* effective address: 8038ECDC */
 /* 800E5F7C 00000024  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E5F80 00000028  EC 22 00 32 */	fmuls f1, f2, f0
 /* 800E5F84 0000002C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
@@ -59,7 +59,7 @@ lbl_800E5F90:
 /* 800E5F9C 0000000C  C0 5F 1F E0 */	lfs f2, 0x1fe0(r31)
 /* 800E5FA0 00000010  3C 80 80 39 */	lis r4, m__18daAlinkHIO_grab_c0@ha
 /* 800E5FA4 00000014  38 84 EC 48 */	addi r4, r4, m__18daAlinkHIO_grab_c0@l
-/* 800E5FA8 00000018  C0 04 00 08 */	lfs f0, 8(r4)
+/* 800E5FA8 00000018  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 8038EC50 */
 /* 800E5FAC 0000001C  EC 02 00 28 */	fsubs f0, f2, f0
 /* 800E5FB0 00000020  EC 43 00 32 */	fmuls f2, f3, f0
 /* 800E5FB4 00000024  4B FF EF F5 */	bl setCarryArmAngle__9daAlink_cFff

@@ -55,7 +55,7 @@ lbl_800C3460:
 /* 800C3474 00000014  7F C3 F3 78 */	mr r3, r30
 /* 800C3478 00000018  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800C347C 0000001C  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800C3480 00000020  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 800C3480 00000020  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 800C3484 00000024  4B FE A9 91 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C3488 00000028  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 800C348C 0000002C  B0 1E 04 DE */	sth r0, 0x4de(r30)

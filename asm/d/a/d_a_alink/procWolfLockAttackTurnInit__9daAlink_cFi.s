@@ -28,10 +28,10 @@ lbl_8013C630:
 /* 8013C698 00000068  B0 1E 30 0C */	sth r0, 0x300c(r30)
 /* 8013C69C 0000006C  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8013C6A0 00000070  38 63 56 1C */	addi r3, r3, l_wolfBaseAnime@l
-/* 8013C6A4 00000074  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8013C6A4 00000074  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80425624 */
 /* 8013C6A8 00000078  FC 40 00 50 */	fneg f2, f0
-/* 8013C6AC 0000007C  C0 23 00 04 */	lfs f1, 4(r3)
-/* 8013C6B0 00000080  C0 03 00 00 */	lfs f0, 0(r3)
+/* 8013C6AC 0000007C  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 80425620 */
+/* 8013C6B0 00000080  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 8042561C */
 /* 8013C6B4 00000084  FC 00 00 50 */	fneg f0, f0
 /* 8013C6B8 00000088  D0 1E 35 88 */	stfs f0, 0x3588(r30)
 /* 8013C6BC 0000008C  D0 3E 35 8C */	stfs f1, 0x358c(r30)
@@ -48,9 +48,9 @@ lbl_8013C6C8:
 /* 8013C6E4 0000001C  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8013C6E8 00000020  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8013C6EC 00000024  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 8013C6F0 00000028  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8013C6F0 00000028  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8013C6F4 0000002C  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 8013C6F8 00000030  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8013C6F8 00000030  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8013C6FC 00000034  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 lbl_8013C700:
 /* 8013C700 00000000  80 7E 07 C8 */	lwz r3, 0x7c8(r30)
@@ -79,9 +79,9 @@ lbl_8013C72C:
 /* 8013C754 00000028  98 1E 2F 99 */	stb r0, 0x2f99(r30)
 /* 8013C758 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013C75C 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013C760 00000034  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013C760 00000034  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013C764 00000038  64 00 01 00 */	oris r0, r0, 0x100
-/* 8013C768 0000003C  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013C768 0000003C  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013C76C 00000040  80 1E 05 80 */	lwz r0, 0x580(r30)
 /* 8013C770 00000044  54 00 01 46 */	rlwinm r0, r0, 0, 5, 3
 /* 8013C774 00000048  90 1E 05 80 */	stw r0, 0x580(r30)

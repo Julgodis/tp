@@ -29,12 +29,12 @@ lbl_8012D474:
 /* 8012D4E0 0000006C  41 82 00 34 */	beq lbl_8012D514
 /* 8012D4E4 00000070  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012D4E8 00000074  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012D4EC 00000078  A8 03 00 5A */	lha r0, 0x5a(r3)
+/* 8012D4EC 00000078  A8 03 00 5A */	lha r0, 0x5a(r3)	/* effective address: 8038EE82 */
 /* 8012D4F0 0000007C  B0 1F 30 D0 */	sth r0, 0x30d0(r31)
-/* 8012D4F4 00000080  C0 03 00 E0 */	lfs f0, 0xe0(r3)
+/* 8012D4F4 00000080  C0 03 00 E0 */	lfs f0, 0xe0(r3)	/* effective address: 8038EF08 */
 /* 8012D4F8 00000084  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 8012D4FC 00000088  C0 1F 33 98 */	lfs f0, 0x3398(r31)
-/* 8012D500 0000008C  C0 23 00 E4 */	lfs f1, 0xe4(r3)
+/* 8012D500 0000008C  C0 23 00 E4 */	lfs f1, 0xe4(r3)	/* effective address: 8038EF0C */
 /* 8012D504 00000090  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8012D508 00000000  40 80 00 70 */	bge lbl_8012D578
 /* 8012D50C 00000004  D0 3F 33 98 */	stfs f1, 0x3398(r31)
@@ -45,11 +45,11 @@ lbl_8012D514:
 /* 8012D51C 00000008  40 82 00 30 */	bne lbl_8012D54C
 /* 8012D520 0000000C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012D524 00000010  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012D528 00000014  C0 03 00 F0 */	lfs f0, 0xf0(r3)
+/* 8012D528 00000014  C0 03 00 F0 */	lfs f0, 0xf0(r3)	/* effective address: 8038EF18 */
 /* 8012D52C 00000018  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 8012D530 0000001C  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 8012D534 00000020  C0 1F 33 98 */	lfs f0, 0x3398(r31)
-/* 8012D538 00000024  C0 23 00 F4 */	lfs f1, 0xf4(r3)
+/* 8012D538 00000024  C0 23 00 F4 */	lfs f1, 0xf4(r3)	/* effective address: 8038EF1C */
 /* 8012D53C 00000028  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8012D540 00000000  40 80 00 38 */	bge lbl_8012D578
 /* 8012D544 00000004  D0 3F 33 98 */	stfs f1, 0x3398(r31)
@@ -57,12 +57,12 @@ lbl_8012D514:
 lbl_8012D54C:
 /* 8012D54C 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012D550 00000004  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012D554 00000008  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 8012D554 00000008  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038EE7E */
 /* 8012D558 0000000C  B0 1F 30 D0 */	sth r0, 0x30d0(r31)
-/* 8012D55C 00000010  C0 03 00 C8 */	lfs f0, 0xc8(r3)
+/* 8012D55C 00000010  C0 03 00 C8 */	lfs f0, 0xc8(r3)	/* effective address: 8038EEF0 */
 /* 8012D560 00000014  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 8012D564 00000018  C0 1F 33 98 */	lfs f0, 0x3398(r31)
-/* 8012D568 0000001C  C0 23 00 D4 */	lfs f1, 0xd4(r3)
+/* 8012D568 0000001C  C0 23 00 D4 */	lfs f1, 0xd4(r3)	/* effective address: 8038EEFC */
 /* 8012D56C 00000020  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8012D570 00000000  40 80 00 08 */	bge lbl_8012D578
 /* 8012D574 00000004  D0 3F 33 98 */	stfs f1, 0x3398(r31)

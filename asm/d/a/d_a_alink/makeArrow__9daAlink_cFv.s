@@ -6,7 +6,7 @@ lbl_800DEA3C:
 /* 800DEA4C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800DEA50 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DEA54 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DEA58 0000001C  88 03 00 EC */	lbz r0, 0xec(r3)
+/* 800DEA58 0000001C  88 03 00 EC */	lbz r0, 0xec(r3)	/* effective address: 804062AC */
 /* 800DEA5C 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 800DEA60 00000024  41 82 00 68 */	beq lbl_800DEAC8
 /* 800DEA64 00000028  A8 1F 30 1E */	lha r0, 0x301e(r31)

@@ -5,7 +5,7 @@ lbl_8023826C:
 /* 80238278 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 8023827C 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80238280 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80238284 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80238284 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80238288 0000001C  4B FF FC 89 */	bl setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c
 /* 8023828C 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80238290 00000024  7C 08 03 A6 */	mtlr r0

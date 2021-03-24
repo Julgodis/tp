@@ -98,8 +98,8 @@ lbl_80297A78:
 /* 80297A94 0000001C  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 80297A98 00000020  3C 80 80 29 */	lis r4, func_802978DC@ha
 /* 80297A9C 00000024  38 84 78 DC */	addi r4, r4, func_802978DC@l
-/* 80297AA0 00000028  3C A0 80 43 */	lis r5, JASBank__lit_156@ha
-/* 80297AA4 0000002C  38 A5 1B 48 */	addi r5, r5, JASBank__lit_156@l
+/* 80297AA0 00000028  3C A0 80 43 */	lis r5, lit_156@ha
+/* 80297AA4 0000002C  38 A5 1B 48 */	addi r5, r5, lit_156@l
 /* 80297AA8 00000030  48 0C A1 7D */	bl __register_global_object
 /* 80297AAC 00000034  38 00 00 01 */	li r0, 1
 /* 80297AB0 00000038  98 0D 8C E2 */	stb r0, struct_80451260+0x2(r13)

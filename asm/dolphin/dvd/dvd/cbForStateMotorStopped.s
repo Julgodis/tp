@@ -47,13 +47,13 @@ lbl_8034A050:
 /* 8034A064 00000014  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 8034A068 00000018  80 03 00 F8 */	lwz r0, 0x00F8(r3)
 /* 8034A06C 0000001C  3C 80 10 62 */	lis r4, 0x1062 /* 0x10624DD3@ha */
-/* 8034A070 00000020  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
+/* 8034A070 00000020  3C 60 80 35 */	lis r3, AlarmHandler@ha
 /* 8034A074 00000024  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A078 00000028  38 84 4D D3 */	addi r4, r4, 0x4DD3 /* 0x10624DD3@l */
 /* 8034A07C 0000002C  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A080 00000030  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A084 00000034  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A088 00000038  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
+/* 8034A088 00000038  38 E3 9D EC */	addi r7, r3, AlarmHandler@l
 /* 8034A08C 0000003C  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A090 00000040  38 A0 00 00 */	li r5, 0
 /* 8034A094 00000044  4B FF 0A C5 */	bl OSSetAlarm

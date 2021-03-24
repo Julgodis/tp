@@ -11,13 +11,13 @@ lbl_802529F4:
 /* 80252A18 00000024  48 00 04 59 */	bl func_80252E70
 /* 80252A1C 00000028  7C 60 07 75 */	extsb. r0, r3
 /* 80252A20 0000002C  40 82 00 34 */	bne lbl_80252A54
-/* 80252A24 00000030  3C 60 80 3C */	lis r3, d_ovlp_d_ovlp_fade2__lit_3721@ha
-/* 80252A28 00000034  38 83 2C FC */	addi r4, r3, d_ovlp_d_ovlp_fade2__lit_3721@l
-/* 80252A2C 00000038  80 64 00 00 */	lwz r3, 0(r4)
-/* 80252A30 0000003C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80252A24 00000030  3C 60 80 3C */	lis r3, lit_3721@ha
+/* 80252A28 00000034  38 83 2C FC */	addi r4, r3, lit_3721@l
+/* 80252A2C 00000038  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803C2CFC */
+/* 80252A30 0000003C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803C2D00 */
 /* 80252A34 00000040  90 7F 00 CC */	stw r3, 0xcc(r31)
 /* 80252A38 00000044  90 1F 00 D0 */	stw r0, 0xd0(r31)
-/* 80252A3C 00000048  80 04 00 08 */	lwz r0, 8(r4)
+/* 80252A3C 00000048  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803C2D04 */
 /* 80252A40 0000004C  90 1F 00 D4 */	stw r0, 0xd4(r31)
 /* 80252A44 00000050  7F E3 FB 78 */	mr r3, r31
 /* 80252A48 00000054  4B DC BA D5 */	bl fopOvlpM_Done__FP18overlap_task_class
@@ -27,7 +27,7 @@ lbl_80252A54:
 /* 80252A54 00000000  38 00 00 00 */	li r0, 0
 /* 80252A58 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80252A5C 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252A60 0000000C  98 03 5D 44 */	stb r0, 0x5d44(r3)
+/* 80252A60 0000000C  98 03 5D 44 */	stb r0, 0x5d44(r3)	/* effective address: 8040BF04 */
 lbl_80252A64:
 /* 80252A64 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80252A68 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

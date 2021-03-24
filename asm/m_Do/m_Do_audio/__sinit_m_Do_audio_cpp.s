@@ -9,7 +9,7 @@ lbl_80007318:
 /* 80007334 0000001C  38 03 2F 40 */	addi r0, r3, __vt__17mDoAud_zelAudio_c@l
 /* 80007338 00000020  3C 60 80 3E */	lis r3, g_mDoAud_zelAudio@ha
 /* 8000733C 00000024  38 63 BF 4C */	addi r3, r3, g_mDoAud_zelAudio@l
-/* 80007340 00000028  90 03 05 14 */	stw r0, 0x514(r3)
+/* 80007340 00000028  90 03 05 14 */	stw r0, 0x514(r3)	/* effective address: 803DC460 */
 /* 80007344 0000002C  3C 80 80 00 */	lis r4, __dt__17mDoAud_zelAudio_cFv@ha
 /* 80007348 00000030  38 84 73 68 */	addi r4, r4, __dt__17mDoAud_zelAudio_cFv@l
 /* 8000734C 00000034  3C A0 80 3E */	lis r5, lit_3620@ha

@@ -42,7 +42,7 @@ lbl_8011B990:
 /* 8011B9A4 00000014  40 82 00 14 */	bne lbl_8011B9B8
 /* 8011B9A8 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8011B9AC 0000001C  38 9F 20 48 */	addi r4, r31, 0x2048
-/* 8011B9B0 00000020  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011B9B0 00000020  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8011B9B4 00000024  4B FE 63 41 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 lbl_8011B9B8:
 /* 8011B9B8 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
@@ -53,14 +53,14 @@ lbl_8011B9B8:
 /* 8011B9CC 00000014  7F E3 FB 78 */	mr r3, r31
 /* 8011B9D0 00000018  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 8011B9D4 0000001C  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 8011B9D8 00000020  C0 24 00 94 */	lfs f1, 0x94(r4)
+/* 8011B9D8 00000020  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 8038EEBC */
 /* 8011B9DC 00000024  48 00 CE 69 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8011B9E0 00000028  48 00 00 18 */	b lbl_8011B9F8
 lbl_8011B9E4:
 /* 8011B9E4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8011B9E8 00000004  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 8011B9EC 00000008  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 8011B9F0 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 8011B9F0 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 8011B9F4 00000010  4B F9 24 21 */	bl setBlendMoveAnime__9daAlink_cFf
 lbl_8011B9F8:
 /* 8011B9F8 00000000  A8 1F 04 E6 */	lha r0, 0x4e6(r31)

@@ -50,7 +50,7 @@ lbl_8010D174:
 /* 8010D234 000000C0  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l
 /* 8010D238 000000C4  7C 04 04 2E */	lfsx f0, r4, r0
 /* 8010D23C 000000C8  C0 3D 04 D0 */	lfs f1, 0x4d0(r29)
-/* 8010D240 000000CC  C0 42 93 2C */	lfs f2, d_a_d_a_alink__lit_7624(r2)
+/* 8010D240 000000CC  C0 42 93 2C */	lfs f2, lit_7624(r2)
 /* 8010D244 000000D0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8010D248 000000D4  EC 01 00 2A */	fadds f0, f1, f0
 /* 8010D24C 000000D8  D0 1D 04 D0 */	stfs f0, 0x4d0(r29)
@@ -108,9 +108,9 @@ lbl_8010D300:
 lbl_8010D310:
 /* 8010D310 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010D314 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010D318 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8010D318 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010D31C 0000000C  64 00 02 00 */	oris r0, r0, 0x200
-/* 8010D320 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8010D320 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010D324 00000014  7F A3 EB 78 */	mr r3, r29
 /* 8010D328 00000018  4B FF B3 B5 */	bl resetHookshotMode__9daAlink_cFv
 /* 8010D32C 0000001C  38 00 00 01 */	li r0, 1

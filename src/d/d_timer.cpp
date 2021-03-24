@@ -35,12 +35,12 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
+struct JKRArchive {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {
@@ -257,7 +257,7 @@ extern "C" void dTimer_hide__Fv(); // 1
 extern "C" void dTimer_isReadyFlag__Fv(); // 1
 extern "C" void __dt__21dDlst_TimerScrnDraw_cFv(); // 1
 extern "C" void createGetIn__8dTimer_cF4cXyz(); // 1
-extern "C" extern char const* const d_d_timer__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_TIMER[10];
 
 // 
@@ -374,12 +374,12 @@ SECTION_DEAD static char const* const pad_8039A484 = "\0\0\0";
 #pragma pop
 
 /* 80454F40-80454F44 0004+00 s=10 e=0 z=0  None .sdata2    @3919                                                        */
-SECTION_SDATA2 static u8 d_d_timer__lit_3919[4] = {
+SECTION_SDATA2 static u8 lit_3919[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454F44-80454F48 0004+00 s=2 e=0 z=0  None .sdata2    @3920                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_3920 = 145.0f;
+SECTION_SDATA2 static f32 lit_3920 = 145.0f;
 
 /* 8025CA0C-8025CF04 04F8+00 s=1 e=0 z=0  None .text      _create__8dTimer_cFv                                         */
 #pragma push
@@ -394,7 +394,7 @@ asm void dTimer_c::_create() {
 
 /* ############################################################################################## */
 /* 80454F48-80454F4C 0004+00 s=3 e=0 z=0  None .sdata2    @4050                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_4050 = 25.0f;
+SECTION_SDATA2 static f32 lit_4050 = 25.0f;
 
 /* 8025CF04-8025D33C 0438+00 s=1 e=0 z=0  None .text      _execute__8dTimer_cFv                                        */
 #pragma push
@@ -574,7 +574,7 @@ asm void dTimer_c::isStart() {
 
 /* ############################################################################################## */
 /* 803C33C0-803C33E4 0024+00 s=1 e=0 z=0  None .data      @5239                                                        */
-SECTION_DATA static void* d_d_timer__lit_5239[9] = {
+SECTION_DATA static void* lit_5239[9] = {
 	/* 0    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x2B8),
 	/* 1    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x250),
 	/* 2    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x258),
@@ -729,17 +729,17 @@ asm void dDlst_TimerScrnDraw_c::getNumber(int param_0) {
 
 /* ############################################################################################## */
 /* 80454F4C-80454F50 0004+00 s=5 e=0 z=0  None .sdata2    @4124                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_4124 = 1.0f;
+SECTION_SDATA2 static f32 lit_4124 = 1.0f;
 
 /* 80454F50-80454F58 0004+04 s=3 e=0 z=0  None .sdata2    @4125                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_4125[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4125[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80454F58-80454F60 0008+00 s=7 e=0 z=0  None .sdata2    @4627                                                        */
-SECTION_SDATA2 static f64 d_d_timer__lit_4627 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4627 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8025EEF0-8025F180 0290+00 s=1 e=0 z=0  None .text      setTimer__21dDlst_TimerScrnDraw_cFi                          */
 #pragma push
@@ -842,7 +842,7 @@ asm void dDlst_TimerScrnDraw_c::anime() {
 
 /* ############################################################################################## */
 /* 80454F6C-80454F70 0004+00 s=1 e=0 z=0  None .sdata2    @5143                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5143 = 49.0f;
+SECTION_SDATA2 static f32 lit_5143 = 49.0f;
 
 /* 8025FF98-802601E4 024C+00 s=1 e=0 z=0  None .text      closeAnime__21dDlst_TimerScrnDraw_cFv                        */
 #pragma push
@@ -866,19 +866,19 @@ SECTION_SDATA2 static f32 lit_5228 = 60.0f;
 SECTION_SDATA2 static f32 lit_5229 = -100.0f;
 
 /* 80454F7C-80454F80 0004+00 s=1 e=0 z=0  None .sdata2    @5230                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5230 = 100.0f;
+SECTION_SDATA2 static f32 lit_5230 = 100.0f;
 
 /* 80454F80-80454F84 0004+00 s=1 e=0 z=0  None .sdata2    @5231                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5231 = 75.0f;
+SECTION_SDATA2 static f32 lit_5231 = 75.0f;
 
 /* 80454F84-80454F88 0004+00 s=1 e=0 z=0  None .sdata2    @5232                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5232 = -75.0f;
+SECTION_SDATA2 static f32 lit_5232 = -75.0f;
 
 /* 80454F88-80454F8C 0004+00 s=1 e=0 z=0  None .sdata2    @5233                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5233 = 200.0f;
+SECTION_SDATA2 static f32 lit_5233 = 200.0f;
 
 /* 80454F8C-80454F90 0004+00 s=1 e=0 z=0  None .sdata2    @5234                                                        */
-SECTION_SDATA2 static f32 d_d_timer__lit_5234 = 150.0f;
+SECTION_SDATA2 static f32 lit_5234 = 150.0f;
 
 /* 80454F90-80454F94 0004+00 s=1 e=0 z=0  None .sdata2    @5235                                                        */
 SECTION_SDATA2 static f32 lit_5235 = 20.0f;

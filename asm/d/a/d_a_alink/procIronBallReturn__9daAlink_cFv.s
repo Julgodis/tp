@@ -37,7 +37,7 @@ lbl_80115AD0:
 /* 80115B28 00000058  4E 80 04 21 */	bctrl 
 /* 80115B2C 0000005C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80115B30 00000060  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80115B34 00000064  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80115B34 00000064  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80115B38 00000068  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80115B3C 0000006C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80115B40 00000070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -72,7 +72,7 @@ lbl_80115BA0:
 /* 80115BAC 0000000C  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 80115BB0 00000010  3C 60 80 39 */	lis r3, m__22daAlinkHIO_ironBall_c0@ha
 /* 80115BB4 00000014  38 63 EA 70 */	addi r3, r3, m__22daAlinkHIO_ironBall_c0@l
-/* 80115BB8 00000018  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 80115BB8 00000018  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038EA80 */
 /* 80115BBC 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80115BC0 00000000  40 81 00 44 */	ble lbl_80115C04
 /* 80115BC4 00000004  38 00 00 00 */	li r0, 0

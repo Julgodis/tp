@@ -7,7 +7,7 @@ lbl_80138DC0:
 /* 80138DD4 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80138DD8 00000018  4B F6 AE B5 */	bl setItemHeap__9daAlink_cFv
 /* 80138DDC 0000001C  7C 7E 1B 78 */	mr r30, r3
-/* 80138DE0 00000020  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* d_a_d_a_alink__l_arcName-_SDA2_BASE_ */
+/* 80138DE0 00000020  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* l_arcName-_SDA2_BASE_ */
 /* 80138DE4 00000024  38 80 00 25 */	li r4, 0x25
 /* 80138DE8 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80138DEC 0000002C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -22,7 +22,7 @@ lbl_80138DC0:
 /* 80138E10 00000050  38 C0 02 00 */	li r6, 0x200
 /* 80138E14 00000054  4B F6 AF 69 */	bl initModel__9daAlink_cFP12J3DModelDataUlUl
 /* 80138E18 00000058  90 7D 07 08 */	stw r3, 0x708(r29)
-/* 80138E1C 0000005C  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* d_a_d_a_alink__l_arcName-_SDA2_BASE_ */
+/* 80138E1C 0000005C  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* l_arcName-_SDA2_BASE_ */
 /* 80138E20 00000060  38 80 00 49 */	li r4, 0x49
 /* 80138E24 00000064  7F E5 FB 78 */	mr r5, r31
 /* 80138E28 00000068  38 C0 00 80 */	li r6, 0x80

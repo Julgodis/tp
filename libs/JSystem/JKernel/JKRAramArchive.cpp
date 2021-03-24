@@ -130,7 +130,7 @@ extern "C" void fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli(); // 1
 extern "C" void fetchResource_subroutine__14JKRAramArchiveFUlUlP7JKRHeapiPPUc(); // 1
 extern "C" void getExpandedResSize__14JKRAramArchiveCFPCv(); // 1
 extern "C" void __dt__7JKRFileFv(); // 1
-extern "C" extern char const* const JKRAramArchive__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__7JKRFile[8];
 
 // 

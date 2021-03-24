@@ -45,7 +45,7 @@ lbl_802BEC94:
 /* 802BECA0 0000000C  3C 60 80 45 */	lis r3, __float_max@ha
 /* 802BECA4 00000010  C0 03 0A E8 */	lfs f0, __float_max@l(r3)
 /* 802BECA8 00000014  D0 1F 00 28 */	stfs f0, 0x28(r31)
-/* 802BECAC 00000018  C0 22 C1 50 */	lfs f1, Z2SoundObject__lit_3821(r2)
+/* 802BECAC 00000018  C0 22 C1 50 */	lfs f1, lit_3821(r2)
 /* 802BECB0 0000001C  D0 3F 00 2C */	stfs f1, 0x2c(r31)
 /* 802BECB4 00000020  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802BECB8 00000024  4B FE 82 B9 */	bl getStartSoundIndex__17JAUSoundAnimationCFf
@@ -58,14 +58,14 @@ lbl_802BEC94:
 /* 802BECD4 00000040  48 00 00 38 */	b lbl_802BED0C
 lbl_802BECD8:
 /* 802BECD8 00000000  90 7F 00 40 */	stw r3, 0x40(r31)
-/* 802BECDC 00000004  C0 02 C1 50 */	lfs f0, Z2SoundObject__lit_3821(r2)
+/* 802BECDC 00000004  C0 02 C1 50 */	lfs f0, lit_3821(r2)
 /* 802BECE0 00000008  D0 1F 00 28 */	stfs f0, 0x28(r31)
 /* 802BECE4 0000000C  D3 DF 00 2C */	stfs f30, 0x2c(r31)
 /* 802BECE8 00000010  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802BECEC 00000014  FC 20 F0 90 */	fmr f1, f30
 /* 802BECF0 00000018  4B FE 82 81 */	bl getStartSoundIndex__17JAUSoundAnimationCFf
 /* 802BECF4 0000001C  90 7F 00 34 */	stw r3, 0x34(r31)
-/* 802BECF8 00000020  C0 22 C1 50 */	lfs f1, Z2SoundObject__lit_3821(r2)
+/* 802BECF8 00000020  C0 22 C1 50 */	lfs f1, lit_3821(r2)
 /* 802BECFC 00000024  D0 3F 00 30 */	stfs f1, 0x30(r31)
 /* 802BED00 00000028  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802BED04 0000002C  4B FE 83 41 */	bl getEndSoundIndex__17JAUSoundAnimationCFf

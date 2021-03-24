@@ -48,7 +48,7 @@ lbl_800D472C:
 /* 800D472C 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 800D4730 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D4734 00000008  38 63 DB 40 */	addi r3, r3, m__21daAlinkHIO_cutJump_c0@l
-/* 800D4738 0000000C  C0 03 00 40 */	lfs f0, 0x40(r3)
+/* 800D4738 0000000C  C0 03 00 40 */	lfs f0, 0x40(r3)	/* effective address: 8038DB80 */
 /* 800D473C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D4740 00000000  40 81 00 20 */	ble lbl_800D4760
 /* 800D4744 00000004  80 BF 31 98 */	lwz r5, 0x3198(r31)
@@ -61,7 +61,7 @@ lbl_800D472C:
 lbl_800D4760:
 /* 800D4760 00000000  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D4764 00000004  38 63 DB 40 */	addi r3, r3, m__21daAlinkHIO_cutJump_c0@l
-/* 800D4768 00000008  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800D4768 00000008  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038DB64 */
 /* 800D476C 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D4770 00000000  40 81 00 2C */	ble lbl_800D479C
 /* 800D4774 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -78,7 +78,7 @@ lbl_800D479C:
 /* 800D479C 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 800D47A0 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D47A4 00000008  38 63 DB 40 */	addi r3, r3, m__21daAlinkHIO_cutJump_c0@l
-/* 800D47A8 0000000C  C0 03 00 3C */	lfs f0, 0x3c(r3)
+/* 800D47A8 0000000C  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038DB7C */
 /* 800D47AC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D47B0 00000000  40 80 00 10 */	bge lbl_800D47C0
 /* 800D47B4 00000004  80 1F 05 80 */	lwz r0, 0x580(r31)

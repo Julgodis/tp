@@ -98,7 +98,7 @@ lbl_800B16A0:
 /* 800B16B4 00000008  7C 09 07 74 */	extsb r9, r0
 /* 800B16B8 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B16BC 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B16C0 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 800B16C0 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 800B16C4 00000018  38 9F 31 A8 */	addi r4, r31, 0x31a8
 /* 800B16C8 0000001C  3C A0 80 3F */	lis r5, mWaterCheck__11fopAcM_wt_c@ha
 /* 800B16CC 00000020  38 A5 1D 80 */	addi r5, r5, mWaterCheck__11fopAcM_wt_c@l

@@ -147,7 +147,7 @@ lbl_801CFED4:
 /* 801CFEEC 00000018  38 00 00 00 */	li r0, 0
 /* 801CFEF0 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801CFEF4 00000020  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801CFEF8 00000024  98 03 00 F2 */	stb r0, 0xf2(r3)
+/* 801CFEF8 00000024  98 03 00 F2 */	stb r0, 0xf2(r3)	/* effective address: 8043027A */
 /* 801CFEFC 00000028  38 7E 00 04 */	addi r3, r30, 4
 /* 801CFF00 0000002C  38 80 00 00 */	li r4, 0
 /* 801CFF04 00000030  4B FF 28 B1 */	bl __dt__16dMenuMapCommon_cFv

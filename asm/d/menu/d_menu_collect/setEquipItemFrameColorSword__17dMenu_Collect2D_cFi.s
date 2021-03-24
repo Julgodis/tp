@@ -10,7 +10,7 @@ lbl_801B39D0:
 /* 801B39F0 00000020  40 82 01 BC */	bne lbl_801B3BAC
 /* 801B39F4 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B39F8 00000028  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 801B39FC 0000002C  88 85 00 14 */	lbz r4, 0x14(r5)
+/* 801B39FC 0000002C  88 85 00 14 */	lbz r4, 0x14(r5)	/* effective address: 804061D4 */
 /* 801B3A00 00000030  88 7D 02 5B */	lbz r3, 0x25b(r29)
 /* 801B3A04 00000034  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 801B3A08 00000038  7C 03 00 40 */	cmplw r3, r0

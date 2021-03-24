@@ -77,10 +77,10 @@ SECTION_DATA static void* __vt__11fapGm_HIO_c[3 + 1 /* padding */] = {
 };
 
 /* 80451BC0-80451BC4 0004+00 s=1 e=0 z=0  None .sdata2    @3689                                                        */
-SECTION_SDATA2 static f32 f_ap_f_ap_game__lit_3689 = 9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3689 = 9.0f / 10.0f;
 
 /* 80451BC4-80451BC8 0004+00 s=1 e=0 z=0  None .sdata2    @3690                                                        */
-SECTION_SDATA2 static f32 f_ap_f_ap_game__lit_3690 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3690 = 3.0f / 5.0f;
 
 /* 80018944-80018A44 0100+00 s=1 e=0 z=0  None .text      __ct__11fapGm_HIO_cFv                                        */
 #pragma push
@@ -117,7 +117,7 @@ asm void fapGm_Execute() {
 
 /* ############################################################################################## */
 /* 803F1BB0-803F1BBC 000C+00 s=1 e=0 z=0  None .bss       @3691                                                        */
-static u8 f_ap_f_ap_game__lit_3691[12];
+static u8 lit_3691[12];
 
 /* 803F1BBC-803F1C00 0040+04 s=2 e=3 z=0  None .bss       g_HIO                                                        */
 u8 g_HIO[64 + 4 /* padding */];

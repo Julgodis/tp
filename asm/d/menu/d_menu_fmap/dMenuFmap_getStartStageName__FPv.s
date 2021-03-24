@@ -8,11 +8,11 @@ lbl_801C662C:
 /* 801C6644 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801C6648 0000001C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 801C664C 00000020  38 7E 4E 20 */	addi r3, r30, 0x4e20
-/* 801C6650 00000024  81 9E 4E 20 */	lwz r12, 0x4e20(r30)
+/* 801C6650 00000024  81 9E 4E 20 */	lwz r12, 0x4e20(r30)	/* effective address: 8040AFE0 */
 /* 801C6654 00000028  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 801C6658 0000002C  7D 89 03 A6 */	mtctr r12
 /* 801C665C 00000030  4E 80 04 21 */	bctrl 
-/* 801C6660 00000034  A0 03 00 0A */	lhz r0, 0xa(r3)
+/* 801C6660 00000034  A0 03 00 0A */	lhz r0, 0xa(r3)	/* effective address: 8040AFEA */
 /* 801C6664 00000038  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 801C6668 0000003C  2C 00 00 05 */	cmpwi r0, 5
 /* 801C666C 00000040  40 82 00 5C */	bne lbl_801C66C8

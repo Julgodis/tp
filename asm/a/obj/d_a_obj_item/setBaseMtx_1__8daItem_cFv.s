@@ -11,19 +11,19 @@ lbl_8015B1C8:
 /* 8015B1EC 00000010  80 63 00 28 */	lwz r3, 0x28(r3)
 /* 8015B1F0 00000014  80 63 00 00 */	lwz r3, 0(r3)
 /* 8015B1F4 00000018  C0 23 00 4C */	lfs f1, 0x4c(r3)
-/* 8015B1F8 0000001C  C0 02 9B 70 */	lfs f0, a_obj_d_a_obj_item__lit_3923(r2)
+/* 8015B1F8 0000001C  C0 02 9B 70 */	lfs f0, lit_3923(r2)
 /* 8015B1FC 00000020  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8015B200 00000024  C0 1F 04 F0 */	lfs f0, 0x4f0(r31)
 /* 8015B204 00000028  EF E1 00 32 */	fmuls f31, f1, f0
 /* 8015B208 0000002C  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 8015B20C 00000030  4B EB 1B 59 */	bl transS__14mDoMtx_stack_cFRC4cXyz
-/* 8015B210 00000034  C0 22 9B 50 */	lfs f1, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015B210 00000034  C0 22 9B 50 */	lfs f1, lit_3857(r2)
 /* 8015B214 00000038  FC 40 F8 90 */	fmr f2, f31
 /* 8015B218 0000003C  FC 60 08 90 */	fmr f3, f1
 /* 8015B21C 00000040  4B EB 1B 81 */	bl transM__14mDoMtx_stack_cFfff
 /* 8015B220 00000044  38 7F 04 E4 */	addi r3, r31, 0x4e4
 /* 8015B224 00000048  4B EB 1D 21 */	bl ZXYrotM__14mDoMtx_stack_cFRC5csXyz
-/* 8015B228 0000004C  C0 22 9B 50 */	lfs f1, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015B228 0000004C  C0 22 9B 50 */	lfs f1, lit_3857(r2)
 /* 8015B22C 00000050  FC 40 F8 50 */	fneg f2, f31
 /* 8015B230 00000054  FC 60 08 90 */	fmr f3, f1
 /* 8015B234 00000058  4B EB 1B 69 */	bl transM__14mDoMtx_stack_cFfff

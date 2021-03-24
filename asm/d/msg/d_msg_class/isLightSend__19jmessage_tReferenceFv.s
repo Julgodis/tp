@@ -4,13 +4,13 @@ lbl_802298DC:
 /* 802298E4 00000008  40 82 00 18 */	bne lbl_802298FC
 /* 802298E8 0000000C  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 802298EC 00000010  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 802298F0 00000014  A8 84 03 1C */	lha r4, 0x31c(r4)
+/* 802298F0 00000014  A8 84 03 1C */	lha r4, 0x31c(r4)	/* effective address: 804305A8 */
 /* 802298F4 00000018  7C 85 23 78 */	mr r5, r4
 /* 802298F8 0000001C  48 00 00 14 */	b lbl_8022990C
 lbl_802298FC:
 /* 802298FC 00000000  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 80229900 00000004  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 80229904 00000008  A8 84 03 1A */	lha r4, 0x31a(r4)
+/* 80229904 00000008  A8 84 03 1A */	lha r4, 0x31a(r4)	/* effective address: 804305A6 */
 /* 80229908 0000000C  7C 85 23 78 */	mr r5, r4
 lbl_8022990C:
 /* 8022990C 00000000  7C A0 07 35 */	extsh. r0, r5

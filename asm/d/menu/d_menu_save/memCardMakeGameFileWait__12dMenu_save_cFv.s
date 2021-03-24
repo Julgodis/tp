@@ -24,9 +24,9 @@ lbl_801F2658:
 /* 801F265C 00000004  40 82 00 28 */	bne lbl_801F2684
 /* 801F2660 00000008  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801F2664 0000000C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801F2668 00000010  88 04 0F 19 */	lbz r0, 0xf19(r4)
+/* 801F2668 00000010  88 04 0F 19 */	lbz r0, 0xf19(r4)	/* effective address: 804070D9 */
 /* 801F266C 00000014  60 00 00 01 */	ori r0, r0, 1
-/* 801F2670 00000018  98 04 0F 19 */	stb r0, 0xf19(r4)
+/* 801F2670 00000018  98 04 0F 19 */	stb r0, 0xf19(r4)	/* effective address: 804070D9 */
 /* 801F2674 0000001C  38 80 03 C7 */	li r4, 0x3c7
 /* 801F2678 00000020  48 00 2A 4D */	bl errorTxtSet__12dMenu_save_cFUs
 /* 801F267C 00000024  38 00 00 1C */	li r0, 0x1c

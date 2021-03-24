@@ -127,7 +127,7 @@ asm void JASAudioReseter::checkDone() const {
 
 /* ############################################################################################## */
 /* 80455740-80455748 0008+00 s=1 e=0 z=0  None .sdata2    @156                                                         */
-SECTION_SDATA2 static f64 JASAudioReseter__lit_156 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_156 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8029D200-8029D2D4 00D4+00 s=1 e=0 z=0  None .text      calc__15JASAudioReseterFv                                    */
 #pragma push

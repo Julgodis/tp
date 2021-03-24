@@ -15,21 +15,21 @@ lbl_80285114:
 /* 80285148 00000034  38 00 00 00 */	li r0, 0
 /* 8028514C 00000038  98 1F 00 88 */	stb r0, 0x88(r31)
 /* 80285150 0000003C  98 1F 00 89 */	stb r0, 0x89(r31)
-/* 80285154 00000040  3C 60 80 3A */	lis r3, jstudio_control__lit_745@ha
-/* 80285158 00000044  38 83 AA 40 */	addi r4, r3, jstudio_control__lit_745@l
-/* 8028515C 00000048  80 64 00 00 */	lwz r3, 0(r4)
-/* 80285160 0000004C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80285154 00000040  3C 60 80 3A */	lis r3, lit_745@ha
+/* 80285158 00000044  38 83 AA 40 */	addi r4, r3, lit_745@l
+/* 8028515C 00000048  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8039AA40 */
+/* 80285160 0000004C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8039AA44 */
 /* 80285164 00000050  90 61 00 08 */	stw r3, 8(r1)
 /* 80285168 00000054  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8028516C 00000058  80 04 00 08 */	lwz r0, 8(r4)
+/* 8028516C 00000058  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8039AA48 */
 /* 80285170 0000005C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80285174 00000060  7F E3 FB 78 */	mr r3, r31
 /* 80285178 00000064  38 81 00 08 */	addi r4, r1, 8
-/* 8028517C 00000068  C0 22 BA 58 */	lfs f1, jstudio_control__lit_748(r2)
+/* 8028517C 00000068  C0 22 BA 58 */	lfs f1, lit_748(r2)
 /* 80285180 0000006C  48 00 00 D1 */	bl transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf
 /* 80285184 00000070  7F E3 FB 78 */	mr r3, r31
 /* 80285188 00000074  38 81 00 08 */	addi r4, r1, 8
-/* 8028518C 00000078  C0 22 BA 58 */	lfs f1, jstudio_control__lit_748(r2)
+/* 8028518C 00000078  C0 22 BA 58 */	lfs f1, lit_748(r2)
 /* 80285190 0000007C  48 00 01 41 */	bl transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf
 /* 80285194 00000080  7F E3 FB 78 */	mr r3, r31
 /* 80285198 00000084  83 E1 00 1C */	lwz r31, 0x1c(r1)

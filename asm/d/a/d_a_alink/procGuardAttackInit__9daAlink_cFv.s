@@ -24,15 +24,15 @@ lbl_800DDA48:
 /* 800DDA64 0000001C  3C 60 80 42 */	lis r3, l_rWaitBaseAnime@ha
 /* 800DDA68 00000020  C4 03 55 5C */	lfsu f0, l_rWaitBaseAnime@l(r3)
 /* 800DDA6C 00000024  D0 1F 34 D4 */	stfs f0, 0x34d4(r31)
-/* 800DDA70 00000028  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800DDA70 00000028  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800DDA74 0000002C  D0 1F 34 D8 */	stfs f0, 0x34d8(r31)
-/* 800DDA78 00000030  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800DDA78 00000030  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800DDA7C 00000034  D0 1F 34 DC */	stfs f0, 0x34dc(r31)
-/* 800DDA80 00000038  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800DDA80 00000038  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80420000 */
 /* 800DDA84 0000003C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800DDA88 00000040  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800DDA88 00000040  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800DDA8C 00000044  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800DDA90 00000048  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800DDA90 00000048  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800DDA94 0000004C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800DDA98 00000050  7F E3 FB 78 */	mr r3, r31
 /* 800DDA9C 00000054  38 80 00 29 */	li r4, 0x29
@@ -44,11 +44,11 @@ lbl_800DDA48:
 /* 800DDAB4 0000006C  4B FC F6 41 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800DDAB8 00000070  3C 60 80 39 */	lis r3, m__21daAlinkHIO_gAtPush_c0@ha
 /* 800DDABC 00000074  38 63 DF 28 */	addi r3, r3, m__21daAlinkHIO_gAtPush_c0@l
-/* 800DDAC0 00000078  C0 03 00 18 */	lfs f0, 0x18(r3)
+/* 800DDAC0 00000078  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8038DF40 */
 /* 800DDAC4 0000007C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
-/* 800DDAC8 00000080  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800DDAC8 00000080  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038DF44 */
 /* 800DDACC 00000084  D0 1F 34 7C */	stfs f0, 0x347c(r31)
-/* 800DDAD0 00000088  C0 03 00 14 */	lfs f0, 0x14(r3)
+/* 800DDAD0 00000088  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8038DF3C */
 /* 800DDAD4 0000008C  D0 1F 34 80 */	stfs f0, 0x3480(r31)
 /* 800DDAD8 00000090  7F E3 FB 78 */	mr r3, r31
 /* 800DDADC 00000094  38 80 00 01 */	li r4, 1
@@ -86,12 +86,12 @@ lbl_800DDB2C:
 /* 800DDB50 00000024  98 1F 16 6C */	stb r0, 0x166c(r31)
 /* 800DDB54 00000028  3C 60 80 39 */	lis r3, m__19daAlinkHIO_guard_c0@ha
 /* 800DDB58 0000002C  38 63 DF 9C */	addi r3, r3, m__19daAlinkHIO_guard_c0@l
-/* 800DDB5C 00000030  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 800DDB5C 00000030  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038E010 */
 /* 800DDB60 00000034  D0 1F 17 38 */	stfs f0, 0x1738(r31)
 /* 800DDB64 00000038  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800DDB68 0000003C  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800DDB6C 00000040  7F E3 FB 78 */	mr r3, r31
-/* 800DDB70 00000044  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DDB70 00000044  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DDB74 00000048  4B FF F4 95 */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800DDB78 0000004C  38 00 00 00 */	li r0, 0
 /* 800DDB7C 00000050  B0 1F 30 0C */	sth r0, 0x300c(r31)

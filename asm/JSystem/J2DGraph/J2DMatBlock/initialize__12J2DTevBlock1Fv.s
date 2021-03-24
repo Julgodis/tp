@@ -76,11 +76,11 @@ lbl_802EBB38:
 /* 802EBB6C 00000034  42 00 FF CC */	bdnz lbl_802EBB38
 /* 802EBB70 00000038  3C 80 80 3A */	lis r4, j2dDefaultIndTevStageInfo@ha
 /* 802EBB74 0000003C  38 A4 1B F4 */	addi r5, r4, j2dDefaultIndTevStageInfo@l
-/* 802EBB78 00000040  80 85 00 00 */	lwz r4, 0(r5)
-/* 802EBB7C 00000044  80 05 00 04 */	lwz r0, 4(r5)
+/* 802EBB78 00000040  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A1BF4 */
+/* 802EBB7C 00000044  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A1BF8 */
 /* 802EBB80 00000048  90 81 00 10 */	stw r4, 0x10(r1)
 /* 802EBB84 0000004C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802EBB88 00000050  80 05 00 08 */	lwz r0, 8(r5)
+/* 802EBB88 00000050  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A1BFC */
 /* 802EBB8C 00000054  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802EBB90 00000058  89 61 00 10 */	lbz r11, 0x10(r1)
 /* 802EBB94 0000005C  88 01 00 11 */	lbz r0, 0x11(r1)

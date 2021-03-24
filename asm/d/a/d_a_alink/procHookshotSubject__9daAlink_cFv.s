@@ -34,16 +34,16 @@ lbl_8010BB74:
 lbl_8010BBC4:
 /* 8010BBC4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010BBC8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010BBCC 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8010BBCC 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010BBD0 0000000C  54 00 03 98 */	rlwinm r0, r0, 0, 0xe, 0xc
-/* 8010BBD4 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 8010BBD4 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010BBD8 00000014  48 00 00 18 */	b lbl_8010BBF0
 lbl_8010BBDC:
 /* 8010BBDC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010BBE0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010BBE4 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8010BBE4 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010BBE8 0000000C  64 00 00 04 */	oris r0, r0, 4
-/* 8010BBEC 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 8010BBEC 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 lbl_8010BBF0:
 /* 8010BBF0 00000000  38 60 00 01 */	li r3, 1
 /* 8010BBF4 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

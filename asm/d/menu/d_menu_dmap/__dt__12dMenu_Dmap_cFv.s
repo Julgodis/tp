@@ -225,7 +225,7 @@ lbl_801BD104:
 /* 801BD104 00000000  38 00 00 00 */	li r0, 0
 /* 801BD108 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801BD10C 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801BD110 0000000C  98 03 00 F2 */	stb r0, 0xf2(r3)
+/* 801BD110 0000000C  98 03 00 F2 */	stb r0, 0xf2(r3)	/* effective address: 8043027A */
 /* 801BD114 00000010  90 0D 8B 00 */	stw r0, myclass__12dMenu_Dmap_c(r13)
 /* 801BD118 00000014  7F C0 07 35 */	extsh. r0, r30
 /* 801BD11C 00000018  40 81 00 0C */	ble lbl_801BD128

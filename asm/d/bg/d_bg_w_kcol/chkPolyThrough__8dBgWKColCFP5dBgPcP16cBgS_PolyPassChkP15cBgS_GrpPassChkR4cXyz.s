@@ -134,7 +134,7 @@ lbl_8007ED94:
 /* 8007ED9C 00000008  41 82 00 38 */	beq lbl_8007EDD4
 /* 8007EDA0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8007EDA4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8007EDA8 00000014  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 8007EDA8 00000014  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 8007EDAC 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 8007EDB0 0000001C  41 82 00 24 */	beq lbl_8007EDD4
 /* 8007EDB4 00000020  7F C4 F3 78 */	mr r4, r30

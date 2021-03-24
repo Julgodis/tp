@@ -130,17 +130,6 @@ extern "C" void getType__21J3DShapeMtxConcatViewCFv(); // 1
 extern "C" void __dt__11J3DShapeMtxFv(); // 1
 extern "C" void getType__11J3DShapeMtxCFv(); // 1
 extern "C" void __sinit_J3DShapeMtx_cpp(); // 1
-extern "C" extern void* J3DShapeMtx__lit_833[3];
-extern "C" extern void* J3DShapeMtx__lit_834[3];
-extern "C" extern void* J3DShapeMtx__lit_835[3];
-extern "C" extern void* J3DShapeMtx__lit_836[3];
-extern "C" extern void* J3DShapeMtx__lit_837[3];
-extern "C" extern void* J3DShapeMtx__lit_838[3];
-extern "C" extern void* J3DShapeMtx__lit_839[3];
-extern "C" extern void* J3DShapeMtx__lit_840[3];
-extern "C" extern void* J3DShapeMtx__lit_841[3];
-extern "C" extern void* J3DShapeMtx__lit_842[3];
-extern "C" extern void* J3DShapeMtx__lit_843[3];
 extern "C" extern u8 data_803CDB70[20];
 extern "C" extern void* __vt__28J3DShapeMtxYBBoardConcatView[10];
 extern "C" extern void* __vt__27J3DShapeMtxBBoardConcatView[10];
@@ -278,104 +267,104 @@ asm void J3DShapeMtx::loadMtxIndx_PNCPU(int param_0, u16 param_1) const {
 
 /* ############################################################################################## */
 /* 803CD990-803CD99C 000C+00 s=1 e=0 z=0  None .data      @832                                                         */
-SECTION_DATA static void* J3DShapeMtx__lit_832[3] = {
+SECTION_DATA static void* lit_832[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxIndx_PNGP__11J3DShapeMtxCFiUs,
 };
 
-/* 803CD99C-803CD9A8 000C+00 s=0 e=0 z=0  None .data      @833                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_833[3] = {
+/* 803CD99C-803CD9A8 000C+00 s=1 e=0 z=0  None .data      @833                                                         */
+SECTION_DATA static void* lit_833[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxIndx_PCPU__11J3DShapeMtxCFiUs,
 };
 
-/* 803CD9A8-803CD9B4 000C+00 s=0 e=0 z=0  None .data      @834                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_834[3] = {
+/* 803CD9A8-803CD9B4 000C+00 s=1 e=0 z=0  None .data      @834                                                         */
+SECTION_DATA static void* lit_834[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxIndx_NCPU__11J3DShapeMtxCFiUs,
 };
 
-/* 803CD9B4-803CD9C0 000C+00 s=0 e=0 z=0  None .data      @835                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_835[3] = {
+/* 803CD9B4-803CD9C0 000C+00 s=1 e=0 z=0  None .data      @835                                                         */
+SECTION_DATA static void* lit_835[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs,
 };
 
-/* 803CD9C0-803CD9F0 0030+00 s=2 e=0 z=0  None .data      sMtxLoadPipeline__11J3DShapeMtx                              */
+/* 803CD9C0-803CD9F0 0030+00 s=3 e=0 z=0  None .data      sMtxLoadPipeline__11J3DShapeMtx                              */
 SECTION_DATA static u8 sMtxLoadPipeline__11J3DShapeMtx[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CD9F0-803CD9FC 000C+00 s=0 e=0 z=0  None .data      @836                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_836[3] = {
+/* 803CD9F0-803CD9FC 000C+00 s=1 e=0 z=0  None .data      @836                                                         */
+SECTION_DATA static void* lit_836[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CD9FC-803CDA08 000C+00 s=0 e=0 z=0  None .data      @837                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_837[3] = {
+/* 803CD9FC-803CDA08 000C+00 s=1 e=0 z=0  None .data      @837                                                         */
+SECTION_DATA static void* lit_837[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA08-803CDA14 000C+00 s=0 e=0 z=0  None .data      @838                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_838[3] = {
+/* 803CDA08-803CDA14 000C+00 s=1 e=0 z=0  None .data      @838                                                         */
+SECTION_DATA static void* lit_838[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA14-803CDA20 000C+00 s=0 e=0 z=0  None .data      @839                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_839[3] = {
+/* 803CDA14-803CDA20 000C+00 s=1 e=0 z=0  None .data      @839                                                         */
+SECTION_DATA static void* lit_839[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA20-803CDA50 0030+00 s=2 e=0 z=0  None .data      sMtxLoadPipeline__21J3DShapeMtxConcatView                    */
+/* 803CDA20-803CDA50 0030+00 s=3 e=0 z=0  None .data      sMtxLoadPipeline__21J3DShapeMtxConcatView                    */
 SECTION_DATA static u8 sMtxLoadPipeline__21J3DShapeMtxConcatView[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CDA50-803CDA5C 000C+00 s=0 e=0 z=0  None .data      @840                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_840[3] = {
+/* 803CDA50-803CDA5C 000C+00 s=1 e=0 z=0  None .data      @840                                                         */
+SECTION_DATA static void* lit_840[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA5C-803CDA68 000C+00 s=0 e=0 z=0  None .data      @841                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_841[3] = {
+/* 803CDA5C-803CDA68 000C+00 s=1 e=0 z=0  None .data      @841                                                         */
+SECTION_DATA static void* lit_841[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA68-803CDA74 000C+00 s=0 e=0 z=0  None .data      @842                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_842[3] = {
+/* 803CDA68-803CDA74 000C+00 s=1 e=0 z=0  None .data      @842                                                         */
+SECTION_DATA static void* lit_842[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA74-803CDA80 000C+00 s=0 e=0 z=0  None .data      @843                                                         */
-SECTION_DATA void* J3DShapeMtx__lit_843[3] = {
+/* 803CDA74-803CDA80 000C+00 s=1 e=0 z=0  None .data      @843                                                         */
+SECTION_DATA static void* lit_843[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
-/* 803CDA80-803CDAB0 0030+00 s=1 e=0 z=0  None .data      sMtxLoadLODPipeline__21J3DShapeMtxConcatView                 */
+/* 803CDA80-803CDAB0 0030+00 s=2 e=0 z=0  None .data      sMtxLoadLODPipeline__21J3DShapeMtxConcatView                 */
 SECTION_DATA static u8 sMtxLoadLODPipeline__21J3DShapeMtxConcatView[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -413,7 +402,7 @@ SECTION_DATA static void* lit_1035[12] = {
 };
 
 /* 803CDB40-803CDB70 0030+00 s=1 e=0 z=0  None .data      @1034                                                        */
-SECTION_DATA static void* J3DShapeMtx__lit_1034[12] = {
+SECTION_DATA static void* lit_1034[12] = {
 	/* 0    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x2B8),
 	/* 1    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
 	/* 2    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xE0),
@@ -450,7 +439,7 @@ u8 sTexGenBlock__17J3DDifferedTexMtx[4];
 u8 sTexMtxObj__17J3DDifferedTexMtx[4];
 
 /* 80456398-8045639C 0004+00 s=2 e=0 z=0  None .sdata2    @1032                                                        */
-SECTION_SDATA2 static u8 J3DShapeMtx__lit_1032[4] = {
+SECTION_SDATA2 static u8 lit_1032[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

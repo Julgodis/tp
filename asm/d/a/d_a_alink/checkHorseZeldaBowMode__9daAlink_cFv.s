@@ -1,7 +1,7 @@
 lbl_800EC76C:
 /* 800EC76C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EC770 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EC774 00000008  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 800EC774 00000008  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800EC778 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 800EC77C 00000010  40 82 00 0C */	bne lbl_800EC788
 /* 800EC780 00000014  38 60 00 00 */	li r3, 0

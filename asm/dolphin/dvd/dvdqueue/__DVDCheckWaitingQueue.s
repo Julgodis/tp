@@ -8,7 +8,7 @@ lbl_8034B9B4:
 /* 8034B9CC 00000018  7C 09 03 A6 */	mtctr r0
 /* 8034B9D0 0000001C  38 84 C9 98 */	addi r4, r4, WaitingQueue@l
 lbl_8034B9D4:
-/* 8034B9D4 00000000  80 04 00 00 */	lwz r0, 0(r4)
+/* 8034B9D4 00000000  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 8044C998 */
 /* 8034B9D8 00000004  7C 00 20 40 */	cmplw r0, r4
 /* 8034B9DC 00000008  41 82 00 10 */	beq lbl_8034B9EC
 /* 8034B9E0 0000000C  4B FF 1D 3D */	bl OSRestoreInterrupts

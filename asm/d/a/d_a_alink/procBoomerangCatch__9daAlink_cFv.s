@@ -11,7 +11,7 @@ lbl_800E1248:
 /* 800E126C 00000024  C0 3F 1F E0 */	lfs f1, 0x1fe0(r31)
 /* 800E1270 00000028  3C 80 80 39 */	lis r4, m__18daAlinkHIO_boom_c0@ha
 /* 800E1274 0000002C  38 84 E6 C8 */	addi r4, r4, m__18daAlinkHIO_boom_c0@l
-/* 800E1278 00000030  C0 04 00 24 */	lfs f0, 0x24(r4)
+/* 800E1278 00000030  C0 04 00 24 */	lfs f0, 0x24(r4)	/* effective address: 8038E6EC */
 /* 800E127C 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E1280 00000000  40 81 00 10 */	ble lbl_800E1290
 /* 800E1284 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -23,7 +23,7 @@ lbl_800E1290:
 /* 800E1298 00000008  41 82 00 24 */	beq lbl_800E12BC
 /* 800E129C 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800E12A0 00000010  38 80 00 02 */	li r4, 2
-/* 800E12A4 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E12A4 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E12A8 00000018  4B FC C4 7D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800E12AC 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800E12B0 00000020  38 80 00 00 */	li r4, 0

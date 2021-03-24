@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcShoe_c {
@@ -33,6 +33,7 @@ struct daNpcShoe_c {
 	/* 80AE85B8 */ void ctrlJointCallBack(J3DJoint*, int);
 	/* 80AE8604 */ void setMotion(int, f32, int);
 	/* 80AE864C */ void reset();
+	/* 80AE895C */ void setAction(bool (daNpcShoe_c::*)(void*));
 	/* 80AE8A04 */ void wait(void*);
 	/* 80AE8E24 */ void fear(void*);
 	/* 80AE8ED4 */ void talk(void*);
@@ -132,7 +133,7 @@ extern "C" void createHeapCallBack__11daNpcShoe_cFP10fopAc_ac_c(); // 1
 extern "C" void ctrlJointCallBack__11daNpcShoe_cFP8J3DJointi(); // 1
 extern "C" void setMotion__11daNpcShoe_cFifi(); // 1
 extern "C" void reset__11daNpcShoe_cFv(); // 1
-extern "C" static void setAction__11daNpcShoe_cFM11daNpcShoe_cFPCvPvPv_b(); // 1
+extern "C" void setAction__11daNpcShoe_cFM11daNpcShoe_cFPCvPvPv_b(); // 1
 extern "C" void wait__11daNpcShoe_cFPv(); // 1
 extern "C" void fear__11daNpcShoe_cFPv(); // 1
 extern "C" void talk__11daNpcShoe_cFPv(); // 1
@@ -407,7 +408,7 @@ asm void daNpcShoe_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpcShoe_cFM11daNpcShoe_cFPCvPvPv_b() {
+asm void daNpcShoe_c::setAction(bool (daNpcShoe_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shoe/d_a_npc_shoe/setAction__11daNpcShoe_cFM11daNpcShoe_cFPCvPvPv_b.s"
 }

@@ -20,7 +20,7 @@ lbl_8011A734:
 lbl_8011A73C:
 /* 8011A73C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011A740 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8011A744 00000008  A3 E3 00 04 */	lhz r31, 4(r3)
+/* 8011A744 00000008  A3 E3 00 04 */	lhz r31, 4(r3)	/* effective address: 804061C4 */
 /* 8011A748 0000000C  4B F1 83 61 */	bl getRupeeMax__21dSv_player_status_a_cCFv
 /* 8011A74C 00000010  54 65 04 3E */	clrlwi r5, r3, 0x10
 /* 8011A750 00000014  38 1E FF FC */	addi r0, r30, -4

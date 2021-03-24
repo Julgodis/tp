@@ -6,8 +6,8 @@ lbl_80232690:
 /* 802326A0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 802326A4 00000014  7C 80 23 78 */	mr r0, r4
 /* 802326A8 00000018  38 61 00 08 */	addi r3, r1, 8
-/* 802326AC 0000001C  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
-/* 802326B0 00000020  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
+/* 802326AC 0000001C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802326B0 00000020  38 84 96 10 */	addi r4, r4, stringBase0@l
 /* 802326B4 00000024  38 84 00 10 */	addi r4, r4, 0x10
 /* 802326B8 00000028  7C 05 07 34 */	extsh r5, r0
 /* 802326BC 0000002C  4C C6 31 82 */	crclr 6

@@ -7,7 +7,7 @@ lbl_8020D49C:
 /* 8020D4B0 00000014  3B C0 00 00 */	li r30, 0
 /* 8020D4B4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020D4B8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020D4BC 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8020D4BC 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 8020D4C0 00000024  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8020D4C4 00000028  7D 89 03 A6 */	mtctr r12
 /* 8020D4C8 0000002C  4E 80 04 21 */	bctrl 

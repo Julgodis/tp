@@ -22,19 +22,19 @@ lbl_801C9A4C:
 /* 801C9A9C 00000050  48 00 2D E5 */	bl setAreaName__12dMenu_Fmap_cFUl
 /* 801C9AA0 00000054  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C9AA4 00000058  38 80 00 01 */	li r4, 1
-/* 801C9AA8 0000005C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C9AA8 0000005C  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C9AAC 00000060  48 00 DC 69 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C9AB0 00000064  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C9AB4 00000068  38 80 00 02 */	li r4, 2
-/* 801C9AB8 0000006C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C9AB8 0000006C  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C9ABC 00000070  48 00 DC 59 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C9AC0 00000074  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C9AC4 00000078  38 80 00 08 */	li r4, 8
-/* 801C9AC8 0000007C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C9AC8 0000007C  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C9ACC 00000080  48 00 DC 49 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C9AD0 00000084  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C9AD4 00000088  38 80 00 04 */	li r4, 4
-/* 801C9AD8 0000008C  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C9AD8 0000008C  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C9ADC 00000090  48 00 DC 39 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C9AE0 00000094  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C9AE4 00000098  38 80 00 00 */	li r4, 0

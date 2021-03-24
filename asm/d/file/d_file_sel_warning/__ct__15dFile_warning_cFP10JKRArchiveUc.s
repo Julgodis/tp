@@ -18,7 +18,7 @@ lbl_80191BAC:
 /* 80191BEC 00000040  48 00 01 09 */	bl screenSet__15dFile_warning_cFv
 /* 80191BF0 00000044  38 00 00 00 */	li r0, 0
 /* 80191BF4 00000048  98 1F 00 18 */	stb r0, 0x18(r31)
-/* 80191BF8 0000004C  C0 02 9F D8 */	lfs f0, d_file_d_file_sel_warning__lit_3741(r2)
+/* 80191BF8 0000004C  C0 02 9F D8 */	lfs f0, lit_3741(r2)
 /* 80191BFC 00000050  D0 1F 00 38 */	stfs f0, 0x38(r31)
 /* 80191C00 00000054  7F E3 FB 78 */	mr r3, r31
 /* 80191C04 00000058  83 E1 00 0C */	lwz r31, 0xc(r1)

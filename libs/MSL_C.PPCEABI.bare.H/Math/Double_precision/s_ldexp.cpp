@@ -27,21 +27,21 @@ extern "C" void copysign(); // 1
 
 /* ############################################################################################## */
 /* 80456B10-80456B18 0008+00 s=1 e=0 z=0  None .sdata2    @91                                                          */
-SECTION_SDATA2 static u8 Math_Double_precision_s_ldexp__lit_91[8] = {
+SECTION_SDATA2 static u8 lit_91[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456B18-80456B20 0008+00 s=1 e=0 z=0  None .sdata2    @92                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_92 = 1.8014398509481984e+16;
+SECTION_SDATA2 static f64 lit_92 = 1.8014398509481984e+16;
 
 /* 80456B20-80456B28 0008+00 s=1 e=0 z=0  None .sdata2    @93                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_93 = 1e-300;
+SECTION_SDATA2 static f64 lit_93 = 1e-300;
 
 /* 80456B28-80456B30 0008+00 s=1 e=0 z=0  None .sdata2    @94                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_94 = 1e+300;
+SECTION_SDATA2 static f64 lit_94 = 1e+300;
 
 /* 80456B30-80456B38 0008+00 s=1 e=0 z=0  None .sdata2    @95                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_95 = 5.551115123125783e-17;
+SECTION_SDATA2 static f64 lit_95 = 5.551115123125783e-17;
 
 /* 8036C2D0-8036C494 01C4+00 s=0 e=3 z=0  None .text      ldexp                                                        */
 #pragma push

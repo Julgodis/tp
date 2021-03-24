@@ -11,7 +11,7 @@ lbl_801A56DC:
 /* 801A5700 00000024  4B FF AD 0D */	bl setLight__18dScnKy_env_light_cFv
 /* 801A5704 00000028  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A5708 0000002C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A570C 00000030  88 03 12 C6 */	lbz r0, 0x12c6(r3)
+/* 801A570C 00000030  88 03 12 C6 */	lbz r0, 0x12c6(r3)	/* effective address: 8042DD1A */
 /* 801A5710 00000034  7C 03 07 74 */	extsb r3, r0
 /* 801A5714 00000038  48 00 15 0D */	bl dKy_setLight_nowroom__Fc
 /* 801A5718 0000003C  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -12,7 +12,7 @@ lbl_8003E114:
 /* 8003E13C 00000028  7D 1F 43 78 */	mr r31, r8
 /* 8003E140 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003E144 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003E148 00000034  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8003E148 00000034  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 8003E14C 00000038  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8003E150 0000003C  7D 89 03 A6 */	mtctr r12
 /* 8003E154 00000040  4E 80 04 21 */	bctrl 

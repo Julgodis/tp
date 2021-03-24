@@ -14,13 +14,13 @@ lbl_801B91DC:
 lbl_801B920C:
 /* 801B920C 00000000  90 1F 0C A4 */	stw r0, 0xca4(r31)
 /* 801B9210 00000004  80 7F 0C A4 */	lwz r3, 0xca4(r31)
-/* 801B9214 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B9218 0000000C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
+/* 801B9214 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B9218 0000000C  38 84 57 60 */	addi r4, r4, stringBase0@l
 /* 801B921C 00000010  38 84 00 70 */	addi r4, r4, 0x70
 /* 801B9220 00000014  3C A0 00 02 */	lis r5, 2
 /* 801B9224 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 801B9228 0000001C  3B C6 61 C0 */	addi r30, r6, g_dComIfG_gameInfo@l
-/* 801B922C 00000020  80 DE 5C C0 */	lwz r6, 0x5cc0(r30)
+/* 801B922C 00000020  80 DE 5C C0 */	lwz r6, 0x5cc0(r30)	/* effective address: 8040BE80 */
 /* 801B9230 00000024  48 13 F4 19 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801B9234 00000028  80 7F 0C A4 */	lwz r3, 0xca4(r31)
 /* 801B9238 0000002C  48 09 BE B1 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -33,8 +33,8 @@ lbl_801B920C:
 lbl_801B9254:
 /* 801B9254 00000000  90 1F 0C BC */	stw r0, 0xcbc(r31)
 /* 801B9258 00000004  80 7F 0C BC */	lwz r3, 0xcbc(r31)
-/* 801B925C 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B9260 0000000C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
+/* 801B925C 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B9260 0000000C  38 84 57 60 */	addi r4, r4, stringBase0@l
 /* 801B9264 00000010  38 84 00 8B */	addi r4, r4, 0x8b
 /* 801B9268 00000014  3C A0 00 02 */	lis r5, 2
 /* 801B926C 00000018  80 DE 5C C0 */	lwz r6, 0x5cc0(r30)
@@ -85,21 +85,21 @@ lbl_801B930C:
 /* 801B9318 0000000C  7C 60 1B 79 */	or. r0, r3, r3
 /* 801B931C 00000010  41 82 00 18 */	beq lbl_801B9334
 /* 801B9320 00000014  38 80 00 02 */	li r4, 2
-/* 801B9324 00000018  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801B9324 00000018  C0 22 A5 EC */	lfs f1, lit_3963(r2)
 /* 801B9328 0000001C  38 A0 00 00 */	li r5, 0
 /* 801B932C 00000020  4B FD AE F5 */	bl __ct__16dSelect_cursor_cFUcfP10JKRArchive
 /* 801B9330 00000024  7C 60 1B 78 */	mr r0, r3
 lbl_801B9334:
 /* 801B9334 00000000  90 1F 0C C0 */	stw r0, 0xcc0(r31)
 /* 801B9338 00000004  80 7F 0C C0 */	lwz r3, 0xcc0(r31)
-/* 801B933C 00000008  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801B933C 00000008  C0 22 A5 EC */	lfs f1, lit_3963(r2)
 /* 801B9340 0000000C  4B FD BF 61 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801B9344 00000010  80 7F 0C C0 */	lwz r3, 0xcc0(r31)
-/* 801B9348 00000014  C0 22 A6 10 */	lfs f1, d_menu_d_menu_dmap__lit_4312(r2)
-/* 801B934C 00000018  C0 42 A6 14 */	lfs f2, d_menu_d_menu_dmap__lit_4313(r2)
-/* 801B9350 0000001C  C0 62 A6 18 */	lfs f3, d_menu_d_menu_dmap__lit_4314(r2)
-/* 801B9354 00000020  C0 82 A6 1C */	lfs f4, d_menu_d_menu_dmap__lit_4315(r2)
-/* 801B9358 00000024  C0 A2 A6 0C */	lfs f5, d_menu_d_menu_dmap__lit_4249(r2)
+/* 801B9348 00000014  C0 22 A6 10 */	lfs f1, lit_4312(r2)
+/* 801B934C 00000018  C0 42 A6 14 */	lfs f2, lit_4313(r2)
+/* 801B9350 0000001C  C0 62 A6 18 */	lfs f3, lit_4314(r2)
+/* 801B9354 00000020  C0 82 A6 1C */	lfs f4, lit_4315(r2)
+/* 801B9358 00000024  C0 A2 A6 0C */	lfs f5, lit_4249(r2)
 /* 801B935C 00000028  4B FD BE 55 */	bl setParam__16dSelect_cursor_cFfffff
 /* 801B9360 0000002C  80 7F 0C A4 */	lwz r3, 0xca4(r31)
 /* 801B9364 00000030  3C 80 74 5F */	lis r4, 0x745F /* 0x745F3030@ha */
@@ -129,18 +129,18 @@ lbl_801B9334:
 /* 801B93C4 00000090  4E 80 04 21 */	bctrl 
 /* 801B93C8 00000094  7F C3 F3 78 */	mr r3, r30
 /* 801B93CC 00000098  38 80 00 20 */	li r4, 0x20
-/* 801B93D0 0000009C  3C A0 80 39 */	lis r5, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B93D4 000000A0  38 A5 57 60 */	addi r5, r5, d_menu_d_menu_dmap__stringBase0@l
+/* 801B93D0 0000009C  3C A0 80 39 */	lis r5, stringBase0@ha
+/* 801B93D4 000000A0  38 A5 57 60 */	addi r5, r5, stringBase0@l
 /* 801B93D8 000000A4  38 A5 00 6F */	addi r5, r5, 0x6f
 /* 801B93DC 000000A8  4C C6 31 82 */	crclr 6
 /* 801B93E0 000000AC  48 14 73 6D */	bl setString__10J2DTextBoxFsPCce
 /* 801B93E4 000000B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B93E8 000000B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B93EC 000000B8  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 801B93EC 000000B8  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 801B93F0 000000BC  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 801B93F4 000000C0  7D 89 03 A6 */	mtctr r12
 /* 801B93F8 000000C4  4E 80 04 21 */	bctrl 
-/* 801B93FC 000000C8  A0 03 00 2A */	lhz r0, 0x2a(r3)
+/* 801B93FC 000000C8  A0 03 00 2A */	lhz r0, 0x2a(r3)	/* effective address: 804061EA */
 /* 801B9400 000000CC  28 00 00 00 */	cmplwi r0, 0
 /* 801B9404 000000D0  41 82 00 30 */	beq lbl_801B9434
 /* 801B9408 000000D4  80 7F 0C C8 */	lwz r3, 0xcc8(r31)

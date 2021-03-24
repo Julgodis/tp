@@ -6,8 +6,8 @@ lbl_8015F60C:
 /* 8015F61C 00000010  3B E0 00 00 */	li r31, 0
 /* 8015F620 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8015F624 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8015F628 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)
-/* 8015F62C 00000020  80 04 05 74 */	lwz r0, 0x574(r4)
+/* 8015F628 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 8015F62C 00000020  80 04 05 74 */	lwz r0, 0x574(r4)	/* effective address: 80406734 */
 /* 8015F630 00000024  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8015F634 00000028  41 82 00 14 */	beq lbl_8015F648
 /* 8015F638 0000002C  4B FF FF 25 */	bl linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c

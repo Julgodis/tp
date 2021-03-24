@@ -22,15 +22,15 @@ lbl_801ABC4C:
 /* 801ABC58 0000000C  7C 7C 1B 78 */	mr r28, r3
 /* 801ABC5C 00000010  3B BE 3E C8 */	addi r29, r30, 0x3ec8
 /* 801ABC60 00000014  7F A3 EB 78 */	mr r3, r29
-/* 801ABC64 00000018  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801ABC68 0000001C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801ABC64 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801ABC68 0000001C  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801ABC6C 00000020  38 84 01 7A */	addi r4, r4, 0x17a
 /* 801ABC70 00000024  48 1B CD 25 */	bl strcmp
 /* 801ABC74 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 801ABC78 0000002C  40 82 00 28 */	bne lbl_801ABCA0
 /* 801ABC7C 00000030  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801ABC80 00000034  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801ABC84 00000038  88 03 12 FE */	lbz r0, 0x12fe(r3)
+/* 801ABC84 00000038  88 03 12 FE */	lbz r0, 0x12fe(r3)	/* effective address: 8042DD52 */
 /* 801ABC88 0000003C  28 00 00 04 */	cmplwi r0, 4
 /* 801ABC8C 00000040  40 82 00 14 */	bne lbl_801ABCA0
 /* 801ABC90 00000044  2C 1C 00 04 */	cmpwi r28, 4
@@ -39,8 +39,8 @@ lbl_801ABC4C:
 /* 801ABC9C 00000050  48 00 00 48 */	b lbl_801ABCE4
 lbl_801ABCA0:
 /* 801ABCA0 00000000  7F A3 EB 78 */	mr r3, r29
-/* 801ABCA4 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801ABCA8 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801ABCA4 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801ABCA8 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801ABCAC 0000000C  38 84 02 61 */	addi r4, r4, 0x261
 /* 801ABCB0 00000010  48 1B CC E5 */	bl strcmp
 /* 801ABCB4 00000014  2C 03 00 00 */	cmpwi r3, 0

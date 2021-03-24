@@ -9,7 +9,7 @@ lbl_801CAA78:
 /* 801CAA94 0000001C  38 80 00 01 */	li r4, 1
 /* 801CAA98 00000020  48 00 2B 35 */	bl tableArrowPosInit__12dMenu_Fmap_cFb
 /* 801CAA9C 00000024  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 801CAAA0 00000028  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAAA0 00000028  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CAAA4 0000002C  48 00 69 D5 */	bl zoomMapCalc2__18dMenu_Fmap2DBack_cFf
 /* 801CAAA8 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801CAAAC 00000034  80 01 00 14 */	lwz r0, 0x14(r1)

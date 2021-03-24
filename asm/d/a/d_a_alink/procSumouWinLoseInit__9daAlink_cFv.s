@@ -47,7 +47,7 @@ lbl_800EC2AC:
 /* 800EC2B4 00000008  4B FC 0C CD */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
 /* 800EC2B8 0000000C  38 00 00 01 */	li r0, 1
 /* 800EC2BC 00000010  B0 1F 30 0C */	sth r0, 0x300c(r31)
-/* 800EC2C0 00000014  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800EC2C0 00000014  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800EC2C4 00000018  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800EC2C8 0000001C  3C 60 00 01 */	lis r3, 0x0001 /* 0x0001004E@ha */
 /* 800EC2CC 00000020  38 03 00 4E */	addi r0, r3, 0x004E /* 0x0001004E@l */
@@ -83,7 +83,7 @@ lbl_800EC324:
 lbl_800EC338:
 /* 800EC338 00000000  7C 9D 23 78 */	mr r29, r4
 /* 800EC33C 00000004  7F E3 FB 78 */	mr r3, r31
-/* 800EC340 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800EC340 00000008  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800EC344 0000000C  FC 40 F8 90 */	fmr f2, f31
 /* 800EC348 00000010  38 A0 FF FF */	li r5, -1
 /* 800EC34C 00000014  C0 62 92 C4 */	lfs f3, lit_6109(r2)

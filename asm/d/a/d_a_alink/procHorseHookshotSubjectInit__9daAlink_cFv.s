@@ -22,9 +22,9 @@ lbl_800F2720:
 /* 800F2740 00000020  48 01 69 31 */	bl setHookshotReadyMaterial__9daAlink_cFv
 /* 800F2744 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F2748 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F274C 0000002C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800F274C 0000002C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F2750 00000030  60 00 40 00 */	ori r0, r0, 0x4000
-/* 800F2754 00000034  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800F2754 00000034  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F2758 00000038  38 60 00 01 */	li r3, 1
 lbl_800F275C:
 /* 800F275C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

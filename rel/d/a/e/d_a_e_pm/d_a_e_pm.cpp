@@ -16,13 +16,13 @@ struct daE_PM_HIO_c {
 	/* 8074BA68 */ ~daE_PM_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
-};
-
-struct J3DModel {
 };
 
 struct daE_PM_c {

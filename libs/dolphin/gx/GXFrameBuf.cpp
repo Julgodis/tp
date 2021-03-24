@@ -133,7 +133,7 @@ extern "C" asm void GXGetNumXfbLines() {
 
 /* ############################################################################################## */
 /* 804565B0-804565B8 0008+00 s=1 e=0 z=0  None .sdata2    @234                                                         */
-SECTION_SDATA2 static f64 GXFrameBuf__lit_234 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_234 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8035CD6C-8035CFA4 0238+00 s=0 e=2 z=0  None .text      GXGetYScaleFactor                                            */
 #pragma push

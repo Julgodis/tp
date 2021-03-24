@@ -15,7 +15,7 @@ lbl_8011E748:
 /* 8011E77C 00000034  40 82 00 30 */	bne lbl_8011E7AC
 /* 8011E780 00000038  3C 60 80 39 */	lis r3, m__26daAlinkHIO_noActAtnMove_c0@ha
 /* 8011E784 0000003C  38 63 D7 68 */	addi r3, r3, m__26daAlinkHIO_noActAtnMove_c0@l
-/* 8011E788 00000040  C0 43 00 08 */	lfs f2, 8(r3)
+/* 8011E788 00000040  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 8038D770 */
 /* 8011E78C 00000044  7F C3 F3 78 */	mr r3, r30
 /* 8011E790 00000048  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011E794 0000004C  FC 60 10 90 */	fmr f3, f2
@@ -45,7 +45,7 @@ lbl_8011E7CC:
 /* 8011E7EC 00000020  48 00 00 34 */	b lbl_8011E820
 lbl_8011E7F0:
 /* 8011E7F0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8011E7F4 00000004  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 8011E7F4 00000004  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 8011E7F8 00000008  48 20 9C 35 */	bl checkPass__12J3DFrameCtrlFf
 /* 8011E7FC 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 8011E800 00000010  41 82 00 20 */	beq lbl_8011E820

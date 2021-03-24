@@ -18,7 +18,7 @@ lbl_801CA35C:
 /* 801CA39C 00000040  7F C3 F3 78 */	mr r3, r30
 /* 801CA3A0 00000044  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801CA3A4 00000048  3B E4 72 88 */	addi r31, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801CA3A8 0000004C  A0 9F 00 EE */	lhz r4, 0xee(r31)
+/* 801CA3A8 0000004C  A0 9F 00 EE */	lhz r4, 0xee(r31)	/* effective address: 803A7376 */
 /* 801CA3AC 00000050  4B E6 A6 11 */	bl isEventBit__11dSv_event_cCFUs
 /* 801CA3B0 00000054  2C 03 00 00 */	cmpwi r3, 0
 /* 801CA3B4 00000058  41 82 00 20 */	beq lbl_801CA3D4

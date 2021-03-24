@@ -72,7 +72,7 @@ lbl_80148964:
 /* 80148970 0000000C  80 17 0D BC */	lwz r0, 0xdbc(r23)
 /* 80148974 00000010  2C 00 00 00 */	cmpwi r0, 0
 /* 80148978 00000014  41 82 00 70 */	beq lbl_801489E8
-/* 8014897C 00000018  C8 42 99 E0 */	lfd f2, d_a_d_a_npc__lit_4142(r2)
+/* 8014897C 00000018  C8 42 99 E0 */	lfd f2, lit_4142(r2)
 /* 80148980 0000001C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80148984 00000020  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80148988 00000024  3C 60 43 30 */	lis r3, 0x4330
@@ -171,19 +171,19 @@ lbl_80148AA8:
 /* 80148ADC 00000034  48 05 C2 C5 */	bl setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80148AE0 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80148AE4 0000003C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80148AE8 00000040  80 04 5F 88 */	lwz r0, 0x5f88(r4)
+/* 80148AE8 00000040  80 04 5F 88 */	lwz r0, 0x5f88(r4)	/* effective address: 8040C148 */
 /* 80148AEC 00000044  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80148AF0 00000048  3B 03 4A C8 */	addi r24, r3, j3dSys@l
-/* 80148AF4 0000004C  90 18 00 48 */	stw r0, 0x48(r24)
-/* 80148AF8 00000050  80 04 5F 8C */	lwz r0, 0x5f8c(r4)
-/* 80148AFC 00000054  90 18 00 4C */	stw r0, 0x4c(r24)
+/* 80148AF4 0000004C  90 18 00 48 */	stw r0, 0x48(r24)	/* effective address: 80434B10 */
+/* 80148AF8 00000050  80 04 5F 8C */	lwz r0, 0x5f8c(r4)	/* effective address: 8040C14C */
+/* 80148AFC 00000054  90 18 00 4C */	stw r0, 0x4c(r24)	/* effective address: 80434B14 */
 /* 80148B00 00000058  80 77 05 78 */	lwz r3, 0x578(r23)
 /* 80148B04 0000005C  4B EC 86 BD */	bl entryDL__16mDoExt_McaMorfSOFv
 /* 80148B08 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80148B0C 00000064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80148B10 00000068  80 03 5F 80 */	lwz r0, 0x5f80(r3)
+/* 80148B10 00000068  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
 /* 80148B14 0000006C  90 18 00 48 */	stw r0, 0x48(r24)
-/* 80148B18 00000070  80 03 5F 84 */	lwz r0, 0x5f84(r3)
+/* 80148B18 00000070  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
 /* 80148B1C 00000074  90 18 00 4C */	stw r0, 0x4c(r24)
 /* 80148B20 00000078  48 00 00 38 */	b lbl_80148B58
 lbl_80148B24:
@@ -244,7 +244,7 @@ lbl_80148BB8:
 /* 80148BE8 00000030  38 F7 09 44 */	addi r7, r23, 0x944
 /* 80148BEC 00000034  39 17 01 0C */	addi r8, r23, 0x10c
 /* 80148BF0 00000038  39 20 00 00 */	li r9, 0
-/* 80148BF4 0000003C  C0 A2 99 DC */	lfs f5, d_a_d_a_npc__lit_4140(r2)
+/* 80148BF4 0000003C  C0 A2 99 DC */	lfs f5, lit_4140(r2)
 /* 80148BF8 00000040  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80148BFC 00000044  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80148C00 00000048  4B EE 5D 11 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
@@ -256,7 +256,7 @@ lbl_80148C0C:
 /* 80148C14 00000008  FC 40 F8 90 */	fmr f2, f31
 /* 80148C18 0000000C  38 97 09 44 */	addi r4, r23, 0x944
 /* 80148C1C 00000010  38 A0 00 00 */	li r5, 0
-/* 80148C20 00000014  C0 62 99 DC */	lfs f3, d_a_d_a_npc__lit_4140(r2)
+/* 80148C20 00000014  C0 62 99 DC */	lfs f3, lit_4140(r2)
 /* 80148C24 00000018  3C C0 80 42 */	lis r6, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80148C28 0000001C  38 C6 48 D0 */	addi r6, r6, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80148C2C 00000020  4B EE 44 89 */	bl dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj

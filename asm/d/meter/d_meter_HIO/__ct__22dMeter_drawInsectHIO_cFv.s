@@ -8,11 +8,11 @@ lbl_801FE8DC:
 /* 801FE8F4 00000018  38 00 00 00 */	li r0, 0
 /* 801FE8F8 0000001C  98 03 00 3C */	stb r0, 0x3c(r3)
 /* 801FE8FC 00000020  98 03 00 3D */	stb r0, 0x3d(r3)
-/* 801FE900 00000024  C0 02 AA E0 */	lfs f0, d_meter_d_meter_HIO__lit_3787(r2)
+/* 801FE900 00000024  C0 02 AA E0 */	lfs f0, lit_3787(r2)
 /* 801FE904 00000028  D0 03 00 08 */	stfs f0, 8(r3)
-/* 801FE908 0000002C  C0 02 AA E4 */	lfs f0, d_meter_d_meter_HIO__lit_3788(r2)
+/* 801FE908 0000002C  C0 02 AA E4 */	lfs f0, lit_3788(r2)
 /* 801FE90C 00000030  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 801FE910 00000034  C0 22 AA F8 */	lfs f1, d_meter_d_meter_HIO__lit_3793(r2)
+/* 801FE910 00000034  C0 22 AA F8 */	lfs f1, lit_3793(r2)
 /* 801FE914 00000038  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 801FE918 0000003C  C0 02 AB 50 */	lfs f0, lit_3912(r2)
 /* 801FE91C 00000040  D0 03 00 14 */	stfs f0, 0x14(r3)
@@ -25,7 +25,7 @@ lbl_801FE8DC:
 /* 801FE938 0000005C  C0 02 AB 5C */	lfs f0, lit_3915(r2)
 /* 801FE93C 00000060  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 801FE940 00000064  D0 43 00 24 */	stfs f2, 0x24(r3)
-/* 801FE944 00000068  C0 02 AB 60 */	lfs f0, d_meter_d_meter_HIO__lit_3916(r2)
+/* 801FE944 00000068  C0 02 AB 60 */	lfs f0, lit_3916(r2)
 /* 801FE948 0000006C  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 801FE94C 00000070  D0 23 00 34 */	stfs f1, 0x34(r3)
 /* 801FE950 00000074  4E 80 00 20 */	blr 

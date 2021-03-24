@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXAttr {
+struct Vec {
 };
 
-struct Vec {
+struct _GXAttr {
 };
 
 struct J3DShape {
@@ -144,7 +144,7 @@ asm void J3DShape::initialize() {
 
 /* ############################################################################################## */
 /* 803A1E98-803A1EA8 0010+00 s=1 e=0 z=0  None .rodata    @697                                                         */
-SECTION_RODATA static u8 const J3DShape__lit_697[16] = {
+SECTION_RODATA static u8 const lit_697[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 

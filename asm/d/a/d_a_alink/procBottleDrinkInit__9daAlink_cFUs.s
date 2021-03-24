@@ -52,9 +52,9 @@ lbl_8010F5C0:
 /* 8010F608 00000048  4B FF EF D1 */	bl setBottleModel__9daAlink_cFUs
 /* 8010F60C 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010F610 00000050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010F614 00000054  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8010F614 00000054  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010F618 00000058  60 00 20 00 */	ori r0, r0, 0x2000
-/* 8010F61C 0000005C  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8010F61C 0000005C  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010F620 00000060  38 00 00 01 */	li r0, 1
 /* 8010F624 00000064  90 1F 31 94 */	stw r0, 0x3194(r31)
 /* 8010F628 00000068  38 00 00 00 */	li r0, 0
@@ -69,8 +69,8 @@ lbl_8010F644:
 /* 8010F644 00000000  48 07 1F FD */	bl dCam_getBody__Fv
 /* 8010F648 00000004  38 80 00 12 */	li r4, 0x12
 /* 8010F64C 00000008  7F C5 F3 78 */	mr r5, r30
-/* 8010F650 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
-/* 8010F654 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
+/* 8010F650 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
+/* 8010F654 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
 /* 8010F658 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8010F65C 00000018  38 E0 00 01 */	li r7, 1
 /* 8010F660 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

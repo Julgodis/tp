@@ -14,7 +14,7 @@ lbl_8013518C:
 /* 8013518C 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80135190 00000004  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 80135194 00000008  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 80135198 0000000C  C0 24 00 BC */	lfs f1, 0xbc(r4)
+/* 80135198 0000000C  C0 24 00 BC */	lfs f1, 0xbc(r4)	/* effective address: 8038EEE4 */
 /* 8013519C 00000010  4B FF 36 A9 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 801351A0 00000014  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 801351A4 00000018  B0 1F 04 DE */	sth r0, 0x4de(r31)
@@ -26,9 +26,9 @@ lbl_8013518C:
 /* 801351BC 00000030  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 801351C0 00000034  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 801351C4 00000038  38 63 EF 28 */	addi r3, r3, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 801351C8 0000003C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 801351C8 0000003C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038EF38 */
 /* 801351CC 00000040  D0 1F 34 7C */	stfs f0, 0x347c(r31)
-/* 801351D0 00000044  C0 03 00 08 */	lfs f0, 8(r3)
+/* 801351D0 00000044  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8038EF30 */
 /* 801351D4 00000048  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 801351D8 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 801351DC 00000050  4B FF 2A D1 */	bl offWolfEyeUp__9daAlink_cFv

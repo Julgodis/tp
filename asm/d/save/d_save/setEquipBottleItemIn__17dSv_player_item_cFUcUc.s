@@ -63,8 +63,8 @@ lbl_8003362C:
 /* 80033688 0000005C  4B FF F3 D5 */	bl getSelectItemIndex__21dSv_player_status_a_cCFi
 /* 8003368C 00000060  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80033690 00000064  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80033694 00000068  98 64 5E 7D */	stb r3, 0x5e7d(r4)
-/* 80033698 0000006C  9B C4 5E 7E */	stb r30, 0x5e7e(r4)
+/* 80033694 00000068  98 64 5E 7D */	stb r3, 0x5e7d(r4)	/* effective address: 8040C03D */
+/* 80033698 0000006C  9B C4 5E 7E */	stb r30, 0x5e7e(r4)	/* effective address: 8040C03E */
 /* 8003369C 00000070  7F E3 FB 78 */	mr r3, r31
 /* 800336A0 00000074  4B FF A7 55 */	bl dComIfGp_setSelectItem__Fi
 lbl_800336A4:

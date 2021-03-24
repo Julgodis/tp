@@ -4,7 +4,7 @@ lbl_8019BFC4:
 /* 8019BFCC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019BFD0 0000000C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8019BFD4 00000010  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 8019BFD8 00000014  98 64 00 C2 */	stb r3, 0xc2(r4)
+/* 8019BFD8 00000014  98 64 00 C2 */	stb r3, 0xc2(r4)	/* effective address: 8043024A */
 /* 8019BFDC 00000018  38 60 03 17 */	li r3, 0x317
 /* 8019BFE0 0000001C  38 80 00 00 */	li r4, 0
 /* 8019BFE4 00000020  38 A0 00 00 */	li r5, 0

@@ -11,18 +11,18 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct cXyz {
-	/* 809C947C */ ~cXyz();
-	/* 809C94B8 */ cXyz();
+struct J3DJoint {
 };
 
 struct fopAc_ac_c {
 };
 
-struct J3DModel {
+struct cXyz {
+	/* 809C947C */ ~cXyz();
+	/* 809C94B8 */ cXyz();
 };
 
 struct daNpc_grA_c {
@@ -66,6 +66,8 @@ struct daNpc_grA_c {
 	/* 809C13D8 */ void reset();
 	/* 809C1990 */ void playExpression();
 	/* 809C2080 */ void playMotion();
+	/* 809C28BC */ void chkAction(int (daNpc_grA_c::*)(void*));
+	/* 809C28E8 */ void setAction(int (daNpc_grA_c::*)(void*));
 	/* 809C2990 */ void selectAction();
 	/* 809C2C3C */ void doEvent();
 	/* 809C3070 */ void setLookMode(int);
@@ -235,8 +237,8 @@ extern "C" void isDelete__11daNpc_grA_cFv(); // 1
 extern "C" void reset__11daNpc_grA_cFv(); // 1
 extern "C" void playExpression__11daNpc_grA_cFv(); // 1
 extern "C" void playMotion__11daNpc_grA_cFv(); // 1
-extern "C" static void chkAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__11daNpc_grA_cFv(); // 1
 extern "C" void doEvent__11daNpc_grA_cFv(); // 1
 extern "C" void setLookMode__11daNpc_grA_cFi(); // 1
@@ -1135,7 +1137,7 @@ asm void daNpc_grA_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i() {
+asm void daNpc_grA_c::chkAction(int (daNpc_grA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/chkAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i.s"
 }
@@ -1146,7 +1148,7 @@ extern "C" asm static void chkAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i() {
+asm void daNpc_grA_c::setAction(int (daNpc_grA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/setAction__11daNpc_grA_cFM11daNpc_grA_cFPCvPvPv_i.s"
 }

@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcImpal_c {
@@ -35,6 +35,7 @@ struct daNpcImpal_c {
 	/* 80A08A68 */ void setExpressionBtp(int);
 	/* 80A08B48 */ void setMotionAnm(int, f32);
 	/* 80A08CBC */ void reset();
+	/* 80A08EB8 */ void setAction(bool (daNpcImpal_c::*)(void*));
 	/* 80A090E8 */ void wait(void*);
 	/* 80A099B4 */ void setMotion(int, f32, int);
 	/* 80A099F8 */ void setExpression(int, f32);
@@ -83,6 +84,16 @@ struct J3DTexMtxAnm {
 struct J3DMatColorAnm {
 	/* 80A084D0 */ ~J3DMatColorAnm();
 	/* 80A0850C */ J3DMatColorAnm();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80A0B954 */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_ActorMngr_c {
@@ -173,7 +184,7 @@ extern "C" void setExpressionAnm__12daNpcImpal_cFib(); // 1
 extern "C" void setExpressionBtp__12daNpcImpal_cFi(); // 1
 extern "C" void setMotionAnm__12daNpcImpal_cFif(); // 1
 extern "C" void reset__12daNpcImpal_cFv(); // 1
-extern "C" static void setAction__12daNpcImpal_cFM12daNpcImpal_cFPCvPvPv_b(); // 1
+extern "C" void setAction__12daNpcImpal_cFM12daNpcImpal_cFPCvPvPv_b(); // 1
 extern "C" void s_sub1__FPvPv(); // 1
 extern "C" void wait__12daNpcImpal_cFPv(); // 1
 extern "C" void setMotion__12daNpcImpal_cFifi(); // 1
@@ -195,7 +206,7 @@ extern "C" void ctrlBtk__12daNpcImpal_cFv(); // 1
 extern "C" void setAttnPos__12daNpcImpal_cFv(); // 1
 extern "C" void lookat__12daNpcImpal_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpcImpal_cFv(); // 1
-extern "C" static void func_80A0B954(); // 1
+extern "C" void func_80A0B954(); // 1
 extern "C" void __sinit_d_a_npc_impal_cpp(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
@@ -621,7 +632,7 @@ asm void daNpcImpal_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpcImpal_cFM12daNpcImpal_cFPCvPvPv_b() {
+asm void daNpcImpal_c::setAction(bool (daNpcImpal_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_impal/d_a_npc_impal/setAction__12daNpcImpal_cFM12daNpcImpal_cFPCvPvPv_b.s"
 }
@@ -863,7 +874,7 @@ asm void daNpcImpal_c::drawDbgInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80A0B954() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_impal/d_a_npc_impal/func_80A0B954.s"
 }

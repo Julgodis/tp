@@ -5,7 +5,7 @@ lbl_800DFFE0:
 /* 800DFFEC 0000000C  41 82 00 1C */	beq lbl_800E0008
 /* 800DFFF0 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DFFF4 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DFFF8 00000018  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800DFFF8 00000018  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800DFFFC 0000001C  54 00 03 19 */	rlwinm. r0, r0, 0, 0xc, 0xc
 /* 800E0000 00000020  41 82 00 08 */	beq lbl_800E0008
 /* 800E0004 00000024  38 80 00 01 */	li r4, 1

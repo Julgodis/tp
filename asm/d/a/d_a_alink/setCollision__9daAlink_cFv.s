@@ -212,7 +212,7 @@ lbl_800AC054:
 /* 800AC09C 00000048  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800AC0A0 00000000  40 81 00 58 */	ble lbl_800AC0F8
 /* 800AC0A4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800AC0A8 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800AC0A8 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800AC0AC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800AC0B0 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800AC0B4 00000014  FC 00 00 32 */	fmul f0, f0, f0

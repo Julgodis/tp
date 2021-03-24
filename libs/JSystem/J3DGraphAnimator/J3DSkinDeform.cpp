@@ -23,13 +23,13 @@ struct Vec {
 struct J3DModel {
 };
 
-struct J3DModelData {
-};
-
 struct J3DVertexBuffer {
 };
 
 struct J3DMtxBuffer {
+};
+
+struct J3DModelData {
 };
 
 struct J3DSkinDeform {
@@ -88,7 +88,7 @@ extern "C" void deform__13J3DSkinDeformFP8J3DModel(); // 1
 extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
 extern "C" void calc__15J3DVtxColorCalcFP8J3DModel(); // 1
 extern "C" void __dt__13J3DSkinDeformFv(); // 1
-extern "C" extern char const* const J3DSkinDeform__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -239,7 +239,7 @@ SECTION_RODATA static u8 const lit_1142[16] = {
 };
 
 /* 803A2018-803A2028 0010+00 s=1 e=0 z=0  None .rodata    @1270                                                        */
-SECTION_RODATA static u8 const J3DSkinDeform__lit_1270[16] = {
+SECTION_RODATA static u8 const lit_1270[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 

@@ -9,7 +9,7 @@ lbl_80048520:
 /* 8004853C 0000001C  B0 81 00 08 */	sth r4, 8(r1)
 /* 80048540 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80048544 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80048548 00000028  80 03 5D AC */	lwz r0, 0x5dac(r3)
+/* 80048548 00000028  80 03 5D AC */	lwz r0, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8004854C 0000002C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80048550 00000030  3C 60 80 05 */	lis r3, findShutterCallBack__FP10fopAc_ac_cPv@ha
 /* 80048554 00000034  38 63 84 6C */	addi r3, r3, findShutterCallBack__FP10fopAc_ac_cPv@l
@@ -29,7 +29,7 @@ lbl_80048520:
 /* 8004858C 0000006C  A8 63 04 B6 */	lha r3, 0x4b6(r3)
 /* 80048590 00000070  3C 63 00 01 */	addis r3, r3, 1
 /* 80048594 00000074  38 03 80 00 */	addi r0, r3, -32768
-/* 80048598 00000078  C0 22 85 34 */	lfs f1, d_event_d_event_manager__lit_5055(r2)
+/* 80048598 00000078  C0 22 85 34 */	lfs f1, lit_5055(r2)
 /* 8004859C 0000007C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 800485A0 00000080  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800485A4 00000084  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l

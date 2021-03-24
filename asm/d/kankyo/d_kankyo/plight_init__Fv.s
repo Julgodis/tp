@@ -2,7 +2,7 @@ lbl_8019E694:
 /* 8019E694 00000000  C0 02 A2 88 */	lfs f0, lit_5077(r2)
 /* 8019E698 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019E69C 00000008  38 C3 CA 54 */	addi r6, r3, g_env_light@l
-/* 8019E6A0 0000000C  D0 06 00 4C */	stfs f0, 0x4c(r6)
+/* 8019E6A0 0000000C  D0 06 00 4C */	stfs f0, 0x4c(r6)	/* effective address: 8042CAA0 */
 /* 8019E6A4 00000010  38 60 00 00 */	li r3, 0
 /* 8019E6A8 00000014  7C 65 1B 78 */	mr r5, r3
 /* 8019E6AC 00000018  38 00 00 64 */	li r0, 0x64
@@ -27,6 +27,6 @@ lbl_8019E6DC:
 /* 8019E6F0 00000014  38 00 FF FF */	li r0, -1
 /* 8019E6F4 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019E6F8 0000001C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8019E6FC 00000020  90 03 12 A4 */	stw r0, 0x12a4(r3)
-/* 8019E700 00000024  90 03 12 A8 */	stw r0, 0x12a8(r3)
+/* 8019E6FC 00000020  90 03 12 A4 */	stw r0, 0x12a4(r3)	/* effective address: 8042DCF8 */
+/* 8019E700 00000024  90 03 12 A8 */	stw r0, 0x12a8(r3)	/* effective address: 8042DCFC */
 /* 8019E704 00000028  4E 80 00 20 */	blr 

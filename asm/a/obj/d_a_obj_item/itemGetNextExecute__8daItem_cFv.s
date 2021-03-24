@@ -41,8 +41,8 @@ lbl_8015CF68:
 lbl_8015CF7C:
 /* 8015CF7C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015CF80 00000004  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 8015CF84 00000008  80 7E 5D AC */	lwz r3, 0x5dac(r30)
-/* 8015CF88 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 8015CF84 00000008  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 8015CF88 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 8015CF8C 00000010  81 8C 01 90 */	lwz r12, 0x190(r12)
 /* 8015CF90 00000014  7D 89 03 A6 */	mtctr r12
 /* 8015CF94 00000018  4E 80 04 21 */	bctrl 

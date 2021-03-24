@@ -10,7 +10,7 @@ lbl_800D0D38:
 /* 800D0D58 00000020  40 82 00 7C */	bne lbl_800D0DD4
 /* 800D0D5C 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D0D60 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D0D64 0000002C  83 E3 5D B4 */	lwz r31, 0x5db4(r3)
+/* 800D0D64 0000002C  83 E3 5D B4 */	lwz r31, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 800D0D68 00000030  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
 /* 800D0D6C 00000034  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 800D0D70 00000038  D0 01 00 08 */	stfs f0, 8(r1)

@@ -49,8 +49,8 @@ lbl_8036CBB8:
 /* 8036CBBC 00000004  41 82 00 1C */	beq lbl_8036CBD8
 /* 8036CBC0 00000008  3C 60 80 45 */	lis r3, gTRKInputPendingPtr@ha
 /* 8036CBC4 0000000C  38 63 19 B8 */	addi r3, r3, gTRKInputPendingPtr@l
-/* 8036CBC8 00000010  80 63 00 00 */	lwz r3, 0(r3)
-/* 8036CBCC 00000014  88 03 00 00 */	lbz r0, 0(r3)
+/* 8036CBC8 00000010  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 804519B8 */
+/* 8036CBCC 00000014  88 03 00 00 */	lbz r0, 0(r3)	/* effective address: 804519B8 */
 /* 8036CBD0 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 8036CBD4 0000001C  41 82 00 10 */	beq lbl_8036CBE4
 lbl_8036CBD8:

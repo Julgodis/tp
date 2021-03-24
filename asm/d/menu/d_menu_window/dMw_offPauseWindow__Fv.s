@@ -1,7 +1,7 @@
 lbl_801FA0AC:
 /* 801FA0AC 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FA0B0 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FA0B4 00000008  80 63 00 24 */	lwz r3, 0x24(r3)
+/* 801FA0B4 00000008  80 63 00 24 */	lwz r3, 0x24(r3)	/* effective address: 804301AC */
 /* 801FA0B8 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801FA0BC 00000010  4D 82 00 20 */	beqlr 
 /* 801FA0C0 00000014  38 00 00 00 */	li r0, 0

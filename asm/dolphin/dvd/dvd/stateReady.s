@@ -124,13 +124,13 @@ lbl_8034A24C:
 /* 8034A260 00000014  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 8034A264 00000018  80 03 00 F8 */	lwz r0, 0x00F8(r3)
 /* 8034A268 0000001C  3C 80 10 62 */	lis r4, 0x1062 /* 0x10624DD3@ha */
-/* 8034A26C 00000020  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
+/* 8034A26C 00000020  3C 60 80 35 */	lis r3, AlarmHandler@ha
 /* 8034A270 00000024  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A274 00000028  38 84 4D D3 */	addi r4, r4, 0x4DD3 /* 0x10624DD3@l */
 /* 8034A278 0000002C  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A27C 00000030  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A280 00000034  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A284 00000038  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
+/* 8034A284 00000038  38 E3 9D EC */	addi r7, r3, AlarmHandler@l
 /* 8034A288 0000003C  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A28C 00000040  38 A0 00 00 */	li r5, 0
 /* 8034A290 00000044  4B FF 08 C9 */	bl OSSetAlarm
@@ -191,13 +191,13 @@ lbl_8034A338:
 /* 8034A34C 00000014  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 8034A350 00000018  80 03 00 F8 */	lwz r0, 0x00F8(r3)
 /* 8034A354 0000001C  3C 80 10 62 */	lis r4, 0x1062 /* 0x10624DD3@ha */
-/* 8034A358 00000020  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
+/* 8034A358 00000020  3C 60 80 35 */	lis r3, AlarmHandler@ha
 /* 8034A35C 00000024  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A360 00000028  38 84 4D D3 */	addi r4, r4, 0x4DD3 /* 0x10624DD3@l */
 /* 8034A364 0000002C  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A368 00000030  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A36C 00000034  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A370 00000038  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
+/* 8034A370 00000038  38 E3 9D EC */	addi r7, r3, AlarmHandler@l
 /* 8034A374 0000003C  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A378 00000040  38 A0 00 00 */	li r5, 0
 /* 8034A37C 00000044  4B FF 07 DD */	bl OSSetAlarm

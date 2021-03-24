@@ -14,8 +14,8 @@ lbl_8033A8A0:
 /* 8033A8D0 00000030  38 60 00 08 */	li r3, 8
 /* 8033A8D4 00000034  90 0D 90 B8 */	stw r0, AlarmQueue(r13)
 /* 8033A8D8 00000038  4B FF FE 11 */	bl __OSSetExceptionHandler
-/* 8033A8DC 0000003C  3C 60 80 3D */	lis r3, OSAlarm__ResetFunctionInfo@ha
-/* 8033A8E0 00000040  38 63 F4 80 */	addi r3, r3, OSAlarm__ResetFunctionInfo@l
+/* 8033A8DC 0000003C  3C 60 80 3D */	lis r3, ResetFunctionInfo@ha
+/* 8033A8E0 00000040  38 63 F4 80 */	addi r3, r3, ResetFunctionInfo@l
 /* 8033A8E4 00000044  48 00 4D 7D */	bl OSRegisterResetFunction
 lbl_8033A8E8:
 /* 8033A8E8 00000000  80 01 00 0C */	lwz r0, 0xc(r1)

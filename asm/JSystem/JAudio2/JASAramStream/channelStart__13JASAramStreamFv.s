@@ -26,7 +26,7 @@ lbl_802976A8:
 /* 802976AC 00000004  3B 80 00 00 */	li r28, 0
 /* 802976B0 00000008  3C 60 80 43 */	lis r3, data_80431B34@ha
 /* 802976B4 0000000C  3B 23 1B 34 */	addi r25, r3, data_80431B34@l
-/* 802976B8 00000010  CB E2 BC 20 */	lfd f31, JASAramStream__lit_533(r2)
+/* 802976B8 00000010  CB E2 BC 20 */	lfd f31, lit_533(r2)
 /* 802976BC 00000014  3F 40 43 30 */	lis r26, 0x4330
 /* 802976C0 00000018  3C 60 80 3A */	lis r3, OSC_ENV@ha
 /* 802976C4 0000001C  3B 63 B1 74 */	addi r27, r3, OSC_ENV@l
@@ -47,8 +47,8 @@ lbl_802976CC:
 /* 802976FC 00000030  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 80297700 00000034  3C 80 80 29 */	lis r4, func_802978DC@ha
 /* 80297704 00000038  38 84 78 DC */	addi r4, r4, func_802978DC@l
-/* 80297708 0000003C  3C A0 80 43 */	lis r5, JASAramStream__lit_792@ha
-/* 8029770C 00000040  38 A5 1B 28 */	addi r5, r5, JASAramStream__lit_792@l
+/* 80297708 0000003C  3C A0 80 43 */	lis r5, lit_792@ha
+/* 8029770C 00000040  38 A5 1B 28 */	addi r5, r5, lit_792@l
 /* 80297710 00000044  48 0C A5 15 */	bl __register_global_object
 /* 80297714 00000048  38 00 00 01 */	li r0, 1
 /* 80297718 0000004C  98 0D 8C E2 */	stb r0, struct_80451260+0x2(r13)

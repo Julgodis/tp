@@ -9,10 +9,10 @@ lbl_80252C68:
 /* 80252C84 0000001C  B0 1F 01 14 */	sth r0, 0x114(r31)
 /* 80252C88 00000020  38 7F 01 18 */	addi r3, r31, 0x118
 /* 80252C8C 00000024  C0 22 B4 30 */	lfs f1, lit_3686(r2)
-/* 80252C90 00000028  C0 42 B4 4C */	lfs f2, d_ovlp_d_ovlp_fade2__lit_3794(r2)
+/* 80252C90 00000028  C0 42 B4 4C */	lfs f2, lit_3794(r2)
 /* 80252C94 0000002C  48 01 CD ED */	bl cLib_addCalc0__FPfff
 /* 80252C98 00000030  C0 3F 01 18 */	lfs f1, 0x118(r31)
-/* 80252C9C 00000034  C0 02 B4 50 */	lfs f0, d_ovlp_d_ovlp_fade2__lit_3795(r2)
+/* 80252C9C 00000034  C0 02 B4 50 */	lfs f0, lit_3795(r2)
 /* 80252CA0 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80252CA4 00000000  40 80 00 40 */	bge lbl_80252CE4
 /* 80252CA8 00000004  88 1F 01 1E */	lbz r0, 0x11e(r31)
@@ -28,14 +28,14 @@ lbl_80252CC4:
 /* 80252CCC 00000008  38 00 00 01 */	li r0, 1
 /* 80252CD0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80252CD4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252CD8 00000014  98 03 5D 44 */	stb r0, 0x5d44(r3)
-/* 80252CDC 00000018  98 03 5E B8 */	stb r0, 0x5eb8(r3)
+/* 80252CD8 00000014  98 03 5D 44 */	stb r0, 0x5d44(r3)	/* effective address: 8040BF04 */
+/* 80252CDC 00000018  98 03 5E B8 */	stb r0, 0x5eb8(r3)	/* effective address: 8040C078 */
 /* 80252CE0 0000001C  48 00 00 18 */	b lbl_80252CF8
 lbl_80252CE4:
 /* 80252CE4 00000000  38 00 00 00 */	li r0, 0
 /* 80252CE8 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80252CEC 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252CF0 0000000C  98 03 5D 44 */	stb r0, 0x5d44(r3)
+/* 80252CF0 0000000C  98 03 5D 44 */	stb r0, 0x5d44(r3)	/* effective address: 8040BF04 */
 /* 80252CF4 00000010  4B DC B7 91 */	bl fopOvlpM_SceneIsStop__Fv
 lbl_80252CF8:
 /* 80252CF8 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

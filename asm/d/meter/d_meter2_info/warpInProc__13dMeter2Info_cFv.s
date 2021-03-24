@@ -8,7 +8,7 @@ lbl_8021CA04:
 /* 8021CA1C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021CA20 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8021CA24 00000020  38 00 FF FF */	li r0, -1
-/* 8021CA28 00000024  98 03 00 98 */	stb r0, 0x98(r3)
+/* 8021CA28 00000024  98 03 00 98 */	stb r0, 0x98(r3)	/* effective address: 80406258 */
 /* 8021CA2C 00000028  3B E3 00 9C */	addi r31, r3, 0x9c
 /* 8021CA30 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 8021CA34 00000030  38 80 00 12 */	li r4, 0x12

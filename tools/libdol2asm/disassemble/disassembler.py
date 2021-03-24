@@ -250,6 +250,8 @@ class Disassembler:
         self.linkedInsns = {} 
         self.r13AddrInsns = {}
         self.r2AddrInsns = {}
+        self.registers = {}
+        self.registerLoads = {}
         self.sections = sections
 
         self.r13_addr = 0x80458580
@@ -288,6 +290,8 @@ class Disassembler:
         self.linkedInsns = {} 
         self.r13AddrInsns = {}
         self.r2AddrInsns = {}
+        self.registers = {}
+        self.registerLoads = {}
 
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
@@ -364,9 +368,11 @@ class Disassembler:
 
         if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
             self.lisInsns.clear()
+            self.registers.clear()
 
         if insn.id == PPC_INS_LIS:
             self.lisInsns[insn.operands[0].reg] = insn
+            self.registers[insn.operands[0].reg] = (insn.operands[1].imm << 16)
         # TODO: Why is this commented?
         #elif insn.id == PPC_INS_LWZU and insn.operands[1].mem.base in self.lisInsns:
         #    hiLoadInsn = self.lisInsns[insn.operands[1].reg]
@@ -380,6 +386,7 @@ class Disassembler:
             self.splitDataLoads[hiLoadInsn.address] = value
             self.splitDataLoads[insn.address] = value
             self.lisInsns.pop(insn.operands[1].reg, None)
+            self.registers[insn.operands[0].reg] = value
 
             # detect r2/r13 initialization
             if insn.id == PPC_INS_ORI and insn.operands[0].reg == insn.operands[1].reg:
@@ -387,8 +394,23 @@ class Disassembler:
                     self.r2_addr = value
                 elif self.r13_addr == None and insn.operands[0].reg == PPC_REG_R13:
                     self.r13_addr = value
+        elif insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.registers:
+            value = self.registers[insn.operands[1].reg]
+            if insn.id == PPC_INS_ORI:
+                value |= insn.operands[2].imm
+            elif insn.id == PPC_INS_ADDI:
+                value += sign_extend_16(insn.operands[2].imm)
+
+            self.registers[insn.operands[0].reg] = value
+        elif (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.registers):
+            assert not insn.address in self.registerLoads
+            value = self.registers[insn.operands[1].mem.base]
+            value += sign_extend_16(insn.operands[1].mem.disp)
+            self.registerLoads[insn.address] = value
+
         elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
             self.lisInsns.pop(insn.operands[0].reg, None)
+            self.registers.pop(insn.operands[0].reg, None)
 
 @dataclass
 class Access:
@@ -473,4 +495,7 @@ class AccessCollector(Disassembler):
             self.add_load_access(insn, value)
         elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
             value = self.splitDataLoads[insn.address]
+            self.add_load_access(insn, value)
+        elif insn.address in self.registerLoads and is_load_store_reg_offset(insn, None):
+            value = self.registerLoads[insn.address]
             self.add_load_access(insn, value)

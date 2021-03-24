@@ -21,7 +21,7 @@ struct __partial_array_destructor {
 
 
 #pragma section "extabindex_"
-extern void* NMWException__lit_211[3];
+extern void* lit_211[3];
 #pragma section "extabindex_"
 extern void* lit_232[3];
 #pragma section "extabindex_"
@@ -109,14 +109,14 @@ extern "C" asm void __construct_new_array() {
 
 /* ############################################################################################## */
 /* 80005660-8000566C 000C+00 s=1 e=0 z=0  None .extabindex @206                                                         */
-SECTION_EXTABINDEX static void* NMWException__lit_206[3] = {
+SECTION_EXTABINDEX static void* lit_206[3] = {
 	/* 0    */ (void*)__destroy_new_array,
 	/* 1    */ (void*)0x0000007C,
 	/* 2    */ (void*)&_section_symbol_extab,
 };
 
 /* 8000566C-80005678 000C+00 s=0 e=0 z=0  None .extabindex @211                                                         */
-SECTION_EXTABINDEX void* NMWException__lit_211[3] = {
+SECTION_EXTABINDEX void* lit_211[3] = {
 	/* 0    */ (void*)__destroy_arr,
 	/* 1    */ (void*)0x00000078,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x8),
@@ -145,7 +145,7 @@ SECTION_EXTABINDEX void* lit_263[3] = {
 
 /* 8000569C-800056BC 0020+00 s=0 e=1 z=0  None .extabindex None                                                         */
 SECTION_EXTABINDEX void* data_8000569C[8] = {
-	/* 0    */ (void*)&NMWException__lit_206,
+	/* 0    */ (void*)&lit_206,
 	/* 1    */ (void*)&data_8000569C,
 	/* 2    */ (void*)__destroy_new_array,
 	/* 3    */ (void*)0x000003AC,

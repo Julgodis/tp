@@ -31,11 +31,11 @@ lbl_80350760:
 /* 8035079C 0000003C  90 0D 93 48 */	stw r0, __AR_StackPointer(r13)
 /* 803507A0 00000040  38 83 50 00 */	addi r4, r3, 0x5000 /* 0xCC005000@l */
 /* 803507A4 00000044  93 AD 93 50 */	stw r29, __AR_BlockLength(r13)
-/* 803507A8 00000048  A0 04 00 1A */	lhz r0, 0x1a(r4)
-/* 803507AC 0000004C  A0 63 50 1A */	lhz r3, 0x501a(r3)
+/* 803507A8 00000048  A0 04 00 1A */	lhz r0, 0x1a(r4)	/* effective address: CC00501A */
+/* 803507AC 0000004C  A0 63 50 1A */	lhz r3, 0x501a(r3)	/* effective address: CC00501A */
 /* 803507B0 00000050  54 00 00 2E */	rlwinm r0, r0, 0, 0, 0x17
 /* 803507B4 00000054  50 60 06 3E */	rlwimi r0, r3, 0, 0x18, 0x1f
-/* 803507B8 00000058  B0 04 00 1A */	sth r0, 0x1a(r4)
+/* 803507B8 00000058  B0 04 00 1A */	sth r0, 0x1a(r4)	/* effective address: CC00501A */
 /* 803507BC 0000005C  48 00 00 E5 */	bl __ARChecksize
 /* 803507C0 00000060  38 00 00 01 */	li r0, 1
 /* 803507C4 00000064  90 0D 93 54 */	stw r0, __AR_init_flag(r13)

@@ -1,8 +1,8 @@
 lbl_8001CFD8:
 /* 8001CFD8 00000000  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8001CFDC 00000004  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 8001CFE0 00000008  80 A5 5D AC */	lwz r5, 0x5dac(r5)
-/* 8001CFE4 0000000C  A8 A5 04 E6 */	lha r5, 0x4e6(r5)
+/* 8001CFE0 00000008  80 A5 5D AC */	lwz r5, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 8001CFE4 0000000C  A8 A5 04 E6 */	lha r5, 0x4e6(r5)	/* effective address: 804066A6 */
 /* 8001CFE8 00000010  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 8001CFEC 00000014  7C 05 00 50 */	subf r0, r5, r0
 /* 8001CFF0 00000018  7C 03 07 34 */	extsh r3, r0

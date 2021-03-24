@@ -14,13 +14,13 @@
 struct mesg_flow_node_event {
 };
 
-struct fopAc_ac_c {
-};
-
 struct mesg_flow_node {
 };
 
 struct mesg_flow_node_branch {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dMsgFlow_c {
@@ -410,103 +410,7 @@ extern "C" void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); /
 extern "C" void event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" static void func_8024DAB0(); // 1
 extern "C" void __sinit_d_msg_flow_cpp(); // 1
-extern "C" extern char const* const d_msg_d_msg_flow__stringBase0;
-extern "C" extern void* d_msg_d_msg_flow__lit_5023[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5024[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5025[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5026[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5027[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5028[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5029[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5030[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5031[3];
-extern "C" extern void* lit_5032[3];
-extern "C" extern void* lit_5033[3];
-extern "C" extern void* lit_5034[3];
-extern "C" extern void* lit_5035[3];
-extern "C" extern void* lit_5036[3];
-extern "C" extern void* lit_5037[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5038[3];
-extern "C" extern void* lit_5039[3];
-extern "C" extern void* lit_5040[3];
-extern "C" extern void* lit_5041[3];
-extern "C" extern void* lit_5042[3];
-extern "C" extern void* lit_5043[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5044[3];
-extern "C" extern void* lit_5045[3];
-extern "C" extern void* lit_5046[3];
-extern "C" extern void* lit_5047[3];
-extern "C" extern void* lit_5048[3];
-extern "C" extern void* lit_5049[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5050[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5051[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5052[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5053[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5054[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5055[3];
-extern "C" extern void* lit_5056[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5057[3];
-extern "C" extern void* lit_5058[3];
-extern "C" extern void* lit_5059[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5060[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5061[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5062[3];
-extern "C" extern void* lit_5063[3];
-extern "C" extern void* lit_5064[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5065[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5066[3];
-extern "C" extern void* lit_5067[3];
-extern "C" extern void* lit_5068[3];
-extern "C" extern void* lit_5069[3];
-extern "C" extern void* lit_5070[3];
-extern "C" extern void* lit_5071[3];
-extern "C" extern void* lit_5072[3];
-extern "C" extern void* lit_5073[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5074[3];
-extern "C" extern void* lit_5075[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5944[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5945[3];
-extern "C" extern void* lit_5946[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5947[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5948[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5949[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5950[3];
-extern "C" extern void* lit_5951[3];
-extern "C" extern void* lit_5952[3];
-extern "C" extern void* lit_5953[3];
-extern "C" extern void* lit_5954[3];
-extern "C" extern void* lit_5955[3];
-extern "C" extern void* lit_5956[3];
-extern "C" extern void* lit_5957[3];
-extern "C" extern void* lit_5958[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5959[3];
-extern "C" extern void* lit_5960[3];
-extern "C" extern void* lit_5961[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5962[3];
-extern "C" extern void* lit_5963[3];
-extern "C" extern void* lit_5964[3];
-extern "C" extern void* lit_5965[3];
-extern "C" extern void* lit_5966[3];
-extern "C" extern void* lit_5967[3];
-extern "C" extern void* lit_5968[3];
-extern "C" extern void* lit_5969[3];
-extern "C" extern void* lit_5970[3];
-extern "C" extern void* lit_5971[3];
-extern "C" extern void* lit_5972[3];
-extern "C" extern void* lit_5973[3];
-extern "C" extern void* lit_5974[3];
-extern "C" extern void* lit_5975[3];
-extern "C" extern void* lit_5976[3];
-extern "C" extern void* lit_5977[3];
-extern "C" extern void* lit_5978[3];
-extern "C" extern void* lit_5979[3];
-extern "C" extern void* lit_5980[3];
-extern "C" extern void* lit_5981[3];
-extern "C" extern void* lit_5982[3];
-extern "C" extern void* lit_5983[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5984[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5985[3];
-extern "C" extern void* d_msg_d_msg_flow__lit_5986[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -667,12 +571,12 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803C14B8-803C14C4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_msg_d_msg_flow__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C14C4-803C151C 0058+00 s=1 e=0 z=0  None .data      @4646                                                        */
-SECTION_DATA static void* d_msg_d_msg_flow__lit_4646[22] = {
+SECTION_DATA static void* lit_4646[22] = {
 	/* 0    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x140),
 	/* 1    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x140),
 	/* 2    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0x148),
@@ -698,7 +602,7 @@ SECTION_DATA static void* d_msg_d_msg_flow__lit_4646[22] = {
 };
 
 /* 803C151C-803C1584 0068+00 s=1 e=0 z=0  None .data      @4645                                                        */
-SECTION_DATA static void* d_msg_d_msg_flow__lit_4645[26] = {
+SECTION_DATA static void* lit_4645[26] = {
 	/* 0    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xCC),
 	/* 1    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xD0),
 	/* 2    */ (void*)(((char*)checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi)+0xD0),
@@ -750,378 +654,378 @@ SECTION_DATA static void* lit_4936[19] = {
 	/* 18   */ (void*)(((char*)messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c)+0x1BC),
 };
 
-/* 803C15D0-803C15DC 000C+00 s=0 e=0 z=0  None .data      @5023                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5023[3] = {
+/* 803C15D0-803C15DC 000C+00 s=1 e=0 z=0  None .data      @5023                                                        */
+SECTION_DATA static void* lit_5023[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15DC-803C15E8 000C+00 s=0 e=0 z=0  None .data      @5024                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5024[3] = {
+/* 803C15DC-803C15E8 000C+00 s=1 e=0 z=0  None .data      @5024                                                        */
+SECTION_DATA static void* lit_5024[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15E8-803C15F4 000C+00 s=0 e=0 z=0  None .data      @5025                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5025[3] = {
+/* 803C15E8-803C15F4 000C+00 s=1 e=0 z=0  None .data      @5025                                                        */
+SECTION_DATA static void* lit_5025[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C15F4-803C1600 000C+00 s=0 e=0 z=0  None .data      @5026                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5026[3] = {
+/* 803C15F4-803C1600 000C+00 s=1 e=0 z=0  None .data      @5026                                                        */
+SECTION_DATA static void* lit_5026[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1600-803C160C 000C+00 s=0 e=0 z=0  None .data      @5027                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5027[3] = {
+/* 803C1600-803C160C 000C+00 s=1 e=0 z=0  None .data      @5027                                                        */
+SECTION_DATA static void* lit_5027[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C160C-803C1618 000C+00 s=0 e=0 z=0  None .data      @5028                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5028[3] = {
+/* 803C160C-803C1618 000C+00 s=1 e=0 z=0  None .data      @5028                                                        */
+SECTION_DATA static void* lit_5028[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1618-803C1624 000C+00 s=0 e=0 z=0  None .data      @5029                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5029[3] = {
+/* 803C1618-803C1624 000C+00 s=1 e=0 z=0  None .data      @5029                                                        */
+SECTION_DATA static void* lit_5029[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1624-803C1630 000C+00 s=0 e=0 z=0  None .data      @5030                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5030[3] = {
+/* 803C1624-803C1630 000C+00 s=1 e=0 z=0  None .data      @5030                                                        */
+SECTION_DATA static void* lit_5030[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1630-803C163C 000C+00 s=0 e=0 z=0  None .data      @5031                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5031[3] = {
+/* 803C1630-803C163C 000C+00 s=1 e=0 z=0  None .data      @5031                                                        */
+SECTION_DATA static void* lit_5031[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C163C-803C1648 000C+00 s=0 e=0 z=0  None .data      @5032                                                        */
-SECTION_DATA void* lit_5032[3] = {
+/* 803C163C-803C1648 000C+00 s=1 e=0 z=0  None .data      @5032                                                        */
+SECTION_DATA static void* lit_5032[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1648-803C1654 000C+00 s=0 e=0 z=0  None .data      @5033                                                        */
-SECTION_DATA void* lit_5033[3] = {
+/* 803C1648-803C1654 000C+00 s=1 e=0 z=0  None .data      @5033                                                        */
+SECTION_DATA static void* lit_5033[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1654-803C1660 000C+00 s=0 e=0 z=0  None .data      @5034                                                        */
-SECTION_DATA void* lit_5034[3] = {
+/* 803C1654-803C1660 000C+00 s=1 e=0 z=0  None .data      @5034                                                        */
+SECTION_DATA static void* lit_5034[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1660-803C166C 000C+00 s=0 e=0 z=0  None .data      @5035                                                        */
-SECTION_DATA void* lit_5035[3] = {
+/* 803C1660-803C166C 000C+00 s=1 e=0 z=0  None .data      @5035                                                        */
+SECTION_DATA static void* lit_5035[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C166C-803C1678 000C+00 s=0 e=0 z=0  None .data      @5036                                                        */
-SECTION_DATA void* lit_5036[3] = {
+/* 803C166C-803C1678 000C+00 s=1 e=0 z=0  None .data      @5036                                                        */
+SECTION_DATA static void* lit_5036[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1678-803C1684 000C+00 s=0 e=0 z=0  None .data      @5037                                                        */
-SECTION_DATA void* lit_5037[3] = {
+/* 803C1678-803C1684 000C+00 s=1 e=0 z=0  None .data      @5037                                                        */
+SECTION_DATA static void* lit_5037[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1684-803C1690 000C+00 s=0 e=0 z=0  None .data      @5038                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5038[3] = {
+/* 803C1684-803C1690 000C+00 s=1 e=0 z=0  None .data      @5038                                                        */
+SECTION_DATA static void* lit_5038[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1690-803C169C 000C+00 s=0 e=0 z=0  None .data      @5039                                                        */
-SECTION_DATA void* lit_5039[3] = {
+/* 803C1690-803C169C 000C+00 s=1 e=0 z=0  None .data      @5039                                                        */
+SECTION_DATA static void* lit_5039[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C169C-803C16A8 000C+00 s=0 e=0 z=0  None .data      @5040                                                        */
-SECTION_DATA void* lit_5040[3] = {
+/* 803C169C-803C16A8 000C+00 s=1 e=0 z=0  None .data      @5040                                                        */
+SECTION_DATA static void* lit_5040[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16A8-803C16B4 000C+00 s=0 e=0 z=0  None .data      @5041                                                        */
-SECTION_DATA void* lit_5041[3] = {
+/* 803C16A8-803C16B4 000C+00 s=1 e=0 z=0  None .data      @5041                                                        */
+SECTION_DATA static void* lit_5041[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16B4-803C16C0 000C+00 s=0 e=0 z=0  None .data      @5042                                                        */
-SECTION_DATA void* lit_5042[3] = {
+/* 803C16B4-803C16C0 000C+00 s=1 e=0 z=0  None .data      @5042                                                        */
+SECTION_DATA static void* lit_5042[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16C0-803C16CC 000C+00 s=0 e=0 z=0  None .data      @5043                                                        */
-SECTION_DATA void* lit_5043[3] = {
+/* 803C16C0-803C16CC 000C+00 s=1 e=0 z=0  None .data      @5043                                                        */
+SECTION_DATA static void* lit_5043[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16CC-803C16D8 000C+00 s=0 e=0 z=0  None .data      @5044                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5044[3] = {
+/* 803C16CC-803C16D8 000C+00 s=1 e=0 z=0  None .data      @5044                                                        */
+SECTION_DATA static void* lit_5044[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16D8-803C16E4 000C+00 s=0 e=0 z=0  None .data      @5045                                                        */
-SECTION_DATA void* lit_5045[3] = {
+/* 803C16D8-803C16E4 000C+00 s=1 e=0 z=0  None .data      @5045                                                        */
+SECTION_DATA static void* lit_5045[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16E4-803C16F0 000C+00 s=0 e=0 z=0  None .data      @5046                                                        */
-SECTION_DATA void* lit_5046[3] = {
+/* 803C16E4-803C16F0 000C+00 s=1 e=0 z=0  None .data      @5046                                                        */
+SECTION_DATA static void* lit_5046[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16F0-803C16FC 000C+00 s=0 e=0 z=0  None .data      @5047                                                        */
-SECTION_DATA void* lit_5047[3] = {
+/* 803C16F0-803C16FC 000C+00 s=1 e=0 z=0  None .data      @5047                                                        */
+SECTION_DATA static void* lit_5047[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C16FC-803C1708 000C+00 s=0 e=0 z=0  None .data      @5048                                                        */
-SECTION_DATA void* lit_5048[3] = {
+/* 803C16FC-803C1708 000C+00 s=1 e=0 z=0  None .data      @5048                                                        */
+SECTION_DATA static void* lit_5048[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1708-803C1714 000C+00 s=0 e=0 z=0  None .data      @5049                                                        */
-SECTION_DATA void* lit_5049[3] = {
+/* 803C1708-803C1714 000C+00 s=1 e=0 z=0  None .data      @5049                                                        */
+SECTION_DATA static void* lit_5049[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1714-803C1720 000C+00 s=0 e=0 z=0  None .data      @5050                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5050[3] = {
+/* 803C1714-803C1720 000C+00 s=1 e=0 z=0  None .data      @5050                                                        */
+SECTION_DATA static void* lit_5050[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1720-803C172C 000C+00 s=0 e=0 z=0  None .data      @5051                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5051[3] = {
+/* 803C1720-803C172C 000C+00 s=1 e=0 z=0  None .data      @5051                                                        */
+SECTION_DATA static void* lit_5051[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C172C-803C1738 000C+00 s=0 e=0 z=0  None .data      @5052                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5052[3] = {
+/* 803C172C-803C1738 000C+00 s=1 e=0 z=0  None .data      @5052                                                        */
+SECTION_DATA static void* lit_5052[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1738-803C1744 000C+00 s=0 e=0 z=0  None .data      @5053                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5053[3] = {
+/* 803C1738-803C1744 000C+00 s=1 e=0 z=0  None .data      @5053                                                        */
+SECTION_DATA static void* lit_5053[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1744-803C1750 000C+00 s=0 e=0 z=0  None .data      @5054                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5054[3] = {
+/* 803C1744-803C1750 000C+00 s=1 e=0 z=0  None .data      @5054                                                        */
+SECTION_DATA static void* lit_5054[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1750-803C175C 000C+00 s=0 e=0 z=0  None .data      @5055                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5055[3] = {
+/* 803C1750-803C175C 000C+00 s=1 e=0 z=0  None .data      @5055                                                        */
+SECTION_DATA static void* lit_5055[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C175C-803C1768 000C+00 s=0 e=0 z=0  None .data      @5056                                                        */
-SECTION_DATA void* lit_5056[3] = {
+/* 803C175C-803C1768 000C+00 s=1 e=0 z=0  None .data      @5056                                                        */
+SECTION_DATA static void* lit_5056[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1768-803C1774 000C+00 s=0 e=0 z=0  None .data      @5057                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5057[3] = {
+/* 803C1768-803C1774 000C+00 s=1 e=0 z=0  None .data      @5057                                                        */
+SECTION_DATA static void* lit_5057[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1774-803C1780 000C+00 s=0 e=0 z=0  None .data      @5058                                                        */
-SECTION_DATA void* lit_5058[3] = {
+/* 803C1774-803C1780 000C+00 s=1 e=0 z=0  None .data      @5058                                                        */
+SECTION_DATA static void* lit_5058[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1780-803C178C 000C+00 s=0 e=0 z=0  None .data      @5059                                                        */
-SECTION_DATA void* lit_5059[3] = {
+/* 803C1780-803C178C 000C+00 s=1 e=0 z=0  None .data      @5059                                                        */
+SECTION_DATA static void* lit_5059[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C178C-803C1798 000C+00 s=0 e=0 z=0  None .data      @5060                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5060[3] = {
+/* 803C178C-803C1798 000C+00 s=1 e=0 z=0  None .data      @5060                                                        */
+SECTION_DATA static void* lit_5060[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1798-803C17A4 000C+00 s=0 e=0 z=0  None .data      @5061                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5061[3] = {
+/* 803C1798-803C17A4 000C+00 s=1 e=0 z=0  None .data      @5061                                                        */
+SECTION_DATA static void* lit_5061[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17A4-803C17B0 000C+00 s=0 e=0 z=0  None .data      @5062                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5062[3] = {
+/* 803C17A4-803C17B0 000C+00 s=1 e=0 z=0  None .data      @5062                                                        */
+SECTION_DATA static void* lit_5062[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17B0-803C17BC 000C+00 s=0 e=0 z=0  None .data      @5063                                                        */
-SECTION_DATA void* lit_5063[3] = {
+/* 803C17B0-803C17BC 000C+00 s=1 e=0 z=0  None .data      @5063                                                        */
+SECTION_DATA static void* lit_5063[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17BC-803C17C8 000C+00 s=0 e=0 z=0  None .data      @5064                                                        */
-SECTION_DATA void* lit_5064[3] = {
+/* 803C17BC-803C17C8 000C+00 s=1 e=0 z=0  None .data      @5064                                                        */
+SECTION_DATA static void* lit_5064[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17C8-803C17D4 000C+00 s=0 e=0 z=0  None .data      @5065                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5065[3] = {
+/* 803C17C8-803C17D4 000C+00 s=1 e=0 z=0  None .data      @5065                                                        */
+SECTION_DATA static void* lit_5065[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17D4-803C17E0 000C+00 s=0 e=0 z=0  None .data      @5066                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5066[3] = {
+/* 803C17D4-803C17E0 000C+00 s=1 e=0 z=0  None .data      @5066                                                        */
+SECTION_DATA static void* lit_5066[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17E0-803C17EC 000C+00 s=0 e=0 z=0  None .data      @5067                                                        */
-SECTION_DATA void* lit_5067[3] = {
+/* 803C17E0-803C17EC 000C+00 s=1 e=0 z=0  None .data      @5067                                                        */
+SECTION_DATA static void* lit_5067[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17EC-803C17F8 000C+00 s=0 e=0 z=0  None .data      @5068                                                        */
-SECTION_DATA void* lit_5068[3] = {
+/* 803C17EC-803C17F8 000C+00 s=1 e=0 z=0  None .data      @5068                                                        */
+SECTION_DATA static void* lit_5068[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C17F8-803C1804 000C+00 s=0 e=0 z=0  None .data      @5069                                                        */
-SECTION_DATA void* lit_5069[3] = {
+/* 803C17F8-803C1804 000C+00 s=1 e=0 z=0  None .data      @5069                                                        */
+SECTION_DATA static void* lit_5069[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1804-803C1810 000C+00 s=0 e=0 z=0  None .data      @5070                                                        */
-SECTION_DATA void* lit_5070[3] = {
+/* 803C1804-803C1810 000C+00 s=1 e=0 z=0  None .data      @5070                                                        */
+SECTION_DATA static void* lit_5070[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1810-803C181C 000C+00 s=0 e=0 z=0  None .data      @5071                                                        */
-SECTION_DATA void* lit_5071[3] = {
+/* 803C1810-803C181C 000C+00 s=1 e=0 z=0  None .data      @5071                                                        */
+SECTION_DATA static void* lit_5071[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C181C-803C1828 000C+00 s=0 e=0 z=0  None .data      @5072                                                        */
-SECTION_DATA void* lit_5072[3] = {
+/* 803C181C-803C1828 000C+00 s=1 e=0 z=0  None .data      @5072                                                        */
+SECTION_DATA static void* lit_5072[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1828-803C1834 000C+00 s=0 e=0 z=0  None .data      @5073                                                        */
-SECTION_DATA void* lit_5073[3] = {
+/* 803C1828-803C1834 000C+00 s=1 e=0 z=0  None .data      @5073                                                        */
+SECTION_DATA static void* lit_5073[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1834-803C1840 000C+00 s=0 e=0 z=0  None .data      @5074                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5074[3] = {
+/* 803C1834-803C1840 000C+00 s=1 e=0 z=0  None .data      @5074                                                        */
+SECTION_DATA static void* lit_5074[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C1840-803C184C 000C+00 s=0 e=0 z=0  None .data      @5075                                                        */
-SECTION_DATA void* lit_5075[3] = {
+/* 803C1840-803C184C 000C+00 s=1 e=0 z=0  None .data      @5075                                                        */
+SECTION_DATA static void* lit_5075[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci,
 };
 
-/* 803C184C-803C1AC8 027C+00 s=2 e=0 z=0  None .data      mQueryList__10dMsgFlow_c                                     */
+/* 803C184C-803C1AC8 027C+00 s=3 e=0 z=0  None .data      mQueryList__10dMsgFlow_c                                     */
 SECTION_DATA static u8 mQueryList__10dMsgFlow_c[636] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1165,308 +1069,308 @@ SECTION_DATA static u8 mQueryList__10dMsgFlow_c[636] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C1AC8-803C1AD4 000C+00 s=0 e=0 z=0  None .data      @5944                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5944[3] = {
+/* 803C1AC8-803C1AD4 000C+00 s=1 e=0 z=0  None .data      @5944                                                        */
+SECTION_DATA static void* lit_5944[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AD4-803C1AE0 000C+00 s=0 e=0 z=0  None .data      @5945                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5945[3] = {
+/* 803C1AD4-803C1AE0 000C+00 s=1 e=0 z=0  None .data      @5945                                                        */
+SECTION_DATA static void* lit_5945[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AE0-803C1AEC 000C+00 s=0 e=0 z=0  None .data      @5946                                                        */
-SECTION_DATA void* lit_5946[3] = {
+/* 803C1AE0-803C1AEC 000C+00 s=1 e=0 z=0  None .data      @5946                                                        */
+SECTION_DATA static void* lit_5946[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AEC-803C1AF8 000C+00 s=0 e=0 z=0  None .data      @5947                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5947[3] = {
+/* 803C1AEC-803C1AF8 000C+00 s=1 e=0 z=0  None .data      @5947                                                        */
+SECTION_DATA static void* lit_5947[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1AF8-803C1B04 000C+00 s=0 e=0 z=0  None .data      @5948                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5948[3] = {
+/* 803C1AF8-803C1B04 000C+00 s=1 e=0 z=0  None .data      @5948                                                        */
+SECTION_DATA static void* lit_5948[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B04-803C1B10 000C+00 s=0 e=0 z=0  None .data      @5949                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5949[3] = {
+/* 803C1B04-803C1B10 000C+00 s=1 e=0 z=0  None .data      @5949                                                        */
+SECTION_DATA static void* lit_5949[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B10-803C1B1C 000C+00 s=0 e=0 z=0  None .data      @5950                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5950[3] = {
+/* 803C1B10-803C1B1C 000C+00 s=1 e=0 z=0  None .data      @5950                                                        */
+SECTION_DATA static void* lit_5950[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B1C-803C1B28 000C+00 s=0 e=0 z=0  None .data      @5951                                                        */
-SECTION_DATA void* lit_5951[3] = {
+/* 803C1B1C-803C1B28 000C+00 s=1 e=0 z=0  None .data      @5951                                                        */
+SECTION_DATA static void* lit_5951[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B28-803C1B34 000C+00 s=0 e=0 z=0  None .data      @5952                                                        */
-SECTION_DATA void* lit_5952[3] = {
+/* 803C1B28-803C1B34 000C+00 s=1 e=0 z=0  None .data      @5952                                                        */
+SECTION_DATA static void* lit_5952[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B34-803C1B40 000C+00 s=0 e=0 z=0  None .data      @5953                                                        */
-SECTION_DATA void* lit_5953[3] = {
+/* 803C1B34-803C1B40 000C+00 s=1 e=0 z=0  None .data      @5953                                                        */
+SECTION_DATA static void* lit_5953[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B40-803C1B4C 000C+00 s=0 e=0 z=0  None .data      @5954                                                        */
-SECTION_DATA void* lit_5954[3] = {
+/* 803C1B40-803C1B4C 000C+00 s=1 e=0 z=0  None .data      @5954                                                        */
+SECTION_DATA static void* lit_5954[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B4C-803C1B58 000C+00 s=0 e=0 z=0  None .data      @5955                                                        */
-SECTION_DATA void* lit_5955[3] = {
+/* 803C1B4C-803C1B58 000C+00 s=1 e=0 z=0  None .data      @5955                                                        */
+SECTION_DATA static void* lit_5955[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B58-803C1B64 000C+00 s=0 e=0 z=0  None .data      @5956                                                        */
-SECTION_DATA void* lit_5956[3] = {
+/* 803C1B58-803C1B64 000C+00 s=1 e=0 z=0  None .data      @5956                                                        */
+SECTION_DATA static void* lit_5956[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B64-803C1B70 000C+00 s=0 e=0 z=0  None .data      @5957                                                        */
-SECTION_DATA void* lit_5957[3] = {
+/* 803C1B64-803C1B70 000C+00 s=1 e=0 z=0  None .data      @5957                                                        */
+SECTION_DATA static void* lit_5957[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B70-803C1B7C 000C+00 s=0 e=0 z=0  None .data      @5958                                                        */
-SECTION_DATA void* lit_5958[3] = {
+/* 803C1B70-803C1B7C 000C+00 s=1 e=0 z=0  None .data      @5958                                                        */
+SECTION_DATA static void* lit_5958[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B7C-803C1B88 000C+00 s=0 e=0 z=0  None .data      @5959                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5959[3] = {
+/* 803C1B7C-803C1B88 000C+00 s=1 e=0 z=0  None .data      @5959                                                        */
+SECTION_DATA static void* lit_5959[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B88-803C1B94 000C+00 s=0 e=0 z=0  None .data      @5960                                                        */
-SECTION_DATA void* lit_5960[3] = {
+/* 803C1B88-803C1B94 000C+00 s=1 e=0 z=0  None .data      @5960                                                        */
+SECTION_DATA static void* lit_5960[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1B94-803C1BA0 000C+00 s=0 e=0 z=0  None .data      @5961                                                        */
-SECTION_DATA void* lit_5961[3] = {
+/* 803C1B94-803C1BA0 000C+00 s=1 e=0 z=0  None .data      @5961                                                        */
+SECTION_DATA static void* lit_5961[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BA0-803C1BAC 000C+00 s=0 e=0 z=0  None .data      @5962                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5962[3] = {
+/* 803C1BA0-803C1BAC 000C+00 s=1 e=0 z=0  None .data      @5962                                                        */
+SECTION_DATA static void* lit_5962[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BAC-803C1BB8 000C+00 s=0 e=0 z=0  None .data      @5963                                                        */
-SECTION_DATA void* lit_5963[3] = {
+/* 803C1BAC-803C1BB8 000C+00 s=1 e=0 z=0  None .data      @5963                                                        */
+SECTION_DATA static void* lit_5963[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BB8-803C1BC4 000C+00 s=0 e=0 z=0  None .data      @5964                                                        */
-SECTION_DATA void* lit_5964[3] = {
+/* 803C1BB8-803C1BC4 000C+00 s=1 e=0 z=0  None .data      @5964                                                        */
+SECTION_DATA static void* lit_5964[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BC4-803C1BD0 000C+00 s=0 e=0 z=0  None .data      @5965                                                        */
-SECTION_DATA void* lit_5965[3] = {
+/* 803C1BC4-803C1BD0 000C+00 s=1 e=0 z=0  None .data      @5965                                                        */
+SECTION_DATA static void* lit_5965[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BD0-803C1BDC 000C+00 s=0 e=0 z=0  None .data      @5966                                                        */
-SECTION_DATA void* lit_5966[3] = {
+/* 803C1BD0-803C1BDC 000C+00 s=1 e=0 z=0  None .data      @5966                                                        */
+SECTION_DATA static void* lit_5966[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BDC-803C1BE8 000C+00 s=0 e=0 z=0  None .data      @5967                                                        */
-SECTION_DATA void* lit_5967[3] = {
+/* 803C1BDC-803C1BE8 000C+00 s=1 e=0 z=0  None .data      @5967                                                        */
+SECTION_DATA static void* lit_5967[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BE8-803C1BF4 000C+00 s=0 e=0 z=0  None .data      @5968                                                        */
-SECTION_DATA void* lit_5968[3] = {
+/* 803C1BE8-803C1BF4 000C+00 s=1 e=0 z=0  None .data      @5968                                                        */
+SECTION_DATA static void* lit_5968[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1BF4-803C1C00 000C+00 s=0 e=0 z=0  None .data      @5969                                                        */
-SECTION_DATA void* lit_5969[3] = {
+/* 803C1BF4-803C1C00 000C+00 s=1 e=0 z=0  None .data      @5969                                                        */
+SECTION_DATA static void* lit_5969[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C00-803C1C0C 000C+00 s=0 e=0 z=0  None .data      @5970                                                        */
-SECTION_DATA void* lit_5970[3] = {
+/* 803C1C00-803C1C0C 000C+00 s=1 e=0 z=0  None .data      @5970                                                        */
+SECTION_DATA static void* lit_5970[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C0C-803C1C18 000C+00 s=0 e=0 z=0  None .data      @5971                                                        */
-SECTION_DATA void* lit_5971[3] = {
+/* 803C1C0C-803C1C18 000C+00 s=1 e=0 z=0  None .data      @5971                                                        */
+SECTION_DATA static void* lit_5971[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C18-803C1C24 000C+00 s=0 e=0 z=0  None .data      @5972                                                        */
-SECTION_DATA void* lit_5972[3] = {
+/* 803C1C18-803C1C24 000C+00 s=1 e=0 z=0  None .data      @5972                                                        */
+SECTION_DATA static void* lit_5972[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C24-803C1C30 000C+00 s=0 e=0 z=0  None .data      @5973                                                        */
-SECTION_DATA void* lit_5973[3] = {
+/* 803C1C24-803C1C30 000C+00 s=1 e=0 z=0  None .data      @5973                                                        */
+SECTION_DATA static void* lit_5973[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C30-803C1C3C 000C+00 s=0 e=0 z=0  None .data      @5974                                                        */
-SECTION_DATA void* lit_5974[3] = {
+/* 803C1C30-803C1C3C 000C+00 s=1 e=0 z=0  None .data      @5974                                                        */
+SECTION_DATA static void* lit_5974[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C3C-803C1C48 000C+00 s=0 e=0 z=0  None .data      @5975                                                        */
-SECTION_DATA void* lit_5975[3] = {
+/* 803C1C3C-803C1C48 000C+00 s=1 e=0 z=0  None .data      @5975                                                        */
+SECTION_DATA static void* lit_5975[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C48-803C1C54 000C+00 s=0 e=0 z=0  None .data      @5976                                                        */
-SECTION_DATA void* lit_5976[3] = {
+/* 803C1C48-803C1C54 000C+00 s=1 e=0 z=0  None .data      @5976                                                        */
+SECTION_DATA static void* lit_5976[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C54-803C1C60 000C+00 s=0 e=0 z=0  None .data      @5977                                                        */
-SECTION_DATA void* lit_5977[3] = {
+/* 803C1C54-803C1C60 000C+00 s=1 e=0 z=0  None .data      @5977                                                        */
+SECTION_DATA static void* lit_5977[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C60-803C1C6C 000C+00 s=0 e=0 z=0  None .data      @5978                                                        */
-SECTION_DATA void* lit_5978[3] = {
+/* 803C1C60-803C1C6C 000C+00 s=1 e=0 z=0  None .data      @5978                                                        */
+SECTION_DATA static void* lit_5978[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C6C-803C1C78 000C+00 s=0 e=0 z=0  None .data      @5979                                                        */
-SECTION_DATA void* lit_5979[3] = {
+/* 803C1C6C-803C1C78 000C+00 s=1 e=0 z=0  None .data      @5979                                                        */
+SECTION_DATA static void* lit_5979[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C78-803C1C84 000C+00 s=0 e=0 z=0  None .data      @5980                                                        */
-SECTION_DATA void* lit_5980[3] = {
+/* 803C1C78-803C1C84 000C+00 s=1 e=0 z=0  None .data      @5980                                                        */
+SECTION_DATA static void* lit_5980[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C84-803C1C90 000C+00 s=0 e=0 z=0  None .data      @5981                                                        */
-SECTION_DATA void* lit_5981[3] = {
+/* 803C1C84-803C1C90 000C+00 s=1 e=0 z=0  None .data      @5981                                                        */
+SECTION_DATA static void* lit_5981[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C90-803C1C9C 000C+00 s=0 e=0 z=0  None .data      @5982                                                        */
-SECTION_DATA void* lit_5982[3] = {
+/* 803C1C90-803C1C9C 000C+00 s=1 e=0 z=0  None .data      @5982                                                        */
+SECTION_DATA static void* lit_5982[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1C9C-803C1CA8 000C+00 s=0 e=0 z=0  None .data      @5983                                                        */
-SECTION_DATA void* lit_5983[3] = {
+/* 803C1C9C-803C1CA8 000C+00 s=1 e=0 z=0  None .data      @5983                                                        */
+SECTION_DATA static void* lit_5983[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CA8-803C1CB4 000C+00 s=0 e=0 z=0  None .data      @5984                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5984[3] = {
+/* 803C1CA8-803C1CB4 000C+00 s=1 e=0 z=0  None .data      @5984                                                        */
+SECTION_DATA static void* lit_5984[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CB4-803C1CC0 000C+00 s=0 e=0 z=0  None .data      @5985                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5985[3] = {
+/* 803C1CB4-803C1CC0 000C+00 s=1 e=0 z=0  None .data      @5985                                                        */
+SECTION_DATA static void* lit_5985[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CC0-803C1CCC 000C+00 s=0 e=0 z=0  None .data      @5986                                                        */
-SECTION_DATA void* d_msg_d_msg_flow__lit_5986[3] = {
+/* 803C1CC0-803C1CCC 000C+00 s=1 e=0 z=0  None .data      @5986                                                        */
+SECTION_DATA static void* lit_5986[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c,
 };
 
-/* 803C1CCC-803C1ED0 0204+00 s=1 e=0 z=0  None .data      mEventList__10dMsgFlow_c                                     */
+/* 803C1CCC-803C1ED0 0204+00 s=2 e=0 z=0  None .data      mEventList__10dMsgFlow_c                                     */
 SECTION_DATA static u8 mEventList__10dMsgFlow_c[516] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1516,7 +1420,7 @@ SECTION_DATA static void* lit_6324[8] = {
 };
 
 /* 803C1EF0-803C1F20 0030+00 s=1 e=0 z=0  None .data      @6503                                                        */
-SECTION_DATA static void* d_msg_d_msg_flow__lit_6503[12] = {
+SECTION_DATA static void* lit_6503[12] = {
 	/* 0    */ (void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0xC4),
 	/* 1    */ (void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x160),
 	/* 2    */ (void*)(((char*)event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c)+0x1FC),
@@ -1709,7 +1613,7 @@ asm void dMsgFlow_c::setInitValueGroupChange(int param_0, fopAc_ac_c** param_1) 
 
 /* ############################################################################################## */
 /* 80456BA0-80456BA4 0004+00 s=1 e=0 z=0  None .sbss2     @4765                                                        */
-SECTION_SBSS2 static u8 d_msg_d_msg_flow__lit_4765[4];
+SECTION_SBSS2 static u8 lit_4765[4];
 
 /* 80456BA4-80456BA8 0004+00 s=1 e=0 z=0  None .sbss2     None                                                         */
 SECTION_SBSS2 static u8 data_80456BA4[4];
@@ -1870,7 +1774,7 @@ asm void dMsgFlow_c::query002(mesg_flow_node_branch* param_0, fopAc_ac_c* param_
 
 /* ############################################################################################## */
 /* 80454D90-80454D98 0008+00 s=5 e=0 z=0  None .sdata2    @5116                                                        */
-SECTION_SDATA2 static f64 d_msg_d_msg_flow__lit_5116 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_5116 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8024B208-8024B250 0048+00 s=1 e=0 z=0  None .text      query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
 #pragma push
@@ -2487,7 +2391,7 @@ asm void dMsgFlow_c::event003(mesg_flow_node_event* param_0, fopAc_ac_c* param_1
 
 /* ############################################################################################## */
 /* 80454DA0-80454DA8 0008+00 s=3 e=0 z=0  None .sdata2    @6040                                                        */
-SECTION_SDATA2 static f64 d_msg_d_msg_flow__lit_6040 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_6040 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8024C590-8024C5F0 0060+00 s=1 e=0 z=0  None .text      event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
 #pragma push

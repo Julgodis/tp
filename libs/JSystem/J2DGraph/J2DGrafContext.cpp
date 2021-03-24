@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -22,12 +28,6 @@ struct JGeometry {
 	struct TVec2 { };
 	/* TVec2<f32> */
 	struct TVec2__template1 {
-	};
-
-};
-
-struct JUtility {
-	struct TColor {
 	};
 
 };
@@ -143,12 +143,12 @@ asm J2DGrafContext::J2DGrafContext(f32 param_0, f32 param_1, f32 param_2, f32 pa
 
 /* ############################################################################################## */
 /* 80456148-8045614C 0004+00 s=5 e=0 z=0  None .sdata2    @627                                                         */
-SECTION_SDATA2 static u8 J2DGrafContext__lit_627[4] = {
+SECTION_SDATA2 static u8 lit_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045614C-80456150 0004+00 s=1 e=0 z=0  None .sdata2    @628                                                         */
-SECTION_SDATA2 static f32 J2DGrafContext__lit_628 = 1.0f;
+SECTION_SDATA2 static f32 lit_628 = 1.0f;
 
 /* 802E8BB4-802E8C44 0090+00 s=1 e=1 z=0  None .text      setPort__14J2DGrafContextFv                                  */
 #pragma push
@@ -174,7 +174,7 @@ asm void J2DGrafContext::setup2D() {
 
 /* ############################################################################################## */
 /* 80456150-80456158 0004+04 s=1 e=0 z=0  None .sdata2    @730                                                         */
-SECTION_SDATA2 static f32 J2DGrafContext__lit_730[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_730[1 + 1 /* padding */] = {
 	1024.0f,
 	/* padding */
 	0.0f,

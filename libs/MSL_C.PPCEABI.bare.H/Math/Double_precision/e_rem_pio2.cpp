@@ -60,36 +60,36 @@ SECTION_RODATA static u8 const npio2_hw[128] = {
 };
 
 /* 80456968-80456970 0008+00 s=1 e=0 z=0  None .sdata2    @145                                                         */
-SECTION_SDATA2 static u8 Math_Double_precision_e_rem_pio2__lit_145[8] = {
+SECTION_SDATA2 static u8 lit_145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456970-80456978 0008+00 s=1 e=0 z=0  None .sdata2    @146                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_146 = 1.5707963267341256;
+SECTION_SDATA2 static f64 lit_146 = 1.5707963267341256;
 
 /* 80456978-80456980 0008+00 s=1 e=0 z=0  None .sdata2    @147                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_147 = 6.077100506506192e-11;
+SECTION_SDATA2 static f64 lit_147 = 6.077100506506192e-11;
 
 /* 80456980-80456988 0008+00 s=1 e=0 z=0  None .sdata2    @148                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_148 = 6.077100506303966e-11;
+SECTION_SDATA2 static f64 lit_148 = 6.077100506303966e-11;
 
 /* 80456988-80456990 0008+00 s=1 e=0 z=0  None .sdata2    @149                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_149 = 2.0222662487959506e-21;
+SECTION_SDATA2 static f64 lit_149 = 2.0222662487959506e-21;
 
 /* 80456990-80456998 0008+00 s=1 e=0 z=0  None .sdata2    @150                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_150 = 0.5;
+SECTION_SDATA2 static f64 lit_150 = 0.5;
 
 /* 80456998-804569A0 0008+00 s=1 e=0 z=0  None .sdata2    @151                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_151 = 0.6366197723675814;
+SECTION_SDATA2 static f64 lit_151 = 0.6366197723675814;
 
 /* 804569A0-804569A8 0008+00 s=1 e=0 z=0  None .sdata2    @152                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_152 = 2.0222662487111665e-21;
+SECTION_SDATA2 static f64 lit_152 = 2.0222662487111665e-21;
 
 /* 804569A8-804569B0 0008+00 s=1 e=0 z=0  None .sdata2    @153                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_153 = 8.4784276603689e-32;
+SECTION_SDATA2 static f64 lit_153 = 8.4784276603689e-32;
 
 /* 804569B0-804569B8 0008+00 s=1 e=0 z=0  None .sdata2    @154                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_e_rem_pio2__lit_154 = 16777216.0;
+SECTION_SDATA2 static f64 lit_154 = 16777216.0;
 
 /* 804569B8-804569C0 0008+00 s=1 e=0 z=0  None .sdata2    @157                                                         */
 SECTION_SDATA2 static f64 lit_157 = 4503601774854144.0 /* cast s32 to float */;

@@ -12,7 +12,7 @@ lbl_801FDFCC:
 /* 801FDFF4 00000028  38 00 00 01 */	li r0, 1
 /* 801FDFF8 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801FDFFC 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801FE000 00000034  98 03 5E B5 */	stb r0, 0x5eb5(r3)
+/* 801FE000 00000034  98 03 5E B5 */	stb r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 801FE004 00000038  38 60 00 00 */	li r3, 0
 /* 801FE008 0000003C  38 80 00 00 */	li r4, 0
 /* 801FE00C 00000040  38 A0 02 60 */	li r5, 0x260
@@ -43,7 +43,7 @@ lbl_801FE044:
 /* 801FE06C 00000028  38 61 00 14 */	addi r3, r1, 0x14
 /* 801FE070 0000002C  38 80 00 01 */	li r4, 1
 /* 801FE074 00000030  38 A0 00 01 */	li r5, 1
-/* 801FE078 00000034  C0 22 AA C0 */	lfs f1, d_menu_d_menu_window__lit_4152(r2)
+/* 801FE078 00000034  C0 22 AA C0 */	lfs f1, lit_4152(r2)
 /* 801FE07C 00000038  FC 40 08 90 */	fmr f2, f1
 /* 801FE080 0000003C  FC 60 08 90 */	fmr f3, f1
 /* 801FE084 00000040  38 C0 00 00 */	li r6, 0
@@ -126,7 +126,7 @@ lbl_801FE044:
 /* 801FE1B8 00000174  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 801FE1BC 00000178  90 01 00 08 */	stw r0, 8(r1)
 /* 801FE1C0 0000017C  38 60 00 00 */	li r3, 0
-/* 801FE1C4 00000180  C0 22 AA C0 */	lfs f1, d_menu_d_menu_window__lit_4152(r2)
+/* 801FE1C4 00000180  C0 22 AA C0 */	lfs f1, lit_4152(r2)
 /* 801FE1C8 00000184  FC 40 08 90 */	fmr f2, f1
 /* 801FE1CC 00000188  FC 60 08 90 */	fmr f3, f1
 /* 801FE1D0 0000018C  FC 80 08 90 */	fmr f4, f1
@@ -172,28 +172,28 @@ lbl_801FE044:
 /* 801FE270 0000022C  38 A0 00 00 */	li r5, 0
 /* 801FE274 00000230  3C 80 CC 01 */	lis r4, 0xCC01 /* 0xCC008000@ha */
 /* 801FE278 00000234  B0 A4 80 00 */	sth r5, 0x8000(r4)
-/* 801FE27C 00000238  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE280 0000023C  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE284 00000240  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 801FE288 00000244  98 A4 80 00 */	stb r5, -0x8000(r4)
+/* 801FE27C 00000238  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE280 0000023C  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE284 00000240  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE288 00000244  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
 /* 801FE28C 00000248  38 00 02 60 */	li r0, 0x260
-/* 801FE290 0000024C  B0 04 80 00 */	sth r0, -0x8000(r4)
-/* 801FE294 00000250  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE298 00000254  B0 A4 80 00 */	sth r5, -0x8000(r4)
+/* 801FE290 0000024C  B0 04 80 00 */	sth r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE294 00000250  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE298 00000254  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
 /* 801FE29C 00000258  38 60 00 01 */	li r3, 1
-/* 801FE2A0 0000025C  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 801FE2A4 00000260  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 801FE2A8 00000264  B0 04 80 00 */	sth r0, -0x8000(r4)
+/* 801FE2A0 0000025C  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2A4 00000260  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2A8 00000264  B0 04 80 00 */	sth r0, -0x8000(r4)	/* effective address: CC008000 */
 /* 801FE2AC 00000268  38 00 01 C0 */	li r0, 0x1c0
-/* 801FE2B0 0000026C  B0 04 80 00 */	sth r0, -0x8000(r4)
-/* 801FE2B4 00000270  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE2B8 00000274  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 801FE2BC 00000278  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 801FE2C0 0000027C  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE2C4 00000280  B0 04 80 00 */	sth r0, -0x8000(r4)
-/* 801FE2C8 00000284  B0 A4 80 00 */	sth r5, -0x8000(r4)
-/* 801FE2CC 00000288  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 801FE2D0 0000028C  98 64 80 00 */	stb r3, -0x8000(r4)
+/* 801FE2B0 0000026C  B0 04 80 00 */	sth r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2B4 00000270  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2B8 00000274  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2BC 00000278  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2C0 0000027C  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2C4 00000280  B0 04 80 00 */	sth r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2C8 00000284  B0 A4 80 00 */	sth r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2CC 00000288  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 801FE2D0 0000028C  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
 lbl_801FE2D4:
 /* 801FE2D4 00000000  83 E1 00 3C */	lwz r31, 0x3c(r1)
 /* 801FE2D8 00000004  80 01 00 44 */	lwz r0, 0x44(r1)

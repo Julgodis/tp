@@ -6,8 +6,8 @@ lbl_80241D5C:
 /* 80241D6C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80241D70 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80241D74 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80241D78 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)
-/* 80241D7C 00000020  80 04 2E 0C */	lwz r0, 0x2e0c(r4)
+/* 80241D78 0000001C  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 80241D7C 00000020  80 04 2E 0C */	lwz r0, 0x2e0c(r4)	/* effective address: 80408FCC */
 /* 80241D80 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80241D84 00000028  40 82 00 44 */	bne lbl_80241DC8
 /* 80241D88 0000002C  88 1F 21 95 */	lbz r0, 0x2195(r31)
@@ -18,7 +18,7 @@ lbl_80241D5C:
 lbl_80241D9C:
 /* 80241D9C 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80241DA0 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80241DA4 00000008  80 03 00 34 */	lwz r0, 0x34(r3)
+/* 80241DA4 00000008  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
 /* 80241DA8 0000000C  54 00 05 AD */	rlwinm. r0, r0, 0, 0x16, 0x16
 /* 80241DAC 00000010  41 82 00 3C */	beq lbl_80241DE8
 /* 80241DB0 00000014  88 1F 21 95 */	lbz r0, 0x2195(r31)

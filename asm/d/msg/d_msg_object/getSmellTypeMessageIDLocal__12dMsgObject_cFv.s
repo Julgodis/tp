@@ -2,7 +2,7 @@ lbl_80237DD8:
 /* 80237DD8 00000000  38 60 00 00 */	li r3, 0
 /* 80237DDC 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80237DE0 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80237DE4 0000000C  88 84 00 16 */	lbz r4, 0x16(r4)
+/* 80237DE4 0000000C  88 84 00 16 */	lbz r4, 0x16(r4)	/* effective address: 804061D6 */
 /* 80237DE8 00000010  2C 04 00 B6 */	cmpwi r4, 0xb6
 /* 80237DEC 00000014  4C 80 00 20 */	bgelr 
 /* 80237DF0 00000018  2C 04 00 B0 */	cmpwi r4, 0xb0

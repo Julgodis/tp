@@ -27,7 +27,7 @@ lbl_800B5CCC:
 /* 800B5D30 00000064  7C 7B 1B 78 */	mr r27, r3
 /* 800B5D34 00000068  3B A0 00 00 */	li r29, 0
 /* 800B5D38 0000006C  C0 3E 33 A8 */	lfs f1, 0x33a8(r30)
-/* 800B5D3C 00000070  C0 02 94 08 */	lfs f0, d_a_d_a_alink__lit_14064(r2)
+/* 800B5D3C 00000070  C0 02 94 08 */	lfs f0, lit_14064(r2)
 /* 800B5D40 00000074  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B5D44 00000000  40 81 00 34 */	ble lbl_800B5D78
 /* 800B5D48 00000004  2C 1B 00 01 */	cmpwi r27, 1
@@ -48,14 +48,14 @@ lbl_800B5D78:
 /* 800B5D80 00000008  40 82 00 1C */	bne lbl_800B5D9C
 /* 800B5D84 0000000C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800B5D88 00000010  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800B5D8C 00000014  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800B5D8C 00000014  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E480 */
 /* 800B5D90 00000018  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800B5D94 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800B5D98 00000004  40 82 00 44 */	bne lbl_800B5DDC
 lbl_800B5D9C:
 /* 800B5D9C 00000000  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800B5DA0 00000004  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800B5DA4 00000008  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800B5DA4 00000008  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038E484 */
 /* 800B5DA8 0000000C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800B5DAC 00000000  40 80 00 30 */	bge lbl_800B5DDC
 /* 800B5DB0 00000004  2C 1D 00 00 */	cmpwi r29, 0
@@ -77,7 +77,7 @@ lbl_800B5DDC:
 /* 800B5DE8 0000000C  40 82 00 18 */	bne lbl_800B5E00
 /* 800B5DEC 00000010  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800B5DF0 00000014  38 83 E4 54 */	addi r4, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800B5DF4 00000018  C0 04 00 34 */	lfs f0, 0x34(r4)
+/* 800B5DF4 00000018  C0 04 00 34 */	lfs f0, 0x34(r4)	/* effective address: 8038E488 */
 /* 800B5DF8 0000001C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800B5DFC 00000000  40 80 01 2C */	bge lbl_800B5F28
 lbl_800B5E00:
@@ -113,12 +113,12 @@ lbl_800B5E50:
 /* 800B5E68 0000000C  2C 1C 00 00 */	cmpwi r28, 0
 /* 800B5E6C 00000010  40 82 00 AC */	bne lbl_800B5F18
 /* 800B5E70 00000014  C0 3E 33 98 */	lfs f1, 0x3398(r30)
-/* 800B5E74 00000018  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800B5E74 00000018  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800B5E78 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B5E7C 00000000  40 81 00 9C */	ble lbl_800B5F18
 /* 800B5E80 00000004  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B5E84 00000008  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B5E88 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800B5E88 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038D6EC */
 /* 800B5E8C 0000003C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B5E90 00000000  40 81 00 08 */	ble lbl_800B5E98
 /* 800B5E94 00000004  D0 1E 33 98 */	stfs f0, 0x3398(r30)
@@ -144,7 +144,7 @@ lbl_800B5E98:
 /* 800B5EE0 00000048  48 00 92 B5 */	bl seStartMapInfo__9daAlink_cFUl
 /* 800B5EE4 0000004C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800B5EE8 00000050  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800B5EEC 00000054  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B5EEC 00000054  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B5EF0 00000058  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800B5EF4 0000005C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800B5EF8 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

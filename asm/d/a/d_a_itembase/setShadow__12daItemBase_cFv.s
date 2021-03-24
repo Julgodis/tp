@@ -47,7 +47,7 @@ lbl_80144D70:
 /* 80144E24 000000A0  FC 40 F8 90 */	fmr f2, f31
 /* 80144E28 000000A4  38 9F 06 7C */	addi r4, r31, 0x67c
 /* 80144E2C 000000A8  38 A0 00 00 */	li r5, 0
-/* 80144E30 000000AC  C0 62 99 A8 */	lfs f3, d_a_d_a_itembase__lit_3881(r2)
+/* 80144E30 000000AC  C0 62 99 A8 */	lfs f3, lit_3881(r2)
 /* 80144E34 000000B0  3C C0 80 42 */	lis r6, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80144E38 000000B4  38 C6 48 D0 */	addi r6, r6, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80144E3C 000000B8  4B EE 82 79 */	bl dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj
@@ -68,7 +68,7 @@ lbl_80144E44:
 /* 80144E74 00000030  C0 02 99 AC */	lfs f0, lit_3952(r2)
 /* 80144E78 00000034  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80144E7C 00000038  40 82 00 08 */	bne lbl_80144E84
-/* 80144E80 0000003C  C0 22 99 B0 */	lfs f1, d_a_d_a_itembase__lit_3953(r2)
+/* 80144E80 0000003C  C0 22 99 B0 */	lfs f1, lit_3953(r2)
 lbl_80144E84:
 /* 80144E84 00000000  80 7F 09 1C */	lwz r3, 0x91c(r31)
 /* 80144E88 00000004  38 80 00 03 */	li r4, 3
@@ -80,7 +80,7 @@ lbl_80144E84:
 /* 80144EA0 0000001C  38 FF 06 7C */	addi r7, r31, 0x67c
 /* 80144EA4 00000020  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 80144EA8 00000024  39 20 00 00 */	li r9, 0
-/* 80144EAC 00000028  C0 A2 99 A8 */	lfs f5, d_a_d_a_itembase__lit_3881(r2)
+/* 80144EAC 00000028  C0 A2 99 A8 */	lfs f5, lit_3881(r2)
 /* 80144EB0 0000002C  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80144EB4 00000030  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80144EB8 00000034  4B EE 9A 59 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

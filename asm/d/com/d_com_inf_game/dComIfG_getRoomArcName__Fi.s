@@ -5,8 +5,8 @@ lbl_8002F4BC:
 /* 8002F4C8 0000000C  7C 65 1B 78 */	mr r5, r3
 /* 8002F4CC 00000010  3C 60 80 42 */	lis r3, data_80423FD0@ha
 /* 8002F4D0 00000014  38 63 3F D0 */	addi r3, r3, data_80423FD0@l
-/* 8002F4D4 00000018  3C 80 80 38 */	lis r4, d_com_d_com_inf_game__stringBase0@ha
-/* 8002F4D8 0000001C  38 84 8F 38 */	addi r4, r4, d_com_d_com_inf_game__stringBase0@l
+/* 8002F4D4 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 8002F4D8 0000001C  38 84 8F 38 */	addi r4, r4, stringBase0@l
 /* 8002F4DC 00000020  38 84 01 6E */	addi r4, r4, 0x16e
 /* 8002F4E0 00000024  4C C6 31 82 */	crclr 6
 /* 8002F4E4 00000028  48 33 6F F9 */	bl sprintf

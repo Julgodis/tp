@@ -15,13 +15,13 @@ lbl_80159550:
 /* 80159584 00000034  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80159588 00000038  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8015958C 0000003C  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80159590 00000040  C0 02 9B 00 */	lfs f0, a_npc_d_a_npc_cd2__lit_4921(r2)
+/* 80159590 00000040  C0 02 9B 00 */	lfs f0, lit_4921(r2)
 /* 80159594 00000044  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80159598 00000048  D0 1E 0A B4 */	stfs f0, 0xab4(r30)
 /* 8015959C 0000004C  A8 1E 0A C0 */	lha r0, 0xac0(r30)
 /* 801595A0 00000050  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 801595A4 00000054  7C 23 04 2E */	lfsx f1, r3, r0
-/* 801595A8 00000058  C0 02 9B 04 */	lfs f0, a_npc_d_a_npc_cd2__lit_4922(r2)
+/* 801595A8 00000058  C0 02 9B 04 */	lfs f0, lit_4922(r2)
 /* 801595AC 0000005C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 801595B0 00000060  D0 1E 0A B8 */	stfs f0, 0xab8(r30)
 /* 801595B4 00000064  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
@@ -59,7 +59,7 @@ lbl_80159550:
 /* 80159634 000000E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80159638 000000E8  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 lbl_8015963C:
-/* 8015963C 00000000  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
+/* 8015963C 00000000  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
 /* 80159640 00000004  38 00 00 FF */	li r0, 0xff
 /* 80159644 00000008  90 01 00 08 */	stw r0, 8(r1)
 /* 80159648 0000000C  38 80 00 00 */	li r4, 0
@@ -78,7 +78,7 @@ lbl_8015963C:
 /* 8015967C 00000040  39 00 00 00 */	li r8, 0
 /* 80159680 00000044  39 3E 04 E4 */	addi r9, r30, 0x4e4
 /* 80159684 00000048  39 40 00 00 */	li r10, 0
-/* 80159688 0000004C  C0 22 9A E0 */	lfs f1, a_npc_d_a_npc_cd2__lit_4050(r2)
+/* 80159688 0000004C  C0 22 9A E0 */	lfs f1, lit_4050(r2)
 /* 8015968C 00000050  4B EF 3E 41 */	bl set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80159690 00000054  7C 7E D9 2E */	stwx r3, r30, r27
 /* 80159694 00000058  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)

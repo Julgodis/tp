@@ -13,7 +13,7 @@ lbl_80217954:
 /* 80217980 0000002C  41 82 00 28 */	beq lbl_802179A8
 /* 80217984 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80217988 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021798C 00000038  88 63 5E 4C */	lbz r3, 0x5e4c(r3)
+/* 8021798C 00000038  88 63 5E 4C */	lbz r3, 0x5e4c(r3)	/* effective address: 8040C00C */
 /* 80217990 0000003C  54 60 FF FF */	rlwinm. r0, r3, 0x1f, 0x1f, 0x1f
 /* 80217994 00000040  40 82 00 0C */	bne lbl_802179A0
 /* 80217998 00000044  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d

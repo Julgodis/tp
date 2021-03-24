@@ -84,7 +84,7 @@ extern "C" void getHeapType__12JKRSolidHeapFv(); // 1
 extern "C" void do_getFreeSize__12JKRSolidHeapFv(); // 1
 extern "C" void do_getMaxFreeBlock__12JKRSolidHeapFv(); // 1
 extern "C" void do_getTotalFreeSize__12JKRSolidHeapFv(); // 1
-extern "C" extern char const* const JKRSolidHeap__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -343,17 +343,17 @@ asm void JKRSolidHeap::check() {
 
 /* ############################################################################################## */
 /* 80455FA8-80455FB0 0004+04 s=1 e=0 z=0  None .sdata2    @693                                                         */
-SECTION_SDATA2 static f32 JKRSolidHeap__lit_693[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_693[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455FB0-80455FB8 0008+00 s=1 e=0 z=0  None .sdata2    @695                                                         */
-SECTION_SDATA2 static f64 JKRSolidHeap__lit_695 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_695 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80455FB8-80455FC0 0008+00 s=1 e=0 z=0  None .sdata2    @697                                                         */
-SECTION_SDATA2 static f64 JKRSolidHeap__lit_697 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_697 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802D10FC-802D11FC 0100+00 s=1 e=0 z=0  None .text      dump__12JKRSolidHeapFv                                       */
 #pragma push

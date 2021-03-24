@@ -115,7 +115,7 @@ lbl_8000E9CC:
 /* 8000E9E0 00000014  41 82 00 88 */	beq lbl_8000EA68
 /* 8000E9E4 00000018  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8000E9E8 0000001C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8000E9EC 00000020  93 E3 00 58 */	stw r31, 0x58(r3)
+/* 8000E9EC 00000020  93 E3 00 58 */	stw r31, 0x58(r3)	/* effective address: 80434B20 */
 /* 8000E9F0 00000024  3A C0 00 00 */	li r22, 0
 /* 8000E9F4 00000028  3C 60 80 43 */	lis r3, sGDLObj__17J3DDisplayListObj@ha
 /* 8000E9F8 0000002C  3B 23 4C 70 */	addi r25, r3, sGDLObj__17J3DDisplayListObj@l

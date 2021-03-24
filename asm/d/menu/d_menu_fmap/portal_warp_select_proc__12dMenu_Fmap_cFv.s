@@ -16,7 +16,7 @@ lbl_801C90A8:
 /* 801C90E0 00000038  48 00 E5 E1 */	bl deleteExplain__17dMenu_Fmap2DTop_cFv
 /* 801C90E4 0000003C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801C90E8 00000040  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801C90EC 00000044  88 03 00 C0 */	lbz r0, 0xc0(r3)
+/* 801C90EC 00000044  88 03 00 C0 */	lbz r0, 0xc0(r3)	/* effective address: 80430248 */
 /* 801C90F0 00000048  28 00 00 03 */	cmplwi r0, 3
 /* 801C90F4 0000004C  40 82 00 90 */	bne lbl_801C9184
 /* 801C90F8 00000050  80 9F 00 90 */	lwz r4, 0x90(r31)

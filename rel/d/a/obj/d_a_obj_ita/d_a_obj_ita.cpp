@@ -39,6 +39,16 @@ struct dBgS_ObjAcch {
 	/* 80C28B40 */ ~dBgS_ObjAcch();
 };
 
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80C291CC */ void sinShort(s16) const;
+	};
+
+};
+
 // 
 // Forward References:
 // 
@@ -69,7 +79,7 @@ extern "C" void Execute__10daObjIta_cFPPA3_A4_f(); // 1
 extern "C" void Draw__10daObjIta_cFv(); // 1
 extern "C" void Delete__10daObjIta_cFv(); // 1
 extern "C" void __dt__15daObj_ITA_HIO_cFv(); // 1
-extern "C" static void func_80C291CC(); // 1
+extern "C" void func_80C291CC(); // 1
 extern "C" void __sinit_d_a_obj_ita_cpp(); // 1
 extern "C" void func_80C29214(); // 1
 extern "C" void func_80C2921C(); // 1
@@ -351,7 +361,7 @@ asm daObj_ITA_HIO_c::~daObj_ITA_HIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C291CC() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/func_80C291CC.s"
 }

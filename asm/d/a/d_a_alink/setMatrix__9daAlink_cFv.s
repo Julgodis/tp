@@ -75,7 +75,7 @@ lbl_800A8DE0:
 /* 800A8DF4 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800A8DF8 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 800A8DFC 0000001C  A8 9F 30 10 */	lha r4, 0x3010(r31)
-/* 800A8E00 00000020  C0 42 93 2C */	lfs f2, d_a_d_a_alink__lit_7624(r2)
+/* 800A8E00 00000020  C0 42 93 2C */	lfs f2, lit_7624(r2)
 /* 800A8E04 00000024  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800A8E08 00000028  6C A0 80 00 */	xoris r0, r5, 0x8000
 /* 800A8E0C 0000002C  90 01 00 0C */	stw r0, 0xc(r1)
@@ -126,7 +126,7 @@ lbl_800A8EB8:
 /* 800A8EB8 00000000  28 00 01 31 */	cmplwi r0, 0x131
 /* 800A8EBC 00000004  40 82 00 14 */	bne lbl_800A8ED0
 /* 800A8EC0 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800A8EC4 0000000C  C0 42 93 3C */	lfs f2, d_a_d_a_alink__lit_7808(r2)
+/* 800A8EC4 0000000C  C0 42 93 3C */	lfs f2, lit_7808(r2)
 /* 800A8EC8 00000010  C0 62 94 14 */	lfs f3, lit_14616(r2)
 /* 800A8ECC 00000014  4B F6 3E D1 */	bl transM__14mDoMtx_stack_cFfff
 lbl_800A8ED0:
@@ -229,7 +229,7 @@ lbl_800A9010:
 /* 800A9038 00000028  41 82 00 24 */	beq lbl_800A905C
 /* 800A903C 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800A9040 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800A9044 00000034  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800A9044 00000034  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800A9048 00000038  28 00 00 FF */	cmplwi r0, 0xff
 /* 800A904C 0000003C  40 82 00 10 */	bne lbl_800A905C
 /* 800A9050 00000040  38 00 00 05 */	li r0, 5
@@ -342,7 +342,7 @@ lbl_800A91BC:
 /* 800A91C8 0000000C  41 82 00 24 */	beq lbl_800A91EC
 /* 800A91CC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800A91D0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800A91D4 00000018  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800A91D4 00000018  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800A91D8 0000001C  28 00 00 FF */	cmplwi r0, 0xff
 /* 800A91DC 00000020  40 82 00 10 */	bne lbl_800A91EC
 /* 800A91E0 00000024  38 00 00 02 */	li r0, 2
@@ -361,7 +361,7 @@ lbl_800A91EC:
 /* 800A9210 00000024  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 /* 800A9214 00000028  48 00 00 0C */	b lbl_800A9220
 lbl_800A9218:
-/* 800A9218 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800A9218 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800A921C 00000004  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 lbl_800A9220:
 /* 800A9220 00000000  88 1F 2F B6 */	lbz r0, 0x2fb6(r31)

@@ -68,9 +68,9 @@ lbl_800DC978:
 /* 800DC9B0 00000038  98 03 2F 7C */	stb r0, 0x2f7c(r3)
 /* 800DC9B4 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DC9B8 00000040  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800DC9BC 00000044  A8 64 5D F4 */	lha r3, 0x5df4(r4)
+/* 800DC9BC 00000044  A8 64 5D F4 */	lha r3, 0x5df4(r4)	/* effective address: 8040BFB4 */
 /* 800DC9C0 00000048  38 03 00 01 */	addi r0, r3, 1
-/* 800DC9C4 0000004C  B0 04 5D F4 */	sth r0, 0x5df4(r4)
+/* 800DC9C4 0000004C  B0 04 5D F4 */	sth r0, 0x5df4(r4)	/* effective address: 8040BFB4 */
 /* 800DC9C8 00000050  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 800DC9CC 00000054  38 80 00 0E */	li r4, 0xe
 /* 800DC9D0 00000058  38 A0 FF FF */	li r5, -1

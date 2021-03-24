@@ -8,7 +8,7 @@ lbl_800E3454:
 /* 800E346C 00000018  C0 23 34 78 */	lfs f1, 0x3478(r3)
 /* 800E3470 0000001C  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E3474 00000020  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800E3478 00000024  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800E3478 00000024  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038E828 */
 /* 800E347C 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 800E3480 0000002C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800E3484 00000030  C0 1F 34 78 */	lfs f0, 0x3478(r31)
@@ -65,7 +65,7 @@ lbl_800E3540:
 /* 800E3544 00000004  4B FF F8 81 */	bl cancelMagneBootsOn__9daAlink_cFv
 /* 800E3548 00000008  7F E3 FB 78 */	mr r3, r31
 /* 800E354C 0000000C  38 80 00 01 */	li r4, 1
-/* 800E3550 00000010  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800E3550 00000010  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800E3554 00000014  4B FE 34 F5 */	bl procFallInit__9daAlink_cFif
 /* 800E3558 00000018  48 00 01 F0 */	b lbl_800E3748
 lbl_800E355C:
@@ -80,7 +80,7 @@ lbl_800E355C:
 /* 800E357C 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E3580 00000000  40 81 00 58 */	ble lbl_800E35D8
 /* 800E3584 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E3588 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E3588 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E358C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E3590 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E3594 00000014  FC 00 00 32 */	fmul f0, f0, f0

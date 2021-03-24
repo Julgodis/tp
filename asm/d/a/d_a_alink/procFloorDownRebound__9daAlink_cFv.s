@@ -18,7 +18,7 @@ lbl_800C850C:
 /* 800C850C 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800C8510 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C8514 00000008  38 63 E0 68 */	addi r3, r3, m__22daAlinkHIO_autoJump_c0@l
-/* 800C8518 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800C8518 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E08C */
 /* 800C851C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C8520 00000000  40 81 00 10 */	ble lbl_800C8530
 /* 800C8524 00000004  7F C3 F3 78 */	mr r3, r30

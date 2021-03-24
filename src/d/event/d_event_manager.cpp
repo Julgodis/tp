@@ -17,7 +17,13 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
-struct dEvDtData_c {
+struct dEvDtStaff_c {
+	/* 80044134 */ void init();
+};
+
+struct dEvDtEvent_c {
+	/* 80043E78 */ void finishCheck();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
 struct Vec {
@@ -30,13 +36,7 @@ struct cXyz {
 struct fopAc_ac_c {
 };
 
-struct dEvDtStaff_c {
-	/* 80044134 */ void init();
-};
-
-struct dEvDtEvent_c {
-	/* 80043E78 */ void finishCheck();
-	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
+struct dEvDtData_c {
 };
 
 struct dEvent_manager_c {
@@ -207,7 +207,7 @@ extern "C" void specialCast__16dEvent_manager_cFPCci(); // 1
 extern "C" static void dEv_talkman_get_action__Fi(); // 1
 extern "C" void ChkPresentEnd__16dEvent_manager_cFv(); // 1
 extern "C" void checkStartDemo__16dEvent_manager_cFv(); // 1
-extern "C" extern char const* const d_event_d_event_manager__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -368,20 +368,20 @@ SECTION_DEAD static char const* const pad_8037A104 = "\0\0\0";
 
 /* 803A8270-803A82A8 0038+00 s=1 e=0 z=0  None .data      soecial_names$3966                                           */
 SECTION_DATA static void* data_803A8270[14] = {
-	/* 0    */ (void*)&d_event_d_event_manager__stringBase0,
-	/* 1    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x10),
-	/* 2    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x1E),
-	/* 3    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x2C),
-	/* 4    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x3F),
-	/* 5    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x50),
-	/* 6    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x63),
-	/* 7    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x6E),
-	/* 8    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x7B),
-	/* 9    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x89),
-	/* 10   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x94),
-	/* 11   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xA3),
-	/* 12   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xB2),
-	/* 13   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xC3),
+	/* 0    */ (void*)&stringBase0,
+	/* 1    */ (void*)(((char*)&stringBase0)+0x10),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x1E),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x2C),
+	/* 4    */ (void*)(((char*)&stringBase0)+0x3F),
+	/* 5    */ (void*)(((char*)&stringBase0)+0x50),
+	/* 6    */ (void*)(((char*)&stringBase0)+0x63),
+	/* 7    */ (void*)(((char*)&stringBase0)+0x6E),
+	/* 8    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 9    */ (void*)(((char*)&stringBase0)+0x89),
+	/* 10   */ (void*)(((char*)&stringBase0)+0x94),
+	/* 11   */ (void*)(((char*)&stringBase0)+0xA3),
+	/* 12   */ (void*)(((char*)&stringBase0)+0xB2),
+	/* 13   */ (void*)(((char*)&stringBase0)+0xC3),
 };
 
 /* 80046480-800465E8 0168+00 s=1 e=0 z=0  None .text      getEventName__18dEvent_exception_cFv                         */
@@ -573,17 +573,17 @@ asm void dEvent_manager_c::endProc(s16 param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80451F00-80451F08 0004+04 s=1 e=0 z=0  None .sdata2    @4398                                                        */
-SECTION_SDATA2 static u8 d_event_d_event_manager__lit_4398[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4398[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451F08-80451F10 0008+00 s=1 e=0 z=0  None .sdata2    @4399                                                        */
-SECTION_SDATA2 static f64 d_event_d_event_manager__lit_4399 = 0.5;
+SECTION_SDATA2 static f64 lit_4399 = 0.5;
 
 /* 80451F10-80451F18 0008+00 s=1 e=0 z=0  None .sdata2    @4400                                                        */
-SECTION_SDATA2 static f64 d_event_d_event_manager__lit_4400 = 3.0;
+SECTION_SDATA2 static f64 lit_4400 = 3.0;
 
 /* 80451F18-80451F20 0008+00 s=1 e=0 z=0  None .sdata2    @4401                                                        */
 SECTION_SDATA2 static u8 lit_4401[8] = {
@@ -597,7 +597,7 @@ SECTION_SDATA2 static f32 lit_4402 = 180.0f;
 SECTION_SDATA2 static f32 lit_4403 = 1.0f;
 
 /* 80451F28-80451F2C 0004+00 s=1 e=0 z=0  None .sdata2    @4404                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_manager__lit_4404 = -1.0f;
+SECTION_SDATA2 static f32 lit_4404 = -1.0f;
 
 /* 80046E64-800473FC 0598+00 s=0 e=1 z=0  None .text      Sequencer__16dEvent_manager_cFv                              */
 #pragma push
@@ -921,10 +921,10 @@ asm void dEvent_manager_c::getRunEventName() {
 
 /* ############################################################################################## */
 /* 80451F2C-80451F30 0004+00 s=1 e=0 z=0  None .sdata2    @5025                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_manager__lit_5025 = 10.0f;
+SECTION_SDATA2 static f32 lit_5025 = 10.0f;
 
 /* 80451F30-80451F34 0004+00 s=1 e=0 z=0  None .sdata2    @5026                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_manager__lit_5026 = -10.0f;
+SECTION_SDATA2 static f32 lit_5026 = -10.0f;
 
 /* 8004846C-80048520 00B4+00 s=1 e=0 z=0  None .text      findShutterCallBack__FP10fopAc_ac_cPv                        */
 #pragma push
@@ -939,7 +939,7 @@ asm static void findShutterCallBack(fopAc_ac_c* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 80451F34-80451F38 0004+00 s=1 e=0 z=0  None .sdata2    @5055                                                        */
-SECTION_SDATA2 static f32 d_event_d_event_manager__lit_5055 = 100.0f;
+SECTION_SDATA2 static f32 lit_5055 = 100.0f;
 
 /* 80048520-80048618 00F8+00 s=1 e=0 z=0  None .text      specialCast_Shutter__16dEvent_manager_cFsi                   */
 #pragma push
@@ -966,9 +966,9 @@ asm void dEvent_manager_c::specialCast(char const* param_0, int param_1) {
 /* ############################################################################################## */
 /* 803A82A8-803A82B8 000C+04 s=1 e=0 z=0  None .data      action_table$5100                                            */
 SECTION_DATA static void* data_803A82A8[3 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x18B),
-	/* 1    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x190),
-	/* 2    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x196),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x18B),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x190),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x196),
 	/* padding */
 	NULL,
 };

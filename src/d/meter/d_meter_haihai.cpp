@@ -45,6 +45,9 @@ struct dMeterSub_c {
 	/* 80194138 */ void isDead();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -56,9 +59,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -104,7 +104,7 @@ extern "C" void updateHaihai__14dMeterHaihai_cFv(); // 1
 extern "C" void playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey(); // 1
 extern "C" void playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey(); // 1
 extern "C" void playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor(); // 1
-extern "C" extern char const* const d_meter_d_meter_haihai__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -185,7 +185,7 @@ SECTION_DEAD char const* const stringBase_8039819A = "zelda_hihi_cursor.bpk";
 #pragma pop
 
 /* 804547B0-804547B4 0004+00 s=6 e=0 z=0  None .sdata2    @3742                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter_haihai__lit_3742[4] = {
+SECTION_SDATA2 static u8 lit_3742[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -213,31 +213,31 @@ asm void dMeterHaihai_c::_execute(u32 param_0) {
 
 /* ############################################################################################## */
 /* 804547B4-804547B8 0004+00 s=2 e=0 z=0  None .sdata2    @3890                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3890 = 13.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3890 = 13.0f / 5.0f;
 
 /* 804547B8-804547BC 0004+00 s=2 e=0 z=0  None .sdata2    @3891                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3891 = 39.0f;
+SECTION_SDATA2 static f32 lit_3891 = 39.0f;
 
 /* 804547BC-804547C0 0004+00 s=2 e=0 z=0  None .sdata2    @3892                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3892 = 58.0f;
+SECTION_SDATA2 static f32 lit_3892 = 58.0f;
 
 /* 804547C0-804547C4 0004+00 s=2 e=0 z=0  None .sdata2    @3893                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3893 = 304.0f;
+SECTION_SDATA2 static f32 lit_3893 = 304.0f;
 
 /* 804547C4-804547C8 0004+00 s=2 e=0 z=0  None .sdata2    @3894                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3894 = 224.0f;
+SECTION_SDATA2 static f32 lit_3894 = 224.0f;
 
 /* 804547C8-804547CC 0004+00 s=6 e=0 z=0  None .sdata2    @3895                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3895 = 0.5f;
+SECTION_SDATA2 static f32 lit_3895 = 0.5f;
 
 /* 804547CC-804547D0 0004+00 s=2 e=0 z=0  None .sdata2    @3896                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3896 = 90.0f;
+SECTION_SDATA2 static f32 lit_3896 = 90.0f;
 
 /* 804547D0-804547D4 0004+00 s=2 e=0 z=0  None .sdata2    @3897                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3897 = 180.0f;
+SECTION_SDATA2 static f32 lit_3897 = 180.0f;
 
 /* 804547D4-804547D8 0004+00 s=2 e=0 z=0  None .sdata2    @3898                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3898 = 270.0f;
+SECTION_SDATA2 static f32 lit_3898 = 270.0f;
 
 /* 8020B140-8020B518 03D8+00 s=1 e=0 z=0  None .text      draw__14dMeterHaihai_cFv                                     */
 #pragma push
@@ -252,16 +252,16 @@ asm void dMeterHaihai_c::draw() {
 
 /* ############################################################################################## */
 /* 804547D8-804547DC 0004+00 s=2 e=0 z=0  None .sdata2    @3940                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3940 = 3.0f;
+SECTION_SDATA2 static f32 lit_3940 = 3.0f;
 
 /* 804547DC-804547E0 0004+00 s=2 e=0 z=0  None .sdata2    @3941                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3941 = 5.0f;
+SECTION_SDATA2 static f32 lit_3941 = 5.0f;
 
 /* 804547E0-804547E4 0004+00 s=1 e=0 z=0  None .sdata2    @3942                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3942 = 70.0f;
+SECTION_SDATA2 static f32 lit_3942 = 70.0f;
 
 /* 804547E4-804547E8 0004+00 s=1 e=0 z=0  None .sdata2    @3943                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_3943 = 50.0f;
+SECTION_SDATA2 static f32 lit_3943 = 50.0f;
 
 /* 8020B518-8020B814 02FC+00 s=0 e=1 z=0  None .text      drawHaihai__14dMeterHaihai_cFUc                              */
 #pragma push
@@ -331,7 +331,7 @@ asm void dMeterHaihai_c::drawHaihaiBottom(f32 param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 804547E8-804547EC 0004+00 s=1 e=0 z=0  None .sdata2    @4116                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_4116 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4116 = 4.0f / 5.0f;
 
 /* 804547EC-804547F0 0004+00 s=1 e=0 z=0  None .sdata2    @4117                                                        */
 SECTION_SDATA2 static f32 lit_4117 = 3.0f / 5.0f;
@@ -371,7 +371,7 @@ asm void dMeterHaihai_c::alphaAnimeHaihai(u32 param_0) {
 
 /* ############################################################################################## */
 /* 804547F0-804547F8 0004+04 s=4 e=0 z=0  None .sdata2    @4165                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_haihai__lit_4165[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4165[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
@@ -390,7 +390,7 @@ asm void dMeterHaihai_c::updateHaihai() {
 
 /* ############################################################################################## */
 /* 804547F8-80454800 0008+00 s=3 e=0 z=0  None .sdata2    @4189                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter_haihai__lit_4189 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4189 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8020BF00-8020C078 0178+00 s=1 e=0 z=0  None .text      playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey         */
 #pragma push

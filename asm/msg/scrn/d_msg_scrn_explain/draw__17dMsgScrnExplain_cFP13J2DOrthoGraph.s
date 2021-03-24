@@ -19,7 +19,7 @@ lbl_8023D94C:
 /* 8023D958 0000000C  C0 22 B1 C0 */	lfs f1, lit_3980(r2)
 /* 8023D95C 00000010  FC 40 08 90 */	fmr f2, f1
 /* 8023D960 00000014  C0 62 B1 B8 */	lfs f3, lit_3978(r2)
-/* 8023D964 00000018  C0 82 B1 CC */	lfs f4, msg_scrn_d_msg_scrn_explain__lit_4120(r2)
+/* 8023D964 00000018  C0 82 B1 CC */	lfs f4, lit_4120(r2)
 /* 8023D968 0000001C  38 80 00 00 */	li r4, 0
 /* 8023D96C 00000020  38 A0 00 00 */	li r5, 0
 /* 8023D970 00000024  38 C0 00 00 */	li r6, 0
@@ -65,7 +65,7 @@ lbl_8023D9AC:
 /* 8023DA08 0000005C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8023DA0C 00000060  80 83 00 04 */	lwz r4, 4(r3)
 /* 8023DA10 00000064  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8023DA14 00000068  C0 22 B1 D0 */	lfs f1, msg_scrn_d_msg_scrn_explain__lit_4121(r2)
+/* 8023DA14 00000068  C0 22 B1 D0 */	lfs f1, lit_4121(r2)
 /* 8023DA18 0000006C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8023DA1C 00000070  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 8023DA20 00000074  7D 89 03 A6 */	mtctr r12
@@ -88,15 +88,15 @@ lbl_8023DA5C:
 /* 8023DA60 00000004  88 1F 00 66 */	lbz r0, 0x66(r31)
 /* 8023DA64 00000008  28 00 00 02 */	cmplwi r0, 2
 /* 8023DA68 0000000C  40 82 00 08 */	bne lbl_8023DA70
-/* 8023DA6C 00000010  C0 62 B1 D4 */	lfs f3, msg_scrn_d_msg_scrn_explain__lit_4122(r2)
+/* 8023DA6C 00000010  C0 62 B1 D4 */	lfs f3, lit_4122(r2)
 lbl_8023DA70:
-/* 8023DA70 00000000  C0 22 B1 D8 */	lfs f1, msg_scrn_d_msg_scrn_explain__lit_4123(r2)
+/* 8023DA70 00000000  C0 22 B1 D8 */	lfs f1, lit_4123(r2)
 /* 8023DA74 00000004  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 8023DA78 00000008  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 8023DA7C 0000000C  C0 04 01 F0 */	lfs f0, 0x1f0(r4)
+/* 8023DA7C 0000000C  C0 04 01 F0 */	lfs f0, 0x1f0(r4)	/* effective address: 8043047C */
 /* 8023DA80 00000010  EC 21 00 2A */	fadds f1, f1, f0
-/* 8023DA84 00000014  C0 42 B1 DC */	lfs f2, msg_scrn_d_msg_scrn_explain__lit_4124(r2)
-/* 8023DA88 00000018  C0 04 02 68 */	lfs f0, 0x268(r4)
+/* 8023DA84 00000014  C0 42 B1 DC */	lfs f2, lit_4124(r2)
+/* 8023DA88 00000018  C0 04 02 68 */	lfs f0, 0x268(r4)	/* effective address: 804304F4 */
 /* 8023DA8C 0000001C  EC 02 00 2A */	fadds f0, f2, f0
 /* 8023DA90 00000020  EC 40 18 2A */	fadds f2, f0, f3
 /* 8023DA94 00000024  4B FF C3 05 */	bl translate__17dMsgScrn3Select_cFff

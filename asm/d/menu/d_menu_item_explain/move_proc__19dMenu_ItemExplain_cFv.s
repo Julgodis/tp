@@ -17,7 +17,7 @@ lbl_801DBB7C:
 lbl_801DBBB8:
 /* 801DBBB8 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801DBBBC 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801DBBC0 00000008  80 63 00 34 */	lwz r3, 0x34(r3)
+/* 801DBBC0 00000008  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
 /* 801DBBC4 0000000C  54 64 05 EF */	rlwinm. r4, r3, 0, 0x17, 0x17
 /* 801DBBC8 00000010  40 82 00 34 */	bne lbl_801DBBFC
 /* 801DBBCC 00000014  54 60 05 AD */	rlwinm. r0, r3, 0, 0x16, 0x16
@@ -72,9 +72,9 @@ lbl_801DBC60:
 /* 801DBC78 00000018  38 A0 00 00 */	li r5, 0
 /* 801DBC7C 0000001C  38 C0 00 00 */	li r6, 0
 /* 801DBC80 00000020  38 E0 00 00 */	li r7, 0
-/* 801DBC84 00000024  C0 22 A8 C4 */	lfs f1, d_menu_d_menu_item_explain__lit_4348(r2)
+/* 801DBC84 00000024  C0 22 A8 C4 */	lfs f1, lit_4348(r2)
 /* 801DBC88 00000028  FC 40 08 90 */	fmr f2, f1
-/* 801DBC8C 0000002C  C0 62 A8 B0 */	lfs f3, d_menu_d_menu_item_explain__lit_4304(r2)
+/* 801DBC8C 0000002C  C0 62 A8 B0 */	lfs f3, lit_4304(r2)
 /* 801DBC90 00000030  FC 80 18 90 */	fmr f4, f3
 /* 801DBC94 00000034  39 00 00 00 */	li r8, 0
 /* 801DBC98 00000038  48 0C FC ED */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

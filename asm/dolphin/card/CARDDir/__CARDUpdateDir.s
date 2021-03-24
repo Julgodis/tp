@@ -32,8 +32,8 @@ lbl_80355964:
 /* 80355990 0000002C  38 80 20 00 */	li r4, 0x2000
 /* 80355994 00000030  4B FE 5C 49 */	bl DCStoreRange
 /* 80355998 00000034  93 BE 00 D8 */	stw r29, 0xd8(r30)
-/* 8035599C 00000038  3C 60 80 35 */	lis r3, CARDDir__EraseCallback@ha
-/* 803559A0 0000003C  38 A3 58 54 */	addi r5, r3, CARDDir__EraseCallback@l
+/* 8035599C 00000038  3C 60 80 35 */	lis r3, EraseCallback@ha
+/* 803559A0 0000003C  38 A3 58 54 */	addi r5, r3, EraseCallback@l
 /* 803559A4 00000040  80 1E 00 80 */	lwz r0, 0x80(r30)
 /* 803559A8 00000044  7F 83 E3 78 */	mr r3, r28
 /* 803559AC 00000048  80 9E 00 0C */	lwz r4, 0xc(r30)

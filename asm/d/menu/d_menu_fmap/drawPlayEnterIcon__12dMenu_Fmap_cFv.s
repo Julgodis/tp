@@ -8,14 +8,14 @@ lbl_801CCE98:
 /* 801CCEB0 00000018  80 83 02 0C */	lwz r4, 0x20c(r3)
 /* 801CCEB4 0000001C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 801CCEB8 00000020  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 801CCEBC 00000024  88 05 4E 0A */	lbz r0, 0x4e0a(r5)
+/* 801CCEBC 00000024  88 05 4E 0A */	lbz r0, 0x4e0a(r5)	/* effective address: 8040AFCA */
 /* 801CCEC0 00000028  7C 05 07 74 */	extsb r5, r0
 /* 801CCEC4 0000002C  4B FF E3 FD */	bl isRoomCheck__12dMenu_Fmap_cFii
 /* 801CCEC8 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 801CCECC 00000034  41 82 00 CC */	beq lbl_801CCF98
 /* 801CCED0 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801CCED4 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801CCED8 00000040  88 03 00 7C */	lbz r0, 0x7c(r3)
+/* 801CCED8 00000040  88 03 00 7C */	lbz r0, 0x7c(r3)	/* effective address: 8040623C */
 /* 801CCEDC 00000044  28 00 00 00 */	cmplwi r0, 0
 /* 801CCEE0 00000048  41 82 00 48 */	beq lbl_801CCF28
 /* 801CCEE4 0000004C  38 61 00 10 */	addi r3, r1, 0x10
@@ -28,7 +28,7 @@ lbl_801CCE98:
 /* 801CCF00 00000068  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 801CCF04 0000006C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801CCF08 00000070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801CCF0C 00000074  AB E3 0D BA */	lha r31, 0xdba(r3)
+/* 801CCF0C 00000074  AB E3 0D BA */	lha r31, 0xdba(r3)	/* effective address: 80406F7A */
 /* 801CCF10 00000078  80 7E 00 8C */	lwz r3, 0x8c(r30)
 /* 801CCF14 0000007C  4B FF 97 19 */	bl dMenuFmap_getStartStageName__FPv
 /* 801CCF18 00000080  7C 64 1B 78 */	mr r4, r3
@@ -54,7 +54,7 @@ lbl_801CCF50:
 /* 801CCF60 00000010  C0 41 00 24 */	lfs f2, 0x24(r1)
 /* 801CCF64 00000014  C0 82 A7 64 */	lfs f4, lit_6987(r2)
 /* 801CCF68 00000018  7F E0 07 34 */	extsh r0, r31
-/* 801CCF6C 0000001C  C8 62 A7 40 */	lfd f3, d_menu_d_menu_fmap__lit_4358(r2)
+/* 801CCF6C 0000001C  C8 62 A7 40 */	lfd f3, lit_4358(r2)
 /* 801CCF70 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801CCF74 00000024  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 801CCF78 00000028  3C 00 43 30 */	lis r0, 0x4330

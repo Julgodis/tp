@@ -34,7 +34,7 @@ lbl_8023E4AC:
 /* 8023E4BC 00000010  D0 1D 00 48 */	stfs f0, 0x48(r29)
 /* 8023E4C0 00000014  3B C0 00 00 */	li r30, 0
 /* 8023E4C4 00000018  3B E0 00 00 */	li r31, 0
-/* 8023E4C8 0000001C  C3 E2 B1 E0 */	lfs f31, msg_scrn_d_msg_scrn_explain__lit_4211(r2)
+/* 8023E4C8 0000001C  C3 E2 B1 E0 */	lfs f31, lit_4211(r2)
 lbl_8023E4CC:
 /* 8023E4CC 00000000  7F A3 EB 78 */	mr r3, r29
 /* 8023E4D0 00000004  48 00 00 FD */	bl getAlphaRatio__17dMsgScrnExplain_cFv
@@ -51,7 +51,7 @@ lbl_8023E4CC:
 /* 8023E4FC 00000030  41 82 00 3C */	beq lbl_8023E538
 /* 8023E500 00000034  7F A3 EB 78 */	mr r3, r29
 /* 8023E504 00000038  48 00 00 C9 */	bl getAlphaRatio__17dMsgScrnExplain_cFv
-/* 8023E508 0000003C  C0 02 B1 E0 */	lfs f0, msg_scrn_d_msg_scrn_explain__lit_4211(r2)
+/* 8023E508 0000003C  C0 02 B1 E0 */	lfs f0, lit_4211(r2)
 /* 8023E50C 00000040  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8023E510 00000044  C0 02 B1 E4 */	lfs f0, lit_4230(r2)
 /* 8023E514 00000048  EC 00 00 72 */	fmuls f0, f0, f1

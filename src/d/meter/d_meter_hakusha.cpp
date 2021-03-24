@@ -57,6 +57,9 @@ struct dMeter2Draw_c {
 struct J2DPane {
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -67,9 +70,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -96,7 +96,7 @@ extern "C" void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv(); // 1
 extern "C" void setAlphaButtonAnimeMin__15dMeterHakusha_cFv(); // 1
 extern "C" void setAlphaButtonAnimeMax__15dMeterHakusha_cFv(); // 1
 extern "C" void getHakushaNum__15dMeterHakusha_cFv(); // 1
-extern "C" extern char const* const d_meter_d_meter_hakusha__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -199,12 +199,12 @@ SECTION_DEAD static char const* const pad_80398205 = "\0\0";
 #pragma pop
 
 /* 80454800-80454804 0004+00 s=6 e=0 z=0  None .sdata2    @3793                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter_hakusha__lit_3793[4] = {
+SECTION_SDATA2 static u8 lit_3793[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454804-80454808 0004+00 s=2 e=0 z=0  None .sdata2    @3794                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_3794 = 28.399999618530273f;
+SECTION_SDATA2 static f32 lit_3794 = 28.399999618530273f;
 
 /* 8020C400-8020C808 0408+00 s=1 e=0 z=0  None .text      _create__15dMeterHakusha_cFv                                 */
 #pragma push
@@ -241,7 +241,7 @@ asm void dMeterHakusha_c::draw() {
 
 /* ############################################################################################## */
 /* 80454808-8045480C 0004+00 s=3 e=0 z=0  None .sdata2    @3936                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_3936 = 1.0f;
+SECTION_SDATA2 static f32 lit_3936 = 1.0f;
 
 /* 8020CABC-8020CC58 019C+00 s=1 e=0 z=0  None .text      _delete__15dMeterHakusha_cFv                                 */
 #pragma push
@@ -267,16 +267,16 @@ asm void dMeterHakusha_c::alphaAnimeHakusha(u32 param_0) {
 
 /* ############################################################################################## */
 /* 8045480C-80454810 0004+00 s=1 e=0 z=0  None .sdata2    @4094                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4094 = 18.0f;
+SECTION_SDATA2 static f32 lit_4094 = 18.0f;
 
 /* 80454810-80454814 0004+00 s=1 e=0 z=0  None .sdata2    @4095                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4095 = 28.0f;
+SECTION_SDATA2 static f32 lit_4095 = 28.0f;
 
 /* 80454814-80454818 0004+00 s=1 e=0 z=0  None .sdata2    @4096                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_hakusha__lit_4096 = 20.0f;
+SECTION_SDATA2 static f32 lit_4096 = 20.0f;
 
 /* 80454818-80454820 0008+00 s=1 e=0 z=0  None .sdata2    @4098                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter_hakusha__lit_4098 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4098 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8020CD6C-8020D258 04EC+00 s=1 e=0 z=0  None .text      updateHakusha__15dMeterHakusha_cFv                           */
 #pragma push

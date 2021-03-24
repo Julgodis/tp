@@ -17,8 +17,8 @@ lbl_8022E7CC:
 /* 8022E808 0000003C  4B FF A1 A1 */	bl getFontGCColorTable__FUcUc
 /* 8022E80C 00000040  90 7D 01 24 */	stw r3, 0x124(r29)
 /* 8022E810 00000044  38 61 00 08 */	addi r3, r1, 8
-/* 8022E814 00000048  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
-/* 8022E818 0000004C  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
+/* 8022E814 00000048  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8022E818 0000004C  38 84 96 10 */	addi r4, r4, stringBase0@l
 /* 8022E81C 00000050  38 84 00 18 */	addi r4, r4, 0x18
 /* 8022E820 00000054  80 BD 01 20 */	lwz r5, 0x120(r29)
 /* 8022E824 00000058  80 DD 01 24 */	lwz r6, 0x124(r29)

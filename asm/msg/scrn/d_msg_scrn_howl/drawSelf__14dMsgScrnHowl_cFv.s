@@ -7,7 +7,7 @@ lbl_80241C30:
 /* 80241C44 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80241C48 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80241C4C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80241C50 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)
+/* 80241C50 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)	/* effective address: 8040C110 */
 /* 80241C54 00000024  38 7E 21 14 */	addi r3, r30, 0x2114
 /* 80241C58 00000028  38 9E 21 18 */	addi r4, r30, 0x2118
 /* 80241C5C 0000002C  38 BE 21 1C */	addi r5, r30, 0x211c
@@ -36,7 +36,7 @@ lbl_80241C9C:
 /* 80241CAC 00000010  48 00 04 ED */	bl drawWave__14dMsgScrnHowl_cFv
 lbl_80241CB0:
 /* 80241CB0 00000000  80 1E 21 20 */	lwz r0, 0x2120(r30)
-/* 80241CB4 00000004  C8 22 B2 80 */	lfd f1, msg_scrn_d_msg_scrn_howl__lit_4587(r2)
+/* 80241CB4 00000004  C8 22 B2 80 */	lfd f1, lit_4587(r2)
 /* 80241CB8 00000008  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80241CBC 0000000C  3C 60 43 30 */	lis r3, 0x4330
 /* 80241CC0 00000010  90 61 00 18 */	stw r3, 0x18(r1)

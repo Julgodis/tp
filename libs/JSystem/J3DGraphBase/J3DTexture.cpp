@@ -60,7 +60,7 @@ SECTION_SDATA2 static f32 lit_284 = 0.125f;
 SECTION_SDATA2 static f32 lit_285 = 1.0f / 100.0f;
 
 /* 80456390-80456398 0008+00 s=1 e=0 z=0  None .sdata2    @288                                                         */
-SECTION_SDATA2 static f64 J3DTexture__lit_288 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_288 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8031204C-803121A4 0158+00 s=0 e=1 z=0  None .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        */
 #pragma push

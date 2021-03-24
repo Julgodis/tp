@@ -16,15 +16,15 @@ struct daE_VA_HIO_c {
 	/* 807CE2AC */ ~daE_VA_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
 	/* 807CE23C */ cXyz();
 	/* 807CEC40 */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daE_VA_c {

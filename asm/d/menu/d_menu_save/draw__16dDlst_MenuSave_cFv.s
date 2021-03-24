@@ -3,11 +3,11 @@ lbl_801F6B0C:
 /* 801F6B10 00000004  7C 08 02 A6 */	mflr r0
 /* 801F6B14 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801F6B18 0000000C  80 63 00 04 */	lwz r3, 4(r3)
-/* 801F6B1C 00000010  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F6B1C 00000010  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F6B20 00000014  FC 40 08 90 */	fmr f2, f1
 /* 801F6B24 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801F6B28 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801F6B2C 00000020  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 801F6B2C 00000020  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 801F6B30 00000024  48 10 23 A5 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 801F6B34 00000028  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801F6B38 0000002C  7C 08 03 A6 */	mtlr r0

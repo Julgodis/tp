@@ -253,7 +253,7 @@ asm void J3DGDSetLightDir(_GXLightID param_0, f32 param_1, f32 param_2, f32 para
 
 /* ############################################################################################## */
 /* 803CD7E8-803CD82C 0044+00 s=1 e=0 z=0  None .data      @899                                                         */
-SECTION_DATA static void* J3DGD__lit_899[17] = {
+SECTION_DATA static void* lit_899[17] = {
 	/* 0    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x10C),
 	/* 1    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
 	/* 2    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x164),
@@ -359,14 +359,14 @@ SECTION_SDATA static u8 J3DGDTexTlutIds[8] = {
 };
 
 /* 80450934-8045093C 0006+02 s=1 e=0 z=0  None .sdata     GX2HWFiltConv                                                */
-SECTION_SDATA static u8 J3DGD__GX2HWFiltConv[6 + 2 /* padding */] = {
+SECTION_SDATA static u8 GX2HWFiltConv[6 + 2 /* padding */] = {
 	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 80456328-8045632C 0004+00 s=1 e=0 z=0  None .sdata2    @1050                                                        */
-SECTION_SDATA2 static f32 J3DGD__lit_1050 = 32.0f;
+SECTION_SDATA2 static f32 lit_1050 = 32.0f;
 
 /* 8045632C-80456330 0004+00 s=1 e=0 z=0  None .sdata2    @1051                                                        */
 SECTION_SDATA2 static f32 lit_1051 = 16.0f;
@@ -532,7 +532,7 @@ SECTION_SDATA2 static f32 lit_1461[1 + 1 /* padding */] = {
 SECTION_SDATA2 static f64 lit_1462 = 1.0;
 
 /* 80456348-80456350 0004+04 s=1 e=0 z=0  None .sdata2    @1463                                                        */
-SECTION_SDATA2 static f32 J3DGD__lit_1463[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_1463[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,

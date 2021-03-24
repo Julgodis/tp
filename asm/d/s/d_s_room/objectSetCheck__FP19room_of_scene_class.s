@@ -124,7 +124,7 @@ lbl_8025B498:
 /* 8025B4A8 00000010  4B DC 67 81 */	bl fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv
 /* 8025B4AC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B4B0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B4B4 0000001C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8025B4B4 0000001C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8025B4B8 00000020  38 63 02 10 */	addi r3, r3, 0x210
 /* 8025B4BC 00000024  4B DF 04 2D */	bl allForceOnEventMove__Q213dPa_control_c7level_cFv
 /* 8025B4C0 00000028  7F C3 F3 78 */	mr r3, r30
@@ -159,7 +159,7 @@ lbl_8025B518:
 /* 8025B530 00000018  4B DC 66 F9 */	bl fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv
 /* 8025B534 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B538 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B53C 00000024  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8025B53C 00000024  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8025B540 00000028  38 63 02 10 */	addi r3, r3, 0x210
 /* 8025B544 0000002C  4B DF 03 A5 */	bl allForceOnEventMove__Q213dPa_control_c7level_cFv
 lbl_8025B548:

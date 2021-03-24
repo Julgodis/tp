@@ -398,7 +398,7 @@ asm void JASChannel::dspUpdateCallback(u32 param_0, JASDsp::TChannel* param_1, v
 
 /* ############################################################################################## */
 /* 804556B0-804556B4 0004+00 s=2 e=0 z=0  None .sdata2    @775                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_775 = 12.0f;
+SECTION_SDATA2 static f32 lit_775 = 12.0f;
 
 /* 804556B4-804556B8 0004+00 s=2 e=0 z=0  None .sdata2    @776                                                         */
 SECTION_SDATA2 static f32 lit_776 = 4096.0f;
@@ -416,10 +416,10 @@ asm void JASChannel::initialUpdateDSPChannel(JASDsp::TChannel* param_0) {
 
 /* ############################################################################################## */
 /* 804556B8-804556BC 0004+00 s=1 e=0 z=0  None .sdata2    @832                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_832 = 32028.5f;
+SECTION_SDATA2 static f32 lit_832 = 32028.5f;
 
 /* 804556BC-804556C0 0004+00 s=1 e=0 z=0  None .sdata2    @833                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_833 = 48000.0f;
+SECTION_SDATA2 static f32 lit_833 = 48000.0f;
 
 /* 8029B324-8029B6A0 037C+00 s=1 e=0 z=0  None .text      updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel           */
 #pragma push
@@ -434,10 +434,10 @@ asm void JASChannel::updateDSPChannel(JASDsp::TChannel* param_0) {
 
 /* ############################################################################################## */
 /* 804556C0-804556C4 0004+00 s=1 e=0 z=0  None .sdata2    @846                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_846 = 0.7070000171661377f;
+SECTION_SDATA2 static f32 lit_846 = 0.7070000171661377f;
 
 /* 804556C4-804556C8 0004+00 s=1 e=0 z=0  None .sdata2    @847                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_847 = 127.5f;
+SECTION_SDATA2 static f32 lit_847 = 127.5f;
 
 /* 8029B6A0-8029B7D8 0138+00 s=1 e=0 z=0  None .text      updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff        */
 #pragma push
@@ -478,7 +478,7 @@ SECTION_DATA static void* lit_974[8 + 1 /* padding */] = {
 };
 
 /* 804556C8-804556CC 0004+00 s=1 e=0 z=0  None .sdata2    @969                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_969 = -1303.7972412109375f;
+SECTION_SDATA2 static f32 lit_969 = -1303.7972412109375f;
 
 /* 804556CC-804556D0 0004+00 s=1 e=0 z=0  None .sdata2    @970                                                         */
 SECTION_SDATA2 static f32 lit_970 = 1303.7972412109375f;
@@ -490,7 +490,7 @@ SECTION_SDATA2 static f32 lit_971 = 3.1415927410125732f;
 SECTION_SDATA2 static f32 lit_972 = 0.326119989156723f;
 
 /* 804556D8-804556E0 0004+04 s=1 e=0 z=0  None .sdata2    @973                                                         */
-SECTION_SDATA2 static f32 JASChannel__lit_973[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_973[1 + 1 /* padding */] = {
 	0.34775999188423157f,
 	/* padding */
 	0.0f,

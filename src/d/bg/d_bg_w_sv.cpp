@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cXyz {
+struct cBgS_PolyInfo {
+};
+
+struct csXyz {
 };
 
 struct cBgD_t {
 };
 
-struct cBgS_PolyInfo {
-};
-
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgWSv {
@@ -67,10 +67,7 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct cBgS_GrpPassChk {
-};
-
-struct dBgS_SphChk {
+struct dBgS_SplGrpChk {
 };
 
 struct dBgS_Acch {
@@ -79,16 +76,19 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
-struct fopAc_ac_c {
+struct cBgS_GrpPassChk {
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_SphChk {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dBgS_RoofChk {
 };
 
-struct dBgS_SplGrpChk {
+struct cBgS_PolyPassChk {
 };
 
 struct dBgW {
@@ -276,12 +276,12 @@ asm void dBgWSv::CrrPos(cBgS_PolyInfo const& param_0, void* param_1, bool param_
 
 /* ############################################################################################## */
 /* 80452758-8045275C 0004+00 s=1 e=0 z=0  None .sdata2    @3807                                                        */
-SECTION_SDATA2 static u8 d_bg_d_bg_w_sv__lit_3807[4] = {
+SECTION_SDATA2 static u8 lit_3807[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045275C-80452760 0004+00 s=1 e=0 z=0  None .sdata2    @3808                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_sv__lit_3808 = 1.0f;
+SECTION_SDATA2 static f32 lit_3808 = 1.0f;
 
 /* 80083300-8008351C 021C+00 s=1 e=0 z=0  None .text      TransPosWork__6dBgWSvFP4cXyziii                              */
 #pragma push

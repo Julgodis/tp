@@ -57,7 +57,7 @@ lbl_8018D764:
 /* 8018D840 000000DC  38 A0 00 01 */	li r5, 1
 /* 8018D844 000000E0  48 00 78 B1 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8018D848 000000E4  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 8018D84C 000000E8  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018D84C 000000E8  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018D850 000000EC  48 00 7A 51 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018D854 000000F0  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 8018D858 000000F4  C0 22 9F 68 */	lfs f1, lit_6069(r2)

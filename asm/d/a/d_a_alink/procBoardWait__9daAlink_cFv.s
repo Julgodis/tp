@@ -51,7 +51,7 @@ lbl_80106C78:
 /* 80106C84 0000000C  A8 9F 30 0A */	lha r4, 0x300a(r31)
 /* 80106C88 00000010  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 80106C8C 00000014  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 80106C90 00000018  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 80106C90 00000018  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038DEE2 */
 /* 80106C94 0000001C  7C 04 00 00 */	cmpw r4, r0
 /* 80106C98 00000020  40 82 00 14 */	bne lbl_80106CAC
 /* 80106C9C 00000024  7F E3 FB 78 */	mr r3, r31
@@ -134,12 +134,12 @@ lbl_80106DB0:
 /* 80106DB4 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80106DB8 00000008  3C 80 80 39 */	lis r4, m__19daAlinkHIO_board_c0@ha
 /* 80106DBC 0000000C  38 E4 E8 70 */	addi r7, r4, m__19daAlinkHIO_board_c0@l
-/* 80106DC0 00000010  C0 47 00 68 */	lfs f2, 0x68(r7)
-/* 80106DC4 00000014  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 80106DC0 00000010  C0 47 00 68 */	lfs f2, 0x68(r7)	/* effective address: 8038E8D8 */
+/* 80106DC4 00000014  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 80106DC8 00000018  38 80 00 F4 */	li r4, 0xf4
 /* 80106DCC 0000001C  38 A0 00 F5 */	li r5, 0xf5
 /* 80106DD0 00000020  38 C0 00 0B */	li r6, 0xb
-/* 80106DD4 00000024  C0 87 00 6C */	lfs f4, 0x6c(r7)
+/* 80106DD4 00000024  C0 87 00 6C */	lfs f4, 0x6c(r7)	/* effective address: 8038E8DC */
 /* 80106DD8 00000028  4B FA 5C 3D */	bl setDoubleAnime__9daAlink_cFfffQ29daAlink_c11daAlink_ANMQ29daAlink_c11daAlink_ANMif
 /* 80106DDC 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 80106DE0 00000030  FC 20 F8 90 */	fmr f1, f31

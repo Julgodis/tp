@@ -18,8 +18,8 @@ lbl_80046DE8:
 /* 80046DE8 00000000  80 1F 00 A4 */	lwz r0, 0xa4(r31)
 /* 80046DEC 00000004  2C 00 00 02 */	cmpwi r0, 2
 /* 80046DF0 00000008  40 82 00 5C */	bne lbl_80046E4C
-/* 80046DF4 0000000C  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
-/* 80046DF8 00000010  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
+/* 80046DF4 0000000C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80046DF8 00000010  38 63 9F 60 */	addi r3, r3, stringBase0@l
 /* 80046DFC 00000014  38 83 01 4B */	addi r4, r3, 0x14b
 /* 80046E00 00000018  3C 60 80 04 */	lis r3, allOffObjectCallBack__FP10fopAc_ac_cPv@ha
 /* 80046E04 0000001C  38 63 6C 9C */	addi r3, r3, allOffObjectCallBack__FP10fopAc_ac_cPv@l

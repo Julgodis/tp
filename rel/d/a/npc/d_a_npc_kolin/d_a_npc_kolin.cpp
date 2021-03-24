@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80559C18 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Kolin_c {
@@ -61,6 +61,8 @@ struct daNpc_Kolin_c {
 	/* 80555DC4 */ void changeAnm(int*, int*);
 	/* 80555DEC */ void changeBck(int*, int*);
 	/* 80555E38 */ void selectAction();
+	/* 80555F28 */ void chkAction(int (daNpc_Kolin_c::*)(void*));
+	/* 80555F54 */ void setAction(int (daNpc_Kolin_c::*)(void*));
 	/* 80555FFC */ void calcFollowSpeedAndAngle(fopAc_ac_c*, int, int);
 	/* 805563BC */ void followPlayer(int);
 	/* 805567AC */ void lookup(u8);
@@ -249,8 +251,8 @@ extern "C" void drawOtherMdl__13daNpc_Kolin_cFv(); // 1
 extern "C" void changeAnm__13daNpc_Kolin_cFPiPi(); // 1
 extern "C" void changeBck__13daNpc_Kolin_cFPiPi(); // 1
 extern "C" void selectAction__13daNpc_Kolin_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i(); // 1
 extern "C" void calcFollowSpeedAndAngle__13daNpc_Kolin_cFP10fopAc_ac_cii(); // 1
 extern "C" void followPlayer__13daNpc_Kolin_cFi(); // 1
 extern "C" void getDistTable__12dAttention_cFi(); // 1
@@ -905,7 +907,7 @@ asm void daNpc_Kolin_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i() {
+asm void daNpc_Kolin_c::chkAction(int (daNpc_Kolin_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i.s"
 }
@@ -916,7 +918,7 @@ extern "C" asm static void chkAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i() {
+asm void daNpc_Kolin_c::setAction(int (daNpc_Kolin_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolin/d_a_npc_kolin/setAction__13daNpc_Kolin_cFM13daNpc_Kolin_cFPCvPvPv_i.s"
 }

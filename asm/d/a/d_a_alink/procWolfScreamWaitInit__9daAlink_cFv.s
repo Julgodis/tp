@@ -17,10 +17,10 @@ lbl_80136F88:
 /* 80136F8C 00000004  38 80 00 00 */	li r4, 0
 /* 80136F90 00000008  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 80136F94 0000000C  38 A5 EF 28 */	addi r5, r5, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 80136F98 00000010  C0 25 00 14 */	lfs f1, 0x14(r5)
+/* 80136F98 00000010  C0 25 00 14 */	lfs f1, 0x14(r5)	/* effective address: 8038EF3C */
 /* 80136F9C 00000014  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 80136FA0 00000018  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
-/* 80136FA4 0000001C  C0 45 00 BC */	lfs f2, 0xbc(r5)
+/* 80136FA4 0000001C  C0 45 00 BC */	lfs f2, 0xbc(r5)	/* effective address: 8038EEE4 */
 /* 80136FA8 00000020  4B FF 27 31 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 80136FAC 00000024  38 00 00 00 */	li r0, 0
 /* 80136FB0 00000028  B0 1F 30 0C */	sth r0, 0x300c(r31)
@@ -32,9 +32,9 @@ lbl_80136FB4:
 /* 80136FC4 00000010  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 80136FC8 00000014  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 80136FCC 00000018  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 80136FD0 0000001C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80136FD0 0000001C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 80136FD4 00000020  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 80136FD8 00000024  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80136FD8 00000024  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 80136FDC 00000028  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 80136FE0 0000002C  38 60 00 01 */	li r3, 1
 /* 80136FE4 00000030  83 E1 00 0C */	lwz r31, 0xc(r1)

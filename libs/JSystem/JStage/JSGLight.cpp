@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct _GXColor {
-};
-
 struct Vec {
 };
 
 struct _GXSpotFn {
+};
+
+struct _GXColor {
 };
 
 struct _GXDistAttnFn {
@@ -186,7 +186,7 @@ asm void JStage::TLight::JSGSetLightType(JStage::TELight param_0) {
 
 /* ############################################################################################## */
 /* 804553E8-804553F0 0004+04 s=1 e=0 z=0  None .sdata2    @311                                                         */
-SECTION_SDATA2 static u32 JSGLight__lit_311[1 + 1 /* padding */] = {
+SECTION_SDATA2 static u32 lit_311[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,

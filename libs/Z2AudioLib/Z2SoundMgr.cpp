@@ -17,10 +17,7 @@ struct JASTrack {
 	/* 80292918 */ void writePort(u32, u16);
 };
 
-struct JAISoundID {
-};
-
-struct JAISoundHandle {
+struct JAISound {
 };
 
 struct JGeometry {
@@ -32,7 +29,10 @@ struct JGeometry {
 
 };
 
-struct JAISound {
+struct JAISoundHandle {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundMgr {
@@ -143,7 +143,7 @@ extern "C" void stop__10Z2SoundMgrFv(); // 1
 extern "C" void initParams__10Z2SoundMgrFv(); // 1
 extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
 extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID(); // 1
-extern "C" extern char const* const Z2SoundMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 
 // 
@@ -218,7 +218,7 @@ extern "C" extern u8 struct_80451340[8];
 
 /* ############################################################################################## */
 /* 803C9D18-803C9D70 0058+00 s=1 e=0 z=0  None .data      @3690                                                        */
-SECTION_DATA static void* Z2SoundMgr__lit_3690[22] = {
+SECTION_DATA static void* lit_3690[22] = {
 	/* 0    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
 	/* 1    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
 	/* 2    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x88),
@@ -244,10 +244,10 @@ SECTION_DATA static void* Z2SoundMgr__lit_3690[22] = {
 };
 
 /* 80455838-8045583C 0004+00 s=5 e=0 z=0  None .sdata2    @3688                                                        */
-SECTION_SDATA2 static f32 Z2SoundMgr__lit_3688 = 1.0f;
+SECTION_SDATA2 static f32 lit_3688 = 1.0f;
 
 /* 8045583C-80455840 0004+00 s=1 e=0 z=0  None .sdata2    @3689                                                        */
-SECTION_SDATA2 static f32 Z2SoundMgr__lit_3689 = -1.0f;
+SECTION_SDATA2 static f32 lit_3689 = -1.0f;
 
 /* 802A9BC8-802A9E80 02B8+00 s=1 e=1 z=0  None .text      seqCallback__FP8JASTrackUs                                   */
 #pragma push
@@ -297,15 +297,15 @@ SECTION_DEAD static char const* const pad_8039B9ED = "\0\0";
 #pragma pop
 
 /* 80455840-80455844 0004+00 s=1 e=0 z=0  None .sdata2    @3904                                                        */
-SECTION_SDATA2 static f32 Z2SoundMgr__lit_3904 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3904 = 3.0f / 10.0f;
 
 /* 80455844-80455848 0004+00 s=3 e=0 z=0  None .sdata2    @3905                                                        */
-SECTION_SDATA2 static u8 Z2SoundMgr__lit_3905[4] = {
+SECTION_SDATA2 static u8 lit_3905[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455848-80455850 0008+00 s=2 e=0 z=0  None .sdata2    @3909                                                        */
-SECTION_SDATA2 static f64 Z2SoundMgr__lit_3909 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3909 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802A9EE8-802AA1B0 02C8+00 s=1 e=0 z=0  None .text      startSound__10Z2SoundMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
@@ -430,7 +430,7 @@ asm void Z2SoundMgr::stop() {
 
 /* ############################################################################################## */
 /* 80455850-80455858 0004+04 s=1 e=0 z=0  None .sdata2    @4313                                                        */
-SECTION_SDATA2 static f32 Z2SoundMgr__lit_4313[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4313[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

@@ -24,7 +24,7 @@ lbl_8015605C:
 /* 801560B4 00000058  38 C0 00 00 */	li r6, 0
 /* 801560B8 0000005C  38 E0 00 00 */	li r7, 0
 /* 801560BC 00000060  39 00 FF FF */	li r8, -1
-/* 801560C0 00000064  C0 22 9A B8 */	lfs f1, a_npc_d_a_npc_cd__lit_4021(r2)
+/* 801560C0 00000064  C0 22 9A B8 */	lfs f1, lit_4021(r2)
 /* 801560C4 00000068  39 20 00 00 */	li r9, 0
 /* 801560C8 0000006C  39 40 FF FF */	li r10, -1
 /* 801560CC 00000070  4B EB A7 05 */	bl __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl
@@ -79,8 +79,8 @@ lbl_80156110:
 /* 80156184 00000074  D0 23 00 44 */	stfs f1, 0x44(r3)
 /* 80156188 00000078  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 8015618C 0000007C  38 A0 00 00 */	li r5, 0
-/* 80156190 00000080  3C 60 80 15 */	lis r3, a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi@ha
-/* 80156194 00000084  38 83 60 10 */	addi r4, r3, a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi@l
+/* 80156190 00000080  3C 60 80 15 */	lis r3, jntNodeCallBack__FP8J3DJointi@ha
+/* 80156194 00000084  38 83 60 10 */	addi r4, r3, jntNodeCallBack__FP8J3DJointi@l
 /* 80156198 00000088  48 00 00 18 */	b lbl_801561B0
 lbl_8015619C:
 /* 8015619C 00000000  80 7F 00 28 */	lwz r3, 0x28(r31)

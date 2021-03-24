@@ -43,7 +43,7 @@ lbl_800DC820:
 /* 800DC830 00000010  41 82 00 7C */	beq lbl_800DC8AC
 /* 800DC834 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DC838 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DC83C 0000001C  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800DC83C 0000001C  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800DC840 00000020  28 00 00 FF */	cmplwi r0, 0xff
 /* 800DC844 00000024  41 82 00 5C */	beq lbl_800DC8A0
 /* 800DC848 00000028  38 60 00 43 */	li r3, 0x43
@@ -59,9 +59,9 @@ lbl_800DC820:
 lbl_800DC870:
 /* 800DC870 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DC874 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DC878 00000008  A8 03 5D F4 */	lha r0, 0x5df4(r3)
+/* 800DC878 00000008  A8 03 5D F4 */	lha r0, 0x5df4(r3)	/* effective address: 8040BFB4 */
 /* 800DC87C 0000000C  7C 00 FA 14 */	add r0, r0, r31
-/* 800DC880 00000010  B0 03 5D F4 */	sth r0, 0x5df4(r3)
+/* 800DC880 00000010  B0 03 5D F4 */	sth r0, 0x5df4(r3)	/* effective address: 8040BFB4 */
 /* 800DC884 00000014  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 800DC888 00000018  38 A0 FF FF */	li r5, -1
 /* 800DC88C 0000001C  38 C0 00 00 */	li r6, 0

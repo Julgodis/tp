@@ -6,7 +6,7 @@ lbl_8032A29C:
 /* 8032A2AC 00000010  98 A3 00 04 */	stb r5, 4(r3)
 /* 8032A2B0 00000014  98 A3 00 05 */	stb r5, 5(r3)
 /* 8032A2B4 00000018  B0 A3 00 06 */	sth r5, 6(r3)
-/* 8032A2B8 0000001C  C0 02 CA 34 */	lfs f0, J3DAnimation__lit_853(r2)
+/* 8032A2B8 0000001C  C0 02 CA 34 */	lfs f0, lit_853(r2)
 /* 8032A2BC 00000020  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8032A2C0 00000024  3C 80 80 3D */	lis r4, __vt__14J3DAnmVtxColor@ha
 /* 8032A2C4 00000028  38 04 ED D4 */	addi r0, r4, __vt__14J3DAnmVtxColor@l

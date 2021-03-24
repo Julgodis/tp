@@ -13,7 +13,7 @@ lbl_8002E0E0:
 lbl_8002E10C:
 /* 8002E10C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002E110 00000004  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 8002E114 00000008  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
+/* 8002E114 00000008  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 8002E118 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8002E11C 00000010  40 82 00 08 */	bne lbl_8002E124
 /* 8002E120 00000014  48 00 01 0D */	bl dComIfGp_createSubExpHeap2D__Fv
@@ -37,7 +37,7 @@ lbl_8002E14C:
 lbl_8002E160:
 /* 8002E160 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002E164 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E168 00000008  9B C3 5E 8F */	stb r30, 0x5e8f(r3)
+/* 8002E168 00000008  9B C3 5E 8F */	stb r30, 0x5e8f(r3)	/* effective address: 8040C04F */
 lbl_8002E16C:
 /* 8002E16C 00000000  38 60 00 01 */	li r3, 1
 /* 8002E170 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -149,7 +149,7 @@ lbl_801129C8:
 /* 80112A24 0000005C  38 7F 10 DC */	addi r3, r31, 0x10dc
 /* 80112A28 00000060  3C 80 80 39 */	lis r4, m__22daAlinkHIO_ironBall_c0@ha
 /* 80112A2C 00000064  38 84 EA 70 */	addi r4, r4, m__22daAlinkHIO_ironBall_c0@l
-/* 80112A30 00000068  C0 24 00 7C */	lfs f1, 0x7c(r4)
+/* 80112A30 00000068  C0 24 00 7C */	lfs f1, 0x7c(r4)	/* effective address: 8038EAEC */
 /* 80112A34 0000006C  48 15 CC D5 */	bl SetR__8cM3dGSphFf
 /* 80112A38 00000070  81 1F 38 44 */	lwz r8, 0x3844(r31)
 /* 80112A3C 00000074  39 20 00 00 */	li r9, 0

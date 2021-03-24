@@ -462,7 +462,7 @@ extern "C" void memory_to_card__10dSv_info_cFPci(); // 1
 extern "C" void card_to_memory__10dSv_info_cFPci(); // 1
 extern "C" void initdata_to_card__10dSv_info_cFPci(); // 1
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
-extern "C" extern char const* const d_save_d_save__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 
 // 
@@ -612,7 +612,7 @@ asm void dSv_player_status_a_c::isMagicFlag(u8 param_0) const {
 
 /* ############################################################################################## */
 /* 80451D58-80451D5C 0004+00 s=1 e=0 z=0  None .sdata2    @3775                                                        */
-SECTION_SDATA2 static f32 d_save_d_save__lit_3775 = 255.0f;
+SECTION_SDATA2 static f32 lit_3775 = 255.0f;
 
 /* 80032B50-80032B94 0044+00 s=1 e=0 z=0  None .text      init__21dSv_player_status_b_cFv                              */
 #pragma push

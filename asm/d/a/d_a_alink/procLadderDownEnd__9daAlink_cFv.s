@@ -24,7 +24,7 @@ lbl_800FDD1C:
 /* 800FDD1C 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800FDD20 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FDD24 00000008  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FDD28 0000000C  C0 03 00 54 */	lfs f0, 0x54(r3)
+/* 800FDD28 0000000C  C0 03 00 54 */	lfs f0, 0x54(r3)	/* effective address: 8038EBE0 */
 /* 800FDD2C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FDD30 00000000  40 81 00 18 */	ble lbl_800FDD48
 /* 800FDD34 00000004  7F C3 F3 78 */	mr r3, r30

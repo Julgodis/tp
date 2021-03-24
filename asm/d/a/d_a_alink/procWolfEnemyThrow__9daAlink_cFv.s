@@ -26,7 +26,7 @@ lbl_8013CCB4:
 /* 8013CCB4 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 8013CCB8 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtBite_c0@ha
 /* 8013CCBC 00000008  38 63 F7 48 */	addi r3, r3, m__22daAlinkHIO_wlAtBite_c0@l
-/* 8013CCC0 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 8013CCC0 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038F77C */
 /* 8013CCC4 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013CCC8 00000000  40 81 00 10 */	ble lbl_8013CCD8
 /* 8013CCCC 00000004  7F C3 F3 78 */	mr r3, r30

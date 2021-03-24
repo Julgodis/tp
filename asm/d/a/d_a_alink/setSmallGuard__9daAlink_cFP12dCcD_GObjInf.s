@@ -28,7 +28,7 @@ lbl_800DD1D4:
 lbl_800DD23C:
 /* 800DD23C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_guard_c0@ha
 /* 800DD240 00000004  38 63 DF 9C */	addi r3, r3, m__19daAlinkHIO_guard_c0@l
-/* 800DD244 00000008  A8 A3 00 56 */	lha r5, 0x56(r3)
+/* 800DD244 00000008  A8 A3 00 56 */	lha r5, 0x56(r3)	/* effective address: 8038DFF2 */
 /* 800DD248 0000000C  7C 05 00 D0 */	neg r0, r5
 /* 800DD24C 00000010  7C 00 07 34 */	extsh r0, r0
 /* 800DD250 00000014  A8 9D 05 9E */	lha r4, 0x59e(r29)
@@ -48,7 +48,7 @@ lbl_800DD278:
 lbl_800DD27C:
 /* 800DD27C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_guard_c0@ha
 /* 800DD280 00000004  38 63 DF 9C */	addi r3, r3, m__19daAlinkHIO_guard_c0@l
-/* 800DD284 00000008  AB C3 00 58 */	lha r30, 0x58(r3)
+/* 800DD284 00000008  AB C3 00 58 */	lha r30, 0x58(r3)	/* effective address: 8038DFF4 */
 /* 800DD288 0000000C  7C 1E 00 D0 */	neg r0, r30
 /* 800DD28C 00000010  7C 1C 07 34 */	extsh r28, r0
 /* 800DD290 00000014  C0 3F 00 08 */	lfs f1, 8(r31)
@@ -63,7 +63,7 @@ lbl_800DD27C:
 /* 800DD2B4 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DD2B8 00000000  40 81 00 58 */	ble lbl_800DD310
 /* 800DD2BC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800DD2C0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800DD2C0 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800DD2C4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800DD2C8 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800DD2CC 00000014  FC 00 00 32 */	fmul f0, f0, f0

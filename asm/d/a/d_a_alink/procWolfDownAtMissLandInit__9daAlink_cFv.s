@@ -25,13 +25,13 @@ lbl_8013BC94:
 /* 8013BCF0 0000005C  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8013BCF4 00000060  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8013BCF8 00000064  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8013BCFC 00000068  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8013BCFC 00000068  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8013BD00 0000006C  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8013BD04 00000070  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8013BD04 00000070  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8013BD08 00000074  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 8013BD0C 00000078  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013BD10 0000007C  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013BD14 00000080  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013BD14 00000080  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013BD18 00000084  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8013BD1C 00000088  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8013BD20 0000008C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

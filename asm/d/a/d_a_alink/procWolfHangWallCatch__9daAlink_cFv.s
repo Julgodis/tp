@@ -63,10 +63,10 @@ lbl_80135BA4:
 /* 80135BDC 00000038  38 80 00 19 */	li r4, 0x19
 /* 80135BE0 0000003C  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 80135BE4 00000040  38 A5 F1 A0 */	addi r5, r5, m__24daAlinkHIO_wlWallHang_c0@l
-/* 80135BE8 00000044  C0 25 00 2C */	lfs f1, 0x2c(r5)
+/* 80135BE8 00000044  C0 25 00 2C */	lfs f1, 0x2c(r5)	/* effective address: 8038F1CC */
 /* 80135BEC 00000048  C0 42 93 BC */	lfs f2, lit_10042(r2)
-/* 80135BF0 0000004C  A8 A5 00 28 */	lha r5, 0x28(r5)
-/* 80135BF4 00000050  C0 62 93 3C */	lfs f3, d_a_d_a_alink__lit_7808(r2)
+/* 80135BF0 0000004C  A8 A5 00 28 */	lha r5, 0x28(r5)	/* effective address: 8038F1C8 */
+/* 80135BF4 00000050  C0 62 93 3C */	lfs f3, lit_7808(r2)
 /* 80135BF8 00000054  4B FF 3B 0D */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 80135BFC 00000058  38 00 00 01 */	li r0, 1
 /* 80135C00 0000005C  B0 1F 30 10 */	sth r0, 0x3010(r31)
@@ -76,9 +76,9 @@ lbl_80135C08:
 /* 80135C0C 00000004  38 80 00 13 */	li r4, 0x13
 /* 80135C10 00000008  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 80135C14 0000000C  38 A5 F1 A0 */	addi r5, r5, m__24daAlinkHIO_wlWallHang_c0@l
-/* 80135C18 00000010  C0 25 00 18 */	lfs f1, 0x18(r5)
+/* 80135C18 00000010  C0 25 00 18 */	lfs f1, 0x18(r5)	/* effective address: 8038F1B8 */
 /* 80135C1C 00000014  C0 42 94 94 */	lfs f2, lit_16210(r2)
-/* 80135C20 00000018  A8 A5 00 14 */	lha r5, 0x14(r5)
+/* 80135C20 00000018  A8 A5 00 14 */	lha r5, 0x14(r5)	/* effective address: 8038F1B4 */
 /* 80135C24 0000001C  C0 62 93 14 */	lfs f3, lit_7307(r2)
 /* 80135C28 00000020  4B FF 3A DD */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 80135C2C 00000024  38 00 00 01 */	li r0, 1
@@ -109,7 +109,7 @@ lbl_80135C78:
 /* 80135C84 0000000C  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 80135C88 00000010  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 80135C8C 00000014  38 63 F1 A0 */	addi r3, r3, m__24daAlinkHIO_wlWallHang_c0@l
-/* 80135C90 00000018  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 80135C90 00000018  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038F1C4 */
 /* 80135C94 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80135C98 00000000  40 81 00 24 */	ble lbl_80135CBC
 /* 80135C9C 00000004  7F E3 FB 78 */	mr r3, r31

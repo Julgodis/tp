@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -81,7 +81,7 @@ extern "C" void fukiAlpha__15dMsgScrnStaff_cFf(); // 1
 extern "C" void fukiScale__15dMsgScrnStaff_cFf(); // 1
 extern "C" void fukiTrans__15dMsgScrnStaff_cFff(); // 1
 extern "C" void fontAlpha__15dMsgScrnStaff_cFf(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_staff__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -175,7 +175,7 @@ SECTION_DATA static void* __vt__15dMsgScrnStaff_c[22] = {
 };
 
 /* 80454CF8-80454CFC 0004+00 s=2 e=0 z=0  None .sdata2    @3842                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_staff__lit_3842[4] = {
+SECTION_SDATA2 static u8 lit_3842[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -203,7 +203,7 @@ asm dMsgScrnStaff_c::~dMsgScrnStaff_c() {
 
 /* ############################################################################################## */
 /* 80454CFC-80454D00 0004+00 s=2 e=0 z=0  None .sdata2    @3877                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_staff__lit_3877 = 1.0f;
+SECTION_SDATA2 static f32 lit_3877 = 1.0f;
 
 /* 80246EE8-80246F68 0080+00 s=1 e=0 z=0  None .text      exec__15dMsgScrnStaff_cFv                                    */
 #pragma push

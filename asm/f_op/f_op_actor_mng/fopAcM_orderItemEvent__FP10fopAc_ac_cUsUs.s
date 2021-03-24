@@ -9,7 +9,7 @@ lbl_8001B9D0:
 /* 8001B9EC 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8001B9F0 00000020  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8001B9F4 00000024  38 00 00 00 */	li r0, 0
-/* 8001B9F8 00000028  88 83 00 E5 */	lbz r4, 0xe5(r3)
+/* 8001B9F8 00000028  88 83 00 E5 */	lbz r4, 0xe5(r3)	/* effective address: 8040B16D */
 /* 8001B9FC 0000002C  28 04 00 00 */	cmplwi r4, 0
 /* 8001BA00 00000030  41 82 00 0C */	beq lbl_8001BA0C
 /* 8001BA04 00000034  28 04 00 02 */	cmplwi r4, 2
@@ -40,7 +40,7 @@ lbl_8001BA40:
 /* 8001BA54 00000014  38 E7 FF FF */	addi r7, r7, 0xFFFF /* 0x0000FFFF@l */
 /* 8001BA58 00000018  3D 00 80 40 */	lis r8, g_dComIfG_gameInfo@ha
 /* 8001BA5C 0000001C  39 08 61 C0 */	addi r8, r8, g_dComIfG_gameInfo@l
-/* 8001BA60 00000020  81 08 5D AC */	lwz r8, 0x5dac(r8)
+/* 8001BA60 00000020  81 08 5D AC */	lwz r8, 0x5dac(r8)	/* effective address: 8040BF6C */
 /* 8001BA64 00000024  39 40 FF FF */	li r10, -1
 /* 8001BA68 00000028  48 02 5C 01 */	bl order__14dEvt_control_cFUsUsUsUsPvPvsUc
 lbl_8001BA6C:

@@ -62,12 +62,12 @@ lbl_800B9760:
 /* 800B9784 0000001C  40 82 00 14 */	bne lbl_800B9798
 /* 800B9788 00000020  3C 60 80 39 */	lis r3, m__18daAlinkHIO_item_c0@ha
 /* 800B978C 00000024  38 63 EB 50 */	addi r3, r3, m__18daAlinkHIO_item_c0@l
-/* 800B9790 00000028  C0 23 00 38 */	lfs f1, 0x38(r3)
+/* 800B9790 00000028  C0 23 00 38 */	lfs f1, 0x38(r3)	/* effective address: 8038EB88 */
 /* 800B9794 0000002C  48 00 00 1C */	b lbl_800B97B0
 lbl_800B9798:
 /* 800B9798 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_item_c0@ha
 /* 800B979C 00000004  38 63 EB 50 */	addi r3, r3, m__18daAlinkHIO_item_c0@l
-/* 800B97A0 00000008  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 800B97A0 00000008  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038EB84 */
 /* 800B97A4 0000000C  48 00 00 0C */	b lbl_800B97B0
 lbl_800B97A8:
 /* 800B97A8 00000000  C0 1D 00 04 */	lfs f0, 4(r29)

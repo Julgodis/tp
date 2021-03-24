@@ -48,7 +48,7 @@ lbl_802679E4:
 /* 80267A9C 000000B8  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80267AA0 000000BC  EC 02 00 2A */	fadds f0, f2, f0
 /* 80267AA4 000000C0  EC 23 00 2A */	fadds f1, f3, f0
-/* 80267AA8 000000C4  C8 42 B6 D8 */	lfd f2, c_math__lit_2299(r2)
+/* 80267AA8 000000C4  C8 42 B6 D8 */	lfd f2, lit_2299(r2)
 /* 80267AAC 000000C8  48 10 4C B5 */	bl fmod
 /* 80267AB0 000000CC  FC 00 08 18 */	frsp f0, f1
 /* 80267AB4 000000D0  FC 00 02 10 */	fabs f0, f0

@@ -44,11 +44,11 @@ lbl_802E2070:
 /* 802E2070 00000000  80 0D 8F 8C */	lwz r0, sPreUserCallback__12JUTException(r13)
 /* 802E2074 00000004  3C 60 80 43 */	lis r3, exCallbackObject@ha
 /* 802E2078 00000008  38 83 45 78 */	addi r4, r3, exCallbackObject@l
-/* 802E207C 0000000C  90 04 00 00 */	stw r0, 0(r4)
-/* 802E2080 00000010  B3 84 00 04 */	sth r28, 4(r4)
-/* 802E2084 00000014  93 A4 00 08 */	stw r29, 8(r4)
-/* 802E2088 00000018  93 C4 00 0C */	stw r30, 0xc(r4)
-/* 802E208C 0000001C  93 E4 00 10 */	stw r31, 0x10(r4)
+/* 802E207C 0000000C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80434578 */
+/* 802E2080 00000010  B3 84 00 04 */	sth r28, 4(r4)	/* effective address: 8043457C */
+/* 802E2084 00000014  93 A4 00 08 */	stw r29, 8(r4)	/* effective address: 80434580 */
+/* 802E2088 00000018  93 C4 00 0C */	stw r30, 0xc(r4)	/* effective address: 80434584 */
+/* 802E208C 0000001C  93 E4 00 10 */	stw r31, 0x10(r4)	/* effective address: 80434588 */
 /* 802E2090 00000020  3C 60 80 3D */	lis r3, sMessageQueue__12JUTException@ha
 /* 802E2094 00000024  38 63 C6 20 */	addi r3, r3, sMessageQueue__12JUTException@l
 /* 802E2098 00000028  38 A0 00 01 */	li r5, 1

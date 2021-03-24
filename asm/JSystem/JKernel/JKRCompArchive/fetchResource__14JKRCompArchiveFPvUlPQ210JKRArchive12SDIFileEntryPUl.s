@@ -95,8 +95,8 @@ lbl_802D91EC:
 /* 802D9214 00000028  7C 7B 1B 78 */	mr r27, r3
 /* 802D9218 0000002C  48 00 00 20 */	b lbl_802D9238
 lbl_802D921C:
-/* 802D921C 00000000  3C 60 80 3A */	lis r3, JKRCompArchive__stringBase0@ha
-/* 802D9220 00000004  38 63 D2 20 */	addi r3, r3, JKRCompArchive__stringBase0@l
+/* 802D921C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D9220 00000004  38 63 D2 20 */	addi r3, r3, stringBase0@l
 /* 802D9224 00000008  38 80 03 08 */	li r4, 0x308
 /* 802D9228 0000000C  38 A3 00 13 */	addi r5, r3, 0x13
 /* 802D922C 00000010  38 C3 00 16 */	addi r6, r3, 0x16

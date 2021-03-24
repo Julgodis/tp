@@ -13,7 +13,7 @@ lbl_800E5170:
 /* 800E519C 0000002C  48 00 01 F8 */	b lbl_800E5394
 lbl_800E51A0:
 /* 800E51A0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800E51A4 00000004  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800E51A4 00000004  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800E51A8 00000008  4B FF FE 01 */	bl setCarryArmAngle__9daAlink_cFff
 /* 800E51AC 0000000C  80 1E 27 EC */	lwz r0, 0x27ec(r30)
 /* 800E51B0 00000010  28 00 00 00 */	cmplwi r0, 0
@@ -82,7 +82,7 @@ lbl_800E5288:
 /* 800E5290 00000008  41 82 00 34 */	beq lbl_800E52C4
 /* 800E5294 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E5298 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E529C 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800E529C 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800E52A0 00000018  28 00 00 06 */	cmplwi r0, 6
 /* 800E52A4 0000001C  40 82 00 20 */	bne lbl_800E52C4
 /* 800E52A8 00000020  7F C3 F3 78 */	mr r3, r30
@@ -135,7 +135,7 @@ lbl_800E5338:
 lbl_800E5358:
 /* 800E5358 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E535C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E5360 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800E5360 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800E5364 0000000C  28 00 00 14 */	cmplwi r0, 0x14
 /* 800E5368 00000010  40 82 00 10 */	bne lbl_800E5378
 /* 800E536C 00000014  7F C3 F3 78 */	mr r3, r30

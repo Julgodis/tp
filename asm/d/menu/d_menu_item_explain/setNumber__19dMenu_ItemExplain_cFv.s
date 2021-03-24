@@ -105,7 +105,7 @@ lbl_801DC93C:
 /* 801DC978 0000003C  40 80 00 BC */	bge lbl_801DCA34
 /* 801DC97C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801DC980 00000044  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 801DC984 00000048  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801DC984 00000048  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801DC988 0000004C  38 00 00 0A */	li r0, 0xa
 /* 801DC98C 00000050  7C 7F 03 D6 */	divw r3, r31, r0
 /* 801DC990 00000054  48 04 19 39 */	bl dMeter2Info_getNumberTextureName__Fi
@@ -152,7 +152,7 @@ lbl_801DC93C:
 lbl_801DCA34:
 /* 801DCA34 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801DCA38 00000004  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 801DCA3C 00000008  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801DCA3C 00000008  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801DCA40 0000000C  38 00 00 64 */	li r0, 0x64
 /* 801DCA44 00000010  7C 7F 03 D6 */	divw r3, r31, r0
 /* 801DCA48 00000014  48 04 18 81 */	bl dMeter2Info_getNumberTextureName__Fi

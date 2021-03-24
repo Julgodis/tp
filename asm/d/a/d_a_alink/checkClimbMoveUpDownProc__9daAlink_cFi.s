@@ -21,7 +21,7 @@ lbl_800FE5E4:
 /* 800FE5E8 00000004  C0 62 92 E0 */	lfs f3, lit_6845(r2)
 /* 800FE5EC 00000008  EC 03 01 F2 */	fmuls f0, f3, f7
 /* 800FE5F0 0000000C  EC A1 00 28 */	fsubs f5, f1, f0
-/* 800FE5F4 00000010  C0 42 93 3C */	lfs f2, d_a_d_a_alink__lit_7808(r2)
+/* 800FE5F4 00000010  C0 42 93 3C */	lfs f2, lit_7808(r2)
 /* 800FE5F8 00000014  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 800FE5FC 00000018  C0 1E 05 98 */	lfs f0, 0x598(r30)
 /* 800FE600 0000001C  EC 01 00 2A */	fadds f0, f1, f0

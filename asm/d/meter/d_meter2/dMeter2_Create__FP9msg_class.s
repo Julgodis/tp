@@ -6,11 +6,11 @@ lbl_80225B08:
 /* 80225B18 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80225B1C 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80225B20 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80225B24 0000001C  93 E3 00 1C */	stw r31, 0x1c(r3)
+/* 80225B24 0000001C  93 E3 00 1C */	stw r31, 0x1c(r3)	/* effective address: 804301A4 */
 /* 80225B28 00000020  38 00 00 01 */	li r0, 1
 /* 80225B2C 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80225B30 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80225B34 0000002C  98 03 5E B8 */	stb r0, 0x5eb8(r3)
+/* 80225B34 0000002C  98 03 5E B8 */	stb r0, 0x5eb8(r3)	/* effective address: 8040C078 */
 /* 80225B38 00000030  38 60 03 14 */	li r3, 0x314
 /* 80225B3C 00000034  38 80 00 00 */	li r4, 0
 /* 80225B40 00000038  38 A0 00 00 */	li r5, 0
@@ -18,16 +18,16 @@ lbl_80225B08:
 /* 80225B48 00000040  38 00 FF FF */	li r0, -1
 /* 80225B4C 00000044  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80225B50 00000048  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80225B54 0000004C  98 03 00 04 */	stb r0, 4(r3)
+/* 80225B54 0000004C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042EBCC */
 /* 80225B58 00000050  3C 60 80 43 */	lis r3, g_ringHIO@ha
 /* 80225B5C 00000054  38 63 FA FC */	addi r3, r3, g_ringHIO@l
-/* 80225B60 00000058  98 03 00 04 */	stb r0, 4(r3)
+/* 80225B60 00000058  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042FB00 */
 /* 80225B64 0000005C  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 80225B68 00000060  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 80225B6C 00000064  98 03 00 04 */	stb r0, 4(r3)
+/* 80225B6C 00000064  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042FC64 */
 /* 80225B70 00000068  3C 60 80 43 */	lis r3, g_cursorHIO@ha
 /* 80225B74 0000006C  38 63 01 10 */	addi r3, r3, g_cursorHIO@l
-/* 80225B78 00000070  98 03 00 04 */	stb r0, 4(r3)
+/* 80225B78 00000070  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80430114 */
 /* 80225B7C 00000074  38 60 03 13 */	li r3, 0x313
 /* 80225B80 00000078  38 80 00 00 */	li r4, 0
 /* 80225B84 0000007C  38 A0 00 00 */	li r5, 0

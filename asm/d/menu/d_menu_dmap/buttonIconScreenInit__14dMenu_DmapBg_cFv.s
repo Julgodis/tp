@@ -16,13 +16,13 @@ lbl_801B8A0C:
 lbl_801B8A44:
 /* 801B8A44 00000000  90 1E 0C B4 */	stw r0, 0xcb4(r30)
 /* 801B8A48 00000004  80 7E 0C B4 */	lwz r3, 0xcb4(r30)
-/* 801B8A4C 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B8A50 0000000C  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
+/* 801B8A4C 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B8A50 0000000C  38 84 57 60 */	addi r4, r4, stringBase0@l
 /* 801B8A54 00000010  38 84 00 4D */	addi r4, r4, 0x4d
 /* 801B8A58 00000014  3C A0 00 02 */	lis r5, 2
 /* 801B8A5C 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 801B8A60 0000001C  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
-/* 801B8A64 00000020  80 C6 5C C0 */	lwz r6, 0x5cc0(r6)
+/* 801B8A64 00000020  80 C6 5C C0 */	lwz r6, 0x5cc0(r6)	/* effective address: 8040BE80 */
 /* 801B8A68 00000024  48 13 FB E1 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801B8A6C 00000028  80 7E 0C B4 */	lwz r3, 0xcb4(r30)
 /* 801B8A70 0000002C  48 09 C6 79 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -102,8 +102,8 @@ lbl_801B8B84:
 /* 801B8B8C 00000008  90 1E 0C EC */	stw r0, 0xcec(r30)
 /* 801B8B90 0000000C  3A C0 00 00 */	li r22, 0
 /* 801B8B94 00000010  3B A0 00 00 */	li r29, 0
-/* 801B8B98 00000014  3C 60 80 39 */	lis r3, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B8B9C 00000018  3B 43 57 60 */	addi r26, r3, d_menu_d_menu_dmap__stringBase0@l
+/* 801B8B98 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801B8B9C 00000018  3B 43 57 60 */	addi r26, r3, stringBase0@l
 /* 801B8BA0 0000001C  3B 7F 00 00 */	addi r27, r31, 0
 /* 801B8BA4 00000020  3B 9F 00 28 */	addi r28, r31, 0x28
 lbl_801B8BA8:
@@ -204,8 +204,8 @@ lbl_801B8D10:
 /* 801B8D1C 0000000C  3A E0 00 00 */	li r23, 0
 /* 801B8D20 00000010  3B A0 00 00 */	li r29, 0
 /* 801B8D24 00000014  3B 9F 00 A0 */	addi r28, r31, 0xa0
-/* 801B8D28 00000018  3C 60 80 39 */	lis r3, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B8D2C 0000001C  3B E3 57 60 */	addi r31, r3, d_menu_d_menu_dmap__stringBase0@l
+/* 801B8D28 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801B8D2C 0000001C  3B E3 57 60 */	addi r31, r3, stringBase0@l
 lbl_801B8D30:
 /* 801B8D30 00000000  80 7E 0C B4 */	lwz r3, 0xcb4(r30)
 /* 801B8D34 00000004  7C DC EA 14 */	add r6, r28, r29
@@ -240,13 +240,13 @@ lbl_801B8DA4:
 /* 801B8DA4 00000000  80 7E 0C F8 */	lwz r3, 0xcf8(r30)
 /* 801B8DA8 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 801B8DAC 00000008  41 82 00 10 */	beq lbl_801B8DBC
-/* 801B8DB0 0000000C  C0 22 A6 04 */	lfs f1, d_menu_d_menu_dmap__lit_4191(r2)
-/* 801B8DB4 00000010  C0 42 A5 E8 */	lfs f2, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801B8DB0 0000000C  C0 22 A6 04 */	lfs f1, lit_4191(r2)
+/* 801B8DB4 00000010  C0 42 A5 E8 */	lfs f2, lit_3962(r2)
 /* 801B8DB8 00000014  48 09 B7 F9 */	bl paneTrans__8CPaneMgrFff
 lbl_801B8DBC:
 /* 801B8DBC 00000000  80 7E 0C F4 */	lwz r3, 0xcf4(r30)
-/* 801B8DC0 00000004  C0 22 A6 08 */	lfs f1, d_menu_d_menu_dmap__lit_4192(r2)
-/* 801B8DC4 00000008  C0 42 A5 E8 */	lfs f2, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801B8DC0 00000004  C0 22 A6 08 */	lfs f1, lit_4192(r2)
+/* 801B8DC4 00000008  C0 42 A5 E8 */	lfs f2, lit_3962(r2)
 /* 801B8DC8 0000000C  48 09 B7 E9 */	bl paneTrans__8CPaneMgrFff
 /* 801B8DCC 00000010  39 61 00 30 */	addi r11, r1, 0x30
 /* 801B8DD0 00000014  48 1A 94 3D */	bl _restgpr_22

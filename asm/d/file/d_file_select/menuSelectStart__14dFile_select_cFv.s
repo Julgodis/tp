@@ -11,9 +11,9 @@ lbl_801868EC:
 /* 80186910 00000024  38 A0 00 00 */	li r5, 0
 /* 80186914 00000028  38 C0 00 00 */	li r6, 0
 /* 80186918 0000002C  38 E0 00 00 */	li r7, 0
-/* 8018691C 00000030  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018691C 00000030  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80186920 00000034  FC 40 08 90 */	fmr f2, f1
-/* 80186924 00000038  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 80186924 00000038  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 80186928 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 8018692C 00000040  39 00 00 00 */	li r8, 0
 /* 80186930 00000044  48 12 50 55 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -32,13 +32,13 @@ lbl_801868EC:
 /* 80186964 00000078  88 1F 02 65 */	lbz r0, 0x265(r31)
 /* 80186968 0000007C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8018696C 00000080  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80186970 00000084  98 03 0F 18 */	stb r0, 0xf18(r3)
+/* 80186970 00000084  98 03 0F 18 */	stb r0, 0xf18(r3)	/* effective address: 804070D8 */
 /* 80186974 00000088  48 00 00 F8 */	b lbl_80186A6C
 lbl_80186978:
 /* 80186978 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 8018697C 00000004  40 82 00 48 */	bne lbl_801869C4
 /* 80186980 00000008  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 80186984 0000000C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
+/* 80186984 0000000C  C0 22 9F 48 */	lfs f1, lit_4778(r2)
 /* 80186988 00000010  48 00 E9 19 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018698C 00000014  7F E3 FB 78 */	mr r3, r31
 /* 80186990 00000018  38 80 04 73 */	li r4, 0x473
@@ -69,16 +69,16 @@ lbl_801869C4:
 /* 801869F0 0000002C  38 C0 00 00 */	li r6, 0
 /* 801869F4 00000030  48 00 66 F1 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 801869F8 00000034  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 801869FC 00000038  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
+/* 801869FC 00000038  C0 22 9F 48 */	lfs f1, lit_4778(r2)
 /* 80186A00 0000003C  48 00 E8 A1 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80186A04 00000040  88 1F 02 65 */	lbz r0, 0x265(r31)
 /* 80186A08 00000044  54 00 10 3A */	slwi r0, r0, 2
 /* 80186A0C 00000048  7F E3 FB 78 */	mr r3, r31
-/* 80186A10 0000004C  3C 80 80 3C */	lis r4, d_file_d_file_select__SelOpenEndFrameTbl@ha
-/* 80186A14 00000050  38 84 A8 78 */	addi r4, r4, d_file_d_file_select__SelOpenEndFrameTbl@l
+/* 80186A10 0000004C  3C 80 80 3C */	lis r4, SelOpenEndFrameTbl@ha
+/* 80186A14 00000050  38 84 A8 78 */	addi r4, r4, SelOpenEndFrameTbl@l
 /* 80186A18 00000054  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80186A1C 00000058  3C A0 80 3C */	lis r5, d_file_d_file_select__SelOpenStartFrameTbl@ha
-/* 80186A20 0000005C  38 A5 A8 6C */	addi r5, r5, d_file_d_file_select__SelOpenStartFrameTbl@l
+/* 80186A1C 00000058  3C A0 80 3C */	lis r5, SelOpenStartFrameTbl@ha
+/* 80186A20 0000005C  38 A5 A8 6C */	addi r5, r5, SelOpenStartFrameTbl@l
 /* 80186A24 00000060  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80186A28 00000064  4B FF EF 6D */	bl selectDataMoveAnmInitSet__14dFile_select_cFii
 /* 80186A2C 00000068  7F E3 FB 78 */	mr r3, r31
@@ -87,7 +87,7 @@ lbl_801869C4:
 /* 80186A38 00000074  38 C0 00 FF */	li r6, 0xff
 /* 80186A3C 00000078  3C E0 80 43 */	lis r7, g_fsHIO@ha
 /* 80186A40 0000007C  38 E7 C9 EC */	addi r7, r7, g_fsHIO@l
-/* 80186A44 00000080  88 E7 00 08 */	lbz r7, 8(r7)
+/* 80186A44 00000080  88 E7 00 08 */	lbz r7, 8(r7)	/* effective address: 8042C9F4 */
 /* 80186A48 00000084  48 00 6C 09 */	bl selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 80186A4C 00000088  7F E3 FB 78 */	mr r3, r31
 /* 80186A50 0000008C  38 80 0D 1F */	li r4, 0xd1f

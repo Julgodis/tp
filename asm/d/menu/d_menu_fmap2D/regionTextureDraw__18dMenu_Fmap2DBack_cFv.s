@@ -37,7 +37,7 @@ lbl_801D2DA8:
 /* 801D2E34 00000070  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 801D2E38 00000074  EF C1 00 28 */	fsubs f30, f1, f0
 /* 801D2E3C 00000078  8B BE 12 27 */	lbz r29, 0x1227(r30)
-/* 801D2E40 0000007C  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D2E40 0000007C  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D2E44 00000080  C0 1E 0F A0 */	lfs f0, 0xfa0(r30)
 /* 801D2E48 00000084  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801D2E4C 00000088  40 82 00 0C */	bne lbl_801D2E58
@@ -48,7 +48,7 @@ lbl_801D2E58:
 lbl_801D2E5C:
 /* 801D2E5C 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D2E60 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D2E64 00000008  88 03 03 02 */	lbz r0, 0x302(r3)
+/* 801D2E64 00000008  88 03 03 02 */	lbz r0, 0x302(r3)	/* effective address: 8042FF62 */
 /* 801D2E68 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801D2E6C 00000010  41 82 02 00 */	beq lbl_801D306C
 /* 801D2E70 00000014  3B 40 00 00 */	li r26, 0
@@ -110,11 +110,11 @@ lbl_801D2F24:
 /* 801D2F44 00000020  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 801D2F48 00000024  7D 89 03 A6 */	mtctr r12
 /* 801D2F4C 00000028  4E 80 04 21 */	bctrl 
-/* 801D2F50 0000002C  C0 62 A7 E8 */	lfs f3, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D2F50 0000002C  C0 62 A7 E8 */	lfs f3, lit_4202(r2)
 lbl_801D2F54:
 /* 801D2F54 00000000  80 7B 0C B4 */	lwz r3, 0xcb4(r27)
 /* 801D2F58 00000004  C0 5E 0F A4 */	lfs f2, 0xfa4(r30)
-/* 801D2F5C 00000008  C0 22 A7 E4 */	lfs f1, d_menu_d_menu_fmap2D__lit_4201(r2)
+/* 801D2F5C 00000008  C0 22 A7 E4 */	lfs f1, lit_4201(r2)
 /* 801D2F60 0000000C  C0 1E 0F C4 */	lfs f0, 0xfc4(r30)
 /* 801D2F64 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801D2F68 00000014  EC 00 00 F2 */	fmuls f0, f0, f3

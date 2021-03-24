@@ -117,16 +117,16 @@ lbl_802D83E0:
 /* 802D8418 00000038  7F 43 D3 78 */	mr r3, r26
 /* 802D841C 0000003C  48 00 00 40 */	b lbl_802D845C
 lbl_802D8420:
-/* 802D8420 00000000  3C 60 80 3A */	lis r3, JKRDvdArchive__stringBase0@ha
-/* 802D8424 00000004  38 63 D1 B0 */	addi r3, r3, JKRDvdArchive__stringBase0@l
+/* 802D8420 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D8424 00000004  38 63 D1 B0 */	addi r3, r3, stringBase0@l
 /* 802D8428 00000008  38 80 02 89 */	li r4, 0x289
 /* 802D842C 0000000C  38 A3 00 12 */	addi r5, r3, 0x12
 /* 802D8430 00000010  38 C3 00 15 */	addi r6, r3, 0x15
 /* 802D8434 00000014  4C C6 31 82 */	crclr 6
 /* 802D8438 00000018  48 00 9D C5 */	bl panic_f__12JUTExceptionFPCciPCce
 lbl_802D843C:
-/* 802D843C 00000000  3C 60 80 3A */	lis r3, JKRDvdArchive__stringBase0@ha
-/* 802D8440 00000004  38 63 D1 B0 */	addi r3, r3, JKRDvdArchive__stringBase0@l
+/* 802D843C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D8440 00000004  38 63 D1 B0 */	addi r3, r3, stringBase0@l
 /* 802D8444 00000008  38 80 02 8D */	li r4, 0x28d
 /* 802D8448 0000000C  38 A3 00 12 */	addi r5, r3, 0x12
 /* 802D844C 00000010  38 C3 00 3A */	addi r6, r3, 0x3a

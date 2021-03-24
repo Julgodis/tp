@@ -57,7 +57,7 @@ lbl_80046ADC:
 lbl_80046B2C:
 /* 80046B2C 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80046B30 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80046B34 00000008  A8 04 4E 08 */	lha r0, 0x4e08(r4)
+/* 80046B34 00000008  A8 04 4E 08 */	lha r0, 0x4e08(r4)	/* effective address: 8040AFC8 */
 /* 80046B38 0000000C  2C 00 FF FE */	cmpwi r0, -2
 /* 80046B3C 00000010  41 82 00 10 */	beq lbl_80046B4C
 /* 80046B40 00000014  7C 00 07 34 */	extsh r0, r0
@@ -66,12 +66,12 @@ lbl_80046B2C:
 lbl_80046B4C:
 /* 80046B4C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80046B50 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80046B54 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 80046B58 0000000C  80 03 05 74 */	lwz r0, 0x574(r3)
+/* 80046B54 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80046B58 0000000C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
 /* 80046B5C 00000010  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80046B60 00000014  7F E3 FB 78 */	mr r3, r31
-/* 80046B64 00000018  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
-/* 80046B68 0000001C  38 A4 9F 60 */	addi r5, r4, d_event_d_event_manager__stringBase0@l
+/* 80046B64 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80046B68 0000001C  38 A4 9F 60 */	addi r5, r4, stringBase0@l
 /* 80046B6C 00000020  38 85 01 3A */	addi r4, r5, 0x13a
 /* 80046B70 00000024  41 82 00 08 */	beq lbl_80046B78
 /* 80046B74 00000028  38 85 01 24 */	addi r4, r5, 0x124
@@ -92,8 +92,8 @@ lbl_80046BA8:
 /* 80046BA8 00000000  2C 03 00 00 */	cmpwi r3, 0
 /* 80046BAC 00000004  40 82 00 44 */	bne lbl_80046BF0
 /* 80046BB0 00000008  7F E3 FB 78 */	mr r3, r31
-/* 80046BB4 0000000C  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
-/* 80046BB8 00000010  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
+/* 80046BB4 0000000C  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80046BB8 00000010  38 84 9F 60 */	addi r4, r4, stringBase0@l
 /* 80046BBC 00000014  38 84 00 10 */	addi r4, r4, 0x10
 /* 80046BC0 00000018  38 A0 00 FF */	li r5, 0xff
 /* 80046BC4 0000001C  38 C0 FF FF */	li r6, -1

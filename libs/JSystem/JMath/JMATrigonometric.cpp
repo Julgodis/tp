@@ -43,6 +43,7 @@ extern "C" void atan(); // 1
 extern "C" void cos(); // 1
 extern "C" void sin(); // 1
 extern "C" void asin(); // 1
+extern "C" extern u8 data_80451000[4];
 
 // 
 // Declarations:
@@ -66,23 +67,23 @@ SECTION_SDATA2 static u8 lit_326[4 + 4 /* padding */] = {
 };
 
 /* 804564E0-804564E8 0008+00 s=1 e=0 z=0  None .sdata2    @436                                                         */
-SECTION_SDATA2 static f64 JMATrigonometric__lit_436 = 6.2831854820251465;
+SECTION_SDATA2 static f64 lit_436 = 6.2831854820251465;
 
 /* 804564E8-804564F0 0008+00 s=1 e=0 z=0  None .sdata2    @437                                                         */
-SECTION_SDATA2 static f64 JMATrigonometric__lit_437 = 8192.0;
+SECTION_SDATA2 static f64 lit_437 = 8192.0;
 
 /* 804564F0-804564F8 0008+00 s=1 e=0 z=0  None .sdata2    @438                                                         */
-SECTION_SDATA2 static f64 JMATrigonometric__lit_438 = 0.0009765625;
+SECTION_SDATA2 static f64 lit_438 = 0.0009765625;
 
 /* 804564F8-80456500 0004+04 s=1 e=0 z=0  None .sdata2    @439                                                         */
-SECTION_SDATA2 static f32 JMATrigonometric__lit_439[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_439[1 + 1 /* padding */] = {
 	0.7853981852531433f,
 	/* padding */
 	0.0f,
 };
 
 /* 80456500-80456508 0008+00 s=1 e=0 z=0  None .sdata2    @441                                                         */
-SECTION_SDATA2 static f64 JMATrigonometric__lit_441 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_441 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80339AEC-80339CB0 01C4+00 s=0 e=1 z=0  None .text      __sinit_JMATrigonometric_cpp                                 */
 #pragma push

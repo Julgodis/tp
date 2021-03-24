@@ -23,14 +23,14 @@ lbl_802C66B0:
 /* 802C6704 00000040  7F A3 EB 78 */	mr r3, r29
 /* 802C6708 00000044  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 802C670C 00000048  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 802C6710 0000004C  A0 84 00 D0 */	lhz r4, 0xd0(r4)
+/* 802C6710 0000004C  A0 84 00 D0 */	lhz r4, 0xd0(r4)	/* effective address: 803A7358 */
 /* 802C6714 00000050  4B D6 E2 A9 */	bl isEventBit__11dSv_event_cCFUs
 /* 802C6718 00000054  2C 03 00 00 */	cmpwi r3, 0
 /* 802C671C 00000058  41 82 00 48 */	beq lbl_802C6764
 /* 802C6720 0000005C  7F A3 EB 78 */	mr r3, r29
 /* 802C6724 00000060  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 802C6728 00000064  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 802C672C 00000068  A0 84 01 F4 */	lhz r4, 0x1f4(r4)
+/* 802C672C 00000068  A0 84 01 F4 */	lhz r4, 0x1f4(r4)	/* effective address: 803A747C */
 /* 802C6730 0000006C  4B D6 E2 8D */	bl isEventBit__11dSv_event_cCFUs
 /* 802C6734 00000070  2C 03 00 00 */	cmpwi r3, 0
 /* 802C6738 00000074  40 82 00 2C */	bne lbl_802C6764
@@ -97,7 +97,7 @@ lbl_802C6804:
 /* 802C6808 00000004  C0 22 C3 48 */	lfs f1, lit_3503(r2)
 /* 802C680C 00000008  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 802C6810 00000000  40 81 00 20 */	ble lbl_802C6830
-/* 802C6814 00000004  C0 02 C3 78 */	lfs f0, Z2EnvSeMgr__lit_3749(r2)
+/* 802C6814 00000004  C0 02 C3 78 */	lfs f0, lit_3749(r2)
 /* 802C6818 00000008  EC 02 00 28 */	fsubs f0, f2, f0
 /* 802C681C 0000000C  D0 1F 03 08 */	stfs f0, 0x308(r31)
 /* 802C6820 00000010  C0 1F 03 08 */	lfs f0, 0x308(r31)
@@ -177,7 +177,7 @@ lbl_802C68E8:
 /* 802C6928 00000040  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802C692C 00000044  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 802C6930 00000048  EC 40 10 28 */	fsubs f2, f0, f2
-/* 802C6934 0000004C  C0 02 C3 EC */	lfs f0, Z2EnvSeMgr__lit_3928(r2)
+/* 802C6934 0000004C  C0 02 C3 EC */	lfs f0, lit_3928(r2)
 /* 802C6938 00000050  EC 02 00 24 */	fdivs f0, f2, f0
 /* 802C693C 00000054  EC 40 07 B2 */	fmuls f2, f0, f30
 /* 802C6940 00000058  FC 80 F8 90 */	fmr f4, f31

@@ -12,13 +12,13 @@ lbl_8029C2C0:
 /* 8029C2E8 00000014  3C 60 80 3C */	lis r3, data_803C78A8@ha
 /* 8029C2EC 00000018  38 63 78 A8 */	addi r3, r3, data_803C78A8@l
 /* 8029C2F0 0000001C  7F E3 00 2E */	lwzx r31, r3, r0
-/* 8029C2F4 00000020  C0 42 BD 10 */	lfs f2, JASOscillator__lit_154(r2)
+/* 8029C2F4 00000020  C0 42 BD 10 */	lfs f2, lit_154(r2)
 /* 8029C2F8 00000024  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8029C2FC 00000028  EC 00 08 24 */	fdivs f0, f0, f1
 /* 8029C300 0000002C  EF E2 00 32 */	fmuls f31, f2, f0
 /* 8029C304 00000030  FC 20 F8 90 */	fmr f1, f31
 /* 8029C308 00000034  48 0C 5D A5 */	bl __cvt_fp2unsigned
-/* 8029C30C 00000038  C8 22 BD 18 */	lfd f1, JASOscillator__lit_156(r2)
+/* 8029C30C 00000038  C8 22 BD 18 */	lfd f1, lit_156(r2)
 /* 8029C310 0000003C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8029C314 00000040  3C 00 43 30 */	lis r0, 0x4330
 /* 8029C318 00000044  90 01 00 08 */	stw r0, 8(r1)
@@ -26,7 +26,7 @@ lbl_8029C2C0:
 /* 8029C320 0000004C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8029C324 00000050  EC 5F 00 28 */	fsubs f2, f31, f0
 /* 8029C328 00000054  54 60 10 3A */	slwi r0, r3, 2
-/* 8029C32C 00000058  C0 62 BC FC */	lfs f3, JASOscillator__lit_87(r2)
+/* 8029C32C 00000058  C0 62 BC FC */	lfs f3, lit_87(r2)
 /* 8029C330 0000005C  EC 23 10 28 */	fsubs f1, f3, f2
 /* 8029C334 00000060  7C 1F 04 2E */	lfsx f0, r31, r0
 /* 8029C338 00000064  EC 21 00 32 */	fmuls f1, f1, f0

@@ -12,7 +12,7 @@ lbl_801A6278:
 /* 801A62A0 00000028  3B A3 CA 54 */	addi r29, r3, g_env_light@l
 /* 801A62A4 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A62A8 00000030  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 801A62AC 00000034  83 25 5D 74 */	lwz r25, 0x5d74(r5)
+/* 801A62AC 00000034  83 25 5D 74 */	lwz r25, 0x5d74(r5)	/* effective address: 8040BF34 */
 /* 801A62B0 00000038  7E DB 07 74 */	extsb r27, r22
 /* 801A62B4 0000003C  1C 9B 04 04 */	mulli r4, r27, 0x404
 /* 801A62B8 00000040  3C 60 80 3F */	lis r3, mStatus__20dStage_roomControl_c@ha
@@ -81,18 +81,18 @@ lbl_801A6370:
 /* 801A63A4 00000034  A0 AD 81 80 */	lhz r5, lightMask(r13)
 /* 801A63A8 00000038  3C 60 80 3C */	lis r3, lightMaskData@ha
 /* 801A63AC 0000003C  38 83 BE AC */	addi r4, r3, lightMaskData@l
-/* 801A63B0 00000040  A0 04 00 04 */	lhz r0, 4(r4)
+/* 801A63B0 00000040  A0 04 00 04 */	lhz r0, 4(r4)	/* effective address: 803BBEB0 */
 /* 801A63B4 00000044  7C A0 03 78 */	or r0, r5, r0
 /* 801A63B8 00000048  B0 0D 81 80 */	sth r0, lightMask(r13)
 /* 801A63BC 0000004C  54 03 04 3E */	clrlwi r3, r0, 0x10
-/* 801A63C0 00000050  A0 04 00 06 */	lhz r0, 6(r4)
+/* 801A63C0 00000050  A0 04 00 06 */	lhz r0, 6(r4)	/* effective address: 803BBEB2 */
 /* 801A63C4 00000054  7C 60 03 78 */	or r0, r3, r0
 /* 801A63C8 00000058  B0 0D 81 80 */	sth r0, lightMask(r13)
 /* 801A63CC 0000005C  3B 00 00 02 */	li r24, 2
 lbl_801A63D0:
 /* 801A63D0 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A63D4 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A63D8 00000008  80 03 07 80 */	lwz r0, 0x780(r3)
+/* 801A63D8 00000008  80 03 07 80 */	lwz r0, 0x780(r3)	/* effective address: 8042D1D4 */
 /* 801A63DC 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 801A63E0 00000010  41 82 00 10 */	beq lbl_801A63F0
 /* 801A63E4 00000014  A0 0D 81 80 */	lhz r0, lightMask(r13)
@@ -101,7 +101,7 @@ lbl_801A63D0:
 lbl_801A63F0:
 /* 801A63F0 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A63F4 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A63F8 00000008  80 03 07 A0 */	lwz r0, 0x7a0(r3)
+/* 801A63F8 00000008  80 03 07 A0 */	lwz r0, 0x7a0(r3)	/* effective address: 8042D1F4 */
 /* 801A63FC 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 801A6400 00000010  41 82 00 10 */	beq lbl_801A6410
 /* 801A6404 00000014  A0 0D 81 80 */	lhz r0, lightMask(r13)
@@ -135,11 +135,11 @@ lbl_801A6410:
 /* 801A6470 00000060  C0 04 00 00 */	lfs f0, 0(r4)
 /* 801A6474 00000064  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A6478 00000068  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A647C 0000006C  D0 03 10 A0 */	stfs f0, 0x10a0(r3)
+/* 801A647C 0000006C  D0 03 10 A0 */	stfs f0, 0x10a0(r3)	/* effective address: 8042DAF4 */
 /* 801A6480 00000070  C0 04 00 04 */	lfs f0, 4(r4)
-/* 801A6484 00000074  D0 03 10 A4 */	stfs f0, 0x10a4(r3)
+/* 801A6484 00000074  D0 03 10 A4 */	stfs f0, 0x10a4(r3)	/* effective address: 8042DAF8 */
 /* 801A6488 00000078  C0 04 00 08 */	lfs f0, 8(r4)
-/* 801A648C 0000007C  D0 03 10 A8 */	stfs f0, 0x10a8(r3)
+/* 801A648C 0000007C  D0 03 10 A8 */	stfs f0, 0x10a8(r3)	/* effective address: 8042DAFC */
 /* 801A6490 00000080  38 60 00 01 */	li r3, 1
 /* 801A6494 00000084  48 00 68 49 */	bl dKy_shadow_mode_set__FUc
 /* 801A6498 00000088  48 00 00 24 */	b lbl_801A64BC
@@ -167,7 +167,7 @@ lbl_801A64E0:
 /* 801A64E4 00000004  81 04 07 80 */	lwz r8, 0x780(r4)
 /* 801A64E8 00000008  2C 08 00 00 */	cmpwi r8, 0
 /* 801A64EC 0000000C  41 82 00 FC */	beq lbl_801A65E8
-/* 801A64F0 00000010  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A64F0 00000010  C0 22 A2 0C */	lfs f1, lit_4409(r2)
 /* 801A64F4 00000014  39 24 07 78 */	addi r9, r4, 0x778
 /* 801A64F8 00000018  C0 04 07 78 */	lfs f0, 0x778(r4)
 /* 801A64FC 0000001C  FC 01 00 00 */	fcmpu cr0, f1, f0
@@ -188,7 +188,7 @@ lbl_801A6518:
 /* 801A6534 0000001C  D0 08 00 08 */	stfs f0, 8(r8)
 /* 801A6538 00000020  2C 05 00 00 */	cmpwi r5, 0
 /* 801A653C 00000024  40 82 00 20 */	bne lbl_801A655C
-/* 801A6540 00000028  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__lit_4731(r2)
+/* 801A6540 00000028  C0 22 A2 68 */	lfs f1, lit_4731(r2)
 /* 801A6544 0000002C  C0 09 00 00 */	lfs f0, 0(r9)
 /* 801A6548 00000030  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801A654C 00000034  81 2D 81 84 */	lwz r9, lightStatusPt(r13)
@@ -196,7 +196,7 @@ lbl_801A6518:
 /* 801A6554 0000003C  7C 09 45 2E */	stfsx f0, r9, r8
 /* 801A6558 00000040  48 00 00 1C */	b lbl_801A6574
 lbl_801A655C:
-/* 801A655C 00000000  C0 22 A2 68 */	lfs f1, d_kankyo_d_kankyo__lit_4731(r2)
+/* 801A655C 00000000  C0 22 A2 68 */	lfs f1, lit_4731(r2)
 /* 801A6560 00000004  C0 09 00 00 */	lfs f0, 0(r9)
 /* 801A6564 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801A6568 0000000C  81 2D 81 84 */	lwz r9, lightStatusPt(r13)
@@ -318,7 +318,7 @@ lbl_801A66BC:
 /* 801A6720 00000064  4B FF 6A 81 */	bl dKy_lightdir_set__FffP3Vec
 /* 801A6724 00000068  48 00 00 5C */	b lbl_801A6780
 lbl_801A6728:
-/* 801A6728 00000000  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A6728 00000000  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801A672C 00000004  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6730 00000008  38 12 02 1C */	addi r0, r18, 0x21c
 /* 801A6734 0000000C  7C 03 05 2E */	stfsx f0, r3, r0
@@ -336,7 +336,7 @@ lbl_801A6728:
 /* 801A6764 0000003C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6768 00000040  38 12 02 18 */	addi r0, r18, 0x218
 /* 801A676C 00000044  7C 83 01 2E */	stwx r4, r3, r0
-/* 801A6770 00000048  C0 02 A2 2C */	lfs f0, d_kankyo_d_kankyo__lit_4442(r2)
+/* 801A6770 00000048  C0 02 A2 2C */	lfs f0, lit_4442(r2)
 /* 801A6774 0000004C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)
 /* 801A6778 00000050  38 12 02 14 */	addi r0, r18, 0x214
 /* 801A677C 00000054  7C 03 05 2E */	stfsx f0, r3, r0
@@ -578,7 +578,7 @@ lbl_801A6AC4:
 /* 801A6AF4 00000030  7C 03 05 2E */	stfsx f0, r3, r0
 /* 801A6AF8 00000034  48 00 00 1C */	b lbl_801A6B14
 lbl_801A6AFC:
-/* 801A6AFC 00000000  C0 22 A2 8C */	lfs f1, d_kankyo_d_kankyo__lit_5106(r2)
+/* 801A6AFC 00000000  C0 22 A2 8C */	lfs f1, lit_5106(r2)
 /* 801A6B00 00000004  C0 1A 0C 1C */	lfs f0, 0xc1c(r26)
 /* 801A6B04 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 801A6B08 0000000C  80 6D 81 84 */	lwz r3, lightStatusPt(r13)

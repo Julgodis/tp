@@ -13,7 +13,7 @@ lbl_8015F2FC:
 /* 8015F328 0000002C  C0 41 00 0C */	lfs f2, 0xc(r1)
 /* 8015F32C 00000030  C0 61 00 10 */	lfs f3, 0x10(r1)
 /* 8015F330 00000034  48 1E 75 B9 */	bl PSMTXTrans
-/* 8015F334 00000038  C0 22 9C 80 */	lfs f1, d_a_d_a_player__lit_4699(r2)
+/* 8015F334 00000038  C0 22 9C 80 */	lfs f1, lit_4699(r2)
 /* 8015F338 0000003C  FC 40 08 90 */	fmr f2, f1
 /* 8015F33C 00000040  FC 60 08 90 */	fmr f3, f1
 /* 8015F340 00000044  4B EA DA F9 */	bl scaleM__14mDoMtx_stack_cFfff

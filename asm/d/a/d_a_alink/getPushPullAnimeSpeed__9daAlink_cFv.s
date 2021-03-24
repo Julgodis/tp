@@ -33,12 +33,12 @@ lbl_800E83C0:
 /* 800E83C8 00000008  41 82 00 14 */	beq lbl_800E83DC
 /* 800E83CC 0000000C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlPush_c0@ha
 /* 800E83D0 00000010  38 63 F1 24 */	addi r3, r3, m__20daAlinkHIO_wlPush_c0@l
-/* 800E83D4 00000014  C0 23 00 10 */	lfs f1, 0x10(r3)
+/* 800E83D4 00000014  C0 23 00 10 */	lfs f1, 0x10(r3)	/* effective address: 8038F134 */
 /* 800E83D8 00000018  48 00 00 3C */	b lbl_800E8414
 lbl_800E83DC:
 /* 800E83DC 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_pushpull_c0@ha
 /* 800E83E0 00000004  38 63 E2 10 */	addi r3, r3, m__22daAlinkHIO_pushpull_c0@l
-/* 800E83E4 00000008  C0 23 00 38 */	lfs f1, 0x38(r3)
+/* 800E83E4 00000008  C0 23 00 38 */	lfs f1, 0x38(r3)	/* effective address: 8038E248 */
 /* 800E83E8 0000000C  48 00 00 2C */	b lbl_800E8414
 lbl_800E83EC:
 /* 800E83EC 00000000  80 1F 05 74 */	lwz r0, 0x574(r31)
@@ -46,12 +46,12 @@ lbl_800E83EC:
 /* 800E83F4 00000008  41 82 00 14 */	beq lbl_800E8408
 /* 800E83F8 0000000C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlPush_c0@ha
 /* 800E83FC 00000010  38 63 F1 24 */	addi r3, r3, m__20daAlinkHIO_wlPush_c0@l
-/* 800E8400 00000014  C0 23 00 08 */	lfs f1, 8(r3)
+/* 800E8400 00000014  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8038F12C */
 /* 800E8404 00000018  48 00 00 10 */	b lbl_800E8414
 lbl_800E8408:
 /* 800E8408 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_pushpull_c0@ha
 /* 800E840C 00000004  38 63 E2 10 */	addi r3, r3, m__22daAlinkHIO_pushpull_c0@l
-/* 800E8410 00000008  C0 23 00 18 */	lfs f1, 0x18(r3)
+/* 800E8410 00000008  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 8038E228 */
 lbl_800E8414:
 /* 800E8414 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800E8418 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

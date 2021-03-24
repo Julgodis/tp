@@ -21,11 +21,11 @@ lbl_801B7F20:
 /* 801B7F6C 0000004C  48 09 1F 95 */	bl __ct__10dMsgFlow_cFv
 /* 801B7F70 00000050  93 BF 0C 98 */	stw r29, 0xc98(r31)
 /* 801B7F74 00000054  93 DF 0C A0 */	stw r30, 0xca0(r31)
-/* 801B7F78 00000058  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801B7F78 00000058  C0 22 A5 E8 */	lfs f1, lit_3962(r2)
 /* 801B7F7C 0000005C  D0 3F 0D 94 */	stfs f1, 0xd94(r31)
 /* 801B7F80 00000060  D0 3F 0D 98 */	stfs f1, 0xd98(r31)
 /* 801B7F84 00000064  D0 3F 0D 9C */	stfs f1, 0xd9c(r31)
-/* 801B7F88 00000068  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801B7F88 00000068  C0 02 A5 EC */	lfs f0, lit_3963(r2)
 /* 801B7F8C 0000006C  D0 1F 0D A8 */	stfs f0, 0xda8(r31)
 /* 801B7F90 00000070  D0 3F 0D B4 */	stfs f1, 0xdb4(r31)
 /* 801B7F94 00000074  D0 3F 0D B8 */	stfs f1, 0xdb8(r31)
@@ -71,8 +71,8 @@ lbl_801B8018:
 /* 801B802C 00000014  7F E3 FB 78 */	mr r3, r31
 /* 801B8030 00000018  48 00 00 E1 */	bl mapScreenInit__14dMenu_DmapBg_cFv
 /* 801B8034 0000001C  38 61 00 10 */	addi r3, r1, 0x10
-/* 801B8038 00000020  3C 80 80 39 */	lis r4, d_menu_d_menu_dmap__stringBase0@ha
-/* 801B803C 00000024  38 84 57 60 */	addi r4, r4, d_menu_d_menu_dmap__stringBase0@l
+/* 801B8038 00000020  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B803C 00000024  38 84 57 60 */	addi r4, r4, stringBase0@l
 /* 801B8040 00000028  48 1B 0A ED */	bl strcpy
 /* 801B8044 0000002C  38 61 00 08 */	addi r3, r1, 8
 /* 801B8048 00000030  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
@@ -111,7 +111,7 @@ lbl_801B80C0:
 /* 801B80C0 00000000  38 00 00 00 */	li r0, 0
 /* 801B80C4 00000004  90 1F 0D 20 */	stw r0, 0xd20(r31)
 /* 801B80C8 00000008  90 1F 0D 24 */	stw r0, 0xd24(r31)
-/* 801B80CC 0000000C  C0 02 A5 E8 */	lfs f0, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801B80CC 0000000C  C0 02 A5 E8 */	lfs f0, lit_3962(r2)
 /* 801B80D0 00000010  D0 1F 0D BC */	stfs f0, 0xdbc(r31)
 /* 801B80D4 00000014  38 7F 0D 80 */	addi r3, r31, 0xd80
 /* 801B80D8 00000018  38 80 00 00 */	li r4, 0

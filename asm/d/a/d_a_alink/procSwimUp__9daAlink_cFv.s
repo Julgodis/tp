@@ -9,7 +9,7 @@ lbl_801041E8:
 /* 80104204 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80104208 00000020  3C 80 80 39 */	lis r4, m__18daAlinkHIO_swim_c0@ha
 /* 8010420C 00000024  38 84 ED 2C */	addi r4, r4, m__18daAlinkHIO_swim_c0@l
-/* 80104210 00000028  C0 44 00 80 */	lfs f2, 0x80(r4)
+/* 80104210 00000028  C0 44 00 80 */	lfs f2, 0x80(r4)	/* effective address: 8038EDAC */
 /* 80104214 0000002C  4B FA F7 11 */	bl setNormalSpeedF__9daAlink_cFff
 /* 80104218 00000030  7F C3 F3 78 */	mr r3, r30
 /* 8010421C 00000034  38 80 00 45 */	li r4, 0x45
@@ -52,7 +52,7 @@ lbl_801042A0:
 /* 801042A0 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 801042A4 00000004  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 801042A8 00000008  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 801042AC 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 801042AC 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038ED3C */
 /* 801042B0 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801042B4 00000000  40 81 00 20 */	ble lbl_801042D4
 /* 801042B8 00000004  C0 3E 33 AC */	lfs f1, 0x33ac(r30)

@@ -17,10 +17,10 @@ lbl_80132738:
 /* 80132774 0000003C  38 80 00 19 */	li r4, 0x19
 /* 80132778 00000040  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlRope_c0@ha
 /* 8013277C 00000044  38 C5 F4 6C */	addi r6, r5, m__20daAlinkHIO_wlRope_c0@l
-/* 80132780 00000048  C0 26 00 28 */	lfs f1, 0x28(r6)
+/* 80132780 00000048  C0 26 00 28 */	lfs f1, 0x28(r6)	/* effective address: 8038F494 */
 /* 80132784 0000004C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 80132788 00000050  38 A0 00 10 */	li r5, 0x10
-/* 8013278C 00000054  C0 66 00 2C */	lfs f3, 0x2c(r6)
+/* 8013278C 00000054  C0 66 00 2C */	lfs f3, 0x2c(r6)	/* effective address: 8038F498 */
 /* 80132790 00000058  4B FF 6F 75 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 80132794 0000005C  38 00 FF FE */	li r0, -2
 /* 80132798 00000060  90 1E 07 18 */	stw r0, 0x718(r30)
@@ -51,8 +51,8 @@ lbl_801327E8:
 /* 801327E8 00000000  7F E3 FB 78 */	mr r3, r31
 /* 801327EC 00000004  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlRope_c0@ha
 /* 801327F0 00000008  38 A5 F4 6C */	addi r5, r5, m__20daAlinkHIO_wlRope_c0@l
-/* 801327F4 0000000C  C0 25 00 28 */	lfs f1, 0x28(r5)
-/* 801327F8 00000010  C0 45 00 30 */	lfs f2, 0x30(r5)
+/* 801327F4 0000000C  C0 25 00 28 */	lfs f1, 0x28(r5)	/* effective address: 8038F494 */
+/* 801327F8 00000010  C0 45 00 30 */	lfs f2, 0x30(r5)	/* effective address: 8038F49C */
 /* 801327FC 00000014  4B FF 6E DD */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 80132800 00000018  38 00 00 13 */	li r0, 0x13
 /* 80132804 0000001C  90 1E 07 18 */	stw r0, 0x718(r30)
@@ -68,7 +68,7 @@ lbl_801327E8:
 /* 8013282C 00000044  98 1F 2F 99 */	stb r0, 0x2f99(r31)
 /* 80132830 00000048  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80132834 0000004C  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80132838 00000050  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80132838 00000050  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013283C 00000054  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80132840 00000058  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80132844 0000005C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

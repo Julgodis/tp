@@ -19,9 +19,9 @@ lbl_800EC564:
 /* 800EC578 00000014  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800EC57C 00000018  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800EC580 0000001C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800EC584 00000020  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800EC584 00000020  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800EC588 00000024  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800EC58C 00000028  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800EC58C 00000028  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800EC590 0000002C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800EC594 00000030  C0 1F 35 88 */	lfs f0, 0x3588(r31)
 /* 800EC598 00000034  D0 1F 34 D4 */	stfs f0, 0x34d4(r31)

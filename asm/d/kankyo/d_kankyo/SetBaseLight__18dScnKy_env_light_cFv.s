@@ -9,7 +9,7 @@ lbl_801A516C:
 /* 801A5188 0000001C  3B E3 CA 54 */	addi r31, r3, g_env_light@l
 /* 801A518C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A5190 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801A5194 00000028  83 C3 5D 74 */	lwz r30, 0x5d74(r3)
+/* 801A5194 00000028  83 C3 5D 74 */	lwz r30, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 801A5198 0000002C  48 00 6F D1 */	bl dKy_SunMoon_Light_Check__Fv
 /* 801A519C 00000030  2C 03 00 01 */	cmpwi r3, 1
 /* 801A51A0 00000034  40 82 00 94 */	bne lbl_801A5234
@@ -65,7 +65,7 @@ lbl_801A5250:
 /* 801A5258 00000008  B0 1D 00 26 */	sth r0, 0x26(r29)
 /* 801A525C 0000000C  B0 1D 00 28 */	sth r0, 0x28(r29)
 /* 801A5260 00000010  B0 1D 00 2A */	sth r0, 0x2a(r29)
-/* 801A5264 00000014  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A5264 00000014  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801A5268 00000018  D0 1D 00 2C */	stfs f0, 0x2c(r29)
 /* 801A526C 0000001C  D0 1D 00 30 */	stfs f0, 0x30(r29)
 /* 801A5270 00000020  39 61 00 30 */	addi r11, r1, 0x30

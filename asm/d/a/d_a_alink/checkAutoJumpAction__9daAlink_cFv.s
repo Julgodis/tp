@@ -17,8 +17,8 @@ lbl_800B607C:
 /* 800B60B8 00000000  39 61 00 60 */	addi r11, r1, 0x60
 /* 800B60BC 00000004  48 2A C1 15 */	bl _savegpr_26
 /* 800B60C0 00000008  7C 7A 1B 78 */	mr r26, r3
-/* 800B60C4 0000000C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800B60C8 00000010  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
+/* 800B60C4 0000000C  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800B60C8 00000010  3B C4 D6 58 */	addi r30, r4, lit_3757@l
 /* 800B60CC 00000014  48 02 CE BD */	bl checkMagneBootsFly__9daAlink_cFv
 /* 800B60D0 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 800B60D4 0000001C  41 82 00 0C */	beq lbl_800B60E0
@@ -105,7 +105,7 @@ lbl_800B61F0:
 /* 800B61F4 00000004  41 82 00 14 */	beq lbl_800B6208
 /* 800B61F8 00000008  7F 43 D3 78 */	mr r3, r26
 /* 800B61FC 0000000C  38 80 00 02 */	li r4, 2
-/* 800B6200 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800B6200 00000010  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800B6204 00000014  4B FF 75 21 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800B6208:
 /* 800B6208 00000000  C0 7A 35 C4 */	lfs f3, 0x35c4(r26)
@@ -163,7 +163,7 @@ lbl_800B62C0:
 /* 800B62CC 0000000C  FC 40 E8 90 */	fmr f2, f29
 /* 800B62D0 00000010  48 1B 13 A5 */	bl cM_atan2s__Fff
 /* 800B62D4 00000014  7C 7C 1B 78 */	mr r28, r3
-/* 800B62D8 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B62D8 00000018  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B62DC 0000001C  EC 00 D8 24 */	fdivs f0, f0, f27
 /* 800B62E0 00000020  EF DE 00 32 */	fmuls f30, f30, f0
 /* 800B62E4 00000024  EF 9D 00 32 */	fmuls f28, f29, f0
@@ -213,7 +213,7 @@ lbl_800B638C:
 /* 800B638C 00000000  C0 7A 04 D8 */	lfs f3, 0x4d8(r26)
 /* 800B6390 00000004  EC A3 E8 2A */	fadds f5, f3, f29
 /* 800B6394 00000008  C0 3A 04 D4 */	lfs f1, 0x4d4(r26)
-/* 800B6398 0000000C  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800B6398 0000000C  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800B639C 00000010  EC 81 00 28 */	fsubs f4, f1, f0
 /* 800B63A0 00000014  C0 5A 04 D0 */	lfs f2, 0x4d0(r26)
 /* 800B63A4 00000018  EC 02 D8 2A */	fadds f0, f2, f27
@@ -303,7 +303,7 @@ lbl_800B64CC:
 lbl_800B64D0:
 /* 800B64D0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B64D4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B64D8 00000008  A0 03 00 02 */	lhz r0, 2(r3)
+/* 800B64D8 00000008  A0 03 00 02 */	lhz r0, 2(r3)	/* effective address: 804061C2 */
 /* 800B64DC 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 800B64E0 00000010  40 82 00 18 */	bne lbl_800B64F8
 /* 800B64E4 00000014  38 63 00 9C */	addi r3, r3, 0x9c
@@ -588,7 +588,7 @@ lbl_800B68DC:
 /* 800B68E4 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 800B68E8 0000000C  41 82 00 30 */	beq lbl_800B6918
 /* 800B68EC 00000010  C0 3A 35 B0 */	lfs f1, 0x35b0(r26)
-/* 800B68F0 00000014  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800B68F0 00000014  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800B68F4 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B68F8 00000000  40 81 00 20 */	ble lbl_800B6918
 /* 800B68FC 00000004  80 1A 19 9C */	lwz r0, 0x199c(r26)
@@ -623,7 +623,7 @@ lbl_800B6948:
 /* 800B6968 00000020  41 82 00 18 */	beq lbl_800B6980
 /* 800B696C 00000024  7F 43 D3 78 */	mr r3, r26
 /* 800B6970 00000028  38 80 00 01 */	li r4, 1
-/* 800B6974 0000002C  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800B6974 0000002C  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800B6978 00000030  48 01 00 D1 */	bl procFallInit__9daAlink_cFif
 /* 800B697C 00000034  48 00 00 08 */	b lbl_800B6984
 lbl_800B6980:

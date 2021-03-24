@@ -11,7 +11,7 @@ lbl_801FCF84:
 lbl_801FCFA8:
 /* 801FCFA8 00000000  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801FCFAC 00000004  3B E4 01 88 */	addi r31, r4, g_meter2_info@l
-/* 801FCFB0 00000008  88 1F 00 BF */	lbz r0, 0xbf(r31)
+/* 801FCFB0 00000008  88 1F 00 BF */	lbz r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 801FCFB4 0000000C  28 00 00 04 */	cmplwi r0, 4
 /* 801FCFB8 00000010  40 82 00 18 */	bne lbl_801FCFD0
 /* 801FCFBC 00000014  88 03 01 48 */	lbz r0, 0x148(r3)
@@ -22,7 +22,7 @@ lbl_801FCFA8:
 lbl_801FCFD0:
 /* 801FCFD0 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801FCFD4 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801FCFD8 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 801FCFD8 00000008  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 801FCFDC 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801FCFE0 00000010  41 82 00 8C */	beq lbl_801FD06C
 /* 801FCFE4 00000014  48 03 B2 49 */	bl getStatus__12dMsgObject_cFv
@@ -49,7 +49,7 @@ lbl_801FCFD0:
 /* 801FD038 00000068  41 82 00 24 */	beq lbl_801FD05C
 /* 801FD03C 0000006C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FD040 00000070  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FD044 00000074  A0 03 00 98 */	lhz r0, 0x98(r3)
+/* 801FD044 00000074  A0 03 00 98 */	lhz r0, 0x98(r3)	/* effective address: 80430220 */
 /* 801FD048 00000078  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 801FD04C 0000007C  40 82 00 10 */	bne lbl_801FD05C
 /* 801FD050 00000080  88 03 00 C1 */	lbz r0, 0xc1(r3)

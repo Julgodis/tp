@@ -15,7 +15,7 @@ lbl_800FD5E4:
 /* 800FD618 00000034  38 80 00 01 */	li r4, 1
 /* 800FD61C 00000038  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800FD620 0000003C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 800FD624 00000040  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800FD624 00000040  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 800FD628 00000044  4B FC 94 21 */	bl procFallInit__9daAlink_cFif
 /* 800FD62C 00000048  48 00 00 08 */	b lbl_800FD634
 lbl_800FD630:

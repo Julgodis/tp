@@ -16,7 +16,7 @@ struct daB_ZANT_HIO_c {
 	/* 8064E994 */ ~daB_ZANT_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct dCcD_Sph {
@@ -25,7 +25,7 @@ struct dCcD_Sph {
 	/* 8064E76C */ dCcD_Sph();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_ZANT_c {

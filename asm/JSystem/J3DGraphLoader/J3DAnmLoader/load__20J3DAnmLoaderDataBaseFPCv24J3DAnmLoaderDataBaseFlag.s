@@ -400,8 +400,8 @@ lbl_803380D8:
 /* 803380F8 00000020  7F C3 F3 78 */	mr r3, r30
 /* 803380FC 00000024  48 00 00 20 */	b lbl_8033811C
 lbl_80338100:
-/* 80338100 00000000  3C 60 80 3A */	lis r3, J3DAnmLoader__stringBase0@ha
-/* 80338104 00000004  38 63 21 30 */	addi r3, r3, J3DAnmLoader__stringBase0@l
+/* 80338100 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80338104 00000004  38 63 21 30 */	addi r3, r3, stringBase0@l
 /* 80338108 00000008  4C C6 31 82 */	crclr 6
 /* 8033810C 0000000C  4B CC E9 B1 */	bl OSReport
 /* 80338110 00000010  38 60 00 00 */	li r3, 0

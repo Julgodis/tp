@@ -31,7 +31,7 @@ lbl_800F6A3C:
 /* 800F6A40 00000004  4B FF DB 5D */	bl setSyncCanoePos__9daAlink_cFv
 /* 800F6A44 00000008  7F C3 F3 78 */	mr r3, r30
 /* 800F6A48 0000000C  7F E4 FB 78 */	mr r4, r31
-/* 800F6A4C 00000010  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800F6A4C 00000010  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800F6A50 00000014  4B FB 65 61 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 800F6A54 00000018  38 60 00 01 */	li r3, 1
 /* 800F6A58 0000001C  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -16,15 +16,15 @@ lbl_80132E88:
 /* 80132EC0 00000038  EC 41 00 32 */	fmuls f2, f1, f0
 /* 80132EC4 0000003C  3C 80 80 42 */	lis r4, l_wolfBaseAnime@ha
 /* 80132EC8 00000040  38 A4 56 1C */	addi r5, r4, l_wolfBaseAnime@l
-/* 80132ECC 00000044  C0 25 00 00 */	lfs f1, 0(r5)
+/* 80132ECC 00000044  C0 25 00 00 */	lfs f1, 0(r5)	/* effective address: 8042561C */
 /* 80132ED0 00000048  3C 80 80 42 */	lis r4, l_wolfRopeBaseAnime@ha
 /* 80132ED4 0000004C  C4 04 56 34 */	lfsu f0, l_wolfRopeBaseAnime@l(r4)
 /* 80132ED8 00000050  EC 01 00 2A */	fadds f0, f1, f0
 /* 80132EDC 00000054  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80132EE0 00000058  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80132EE4 0000005C  D0 03 35 88 */	stfs f0, 0x3588(r3)
-/* 80132EE8 00000060  C0 25 00 08 */	lfs f1, 8(r5)
-/* 80132EEC 00000064  C0 04 00 08 */	lfs f0, 8(r4)
+/* 80132EE8 00000060  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 80425624 */
+/* 80132EEC 00000064  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80420008 */
 /* 80132EF0 00000068  EC 01 00 2A */	fadds f0, f1, f0
 /* 80132EF4 0000006C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80132EF8 00000070  EC 01 00 28 */	fsubs f0, f1, f0
@@ -53,7 +53,7 @@ lbl_80132F28:
 /* 80132F50 00000028  B0 1E 30 08 */	sth r0, 0x3008(r30)
 /* 80132F54 0000002C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80132F58 00000030  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80132F5C 00000034  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80132F5C 00000034  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80132F60 00000038  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80132F64 0000003C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80132F68 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -71,7 +71,7 @@ lbl_80132F88:
 /* 80132F94 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 80132F98 00000010  41 82 00 18 */	beq lbl_80132FB0
 /* 80132F9C 00000014  7F C3 F3 78 */	mr r3, r30
-/* 80132FA0 00000018  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 80132FA0 00000018  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 80132FA4 0000001C  4B FF EA C9 */	bl wolfRopeSwingInc__9daAlink_cFf
 /* 80132FA8 00000020  38 00 00 00 */	li r0, 0
 /* 80132FAC 00000024  B0 1E 30 08 */	sth r0, 0x3008(r30)

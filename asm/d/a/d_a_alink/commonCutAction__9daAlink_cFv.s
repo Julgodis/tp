@@ -12,7 +12,7 @@ lbl_800D21D0:
 lbl_800D21F8:
 /* 800D21F8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D21FC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D2200 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800D2200 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800D2204 0000000C  28 00 00 04 */	cmplwi r0, 4
 /* 800D2208 00000010  40 82 00 10 */	bne lbl_800D2218
 /* 800D220C 00000014  7F E3 FB 78 */	mr r3, r31

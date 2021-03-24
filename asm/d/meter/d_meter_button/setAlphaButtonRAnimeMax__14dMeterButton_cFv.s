@@ -6,12 +6,12 @@ lbl_80207358:
 /* 80207368 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8020736C 00000014  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 80207370 00000018  48 04 E4 B9 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80207374 0000001C  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
+/* 80207374 0000001C  C0 02 AD 4C */	lfs f0, lit_4147(r2)
 /* 80207378 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020737C 00000024  41 82 00 B4 */	beq lbl_80207430
 /* 80207380 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80207384 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80207388 00000030  88 03 5E 42 */	lbz r0, 0x5e42(r3)
+/* 80207388 00000030  88 03 5E 42 */	lbz r0, 0x5e42(r3)	/* effective address: 8040C002 */
 /* 8020738C 00000034  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80207390 00000038  41 82 00 20 */	beq lbl_802073B0
 /* 80207394 0000003C  80 7F 00 20 */	lwz r3, 0x20(r31)
@@ -27,15 +27,15 @@ lbl_802073B0:
 /* 802073B8 00000008  48 04 E4 19 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802073BC 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 802073C0 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 802073C4 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 802073C8 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 802073C4 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 802073C8 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 802073CC 0000001C  80 9F 00 20 */	lwz r4, 0x20(r31)
 /* 802073D0 00000020  38 A0 00 05 */	li r5, 5
 /* 802073D4 00000024  48 01 36 D1 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas
 lbl_802073D8:
 /* 802073D8 00000000  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802073DC 00000004  48 04 E4 4D */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802073E0 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
+/* 802073E0 00000008  C0 42 AD 4C */	lfs f2, lit_4147(r2)
 /* 802073E4 0000000C  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 802073E8 00000010  40 82 00 48 */	bne lbl_80207430
 /* 802073EC 00000014  88 1F 04 C2 */	lbz r0, 0x4c2(r31)
@@ -49,7 +49,7 @@ lbl_802073D8:
 /* 8020740C 00000034  38 C0 00 00 */	li r6, 0
 /* 80207410 00000038  38 E0 00 00 */	li r7, 0
 /* 80207414 0000003C  FC 20 10 90 */	fmr f1, f2
-/* 80207418 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
+/* 80207418 00000040  C0 62 AD 58 */	lfs f3, lit_4513(r2)
 /* 8020741C 00000044  FC 80 18 90 */	fmr f4, f3
 /* 80207420 00000048  39 00 00 00 */	li r8, 0
 /* 80207424 0000004C  48 0A 45 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

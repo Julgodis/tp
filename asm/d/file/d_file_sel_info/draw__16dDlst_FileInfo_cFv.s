@@ -7,7 +7,7 @@ lbl_80192D9C:
 /* 80192DB0 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80192DB4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80192DB8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80192DBC 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)
+/* 80192DBC 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)	/* effective address: 8040C110 */
 /* 80192DC0 00000024  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 80192DC4 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 80192DC8 0000002C  41 82 00 94 */	beq lbl_80192E5C
@@ -29,7 +29,7 @@ lbl_80192D9C:
 /* 80192E08 0000006C  38 61 00 08 */	addi r3, r1, 8
 /* 80192E0C 00000070  EC 20 20 24 */	fdivs f1, f0, f4
 /* 80192E10 00000074  EC 43 10 24 */	fdivs f2, f3, f2
-/* 80192E14 00000078  C0 62 9F F8 */	lfs f3, d_file_d_file_sel_info__lit_4000(r2)
+/* 80192E14 00000078  C0 62 9F F8 */	lfs f3, lit_4000(r2)
 /* 80192E18 0000007C  48 1B 3B 51 */	bl PSMTXScale
 /* 80192E1C 00000080  7F C3 F3 78 */	mr r3, r30
 /* 80192E20 00000084  38 81 00 08 */	addi r4, r1, 8
@@ -49,7 +49,7 @@ lbl_80192D9C:
 /* 80192E58 000000BC  48 1B 36 59 */	bl PSMTXCopy
 lbl_80192E5C:
 /* 80192E5C 00000000  80 7D 00 04 */	lwz r3, 4(r29)
-/* 80192E60 00000004  C0 22 9F FC */	lfs f1, d_file_d_file_sel_info__lit_4001(r2)
+/* 80192E60 00000004  C0 22 9F FC */	lfs f1, lit_4001(r2)
 /* 80192E64 00000008  FC 40 08 90 */	fmr f2, f1
 /* 80192E68 0000000C  7F E4 FB 78 */	mr r4, r31
 /* 80192E6C 00000010  48 16 60 69 */	bl draw__9J2DScreenFffPC14J2DGrafContext

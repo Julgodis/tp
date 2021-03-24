@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcDoorBoy_c {
@@ -33,6 +33,7 @@ struct daNpcDoorBoy_c {
 	/* 809AB724 */ void ctrlJointCallBack(J3DJoint*, int);
 	/* 809AB770 */ void setMotion(int, f32, int);
 	/* 809AB7B8 */ void reset();
+	/* 809AB984 */ void setAction(bool (daNpcDoorBoy_c::*)(void*));
 	/* 809ABA2C */ void wait(void*);
 	/* 809AC064 */ void fear(void*);
 	/* 809AC114 */ void talk(void*);
@@ -133,7 +134,7 @@ extern "C" void createHeapCallBack__14daNpcDoorBoy_cFP10fopAc_ac_c(); // 1
 extern "C" void ctrlJointCallBack__14daNpcDoorBoy_cFP8J3DJointi(); // 1
 extern "C" void setMotion__14daNpcDoorBoy_cFifi(); // 1
 extern "C" void reset__14daNpcDoorBoy_cFv(); // 1
-extern "C" static void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b(); // 1
+extern "C" void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b(); // 1
 extern "C" void wait__14daNpcDoorBoy_cFPv(); // 1
 extern "C" void fear__14daNpcDoorBoy_cFPv(); // 1
 extern "C" void talk__14daNpcDoorBoy_cFPv(); // 1
@@ -412,7 +413,7 @@ asm void daNpcDoorBoy_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b() {
+asm void daNpcDoorBoy_c::setAction(bool (daNpcDoorBoy_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_doorboy/d_a_npc_doorboy/setAction__14daNpcDoorBoy_cFM14daNpcDoorBoy_cFPCvPvPv_b.s"
 }

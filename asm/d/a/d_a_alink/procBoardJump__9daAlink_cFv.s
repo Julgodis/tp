@@ -40,10 +40,10 @@ lbl_80107360:
 /* 80107390 00000008  38 80 00 F7 */	li r4, 0xf7
 /* 80107394 0000000C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_board_c0@ha
 /* 80107398 00000010  38 A5 E8 70 */	addi r5, r5, m__19daAlinkHIO_board_c0@l
-/* 8010739C 00000014  C0 25 00 18 */	lfs f1, 0x18(r5)
-/* 801073A0 00000018  C0 45 00 1C */	lfs f2, 0x1c(r5)
-/* 801073A4 0000001C  A8 A5 00 14 */	lha r5, 0x14(r5)
-/* 801073A8 00000020  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 8010739C 00000014  C0 25 00 18 */	lfs f1, 0x18(r5)	/* effective address: 8038E888 */
+/* 801073A0 00000018  C0 45 00 1C */	lfs f2, 0x1c(r5)	/* effective address: 8038E88C */
+/* 801073A4 0000001C  A8 A5 00 14 */	lha r5, 0x14(r5)	/* effective address: 8038E884 */
+/* 801073A8 00000020  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 801073AC 00000024  4B FA 5C 61 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 801073B0 00000028  38 00 00 01 */	li r0, 1
 /* 801073B4 0000002C  B0 1F 30 10 */	sth r0, 0x3010(r31)

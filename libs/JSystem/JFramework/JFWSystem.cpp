@@ -214,7 +214,7 @@ u8 systemConsole__9JFWSystem[4];
 static u8 data_804511BC[4];
 
 /* 80455240-80455244 0004+00 s=1 e=0 z=0  None .sdata2    @2242                                                        */
-SECTION_SDATA2 static f32 JFWSystem__lit_2242 = 0.5f;
+SECTION_SDATA2 static f32 lit_2242 = 0.5f;
 
 /* 80455244-80455248 0004+00 s=1 e=0 z=0  None .sdata2    @2243                                                        */
 SECTION_SDATA2 static f32 lit_2243 = 17.0f / 20.0f;

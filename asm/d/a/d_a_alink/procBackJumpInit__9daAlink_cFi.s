@@ -31,9 +31,9 @@ lbl_800C57A4:
 /* 800C5818 00000074  4B FE 78 DD */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800C581C 00000078  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutDown_c0@ha
 /* 800C5820 0000007C  38 63 DD 44 */	addi r3, r3, m__21daAlinkHIO_cutDown_c0@l
-/* 800C5824 00000080  C0 03 00 6C */	lfs f0, 0x6c(r3)
+/* 800C5824 00000080  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 8038DDB0 */
 /* 800C5828 00000084  D0 1E 33 98 */	stfs f0, 0x3398(r30)
-/* 800C582C 00000088  C0 03 00 70 */	lfs f0, 0x70(r3)
+/* 800C582C 00000088  C0 03 00 70 */	lfs f0, 0x70(r3)	/* effective address: 8038DDB4 */
 /* 800C5830 0000008C  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 800C5834 00000090  7F C3 F3 78 */	mr r3, r30
 /* 800C5838 00000094  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010095@ha */
@@ -51,9 +51,9 @@ lbl_800C5854:
 /* 800C5864 00000010  4B FE 78 91 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800C5868 00000014  3C 60 80 39 */	lis r3, m__22daAlinkHIO_backJump_c0@ha
 /* 800C586C 00000018  38 63 D8 2C */	addi r3, r3, m__22daAlinkHIO_backJump_c0@l
-/* 800C5870 0000001C  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 800C5870 0000001C  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038D854 */
 /* 800C5874 00000020  D0 1E 33 98 */	stfs f0, 0x3398(r30)
-/* 800C5878 00000024  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800C5878 00000024  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038D858 */
 /* 800C587C 00000028  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 800C5880 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 800C5884 00000030  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010007@ha */

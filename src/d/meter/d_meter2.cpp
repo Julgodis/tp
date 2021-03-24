@@ -243,10 +243,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -317,7 +317,7 @@ extern "C" static void dMeter2_Execute__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_IsDelete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Delete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Create__FP9msg_class(); // 1
-extern "C" extern char const* const d_meter_d_meter2__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_METER2[10];
 
 // 
@@ -528,12 +528,12 @@ SECTION_DEAD static char const* const pad_8039934F = "";
 #pragma pop
 
 /* 804549C8-804549CC 0004+00 s=9 e=0 z=0  None .sdata2    @4662                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter2__lit_4662[4] = {
+SECTION_SDATA2 static u8 lit_4662[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804549CC-804549D0 0004+00 s=13 e=0 z=0  None .sdata2    @4663                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2__lit_4663 = 1.0f;
+SECTION_SDATA2 static f32 lit_4663 = 1.0f;
 
 /* 8021EA14-8021F128 0714+00 s=1 e=0 z=0  None .text      _create__9dMeter2_cFv                                        */
 #pragma push
@@ -570,7 +570,7 @@ asm void dMeter2_c::_draw() {
 
 /* ############################################################################################## */
 /* 804549D0-804549D8 0004+04 s=10 e=0 z=0  None .sdata2    @4837                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2__lit_4837[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4837[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
@@ -611,7 +611,7 @@ asm void dMeter2_c::setLifeZero() {
 
 /* ############################################################################################## */
 /* 803BFA28-803BFA54 002C+00 s=1 e=0 z=0  None .data      @5038                                                        */
-SECTION_DATA static void* d_meter_d_meter2__lit_5038[11] = {
+SECTION_DATA static void* lit_5038[11] = {
 	/* 0    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
 	/* 1    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x3FC),
 	/* 2    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x41C),
@@ -638,10 +638,10 @@ asm void dMeter2_c::checkStatus() {
 
 /* ############################################################################################## */
 /* 804549D8-804549E0 0008+00 s=4 e=0 z=0  None .sdata2    @5267                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter2__lit_5267 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_5267 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 804549E0-804549E8 0008+00 s=2 e=0 z=0  None .sdata2    @5268                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter2__lit_5268 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_5268 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8021FD60-80220180 0420+00 s=1 e=0 z=0  None .text      moveLife__9dMeter2_cFv                                       */
 #pragma push
@@ -1012,10 +1012,10 @@ asm void dMeter2_c::alphaAnimeButton() {
 
 /* ############################################################################################## */
 /* 80454A04-80454A08 0004+00 s=1 e=0 z=0  None .sdata2    @9090                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2__lit_9090 = 255.0f;
+SECTION_SDATA2 static f32 lit_9090 = 255.0f;
 
 /* 80454A08-80454A10 0004+04 s=1 e=0 z=0  None .sdata2    @9091                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2__lit_9091[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_9091[1 + 1 /* padding */] = {
 	5.0f,
 	/* padding */
 	0.0f,

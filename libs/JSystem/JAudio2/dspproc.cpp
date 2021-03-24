@@ -88,7 +88,7 @@ SECTION_SDATA static u16 DSP_MIXERLEVEL[1 + 3 /* padding */] = {
 };
 
 /* 80455770-80455778 0004+04 s=1 e=0 z=0  None .sdata2    @333                                                         */
-SECTION_SDATA2 static f32 dspproc__lit_333[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_333[1 + 1 /* padding */] = {
 	4096.0f,
 	/* padding */
 	0.0f,

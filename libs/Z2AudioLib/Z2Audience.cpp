@@ -263,7 +263,7 @@ asm void Z2AudibleAbsPos::calc(JGeometry::TVec3<f32> const& param_0) {
 
 /* ############################################################################################## */
 /* 80455AA0-80455AA4 0004+00 s=19 e=0 z=0  None .sdata2    @848                                                         */
-SECTION_SDATA2 static u8 Z2Audience__lit_848[4] = {
+SECTION_SDATA2 static u8 lit_848[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -303,13 +303,13 @@ SECTION_DATA static void* __vt__9Z2Audible[5 + 1 /* padding */] = {
 };
 
 /* 80455AA4-80455AA8 0004+00 s=16 e=0 z=0  None .sdata2    @894                                                         */
-SECTION_SDATA2 static f32 Z2Audience__lit_894 = 1.0f;
+SECTION_SDATA2 static f32 lit_894 = 1.0f;
 
 /* 80455AA8-80455AAC 0004+00 s=10 e=0 z=0  None .sdata2    @895                                                         */
 SECTION_SDATA2 static f32 lit_895 = 0.5f;
 
 /* 80455AAC-80455AB0 0004+00 s=5 e=0 z=0  None .sdata2    @896                                                         */
-SECTION_SDATA2 static f32 Z2Audience__lit_896 = -1.0f;
+SECTION_SDATA2 static f32 lit_896 = -1.0f;
 
 /* 802BBD94-802BBE74 00E0+00 s=1 e=0 z=0  None .text      __ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb */
 #pragma push
@@ -357,10 +357,10 @@ asm void Z2Audible::getOuterParams(int param_0) {
 
 /* ############################################################################################## */
 /* 80455AB0-80455AB4 0004+00 s=4 e=0 z=0  None .sdata2    @998                                                         */
-SECTION_SDATA2 static f32 Z2Audience__lit_998 = 3.0f;
+SECTION_SDATA2 static f32 lit_998 = 3.0f;
 
 /* 80455AB4-80455AB8 0004+00 s=1 e=0 z=0  None .sdata2    @999                                                         */
-SECTION_SDATA2 static f32 Z2Audience__lit_999 = 15.0f;
+SECTION_SDATA2 static f32 lit_999 = 15.0f;
 
 /* 80455AB8-80455ABC 0004+00 s=4 e=0 z=0  None .sdata2    @1000                                                        */
 SECTION_SDATA2 static f32 lit_1000 = 3.0f / 10.0f;
@@ -448,10 +448,10 @@ asm void Z2Audience3DSetting::init() {
 SECTION_SDATA2 static f32 lit_1058 = 1.25f;
 
 /* 80455AE0-80455AE4 0004+00 s=3 e=0 z=0  None .sdata2    @1059                                                        */
-SECTION_SDATA2 static f32 Z2Audience__lit_1059 = 2.0f;
+SECTION_SDATA2 static f32 lit_1059 = 2.0f;
 
 /* 80455AE4-80455AE8 0004+00 s=2 e=0 z=0  None .sdata2    @1060                                                        */
-SECTION_SDATA2 static f32 Z2Audience__lit_1060 = 4.0f;
+SECTION_SDATA2 static f32 lit_1060 = 4.0f;
 
 /* 80455AE8-80455AEC 0004+00 s=2 e=0 z=0  None .sdata2    @1061                                                        */
 SECTION_SDATA2 static f32 lit_1061 = 6.0f;
@@ -463,10 +463,10 @@ SECTION_SDATA2 static f32 lit_1062 = 8.0f;
 SECTION_SDATA2 static f32 lit_1063 = 9.0f / 10.0f;
 
 /* 80455AF4-80455AF8 0004+00 s=2 e=0 z=0  None .sdata2    @1064                                                        */
-SECTION_SDATA2 static f32 Z2Audience__lit_1064 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_1064 = 4.0f / 5.0f;
 
 /* 80455AF8-80455AFC 0004+00 s=2 e=0 z=0  None .sdata2    @1065                                                        */
-SECTION_SDATA2 static f32 Z2Audience__lit_1065 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_1065 = 7.0f / 10.0f;
 
 /* 80455AFC-80455B00 0004+00 s=2 e=0 z=0  None .sdata2    @1066                                                        */
 SECTION_SDATA2 static f32 lit_1066 = 3.0f / 5.0f;
@@ -577,7 +577,7 @@ SECTION_SDATA2 static f32 lit_1268 = 22.755556106567383f;
 SECTION_SDATA2 static f32 lit_1269 = 50.0f;
 
 /* 80455B14-80455B18 0004+00 s=1 e=0 z=0  None .sdata2    @1270                                                        */
-SECTION_SDATA2 static f32 Z2Audience__lit_1270 = 2.1445069313049316f;
+SECTION_SDATA2 static f32 lit_1270 = 2.1445069313049316f;
 
 /* 80455B18-80455B1C 0004+00 s=2 e=0 z=0  None .sdata2    @1271                                                        */
 SECTION_SDATA2 static f32 lit_1271 = 32.0f;
@@ -768,7 +768,7 @@ asm void Z2Audience::setAudioCamera(f32 (* param_0)[4], Vec& param_1, Vec& param
 
 /* ############################################################################################## */
 /* 804341D8-804341E4 000C+00 s=2 e=0 z=0  None .bss       @1539                                                        */
-static u8 Z2Audience__lit_1539[12];
+static u8 lit_1539[12];
 
 /* 804341E4-804341F8 0010+04 s=2 e=1 z=0  None .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9Z2Audible>Fv */
 u8 data_804341E4[16 + 4 /* padding */];

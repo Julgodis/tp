@@ -18,8 +18,8 @@ lbl_801F3C7C:
 /* 801F3CBC 00000040  4E 80 04 21 */	bctrl 
 /* 801F3CC0 00000044  88 1F 00 54 */	lbz r0, 0x54(r31)
 /* 801F3CC4 00000048  54 04 10 3A */	slwi r4, r0, 2
-/* 801F3CC8 0000004C  3C 60 80 3C */	lis r3, d_menu_d_menu_save__SelStartFrameTbl@ha
-/* 801F3CCC 00000050  38 63 DF 84 */	addi r3, r3, d_menu_d_menu_save__SelStartFrameTbl@l
+/* 801F3CC8 0000004C  3C 60 80 3C */	lis r3, SelStartFrameTbl@ha
+/* 801F3CCC 00000050  38 63 DF 84 */	addi r3, r3, SelStartFrameTbl@l
 /* 801F3CD0 00000054  7C 03 20 2E */	lwzx r0, r3, r4
 /* 801F3CD4 00000058  7C 7F 22 14 */	add r3, r31, r4
 /* 801F3CD8 0000005C  90 03 00 74 */	stw r0, 0x74(r3)
@@ -27,7 +27,7 @@ lbl_801F3C7C:
 /* 801F3CE0 00000064  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3CE4 00000068  7C 7F 02 14 */	add r3, r31, r0
 /* 801F3CE8 0000006C  80 03 00 74 */	lwz r0, 0x74(r3)
-/* 801F3CEC 00000070  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
+/* 801F3CEC 00000070  C8 22 AA 70 */	lfd f1, lit_4185(r2)
 /* 801F3CF0 00000074  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F3CF4 00000078  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F3CF8 0000007C  3C 00 43 30 */	lis r0, 0x4330
@@ -57,7 +57,7 @@ lbl_801F3D40:
 /* 801F3D54 00000014  38 C0 00 00 */	li r6, 0
 /* 801F3D58 00000018  3C E0 80 43 */	lis r7, g_msHIO@ha
 /* 801F3D5C 0000001C  38 E7 E8 4C */	addi r7, r7, g_msHIO@l
-/* 801F3D60 00000020  88 E7 00 0A */	lbz r7, 0xa(r7)
+/* 801F3D60 00000020  88 E7 00 0A */	lbz r7, 0xa(r7)	/* effective address: 8042E856 */
 /* 801F3D64 00000024  48 00 25 F1 */	bl selectWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc
 /* 801F3D68 00000028  88 1F 00 55 */	lbz r0, 0x55(r31)
 /* 801F3D6C 0000002C  54 00 10 3A */	slwi r0, r0, 2
@@ -71,8 +71,8 @@ lbl_801F3D40:
 /* 801F3D8C 0000004C  4E 80 04 21 */	bctrl 
 /* 801F3D90 00000050  88 1F 00 55 */	lbz r0, 0x55(r31)
 /* 801F3D94 00000054  54 04 10 3A */	slwi r4, r0, 2
-/* 801F3D98 00000058  3C 60 80 3C */	lis r3, d_menu_d_menu_save__SelEndFrameTbl@ha
-/* 801F3D9C 0000005C  38 63 DF 90 */	addi r3, r3, d_menu_d_menu_save__SelEndFrameTbl@l
+/* 801F3D98 00000058  3C 60 80 3C */	lis r3, SelEndFrameTbl@ha
+/* 801F3D9C 0000005C  38 63 DF 90 */	addi r3, r3, SelEndFrameTbl@l
 /* 801F3DA0 00000060  7C 03 20 2E */	lwzx r0, r3, r4
 /* 801F3DA4 00000064  7C 7F 22 14 */	add r3, r31, r4
 /* 801F3DA8 00000068  90 03 00 74 */	stw r0, 0x74(r3)
@@ -80,7 +80,7 @@ lbl_801F3D40:
 /* 801F3DB0 00000070  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3DB4 00000074  7C 7F 02 14 */	add r3, r31, r0
 /* 801F3DB8 00000078  80 03 00 74 */	lwz r0, 0x74(r3)
-/* 801F3DBC 0000007C  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
+/* 801F3DBC 0000007C  C8 22 AA 70 */	lfd f1, lit_4185(r2)
 /* 801F3DC0 00000080  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F3DC4 00000084  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F3DC8 00000088  3C 00 43 30 */	lis r0, 0x4330
@@ -102,7 +102,7 @@ lbl_801F3D40:
 /* 801F3E08 000000C8  80 63 00 F8 */	lwz r3, 0xf8(r3)
 /* 801F3E0C 000000CC  B0 83 00 16 */	sth r4, 0x16(r3)
 /* 801F3E10 000000D0  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F3E14 000000D4  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F3E14 000000D4  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F3E18 000000D8  4B FA 14 89 */	bl setAlphaRate__16dSelect_cursor_cFf
 lbl_801F3E1C:
 /* 801F3E1C 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

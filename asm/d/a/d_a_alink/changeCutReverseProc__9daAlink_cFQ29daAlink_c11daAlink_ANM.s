@@ -115,7 +115,7 @@ lbl_800D1B48:
 /* 800D1B70 00000028  7C 7C 1B 78 */	mr r28, r3
 /* 800D1B74 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D1B78 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D1B7C 00000034  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D1B7C 00000034  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D1B80 00000038  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800D1B84 0000003C  41 82 02 0C */	beq lbl_800D1D90
 /* 800D1B88 00000040  2C 1C 00 02 */	cmpwi r28, 2
@@ -141,7 +141,7 @@ lbl_800D1BB0:
 /* 800D1BD4 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D1BD8 00000000  40 81 00 58 */	ble lbl_800D1C30
 /* 800D1BDC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800D1BE0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800D1BE0 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800D1BE4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800D1BE8 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800D1BEC 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -247,7 +247,7 @@ lbl_800D1D44:
 /* 800D1D44 00000000  38 DE 1B 78 */	addi r6, r30, 0x1b78
 /* 800D1D48 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D1D4C 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D1D50 0000000C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 800D1D50 0000000C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 800D1D54 00000010  38 80 00 00 */	li r4, 0
 /* 800D1D58 00000014  90 81 00 08 */	stw r4, 8(r1)
 /* 800D1D5C 00000018  38 00 FF FF */	li r0, -1
@@ -261,7 +261,7 @@ lbl_800D1D44:
 /* 800D1D7C 00000038  39 01 00 24 */	addi r8, r1, 0x24
 /* 800D1D80 0000003C  39 20 00 00 */	li r9, 0
 /* 800D1D84 00000040  39 40 00 FF */	li r10, 0xff
-/* 800D1D88 00000044  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800D1D88 00000044  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800D1D8C 00000048  4B F7 AD 05 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_800D1D90:
 /* 800D1D90 00000000  88 7E 12 A0 */	lbz r3, 0x12a0(r30)
@@ -280,7 +280,7 @@ lbl_800D1DB0:
 /* 800D1DBC 0000000C  38 7E 2C A8 */	addi r3, r30, 0x2ca8
 /* 800D1DC0 00000010  7F A4 EB 78 */	mr r4, r29
 /* 800D1DC4 00000014  38 C0 00 00 */	li r6, 0
-/* 800D1DC8 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800D1DC8 00000018  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800D1DCC 0000001C  48 1F 2A 49 */	bl startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef
 /* 800D1DD0 00000020  7F C3 F3 78 */	mr r3, r30
 /* 800D1DD4 00000024  7F E4 FB 78 */	mr r4, r31

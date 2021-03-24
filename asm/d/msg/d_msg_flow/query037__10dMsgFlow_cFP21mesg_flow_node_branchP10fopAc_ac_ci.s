@@ -7,8 +7,8 @@ lbl_8024BC80:
 /* 8024BC94 00000014  88 63 00 FA */	lbz r3, 0xfa(r3)
 /* 8024BC98 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8024BC9C 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8024BCA0 00000020  80 84 5D BC */	lwz r4, 0x5dbc(r4)
-/* 8024BCA4 00000024  88 04 01 A2 */	lbz r0, 0x1a2(r4)
+/* 8024BCA0 00000020  80 84 5D BC */	lwz r4, 0x5dbc(r4)	/* effective address: 8040BF7C */
+/* 8024BCA4 00000024  88 04 01 A2 */	lbz r0, 0x1a2(r4)	/* effective address: 80406362 */
 /* 8024BCA8 00000028  28 00 00 02 */	cmplwi r0, 2
 /* 8024BCAC 0000002C  40 82 00 08 */	bne lbl_8024BCB4
 /* 8024BCB0 00000030  38 60 00 03 */	li r3, 3

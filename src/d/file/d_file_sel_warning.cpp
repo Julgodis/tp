@@ -116,9 +116,7 @@ extern "C" void draw__16dDlst_FileWarn_cFv(); // 1
 extern "C" void __sinit_d_file_sel_warning_cpp(); // 1
 extern "C" void __dt__16dDlst_FileWarn_cFv(); // 1
 extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform(); // 1
-extern "C" extern char const* const d_file_d_file_sel_warning__stringBase0;
-extern "C" extern void* d_file_d_file_sel_warning__lit_3805[3];
-extern "C" extern void* d_file_d_file_sel_warning__lit_3806[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -155,26 +153,26 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 803BB410-803BB41C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_file_d_file_sel_warning__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB41C-803BB428 000C+00 s=0 e=0 z=0  None .data      @3805                                                        */
-SECTION_DATA void* d_file_d_file_sel_warning__lit_3805[3] = {
+/* 803BB41C-803BB428 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
+SECTION_DATA static void* lit_3805[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeWait__15dFile_warning_cFv,
 };
 
-/* 803BB428-803BB434 000C+00 s=0 e=0 z=0  None .data      @3806                                                        */
-SECTION_DATA void* d_file_d_file_sel_warning__lit_3806[3] = {
+/* 803BB428-803BB434 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
+SECTION_DATA static void* lit_3806[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeMove__15dFile_warning_cFv,
 };
 
-/* 803BB434-803BB44C 0018+00 s=1 e=0 z=0  None .data      fileWarningProc                                              */
-SECTION_DATA static u8 d_file_d_file_sel_warning__fileWarningProc[24] = {
+/* 803BB434-803BB44C 0018+00 s=2 e=0 z=0  None .data      fileWarningProc                                              */
+SECTION_DATA static u8 fileWarningProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -209,7 +207,7 @@ SECTION_DATA static void* __vt__15dFile_warning_c[3 + 3 /* padding */] = {
 };
 
 /* 804539D8-804539DC 0004+00 s=3 e=0 z=0  None .sdata2    @3741                                                        */
-SECTION_SDATA2 static u8 d_file_d_file_sel_warning__lit_3741[4] = {
+SECTION_SDATA2 static u8 lit_3741[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -252,19 +250,19 @@ SECTION_DEAD static char const* const pad_803948B1 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 804539DC-804539E0 0004+00 s=1 e=0 z=0  None .sdata2    @3769                                                        */
-SECTION_SDATA2 static void* d_file_d_file_sel_warning__lit_3769 = (void*)&d_file_d_file_sel_warning__stringBase0;
+SECTION_SDATA2 static void* lit_3769 = (void*)&stringBase0;
 
 /* 804539E0-804539E4 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
-SECTION_SDATA2 static void* data_804539E0 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x25);
+SECTION_SDATA2 static void* data_804539E0 = (void*)(((char*)&stringBase0)+0x25);
 
 /* 804539E4-804539E8 0004+00 s=1 e=0 z=0  None .sdata2    @3770                                                        */
-SECTION_SDATA2 static void* d_file_d_file_sel_warning__lit_3770 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x44);
+SECTION_SDATA2 static void* lit_3770 = (void*)(((char*)&stringBase0)+0x44);
 
 /* 804539E8-804539EC 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
-SECTION_SDATA2 static void* data_804539E8 = (void*)(((char*)&d_file_d_file_sel_warning__stringBase0)+0x69);
+SECTION_SDATA2 static void* data_804539E8 = (void*)(((char*)&stringBase0)+0x69);
 
 /* 804539EC-804539F0 0004+00 s=2 e=0 z=0  None .sdata2    @3799                                                        */
-SECTION_SDATA2 static f32 d_file_d_file_sel_warning__lit_3799 = 2849.0f;
+SECTION_SDATA2 static f32 lit_3799 = 2849.0f;
 
 /* 80191CF4-80191F18 0224+00 s=1 e=0 z=0  None .text      screenSet__15dFile_warning_cFv                               */
 #pragma push
@@ -312,7 +310,7 @@ asm void dFile_warning_c::modeMove() {
 
 /* ############################################################################################## */
 /* 804539F0-804539F8 0008+00 s=3 e=0 z=0  None .sdata2    @3868                                                        */
-SECTION_SDATA2 static f64 d_file_d_file_sel_warning__lit_3868 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3868 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80191FD4-801920B8 00E4+00 s=1 e=0 z=0  None .text      baseMoveAnm__15dFile_warning_cFv                             */
 #pragma push

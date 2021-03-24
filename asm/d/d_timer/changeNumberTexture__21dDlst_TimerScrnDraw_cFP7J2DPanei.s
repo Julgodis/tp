@@ -15,7 +15,7 @@ lbl_8025EE50:
 lbl_8025EE54:
 /* 8025EE54 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025EE58 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025EE5C 00000008  83 E3 5D 30 */	lwz r31, 0x5d30(r3)
+/* 8025EE5C 00000008  83 E3 5D 30 */	lwz r31, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 8025EE60 0000000C  7F 83 E3 78 */	mr r3, r28
 /* 8025EE64 00000010  7F C4 F3 78 */	mr r4, r30
 /* 8025EE68 00000014  48 00 00 65 */	bl getNumber__21dDlst_TimerScrnDraw_cFi

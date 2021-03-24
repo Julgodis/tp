@@ -9,8 +9,8 @@ lbl_80120DB0:
 /* 80120DCC 00000000  39 61 00 60 */	addi r11, r1, 0x60
 /* 80120DD0 00000004  48 24 13 F1 */	bl _savegpr_22
 /* 80120DD4 00000008  7C 78 1B 78 */	mr r24, r3
-/* 80120DD8 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 80120DDC 00000010  3B A3 D6 58 */	addi r29, r3, d_a_d_a_alink__lit_3757@l
+/* 80120DD8 0000000C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 80120DDC 00000010  3B A3 D6 58 */	addi r29, r3, lit_3757@l
 /* 80120DE0 00000014  3B 20 00 00 */	li r25, 0
 /* 80120DE4 00000018  3A E0 00 00 */	li r23, 0
 /* 80120DE8 0000001C  3C 60 80 3B */	lis r3, m_typeFourData__8dPaPoF_c@ha

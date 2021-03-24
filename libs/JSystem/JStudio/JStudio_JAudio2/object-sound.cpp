@@ -116,9 +116,6 @@ struct JAISoundParamsMove {
 	/* 802A2EBC */ void movePan(f32, u32);
 };
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -126,6 +123,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -165,8 +165,8 @@ extern "C" void beginSound_fadeIn___Q215JStudio_JAudio214TAdaptor_soundFv(); // 
 extern "C" void endSound_fadeOut___Q215JStudio_JAudio214TAdaptor_soundFUl(); // 1
 extern "C" void __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv(); // 1
 extern "C" void func_8028E0F4(); // 1
-extern "C" extern u8 object_sound__lit_1817[12];
-extern "C" extern u8 object_sound__lit_1818[12];
+extern "C" extern u8 lit_1817[12];
+extern "C" extern u8 lit_1818[12];
 extern "C" extern u8 lit_1819[12];
 extern "C" extern u8 lit_1820[12];
 extern "C" extern u8 lit_1821[12];
@@ -334,10 +334,10 @@ asm JStudio_JAudio2::TAdaptor_sound::~TAdaptor_sound() {
 static u8 data_80431490[32];
 
 /* 804314B0-804314BC 000C+00 s=0 e=0 z=0  None .bss       @1817                                                        */
-u8 object_sound__lit_1817[12];
+u8 lit_1817[12];
 
 /* 804314BC-804314C8 000C+00 s=0 e=0 z=0  None .bss       @1818                                                        */
-u8 object_sound__lit_1818[12];
+u8 lit_1818[12];
 
 /* 804314C8-804314D4 000C+00 s=0 e=0 z=0  None .bss       @1819                                                        */
 u8 lit_1819[12];
@@ -351,7 +351,7 @@ u8 lit_1821[12];
 /* 804314EC-804314F8 000C+00 s=0 e=0 z=0  None .bss       @1822                                                        */
 u8 lit_1822[12];
 
-/* 804314F8-80431540 0048+00 s=1 e=0 z=0  None .bss       saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound         */
+/* 804314F8-80431540 0048+00 s=2 e=0 z=0  None .bss       saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound         */
 static u8 saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound[72];
 
 /* 8028D9A4-8028DA74 00D0+00 s=1 e=0 z=0  None .text      adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv    */

@@ -30,7 +30,7 @@ lbl_8025FBD0:
 /* 8025FBDC 0000000C  7C 00 20 00 */	cmpw r0, r4
 /* 8025FBE0 00000010  41 81 01 AC */	bgt lbl_8025FD8C
 /* 8025FBE4 00000014  7C 00 07 34 */	extsh r0, r0
-/* 8025FBE8 00000018  C8 62 B5 58 */	lfd f3, d_d_timer__lit_4627(r2)
+/* 8025FBE8 00000018  C8 62 B5 58 */	lfd f3, lit_4627(r2)
 /* 8025FBEC 0000001C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8025FBF0 00000020  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8025FBF4 00000024  3C 60 43 30 */	lis r3, 0x4330
@@ -54,7 +54,7 @@ lbl_8025FBD0:
 /* 8025FC3C 0000006C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8025FC40 00000070  EF E2 00 24 */	fdivs f31, f2, f0
 /* 8025FC44 00000074  C0 22 B5 68 */	lfs f1, lit_5094(r2)
-/* 8025FC48 00000078  C0 02 B5 4C */	lfs f0, d_d_timer__lit_4124(r2)
+/* 8025FC48 00000078  C0 02 B5 4C */	lfs f0, lit_4124(r2)
 /* 8025FC4C 0000007C  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 8025FC50 00000080  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8025FC54 00000084  80 1D 00 18 */	lwz r0, 0x18(r29)
@@ -69,9 +69,9 @@ lbl_8025FBD0:
 /* 8025FC78 000000A8  7F A3 EB 78 */	mr r3, r29
 /* 8025FC7C 000000AC  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8025FC80 000000B0  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8025FC84 000000B4  C0 04 0B 84 */	lfs f0, 0xb84(r4)
+/* 8025FC84 000000B4  C0 04 0B 84 */	lfs f0, 0xb84(r4)	/* effective address: 8042F74C */
 /* 8025FC88 000000B8  EC 20 08 2A */	fadds f1, f0, f1
-/* 8025FC8C 000000BC  C0 44 0B 88 */	lfs f2, 0xb88(r4)
+/* 8025FC8C 000000BC  C0 44 0B 88 */	lfs f2, 0xb88(r4)	/* effective address: 8042F750 */
 /* 8025FC90 000000C0  4B FF FD 9D */	bl setTimerPos__21dDlst_TimerScrnDraw_cFff
 /* 8025FC94 000000C4  48 00 00 2C */	b lbl_8025FCC0
 lbl_8025FC98:
@@ -105,10 +105,10 @@ lbl_8025FCC0:
 /* 8025FD00 00000040  40 82 00 38 */	bne lbl_8025FD38
 /* 8025FD04 00000044  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8025FD08 00000048  38 83 EB C8 */	addi r4, r3, g_drawHIO@l
-/* 8025FD0C 0000004C  C0 24 0B 80 */	lfs f1, 0xb80(r4)
+/* 8025FD0C 0000004C  C0 24 0B 80 */	lfs f1, 0xb80(r4)	/* effective address: 8042F748 */
 /* 8025FD10 00000050  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8025FD14 00000054  80 63 00 04 */	lwz r3, 4(r3)
-/* 8025FD18 00000058  C0 04 0B 7C */	lfs f0, 0xb7c(r4)
+/* 8025FD18 00000058  C0 04 0B 7C */	lfs f0, 0xb7c(r4)	/* effective address: 8042F744 */
 /* 8025FD1C 0000005C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8025FD20 00000060  D0 23 00 D0 */	stfs f1, 0xd0(r3)
 /* 8025FD24 00000064  81 83 00 00 */	lwz r12, 0(r3)
@@ -150,7 +150,7 @@ lbl_8025FD8C:
 /* 8025FDA8 0000001C  7C 04 18 50 */	subf r0, r4, r3
 /* 8025FDAC 00000020  7C 00 07 34 */	extsh r0, r0
 /* 8025FDB0 00000024  A8 9F 00 02 */	lha r4, 2(r31)
-/* 8025FDB4 00000028  C8 62 B5 58 */	lfd f3, d_d_timer__lit_4627(r2)
+/* 8025FDB4 00000028  C8 62 B5 58 */	lfd f3, lit_4627(r2)
 /* 8025FDB8 0000002C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8025FDBC 00000030  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8025FDC0 00000034  3C 60 43 30 */	lis r3, 0x4330
@@ -174,7 +174,7 @@ lbl_8025FD8C:
 /* 8025FE08 0000007C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8025FE0C 00000080  EF E2 00 24 */	fdivs f31, f2, f0
 /* 8025FE10 00000084  C0 22 B5 68 */	lfs f1, lit_5094(r2)
-/* 8025FE14 00000088  C0 02 B5 4C */	lfs f0, d_d_timer__lit_4124(r2)
+/* 8025FE14 00000088  C0 02 B5 4C */	lfs f0, lit_4124(r2)
 /* 8025FE18 0000008C  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 8025FE1C 00000090  EF C1 00 32 */	fmuls f30, f1, f0
 /* 8025FE20 00000094  80 1D 00 14 */	lwz r0, 0x14(r29)

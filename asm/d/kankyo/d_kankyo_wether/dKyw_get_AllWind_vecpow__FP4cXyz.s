@@ -12,8 +12,8 @@ lbl_8005B530:
 /* 8005B558 00000028  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8005B55C 0000002C  38 A4 CA 54 */	addi r5, r4, g_env_light@l
 /* 8005B560 00000030  38 85 0E 48 */	addi r4, r5, 0xe48
-/* 8005B564 00000034  C0 45 0E 58 */	lfs f2, 0xe58(r5)
-/* 8005B568 00000038  C0 22 86 E4 */	lfs f1, d_kankyo_d_kankyo_wether__lit_4379(r2)
+/* 8005B564 00000034  C0 45 0E 58 */	lfs f2, 0xe58(r5)	/* effective address: 8042D8AC */
+/* 8005B568 00000038  C0 22 86 E4 */	lfs f1, lit_4379(r2)
 /* 8005B56C 0000003C  C0 01 00 08 */	lfs f0, 8(r1)
 /* 8005B570 00000040  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8005B574 00000044  EC 22 00 32 */	fmuls f1, f2, f0

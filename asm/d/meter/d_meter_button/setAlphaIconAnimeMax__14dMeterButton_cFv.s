@@ -6,7 +6,7 @@ lbl_802093D8:
 /* 802093E8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 802093EC 00000014  80 63 00 F4 */	lwz r3, 0xf4(r3)
 /* 802093F0 00000018  48 04 C4 39 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 802093F4 0000001C  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
+/* 802093F4 0000001C  C0 02 AD 4C */	lfs f0, lit_4147(r2)
 /* 802093F8 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802093FC 00000024  41 82 00 64 */	beq lbl_80209460
 /* 80209400 00000028  88 9F 04 D9 */	lbz r4, 0x4d9(r31)
@@ -17,7 +17,7 @@ lbl_802093D8:
 /* 80209414 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80209418 00000040  41 82 00 20 */	beq lbl_80209438
 /* 8020941C 00000044  80 7F 00 F4 */	lwz r3, 0xf4(r31)
-/* 80209420 00000048  C0 22 AD 4C */	lfs f1, d_meter_d_meter_button__lit_4147(r2)
+/* 80209420 00000048  C0 22 AD 4C */	lfs f1, lit_4147(r2)
 /* 80209424 0000004C  48 04 C3 AD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80209428 00000050  38 00 00 05 */	li r0, 5
 /* 8020942C 00000054  80 7F 00 F4 */	lwz r3, 0xf4(r31)
@@ -25,12 +25,12 @@ lbl_802093D8:
 /* 80209434 0000005C  48 00 00 2C */	b lbl_80209460
 lbl_80209438:
 /* 80209438 00000000  80 7F 00 F4 */	lwz r3, 0xf4(r31)
-/* 8020943C 00000004  C0 22 AD 4C */	lfs f1, d_meter_d_meter_button__lit_4147(r2)
+/* 8020943C 00000004  C0 22 AD 4C */	lfs f1, lit_4147(r2)
 /* 80209440 00000008  48 04 C3 91 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80209444 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80209448 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020944C 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 80209450 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 8020944C 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 80209450 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 80209454 0000001C  80 9F 00 F4 */	lwz r4, 0xf4(r31)
 /* 80209458 00000020  38 A0 00 05 */	li r5, 5
 /* 8020945C 00000024  48 01 16 49 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas

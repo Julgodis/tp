@@ -22,10 +22,10 @@ lbl_80339AEC:
 /* 80339B3C 0000002C  48 02 82 25 */	bl __construct_array
 /* 80339B40 00000030  3B 80 00 00 */	li r28, 0
 /* 80339B44 00000034  7F 9F E3 78 */	mr r31, r28
-/* 80339B48 00000038  CB A2 CB 00 */	lfd f29, JMATrigonometric__lit_441(r2)
+/* 80339B48 00000038  CB A2 CB 00 */	lfd f29, lit_441(r2)
 /* 80339B4C 0000003C  3F C0 43 30 */	lis r30, 0x4330
-/* 80339B50 00000040  CB E2 CA E0 */	lfd f31, JMATrigonometric__lit_436(r2)
-/* 80339B54 00000044  CB C2 CA E8 */	lfd f30, JMATrigonometric__lit_437(r2)
+/* 80339B50 00000040  CB E2 CA E0 */	lfd f31, lit_436(r2)
+/* 80339B54 00000044  CB C2 CA E8 */	lfd f30, lit_437(r2)
 /* 80339B58 00000048  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80339B5C 0000004C  3B A3 9A 20 */	addi r29, r3, sincosTable___5JMath@l
 lbl_80339B60:
@@ -51,9 +51,9 @@ lbl_80339B60:
 /* 80339BAC 0000004C  41 80 FF B4 */	blt lbl_80339B60
 /* 80339BB0 00000050  3B 80 00 00 */	li r28, 0
 /* 80339BB4 00000054  3B E0 00 00 */	li r31, 0
-/* 80339BB8 00000058  CB E2 CB 00 */	lfd f31, JMATrigonometric__lit_441(r2)
+/* 80339BB8 00000058  CB E2 CB 00 */	lfd f31, lit_441(r2)
 /* 80339BBC 0000005C  3F C0 43 30 */	lis r30, 0x4330
-/* 80339BC0 00000060  CB C2 CA F0 */	lfd f30, JMATrigonometric__lit_438(r2)
+/* 80339BC0 00000060  CB C2 CA F0 */	lfd f30, lit_438(r2)
 /* 80339BC4 00000064  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
 /* 80339BC8 00000068  3B A3 9A 20 */	addi r29, r3, atanTable___5JMath@l
 lbl_80339BCC:
@@ -73,13 +73,13 @@ lbl_80339BCC:
 /* 80339C00 00000034  C0 02 CA D8 */	lfs f0, lit_326(r2)
 /* 80339C04 00000038  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
 /* 80339C08 0000003C  D4 03 9A 20 */	stfsu f0, atanTable___5JMath@l(r3)
-/* 80339C0C 00000040  C0 02 CA F8 */	lfs f0, JMATrigonometric__lit_439(r2)
-/* 80339C10 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)
+/* 80339C0C 00000040  C0 02 CA F8 */	lfs f0, lit_439(r2)
+/* 80339C10 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)	/* effective address: 80451000 */
 /* 80339C14 00000048  3B 80 00 00 */	li r28, 0
 /* 80339C18 0000004C  3B E0 00 00 */	li r31, 0
-/* 80339C1C 00000050  CB C2 CB 00 */	lfd f30, JMATrigonometric__lit_441(r2)
+/* 80339C1C 00000050  CB C2 CB 00 */	lfd f30, lit_441(r2)
 /* 80339C20 00000054  3F A0 43 30 */	lis r29, 0x4330
-/* 80339C24 00000058  CB E2 CA F0 */	lfd f31, JMATrigonometric__lit_438(r2)
+/* 80339C24 00000058  CB E2 CA F0 */	lfd f31, lit_438(r2)
 /* 80339C28 0000005C  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
 /* 80339C2C 00000060  3B C3 AA 40 */	addi r30, r3, asinAcosTable___5JMath@l
 lbl_80339C30:
@@ -99,8 +99,8 @@ lbl_80339C30:
 /* 80339C64 00000034  C0 02 CA D8 */	lfs f0, lit_326(r2)
 /* 80339C68 00000038  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
 /* 80339C6C 0000003C  D4 03 AA 40 */	stfsu f0, asinAcosTable___5JMath@l(r3)
-/* 80339C70 00000040  C0 02 CA F8 */	lfs f0, JMATrigonometric__lit_439(r2)
-/* 80339C74 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)
+/* 80339C70 00000040  C0 02 CA F8 */	lfs f0, lit_439(r2)
+/* 80339C74 00000044  D0 03 10 00 */	stfs f0, 0x1000(r3)	/* effective address: 80451000 */
 /* 80339C78 00000048  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */
 /* 80339C7C 00000000  CB E1 00 60 */	lfd f31, 0x60(r1)
 /* 80339C80 00000050  E3 C1 00 58 */	psq_l f30, 88(r1), 0, 0 /* qr0 */

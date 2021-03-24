@@ -11,19 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -34,6 +22,18 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 8054E460 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct daNpc_Kakashi_c {
@@ -61,6 +61,8 @@ struct daNpc_Kakashi_c {
 	/* 8054C584 */ void setCollision();
 	/* 8054C924 */ void drawDbgInfo();
 	/* 8054C92C */ void selectAction();
+	/* 8054CA1C */ void chkAction(int (daNpc_Kakashi_c::*)(void*));
+	/* 8054CA48 */ void setAction(int (daNpc_Kakashi_c::*)(void*));
 	/* 8054CAF0 */ void hitChk();
 	/* 8054CEA0 */ void setStaggerParam(fopAc_ac_c*);
 	/* 8054D26C */ void setPrtcls(int);
@@ -199,8 +201,8 @@ extern "C" void setAttnPos__15daNpc_Kakashi_cFv(); // 1
 extern "C" void setCollision__15daNpc_Kakashi_cFv(); // 1
 extern "C" void drawDbgInfo__15daNpc_Kakashi_cFv(); // 1
 extern "C" void selectAction__15daNpc_Kakashi_cFv(); // 1
-extern "C" static void chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i(); // 1
+extern "C" void setAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i(); // 1
 extern "C" void hitChk__15daNpc_Kakashi_cFv(); // 1
 extern "C" void setStaggerParam__15daNpc_Kakashi_cFP10fopAc_ac_c(); // 1
 extern "C" void setPrtcls__15daNpc_Kakashi_cFi(); // 1
@@ -666,7 +668,7 @@ asm void daNpc_Kakashi_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i() {
+asm void daNpc_Kakashi_c::chkAction(int (daNpc_Kakashi_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i.s"
 }
@@ -677,7 +679,7 @@ extern "C" asm static void chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i() {
+asm void daNpc_Kakashi_c::setAction(int (daNpc_Kakashi_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kakashi/d_a_npc_kakashi/setAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i.s"
 }

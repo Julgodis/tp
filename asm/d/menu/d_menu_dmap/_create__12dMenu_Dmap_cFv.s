@@ -40,7 +40,7 @@ lbl_801BD7C0:
 /* 801BD858 00000098  90 1D 00 00 */	stw r0, 0(r29)
 /* 801BD85C 0000009C  38 00 00 00 */	li r0, 0
 /* 801BD860 000000A0  90 1D 00 8C */	stw r0, 0x8c(r29)
-/* 801BD864 000000A4  C0 02 A5 E8 */	lfs f0, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BD864 000000A4  C0 02 A5 E8 */	lfs f0, lit_3962(r2)
 /* 801BD868 000000A8  D0 1D 00 90 */	stfs f0, 0x90(r29)
 /* 801BD86C 000000AC  D0 1D 00 94 */	stfs f0, 0x94(r29)
 /* 801BD870 000000B0  D0 1D 00 98 */	stfs f0, 0x98(r29)
@@ -108,8 +108,8 @@ lbl_801BD94C:
 /* 801BD960 00000014  38 A0 00 02 */	li r5, 2
 /* 801BD964 00000018  38 C0 00 01 */	li r6, 1
 /* 801BD968 0000001C  38 E0 00 01 */	li r7, 1
-/* 801BD96C 00000020  C0 22 A6 14 */	lfs f1, d_menu_d_menu_dmap__lit_4313(r2)
-/* 801BD970 00000024  C0 42 A6 0C */	lfs f2, d_menu_d_menu_dmap__lit_4249(r2)
+/* 801BD96C 00000020  C0 22 A6 14 */	lfs f1, lit_4313(r2)
+/* 801BD970 00000024  C0 42 A6 0C */	lfs f2, lit_4249(r2)
 /* 801BD974 00000028  39 00 00 00 */	li r8, 0
 /* 801BD978 0000002C  39 20 08 00 */	li r9, 0x800
 /* 801BD97C 00000030  4B E7 46 C9 */	bl __ct__9STControlFssssffss
@@ -163,7 +163,7 @@ lbl_801BDA0C:
 lbl_801BDA30:
 /* 801BDA30 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801BDA34 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801BDA38 00000008  88 03 00 BF */	lbz r0, 0xbf(r3)
+/* 801BDA38 00000008  88 03 00 BF */	lbz r0, 0xbf(r3)	/* effective address: 80430247 */
 /* 801BDA3C 0000000C  28 00 00 06 */	cmplwi r0, 6
 /* 801BDA40 00000010  40 82 00 A0 */	bne lbl_801BDAE0
 /* 801BDA44 00000014  3B 80 00 00 */	li r28, 0
@@ -262,7 +262,7 @@ lbl_801BDB9C:
 /* 801BDBA4 00000008  88 1F 01 7F */	lbz r0, 0x17f(r31)
 /* 801BDBA8 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801BDBAC 00000010  41 82 00 7C */	beq lbl_801BDC28
-/* 801BDBB0 00000014  C0 02 A5 E8 */	lfs f0, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BDBB0 00000014  C0 02 A5 E8 */	lfs f0, lit_3962(r2)
 /* 801BDBB4 00000018  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 801BDBB8 0000001C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 801BDBBC 00000020  80 7F 00 04 */	lwz r3, 4(r31)
@@ -315,7 +315,7 @@ lbl_801BDC28:
 /* 801BDC70 00000048  80 83 00 78 */	lwz r4, 0x78(r3)
 /* 801BDC74 0000004C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 801BDC78 00000050  80 63 0C C4 */	lwz r3, 0xcc4(r3)
-/* 801BDC7C 00000054  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BDC7C 00000054  C0 22 A5 EC */	lfs f1, lit_3963(r2)
 /* 801BDC80 00000058  81 83 00 00 */	lwz r12, 0(r3)
 /* 801BDC84 0000005C  81 8C 00 9C */	lwz r12, 0x9c(r12)
 /* 801BDC88 00000060  7D 89 03 A6 */	mtctr r12
@@ -324,8 +324,8 @@ lbl_801BDC28:
 /* 801BDC94 0000006C  41 82 00 24 */	beq lbl_801BDCB8
 /* 801BDC98 00000070  80 7F 00 08 */	lwz r3, 8(r31)
 /* 801BDC9C 00000074  80 63 0C C4 */	lwz r3, 0xcc4(r3)
-/* 801BDCA0 00000078  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
-/* 801BDCA4 0000007C  C0 42 A5 E8 */	lfs f2, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BDCA0 00000078  C0 22 A5 EC */	lfs f1, lit_3963(r2)
+/* 801BDCA4 0000007C  C0 42 A5 E8 */	lfs f2, lit_3962(r2)
 /* 801BDCA8 00000080  81 83 00 00 */	lwz r12, 0(r3)
 /* 801BDCAC 00000084  81 8C 01 04 */	lwz r12, 0x104(r12)
 /* 801BDCB0 00000088  7D 89 03 A6 */	mtctr r12
@@ -337,15 +337,15 @@ lbl_801BDCB8:
 /* 801BDCC4 0000000C  88 03 00 E7 */	lbz r0, 0xe7(r3)
 /* 801BDCC8 00000010  7C 04 07 74 */	extsb r4, r0
 /* 801BDCCC 00000014  7F E3 FB 78 */	mr r3, r31
-/* 801BDCD0 00000018  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BDCD0 00000018  C0 22 A5 EC */	lfs f1, lit_3963(r2)
 /* 801BDCD4 0000001C  4B FF EB 75 */	bl getIconPos__12dMenu_Dmap_cFScf
 /* 801BDCD8 00000020  38 00 00 00 */	li r0, 0
 /* 801BDCDC 00000024  98 1F 01 7D */	stb r0, 0x17d(r31)
 /* 801BDCE0 00000028  7F E3 FB 78 */	mr r3, r31
 /* 801BDCE4 0000002C  88 1F 01 7B */	lbz r0, 0x17b(r31)
 /* 801BDCE8 00000030  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801BDCEC 00000034  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap__init_process@ha
-/* 801BDCF0 00000038  38 04 C8 28 */	addi r0, r4, d_menu_d_menu_dmap__init_process@l
+/* 801BDCEC 00000034  3C 80 80 3C */	lis r4, init_process@ha
+/* 801BDCF0 00000038  38 04 C8 28 */	addi r0, r4, init_process@l
 /* 801BDCF4 0000003C  7D 80 2A 14 */	add r12, r0, r5
 /* 801BDCF8 00000040  48 1A 43 8D */	bl __ptmf_scall
 /* 801BDCFC 00000044  60 00 00 00 */	nop 
@@ -354,8 +354,8 @@ lbl_801BDCB8:
 /* 801BDD08 00000050  7F E3 FB 78 */	mr r3, r31
 /* 801BDD0C 00000054  88 1F 01 7E */	lbz r0, 0x17e(r31)
 /* 801BDD10 00000058  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801BDD14 0000005C  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap__map_init_process@ha
-/* 801BDD18 00000060  38 04 C9 D8 */	addi r0, r4, d_menu_d_menu_dmap__map_init_process@l
+/* 801BDD14 0000005C  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801BDD18 00000060  38 04 C9 D8 */	addi r0, r4, map_init_process@l
 /* 801BDD1C 00000064  7D 80 2A 14 */	add r12, r0, r5
 /* 801BDD20 00000068  48 1A 43 65 */	bl __ptmf_scall
 /* 801BDD24 0000006C  60 00 00 00 */	nop 

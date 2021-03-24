@@ -5,12 +5,12 @@ lbl_8000FBC0:
 /* 8000FBCC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8000FBD0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8000FBD4 00000014  C0 03 00 28 */	lfs f0, 0x28(r3)
-/* 8000FBD8 00000018  C0 22 81 18 */	lfs f1, m_Do_m_Do_ext__lit_3847(r2)
+/* 8000FBD8 00000018  C0 22 81 18 */	lfs f1, lit_3847(r2)
 /* 8000FBDC 0000001C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8000FBE0 00000000  40 80 00 50 */	bge lbl_8000FC30
 /* 8000FBE4 00000004  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 8000FBE8 00000008  C0 5F 00 34 */	lfs f2, 0x34(r31)
-/* 8000FBEC 0000000C  C0 02 81 1C */	lfs f0, m_Do_m_Do_ext__lit_3876(r2)
+/* 8000FBEC 0000000C  C0 02 81 1C */	lfs f0, lit_3876(r2)
 /* 8000FBF0 00000030  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8000FBF4 00000000  40 80 00 34 */	bge lbl_8000FC28
 /* 8000FBF8 00000004  38 7F 00 30 */	addi r3, r31, 0x30
@@ -18,7 +18,7 @@ lbl_8000FBC0:
 /* 8000FC00 0000000C  48 26 0B 41 */	bl cLib_chaseF__FPfff
 /* 8000FC04 00000010  C0 3F 00 28 */	lfs f1, 0x28(r31)
 /* 8000FC08 00000014  C0 5F 00 30 */	lfs f2, 0x30(r31)
-/* 8000FC0C 00000018  C0 02 81 18 */	lfs f0, m_Do_m_Do_ext__lit_3847(r2)
+/* 8000FC0C 00000018  C0 02 81 18 */	lfs f0, lit_3847(r2)
 /* 8000FC10 0000001C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8000FC14 00000020  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 8000FC18 00000024  EC 02 00 32 */	fmuls f0, f2, f0

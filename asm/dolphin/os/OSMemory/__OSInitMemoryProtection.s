@@ -9,10 +9,10 @@ lbl_8033EEF0:
 /* 8033EF0C 0000001C  3C 80 CC 00 */	lis r4, 0xCC00 /* 0xCC004000@ha */
 /* 8033EF10 00000020  3B 84 40 00 */	addi r28, r4, 0x4000 /* 0xCC004000@l */
 /* 8033EF14 00000024  38 00 00 00 */	li r0, 0
-/* 8033EF18 00000028  B0 1C 00 20 */	sth r0, 0x20(r28)
+/* 8033EF18 00000028  B0 1C 00 20 */	sth r0, 0x20(r28)	/* effective address: CC004020 */
 /* 8033EF1C 0000002C  38 00 00 FF */	li r0, 0xff
 /* 8033EF20 00000030  7C 7E 1B 78 */	mr r30, r3
-/* 8033EF24 00000034  B0 1C 00 10 */	sth r0, 0x10(r28)
+/* 8033EF24 00000034  B0 1C 00 10 */	sth r0, 0x10(r28)	/* effective address: CC004010 */
 /* 8033EF28 00000038  3C 60 F0 00 */	lis r3, 0xf000
 /* 8033EF2C 0000003C  4B FF EB 91 */	bl __OSMaskInterrupts
 /* 8033EF30 00000040  3C 60 80 34 */	lis r3, MEMIntrruptHandler@ha
@@ -32,8 +32,8 @@ lbl_8033EEF0:
 /* 8033EF68 00000078  7F A4 EB 78 */	mr r4, r29
 /* 8033EF6C 0000007C  38 60 00 04 */	li r3, 4
 /* 8033EF70 00000080  4B FF E7 D1 */	bl __OSSetInterruptHandler
-/* 8033EF74 00000084  3C 60 80 3D */	lis r3, OSMemory__ResetFunctionInfo@ha
-/* 8033EF78 00000088  38 63 07 D8 */	addi r3, r3, OSMemory__ResetFunctionInfo@l
+/* 8033EF74 00000084  3C 60 80 3D */	lis r3, ResetFunctionInfo@ha
+/* 8033EF78 00000088  38 63 07 D8 */	addi r3, r3, ResetFunctionInfo@l
 /* 8033EF7C 0000008C  48 00 06 E5 */	bl OSRegisterResetFunction
 /* 8033EF80 00000090  80 7B 00 F0 */	lwz r3, 0xf0(r27)
 /* 8033EF84 00000094  80 1B 00 28 */	lwz r0, 0x28(r27)

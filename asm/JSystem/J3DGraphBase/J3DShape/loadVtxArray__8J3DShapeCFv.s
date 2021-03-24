@@ -7,7 +7,7 @@ lbl_80314EEC:
 /* 80314F00 00000014  38 60 00 09 */	li r3, 9
 /* 80314F04 00000018  3C 80 80 43 */	lis r4, j3dSys@ha
 /* 80314F08 0000001C  38 84 4A C8 */	addi r4, r4, j3dSys@l
-/* 80314F0C 00000020  80 84 01 0C */	lwz r4, 0x10c(r4)
+/* 80314F0C 00000020  80 84 01 0C */	lwz r4, 0x10c(r4)	/* effective address: 80434BD4 */
 /* 80314F10 00000024  4B FF FF A1 */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 /* 80314F14 00000028  88 1F 00 34 */	lbz r0, 0x34(r31)
 /* 80314F18 0000002C  28 00 00 00 */	cmplwi r0, 0
@@ -15,13 +15,13 @@ lbl_80314EEC:
 /* 80314F20 00000034  38 60 00 0A */	li r3, 0xa
 /* 80314F24 00000038  3C 80 80 43 */	lis r4, j3dSys@ha
 /* 80314F28 0000003C  38 84 4A C8 */	addi r4, r4, j3dSys@l
-/* 80314F2C 00000040  80 84 01 10 */	lwz r4, 0x110(r4)
+/* 80314F2C 00000040  80 84 01 10 */	lwz r4, 0x110(r4)	/* effective address: 80434BD8 */
 /* 80314F30 00000044  4B FF FF 81 */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 lbl_80314F34:
 /* 80314F34 00000000  38 60 00 0B */	li r3, 0xb
 /* 80314F38 00000004  3C 80 80 43 */	lis r4, j3dSys@ha
 /* 80314F3C 00000008  38 84 4A C8 */	addi r4, r4, j3dSys@l
-/* 80314F40 0000000C  80 84 01 14 */	lwz r4, 0x114(r4)
+/* 80314F40 0000000C  80 84 01 14 */	lwz r4, 0x114(r4)	/* effective address: 80434BDC */
 /* 80314F44 00000010  4B FF FF 6D */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 /* 80314F48 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80314F4C 00000018  80 01 00 14 */	lwz r0, 0x14(r1)

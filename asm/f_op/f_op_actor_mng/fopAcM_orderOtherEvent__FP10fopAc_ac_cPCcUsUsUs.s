@@ -13,7 +13,7 @@ lbl_8001B3CC:
 /* 8001B3F8 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8001B3FC 00000030  3B 63 4E C8 */	addi r27, r3, 0x4ec8
 /* 8001B400 00000034  38 00 00 00 */	li r0, 0
-/* 8001B404 00000038  88 83 4F AD */	lbz r4, 0x4fad(r3)
+/* 8001B404 00000038  88 83 4F AD */	lbz r4, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8001B408 0000003C  28 04 00 00 */	cmplwi r4, 0
 /* 8001B40C 00000040  41 82 00 0C */	beq lbl_8001B418
 /* 8001B410 00000044  28 04 00 02 */	cmplwi r4, 2

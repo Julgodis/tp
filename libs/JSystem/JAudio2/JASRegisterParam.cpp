@@ -65,7 +65,7 @@ asm void JASRegisterParam::init() {
 
 /* ############################################################################################## */
 /* 803C5B90-803C5BB8 0028+00 s=1 e=0 z=0  None .data      @56                                                          */
-SECTION_DATA static void* JASRegisterParam__lit_56[10] = {
+SECTION_DATA static void* lit_56[10] = {
 	/* 0    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
 	/* 1    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
 	/* 2    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x74),
@@ -91,7 +91,7 @@ asm void JASRegisterParam::write(JASRegisterParam::RegID param_0, u32 param_1) {
 
 /* ############################################################################################## */
 /* 803C5BB8-803C5BE0 0028+00 s=1 e=0 z=0  None .data      @87                                                          */
-SECTION_DATA static void* JASRegisterParam__lit_87[10] = {
+SECTION_DATA static void* lit_87[10] = {
 	/* 0    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
 	/* 1    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
 	/* 2    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x68),

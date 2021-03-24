@@ -25,7 +25,7 @@ lbl_800D31E4:
 /* 800D3210 0000002C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D3214 00000030  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800D3218 00000034  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800D321C 00000038  C0 44 00 38 */	lfs f2, 0x38(r4)
+/* 800D321C 00000038  C0 44 00 38 */	lfs f2, 0x38(r4)	/* effective address: 8038D6F4 */
 /* 800D3220 0000003C  48 19 D5 21 */	bl cLib_chaseF__FPfff
 /* 800D3224 00000040  80 1E 05 88 */	lwz r0, 0x588(r30)
 /* 800D3228 00000044  64 00 08 00 */	oris r0, r0, 0x800

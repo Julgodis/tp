@@ -23,7 +23,7 @@ lbl_8015CE10:
 lbl_8015CE1C:
 /* 8015CE1C 00000000  D0 3F 04 D4 */	stfs f1, 0x4d4(r31)
 lbl_8015CE20:
-/* 8015CE20 00000000  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015CE20 00000000  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015CE24 00000004  88 1F 09 2A */	lbz r0, 0x92a(r31)
 /* 8015CE28 00000008  2C 00 00 0E */	cmpwi r0, 0xe
 /* 8015CE2C 0000000C  40 80 00 1C */	bge lbl_8015CE48
@@ -39,11 +39,11 @@ lbl_8015CE48:
 /* 8015CE50 00000008  40 80 00 0C */	bge lbl_8015CE5C
 /* 8015CE54 0000000C  48 00 00 08 */	b lbl_8015CE5C
 lbl_8015CE58:
-/* 8015CE58 00000000  C0 22 9B 70 */	lfs f1, a_obj_d_a_obj_item__lit_3923(r2)
+/* 8015CE58 00000000  C0 22 9B 70 */	lfs f1, lit_3923(r2)
 lbl_8015CE5C:
 /* 8015CE5C 00000000  38 7F 09 B8 */	addi r3, r31, 0x9b8
 /* 8015CE60 00000004  38 9F 04 D0 */	addi r4, r31, 0x4d0
-/* 8015CE64 00000008  C0 42 9B B8 */	lfs f2, a_obj_d_a_obj_item__lit_4781(r2)
+/* 8015CE64 00000008  C0 42 9B B8 */	lfs f2, lit_4781(r2)
 /* 8015CE68 0000000C  4B EC 02 A5 */	bl fopAcM_effHamonSet__FPUlPC4cXyzff
 /* 8015CE6C 00000010  7F E3 FB 78 */	mr r3, r31
 /* 8015CE70 00000014  81 9F 05 68 */	lwz r12, 0x568(r31)

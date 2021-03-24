@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -28,6 +19,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AD787C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Seirei_c {
@@ -52,6 +52,8 @@ struct daNpc_Seirei_c {
 	/* 80AD6464 */ void drawDbgInfo();
 	/* 80AD646C */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80AD6604 */ void selectAction();
+	/* 80AD664C */ void chkAction(int (daNpc_Seirei_c::*)(void*));
+	/* 80AD6678 */ void setAction(int (daNpc_Seirei_c::*)(void*));
 	/* 80AD6720 */ void ctrlWaitAnm();
 	/* 80AD6808 */ void setPrtcls();
 	/* 80AD6A38 */ void chkFirstMeeting();
@@ -172,8 +174,8 @@ extern "C" void setAttnPos__14daNpc_Seirei_cFv(); // 1
 extern "C" void drawDbgInfo__14daNpc_Seirei_cFv(); // 1
 extern "C" void afterSetMotionAnm__14daNpc_Seirei_cFiifi(); // 1
 extern "C" void selectAction__14daNpc_Seirei_cFv(); // 1
-extern "C" static void chkAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i(); // 1
+extern "C" void setAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i(); // 1
 extern "C" void ctrlWaitAnm__14daNpc_Seirei_cFv(); // 1
 extern "C" void setPrtcls__14daNpc_Seirei_cFv(); // 1
 extern "C" void chkFirstMeeting__14daNpc_Seirei_cFv(); // 1
@@ -540,7 +542,7 @@ asm void daNpc_Seirei_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i() {
+asm void daNpc_Seirei_c::chkAction(int (daNpc_Seirei_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seirei/d_a_npc_seirei/chkAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i.s"
 }
@@ -551,7 +553,7 @@ extern "C" asm static void chkAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i() {
+asm void daNpc_Seirei_c::setAction(int (daNpc_Seirei_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seirei/d_a_npc_seirei/setAction__14daNpc_Seirei_cFM14daNpc_Seirei_cFPCvPvPv_i.s"
 }

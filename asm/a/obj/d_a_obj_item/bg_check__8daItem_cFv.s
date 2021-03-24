@@ -8,12 +8,12 @@ lbl_8015D734:
 /* 8015D74C 00000018  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 8015D750 0000001C  41 82 00 34 */	beq lbl_8015D784
 /* 8015D754 00000020  C0 3F 05 2C */	lfs f1, 0x52c(r31)
-/* 8015D758 00000024  C0 02 9B C4 */	lfs f0, a_obj_d_a_obj_item__lit_5050(r2)
+/* 8015D758 00000024  C0 02 9B C4 */	lfs f0, lit_5050(r2)
 /* 8015D75C 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015D760 00000000  40 81 00 14 */	ble lbl_8015D774
 /* 8015D764 00000004  38 7F 04 F8 */	addi r3, r31, 0x4f8
 /* 8015D768 00000008  38 9F 07 64 */	addi r4, r31, 0x764
-/* 8015D76C 0000000C  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015D76C 0000000C  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015D770 00000010  4B FF D6 5D */	bl Reflect__FP4cXyzRC13cBgS_PolyInfof
 lbl_8015D774:
 /* 8015D774 00000000  C0 3F 04 F8 */	lfs f1, 0x4f8(r31)
@@ -31,7 +31,7 @@ lbl_8015D784:
 /* 8015D7A0 0000001C  C0 1F 05 00 */	lfs f0, 0x500(r31)
 /* 8015D7A4 00000020  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8015D7A8 00000024  C0 3F 05 2C */	lfs f1, 0x52c(r31)
-/* 8015D7AC 00000028  C0 02 9B C4 */	lfs f0, a_obj_d_a_obj_item__lit_5050(r2)
+/* 8015D7AC 00000028  C0 02 9B C4 */	lfs f0, lit_5050(r2)
 /* 8015D7B0 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015D7B4 00000000  40 81 00 1C */	ble lbl_8015D7D0
 /* 8015D7B8 00000004  7F E3 FB 78 */	mr r3, r31
@@ -49,10 +49,10 @@ lbl_8015D7D0:
 /* 8015D7E4 00000014  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8015D7E8 00000018  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 8015D7EC 0000001C  C0 3F 04 FC */	lfs f1, 0x4fc(r31)
-/* 8015D7F0 00000020  C0 02 9B C8 */	lfs f0, a_obj_d_a_obj_item__lit_5051(r2)
+/* 8015D7F0 00000020  C0 02 9B C8 */	lfs f0, lit_5051(r2)
 /* 8015D7F4 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015D7F8 00000000  40 80 00 0C */	bge lbl_8015D804
-/* 8015D7FC 00000004  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015D7FC 00000004  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015D800 00000008  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 lbl_8015D804:
 /* 8015D804 00000000  88 7F 09 4B */	lbz r3, 0x94b(r31)

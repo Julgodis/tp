@@ -159,7 +159,7 @@ lbl_800CC490:
 lbl_800CC5C4:
 /* 800CC5C4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CC5C8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CC5CC 00000008  88 03 00 13 */	lbz r0, 0x13(r3)
+/* 800CC5CC 00000008  88 03 00 13 */	lbz r0, 0x13(r3)	/* effective address: 804061D3 */
 /* 800CC5D0 0000000C  28 00 00 2E */	cmplwi r0, 0x2e
 /* 800CC5D4 00000010  40 82 00 84 */	bne lbl_800CC658
 /* 800CC5D8 00000014  80 7D 06 4C */	lwz r3, 0x64c(r29)

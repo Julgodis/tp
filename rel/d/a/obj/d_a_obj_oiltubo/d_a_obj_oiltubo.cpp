@@ -24,6 +24,7 @@ struct daObj_Oiltubo_c {
 	/* 80CA6FE8 */ void getResName();
 	/* 80CA6FF8 */ void restart();
 	/* 80CA7068 */ void initialize();
+	/* 80CA720C */ void setProcess(int (daObj_Oiltubo_c::*)(void*));
 	/* 80CA72BC */ void setParam();
 	/* 80CA7318 */ void setEnvTevColor();
 	/* 80CA7374 */ void setRoomNo();
@@ -87,7 +88,7 @@ extern "C" void createHeapCallBack__15daObj_Oiltubo_cFP10fopAc_ac_c(); // 1
 extern "C" void getResName__15daObj_Oiltubo_cFv(); // 1
 extern "C" void restart__15daObj_Oiltubo_cFv(); // 1
 extern "C" void initialize__15daObj_Oiltubo_cFv(); // 1
-extern "C" static void setProcess__15daObj_Oiltubo_cFM15daObj_Oiltubo_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__15daObj_Oiltubo_cFM15daObj_Oiltubo_cFPCvPvPv_i(); // 1
 extern "C" void setParam__15daObj_Oiltubo_cFv(); // 1
 extern "C" void setEnvTevColor__15daObj_Oiltubo_cFv(); // 1
 extern "C" void setRoomNo__15daObj_Oiltubo_cFv(); // 1
@@ -315,7 +316,7 @@ asm void daObj_Oiltubo_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__15daObj_Oiltubo_cFM15daObj_Oiltubo_cFPCvPvPv_i() {
+asm void daObj_Oiltubo_c::setProcess(int (daObj_Oiltubo_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_oiltubo/d_a_obj_oiltubo/setProcess__15daObj_Oiltubo_cFM15daObj_Oiltubo_cFPCvPvPv_i.s"
 }

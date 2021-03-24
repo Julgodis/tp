@@ -277,7 +277,7 @@ extern "C" extern u32 __float_epsilon;
 
 /* ############################################################################################## */
 /* 804552A8-804552B0 0004+04 s=7 e=0 z=0  None .sdata2    @2262                                                        */
-SECTION_SDATA2 static f32 JPABaseShape__lit_2262[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_2262[1 + 1 /* padding */] = {
 	25.0f,
 	/* padding */
 	0.0f,
@@ -632,7 +632,7 @@ SECTION_SDATA2 static u8 lit_2742[4 + 4 /* padding */] = {
 };
 
 /* 804552C8-804552D0 0008+00 s=6 e=0 z=0  None .sdata2    @2744                                                        */
-SECTION_SDATA2 static f64 JPABaseShape__lit_2744 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_2744 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802775AC-80277758 01AC+00 s=0 e=1 z=0  None .text      JPAGenCalcTexCrdMtxAnm__FP18JPAEmitterWorkData               */
 #pragma push

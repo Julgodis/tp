@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80A79D58 */ ~cXyz();
-	/* 80A7A5C4 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A7A5C8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80A79D58 */ ~cXyz();
+	/* 80A7A5C4 */ cXyz();
 };
 
 struct daNpc_Moi_c {
@@ -70,6 +70,8 @@ struct daNpc_Moi_c {
 	/* 80A76384 */ void changeBtp(int*, int*);
 	/* 80A7643C */ void changeBtk(int*, int*);
 	/* 80A764B0 */ void selectAction();
+	/* 80A765CC */ void chkAction(int (daNpc_Moi_c::*)(void*));
+	/* 80A765F8 */ void setAction(int (daNpc_Moi_c::*)(void*));
 	/* 80A766A0 */ void chkPlayerGetWoodShield();
 	/* 80A766DC */ void setSSlash(int);
 	/* 80A76888 */ void chkPullOutSw();
@@ -262,8 +264,8 @@ extern "C" void changeBck__11daNpc_Moi_cFPiPi(); // 1
 extern "C" void changeBtp__11daNpc_Moi_cFPiPi(); // 1
 extern "C" void changeBtk__11daNpc_Moi_cFPiPi(); // 1
 extern "C" void selectAction__11daNpc_Moi_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i(); // 1
 extern "C" void chkPlayerGetWoodShield__11daNpc_Moi_cFv(); // 1
 extern "C" void setSSlash__11daNpc_Moi_cFi(); // 1
 extern "C" void chkPullOutSw__11daNpc_Moi_cFv(); // 1
@@ -959,7 +961,7 @@ asm void daNpc_Moi_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i() {
+asm void daNpc_Moi_c::chkAction(int (daNpc_Moi_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_moi/d_a_npc_moi/chkAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i.s"
 }
@@ -970,7 +972,7 @@ extern "C" asm static void chkAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i() {
+asm void daNpc_Moi_c::setAction(int (daNpc_Moi_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_moi/d_a_npc_moi/setAction__11daNpc_Moi_cFM11daNpc_Moi_cFPCvPvPv_i.s"
 }

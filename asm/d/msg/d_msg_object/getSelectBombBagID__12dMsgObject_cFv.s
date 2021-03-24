@@ -4,7 +4,7 @@ lbl_802385B4:
 /* 802385BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802385C0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802385C4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802385C8 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 802385C8 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 802385CC 00000018  4B FF F0 71 */	bl getSelectBombBagIDLocal__12dMsgObject_cFv
 /* 802385D0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802385D4 00000020  7C 08 03 A6 */	mtlr r0

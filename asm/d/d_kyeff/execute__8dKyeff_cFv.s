@@ -5,8 +5,8 @@ lbl_801ADD5C:
 /* 801ADD68 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801ADD6C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801ADD70 00000014  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 801ADD74 00000018  3C 80 80 39 */	lis r4, d_d_kyeff__stringBase0@ha
-/* 801ADD78 0000001C  38 84 4F 38 */	addi r4, r4, d_d_kyeff__stringBase0@l
+/* 801ADD74 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801ADD78 0000001C  38 84 4F 38 */	addi r4, r4, stringBase0@l
 /* 801ADD7C 00000020  48 1B AC 19 */	bl strcmp
 /* 801ADD80 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 801ADD84 00000028  41 82 00 08 */	beq lbl_801ADD8C

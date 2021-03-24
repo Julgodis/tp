@@ -110,10 +110,10 @@ extern "C" void __ct__18JAU_JASInitializerFv(); // 1
 extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap(); // 1
 extern "C" void __ct__18JAU_JAIInitializerFv(); // 1
 extern "C" void initJAInterface__18JAU_JAIInitializerFv(); // 1
-extern "C" extern u8 JAUInitializer__lit_855[12];
+extern "C" extern u8 lit_855[12];
 extern "C" extern u8 lit_859[12];
 extern "C" extern u8 lit_863[12];
-extern "C" extern u8 JAUInitializer__lit_867[12 + 96 /* padding */];
+extern "C" extern u8 lit_867[12 + 96 /* padding */];
 
 // 
 // External References:
@@ -167,7 +167,7 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 
 /* ############################################################################################## */
 /* 80455810-80455818 0004+04 s=1 e=0 z=0  None .sdata2    @730                                                         */
-SECTION_SDATA2 static f32 JAUInitializer__lit_730[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_730[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
@@ -186,10 +186,10 @@ asm JAU_JASInitializer::JAU_JASInitializer() {
 
 /* ############################################################################################## */
 /* 80434110-8043411C 000C+00 s=2 e=0 z=0  None .bss       @757                                                         */
-static u8 JAUInitializer__lit_757[12];
+static u8 lit_757[12];
 
 /* 8043411C-80434128 000C+00 s=1 e=0 z=0  None .bss       @763                                                         */
-static u8 JAUInitializer__lit_763[12];
+static u8 lit_763[12];
 
 /* 802A4B28-802A4D3C 0214+00 s=0 e=1 z=0  None .text      initJASystem__18JAU_JASInitializerFP12JKRSolidHeap           */
 #pragma push
@@ -226,7 +226,7 @@ asm void JAU_JAIInitializer::initJAInterface() {
 
 /* ############################################################################################## */
 /* 80434128-80434134 000C+00 s=0 e=0 z=0  None .bss       @855                                                         */
-u8 JAUInitializer__lit_855[12];
+u8 lit_855[12];
 
 /* 80434134-80434140 000C+00 s=0 e=0 z=0  None .bss       @859                                                         */
 u8 lit_859[12];
@@ -235,5 +235,5 @@ u8 lit_859[12];
 u8 lit_863[12];
 
 /* 8043414C-804341B8 000C+60 s=0 e=0 z=0  None .bss       @867                                                         */
-u8 JAUInitializer__lit_867[12 + 96 /* padding */];
+u8 lit_867[12 + 96 /* padding */];
 

@@ -22,6 +22,8 @@ struct daTag_SSDrink_c {
 	/* 80D62FC8 */ void getValue();
 	/* 80D62FD4 */ void restart();
 	/* 80D63044 */ void initialize();
+	/* 80D630BC */ void checkProcess(int (daTag_SSDrink_c::*)(void*));
+	/* 80D630E8 */ void setProcess(int (daTag_SSDrink_c::*)(void*));
 	/* 80D631D4 */ void setAttnPos();
 	/* 80D63208 */ void chkEvent();
 	/* 80D63384 */ void orderEvent();
@@ -54,8 +56,8 @@ extern "C" void getFlowNodeNum__15daTag_SSDrink_cFv(); // 1
 extern "C" void getValue__15daTag_SSDrink_cFv(); // 1
 extern "C" void restart__15daTag_SSDrink_cFv(); // 1
 extern "C" void initialize__15daTag_SSDrink_cFv(); // 1
-extern "C" static void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
-extern "C" static void setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
+extern "C" void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
 extern "C" void setAttnPos__15daTag_SSDrink_cFv(); // 1
 extern "C" void chkEvent__15daTag_SSDrink_cFv(); // 1
 extern "C" void orderEvent__15daTag_SSDrink_cFv(); // 1
@@ -209,7 +211,7 @@ asm void daTag_SSDrink_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i() {
+asm void daTag_SSDrink_c::checkProcess(int (daTag_SSDrink_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i.s"
 }
@@ -220,7 +222,7 @@ extern "C" asm static void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPC
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i() {
+asm void daTag_SSDrink_c::setProcess(int (daTag_SSDrink_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i.s"
 }

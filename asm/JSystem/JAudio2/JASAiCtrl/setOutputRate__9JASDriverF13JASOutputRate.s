@@ -10,7 +10,7 @@ lbl_8029C524:
 lbl_8029C544:
 /* 8029C544 00000000  38 00 00 0A */	li r0, 0xa
 /* 8029C548 00000004  90 0D 82 34 */	stw r0, sSubFrames__9JASDriver(r13)
-/* 8029C54C 00000008  C0 02 BD 24 */	lfs f0, JASAiCtrl__lit_234(r2)
+/* 8029C54C 00000008  C0 02 BD 24 */	lfs f0, lit_234(r2)
 /* 8029C550 0000000C  D0 0D 82 30 */	stfs f0, sDacRate__9JASDriver(r13)
 lbl_8029C554:
 /* 8029C554 00000000  C0 2D 82 30 */	lfs f1, sDacRate__9JASDriver(r13)

@@ -46,8 +46,8 @@ lbl_8025BA0C:
 /* 8025BA24 00000018  80 7C 01 D0 */	lwz r3, 0x1d0(r28)
 /* 8025BA28 0000001C  9B A3 00 04 */	stb r29, 4(r3)
 /* 8025BA2C 00000020  7F E3 FB 78 */	mr r3, r31
-/* 8025BA30 00000024  3C 80 80 3A */	lis r4, d_s_d_s_room__stringBase0@ha
-/* 8025BA34 00000028  38 84 A3 88 */	addi r4, r4, d_s_d_s_room__stringBase0@l
+/* 8025BA30 00000024  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8025BA34 00000028  38 84 A3 88 */	addi r4, r4, stringBase0@l
 /* 8025BA38 0000002C  38 84 00 42 */	addi r4, r4, 0x42
 /* 8025BA3C 00000030  7F C5 F3 78 */	mr r5, r30
 /* 8025BA40 00000034  38 C0 00 40 */	li r6, 0x40

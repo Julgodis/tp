@@ -1,5 +1,5 @@
 lbl_802BD90C:
-/* 802BD90C 00000000  C0 02 C0 A0 */	lfs f0, Z2Audience__lit_848(r2)
+/* 802BD90C 00000000  C0 02 C0 A0 */	lfs f0, lit_848(r2)
 /* 802BD910 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802BD914 00000000  40 80 00 08 */	bge lbl_802BD91C
 /* 802BD918 00000004  FC 20 00 90 */	fmr f1, f0

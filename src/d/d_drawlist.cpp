@@ -103,6 +103,9 @@ struct cM_rnd_c {
 	/* 80053E60 */ void getValue(f32, f32);
 };
 
+struct _GXColor {
+};
+
 struct Vec {
 };
 
@@ -114,18 +117,15 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
-struct _GXColor {
-};
-
 struct dDlst_effectLine_c {
 	/* 80053E9C */ void draw();
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct dDlst_shadowPoly_c {
@@ -353,7 +353,7 @@ extern "C" void getTri__22dDlst_shadowRealPoly_cFv(); // 1
 extern "C" void getTriMax__22dDlst_shadowRealPoly_cFv(); // 1
 extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
 extern "C" void __sinit_d_drawlist_cpp(); // 1
-extern "C" extern char const* const d_d_drawlist__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 l_frontZMat[60 + 4 /* padding */];
 extern "C" extern u8 l_frontNoZSubMat[42 + 2 /* padding */];
 extern "C" extern u8 l_shadowVolPos[96 + 20 /* padding */];
@@ -607,23 +607,23 @@ SECTION_SDATA static u8 data_80450648[4] = {
 };
 
 /* 80452008-8045200C 0004+00 s=4 e=0 z=0  None .sdata2    @4072                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4072 = 0.5f;
+SECTION_SDATA2 static f32 lit_4072 = 0.5f;
 
 /* 8045200C-80452010 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4073 = 32768.0f;
+SECTION_SDATA2 static f32 lit_4073 = 32768.0f;
 
 /* 80452010-80452018 0004+04 s=10 e=0 z=0  None .sdata2    @4074                                                        */
-SECTION_SDATA2 static u8 d_d_drawlist__lit_4074[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4074[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80452018-80452020 0008+00 s=8 e=0 z=0  None .sdata2    @4076                                                        */
-SECTION_SDATA2 static f64 d_d_drawlist__lit_4076 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4076 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80452020-80452028 0008+00 s=5 e=0 z=0  None .sdata2    @4079                                                        */
-SECTION_SDATA2 static f64 d_d_drawlist__lit_4079 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4079 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80051F98-80052354 03BC+00 s=1 e=0 z=0  None .text      draw__11dDlst_2DT_cFv                                        */
 #pragma push
@@ -638,7 +638,7 @@ asm void dDlst_2DT_c::draw() {
 
 /* ############################################################################################## */
 /* 80452028-8045202C 0004+00 s=10 e=0 z=0  None .sdata2    @4270                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4270 = 1.0f;
+SECTION_SDATA2 static f32 lit_4270 = 1.0f;
 
 /* 80052354-80052B00 07AC+00 s=1 e=0 z=0  None .text      draw__12dDlst_2DT2_cFv                                       */
 #pragma push
@@ -653,7 +653,7 @@ asm void dDlst_2DT2_c::draw() {
 
 /* ############################################################################################## */
 /* 803A87A0-803A87C0 000C+14 s=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_d_drawlist__cNullVec__6Z2Calc[12 + 20 /* padding */] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12 + 20 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -942,7 +942,7 @@ SECTION_DATA static void* __vt__12dDlst_2DT2_c[3] = {
 };
 
 /* 80456B68-80456B70 0004+04 s=1 e=0 z=0  None .sbss2     @4275                                                        */
-SECTION_SBSS2 static u8 d_d_drawlist__lit_4275[4 + 4 /* padding */];
+SECTION_SBSS2 static u8 lit_4275[4 + 4 /* padding */];
 
 /* 80052B00-80052B4C 004C+00 s=1 e=0 z=0  None .text      __ct__12dDlst_2DT2_cFv                                       */
 #pragma push
@@ -957,7 +957,7 @@ asm dDlst_2DT2_c::dDlst_2DT2_c() {
 
 /* ############################################################################################## */
 /* 8045202C-80452030 0004+00 s=1 e=0 z=0  None .sdata2    @4284                                                        */
-SECTION_SDATA2 static u32 d_d_drawlist__lit_4284 = 0x000000FF;
+SECTION_SDATA2 static u32 lit_4284 = 0x000000FF;
 
 /* 80052B4C-80052C58 010C+00 s=1 e=0 z=0  None .text      init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff                   */
 #pragma push
@@ -972,7 +972,7 @@ asm void dDlst_2DT2_c::init(ResTIMG* param_0, f32 param_1, f32 param_2, f32 para
 
 /* ############################################################################################## */
 /* 80452030-80452034 0004+00 s=2 e=0 z=0  None .sdata2    @4360                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4360 = 256.0f;
+SECTION_SDATA2 static f32 lit_4360 = 256.0f;
 
 /* 80052C58-8005312C 04D4+00 s=1 e=0 z=0  None .text      draw__11dDlst_2DM_cFv                                        */
 #pragma push
@@ -1141,16 +1141,16 @@ asm void cM_rnd_c::init(int param_0, int param_1, int param_2) {
 
 /* ############################################################################################## */
 /* 80452034-80452038 0004+00 s=1 e=0 z=0  None .sdata2    @4791                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4791 = 30323.0f;
+SECTION_SDATA2 static f32 lit_4791 = 30323.0f;
 
 /* 80452038-8045203C 0004+00 s=1 e=0 z=0  None .sdata2    @4792                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4792 = 30269.0f;
+SECTION_SDATA2 static f32 lit_4792 = 30269.0f;
 
 /* 8045203C-80452040 0004+00 s=1 e=0 z=0  None .sdata2    @4793                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4793 = 30307.0f;
+SECTION_SDATA2 static f32 lit_4793 = 30307.0f;
 
 /* 80452040-80452048 0008+00 s=1 e=0 z=0  None .sdata2    @4794                                                        */
-SECTION_SDATA2 static f64 d_d_drawlist__lit_4794 = 1.0;
+SECTION_SDATA2 static f64 lit_4794 = 1.0;
 
 /* 80053CEC-80053DE0 00F4+00 s=2 e=0 z=0  None .text      get__8cM_rnd_cFv                                             */
 #pragma push
@@ -1176,7 +1176,7 @@ asm void cM_rnd_c::getF(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80452048-8045204C 0004+00 s=5 e=0 z=0  None .sdata2    @4806                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4806 = 2.0f;
+SECTION_SDATA2 static f32 lit_4806 = 2.0f;
 
 /* 80053E18-80053E60 0048+00 s=1 e=0 z=0  None .text      getFX__8cM_rnd_cFf                                           */
 #pragma push
@@ -1202,7 +1202,7 @@ asm void cM_rnd_c::getValue(f32 param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 8045204C-80452050 0004+00 s=1 e=0 z=0  None .sdata2    @4876                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_4876 = 32767.0f;
+SECTION_SDATA2 static f32 lit_4876 = 32767.0f;
 
 /* 80053E9C-800541F4 0358+00 s=1 e=0 z=0  None .text      draw__18dDlst_effectLine_cFv                                 */
 #pragma push
@@ -1300,10 +1300,10 @@ asm void dDlst_shadowReal_c::draw() {
 
 /* ############################################################################################## */
 /* 80452050-80452054 0004+00 s=1 e=0 z=0  None .sdata2    @5061                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5061 = -1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_5061 = -1.0f / 5.0f;
 
 /* 80452054-80452058 0004+00 s=1 e=0 z=0  None .sdata2    @5062                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5062 = -90.0f;
+SECTION_SDATA2 static f32 lit_5062 = -90.0f;
 
 /* 80054688-80054854 01CC+00 s=1 e=0 z=0  None .text      psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla */
 #pragma push
@@ -1318,16 +1318,16 @@ asm static void psdRealCallBack(cBgS_ShdwDraw* param_0, cBgD_Vtx_t* param_1, int
 
 /* ############################################################################################## */
 /* 80452058-8045205C 0004+00 s=1 e=0 z=0  None .sdata2    @5127                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5127 = 0.0020000000949949026f;
+SECTION_SDATA2 static f32 lit_5127 = 0.0020000000949949026f;
 
 /* 8045205C-80452060 0004+00 s=1 e=0 z=0  None .sdata2    @5128                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5128 = 120.0f;
+SECTION_SDATA2 static f32 lit_5128 = 120.0f;
 
 /* 80452060-80452064 0004+00 s=1 e=0 z=0  None .sdata2    @5129                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5129 = 3.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_5129 = 3.0f / 20.0f;
 
 /* 80452064-80452068 0004+00 s=3 e=0 z=0  None .sdata2    @5130                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5130 = 10000.0f;
+SECTION_SDATA2 static f32 lit_5130 = 10000.0f;
 
 /* 80054854-80054A6C 0218+00 s=1 e=0 z=0  None .text      realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c       */
 #pragma push
@@ -1353,10 +1353,10 @@ asm ShdwDrawPoly_c::~ShdwDrawPoly_c() {
 
 /* ############################################################################################## */
 /* 80452068-8045206C 0004+00 s=1 e=0 z=0  None .sdata2    @5155                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5155 = 15.0f;
+SECTION_SDATA2 static f32 lit_5155 = 15.0f;
 
 /* 8045206C-80452070 0004+00 s=1 e=0 z=0  None .sdata2    @5156                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5156 = 13.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_5156 = 13.0f / 20.0f;
 
 /* 80054ACC-80054BD0 0104+00 s=2 e=0 z=0  None .text      setkankyoShadow__FP12dKy_tevstr_cPf                          */
 #pragma push
@@ -1371,13 +1371,13 @@ asm static void setkankyoShadow(dKy_tevstr_c* param_0, f32* param_1) {
 
 /* ############################################################################################## */
 /* 80452070-80452074 0004+00 s=1 e=0 z=0  None .sdata2    @5267                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5267 = 50.0f;
+SECTION_SDATA2 static f32 lit_5267 = 50.0f;
 
 /* 80452074-80452078 0004+00 s=1 e=0 z=0  None .sdata2    @5268                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5268 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_5268 = 4.0f / 5.0f;
 
 /* 80452078-80452080 0004+04 s=1 e=0 z=0  None .sdata2    @5269                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5269[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_5269[1 + 1 /* padding */] = {
 	255.0f,
 	/* padding */
 	0.0f,
@@ -1387,7 +1387,7 @@ SECTION_SDATA2 static f32 d_d_drawlist__lit_5269[1 + 1 /* padding */] = {
 SECTION_SDATA2 static f64 lit_5270 = 0.5;
 
 /* 80452088-80452090 0008+00 s=1 e=0 z=0  None .sdata2    @5271                                                        */
-SECTION_SDATA2 static f64 d_d_drawlist__lit_5271 = 3.0;
+SECTION_SDATA2 static f64 lit_5271 = 3.0;
 
 /* 80452090-80452098 0008+00 s=1 e=0 z=0  None .sdata2    @5272                                                        */
 SECTION_SDATA2 static u8 lit_5272[8] = {
@@ -1455,10 +1455,10 @@ asm void dDlst_shadowSimple_c::draw() {
 
 /* ############################################################################################## */
 /* 804520A4-804520A8 0004+00 s=1 e=0 z=0  None .sdata2    @5375                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5375 = -255.0f;
+SECTION_SDATA2 static f32 lit_5375 = -255.0f;
 
 /* 804520A8-804520AC 0004+00 s=1 e=0 z=0  None .sdata2    @5376                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5376 = 0.000699999975040555f;
+SECTION_SDATA2 static f32 lit_5376 = 0.000699999975040555f;
 
 /* 804520AC-804520B0 0004+00 s=1 e=0 z=0  None .sdata2    @5377                                                        */
 SECTION_SDATA2 static f32 lit_5377 = 7.0f / 5.0f;
@@ -1523,7 +1523,7 @@ SECTION_SDATA static u8 data_80450658[4] = {
 };
 
 /* 804520B4-804520B8 0004+00 s=1 e=0 z=0  None .sdata2    @5433                                                        */
-SECTION_SDATA2 static u32 d_d_drawlist__lit_5433 = 0x00000020;
+SECTION_SDATA2 static u32 lit_5433 = 0x00000020;
 
 /* 80055A14-80055C74 0260+00 s=0 e=1 z=0  None .text      draw__21dDlst_shadowControl_cFPA4_f                          */
 #pragma push
@@ -1752,7 +1752,7 @@ asm void dDlst_list_c::reset() {
 
 /* ############################################################################################## */
 /* 804520CC-804520D0 0004+00 s=1 e=0 z=0  None .sdata2    @5747                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5747 = 9999.0f;
+SECTION_SDATA2 static f32 lit_5747 = 9999.0f;
 
 /* 800565EC-800566D4 00E8+00 s=0 e=2 z=0  None .text      entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz */
 #pragma push
@@ -1859,13 +1859,13 @@ f32 mWipeRate__12dDlst_list_c;
 static f32 mWipeSpeed__12dDlst_list_c[1 + 1 /* padding */];
 
 /* 804520D0-804520D4 0004+00 s=1 e=0 z=0  None .sdata2    @5809                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5809 = 608.0f;
+SECTION_SDATA2 static f32 lit_5809 = 608.0f;
 
 /* 804520D4-804520D8 0004+00 s=1 e=0 z=0  None .sdata2    @5810                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5810 = 448.0f;
+SECTION_SDATA2 static f32 lit_5810 = 448.0f;
 
 /* 804520D8-804520DC 0004+00 s=1 e=0 z=0  None .sdata2    @5811                                                        */
-SECTION_SDATA2 static f32 d_d_drawlist__lit_5811 = 2.436000108718872f;
+SECTION_SDATA2 static f32 lit_5811 = 2.436000108718872f;
 
 /* 8005681C-800568D8 00BC+00 s=1 e=0 z=0  None .text      wipeIn__12dDlst_list_cFfR8_GXColor                           */
 #pragma push

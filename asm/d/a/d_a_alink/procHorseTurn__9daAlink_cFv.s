@@ -7,7 +7,7 @@ lbl_800F0CE4:
 /* 800F0CF8 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800F0CFC 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800F0D00 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800F0D04 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)
+/* 800F0D04 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)	/* effective address: 8040BF78 */
 /* 800F0D08 00000024  4B FF CD 1D */	bl setSyncRidePos__9daAlink_cFv
 /* 800F0D0C 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 800F0D10 0000002C  40 82 00 0C */	bne lbl_800F0D1C
@@ -105,7 +105,7 @@ lbl_800F0E3C:
 /* 800F0E60 00000024  41 82 00 70 */	beq lbl_800F0ED0
 /* 800F0E64 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F0E68 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F0E6C 00000030  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800F0E6C 00000030  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800F0E70 00000034  28 00 00 FF */	cmplwi r0, 0xff
 /* 800F0E74 00000038  41 82 00 14 */	beq lbl_800F0E88
 /* 800F0E78 0000003C  7F C3 F3 78 */	mr r3, r30
@@ -123,7 +123,7 @@ lbl_800F0E94:
 /* 800F0EA0 0000000C  41 82 00 24 */	beq lbl_800F0EC4
 /* 800F0EA4 00000010  7F C3 F3 78 */	mr r3, r30
 /* 800F0EA8 00000014  38 80 00 02 */	li r4, 2
-/* 800F0EAC 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F0EAC 00000018  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F0EB0 0000001C  4B FB C8 75 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F0EB4 00000020  7F C3 F3 78 */	mr r3, r30
 /* 800F0EB8 00000024  38 80 00 55 */	li r4, 0x55
@@ -219,7 +219,7 @@ lbl_800F0FCC:
 /* 800F0FFC 00000030  41 82 00 40 */	beq lbl_800F103C
 /* 800F1000 00000034  7F C3 F3 78 */	mr r3, r30
 /* 800F1004 00000038  38 80 00 02 */	li r4, 2
-/* 800F1008 0000003C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F1008 0000003C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F100C 00000040  4B FB C7 19 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F1010 00000044  80 1F 17 48 */	lwz r0, 0x1748(r31)
 /* 800F1014 00000048  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b

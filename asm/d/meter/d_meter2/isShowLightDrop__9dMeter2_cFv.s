@@ -7,7 +7,7 @@ lbl_802256DC:
 /* 802256F0 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 802256F4 00000018  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 802256F8 0000001C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 802256FC 00000020  88 03 0F 24 */	lbz r0, 0xf24(r3)
+/* 802256FC 00000020  88 03 0F 24 */	lbz r0, 0xf24(r3)	/* effective address: 8042FAEC */
 /* 80225700 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80225704 00000028  40 82 01 80 */	bne lbl_80225884
 /* 80225708 0000002C  80 1F 01 24 */	lwz r0, 0x124(r31)
@@ -16,7 +16,7 @@ lbl_802256DC:
 /* 80225714 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80225718 0000003C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 8022571C 00000040  38 7E 01 14 */	addi r3, r30, 0x114
-/* 80225720 00000044  88 9E 4E 0C */	lbz r4, 0x4e0c(r30)
+/* 80225720 00000044  88 9E 4E 0C */	lbz r4, 0x4e0c(r30)	/* effective address: 8040AFCC */
 /* 80225724 00000048  4B E0 EC 79 */	bl isLightDropGetFlag__16dSv_light_drop_cCFUc
 /* 80225728 0000004C  2C 03 00 00 */	cmpwi r3, 0
 /* 8022572C 00000050  41 82 01 50 */	beq lbl_8022587C
@@ -36,7 +36,7 @@ lbl_802256DC:
 /* 80225764 00000088  41 82 00 30 */	beq lbl_80225794
 /* 80225768 0000008C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8022576C 00000090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80225770 00000094  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 80225770 00000094  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 80225774 00000098  28 00 00 00 */	cmplwi r0, 0
 /* 80225778 0000009C  41 82 00 10 */	beq lbl_80225788
 /* 8022577C 000000A0  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
@@ -50,7 +50,7 @@ lbl_8022578C:
 lbl_80225794:
 /* 80225794 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80225798 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8022579C 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8022579C 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 802257A0 0000000C  38 00 00 00 */	li r0, 0
 /* 802257A4 00000010  88 64 05 6A */	lbz r3, 0x56a(r4)
 /* 802257A8 00000014  28 03 00 00 */	cmplwi r3, 0
@@ -105,7 +105,7 @@ lbl_802257FC:
 /* 80225864 00000068  40 82 00 18 */	bne lbl_8022587C
 /* 80225868 0000006C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8022586C 00000070  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80225870 00000074  A0 03 00 A2 */	lhz r0, 0xa2(r3)
+/* 80225870 00000074  A0 03 00 A2 */	lhz r0, 0xa2(r3)	/* effective address: 8043022A */
 /* 80225874 00000078  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80225878 0000007C  41 82 00 0C */	beq lbl_80225884
 lbl_8022587C:

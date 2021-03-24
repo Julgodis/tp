@@ -8,7 +8,7 @@ lbl_802BCD28:
 /* 802BCD40 00000018  D0 03 00 00 */	stfs f0, 0(r3)
 /* 802BCD44 0000001C  C0 02 C1 28 */	lfs f0, lit_1335(r2)
 /* 802BCD48 00000020  D0 03 00 04 */	stfs f0, 4(r3)
-/* 802BCD4C 00000024  C0 02 C0 A0 */	lfs f0, Z2Audience__lit_848(r2)
+/* 802BCD4C 00000024  C0 02 C0 A0 */	lfs f0, lit_848(r2)
 /* 802BCD50 00000028  D0 03 00 08 */	stfs f0, 8(r3)
 /* 802BCD54 0000002C  C0 02 C1 2C */	lfs f0, lit_1336(r2)
 /* 802BCD58 00000030  D0 03 00 0C */	stfs f0, 0xc(r3)

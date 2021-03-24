@@ -45,7 +45,7 @@ lbl_800E7040:
 /* 800E7084 00000038  C0 3E 1F E0 */	lfs f1, 0x1fe0(r30)
 /* 800E7088 0000003C  3C 80 80 39 */	lis r4, m__18daAlinkHIO_grab_c0@ha
 /* 800E708C 00000040  38 84 EC 48 */	addi r4, r4, m__18daAlinkHIO_grab_c0@l
-/* 800E7090 00000044  C0 04 00 A8 */	lfs f0, 0xa8(r4)
+/* 800E7090 00000044  C0 04 00 A8 */	lfs f0, 0xa8(r4)	/* effective address: 8038ECF0 */
 /* 800E7094 00000048  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E7098 0000004C  EC 22 00 32 */	fmuls f1, f2, f0
 /* 800E709C 00000050  C0 42 92 C0 */	lfs f2, lit_6108(r2)

@@ -42,8 +42,8 @@ lbl_802734FC:
 /* 8027359C 000000A0  38 C1 00 09 */	addi r6, r1, 9
 /* 802735A0 000000A4  7C 67 1B 78 */	mr r7, r3
 /* 802735A4 000000A8  48 0E 75 E5 */	bl GXGetGPStatus
-/* 802735A8 000000AC  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 802735AC 000000B0  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 802735A8 000000AC  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802735AC 000000B0  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 802735B0 000000B4  88 81 00 0A */	lbz r4, 0xa(r1)
 /* 802735B4 000000B8  88 A1 00 09 */	lbz r5, 9(r1)
 /* 802735B8 000000BC  7F E6 FB 78 */	mr r6, r31
@@ -56,8 +56,8 @@ lbl_802734FC:
 /* 802735D4 000000D8  40 82 00 24 */	bne lbl_802735F8
 /* 802735D8 000000DC  28 1D 00 00 */	cmplwi r29, 0
 /* 802735DC 000000E0  41 82 00 1C */	beq lbl_802735F8
-/* 802735E0 000000E4  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 802735E4 000000E8  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 802735E0 000000E4  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802735E4 000000E8  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 802735E8 000000EC  38 63 00 1C */	addi r3, r3, 0x1c
 /* 802735EC 000000F0  4C C6 31 82 */	crclr 6
 /* 802735F0 000000F4  4B D9 34 CD */	bl OSReport
@@ -69,8 +69,8 @@ lbl_802735F8:
 /* 80273604 0000000C  41 82 00 24 */	beq lbl_80273628
 /* 80273608 00000010  28 1D 00 00 */	cmplwi r29, 0
 /* 8027360C 00000014  41 82 00 1C */	beq lbl_80273628
-/* 80273610 00000018  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 80273614 0000001C  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 80273610 00000018  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80273614 0000001C  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 80273618 00000020  38 63 00 3A */	addi r3, r3, 0x3a
 /* 8027361C 00000024  4C C6 31 82 */	crclr 6
 /* 80273620 00000028  4B D9 34 9D */	bl OSReport
@@ -85,8 +85,8 @@ lbl_80273628:
 /* 80273640 00000018  41 82 00 24 */	beq lbl_80273664
 /* 80273644 0000001C  28 1D 00 00 */	cmplwi r29, 0
 /* 80273648 00000020  41 82 00 1C */	beq lbl_80273664
-/* 8027364C 00000024  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 80273650 00000028  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 8027364C 00000024  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80273650 00000028  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 80273654 0000002C  38 63 00 62 */	addi r3, r3, 0x62
 /* 80273658 00000030  4C C6 31 82 */	crclr 6
 /* 8027365C 00000034  4B D9 34 61 */	bl OSReport
@@ -105,15 +105,15 @@ lbl_80273664:
 /* 8027368C 00000028  41 82 00 24 */	beq lbl_802736B0
 /* 80273690 0000002C  28 1C 00 00 */	cmplwi r28, 0
 /* 80273694 00000030  41 82 00 1C */	beq lbl_802736B0
-/* 80273698 00000034  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 8027369C 00000038  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 80273698 00000034  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 8027369C 00000038  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 802736A0 0000003C  38 63 00 87 */	addi r3, r3, 0x87
 /* 802736A4 00000040  4C C6 31 82 */	crclr 6
 /* 802736A8 00000044  4B D9 34 15 */	bl OSReport
 /* 802736AC 00000048  48 00 00 18 */	b lbl_802736C4
 lbl_802736B0:
-/* 802736B0 00000000  3C 60 80 3A */	lis r3, JFWDisplay__stringBase0@ha
-/* 802736B4 00000004  38 63 A8 78 */	addi r3, r3, JFWDisplay__stringBase0@l
+/* 802736B0 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802736B4 00000004  38 63 A8 78 */	addi r3, r3, stringBase0@l
 /* 802736B8 00000008  38 63 00 B7 */	addi r3, r3, 0xb7
 /* 802736BC 0000000C  4C C6 31 82 */	crclr 6
 /* 802736C0 00000010  4B D9 33 FD */	bl OSReport

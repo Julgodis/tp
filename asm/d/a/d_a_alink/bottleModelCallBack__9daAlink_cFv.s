@@ -17,7 +17,7 @@ lbl_8010E48C:
 /* 8010E4C8 0000003C  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 8010E4CC 00000040  48 23 7F E5 */	bl PSMTXCopy
 /* 8010E4D0 00000044  C0 22 94 14 */	lfs f1, lit_14616(r2)
-/* 8010E4D4 00000048  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 8010E4D4 00000048  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 8010E4D8 0000004C  C0 62 94 A8 */	lfs f3, lit_16570(r2)
 /* 8010E4DC 00000050  4B EF E8 C1 */	bl transM__14mDoMtx_stack_cFfff
 /* 8010E4E0 00000054  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

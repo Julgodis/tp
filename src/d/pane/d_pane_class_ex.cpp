@@ -14,13 +14,13 @@
 struct J2DAnmTexPattern {
 };
 
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmTransform {
 };
 
 struct J2DAnmVtxColor {
+};
+
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DPane {

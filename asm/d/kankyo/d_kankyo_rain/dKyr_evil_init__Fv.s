@@ -6,11 +6,11 @@ lbl_8006D914:
 /* 8006D924 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006D928 00000014  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8006D92C 00000018  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8006D930 0000001C  80 1F 10 58 */	lwz r0, 0x1058(r31)
+/* 8006D930 0000001C  80 1F 10 58 */	lwz r0, 0x1058(r31)	/* effective address: 8042DAAC */
 /* 8006D934 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 8006D938 00000024  41 82 00 B4 */	beq lbl_8006D9EC
-/* 8006D93C 00000028  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8006D940 0000002C  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8006D93C 00000028  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8006D940 0000002C  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8006D944 00000030  38 63 00 10 */	addi r3, r3, 0x10
 /* 8006D948 00000034  38 80 00 53 */	li r4, 0x53
 /* 8006D94C 00000038  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -22,8 +22,8 @@ lbl_8006D914:
 /* 8006D964 00000050  4B FC E9 89 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 8006D968 00000054  80 9F 10 58 */	lwz r4, 0x1058(r31)
 /* 8006D96C 00000058  90 64 00 14 */	stw r3, 0x14(r4)
-/* 8006D970 0000005C  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8006D974 00000060  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8006D970 0000005C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8006D974 00000060  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8006D978 00000064  38 63 00 94 */	addi r3, r3, 0x94
 /* 8006D97C 00000068  4B FC 1A B9 */	bl dComIfG_getStageRes__FPCc
 /* 8006D980 0000006C  80 9F 10 58 */	lwz r4, 0x1058(r31)
@@ -32,8 +32,8 @@ lbl_8006D914:
 /* 8006D98C 00000078  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8006D990 0000007C  28 00 00 00 */	cmplwi r0, 0
 /* 8006D994 00000080  40 82 00 28 */	bne lbl_8006D9BC
-/* 8006D998 00000084  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8006D99C 00000088  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8006D998 00000084  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8006D99C 00000088  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8006D9A0 0000008C  38 63 00 10 */	addi r3, r3, 0x10
 /* 8006D9A4 00000090  38 80 00 53 */	li r4, 0x53
 /* 8006D9A8 00000094  7F C5 F3 78 */	mr r5, r30

@@ -92,7 +92,7 @@ asm void csXyz::operator-(csXyz& param_0) {
 
 /* ############################################################################################## */
 /* 804550A0-804550A8 0008+00 s=1 e=0 z=0  None .sdata2    @151                                                         */
-SECTION_SDATA2 static f64 c_sxyz__lit_151 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_151 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802674E8-8026758C 00A4+00 s=0 e=0 z=0  None .text      __ml__5csXyzFf                                               */
 #pragma push

@@ -20,9 +20,6 @@ struct JASOscillator {
 
 };
 
-struct JASSoundParams {
-};
-
 struct JASChannel {
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
@@ -39,6 +36,9 @@ struct JASDsp {
 		/* 8029E094 */ void setDistFilter(s16);
 	};
 
+};
+
+struct JASSoundParams {
 };
 
 struct JASTrack {
@@ -268,7 +268,7 @@ extern "C" void __dt__19JASDefaultBankTableFv(); // 1
 extern "C" void func_80293528(); // 1
 extern "C" extern u8 const sPitchEnvOsc__8JASTrack[24];
 extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
-extern "C" extern u8 JASTrack__lit_433[12];
+extern "C" extern u8 lit_433[12];
 extern "C" extern u8 data_80431AF4[16];
 extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 
@@ -338,7 +338,7 @@ extern "C" extern u8 struct_80451230[8];
 
 /* ############################################################################################## */
 /* 804555A0-804555A4 0004+00 s=6 e=0 z=0  None .sdata2    @457                                                         */
-SECTION_SDATA2 static u8 JASTrack__lit_457[4] = {
+SECTION_SDATA2 static u8 lit_457[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -355,13 +355,13 @@ asm JASTrack::JASTrack() {
 
 /* ############################################################################################## */
 /* 804316A8-804316B4 000C+00 s=1 e=0 z=0  None .bss       @431                                                         */
-static u8 JASTrack__lit_431[12];
+static u8 lit_431[12];
 
-/* 804316B4-80431AC0 040C+00 s=1 e=0 z=0  None .bss       sDefaultBankTable__8JASTrack                                 */
+/* 804316B4-80431AC0 040C+00 s=2 e=0 z=0  None .bss       sDefaultBankTable__8JASTrack                                 */
 static u8 sDefaultBankTable__8JASTrack[1036];
 
 /* 80431AC0-80431ACC 000C+00 s=0 e=0 z=0  None .bss       @433                                                         */
-u8 JASTrack__lit_433[12];
+u8 lit_433[12];
 
 /* 80431ACC-80431ADC 0010+00 s=1 e=0 z=0  None .bss       sTrackList__8JASTrack                                        */
 static u8 sTrackList__8JASTrack[16];
@@ -370,7 +370,7 @@ static u8 sTrackList__8JASTrack[16];
 static u8 lit_470[12];
 
 /* 80431AE8-80431AF4 000C+00 s=2 e=0 z=0  None .bss       @476                                                         */
-static u8 JASTrack__lit_476[12];
+static u8 lit_476[12];
 
 /* 80431AF4-80431B04 0010+00 s=3 e=1 z=0  None .bss       memPool_$localstatic3$getMemPool___58JASPoolAllocObject_MultiThreaded<Q28JASTrack11TChannelMgr>Fv */
 u8 data_80431AF4[16];
@@ -423,7 +423,7 @@ asm void JASTrack::init() {
 
 /* ############################################################################################## */
 /* 804555A8-804555AC 0004+00 s=4 e=0 z=0  None .sdata2    @690                                                         */
-SECTION_SDATA2 static f32 JASTrack__lit_690 = 0.5f;
+SECTION_SDATA2 static f32 lit_690 = 0.5f;
 
 /* 802918FC-8029194C 0050+00 s=1 e=0 z=0  None .text      initTimed__8JASTrackFv                                       */
 #pragma push
@@ -654,7 +654,7 @@ asm void JASTrack::updateTimedParam() {
 
 /* ############################################################################################## */
 /* 804555B8-804555BC 0004+00 s=1 e=0 z=0  None .sdata2    @1032                                                        */
-SECTION_SDATA2 static f32 JASTrack__lit_1032 = 1.0f / 3.0f;
+SECTION_SDATA2 static f32 lit_1032 = 1.0f / 3.0f;
 
 /* 80292348-802924E4 019C+00 s=1 e=0 z=0  None .text      updateTrack__8JASTrackFf                                     */
 #pragma push
@@ -669,7 +669,7 @@ asm void JASTrack::updateTrack(f32 param_0) {
 
 /* ############################################################################################## */
 /* 804555BC-804555C0 0004+00 s=1 e=0 z=0  None .sdata2    @1042                                                        */
-SECTION_SDATA2 static f32 JASTrack__lit_1042 = 4.0f / 3.0f;
+SECTION_SDATA2 static f32 lit_1042 = 4.0f / 3.0f;
 
 /* 804555C0-804555C8 0008+00 s=1 e=0 z=0  None .sdata2    @1044                                                        */
 SECTION_SDATA2 static f64 lit_1044 = 4503601774854144.0 /* cast s32 to float */;
@@ -701,7 +701,7 @@ asm void JASTrack::updateSeq(bool param_0, f32 param_1) {
 SECTION_SDATA2 static f32 lit_1069 = 120.0f;
 
 /* 804555CC-804555D0 0004+00 s=1 e=0 z=0  None .sdata2    @1070                                                        */
-SECTION_SDATA2 static f32 JASTrack__lit_1070 = 10.0f;
+SECTION_SDATA2 static f32 lit_1070 = 10.0f;
 
 /* 80292644-802926E0 009C+00 s=1 e=0 z=0  None .text      seqTimeToDspTime__8JASTrackFf                                */
 #pragma push

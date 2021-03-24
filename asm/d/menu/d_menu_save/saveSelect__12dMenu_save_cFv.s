@@ -12,7 +12,7 @@ lbl_801F3934:
 /* 801F395C 00000028  4B E3 E8 41 */	bl checkTrigger__9STControlFv
 /* 801F3960 0000002C  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801F3964 00000030  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801F3968 00000034  80 63 00 34 */	lwz r3, 0x34(r3)
+/* 801F3968 00000034  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
 /* 801F396C 00000038  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
 /* 801F3970 0000003C  41 82 00 10 */	beq lbl_801F3980
 /* 801F3974 00000040  7F E3 FB 78 */	mr r3, r31
@@ -39,9 +39,9 @@ lbl_801F3994:
 /* 801F39C0 0000002C  38 A0 00 00 */	li r5, 0
 /* 801F39C4 00000030  38 C0 00 00 */	li r6, 0
 /* 801F39C8 00000034  38 E0 00 00 */	li r7, 0
-/* 801F39CC 00000038  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F39CC 00000038  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F39D0 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 801F39D4 00000040  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F39D4 00000040  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F39D8 00000044  FC 80 18 90 */	fmr f4, f3
 /* 801F39DC 00000048  39 00 00 00 */	li r8, 0
 /* 801F39E0 0000004C  48 0B 7F A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -70,9 +70,9 @@ lbl_801F3A0C:
 /* 801F3A38 0000002C  38 A0 00 00 */	li r5, 0
 /* 801F3A3C 00000030  38 C0 00 00 */	li r6, 0
 /* 801F3A40 00000034  38 E0 00 00 */	li r7, 0
-/* 801F3A44 00000038  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F3A44 00000038  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F3A48 0000003C  FC 40 08 90 */	fmr f2, f1
-/* 801F3A4C 00000040  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F3A4C 00000040  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F3A50 00000044  FC 80 18 90 */	fmr f4, f3
 /* 801F3A54 00000048  39 00 00 00 */	li r8, 0
 /* 801F3A58 0000004C  48 0B 7F 2D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

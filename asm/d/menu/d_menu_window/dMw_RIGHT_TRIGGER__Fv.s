@@ -4,7 +4,7 @@ lbl_801F9FF4:
 /* 801F9FFC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801FA000 0000000C  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801FA004 00000010  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801FA008 00000014  80 03 00 34 */	lwz r0, 0x34(r3)
+/* 801FA008 00000014  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
 /* 801FA00C 00000018  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 801FA010 0000001C  41 82 00 18 */	beq lbl_801FA028
 /* 801FA014 00000020  4B FF FF 71 */	bl dMw_UP_TRIGGER__Fv

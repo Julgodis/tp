@@ -6,7 +6,7 @@ lbl_8002E22C:
 /* 8002E23C 00000010  48 33 3F 95 */	bl _savegpr_26
 /* 8002E240 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002E244 00000018  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 8002E248 0000001C  80 7D 5E BC */	lwz r3, 0x5ebc(r29)
+/* 8002E248 0000001C  80 7D 5E BC */	lwz r3, 0x5ebc(r29)	/* effective address: 8040C07C */
 /* 8002E24C 00000020  48 2A 05 39 */	bl getTotalFreeSize__7JKRHeapFv
 /* 8002E250 00000024  C8 22 83 10 */	lfd f1, lit_6337(r2)
 /* 8002E254 00000028  6C 60 80 00 */	xoris r0, r3, 0x8000

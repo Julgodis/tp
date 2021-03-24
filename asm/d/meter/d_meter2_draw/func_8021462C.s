@@ -83,11 +83,11 @@ lbl_8021462C:
 /* 80214770 00000120  7D 89 03 A6 */	mtctr r12
 /* 80214774 00000124  4E 80 04 21 */	bctrl 
 /* 80214778 00000128  80 7B 00 80 */	lwz r3, 0x80(r27)
-/* 8021477C 0000012C  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
+/* 8021477C 0000012C  C0 22 AE 80 */	lfs f1, lit_4182(r2)
 /* 80214780 00000130  FC 40 08 90 */	fmr f2, f1
 /* 80214784 00000134  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80214788 00000138  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8021478C 0000013C  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 8021478C 0000013C  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 80214790 00000140  48 0E 47 45 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 80214794 00000168  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */
 /* 80214798 00000000  CB E1 00 60 */	lfd f31, 0x60(r1)

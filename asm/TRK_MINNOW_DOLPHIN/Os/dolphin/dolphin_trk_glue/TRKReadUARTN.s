@@ -4,7 +4,7 @@ lbl_80371DA4:
 /* 80371DAC 00000008  3C A0 80 3D */	lis r5, gDBCommTable@ha
 /* 80371DB0 0000000C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80371DB4 00000010  38 A5 32 A8 */	addi r5, r5, gDBCommTable@l
-/* 80371DB8 00000014  81 85 00 10 */	lwz r12, 0x10(r5)
+/* 80371DB8 00000014  81 85 00 10 */	lwz r12, 0x10(r5)	/* effective address: 803D32B8 */
 /* 80371DBC 00000018  7D 89 03 A6 */	mtctr r12
 /* 80371DC0 0000001C  4E 80 04 21 */	bctrl 
 /* 80371DC4 00000020  7C 03 00 D0 */	neg r0, r3

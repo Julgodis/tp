@@ -229,7 +229,7 @@ asm void dMenu_Fmap_stage_data_c::isArrival() {
 
 /* ############################################################################################## */
 /* 80451E20-80451E28 0004+04 s=5 e=0 z=0  None .sdata2    @3894                                                        */
-SECTION_SDATA2 static u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3894[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -413,7 +413,7 @@ asm void dMenuFmapIconDisp_c::getPosition(int* param_0, int* param_1, f32* param
 
 /* ############################################################################################## */
 /* 803A7D38-803A7D74 003C+00 s=1 e=0 z=0  None .data      @4467                                                        */
-SECTION_DATA static void* d_map_d_map_path_fmap__lit_4467[15] = {
+SECTION_DATA static void* lit_4467[15] = {
 	/* 0    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
 	/* 1    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
 	/* 2    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),

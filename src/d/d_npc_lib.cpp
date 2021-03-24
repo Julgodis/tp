@@ -14,6 +14,12 @@
 struct J3DModel {
 };
 
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
 struct fopAc_ac_c {
 };
 
@@ -26,12 +32,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct dNpcLib_lookat_c {
@@ -141,33 +141,33 @@ asm void dNpcLib_lookat_c::init(J3DModel* param_0, int* param_1, csXyz* param_2,
 
 /* ############################################################################################## */
 /* 80454DE8-80454DEC 0004+00 s=3 e=0 z=0  None .sdata2    @3864                                                        */
-SECTION_SDATA2 static u8 d_d_npc_lib__lit_3864[4] = {
+SECTION_SDATA2 static u8 lit_3864[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454DEC-80454DF0 0004+00 s=1 e=0 z=0  None .sdata2    @3865                                                        */
-SECTION_SDATA2 static f32 d_d_npc_lib__lit_3865 = 1.0f;
+SECTION_SDATA2 static f32 lit_3865 = 1.0f;
 
 /* 80454DF0-80454DF8 0008+00 s=2 e=0 z=0  None .sdata2    @3866                                                        */
-SECTION_SDATA2 static f64 d_d_npc_lib__lit_3866 = 0.5;
+SECTION_SDATA2 static f64 lit_3866 = 0.5;
 
 /* 80454DF8-80454E00 0008+00 s=2 e=0 z=0  None .sdata2    @3867                                                        */
-SECTION_SDATA2 static f64 d_d_npc_lib__lit_3867 = 3.0;
+SECTION_SDATA2 static f64 lit_3867 = 3.0;
 
 /* 80454E00-80454E08 0008+00 s=2 e=0 z=0  None .sdata2    @3868                                                        */
-SECTION_SDATA2 static u8 d_d_npc_lib__lit_3868[8] = {
+SECTION_SDATA2 static u8 lit_3868[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454E08-80454E10 0004+04 s=1 e=0 z=0  None .sdata2    @3869                                                        */
-SECTION_SDATA2 static f32 d_d_npc_lib__lit_3869[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3869[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
 /* 80454E10-80454E18 0008+00 s=2 e=0 z=0  None .sdata2    @3873                                                        */
-SECTION_SDATA2 static f64 d_d_npc_lib__lit_3873 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3873 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80251534-80251B60 062C+00 s=0 e=0 z=0  None .text      action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi     */
 #pragma push
@@ -193,7 +193,7 @@ asm void dNpcLib_lookat_c::dbView() {
 
 /* ############################################################################################## */
 /* 80454E18-80454E20 0004+04 s=1 e=0 z=0  None .sdata2    @3970                                                        */
-SECTION_SDATA2 static f32 d_d_npc_lib__lit_3970[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3970[1 + 1 /* padding */] = {
 	2.0f / 5.0f,
 	/* padding */
 	0.0f,

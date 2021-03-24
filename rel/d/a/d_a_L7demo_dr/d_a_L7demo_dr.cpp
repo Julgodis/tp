@@ -12,6 +12,7 @@
 // 
 
 struct daDr_c {
+	/* 805A9238 */ void setAction(void (daDr_c::*)());
 	/* 805A92DC */ void action();
 	/* 805A9304 */ void mtx_set();
 	/* 805A93D4 */ void draw();
@@ -41,7 +42,7 @@ void daDr_Delete(daDr_c*); // 2
 void useHeapInit(fopAc_ac_c*); // 2
 void daDr_Create(daDr_c*); // 2
 
-extern "C" static void setAction__6daDr_cFM6daDr_cFPCvPv_v(); // 1
+extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v(); // 1
 extern "C" void action__6daDr_cFv(); // 1
 extern "C" void mtx_set__6daDr_cFv(); // 1
 extern "C" void draw__6daDr_cFv(); // 1
@@ -116,7 +117,7 @@ extern "C" void _unresolved(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__6daDr_cFM6daDr_cFPCvPv_v() {
+asm void daDr_c::setAction(void (daDr_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/setAction__6daDr_cFM6daDr_cFPCvPv_v.s"
 }

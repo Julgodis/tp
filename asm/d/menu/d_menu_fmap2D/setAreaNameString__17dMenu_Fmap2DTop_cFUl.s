@@ -22,8 +22,8 @@ lbl_801D7034:
 /* 801D705C 00000028  7D 89 03 A6 */	mtctr r12
 /* 801D7060 0000002C  4E 80 04 21 */	bctrl 
 /* 801D7064 00000030  48 12 95 F5 */	bl getStringPtr__10J2DTextBoxCFv
-/* 801D7068 00000034  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D706C 00000038  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D7068 00000034  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D706C 00000038  38 84 65 D0 */	addi r4, r4, stringBase0@l
 /* 801D7070 0000003C  38 84 00 BB */	addi r4, r4, 0xbb
 /* 801D7074 00000040  48 19 1A B9 */	bl strcpy
 /* 801D7078 00000044  48 00 00 48 */	b lbl_801D70C0

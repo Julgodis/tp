@@ -31,11 +31,11 @@ lbl_8025B8A4:
 lbl_8025B918:
 /* 8025B918 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B91C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B920 00000008  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8025B920 00000008  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 8025B924 0000000C  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8025B928 00000010  7D 89 03 A6 */	mtctr r12
 /* 8025B92C 00000014  4E 80 04 21 */	bctrl 
-/* 8025B930 00000018  A0 03 00 0A */	lhz r0, 0xa(r3)
+/* 8025B930 00000018  A0 03 00 0A */	lhz r0, 0xa(r3)	/* effective address: 804061CA */
 /* 8025B934 0000001C  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 8025B938 00000020  41 82 00 0C */	beq lbl_8025B944
 /* 8025B93C 00000024  4B DB 34 B1 */	bl mDoExt_getArchiveHeap__Fv

@@ -5,8 +5,8 @@ lbl_8003A840:
 /* 8003A84C 0000000C  39 61 00 50 */	addi r11, r1, 0x50
 /* 8003A850 00000010  48 32 79 69 */	bl _savegpr_20
 /* 8003A854 00000014  7C 77 1B 78 */	mr r23, r3
-/* 8003A858 00000018  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003A85C 0000001C  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003A858 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003A85C 0000001C  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003A860 00000020  38 63 00 23 */	addi r3, r3, 0x23
 /* 8003A864 00000024  38 80 00 5D */	li r4, 0x5d
 /* 8003A868 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha

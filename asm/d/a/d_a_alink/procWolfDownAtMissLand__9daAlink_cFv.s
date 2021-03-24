@@ -26,7 +26,7 @@ lbl_8013BDAC:
 /* 8013BDAC 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 8013BDB0 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtDown_c0@ha
 /* 8013BDB4 00000008  38 63 F6 58 */	addi r3, r3, m__22daAlinkHIO_wlAtDown_c0@l
-/* 8013BDB8 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 8013BDB8 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038F6CC */
 /* 8013BDBC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013BDC0 00000000  40 81 00 14 */	ble lbl_8013BDD4
 /* 8013BDC4 00000004  7F C3 F3 78 */	mr r3, r30

@@ -158,10 +158,10 @@ SECTION_SDATA static f32 oneFrameRate = 8.0f;
 SECTION_SDATA static f32 oneFrameRateUser = 10.0f;
 
 /* 804560D8-804560DC 0004+00 s=1 e=0 z=0  None .sdata2    @2258                                                        */
-SECTION_SDATA2 static f32 JUTProcBar__lit_2258 = 8.0f;
+SECTION_SDATA2 static f32 lit_2258 = 8.0f;
 
 /* 804560DC-804560E0 0004+00 s=2 e=0 z=0  None .sdata2    @2259                                                        */
-SECTION_SDATA2 static f32 JUTProcBar__lit_2259 = 10.0f;
+SECTION_SDATA2 static f32 lit_2259 = 10.0f;
 
 /* 802E5A60-802E5B30 00D0+00 s=0 e=1 z=0  None .text      clear__10JUTProcBarFv                                        */
 #pragma push
@@ -207,10 +207,10 @@ SECTION_SDATA2 static f32 lit_2309 = 16666.0f;
 SECTION_SDATA2 static f32 lit_2310 = 30.0f;
 
 /* 804560FC-80456100 0004+00 s=1 e=0 z=0  None .sdata2    @2311                                                        */
-SECTION_SDATA2 static f32 JUTProcBar__lit_2311 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_2311 = 1.0f / 10.0f;
 
 /* 80456100-80456104 0004+00 s=1 e=0 z=0  None .sdata2    @2312                                                        */
-SECTION_SDATA2 static f32 JUTProcBar__lit_2312 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_2312 = 1.0f / 5.0f;
 
 /* 80456104-80456108 0004+00 s=1 e=0 z=0  None .sdata2    @2313                                                        */
 SECTION_SDATA2 static f32 lit_2313 = 60.0f;

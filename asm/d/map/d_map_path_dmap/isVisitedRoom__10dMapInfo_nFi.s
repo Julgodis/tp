@@ -6,7 +6,7 @@ lbl_8003ED10:
 /* 8003ED20 00000010  3B E0 00 00 */	li r31, 0
 /* 8003ED24 00000014  3C 80 80 43 */	lis r4, g_fmapHIO@ha
 /* 8003ED28 00000018  38 84 FC 60 */	addi r4, r4, g_fmapHIO@l
-/* 8003ED2C 0000001C  88 04 02 FC */	lbz r0, 0x2fc(r4)
+/* 8003ED2C 0000001C  88 04 02 FC */	lbz r0, 0x2fc(r4)	/* effective address: 8042FF5C */
 /* 8003ED30 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 8003ED34 00000024  40 82 00 10 */	bne lbl_8003ED44
 /* 8003ED38 00000028  4B FF 0F 61 */	bl dComIfGs_isVisitedRoom__Fi

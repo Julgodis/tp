@@ -104,7 +104,7 @@ extern "C" void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void getSubFrameCounter__9JASDriverFv(); // 1
-extern "C" extern char const* const JASAiCtrl__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -238,7 +238,7 @@ SECTION_SDATA static u32 sSubFrames__9JASDriver = 0x00000007;
 SECTION_SDATA2 static f32 lit_233 = 32000.0f;
 
 /* 80455724-80455728 0004+00 s=1 e=0 z=0  None .sdata2    @234                                                         */
-SECTION_SDATA2 static f32 JASAiCtrl__lit_234 = 48000.0f;
+SECTION_SDATA2 static f32 lit_234 = 48000.0f;
 
 /* 80455728-8045572C 0004+00 s=1 e=0 z=0  None .sdata2    @235                                                         */
 SECTION_SDATA2 static f32 lit_235 = 1.0008896589279175f;
@@ -311,10 +311,10 @@ static u8 data_804512D0[4];
 static u8 data_804512D4[4];
 
 /* 8045572C-80455730 0004+00 s=1 e=0 z=0  None .sdata2    @275                                                         */
-SECTION_SDATA2 static f32 JASAiCtrl__lit_275 = 11.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_275 = 11.0f / 10.0f;
 
 /* 80455730-80455738 0004+04 s=1 e=0 z=0  None .sdata2    @276                                                         */
-SECTION_SDATA2 static f32 JASAiCtrl__lit_276[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_276[1 + 1 /* padding */] = {
 	32028.5f,
 	/* padding */
 	0.0f,

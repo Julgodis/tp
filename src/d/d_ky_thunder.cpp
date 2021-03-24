@@ -85,7 +85,7 @@ extern "C" static void dThunder_IsDelete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Delete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Create__FP12kankyo_class(); // 1
 extern "C" void create__10dThunder_cFv(); // 1
-extern "C" extern char const* const d_d_ky_thunder__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_KY_THUNDER[10 + 1 /* padding */];
 
 // 
@@ -181,10 +181,10 @@ asm void dThunder_c::adjustHeap() {
 
 /* ############################################################################################## */
 /* 8042E7F0-8042E7FC 000C+00 s=1 e=0 z=0  None .bss       @3816                                                        */
-static u8 d_d_ky_thunder__lit_3816[12];
+static u8 lit_3816[12];
 
 /* 8042E7FC-8042E808 000C+00 s=1 e=0 z=0  None .bss       @3818                                                        */
-static u8 d_d_ky_thunder__lit_3818[12];
+static u8 lit_3818[12];
 
 /* 8042E808-8042E814 000C+00 s=1 e=0 z=0  None .bss       l_offsetPos$localstatic3$draw__10dThunder_cFv                */
 static u8 data_8042E808[12];
@@ -193,18 +193,18 @@ static u8 data_8042E808[12];
 static u8 data_8042E814[12];
 
 /* 80453E70-80453E74 0004+00 s=2 e=0 z=0  None .sdata2    @3882                                                        */
-SECTION_SDATA2 static u8 d_d_ky_thunder__lit_3882[4] = {
+SECTION_SDATA2 static u8 lit_3882[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453E74-80453E78 0004+00 s=1 e=0 z=0  None .sdata2    @3883                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3883 = 40.0f;
+SECTION_SDATA2 static f32 lit_3883 = 40.0f;
 
 /* 80453E78-80453E7C 0004+00 s=1 e=0 z=0  None .sdata2    @3884                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3884 = -250.0f;
+SECTION_SDATA2 static f32 lit_3884 = -250.0f;
 
 /* 80453E7C-80453E80 0004+00 s=3 e=0 z=0  None .sdata2    @3885                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3885 = 1.0f;
+SECTION_SDATA2 static f32 lit_3885 = 1.0f;
 
 /* 801AE000-801AE19C 019C+00 s=1 e=0 z=0  None .text      dThunder_Draw__FP10dThunder_c                                */
 #pragma push
@@ -219,25 +219,25 @@ asm static void dThunder_Draw(dThunder_c* param_0) {
 
 /* ############################################################################################## */
 /* 80453E80-80453E84 0004+00 s=2 e=0 z=0  None .sdata2    @3923                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3923 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3923 = 1.0f / 10.0f;
 
 /* 80453E84-80453E88 0004+00 s=1 e=0 z=0  None .sdata2    @3924                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3924 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_3924 = 1.0f / 20.0f;
 
 /* 80453E88-80453E8C 0004+00 s=1 e=0 z=0  None .sdata2    @3925                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3925 = 0.017000000923871994f;
+SECTION_SDATA2 static f32 lit_3925 = 0.017000000923871994f;
 
 /* 80453E8C-80453E90 0004+00 s=1 e=0 z=0  None .sdata2    @3926                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3926 = 9.999999747378752e-06f;
+SECTION_SDATA2 static f32 lit_3926 = 9.999999747378752e-06f;
 
 /* 80453E90-80453E94 0004+00 s=1 e=0 z=0  None .sdata2    @3927                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3927 = 60.0f;
+SECTION_SDATA2 static f32 lit_3927 = 60.0f;
 
 /* 80453E94-80453E98 0004+00 s=1 e=0 z=0  None .sdata2    @3928                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3928 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_3928 = 1.0f / 100.0f;
 
 /* 80453E98-80453E9C 0004+00 s=1 e=0 z=0  None .sdata2    @3929                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_3929 = 1.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_3929 = 1.0f / 50.0f;
 
 /* 801AE19C-801AE374 01D8+00 s=1 e=0 z=0  None .text      dThunder_Execute__FP10dThunder_c                             */
 #pragma push
@@ -295,71 +295,71 @@ SECTION_DEAD static char const* const pad_80394F4E = "\0";
 #pragma pop
 
 /* 80453E9C-80453EA0 0004+00 s=1 e=0 z=0  None .sdata2    @4079                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4079 = 0.5f;
+SECTION_SDATA2 static f32 lit_4079 = 0.5f;
 
 /* 80453EA0-80453EA4 0004+00 s=1 e=0 z=0  None .sdata2    @4080                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4080 = 0.25f;
+SECTION_SDATA2 static f32 lit_4080 = 0.25f;
 
 /* 80453EA4-80453EA8 0004+00 s=1 e=0 z=0  None .sdata2    @4081                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4081 = 14.0f;
+SECTION_SDATA2 static f32 lit_4081 = 14.0f;
 
 /* 80453EA8-80453EAC 0004+00 s=1 e=0 z=0  None .sdata2    @4082                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4082 = 20.0f;
+SECTION_SDATA2 static f32 lit_4082 = 20.0f;
 
 /* 80453EAC-80453EB0 0004+00 s=1 e=0 z=0  None .sdata2    @4083                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4083 = 60000.0f;
+SECTION_SDATA2 static f32 lit_4083 = 60000.0f;
 
 /* 80453EB0-80453EB4 0004+00 s=1 e=0 z=0  None .sdata2    @4084                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4084 = -5000.0f;
+SECTION_SDATA2 static f32 lit_4084 = -5000.0f;
 
 /* 80453EB4-80453EB8 0004+00 s=1 e=0 z=0  None .sdata2    @4085                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4085 = 2000.0f;
+SECTION_SDATA2 static f32 lit_4085 = 2000.0f;
 
 /* 80453EB8-80453EBC 0004+00 s=1 e=0 z=0  None .sdata2    @4086                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4086 = 24.0f;
+SECTION_SDATA2 static f32 lit_4086 = 24.0f;
 
 /* 80453EBC-80453EC0 0004+00 s=1 e=0 z=0  None .sdata2    @4087                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4087 = 2500.0f;
+SECTION_SDATA2 static f32 lit_4087 = 2500.0f;
 
 /* 80453EC0-80453EC4 0004+00 s=1 e=0 z=0  None .sdata2    @4088                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4088 = 6000.0f;
+SECTION_SDATA2 static f32 lit_4088 = 6000.0f;
 
 /* 80453EC4-80453EC8 0004+00 s=1 e=0 z=0  None .sdata2    @4089                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4089 = 3.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4089 = 3.0f / 20.0f;
 
 /* 80453EC8-80453ED0 0004+04 s=1 e=0 z=0  None .sdata2    @4090                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4090[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4090[1 + 1 /* padding */] = {
 	1.0f / 5.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80453ED0-80453ED8 0008+00 s=1 e=0 z=0  None .sdata2    @4091                                                        */
-SECTION_SDATA2 static f64 d_d_ky_thunder__lit_4091 = 0.5;
+SECTION_SDATA2 static f64 lit_4091 = 0.5;
 
 /* 80453ED8-80453EDC 0004+00 s=1 e=0 z=0  None .sdata2    @4092                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4092 = -1.0f;
+SECTION_SDATA2 static f32 lit_4092 = -1.0f;
 
 /* 80453EDC-80453EE0 0004+00 s=1 e=0 z=0  None .sdata2    @4093                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4093 = 100000.0f;
+SECTION_SDATA2 static f32 lit_4093 = 100000.0f;
 
 /* 80453EE0-80453EE4 0004+00 s=1 e=0 z=0  None .sdata2    @4094                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4094 = 19635.0f;
+SECTION_SDATA2 static f32 lit_4094 = 19635.0f;
 
 /* 80453EE4-80453EE8 0004+00 s=1 e=0 z=0  None .sdata2    @4095                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4095 = 260.0f;
+SECTION_SDATA2 static f32 lit_4095 = 260.0f;
 
 /* 80453EE8-80453EEC 0004+00 s=1 e=0 z=0  None .sdata2    @4096                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4096 = 4592.0f;
+SECTION_SDATA2 static f32 lit_4096 = 4592.0f;
 
 /* 80453EEC-80453EF0 0004+00 s=1 e=0 z=0  None .sdata2    @4097                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4097 = 1507.0f;
+SECTION_SDATA2 static f32 lit_4097 = 1507.0f;
 
 /* 80453EF0-80453EF4 0004+00 s=1 e=0 z=0  None .sdata2    @4098                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4098 = 100.0f;
+SECTION_SDATA2 static f32 lit_4098 = 100.0f;
 
 /* 80453EF4-80453EF8 0004+00 s=1 e=0 z=0  None .sdata2    @4099                                                        */
-SECTION_SDATA2 static f32 d_d_ky_thunder__lit_4099 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4099 = 3.0f / 10.0f;
 
 /* 801AE458-801AE938 04E0+00 s=1 e=0 z=0  None .text      create__10dThunder_cFv                                       */
 #pragma push

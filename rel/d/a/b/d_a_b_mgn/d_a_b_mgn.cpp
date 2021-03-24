@@ -16,15 +16,15 @@ struct daB_MGN_HIO_c {
 	/* 8060F8D0 */ ~daB_MGN_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
 	/* 8060F864 */ cXyz();
 	/* 8060FD78 */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daB_MGN_c {

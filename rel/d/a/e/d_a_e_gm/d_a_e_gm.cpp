@@ -17,6 +17,7 @@ struct daE_GM_HIO_c {
 };
 
 struct daE_GM_c {
+	/* 806D12C8 */ void setAction(void (daE_GM_c::*)());
 	/* 806D136C */ void action();
 	/* 806D1580 */ void egg_wait();
 	/* 806D1A9C */ void appear();
@@ -106,7 +107,7 @@ void daE_GM_Create(daE_GM_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
 
 extern "C" void __ct__12daE_GM_HIO_cFv(); // 1
-extern "C" static void setAction__8daE_GM_cFM8daE_GM_cFPCvPv_v(); // 1
+extern "C" void setAction__8daE_GM_cFM8daE_GM_cFPCvPv_v(); // 1
 extern "C" void action__8daE_GM_cFv(); // 1
 extern "C" void s_obj_sub2__FPvPv(); // 1
 extern "C" void egg_wait__8daE_GM_cFv(); // 1
@@ -372,7 +373,7 @@ asm daE_GM_HIO_c::daE_GM_HIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__8daE_GM_cFM8daE_GM_cFPCvPv_v() {
+asm void daE_GM_c::setAction(void (daE_GM_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gm/d_a_e_gm/setAction__8daE_GM_cFM8daE_GM_cFPCvPv_v.s"
 }

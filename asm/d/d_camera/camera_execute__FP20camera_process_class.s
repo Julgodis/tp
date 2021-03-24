@@ -18,9 +18,9 @@ lbl_80181ECC:
 lbl_80181F0C:
 /* 80181F0C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80181F10 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80181F14 00000008  80 03 5D 7C */	lwz r0, 0x5d7c(r3)
+/* 80181F14 00000008  80 03 5D 7C */	lwz r0, 0x5d7c(r3)	/* effective address: 8040BF3C */
 /* 80181F18 0000000C  54 00 06 B0 */	rlwinm r0, r0, 0, 0x1a, 0x18
-/* 80181F1C 00000010  90 03 5D 7C */	stw r0, 0x5d7c(r3)
+/* 80181F1C 00000010  90 03 5D 7C */	stw r0, 0x5d7c(r3)	/* effective address: 8040BF3C */
 /* 80181F20 00000014  80 1F 02 6C */	lwz r0, 0x26c(r31)
 /* 80181F24 00000018  2C 00 00 00 */	cmpwi r0, 0
 /* 80181F28 0000001C  40 82 00 10 */	bne lbl_80181F38

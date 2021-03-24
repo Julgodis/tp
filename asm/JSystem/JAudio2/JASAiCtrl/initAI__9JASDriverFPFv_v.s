@@ -73,7 +73,7 @@ lbl_8029C470:
 /* 8029C498 00000028  48 0B 3B ED */	bl AIInit
 /* 8029C49C 0000002C  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C4A0 00000030  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
-/* 8029C4A4 00000034  80 63 00 08 */	lwz r3, 8(r3)
+/* 8029C4A4 00000034  80 63 00 08 */	lwz r3, 8(r3)	/* effective address: 80431C60 */
 /* 8029C4A8 00000038  7F 44 D3 78 */	mr r4, r26
 /* 8029C4AC 0000003C  48 0B 38 09 */	bl AIInitDMA
 /* 8029C4B0 00000040  80 6D 8D 40 */	lwz r3, sOutputRate__9JASDriver(r13)

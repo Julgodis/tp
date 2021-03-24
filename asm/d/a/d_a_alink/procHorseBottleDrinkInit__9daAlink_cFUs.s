@@ -29,7 +29,7 @@ lbl_800F2980:
 /* 800F299C 0000001C  40 82 00 14 */	bne lbl_800F29B0
 /* 800F29A0 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800F29A4 00000024  38 80 00 02 */	li r4, 2
-/* 800F29A8 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F29A8 00000028  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F29AC 0000002C  4B FB B1 41 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F29B0:
 /* 800F29B0 00000000  7F E3 FB 78 */	mr r3, r31
@@ -45,7 +45,7 @@ lbl_800F29B0:
 /* 800F29D8 00000028  41 82 00 30 */	beq lbl_800F2A08
 /* 800F29DC 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F29E0 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F29E4 00000034  80 83 5D B8 */	lwz r4, 0x5db8(r3)
+/* 800F29E4 00000034  80 83 5D B8 */	lwz r4, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800F29E8 00000038  38 00 00 03 */	li r0, 3
 /* 800F29EC 0000003C  98 04 16 B8 */	stb r0, 0x16b8(r4)
 /* 800F29F0 00000040  38 60 00 00 */	li r3, 0
@@ -78,9 +78,9 @@ lbl_800F2A14:
 /* 800F2A54 00000040  48 01 BB 85 */	bl setBottleModel__9daAlink_cFUs
 /* 800F2A58 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F2A5C 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F2A60 0000004C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 800F2A60 0000004C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800F2A64 00000050  60 00 20 00 */	ori r0, r0, 0x2000
-/* 800F2A68 00000054  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 800F2A68 00000054  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800F2A6C 00000058  38 00 00 01 */	li r0, 1
 /* 800F2A70 0000005C  90 1F 31 9C */	stw r0, 0x319c(r31)
 /* 800F2A74 00000060  28 1F 00 00 */	cmplwi r31, 0
@@ -93,8 +93,8 @@ lbl_800F2A88:
 /* 800F2A88 00000000  48 08 EB B9 */	bl dCam_getBody__Fv
 /* 800F2A8C 00000004  38 80 00 12 */	li r4, 0x12
 /* 800F2A90 00000008  7F C5 F3 78 */	mr r5, r30
-/* 800F2A94 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
-/* 800F2A98 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
+/* 800F2A94 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
+/* 800F2A98 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
 /* 800F2A9C 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 800F2AA0 00000018  38 E0 00 01 */	li r7, 1
 /* 800F2AA4 0000001C  39 1F 31 9C */	addi r8, r31, 0x319c

@@ -14,18 +14,18 @@
 struct JKRHeap {
 };
 
+struct _GXRenderModeObj {
+};
+
+struct _GXColor {
+};
+
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
-};
-
-struct _GXColor {
-};
-
-struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -157,7 +157,7 @@ extern "C" static void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext(); // 1
 extern "C" static void diagnoseGpHang__Fv(); // 1
 extern "C" void __sinit_JFWDisplay_cpp(); // 1
 extern "C" void func_80273724(); // 1
-extern "C" extern char const* const JFWDisplay__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 sManager__10JFWDisplay[4];
 
 // 
@@ -631,7 +631,7 @@ asm void JFWDisplay::clearEfb(int param_0, int param_1, int param_2, int param_3
 
 /* ############################################################################################## */
 /* 80455268-80455270 0008+00 s=1 e=0 z=0  None .sdata2    @2933                                                        */
-SECTION_SDATA2 static f64 JFWDisplay__lit_2933 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_2933 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8027331C-802733A8 008C+00 s=1 e=0 z=0  None .text      calcCombinationRatio__10JFWDisplayFv                         */
 #pragma push

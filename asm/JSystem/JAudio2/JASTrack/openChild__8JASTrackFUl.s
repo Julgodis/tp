@@ -53,8 +53,8 @@ lbl_80291CD0:
 /* 80291CEC 0000001C  38 63 1B 04 */	addi r3, r3, data_80431B04@l
 /* 80291CF0 00000020  3C 80 80 29 */	lis r4, func_802932E0@ha
 /* 80291CF4 00000024  38 84 32 E0 */	addi r4, r4, func_802932E0@l
-/* 80291CF8 00000028  3C A0 80 43 */	lis r5, JASTrack__lit_476@ha
-/* 80291CFC 0000002C  38 A5 1A E8 */	addi r5, r5, JASTrack__lit_476@l
+/* 80291CF8 00000028  3C A0 80 43 */	lis r5, lit_476@ha
+/* 80291CFC 0000002C  38 A5 1A E8 */	addi r5, r5, lit_476@l
 /* 80291D00 00000030  48 0C FF 25 */	bl __register_global_object
 /* 80291D04 00000034  38 00 00 01 */	li r0, 1
 /* 80291D08 00000038  98 0D 8C B1 */	stb r0, struct_80451230+0x1(r13)

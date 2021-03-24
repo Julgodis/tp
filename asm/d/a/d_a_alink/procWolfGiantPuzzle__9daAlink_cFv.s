@@ -62,7 +62,7 @@ lbl_80135298:
 /* 801352E0 0000003C  C0 42 94 9C */	lfs f2, lit_16567(r2)
 /* 801352E4 00000040  EC 02 00 32 */	fmuls f0, f2, f0
 /* 801352E8 00000044  EC 81 00 2A */	fadds f4, f1, f0
-/* 801352EC 00000048  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 801352EC 00000048  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 801352F0 0000004C  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 801352F4 00000050  EC 61 00 2A */	fadds f3, f1, f0
 /* 801352F8 00000054  7C 04 04 2E */	lfsx f0, r4, r0
@@ -95,7 +95,7 @@ lbl_80135298:
 /* 80135364 00000018  40 82 00 60 */	bne lbl_801353C4
 /* 80135368 0000001C  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8013536C 00000020  38 63 EF 28 */	addi r3, r3, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 80135370 00000024  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 80135370 00000024  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8038EF34 */
 /* 80135374 00000028  D0 1F 34 7C */	stfs f0, 0x347c(r31)
 /* 80135378 0000002C  C0 1F 05 94 */	lfs f0, 0x594(r31)
 /* 8013537C 00000030  D0 1F 34 78 */	stfs f0, 0x3478(r31)
@@ -131,9 +131,9 @@ lbl_801353C4:
 /* 801353E4 00000020  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 801353E8 00000024  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 801353EC 00000028  38 E5 EF 28 */	addi r7, r5, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 801353F0 0000002C  A8 A7 00 04 */	lha r5, 4(r7)
-/* 801353F4 00000030  A8 C7 00 00 */	lha r6, 0(r7)
-/* 801353F8 00000034  A8 E7 00 02 */	lha r7, 2(r7)
+/* 801353F0 0000002C  A8 A7 00 04 */	lha r5, 4(r7)	/* effective address: 8038EF2C */
+/* 801353F4 00000030  A8 C7 00 00 */	lha r6, 0(r7)	/* effective address: 8038EF28 */
+/* 801353F8 00000034  A8 E7 00 02 */	lha r7, 2(r7)	/* effective address: 8038EF2A */
 /* 801353FC 00000038  48 13 B1 45 */	bl cLib_addCalcAngleS__FPsssss
 /* 80135400 0000003C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 80135404 00000040  B0 1F 04 DE */	sth r0, 0x4de(r31)
@@ -152,7 +152,7 @@ lbl_80135428:
 /* 80135430 00000008  90 1F 31 A0 */	stw r0, 0x31a0(r31)
 lbl_80135434:
 /* 80135434 00000000  7F E3 FB 78 */	mr r3, r31
-/* 80135438 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 80135438 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 8013543C 00000008  4B FF 34 09 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 80135440 0000000C  38 60 00 01 */	li r3, 1
 lbl_80135444:

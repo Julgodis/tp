@@ -9,7 +9,7 @@ lbl_801E3DE0:
 /* 801E3DFC 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 801E3E00 00000020  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801E3E04 00000024  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801E3E08 00000028  AB A4 07 22 */	lha r29, 0x722(r4)
+/* 801E3E08 00000028  AB A4 07 22 */	lha r29, 0x722(r4)	/* effective address: 8042F2EA */
 /* 801E3E0C 0000002C  38 00 00 00 */	li r0, 0
 /* 801E3E10 00000030  B0 03 03 D8 */	sth r0, 0x3d8(r3)
 /* 801E3E14 00000034  38 80 00 00 */	li r4, 0
@@ -21,7 +21,7 @@ lbl_801E3DE0:
 /* 801E3E2C 0000004C  B3 DF 03 D8 */	sth r30, 0x3d8(r31)
 /* 801E3E30 00000050  9B DF 03 EC */	stb r30, 0x3ec(r31)
 /* 801E3E34 00000054  3B 80 00 00 */	li r28, 0
-/* 801E3E38 00000058  C3 E2 A9 2C */	lfs f31, d_menu_d_menu_option__lit_4068(r2)
+/* 801E3E38 00000058  C3 E2 A9 2C */	lfs f31, lit_4068(r2)
 lbl_801E3E3C:
 /* 801E3E3C 00000000  3B BE 00 5C */	addi r29, r30, 0x5c
 /* 801E3E40 00000004  7C 7F E8 2E */	lwzx r3, r31, r29
@@ -33,7 +33,7 @@ lbl_801E3E3C:
 /* 801E3E58 0000001C  7D 89 03 A6 */	mtctr r12
 /* 801E3E5C 00000020  4E 80 04 21 */	bctrl 
 /* 801E3E60 00000024  7C 7F E8 2E */	lwzx r3, r31, r29
-/* 801E3E64 00000028  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__lit_4068(r2)
+/* 801E3E64 00000028  C0 22 A9 2C */	lfs f1, lit_4068(r2)
 /* 801E3E68 0000002C  48 07 19 69 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801E3E6C 00000030  3B 9C 00 01 */	addi r28, r28, 1
 /* 801E3E70 00000034  2C 1C 00 05 */	cmpwi r28, 5
@@ -45,12 +45,12 @@ lbl_801E3E3C:
 /* 801E3E88 0000004C  7F E3 FB 78 */	mr r3, r31
 /* 801E3E8C 00000050  48 00 34 89 */	bl setCursorPos__14dMenu_Option_cFUc
 /* 801E3E90 00000054  7F E3 FB 78 */	mr r3, r31
-/* 801E3E94 00000058  C0 22 A9 2C */	lfs f1, d_menu_d_menu_option__lit_4068(r2)
+/* 801E3E94 00000058  C0 22 A9 2C */	lfs f1, lit_4068(r2)
 /* 801E3E98 0000005C  48 00 3E 81 */	bl cursorAnime__14dMenu_Option_cFf
 /* 801E3E9C 00000060  38 60 00 01 */	li r3, 1
 /* 801E3EA0 00000064  48 00 00 AC */	b lbl_801E3F4C
 lbl_801E3EA4:
-/* 801E3EA4 00000000  C8 42 A9 58 */	lfd f2, d_menu_d_menu_option__lit_4520(r2)
+/* 801E3EA4 00000000  C8 42 A9 58 */	lfd f2, lit_4520(r2)
 /* 801E3EA8 00000004  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 801E3EAC 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801E3EB0 0000000C  3C 60 43 30 */	lis r3, 0x4330

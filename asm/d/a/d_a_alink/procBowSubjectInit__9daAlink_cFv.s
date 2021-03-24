@@ -16,7 +16,7 @@ lbl_800DFD98:
 /* 800DFDA0 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DFDA4 0000000C  3C A0 80 39 */	lis r5, m__17daAlinkHIO_bow_c0@ha
 /* 800DFDA8 00000010  38 A5 E6 58 */	addi r5, r5, m__17daAlinkHIO_bow_c0@l
-/* 800DFDAC 00000014  C0 45 00 30 */	lfs f2, 0x30(r5)
+/* 800DFDAC 00000014  C0 45 00 30 */	lfs f2, 0x30(r5)	/* effective address: 8038E688 */
 /* 800DFDB0 00000018  4B FC D2 31 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800DFDB4 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800DFDB8 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)

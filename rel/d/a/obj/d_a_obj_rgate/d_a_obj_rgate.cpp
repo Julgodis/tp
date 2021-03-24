@@ -14,10 +14,10 @@
 struct J3DJoint {
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct daObjRgate_c {

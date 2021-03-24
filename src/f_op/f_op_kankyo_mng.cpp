@@ -17,16 +17,16 @@ struct cXyz {
 struct layer_class {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -88,7 +88,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 80451C68-80451C70 0004+04 s=2 e=0 z=0  None .sdata2    @3713                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_kankyo_mng__lit_3713[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3713[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

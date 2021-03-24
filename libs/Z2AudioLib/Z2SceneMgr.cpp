@@ -179,7 +179,7 @@ extern "C" void eraseBgmWave__10Z2SceneMgrFUl(); // 1
 extern "C" void getWaveLoadStatus__10Z2SceneMgrFUlUl(); // 1
 extern "C" void loadSeWave__10Z2SceneMgrFUl(); // 1
 extern "C" void loadBgmWave__10Z2SceneMgrFUl(); // 1
-extern "C" extern char const* const Z2SceneMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -414,87 +414,87 @@ SECTION_DEAD static char const* const pad_8039C21C = "\0\0\0";
 
 /* 803CA5C0-803CA704 0144+00 s=1 e=0 z=0  None .data      sSpotName                                                    */
 SECTION_DATA static void* sSpotName[81] = {
-	/* 0    */ (void*)&Z2SceneMgr__stringBase0,
-	/* 1    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x7),
-	/* 2    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xF),
-	/* 3    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x16),
-	/* 4    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E),
-	/* 5    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x26),
-	/* 6    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x2E),
-	/* 7    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x36),
-	/* 8    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x3E),
-	/* 9    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x46),
-	/* 10   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x4E),
-	/* 11   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x56),
-	/* 12   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x5E),
-	/* 13   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x66),
-	/* 14   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x6E),
-	/* 15   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x76),
-	/* 16   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x7E),
-	/* 17   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x86),
-	/* 18   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x8E),
-	/* 19   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x96),
-	/* 20   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x9E),
-	/* 21   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xA6),
-	/* 22   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xAE),
-	/* 23   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xB6),
-	/* 24   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xBE),
-	/* 25   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xC6),
-	/* 26   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xCE),
-	/* 27   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xD6),
-	/* 28   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xDE),
-	/* 29   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xE6),
-	/* 30   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xEE),
-	/* 31   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xF6),
-	/* 32   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xFE),
-	/* 33   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x106),
-	/* 34   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x10E),
-	/* 35   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x116),
-	/* 36   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x117),
-	/* 37   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x11F),
-	/* 38   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x127),
-	/* 39   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x12F),
-	/* 40   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x136),
-	/* 41   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x13D),
-	/* 42   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x145),
-	/* 43   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x14D),
-	/* 44   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x154),
-	/* 45   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x15C),
-	/* 46   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x164),
-	/* 47   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x16B),
-	/* 48   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x173),
-	/* 49   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x17B),
-	/* 50   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x182),
-	/* 51   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x18A),
-	/* 52   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x192),
-	/* 53   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x199),
-	/* 54   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A1),
-	/* 55   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A9),
-	/* 56   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B0),
-	/* 57   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B8),
-	/* 58   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C0),
-	/* 59   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C7),
-	/* 60   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1CF),
-	/* 61   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1D7),
-	/* 62   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1DE),
-	/* 63   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E6),
-	/* 64   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1EE),
-	/* 65   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1F6),
-	/* 66   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1FE),
-	/* 67   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x205),
-	/* 68   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x20D),
-	/* 69   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x215),
-	/* 70   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x21D),
-	/* 71   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x224),
-	/* 72   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x22B),
-	/* 73   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x232),
-	/* 74   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x239),
-	/* 75   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x240),
-	/* 76   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x247),
-	/* 77   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x24E),
-	/* 78   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x255),
-	/* 79   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x25C),
-	/* 80   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x263),
+	/* 0    */ (void*)&stringBase0,
+	/* 1    */ (void*)(((char*)&stringBase0)+0x7),
+	/* 2    */ (void*)(((char*)&stringBase0)+0xF),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x16),
+	/* 4    */ (void*)(((char*)&stringBase0)+0x1E),
+	/* 5    */ (void*)(((char*)&stringBase0)+0x26),
+	/* 6    */ (void*)(((char*)&stringBase0)+0x2E),
+	/* 7    */ (void*)(((char*)&stringBase0)+0x36),
+	/* 8    */ (void*)(((char*)&stringBase0)+0x3E),
+	/* 9    */ (void*)(((char*)&stringBase0)+0x46),
+	/* 10   */ (void*)(((char*)&stringBase0)+0x4E),
+	/* 11   */ (void*)(((char*)&stringBase0)+0x56),
+	/* 12   */ (void*)(((char*)&stringBase0)+0x5E),
+	/* 13   */ (void*)(((char*)&stringBase0)+0x66),
+	/* 14   */ (void*)(((char*)&stringBase0)+0x6E),
+	/* 15   */ (void*)(((char*)&stringBase0)+0x76),
+	/* 16   */ (void*)(((char*)&stringBase0)+0x7E),
+	/* 17   */ (void*)(((char*)&stringBase0)+0x86),
+	/* 18   */ (void*)(((char*)&stringBase0)+0x8E),
+	/* 19   */ (void*)(((char*)&stringBase0)+0x96),
+	/* 20   */ (void*)(((char*)&stringBase0)+0x9E),
+	/* 21   */ (void*)(((char*)&stringBase0)+0xA6),
+	/* 22   */ (void*)(((char*)&stringBase0)+0xAE),
+	/* 23   */ (void*)(((char*)&stringBase0)+0xB6),
+	/* 24   */ (void*)(((char*)&stringBase0)+0xBE),
+	/* 25   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 26   */ (void*)(((char*)&stringBase0)+0xCE),
+	/* 27   */ (void*)(((char*)&stringBase0)+0xD6),
+	/* 28   */ (void*)(((char*)&stringBase0)+0xDE),
+	/* 29   */ (void*)(((char*)&stringBase0)+0xE6),
+	/* 30   */ (void*)(((char*)&stringBase0)+0xEE),
+	/* 31   */ (void*)(((char*)&stringBase0)+0xF6),
+	/* 32   */ (void*)(((char*)&stringBase0)+0xFE),
+	/* 33   */ (void*)(((char*)&stringBase0)+0x106),
+	/* 34   */ (void*)(((char*)&stringBase0)+0x10E),
+	/* 35   */ (void*)(((char*)&stringBase0)+0x116),
+	/* 36   */ (void*)(((char*)&stringBase0)+0x117),
+	/* 37   */ (void*)(((char*)&stringBase0)+0x11F),
+	/* 38   */ (void*)(((char*)&stringBase0)+0x127),
+	/* 39   */ (void*)(((char*)&stringBase0)+0x12F),
+	/* 40   */ (void*)(((char*)&stringBase0)+0x136),
+	/* 41   */ (void*)(((char*)&stringBase0)+0x13D),
+	/* 42   */ (void*)(((char*)&stringBase0)+0x145),
+	/* 43   */ (void*)(((char*)&stringBase0)+0x14D),
+	/* 44   */ (void*)(((char*)&stringBase0)+0x154),
+	/* 45   */ (void*)(((char*)&stringBase0)+0x15C),
+	/* 46   */ (void*)(((char*)&stringBase0)+0x164),
+	/* 47   */ (void*)(((char*)&stringBase0)+0x16B),
+	/* 48   */ (void*)(((char*)&stringBase0)+0x173),
+	/* 49   */ (void*)(((char*)&stringBase0)+0x17B),
+	/* 50   */ (void*)(((char*)&stringBase0)+0x182),
+	/* 51   */ (void*)(((char*)&stringBase0)+0x18A),
+	/* 52   */ (void*)(((char*)&stringBase0)+0x192),
+	/* 53   */ (void*)(((char*)&stringBase0)+0x199),
+	/* 54   */ (void*)(((char*)&stringBase0)+0x1A1),
+	/* 55   */ (void*)(((char*)&stringBase0)+0x1A9),
+	/* 56   */ (void*)(((char*)&stringBase0)+0x1B0),
+	/* 57   */ (void*)(((char*)&stringBase0)+0x1B8),
+	/* 58   */ (void*)(((char*)&stringBase0)+0x1C0),
+	/* 59   */ (void*)(((char*)&stringBase0)+0x1C7),
+	/* 60   */ (void*)(((char*)&stringBase0)+0x1CF),
+	/* 61   */ (void*)(((char*)&stringBase0)+0x1D7),
+	/* 62   */ (void*)(((char*)&stringBase0)+0x1DE),
+	/* 63   */ (void*)(((char*)&stringBase0)+0x1E6),
+	/* 64   */ (void*)(((char*)&stringBase0)+0x1EE),
+	/* 65   */ (void*)(((char*)&stringBase0)+0x1F6),
+	/* 66   */ (void*)(((char*)&stringBase0)+0x1FE),
+	/* 67   */ (void*)(((char*)&stringBase0)+0x205),
+	/* 68   */ (void*)(((char*)&stringBase0)+0x20D),
+	/* 69   */ (void*)(((char*)&stringBase0)+0x215),
+	/* 70   */ (void*)(((char*)&stringBase0)+0x21D),
+	/* 71   */ (void*)(((char*)&stringBase0)+0x224),
+	/* 72   */ (void*)(((char*)&stringBase0)+0x22B),
+	/* 73   */ (void*)(((char*)&stringBase0)+0x232),
+	/* 74   */ (void*)(((char*)&stringBase0)+0x239),
+	/* 75   */ (void*)(((char*)&stringBase0)+0x240),
+	/* 76   */ (void*)(((char*)&stringBase0)+0x247),
+	/* 77   */ (void*)(((char*)&stringBase0)+0x24E),
+	/* 78   */ (void*)(((char*)&stringBase0)+0x255),
+	/* 79   */ (void*)(((char*)&stringBase0)+0x25C),
+	/* 80   */ (void*)(((char*)&stringBase0)+0x263),
 };
 
 /* 803CA704-803CA744 0040+00 s=1 e=0 z=0  None .data      @5354                                                        */
@@ -590,7 +590,7 @@ SECTION_DATA static void* lit_5350[12] = {
 };
 
 /* 803CA824-803CA844 0020+00 s=1 e=0 z=0  None .data      @5349                                                        */
-SECTION_DATA static void* Z2SceneMgr__lit_5349[8] = {
+SECTION_DATA static void* lit_5349[8] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x430),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x45C),
 	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x52C),
@@ -602,7 +602,7 @@ SECTION_DATA static void* Z2SceneMgr__lit_5349[8] = {
 };
 
 /* 803CA844-803CA878 0034+00 s=1 e=0 z=0  None .data      @5348                                                        */
-SECTION_DATA static void* Z2SceneMgr__lit_5348[13] = {
+SECTION_DATA static void* lit_5348[13] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2E0),
 	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
@@ -619,7 +619,7 @@ SECTION_DATA static void* Z2SceneMgr__lit_5348[13] = {
 };
 
 /* 803CA878-803CA9BC 0144+00 s=1 e=0 z=0  None .data      @5347                                                        */
-SECTION_DATA static void* Z2SceneMgr__lit_5347[81] = {
+SECTION_DATA static void* lit_5347[81] = {
 	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150),
 	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E0),
 	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x40C),
@@ -710,16 +710,16 @@ SECTION_SDATA2 static f32 lit_5341 = -1.0f;
 SECTION_SDATA2 static f32 lit_5342 = 0.5f;
 
 /* 80455A58-80455A5C 0004+00 s=1 e=0 z=0  None .sdata2    @5343                                                        */
-SECTION_SDATA2 static f32 Z2SceneMgr__lit_5343 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5343 = 7.0f / 10.0f;
 
 /* 80455A5C-80455A60 0004+00 s=1 e=0 z=0  None .sdata2    @5344                                                        */
-SECTION_SDATA2 static f32 Z2SceneMgr__lit_5344 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_5344 = 4.0f / 5.0f;
 
 /* 80455A60-80455A64 0004+00 s=1 e=0 z=0  None .sdata2    @5345                                                        */
-SECTION_SDATA2 static f32 Z2SceneMgr__lit_5345 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5345 = 1.0f / 10.0f;
 
 /* 80455A64-80455A68 0004+00 s=1 e=0 z=0  None .sdata2    @5346                                                        */
-SECTION_SDATA2 static f32 Z2SceneMgr__lit_5346 = 2.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_5346 = 2.0f / 25.0f;
 
 /* 802B6AF8-802B995C 2E64+00 s=8 e=1 z=0  None .text      setSceneName__10Z2SceneMgrFPcll                              */
 #pragma push
@@ -965,7 +965,7 @@ asm void Z2SceneMgr::load2ndDynamicWave() {
 
 /* ############################################################################################## */
 /* 803CA9BC-803CAB18 015C+00 s=1 e=0 z=0  None .data      @5852                                                        */
-SECTION_DATA static void* Z2SceneMgr__lit_5852[87] = {
+SECTION_DATA static void* lit_5852[87] = {
 	/* 0    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
 	/* 1    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
 	/* 2    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),

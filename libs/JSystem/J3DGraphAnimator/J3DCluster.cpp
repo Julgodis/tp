@@ -165,13 +165,13 @@ asm void J3DDeformer::deform(J3DVertexBuffer* param_0, u16 param_1) {
 SECTION_SDATA2 static f32 lit_830 = 1.0f;
 
 /* 80456474-80456478 0004+00 s=1 e=0 z=0  None .sdata2    @840                                                         */
-SECTION_SDATA2 static u32 J3DCluster__lit_840 = 0x3F800000;
+SECTION_SDATA2 static u32 lit_840 = 0x3F800000;
 
 /* 80456478-8045647C 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80456478 = 0xBF800000;
 
 /* 8045647C-80456480 0004+00 s=3 e=0 z=0  None .sdata2    @866                                                         */
-SECTION_SDATA2 static u8 J3DCluster__lit_866[4] = {
+SECTION_SDATA2 static u8 lit_866[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -188,7 +188,7 @@ asm void J3DDeformer::deform_VtxPosF32(J3DVertexBuffer* param_0, J3DCluster* par
 
 /* ############################################################################################## */
 /* 80456480-80456484 0004+00 s=1 e=0 z=0  None .sdata2    @1020                                                        */
-SECTION_SDATA2 static f32 J3DCluster__lit_1020 = -1.0f;
+SECTION_SDATA2 static f32 lit_1020 = -1.0f;
 
 /* 80456484-80456488 0004+00 s=1 e=0 z=0  None .sdata2    @1021                                                        */
 SECTION_SDATA2 static f32 lit_1021 = 3.1415927410125732f;
@@ -197,13 +197,13 @@ SECTION_SDATA2 static f32 lit_1021 = 3.1415927410125732f;
 SECTION_SDATA2 static f32 lit_1022 = 1023.5f;
 
 /* 8045648C-80456490 0004+00 s=1 e=0 z=0  None .sdata2    @1023                                                        */
-SECTION_SDATA2 static f32 J3DCluster__lit_1023 = 1.5707963705062866f;
+SECTION_SDATA2 static f32 lit_1023 = 1.5707963705062866f;
 
 /* 80456490-80456494 0004+00 s=1 e=0 z=0  None .sdata2    @1024                                                        */
-SECTION_SDATA2 static f32 J3DCluster__lit_1024 = 57.2957763671875f;
+SECTION_SDATA2 static f32 lit_1024 = 57.2957763671875f;
 
 /* 80456494-80456498 0004+00 s=1 e=0 z=0  None .sdata2    @1025                                                        */
-SECTION_SDATA2 static f32 J3DCluster__lit_1025 = 180.0f;
+SECTION_SDATA2 static f32 lit_1025 = 180.0f;
 
 /* 80456498-804564A0 0008+00 s=1 e=0 z=0  None .sdata2    @1027                                                        */
 SECTION_SDATA2 static f64 lit_1027 = 4503599627370496.0 /* cast u32 to float */;

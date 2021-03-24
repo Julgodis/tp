@@ -19,33 +19,33 @@ lbl_802D10FC:
 /* 802D1140 00000044  80 1E 00 34 */	lwz r0, 0x34(r30)
 /* 802D1144 00000048  7C 03 00 50 */	subf r0, r3, r0
 /* 802D1148 0000004C  7F A5 02 14 */	add r29, r5, r0
-/* 802D114C 00000050  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D1150 00000054  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D114C 00000050  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1150 00000054  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D1154 00000058  38 63 01 17 */	addi r3, r3, 0x117
 /* 802D1158 0000005C  4C C6 31 82 */	crclr 6
 /* 802D115C 00000060  48 01 74 6D */	bl JUTReportConsole_f
 /* 802D1160 00000064  80 9E 00 74 */	lwz r4, 0x74(r30)
-/* 802D1164 00000068  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D1168 0000006C  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D1164 00000068  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1168 0000006C  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D116C 00000070  38 63 01 28 */	addi r3, r3, 0x128
 /* 802D1170 00000074  80 1E 00 34 */	lwz r0, 0x34(r30)
 /* 802D1174 00000078  7C A4 00 50 */	subf r5, r4, r0
 /* 802D1178 0000007C  4C C6 31 82 */	crclr 6
 /* 802D117C 00000080  48 01 74 4D */	bl JUTReportConsole_f
 /* 802D1180 00000084  80 BE 00 38 */	lwz r5, 0x38(r30)
-/* 802D1184 00000088  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D1188 0000008C  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D1184 00000088  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1188 0000008C  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D118C 00000090  38 63 01 39 */	addi r3, r3, 0x139
 /* 802D1190 00000094  7F A4 EB 78 */	mr r4, r29
-/* 802D1194 00000098  C0 62 C5 A8 */	lfs f3, JKRSolidHeap__lit_693(r2)
-/* 802D1198 0000009C  C8 22 C5 B0 */	lfd f1, JKRSolidHeap__lit_695(r2)
+/* 802D1194 00000098  C0 62 C5 A8 */	lfs f3, lit_693(r2)
+/* 802D1198 0000009C  C8 22 C5 B0 */	lfd f1, lit_695(r2)
 /* 802D119C 000000A0  6F A0 80 00 */	xoris r0, r29, 0x8000
 /* 802D11A0 000000A4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802D11A4 000000A8  3C 00 43 30 */	lis r0, 0x4330
 /* 802D11A8 000000AC  90 01 00 08 */	stw r0, 8(r1)
 /* 802D11AC 000000B0  C8 01 00 08 */	lfd f0, 8(r1)
 /* 802D11B0 000000B4  EC 40 08 28 */	fsubs f2, f0, f1
-/* 802D11B4 000000B8  C8 22 C5 B8 */	lfd f1, JKRSolidHeap__lit_697(r2)
+/* 802D11B4 000000B8  C8 22 C5 B8 */	lfd f1, lit_697(r2)
 /* 802D11B8 000000BC  90 A1 00 14 */	stw r5, 0x14(r1)
 /* 802D11BC 000000C0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802D11C0 000000C4  C8 01 00 10 */	lfd f0, 0x10(r1)

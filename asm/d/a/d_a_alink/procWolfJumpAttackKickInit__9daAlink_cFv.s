@@ -35,9 +35,9 @@ lbl_8013A7EC:
 /* 8013A870 00000084  4E 80 04 21 */	bctrl 
 /* 8013A874 00000088  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013A878 0000008C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013A87C 00000090  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013A87C 00000090  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013A880 00000094  64 00 00 20 */	oris r0, r0, 0x20
-/* 8013A884 00000098  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013A884 00000098  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013A888 0000009C  38 60 00 01 */	li r3, 1
 /* 8013A88C 000000A0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8013A890 000000A4  80 01 00 14 */	lwz r0, 0x14(r1)

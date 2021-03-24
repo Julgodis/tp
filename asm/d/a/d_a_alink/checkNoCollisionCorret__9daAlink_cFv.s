@@ -23,8 +23,8 @@ lbl_800AA5E8:
 /* 800AA63C 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800AA640 00000058  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 800AA644 0000005C  4B F9 DD A5 */	bl getRunEventName__16dEvent_manager_cFv
-/* 800AA648 00000060  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
-/* 800AA64C 00000064  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
+/* 800AA648 00000060  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 800AA64C 00000064  38 84 20 94 */	addi r4, r4, stringBase0@l
 /* 800AA650 00000068  38 84 04 65 */	addi r4, r4, 0x465
 /* 800AA654 0000006C  48 2B E3 41 */	bl strcmp
 /* 800AA658 00000070  2C 03 00 00 */	cmpwi r3, 0

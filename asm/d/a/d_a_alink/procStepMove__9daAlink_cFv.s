@@ -23,7 +23,7 @@ lbl_800C75AC:
 /* 800C75AC 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800C75B0 00000004  3C 60 80 39 */	lis r3, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C75B4 00000008  38 63 E1 1C */	addi r3, r3, m__23daAlinkHIO_smallJump_c0@l
-/* 800C75B8 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800C75B8 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038E154 */
 /* 800C75BC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C75C0 00000000  40 81 00 B4 */	ble lbl_800C7674
 /* 800C75C4 00000004  C0 1E 34 78 */	lfs f0, 0x3478(r30)

@@ -39,7 +39,7 @@ extern "C" extern void* __GXData;
 
 /* ############################################################################################## */
 /* 803D2280-803D22E8 0068+00 s=1 e=0 z=0  None .data      @176                                                         */
-SECTION_DATA static void* GXAttr__lit_176[26] = {
+SECTION_DATA static void* lit_176[26] = {
 	/* 0    */ (void*)(((char*)GXSetVtxDesc)+0x20),
 	/* 1    */ (void*)(((char*)GXSetVtxDesc)+0x34),
 	/* 2    */ (void*)(((char*)GXSetVtxDesc)+0x48),
@@ -174,7 +174,7 @@ extern "C" asm void GXClearVtxDesc() {
 
 /* ############################################################################################## */
 /* 803D2350-803D2394 0044+00 s=1 e=0 z=0  None .data      @476                                                         */
-SECTION_DATA static void* GXAttr__lit_476[17] = {
+SECTION_DATA static void* lit_476[17] = {
 	/* 0    */ (void*)(((char*)GXSetVtxAttrFmt)+0x3C),
 	/* 1    */ (void*)(((char*)GXSetVtxAttrFmt)+0x64),
 	/* 2    */ (void*)(((char*)GXSetVtxAttrFmt)+0xB8),
@@ -207,7 +207,7 @@ extern "C" asm void GXSetVtxAttrFmt() {
 
 /* ############################################################################################## */
 /* 803D2394-803D23D8 0044+00 s=1 e=0 z=0  None .data      @503                                                         */
-SECTION_DATA static void* GXAttr__lit_503[17] = {
+SECTION_DATA static void* lit_503[17] = {
 	/* 0    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x50),
 	/* 1    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x78),
 	/* 2    */ (void*)(((char*)GXSetVtxAttrFmtv)+0xCC),
@@ -273,7 +273,7 @@ extern "C" asm void GXInvalidateVtxCache() {
 
 /* ############################################################################################## */
 /* 803D23D8-803D23F4 001C+00 s=1 e=0 z=0  None .data      @740                                                         */
-SECTION_DATA static void* GXAttr__lit_740[7] = {
+SECTION_DATA static void* lit_740[7] = {
 	/* 0    */ (void*)(((char*)GXSetTexCoordGen2)+0x1CC),
 	/* 1    */ (void*)(((char*)GXSetTexCoordGen2)+0x1E0),
 	/* 2    */ (void*)(((char*)GXSetTexCoordGen2)+0x1F4),

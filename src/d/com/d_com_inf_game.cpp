@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
-struct J3DModel {
-};
-
 struct dTimer_c {
 	/* 8025D524 */ void deleteCheck();
 	/* 8025D618 */ void start(int, s16);
@@ -31,6 +25,12 @@ struct dStage_startStage_c {
 };
 
 struct J3DModelData {
+};
+
+struct J3DModel {
+};
+
+struct cXyz {
 };
 
 struct dComIfG_play_c {
@@ -554,8 +554,8 @@ extern "C" void getTimerPtr__14dComIfG_play_cFv(); // 1
 extern "C" void ct__13dComIfG_inf_cFv(); // 1
 extern "C" void dComIfG_changeOpeningScene__FP11scene_classs(); // 1
 extern "C" void dComIfG_resetToOpening__FP11scene_class(); // 1
-extern "C" static void d_com_d_com_inf_game__phase_1__FPc(); // 1
-extern "C" static void d_com_d_com_inf_game__phase_2__FPc(); // 1
+extern "C" static void phase_1__FPc(); // 1
+extern "C" static void phase_2__FPc(); // 1
 extern "C" static void phase_3__FPc(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
 extern "C" static void phase_01__FP12phaseParam_c(); // 1
@@ -705,7 +705,7 @@ extern "C" void __dt__15cCcD_DivideAreaFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__15cCcD_DivideInfoFv(); // 1
-extern "C" extern char const* const d_com_d_com_inf_game__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__25mDoExt_McaMorfCallBack1_c[3];
 extern "C" extern void* __vt__12dCcMassS_Obj[3];
 extern "C" extern void* __vt__15cCcD_DivideArea[3];
@@ -907,7 +907,7 @@ asm void dComIfG_play_c::ct() {
 static u8 dComIfG_mTimerInfo[20];
 
 /* 804061B4-804061C0 000C+00 s=1 e=0 z=0  None .bss       @5065                                                        */
-static u8 d_com_d_com_inf_game__lit_5065[12];
+static u8 lit_5065[12];
 
 /* 804061C0-80423FD0 1DE10+00 s=99 e=2264 z=0  None .bss       g_dComIfG_gameInfo                                           */
 u8 g_dComIfG_gameInfo[122384];
@@ -1342,7 +1342,7 @@ asm void dComIfG_resetToOpening(scene_class* param_0) {
 #pragma optimizewithasm off
 asm static void phase_1(char* param_0) {
 	nofralloc
-#include "asm/d/com/d_com_inf_game/d_com_d_com_inf_game__phase_1__FPc.s"
+#include "asm/d/com/d_com_inf_game/phase_1__FPc.s"
 }
 #pragma pop
 
@@ -1353,7 +1353,7 @@ asm static void phase_1(char* param_0) {
 #pragma optimizewithasm off
 asm static void phase_2(char* param_0) {
 	nofralloc
-#include "asm/d/com/d_com_inf_game/d_com_d_com_inf_game__phase_2__FPc.s"
+#include "asm/d/com/d_com_inf_game/phase_2__FPc.s"
 }
 #pragma pop
 
@@ -1372,8 +1372,8 @@ asm static void phase_3(char* param_0) {
 /* ############################################################################################## */
 /* 803A71B8-803A71C4 000C+00 s=1 e=0 z=0  None .data      l_method$5017                                                */
 SECTION_DATA static void* data_803A71B8[3] = {
-	/* 0    */ (void*)d_com_d_com_inf_game__phase_1__FPc,
-	/* 1    */ (void*)d_com_d_com_inf_game__phase_2__FPc,
+	/* 0    */ (void*)phase_1__FPc,
+	/* 1    */ (void*)phase_2__FPc,
 	/* 2    */ (void*)phase_3__FPc,
 };
 

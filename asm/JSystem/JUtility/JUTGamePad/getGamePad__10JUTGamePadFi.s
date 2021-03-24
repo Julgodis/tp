@@ -1,7 +1,7 @@
 lbl_802E199C:
 /* 802E199C 00000000  3C 80 80 43 */	lis r4, mPadList__10JUTGamePad@ha
 /* 802E19A0 00000004  38 84 43 E4 */	addi r4, r4, mPadList__10JUTGamePad@l
-/* 802E19A4 00000008  80 84 00 00 */	lwz r4, 0(r4)
+/* 802E19A4 00000008  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 804343E4 */
 /* 802E19A8 0000000C  48 00 00 20 */	b lbl_802E19C8
 lbl_802E19AC:
 /* 802E19AC 00000000  80 A4 00 00 */	lwz r5, 0(r4)

@@ -41,7 +41,7 @@ static u8 ResetCallback[4];
 static u8 Down[4];
 
 /* 804516A8-804516B0 0004+04 s=2 e=0 z=0  None .sbss      LastState                                                    */
-static u8 OSResetSW__LastState[4 + 4 /* padding */];
+static u8 LastState[4 + 4 /* padding */];
 
 /* 804516B0-804516B4 0004+00 s=1 e=0 z=0  None .sbss      HoldUp                                                       */
 static u8 HoldUp[4];

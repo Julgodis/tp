@@ -13,7 +13,7 @@ lbl_8020E4C8:
 /* 8020E4F4 0000002C  41 82 00 3C */	beq lbl_8020E530
 /* 8020E4F8 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E4FC 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020E500 00000038  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8020E500 00000038  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8020E504 0000003C  28 00 00 00 */	cmplwi r0, 0
 /* 8020E508 00000040  41 82 00 10 */	beq lbl_8020E518
 /* 8020E50C 00000044  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
@@ -30,7 +30,7 @@ lbl_8020E51C:
 lbl_8020E530:
 /* 8020E530 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E534 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020E538 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8020E538 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8020E53C 0000000C  38 00 00 00 */	li r0, 0
 /* 8020E540 00000010  88 64 05 6A */	lbz r3, 0x56a(r4)
 /* 8020E544 00000014  28 03 00 00 */	cmplwi r3, 0
@@ -78,7 +78,7 @@ lbl_8020E558:
 /* 8020E5E8 00000090  40 82 00 18 */	bne lbl_8020E600
 /* 8020E5EC 00000094  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E5F0 00000098  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E5F4 0000009C  A0 03 00 B0 */	lhz r0, 0xb0(r3)
+/* 8020E5F4 0000009C  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
 /* 8020E5F8 000000A0  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 8020E5FC 000000A4  41 82 00 0C */	beq lbl_8020E608
 lbl_8020E600:

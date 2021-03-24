@@ -30,7 +30,7 @@ lbl_800F9F9C:
 /* 800F9F9C 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800F9FA0 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_crouch_c0@ha
 /* 800F9FA4 00000008  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
-/* 800F9FA8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800F9FA8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E040 */
 /* 800F9FAC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800F9FB0 00000000  40 80 00 10 */	bge lbl_800F9FC0
 /* 800F9FB4 00000004  7F C3 F3 78 */	mr r3, r30

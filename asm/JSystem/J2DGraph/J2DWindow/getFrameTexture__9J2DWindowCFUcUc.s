@@ -2,12 +2,12 @@ lbl_802FBE60:
 /* 802FBE60 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FBE64 00000004  3C C0 80 3A */	lis r6, lit_3028@ha
 /* 802FBE68 00000008  38 E6 1C 30 */	addi r7, r6, lit_3028@l
-/* 802FBE6C 0000000C  80 C7 00 00 */	lwz r6, 0(r7)
-/* 802FBE70 00000010  80 07 00 04 */	lwz r0, 4(r7)
+/* 802FBE6C 0000000C  80 C7 00 00 */	lwz r6, 0(r7)	/* effective address: 803A1C30 */
+/* 802FBE70 00000010  80 07 00 04 */	lwz r0, 4(r7)	/* effective address: 803A1C34 */
 /* 802FBE74 00000014  90 C1 00 08 */	stw r6, 8(r1)
 /* 802FBE78 00000018  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802FBE7C 0000001C  80 C7 00 08 */	lwz r6, 8(r7)
-/* 802FBE80 00000020  80 07 00 0C */	lwz r0, 0xc(r7)
+/* 802FBE7C 0000001C  80 C7 00 08 */	lwz r6, 8(r7)	/* effective address: 803A1C38 */
+/* 802FBE80 00000020  80 07 00 0C */	lwz r0, 0xc(r7)	/* effective address: 803A1C3C */
 /* 802FBE84 00000024  90 C1 00 10 */	stw r6, 0x10(r1)
 /* 802FBE88 00000028  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802FBE8C 0000002C  80 03 01 00 */	lwz r0, 0x100(r3)

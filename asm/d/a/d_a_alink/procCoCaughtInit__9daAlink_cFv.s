@@ -21,7 +21,7 @@ lbl_8011C93C:
 /* 8011C94C 00000010  38 80 00 3B */	li r4, 0x3b
 /* 8011C950 00000014  3C A0 80 39 */	lis r5, m__25daAlinkHIO_wlDamCaught_c0@ha
 /* 8011C954 00000018  38 A5 F3 B4 */	addi r5, r5, m__25daAlinkHIO_wlDamCaught_c0@l
-/* 8011C958 0000001C  C0 25 00 08 */	lfs f1, 8(r5)
+/* 8011C958 0000001C  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 8038F3BC */
 /* 8011C95C 00000020  48 00 CD 4D */	bl setSingleAnimeWolfBaseMorf__9daAlink_cFQ29daAlink_c12daAlink_WANMf
 /* 8011C960 00000024  48 00 00 1C */	b lbl_8011C97C
 lbl_8011C964:
@@ -29,7 +29,7 @@ lbl_8011C964:
 /* 8011C968 00000004  38 80 00 B9 */	li r4, 0xb9
 /* 8011C96C 00000008  3C A0 80 39 */	lis r5, m__23daAlinkHIO_damCaught_c0@ha
 /* 8011C970 0000000C  38 A5 E4 9C */	addi r5, r5, m__23daAlinkHIO_damCaught_c0@l
-/* 8011C974 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 8011C974 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038E4B8 */
 /* 8011C978 00000014  4B F9 06 39 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 lbl_8011C97C:
 /* 8011C97C 00000000  28 1F 00 00 */	cmplwi r31, 0

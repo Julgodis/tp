@@ -8,13 +8,13 @@ lbl_8000E7C0:
 /* 8000E7D8 00000018  7C 9C 23 78 */	mr r28, r4
 /* 8000E7DC 0000001C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8000E7E0 00000020  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 8000E7E4 00000024  83 DF 00 48 */	lwz r30, 0x48(r31)
-/* 8000E7E8 00000028  83 BF 00 4C */	lwz r29, 0x4c(r31)
+/* 8000E7E4 00000024  83 DF 00 48 */	lwz r30, 0x48(r31)	/* effective address: 80434B10 */
+/* 8000E7E8 00000028  83 BF 00 4C */	lwz r29, 0x4c(r31)	/* effective address: 80434B14 */
 /* 8000E7EC 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8000E7F0 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8000E7F4 00000034  80 03 5F A8 */	lwz r0, 0x5fa8(r3)
-/* 8000E7F8 00000038  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 8000E7FC 0000003C  90 1F 00 4C */	stw r0, 0x4c(r31)
+/* 8000E7F4 00000034  80 03 5F A8 */	lwz r0, 0x5fa8(r3)	/* effective address: 8040C168 */
+/* 8000E7F8 00000038  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
+/* 8000E7FC 0000003C  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
 /* 8000E800 00000040  80 7B 00 00 */	lwz r3, 0(r27)
 /* 8000E804 00000044  4B FF F5 61 */	bl mDoExt_modelEntryDL__FP8J3DModel
 /* 8000E808 00000048  7F 63 DB 78 */	mr r3, r27

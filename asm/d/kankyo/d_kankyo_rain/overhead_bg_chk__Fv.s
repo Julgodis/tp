@@ -6,7 +6,7 @@ lbl_8005CDD0:
 /* 8005CDE0 00000010  48 30 53 FD */	bl _savegpr_29
 /* 8005CDE4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8005CDE8 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8005CDEC 0000001C  83 E3 5D 74 */	lwz r31, 0x5d74(r3)
+/* 8005CDEC 0000001C  83 E3 5D 74 */	lwz r31, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8005CDF0 00000020  3B C0 00 00 */	li r30, 0
 /* 8005CDF4 00000024  3B A1 00 64 */	addi r29, r1, 0x64
 /* 8005CDF8 00000028  7F A3 EB 78 */	mr r3, r29
@@ -42,7 +42,7 @@ lbl_8005CDD0:
 /* 8005CE70 000000A0  D0 41 00 0C */	stfs f2, 0xc(r1)
 /* 8005CE74 000000A4  C0 3F 00 E0 */	lfs f1, 0xe0(r31)
 /* 8005CE78 000000A8  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 8005CE7C 000000AC  C0 02 88 7C */	lfs f0, d_kankyo_d_kankyo_rain__lit_4467(r2)
+/* 8005CE7C 000000AC  C0 02 88 7C */	lfs f0, lit_4467(r2)
 /* 8005CE80 000000B0  EC 02 00 2A */	fadds f0, f2, f0
 /* 8005CE84 000000B4  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8005CE88 000000B8  D0 61 00 50 */	stfs f3, 0x50(r1)
@@ -54,13 +54,13 @@ lbl_8005CDD0:
 /* 8005CEA0 000000D0  7F A3 EB 78 */	mr r3, r29
 /* 8005CEA4 000000D4  38 81 00 14 */	addi r4, r1, 0x14
 /* 8005CEA8 000000D8  48 01 85 F5 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
-/* 8005CEAC 000000DC  C0 02 88 30 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4361(r2)
+/* 8005CEAC 000000DC  C0 02 88 30 */	lfs f0, lit_4361(r2)
 /* 8005CEB0 000000E0  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8005CEB4 000000E4  41 82 00 50 */	beq lbl_8005CF04
 /* 8005CEB8 000000E8  3B C0 00 01 */	li r30, 1
 /* 8005CEBC 000000EC  38 7D 3E C8 */	addi r3, r29, 0x3ec8
-/* 8005CEC0 000000F0  3C 80 80 38 */	lis r4, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8005CEC4 000000F4  38 84 A5 78 */	addi r4, r4, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8005CEC0 000000F0  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 8005CEC4 000000F4  38 84 A5 78 */	addi r4, r4, stringBase0@l
 /* 8005CEC8 000000F8  38 84 00 17 */	addi r4, r4, 0x17
 /* 8005CECC 000000FC  48 30 BA C9 */	bl strcmp
 /* 8005CED0 00000100  2C 03 00 00 */	cmpwi r3, 0
@@ -78,7 +78,7 @@ lbl_8005CDD0:
 /* 8005CF00 00000130  48 00 00 60 */	b lbl_8005CF60
 lbl_8005CF04:
 /* 8005CF04 00000000  C0 21 00 0C */	lfs f1, 0xc(r1)
-/* 8005CF08 00000004  C0 02 88 80 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4468(r2)
+/* 8005CF08 00000004  C0 02 88 80 */	lfs f0, lit_4468(r2)
 /* 8005CF0C 00000008  EC 01 00 2A */	fadds f0, f1, f0
 /* 8005CF10 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8005CF14 00000010  38 61 00 64 */	addi r3, r1, 0x64
@@ -87,7 +87,7 @@ lbl_8005CF04:
 /* 8005CF20 0000001C  7F A3 EB 78 */	mr r3, r29
 /* 8005CF24 00000020  38 81 00 64 */	addi r4, r1, 0x64
 /* 8005CF28 00000024  48 01 75 79 */	bl GroundCross__4cBgSFP11cBgS_GndChk
-/* 8005CF2C 00000028  C0 42 88 7C */	lfs f2, d_kankyo_d_kankyo_rain__lit_4467(r2)
+/* 8005CF2C 00000028  C0 42 88 7C */	lfs f2, lit_4467(r2)
 /* 8005CF30 0000002C  C0 1F 00 DC */	lfs f0, 0xdc(r31)
 /* 8005CF34 00000030  EC 02 00 2A */	fadds f0, f2, f0
 /* 8005CF38 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0

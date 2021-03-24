@@ -51,7 +51,7 @@ lbl_8012A2D4:
 /* 8012A2DC 00000008  41 82 00 2C */	beq lbl_8012A308
 /* 8012A2E0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8012A2E4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8012A2E8 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8012A2E8 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8012A2EC 00000018  38 80 00 02 */	li r4, 2
 /* 8012A2F0 0000001C  38 A0 00 00 */	li r5, 0
 /* 8012A2F4 00000020  38 DE 37 8C */	addi r6, r30, 0x378c

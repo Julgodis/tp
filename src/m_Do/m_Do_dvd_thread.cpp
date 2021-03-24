@@ -149,7 +149,7 @@ extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
 extern "C" void __dt__21mDoDvdThd_toMainRam_cFv(); // 1
 extern "C" void execute__21mDoDvdThd_toMainRam_cFv(); // 1
 extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
-extern "C" extern char const* const m_Do_m_Do_dvd_thread__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 l_threadStack__9mDoDvdThd[4096];
 
 // 

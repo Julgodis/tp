@@ -42,7 +42,7 @@ lbl_800EA46C:
 /* 800EA484 00000018  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800EA488 0000001C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_atnMove_c0@ha
 /* 800EA48C 00000020  38 63 D7 14 */	addi r3, r3, m__21daAlinkHIO_atnMove_c0@l
-/* 800EA490 00000024  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800EA490 00000024  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D730 */
 /* 800EA494 00000028  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 800EA498 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800EA49C 00000030  38 80 01 21 */	li r4, 0x121

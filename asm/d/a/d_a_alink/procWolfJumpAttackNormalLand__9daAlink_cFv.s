@@ -18,7 +18,7 @@ lbl_8013AD20:
 /* 8013AD30 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013AD34 00000014  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8013AD38 00000018  38 84 EF 28 */	addi r4, r4, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8013AD3C 0000001C  C0 44 00 10 */	lfs f2, 0x10(r4)
+/* 8013AD3C 0000001C  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 8038EF38 */
 /* 8013AD40 00000020  48 13 5A 01 */	bl cLib_chaseF__FPfff
 /* 8013AD44 00000024  7F C3 F3 78 */	mr r3, r30
 /* 8013AD48 00000028  4B F9 73 B5 */	bl setComboReserb__9daAlink_cFv
@@ -36,7 +36,7 @@ lbl_8013AD74:
 /* 8013AD74 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 8013AD78 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtLand_c0@ha
 /* 8013AD7C 00000008  38 63 F6 18 */	addi r3, r3, m__22daAlinkHIO_wlAtLand_c0@l
-/* 8013AD80 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 8013AD80 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038F628 */
 /* 8013AD84 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013AD88 00000000  40 81 00 4C */	ble lbl_8013ADD4
 /* 8013AD8C 00000004  A8 1E 30 0C */	lha r0, 0x300c(r30)

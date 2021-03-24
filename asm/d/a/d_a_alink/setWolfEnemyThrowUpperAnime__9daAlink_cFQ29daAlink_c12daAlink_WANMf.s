@@ -10,9 +10,9 @@ lbl_801395B4:
 /* 801395D4 00000020  38 A0 00 02 */	li r5, 2
 /* 801395D8 00000024  3C C0 80 39 */	lis r6, m__22daAlinkHIO_wlAtBite_c0@ha
 /* 801395DC 00000028  38 C6 F7 48 */	addi r6, r6, m__22daAlinkHIO_wlAtBite_c0@l
-/* 801395E0 0000002C  C0 26 00 2C */	lfs f1, 0x2c(r6)
+/* 801395E0 0000002C  C0 26 00 2C */	lfs f1, 0x2c(r6)	/* effective address: 8038F774 */
 /* 801395E4 00000030  38 C0 FF FF */	li r6, -1
-/* 801395E8 00000034  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 801395E8 00000034  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 801395EC 00000038  4B F7 3D ED */	bl setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf
 /* 801395F0 0000003C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801395F4 00000040  7C 08 03 A6 */	mtlr r0

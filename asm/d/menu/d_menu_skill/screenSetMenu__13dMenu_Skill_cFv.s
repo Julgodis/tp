@@ -16,8 +16,8 @@ lbl_801F8388:
 lbl_801F83C0:
 /* 801F83C0 00000000  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 801F83C4 00000004  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801F83C8 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_skill__stringBase0@ha
-/* 801F83CC 0000000C  38 84 7D B8 */	addi r4, r4, d_menu_d_menu_skill__stringBase0@l
+/* 801F83C8 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801F83CC 0000000C  38 84 7D B8 */	addi r4, r4, stringBase0@l
 /* 801F83D0 00000010  38 84 00 19 */	addi r4, r4, 0x19
 /* 801F83D4 00000014  3C A0 00 02 */	lis r5, 2
 /* 801F83D8 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -39,13 +39,13 @@ lbl_801F83C0:
 lbl_801F8418:
 /* 801F8418 00000000  90 1F 01 5C */	stw r0, 0x15c(r31)
 /* 801F841C 00000004  80 7F 01 5C */	lwz r3, 0x15c(r31)
-/* 801F8420 00000008  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F8420 00000008  C0 22 AA 88 */	lfs f1, lit_3808(r2)
 /* 801F8424 0000000C  48 05 D3 AD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F8428 00000010  3A 80 00 00 */	li r20, 0
 /* 801F842C 00000014  3A 40 00 00 */	li r18, 0
 /* 801F8430 00000018  3A 20 00 00 */	li r17, 0
-/* 801F8434 0000001C  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__stringBase0@ha
-/* 801F8438 00000020  39 C3 7D B8 */	addi r14, r3, d_menu_d_menu_skill__stringBase0@l
+/* 801F8434 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801F8438 00000020  39 C3 7D B8 */	addi r14, r3, stringBase0@l
 /* 801F843C 00000024  3B 17 01 18 */	addi r24, r23, 0x118
 /* 801F8440 00000028  3B 37 01 50 */	addi r25, r23, 0x150
 /* 801F8444 0000002C  3B 57 01 88 */	addi r26, r23, 0x188
@@ -409,8 +409,8 @@ lbl_801F8940:
 /* 801F89B4 00000074  4E 80 04 21 */	bctrl 
 /* 801F89B8 00000078  7D C3 73 78 */	mr r3, r14
 /* 801F89BC 0000007C  38 80 02 00 */	li r4, 0x200
-/* 801F89C0 00000080  3C A0 80 39 */	lis r5, d_menu_d_menu_skill__stringBase0@ha
-/* 801F89C4 00000084  38 A5 7D B8 */	addi r5, r5, d_menu_d_menu_skill__stringBase0@l
+/* 801F89C0 00000080  3C A0 80 39 */	lis r5, stringBase0@ha
+/* 801F89C4 00000084  38 A5 7D B8 */	addi r5, r5, stringBase0@l
 /* 801F89C8 00000088  38 A5 00 2F */	addi r5, r5, 0x2f
 /* 801F89CC 0000008C  4C C6 31 82 */	crclr 6
 /* 801F89D0 00000090  48 10 7D 7D */	bl setString__10J2DTextBoxFsPCce

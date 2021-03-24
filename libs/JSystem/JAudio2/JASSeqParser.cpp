@@ -225,63 +225,7 @@ extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs(); // 1
 extern "C" void parseRegCommand__12JASSeqParserFP8JASTracki(); // 1
 extern "C" void parse__12JASSeqParserFP8JASTrack(); // 1
 extern "C" void __sinit_JASSeqParser_cpp(); // 1
-extern "C" extern char const* const JASSeqParser__stringBase0;
-extern "C" extern void* JASSeqParser__lit_487[3];
-extern "C" extern void* JASSeqParser__lit_488[3];
-extern "C" extern void* JASSeqParser__lit_489[3];
-extern "C" extern void* JASSeqParser__lit_490[3];
-extern "C" extern void* JASSeqParser__lit_491[3];
-extern "C" extern void* JASSeqParser__lit_492[3];
-extern "C" extern void* JASSeqParser__lit_493[3];
-extern "C" extern void* lit_494[3];
-extern "C" extern void* lit_495[3];
-extern "C" extern void* lit_496[3];
-extern "C" extern void* lit_497[3];
-extern "C" extern void* JASSeqParser__lit_498[3];
-extern "C" extern void* JASSeqParser__lit_499[3];
-extern "C" extern void* lit_500[3];
-extern "C" extern void* lit_501[3];
-extern "C" extern void* lit_502[3];
-extern "C" extern void* JASSeqParser__lit_503[3];
-extern "C" extern void* JASSeqParser__lit_504[3];
-extern "C" extern void* JASSeqParser__lit_505[3];
-extern "C" extern void* JASSeqParser__lit_506[3];
-extern "C" extern void* JASSeqParser__lit_507[3];
-extern "C" extern void* JASSeqParser__lit_508[3];
-extern "C" extern void* JASSeqParser__lit_509[3];
-extern "C" extern void* JASSeqParser__lit_510[3];
-extern "C" extern void* JASSeqParser__lit_511[3];
-extern "C" extern void* JASSeqParser__lit_512[3];
-extern "C" extern void* lit_513[3];
-extern "C" extern void* JASSeqParser__lit_514[3];
-extern "C" extern void* lit_515[3];
-extern "C" extern void* lit_516[3];
-extern "C" extern void* lit_517[3];
-extern "C" extern void* lit_518[3];
-extern "C" extern void* lit_519[3];
-extern "C" extern void* lit_520[3];
-extern "C" extern void* lit_521[3];
-extern "C" extern void* JASSeqParser__lit_522[3];
-extern "C" extern void* lit_523[3];
-extern "C" extern void* lit_524[3];
-extern "C" extern void* JASSeqParser__lit_525[3];
-extern "C" extern void* JASSeqParser__lit_526[3];
-extern "C" extern void* lit_527[3];
-extern "C" extern void* lit_528[3];
-extern "C" extern void* lit_529[3];
-extern "C" extern void* lit_530[3];
-extern "C" extern void* JASSeqParser__lit_531[3];
-extern "C" extern void* lit_532[3];
-extern "C" extern void* JASSeqParser__lit_533[3];
-extern "C" extern void* lit_534[3];
-extern "C" extern void* JASSeqParser__lit_535[3];
-extern "C" extern void* JASSeqParser__lit_536[3];
-extern "C" extern void* JASSeqParser__lit_537[3];
-extern "C" extern void* JASSeqParser__lit_538[3];
-extern "C" extern void* lit_539[3];
-extern "C" extern void* lit_540[3];
-extern "C" extern void* lit_541[3];
-extern "C" extern void* lit_542[3];
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__12JASSeqParser[8];
 extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
 
@@ -359,398 +303,398 @@ asm void JASSeqParser::conditionCheck(JASTrack* param_0, JASSeqParser::BranchCon
 
 /* ############################################################################################## */
 /* 803C5BE0-803C5BEC 000C+00 s=1 e=0 z=0  None .data      @486                                                         */
-SECTION_DATA static void* JASSeqParser__lit_486[3] = {
+SECTION_DATA static void* lit_486[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNoteOn__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BEC-803C5BF8 000C+00 s=0 e=0 z=0  None .data      @487                                                         */
-SECTION_DATA void* JASSeqParser__lit_487[3] = {
+/* 803C5BEC-803C5BF8 000C+00 s=1 e=0 z=0  None .data      @487                                                         */
+SECTION_DATA static void* lit_487[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNoteOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5BF8-803C5C04 000C+00 s=0 e=0 z=0  None .data      @488                                                         */
-SECTION_DATA void* JASSeqParser__lit_488[3] = {
+/* 803C5BF8-803C5C04 000C+00 s=1 e=0 z=0  None .data      @488                                                         */
+SECTION_DATA static void* lit_488[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C04-803C5C10 000C+00 s=0 e=0 z=0  None .data      @489                                                         */
-SECTION_DATA void* JASSeqParser__lit_489[3] = {
+/* 803C5C04-803C5C10 000C+00 s=1 e=0 z=0  None .data      @489                                                         */
+SECTION_DATA static void* lit_489[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetLastNote__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C10-803C5C1C 000C+00 s=0 e=0 z=0  None .data      @490                                                         */
-SECTION_DATA void* JASSeqParser__lit_490[3] = {
+/* 803C5C10-803C5C1C 000C+00 s=1 e=0 z=0  None .data      @490                                                         */
+SECTION_DATA static void* lit_490[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C1C-803C5C28 000C+00 s=0 e=0 z=0  None .data      @491                                                         */
-SECTION_DATA void* JASSeqParser__lit_491[3] = {
+/* 803C5C1C-803C5C28 000C+00 s=1 e=0 z=0  None .data      @491                                                         */
+SECTION_DATA static void* lit_491[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C28-803C5C34 000C+00 s=0 e=0 z=0  None .data      @492                                                         */
-SECTION_DATA void* JASSeqParser__lit_492[3] = {
+/* 803C5C28-803C5C34 000C+00 s=1 e=0 z=0  None .data      @492                                                         */
+SECTION_DATA static void* lit_492[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamEI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C34-803C5C40 000C+00 s=0 e=0 z=0  None .data      @493                                                         */
-SECTION_DATA void* JASSeqParser__lit_493[3] = {
+/* 803C5C34-803C5C40 000C+00 s=1 e=0 z=0  None .data      @493                                                         */
+SECTION_DATA static void* lit_493[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParamII__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C40-803C5C4C 000C+00 s=0 e=0 z=0  None .data      @494                                                         */
-SECTION_DATA void* lit_494[3] = {
+/* 803C5C40-803C5C4C 000C+00 s=1 e=0 z=0  None .data      @494                                                         */
+SECTION_DATA static void* lit_494[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdOpenTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C4C-803C5C58 000C+00 s=0 e=0 z=0  None .data      @495                                                         */
-SECTION_DATA void* lit_495[3] = {
+/* 803C5C4C-803C5C58 000C+00 s=1 e=0 z=0  None .data      @495                                                         */
+SECTION_DATA static void* lit_495[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCloseTrack__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C58-803C5C64 000C+00 s=0 e=0 z=0  None .data      @496                                                         */
-SECTION_DATA void* lit_496[3] = {
+/* 803C5C58-803C5C64 000C+00 s=1 e=0 z=0  None .data      @496                                                         */
+SECTION_DATA static void* lit_496[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCall__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C64-803C5C70 000C+00 s=0 e=0 z=0  None .data      @497                                                         */
-SECTION_DATA void* lit_497[3] = {
+/* 803C5C64-803C5C70 000C+00 s=1 e=0 z=0  None .data      @497                                                         */
+SECTION_DATA static void* lit_497[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCallF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C70-803C5C7C 000C+00 s=0 e=0 z=0  None .data      @498                                                         */
-SECTION_DATA void* JASSeqParser__lit_498[3] = {
+/* 803C5C70-803C5C7C 000C+00 s=1 e=0 z=0  None .data      @498                                                         */
+SECTION_DATA static void* lit_498[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C7C-803C5C88 000C+00 s=0 e=0 z=0  None .data      @499                                                         */
-SECTION_DATA void* JASSeqParser__lit_499[3] = {
+/* 803C5C7C-803C5C88 000C+00 s=1 e=0 z=0  None .data      @499                                                         */
+SECTION_DATA static void* lit_499[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRetF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C88-803C5C94 000C+00 s=0 e=0 z=0  None .data      @500                                                         */
-SECTION_DATA void* lit_500[3] = {
+/* 803C5C88-803C5C94 000C+00 s=1 e=0 z=0  None .data      @500                                                         */
+SECTION_DATA static void* lit_500[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmp__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5C94-803C5CA0 000C+00 s=0 e=0 z=0  None .data      @501                                                         */
-SECTION_DATA void* lit_501[3] = {
+/* 803C5C94-803C5CA0 000C+00 s=1 e=0 z=0  None .data      @501                                                         */
+SECTION_DATA static void* lit_501[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmpF__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CA0-803C5CAC 000C+00 s=0 e=0 z=0  None .data      @502                                                         */
-SECTION_DATA void* lit_502[3] = {
+/* 803C5CA0-803C5CAC 000C+00 s=1 e=0 z=0  None .data      @502                                                         */
+SECTION_DATA static void* lit_502[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdJmpTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CAC-803C5CB8 000C+00 s=0 e=0 z=0  None .data      @503                                                         */
-SECTION_DATA void* JASSeqParser__lit_503[3] = {
+/* 803C5CAC-803C5CB8 000C+00 s=1 e=0 z=0  None .data      @503                                                         */
+SECTION_DATA static void* lit_503[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCallTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CB8-803C5CC4 000C+00 s=0 e=0 z=0  None .data      @504                                                         */
-SECTION_DATA void* JASSeqParser__lit_504[3] = {
+/* 803C5CB8-803C5CC4 000C+00 s=1 e=0 z=0  None .data      @504                                                         */
+SECTION_DATA static void* lit_504[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdLoopS__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CC4-803C5CD0 000C+00 s=0 e=0 z=0  None .data      @505                                                         */
-SECTION_DATA void* JASSeqParser__lit_505[3] = {
+/* 803C5CC4-803C5CD0 000C+00 s=1 e=0 z=0  None .data      @505                                                         */
+SECTION_DATA static void* lit_505[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdLoopE__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CD0-803C5CDC 000C+00 s=0 e=0 z=0  None .data      @506                                                         */
-SECTION_DATA void* JASSeqParser__lit_506[3] = {
+/* 803C5CD0-803C5CDC 000C+00 s=1 e=0 z=0  None .data      @506                                                         */
+SECTION_DATA static void* lit_506[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CDC-803C5CE8 000C+00 s=0 e=0 z=0  None .data      @507                                                         */
-SECTION_DATA void* JASSeqParser__lit_507[3] = {
+/* 803C5CDC-803C5CE8 000C+00 s=1 e=0 z=0  None .data      @507                                                         */
+SECTION_DATA static void* lit_507[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CE8-803C5CF4 000C+00 s=0 e=0 z=0  None .data      @508                                                         */
-SECTION_DATA void* JASSeqParser__lit_508[3] = {
+/* 803C5CE8-803C5CF4 000C+00 s=1 e=0 z=0  None .data      @508                                                         */
+SECTION_DATA static void* lit_508[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5CF4-803C5D00 000C+00 s=0 e=0 z=0  None .data      @509                                                         */
-SECTION_DATA void* JASSeqParser__lit_509[3] = {
+/* 803C5CF4-803C5D00 000C+00 s=1 e=0 z=0  None .data      @509                                                         */
+SECTION_DATA static void* lit_509[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D00-803C5D0C 000C+00 s=0 e=0 z=0  None .data      @510                                                         */
-SECTION_DATA void* JASSeqParser__lit_510[3] = {
+/* 803C5D00-803C5D0C 000C+00 s=1 e=0 z=0  None .data      @510                                                         */
+SECTION_DATA static void* lit_510[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParentWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D0C-803C5D18 000C+00 s=0 e=0 z=0  None .data      @511                                                         */
-SECTION_DATA void* JASSeqParser__lit_511[3] = {
+/* 803C5D0C-803C5D18 000C+00 s=1 e=0 z=0  None .data      @511                                                         */
+SECTION_DATA static void* lit_511[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdChildWritePort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D18-803C5D24 000C+00 s=0 e=0 z=0  None .data      @512                                                         */
-SECTION_DATA void* JASSeqParser__lit_512[3] = {
+/* 803C5D18-803C5D24 000C+00 s=1 e=0 z=0  None .data      @512                                                         */
+SECTION_DATA static void* lit_512[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdParentReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D24-803C5D30 000C+00 s=0 e=0 z=0  None .data      @513                                                         */
-SECTION_DATA void* lit_513[3] = {
+/* 803C5D24-803C5D30 000C+00 s=1 e=0 z=0  None .data      @513                                                         */
+SECTION_DATA static void* lit_513[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdChildReadPort__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D30-803C5D3C 000C+00 s=0 e=0 z=0  None .data      @514                                                         */
-SECTION_DATA void* JASSeqParser__lit_514[3] = {
+/* 803C5D30-803C5D3C 000C+00 s=1 e=0 z=0  None .data      @514                                                         */
+SECTION_DATA static void* lit_514[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D3C-803C5D48 000C+00 s=0 e=0 z=0  None .data      @515                                                         */
-SECTION_DATA void* lit_515[3] = {
+/* 803C5D3C-803C5D48 000C+00 s=1 e=0 z=0  None .data      @515                                                         */
+SECTION_DATA static void* lit_515[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D48-803C5D54 000C+00 s=0 e=0 z=0  None .data      @516                                                         */
-SECTION_DATA void* lit_516[3] = {
+/* 803C5D48-803C5D54 000C+00 s=1 e=0 z=0  None .data      @516                                                         */
+SECTION_DATA static void* lit_516[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdReg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D54-803C5D60 000C+00 s=0 e=0 z=0  None .data      @517                                                         */
-SECTION_DATA void* lit_517[3] = {
+/* 803C5D54-803C5D60 000C+00 s=1 e=0 z=0  None .data      @517                                                         */
+SECTION_DATA static void* lit_517[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegUni__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D60-803C5D6C 000C+00 s=0 e=0 z=0  None .data      @518                                                         */
-SECTION_DATA void* lit_518[3] = {
+/* 803C5D60-803C5D6C 000C+00 s=1 e=0 z=0  None .data      @518                                                         */
+SECTION_DATA static void* lit_518[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D6C-803C5D78 000C+00 s=0 e=0 z=0  None .data      @519                                                         */
-SECTION_DATA void* lit_519[3] = {
+/* 803C5D6C-803C5D78 000C+00 s=1 e=0 z=0  None .data      @519                                                         */
+SECTION_DATA static void* lit_519[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdTempo__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D78-803C5D84 000C+00 s=0 e=0 z=0  None .data      @520                                                         */
-SECTION_DATA void* lit_520[3] = {
+/* 803C5D78-803C5D84 000C+00 s=1 e=0 z=0  None .data      @520                                                         */
+SECTION_DATA static void* lit_520[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBankPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D84-803C5D90 000C+00 s=0 e=0 z=0  None .data      @521                                                         */
-SECTION_DATA void* lit_521[3] = {
+/* 803C5D84-803C5D90 000C+00 s=1 e=0 z=0  None .data      @521                                                         */
+SECTION_DATA static void* lit_521[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBank__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D90-803C5D9C 000C+00 s=0 e=0 z=0  None .data      @522                                                         */
-SECTION_DATA void* JASSeqParser__lit_522[3] = {
+/* 803C5D90-803C5D9C 000C+00 s=1 e=0 z=0  None .data      @522                                                         */
+SECTION_DATA static void* lit_522[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdPrg__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5D9C-803C5DA8 000C+00 s=0 e=0 z=0  None .data      @523                                                         */
-SECTION_DATA void* lit_523[3] = {
+/* 803C5D9C-803C5DA8 000C+00 s=1 e=0 z=0  None .data      @523                                                         */
+SECTION_DATA static void* lit_523[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DA8-803C5DB4 000C+00 s=0 e=0 z=0  None .data      @524                                                         */
-SECTION_DATA void* lit_524[3] = {
+/* 803C5DA8-803C5DB4 000C+00 s=1 e=0 z=0  None .data      @524                                                         */
+SECTION_DATA static void* lit_524[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdEnvSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DB4-803C5DC0 000C+00 s=0 e=0 z=0  None .data      @525                                                         */
-SECTION_DATA void* JASSeqParser__lit_525[3] = {
+/* 803C5DB4-803C5DC0 000C+00 s=1 e=0 z=0  None .data      @525                                                         */
+SECTION_DATA static void* lit_525[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DC0-803C5DCC 000C+00 s=0 e=0 z=0  None .data      @526                                                         */
-SECTION_DATA void* JASSeqParser__lit_526[3] = {
+/* 803C5DC0-803C5DCC 000C+00 s=1 e=0 z=0  None .data      @526                                                         */
+SECTION_DATA static void* lit_526[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdBusConnect__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DCC-803C5DD8 000C+00 s=0 e=0 z=0  None .data      @527                                                         */
-SECTION_DATA void* lit_527[3] = {
+/* 803C5DCC-803C5DD8 000C+00 s=1 e=0 z=0  None .data      @527                                                         */
+SECTION_DATA static void* lit_527[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DD8-803C5DE4 000C+00 s=0 e=0 z=0  None .data      @528                                                         */
-SECTION_DATA void* lit_528[3] = {
+/* 803C5DD8-803C5DE4 000C+00 s=1 e=0 z=0  None .data      @528                                                         */
+SECTION_DATA static void* lit_528[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DE4-803C5DF0 000C+00 s=0 e=0 z=0  None .data      @529                                                         */
-SECTION_DATA void* lit_529[3] = {
+/* 803C5DE4-803C5DF0 000C+00 s=1 e=0 z=0  None .data      @529                                                         */
+SECTION_DATA static void* lit_529[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdFIRSet__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DF0-803C5DFC 000C+00 s=0 e=0 z=0  None .data      @530                                                         */
-SECTION_DATA void* lit_530[3] = {
+/* 803C5DF0-803C5DFC 000C+00 s=1 e=0 z=0  None .data      @530                                                         */
+SECTION_DATA static void* lit_530[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWait__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5DFC-803C5E08 000C+00 s=0 e=0 z=0  None .data      @531                                                         */
-SECTION_DATA void* JASSeqParser__lit_531[3] = {
+/* 803C5DFC-803C5E08 000C+00 s=1 e=0 z=0  None .data      @531                                                         */
+SECTION_DATA static void* lit_531[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdWaitByte__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E08-803C5E14 000C+00 s=0 e=0 z=0  None .data      @532                                                         */
-SECTION_DATA void* lit_532[3] = {
+/* 803C5E08-803C5E14 000C+00 s=1 e=0 z=0  None .data      @532                                                         */
+SECTION_DATA static void* lit_532[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetIntTable__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E14-803C5E20 000C+00 s=0 e=0 z=0  None .data      @533                                                         */
-SECTION_DATA void* JASSeqParser__lit_533[3] = {
+/* 803C5E14-803C5E20 000C+00 s=1 e=0 z=0  None .data      @533                                                         */
+SECTION_DATA static void* lit_533[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E20-803C5E2C 000C+00 s=0 e=0 z=0  None .data      @534                                                         */
-SECTION_DATA void* lit_534[3] = {
+/* 803C5E20-803C5E2C 000C+00 s=1 e=0 z=0  None .data      @534                                                         */
+SECTION_DATA static void* lit_534[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E2C-803C5E38 000C+00 s=0 e=0 z=0  None .data      @535                                                         */
-SECTION_DATA void* JASSeqParser__lit_535[3] = {
+/* 803C5E2C-803C5E38 000C+00 s=1 e=0 z=0  None .data      @535                                                         */
+SECTION_DATA static void* lit_535[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdRetI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E38-803C5E44 000C+00 s=0 e=0 z=0  None .data      @536                                                         */
-SECTION_DATA void* JASSeqParser__lit_536[3] = {
+/* 803C5E38-803C5E44 000C+00 s=1 e=0 z=0  None .data      @536                                                         */
+SECTION_DATA static void* lit_536[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdClrI__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E44-803C5E50 000C+00 s=0 e=0 z=0  None .data      @537                                                         */
-SECTION_DATA void* JASSeqParser__lit_537[3] = {
+/* 803C5E44-803C5E50 000C+00 s=1 e=0 z=0  None .data      @537                                                         */
+SECTION_DATA static void* lit_537[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdIntTimer__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E50-803C5E5C 000C+00 s=0 e=0 z=0  None .data      @538                                                         */
-SECTION_DATA void* JASSeqParser__lit_538[3] = {
+/* 803C5E50-803C5E5C 000C+00 s=1 e=0 z=0  None .data      @538                                                         */
+SECTION_DATA static void* lit_538[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdSyncCPU__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E5C-803C5E68 000C+00 s=0 e=0 z=0  None .data      @539                                                         */
-SECTION_DATA void* lit_539[3] = {
+/* 803C5E5C-803C5E68 000C+00 s=1 e=0 z=0  None .data      @539                                                         */
+SECTION_DATA static void* lit_539[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdPrintf__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E68-803C5E74 000C+00 s=0 e=0 z=0  None .data      @540                                                         */
-SECTION_DATA void* lit_540[3] = {
+/* 803C5E68-803C5E74 000C+00 s=1 e=0 z=0  None .data      @540                                                         */
+SECTION_DATA static void* lit_540[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdNop__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E74-803C5E80 000C+00 s=0 e=0 z=0  None .data      @541                                                         */
-SECTION_DATA void* lit_541[3] = {
+/* 803C5E74-803C5E80 000C+00 s=1 e=0 z=0  None .data      @541                                                         */
+SECTION_DATA static void* lit_541[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdFinish__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C5E80-803C6480 0600+00 s=1 e=0 z=0  None .data      sCmdInfo__12JASSeqParser                                     */
+/* 803C5E80-803C6480 0600+00 s=2 e=0 z=0  None .data      sCmdInfo__12JASSeqParser                                     */
 SECTION_DATA static u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -850,14 +794,14 @@ SECTION_DATA static u8 sCmdInfo__12JASSeqParser[1536] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C6480-803C648C 000C+00 s=0 e=0 z=0  None .data      @542                                                         */
-SECTION_DATA void* lit_542[3] = {
+/* 803C6480-803C648C 000C+00 s=1 e=0 z=0  None .data      @542                                                         */
+SECTION_DATA static void* lit_542[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)cmdDump__12JASSeqParserFP8JASTrackPUl,
 };
 
-/* 803C648C-803C747C 0FF0+00 s=1 e=0 z=0  None .data      sExtCmdInfo__12JASSeqParser                                  */
+/* 803C648C-803C747C 0FF0+00 s=2 e=0 z=0  None .data      sExtCmdInfo__12JASSeqParser                                  */
 SECTION_DATA static u8 sExtCmdInfo__12JASSeqParser[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1117,7 +1061,7 @@ SECTION_DATA static u8 sExtCmdInfo__12JASSeqParser[4080] = {
 };
 
 /* 803C747C-803C7550 00D4+00 s=1 e=0 z=0  None .data      @632                                                         */
-SECTION_DATA static void* JASSeqParser__lit_632[53] = {
+SECTION_DATA static void* lit_632[53] = {
 	/* 0    */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
 	/* 1    */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
 	/* 2    */ (void*)(((char*)writeReg__12JASSeqParserFP8JASTrackUlUl)+0x70),
@@ -1174,10 +1118,10 @@ SECTION_DATA static void* JASSeqParser__lit_632[53] = {
 };
 
 /* 804555D8-804555DC 0004+00 s=6 e=0 z=0  None .sdata2    @627                                                         */
-SECTION_SDATA2 static f32 JASSeqParser__lit_627 = 32767.0f;
+SECTION_SDATA2 static f32 lit_627 = 32767.0f;
 
 /* 804555DC-804555E0 0004+00 s=2 e=0 z=0  None .sdata2    @628                                                         */
-SECTION_SDATA2 static f32 JASSeqParser__lit_628 = 1524.0f;
+SECTION_SDATA2 static f32 lit_628 = 1524.0f;
 
 /* 804555E0-804555E4 0004+00 s=2 e=0 z=0  None .sdata2    @629                                                         */
 SECTION_SDATA2 static f32 lit_629 = 12192.0f;
@@ -1569,7 +1513,7 @@ asm void JASSeqParser::cmdSetLastNote(JASTrack* param_0, u32* param_1) {
 
 /* ############################################################################################## */
 /* 80455600-80455608 0004+04 s=1 e=0 z=0  None .sdata2    @931                                                         */
-SECTION_SDATA2 static f32 JASSeqParser__lit_931[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_931[1 + 1 /* padding */] = {
 	16383.0f,
 	/* padding */
 	0.0f,
@@ -1801,7 +1745,7 @@ asm void JASSeqParser::cmdPrg(JASTrack* param_0, u32* param_1) {
 
 /* ############################################################################################## */
 /* 80455608-80455610 0008+00 s=4 e=0 z=0  None .sdata2    @1064                                                        */
-SECTION_SDATA2 static f64 JASSeqParser__lit_1064 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_1064 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80294BF8-80294C54 005C+00 s=1 e=0 z=0  None .text      cmdParamI__12JASSeqParserFP8JASTrackPUl                      */
 #pragma push

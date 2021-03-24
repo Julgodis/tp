@@ -69,7 +69,7 @@ lbl_800EF534:
 /* 800EF538 00000004  40 82 00 2C */	bne lbl_800EF564
 /* 800EF53C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EF540 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EF544 00000010  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 800EF544 00000010  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800EF548 00000014  28 03 00 00 */	cmplwi r3, 0
 /* 800EF54C 00000018  41 82 00 18 */	beq lbl_800EF564
 /* 800EF550 0000001C  88 03 16 B4 */	lbz r0, 0x16b4(r3)

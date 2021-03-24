@@ -846,7 +846,7 @@ extern "C" void isHeart__FUc(); // 1
 extern "C" void isInsect__FUc(); // 1
 extern "C" void check_itemno__Fi(); // 1
 extern "C" static void addBombCount__FUcUc(); // 1
-extern "C" extern char const* const d_d_item__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 mData__12dEnemyItem_c[4 + 4 /* padding */];
 
 // 
@@ -1452,7 +1452,7 @@ asm void checkItemGet(u8 param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80452BD8-80452BDC 0004+00 s=1 e=0 z=0  None .sdata2    @3655                                                        */
-SECTION_SDATA2 static f32 d_d_item__lit_3655 = 4.0f;
+SECTION_SDATA2 static f32 lit_3655 = 4.0f;
 
 /* 80097F2C-80097F50 0024+00 s=1 e=0 z=0  None .text      item_func_HEART__Fv                                          */
 #pragma push
@@ -1753,7 +1753,7 @@ asm static void item_func_BOMB_INSECT_30() {
 
 /* ############################################################################################## */
 /* 80452BDC-80452BE0 0004+00 s=1 e=0 z=0  None .sdata2    @3794                                                        */
-SECTION_SDATA2 static f32 d_d_item__lit_3794 = 32.0f;
+SECTION_SDATA2 static f32 lit_3794 = 32.0f;
 
 /* 8009825C-80098280 0024+00 s=1 e=0 z=0  None .text      item_func_RECOVER_FAILY__Fv                                  */
 #pragma push
@@ -1801,7 +1801,7 @@ asm static void item_func_KAKERA_HEART() {
 
 /* ############################################################################################## */
 /* 80452BE0-80452BE8 0008+00 s=1 e=0 z=0  None .sdata2    @3828                                                        */
-SECTION_SDATA2 static f64 d_d_item__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3828 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 800982B4-80098344 0090+00 s=1 e=0 z=0  None .text      item_func_UTUWA_HEART__Fv                                    */
 #pragma push

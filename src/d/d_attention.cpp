@@ -35,14 +35,14 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
+struct fopAc_ac_c {
+};
+
 struct cSAngle {
 	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80270F98 */ cSAngle(s16);
 	/* 802710E8 */ void Inv() const;
 	/* 80271228 */ void operator-(s16) const;
-};
-
-struct fopAc_ac_c {
 };
 
 struct dAttention_c {
@@ -291,7 +291,7 @@ extern "C" void proc__10dAttLook_cFv(); // 1
 extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi(); // 1
 extern "C" void __dt__15dAttDrawParam_cFv(); // 1
 extern "C" void __sinit_d_attention_cpp(); // 1
-extern "C" extern char const* const d_d_attention__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__19dAttDraw_CallBack_c[3];
 extern "C" extern void* __vt__11dAttParam_c[3 + 1 /* padding */];
 extern "C" extern u8 pad_8045067A[4];
@@ -461,45 +461,45 @@ SECTION_DATA void* __vt__11dAttParam_c[3 + 1 /* padding */] = {
 };
 
 /* 80452628-8045262C 0004+00 s=1 e=0 z=0  None .sdata2    @4061                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4061 = 45.0f;
+SECTION_SDATA2 static f32 lit_4061 = 45.0f;
 
 /* 8045262C-80452630 0004+00 s=1 e=0 z=0  None .sdata2    @4062                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4062 = 30.0f;
+SECTION_SDATA2 static f32 lit_4062 = 30.0f;
 
 /* 80452630-80452634 0004+00 s=1 e=0 z=0  None .sdata2    @4063                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4063 = 90.0f;
+SECTION_SDATA2 static f32 lit_4063 = 90.0f;
 
 /* 80452634-80452638 0004+00 s=2 e=0 z=0  None .sdata2    @4064                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4064 = -9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4064 = -9.0f / 10.0f;
 
 /* 80452638-8045263C 0004+00 s=1 e=0 z=0  None .sdata2    @4065                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4065 = 3000.0f;
+SECTION_SDATA2 static f32 lit_4065 = 3000.0f;
 
 /* 8045263C-80452640 0004+00 s=1 e=0 z=0  None .sdata2    @4066                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4066 = 1000.0f;
+SECTION_SDATA2 static f32 lit_4066 = 1000.0f;
 
 /* 80452640-80452644 0004+00 s=1 e=0 z=0  None .sdata2    @4067                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4067 = 6.0f;
+SECTION_SDATA2 static f32 lit_4067 = 6.0f;
 
 /* 80452644-80452648 0004+00 s=1 e=0 z=0  None .sdata2    @4068                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4068 = 4.5f;
+SECTION_SDATA2 static f32 lit_4068 = 4.5f;
 
 /* 80452648-8045264C 0004+00 s=1 e=0 z=0  None .sdata2    @4069                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4069 = 14.0f;
+SECTION_SDATA2 static f32 lit_4069 = 14.0f;
 
 /* 8045264C-80452650 0004+00 s=1 e=0 z=0  None .sdata2    @4070                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4070 = 10.0f;
+SECTION_SDATA2 static f32 lit_4070 = 10.0f;
 
 /* 80452650-80452654 0004+00 s=12 e=0 z=0  None .sdata2    @4071                                                        */
-SECTION_SDATA2 static u8 d_d_attention__lit_4071[4] = {
+SECTION_SDATA2 static u8 lit_4071[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80452654-80452658 0004+00 s=1 e=0 z=0  None .sdata2    @4072                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4072 = 17.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4072 = 17.0f / 10.0f;
 
 /* 80452658-8045265C 0004+00 s=10 e=0 z=0  None .sdata2    @4073                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4073 = 1.0f;
+SECTION_SDATA2 static f32 lit_4073 = 1.0f;
 
 /* 80070038-80070110 00D8+00 s=1 e=0 z=0  None .text      __ct__11dAttParam_cFl                                        */
 #pragma push
@@ -525,10 +525,10 @@ asm dAttParam_c::~dAttParam_c() {
 
 /* ############################################################################################## */
 /* 8045265C-80452660 0004+00 s=1 e=0 z=0  None .sdata2    @4084                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4084 = 250.0f;
+SECTION_SDATA2 static f32 lit_4084 = 250.0f;
 
 /* 80452660-80452664 0004+00 s=1 e=0 z=0  None .sdata2    @4085                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4085 = 2.0f;
+SECTION_SDATA2 static f32 lit_4085 = 2.0f;
 
 /* 80070158-80070178 0020+00 s=1 e=0 z=0  None .text      __ct__15dAttDrawParam_cFv                                    */
 #pragma push
@@ -543,7 +543,7 @@ asm dAttDrawParam_c::dAttDrawParam_c() {
 
 /* ############################################################################################## */
 /* 80452664-80452668 0004+00 s=1 e=0 z=0  None .sdata2    @4092                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4092 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4092 = 3.0f / 5.0f;
 
 /* 80070178-80070198 0020+00 s=1 e=0 z=0  None .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
 #pragma push
@@ -558,7 +558,7 @@ asm void dAttDraw_CallBack_c::execute(u16 param_0, J3DTransformInfo* param_1) {
 
 /* ############################################################################################## */
 /* 80424B00-80424B0C 000C+00 s=1 e=0 z=0  None .bss       @4093                                                        */
-static u8 d_d_attention__lit_4093[12];
+static u8 lit_4093[12];
 
 /* 80424B0C-80424B20 0010+04 s=3 e=0 z=0  None .bss       g_AttDwHIO                                                   */
 static u8 g_AttDwHIO[16 + 4 /* padding */];
@@ -677,14 +677,14 @@ asm static void check_flontofplayer(u32 param_0, s16 param_1, s16 param_2) {
 
 /* ############################################################################################## */
 /* 80452668-80452670 0004+04 s=2 e=0 z=0  None .sdata2    @4448                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4448[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4448[1 + 1 /* padding */] = {
 	32768.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80452670-80452678 0008+00 s=3 e=0 z=0  None .sdata2    @4450                                                        */
-SECTION_SDATA2 static f64 d_d_attention__lit_4450 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4450 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80070BF4-80070C40 004C+00 s=2 e=0 z=0  None .text      distace_weight__Ffsf                                         */
 #pragma push
@@ -710,13 +710,13 @@ asm static void distace_angle_adjust(f32 param_0, s16 param_1, f32 param_2) {
 
 /* ############################################################################################## */
 /* 80452678-80452680 0008+00 s=3 e=0 z=0  None .sdata2    @4514                                                        */
-SECTION_SDATA2 static f64 d_d_attention__lit_4514 = 0.5;
+SECTION_SDATA2 static f64 lit_4514 = 0.5;
 
 /* 80452680-80452688 0008+00 s=3 e=0 z=0  None .sdata2    @4515                                                        */
-SECTION_SDATA2 static f64 d_d_attention__lit_4515 = 3.0;
+SECTION_SDATA2 static f64 lit_4515 = 3.0;
 
 /* 80452688-80452690 0008+00 s=3 e=0 z=0  None .sdata2    @4516                                                        */
-SECTION_SDATA2 static u8 d_d_attention__lit_4516[8] = {
+SECTION_SDATA2 static u8 lit_4516[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -733,10 +733,10 @@ asm static void check_distace(cXyz* param_0, s16 param_1, cXyz* param_2, f32 par
 
 /* ############################################################################################## */
 /* 80452690-80452694 0004+00 s=3 e=0 z=0  None .sdata2    @4562                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4562 = -1.0f;
+SECTION_SDATA2 static f32 lit_4562 = -1.0f;
 
 /* 80452694-80452698 0004+00 s=3 e=0 z=0  None .sdata2    @4563                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_4563 = 0.5f;
+SECTION_SDATA2 static f32 lit_4563 = 0.5f;
 
 /* 80070E90-800710C0 0230+00 s=2 e=0 z=0  None .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
 #pragma push
@@ -1088,10 +1088,10 @@ asm void J3DTevBlock::setTevKColor(u32 param_0, J3DGXColor const* param_1) {
 
 /* ############################################################################################## */
 /* 804526B0-804526B4 0004+00 s=1 e=0 z=0  None .sdata2    @5784                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_5784 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_5784 = 0.01745329238474369f;
 
 /* 804526B4-804526B8 0004+00 s=1 e=0 z=0  None .sdata2    @5785                                                        */
-SECTION_SDATA2 static f32 d_d_attention__lit_5785 = -100.0f;
+SECTION_SDATA2 static f32 lit_5785 = -100.0f;
 
 /* 800732B0-8007353C 028C+00 s=1 e=0 z=0  None .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
 #pragma push

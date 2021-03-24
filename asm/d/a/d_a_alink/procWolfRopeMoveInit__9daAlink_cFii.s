@@ -20,7 +20,7 @@ lbl_80131C74:
 /* 80131CBC 00000048  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80131CC0 0000004C  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlRope_c0@ha
 /* 80131CC4 00000050  38 A5 F4 6C */	addi r5, r5, m__20daAlinkHIO_wlRope_c0@l
-/* 80131CC8 00000054  C0 45 00 20 */	lfs f2, 0x20(r5)
+/* 80131CC8 00000054  C0 45 00 20 */	lfs f2, 0x20(r5)	/* effective address: 8038F48C */
 /* 80131CCC 00000058  4B FF 7A 0D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 80131CD0 0000005C  2C 1D 00 00 */	cmpwi r29, 0
 /* 80131CD4 00000060  41 82 00 14 */	beq lbl_80131CE8

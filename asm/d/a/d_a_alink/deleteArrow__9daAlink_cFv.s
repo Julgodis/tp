@@ -16,7 +16,7 @@ lbl_800DEAE4:
 /* 800DEB1C 00000038  A8 BF 05 6C */	lha r5, 0x56c(r31)
 /* 800DEB20 0000003C  3C 80 80 39 */	lis r4, m__20daAlinkHIO_damage_c0@ha
 /* 800DEB24 00000040  38 84 E5 4C */	addi r4, r4, m__20daAlinkHIO_damage_c0@l
-/* 800DEB28 00000044  A8 04 00 2A */	lha r0, 0x2a(r4)
+/* 800DEB28 00000044  A8 04 00 2A */	lha r0, 0x2a(r4)	/* effective address: 8038E576 */
 /* 800DEB2C 00000048  7C 05 00 00 */	cmpw r5, r0
 /* 800DEB30 0000004C  41 82 00 10 */	beq lbl_800DEB40
 /* 800DEB34 00000050  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -30,9 +30,9 @@ lbl_800DEB40:
 /* 800DEB50 00000010  4B F4 FC ED */	bl dComIfGp_addSelectItemNum__Fis
 /* 800DEB54 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DEB58 00000018  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800DEB5C 0000001C  A8 64 5D F4 */	lha r3, 0x5df4(r4)
+/* 800DEB5C 0000001C  A8 64 5D F4 */	lha r3, 0x5df4(r4)	/* effective address: 8040BFB4 */
 /* 800DEB60 00000020  38 03 FF FF */	addi r0, r3, -1
-/* 800DEB64 00000024  B0 04 5D F4 */	sth r0, 0x5df4(r4)
+/* 800DEB64 00000024  B0 04 5D F4 */	sth r0, 0x5df4(r4)	/* effective address: 8040BFB4 */
 /* 800DEB68 00000028  48 00 00 08 */	b lbl_800DEB70
 lbl_800DEB6C:
 /* 800DEB6C 00000000  4B F3 B1 11 */	bl fopAcM_delete__FP10fopAc_ac_c

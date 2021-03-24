@@ -8,9 +8,9 @@ lbl_801FA8A8:
 /* 801FA8C0 00000018  98 A3 01 44 */	stb r5, 0x144(r3)
 /* 801FA8C4 0000001C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801FA8C8 00000020  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801FA8CC 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)
-/* 801FA8D0 00000028  98 04 00 BA */	stb r0, 0xba(r4)
-/* 801FA8D4 0000002C  98 A4 00 B9 */	stb r5, 0xb9(r4)
+/* 801FA8CC 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)	/* effective address: 80430241 */
+/* 801FA8D0 00000028  98 04 00 BA */	stb r0, 0xba(r4)	/* effective address: 80430242 */
+/* 801FA8D4 0000002C  98 A4 00 B9 */	stb r5, 0xb9(r4)	/* effective address: 80430241 */
 /* 801FA8D8 00000030  38 00 00 00 */	li r0, 0
 /* 801FA8DC 00000034  98 03 01 52 */	stb r0, 0x152(r3)
 /* 801FA8E0 00000038  38 80 00 01 */	li r4, 1

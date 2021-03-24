@@ -30,19 +30,19 @@ lbl_80235380:
 /* 80235384 00000004  4B FF 3D E5 */	bl selectMessage__19jmessage_tReferenceFv
 /* 80235388 00000008  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8023538C 0000000C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80235390 00000010  88 03 00 BD */	lbz r0, 0xbd(r3)
+/* 80235390 00000010  88 03 00 BD */	lbz r0, 0xbd(r3)	/* effective address: 80430245 */
 /* 80235394 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 80235398 00000018  41 82 00 1C */	beq lbl_802353B4
 /* 8023539C 0000001C  38 00 00 2A */	li r0, 0x2a
 /* 802353A0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802353A4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802353A8 00000028  98 03 5E 35 */	stb r0, 0x5e35(r3)
+/* 802353A8 00000028  98 03 5E 35 */	stb r0, 0x5e35(r3)	/* effective address: 8040BFF5 */
 /* 802353AC 0000002C  38 00 00 00 */	li r0, 0
-/* 802353B0 00000030  98 03 5E 50 */	stb r0, 0x5e50(r3)
+/* 802353B0 00000030  98 03 5E 50 */	stb r0, 0x5e50(r3)	/* effective address: 8040C010 */
 lbl_802353B4:
 /* 802353B4 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 802353B8 00000004  3B C3 D2 E8 */	addi r30, r3, m_cpadInfo__8mDoCPd_c@l
-/* 802353BC 00000008  80 7E 00 34 */	lwz r3, 0x34(r30)
+/* 802353BC 00000008  80 7E 00 34 */	lwz r3, 0x34(r30)	/* effective address: 803DD31C */
 /* 802353C0 0000000C  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
 /* 802353C4 00000010  41 82 00 24 */	beq lbl_802353E8
 /* 802353C8 00000014  7F E3 FB 78 */	mr r3, r31
@@ -359,9 +359,9 @@ lbl_8023582C:
 /* 80235840 00000014  38 A0 00 00 */	li r5, 0
 /* 80235844 00000018  38 C0 00 00 */	li r6, 0
 /* 80235848 0000001C  38 E0 00 00 */	li r7, 0
-/* 8023584C 00000020  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__lit_4084(r2)
+/* 8023584C 00000020  C0 22 B0 C0 */	lfs f1, lit_4084(r2)
 /* 80235850 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80235854 00000028  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__lit_4145(r2)
+/* 80235854 00000028  C0 62 B1 10 */	lfs f3, lit_4145(r2)
 /* 80235858 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 8023585C 00000030  39 00 00 00 */	li r8, 0
 /* 80235860 00000034  48 07 61 25 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

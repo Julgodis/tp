@@ -14,18 +14,18 @@ lbl_800E5FD0:
 /* 800E6000 00000030  41 82 00 48 */	beq lbl_800E6048
 /* 800E6004 00000034  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6008 00000038  38 A3 EC 48 */	addi r5, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E600C 0000003C  C0 25 00 90 */	lfs f1, 0x90(r5)
+/* 800E600C 0000003C  C0 25 00 90 */	lfs f1, 0x90(r5)	/* effective address: 8038ECD8 */
 /* 800E6010 00000040  7F C3 F3 78 */	mr r3, r30
 /* 800E6014 00000044  38 80 00 B5 */	li r4, 0xb5
 /* 800E6018 00000048  C0 02 93 34 */	lfs f0, lit_7710(r2)
 /* 800E601C 0000004C  EC 40 08 2A */	fadds f2, f0, f1
-/* 800E6020 00000050  A8 A5 00 8C */	lha r5, 0x8c(r5)
+/* 800E6020 00000050  A8 A5 00 8C */	lha r5, 0x8c(r5)	/* effective address: 8038ECD4 */
 /* 800E6024 00000054  C0 62 92 C0 */	lfs f3, lit_6108(r2)
 /* 800E6028 00000058  4B FC 6F E5 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800E602C 0000005C  38 00 00 01 */	li r0, 1
 /* 800E6030 00000060  B0 1E 30 0E */	sth r0, 0x300e(r30)
 /* 800E6034 00000064  7F C3 F3 78 */	mr r3, r30
-/* 800E6038 00000068  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E6038 00000068  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E603C 0000006C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800E6040 00000070  4B FF EF 69 */	bl setCarryArmAngle__9daAlink_cFff
 /* 800E6044 00000074  48 00 00 34 */	b lbl_800E6078
@@ -40,7 +40,7 @@ lbl_800E6048:
 /* 800E6064 0000001C  B0 1E 30 0E */	sth r0, 0x300e(r30)
 /* 800E6068 00000020  7F C3 F3 78 */	mr r3, r30
 /* 800E606C 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800E6070 00000028  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800E6070 00000028  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800E6074 0000002C  4B FF EF 35 */	bl setCarryArmAngle__9daAlink_cFff
 lbl_800E6078:
 /* 800E6078 00000000  38 61 00 18 */	addi r3, r1, 0x18
@@ -63,7 +63,7 @@ lbl_800E6078:
 /* 800E60BC 00000044  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E60C0 00000000  40 81 00 58 */	ble lbl_800E6118
 /* 800E60C4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E60C8 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E60C8 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E60CC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E60D0 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E60D4 00000014  FC 00 00 32 */	fmul f0, f0, f0

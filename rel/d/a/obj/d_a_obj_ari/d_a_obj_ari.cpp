@@ -16,10 +16,10 @@ struct daObj_AriHIO_c {
 	/* 80BA5360 */ ~daObj_AriHIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjARI_c {

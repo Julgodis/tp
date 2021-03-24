@@ -26,8 +26,8 @@ lbl_80005B1C:
 /* 80005B34 00000018  41 82 02 00 */	beq lbl_80005D34
 /* 80005B38 0000001C  38 60 01 DB */	li r3, 0x1db
 /* 80005B3C 00000020  38 80 00 64 */	li r4, 0x64
-/* 80005B40 00000024  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005B44 00000028  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005B40 00000024  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005B44 00000028  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005B48 0000002C  38 A5 01 96 */	addi r5, r5, 0x196
 /* 80005B4C 00000030  4C C6 31 82 */	crclr 6
 /* 80005B50 00000034  48 2D A9 E1 */	bl JUTReport__FiiPCce
@@ -36,15 +36,15 @@ lbl_80005B1C:
 /* 80005B5C 00000040  7C 66 1B 78 */	mr r6, r3
 /* 80005B60 00000044  38 60 01 DB */	li r3, 0x1db
 /* 80005B64 00000048  38 80 00 72 */	li r4, 0x72
-/* 80005B68 0000004C  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005B6C 00000050  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005B68 0000004C  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005B6C 00000050  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005B70 00000054  38 A5 01 A0 */	addi r5, r5, 0x1a0
 /* 80005B74 00000058  4C C6 31 82 */	crclr 6
 /* 80005B78 0000005C  48 2D A9 B9 */	bl JUTReport__FiiPCce
 /* 80005B7C 00000060  38 60 01 DB */	li r3, 0x1db
 /* 80005B80 00000064  38 80 00 80 */	li r4, 0x80
-/* 80005B84 00000068  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005B88 0000006C  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005B84 00000068  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005B88 0000006C  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005B8C 00000070  38 A5 01 50 */	addi r5, r5, 0x150
 /* 80005B90 00000074  4C C6 31 82 */	crclr 6
 /* 80005B94 00000078  48 2D A9 9D */	bl JUTReport__FiiPCce
@@ -53,8 +53,8 @@ lbl_80005B1C:
 /* 80005BA0 00000084  7C 66 1B 78 */	mr r6, r3
 /* 80005BA4 00000088  38 60 01 DB */	li r3, 0x1db
 /* 80005BA8 0000008C  38 80 00 8E */	li r4, 0x8e
-/* 80005BAC 00000090  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005BB0 00000094  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005BAC 00000090  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005BB0 00000094  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005BB4 00000098  38 A5 01 A0 */	addi r5, r5, 0x1a0
 /* 80005BB8 0000009C  4C C6 31 82 */	crclr 6
 /* 80005BBC 000000A0  48 2D A9 75 */	bl JUTReport__FiiPCce
@@ -64,8 +64,8 @@ lbl_80005BC4:
 /* 80005BC8 00000004  41 82 01 6C */	beq lbl_80005D34
 /* 80005BCC 00000008  38 60 01 DB */	li r3, 0x1db
 /* 80005BD0 0000000C  38 80 00 64 */	li r4, 0x64
-/* 80005BD4 00000010  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005BD8 00000014  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005BD4 00000010  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005BD8 00000014  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005BDC 00000018  38 A5 01 A3 */	addi r5, r5, 0x1a3
 /* 80005BE0 0000001C  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
 /* 80005BE4 00000020  38 D9 00 34 */	addi r6, r25, 0x34
@@ -74,8 +74,8 @@ lbl_80005BC4:
 /* 80005BF0 0000002C  48 2D A9 41 */	bl JUTReport__FiiPCce
 /* 80005BF4 00000030  38 60 01 DB */	li r3, 0x1db
 /* 80005BF8 00000034  38 80 00 72 */	li r4, 0x72
-/* 80005BFC 00000038  3C A0 80 37 */	lis r5, m_Do_m_Do_main__stringBase0@ha
-/* 80005C00 0000003C  38 A5 39 A0 */	addi r5, r5, m_Do_m_Do_main__stringBase0@l
+/* 80005BFC 00000038  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 80005C00 0000003C  38 A5 39 A0 */	addi r5, r5, stringBase0@l
 /* 80005C04 00000040  38 A5 01 A3 */	addi r5, r5, 0x1a3
 /* 80005C08 00000044  88 0D 80 08 */	lbz r0, data_80450588(r13)
 /* 80005C0C 00000048  54 00 10 3A */	slwi r0, r0, 2
@@ -87,8 +87,8 @@ lbl_80005BC4:
 /* 80005C24 00000060  3B 80 00 00 */	li r28, 0
 /* 80005C28 00000064  3B 60 00 00 */	li r27, 0
 /* 80005C2C 00000068  3B 39 00 14 */	addi r25, r25, 0x14
-/* 80005C30 0000006C  3C 60 80 37 */	lis r3, m_Do_m_Do_main__stringBase0@ha
-/* 80005C34 00000070  3B 43 39 A0 */	addi r26, r3, m_Do_m_Do_main__stringBase0@l
+/* 80005C30 0000006C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80005C34 00000070  3B 43 39 A0 */	addi r26, r3, stringBase0@l
 lbl_80005C38:
 /* 80005C38 00000000  7E F9 D8 2E */	lwzx r23, r25, r27
 /* 80005C3C 00000004  83 17 00 08 */	lwz r24, 8(r23)

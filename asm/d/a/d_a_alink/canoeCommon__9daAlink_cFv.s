@@ -56,10 +56,10 @@ lbl_800F4894:
 /* 800F4898 00000004  C0 42 94 B8 */	lfs f2, lit_17592(r2)
 /* 800F489C 00000008  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F48A0 0000000C  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F48A4 00000010  C0 63 00 18 */	lfs f3, 0x18(r3)
+/* 800F48A4 00000010  C0 63 00 18 */	lfs f3, 0x18(r3)	/* effective address: 8038E628 */
 /* 800F48A8 00000014  FC 00 00 18 */	frsp f0, f0
 /* 800F48AC 00000018  EC 20 18 28 */	fsubs f1, f0, f3
-/* 800F48B0 0000001C  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800F48B0 0000001C  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038E640 */
 /* 800F48B4 00000020  EC 00 18 28 */	fsubs f0, f0, f3
 /* 800F48B8 00000024  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800F48BC 00000028  EC 02 00 32 */	fmuls f0, f2, f0

@@ -7,14 +7,14 @@ lbl_801B5D70:
 /* 801B5D84 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 801B5D88 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B5D8C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B5D90 00000020  83 C3 5F 50 */	lwz r30, 0x5f50(r3)
+/* 801B5D90 00000020  83 C3 5F 50 */	lwz r30, 0x5f50(r3)	/* effective address: 8040C110 */
 /* 801B5D94 00000024  7F C3 F3 78 */	mr r3, r30
 /* 801B5D98 00000028  81 9E 00 00 */	lwz r12, 0(r30)
 /* 801B5D9C 0000002C  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 801B5DA0 00000030  7D 89 03 A6 */	mtctr r12
 /* 801B5DA4 00000034  4E 80 04 21 */	bctrl 
 /* 801B5DA8 00000038  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801B5DAC 0000003C  C0 22 A5 28 */	lfs f1, d_menu_d_menu_collect__lit_4481(r2)
+/* 801B5DAC 0000003C  C0 22 A5 28 */	lfs f1, lit_4481(r2)
 /* 801B5DB0 00000040  FC 40 08 90 */	fmr f2, f1
 /* 801B5DB4 00000044  7F C4 F3 78 */	mr r4, r30
 /* 801B5DB8 00000048  48 14 31 1D */	bl draw__9J2DScreenFffPC14J2DGrafContext
@@ -31,8 +31,8 @@ lbl_801B5D70:
 /* 801B5DE4 00000074  7D 89 03 A6 */	mtctr r12
 /* 801B5DE8 00000078  4E 80 04 21 */	bctrl 
 /* 801B5DEC 0000007C  48 14 A8 6D */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B5DF0 00000080  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
-/* 801B5DF4 00000084  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
+/* 801B5DF0 00000080  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B5DF4 00000084  38 84 53 30 */	addi r4, r4, stringBase0@l
 /* 801B5DF8 00000088  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B5DFC 0000008C  48 1B 2D 31 */	bl strcpy
 /* 801B5E00 00000090  80 7F 00 18 */	lwz r3, 0x18(r31)
@@ -45,8 +45,8 @@ lbl_801B5D70:
 /* 801B5E1C 000000AC  7D 89 03 A6 */	mtctr r12
 /* 801B5E20 000000B0  4E 80 04 21 */	bctrl 
 /* 801B5E24 000000B4  48 14 A8 35 */	bl getStringPtr__10J2DTextBoxCFv
-/* 801B5E28 000000B8  3C 80 80 39 */	lis r4, d_menu_d_menu_collect__stringBase0@ha
-/* 801B5E2C 000000BC  38 84 53 30 */	addi r4, r4, d_menu_d_menu_collect__stringBase0@l
+/* 801B5E28 000000B8  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801B5E2C 000000BC  38 84 53 30 */	addi r4, r4, stringBase0@l
 /* 801B5E30 000000C0  38 84 00 55 */	addi r4, r4, 0x55
 /* 801B5E34 000000C4  48 1B 2C F9 */	bl strcpy
 /* 801B5E38 000000C8  48 00 00 E4 */	b lbl_801B5F1C
@@ -102,7 +102,7 @@ lbl_801B5E3C:
 /* 801B5EFC 000000C0  4E 80 04 21 */	bctrl 
 /* 801B5F00 000000C4  7C 64 1B 78 */	mr r4, r3
 /* 801B5F04 000000C8  80 7F 00 24 */	lwz r3, 0x24(r31)
-/* 801B5F08 000000CC  C0 22 A5 60 */	lfs f1, d_menu_d_menu_collect__lit_5531(r2)
+/* 801B5F08 000000CC  C0 22 A5 60 */	lfs f1, lit_5531(r2)
 /* 801B5F0C 000000D0  81 83 00 00 */	lwz r12, 0(r3)
 /* 801B5F10 000000D4  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 801B5F14 000000D8  7D 89 03 A6 */	mtctr r12

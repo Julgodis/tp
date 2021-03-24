@@ -14,7 +14,7 @@ lbl_800D4D2C:
 /* 800D4D30 00000004  4B FF D5 8D */	bl setSwordChargeVoiceSe__9daAlink_cFv
 /* 800D4D34 00000008  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D4D38 0000000C  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D4D3C 00000010  A8 03 00 52 */	lha r0, 0x52(r3)
+/* 800D4D3C 00000010  A8 03 00 52 */	lha r0, 0x52(r3)	/* effective address: 8038DEDE */
 /* 800D4D40 00000014  B0 1F 30 7E */	sth r0, 0x307e(r31)
 /* 800D4D44 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800D4D48 0000001C  38 80 00 08 */	li r4, 8

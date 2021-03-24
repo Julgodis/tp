@@ -15,20 +15,20 @@ lbl_80035798:
 /* 800357CC 00000034  7F A3 EB 78 */	mr r3, r29
 /* 800357D0 00000038  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800357D4 0000003C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800357D8 00000040  A0 84 01 C4 */	lhz r4, 0x1c4(r4)
+/* 800357D8 00000040  A0 84 01 C4 */	lhz r4, 0x1c4(r4)	/* effective address: 803A744C */
 /* 800357DC 00000044  4B FF F1 E1 */	bl isEventBit__11dSv_event_cCFUs
 /* 800357E0 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 800357E4 0000004C  40 82 00 50 */	bne lbl_80035834
 /* 800357E8 00000050  7F A3 EB 78 */	mr r3, r29
 /* 800357EC 00000054  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800357F0 00000058  3B 24 72 88 */	addi r25, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800357F4 0000005C  A0 99 01 C0 */	lhz r4, 0x1c0(r25)
+/* 800357F4 0000005C  A0 99 01 C0 */	lhz r4, 0x1c0(r25)	/* effective address: 803A7448 */
 /* 800357F8 00000060  4B FF F1 C5 */	bl isEventBit__11dSv_event_cCFUs
 /* 800357FC 00000064  7C 7B 1B 78 */	mr r27, r3
 /* 80035800 00000068  7F A3 EB 78 */	mr r3, r29
 /* 80035804 0000006C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80035808 00000070  3A C4 72 88 */	addi r22, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8003580C 00000074  A0 96 01 C2 */	lhz r4, 0x1c2(r22)
+/* 8003580C 00000074  A0 96 01 C2 */	lhz r4, 0x1c2(r22)	/* effective address: 803A744A */
 /* 80035810 00000078  4B FF F1 AD */	bl isEventBit__11dSv_event_cCFUs
 /* 80035814 0000007C  7C 77 1B 78 */	mr r23, r3
 /* 80035818 00000080  7F A3 EB 78 */	mr r3, r29
@@ -62,26 +62,26 @@ lbl_80035834:
 /* 80035884 00000050  4B FF D7 35 */	bl setItem__17dSv_player_item_cFiUc
 /* 80035888 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003588C 00000058  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80035890 0000005C  A3 E4 00 08 */	lhz r31, 8(r4)
+/* 80035890 0000005C  A3 E4 00 08 */	lhz r31, 8(r4)	/* effective address: 804061C8 */
 /* 80035894 00000060  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80035898 00000064  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8003589C 00000068  A0 03 00 B6 */	lhz r0, 0xb6(r3)
-/* 800358A0 0000006C  B0 04 00 08 */	sth r0, 8(r4)
+/* 8003589C 00000068  A0 03 00 B6 */	lhz r0, 0xb6(r3)	/* effective address: 8043023E */
+/* 800358A0 0000006C  B0 04 00 08 */	sth r0, 8(r4)	/* effective address: 804061C8 */
 /* 800358A4 00000070  3B C0 00 01 */	li r30, 1
 lbl_800358A8:
 /* 800358A8 00000000  1C 18 0A 94 */	mulli r0, r24, 0xa94
 /* 800358AC 00000004  7F 9C 02 14 */	add r28, r28, r0
 /* 800358B0 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800358B4 0000000C  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
-/* 800358B8 00000010  83 38 0F 28 */	lwz r25, 0xf28(r24)
-/* 800358BC 00000014  83 58 0F 2C */	lwz r26, 0xf2c(r24)
+/* 800358B8 00000010  83 38 0F 28 */	lwz r25, 0xf28(r24)	/* effective address: 804070E8 */
+/* 800358BC 00000014  83 58 0F 2C */	lwz r26, 0xf2c(r24)	/* effective address: 804070EC */
 /* 800358C0 00000018  48 30 CE 3D */	bl OSGetTime
 /* 800358C4 0000001C  7C BA 20 10 */	subfc r5, r26, r4
 /* 800358C8 00000020  7C 19 19 10 */	subfe r0, r25, r3
 /* 800358CC 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800358D0 00000028  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800358D4 0000002C  80 64 0F 30 */	lwz r3, 0xf30(r4)
-/* 800358D8 00000030  80 84 0F 34 */	lwz r4, 0xf34(r4)
+/* 800358D4 0000002C  80 64 0F 30 */	lwz r3, 0xf30(r4)	/* effective address: 804070F0 */
+/* 800358D8 00000030  80 84 0F 34 */	lwz r4, 0xf34(r4)	/* effective address: 804070F4 */
 /* 800358DC 00000034  7F 25 20 14 */	addc r25, r5, r4
 /* 800358E0 00000038  7F 40 19 14 */	adde r26, r0, r3
 /* 800358E4 0000003C  3C A0 80 00 */	lis r5, 0x8000 /* 0x800000F8@ha */
@@ -109,8 +109,8 @@ lbl_80035928:
 /* 80035938 00000010  7F 04 C3 78 */	mr r4, r24
 /* 8003593C 00000014  38 A0 09 58 */	li r5, 0x958
 /* 80035940 00000018  4B FC DC 01 */	bl memcpy
-/* 80035944 0000001C  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
-/* 80035948 00000020  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
+/* 80035944 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80035948 00000020  38 63 92 34 */	addi r3, r3, stringBase0@l
 /* 8003594C 00000024  38 63 00 29 */	addi r3, r3, 0x29
 /* 80035950 00000028  38 80 09 58 */	li r4, 0x958
 /* 80035954 0000002C  4C C6 31 82 */	crclr 6
@@ -123,7 +123,7 @@ lbl_80035928:
 /* 80035970 00000048  7F A3 EB 78 */	mr r3, r29
 /* 80035974 0000004C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80035978 00000050  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8003597C 00000054  A0 84 01 C0 */	lhz r4, 0x1c0(r4)
+/* 8003597C 00000054  A0 84 01 C0 */	lhz r4, 0x1c0(r4)	/* effective address: 803A7448 */
 /* 80035980 00000058  4B FF F0 0D */	bl onEventBit__11dSv_event_cFUs
 lbl_80035984:
 /* 80035984 00000000  2C 17 00 00 */	cmpwi r23, 0
@@ -131,7 +131,7 @@ lbl_80035984:
 /* 8003598C 00000008  7F A3 EB 78 */	mr r3, r29
 /* 80035990 0000000C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80035994 00000010  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80035998 00000014  A0 84 01 C2 */	lhz r4, 0x1c2(r4)
+/* 80035998 00000014  A0 84 01 C2 */	lhz r4, 0x1c2(r4)	/* effective address: 803A744A */
 /* 8003599C 00000018  4B FF EF F1 */	bl onEventBit__11dSv_event_cFUs
 lbl_800359A0:
 /* 800359A0 00000000  57 C0 06 3E */	clrlwi r0, r30, 0x18
@@ -145,10 +145,10 @@ lbl_800359A0:
 /* 800359C0 00000020  4B FF D5 F9 */	bl setItem__17dSv_player_item_cFiUc
 /* 800359C4 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800359C8 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800359CC 0000002C  B3 E3 00 08 */	sth r31, 8(r3)
+/* 800359CC 0000002C  B3 E3 00 08 */	sth r31, 8(r3)	/* effective address: 804061C8 */
 lbl_800359D0:
-/* 800359D0 00000000  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
-/* 800359D4 00000004  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
+/* 800359D0 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 800359D4 00000004  38 63 92 34 */	addi r3, r3, stringBase0@l
 /* 800359D8 00000008  38 63 00 38 */	addi r3, r3, 0x38
 /* 800359DC 0000000C  38 80 09 58 */	li r4, 0x958
 /* 800359E0 00000010  4C C6 31 82 */	crclr 6

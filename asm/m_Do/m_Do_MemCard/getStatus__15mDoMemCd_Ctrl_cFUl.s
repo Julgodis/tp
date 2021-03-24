@@ -12,8 +12,8 @@ lbl_80016D74:
 /* 80016D9C 00000028  80 1E 1F C4 */	lwz r0, 0x1fc4(r30)
 /* 80016DA0 0000002C  28 00 00 0D */	cmplwi r0, 0xd
 /* 80016DA4 00000030  41 81 00 88 */	bgt lbl_80016E2C
-/* 80016DA8 00000034  3C 60 80 3A */	lis r3, m_Do_m_Do_MemCard__lit_3770@ha
-/* 80016DAC 00000038  38 63 34 F8 */	addi r3, r3, m_Do_m_Do_MemCard__lit_3770@l
+/* 80016DA8 00000034  3C 60 80 3A */	lis r3, lit_3770@ha
+/* 80016DAC 00000038  38 63 34 F8 */	addi r3, r3, lit_3770@l
 /* 80016DB0 0000003C  54 00 10 3A */	slwi r0, r0, 2
 /* 80016DB4 00000040  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80016DB8 00000044  7C 09 03 A6 */	mtctr r0

@@ -32,7 +32,7 @@ lbl_800DB6F4:
 /* 800DB714 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800DB718 00000024  3C 60 80 39 */	lis r3, m__23daAlinkHIO_damCaught_c0@ha
 /* 800DB71C 00000028  38 63 E4 9C */	addi r3, r3, m__23daAlinkHIO_damCaught_c0@l
-/* 800DB720 0000002C  A8 03 00 14 */	lha r0, 0x14(r3)
+/* 800DB720 0000002C  A8 03 00 14 */	lha r0, 0x14(r3)	/* effective address: 8038E4B0 */
 /* 800DB724 00000030  B0 1F 30 08 */	sth r0, 0x3008(r31)
 /* 800DB728 00000034  80 1F 28 F8 */	lwz r0, 0x28f8(r31)
 /* 800DB72C 00000038  90 01 00 0C */	stw r0, 0xc(r1)
@@ -49,7 +49,7 @@ lbl_800DB6F4:
 /* 800DB758 00000064  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DB75C 00000000  40 81 00 58 */	ble lbl_800DB7B4
 /* 800DB760 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800DB764 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800DB764 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800DB768 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800DB76C 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800DB770 00000014  FC 00 00 32 */	fmul f0, f0, f0

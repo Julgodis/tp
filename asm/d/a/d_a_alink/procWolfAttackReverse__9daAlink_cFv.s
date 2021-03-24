@@ -42,7 +42,7 @@ lbl_8013CA80:
 /* 8013CA80 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 8013CA84 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAttack_c0@ha
 /* 8013CA88 00000008  38 63 F7 A4 */	addi r3, r3, m__22daAlinkHIO_wlAttack_c0@l
-/* 8013CA8C 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 8013CA8C 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038F7B4 */
 /* 8013CA90 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013CA94 00000000  40 81 00 98 */	ble lbl_8013CB2C
 /* 8013CA98 00000004  7F E3 FB 78 */	mr r3, r31

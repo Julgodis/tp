@@ -1,8 +1,8 @@
 lbl_8035DD78:
 /* 8035DD78 00000000  28 03 00 3C */	cmplwi r3, 0x3c
 /* 8035DD7C 00000004  41 81 00 40 */	bgt lbl_8035DDBC
-/* 8035DD80 00000008  3D 20 80 3D */	lis r9, GXTexture__lit_145@ha
-/* 8035DD84 0000000C  39 29 26 8C */	addi r9, r9, GXTexture__lit_145@l
+/* 8035DD80 00000008  3D 20 80 3D */	lis r9, lit_145@ha
+/* 8035DD84 0000000C  39 29 26 8C */	addi r9, r9, lit_145@l
 /* 8035DD88 00000010  54 60 10 3A */	slwi r0, r3, 2
 /* 8035DD8C 00000014  7C 09 00 2E */	lwzx r0, r9, r0
 /* 8035DD90 00000018  7C 09 03 A6 */	mtctr r0

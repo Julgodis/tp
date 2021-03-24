@@ -12,8 +12,8 @@ lbl_800185E4:
 /* 800185E4 00000000  7C 64 07 34 */	extsh r4, r3
 /* 800185E8 00000004  28 04 03 18 */	cmplwi r4, 0x318
 /* 800185EC 00000008  41 80 00 20 */	blt lbl_8001860C
-/* 800185F0 0000000C  3C 60 80 37 */	lis r3, c_c_dylink__stringBase0@ha
-/* 800185F4 00000010  38 63 5D E8 */	addi r3, r3, c_c_dylink__stringBase0@l
+/* 800185F0 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 800185F4 00000010  38 63 5D E8 */	addi r3, r3, stringBase0@l
 /* 800185F8 00000014  38 63 2A 0D */	addi r3, r3, 0x2a0d
 /* 800185FC 00000018  4C C6 31 82 */	crclr 6
 /* 80018600 0000001C  4B FE E6 0D */	bl OSReport_Error
@@ -37,8 +37,8 @@ lbl_8001860C:
 /* 80018644 00000038  38 60 00 04 */	li r3, 4
 /* 80018648 0000003C  48 00 00 2C */	b lbl_80018674
 lbl_8001864C:
-/* 8001864C 00000000  3C 60 80 37 */	lis r3, c_c_dylink__stringBase0@ha
-/* 80018650 00000004  38 63 5D E8 */	addi r3, r3, c_c_dylink__stringBase0@l
+/* 8001864C 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80018650 00000004  38 63 5D E8 */	addi r3, r3, stringBase0@l
 /* 80018654 00000008  38 63 2A 26 */	addi r3, r3, 0x2a26
 /* 80018658 0000000C  4C C6 31 82 */	crclr 6
 /* 8001865C 00000010  4B FE E5 B1 */	bl OSReport_Error

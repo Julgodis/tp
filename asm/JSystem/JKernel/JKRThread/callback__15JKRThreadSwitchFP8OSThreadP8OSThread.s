@@ -77,8 +77,8 @@ lbl_802D1BF4:
 /* 802D1BF8 00000004  40 80 00 2C */	bge lbl_802D1C24
 /* 802D1BFC 00000008  48 00 00 24 */	b lbl_802D1C20
 lbl_802D1C00:
-/* 802D1C00 00000000  3C 60 80 3A */	lis r3, JKRThread__stringBase0@ha
-/* 802D1C04 00000004  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
+/* 802D1C00 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1C04 00000004  38 63 CF A8 */	addi r3, r3, stringBase0@l
 /* 802D1C08 00000008  38 63 00 34 */	addi r3, r3, 0x34
 /* 802D1C0C 0000000C  48 01 6A F1 */	bl JUTWarningConsole
 /* 802D1C10 00000010  83 AD 8D F4 */	lwz r29, sCurrentHeap__7JKRHeap(r13)

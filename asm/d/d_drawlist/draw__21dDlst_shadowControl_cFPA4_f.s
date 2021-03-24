@@ -6,8 +6,8 @@ lbl_80055A14:
 /* 80055A24 00000010  48 30 C7 B1 */	bl _savegpr_27
 /* 80055A28 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80055A2C 00000018  7C 9B 23 78 */	mr r27, r4
-/* 80055A30 0000001C  3C 60 80 3B */	lis r3, d_d_drawlist__cNullVec__6Z2Calc@ha
-/* 80055A34 00000020  3B E3 87 A0 */	addi r31, r3, d_d_drawlist__cNullVec__6Z2Calc@l
+/* 80055A30 0000001C  3C 60 80 3B */	lis r3, cNullVec__6Z2Calc@ha
+/* 80055A34 00000020  3B E3 87 A0 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80055A38 00000024  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80055A3C 00000028  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 80055A40 0000002C  48 2B AC FD */	bl reinitGX__6J3DSysFv
@@ -44,7 +44,7 @@ lbl_80055A14:
 /* 80055ABC 000000A8  7F 63 DB 78 */	mr r3, r27
 /* 80055AC0 000000AC  38 80 00 00 */	li r4, 0
 /* 80055AC4 000000B0  48 30 A7 89 */	bl GXLoadPosMtxImm
-/* 80055AC8 000000B4  80 02 86 B4 */	lwz r0, d_d_drawlist__lit_5433(r2)
+/* 80055AC8 000000B4  80 02 86 B4 */	lwz r0, lit_5433(r2)
 /* 80055ACC 000000B8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80055AD0 000000BC  38 60 00 02 */	li r3, 2
 /* 80055AD4 000000C0  38 81 00 10 */	addi r4, r1, 0x10

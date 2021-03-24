@@ -7,7 +7,7 @@ lbl_80099198:
 /* 800991AC 00000014  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 800991B0 00000018  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800991B4 0000001C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800991B8 00000020  A0 84 02 36 */	lhz r4, 0x236(r4)
+/* 800991B8 00000020  A0 84 02 36 */	lhz r4, 0x236(r4)	/* effective address: 803A74BE */
 /* 800991BC 00000024  4B F9 B7 D1 */	bl onEventBit__11dSv_event_cFUs
 /* 800991C0 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800991C4 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

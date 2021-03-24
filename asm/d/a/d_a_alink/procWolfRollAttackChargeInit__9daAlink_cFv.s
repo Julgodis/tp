@@ -11,7 +11,7 @@ lbl_801398A8:
 /* 801398CC 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 801398D0 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_wlAttack_c0@ha
 /* 801398D4 0000002C  38 A5 F7 A4 */	addi r5, r5, m__22daAlinkHIO_wlAttack_c0@l
-/* 801398D8 00000030  C0 45 00 20 */	lfs f2, 0x20(r5)
+/* 801398D8 00000030  C0 45 00 20 */	lfs f2, 0x20(r5)	/* effective address: 8038F7C4 */
 /* 801398DC 00000034  4B FE FD FD */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 801398E0 00000038  7F E3 FB 78 */	mr r3, r31
 /* 801398E4 0000003C  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010037@ha */

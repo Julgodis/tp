@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISeqDataRegion {
 };
 
 struct JAISoundParamsMove {
 };
 
-struct JAISeqDataRegion {
+struct JAISoundActivity {
 };
 
-struct JAISoundActivity {
+struct JAISoundID {
 };
 
 struct JAISeCategoryMgr {
@@ -46,16 +46,16 @@ struct JASMemPool__template0 {
 	/* 8029FC34 */ ~JASMemPool__template0();
 };
 
-struct JAISeCategoryArrangement {
-};
-
-struct JAISoundHandle {
+struct JAISeqDataMgr {
 };
 
 struct JAIAudience {
 };
 
-struct JAISeqDataMgr {
+struct JAISeCategoryArrangement {
+};
+
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -168,7 +168,7 @@ extern "C" void func_802A0768(); // 1
 extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
 extern "C" void __dt__8JAISeMgrFv(); // 1
 extern "C" void __ct__16JAISeCategoryMgrFv(); // 1
-extern "C" extern char const* const JAISeMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__8JAISeMgr[5];
 extern "C" extern void* __vt__16JAISeCategoryMgr[5];
 extern "C" extern u8 data_80434084[16 + 4 /* padding */];
@@ -257,7 +257,7 @@ asm void JAISeCategoryMgr::JAISeMgr_calc_() {
 
 /* ############################################################################################## */
 /* 80434078-80434084 000C+00 s=2 e=0 z=0  None .bss       @744                                                         */
-static u8 JAISeMgr__lit_744[12];
+static u8 lit_744[12];
 
 /* 80434084-80434098 0010+04 s=2 e=1 z=0  None .bss       memPool_$localstatic3$getMemPool___26JASPoolAllocObject<5JAISe>Fv */
 u8 data_80434084[16 + 4 /* padding */];
@@ -364,7 +364,7 @@ SECTION_SDATA2 static u8 lit_1041[4] = {
 };
 
 /* 80455794-80455798 0004+00 s=4 e=0 z=0  None .sdata2    @1042                                                        */
-SECTION_SDATA2 static f32 JAISeMgr__lit_1042 = 0.5f;
+SECTION_SDATA2 static f32 lit_1042 = 0.5f;
 
 /* 8029FF18-802A0074 015C+00 s=1 e=0 z=0  None .text      JAISeMgr_mixOut___16JAISeCategoryMgrFRC18JAISoundParamsMove16JAISoundActivity */
 #pragma push

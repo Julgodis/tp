@@ -6,11 +6,11 @@ lbl_800C03E8:
 /* 800C03F8 00000010  3B E0 00 01 */	li r31, 1
 /* 800C03FC 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800C0400 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800C0404 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800C0404 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800C0408 00000020  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 800C040C 00000024  7D 89 03 A6 */	mtctr r12
 /* 800C0410 00000028  4E 80 04 21 */	bctrl 
-/* 800C0414 0000002C  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 800C0414 0000002C  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 804061CC */
 /* 800C0418 00000030  54 00 87 7E */	rlwinm r0, r0, 0x10, 0x1d, 0x1f
 /* 800C041C 00000034  28 00 00 02 */	cmplwi r0, 2
 /* 800C0420 00000038  41 82 00 14 */	beq lbl_800C0434

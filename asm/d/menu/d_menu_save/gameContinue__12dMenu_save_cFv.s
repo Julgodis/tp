@@ -19,9 +19,9 @@ lbl_801F2BF8:
 /* 801F2C3C 00000044  38 A0 00 00 */	li r5, 0
 /* 801F2C40 00000048  38 C0 00 00 */	li r6, 0
 /* 801F2C44 0000004C  38 E0 00 00 */	li r7, 0
-/* 801F2C48 00000050  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F2C48 00000050  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F2C4C 00000054  FC 40 08 90 */	fmr f2, f1
-/* 801F2C50 00000058  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F2C50 00000058  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F2C54 0000005C  FC 80 18 90 */	fmr f4, f3
 /* 801F2C58 00000060  39 00 00 00 */	li r8, 0
 /* 801F2C5C 00000064  48 0B 8D 29 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -40,13 +40,13 @@ lbl_801F2C84:
 /* 801F2C88 00000004  98 1F 01 BB */	stb r0, 0x1bb(r31)
 /* 801F2C8C 00000008  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801F2C90 0000000C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801F2C94 00000010  88 83 00 DD */	lbz r4, 0xdd(r3)
+/* 801F2C94 00000010  88 83 00 DD */	lbz r4, 0xdd(r3)	/* effective address: 80430265 */
 /* 801F2C98 00000014  28 04 00 00 */	cmplwi r4, 0
 /* 801F2C9C 00000018  41 82 00 08 */	beq lbl_801F2CA4
 /* 801F2CA0 0000001C  48 02 B1 79 */	bl setMiniGameItem__13dMeter2Info_cFUc
 lbl_801F2CA4:
 /* 801F2CA4 00000000  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F2CA8 00000004  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F2CA8 00000004  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F2CAC 00000008  4B FA 25 F5 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F2CB0 0000000C  38 00 00 04 */	li r0, 4
 /* 801F2CB4 00000010  98 1F 01 BA */	stb r0, 0x1ba(r31)
@@ -68,9 +68,9 @@ lbl_801F2CDC:
 /* 801F2CEC 00000010  38 A0 00 00 */	li r5, 0
 /* 801F2CF0 00000014  38 C0 00 00 */	li r6, 0
 /* 801F2CF4 00000018  38 E0 00 00 */	li r7, 0
-/* 801F2CF8 0000001C  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F2CF8 0000001C  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F2CFC 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801F2D00 00000024  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F2D00 00000024  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F2D04 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801F2D08 0000002C  39 00 00 00 */	li r8, 0
 /* 801F2D0C 00000030  48 0B 8C 79 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

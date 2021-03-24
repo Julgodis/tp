@@ -5,8 +5,8 @@ lbl_80157600:
 /* 8015760C 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80157610 00000010  48 20 AB B1 */	bl _savegpr_22
 /* 80157614 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80157618 00000018  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd__cNullVec__6Z2Calc@ha
-/* 8015761C 0000001C  3B E3 3B 80 */	addi r31, r3, a_npc_d_a_npc_cd__cNullVec__6Z2Calc@l
+/* 80157618 00000018  3C 60 80 3B */	lis r3, cNullVec__6Z2Calc@ha
+/* 8015761C 0000001C  3B E3 3B 80 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80157620 00000020  3C 60 80 3B */	lis r3, __vt__14mDoHIO_entry_c@ha
 /* 80157624 00000024  38 03 61 B4 */	addi r0, r3, __vt__14mDoHIO_entry_c@l
 /* 80157628 00000028  90 1E 00 00 */	stw r0, 0(r30)

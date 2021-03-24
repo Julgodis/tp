@@ -111,13 +111,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
+struct _GXRenderModeObj {
+};
+
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
-};
-
-struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -199,7 +199,7 @@ extern "C" void __dt__13J2DOrthoGraphFv(); // 1
 extern "C" void mDoGph_Create__Fv(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
 extern "C" void getAtnActorID__9daPy_py_cCFv(); // 1
-extern "C" extern char const* const m_Do_m_Do_graphic__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 extern "C" extern u8 m_bloom__13mDoGph_gInf_c[20];
 extern "C" extern u8 mBackColor__13mDoGph_gInf_c[4];
@@ -450,12 +450,12 @@ asm void mDoGph_gInf_c::beginRender() {
 
 /* ############################################################################################## */
 /* 80451A38-80451A3C 0004+00 s=11 e=0 z=0  None .sdata2    @4062                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4062[4] = {
+SECTION_SDATA2 static u8 lit_4062[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451A3C-80451A40 0004+00 s=8 e=0 z=0  None .sdata2    @4063                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4063 = 1.0f;
+SECTION_SDATA2 static f32 lit_4063 = 1.0f;
 
 /* 80007FD8-80008028 0050+00 s=1 e=6 z=0  None .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
 #pragma push
@@ -527,7 +527,7 @@ asm void mDoGph_gInf_c::fadeOut(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80451A40-80451A44 0004+00 s=5 e=0 z=0  None .sdata2    @4105                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4105 = 10.0f;
+SECTION_SDATA2 static f32 lit_4105 = 10.0f;
 
 /* 800080F4-80008330 023C+00 s=1 e=0 z=0  None .text      darwFilter__F8_GXColor                                       */
 #pragma push
@@ -542,7 +542,7 @@ asm static void darwFilter(_GXColor param_0) {
 
 /* ############################################################################################## */
 /* 80451A44-80451A48 0004+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4131 = 255.0f;
+SECTION_SDATA2 static f32 lit_4131 = 255.0f;
 
 /* 80008330-8000841C 00EC+00 s=1 e=0 z=0  None .text      calcFade__13mDoGph_gInf_cFv                                  */
 #pragma push
@@ -622,69 +622,69 @@ SECTION_SDATA static u8 data_8045059C[4] = {
 };
 
 /* 80451A48-80451A4C 0004+00 s=1 e=0 z=0  None .sdata2    @4422                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4422 = -255.0f;
+SECTION_SDATA2 static f32 lit_4422 = -255.0f;
 
 /* 80451A4C-80451A50 0004+00 s=2 e=0 z=0  None .sdata2    @4423                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4423 = 60.0f;
+SECTION_SDATA2 static f32 lit_4423 = 60.0f;
 
 /* 80451A50-80451A54 0004+00 s=1 e=0 z=0  None .sdata2    @4424                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4424 = 48.0f;
+SECTION_SDATA2 static f32 lit_4424 = 48.0f;
 
 /* 80451A54-80451A58 0004+00 s=1 e=0 z=0  None .sdata2    @4425                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4425 = 400.0f;
+SECTION_SDATA2 static f32 lit_4425 = 400.0f;
 
 /* 80451A58-80451A60 0008+00 s=1 e=0 z=0  None .sdata2    @4426                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4426 = 0.5;
+SECTION_SDATA2 static f64 lit_4426 = 0.5;
 
 /* 80451A60-80451A68 0008+00 s=1 e=0 z=0  None .sdata2    @4427                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4427 = 3.0;
+SECTION_SDATA2 static f64 lit_4427 = 3.0;
 
 /* 80451A68-80451A70 0008+00 s=1 e=0 z=0  None .sdata2    @4428                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4428[8] = {
+SECTION_SDATA2 static u8 lit_4428[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451A70-80451A74 0004+00 s=1 e=0 z=0  None .sdata2    @4429                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4429 = 280.0f;
+SECTION_SDATA2 static f32 lit_4429 = 280.0f;
 
 /* 80451A74-80451A78 0004+00 s=1 e=0 z=0  None .sdata2    @4430                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4430 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4430 = 4.0f / 5.0f;
 
 /* 80451A78-80451A7C 0004+00 s=1 e=0 z=0  None .sdata2    @4431                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4431 = -180.0f;
+SECTION_SDATA2 static f32 lit_4431 = -180.0f;
 
 /* 80451A7C-80451A80 0004+00 s=1 e=0 z=0  None .sdata2    @4432                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4432 = 75.0f;
+SECTION_SDATA2 static f32 lit_4432 = 75.0f;
 
 /* 80451A80-80451A84 0004+00 s=1 e=0 z=0  None .sdata2    @4433                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4433 = 3.0f;
+SECTION_SDATA2 static f32 lit_4433 = 3.0f;
 
 /* 80451A84-80451A88 0004+00 s=1 e=0 z=0  None .sdata2    @4434                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4434 = 999999.0f;
+SECTION_SDATA2 static f32 lit_4434 = 999999.0f;
 
 /* 80451A88-80451A8C 0004+00 s=1 e=0 z=0  None .sdata2    @4435                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4435 = 80.0f;
+SECTION_SDATA2 static f32 lit_4435 = 80.0f;
 
 /* 80451A8C-80451A90 0004+00 s=1 e=0 z=0  None .sdata2    @4436                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4436 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4436 = 1.0f / 10.0f;
 
 /* 80451A90-80451A94 0004+00 s=1 e=0 z=0  None .sdata2    @4437                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4437 = 100.0f;
+SECTION_SDATA2 static f32 lit_4437 = 100.0f;
 
 /* 80451A94-80451A98 0004+00 s=1 e=0 z=0  None .sdata2    @4438                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4438 = 9.999999747378752e-05f;
+SECTION_SDATA2 static f32 lit_4438 = 9.999999747378752e-05f;
 
 /* 80451A98-80451A9C 0004+00 s=1 e=0 z=0  None .sdata2    @4439                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4439 = -254.0f;
+SECTION_SDATA2 static f32 lit_4439 = -254.0f;
 
 /* 80451A9C-80451AA0 0004+00 s=1 e=0 z=0  None .sdata2    @4440                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4440 = 509.0f;
+SECTION_SDATA2 static f32 lit_4440 = 509.0f;
 
 /* 80451AA0-80451AA4 0004+00 s=1 e=0 z=0  None .sdata2    @4441                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4441 = 0.0024999999441206455f;
+SECTION_SDATA2 static f32 lit_4441 = 0.0024999999441206455f;
 
 /* 80451AA4-80451AA8 0004+00 s=1 e=0 z=0  None .sdata2    @4442                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4442 = -0.0024999999441206455f;
+SECTION_SDATA2 static f32 lit_4442 = -0.0024999999441206455f;
 
 /* 80008630-80009184 0B54+00 s=1 e=0 z=0  None .text      drawDepth2__FP10view_classP15view_port_classi                */
 #pragma push
@@ -710,10 +710,10 @@ asm cXyz::~cXyz() {
 
 /* ############################################################################################## */
 /* 80451AA8-80451AAC 0004+00 s=3 e=0 z=0  None .sdata2    @4480                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4480 = 448.0f;
+SECTION_SDATA2 static f32 lit_4480 = 448.0f;
 
 /* 80451AAC-80451AB0 0004+00 s=3 e=0 z=0  None .sdata2    @4481                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4481 = 608.0f;
+SECTION_SDATA2 static f32 lit_4481 = 608.0f;
 
 /* 800091C0-800094B4 02F4+00 s=1 e=0 z=0  None .text      trimming__FP10view_classP15view_port_class                   */
 #pragma push
@@ -739,7 +739,7 @@ asm void mDoGph_drawFilterQuad(s8 param_0, s8 param_1) {
 
 /* ############################################################################################## */
 /* 80451AB0-80451AB4 0004+00 s=1 e=0 z=0  None .sdata2    @4505                                                        */
-SECTION_SDATA2 static u32 m_Do_m_Do_graphic__lit_4505 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_4505 = 0xFFFFFFFF;
 
 /* 80009544-800095F8 00B4+00 s=0 e=1 z=0  None .text      create__Q213mDoGph_gInf_c7bloom_cFv                          */
 #pragma push
@@ -765,7 +765,7 @@ asm void mDoGph_gInf_c::bloom_c::remove() {
 
 /* ############################################################################################## */
 /* 80451AB4-80451AB8 0004+00 s=1 e=0 z=0  None .sdata2    @4528                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4528[4] = {
+SECTION_SDATA2 static u8 lit_4528[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -773,20 +773,20 @@ SECTION_SDATA2 static u8 m_Do_m_Do_graphic__lit_4528[4] = {
 SECTION_SDATA2 static u32 data_80451AB8 = 0x00000040;
 
 /* 80451ABC-80451AC0 0004+00 s=1 e=0 z=0  None .sdata2    @4592                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4592 = 4.0f;
+SECTION_SDATA2 static f32 lit_4592 = 4.0f;
 
 /* 80451AC0-80451AC8 0004+04 s=1 e=0 z=0  None .sdata2    @4593                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4593[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4593[1 + 1 /* padding */] = {
 	0.00015624999650754035f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451AC8-80451AD0 0008+00 s=1 e=0 z=0  None .sdata2    @4595                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_graphic__lit_4595 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4595 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80456B60-80456B68 0004+04 s=1 e=0 z=0  None .sbss2     @4530                                                        */
-SECTION_SBSS2 static u8 m_Do_m_Do_graphic__lit_4530[4 + 4 /* padding */];
+SECTION_SBSS2 static u8 lit_4530[4 + 4 /* padding */];
 
 /* 80009650-8000A160 0B10+00 s=1 e=0 z=0  None .text      draw__Q213mDoGph_gInf_c7bloom_cFv                            */
 #pragma push
@@ -823,10 +823,10 @@ asm static void motionBlure(view_class* param_0) {
 
 /* ############################################################################################## */
 /* 80451AD0-80451AD4 0004+00 s=1 e=0 z=0  None .sdata2    @4641                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4641 = -35000.0f;
+SECTION_SDATA2 static f32 lit_4641 = -35000.0f;
 
 /* 80451AD4-80451AD8 0004+00 s=1 e=0 z=0  None .sdata2    @4642                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_4642 = -30000.0f;
+SECTION_SDATA2 static f32 lit_4642 = -30000.0f;
 
 /* 8000A504-8000A58C 0088+00 s=1 e=0 z=0  None .text      setLight__Fv                                                 */
 #pragma push
@@ -863,31 +863,31 @@ SECTION_DEAD static char const* const pad_80373DE7 = "";
 #pragma pop
 
 /* 80451AD8-80451ADC 0004+00 s=1 e=0 z=0  None .sdata2    @5023                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5023 = -1.0f;
+SECTION_SDATA2 static f32 lit_5023 = -1.0f;
 
 /* 80451ADC-80451AE0 0004+00 s=1 e=0 z=0  None .sdata2    @5024                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5024 = 0.5f;
+SECTION_SDATA2 static f32 lit_5024 = 0.5f;
 
 /* 80451AE0-80451AE4 0004+00 s=1 e=0 z=0  None .sdata2    @5025                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5025 = -0.5f;
+SECTION_SDATA2 static f32 lit_5025 = -0.5f;
 
 /* 80451AE4-80451AE8 0004+00 s=1 e=0 z=0  None .sdata2    @5026                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5026 = 19.0f / 14.0f;
+SECTION_SDATA2 static f32 lit_5026 = 19.0f / 14.0f;
 
 /* 80451AE8-80451AEC 0004+00 s=1 e=0 z=0  None .sdata2    @5027                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5027 = 100000.0f;
+SECTION_SDATA2 static f32 lit_5027 = 100000.0f;
 
 /* 80451AEC-80451AF0 0004+00 s=1 e=0 z=0  None .sdata2    @5028                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5028 = -2.0f;
+SECTION_SDATA2 static f32 lit_5028 = -2.0f;
 
 /* 80451AF0-80451AF4 0004+00 s=1 e=0 z=0  None .sdata2    @5029                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5029 = -100000.0f;
+SECTION_SDATA2 static f32 lit_5029 = -100000.0f;
 
 /* 80451AF4-80451AF8 0004+00 s=1 e=0 z=0  None .sdata2    @5030                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5030 = 304.0f;
+SECTION_SDATA2 static f32 lit_5030 = 304.0f;
 
 /* 80451AF8-80451B00 0004+04 s=1 e=0 z=0  None .sdata2    @5031                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_graphic__lit_5031[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_5031[1 + 1 /* padding */] = {
 	224.0f,
 	/* padding */
 	0.0f,

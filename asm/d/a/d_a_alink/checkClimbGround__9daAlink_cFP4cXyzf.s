@@ -40,7 +40,7 @@ lbl_800FED50:
 /* 800FEDE8 00000064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FEDEC 00000068  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800FEDF0 0000006C  3B E3 0F 38 */	addi r31, r3, 0xf38
-/* 800FEDF4 00000070  C0 02 93 2C */	lfs f0, d_a_d_a_alink__lit_7624(r2)
+/* 800FEDF4 00000070  C0 02 93 2C */	lfs f0, lit_7624(r2)
 /* 800FEDF8 00000074  EF 80 01 32 */	fmuls f28, f0, f4
 /* 800FEDFC 00000078  EF 60 01 72 */	fmuls f27, f0, f5
 /* 800FEE00 0000007C  C3 C2 93 A4 */	lfs f30, lit_9138(r2)

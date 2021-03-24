@@ -7,8 +7,8 @@ lbl_801C1F2C:
 /* 801C1F40 00000014  98 03 00 F5 */	stb r0, 0xf5(r3)
 /* 801C1F44 00000018  88 03 00 F5 */	lbz r0, 0xf5(r3)
 /* 801C1F48 0000001C  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C1F4C 00000020  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap_map__init_process@ha
-/* 801C1F50 00000024  38 04 CC E4 */	addi r0, r4, d_menu_d_menu_dmap_map__init_process@l
+/* 801C1F4C 00000020  3C 80 80 3C */	lis r4, init_process@ha
+/* 801C1F50 00000024  38 04 CC E4 */	addi r0, r4, init_process@l
 /* 801C1F54 00000028  7D 80 2A 14 */	add r12, r0, r5
 /* 801C1F58 0000002C  48 1A 01 2D */	bl __ptmf_scall
 /* 801C1F5C 00000030  60 00 00 00 */	nop 

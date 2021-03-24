@@ -21,7 +21,7 @@ lbl_800C5044:
 /* 800C5044 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 800C5048 00000004  3C 60 80 39 */	lis r3, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C504C 00000008  38 63 D7 BC */	addi r3, r3, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C5050 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800C5050 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038D7E0 */
 /* 800C5054 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C5058 00000000  40 81 00 20 */	ble lbl_800C5078
 /* 800C505C 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -66,7 +66,7 @@ lbl_800C50D4:
 /* 800C50E8 00000014  7F C4 F3 78 */	mr r4, r30
 /* 800C50EC 00000018  3C A0 80 39 */	lis r5, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C50F0 0000001C  38 A5 D7 BC */	addi r5, r5, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C50F4 00000020  C0 25 00 18 */	lfs f1, 0x18(r5)
+/* 800C50F4 00000020  C0 25 00 18 */	lfs f1, 0x18(r5)	/* effective address: 8038D7D4 */
 /* 800C50F8 00000024  48 03 CB FD */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 /* 800C50FC 00000028  38 00 00 00 */	li r0, 0
 /* 800C5100 0000002C  B0 1E 00 14 */	sth r0, 0x14(r30)

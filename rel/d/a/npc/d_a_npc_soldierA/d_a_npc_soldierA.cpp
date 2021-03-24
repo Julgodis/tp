@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpc_SoldierA_c {
@@ -43,6 +43,8 @@ struct daNpc_SoldierA_c {
 	/* 80AF0B7C */ void isDelete();
 	/* 80AF0BB0 */ void reset();
 	/* 80AF0D34 */ void playMotion();
+	/* 80AF0F50 */ void chkAction(int (daNpc_SoldierA_c::*)(void*));
+	/* 80AF0F7C */ void setAction(int (daNpc_SoldierA_c::*)(void*));
 	/* 80AF1024 */ void selectAction();
 	/* 80AF10A4 */ void doNormalAction(int);
 	/* 80AF11B8 */ void doEvent();
@@ -150,8 +152,8 @@ extern "C" void getTypeFromParam__16daNpc_SoldierA_cFv(); // 1
 extern "C" void isDelete__16daNpc_SoldierA_cFv(); // 1
 extern "C" void reset__16daNpc_SoldierA_cFv(); // 1
 extern "C" void playMotion__16daNpc_SoldierA_cFv(); // 1
-extern "C" static void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i(); // 1
+extern "C" void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__16daNpc_SoldierA_cFv(); // 1
 extern "C" void doNormalAction__16daNpc_SoldierA_cFi(); // 1
 extern "C" void doEvent__16daNpc_SoldierA_cFv(); // 1
@@ -585,7 +587,7 @@ asm void daNpc_SoldierA_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i() {
+asm void daNpc_SoldierA_c::chkAction(int (daNpc_SoldierA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i.s"
 }
@@ -596,7 +598,7 @@ extern "C" asm static void chkAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i() {
+asm void daNpc_SoldierA_c::setAction(int (daNpc_SoldierA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_soldierA/d_a_npc_soldierA/setAction__16daNpc_SoldierA_cFM16daNpc_SoldierA_cFPCvPvPv_i.s"
 }

@@ -33,7 +33,7 @@ lbl_8001CC10:
 /* 8001CC18 00000008  B0 1F 04 E4 */	sth r0, 0x4e4(r31)
 /* 8001CC1C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001CC20 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001CC24 00000014  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8001CC24 00000014  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8001CC28 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 8001CC2C 0000001C  41 82 00 1C */	beq lbl_8001CC48
 /* 8001CC30 00000020  88 1F 04 96 */	lbz r0, 0x496(r31)

@@ -67,7 +67,7 @@ lbl_800D18CC:
 lbl_800D18D0:
 /* 800D18D0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D18D4 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800D18D8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800D18D8 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800D18DC 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800D18E0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800D18E4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

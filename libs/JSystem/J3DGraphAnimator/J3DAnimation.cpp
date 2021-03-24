@@ -40,13 +40,13 @@ struct J3DAnmTransformKey {
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-struct J3DModelData {
+struct J3DMaterialTable {
 };
 
 struct J3DTextureSRTInfo {
 };
 
-struct J3DMaterialTable {
+struct J3DModelData {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -261,10 +261,10 @@ extern "C" extern void* __vt__10JUTNameTab[3];
 
 /* ############################################################################################## */
 /* 80456430-80456434 0004+00 s=6 e=0 z=0  None .sdata2    @852                                                         */
-SECTION_SDATA2 static f32 J3DAnimation__lit_852 = 1.0f;
+SECTION_SDATA2 static f32 lit_852 = 1.0f;
 
 /* 80456434-80456438 0004+00 s=20 e=0 z=0  None .sdata2    @853                                                         */
-SECTION_SDATA2 static u8 J3DAnimation__lit_853[4] = {
+SECTION_SDATA2 static u8 lit_853[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -281,7 +281,7 @@ asm void J3DFrameCtrl::init(s16 param_0) {
 
 /* ############################################################################################## */
 /* 80456438-80456440 0004+04 s=2 e=0 z=0  None .sdata2    @973                                                         */
-SECTION_SDATA2 static f32 J3DAnimation__lit_973[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_973[1 + 1 /* padding */] = {
 	0.0010000000474974513f,
 	/* padding */
 	0.0f,
@@ -722,10 +722,10 @@ asm void J3DAnmTextureSRTKey::searchUpdateMaterialID(J3DModelData* param_0) {
 
 /* ############################################################################################## */
 /* 8045645C-80456460 0004+00 s=1 e=0 z=0  None .sdata2    @1817                                                        */
-SECTION_SDATA2 static f32 J3DAnimation__lit_1817 = -1024.0f;
+SECTION_SDATA2 static f32 lit_1817 = -1024.0f;
 
 /* 80456460-80456468 0004+04 s=1 e=0 z=0  None .sdata2    @1818                                                        */
-SECTION_SDATA2 static f32 J3DAnimation__lit_1818[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_1818[1 + 1 /* padding */] = {
 	1023.0f,
 	/* padding */
 	0.0f,

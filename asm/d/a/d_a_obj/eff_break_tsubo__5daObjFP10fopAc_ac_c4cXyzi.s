@@ -7,8 +7,8 @@ lbl_80037038:
 /* 8003704C 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80037050 00000018  7C 9E 23 78 */	mr r30, r4
 /* 80037054 0000001C  7C BF 2B 78 */	mr r31, r5
-/* 80037058 00000020  3C 60 80 38 */	lis r3, d_a_d_a_obj__stringBase0@ha
-/* 8003705C 00000024  38 63 92 A8 */	addi r3, r3, d_a_d_a_obj__stringBase0@l
+/* 80037058 00000020  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003705C 00000024  38 63 92 A8 */	addi r3, r3, stringBase0@l
 /* 80037060 00000028  38 80 00 20 */	li r4, 0x20
 /* 80037064 0000002C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80037068 00000030  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -18,8 +18,8 @@ lbl_80037038:
 /* 80037078 00000040  38 C0 00 80 */	li r6, 0x80
 /* 8003707C 00000044  48 00 52 71 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 80037080 00000048  7C 7B 1B 78 */	mr r27, r3
-/* 80037084 0000004C  3C 60 80 38 */	lis r3, d_a_d_a_obj__stringBase0@ha
-/* 80037088 00000050  38 63 92 A8 */	addi r3, r3, d_a_d_a_obj__stringBase0@l
+/* 80037084 0000004C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80037088 00000050  38 63 92 A8 */	addi r3, r3, stringBase0@l
 /* 8003708C 00000054  38 80 00 42 */	li r4, 0x42
 /* 80037090 00000058  7F 45 D3 78 */	mr r5, r26
 /* 80037094 0000005C  38 C0 00 80 */	li r6, 0x80
@@ -29,7 +29,7 @@ lbl_80037038:
 /* 800370A4 0000006C  7C 04 07 74 */	extsb r4, r0
 /* 800370A8 00000070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800370AC 00000074  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 800370B0 00000078  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
+/* 800370B0 00000078  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
 /* 800370B4 0000007C  38 0D 89 10 */	addi r0, r13, 0x80450E90-0x80458580 /* mEcallback__18dPa_modelEcallBack-_SDA_BASE_ */
 /* 800370B8 00000080  90 01 00 08 */	stw r0, 8(r1)
 /* 800370BC 00000084  90 81 00 0C */	stw r4, 0xc(r1)

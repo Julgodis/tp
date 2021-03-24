@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct J3DTexNoAnm {
+};
+
+struct J3DTevColorAnm {
+};
+
+struct J3DTexMtxAnm {
+};
+
 struct J3DTevKColorAnm {
 };
 
@@ -18,15 +27,6 @@ struct J3DMaterial {
 };
 
 struct J3DMatColorAnm {
-};
-
-struct J3DTexMtxAnm {
-};
-
-struct J3DTevColorAnm {
-};
-
-struct J3DTexNoAnm {
 };
 
 struct J3DMaterialAnm {

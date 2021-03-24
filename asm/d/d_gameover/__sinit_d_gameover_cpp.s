@@ -3,15 +3,15 @@ lbl_8019C0C8:
 /* 8019C0CC 00000004  7C 08 02 A6 */	mflr r0
 /* 8019C0D0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019C0D4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8019C0D8 00000010  3C 60 80 3C */	lis r3, d_d_gameover__cNullVec__6Z2Calc@ha
-/* 8019C0DC 00000014  3B E3 BB 50 */	addi r31, r3, d_d_gameover__cNullVec__6Z2Calc@l
+/* 8019C0D8 00000010  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha
+/* 8019C0DC 00000014  3B E3 BB 50 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8019C0E0 00000018  3C 60 80 43 */	lis r3, l_HIO@ha
 /* 8019C0E4 0000001C  38 63 CA 2C */	addi r3, r3, l_HIO@l
 /* 8019C0E8 00000020  4B FF EE F9 */	bl __ct__10dGov_HIO_cFv
 /* 8019C0EC 00000024  3C 80 80 1A */	lis r4, __dt__10dGov_HIO_cFv@ha
 /* 8019C0F0 00000028  38 84 C0 6C */	addi r4, r4, __dt__10dGov_HIO_cFv@l
-/* 8019C0F4 0000002C  3C A0 80 43 */	lis r5, d_d_gameover__lit_3882@ha
-/* 8019C0F8 00000030  38 A5 CA 20 */	addi r5, r5, d_d_gameover__lit_3882@l
+/* 8019C0F4 0000002C  3C A0 80 43 */	lis r5, lit_3882@ha
+/* 8019C0F8 00000030  38 A5 CA 20 */	addi r5, r5, lit_3882@l
 /* 8019C0FC 00000034  48 1C 5B 29 */	bl __register_global_object
 /* 8019C100 00000038  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8019C104 0000003C  80 1F 00 10 */	lwz r0, 0x10(r31)

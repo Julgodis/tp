@@ -12,7 +12,7 @@ lbl_80087C04:
 /* 80087C2C 0000000C  7C 9C 23 78 */	mr r28, r4
 /* 80087C30 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80087C34 00000014  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80087C38 00000018  83 DF 5D AC */	lwz r30, 0x5dac(r31)
+/* 80087C38 00000018  83 DF 5D AC */	lwz r30, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 80087C3C 0000001C  7F 83 E3 78 */	mr r3, r28
 /* 80087C40 00000020  4B FF FE 19 */	bl at_power_check__FP11dCcU_AtInfo
 /* 80087C44 00000024  90 7C 00 04 */	stw r3, 4(r28)
@@ -25,15 +25,15 @@ lbl_80087C04:
 /* 80087C60 00000040  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80087C64 00000044  C0 03 05 00 */	lfs f0, 0x500(r3)
 /* 80087C68 00000048  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80087C6C 0000004C  C0 02 8D 98 */	lfs f0, d_cc_d_cc_uty__lit_4212(r2)
+/* 80087C6C 0000004C  C0 02 8D 98 */	lfs f0, lit_4212(r2)
 /* 80087C70 00000050  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80087C74 00000054  38 61 00 0C */	addi r3, r1, 0xc
 /* 80087C78 00000058  48 2B F4 C1 */	bl PSVECSquareMag
-/* 80087C7C 0000005C  C0 02 8D 98 */	lfs f0, d_cc_d_cc_uty__lit_4212(r2)
+/* 80087C7C 0000005C  C0 02 8D 98 */	lfs f0, lit_4212(r2)
 /* 80087C80 0000007C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80087C84 00000000  40 81 00 58 */	ble lbl_80087CDC
 /* 80087C88 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80087C8C 00000008  C8 82 8D A0 */	lfd f4, d_cc_d_cc_uty__lit_4213(r2)
+/* 80087C8C 00000008  C8 82 8D A0 */	lfd f4, lit_4213(r2)
 /* 80087C90 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 80087C94 00000010  C8 62 8D A8 */	lfd f3, lit_4214(r2)
 /* 80087C98 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -54,7 +54,7 @@ lbl_80087C04:
 /* 80087CD4 00000050  FC 20 08 18 */	frsp f1, f1
 /* 80087CD8 00000054  48 00 00 88 */	b lbl_80087D60
 lbl_80087CDC:
-/* 80087CDC 00000000  C8 02 8D B0 */	lfd f0, d_cc_d_cc_uty__lit_4215(r2)
+/* 80087CDC 00000000  C8 02 8D B0 */	lfd f0, lit_4215(r2)
 /* 80087CE0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80087CE4 00000000  40 80 00 10 */	bge lbl_80087CF4
 /* 80087CE8 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -186,8 +186,8 @@ lbl_80087E9C:
 /* 80087EA4 00000008  40 82 00 78 */	bne lbl_80087F1C
 /* 80087EA8 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80087EAC 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80087EB0 00000014  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 80087EB4 00000018  80 03 05 74 */	lwz r0, 0x574(r3)
+/* 80087EB0 00000014  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80087EB4 00000018  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
 /* 80087EB8 0000001C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80087EBC 00000020  40 82 00 40 */	bne lbl_80087EFC
 /* 80087EC0 00000024  48 0D 74 D9 */	bl checkMasterSwordEquip__9daPy_py_cFv
@@ -199,7 +199,7 @@ lbl_80087E9C:
 lbl_80087ED8:
 /* 80087ED8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80087EDC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80087EE0 00000008  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 80087EE0 00000008  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 80087EE4 0000000C  28 00 00 3F */	cmplwi r0, 0x3f
 /* 80087EE8 00000010  40 82 00 14 */	bne lbl_80087EFC
 /* 80087EEC 00000014  A0 1C 00 1C */	lhz r0, 0x1c(r28)

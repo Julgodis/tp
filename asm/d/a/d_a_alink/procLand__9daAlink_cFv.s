@@ -18,7 +18,7 @@ lbl_800C7020:
 /* 800C7020 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800C7024 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C7028 00000008  38 63 E0 68 */	addi r3, r3, m__22daAlinkHIO_autoJump_c0@l
-/* 800C702C 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800C702C 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E08C */
 /* 800C7030 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C7034 00000000  40 81 00 14 */	ble lbl_800C7048
 /* 800C7038 00000004  7F C3 F3 78 */	mr r3, r30
@@ -47,7 +47,7 @@ lbl_800C7080:
 /* 800C708C 0000000C  C0 3E 34 78 */	lfs f1, 0x3478(r30)
 /* 800C7090 00000010  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800C7094 00000014  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800C7098 00000018  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800C7098 00000018  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E480 */
 /* 800C709C 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C70A0 00000000  40 80 00 0C */	bge lbl_800C70AC
 lbl_800C70A4:
@@ -58,7 +58,7 @@ lbl_800C70AC:
 lbl_800C70B0:
 /* 800C70B0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C70B4 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800C70B8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C70B8 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C70BC 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800C70C0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800C70C4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

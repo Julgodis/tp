@@ -8,7 +8,7 @@ lbl_801F1644:
 /* 801F165C 00000018  98 03 01 B0 */	stb r0, 0x1b0(r3)
 /* 801F1660 0000001C  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F1664 00000020  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F1668 00000024  88 03 00 0B */	lbz r0, 0xb(r3)
+/* 801F1668 00000024  88 03 00 0B */	lbz r0, 0xb(r3)	/* effective address: 8042E857 */
 /* 801F166C 00000028  98 1F 01 BD */	stb r0, 0x1bd(r31)
 /* 801F1670 0000002C  88 9F 01 BD */	lbz r4, 0x1bd(r31)
 /* 801F1674 00000030  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay(r13)

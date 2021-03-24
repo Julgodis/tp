@@ -19,19 +19,19 @@ lbl_801CA1E8:
 /* 801CA22C 00000044  48 00 26 55 */	bl setAreaName__12dMenu_Fmap_cFUl
 /* 801CA230 00000048  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801CA234 0000004C  38 80 00 01 */	li r4, 1
-/* 801CA238 00000050  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CA238 00000050  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CA23C 00000054  48 00 D4 D9 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801CA240 00000058  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801CA244 0000005C  38 80 00 02 */	li r4, 2
-/* 801CA248 00000060  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CA248 00000060  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CA24C 00000064  48 00 D4 C9 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801CA250 00000068  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801CA254 0000006C  38 80 00 08 */	li r4, 8
-/* 801CA258 00000070  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CA258 00000070  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CA25C 00000074  48 00 D4 B9 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801CA260 00000078  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801CA264 0000007C  38 80 00 04 */	li r4, 4
-/* 801CA268 00000080  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CA268 00000080  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CA26C 00000084  48 00 D4 A9 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801CA270 00000088  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801CA274 0000008C  38 80 00 00 */	li r4, 0

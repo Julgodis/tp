@@ -9,7 +9,7 @@ lbl_800C76F8:
 /* 800C7714 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C7718 00000020  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800C771C 00000024  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800C7720 00000028  C0 44 00 38 */	lfs f2, 0x38(r4)
+/* 800C7720 00000028  C0 44 00 38 */	lfs f2, 0x38(r4)	/* effective address: 8038D6F4 */
 /* 800C7724 0000002C  48 1A 90 1D */	bl cLib_chaseF__FPfff
 /* 800C7728 00000030  7F A3 EB 78 */	mr r3, r29
 /* 800C772C 00000034  4B FE BD D5 */	bl checkAttentionState__9daAlink_cFv

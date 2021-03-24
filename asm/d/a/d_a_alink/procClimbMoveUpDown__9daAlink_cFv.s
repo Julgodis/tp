@@ -30,12 +30,12 @@ lbl_800FFC84:
 /* 800FFCC4 00000040  88 1E 2F 98 */	lbz r0, 0x2f98(r30)
 /* 800FFCC8 00000044  28 00 00 01 */	cmplwi r0, 1
 /* 800FFCCC 00000048  40 82 00 0C */	bne lbl_800FFCD8
-/* 800FFCD0 0000004C  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FFCD0 0000004C  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FFCD4 00000050  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_800FFCD8:
 /* 800FFCD8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 800FFCDC 00000004  80 9E 32 CC */	lwz r4, 0x32cc(r30)
-/* 800FFCE0 00000008  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800FFCE0 00000008  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800FFCE4 0000000C  4B FA D2 FD */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800FFCE8 00000010  38 00 00 0A */	li r0, 0xa
 /* 800FFCEC 00000014  98 1E 2F 99 */	stb r0, 0x2f99(r30)
@@ -71,7 +71,7 @@ lbl_800FFD34:
 /* 800FFD58 00000010  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FFD5C 00000028  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800FFD60 00000000  40 80 00 0C */	bge lbl_800FFD6C
-/* 800FFD64 00000004  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FFD64 00000004  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FFD68 00000008  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_800FFD6C:
 /* 800FFD6C 00000000  7F C3 F3 78 */	mr r3, r30

@@ -25,11 +25,11 @@ lbl_8013D5B4:
 /* 8013D5E0 0000002C  38 A5 F9 5C */	addi r5, r5, m__20daAlinkHIO_wlGrab_c0@l
 /* 8013D5E4 00000030  38 A5 00 14 */	addi r5, r5, 0x14
 /* 8013D5E8 00000034  4B FE C2 61 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
-/* 8013D5EC 00000038  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 8013D5EC 00000038  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 8013D5F0 0000003C  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 8013D5F4 00000040  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlGrab_c0@ha
 /* 8013D5F8 00000044  38 63 F9 5C */	addi r3, r3, m__20daAlinkHIO_wlGrab_c0@l
-/* 8013D5FC 00000048  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 8013D5FC 00000048  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038F980 */
 /* 8013D600 0000004C  D0 1E 34 7C */	stfs f0, 0x347c(r30)
 /* 8013D604 00000050  48 00 00 34 */	b lbl_8013D638
 lbl_8013D608:
@@ -43,7 +43,7 @@ lbl_8013D608:
 /* 8013D624 0000001C  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 8013D628 00000020  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlGrab_c0@ha
 /* 8013D62C 00000024  38 63 F9 5C */	addi r3, r3, m__20daAlinkHIO_wlGrab_c0@l
-/* 8013D630 00000028  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 8013D630 00000028  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038F9A8 */
 /* 8013D634 0000002C  D0 1E 34 7C */	stfs f0, 0x347c(r30)
 lbl_8013D638:
 /* 8013D638 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)

@@ -6,7 +6,7 @@ lbl_8025D33C:
 /* 8025D34C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8025D350 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025D354 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025D358 0000001C  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 8025D358 0000001C  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8025D35C 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 8025D360 00000024  40 82 00 20 */	bne lbl_8025D380
 /* 8025D364 00000028  4B FD AE C9 */	bl getStatus__12dMsgObject_cFv

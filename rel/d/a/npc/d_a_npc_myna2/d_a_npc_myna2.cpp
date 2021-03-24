@@ -35,6 +35,8 @@ struct daNpc_myna2_c {
 	/* 80A85094 */ void isDelete();
 	/* 80A85160 */ void reset();
 	/* 80A85358 */ void playMotion();
+	/* 80A855E8 */ void chkAction(int (daNpc_myna2_c::*)(void*));
+	/* 80A85614 */ void setAction(int (daNpc_myna2_c::*)(void*));
 	/* 80A856BC */ void selectAction();
 	/* 80A857B0 */ void doNormalAction(int);
 	/* 80A85894 */ void doEvent();
@@ -149,8 +151,8 @@ extern "C" void getTypeFromParam__13daNpc_myna2_cFv(); // 1
 extern "C" void isDelete__13daNpc_myna2_cFv(); // 1
 extern "C" void reset__13daNpc_myna2_cFv(); // 1
 extern "C" void playMotion__13daNpc_myna2_cFv(); // 1
-extern "C" static void chkAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__13daNpc_myna2_cFv(); // 1
 extern "C" void doNormalAction__13daNpc_myna2_cFi(); // 1
 extern "C" void doEvent__13daNpc_myna2_cFv(); // 1
@@ -614,7 +616,7 @@ asm void daNpc_myna2_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i() {
+asm void daNpc_myna2_c::chkAction(int (daNpc_myna2_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_myna2/d_a_npc_myna2/chkAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i.s"
 }
@@ -625,7 +627,7 @@ extern "C" asm static void chkAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i() {
+asm void daNpc_myna2_c::setAction(int (daNpc_myna2_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_myna2/d_a_npc_myna2/setAction__13daNpc_myna2_cFM13daNpc_myna2_cFPCvPvPv_i.s"
 }

@@ -8,7 +8,7 @@ lbl_8019B484:
 /* 8019B49C 00000018  38 03 00 01 */	addi r0, r3, 1
 /* 8019B4A0 0000001C  B0 1F 01 14 */	sth r0, 0x114(r31)
 /* 8019B4A4 00000020  80 7F 01 00 */	lwz r3, 0x100(r31)
-/* 8019B4A8 00000024  C0 22 A1 84 */	lfs f1, d_d_gameover__lit_3869(r2)
+/* 8019B4A8 00000024  C0 22 A1 84 */	lfs f1, lit_3869(r2)
 /* 8019B4AC 00000028  48 00 08 05 */	bl setBackAlpha__24dDlst_GameOverScrnDraw_cFf
 /* 8019B4B0 0000002C  A8 1F 01 14 */	lha r0, 0x114(r31)
 /* 8019B4B4 00000030  2C 00 00 1E */	cmpwi r0, 0x1e

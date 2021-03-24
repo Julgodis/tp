@@ -14,10 +14,10 @@ lbl_800E6EEC:
 /* 800E6F1C 00000030  41 82 00 78 */	beq lbl_800E6F94
 /* 800E6F20 00000034  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6F24 00000038  3B E3 EC 48 */	addi r31, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E6F28 0000003C  C0 3F 00 A4 */	lfs f1, 0xa4(r31)
+/* 800E6F28 0000003C  C0 3F 00 A4 */	lfs f1, 0xa4(r31)	/* effective address: 8038ECEC */
 /* 800E6F2C 00000040  7F C3 F3 78 */	mr r3, r30
 /* 800E6F30 00000044  38 80 00 B5 */	li r4, 0xb5
-/* 800E6F34 00000048  C0 5F 00 A8 */	lfs f2, 0xa8(r31)
+/* 800E6F34 00000048  C0 5F 00 A8 */	lfs f2, 0xa8(r31)	/* effective address: 8038ECF0 */
 /* 800E6F38 0000004C  C0 02 93 34 */	lfs f0, lit_7710(r2)
 /* 800E6F3C 00000050  EC 00 08 2A */	fadds f0, f0, f1
 /* 800E6F40 00000054  FC 00 00 1E */	fctiwz f0, f0
@@ -27,9 +27,9 @@ lbl_800E6EEC:
 /* 800E6F50 00000064  4B FC 60 BD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800E6F54 00000068  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6F58 0000006C  38 63 EC 48 */	addi r3, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E6F5C 00000070  C0 03 00 B0 */	lfs f0, 0xb0(r3)
+/* 800E6F5C 00000070  C0 03 00 B0 */	lfs f0, 0xb0(r3)	/* effective address: 8038ECF8 */
 /* 800E6F60 00000074  D0 1E 34 78 */	stfs f0, 0x3478(r30)
-/* 800E6F64 00000078  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E6F64 00000078  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E6F68 0000007C  C0 42 93 34 */	lfs f2, lit_7710(r2)
 /* 800E6F6C 00000080  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 800E6F70 00000084  EC 02 00 28 */	fsubs f0, f2, f0
@@ -50,7 +50,7 @@ lbl_800E6F94:
 /* 800E6FA8 00000014  4B FC 61 4D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800E6FAC 00000018  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6FB0 0000001C  38 63 EC 48 */	addi r3, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E6FB4 00000020  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800E6FB4 00000020  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038EC80 */
 /* 800E6FB8 00000024  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800E6FBC 00000028  38 00 00 00 */	li r0, 0
 /* 800E6FC0 0000002C  B0 1E 30 0E */	sth r0, 0x300e(r30)

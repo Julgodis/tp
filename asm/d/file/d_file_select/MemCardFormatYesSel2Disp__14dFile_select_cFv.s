@@ -17,7 +17,7 @@ lbl_8018F228:
 /* 8018F264 0000003C  40 82 00 28 */	bne lbl_8018F28C
 /* 8018F268 00000040  3C 60 80 43 */	lis r3, g_fsHIO@ha
 /* 8018F26C 00000044  38 63 C9 EC */	addi r3, r3, g_fsHIO@l
-/* 8018F270 00000048  88 03 00 0C */	lbz r0, 0xc(r3)
+/* 8018F270 00000048  88 03 00 0C */	lbz r0, 0xc(r3)	/* effective address: 8042C9F8 */
 /* 8018F274 0000004C  B0 1E 03 AC */	sth r0, 0x3ac(r30)
 /* 8018F278 00000050  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 8018F27C 00000054  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l

@@ -11,8 +11,8 @@ lbl_80156B4C:
 /* 80156B70 00000024  41 82 00 48 */	beq lbl_80156BB8
 /* 80156B74 00000028  38 7C 05 6C */	addi r3, r28, 0x56c
 /* 80156B78 0000002C  57 BF 10 3A */	slwi r31, r29, 2
-/* 80156B7C 00000030  3C 80 80 3B */	lis r4, a_npc_d_a_npc_cd__l_resNameTbl@ha
-/* 80156B80 00000034  3B C4 3B 8C */	addi r30, r4, a_npc_d_a_npc_cd__l_resNameTbl@l
+/* 80156B7C 00000030  3C 80 80 3B */	lis r4, l_resNameTbl@ha
+/* 80156B80 00000034  3B C4 3B 8C */	addi r30, r4, l_resNameTbl@l
 /* 80156B84 00000038  7C 9E F8 2E */	lwzx r4, r30, r31
 /* 80156B88 0000003C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80156B8C 00000040  4B ED 63 31 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
@@ -30,8 +30,8 @@ lbl_80156B9C:
 lbl_80156BB8:
 /* 80156BB8 00000000  38 7C 05 6C */	addi r3, r28, 0x56c
 /* 80156BBC 00000004  57 BF 10 3A */	slwi r31, r29, 2
-/* 80156BC0 00000008  3C 80 80 3B */	lis r4, a_npc_d_a_npc_cd__l_resNameTbl@ha
-/* 80156BC4 0000000C  3B C4 3B 8C */	addi r30, r4, a_npc_d_a_npc_cd__l_resNameTbl@l
+/* 80156BC0 00000008  3C 80 80 3B */	lis r4, l_resNameTbl@ha
+/* 80156BC4 0000000C  3B C4 3B 8C */	addi r30, r4, l_resNameTbl@l
 /* 80156BC8 00000010  7C 9E F8 2E */	lwzx r4, r30, r31
 /* 80156BCC 00000014  80 84 00 00 */	lwz r4, 0(r4)
 /* 80156BD0 00000018  4B ED 62 ED */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc
@@ -49,8 +49,8 @@ lbl_80156BE0:
 lbl_80156BFC:
 /* 80156BFC 00000000  38 7C 05 74 */	addi r3, r28, 0x574
 /* 80156C00 00000004  57 BE 10 3A */	slwi r30, r29, 2
-/* 80156C04 00000008  3C 80 80 3B */	lis r4, a_npc_d_a_npc_cd__l_resNameTbl@ha
-/* 80156C08 0000000C  3B E4 3B 8C */	addi r31, r4, a_npc_d_a_npc_cd__l_resNameTbl@l
+/* 80156C04 00000008  3C 80 80 3B */	lis r4, l_resNameTbl@ha
+/* 80156C08 0000000C  3B E4 3B 8C */	addi r31, r4, l_resNameTbl@l
 /* 80156C0C 00000010  7C 9F F0 2E */	lwzx r4, r31, r30
 /* 80156C10 00000014  80 84 00 08 */	lwz r4, 8(r4)
 /* 80156C14 00000018  4B ED 62 A9 */	bl dComIfG_resLoad__FP30request_of_phase_process_classPCc

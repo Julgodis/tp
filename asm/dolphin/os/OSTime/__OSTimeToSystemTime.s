@@ -9,7 +9,7 @@ lbl_80342780:
 /* 8034279C 0000001C  4B FF AF 59 */	bl OSDisableInterrupts
 /* 803427A0 00000020  3C A0 80 00 */	lis r5, 0x8000 /* 0x800030DC@ha */
 /* 803427A4 00000024  80 85 30 DC */	lwz r4, 0x30DC(r5)
-/* 803427A8 00000028  80 05 30 D8 */	lwz r0, 0x30d8(r5)
+/* 803427A8 00000028  80 05 30 D8 */	lwz r0, 0x30d8(r5)	/* effective address: 800030D8 */
 /* 803427AC 0000002C  7F C4 F0 14 */	addc r30, r4, r30
 /* 803427B0 00000030  7F E0 F9 14 */	adde r31, r0, r31
 /* 803427B4 00000034  4B FF AF 69 */	bl OSRestoreInterrupts

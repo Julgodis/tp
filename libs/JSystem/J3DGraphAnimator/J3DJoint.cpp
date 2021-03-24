@@ -95,7 +95,7 @@ extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803A2068-803A2074 000C+00 s=1 e=0 z=0  None .rodata    @882                                                         */
-SECTION_RODATA static u8 const J3DJoint__lit_882[12] = {
+SECTION_RODATA static u8 const lit_882[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
@@ -112,7 +112,7 @@ asm void J3DMtxCalcJ3DSysInitBasic::init(Vec const& param_0, f32 const (& param_
 
 /* ############################################################################################## */
 /* 803A2074-803A2080 000C+00 s=1 e=0 z=0  None .rodata    @893                                                         */
-SECTION_RODATA static u8 const J3DJoint__lit_893[12] = {
+SECTION_RODATA static u8 const lit_893[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 

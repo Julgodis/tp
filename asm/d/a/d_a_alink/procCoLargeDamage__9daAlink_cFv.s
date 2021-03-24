@@ -130,7 +130,7 @@ lbl_800DA038:
 /* 800DA058 00000020  38 80 01 25 */	li r4, 0x125
 /* 800DA05C 00000024  3C A0 80 39 */	lis r5, m__20daAlinkHIO_damage_c0@ha
 /* 800DA060 00000028  38 A5 E5 4C */	addi r5, r5, m__20daAlinkHIO_damage_c0@l
-/* 800DA064 0000002C  C0 25 00 54 */	lfs f1, 0x54(r5)
+/* 800DA064 0000002C  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038E5A0 */
 /* 800DA068 00000030  4B FD 2F 49 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 800DA06C 00000034  7F E3 FB 78 */	mr r3, r31
 /* 800DA070 00000038  A8 9F 30 80 */	lha r4, 0x3080(r31)
@@ -168,7 +168,7 @@ lbl_800DA0B0:
 /* 800DA0E8 00000038  38 03 9A 20 */	addi r0, r3, sincosTable___5JMath@l
 /* 800DA0EC 0000003C  7C 60 22 14 */	add r3, r0, r4
 /* 800DA0F0 00000040  C0 A3 00 04 */	lfs f5, 4(r3)
-/* 800DA0F4 00000044  C0 22 92 9C */	lfs f1, d_a_d_a_alink__lit_5944(r2)
+/* 800DA0F4 00000044  C0 22 92 9C */	lfs f1, lit_5944(r2)
 /* 800DA0F8 00000048  C0 1E 00 34 */	lfs f0, 0x34(r30)
 /* 800DA0FC 0000004C  EC C1 00 2A */	fadds f6, f1, f0
 /* 800DA100 00000050  EC 05 01 B2 */	fmuls f0, f5, f6

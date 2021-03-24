@@ -16,8 +16,8 @@ lbl_802CD34C:
 /* 802CD384 00000038  90 01 00 64 */	stw r0, 0x64(r1)
 /* 802CD388 0000003C  C0 02 C5 58 */	lfs f0, lit_3931(r2)
 /* 802CD38C 00000040  D0 01 00 74 */	stfs f0, 0x74(r1)
-/* 802CD390 00000044  3C 60 80 3A */	lis r3, Z2AudioMgr__stringBase0@ha
-/* 802CD394 00000048  38 03 CA 58 */	addi r0, r3, Z2AudioMgr__stringBase0@l
+/* 802CD390 00000044  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802CD394 00000048  38 03 CA 58 */	addi r0, r3, stringBase0@l
 /* 802CD398 0000004C  90 01 00 78 */	stw r0, 0x78(r1)
 /* 802CD39C 00000050  38 61 00 48 */	addi r3, r1, 0x48
 /* 802CD3A0 00000054  7F 64 DB 78 */	mr r4, r27
@@ -141,8 +141,8 @@ lbl_802CD34C:
 /* 802CD578 0000022C  3C 60 80 3D */	lis r3, __files@ha
 /* 802CD57C 00000230  38 63 29 B0 */	addi r3, r3, __files@l
 /* 802CD580 00000234  38 63 00 A0 */	addi r3, r3, 0xa0
-/* 802CD584 00000238  3C 80 80 3A */	lis r4, Z2AudioMgr__stringBase0@ha
-/* 802CD588 0000023C  38 84 CA 58 */	addi r4, r4, Z2AudioMgr__stringBase0@l
+/* 802CD584 00000238  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802CD588 0000023C  38 84 CA 58 */	addi r4, r4, stringBase0@l
 /* 802CD58C 00000240  3B 20 00 01 */	li r25, 1
 /* 802CD590 00000244  28 18 00 01 */	cmplwi r24, 1
 /* 802CD594 00000248  41 80 00 14 */	blt lbl_802CD5A8
@@ -187,8 +187,8 @@ lbl_802CD5F4:
 /* 802CD624 00000030  38 63 41 E4 */	addi r3, r3, data_804341E4@l
 /* 802CD628 00000034  3C 80 80 2C */	lis r4, func_802BD288@ha
 /* 802CD62C 00000038  38 84 D2 88 */	addi r4, r4, func_802BD288@l
-/* 802CD630 0000003C  3C A0 80 43 */	lis r5, Z2AudioMgr__lit_3779@ha
-/* 802CD634 00000040  38 A5 42 68 */	addi r5, r5, Z2AudioMgr__lit_3779@l
+/* 802CD630 0000003C  3C A0 80 43 */	lis r5, lit_3779@ha
+/* 802CD634 00000040  38 A5 42 68 */	addi r5, r5, lit_3779@l
 /* 802CD638 00000044  48 09 45 ED */	bl __register_global_object
 /* 802CD63C 00000048  38 00 00 01 */	li r0, 1
 /* 802CD640 0000004C  98 0D 8D D4 */	stb r0, data_80451354(r13)

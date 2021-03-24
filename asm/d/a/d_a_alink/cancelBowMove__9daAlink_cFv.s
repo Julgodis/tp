@@ -38,7 +38,7 @@ lbl_800DEE68:
 lbl_800DEEA8:
 /* 800DEEA8 00000000  7F A3 EB 78 */	mr r3, r29
 /* 800DEEAC 00000004  38 80 00 02 */	li r4, 2
-/* 800DEEB0 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DEEB0 00000008  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DEEB4 0000000C  4B FC E8 71 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800DEEB8 00000010  38 60 00 01 */	li r3, 1
 /* 800DEEBC 00000014  48 00 00 08 */	b lbl_800DEEC4

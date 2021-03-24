@@ -7,8 +7,8 @@ lbl_801C2234:
 /* 801C2248 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801C224C 00000018  8B E3 00 F5 */	lbz r31, 0xf5(r3)
 /* 801C2250 0000001C  1C BF 00 0C */	mulli r5, r31, 0xc
-/* 801C2254 00000020  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap_map__move_process@ha
-/* 801C2258 00000024  38 04 CD 44 */	addi r0, r4, d_menu_d_menu_dmap_map__move_process@l
+/* 801C2254 00000020  3C 80 80 3C */	lis r4, move_process@ha
+/* 801C2258 00000024  38 04 CD 44 */	addi r0, r4, move_process@l
 /* 801C225C 00000028  7D 80 2A 14 */	add r12, r0, r5
 /* 801C2260 0000002C  48 19 FE 25 */	bl __ptmf_scall
 /* 801C2264 00000030  60 00 00 00 */	nop 
@@ -17,8 +17,8 @@ lbl_801C2234:
 /* 801C2270 0000003C  41 82 00 20 */	beq lbl_801C2290
 /* 801C2274 00000040  7F C3 F3 78 */	mr r3, r30
 /* 801C2278 00000044  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C227C 00000048  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap_map__init_process@ha
-/* 801C2280 0000004C  38 04 CC E4 */	addi r0, r4, d_menu_d_menu_dmap_map__init_process@l
+/* 801C227C 00000048  3C 80 80 3C */	lis r4, init_process@ha
+/* 801C2280 0000004C  38 04 CC E4 */	addi r0, r4, init_process@l
 /* 801C2284 00000050  7D 80 2A 14 */	add r12, r0, r5
 /* 801C2288 00000054  48 19 FD FD */	bl __ptmf_scall
 /* 801C228C 00000058  60 00 00 00 */	nop 

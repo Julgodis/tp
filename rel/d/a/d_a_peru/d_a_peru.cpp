@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80D4B7BC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daPeru_c {
@@ -54,6 +54,7 @@ struct daPeru_c {
 	/* 80D47F5C */ void setAttnPos();
 	/* 80D481A4 */ void setCollision();
 	/* 80D4835C */ void drawDbgInfo();
+	/* 80D48364 */ void setAction(int (daPeru_c::*)(int), int);
 	/* 80D48414 */ void wait(int);
 	/* 80D486A0 */ void is_AppearDemo_start();
 	/* 80D48720 */ void _AppearDemoTag_delete();
@@ -246,7 +247,7 @@ extern "C" void action__8daPeru_cFv(); // 1
 extern "C" void setAttnPos__8daPeru_cFv(); // 1
 extern "C" void setCollision__8daPeru_cFv(); // 1
 extern "C" void drawDbgInfo__8daPeru_cFv(); // 1
-extern "C" static void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii(); // 1
+extern "C" void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii(); // 1
 extern "C" void wait__8daPeru_cFi(); // 1
 extern "C" void is_AppearDemo_start__8daPeru_cFv(); // 1
 extern "C" void _AppearDemoTag_delete__8daPeru_cFv(); // 1
@@ -816,7 +817,7 @@ asm void daPeru_c::drawDbgInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii() {
+asm void daPeru_c::setAction(int (daPeru_c::*)(int), int param_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_peru/d_a_peru/setAction__8daPeru_cFM8daPeru_cFPCvPvi_ii.s"
 }

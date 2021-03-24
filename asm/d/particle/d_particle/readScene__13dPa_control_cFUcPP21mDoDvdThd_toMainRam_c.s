@@ -28,8 +28,8 @@ lbl_8004BE58:
 /* 8004BE58 00000000  9B DD 00 18 */	stb r30, 0x18(r29)
 /* 8004BE5C 00000004  3C 60 80 42 */	lis r3, data_804248AC@ha
 /* 8004BE60 00000008  38 63 48 AC */	addi r3, r3, data_804248AC@l
-/* 8004BE64 0000000C  3C 80 80 38 */	lis r4, d_particle_d_particle__stringBase0@ha
-/* 8004BE68 00000010  38 84 A1 2C */	addi r4, r4, d_particle_d_particle__stringBase0@l
+/* 8004BE64 0000000C  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 8004BE68 00000010  38 84 A1 2C */	addi r4, r4, stringBase0@l
 /* 8004BE6C 00000014  38 84 00 06 */	addi r4, r4, 6
 /* 8004BE70 00000018  57 C5 06 3E */	clrlwi r5, r30, 0x18
 /* 8004BE74 0000001C  4C C6 31 82 */	crclr 6

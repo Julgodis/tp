@@ -5,12 +5,12 @@ lbl_800F40E4:
 /* 800F40F0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800F40F4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800F40F8 00000014  38 80 01 FB */	li r4, 0x1fb
-/* 800F40FC 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
-/* 800F4100 0000001C  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800F40FC 00000018  C0 22 92 B8 */	lfs f1, lit_6040(r2)
+/* 800F4100 0000001C  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800F4104 00000020  4B FB 92 A5 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800F4108 00000024  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800F410C 00000028  D0 1F 20 54 */	stfs f0, 0x2054(r31)
-/* 800F4110 0000002C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800F4110 0000002C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800F4114 00000030  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 /* 800F4118 00000034  38 00 00 08 */	li r0, 8
 /* 800F411C 00000038  98 1F 2F 97 */	stb r0, 0x2f97(r31)

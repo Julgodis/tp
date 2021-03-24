@@ -27,7 +27,7 @@ lbl_801EC504:
 /* 801EC568 00000064  40 82 01 D4 */	bne lbl_801EC73C
 /* 801EC56C 00000068  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 801EC570 0000006C  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801EC574 00000070  80 84 00 34 */	lwz r4, 0x34(r4)
+/* 801EC574 00000070  80 84 00 34 */	lwz r4, 0x34(r4)	/* effective address: 803DD31C */
 /* 801EC578 00000074  54 80 06 B5 */	rlwinm. r0, r4, 0, 0x1a, 0x1a
 /* 801EC57C 00000078  41 82 00 44 */	beq lbl_801EC5C0
 /* 801EC580 0000007C  80 1F 06 2C */	lwz r0, 0x62c(r31)
@@ -142,9 +142,9 @@ lbl_801EC708:
 /* 801EC718 00000010  38 A0 00 00 */	li r5, 0
 /* 801EC71C 00000014  38 C0 00 00 */	li r6, 0
 /* 801EC720 00000018  38 E0 00 00 */	li r7, 0
-/* 801EC724 0000001C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__lit_4305(r2)
+/* 801EC724 0000001C  C0 22 A9 9C */	lfs f1, lit_4305(r2)
 /* 801EC728 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801EC72C 00000024  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__lit_4465(r2)
+/* 801EC72C 00000024  C0 62 A9 C0 */	lfs f3, lit_4465(r2)
 /* 801EC730 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801EC734 0000002C  39 00 00 00 */	li r8, 0
 /* 801EC738 00000030  48 0B F2 4D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

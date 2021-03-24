@@ -11,9 +11,9 @@ lbl_800884F0:
 /* 80088514 00000024  90 1E 00 1C */	stw r0, 0x1c(r30)
 /* 80088518 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8008851C 0000002C  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 80088520 00000030  80 65 5D 88 */	lwz r3, 0x5d88(r5)
-/* 80088524 00000034  3C 80 80 38 */	lis r4, d_d_cam_param__stringBase0@ha
-/* 80088528 00000038  38 84 A7 E0 */	addi r4, r4, d_d_cam_param__stringBase0@l
+/* 80088520 00000030  80 65 5D 88 */	lwz r3, 0x5d88(r5)	/* effective address: 8040BF48 */
+/* 80088524 00000034  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80088528 00000038  38 84 A7 E0 */	addi r4, r4, stringBase0@l
 /* 8008852C 0000003C  3C A5 00 02 */	addis r5, r5, 2
 /* 80088530 00000040  38 C0 00 80 */	li r6, 0x80
 /* 80088534 00000044  38 A5 C2 F8 */	addi r5, r5, -15624

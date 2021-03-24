@@ -26,9 +26,9 @@ lbl_8023DC10:
 /* 8023DC40 00000030  38 A0 00 00 */	li r5, 0
 /* 8023DC44 00000034  38 C0 00 00 */	li r6, 0
 /* 8023DC48 00000038  38 E0 00 00 */	li r7, 0
-/* 8023DC4C 0000003C  C0 22 B1 E0 */	lfs f1, msg_scrn_d_msg_scrn_explain__lit_4211(r2)
+/* 8023DC4C 0000003C  C0 22 B1 E0 */	lfs f1, lit_4211(r2)
 /* 8023DC50 00000040  FC 40 08 90 */	fmr f2, f1
-/* 8023DC54 00000044  C0 62 B1 D0 */	lfs f3, msg_scrn_d_msg_scrn_explain__lit_4121(r2)
+/* 8023DC54 00000044  C0 62 B1 D0 */	lfs f3, lit_4121(r2)
 /* 8023DC58 00000048  FC 80 18 90 */	fmr f4, f3
 /* 8023DC5C 0000004C  39 00 00 00 */	li r8, 0
 /* 8023DC60 00000050  48 06 DD 25 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

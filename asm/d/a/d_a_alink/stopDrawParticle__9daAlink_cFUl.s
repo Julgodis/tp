@@ -4,7 +4,7 @@ lbl_80120778:
 /* 80120780 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80120784 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80120788 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8012078C 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8012078C 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80120790 00000018  38 63 02 10 */	addi r3, r3, 0x210
 /* 80120794 0000001C  4B F2 B1 85 */	bl getEmitter__Q213dPa_control_c7level_cFUl
 /* 80120798 00000020  28 03 00 00 */	cmplwi r3, 0

@@ -20,6 +20,6 @@ lbl_802EB344:
 /* 802EB360 0000001C  41 80 FF D0 */	blt lbl_802EB330
 /* 802EB364 00000020  3C 80 80 3A */	lis r4, j2dDefaultIndTexMtxInfo@ha
 /* 802EB368 00000024  38 84 1B C4 */	addi r4, r4, j2dDefaultIndTexMtxInfo@l
-/* 802EB36C 00000028  88 04 00 18 */	lbz r0, 0x18(r4)
+/* 802EB36C 00000028  88 04 00 18 */	lbz r0, 0x18(r4)	/* effective address: 803A1BDC */
 /* 802EB370 0000002C  98 03 00 18 */	stb r0, 0x18(r3)
 /* 802EB374 00000030  4E 80 00 20 */	blr 

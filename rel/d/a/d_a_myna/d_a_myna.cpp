@@ -21,22 +21,22 @@ struct J3DFrameCtrl {
 	/* 80946370 */ ~J3DFrameCtrl();
 };
 
+struct J3DAnmTexPattern {
+};
+
 struct J3DAnmTransformKey {
-};
-
-struct msg_class {
-};
-
-struct J3DModel {
-};
-
-struct cXyz {
 };
 
 struct J3DModelData {
 };
 
-struct J3DAnmTexPattern {
+struct J3DModel {
+};
+
+struct msg_class {
+};
+
+struct cXyz {
 };
 
 struct daMyna_c {

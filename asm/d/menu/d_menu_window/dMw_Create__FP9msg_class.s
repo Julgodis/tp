@@ -6,14 +6,14 @@ lbl_801FD8C0:
 /* 801FD8D0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801FD8D4 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FD8D8 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FD8DC 0000001C  93 E3 00 24 */	stw r31, 0x24(r3)
+/* 801FD8DC 0000001C  93 E3 00 24 */	stw r31, 0x24(r3)	/* effective address: 804301AC */
 /* 801FD8E0 00000020  38 00 FF FF */	li r0, -1
 /* 801FD8E4 00000024  3C 60 80 43 */	lis r3, g_mwHIO@ha
 /* 801FD8E8 00000028  38 63 E8 6C */	addi r3, r3, g_mwHIO@l
-/* 801FD8EC 0000002C  98 03 00 04 */	stb r0, 4(r3)
+/* 801FD8EC 0000002C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042E870 */
 /* 801FD8F0 00000030  3C 60 80 43 */	lis r3, g_mwDHIO@ha
 /* 801FD8F4 00000034  38 63 E9 A8 */	addi r3, r3, g_mwDHIO@l
-/* 801FD8F8 00000038  98 03 00 04 */	stb r0, 4(r3)
+/* 801FD8F8 00000038  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8042E9AC */
 /* 801FD8FC 0000003C  38 60 00 00 */	li r3, 0
 /* 801FD900 00000040  4B E3 08 89 */	bl dComIfGp_offHeapLockFlag__Fi
 /* 801FD904 00000044  7F E3 FB 78 */	mr r3, r31

@@ -33,7 +33,7 @@ lbl_800402FC:
 /* 80040378 00000068  41 82 00 44 */	beq lbl_800403BC
 /* 8004037C 0000006C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80040380 00000070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80040384 00000074  88 03 0D B4 */	lbz r0, 0xdb4(r3)
+/* 80040384 00000074  88 03 0D B4 */	lbz r0, 0xdb4(r3)	/* effective address: 80406F74 */
 /* 80040388 00000078  7C 1E 07 74 */	extsb r30, r0
 /* 8004038C 0000007C  38 61 00 20 */	addi r3, r1, 0x20
 /* 80040390 00000080  4B FF EC 9D */	bl getMapRestartPos__10dMapInfo_nFv
@@ -54,7 +54,7 @@ lbl_800403BC:
 /* 800403C8 0000000C  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 800403CC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800403D0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800403D4 00000018  88 03 0D B4 */	lbz r0, 0xdb4(r3)
+/* 800403D4 00000018  88 03 0D B4 */	lbz r0, 0xdb4(r3)	/* effective address: 80406F74 */
 /* 800403D8 0000001C  7C 00 07 74 */	extsb r0, r0
 /* 800403DC 00000020  7C 04 00 00 */	cmpw r4, r0
 /* 800403E0 00000024  41 82 00 08 */	beq lbl_800403E8
@@ -99,7 +99,7 @@ lbl_80040458:
 /* 80040470 00000018  41 82 00 58 */	beq lbl_800404C8
 /* 80040474 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80040478 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8004047C 00000024  80 03 5D AC */	lwz r0, 0x5dac(r3)
+/* 8004047C 00000024  80 03 5D AC */	lwz r0, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 80040480 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80040484 0000002C  41 82 00 44 */	beq lbl_800404C8
 /* 80040488 00000030  7F E3 FB 78 */	mr r3, r31

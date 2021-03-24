@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80ACF47C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Seira_c {
@@ -68,6 +68,8 @@ struct daNpc_Seira_c {
 	/* 80ACD6AC */ void changeBtp(int*, int*);
 	/* 80ACD744 */ void changeBtk(int*, int*);
 	/* 80ACD770 */ void selectAction();
+	/* 80ACD900 */ void chkAction(int (daNpc_Seira_c::*)(void*));
+	/* 80ACD92C */ void setAction(int (daNpc_Seira_c::*)(void*));
 	/* 80ACD9D4 */ void cutConversationAboutSaru(int);
 	/* 80ACDC6C */ void checkStageIsSeirasShop();
 	/* 80ACDCE4 */ void getShopItemType();
@@ -252,8 +254,8 @@ extern "C" void changeBck__13daNpc_Seira_cFPiPi(); // 1
 extern "C" void changeBtp__13daNpc_Seira_cFPiPi(); // 1
 extern "C" void changeBtk__13daNpc_Seira_cFPiPi(); // 1
 extern "C" void selectAction__13daNpc_Seira_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i(); // 1
 extern "C" void cutConversationAboutSaru__13daNpc_Seira_cFi(); // 1
 extern "C" void checkStageIsSeirasShop__13daNpc_Seira_cFv(); // 1
 extern "C" void getShopItemType__13daNpc_Seira_cFv(); // 1
@@ -902,7 +904,7 @@ asm void daNpc_Seira_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i() {
+asm void daNpc_Seira_c::chkAction(int (daNpc_Seira_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seira/d_a_npc_seira/chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i.s"
 }
@@ -913,7 +915,7 @@ extern "C" asm static void chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i() {
+asm void daNpc_Seira_c::setAction(int (daNpc_Seira_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seira/d_a_npc_seira/setAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i.s"
 }

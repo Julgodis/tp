@@ -8,11 +8,11 @@ lbl_800F38E8:
 /* 800F3900 00000018  4B FC E6 6D */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F3904 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 800F3908 00000020  38 80 00 02 */	li r4, 2
-/* 800F390C 00000024  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F390C 00000024  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F3910 00000028  4B FB 9E 15 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F3914 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800F3918 00000030  38 80 00 02 */	li r4, 2
-/* 800F391C 00000034  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F391C 00000034  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F3920 00000038  4B FB A1 CD */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 /* 800F3924 0000003C  38 00 00 00 */	li r0, 0
 /* 800F3928 00000040  B0 1F 30 10 */	sth r0, 0x3010(r31)
@@ -24,7 +24,7 @@ lbl_800F38E8:
 /* 800F3940 00000058  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800F3944 0000005C  7F E3 FB 78 */	mr r3, r31
 /* 800F3948 00000060  38 80 00 61 */	li r4, 0x61
-/* 800F394C 00000064  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800F394C 00000064  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800F3950 00000068  C0 42 93 24 */	lfs f2, lit_7450(r2)
 /* 800F3954 0000006C  4B FB 96 8D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800F3958 00000070  38 00 00 00 */	li r0, 0

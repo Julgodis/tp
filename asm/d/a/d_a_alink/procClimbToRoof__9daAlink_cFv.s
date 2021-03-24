@@ -32,7 +32,7 @@ lbl_8010048C:
 /* 801004D8 0000004C  80 7F 20 60 */	lwz r3, 0x2060(r31)
 /* 801004DC 00000050  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 801004E0 00000054  C0 23 00 1C */	lfs f1, 0x1c(r3)
-/* 801004E4 00000058  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 801004E4 00000058  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 801004E8 0000005C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801004EC 00000060  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 801004F0 00000064  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -83,7 +83,7 @@ lbl_8010059C:
 /* 801005A0 00000004  38 80 00 01 */	li r4, 1
 /* 801005A4 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 801005A8 0000000C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 801005AC 00000010  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 801005AC 00000010  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 801005B0 00000014  4B FC 64 99 */	bl procFallInit__9daAlink_cFif
 lbl_801005B4:
 /* 801005B4 00000000  38 60 00 01 */	li r3, 1

@@ -6,7 +6,7 @@ lbl_801DEA48:
 /* 801DEA58 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801DEA5C 00000014  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801DEA60 00000018  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801DEA64 0000001C  A8 04 07 5E */	lha r0, 0x75e(r4)
+/* 801DEA64 0000001C  A8 04 07 5E */	lha r0, 0x75e(r4)	/* effective address: 8042F326 */
 /* 801DEA68 00000020  B0 03 03 6A */	sth r0, 0x36a(r3)
 /* 801DEA6C 00000024  38 80 00 00 */	li r4, 0
 /* 801DEA70 00000028  48 00 2A A9 */	bl setAButtonString__14dMenu_Letter_cFUs

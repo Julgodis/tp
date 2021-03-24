@@ -9,7 +9,7 @@ lbl_800DFCD8:
 /* 800DFCF4 0000001C  40 82 00 5C */	bne lbl_800DFD50
 /* 800DFCF8 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800DFCFC 00000024  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800DFD00 00000028  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800DFD00 00000028  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800DFD04 0000002C  54 00 02 95 */	rlwinm. r0, r0, 0, 0xa, 0xa
 /* 800DFD08 00000030  40 82 00 48 */	bne lbl_800DFD50
 /* 800DFD0C 00000034  38 81 00 0C */	addi r4, r1, 0xc

@@ -14,8 +14,8 @@ lbl_80262814:
 /* 80262814 00000000  4B DA C5 D9 */	bl mDoExt_getArchiveHeap__Fv
 /* 80262818 00000004  7C 7E 1B 78 */	mr r30, r3
 /* 8026281C 00000008  3B A0 00 00 */	li r29, 0
-/* 80262820 0000000C  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
-/* 80262824 00000010  3B E3 A4 A0 */	addi r31, r3, DynamicLink__stringBase0@l
+/* 80262820 0000000C  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80262824 00000010  3B E3 A4 A0 */	addi r31, r3, stringBase0@l
 lbl_80262828:
 /* 80262828 00000000  80 7C 00 10 */	lwz r3, 0x10(r28)
 /* 8026282C 00000004  28 03 00 00 */	cmplwi r3, 0
@@ -97,8 +97,8 @@ lbl_80262948:
 /* 80262948 00000000  40 82 00 70 */	bne lbl_802629B8
 /* 8026294C 00000004  38 61 00 10 */	addi r3, r1, 0x10
 /* 80262950 00000008  38 80 00 40 */	li r4, 0x40
-/* 80262954 0000000C  3C A0 80 3A */	lis r5, DynamicLink__stringBase0@ha
-/* 80262958 00000010  38 A5 A4 A0 */	addi r5, r5, DynamicLink__stringBase0@l
+/* 80262954 0000000C  3C A0 80 3A */	lis r5, stringBase0@ha
+/* 80262958 00000010  38 A5 A4 A0 */	addi r5, r5, stringBase0@l
 /* 8026295C 00000014  38 A5 01 48 */	addi r5, r5, 0x148
 /* 80262960 00000018  80 DC 00 1C */	lwz r6, 0x1c(r28)
 /* 80262964 0000001C  4C C6 31 82 */	crclr 6
@@ -151,8 +151,8 @@ lbl_80262A18:
 /* 80262A18 00000000  80 7C 00 10 */	lwz r3, 0x10(r28)
 /* 80262A1C 00000004  28 03 00 00 */	cmplwi r3, 0
 /* 80262A20 00000008  40 82 00 24 */	bne lbl_80262A44
-/* 80262A24 0000000C  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
-/* 80262A28 00000010  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
+/* 80262A24 0000000C  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80262A28 00000010  38 63 A4 A0 */	addi r3, r3, stringBase0@l
 /* 80262A2C 00000014  38 63 01 62 */	addi r3, r3, 0x162
 /* 80262A30 00000018  80 9C 00 1C */	lwz r4, 0x1c(r28)
 /* 80262A34 0000001C  4C C6 31 82 */	crclr 6
@@ -177,8 +177,8 @@ lbl_80262A74:
 /* 80262A78 00000004  A0 BC 00 22 */	lhz r5, 0x22(r28)
 /* 80262A7C 00000008  7C 04 28 40 */	cmplw r4, r5
 /* 80262A80 0000000C  41 82 00 38 */	beq lbl_80262AB8
-/* 80262A84 00000010  3C 60 80 3A */	lis r3, DynamicLink__stringBase0@ha
-/* 80262A88 00000014  38 63 A4 A0 */	addi r3, r3, DynamicLink__stringBase0@l
+/* 80262A84 00000010  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80262A88 00000014  38 63 A4 A0 */	addi r3, r3, stringBase0@l
 /* 80262A8C 00000018  38 63 01 9D */	addi r3, r3, 0x19d
 /* 80262A90 0000001C  80 DC 00 1C */	lwz r6, 0x1c(r28)
 /* 80262A94 00000020  4C C6 31 82 */	crclr 6

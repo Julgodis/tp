@@ -18,7 +18,7 @@ lbl_80209D7C:
 /* 80209DBC 0000001C  80 9B 00 84 */	lwz r4, 0x84(r27)
 /* 80209DC0 00000020  48 01 28 E5 */	bl getStringLength__13dMeter2Info_cFP10J2DTextBoxPc
 /* 80209DC4 00000024  57 9A 10 3A */	slwi r26, r28, 2
-/* 80209DC8 00000028  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
+/* 80209DC8 00000028  C0 42 AD 4C */	lfs f2, lit_4147(r2)
 /* 80209DCC 0000002C  7F FB D2 14 */	add r31, r27, r26
 /* 80209DD0 00000030  C0 1F 06 10 */	lfs f0, 0x610(r31)
 /* 80209DD4 00000034  EC 00 00 72 */	fmuls f0, f0, f1
@@ -62,15 +62,15 @@ lbl_80209E38:
 /* 80209E68 00000030  EF E2 00 28 */	fsubs f31, f2, f0
 /* 80209E6C 00000034  C0 1F 01 E4 */	lfs f0, 0x1e4(r31)
 /* 80209E70 00000038  EF DF 00 2A */	fadds f30, f31, f0
-/* 80209E74 0000003C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 80209E74 0000003C  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 80209E78 00000040  57 A0 06 3E */	clrlwi r0, r29, 0x18
 /* 80209E7C 00000044  57 BD 15 BA */	rlwinm r29, r29, 2, 0x16, 0x1d
 /* 80209E80 00000048  7F DB EA 14 */	add r30, r27, r29
 /* 80209E84 0000004C  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
 /* 80209E88 00000050  28 00 00 15 */	cmplwi r0, 0x15
 /* 80209E8C 00000054  41 81 06 04 */	bgt lbl_8020A490
-/* 80209E90 00000058  3C 60 80 3C */	lis r3, d_meter_d_meter_button__lit_7807@ha
-/* 80209E94 0000005C  38 63 F1 A8 */	addi r3, r3, d_meter_d_meter_button__lit_7807@l
+/* 80209E90 00000058  3C 60 80 3C */	lis r3, lit_7807@ha
+/* 80209E94 0000005C  38 63 F1 A8 */	addi r3, r3, lit_7807@l
 /* 80209E98 00000060  54 00 10 3A */	slwi r0, r0, 2
 /* 80209E9C 00000064  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80209EA0 00000068  7C 09 03 A6 */	mtctr r0
@@ -268,7 +268,7 @@ lbl_8020A12C:
 /* 8020A190 00000064  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
 /* 8020A194 00000068  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020A198 0000006C  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 8020A19C 00000070  88 1A 5E 2D */	lbz r0, 0x5e2d(r26)
+/* 8020A19C 00000070  88 1A 5E 2D */	lbz r0, 0x5e2d(r26)	/* effective address: 8040BFED */
 /* 8020A1A0 00000074  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8020A1A4 00000078  41 82 00 44 */	beq lbl_8020A1E8
 /* 8020A1A8 0000007C  80 7B 00 08 */	lwz r3, 8(r27)
@@ -308,13 +308,13 @@ lbl_8020A1E8:
 /* 8020A22C 00000044  EC 01 00 2A */	fadds f0, f1, f0
 /* 8020A230 00000048  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
 lbl_8020A234:
-/* 8020A234 00000000  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 8020A234 00000000  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 8020A238 00000004  7C 7B EA 14 */	add r3, r27, r29
 /* 8020A23C 00000008  D0 03 03 04 */	stfs f0, 0x304(r3)
 /* 8020A240 0000000C  48 00 02 50 */	b lbl_8020A490
 /* 8020A244 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020A248 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020A24C 00000018  80 03 5D 7C */	lwz r0, 0x5d7c(r3)
+/* 8020A24C 00000018  80 03 5D 7C */	lwz r0, 0x5d7c(r3)	/* effective address: 8040BF3C */
 /* 8020A250 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 8020A254 00000020  41 82 00 48 */	beq lbl_8020A29C
 /* 8020A258 00000024  80 7B 00 08 */	lwz r3, 8(r27)
@@ -331,7 +331,7 @@ lbl_8020A234:
 /* 8020A284 00000050  C0 1B 05 30 */	lfs f0, 0x530(r27)
 /* 8020A288 00000054  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020A28C 00000058  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
-/* 8020A290 0000005C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 8020A290 0000005C  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 8020A294 00000060  D0 1E 03 04 */	stfs f0, 0x304(r30)
 /* 8020A298 00000064  48 00 01 F8 */	b lbl_8020A490
 lbl_8020A29C:
@@ -458,7 +458,7 @@ lbl_8020A29C:
 /* 8020A47C 000001E0  C0 1B 05 F0 */	lfs f0, 0x5f0(r27)
 /* 8020A480 000001E4  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020A484 000001E8  D0 1E 01 EC */	stfs f0, 0x1ec(r30)
-/* 8020A488 000001EC  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 8020A488 000001EC  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 8020A48C 000001F0  D0 1E 03 04 */	stfs f0, 0x304(r30)
 lbl_8020A490:
 /* 8020A490 00000000  C0 3F 01 E4 */	lfs f1, 0x1e4(r31)

@@ -26,7 +26,7 @@ lbl_801CD4A0:
 /* 801CD4B8 00000018  40 82 00 DC */	bne lbl_801CD594
 /* 801CD4BC 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801CD4C0 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801CD4C4 00000024  88 03 00 7C */	lbz r0, 0x7c(r3)
+/* 801CD4C4 00000024  88 03 00 7C */	lbz r0, 0x7c(r3)	/* effective address: 8040623C */
 /* 801CD4C8 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 801CD4CC 0000002C  41 82 00 3C */	beq lbl_801CD508
 /* 801CD4D0 00000030  38 61 00 20 */	addi r3, r1, 0x20
@@ -54,7 +54,7 @@ lbl_801CD508:
 /* 801CD524 0000001C  38 61 00 18 */	addi r3, r1, 0x18
 /* 801CD528 00000020  48 19 B6 05 */	bl strcpy
 lbl_801CD52C:
-/* 801CD52C 00000000  C0 42 A7 28 */	lfs f2, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CD52C 00000000  C0 42 A7 28 */	lfs f2, lit_4158(r2)
 /* 801CD530 00000004  88 1E 03 00 */	lbz r0, 0x300(r30)
 /* 801CD534 00000008  28 00 00 17 */	cmplwi r0, 0x17
 /* 801CD538 0000000C  40 82 00 3C */	bne lbl_801CD574
@@ -64,7 +64,7 @@ lbl_801CD52C:
 /* 801CD548 0000001C  38 A1 00 08 */	addi r5, r1, 8
 /* 801CD54C 00000020  48 00 3A 31 */	bl calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf
 /* 801CD550 00000024  80 7E 00 14 */	lwz r3, 0x14(r30)
-/* 801CD554 00000028  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CD554 00000028  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801CD558 0000002C  C0 42 A7 68 */	lfs f2, lit_7300(r2)
 /* 801CD55C 00000030  38 81 00 14 */	addi r4, r1, 0x14
 /* 801CD560 00000034  38 A1 00 0C */	addi r5, r1, 0xc

@@ -10,7 +10,7 @@ lbl_800B9018:
 /* 800B9038 00000020  41 82 00 F4 */	beq lbl_800B912C
 /* 800B903C 00000024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800B9040 00000028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800B9044 0000002C  88 04 5E 24 */	lbz r0, 0x5e24(r4)
+/* 800B9044 0000002C  88 04 5E 24 */	lbz r0, 0x5e24(r4)	/* effective address: 8040BFE4 */
 /* 800B9048 00000030  28 00 00 19 */	cmplwi r0, 0x19
 /* 800B904C 00000034  40 82 00 74 */	bne lbl_800B90C0
 /* 800B9050 00000038  80 1F 05 74 */	lwz r0, 0x574(r31)

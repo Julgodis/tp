@@ -25,7 +25,7 @@ lbl_800CB630:
 /* 800CB650 00000020  40 82 00 24 */	bne lbl_800CB674
 /* 800CB654 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CB658 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CB65C 0000002C  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800CB65C 0000002C  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800CB660 00000030  28 00 00 FF */	cmplwi r0, 0xff
 /* 800CB664 00000034  41 82 00 10 */	beq lbl_800CB674
 /* 800CB668 00000038  80 1F 2E 50 */	lwz r0, 0x2e50(r31)

@@ -28,7 +28,7 @@ lbl_8013BA70:
 /* 8013BAA8 00000038  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013BAAC 0000003C  C0 42 93 78 */	lfs f2, lit_8676(r2)
 /* 8013BAB0 00000040  38 C0 FF FF */	li r6, -1
-/* 8013BAB4 00000044  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 8013BAB4 00000044  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 8013BAB8 00000048  4B F7 19 21 */	bl setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf
 /* 8013BABC 0000004C  28 1D 00 00 */	cmplwi r29, 0
 /* 8013BAC0 00000050  41 82 00 F0 */	beq lbl_8013BBB0
@@ -38,7 +38,7 @@ lbl_8013BA70:
 /* 8013BAD0 00000060  38 DD 05 68 */	addi r6, r29, 0x568
 /* 8013BAD4 00000064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013BAD8 00000068  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 8013BADC 0000006C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8013BADC 0000006C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8013BAE0 00000070  38 80 00 00 */	li r4, 0
 /* 8013BAE4 00000074  90 81 00 08 */	stw r4, 8(r1)
 /* 8013BAE8 00000078  38 00 FF FF */	li r0, -1
@@ -105,7 +105,7 @@ lbl_8013BBC0:
 /* 8013BBD4 00000014  4B FE DC 75 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8013BBD8 00000018  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013BBDC 0000001C  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 8013BBE0 00000020  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013BBE0 00000020  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013BBE4 00000024  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 8013BBE8 00000028  D0 21 00 34 */	stfs f1, 0x34(r1)
 /* 8013BBEC 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -135,7 +135,7 @@ lbl_8013BC0C:
 lbl_8013BC48:
 /* 8013BC48 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013BC4C 00000004  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 8013BC50 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013BC50 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013BC54 0000000C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8013BC58 00000010  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 8013BC5C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

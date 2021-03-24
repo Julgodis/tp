@@ -46,7 +46,7 @@ lbl_800A2384:
 /* 800A2390 0000000C  80 1E 31 98 */	lwz r0, 0x3198(r30)
 /* 800A2394 00000010  2C 00 00 00 */	cmpwi r0, 0
 /* 800A2398 00000014  41 82 00 88 */	beq lbl_800A2420
-/* 800A239C 00000018  C0 22 94 AC */	lfs f1, d_a_d_a_alink__lit_16641(r2)
+/* 800A239C 00000018  C0 22 94 AC */	lfs f1, lit_16641(r2)
 /* 800A23A0 0000001C  A8 1E 30 10 */	lha r0, 0x3010(r30)
 /* 800A23A4 00000020  C8 62 92 B0 */	lfd f3, lit_6025(r2)
 /* 800A23A8 00000024  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -88,7 +88,7 @@ lbl_800A242C:
 /* 800A2430 00000004  40 82 00 18 */	bne lbl_800A2448
 /* 800A2434 00000008  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800A2438 0000000C  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800A243C 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800A243C 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038D6E8 */
 /* 800A2440 00000014  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800A2444 00000000  41 81 00 20 */	bgt lbl_800A2464
 lbl_800A2448:
@@ -96,7 +96,7 @@ lbl_800A2448:
 /* 800A244C 00000004  40 82 00 E4 */	bne lbl_800A2530
 /* 800A2450 00000008  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 800A2454 0000000C  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 800A2458 00000010  C0 03 00 84 */	lfs f0, 0x84(r3)
+/* 800A2458 00000010  C0 03 00 84 */	lfs f0, 0x84(r3)	/* effective address: 8038EEAC */
 /* 800A245C 00000014  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800A2460 00000000  40 81 00 D0 */	ble lbl_800A2530
 lbl_800A2464:
@@ -152,7 +152,7 @@ lbl_800A24F8:
 lbl_800A2514:
 /* 800A2514 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 800A2518 00000004  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 800A251C 00000008  C0 03 00 8C */	lfs f0, 0x8c(r3)
+/* 800A251C 00000008  C0 03 00 8C */	lfs f0, 0x8c(r3)	/* effective address: 8038EEB4 */
 /* 800A2520 0000000C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800A2524 00000000  40 80 00 A8 */	bge lbl_800A25CC
 lbl_800A2528:

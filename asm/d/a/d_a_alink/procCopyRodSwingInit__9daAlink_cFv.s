@@ -32,9 +32,9 @@ lbl_800E2114:
 /* 800E2138 00000024  D0 1F 34 7C */	stfs f0, 0x347c(r31)
 /* 800E213C 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_copyRod_c0@ha
 /* 800E2140 0000002C  38 63 EA FC */	addi r3, r3, m__21daAlinkHIO_copyRod_c0@l
-/* 800E2144 00000030  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800E2144 00000030  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038EB20 */
 /* 800E2148 00000034  D0 1F 34 80 */	stfs f0, 0x3480(r31)
-/* 800E214C 00000038  C0 02 93 38 */	lfs f0, d_a_d_a_alink__lit_7807(r2)
+/* 800E214C 00000038  C0 02 93 38 */	lfs f0, lit_7807(r2)
 /* 800E2150 0000003C  D0 1F 34 84 */	stfs f0, 0x3484(r31)
 /* 800E2154 00000040  48 00 00 40 */	b lbl_800E2194
 lbl_800E2158:
@@ -49,7 +49,7 @@ lbl_800E2158:
 /* 800E2178 00000020  D0 1F 34 7C */	stfs f0, 0x347c(r31)
 /* 800E217C 00000024  3C 60 80 39 */	lis r3, m__21daAlinkHIO_copyRod_c0@ha
 /* 800E2180 00000028  38 63 EA FC */	addi r3, r3, m__21daAlinkHIO_copyRod_c0@l
-/* 800E2184 0000002C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800E2184 0000002C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038EB0C */
 /* 800E2188 00000030  D0 1F 34 80 */	stfs f0, 0x3480(r31)
 /* 800E218C 00000034  C0 02 93 48 */	lfs f0, lit_8130(r2)
 /* 800E2190 00000038  D0 1F 34 84 */	stfs f0, 0x3484(r31)

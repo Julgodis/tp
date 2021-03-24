@@ -16,7 +16,7 @@ lbl_8036D974:
 /* 8036D9AC 00000038  38 83 F2 70 */	addi r4, r3, gTRKFramingState@l
 /* 8036D9B0 0000003C  93 E1 00 10 */	stw r31, 0x10(r1)
 /* 8036D9B4 00000040  38 61 00 08 */	addi r3, r1, 8
-/* 8036D9B8 00000044  90 04 00 00 */	stw r0, 0(r4)
+/* 8036D9B8 00000044  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 8044F270 */
 /* 8036D9BC 00000048  4B FF F2 99 */	bl TRKPostEvent
 lbl_8036D9C0:
 /* 8036D9C0 00000000  80 01 00 24 */	lwz r0, 0x24(r1)

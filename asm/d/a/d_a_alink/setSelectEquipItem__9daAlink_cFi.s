@@ -12,7 +12,7 @@ lbl_800A4910:
 /* 800A4938 00000028  83 DC 06 B8 */	lwz r30, 0x6b8(r28)
 /* 800A493C 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800A4940 00000030  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 800A4944 00000034  88 1F 00 14 */	lbz r0, 0x14(r31)
+/* 800A4944 00000034  88 1F 00 14 */	lbz r0, 0x14(r31)	/* effective address: 804061D4 */
 /* 800A4948 00000038  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800A494C 0000003C  40 82 00 18 */	bne lbl_800A4964
 /* 800A4950 00000040  80 1C 06 70 */	lwz r0, 0x670(r28)

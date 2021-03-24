@@ -18,18 +18,18 @@ lbl_8003F02C:
 lbl_8003F06C:
 /* 8003F06C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003F070 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003F074 00000008  C0 03 0D BC */	lfs f0, 0xdbc(r3)
+/* 8003F074 00000008  C0 03 0D BC */	lfs f0, 0xdbc(r3)	/* effective address: 80406F7C */
 /* 8003F078 0000000C  D0 01 00 08 */	stfs f0, 8(r1)
-/* 8003F07C 00000010  C0 03 0D C0 */	lfs f0, 0xdc0(r3)
+/* 8003F07C 00000010  C0 03 0D C0 */	lfs f0, 0xdc0(r3)	/* effective address: 80406F80 */
 /* 8003F080 00000014  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8003F084 00000018  C0 03 0D C4 */	lfs f0, 0xdc4(r3)
+/* 8003F084 00000018  C0 03 0D C4 */	lfs f0, 0xdc4(r3)	/* effective address: 80406F84 */
 /* 8003F088 0000001C  D0 01 00 10 */	stfs f0, 0x10(r1)
 lbl_8003F08C:
 /* 8003F08C 00000000  3C 60 80 3F */	lis r3, mStatus__20dStage_roomControl_c@ha
 /* 8003F090 00000004  38 83 60 94 */	addi r4, r3, mStatus__20dStage_roomControl_c@l
 /* 8003F094 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003F098 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003F09C 00000010  88 03 0D B4 */	lbz r0, 0xdb4(r3)
+/* 8003F09C 00000010  88 03 0D B4 */	lbz r0, 0xdb4(r3)	/* effective address: 80406F74 */
 /* 8003F0A0 00000014  7C 00 07 74 */	extsb r0, r0
 /* 8003F0A4 00000018  1C 00 04 04 */	mulli r0, r0, 0x404
 /* 8003F0A8 0000001C  7C 64 02 14 */	add r3, r4, r0

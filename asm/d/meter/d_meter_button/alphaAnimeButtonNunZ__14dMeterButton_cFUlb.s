@@ -22,7 +22,7 @@ lbl_80204548:
 /* 80204598 00000050  41 82 00 30 */	beq lbl_802045C8
 /* 8020459C 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802045A0 00000058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802045A4 0000005C  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 802045A4 0000005C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 802045A8 00000060  28 00 00 00 */	cmplwi r0, 0
 /* 802045AC 00000064  41 82 00 10 */	beq lbl_802045BC
 /* 802045B0 00000068  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)

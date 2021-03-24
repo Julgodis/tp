@@ -41,7 +41,7 @@ lbl_8002F008:
 lbl_8002F020:
 /* 8002F020 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002F024 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002F028 00000008  9B E3 00 15 */	stb r31, 0x15(r3)
+/* 8002F028 00000008  9B E3 00 15 */	stb r31, 0x15(r3)	/* effective address: 804061D5 */
 /* 8002F02C 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8002F030 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8002F034 00000014  7C 08 03 A6 */	mtlr r0

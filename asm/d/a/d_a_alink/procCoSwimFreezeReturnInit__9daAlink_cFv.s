@@ -7,8 +7,8 @@ lbl_800DC278:
 /* 800DC28C 00000000  39 61 00 20 */	addi r11, r1, 0x20
 /* 800DC290 00000004  48 28 5F 49 */	bl _savegpr_28
 /* 800DC294 00000008  7C 7F 1B 78 */	mr r31, r3
-/* 800DC298 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 800DC29C 00000010  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__lit_3757@l
+/* 800DC298 0000000C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 800DC29C 00000010  3B C3 D6 58 */	addi r30, r3, lit_3757@l
 /* 800DC2A0 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DC2A4 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800DC2A8 0000001C  38 63 4E C8 */	addi r3, r3, 0x4ec8
@@ -46,7 +46,7 @@ lbl_800DC2FC:
 /* 800DC320 00000024  38 80 00 37 */	li r4, 0x37
 /* 800DC324 00000028  38 BE 1B E4 */	addi r5, r30, 0x1be4
 /* 800DC328 0000002C  C0 25 00 5C */	lfs f1, 0x5c(r5)
-/* 800DC32C 00000030  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
+/* 800DC32C 00000030  C0 42 93 30 */	lfs f2, lit_7625(r2)
 /* 800DC330 00000034  48 04 D3 A9 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 800DC334 00000038  38 00 00 03 */	li r0, 3
 /* 800DC338 0000003C  B0 1F 1F D8 */	sth r0, 0x1fd8(r31)
@@ -67,7 +67,7 @@ lbl_800DC364:
 /* 800DC370 0000000C  C0 25 00 60 */	lfs f1, 0x60(r5)
 /* 800DC374 00000010  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800DC378 00000014  38 A0 00 05 */	li r5, 5
-/* 800DC37C 00000018  C0 62 93 30 */	lfs f3, d_a_d_a_alink__lit_7625(r2)
+/* 800DC37C 00000018  C0 62 93 30 */	lfs f3, lit_7625(r2)
 /* 800DC380 0000001C  4B FD 0C 8D */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800DC384 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800DC388 00000024  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010053@ha */
@@ -114,8 +114,8 @@ lbl_800DC41C:
 /* 800DC41C 00000000  48 0A 52 25 */	bl dCam_getBody__Fv
 /* 800DC420 00000004  38 80 00 09 */	li r4, 9
 /* 800DC424 00000008  7F 85 E3 78 */	mr r5, r28
-/* 800DC428 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
-/* 800DC42C 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
+/* 800DC428 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
+/* 800DC42C 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
 /* 800DC430 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 800DC434 00000018  38 E0 00 01 */	li r7, 1
 /* 800DC438 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

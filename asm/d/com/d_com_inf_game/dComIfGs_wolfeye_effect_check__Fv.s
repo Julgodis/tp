@@ -2,10 +2,10 @@ lbl_8002FA54:
 /* 8002FA54 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8002FA58 00000004  38 83 CA 54 */	addi r4, r3, g_env_light@l
 /* 8002FA5C 00000008  38 60 00 00 */	li r3, 0
-/* 8002FA60 0000000C  88 04 0F 3D */	lbz r0, 0xf3d(r4)
+/* 8002FA60 0000000C  88 04 0F 3D */	lbz r0, 0xf3d(r4)	/* effective address: 8042D991 */
 /* 8002FA64 00000010  28 00 00 01 */	cmplwi r0, 1
 /* 8002FA68 00000014  4C 82 00 20 */	bnelr 
-/* 8002FA6C 00000018  C0 24 0F 40 */	lfs f1, 0xf40(r4)
+/* 8002FA6C 00000018  C0 24 0F 40 */	lfs f1, 0xf40(r4)	/* effective address: 8042D994 */
 /* 8002FA70 0000001C  C8 02 83 20 */	lfd f0, lit_7580(r2)
 /* 8002FA74 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8002FA78 00000000  4C 81 00 20 */	blelr 

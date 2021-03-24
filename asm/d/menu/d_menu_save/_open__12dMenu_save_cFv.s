@@ -87,7 +87,7 @@ lbl_801F0AD4:
 /* 801F0AD8 00000004  98 1F 01 BA */	stb r0, 0x1ba(r31)
 /* 801F0ADC 00000008  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801F0AE0 0000000C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801F0AE4 00000010  88 03 00 DD */	lbz r0, 0xdd(r3)
+/* 801F0AE4 00000010  88 03 00 DD */	lbz r0, 0xdd(r3)	/* effective address: 80430265 */
 /* 801F0AE8 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 801F0AEC 00000018  41 82 00 0C */	beq lbl_801F0AF8
 /* 801F0AF0 0000001C  38 80 00 01 */	li r4, 1

@@ -18,7 +18,7 @@ lbl_800FCF84:
 /* 800FCFC4 00000040  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 800FCFC8 00000044  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
 /* 800FCFCC 00000048  C0 62 95 84 */	lfs f3, lit_24618(r2)
-/* 800FCFD0 0000004C  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 800FCFD0 0000004C  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038ED8C */
 /* 800FCFD4 00000050  48 00 00 10 */	b lbl_800FCFE4
 lbl_800FCFD8:
 /* 800FCFD8 00000000  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
@@ -38,7 +38,7 @@ lbl_800FCFE4:
 /* 800FD00C 00000018  C0 0D 81 18 */	lfs f0, l_ladderAnmBaseTransY(r13)
 /* 800FD010 0000001C  D0 1F 33 B0 */	stfs f0, 0x33b0(r31)
 /* 800FD014 00000020  80 7F 20 60 */	lwz r3, 0x2060(r31)
-/* 800FD018 00000024  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800FD018 00000024  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800FD01C 00000028  38 80 00 00 */	li r4, 0
 /* 800FD020 0000002C  38 A0 00 23 */	li r5, 0x23
 /* 800FD024 00000030  4B F1 28 25 */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs

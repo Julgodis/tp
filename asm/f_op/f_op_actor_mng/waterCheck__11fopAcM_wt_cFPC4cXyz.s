@@ -25,7 +25,7 @@ lbl_8001DD84:
 /* 8001DDE0 0000005C  41 82 00 1C */	beq lbl_8001DDFC
 /* 8001DDE4 00000060  3C 60 80 3F */	lis r3, mWaterCheck__11fopAcM_wt_c@ha
 /* 8001DDE8 00000064  38 63 1D 80 */	addi r3, r3, mWaterCheck__11fopAcM_wt_c@l
-/* 8001DDEC 00000068  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 8001DDEC 00000068  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 803F1DCC */
 /* 8001DDF0 0000006C  D0 0D 87 58 */	stfs f0, mWaterY__11fopAcM_wt_c(r13)
 /* 8001DDF4 00000070  38 60 00 01 */	li r3, 1
 /* 8001DDF8 00000074  48 00 00 08 */	b lbl_8001DE00

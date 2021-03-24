@@ -41,7 +41,7 @@ lbl_800FB3AC:
 /* 800FB3BC 00000010  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800FB3C0 00000014  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wallFall_c0@ha
 /* 800FB3C4 00000018  38 63 E1 B8 */	addi r3, r3, m__22daAlinkHIO_wallFall_c0@l
-/* 800FB3C8 0000001C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800FB3C8 0000001C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E1DC */
 /* 800FB3CC 00000020  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FB3D0 00000000  40 81 00 50 */	ble lbl_800FB420
 lbl_800FB3D4:
@@ -51,7 +51,7 @@ lbl_800FB3D4:
 /* 800FB3E0 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 800FB3E4 00000010  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wallCatch_c0@ha
 /* 800FB3E8 00000014  38 84 E1 64 */	addi r4, r4, m__23daAlinkHIO_wallCatch_c0@l
-/* 800FB3EC 00000018  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 800FB3EC 00000018  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038E194 */
 /* 800FB3F0 0000001C  48 00 07 D9 */	bl procHangClimbInit__9daAlink_cFf
 /* 800FB3F4 00000020  48 00 00 2C */	b lbl_800FB420
 lbl_800FB3F8:

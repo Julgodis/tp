@@ -16,7 +16,7 @@ lbl_800D6FE0:
 /* 800D7018 00000024  EF E2 00 32 */	fmuls f31, f2, f0
 /* 800D701C 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800D7020 0000002C  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800D7024 00000030  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800D7024 00000030  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038E488 */
 /* 800D7028 00000048  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800D702C 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800D7030 00000004  40 82 00 54 */	bne lbl_800D7084
@@ -26,7 +26,7 @@ lbl_800D6FE0:
 /* 800D7040 00000014  40 82 00 44 */	bne lbl_800D7084
 /* 800D7044 00000018  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800D7048 0000001C  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800D704C 00000020  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800D704C 00000020  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038E48C */
 /* 800D7050 00000070  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800D7054 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800D7058 00000004  40 82 00 14 */	bne lbl_800D706C

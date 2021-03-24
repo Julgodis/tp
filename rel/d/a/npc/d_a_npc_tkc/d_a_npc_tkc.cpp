@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcTkc_c {
@@ -38,6 +38,7 @@ struct daNpcTkc_c {
 	/* 80B0D5A4 */ void setExpressionBtp(int);
 	/* 80B0D678 */ void reset();
 	/* 80B0DA94 */ void setMotionAnm(int, f32);
+	/* 80B0DBC8 */ void setAction(void (daNpcTkc_c::*)());
 	/* 80B0DC68 */ void wait();
 	/* 80B0DEF8 */ void calcFly();
 	/* 80B0E124 */ void searchPlayer();
@@ -182,7 +183,7 @@ extern "C" void setExpressionAnm__10daNpcTkc_cFib(); // 1
 extern "C" void setExpressionBtp__10daNpcTkc_cFi(); // 1
 extern "C" void reset__10daNpcTkc_cFv(); // 1
 extern "C" void setMotionAnm__10daNpcTkc_cFif(); // 1
-extern "C" static void setAction__10daNpcTkc_cFM10daNpcTkc_cFPCvPv_v(); // 1
+extern "C" void setAction__10daNpcTkc_cFM10daNpcTkc_cFPCvPv_v(); // 1
 extern "C" void wait__10daNpcTkc_cFv(); // 1
 extern "C" void calcFly__10daNpcTkc_cFv(); // 1
 extern "C" void searchPlayer__10daNpcTkc_cFv(); // 1
@@ -658,7 +659,7 @@ asm void daNpcTkc_c::setMotionAnm(int param_0, f32 param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daNpcTkc_cFM10daNpcTkc_cFPCvPv_v() {
+asm void daNpcTkc_c::setAction(void (daNpcTkc_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/setAction__10daNpcTkc_cFM10daNpcTkc_cFPCvPv_v.s"
 }

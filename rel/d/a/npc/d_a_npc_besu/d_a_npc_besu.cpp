@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 8053DDB8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Besu_c {
@@ -68,6 +68,8 @@ struct daNpc_Besu_c {
 	/* 805398DC */ void changeBtp(int*, int*);
 	/* 80539968 */ void changeBtk(int*, int*);
 	/* 80539994 */ void selectAction();
+	/* 80539ACC */ void chkAction(int (daNpc_Besu_c::*)(void*));
+	/* 80539AF8 */ void setAction(int (daNpc_Besu_c::*)(void*));
 	/* 80539BA0 */ void mop(int, int);
 	/* 80539CF4 */ void cutConversationAboutSaru(int);
 	/* 80539E48 */ void cutConversationAboutPachinko(int);
@@ -249,8 +251,8 @@ extern "C" void changeBck__12daNpc_Besu_cFPiPi(); // 1
 extern "C" void changeBtp__12daNpc_Besu_cFPiPi(); // 1
 extern "C" void changeBtk__12daNpc_Besu_cFPiPi(); // 1
 extern "C" void selectAction__12daNpc_Besu_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i(); // 1
 extern "C" void mop__12daNpc_Besu_cFii(); // 1
 extern "C" void cutConversationAboutSaru__12daNpc_Besu_cFi(); // 1
 extern "C" void cutConversationAboutPachinko__12daNpc_Besu_cFi(); // 1
@@ -948,7 +950,7 @@ asm void daNpc_Besu_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i() {
+asm void daNpc_Besu_c::chkAction(int (daNpc_Besu_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i.s"
 }
@@ -959,7 +961,7 @@ extern "C" asm static void chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i() {
+asm void daNpc_Besu_c::setAction(int (daNpc_Besu_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_besu/d_a_npc_besu/setAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i.s"
 }

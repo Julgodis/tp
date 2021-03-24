@@ -62,7 +62,7 @@ lbl_800B7414:
 /* 800B7470 00000018  38 84 00 40 */	addi r4, r4, 0x40
 /* 800B7474 0000001C  3C A0 80 39 */	lis r5, m__21daAlinkHIO_atnMove_c0@ha
 /* 800B7478 00000020  38 A5 D7 14 */	addi r5, r5, m__21daAlinkHIO_atnMove_c0@l
-/* 800B747C 00000024  C0 25 00 08 */	lfs f1, 8(r5)
+/* 800B747C 00000024  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 8038D71C */
 /* 800B7480 00000028  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 800B7484 0000002C  4B FF 5F 25 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800B7488 00000030  7F C3 F3 78 */	mr r3, r30

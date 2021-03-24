@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A68604 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Len_c {
@@ -58,6 +58,8 @@ struct daNpc_Len_c {
 	/* 80A65E28 */ void setCollision();
 	/* 80A65F80 */ void drawDbgInfo();
 	/* 80A65F88 */ void selectAction();
+	/* 80A66004 */ void chkAction(int (daNpc_Len_c::*)(void*));
+	/* 80A66030 */ void setAction(int (daNpc_Len_c::*)(void*));
 	/* 80A660D8 */ void checkStartDemo13StbEvt(fopAc_ac_c*, f32, f32, f32, f32, f32, f32, f32);
 	/* 80A661B4 */ void cutConversationInHotel(int);
 	/* 80A66664 */ void cutHurry(int);
@@ -227,8 +229,8 @@ extern "C" void setAttnPos__11daNpc_Len_cFv(); // 1
 extern "C" void setCollision__11daNpc_Len_cFv(); // 1
 extern "C" void drawDbgInfo__11daNpc_Len_cFv(); // 1
 extern "C" void selectAction__11daNpc_Len_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i(); // 1
 extern "C" void checkStartDemo13StbEvt__11daNpc_Len_cFP10fopAc_ac_cfffffff(); // 1
 extern "C" void cutConversationInHotel__11daNpc_Len_cFi(); // 1
 extern "C" void cutHurry__11daNpc_Len_cFi(); // 1
@@ -760,7 +762,7 @@ asm void daNpc_Len_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i() {
+asm void daNpc_Len_c::chkAction(int (daNpc_Len_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_len/d_a_npc_len/chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i.s"
 }
@@ -771,7 +773,7 @@ extern "C" asm static void chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i() {
+asm void daNpc_Len_c::setAction(int (daNpc_Len_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_len/d_a_npc_len/setAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i.s"
 }

@@ -7,8 +7,8 @@ lbl_80237F80:
 /* 80237F94 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80237F98 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80237F9C 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80237FA0 00000020  93 DF 5D BC */	stw r30, 0x5dbc(r31)
-/* 80237FA4 00000024  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)
+/* 80237FA0 00000020  93 DF 5D BC */	stw r30, 0x5dbc(r31)	/* effective address: 8040BF7C */
+/* 80237FA4 00000024  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)	/* effective address: 8040C088 */
 /* 80237FA8 00000028  4B DD 72 25 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 80237FAC 0000002C  7C 7D 1B 78 */	mr r29, r3
 /* 80237FB0 00000030  80 7F 5E C8 */	lwz r3, 0x5ec8(r31)
@@ -24,7 +24,7 @@ lbl_80237F80:
 /* 80237FD8 00000058  38 00 FF FF */	li r0, -1
 /* 80237FDC 0000005C  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80237FE0 00000060  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80237FE4 00000064  98 03 00 04 */	stb r0, 4(r3)
+/* 80237FE4 00000064  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80430290 */
 /* 80237FE8 00000068  7F A3 EB 78 */	mr r3, r29
 /* 80237FEC 0000006C  4B DD 71 E1 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 80237FF0 00000070  7F C3 F3 78 */	mr r3, r30

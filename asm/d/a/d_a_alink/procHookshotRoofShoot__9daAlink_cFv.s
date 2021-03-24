@@ -31,9 +31,9 @@ lbl_8010CDC4:
 /* 8010CDC8 00000004  98 1F 20 68 */	stb r0, 0x2068(r31)
 /* 8010CDCC 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010CDD0 0000000C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 8010CDD4 00000010  80 1E 5F 18 */	lwz r0, 0x5f18(r30)
+/* 8010CDD4 00000010  80 1E 5F 18 */	lwz r0, 0x5f18(r30)	/* effective address: 8040C0D8 */
 /* 8010CDD8 00000014  54 00 03 98 */	rlwinm r0, r0, 0, 0xe, 0xc
-/* 8010CDDC 00000018  90 1E 5F 18 */	stw r0, 0x5f18(r30)
+/* 8010CDDC 00000018  90 1E 5F 18 */	stw r0, 0x5f18(r30)	/* effective address: 8040C0D8 */
 /* 8010CDE0 0000001C  A8 1F 30 8E */	lha r0, 0x308e(r31)
 /* 8010CDE4 00000020  2C 00 00 00 */	cmpwi r0, 0
 /* 8010CDE8 00000024  41 82 00 20 */	beq lbl_8010CE08
@@ -112,7 +112,7 @@ lbl_8010CEF0:
 /* 8010CEF4 00000004  4B FF BB 25 */	bl checkHookshotWait__9daAlink_cCFv
 /* 8010CEF8 00000008  2C 03 00 00 */	cmpwi r3, 0
 /* 8010CEFC 0000000C  41 82 00 3C */	beq lbl_8010CF38
-/* 8010CF00 00000010  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8010CF00 00000010  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8010CF04 00000014  D0 1F 1F DC */	stfs f0, 0x1fdc(r31)
 /* 8010CF08 00000018  A8 1F 30 0C */	lha r0, 0x300c(r31)
 /* 8010CF0C 0000001C  2C 00 00 00 */	cmpwi r0, 0

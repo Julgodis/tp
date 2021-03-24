@@ -7,7 +7,7 @@ lbl_80313FA4:
 /* 80313FB8 00000014  7C 77 1B 78 */	mr r23, r3
 /* 80313FBC 00000018  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80313FC0 0000001C  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80313FC4 00000020  80 BC 00 38 */	lwz r5, 0x38(r28)
+/* 80313FC4 00000020  80 BC 00 38 */	lwz r5, 0x38(r28)	/* effective address: 80434B00 */
 /* 80313FC8 00000024  80 65 00 84 */	lwz r3, 0x84(r5)
 /* 80313FCC 00000028  80 83 00 34 */	lwz r4, 0x34(r3)
 /* 80313FD0 0000002C  90 8D 90 38 */	stw r4, sMtxPtrTbl__21J3DShapeMtxConcatView(r13)

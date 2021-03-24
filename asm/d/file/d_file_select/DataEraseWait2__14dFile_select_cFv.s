@@ -14,9 +14,9 @@ lbl_80189FFC:
 /* 8018A02C 00000030  38 A0 00 00 */	li r5, 0
 /* 8018A030 00000034  38 C0 00 00 */	li r6, 0
 /* 8018A034 00000038  38 E0 00 00 */	li r7, 0
-/* 8018A038 0000003C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018A038 0000003C  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018A03C 00000040  FC 40 08 90 */	fmr f2, f1
-/* 8018A040 00000044  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 8018A040 00000044  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 8018A044 00000048  FC 80 18 90 */	fmr f4, f3
 /* 8018A048 0000004C  39 00 00 00 */	li r8, 0
 /* 8018A04C 00000050  48 12 24 C1 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -35,9 +35,9 @@ lbl_8018A060:
 /* 8018A07C 0000001C  38 A0 00 00 */	li r5, 0
 /* 8018A080 00000020  38 C0 00 00 */	li r6, 0
 /* 8018A084 00000024  38 E0 00 00 */	li r7, 0
-/* 8018A088 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018A088 00000028  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018A08C 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 8018A090 00000030  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 8018A090 00000030  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 8018A094 00000034  FC 80 18 90 */	fmr f4, f3
 /* 8018A098 00000038  39 00 00 00 */	li r8, 0
 /* 8018A09C 0000003C  48 12 18 E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -73,9 +73,9 @@ lbl_8018A0F8:
 /* 8018A110 00000018  38 A0 00 00 */	li r5, 0
 /* 8018A114 0000001C  38 C0 00 00 */	li r6, 0
 /* 8018A118 00000020  38 E0 00 00 */	li r7, 0
-/* 8018A11C 00000024  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018A11C 00000024  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018A120 00000028  FC 40 08 90 */	fmr f2, f1
-/* 8018A124 0000002C  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 8018A124 0000002C  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 8018A128 00000030  FC 80 18 90 */	fmr f4, f3
 /* 8018A12C 00000034  39 00 00 00 */	li r8, 0
 /* 8018A130 00000038  48 12 18 55 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

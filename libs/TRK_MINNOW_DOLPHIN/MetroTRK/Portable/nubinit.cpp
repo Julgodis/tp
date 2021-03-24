@@ -42,7 +42,7 @@ extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803A2688-803A26A4 001B+01 s=1 e=0 z=0  None .rodata    @133                                                         */
-SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padding */] = {
+SECTION_RODATA static u8 const lit_133[27 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x47, 0x41, 0x4D,
 	0x45, 0x43, 0x55, 0x42, 0x45, 0x20, 0x76, 0x32, 0x2E, 0x36, 0x00,
 	/* padding */
@@ -73,7 +73,7 @@ extern "C" asm void TRKTerminateNub() {
 
 /* ############################################################################################## */
 /* 803A26A4-803A26B8 0010+04 s=1 e=0 z=0  None .rodata    @154                                                         */
-SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_154[16 + 4 /* padding */] = {
+SECTION_RODATA static u8 const lit_154[16 + 4 /* padding */] = {
 	0x49, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x20, 0x4E, 0x55, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

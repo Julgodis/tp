@@ -1,5 +1,5 @@
 lbl_801C0F74:
-/* 801C0F74 00000000  C0 22 A6 98 */	lfs f1, d_menu_d_menu_dmap_map__lit_3946(r2)
+/* 801C0F74 00000000  C0 22 A6 98 */	lfs f1, lit_3946(r2)
 /* 801C0F78 00000004  C0 03 00 BC */	lfs f0, 0xbc(r3)
 /* 801C0F7C 00000008  EC 41 00 24 */	fdivs f2, f1, f0
 /* 801C0F80 0000000C  C0 23 00 A0 */	lfs f1, 0xa0(r3)

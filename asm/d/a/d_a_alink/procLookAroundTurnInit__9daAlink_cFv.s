@@ -25,7 +25,7 @@ lbl_8011DE24:
 /* 8011DE28 00000004  40 82 00 20 */	bne lbl_8011DE48
 /* 8011DE2C 00000008  7F E3 FB 78 */	mr r3, r31
 /* 8011DE30 0000000C  38 80 01 86 */	li r4, 0x186
-/* 8011DE34 00000010  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011DE34 00000010  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8011DE38 00000014  38 A0 00 59 */	li r5, 0x59
 /* 8011DE3C 00000018  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8011DE40 0000001C  4B F8 F1 CD */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
@@ -35,7 +35,7 @@ lbl_8011DE48:
 /* 8011DE4C 00000004  40 82 00 68 */	bne lbl_8011DEB4
 /* 8011DE50 00000008  7F E3 FB 78 */	mr r3, r31
 /* 8011DE54 0000000C  38 80 01 86 */	li r4, 0x186
-/* 8011DE58 00000010  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011DE58 00000010  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8011DE5C 00000014  38 A0 00 5D */	li r5, 0x5d
 /* 8011DE60 00000018  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8011DE64 0000001C  4B F8 F1 A9 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf

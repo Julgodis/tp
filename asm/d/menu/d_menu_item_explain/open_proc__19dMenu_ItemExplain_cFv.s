@@ -5,11 +5,11 @@ lbl_801DBAB4:
 /* 801DBAC0 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801DBAC4 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801DBAC8 00000014  C0 23 00 BC */	lfs f1, 0xbc(r3)
-/* 801DBACC 00000018  C0 02 A8 C8 */	lfs f0, d_menu_d_menu_item_explain__lit_4452(r2)
+/* 801DBACC 00000018  C0 02 A8 C8 */	lfs f0, lit_4452(r2)
 /* 801DBAD0 0000001C  EC 01 00 2A */	fadds f0, f1, f0
 /* 801DBAD4 00000020  D0 03 00 BC */	stfs f0, 0xbc(r3)
 /* 801DBAD8 00000024  C0 23 00 BC */	lfs f1, 0xbc(r3)
-/* 801DBADC 00000028  C0 02 A8 8C */	lfs f0, d_menu_d_menu_item_explain__lit_4063(r2)
+/* 801DBADC 00000028  C0 02 A8 8C */	lfs f0, lit_4063(r2)
 /* 801DBAE0 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801DBAE4 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801DBAE8 00000004  40 82 00 10 */	bne lbl_801DBAF8
@@ -22,9 +22,9 @@ lbl_801DBAF8:
 /* 801DBB00 00000008  41 82 00 3C */	beq lbl_801DBB3C
 /* 801DBB04 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 801DBB08 00000010  48 00 0C A5 */	bl getAlphaRatio__19dMenu_ItemExplain_cFv
-/* 801DBB0C 00000014  C0 02 A8 C4 */	lfs f0, d_menu_d_menu_item_explain__lit_4348(r2)
+/* 801DBB0C 00000014  C0 02 A8 C4 */	lfs f0, lit_4348(r2)
 /* 801DBB10 00000018  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801DBB14 0000001C  C0 02 A8 CC */	lfs f0, d_menu_d_menu_item_explain__lit_4453(r2)
+/* 801DBB14 0000001C  C0 02 A8 CC */	lfs f0, lit_4453(r2)
 /* 801DBB18 00000020  EC 00 00 72 */	fmuls f0, f0, f1
 /* 801DBB1C 00000024  FC 00 00 1E */	fctiwz f0, f0
 /* 801DBB20 00000028  D8 01 00 08 */	stfd f0, 8(r1)

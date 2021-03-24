@@ -31,7 +31,7 @@ lbl_800D4CA8:
 /* 800D4CD8 00000030  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800D4CDC 00000034  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D4CE0 00000038  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D4CE4 0000003C  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 800D4CE4 0000003C  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038DEE2 */
 /* 800D4CE8 00000040  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800D4CEC 00000044  38 60 00 01 */	li r3, 1
 lbl_800D4CF0:

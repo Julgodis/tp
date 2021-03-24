@@ -47,7 +47,7 @@ lbl_800FFB28:
 /* 800FFB54 0000002C  4B FF E4 BD */	bl getClimbMoveUpDownAnmSpeed__9daAlink_cFv
 /* 800FFB58 00000030  7F C3 F3 78 */	mr r3, r30
 /* 800FFB5C 00000034  38 80 00 A2 */	li r4, 0xa2
-/* 800FFB60 00000038  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800FFB60 00000038  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800FFB64 0000003C  4B FA D4 7D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800FFB68 00000040  93 FE 32 CC */	stw r31, 0x32cc(r30)
 /* 800FFB6C 00000044  48 00 00 38 */	b lbl_800FFBA4
@@ -57,7 +57,7 @@ lbl_800FFB70:
 /* 800FFB78 00000008  88 1E 2F 98 */	lbz r0, 0x2f98(r30)
 /* 800FFB7C 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 800FFB80 00000010  40 82 00 0C */	bne lbl_800FFB8C
-/* 800FFB84 00000014  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FFB84 00000014  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FFB88 00000018  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_800FFB8C:
 /* 800FFB8C 00000000  7F C3 F3 78 */	mr r3, r30
@@ -72,13 +72,13 @@ lbl_800FFBA4:
 /* 800FFBAC 00000008  40 82 00 18 */	bne lbl_800FFBC4
 /* 800FFBB0 0000000C  38 00 E8 00 */	li r0, -6144
 /* 800FFBB4 00000010  B0 1E 30 A0 */	sth r0, 0x30a0(r30)
-/* 800FFBB8 00000014  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FFBB8 00000014  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FFBBC 00000018  D0 1E 33 F4 */	stfs f0, 0x33f4(r30)
 /* 800FFBC0 0000001C  48 00 00 14 */	b lbl_800FFBD4
 lbl_800FFBC4:
 /* 800FFBC4 00000000  38 00 28 00 */	li r0, 0x2800
 /* 800FFBC8 00000004  B0 1E 30 A0 */	sth r0, 0x30a0(r30)
-/* 800FFBCC 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FFBCC 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FFBD0 0000000C  D0 1E 33 F4 */	stfs f0, 0x33f4(r30)
 lbl_800FFBD4:
 /* 800FFBD4 00000000  38 00 00 0A */	li r0, 0xa
@@ -104,9 +104,9 @@ lbl_800FFBD4:
 /* 800FFC24 00000050  4E 80 04 21 */	bctrl 
 /* 800FFC28 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FFC2C 00000058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FFC30 0000005C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FFC30 0000005C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FFC34 00000060  60 00 00 08 */	ori r0, r0, 8
-/* 800FFC38 00000064  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FFC38 00000064  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FFC3C 00000068  38 60 00 01 */	li r3, 1
 /* 800FFC40 0000006C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800FFC44 00000070  83 C1 00 08 */	lwz r30, 8(r1)

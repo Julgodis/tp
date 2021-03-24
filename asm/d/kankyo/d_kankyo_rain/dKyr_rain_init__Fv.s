@@ -6,9 +6,9 @@ lbl_8005CC5C:
 /* 8005CC6C 00000010  48 30 55 71 */	bl _savegpr_29
 /* 8005CC70 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8005CC74 00000018  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 8005CC78 0000001C  83 A5 5D 74 */	lwz r29, 0x5d74(r5)
-/* 8005CC7C 00000020  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8005CC80 00000024  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8005CC78 0000001C  83 A5 5D 74 */	lwz r29, 0x5d74(r5)	/* effective address: 8040BF34 */
+/* 8005CC7C 00000020  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8005CC80 00000024  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8005CC84 00000028  38 63 00 10 */	addi r3, r3, 0x10
 /* 8005CC88 0000002C  38 80 00 4A */	li r4, 0x4a
 /* 8005CC8C 00000030  3F C5 00 02 */	addis r30, r5, 2
@@ -18,10 +18,10 @@ lbl_8005CC5C:
 /* 8005CC9C 00000040  4B FD F6 51 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 8005CCA0 00000044  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8005CCA4 00000048  3B E4 CA 54 */	addi r31, r4, g_env_light@l
-/* 8005CCA8 0000004C  80 9F 0E 84 */	lwz r4, 0xe84(r31)
-/* 8005CCAC 00000050  90 64 00 10 */	stw r3, 0x10(r4)
-/* 8005CCB0 00000054  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8005CCB4 00000058  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8005CCA8 0000004C  80 9F 0E 84 */	lwz r4, 0xe84(r31)	/* effective address: 8042D8D8 */
+/* 8005CCAC 00000050  90 64 00 10 */	stw r3, 0x10(r4)	/* effective address: 80430010 */
+/* 8005CCB0 00000054  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8005CCB4 00000058  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8005CCB8 0000005C  38 63 00 10 */	addi r3, r3, 0x10
 /* 8005CCBC 00000060  38 80 00 57 */	li r4, 0x57
 /* 8005CCC0 00000064  7F C5 F3 78 */	mr r5, r30
@@ -43,7 +43,7 @@ lbl_8005CC5C:
 /* 8005CD00 000000A4  D0 03 36 E8 */	stfs f0, 0x36e8(r3)
 /* 8005CD04 000000A8  C0 1D 00 EC */	lfs f0, 0xec(r29)
 /* 8005CD08 000000AC  D0 03 36 EC */	stfs f0, 0x36ec(r3)
-/* 8005CD0C 000000B0  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
+/* 8005CD0C 000000B0  C0 02 87 B8 */	lfs f0, lit_3954(r2)
 /* 8005CD10 000000B4  80 7F 0E 84 */	lwz r3, 0xe84(r31)
 /* 8005CD14 000000B8  D0 03 36 FC */	stfs f0, 0x36fc(r3)
 /* 8005CD18 000000BC  80 7F 0E 84 */	lwz r3, 0xe84(r31)

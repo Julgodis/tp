@@ -34,7 +34,7 @@ lbl_8011F8E8:
 lbl_8011F934:
 /* 8011F934 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8011F938 00000004  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-/* 8011F93C 00000008  88 7E 00 4E */	lbz r3, 0x4e(r30)
+/* 8011F93C 00000008  88 7E 00 4E */	lbz r3, 0x4e(r30)	/* effective address: 804301D6 */
 /* 8011F940 0000000C  38 80 00 00 */	li r4, 0
 /* 8011F944 00000010  38 A0 00 CA */	li r5, 0xca
 /* 8011F948 00000014  38 C0 00 00 */	li r6, 0
@@ -46,7 +46,7 @@ lbl_8011F934:
 /* 8011F960 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011F964 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8011F968 00000034  38 63 0E D8 */	addi r3, r3, 0xed8
-/* 8011F96C 00000038  88 A5 00 50 */	lbz r5, 0x50(r5)
+/* 8011F96C 00000038  88 A5 00 50 */	lbz r5, 0x50(r5)	/* effective address: 804301D8 */
 /* 8011F970 0000003C  88 1E 00 4E */	lbz r0, 0x4e(r30)
 /* 8011F974 00000040  7C 06 07 74 */	extsb r6, r0
 /* 8011F978 00000044  4B F1 56 2D */	bl set__17dSv_turnRestart_cFRC4cXyzsScUl

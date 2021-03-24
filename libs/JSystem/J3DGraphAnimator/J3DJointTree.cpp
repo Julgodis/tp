@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct J3DShapeTable {
-};
-
-struct J3DMtxBuffer {
-};
-
 struct Vec {
-};
-
-struct J3DModelHierarchy {
 };
 
 struct J3DJoint {
@@ -28,7 +19,16 @@ struct J3DJoint {
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
+struct J3DShapeTable {
+};
+
 struct J3DMaterialTable {
+};
+
+struct J3DModelHierarchy {
+};
+
+struct J3DMtxBuffer {
 };
 
 struct J3DJointTree {

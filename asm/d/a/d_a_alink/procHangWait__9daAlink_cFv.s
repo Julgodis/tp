@@ -32,7 +32,7 @@ lbl_800FB570:
 /* 800FB5B8 00000048  90 01 00 08 */	stw r0, 8(r1)
 /* 800FB5BC 0000004C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 800FB5C0 00000050  EC 40 10 28 */	fsubs f2, f0, f2
-/* 800FB5C4 00000054  C0 62 93 30 */	lfs f3, d_a_d_a_alink__lit_7625(r2)
+/* 800FB5C4 00000054  C0 62 93 30 */	lfs f3, lit_7625(r2)
 /* 800FB5C8 00000058  4B FB 1A 45 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 lbl_800FB5CC:
 /* 800FB5CC 00000000  C0 3D 33 AC */	lfs f1, 0x33ac(r29)
@@ -46,7 +46,7 @@ lbl_800FB5CC:
 /* 800FB5EC 00000014  7F A3 EB 78 */	mr r3, r29
 /* 800FB5F0 00000018  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wallCatch_c0@ha
 /* 800FB5F4 0000001C  38 84 E1 64 */	addi r4, r4, m__23daAlinkHIO_wallCatch_c0@l
-/* 800FB5F8 00000020  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 800FB5F8 00000020  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038E194 */
 /* 800FB5FC 00000024  48 00 05 CD */	bl procHangClimbInit__9daAlink_cFf
 /* 800FB600 00000028  48 00 00 38 */	b lbl_800FB638
 lbl_800FB604:

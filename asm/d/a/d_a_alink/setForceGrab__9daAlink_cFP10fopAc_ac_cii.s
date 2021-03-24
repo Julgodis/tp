@@ -72,7 +72,7 @@ lbl_800E3B70:
 /* 800E3B94 00000024  7F A3 EB 78 */	mr r3, r29
 /* 800E3B98 00000028  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800E3B9C 0000002C  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800E3BA0 00000030  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 800E3BA0 00000030  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 800E3BA4 00000034  48 00 02 19 */	bl setGrabUpperAnime__9daAlink_cFf
 /* 800E3BA8 00000038  38 60 00 01 */	li r3, 1
 /* 800E3BAC 0000003C  48 00 00 08 */	b lbl_800E3BB4

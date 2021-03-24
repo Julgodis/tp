@@ -14,8 +14,8 @@ lbl_801BA0BC:
 /* 801BA0EC 00000030  90 1F 00 04 */	stw r0, 4(r31)
 /* 801BA0F0 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801BA0F4 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801BA0F8 0000003C  80 63 5C C0 */	lwz r3, 0x5cc0(r3)
-/* 801BA0FC 00000040  81 83 00 00 */	lwz r12, 0(r3)
+/* 801BA0F8 0000003C  80 63 5C C0 */	lwz r3, 0x5cc0(r3)	/* effective address: 8040BE80 */
+/* 801BA0FC 00000040  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801BA100 00000044  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 801BA104 00000048  7D 89 03 A6 */	mtctr r12
 /* 801BA108 0000004C  4E 80 04 21 */	bctrl 

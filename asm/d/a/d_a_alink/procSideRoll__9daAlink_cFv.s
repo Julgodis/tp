@@ -54,7 +54,7 @@ lbl_800C5544:
 /* 800C5548 00000004  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 800C554C 00000008  41 82 00 10 */	beq lbl_800C555C
 /* 800C5550 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 800C5554 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C5554 00000010  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C5558 00000014  48 01 7A B1 */	bl setUpperGuardAnime__9daAlink_cFf
 lbl_800C555C:
 /* 800C555C 00000000  7F A3 EB 78 */	mr r3, r29
@@ -103,7 +103,7 @@ lbl_800C55DC:
 /* 800C55F8 0000001C  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 800C55FC 00000020  3C 60 80 39 */	lis r3, m__22daAlinkHIO_turnMove_c0@ha
 /* 800C5600 00000024  38 63 DF 70 */	addi r3, r3, m__22daAlinkHIO_turnMove_c0@l
-/* 800C5604 00000028  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800C5604 00000028  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038DF80 */
 /* 800C5608 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C560C 00000000  40 81 00 10 */	ble lbl_800C561C
 /* 800C5610 00000004  7F E3 FB 78 */	mr r3, r31
@@ -113,7 +113,7 @@ lbl_800C561C:
 /* 800C561C 00000000  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 800C5620 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_turnMove_c0@ha
 /* 800C5624 00000008  38 63 DF 70 */	addi r3, r3, m__22daAlinkHIO_turnMove_c0@l
-/* 800C5628 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800C5628 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038DF80 */
 /* 800C562C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C5630 00000000  40 81 00 38 */	ble lbl_800C5668
 /* 800C5634 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -137,7 +137,7 @@ lbl_800C5668:
 /* 800C5678 00000010  41 82 00 34 */	beq lbl_800C56AC
 /* 800C567C 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C5680 00000018  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800C5684 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C5684 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C5688 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800C568C 00000024  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800C5690 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

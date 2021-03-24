@@ -16,20 +16,14 @@ struct daObj_KagHIO_c {
 	/* 80C31060 */ ~daObj_KagHIO_c();
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DFrameCtrl {
-	/* 80C2E714 */ ~J3DFrameCtrl();
+struct csXyz {
 };
 
 struct cXyz {
 };
 
-struct csXyz {
-};
-
 struct daObjKAG_c {
+	/* 80C2E434 */ void setAction(void (daObjKAG_c::*)());
 	/* 80C2E7A0 */ void Kag_Bgcheck(cXyz*, csXyz*, cXyz*);
 	/* 80C2EA40 */ void fly();
 	/* 80C2F764 */ void wait();
@@ -46,6 +40,13 @@ struct daObjKAG_c {
 	/* 80C30754 */ void setBaseMtx();
 	/* 80C308F0 */ void create();
 	/* 80C30E54 */ void kag_setParticle();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	/* 80C2E714 */ ~J3DFrameCtrl();
 };
 
 struct cM3dGPla {
@@ -84,7 +85,7 @@ static void daObjKAG_Execute(daObjKAG_c*); // 2
 void daObjKAG_IsDelete(daObjKAG_c*); // 2
 
 extern "C" void __ct__14daObj_KagHIO_cFv(); // 1
-extern "C" static void setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v(); // 1
+extern "C" void setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v(); // 1
 extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void daObjKAG_Create__FP10fopAc_ac_c(); // 1
@@ -232,7 +233,7 @@ asm daObj_KagHIO_c::daObj_KagHIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v() {
+asm void daObjKAG_c::setAction(void (daObjKAG_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kag/d_a_obj_kag/setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v.s"
 }

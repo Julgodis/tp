@@ -16,7 +16,7 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct J2DAnmTextureSRTKey {
@@ -26,7 +26,7 @@ struct J2DAnmTransformKey {
 	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct J2DAnmColor {
@@ -56,6 +56,9 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -64,9 +67,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -113,7 +113,7 @@ extern "C" void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey(); // 
 extern "C" void moveCenter__16dSelect_cursor_cFP7J2DPaneff(); // 1
 extern "C" void __dt__19dSelect_cursorHIO_cFv(); // 1
 extern "C" void __dt__18J2DAnmTransformKeyFv(); // 1
-extern "C" extern char const* const d_d_select_cursor__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* data_803BB70C[4];
 extern "C" extern void* data_803BB71C[4];
 extern "C" extern void* data_803BB72C[4];
@@ -216,48 +216,48 @@ SECTION_DEAD static char const* const pad_80394C0D = "\0\0";
 #pragma pop
 
 /* 803BB700-803BB70C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_d_select_cursor__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803BB70C-803BB71C 0010+00 s=0 e=0 z=0  None .data      blo_name$3684                                                */
 SECTION_DATA void* data_803BB70C[4] = {
-	/* 0    */ (void*)&d_d_select_cursor__stringBase0,
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x1F),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x3B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x5C),
+	/* 0    */ (void*)&stringBase0,
+	/* 1    */ (void*)(((char*)&stringBase0)+0x1F),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x3B),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x5C),
 };
 
 /* 803BB71C-803BB72C 0010+00 s=0 e=0 z=0  None .data      bck_name$3685                                                */
 SECTION_DATA void* data_803BB71C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7C),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x7C),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
 };
 
 /* 803BB72C-803BB73C 0010+00 s=0 e=0 z=0  None .data      bpk_name$3686                                                */
 SECTION_DATA void* data_803BB72C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x98),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xB7),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xD3),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xF4),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x98),
+	/* 1    */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 2    */ (void*)(((char*)&stringBase0)+0xD3),
+	/* 3    */ (void*)(((char*)&stringBase0)+0xF4),
 };
 
 /* 803BB73C-803BB74C 0010+00 s=0 e=0 z=0  None .data      btk_name$3687                                                */
 SECTION_DATA void* data_803BB73C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x113),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x132),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x113),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x132),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
 };
 
 /* 803BB74C-803BB78C 0010+30 s=0 e=0 z=0  None .data      btk2_name$3688                                               */
 SECTION_DATA void* data_803BB74C[4 + 12 /* padding */] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x14E),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x14E),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x7B),
 	/* padding */
 	NULL,
 	NULL,
@@ -313,7 +313,7 @@ asm dSelect_cursorHIO_c::dSelect_cursorHIO_c() {
 
 /* ############################################################################################## */
 /* 80453A50-80453A54 0004+00 s=4 e=0 z=0  None .sdata2    @3808                                                        */
-SECTION_SDATA2 static u8 d_d_select_cursor__lit_3808[4] = {
+SECTION_SDATA2 static u8 lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -352,10 +352,10 @@ asm void dSelect_cursor_c::draw() {
 
 /* ############################################################################################## */
 /* 80453A54-80453A58 0004+00 s=3 e=0 z=0  None .sdata2    @4062                                                        */
-SECTION_SDATA2 static f32 d_d_select_cursor__lit_4062 = 0.5f;
+SECTION_SDATA2 static f32 lit_4062 = 0.5f;
 
 /* 80453A58-80453A60 0008+00 s=3 e=0 z=0  None .sdata2    @4064                                                        */
-SECTION_SDATA2 static f64 d_d_select_cursor__lit_4064 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4064 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80194CC0-801950F4 0434+00 s=1 e=0 z=0  None .text      update__16dSelect_cursor_cFv                                 */
 #pragma push
@@ -370,7 +370,7 @@ asm void dSelect_cursor_c::update() {
 
 /* ############################################################################################## */
 /* 80453A60-80453A64 0004+00 s=1 e=0 z=0  None .sdata2    @4089                                                        */
-SECTION_SDATA2 static f32 d_d_select_cursor__lit_4089 = -1.0f;
+SECTION_SDATA2 static f32 lit_4089 = -1.0f;
 
 /* 801950F4-801951B0 00BC+00 s=0 e=30 z=0  None .text      setPos__16dSelect_cursor_cFffP7J2DPaneb                      */
 #pragma push
@@ -418,7 +418,7 @@ asm void dSelect_cursor_c::setAlphaRate(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80453A64-80453A68 0004+00 s=2 e=0 z=0  None .sdata2    @4157                                                        */
-SECTION_SDATA2 static f32 d_d_select_cursor__lit_4157 = 5.0f;
+SECTION_SDATA2 static f32 lit_4157 = 5.0f;
 
 /* 80195330-801953CC 009C+00 s=0 e=1 z=0  None .text      addAlpha__16dSelect_cursor_cFv                               */
 #pragma push
@@ -466,7 +466,7 @@ asm void dSelect_cursor_c::setBtk0Animation(J2DAnmTextureSRTKey* param_0) {
 
 /* ############################################################################################## */
 /* 80453A68-80453A6C 0004+00 s=1 e=0 z=0  None .sdata2    @4237                                                        */
-SECTION_SDATA2 static f32 d_d_select_cursor__lit_4237 = 20.0f;
+SECTION_SDATA2 static f32 lit_4237 = 20.0f;
 
 /* 80453A6C-80453A70 0004+00 s=1 e=0 z=0  None .sdata2    @4238                                                        */
 SECTION_SDATA2 static f32 lit_4238 = 10.0f;

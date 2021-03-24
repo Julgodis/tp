@@ -9,7 +9,7 @@ lbl_80162D38:
 /* 80162D54 00000008  7C 7E 1B 78 */	mr r30, r3
 /* 80162D58 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80162D5C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80162D60 00000014  80 83 5D B4 */	lwz r4, 0x5db4(r3)
+/* 80162D60 00000014  80 83 5D B4 */	lwz r4, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 80162D64 00000018  80 AD 8A 98 */	lwz r5, m_midnaActor__9daPy_py_c(r13)
 /* 80162D68 0000001C  38 60 00 00 */	li r3, 0
 /* 80162D6C 00000020  80 04 05 70 */	lwz r0, 0x570(r4)
@@ -23,10 +23,10 @@ lbl_80162D88:
 /* 80162D88 00000000  98 7E 01 94 */	stb r3, 0x194(r30)
 /* 80162D8C 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80162D90 00000008  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80162D94 0000000C  80 7F 5D 7C */	lwz r3, 0x5d7c(r31)
+/* 80162D94 0000000C  80 7F 5D 7C */	lwz r3, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162D98 00000010  38 00 F7 FB */	li r0, -2053
 /* 80162D9C 00000014  7C 60 00 38 */	and r0, r3, r0
-/* 80162DA0 00000018  90 1F 5D 7C */	stw r0, 0x5d7c(r31)
+/* 80162DA0 00000018  90 1F 5D 7C */	stw r0, 0x5d7c(r31)	/* effective address: 8040BF3C */
 /* 80162DA4 0000001C  80 9E 06 0C */	lwz r4, 0x60c(r30)
 /* 80162DA8 00000020  3C 60 EF E9 */	lis r3, 0xEFE9 /* 0xEFE973DE@ha */
 /* 80162DAC 00000024  38 03 73 DE */	addi r0, r3, 0x73DE /* 0xEFE973DE@l */
@@ -39,7 +39,7 @@ lbl_80162D88:
 /* 80162DC8 00000040  90 1F 5D 7C */	stw r0, 0x5d7c(r31)
 /* 80162DCC 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80162DD0 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80162DD4 0000004C  80 03 51 84 */	lwz r0, 0x5184(r3)
+/* 80162DD4 0000004C  80 03 51 84 */	lwz r0, 0x5184(r3)	/* effective address: 8040B344 */
 /* 80162DD8 00000050  2C 00 00 00 */	cmpwi r0, 0
 /* 80162DDC 00000054  40 82 00 10 */	bne lbl_80162DEC
 /* 80162DE0 00000058  80 1E 06 0C */	lwz r0, 0x60c(r30)
@@ -49,7 +49,7 @@ lbl_80162DEC:
 /* 80162DEC 00000000  80 9E 06 8C */	lwz r4, 0x68c(r30)
 /* 80162DF0 00000004  3C 60 80 43 */	lis r3, data_8042C8F8@ha
 /* 80162DF4 00000008  3B A3 C8 F8 */	addi r29, r3, data_8042C8F8@l
-/* 80162DF8 0000000C  80 1D 00 04 */	lwz r0, 4(r29)
+/* 80162DF8 0000000C  80 1D 00 04 */	lwz r0, 4(r29)	/* effective address: 8042C8FC */
 /* 80162DFC 00000010  7C 04 00 00 */	cmpw r4, r0
 /* 80162E00 00000014  41 82 00 48 */	beq lbl_80162E48
 /* 80162E04 00000018  7F C3 F3 78 */	mr r3, r30

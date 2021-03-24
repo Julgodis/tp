@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -28,16 +21,23 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct fopAc_ac_c {
+struct mesg_flow_node_branch {
 };
 
-struct mesg_flow_node_branch {
+struct fopAc_ac_c {
 };
 
 struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A528 */ void getEventId(int*);
 	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dShopSystem_c {
@@ -110,16 +110,16 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -272,19 +272,7 @@ extern "C" void __sinit_d_shop_system_cpp(); // 1
 extern "C" void beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" void beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" void getResName2__13dShopSystem_cFi(); // 1
-extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
-extern "C" extern void* d_shop_d_shop_system__lit_4056[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4057[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4058[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4059[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4060[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4061[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4062[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4063[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4064[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4065[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4066[3];
-extern "C" extern void* d_shop_d_shop_system__lit_4067[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -431,7 +419,7 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803BB898-803BB8A4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_shop_d_shop_system__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -490,19 +478,19 @@ asm static void dShopSystem_searchCameraActor(void* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 80453B00-80453B04 0004+00 s=1 e=0 z=0  None .sdata2    @4097                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4097 = 9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4097 = 9.0f / 10.0f;
 
 /* 80453B04-80453B08 0004+00 s=2 e=0 z=0  None .sdata2    @4098                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4098 = 0.5f;
+SECTION_SDATA2 static f32 lit_4098 = 0.5f;
 
 /* 80453B08-80453B0C 0004+00 s=5 e=0 z=0  None .sdata2    @4099                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4099 = 1.0f;
+SECTION_SDATA2 static f32 lit_4099 = 1.0f;
 
 /* 80453B0C-80453B10 0004+00 s=1 e=0 z=0  None .sdata2    @4100                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4100 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4100 = 1.0f / 10.0f;
 
 /* 80453B10-80453B14 0004+00 s=1 e=0 z=0  None .sdata2    @4101                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4101 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4101 = 7.0f / 10.0f;
 
 /* 80197338-801974E4 01AC+00 s=0 e=0 z=0  None .text      initShopSystem__13dShopSystem_cFv                            */
 #pragma push
@@ -523,92 +511,92 @@ SECTION_DATA static u8 item_seira_shop[36] = {
 	0xC2, 0xE6, 0x00, 0x00,
 };
 
-/* 803BB8E4-803BB8F0 000C+00 s=0 e=0 z=0  None .data      @4056                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4056[3] = {
+/* 803BB8E4-803BB8F0 000C+00 s=1 e=0 z=0  None .data      @4056                                                        */
+SECTION_DATA static void* lit_4056[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB8F0-803BB8FC 000C+00 s=0 e=0 z=0  None .data      @4057                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4057[3] = {
+/* 803BB8F0-803BB8FC 000C+00 s=1 e=0 z=0  None .data      @4057                                                        */
+SECTION_DATA static void* lit_4057[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB8FC-803BB908 000C+00 s=0 e=0 z=0  None .data      @4058                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4058[3] = {
+/* 803BB8FC-803BB908 000C+00 s=1 e=0 z=0  None .data      @4058                                                        */
+SECTION_DATA static void* lit_4058[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB908-803BB914 000C+00 s=0 e=0 z=0  None .data      @4059                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4059[3] = {
+/* 803BB908-803BB914 000C+00 s=1 e=0 z=0  None .data      @4059                                                        */
+SECTION_DATA static void* lit_4059[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB914-803BB920 000C+00 s=0 e=0 z=0  None .data      @4060                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4060[3] = {
+/* 803BB914-803BB920 000C+00 s=1 e=0 z=0  None .data      @4060                                                        */
+SECTION_DATA static void* lit_4060[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB920-803BB92C 000C+00 s=0 e=0 z=0  None .data      @4061                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4061[3] = {
+/* 803BB920-803BB92C 000C+00 s=1 e=0 z=0  None .data      @4061                                                        */
+SECTION_DATA static void* lit_4061[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB92C-803BB938 000C+00 s=0 e=0 z=0  None .data      @4062                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4062[3] = {
+/* 803BB92C-803BB938 000C+00 s=1 e=0 z=0  None .data      @4062                                                        */
+SECTION_DATA static void* lit_4062[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB938-803BB944 000C+00 s=0 e=0 z=0  None .data      @4063                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4063[3] = {
+/* 803BB938-803BB944 000C+00 s=1 e=0 z=0  None .data      @4063                                                        */
+SECTION_DATA static void* lit_4063[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB944-803BB950 000C+00 s=0 e=0 z=0  None .data      @4064                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4064[3] = {
+/* 803BB944-803BB950 000C+00 s=1 e=0 z=0  None .data      @4064                                                        */
+SECTION_DATA static void* lit_4064[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB950-803BB95C 000C+00 s=0 e=0 z=0  None .data      @4065                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4065[3] = {
+/* 803BB950-803BB95C 000C+00 s=1 e=0 z=0  None .data      @4065                                                        */
+SECTION_DATA static void* lit_4065[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB95C-803BB968 000C+00 s=0 e=0 z=0  None .data      @4066                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4066[3] = {
+/* 803BB95C-803BB968 000C+00 s=1 e=0 z=0  None .data      @4066                                                        */
+SECTION_DATA static void* lit_4066[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB968-803BB974 000C+00 s=0 e=0 z=0  None .data      @4067                                                        */
-SECTION_DATA void* d_shop_d_shop_system__lit_4067[3] = {
+/* 803BB968-803BB974 000C+00 s=1 e=0 z=0  None .data      @4067                                                        */
+SECTION_DATA static void* lit_4067[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB974-803BBA7C 0090+78 s=1 e=0 z=0  None .data      process                                                      */
-SECTION_DATA static u8 d_shop_d_shop_system__process[144 + 120 /* padding */] = {
+/* 803BB974-803BBA7C 0090+78 s=2 e=0 z=0  None .data      process                                                      */
+SECTION_DATA static u8 process[144 + 120 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -777,16 +765,16 @@ asm void dShopSystem_c::checkController(u8 param_0, dMsgFlow_c* param_1) {
 
 /* ############################################################################################## */
 /* 80453B14-80453B18 0004+00 s=4 e=0 z=0  None .sdata2    @4493                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4493 = -1.0f;
+SECTION_SDATA2 static f32 lit_4493 = -1.0f;
 
 /* 80453B18-80453B1C 0004+00 s=8 e=0 z=0  None .sdata2    @4494                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4494 = 0.25f;
+SECTION_SDATA2 static f32 lit_4494 = 0.25f;
 
 /* 80453B1C-80453B20 0004+00 s=9 e=0 z=0  None .sdata2    @4495                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4495 = 20.0f;
+SECTION_SDATA2 static f32 lit_4495 = 20.0f;
 
 /* 80453B20-80453B24 0004+00 s=9 e=0 z=0  None .sdata2    @4496                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4496 = 5.0f;
+SECTION_SDATA2 static f32 lit_4496 = 5.0f;
 
 /* 80197808-80197DD0 05C8+00 s=1 e=0 z=0  None .text      chooseItem3__13dShopSystem_cFUc                              */
 #pragma push
@@ -890,10 +878,10 @@ SECTION_DEAD static char const* const pad_80394C26 = "\0";
 #pragma pop
 
 /* 80453B24-80453B28 0004+00 s=1 e=0 z=0  None .sdata2    @5000                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5000 = -25.0f;
+SECTION_SDATA2 static f32 lit_5000 = -25.0f;
 
 /* 80453B28-80453B2C 0004+00 s=1 e=0 z=0  None .sdata2    @5001                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5001 = 150.0f;
+SECTION_SDATA2 static f32 lit_5001 = 150.0f;
 
 /* 80453B2C-80453B30 0004+00 s=1 e=0 z=0  None .sdata2    @5002                                                        */
 SECTION_SDATA2 static f32 lit_5002 = -50.0f;
@@ -994,7 +982,7 @@ SECTION_SDATA2 static f32 lit_5296[1 + 1 /* padding */] = {
 };
 
 /* 80453B50-80453B58 0008+00 s=1 e=0 z=0  None .sdata2    @5298                                                        */
-SECTION_SDATA2 static f64 d_shop_d_shop_system__lit_5298 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_5298 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80199A18-80199BF8 01E0+00 s=1 e=0 z=0  None .text      seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
@@ -1190,7 +1178,7 @@ SECTION_SDATA2 static f32 lit_5689 = 10.0f;
 SECTION_SDATA2 static f32 lit_5690 = 225.0f;
 
 /* 80453B70-80453B74 0004+00 s=1 e=0 z=0  None .sdata2    @5691                                                        */
-SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5691 = 370.0f;
+SECTION_SDATA2 static f32 lit_5691 = 370.0f;
 
 /* 80453B74-80453B78 0004+00 s=1 e=0 z=0  None .sdata2    @5692                                                        */
 SECTION_SDATA2 static f32 lit_5692 = -180.0f;

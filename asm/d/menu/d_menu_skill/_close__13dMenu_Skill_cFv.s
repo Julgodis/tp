@@ -8,7 +8,7 @@ lbl_801F7C1C:
 /* 801F7C34 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 801F7C38 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801F7C3C 0000000C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 801F7C40 00000010  A8 A3 0A 68 */	lha r5, 0xa68(r3)
+/* 801F7C40 00000010  A8 A3 0A 68 */	lha r5, 0xa68(r3)	/* effective address: 8042F630 */
 /* 801F7C44 00000014  38 60 00 00 */	li r3, 0
 /* 801F7C48 00000018  B0 7F 02 00 */	sth r3, 0x200(r31)
 /* 801F7C4C 0000001C  A8 9F 02 00 */	lha r4, 0x200(r31)
@@ -18,7 +18,7 @@ lbl_801F7C1C:
 /* 801F7C5C 0000002C  98 7F 02 04 */	stb r3, 0x204(r31)
 /* 801F7C60 00000030  80 7F 01 5C */	lwz r3, 0x15c(r31)
 /* 801F7C64 00000034  80 63 00 04 */	lwz r3, 4(r3)
-/* 801F7C68 00000038  C0 02 AA 88 */	lfs f0, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F7C68 00000038  C0 02 AA 88 */	lfs f0, lit_3808(r2)
 /* 801F7C6C 0000003C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 801F7C70 00000040  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 801F7C74 00000044  81 83 00 00 */	lwz r12, 0(r3)
@@ -26,15 +26,15 @@ lbl_801F7C1C:
 /* 801F7C7C 0000004C  7D 89 03 A6 */	mtctr r12
 /* 801F7C80 00000050  4E 80 04 21 */	bctrl 
 /* 801F7C84 00000054  80 7F 01 5C */	lwz r3, 0x15c(r31)
-/* 801F7C88 00000058  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F7C88 00000058  C0 22 AA 88 */	lfs f1, lit_3808(r2)
 /* 801F7C8C 0000005C  48 05 DB 45 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F7C90 00000060  7F E3 FB 78 */	mr r3, r31
 /* 801F7C94 00000064  48 00 12 09 */	bl setCursorPos__13dMenu_Skill_cFv
 /* 801F7C98 00000068  80 7F 01 98 */	lwz r3, 0x198(r31)
-/* 801F7C9C 0000006C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F7C9C 0000006C  C0 22 AA 88 */	lfs f1, lit_3808(r2)
 /* 801F7CA0 00000070  4B F9 D6 01 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F7CA4 00000074  80 7F 01 98 */	lwz r3, 0x198(r31)
-/* 801F7CA8 00000078  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F7CA8 00000078  C0 22 AA 88 */	lfs f1, lit_3808(r2)
 /* 801F7CAC 0000007C  4B F9 D5 1D */	bl setScale__16dSelect_cursor_cFf
 /* 801F7CB0 00000080  38 60 00 01 */	li r3, 1
 /* 801F7CB4 00000084  48 00 00 88 */	b lbl_801F7D3C

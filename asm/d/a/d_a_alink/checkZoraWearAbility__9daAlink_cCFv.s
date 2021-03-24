@@ -6,7 +6,7 @@ lbl_800BFDB0:
 /* 800BFDC0 00000010  40 82 00 1C */	bne lbl_800BFDDC
 /* 800BFDC4 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800BFDC8 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800BFDCC 0000001C  88 04 00 13 */	lbz r0, 0x13(r4)
+/* 800BFDCC 0000001C  88 04 00 13 */	lbz r0, 0x13(r4)	/* effective address: 804061D3 */
 /* 800BFDD0 00000020  28 00 00 31 */	cmplwi r0, 0x31
 /* 800BFDD4 00000024  40 82 00 08 */	bne lbl_800BFDDC
 /* 800BFDD8 00000028  38 C0 00 01 */	li r6, 1

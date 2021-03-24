@@ -221,8 +221,8 @@ lbl_801D85EC:
 lbl_801D8610:
 /* 801D8610 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801D8614 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801D8618 00000008  80 63 5C 6C */	lwz r3, 0x5c6c(r3)
-/* 801D861C 0000000C  81 83 00 00 */	lwz r12, 0(r3)
+/* 801D8618 00000008  80 63 5C 6C */	lwz r3, 0x5c6c(r3)	/* effective address: 8040BE2C */
+/* 801D861C 0000000C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801D8620 00000010  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 801D8624 00000014  7D 89 03 A6 */	mtctr r12
 /* 801D8628 00000018  4E 80 04 21 */	bctrl 

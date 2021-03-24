@@ -5,12 +5,12 @@ lbl_80157524:
 /* 80157530 0000000C  88 03 09 E8 */	lbz r0, 0x9e8(r3)
 /* 80157534 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 80157538 00000014  54 84 18 38 */	slwi r4, r4, 3
-/* 8015753C 00000018  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd__l_bmdTbl@ha
-/* 80157540 0000001C  38 03 3C 04 */	addi r0, r3, a_npc_d_a_npc_cd__l_bmdTbl@l
+/* 8015753C 00000018  3C 60 80 3B */	lis r3, l_bmdTbl@ha
+/* 80157540 0000001C  38 03 3C 04 */	addi r0, r3, l_bmdTbl@l
 /* 80157544 00000020  7C A0 22 14 */	add r5, r0, r4
 /* 80157548 00000024  41 82 00 10 */	beq lbl_80157558
-/* 8015754C 00000028  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd__l_bmdTWTbl@ha
-/* 80157550 0000002C  38 03 3C F4 */	addi r0, r3, a_npc_d_a_npc_cd__l_bmdTWTbl@l
+/* 8015754C 00000028  3C 60 80 3B */	lis r3, l_bmdTWTbl@ha
+/* 80157550 0000002C  38 03 3C F4 */	addi r0, r3, l_bmdTWTbl@l
 /* 80157554 00000030  7C A0 22 14 */	add r5, r0, r4
 lbl_80157558:
 /* 80157558 00000000  80 65 00 00 */	lwz r3, 0(r5)

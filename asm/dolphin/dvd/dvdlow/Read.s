@@ -12,7 +12,7 @@ lbl_80347A88:
 /* 80347AB0 00000028  3B 83 00 00 */	addi r28, r3, 0
 /* 80347AB4 0000002C  90 0D 91 90 */	stw r0, StopAtNextInt(r13)
 /* 80347AB8 00000030  38 00 00 01 */	li r0, 1
-/* 80347ABC 00000034  90 CD 91 98 */	stw r6, dvdlow__Callback(r13)
+/* 80347ABC 00000034  90 CD 91 98 */	stw r6, Callback(r13)
 /* 80347AC0 00000038  3C C0 80 45 */	lis r6, CommandList@ha
 /* 80347AC4 0000003C  3B E6 C8 30 */	addi r31, r6, CommandList@l
 /* 80347AC8 00000040  90 0D 91 D0 */	stw r0, LastCommandWasRead(r13)
@@ -23,16 +23,16 @@ lbl_80347A88:
 /* 80347ADC 00000054  90 6D 91 C8 */	stw r3, LastReadIssued(r13)
 /* 80347AE0 00000058  38 84 60 00 */	addi r4, r4, 0x6000 /* 0xCC006000@l */
 /* 80347AE4 0000005C  3C 60 A8 00 */	lis r3, 0xa800
-/* 80347AE8 00000060  90 64 00 08 */	stw r3, 8(r4)
+/* 80347AE8 00000060  90 64 00 08 */	stw r3, 8(r4)	/* effective address: CC006008 */
 /* 80347AEC 00000064  57 C3 F0 BE */	srwi r3, r30, 2
 /* 80347AF0 00000068  7C 1D 00 40 */	cmplw r29, r0
-/* 80347AF4 0000006C  90 64 00 0C */	stw r3, 0xc(r4)
+/* 80347AF4 0000006C  90 64 00 0C */	stw r3, 0xc(r4)	/* effective address: CC00600C */
 /* 80347AF8 00000070  38 00 00 03 */	li r0, 3
-/* 80347AFC 00000074  93 A4 00 10 */	stw r29, 0x10(r4)
-/* 80347B00 00000078  93 84 00 14 */	stw r28, 0x14(r4)
-/* 80347B04 0000007C  93 A4 00 18 */	stw r29, 0x18(r4)
+/* 80347AFC 00000074  93 A4 00 10 */	stw r29, 0x10(r4)	/* effective address: CC006010 */
+/* 80347B00 00000078  93 84 00 14 */	stw r28, 0x14(r4)	/* effective address: CC006014 */
+/* 80347B04 0000007C  93 A4 00 18 */	stw r29, 0x18(r4)	/* effective address: CC006018 */
 /* 80347B08 00000080  93 AD 91 94 */	stw r29, LastLength(r13)
-/* 80347B0C 00000084  90 04 00 1C */	stw r0, 0x1c(r4)
+/* 80347B0C 00000084  90 04 00 1C */	stw r0, 0x1c(r4)	/* effective address: CC00601C */
 /* 80347B10 00000088  40 81 00 38 */	ble lbl_80347B48
 /* 80347B14 0000008C  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 80347B18 00000090  80 03 00 F8 */	lwz r0, 0x00F8(r3)

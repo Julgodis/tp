@@ -14,10 +14,10 @@ lbl_800C70F8:
 /* 800C7128 00000030  38 80 00 D7 */	li r4, 0xd7
 /* 800C712C 00000034  3C A0 80 39 */	lis r5, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C7130 00000038  38 C5 E1 1C */	addi r6, r5, m__23daAlinkHIO_smallJump_c0@l
-/* 800C7134 0000003C  C0 26 00 04 */	lfs f1, 4(r6)
+/* 800C7134 0000003C  C0 26 00 04 */	lfs f1, 4(r6)	/* effective address: 8038E120 */
 /* 800C7138 00000040  C0 42 93 44 */	lfs f2, lit_7977(r2)
-/* 800C713C 00000044  A8 A6 00 00 */	lha r5, 0(r6)
-/* 800C7140 00000048  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 800C713C 00000044  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038E11C */
+/* 800C7140 00000048  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038E128 */
 /* 800C7144 0000004C  4B FE 5E C9 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800C7148 00000050  7F E3 FB 78 */	mr r3, r31
 /* 800C714C 00000054  4B FE D7 85 */	bl setJumpMode__9daAlink_cFv
@@ -37,9 +37,9 @@ lbl_800C70F8:
 /* 800C7184 0000008C  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800C7188 00000090  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800C718C 00000094  D0 1F 34 D4 */	stfs f0, 0x34d4(r31)
-/* 800C7190 00000098  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800C7190 00000098  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800C7194 0000009C  D0 1F 34 D8 */	stfs f0, 0x34d8(r31)
-/* 800C7198 000000A0  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800C7198 000000A0  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800C719C 000000A4  D0 1F 34 DC */	stfs f0, 0x34dc(r31)
 /* 800C71A0 000000A8  48 00 00 E8 */	b lbl_800C7288
 lbl_800C71A4:
@@ -108,13 +108,13 @@ lbl_800C7288:
 /* 800C728C 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800C7290 00000008  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800C7294 0000000C  38 63 55 14 */	addi r3, r3, l_waitBaseAnime@l
-/* 800C7298 00000010  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800C7298 00000010  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 800C729C 00000014  D0 1F 33 B0 */	stfs f0, 0x33b0(r31)
-/* 800C72A0 00000018  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800C72A0 00000018  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80425514 */
 /* 800C72A4 0000001C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800C72A8 00000020  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800C72A8 00000020  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 800C72AC 00000024  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800C72B0 00000028  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800C72B0 00000028  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 800C72B4 0000002C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800C72B8 00000030  38 60 00 01 */	li r3, 1
 /* 800C72BC 00000034  83 E1 00 1C */	lwz r31, 0x1c(r1)

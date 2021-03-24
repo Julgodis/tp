@@ -190,7 +190,7 @@ extern "C" void setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey(); // 
 extern "C" void setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor(); // 1
 extern "C" void setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor(); // 1
 extern "C" void isOugiID__14dMsgScrnItem_cFv(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_item__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -327,27 +327,27 @@ SECTION_DATA static void* __vt__14dMsgScrnItem_c[22] = {
 };
 
 /* 80454BF8-80454BFC 0004+00 s=2 e=0 z=0  None .sdata2    @4192                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4192 = 100.0f;
+SECTION_SDATA2 static f32 lit_4192 = 100.0f;
 
 /* 80454BFC-80454C00 0004+00 s=3 e=0 z=0  None .sdata2    @4193                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4193 = 1.0f;
+SECTION_SDATA2 static f32 lit_4193 = 1.0f;
 
 /* 80454C00-80454C04 0004+00 s=1 e=0 z=0  None .sdata2    @4194                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4194 = 48.0f;
+SECTION_SDATA2 static f32 lit_4194 = 48.0f;
 
 /* 80454C04-80454C08 0004+00 s=3 e=0 z=0  None .sdata2    @4195                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_item__lit_4195[4] = {
+SECTION_SDATA2 static u8 lit_4195[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454C08-80454C0C 0004+00 s=1 e=0 z=0  None .sdata2    @4196                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4196 = 6.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4196 = 6.0f / 5.0f;
 
 /* 80454C0C-80454C10 0004+00 s=3 e=0 z=0  None .sdata2    @4197                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4197 = 0.5f;
+SECTION_SDATA2 static f32 lit_4197 = 0.5f;
 
 /* 80454C10-80454C18 0008+00 s=2 e=0 z=0  None .sdata2    @4199                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_item__lit_4199 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4199 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8023E79C-8023F51C 0D80+00 s=0 e=1 z=0  None .text      __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap                     */
 #pragma push
@@ -388,13 +388,13 @@ asm void dMsgScrnItem_c::exec() {
 
 /* ############################################################################################## */
 /* 80454C20-80454C24 0004+00 s=1 e=0 z=0  None .sdata2    @4476                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4476 = 2.0f;
+SECTION_SDATA2 static f32 lit_4476 = 2.0f;
 
 /* 80454C24-80454C28 0004+00 s=1 e=0 z=0  None .sdata2    @4477                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4477 = 255.0f;
+SECTION_SDATA2 static f32 lit_4477 = 255.0f;
 
 /* 80454C28-80454C2C 0004+00 s=1 e=0 z=0  None .sdata2    @4478                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4478 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4478 = 3.0f / 5.0f;
 
 /* 8023FB24-8023FF30 040C+00 s=1 e=0 z=0  None .text      drawSelf__14dMsgScrnItem_cFv                                 */
 #pragma push
@@ -552,31 +552,31 @@ asm void dMsgScrnItem_c::fukiAlpha(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80454C2C-80454C30 0004+00 s=1 e=0 z=0  None .sdata2    @4663                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4663 = 608.0f;
+SECTION_SDATA2 static f32 lit_4663 = 608.0f;
 
 /* 80454C30-80454C34 0004+00 s=1 e=0 z=0  None .sdata2    @4664                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4664 = 448.0f;
+SECTION_SDATA2 static f32 lit_4664 = 448.0f;
 
 /* 80454C34-80454C38 0004+00 s=1 e=0 z=0  None .sdata2    @4665                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4665 = 50.0f;
+SECTION_SDATA2 static f32 lit_4665 = 50.0f;
 
 /* 80454C38-80454C3C 0004+00 s=1 e=0 z=0  None .sdata2    @4666                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4666 = 105.0f;
+SECTION_SDATA2 static f32 lit_4666 = 105.0f;
 
 /* 80454C3C-80454C40 0004+00 s=1 e=0 z=0  None .sdata2    @4667                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4667 = 486.0f;
+SECTION_SDATA2 static f32 lit_4667 = 486.0f;
 
 /* 80454C40-80454C44 0004+00 s=1 e=0 z=0  None .sdata2    @4668                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4668 = 230.0f;
+SECTION_SDATA2 static f32 lit_4668 = 230.0f;
 
 /* 80454C44-80454C48 0004+00 s=1 e=0 z=0  None .sdata2    @4669                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4669 = 235.0f;
+SECTION_SDATA2 static f32 lit_4669 = 235.0f;
 
 /* 80454C48-80454C4C 0004+00 s=1 e=0 z=0  None .sdata2    @4670                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4670 = 355.0f;
+SECTION_SDATA2 static f32 lit_4670 = 355.0f;
 
 /* 80454C4C-80454C50 0004+00 s=1 e=0 z=0  None .sdata2    @4671                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_item__lit_4671 = 209.0f;
+SECTION_SDATA2 static f32 lit_4671 = 209.0f;
 
 /* 80240174-8024074C 05D8+00 s=1 e=0 z=0  None .text      fukiPosCalc__14dMsgScrnItem_cFUc                             */
 #pragma push

@@ -24,13 +24,13 @@ struct J3DAnmTevRegKey {
 	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-struct J3DAnmTexPattern {
-	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
 struct J3DAnmColor;
 struct J3DAnmTextureSRTKey {
 	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
+struct J3DAnmTexPattern {
+	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DMaterialTable {
@@ -126,12 +126,12 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevStageInfo {
@@ -142,16 +142,16 @@ struct J3DTevStage {
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 };
 
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
 struct J3DTevSwapModeTable {
 	/* 8000E134 */ J3DTevSwapModeTable();
 };
 
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
 };
 
 struct J3DTevBlock {
@@ -179,13 +179,13 @@ struct J3DTevBlock {
 	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
-struct J3DZMode {
+struct J3DAlphaComp {
 };
 
 struct J3DBlend {
 };
 
-struct J3DAlphaComp {
+struct J3DZMode {
 };
 
 struct J3DPEBlock {
@@ -347,10 +347,10 @@ struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -459,10 +459,10 @@ struct dDlst_list_c {
 	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -536,13 +536,13 @@ struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-struct J3DTexMtxAnm {
+struct J3DTevKColorAnm {
 };
 
 struct J3DTevColorAnm {
 };
 
-struct J3DTevKColorAnm {
+struct J3DTexMtxAnm {
 };
 
 struct J3DMaterialAnm {
@@ -846,7 +846,7 @@ extern "C" void func_80015034(); // 1
 extern "C" void func_8001505C(); // 1
 extern "C" void func_80015084(); // 1
 extern "C" void func_800150AC(); // 1
-extern "C" extern char const* const m_Do_m_Do_ext__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__7JUTFont[17];
 extern "C" extern void* __vt__26mDoExt_3DlineMatSortPacket[5];
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
@@ -1038,7 +1038,7 @@ extern "C" extern u8 struct_804563F8[4];
 
 /* ############################################################################################## */
 /* 80451B18-80451B1C 0004+00 s=11 e=0 z=0  None .sdata2    @3847                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_ext__lit_3847 = 1.0f;
+SECTION_SDATA2 static f32 lit_3847 = 1.0f;
 
 /* 8000D0AC-8000D320 0274+00 s=5 e=0 z=0  None .text      mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs              */
 #pragma push
@@ -1053,12 +1053,12 @@ asm static void mDoExt_setJ3DData(f32 (* param_0)[4], J3DTransformInfo const* pa
 
 /* ############################################################################################## */
 /* 80451B1C-80451B20 0004+00 s=22 e=0 z=0  None .sdata2    @3876                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_ext__lit_3876[4] = {
+SECTION_SDATA2 static u8 lit_3876[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451B20-80451B28 0008+00 s=10 e=0 z=0  None .sdata2    @3878                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_ext__lit_3878 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3878 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8000D320-8000D428 0108+00 s=6 e=0 z=0  None .text      initPlay__14mDoExt_baseAnmFsifss                             */
 #pragma push
@@ -3456,10 +3456,10 @@ asm void mDoExt_3DlineMat0_c::update(int param_0, _GXColor& param_1, dKy_tevstr_
 
 /* ############################################################################################## */
 /* 80451B40-80451B44 0004+00 s=1 e=0 z=0  None .sdata2    @7624                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_ext__lit_7624 = 0.125f;
+SECTION_SDATA2 static f32 lit_7624 = 0.125f;
 
 /* 80451B44-80451B48 0004+00 s=1 e=0 z=0  None .sdata2    @7625                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_ext__lit_7625 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_7625 = 1.0f / 100.0f;
 
 /* 80013360-800134F8 0198+00 s=0 e=0 z=0  None .text      init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi                   */
 #pragma push

@@ -4,7 +4,7 @@ lbl_801F12F0:
 /* 801F12F8 00000008  4D 82 00 20 */	beqlr 
 /* 801F12FC 0000000C  3C 80 80 3F */	lis r4, g_mDoMemCd_control@ha
 /* 801F1300 00000010  38 A4 AF 40 */	addi r5, r4, g_mDoMemCd_control@l
-/* 801F1304 00000014  88 05 1F BE */	lbz r0, 0x1fbe(r5)
+/* 801F1304 00000014  88 05 1F BE */	lbz r0, 0x1fbe(r5)	/* effective address: 803ECEFE */
 /* 801F1308 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 801F130C 0000001C  41 82 00 0C */	beq lbl_801F1318
 /* 801F1310 00000020  28 00 00 01 */	cmplwi r0, 1

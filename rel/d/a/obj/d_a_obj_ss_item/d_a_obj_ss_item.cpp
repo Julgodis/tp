@@ -31,6 +31,7 @@ struct daObj_SSItem_c {
 	/* 80CE78D4 */ void getValue();
 	/* 80CE78E0 */ void restart();
 	/* 80CE7950 */ void initialize();
+	/* 80CE7B04 */ void setProcess(int (daObj_SSItem_c::*)(void*));
 	/* 80CE7BB4 */ void setParam();
 	/* 80CE7C24 */ void setEnvTevColor();
 	/* 80CE7C80 */ void setRoomNo();
@@ -99,7 +100,7 @@ extern "C" void getFlowNodeNum__14daObj_SSItem_cFv(); // 1
 extern "C" void getValue__14daObj_SSItem_cFv(); // 1
 extern "C" void restart__14daObj_SSItem_cFv(); // 1
 extern "C" void initialize__14daObj_SSItem_cFv(); // 1
-extern "C" static void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i(); // 1
 extern "C" void setParam__14daObj_SSItem_cFv(); // 1
 extern "C" void setEnvTevColor__14daObj_SSItem_cFv(); // 1
 extern "C" void setRoomNo__14daObj_SSItem_cFv(); // 1
@@ -405,7 +406,7 @@ asm void daObj_SSItem_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i() {
+asm void daObj_SSItem_c::setProcess(int (daObj_SSItem_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i.s"
 }

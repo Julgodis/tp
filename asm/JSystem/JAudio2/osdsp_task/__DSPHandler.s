@@ -11,7 +11,7 @@ lbl_8029EB20:
 /* 8029EB44 00000024  54 A4 04 3E */	clrlwi r4, r5, 0x10
 /* 8029EB48 00000028  7C 80 00 38 */	and r0, r4, r0
 /* 8029EB4C 0000002C  60 00 00 80 */	ori r0, r0, 0x80
-/* 8029EB50 00000030  B0 06 50 0A */	sth r0, 0x500a(r6)
+/* 8029EB50 00000030  B0 06 50 0A */	sth r0, 0x500a(r6)	/* effective address: CC00500A */
 /* 8029EB54 00000034  48 09 D4 AD */	bl OSClearContext
 /* 8029EB58 00000038  38 61 00 08 */	addi r3, r1, 8
 /* 8029EB5C 0000003C  48 09 D2 DD */	bl OSSetCurrentContext

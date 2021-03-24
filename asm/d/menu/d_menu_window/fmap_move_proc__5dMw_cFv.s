@@ -16,7 +16,7 @@ lbl_801FB298:
 /* 801FB2D0 00000038  98 7F 01 46 */	stb r3, 0x146(r31)
 /* 801FB2D4 0000003C  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801FB2D8 00000040  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801FB2DC 00000044  88 03 02 F9 */	lbz r0, 0x2f9(r3)
+/* 801FB2DC 00000044  88 03 02 F9 */	lbz r0, 0x2f9(r3)	/* effective address: 8042FF59 */
 /* 801FB2E0 00000048  28 00 00 00 */	cmplwi r0, 0
 /* 801FB2E4 0000004C  41 82 00 40 */	beq lbl_801FB324
 /* 801FB2E8 00000050  38 00 00 09 */	li r0, 9
@@ -37,7 +37,7 @@ lbl_801FB298:
 lbl_801FB324:
 /* 801FB324 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB328 00000004  38 83 01 88 */	addi r4, r3, g_meter2_info@l
-/* 801FB32C 00000008  80 64 00 20 */	lwz r3, 0x20(r4)
+/* 801FB32C 00000008  80 64 00 20 */	lwz r3, 0x20(r4)	/* effective address: 804301A8 */
 /* 801FB330 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 801FB334 00000010  41 82 00 24 */	beq lbl_801FB358
 /* 801FB338 00000014  88 04 00 BF */	lbz r0, 0xbf(r4)

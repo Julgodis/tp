@@ -23,7 +23,7 @@ lbl_801F2514:
 /* 801F2568 00000054  40 82 00 2C */	bne lbl_801F2594
 /* 801F256C 00000058  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F2570 0000005C  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F2574 00000060  88 03 00 06 */	lbz r0, 6(r3)
+/* 801F2574 00000060  88 03 00 06 */	lbz r0, 6(r3)	/* effective address: 8042E852 */
 /* 801F2578 00000064  98 1D 01 BD */	stb r0, 0x1bd(r29)
 /* 801F257C 00000068  7F A3 EB 78 */	mr r3, r29
 /* 801F2580 0000006C  48 00 43 D5 */	bl setInitSaveData__12dMenu_save_cFv

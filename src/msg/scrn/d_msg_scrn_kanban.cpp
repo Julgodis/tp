@@ -96,7 +96,7 @@ extern "C" void draw__16dMsgScrnKanban_cFv(); // 1
 extern "C" void fukiAlpha__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnKanban_cFff(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_kanban__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -199,15 +199,15 @@ SECTION_DATA static void* __vt__16dMsgScrnKanban_c[22] = {
 };
 
 /* 80454CC0-80454CC4 0004+00 s=2 e=0 z=0  None .sdata2    @3944                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_kanban__lit_3944[4] = {
+SECTION_SDATA2 static u8 lit_3944[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454CC4-80454CC8 0004+00 s=3 e=0 z=0  None .sdata2    @3945                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_kanban__lit_3945 = 1.0f;
+SECTION_SDATA2 static f32 lit_3945 = 1.0f;
 
 /* 80454CC8-80454CD0 0004+04 s=1 e=0 z=0  None .sdata2    @3946                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_kanban__lit_3946[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3946[1 + 1 /* padding */] = {
 	6.0f / 5.0f,
 	/* padding */
 	0.0f,
@@ -237,7 +237,7 @@ asm dMsgScrnKanban_c::~dMsgScrnKanban_c() {
 
 /* ############################################################################################## */
 /* 80454CD0-80454CD8 0008+00 s=1 e=0 z=0  None .sdata2    @4033                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_kanban__lit_4033 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4033 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80245528-80245618 00F0+00 s=1 e=0 z=0  None .text      exec__16dMsgScrnKanban_cFv                                   */
 #pragma push

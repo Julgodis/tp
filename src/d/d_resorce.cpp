@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
-};
-
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
 	/* 802D6684 */ void findIdxResource(u32) const;
 	/* 802D66AC */ void findNameResource(char const*) const;
+};
+
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
 };
 
 struct J3DModelData {
@@ -270,7 +270,7 @@ extern "C" void __dt__18mDoExt_transAnmBasFv(); // 1
 extern "C" void getKind__18J3DAnmTransformKeyCFv(); // 1
 extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
-extern "C" extern char const* const d_d_resorce__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__10J3DAnmBase[4];
 extern "C" extern void* __vt__15J3DAnmTransform[5];
 extern "C" extern void* __vt__18mDoExt_transAnmBas[5];
@@ -883,10 +883,10 @@ asm void dRes_info_c::dump_long(dRes_info_c* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80451DF8-80451E00 0008+00 s=1 e=0 z=0  None .sdata2    @4277                                                        */
-SECTION_SDATA2 static f64 d_d_resorce__lit_4277 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4277 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80451E00-80451E08 0004+04 s=1 e=0 z=0  None .sdata2    @4333                                                        */
-SECTION_SDATA2 static f32 d_d_resorce__lit_4333[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4333[1 + 1 /* padding */] = {
 	0.0009765625f,
 	/* padding */
 	0.0f,

@@ -6,7 +6,7 @@ lbl_80057A04:
 /* 80057A14 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80057A18 00000014  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057A1C 00000018  3B C3 CA 54 */	addi r30, r3, g_env_light@l
-/* 80057A20 0000001C  88 1E 0E 70 */	lbz r0, 0xe70(r30)
+/* 80057A20 0000001C  88 1E 0E 70 */	lbz r0, 0xe70(r30)	/* effective address: 8042D8C4 */
 /* 80057A24 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 80057A28 00000024  41 82 00 58 */	beq lbl_80057A80
 /* 80057A2C 00000028  80 7E 0E 74 */	lwz r3, 0xe74(r30)
@@ -20,7 +20,7 @@ lbl_80057A04:
 lbl_80057A4C:
 /* 80057A4C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057A50 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057A54 00000008  80 7F 0E 78 */	lwz r3, 0xe78(r31)
+/* 80057A54 00000008  80 7F 0E 78 */	lwz r3, 0xe78(r31)	/* effective address: 8042D8CC */
 /* 80057A58 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 80057A5C 00000010  41 82 00 18 */	beq lbl_80057A74
 /* 80057A60 00000014  38 80 00 01 */	li r4, 1
@@ -35,7 +35,7 @@ lbl_80057A74:
 lbl_80057A80:
 /* 80057A80 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057A84 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057A88 00000008  88 1F 0E 7C */	lbz r0, 0xe7c(r31)
+/* 80057A88 00000008  88 1F 0E 7C */	lbz r0, 0xe7c(r31)	/* effective address: 8042D8D0 */
 /* 80057A8C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057A90 00000010  41 82 00 2C */	beq lbl_80057ABC
 /* 80057A94 00000014  80 7F 0E 84 */	lwz r3, 0xe84(r31)
@@ -52,7 +52,7 @@ lbl_80057AB4:
 lbl_80057ABC:
 /* 80057ABC 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057AC0 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057AC4 00000008  88 1F 0E 88 */	lbz r0, 0xe88(r31)
+/* 80057AC4 00000008  88 1F 0E 88 */	lbz r0, 0xe88(r31)	/* effective address: 8042D8DC */
 /* 80057AC8 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057ACC 00000010  41 82 00 38 */	beq lbl_80057B04
 /* 80057AD0 00000014  80 7F 0E 94 */	lwz r3, 0xe94(r31)
@@ -68,11 +68,11 @@ lbl_80057AF0:
 /* 80057AF4 00000004  90 1F 0E 94 */	stw r0, 0xe94(r31)
 /* 80057AF8 00000008  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057AFC 0000000C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80057B00 00000010  98 03 0E 90 */	stb r0, 0xe90(r3)
+/* 80057B00 00000010  98 03 0E 90 */	stb r0, 0xe90(r3)	/* effective address: 8042D8E4 */
 lbl_80057B04:
 /* 80057B04 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057B08 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057B0C 00000008  88 1F 0E 98 */	lbz r0, 0xe98(r31)
+/* 80057B0C 00000008  88 1F 0E 98 */	lbz r0, 0xe98(r31)	/* effective address: 8042D8EC */
 /* 80057B10 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057B14 00000010  41 82 00 2C */	beq lbl_80057B40
 /* 80057B18 00000014  80 7F 0E A4 */	lwz r3, 0xea4(r31)
@@ -89,7 +89,7 @@ lbl_80057B38:
 lbl_80057B40:
 /* 80057B40 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057B44 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057B48 00000008  88 1F 0E A8 */	lbz r0, 0xea8(r31)
+/* 80057B48 00000008  88 1F 0E A8 */	lbz r0, 0xea8(r31)	/* effective address: 8042D8FC */
 /* 80057B4C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057B50 00000010  41 82 00 2C */	beq lbl_80057B7C
 /* 80057B54 00000014  80 7F 0E B0 */	lwz r3, 0xeb0(r31)
@@ -106,7 +106,7 @@ lbl_80057B74:
 lbl_80057B7C:
 /* 80057B7C 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057B80 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057B84 00000008  88 1F 0E B4 */	lbz r0, 0xeb4(r31)
+/* 80057B84 00000008  88 1F 0E B4 */	lbz r0, 0xeb4(r31)	/* effective address: 8042D908 */
 /* 80057B88 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057B8C 00000010  41 82 00 2C */	beq lbl_80057BB8
 /* 80057B90 00000014  80 7F 0E C0 */	lwz r3, 0xec0(r31)
@@ -123,7 +123,7 @@ lbl_80057BB0:
 lbl_80057BB8:
 /* 80057BB8 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057BBC 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057BC0 00000008  88 1F 0F 20 */	lbz r0, 0xf20(r31)
+/* 80057BC0 00000008  88 1F 0F 20 */	lbz r0, 0xf20(r31)	/* effective address: 8042D974 */
 /* 80057BC4 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057BC8 00000010  41 82 00 2C */	beq lbl_80057BF4
 /* 80057BCC 00000014  80 7F 0F 28 */	lwz r3, 0xf28(r31)
@@ -140,7 +140,7 @@ lbl_80057BEC:
 lbl_80057BF4:
 /* 80057BF4 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057BF8 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057BFC 00000008  88 1F 10 44 */	lbz r0, 0x1044(r31)
+/* 80057BFC 00000008  88 1F 10 44 */	lbz r0, 0x1044(r31)	/* effective address: 8042DA98 */
 /* 80057C00 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057C04 00000010  41 82 00 2C */	beq lbl_80057C30
 /* 80057C08 00000014  80 7F 10 4C */	lwz r3, 0x104c(r31)
@@ -157,7 +157,7 @@ lbl_80057C28:
 lbl_80057C30:
 /* 80057C30 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80057C34 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80057C38 00000008  88 1F 10 50 */	lbz r0, 0x1050(r31)
+/* 80057C38 00000008  88 1F 10 50 */	lbz r0, 0x1050(r31)	/* effective address: 8042DAA4 */
 /* 80057C3C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80057C40 00000010  41 82 00 2C */	beq lbl_80057C6C
 /* 80057C44 00000014  80 7F 10 58 */	lwz r3, 0x1058(r31)

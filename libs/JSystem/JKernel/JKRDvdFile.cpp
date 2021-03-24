@@ -78,7 +78,7 @@ extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo(); // 1
 extern "C" void getFileSize__10JKRDvdFileCFv(); // 1
 extern "C" void __sinit_JKRDvdFile_cpp(); // 1
 extern "C" void func_802D9B44(); // 1
-extern "C" extern char const* const JKRDvdFile__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

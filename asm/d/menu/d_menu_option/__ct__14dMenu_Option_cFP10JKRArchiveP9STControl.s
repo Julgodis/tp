@@ -47,9 +47,9 @@ lbl_801E1F10:
 /* 801E1FC4 000000B4  98 9F 03 EE */	stb r4, 0x3ee(r31)
 /* 801E1FC8 000000B8  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801E1FCC 000000BC  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 801E1FD0 000000C0  C0 03 07 0C */	lfs f0, 0x70c(r3)
+/* 801E1FD0 000000C0  C0 03 07 0C */	lfs f0, 0x70c(r3)	/* effective address: 8042F2D4 */
 /* 801E1FD4 000000C4  D0 1F 03 3C */	stfs f0, 0x33c(r31)
-/* 801E1FD8 000000C8  C0 03 07 10 */	lfs f0, 0x710(r3)
+/* 801E1FD8 000000C8  C0 03 07 10 */	lfs f0, 0x710(r3)	/* effective address: 8042F2D8 */
 /* 801E1FDC 000000CC  D0 1F 03 40 */	stfs f0, 0x340(r31)
 /* 801E1FE0 000000D0  90 9F 00 50 */	stw r4, 0x50(r31)
 /* 801E1FE4 000000D4  93 DF 00 58 */	stw r30, 0x58(r31)

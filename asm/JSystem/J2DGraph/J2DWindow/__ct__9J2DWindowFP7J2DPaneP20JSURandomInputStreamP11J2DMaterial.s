@@ -62,14 +62,14 @@ lbl_802F9C10:
 /* 802F9D00 000000F0  38 81 00 64 */	addi r4, r1, 0x64
 /* 802F9D04 000000F4  38 A0 00 40 */	li r5, 0x40
 /* 802F9D08 000000F8  4B FE 25 91 */	bl read__14JSUInputStreamFPvl
-/* 802F9D0C 000000FC  3C 60 80 3A */	lis r3, J2DWindow__lit_1831@ha
-/* 802F9D10 00000100  38 83 1C 10 */	addi r4, r3, J2DWindow__lit_1831@l
-/* 802F9D14 00000104  80 64 00 00 */	lwz r3, 0(r4)
-/* 802F9D18 00000108  80 04 00 04 */	lwz r0, 4(r4)
+/* 802F9D0C 000000FC  3C 60 80 3A */	lis r3, lit_1831@ha
+/* 802F9D10 00000100  38 83 1C 10 */	addi r4, r3, lit_1831@l
+/* 802F9D14 00000104  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A1C10 */
+/* 802F9D18 00000108  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A1C14 */
 /* 802F9D1C 0000010C  90 61 00 54 */	stw r3, 0x54(r1)
 /* 802F9D20 00000110  90 01 00 58 */	stw r0, 0x58(r1)
-/* 802F9D24 00000114  80 64 00 08 */	lwz r3, 8(r4)
-/* 802F9D28 00000118  80 04 00 0C */	lwz r0, 0xc(r4)
+/* 802F9D24 00000114  80 64 00 08 */	lwz r3, 8(r4)	/* effective address: 803A1C18 */
+/* 802F9D28 00000118  80 04 00 0C */	lwz r0, 0xc(r4)	/* effective address: 803A1C1C */
 /* 802F9D2C 0000011C  90 61 00 5C */	stw r3, 0x5c(r1)
 /* 802F9D30 00000120  90 01 00 60 */	stw r0, 0x60(r1)
 /* 802F9D34 00000124  38 1B 01 28 */	addi r0, r27, 0x128
@@ -251,12 +251,12 @@ lbl_802F9EA0:
 lbl_802F9FE4:
 /* 802F9FE4 00000000  3C 60 80 3A */	lis r3, lit_1849@ha
 /* 802F9FE8 00000004  38 83 1C 20 */	addi r4, r3, lit_1849@l
-/* 802F9FEC 00000008  80 64 00 00 */	lwz r3, 0(r4)
-/* 802F9FF0 0000000C  80 04 00 04 */	lwz r0, 4(r4)
+/* 802F9FEC 00000008  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A1C20 */
+/* 802F9FF0 0000000C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A1C24 */
 /* 802F9FF4 00000010  90 61 00 34 */	stw r3, 0x34(r1)
 /* 802F9FF8 00000014  90 01 00 38 */	stw r0, 0x38(r1)
-/* 802F9FFC 00000018  80 64 00 08 */	lwz r3, 8(r4)
-/* 802FA000 0000001C  80 04 00 0C */	lwz r0, 0xc(r4)
+/* 802F9FFC 00000018  80 64 00 08 */	lwz r3, 8(r4)	/* effective address: 803A1C28 */
+/* 802FA000 0000001C  80 04 00 0C */	lwz r0, 0xc(r4)	/* effective address: 803A1C2C */
 /* 802FA004 00000020  90 61 00 3C */	stw r3, 0x3c(r1)
 /* 802FA008 00000024  90 01 00 40 */	stw r0, 0x40(r1)
 /* 802FA00C 00000028  38 1B 01 00 */	addi r0, r27, 0x100

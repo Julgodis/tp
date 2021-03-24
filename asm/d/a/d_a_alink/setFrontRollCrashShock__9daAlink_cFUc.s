@@ -8,7 +8,7 @@ lbl_800C1CEC:
 /* 800C1D04 00000018  7C 9F 23 78 */	mr r31, r4
 /* 800C1D08 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C1D0C 00000020  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 800C1D10 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C1D10 00000024  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C1D14 00000028  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 800C1D18 0000002C  D0 21 00 20 */	stfs f1, 0x20(r1)
 /* 800C1D1C 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

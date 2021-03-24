@@ -110,7 +110,7 @@ f32 mSystemFar__14mDoLib_clipper;
 f32 mFovyRate__14mDoLib_clipper;
 
 /* 80451B80-80451B84 0004+00 s=1 e=0 z=0  None .sdata2    @3739                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3739 = 182.04444885253906f;
+SECTION_SDATA2 static f32 lit_3739 = 182.04444885253906f;
 
 /* 8001528C-80015310 0084+00 s=0 e=1 z=0  None .text      setup__14mDoLib_clipperFffff                                 */
 #pragma push
@@ -130,25 +130,25 @@ SECTION_SDATA2 static u8 lit_3784[4] = {
 };
 
 /* 80451B88-80451B8C 0004+00 s=1 e=0 z=0  None .sdata2    @3785                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3785 = 500000.0f;
+SECTION_SDATA2 static f32 lit_3785 = 500000.0f;
 
 /* 80451B8C-80451B90 0004+00 s=1 e=0 z=0  None .sdata2    @3786                                                        */
 SECTION_SDATA2 static f32 lit_3786 = 0.5f;
 
 /* 80451B90-80451B94 0004+00 s=1 e=0 z=0  None .sdata2    @3787                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3787 = 2.0f;
+SECTION_SDATA2 static f32 lit_3787 = 2.0f;
 
 /* 80451B94-80451B98 0004+00 s=1 e=0 z=0  None .sdata2    @3788                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3788 = 304.0f;
+SECTION_SDATA2 static f32 lit_3788 = 304.0f;
 
 /* 80451B98-80451B9C 0004+00 s=1 e=0 z=0  None .sdata2    @3789                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3789 = 608.0f;
+SECTION_SDATA2 static f32 lit_3789 = 608.0f;
 
 /* 80451B9C-80451BA0 0004+00 s=1 e=0 z=0  None .sdata2    @3790                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3790 = 224.0f;
+SECTION_SDATA2 static f32 lit_3790 = 224.0f;
 
 /* 80451BA0-80451BA8 0004+04 s=1 e=0 z=0  None .sdata2    @3791                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3791[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3791[1 + 1 /* padding */] = {
 	448.0f,
 	/* padding */
 	0.0f,

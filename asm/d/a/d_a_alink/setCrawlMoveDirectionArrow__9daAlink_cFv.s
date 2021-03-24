@@ -92,7 +92,7 @@ lbl_800F7E1C:
 lbl_800F7E24:
 /* 800F7E24 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F7E28 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F7E2C 00000008  9B E3 5E 81 */	stb r31, 0x5e81(r3)
+/* 800F7E2C 00000008  9B E3 5E 81 */	stb r31, 0x5e81(r3)	/* effective address: 8040C041 */
 /* 800F7E30 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800F7E34 00000010  83 C1 00 08 */	lwz r30, 8(r1)
 /* 800F7E38 00000014  80 01 00 14 */	lwz r0, 0x14(r1)

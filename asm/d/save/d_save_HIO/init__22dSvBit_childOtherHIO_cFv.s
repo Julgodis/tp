@@ -9,7 +9,7 @@ lbl_8025C178:
 /* 8025C194 0000001C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 8025C198 00000020  3B E4 01 14 */	addi r31, r4, 0x114
 /* 8025C19C 00000024  7F E3 FB 78 */	mr r3, r31
-/* 8025C1A0 00000028  88 84 4E 0C */	lbz r4, 0x4e0c(r4)
+/* 8025C1A0 00000028  88 84 4E 0C */	lbz r4, 0x4e0c(r4)	/* effective address: 8040AFCC */
 /* 8025C1A4 0000002C  4B DD 81 9D */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 8025C1A8 00000030  98 7D 00 05 */	stb r3, 5(r29)
 /* 8025C1AC 00000034  88 1D 00 05 */	lbz r0, 5(r29)

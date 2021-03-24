@@ -14,7 +14,7 @@ lbl_800B7BF8:
 lbl_800B7C28:
 /* 800B7C28 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B7C2C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B7C30 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B7C30 00000008  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B7C34 0000000C  28 00 00 1C */	cmplwi r0, 0x1c
 /* 800B7C38 00000010  41 82 00 2C */	beq lbl_800B7C64
 /* 800B7C3C 00000014  28 00 00 1B */	cmplwi r0, 0x1b

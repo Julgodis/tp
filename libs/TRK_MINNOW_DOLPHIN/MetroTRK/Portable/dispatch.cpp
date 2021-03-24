@@ -43,7 +43,7 @@ extern "C" void MWTRACE(); // 1
 
 /* ############################################################################################## */
 /* 803A2890-803A28AC 0019+03 s=1 e=0 z=0  None .rodata    @126                                                         */
-SECTION_RODATA static u8 const MetroTRK_Portable_dispatch__lit_126[25 + 3 /* padding */] = {
+SECTION_RODATA static u8 const lit_126[25 + 3 /* padding */] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 	/* padding */
@@ -51,7 +51,7 @@ SECTION_RODATA static u8 const MetroTRK_Portable_dispatch__lit_126[25 + 3 /* pad
 };
 
 /* 803A28AC-803A28D0 001D+07 s=1 e=0 z=0  None .rodata    @127                                                         */
-SECTION_RODATA static u8 const MetroTRK_Portable_dispatch__lit_127[29 + 7 /* padding */] = {
+SECTION_RODATA static u8 const lit_127[29 + 7 /* padding */] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74,
 	0x65, 0x20, 0x65, 0x72, 0x72, 0x20, 0x3D, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
 	/* padding */
@@ -59,7 +59,7 @@ SECTION_RODATA static u8 const MetroTRK_Portable_dispatch__lit_127[29 + 7 /* pad
 };
 
 /* 803D3190-803D3200 006C+04 s=1 e=0 z=0  None .data      @128                                                         */
-SECTION_DATA static void* MetroTRK_Portable_dispatch__lit_128[27 + 1 /* padding */] = {
+SECTION_DATA static void* lit_128[27 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)TRKDispatchMessage)+0x13C),
 	/* 1    */ (void*)(((char*)TRKDispatchMessage)+0x60),
 	/* 2    */ (void*)(((char*)TRKDispatchMessage)+0x70),

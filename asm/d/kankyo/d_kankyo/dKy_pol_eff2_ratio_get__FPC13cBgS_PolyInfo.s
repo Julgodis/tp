@@ -13,7 +13,7 @@ lbl_801ABFE4:
 /* 801AC010 0000002C  37 A3 0F 38 */	addic. r29, r3, 0xf38
 /* 801AC014 00000030  40 82 00 0C */	bne lbl_801AC020
 lbl_801AC018:
-/* 801AC018 00000000  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AC018 00000000  C0 22 A2 0C */	lfs f1, lit_4409(r2)
 /* 801AC01C 00000004  48 00 01 0C */	b lbl_801AC128
 lbl_801AC020:
 /* 801AC020 00000000  7F A3 EB 78 */	mr r3, r29
@@ -22,15 +22,15 @@ lbl_801AC020:
 /* 801AC02C 0000000C  7C 7B 1B 78 */	mr r27, r3
 /* 801AC030 00000010  3B 9D 3E C8 */	addi r28, r29, 0x3ec8
 /* 801AC034 00000014  7F 83 E3 78 */	mr r3, r28
-/* 801AC038 00000018  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801AC03C 0000001C  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801AC038 00000018  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801AC03C 0000001C  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801AC040 00000020  38 84 01 7A */	addi r4, r4, 0x17a
 /* 801AC044 00000024  48 1B C9 51 */	bl strcmp
 /* 801AC048 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 801AC04C 0000002C  40 82 00 28 */	bne lbl_801AC074
 /* 801AC050 00000030  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801AC054 00000034  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801AC058 00000038  88 03 12 FE */	lbz r0, 0x12fe(r3)
+/* 801AC058 00000038  88 03 12 FE */	lbz r0, 0x12fe(r3)	/* effective address: 8042DD52 */
 /* 801AC05C 0000003C  28 00 00 04 */	cmplwi r0, 4
 /* 801AC060 00000040  40 82 00 14 */	bne lbl_801AC074
 /* 801AC064 00000044  2C 1B 00 04 */	cmpwi r27, 4
@@ -39,8 +39,8 @@ lbl_801AC020:
 /* 801AC070 00000050  48 00 00 48 */	b lbl_801AC0B8
 lbl_801AC074:
 /* 801AC074 00000000  7F 83 E3 78 */	mr r3, r28
-/* 801AC078 00000004  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801AC07C 00000008  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801AC078 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801AC07C 00000008  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801AC080 0000000C  38 84 02 61 */	addi r4, r4, 0x261
 /* 801AC084 00000010  48 1B C9 11 */	bl strcmp
 /* 801AC088 00000014  2C 03 00 00 */	cmpwi r3, 0
@@ -67,12 +67,12 @@ lbl_801AC0B8:
 /* 801AC0D8 00000020  7C 04 00 AE */	lbzx r0, r4, r0
 /* 801AC0DC 00000024  48 00 00 0C */	b lbl_801AC0E8
 lbl_801AC0E0:
-/* 801AC0E0 00000000  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AC0E0 00000000  C0 22 A2 0C */	lfs f1, lit_4409(r2)
 /* 801AC0E4 00000004  48 00 00 44 */	b lbl_801AC128
 lbl_801AC0E8:
 /* 801AC0E8 00000000  28 00 00 64 */	cmplwi r0, 0x64
 /* 801AC0EC 00000004  41 80 00 0C */	blt lbl_801AC0F8
-/* 801AC0F0 00000008  C0 22 A2 0C */	lfs f1, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AC0F0 00000008  C0 22 A2 0C */	lfs f1, lit_4409(r2)
 /* 801AC0F4 0000000C  48 00 00 34 */	b lbl_801AC128
 lbl_801AC0F8:
 /* 801AC0F8 00000000  80 7E 12 F4 */	lwz r3, 0x12f4(r30)
@@ -85,7 +85,7 @@ lbl_801AC0F8:
 /* 801AC114 0000001C  90 01 00 08 */	stw r0, 8(r1)
 /* 801AC118 00000020  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801AC11C 00000024  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801AC120 00000028  C0 02 A2 68 */	lfs f0, d_kankyo_d_kankyo__lit_4731(r2)
+/* 801AC120 00000028  C0 02 A2 68 */	lfs f0, lit_4731(r2)
 /* 801AC124 0000002C  EC 20 00 72 */	fmuls f1, f0, f1
 lbl_801AC128:
 /* 801AC128 00000000  39 61 00 30 */	addi r11, r1, 0x30

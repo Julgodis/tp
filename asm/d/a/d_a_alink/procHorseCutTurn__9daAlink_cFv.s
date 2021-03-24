@@ -29,7 +29,7 @@ lbl_800F1C08:
 /* 800F1C08 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800F1C0C 00000004  3C 60 80 39 */	lis r3, m__25daAlinkHIO_hoCutCharge_c0@ha
 /* 800F1C10 00000008  38 63 DC 9C */	addi r3, r3, m__25daAlinkHIO_hoCutCharge_c0@l
-/* 800F1C14 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800F1C14 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038DCD4 */
 /* 800F1C18 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800F1C1C 00000000  40 81 00 80 */	ble lbl_800F1C9C
 /* 800F1C20 00000004  7F C3 F3 78 */	mr r3, r30
@@ -69,7 +69,7 @@ lbl_800F1C9C:
 /* 800F1C9C 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800F1CA0 00000004  3C 60 80 39 */	lis r3, m__25daAlinkHIO_hoCutCharge_c0@ha
 /* 800F1CA4 00000008  38 63 DC 9C */	addi r3, r3, m__25daAlinkHIO_hoCutCharge_c0@l
-/* 800F1CA8 0000000C  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 800F1CA8 0000000C  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038DCE4 */
 /* 800F1CAC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800F1CB0 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800F1CB4 00000004  40 82 00 48 */	bne lbl_800F1CFC

@@ -29,21 +29,21 @@ lbl_8021BEA8:
 /* 8021BED0 00000028  B0 9F 00 98 */	sth r4, 0x98(r31)
 /* 8021BED4 0000002C  98 9F 00 B9 */	stb r4, 0xb9(r31)
 /* 8021BED8 00000030  98 9F 00 BA */	stb r4, 0xba(r31)
-/* 8021BEDC 00000034  C0 22 AF 98 */	lfs f1, d_meter_d_meter2_info__lit_3916(r2)
+/* 8021BEDC 00000034  C0 22 AF 98 */	lfs f1, lit_3916(r2)
 /* 8021BEE0 00000038  D0 3F 00 54 */	stfs f1, 0x54(r31)
 /* 8021BEE4 0000003C  D0 3F 00 58 */	stfs f1, 0x58(r31)
 /* 8021BEE8 00000040  D0 3F 00 5C */	stfs f1, 0x5c(r31)
-/* 8021BEEC 00000044  C0 02 AF 9C */	lfs f0, d_meter_d_meter2_info__lit_3917(r2)
+/* 8021BEEC 00000044  C0 02 AF 9C */	lfs f0, lit_3917(r2)
 /* 8021BEF0 00000048  D0 1F 00 60 */	stfs f0, 0x60(r31)
-/* 8021BEF4 0000004C  C0 02 AF A0 */	lfs f0, d_meter_d_meter2_info__lit_3918(r2)
+/* 8021BEF4 0000004C  C0 02 AF A0 */	lfs f0, lit_3918(r2)
 /* 8021BEF8 00000050  D0 1F 00 64 */	stfs f0, 0x64(r31)
-/* 8021BEFC 00000054  C0 02 AF A4 */	lfs f0, d_meter_d_meter2_info__lit_3919(r2)
+/* 8021BEFC 00000054  C0 02 AF A4 */	lfs f0, lit_3919(r2)
 /* 8021BF00 00000058  D0 1F 00 68 */	stfs f0, 0x68(r31)
-/* 8021BF04 0000005C  C0 02 AF A8 */	lfs f0, d_meter_d_meter2_info__lit_3920(r2)
+/* 8021BF04 0000005C  C0 02 AF A8 */	lfs f0, lit_3920(r2)
 /* 8021BF08 00000060  D0 1F 00 6C */	stfs f0, 0x6c(r31)
-/* 8021BF0C 00000064  C0 02 AF AC */	lfs f0, d_meter_d_meter2_info__lit_3921(r2)
+/* 8021BF0C 00000064  C0 02 AF AC */	lfs f0, lit_3921(r2)
 /* 8021BF10 00000068  D0 1F 00 70 */	stfs f0, 0x70(r31)
-/* 8021BF14 0000006C  C0 02 AF B0 */	lfs f0, d_meter_d_meter2_info__lit_3922(r2)
+/* 8021BF14 0000006C  C0 02 AF B0 */	lfs f0, lit_3922(r2)
 /* 8021BF18 00000070  D0 1F 00 74 */	stfs f0, 0x74(r31)
 /* 8021BF1C 00000074  D0 3F 00 78 */	stfs f1, 0x78(r31)
 /* 8021BF20 00000078  D0 3F 00 7C */	stfs f1, 0x7c(r31)
@@ -76,13 +76,13 @@ lbl_8021BEA8:
 /* 8021BF8C 000000E4  98 1F 00 C2 */	stb r0, 0xc2(r31)
 /* 8021BF90 000000E8  38 00 00 FF */	li r0, 0xff
 /* 8021BF94 000000EC  98 1F 00 C3 */	stb r0, 0xc3(r31)
-/* 8021BF98 000000F0  C0 02 AF 98 */	lfs f0, d_meter_d_meter2_info__lit_3916(r2)
+/* 8021BF98 000000F0  C0 02 AF 98 */	lfs f0, lit_3916(r2)
 /* 8021BF9C 000000F4  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8021BFA0 000000F8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8021BFA4 000000FC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8021BFA8 00000100  7F E3 FB 78 */	mr r3, r31
-/* 8021BFAC 00000104  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
-/* 8021BFB0 00000108  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
+/* 8021BFAC 00000104  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8021BFB0 00000108  38 84 91 68 */	addi r4, r4, stringBase0@l
 /* 8021BFB4 0000010C  38 A1 00 08 */	addi r5, r1, 8
 /* 8021BFB8 00000110  38 C0 00 00 */	li r6, 0
 /* 8021BFBC 00000114  38 E0 00 00 */	li r7, 0
@@ -124,8 +124,8 @@ lbl_8021BFFC:
 /* 8021C044 00000048  98 7F 00 DD */	stb r3, 0xdd(r31)
 /* 8021C048 0000004C  98 7F 00 DE */	stb r3, 0xde(r31)
 /* 8021C04C 00000050  7F E3 FB 78 */	mr r3, r31
-/* 8021C050 00000054  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
-/* 8021C054 00000058  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
+/* 8021C050 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8021C054 00000058  38 84 91 68 */	addi r4, r4, stringBase0@l
 /* 8021C058 0000005C  48 00 22 39 */	bl setSaveStageName__13dMeter2Info_cFPCc
 /* 8021C05C 00000060  3B A0 00 00 */	li r29, 0
 /* 8021C060 00000064  9B BF 00 DF */	stb r29, 0xdf(r31)

@@ -111,7 +111,7 @@ lbl_800D79B0:
 /* 800D79BC 0000000C  C0 3F 33 D8 */	lfs f1, 0x33d8(r31)
 /* 800D79C0 00000010  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 800D79C4 00000014  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 800D79C8 00000018  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800D79C8 00000018  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038D69C */
 /* 800D79CC 0000001C  EC 01 00 2A */	fadds f0, f1, f0
 /* 800D79D0 00000020  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800D79D4 00000000  41 81 00 0C */	bgt lbl_800D79E0

@@ -93,8 +93,8 @@ lbl_801CC73C:
 /* 801CC750 00000014  42 00 FF EC */	bdnz lbl_801CC73C
 /* 801CC754 00000018  3B 40 00 00 */	li r26, 0
 /* 801CC758 0000001C  3B C0 00 00 */	li r30, 0
-/* 801CC75C 00000020  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap__stringBase0@ha
-/* 801CC760 00000024  3B A3 60 E8 */	addi r29, r3, d_menu_d_menu_fmap__stringBase0@l
+/* 801CC75C 00000020  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801CC760 00000024  3B A3 60 E8 */	addi r29, r3, stringBase0@l
 lbl_801CC764:
 /* 801CC764 00000000  38 7E 02 60 */	addi r3, r30, 0x260
 /* 801CC768 00000004  7C 7F 1A 14 */	add r3, r31, r3

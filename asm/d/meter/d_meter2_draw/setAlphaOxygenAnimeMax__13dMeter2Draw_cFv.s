@@ -5,7 +5,7 @@ lbl_80215A94:
 /* 80215AA0 0000000C  41 80 00 18 */	blt lbl_80215AB8
 /* 80215AA4 00000010  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 80215AA8 00000014  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80215AAC 00000018  C0 04 00 18 */	lfs f0, 0x18(r4)
+/* 80215AAC 00000018  C0 04 00 18 */	lfs f0, 0x18(r4)	/* effective address: 8042EBE0 */
 /* 80215AB0 0000001C  D0 03 06 04 */	stfs f0, 0x604(r3)
 /* 80215AB4 00000020  48 00 00 5C */	b lbl_80215B10
 lbl_80215AB8:
@@ -29,7 +29,7 @@ lbl_80215AD4:
 /* 80215AF8 00000024  EC 21 00 24 */	fdivs f1, f1, f0
 /* 80215AFC 00000028  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 80215B00 0000002C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80215B04 00000030  C0 04 00 18 */	lfs f0, 0x18(r4)
+/* 80215B04 00000030  C0 04 00 18 */	lfs f0, 0x18(r4)	/* effective address: 8042EBE0 */
 /* 80215B08 00000034  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80215B0C 00000038  D0 03 06 04 */	stfs f0, 0x604(r3)
 lbl_80215B10:

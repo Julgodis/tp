@@ -19,7 +19,7 @@ lbl_801BC788:
 /* 801BC7CC 00000044  48 00 49 C9 */	bl getPlayerDrawInfo__20dMenu_StageMapCtrl_cCFPfPfPs
 /* 801BC7D0 00000048  C0 42 A6 50 */	lfs f2, lit_5288(r2)
 /* 801BC7D4 0000004C  A8 01 00 08 */	lha r0, 8(r1)
-/* 801BC7D8 00000050  C8 22 A5 F8 */	lfd f1, d_menu_d_menu_dmap__lit_4108(r2)
+/* 801BC7D8 00000050  C8 22 A5 F8 */	lfd f1, lit_4108(r2)
 /* 801BC7DC 00000054  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801BC7E0 00000058  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801BC7E4 0000005C  3C 00 43 30 */	lis r0, 0x4330
@@ -33,7 +33,7 @@ lbl_801BC788:
 /* 801BC804 0000007C  C0 21 00 10 */	lfs f1, 0x10(r1)
 /* 801BC808 00000080  C0 41 00 0C */	lfs f2, 0xc(r1)
 /* 801BC80C 00000084  FC 60 F8 90 */	fmr f3, f31
-/* 801BC810 00000088  C0 A2 A5 EC */	lfs f5, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BC810 00000088  C0 A2 A5 EC */	lfs f5, lit_3963(r2)
 /* 801BC814 0000008C  38 A0 00 01 */	li r5, 1
 /* 801BC818 00000090  48 00 7B 91 */	bl setIconInfo__16dMenuMapCommon_cFUcfffffUc
 /* 801BC81C 00000094  C0 01 00 10 */	lfs f0, 0x10(r1)

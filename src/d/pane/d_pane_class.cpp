@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct J2DRotateAxis {
 };
 
@@ -22,24 +28,18 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-struct JUtility {
-	struct TColor {
-	};
+struct JKRExpHeap {
+};
 
+struct JKRArchive {
 };
 
 struct JSURandomInputStream {
 	/* 80255328 */ ~JSURandomInputStream();
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -332,14 +332,14 @@ asm void CPaneMgr::childPaneGetSize(J2DPane* param_0) {
 
 /* ############################################################################################## */
 /* 80454E88-80454E90 0004+04 s=4 e=0 z=0  None .sdata2    @3858                                                        */
-SECTION_SDATA2 static u8 d_pane_d_pane_class__lit_3858[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3858[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454E90-80454E98 0008+00 s=2 e=0 z=0  None .sdata2    @3860                                                        */
-SECTION_SDATA2 static f64 d_pane_d_pane_class__lit_3860 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3860 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80254134-802542E8 01B4+00 s=1 e=0 z=0  None .text      childPaneSetSize__8CPaneMgrFP7J2DPaneff                      */
 #pragma push
@@ -431,7 +431,7 @@ asm void J2DWindow::setBlackWhite(JUtility::TColor param_0, JUtility::TColor par
 
 /* ############################################################################################## */
 /* 80454E98-80454EA0 0004+04 s=3 e=0 z=0  None .sdata2    @4046                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class__lit_4046[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4046[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
@@ -472,7 +472,7 @@ asm void CPaneMgr::scaleAnime(s16 param_0, f32 param_1, f32 param_2, u8 param_3)
 
 /* ############################################################################################## */
 /* 80454EA0-80454EA8 0008+00 s=1 e=0 z=0  None .sdata2    @4349                                                        */
-SECTION_SDATA2 static f64 d_pane_d_pane_class__lit_4349 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4349 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802548BC-80254C90 03D4+00 s=0 e=4 z=0  None .text      colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc */
 #pragma push
@@ -487,16 +487,16 @@ asm void CPaneMgr::colorAnime(s16 param_0, JUtility::TColor param_1, JUtility::T
 
 /* ############################################################################################## */
 /* 80454EA8-80454EAC 0004+00 s=1 e=0 z=0  None .sdata2    @4473                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class__lit_4473 = 608.0f;
+SECTION_SDATA2 static f32 lit_4473 = 608.0f;
 
 /* 80454EAC-80454EB0 0004+00 s=1 e=0 z=0  None .sdata2    @4474                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class__lit_4474 = 448.0f;
+SECTION_SDATA2 static f32 lit_4474 = 448.0f;
 
 /* 80454EB0-80454EB4 0004+00 s=1 e=0 z=0  None .sdata2    @4475                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class__lit_4475 = -1.0f;
+SECTION_SDATA2 static f32 lit_4475 = -1.0f;
 
 /* 80454EB4-80454EB8 0004+00 s=1 e=0 z=0  None .sdata2    @4476                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class__lit_4476 = 1.0f;
+SECTION_SDATA2 static f32 lit_4476 = 1.0f;
 
 /* 80254C90-80254EBC 022C+00 s=1 e=9 z=0  None .text      getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs                */
 #pragma push

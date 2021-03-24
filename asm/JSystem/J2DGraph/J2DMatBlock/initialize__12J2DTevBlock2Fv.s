@@ -91,10 +91,10 @@ lbl_802EC8C4:
 /* 802EC8F8 00000034  42 00 FF CC */	bdnz lbl_802EC8C4
 /* 802EC8FC 00000038  3C 80 80 3A */	lis r4, j2dDefaultIndTevStageInfo@ha
 /* 802EC900 0000003C  84 A4 1B F4 */	lwzu r5, j2dDefaultIndTevStageInfo@l(r4)
-/* 802EC904 00000040  80 04 00 04 */	lwz r0, 4(r4)
+/* 802EC904 00000040  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A0004 */
 /* 802EC908 00000044  90 A1 00 1C */	stw r5, 0x1c(r1)
 /* 802EC90C 00000048  90 01 00 20 */	stw r0, 0x20(r1)
-/* 802EC910 0000004C  80 04 00 08 */	lwz r0, 8(r4)
+/* 802EC910 0000004C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A0008 */
 /* 802EC914 00000050  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802EC918 00000054  89 81 00 1C */	lbz r12, 0x1c(r1)
 /* 802EC91C 00000058  88 01 00 1D */	lbz r0, 0x1d(r1)
@@ -122,11 +122,11 @@ lbl_802EC8C4:
 /* 802EC974 000000B0  7D 60 03 78 */	or r0, r11, r0
 /* 802EC978 000000B4  7D 80 03 78 */	or r0, r12, r0
 /* 802EC97C 000000B8  90 03 00 5C */	stw r0, 0x5c(r3)
-/* 802EC980 000000BC  80 A4 00 00 */	lwz r5, 0(r4)
-/* 802EC984 000000C0  80 04 00 04 */	lwz r0, 4(r4)
+/* 802EC980 000000BC  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 803A0000 */
+/* 802EC984 000000C0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A0004 */
 /* 802EC988 000000C4  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 802EC98C 000000C8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802EC990 000000CC  80 04 00 08 */	lwz r0, 8(r4)
+/* 802EC990 000000CC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A0008 */
 /* 802EC994 000000D0  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802EC998 000000D4  89 61 00 10 */	lbz r11, 0x10(r1)
 /* 802EC99C 000000D8  88 01 00 11 */	lbz r0, 0x11(r1)

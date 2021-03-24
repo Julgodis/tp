@@ -58,10 +58,6 @@ extern "C" void executeStart__17dEvLib_callback_cFv(); // 1
 extern "C" void initRun__17dEvLib_callback_cFv(); // 1
 extern "C" void executeRun__17dEvLib_callback_cFv(); // 1
 extern "C" void __sinit_d_event_lib_cpp(); // 1
-extern "C" extern void* lit_3617[3];
-extern "C" extern void* lit_3618[3];
-extern "C" extern void* d_event_d_event_lib__lit_3621[3];
-extern "C" extern void* lit_3622[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -203,8 +199,38 @@ asm void dEvLib_callback_c::executeRun() {
 
 /* ############################################################################################## */
 /* 803A82B8-803A82C4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_event_d_event_lib__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A82C4-803A82D0 000C+00 s=1 e=0 z=0  None .data      @3617                                                        */
+SECTION_DATA static void* lit_3617[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)initStart__17dEvLib_callback_cFv,
+};
+
+/* 803A82D0-803A82DC 000C+00 s=1 e=0 z=0  None .data      @3618                                                        */
+SECTION_DATA static void* lit_3618[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)executeStart__17dEvLib_callback_cFv,
+};
+
+/* 803A82DC-803A82E8 000C+00 s=1 e=0 z=0  None .data      @3621                                                        */
+SECTION_DATA static void* lit_3621[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)initRun__17dEvLib_callback_cFv,
+};
+
+/* 803A82E8-803A82F8 000C+04 s=1 e=0 z=0  None .data      @3622                                                        */
+SECTION_DATA static void* lit_3622[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)executeRun__17dEvLib_callback_cFv,
+	/* padding */
+	NULL,
 };
 
 /* 80048BD8-80048C54 007C+00 s=0 e=1 z=0  None .text      __sinit_d_event_lib_cpp                                      */
@@ -217,35 +243,4 @@ extern "C" asm void __sinit_d_event_lib_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 803A82C4-803A82D0 000C+00 s=0 e=0 z=0  None .data      @3617                                                        */
-SECTION_DATA void* lit_3617[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)initStart__17dEvLib_callback_cFv,
-};
-
-/* 803A82D0-803A82DC 000C+00 s=0 e=0 z=0  None .data      @3618                                                        */
-SECTION_DATA void* lit_3618[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)executeStart__17dEvLib_callback_cFv,
-};
-
-/* 803A82DC-803A82E8 000C+00 s=0 e=0 z=0  None .data      @3621                                                        */
-SECTION_DATA void* d_event_d_event_lib__lit_3621[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)initRun__17dEvLib_callback_cFv,
-};
-
-/* 803A82E8-803A82F8 000C+04 s=0 e=0 z=0  None .data      @3622                                                        */
-SECTION_DATA void* lit_3622[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)executeRun__17dEvLib_callback_cFv,
-	/* padding */
-	NULL,
-};
 

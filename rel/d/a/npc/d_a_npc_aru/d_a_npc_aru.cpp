@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80956DDC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Aru_c {
@@ -64,6 +64,8 @@ struct daNpc_Aru_c {
 	/* 80953798 */ void setCollision();
 	/* 809538F0 */ void drawDbgInfo();
 	/* 809538F8 */ void selectAction();
+	/* 80953AB8 */ void chkAction(int (daNpc_Aru_c::*)(void*));
+	/* 80953AE4 */ void setAction(int (daNpc_Aru_c::*)(void*));
 	/* 80953B8C */ void chkBullRunningStage();
 	/* 80953C08 */ void chkSkipFenceStage();
 	/* 80953C84 */ void srchActorDirection(fopAc_ac_c*);
@@ -252,8 +254,8 @@ extern "C" void setAttnPos__11daNpc_Aru_cFv(); // 1
 extern "C" void setCollision__11daNpc_Aru_cFv(); // 1
 extern "C" void drawDbgInfo__11daNpc_Aru_cFv(); // 1
 extern "C" void selectAction__11daNpc_Aru_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i(); // 1
 extern "C" void chkBullRunningStage__11daNpc_Aru_cFv(); // 1
 extern "C" void chkSkipFenceStage__11daNpc_Aru_cFv(); // 1
 extern "C" void srchActorDirection__11daNpc_Aru_cFP10fopAc_ac_c(); // 1
@@ -918,7 +920,7 @@ asm void daNpc_Aru_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i() {
+asm void daNpc_Aru_c::chkAction(int (daNpc_Aru_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_aru/d_a_npc_aru/chkAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i.s"
 }
@@ -929,7 +931,7 @@ extern "C" asm static void chkAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i() {
+asm void daNpc_Aru_c::setAction(int (daNpc_Aru_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_aru/d_a_npc_aru/setAction__11daNpc_Aru_cFM11daNpc_Aru_cFPCvPvPv_i.s"
 }

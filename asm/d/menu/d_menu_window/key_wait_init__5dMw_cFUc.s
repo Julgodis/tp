@@ -8,17 +8,17 @@ lbl_801FA13C:
 /* 801FA154 00000018  7C 9F 23 78 */	mr r31, r4
 /* 801FA158 0000001C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801FA15C 00000020  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801FA160 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)
-/* 801FA164 00000028  98 04 00 BA */	stb r0, 0xba(r4)
+/* 801FA160 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)	/* effective address: 80430241 */
+/* 801FA164 00000028  98 04 00 BA */	stb r0, 0xba(r4)	/* effective address: 80430242 */
 /* 801FA168 0000002C  38 00 00 00 */	li r0, 0
-/* 801FA16C 00000030  98 04 00 B9 */	stb r0, 0xb9(r4)
+/* 801FA16C 00000030  98 04 00 B9 */	stb r0, 0xb9(r4)	/* effective address: 80430241 */
 /* 801FA170 00000034  48 00 1C A5 */	bl dMw_capture_delete__5dMw_cFv
 /* 801FA174 00000038  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 801FA178 0000003C  38 03 FF FD */	addi r0, r3, -3
 /* 801FA17C 00000040  28 00 00 1F */	cmplwi r0, 0x1f
 /* 801FA180 00000044  41 81 00 78 */	bgt lbl_801FA1F8
-/* 801FA184 00000048  3C 60 80 3C */	lis r3, d_menu_d_menu_window__lit_4360@ha
-/* 801FA188 0000004C  38 63 EF 94 */	addi r3, r3, d_menu_d_menu_window__lit_4360@l
+/* 801FA184 00000048  3C 60 80 3C */	lis r3, lit_4360@ha
+/* 801FA188 0000004C  38 63 EF 94 */	addi r3, r3, lit_4360@l
 /* 801FA18C 00000050  54 00 10 3A */	slwi r0, r0, 2
 /* 801FA190 00000054  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801FA194 00000058  7C 09 03 A6 */	mtctr r0

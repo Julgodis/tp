@@ -35,9 +35,9 @@ lbl_8027C56C:
 lbl_8027C5F0:
 /* 8027C5F0 00000000  FC 60 20 34 */	frsqrte f3, f4
 /* 8027C5F4 00000004  FC 60 18 18 */	frsp f3, f3
-/* 8027C5F8 00000008  C0 02 B9 44 */	lfs f0, JPAFieldBlock__lit_2460(r2)
+/* 8027C5F8 00000008  C0 02 B9 44 */	lfs f0, lit_2460(r2)
 /* 8027C5FC 0000000C  EC 40 00 F2 */	fmuls f2, f0, f3
-/* 8027C600 00000010  C0 22 B9 48 */	lfs f1, JPAFieldBlock__lit_2461(r2)
+/* 8027C600 00000010  C0 22 B9 48 */	lfs f1, lit_2461(r2)
 /* 8027C604 00000014  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 8027C608 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8027C60C 0000001C  EC 01 00 28 */	fsubs f0, f1, f0

@@ -34,6 +34,16 @@ struct dBgS_ObjAcch {
 	/* 80BE2A00 */ ~dBgS_ObjAcch();
 };
 
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80BE2F74 */ void sinShort(s16) const;
+	};
+
+};
+
 // 
 // Forward References:
 // 
@@ -62,7 +72,7 @@ extern "C" void Create__11daObjDust_cFv(); // 1
 extern "C" void Execute__11daObjDust_cFPPA3_A4_f(); // 1
 extern "C" void Draw__11daObjDust_cFv(); // 1
 extern "C" void Delete__11daObjDust_cFv(); // 1
-extern "C" static void func_80BE2F74(); // 1
+extern "C" void func_80BE2F74(); // 1
 extern "C" void func_80BE2F80(); // 1
 extern "C" void func_80BE2F88(); // 1
 extern "C" extern u8 const lit_3673[4 + 4 /* padding */];
@@ -308,7 +318,7 @@ asm void daObjDust_c::Delete() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BE2F74() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_dust/d_a_obj_dust/func_80BE2F74.s"
 }

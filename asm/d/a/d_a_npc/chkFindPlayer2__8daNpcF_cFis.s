@@ -19,7 +19,7 @@ lbl_801549E0:
 /* 80154A24 00000018  7F 64 DB 78 */	mr r4, r27
 /* 80154A28 0000001C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80154A2C 00000020  3B E5 61 C0 */	addi r31, r5, g_dComIfG_gameInfo@l
-/* 80154A30 00000024  80 BF 5D AC */	lwz r5, 0x5dac(r31)
+/* 80154A30 00000024  80 BF 5D AC */	lwz r5, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 80154A34 00000028  4B FF FF 39 */	bl getAttentionPos__8daNpcF_cFP10fopAc_ac_c
 /* 80154A38 0000002C  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 80154A3C 00000030  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -49,12 +49,12 @@ lbl_80154A8C:
 /* 80154A8C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80154A90 00000004  4B FF 65 81 */	bl getDistTable__12dAttention_cFi
 /* 80154A94 00000008  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 80154A98 0000000C  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 80154A98 0000000C  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 80154A9C 00000010  EF C0 00 72 */	fmuls f30, f0, f1
 /* 80154AA0 00000014  7F C3 F3 78 */	mr r3, r30
 /* 80154AA4 00000018  4B FF 65 6D */	bl getDistTable__12dAttention_cFi
 /* 80154AA8 0000001C  C0 23 00 0C */	lfs f1, 0xc(r3)
-/* 80154AAC 00000020  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 80154AAC 00000020  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 80154AB0 00000024  EF A0 00 72 */	fmuls f29, f0, f1
 /* 80154AB4 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80154AB8 0000002C  4B FF 65 59 */	bl getDistTable__12dAttention_cFi

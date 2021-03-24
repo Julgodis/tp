@@ -22,18 +22,18 @@ lbl_8015ADCC:
 /* 8015AE1C 0000003C  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 8015AE20 00000040  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8015AE24 00000044  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8015AE28 00000048  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015AE28 00000048  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015AE2C 0000004C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8015AE30 00000050  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 8015AE34 00000054  38 61 00 1C */	addi r3, r1, 0x1c
 /* 8015AE38 00000058  48 1E C3 01 */	bl PSVECSquareMag
-/* 8015AE3C 0000005C  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015AE3C 0000005C  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015AE40 00000074  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015AE44 00000000  40 81 00 58 */	ble lbl_8015AE9C
 /* 8015AE48 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8015AE4C 00000008  C8 82 9B 58 */	lfd f4, a_obj_d_a_obj_item__lit_3858(r2)
+/* 8015AE4C 00000008  C8 82 9B 58 */	lfd f4, lit_3858(r2)
 /* 8015AE50 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 8015AE54 00000010  C8 62 9B 60 */	lfd f3, a_obj_d_a_obj_item__lit_3859(r2)
+/* 8015AE54 00000010  C8 62 9B 60 */	lfd f3, lit_3859(r2)
 /* 8015AE58 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8015AE5C 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8015AE60 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -52,7 +52,7 @@ lbl_8015ADCC:
 /* 8015AE94 00000050  FF C0 F0 18 */	frsp f30, f30
 /* 8015AE98 00000054  48 00 00 90 */	b lbl_8015AF28
 lbl_8015AE9C:
-/* 8015AE9C 00000000  C8 02 9B 68 */	lfd f0, a_obj_d_a_obj_item__lit_3860(r2)
+/* 8015AE9C 00000000  C8 02 9B 68 */	lfd f0, lit_3860(r2)
 /* 8015AEA0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015AEA4 00000000  40 80 00 10 */	bge lbl_8015AEB4
 /* 8015AEA8 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -117,18 +117,18 @@ lbl_8015AF28:
 /* 8015AF70 00000048  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 8015AF74 0000004C  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8015AF78 00000050  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8015AF7C 00000054  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015AF7C 00000054  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015AF80 00000058  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8015AF84 0000005C  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 8015AF88 00000060  38 61 00 10 */	addi r3, r1, 0x10
 /* 8015AF8C 00000064  48 1E C1 AD */	bl PSVECSquareMag
-/* 8015AF90 00000068  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015AF90 00000068  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015AF94 0000006C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015AF98 00000000  40 81 00 58 */	ble lbl_8015AFF0
 /* 8015AF9C 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8015AFA0 00000008  C8 82 9B 58 */	lfd f4, a_obj_d_a_obj_item__lit_3858(r2)
+/* 8015AFA0 00000008  C8 82 9B 58 */	lfd f4, lit_3858(r2)
 /* 8015AFA4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 8015AFA8 00000010  C8 62 9B 60 */	lfd f3, a_obj_d_a_obj_item__lit_3859(r2)
+/* 8015AFA8 00000010  C8 62 9B 60 */	lfd f3, lit_3859(r2)
 /* 8015AFAC 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 8015AFB0 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 8015AFB4 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -147,7 +147,7 @@ lbl_8015AF28:
 /* 8015AFE8 00000050  FC 20 08 18 */	frsp f1, f1
 /* 8015AFEC 00000054  48 00 00 88 */	b lbl_8015B074
 lbl_8015AFF0:
-/* 8015AFF0 00000000  C8 02 9B 68 */	lfd f0, a_obj_d_a_obj_item__lit_3860(r2)
+/* 8015AFF0 00000000  C8 02 9B 68 */	lfd f0, lit_3860(r2)
 /* 8015AFF4 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015AFF8 00000000  40 80 00 10 */	bge lbl_8015B008
 /* 8015AFFC 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -196,7 +196,7 @@ lbl_8015B084:
 /* 8015B084 00000000  3C 60 80 3A */	lis r3, __vt__8cM3dGPla@ha
 /* 8015B088 00000004  38 03 37 C0 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 8015B08C 00000008  90 01 00 5C */	stw r0, 0x5c(r1)
-/* 8015B090 0000000C  C0 22 9B 50 */	lfs f1, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015B090 0000000C  C0 22 9B 50 */	lfs f1, lit_3857(r2)
 lbl_8015B094:
 /* 8015B094 00000000  E3 E1 00 88 */	psq_l f31, 136(r1), 0, 0 /* qr0 */
 /* 8015B098 00000000  CB E1 00 80 */	lfd f31, 0x80(r1)

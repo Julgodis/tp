@@ -10,7 +10,7 @@ lbl_800F038C:
 /* 800F03AC 00000020  4B FD 1B C1 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F03B0 00000024  7F C3 F3 78 */	mr r3, r30
 /* 800F03B4 00000028  38 80 00 02 */	li r4, 2
-/* 800F03B8 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F03B8 0000002C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F03BC 00000030  4B FB D7 31 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 /* 800F03C0 00000034  A0 1E 2F DC */	lhz r0, 0x2fdc(r30)
 /* 800F03C4 00000038  28 00 00 FF */	cmplwi r0, 0xff
@@ -143,27 +143,27 @@ lbl_800F0560:
 /* 800F059C 0000003C  40 82 00 24 */	bne lbl_800F05C0
 /* 800F05A0 00000040  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F05A4 00000044  38 63 55 14 */	addi r3, r3, l_waitBaseAnime@l
-/* 800F05A8 00000048  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F05A8 00000048  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 800F05AC 0000004C  FC 00 00 50 */	fneg f0, f0
 /* 800F05B0 00000050  D0 1E 37 C8 */	stfs f0, 0x37c8(r30)
-/* 800F05B4 00000054  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800F05B4 00000054  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80425514 */
 /* 800F05B8 00000058  D0 1E 37 D0 */	stfs f0, 0x37d0(r30)
 /* 800F05BC 0000005C  48 00 00 20 */	b lbl_800F05DC
 lbl_800F05C0:
 /* 800F05C0 00000000  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F05C4 00000004  38 63 55 14 */	addi r3, r3, l_waitBaseAnime@l
-/* 800F05C8 00000008  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F05C8 00000008  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 800F05CC 0000000C  D0 1E 37 C8 */	stfs f0, 0x37c8(r30)
-/* 800F05D0 00000010  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800F05D0 00000010  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80425514 */
 /* 800F05D4 00000014  FC 00 00 50 */	fneg f0, f0
 /* 800F05D8 00000018  D0 1E 37 D0 */	stfs f0, 0x37d0(r30)
 lbl_800F05DC:
 /* 800F05DC 00000000  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F05E0 00000004  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800F05E4 00000008  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 800F05E8 0000000C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F05E8 0000000C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800F05EC 00000010  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 800F05F0 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F05F0 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800F05F4 00000018  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 800F05F8 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 800F05FC 00000020  38 80 00 02 */	li r4, 2

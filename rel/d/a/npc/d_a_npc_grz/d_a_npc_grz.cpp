@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpc_Grz_c {
@@ -54,6 +54,8 @@ struct daNpc_Grz_c {
 	/* 809EB154 */ void resetCol();
 	/* 809EB234 */ void playExpression();
 	/* 809EB5C0 */ void playMotion();
+	/* 809EBA3C */ void chkAction(int (daNpc_Grz_c::*)(void*));
+	/* 809EBA68 */ void setAction(int (daNpc_Grz_c::*)(void*));
 	/* 809EBB10 */ void selectAction();
 	/* 809EBC04 */ void doNormalAction(int);
 	/* 809EBD18 */ void doEvent();
@@ -236,8 +238,8 @@ extern "C" void reset__11daNpc_Grz_cFv(); // 1
 extern "C" void resetCol__11daNpc_Grz_cFv(); // 1
 extern "C" void playExpression__11daNpc_Grz_cFv(); // 1
 extern "C" void playMotion__11daNpc_Grz_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__11daNpc_Grz_cFv(); // 1
 extern "C" void doNormalAction__11daNpc_Grz_cFi(); // 1
 extern "C" void doEvent__11daNpc_Grz_cFv(); // 1
@@ -1022,7 +1024,7 @@ asm void daNpc_Grz_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i() {
+asm void daNpc_Grz_c::chkAction(int (daNpc_Grz_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_grz/d_a_npc_grz/chkAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i.s"
 }
@@ -1033,7 +1035,7 @@ extern "C" asm static void chkAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i() {
+asm void daNpc_Grz_c::setAction(int (daNpc_Grz_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_grz/d_a_npc_grz/setAction__11daNpc_Grz_cFM11daNpc_Grz_cFPCvPvPv_i.s"
 }

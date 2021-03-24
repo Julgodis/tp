@@ -52,7 +52,7 @@ lbl_80233EF4:
 /* 80233F34 00000040  88 03 00 1F */	lbz r0, 0x1f(r3)
 /* 80233F38 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80233F3C 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80233F40 0000004C  90 03 5E EC */	stw r0, 0x5eec(r3)
+/* 80233F40 0000004C  90 03 5E EC */	stw r0, 0x5eec(r3)	/* effective address: 8040C0AC */
 /* 80233F44 00000050  38 00 00 00 */	li r0, 0
 /* 80233F48 00000054  80 7E 01 18 */	lwz r3, 0x118(r30)
 /* 80233F4C 00000058  90 03 05 C4 */	stw r0, 0x5c4(r3)

@@ -54,13 +54,13 @@ asm void JASProbe::start(char const* param_0) {
 
 /* ############################################################################################## */
 /* 80455588-8045558C 0004+00 s=1 e=0 z=0  None .sdata2    @125                                                         */
-SECTION_SDATA2 static f32 JASProbe__lit_125 = 59.939998626708984f;
+SECTION_SDATA2 static f32 lit_125 = 59.939998626708984f;
 
 /* 8045558C-80455590 0004+00 s=1 e=0 z=0  None .sdata2    @126                                                         */
-SECTION_SDATA2 static f32 JASProbe__lit_126 = 24.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_126 = 24.0f / 25.0f;
 
 /* 80455590-80455598 0004+04 s=1 e=0 z=0  None .sdata2    @127                                                         */
-SECTION_SDATA2 static f32 JASProbe__lit_127[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_127[1 + 1 /* padding */] = {
 	1.0f / 25.0f,
 	/* padding */
 	0.0f,

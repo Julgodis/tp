@@ -19,7 +19,7 @@ lbl_80026E34:
 /* 80026E38 00000004  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80026E3C 00000008  3B DF 4E 20 */	addi r30, r31, 0x4e20
 /* 80026E40 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 80026E44 00000010  81 9E 00 00 */	lwz r12, 0(r30)
+/* 80026E44 00000010  81 9E 00 00 */	lwz r12, 0(r30)	/* effective address: 8040AFE0 */
 /* 80026E48 00000014  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 80026E4C 00000018  7D 89 03 A6 */	mtctr r12
 /* 80026E50 0000001C  4E 80 04 21 */	bctrl 
@@ -36,7 +36,7 @@ lbl_80026E34:
 /* 80026E7C 00000048  40 82 00 2C */	bne lbl_80026EA8
 /* 80026E80 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80026E84 00000050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80026E88 00000054  88 03 4E 1C */	lbz r0, 0x4e1c(r3)
+/* 80026E88 00000054  88 03 4E 1C */	lbz r0, 0x4e1c(r3)	/* effective address: 8040AFDC */
 /* 80026E8C 00000058  7C 00 07 75 */	extsb. r0, r0
 /* 80026E90 0000005C  41 82 00 18 */	beq lbl_80026EA8
 /* 80026E94 00000060  38 7F 4E 0E */	addi r3, r31, 0x4e0e
@@ -55,8 +55,8 @@ lbl_80026EA8:
 /* 80026EC4 0000001C  54 00 87 7E */	rlwinm r0, r0, 0x10, 0x1d, 0x1f
 /* 80026EC8 00000020  28 00 00 01 */	cmplwi r0, 1
 /* 80026ECC 00000024  40 82 00 48 */	bne lbl_80026F14
-/* 80026ED0 00000028  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026ED4 0000002C  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026ED0 00000028  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026ED4 0000002C  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026ED8 00000030  38 63 01 32 */	addi r3, r3, 0x132
 /* 80026EDC 00000034  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026EE0 00000038  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -73,8 +73,8 @@ lbl_80026EA8:
 /* 80026F0C 00000064  4E 80 04 21 */	bctrl 
 /* 80026F10 00000068  48 00 00 58 */	b lbl_80026F68
 lbl_80026F14:
-/* 80026F14 00000000  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026F18 00000004  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026F14 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026F18 00000004  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026F1C 00000008  38 63 01 32 */	addi r3, r3, 0x132
 /* 80026F20 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026F24 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -83,8 +83,8 @@ lbl_80026F14:
 /* 80026F30 0000001C  7F A4 EB 78 */	mr r4, r29
 /* 80026F34 00000020  38 A0 00 40 */	li r5, 0x40
 /* 80026F38 00000024  48 01 52 5D */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci
-/* 80026F3C 00000028  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026F40 0000002C  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026F3C 00000028  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026F40 0000002C  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026F44 00000030  38 63 00 E3 */	addi r3, r3, 0xe3
 /* 80026F48 00000034  7F A4 EB 78 */	mr r4, r29
 /* 80026F4C 00000038  38 A0 00 40 */	li r5, 0x40
@@ -95,8 +95,8 @@ lbl_80026F14:
 /* 80026F60 0000004C  7D 89 03 A6 */	mtctr r12
 /* 80026F64 00000050  4E 80 04 21 */	bctrl 
 lbl_80026F68:
-/* 80026F68 00000000  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026F6C 00000004  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026F68 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026F6C 00000004  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026F70 00000008  38 63 01 39 */	addi r3, r3, 0x139
 /* 80026F74 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80026F78 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -107,7 +107,7 @@ lbl_80026F68:
 /* 80026F8C 00000024  48 01 52 09 */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci
 /* 80026F90 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80026F94 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80026F98 00000030  80 63 5D 88 */	lwz r3, 0x5d88(r3)
+/* 80026F98 00000030  80 63 5D 88 */	lwz r3, 0x5d88(r3)	/* effective address: 8040BF48 */
 /* 80026F9C 00000034  7F A4 EB 78 */	mr r4, r29
 /* 80026FA0 00000038  38 A0 00 80 */	li r5, 0x80
 /* 80026FA4 0000003C  48 01 51 F1 */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci

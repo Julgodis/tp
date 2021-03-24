@@ -32,13 +32,13 @@ extern "C" void OutputData(); // 1
 extern "C" extern u8 const lit_322[8];
 extern "C" extern u8 const lit_323[9 + 3 /* padding */];
 extern "C" extern u8 const lit_402[31 + 1 /* padding */];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_462[40];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_463[54 + 2 /* padding */];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_464[40];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_465[47 + 1 /* padding */];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_466[47 + 1 /* padding */];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_498[45 + 3 /* padding */];
-extern "C" extern u8 const MetroTRK_Portable_msghndlr__lit_535[44];
+extern "C" extern u8 const lit_462[40];
+extern "C" extern u8 const lit_463[54 + 2 /* padding */];
+extern "C" extern u8 const lit_464[40];
+extern "C" extern u8 const lit_465[47 + 1 /* padding */];
+extern "C" extern u8 const lit_466[47 + 1 /* padding */];
+extern "C" extern u8 const lit_498[45 + 3 /* padding */];
+extern "C" extern u8 const lit_535[44];
 SECTION_BSS u8 IsTRKConnected[4 + 4 /* padding */];
 
 // 
@@ -134,7 +134,7 @@ SECTION_RODATA u8 const lit_323[9 + 3 /* padding */] = {
 };
 
 /* 803A2904-803A2910 000C+00 s=1 e=0 z=0  None .rodata    @370                                                         */
-SECTION_RODATA static u8 const MetroTRK_Portable_msghndlr__lit_370[12] = {
+SECTION_RODATA static u8 const lit_370[12] = {
 	0x44, 0x6F, 0x43, 0x6F, 0x6E, 0x74, 0x69, 0x6E, 0x75, 0x65, 0x0A, 0x00,
 };
 
@@ -198,7 +198,7 @@ extern "C" asm void TRKDoReadRegisters() {
 
 /* ############################################################################################## */
 /* 803D3200-803D321C 001C+00 s=1 e=0 z=0  None .data      @499                                                         */
-SECTION_DATA static void* MetroTRK_Portable_msghndlr__lit_499[7] = {
+SECTION_DATA static void* lit_499[7] = {
 	/* 0    */ (void*)(((char*)TRKDoWriteMemory)+0x194),
 	/* 1    */ (void*)(((char*)TRKDoWriteMemory)+0x1B4),
 	/* 2    */ (void*)(((char*)TRKDoWriteMemory)+0x18C),
@@ -221,7 +221,7 @@ extern "C" asm void TRKDoWriteMemory() {
 
 /* ############################################################################################## */
 /* 803D321C-803D3238 001C+00 s=1 e=0 z=0  None .data      @536                                                         */
-SECTION_DATA static void* MetroTRK_Portable_msghndlr__lit_536[7] = {
+SECTION_DATA static void* lit_536[7] = {
 	/* 0    */ (void*)(((char*)TRKDoReadMemory)+0x19C),
 	/* 1    */ (void*)(((char*)TRKDoReadMemory)+0x1BC),
 	/* 2    */ (void*)(((char*)TRKDoReadMemory)+0x194),
@@ -336,14 +336,14 @@ extern "C" asm void GetTRKConnected() {
 
 /* ############################################################################################## */
 /* 803A2968-803A2990 0028+00 s=0 e=0 z=0  None .rodata    @462                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_462[40] = {
+SECTION_RODATA u8 const lit_462[40] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x6C, 0x65, 0x6E, 0x67, 0x74, 0x68, 0x20,
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
 /* 803A2990-803A29C8 0036+02 s=0 e=0 z=0  None .rodata    @463                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_463[54 + 2 /* padding */] = {
+SECTION_RODATA u8 const lit_463[54 + 2 /* padding */] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x20,
 	0x20, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6C, 0x74, 0x20, 0x72, 0x65, 0x67, 0x73, 0x20, 0x30, 0x78,
@@ -353,14 +353,14 @@ SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_463[54 + 2 /* padding */
 };
 
 /* 803A29C8-803A29F0 0028+00 s=0 e=0 z=0  None .rodata    @464                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_464[40] = {
+SECTION_RODATA u8 const lit_464[40] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x46, 0x50, 0x20, 0x72, 0x65, 0x67, 0x73, 0x20,
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
 
 /* 803A29F0-803A2A20 002F+01 s=0 e=0 z=0  None .rodata    @465                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_465[47 + 1 /* padding */] = {
+SECTION_RODATA u8 const lit_465[47 + 1 /* padding */] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64,
 	0x31, 0x20, 0x72, 0x65, 0x67, 0x73, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
@@ -369,7 +369,7 @@ SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_465[47 + 1 /* padding */
 };
 
 /* 803A2A20-803A2A50 002F+01 s=0 e=0 z=0  None .rodata    @466                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_466[47 + 1 /* padding */] = {
+SECTION_RODATA u8 const lit_466[47 + 1 /* padding */] = {
 	0x44, 0x6F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69, 0x73, 0x74, 0x65, 0x72, 0x73, 0x20,
 	0x3A, 0x20, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x65, 0x78, 0x74, 0x65, 0x6E, 0x64, 0x65, 0x64,
 	0x32, 0x20, 0x72, 0x65, 0x67, 0x73, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
@@ -378,7 +378,7 @@ SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_466[47 + 1 /* padding */
 };
 
 /* 803A2A50-803A2A80 002D+03 s=0 e=0 z=0  None .rodata    @498                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_498[45 + 3 /* padding */] = {
+SECTION_RODATA u8 const lit_498[45 + 3 /* padding */] = {
 	0x57, 0x72, 0x69, 0x74, 0x65, 0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x28, 0x30, 0x78, 0x25,
 	0x30, 0x32, 0x78, 0x29, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x30, 0x78,
 	0x25, 0x30, 0x38, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
@@ -387,7 +387,7 @@ SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_498[45 + 3 /* padding */
 };
 
 /* 803A2A80-803A2AAC 002C+00 s=0 e=0 z=0  None .rodata    @535                                                         */
-SECTION_RODATA u8 const MetroTRK_Portable_msghndlr__lit_535[44] = {
+SECTION_RODATA u8 const lit_535[44] = {
 	0x52, 0x65, 0x61, 0x64, 0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x28, 0x30, 0x78, 0x25, 0x30,
 	0x32, 0x78, 0x29, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x30, 0x78, 0x25,
 	0x30, 0x38, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,

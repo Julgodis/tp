@@ -6,8 +6,8 @@ lbl_802877A8:
 /* 802877B8 00000010  48 0D AA 25 */	bl _savegpr_29
 /* 802877BC 00000014  7C A8 2B 78 */	mr r8, r5
 /* 802877C0 00000018  7C C9 33 78 */	mr r9, r6
-/* 802877C4 0000001C  3C A0 80 43 */	lis r5, jstudio_object__lit_744@ha
-/* 802877C8 00000020  38 C5 10 10 */	addi r6, r5, jstudio_object__lit_744@l
+/* 802877C4 0000001C  3C A0 80 43 */	lis r5, lit_744@ha
+/* 802877C8 00000020  38 C5 10 10 */	addi r6, r5, lit_744@l
 /* 802877CC 00000024  3C A0 80 3A */	lis r5, sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor@ha
 /* 802877D0 00000028  39 65 AA 68 */	addi r11, r5, sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor@l
 /* 802877D4 0000002C  3C A0 80 3C */	lis r5, lit_742@ha
@@ -20,11 +20,11 @@ lbl_802877A8:
 /* 802877F0 00000048  54 87 06 FE */	clrlwi r7, r4, 0x1b
 /* 802877F4 0000004C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 802877F8 00000050  39 43 21 80 */	addi r10, r3, __ptmf_null@l
-/* 802877FC 00000054  80 8A 00 00 */	lwz r4, 0(r10)
-/* 80287800 00000058  80 6A 00 04 */	lwz r3, 4(r10)
+/* 802877FC 00000054  80 8A 00 00 */	lwz r4, 0(r10)	/* effective address: 803A2180 */
+/* 80287800 00000058  80 6A 00 04 */	lwz r3, 4(r10)	/* effective address: 803A2184 */
 /* 80287804 0000005C  90 81 00 08 */	stw r4, 8(r1)
 /* 80287808 00000060  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8028780C 00000064  80 6A 00 08 */	lwz r3, 8(r10)
+/* 8028780C 00000064  80 6A 00 08 */	lwz r3, 8(r10)	/* effective address: 803A2188 */
 /* 80287810 00000068  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80287814 0000006C  38 8C FF F7 */	addi r4, r12, -9
 /* 80287818 00000070  28 04 00 4D */	cmplwi r4, 0x4d

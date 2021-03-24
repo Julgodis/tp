@@ -1,7 +1,7 @@
 lbl_80047D4C:
 /* 80047D4C 00000000  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80047D50 00000004  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 80047D54 00000008  88 05 4F AC */	lbz r0, 0x4fac(r5)
+/* 80047D54 00000008  88 05 4F AC */	lbz r0, 0x4fac(r5)	/* effective address: 8040B16C */
 /* 80047D58 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80047D5C 00000010  40 82 00 0C */	bne lbl_80047D68
 /* 80047D60 00000014  38 60 00 00 */	li r3, 0

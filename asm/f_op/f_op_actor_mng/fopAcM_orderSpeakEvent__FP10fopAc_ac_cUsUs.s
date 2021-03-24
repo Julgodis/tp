@@ -9,7 +9,7 @@ lbl_8001B19C:
 /* 8001B1B8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8001B1BC 00000020  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8001B1C0 00000024  38 00 00 00 */	li r0, 0
-/* 8001B1C4 00000028  88 83 00 E5 */	lbz r4, 0xe5(r3)
+/* 8001B1C4 00000028  88 83 00 E5 */	lbz r4, 0xe5(r3)	/* effective address: 8040B16D */
 /* 8001B1C8 0000002C  28 04 00 00 */	cmplwi r4, 0
 /* 8001B1CC 00000030  41 82 00 0C */	beq lbl_8001B1D8
 /* 8001B1D0 00000034  28 04 00 02 */	cmplwi r4, 2
@@ -39,7 +39,7 @@ lbl_8001B20C:
 /* 8001B21C 00000010  38 E0 01 4F */	li r7, 0x14f
 /* 8001B220 00000014  3D 00 80 40 */	lis r8, g_dComIfG_gameInfo@ha
 /* 8001B224 00000018  39 08 61 C0 */	addi r8, r8, g_dComIfG_gameInfo@l
-/* 8001B228 0000001C  81 08 5D AC */	lwz r8, 0x5dac(r8)
+/* 8001B228 0000001C  81 08 5D AC */	lwz r8, 0x5dac(r8)	/* effective address: 8040BF6C */
 /* 8001B22C 00000020  39 40 FF FF */	li r10, -1
 /* 8001B230 00000024  48 02 64 39 */	bl order__14dEvt_control_cFUsUsUsUsPvPvsUc
 lbl_8001B234:

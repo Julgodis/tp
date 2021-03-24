@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct J2DTextBox {
@@ -136,13 +136,13 @@ asm void dMsgString_c::resetStringLocal(J2DTextBox* param_0) {
 
 /* ############################################################################################## */
 /* 80454D78-80454D7C 0004+00 s=1 e=0 z=0  None .sdata2    @3777                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_string__lit_3777 = 255.0f;
+SECTION_SDATA2 static f32 lit_3777 = 255.0f;
 
 /* 80454D7C-80454D80 0004+00 s=1 e=0 z=0  None .sdata2    @3778                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_string__lit_3778 = -1.0f;
+SECTION_SDATA2 static f32 lit_3778 = -1.0f;
 
 /* 80454D80-80454D88 0004+04 s=1 e=0 z=0  None .sdata2    @3779                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_string__lit_3779[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3779[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

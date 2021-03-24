@@ -24,12 +24,6 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct J3DModel {
-};
-
-struct dJntColData_c {
-};
-
 struct cM3dGLin {
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
@@ -38,7 +32,13 @@ struct cM3dGLin {
 struct fopAc_ac_c {
 };
 
+struct J3DModel {
+};
+
 struct csXyz {
+};
+
+struct dJntColData_c {
 };
 
 struct dJntCol_c {
@@ -178,7 +178,7 @@ asm void dJntCol_c::init(fopAc_ac_c* param_0, dJntColData_c const* param_1, J3DM
 
 /* ############################################################################################## */
 /* 80451D60-80451D64 0004+00 s=1 e=0 z=0  None .sdata2    @3655                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_3655 = 500.0f;
+SECTION_SDATA2 static f32 lit_3655 = 500.0f;
 
 /* 80035CC8-80035DC8 0100+00 s=2 e=0 z=0  None .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
 #pragma push
@@ -207,37 +207,37 @@ SECTION_DATA void* __vt__8cM3dGSph[3] = {
 };
 
 /* 80451D64-80451D68 0004+00 s=1 e=0 z=0  None .sdata2    @4141                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_4141 = -10000000.0f;
+SECTION_SDATA2 static f32 lit_4141 = -10000000.0f;
 
 /* 80451D68-80451D70 0004+04 s=2 e=0 z=0  None .sdata2    @4142                                                        */
-SECTION_SDATA2 static u8 d_d_jnt_col__lit_4142[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4142[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451D70-80451D78 0008+00 s=2 e=0 z=0  None .sdata2    @4143                                                        */
-SECTION_SDATA2 static f64 d_d_jnt_col__lit_4143 = 0.5;
+SECTION_SDATA2 static f64 lit_4143 = 0.5;
 
 /* 80451D78-80451D80 0008+00 s=2 e=0 z=0  None .sdata2    @4144                                                        */
-SECTION_SDATA2 static f64 d_d_jnt_col__lit_4144 = 3.0;
+SECTION_SDATA2 static f64 lit_4144 = 3.0;
 
 /* 80451D80-80451D88 0008+00 s=2 e=0 z=0  None .sdata2    @4145                                                        */
-SECTION_SDATA2 static u8 d_d_jnt_col__lit_4145[8] = {
+SECTION_SDATA2 static u8 lit_4145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451D88-80451D8C 0004+00 s=1 e=0 z=0  None .sdata2    @4146                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_4146 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4146 = 1.0f / 100.0f;
 
 /* 80451D8C-80451D90 0004+00 s=2 e=0 z=0  None .sdata2    @4147                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_4147 = 9.999999747378752e-05f;
+SECTION_SDATA2 static f32 lit_4147 = 9.999999747378752e-05f;
 
 /* 80451D90-80451D94 0004+00 s=1 e=0 z=0  None .sdata2    @4148                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_4148 = 0.5f;
+SECTION_SDATA2 static f32 lit_4148 = 0.5f;
 
 /* 80451D94-80451D98 0004+00 s=1 e=0 z=0  None .sdata2    @4149                                                        */
-SECTION_SDATA2 static f32 d_d_jnt_col__lit_4149 = 1.0f;
+SECTION_SDATA2 static f32 lit_4149 = 1.0f;
 
 /* 80035DC8-80036A5C 0C94+00 s=2 e=0 z=0  None .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
 #pragma push

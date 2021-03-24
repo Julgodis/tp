@@ -18,7 +18,7 @@ lbl_801F51BC:
 /* 801F51CC 00000010  80 63 00 C0 */	lwz r3, 0xc0(r3)
 /* 801F51D0 00000014  3C 80 80 43 */	lis r4, g_msHIO@ha
 /* 801F51D4 00000018  3B A4 E8 4C */	addi r29, r4, g_msHIO@l
-/* 801F51D8 0000001C  88 9D 00 08 */	lbz r4, 8(r29)
+/* 801F51D8 0000001C  88 9D 00 08 */	lbz r4, 8(r29)	/* effective address: 8042E854 */
 /* 801F51DC 00000020  38 A0 00 FF */	li r5, 0xff
 /* 801F51E0 00000024  38 C0 00 00 */	li r6, 0
 /* 801F51E4 00000028  38 E0 00 00 */	li r7, 0
@@ -36,7 +36,7 @@ lbl_801F51BC:
 /* 801F5214 00000058  48 06 06 65 */	bl alphaAnime__13CPaneMgrAlphaFsUcUcUc
 /* 801F5218 0000005C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801F521C 00000060  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801F5220 00000064  A8 84 00 94 */	lha r4, 0x94(r4)
+/* 801F5220 00000064  A8 84 00 94 */	lha r4, 0x94(r4)	/* effective address: 8043021C */
 /* 801F5224 00000068  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 801F5228 0000006C  28 00 00 01 */	cmplwi r0, 1
 /* 801F522C 00000070  40 82 00 30 */	bne lbl_801F525C

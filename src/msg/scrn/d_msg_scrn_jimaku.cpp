@@ -98,7 +98,7 @@ extern "C" void fukiAlpha__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnJimaku_cFff(); // 1
 extern "C" void fontAlpha__16dMsgScrnJimaku_cFf(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -199,12 +199,12 @@ SECTION_DATA static void* __vt__16dMsgScrnJimaku_c[22] = {
 };
 
 /* 80454CB0-80454CB4 0004+00 s=2 e=0 z=0  None .sdata2    @3941                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4] = {
+SECTION_SDATA2 static u8 lit_3941[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454CB4-80454CB8 0004+00 s=1 e=0 z=0  None .sdata2    @3942                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_jimaku__lit_3942 = 6.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3942 = 6.0f / 5.0f;
 
 /* 80244558-80244A74 051C+00 s=0 e=1 z=0  None .text      __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap                     */
 #pragma push
@@ -230,7 +230,7 @@ asm dMsgScrnJimaku_c::~dMsgScrnJimaku_c() {
 
 /* ############################################################################################## */
 /* 80454CB8-80454CC0 0004+04 s=2 e=0 z=0  None .sdata2    @4021                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4021[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

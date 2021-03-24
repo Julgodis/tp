@@ -6,7 +6,7 @@ lbl_8015F914:
 /* 8015F924 00000010  7C 86 23 78 */	mr r6, r4
 /* 8015F928 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F92C 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F930 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8015F930 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 8015F934 00000020  7C 04 03 78 */	mr r4, r0
 /* 8015F938 00000024  38 A0 00 00 */	li r5, 0
 /* 8015F93C 00000028  38 E0 00 00 */	li r7, 0

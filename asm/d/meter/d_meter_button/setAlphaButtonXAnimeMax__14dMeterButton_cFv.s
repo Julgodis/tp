@@ -6,12 +6,12 @@ lbl_80207C34:
 /* 80207C44 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80207C48 00000014  80 63 00 38 */	lwz r3, 0x38(r3)
 /* 80207C4C 00000018  48 04 DB DD */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80207C50 0000001C  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
+/* 80207C50 0000001C  C0 02 AD 4C */	lfs f0, lit_4147(r2)
 /* 80207C54 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80207C58 00000024  41 82 00 B4 */	beq lbl_80207D0C
 /* 80207C5C 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80207C60 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80207C64 00000030  88 03 5E 5E */	lbz r0, 0x5e5e(r3)
+/* 80207C64 00000030  88 03 5E 5E */	lbz r0, 0x5e5e(r3)	/* effective address: 8040C01E */
 /* 80207C68 00000034  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80207C6C 00000038  41 82 00 20 */	beq lbl_80207C8C
 /* 80207C70 0000003C  80 7F 00 38 */	lwz r3, 0x38(r31)
@@ -27,15 +27,15 @@ lbl_80207C8C:
 /* 80207C94 00000008  48 04 DB 3D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80207C98 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80207C9C 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80207CA0 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 80207CA4 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 80207CA0 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 80207CA4 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 80207CA8 0000001C  80 9F 00 38 */	lwz r4, 0x38(r31)
 /* 80207CAC 00000020  38 A0 00 05 */	li r5, 5
 /* 80207CB0 00000024  48 01 2D F5 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas
 lbl_80207CB4:
 /* 80207CB4 00000000  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 80207CB8 00000004  48 04 DB 71 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80207CBC 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
+/* 80207CBC 00000008  C0 42 AD 4C */	lfs f2, lit_4147(r2)
 /* 80207CC0 0000000C  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80207CC4 00000010  40 82 00 48 */	bne lbl_80207D0C
 /* 80207CC8 00000014  88 1F 04 C7 */	lbz r0, 0x4c7(r31)
@@ -49,7 +49,7 @@ lbl_80207CB4:
 /* 80207CE8 00000034  38 C0 00 00 */	li r6, 0
 /* 80207CEC 00000038  38 E0 00 00 */	li r7, 0
 /* 80207CF0 0000003C  FC 20 10 90 */	fmr f1, f2
-/* 80207CF4 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
+/* 80207CF4 00000040  C0 62 AD 58 */	lfs f3, lit_4513(r2)
 /* 80207CF8 00000044  FC 80 18 90 */	fmr f4, f3
 /* 80207CFC 00000048  39 00 00 00 */	li r8, 0
 /* 80207D00 0000004C  48 0A 3C 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

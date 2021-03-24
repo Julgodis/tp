@@ -23,7 +23,7 @@ lbl_801B2D34:
 /* 801B2D50 0000001C  41 82 00 7C */	beq lbl_801B2DCC
 /* 801B2D54 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2D58 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2D5C 00000028  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 801B2D5C 00000028  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 801B2D60 0000002C  28 00 00 2B */	cmplwi r0, 0x2b
 /* 801B2D64 00000030  41 82 01 68 */	beq lbl_801B2ECC
 /* 801B2D68 00000034  38 60 00 2B */	li r3, 0x2b
@@ -34,7 +34,7 @@ lbl_801B2D34:
 /* 801B2D7C 00000048  48 00 0F 79 */	bl setEquipItemFrameColorShield__17dMenu_Collect2D_cFi
 /* 801B2D80 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2D84 00000050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2D88 00000054  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801B2D88 00000054  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801B2D8C 00000058  4B F8 D2 D9 */	bl setShieldChange__9daAlink_cFv
 /* 801B2D90 0000005C  38 00 00 4F */	li r0, 0x4f
 /* 801B2D94 00000060  90 01 00 10 */	stw r0, 0x10(r1)
@@ -43,9 +43,9 @@ lbl_801B2D34:
 /* 801B2DA0 0000006C  38 A0 00 00 */	li r5, 0
 /* 801B2DA4 00000070  38 C0 00 00 */	li r6, 0
 /* 801B2DA8 00000074  38 E0 00 00 */	li r7, 0
-/* 801B2DAC 00000078  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B2DAC 00000078  C0 22 A5 2C */	lfs f1, lit_4482(r2)
 /* 801B2DB0 0000007C  FC 40 08 90 */	fmr f2, f1
-/* 801B2DB4 00000080  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
+/* 801B2DB4 00000080  C0 62 A5 60 */	lfs f3, lit_5531(r2)
 /* 801B2DB8 00000084  FC 80 18 90 */	fmr f4, f3
 /* 801B2DBC 00000088  39 00 00 00 */	li r8, 0
 /* 801B2DC0 0000008C  48 0F 8B C5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -59,7 +59,7 @@ lbl_801B2DCC:
 /* 801B2DDC 00000010  41 82 00 F0 */	beq lbl_801B2ECC
 /* 801B2DE0 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2DE4 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2DE8 0000001C  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 801B2DE8 0000001C  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 801B2DEC 00000020  28 00 00 2A */	cmplwi r0, 0x2a
 /* 801B2DF0 00000024  41 82 00 DC */	beq lbl_801B2ECC
 /* 801B2DF4 00000028  38 60 00 2A */	li r3, 0x2a
@@ -70,7 +70,7 @@ lbl_801B2DCC:
 /* 801B2E08 0000003C  48 00 0E ED */	bl setEquipItemFrameColorShield__17dMenu_Collect2D_cFi
 /* 801B2E0C 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2E10 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2E14 00000048  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801B2E14 00000048  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801B2E18 0000004C  4B F8 D2 4D */	bl setShieldChange__9daAlink_cFv
 /* 801B2E1C 00000050  38 00 00 4F */	li r0, 0x4f
 /* 801B2E20 00000054  90 01 00 0C */	stw r0, 0xc(r1)
@@ -79,9 +79,9 @@ lbl_801B2DCC:
 /* 801B2E2C 00000060  38 A0 00 00 */	li r5, 0
 /* 801B2E30 00000064  38 C0 00 00 */	li r6, 0
 /* 801B2E34 00000068  38 E0 00 00 */	li r7, 0
-/* 801B2E38 0000006C  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B2E38 0000006C  C0 22 A5 2C */	lfs f1, lit_4482(r2)
 /* 801B2E3C 00000070  FC 40 08 90 */	fmr f2, f1
-/* 801B2E40 00000074  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
+/* 801B2E40 00000074  C0 62 A5 60 */	lfs f3, lit_5531(r2)
 /* 801B2E44 00000078  FC 80 18 90 */	fmr f4, f3
 /* 801B2E48 0000007C  39 00 00 00 */	li r8, 0
 /* 801B2E4C 00000080  48 0F 8B 39 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -90,7 +90,7 @@ lbl_801B2DCC:
 lbl_801B2E58:
 /* 801B2E58 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2E5C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2E60 00000008  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 801B2E60 00000008  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 801B2E64 0000000C  28 00 00 2C */	cmplwi r0, 0x2c
 /* 801B2E68 00000010  41 82 00 64 */	beq lbl_801B2ECC
 /* 801B2E6C 00000014  38 60 00 2C */	li r3, 0x2c
@@ -101,7 +101,7 @@ lbl_801B2E58:
 /* 801B2E80 00000028  48 00 0E 75 */	bl setEquipItemFrameColorShield__17dMenu_Collect2D_cFi
 /* 801B2E84 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B2E88 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B2E8C 00000034  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801B2E8C 00000034  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801B2E90 00000038  4B F8 D1 D5 */	bl setShieldChange__9daAlink_cFv
 /* 801B2E94 0000003C  38 00 00 4F */	li r0, 0x4f
 /* 801B2E98 00000040  90 01 00 08 */	stw r0, 8(r1)
@@ -110,9 +110,9 @@ lbl_801B2E58:
 /* 801B2EA4 0000004C  38 A0 00 00 */	li r5, 0
 /* 801B2EA8 00000050  38 C0 00 00 */	li r6, 0
 /* 801B2EAC 00000054  38 E0 00 00 */	li r7, 0
-/* 801B2EB0 00000058  C0 22 A5 2C */	lfs f1, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B2EB0 00000058  C0 22 A5 2C */	lfs f1, lit_4482(r2)
 /* 801B2EB4 0000005C  FC 40 08 90 */	fmr f2, f1
-/* 801B2EB8 00000060  C0 62 A5 60 */	lfs f3, d_menu_d_menu_collect__lit_5531(r2)
+/* 801B2EB8 00000060  C0 62 A5 60 */	lfs f3, lit_5531(r2)
 /* 801B2EBC 00000064  FC 80 18 90 */	fmr f4, f3
 /* 801B2EC0 00000068  39 00 00 00 */	li r8, 0
 /* 801B2EC4 0000006C  48 0F 8A C1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

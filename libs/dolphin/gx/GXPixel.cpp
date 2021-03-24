@@ -40,7 +40,7 @@ extern "C" extern void* __GXData;
 
 /* ############################################################################################## */
 /* 80456618-8045661C 0004+00 s=1 e=0 z=0  None .sdata2    @211                                                         */
-SECTION_SDATA2 static u8 GXPixel__lit_211[4] = {
+SECTION_SDATA2 static u8 lit_211[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -48,7 +48,7 @@ SECTION_SDATA2 static u8 GXPixel__lit_211[4] = {
 SECTION_SDATA2 static f32 lit_212 = 1.0f;
 
 /* 80456620-80456628 0004+04 s=1 e=0 z=0  None .sdata2    @213                                                         */
-SECTION_SDATA2 static f32 GXPixel__lit_213[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_213[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
@@ -58,24 +58,24 @@ SECTION_SDATA2 static f32 GXPixel__lit_213[1 + 1 /* padding */] = {
 SECTION_SDATA2 static f64 lit_214 = 1.0;
 
 /* 80456630-80456638 0004+04 s=1 e=0 z=0  None .sdata2    @215                                                         */
-SECTION_SDATA2 static f32 GXPixel__lit_215[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_215[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80456638-80456640 0008+00 s=1 e=0 z=0  None .sdata2    @216                                                         */
-SECTION_SDATA2 static f64 GXPixel__lit_216 = 0.5;
+SECTION_SDATA2 static f64 lit_216 = 0.5;
 
 /* 80456640-80456648 0004+04 s=1 e=0 z=0  None .sdata2    @217                                                         */
-SECTION_SDATA2 static f32 GXPixel__lit_217[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_217[1 + 1 /* padding */] = {
 	8388638.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80456648-80456650 0008+00 s=1 e=0 z=0  None .sdata2    @219                                                         */
-SECTION_SDATA2 static f64 GXPixel__lit_219 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_219 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8035F8B8-8035FACC 0214+00 s=0 e=20 z=0  None .text      GXSetFog                                                     */
 #pragma push

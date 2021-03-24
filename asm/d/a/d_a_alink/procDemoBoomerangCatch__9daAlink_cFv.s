@@ -16,7 +16,7 @@ lbl_8011BDF0:
 /* 8011BE28 00000038  7F E3 FB 78 */	mr r3, r31
 /* 8011BE2C 0000003C  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 8011BE30 00000040  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 8011BE34 00000044  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 8011BE34 00000044  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 8011BE38 00000048  4B F9 1F DD */	bl setBlendMoveAnime__9daAlink_cFf
 lbl_8011BE3C:
 /* 8011BE3C 00000000  38 60 00 01 */	li r3, 1

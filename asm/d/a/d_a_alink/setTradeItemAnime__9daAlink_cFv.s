@@ -20,7 +20,7 @@ lbl_801186D4:
 lbl_8011871C:
 /* 8011871C 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80118720 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80118724 00000008  88 84 4F B6 */	lbz r4, 0x4fb6(r4)
+/* 80118724 00000008  88 84 4F B6 */	lbz r4, 0x4fb6(r4)	/* effective address: 8040B176 */
 lbl_80118728:
 /* 80118728 00000000  38 A0 00 03 */	li r5, 3
 /* 8011872C 00000004  38 C0 FF FF */	li r6, -1

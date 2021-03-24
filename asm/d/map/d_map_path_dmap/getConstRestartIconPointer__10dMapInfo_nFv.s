@@ -6,7 +6,7 @@ lbl_8003EF70:
 /* 8003EF80 00000010  48 32 32 59 */	bl _savegpr_28
 /* 8003EF84 00000014  3C 60 80 42 */	lis r3, mTypeGroupListAll__7dTres_c@ha
 /* 8003EF88 00000018  38 63 54 38 */	addi r3, r3, mTypeGroupListAll__7dTres_c@l
-/* 8003EF8C 0000001C  8B C3 00 5C */	lbz r30, 0x5c(r3)
+/* 8003EF8C 0000001C  8B C3 00 5C */	lbz r30, 0x5c(r3)	/* effective address: 80425494 */
 /* 8003EF90 00000020  38 60 00 07 */	li r3, 7
 /* 8003EF94 00000024  48 05 D3 CD */	bl getFirstData__7dTres_cFUc
 /* 8003EF98 00000028  7C 7D 1B 78 */	mr r29, r3

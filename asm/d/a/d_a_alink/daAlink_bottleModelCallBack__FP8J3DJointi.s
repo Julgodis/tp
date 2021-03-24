@@ -4,8 +4,8 @@ lbl_8010E52C:
 /* 8010E534 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8010E538 0000000C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8010E53C 00000010  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8010E540 00000014  80 63 00 38 */	lwz r3, 0x38(r3)
-/* 8010E544 00000018  80 63 00 14 */	lwz r3, 0x14(r3)
+/* 8010E540 00000014  80 63 00 38 */	lwz r3, 0x38(r3)	/* effective address: 80434B00 */
+/* 8010E544 00000018  80 63 00 14 */	lwz r3, 0x14(r3)	/* effective address: 80434ADC */
 /* 8010E548 0000001C  2C 04 00 00 */	cmpwi r4, 0
 /* 8010E54C 00000020  40 82 00 08 */	bne lbl_8010E554
 /* 8010E550 00000024  4B FF FF 3D */	bl bottleModelCallBack__9daAlink_cFv

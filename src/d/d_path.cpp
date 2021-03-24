@@ -101,7 +101,7 @@ asm void dPath_GetNextRoomPath(dPath const* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80452000-80452008 0004+04 s=1 e=0 z=0  None .sdata2    @3685                                                        */
-SECTION_SDATA2 static u8 d_d_path__lit_3685[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3685[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

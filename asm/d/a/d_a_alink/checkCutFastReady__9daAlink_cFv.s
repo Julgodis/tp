@@ -43,7 +43,7 @@ lbl_800D1164:
 /* 800D1178 00000014  40 82 00 D4 */	bne lbl_800D124C
 /* 800D117C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D1180 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D1184 00000020  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D1184 00000020  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D1188 00000024  28 00 00 FF */	cmplwi r0, 0xff
 /* 800D118C 00000028  41 82 00 C0 */	beq lbl_800D124C
 /* 800D1190 0000002C  54 80 07 7B */	rlwinm. r0, r4, 0, 0x1d, 0x1d

@@ -11,10 +11,8 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct daObjMATO_c {
+	/* 80C91B58 */ void setAction(void (daObjMATO_c::*)(int), int);
 	/* 80C91D48 */ void action();
 	/* 80C91DE4 */ void hit_check();
 	/* 80C91ECC */ void start_wait(int);
@@ -26,6 +24,9 @@ struct daObjMATO_c {
 	/* 80C9243C */ void setBaseMtx();
 	/* 80C92650 */ void mato_init();
 	/* 80C927AC */ void create();
+};
+
+struct fopAc_ac_c {
 };
 
 struct MatoData_s {
@@ -60,7 +61,7 @@ void daObjMATO_Draw(daObjMATO_c*); // 2
 static void daObjMATO_Execute(daObjMATO_c*); // 2
 void daObjMATO_IsDelete(daObjMATO_c*); // 2
 
-extern "C" static void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi(); // 1
+extern "C" void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi(); // 1
 extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void daObjMATO_Create__FP10fopAc_ac_c(); // 1
 extern "C" void daObjMATO_Delete__FP11daObjMATO_c(); // 1
@@ -127,7 +128,7 @@ extern "C" void _unresolved(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi() {
+asm void daObjMATO_c::setAction(void (daObjMATO_c::*)(int), int param_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi.s"
 }

@@ -11,10 +11,13 @@
 // Types:
 // 
 
-struct _GXColor {
+struct JPABaseEmitter {
 };
 
 struct Vec {
+};
+
+struct _GXColor {
 };
 
 namespace JStudio {
@@ -49,9 +52,6 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-};
-
-struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {

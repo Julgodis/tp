@@ -20,7 +20,7 @@ lbl_801FC034:
 /* 801FC03C 00000008  4B FB B9 D1 */	bl _create__15dMenu_Collect_cFv
 /* 801FC040 0000000C  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801FC044 00000010  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801FC048 00000014  88 03 00 39 */	lbz r0, 0x39(r3)
+/* 801FC048 00000014  88 03 00 39 */	lbz r0, 0x39(r3)	/* effective address: 803DD321 */
 /* 801FC04C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 801FC050 0000001C  41 82 00 14 */	beq lbl_801FC064
 /* 801FC054 00000020  7F E3 FB 78 */	mr r3, r31

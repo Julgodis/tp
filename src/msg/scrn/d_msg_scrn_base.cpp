@@ -131,7 +131,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 803C0D08-803C0D58 0050+00 s=1 e=0 z=0  None .data      @3949                                                        */
-SECTION_DATA static void* msg_scrn_d_msg_scrn_base__lit_3949[20] = {
+SECTION_DATA static void* lit_3949[20] = {
 	/* 0    */ (void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
 	/* 1    */ (void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
 	/* 2    */ (void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
@@ -204,12 +204,12 @@ asm dMsgScrnBase_c::~dMsgScrnBase_c() {
 
 /* ############################################################################################## */
 /* 80454BA8-80454BAC 0004+00 s=3 e=0 z=0  None .sdata2    @3820                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_base__lit_3820[4] = {
+SECTION_SDATA2 static u8 lit_3820[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454BAC-80454BB0 0004+00 s=2 e=0 z=0  None .sdata2    @3821                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_base__lit_3821 = 1.0f;
+SECTION_SDATA2 static f32 lit_3821 = 1.0f;
 
 /* 8023C16C-8023C234 00C8+00 s=1 e=9 z=0  None .text      init__14dMsgScrnBase_cFv                                     */
 #pragma push

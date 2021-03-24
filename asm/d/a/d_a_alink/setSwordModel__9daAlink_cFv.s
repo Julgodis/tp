@@ -16,7 +16,7 @@ lbl_800D1268:
 /* 800D12A0 00000038  98 1F 2F 94 */	stb r0, 0x2f94(r31)
 /* 800D12A4 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D12A8 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D12AC 00000044  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D12AC 00000044  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D12B0 00000048  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800D12B4 0000004C  40 82 00 28 */	bne lbl_800D12DC
 /* 800D12B8 00000050  80 7F 06 B8 */	lwz r3, 0x6b8(r31)

@@ -127,10 +127,10 @@ struct JFWDisplay {
 	/* 80272C60 */ void waitBlanking(int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -216,23 +216,23 @@ extern "C" void setRenderMode__10dScnLogo_cFv(); // 1
 extern "C" void __dt__10dLog_HIO_cFv(); // 1
 extern "C" static void func_802585A4(); // 1
 extern "C" void __sinit_d_s_logo_cpp(); // 1
-extern "C" extern char const* const d_s_d_s_logo__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* lit_3737[3];
-extern "C" extern void* d_s_d_s_logo__lit_3738[3];
-extern "C" extern void* d_s_d_s_logo__lit_3739[3];
-extern "C" extern void* d_s_d_s_logo__lit_3740[3];
-extern "C" extern void* d_s_d_s_logo__lit_3741[3];
-extern "C" extern void* d_s_d_s_logo__lit_3742[3];
-extern "C" extern void* d_s_d_s_logo__lit_3743[3];
+extern "C" extern void* lit_3738[3];
+extern "C" extern void* lit_3739[3];
+extern "C" extern void* lit_3740[3];
+extern "C" extern void* lit_3741[3];
+extern "C" extern void* lit_3742[3];
+extern "C" extern void* lit_3743[3];
 extern "C" extern void* lit_3744[3];
-extern "C" extern void* d_s_d_s_logo__lit_3745[3];
-extern "C" extern void* d_s_d_s_logo__lit_3746[3];
-extern "C" extern void* d_s_d_s_logo__lit_3747[3];
-extern "C" extern void* d_s_d_s_logo__lit_3748[3];
-extern "C" extern void* d_s_d_s_logo__lit_3749[3];
-extern "C" extern void* d_s_d_s_logo__lit_3750[3];
-extern "C" extern void* d_s_d_s_logo__lit_3751[3];
-extern "C" extern void* d_s_d_s_logo__lit_3752[3];
+extern "C" extern void* lit_3745[3];
+extern "C" extern void* lit_3746[3];
+extern "C" extern void* lit_3747[3];
+extern "C" extern void* lit_3748[3];
+extern "C" extern void* lit_3749[3];
+extern "C" extern void* lit_3750[3];
+extern "C" extern void* lit_3751[3];
+extern "C" extern void* lit_3752[3];
 extern "C" extern void* g_profile_LOGO_SCENE[10];
 
 // 
@@ -341,7 +341,7 @@ extern "C" extern u8 struct_80451500[4];
 
 /* ############################################################################################## */
 /* 803C2E38-803C2E44 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_s_d_s_logo__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -353,42 +353,42 @@ SECTION_DATA void* lit_3737[3] = {
 };
 
 /* 803C2E50-803C2E5C 000C+00 s=0 e=0 z=0  None .data      @3738                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3738[3] = {
+SECTION_DATA void* lit_3738[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)warningDispDraw__10dScnLogo_cFv,
 };
 
 /* 803C2E5C-803C2E68 000C+00 s=0 e=0 z=0  None .data      @3739                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3739[3] = {
+SECTION_DATA void* lit_3739[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)warningOutDraw__10dScnLogo_cFv,
 };
 
 /* 803C2E68-803C2E74 000C+00 s=0 e=0 z=0  None .data      @3740                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3740[3] = {
+SECTION_DATA void* lit_3740[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nintendoInDraw__10dScnLogo_cFv,
 };
 
 /* 803C2E74-803C2E80 000C+00 s=0 e=0 z=0  None .data      @3741                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3741[3] = {
+SECTION_DATA void* lit_3741[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nintendoOutDraw__10dScnLogo_cFv,
 };
 
 /* 803C2E80-803C2E8C 000C+00 s=0 e=0 z=0  None .data      @3742                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3742[3] = {
+SECTION_DATA void* lit_3742[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dolbyInDraw__10dScnLogo_cFv,
 };
 
 /* 803C2E8C-803C2E98 000C+00 s=0 e=0 z=0  None .data      @3743                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3743[3] = {
+SECTION_DATA void* lit_3743[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dolbyOutDraw__10dScnLogo_cFv,
@@ -402,56 +402,56 @@ SECTION_DATA void* lit_3744[3] = {
 };
 
 /* 803C2EA4-803C2EB0 000C+00 s=0 e=0 z=0  None .data      @3745                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3745[3] = {
+SECTION_DATA void* lit_3745[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progInDraw__10dScnLogo_cFv,
 };
 
 /* 803C2EB0-803C2EBC 000C+00 s=0 e=0 z=0  None .data      @3746                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3746[3] = {
+SECTION_DATA void* lit_3746[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progSelDraw__10dScnLogo_cFv,
 };
 
 /* 803C2EBC-803C2EC8 000C+00 s=0 e=0 z=0  None .data      @3747                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3747[3] = {
+SECTION_DATA void* lit_3747[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progOutDraw__10dScnLogo_cFv,
 };
 
 /* 803C2EC8-803C2ED4 000C+00 s=0 e=0 z=0  None .data      @3748                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3748[3] = {
+SECTION_DATA void* lit_3748[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progSetDraw__10dScnLogo_cFv,
 };
 
 /* 803C2ED4-803C2EE0 000C+00 s=0 e=0 z=0  None .data      @3749                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3749[3] = {
+SECTION_DATA void* lit_3749[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progSet2Draw__10dScnLogo_cFv,
 };
 
 /* 803C2EE0-803C2EEC 000C+00 s=0 e=0 z=0  None .data      @3750                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3750[3] = {
+SECTION_DATA void* lit_3750[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)progChangeDraw__10dScnLogo_cFv,
 };
 
 /* 803C2EEC-803C2EF8 000C+00 s=0 e=0 z=0  None .data      @3751                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3751[3] = {
+SECTION_DATA void* lit_3751[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)dvdWaitDraw__10dScnLogo_cFv,
 };
 
 /* 803C2EF8-803C2F04 000C+00 s=0 e=0 z=0  None .data      @3752                                                        */
-SECTION_DATA void* d_s_d_s_logo__lit_3752[3] = {
+SECTION_DATA void* lit_3752[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)nextSceneChange__10dScnLogo_cFv,
@@ -602,19 +602,19 @@ SECTION_SDATA2 static f32 lit_3933 = 0.5f;
 SECTION_SDATA2 static f32 lit_3934 = 1.0f;
 
 /* 80454EE0-80454EE4 0004+00 s=1 e=0 z=0  None .sdata2    @3935                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_logo__lit_3935 = -1.0f;
+SECTION_SDATA2 static f32 lit_3935 = -1.0f;
 
 /* 80454EE4-80454EE8 0004+00 s=1 e=0 z=0  None .sdata2    @3936                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_logo__lit_3936 = -0.5f;
+SECTION_SDATA2 static f32 lit_3936 = -0.5f;
 
 /* 80454EE8-80454EEC 0004+00 s=2 e=0 z=0  None .sdata2    @3937                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_logo__lit_3937 = 255.0f;
+SECTION_SDATA2 static f32 lit_3937 = 255.0f;
 
 /* 80454EEC-80454EF0 0004+00 s=1 e=0 z=0  None .sdata2    @3938                                                        */
 SECTION_SDATA2 static f32 lit_3938 = 200.0f;
 
 /* 80454EF0-80454EF8 0008+00 s=2 e=0 z=0  None .sdata2    @3940                                                        */
-SECTION_SDATA2 static f64 d_s_d_s_logo__lit_3940 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3940 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8025631C-802568E0 05C4+00 s=1 e=0 z=0  None .text      progSelDraw__10dScnLogo_cFv                                  */
 #pragma push
@@ -1031,7 +1031,7 @@ asm static void cLib_calcTimer__template5(u16* param_0) {
 
 /* ############################################################################################## */
 /* 80430758-80430768 000C+04 s=1 e=0 z=0  None .bss       @3702                                                        */
-static u8 d_s_d_s_logo__lit_3702[12 + 4 /* padding */];
+static u8 lit_3702[12 + 4 /* padding */];
 
 /* 804510E8-804510F0 0008+00 s=1 e=0 z=0  None .sbss      g_LogHIO                                                     */
 static u8 g_LogHIO[8];

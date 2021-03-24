@@ -16,14 +16,8 @@ struct daObj_BattaHIO_c {
 	/* 80BAC874 */ ~daObj_BattaHIO_c();
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DFrameCtrl {
-	/* 80BAA13C */ ~J3DFrameCtrl();
-};
-
 struct daObjBATTA_c {
+	/* 80BA9E5C */ void setAction(void (daObjBATTA_c::*)());
 	/* 80BAA1C8 */ void wait();
 	/* 80BAA47C */ void turn();
 	/* 80BAAA18 */ void jump();
@@ -40,6 +34,13 @@ struct daObjBATTA_c {
 	/* 80BABFA4 */ void _delete();
 	/* 80BAC00C */ void mtx_set();
 	/* 80BAC194 */ void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	/* 80BAA13C */ ~J3DFrameCtrl();
 };
 
 struct cM3dGSph {
@@ -82,7 +83,7 @@ static void daObjBATTA_Execute(daObjBATTA_c*); // 2
 void daObjBATTA_IsDelete(daObjBATTA_c*); // 2
 
 extern "C" void __ct__16daObj_BattaHIO_cFv(); // 1
-extern "C" static void setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v(); // 1
+extern "C" void setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v(); // 1
 extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void daObjBATTA_Create__FP10fopAc_ac_c(); // 1
@@ -232,7 +233,7 @@ asm daObj_BattaHIO_c::daObj_BattaHIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v() {
+asm void daObjBATTA_c::setAction(void (daObjBATTA_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v.s"
 }

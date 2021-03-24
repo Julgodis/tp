@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -82,7 +82,7 @@ extern "C" void fukiAlpha__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnBoss_cFff(); // 1
 extern "C" void fontAlpha__14dMsgScrnBoss_cFf(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_boss__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -180,7 +180,7 @@ SECTION_DATA static void* __vt__14dMsgScrnBoss_c[22] = {
 };
 
 /* 80454BB0-80454BB4 0004+00 s=3 e=0 z=0  None .sdata2    @3854                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_boss__lit_3854 = 1.0f;
+SECTION_SDATA2 static f32 lit_3854 = 1.0f;
 
 /* 8023C5C8-8023C928 0360+00 s=0 e=1 z=0  None .text      __ct__14dMsgScrnBoss_cFv                                     */
 #pragma push
@@ -217,7 +217,7 @@ asm void dMsgScrnBoss_c::exec() {
 
 /* ############################################################################################## */
 /* 80454BB4-80454BB8 0004+00 s=1 e=0 z=0  None .sdata2    @3916                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_boss__lit_3916[4] = {
+SECTION_SDATA2 static u8 lit_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

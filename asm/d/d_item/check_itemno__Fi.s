@@ -56,8 +56,8 @@ lbl_8009B888:
 /* 8009B888 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B88C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B890 00000008  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8009B894 0000000C  3C 80 80 38 */	lis r4, d_d_item__stringBase0@ha
-/* 8009B898 00000010  38 84 B0 D0 */	addi r4, r4, d_d_item__stringBase0@l
+/* 8009B894 0000000C  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 8009B898 00000010  38 84 B0 D0 */	addi r4, r4, stringBase0@l
 /* 8009B89C 00000014  38 A0 00 06 */	li r5, 6
 /* 8009B8A0 00000018  48 2C D0 B5 */	bl strncmp
 /* 8009B8A4 0000001C  2C 03 00 00 */	cmpwi r3, 0

@@ -15,8 +15,8 @@ lbl_8009258C:
 /* 800925C0 00000020  38 00 00 03 */	li r0, 3
 /* 800925C4 00000024  7C 09 03 A6 */	mtctr r0
 lbl_800925C8:
-/* 800925C8 00000000  80 64 00 04 */	lwz r3, 4(r4)
-/* 800925CC 00000004  84 04 00 08 */	lwzu r0, 8(r4)
+/* 800925C8 00000000  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 8037A884 */
+/* 800925CC 00000004  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 8037A888 */
 /* 800925D0 00000008  90 65 00 04 */	stw r3, 4(r5)
 /* 800925D4 0000000C  94 05 00 08 */	stwu r0, 8(r5)
 /* 800925D8 00000010  42 00 FF F0 */	bdnz lbl_800925C8
@@ -25,21 +25,21 @@ lbl_800925C8:
 /* 800925E4 0000001C  40 82 01 B0 */	bne lbl_80092794
 /* 800925E8 00000020  7F C3 F3 78 */	mr r3, r30
 /* 800925EC 00000024  38 9F 00 04 */	addi r4, r31, 4
-/* 800925F0 00000028  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
-/* 800925F4 0000002C  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
+/* 800925F0 00000028  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 800925F4 0000002C  38 A5 AA F4 */	addi r5, r5, stringBase0@l
 /* 800925F8 00000030  38 A5 01 80 */	addi r5, r5, 0x180
 /* 800925FC 00000034  38 C0 00 00 */	li r6, 0
 /* 80092600 00000038  4B FF 6A 8D */	bl getEvIntData__9dCamera_cFPiPci
 /* 80092604 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 80092608 00000040  7F E4 FB 78 */	mr r4, r31
-/* 8009260C 00000044  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
-/* 80092610 00000048  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
+/* 8009260C 00000044  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 80092610 00000048  38 A5 AA F4 */	addi r5, r5, stringBase0@l
 /* 80092614 0000004C  38 C0 00 01 */	li r6, 1
 /* 80092618 00000050  4B FF 6A 75 */	bl getEvIntData__9dCamera_cFPiPci
 /* 8009261C 00000054  7F C3 F3 78 */	mr r3, r30
 /* 80092620 00000058  38 9F 00 08 */	addi r4, r31, 8
-/* 80092624 0000005C  3C A0 80 38 */	lis r5, d_d_ev_camera__stringBase0@ha
-/* 80092628 00000060  38 A5 AA F4 */	addi r5, r5, d_d_ev_camera__stringBase0@l
+/* 80092624 0000005C  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 80092628 00000060  38 A5 AA F4 */	addi r5, r5, stringBase0@l
 /* 8009262C 00000064  38 A5 01 7B */	addi r5, r5, 0x17b
 /* 80092630 00000068  81 1F 00 00 */	lwz r8, 0(r31)
 /* 80092634 0000006C  38 00 00 0A */	li r0, 0xa
@@ -70,22 +70,22 @@ lbl_80092688:
 /* 80092690 00000008  40 82 00 5C */	bne lbl_800926EC
 /* 80092694 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80092698 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8009269C 00000014  C0 04 5D 8C */	lfs f0, 0x5d8c(r4)
+/* 8009269C 00000014  C0 04 5D 8C */	lfs f0, 0x5d8c(r4)	/* effective address: 8040BF4C */
 /* 800926A0 00000018  D0 1F 00 28 */	stfs f0, 0x28(r31)
-/* 800926A4 0000001C  C0 04 5D 90 */	lfs f0, 0x5d90(r4)
+/* 800926A4 0000001C  C0 04 5D 90 */	lfs f0, 0x5d90(r4)	/* effective address: 8040BF50 */
 /* 800926A8 00000020  D0 1F 00 2C */	stfs f0, 0x2c(r31)
-/* 800926AC 00000024  C0 04 5D 94 */	lfs f0, 0x5d94(r4)
+/* 800926AC 00000024  C0 04 5D 94 */	lfs f0, 0x5d94(r4)	/* effective address: 8040BF54 */
 /* 800926B0 00000028  D0 1F 00 30 */	stfs f0, 0x30(r31)
-/* 800926B4 0000002C  C0 04 5D 98 */	lfs f0, 0x5d98(r4)
+/* 800926B4 0000002C  C0 04 5D 98 */	lfs f0, 0x5d98(r4)	/* effective address: 8040BF58 */
 /* 800926B8 00000030  D0 1F 00 34 */	stfs f0, 0x34(r31)
-/* 800926BC 00000034  C0 04 5D 9C */	lfs f0, 0x5d9c(r4)
+/* 800926BC 00000034  C0 04 5D 9C */	lfs f0, 0x5d9c(r4)	/* effective address: 8040BF5C */
 /* 800926C0 00000038  D0 1F 00 38 */	stfs f0, 0x38(r31)
-/* 800926C4 0000003C  C0 04 5D A0 */	lfs f0, 0x5da0(r4)
+/* 800926C4 0000003C  C0 04 5D A0 */	lfs f0, 0x5da0(r4)	/* effective address: 8040BF60 */
 /* 800926C8 00000040  D0 1F 00 3C */	stfs f0, 0x3c(r31)
-/* 800926CC 00000044  C0 04 5D A4 */	lfs f0, 0x5da4(r4)
+/* 800926CC 00000044  C0 04 5D A4 */	lfs f0, 0x5da4(r4)	/* effective address: 8040BF64 */
 /* 800926D0 00000048  D0 1F 00 48 */	stfs f0, 0x48(r31)
 /* 800926D4 0000004C  38 61 00 34 */	addi r3, r1, 0x34
-/* 800926D8 00000050  A8 84 5D A8 */	lha r4, 0x5da8(r4)
+/* 800926D8 00000050  A8 84 5D A8 */	lha r4, 0x5da8(r4)	/* effective address: 8040BF68 */
 /* 800926DC 00000054  48 1D E8 BD */	bl __ct__7cSAngleFs
 /* 800926E0 00000058  A8 01 00 34 */	lha r0, 0x34(r1)
 /* 800926E4 0000005C  B0 1F 00 42 */	sth r0, 0x42(r31)
@@ -157,7 +157,7 @@ lbl_800927CC:
 /* 800927DC 00000010  90 61 00 98 */	stw r3, 0x98(r1)
 /* 800927E0 00000014  C8 01 00 98 */	lfd f0, 0x98(r1)
 /* 800927E4 00000018  EC 40 08 28 */	fsubs f2, f0, f1
-/* 800927E8 0000001C  C8 22 8E F8 */	lfd f1, d_d_ev_camera__lit_5962(r2)
+/* 800927E8 0000001C  C8 22 8E F8 */	lfd f1, lit_5962(r2)
 /* 800927EC 00000020  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 800927F0 00000024  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 800927F4 00000028  90 61 00 A0 */	stw r3, 0xa0(r1)

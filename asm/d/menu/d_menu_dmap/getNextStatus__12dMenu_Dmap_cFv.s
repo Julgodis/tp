@@ -39,7 +39,7 @@ lbl_801BF39C:
 lbl_801BF3C0:
 /* 801BF3C0 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801BF3C4 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801BF3C8 00000008  A0 03 00 B2 */	lhz r0, 0xb2(r3)
+/* 801BF3C8 00000008  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801BF3CC 0000000C  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 801BF3D0 00000010  41 82 00 28 */	beq lbl_801BF3F8
 /* 801BF3D4 00000014  88 03 00 BF */	lbz r0, 0xbf(r3)

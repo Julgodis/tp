@@ -82,7 +82,7 @@ lbl_800BD6FC:
 /* 800BD83C 0000012C  48 28 96 11 */	bl PSMTXMultVecSR
 /* 800BD840 00000130  38 61 00 6C */	addi r3, r1, 0x6c
 /* 800BD844 00000134  7C 64 1B 78 */	mr r4, r3
-/* 800BD848 00000138  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 800BD848 00000138  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 800BD84C 0000013C  48 28 98 8D */	bl PSVECScale
 /* 800BD850 00000140  38 61 00 84 */	addi r3, r1, 0x84
 /* 800BD854 00000144  38 81 00 6C */	addi r4, r1, 0x6c
@@ -224,7 +224,7 @@ lbl_800BDA18:
 /* 800BDA5C 00000044  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BDA60 00000000  40 81 00 58 */	ble lbl_800BDAB8
 /* 800BDA64 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800BDA68 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800BDA68 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800BDA6C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800BDA70 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800BDA74 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -289,7 +289,7 @@ lbl_800BDB2C:
 lbl_800BDB40:
 /* 800BDB40 00000000  FF C0 08 90 */	fmr f30, f1
 lbl_800BDB44:
-/* 800BDB44 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800BDB44 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800BDB48 00000004  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 800BDB4C 00000000  40 81 00 20 */	ble lbl_800BDB6C
 /* 800BDB50 00000004  38 61 00 60 */	addi r3, r1, 0x60

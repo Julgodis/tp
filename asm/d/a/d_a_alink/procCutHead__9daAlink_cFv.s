@@ -52,9 +52,9 @@ lbl_800D6068:
 /* 800D608C 00000024  41 82 00 24 */	beq lbl_800D60B0
 /* 800D6090 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutHead_c0@ha
 /* 800D6094 0000002C  38 63 DD B8 */	addi r3, r3, m__21daAlinkHIO_cutHead_c0@l
-/* 800D6098 00000030  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 800D6098 00000030  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038DE00 */
 /* 800D609C 00000034  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
-/* 800D60A0 00000038  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800D60A0 00000038  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038DE04 */
 /* 800D60A4 0000003C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800D60A8 00000040  7F C3 F3 78 */	mr r3, r30
 /* 800D60AC 00000044  4B FE 55 99 */	bl initGravity__9daAlink_cFv
@@ -62,7 +62,7 @@ lbl_800D60B0:
 /* 800D60B0 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800D60B4 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutHead_c0@ha
 /* 800D60B8 00000008  38 63 DD B8 */	addi r3, r3, m__21daAlinkHIO_cutHead_c0@l
-/* 800D60BC 0000000C  C0 03 00 50 */	lfs f0, 0x50(r3)
+/* 800D60BC 0000000C  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8038DE08 */
 /* 800D60C0 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D60C4 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800D60C8 00000004  40 82 00 38 */	bne lbl_800D6100

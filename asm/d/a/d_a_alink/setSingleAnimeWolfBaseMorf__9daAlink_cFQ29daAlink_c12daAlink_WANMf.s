@@ -3,7 +3,7 @@ lbl_801296A8:
 /* 801296AC 00000004  7C 08 02 A6 */	mflr r0
 /* 801296B0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801296B4 0000000C  FC 60 08 90 */	fmr f3, f1
-/* 801296B8 00000010  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 801296B8 00000010  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 801296BC 00000014  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 801296C0 00000018  38 A0 FF FF */	li r5, -1
 /* 801296C4 0000001C  48 00 00 41 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf

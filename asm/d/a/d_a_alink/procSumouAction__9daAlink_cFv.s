@@ -19,7 +19,7 @@ lbl_800EBD14:
 /* 800EBD20 0000000C  38 00 00 01 */	li r0, 1
 /* 800EBD24 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EBD28 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EBD2C 00000018  98 03 5E 81 */	stb r0, 0x5e81(r3)
+/* 800EBD2C 00000018  98 03 5E 81 */	stb r0, 0x5e81(r3)	/* effective address: 8040C041 */
 /* 800EBD30 0000001C  48 00 00 1C */	b lbl_800EBD4C
 lbl_800EBD34:
 /* 800EBD34 00000000  28 00 00 03 */	cmplwi r0, 3
@@ -27,7 +27,7 @@ lbl_800EBD34:
 /* 800EBD3C 00000008  38 00 00 04 */	li r0, 4
 /* 800EBD40 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EBD44 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EBD48 00000014  98 03 5E 81 */	stb r0, 0x5e81(r3)
+/* 800EBD48 00000014  98 03 5E 81 */	stb r0, 0x5e81(r3)	/* effective address: 8040C041 */
 lbl_800EBD4C:
 /* 800EBD4C 00000000  A8 7F 30 0C */	lha r3, 0x300c(r31)
 /* 800EBD50 00000004  38 03 00 01 */	addi r0, r3, 1
@@ -219,7 +219,7 @@ lbl_800EBFC8:
 /* 800EBFFC 00000000  40 81 00 C4 */	ble lbl_800EC0C0
 /* 800EC000 00000004  7F E3 FB 78 */	mr r3, r31
 /* 800EC004 00000008  38 80 01 52 */	li r4, 0x152
-/* 800EC008 0000000C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800EC008 0000000C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800EC00C 00000010  90 A1 00 0C */	stw r5, 0xc(r1)
 /* 800EC010 00000014  90 01 00 08 */	stw r0, 8(r1)
 /* 800EC014 00000018  C8 01 00 08 */	lfd f0, 8(r1)

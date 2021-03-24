@@ -14,7 +14,7 @@ lbl_800F2EE0:
 /* 800F2F10 00000030  4B FC E3 CD */	bl deleteEquipItem__9daAlink_cFii
 /* 800F2F14 00000034  7F E3 FB 78 */	mr r3, r31
 /* 800F2F18 00000038  38 80 00 60 */	li r4, 0x60
-/* 800F2F1C 0000003C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F2F1C 0000003C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F2F20 00000040  4B FB A0 91 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 800F2F24 00000044  7F E3 FB 78 */	mr r3, r31
 /* 800F2F28 00000048  4B FF A5 B5 */	bl setSyncHorsePos__9daAlink_cFv

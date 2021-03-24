@@ -20,7 +20,7 @@ lbl_80137158:
 /* 80137170 00000018  7C 43 04 2E */	lfsx f2, r3, r0
 /* 80137174 0000001C  3C 60 80 39 */	lis r3, m__19daAlinkHIO_wlLie_c0@ha
 /* 80137178 00000020  38 63 F1 38 */	addi r3, r3, m__19daAlinkHIO_wlLie_c0@l
-/* 8013717C 00000024  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 8013717C 00000024  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038F16C */
 /* 80137180 00000028  C0 1F 1F DC */	lfs f0, 0x1fdc(r31)
 /* 80137184 0000002C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80137188 00000030  EC 20 00 B2 */	fmuls f1, f0, f2

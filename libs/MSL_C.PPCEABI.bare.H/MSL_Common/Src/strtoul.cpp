@@ -54,7 +54,7 @@ extern "C" asm void strtoul() {
 
 /* ############################################################################################## */
 /* 803D3148-803D3190 0044+04 s=1 e=0 z=0  None .data      @431                                                         */
-SECTION_DATA static void* MSL_Common_Src_strtoul__lit_431[17 + 1 /* padding */] = {
+SECTION_DATA static void* lit_431[17 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)__strtoul)+0x310),
 	/* 1    */ (void*)(((char*)__strtoul)+0xC4),
 	/* 2    */ (void*)(((char*)__strtoul)+0x164),

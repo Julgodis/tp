@@ -40,7 +40,7 @@ lbl_80050CC4:
 /* 80050D5C 0000007C  C0 23 01 CC */	lfs f1, 0x1cc(r3)
 /* 80050D60 00000080  C0 1B 00 04 */	lfs f0, 4(r27)
 /* 80050D64 00000084  EF E1 00 28 */	fsubs f31, f1, f0
-/* 80050D68 00000088  C0 02 85 F8 */	lfs f0, d_particle_d_particle_copoly__lit_3672(r2)
+/* 80050D68 00000088  C0 02 85 F8 */	lfs f0, lit_3672(r2)
 /* 80050D6C 000000A8  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 80050D70 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 80050D74 00000004  40 82 00 C0 */	bne lbl_80050E34
@@ -72,7 +72,7 @@ lbl_80050DC8:
 /* 80050DD8 00000008  40 82 00 34 */	bne lbl_80050E0C
 /* 80050DDC 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80050DE0 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80050DE4 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80050DE4 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80050DE8 00000018  7F 44 D3 78 */	mr r4, r26
 /* 80050DEC 0000001C  80 BA 00 28 */	lwz r5, 0x28(r26)
 /* 80050DF0 00000020  38 A5 01 80 */	addi r5, r5, 0x180

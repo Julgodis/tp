@@ -7,14 +7,14 @@ lbl_801AECB8:
 /* 801AECCC 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801AECD0 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801AECD4 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801AECD8 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)
+/* 801AECD8 00000020  83 E3 5F 50 */	lwz r31, 0x5f50(r3)	/* effective address: 8040C110 */
 /* 801AECDC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 801AECE0 00000028  81 9F 00 00 */	lwz r12, 0(r31)
 /* 801AECE4 0000002C  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 801AECE8 00000030  7D 89 03 A6 */	mtctr r12
 /* 801AECEC 00000034  4E 80 04 21 */	bctrl 
 /* 801AECF0 00000038  80 7E 00 04 */	lwz r3, 4(r30)
-/* 801AECF4 0000003C  C0 22 A5 08 */	lfs f1, d_d_kantera_icon_meter__lit_3776(r2)
+/* 801AECF4 0000003C  C0 22 A5 08 */	lfs f1, lit_3776(r2)
 /* 801AECF8 00000040  FC 40 08 90 */	fmr f2, f1
 /* 801AECFC 00000044  7F E4 FB 78 */	mr r4, r31
 /* 801AED00 00000048  48 14 A1 D5 */	bl draw__9J2DScreenFffPC14J2DGrafContext

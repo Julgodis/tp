@@ -6,9 +6,9 @@ lbl_801EABEC:
 /* 801EABFC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801EAC00 00000014  3C 60 80 43 */	lis r3, g_ringHIO@ha
 /* 801EAC04 00000018  38 63 FA FC */	addi r3, r3, g_ringHIO@l
-/* 801EAC08 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 801EAC08 0000001C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042FB04 */
 /* 801EAC0C 00000020  D0 1F 05 0C */	stfs f0, 0x50c(r31)
-/* 801EAC10 00000024  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 801EAC10 00000024  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8042FB08 */
 /* 801EAC14 00000028  D0 1F 05 10 */	stfs f0, 0x510(r31)
 /* 801EAC18 0000002C  88 1F 06 B0 */	lbz r0, 0x6b0(r31)
 /* 801EAC1C 00000030  98 1F 06 B1 */	stb r0, 0x6b1(r31)
@@ -43,7 +43,7 @@ lbl_801EAC74:
 /* 801EAC8C 00000018  C0 1F 06 10 */	lfs f0, 0x610(r31)
 /* 801EAC90 0000001C  3C 60 80 43 */	lis r3, g_ringHIO@ha
 /* 801EAC94 00000020  38 83 FA FC */	addi r4, r3, g_ringHIO@l
-/* 801EAC98 00000024  C0 24 00 28 */	lfs f1, 0x28(r4)
+/* 801EAC98 00000024  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 8042FB24 */
 /* 801EAC9C 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801EACA0 0000002C  41 82 00 14 */	beq lbl_801EACB4
 /* 801EACA4 00000030  D0 3F 06 10 */	stfs f1, 0x610(r31)

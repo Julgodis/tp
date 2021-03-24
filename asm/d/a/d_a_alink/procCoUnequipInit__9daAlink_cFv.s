@@ -22,14 +22,14 @@ lbl_8011A4EC:
 /* 8011A50C 00000020  7F E3 FB 78 */	mr r3, r31
 /* 8011A510 00000024  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 8011A514 00000028  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 8011A518 0000002C  C0 24 00 94 */	lfs f1, 0x94(r4)
+/* 8011A518 0000002C  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 8038EEBC */
 /* 8011A51C 00000030  48 00 E3 29 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8011A520 00000034  48 00 00 94 */	b lbl_8011A5B4
 lbl_8011A524:
 /* 8011A524 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8011A528 00000004  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 8011A52C 00000008  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 8011A530 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 8011A530 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 8011A534 00000010  4B F9 38 E1 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 8011A538 00000014  80 1F 06 10 */	lwz r0, 0x610(r31)
 /* 8011A53C 00000018  2C 00 00 00 */	cmpwi r0, 0
@@ -59,7 +59,7 @@ lbl_8011A584:
 /* 8011A594 00000010  B0 1F 30 0E */	sth r0, 0x300e(r31)
 /* 8011A598 00000014  7F E3 FB 78 */	mr r3, r31
 /* 8011A59C 00000018  38 80 01 88 */	li r4, 0x188
-/* 8011A5A0 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011A5A0 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8011A5A4 00000020  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 8011A5A8 00000024  38 A0 00 27 */	li r5, 0x27
 /* 8011A5AC 00000028  C0 62 92 C4 */	lfs f3, lit_6109(r2)

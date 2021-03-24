@@ -6,8 +6,8 @@ lbl_800E63F0:
 /* 800E6400 00000010  48 27 BD DD */	bl _savegpr_29
 /* 800E6404 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 800E6408 00000018  7C 9D 23 78 */	mr r29, r4
-/* 800E640C 0000001C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800E6410 00000020  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
+/* 800E640C 0000001C  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800E6410 00000020  3B C4 D6 58 */	addi r30, r4, lit_3757@l
 /* 800E6414 00000024  80 03 31 A0 */	lwz r0, 0x31a0(r3)
 /* 800E6418 00000028  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 800E641C 0000002C  41 82 00 98 */	beq lbl_800E64B4
@@ -43,7 +43,7 @@ lbl_800E6480:
 /* 800E648C 0000000C  38 DE 15 F0 */	addi r6, r30, 0x15f0
 /* 800E6490 00000010  38 C6 00 3C */	addi r6, r6, 0x3c
 /* 800E6494 00000014  4B FC 72 5D */	bl setUpperAnimeParam__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERPC16daAlinkHIO_anm_c
-/* 800E6498 00000018  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800E6498 00000018  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800E649C 0000001C  D0 1F 34 3C */	stfs f0, 0x343c(r31)
 lbl_800E64A0:
 /* 800E64A0 00000000  80 1F 05 74 */	lwz r0, 0x574(r31)
@@ -116,7 +116,7 @@ lbl_800E658C:
 /* 800E6594 00000008  38 BE 15 F0 */	addi r5, r30, 0x15f0
 /* 800E6598 0000000C  38 A5 00 3C */	addi r5, r5, 0x3c
 /* 800E659C 00000010  4B FC 6B 59 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E65A0 00000014  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800E65A0 00000014  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800E65A4 00000018  D0 1F 34 3C */	stfs f0, 0x343c(r31)
 /* 800E65A8 0000001C  38 7E 15 F0 */	addi r3, r30, 0x15f0
 /* 800E65AC 00000020  C0 03 00 4C */	lfs f0, 0x4c(r3)
@@ -128,9 +128,9 @@ lbl_800E65BC:
 /* 800E65C0 00000004  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800E65C4 00000008  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800E65C8 0000000C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800E65CC 00000010  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800E65CC 00000010  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800E65D0 00000014  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800E65D4 00000018  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800E65D4 00000018  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800E65D8 0000001C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800E65DC 00000020  38 60 00 01 */	li r3, 1
 lbl_800E65E0:

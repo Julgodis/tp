@@ -5,12 +5,12 @@ lbl_8034A394:
 /* 8034A3A0 0000000C  38 04 A3 94 */	addi r0, r4, stateBusy@l
 /* 8034A3A4 00000010  7C 67 1B 78 */	mr r7, r3
 /* 8034A3A8 00000014  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034A3AC 00000018  90 0D 92 40 */	stw r0, dvd__LastState(r13)
+/* 8034A3AC 00000018  90 0D 92 40 */	stw r0, LastState(r13)
 /* 8034A3B0 0000001C  80 03 00 08 */	lwz r0, 8(r3)
 /* 8034A3B4 00000020  28 00 00 10 */	cmplwi r0, 0x10
 /* 8034A3B8 00000024  41 81 02 F4 */	bgt lbl_8034A6AC
-/* 8034A3BC 00000028  3C 60 80 3D */	lis r3, dvd__lit_359@ha
-/* 8034A3C0 0000002C  38 63 15 A8 */	addi r3, r3, dvd__lit_359@l
+/* 8034A3BC 00000028  3C 60 80 3D */	lis r3, lit_359@ha
+/* 8034A3C0 0000002C  38 63 15 A8 */	addi r3, r3, lit_359@l
 /* 8034A3C4 00000030  54 00 10 3A */	slwi r0, r0, 2
 /* 8034A3C8 00000034  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8034A3CC 00000038  7C 09 03 A6 */	mtctr r0
@@ -19,7 +19,7 @@ lbl_8034A394:
 /* 8034A3D8 00000044  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A3DC 00000048  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A3E0 0000004C  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A3E4 00000050  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A3E4 00000050  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A3E8 00000054  38 00 00 20 */	li r0, 0x20
 /* 8034A3EC 00000058  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A3F0 0000005C  90 07 00 1C */	stw r0, 0x1c(r7)
@@ -47,9 +47,9 @@ lbl_8034A43C:
 lbl_8034A444:
 /* 8034A444 00000000  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC006000@ha */
 /* 8034A448 00000004  38 63 60 00 */	addi r3, r3, 0x6000 /* 0xCC006000@l */
-/* 8034A44C 00000008  80 03 00 04 */	lwz r0, 4(r3)
+/* 8034A44C 00000008  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: CC006004 */
 /* 8034A450 0000000C  3C 80 00 08 */	lis r4, 8
-/* 8034A454 00000010  90 03 00 04 */	stw r0, 4(r3)
+/* 8034A454 00000010  90 03 00 04 */	stw r0, 4(r3)	/* effective address: CC006004 */
 /* 8034A458 00000014  80 67 00 20 */	lwz r3, 0x20(r7)
 /* 8034A45C 00000018  80 07 00 14 */	lwz r0, 0x14(r7)
 /* 8034A460 0000001C  7C 03 00 50 */	subf r0, r3, r0
@@ -74,7 +74,7 @@ lbl_8034A474:
 /* 8034A4A4 00000030  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A4A8 00000034  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A4AC 00000038  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A4B0 0000003C  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A4B0 0000003C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A4B4 00000040  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A4B8 00000044  80 67 00 10 */	lwz r3, 0x10(r7)
 /* 8034A4BC 00000048  4B FF D9 F5 */	bl DVDLowSeek
@@ -89,8 +89,8 @@ lbl_8034A474:
 /* 8034A4E0 0000006C  48 00 01 E4 */	b lbl_8034A6C4
 /* 8034A4E4 00000070  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC006000@ha */
 /* 8034A4E8 00000074  38 63 60 00 */	addi r3, r3, 0x6000 /* 0xCC006000@l */
-/* 8034A4EC 00000078  80 03 00 04 */	lwz r0, 4(r3)
-/* 8034A4F0 0000007C  90 03 00 04 */	stw r0, 4(r3)
+/* 8034A4EC 00000078  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: CC006004 */
+/* 8034A4F0 0000007C  90 03 00 04 */	stw r0, 4(r3)	/* effective address: CC006004 */
 /* 8034A4F4 00000080  80 0D 92 0C */	lwz r0, AutoFinishing(r13)
 /* 8034A4F8 00000084  2C 00 00 00 */	cmpwi r0, 0
 /* 8034A4FC 00000088  41 82 00 24 */	beq lbl_8034A520
@@ -117,7 +117,7 @@ lbl_8034A520:
 /* 8034A54C 0000002C  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A550 00000030  38 83 60 00 */	addi r4, r3, 0x6000
 /* 8034A554 00000034  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A558 00000038  90 04 00 04 */	stw r0, 4(r4)
+/* 8034A558 00000038  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC006004 */
 /* 8034A55C 0000003C  38 C3 A6 D4 */	addi r6, r3, cbForStateBusy@l
 /* 8034A560 00000040  3C 60 00 01 */	lis r3, 1
 /* 8034A564 00000044  38 80 00 00 */	li r4, 0
@@ -128,7 +128,7 @@ lbl_8034A520:
 /* 8034A578 00000058  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A57C 0000005C  38 83 60 00 */	addi r4, r3, 0x6000
 /* 8034A580 00000060  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A584 00000064  90 04 00 04 */	stw r0, 4(r4)
+/* 8034A584 00000064  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC006004 */
 /* 8034A588 00000068  38 00 00 01 */	li r0, 1
 /* 8034A58C 0000006C  38 C3 A6 D4 */	addi r6, r3, cbForStateBusy@l
 /* 8034A590 00000070  90 0D 92 0C */	stw r0, AutoFinishing(r13)
@@ -141,7 +141,7 @@ lbl_8034A520:
 /* 8034A5AC 0000008C  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A5B0 00000090  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A5B4 00000094  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A5B8 00000098  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A5B8 00000098  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A5BC 0000009C  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A5C0 000000A0  38 60 00 00 */	li r3, 0
 /* 8034A5C4 000000A4  4B FF DC 9D */	bl DVDLowRequestAudioStatus
@@ -150,7 +150,7 @@ lbl_8034A520:
 /* 8034A5D0 000000B0  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A5D4 000000B4  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A5D8 000000B8  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A5DC 000000BC  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A5DC 000000BC  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A5E0 000000C0  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A5E4 000000C4  3C 60 00 01 */	lis r3, 1
 /* 8034A5E8 000000C8  4B FF DC 79 */	bl DVDLowRequestAudioStatus
@@ -159,7 +159,7 @@ lbl_8034A520:
 /* 8034A5F4 000000D4  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A5F8 000000D8  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A5FC 000000DC  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A600 000000E0  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A600 000000E0  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A604 000000E4  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A608 000000E8  3C 60 00 02 */	lis r3, 2
 /* 8034A60C 000000EC  4B FF DC 55 */	bl DVDLowRequestAudioStatus
@@ -168,7 +168,7 @@ lbl_8034A520:
 /* 8034A618 000000F8  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A61C 000000FC  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A620 00000100  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A624 00000104  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A624 00000104  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A628 00000108  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A62C 0000010C  3C 60 00 03 */	lis r3, 3
 /* 8034A630 00000110  4B FF DC 31 */	bl DVDLowRequestAudioStatus
@@ -177,7 +177,7 @@ lbl_8034A520:
 /* 8034A63C 0000011C  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A640 00000120  38 83 60 00 */	addi r4, r3, 0x6000
 /* 8034A644 00000124  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A648 00000128  90 04 00 04 */	stw r0, 4(r4)
+/* 8034A648 00000128  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC006004 */
 /* 8034A64C 0000012C  38 A3 A6 D4 */	addi r5, r3, cbForStateBusy@l
 /* 8034A650 00000130  80 67 00 10 */	lwz r3, 0x10(r7)
 /* 8034A654 00000134  80 87 00 14 */	lwz r4, 0x14(r7)
@@ -187,7 +187,7 @@ lbl_8034A520:
 /* 8034A664 00000144  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A668 00000148  38 A3 60 00 */	addi r5, r3, 0x6000
 /* 8034A66C 0000014C  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A670 00000150  90 05 00 04 */	stw r0, 4(r5)
+/* 8034A670 00000150  90 05 00 04 */	stw r0, 4(r5)	/* effective address: CC006004 */
 /* 8034A674 00000154  38 00 00 20 */	li r0, 0x20
 /* 8034A678 00000158  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A67C 0000015C  90 07 00 1C */	stw r0, 0x1c(r7)
@@ -198,7 +198,7 @@ lbl_8034A520:
 /* 8034A690 00000170  80 03 60 04 */	lwz r0, 0x6004(r3)
 /* 8034A694 00000174  38 83 60 00 */	addi r4, r3, 0x6000
 /* 8034A698 00000178  3C 60 80 35 */	lis r3, cbForStateBusy@ha
-/* 8034A69C 0000017C  90 04 00 04 */	stw r0, 4(r4)
+/* 8034A69C 0000017C  90 04 00 04 */	stw r0, 4(r4)	/* effective address: CC006004 */
 /* 8034A6A0 00000180  38 63 A6 D4 */	addi r3, r3, cbForStateBusy@l
 /* 8034A6A4 00000184  4B FF D9 71 */	bl DVDLowStopMotor
 /* 8034A6A8 00000188  48 00 00 1C */	b lbl_8034A6C4

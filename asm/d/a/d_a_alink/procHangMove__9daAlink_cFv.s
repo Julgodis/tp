@@ -24,7 +24,7 @@ lbl_800FB790:
 /* 800FB7E8 00000004  7F C3 F3 78 */	mr r3, r30
 /* 800FB7EC 00000008  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wallCatch_c0@ha
 /* 800FB7F0 0000000C  38 84 E1 64 */	addi r4, r4, m__23daAlinkHIO_wallCatch_c0@l
-/* 800FB7F4 00000010  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 800FB7F4 00000010  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038E194 */
 /* 800FB7F8 00000014  48 00 03 D1 */	bl procHangClimbInit__9daAlink_cFf
 /* 800FB7FC 00000018  48 00 03 A8 */	b lbl_800FBBA4
 lbl_800FB800:
@@ -112,7 +112,7 @@ lbl_800FB928:
 /* 800FB92C 00000004  4B FF E6 B1 */	bl getHangMoveAnmSpeed__9daAlink_cFv
 /* 800FB930 00000008  7F C3 F3 78 */	mr r3, r30
 /* 800FB934 0000000C  7F A4 EB 78 */	mr r4, r29
-/* 800FB938 00000010  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
+/* 800FB938 00000010  C0 42 93 30 */	lfs f2, lit_7625(r2)
 /* 800FB93C 00000014  4B FB 16 A5 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800FB940 00000018  38 00 00 0D */	li r0, 0xd
 /* 800FB944 0000001C  98 1E 2F 99 */	stb r0, 0x2f99(r30)
@@ -146,14 +146,14 @@ lbl_800FB98C:
 /* 800FB9B0 00000024  7D 03 04 2E */	lfsx f8, r3, r0
 /* 800FB9B4 00000028  7C 04 04 2E */	lfsx f0, r4, r0
 /* 800FB9B8 0000002C  C0 3E 04 D8 */	lfs f1, 0x4d8(r30)
-/* 800FB9BC 00000030  C0 62 92 9C */	lfs f3, d_a_d_a_alink__lit_5944(r2)
+/* 800FB9BC 00000030  C0 62 92 9C */	lfs f3, lit_5944(r2)
 /* 800FB9C0 00000034  EC 03 00 32 */	fmuls f0, f3, f0
 /* 800FB9C4 00000038  EC 21 00 2A */	fadds f1, f1, f0
 /* 800FB9C8 0000003C  C0 42 92 E0 */	lfs f2, lit_6845(r2)
 /* 800FB9CC 00000040  EC 02 01 F2 */	fmuls f0, f2, f7
 /* 800FB9D0 00000044  EC A1 00 28 */	fsubs f5, f1, f0
 /* 800FB9D4 00000048  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
-/* 800FB9D8 0000004C  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800FB9D8 0000004C  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800FB9DC 00000050  EC 81 00 28 */	fsubs f4, f1, f0
 /* 800FB9E0 00000054  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
 /* 800FB9E4 00000058  EC 03 02 32 */	fmuls f0, f3, f8
@@ -226,12 +226,12 @@ lbl_800FBAD8:
 /* 800FBAE4 0000000C  D0 61 00 0C */	stfs f3, 0xc(r1)
 /* 800FBAE8 00000010  C0 5E 1B 80 */	lfs f2, 0x1b80(r30)
 /* 800FBAEC 00000014  D0 41 00 10 */	stfs f2, 0x10(r1)
-/* 800FBAF0 00000018  C0 22 93 2C */	lfs f1, d_a_d_a_alink__lit_7624(r2)
+/* 800FBAF0 00000018  C0 22 93 2C */	lfs f1, lit_7624(r2)
 /* 800FBAF4 0000001C  C0 01 00 2C */	lfs f0, 0x2c(r1)
 /* 800FBAF8 00000020  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800FBAFC 00000024  EC 04 00 28 */	fsubs f0, f4, f0
 /* 800FBB00 00000028  D0 01 00 08 */	stfs f0, 8(r1)
-/* 800FBB04 0000002C  C0 02 92 9C */	lfs f0, d_a_d_a_alink__lit_5944(r2)
+/* 800FBB04 0000002C  C0 02 92 9C */	lfs f0, lit_5944(r2)
 /* 800FBB08 00000030  EC 03 00 2A */	fadds f0, f3, f0
 /* 800FBB0C 00000034  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800FBB10 00000038  C0 01 00 34 */	lfs f0, 0x34(r1)
@@ -250,7 +250,7 @@ lbl_800FBAD8:
 /* 800FBB44 0000006C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800FBB48 00000070  FC 00 02 10 */	fabs f0, f0
 /* 800FBB4C 00000074  FC 20 00 18 */	frsp f1, f0
-/* 800FBB50 00000078  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800FBB50 00000078  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800FBB54 0000007C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FBB58 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 800FBB5C 00000004  40 82 00 1C */	bne lbl_800FBB78

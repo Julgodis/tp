@@ -9,8 +9,8 @@ lbl_801E1518:
 /* 801E1534 0000001C  40 82 00 3C */	bne lbl_801E1570
 /* 801E1538 00000020  3B A0 00 00 */	li r29, 0
 /* 801E153C 00000024  3B E0 00 00 */	li r31, 0
-/* 801E1540 00000028  3C 60 80 39 */	lis r3, d_menu_d_menu_letter__stringBase0@ha
-/* 801E1544 0000002C  3B C3 6D C0 */	addi r30, r3, d_menu_d_menu_letter__stringBase0@l
+/* 801E1540 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801E1544 0000002C  3B C3 6D C0 */	addi r30, r3, stringBase0@l
 lbl_801E1548:
 /* 801E1548 00000000  38 1F 02 8C */	addi r0, r31, 0x28c
 /* 801E154C 00000004  7C 7B 00 2E */	lwzx r3, r27, r0

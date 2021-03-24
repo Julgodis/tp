@@ -1,7 +1,7 @@
 lbl_8015F3C4:
 /* 8015F3C4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F3C8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F3CC 00000008  88 63 00 15 */	lbz r3, 0x15(r3)
+/* 8015F3CC 00000008  88 63 00 15 */	lbz r3, 0x15(r3)	/* effective address: 804061D5 */
 /* 8015F3D0 0000000C  38 80 00 01 */	li r4, 1
 /* 8015F3D4 00000010  38 03 FF D6 */	addi r0, r3, -42
 /* 8015F3D8 00000014  54 00 04 3E */	clrlwi r0, r0, 0x10

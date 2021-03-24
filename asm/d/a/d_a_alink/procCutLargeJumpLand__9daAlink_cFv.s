@@ -43,7 +43,7 @@ lbl_800D6894:
 /* 800D6894 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 800D6898 00000004  3C 60 80 39 */	lis r3, m__26daAlinkHIO_cutLargeJump_c0@ha
 /* 800D689C 00000008  38 63 DE 18 */	addi r3, r3, m__26daAlinkHIO_cutLargeJump_c0@l
-/* 800D68A0 0000000C  C0 03 00 70 */	lfs f0, 0x70(r3)
+/* 800D68A0 0000000C  C0 03 00 70 */	lfs f0, 0x70(r3)	/* effective address: 8038DE88 */
 /* 800D68A4 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D68A8 00000000  40 81 00 20 */	ble lbl_800D68C8
 /* 800D68AC 00000004  80 BF 31 98 */	lwz r5, 0x3198(r31)
@@ -56,7 +56,7 @@ lbl_800D6894:
 lbl_800D68C8:
 /* 800D68C8 00000000  3C 60 80 39 */	lis r3, m__26daAlinkHIO_cutLargeJump_c0@ha
 /* 800D68CC 00000004  38 63 DE 18 */	addi r3, r3, m__26daAlinkHIO_cutLargeJump_c0@l
-/* 800D68D0 00000008  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800D68D0 00000008  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038DE64 */
 /* 800D68D4 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D68D8 00000000  40 81 00 14 */	ble lbl_800D68EC
 /* 800D68DC 00000004  7F E3 FB 78 */	mr r3, r31

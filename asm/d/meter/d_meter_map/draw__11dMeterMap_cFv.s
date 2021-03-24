@@ -20,8 +20,8 @@ lbl_8020DF68:
 /* 8020DFB0 0000001C  41 82 00 8C */	beq lbl_8020E03C
 /* 8020DFB4 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DFB8 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020DFBC 00000028  80 63 5F 50 */	lwz r3, 0x5f50(r3)
-/* 8020DFC0 0000002C  81 83 00 00 */	lwz r12, 0(r3)
+/* 8020DFBC 00000028  80 63 5F 50 */	lwz r3, 0x5f50(r3)	/* effective address: 8040C110 */
+/* 8020DFC0 0000002C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 8020DFC4 00000030  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 8020DFC8 00000034  7D 89 03 A6 */	mtctr r12
 /* 8020DFCC 00000038  4E 80 04 21 */	bctrl 

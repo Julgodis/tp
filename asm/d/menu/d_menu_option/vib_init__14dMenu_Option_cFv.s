@@ -5,7 +5,7 @@ lbl_801E41A0:
 /* 801E41AC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801E41B0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801E41B4 00000014  80 63 00 44 */	lwz r3, 0x44(r3)
-/* 801E41B8 00000018  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
+/* 801E41B8 00000018  C0 22 A9 30 */	lfs f1, lit_4069(r2)
 /* 801E41BC 0000001C  4B FB 10 E5 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801E41C0 00000020  7F E3 FB 78 */	mr r3, r31
 /* 801E41C4 00000024  38 80 00 01 */	li r4, 1

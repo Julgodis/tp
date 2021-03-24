@@ -61,7 +61,7 @@ lbl_800CBAE0:
 /* 800CBB14 00000034  41 82 00 18 */	beq lbl_800CBB2C
 /* 800CBB18 00000038  38 60 00 04 */	li r3, 4
 /* 800CBB1C 0000003C  48 0E 11 D9 */	bl dKy_shadow_mode_reset__FUc
-/* 800CBB20 00000040  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800CBB20 00000040  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800CBB24 00000044  D0 1E 04 50 */	stfs f0, 0x450(r30)
 /* 800CBB28 00000048  48 00 00 0C */	b lbl_800CBB34
 lbl_800CBB2C:

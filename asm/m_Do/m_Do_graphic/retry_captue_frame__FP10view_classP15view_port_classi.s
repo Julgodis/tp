@@ -34,7 +34,7 @@ lbl_8000A160:
 /* 8000A1E0 00000080  83 6D 86 50 */	lwz r27, mFrameBufferTex__13mDoGph_gInf_c(r13)
 /* 8000A1E4 00000084  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8000A1E8 00000088  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8000A1EC 0000008C  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 8000A1EC 0000008C  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8000A1F0 00000090  28 00 00 00 */	cmplwi r0, 0
 /* 8000A1F4 00000094  40 82 00 84 */	bne lbl_8000A278
 /* 8000A1F8 00000098  7C A0 07 35 */	extsh. r0, r5

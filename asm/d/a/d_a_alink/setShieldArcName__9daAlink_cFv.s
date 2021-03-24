@@ -1,7 +1,7 @@
 lbl_8013FF90:
 /* 8013FF90 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8013FF94 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8013FF98 00000008  88 04 00 15 */	lbz r0, 0x15(r4)
+/* 8013FF98 00000008  88 04 00 15 */	lbz r0, 0x15(r4)	/* effective address: 804061D5 */
 /* 8013FF9C 0000000C  28 00 00 2A */	cmplwi r0, 0x2a
 /* 8013FFA0 00000010  41 82 00 0C */	beq lbl_8013FFAC
 /* 8013FFA4 00000014  28 00 00 FF */	cmplwi r0, 0xff

@@ -18,7 +18,7 @@ lbl_801D9504:
 /* 801D9544 00000040  48 00 08 89 */	bl getInsectItemID__14dMenu_Insect_cFii
 /* 801D9548 00000044  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801D954C 00000048  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801D9550 0000004C  98 64 00 C3 */	stb r3, 0xc3(r4)
+/* 801D9550 0000004C  98 64 00 C3 */	stb r3, 0xc3(r4)	/* effective address: 8043024B */
 lbl_801D9554:
 /* 801D9554 00000000  38 00 00 52 */	li r0, 0x52
 /* 801D9558 00000004  90 01 00 08 */	stw r0, 8(r1)
@@ -27,9 +27,9 @@ lbl_801D9554:
 /* 801D9564 00000010  38 A0 00 00 */	li r5, 0
 /* 801D9568 00000014  38 C0 00 00 */	li r6, 0
 /* 801D956C 00000018  38 E0 00 00 */	li r7, 0
-/* 801D9570 0000001C  C0 22 A8 38 */	lfs f1, d_menu_d_menu_insect__lit_3834(r2)
+/* 801D9570 0000001C  C0 22 A8 38 */	lfs f1, lit_3834(r2)
 /* 801D9574 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801D9578 00000024  C0 62 A8 68 */	lfs f3, d_menu_d_menu_insect__lit_4089(r2)
+/* 801D9578 00000024  C0 62 A8 68 */	lfs f3, lit_4089(r2)
 /* 801D957C 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801D9580 0000002C  39 00 00 00 */	li r8, 0
 /* 801D9584 00000030  48 0D 24 01 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

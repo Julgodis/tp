@@ -9,7 +9,7 @@ lbl_800D70A0:
 /* 800D70BC 0000001C  41 82 00 8C */	beq lbl_800D7148
 /* 800D70C0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D70C4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D70C8 00000028  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D70C8 00000028  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D70CC 0000002C  28 00 00 FF */	cmplwi r0, 0xff
 /* 800D70D0 00000030  40 82 00 10 */	bne lbl_800D70E0
 /* 800D70D4 00000034  80 1F 05 74 */	lwz r0, 0x574(r31)

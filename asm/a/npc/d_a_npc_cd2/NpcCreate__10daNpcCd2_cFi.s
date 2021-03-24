@@ -32,7 +32,7 @@ lbl_80157D48:
 /* 80157D74 0000002C  38 C0 00 00 */	li r6, 0
 /* 80157D78 00000030  38 E0 00 00 */	li r7, 0
 /* 80157D7C 00000034  39 00 FF FF */	li r8, -1
-/* 80157D80 00000038  C0 22 9A E0 */	lfs f1, a_npc_d_a_npc_cd2__lit_4050(r2)
+/* 80157D80 00000038  C0 22 9A E0 */	lfs f1, lit_4050(r2)
 /* 80157D84 0000003C  39 20 00 00 */	li r9, 0
 /* 80157D88 00000040  39 40 FF FF */	li r10, -1
 /* 80157D8C 00000044  4B EB 8A 45 */	bl __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl
@@ -91,7 +91,7 @@ lbl_80157E3C:
 /* 80157E50 00000014  7F C5 F3 78 */	mr r5, r30
 /* 80157E54 00000018  38 C0 00 01 */	li r6, 1
 /* 80157E58 0000001C  38 E0 00 02 */	li r7, 2
-/* 80157E5C 00000020  C0 22 9A E0 */	lfs f1, a_npc_d_a_npc_cd2__lit_4050(r2)
+/* 80157E5C 00000020  C0 22 9A E0 */	lfs f1, lit_4050(r2)
 /* 80157E60 00000024  39 00 00 00 */	li r8, 0
 /* 80157E64 00000028  39 20 FF FF */	li r9, -1
 /* 80157E68 0000002C  4B EB 56 E5 */	bl init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss
@@ -123,8 +123,8 @@ lbl_80157E88:
 /* 80157EC4 0000003C  D0 23 00 44 */	stfs f1, 0x44(r3)
 /* 80157EC8 00000040  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 80157ECC 00000044  38 A0 00 00 */	li r5, 0
-/* 80157ED0 00000048  3C 60 80 15 */	lis r3, a_npc_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi@ha
-/* 80157ED4 0000004C  38 83 7C B4 */	addi r4, r3, a_npc_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi@l
+/* 80157ED0 00000048  3C 60 80 15 */	lis r3, jntNodeCallBack__FP8J3DJointi@ha
+/* 80157ED4 0000004C  38 83 7C B4 */	addi r4, r3, jntNodeCallBack__FP8J3DJointi@l
 /* 80157ED8 00000050  48 00 00 18 */	b lbl_80157EF0
 lbl_80157EDC:
 /* 80157EDC 00000000  80 7F 00 28 */	lwz r3, 0x28(r31)

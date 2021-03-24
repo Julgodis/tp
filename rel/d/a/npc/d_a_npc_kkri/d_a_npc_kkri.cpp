@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80552C04 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Kkri_c {
@@ -58,6 +58,8 @@ struct daNpc_Kkri_c {
 	/* 80550ADC */ void setCollision();
 	/* 80550CA0 */ void drawDbgInfo();
 	/* 80550CA8 */ void selectAction();
+	/* 80550D44 */ void chkAction(int (daNpc_Kkri_c::*)(void*));
+	/* 80550D70 */ void setAction(int (daNpc_Kkri_c::*)(void*));
 	/* 80550E18 */ void cutConversationAboutSoup(int);
 	/* 80550F70 */ void cutYmLook(int);
 	/* 80551084 */ void sleep();
@@ -228,8 +230,8 @@ extern "C" void setAttnPos__12daNpc_Kkri_cFv(); // 1
 extern "C" void setCollision__12daNpc_Kkri_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_Kkri_cFv(); // 1
 extern "C" void selectAction__12daNpc_Kkri_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i(); // 1
 extern "C" void cutConversationAboutSoup__12daNpc_Kkri_cFi(); // 1
 extern "C" void cutYmLook__12daNpc_Kkri_cFi(); // 1
 extern "C" void sleep__12daNpc_Kkri_cFv(); // 1
@@ -756,7 +758,7 @@ asm void daNpc_Kkri_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i() {
+asm void daNpc_Kkri_c::chkAction(int (daNpc_Kkri_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kkri/d_a_npc_kkri/chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i.s"
 }
@@ -767,7 +769,7 @@ extern "C" asm static void chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i() {
+asm void daNpc_Kkri_c::setAction(int (daNpc_Kkri_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kkri/d_a_npc_kkri/setAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i.s"
 }

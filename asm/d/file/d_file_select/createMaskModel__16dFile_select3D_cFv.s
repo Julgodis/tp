@@ -21,7 +21,7 @@ lbl_80190BA8:
 /* 80190BF4 0000004C  38 85 00 28 */	addi r4, r5, 0x28
 /* 80190BF8 00000050  7C 04 04 2E */	lfsx f0, r4, r0
 /* 80190BFC 00000054  D0 03 03 C0 */	stfs f0, 0x3c0(r3)
-/* 80190C00 00000058  C0 02 9F 48 */	lfs f0, d_file_d_file_select__lit_4778(r2)
+/* 80190C00 00000058  C0 02 9F 48 */	lfs f0, lit_4778(r2)
 /* 80190C04 0000005C  D0 03 03 A4 */	stfs f0, 0x3a4(r3)
 /* 80190C08 00000060  D0 03 03 A8 */	stfs f0, 0x3a8(r3)
 /* 80190C0C 00000064  D0 03 03 AC */	stfs f0, 0x3ac(r3)
@@ -36,8 +36,8 @@ lbl_80190BA8:
 /* 80190C30 00000088  28 00 00 00 */	cmplwi r0, 0
 /* 80190C34 0000008C  41 82 01 20 */	beq lbl_80190D54
 /* 80190C38 00000090  54 07 15 BA */	rlwinm r7, r0, 2, 0x16, 0x1d
-/* 80190C3C 00000094  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
-/* 80190C40 00000098  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
+/* 80190C3C 00000094  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 80190C40 00000098  38 84 43 88 */	addi r4, r4, stringBase0@l
 /* 80190C44 0000009C  38 84 03 E1 */	addi r4, r4, 0x3e1
 /* 80190C48 000000A0  3C A0 80 3C */	lis r5, data_803BB304@ha
 /* 80190C4C 000000A4  38 05 B3 04 */	addi r0, r5, data_803BB304@l

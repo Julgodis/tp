@@ -6,14 +6,14 @@ lbl_8021901C:
 /* 8021902C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80219030 00000014  80 63 02 F8 */	lwz r3, 0x2f8(r3)
 /* 80219034 00000018  48 03 C7 F5 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80219038 0000001C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80219038 0000001C  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 8021903C 00000020  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80219040 00000024  41 82 00 54 */	beq lbl_80219094
 /* 80219044 00000028  80 7F 02 F8 */	lwz r3, 0x2f8(r31)
 /* 80219048 0000002C  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8021904C 00000030  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80219050 00000034  C0 24 00 18 */	lfs f1, 0x18(r4)
-/* 80219054 00000038  C0 04 00 84 */	lfs f0, 0x84(r4)
+/* 80219050 00000034  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8042EBE0 */
+/* 80219054 00000038  C0 04 00 84 */	lfs f0, 0x84(r4)	/* effective address: 8042EC4C */
 /* 80219058 0000003C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8021905C 00000040  48 03 C7 75 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80219060 00000044  7F E3 FB 78 */	mr r3, r31

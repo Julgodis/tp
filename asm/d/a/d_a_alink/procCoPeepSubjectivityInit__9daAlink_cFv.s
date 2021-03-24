@@ -34,9 +34,9 @@ lbl_800CF154:
 /* 800CF178 00000024  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 800CF17C 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CF180 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CF184 00000030  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800CF184 00000030  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800CF188 00000034  60 00 20 00 */	ori r0, r0, 0x2000
-/* 800CF18C 00000038  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800CF18C 00000038  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800CF190 0000003C  C0 02 92 C8 */	lfs f0, lit_6183(r2)
 /* 800CF194 00000040  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800CF198 00000044  A8 1F 04 E6 */	lha r0, 0x4e6(r31)

@@ -11,52 +11,13 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTLUT {
-};
-
-struct _GXCullMode {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
 struct J2DTevStage {
-};
-
-struct _GXTexMapID {
 };
 
 struct J2DAnmTransform {
 };
 
-struct J2DAnmBase {
-};
-
-struct ResFONT {
+struct ResTIMG {
 };
 
 struct JSUStreamSeekFrom {
@@ -67,7 +28,20 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+struct _GXCullMode {
+};
+
+struct J2DAnmBase {
+};
+
 struct J2DAnmVtxColor {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -95,10 +69,7 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct J2DAnmTextureSRTKey {
 };
 
 struct JGeometry {
@@ -126,6 +97,35 @@ struct JUTPalette {
 struct JUTTexture {
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct _GXTexMapID {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct ResTLUT {
 };
 
 struct J2DPictureEx {
@@ -403,7 +403,7 @@ extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
 
 /* ############################################################################################## */
 /* 804562C0-804562C4 0004+00 s=7 e=0 z=0  None .sdata2    @1517                                                        */
-SECTION_SDATA2 static f32 J2DPictureEx__lit_1517 = 1.0f;
+SECTION_SDATA2 static f32 lit_1517 = 1.0f;
 
 /* 80303640-803036EC 00AC+00 s=1 e=0 z=0  None .text      initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT                */
 #pragma push

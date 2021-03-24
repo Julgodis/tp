@@ -25,33 +25,33 @@ lbl_80017E30:
 /* 80017E8C 0000005C  7F A3 EB 78 */	mr r3, r29
 /* 80017E90 00000060  48 2B 68 F5 */	bl getTotalFreeSize__7JKRHeapFv
 /* 80017E94 00000064  7C 7C 1B 78 */	mr r28, r3
-/* 80017E98 00000068  3C 60 80 37 */	lis r3, m_Do_m_Do_machine_exception__stringBase0@ha
-/* 80017E9C 0000006C  38 63 44 60 */	addi r3, r3, m_Do_m_Do_machine_exception__stringBase0@l
+/* 80017E98 00000068  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80017E9C 0000006C  38 63 44 60 */	addi r3, r3, stringBase0@l
 /* 80017EA0 00000070  38 63 00 28 */	addi r3, r3, 0x28
 /* 80017EA4 00000074  4B FF FF 65 */	bl print__FPCc
-/* 80017EA8 00000078  3C 60 80 37 */	lis r3, m_Do_m_Do_machine_exception__stringBase0@ha
-/* 80017EAC 0000007C  38 63 44 60 */	addi r3, r3, m_Do_m_Do_machine_exception__stringBase0@l
+/* 80017EA8 00000078  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80017EAC 0000007C  38 63 44 60 */	addi r3, r3, stringBase0@l
 /* 80017EB0 00000080  38 63 00 4A */	addi r3, r3, 0x4a
 /* 80017EB4 00000084  56 E4 B2 BE */	srwi r4, r23, 0xa
 /* 80017EB8 00000088  57 45 B2 BE */	srwi r5, r26, 0xa
 /* 80017EBC 0000008C  4C C6 31 82 */	crclr 6
 /* 80017EC0 00000090  4B FF FE BD */	bl print_f__FPCce
-/* 80017EC4 00000094  3C 60 80 37 */	lis r3, m_Do_m_Do_machine_exception__stringBase0@ha
-/* 80017EC8 00000098  38 63 44 60 */	addi r3, r3, m_Do_m_Do_machine_exception__stringBase0@l
+/* 80017EC4 00000094  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80017EC8 00000098  38 63 44 60 */	addi r3, r3, stringBase0@l
 /* 80017ECC 0000009C  38 63 00 5D */	addi r3, r3, 0x5d
 /* 80017ED0 000000A0  57 04 B2 BE */	srwi r4, r24, 0xa
 /* 80017ED4 000000A4  57 65 B2 BE */	srwi r5, r27, 0xa
 /* 80017ED8 000000A8  4C C6 31 82 */	crclr 6
 /* 80017EDC 000000AC  4B FF FE A1 */	bl print_f__FPCce
-/* 80017EE0 000000B0  3C 60 80 37 */	lis r3, m_Do_m_Do_machine_exception__stringBase0@ha
-/* 80017EE4 000000B4  38 63 44 60 */	addi r3, r3, m_Do_m_Do_machine_exception__stringBase0@l
+/* 80017EE0 000000B0  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80017EE4 000000B4  38 63 44 60 */	addi r3, r3, stringBase0@l
 /* 80017EE8 000000B8  38 63 00 70 */	addi r3, r3, 0x70
 /* 80017EEC 000000BC  57 24 B2 BE */	srwi r4, r25, 0xa
 /* 80017EF0 000000C0  57 85 B2 BE */	srwi r5, r28, 0xa
 /* 80017EF4 000000C4  4C C6 31 82 */	crclr 6
 /* 80017EF8 000000C8  4B FF FE 85 */	bl print_f__FPCce
-/* 80017EFC 000000CC  3C 60 80 37 */	lis r3, m_Do_m_Do_machine_exception__stringBase0@ha
-/* 80017F00 000000D0  38 63 44 60 */	addi r3, r3, m_Do_m_Do_machine_exception__stringBase0@l
+/* 80017EFC 000000CC  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80017F00 000000D0  38 63 44 60 */	addi r3, r3, stringBase0@l
 /* 80017F04 000000D4  38 63 00 83 */	addi r3, r3, 0x83
 /* 80017F08 000000D8  4B FF FF 01 */	bl print__FPCc
 /* 80017F0C 000000DC  80 6D 8E 48 */	lwz r3, sAramObject__7JKRAram(r13)

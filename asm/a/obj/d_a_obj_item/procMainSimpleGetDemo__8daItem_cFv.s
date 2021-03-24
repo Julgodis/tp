@@ -6,7 +6,7 @@ lbl_8015C134:
 /* 8015C144 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8015C148 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015C14C 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015C150 0000001C  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8015C150 0000001C  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8015C154 00000020  38 61 00 08 */	addi r3, r1, 8
 /* 8015C158 00000024  48 00 1E 81 */	bl getItemPos__9daPy_py_cCFv
 /* 8015C15C 00000028  C0 61 00 08 */	lfs f3, 8(r1)
@@ -15,7 +15,7 @@ lbl_8015C134:
 /* 8015C168 00000034  D0 41 00 18 */	stfs f2, 0x18(r1)
 /* 8015C16C 00000038  C0 21 00 10 */	lfs f1, 0x10(r1)
 /* 8015C170 0000003C  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 8015C174 00000040  C0 02 9B 98 */	lfs f0, a_obj_d_a_obj_item__lit_4404(r2)
+/* 8015C174 00000040  C0 02 9B 98 */	lfs f0, lit_4404(r2)
 /* 8015C178 00000044  EC 02 00 2A */	fadds f0, f2, f0
 /* 8015C17C 00000048  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8015C180 0000004C  D0 7F 04 D0 */	stfs f3, 0x4d0(r31)
@@ -31,12 +31,12 @@ lbl_8015C134:
 lbl_8015C1A8:
 /* 8015C1A8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015C1AC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015C1B0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)
-/* 8015C1B4 0000000C  A8 03 02 30 */	lha r0, 0x230(r3)
+/* 8015C1B0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 8015C1B4 0000000C  A8 03 02 30 */	lha r0, 0x230(r3)	/* effective address: 804063F0 */
 /* 8015C1B8 00000010  B0 1F 04 E4 */	sth r0, 0x4e4(r31)
-/* 8015C1BC 00000014  A8 03 02 32 */	lha r0, 0x232(r3)
+/* 8015C1BC 00000014  A8 03 02 32 */	lha r0, 0x232(r3)	/* effective address: 804063F2 */
 /* 8015C1C0 00000018  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
-/* 8015C1C4 0000001C  A8 03 02 34 */	lha r0, 0x234(r3)
+/* 8015C1C4 0000001C  A8 03 02 34 */	lha r0, 0x234(r3)	/* effective address: 804063F4 */
 /* 8015C1C8 00000020  B0 1F 04 E8 */	sth r0, 0x4e8(r31)
 /* 8015C1CC 00000024  A8 7F 09 46 */	lha r3, 0x946(r31)
 /* 8015C1D0 00000028  38 03 FF FF */	addi r0, r3, -1

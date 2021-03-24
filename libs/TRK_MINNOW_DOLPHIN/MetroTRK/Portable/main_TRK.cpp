@@ -32,7 +32,7 @@ extern "C" void MWTRACE(); // 1
 
 /* ############################################################################################## */
 /* 803A2BF8-803A2C08 000B+05 s=1 e=0 z=0  None .rodata    @80                                                          */
-SECTION_RODATA static u8 const MetroTRK_Portable_main_TRK__lit_80[11 + 5 /* padding */] = {
+SECTION_RODATA static u8 const lit_80[11 + 5 /* padding */] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x4D, 0x61, 0x69, 0x6E, 0x20, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,

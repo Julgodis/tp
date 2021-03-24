@@ -6,7 +6,7 @@ lbl_8025B67C:
 /* 8025B68C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8025B690 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B694 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B698 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8025B698 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 8025B69C 00000020  81 8C 00 30 */	lwz r12, 0x30(r12)
 /* 8025B6A0 00000024  7D 89 03 A6 */	mtctr r12
 /* 8025B6A4 00000028  4E 80 04 21 */	bctrl 
@@ -24,7 +24,7 @@ lbl_8025B6CC:
 /* 8025B6CC 00000000  80 83 00 04 */	lwz r4, 4(r3)
 /* 8025B6D0 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025B6D4 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025B6D8 0000000C  88 03 4E 18 */	lbz r0, 0x4e18(r3)
+/* 8025B6D8 0000000C  88 03 4E 18 */	lbz r0, 0x4e18(r3)	/* effective address: 8040AFD8 */
 /* 8025B6DC 00000010  7C 00 07 74 */	extsb r0, r0
 /* 8025B6E0 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 8025B6E4 00000018  7C 64 00 2E */	lwzx r3, r4, r0

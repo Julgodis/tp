@@ -9,8 +9,8 @@ lbl_8029EE40:
 /* 8029EE5C 0000001C  94 66 40 60 */	stwu r3, sync_stack@l(r6)
 /* 8029EE60 00000020  38 00 00 01 */	li r0, 1
 /* 8029EE64 00000024  98 0D 8D 89 */	stb r0, struct_80451308+0x1(r13)
-/* 8029EE68 00000028  90 86 00 04 */	stw r4, 4(r6)
-/* 8029EE6C 0000002C  90 A6 00 08 */	stw r5, 8(r6)
+/* 8029EE68 00000028  90 86 00 04 */	stw r4, 4(r6)	/* effective address: 80430004 */
+/* 8029EE6C 0000002C  90 A6 00 08 */	stw r5, 8(r6)	/* effective address: 80430008 */
 /* 8029EE70 00000030  48 00 00 10 */	b lbl_8029EE80
 lbl_8029EE74:
 /* 8029EE74 00000000  4B FF F7 AD */	bl DsyncFrame2ch__FUlUlUl

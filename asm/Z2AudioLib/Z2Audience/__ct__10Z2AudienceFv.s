@@ -15,7 +15,7 @@ lbl_802BD15C:
 /* 802BD160 00000004  3C 60 80 3D */	lis r3, __vt__10Z2Audience@ha
 /* 802BD164 00000008  38 03 AC 98 */	addi r0, r3, __vt__10Z2Audience@l
 /* 802BD168 0000000C  90 1F 00 00 */	stw r0, 0(r31)
-/* 802BD16C 00000010  C0 02 C0 A4 */	lfs f0, Z2Audience__lit_894(r2)
+/* 802BD16C 00000010  C0 02 C0 A4 */	lfs f0, lit_894(r2)
 /* 802BD170 00000014  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 802BD174 00000018  38 00 00 7F */	li r0, 0x7f
 /* 802BD178 0000001C  98 1F 00 08 */	stb r0, 8(r31)

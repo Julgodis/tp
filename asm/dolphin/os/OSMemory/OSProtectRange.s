@@ -31,13 +31,13 @@ lbl_8033ED14:
 /* 8033ED88 00000074  38 85 00 10 */	addi r4, r5, 0x10
 /* 8033ED8C 00000078  57 46 08 3C */	slwi r6, r26, 1
 /* 8033ED90 0000007C  38 00 00 03 */	li r0, 3
-/* 8033ED94 00000080  A0 A5 00 10 */	lhz r5, 0x10(r5)
+/* 8033ED94 00000080  A0 A5 00 10 */	lhz r5, 0x10(r5)	/* effective address: CC004010 */
 /* 8033ED98 00000084  7C 03 30 30 */	slw r3, r0, r6
 /* 8033ED9C 00000088  7F E0 30 30 */	slw r0, r31, r6
 /* 8033EDA0 0000008C  7C A5 18 78 */	andc r5, r5, r3
 /* 8033EDA4 00000090  7C A5 03 78 */	or r5, r5, r0
 /* 8033EDA8 00000094  28 1F 00 03 */	cmplwi r31, 3
-/* 8033EDAC 00000098  B0 A4 00 00 */	sth r5, 0(r4)
+/* 8033EDAC 00000098  B0 A4 00 00 */	sth r5, 0(r4)	/* effective address: CC004010 */
 /* 8033EDB0 0000009C  41 82 00 0C */	beq lbl_8033EDBC
 /* 8033EDB4 000000A0  7F C3 F3 78 */	mr r3, r30
 /* 8033EDB8 000000A4  4B FF ED 8D */	bl __OSUnmaskInterrupts

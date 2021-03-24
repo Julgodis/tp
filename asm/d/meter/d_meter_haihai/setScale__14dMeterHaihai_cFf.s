@@ -5,18 +5,18 @@ lbl_8020BC20:
 /* 8020BC2C 0000000C  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 8020BC30 00000010  28 00 00 01 */	cmplwi r0, 1
 /* 8020BC34 00000014  40 82 00 60 */	bne lbl_8020BC94
-/* 8020BC38 00000018  C0 62 AD E8 */	lfs f3, d_meter_d_meter_haihai__lit_4116(r2)
+/* 8020BC38 00000018  C0 62 AD E8 */	lfs f3, lit_4116(r2)
 /* 8020BC3C 0000001C  C0 42 AD EC */	lfs f2, lit_4117(r2)
 /* 8020BC40 00000020  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020BC44 00000024  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8020BC48 00000028  C0 04 04 FC */	lfs f0, 0x4fc(r4)
+/* 8020BC48 00000028  C0 04 04 FC */	lfs f0, 0x4fc(r4)	/* effective address: 8042F0C4 */
 /* 8020BC4C 0000002C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8020BC50 00000030  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8020BC54 00000034  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8020BC58 00000038  EC 80 00 72 */	fmuls f4, f0, f1
 /* 8020BC5C 0000003C  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020BC60 00000040  80 63 00 04 */	lwz r3, 4(r3)
-/* 8020BC64 00000044  C0 04 04 F8 */	lfs f0, 0x4f8(r4)
+/* 8020BC64 00000044  C0 04 04 F8 */	lfs f0, 0x4f8(r4)	/* effective address: 8042F0C0 */
 /* 8020BC68 00000048  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8020BC6C 0000004C  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8020BC70 00000050  EC 03 00 32 */	fmuls f0, f3, f0
@@ -34,12 +34,12 @@ lbl_8020BC94:
 /* 8020BC9C 00000008  C0 42 AD EC */	lfs f2, lit_4117(r2)
 /* 8020BCA0 0000000C  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020BCA4 00000010  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8020BCA8 00000014  C0 04 04 FC */	lfs f0, 0x4fc(r4)
+/* 8020BCA8 00000014  C0 04 04 FC */	lfs f0, 0x4fc(r4)	/* effective address: 8042F0C4 */
 /* 8020BCAC 00000018  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8020BCB0 0000001C  EC 60 00 72 */	fmuls f3, f0, f1
 /* 8020BCB4 00000020  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020BCB8 00000024  80 63 00 04 */	lwz r3, 4(r3)
-/* 8020BCBC 00000028  C0 04 04 F8 */	lfs f0, 0x4f8(r4)
+/* 8020BCBC 00000028  C0 04 04 F8 */	lfs f0, 0x4f8(r4)	/* effective address: 8042F0C0 */
 /* 8020BCC0 0000002C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8020BCC4 00000030  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020BCC8 00000034  D0 03 00 CC */	stfs f0, 0xcc(r3)
@@ -54,7 +54,7 @@ lbl_8020BCE4:
 /* 8020BCE8 00000004  40 82 00 38 */	bne lbl_8020BD20
 /* 8020BCEC 00000008  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020BCF0 0000000C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8020BCF4 00000010  C0 04 06 C0 */	lfs f0, 0x6c0(r4)
+/* 8020BCF4 00000010  C0 04 06 C0 */	lfs f0, 0x6c0(r4)	/* effective address: 8042F288 */
 /* 8020BCF8 00000014  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020BCFC 00000018  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020BD00 0000001C  80 63 00 04 */	lwz r3, 4(r3)
@@ -70,11 +70,11 @@ lbl_8020BD20:
 /* 8020BD24 00000004  40 82 00 40 */	bne lbl_8020BD64
 /* 8020BD28 00000008  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020BD2C 0000000C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8020BD30 00000010  C0 04 05 2C */	lfs f0, 0x52c(r4)
+/* 8020BD30 00000010  C0 04 05 2C */	lfs f0, 0x52c(r4)	/* effective address: 8042F0F4 */
 /* 8020BD34 00000014  EC 40 00 72 */	fmuls f2, f0, f1
 /* 8020BD38 00000018  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020BD3C 0000001C  80 63 00 04 */	lwz r3, 4(r3)
-/* 8020BD40 00000020  C0 04 05 28 */	lfs f0, 0x528(r4)
+/* 8020BD40 00000020  C0 04 05 28 */	lfs f0, 0x528(r4)	/* effective address: 8042F0F0 */
 /* 8020BD44 00000024  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020BD48 00000028  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8020BD4C 0000002C  D0 43 00 D0 */	stfs f2, 0xd0(r3)
@@ -86,11 +86,11 @@ lbl_8020BD20:
 lbl_8020BD64:
 /* 8020BD64 00000000  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8020BD68 00000004  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8020BD6C 00000008  C0 04 04 FC */	lfs f0, 0x4fc(r4)
+/* 8020BD6C 00000008  C0 04 04 FC */	lfs f0, 0x4fc(r4)	/* effective address: 8042F0C4 */
 /* 8020BD70 0000000C  EC 40 00 72 */	fmuls f2, f0, f1
 /* 8020BD74 00000010  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020BD78 00000014  80 63 00 04 */	lwz r3, 4(r3)
-/* 8020BD7C 00000018  C0 04 04 F8 */	lfs f0, 0x4f8(r4)
+/* 8020BD7C 00000018  C0 04 04 F8 */	lfs f0, 0x4f8(r4)	/* effective address: 8042F0C0 */
 /* 8020BD80 0000001C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8020BD84 00000020  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8020BD88 00000024  D0 43 00 D0 */	stfs f2, 0xd0(r3)

@@ -45,7 +45,7 @@ lbl_8021F3F8:
 lbl_8021F410:
 /* 8021F410 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8021F414 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8021F418 00000008  88 03 00 B9 */	lbz r0, 0xb9(r3)
+/* 8021F418 00000008  88 03 00 B9 */	lbz r0, 0xb9(r3)	/* effective address: 80430241 */
 /* 8021F41C 0000000C  28 00 00 02 */	cmplwi r0, 2
 /* 8021F420 00000010  40 82 00 24 */	bne lbl_8021F444
 /* 8021F424 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

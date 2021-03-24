@@ -12,9 +12,9 @@ lbl_801F43F8:
 /* 801F4420 00000028  38 A0 00 00 */	li r5, 0
 /* 801F4424 0000002C  38 C0 00 00 */	li r6, 0
 /* 801F4428 00000030  38 E0 00 00 */	li r7, 0
-/* 801F442C 00000034  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F442C 00000034  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F4430 00000038  FC 40 08 90 */	fmr f2, f1
-/* 801F4434 0000003C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F4434 0000003C  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F4438 00000040  FC 80 18 90 */	fmr f4, f3
 /* 801F443C 00000044  39 00 00 00 */	li r8, 0
 /* 801F4440 00000048  48 0B 80 CD */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -57,7 +57,7 @@ lbl_801F43F8:
 /* 801F44D4 000000DC  40 82 00 24 */	bne lbl_801F44F8
 /* 801F44D8 000000E0  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F44DC 000000E4  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F44E0 000000E8  88 03 00 06 */	lbz r0, 6(r3)
+/* 801F44E0 000000E8  88 03 00 06 */	lbz r0, 6(r3)	/* effective address: 8042E852 */
 /* 801F44E4 000000EC  98 1F 01 BD */	stb r0, 0x1bd(r31)
 /* 801F44E8 000000F0  7F E3 FB 78 */	mr r3, r31
 /* 801F44EC 000000F4  4B FF E3 55 */	bl dataWrite__12dMenu_save_cFv

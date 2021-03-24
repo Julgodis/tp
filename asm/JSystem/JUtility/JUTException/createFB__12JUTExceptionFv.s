@@ -11,10 +11,10 @@ lbl_802E3A08:
 /* 802E3A2C 00000024  48 05 78 61 */	bl OSGetArenaHi
 /* 802E3A30 00000028  3C 80 80 3D */	lis r4, GXNtsc480Int@ha
 /* 802E3A34 0000002C  38 A4 24 84 */	addi r5, r4, GXNtsc480Int@l
-/* 802E3A38 00000030  A0 85 00 04 */	lhz r4, 4(r5)
+/* 802E3A38 00000030  A0 85 00 04 */	lhz r4, 4(r5)	/* effective address: 803D2488 */
 /* 802E3A3C 00000034  38 04 00 0F */	addi r0, r4, 0xf
 /* 802E3A40 00000038  54 04 04 36 */	rlwinm r4, r0, 0, 0x10, 0x1b
-/* 802E3A44 0000003C  A0 05 00 08 */	lhz r0, 8(r5)
+/* 802E3A44 0000003C  A0 05 00 08 */	lhz r0, 8(r5)	/* effective address: 803D248C */
 /* 802E3A48 00000040  7C 04 01 D6 */	mullw r0, r4, r0
 /* 802E3A4C 00000044  54 07 08 3C */	slwi r7, r0, 1
 /* 802E3A50 00000048  7C 07 18 50 */	subf r0, r7, r3

@@ -1,7 +1,7 @@
 lbl_801AC140:
 /* 801AC140 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801AC144 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801AC148 00000008  88 63 0E 6E */	lbz r3, 0xe6e(r3)
+/* 801AC148 00000008  88 63 0E 6E */	lbz r3, 0xe6e(r3)	/* effective address: 8042D8C2 */
 /* 801AC14C 0000000C  28 03 00 FF */	cmplwi r3, 0xff
 /* 801AC150 00000010  40 82 00 0C */	bne lbl_801AC15C
 /* 801AC154 00000014  38 60 FF FF */	li r3, -1

@@ -95,7 +95,8 @@ extern "C" void draw__14dDvdErrorMsg_cFl(); // 1
 extern "C" void execute__14dDvdErrorMsg_cFv(); // 1
 extern "C" static void drawCapture__FUc(); // 1
 extern "C" void execute__19dShutdownErrorMsg_cFv(); // 1
-extern "C" extern char const* const d_d_error_msg__stringBase0;
+extern "C" extern void* const font_data[18584];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -233,8 +234,8 @@ SECTION_RODATA static u8 const msg_data[608] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8037B3E0-8038D640 12260+00 s=1 e=0 z=0  None .rodata    font_data                                                    */
-SECTION_RODATA static void* const font_data[18584] = {
+/* 8037B3E0-8038D640 12260+00 s=1 e=1 z=0  None .rodata    font_data                                                    */
+SECTION_RODATA void* const font_data[18584] = {
 	/* 0    */ (void*)0x464F4E54,
 	/* 1    */ (void*)0x62666E31,
 	/* 2    */ (void*)0x00012260,
@@ -18822,39 +18823,39 @@ SECTION_RODATA static void* const font_data[18584] = {
 };
 
 /* 80452C18-80452C1C 0004+00 s=3 e=0 z=0  None .sdata2    @3758                                                        */
-SECTION_SDATA2 static u8 d_d_error_msg__lit_3758[4] = {
+SECTION_SDATA2 static u8 lit_3758[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80452C1C-80452C20 0004+00 s=2 e=0 z=0  None .sdata2    @3759                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3759 = 608.0f;
+SECTION_SDATA2 static f32 lit_3759 = 608.0f;
 
 /* 80452C20-80452C24 0004+00 s=1 e=0 z=0  None .sdata2    @3760                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3760 = 200.0f;
+SECTION_SDATA2 static f32 lit_3760 = 200.0f;
 
 /* 80452C24-80452C28 0004+00 s=2 e=0 z=0  None .sdata2    @3761                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3761 = 448.0f;
+SECTION_SDATA2 static f32 lit_3761 = 448.0f;
 
 /* 80452C28-80452C2C 0004+00 s=1 e=0 z=0  None .sdata2    @3762                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3762 = 23.0f;
+SECTION_SDATA2 static f32 lit_3762 = 23.0f;
 
 /* 80452C2C-80452C30 0004+00 s=1 e=0 z=0  None .sdata2    @3763                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3763 = 22.0f;
+SECTION_SDATA2 static f32 lit_3763 = 22.0f;
 
 /* 80452C30-80452C34 0004+00 s=3 e=0 z=0  None .sdata2    @3764                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3764 = 1.0f;
+SECTION_SDATA2 static f32 lit_3764 = 1.0f;
 
 /* 80452C34-80452C38 0004+00 s=1 e=0 z=0  None .sdata2    @3765                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3765 = 0.5f;
+SECTION_SDATA2 static f32 lit_3765 = 0.5f;
 
 /* 80452C38-80452C3C 0004+00 s=1 e=0 z=0  None .sdata2    @3766                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3766 = 2.0f;
+SECTION_SDATA2 static f32 lit_3766 = 2.0f;
 
 /* 80452C3C-80452C40 0004+00 s=2 e=0 z=0  None .sdata2    @3767                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3767 = 10.0f;
+SECTION_SDATA2 static f32 lit_3767 = 10.0f;
 
 /* 80452C40-80452C48 0008+00 s=1 e=0 z=0  None .sdata2    @3769                                                        */
-SECTION_SDATA2 static f64 d_d_error_msg__lit_3769 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3769 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8009CB88-8009D194 060C+00 s=1 e=0 z=0  None .text      messageSet__FUlb                                             */
 #pragma push
@@ -18869,7 +18870,7 @@ asm static void messageSet(u32 param_0, bool param_1) {
 
 /* ############################################################################################## */
 /* 80452C48-80452C50 0004+04 s=1 e=0 z=0  None .sdata2    @3835                                                        */
-SECTION_SDATA2 static f32 d_d_error_msg__lit_3835[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3835[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
@@ -18909,7 +18910,7 @@ asm void dDvdErrorMsg_c::execute() {
 
 /* ############################################################################################## */
 /* 80456B78-80456B80 0004+04 s=1 e=0 z=0  None .sbss2     @3873                                                        */
-SECTION_SBSS2 static u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
+SECTION_SBSS2 static u8 lit_3873[4 + 4 /* padding */];
 
 /* 8009D410-8009D790 0380+00 s=1 e=0 z=0  None .text      drawCapture__FUc                                             */
 #pragma push

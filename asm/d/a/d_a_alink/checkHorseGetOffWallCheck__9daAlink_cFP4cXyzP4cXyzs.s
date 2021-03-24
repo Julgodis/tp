@@ -22,7 +22,7 @@ lbl_800EF130:
 /* 800EF130 00000000  C0 22 94 D4 */	lfs f1, lit_18929(r2)
 /* 800EF134 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlSlide_c0@ha
 /* 800EF138 00000008  38 63 F3 F0 */	addi r3, r3, m__21daAlinkHIO_wlSlide_c0@l
-/* 800EF13C 0000000C  C0 03 00 5C */	lfs f0, 0x5c(r3)
+/* 800EF13C 0000000C  C0 03 00 5C */	lfs f0, 0x5c(r3)	/* effective address: 8038F44C */
 /* 800EF140 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800EF144 00000014  FC 00 00 1E */	fctiwz f0, f0
 /* 800EF148 00000018  D8 01 00 08 */	stfd f0, 8(r1)

@@ -6,11 +6,11 @@ lbl_8024C694:
 /* 8024C6A4 00000010  4B FF EA 8D */	bl getParam__10dMsgFlow_cFPUc
 /* 8024C6A8 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8024C6AC 00000018  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
-/* 8024C6B0 0000001C  A8 85 5D CC */	lha r4, 0x5dcc(r5)
+/* 8024C6B0 0000001C  A8 85 5D CC */	lha r4, 0x5dcc(r5)	/* effective address: 8040BF8C */
 /* 8024C6B4 00000020  7C 03 00 D0 */	neg r0, r3
 /* 8024C6B8 00000024  7C 00 07 34 */	extsh r0, r0
 /* 8024C6BC 00000028  7C 04 02 14 */	add r0, r4, r0
-/* 8024C6C0 0000002C  B0 05 5D CC */	sth r0, 0x5dcc(r5)
+/* 8024C6C0 0000002C  B0 05 5D CC */	sth r0, 0x5dcc(r5)	/* effective address: 8040BF8C */
 /* 8024C6C4 00000030  38 60 00 01 */	li r3, 1
 /* 8024C6C8 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8024C6CC 00000038  7C 08 03 A6 */	mtlr r0

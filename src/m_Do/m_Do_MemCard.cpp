@@ -79,7 +79,7 @@ extern "C" void checkspace__15mDoMemCd_Ctrl_cFv(); // 1
 extern "C" void setCardState__15mDoMemCd_Ctrl_cFl(); // 1
 extern "C" static void mDoMemCd_main__FPv(); // 1
 extern "C" void __sinit_m_Do_MemCard_cpp(); // 1
-extern "C" extern char const* const m_Do_m_Do_MemCard__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 g_mDoMemCd_control[8192];
 
 // 
@@ -258,7 +258,7 @@ asm void mDoMemCd_Ctrl_c::SaveSync() {
 
 /* ############################################################################################## */
 /* 803A34F8-803A3530 0038+00 s=1 e=0 z=0  None .data      @3770                                                        */
-SECTION_DATA static void* m_Do_m_Do_MemCard__lit_3770[14] = {
+SECTION_DATA static void* lit_3770[14] = {
 	/* 0    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x74),
 	/* 1    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x4C),
 	/* 2    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x54),
@@ -354,7 +354,7 @@ asm void mDoMemCd_Ctrl_c::detach() {
 
 /* ############################################################################################## */
 /* 803A3530-803A3568 0038+00 s=1 e=0 z=0  None .data      @3850                                                        */
-SECTION_DATA static void* m_Do_m_Do_MemCard__lit_3850[14] = {
+SECTION_DATA static void* lit_3850[14] = {
 	/* 0    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xF4),
 	/* 1    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
 	/* 2    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),

@@ -5,8 +5,8 @@ lbl_80126928:
 /* 80126934 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80126938 00000010  48 23 B8 99 */	bl _savegpr_26
 /* 8012693C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80126940 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 80126944 0000001C  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__lit_3757@l
+/* 80126940 00000018  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 80126944 0000001C  3B C3 D6 58 */	addi r30, r3, lit_3757@l
 /* 80126948 00000020  38 7F 20 F0 */	addi r3, r31, 0x20f0
 /* 8012694C 00000024  48 03 88 1D */	bl setAnimeHeap__14daPy_anmHeap_cFv
 /* 80126950 00000028  7C 7C 1B 78 */	mr r28, r3
@@ -108,7 +108,7 @@ lbl_801269D8:
 /* 80126AC8 000000F0  38 63 00 58 */	addi r3, r3, 0x58
 /* 80126ACC 000000F4  80 9F 07 AC */	lwz r4, 0x7ac(r31)
 /* 80126AD0 000000F8  48 20 93 A1 */	bl entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 80126AD4 000000FC  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80126AD4 000000FC  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80126AD8 00000100  80 7F 07 AC */	lwz r3, 0x7ac(r31)
 /* 80126ADC 00000104  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80126AE0 00000108  38 62 92 50 */	addi r3, r2, 0x80452C50-0x80459A00 /* l_wArcName-_SDA2_BASE_ */
@@ -126,7 +126,7 @@ lbl_801269D8:
 /* 80126B10 00000138  38 63 00 58 */	addi r3, r3, 0x58
 /* 80126B14 0000013C  80 9F 07 B0 */	lwz r4, 0x7b0(r31)
 /* 80126B18 00000140  48 20 93 59 */	bl entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 80126B1C 00000144  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80126B1C 00000144  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80126B20 00000148  80 7F 07 B0 */	lwz r3, 0x7b0(r31)
 /* 80126B24 0000014C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80126B28 00000150  38 62 92 50 */	addi r3, r2, 0x80452C50-0x80459A00 /* l_wArcName-_SDA2_BASE_ */
@@ -144,7 +144,7 @@ lbl_801269D8:
 /* 80126B58 00000180  38 63 00 58 */	addi r3, r3, 0x58
 /* 80126B5C 00000184  80 9F 07 B4 */	lwz r4, 0x7b4(r31)
 /* 80126B60 00000188  48 20 93 11 */	bl entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 80126B64 0000018C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80126B64 0000018C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80126B68 00000190  80 7F 07 B4 */	lwz r3, 0x7b4(r31)
 /* 80126B6C 00000194  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80126B70 00000198  38 62 92 50 */	addi r3, r2, 0x80452C50-0x80459A00 /* l_wArcName-_SDA2_BASE_ */
@@ -162,7 +162,7 @@ lbl_801269D8:
 /* 80126BA0 000001C8  38 63 00 58 */	addi r3, r3, 0x58
 /* 80126BA4 000001CC  80 9F 07 B8 */	lwz r4, 0x7b8(r31)
 /* 80126BA8 000001D0  48 20 92 C9 */	bl entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 80126BAC 000001D4  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80126BAC 000001D4  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80126BB0 000001D8  80 7F 07 B8 */	lwz r3, 0x7b8(r31)
 /* 80126BB4 000001DC  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80126BB8 000001E0  7F 83 E3 78 */	mr r3, r28
@@ -170,7 +170,7 @@ lbl_801269D8:
 /* 80126BC0 000001E8  38 00 00 01 */	li r0, 1
 /* 80126BC4 000001EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80126BC8 000001F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80126BCC 000001F4  98 03 00 1E */	stb r0, 0x1e(r3)
+/* 80126BCC 000001F4  98 03 00 1E */	stb r0, 0x1e(r3)	/* effective address: 804061DE */
 /* 80126BD0 000001F8  80 7F 06 50 */	lwz r3, 0x650(r31)
 /* 80126BD4 000001FC  93 E3 00 14 */	stw r31, 0x14(r3)
 /* 80126BD8 00000200  7F E3 FB 78 */	mr r3, r31
@@ -178,15 +178,15 @@ lbl_801269D8:
 /* 80126BE0 00000208  48 01 99 71 */	bl changeModelDataDirectWolf__9daAlink_cFi
 /* 80126BE4 0000020C  38 7F 21 88 */	addi r3, r31, 0x2188
 /* 80126BE8 00000210  80 9F 06 4C */	lwz r4, 0x64c(r31)
-/* 80126BEC 00000214  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
-/* 80126BF0 00000218  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
+/* 80126BEC 00000214  3C A0 80 39 */	lis r5, stringBase0@ha
+/* 80126BF0 00000218  38 A5 20 94 */	addi r5, r5, stringBase0@l
 /* 80126BF4 0000021C  38 A5 02 18 */	addi r5, r5, 0x218
 /* 80126BF8 00000220  4B F7 5D 6D */	bl entry__8dEyeHL_cFP12J3DModelDataPCc
 /* 80126BFC 00000224  80 7F 07 9C */	lwz r3, 0x79c(r31)
 /* 80126C00 00000228  80 83 00 04 */	lwz r4, 4(r3)
 /* 80126C04 0000022C  38 7F 21 9C */	addi r3, r31, 0x219c
-/* 80126C08 00000230  3C A0 80 39 */	lis r5, d_a_d_a_alink__stringBase0@ha
-/* 80126C0C 00000234  38 A5 20 94 */	addi r5, r5, d_a_d_a_alink__stringBase0@l
+/* 80126C08 00000230  3C A0 80 39 */	lis r5, stringBase0@ha
+/* 80126C0C 00000234  38 A5 20 94 */	addi r5, r5, stringBase0@l
 /* 80126C10 00000238  38 A5 02 27 */	addi r5, r5, 0x227
 /* 80126C14 0000023C  4B F7 5D 51 */	bl entry__8dEyeHL_cFP12J3DModelDataPCc
 /* 80126C18 00000240  80 7F 06 4C */	lwz r3, 0x64c(r31)
@@ -379,11 +379,11 @@ lbl_80126E70:
 /* 80126EFC 0000008C  90 1F 06 80 */	stw r0, 0x680(r31)
 /* 80126F00 00000090  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80126F04 00000094  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80126F08 00000098  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 80126F08 00000098  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 80126F0C 0000009C  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 80126F10 000000A0  7D 89 03 A6 */	mtctr r12
 /* 80126F14 000000A4  4E 80 04 21 */	bctrl 
-/* 80126F18 000000A8  88 03 00 09 */	lbz r0, 9(r3)
+/* 80126F18 000000A8  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 804061C9 */
 /* 80126F1C 000000AC  54 00 D7 BE */	rlwinm r0, r0, 0x1a, 0x1e, 0x1f
 /* 80126F20 000000B0  98 1F 2F C7 */	stb r0, 0x2fc7(r31)
 /* 80126F24 000000B4  39 61 00 30 */	addi r11, r1, 0x30

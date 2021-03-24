@@ -37,15 +37,15 @@ lbl_8025D5A0:
 /* 8025D5BC 0000001C  48 00 2F B9 */	bl createStart__21dDlst_TimerScrnDraw_cFUs
 /* 8025D5C0 00000020  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8025D5C4 00000024  38 83 EB C8 */	addi r4, r3, g_drawHIO@l
-/* 8025D5C8 00000028  A8 64 0B E8 */	lha r3, 0xbe8(r4)
-/* 8025D5CC 0000002C  A8 04 0B EA */	lha r0, 0xbea(r4)
+/* 8025D5C8 00000028  A8 64 0B E8 */	lha r3, 0xbe8(r4)	/* effective address: 8042F7B0 */
+/* 8025D5CC 0000002C  A8 04 0B EA */	lha r0, 0xbea(r4)	/* effective address: 8042F7B2 */
 /* 8025D5D0 00000030  7C 03 02 14 */	add r0, r3, r0
 /* 8025D5D4 00000034  B0 1E 01 68 */	sth r0, 0x168(r30)
 /* 8025D5D8 00000038  48 00 00 14 */	b lbl_8025D5EC
 lbl_8025D5DC:
 /* 8025D5DC 00000000  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8025D5E0 00000004  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8025D5E4 00000008  A8 03 0B EA */	lha r0, 0xbea(r3)
+/* 8025D5E4 00000008  A8 03 0B EA */	lha r0, 0xbea(r3)	/* effective address: 8042F7B2 */
 /* 8025D5E8 0000000C  B0 1E 01 68 */	sth r0, 0x168(r30)
 lbl_8025D5EC:
 /* 8025D5EC 00000000  38 00 00 01 */	li r0, 1

@@ -47,7 +47,7 @@ lbl_8002E7B8:
 /* 8002E7BC 00000004  40 82 00 14 */	bne lbl_8002E7D0
 /* 8002E7C0 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002E7C4 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E7C8 00000010  9B E3 00 F4 */	stb r31, 0xf4(r3)
+/* 8002E7C8 00000010  9B E3 00 F4 */	stb r31, 0xf4(r3)	/* effective address: 804062B4 */
 /* 8002E7CC 00000014  48 00 00 58 */	b lbl_8002E824
 lbl_8002E7D0:
 /* 8002E7D0 00000000  28 00 00 76 */	cmplwi r0, 0x76

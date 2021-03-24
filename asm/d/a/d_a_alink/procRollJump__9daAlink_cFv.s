@@ -18,14 +18,14 @@ lbl_800C6958:
 /* 800C6968 00000004  38 80 00 03 */	li r4, 3
 /* 800C696C 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C6970 0000000C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 800C6974 00000010  C0 25 00 84 */	lfs f1, 0x84(r5)
+/* 800C6974 00000010  C0 25 00 84 */	lfs f1, 0x84(r5)	/* effective address: 8038E0EC */
 /* 800C6978 00000014  48 00 00 D1 */	bl procFallInit__9daAlink_cFif
 /* 800C697C 00000018  48 00 00 B4 */	b lbl_800C6A30
 lbl_800C6980:
 /* 800C6980 00000000  A8 BF 04 E4 */	lha r5, 0x4e4(r31)
 /* 800C6984 00000004  3C 80 80 39 */	lis r4, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C6988 00000008  38 84 E0 68 */	addi r4, r4, m__22daAlinkHIO_autoJump_c0@l
-/* 800C698C 0000000C  A8 04 00 54 */	lha r0, 0x54(r4)
+/* 800C698C 0000000C  A8 04 00 54 */	lha r0, 0x54(r4)	/* effective address: 8038E0BC */
 /* 800C6990 00000010  7C 05 02 14 */	add r0, r5, r0
 /* 800C6994 00000014  B0 1F 04 E4 */	sth r0, 0x4e4(r31)
 /* 800C6998 00000018  A8 1F 04 E4 */	lha r0, 0x4e4(r31)
@@ -58,11 +58,11 @@ lbl_800C69DC:
 /* 800C69FC 00000020  38 7F 34 7C */	addi r3, r31, 0x347c
 /* 800C6A00 00000024  3C 80 80 39 */	lis r4, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C6A04 00000028  38 84 E0 68 */	addi r4, r4, m__22daAlinkHIO_autoJump_c0@l
-/* 800C6A08 0000002C  C0 24 00 88 */	lfs f1, 0x88(r4)
+/* 800C6A08 0000002C  C0 24 00 88 */	lfs f1, 0x88(r4)	/* effective address: 8038E0F0 */
 /* 800C6A0C 00000030  C0 1F 33 A8 */	lfs f0, 0x33a8(r31)
 /* 800C6A10 00000034  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 800C6A14 00000038  EC 21 00 32 */	fmuls f1, f1, f0
-/* 800C6A18 0000003C  C0 44 00 8C */	lfs f2, 0x8c(r4)
+/* 800C6A18 0000003C  C0 44 00 8C */	lfs f2, 0x8c(r4)	/* effective address: 8038E0F4 */
 /* 800C6A1C 00000040  48 1A 9D 25 */	bl cLib_chaseF__FPfff
 /* 800C6A20 00000044  C0 3F 34 78 */	lfs f1, 0x3478(r31)
 /* 800C6A24 00000048  C0 1F 34 7C */	lfs f0, 0x347c(r31)

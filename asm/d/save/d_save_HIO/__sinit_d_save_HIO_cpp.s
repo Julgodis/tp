@@ -7,10 +7,10 @@ lbl_8025C5FC:
 /* 8025C610 00000014  38 03 33 B4 */	addi r0, r3, __vt__12dSvBit_HIO_c@l
 /* 8025C614 00000018  3C 60 80 43 */	lis r3, g_save_bit_HIO@ha
 /* 8025C618 0000001C  3B E3 07 EC */	addi r31, r3, g_save_bit_HIO@l
-/* 8025C61C 00000020  90 1F 00 00 */	stw r0, 0(r31)
+/* 8025C61C 00000020  90 1F 00 00 */	stw r0, 0(r31)	/* effective address: 804307EC */
 /* 8025C620 00000024  3C 60 80 3C */	lis r3, __vt__23dSvBit_childSwitchHIO_c@ha
 /* 8025C624 00000028  38 03 33 A8 */	addi r0, r3, __vt__23dSvBit_childSwitchHIO_c@l
-/* 8025C628 0000002C  90 1F 00 08 */	stw r0, 8(r31)
+/* 8025C628 0000002C  90 1F 00 08 */	stw r0, 8(r31)	/* effective address: 804307F4 */
 /* 8025C62C 00000030  38 7F 00 10 */	addi r3, r31, 0x10
 /* 8025C630 00000034  4B FF F5 49 */	bl __ct__29dSvBit_childSwPerfectionHIO_cFv
 /* 8025C634 00000038  38 7F 01 18 */	addi r3, r31, 0x118
@@ -23,7 +23,7 @@ lbl_8025C5FC:
 /* 8025C650 00000054  3B E3 07 EC */	addi r31, r3, g_save_bit_HIO@l
 /* 8025C654 00000058  3C 60 80 3C */	lis r3, __vt__21dSvBit_childItemHIO_c@ha
 /* 8025C658 0000005C  38 03 33 9C */	addi r0, r3, __vt__21dSvBit_childItemHIO_c@l
-/* 8025C65C 00000060  90 1F 02 10 */	stw r0, 0x210(r31)
+/* 8025C65C 00000060  90 1F 02 10 */	stw r0, 0x210(r31)	/* effective address: 804309FC */
 /* 8025C660 00000064  38 7F 02 18 */	addi r3, r31, 0x218
 /* 8025C664 00000068  4B FF F7 0D */	bl __ct__29dSvBit_childItPerfectionHIO_cFv
 /* 8025C668 0000006C  38 7F 02 60 */	addi r3, r31, 0x260
@@ -36,7 +36,7 @@ lbl_8025C5FC:
 /* 8025C684 00000088  38 83 07 EC */	addi r4, r3, g_save_bit_HIO@l
 /* 8025C688 0000008C  3C 60 80 3C */	lis r3, __vt__25dSvBit_childTreasureHIO_c@ha
 /* 8025C68C 00000090  38 03 33 90 */	addi r0, r3, __vt__25dSvBit_childTreasureHIO_c@l
-/* 8025C690 00000094  90 04 03 D8 */	stw r0, 0x3d8(r4)
+/* 8025C690 00000094  90 04 03 D8 */	stw r0, 0x3d8(r4)	/* effective address: 80430BC4 */
 /* 8025C694 00000098  38 64 03 E0 */	addi r3, r4, 0x3e0
 /* 8025C698 0000009C  4B FF F8 D1 */	bl __ct__29dSvBit_childTbPerfectionHIO_cFv
 /* 8025C69C 000000A0  3C 60 80 43 */	lis r3, g_save_bit_HIO@ha
@@ -55,8 +55,8 @@ lbl_8025C5FC:
 /* 8025C6D0 000000D4  38 63 07 EC */	addi r3, r3, g_save_bit_HIO@l
 /* 8025C6D4 000000D8  3C 80 80 26 */	lis r4, __dt__12dSvBit_HIO_cFv@ha
 /* 8025C6D8 000000DC  38 84 C6 FC */	addi r4, r4, __dt__12dSvBit_HIO_cFv@l
-/* 8025C6DC 000000E0  3C A0 80 43 */	lis r5, d_save_d_save_HIO__lit_3659@ha
-/* 8025C6E0 000000E4  38 A5 07 E0 */	addi r5, r5, d_save_d_save_HIO__lit_3659@l
+/* 8025C6DC 000000E0  3C A0 80 43 */	lis r5, lit_3659@ha
+/* 8025C6E0 000000E4  38 A5 07 E0 */	addi r5, r5, lit_3659@l
 /* 8025C6E4 000000E8  48 10 55 41 */	bl __register_global_object
 /* 8025C6E8 000000EC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8025C6EC 000000F0  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -8,9 +8,9 @@ lbl_8012E508:
 /* 8012E520 00000018  A8 9F 30 0C */	lha r4, 0x300c(r31)
 /* 8012E524 0000001C  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlAtnMove_c0@ha
 /* 8012E528 00000020  38 E5 EF 70 */	addi r7, r5, m__23daAlinkHIO_wlAtnMove_c0@l
-/* 8012E52C 00000024  A8 A7 00 04 */	lha r5, 4(r7)
-/* 8012E530 00000028  A8 C7 00 00 */	lha r6, 0(r7)
-/* 8012E534 0000002C  A8 E7 00 02 */	lha r7, 2(r7)
+/* 8012E52C 00000024  A8 A7 00 04 */	lha r5, 4(r7)	/* effective address: 8038EF74 */
+/* 8012E530 00000028  A8 C7 00 00 */	lha r6, 0(r7)	/* effective address: 8038EF70 */
+/* 8012E534 0000002C  A8 E7 00 02 */	lha r7, 2(r7)	/* effective address: 8038EF72 */
 /* 8012E538 00000030  48 14 20 09 */	bl cLib_addCalcAngleS__FPsssss
 /* 8012E53C 00000034  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 8012E540 00000038  3C 63 00 01 */	addis r3, r3, 1
@@ -44,7 +44,7 @@ lbl_8012E598:
 /* 8012E5A8 00000010  C0 3F 34 FC */	lfs f1, 0x34fc(r31)
 /* 8012E5AC 00000014  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlBackJump_c0@ha
 /* 8012E5B0 00000018  38 A3 F0 10 */	addi r5, r3, m__24daAlinkHIO_wlBackJump_c0@l
-/* 8012E5B4 0000001C  C0 05 00 30 */	lfs f0, 0x30(r5)
+/* 8012E5B4 0000001C  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 8038F040 */
 /* 8012E5B8 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8012E5BC 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8012E5C0 00000000  40 80 00 1C */	bge lbl_8012E5DC

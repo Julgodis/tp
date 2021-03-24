@@ -19,8 +19,8 @@ lbl_802D9938:
 /* 802D997C 00000044  48 00 27 E1 */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 802D9980 00000048  48 00 00 20 */	b lbl_802D99A0
 lbl_802D9984:
-/* 802D9984 00000000  3C 60 80 3A */	lis r3, JKRDvdFile__stringBase0@ha
-/* 802D9988 00000004  38 63 D2 60 */	addi r3, r3, JKRDvdFile__stringBase0@l
+/* 802D9984 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D9988 00000004  38 63 D2 60 */	addi r3, r3, stringBase0@l
 /* 802D998C 00000008  38 80 00 D5 */	li r4, 0xd5
 /* 802D9990 0000000C  38 A3 00 0F */	addi r5, r3, 0xf
 /* 802D9994 00000010  38 C3 00 12 */	addi r6, r3, 0x12

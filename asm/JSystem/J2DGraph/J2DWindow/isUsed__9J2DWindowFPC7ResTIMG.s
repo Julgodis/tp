@@ -9,8 +9,8 @@ lbl_802FBEDC:
 /* 802FBEF8 0000001C  38 00 00 02 */	li r0, 2
 /* 802FBEFC 00000020  7C 09 03 A6 */	mtctr r0
 lbl_802FBF00:
-/* 802FBF00 00000000  80 A6 00 04 */	lwz r5, 4(r6)
-/* 802FBF04 00000004  84 06 00 08 */	lwzu r0, 8(r6)
+/* 802FBF00 00000000  80 A6 00 04 */	lwz r5, 4(r6)	/* effective address: 803A1C40 */
+/* 802FBF04 00000004  84 06 00 08 */	lwzu r0, 8(r6)	/* effective address: 803A1C44 */
 /* 802FBF08 00000008  90 A7 00 04 */	stw r5, 4(r7)
 /* 802FBF0C 0000000C  94 07 00 08 */	stwu r0, 8(r7)
 /* 802FBF10 00000010  42 00 FF F0 */	bdnz lbl_802FBF00

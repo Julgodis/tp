@@ -5,8 +5,8 @@ lbl_8005520C:
 /* 80055218 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8005521C 00000010  48 30 CF C1 */	bl _savegpr_29
 /* 80055220 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80055224 00000018  3C 60 80 3B */	lis r3, d_d_drawlist__cNullVec__6Z2Calc@ha
-/* 80055228 0000001C  3B C3 87 A0 */	addi r30, r3, d_d_drawlist__cNullVec__6Z2Calc@l
+/* 80055224 00000018  3C 60 80 3B */	lis r3, cNullVec__6Z2Calc@ha
+/* 80055228 0000001C  3B C3 87 A0 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 8005522C 00000020  88 1D 00 00 */	lbz r0, 0(r29)
 /* 80055230 00000024  38 6D 80 D0 */	addi r3, r13, 0x80450650-0x80458580 /* data_80450650-_SDA_BASE_ */
 /* 80055234 00000028  98 03 00 03 */	stb r0, 3(r3)

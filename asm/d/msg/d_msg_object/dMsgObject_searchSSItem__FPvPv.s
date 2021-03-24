@@ -7,7 +7,7 @@ lbl_80232A44:
 /* 80232A58 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80232A5C 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80232A60 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80232A64 00000020  83 E4 5D AC */	lwz r31, 0x5dac(r4)
+/* 80232A64 00000020  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 80232A68 00000024  4B DE 62 79 */	bl fopAc_IsActor__FPv
 /* 80232A6C 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 80232A70 0000002C  41 82 00 60 */	beq lbl_80232AD0

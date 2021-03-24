@@ -33,9 +33,9 @@ lbl_8011DFD4:
 /* 8011DFD8 00000004  B0 1F 30 0E */	sth r0, 0x300e(r31)
 /* 8011DFDC 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011DFE0 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8011DFE4 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8011DFE4 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8011DFE8 00000014  60 00 00 10 */	ori r0, r0, 0x10
-/* 8011DFEC 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 8011DFEC 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8011DFF0 0000001C  38 00 00 01 */	li r0, 1
 /* 8011DFF4 00000020  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 8011DFF8 00000024  80 1F 06 0C */	lwz r0, 0x60c(r31)

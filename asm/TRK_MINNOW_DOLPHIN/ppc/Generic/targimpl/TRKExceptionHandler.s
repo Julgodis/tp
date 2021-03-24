@@ -1,10 +1,10 @@
 lbl_8036F818:
 /* 8036F818 00000000  3C 40 80 3D */	lis r2, gTRKExceptionStatus@h
 /* 8036F81C 00000004  60 42 32 44 */	ori r2, r2, gTRKExceptionStatus@l
-/* 8036F820 00000008  B0 62 00 08 */	sth r3, 8(r2)
+/* 8036F820 00000008  B0 62 00 08 */	sth r3, 8(r2)	/* effective address: 803D324C */
 /* 8036F824 0000000C  7C 7A 02 A6 */	mfspr r3, 0x1a
-/* 8036F828 00000010  90 62 00 00 */	stw r3, 0(r2)
-/* 8036F82C 00000014  A0 62 00 08 */	lhz r3, 8(r2)
+/* 8036F828 00000010  90 62 00 00 */	stw r3, 0(r2)	/* effective address: 803D3244 */
+/* 8036F82C 00000014  A0 62 00 08 */	lhz r3, 8(r2)	/* effective address: 803D324C */
 /* 8036F830 00000018  2C 03 02 00 */	cmpwi r3, 0x200
 /* 8036F834 0000001C  41 82 00 50 */	beq lbl_8036F884
 /* 8036F838 00000020  2C 03 03 00 */	cmpwi r3, 0x300
@@ -34,7 +34,7 @@ lbl_8036F890:
 /* 8036F890 00000000  3C 40 80 3D */	lis r2, gTRKExceptionStatus@h
 /* 8036F894 00000004  60 42 32 44 */	ori r2, r2, gTRKExceptionStatus@l
 /* 8036F898 00000008  38 60 00 01 */	li r3, 1
-/* 8036F89C 0000000C  98 62 00 0D */	stb r3, 0xd(r2)
+/* 8036F89C 0000000C  98 62 00 0D */	stb r3, 0xd(r2)	/* effective address: 803D3251 */
 /* 8036F8A0 00000010  7C 73 42 A6 */	mfspr r3, 0x113
 /* 8036F8A4 00000014  7C 6F F1 20 */	mtcrf 0xff, r3
 /* 8036F8A8 00000018  7C 51 42 A6 */	mfspr r2, 0x111

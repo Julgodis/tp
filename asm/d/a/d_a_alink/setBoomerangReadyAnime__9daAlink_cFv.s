@@ -22,7 +22,7 @@ lbl_800E059C:
 /* 800E05A8 0000000C  41 82 00 14 */	beq lbl_800E05BC
 /* 800E05AC 00000010  3C A0 80 39 */	lis r5, m__18daAlinkHIO_boom_c0@ha
 /* 800E05B0 00000014  38 A5 E6 C8 */	addi r5, r5, m__18daAlinkHIO_boom_c0@l
-/* 800E05B4 00000018  C0 25 00 2C */	lfs f1, 0x2c(r5)
+/* 800E05B4 00000018  C0 25 00 2C */	lfs f1, 0x2c(r5)	/* effective address: 8038E6F4 */
 /* 800E05B8 0000001C  48 00 00 08 */	b lbl_800E05C0
 lbl_800E05BC:
 /* 800E05BC 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)

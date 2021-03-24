@@ -92,7 +92,7 @@ lbl_8014BD70:
 /* 8014BDBC 0000004C  4B FF 9A DD */	bl initialize__22daNpcT_MotionSeqMngr_cFv
 /* 8014BDC0 00000050  93 BF 0B 5C */	stw r29, 0xb5c(r31)
 /* 8014BDC4 00000054  93 DF 0B 58 */	stw r30, 0xb58(r31)
-/* 8014BDC8 00000058  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 8014BDC8 00000058  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 8014BDCC 0000005C  D0 1F 0B 68 */	stfs f0, 0xb68(r31)
 lbl_8014BDD0:
 /* 8014BDD0 00000000  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -109,7 +109,7 @@ lbl_8014BDD0:
 /* 8014BDFC 0000002C  4B FF 9A 9D */	bl initialize__22daNpcT_MotionSeqMngr_cFv
 /* 8014BE00 00000030  93 BF 0B 80 */	stw r29, 0xb80(r31)
 /* 8014BE04 00000034  93 DF 0B 7C */	stw r30, 0xb7c(r31)
-/* 8014BE08 00000038  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 8014BE08 00000038  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 8014BE0C 0000003C  D0 1F 0B 8C */	stfs f0, 0xb8c(r31)
 lbl_8014BE10:
 /* 8014BE10 00000000  7F 83 E3 78 */	mr r3, r28

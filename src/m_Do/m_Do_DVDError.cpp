@@ -99,7 +99,7 @@ asm void mDoDvdErr_ThdInit() {
 u8 DvdErr_stack[3072];
 
 /* 803DFBE0-803DFC20 0028+18 s=1 e=0 z=0  None .bss       Alarm                                                        */
-static u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
+static u8 Alarm[40 + 24 /* padding */];
 
 /* 8001665C-800166A4 0048+00 s=0 e=1 z=0  None .text      mDoDvdErr_ThdCleanup__Fv                                     */
 #pragma push

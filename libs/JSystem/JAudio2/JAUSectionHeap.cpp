@@ -14,6 +14,9 @@
 struct JAISoundID {
 };
 
+struct JKRArchive {
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE5F8 */ void freeTail();
@@ -25,9 +28,6 @@ struct JKRSolidHeap {
 };
 
 struct JAISeqDataUser {
-};
-
-struct JKRArchive {
 };
 
 struct JAISeqData {
@@ -234,7 +234,7 @@ extern "C" static void func_802A6680(); // 1
 extern "C" static void func_802A6688(); // 1
 extern "C" static void func_802A6690(); // 1
 extern "C" static void func_802A6698(); // 1
-extern "C" extern char const* const JAUSectionHeap__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AE5E70 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Sha_c {
@@ -58,6 +58,8 @@ struct daNpc_Sha_c {
 	/* 80AE4360 */ void setCollision();
 	/* 80AE44B8 */ void drawDbgInfo();
 	/* 80AE44C0 */ void selectAction();
+	/* 80AE4508 */ void chkAction(int (daNpc_Sha_c::*)(void*));
+	/* 80AE4534 */ void setAction(int (daNpc_Sha_c::*)(void*));
 	/* 80AE45DC */ void getSceneChangeNoTableIx();
 	/* 80AE48D0 */ void setTempBit(int);
 	/* 80AE4974 */ void cutPerformAugury(int);
@@ -231,8 +233,8 @@ extern "C" void setAttnPos__11daNpc_Sha_cFv(); // 1
 extern "C" void setCollision__11daNpc_Sha_cFv(); // 1
 extern "C" void drawDbgInfo__11daNpc_Sha_cFv(); // 1
 extern "C" void selectAction__11daNpc_Sha_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i(); // 1
 extern "C" void getSceneChangeNoTableIx__11daNpc_Sha_cFv(); // 1
 extern "C" void setTempBit__11daNpc_Sha_cFi(); // 1
 extern "C" void cutPerformAugury__11daNpc_Sha_cFi(); // 1
@@ -809,7 +811,7 @@ asm void daNpc_Sha_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i() {
+asm void daNpc_Sha_c::chkAction(int (daNpc_Sha_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shaman/d_a_npc_shaman/chkAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i.s"
 }
@@ -820,7 +822,7 @@ extern "C" asm static void chkAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i() {
+asm void daNpc_Sha_c::setAction(int (daNpc_Sha_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shaman/d_a_npc_shaman/setAction__11daNpc_Sha_cFM11daNpc_Sha_cFPCvPvPv_i.s"
 }

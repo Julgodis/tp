@@ -23,10 +23,10 @@ lbl_80104C7C:
 /* 80104CA0 00000024  38 80 00 14 */	li r4, 0x14
 /* 80104CA4 00000028  3C A0 80 39 */	lis r5, m__18daAlinkHIO_swim_c0@ha
 /* 80104CA8 0000002C  38 A5 ED 2C */	addi r5, r5, m__18daAlinkHIO_swim_c0@l
-/* 80104CAC 00000030  C0 25 00 90 */	lfs f1, 0x90(r5)
+/* 80104CAC 00000030  C0 25 00 90 */	lfs f1, 0x90(r5)	/* effective address: 8038EDBC */
 /* 80104CB0 00000034  3C A0 80 39 */	lis r5, m__22daAlinkHIO_hookshot_c0@ha
 /* 80104CB4 00000038  38 A5 E9 C0 */	addi r5, r5, m__22daAlinkHIO_hookshot_c0@l
-/* 80104CB8 0000003C  C0 45 00 44 */	lfs f2, 0x44(r5)
+/* 80104CB8 0000003C  C0 45 00 44 */	lfs f2, 0x44(r5)	/* effective address: 8038EA04 */
 /* 80104CBC 00000040  4B FA 83 25 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_80104CC0:
 /* 80104CC0 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)
@@ -59,7 +59,7 @@ lbl_80104D10:
 /* 80104D24 00000014  D0 3F 05 94 */	stfs f1, 0x594(r31)
 /* 80104D28 00000018  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 80104D2C 0000001C  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 80104D30 00000020  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 80104D30 00000020  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038ED8C */
 /* 80104D34 00000024  D0 1F 34 80 */	stfs f0, 0x3480(r31)
 /* 80104D38 00000028  38 00 00 00 */	li r0, 0
 /* 80104D3C 0000002C  B0 1F 30 10 */	sth r0, 0x3010(r31)
@@ -68,10 +68,10 @@ lbl_80104D10:
 /* 80104D48 00000038  48 00 43 29 */	bl setHookshotReadyMaterial__9daAlink_cFv
 /* 80104D4C 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80104D50 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80104D54 00000044  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80104D54 00000044  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104D58 00000048  64 00 00 10 */	oris r0, r0, 0x10
 /* 80104D5C 0000004C  60 00 40 00 */	ori r0, r0, 0x4000
-/* 80104D60 00000050  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80104D60 00000050  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104D64 00000054  38 60 00 01 */	li r3, 1
 lbl_80104D68:
 /* 80104D68 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

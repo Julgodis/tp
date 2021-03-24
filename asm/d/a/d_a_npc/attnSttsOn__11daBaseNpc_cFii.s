@@ -1,8 +1,8 @@
 lbl_8014EFA4:
 /* 8014EFA4 00000000  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8014EFA8 00000004  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
-/* 8014EFAC 00000008  80 C6 5D B4 */	lwz r6, 0x5db4(r6)
-/* 8014EFB0 0000000C  80 06 05 74 */	lwz r0, 0x574(r6)
+/* 8014EFAC 00000008  80 C6 5D B4 */	lwz r6, 0x5db4(r6)	/* effective address: 8040BF74 */
+/* 8014EFB0 0000000C  80 06 05 74 */	lwz r0, 0x574(r6)	/* effective address: 80406734 */
 /* 8014EFB4 00000010  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8014EFB8 00000014  41 82 00 1C */	beq lbl_8014EFD4
 /* 8014EFBC 00000018  2C 05 00 00 */	cmpwi r5, 0

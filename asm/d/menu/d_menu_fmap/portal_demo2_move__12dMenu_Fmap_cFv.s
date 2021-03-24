@@ -26,9 +26,9 @@ lbl_801C9CC8:
 /* 801C9D28 00000060  38 A0 00 00 */	li r5, 0
 /* 801C9D2C 00000064  38 C0 00 00 */	li r6, 0
 /* 801C9D30 00000068  38 E0 00 00 */	li r7, 0
-/* 801C9D34 0000006C  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801C9D34 0000006C  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801C9D38 00000070  FC 40 08 90 */	fmr f2, f1
-/* 801C9D3C 00000074  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801C9D3C 00000074  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801C9D40 00000078  FC 80 18 90 */	fmr f4, f3
 /* 801C9D44 0000007C  39 00 00 00 */	li r8, 0
 /* 801C9D48 00000080  48 0E 1C 3D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

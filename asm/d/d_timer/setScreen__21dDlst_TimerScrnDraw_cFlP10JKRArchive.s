@@ -36,8 +36,8 @@ lbl_8025E010:
 lbl_8025E034:
 /* 8025E034 00000000  90 1F 00 08 */	stw r0, 8(r31)
 /* 8025E038 00000004  80 7F 00 08 */	lwz r3, 8(r31)
-/* 8025E03C 00000008  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
-/* 8025E040 0000000C  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
+/* 8025E03C 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8025E040 0000000C  38 84 A3 D8 */	addi r4, r4, stringBase0@l
 /* 8025E044 00000010  38 84 00 06 */	addi r4, r4, 6
 /* 8025E048 00000014  3C A0 00 02 */	lis r5, 2
 /* 8025E04C 00000018  80 DF 00 7C */	lwz r6, 0x7c(r31)
@@ -56,8 +56,8 @@ lbl_8025E034:
 /* 8025E080 0000004C  38 60 00 07 */	li r3, 7
 /* 8025E084 00000050  64 63 00 07 */	oris r3, r3, 7
 /* 8025E088 00000054  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 8025E08C 00000058  3C 80 80 3A */	lis r4, d_d_timer__stringBase0@ha
-/* 8025E090 0000005C  38 84 A3 D8 */	addi r4, r4, d_d_timer__stringBase0@l
+/* 8025E08C 00000058  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8025E090 0000005C  38 84 A3 D8 */	addi r4, r4, stringBase0@l
 /* 8025E094 00000060  38 64 00 26 */	addi r3, r4, 0x26
 /* 8025E098 00000064  80 9F 00 7C */	lwz r4, 0x7c(r31)
 /* 8025E09C 00000068  48 07 61 D5 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -138,7 +138,7 @@ lbl_8025E144:
 /* 8025E1BC 00000078  7D 89 03 A6 */	mtctr r12
 /* 8025E1C0 0000007C  4E 80 04 21 */	bctrl 
 /* 8025E1C4 00000080  38 80 00 00 */	li r4, 0
-/* 8025E1C8 00000084  C0 02 B5 40 */	lfs f0, d_d_timer__lit_3919(r2)
+/* 8025E1C8 00000084  C0 02 B5 40 */	lfs f0, lit_3919(r2)
 /* 8025E1CC 00000088  7C 88 23 78 */	mr r8, r4
 /* 8025E1D0 0000008C  7C 87 23 78 */	mr r7, r4
 /* 8025E1D4 00000090  7C 86 23 78 */	mr r6, r4
@@ -158,9 +158,9 @@ lbl_8025E1E4:
 /* 8025E208 00000024  38 00 00 00 */	li r0, 0
 /* 8025E20C 00000028  98 1F 03 DC */	stb r0, 0x3dc(r31)
 /* 8025E210 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 8025E214 00000030  C0 22 B5 40 */	lfs f1, d_d_timer__lit_3919(r2)
+/* 8025E214 00000030  C0 22 B5 40 */	lfs f1, lit_3919(r2)
 /* 8025E218 00000034  48 00 28 BD */	bl playBckAnimation__21dDlst_TimerScrnDraw_cFf
-/* 8025E21C 00000038  C0 02 B5 40 */	lfs f0, d_d_timer__lit_3919(r2)
+/* 8025E21C 00000038  C0 02 B5 40 */	lfs f0, lit_3919(r2)
 /* 8025E220 0000003C  D0 1F 03 C4 */	stfs f0, 0x3c4(r31)
 /* 8025E224 00000040  D0 1F 03 C0 */	stfs f0, 0x3c0(r31)
 /* 8025E228 00000044  83 E1 00 0C */	lwz r31, 0xc(r1)

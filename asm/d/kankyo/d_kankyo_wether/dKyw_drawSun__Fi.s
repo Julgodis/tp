@@ -5,7 +5,7 @@ lbl_800570DC:
 /* 800570E8 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 800570EC 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800570F0 00000014  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 800570F4 00000018  80 63 0E 74 */	lwz r3, 0xe74(r3)
+/* 800570F4 00000018  80 63 0E 74 */	lwz r3, 0xe74(r3)	/* effective address: 8042D8C8 */
 /* 800570F8 0000001C  4B FF FA 51 */	bl dKyw_setDrawPacketListSky__FP9J3DPacketi
 /* 800570FC 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80057100 00000024  7C 08 03 A6 */	mtlr r0

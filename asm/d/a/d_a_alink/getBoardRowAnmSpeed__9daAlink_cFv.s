@@ -1,12 +1,12 @@
 lbl_801066B8:
 /* 801066B8 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_board_c0@ha
 /* 801066BC 00000004  38 84 E8 70 */	addi r4, r4, m__19daAlinkHIO_board_c0@l
-/* 801066C0 00000008  C0 84 00 88 */	lfs f4, 0x88(r4)
-/* 801066C4 0000000C  C0 04 00 78 */	lfs f0, 0x78(r4)
+/* 801066C0 00000008  C0 84 00 88 */	lfs f4, 0x88(r4)	/* effective address: 8038E8F8 */
+/* 801066C4 0000000C  C0 04 00 78 */	lfs f0, 0x78(r4)	/* effective address: 8038E8E8 */
 /* 801066C8 00000010  EC 60 20 28 */	fsubs f3, f0, f4
-/* 801066CC 00000014  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 801066CC 00000014  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 801066D0 00000018  C0 23 33 98 */	lfs f1, 0x3398(r3)
-/* 801066D4 0000001C  C0 04 00 7C */	lfs f0, 0x7c(r4)
+/* 801066D4 0000001C  C0 04 00 7C */	lfs f0, 0x7c(r4)	/* effective address: 8038E8EC */
 /* 801066D8 00000020  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801066DC 00000024  EC 02 00 28 */	fsubs f0, f2, f0
 /* 801066E0 00000028  EC 03 00 32 */	fmuls f0, f3, f0

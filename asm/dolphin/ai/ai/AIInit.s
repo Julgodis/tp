@@ -54,16 +54,16 @@ lbl_80350084:
 /* 80350154 000000D0  93 ED 93 20 */	stw r31, min_wait(r13)
 /* 80350158 000000D4  93 ED 93 28 */	stw r31, max_wait(r13)
 /* 8035015C 000000D8  93 ED 93 30 */	stw r31, buffer(r13)
-/* 80350160 000000DC  80 A6 6C 04 */	lwz r5, 0x6c04(r6)
-/* 80350164 000000E0  90 06 6C 00 */	stw r0, 0x6c00(r6)
+/* 80350160 000000DC  80 A6 6C 04 */	lwz r5, 0x6c04(r6)	/* effective address: CC006C04 */
+/* 80350164 000000E0  90 06 6C 00 */	stw r0, 0x6c00(r6)	/* effective address: CC006C00 */
 /* 80350168 000000E4  54 A0 06 1E */	rlwinm r0, r5, 0, 0x18, 0xf
 /* 8035016C 000000E8  60 00 00 00 */	nop 
-/* 80350170 000000EC  90 06 6C 04 */	stw r0, 0x6c04(r6)
-/* 80350174 000000F0  80 06 6C 04 */	lwz r0, 0x6c04(r6)
+/* 80350170 000000EC  90 06 6C 04 */	stw r0, 0x6c04(r6)	/* effective address: CC006C04 */
+/* 80350174 000000F0  80 06 6C 04 */	lwz r0, 0x6c04(r6)	/* effective address: CC006C04 */
 /* 80350178 000000F4  54 00 00 2E */	rlwinm r0, r0, 0, 0, 0x17
 /* 8035017C 000000F8  60 00 00 00 */	nop 
-/* 80350180 000000FC  90 06 6C 04 */	stw r0, 0x6c04(r6)
-/* 80350184 00000100  93 E6 6C 0C */	stw r31, 0x6c0c(r6)
+/* 80350180 000000FC  90 06 6C 04 */	stw r0, 0x6c04(r6)	/* effective address: CC006C04 */
+/* 80350184 00000100  93 E6 6C 0C */	stw r31, 0x6c0c(r6)	/* effective address: CC006C0C */
 /* 80350188 00000104  4B FF FD C1 */	bl __AI_set_stream_sample_rate
 /* 8035018C 00000108  38 60 00 00 */	li r3, 0
 /* 80350190 0000010C  4B FF FC C5 */	bl AISetDSPSampleRate

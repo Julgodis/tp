@@ -20,19 +20,19 @@ lbl_8029E720:
 /* 8029E768 00000048  38 E0 1F 00 */	li r7, 0x1f00
 /* 8029E76C 0000004C  38 80 20 00 */	li r4, 0x2000
 /* 8029E770 00000050  38 60 00 10 */	li r3, 0x10
-/* 8029E774 00000054  91 49 00 04 */	stw r10, 4(r9)
-/* 8029E778 00000058  91 09 00 0C */	stw r8, 0xc(r9)
-/* 8029E77C 0000005C  90 E9 00 10 */	stw r7, 0x10(r9)
-/* 8029E780 00000060  90 C9 00 14 */	stw r6, 0x14(r9)
-/* 8029E784 00000064  90 A9 00 18 */	stw r5, 0x18(r9)
-/* 8029E788 00000068  90 89 00 1C */	stw r4, 0x1c(r9)
-/* 8029E78C 0000006C  90 C9 00 20 */	stw r6, 0x20(r9)
-/* 8029E790 00000070  B0 C9 00 24 */	sth r6, 0x24(r9)
-/* 8029E794 00000074  B0 69 00 26 */	sth r3, 0x26(r9)
-/* 8029E798 00000078  90 09 00 28 */	stw r0, 0x28(r9)
-/* 8029E79C 0000007C  90 C9 00 2C */	stw r6, 0x2c(r9)
-/* 8029E7A0 00000080  90 C9 00 30 */	stw r6, 0x30(r9)
-/* 8029E7A4 00000084  93 E9 00 34 */	stw r31, 0x34(r9)
+/* 8029E774 00000054  91 49 00 04 */	stw r10, 4(r9)	/* effective address: 80431F84 */
+/* 8029E778 00000058  91 09 00 0C */	stw r8, 0xc(r9)	/* effective address: 80431F8C */
+/* 8029E77C 0000005C  90 E9 00 10 */	stw r7, 0x10(r9)	/* effective address: 80431F90 */
+/* 8029E780 00000060  90 C9 00 14 */	stw r6, 0x14(r9)	/* effective address: 80431F94 */
+/* 8029E784 00000064  90 A9 00 18 */	stw r5, 0x18(r9)	/* effective address: 80431F98 */
+/* 8029E788 00000068  90 89 00 1C */	stw r4, 0x1c(r9)	/* effective address: 80431F9C */
+/* 8029E78C 0000006C  90 C9 00 20 */	stw r6, 0x20(r9)	/* effective address: 80431FA0 */
+/* 8029E790 00000070  B0 C9 00 24 */	sth r6, 0x24(r9)	/* effective address: 80431FA4 */
+/* 8029E794 00000074  B0 69 00 26 */	sth r3, 0x26(r9)	/* effective address: 80431FA6 */
+/* 8029E798 00000078  90 09 00 28 */	stw r0, 0x28(r9)	/* effective address: 80431FA8 */
+/* 8029E79C 0000007C  90 C9 00 2C */	stw r6, 0x2c(r9)	/* effective address: 80431FAC */
+/* 8029E7A0 00000080  90 C9 00 30 */	stw r6, 0x30(r9)	/* effective address: 80431FB0 */
+/* 8029E7A4 00000084  93 E9 00 34 */	stw r31, 0x34(r9)	/* effective address: 80431FB4 */
 /* 8029E7A8 00000088  48 0B 3D 15 */	bl DSPInit
 /* 8029E7AC 0000008C  3C 60 80 43 */	lis r3, audio_task@ha
 /* 8029E7B0 00000090  38 63 1F 80 */	addi r3, r3, audio_task@l

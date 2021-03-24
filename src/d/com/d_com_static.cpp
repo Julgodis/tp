@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
-};
-
-struct fopAc_ac_c {
 };
 
 struct daSus_c {
@@ -186,8 +186,8 @@ extern "C" void __ct__Q27daSus_c6room_cFv(); // 1
 extern "C" static void func_80031EF0(); // 1
 extern "C" void __dt__Q27daSus_c6data_cFv(); // 1
 extern "C" void __ct__Q27daSus_c6data_cFv(); // 1
-extern "C" extern char const* const d_com_d_com_static__stringBase0;
-extern "C" extern u8 d_com_d_com_static__lit_4480[12];
+extern "C" extern char const* const stringBase0;
+extern "C" extern u8 lit_4480[12];
 extern "C" extern u8 struct_80450D8C[4];
 extern "C" extern u8 m_aim_rate__8daYkgr_c[4];
 extern "C" extern u8 m_path__8daYkgr_c[4];
@@ -337,7 +337,7 @@ asm void daSus_c::room_c::reset() {
 
 /* ############################################################################################## */
 /* 80423FF0-80423FFC 000C+00 s=1 e=0 z=0  None .bss       @3840                                                        */
-static u8 d_com_d_com_static__lit_3840[12];
+static u8 lit_3840[12];
 
 /* 80423FFC-8042447C 0480+00 s=6 e=0 z=0  None .bss       mData__7daSus_c                                              */
 static u8 mData__7daSus_c[1152];
@@ -573,7 +573,7 @@ SECTION_SDATA2 u32 CLOSE_BOUND_SPEED__7daDsh_c = 0x41F00000;
 SECTION_SDATA2 u32 CLOSE_BOUND_RATIO__7daDsh_c = 0xBECCCCCD;
 
 /* 80451D54-80451D58 0004+00 s=1 e=0 z=0  None .sdata2    @4338                                                        */
-SECTION_SDATA2 static u8 d_com_d_com_static__lit_4338[4] = {
+SECTION_SDATA2 static u8 lit_4338[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -805,7 +805,7 @@ asm void daObjCarry_c::chkSaveFlag() {
 
 /* ############################################################################################## */
 /* 804245A0-804245AC 000C+00 s=0 e=0 z=0  None .bss       @4480                                                        */
-u8 d_com_d_com_static__lit_4480[12];
+u8 lit_4480[12];
 
 /* 804245AC-804245E8 003C+00 s=3 e=0 z=0  None .bss       mPos__12daObjCarry_c                                         */
 static u8 mPos__12daObjCarry_c[60];

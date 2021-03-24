@@ -54,7 +54,7 @@ extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_Delete__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_draw__FP9daNocrm_c(); // 1
-extern "C" extern char const* const d_a_d_a_no_chg_room__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 
 // 
@@ -105,7 +105,7 @@ asm static void isLoadRoom(int param_0) {
 
 /* ############################################################################################## */
 /* 804533C8-804533CC 0004+00 s=2 e=0 z=0  None .sdata2    @3762                                                        */
-SECTION_SDATA2 static u8 d_a_d_a_no_chg_room__lit_3762[4] = {
+SECTION_SDATA2 static u8 lit_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -142,10 +142,10 @@ SECTION_DEAD static char const* const pad_8039267C = "\0\0\0";
 #pragma pop
 
 /* 804533CC-804533D0 0004+00 s=1 e=0 z=0  None .sdata2    @3832                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_no_chg_room__lit_3832 = 1000.0f;
+SECTION_SDATA2 static f32 lit_3832 = 1000.0f;
 
 /* 804533D0-804533D8 0004+04 s=1 e=0 z=0  None .sdata2    @3833                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_no_chg_room__lit_3833[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3833[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,

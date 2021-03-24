@@ -19,7 +19,7 @@ lbl_800D3858:
 /* 800D386C 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D3870 00000018  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800D3874 0000001C  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800D3878 00000020  C0 44 00 38 */	lfs f2, 0x38(r4)
+/* 800D3878 00000020  C0 44 00 38 */	lfs f2, 0x38(r4)	/* effective address: 8038D6F4 */
 /* 800D387C 00000024  48 19 CE C5 */	bl cLib_chaseF__FPfff
 /* 800D3880 00000028  80 1E 05 88 */	lwz r0, 0x588(r30)
 /* 800D3884 0000002C  64 00 08 00 */	oris r0, r0, 0x800

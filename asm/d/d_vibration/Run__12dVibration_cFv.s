@@ -133,7 +133,7 @@ lbl_8006F404:
 lbl_8006F43C:
 /* 8006F43C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006F440 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8006F444 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 8006F444 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8006F448 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 8006F44C 00000010  41 82 01 F0 */	beq lbl_8006F63C
 /* 8006F450 00000014  88 03 02 2F */	lbz r0, 0x22f(r3)
@@ -170,7 +170,7 @@ lbl_8006F484:
 lbl_8006F4C8:
 /* 8006F4C8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006F4CC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8006F4D0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 8006F4D0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8006F4D4 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 8006F4D8 00000010  41 82 01 64 */	beq lbl_8006F63C
 /* 8006F4DC 00000014  88 03 02 2F */	lbz r0, 0x22f(r3)
@@ -225,7 +225,7 @@ lbl_8006F568:
 lbl_8006F598:
 /* 8006F598 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006F59C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8006F5A0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 8006F5A0 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8006F5A4 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 8006F5A8 00000010  41 82 00 5C */	beq lbl_8006F604
 /* 8006F5AC 00000014  88 03 02 2F */	lbz r0, 0x22f(r3)
@@ -258,7 +258,7 @@ lbl_8006F604:
 lbl_8006F614:
 /* 8006F614 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8006F618 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8006F61C 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 8006F61C 00000008  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8006F620 0000000C  28 03 00 00 */	cmplwi r3, 0
 /* 8006F624 00000010  41 82 00 18 */	beq lbl_8006F63C
 /* 8006F628 00000014  88 03 02 2F */	lbz r0, 0x22f(r3)
@@ -361,7 +361,7 @@ lbl_8006F750:
 /* 8006F77C 0000002C  7C 64 1B 78 */	mr r4, r3
 /* 8006F780 00000030  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F784 00000034  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F788 00000038  80 63 00 00 */	lwz r3, 0(r3)
+/* 8006F788 00000038  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
 /* 8006F78C 0000003C  38 63 00 68 */	addi r3, r3, 0x68
 /* 8006F790 00000040  38 A0 00 00 */	li r5, 0
 /* 8006F794 00000044  38 C0 00 3C */	li r6, 0x3c
@@ -387,7 +387,7 @@ lbl_8006F7A0:
 /* 8006F7E0 00000040  7C 64 1B 78 */	mr r4, r3
 /* 8006F7E4 00000044  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F7E8 00000048  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F7EC 0000004C  80 63 00 00 */	lwz r3, 0(r3)
+/* 8006F7EC 0000004C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
 /* 8006F7F0 00000050  38 63 00 68 */	addi r3, r3, 0x68
 /* 8006F7F4 00000054  38 A0 00 01 */	li r5, 1
 /* 8006F7F8 00000058  38 C0 00 3C */	li r6, 0x3c
@@ -428,7 +428,7 @@ lbl_8006F84C:
 /* 8006F87C 00000030  7C 64 1B 78 */	mr r4, r3
 /* 8006F880 00000034  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F884 00000038  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F888 0000003C  80 63 00 00 */	lwz r3, 0(r3)
+/* 8006F888 0000003C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
 /* 8006F88C 00000040  38 63 00 68 */	addi r3, r3, 0x68
 /* 8006F890 00000044  38 A0 00 00 */	li r5, 0
 /* 8006F894 00000048  38 C0 00 3C */	li r6, 0x3c
@@ -437,13 +437,13 @@ lbl_8006F84C:
 lbl_8006F8A0:
 /* 8006F8A0 00000000  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F8A4 00000004  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F8A8 00000008  80 63 00 00 */	lwz r3, 0(r3)
+/* 8006F8A8 00000008  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
 /* 8006F8AC 0000000C  38 63 00 68 */	addi r3, r3, 0x68
 /* 8006F8B0 00000010  48 27 20 C9 */	bl stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv
 /* 8006F8B4 00000014  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F8B8 00000018  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F8BC 0000001C  80 63 00 00 */	lwz r3, 0(r3)
-/* 8006F8C0 00000020  A8 63 00 7C */	lha r3, 0x7c(r3)
+/* 8006F8BC 0000001C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
+/* 8006F8C0 00000020  A8 63 00 7C */	lha r3, 0x7c(r3)	/* effective address: 803DD354 */
 /* 8006F8C4 00000024  38 80 00 00 */	li r4, 0
 /* 8006F8C8 00000028  48 27 1D C5 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
 /* 8006F8CC 0000002C  38 00 FF 9D */	li r0, -99
@@ -504,13 +504,13 @@ lbl_8006F990:
 /* 8006F994 00000004  41 80 00 40 */	blt lbl_8006F9D4
 /* 8006F998 00000008  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F99C 0000000C  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F9A0 00000010  80 63 00 00 */	lwz r3, 0(r3)
+/* 8006F9A0 00000010  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
 /* 8006F9A4 00000014  38 63 00 68 */	addi r3, r3, 0x68
 /* 8006F9A8 00000018  48 27 1F D1 */	bl stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv
 /* 8006F9AC 0000001C  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006F9B0 00000020  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006F9B4 00000024  80 63 00 00 */	lwz r3, 0(r3)
-/* 8006F9B8 00000028  A8 63 00 7C */	lha r3, 0x7c(r3)
+/* 8006F9B4 00000024  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
+/* 8006F9B8 00000028  A8 63 00 7C */	lha r3, 0x7c(r3)	/* effective address: 803DD354 */
 /* 8006F9BC 0000002C  38 80 00 00 */	li r4, 0
 /* 8006F9C0 00000030  48 27 1C CD */	bl stopMotor__Q210JUTGamePad7CRumbleFib
 /* 8006F9C4 00000034  80 7F 00 80 */	lwz r3, 0x80(r31)

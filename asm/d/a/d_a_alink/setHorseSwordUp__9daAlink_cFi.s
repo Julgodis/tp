@@ -43,7 +43,7 @@ lbl_800EEEF4:
 /* 800EEEF8 00000004  4B FF E0 A5 */	bl setHorseSwordUpAnime__9daAlink_cFv
 /* 800EEEFC 00000008  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EEF00 0000000C  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EEF04 00000010  A8 03 00 50 */	lha r0, 0x50(r3)
+/* 800EEF04 00000010  A8 03 00 50 */	lha r0, 0x50(r3)	/* effective address: 8038E5F4 */
 /* 800EEF08 00000014  B0 1E 30 02 */	sth r0, 0x3002(r30)
 lbl_800EEF0C:
 /* 800EEF0C 00000000  80 1E 05 74 */	lwz r0, 0x574(r30)

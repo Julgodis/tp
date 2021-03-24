@@ -8,7 +8,7 @@ lbl_801A5BD4:
 /* 801A5BEC 00000018  48 12 0D AD */	bl resetScene__10Z2EnvSeMgrFv
 /* 801A5BF0 0000001C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A5BF4 00000020  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A5BF8 00000024  80 63 0F 38 */	lwz r3, 0xf38(r3)
+/* 801A5BF8 00000024  80 63 0F 38 */	lwz r3, 0xf38(r3)	/* effective address: 8042D98C */
 /* 801A5BFC 00000028  28 03 00 00 */	cmplwi r3, 0
 /* 801A5C00 0000002C  41 82 00 08 */	beq lbl_801A5C08
 /* 801A5C04 00000030  4B E6 95 89 */	bl mDoExt_destroySolidHeap__FP12JKRSolidHeap

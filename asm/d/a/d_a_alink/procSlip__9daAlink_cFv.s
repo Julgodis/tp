@@ -8,7 +8,7 @@ lbl_800C5CA4:
 /* 800C5CBC 00000018  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C5CC0 0000001C  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800C5CC4 00000020  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800C5CC8 00000024  C0 44 00 44 */	lfs f2, 0x44(r4)
+/* 800C5CC8 00000024  C0 44 00 44 */	lfs f2, 0x44(r4)	/* effective address: 8038D700 */
 /* 800C5CCC 00000028  48 1A AA 75 */	bl cLib_chaseF__FPfff
 /* 800C5CD0 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800C5CD4 00000030  4B FE DC 31 */	bl checkZeroSpeedF__9daAlink_cCFv

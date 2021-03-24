@@ -15,7 +15,7 @@ lbl_800F778C:
 /* 800F7790 00000004  38 80 00 19 */	li r4, 0x19
 /* 800F7794 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800F7798 0000000C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 800F779C 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 800F779C 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 800F77A0 00000014  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 800F77A4 00000018  4B FB 58 3D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800F77A8 0000001C  7F E3 FB 78 */	mr r3, r31

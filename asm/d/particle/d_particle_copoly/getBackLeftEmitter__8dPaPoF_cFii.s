@@ -5,7 +5,7 @@ lbl_800515CC:
 /* 800515D8 0000000C  7C 66 1B 78 */	mr r6, r3
 /* 800515DC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800515E0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800515E4 00000018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 800515E4 00000018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 800515E8 0000001C  38 63 02 10 */	addi r3, r3, 0x210
 /* 800515EC 00000020  54 80 20 36 */	slwi r0, r4, 4
 /* 800515F0 00000024  7C 86 02 14 */	add r4, r6, r0

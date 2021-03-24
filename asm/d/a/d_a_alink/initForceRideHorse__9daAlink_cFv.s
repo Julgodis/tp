@@ -11,7 +11,7 @@ lbl_800ECB58:
 /* 800ECB7C 00000024  38 7E 28 14 */	addi r3, r30, 0x2814
 /* 800ECB80 00000028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800ECB84 0000002C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
-/* 800ECB88 00000030  80 9F 5D B8 */	lwz r4, 0x5db8(r31)
+/* 800ECB88 00000030  80 9F 5D B8 */	lwz r4, 0x5db8(r31)	/* effective address: 8040BF78 */
 /* 800ECB8C 00000034  48 07 21 2D */	bl setData__16daPy_actorKeep_cFP10fopAc_ac_c
 /* 800ECB90 00000038  3C 60 80 42 */	lis r3, l_horseBaseAnime@ha
 /* 800ECB94 0000003C  38 03 55 8C */	addi r0, r3, l_horseBaseAnime@l

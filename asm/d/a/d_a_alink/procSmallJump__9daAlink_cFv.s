@@ -30,7 +30,7 @@ lbl_800C7324:
 /* 800C733C 00000008  38 80 00 02 */	li r4, 2
 /* 800C7340 0000000C  3C A0 80 39 */	lis r5, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C7344 00000010  38 A5 E1 1C */	addi r5, r5, m__23daAlinkHIO_smallJump_c0@l
-/* 800C7348 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)
+/* 800C7348 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 8038E160 */
 /* 800C734C 00000018  4B FF F6 FD */	bl procFallInit__9daAlink_cFif
 /* 800C7350 0000001C  48 00 01 6C */	b lbl_800C74BC
 lbl_800C7354:
@@ -47,7 +47,7 @@ lbl_800C7360:
 /* 800C7378 00000018  4B FE D5 59 */	bl setJumpMode__9daAlink_cFv
 /* 800C737C 0000001C  3C 60 80 39 */	lis r3, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C7380 00000020  38 63 E1 1C */	addi r3, r3, m__23daAlinkHIO_smallJump_c0@l
-/* 800C7384 00000024  C0 03 00 3C */	lfs f0, 0x3c(r3)
+/* 800C7384 00000024  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038E158 */
 /* 800C7388 00000028  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800C738C 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800C7390 00000030  38 80 00 01 */	li r4, 1
@@ -61,7 +61,7 @@ lbl_800C7360:
 /* 800C73B0 00000050  C0 62 93 14 */	lfs f3, lit_7307(r2)
 /* 800C73B4 00000054  3C 60 80 39 */	lis r3, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C73B8 00000058  38 63 E1 1C */	addi r3, r3, m__23daAlinkHIO_smallJump_c0@l
-/* 800C73BC 0000005C  C0 43 00 40 */	lfs f2, 0x40(r3)
+/* 800C73BC 0000005C  C0 43 00 40 */	lfs f2, 0x40(r3)	/* effective address: 8038E15C */
 /* 800C73C0 00000060  C0 3F 34 78 */	lfs f1, 0x3478(r31)
 /* 800C73C4 00000064  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 800C73C8 00000068  EC 01 00 28 */	fsubs f0, f1, f0
@@ -86,7 +86,7 @@ lbl_800C7404:
 /* 800C740C 00000008  FC 60 00 50 */	fneg f3, f0
 /* 800C7410 0000000C  3C 60 80 39 */	lis r3, m__23daAlinkHIO_smallJump_c0@ha
 /* 800C7414 00000010  38 63 E1 1C */	addi r3, r3, m__23daAlinkHIO_smallJump_c0@l
-/* 800C7418 00000014  C0 43 00 40 */	lfs f2, 0x40(r3)
+/* 800C7418 00000014  C0 43 00 40 */	lfs f2, 0x40(r3)	/* effective address: 8038E15C */
 /* 800C741C 00000018  C0 3F 34 78 */	lfs f1, 0x3478(r31)
 /* 800C7420 0000001C  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 800C7424 00000020  EC 01 00 28 */	fsubs f0, f1, f0

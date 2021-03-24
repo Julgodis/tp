@@ -19,15 +19,15 @@ lbl_8013FC24:
 /* 8013FC68 00000044  4B F0 28 B1 */	bl reset__14dEvt_control_cFPv
 /* 8013FC6C 00000048  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013FC70 0000004C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013FC74 00000050  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013FC74 00000050  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FC78 00000054  54 00 01 88 */	rlwinm r0, r0, 0, 6, 4
-/* 8013FC7C 00000058  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013FC7C 00000058  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FC80 0000005C  A8 1E 30 12 */	lha r0, 0x3012(r30)
 /* 8013FC84 00000060  2C 00 00 B0 */	cmpwi r0, 0xb0
 /* 8013FC88 00000064  40 82 00 2C */	bne lbl_8013FCB4
 /* 8013FC8C 00000068  7F C3 F3 78 */	mr r3, r30
-/* 8013FC90 0000006C  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
-/* 8013FC94 00000070  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
+/* 8013FC90 0000006C  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 8013FC94 00000070  38 84 20 94 */	addi r4, r4, stringBase0@l
 /* 8013FC98 00000074  38 84 03 1E */	addi r4, r4, 0x31e
 /* 8013FC9C 00000078  3C A0 00 01 */	lis r5, 0x0001 /* 0x0000FFFF@ha */
 /* 8013FCA0 0000007C  38 A5 FF FF */	addi r5, r5, 0xFFFF /* 0x0000FFFF@l */
@@ -37,8 +37,8 @@ lbl_8013FC24:
 /* 8013FCB0 0000008C  48 00 00 28 */	b lbl_8013FCD8
 lbl_8013FCB4:
 /* 8013FCB4 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8013FCB8 00000004  3C 80 80 39 */	lis r4, d_a_d_a_alink__stringBase0@ha
-/* 8013FCBC 00000008  38 84 20 94 */	addi r4, r4, d_a_d_a_alink__stringBase0@l
+/* 8013FCB8 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 8013FCBC 00000008  38 84 20 94 */	addi r4, r4, stringBase0@l
 /* 8013FCC0 0000000C  38 84 03 28 */	addi r4, r4, 0x328
 /* 8013FCC4 00000010  3C A0 00 01 */	lis r5, 0x0001 /* 0x0000FFFF@ha */
 /* 8013FCC8 00000014  38 A5 FF FF */	addi r5, r5, 0xFFFF /* 0x0000FFFF@l */
@@ -108,7 +108,7 @@ lbl_8013FDA4:
 /* 8013FDAC 00000008  40 82 01 60 */	bne lbl_8013FF0C
 /* 8013FDB0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013FDB4 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013FDB8 00000014  88 63 00 16 */	lbz r3, 0x16(r3)
+/* 8013FDB8 00000014  88 63 00 16 */	lbz r3, 0x16(r3)	/* effective address: 804061D6 */
 /* 8013FDBC 00000018  A8 1E 30 12 */	lha r0, 0x3012(r30)
 /* 8013FDC0 0000001C  7C 00 18 00 */	cmpw r0, r3
 /* 8013FDC4 00000020  41 82 01 48 */	beq lbl_8013FF0C
@@ -137,16 +137,16 @@ lbl_8013FE00:
 lbl_8013FE18:
 /* 8013FE18 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8013FE1C 00000004  38 80 00 83 */	li r4, 0x83
-/* 8013FE20 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
-/* 8013FE24 0000000C  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
+/* 8013FE20 00000008  C0 22 92 B8 */	lfs f1, lit_6040(r2)
+/* 8013FE24 0000000C  C0 42 93 30 */	lfs f2, lit_7625(r2)
 /* 8013FE28 00000010  38 A0 FF FF */	li r5, -1
 /* 8013FE2C 00000014  C0 62 92 C4 */	lfs f3, lit_6109(r2)
 /* 8013FE30 00000018  4B FE 98 D5 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8013FE34 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013FE38 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013FE3C 00000024  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013FE3C 00000024  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FE40 00000028  64 00 04 00 */	oris r0, r0, 0x400
-/* 8013FE44 0000002C  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013FE44 0000002C  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FE48 00000030  28 1F 00 00 */	cmplwi r31, 0
 /* 8013FE4C 00000034  41 82 00 10 */	beq lbl_8013FE5C
 /* 8013FE50 00000038  80 1F 04 9C */	lwz r0, 0x49c(r31)

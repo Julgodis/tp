@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80A95B40 */ ~cXyz();
-	/* 80A961D0 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A961D4 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80A95B40 */ ~cXyz();
+	/* 80A961D0 */ cXyz();
 };
 
 struct daNpc_Pachi_Besu_c {
@@ -64,6 +64,8 @@ struct daNpc_Pachi_Besu_c {
 	/* 80A944F0 */ void setCollision();
 	/* 80A94620 */ void drawDbgInfo();
 	/* 80A94628 */ void selectAction();
+	/* 80A946A4 */ void chkAction(int (daNpc_Pachi_Besu_c::*)(void*));
+	/* 80A946D0 */ void setAction(int (daNpc_Pachi_Besu_c::*)(void*));
 	/* 80A94778 */ void wait(void*);
 	/* 80A949EC */ void talk(void*);
 	/* 80A94A7C */ void _turn_to_link(s16);
@@ -250,8 +252,8 @@ extern "C" void setAttnPos__18daNpc_Pachi_Besu_cFv(); // 1
 extern "C" void setCollision__18daNpc_Pachi_Besu_cFv(); // 1
 extern "C" void drawDbgInfo__18daNpc_Pachi_Besu_cFv(); // 1
 extern "C" void selectAction__18daNpc_Pachi_Besu_cFv(); // 1
-extern "C" static void chkAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i(); // 1
+extern "C" void setAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i(); // 1
 extern "C" void wait__18daNpc_Pachi_Besu_cFPv(); // 1
 extern "C" void talk__18daNpc_Pachi_Besu_cFPv(); // 1
 extern "C" void _turn_to_link__18daNpc_Pachi_Besu_cFs(); // 1
@@ -865,7 +867,7 @@ asm void daNpc_Pachi_Besu_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Besu_c::chkAction(int (daNpc_Pachi_Besu_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_besu/d_a_npc_pachi_besu/chkAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i.s"
 }
@@ -876,7 +878,7 @@ extern "C" asm static void chkAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Besu_c::setAction(int (daNpc_Pachi_Besu_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_besu/d_a_npc_pachi_besu/setAction__18daNpc_Pachi_Besu_cFM18daNpc_Pachi_Besu_cFPCvPvPv_i.s"
 }

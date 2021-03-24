@@ -7,7 +7,7 @@ lbl_80222364:
 /* 80222378 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8022237C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80222380 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80222384 00000020  88 A3 5E 3F */	lbz r5, 0x5e3f(r3)
+/* 80222384 00000020  88 A3 5E 3F */	lbz r5, 0x5e3f(r3)	/* effective address: 8040BFFF */
 /* 80222388 00000024  28 05 00 00 */	cmplwi r5, 0
 /* 8022238C 00000028  41 82 00 28 */	beq lbl_802223B4
 /* 80222390 0000002C  88 03 5E 59 */	lbz r0, 0x5e59(r3)
@@ -23,13 +23,13 @@ lbl_802223B4:
 /* 802223B4 00000000  88 9E 01 CB */	lbz r4, 0x1cb(r30)
 /* 802223B8 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802223BC 00000008  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 802223C0 0000000C  88 1F 5E 2F */	lbz r0, 0x5e2f(r31)
+/* 802223C0 0000000C  88 1F 5E 2F */	lbz r0, 0x5e2f(r31)	/* effective address: 8040BFEF */
 /* 802223C4 00000010  7C 04 00 40 */	cmplw r4, r0
 /* 802223C8 00000014  40 82 00 74 */	bne lbl_8022243C
 /* 802223CC 00000018  80 9E 01 AC */	lwz r4, 0x1ac(r30)
 /* 802223D0 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 802223D4 00000020  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 802223D8 00000024  A0 03 00 AE */	lhz r0, 0xae(r3)
+/* 802223D8 00000024  A0 03 00 AE */	lhz r0, 0xae(r3)	/* effective address: 80430236 */
 /* 802223DC 00000028  54 00 E7 FE */	rlwinm r0, r0, 0x1c, 0x1f, 0x1f
 /* 802223E0 0000002C  7C 04 00 00 */	cmpw r4, r0
 /* 802223E4 00000030  40 82 00 58 */	bne lbl_8022243C
@@ -47,7 +47,7 @@ lbl_8022240C:
 /* 80222410 00000004  41 82 00 18 */	beq lbl_80222428
 /* 80222414 00000008  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80222418 0000000C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8022241C 00000010  88 04 5E 4C */	lbz r0, 0x5e4c(r4)
+/* 8022241C 00000010  88 04 5E 4C */	lbz r0, 0x5e4c(r4)	/* effective address: 8040C00C */
 /* 80222420 00000014  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 80222424 00000018  40 82 00 18 */	bne lbl_8022243C
 lbl_80222428:
@@ -64,7 +64,7 @@ lbl_8022243C:
 /* 8022244C 00000010  98 1E 01 CB */	stb r0, 0x1cb(r30)
 /* 80222450 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80222454 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80222458 0000001C  A0 03 00 AE */	lhz r0, 0xae(r3)
+/* 80222458 0000001C  A0 03 00 AE */	lhz r0, 0xae(r3)	/* effective address: 80430236 */
 /* 8022245C 00000020  54 00 E7 FE */	rlwinm r0, r0, 0x1c, 0x1f, 0x1f
 /* 80222460 00000024  90 1E 01 AC */	stw r0, 0x1ac(r30)
 /* 80222464 00000028  80 7E 01 0C */	lwz r3, 0x10c(r30)

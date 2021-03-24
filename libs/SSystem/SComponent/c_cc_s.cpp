@@ -15,13 +15,6 @@ struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-};
-
-struct cCcD_GStts {
-};
-
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 8026395C */ void ClrCcMove();
@@ -29,7 +22,14 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
+struct cCcD_GStts {
+};
+
 struct cCcD_GObjInf {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
 };
 
 struct cCcS {
@@ -294,7 +294,7 @@ static u8 lit_2492[12];
 static u8 data_80430CCC[12];
 
 /* 80455038-8045503C 0004+00 s=2 e=0 z=0  None .sdata2    @2532                                                        */
-SECTION_SDATA2 static u8 c_cc_s__lit_2532[4] = {
+SECTION_SDATA2 static u8 lit_2532[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

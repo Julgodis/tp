@@ -6,7 +6,7 @@ lbl_801D7A08:
 /* 801D7A18 00000010  48 18 A7 BD */	bl _savegpr_27
 /* 801D7A1C 00000014  3C A0 80 43 */	lis r5, g_fmapHIO@ha
 /* 801D7A20 00000018  38 A5 FC 60 */	addi r5, r5, g_fmapHIO@l
-/* 801D7A24 0000001C  88 05 02 FC */	lbz r0, 0x2fc(r5)
+/* 801D7A24 0000001C  88 05 02 FC */	lbz r0, 0x2fc(r5)	/* effective address: 8042FF5C */
 /* 801D7A28 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 801D7A2C 00000024  41 82 00 0C */	beq lbl_801D7A38
 /* 801D7A30 00000028  38 60 00 01 */	li r3, 1

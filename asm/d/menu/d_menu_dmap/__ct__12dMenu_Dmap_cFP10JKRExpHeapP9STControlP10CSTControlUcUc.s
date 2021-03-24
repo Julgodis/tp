@@ -5,7 +5,7 @@ lbl_801BB498:
 /* 801BB4A4 0000000C  39 40 00 00 */	li r10, 0
 /* 801BB4A8 00000010  3D 20 80 43 */	lis r9, g_meter2_info@ha
 /* 801BB4AC 00000014  39 29 01 88 */	addi r9, r9, g_meter2_info@l
-/* 801BB4B0 00000018  99 49 00 F2 */	stb r10, 0xf2(r9)
+/* 801BB4B0 00000018  99 49 00 F2 */	stb r10, 0xf2(r9)	/* effective address: 8043027A */
 /* 801BB4B4 0000001C  90 6D 8B 00 */	stw r3, myclass__12dMenu_Dmap_c(r13)
 /* 801BB4B8 00000020  90 83 00 E8 */	stw r4, 0xe8(r3)
 /* 801BB4BC 00000024  90 A3 00 F4 */	stw r5, 0xf4(r3)
@@ -59,7 +59,7 @@ lbl_801BB558:
 /* 801BB56C 00000014  38 00 00 00 */	li r0, 0
 /* 801BB570 00000018  90 03 00 98 */	stw r0, 0x98(r3)
 /* 801BB574 0000001C  90 03 00 04 */	stw r0, 4(r3)
-/* 801BB578 00000020  C0 22 A5 E8 */	lfs f1, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BB578 00000020  C0 22 A5 E8 */	lfs f1, lit_3962(r2)
 /* 801BB57C 00000024  D0 23 01 44 */	stfs f1, 0x144(r3)
 /* 801BB580 00000028  D0 23 01 48 */	stfs f1, 0x148(r3)
 /* 801BB584 0000002C  98 03 01 81 */	stb r0, 0x181(r3)
@@ -73,7 +73,7 @@ lbl_801BB558:
 lbl_801BB5A4:
 /* 801BB5A4 00000000  28 00 00 03 */	cmplwi r0, 3
 /* 801BB5A8 00000004  40 82 00 14 */	bne lbl_801BB5BC
-/* 801BB5AC 00000008  C0 02 A6 24 */	lfs f0, d_menu_d_menu_dmap__lit_4784(r2)
+/* 801BB5AC 00000008  C0 02 A6 24 */	lfs f0, lit_4784(r2)
 /* 801BB5B0 0000000C  D0 03 01 04 */	stfs f0, 0x104(r3)
 /* 801BB5B4 00000010  D0 23 01 08 */	stfs f1, 0x108(r3)
 /* 801BB5B8 00000014  48 00 00 3C */	b lbl_801BB5F4
@@ -88,14 +88,14 @@ lbl_801BB5D4:
 /* 801BB5D4 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 801BB5D8 00000004  40 82 00 14 */	bne lbl_801BB5EC
 /* 801BB5DC 00000008  D0 23 01 04 */	stfs f1, 0x104(r3)
-/* 801BB5E0 0000000C  C0 02 A6 28 */	lfs f0, d_menu_d_menu_dmap__lit_4785(r2)
+/* 801BB5E0 0000000C  C0 02 A6 28 */	lfs f0, lit_4785(r2)
 /* 801BB5E4 00000010  D0 03 01 08 */	stfs f0, 0x108(r3)
 /* 801BB5E8 00000014  48 00 00 0C */	b lbl_801BB5F4
 lbl_801BB5EC:
 /* 801BB5EC 00000000  D0 23 01 04 */	stfs f1, 0x104(r3)
 /* 801BB5F0 00000004  D0 23 01 08 */	stfs f1, 0x108(r3)
 lbl_801BB5F4:
-/* 801BB5F4 00000000  C0 02 A5 E8 */	lfs f0, d_menu_d_menu_dmap__lit_3962(r2)
+/* 801BB5F4 00000000  C0 02 A5 E8 */	lfs f0, lit_3962(r2)
 /* 801BB5F8 00000004  D0 03 01 0C */	stfs f0, 0x10c(r3)
 /* 801BB5FC 00000008  D0 03 01 10 */	stfs f0, 0x110(r3)
 /* 801BB600 0000000C  D0 03 01 34 */	stfs f0, 0x134(r3)

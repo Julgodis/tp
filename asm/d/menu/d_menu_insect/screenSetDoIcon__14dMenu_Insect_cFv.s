@@ -14,8 +14,8 @@ lbl_801D9BD0:
 lbl_801D9C00:
 /* 801D9C00 00000000  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 801D9C04 00000004  80 7F 00 28 */	lwz r3, 0x28(r31)
-/* 801D9C08 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_insect__stringBase0@ha
-/* 801D9C0C 0000000C  38 84 68 C0 */	addi r4, r4, d_menu_d_menu_insect__stringBase0@l
+/* 801D9C08 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D9C0C 0000000C  38 84 68 C0 */	addi r4, r4, stringBase0@l
 /* 801D9C10 00000010  38 84 00 66 */	addi r4, r4, 0x66
 /* 801D9C14 00000014  3C A0 00 02 */	lis r5, 2
 /* 801D9C18 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -40,8 +40,8 @@ lbl_801D9C34:
 /* 801D9C60 0000002C  3B 43 68 10 */	addi r26, r3, data_80396810@l
 /* 801D9C64 00000030  3C 60 80 39 */	lis r3, data_80396838@ha
 /* 801D9C68 00000034  3B 63 68 38 */	addi r27, r3, data_80396838@l
-/* 801D9C6C 00000038  3C 60 80 39 */	lis r3, d_menu_d_menu_insect__stringBase0@ha
-/* 801D9C70 0000003C  3B 83 68 C0 */	addi r28, r3, d_menu_d_menu_insect__stringBase0@l
+/* 801D9C6C 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801D9C70 0000003C  3B 83 68 C0 */	addi r28, r3, stringBase0@l
 lbl_801D9C74:
 /* 801D9C74 00000000  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 801D9C78 00000004  7C 9A EA 14 */	add r4, r26, r29

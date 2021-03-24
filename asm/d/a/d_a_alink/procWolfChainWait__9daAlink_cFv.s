@@ -13,7 +13,7 @@ lbl_8013E80C:
 /* 8013E838 00000018  A8 9D 30 08 */	lha r4, 0x3008(r29)
 /* 8013E83C 0000001C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlChain_c0@ha
 /* 8013E840 00000020  38 63 F8 58 */	addi r3, r3, m__21daAlinkHIO_wlChain_c0@l
-/* 8013E844 00000024  A8 03 00 3E */	lha r0, 0x3e(r3)
+/* 8013E844 00000024  A8 03 00 3E */	lha r0, 0x3e(r3)	/* effective address: 8038F896 */
 /* 8013E848 00000028  7C 00 00 D0 */	neg r0, r0
 /* 8013E84C 0000002C  7C 04 00 00 */	cmpw r4, r0
 /* 8013E850 00000030  41 81 01 40 */	bgt lbl_8013E990
@@ -30,7 +30,7 @@ lbl_8013E854:
 /* 8013E878 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013E87C 00000000  40 81 00 58 */	ble lbl_8013E8D4
 /* 8013E880 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8013E884 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 8013E884 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 8013E888 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 8013E88C 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 8013E890 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -103,7 +103,7 @@ lbl_8013E958:
 /* 8013E978 00000020  38 80 00 02 */	li r4, 2
 /* 8013E97C 00000024  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 8013E980 00000028  38 A5 F1 A0 */	addi r5, r5, m__24daAlinkHIO_wlWallHang_c0@l
-/* 8013E984 0000002C  C0 25 00 98 */	lfs f1, 0x98(r5)
+/* 8013E984 0000002C  C0 25 00 98 */	lfs f1, 0x98(r5)	/* effective address: 8038F238 */
 /* 8013E988 00000030  4B FF 04 49 */	bl procWolfFallInit__9daAlink_cFif
 /* 8013E98C 00000034  48 00 03 98 */	b lbl_8013ED24
 lbl_8013E990:
@@ -130,7 +130,7 @@ lbl_8013E9B0:
 /* 8013E9DC 00000010  B0 1D 30 10 */	sth r0, 0x3010(r29)
 /* 8013E9E0 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013E9E4 00000018  D0 21 00 60 */	stfs f1, 0x60(r1)
-/* 8013E9E8 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013E9E8 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013E9EC 00000020  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 8013E9F0 00000024  D0 21 00 68 */	stfs f1, 0x68(r1)
 /* 8013E9F4 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -300,15 +300,15 @@ lbl_8013EC5C:
 /* 8013EC6C 00000004  38 80 00 59 */	li r4, 0x59
 /* 8013EC70 00000008  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlChain_c0@ha
 /* 8013EC74 0000000C  38 63 F8 58 */	addi r3, r3, m__21daAlinkHIO_wlChain_c0@l
-/* 8013EC78 00000010  C0 23 00 40 */	lfs f1, 0x40(r3)
-/* 8013EC7C 00000014  C0 43 00 44 */	lfs f2, 0x44(r3)
+/* 8013EC78 00000010  C0 23 00 40 */	lfs f1, 0x40(r3)	/* effective address: 8038F898 */
+/* 8013EC7C 00000014  C0 43 00 44 */	lfs f2, 0x44(r3)	/* effective address: 8038F89C */
 /* 8013EC80 00000018  48 00 00 18 */	b lbl_8013EC98
 lbl_8013EC84:
 /* 8013EC84 00000000  38 80 00 58 */	li r4, 0x58
 /* 8013EC88 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlChain_c0@ha
 /* 8013EC8C 00000008  38 63 F8 58 */	addi r3, r3, m__21daAlinkHIO_wlChain_c0@l
-/* 8013EC90 0000000C  C0 23 00 48 */	lfs f1, 0x48(r3)
-/* 8013EC94 00000010  C0 43 00 4C */	lfs f2, 0x4c(r3)
+/* 8013EC90 0000000C  C0 23 00 48 */	lfs f1, 0x48(r3)	/* effective address: 8038F8A0 */
+/* 8013EC94 00000010  C0 43 00 4C */	lfs f2, 0x4c(r3)	/* effective address: 8038F8A4 */
 lbl_8013EC98:
 /* 8013EC98 00000000  A0 1D 1F 58 */	lhz r0, 0x1f58(r29)
 /* 8013EC9C 00000004  7C 04 00 00 */	cmpw r4, r0

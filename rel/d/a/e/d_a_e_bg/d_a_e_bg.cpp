@@ -16,10 +16,10 @@ struct daE_BG_HIO_c {
 	/* 8068A19C */ ~daE_BG_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_BG_c {

@@ -27,7 +27,7 @@ extern "C" static void double2hex(); // 1
 extern "C" static void longlong2str(); // 1
 extern "C" static void long2str(); // 1
 extern "C" static void parse_format(); // 1
-extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -181,7 +181,7 @@ extern "C" asm static void __pformatter() {
 
 /* ############################################################################################## */
 /* 80456670-80456678 0008+00 s=1 e=0 z=0  None .sdata2    @1089                                                        */
-SECTION_SDATA2 static u8 MSL_Common_Src_printf__lit_1089[8] = {
+SECTION_SDATA2 static u8 lit_1089[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

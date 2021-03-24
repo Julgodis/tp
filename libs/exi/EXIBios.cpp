@@ -38,15 +38,15 @@ extern "C" void EXIGetID(); // 1
 extern "C" extern u8 lit_473[15 + 1 /* padding */];
 extern "C" extern u8 lit_474[16];
 extern "C" extern u8 lit_475[16];
-extern "C" extern u8 EXIBios__lit_476[16];
+extern "C" extern u8 lit_476[16];
 extern "C" extern u8 lit_477[17 + 3 /* padding */];
 extern "C" extern u8 lit_478[17 + 3 /* padding */];
 extern "C" extern u8 lit_479[12];
 extern "C" extern u8 lit_485[9 + 3 /* padding */];
-extern "C" extern u8 EXIBios__lit_486[13 + 3 /* padding */];
-extern "C" extern u8 EXIBios__lit_487[18 + 2 /* padding */];
-extern "C" extern u8 EXIBios__lit_489[14 + 2 /* padding */];
-extern "C" extern u8 EXIBios__lit_490[14 + 6 /* padding */];
+extern "C" extern u8 lit_486[13 + 3 /* padding */];
+extern "C" extern u8 lit_487[18 + 2 /* padding */];
+extern "C" extern u8 lit_489[14 + 2 /* padding */];
+extern "C" extern u8 lit_490[14 + 6 /* padding */];
 
 // 
 // External References:
@@ -267,7 +267,7 @@ extern "C" asm static void EXTIntrruptHandler() {
 
 /* ############################################################################################## */
 /* 803D10A8-803D10F0 0045+03 s=1 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 EXIBios__lit_1[69 + 3 /* padding */] = {
+SECTION_DATA static u8 lit_1[69 + 3 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x45, 0x58, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -279,7 +279,7 @@ SECTION_DATA static u8 EXIBios__lit_1[69 + 3 /* padding */] = {
 
 /* 804509C0-804509C8 0004+04 s=1 e=0 z=0  None .sdata     __EXIVersion                                                 */
 SECTION_SDATA static void* __EXIVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&EXIBios__lit_1,
+	/* 0    */ (void*)&lit_1,
 	/* padding */
 	NULL,
 };
@@ -372,7 +372,7 @@ SECTION_DATA u8 lit_475[16] = {
 };
 
 /* 803D1120-803D1130 0010+00 s=0 e=0 z=0  None .data      @476                                                         */
-SECTION_DATA u8 EXIBios__lit_476[16] = {
+SECTION_DATA u8 lit_476[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x35, 0x30, 0x37, 0x00,
 };
 
@@ -405,14 +405,14 @@ SECTION_DATA u8 lit_485[9 + 3 /* padding */] = {
 };
 
 /* 803D1170-803D1180 000D+03 s=0 e=0 z=0  None .data      @486                                                         */
-SECTION_DATA u8 EXIBios__lit_486[13 + 3 /* padding */] = {
+SECTION_DATA u8 lit_486[13 + 3 /* padding */] = {
 	0x41, 0x72, 0x74, 0x69, 0x73, 0x74, 0x20, 0x45, 0x74, 0x68, 0x65, 0x72, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803D1180-803D1194 0012+02 s=0 e=0 z=0  None .data      @487                                                         */
-SECTION_DATA u8 EXIBios__lit_487[18 + 2 /* padding */] = {
+SECTION_DATA u8 lit_487[18 + 2 /* padding */] = {
 	0x42, 0x72, 0x6F, 0x61, 0x64, 0x62, 0x61, 0x6E, 0x64, 0x20, 0x41, 0x64, 0x61, 0x70, 0x74, 0x65,
 	0x72, 0x00,
 	/* padding */
@@ -420,14 +420,14 @@ SECTION_DATA u8 EXIBios__lit_487[18 + 2 /* padding */] = {
 };
 
 /* 803D1194-803D11A4 000E+02 s=0 e=0 z=0  None .data      @489                                                         */
-SECTION_DATA u8 EXIBios__lit_489[14 + 2 /* padding */] = {
+SECTION_DATA u8 lit_489[14 + 2 /* padding */] = {
 	0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x20, 0x48, 0x61, 0x6E, 0x67, 0x65, 0x72, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803D11A4-803D11B8 000E+06 s=0 e=0 z=0  None .data      @490                                                         */
-SECTION_DATA u8 EXIBios__lit_490[14 + 6 /* padding */] = {
+SECTION_DATA u8 lit_490[14 + 6 /* padding */] = {
 	0x49, 0x53, 0x2D, 0x44, 0x4F, 0x4C, 0x2D, 0x56, 0x49, 0x45, 0x57, 0x45, 0x52, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

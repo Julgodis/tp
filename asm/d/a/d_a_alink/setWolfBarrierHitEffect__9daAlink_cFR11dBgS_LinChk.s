@@ -33,7 +33,7 @@ lbl_80123ED0:
 /* 80123F4C 0000007C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80123F50 00000000  40 81 00 58 */	ble lbl_80123FA8
 /* 80123F54 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80123F58 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 80123F58 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 80123F5C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 80123F60 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 80123F64 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -124,7 +124,7 @@ lbl_8012407C:
 /* 80124084 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80124088 0000000C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_8012408C:
-/* 8012408C 00000000  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 8012408C 00000000  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 80124090 00000004  38 80 00 00 */	li r4, 0
 /* 80124094 00000008  90 81 00 08 */	stw r4, 8(r1)
 /* 80124098 0000000C  38 00 FF FF */	li r0, -1
@@ -139,7 +139,7 @@ lbl_8012408C:
 /* 801240BC 00000030  39 01 00 28 */	addi r8, r1, 0x28
 /* 801240C0 00000034  39 20 00 00 */	li r9, 0
 /* 801240C4 00000038  39 40 00 FF */	li r10, 0xff
-/* 801240C8 0000003C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 801240C8 0000003C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 801240CC 00000040  4B F2 89 C5 */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 801240D0 00000044  3B 7B 00 01 */	addi r27, r27, 1
 /* 801240D4 00000048  2C 1B 00 02 */	cmpwi r27, 2
@@ -153,9 +153,9 @@ lbl_8012408C:
 /* 801240F4 00000068  7F A5 EB 78 */	mr r5, r29
 /* 801240F8 0000006C  38 C0 00 00 */	li r6, 0
 /* 801240FC 00000070  38 E0 00 00 */	li r7, 0
-/* 80124100 00000074  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 80124100 00000074  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 80124104 00000078  FC 40 08 90 */	fmr f2, f1
-/* 80124108 0000007C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 80124108 0000007C  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 8012410C 00000080  FC 80 18 90 */	fmr f4, f3
 /* 80124110 00000084  39 00 00 00 */	li r8, 0
 /* 80124114 00000088  48 18 78 71 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

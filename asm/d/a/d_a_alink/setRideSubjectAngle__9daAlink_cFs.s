@@ -19,11 +19,11 @@ lbl_800EEF30:
 lbl_800EEF74:
 /* 800EEF74 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_horse_c0@ha
 /* 800EEF78 00000004  38 84 E5 A4 */	addi r4, r4, m__19daAlinkHIO_horse_c0@l
-/* 800EEF7C 00000008  A8 C4 00 58 */	lha r6, 0x58(r4)
+/* 800EEF7C 00000008  A8 C4 00 58 */	lha r6, 0x58(r4)	/* effective address: 8038E5FC */
 lbl_800EEF80:
 /* 800EEF80 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_horse_c0@ha
 /* 800EEF84 00000004  38 84 E5 A4 */	addi r4, r4, m__19daAlinkHIO_horse_c0@l
-/* 800EEF88 00000008  A8 04 00 5A */	lha r0, 0x5a(r4)
+/* 800EEF88 00000008  A8 04 00 5A */	lha r0, 0x5a(r4)	/* effective address: 8038E5FE */
 /* 800EEF8C 0000000C  A8 BE 05 9C */	lha r5, 0x59c(r30)
 /* 800EEF90 00000010  7C 05 00 00 */	cmpw r5, r0
 /* 800EEF94 00000014  40 80 00 08 */	bge lbl_800EEF9C

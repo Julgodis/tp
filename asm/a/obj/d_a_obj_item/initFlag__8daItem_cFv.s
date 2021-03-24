@@ -3,8 +3,8 @@ lbl_8015DAAC:
 /* 8015DAB0 00000004  54 00 47 3E */	rlwinm r0, r0, 8, 0x1c, 0x1f
 /* 8015DAB4 00000008  28 00 00 09 */	cmplwi r0, 9
 /* 8015DAB8 0000000C  41 81 00 1C */	bgt lbl_8015DAD4
-/* 8015DABC 00000010  3C 80 80 3C */	lis r4, a_obj_d_a_obj_item__lit_5171@ha
-/* 8015DAC0 00000014  38 84 9D DC */	addi r4, r4, a_obj_d_a_obj_item__lit_5171@l
+/* 8015DABC 00000010  3C 80 80 3C */	lis r4, lit_5171@ha
+/* 8015DAC0 00000014  38 84 9D DC */	addi r4, r4, lit_5171@l
 /* 8015DAC4 00000018  54 00 10 3A */	slwi r0, r0, 2
 /* 8015DAC8 0000001C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8015DACC 00000020  7C 09 03 A6 */	mtctr r0

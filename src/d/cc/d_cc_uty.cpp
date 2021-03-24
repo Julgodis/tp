@@ -180,20 +180,20 @@ asm static void at_power_check(dCcU_AtInfo* param_0) {
 
 /* ############################################################################################## */
 /* 80452798-804527A0 0004+04 s=1 e=0 z=0  None .sdata2    @4212                                                        */
-SECTION_SDATA2 static u8 d_cc_d_cc_uty__lit_4212[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4212[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804527A0-804527A8 0008+00 s=1 e=0 z=0  None .sdata2    @4213                                                        */
-SECTION_SDATA2 static f64 d_cc_d_cc_uty__lit_4213 = 0.5;
+SECTION_SDATA2 static f64 lit_4213 = 0.5;
 
 /* 804527A8-804527B0 0008+00 s=1 e=0 z=0  None .sdata2    @4214                                                        */
 SECTION_SDATA2 static f64 lit_4214 = 3.0;
 
 /* 804527B0-804527B8 0008+00 s=1 e=0 z=0  None .sdata2    @4215                                                        */
-SECTION_SDATA2 static u8 d_cc_d_cc_uty__lit_4215[8] = {
+SECTION_SDATA2 static u8 lit_4215[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

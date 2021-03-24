@@ -69,8 +69,8 @@ lbl_8025DCC0:
 /* 8025DCE4 00000024  7F C3 F3 78 */	mr r3, r30
 /* 8025DCE8 00000028  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 8025DCEC 0000002C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 8025DCF0 00000030  C0 24 0B 84 */	lfs f1, 0xb84(r4)
-/* 8025DCF4 00000034  C0 44 0B 88 */	lfs f2, 0xb88(r4)
+/* 8025DCF0 00000030  C0 24 0B 84 */	lfs f1, 0xb84(r4)	/* effective address: 8042F74C */
+/* 8025DCF4 00000034  C0 44 0B 88 */	lfs f2, 0xb88(r4)	/* effective address: 8042F750 */
 /* 8025DCF8 00000038  48 00 1D 35 */	bl setTimerPos__21dDlst_TimerScrnDraw_cFff
 /* 8025DCFC 0000003C  48 00 00 28 */	b lbl_8025DD24
 lbl_8025DD00:
@@ -92,10 +92,10 @@ lbl_8025DD24:
 /* 8025DD38 00000014  40 82 00 38 */	bne lbl_8025DD70
 /* 8025DD3C 00000018  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8025DD40 0000001C  38 83 EB C8 */	addi r4, r3, g_drawHIO@l
-/* 8025DD44 00000020  C0 24 0B 80 */	lfs f1, 0xb80(r4)
+/* 8025DD44 00000020  C0 24 0B 80 */	lfs f1, 0xb80(r4)	/* effective address: 8042F748 */
 /* 8025DD48 00000024  80 7E 00 18 */	lwz r3, 0x18(r30)
 /* 8025DD4C 00000028  80 63 00 04 */	lwz r3, 4(r3)
-/* 8025DD50 0000002C  C0 04 0B 7C */	lfs f0, 0xb7c(r4)
+/* 8025DD50 0000002C  C0 04 0B 7C */	lfs f0, 0xb7c(r4)	/* effective address: 8042F744 */
 /* 8025DD54 00000030  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8025DD58 00000034  D0 23 00 D0 */	stfs f1, 0xd0(r3)
 /* 8025DD5C 00000038  81 83 00 00 */	lwz r12, 0(r3)

@@ -6,7 +6,7 @@ lbl_802379D8:
 /* 802379E8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 802379EC 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 802379F0 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 802379F4 0000001C  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 802379F4 0000001C  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 802379F8 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 802379FC 00000024  40 82 00 64 */	bne lbl_80237A60
 /* 80237A00 00000028  4B FF EE F9 */	bl getStatusLocal__12dMsgObject_cFv

@@ -24,7 +24,7 @@ lbl_80349788:
 lbl_803497AC:
 /* 803497AC 00000000  3C 60 CC 00 */	lis r3, 0xCC00 /* 0xCC006000@ha */
 /* 803497B0 00000004  38 63 60 00 */	addi r3, r3, 0x6000 /* 0xCC006000@l */
-/* 803497B4 00000008  80 63 00 20 */	lwz r3, 0x20(r3)
+/* 803497B4 00000008  80 63 00 20 */	lwz r3, 0x20(r3)	/* effective address: CC006020 */
 /* 803497B8 0000000C  48 00 23 D1 */	bl __DVDStoreErrorCode
 /* 803497BC 00000010  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 803497C0 00000014  38 63 92 DC */	addi r3, r3, cbForStateError@l

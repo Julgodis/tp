@@ -67,7 +67,7 @@ lbl_801D1AA4:
 /* 801D1BA8 000000D8  D0 1E 11 AC */	stfs f0, 0x11ac(r30)
 /* 801D1BAC 000000DC  C0 1E 0F CC */	lfs f0, 0xfcc(r30)
 /* 801D1BB0 000000E0  D0 1E 11 B0 */	stfs f0, 0x11b0(r30)
-/* 801D1BB4 000000E4  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D1BB4 000000E4  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D1BB8 000000E8  C0 5E 11 A4 */	lfs f2, 0x11a4(r30)
 /* 801D1BBC 000000EC  FC 01 10 00 */	fcmpu cr0, f1, f2
 /* 801D1BC0 000000F0  40 82 00 10 */	bne lbl_801D1BD0
@@ -79,16 +79,16 @@ lbl_801D1BD0:
 /* 801D1BD4 00000004  C0 02 A7 D4 */	lfs f0, lit_3971(r2)
 /* 801D1BD8 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801D1BDC 00000000  40 81 00 F0 */	ble lbl_801D1CCC
-/* 801D1BE0 00000004  C0 02 A7 EC */	lfs f0, d_menu_d_menu_fmap2D__lit_4203(r2)
+/* 801D1BE0 00000004  C0 02 A7 EC */	lfs f0, lit_4203(r2)
 /* 801D1BE4 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801D1BE8 00000000  40 80 00 E4 */	bge lbl_801D1CCC
 /* 801D1BEC 00000004  EC 60 08 28 */	fsubs f3, f0, f1
-/* 801D1BF0 00000008  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D1BF0 00000008  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D1BF4 0000000C  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 801D1BF8 00000010  41 82 00 08 */	beq lbl_801D1C00
 /* 801D1BFC 00000014  EF A2 00 F2 */	fmuls f29, f2, f3
 lbl_801D1C00:
-/* 801D1C00 00000000  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D1C00 00000000  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D1C04 00000004  C0 3E 11 A8 */	lfs f1, 0x11a8(r30)
 /* 801D1C08 00000008  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 801D1C0C 0000000C  41 82 00 08 */	beq lbl_801D1C14
@@ -141,7 +141,7 @@ lbl_801D1C14:
 /* 801D1CC4 000000B0  EC 01 00 28 */	fsubs f0, f1, f0
 /* 801D1CC8 000000B4  D0 1E 11 B0 */	stfs f0, 0x11b0(r30)
 lbl_801D1CCC:
-/* 801D1CCC 00000000  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D1CCC 00000000  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D1CD0 00000004  FC 00 D8 00 */	fcmpu cr0, f0, f27
 /* 801D1CD4 00000008  40 82 00 18 */	bne lbl_801D1CEC
 /* 801D1CD8 0000000C  D0 1E 0F D4 */	stfs f0, 0xfd4(r30)

@@ -6,7 +6,7 @@ lbl_800A3E30:
 /* 800A3E40 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800A3E44 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800A3E48 00000018  7C BF 2B 78 */	mr r31, r5
-/* 800A3E4C 0000001C  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* d_a_d_a_alink__l_arcName-_SDA2_BASE_ */
+/* 800A3E4C 0000001C  38 62 92 90 */	addi r3, r2, 0x80452C90-0x80459A00 /* l_arcName-_SDA2_BASE_ */
 /* 800A3E50 00000020  54 84 04 3E */	clrlwi r4, r4, 0x10
 /* 800A3E54 00000024  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 800A3E58 00000028  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l

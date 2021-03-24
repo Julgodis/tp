@@ -39,8 +39,8 @@ lbl_80078844:
 /* 80078848 00000004  93 8D 89 F4 */	stw r28, m_dzb_id__16dBgS_MoveBgActor(r13)
 /* 8007884C 00000008  93 AD 89 F8 */	stw r29, m_set_func__16dBgS_MoveBgActor(r13)
 /* 80078850 0000000C  7F E3 FB 78 */	mr r3, r31
-/* 80078854 00000010  3C 80 80 08 */	lis r4, d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c@ha
-/* 80078858 00000014  38 84 86 68 */	addi r4, r4, d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c@l
+/* 80078854 00000010  3C 80 80 08 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 80078858 00000014  38 84 86 68 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
 /* 8007885C 00000018  7F C5 F3 78 */	mr r5, r30
 /* 80078860 0000001C  4B FA 1C 51 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80078864 00000020  54 60 06 3F */	clrlwi. r0, r3, 0x18

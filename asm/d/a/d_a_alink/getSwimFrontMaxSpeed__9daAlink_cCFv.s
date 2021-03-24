@@ -12,7 +12,7 @@ lbl_80101A18:
 /* 80101A40 00000028  41 82 00 14 */	beq lbl_80101A54
 /* 80101A44 0000002C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 80101A48 00000030  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 80101A4C 00000034  C0 23 00 78 */	lfs f1, 0x78(r3)
+/* 80101A4C 00000034  C0 23 00 78 */	lfs f1, 0x78(r3)	/* effective address: 8038EDA4 */
 /* 80101A50 00000038  48 00 00 44 */	b lbl_80101A94
 lbl_80101A54:
 /* 80101A54 00000000  7F E3 FB 78 */	mr r3, r31
@@ -27,12 +27,12 @@ lbl_80101A6C:
 /* 80101A74 00000008  41 82 00 14 */	beq lbl_80101A88
 /* 80101A78 0000000C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 80101A7C 00000010  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 80101A80 00000014  C0 23 00 EC */	lfs f1, 0xec(r3)
+/* 80101A80 00000014  C0 23 00 EC */	lfs f1, 0xec(r3)	/* effective address: 8038EE18 */
 /* 80101A84 00000018  48 00 00 10 */	b lbl_80101A94
 lbl_80101A88:
 /* 80101A88 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 80101A8C 00000004  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 80101A90 00000008  C0 23 00 68 */	lfs f1, 0x68(r3)
+/* 80101A90 00000008  C0 23 00 68 */	lfs f1, 0x68(r3)	/* effective address: 8038ED94 */
 lbl_80101A94:
 /* 80101A94 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80101A98 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

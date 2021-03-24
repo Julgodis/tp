@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80AA06E0 */ ~cXyz();
-	/* 80AA0D70 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AA0D74 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80AA06E0 */ ~cXyz();
+	/* 80AA0D70 */ cXyz();
 };
 
 struct daNpc_Pachi_Taro_c {
@@ -72,6 +72,8 @@ struct daNpc_Pachi_Taro_c {
 	/* 80A9DC14 */ void drawDbgInfo();
 	/* 80A9DC1C */ void drawOtherMdl();
 	/* 80A9DD24 */ void selectAction();
+	/* 80A9DDA0 */ void chkAction(int (daNpc_Pachi_Taro_c::*)(void*));
+	/* 80A9DDCC */ void setAction(int (daNpc_Pachi_Taro_c::*)(void*));
 	/* 80A9DE74 */ void wait(void*);
 	/* 80A9E154 */ void setMesPat();
 	/* 80A9E224 */ void _turn_to_link(s16);
@@ -275,8 +277,8 @@ extern "C" void setCollision__18daNpc_Pachi_Taro_cFv(); // 1
 extern "C" void drawDbgInfo__18daNpc_Pachi_Taro_cFv(); // 1
 extern "C" void drawOtherMdl__18daNpc_Pachi_Taro_cFv(); // 1
 extern "C" void selectAction__18daNpc_Pachi_Taro_cFv(); // 1
-extern "C" static void chkAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i(); // 1
+extern "C" void setAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i(); // 1
 extern "C" void wait__18daNpc_Pachi_Taro_cFPv(); // 1
 extern "C" void setMesPat__18daNpc_Pachi_Taro_cFv(); // 1
 extern "C" void _turn_to_link__18daNpc_Pachi_Taro_cFs(); // 1
@@ -975,7 +977,7 @@ asm void daNpc_Pachi_Taro_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Taro_c::chkAction(int (daNpc_Pachi_Taro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_taro/d_a_npc_pachi_taro/chkAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i.s"
 }
@@ -986,7 +988,7 @@ extern "C" asm static void chkAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Taro_c::setAction(int (daNpc_Pachi_Taro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_taro/d_a_npc_pachi_taro/setAction__18daNpc_Pachi_Taro_cFM18daNpc_Pachi_Taro_cFPCvPvPv_i.s"
 }

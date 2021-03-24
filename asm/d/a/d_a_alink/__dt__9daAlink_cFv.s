@@ -12,16 +12,16 @@ lbl_800CD7AC:
 /* 800CD7D4 00000028  90 1F 06 28 */	stw r0, 0x628(r31)
 /* 800CD7D8 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CD7DC 00000030  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 800CD7E0 00000034  80 85 5F 18 */	lwz r4, 0x5f18(r5)
+/* 800CD7E0 00000034  80 85 5F 18 */	lwz r4, 0x5f18(r5)	/* effective address: 8040C0D8 */
 /* 800CD7E4 00000038  3C 60 00 40 */	lis r3, 0x0040 /* 0x00400030@ha */
 /* 800CD7E8 0000003C  38 03 00 30 */	addi r0, r3, 0x0030 /* 0x00400030@l */
 /* 800CD7EC 00000040  7C 80 00 38 */	and r0, r4, r0
-/* 800CD7F0 00000044  90 05 5F 18 */	stw r0, 0x5f18(r5)
-/* 800CD7F4 00000048  80 85 5F 1C */	lwz r4, 0x5f1c(r5)
+/* 800CD7F0 00000044  90 05 5F 18 */	stw r0, 0x5f18(r5)	/* effective address: 8040C0D8 */
+/* 800CD7F4 00000048  80 85 5F 1C */	lwz r4, 0x5f1c(r5)	/* effective address: 8040C0DC */
 /* 800CD7F8 0000004C  3C 60 F8 05 */	lis r3, 0xF805 /* 0xF8048487@ha */
 /* 800CD7FC 00000050  38 03 84 87 */	addi r0, r3, 0x8487 /* 0xF8048487@l */
 /* 800CD800 00000054  7C 80 00 38 */	and r0, r4, r0
-/* 800CD804 00000058  90 05 5F 1C */	stw r0, 0x5f1c(r5)
+/* 800CD804 00000058  90 05 5F 1C */	stw r0, 0x5f1c(r5)	/* effective address: 8040C0DC */
 /* 800CD808 0000005C  38 7F 2C A8 */	addi r3, r31, 0x2ca8
 /* 800CD80C 00000060  48 1F 5F 41 */	bl deleteKantera__14Z2CreatureLinkFv
 /* 800CD810 00000064  38 7F 2C A8 */	addi r3, r31, 0x2ca8
@@ -45,7 +45,7 @@ lbl_800CD83C:
 /* 800CD854 00000018  38 00 00 01 */	li r0, 1
 /* 800CD858 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CD85C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CD860 00000024  98 03 5E B8 */	stb r0, 0x5eb8(r3)
+/* 800CD860 00000024  98 03 5E B8 */	stb r0, 0x5eb8(r3)	/* effective address: 8040C078 */
 lbl_800CD864:
 /* 800CD864 00000000  A0 1F 2F E8 */	lhz r0, 0x2fe8(r31)
 /* 800CD868 00000004  28 00 01 4F */	cmplwi r0, 0x14f
@@ -81,8 +81,8 @@ lbl_800CD8C8:
 /* 800CD8D0 00000008  38 00 00 00 */	li r0, 0
 /* 800CD8D4 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CD8D8 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CD8DC 00000014  90 03 5D AC */	stw r0, 0x5dac(r3)
-/* 800CD8E0 00000018  90 03 5D B4 */	stw r0, 0x5db4(r3)
+/* 800CD8DC 00000014  90 03 5D AC */	stw r0, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 800CD8E0 00000018  90 03 5D B4 */	stw r0, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 800CD8E4 0000001C  38 7F 37 B0 */	addi r3, r31, 0x37b0
 /* 800CD8E8 00000020  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 800CD8EC 00000024  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l

@@ -5,8 +5,8 @@ lbl_8015F438:
 /* 8015F444 0000000C  7C 66 1B 78 */	mr r6, r3
 /* 8015F448 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F44C 00000014  38 E3 61 C0 */	addi r7, r3, g_dComIfG_gameInfo@l
-/* 8015F450 00000018  80 67 5D B4 */	lwz r3, 0x5db4(r7)
-/* 8015F454 0000001C  88 E7 4F AD */	lbz r7, 0x4fad(r7)
+/* 8015F450 00000018  80 67 5D B4 */	lwz r3, 0x5db4(r7)	/* effective address: 8040BF74 */
+/* 8015F454 0000001C  88 E7 4F AD */	lbz r7, 0x4fad(r7)	/* effective address: 8040B16D */
 /* 8015F458 00000020  30 07 FF FF */	addic r0, r7, -1
 /* 8015F45C 00000024  7C 00 39 10 */	subfe r0, r0, r7
 /* 8015F460 00000028  54 07 06 3E */	clrlwi r7, r0, 0x18

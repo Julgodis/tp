@@ -2,8 +2,8 @@ lbl_80028114:
 /* 80028114 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80028118 00000004  7C 08 02 A6 */	mflr r0
 /* 8002811C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80028120 0000000C  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80028124 00000010  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80028120 0000000C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80028124 00000010  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80028128 00000014  38 63 03 C3 */	addi r3, r3, 0x3c3
 /* 8002812C 00000018  4C C6 31 82 */	crclr 6
 /* 80028130 0000001C  4B FD E9 8D */	bl OSReport

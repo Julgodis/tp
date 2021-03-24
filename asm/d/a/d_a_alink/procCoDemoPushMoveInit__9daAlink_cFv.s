@@ -26,10 +26,10 @@ lbl_8011BB94:
 /* 8011BB98 00000004  38 80 00 08 */	li r4, 8
 /* 8011BB9C 00000008  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlPush_c0@ha
 /* 8011BBA0 0000000C  38 C5 F1 24 */	addi r6, r5, m__20daAlinkHIO_wlPush_c0@l
-/* 8011BBA4 00000010  C0 26 00 08 */	lfs f1, 8(r6)
+/* 8011BBA4 00000010  C0 26 00 08 */	lfs f1, 8(r6)	/* effective address: 8038F12C */
 /* 8011BBA8 00000014  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 8011BBAC 00000018  38 A0 00 18 */	li r5, 0x18
-/* 8011BBB0 0000001C  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 8011BBB0 0000001C  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038F130 */
 /* 8011BBB4 00000020  48 00 DB 51 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8011BBB8 00000024  48 00 00 3C */	b lbl_8011BBF4
 lbl_8011BBBC:
@@ -45,8 +45,8 @@ lbl_8011BBD8:
 /* 8011BBDC 00000004  38 80 00 37 */	li r4, 0x37
 /* 8011BBE0 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_pushpull_c0@ha
 /* 8011BBE4 0000000C  38 A5 E2 10 */	addi r5, r5, m__22daAlinkHIO_pushpull_c0@l
-/* 8011BBE8 00000010  C0 25 00 18 */	lfs f1, 0x18(r5)
-/* 8011BBEC 00000014  C0 45 00 1C */	lfs f2, 0x1c(r5)
+/* 8011BBE8 00000010  C0 25 00 18 */	lfs f1, 0x18(r5)	/* effective address: 8038E228 */
+/* 8011BBEC 00000014  C0 45 00 1C */	lfs f2, 0x1c(r5)	/* effective address: 8038E22C */
 /* 8011BBF0 00000018  4B F9 13 F1 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_8011BBF4:
 /* 8011BBF4 00000000  C0 02 92 C0 */	lfs f0, lit_6108(r2)

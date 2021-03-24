@@ -19,9 +19,9 @@ lbl_801D79BC:
 lbl_801D79D4:
 /* 801D79D4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801D79D8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801D79DC 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801D79DC 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801D79E0 0000000C  38 80 00 00 */	li r4, 0
-/* 801D79E4 00000010  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 801D79E4 00000010  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 801D79E8 00000014  81 8C 02 1C */	lwz r12, 0x21c(r12)
 /* 801D79EC 00000018  7D 89 03 A6 */	mtctr r12
 /* 801D79F0 0000001C  4E 80 04 21 */	bctrl 

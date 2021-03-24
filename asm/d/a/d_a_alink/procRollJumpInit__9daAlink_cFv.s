@@ -11,7 +11,7 @@ lbl_800C6850:
 /* 800C6874 00000024  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C6878 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C687C 0000002C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 800C6880 00000030  C0 45 00 80 */	lfs f2, 0x80(r5)
+/* 800C6880 00000030  C0 45 00 80 */	lfs f2, 0x80(r5)	/* effective address: 8038E0E8 */
 /* 800C6884 00000034  4B FE 67 5D */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800C6888 00000038  C0 1F 34 10 */	lfs f0, 0x3410(r31)
 /* 800C688C 0000003C  D0 1F 34 78 */	stfs f0, 0x3478(r31)

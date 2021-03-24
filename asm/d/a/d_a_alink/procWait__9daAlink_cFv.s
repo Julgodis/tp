@@ -59,7 +59,7 @@ lbl_800C35BC:
 /* 800C35E4 00000028  48 00 00 D0 */	b lbl_800C36B4
 lbl_800C35E8:
 /* 800C35E8 00000000  7F C3 F3 78 */	mr r3, r30
-/* 800C35EC 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C35EC 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C35F0 00000008  4B FE A8 25 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C35F4 0000000C  2C 1D 00 00 */	cmpwi r29, 0
 /* 800C35F8 00000010  41 82 00 4C */	beq lbl_800C3644

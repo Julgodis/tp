@@ -77,7 +77,7 @@ lbl_800E6A28:
 /* 800E6A30 00000008  EC 41 00 32 */	fmuls f2, f1, f0
 lbl_800E6A34:
 /* 800E6A34 00000000  7F A3 EB 78 */	mr r3, r29
-/* 800E6A38 00000004  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 800E6A38 00000004  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800E6A3C 00000008  C0 3D 34 7C */	lfs f1, 0x347c(r29)
 /* 800E6A40 0000000C  C0 02 93 34 */	lfs f0, lit_7710(r2)
 /* 800E6A44 00000010  EC 04 00 28 */	fsubs f0, f4, f0
@@ -92,7 +92,7 @@ lbl_800E6A58:
 /* 800E6A64 0000000C  C0 5E 00 10 */	lfs f2, 0x10(r30)
 /* 800E6A68 00000010  3C 80 80 39 */	lis r4, m__18daAlinkHIO_grab_c0@ha
 /* 800E6A6C 00000014  38 84 EC 48 */	addi r4, r4, m__18daAlinkHIO_grab_c0@l
-/* 800E6A70 00000018  C0 04 00 58 */	lfs f0, 0x58(r4)
+/* 800E6A70 00000018  C0 04 00 58 */	lfs f0, 0x58(r4)	/* effective address: 8038ECA0 */
 /* 800E6A74 0000001C  EC 02 00 28 */	fsubs f0, f2, f0
 /* 800E6A78 00000020  EC 43 00 32 */	fmuls f2, f3, f0
 /* 800E6A7C 00000024  4B FF E5 2D */	bl setCarryArmAngle__9daAlink_cFff

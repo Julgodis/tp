@@ -186,7 +186,7 @@ asm void J3DSys::loadNrmMtxIndx(int param_0, u16 param_1) const {
 
 /* ############################################################################################## */
 /* 803A1DF8-803A1E08 0010+00 s=1 e=0 z=0  None .rodata    @695                                                         */
-SECTION_RODATA static u8 const J3DSys__lit_695[16] = {
+SECTION_RODATA static u8 const lit_695[16] = {
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -336,10 +336,10 @@ SECTION_SDATA2 static u8 lit_892[4] = {
 };
 
 /* 8045636C-80456370 0004+00 s=1 e=0 z=0  None .sdata2    @893                                                         */
-SECTION_SDATA2 static f32 J3DSys__lit_893 = 1.0f;
+SECTION_SDATA2 static f32 lit_893 = 1.0f;
 
 /* 80456370-80456378 0004+04 s=1 e=0 z=0  None .sdata2    @894                                                         */
-SECTION_SDATA2 static f32 J3DSys__lit_894[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_894[1 + 1 /* padding */] = {
 	1.0f / 10.0f,
 	/* padding */
 	0.0f,

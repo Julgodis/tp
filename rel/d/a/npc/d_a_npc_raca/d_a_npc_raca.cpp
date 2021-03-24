@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AB86A4 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Raca_c {
@@ -59,6 +59,8 @@ struct daNpc_Raca_c {
 	/* 80AB7180 */ void setCollision();
 	/* 80AB72B4 */ void drawDbgInfo();
 	/* 80AB72BC */ void selectAction();
+	/* 80AB73B0 */ void chkAction(int (daNpc_Raca_c::*)(void*));
+	/* 80AB73DC */ void setAction(int (daNpc_Raca_c::*)(void*));
 	/* 80AB7484 */ void wait(void*);
 	/* 80AB7710 */ void walk(void*);
 	/* 80AB7918 */ void talk(void*);
@@ -228,8 +230,8 @@ extern "C" void setAttnPos__12daNpc_Raca_cFv(); // 1
 extern "C" void setCollision__12daNpc_Raca_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_Raca_cFv(); // 1
 extern "C" void selectAction__12daNpc_Raca_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i(); // 1
 extern "C" void wait__12daNpc_Raca_cFPv(); // 1
 extern "C" void walk__12daNpc_Raca_cFPv(); // 1
 extern "C" void talk__12daNpc_Raca_cFPv(); // 1
@@ -748,7 +750,7 @@ asm void daNpc_Raca_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i() {
+asm void daNpc_Raca_c::chkAction(int (daNpc_Raca_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_raca/d_a_npc_raca/chkAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i.s"
 }
@@ -759,7 +761,7 @@ extern "C" asm static void chkAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i() {
+asm void daNpc_Raca_c::setAction(int (daNpc_Raca_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_raca/d_a_npc_raca/setAction__12daNpc_Raca_cFM12daNpc_Raca_cFPCvPvPv_i.s"
 }

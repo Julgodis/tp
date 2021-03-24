@@ -9,7 +9,7 @@ lbl_800C3A44:
 /* 800C3A60 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 800C3A64 00000020  40 82 00 18 */	bne lbl_800C3A7C
 /* 800C3A68 00000024  7F E3 FB 78 */	mr r3, r31
-/* 800C3A6C 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C3A6C 00000028  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C3A70 0000002C  4B FE B0 01 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800C3A74 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800C3A78 00000034  4B FF 39 19 */	bl checkSwordTwirlAction__9daAlink_cFv

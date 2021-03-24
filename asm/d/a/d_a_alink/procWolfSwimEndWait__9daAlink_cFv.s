@@ -59,7 +59,7 @@ lbl_80138AF0:
 /* 80138AF0 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80138AF4 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlSwim_c0@ha
 /* 80138AF8 00000008  38 63 F8 B4 */	addi r3, r3, m__20daAlinkHIO_wlSwim_c0@l
-/* 80138AFC 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 80138AFC 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038F8D8 */
 /* 80138B00 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80138B04 00000000  40 81 00 10 */	ble lbl_80138B14
 /* 80138B08 00000004  7F C3 F3 78 */	mr r3, r30

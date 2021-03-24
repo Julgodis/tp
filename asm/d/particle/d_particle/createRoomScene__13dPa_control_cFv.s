@@ -23,8 +23,8 @@ lbl_8004BD2C:
 /* 8004BD2C 00000000  90 1B 00 14 */	stw r0, 0x14(r27)
 /* 8004BD30 00000004  80 7B 00 14 */	lwz r3, 0x14(r27)
 /* 8004BD34 00000008  80 8D 86 4C */	lwz r4, mFrameBufferTimg__13mDoGph_gInf_c(r13)
-/* 8004BD38 0000000C  3C A0 80 38 */	lis r5, d_particle_d_particle__stringBase0@ha
-/* 8004BD3C 00000010  38 A5 A1 2C */	addi r5, r5, d_particle_d_particle__stringBase0@l
+/* 8004BD38 0000000C  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 8004BD3C 00000010  38 A5 A1 2C */	addi r5, r5, stringBase0@l
 /* 8004BD40 00000014  48 22 81 AD */	bl swapTexture__18JPAResourceManagerFPC7ResTIMGPCc
 /* 8004BD44 00000018  80 6D 89 20 */	lwz r3, mEmitterMng__13dPa_control_c(r13)
 /* 8004BD48 0000001C  80 9B 00 14 */	lwz r4, 0x14(r27)

@@ -7,26 +7,26 @@ lbl_802F7100:
 /* 802F7114 00000014  3B E4 49 B0 */	addi r31, r4, static_mBounds__7J2DPane@l
 /* 802F7118 00000018  80 83 00 20 */	lwz r4, 0x20(r3)
 /* 802F711C 0000001C  80 03 00 24 */	lwz r0, 0x24(r3)
-/* 802F7120 00000020  90 9F 00 00 */	stw r4, 0(r31)
-/* 802F7124 00000024  90 1F 00 04 */	stw r0, 4(r31)
+/* 802F7120 00000020  90 9F 00 00 */	stw r4, 0(r31)	/* effective address: 804349B0 */
+/* 802F7124 00000024  90 1F 00 04 */	stw r0, 4(r31)	/* effective address: 804349B4 */
 /* 802F7128 00000028  80 83 00 28 */	lwz r4, 0x28(r3)
 /* 802F712C 0000002C  80 03 00 2C */	lwz r0, 0x2c(r3)
-/* 802F7130 00000030  90 9F 00 08 */	stw r4, 8(r31)
-/* 802F7134 00000034  90 1F 00 0C */	stw r0, 0xc(r31)
+/* 802F7130 00000030  90 9F 00 08 */	stw r4, 8(r31)	/* effective address: 804349B8 */
+/* 802F7134 00000034  90 1F 00 0C */	stw r0, 0xc(r31)	/* effective address: 804349BC */
 /* 802F7138 00000038  C0 23 00 D4 */	lfs f1, 0xd4(r3)
 /* 802F713C 0000003C  C0 43 00 D8 */	lfs f2, 0xd8(r3)
-/* 802F7140 00000040  C0 1F 00 00 */	lfs f0, 0(r31)
+/* 802F7140 00000040  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 804349B0 */
 /* 802F7144 00000044  EC 00 08 2A */	fadds f0, f0, f1
-/* 802F7148 00000048  D0 1F 00 00 */	stfs f0, 0(r31)
-/* 802F714C 0000004C  C0 1F 00 04 */	lfs f0, 4(r31)
+/* 802F7148 00000048  D0 1F 00 00 */	stfs f0, 0(r31)	/* effective address: 804349B0 */
+/* 802F714C 0000004C  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 804349B4 */
 /* 802F7150 00000050  EC 00 10 2A */	fadds f0, f0, f2
-/* 802F7154 00000054  D0 1F 00 04 */	stfs f0, 4(r31)
-/* 802F7158 00000058  C0 1F 00 08 */	lfs f0, 8(r31)
+/* 802F7154 00000054  D0 1F 00 04 */	stfs f0, 4(r31)	/* effective address: 804349B4 */
+/* 802F7158 00000058  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 804349B8 */
 /* 802F715C 0000005C  EC 00 08 2A */	fadds f0, f0, f1
-/* 802F7160 00000060  D0 1F 00 08 */	stfs f0, 8(r31)
-/* 802F7164 00000064  C0 1F 00 0C */	lfs f0, 0xc(r31)
+/* 802F7160 00000060  D0 1F 00 08 */	stfs f0, 8(r31)	/* effective address: 804349B8 */
+/* 802F7164 00000064  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 804349BC */
 /* 802F7168 00000068  EC 00 10 2A */	fadds f0, f0, f2
-/* 802F716C 0000006C  D0 1F 00 0C */	stfs f0, 0xc(r31)
+/* 802F716C 0000006C  D0 1F 00 0C */	stfs f0, 0xc(r31)	/* effective address: 804349BC */
 /* 802F7170 00000070  48 00 09 8D */	bl getParentPane__7J2DPaneFv
 /* 802F7174 00000074  28 03 00 00 */	cmplwi r3, 0
 /* 802F7178 00000078  41 82 00 48 */	beq lbl_802F71C0
@@ -37,7 +37,7 @@ lbl_802F7100:
 /* 802F718C 0000008C  3C 60 80 43 */	lis r3, static_mBounds__7J2DPane@ha
 /* 802F7190 00000090  C4 03 49 B0 */	lfsu f0, static_mBounds__7J2DPane@l(r3)
 /* 802F7194 00000094  EC 00 08 2A */	fadds f0, f0, f1
-/* 802F7198 00000098  D0 03 00 00 */	stfs f0, 0(r3)
+/* 802F7198 00000098  D0 03 00 00 */	stfs f0, 0(r3)	/* effective address: 80430000 */
 /* 802F719C 0000009C  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 802F71A0 000000A0  EC 00 10 2A */	fadds f0, f0, f2
 /* 802F71A4 000000A4  D0 1F 00 04 */	stfs f0, 4(r31)

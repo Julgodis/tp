@@ -174,7 +174,7 @@ extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl(); // 1
 extern "C" void bgmNowBattle__8Z2SeqMgrFf(); // 1
 extern "C" void taktModeMute__8Z2SeqMgrFv(); // 1
 extern "C" void taktModeMuteOff__8Z2SeqMgrFv(); // 1
-extern "C" extern char const* const Z2SeqMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -254,14 +254,14 @@ asm Z2SeqMgr::Z2SeqMgr() {
 
 /* ############################################################################################## */
 /* 804559A0-804559A8 0004+04 s=1 e=0 z=0  None .sdata2    @3559                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_3559[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3559[1 + 1 /* padding */] = {
 	-10000.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 804559A8-804559B0 0008+00 s=22 e=0 z=0  None .sdata2    @3561                                                        */
-SECTION_SDATA2 static f64 Z2SeqMgr__lit_3561 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3561 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802AF010-802AF408 03F8+00 s=3 e=5 z=0  None .text      bgmStart__8Z2SeqMgrFUlUll                                    */
 #pragma push
@@ -376,7 +376,7 @@ SECTION_DEAD char const* const stringBase_8039BC7E = "force_end";
 #pragma pop
 
 /* 803C9DF8-803CA08C 0294+00 s=1 e=0 z=0  None .data      @3900                                                        */
-SECTION_DATA static void* Z2SeqMgr__lit_3900[165] = {
+SECTION_DATA static void* lit_3900[165] = {
 	/* 0    */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x14C),
 	/* 1    */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0x18C),
 	/* 2    */ (void*)(((char*)subBgmStart__8Z2SeqMgrFUl)+0xFC),
@@ -787,7 +787,7 @@ asm void Z2SeqMgr::bgmStreamStop(u32 param_0) {
 
 /* ############################################################################################## */
 /* 803CA308-803CA33C 0034+00 s=1 e=0 z=0  None .data      @4739                                                        */
-SECTION_DATA static void* Z2SeqMgr__lit_4739[13] = {
+SECTION_DATA static void* lit_4739[13] = {
 	/* 0    */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	/* 1    */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x440),
 	/* 2    */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0x428),
@@ -804,50 +804,50 @@ SECTION_DATA static void* Z2SeqMgr__lit_4739[13] = {
 };
 
 /* 804559B0-804559B4 0004+00 s=1 e=0 z=0  None .sdata2    @4726                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4726 = 13.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4726 = 13.0f / 20.0f;
 
 /* 804559B4-804559B8 0004+00 s=10 e=0 z=0  None .sdata2    @4727                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4727 = -1.0f;
+SECTION_SDATA2 static f32 lit_4727 = -1.0f;
 
 /* 804559B8-804559BC 0004+00 s=1 e=0 z=0  None .sdata2    @4728                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4728 = 29.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4728 = 29.0f / 100.0f;
 
 /* 804559BC-804559C0 0004+00 s=1 e=0 z=0  None .sdata2    @4729                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4729 = 7.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4729 = 7.0f / 20.0f;
 
 /* 804559C0-804559C4 0004+00 s=1 e=0 z=0  None .sdata2    @4730                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4730 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4730 = 3.0f / 5.0f;
 
 /* 804559C4-804559C8 0004+00 s=2 e=0 z=0  None .sdata2    @4731                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4731 = 0.5f;
+SECTION_SDATA2 static f32 lit_4731 = 0.5f;
 
 /* 804559C8-804559CC 0004+00 s=3 e=0 z=0  None .sdata2    @4732                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4732 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4732 = 3.0f / 10.0f;
 
 /* 804559CC-804559D0 0004+00 s=1 e=0 z=0  None .sdata2    @4733                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4733 = 3100.0f;
+SECTION_SDATA2 static f32 lit_4733 = 3100.0f;
 
 /* 804559D0-804559D4 0004+00 s=1 e=0 z=0  None .sdata2    @4734                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4734 = 200.0f;
+SECTION_SDATA2 static f32 lit_4734 = 200.0f;
 
 /* 804559D4-804559D8 0004+00 s=1 e=0 z=0  None .sdata2    @4735                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4735 = 1600.0f;
+SECTION_SDATA2 static f32 lit_4735 = 1600.0f;
 
 /* 804559D8-804559DC 0004+00 s=1 e=0 z=0  None .sdata2    @4736                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4736 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4736 = 4.0f / 5.0f;
 
 /* 804559DC-804559E0 0004+00 s=1 e=0 z=0  None .sdata2    @4737                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4737 = 3150.0f;
+SECTION_SDATA2 static f32 lit_4737 = 3150.0f;
 
 /* 804559E0-804559E8 0004+04 s=1 e=0 z=0  None .sdata2    @4738                                                        */
-SECTION_SDATA2 static f32 Z2SeqMgr__lit_4738[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4738[1 + 1 /* padding */] = {
 	6150.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 804559E8-804559F0 0008+00 s=1 e=0 z=0  None .sdata2    @4741                                                        */
-SECTION_SDATA2 static f64 Z2SeqMgr__lit_4741 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4741 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802AFF8C-802B1DF4 1E68+00 s=5 e=8 z=0  None .text      changeBgmStatus__8Z2SeqMgrFl                                 */
 #pragma push
@@ -1340,7 +1340,7 @@ asm void Z2SeqMgr::onFieldBgmJumpEnd() {
 
 /* ############################################################################################## */
 /* 803CA4B4-803CA508 0054+00 s=1 e=0 z=0  None .data      @6877                                                        */
-SECTION_DATA static void* Z2SeqMgr__lit_6877[21] = {
+SECTION_DATA static void* lit_6877[21] = {
 	/* 0    */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	/* 1    */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1F8),
 	/* 2    */ (void*)(((char*)fieldBgmFramework__8Z2SeqMgrFv)+0x1C8),

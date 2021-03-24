@@ -1,10 +1,10 @@
 lbl_8034ED50:
 /* 8034ED50 00000000  7C 08 02 A6 */	mflr r0
-/* 8034ED54 00000004  3C 60 80 45 */	lis r3, Pad__Type@ha
+/* 8034ED54 00000004  3C 60 80 45 */	lis r3, Type@ha
 /* 8034ED58 00000008  90 01 00 04 */	stw r0, 4(r1)
 /* 8034ED5C 0000000C  94 21 FF C8 */	stwu r1, -0x38(r1)
 /* 8034ED60 00000010  BF 21 00 1C */	stmw r25, 0x1c(r1)
-/* 8034ED64 00000014  3B E3 CB 70 */	addi r31, r3, Pad__Type@l
+/* 8034ED64 00000014  3B E3 CB 70 */	addi r31, r3, Type@l
 /* 8034ED68 00000018  80 0D 92 C8 */	lwz r0, Initialized(r13)
 /* 8034ED6C 0000001C  2C 00 00 00 */	cmpwi r0, 0
 /* 8034ED70 00000020  41 82 00 0C */	beq lbl_8034ED7C
@@ -63,21 +63,21 @@ lbl_8034EE30:
 /* 8034EE38 00000008  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE3C 0000000C  64 00 4D 00 */	oris r0, r0, 0x4d00
 /* 8034EE40 00000010  90 1F 00 40 */	stw r0, 0x40(r31)
-/* 8034EE44 00000014  A0 03 30 E0 */	lhz r0, 0x30e0(r3)
+/* 8034EE44 00000014  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE48 00000018  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE4C 0000001C  64 00 4D 40 */	oris r0, r0, 0x4d40
 /* 8034EE50 00000020  90 1F 00 44 */	stw r0, 0x44(r31)
-/* 8034EE54 00000024  A0 03 30 E0 */	lhz r0, 0x30e0(r3)
+/* 8034EE54 00000024  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE58 00000028  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE5C 0000002C  64 00 4D 80 */	oris r0, r0, 0x4d80
 /* 8034EE60 00000030  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 8034EE64 00000034  A0 03 30 E0 */	lhz r0, 0x30e0(r3)
+/* 8034EE64 00000034  A0 03 30 E0 */	lhz r0, 0x30e0(r3)	/* effective address: 800030E0 */
 /* 8034EE68 00000038  54 00 42 AE */	rlwinm r0, r0, 8, 0xa, 0x17
 /* 8034EE6C 0000003C  64 00 4D C0 */	oris r0, r0, 0x4dc0
 /* 8034EE70 00000040  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8034EE74 00000044  4B FF 75 01 */	bl SIRefreshSamplingRate
-/* 8034EE78 00000048  3C 60 80 3D */	lis r3, Pad__ResetFunctionInfo@ha
-/* 8034EE7C 0000004C  38 63 1B 90 */	addi r3, r3, Pad__ResetFunctionInfo@l
+/* 8034EE78 00000048  3C 60 80 3D */	lis r3, ResetFunctionInfo@ha
+/* 8034EE7C 0000004C  38 63 1B 90 */	addi r3, r3, ResetFunctionInfo@l
 /* 8034EE80 00000050  4B FF 07 E1 */	bl OSRegisterResetFunction
 /* 8034EE84 00000054  3C 60 F0 00 */	lis r3, 0xf000
 /* 8034EE88 00000058  4B FF FC A5 */	bl PADReset

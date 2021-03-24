@@ -14,7 +14,7 @@ lbl_801D5BD0:
 /* 801D5C00 00000030  38 05 D7 50 */	addi r0, r5, __vt__17dMenu_Fmap2DTop_c@l
 /* 801D5C04 00000034  90 03 00 00 */	stw r0, 0(r3)
 /* 801D5C08 00000038  90 83 00 04 */	stw r4, 4(r3)
-/* 801D5C0C 0000003C  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5C0C 0000003C  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D5C10 00000040  D0 03 00 78 */	stfs f0, 0x78(r3)
 /* 801D5C14 00000044  D0 03 00 7C */	stfs f0, 0x7c(r3)
 /* 801D5C18 00000048  38 00 00 00 */	li r0, 0
@@ -29,13 +29,13 @@ lbl_801D5BD0:
 lbl_801D5C3C:
 /* 801D5C3C 00000000  90 1F 00 08 */	stw r0, 8(r31)
 /* 801D5C40 00000004  80 7F 00 08 */	lwz r3, 8(r31)
-/* 801D5C44 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D5C48 0000000C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D5C44 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D5C48 0000000C  38 84 65 D0 */	addi r4, r4, stringBase0@l
 /* 801D5C4C 00000010  38 84 00 85 */	addi r4, r4, 0x85
 /* 801D5C50 00000014  3C A0 01 02 */	lis r5, 0x102
 /* 801D5C54 00000018  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 801D5C58 0000001C  3B A6 61 C0 */	addi r29, r6, g_dComIfG_gameInfo@l
-/* 801D5C5C 00000020  80 DD 5C BC */	lwz r6, 0x5cbc(r29)
+/* 801D5C5C 00000020  80 DD 5C BC */	lwz r6, 0x5cbc(r29)	/* effective address: 8040BE7C */
 /* 801D5C60 00000024  48 12 29 E9 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801D5C64 00000028  80 7F 00 08 */	lwz r3, 8(r31)
 /* 801D5C68 0000002C  48 07 F4 81 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -129,7 +129,7 @@ lbl_801D5D7C:
 lbl_801D5DB4:
 /* 801D5DB4 00000000  90 1F 00 34 */	stw r0, 0x34(r31)
 /* 801D5DB8 00000004  80 7F 00 34 */	lwz r3, 0x34(r31)
-/* 801D5DBC 00000008  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5DBC 00000008  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5DC0 0000000C  48 07 FA 11 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5DC4 00000010  38 60 00 1C */	li r3, 0x1c
 /* 801D5DC8 00000014  48 0F 8E 85 */	bl __nw__FUl
@@ -146,7 +146,7 @@ lbl_801D5DB4:
 lbl_801D5DF4:
 /* 801D5DF4 00000000  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 801D5DF8 00000004  80 7F 00 30 */	lwz r3, 0x30(r31)
-/* 801D5DFC 00000008  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5DFC 00000008  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5E00 0000000C  48 07 F9 D1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5E04 00000010  38 60 00 6C */	li r3, 0x6c
 /* 801D5E08 00000014  48 0F 8E 45 */	bl __nw__FUl
@@ -268,22 +268,22 @@ lbl_801D5F84:
 lbl_801D5FBC:
 /* 801D5FBC 00000000  90 1F 00 2C */	stw r0, 0x2c(r31)
 /* 801D5FC0 00000004  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 801D5FC4 00000008  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5FC4 00000008  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5FC8 0000000C  48 07 F8 09 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5FCC 00000010  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 801D5FD0 00000014  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5FD0 00000014  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5FD4 00000018  48 07 F7 FD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5FD8 0000001C  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 801D5FDC 00000020  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5FDC 00000020  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5FE0 00000024  48 07 F7 F1 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5FE4 00000028  80 7F 00 24 */	lwz r3, 0x24(r31)
-/* 801D5FE8 0000002C  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5FE8 0000002C  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5FEC 00000030  48 07 F7 E5 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5FF0 00000034  80 7F 00 28 */	lwz r3, 0x28(r31)
-/* 801D5FF4 00000038  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D5FF4 00000038  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D5FF8 0000003C  48 07 F7 D9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D5FFC 00000040  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801D6000 00000044  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D6000 00000044  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D6004 00000048  48 07 F7 CD */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801D6008 0000004C  38 60 00 6C */	li r3, 0x6c
 /* 801D600C 00000050  48 0F 8C 41 */	bl __nw__FUl
@@ -316,7 +316,7 @@ lbl_801D6070:
 /* 801D6070 00000000  90 1F 00 54 */	stw r0, 0x54(r31)
 /* 801D6074 00000004  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801D6078 00000008  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801D607C 0000000C  88 04 00 BF */	lbz r0, 0xbf(r4)
+/* 801D607C 0000000C  88 04 00 BF */	lbz r0, 0xbf(r4)	/* effective address: 80430247 */
 /* 801D6080 00000010  28 00 00 09 */	cmplwi r0, 9
 /* 801D6084 00000014  40 82 00 14 */	bne lbl_801D6098
 /* 801D6088 00000018  80 7F 00 50 */	lwz r3, 0x50(r31)
@@ -338,7 +338,7 @@ lbl_801D6098:
 /* 801D60C4 0000002C  7C 60 1B 78 */	mr r0, r3
 lbl_801D60C8:
 /* 801D60C8 00000000  90 1F 00 60 */	stw r0, 0x60(r31)
-/* 801D60CC 00000004  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D60CC 00000004  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D60D0 00000008  D0 3F 00 88 */	stfs f1, 0x88(r31)
 /* 801D60D4 0000000C  D0 3F 00 84 */	stfs f1, 0x84(r31)
 /* 801D60D8 00000010  C0 02 A7 D4 */	lfs f0, lit_3971(r2)
@@ -367,8 +367,8 @@ lbl_801D60C8:
 /* 801D6134 0000006C  38 60 00 07 */	li r3, 7
 /* 801D6138 00000070  64 63 00 07 */	oris r3, r3, 7
 /* 801D613C 00000074  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 801D6140 00000078  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6144 0000007C  38 84 65 D0 */	addi r4, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D6140 00000078  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6144 0000007C  38 84 65 D0 */	addi r4, r4, stringBase0@l
 /* 801D6148 00000080  38 64 00 A0 */	addi r3, r4, 0xa0
 /* 801D614C 00000084  80 9D 5C BC */	lwz r4, 0x5cbc(r29)
 /* 801D6150 00000088  48 0F E1 21 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -380,12 +380,12 @@ lbl_801D60C8:
 /* 801D6168 000000A0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 801D616C 000000A4  7D 89 03 A6 */	mtctr r12
 /* 801D6170 000000A8  4E 80 04 21 */	bctrl 
-/* 801D6174 000000AC  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D6174 000000AC  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D6178 000000B0  D0 1F 00 74 */	stfs f0, 0x74(r31)
 /* 801D617C 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D6180 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6184 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6188 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D6184 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6188 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D618C 000000C4  3B 5E 00 40 */	addi r26, r30, 0x40
 lbl_801D6190:
 /* 801D6190 00000000  4B E3 E9 75 */	bl mDoExt_getRubyFont__Fv
@@ -431,8 +431,8 @@ lbl_801D6190:
 /* 801D6230 000000A0  41 80 FF 60 */	blt lbl_801D6190
 /* 801D6234 000000A4  3B 00 00 00 */	li r24, 0
 /* 801D6238 000000A8  3B A0 00 00 */	li r29, 0
-/* 801D623C 000000AC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6240 000000B0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D623C 000000AC  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6240 000000B0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D6244 000000B4  3B 5E 00 70 */	addi r26, r30, 0x70
 lbl_801D6248:
 /* 801D6248 00000000  4B E3 E8 BD */	bl mDoExt_getRubyFont__Fv
@@ -481,8 +481,8 @@ lbl_801D6248:
 /* 801D62F4 000000AC  48 00 0C 45 */	bl setTitleNameString__17dMenu_Fmap2DTop_cFUl
 /* 801D62F8 000000B0  3B 00 00 00 */	li r24, 0
 /* 801D62FC 000000B4  3B A0 00 00 */	li r29, 0
-/* 801D6300 000000B8  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6304 000000BC  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D6300 000000B8  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6304 000000BC  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D6308 000000C0  3B 5E 00 E0 */	addi r26, r30, 0xe0
 lbl_801D630C:
 /* 801D630C 00000000  4B E3 E6 E5 */	bl mDoExt_getMesgFont__Fv
@@ -532,8 +532,8 @@ lbl_801D630C:
 /* 801D63BC 000000B0  48 00 0D 2D */	bl setZButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D63C0 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D63C4 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D63C8 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D63CC 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D63C8 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D63CC 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D63D0 000000C4  3B 5E 01 30 */	addi r26, r30, 0x130
 lbl_801D63D4:
 /* 801D63D4 00000000  4B E3 E6 1D */	bl mDoExt_getMesgFont__Fv
@@ -583,8 +583,8 @@ lbl_801D63D4:
 /* 801D6484 000000B0  48 00 0D 8D */	bl setBButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D6488 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D648C 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6490 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6494 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D6490 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6494 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D6498 000000C4  3B 5E 01 80 */	addi r26, r30, 0x180
 lbl_801D649C:
 /* 801D649C 00000000  4B E3 E5 55 */	bl mDoExt_getMesgFont__Fv
@@ -634,8 +634,8 @@ lbl_801D649C:
 /* 801D654C 000000B0  48 00 0D 89 */	bl setAButtonString__17dMenu_Fmap2DTop_cFUlUc
 /* 801D6550 000000B4  3B 00 00 00 */	li r24, 0
 /* 801D6554 000000B8  3B A0 00 00 */	li r29, 0
-/* 801D6558 000000BC  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D655C 000000C0  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D6558 000000BC  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D655C 000000C0  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D6560 000000C4  3B 5E 01 D0 */	addi r26, r30, 0x1d0
 lbl_801D6564:
 /* 801D6564 00000000  4B E3 E4 8D */	bl mDoExt_getMesgFont__Fv
@@ -684,8 +684,8 @@ lbl_801D6564:
 /* 801D6610 000000AC  48 00 0D 89 */	bl setCrossLRString__17dMenu_Fmap2DTop_cFUl
 /* 801D6614 000000B0  3B 00 00 00 */	li r24, 0
 /* 801D6618 000000B4  3B A0 00 00 */	li r29, 0
-/* 801D661C 000000B8  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap2D__stringBase0@ha
-/* 801D6620 000000BC  3B 64 65 D0 */	addi r27, r4, d_menu_d_menu_fmap2D__stringBase0@l
+/* 801D661C 000000B8  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801D6620 000000BC  3B 64 65 D0 */	addi r27, r4, stringBase0@l
 /* 801D6624 000000C0  3B 9E 02 20 */	addi r28, r30, 0x220
 lbl_801D6628:
 /* 801D6628 00000000  4B E3 E3 C9 */	bl mDoExt_getMesgFont__Fv

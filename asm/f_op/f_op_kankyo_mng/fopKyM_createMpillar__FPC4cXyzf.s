@@ -13,7 +13,7 @@ lbl_8001F90C:
 /* 8001F938 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001F93C 00000030  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 lbl_8001F940:
-/* 8001F940 00000000  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 8001F940 00000000  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 8001F944 00000004  38 80 00 00 */	li r4, 0
 /* 8001F948 00000008  90 81 00 08 */	stw r4, 8(r1)
 /* 8001F94C 0000000C  38 00 FF FF */	li r0, -1
@@ -29,7 +29,7 @@ lbl_8001F940:
 /* 8001F974 00000034  39 00 00 00 */	li r8, 0
 /* 8001F978 00000038  39 21 00 20 */	addi r9, r1, 0x20
 /* 8001F97C 0000003C  39 40 00 FF */	li r10, 0xff
-/* 8001F980 00000040  C0 22 82 68 */	lfs f1, f_op_f_op_kankyo_mng__lit_3713(r2)
+/* 8001F980 00000040  C0 22 82 68 */	lfs f1, lit_3713(r2)
 /* 8001F984 00000044  48 02 D1 0D */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8001F988 00000048  3B BD 00 01 */	addi r29, r29, 1
 /* 8001F98C 0000004C  2C 1D 00 02 */	cmpwi r29, 2

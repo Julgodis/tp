@@ -11,8 +11,8 @@ lbl_800D8F3C:
 /* 800D8F60 00000008  7C 7C 1B 78 */	mr r28, r3
 /* 800D8F64 0000000C  7C 9B 23 78 */	mr r27, r4
 /* 800D8F68 00000010  7C BA 2B 79 */	or. r26, r5, r5
-/* 800D8F6C 00000014  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 800D8F70 00000018  3B E3 D6 58 */	addi r31, r3, d_a_d_a_alink__lit_3757@l
+/* 800D8F6C 00000014  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 800D8F70 00000018  3B E3 D6 58 */	addi r31, r3, lit_3757@l
 /* 800D8F74 0000001C  40 82 00 70 */	bne lbl_800D8FE4
 /* 800D8F78 00000020  28 1B 00 00 */	cmplwi r27, 0
 /* 800D8F7C 00000024  41 82 00 28 */	beq lbl_800D8FA4
@@ -204,7 +204,7 @@ lbl_800D9204:
 /* 800D9220 0000001C  FC 20 F0 90 */	fmr f1, f30
 /* 800D9224 00000020  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800D9228 00000024  38 C0 FF FF */	li r6, -1
-/* 800D922C 00000028  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800D922C 00000028  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800D9230 0000002C  4B FD 47 35 */	bl setUnderAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERffsf
 /* 800D9234 00000030  48 00 00 34 */	b lbl_800D9268
 lbl_800D9238:
@@ -218,7 +218,7 @@ lbl_800D9238:
 /* 800D9254 0000001C  FC 20 F0 90 */	fmr f1, f30
 /* 800D9258 00000020  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800D925C 00000024  38 C0 FF FF */	li r6, -1
-/* 800D9260 00000028  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800D9260 00000028  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800D9264 0000002C  4B FD 47 01 */	bl setUnderAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERffsf
 lbl_800D9268:
 /* 800D9268 00000000  C0 01 00 18 */	lfs f0, 0x18(r1)
@@ -288,7 +288,7 @@ lbl_800D9320:
 /* 800D9358 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D935C 00000000  40 81 00 58 */	ble lbl_800D93B4
 /* 800D9360 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800D9364 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800D9364 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800D9368 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800D936C 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800D9370 00000014  FC 00 00 32 */	fmul f0, f0, f0

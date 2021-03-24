@@ -16,11 +16,11 @@ lbl_801399C4:
 lbl_801399FC:
 /* 801399FC 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAttack_c0@ha
 /* 80139A00 00000004  38 63 F7 A4 */	addi r3, r3, m__22daAlinkHIO_wlAttack_c0@l
-/* 80139A04 00000008  A8 03 00 14 */	lha r0, 0x14(r3)
+/* 80139A04 00000008  A8 03 00 14 */	lha r0, 0x14(r3)	/* effective address: 8038F7B8 */
 /* 80139A08 0000000C  B0 1F 30 08 */	sth r0, 0x3008(r31)
 /* 80139A0C 00000010  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtLock_c0@ha
 /* 80139A10 00000014  38 63 F6 F4 */	addi r3, r3, m__22daAlinkHIO_wlAtLock_c0@l
-/* 80139A14 00000018  A8 03 00 28 */	lha r0, 0x28(r3)
+/* 80139A14 00000018  A8 03 00 28 */	lha r0, 0x28(r3)	/* effective address: 8038F71C */
 /* 80139A18 0000001C  B0 1F 30 0A */	sth r0, 0x300a(r31)
 /* 80139A1C 00000020  38 00 00 1E */	li r0, 0x1e
 /* 80139A20 00000024  B0 1F 30 12 */	sth r0, 0x3012(r31)
@@ -34,9 +34,9 @@ lbl_801399FC:
 /* 80139A40 00000044  4B F8 56 79 */	bl voiceStartLevel__9daAlink_cFUl
 /* 80139A44 00000048  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80139A48 0000004C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80139A4C 00000050  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80139A4C 00000050  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80139A50 00000054  64 00 40 00 */	oris r0, r0, 0x4000
-/* 80139A54 00000058  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80139A54 00000058  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80139A58 0000005C  38 60 00 01 */	li r3, 1
 /* 80139A5C 00000060  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80139A60 00000064  80 01 00 14 */	lwz r0, 0x14(r1)

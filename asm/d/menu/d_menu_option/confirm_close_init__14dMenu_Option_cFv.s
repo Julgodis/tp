@@ -26,9 +26,9 @@ lbl_801E4F18:
 /* 801E4F78 00000060  38 A0 00 00 */	li r5, 0
 /* 801E4F7C 00000064  38 C0 00 00 */	li r6, 0
 /* 801E4F80 00000068  38 E0 00 00 */	li r7, 0
-/* 801E4F84 0000006C  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
+/* 801E4F84 0000006C  C0 22 A9 30 */	lfs f1, lit_4069(r2)
 /* 801E4F88 00000070  FC 40 08 90 */	fmr f2, f1
-/* 801E4F8C 00000074  C0 62 A9 54 */	lfs f3, d_menu_d_menu_option__lit_4472(r2)
+/* 801E4F8C 00000074  C0 62 A9 54 */	lfs f3, lit_4472(r2)
 /* 801E4F90 00000078  FC 80 18 90 */	fmr f4, f3
 /* 801E4F94 0000007C  39 00 00 00 */	li r8, 0
 /* 801E4F98 00000080  48 0C 69 ED */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

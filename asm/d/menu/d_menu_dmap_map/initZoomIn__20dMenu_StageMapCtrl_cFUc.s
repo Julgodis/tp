@@ -6,7 +6,7 @@ lbl_801C1C40:
 /* 801C1C50 00000010  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801C1C54 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801C1C58 00000018  7C 9F 23 78 */	mr r31, r4
-/* 801C1C5C 0000001C  C0 02 A6 60 */	lfs f0, d_menu_d_menu_dmap_map__lit_3803(r2)
+/* 801C1C5C 0000001C  C0 02 A6 60 */	lfs f0, lit_3803(r2)
 /* 801C1C60 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 801C1C64 00000024  D0 01 00 08 */	stfs f0, 8(r1)
 /* 801C1C68 00000028  38 81 00 0C */	addi r4, r1, 0xc
@@ -31,8 +31,8 @@ lbl_801C1C40:
 /* 801C1CB4 00000074  7F C3 F3 78 */	mr r3, r30
 /* 801C1CB8 00000078  88 1E 00 F5 */	lbz r0, 0xf5(r30)
 /* 801C1CBC 0000007C  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C1CC0 00000080  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap_map__init_process@ha
-/* 801C1CC4 00000084  38 04 CC E4 */	addi r0, r4, d_menu_d_menu_dmap_map__init_process@l
+/* 801C1CC0 00000080  3C 80 80 3C */	lis r4, init_process@ha
+/* 801C1CC4 00000084  38 04 CC E4 */	addi r0, r4, init_process@l
 /* 801C1CC8 00000088  7D 80 2A 14 */	add r12, r0, r5
 /* 801C1CCC 0000008C  48 1A 03 B9 */	bl __ptmf_scall
 /* 801C1CD0 00000090  60 00 00 00 */	nop 

@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JKRAramBlock {
-};
-
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -21,6 +18,9 @@ struct JKRHeap {
 };
 
 struct JKRExpandSwitch {
+};
+
+struct JKRAramBlock {
 };
 
 struct JKRAram {
@@ -99,12 +99,12 @@ extern "C" void changeGroupIdIfNeed__7JKRAramFPUci(); // 1
 extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
 extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
 extern "C" static void JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl(); // 1
-extern "C" static void JKRAram__decompSZS_subroutine__FPUcPUc(); // 1
-extern "C" static void JKRAram__firstSrcData__Fv(); // 1
-extern "C" static void JKRAram__nextSrcData__FPUc(); // 1
+extern "C" static void decompSZS_subroutine__FPUcPUc(); // 1
+extern "C" static void firstSrcData__Fv(); // 1
+extern "C" static void nextSrcData__FPUc(); // 1
 extern "C" void __sinit_JKRAram_cpp(); // 1
 extern "C" void func_802D2DF0(); // 1
-extern "C" extern char const* const JKRAram__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 sMessageQueue__7JKRAram[32];
 extern "C" extern u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */];
 extern "C" extern u8 sAramObject__7JKRAram[4];
@@ -295,13 +295,13 @@ asm void JKRAram::aramToMainRam(u32 param_0, u8* param_1, u32 param_2, JKRExpand
 
 /* ############################################################################################## */
 /* 804342D0-804342DC 000C+00 s=1 e=0 z=0  None .bss       @492                                                         */
-static u8 JKRAram__lit_492[12];
+static u8 lit_492[12];
 
 /* 804342DC-804342E8 000C+00 s=1 e=0 z=0  None .bss       sAramCommandList__7JKRAram                                   */
 static u8 sAramCommandList__7JKRAram[12];
 
 /* 804342E8-80434300 0018+00 s=1 e=0 z=0  None .bss       decompMutex                                                  */
-static u8 JKRAram__decompMutex[24];
+static u8 decompMutex[24];
 
 /* 804508B8-804508C0 0004+04 s=1 e=1 z=0  None .sdata     sSZSBufferSize__7JKRAram                                     */
 SECTION_SDATA u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */] = {
@@ -311,49 +311,49 @@ SECTION_SDATA u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */] = {
 };
 
 /* 804513CC-804513D0 0004+00 s=3 e=0 z=0  None .sbss      szpBuf                                                       */
-static u8 JKRAram__szpBuf[4];
+static u8 szpBuf[4];
 
 /* 804513D0-804513D4 0004+00 s=3 e=0 z=0  None .sbss      szpEnd                                                       */
-static u8 JKRAram__szpEnd[4];
+static u8 szpEnd[4];
 
 /* 804513D4-804513D8 0004+00 s=2 e=0 z=0  None .sbss      refBuf                                                       */
-static u8 JKRAram__refBuf[4];
+static u8 refBuf[4];
 
 /* 804513D8-804513DC 0004+00 s=2 e=0 z=0  None .sbss      refEnd                                                       */
-static u8 JKRAram__refEnd[4];
+static u8 refEnd[4];
 
 /* 804513DC-804513E0 0004+00 s=2 e=0 z=0  None .sbss      refCurrent                                                   */
-static u8 JKRAram__refCurrent[4];
+static u8 refCurrent[4];
 
 /* 804513E0-804513E4 0004+00 s=3 e=0 z=0  None .sbss      srcOffset                                                    */
-static u8 JKRAram__srcOffset[4];
+static u8 srcOffset[4];
 
 /* 804513E4-804513E8 0004+00 s=4 e=0 z=0  None .sbss      transLeft                                                    */
-static u8 JKRAram__transLeft[4];
+static u8 transLeft[4];
 
 /* 804513E8-804513EC 0004+00 s=3 e=0 z=0  None .sbss      srcLimit                                                     */
-static u8 JKRAram__srcLimit[4];
+static u8 srcLimit[4];
 
 /* 804513EC-804513F0 0004+00 s=3 e=0 z=0  None .sbss      srcAddress                                                   */
 static u8 srcAddress[4];
 
 /* 804513F0-804513F4 0004+00 s=2 e=0 z=0  None .sbss      fileOffset                                                   */
-static u8 JKRAram__fileOffset[4];
+static u8 fileOffset[4];
 
 /* 804513F4-804513F8 0004+00 s=2 e=0 z=0  None .sbss      readCount                                                    */
-static u8 JKRAram__readCount[4];
+static u8 readCount[4];
 
 /* 804513F8-804513FC 0004+00 s=2 e=0 z=0  None .sbss      maxDest                                                      */
-static u8 JKRAram__maxDest[4];
+static u8 maxDest[4];
 
 /* 804513FC-80451400 0004+00 s=1 e=0 z=0  None .sbss      None                                                         */
 static u8 data_804513FC[4];
 
 /* 80451400-80451404 0004+00 s=2 e=0 z=0  None .sbss      tsPtr                                                        */
-static u8 JKRAram__tsPtr[4];
+static u8 tsPtr[4];
 
 /* 80451404-80451408 0004+00 s=1 e=0 z=0  None .sbss      tsArea                                                       */
-static u8 JKRAram__tsArea[4];
+static u8 tsArea[4];
 
 /* 802D2830-802D29A0 0170+00 s=1 e=0 z=0  None .text      JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl               */
 #pragma push
@@ -372,7 +372,7 @@ asm static void JKRDecompressFromAramToMainRam(u32 param_0, void* param_1, u32 p
 #pragma optimizewithasm off
 asm static void decompSZS_subroutine(u8* param_0, u8* param_1) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRAram/JKRAram__decompSZS_subroutine__FPUcPUc.s"
+#include "asm/JSystem/JKernel/JKRAram/decompSZS_subroutine__FPUcPUc.s"
 }
 #pragma pop
 
@@ -383,7 +383,7 @@ asm static void decompSZS_subroutine(u8* param_0, u8* param_1) {
 #pragma optimizewithasm off
 asm static void firstSrcData() {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRAram/JKRAram__firstSrcData__Fv.s"
+#include "asm/JSystem/JKernel/JKRAram/firstSrcData__Fv.s"
 }
 #pragma pop
 
@@ -394,7 +394,7 @@ asm static void firstSrcData() {
 #pragma optimizewithasm off
 asm static void nextSrcData(u8* param_0) {
 	nofralloc
-#include "asm/JSystem/JKernel/JKRAram/JKRAram__nextSrcData__FPUc.s"
+#include "asm/JSystem/JKernel/JKRAram/nextSrcData__FPUc.s"
 }
 #pragma pop
 

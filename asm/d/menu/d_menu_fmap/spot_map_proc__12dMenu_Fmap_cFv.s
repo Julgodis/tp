@@ -14,7 +14,7 @@ lbl_801C9618:
 /* 801C9648 00000014  41 82 00 50 */	beq lbl_801C9698
 /* 801C964C 00000018  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801C9650 0000001C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801C9654 00000020  A0 03 00 B2 */	lhz r0, 0xb2(r3)
+/* 801C9654 00000020  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801C9658 00000024  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 801C965C 00000028  40 82 00 3C */	bne lbl_801C9698
 /* 801C9660 0000002C  80 63 00 1C */	lwz r3, 0x1c(r3)
@@ -37,7 +37,7 @@ lbl_801C9698:
 /* 801C96A0 00000008  41 82 00 44 */	beq lbl_801C96E4
 /* 801C96A4 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801C96A8 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801C96AC 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)
+/* 801C96AC 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801C96B0 00000018  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 801C96B4 0000001C  40 82 00 30 */	bne lbl_801C96E4
 /* 801C96B8 00000020  80 63 00 1C */	lwz r3, 0x1c(r3)
@@ -79,9 +79,9 @@ lbl_801C96E4:
 /* 801C9744 00000060  38 A0 00 00 */	li r5, 0
 /* 801C9748 00000064  38 C0 00 00 */	li r6, 0
 /* 801C974C 00000068  38 E0 00 00 */	li r7, 0
-/* 801C9750 0000006C  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801C9750 0000006C  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801C9754 00000070  FC 40 08 90 */	fmr f2, f1
-/* 801C9758 00000074  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801C9758 00000074  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801C975C 00000078  FC 80 18 90 */	fmr f4, f3
 /* 801C9760 0000007C  39 00 00 00 */	li r8, 0
 /* 801C9764 00000080  48 0E 22 21 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -97,14 +97,14 @@ lbl_801C976C:
 /* 801C9788 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 801C978C 00000020  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801C9790 00000024  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801C9794 00000028  A0 84 00 D0 */	lhz r4, 0xd0(r4)
+/* 801C9794 00000028  A0 84 00 D0 */	lhz r4, 0xd0(r4)	/* effective address: 803A7358 */
 /* 801C9798 0000002C  4B E6 B2 25 */	bl isEventBit__11dSv_event_cCFUs
 /* 801C979C 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 801C97A0 00000034  41 82 00 44 */	beq lbl_801C97E4
 /* 801C97A4 00000038  7F C3 F3 78 */	mr r3, r30
 /* 801C97A8 0000003C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801C97AC 00000040  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801C97B0 00000044  A0 84 01 F4 */	lhz r4, 0x1f4(r4)
+/* 801C97B0 00000044  A0 84 01 F4 */	lhz r4, 0x1f4(r4)	/* effective address: 803A747C */
 /* 801C97B4 00000048  4B E6 B2 09 */	bl isEventBit__11dSv_event_cCFUs
 /* 801C97B8 0000004C  2C 03 00 00 */	cmpwi r3, 0
 /* 801C97BC 00000050  40 82 00 28 */	bne lbl_801C97E4
@@ -133,7 +133,7 @@ lbl_801C97E4:
 /* 801C9814 00000030  7F C3 F3 78 */	mr r3, r30
 /* 801C9818 00000034  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801C981C 00000038  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801C9820 0000003C  A0 84 06 26 */	lhz r4, 0x626(r4)
+/* 801C9820 0000003C  A0 84 06 26 */	lhz r4, 0x626(r4)	/* effective address: 803A78AE */
 /* 801C9824 00000040  4B E6 B1 69 */	bl onEventBit__11dSv_event_cFUs
 /* 801C9828 00000044  48 00 00 58 */	b lbl_801C9880
 lbl_801C982C:
@@ -172,9 +172,9 @@ lbl_801C9880:
 /* 801C98A4 00000024  38 A0 00 00 */	li r5, 0
 /* 801C98A8 00000028  38 C0 00 00 */	li r6, 0
 /* 801C98AC 0000002C  38 E0 00 00 */	li r7, 0
-/* 801C98B0 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801C98B0 00000030  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801C98B4 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801C98B8 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801C98B8 00000038  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801C98BC 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801C98C0 00000040  39 00 00 00 */	li r8, 0
 /* 801C98C4 00000044  48 0E 20 C1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -182,11 +182,11 @@ lbl_801C9880:
 lbl_801C98CC:
 /* 801C98CC 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801C98D0 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801C98D4 00000008  88 03 02 F8 */	lbz r0, 0x2f8(r3)
+/* 801C98D4 00000008  88 03 02 F8 */	lbz r0, 0x2f8(r3)	/* effective address: 8042FF58 */
 /* 801C98D8 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801C98DC 00000010  41 82 00 1C */	beq lbl_801C98F8
 /* 801C98E0 00000014  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 801C98E4 00000018  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801C98E4 00000018  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801C98E8 0000001C  48 00 78 61 */	bl zoomMapCalc__18dMenu_Fmap2DBack_cFf
 /* 801C98EC 00000020  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 801C98F0 00000024  C0 3F 01 EC */	lfs f1, 0x1ec(r31)
@@ -199,7 +199,7 @@ lbl_801C98F8:
 /* 801C9908 00000010  48 00 B5 79 */	bl stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb
 /* 801C990C 00000014  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 801C9910 00000018  48 00 8D 69 */	bl getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv
-/* 801C9914 0000001C  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C9914 0000001C  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801C9918 00000020  EC 21 00 28 */	fsubs f1, f1, f0
 /* 801C991C 00000024  C0 02 A7 58 */	lfs f0, lit_4939(r2)
 /* 801C9920 00000028  EF E1 00 28 */	fsubs f31, f1, f0

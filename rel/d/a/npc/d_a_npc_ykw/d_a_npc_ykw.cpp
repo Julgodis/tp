@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80B66BFC */ ~cXyz();
-	/* 80B672D4 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B672D8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80B66BFC */ ~cXyz();
+	/* 80B672D4 */ cXyz();
 };
 
 struct daNpc_ykW_c {
@@ -69,6 +69,8 @@ struct daNpc_ykW_c {
 	/* 80B614D0 */ void setCollision();
 	/* 80B61708 */ void drawDbgInfo();
 	/* 80B61710 */ void selectAction();
+	/* 80B61828 */ void chkAction(int (daNpc_ykW_c::*)(void*));
+	/* 80B61854 */ void setAction(int (daNpc_ykW_c::*)(void*));
 	/* 80B618FC */ void getGoalPos();
 	/* 80B61A0C */ void orderGoIntoBossRoomEvt();
 	/* 80B61AA4 */ void putUtuwaHeart(cXyz*, f32, f32, s16, cXyz*);
@@ -253,8 +255,8 @@ extern "C" void setAttnPos__11daNpc_ykW_cFv(); // 1
 extern "C" void setCollision__11daNpc_ykW_cFv(); // 1
 extern "C" void drawDbgInfo__11daNpc_ykW_cFv(); // 1
 extern "C" void selectAction__11daNpc_ykW_cFv(); // 1
-extern "C" static void chkAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i(); // 1
 extern "C" void getGoalPos__11daNpc_ykW_cFv(); // 1
 extern "C" void orderGoIntoBossRoomEvt__11daNpc_ykW_cFv(); // 1
 extern "C" void putUtuwaHeart__11daNpc_ykW_cFP4cXyzffsP4cXyz(); // 1
@@ -971,7 +973,7 @@ asm void daNpc_ykW_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i() {
+asm void daNpc_ykW_c::chkAction(int (daNpc_ykW_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ykw/d_a_npc_ykw/chkAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i.s"
 }
@@ -982,7 +984,7 @@ extern "C" asm static void chkAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i() {
+asm void daNpc_ykW_c::setAction(int (daNpc_ykW_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ykw/d_a_npc_ykw/setAction__11daNpc_ykW_cFM11daNpc_ykW_cFPCvPvPv_i.s"
 }

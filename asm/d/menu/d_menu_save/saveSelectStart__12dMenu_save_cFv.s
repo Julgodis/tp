@@ -12,24 +12,24 @@ lbl_801F3A94:
 /* 801F3ABC 00000028  38 A0 00 00 */	li r5, 0
 /* 801F3AC0 0000002C  38 C0 00 00 */	li r6, 0
 /* 801F3AC4 00000030  38 E0 00 00 */	li r7, 0
-/* 801F3AC8 00000034  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F3AC8 00000034  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F3ACC 00000038  FC 40 08 90 */	fmr f2, f1
-/* 801F3AD0 0000003C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F3AD0 0000003C  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F3AD4 00000040  FC 80 18 90 */	fmr f4, f3
 /* 801F3AD8 00000044  39 00 00 00 */	li r8, 0
 /* 801F3ADC 00000048  48 0B 7E A9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801F3AE0 0000004C  88 1D 00 54 */	lbz r0, 0x54(r29)
 /* 801F3AE4 00000050  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3AE8 00000054  7F A3 EB 78 */	mr r3, r29
-/* 801F3AEC 00000058  3C 80 80 3C */	lis r4, d_menu_d_menu_save__SelOpenStartFrameTbl@ha
-/* 801F3AF0 0000005C  38 84 DF 9C */	addi r4, r4, d_menu_d_menu_save__SelOpenStartFrameTbl@l
+/* 801F3AEC 00000058  3C 80 80 3C */	lis r4, SelOpenStartFrameTbl@ha
+/* 801F3AF0 0000005C  38 84 DF 9C */	addi r4, r4, SelOpenStartFrameTbl@l
 /* 801F3AF4 00000060  7C 84 00 2E */	lwzx r4, r4, r0
-/* 801F3AF8 00000064  3C A0 80 3C */	lis r5, d_menu_d_menu_save__SelOpenEndFrameTbl@ha
-/* 801F3AFC 00000068  38 A5 DF A8 */	addi r5, r5, d_menu_d_menu_save__SelOpenEndFrameTbl@l
+/* 801F3AF8 00000064  3C A0 80 3C */	lis r5, SelOpenEndFrameTbl@ha
+/* 801F3AFC 00000068  38 A5 DF A8 */	addi r5, r5, SelOpenEndFrameTbl@l
 /* 801F3B00 0000006C  7C A5 00 2E */	lwzx r5, r5, r0
 /* 801F3B04 00000070  48 00 1A 05 */	bl selectDataMoveAnmInitSet__12dMenu_save_cFii
 /* 801F3B08 00000074  80 7D 00 2C */	lwz r3, 0x2c(r29)
-/* 801F3B0C 00000078  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F3B0C 00000078  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F3B10 0000007C  4B FA 17 91 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F3B14 00000080  7F A3 EB 78 */	mr r3, r29
 /* 801F3B18 00000084  88 9D 00 54 */	lbz r4, 0x54(r29)
@@ -37,7 +37,7 @@ lbl_801F3A94:
 /* 801F3B20 0000008C  38 C0 00 00 */	li r6, 0
 /* 801F3B24 00000090  3C E0 80 43 */	lis r7, g_msHIO@ha
 /* 801F3B28 00000094  38 E7 E8 4C */	addi r7, r7, g_msHIO@l
-/* 801F3B2C 00000098  88 E7 00 0A */	lbz r7, 0xa(r7)
+/* 801F3B2C 00000098  88 E7 00 0A */	lbz r7, 0xa(r7)	/* effective address: 8042E856 */
 /* 801F3B30 0000009C  48 00 28 25 */	bl selectWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc
 /* 801F3B34 000000A0  88 1D 00 54 */	lbz r0, 0x54(r29)
 /* 801F3B38 000000A4  7C 7D 02 14 */	add r3, r29, r0

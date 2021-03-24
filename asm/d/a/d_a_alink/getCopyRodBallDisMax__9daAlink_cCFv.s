@@ -7,12 +7,12 @@ lbl_800E1330:
 /* 800E1344 00000014  41 82 00 14 */	beq lbl_800E1358
 /* 800E1348 00000018  3C 60 80 39 */	lis r3, m__21daAlinkHIO_copyRod_c0@ha
 /* 800E134C 0000001C  38 63 EA FC */	addi r3, r3, m__21daAlinkHIO_copyRod_c0@l
-/* 800E1350 00000020  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 800E1350 00000020  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038EB30 */
 /* 800E1354 00000024  48 00 00 10 */	b lbl_800E1364
 lbl_800E1358:
 /* 800E1358 00000000  3C 60 80 39 */	lis r3, m__21daAlinkHIO_copyRod_c0@ha
 /* 800E135C 00000004  38 63 EA FC */	addi r3, r3, m__21daAlinkHIO_copyRod_c0@l
-/* 800E1360 00000008  C0 23 00 2C */	lfs f1, 0x2c(r3)
+/* 800E1360 00000008  C0 23 00 2C */	lfs f1, 0x2c(r3)	/* effective address: 8038EB28 */
 lbl_800E1364:
 /* 800E1364 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800E1368 00000004  7C 08 03 A6 */	mtlr r0

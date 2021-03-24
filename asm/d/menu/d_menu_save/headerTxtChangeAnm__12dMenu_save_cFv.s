@@ -18,7 +18,7 @@ lbl_801F4954:
 /* 801F4964 00000010  80 63 01 68 */	lwz r3, 0x168(r3)
 /* 801F4968 00000014  3C 80 80 43 */	lis r4, g_msHIO@ha
 /* 801F496C 00000018  3B A4 E8 4C */	addi r29, r4, g_msHIO@l
-/* 801F4970 0000001C  88 9D 00 08 */	lbz r4, 8(r29)
+/* 801F4970 0000001C  88 9D 00 08 */	lbz r4, 8(r29)	/* effective address: 8042E854 */
 /* 801F4974 00000020  38 A0 00 FF */	li r5, 0xff
 /* 801F4978 00000024  38 C0 00 00 */	li r6, 0
 /* 801F497C 00000028  38 E0 00 00 */	li r7, 0
@@ -36,7 +36,7 @@ lbl_801F4954:
 /* 801F49AC 00000058  48 06 0E CD */	bl alphaAnime__13CPaneMgrAlphaFsUcUcUc
 /* 801F49B0 0000005C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801F49B4 00000060  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801F49B8 00000064  A8 84 00 94 */	lha r4, 0x94(r4)
+/* 801F49B8 00000064  A8 84 00 94 */	lha r4, 0x94(r4)	/* effective address: 8043021C */
 /* 801F49BC 00000068  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 801F49C0 0000006C  28 00 00 01 */	cmplwi r0, 1
 /* 801F49C4 00000070  40 82 00 30 */	bne lbl_801F49F4

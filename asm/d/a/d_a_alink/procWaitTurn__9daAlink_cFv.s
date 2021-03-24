@@ -9,7 +9,7 @@ lbl_800C3B1C:
 /* 800C3B38 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C3B3C 00000020  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800C3B40 00000024  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800C3B44 00000028  C0 44 00 38 */	lfs f2, 0x38(r4)
+/* 800C3B44 00000028  C0 44 00 38 */	lfs f2, 0x38(r4)	/* effective address: 8038D6F4 */
 /* 800C3B48 0000002C  48 1A CB F9 */	bl cLib_chaseF__FPfff
 /* 800C3B4C 00000030  7F C3 F3 78 */	mr r3, r30
 /* 800C3B50 00000034  4B FF 64 01 */	bl checkGroundSpecialMode__9daAlink_cFv

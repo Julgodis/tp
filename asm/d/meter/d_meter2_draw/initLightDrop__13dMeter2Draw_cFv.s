@@ -106,15 +106,15 @@ lbl_802122E4:
 lbl_80212318:
 /* 80212318 00000000  90 1E 01 EC */	stw r0, 0x1ec(r30)
 /* 8021231C 00000004  80 7E 01 E0 */	lwz r3, 0x1e0(r30)
-/* 80212320 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80212320 00000008  C0 22 AE 80 */	lfs f1, lit_4182(r2)
 /* 80212324 0000000C  48 04 34 AD */	bl setAlphaRate__13CPaneMgrAlphaFf
-/* 80212328 00000010  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80212328 00000010  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 8021232C 00000014  D0 1E 06 FC */	stfs f0, 0x6fc(r30)
 /* 80212330 00000018  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80212334 0000001C  3B E3 EB C8 */	addi r31, r3, g_drawHIO@l
-/* 80212338 00000020  C0 1F 0E 84 */	lfs f0, 0xe84(r31)
+/* 80212338 00000020  C0 1F 0E 84 */	lfs f0, 0xe84(r31)	/* effective address: 8042FA4C */
 /* 8021233C 00000024  D0 1E 06 F4 */	stfs f0, 0x6f4(r30)
-/* 80212340 00000028  C0 02 AE 84 */	lfs f0, d_meter_d_meter2_draw__lit_4183(r2)
+/* 80212340 00000028  C0 02 AE 84 */	lfs f0, lit_4183(r2)
 /* 80212344 0000002C  D0 1E 06 F8 */	stfs f0, 0x6f8(r30)
 /* 80212348 00000030  3B 20 00 00 */	li r25, 0
 /* 8021234C 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -142,19 +142,19 @@ lbl_80212390:
 /* 80212398 00000008  41 80 FF D0 */	blt lbl_80212368
 /* 8021239C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802123A0 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 802123A4 00000014  8B 64 5E A1 */	lbz r27, 0x5ea1(r4)
+/* 802123A4 00000014  8B 64 5E A1 */	lbz r27, 0x5ea1(r4)	/* effective address: 8040C061 */
 /* 802123A8 00000018  7F 43 D3 78 */	mr r3, r26
-/* 802123AC 0000001C  88 84 4E 0C */	lbz r4, 0x4e0c(r4)
+/* 802123AC 0000001C  88 84 4E 0C */	lbz r4, 0x4e0c(r4)	/* effective address: 8040AFCC */
 /* 802123B0 00000020  4B E2 1F 91 */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 802123B4 00000024  7C 64 1B 78 */	mr r4, r3
 /* 802123B8 00000028  7F C3 F3 78 */	mr r3, r30
 /* 802123BC 0000002C  7F 65 DB 78 */	mr r5, r27
 /* 802123C0 00000030  3C C0 80 43 */	lis r6, g_drawHIO@ha
 /* 802123C4 00000034  38 C6 EB C8 */	addi r6, r6, g_drawHIO@l
-/* 802123C8 00000038  C0 26 0E 8C */	lfs f1, 0xe8c(r6)
-/* 802123CC 0000003C  C0 46 0E 94 */	lfs f2, 0xe94(r6)
+/* 802123C8 00000038  C0 26 0E 8C */	lfs f1, 0xe8c(r6)	/* effective address: 8042FA54 */
+/* 802123CC 0000003C  C0 46 0E 94 */	lfs f2, 0xe94(r6)	/* effective address: 8042FA5C */
 /* 802123D0 00000040  C0 7F 0E 84 */	lfs f3, 0xe84(r31)
-/* 802123D4 00000044  C0 86 0E A4 */	lfs f4, 0xea4(r6)
+/* 802123D4 00000044  C0 86 0E A4 */	lfs f4, 0xea4(r6)	/* effective address: 8042FA6C */
 /* 802123D8 00000048  38 C0 00 00 */	li r6, 0
 /* 802123DC 0000004C  48 00 37 3D */	bl drawLightDrop__13dMeter2Draw_cFUcUcffffUc
 /* 802123E0 00000050  7F C3 F3 78 */	mr r3, r30

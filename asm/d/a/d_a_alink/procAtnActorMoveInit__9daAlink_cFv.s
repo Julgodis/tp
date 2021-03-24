@@ -14,7 +14,7 @@ lbl_800C3A18:
 /* 800C3A18 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800C3A1C 00000004  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800C3A20 00000008  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800C3A24 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 800C3A24 0000000C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 800C3A28 00000010  4B FE B0 49 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800C3A2C 00000014  38 60 00 01 */	li r3, 1
 lbl_800C3A30:

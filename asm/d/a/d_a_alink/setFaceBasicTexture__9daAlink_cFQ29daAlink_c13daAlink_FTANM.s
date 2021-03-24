@@ -25,7 +25,7 @@ lbl_800AF8EC:
 /* 800AF8F4 00000008  40 82 00 18 */	bne lbl_800AF90C
 /* 800AF8F8 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800AF8FC 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800AF900 00000014  A0 03 00 02 */	lhz r0, 2(r3)
+/* 800AF900 00000014  A0 03 00 02 */	lhz r0, 2(r3)	/* effective address: 804061C2 */
 /* 800AF904 00000018  28 00 00 04 */	cmplwi r0, 4
 /* 800AF908 0000001C  40 81 00 10 */	ble lbl_800AF918
 lbl_800AF90C:

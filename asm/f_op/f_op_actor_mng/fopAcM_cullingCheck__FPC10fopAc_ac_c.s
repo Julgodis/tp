@@ -23,7 +23,7 @@ lbl_8001AD34:
 /* 8001AD38 00000004  FC 40 08 90 */	fmr f2, f1
 /* 8001AD3C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001AD40 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001AD44 00000010  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8001AD44 00000010  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8001AD48 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 8001AD4C 00000018  41 82 00 0C */	beq lbl_8001AD58
 /* 8001AD50 0000001C  C0 03 4F B8 */	lfs f0, 0x4fb8(r3)
@@ -45,14 +45,14 @@ lbl_8001AD7C:
 /* 8001AD80 00000004  41 82 01 14 */	beq lbl_8001AE94
 /* 8001AD84 00000008  2C 03 00 0E */	cmpwi r3, 0xe
 /* 8001AD88 0000000C  40 82 00 80 */	bne lbl_8001AE08
-/* 8001AD8C 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
+/* 8001AD8C 00000010  C0 02 82 04 */	lfs f0, lit_4645(r2)
 /* 8001AD90 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AD94 00000000  40 81 00 58 */	ble lbl_8001ADEC
 /* 8001AD98 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
 /* 8001AD9C 00000008  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8001ADA0 0000000C  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 8001ADA4 00000010  3B A3 D8 E4 */	addi r29, r3, mClipper__14mDoLib_clipper@l
-/* 8001ADA8 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)
+/* 8001ADA8 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)	/* effective address: 803DD93C */
 /* 8001ADAC 00000018  7F A3 EB 78 */	mr r3, r29
 /* 8001ADB0 0000001C  48 25 89 DD */	bl calcViewFrustum__11J3DUClipperFv
 /* 8001ADB4 00000020  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
@@ -82,14 +82,14 @@ lbl_8001AE08:
 /* 8001AE0C 00000004  3C 60 80 3A */	lis r3, l_cullSizeBox@ha
 /* 8001AE10 00000008  38 03 35 F0 */	addi r0, r3, l_cullSizeBox@l
 /* 8001AE14 0000000C  7F C0 22 14 */	add r30, r0, r4
-/* 8001AE18 00000010  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
+/* 8001AE18 00000010  C0 02 82 04 */	lfs f0, lit_4645(r2)
 /* 8001AE1C 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AE20 00000000  40 81 00 58 */	ble lbl_8001AE78
 /* 8001AE24 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
 /* 8001AE28 00000008  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8001AE2C 0000000C  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 8001AE30 00000010  3B A3 D8 E4 */	addi r29, r3, mClipper__14mDoLib_clipper@l
-/* 8001AE34 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)
+/* 8001AE34 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)	/* effective address: 803DD93C */
 /* 8001AE38 00000018  7F A3 EB 78 */	mr r3, r29
 /* 8001AE3C 0000001C  48 25 89 51 */	bl calcViewFrustum__11J3DUClipperFv
 /* 8001AE40 00000020  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
@@ -117,14 +117,14 @@ lbl_8001AE78:
 lbl_8001AE94:
 /* 8001AE94 00000000  2C 03 00 17 */	cmpwi r3, 0x17
 /* 8001AE98 00000004  40 82 00 E0 */	bne lbl_8001AF78
-/* 8001AE9C 00000008  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
+/* 8001AE9C 00000008  C0 02 82 04 */	lfs f0, lit_4645(r2)
 /* 8001AEA0 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AEA4 00000000  40 81 00 88 */	ble lbl_8001AF2C
 /* 8001AEA8 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
 /* 8001AEAC 00000008  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8001AEB0 0000000C  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 8001AEB4 00000010  3B A3 D8 E4 */	addi r29, r3, mClipper__14mDoLib_clipper@l
-/* 8001AEB8 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)
+/* 8001AEB8 00000014  D0 1D 00 58 */	stfs f0, 0x58(r29)	/* effective address: 803DD93C */
 /* 8001AEBC 00000018  7F A3 EB 78 */	mr r3, r29
 /* 8001AEC0 0000001C  48 25 88 CD */	bl calcViewFrustum__11J3DUClipperFv
 /* 8001AEC4 00000020  C0 3E 05 14 */	lfs f1, 0x514(r30)
@@ -179,14 +179,14 @@ lbl_8001AF78:
 /* 8001AF80 00000008  3C 60 80 3A */	lis r3, l_cullSizeSphere@ha
 /* 8001AF84 0000000C  38 03 37 40 */	addi r0, r3, l_cullSizeSphere@l
 /* 8001AF88 00000010  7F A0 22 14 */	add r29, r0, r4
-/* 8001AF8C 00000014  C0 02 82 04 */	lfs f0, f_op_f_op_actor_mng__lit_4645(r2)
+/* 8001AF8C 00000014  C0 02 82 04 */	lfs f0, lit_4645(r2)
 /* 8001AF90 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8001AF94 00000000  40 81 00 7C */	ble lbl_8001B010
 /* 8001AF98 00000004  C0 0D 86 F0 */	lfs f0, mSystemFar__14mDoLib_clipper(r13)
 /* 8001AF9C 00000008  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8001AFA0 0000000C  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 8001AFA4 00000010  3B C3 D8 E4 */	addi r30, r3, mClipper__14mDoLib_clipper@l
-/* 8001AFA8 00000014  D0 1E 00 58 */	stfs f0, 0x58(r30)
+/* 8001AFA8 00000014  D0 1E 00 58 */	stfs f0, 0x58(r30)	/* effective address: 803DD93C */
 /* 8001AFAC 00000018  7F C3 F3 78 */	mr r3, r30
 /* 8001AFB0 0000001C  48 25 87 DD */	bl calcViewFrustum__11J3DUClipperFv
 /* 8001AFB4 00000020  C0 3D 00 0C */	lfs f1, 0xc(r29)

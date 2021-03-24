@@ -52,7 +52,7 @@ lbl_800E779C:
 /* 800E779C 00000000  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 800E77A0 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_pickUp_c0@ha
 /* 800E77A4 00000008  38 63 E8 40 */	addi r3, r3, m__20daAlinkHIO_pickUp_c0@l
-/* 800E77A8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800E77A8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E864 */
 /* 800E77AC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E77B0 00000000  40 80 00 20 */	bge lbl_800E77D0
 /* 800E77B4 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)

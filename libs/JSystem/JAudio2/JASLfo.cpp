@@ -43,12 +43,12 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 
 /* ############################################################################################## */
 /* 804556E0-804556E4 0004+00 s=3 e=0 z=0  None .sdata2    @341                                                         */
-SECTION_SDATA2 static u8 JASLfo__lit_341[4] = {
+SECTION_SDATA2 static u8 lit_341[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804556E4-804556E8 0004+00 s=2 e=0 z=0  None .sdata2    @342                                                         */
-SECTION_SDATA2 static f32 JASLfo__lit_342 = 1.0f;
+SECTION_SDATA2 static f32 lit_342 = 1.0f;
 
 /* 8029BD14-8029BD44 0030+00 s=1 e=1 z=0  None .text      __ct__6JASLfoFv                                              */
 #pragma push
@@ -63,10 +63,10 @@ asm JASLfo::JASLfo() {
 
 /* ############################################################################################## */
 /* 804556E8-804556EC 0004+00 s=1 e=0 z=0  None .sdata2    @363                                                         */
-SECTION_SDATA2 static f32 JASLfo__lit_363 = -8192.0f;
+SECTION_SDATA2 static f32 lit_363 = -8192.0f;
 
 /* 804556EC-804556F0 0004+00 s=1 e=0 z=0  None .sdata2    @364                                                         */
-SECTION_SDATA2 static f32 JASLfo__lit_364 = 8192.0f;
+SECTION_SDATA2 static f32 lit_364 = 8192.0f;
 
 /* 8029BD44-8029BDD8 0094+00 s=0 e=3 z=0  None .text      getValue__6JASLfoCFv                                         */
 #pragma push
@@ -81,7 +81,7 @@ asm void JASLfo::getValue() const {
 
 /* ############################################################################################## */
 /* 804556F0-804556F8 0004+04 s=1 e=0 z=0  None .sdata2    @376                                                         */
-SECTION_SDATA2 static f32 JASLfo__lit_376[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_376[1 + 1 /* padding */] = {
 	1.0f / 72.0f,
 	/* padding */
 	0.0f,

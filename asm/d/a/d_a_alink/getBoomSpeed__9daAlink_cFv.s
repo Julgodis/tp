@@ -18,12 +18,12 @@ lbl_800E0048:
 /* 800E004C 00000004  41 82 00 14 */	beq lbl_800E0060
 /* 800E0050 00000008  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E0054 0000000C  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E0058 00000010  C0 23 00 38 */	lfs f1, 0x38(r3)
+/* 800E0058 00000010  C0 23 00 38 */	lfs f1, 0x38(r3)	/* effective address: 8038E700 */
 /* 800E005C 00000014  48 00 00 10 */	b lbl_800E006C
 lbl_800E0060:
 /* 800E0060 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E0064 00000004  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E0068 00000008  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 800E0068 00000008  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038E6FC */
 lbl_800E006C:
 /* 800E006C 00000000  80 1E 31 A0 */	lwz r0, 0x31a0(r30)
 /* 800E0070 00000004  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15

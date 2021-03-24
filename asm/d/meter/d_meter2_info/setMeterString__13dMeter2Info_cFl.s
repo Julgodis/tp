@@ -12,7 +12,7 @@ lbl_8021C984:
 lbl_8021C994:
 /* 8021C994 00000000  3C A0 80 43 */	lis r5, g_meter2_info@ha
 /* 8021C998 00000004  38 A5 01 88 */	addi r5, r5, g_meter2_info@l
-/* 8021C99C 00000008  80 A5 00 1C */	lwz r5, 0x1c(r5)
+/* 8021C99C 00000008  80 A5 00 1C */	lwz r5, 0x1c(r5)	/* effective address: 804301A4 */
 /* 8021C9A0 0000000C  28 05 00 00 */	cmplwi r5, 0
 /* 8021C9A4 00000010  41 82 00 30 */	beq lbl_8021C9D4
 /* 8021C9A8 00000014  88 05 01 E5 */	lbz r0, 0x1e5(r5)

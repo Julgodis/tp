@@ -1,7 +1,7 @@
 lbl_801ED2BC:
 /* 801ED2BC 00000000  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 801ED2C0 00000004  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801ED2C4 00000008  80 04 00 30 */	lwz r0, 0x30(r4)
+/* 801ED2C4 00000008  80 04 00 30 */	lwz r0, 0x30(r4)	/* effective address: 803DD318 */
 /* 801ED2C8 0000000C  54 00 06 73 */	rlwinm. r0, r0, 0, 0x19, 0x19
 /* 801ED2CC 00000010  41 82 00 30 */	beq lbl_801ED2FC
 /* 801ED2D0 00000014  88 03 06 CE */	lbz r0, 0x6ce(r3)
@@ -9,7 +9,7 @@ lbl_801ED2BC:
 /* 801ED2D8 0000001C  41 82 00 18 */	beq lbl_801ED2F0
 /* 801ED2DC 00000020  3C 80 80 43 */	lis r4, g_ringHIO@ha
 /* 801ED2E0 00000024  38 84 FA FC */	addi r4, r4, g_ringHIO@l
-/* 801ED2E4 00000028  A8 04 01 4C */	lha r0, 0x14c(r4)
+/* 801ED2E4 00000028  A8 04 01 4C */	lha r0, 0x14c(r4)	/* effective address: 8042FC48 */
 /* 801ED2E8 0000002C  B0 03 06 72 */	sth r0, 0x672(r3)
 /* 801ED2EC 00000030  48 00 00 20 */	b lbl_801ED30C
 lbl_801ED2F0:
@@ -19,7 +19,7 @@ lbl_801ED2F0:
 lbl_801ED2FC:
 /* 801ED2FC 00000000  3C 80 80 43 */	lis r4, g_ringHIO@ha
 /* 801ED300 00000004  38 84 FA FC */	addi r4, r4, g_ringHIO@l
-/* 801ED304 00000008  A8 04 01 4A */	lha r0, 0x14a(r4)
+/* 801ED304 00000008  A8 04 01 4A */	lha r0, 0x14a(r4)	/* effective address: 8042FC46 */
 /* 801ED308 0000000C  B0 03 06 72 */	sth r0, 0x672(r3)
 lbl_801ED30C:
 /* 801ED30C 00000000  38 00 00 00 */	li r0, 0

@@ -51,10 +51,10 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 /* ############################################################################################## */
 /* 804550A8-804550B0 0008+00 s=1 e=0 z=0  None .sdata2    @2201                                                        */
-SECTION_SDATA2 static f64 c_math__lit_2201 = 6.2831854820251465;
+SECTION_SDATA2 static f64 lit_2201 = 6.2831854820251465;
 
 /* 804550B0-804550B4 0004+00 s=1 e=0 z=0  None .sdata2    @2215                                                        */
-SECTION_SDATA2 static f32 c_math__lit_2215 = 10430.3779296875f;
+SECTION_SDATA2 static f32 lit_2215 = 10430.3779296875f;
 
 /* 802675E4-80267640 005C+00 s=0 e=23 z=0  None .text      cM_rad2s__Ff                                                 */
 #pragma push
@@ -219,7 +219,7 @@ asm static void U_GetAtanTable(f32 param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 804550B8-804550BC 0004+00 s=1 e=0 z=0  None .sdata2    @2277                                                        */
-SECTION_SDATA2 static u8 c_math__lit_2277[4] = {
+SECTION_SDATA2 static u8 lit_2277[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -288,7 +288,7 @@ SECTION_SDATA2 static f32 lit_2298[1 + 1 /* padding */] = {
 };
 
 /* 804550D8-804550E0 0008+00 s=2 e=0 z=0  None .sdata2    @2299                                                        */
-SECTION_SDATA2 static f64 c_math__lit_2299 = 1.0;
+SECTION_SDATA2 static f64 lit_2299 = 1.0;
 
 /* 8026786C-80267954 00E8+00 s=2 e=15 z=0  None .text      cM_rnd__Fv                                                   */
 #pragma push
@@ -314,10 +314,10 @@ asm void cM_rndF(f32 param_0) {
 
 /* ############################################################################################## */
 /* 804550E0-804550E4 0004+00 s=2 e=0 z=0  None .sdata2    @2311                                                        */
-SECTION_SDATA2 static f32 c_math__lit_2311 = 2.0f;
+SECTION_SDATA2 static f32 lit_2311 = 2.0f;
 
 /* 804550E4-804550E8 0004+00 s=2 e=0 z=0  None .sdata2    @2312                                                        */
-SECTION_SDATA2 static f32 c_math__lit_2312 = 0.5f;
+SECTION_SDATA2 static f32 lit_2312 = 0.5f;
 
 /* 8026798C-802679D4 0048+00 s=0 e=24 z=0  None .text      cM_rndFX__Ff                                                 */
 #pragma push

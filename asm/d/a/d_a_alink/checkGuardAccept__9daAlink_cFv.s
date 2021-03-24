@@ -11,7 +11,7 @@ lbl_800DCF64:
 /* 800DCF88 00000024  41 82 00 1C */	beq lbl_800DCFA4
 /* 800DCF8C 00000028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800DCF90 0000002C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800DCF94 00000030  88 04 00 15 */	lbz r0, 0x15(r4)
+/* 800DCF94 00000030  88 04 00 15 */	lbz r0, 0x15(r4)	/* effective address: 804061D5 */
 /* 800DCF98 00000034  28 00 00 FF */	cmplwi r0, 0xff
 /* 800DCF9C 00000038  41 82 00 08 */	beq lbl_800DCFA4
 /* 800DCFA0 0000003C  38 C0 00 01 */	li r6, 1

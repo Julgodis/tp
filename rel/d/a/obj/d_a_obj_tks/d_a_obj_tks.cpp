@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daObjTks_c {
@@ -36,6 +36,7 @@ struct daObjTks_c {
 	/* 80D102D0 */ void setExpressionBtp(int);
 	/* 80D103A4 */ void setMotion(int, f32, int);
 	/* 80D103E8 */ void reset();
+	/* 80D10578 */ void setAction(void (daObjTks_c::*)());
 	/* 80D10618 */ void wait();
 	/* 80D106C8 */ void setExpression(int, f32);
 	/* 80D106F4 */ void talk();
@@ -83,6 +84,16 @@ struct J3DTexMtxAnm {
 struct J3DMatColorAnm {
 	/* 80D0FCE0 */ ~J3DMatColorAnm();
 	/* 80D0FD1C */ J3DMatColorAnm();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80D11EA0 */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_Lookat_c {
@@ -172,7 +183,7 @@ extern "C" void setExpressionAnm__10daObjTks_cFib(); // 1
 extern "C" void setExpressionBtp__10daObjTks_cFi(); // 1
 extern "C" void setMotion__10daObjTks_cFifi(); // 1
 extern "C" void reset__10daObjTks_cFv(); // 1
-extern "C" static void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v(); // 1
+extern "C" void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v(); // 1
 extern "C" void wait__10daObjTks_cFv(); // 1
 extern "C" void setExpression__10daObjTks_cFif(); // 1
 extern "C" void talk__10daObjTks_cFv(); // 1
@@ -192,7 +203,7 @@ extern "C" void setAttnPos__10daObjTks_cFv(); // 1
 extern "C" void lookat__10daObjTks_cFv(); // 1
 extern "C" void drawDbgInfo__10daObjTks_cFv(); // 1
 extern "C" void drawOtherMdls__10daObjTks_cFv(); // 1
-extern "C" static void func_80D11EA0(); // 1
+extern "C" void func_80D11EA0(); // 1
 extern "C" void __sinit_d_a_obj_tks_cpp(); // 1
 extern "C" void __dt__15daNpcF_Lookat_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -599,7 +610,7 @@ asm void daObjTks_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v() {
+asm void daObjTks_c::setAction(void (daObjTks_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setAction__10daObjTks_cFM10daObjTks_cFPCvPv_v.s"
 }
@@ -819,7 +830,7 @@ asm void daObjTks_c::drawOtherMdls() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80D11EA0() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/func_80D11EA0.s"
 }

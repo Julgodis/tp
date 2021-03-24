@@ -16,14 +16,14 @@ struct daE_DT_HIO_c {
 	/* 806B5BDC */ ~daE_DT_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
 	/* 806AE56C */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daE_DT_c {

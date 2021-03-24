@@ -13,8 +13,8 @@ lbl_8001CA1C:
 /* 8001CA48 0000002C  7C 7F 1B 78 */	mr r31, r3
 /* 8001CA4C 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001CA50 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001CA54 00000038  80 63 5D AC */	lwz r3, 0x5dac(r3)
-/* 8001CA58 0000003C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 8001CA54 00000038  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8001CA58 0000003C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 8001CA5C 00000040  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 8001CA60 00000044  7D 89 03 A6 */	mtctr r12
 /* 8001CA64 00000048  4E 80 04 21 */	bctrl 

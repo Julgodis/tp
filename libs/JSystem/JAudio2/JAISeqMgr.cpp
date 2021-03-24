@@ -11,13 +11,7 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-struct JAIAudience {
-};
-
-struct JASSoundParams {
+struct JAISeqDataRegion {
 };
 
 template <typename A0>
@@ -26,10 +20,19 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template1 {
 };
 
-struct JAISeqMgr;
 struct JAISoundActivity {
 };
 
+struct JAIAudience {
+};
+
+struct JAISoundID {
+};
+
+struct JASSoundParams {
+};
+
+struct JAISeqMgr;
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -47,9 +50,6 @@ struct JAISeq {
 };
 
 struct JAISoundHandle {
-};
-
-struct JAISeqDataRegion {
 };
 
 struct JAISeqMgr {
@@ -204,7 +204,7 @@ SECTION_DATA void* __vt__9JAISeqMgr[5 + 1 /* padding */] = {
 };
 
 /* 804557A8-804557AC 0004+00 s=1 e=0 z=0  None .sdata2    @691                                                         */
-SECTION_SDATA2 static f32 JAISeqMgr__lit_691 = 1.0f;
+SECTION_SDATA2 static f32 lit_691 = 1.0f;
 
 /* 804557AC-804557B0 0004+00 s=1 e=0 z=0  None .sdata2    @692                                                         */
 SECTION_SDATA2 static u8 lit_692[4] = {
@@ -212,7 +212,7 @@ SECTION_SDATA2 static u8 lit_692[4] = {
 };
 
 /* 804557B0-804557B8 0004+04 s=1 e=0 z=0  None .sdata2    @693                                                         */
-SECTION_SDATA2 static f32 JAISeqMgr__lit_693[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_693[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

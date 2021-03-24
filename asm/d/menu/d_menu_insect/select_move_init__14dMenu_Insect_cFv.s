@@ -7,7 +7,7 @@ lbl_801D9290:
 /* 801D92A4 00000014  38 00 00 FF */	li r0, 0xff
 /* 801D92A8 00000018  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801D92AC 0000001C  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801D92B0 00000020  98 04 00 C3 */	stb r0, 0xc3(r4)
+/* 801D92B0 00000020  98 04 00 C3 */	stb r0, 0xc3(r4)	/* effective address: 8043024B */
 /* 801D92B4 00000024  38 80 04 0C */	li r4, 0x40c
 /* 801D92B8 00000028  48 00 10 4D */	bl setAButtonString__14dMenu_Insect_cFUs
 /* 801D92BC 0000002C  7F E3 FB 78 */	mr r3, r31

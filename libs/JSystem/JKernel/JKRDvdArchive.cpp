@@ -101,7 +101,7 @@ extern "C" void fetchResource__13JKRDvdArchiveFPvUlPQ210JKRArchive12SDIFileEntry
 extern "C" void fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii(); // 1
 extern "C" void fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc(); // 1
 extern "C" void getExpandedResSize__13JKRDvdArchiveCFPCv(); // 1
-extern "C" extern char const* const JKRDvdArchive__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

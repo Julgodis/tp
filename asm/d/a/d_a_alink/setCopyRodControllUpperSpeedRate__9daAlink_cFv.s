@@ -20,7 +20,7 @@ lbl_800E15FC:
 lbl_800E1644:
 /* 800E1644 00000000  57 C0 06 3F */	clrlwi. r0, r30, 0x18
 /* 800E1648 00000004  41 82 00 0C */	beq lbl_800E1654
-/* 800E164C 00000008  C3 E2 92 B8 */	lfs f31, d_a_d_a_alink__lit_6040(r2)
+/* 800E164C 00000008  C3 E2 92 B8 */	lfs f31, lit_6040(r2)
 /* 800E1650 0000000C  48 00 00 80 */	b lbl_800E16D0
 lbl_800E1654:
 /* 800E1654 00000000  A0 1D 2F E8 */	lhz r0, 0x2fe8(r29)
@@ -29,7 +29,7 @@ lbl_800E1654:
 /* 800E1660 0000000C  C0 3D 34 78 */	lfs f1, 0x3478(r29)
 /* 800E1664 00000010  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800E1668 00000014  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800E166C 00000018  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800E166C 00000018  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038D6EC */
 /* 800E1670 0000001C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E1674 00000020  FC 00 02 10 */	fabs f0, f0
 /* 800E1678 00000024  FC 00 00 18 */	frsp f0, f0
@@ -39,7 +39,7 @@ lbl_800E1684:
 /* 800E1684 00000000  C0 3D 33 98 */	lfs f1, 0x3398(r29)
 /* 800E1688 00000004  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800E168C 00000008  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800E1690 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800E1690 0000000C  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038D6EC */
 /* 800E1694 00000010  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E1698 00000014  FC 00 02 10 */	fabs f0, f0
 /* 800E169C 00000018  FC 00 00 18 */	frsp f0, f0
@@ -51,13 +51,13 @@ lbl_800E16A4:
 /* 800E16B0 0000000C  4B FD 9E 09 */	bl checkHeavyStateOn__9daAlink_cFii
 /* 800E16B4 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 800E16B8 00000014  41 82 00 18 */	beq lbl_800E16D0
-/* 800E16BC 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E16BC 00000018  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E16C0 0000001C  C0 1D 34 34 */	lfs f0, 0x3434(r29)
 /* 800E16C4 00000020  EC 00 00 32 */	fmuls f0, f0, f0
 /* 800E16C8 00000024  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E16CC 00000028  EF FF 00 32 */	fmuls f31, f31, f0
 lbl_800E16D0:
-/* 800E16D0 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E16D0 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E16D4 00000004  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 800E16D8 00000000  40 81 00 08 */	ble lbl_800E16E0
 /* 800E16DC 00000004  FF E0 00 90 */	fmr f31, f0

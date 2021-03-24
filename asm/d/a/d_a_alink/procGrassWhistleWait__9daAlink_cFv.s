@@ -41,7 +41,7 @@ lbl_80111D1C:
 /* 80111D34 00000018  40 82 01 1C */	bne lbl_80111E50
 /* 80111D38 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111D3C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80111D40 00000024  83 A3 5D B8 */	lwz r29, 0x5db8(r3)
+/* 80111D40 00000024  83 A3 5D B8 */	lwz r29, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 80111D44 00000028  3C 60 80 11 */	lis r3, daAlink_searchWhistle__FP10fopAc_ac_cPv@ha
 /* 80111D48 0000002C  38 63 17 4C */	addi r3, r3, daAlink_searchWhistle__FP10fopAc_ac_cPv@l
 /* 80111D4C 00000030  38 80 00 00 */	li r4, 0
@@ -146,13 +146,13 @@ lbl_80111EA0:
 /* 80111EAC 0000000C  4B F9 B1 05 */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 80111EB0 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80111EB4 00000014  38 80 00 02 */	li r4, 2
-/* 80111EB8 00000018  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 80111EB8 00000018  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 80111EBC 0000001C  4B F9 B8 69 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80111EC0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111EC4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80111EC8 00000028  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
+/* 80111EC8 00000028  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)	/* effective address: 8040B164 */
 /* 80111ECC 0000002C  60 00 00 06 */	ori r0, r0, 6
-/* 80111ED0 00000030  B0 03 4F A4 */	sth r0, 0x4fa4(r3)
+/* 80111ED0 00000030  B0 03 4F A4 */	sth r0, 0x4fa4(r3)	/* effective address: 8040B164 */
 /* 80111ED4 00000034  A8 1F 30 0C */	lha r0, 0x300c(r31)
 /* 80111ED8 00000038  2C 00 00 00 */	cmpwi r0, 0
 /* 80111EDC 0000003C  40 82 00 6C */	bne lbl_80111F48
@@ -209,7 +209,7 @@ lbl_80111F90:
 /* 80111FA0 00000010  41 82 00 34 */	beq lbl_80111FD4
 /* 80111FA4 00000014  7F E3 FB 78 */	mr r3, r31
 /* 80111FA8 00000018  38 80 00 02 */	li r4, 2
-/* 80111FAC 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 80111FAC 0000001C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 80111FB0 00000020  4B F9 B7 75 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 80111FB4 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80111FB8 00000028  48 00 5C D9 */	bl resetSpecialEvent__9daAlink_cFv

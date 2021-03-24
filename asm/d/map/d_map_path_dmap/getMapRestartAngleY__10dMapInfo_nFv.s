@@ -5,7 +5,7 @@ lbl_8003F0F8:
 /* 8003F104 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8003F108 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003F10C 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003F110 00000018  AB E3 0D BA */	lha r31, 0xdba(r3)
+/* 8003F110 00000018  AB E3 0D BA */	lha r31, 0xdba(r3)	/* effective address: 80406F7A */
 /* 8003F114 0000001C  4B FF FE 5D */	bl getConstRestartIconPointer__10dMapInfo_nFv
 /* 8003F118 00000020  28 03 00 00 */	cmplwi r3, 0
 /* 8003F11C 00000024  41 82 00 34 */	beq lbl_8003F150
@@ -27,7 +27,7 @@ lbl_8003F150:
 /* 8003F154 00000004  38 83 60 94 */	addi r4, r3, mStatus__20dStage_roomControl_c@l
 /* 8003F158 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003F15C 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003F160 00000010  88 03 0D B4 */	lbz r0, 0xdb4(r3)
+/* 8003F160 00000010  88 03 0D B4 */	lbz r0, 0xdb4(r3)	/* effective address: 80406F74 */
 /* 8003F164 00000014  7C 00 07 74 */	extsb r0, r0
 /* 8003F168 00000018  1C 00 04 04 */	mulli r0, r0, 0x404
 /* 8003F16C 0000001C  7C 64 02 14 */	add r3, r4, r0

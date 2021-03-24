@@ -7,9 +7,9 @@ lbl_801A8BC8:
 /* 801A8BDC 00000014  38 00 00 01 */	li r0, 1
 /* 801A8BE0 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A8BE4 0000001C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A8BE8 00000020  98 03 12 C8 */	stb r0, 0x12c8(r3)
-/* 801A8BEC 00000024  98 03 12 C2 */	stb r0, 0x12c2(r3)
-/* 801A8BF0 00000028  98 03 12 C3 */	stb r0, 0x12c3(r3)
+/* 801A8BE8 00000020  98 03 12 C8 */	stb r0, 0x12c8(r3)	/* effective address: 8042DD1C */
+/* 801A8BEC 00000024  98 03 12 C2 */	stb r0, 0x12c2(r3)	/* effective address: 8042DD16 */
+/* 801A8BF0 00000028  98 03 12 C3 */	stb r0, 0x12c3(r3)	/* effective address: 8042DD17 */
 /* 801A8BF4 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801A8BF8 00000030  7C 08 03 A6 */	mtlr r0
 /* 801A8BFC 00000034  38 21 00 10 */	addi r1, r1, 0x10

@@ -11,21 +11,21 @@
 // Types:
 // 
 
+struct Vec {
+};
+
+struct J3DJoint {
+};
+
 struct fopAc_ac_c {
 };
 
 struct J3DModel {
 };
 
-struct J3DJoint {
-};
-
 struct cXyz {
 	/* 80A136EC */ ~cXyz();
 	/* 80A13728 */ cXyz();
-};
-
-struct Vec {
 };
 
 struct daNpcIns_c {
@@ -106,6 +106,16 @@ struct J3DMatColorAnm {
 
 struct cM3dGPla {
 	/* 80A11330 */ ~cM3dGPla();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80A13468 */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_ActorMngr_c {
@@ -223,7 +233,7 @@ extern "C" void setAttnPos__10daNpcIns_cFv(); // 1
 extern "C" void lookat__10daNpcIns_cFv(); // 1
 extern "C" void setMtx__10daNpcIns_cFv(); // 1
 extern "C" void drawDbgInfo__10daNpcIns_cFv(); // 1
-extern "C" static void func_80A13468(); // 1
+extern "C" void func_80A13468(); // 1
 extern "C" static void func_80A13474(); // 1
 extern "C" void __sinit_d_a_npc_ins_cpp(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
@@ -1024,7 +1034,7 @@ asm void daNpcIns_c::drawDbgInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80A13468() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/func_80A13468.s"
 }

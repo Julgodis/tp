@@ -9,12 +9,12 @@ lbl_8001FD34:
 /* 8001FD50 0000001C  7C BE 2B 78 */	mr r30, r5
 /* 8001FD54 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001FD58 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 8001FD5C 00000028  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
+/* 8001FD5C 00000028  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 8001FD60 0000002C  28 00 00 08 */	cmplwi r0, 8
 /* 8001FD64 00000030  40 82 00 14 */	bne lbl_8001FD78
 /* 8001FD68 00000034  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8001FD6C 00000038  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8001FD70 0000003C  80 63 00 1C */	lwz r3, 0x1c(r3)
+/* 8001FD70 0000003C  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 8001FD74 00000040  48 1F F9 79 */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_8001FD78:
 /* 8001FD78 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
@@ -34,9 +34,9 @@ lbl_8001FDAC:
 /* 8001FDAC 00000000  38 00 00 FF */	li r0, 0xff
 /* 8001FDB0 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001FDB4 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001FDB8 0000000C  98 03 5E 7C */	stb r0, 0x5e7c(r3)
+/* 8001FDB8 0000000C  98 03 5E 7C */	stb r0, 0x5e7c(r3)	/* effective address: 8040C03C */
 /* 8001FDBC 00000010  38 00 FF FF */	li r0, -1
-/* 8001FDC0 00000014  90 03 5E E8 */	stw r0, 0x5ee8(r3)
+/* 8001FDC0 00000014  90 03 5E E8 */	stw r0, 0x5ee8(r3)	/* effective address: 8040C0A8 */
 /* 8001FDC4 00000018  28 1D 00 00 */	cmplwi r29, 0
 /* 8001FDC8 0000001C  41 82 00 20 */	beq lbl_8001FDE8
 /* 8001FDCC 00000020  C0 1D 05 38 */	lfs f0, 0x538(r29)
@@ -47,14 +47,14 @@ lbl_8001FDAC:
 /* 8001FDE0 00000034  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8001FDE4 00000038  48 00 00 14 */	b lbl_8001FDF8
 lbl_8001FDE8:
-/* 8001FDE8 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__lit_3902(r2)
+/* 8001FDE8 00000000  C0 02 82 70 */	lfs f0, lit_3902(r2)
 /* 8001FDEC 00000004  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8001FDF0 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8001FDF4 0000000C  D0 01 00 10 */	stfs f0, 0x10(r1)
 lbl_8001FDF8:
 /* 8001FDF8 00000000  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 8001FDFC 00000004  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 8001FE00 00000008  88 03 03 1F */	lbz r0, 0x31f(r3)
+/* 8001FE00 00000008  88 03 03 1F */	lbz r0, 0x31f(r3)	/* effective address: 804305AB */
 /* 8001FE04 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 8001FE08 00000010  40 82 00 08 */	bne lbl_8001FE10
 /* 8001FE0C 00000014  AB 83 02 F4 */	lha r28, 0x2f4(r3)

@@ -14,7 +14,7 @@ lbl_802B9D98:
 /* 802B9DC8 00000030  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 802B9DCC 00000034  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 802B9DD0 00000038  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 802B9DD4 0000003C  A0 84 00 D0 */	lhz r4, 0xd0(r4)
+/* 802B9DD4 0000003C  A0 84 00 D0 */	lhz r4, 0xd0(r4)	/* effective address: 803A7358 */
 /* 802B9DD8 00000040  4B D7 AB E5 */	bl isEventBit__11dSv_event_cCFUs
 /* 802B9DDC 00000044  30 03 FF FF */	addic r0, r3, -1
 /* 802B9DE0 00000048  7C 60 19 10 */	subfe r3, r0, r3

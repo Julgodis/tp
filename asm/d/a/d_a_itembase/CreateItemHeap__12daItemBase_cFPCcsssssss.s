@@ -87,7 +87,7 @@ lbl_80144884:
 /* 80144898 00000014  7E A5 AB 78 */	mr r5, r21
 /* 8014489C 00000018  38 C0 00 01 */	li r6, 1
 /* 801448A0 0000001C  38 E0 00 02 */	li r7, 2
-/* 801448A4 00000020  C0 22 99 A8 */	lfs f1, d_a_d_a_itembase__lit_3881(r2)
+/* 801448A4 00000020  C0 22 99 A8 */	lfs f1, lit_3881(r2)
 /* 801448A8 00000024  39 00 00 00 */	li r8, 0
 /* 801448AC 00000028  39 20 FF FF */	li r9, -1
 /* 801448B0 0000002C  4B EC 8D 8D */	bl init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss
@@ -127,7 +127,7 @@ lbl_80144918:
 /* 8014492C 00000014  7E A5 AB 78 */	mr r5, r21
 /* 80144930 00000018  38 C0 00 01 */	li r6, 1
 /* 80144934 0000001C  38 E0 00 02 */	li r7, 2
-/* 80144938 00000020  C0 22 99 A8 */	lfs f1, d_a_d_a_itembase__lit_3881(r2)
+/* 80144938 00000020  C0 22 99 A8 */	lfs f1, lit_3881(r2)
 /* 8014493C 00000024  39 00 00 00 */	li r8, 0
 /* 80144940 00000028  39 20 FF FF */	li r9, -1
 /* 80144944 0000002C  4B EC 8B 39 */	bl init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss
@@ -166,7 +166,7 @@ lbl_801449AC:
 /* 801449BC 00000010  7E A4 AB 78 */	mr r4, r21
 /* 801449C0 00000014  38 A0 00 01 */	li r5, 1
 /* 801449C4 00000018  38 C0 00 02 */	li r6, 2
-/* 801449C8 0000001C  C0 22 99 A8 */	lfs f1, d_a_d_a_itembase__lit_3881(r2)
+/* 801449C8 0000001C  C0 22 99 A8 */	lfs f1, lit_3881(r2)
 /* 801449CC 00000020  38 E0 00 00 */	li r7, 0
 /* 801449D0 00000024  39 00 FF FF */	li r8, -1
 /* 801449D4 00000028  39 20 00 00 */	li r9, 0
@@ -218,7 +218,7 @@ lbl_80144A68:
 /* 80144A7C 00000014  7E A5 AB 78 */	mr r5, r21
 /* 80144A80 00000018  7E C6 B3 78 */	mr r6, r22
 /* 80144A84 0000001C  38 E0 00 02 */	li r7, 2
-/* 80144A88 00000020  C0 22 99 A8 */	lfs f1, d_a_d_a_itembase__lit_3881(r2)
+/* 80144A88 00000020  C0 22 99 A8 */	lfs f1, lit_3881(r2)
 /* 80144A8C 00000024  39 00 00 00 */	li r8, 0
 /* 80144A90 00000028  39 20 FF FF */	li r9, -1
 /* 80144A94 0000002C  4B EC 8C 79 */	bl init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss
@@ -258,7 +258,7 @@ lbl_80144AFC:
 /* 80144B10 00000014  7E A5 AB 78 */	mr r5, r21
 /* 80144B14 00000018  38 C0 00 01 */	li r6, 1
 /* 80144B18 0000001C  38 E0 00 02 */	li r7, 2
-/* 80144B1C 00000020  C0 22 99 A8 */	lfs f1, d_a_d_a_itembase__lit_3881(r2)
+/* 80144B1C 00000020  C0 22 99 A8 */	lfs f1, lit_3881(r2)
 /* 80144B20 00000024  39 00 00 00 */	li r8, 0
 /* 80144B24 00000028  39 20 FF FF */	li r9, -1
 /* 80144B28 0000002C  4B EC 8A 25 */	bl init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss

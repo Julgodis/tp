@@ -64,11 +64,11 @@ lbl_8009E82C:
 /* 8009E8A0 00000074  C0 1F 2C 24 */	lfs f0, 0x2c24(r31)
 /* 8009E8A4 00000078  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8009E8A8 0000007C  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 8009E8AC 00000080  D0 03 00 0C */	stfs f0, 0xc(r3)
+/* 8009E8AC 00000080  D0 03 00 0C */	stfs f0, 0xc(r3)	/* effective address: 80434BF0 */
 /* 8009E8B0 00000084  C0 1F 2C 34 */	lfs f0, 0x2c34(r31)
-/* 8009E8B4 00000088  D0 03 00 1C */	stfs f0, 0x1c(r3)
+/* 8009E8B4 00000088  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 80434C00 */
 /* 8009E8B8 0000008C  C0 1F 2C 44 */	lfs f0, 0x2c44(r31)
-/* 8009E8BC 00000090  D0 03 00 2C */	stfs f0, 0x2c(r3)
+/* 8009E8BC 00000090  D0 03 00 2C */	stfs f0, 0x2c(r3)	/* effective address: 80434C10 */
 /* 8009E8C0 00000094  48 00 00 40 */	b lbl_8009E900
 lbl_8009E8C4:
 /* 8009E8C4 00000000  80 7F 20 60 */	lwz r3, 0x2060(r31)

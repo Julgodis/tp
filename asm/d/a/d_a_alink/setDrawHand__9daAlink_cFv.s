@@ -18,13 +18,13 @@ lbl_800CAFC8:
 /* 800CB008 00000040  41 82 00 40 */	beq lbl_800CB048
 /* 800CB00C 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CB010 00000048  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800CB014 0000004C  88 64 00 14 */	lbz r3, 0x14(r4)
+/* 800CB014 0000004C  88 64 00 14 */	lbz r3, 0x14(r4)	/* effective address: 804061D4 */
 /* 800CB018 00000050  38 03 FF 01 */	addi r0, r3, -255
 /* 800CB01C 00000054  20 00 00 00 */	subfic r0, r0, 0
 /* 800CB020 00000058  7C 60 01 10 */	subfe r3, r0, r0
 /* 800CB024 0000005C  38 00 00 FE */	li r0, 0xfe
 /* 800CB028 00000060  7C 1F 18 78 */	andc r31, r0, r3
-/* 800CB02C 00000064  88 04 00 15 */	lbz r0, 0x15(r4)
+/* 800CB02C 00000064  88 04 00 15 */	lbz r0, 0x15(r4)	/* effective address: 804061D5 */
 /* 800CB030 00000068  28 00 00 FF */	cmplwi r0, 0xff
 /* 800CB034 0000006C  41 82 00 0C */	beq lbl_800CB040
 /* 800CB038 00000070  3B C0 00 06 */	li r30, 6

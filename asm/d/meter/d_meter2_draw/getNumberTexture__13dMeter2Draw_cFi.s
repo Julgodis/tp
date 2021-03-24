@@ -5,7 +5,7 @@ lbl_8021A29C:
 /* 8021A2A8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8021A2AC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021A2B0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021A2B4 00000018  83 E3 5D 30 */	lwz r31, 0x5d30(r3)
+/* 8021A2B4 00000018  83 E3 5D 30 */	lwz r31, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 8021A2B8 0000001C  7C 83 23 78 */	mr r3, r4
 /* 8021A2BC 00000020  48 00 40 0D */	bl dMeter2Info_getNumberTextureName__Fi
 /* 8021A2C0 00000024  7C 65 1B 78 */	mr r5, r3

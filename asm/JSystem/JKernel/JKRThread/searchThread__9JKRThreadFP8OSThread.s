@@ -1,7 +1,7 @@
 lbl_802D1960:
 /* 802D1960 00000000  3C 80 80 43 */	lis r4, sThreadList__9JKRThread@ha
 /* 802D1964 00000004  38 84 42 8C */	addi r4, r4, sThreadList__9JKRThread@l
-/* 802D1968 00000008  80 84 00 00 */	lwz r4, 0(r4)
+/* 802D1968 00000008  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8043428C */
 /* 802D196C 0000000C  48 00 00 20 */	b lbl_802D198C
 lbl_802D1970:
 /* 802D1970 00000000  80 A4 00 00 */	lwz r5, 0(r4)

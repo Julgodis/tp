@@ -5,10 +5,10 @@ lbl_80122BBC:
 /* 80122BC8 0000000C  39 61 00 90 */	addi r11, r1, 0x90
 /* 80122BCC 00000010  48 23 F6 09 */	bl _savegpr_27
 /* 80122BD0 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 80122BD4 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 80122BD8 0000001C  3B 83 D6 58 */	addi r28, r3, d_a_d_a_alink__lit_3757@l
-/* 80122BDC 00000020  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 80122BE0 00000024  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 80122BD4 00000018  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 80122BD8 0000001C  3B 83 D6 58 */	addi r28, r3, lit_3757@l
+/* 80122BDC 00000020  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 80122BE0 00000024  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 80122BE4 00000028  38 63 01 2C */	addi r3, r3, 0x12c
 /* 80122BE8 0000002C  4B F7 AE 79 */	bl checkStageName__9daAlink_cFPCc
 /* 80122BEC 00000030  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -102,8 +102,8 @@ lbl_80122CF4:
 /* 80122D34 00000040  A8 1E 30 1A */	lha r0, 0x301a(r30)
 /* 80122D38 00000044  2C 00 00 06 */	cmpwi r0, 6
 /* 80122D3C 00000048  40 82 01 C4 */	bne lbl_80122F00
-/* 80122D40 0000004C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 80122D44 00000050  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 80122D40 0000004C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 80122D44 00000050  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 80122D48 00000054  38 63 00 BB */	addi r3, r3, 0xbb
 /* 80122D4C 00000058  4B F7 AD 15 */	bl checkStageName__9daAlink_cFPCc
 /* 80122D50 0000005C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -157,7 +157,7 @@ lbl_80122CF4:
 /* 80122E10 0000011C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80122E14 00000000  40 81 00 58 */	ble lbl_80122E6C
 /* 80122E18 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80122E1C 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 80122E1C 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 80122E20 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 80122E24 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 80122E28 00000014  FC 00 00 32 */	fmul f0, f0, f0

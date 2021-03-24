@@ -68,19 +68,19 @@ lbl_8014ED3C:
 /* 8014ED44 00000008  41 82 00 48 */	beq lbl_8014ED8C
 /* 8014ED48 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8014ED4C 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8014ED50 00000014  80 04 5F 88 */	lwz r0, 0x5f88(r4)
+/* 8014ED50 00000014  80 04 5F 88 */	lwz r0, 0x5f88(r4)	/* effective address: 8040C148 */
 /* 8014ED54 00000018  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8014ED58 0000001C  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 8014ED5C 00000020  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 8014ED60 00000024  80 04 5F 8C */	lwz r0, 0x5f8c(r4)
-/* 8014ED64 00000028  90 1C 00 4C */	stw r0, 0x4c(r28)
+/* 8014ED5C 00000020  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
+/* 8014ED60 00000024  80 04 5F 8C */	lwz r0, 0x5f8c(r4)	/* effective address: 8040C14C */
+/* 8014ED64 00000028  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
 /* 8014ED68 0000002C  80 7D 07 54 */	lwz r3, 0x754(r29)
 /* 8014ED6C 00000030  4B EC 24 55 */	bl entryDL__16mDoExt_McaMorfSOFv
 /* 8014ED70 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8014ED74 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8014ED78 0000003C  80 03 5F 80 */	lwz r0, 0x5f80(r3)
+/* 8014ED78 0000003C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
 /* 8014ED7C 00000040  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 8014ED80 00000044  80 03 5F 84 */	lwz r0, 0x5f84(r3)
+/* 8014ED80 00000044  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
 /* 8014ED84 00000048  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 8014ED88 0000004C  48 00 00 0C */	b lbl_8014ED94
 lbl_8014ED8C:
@@ -112,7 +112,7 @@ lbl_8014EDC4:
 /* 8014EDE4 00000020  38 FD 09 E8 */	addi r7, r29, 0x9e8
 /* 8014EDE8 00000024  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 8014EDEC 00000028  39 20 00 00 */	li r9, 0
-/* 8014EDF0 0000002C  C0 A2 99 DC */	lfs f5, d_a_d_a_npc__lit_4140(r2)
+/* 8014EDF0 0000002C  C0 A2 99 DC */	lfs f5, lit_4140(r2)
 /* 8014EDF4 00000030  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 8014EDF8 00000034  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 8014EDFC 00000038  4B ED FB 15 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

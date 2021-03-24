@@ -14,7 +14,7 @@ lbl_801A60E0:
 /* 801A6110 0000001C  3B C0 00 00 */	li r30, 0
 /* 801A6114 00000020  3C 60 80 43 */	lis r3, lightStatusData@ha
 /* 801A6118 00000024  3B 83 E0 7C */	addi r28, r3, lightStatusData@l
-/* 801A611C 00000028  C3 E2 A2 0C */	lfs f31, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A611C 00000028  C3 E2 A2 0C */	lfs f31, lit_4409(r2)
 /* 801A6120 0000002C  3C 60 80 3C */	lis r3, lightMaskData@ha
 /* 801A6124 00000030  3B A3 BE AC */	addi r29, r3, lightMaskData@l
 lbl_801A6128:

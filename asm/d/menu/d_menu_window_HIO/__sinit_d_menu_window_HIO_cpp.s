@@ -3,8 +3,8 @@ lbl_801F9F28:
 /* 801F9F2C 00000004  7C 08 02 A6 */	mflr r0
 /* 801F9F30 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801F9F34 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801F9F38 00000010  3C 60 80 43 */	lis r3, d_menu_d_menu_window_HIO__lit_3773@ha
-/* 801F9F3C 00000014  3B E3 E8 60 */	addi r31, r3, d_menu_d_menu_window_HIO__lit_3773@l
+/* 801F9F38 00000010  3C 60 80 43 */	lis r3, lit_3773@ha
+/* 801F9F3C 00000014  3B E3 E8 60 */	addi r31, r3, lit_3773@l
 /* 801F9F40 00000018  38 7F 00 0C */	addi r3, r31, 0xc
 /* 801F9F44 0000001C  4B FF FB B9 */	bl __ct__9dMw_HIO_cFv
 /* 801F9F48 00000020  3C 80 80 20 */	lis r4, __dt__9dMw_HIO_cFv@ha

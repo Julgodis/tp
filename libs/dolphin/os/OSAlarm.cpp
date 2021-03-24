@@ -20,7 +20,7 @@ extern "C" void OSSetPeriodicAlarm(); // 1
 extern "C" void OSCancelAlarm(); // 1
 extern "C" static void DecrementerExceptionCallback(); // 1
 extern "C" static void DecrementerExceptionHandler(); // 1
-extern "C" static void OSAlarm__OnReset(); // 1
+extern "C" static void OnReset(); // 1
 
 // 
 // External References:
@@ -50,8 +50,8 @@ extern "C" void __div2i(); // 1
 
 /* ############################################################################################## */
 /* 803CF480-803CF490 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
-SECTION_DATA static void* OSAlarm__ResetFunctionInfo[4] = {
-	/* 0    */ (void*)OSAlarm__OnReset,
+SECTION_DATA static void* ResetFunctionInfo[4] = {
+	/* 0    */ (void*)OnReset,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)NULL,
 	/* 3    */ (void*)NULL,
@@ -152,9 +152,9 @@ extern "C" asm static void DecrementerExceptionHandler() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSAlarm__OnReset() {
+extern "C" asm static void OnReset() {
 	nofralloc
-#include "asm/dolphin/os/OSAlarm/OSAlarm__OnReset.s"
+#include "asm/dolphin/os/OSAlarm/OnReset.s"
 }
 #pragma pop
 

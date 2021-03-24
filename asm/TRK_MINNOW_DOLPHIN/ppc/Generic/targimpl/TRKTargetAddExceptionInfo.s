@@ -21,7 +21,7 @@ lbl_8036FE94:
 /* 8036FEE0 0000004C  80 A1 00 08 */	lwz r5, 8(r1)
 /* 8036FEE4 00000050  38 83 32 44 */	addi r4, r3, gTRKExceptionStatus@l
 /* 8036FEE8 00000054  7F E3 FB 78 */	mr r3, r31
-/* 8036FEEC 00000058  A0 04 00 08 */	lhz r0, 8(r4)
+/* 8036FEEC 00000058  A0 04 00 08 */	lhz r0, 8(r4)	/* effective address: 803D324C */
 /* 8036FEF0 0000005C  38 81 00 0C */	addi r4, r1, 0xc
 /* 8036FEF4 00000060  90 A1 00 18 */	stw r5, 0x18(r1)
 /* 8036FEF8 00000064  38 A0 00 40 */	li r5, 0x40

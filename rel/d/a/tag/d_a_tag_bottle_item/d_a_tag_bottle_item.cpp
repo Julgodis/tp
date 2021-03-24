@@ -19,6 +19,8 @@ struct daTag_BottleItem_c {
 	/* 80D560D8 */ void setTypeFromParam();
 	/* 80D56100 */ void restart();
 	/* 80D56170 */ void initialize();
+	/* 80D561E8 */ void checkProcess(int (daTag_BottleItem_c::*)(void*));
+	/* 80D56214 */ void setProcess(int (daTag_BottleItem_c::*)(void*));
 	/* 80D56300 */ void setAttnPos();
 	/* 80D56334 */ void chkEvent();
 	/* 80D56384 */ void orderEvent();
@@ -44,8 +46,8 @@ extern "C" void Draw__18daTag_BottleItem_cFv(); // 1
 extern "C" void setTypeFromParam__18daTag_BottleItem_cFv(); // 1
 extern "C" void restart__18daTag_BottleItem_cFv(); // 1
 extern "C" void initialize__18daTag_BottleItem_cFv(); // 1
-extern "C" static void checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
-extern "C" static void setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
+extern "C" void checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
 extern "C" void setAttnPos__18daTag_BottleItem_cFv(); // 1
 extern "C" void chkEvent__18daTag_BottleItem_cFv(); // 1
 extern "C" void orderEvent__18daTag_BottleItem_cFv(); // 1
@@ -160,7 +162,7 @@ asm void daTag_BottleItem_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i() {
+asm void daTag_BottleItem_c::checkProcess(int (daTag_BottleItem_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/func_80D561E8.s"
 }
@@ -171,7 +173,7 @@ extern "C" asm static void checkProcess__18daTag_BottleItem_cFM18daTag_BottleIte
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i() {
+asm void daTag_BottleItem_c::setProcess(int (daTag_BottleItem_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/func_80D56214.s"
 }

@@ -70,7 +70,7 @@ lbl_8013C4BC:
 /* 8013C4DC 00000020  7F E3 FB 78 */	mr r3, r31
 /* 8013C4E0 00000024  3C 80 80 39 */	lis r4, m__22daAlinkHIO_wlAtLock_c0@ha
 /* 8013C4E4 00000028  38 84 F6 F4 */	addi r4, r4, m__22daAlinkHIO_wlAtLock_c0@l
-/* 8013C4E8 0000002C  C0 24 00 48 */	lfs f1, 0x48(r4)
+/* 8013C4E8 0000002C  C0 24 00 48 */	lfs f1, 0x48(r4)	/* effective address: 8038F73C */
 /* 8013C4EC 00000030  C0 5F 05 34 */	lfs f2, 0x534(r31)
 /* 8013C4F0 00000034  38 80 00 00 */	li r4, 0
 /* 8013C4F4 00000038  4B F7 F2 7D */	bl setSpecialGravity__9daAlink_cFffi
@@ -82,8 +82,8 @@ lbl_8013C4FC:
 /* 8013C508 00000000  40 81 00 18 */	ble lbl_8013C520
 /* 8013C50C 00000004  38 7F 33 98 */	addi r3, r31, 0x3398
 /* 8013C510 00000008  C0 42 94 A8 */	lfs f2, lit_16570(r2)
-/* 8013C514 0000000C  C0 62 93 3C */	lfs f3, d_a_d_a_alink__lit_7808(r2)
-/* 8013C518 00000010  C0 82 92 B8 */	lfs f4, d_a_d_a_alink__lit_6040(r2)
+/* 8013C514 0000000C  C0 62 93 3C */	lfs f3, lit_7808(r2)
+/* 8013C518 00000010  C0 82 92 B8 */	lfs f4, lit_6040(r2)
 /* 8013C51C 00000014  48 13 34 61 */	bl cLib_addCalc__FPfffff
 lbl_8013C520:
 /* 8013C520 00000000  38 7F 1F D0 */	addi r3, r31, 0x1fd0
@@ -99,8 +99,8 @@ lbl_8013C520:
 /* 8013C548 00000028  38 80 00 51 */	li r4, 0x51
 /* 8013C54C 0000002C  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlAtNjump_c0@ha
 /* 8013C550 00000030  38 A5 F5 78 */	addi r5, r5, m__23daAlinkHIO_wlAtNjump_c0@l
-/* 8013C554 00000034  C0 25 00 24 */	lfs f1, 0x24(r5)
-/* 8013C558 00000038  C0 45 00 28 */	lfs f2, 0x28(r5)
+/* 8013C554 00000034  C0 25 00 24 */	lfs f1, 0x24(r5)	/* effective address: 8038F59C */
+/* 8013C558 00000038  C0 45 00 28 */	lfs f2, 0x28(r5)	/* effective address: 8038F5A0 */
 /* 8013C55C 0000003C  4B FE D1 7D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 lbl_8013C560:
 /* 8013C560 00000000  80 1F 19 9C */	lwz r0, 0x199c(r31)
@@ -130,7 +130,7 @@ lbl_8013C5B4:
 /* 8013C5B4 00000000  C0 1F 33 98 */	lfs f0, 0x3398(r31)
 /* 8013C5B8 00000004  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlAtNjump_c0@ha
 /* 8013C5BC 00000008  38 63 F5 78 */	addi r3, r3, m__23daAlinkHIO_wlAtNjump_c0@l
-/* 8013C5C0 0000000C  C0 23 00 18 */	lfs f1, 0x18(r3)
+/* 8013C5C0 0000000C  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 8038F590 */
 /* 8013C5C4 00000010  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8013C5C8 00000000  40 81 00 08 */	ble lbl_8013C5D0
 /* 8013C5CC 00000004  D0 3F 33 98 */	stfs f1, 0x3398(r31)

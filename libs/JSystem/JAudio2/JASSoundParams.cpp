@@ -44,7 +44,7 @@ SECTION_SDATA2 static u8 lit_299[4] = {
 SECTION_SDATA2 static f32 lit_300 = 1.0f;
 
 /* 80455768-8045576C 0004+00 s=1 e=0 z=0  None .sdata2    @301                                                         */
-SECTION_SDATA2 static f32 JASSoundParams__lit_301 = 8.0f;
+SECTION_SDATA2 static f32 lit_301 = 8.0f;
 
 /* 8029E3B0-8029E47C 00CC+00 s=0 e=2 z=0  None .text      clamp__14JASSoundParamsFv                                    */
 #pragma push
@@ -59,7 +59,7 @@ asm void JASSoundParams::clamp() {
 
 /* ############################################################################################## */
 /* 8045576C-80455770 0004+00 s=1 e=0 z=0  None .sdata2    @311                                                         */
-SECTION_SDATA2 static f32 JASSoundParams__lit_311 = 0.5f;
+SECTION_SDATA2 static f32 lit_311 = 0.5f;
 
 /* 8029E47C-8029E4D8 005C+00 s=0 e=2 z=0  None .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
 #pragma push

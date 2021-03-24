@@ -30,7 +30,7 @@ lbl_801C235C:
 /* 801C23CC 00000070  98 1A 00 EF */	stb r0, 0xef(r26)
 lbl_801C23D0:
 /* 801C23D0 00000000  57 A0 04 3E */	clrlwi r0, r29, 0x10
-/* 801C23D4 00000004  C8 22 A6 B0 */	lfd f1, d_menu_d_menu_dmap_map__lit_4170(r2)
+/* 801C23D4 00000004  C8 22 A6 B0 */	lfd f1, lit_4170(r2)
 /* 801C23D8 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801C23DC 0000000C  3C 60 43 30 */	lis r3, 0x4330
 /* 801C23E0 00000010  90 61 00 08 */	stw r3, 8(r1)
@@ -63,13 +63,13 @@ lbl_801C23D0:
 /* 801C244C 0000007C  D0 1A 00 A8 */	stfs f0, 0xa8(r26)
 /* 801C2450 00000080  7F 43 D3 78 */	mr r3, r26
 /* 801C2454 00000084  38 9A 00 DC */	addi r4, r26, 0xdc
-/* 801C2458 00000088  C0 42 A6 C8 */	lfs f2, d_menu_d_menu_dmap_map__lit_4460(r2)
+/* 801C2458 00000088  C0 42 A6 C8 */	lfs f2, lit_4460(r2)
 /* 801C245C 0000008C  C0 0D 89 00 */	lfs f0, mAllSizeX__8dMpath_c(r13)
 /* 801C2460 00000090  EC 22 00 32 */	fmuls f1, f2, f0
 /* 801C2464 00000094  C0 0D 89 04 */	lfs f0, mAllSizeZ__8dMpath_c(r13)
 /* 801C2468 00000098  EC 42 00 32 */	fmuls f2, f2, f0
-/* 801C246C 0000009C  C0 62 A6 CC */	lfs f3, d_menu_d_menu_dmap_map__lit_4461(r2)
-/* 801C2470 000000A0  C0 82 A6 D0 */	lfs f4, d_menu_d_menu_dmap_map__lit_4462(r2)
+/* 801C246C 0000009C  C0 62 A6 CC */	lfs f3, lit_4461(r2)
+/* 801C2470 000000A0  C0 82 A6 D0 */	lfs f4, lit_4462(r2)
 /* 801C2474 000000A4  81 9A 00 00 */	lwz r12, 0(r26)
 /* 801C2478 000000A8  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 801C247C 000000AC  7D 89 03 A6 */	mtctr r12
@@ -100,8 +100,8 @@ lbl_801C23D0:
 /* 801C24E0 00000110  7F 43 D3 78 */	mr r3, r26
 /* 801C24E4 00000114  88 1A 00 F5 */	lbz r0, 0xf5(r26)
 /* 801C24E8 00000118  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C24EC 0000011C  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap_map__init_process@ha
-/* 801C24F0 00000120  38 04 CC E4 */	addi r0, r4, d_menu_d_menu_dmap_map__init_process@l
+/* 801C24EC 0000011C  3C 80 80 3C */	lis r4, init_process@ha
+/* 801C24F0 00000120  38 04 CC E4 */	addi r0, r4, init_process@l
 /* 801C24F4 00000124  7D 80 2A 14 */	add r12, r0, r5
 /* 801C24F8 00000128  48 19 FB 8D */	bl __ptmf_scall
 /* 801C24FC 0000012C  60 00 00 00 */	nop 

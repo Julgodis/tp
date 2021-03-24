@@ -27,9 +27,9 @@ lbl_801383D8:
 /* 8013843C 00000064  4B F7 74 65 */	bl setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM
 /* 80138440 00000068  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80138444 0000006C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80138448 00000070  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80138448 00000070  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8013844C 00000074  64 00 00 10 */	oris r0, r0, 0x10
-/* 80138450 00000078  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80138450 00000078  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80138454 0000007C  7F E3 FB 78 */	mr r3, r31
 /* 80138458 00000080  3C 80 00 03 */	lis r4, 0x0003 /* 0x00030023@ha */
 /* 8013845C 00000084  38 84 00 23 */	addi r4, r4, 0x0023 /* 0x00030023@l */

@@ -8,9 +8,9 @@ lbl_800E08C4:
 /* 800E08DC 00000018  7C 9E 23 78 */	mr r30, r4
 /* 800E08E0 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800E08E4 00000020  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800E08E8 00000024  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800E08E8 00000024  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800E08EC 00000028  54 00 02 90 */	rlwinm r0, r0, 0, 0xa, 8
-/* 800E08F0 0000002C  90 04 5F 18 */	stw r0, 0x5f18(r4)
+/* 800E08F0 0000002C  90 04 5F 18 */	stw r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800E08F4 00000030  A0 03 2F DC */	lhz r0, 0x2fdc(r3)
 /* 800E08F8 00000034  28 00 00 FF */	cmplwi r0, 0xff
 /* 800E08FC 00000038  40 82 01 7C */	bne lbl_800E0A78
@@ -101,7 +101,7 @@ lbl_800E09F8:
 /* 800E0A3C 00000044  90 1F 05 70 */	stw r0, 0x570(r31)
 /* 800E0A40 00000048  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800E0A44 0000004C  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800E0A48 00000050  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E0A48 00000050  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E0A4C 00000054  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800E0A50 00000058  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800E0A54 0000005C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

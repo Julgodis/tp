@@ -5,7 +5,7 @@ lbl_80014994:
 /* 800149A0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800149A4 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800149A8 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800149AC 00000018  83 E3 5C A4 */	lwz r31, 0x5ca4(r3)
+/* 800149AC 00000018  83 E3 5C A4 */	lwz r31, 0x5ca4(r3)	/* effective address: 8040BE64 */
 /* 800149B0 0000001C  4B FF A3 D1 */	bl mDoExt_getZeldaHeap__Fv
 /* 800149B4 00000020  7C 65 1B 78 */	mr r5, r3
 /* 800149B8 00000024  38 6D 86 C4 */	addi r3, r13, 0x80450C44-0x80458580 /* mDoExt_font0-_SDA_BASE_ */

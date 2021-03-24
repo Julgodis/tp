@@ -29,7 +29,7 @@ lbl_8019ACF8:
 /* 8019AD64 0000006C  38 61 00 0C */	addi r3, r1, 0xc
 /* 8019AD68 00000070  38 80 00 01 */	li r4, 1
 /* 8019AD6C 00000074  38 A0 00 01 */	li r5, 1
-/* 8019AD70 00000078  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
+/* 8019AD70 00000078  C0 22 A1 80 */	lfs f1, lit_3868(r2)
 /* 8019AD74 0000007C  FC 40 08 90 */	fmr f2, f1
 /* 8019AD78 00000080  FC 60 08 90 */	fmr f3, f1
 /* 8019AD7C 00000084  38 C0 00 00 */	li r6, 0
@@ -103,7 +103,7 @@ lbl_8019ACF8:
 /* 8019AE8C 00000194  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 8019AE90 00000198  90 01 00 08 */	stw r0, 8(r1)
 /* 8019AE94 0000019C  38 60 00 00 */	li r3, 0
-/* 8019AE98 000001A0  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
+/* 8019AE98 000001A0  C0 22 A1 80 */	lfs f1, lit_3868(r2)
 /* 8019AE9C 000001A4  FC 40 08 90 */	fmr f2, f1
 /* 8019AEA0 000001A8  FC 60 08 90 */	fmr f3, f1
 /* 8019AEA4 000001AC  FC 80 08 90 */	fmr f4, f1
@@ -118,8 +118,8 @@ lbl_8019ACF8:
 /* 8019AEC8 000001D0  38 60 00 01 */	li r3, 1
 /* 8019AECC 000001D4  48 1C 4F 0D */	bl GXSetDither
 /* 8019AED0 000001D8  38 61 00 2C */	addi r3, r1, 0x2c
-/* 8019AED4 000001DC  C0 22 A1 80 */	lfs f1, d_d_gameover__lit_3868(r2)
-/* 8019AED8 000001E0  C0 42 A1 84 */	lfs f2, d_d_gameover__lit_3869(r2)
+/* 8019AED4 000001DC  C0 22 A1 80 */	lfs f1, lit_3868(r2)
+/* 8019AED8 000001E0  C0 42 A1 84 */	lfs f2, lit_3869(r2)
 /* 8019AEDC 000001E4  FC 60 08 90 */	fmr f3, f1
 /* 8019AEE0 000001E8  FC 80 10 90 */	fmr f4, f2
 /* 8019AEE4 000001EC  FC A0 08 90 */	fmr f5, f1
@@ -160,27 +160,27 @@ lbl_8019ACF8:
 /* 8019AF70 00000278  38 A0 00 00 */	li r5, 0
 /* 8019AF74 0000027C  3C 80 CC 01 */	lis r4, 0xCC01 /* 0xCC008000@ha */
 /* 8019AF78 00000280  98 A4 80 00 */	stb r5, 0x8000(r4)
-/* 8019AF7C 00000284  98 A4 80 00 */	stb r5, -0x8000(r4)
+/* 8019AF7C 00000284  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
 /* 8019AF80 00000288  38 60 FF FB */	li r3, -5
-/* 8019AF84 0000028C  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 8019AF88 00000290  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 8019AF8C 00000294  98 A4 80 00 */	stb r5, -0x8000(r4)
+/* 8019AF84 0000028C  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AF88 00000290  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AF8C 00000294  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
 /* 8019AF90 00000298  38 00 00 01 */	li r0, 1
-/* 8019AF94 0000029C  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AF98 000002A0  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 8019AF9C 000002A4  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 8019AFA0 000002A8  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFA4 000002AC  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 8019AFA8 000002B0  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFAC 000002B4  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFB0 000002B8  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 8019AFB4 000002BC  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFB8 000002C0  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFBC 000002C4  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 8019AFC0 000002C8  98 04 80 00 */	stb r0, -0x8000(r4)
-/* 8019AFC4 000002CC  98 64 80 00 */	stb r3, -0x8000(r4)
-/* 8019AFC8 000002D0  98 A4 80 00 */	stb r5, -0x8000(r4)
-/* 8019AFCC 000002D4  98 04 80 00 */	stb r0, -0x8000(r4)
+/* 8019AF94 0000029C  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AF98 000002A0  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AF9C 000002A4  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFA0 000002A8  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFA4 000002AC  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFA8 000002B0  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFAC 000002B4  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFB0 000002B8  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFB4 000002BC  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFB8 000002C0  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFBC 000002C4  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFC0 000002C8  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFC4 000002CC  98 64 80 00 */	stb r3, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFC8 000002D0  98 A4 80 00 */	stb r5, -0x8000(r4)	/* effective address: CC008000 */
+/* 8019AFCC 000002D4  98 04 80 00 */	stb r0, -0x8000(r4)	/* effective address: CC008000 */
 /* 8019AFD0 000002D8  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 8019AFD4 000002DC  7C 08 03 A6 */	mtlr r0
 /* 8019AFD8 000002E0  38 21 00 70 */	addi r1, r1, 0x70

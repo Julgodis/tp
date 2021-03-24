@@ -5,8 +5,8 @@ lbl_8006C790:
 /* 8006C79C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8006C7A0 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8006C7A4 00000014  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8006C7A8 00000018  3C 60 80 38 */	lis r3, d_kankyo_d_kankyo_rain__stringBase0@ha
-/* 8006C7AC 0000001C  38 63 A5 78 */	addi r3, r3, d_kankyo_d_kankyo_rain__stringBase0@l
+/* 8006C7A8 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8006C7AC 0000001C  38 63 A5 78 */	addi r3, r3, stringBase0@l
 /* 8006C7B0 00000020  38 63 00 10 */	addi r3, r3, 0x10
 /* 8006C7B4 00000024  38 80 00 53 */	li r4, 0x53
 /* 8006C7B8 00000028  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -17,8 +17,8 @@ lbl_8006C790:
 /* 8006C7CC 0000003C  4B FC FB 21 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 8006C7D0 00000040  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8006C7D4 00000044  38 84 CA 54 */	addi r4, r4, g_env_light@l
-/* 8006C7D8 00000048  80 84 10 4C */	lwz r4, 0x104c(r4)
-/* 8006C7DC 0000004C  90 64 00 14 */	stw r3, 0x14(r4)
+/* 8006C7D8 00000048  80 84 10 4C */	lwz r4, 0x104c(r4)	/* effective address: 8042DAA0 */
+/* 8006C7DC 0000004C  90 64 00 14 */	stw r3, 0x14(r4)	/* effective address: 8042CA68 */
 /* 8006C7E0 00000050  38 60 00 00 */	li r3, 0
 /* 8006C7E4 00000054  7C 65 1B 78 */	mr r5, r3
 /* 8006C7E8 00000058  38 00 00 64 */	li r0, 0x64
@@ -39,12 +39,12 @@ lbl_8006C7F0:
 /* 8006C820 00000030  4B FC 81 15 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8006C824 00000034  2C 03 00 00 */	cmpwi r3, 0
 /* 8006C828 00000038  40 82 00 14 */	bne lbl_8006C83C
-/* 8006C82C 0000003C  C0 02 88 14 */	lfs f0, d_kankyo_d_kankyo_rain__lit_4354(r2)
+/* 8006C82C 0000003C  C0 02 88 14 */	lfs f0, lit_4354(r2)
 /* 8006C830 00000040  80 7F 10 4C */	lwz r3, 0x104c(r31)
 /* 8006C834 00000044  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 /* 8006C838 00000048  48 00 00 10 */	b lbl_8006C848
 lbl_8006C83C:
-/* 8006C83C 00000000  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
+/* 8006C83C 00000000  C0 02 87 B8 */	lfs f0, lit_3954(r2)
 /* 8006C840 00000004  80 7F 10 4C */	lwz r3, 0x104c(r31)
 /* 8006C844 00000008  D0 03 1C 3C */	stfs f0, 0x1c3c(r3)
 lbl_8006C848:

@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
@@ -18,9 +21,6 @@ struct dKy_tevstr_c {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcChin_c {
@@ -53,6 +53,7 @@ struct daNpcChin_c {
 	/* 8098DBBC */ void reset();
 	/* 8098DCD0 */ void playExpression();
 	/* 8098E04C */ void playMotion();
+	/* 8098E5C4 */ void setAction(bool (daNpcChin_c::*)(void*));
 	/* 8098E66C */ void setLookMode(int);
 	/* 8098E690 */ void lookat();
 	/* 8098E870 */ void step(s16, int, int);
@@ -222,7 +223,7 @@ extern "C" void drawDbgInfo__11daNpcChin_cFv(); // 1
 extern "C" void reset__11daNpcChin_cFv(); // 1
 extern "C" void playExpression__11daNpcChin_cFv(); // 1
 extern "C" void playMotion__11daNpcChin_cFv(); // 1
-extern "C" static void setAction__11daNpcChin_cFM11daNpcChin_cFPCvPvPv_b(); // 1
+extern "C" void setAction__11daNpcChin_cFM11daNpcChin_cFPCvPvPv_b(); // 1
 extern "C" void setLookMode__11daNpcChin_cFi(); // 1
 extern "C" void lookat__11daNpcChin_cFv(); // 1
 extern "C" void step__11daNpcChin_cFsii(); // 1
@@ -866,7 +867,7 @@ asm void daNpcChin_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpcChin_cFM11daNpcChin_cFPCvPvPv_b() {
+asm void daNpcChin_c::setAction(bool (daNpcChin_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/setAction__11daNpcChin_cFM11daNpcChin_cFPCvPvPv_b.s"
 }

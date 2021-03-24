@@ -45,7 +45,7 @@ lbl_800F78A8:
 /* 800F78B0 00000008  40 82 00 2C */	bne lbl_800F78DC
 /* 800F78B4 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800F78B8 00000010  38 80 00 02 */	li r4, 2
-/* 800F78BC 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F78BC 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F78C0 00000018  4B FB 5E 65 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F78C4 0000001C  80 1F 05 88 */	lwz r0, 0x588(r31)
 /* 800F78C8 00000020  60 00 10 00 */	ori r0, r0, 0x1000
@@ -62,9 +62,9 @@ lbl_800F78DC:
 /* 800F78F0 00000008  A8 9F 2F E2 */	lha r4, 0x2fe2(r31)
 /* 800F78F4 0000000C  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800F78F8 00000010  38 E5 D6 BC */	addi r7, r5, m__18daAlinkHIO_move_c0@l
-/* 800F78FC 00000014  A8 A7 00 18 */	lha r5, 0x18(r7)
-/* 800F7900 00000018  A8 C7 00 14 */	lha r6, 0x14(r7)
-/* 800F7904 0000001C  A8 E7 00 16 */	lha r7, 0x16(r7)
+/* 800F78FC 00000014  A8 A7 00 18 */	lha r5, 0x18(r7)	/* effective address: 8038D6D4 */
+/* 800F7900 00000018  A8 C7 00 14 */	lha r6, 0x14(r7)	/* effective address: 8038D6D0 */
+/* 800F7904 0000001C  A8 E7 00 16 */	lha r7, 0x16(r7)	/* effective address: 8038D6D2 */
 /* 800F7908 00000020  48 17 8C 39 */	bl cLib_addCalcAngleS__FPsssss
 /* 800F790C 00000024  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800F7910 00000028  B0 1F 04 DE */	sth r0, 0x4de(r31)
@@ -89,9 +89,9 @@ lbl_800F7948:
 /* 800F7954 00000000  40 80 00 1C */	bge lbl_800F7970
 /* 800F7958 00000004  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800F795C 00000008  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800F7960 0000000C  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800F7960 0000000C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D6D8 */
 /* 800F7964 00000010  D0 1F 1F DC */	stfs f0, 0x1fdc(r31)
-/* 800F7968 00000014  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800F7968 00000014  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800F796C 00000018  D0 1F 20 54 */	stfs f0, 0x2054(r31)
 lbl_800F7970:
 /* 800F7970 00000000  38 60 00 01 */	li r3, 1

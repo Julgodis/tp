@@ -7,7 +7,7 @@ lbl_801CD814:
 /* 801CD828 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801CD82C 00000018  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801CD830 0000001C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801CD834 00000020  88 A3 00 E2 */	lbz r5, 0xe2(r3)
+/* 801CD834 00000020  88 A3 00 E2 */	lbz r5, 0xe2(r3)	/* effective address: 8043026A */
 /* 801CD838 00000024  38 7E 02 50 */	addi r3, r30, 0x250
 /* 801CD83C 00000028  3C 80 80 3C */	lis r4, data_803BD64C@ha
 /* 801CD840 0000002C  38 04 D6 4C */	addi r0, r4, data_803BD64C@l
@@ -31,7 +31,7 @@ lbl_801CD814:
 /* 801CD888 00000074  38 BE 02 50 */	addi r5, r30, 0x250
 /* 801CD88C 00000078  C0 21 00 0C */	lfs f1, 0xc(r1)
 /* 801CD890 0000007C  C0 41 00 08 */	lfs f2, 8(r1)
-/* 801CD894 00000080  C0 62 A7 28 */	lfs f3, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CD894 00000080  C0 62 A7 28 */	lfs f3, lit_4158(r2)
 /* 801CD898 00000084  48 00 81 29 */	bl setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff
 lbl_801CD89C:
 /* 801CD89C 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

@@ -20,12 +20,12 @@ lbl_8012E9C8:
 /* 8012EA10 0000002C  41 82 00 34 */	beq lbl_8012EA44
 /* 8012EA14 00000030  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8012EA18 00000034  38 63 F0 A8 */	addi r3, r3, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8012EA1C 00000038  C0 23 00 04 */	lfs f1, 4(r3)
-/* 8012EA20 0000003C  C0 03 00 70 */	lfs f0, 0x70(r3)
+/* 8012EA1C 00000038  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 8038F0AC */
+/* 8012EA20 0000003C  C0 03 00 70 */	lfs f0, 0x70(r3)	/* effective address: 8038F118 */
 /* 8012EA24 00000040  D0 1F 05 94 */	stfs f0, 0x594(r31)
-/* 8012EA28 00000044  C3 E3 00 48 */	lfs f31, 0x48(r3)
-/* 8012EA2C 00000048  C3 C3 00 4C */	lfs f30, 0x4c(r3)
-/* 8012EA30 0000004C  AB C3 00 40 */	lha r30, 0x40(r3)
+/* 8012EA28 00000044  C3 E3 00 48 */	lfs f31, 0x48(r3)	/* effective address: 8038F0F0 */
+/* 8012EA2C 00000048  C3 C3 00 4C */	lfs f30, 0x4c(r3)	/* effective address: 8038F0F4 */
+/* 8012EA30 0000004C  AB C3 00 40 */	lha r30, 0x40(r3)	/* effective address: 8038F0E8 */
 /* 8012EA34 00000050  80 1F 05 78 */	lwz r0, 0x578(r31)
 /* 8012EA38 00000054  64 00 00 01 */	oris r0, r0, 1
 /* 8012EA3C 00000058  90 1F 05 78 */	stw r0, 0x578(r31)
@@ -33,20 +33,20 @@ lbl_8012E9C8:
 lbl_8012EA44:
 /* 8012EA44 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8012EA48 00000004  38 63 F0 A8 */	addi r3, r3, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8012EA4C 00000008  C0 23 00 60 */	lfs f1, 0x60(r3)
-/* 8012EA50 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 8012EA4C 00000008  C0 23 00 60 */	lfs f1, 0x60(r3)	/* effective address: 8038F108 */
+/* 8012EA50 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038F11C */
 /* 8012EA54 00000010  D0 1F 05 94 */	stfs f0, 0x594(r31)
-/* 8012EA58 00000014  C3 E3 00 68 */	lfs f31, 0x68(r3)
-/* 8012EA5C 00000018  C3 C3 00 6C */	lfs f30, 0x6c(r3)
-/* 8012EA60 0000001C  AB C3 00 42 */	lha r30, 0x42(r3)
+/* 8012EA58 00000014  C3 E3 00 68 */	lfs f31, 0x68(r3)	/* effective address: 8038F110 */
+/* 8012EA5C 00000018  C3 C3 00 6C */	lfs f30, 0x6c(r3)	/* effective address: 8038F114 */
+/* 8012EA60 0000001C  AB C3 00 42 */	lha r30, 0x42(r3)	/* effective address: 8038F0EA */
 lbl_8012EA64:
 /* 8012EA64 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8012EA68 00000004  38 80 00 04 */	li r4, 4
 /* 8012EA6C 00000008  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8012EA70 0000000C  38 C5 F0 A8 */	addi r6, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8012EA74 00000010  C0 46 00 08 */	lfs f2, 8(r6)
-/* 8012EA78 00000014  A8 A6 00 00 */	lha r5, 0(r6)
-/* 8012EA7C 00000018  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 8012EA74 00000010  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038F0B0 */
+/* 8012EA78 00000014  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038F0A8 */
+/* 8012EA7C 00000018  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038F0B4 */
 /* 8012EA80 0000001C  4B FF AC 85 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8012EA84 00000020  C0 3F 05 2C */	lfs f1, 0x52c(r31)
 /* 8012EA88 00000024  C0 1F 05 94 */	lfs f0, 0x594(r31)
@@ -56,7 +56,7 @@ lbl_8012EA64:
 /* 8012EA98 00000008  40 82 00 18 */	bne lbl_8012EAB0
 /* 8012EA9C 0000000C  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8012EAA0 00000010  38 63 F0 A8 */	addi r3, r3, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8012EAA4 00000014  88 03 00 3C */	lbz r0, 0x3c(r3)
+/* 8012EAA4 00000014  88 03 00 3C */	lbz r0, 0x3c(r3)	/* effective address: 8038F0E4 */
 /* 8012EAA8 00000018  28 00 00 01 */	cmplwi r0, 1
 /* 8012EAAC 0000001C  40 82 00 0C */	bne lbl_8012EAB8
 lbl_8012EAB0:
@@ -85,11 +85,11 @@ lbl_8012EAC4:
 /* 8012EB00 0000003C  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8012EB04 00000040  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8012EB08 00000044  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8012EB0C 00000048  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8012EB0C 00000048  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8012EB10 0000004C  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8012EB14 00000050  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8012EB14 00000050  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8012EB18 00000054  D0 1F 35 90 */	stfs f0, 0x3590(r31)
-/* 8012EB1C 00000058  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8012EB1C 00000058  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8012EB20 0000005C  D0 1F 33 B0 */	stfs f0, 0x33b0(r31)
 /* 8012EB24 00000060  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 8012EB28 00000064  B0 1F 04 DE */	sth r0, 0x4de(r31)

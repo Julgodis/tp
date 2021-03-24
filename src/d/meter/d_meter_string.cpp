@@ -51,6 +51,9 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -61,9 +64,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -104,7 +104,7 @@ extern "C" void createString__14dMeterString_cFi(); // 1
 extern "C" void playBckAnimation__14dMeterString_cFf(); // 1
 extern "C" void drawPikari__14dMeterString_cFv(); // 1
 extern "C" void isLeadByte__14dMeterString_cFi(); // 1
-extern "C" extern char const* const d_meter_d_meter_string__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -201,19 +201,19 @@ SECTION_DEAD static char const* const pad_80398251 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 80454848-8045484C 0004+00 s=1 e=0 z=0  None .sdata2    @3758                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3758 = 210.0f;
+SECTION_SDATA2 static f32 lit_3758 = 210.0f;
 
 /* 8045484C-80454850 0004+00 s=1 e=0 z=0  None .sdata2    @3759                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3759 = 410.0f;
+SECTION_SDATA2 static f32 lit_3759 = 410.0f;
 
 /* 80454850-80454854 0004+00 s=1 e=0 z=0  None .sdata2    @3760                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3760 = 32.0f;
+SECTION_SDATA2 static f32 lit_3760 = 32.0f;
 
 /* 80454854-80454858 0004+00 s=1 e=0 z=0  None .sdata2    @3761                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3761 = 419.0f;
+SECTION_SDATA2 static f32 lit_3761 = 419.0f;
 
 /* 80454858-8045485C 0004+00 s=3 e=0 z=0  None .sdata2    @3762                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter_string__lit_3762[4] = {
+SECTION_SDATA2 static u8 lit_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -241,23 +241,23 @@ asm void dMeterString_c::_execute(u32 param_0) {
 
 /* ############################################################################################## */
 /* 8045485C-80454860 0004+00 s=1 e=0 z=0  None .sdata2    @3819                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3819 = 60.0f;
+SECTION_SDATA2 static f32 lit_3819 = 60.0f;
 
 /* 80454860-80454864 0004+00 s=2 e=0 z=0  None .sdata2    @3820                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3820 = 1.0f;
+SECTION_SDATA2 static f32 lit_3820 = 1.0f;
 
 /* 80454864-80454868 0004+00 s=2 e=0 z=0  None .sdata2    @3821                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3821 = -1.0f;
+SECTION_SDATA2 static f32 lit_3821 = -1.0f;
 
 /* 80454868-80454870 0004+04 s=1 e=0 z=0  None .sdata2    @3822                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3822[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3822[1 + 1 /* padding */] = {
 	18.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80454870-80454878 0008+00 s=2 e=0 z=0  None .sdata2    @3824                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter_string__lit_3824 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3824 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8020F1B0-8020F49C 02EC+00 s=1 e=0 z=0  None .text      draw__14dMeterString_cFv                                     */
 #pragma push
@@ -283,7 +283,7 @@ asm void dMeterString_c::_delete() {
 
 /* ############################################################################################## */
 /* 80454878-8045487C 0004+00 s=1 e=0 z=0  None .sdata2    @3866                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3866 = 40.0f;
+SECTION_SDATA2 static f32 lit_3866 = 40.0f;
 
 /* 8020F5A4-8020F66C 00C8+00 s=2 e=1 z=0  None .text      createString__14dMeterString_cFi                             */
 #pragma push
@@ -309,7 +309,7 @@ asm void dMeterString_c::playBckAnimation(f32 param_0) {
 
 /* ############################################################################################## */
 /* 8045487C-80454880 0004+00 s=1 e=0 z=0  None .sdata2    @3979                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3979 = 0.5f;
+SECTION_SDATA2 static f32 lit_3979 = 0.5f;
 
 /* 8020F6EC-8020FA88 039C+00 s=1 e=0 z=0  None .text      drawPikari__14dMeterString_cFv                               */
 #pragma push

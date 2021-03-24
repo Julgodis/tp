@@ -36,8 +36,8 @@ lbl_80047548:
 lbl_80047598:
 /* 80047598 00000000  3C 60 80 42 */	lis r3, data_804246A0@ha
 /* 8004759C 00000004  38 63 46 A0 */	addi r3, r3, data_804246A0@l
-/* 800475A0 00000008  3C 80 80 38 */	lis r4, d_event_d_event_manager__stringBase0@ha
-/* 800475A4 0000000C  38 84 9F 60 */	addi r4, r4, d_event_d_event_manager__stringBase0@l
+/* 800475A0 00000008  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 800475A4 0000000C  38 84 9F 60 */	addi r4, r4, stringBase0@l
 /* 800475A8 00000010  38 84 01 4F */	addi r4, r4, 0x14f
 /* 800475AC 00000014  57 05 06 3E */	clrlwi r5, r24, 0x18
 /* 800475B0 00000018  4C C6 31 82 */	crclr 6

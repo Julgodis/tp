@@ -11,20 +11,20 @@ lbl_8004D278:
 /* 8004D29C 00000010  54 00 84 3E */	srwi r0, r0, 0x10
 /* 8004D2A0 00000014  28 00 00 64 */	cmplwi r0, 0x64
 /* 8004D2A4 00000018  40 80 00 24 */	bge lbl_8004D2C8
-/* 8004D2A8 0000001C  C8 22 85 68 */	lfd f1, d_particle_d_particle__lit_4093(r2)
+/* 8004D2A8 0000001C  C8 22 85 68 */	lfd f1, lit_4093(r2)
 /* 8004D2AC 00000020  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8004D2B0 00000024  3C 00 43 30 */	lis r0, 0x4330
 /* 8004D2B4 00000028  90 01 00 30 */	stw r0, 0x30(r1)
 /* 8004D2B8 0000002C  C8 01 00 30 */	lfd f0, 0x30(r1)
 /* 8004D2BC 00000030  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8004D2C0 00000034  C0 02 85 84 */	lfs f0, d_particle_d_particle__lit_4518(r2)
+/* 8004D2C0 00000034  C0 02 85 84 */	lfs f0, lit_4518(r2)
 /* 8004D2C4 00000038  EF E1 00 24 */	fdivs f31, f1, f0
 lbl_8004D2C8:
 /* 8004D2C8 00000000  54 A0 06 B5 */	rlwinm. r0, r5, 0, 0x1a, 0x1a
 /* 8004D2CC 00000004  41 82 00 B4 */	beq lbl_8004D380
 /* 8004D2D0 00000008  80 02 85 C8 */	lwz r0, lit_5374(r2)
 /* 8004D2D4 0000000C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8004D2D8 00000010  80 02 85 CC */	lwz r0, d_particle_d_particle__lit_5375(r2)
+/* 8004D2D8 00000010  80 02 85 CC */	lwz r0, lit_5375(r2)
 /* 8004D2DC 00000014  90 01 00 20 */	stw r0, 0x20(r1)
 /* 8004D2E0 00000018  28 08 00 00 */	cmplwi r8, 0
 /* 8004D2E4 0000001C  41 82 00 24 */	beq lbl_8004D308
@@ -106,8 +106,8 @@ lbl_8004D3E8:
 /* 8004D400 00000018  48 15 C8 BD */	bl dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf
 /* 8004D404 0000001C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8004D408 00000020  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8004D40C 00000024  C0 23 12 5C */	lfs f1, 0x125c(r3)
-/* 8004D410 00000028  C0 02 85 88 */	lfs f0, d_particle_d_particle__lit_4519(r2)
+/* 8004D40C 00000024  C0 23 12 5C */	lfs f1, 0x125c(r3)	/* effective address: 8042DCB0 */
+/* 8004D410 00000028  C0 02 85 88 */	lfs f0, lit_4519(r2)
 /* 8004D414 0000002C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8004D418 00000030  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8004D41C 00000034  EF E1 00 2A */	fadds f31, f1, f0

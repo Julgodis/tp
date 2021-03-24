@@ -41,7 +41,7 @@ lbl_800AA350:
 /* 800AA374 00000024  C0 3F 04 D8 */	lfs f1, 0x4d8(r31)
 /* 800AA378 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutFnJU_c0@ha
 /* 800AA37C 0000002C  38 63 DA EC */	addi r3, r3, m__21daAlinkHIO_cutFnJU_c0@l
-/* 800AA380 00000030  C0 83 00 50 */	lfs f4, 0x50(r3)
+/* 800AA380 00000030  C0 83 00 50 */	lfs f4, 0x50(r3)	/* effective address: 8038DB3C */
 /* 800AA384 00000034  EC 04 00 32 */	fmuls f0, f4, f0
 /* 800AA388 00000038  EC 61 00 2A */	fadds f3, f1, f0
 /* 800AA38C 0000003C  C0 5F 34 78 */	lfs f2, 0x3478(r31)
@@ -54,7 +54,7 @@ lbl_800AA350:
 /* 800AA3A8 00000058  D0 61 00 7C */	stfs f3, 0x7c(r1)
 /* 800AA3AC 0000005C  C0 1F 05 C0 */	lfs f0, 0x5c0(r31)
 /* 800AA3B0 00000060  EC 20 10 28 */	fsubs f1, f0, f2
-/* 800AA3B4 00000064  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800AA3B4 00000064  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800AA3B8 00000068  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800AA3BC 00000000  40 80 00 08 */	bge lbl_800AA3C4
 /* 800AA3C0 00000004  FC 20 00 90 */	fmr f1, f0
@@ -141,9 +141,9 @@ lbl_800AA420:
 /* 800AA4F4 000000D4  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 800AA4F8 000000D8  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 800AA4FC 000000DC  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 800AA500 000000E0  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800AA500 000000E0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
 /* 800AA504 000000E4  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 800AA508 000000E8  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800AA508 000000E8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
 /* 800AA50C 000000EC  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 800AA510 000000F0  48 00 00 44 */	b lbl_800AA554
 lbl_800AA514:

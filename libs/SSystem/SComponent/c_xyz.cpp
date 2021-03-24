@@ -144,7 +144,7 @@ asm void cXyz::operator*(Vec const& param_0) const {
 
 /* ############################################################################################## */
 /* 80455070-80455074 0004+00 s=3 e=0 z=0  None .sdata2    @2201                                                        */
-SECTION_SDATA2 static f32 c_xyz__lit_2201 = 1.0f;
+SECTION_SDATA2 static f32 lit_2201 = 1.0f;
 
 /* 80266C18-80266C6C 0054+00 s=0 e=3 z=0  None .text      __dv__4cXyzCFf                                               */
 #pragma push
@@ -194,11 +194,11 @@ asm void cXyz::norm() const {
 /* 80430CE8-80430CF4 000C+00 s=1 e=0 z=0  None .bss       @2450                                                        */
 static u8 lit_2450[12];
 
-/* 80430CF4-80430D00 000C+00 s=2 e=50 z=0  None .bss       Zero__4cXyz                                                  */
+/* 80430CF4-80430D00 000C+00 s=3 e=50 z=0  None .bss       Zero__4cXyz                                                  */
 f32 Zero__4cXyz[3];
 
 /* 80455074-80455078 0004+00 s=4 e=0 z=0  None .sdata2    @2288                                                        */
-SECTION_SDATA2 static f32 c_xyz__lit_2288 = 7.999999968033578e-11f;
+SECTION_SDATA2 static f32 lit_2288 = 7.999999968033578e-11f;
 
 /* 80266D30-80266DC4 0094+00 s=1 e=4 z=0  None .text      normZP__4cXyzCFv                                             */
 #pragma push
@@ -213,7 +213,7 @@ asm void cXyz::normZP() const {
 
 /* ############################################################################################## */
 /* 8039A868-8039A878 000C+04 s=1 e=0 z=0  None .rodata    @2299                                                        */
-SECTION_RODATA static u8 const c_xyz__lit_2299[12 + 4 /* padding */] = {
+SECTION_RODATA static u8 const lit_2299[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -298,7 +298,7 @@ asm bool cXyz::operator!=(Vec const& param_0) const {
 
 /* ############################################################################################## */
 /* 80455084-80455088 0004+00 s=1 e=0 z=0  None .sdata2    @2405                                                        */
-SECTION_SDATA2 static f32 c_xyz__lit_2405 = 32.0f;
+SECTION_SDATA2 static f32 lit_2405 = 32.0f;
 
 /* 802670AC-80267128 007C+00 s=0 e=4 z=0  None .text      isZero__4cXyzCFv                                             */
 #pragma push

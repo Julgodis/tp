@@ -4,7 +4,7 @@ lbl_8025BAF8:
 /* 8025BB00 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8025BB04 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8025BB08 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8025BB0C 00000014  80 04 5D AC */	lwz r0, 0x5dac(r4)
+/* 8025BB0C 00000014  80 04 5D AC */	lwz r0, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 8025BB10 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 8025BB14 0000001C  40 82 00 0C */	bne lbl_8025BB20
 /* 8025BB18 00000020  38 60 00 00 */	li r3, 0

@@ -24,10 +24,10 @@ struct mDoHIO_entry_c {
 	/* 80BB8308 */ ~mDoHIO_entry_c();
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct daBmWindow_c {

@@ -35,7 +35,7 @@ lbl_801877AC:
 /* 801877C8 0000001C  48 00 00 48 */	b lbl_80187810
 lbl_801877CC:
 /* 801877CC 00000000  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 801877D0 00000004  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
+/* 801877D0 00000004  C0 22 9F 48 */	lfs f1, lit_4778(r2)
 /* 801877D4 00000008  48 00 DA CD */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801877D8 0000000C  38 00 00 0F */	li r0, 0xf
 /* 801877DC 00000010  98 1F 02 0A */	stb r0, 0x20a(r31)

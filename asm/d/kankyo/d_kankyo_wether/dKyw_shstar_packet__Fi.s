@@ -5,7 +5,7 @@ lbl_80057390:
 /* 8005739C 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 800573A0 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800573A4 00000014  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 800573A8 00000018  80 63 0F 1C */	lwz r3, 0xf1c(r3)
+/* 800573A8 00000018  80 63 0F 1C */	lwz r3, 0xf1c(r3)	/* effective address: 8042D970 */
 /* 800573AC 0000001C  4B FF F7 9D */	bl dKyw_setDrawPacketListSky__FP9J3DPacketi
 /* 800573B0 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800573B4 00000024  7C 08 03 A6 */	mtlr r0

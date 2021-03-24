@@ -18,12 +18,12 @@ lbl_802C5C9C:
 /* 802C5CDC 00000040  48 00 00 95 */	bl setPanDir__10Z2EnvSeDirFP3Vec
 /* 802C5CE0 00000044  48 00 00 20 */	b lbl_802C5D00
 lbl_802C5CE4:
-/* 802C5CE4 00000000  3C 60 80 3A */	lis r3, Z2EnvSeMgr__cNullVec__6Z2Calc@ha
-/* 802C5CE8 00000004  C4 03 C2 50 */	lfsu f0, Z2EnvSeMgr__cNullVec__6Z2Calc@l(r3)
+/* 802C5CE4 00000000  3C 60 80 3A */	lis r3, cNullVec__6Z2Calc@ha
+/* 802C5CE8 00000004  C4 03 C2 50 */	lfsu f0, cNullVec__6Z2Calc@l(r3)
 /* 802C5CEC 00000008  D0 1E 00 10 */	stfs f0, 0x10(r30)
-/* 802C5CF0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 802C5CF0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803A0004 */
 /* 802C5CF4 00000010  D0 1E 00 14 */	stfs f0, 0x14(r30)
-/* 802C5CF8 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 802C5CF8 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803A0008 */
 /* 802C5CFC 00000018  D0 1E 00 18 */	stfs f0, 0x18(r30)
 lbl_802C5D00:
 /* 802C5D00 00000000  7F C3 F3 78 */	mr r3, r30

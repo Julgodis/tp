@@ -23,7 +23,7 @@ lbl_800E6D6C:
 lbl_800E6DC0:
 /* 800E6DC0 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800E6DC4 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800E6DC8 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E6DC8 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E6DCC 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800E6DD0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800E6DD4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

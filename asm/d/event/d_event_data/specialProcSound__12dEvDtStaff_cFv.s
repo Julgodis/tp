@@ -9,8 +9,8 @@ lbl_80044A58:
 /* 80044A74 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80044A78 00000020  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 80044A7C 00000024  7F A3 EB 78 */	mr r3, r29
-/* 80044A80 00000028  3C 80 80 38 */	lis r4, d_event_d_event_data__stringBase0@ha
-/* 80044A84 0000002C  38 84 9D D0 */	addi r4, r4, d_event_d_event_data__stringBase0@l
+/* 80044A80 00000028  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80044A84 0000002C  38 84 9D D0 */	addi r4, r4, stringBase0@l
 /* 80044A88 00000030  38 84 00 70 */	addi r4, r4, 0x70
 /* 80044A8C 00000034  38 A0 00 00 */	li r5, 0
 /* 80044A90 00000038  38 C0 00 00 */	li r6, 0
@@ -72,8 +72,8 @@ lbl_80044B50:
 lbl_80044B60:
 /* 80044B60 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80044B64 00000004  7F C4 F3 78 */	mr r4, r30
-/* 80044B68 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
-/* 80044B6C 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
+/* 80044B68 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 80044B6C 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
 /* 80044B70 00000010  38 A5 00 62 */	addi r5, r5, 0x62
 /* 80044B74 00000014  38 C0 00 03 */	li r6, 3
 /* 80044B78 00000018  48 00 35 75 */	bl getMySubstanceP__16dEvent_manager_cFiPCci
@@ -89,9 +89,9 @@ lbl_80044B60:
 /* 80044BA0 00000040  38 A0 00 00 */	li r5, 0
 /* 80044BA4 00000044  38 C0 00 00 */	li r6, 0
 /* 80044BA8 00000048  38 E0 00 00 */	li r7, 0
-/* 80044BAC 0000004C  C0 22 84 F0 */	lfs f1, d_event_d_event_data__lit_4668(r2)
+/* 80044BAC 0000004C  C0 22 84 F0 */	lfs f1, lit_4668(r2)
 /* 80044BB0 00000050  FC 40 08 90 */	fmr f2, f1
-/* 80044BB4 00000054  C0 62 84 F4 */	lfs f3, d_event_d_event_data__lit_4669(r2)
+/* 80044BB4 00000054  C0 62 84 F4 */	lfs f3, lit_4669(r2)
 /* 80044BB8 00000058  FC 80 18 90 */	fmr f4, f3
 /* 80044BBC 0000005C  39 00 00 00 */	li r8, 0
 /* 80044BC0 00000060  48 26 6D C5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -104,9 +104,9 @@ lbl_80044BC8:
 /* 80044BD8 00000010  38 A0 00 00 */	li r5, 0
 /* 80044BDC 00000014  38 C0 00 00 */	li r6, 0
 /* 80044BE0 00000018  38 E0 00 00 */	li r7, 0
-/* 80044BE4 0000001C  C0 22 84 F0 */	lfs f1, d_event_d_event_data__lit_4668(r2)
+/* 80044BE4 0000001C  C0 22 84 F0 */	lfs f1, lit_4668(r2)
 /* 80044BE8 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80044BEC 00000024  C0 62 84 F4 */	lfs f3, d_event_d_event_data__lit_4669(r2)
+/* 80044BEC 00000024  C0 62 84 F4 */	lfs f3, lit_4669(r2)
 /* 80044BF0 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80044BF4 0000002C  39 00 00 00 */	li r8, 0
 /* 80044BF8 00000030  48 26 6D 8D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -114,8 +114,8 @@ lbl_80044BC8:
 lbl_80044C00:
 /* 80044C00 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80044C04 00000004  7F C4 F3 78 */	mr r4, r30
-/* 80044C08 00000008  3C A0 80 38 */	lis r5, d_event_d_event_data__stringBase0@ha
-/* 80044C0C 0000000C  38 A5 9D D0 */	addi r5, r5, d_event_d_event_data__stringBase0@l
+/* 80044C08 00000008  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 80044C0C 0000000C  38 A5 9D D0 */	addi r5, r5, stringBase0@l
 /* 80044C10 00000010  38 A5 00 3D */	addi r5, r5, 0x3d
 /* 80044C14 00000014  38 C0 00 03 */	li r6, 3
 /* 80044C18 00000018  48 00 34 D5 */	bl getMySubstanceP__16dEvent_manager_cFiPCci

@@ -49,7 +49,7 @@ lbl_801EDAB0:
 /* 801EDAC0 00000010  48 06 7D 11 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801EDAC4 00000014  80 7E 01 B8 */	lwz r3, 0x1b8(r30)
 /* 801EDAC8 00000018  C0 22 AA 10 */	lfs f1, lit_5683(r2)
-/* 801EDACC 0000001C  C0 02 A9 9C */	lfs f0, d_menu_d_menu_ring__lit_4305(r2)
+/* 801EDACC 0000001C  C0 02 A9 9C */	lfs f0, lit_4305(r2)
 /* 801EDAD0 00000020  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 801EDAD4 00000024  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801EDAD8 00000028  FC 00 00 1E */	fctiwz f0, f0

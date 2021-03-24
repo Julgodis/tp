@@ -9,7 +9,7 @@ lbl_80047E10:
 /* 80047E2C 0000001C  7D 1F 43 78 */	mr r31, r8
 /* 80047E30 00000020  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80047E34 00000024  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 80047E38 00000028  88 05 4F AC */	lbz r0, 0x4fac(r5)
+/* 80047E38 00000028  88 05 4F AC */	lbz r0, 0x4fac(r5)	/* effective address: 8040B16C */
 /* 80047E3C 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80047E40 00000030  40 82 00 0C */	bne lbl_80047E4C
 /* 80047E44 00000034  38 60 00 00 */	li r3, 0

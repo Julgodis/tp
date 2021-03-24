@@ -5,7 +5,7 @@ lbl_80237AB0:
 /* 80237ABC 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80237AC0 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80237AC4 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80237AC8 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80237AC8 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80237ACC 0000001C  48 00 02 BD */	bl setDemoMessageLocal__12dMsgObject_cFUl
 /* 80237AD0 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80237AD4 00000024  7C 08 03 A6 */	mtlr r0

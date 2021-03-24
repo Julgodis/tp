@@ -34,12 +34,12 @@ lbl_80244E88:
 lbl_80244EB0:
 /* 80244EB0 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 80244EB4 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80244EB8 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
-/* 80244EBC 0000000C  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
+/* 80244EB8 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80244EBC 0000000C  38 84 9A B8 */	addi r4, r4, stringBase0@l
 /* 80244EC0 00000010  3C A0 01 02 */	lis r5, 0x102
 /* 80244EC4 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 80244EC8 00000018  3B A6 61 C0 */	addi r29, r6, g_dComIfG_gameInfo@l
-/* 80244ECC 0000001C  80 DD 5C 74 */	lwz r6, 0x5c74(r29)
+/* 80244ECC 0000001C  80 DD 5C 74 */	lwz r6, 0x5c74(r29)	/* effective address: 8040BE34 */
 /* 80244ED0 00000020  48 0B 37 79 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 80244ED4 00000024  80 7F 00 04 */	lwz r3, 4(r31)
 /* 80244ED8 00000028  48 01 02 11 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -55,15 +55,15 @@ lbl_80244EB0:
 /* 80244F00 00000050  38 60 00 07 */	li r3, 7
 /* 80244F04 00000054  64 63 00 07 */	oris r3, r3, 7
 /* 80244F08 00000058  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 80244F0C 0000005C  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
-/* 80244F10 00000060  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
+/* 80244F0C 0000005C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80244F10 00000060  38 84 9A B8 */	addi r4, r4, stringBase0@l
 /* 80244F14 00000064  38 64 00 19 */	addi r3, r4, 0x19
 /* 80244F18 00000068  80 9D 5C 74 */	lwz r4, 0x5c74(r29)
 /* 80244F1C 0000006C  48 08 F3 55 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 80244F20 00000070  48 0C 3B 4D */	bl load__20J2DAnmLoaderDataBaseFPCv
 /* 80244F24 00000074  90 7F 00 CC */	stw r3, 0xcc(r31)
-/* 80244F28 00000078  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_kanban__stringBase0@ha
-/* 80244F2C 0000007C  38 84 9A B8 */	addi r4, r4, msg_scrn_d_msg_scrn_kanban__stringBase0@l
+/* 80244F28 00000078  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80244F2C 0000007C  38 84 9A B8 */	addi r4, r4, stringBase0@l
 /* 80244F30 00000080  38 64 00 32 */	addi r3, r4, 0x32
 /* 80244F34 00000084  80 9D 5C 74 */	lwz r4, 0x5c74(r29)
 /* 80244F38 00000088  48 08 F3 39 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -75,7 +75,7 @@ lbl_80244EB0:
 /* 80244F50 000000A0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80244F54 000000A4  7D 89 03 A6 */	mtctr r12
 /* 80244F58 000000A8  4E 80 04 21 */	bctrl 
-/* 80244F5C 000000AC  C0 02 B2 C0 */	lfs f0, msg_scrn_d_msg_scrn_kanban__lit_3944(r2)
+/* 80244F5C 000000AC  C0 02 B2 C0 */	lfs f0, lit_3944(r2)
 /* 80244F60 000000B0  D0 1F 00 D8 */	stfs f0, 0xd8(r31)
 /* 80244F64 000000B4  38 60 00 6C */	li r3, 0x6c
 /* 80244F68 000000B8  48 08 9C E5 */	bl __nw__FUl
@@ -98,7 +98,7 @@ lbl_80244F94:
 /* 80244FA8 00000014  81 8C 00 60 */	lwz r12, 0x60(r12)
 /* 80244FAC 00000018  7D 89 03 A6 */	mtctr r12
 /* 80244FB0 0000001C  4E 80 04 21 */	bctrl 
-/* 80244FB4 00000020  C0 02 B2 C4 */	lfs f0, msg_scrn_d_msg_scrn_kanban__lit_3945(r2)
+/* 80244FB4 00000020  C0 02 B2 C4 */	lfs f0, lit_3945(r2)
 /* 80244FB8 00000024  80 9F 00 CC */	lwz r4, 0xcc(r31)
 /* 80244FBC 00000028  D0 04 00 08 */	stfs f0, 8(r4)
 /* 80244FC0 0000002C  80 9F 00 08 */	lwz r4, 8(r31)
@@ -113,10 +113,10 @@ lbl_80244F94:
 /* 80244FE4 00000050  4E 80 04 21 */	bctrl 
 /* 80244FE8 00000054  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 80244FEC 00000058  38 A4 02 8C */	addi r5, r4, g_MsgObject_HIO_c@l
-/* 80244FF0 0000005C  C0 25 00 AC */	lfs f1, 0xac(r5)
+/* 80244FF0 0000005C  C0 25 00 AC */	lfs f1, 0xac(r5)	/* effective address: 80430338 */
 /* 80244FF4 00000060  80 9F 00 08 */	lwz r4, 8(r31)
 /* 80244FF8 00000064  80 64 00 04 */	lwz r3, 4(r4)
-/* 80244FFC 00000068  C0 05 00 80 */	lfs f0, 0x80(r5)
+/* 80244FFC 00000068  C0 05 00 80 */	lfs f0, 0x80(r5)	/* effective address: 8043030C */
 /* 80245000 0000006C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 80245004 00000070  D0 23 00 D0 */	stfs f1, 0xd0(r3)
 /* 80245008 00000074  81 83 00 00 */	lwz r12, 0(r3)
@@ -254,7 +254,7 @@ lbl_802450E0:
 /* 80245208 00000128  D0 1F 00 80 */	stfs f0, 0x80(r31)
 /* 8024520C 0000012C  3B 60 00 00 */	li r27, 0
 /* 80245210 00000130  3B C0 00 00 */	li r30, 0
-/* 80245214 00000134  C3 E2 B2 C8 */	lfs f31, msg_scrn_d_msg_scrn_kanban__lit_3946(r2)
+/* 80245214 00000134  C3 E2 B2 C8 */	lfs f31, lit_3946(r2)
 lbl_80245218:
 /* 80245218 00000000  38 1E 00 0C */	addi r0, r30, 0xc
 /* 8024521C 00000004  7C 9F 00 2E */	lwzx r4, r31, r0
@@ -284,7 +284,7 @@ lbl_80245218:
 /* 8024527C 00000064  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 80245280 00000068  48 00 F0 E5 */	bl getGlobalPosY__8CPaneMgrFv
 /* 80245284 0000006C  D0 3F 00 68 */	stfs f1, 0x68(r31)
-/* 80245288 00000070  C0 02 B2 C0 */	lfs f0, msg_scrn_d_msg_scrn_kanban__lit_3944(r2)
+/* 80245288 00000070  C0 02 B2 C0 */	lfs f0, lit_3944(r2)
 /* 8024528C 00000074  D0 1F 00 B4 */	stfs f0, 0xb4(r31)
 /* 80245290 00000078  3B 60 00 00 */	li r27, 0
 /* 80245294 0000007C  3B C0 00 00 */	li r30, 0
@@ -316,7 +316,7 @@ lbl_802452DC:
 /* 802452F4 00000018  C0 23 00 28 */	lfs f1, 0x28(r3)
 /* 802452F8 0000001C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 802452FC 00000020  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80245300 00000024  C0 02 B2 C8 */	lfs f0, msg_scrn_d_msg_scrn_kanban__lit_3946(r2)
+/* 80245300 00000024  C0 02 B2 C8 */	lfs f0, lit_3946(r2)
 /* 80245304 00000028  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80245308 0000002C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8024530C 00000030  81 8C 00 18 */	lwz r12, 0x18(r12)

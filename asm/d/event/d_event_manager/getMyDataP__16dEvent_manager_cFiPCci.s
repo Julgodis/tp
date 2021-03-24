@@ -8,7 +8,7 @@ lbl_80047FC8:
 /* 80047FE0 00000018  7C BF 2B 78 */	mr r31, r5
 /* 80047FE4 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80047FE8 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80047FEC 00000024  88 03 4F AC */	lbz r0, 0x4fac(r3)
+/* 80047FEC 00000024  88 03 4F AC */	lbz r0, 0x4fac(r3)	/* effective address: 8040B16C */
 /* 80047FF0 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80047FF4 0000002C  40 82 00 0C */	bne lbl_80048000
 /* 80047FF8 00000030  38 60 00 00 */	li r3, 0

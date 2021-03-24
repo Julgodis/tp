@@ -15,7 +15,7 @@
 extern "C" static void PackArgs(); // 1
 extern "C" static void Run(); // 1
 extern "C" static void ReadDisc(); // 1
-extern "C" static void OSExec__Callback(); // 1
+extern "C" static void Callback(); // 1
 extern "C" void __OSGetExecParams(); // 1
 extern "C" static void GetApploaderPosition(); // 1
 extern "C" static void __OSBootDolSimple(); // 1
@@ -102,9 +102,9 @@ static u8 Prepared[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSExec__Callback() {
+extern "C" asm static void Callback() {
 	nofralloc
-#include "asm/dolphin/os/OSExec/OSExec__Callback.s"
+#include "asm/dolphin/os/OSExec/Callback.s"
 }
 #pragma pop
 
@@ -137,7 +137,7 @@ extern "C" asm static void GetApploaderPosition() {
 
 /* ############################################################################################## */
 /* 803CFC38-803CFC48 000B+05 s=1 e=0 z=0  None .data      @115                                                         */
-SECTION_DATA static u8 OSExec__lit_115[11 + 5 /* padding */] = {
+SECTION_DATA static u8 lit_115[11 + 5 /* padding */] = {
 	0x32, 0x30, 0x30, 0x34, 0x2F, 0x30, 0x32, 0x2F, 0x30, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
@@ -156,7 +156,7 @@ extern "C" asm static void __OSBootDolSimple() {
 
 /* ############################################################################################## */
 /* 804509A8-804509B0 0003+05 s=1 e=0 z=0  None .sdata     @213                                                         */
-SECTION_SDATA static u8 OSExec__lit_213[3 + 5 /* padding */] = {
+SECTION_SDATA static u8 lit_213[3 + 5 /* padding */] = {
 	0x25, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,

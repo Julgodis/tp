@@ -16,7 +16,7 @@ lbl_801074AC:
 /* 801074E4 00000038  C0 5E 1F E0 */	lfs f2, 0x1fe0(r30)
 /* 801074E8 0000003C  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 801074EC 00000040  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 801074F0 00000044  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 801074F0 00000044  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038DEE2 */
 /* 801074F4 00000048  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 801074F8 0000004C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801074FC 00000050  90 01 00 0C */	stw r0, 0xc(r1)

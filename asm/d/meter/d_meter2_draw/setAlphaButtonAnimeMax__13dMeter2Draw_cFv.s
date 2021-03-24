@@ -8,8 +8,8 @@ lbl_802190A8:
 /* 802190C0 00000018  48 03 C7 69 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 802190C4 0000001C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 802190C8 00000020  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 802190CC 00000024  C0 43 00 18 */	lfs f2, 0x18(r3)
-/* 802190D0 00000028  C0 03 00 84 */	lfs f0, 0x84(r3)
+/* 802190CC 00000024  C0 43 00 18 */	lfs f2, 0x18(r3)	/* effective address: 8042EBE0 */
+/* 802190D0 00000028  C0 03 00 84 */	lfs f0, 0x84(r3)	/* effective address: 8042EC4C */
 /* 802190D4 0000002C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802190D8 00000030  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 802190DC 00000034  41 82 00 44 */	beq lbl_80219120
@@ -38,7 +38,7 @@ lbl_80219120:
 /* 80219134 00000014  38 83 01 88 */	addi r4, r3, g_meter2_info@l
 /* 80219138 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021913C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80219140 00000020  88 03 4E 0C */	lbz r0, 0x4e0c(r3)
+/* 80219140 00000020  88 03 4E 0C */	lbz r0, 0x4e0c(r3)	/* effective address: 8040AFCC */
 /* 80219144 00000024  7C 00 07 74 */	extsb r0, r0
 /* 80219148 00000028  7C 64 02 14 */	add r3, r4, r0
 /* 8021914C 0000002C  8C 03 00 E3 */	lbzu r0, 0xe3(r3)

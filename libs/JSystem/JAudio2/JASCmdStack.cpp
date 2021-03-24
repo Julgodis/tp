@@ -40,7 +40,7 @@ extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv(); // 1
 extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv(); // 1
 extern "C" void __sinit_JASCmdStack_cpp(); // 1
 extern "C" void __dt__Q210JASPortCmd9TPortHeadFv(); // 1
-extern "C" extern u8 JASCmdStack__lit_82[12];
+extern "C" extern u8 lit_82[12];
 
 // 
 // External References:
@@ -64,13 +64,13 @@ extern "C" void _restgpr_29(); // 1
 
 /* ############################################################################################## */
 /* 80431678-80431684 000C+00 s=1 e=0 z=0  None .bss       @80                                                          */
-static u8 JASCmdStack__lit_80[12];
+static u8 lit_80[12];
 
 /* 80431684-80431690 000C+00 s=1 e=0 z=0  None .bss       sCommandListOnce__10JASPortCmd                               */
 static u8 sCommandListOnce__10JASPortCmd[12];
 
 /* 80431690-8043169C 000C+00 s=0 e=0 z=0  None .bss       @82                                                          */
-u8 JASCmdStack__lit_82[12];
+u8 lit_82[12];
 
 /* 8043169C-804316A8 000C+00 s=1 e=0 z=0  None .bss       sCommandListStay__10JASPortCmd                               */
 static u8 sCommandListStay__10JASPortCmd[12];

@@ -18,7 +18,7 @@ lbl_801B90E0:
 /* 801B9120 00000040  80 9E 0C 9C */	lwz r4, 0xc9c(r30)
 /* 801B9124 00000044  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 801B9128 00000048  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 801B912C 0000004C  80 A5 5C C0 */	lwz r5, 0x5cc0(r5)
+/* 801B912C 0000004C  80 A5 5C C0 */	lwz r5, 0x5cc0(r5)	/* effective address: 8040BE80 */
 /* 801B9130 00000050  80 DE 0C A0 */	lwz r6, 0xca0(r30)
 /* 801B9134 00000054  38 E0 00 01 */	li r7, 1
 /* 801B9138 00000058  48 02 16 1D */	bl __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb

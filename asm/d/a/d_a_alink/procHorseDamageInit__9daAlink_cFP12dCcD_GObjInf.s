@@ -17,7 +17,7 @@ lbl_800F1D18:
 /* 800F1D54 0000003C  41 82 00 14 */	beq lbl_800F1D68
 /* 800F1D58 00000040  7F E3 FB 78 */	mr r3, r31
 /* 800F1D5C 00000044  38 80 00 02 */	li r4, 2
-/* 800F1D60 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F1D60 00000048  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F1D64 0000004C  4B FB BD 89 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1D68:
 /* 800F1D68 00000000  7F E3 FB 78 */	mr r3, r31
@@ -60,7 +60,7 @@ lbl_800F1DEC:
 /* 800F1DF8 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800F1DFC 00000010  3C 80 80 39 */	lis r4, data_803919D8@ha
 /* 800F1E00 00000014  38 84 19 D8 */	addi r4, r4, data_803919D8@l
-/* 800F1E04 00000018  A0 84 00 08 */	lhz r4, 8(r4)
+/* 800F1E04 00000018  A0 84 00 08 */	lhz r4, 8(r4)	/* effective address: 803919E0 */
 /* 800F1E08 0000001C  38 A0 00 02 */	li r5, 2
 /* 800F1E0C 00000020  3C C0 80 39 */	lis r6, m__22daAlinkHIO_damHorse_c0@ha
 /* 800F1E10 00000024  38 C6 E4 28 */	addi r6, r6, m__22daAlinkHIO_damHorse_c0@l
@@ -92,7 +92,7 @@ lbl_800F1E1C:
 /* 800F1E74 00000058  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800F1E78 0000005C  3C 60 80 39 */	lis r3, m__22daAlinkHIO_damHorse_c0@ha
 /* 800F1E7C 00000060  38 63 E4 28 */	addi r3, r3, m__22daAlinkHIO_damHorse_c0@l
-/* 800F1E80 00000064  AB A3 00 28 */	lha r29, 0x28(r3)
+/* 800F1E80 00000064  AB A3 00 28 */	lha r29, 0x28(r3)	/* effective address: 8038E450 */
 /* 800F1E84 00000068  7C 1D 00 D0 */	neg r0, r29
 /* 800F1E88 0000006C  7C 1E 07 34 */	extsh r30, r0
 /* 800F1E8C 00000070  48 17 57 E9 */	bl cM_atan2s__Fff
@@ -111,7 +111,7 @@ lbl_800F1EB4:
 /* 800F1EB4 00000000  B3 DF 30 10 */	sth r30, 0x3010(r31)
 /* 800F1EB8 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_damHorse_c0@ha
 /* 800F1EBC 00000008  38 63 E4 28 */	addi r3, r3, m__22daAlinkHIO_damHorse_c0@l
-/* 800F1EC0 0000000C  AB A3 00 2A */	lha r29, 0x2a(r3)
+/* 800F1EC0 0000000C  AB A3 00 2A */	lha r29, 0x2a(r3)	/* effective address: 8038E452 */
 /* 800F1EC4 00000010  7C 1D 00 D0 */	neg r0, r29
 /* 800F1EC8 00000014  7C 1E 07 34 */	extsh r30, r0
 /* 800F1ECC 00000018  C0 01 00 0C */	lfs f0, 0xc(r1)

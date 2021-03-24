@@ -8,16 +8,16 @@ lbl_8000B7C8:
 /* 8000B7E0 00000018  90 6D 85 90 */	stw r3, sHungUpTime__7mDoMain(r13)
 /* 8000B7E4 0000001C  4B FF B0 BD */	bl OSReportEnable
 /* 8000B7E8 00000020  48 25 7A A5 */	bl cAPICPad_recalibrate__Fv
-/* 8000B7EC 00000024  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B7F0 00000028  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B7EC 00000024  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B7F0 00000028  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B7F4 0000002C  38 63 01 19 */	addi r3, r3, 0x119
 /* 8000B7F8 00000030  4C C6 31 82 */	crclr 6
 /* 8000B7FC 00000034  4B FF B2 C1 */	bl OSReport
 /* 8000B800 00000038  83 ED 8F 88 */	lwz r31, sErrorManager__12JUTException(r13)
 /* 8000B804 0000003C  28 1F 00 00 */	cmplwi r31, 0
 /* 8000B808 00000040  40 82 00 20 */	bne lbl_8000B828
-/* 8000B80C 00000044  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B810 00000048  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B80C 00000044  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B810 00000048  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B814 0000004C  38 63 01 2D */	addi r3, r3, 0x12d
 /* 8000B818 00000050  4C C6 31 82 */	crclr 6
 /* 8000B81C 00000054  4B FF B2 A1 */	bl OSReport
@@ -39,8 +39,8 @@ lbl_8000B828:
 /* 8000B858 00000030  28 1F 00 00 */	cmplwi r31, 0
 /* 8000B85C 00000034  41 82 00 94 */	beq lbl_8000B8F0
 /* 8000B860 00000038  48 33 1E A9 */	bl OSEnableInterrupts
-/* 8000B864 0000003C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B868 00000040  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B864 0000003C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B868 00000040  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B86C 00000044  38 63 01 49 */	addi r3, r3, 0x149
 /* 8000B870 00000048  4C C6 31 82 */	crclr 6
 /* 8000B874 0000004C  4B FF B2 49 */	bl OSReport
@@ -62,8 +62,8 @@ lbl_8000B8AC:
 /* 8000B8AC 00000000  88 0D 80 00 */	lbz r0, data_80450580(r13)
 /* 8000B8B0 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 8000B8B4 00000008  41 82 FF C8 */	beq lbl_8000B87C
-/* 8000B8B8 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B8BC 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B8B8 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B8BC 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B8C0 00000014  38 63 01 65 */	addi r3, r3, 0x165
 /* 8000B8C4 00000018  4C C6 31 82 */	crclr 6
 /* 8000B8C8 0000001C  4B FF B1 F5 */	bl OSReport
@@ -84,16 +84,16 @@ lbl_8000B8F4:
 /* 8000B8FC 00000008  48 2D 4E B5 */	bl __dt__10JUTGamePadFv
 /* 8000B900 0000000C  48 00 00 20 */	b lbl_8000B920
 lbl_8000B904:
-/* 8000B904 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B908 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B904 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B908 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B90C 00000008  38 63 01 83 */	addi r3, r3, 0x183
 /* 8000B910 0000000C  4C C6 31 82 */	crclr 6
 /* 8000B914 00000010  4B FF B1 A9 */	bl OSReport
 /* 8000B918 00000014  38 60 0B B8 */	li r3, 0xbb8
 /* 8000B91C 00000018  48 2D 80 65 */	bl waitTime__12JUTExceptionFl
 lbl_8000B920:
-/* 8000B920 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B924 00000004  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B920 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B924 00000004  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B928 00000008  38 63 01 8E */	addi r3, r3, 0x18e
 /* 8000B92C 0000000C  48 33 D3 C9 */	bl DVDChangeDir
 /* 8000B930 00000010  48 2D 93 7D */	bl destroyManager__8JUTVideoFv

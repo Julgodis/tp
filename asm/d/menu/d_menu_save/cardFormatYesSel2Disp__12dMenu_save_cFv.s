@@ -17,7 +17,7 @@ lbl_801F2250:
 /* 801F228C 0000003C  40 82 00 28 */	bne lbl_801F22B4
 /* 801F2290 00000040  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F2294 00000044  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F2298 00000048  88 03 00 06 */	lbz r0, 6(r3)
+/* 801F2298 00000048  88 03 00 06 */	lbz r0, 6(r3)	/* effective address: 8042E852 */
 /* 801F229C 0000004C  98 1E 01 BD */	stb r0, 0x1bd(r30)
 /* 801F22A0 00000050  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 801F22A4 00000054  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l

@@ -16,7 +16,7 @@ lbl_8013852C:
 lbl_80138564:
 /* 80138564 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlSwim_c0@ha
 /* 80138568 00000004  38 63 F8 B4 */	addi r3, r3, m__20daAlinkHIO_wlSwim_c0@l
-/* 8013856C 00000008  C3 E3 00 68 */	lfs f31, 0x68(r3)
+/* 8013856C 00000008  C3 E3 00 68 */	lfs f31, 0x68(r3)	/* effective address: 8038F91C */
 lbl_80138570:
 /* 80138570 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80138574 00000004  38 80 01 28 */	li r4, 0x128
@@ -43,20 +43,20 @@ lbl_801385B0:
 /* 801385C0 00000010  41 82 00 14 */	beq lbl_801385D4
 /* 801385C4 00000014  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlSwim_c0@ha
 /* 801385C8 00000018  38 A5 F8 B4 */	addi r5, r5, m__20daAlinkHIO_wlSwim_c0@l
-/* 801385CC 0000001C  C0 25 00 64 */	lfs f1, 0x64(r5)
+/* 801385CC 0000001C  C0 25 00 64 */	lfs f1, 0x64(r5)	/* effective address: 8038F918 */
 /* 801385D0 00000020  48 00 00 10 */	b lbl_801385E0
 lbl_801385D4:
 /* 801385D4 00000000  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlSwim_c0@ha
 /* 801385D8 00000004  38 A5 F8 B4 */	addi r5, r5, m__20daAlinkHIO_wlSwim_c0@l
-/* 801385DC 00000008  C0 25 00 88 */	lfs f1, 0x88(r5)
+/* 801385DC 00000008  C0 25 00 88 */	lfs f1, 0x88(r5)	/* effective address: 8038F93C */
 lbl_801385E0:
 /* 801385E0 00000000  FC 40 F8 90 */	fmr f2, f31
 /* 801385E4 00000004  4B FF 10 F5 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 801385E8 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801385EC 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801385F0 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 801385F0 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 801385F4 00000014  64 00 00 10 */	oris r0, r0, 0x10
-/* 801385F8 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 801385F8 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 801385FC 0000001C  80 1F 05 70 */	lwz r0, 0x570(r31)
 /* 80138600 00000020  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80138604 00000024  41 82 00 14 */	beq lbl_80138618

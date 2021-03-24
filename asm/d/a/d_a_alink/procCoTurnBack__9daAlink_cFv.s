@@ -17,13 +17,13 @@ lbl_8011B46C:
 /* 8011B4A8 0000003C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8011B4AC 00000040  41 82 00 14 */	beq lbl_8011B4C0
 /* 8011B4B0 00000044  7F C3 F3 78 */	mr r3, r30
-/* 8011B4B4 00000048  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 8011B4B4 00000048  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 8011B4B8 0000004C  48 00 D3 8D */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8011B4BC 00000050  48 00 00 30 */	b lbl_8011B4EC
 lbl_8011B4C0:
 /* 8011B4C0 00000000  3C 60 80 39 */	lis r3, m__26daAlinkHIO_noActAtnMove_c0@ha
 /* 8011B4C4 00000004  38 63 D7 68 */	addi r3, r3, m__26daAlinkHIO_noActAtnMove_c0@l
-/* 8011B4C8 00000008  C0 43 00 08 */	lfs f2, 8(r3)
+/* 8011B4C8 00000008  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 8038D770 */
 /* 8011B4CC 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 8011B4D0 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011B4D4 00000014  FC 60 10 90 */	fmr f3, f2

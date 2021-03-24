@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -28,6 +19,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80ACAF64 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_seiD_c {
@@ -52,6 +52,8 @@ struct daNpc_seiD_c {
 	/* 80ACA1B8 */ void drawDbgInfo();
 	/* 80ACA1C0 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80ACA358 */ void selectAction();
+	/* 80ACA3A0 */ void chkAction(int (daNpc_seiD_c::*)(void*));
+	/* 80ACA3CC */ void setAction(int (daNpc_seiD_c::*)(void*));
 	/* 80ACA474 */ void ctrlWaitAnm();
 	/* 80ACA478 */ void wait(void*);
 	/* 80ACA4A4 */ void talk(void*);
@@ -169,8 +171,8 @@ extern "C" void setAttnPos__12daNpc_seiD_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_seiD_cFv(); // 1
 extern "C" void afterSetMotionAnm__12daNpc_seiD_cFiifi(); // 1
 extern "C" void selectAction__12daNpc_seiD_cFv(); // 1
-extern "C" static void chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i(); // 1
 extern "C" void ctrlWaitAnm__12daNpc_seiD_cFv(); // 1
 extern "C" void wait__12daNpc_seiD_cFPv(); // 1
 extern "C" void talk__12daNpc_seiD_cFPv(); // 1
@@ -525,7 +527,7 @@ asm void daNpc_seiD_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i() {
+asm void daNpc_seiD_c::chkAction(int (daNpc_seiD_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seid/d_a_npc_seid/chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i.s"
 }
@@ -536,7 +538,7 @@ extern "C" asm static void chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i() {
+asm void daNpc_seiD_c::setAction(int (daNpc_seiD_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_seid/d_a_npc_seid/setAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i.s"
 }

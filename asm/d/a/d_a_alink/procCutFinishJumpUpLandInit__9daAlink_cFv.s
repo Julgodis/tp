@@ -32,17 +32,17 @@ lbl_800D3DD8:
 /* 800D3E50 00000078  40 82 00 20 */	bne lbl_800D3E70
 /* 800D3E54 0000007C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutFnJU_c0@ha
 /* 800D3E58 00000080  38 63 DA EC */	addi r3, r3, m__21daAlinkHIO_cutFnJU_c0@l
-/* 800D3E5C 00000084  C0 03 00 3C */	lfs f0, 0x3c(r3)
+/* 800D3E5C 00000084  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038DB28 */
 /* 800D3E60 00000088  D0 1F 34 84 */	stfs f0, 0x3484(r31)
-/* 800D3E64 0000008C  A8 03 00 2A */	lha r0, 0x2a(r3)
+/* 800D3E64 0000008C  A8 03 00 2A */	lha r0, 0x2a(r3)	/* effective address: 8038DB16 */
 /* 800D3E68 00000090  B0 1F 30 08 */	sth r0, 0x3008(r31)
 /* 800D3E6C 00000094  48 00 00 1C */	b lbl_800D3E88
 lbl_800D3E70:
 /* 800D3E70 00000000  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutFnJU_c0@ha
 /* 800D3E74 00000004  38 63 DA EC */	addi r3, r3, m__21daAlinkHIO_cutFnJU_c0@l
-/* 800D3E78 00000008  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800D3E78 00000008  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038DB10 */
 /* 800D3E7C 0000000C  D0 1F 34 84 */	stfs f0, 0x3484(r31)
-/* 800D3E80 00000010  A8 03 00 28 */	lha r0, 0x28(r3)
+/* 800D3E80 00000010  A8 03 00 28 */	lha r0, 0x28(r3)	/* effective address: 8038DB14 */
 /* 800D3E84 00000014  B0 1F 30 08 */	sth r0, 0x3008(r31)
 lbl_800D3E88:
 /* 800D3E88 00000000  38 00 00 00 */	li r0, 0
@@ -50,9 +50,9 @@ lbl_800D3E88:
 /* 800D3E90 00000008  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800D3E94 0000000C  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800D3E98 00000010  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800D3E9C 00000014  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800D3E9C 00000014  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800D3EA0 00000018  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800D3EA4 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800D3EA4 0000001C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D3EA8 00000020  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800D3EAC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 800D3EB0 00000028  4B FF ED 4D */	bl initCutAtnActorSearch__9daAlink_cFv

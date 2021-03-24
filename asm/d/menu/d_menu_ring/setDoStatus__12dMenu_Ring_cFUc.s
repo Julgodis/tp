@@ -27,7 +27,7 @@ lbl_801EEB3C:
 /* 801EEB3C 00000000  88 03 06 CC */	lbz r0, 0x6cc(r3)
 /* 801EEB40 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EEB44 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801EEB48 0000000C  98 03 5E 3C */	stb r0, 0x5e3c(r3)
+/* 801EEB48 0000000C  98 03 5E 3C */	stb r0, 0x5e3c(r3)	/* effective address: 8040BFFC */
 /* 801EEB4C 00000010  38 00 00 00 */	li r0, 0
-/* 801EEB50 00000014  98 03 5E 57 */	stb r0, 0x5e57(r3)
+/* 801EEB50 00000014  98 03 5E 57 */	stb r0, 0x5e57(r3)	/* effective address: 8040C017 */
 /* 801EEB54 00000018  4E 80 00 20 */	blr 

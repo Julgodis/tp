@@ -29,7 +29,7 @@ extern "C" void __kernel_sin(); // 1
 
 /* ############################################################################################## */
 /* 80456B38-80456B40 0008+00 s=1 e=0 z=0  None .sdata2    @67                                                          */
-SECTION_SDATA2 static u8 Math_Double_precision_s_sin__lit_67[8] = {
+SECTION_SDATA2 static u8 lit_67[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

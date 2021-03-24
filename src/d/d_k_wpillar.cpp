@@ -25,10 +25,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -79,16 +79,16 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -199,20 +199,20 @@ extern "C" extern u8 struct_80450D64[4];
 
 /* ############################################################################################## */
 /* 80454FF0-80454FF8 0007+01 s=1 e=0 z=0  None .sdata2    l_arcName                                                    */
-SECTION_SDATA2 static u8 d_d_k_wpillar__l_arcName[7 + 1 /* padding */] = {
+SECTION_SDATA2 static u8 l_arcName[7 + 1 /* padding */] = {
 	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
 	/* padding */
 	0x00,
 };
 
 /* 80454FF8-80454FFC 0004+00 s=1 e=0 z=0  None .sdata2    @3838                                                        */
-SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3838 = 1.0f;
+SECTION_SDATA2 static f32 lit_3838 = 1.0f;
 
 /* 80454FFC-80455000 0004+00 s=1 e=0 z=0  None .sdata2    @3839                                                        */
-SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3839 = 0.5f;
+SECTION_SDATA2 static f32 lit_3839 = 0.5f;
 
 /* 80455000-80455004 0004+00 s=1 e=0 z=0  None .sdata2    @3840                                                        */
-SECTION_SDATA2 static f32 d_d_k_wpillar__lit_3840 = 0.25f;
+SECTION_SDATA2 static f32 lit_3840 = 0.25f;
 
 /* 80261B54-80261F04 03B0+00 s=1 e=0 z=0  None .text      create__11dkWpillar_cFv                                      */
 #pragma push
@@ -260,7 +260,7 @@ asm static void dkWpillar_Delete(dkWpillar_c* param_0) {
 
 /* ############################################################################################## */
 /* 80455004-80455008 0004+00 s=1 e=0 z=0  None .sdata2    @3946                                                        */
-SECTION_SDATA2 static u8 d_d_k_wpillar__lit_3946[4] = {
+SECTION_SDATA2 static u8 lit_3946[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

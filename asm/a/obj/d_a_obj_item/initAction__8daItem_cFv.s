@@ -16,17 +16,17 @@ lbl_8015D9F0:
 /* 8015DA28 00000038  4B F3 DD 55 */	bl isHeart__FUc
 /* 8015DA2C 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 8015DA30 00000040  41 82 00 5C */	beq lbl_8015DA8C
-/* 8015DA34 00000044  C0 22 9B C4 */	lfs f1, a_obj_d_a_obj_item__lit_5050(r2)
+/* 8015DA34 00000044  C0 22 9B C4 */	lfs f1, lit_5050(r2)
 /* 8015DA38 00000048  48 10 9F 1D */	bl cM_rndF__Ff
-/* 8015DA3C 0000004C  C0 02 9B CC */	lfs f0, a_obj_d_a_obj_item__lit_5110(r2)
+/* 8015DA3C 0000004C  C0 02 9B CC */	lfs f0, lit_5110(r2)
 /* 8015DA40 00000050  EC 20 08 2A */	fadds f1, f0, f1
-/* 8015DA44 00000054  C0 02 9B 98 */	lfs f0, a_obj_d_a_obj_item__lit_4404(r2)
+/* 8015DA44 00000054  C0 02 9B 98 */	lfs f0, lit_4404(r2)
 /* 8015DA48 00000058  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8015DA4C 0000005C  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 8015DA50 00000060  7F E3 FB 78 */	mr r3, r31
 /* 8015DA54 00000064  4B FF D6 65 */	bl getData__12daItemBase_cFv
 /* 8015DA58 00000068  A8 03 00 2A */	lha r0, 0x2a(r3)
-/* 8015DA5C 0000006C  C8 22 9B B0 */	lfd f1, a_obj_d_a_obj_item__lit_4668(r2)
+/* 8015DA5C 0000006C  C8 22 9B B0 */	lfd f1, lit_4668(r2)
 /* 8015DA60 00000070  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8015DA64 00000074  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8015DA68 00000078  3C 00 43 30 */	lis r0, 0x4330

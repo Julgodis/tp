@@ -28,7 +28,7 @@ lbl_80138F18:
 lbl_80138F80:
 /* 80138F80 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80138F84 00000004  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 80138F88 00000008  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80138F88 00000008  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80138F8C 0000000C  38 80 00 00 */	li r4, 0
 /* 80138F90 00000010  90 81 00 08 */	stw r4, 8(r1)
 /* 80138F94 00000014  38 00 FF FF */	li r0, -1

@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcBlueNS_c {
@@ -51,6 +51,7 @@ struct daNpcBlueNS_c {
 	/* 8096A350 */ void drawDbgInfo();
 	/* 8096A358 */ void reset();
 	/* 8096A518 */ void playMotion();
+	/* 8096A750 */ void setAction(int (daNpcBlueNS_c::*)(int));
 	/* 8096A7F8 */ void setLookMode(int);
 	/* 8096A81C */ void lookat();
 	/* 8096A9FC */ void step(s16, int);
@@ -183,7 +184,7 @@ extern "C" void setMotion__13daNpcBlueNS_cFifi(); // 1
 extern "C" void drawDbgInfo__13daNpcBlueNS_cFv(); // 1
 extern "C" void reset__13daNpcBlueNS_cFv(); // 1
 extern "C" void playMotion__13daNpcBlueNS_cFv(); // 1
-extern "C" static void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i(); // 1
+extern "C" void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i(); // 1
 extern "C" void setLookMode__13daNpcBlueNS_cFi(); // 1
 extern "C" void lookat__13daNpcBlueNS_cFv(); // 1
 extern "C" void step__13daNpcBlueNS_cFsi(); // 1
@@ -700,7 +701,7 @@ asm void daNpcBlueNS_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i() {
+asm void daNpcBlueNS_c::setAction(int (daNpcBlueNS_c::*)(int)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_blue_ns/d_a_npc_blue_ns/setAction__13daNpcBlueNS_cFM13daNpcBlueNS_cFPCvPvi_i.s"
 }

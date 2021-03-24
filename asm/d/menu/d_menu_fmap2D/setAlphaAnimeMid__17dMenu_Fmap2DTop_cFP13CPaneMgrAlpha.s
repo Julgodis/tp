@@ -24,16 +24,16 @@ lbl_801D78A0:
 lbl_801D78A8:
 /* 801D78A8 00000000  B3 FE 00 16 */	sth r31, 0x16(r30)
 /* 801D78AC 00000004  7F C3 F3 78 */	mr r3, r30
-/* 801D78B0 00000008  C0 42 A7 E8 */	lfs f2, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D78B0 00000008  C0 42 A7 E8 */	lfs f2, lit_4202(r2)
 /* 801D78B4 0000000C  7F E0 07 34 */	extsh r0, r31
-/* 801D78B8 00000010  C8 22 A8 08 */	lfd f1, d_menu_d_menu_fmap2D__lit_4496(r2)
+/* 801D78B8 00000010  C8 22 A8 08 */	lfd f1, lit_4496(r2)
 /* 801D78BC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801D78C0 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801D78C4 0000001C  3C 00 43 30 */	lis r0, 0x4330
 /* 801D78C8 00000020  90 01 00 08 */	stw r0, 8(r1)
 /* 801D78CC 00000024  C8 01 00 08 */	lfd f0, 8(r1)
 /* 801D78D0 00000028  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801D78D4 0000002C  C0 02 A7 F4 */	lfs f0, d_menu_d_menu_fmap2D__lit_4205(r2)
+/* 801D78D4 0000002C  C0 02 A7 F4 */	lfs f0, lit_4205(r2)
 /* 801D78D8 00000030  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D78DC 00000034  EC 22 00 32 */	fmuls f1, f2, f0
 /* 801D78E0 00000038  48 07 DE F1 */	bl setAlphaRate__13CPaneMgrAlphaFf

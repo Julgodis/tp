@@ -1,7 +1,7 @@
 lbl_80238528:
 /* 80238528 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8023852C 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80238530 00000008  80 04 5D BC */	lwz r0, 0x5dbc(r4)
+/* 80238530 00000008  80 04 5D BC */	lwz r0, 0x5dbc(r4)	/* effective address: 8040BF7C */
 /* 80238534 0000000C  1C 63 00 C8 */	mulli r3, r3, 0xc8
 /* 80238538 00000010  38 63 02 6E */	addi r3, r3, 0x26e
 /* 8023853C 00000014  7C 60 1A 14 */	add r3, r0, r3

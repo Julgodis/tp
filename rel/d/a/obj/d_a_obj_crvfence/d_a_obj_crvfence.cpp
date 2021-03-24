@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct cXyz {
 	/* 80BCED24 */ ~cXyz();
 	/* 80BCFFBC */ cXyz();
-};
-
-struct csXyz {
 };
 
 struct daObjCRVFENCE_c {

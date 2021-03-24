@@ -9,8 +9,8 @@ lbl_800DA180:
 /* 800DA19C 0000001C  7C BC 2B 78 */	mr r28, r5
 /* 800DA1A0 00000020  7C DD 33 78 */	mr r29, r6
 /* 800DA1A4 00000024  7C FE 3B 78 */	mr r30, r7
-/* 800DA1A8 00000028  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800DA1AC 0000002C  3B 24 D6 58 */	addi r25, r4, d_a_d_a_alink__lit_3757@l
+/* 800DA1A8 00000028  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800DA1AC 0000002C  3B 24 D6 58 */	addi r25, r4, lit_3757@l
 /* 800DA1B0 00000030  38 80 00 33 */	li r4, 0x33
 /* 800DA1B4 00000034  4B FE 8B F1 */	bl commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800DA1B8 00000038  2C 03 00 00 */	cmpwi r3, 0
@@ -74,8 +74,8 @@ lbl_800DA284:
 /* 800DA294 00000010  3B 80 00 87 */	li r28, 0x87
 /* 800DA298 00000014  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800DA29C 00000018  38 A0 FF FF */	li r5, -1
-/* 800DA2A0 0000001C  C0 62 93 3C */	lfs f3, d_a_d_a_alink__lit_7808(r2)
-/* 800DA2A4 00000020  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800DA2A0 0000001C  C0 62 93 3C */	lfs f3, lit_7808(r2)
+/* 800DA2A4 00000020  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800DA2A8 00000024  38 00 FF FF */	li r0, -1
 /* 800DA2AC 00000028  B0 1A 30 08 */	sth r0, 0x3008(r26)
 /* 800DA2B0 0000002C  C0 1F 00 10 */	lfs f0, 0x10(r31)
@@ -142,7 +142,7 @@ lbl_800DA384:
 /* 800DA384 00000000  B0 7A 30 08 */	sth r3, 0x3008(r26)
 /* 800DA388 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800DA38C 00000008  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DA390 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800DA390 0000000C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800DA394 00000010  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DA398 00000014  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DA39C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -226,7 +226,7 @@ lbl_800DA4BC:
 /* 800DA4C4 00000008  38 00 00 01 */	li r0, 1
 /* 800DA4C8 0000000C  B0 1A 30 10 */	sth r0, 0x3010(r26)
 lbl_800DA4CC:
-/* 800DA4CC 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800DA4CC 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800DA4D0 00000004  D0 1A 33 CC */	stfs f0, 0x33cc(r26)
 /* 800DA4D4 00000008  C0 62 93 14 */	lfs f3, lit_7307(r2)
 /* 800DA4D8 0000000C  C0 5A 34 78 */	lfs f2, 0x3478(r26)

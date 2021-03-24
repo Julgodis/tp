@@ -8,7 +8,7 @@ lbl_802D30BC:
 /* 802D30D4 00000018  38 60 00 00 */	li r3, 0
 /* 802D30D8 0000001C  3C A0 80 43 */	lis r5, sAramList__11JKRAramHeap@ha
 /* 802D30DC 00000020  38 A5 43 0C */	addi r5, r5, sAramList__11JKRAramHeap@l
-/* 802D30E0 00000024  80 E5 00 04 */	lwz r7, 4(r5)
+/* 802D30E0 00000024  80 E5 00 04 */	lwz r7, 4(r5)	/* effective address: 80434310 */
 /* 802D30E4 00000028  48 00 00 20 */	b lbl_802D3104
 lbl_802D30E8:
 /* 802D30E8 00000000  80 A7 00 00 */	lwz r5, 0(r7)

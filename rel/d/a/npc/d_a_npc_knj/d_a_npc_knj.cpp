@@ -11,13 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -28,6 +22,12 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A4511C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Knj_c {
@@ -53,6 +53,8 @@ struct daNpc_Knj_c {
 	/* 80A44088 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80A44264 */ void drawGhost();
 	/* 80A442D0 */ void selectAction();
+	/* 80A44318 */ void chkAction(int (daNpc_Knj_c::*)(void*));
+	/* 80A44344 */ void setAction(int (daNpc_Knj_c::*)(void*));
 	/* 80A443EC */ void wait(void*);
 	/* 80A44598 */ void talk(void*);
 	/* 80A45460 */ daNpc_Knj_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
@@ -164,8 +166,8 @@ extern "C" void drawDbgInfo__11daNpc_Knj_cFv(); // 1
 extern "C" void afterSetMotionAnm__11daNpc_Knj_cFiifi(); // 1
 extern "C" void drawGhost__11daNpc_Knj_cFv(); // 1
 extern "C" void selectAction__11daNpc_Knj_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i(); // 1
 extern "C" void wait__11daNpc_Knj_cFPv(); // 1
 extern "C" void talk__11daNpc_Knj_cFPv(); // 1
 extern "C" void daNpc_Knj_Create__FPv(); // 1
@@ -518,7 +520,7 @@ asm void daNpc_Knj_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i() {
+asm void daNpc_Knj_c::chkAction(int (daNpc_Knj_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_knj/d_a_npc_knj/chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i.s"
 }
@@ -529,7 +531,7 @@ extern "C" asm static void chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i() {
+asm void daNpc_Knj_c::setAction(int (daNpc_Knj_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_knj/d_a_npc_knj/setAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i.s"
 }

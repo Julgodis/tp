@@ -59,7 +59,7 @@ lbl_8011CE9C:
 /* 8011CEB8 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011CEBC 00000020  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlDamFall_c0@ha
 /* 8011CEC0 00000024  38 A5 F3 74 */	addi r5, r5, m__23daAlinkHIO_wlDamFall_c0@l
-/* 8011CEC4 00000028  C0 45 00 3C */	lfs f2, 0x3c(r5)
+/* 8011CEC4 00000028  C0 45 00 3C */	lfs f2, 0x3c(r5)	/* effective address: 8038F3B0 */
 /* 8011CEC8 0000002C  48 00 C8 11 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8011CECC 00000030  48 00 00 20 */	b lbl_8011CEEC
 lbl_8011CED0:
@@ -68,7 +68,7 @@ lbl_8011CED0:
 /* 8011CED8 00000008  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011CEDC 0000000C  3C A0 80 39 */	lis r5, m__21daAlinkHIO_damFall_c0@ha
 /* 8011CEE0 00000010  38 A5 E4 54 */	addi r5, r5, m__21daAlinkHIO_damFall_c0@l
-/* 8011CEE4 00000014  C0 45 00 44 */	lfs f2, 0x44(r5)
+/* 8011CEE4 00000014  C0 45 00 44 */	lfs f2, 0x44(r5)	/* effective address: 8038E498 */
 /* 8011CEE8 00000018  4B F9 00 F9 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_8011CEEC:
 /* 8011CEEC 00000000  38 00 00 00 */	li r0, 0
@@ -83,8 +83,8 @@ lbl_8011CF08:
 /* 8011CF08 00000000  48 06 47 39 */	bl dCam_getBody__Fv
 /* 8011CF0C 00000004  38 80 00 13 */	li r4, 0x13
 /* 8011CF10 00000008  7F C5 F3 78 */	mr r5, r30
-/* 8011CF14 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
-/* 8011CF18 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
+/* 8011CF14 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
+/* 8011CF18 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
 /* 8011CF1C 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8011CF20 00000018  38 E0 00 01 */	li r7, 1
 /* 8011CF24 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194

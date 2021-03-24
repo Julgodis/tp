@@ -20,7 +20,7 @@ lbl_800F7CA0:
 /* 800F7CB8 00000018  7C 43 04 2E */	lfsx f2, r3, r0
 /* 800F7CBC 0000001C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_crouch_c0@ha
 /* 800F7CC0 00000020  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
-/* 800F7CC4 00000024  C0 23 00 3C */	lfs f1, 0x3c(r3)
+/* 800F7CC4 00000024  C0 23 00 3C */	lfs f1, 0x3c(r3)	/* effective address: 8038E058 */
 /* 800F7CC8 00000028  C0 1F 1F DC */	lfs f0, 0x1fdc(r31)
 /* 800F7CCC 0000002C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800F7CD0 00000030  EC 20 00 B2 */	fmuls f1, f0, f2

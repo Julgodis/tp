@@ -79,17 +79,17 @@ lbl_802BFA88:
 /* 802BFAA0 00000018  98 17 00 18 */	stb r0, 0x18(r23)
 /* 802BFAA4 0000001C  80 6D 8D E0 */	lwz r3, mLinkPtr__14Z2CreatureLink(r13)
 /* 802BFAA8 00000020  88 03 00 C8 */	lbz r0, 0xc8(r3)
-/* 802BFAAC 00000024  C8 22 C1 D0 */	lfd f1, Z2SoundObjMgr__lit_3703(r2)
+/* 802BFAAC 00000024  C8 22 C1 D0 */	lfd f1, lit_3703(r2)
 /* 802BFAB0 00000028  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 802BFAB4 0000002C  3C 00 43 30 */	lis r0, 0x4330
 /* 802BFAB8 00000030  90 01 00 28 */	stw r0, 0x28(r1)
 /* 802BFABC 00000034  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 802BFAC0 00000038  EC 20 08 28 */	fsubs f1, f0, f1
-/* 802BFAC4 0000003C  C0 42 C1 B0 */	lfs f2, Z2SoundObjMgr__lit_3694(r2)
-/* 802BFAC8 00000040  C0 62 C1 B4 */	lfs f3, Z2SoundObjMgr__lit_3695(r2)
-/* 802BFACC 00000044  C0 82 C1 B8 */	lfs f4, Z2SoundObjMgr__lit_3696(r2)
-/* 802BFAD0 00000048  C0 A2 C1 BC */	lfs f5, Z2SoundObjMgr__lit_3697(r2)
-/* 802BFAD4 0000004C  C0 C2 C1 C0 */	lfs f6, Z2SoundObjMgr__lit_3698(r2)
+/* 802BFAC4 0000003C  C0 42 C1 B0 */	lfs f2, lit_3694(r2)
+/* 802BFAC8 00000040  C0 62 C1 B4 */	lfs f3, lit_3695(r2)
+/* 802BFACC 00000044  C0 82 C1 B8 */	lfs f4, lit_3696(r2)
+/* 802BFAD0 00000048  C0 A2 C1 BC */	lfs f5, lit_3697(r2)
+/* 802BFAD4 0000004C  C0 C2 C1 C0 */	lfs f6, lit_3698(r2)
 /* 802BFAD8 00000050  38 60 00 01 */	li r3, 1
 /* 802BFADC 00000054  4B FE 9C 19 */	bl getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign
 /* 802BFAE0 00000058  FF C0 08 90 */	fmr f30, f1
@@ -110,8 +110,8 @@ lbl_802BFAF4:
 /* 802BFB18 00000024  38 18 FF F6 */	addi r0, r24, -10
 /* 802BFB1C 00000028  28 00 00 2F */	cmplwi r0, 0x2f
 /* 802BFB20 0000002C  41 81 00 7C */	bgt lbl_802BFB9C
-/* 802BFB24 00000030  3C 60 80 3D */	lis r3, Z2SoundObjMgr__lit_3704@ha
-/* 802BFB28 00000034  38 63 B1 70 */	addi r3, r3, Z2SoundObjMgr__lit_3704@l
+/* 802BFB24 00000030  3C 60 80 3D */	lis r3, lit_3704@ha
+/* 802BFB28 00000034  38 63 B1 70 */	addi r3, r3, lit_3704@l
 /* 802BFB2C 00000038  54 00 10 3A */	slwi r0, r0, 2
 /* 802BFB30 0000003C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 802BFB34 00000040  7C 09 03 A6 */	mtctr r0
@@ -149,8 +149,8 @@ lbl_802BFB9C:
 /* 802BFBB0 00000014  28 04 00 00 */	cmplwi r4, 0
 /* 802BFBB4 00000018  41 82 02 8C */	beq lbl_802BFE40
 /* 802BFBB8 0000001C  57 06 25 36 */	rlwinm r6, r24, 4, 0x14, 0x1b
-/* 802BFBBC 00000020  3C A0 80 3D */	lis r5, Z2SoundObjMgr__mEnemyInfo@ha
-/* 802BFBC0 00000024  38 05 AD 70 */	addi r0, r5, Z2SoundObjMgr__mEnemyInfo@l
+/* 802BFBBC 00000020  3C A0 80 3D */	lis r5, mEnemyInfo@ha
+/* 802BFBC0 00000024  38 05 AD 70 */	addi r0, r5, mEnemyInfo@l
 /* 802BFBC4 00000028  7C C0 32 14 */	add r6, r0, r6
 /* 802BFBC8 0000002C  80 A6 00 08 */	lwz r5, 8(r6)
 /* 802BFBCC 00000030  80 06 00 0C */	lwz r0, 0xc(r6)
@@ -176,11 +176,11 @@ lbl_802BFC04:
 lbl_802BFC18:
 /* 802BFC18 00000000  3C A0 80 3A */	lis r5, lit_3380@ha
 /* 802BFC1C 00000004  38 C5 C2 40 */	addi r6, r5, lit_3380@l
-/* 802BFC20 00000008  80 A6 00 00 */	lwz r5, 0(r6)
-/* 802BFC24 0000000C  80 06 00 04 */	lwz r0, 4(r6)
+/* 802BFC20 00000008  80 A6 00 00 */	lwz r5, 0(r6)	/* effective address: 8039C240 */
+/* 802BFC24 0000000C  80 06 00 04 */	lwz r0, 4(r6)	/* effective address: 8039C244 */
 /* 802BFC28 00000010  90 A1 00 1C */	stw r5, 0x1c(r1)
 /* 802BFC2C 00000014  90 01 00 20 */	stw r0, 0x20(r1)
-/* 802BFC30 00000018  80 06 00 08 */	lwz r0, 8(r6)
+/* 802BFC30 00000018  80 06 00 08 */	lwz r0, 8(r6)	/* effective address: 8039C248 */
 /* 802BFC34 0000001C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802BFC38 00000020  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 802BFC3C 00000024  48 08 74 79 */	bl PSVECSubtract
@@ -191,7 +191,7 @@ lbl_802BFC18:
 /* 802BFC50 00000038  48 08 75 01 */	bl PSVECMag
 /* 802BFC54 0000003C  FF E0 08 90 */	fmr f31, f1
 /* 802BFC58 00000040  A0 01 00 1A */	lhz r0, 0x1a(r1)
-/* 802BFC5C 00000044  C8 22 C1 D0 */	lfd f1, Z2SoundObjMgr__lit_3703(r2)
+/* 802BFC5C 00000044  C8 22 C1 D0 */	lfd f1, lit_3703(r2)
 /* 802BFC60 00000048  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 802BFC64 0000004C  3C 80 43 30 */	lis r4, 0x4330
 /* 802BFC68 00000050  90 81 00 28 */	stw r4, 0x28(r1)
@@ -285,7 +285,7 @@ lbl_802BFD98:
 /* 802BFDAC 00000014  3B A0 00 01 */	li r29, 1
 lbl_802BFDB0:
 /* 802BFDB0 00000000  A0 01 00 18 */	lhz r0, 0x18(r1)
-/* 802BFDB4 00000004  C8 22 C1 D0 */	lfd f1, Z2SoundObjMgr__lit_3703(r2)
+/* 802BFDB4 00000004  C8 22 C1 D0 */	lfd f1, lit_3703(r2)
 /* 802BFDB8 00000008  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 802BFDBC 0000000C  3C 80 43 30 */	lis r4, 0x4330
 /* 802BFDC0 00000010  90 81 00 28 */	stw r4, 0x28(r1)

@@ -122,7 +122,7 @@ extern "C" void JUTReportConsole_f(); // 1
 extern "C" void JUTReportConsole(); // 1
 extern "C" void JUTWarningConsole_f(); // 1
 extern "C" void JUTWarningConsole(); // 1
-extern "C" extern char const* const JUTConsole__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
 // 
@@ -265,10 +265,10 @@ asm void JUTConsole::clear() {
 
 /* ############################################################################################## */
 /* 80456118-8045611C 0004+00 s=1 e=0 z=0  None .sdata2    @2460                                                        */
-SECTION_SDATA2 static f32 JUTConsole__lit_2460 = 2.0f;
+SECTION_SDATA2 static f32 lit_2460 = 2.0f;
 
 /* 8045611C-80456120 0004+00 s=1 e=0 z=0  None .sdata2    @2461                                                        */
-SECTION_SDATA2 static u8 JUTConsole__lit_2461[4] = {
+SECTION_SDATA2 static u8 lit_2461[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -285,7 +285,7 @@ SECTION_SDATA2 static f32 lit_2464 = -1.0f;
 SECTION_SDATA2 static f32 lit_2465 = 1.0f;
 
 /* 80456130-80456138 0004+04 s=1 e=0 z=0  None .sdata2    @2466                                                        */
-SECTION_SDATA2 static f32 JUTConsole__lit_2466[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_2466[1 + 1 /* padding */] = {
 	4.0f,
 	/* padding */
 	0.0f,

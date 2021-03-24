@@ -213,7 +213,7 @@ extern "C" asm static void AIGetStreamVolRight() {
 
 /* ############################################################################################## */
 /* 803D1BA0-803D1BE8 0044+04 s=1 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 ai__lit_1[68 + 4 /* padding */] = {
+SECTION_DATA static u8 lit_1[68 + 4 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -225,7 +225,7 @@ SECTION_DATA static u8 ai__lit_1[68 + 4 /* padding */] = {
 
 /* 80450A40-80450A48 0004+04 s=1 e=0 z=0  None .sdata     __AIVersion                                                  */
 SECTION_SDATA static void* __AIVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&ai__lit_1,
+	/* 0    */ (void*)&lit_1,
 	/* padding */
 	NULL,
 };

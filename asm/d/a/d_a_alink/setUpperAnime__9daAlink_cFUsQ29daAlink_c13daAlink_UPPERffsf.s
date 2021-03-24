@@ -68,7 +68,7 @@ lbl_800AD4CC:
 /* 800AD4CC 00000000  57 80 18 38 */	slwi r0, r28, 3
 /* 800AD4D0 00000004  7C 7A 02 14 */	add r3, r26, r0
 /* 800AD4D4 00000008  93 C3 1F 44 */	stw r30, 0x1f44(r3)
-/* 800AD4D8 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800AD4D8 0000000C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800AD4DC 00000010  D0 03 1F 40 */	stfs f0, 0x1f40(r3)
 /* 800AD4E0 00000014  7C 7A CA 14 */	add r3, r26, r25
 /* 800AD4E4 00000018  B3 63 1F 94 */	sth r27, 0x1f94(r3)
@@ -112,9 +112,9 @@ lbl_800AD558:
 lbl_800AD56C:
 /* 800AD56C 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800AD570 00000004  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800AD574 00000008  C0 43 00 28 */	lfs f2, 0x28(r3)
-/* 800AD578 0000000C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
-/* 800AD57C 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800AD574 00000008  C0 43 00 28 */	lfs f2, 0x28(r3)	/* effective address: 8038E81C */
+/* 800AD578 0000000C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
+/* 800AD57C 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E820 */
 /* 800AD580 00000014  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800AD584 00000018  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800AD588 0000001C  EF 9C 00 32 */	fmuls f28, f28, f0

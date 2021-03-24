@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A05DF0 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Hoz_c {
@@ -61,6 +61,8 @@ struct daNpc_Hoz_c {
 	/* 80A02DD4 */ void evtOrder();
 	/* 80A02F78 */ void drawDbgInfo();
 	/* 80A02F80 */ void selectAction();
+	/* 80A030A8 */ void chkAction(int (daNpc_Hoz_c::*)(void*));
+	/* 80A030D4 */ void setAction(int (daNpc_Hoz_c::*)(void*));
 	/* 80A0317C */ void wait(void*);
 	/* 80A03304 */ void waitBattle(void*);
 	/* 80A03578 */ void waitTwilightBattle(void*);
@@ -241,8 +243,8 @@ extern "C" void setCollision__11daNpc_Hoz_cFv(); // 1
 extern "C" void evtOrder__11daNpc_Hoz_cFv(); // 1
 extern "C" void drawDbgInfo__11daNpc_Hoz_cFv(); // 1
 extern "C" void selectAction__11daNpc_Hoz_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i(); // 1
 extern "C" void wait__11daNpc_Hoz_cFPv(); // 1
 extern "C" void waitBattle__11daNpc_Hoz_cFPv(); // 1
 extern "C" void waitTwilightBattle__11daNpc_Hoz_cFPv(); // 1
@@ -849,7 +851,7 @@ asm void daNpc_Hoz_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i() {
+asm void daNpc_Hoz_c::chkAction(int (daNpc_Hoz_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hoz/d_a_npc_hoz/chkAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i.s"
 }
@@ -860,7 +862,7 @@ extern "C" asm static void chkAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i() {
+asm void daNpc_Hoz_c::setAction(int (daNpc_Hoz_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hoz/d_a_npc_hoz/setAction__11daNpc_Hoz_cFM11daNpc_Hoz_cFPCvPvPv_i.s"
 }

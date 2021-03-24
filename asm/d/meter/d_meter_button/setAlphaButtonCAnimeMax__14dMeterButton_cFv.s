@@ -9,12 +9,12 @@ lbl_802077EC:
 /* 80207808 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 8020780C 00000020  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 80207810 00000024  48 04 E0 19 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80207814 00000028  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
+/* 80207814 00000028  C0 02 AD 4C */	lfs f0, lit_4147(r2)
 /* 80207818 0000002C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020781C 00000030  41 82 00 B4 */	beq lbl_802078D0
 /* 80207820 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80207824 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80207828 0000003C  88 03 5E 4C */	lbz r0, 0x5e4c(r3)
+/* 80207828 0000003C  88 03 5E 4C */	lbz r0, 0x5e4c(r3)	/* effective address: 8040C00C */
 /* 8020782C 00000040  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80207830 00000044  41 82 00 20 */	beq lbl_80207850
 /* 80207834 00000048  80 7F 00 30 */	lwz r3, 0x30(r31)
@@ -30,15 +30,15 @@ lbl_80207850:
 /* 80207858 00000008  48 04 DF 79 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020785C 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80207860 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80207864 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 80207868 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 80207864 00000014  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 80207868 00000018  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 8020786C 0000001C  80 9F 00 30 */	lwz r4, 0x30(r31)
 /* 80207870 00000020  38 A0 00 05 */	li r5, 5
 /* 80207874 00000024  48 01 32 31 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas
 lbl_80207878:
 /* 80207878 00000000  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 8020787C 00000004  48 04 DF AD */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80207880 00000008  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
+/* 80207880 00000008  C0 42 AD 4C */	lfs f2, lit_4147(r2)
 /* 80207884 0000000C  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80207888 00000010  40 82 00 48 */	bne lbl_802078D0
 /* 8020788C 00000014  88 1F 04 C5 */	lbz r0, 0x4c5(r31)
@@ -52,7 +52,7 @@ lbl_80207878:
 /* 802078AC 00000034  38 C0 00 00 */	li r6, 0
 /* 802078B0 00000038  38 E0 00 00 */	li r7, 0
 /* 802078B4 0000003C  FC 20 10 90 */	fmr f1, f2
-/* 802078B8 00000040  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
+/* 802078B8 00000040  C0 62 AD 58 */	lfs f3, lit_4513(r2)
 /* 802078BC 00000044  FC 80 18 90 */	fmr f4, f3
 /* 802078C0 00000048  39 00 00 00 */	li r8, 0
 /* 802078C4 0000004C  48 0A 40 C1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -61,8 +61,8 @@ lbl_80207878:
 lbl_802078D0:
 /* 802078D0 00000000  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 802078D4 00000004  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 802078D8 00000008  A8 83 04 22 */	lha r4, 0x422(r3)
-/* 802078DC 0000000C  A8 A3 04 24 */	lha r5, 0x424(r3)
+/* 802078D8 00000008  A8 83 04 22 */	lha r4, 0x422(r3)	/* effective address: 8042EFEA */
+/* 802078DC 0000000C  A8 A3 04 24 */	lha r5, 0x424(r3)	/* effective address: 8042EFEC */
 /* 802078E0 00000010  88 1F 04 DA */	lbz r0, 0x4da(r31)
 /* 802078E4 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 802078E8 00000018  40 82 00 28 */	bne lbl_80207910
@@ -89,7 +89,7 @@ lbl_80207934:
 /* 80207934 00000000  A8 1F 04 B4 */	lha r0, 0x4b4(r31)
 /* 80207938 00000004  7C 00 20 00 */	cmpw r0, r4
 /* 8020793C 00000008  40 80 00 3C */	bge lbl_80207978
-/* 80207940 0000000C  C8 42 AD 68 */	lfd f2, d_meter_d_meter_button__lit_4517(r2)
+/* 80207940 0000000C  C8 42 AD 68 */	lfd f2, lit_4517(r2)
 /* 80207944 00000010  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80207948 00000014  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8020794C 00000018  3C 60 43 30 */	lis r3, 0x4330
@@ -105,7 +105,7 @@ lbl_80207934:
 /* 80207974 00000040  48 00 00 48 */	b lbl_802079BC
 lbl_80207978:
 /* 80207978 00000000  7C 00 18 50 */	subf r0, r0, r3
-/* 8020797C 00000004  C8 42 AD 68 */	lfd f2, d_meter_d_meter_button__lit_4517(r2)
+/* 8020797C 00000004  C8 42 AD 68 */	lfd f2, lit_4517(r2)
 /* 80207980 00000008  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80207984 0000000C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80207988 00000010  3C 60 43 30 */	lis r3, 0x4330
@@ -138,7 +138,7 @@ lbl_802079C4:
 /* 802079E8 00000024  48 04 DD E9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802079EC 00000028  48 00 00 0C */	b lbl_802079F8
 lbl_802079F0:
-/* 802079F0 00000000  C0 22 AD 48 */	lfs f1, d_meter_d_meter_button__lit_4146(r2)
+/* 802079F0 00000000  C0 22 AD 48 */	lfs f1, lit_4146(r2)
 /* 802079F4 00000004  48 04 DD DD */	bl setAlphaRate__13CPaneMgrAlphaFf
 lbl_802079F8:
 /* 802079F8 00000000  3B BD 00 01 */	addi r29, r29, 1

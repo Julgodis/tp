@@ -8,7 +8,7 @@ lbl_800E53AC:
 /* 800E53C4 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 800E53C8 0000001C  40 82 00 10 */	bne lbl_800E53D8
 /* 800E53CC 00000020  7F E3 FB 78 */	mr r3, r31
-/* 800E53D0 00000024  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E53D0 00000024  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E53D4 00000028  4B FF E9 E9 */	bl setGrabUpperAnime__9daAlink_cFf
 lbl_800E53D8:
 /* 800E53D8 00000000  7F E3 FB 78 */	mr r3, r31

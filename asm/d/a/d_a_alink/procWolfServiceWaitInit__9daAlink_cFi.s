@@ -41,12 +41,12 @@ lbl_8012CC3C:
 lbl_8012CC7C:
 /* 8012CC7C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8012CC80 00000004  38 80 00 0B */	li r4, 0xb
-/* 8012CC84 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8012CC84 00000008  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8012CC88 0000000C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_wlLie_c0@ha
 /* 8012CC8C 00000010  38 C5 F1 38 */	addi r6, r5, m__19daAlinkHIO_wlLie_c0@l
-/* 8012CC90 00000014  C0 46 00 08 */	lfs f2, 8(r6)
-/* 8012CC94 00000018  A8 A6 00 00 */	lha r5, 0(r6)
-/* 8012CC98 0000001C  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 8012CC90 00000014  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038F140 */
+/* 8012CC94 00000018  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038F138 */
+/* 8012CC98 0000001C  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038F144 */
 /* 8012CC9C 00000020  4B FF CA 69 */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8012CCA0 00000024  38 00 00 00 */	li r0, 0
 /* 8012CCA4 00000028  90 1E 31 98 */	stw r0, 0x3198(r30)

@@ -27,7 +27,7 @@ lbl_80134890:
 /* 80134894 00000004  41 82 00 1C */	beq lbl_801348B0
 /* 80134898 00000008  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlPoint_c0@ha
 /* 8013489C 0000000C  38 63 F7 DC */	addi r3, r3, m__21daAlinkHIO_wlPoint_c0@l
-/* 801348A0 00000010  A8 03 00 50 */	lha r0, 0x50(r3)
+/* 801348A0 00000010  A8 03 00 50 */	lha r0, 0x50(r3)	/* effective address: 8038F82C */
 /* 801348A4 00000014  7C 00 00 D0 */	neg r0, r0
 /* 801348A8 00000018  7C 04 00 00 */	cmpw r4, r0
 /* 801348AC 0000001C  40 80 00 10 */	bge lbl_801348BC
@@ -90,7 +90,7 @@ lbl_80134950:
 /* 80134978 00000028  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 8013497C 0000002C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlPoint_c0@ha
 /* 80134980 00000030  38 63 F7 DC */	addi r3, r3, m__21daAlinkHIO_wlPoint_c0@l
-/* 80134984 00000034  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 80134984 00000034  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038F814 */
 /* 80134988 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013498C 00000000  40 81 00 14 */	ble lbl_801349A0
 lbl_80134990:
@@ -110,8 +110,8 @@ lbl_801349A0:
 /* 801349C0 00000020  38 80 00 31 */	li r4, 0x31
 /* 801349C4 00000024  3C A0 80 39 */	lis r5, m__21daAlinkHIO_wlPoint_c0@ha
 /* 801349C8 00000028  38 A5 F7 DC */	addi r5, r5, m__21daAlinkHIO_wlPoint_c0@l
-/* 801349CC 0000002C  C0 25 00 54 */	lfs f1, 0x54(r5)
-/* 801349D0 00000030  C0 45 00 58 */	lfs f2, 0x58(r5)
+/* 801349CC 0000002C  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F830 */
+/* 801349D0 00000030  C0 45 00 58 */	lfs f2, 0x58(r5)	/* effective address: 8038F834 */
 /* 801349D4 00000034  4B FF 4D 05 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 lbl_801349D8:
 /* 801349D8 00000000  38 60 00 01 */	li r3, 1
@@ -152,7 +152,7 @@ lbl_80134A0C:
 /* 80134A5C 00000050  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80134A60 00000054  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 80134A64 00000058  38 A5 F0 A8 */	addi r5, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 80134A68 0000005C  C0 45 00 34 */	lfs f2, 0x34(r5)
+/* 80134A68 0000005C  C0 45 00 34 */	lfs f2, 0x34(r5)	/* effective address: 8038F0DC */
 /* 80134A6C 00000060  4B FF 4C 6D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 lbl_80134A70:
 /* 80134A70 00000000  A8 1D 30 08 */	lha r0, 0x3008(r29)
@@ -178,7 +178,7 @@ lbl_80134A70:
 /* 80134AC0 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80134AC4 00000000  40 81 00 58 */	ble lbl_80134B1C
 /* 80134AC8 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 80134ACC 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 80134ACC 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 80134AD0 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 80134AD4 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 80134AD8 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -300,9 +300,9 @@ lbl_80134C24:
 /* 80134C70 0000004C  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 80134C74 00000050  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 80134C78 00000054  D0 1D 04 F8 */	stfs f0, 0x4f8(r29)
-/* 80134C7C 00000058  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80134C7C 00000058  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
 /* 80134C80 0000005C  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
-/* 80134C84 00000060  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80134C84 00000060  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
 /* 80134C88 00000064  D0 1D 05 00 */	stfs f0, 0x500(r29)
 /* 80134C8C 00000068  7F A3 EB 78 */	mr r3, r29
 /* 80134C90 0000006C  C0 5D 05 34 */	lfs f2, 0x534(r29)
@@ -315,7 +315,7 @@ lbl_80134C24:
 /* 80134CAC 00000088  4B FE C5 15 */	bl setFootEffectProcType__9daAlink_cFi
 /* 80134CB0 0000008C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80134CB4 00000090  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80134CB8 00000094  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80134CB8 00000094  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80134CBC 00000098  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80134CC0 0000009C  D0 21 00 20 */	stfs f1, 0x20(r1)
 /* 80134CC4 000000A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -344,7 +344,7 @@ lbl_80134D04:
 /* 80134D14 00000010  38 80 00 02 */	li r4, 2
 /* 80134D18 00000014  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 80134D1C 00000018  38 A5 F0 A8 */	addi r5, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 80134D20 0000001C  C0 25 00 54 */	lfs f1, 0x54(r5)
+/* 80134D20 0000001C  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F0FC */
 /* 80134D24 00000020  4B FF A0 AD */	bl procWolfFallInit__9daAlink_cFif
 /* 80134D28 00000024  48 00 00 74 */	b lbl_80134D9C
 lbl_80134D2C:
@@ -375,7 +375,7 @@ lbl_80134D84:
 /* 80134D88 00000004  38 80 00 02 */	li r4, 2
 /* 80134D8C 00000008  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 80134D90 0000000C  38 A5 F0 A8 */	addi r5, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 80134D94 00000010  C0 25 00 54 */	lfs f1, 0x54(r5)
+/* 80134D94 00000010  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F0FC */
 /* 80134D98 00000014  4B FF A0 39 */	bl procWolfFallInit__9daAlink_cFif
 lbl_80134D9C:
 /* 80134D9C 00000000  38 60 00 01 */	li r3, 1

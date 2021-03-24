@@ -34,7 +34,7 @@ lbl_80201404:
 /* 80201484 00000080  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80201488 00000084  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
 /* 8020148C 00000088  38 84 90 C0 */	addi r4, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
-/* 80201490 0000008C  A0 84 00 62 */	lhz r4, 0x62(r4)
+/* 80201490 0000008C  A0 84 00 62 */	lhz r4, 0x62(r4)	/* effective address: 80379122 */
 /* 80201494 00000090  4B E3 35 29 */	bl isEventBit__11dSv_event_cCFUs
 /* 80201498 00000094  2C 03 00 00 */	cmpwi r3, 0
 /* 8020149C 00000098  41 82 00 24 */	beq lbl_802014C0
@@ -524,7 +524,7 @@ lbl_80201B54:
 /* 80201B5C 00000008  41 82 03 20 */	beq lbl_80201E7C
 /* 80201B60 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80201B64 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80201B68 00000014  89 C3 5E 2D */	lbz r14, 0x5e2d(r3)
+/* 80201B68 00000014  89 C3 5E 2D */	lbz r14, 0x5e2d(r3)	/* effective address: 8040BFED */
 /* 80201B6C 00000018  55 C0 07 FF */	clrlwi. r0, r14, 0x1f
 /* 80201B70 0000001C  41 82 00 64 */	beq lbl_80201BD4
 /* 80201B74 00000020  80 6F 00 08 */	lwz r3, 8(r15)
@@ -734,7 +734,7 @@ lbl_80201E7C:
 /* 80201E84 00000008  41 82 03 20 */	beq lbl_802021A4
 /* 80201E88 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80201E8C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80201E90 00000014  89 C3 5E 30 */	lbz r14, 0x5e30(r3)
+/* 80201E90 00000014  89 C3 5E 30 */	lbz r14, 0x5e30(r3)	/* effective address: 8040BFF0 */
 /* 80201E94 00000018  55 C0 07 FF */	clrlwi. r0, r14, 0x1f
 /* 80201E98 0000001C  41 82 00 64 */	beq lbl_80201EFC
 /* 80201E9C 00000020  80 6F 00 08 */	lwz r3, 8(r15)
@@ -941,7 +941,7 @@ lbl_80202148:
 lbl_802021A4:
 /* 802021A4 00000000  3A 20 00 00 */	li r17, 0
 /* 802021A8 00000004  39 C0 00 00 */	li r14, 0
-/* 802021AC 00000008  C3 E2 AD 48 */	lfs f31, d_meter_d_meter_button__lit_4146(r2)
+/* 802021AC 00000008  C3 E2 AD 48 */	lfs f31, lit_4146(r2)
 lbl_802021B0:
 /* 802021B0 00000000  7E 0F 72 14 */	add r16, r15, r14
 /* 802021B4 00000004  C0 30 02 F4 */	lfs f1, 0x2f4(r16)
@@ -951,15 +951,15 @@ lbl_802021B0:
 /* 802021C4 00000014  48 00 00 38 */	b lbl_802021FC
 lbl_802021C8:
 /* 802021C8 00000000  38 70 02 FC */	addi r3, r16, 0x2fc
-/* 802021CC 00000004  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
-/* 802021D0 00000008  C0 62 AD 50 */	lfs f3, d_meter_d_meter_button__lit_4148(r2)
+/* 802021CC 00000004  C0 42 AD 4C */	lfs f2, lit_4147(r2)
+/* 802021D0 00000008  C0 62 AD 50 */	lfs f3, lit_4148(r2)
 /* 802021D4 0000000C  48 06 D8 69 */	bl cLib_addCalc2__FPffff
 /* 802021D8 00000010  C0 10 02 FC */	lfs f0, 0x2fc(r16)
 /* 802021DC 00000014  C0 30 02 F4 */	lfs f1, 0x2f4(r16)
 /* 802021E0 00000018  EC 00 08 28 */	fsubs f0, f0, f1
 /* 802021E4 0000001C  FC 00 02 10 */	fabs f0, f0
 /* 802021E8 00000020  FC 40 00 18 */	frsp f2, f0
-/* 802021EC 00000024  C0 02 AD 54 */	lfs f0, d_meter_d_meter_button__lit_4149(r2)
+/* 802021EC 00000024  C0 02 AD 54 */	lfs f0, lit_4149(r2)
 /* 802021F0 00000028  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802021F4 00000000  40 80 00 08 */	bge lbl_802021FC
 /* 802021F8 00000004  D0 30 02 FC */	stfs f1, 0x2fc(r16)

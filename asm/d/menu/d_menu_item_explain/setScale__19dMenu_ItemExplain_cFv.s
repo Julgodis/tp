@@ -7,7 +7,7 @@ lbl_801DCBBC:
 /* 801DCBD0 00000014  41 82 00 AC */	beq lbl_801DCC7C
 /* 801DCBD4 00000018  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801DCBD8 0000001C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801DCBDC 00000020  88 04 05 68 */	lbz r0, 0x568(r4)
+/* 801DCBDC 00000020  88 04 05 68 */	lbz r0, 0x568(r4)	/* effective address: 8042F130 */
 /* 801DCBE0 00000024  28 00 00 01 */	cmplwi r0, 1
 /* 801DCBE4 00000028  40 82 00 2C */	bne lbl_801DCC10
 /* 801DCBE8 0000002C  88 04 05 69 */	lbz r0, 0x569(r4)
@@ -21,7 +21,7 @@ lbl_801DCBBC:
 /* 801DCC08 0000004C  EC 61 00 24 */	fdivs f3, f1, f0
 /* 801DCC0C 00000050  48 00 00 08 */	b lbl_801DCC14
 lbl_801DCC10:
-/* 801DCC10 00000000  C0 62 A8 C4 */	lfs f3, d_menu_d_menu_item_explain__lit_4348(r2)
+/* 801DCC10 00000000  C0 62 A8 C4 */	lfs f3, lit_4348(r2)
 lbl_801DCC14:
 /* 801DCC14 00000000  80 A3 00 88 */	lwz r5, 0x88(r3)
 /* 801DCC18 00000004  A0 05 00 04 */	lhz r0, 4(r5)
@@ -31,7 +31,7 @@ lbl_801DCC14:
 /* 801DCC28 00000014  90 81 00 10 */	stw r4, 0x10(r1)
 /* 801DCC2C 00000018  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 801DCC30 0000001C  EC 00 10 28 */	fsubs f0, f0, f2
-/* 801DCC34 00000020  C0 22 A8 BC */	lfs f1, d_menu_d_menu_item_explain__lit_4346(r2)
+/* 801DCC34 00000020  C0 22 A8 BC */	lfs f1, lit_4346(r2)
 /* 801DCC38 00000024  EC 00 08 24 */	fdivs f0, f0, f1
 /* 801DCC3C 00000028  EC 80 00 F2 */	fmuls f4, f0, f3
 /* 801DCC40 0000002C  80 63 00 38 */	lwz r3, 0x38(r3)

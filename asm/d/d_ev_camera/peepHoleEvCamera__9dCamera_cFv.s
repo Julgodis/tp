@@ -12,7 +12,7 @@ lbl_80095E7C:
 /* 80095EA4 00000028  7F C4 F3 78 */	mr r4, r30
 /* 80095EA8 0000002C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80095EAC 00000030  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 80095EB0 00000034  80 A5 5D B4 */	lwz r5, 0x5db4(r5)
+/* 80095EB0 00000034  80 A5 5D B4 */	lwz r5, 0x5db4(r5)	/* effective address: 8040BF74 */
 /* 80095EB4 00000038  48 00 18 A9 */	bl positionOf__9dCamera_cFP10fopAc_ac_c
 /* 80095EB8 0000003C  C0 41 00 44 */	lfs f2, 0x44(r1)
 /* 80095EBC 00000040  D0 41 00 74 */	stfs f2, 0x74(r1)
@@ -26,7 +26,7 @@ lbl_80095E7C:
 /* 80095EDC 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80095EE0 00000064  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80095EE4 00000068  38 7F 4E C8 */	addi r3, r31, 0x4ec8
-/* 80095EE8 0000006C  80 9F 4F 90 */	lwz r4, 0x4f90(r31)
+/* 80095EE8 0000006C  80 9F 4F 90 */	lwz r4, 0x4f90(r31)	/* effective address: 8040B150 */
 /* 80095EEC 00000070  4B FA D4 01 */	bl convPId__14dEvt_control_cFUi
 /* 80095EF0 00000074  7C 65 1B 79 */	or. r5, r3, r3
 /* 80095EF4 00000078  41 82 00 B4 */	beq lbl_80095FA8

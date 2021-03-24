@@ -9,7 +9,7 @@ lbl_80130580:
 /* 8013059C 0000001C  AB E3 00 08 */	lha r31, 8(r3)
 /* 801305A0 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801305A4 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801305A8 00000028  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
+/* 801305A8 00000028  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801305AC 0000002C  2C 1F 00 F4 */	cmpwi r31, 0xf4
 /* 801305B0 00000030  40 82 00 18 */	bne lbl_801305C8
 /* 801305B4 00000034  38 63 07 F0 */	addi r3, r3, 0x7f0

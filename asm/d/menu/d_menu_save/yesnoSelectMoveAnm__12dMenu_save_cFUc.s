@@ -15,8 +15,8 @@ lbl_801F5AE4:
 /* 801F5B18 00000034  7C DC 02 14 */	add r6, r28, r0
 /* 801F5B1C 00000038  80 86 00 8C */	lwz r4, 0x8c(r6)
 /* 801F5B20 0000003C  54 60 1D 78 */	rlwinm r0, r3, 3, 0x15, 0x1c
-/* 801F5B24 00000040  3C 60 80 3C */	lis r3, d_menu_d_menu_save__YnSelStartFrameTbl@ha
-/* 801F5B28 00000044  38 A3 DF B4 */	addi r5, r3, d_menu_d_menu_save__YnSelStartFrameTbl@l
+/* 801F5B24 00000040  3C 60 80 3C */	lis r3, YnSelStartFrameTbl@ha
+/* 801F5B28 00000044  38 A3 DF B4 */	addi r5, r3, YnSelStartFrameTbl@l
 /* 801F5B2C 00000048  7C 65 02 14 */	add r3, r5, r0
 /* 801F5B30 0000004C  57 A7 15 BA */	rlwinm r7, r29, 2, 0x16, 0x1d
 /* 801F5B34 00000050  7C 03 38 2E */	lwzx r0, r3, r7
@@ -54,7 +54,7 @@ lbl_801F5BA8:
 /* 801F5BAC 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F5BB0 00000008  7C 7C 02 14 */	add r3, r28, r0
 /* 801F5BB4 0000000C  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F5BB8 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
+/* 801F5BB8 00000010  C8 22 AA 70 */	lfd f1, lit_4185(r2)
 /* 801F5BBC 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F5BC0 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F5BC4 0000001C  3C 00 43 30 */	lis r0, 0x4330
@@ -79,8 +79,8 @@ lbl_801F5BF8:
 /* 801F5C0C 00000014  7C DC 02 14 */	add r6, r28, r0
 /* 801F5C10 00000018  80 86 00 8C */	lwz r4, 0x8c(r6)
 /* 801F5C14 0000001C  54 60 1D 78 */	rlwinm r0, r3, 3, 0x15, 0x1c
-/* 801F5C18 00000020  3C 60 80 3C */	lis r3, d_menu_d_menu_save__YnSelEndFrameTbl@ha
-/* 801F5C1C 00000024  38 A3 DF C4 */	addi r5, r3, d_menu_d_menu_save__YnSelEndFrameTbl@l
+/* 801F5C18 00000020  3C 60 80 3C */	lis r3, YnSelEndFrameTbl@ha
+/* 801F5C1C 00000024  38 A3 DF C4 */	addi r5, r3, YnSelEndFrameTbl@l
 /* 801F5C20 00000028  7C 65 02 14 */	add r3, r5, r0
 /* 801F5C24 0000002C  57 A7 15 BA */	rlwinm r7, r29, 2, 0x16, 0x1d
 /* 801F5C28 00000030  7C 03 38 2E */	lwzx r0, r3, r7
@@ -118,7 +118,7 @@ lbl_801F5C9C:
 /* 801F5CA0 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F5CA4 00000008  7C 7C 02 14 */	add r3, r28, r0
 /* 801F5CA8 0000000C  80 03 00 8C */	lwz r0, 0x8c(r3)
-/* 801F5CAC 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
+/* 801F5CAC 00000010  C8 22 AA 70 */	lfd f1, lit_4185(r2)
 /* 801F5CB0 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F5CB4 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F5CB8 0000001C  3C 00 43 30 */	lis r0, 0x4330

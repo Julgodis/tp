@@ -17,7 +17,7 @@ lbl_80252300:
 lbl_8025233C:
 /* 8025233C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80252340 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252344 00000008  88 03 4E 1C */	lbz r0, 0x4e1c(r3)
+/* 80252344 00000008  88 03 4E 1C */	lbz r0, 0x4e1c(r3)	/* effective address: 8040AFDC */
 /* 80252348 0000000C  2C 00 00 01 */	cmpwi r0, 1
 /* 8025234C 00000010  40 82 00 08 */	bne lbl_80252354
 /* 80252350 00000014  8B C3 4E 1E */	lbz r30, 0x4e1e(r3)

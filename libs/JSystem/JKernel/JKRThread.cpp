@@ -34,13 +34,13 @@ struct JKRThread {
 	/* 802D1E14 */ void run();
 };
 
+struct JKRThreadName_ {
+};
+
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-};
-
-struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {
@@ -107,7 +107,7 @@ extern "C" void __dt__15JKRThreadSwitchFv(); // 1
 extern "C" void __sinit_JKRThread_cpp(); // 1
 extern "C" void func_802D1EFC(); // 1
 extern "C" void func_802D1F50(); // 1
-extern "C" extern char const* const JKRThread__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 lit_989[12];
 extern "C" extern u8 sTaskList__7JKRTask[12];
 extern "C" extern u8 sEndMesgQueue__7JKRTask[32];
@@ -369,13 +369,13 @@ asm void JKRThreadSwitch::callback(OSThread* param_0, OSThread* param_1) {
 
 /* ############################################################################################## */
 /* 80455FC0-80455FC4 0004+00 s=1 e=0 z=0  None .sdata2    @934                                                         */
-SECTION_SDATA2 static f32 JKRThread__lit_934 = 100.0f;
+SECTION_SDATA2 static f32 lit_934 = 100.0f;
 
 /* 80455FC4-80455FC8 0004+00 s=1 e=0 z=0  None .sdata2    @935                                                         */
-SECTION_SDATA2 static f32 JKRThread__lit_935 = 1000.0f;
+SECTION_SDATA2 static f32 lit_935 = 1000.0f;
 
 /* 80455FC8-80455FD0 0008+00 s=1 e=0 z=0  None .sdata2    @937                                                         */
-SECTION_SDATA2 static f64 JKRThread__lit_937 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_937 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802D1C74-802D1E14 01A0+00 s=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole       */
 #pragma push

@@ -7,8 +7,8 @@ lbl_800ECF9C:
 /* 800ECFB0 00000014  38 80 00 CC */	li r4, 0xcc
 /* 800ECFB4 00000018  3C A0 80 39 */	lis r5, m__19daAlinkHIO_horse_c0@ha
 /* 800ECFB8 0000001C  38 A5 E5 A4 */	addi r5, r5, m__19daAlinkHIO_horse_c0@l
-/* 800ECFBC 00000020  C0 25 00 5C */	lfs f1, 0x5c(r5)
-/* 800ECFC0 00000024  C0 45 00 60 */	lfs f2, 0x60(r5)
+/* 800ECFBC 00000020  C0 25 00 5C */	lfs f1, 0x5c(r5)	/* effective address: 8038E600 */
+/* 800ECFC0 00000024  C0 45 00 60 */	lfs f2, 0x60(r5)	/* effective address: 8038E604 */
 /* 800ECFC4 00000028  4B FC 03 E5 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 800ECFC8 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800ECFCC 00000030  38 80 00 E8 */	li r4, 0xe8

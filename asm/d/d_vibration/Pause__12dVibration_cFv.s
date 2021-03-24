@@ -17,12 +17,12 @@ lbl_8006FF70:
 /* 8006FF70 00000000  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006FF74 00000004  80 83 D2 D8 */	lwz r4, m_gamePad__8mDoCPd_c@l(r3)
 /* 8006FF78 00000008  38 64 00 68 */	addi r3, r4, 0x68
-/* 8006FF7C 0000000C  A8 84 00 7C */	lha r4, 0x7c(r4)
+/* 8006FF7C 0000000C  A8 84 00 7C */	lha r4, 0x7c(r4)	/* effective address: 803DD354 */
 /* 8006FF80 00000010  48 27 19 C9 */	bl stopPatternedRumble__Q210JUTGamePad7CRumbleFs
 /* 8006FF84 00000014  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 8006FF88 00000018  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 8006FF8C 0000001C  80 63 00 00 */	lwz r3, 0(r3)
-/* 8006FF90 00000020  A8 63 00 7C */	lha r3, 0x7c(r3)
+/* 8006FF8C 0000001C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803DD2D8 */
+/* 8006FF90 00000020  A8 63 00 7C */	lha r3, 0x7c(r3)	/* effective address: 803DD354 */
 /* 8006FF94 00000024  38 80 00 01 */	li r4, 1
 /* 8006FF98 00000028  48 27 16 F5 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
 lbl_8006FF9C:

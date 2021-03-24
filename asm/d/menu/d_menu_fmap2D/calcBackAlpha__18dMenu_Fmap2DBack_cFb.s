@@ -11,8 +11,8 @@ lbl_801D4928:
 /* 801D494C 00000024  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801D4950 00000028  41 82 00 7C */	beq lbl_801D49CC
 /* 801D4954 0000002C  38 7F 11 E4 */	addi r3, r31, 0x11e4
-/* 801D4958 00000030  C0 42 A8 18 */	lfs f2, d_menu_d_menu_fmap2D__lit_5433(r2)
-/* 801D495C 00000034  C0 62 A7 E8 */	lfs f3, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D4958 00000030  C0 42 A8 18 */	lfs f2, lit_5433(r2)
+/* 801D495C 00000034  C0 62 A7 E8 */	lfs f3, lit_4202(r2)
 /* 801D4960 00000038  48 09 B0 DD */	bl cLib_addCalc2__FPffff
 /* 801D4964 0000003C  C0 1F 11 E4 */	lfs f0, 0x11e4(r31)
 /* 801D4968 00000040  C0 22 A7 D4 */	lfs f1, lit_3971(r2)
@@ -25,13 +25,13 @@ lbl_801D4928:
 /* 801D4984 00000004  D0 3F 11 E4 */	stfs f1, 0x11e4(r31)
 /* 801D4988 00000008  48 00 00 44 */	b lbl_801D49CC
 lbl_801D498C:
-/* 801D498C 00000000  C0 22 A7 D0 */	lfs f1, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D498C 00000000  C0 22 A7 D0 */	lfs f1, lit_3970(r2)
 /* 801D4990 00000004  C0 1F 11 E4 */	lfs f0, 0x11e4(r31)
 /* 801D4994 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801D4998 0000000C  41 82 00 34 */	beq lbl_801D49CC
 /* 801D499C 00000010  38 7F 11 E4 */	addi r3, r31, 0x11e4
-/* 801D49A0 00000014  C0 42 A8 18 */	lfs f2, d_menu_d_menu_fmap2D__lit_5433(r2)
-/* 801D49A4 00000018  C0 62 A7 E8 */	lfs f3, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D49A0 00000014  C0 42 A8 18 */	lfs f2, lit_5433(r2)
+/* 801D49A4 00000018  C0 62 A7 E8 */	lfs f3, lit_4202(r2)
 /* 801D49A8 0000001C  48 09 B0 95 */	bl cLib_addCalc2__FPffff
 /* 801D49AC 00000020  C0 1F 11 E4 */	lfs f0, 0x11e4(r31)
 /* 801D49B0 00000024  FC 00 02 10 */	fabs f0, f0
@@ -39,7 +39,7 @@ lbl_801D498C:
 /* 801D49B8 0000002C  C0 02 A8 1C */	lfs f0, lit_5434(r2)
 /* 801D49BC 00000030  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801D49C0 00000000  40 80 00 0C */	bge lbl_801D49CC
-/* 801D49C4 00000004  C0 02 A7 D0 */	lfs f0, d_menu_d_menu_fmap2D__lit_3970(r2)
+/* 801D49C4 00000004  C0 02 A7 D0 */	lfs f0, lit_3970(r2)
 /* 801D49C8 00000008  D0 1F 11 E4 */	stfs f0, 0x11e4(r31)
 lbl_801D49CC:
 /* 801D49CC 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -25,11 +25,11 @@ lbl_802DB1B8:
 /* 802DB1B8 00000000  38 60 FF FF */	li r3, -1
 /* 802DB1BC 00000004  48 00 02 14 */	b lbl_802DB3D0
 lbl_802DB1C0:
-/* 802DB1C0 00000000  80 8D 8F 18 */	lwz r4, JKRDvdAramRipper__fileOffset(r13)
+/* 802DB1C0 00000000  80 8D 8F 18 */	lwz r4, fileOffset(r13)
 /* 802DB1C4 00000004  80 03 00 04 */	lwz r0, 4(r3)
 /* 802DB1C8 00000008  7C 04 00 50 */	subf r0, r4, r0
 /* 802DB1CC 0000000C  7F F8 02 14 */	add r31, r24, r0
-/* 802DB1D0 00000010  80 0D 8F 20 */	lwz r0, JKRDvdAramRipper__maxDest(r13)
+/* 802DB1D0 00000010  80 0D 8F 20 */	lwz r0, maxDest(r13)
 /* 802DB1D4 00000014  7C 18 02 14 */	add r0, r24, r0
 /* 802DB1D8 00000018  7C 1F 00 40 */	cmplw r31, r0
 /* 802DB1DC 0000001C  40 81 00 08 */	ble lbl_802DB1E4
@@ -39,14 +39,14 @@ lbl_802DB1E4:
 lbl_802DB1E8:
 /* 802DB1E8 00000000  2C 1D 00 00 */	cmpwi r29, 0
 /* 802DB1EC 00000004  40 82 00 34 */	bne lbl_802DB220
-/* 802DB1F0 00000008  80 0D 8F 10 */	lwz r0, JKRDvdAramRipper__srcLimit(r13)
+/* 802DB1F0 00000008  80 0D 8F 10 */	lwz r0, srcLimit(r13)
 /* 802DB1F4 0000000C  7C 17 00 40 */	cmplw r23, r0
 /* 802DB1F8 00000010  40 81 00 1C */	ble lbl_802DB214
-/* 802DB1FC 00000014  80 0D 8F 0C */	lwz r0, JKRDvdAramRipper__transLeft(r13)
+/* 802DB1FC 00000014  80 0D 8F 0C */	lwz r0, transLeft(r13)
 /* 802DB200 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 802DB204 0000001C  41 82 00 10 */	beq lbl_802DB214
 /* 802DB208 00000020  7E E3 BB 78 */	mr r3, r23
-/* 802DB20C 00000024  48 00 02 91 */	bl JKRDvdAramRipper__nextSrcData__FPUc
+/* 802DB20C 00000024  48 00 02 91 */	bl nextSrcData__FPUc
 /* 802DB210 00000028  7C 77 1B 78 */	mr r23, r3
 lbl_802DB214:
 /* 802DB214 00000000  8B 97 00 00 */	lbz r28, 0(r23)
@@ -55,8 +55,8 @@ lbl_802DB214:
 lbl_802DB220:
 /* 802DB220 00000000  57 80 06 31 */	rlwinm. r0, r28, 0, 0x18, 0x18
 /* 802DB224 00000004  41 82 00 94 */	beq lbl_802DB2B8
-/* 802DB228 00000008  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount(r13)
-/* 802DB22C 0000000C  80 0D 8F 18 */	lwz r0, JKRDvdAramRipper__fileOffset(r13)
+/* 802DB228 00000008  80 6D 8F 1C */	lwz r3, readCount(r13)
+/* 802DB22C 0000000C  80 0D 8F 18 */	lwz r0, fileOffset(r13)
 /* 802DB230 00000010  7C 03 00 40 */	cmplw r3, r0
 /* 802DB234 00000014  41 80 00 44 */	blt lbl_802DB278
 /* 802DB238 00000018  88 97 00 00 */	lbz r4, 0(r23)
@@ -78,20 +78,20 @@ lbl_802DB270:
 /* 802DB274 00000004  41 82 01 48 */	beq lbl_802DB3BC
 lbl_802DB278:
 /* 802DB278 00000000  88 97 00 00 */	lbz r4, 0(r23)
-/* 802DB27C 00000004  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB27C 00000004  80 6D 8E F8 */	lwz r3, refCurrent(r13)
 /* 802DB280 00000008  38 03 00 01 */	addi r0, r3, 1
-/* 802DB284 0000000C  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB284 0000000C  90 0D 8E F8 */	stw r0, refCurrent(r13)
 /* 802DB288 00000010  98 83 00 00 */	stb r4, 0(r3)
-/* 802DB28C 00000014  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent(r13)
-/* 802DB290 00000018  80 0D 8E F4 */	lwz r0, JKRDvdAramRipper__refEnd(r13)
+/* 802DB28C 00000014  80 6D 8E F8 */	lwz r3, refCurrent(r13)
+/* 802DB290 00000018  80 0D 8E F4 */	lwz r0, refEnd(r13)
 /* 802DB294 0000001C  7C 03 00 40 */	cmplw r3, r0
 /* 802DB298 00000020  40 82 00 0C */	bne lbl_802DB2A4
-/* 802DB29C 00000024  80 0D 8E F0 */	lwz r0, JKRDvdAramRipper__refBuf(r13)
-/* 802DB2A0 00000028  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB29C 00000024  80 0D 8E F0 */	lwz r0, refBuf(r13)
+/* 802DB2A0 00000028  90 0D 8E F8 */	stw r0, refCurrent(r13)
 lbl_802DB2A4:
-/* 802DB2A4 00000000  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount(r13)
+/* 802DB2A4 00000000  80 6D 8F 1C */	lwz r3, readCount(r13)
 /* 802DB2A8 00000004  38 03 00 01 */	addi r0, r3, 1
-/* 802DB2AC 00000008  90 0D 8F 1C */	stw r0, JKRDvdAramRipper__readCount(r13)
+/* 802DB2AC 00000008  90 0D 8F 1C */	stw r0, readCount(r13)
 /* 802DB2B0 0000000C  3A F7 00 01 */	addi r23, r23, 1
 /* 802DB2B4 00000010  48 00 00 F8 */	b lbl_802DB3AC
 lbl_802DB2B8:
@@ -99,14 +99,14 @@ lbl_802DB2B8:
 /* 802DB2BC 00000004  88 97 00 01 */	lbz r4, 1(r23)
 /* 802DB2C0 00000008  50 64 45 2E */	rlwimi r4, r3, 8, 0x14, 0x17
 /* 802DB2C4 0000000C  7C 7B 26 70 */	srawi r27, r3, 4
-/* 802DB2C8 00000010  80 0D 8E F8 */	lwz r0, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB2C8 00000010  80 0D 8E F8 */	lwz r0, refCurrent(r13)
 /* 802DB2CC 00000014  7C 64 00 50 */	subf r3, r4, r0
 /* 802DB2D0 00000018  3B C3 FF FF */	addi r30, r3, -1
-/* 802DB2D4 0000001C  80 6D 8E F0 */	lwz r3, JKRDvdAramRipper__refBuf(r13)
+/* 802DB2D4 0000001C  80 6D 8E F0 */	lwz r3, refBuf(r13)
 /* 802DB2D8 00000020  7C 1E 18 40 */	cmplw r30, r3
 /* 802DB2DC 00000024  3A F7 00 02 */	addi r23, r23, 2
 /* 802DB2E0 00000028  40 80 00 10 */	bge lbl_802DB2F0
-/* 802DB2E4 0000002C  80 0D 8E F4 */	lwz r0, JKRDvdAramRipper__refEnd(r13)
+/* 802DB2E4 0000002C  80 0D 8E F4 */	lwz r0, refEnd(r13)
 /* 802DB2E8 00000030  7C 03 00 50 */	subf r0, r3, r0
 /* 802DB2EC 00000034  7F DE 02 14 */	add r30, r30, r0
 lbl_802DB2F0:
@@ -119,8 +119,8 @@ lbl_802DB2F0:
 lbl_802DB308:
 /* 802DB308 00000000  3B 7B 00 02 */	addi r27, r27, 2
 lbl_802DB30C:
-/* 802DB30C 00000000  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount(r13)
-/* 802DB310 00000004  80 0D 8F 18 */	lwz r0, JKRDvdAramRipper__fileOffset(r13)
+/* 802DB30C 00000000  80 6D 8F 1C */	lwz r3, readCount(r13)
+/* 802DB310 00000004  80 0D 8F 18 */	lwz r0, fileOffset(r13)
 /* 802DB314 00000008  7C 03 00 40 */	cmplw r3, r0
 /* 802DB318 0000000C  41 80 00 44 */	blt lbl_802DB35C
 /* 802DB31C 00000010  88 9E 00 00 */	lbz r4, 0(r30)
@@ -142,25 +142,25 @@ lbl_802DB354:
 /* 802DB358 00000004  41 82 00 54 */	beq lbl_802DB3AC
 lbl_802DB35C:
 /* 802DB35C 00000000  88 9E 00 00 */	lbz r4, 0(r30)
-/* 802DB360 00000004  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB360 00000004  80 6D 8E F8 */	lwz r3, refCurrent(r13)
 /* 802DB364 00000008  38 03 00 01 */	addi r0, r3, 1
-/* 802DB368 0000000C  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB368 0000000C  90 0D 8E F8 */	stw r0, refCurrent(r13)
 /* 802DB36C 00000010  98 83 00 00 */	stb r4, 0(r3)
-/* 802DB370 00000014  80 0D 8E F8 */	lwz r0, JKRDvdAramRipper__refCurrent(r13)
-/* 802DB374 00000018  80 6D 8E F4 */	lwz r3, JKRDvdAramRipper__refEnd(r13)
+/* 802DB370 00000014  80 0D 8E F8 */	lwz r0, refCurrent(r13)
+/* 802DB374 00000018  80 6D 8E F4 */	lwz r3, refEnd(r13)
 /* 802DB378 0000001C  7C 00 18 40 */	cmplw r0, r3
 /* 802DB37C 00000020  40 82 00 0C */	bne lbl_802DB388
-/* 802DB380 00000024  80 0D 8E F0 */	lwz r0, JKRDvdAramRipper__refBuf(r13)
-/* 802DB384 00000028  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent(r13)
+/* 802DB380 00000024  80 0D 8E F0 */	lwz r0, refBuf(r13)
+/* 802DB384 00000028  90 0D 8E F8 */	stw r0, refCurrent(r13)
 lbl_802DB388:
 /* 802DB388 00000000  3B DE 00 01 */	addi r30, r30, 1
 /* 802DB38C 00000004  7C 1E 18 40 */	cmplw r30, r3
 /* 802DB390 00000008  40 82 00 08 */	bne lbl_802DB398
-/* 802DB394 0000000C  83 CD 8E F0 */	lwz r30, JKRDvdAramRipper__refBuf(r13)
+/* 802DB394 0000000C  83 CD 8E F0 */	lwz r30, refBuf(r13)
 lbl_802DB398:
-/* 802DB398 00000000  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount(r13)
+/* 802DB398 00000000  80 6D 8F 1C */	lwz r3, readCount(r13)
 /* 802DB39C 00000004  38 03 00 01 */	addi r0, r3, 1
-/* 802DB3A0 00000008  90 0D 8F 1C */	stw r0, JKRDvdAramRipper__readCount(r13)
+/* 802DB3A0 00000008  90 0D 8F 1C */	stw r0, readCount(r13)
 /* 802DB3A4 0000000C  37 7B FF FF */	addic. r27, r27, -1
 /* 802DB3A8 00000010  40 82 FF 64 */	bne lbl_802DB30C
 lbl_802DB3AC:
@@ -171,7 +171,7 @@ lbl_802DB3AC:
 lbl_802DB3BC:
 /* 802DB3BC 00000000  7F 23 CB 78 */	mr r3, r25
 /* 802DB3C0 00000004  48 00 01 C1 */	bl dmaBufferFlush__FUl
-/* 802DB3C4 00000008  80 6D 8F 28 */	lwz r3, JKRDvdAramRipper__tsPtr(r13)
+/* 802DB3C4 00000008  80 6D 8F 28 */	lwz r3, tsPtr(r13)
 /* 802DB3C8 0000000C  93 43 00 00 */	stw r26, 0(r3)
 /* 802DB3CC 00000010  38 60 00 00 */	li r3, 0
 lbl_802DB3D0:

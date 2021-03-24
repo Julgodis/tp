@@ -7,11 +7,11 @@ lbl_801F2840:
 /* 801F2854 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 801F2858 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F285C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801F2860 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 801F2860 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 801F2864 00000024  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 801F2868 00000028  7D 89 03 A6 */	mtctr r12
 /* 801F286C 0000002C  4E 80 04 21 */	bctrl 
-/* 801F2870 00000030  88 03 00 09 */	lbz r0, 9(r3)
+/* 801F2870 00000030  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 804061C9 */
 /* 801F2874 00000034  54 04 FE FE */	rlwinm r4, r0, 0x1f, 0x1b, 0x1f
 /* 801F2878 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F287C 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

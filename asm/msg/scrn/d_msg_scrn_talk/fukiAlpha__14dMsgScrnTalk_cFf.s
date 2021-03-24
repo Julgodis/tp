@@ -11,7 +11,7 @@ lbl_802482B4:
 /* 802482D8 00000010  80 63 00 08 */	lwz r3, 8(r3)
 /* 802482DC 00000014  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 802482E0 00000018  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 802482E4 0000001C  C0 04 00 18 */	lfs f0, 0x18(r4)
+/* 802482E4 0000001C  C0 04 00 18 */	lfs f0, 0x18(r4)	/* effective address: 804302A4 */
 /* 802482E8 00000020  EC 3F 00 32 */	fmuls f1, f31, f0
 /* 802482EC 00000024  48 00 D4 E5 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 802482F0 00000028  3B A0 00 00 */	li r29, 0

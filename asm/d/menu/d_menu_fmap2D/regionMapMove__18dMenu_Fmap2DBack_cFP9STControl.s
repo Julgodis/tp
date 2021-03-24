@@ -42,8 +42,8 @@ lbl_801D4B2C:
 /* 801D4BCC 0000007C  4B FF C3 B1 */	bl calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf
 /* 801D4BD0 00000080  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4BD4 00000084  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4BD8 00000088  C3 A3 00 E0 */	lfs f29, 0xe0(r3)
-/* 801D4BDC 0000008C  C0 03 00 E4 */	lfs f0, 0xe4(r3)
+/* 801D4BD8 00000088  C3 A3 00 E0 */	lfs f29, 0xe0(r3)	/* effective address: 8042FD40 */
+/* 801D4BDC 0000008C  C0 03 00 E4 */	lfs f0, 0xe4(r3)	/* effective address: 8042FD44 */
 /* 801D4BE0 000000B4  FC 1D 00 40 */	fcmpo cr0, f29, f0
 /* 801D4BE4 00000000  40 80 00 0C */	bge lbl_801D4BF0
 /* 801D4BE8 00000004  FF E0 E8 90 */	fmr f31, f29
@@ -92,14 +92,14 @@ lbl_801D4C04:
 /* 801D4C84 00000000  40 80 00 14 */	bge lbl_801D4C98
 /* 801D4C88 00000004  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4C8C 00000008  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4C90 0000000C  C0 23 00 D0 */	lfs f1, 0xd0(r3)
+/* 801D4C90 0000000C  C0 23 00 D0 */	lfs f1, 0xd0(r3)	/* effective address: 8042FD30 */
 /* 801D4C94 00000010  48 00 00 10 */	b lbl_801D4CA4
 lbl_801D4C98:
 /* 801D4C98 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4C9C 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4CA0 00000008  C0 23 00 C0 */	lfs f1, 0xc0(r3)
+/* 801D4CA0 00000008  C0 23 00 C0 */	lfs f1, 0xc0(r3)	/* effective address: 8042FD20 */
 lbl_801D4CA4:
-/* 801D4CA4 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__lit_4260(r2)
+/* 801D4CA4 00000000  C0 02 A8 00 */	lfs f0, lit_4260(r2)
 /* 801D4CA8 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D4CAC 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 /* 801D4CB0 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha

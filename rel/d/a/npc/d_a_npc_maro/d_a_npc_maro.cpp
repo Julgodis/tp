@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80563F14 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Maro_c {
@@ -66,6 +66,8 @@ struct daNpc_Maro_c {
 	/* 8055DAD8 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
 	/* 8055DB64 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 8055DBF0 */ void selectAction();
+	/* 8055DD08 */ void chkAction(int (daNpc_Maro_c::*)(void*));
+	/* 8055DD34 */ void setAction(int (daNpc_Maro_c::*)(void*));
 	/* 8055DDDC */ void cutConversationAboutPachinko(int);
 	/* 8055DF7C */ void cutConversationAboutWoodSwd(int);
 	/* 8055E124 */ void cutSwdTutorial(int);
@@ -269,8 +271,8 @@ extern "C" void drawOtherMdl__12daNpc_Maro_cFv(); // 1
 extern "C" void getFaceMotionAnm__12daNpc_Maro_cF26daNpcT_faceMotionAnmData_c(); // 1
 extern "C" void getMotionAnm__12daNpc_Maro_cF22daNpcT_motionAnmData_c(); // 1
 extern "C" void selectAction__12daNpc_Maro_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i(); // 1
 extern "C" void cutConversationAboutPachinko__12daNpc_Maro_cFi(); // 1
 extern "C" void cutConversationAboutWoodSwd__12daNpc_Maro_cFi(); // 1
 extern "C" void cutSwdTutorial__12daNpc_Maro_cFi(); // 1
@@ -961,7 +963,7 @@ asm void daNpc_Maro_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i() {
+asm void daNpc_Maro_c::chkAction(int (daNpc_Maro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_maro/d_a_npc_maro/chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i.s"
 }
@@ -972,7 +974,7 @@ extern "C" asm static void chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i() {
+asm void daNpc_Maro_c::setAction(int (daNpc_Maro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_maro/d_a_npc_maro/setAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i.s"
 }

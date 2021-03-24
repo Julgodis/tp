@@ -3,8 +3,8 @@ lbl_801ADCA4:
 /* 801ADCA8 00000004  7C 08 02 A6 */	mflr r0
 /* 801ADCAC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801ADCB0 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801ADCB4 00000010  3C 60 80 43 */	lis r3, d_kankyo_d_kankyo__lit_4112@ha
-/* 801ADCB8 00000014  3B E3 CA 48 */	addi r31, r3, d_kankyo_d_kankyo__lit_4112@l
+/* 801ADCB4 00000010  3C 60 80 43 */	lis r3, lit_4112@ha
+/* 801ADCB8 00000014  3B E3 CA 48 */	addi r31, r3, lit_4112@l
 /* 801ADCBC 00000018  38 7F 00 0C */	addi r3, r31, 0xc
 /* 801ADCC0 0000001C  4B FF 16 29 */	bl __ct__18dScnKy_env_light_cFv
 /* 801ADCC4 00000020  3C 80 80 1B */	lis r4, __dt__18dScnKy_env_light_cFv@ha

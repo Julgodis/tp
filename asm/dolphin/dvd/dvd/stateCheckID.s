@@ -29,7 +29,7 @@ lbl_80349968:
 /* 803499A8 00000040  3C 80 80 35 */	lis r4, stateCheckID2a@ha
 /* 803499AC 00000044  80 6D 91 F8 */	lwz r3, executing(r13)
 /* 803499B0 00000048  38 04 9A 54 */	addi r0, r4, stateCheckID2a@l
-/* 803499B4 0000004C  90 0D 92 40 */	stw r0, dvd__LastState(r13)
+/* 803499B4 0000004C  90 0D 92 40 */	stw r0, LastState(r13)
 /* 803499B8 00000050  48 00 00 9D */	bl stateCheckID2a
 /* 803499BC 00000054  48 00 00 50 */	b lbl_80349A0C
 lbl_803499C0:
@@ -52,7 +52,7 @@ lbl_803499F8:
 /* 803499F8 00000000  3C 80 80 35 */	lis r4, stateCheckID3@ha
 /* 803499FC 00000004  80 6D 91 F8 */	lwz r3, executing(r13)
 /* 80349A00 00000008  38 04 9A 20 */	addi r0, r4, stateCheckID3@l
-/* 80349A04 0000000C  90 0D 92 40 */	stw r0, dvd__LastState(r13)
+/* 80349A04 0000000C  90 0D 92 40 */	stw r0, LastState(r13)
 /* 80349A08 00000010  48 00 00 19 */	bl stateCheckID3
 lbl_80349A0C:
 /* 80349A0C 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

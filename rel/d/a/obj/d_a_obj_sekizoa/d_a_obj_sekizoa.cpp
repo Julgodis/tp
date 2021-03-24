@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -28,6 +19,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80CD52AC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daObj_Sekizoa_c {
@@ -60,6 +60,8 @@ struct daObj_Sekizoa_c {
 	/* 80CD05D0 */ void drawGhost();
 	/* 80CD06BC */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80CD0A84 */ void selectAction();
+	/* 80CD0B08 */ void chkAction(int (daObj_Sekizoa_c::*)(void*));
+	/* 80CD0B34 */ void setAction(int (daObj_Sekizoa_c::*)(void*));
 	/* 80CD0BDC */ void checkMoveDirection();
 	/* 80CD0DE8 */ void getWaitMotionNo();
 	/* 80CD0E30 */ void getGameMotionNo();
@@ -210,8 +212,8 @@ extern "C" void setYariAnm__15daObj_Sekizoa_cFiif(); // 1
 extern "C" void drawGhost__15daObj_Sekizoa_cFv(); // 1
 extern "C" void afterSetMotionAnm__15daObj_Sekizoa_cFiifi(); // 1
 extern "C" void selectAction__15daObj_Sekizoa_cFv(); // 1
-extern "C" static void chkAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i(); // 1
+extern "C" void setAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i(); // 1
 extern "C" void checkMoveDirection__15daObj_Sekizoa_cFv(); // 1
 extern "C" void getWaitMotionNo__15daObj_Sekizoa_cFv(); // 1
 extern "C" void getGameMotionNo__15daObj_Sekizoa_cFv(); // 1
@@ -758,7 +760,7 @@ asm void daObj_Sekizoa_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i() {
+asm void daObj_Sekizoa_c::chkAction(int (daObj_Sekizoa_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizoa/d_a_obj_sekizoa/chkAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i.s"
 }
@@ -769,7 +771,7 @@ extern "C" asm static void chkAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i() {
+asm void daObj_Sekizoa_c::setAction(int (daObj_Sekizoa_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizoa/d_a_obj_sekizoa/setAction__15daObj_Sekizoa_cFM15daObj_Sekizoa_cFPCvPvPv_i.s"
 }

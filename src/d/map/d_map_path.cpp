@@ -109,7 +109,7 @@ extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii(); // 1
 extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
 extern "C" void __sinit_d_map_path_cpp(); // 1
 extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
-extern "C" extern char const* const d_map_d_map_path__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
 extern "C" extern void* __vt__11dDrawPath_c[16];
 extern "C" extern u8 m_texObjAgg__8dMpath_n[28];
@@ -336,7 +336,7 @@ asm void dRenderingFDAmap_c::setTevSettingIntensityTextureToCI() const {
 
 /* ############################################################################################## */
 /* 80451E08-80451E0C 0004+00 s=3 e=0 z=0  None .sdata2    @3836                                                        */
-SECTION_SDATA2 static u8 d_map_d_map_path__lit_3836[4] = {
+SECTION_SDATA2 static u8 lit_3836[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -353,16 +353,16 @@ asm void dRenderingFDAmap_c::drawBack() const {
 
 /* ############################################################################################## */
 /* 80451E0C-80451E10 0004+00 s=1 e=0 z=0  None .sdata2    @3846                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path__lit_3846 = 1.0f;
+SECTION_SDATA2 static f32 lit_3846 = 1.0f;
 
 /* 80451E10-80451E14 0004+00 s=1 e=0 z=0  None .sdata2    @3847                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path__lit_3847 = 0.5f;
+SECTION_SDATA2 static f32 lit_3847 = 0.5f;
 
 /* 80451E14-80451E18 0004+00 s=1 e=0 z=0  None .sdata2    @3848                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path__lit_3848 = 10000.0f;
+SECTION_SDATA2 static f32 lit_3848 = 10000.0f;
 
 /* 80451E18-80451E20 0008+00 s=1 e=0 z=0  None .sdata2    @3850                                                        */
-SECTION_SDATA2 static f64 d_map_d_map_path__lit_3850 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3850 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8003D188-8003D320 0198+00 s=1 e=8 z=0  None .text      preRenderingMap__18dRenderingFDAmap_cFv                      */
 #pragma push

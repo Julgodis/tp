@@ -5,11 +5,11 @@ lbl_8001DD1C:
 /* 8001DD28 0000000C  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8001DD2C 00000010  3C 80 80 3F */	lis r4, mRoofCheck__11fopAcM_rc_c@ha
 /* 8001DD30 00000014  38 84 1D 24 */	addi r4, r4, mRoofCheck__11fopAcM_rc_c@l
-/* 8001DD34 00000018  D0 04 00 3C */	stfs f0, 0x3c(r4)
+/* 8001DD34 00000018  D0 04 00 3C */	stfs f0, 0x3c(r4)	/* effective address: 803F1D60 */
 /* 8001DD38 0000001C  C0 03 00 04 */	lfs f0, 4(r3)
-/* 8001DD3C 00000020  D0 04 00 40 */	stfs f0, 0x40(r4)
+/* 8001DD3C 00000020  D0 04 00 40 */	stfs f0, 0x40(r4)	/* effective address: 803F1D64 */
 /* 8001DD40 00000024  C0 03 00 08 */	lfs f0, 8(r3)
-/* 8001DD44 00000028  D0 04 00 44 */	stfs f0, 0x44(r4)
+/* 8001DD44 00000028  D0 04 00 44 */	stfs f0, 0x44(r4)	/* effective address: 803F1D68 */
 /* 8001DD48 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001DD4C 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8001DD50 00000034  38 63 0F 38 */	addi r3, r3, 0xf38

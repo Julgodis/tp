@@ -5,7 +5,7 @@ lbl_800581AC:
 /* 800581B8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800581BC 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 800581C0 00000014  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 800581C4 00000018  88 1F 0E C4 */	lbz r0, 0xec4(r31)
+/* 800581C4 00000018  88 1F 0E C4 */	lbz r0, 0xec4(r31)	/* effective address: 8042D918 */
 /* 800581C8 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 800581CC 00000020  41 82 00 2C */	beq lbl_800581F8
 /* 800581D0 00000024  80 7F 0E D0 */	lwz r3, 0xed0(r31)

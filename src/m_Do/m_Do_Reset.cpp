@@ -49,7 +49,7 @@ extern "C" static void destroyVideo__Fv(); // 1
 extern "C" void mDoRst_reset__FiUli(); // 1
 extern "C" void mDoRst_resetCallBack__FiPv(); // 1
 extern "C" void getResetData__6mDoRstFv(); // 1
-extern "C" extern char const* const m_Do_m_Do_Reset__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 extern "C" extern u8 struct_80450C80[8];
 extern "C" extern u8 data_80450C88[8];

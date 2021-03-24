@@ -14,10 +14,10 @@
 struct cCcD_Obj {
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct dCcMassS_Obj {
@@ -31,13 +31,13 @@ struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
 
+struct Vec {
+};
+
 struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
-};
-
-struct Vec {
 };
 
 struct dCcMassS_Mng {
@@ -260,7 +260,7 @@ asm dCcMassS_Obj::dCcMassS_Obj() {
 
 /* ############################################################################################## */
 /* 80452764-80452768 0004+00 s=2 e=0 z=0  None .sdata2    @3724                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3724 = -1000000000.0f;
+SECTION_SDATA2 static f32 lit_3724 = -1000000000.0f;
 
 /* 800855E4-80085630 004C+00 s=1 e=1 z=0  None .text      Ct__12dCcMassS_MngFv                                         */
 #pragma push
@@ -301,10 +301,10 @@ asm void dCcMassS_Mng::Prepare() {
 
 /* ############################################################################################## */
 /* 8045276C-80452770 0004+00 s=2 e=0 z=0  None .sdata2    @3899                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3899 = 1.0f;
+SECTION_SDATA2 static f32 lit_3899 = 1.0f;
 
 /* 80452770-80452774 0004+00 s=1 e=0 z=0  None .sdata2    @3900                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3900 = 20.0f;
+SECTION_SDATA2 static f32 lit_3900 = 20.0f;
 
 /* 800858AC-80085CF0 0444+00 s=0 e=0 z=0  None .text      Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf   */
 #pragma push
@@ -330,7 +330,7 @@ asm void dCcMassS_Mng::Clear() {
 
 /* ############################################################################################## */
 /* 80452774-80452778 0004+00 s=1 e=0 z=0  None .sdata2    @3941                                                        */
-SECTION_SDATA2 static f32 d_cc_d_cc_mass_s__lit_3941 = 0.5f;
+SECTION_SDATA2 static f32 lit_3941 = 0.5f;
 
 /* 80085D98-80085E6C 00D4+00 s=0 e=4 z=0  None .text      Set__12dCcMassS_MngFP8cCcD_ObjUc                             */
 #pragma push

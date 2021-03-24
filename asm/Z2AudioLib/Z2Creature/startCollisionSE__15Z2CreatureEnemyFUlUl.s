@@ -48,8 +48,8 @@ lbl_802C1AB8:
 /* 802C1AB8 00000000  38 1F FF E2 */	addi r0, r31, -30
 /* 802C1ABC 00000004  28 00 00 16 */	cmplwi r0, 0x16
 /* 802C1AC0 00000008  41 81 00 90 */	bgt lbl_802C1B50
-/* 802C1AC4 0000000C  3C 60 80 3D */	lis r3, Z2Creature__lit_4411@ha
-/* 802C1AC8 00000010  38 63 B7 24 */	addi r3, r3, Z2Creature__lit_4411@l
+/* 802C1AC4 0000000C  3C 60 80 3D */	lis r3, lit_4411@ha
+/* 802C1AC8 00000010  38 63 B7 24 */	addi r3, r3, lit_4411@l
 /* 802C1ACC 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 802C1AD0 00000018  7C 03 00 2E */	lwzx r0, r3, r0
 /* 802C1AD4 0000001C  7C 09 03 A6 */	mtctr r0

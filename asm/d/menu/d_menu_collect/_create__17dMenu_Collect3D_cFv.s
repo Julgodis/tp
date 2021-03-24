@@ -16,7 +16,7 @@ lbl_801B65A8:
 /* 801B65E0 00000038  4B E5 8B ED */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 801B65E4 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B65E8 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B65EC 00000044  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 801B65EC 00000044  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 801B65F0 00000048  28 03 00 00 */	cmplwi r3, 0
 /* 801B65F4 0000004C  41 82 00 08 */	beq lbl_801B65FC
 /* 801B65F8 00000050  4B F8 A0 B1 */	bl initStatusWindow__9daAlink_cFv

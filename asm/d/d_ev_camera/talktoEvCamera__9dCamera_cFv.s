@@ -7,7 +7,7 @@ lbl_80090174:
 /* 80090188 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009018C 00000018  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80090190 0000001C  38 64 4E C8 */	addi r3, r4, 0x4ec8
-/* 80090194 00000020  80 84 4F 8C */	lwz r4, 0x4f8c(r4)
+/* 80090194 00000020  80 84 4F 8C */	lwz r4, 0x4f8c(r4)	/* effective address: 8040B14C */
 /* 80090198 00000024  4B FB 31 55 */	bl convPId__14dEvt_control_cFUi
 /* 8009019C 00000028  80 7F 06 84 */	lwz r3, 0x684(r31)
 /* 800901A0 0000002C  80 1F 04 F4 */	lwz r0, 0x4f4(r31)

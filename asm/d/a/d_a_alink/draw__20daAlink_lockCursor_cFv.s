@@ -131,7 +131,7 @@ lbl_8012660C:
 /* 80126614 00000008  FC 40 08 90 */	fmr f2, f1
 /* 80126618 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8012661C 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80126620 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 80126620 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 80126624 00000018  48 1D 28 B1 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 lbl_80126628:
 /* 80126628 00000000  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */

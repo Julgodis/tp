@@ -54,17 +54,17 @@ lbl_80104F4C:
 lbl_80104F78:
 /* 80104F78 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 80104F7C 00000004  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 80104F80 00000008  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 80104F80 00000008  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038ED8C */
 /* 80104F84 0000000C  D0 1F 34 80 */	stfs f0, 0x3480(r31)
 /* 80104F88 00000010  38 00 00 00 */	li r0, 0
 /* 80104F8C 00000014  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 80104F90 00000018  B0 1F 30 D0 */	sth r0, 0x30d0(r31)
 /* 80104F94 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80104F98 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80104F9C 00000024  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80104F9C 00000024  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104FA0 00000028  64 00 00 10 */	oris r0, r0, 0x10
 /* 80104FA4 0000002C  60 00 40 00 */	ori r0, r0, 0x4000
-/* 80104FA8 00000030  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80104FA8 00000030  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104FAC 00000034  38 60 00 01 */	li r3, 1
 lbl_80104FB0:
 /* 80104FB0 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -7,10 +7,10 @@ lbl_80238730:
 /* 80238744 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 80238748 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8023874C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80238750 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)
-/* 80238754 00000024  A8 03 01 7A */	lha r0, 0x17a(r3)
+/* 80238750 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 80238754 00000024  A8 03 01 7A */	lha r0, 0x17a(r3)	/* effective address: 8040633A */
 /* 80238758 00000028  7C 00 EA 14 */	add r0, r0, r29
-/* 8023875C 0000002C  B0 03 01 7A */	sth r0, 0x17a(r3)
+/* 8023875C 0000002C  B0 03 01 7A */	sth r0, 0x17a(r3)	/* effective address: 8040633A */
 /* 80238760 00000030  4B FF FF 01 */	bl dMsgObject_getTotalPrice__Fv
 /* 80238764 00000034  7C 1D 1A 14 */	add r0, r29, r3
 /* 80238768 00000038  7C 1D 07 35 */	extsh. r29, r0

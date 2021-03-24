@@ -55,9 +55,9 @@ lbl_8012FED0:
 lbl_8012FF50:
 /* 8012FF50 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8012FF54 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8012FF58 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
-/* 8012FF5C 0000000C  60 00 02 00 */	ori r0, r0, 0x200
-/* 8012FF60 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8012FF58 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
+/* 8012FF5C 0000000C  60 00 02 00 */	ori r0, r0, 0x0200 /* 0x43300200@l */
+/* 8012FF60 00000010  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8012FF64 00000014  38 00 00 78 */	li r0, 0x78
 /* 8012FF68 00000018  98 1F 2F 9D */	stb r0, 0x2f9d(r31)
 /* 8012FF6C 0000001C  7F E3 FB 78 */	mr r3, r31
@@ -65,7 +65,7 @@ lbl_8012FF50:
 /* 8012FF74 00000024  4B FF 12 4D */	bl setFootEffectProcType__9daAlink_cFi
 /* 8012FF78 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlSlide_c0@ha
 /* 8012FF7C 0000002C  38 63 F3 F0 */	addi r3, r3, m__21daAlinkHIO_wlSlide_c0@l
-/* 8012FF80 00000030  C0 03 00 54 */	lfs f0, 0x54(r3)
+/* 8012FF80 00000030  C0 03 00 54 */	lfs f0, 0x54(r3)	/* effective address: 8038F444 */
 /* 8012FF84 00000034  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 8012FF88 00000038  38 60 00 01 */	li r3, 1
 lbl_8012FF8C:

@@ -107,13 +107,13 @@ struct JUTResReference {
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
+struct _GXTlut {
+};
+
 struct JUTTransparency {
 };
 
 struct _GXTlutFmt {
-};
-
-struct _GXTlut {
 };
 
 struct JUTPalette {
@@ -224,7 +224,7 @@ extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80456300-80456308 0004+04 s=10 e=0 z=0  None .sdata2    @1573                                                        */
-SECTION_SDATA2 static u8 J2DAnimation__lit_1573[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_1573[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -437,7 +437,7 @@ asm void J2DAnmTevRegKey::searchUpdateMaterialID(J2DScreen* param_0) {
 
 /* ############################################################################################## */
 /* 80456320-80456328 0008+00 s=1 e=0 z=0  None .sdata2    @2379                                                        */
-SECTION_SDATA2 static f64 J2DAnimation__lit_2379 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_2379 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8030C77C-8030C9B0 0234+00 s=6 e=0 z=0  None .text      J2DGetKeyFrameInterpolation<s>__FfP18J3DAnmKeyTableBasePs    */
 #pragma push

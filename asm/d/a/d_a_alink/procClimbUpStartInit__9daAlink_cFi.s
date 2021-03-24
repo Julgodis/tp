@@ -42,7 +42,7 @@ lbl_800FF4D8:
 /* 800FF4E8 00000010  4B FA DC 0D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800FF4EC 00000014  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FF4F0 00000018  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FF4F4 0000001C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800FF4F4 0000001C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038EB9C */
 /* 800FF4F8 00000020  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800FF4FC 00000024  7F C3 F3 78 */	mr r3, r30
 /* 800FF500 00000028  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010057@ha */
@@ -61,7 +61,7 @@ lbl_800FF51C:
 /* 800FF530 00000014  4B FA DB C5 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800FF534 00000018  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FF538 0000001C  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FF53C 00000020  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800FF53C 00000020  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038EBB0 */
 /* 800FF540 00000024  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800FF544 00000028  7F C3 F3 78 */	mr r3, r30
 /* 800FF548 0000002C  3C 80 00 01 */	lis r4, 0x0001 /* 0x0001000B@ha */
@@ -75,15 +75,15 @@ lbl_800FF560:
 /* 800FF564 00000004  90 1E 31 98 */	stw r0, 0x3198(r30)
 /* 800FF568 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FF56C 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FF570 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FF570 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FF574 00000014  60 00 00 08 */	ori r0, r0, 8
-/* 800FF578 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FF578 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FF57C 0000001C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800FF580 00000020  41 82 00 1C */	beq lbl_800FF59C
 /* 800FF584 00000024  C0 3E 34 F0 */	lfs f1, 0x34f0(r30)
 /* 800FF588 00000028  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FF58C 0000002C  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FF590 00000030  C0 03 00 6C */	lfs f0, 0x6c(r3)
+/* 800FF590 00000030  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 8038EBF8 */
 /* 800FF594 00000034  EC 01 00 2A */	fadds f0, f1, f0
 /* 800FF598 00000038  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 lbl_800FF59C:
@@ -93,9 +93,9 @@ lbl_800FF59C:
 /* 800FF5A8 0000000C  B0 1E 30 12 */	sth r0, 0x3012(r30)
 /* 800FF5AC 00000010  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800FF5B0 00000014  38 83 55 14 */	addi r4, r3, l_waitBaseAnime@l
-/* 800FF5B4 00000018  C0 44 00 08 */	lfs f2, 8(r4)
+/* 800FF5B4 00000018  C0 44 00 08 */	lfs f2, 8(r4)	/* effective address: 8042551C */
 /* 800FF5B8 0000001C  C0 2D 81 18 */	lfs f1, l_ladderAnmBaseTransY(r13)
-/* 800FF5BC 00000020  C0 04 00 00 */	lfs f0, 0(r4)
+/* 800FF5BC 00000020  C0 04 00 00 */	lfs f0, 0(r4)	/* effective address: 80425514 */
 /* 800FF5C0 00000024  D0 1E 37 C8 */	stfs f0, 0x37c8(r30)
 /* 800FF5C4 00000028  D0 3E 37 CC */	stfs f1, 0x37cc(r30)
 /* 800FF5C8 0000002C  D0 5E 37 D0 */	stfs f2, 0x37d0(r30)
@@ -120,7 +120,7 @@ lbl_800FF59C:
 /* 800FF614 00000078  EC 02 00 2A */	fadds f0, f2, f0
 /* 800FF618 0000007C  EC 03 00 28 */	fsubs f0, f3, f0
 /* 800FF61C 00000080  D0 05 00 1C */	stfs f0, 0x1c(r5)
-/* 800FF620 00000084  C0 64 00 08 */	lfs f3, 8(r4)
+/* 800FF620 00000084  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 8042551C */
 /* 800FF624 00000088  C0 45 00 18 */	lfs f2, 0x18(r5)
 /* 800FF628 0000008C  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 800FF62C 00000090  C0 1E 37 9C */	lfs f0, 0x379c(r30)
@@ -139,7 +139,7 @@ lbl_800FF59C:
 /* 800FF660 000000C4  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 800FF664 000000C8  38 61 00 14 */	addi r3, r1, 0x14
 /* 800FF668 000000CC  38 9E 37 C8 */	addi r4, r30, 0x37c8
-/* 800FF66C 000000D0  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FF66C 000000D0  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FF670 000000D4  EC 20 08 28 */	fsubs f1, f0, f1
 /* 800FF674 000000D8  48 16 75 11 */	bl __ml__4cXyzCFf
 /* 800FF678 000000DC  38 61 00 08 */	addi r3, r1, 8

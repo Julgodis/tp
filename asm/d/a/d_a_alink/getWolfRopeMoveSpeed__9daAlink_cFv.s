@@ -20,7 +20,7 @@ lbl_801316D0:
 /* 801316E8 00000018  7C 43 04 2E */	lfsx f2, r3, r0
 /* 801316EC 0000001C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlRope_c0@ha
 /* 801316F0 00000020  38 63 F4 6C */	addi r3, r3, m__20daAlinkHIO_wlRope_c0@l
-/* 801316F4 00000024  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 801316F4 00000024  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 8038F490 */
 /* 801316F8 00000028  C0 1F 1F DC */	lfs f0, 0x1fdc(r31)
 /* 801316FC 0000002C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80131700 00000030  EC 20 00 B2 */	fmuls f1, f0, f2

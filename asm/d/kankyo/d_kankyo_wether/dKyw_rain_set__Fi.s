@@ -1,6 +1,6 @@
 lbl_8005B64C:
 /* 8005B64C 00000000  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8005B650 00000004  38 84 CA 54 */	addi r4, r4, g_env_light@l
-/* 8005B654 00000008  90 64 0E 80 */	stw r3, 0xe80(r4)
-/* 8005B658 0000000C  90 64 12 9C */	stw r3, 0x129c(r4)
+/* 8005B654 00000008  90 64 0E 80 */	stw r3, 0xe80(r4)	/* effective address: 8042D8D4 */
+/* 8005B658 0000000C  90 64 12 9C */	stw r3, 0x129c(r4)	/* effective address: 8042DCF0 */
 /* 8005B65C 00000010  4E 80 00 20 */	blr 

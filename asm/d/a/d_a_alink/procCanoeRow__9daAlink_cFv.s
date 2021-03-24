@@ -49,7 +49,7 @@ lbl_800F5ABC:
 lbl_800F5ACC:
 /* 800F5ACC 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5AD0 00000004  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F5AD4 00000008  C3 E3 00 1C */	lfs f31, 0x1c(r3)
+/* 800F5AD4 00000008  C3 E3 00 1C */	lfs f31, 0x1c(r3)	/* effective address: 8038E62C */
 /* 800F5AD8 0000000C  A8 1D 30 0E */	lha r0, 0x300e(r29)
 /* 800F5ADC 00000010  2C 00 00 01 */	cmpwi r0, 1
 /* 800F5AE0 00000014  40 82 00 24 */	bne lbl_800F5B04
@@ -75,7 +75,7 @@ lbl_800F5B04:
 lbl_800F5B2C:
 /* 800F5B2C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5B30 00000004  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F5B34 00000008  C3 E3 00 30 */	lfs f31, 0x30(r3)
+/* 800F5B34 00000008  C3 E3 00 30 */	lfs f31, 0x30(r3)	/* effective address: 8038E640 */
 lbl_800F5B38:
 /* 800F5B38 00000000  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 800F5B3C 00000004  D0 01 00 08 */	stfs f0, 8(r1)
@@ -173,7 +173,7 @@ lbl_800F5C84:
 /* 800F5C84 00000000  FC 20 F8 50 */	fneg f1, f31
 /* 800F5C88 00000004  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5C8C 00000008  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F5C90 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800F5C90 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038E644 */
 /* 800F5C94 00000010  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800F5C98 00000014  D0 1F 14 68 */	stfs f0, 0x1468(r31)
 lbl_800F5C9C:

@@ -22,22 +22,22 @@ lbl_800C3730:
 /* 800C3780 00000050  C0 3F 05 94 */	lfs f1, 0x594(r31)
 /* 800C3784 00000054  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800C3788 00000058  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800C378C 0000005C  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 800C378C 0000005C  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038D6E4 */
 /* 800C3790 00000060  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800C3794 00000064  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800C3798 00000000  40 81 00 08 */	ble lbl_800C37A0
 /* 800C379C 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 lbl_800C37A0:
 /* 800C37A0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800C37A4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C37A4 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C37A8 00000008  4B FE A6 6D */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C37AC 0000000C  80 1F 31 74 */	lwz r0, 0x3174(r31)
 /* 800C37B0 00000010  2C 00 00 08 */	cmpwi r0, 8
 /* 800C37B4 00000014  41 82 00 44 */	beq lbl_800C37F8
 /* 800C37B8 00000018  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 800C37BC 0000001C  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 800C37C0 00000020  A8 83 00 06 */	lha r4, 6(r3)
-/* 800C37C4 00000024  A8 63 00 04 */	lha r3, 4(r3)
+/* 800C37C0 00000020  A8 83 00 06 */	lha r4, 6(r3)	/* effective address: 8038D66A */
+/* 800C37C4 00000024  A8 63 00 04 */	lha r3, 4(r3)	/* effective address: 8038D668 */
 /* 800C37C8 00000028  A8 1F 2F F0 */	lha r0, 0x2ff0(r31)
 /* 800C37CC 0000002C  7C 00 0E 70 */	srawi r0, r0, 1
 /* 800C37D0 00000030  7C 05 07 34 */	extsh r5, r0

@@ -6,7 +6,7 @@ lbl_801CD95C:
 /* 801CD96C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801CD970 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801CD974 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801CD978 0000001C  88 03 00 7C */	lbz r0, 0x7c(r3)
+/* 801CD978 0000001C  88 03 00 7C */	lbz r0, 0x7c(r3)	/* effective address: 8040623C */
 /* 801CD97C 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 801CD980 00000024  41 82 00 3C */	beq lbl_801CD9BC
 /* 801CD984 00000028  38 61 00 10 */	addi r3, r1, 0x10
@@ -45,7 +45,7 @@ lbl_801CD9E0:
 /* 801CDA00 00000020  38 BF 01 10 */	addi r5, r31, 0x110
 /* 801CDA04 00000024  38 DF 01 14 */	addi r6, r31, 0x114
 /* 801CDA08 00000028  48 00 33 49 */	bl calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf
-/* 801CDA0C 0000002C  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CDA0C 0000002C  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CDA10 00000030  D0 1F 01 18 */	stfs f0, 0x118(r31)
 /* 801CDA14 00000034  38 7F 01 10 */	addi r3, r31, 0x110
 /* 801CDA18 00000038  83 E1 00 2C */	lwz r31, 0x2c(r1)

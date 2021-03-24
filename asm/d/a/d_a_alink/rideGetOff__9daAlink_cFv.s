@@ -12,7 +12,7 @@ lbl_800ECBD0:
 /* 800ECBF8 00000028  41 82 00 34 */	beq lbl_800ECC2C
 /* 800ECBFC 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800ECC00 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800ECC04 00000034  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 800ECC04 00000034  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800ECC08 00000038  28 03 00 00 */	cmplwi r3, 0
 /* 800ECC0C 0000003C  41 82 00 10 */	beq lbl_800ECC1C
 /* 800ECC10 00000040  39 83 18 F8 */	addi r12, r3, 0x18f8

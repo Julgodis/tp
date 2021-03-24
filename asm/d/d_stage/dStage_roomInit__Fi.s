@@ -9,7 +9,7 @@ lbl_80024D10:
 /* 80024D2C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80024D30 00000020  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80024D34 00000024  38 7E 4E 20 */	addi r3, r30, 0x4e20
-/* 80024D38 00000028  81 9E 4E 20 */	lwz r12, 0x4e20(r30)
+/* 80024D38 00000028  81 9E 4E 20 */	lwz r12, 0x4e20(r30)	/* effective address: 8040AFE0 */
 /* 80024D3C 0000002C  81 8C 00 30 */	lwz r12, 0x30(r12)
 /* 80024D40 00000030  7D 89 03 A6 */	mtctr r12
 /* 80024D44 00000034  4E 80 04 21 */	bctrl 

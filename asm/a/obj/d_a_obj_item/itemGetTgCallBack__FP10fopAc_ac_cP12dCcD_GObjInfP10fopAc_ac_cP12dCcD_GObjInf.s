@@ -24,7 +24,7 @@ lbl_8015B364:
 lbl_8015B374:
 /* 8015B374 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015B378 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015B37C 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8015B37C 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8015B380 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8015B384 00000010  40 82 00 3C */	bne lbl_8015B3C0
 /* 8015B388 00000014  88 1F 09 5E */	lbz r0, 0x95e(r31)

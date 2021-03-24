@@ -130,7 +130,7 @@ extern "C" static void fault_callback_scroll__FUsP9OSContextUlUl(); // 1
 extern "C" static void my_PrintHeap__FPCcUl(); // 1
 extern "C" static void my_SysPrintHeap__FPCcPvUl(); // 1
 extern "C" void mDoMch_Create__Fv(); // 1
-extern "C" extern char const* const m_Do_m_Do_machine__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 g_ntscZeldaProg[60];
 extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
 
@@ -446,10 +446,10 @@ asm static void myExceptionCallback(u16 param_0, OSContext* param_1, u32 param_2
 
 /* ############################################################################################## */
 /* 80451B00-80451B04 0004+00 s=1 e=0 z=0  None .sdata2    @3940                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_machine__lit_3940 = 8.0f;
+SECTION_SDATA2 static f32 lit_3940 = 8.0f;
 
 /* 80451B04-80451B08 0004+00 s=1 e=0 z=0  None .sdata2    @3941                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_machine__lit_3941 = 6.0f;
+SECTION_SDATA2 static f32 lit_3941 = 6.0f;
 
 /* 8000B95C-8000BCF4 0398+00 s=1 e=0 z=0  None .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
 #pragma push

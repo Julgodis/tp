@@ -4,9 +4,9 @@ lbl_8009899C:
 /* 800989A4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800989A8 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800989AC 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800989B0 00000014  A8 64 5D F6 */	lha r3, 0x5df6(r4)
+/* 800989B0 00000014  A8 64 5D F6 */	lha r3, 0x5df6(r4)	/* effective address: 8040BFB6 */
 /* 800989B4 00000018  38 03 00 32 */	addi r0, r3, 0x32
-/* 800989B8 0000001C  B0 04 5D F6 */	sth r0, 0x5df6(r4)
+/* 800989B8 0000001C  B0 04 5D F6 */	sth r0, 0x5df6(r4)	/* effective address: 8040BFB6 */
 /* 800989BC 00000020  38 64 00 9C */	addi r3, r4, 0x9c
 /* 800989C0 00000024  38 80 00 17 */	li r4, 0x17
 /* 800989C4 00000028  38 A0 00 4B */	li r5, 0x4b

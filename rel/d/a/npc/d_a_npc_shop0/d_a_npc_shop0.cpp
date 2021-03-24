@@ -37,6 +37,8 @@ struct daNpc_Shop0_c {
 	/* 80AEB634 */ void setMtx();
 	/* 80AEB6DC */ void setRoomInf();
 	/* 80AEB780 */ void cut_alert(int, int);
+	/* 80AEB7F0 */ void chkProcess(int (daNpc_Shop0_c::*)(void*));
+	/* 80AEB824 */ void setProcess(int (daNpc_Shop0_c::*)(void*), void*, int);
 	/* 80AEB920 */ void wait(void*);
 	/* 80AEB9BC */ void talk(void*);
 };
@@ -120,8 +122,8 @@ extern "C" void orderEvent__13daNpc_Shop0_cFv(); // 1
 extern "C" void setMtx__13daNpc_Shop0_cFv(); // 1
 extern "C" void setRoomInf__13daNpc_Shop0_cFv(); // 1
 extern "C" void cut_alert__13daNpc_Shop0_cFii(); // 1
-extern "C" static void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i(); // 1
-extern "C" static void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi(); // 1
+extern "C" void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi(); // 1
 extern "C" void wait__13daNpc_Shop0_cFPv(); // 1
 extern "C" void talk__13daNpc_Shop0_cFPv(); // 1
 extern "C" void daNpc_Shop0_Create__FPv(); // 1
@@ -494,7 +496,7 @@ asm void daNpc_Shop0_c::cut_alert(int param_0, int param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i() {
+asm void daNpc_Shop0_c::chkProcess(int (daNpc_Shop0_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i.s"
 }
@@ -505,7 +507,7 @@ extern "C" asm static void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi() {
+asm void daNpc_Shop0_c::setProcess(int (daNpc_Shop0_c::*)(void*), void* param_1, int param_2) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi.s"
 }

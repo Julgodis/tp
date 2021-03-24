@@ -30,7 +30,7 @@ lbl_8011FD84:
 /* 8011FDB8 00000034  38 80 00 00 */	li r4, 0
 /* 8011FDBC 00000038  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8011FDC0 0000003C  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
-/* 8011FDC4 00000040  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 8011FDC4 00000040  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038EE98 */
 /* 8011FDC8 00000044  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8011FDCC 00000048  48 00 99 0D */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8011FDD0 0000004C  48 00 00 20 */	b lbl_8011FDF0
@@ -39,15 +39,15 @@ lbl_8011FDD4:
 /* 8011FDD8 00000004  38 80 00 19 */	li r4, 0x19
 /* 8011FDDC 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 8011FDE0 0000000C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 8011FDE4 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 8011FDE4 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 8011FDE8 00000014  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8011FDEC 00000018  4B F8 D1 F5 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_8011FDF0:
 /* 8011FDF0 00000000  3B 60 00 00 */	li r27, 0
 /* 8011FDF4 00000004  2C 1E 00 00 */	cmpwi r30, 0
 /* 8011FDF8 00000008  40 82 00 50 */	bne lbl_8011FE48
-/* 8011FDFC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 8011FE00 00000010  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 8011FDFC 0000000C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8011FE00 00000010  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 8011FE04 00000014  38 63 01 68 */	addi r3, r3, 0x168
 /* 8011FE08 00000018  4B F7 DC 59 */	bl checkStageName__9daAlink_cFPCc
 /* 8011FE0C 0000001C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -56,8 +56,8 @@ lbl_8011FDF0:
 /* 8011FE18 00000028  2C 00 00 04 */	cmpwi r0, 4
 /* 8011FE1C 0000002C  41 82 00 28 */	beq lbl_8011FE44
 lbl_8011FE20:
-/* 8011FE20 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 8011FE24 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 8011FE20 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8011FE24 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 8011FE28 00000008  38 63 01 70 */	addi r3, r3, 0x170
 /* 8011FE2C 0000000C  4B F7 DC 35 */	bl checkStageName__9daAlink_cFPCc
 /* 8011FE30 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -78,7 +78,7 @@ lbl_8011FE48:
 /* 8011FE64 0000001C  B0 7C 30 0A */	sth r3, 0x300a(r28)
 /* 8011FE68 00000020  38 00 00 FF */	li r0, 0xff
 /* 8011FE6C 00000024  B0 1C 30 10 */	sth r0, 0x3010(r28)
-/* 8011FE70 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8011FE70 00000028  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8011FE74 0000002C  D0 1C 34 88 */	stfs f0, 0x3488(r28)
 /* 8011FE78 00000030  A8 1C 30 0C */	lha r0, 0x300c(r28)
 /* 8011FE7C 00000034  2C 00 00 00 */	cmpwi r0, 0
@@ -191,12 +191,12 @@ lbl_8011FFF0:
 /* 80120008 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8012000C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80120010 00000020  38 00 FF FF */	li r0, -1
-/* 80120014 00000024  98 03 00 98 */	stb r0, 0x98(r3)
+/* 80120014 00000024  98 03 00 98 */	stb r0, 0x98(r3)	/* effective address: 80406258 */
 lbl_80120018:
 /* 80120018 00000000  38 00 09 F4 */	li r0, 0x9f4
 /* 8012001C 00000004  90 1C 32 CC */	stw r0, 0x32cc(r28)
 lbl_80120020:
-/* 80120020 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80120020 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80120024 00000004  D0 1C 34 84 */	stfs f0, 0x3484(r28)
 /* 80120028 00000008  48 00 00 AC */	b lbl_801200D4
 lbl_8012002C:
@@ -210,7 +210,7 @@ lbl_8012002C:
 /* 80120048 0000001C  C0 02 96 58 */	lfs f0, lit_37152(r2)
 /* 8012004C 00000020  D0 1C 34 80 */	stfs f0, 0x3480(r28)
 /* 80120050 00000024  B0 7C 30 12 */	sth r3, 0x3012(r28)
-/* 80120054 00000028  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 80120054 00000028  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 80120058 0000002C  D0 1C 34 88 */	stfs f0, 0x3488(r28)
 /* 8012005C 00000030  48 00 00 2C */	b lbl_80120088
 lbl_80120060:

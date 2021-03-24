@@ -94,7 +94,7 @@ lbl_8029B920:
 /* 8029B930 00000010  C0 02 BC 84 */	lfs f0, lit_545(r2)
 /* 8029B934 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029B938 00000000  40 80 00 30 */	bge lbl_8029B968
-/* 8029B93C 00000004  C0 02 BC C8 */	lfs f0, JASChannel__lit_969(r2)
+/* 8029B93C 00000004  C0 02 BC C8 */	lfs f0, lit_969(r2)
 /* 8029B940 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029B944 0000000C  FC 00 00 1E */	fctiwz f0, f0
 /* 8029B948 00000010  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -156,7 +156,7 @@ lbl_8029BA0C:
 lbl_8029BA14:
 /* 8029BA14 00000000  C0 42 BC 88 */	lfs f2, lit_546(r2)
 /* 8029BA18 00000004  C0 22 BC D4 */	lfs f1, lit_972(r2)
-/* 8029BA1C 00000008  C0 02 BC D8 */	lfs f0, JASChannel__lit_973(r2)
+/* 8029BA1C 00000008  C0 02 BC D8 */	lfs f0, lit_973(r2)
 /* 8029BA20 0000000C  EC 00 06 F2 */	fmuls f0, f0, f27
 /* 8029BA24 00000010  EC 21 00 2A */	fadds f1, f1, f0
 /* 8029BA28 00000014  C0 02 BC D0 */	lfs f0, lit_971(r2)
@@ -165,7 +165,7 @@ lbl_8029BA14:
 /* 8029BA34 00000020  C0 02 BC 84 */	lfs f0, lit_545(r2)
 /* 8029BA38 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029BA3C 00000000  40 80 00 30 */	bge lbl_8029BA6C
-/* 8029BA40 00000004  C0 02 BC C8 */	lfs f0, JASChannel__lit_969(r2)
+/* 8029BA40 00000004  C0 02 BC C8 */	lfs f0, lit_969(r2)
 /* 8029BA44 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BA48 0000000C  FC 00 00 1E */	fctiwz f0, f0
 /* 8029BA4C 00000010  D8 01 00 18 */	stfd f0, 0x18(r1)
@@ -206,7 +206,7 @@ lbl_8029BAB4:
 /* 8029BAC4 00000010  C0 02 BC 84 */	lfs f0, lit_545(r2)
 /* 8029BAC8 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029BACC 00000000  40 80 00 30 */	bge lbl_8029BAFC
-/* 8029BAD0 00000004  C0 02 BC C8 */	lfs f0, JASChannel__lit_969(r2)
+/* 8029BAD0 00000004  C0 02 BC C8 */	lfs f0, lit_969(r2)
 /* 8029BAD4 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BAD8 0000000C  FC 00 00 1E */	fctiwz f0, f0
 /* 8029BADC 00000010  D8 01 00 18 */	stfd f0, 0x18(r1)

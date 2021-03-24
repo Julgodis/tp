@@ -138,7 +138,7 @@ extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(
 extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
 extern "C" void do_changeGroupID__7JKRHeapFUc(); // 1
 extern "C" void do_getCurrentGroupId__7JKRHeapFv(); // 1
-extern "C" extern char const* const JKRHeap__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 extern "C" extern u8 sRootHeap__7JKRHeap[4];

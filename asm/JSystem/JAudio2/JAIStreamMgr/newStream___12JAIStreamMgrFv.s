@@ -21,8 +21,8 @@ lbl_802A41A0:
 /* 802A41BC 0000001C  38 63 40 FC */	addi r3, r3, data_804340FC@l
 /* 802A41C0 00000020  3C 80 80 2A */	lis r4, func_802A3E68@ha
 /* 802A41C4 00000024  38 84 3E 68 */	addi r4, r4, func_802A3E68@l
-/* 802A41C8 00000028  3C A0 80 43 */	lis r5, JAIStreamMgr__lit_745@ha
-/* 802A41CC 0000002C  38 A5 40 F0 */	addi r5, r5, JAIStreamMgr__lit_745@l
+/* 802A41C8 00000028  3C A0 80 43 */	lis r5, lit_745@ha
+/* 802A41CC 0000002C  38 A5 40 F0 */	addi r5, r5, lit_745@l
 /* 802A41D0 00000030  48 0B DA 55 */	bl __register_global_object
 /* 802A41D4 00000034  38 00 00 01 */	li r0, 1
 /* 802A41D8 00000038  98 0D 8D A8 */	stb r0, data_80451328(r13)

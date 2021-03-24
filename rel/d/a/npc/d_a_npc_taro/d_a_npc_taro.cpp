@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80570C8C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Taro_c {
@@ -64,6 +64,8 @@ struct daNpc_Taro_c {
 	/* 80568598 */ void drawOtherMdl();
 	/* 805686A0 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
 	/* 80568738 */ void selectAction();
+	/* 80568828 */ void chkAction(int (daNpc_Taro_c::*)(void*));
+	/* 80568854 */ void setAction(int (daNpc_Taro_c::*)(void*));
 	/* 805688FC */ void setSwingVoice();
 	/* 80568A2C */ void cutConversationAboutPachinko(int);
 	/* 80568C58 */ void cutConversationAboutWoodSwd(int);
@@ -252,8 +254,8 @@ extern "C" void drawDbgInfo__12daNpc_Taro_cFv(); // 1
 extern "C" void drawOtherMdl__12daNpc_Taro_cFv(); // 1
 extern "C" void getFaceMotionAnm__12daNpc_Taro_cF26daNpcT_faceMotionAnmData_c(); // 1
 extern "C" void selectAction__12daNpc_Taro_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i(); // 1
 extern "C" void setSwingVoice__12daNpc_Taro_cFv(); // 1
 extern "C" void cutConversationAboutPachinko__12daNpc_Taro_cFi(); // 1
 extern "C" void cutConversationAboutWoodSwd__12daNpc_Taro_cFi(); // 1
@@ -997,7 +999,7 @@ asm void daNpc_Taro_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i() {
+asm void daNpc_Taro_c::chkAction(int (daNpc_Taro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_taro/d_a_npc_taro/chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i.s"
 }
@@ -1008,7 +1010,7 @@ extern "C" asm static void chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i() {
+asm void daNpc_Taro_c::setAction(int (daNpc_Taro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_taro/d_a_npc_taro/setAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i.s"
 }

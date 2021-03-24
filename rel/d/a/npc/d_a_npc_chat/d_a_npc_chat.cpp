@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -21,15 +30,6 @@ struct daNpcF_c {
 	/* 809863F0 */ void setCollisions();
 	/* 809863F4 */ void setExpressionAnm(int, bool);
 	/* 809863FC */ void setExpression(int, f32);
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct _GXColorS10 {
@@ -74,6 +74,7 @@ struct daNpcChat_c {
 	/* 809837EC */ void reset();
 	/* 809839E0 */ void playMotion();
 	/* 80984DD0 */ void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
+	/* 80984F34 */ void setAction(bool (daNpcChat_c::*)(void*));
 	/* 80984FDC */ void step(s16, int);
 	/* 809850D0 */ void setTalkMember(daNpcChat_c*);
 	/* 80985104 */ void wait(void*);
@@ -186,7 +187,7 @@ extern "C" void getLookPlayerCheck__11daNpcChat_cFv(); // 1
 extern "C" void reset__11daNpcChat_cFv(); // 1
 extern "C" void playMotion__11daNpcChat_cFv(); // 1
 extern "C" void playMotionAnmLoop__11daNpcChat_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
-extern "C" static void setAction__11daNpcChat_cFM11daNpcChat_cFPCvPvPv_b(); // 1
+extern "C" void setAction__11daNpcChat_cFM11daNpcChat_cFPCvPvPv_b(); // 1
 extern "C" void step__11daNpcChat_cFsi(); // 1
 extern "C" void setTalkMember__11daNpcChat_cFP11daNpcChat_c(); // 1
 extern "C" void wait__11daNpcChat_cFPv(); // 1
@@ -1026,7 +1027,7 @@ asm void daNpcChat_c::playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData*** param_0)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpcChat_cFM11daNpcChat_cFPCvPvPv_b() {
+asm void daNpcChat_c::setAction(bool (daNpcChat_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_chat/d_a_npc_chat/setAction__11daNpcChat_cFM11daNpcChat_cFPCvPvPv_b.s"
 }

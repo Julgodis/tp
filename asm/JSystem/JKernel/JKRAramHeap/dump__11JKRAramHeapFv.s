@@ -8,7 +8,7 @@ lbl_802D3218:
 /* 802D3230 00000018  48 06 BE 11 */	bl OSLockMutex
 /* 802D3234 0000001C  3C 60 80 43 */	lis r3, sAramList__11JKRAramHeap@ha
 /* 802D3238 00000020  38 63 43 0C */	addi r3, r3, sAramList__11JKRAramHeap@l
-/* 802D323C 00000024  80 63 00 00 */	lwz r3, 0(r3)
+/* 802D323C 00000024  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8043430C */
 /* 802D3240 00000028  48 00 00 08 */	b lbl_802D3248
 lbl_802D3244:
 /* 802D3244 00000000  80 63 00 0C */	lwz r3, 0xc(r3)

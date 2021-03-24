@@ -22,7 +22,7 @@ lbl_800F1980:
 /* 800F1998 00000018  41 82 00 B0 */	beq lbl_800F1A48
 /* 800F199C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F19A0 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F19A4 00000024  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800F19A4 00000024  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800F19A8 00000028  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800F19AC 0000002C  41 82 00 10 */	beq lbl_800F19BC
 /* 800F19B0 00000030  80 7E 06 C4 */	lwz r3, 0x6c4(r30)

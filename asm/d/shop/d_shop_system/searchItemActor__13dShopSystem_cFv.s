@@ -216,7 +216,7 @@ lbl_8019A89C:
 /* 8019A8DC 00000040  D0 03 04 D0 */	stfs f0, 0x4d0(r3)
 /* 8019A8E0 00000044  C0 02 A1 6C */	lfs f0, lit_5690(r2)
 /* 8019A8E4 00000048  D0 03 04 D4 */	stfs f0, 0x4d4(r3)
-/* 8019A8E8 0000004C  C0 02 A1 70 */	lfs f0, d_shop_d_shop_system__lit_5691(r2)
+/* 8019A8E8 0000004C  C0 02 A1 70 */	lfs f0, lit_5691(r2)
 /* 8019A8EC 00000050  D0 03 04 D8 */	stfs f0, 0x4d8(r3)
 lbl_8019A8F0:
 /* 8019A8F0 00000000  88 0D 8A D8 */	lbz r0, data_80451058(r13)
@@ -233,12 +233,12 @@ lbl_8019A8F0:
 /* 8019A91C 0000002C  7F C4 F3 78 */	mr r4, r30
 /* 8019A920 00000030  3C A0 80 3C */	lis r5, dShopSystem_itemActor@ha
 /* 8019A924 00000034  39 45 B8 A4 */	addi r10, r5, dShopSystem_itemActor@l
-/* 8019A928 00000038  80 AA 00 00 */	lwz r5, 0(r10)
-/* 8019A92C 0000003C  80 CA 00 04 */	lwz r6, 4(r10)
-/* 8019A930 00000040  80 EA 00 08 */	lwz r7, 8(r10)
-/* 8019A934 00000044  81 0A 00 0C */	lwz r8, 0xc(r10)
-/* 8019A938 00000048  81 2A 00 10 */	lwz r9, 0x10(r10)
-/* 8019A93C 0000004C  81 4A 00 14 */	lwz r10, 0x14(r10)
+/* 8019A928 00000038  80 AA 00 00 */	lwz r5, 0(r10)	/* effective address: 803BB8A4 */
+/* 8019A92C 0000003C  80 CA 00 04 */	lwz r6, 4(r10)	/* effective address: 803BB8A8 */
+/* 8019A930 00000040  80 EA 00 08 */	lwz r7, 8(r10)	/* effective address: 803BB8AC */
+/* 8019A934 00000044  81 0A 00 0C */	lwz r8, 0xc(r10)	/* effective address: 803BB8B0 */
+/* 8019A938 00000048  81 2A 00 10 */	lwz r9, 0x10(r10)	/* effective address: 803BB8B4 */
+/* 8019A93C 0000004C  81 4A 00 14 */	lwz r10, 0x14(r10)	/* effective address: 803BB8B8 */
 /* 8019A940 00000050  4B FF BC C9 */	bl setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz
 /* 8019A944 00000054  88 1E 0F 77 */	lbz r0, 0xf77(r30)
 /* 8019A948 00000058  28 00 00 08 */	cmplwi r0, 8
@@ -299,9 +299,9 @@ lbl_8019AA10:
 /* 8019AA14 00000004  7F C4 F3 78 */	mr r4, r30
 /* 8019AA18 00000008  3C A0 80 3C */	lis r5, dShopSystem_itemActor@ha
 /* 8019AA1C 0000000C  38 E5 B8 A4 */	addi r7, r5, dShopSystem_itemActor@l
-/* 8019AA20 00000010  80 A7 00 00 */	lwz r5, 0(r7)
-/* 8019AA24 00000014  80 C7 00 04 */	lwz r6, 4(r7)
-/* 8019AA28 00000018  80 E7 00 08 */	lwz r7, 8(r7)
+/* 8019AA20 00000010  80 A7 00 00 */	lwz r5, 0(r7)	/* effective address: 803BB8A4 */
+/* 8019AA24 00000014  80 C7 00 04 */	lwz r6, 4(r7)	/* effective address: 803BB8A8 */
+/* 8019AA28 00000018  80 E7 00 08 */	lwz r7, 8(r7)	/* effective address: 803BB8AC */
 /* 8019AA2C 0000001C  81 0D 81 70 */	lwz r8, dShopSystem_cameraActor(r13)
 /* 8019AA30 00000020  39 08 04 D0 */	addi r8, r8, 0x4d0
 /* 8019AA34 00000024  39 2D 81 70 */	addi r9, r13, 0x804506F0-0x80458580 /* dShopSystem_cameraActor-_SDA_BASE_ */

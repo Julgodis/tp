@@ -31,7 +31,7 @@ lbl_801AC8DC:
 /* 801AC8DC 00000000  88 01 00 08 */	lbz r0, 8(r1)
 /* 801AC8E0 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801AC8E4 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801AC8E8 0000000C  98 03 4E 0C */	stb r0, 0x4e0c(r3)
+/* 801AC8E8 0000000C  98 03 4E 0C */	stb r0, 0x4e0c(r3)	/* effective address: 8040AFCC */
 /* 801AC8EC 00000010  48 00 00 14 */	b lbl_801AC900
 lbl_801AC8F0:
 /* 801AC8F0 00000000  3B BD 00 01 */	addi r29, r29, 1

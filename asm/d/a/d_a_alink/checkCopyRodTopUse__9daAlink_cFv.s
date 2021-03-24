@@ -32,11 +32,11 @@ lbl_800E14C8:
 /* 800E14CC 00000004  40 82 00 30 */	bne lbl_800E14FC
 /* 800E14D0 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E14D4 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E14D8 00000010  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800E14D8 00000010  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800E14DC 00000014  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 800E14E0 00000018  7D 89 03 A6 */	mtctr r12
 /* 800E14E4 0000001C  4E 80 04 21 */	bctrl 
-/* 800E14E8 00000020  88 03 00 09 */	lbz r0, 9(r3)
+/* 800E14E8 00000020  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 804061C9 */
 /* 800E14EC 00000024  54 00 FE FE */	rlwinm r0, r0, 0x1f, 0x1b, 0x1f
 /* 800E14F0 00000028  2C 00 00 15 */	cmpwi r0, 0x15
 /* 800E14F4 0000002C  41 82 00 08 */	beq lbl_800E14FC

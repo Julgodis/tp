@@ -34,14 +34,14 @@ lbl_800C539C:
 /* 800C539C 00000000  7F C3 F3 78 */	mr r3, r30
 /* 800C53A0 00000004  3C A0 80 39 */	lis r5, m__22daAlinkHIO_turnMove_c0@ha
 /* 800C53A4 00000008  38 C5 DF 70 */	addi r6, r5, m__22daAlinkHIO_turnMove_c0@l
-/* 800C53A8 0000000C  C0 26 00 24 */	lfs f1, 0x24(r6)
-/* 800C53AC 00000010  C0 46 00 08 */	lfs f2, 8(r6)
-/* 800C53B0 00000014  A8 A6 00 00 */	lha r5, 0(r6)
-/* 800C53B4 00000018  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 800C53A8 0000000C  C0 26 00 24 */	lfs f1, 0x24(r6)	/* effective address: 8038DF94 */
+/* 800C53AC 00000010  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038DF78 */
+/* 800C53B0 00000014  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038DF70 */
+/* 800C53B4 00000018  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038DF7C */
 /* 800C53B8 0000001C  4B FE 7C 55 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800C53BC 00000020  3C 60 80 39 */	lis r3, m__22daAlinkHIO_turnMove_c0@ha
 /* 800C53C0 00000024  38 63 DF 70 */	addi r3, r3, m__22daAlinkHIO_turnMove_c0@l
-/* 800C53C4 00000028  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 800C53C4 00000028  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038DF98 */
 /* 800C53C8 0000002C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800C53CC 00000030  80 1E 05 70 */	lwz r0, 0x570(r30)
 /* 800C53D0 00000034  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
@@ -49,7 +49,7 @@ lbl_800C539C:
 /* 800C53D8 0000003C  C0 3E 33 98 */	lfs f1, 0x3398(r30)
 /* 800C53DC 00000040  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800C53E0 00000044  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800C53E4 00000048  C0 03 00 3C */	lfs f0, 0x3c(r3)
+/* 800C53E4 00000048  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038E830 */
 /* 800C53E8 0000004C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800C53EC 00000050  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800C53F0 00000054  48 00 00 2C */	b lbl_800C541C

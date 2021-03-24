@@ -8,7 +8,7 @@ lbl_801F7FF8:
 /* 801F8010 00000018  7C 7F 1B 78 */	mr r31, r3
 /* 801F8014 0000001C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801F8018 00000020  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 801F801C 00000024  A8 83 0A 66 */	lha r4, 0xa66(r3)
+/* 801F801C 00000024  A8 83 0A 66 */	lha r4, 0xa66(r3)	/* effective address: 8042F62E */
 /* 801F8020 00000028  A8 7F 02 02 */	lha r3, 0x202(r31)
 /* 801F8024 0000002C  38 03 00 01 */	addi r0, r3, 1
 /* 801F8028 00000030  B0 1F 02 02 */	sth r0, 0x202(r31)
@@ -18,12 +18,12 @@ lbl_801F7FF8:
 /* 801F8038 00000040  38 00 00 02 */	li r0, 2
 /* 801F803C 00000044  98 1F 02 05 */	stb r0, 0x205(r31)
 /* 801F8040 00000048  80 7F 01 7C */	lwz r3, 0x17c(r31)
-/* 801F8044 0000004C  C0 22 AA 8C */	lfs f1, d_menu_d_menu_skill__lit_3809(r2)
+/* 801F8044 0000004C  C0 22 AA 8C */	lfs f1, lit_3809(r2)
 /* 801F8048 00000050  48 05 D7 89 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F804C 00000054  80 7F 01 58 */	lwz r3, 0x158(r31)
 /* 801F8050 00000058  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801F8054 0000005C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801F8058 00000060  88 84 0A 8D */	lbz r4, 0xa8d(r4)
+/* 801F8058 00000060  88 84 0A 8D */	lbz r4, 0xa8d(r4)	/* effective address: 8042F655 */
 /* 801F805C 00000064  81 83 00 00 */	lwz r12, 0(r3)
 /* 801F8060 00000068  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 801F8064 0000006C  7D 89 03 A6 */	mtctr r12
@@ -49,8 +49,8 @@ lbl_801F8070:
 /* 801F80B0 00000040  80 7F 01 58 */	lwz r3, 0x158(r31)
 /* 801F80B4 00000044  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801F80B8 00000048  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801F80BC 0000004C  88 04 0A 8D */	lbz r0, 0xa8d(r4)
-/* 801F80C0 00000050  C8 22 AA B8 */	lfd f1, d_menu_d_menu_skill__lit_4104(r2)
+/* 801F80BC 0000004C  88 04 0A 8D */	lbz r0, 0xa8d(r4)	/* effective address: 8042F655 */
+/* 801F80C0 00000050  C8 22 AA B8 */	lfd f1, lit_4104(r2)
 /* 801F80C4 00000054  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 801F80C8 00000058  3C 00 43 30 */	lis r0, 0x4330
 /* 801F80CC 0000005C  90 01 00 18 */	stw r0, 0x18(r1)

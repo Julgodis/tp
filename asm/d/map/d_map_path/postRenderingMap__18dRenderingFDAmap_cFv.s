@@ -29,8 +29,8 @@ lbl_8003D320:
 /* 8003D38C 0000006C  48 32 2A 4D */	bl GXSetDither
 /* 8003D390 00000070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003D394 00000074  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003D398 00000078  80 63 5F 50 */	lwz r3, 0x5f50(r3)
-/* 8003D39C 0000007C  81 83 00 00 */	lwz r12, 0(r3)
+/* 8003D398 00000078  80 63 5F 50 */	lwz r3, 0x5f50(r3)	/* effective address: 8040C110 */
+/* 8003D39C 0000007C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 8003D3A0 00000080  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 8003D3A4 00000084  7D 89 03 A6 */	mtctr r12
 /* 8003D3A8 00000088  4E 80 04 21 */	bctrl 

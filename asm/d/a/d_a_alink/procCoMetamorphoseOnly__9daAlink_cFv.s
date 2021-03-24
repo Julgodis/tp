@@ -27,16 +27,16 @@ lbl_800C83D4:
 /* 800C8400 0000002C  38 80 00 00 */	li r4, 0
 /* 800C8404 00000030  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 800C8408 00000034  38 A5 EF 28 */	addi r5, r5, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 800C840C 00000038  C0 25 00 14 */	lfs f1, 0x14(r5)
-/* 800C8410 0000003C  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800C840C 00000038  C0 25 00 14 */	lfs f1, 0x14(r5)	/* effective address: 8038EF3C */
+/* 800C8410 0000003C  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800C8414 00000040  48 06 12 C5 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 800C8418 00000044  48 00 00 1C */	b lbl_800C8434
 lbl_800C841C:
 /* 800C841C 00000000  38 80 00 19 */	li r4, 0x19
 /* 800C8420 00000004  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800C8424 00000008  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 800C8428 0000000C  C0 25 00 1C */	lfs f1, 0x1c(r5)
-/* 800C842C 00000010  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800C8428 0000000C  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
+/* 800C842C 00000010  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800C8430 00000014  4B FE 4B B1 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_800C8434:
 /* 800C8434 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

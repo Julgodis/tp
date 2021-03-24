@@ -15,10 +15,18 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
+struct _GXTexMapID {
+};
+
 struct JPAEmitterManager {
 };
 
-struct _GXTexMapID {
+struct JPAEmitterWorkData {
+};
+
+struct JPABaseParticle {
+	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
+	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
 struct JPAResource {
@@ -31,14 +39,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
-	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
-	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
 struct JPABaseEmitter {
@@ -109,10 +109,10 @@ asm JPAEmitterCallBack::~JPAEmitterCallBack() {
 
 /* ############################################################################################## */
 /* 80455370-80455374 0004+00 s=1 e=0 z=0  None .sdata2    @2440                                                        */
-SECTION_SDATA2 static f32 JPAEmitter__lit_2440 = 32.0f;
+SECTION_SDATA2 static f32 lit_2440 = 32.0f;
 
 /* 80455374-80455378 0004+00 s=1 e=0 z=0  None .sdata2    @2441                                                        */
-SECTION_SDATA2 static u8 JPAEmitter__lit_2441[4] = {
+SECTION_SDATA2 static u8 lit_2441[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

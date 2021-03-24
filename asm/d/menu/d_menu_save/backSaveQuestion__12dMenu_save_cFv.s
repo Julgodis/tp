@@ -6,7 +6,7 @@ lbl_801F19DC:
 /* 801F19EC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801F19F0 00000014  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F19F4 00000018  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F19F8 0000001C  88 03 00 0B */	lbz r0, 0xb(r3)
+/* 801F19F8 0000001C  88 03 00 0B */	lbz r0, 0xb(r3)	/* effective address: 8042E857 */
 /* 801F19FC 00000020  98 1F 01 BD */	stb r0, 0x1bd(r31)
 /* 801F1A00 00000024  88 9F 01 BD */	lbz r4, 0x1bd(r31)
 /* 801F1A04 00000028  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay(r13)

@@ -121,10 +121,10 @@ static u8 data_80451270[4];
 static u8 data_80451274[4];
 
 /* 80455648-8045564C 0004+00 s=2 e=0 z=0  None .sdata2    @219                                                         */
-SECTION_SDATA2 static f32 JASDrumSet__lit_219 = 1.0f;
+SECTION_SDATA2 static f32 lit_219 = 1.0f;
 
 /* 8045564C-80455650 0004+00 s=1 e=0 z=0  None .sdata2    @220                                                         */
-SECTION_SDATA2 static u8 JASDrumSet__lit_220[4] = {
+SECTION_SDATA2 static u8 lit_220[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

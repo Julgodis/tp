@@ -24,7 +24,7 @@ lbl_8011A6B8:
 /* 8011A6DC 00000024  38 00 00 01 */	li r0, 1
 /* 8011A6E0 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011A6E4 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8011A6E8 00000030  98 03 5E B4 */	stb r0, 0x5eb4(r3)
+/* 8011A6E8 00000030  98 03 5E B4 */	stb r0, 0x5eb4(r3)	/* effective address: 8040C074 */
 lbl_8011A6EC:
 /* 8011A6EC 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8011A6F0 00000004  7C 08 03 A6 */	mtlr r0

@@ -19,9 +19,9 @@ lbl_8010C9F4:
 /* 8010CA38 00000044  41 82 00 34 */	beq lbl_8010CA6C
 /* 8010CA3C 00000048  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010CA40 0000004C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010CA44 00000050  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8010CA44 00000050  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010CA48 00000054  54 00 04 E2 */	rlwinm r0, r0, 0, 0x13, 0x11
-/* 8010CA4C 00000058  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 8010CA4C 00000058  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010CA50 0000005C  38 00 00 00 */	li r0, 0
 /* 8010CA54 00000060  B0 1F 05 9E */	sth r0, 0x59e(r31)
 /* 8010CA58 00000064  B0 1F 05 9C */	sth r0, 0x59c(r31)
@@ -32,7 +32,7 @@ lbl_8010C9F4:
 lbl_8010CA6C:
 /* 8010CA6C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010CA70 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010CA74 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8010CA74 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010CA78 0000000C  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 8010CA7C 00000010  41 82 00 68 */	beq lbl_8010CAE4
 /* 8010CA80 00000014  7F E3 FB 78 */	mr r3, r31
@@ -89,7 +89,7 @@ lbl_8010CB28:
 /* 8010CB3C 00000014  41 82 00 18 */	beq lbl_8010CB54
 /* 8010CB40 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8010CB44 0000001C  38 80 00 01 */	li r4, 1
-/* 8010CB48 00000020  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 8010CB48 00000020  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 8010CB4C 00000024  4B FB 9E FD */	bl procFallInit__9daAlink_cFif
 /* 8010CB50 00000028  48 00 01 18 */	b lbl_8010CC68
 lbl_8010CB54:
@@ -138,7 +138,7 @@ lbl_8010CBF0:
 /* 8010CBF0 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 8010CBF4 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 8010CBF8 00000008  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 8010CBFC 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 8010CBFC 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E9E4 */
 /* 8010CC00 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8010CC04 00000000  40 81 00 60 */	ble lbl_8010CC64
 lbl_8010CC08:

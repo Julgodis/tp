@@ -27,7 +27,7 @@ extern "C" void strncpy(); // 1
 
 /* ############################################################################################## */
 /* 80456668-80456670 0004+04 s=1 e=0 z=0  None .sdata2    @74                                                          */
-SECTION_SDATA2 static u32 MSL_Common_Src_mbstring__lit_74[1 + 1 /* padding */] = {
+SECTION_SDATA2 static u32 lit_74[1 + 1 /* padding */] = {
 	0x0000C0E0,
 	/* padding */
 	0x00000000,

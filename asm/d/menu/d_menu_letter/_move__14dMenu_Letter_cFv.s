@@ -11,8 +11,8 @@ lbl_801DD474:
 /* 801DD498 00000024  8B FD 03 6D */	lbz r31, 0x36d(r29)
 /* 801DD49C 00000028  7F A3 EB 78 */	mr r3, r29
 /* 801DD4A0 0000002C  1C BF 00 0C */	mulli r5, r31, 0xc
-/* 801DD4A4 00000030  3C 80 80 3C */	lis r4, d_menu_d_menu_letter__map_move_process@ha
-/* 801DD4A8 00000034  38 04 DB 2C */	addi r0, r4, d_menu_d_menu_letter__map_move_process@l
+/* 801DD4A4 00000030  3C 80 80 3C */	lis r4, map_move_process@ha
+/* 801DD4A8 00000034  38 04 DB 2C */	addi r0, r4, map_move_process@l
 /* 801DD4AC 00000038  7D 80 2A 14 */	add r12, r0, r5
 /* 801DD4B0 0000003C  48 18 4B D5 */	bl __ptmf_scall
 /* 801DD4B4 00000040  60 00 00 00 */	nop 
@@ -21,8 +21,8 @@ lbl_801DD474:
 /* 801DD4C0 0000004C  41 82 00 20 */	beq lbl_801DD4E0
 /* 801DD4C4 00000050  7F A3 EB 78 */	mr r3, r29
 /* 801DD4C8 00000054  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801DD4CC 00000058  3C 80 80 3C */	lis r4, d_menu_d_menu_letter__map_init_process@ha
-/* 801DD4D0 0000005C  38 04 DA 6C */	addi r0, r4, d_menu_d_menu_letter__map_init_process@l
+/* 801DD4CC 00000058  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801DD4D0 0000005C  38 04 DA 6C */	addi r0, r4, map_init_process@l
 /* 801DD4D4 00000060  7D 80 2A 14 */	add r12, r0, r5
 /* 801DD4D8 00000064  48 18 4B AD */	bl __ptmf_scall
 /* 801DD4DC 00000068  60 00 00 00 */	nop 

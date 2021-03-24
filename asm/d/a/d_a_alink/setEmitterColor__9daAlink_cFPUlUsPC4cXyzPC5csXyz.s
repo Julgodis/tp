@@ -11,7 +11,7 @@ lbl_801206C4:
 /* 801206E8 00000024  7C E9 3B 78 */	mr r9, r7
 /* 801206EC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801206F0 0000002C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 801206F4 00000030  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
+/* 801206F4 00000030  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
 /* 801206F8 00000034  38 00 00 FF */	li r0, 0xff
 /* 801206FC 00000038  90 01 00 08 */	stw r0, 8(r1)
 /* 80120700 0000003C  38 80 00 00 */	li r4, 0

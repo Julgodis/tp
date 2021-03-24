@@ -13,7 +13,7 @@ lbl_800DCE6C:
 /* 800DCE98 0000002C  3B A0 00 00 */	li r29, 0
 /* 800DCE9C 00000030  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800DCEA0 00000034  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800DCEA4 00000038  88 04 00 15 */	lbz r0, 0x15(r4)
+/* 800DCEA4 00000038  88 04 00 15 */	lbz r0, 0x15(r4)	/* effective address: 804061D5 */
 /* 800DCEA8 0000003C  28 00 00 FF */	cmplwi r0, 0xff
 /* 800DCEAC 00000040  41 82 00 14 */	beq lbl_800DCEC0
 /* 800DCEB0 00000044  48 01 00 55 */	bl checkHorseLieAnime__9daAlink_cCFv

@@ -41,13 +41,13 @@ lbl_80235F2C:
 /* 80235F4C 00000020  38 00 00 FF */	li r0, 0xff
 /* 80235F50 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80235F54 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80235F58 0000002C  98 03 5E 7C */	stb r0, 0x5e7c(r3)
+/* 80235F58 0000002C  98 03 5E 7C */	stb r0, 0x5e7c(r3)	/* effective address: 8040C03C */
 /* 80235F5C 00000030  38 00 FF FF */	li r0, -1
-/* 80235F60 00000034  90 03 5E E8 */	stw r0, 0x5ee8(r3)
+/* 80235F60 00000034  90 03 5E E8 */	stw r0, 0x5ee8(r3)	/* effective address: 8040C0A8 */
 /* 80235F64 00000038  38 00 00 00 */	li r0, 0
-/* 80235F68 0000003C  98 03 5E 7A */	stb r0, 0x5e7a(r3)
-/* 80235F6C 00000040  98 03 5E 7B */	stb r0, 0x5e7b(r3)
-/* 80235F70 00000044  90 03 5E EC */	stw r0, 0x5eec(r3)
+/* 80235F68 0000003C  98 03 5E 7A */	stb r0, 0x5e7a(r3)	/* effective address: 8040C03A */
+/* 80235F6C 00000040  98 03 5E 7B */	stb r0, 0x5e7b(r3)	/* effective address: 8040C03B */
+/* 80235F70 00000044  90 03 5E EC */	stw r0, 0x5eec(r3)	/* effective address: 8040C0AC */
 /* 80235F74 00000048  48 00 19 F5 */	bl offCameraCancelFlag__12dMsgObject_cFv
 /* 80235F78 0000004C  38 60 00 FF */	li r3, 0xff
 /* 80235F7C 00000050  48 00 25 71 */	bl setMsgOutputType__12dMsgObject_cFUc
@@ -110,9 +110,9 @@ lbl_80236028:
 /* 80236048 00000020  41 82 00 20 */	beq lbl_80236068
 /* 8023604C 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80236050 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80236054 0000002C  A8 03 5D F4 */	lha r0, 0x5df4(r3)
+/* 80236054 0000002C  A8 03 5D F4 */	lha r0, 0x5df4(r3)	/* effective address: 8040BFB4 */
 /* 80236058 00000030  7C 00 22 14 */	add r0, r0, r4
-/* 8023605C 00000034  B0 03 5D F4 */	sth r0, 0x5df4(r3)
+/* 8023605C 00000034  B0 03 5D F4 */	sth r0, 0x5df4(r3)	/* effective address: 8040BFB4 */
 /* 80236060 00000038  38 00 00 00 */	li r0, 0
 /* 80236064 0000003C  98 1F 01 A5 */	stb r0, 0x1a5(r31)
 lbl_80236068:

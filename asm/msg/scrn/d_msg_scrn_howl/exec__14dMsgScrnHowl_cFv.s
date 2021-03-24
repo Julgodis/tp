@@ -14,8 +14,8 @@ lbl_80241A70:
 /* 80241AA0 0000000C  98 03 27 99 */	stb r0, 0x2799(r3)
 /* 80241AA4 00000010  88 03 27 98 */	lbz r0, 0x2798(r3)
 /* 80241AA8 00000014  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80241AAC 00000018  3C 80 80 3C */	lis r4, msg_scrn_d_msg_scrn_howl__process@ha
-/* 80241AB0 0000001C  38 04 10 90 */	addi r0, r4, msg_scrn_d_msg_scrn_howl__process@l
+/* 80241AAC 00000018  3C 80 80 3C */	lis r4, process@ha
+/* 80241AB0 0000001C  38 04 10 90 */	addi r0, r4, process@l
 /* 80241AB4 00000020  7D 80 2A 14 */	add r12, r0, r5
 /* 80241AB8 00000024  48 12 05 CD */	bl __ptmf_scall
 /* 80241ABC 00000028  60 00 00 00 */	nop 
@@ -38,8 +38,8 @@ lbl_80241AE4:
 /* 80241AF8 00000014  41 82 00 20 */	beq lbl_80241B18
 /* 80241AFC 00000018  7F E3 FB 78 */	mr r3, r31
 /* 80241B00 0000001C  1C A4 00 0C */	mulli r5, r4, 0xc
-/* 80241B04 00000020  3C 80 80 3C */	lis r4, msg_scrn_d_msg_scrn_howl__init_proc@ha
-/* 80241B08 00000024  38 04 10 18 */	addi r0, r4, msg_scrn_d_msg_scrn_howl__init_proc@l
+/* 80241B04 00000020  3C 80 80 3C */	lis r4, init_proc@ha
+/* 80241B08 00000024  38 04 10 18 */	addi r0, r4, init_proc@l
 /* 80241B0C 00000028  7D 80 2A 14 */	add r12, r0, r5
 /* 80241B10 0000002C  48 12 05 75 */	bl __ptmf_scall
 /* 80241B14 00000030  60 00 00 00 */	nop 
@@ -50,11 +50,11 @@ lbl_80241B18:
 /* 80241B24 0000000C  88 1F 27 98 */	lbz r0, 0x2798(r31)
 /* 80241B28 00000010  28 00 00 03 */	cmplwi r0, 3
 /* 80241B2C 00000014  40 82 00 10 */	bne lbl_80241B3C
-/* 80241B30 00000018  C3 C2 B2 70 */	lfs f30, msg_scrn_d_msg_scrn_howl__lit_4561(r2)
-/* 80241B34 0000001C  C3 A2 B2 50 */	lfs f29, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
+/* 80241B30 00000018  C3 C2 B2 70 */	lfs f30, lit_4561(r2)
+/* 80241B34 0000001C  C3 A2 B2 50 */	lfs f29, lit_4427(r2)
 /* 80241B38 00000020  48 00 00 0C */	b lbl_80241B44
 lbl_80241B3C:
-/* 80241B3C 00000000  C3 C2 B2 60 */	lfs f30, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
+/* 80241B3C 00000000  C3 C2 B2 60 */	lfs f30, lit_4431(r2)
 /* 80241B40 00000004  FF A0 F0 90 */	fmr f29, f30
 lbl_80241B44:
 /* 80241B44 00000000  C0 1F 19 94 */	lfs f0, 0x1994(r31)
@@ -62,14 +62,14 @@ lbl_80241B44:
 /* 80241B4C 00000008  41 82 00 38 */	beq lbl_80241B84
 /* 80241B50 0000000C  38 7F 19 94 */	addi r3, r31, 0x1994
 /* 80241B54 00000010  FC 20 F0 90 */	fmr f1, f30
-/* 80241B58 00000014  C0 42 B2 74 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4562(r2)
-/* 80241B5C 00000018  C0 62 B2 60 */	lfs f3, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
+/* 80241B58 00000014  C0 42 B2 74 */	lfs f2, lit_4562(r2)
+/* 80241B5C 00000018  C0 62 B2 60 */	lfs f3, lit_4431(r2)
 /* 80241B60 0000001C  48 02 DE DD */	bl cLib_addCalc2__FPffff
 /* 80241B64 00000020  C0 1F 19 94 */	lfs f0, 0x1994(r31)
 /* 80241B68 00000024  EC 00 F0 28 */	fsubs f0, f0, f30
 /* 80241B6C 00000028  FC 00 02 10 */	fabs f0, f0
 /* 80241B70 0000002C  FC 20 00 18 */	frsp f1, f0
-/* 80241B74 00000030  C0 02 B2 78 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4563(r2)
+/* 80241B74 00000030  C0 02 B2 78 */	lfs f0, lit_4563(r2)
 /* 80241B78 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80241B7C 00000000  40 80 00 08 */	bge lbl_80241B84
 /* 80241B80 00000004  D3 DF 19 94 */	stfs f30, 0x1994(r31)
@@ -79,14 +79,14 @@ lbl_80241B84:
 /* 80241B8C 00000008  41 82 00 38 */	beq lbl_80241BC4
 /* 80241B90 0000000C  38 7F 19 98 */	addi r3, r31, 0x1998
 /* 80241B94 00000010  FC 20 E8 90 */	fmr f1, f29
-/* 80241B98 00000014  C0 42 B2 74 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4562(r2)
-/* 80241B9C 00000018  C0 62 B2 60 */	lfs f3, msg_scrn_d_msg_scrn_howl__lit_4431(r2)
+/* 80241B98 00000014  C0 42 B2 74 */	lfs f2, lit_4562(r2)
+/* 80241B9C 00000018  C0 62 B2 60 */	lfs f3, lit_4431(r2)
 /* 80241BA0 0000001C  48 02 DE 9D */	bl cLib_addCalc2__FPffff
 /* 80241BA4 00000020  C0 1F 19 98 */	lfs f0, 0x1998(r31)
 /* 80241BA8 00000024  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 80241BAC 00000028  FC 00 02 10 */	fabs f0, f0
 /* 80241BB0 0000002C  FC 20 00 18 */	frsp f1, f0
-/* 80241BB4 00000030  C0 02 B2 78 */	lfs f0, msg_scrn_d_msg_scrn_howl__lit_4563(r2)
+/* 80241BB4 00000030  C0 02 B2 78 */	lfs f0, lit_4563(r2)
 /* 80241BB8 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80241BBC 00000000  40 80 00 08 */	bge lbl_80241BC4
 /* 80241BC0 00000004  D3 BF 19 98 */	stfs f29, 0x1998(r31)

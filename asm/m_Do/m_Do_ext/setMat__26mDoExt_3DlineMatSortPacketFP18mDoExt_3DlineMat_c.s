@@ -11,7 +11,7 @@ lbl_80014738:
 /* 8001475C 00000024  40 82 00 1C */	bne lbl_80014778
 /* 80014760 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80014764 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80014768 00000030  80 63 5F 90 */	lwz r3, 0x5f90(r3)
+/* 80014768 00000030  80 63 5F 90 */	lwz r3, 0x5f90(r3)	/* effective address: 8040C150 */
 /* 8001476C 00000034  7F C4 F3 78 */	mr r4, r30
 /* 80014770 00000038  38 A0 00 00 */	li r5, 0
 /* 80014774 0000003C  48 31 0D 19 */	bl entryImm__13J3DDrawBufferFP9J3DPacketUs

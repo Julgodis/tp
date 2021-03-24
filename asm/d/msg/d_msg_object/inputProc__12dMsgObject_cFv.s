@@ -8,7 +8,7 @@ lbl_802358D4:
 /* 802358EC 00000018  38 00 00 01 */	li r0, 1
 /* 802358F0 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 802358F4 00000020  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-/* 802358F8 00000024  98 1E 00 BD */	stb r0, 0xbd(r30)
+/* 802358F8 00000024  98 1E 00 BD */	stb r0, 0xbd(r30)	/* effective address: 80430245 */
 /* 802358FC 00000028  80 7C 01 18 */	lwz r3, 0x118(r28)
 /* 80235900 0000002C  4B FF 3B A9 */	bl inputNumber__19jmessage_tReferenceFv
 /* 80235904 00000030  7F 83 E3 78 */	mr r3, r28
@@ -19,7 +19,7 @@ lbl_802358D4:
 /* 80235918 00000044  98 1C 01 99 */	stb r0, 0x199(r28)
 /* 8023591C 00000048  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80235920 0000004C  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80235924 00000050  80 63 00 34 */	lwz r3, 0x34(r3)
+/* 80235924 00000050  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
 /* 80235928 00000054  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
 /* 8023592C 00000058  41 82 01 58 */	beq lbl_80235A84
 /* 80235930 0000005C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -28,7 +28,7 @@ lbl_802358D4:
 /* 8023593C 00000068  7F A3 EB 78 */	mr r3, r29
 /* 80235940 0000006C  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
 /* 80235944 00000070  3B E4 90 C0 */	addi r31, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
-/* 80235948 00000074  A0 9F 00 A0 */	lhz r4, 0xa0(r31)
+/* 80235948 00000074  A0 9F 00 A0 */	lhz r4, 0xa0(r31)	/* effective address: 80379160 */
 /* 8023594C 00000078  4B DF F0 71 */	bl isEventBit__11dSv_event_cCFUs
 /* 80235950 0000007C  7C 7B 1B 78 */	mr r27, r3
 /* 80235954 00000080  A8 1C 01 74 */	lha r0, 0x174(r28)
@@ -39,7 +39,7 @@ lbl_802358D4:
 /* 80235968 00000094  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8023596C 00000098  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80235970 0000009C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80235974 000000A0  A0 84 06 44 */	lhz r4, 0x644(r4)
+/* 80235974 000000A0  A0 84 06 44 */	lhz r4, 0x644(r4)	/* effective address: 803A78CC */
 /* 80235978 000000A4  4B DF F0 45 */	bl isEventBit__11dSv_event_cCFUs
 /* 8023597C 000000A8  2C 03 00 00 */	cmpwi r3, 0
 /* 80235980 000000AC  40 82 00 0C */	bne lbl_8023598C
@@ -48,11 +48,11 @@ lbl_802358D4:
 lbl_8023598C:
 /* 8023598C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80235990 00000004  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 80235994 00000008  80 85 5D C4 */	lwz r4, 0x5dc4(r5)
+/* 80235994 00000008  80 85 5D C4 */	lwz r4, 0x5dc4(r5)	/* effective address: 8040BF84 */
 /* 80235998 0000000C  A8 7C 01 74 */	lha r3, 0x174(r28)
 /* 8023599C 00000010  7C 03 00 D0 */	neg r0, r3
 /* 802359A0 00000014  7C 04 02 14 */	add r0, r4, r0
-/* 802359A4 00000018  90 05 5D C4 */	stw r0, 0x5dc4(r5)
+/* 802359A4 00000018  90 05 5D C4 */	stw r0, 0x5dc4(r5)	/* effective address: 8040BF84 */
 /* 802359A8 0000001C  2C 1B 00 00 */	cmpwi r27, 0
 /* 802359AC 00000020  41 82 00 AC */	beq lbl_80235A58
 /* 802359B0 00000024  7C 60 07 35 */	extsh. r0, r3
@@ -70,14 +70,14 @@ lbl_8023598C:
 /* 802359E0 00000054  7F 63 DB 78 */	mr r3, r27
 /* 802359E4 00000058  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 802359E8 0000005C  3B E4 72 88 */	addi r31, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 802359EC 00000060  A0 9F 00 F8 */	lhz r4, 0xf8(r31)
+/* 802359EC 00000060  A0 9F 00 F8 */	lhz r4, 0xf8(r31)	/* effective address: 803A7380 */
 /* 802359F0 00000064  4B DF EF CD */	bl isEventBit__11dSv_event_cCFUs
 /* 802359F4 00000068  2C 03 00 00 */	cmpwi r3, 0
 /* 802359F8 0000006C  40 82 00 74 */	bne lbl_80235A6C
 /* 802359FC 00000070  7F 63 DB 78 */	mr r3, r27
 /* 80235A00 00000074  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80235A04 00000078  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80235A08 0000007C  A0 9D 02 F0 */	lhz r4, 0x2f0(r29)
+/* 80235A08 0000007C  A0 9D 02 F0 */	lhz r4, 0x2f0(r29)	/* effective address: 803A7578 */
 /* 80235A0C 00000080  4B DF EF B1 */	bl isEventBit__11dSv_event_cCFUs
 /* 80235A10 00000084  2C 03 00 00 */	cmpwi r3, 0
 /* 80235A14 00000088  40 82 00 1C */	bne lbl_80235A30
@@ -120,7 +120,7 @@ lbl_80235A84:
 /* 80235A94 00000010  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80235A98 00000014  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
 /* 80235A9C 00000018  38 84 90 C0 */	addi r4, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
-/* 80235AA0 0000001C  A0 84 00 A0 */	lhz r4, 0xa0(r4)
+/* 80235AA0 0000001C  A0 84 00 A0 */	lhz r4, 0xa0(r4)	/* effective address: 80379160 */
 /* 80235AA4 00000020  4B DF EF 01 */	bl offEventBit__11dSv_event_cFUs
 /* 80235AA8 00000024  38 00 00 00 */	li r0, 0
 /* 80235AAC 00000028  98 1E 00 BD */	stb r0, 0xbd(r30)

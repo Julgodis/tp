@@ -21,8 +21,8 @@ lbl_802D106C:
 /* 802D10B8 0000004C  7C 05 20 40 */	cmplw r5, r4
 /* 802D10BC 00000050  41 82 00 1C */	beq lbl_802D10D8
 /* 802D10C0 00000054  3B E0 00 00 */	li r31, 0
-/* 802D10C4 00000058  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D10C8 0000005C  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D10C4 00000058  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D10C8 0000005C  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D10CC 00000060  38 63 00 E6 */	addi r3, r3, 0xe6
 /* 802D10D0 00000064  4C C6 31 82 */	crclr 6
 /* 802D10D4 00000068  48 01 75 A9 */	bl JUTWarningConsole_f

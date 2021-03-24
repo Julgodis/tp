@@ -50,7 +50,7 @@ lbl_800B841C:
 /* 800B8424 00000008  41 82 04 4C */	beq lbl_800B8870
 /* 800B8428 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B842C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8430 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B8430 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B8434 00000018  28 00 00 89 */	cmplwi r0, 0x89
 /* 800B8438 0000001C  40 82 00 14 */	bne lbl_800B844C
 /* 800B843C 00000020  7F E3 FB 78 */	mr r3, r31
@@ -114,8 +114,8 @@ lbl_800B84FC:
 /* 800B8504 00000008  48 00 EB F5 */	bl procSmallJumpInit__9daAlink_cFi
 /* 800B8508 0000000C  48 00 04 08 */	b lbl_800B8910
 lbl_800B850C:
-/* 800B850C 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800B8510 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800B850C 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800B8510 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800B8514 00000008  38 63 00 6F */	addi r3, r3, 0x6f
 /* 800B8518 0000000C  4B FE 55 49 */	bl checkStageName__9daAlink_cFPCc
 /* 800B851C 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -160,8 +160,8 @@ lbl_800B8598:
 /* 800B85A4 0000000C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 800B85A8 00000010  28 00 00 05 */	cmplwi r0, 5
 /* 800B85AC 00000014  40 82 00 54 */	bne lbl_800B8600
-/* 800B85B0 00000018  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800B85B4 0000001C  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800B85B0 00000018  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800B85B4 0000001C  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800B85B8 00000020  38 63 00 6F */	addi r3, r3, 0x6f
 /* 800B85BC 00000024  4B FE 54 A5 */	bl checkStageName__9daAlink_cFPCc
 /* 800B85C0 00000028  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -369,7 +369,7 @@ lbl_800B8870:
 /* 800B8878 00000008  41 82 00 94 */	beq lbl_800B890C
 /* 800B887C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B8880 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8884 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B8884 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B8888 00000018  28 00 00 91 */	cmplwi r0, 0x91
 /* 800B888C 0000001C  40 82 00 80 */	bne lbl_800B890C
 /* 800B8890 00000020  80 7F 27 F4 */	lwz r3, 0x27f4(r31)

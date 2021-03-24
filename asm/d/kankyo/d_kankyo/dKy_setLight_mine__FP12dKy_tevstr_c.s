@@ -30,7 +30,7 @@ lbl_801A8854:
 /* 801A88C4 00000070  38 61 00 0C */	addi r3, r1, 0xc
 /* 801A88C8 00000074  3C 80 80 3C */	lis r4, lightMaskData@ha
 /* 801A88CC 00000078  38 84 BE AC */	addi r4, r4, lightMaskData@l
-/* 801A88D0 0000007C  A0 84 00 00 */	lhz r4, 0(r4)
+/* 801A88D0 0000007C  A0 84 00 00 */	lhz r4, 0(r4)	/* effective address: 803BBEAC */
 /* 801A88D4 00000080  48 1B 50 11 */	bl GXLoadLightObjImm
 /* 801A88D8 00000084  83 E1 00 5C */	lwz r31, 0x5c(r1)
 /* 801A88DC 00000088  80 01 00 64 */	lwz r0, 0x64(r1)

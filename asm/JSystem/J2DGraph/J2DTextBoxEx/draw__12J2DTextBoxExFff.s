@@ -112,8 +112,8 @@ lbl_80307A48:
 /* 80307A48 00000000  38 61 00 48 */	addi r3, r1, 0x48
 /* 80307A4C 00000004  C0 22 C8 D8 */	lfs f1, lit_1534(r2)
 /* 80307A50 00000008  FC 40 08 90 */	fmr f2, f1
-/* 80307A54 0000000C  3C A0 80 3A */	lis r5, J2DTextBoxEx__stringBase0@ha
-/* 80307A58 00000010  38 A5 1D F0 */	addi r5, r5, J2DTextBoxEx__stringBase0@l
+/* 80307A54 0000000C  3C A0 80 3A */	lis r5, stringBase0@ha
+/* 80307A58 00000010  38 A5 1D F0 */	addi r5, r5, stringBase0@l
 /* 80307A5C 00000014  4C C6 32 42 */	crset 6
 /* 80307A60 00000018  4B FE CD 19 */	bl print__8J2DPrintFffUcPCce
 lbl_80307A64:

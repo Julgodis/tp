@@ -5,8 +5,8 @@ lbl_80041A20:
 /* 80041A2C 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80041A30 00000010  48 32 07 AD */	bl _savegpr_29
 /* 80041A34 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 80041A38 00000018  3C 60 80 38 */	lis r3, d_event_d_event__stringBase0@ha
-/* 80041A3C 0000001C  38 63 9D 80 */	addi r3, r3, d_event_d_event__stringBase0@l
+/* 80041A38 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80041A3C 0000001C  38 63 9D 80 */	addi r3, r3, stringBase0@l
 /* 80041A40 00000020  3B C3 00 0B */	addi r30, r3, 0xb
 /* 80041A44 00000024  83 A4 00 0C */	lwz r29, 0xc(r4)
 /* 80041A48 00000028  A8 7D 00 08 */	lha r3, 8(r29)
@@ -28,16 +28,16 @@ lbl_80041A7C:
 /* 80041A7C 00000000  80 AD 8A 98 */	lwz r5, m_midnaActor__9daPy_py_c(r13)
 /* 80041A80 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80041A84 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80041A88 0000000C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 80041A8C 00000010  80 03 05 74 */	lwz r0, 0x574(r3)
+/* 80041A88 0000000C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80041A8C 00000010  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
 /* 80041A90 00000014  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80041A94 00000018  41 82 00 10 */	beq lbl_80041AA4
 /* 80041A98 0000001C  80 05 08 90 */	lwz r0, 0x890(r5)
 /* 80041A9C 00000020  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 80041AA0 00000024  41 82 00 10 */	beq lbl_80041AB0
 lbl_80041AA4:
-/* 80041AA4 00000000  3C 60 80 38 */	lis r3, d_event_d_event__stringBase0@ha
-/* 80041AA8 00000004  38 63 9D 80 */	addi r3, r3, d_event_d_event__stringBase0@l
+/* 80041AA4 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80041AA8 00000004  38 63 9D 80 */	addi r3, r3, stringBase0@l
 /* 80041AAC 00000008  3B C3 00 18 */	addi r30, r3, 0x18
 lbl_80041AB0:
 /* 80041AB0 00000000  7F E3 FB 78 */	mr r3, r31

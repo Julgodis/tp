@@ -8,7 +8,7 @@ lbl_8001BA7C:
 /* 8001BA94 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8001BA98 0000001C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8001BA9C 00000020  38 00 00 00 */	li r0, 0
-/* 8001BAA0 00000024  88 83 00 E5 */	lbz r4, 0xe5(r3)
+/* 8001BAA0 00000024  88 83 00 E5 */	lbz r4, 0xe5(r3)	/* effective address: 8040B16D */
 /* 8001BAA4 00000028  28 04 00 00 */	cmplwi r4, 0
 /* 8001BAA8 0000002C  41 82 00 0C */	beq lbl_8001BAB4
 /* 8001BAAC 00000030  28 04 00 02 */	cmplwi r4, 2

@@ -52,7 +52,7 @@ lbl_8026E760:
 /* 8026E7B4 00000020  38 7F 00 04 */	addi r3, r31, 4
 /* 8026E7B8 00000024  38 9F 00 08 */	addi r4, r31, 8
 /* 8026E7BC 00000028  4B FF FF 09 */	bl cM3d_PlaneCrossLineProcWork__FfffffffPfPf
-/* 8026E7C0 0000002C  C0 02 B7 18 */	lfs f0, c_m3d__lit_2256(r2)
+/* 8026E7C0 0000002C  C0 02 B7 18 */	lfs f0, lit_2256(r2)
 /* 8026E7C4 00000030  D0 1F 00 00 */	stfs f0, 0(r31)
 /* 8026E7C8 00000034  48 00 00 80 */	b lbl_8026E848
 lbl_8026E7CC:
@@ -72,7 +72,7 @@ lbl_8026E7CC:
 /* 8026E800 00000024  38 7F 00 08 */	addi r3, r31, 8
 /* 8026E804 00000028  7F E4 FB 78 */	mr r4, r31
 /* 8026E808 0000002C  4B FF FE BD */	bl cM3d_PlaneCrossLineProcWork__FfffffffPfPf
-/* 8026E80C 00000030  C0 02 B7 18 */	lfs f0, c_m3d__lit_2256(r2)
+/* 8026E80C 00000030  C0 02 B7 18 */	lfs f0, lit_2256(r2)
 /* 8026E810 00000034  D0 1F 00 04 */	stfs f0, 4(r31)
 /* 8026E814 00000038  48 00 00 34 */	b lbl_8026E848
 lbl_8026E818:
@@ -86,7 +86,7 @@ lbl_8026E818:
 /* 8026E834 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 8026E838 00000020  38 9F 00 04 */	addi r4, r31, 4
 /* 8026E83C 00000024  4B FF FE 89 */	bl cM3d_PlaneCrossLineProcWork__FfffffffPfPf
-/* 8026E840 00000028  C0 02 B7 18 */	lfs f0, c_m3d__lit_2256(r2)
+/* 8026E840 00000028  C0 02 B7 18 */	lfs f0, lit_2256(r2)
 /* 8026E844 0000002C  D0 1F 00 08 */	stfs f0, 8(r31)
 lbl_8026E848:
 /* 8026E848 00000000  7F E3 FB 78 */	mr r3, r31

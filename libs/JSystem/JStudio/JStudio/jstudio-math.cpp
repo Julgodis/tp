@@ -57,10 +57,10 @@ extern "C" extern u32 __float_epsilon;
 
 /* ############################################################################################## */
 /* 80455468-8045546C 0004+00 s=1 e=0 z=0  None .sdata2    @488                                                         */
-SECTION_SDATA2 static f32 jstudio_math__lit_488 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_488 = 0.01745329238474369f;
 
 /* 8045546C-80455470 0004+00 s=2 e=0 z=0  None .sdata2    @489                                                         */
-SECTION_SDATA2 static u8 jstudio_math__lit_489[4] = {
+SECTION_SDATA2 static u8 lit_489[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -103,13 +103,13 @@ SECTION_SDATA2 static f32 lit_625[1 + 1 /* padding */] = {
 };
 
 /* 80455488-80455490 0008+00 s=1 e=0 z=0  None .sdata2    @626                                                         */
-SECTION_SDATA2 static f64 jstudio_math__lit_626 = -1.5707963267948966;
+SECTION_SDATA2 static f64 lit_626 = -1.5707963267948966;
 
 /* 80455490-80455498 0008+00 s=1 e=0 z=0  None .sdata2    @627                                                         */
-SECTION_SDATA2 static f64 jstudio_math__lit_627 = 1.5707963267948966;
+SECTION_SDATA2 static f64 lit_627 = 1.5707963267948966;
 
 /* 80455498-804554A0 0008+00 s=1 e=0 z=0  None .sdata2    @628                                                         */
-SECTION_SDATA2 static f64 jstudio_math__lit_628 = 57.29577951308232;
+SECTION_SDATA2 static f64 lit_628 = 57.29577951308232;
 
 /* 80285BCC-80285E0C 0240+00 s=0 e=2 z=0  None .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
 #pragma push

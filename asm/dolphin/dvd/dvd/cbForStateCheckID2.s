@@ -19,13 +19,13 @@ lbl_80349C58:
 /* 80349C64 0000000C  80 8D 92 00 */	lwz r4, bootInfo(r13)
 /* 80349C68 00000010  38 03 91 C8 */	addi r0, r3, stateReadingFST@l
 /* 80349C6C 00000014  38 A0 00 00 */	li r5, 0
-/* 80349C70 00000018  90 0D 92 40 */	stw r0, dvd__LastState(r13)
+/* 80349C70 00000018  90 0D 92 40 */	stw r0, LastState(r13)
 /* 80349C74 0000001C  3C 60 80 45 */	lis r3, BB2@ha
 /* 80349C78 00000020  90 AD 92 2C */	stw r5, NumInternalRetry(r13)
 /* 80349C7C 00000024  38 63 C9 00 */	addi r3, r3, BB2@l
 /* 80349C80 00000028  3B E3 00 08 */	addi r31, r3, 8
 /* 80349C84 0000002C  80 64 00 3C */	lwz r3, 0x3c(r4)
-/* 80349C88 00000030  80 1F 00 00 */	lwz r0, 0(r31)
+/* 80349C88 00000030  80 1F 00 00 */	lwz r0, 0(r31)	/* effective address: 8044C908 */
 /* 80349C8C 00000034  7C 03 00 40 */	cmplw r3, r0
 /* 80349C90 00000038  40 80 00 1C */	bge lbl_80349CAC
 /* 80349C94 0000003C  3C 60 80 3D */	lis r3, lit_24@ha
@@ -40,7 +40,7 @@ lbl_80349CAC:
 /* 80349CB4 00000008  38 A3 C9 00 */	addi r5, r3, BB2@l
 /* 80349CB8 0000000C  80 ED 92 00 */	lwz r7, bootInfo(r13)
 /* 80349CBC 00000010  3C 80 80 35 */	lis r4, cbForStateReadingFST@ha
-/* 80349CC0 00000014  80 A5 00 04 */	lwz r5, 4(r5)
+/* 80349CC0 00000014  80 A5 00 04 */	lwz r5, 4(r5)	/* effective address: 8044C904 */
 /* 80349CC4 00000018  38 06 00 1F */	addi r0, r6, 0x1f
 /* 80349CC8 0000001C  80 67 00 38 */	lwz r3, 0x38(r7)
 /* 80349CCC 00000020  38 C4 92 5C */	addi r6, r4, cbForStateReadingFST@l

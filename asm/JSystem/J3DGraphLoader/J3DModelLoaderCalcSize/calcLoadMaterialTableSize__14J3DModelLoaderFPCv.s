@@ -47,8 +47,8 @@ lbl_80336A34:
 /* 80336A44 00000010  3B 60 00 01 */	li r27, 1
 /* 80336A48 00000014  48 00 00 14 */	b lbl_80336A5C
 lbl_80336A4C:
-/* 80336A4C 00000000  3C 60 80 3A */	lis r3, J3DModelLoaderCalcSize__stringBase0@ha
-/* 80336A50 00000004  38 63 20 E8 */	addi r3, r3, J3DModelLoaderCalcSize__stringBase0@l
+/* 80336A4C 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80336A50 00000004  38 63 20 E8 */	addi r3, r3, stringBase0@l
 /* 80336A54 00000008  4C C6 31 82 */	crclr 6
 /* 80336A58 0000000C  4B CD 00 65 */	bl OSReport
 lbl_80336A5C:

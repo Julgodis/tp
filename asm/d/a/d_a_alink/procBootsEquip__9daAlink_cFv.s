@@ -19,7 +19,7 @@ lbl_800E30DC:
 /* 800E3120 00000044  48 00 00 DC */	b lbl_800E31FC
 lbl_800E3124:
 /* 800E3124 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800E3128 00000004  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 800E3128 00000004  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 800E312C 00000008  48 24 53 01 */	bl checkPass__12J3DFrameCtrlFf
 /* 800E3130 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 800E3134 00000010  41 82 00 14 */	beq lbl_800E3148
@@ -38,7 +38,7 @@ lbl_800E3148:
 /* 800E3164 0000001C  41 82 00 34 */	beq lbl_800E3198
 /* 800E3168 00000020  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800E316C 00000024  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800E3170 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E3170 00000028  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E3174 0000002C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800E3178 00000030  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800E317C 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -57,7 +57,7 @@ lbl_800E31A8:
 /* 800E31A8 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800E31AC 00000004  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E31B0 00000008  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800E31B4 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800E31B4 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038E804 */
 /* 800E31B8 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E31BC 00000000  40 81 00 20 */	ble lbl_800E31DC
 /* 800E31C0 00000004  80 1E 31 A0 */	lwz r0, 0x31a0(r30)
@@ -68,7 +68,7 @@ lbl_800E31A8:
 /* 800E31D4 00000018  4B FD 6E FD */	bl checkNextAction__9daAlink_cFi
 /* 800E31D8 0000001C  48 00 00 24 */	b lbl_800E31FC
 lbl_800E31DC:
-/* 800E31DC 00000000  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800E31DC 00000000  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800E31E0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E31E4 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800E31E8 00000004  40 82 00 14 */	bne lbl_800E31FC

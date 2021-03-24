@@ -33,7 +33,7 @@ extern "C" static void stateCheckID2(); // 1
 extern "C" static void cbForStateCheckID1(); // 1
 extern "C" static void cbForStateCheckID2(); // 1
 extern "C" static void cbForStateCheckID3(); // 1
-extern "C" static void dvd__AlarmHandler(); // 1
+extern "C" static void AlarmHandler(); // 1
 extern "C" static void stateCoverClosed(); // 1
 extern "C" static void stateCoverClosed_CMD(); // 1
 extern "C" static void cbForStateCoverClosed(); // 1
@@ -126,7 +126,7 @@ extern "C" asm static void defaultOptionalCommandChecker() {
 
 /* ############################################################################################## */
 /* 803D1520-803D1568 0045+03 s=1 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 dvd__lit_1[69 + 3 /* padding */] = {
+SECTION_DATA static u8 lit_1[69 + 3 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -144,7 +144,7 @@ SECTION_DATA static u8 lit_18[10 + 2 /* padding */] = {
 };
 
 /* 804509E8-804509EC 0004+00 s=1 e=0 z=0  None .sdata     __DVDVersion                                                 */
-SECTION_SDATA static void* __DVDVersion = (void*)&dvd__lit_1;
+SECTION_SDATA static void* __DVDVersion = (void*)&lit_1;
 
 /* 80451778-8045177C 0004+00 s=24 e=0 z=0  None .sbss      executing                                                    */
 static u8 executing[4];
@@ -237,7 +237,7 @@ SECTION_SDATA static u8 lit_23[6 + 2 /* padding */] = {
 };
 
 /* 804517C0-804517C8 0004+04 s=6 e=0 z=0  None .sbss      LastState                                                    */
-static u8 dvd__LastState[4 + 4 /* padding */];
+static u8 LastState[4 + 4 /* padding */];
 
 /* 803491C8-8034925C 0094+00 s=1 e=0 z=0  None .text      stateReadingFST                                              */
 #pragma push
@@ -459,9 +459,9 @@ extern "C" asm static void cbForStateCheckID3() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dvd__AlarmHandler() {
+extern "C" asm static void AlarmHandler() {
 	nofralloc
-#include "asm/dolphin/dvd/dvd/dvd__AlarmHandler.s"
+#include "asm/dolphin/dvd/dvd/AlarmHandler.s"
 }
 #pragma pop
 
@@ -534,7 +534,7 @@ extern "C" asm static void stateReady() {
 
 /* ############################################################################################## */
 /* 803D15A8-803D15EC 0044+00 s=1 e=0 z=0  None .data      @359                                                         */
-SECTION_DATA static void* dvd__lit_359[17] = {
+SECTION_DATA static void* lit_359[17] = {
 	/* 0    */ (void*)(((char*)stateBusy)+0x318),
 	/* 1    */ (void*)(((char*)stateBusy)+0x6C),
 	/* 2    */ (void*)(((char*)stateBusy)+0x10C),
@@ -770,7 +770,7 @@ extern "C" asm void DVDGetCurrentDiskID() {
 
 /* ############################################################################################## */
 /* 803D1670-803D16A8 0034+04 s=1 e=0 z=0  None .data      @1060                                                        */
-SECTION_DATA static void* dvd__lit_1060[13 + 1 /* padding */] = {
+SECTION_DATA static void* lit_1060[13 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)DVDCheckDisk)+0x98),
 	/* 1    */ (void*)(((char*)DVDCheckDisk)+0xA0),
 	/* 2    */ (void*)(((char*)DVDCheckDisk)+0x90),

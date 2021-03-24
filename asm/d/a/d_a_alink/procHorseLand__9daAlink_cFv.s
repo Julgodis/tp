@@ -7,7 +7,7 @@ lbl_800F1204:
 /* 800F1218 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800F121C 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800F1220 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800F1224 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)
+/* 800F1224 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)	/* effective address: 8040BF78 */
 /* 800F1228 00000024  4B FF C7 FD */	bl setSyncRidePos__9daAlink_cFv
 /* 800F122C 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 800F1230 0000002C  40 82 00 0C */	bne lbl_800F123C

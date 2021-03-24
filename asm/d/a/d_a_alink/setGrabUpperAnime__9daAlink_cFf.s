@@ -16,18 +16,18 @@ lbl_800E3DBC:
 /* 800E3DF4 00000010  4B FD BF BD */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800E3DF8 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 800E3DFC 00000018  41 82 00 20 */	beq lbl_800E3E1C
-/* 800E3E00 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E3E00 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E3E04 00000020  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E3E08 00000024  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800E3E0C 00000028  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 800E3E0C 00000028  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038E83C */
 /* 800E3E10 0000002C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E3E14 00000030  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800E3E18 00000034  48 00 00 1C */	b lbl_800E3E34
 lbl_800E3E1C:
-/* 800E3E1C 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E3E1C 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E3E20 00000004  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E3E24 00000008  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800E3E28 0000000C  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 800E3E28 0000000C  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038E81C */
 /* 800E3E2C 00000010  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800E3E30 00000014  EF FF 00 32 */	fmuls f31, f31, f0
 lbl_800E3E34:

@@ -113,7 +113,7 @@ lbl_800B7778:
 /* 800B777C 00000004  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 /* 800B7780 00000008  48 00 03 E0 */	b lbl_800B7B60
 lbl_800B7784:
-/* 800B7784 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B7784 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B7788 00000004  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 /* 800B778C 00000008  48 00 03 D4 */	b lbl_800B7B60
 lbl_800B7790:
@@ -181,7 +181,7 @@ lbl_800B784C:
 /* 800B7864 00000018  57 A4 06 3E */	clrlwi r4, r29, 0x18
 /* 800B7868 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B786C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B7870 00000024  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B7870 00000024  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B7874 00000028  7C 04 00 40 */	cmplw r4, r0
 /* 800B7878 0000002C  40 82 00 10 */	bne lbl_800B7888
 /* 800B787C 00000030  88 1F 2F 8D */	lbz r0, 0x2f8d(r31)
@@ -191,7 +191,7 @@ lbl_800B7888:
 /* 800B7888 00000000  57 A4 06 3E */	clrlwi r4, r29, 0x18
 /* 800B788C 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B7890 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B7894 0000000C  88 03 5E 1D */	lbz r0, 0x5e1d(r3)
+/* 800B7894 0000000C  88 03 5E 1D */	lbz r0, 0x5e1d(r3)	/* effective address: 8040BFDD */
 /* 800B7898 00000010  7C 04 00 40 */	cmplw r4, r0
 /* 800B789C 00000014  40 82 02 C4 */	bne lbl_800B7B60
 /* 800B78A0 00000018  7F E3 FB 78 */	mr r3, r31
@@ -235,7 +235,7 @@ lbl_800B78FC:
 lbl_800B7928:
 /* 800B7928 00000000  3C 60 80 39 */	lis r3, m__23daAlinkHIO_damCaught_c0@ha
 /* 800B792C 00000004  38 63 E4 9C */	addi r3, r3, m__23daAlinkHIO_damCaught_c0@l
-/* 800B7930 00000008  A8 63 00 16 */	lha r3, 0x16(r3)
+/* 800B7930 00000008  A8 63 00 16 */	lha r3, 0x16(r3)	/* effective address: 8038E4B2 */
 /* 800B7934 0000000C  A8 1F 30 F6 */	lha r0, 0x30f6(r31)
 /* 800B7938 00000010  7C 03 00 50 */	subf r0, r3, r0
 /* 800B793C 00000014  B0 1F 30 F6 */	sth r0, 0x30f6(r31)
@@ -253,7 +253,7 @@ lbl_800B7940:
 /* 800B7968 0000001C  40 81 00 1C */	ble lbl_800B7984
 /* 800B796C 00000020  3C 60 80 39 */	lis r3, m__23daAlinkHIO_damCaught_c0@ha
 /* 800B7970 00000024  38 63 E4 9C */	addi r3, r3, m__23daAlinkHIO_damCaught_c0@l
-/* 800B7974 00000028  A8 63 00 16 */	lha r3, 0x16(r3)
+/* 800B7974 00000028  A8 63 00 16 */	lha r3, 0x16(r3)	/* effective address: 8038E4B2 */
 /* 800B7978 0000002C  A8 1F 30 F6 */	lha r0, 0x30f6(r31)
 /* 800B797C 00000030  7C 03 00 50 */	subf r0, r3, r0
 /* 800B7980 00000034  B0 1F 30 F6 */	sth r0, 0x30f6(r31)

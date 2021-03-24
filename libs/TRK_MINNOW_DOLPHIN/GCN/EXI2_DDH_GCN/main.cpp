@@ -22,8 +22,8 @@ extern "C" void ddh_cc_close(); // 1
 extern "C" void ddh_cc_open(); // 1
 extern "C" void ddh_cc_shutdown(); // 1
 extern "C" void ddh_cc_initialize(); // 1
-extern "C" extern u8 const GCN_EXI2_DDH_GCN_main__lit_319[41 + 3 /* padding */];
-extern "C" extern u8 const GCN_EXI2_DDH_GCN_main__lit_320[28];
+extern "C" extern u8 const lit_319[41 + 3 /* padding */];
+extern "C" extern u8 const lit_320[28];
 
 // 
 // External References:
@@ -60,10 +60,10 @@ extern "C" asm void ddh_cc_initinterrupts() {
 
 /* ############################################################################################## */
 /* 8044F830-80450030 0800+00 s=1 e=0 z=0  None .bss       gRecvBuf                                                     */
-static u8 GCN_EXI2_DDH_GCN_main__gRecvBuf[2048];
+static u8 gRecvBuf[2048];
 
 /* 80450030-80450050 001C+04 s=3 e=0 z=0  None .bss       gRecvCB                                                      */
-static u8 GCN_EXI2_DDH_GCN_main__gRecvCB[28 + 4 /* padding */];
+static u8 gRecvCB[28 + 4 /* padding */];
 
 /* 80372380-803723F0 0070+00 s=0 e=1 z=0  None .text      ddh_cc_peek                                                  */
 #pragma push
@@ -100,13 +100,13 @@ extern "C" asm void ddh_cc_pre_continue() {
 
 /* ############################################################################################## */
 /* 803A2D10-803A2D24 0014+00 s=1 e=0 z=0  None .rodata    @318                                                         */
-SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_318[20] = {
+SECTION_RODATA static u8 const lit_318[20] = {
 	0x63, 0x63, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A,
 	0x65, 0x64, 0x0A, 0x00,
 };
 
 /* 804519C0-804519C8 0004+04 s=3 e=0 z=0  None .sbss      gIsInitialized                                               */
-static u8 GCN_EXI2_DDH_GCN_main__gIsInitialized[4 + 4 /* padding */];
+static u8 gIsInitialized[4 + 4 /* padding */];
 
 /* 80372438-803724F8 00C0+00 s=0 e=1 z=0  None .text      ddh_cc_write                                                 */
 #pragma push
@@ -121,7 +121,7 @@ extern "C" asm void ddh_cc_write() {
 
 /* ############################################################################################## */
 /* 803A2D24-803A2D50 0029+03 s=0 e=0 z=0  None .rodata    @319                                                         */
-SECTION_RODATA u8 const GCN_EXI2_DDH_GCN_main__lit_319[41 + 3 /* padding */] = {
+SECTION_RODATA u8 const lit_319[41 + 3 /* padding */] = {
 	0x63, 0x63, 0x5F, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x3A, 0x20, 0x4F, 0x75, 0x74, 0x70, 0x75,
 	0x74, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x25, 0x6C,
 	0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,
@@ -130,13 +130,13 @@ SECTION_RODATA u8 const GCN_EXI2_DDH_GCN_main__lit_319[41 + 3 /* padding */] = {
 };
 
 /* 803A2D50-803A2D6C 001C+00 s=0 e=0 z=0  None .rodata    @320                                                         */
-SECTION_RODATA u8 const GCN_EXI2_DDH_GCN_main__lit_320[28] = {
+SECTION_RODATA u8 const lit_320[28] = {
 	0x63, 0x63, 0x5F, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x73, 0x65, 0x6E, 0x64, 0x69, 0x6E, 0x67,
 	0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,
 };
 
 /* 803A2D6C-803A2D94 0025+03 s=1 e=0 z=0  None .rodata    @342                                                         */
-SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_342[37 + 3 /* padding */] = {
+SECTION_RODATA static u8 const lit_342[37 + 3 /* padding */] = {
 	0x45, 0x78, 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x70, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20,
 	0x73, 0x69, 0x7A, 0x65, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x28, 0x25,
 	0x6C, 0x64, 0x29, 0x0A, 0x00,
@@ -145,7 +145,7 @@ SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_342[37 + 3 /* padding 
 };
 
 /* 803A2D94-803A2DC4 002D+03 s=1 e=0 z=0  None .rodata    @343                                                         */
-SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_343[45 + 3 /* padding */] = {
+SECTION_RODATA static u8 const lit_343[45 + 3 /* padding */] = {
 	0x63, 0x63, 0x5F, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3A, 0x20, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x20,
 	0x72, 0x65, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x20, 0x66, 0x72,
 	0x6F, 0x6D, 0x20, 0x45, 0x58, 0x49, 0x32, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
@@ -199,7 +199,7 @@ extern "C" asm void ddh_cc_shutdown() {
 
 /* ############################################################################################## */
 /* 803A2DC4-803A2DD8 0013+01 s=1 e=0 z=0  None .rodata    @349                                                         */
-SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_349[19 + 1 /* padding */] = {
+SECTION_RODATA static u8 const lit_349[19 + 1 /* padding */] = {
 	0x43, 0x41, 0x4C, 0x4C, 0x49, 0x4E, 0x47, 0x20, 0x45, 0x58, 0x49, 0x32, 0x5F, 0x49, 0x6E, 0x69,
 	0x74, 0x0A, 0x00,
 	/* padding */
@@ -207,7 +207,7 @@ SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_349[19 + 1 /* padding 
 };
 
 /* 803A2DD8-803A2DF0 0018+00 s=1 e=0 z=0  None .rodata    @350                                                         */
-SECTION_RODATA static u8 const GCN_EXI2_DDH_GCN_main__lit_350[24] = {
+SECTION_RODATA static u8 const lit_350[24] = {
 	0x44, 0x4F, 0x4E, 0x45, 0x20, 0x43, 0x41, 0x4C, 0x4C, 0x49, 0x4E, 0x47, 0x20, 0x45, 0x58, 0x49,
 	0x32, 0x5F, 0x49, 0x6E, 0x69, 0x74, 0x0A, 0x00,
 };

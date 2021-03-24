@@ -26,7 +26,7 @@ lbl_80109224:
 lbl_80109240:
 /* 80109240 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 80109244 00000004  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 80109248 00000008  C0 23 00 40 */	lfs f1, 0x40(r3)
+/* 80109248 00000008  C0 23 00 40 */	lfs f1, 0x40(r3)	/* effective address: 8038EA00 */
 lbl_8010924C:
 /* 8010924C 00000000  7F A3 EB 78 */	mr r3, r29
 /* 80109250 00000004  38 80 01 8D */	li r4, 0x18d

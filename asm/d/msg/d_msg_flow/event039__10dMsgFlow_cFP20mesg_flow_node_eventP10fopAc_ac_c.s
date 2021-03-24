@@ -6,7 +6,7 @@ lbl_8024D93C:
 /* 8024D94C 00000010  4B FF D7 E5 */	bl getParam__10dMsgFlow_cFPUc
 /* 8024D950 00000014  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8024D954 00000018  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 8024D958 0000001C  98 64 00 E1 */	stb r3, 0xe1(r4)
+/* 8024D958 0000001C  98 64 00 E1 */	stb r3, 0xe1(r4)	/* effective address: 80430269 */
 /* 8024D95C 00000020  38 60 00 01 */	li r3, 1
 /* 8024D960 00000024  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8024D964 00000028  7C 08 03 A6 */	mtlr r0

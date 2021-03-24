@@ -37,8 +37,8 @@ lbl_801C529C:
 /* 801C52AC 00000010  7F 83 E3 78 */	mr r3, r28
 /* 801C52B0 00000014  88 1C 01 FB */	lbz r0, 0x1fb(r28)
 /* 801C52B4 00000018  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C52B8 0000001C  3C 80 80 3C */	lis r4, d_menu_d_menu_fishing__map_init_process@ha
-/* 801C52BC 00000020  38 04 D0 50 */	addi r0, r4, d_menu_d_menu_fishing__map_init_process@l
+/* 801C52B8 0000001C  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801C52BC 00000020  38 04 D0 50 */	addi r0, r4, map_init_process@l
 /* 801C52C0 00000024  7D 80 2A 14 */	add r12, r0, r5
 /* 801C52C4 00000028  48 19 CD C1 */	bl __ptmf_scall
 /* 801C52C8 0000002C  60 00 00 00 */	nop 

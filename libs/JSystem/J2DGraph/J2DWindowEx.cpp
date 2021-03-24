@@ -11,43 +11,42 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
+struct J2DTevStage {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
+struct J2DWindow {
+	struct TMaterial {
+	};
 
-struct _GXCullMode {
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ void getTypeID() const;
 };
 
 struct ResTIMG {
 };
 
-struct J2DAnmTexPattern {
+struct JSUStreamSeekFrom {
 };
 
-struct J2DAnmTextureSRTKey {
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmColor {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct J2DTevStage {
-};
-
-struct J2DAnmTransform {
+struct _GXCullMode {
 };
 
 struct J2DAnmBase {
+};
+
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct JGeometry {
@@ -62,19 +61,11 @@ struct JGeometry {
 struct ResFONT {
 };
 
-struct JSUStreamSeekFrom {
+struct J2DAnmTransform {
 };
 
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -103,21 +94,30 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct J2DWindow {
-	struct TMaterial {
-	};
-
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ void getTypeID() const;
 };
 
 struct J2DWindowEx {
@@ -220,14 +220,14 @@ extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor(); // 1
 extern "C" extern u8 const lit_1557[16];
 extern "C" extern u8 const lit_1566[16];
 extern "C" extern u8 const lit_1575[16];
-extern "C" extern u8 const J2DWindowEx__lit_1581[16];
+extern "C" extern u8 const lit_1581[16];
 extern "C" extern u8 const lit_1587[16];
 extern "C" extern u8 const lit_1596[16];
 extern "C" extern u8 const lit_1605[16];
 extern "C" extern u8 const lit_1612[16];
 extern "C" extern u8 const lit_2530[24];
 extern "C" extern u8 const lit_2531[24];
-extern "C" extern u8 const J2DWindowEx__lit_2532[30 + 2 /* padding */];
+extern "C" extern u8 const lit_2532[30 + 2 /* padding */];
 
 // 
 // External References:
@@ -437,10 +437,10 @@ SECTION_SDATA2 static u8 lit_1827[4] = {
 };
 
 /* 804562B4-804562B8 0004+00 s=1 e=0 z=0  None .sdata2    @2256                                                        */
-SECTION_SDATA2 static f32 J2DWindowEx__lit_2256 = 1.0f;
+SECTION_SDATA2 static f32 lit_2256 = 1.0f;
 
 /* 804562B8-804562C0 0004+04 s=1 e=0 z=0  None .sdata2    @2257                                                        */
-SECTION_SDATA2 static f32 J2DWindowEx__lit_2257[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_2257[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
@@ -760,7 +760,7 @@ SECTION_RODATA u8 const lit_1575[16] = {
 };
 
 /* 803A1CA0-803A1CB0 0010+00 s=0 e=0 z=0  None .rodata    @1581                                                        */
-SECTION_RODATA u8 const J2DWindowEx__lit_1581[16] = {
+SECTION_RODATA u8 const lit_1581[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -797,7 +797,7 @@ SECTION_RODATA u8 const lit_2531[24] = {
 };
 
 /* 803A1D20-803A1D40 001E+02 s=0 e=0 z=0  None .rodata    @2532                                                        */
-SECTION_RODATA u8 const J2DWindowEx__lit_2532[30 + 2 /* padding */] = {
+SECTION_RODATA u8 const lit_2532[30 + 2 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */

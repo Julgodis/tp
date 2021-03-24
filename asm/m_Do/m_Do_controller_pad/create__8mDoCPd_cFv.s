@@ -25,7 +25,7 @@ lbl_8000797C:
 lbl_800079AC:
 /* 800079AC 00000000  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 800079B0 00000004  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 800079B4 00000008  90 03 00 04 */	stw r0, 4(r3)
+/* 800079B4 00000008  90 03 00 04 */	stw r0, 4(r3)	/* effective address: 803DD2DC */
 /* 800079B8 0000000C  38 60 00 B0 */	li r3, 0xb0
 /* 800079BC 00000010  48 2C 72 91 */	bl __nw__FUl
 /* 800079C0 00000014  7C 60 1B 79 */	or. r0, r3, r3
@@ -36,7 +36,7 @@ lbl_800079AC:
 lbl_800079D4:
 /* 800079D4 00000000  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 800079D8 00000004  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 800079DC 00000008  90 03 00 08 */	stw r0, 8(r3)
+/* 800079DC 00000008  90 03 00 08 */	stw r0, 8(r3)	/* effective address: 803DD2E0 */
 /* 800079E0 0000000C  38 60 00 B0 */	li r3, 0xb0
 /* 800079E4 00000010  48 2C 72 69 */	bl __nw__FUl
 /* 800079E8 00000014  7C 60 1B 79 */	or. r0, r3, r3
@@ -47,7 +47,7 @@ lbl_800079D4:
 lbl_800079FC:
 /* 800079FC 00000000  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 80007A00 00000004  38 63 D2 D8 */	addi r3, r3, m_gamePad__8mDoCPd_c@l
-/* 80007A04 00000008  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80007A04 00000008  90 03 00 0C */	stw r0, 0xc(r3)	/* effective address: 803DD2E4 */
 /* 80007A08 0000000C  48 00 00 14 */	b lbl_80007A1C
 lbl_80007A0C:
 /* 80007A0C 00000000  38 00 00 00 */	li r0, 0

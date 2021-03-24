@@ -41,10 +41,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -82,9 +82,7 @@ extern "C" void __dt__19dDlst_BrightCheck_cFv(); // 1
 extern "C" extern u8 const data_80394938[40];
 extern "C" extern u8 const data_80394960[80];
 extern "C" extern u8 const data_803949B0[40];
-extern "C" extern char const* const d_d_bright_check__stringBase0;
-extern "C" extern void* d_d_bright_check__lit_3797[3];
-extern "C" extern void* d_d_bright_check__lit_3798[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -121,25 +119,25 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803BB5B0-803BB5BC 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_d_bright_check__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB5BC-803BB5C8 000C+00 s=0 e=0 z=0  None .data      @3797                                                        */
-SECTION_DATA void* d_d_bright_check__lit_3797[3] = {
+/* 803BB5BC-803BB5C8 000C+00 s=1 e=0 z=0  None .data      @3797                                                        */
+SECTION_DATA static void* lit_3797[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeWait__14dBrightCheck_cFv,
 };
 
-/* 803BB5C8-803BB5D4 000C+00 s=0 e=0 z=0  None .data      @3798                                                        */
-SECTION_DATA void* d_d_bright_check__lit_3798[3] = {
+/* 803BB5C8-803BB5D4 000C+00 s=1 e=0 z=0  None .data      @3798                                                        */
+SECTION_DATA static void* lit_3798[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeMove__14dBrightCheck_cFv,
 };
 
-/* 803BB5D4-803BB5EC 0018+00 s=1 e=0 z=0  None .data      brightChackProc                                              */
+/* 803BB5D4-803BB5EC 0018+00 s=2 e=0 z=0  None .data      brightChackProc                                              */
 SECTION_DATA static u8 brightChackProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -227,7 +225,7 @@ SECTION_DEAD char const* const stringBase_803949EF = "";
 #pragma pop
 
 /* 80453A00-80453A04 0004+00 s=2 e=0 z=0  None .sdata2    @3792                                                        */
-SECTION_SDATA2 static u8 d_d_bright_check__lit_3792[4] = {
+SECTION_SDATA2 static u8 lit_3792[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -266,10 +264,10 @@ asm void dBrightCheck_c::modeWait() {
 
 /* ############################################################################################## */
 /* 80453A04-80453A08 0004+00 s=1 e=0 z=0  None .sdata2    @3821                                                        */
-SECTION_SDATA2 static f32 d_d_bright_check__lit_3821 = 1.0f;
+SECTION_SDATA2 static f32 lit_3821 = 1.0f;
 
 /* 80453A08-80453A10 0004+04 s=1 e=0 z=0  None .sdata2    @3822                                                        */
-SECTION_SDATA2 static f32 d_d_bright_check__lit_3822[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3822[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,

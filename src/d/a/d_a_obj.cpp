@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
+struct Quaternion {
+};
+
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -20,17 +31,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
-};
-
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-};
-
-struct fopAc_ac_c {
-};
-
-struct Quaternion {
 };
 
 struct daObj {
@@ -60,26 +60,26 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct J3DModelData {
+struct JPABaseEmitter {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct JPABaseEmitter {
+struct J3DModelData {
 };
 
 struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -119,7 +119,7 @@ extern "C" void quat_rotBaseY__5daObjFP10QuaternionRC4cXyz(); // 1
 extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl(); // 1
 extern "C" void GetCoCP__12cCcD_CylAttrFv(); // 1
 extern "C" void GetCoCP__12cCcD_SphAttrFv(); // 1
-extern "C" extern char const* const d_a_d_a_obj__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -163,6 +163,7 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void acos(); // 1
+extern "C" extern void* const font_data[18584];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mTsubo__13dPa_control_c[64];
 extern "C" extern f32 Zero__4cXyz[3];
@@ -207,7 +208,7 @@ asm void daObj::eff_break_tsubo(fopAc_ac_c* param_0, cXyz param_1, int param_2) 
 
 /* ############################################################################################## */
 /* 804245E8-804245F4 000C+00 s=1 e=0 z=0  None .bss       @3677                                                        */
-static u8 d_a_d_a_obj__lit_3677[12];
+static u8 lit_3677[12];
 
 /* 804245F4-80424600 000C+00 s=1 e=0 z=0  None .bss       scale$3676                                                   */
 static f32 data_804245F4[3];
@@ -225,7 +226,7 @@ asm void daObj::make_eff_break_kotubo(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80424600-8042460C 000C+00 s=1 e=0 z=0  None .bss       @3692                                                        */
-static u8 d_a_d_a_obj__lit_3692[12];
+static u8 lit_3692[12];
 
 /* 8042460C-80424618 000C+00 s=1 e=0 z=0  None .bss       scale$3691                                                   */
 static f32 data_8042460C[3];
@@ -243,7 +244,7 @@ asm void daObj::make_eff_break_kotubo2(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80424618-80424624 000C+00 s=1 e=0 z=0  None .bss       @3719                                                        */
-static u8 d_a_d_a_obj__lit_3719[12];
+static u8 lit_3719[12];
 
 /* 80424624-80424630 000C+00 s=1 e=0 z=0  None .bss       scale$3718                                                   */
 static f32 data_80424624[3];
@@ -261,13 +262,13 @@ asm void daObj::make_eff_break_gm_kotubo(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80424630-8042463C 000C+00 s=1 e=0 z=0  None .bss       @3732                                                        */
-static u8 d_a_d_a_obj__lit_3732[12];
+static u8 lit_3732[12];
 
 /* 8042463C-80424648 000C+00 s=1 e=0 z=0  None .bss       scale$3731                                                   */
 static f32 data_8042463C[3];
 
 /* 80451D9C-80451DA0 0004+00 s=1 e=0 z=0  None .sdata2    @3714                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_obj__lit_3714 = 2.0f;
+SECTION_SDATA2 static f32 lit_3714 = 2.0f;
 
 /* 80037330-800373C0 0090+00 s=0 e=0 z=0  None .text      make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c               */
 #pragma push
@@ -282,7 +283,7 @@ asm void daObj::make_eff_break_gm_ootubo(fopAc_ac_c* param_0) {
 
 /* ############################################################################################## */
 /* 80451DA0-80451DA4 0004+00 s=4 e=0 z=0  None .sdata2    @3801                                                        */
-SECTION_SDATA2 static u8 d_a_d_a_obj__lit_3801[4] = {
+SECTION_SDATA2 static u8 lit_3801[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -299,7 +300,7 @@ asm void daObj::posMoveF_stream(fopAc_ac_c* param_0, cXyz const* param_1, cXyz c
 
 /* ############################################################################################## */
 /* 80451DA4-80451DA8 0004+00 s=2 e=0 z=0  None .sdata2    @3836                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_obj__lit_3836 = -1.0f;
+SECTION_SDATA2 static f32 lit_3836 = -1.0f;
 
 /* 800373F0-800374EC 00FC+00 s=1 e=0 z=0  None .text      posMoveF_resist_acc__Q25daObj21@unnamed@d_a_obj_cpp@FP4cXyzPC10fopAc_ac_cPC4cXyzff */
 #pragma push
@@ -336,7 +337,7 @@ asm void daObj::posMoveF_grade(fopAc_ac_c* param_0, cXyz const* param_1, cXyz co
 
 /* ############################################################################################## */
 /* 80451DA8-80451DB0 0004+04 s=1 e=0 z=0  None .sdata2    @3956                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_obj__lit_3956[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3956[1 + 1 /* padding */] = {
 	9.99999905104687e-09f,
 	/* padding */
 	0.0f,

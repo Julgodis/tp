@@ -137,9 +137,10 @@ def execute_tasks(process_count: int,
         try:
             input.put((i, task))
         except:
-            g.LOG.error(task)
-            g.CONSOLE.print_exception()
-            sys.exit(1)
+            get_console().print_exception()
+            error(i)
+            error(task)
+            fatal_exit()
 
     # create the processes
     processors = [

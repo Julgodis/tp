@@ -18,7 +18,7 @@ lbl_800A7ABC:
 /* 800A7AFC 00000040  38 61 00 18 */	addi r3, r1, 0x18
 /* 800A7B00 00000044  3C A0 80 39 */	lis r5, m__19daAlinkHIO_basic_c0@ha
 /* 800A7B04 00000048  3B E5 D6 64 */	addi r31, r5, m__19daAlinkHIO_basic_c0@l
-/* 800A7B08 0000004C  C0 3F 00 2C */	lfs f1, 0x2c(r31)
+/* 800A7B08 0000004C  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 8038D690 */
 /* 800A7B0C 00000050  48 1B F0 79 */	bl __ml__4cXyzCFf
 /* 800A7B10 00000054  38 61 00 0C */	addi r3, r1, 0xc
 /* 800A7B14 00000058  38 81 00 30 */	addi r4, r1, 0x30
@@ -50,7 +50,7 @@ lbl_800A7ABC:
 /* 800A7B7C 000000C0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800A7B80 00000000  40 81 00 58 */	ble lbl_800A7BD8
 /* 800A7B84 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800A7B88 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800A7B88 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800A7B8C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800A7B90 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800A7B94 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -114,8 +114,8 @@ lbl_800A7C4C:
 lbl_800A7C5C:
 /* 800A7C5C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 800A7C60 00000004  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 800A7C64 00000008  C0 63 00 30 */	lfs f3, 0x30(r3)
-/* 800A7C68 0000000C  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800A7C64 00000008  C0 63 00 30 */	lfs f3, 0x30(r3)	/* effective address: 8038D694 */
+/* 800A7C68 0000000C  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800A7C6C 00000010  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 800A7C70 00000014  EC 00 18 28 */	fsubs f0, f0, f3
 /* 800A7C74 00000018  EC 42 00 24 */	fdivs f2, f2, f0
@@ -127,7 +127,7 @@ lbl_800A7C5C:
 /* 800A7C8C 00000004  FC 20 00 90 */	fmr f1, f0
 /* 800A7C90 00000008  48 00 00 08 */	b lbl_800A7C98
 lbl_800A7C94:
-/* 800A7C94 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800A7C94 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 lbl_800A7C98:
 /* 800A7C98 00000000  83 E1 00 4C */	lwz r31, 0x4c(r1)
 /* 800A7C9C 00000004  83 C1 00 48 */	lwz r30, 0x48(r1)

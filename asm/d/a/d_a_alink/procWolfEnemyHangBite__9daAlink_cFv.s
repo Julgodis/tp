@@ -33,7 +33,7 @@ lbl_8013CE28:
 /* 8013CE64 0000003C  B0 1D 30 0E */	sth r0, 0x300e(r29)
 /* 8013CE68 00000040  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtBite_c0@ha
 /* 8013CE6C 00000044  38 63 F7 48 */	addi r3, r3, m__22daAlinkHIO_wlAtBite_c0@l
-/* 8013CE70 00000048  A8 03 00 28 */	lha r0, 0x28(r3)
+/* 8013CE70 00000048  A8 03 00 28 */	lha r0, 0x28(r3)	/* effective address: 8038F770 */
 /* 8013CE74 0000004C  B0 1D 30 08 */	sth r0, 0x3008(r29)
 /* 8013CE78 00000050  48 00 00 18 */	b lbl_8013CE90
 lbl_8013CE7C:
@@ -84,16 +84,16 @@ lbl_8013CF10:
 /* 8013CF1C 0000000C  38 7D 34 78 */	addi r3, r29, 0x3478
 /* 8013CF20 00000010  3C 80 80 39 */	lis r4, m__22daAlinkHIO_wlAtBite_c0@ha
 /* 8013CF24 00000014  38 84 F7 48 */	addi r4, r4, m__22daAlinkHIO_wlAtBite_c0@l
-/* 8013CF28 00000018  C0 24 00 48 */	lfs f1, 0x48(r4)
-/* 8013CF2C 0000001C  C0 44 00 50 */	lfs f2, 0x50(r4)
+/* 8013CF28 00000018  C0 24 00 48 */	lfs f1, 0x48(r4)	/* effective address: 8038F790 */
+/* 8013CF2C 0000001C  C0 44 00 50 */	lfs f2, 0x50(r4)	/* effective address: 8038F798 */
 /* 8013CF30 00000020  48 13 38 11 */	bl cLib_chaseF__FPfff
 /* 8013CF34 00000024  48 00 00 1C */	b lbl_8013CF50
 lbl_8013CF38:
 /* 8013CF38 00000000  38 7D 34 78 */	addi r3, r29, 0x3478
 /* 8013CF3C 00000004  3C 80 80 39 */	lis r4, m__22daAlinkHIO_wlAtBite_c0@ha
 /* 8013CF40 00000008  38 84 F7 48 */	addi r4, r4, m__22daAlinkHIO_wlAtBite_c0@l
-/* 8013CF44 0000000C  C0 24 00 40 */	lfs f1, 0x40(r4)
-/* 8013CF48 00000010  C0 44 00 58 */	lfs f2, 0x58(r4)
+/* 8013CF44 0000000C  C0 24 00 40 */	lfs f1, 0x40(r4)	/* effective address: 8038F788 */
+/* 8013CF48 00000010  C0 44 00 58 */	lfs f2, 0x58(r4)	/* effective address: 8038F7A0 */
 /* 8013CF4C 00000014  48 13 37 F5 */	bl cLib_chaseF__FPfff
 lbl_8013CF50:
 /* 8013CF50 00000000  C0 3F 00 0C */	lfs f1, 0xc(r31)

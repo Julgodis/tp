@@ -14,10 +14,10 @@
 struct dMdl_obj_c {
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
 struct dMdl_c {
@@ -109,7 +109,7 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
 /* ############################################################################################## */
 /* 80456B70-80456B78 0004+04 s=1 e=0 z=0  None .sbss2     @3621                                                        */
-SECTION_SBSS2 static u8 d_d_model__lit_3621[4 + 4 /* padding */];
+SECTION_SBSS2 static u8 lit_3621[4 + 4 /* padding */];
 
 /* 8009C4FC-8009C650 0154+00 s=1 e=0 z=0  None .text      draw__6dMdl_cFv                                              */
 #pragma push

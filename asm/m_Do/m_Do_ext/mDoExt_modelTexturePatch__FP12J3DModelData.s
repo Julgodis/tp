@@ -8,7 +8,7 @@ lbl_8000DB10:
 /* 8000DB28 00000018  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 8000DB2C 0000001C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8000DB30 00000020  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8000DB34 00000024  90 03 00 58 */	stw r0, 0x58(r3)
+/* 8000DB34 00000024  90 03 00 58 */	stw r0, 0x58(r3)	/* effective address: 80434B20 */
 /* 8000DB38 00000028  3B 80 00 00 */	li r28, 0
 /* 8000DB3C 0000002C  3C 60 80 43 */	lis r3, sGDLObj__17J3DDisplayListObj@ha
 /* 8000DB40 00000030  3B E3 4C 70 */	addi r31, r3, sGDLObj__17J3DDisplayListObj@l

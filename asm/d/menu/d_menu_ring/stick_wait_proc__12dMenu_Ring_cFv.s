@@ -31,7 +31,7 @@ lbl_801ED380:
 /* 801ED388 00000008  41 82 00 60 */	beq lbl_801ED3E8
 /* 801ED38C 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801ED390 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801ED394 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)
+/* 801ED394 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801ED398 00000018  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 801ED39C 0000001C  40 82 00 4C */	bne lbl_801ED3E8
 /* 801ED3A0 00000020  7F E3 FB 78 */	mr r3, r31
@@ -42,7 +42,7 @@ lbl_801ED380:
 /* 801ED3B4 00000034  38 00 00 01 */	li r0, 1
 /* 801ED3B8 00000038  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801ED3BC 0000003C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801ED3C0 00000040  98 03 00 E8 */	stb r0, 0xe8(r3)
+/* 801ED3C0 00000040  98 03 00 E8 */	stb r0, 0xe8(r3)	/* effective address: 80430270 */
 /* 801ED3C4 00000044  88 1F 06 A8 */	lbz r0, 0x6a8(r31)
 /* 801ED3C8 00000048  98 1F 06 C4 */	stb r0, 0x6c4(r31)
 /* 801ED3CC 0000004C  38 00 00 02 */	li r0, 2
@@ -58,7 +58,7 @@ lbl_801ED3E8:
 /* 801ED3F0 00000008  41 82 00 4C */	beq lbl_801ED43C
 /* 801ED3F4 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801ED3F8 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801ED3FC 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)
+/* 801ED3FC 00000014  A0 03 00 B2 */	lhz r0, 0xb2(r3)	/* effective address: 8043023A */
 /* 801ED400 00000018  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 801ED404 0000001C  40 82 00 38 */	bne lbl_801ED43C
 /* 801ED408 00000020  38 00 00 4A */	li r0, 0x4a
@@ -68,9 +68,9 @@ lbl_801ED3E8:
 /* 801ED418 00000030  38 A0 00 00 */	li r5, 0
 /* 801ED41C 00000034  38 C0 00 00 */	li r6, 0
 /* 801ED420 00000038  38 E0 00 00 */	li r7, 0
-/* 801ED424 0000003C  C0 22 A9 9C */	lfs f1, d_menu_d_menu_ring__lit_4305(r2)
+/* 801ED424 0000003C  C0 22 A9 9C */	lfs f1, lit_4305(r2)
 /* 801ED428 00000040  FC 40 08 90 */	fmr f2, f1
-/* 801ED42C 00000044  C0 62 A9 C0 */	lfs f3, d_menu_d_menu_ring__lit_4465(r2)
+/* 801ED42C 00000044  C0 62 A9 C0 */	lfs f3, lit_4465(r2)
 /* 801ED430 00000048  FC 80 18 90 */	fmr f4, f3
 /* 801ED434 0000004C  39 00 00 00 */	li r8, 0
 /* 801ED438 00000050  48 0B E5 4D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

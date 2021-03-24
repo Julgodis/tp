@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct dPa_YkgrPcallBack {

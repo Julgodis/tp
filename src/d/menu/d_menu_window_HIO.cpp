@@ -44,7 +44,7 @@ extern "C" void __dt__10dMw_DHIO_cFv(); // 1
 extern "C" void __dt__9dMw_HIO_cFv(); // 1
 extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
 extern "C" extern u8 g_mwHIO[304];
-extern "C" extern u8 d_menu_d_menu_window_HIO__lit_3774[12];
+extern "C" extern u8 lit_3774[12];
 extern "C" extern u8 g_mwDHIO[520];
 
 // 
@@ -189,7 +189,7 @@ asm dMw_HIO_c::~dMw_HIO_c() {
 
 /* ############################################################################################## */
 /* 8042E860-8042E86C 000C+00 s=1 e=0 z=0  None .bss       @3773                                                        */
-static u8 d_menu_d_menu_window_HIO__lit_3773[12];
+static u8 lit_3773[12];
 
 /* 801F9F28-801F9F84 005C+00 s=0 e=1 z=0  None .text      __sinit_d_menu_window_HIO_cpp                                */
 #pragma push
@@ -207,7 +207,7 @@ extern "C" asm void __sinit_d_menu_window_HIO_cpp() {
 u8 g_mwHIO[304];
 
 /* 8042E99C-8042E9A8 000C+00 s=0 e=0 z=0  None .bss       @3774                                                        */
-u8 d_menu_d_menu_window_HIO__lit_3774[12];
+u8 lit_3774[12];
 
 /* 8042E9A8-8042EBB0 0208+00 s=0 e=1 z=0  None .bss       g_mwDHIO                                                     */
 u8 g_mwDHIO[520];

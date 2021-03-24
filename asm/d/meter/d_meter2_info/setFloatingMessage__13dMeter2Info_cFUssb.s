@@ -1,7 +1,7 @@
 lbl_8021C0E0:
 /* 8021C0E0 00000000  3C E0 80 40 */	lis r7, g_dComIfG_gameInfo@ha
 /* 8021C0E4 00000004  38 E7 61 C0 */	addi r7, r7, g_dComIfG_gameInfo@l
-/* 8021C0E8 00000008  88 07 4F AD */	lbz r0, 0x4fad(r7)
+/* 8021C0E8 00000008  88 07 4F AD */	lbz r0, 0x4fad(r7)	/* effective address: 8040B16D */
 /* 8021C0EC 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8021C0F0 00000010  41 82 00 0C */	beq lbl_8021C0FC
 /* 8021C0F4 00000014  38 60 00 00 */	li r3, 0

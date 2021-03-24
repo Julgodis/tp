@@ -11,8 +11,8 @@ lbl_80019CB8:
 /* 80019CDC 00000024  7C 60 1B 78 */	mr r0, r3
 /* 80019CE0 00000028  7C 1F 03 79 */	or. r31, r0, r0
 /* 80019CE4 0000002C  41 82 00 1C */	beq lbl_80019D00
-/* 80019CE8 00000030  3C 80 80 38 */	lis r4, f_op_f_op_actor_mng__stringBase0@ha
-/* 80019CEC 00000034  38 84 88 C8 */	addi r4, r4, f_op_f_op_actor_mng__stringBase0@l
+/* 80019CE8 00000030  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80019CEC 00000034  38 84 88 C8 */	addi r4, r4, stringBase0@l
 /* 80019CF0 00000038  4B FF FF 89 */	bl fopAcM_Log__FPC10fopAc_ac_cPCc
 /* 80019CF4 0000003C  7F E3 FB 78 */	mr r3, r31
 /* 80019CF8 00000040  48 00 84 21 */	bl fpcM_Delete__FPv

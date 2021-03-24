@@ -10,7 +10,7 @@ lbl_801D2B64:
 /* 801D2B84 0000000C  7C 9F 23 78 */	mr r31, r4
 /* 801D2B88 00000010  3C 80 80 43 */	lis r4, g_fmapHIO@ha
 /* 801D2B8C 00000014  38 84 FC 60 */	addi r4, r4, g_fmapHIO@l
-/* 801D2B90 00000018  88 04 03 08 */	lbz r0, 0x308(r4)
+/* 801D2B90 00000018  88 04 03 08 */	lbz r0, 0x308(r4)	/* effective address: 8042FF68 */
 /* 801D2B94 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 801D2B98 00000020  40 82 00 30 */	bne lbl_801D2BC8
 /* 801D2B9C 00000024  4B FF FB 7D */	bl getMapAreaSizeX__18dMenu_Fmap2DBack_cFv

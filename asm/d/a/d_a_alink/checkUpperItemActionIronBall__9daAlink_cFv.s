@@ -42,8 +42,8 @@ lbl_801152CC:
 /* 801152EC 00000020  38 80 01 63 */	li r4, 0x163
 /* 801152F0 00000024  3C A0 80 39 */	lis r5, m__22daAlinkHIO_ironBall_c0@ha
 /* 801152F4 00000028  38 A5 EA 70 */	addi r5, r5, m__22daAlinkHIO_ironBall_c0@l
-/* 801152F8 0000002C  C0 25 00 24 */	lfs f1, 0x24(r5)
-/* 801152FC 00000030  C0 45 00 28 */	lfs f2, 0x28(r5)
+/* 801152F8 0000002C  C0 25 00 24 */	lfs f1, 0x24(r5)	/* effective address: 8038EA94 */
+/* 801152FC 00000030  C0 45 00 28 */	lfs f2, 0x28(r5)	/* effective address: 8038EA98 */
 /* 80115300 00000034  4B F9 7C E1 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_80115304:
 /* 80115304 00000000  7F E3 FB 78 */	mr r3, r31
@@ -53,8 +53,8 @@ lbl_80115304:
 /* 80115314 00000010  7F E3 FB 78 */	mr r3, r31
 /* 80115318 00000014  3C A0 80 39 */	lis r5, m__22daAlinkHIO_ironBall_c0@ha
 /* 8011531C 00000018  38 A5 EA 70 */	addi r5, r5, m__22daAlinkHIO_ironBall_c0@l
-/* 80115320 0000001C  C0 25 00 24 */	lfs f1, 0x24(r5)
-/* 80115324 00000020  C0 45 00 28 */	lfs f2, 0x28(r5)
+/* 80115320 0000001C  C0 25 00 24 */	lfs f1, 0x24(r5)	/* effective address: 8038EA94 */
+/* 80115324 00000020  C0 45 00 28 */	lfs f2, 0x28(r5)	/* effective address: 8038EA98 */
 /* 80115328 00000024  4B F9 80 81 */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
 /* 8011532C 00000028  38 00 00 02 */	li r0, 2
 /* 80115330 0000002C  B0 1F 30 18 */	sth r0, 0x3018(r31)

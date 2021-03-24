@@ -21,7 +21,9 @@ struct cXyz {
 };
 
 struct daL7ODR_c {
+	/* 805AB098 */ void setAction(void (daL7ODR_c::*)());
 	/* 805AB13C */ void action();
+	/* 805AB164 */ void setDrAction(void (daL7ODR_c::*)());
 	/* 805AB208 */ void dr_action();
 	/* 805AB230 */ void mtx_set();
 	/* 805AB2E8 */ void draw();
@@ -68,9 +70,9 @@ void daL7ODR_Delete(daL7ODR_c*); // 2
 void useHeapInit(fopAc_ac_c*); // 2
 void daL7ODR_Create(daL7ODR_c*); // 2
 
-extern "C" static void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
+extern "C" void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
 extern "C" void action__9daL7ODR_cFv(); // 1
-extern "C" static void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
+extern "C" void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v(); // 1
 extern "C" void dr_action__9daL7ODR_cFv(); // 1
 extern "C" void mtx_set__9daL7ODR_cFv(); // 1
 extern "C" void draw__9daL7ODR_cFv(); // 1
@@ -209,7 +211,7 @@ extern "C" void _unresolved(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v() {
+asm void daL7ODR_c::setAction(void (daL7ODR_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v.s"
 }
@@ -231,7 +233,7 @@ asm void daL7ODR_c::action() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v() {
+asm void daL7ODR_c::setDrAction(void (daL7ODR_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v.s"
 }

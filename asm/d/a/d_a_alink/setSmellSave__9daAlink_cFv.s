@@ -6,7 +6,7 @@ lbl_8013F90C:
 /* 8013F91C 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8013F920 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013F924 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013F928 0000001C  88 03 00 16 */	lbz r0, 0x16(r3)
+/* 8013F928 0000001C  88 03 00 16 */	lbz r0, 0x16(r3)	/* effective address: 804061D6 */
 /* 8013F92C 00000020  28 00 00 B5 */	cmplwi r0, 0xb5
 /* 8013F930 00000024  40 82 00 10 */	bne lbl_8013F940
 /* 8013F934 00000028  38 63 07 F0 */	addi r3, r3, 0x7f0

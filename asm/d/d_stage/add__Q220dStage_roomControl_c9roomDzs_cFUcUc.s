@@ -17,8 +17,8 @@ lbl_80024B70:
 /* 80024B7C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80024B80 00000010  40 82 00 80 */	bne lbl_80024C00
 /* 80024B84 00000014  38 61 00 08 */	addi r3, r1, 8
-/* 80024B88 00000018  3C 80 80 38 */	lis r4, d_d_stage__stringBase0@ha
-/* 80024B8C 0000001C  38 84 8A 50 */	addi r4, r4, d_d_stage__stringBase0@l
+/* 80024B88 00000018  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80024B8C 0000001C  38 84 8A 50 */	addi r4, r4, stringBase0@l
 /* 80024B90 00000020  38 84 00 C6 */	addi r4, r4, 0xc6
 /* 80024B94 00000024  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 80024B98 00000028  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
@@ -28,7 +28,7 @@ lbl_80024B70:
 /* 80024BA8 00000038  48 34 19 35 */	bl sprintf
 /* 80024BAC 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80024BB0 00000040  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80024BB4 00000044  80 7F 5C 68 */	lwz r3, 0x5c68(r31)
+/* 80024BB4 00000044  80 7F 5C 68 */	lwz r3, 0x5c68(r31)	/* effective address: 8040BE28 */
 /* 80024BB8 00000048  38 81 00 08 */	addi r4, r1, 8
 /* 80024BBC 0000004C  48 00 DB 7D */	bl dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc
 /* 80024BC0 00000050  7C 7C 1B 78 */	mr r28, r3

@@ -57,8 +57,8 @@ lbl_800CBCC8:
 /* 800CBCE0 00000018  41 82 00 30 */	beq lbl_800CBD10
 /* 800CBCE4 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CBCE8 00000020  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 800CBCEC 00000024  80 65 5D B8 */	lwz r3, 0x5db8(r5)
-/* 800CBCF0 00000028  80 83 17 34 */	lwz r4, 0x1734(r3)
+/* 800CBCEC 00000024  80 65 5D B8 */	lwz r3, 0x5db8(r5)	/* effective address: 8040BF78 */
+/* 800CBCF0 00000028  80 83 17 34 */	lwz r4, 0x1734(r3)	/* effective address: 80401734 */
 /* 800CBCF4 0000002C  7C 9E 23 78 */	mr r30, r4
 /* 800CBCF8 00000030  28 04 00 00 */	cmplwi r4, 0
 /* 800CBCFC 00000034  41 82 00 C4 */	beq lbl_800CBDC0
@@ -112,7 +112,7 @@ lbl_800CBD8C:
 /* 800CBD9C 00000010  38 FD 1A 60 */	addi r7, r29, 0x1a60
 /* 800CBDA0 00000014  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 800CBDA4 00000018  39 20 00 00 */	li r9, 0
-/* 800CBDA8 0000001C  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__lit_6040(r2)
+/* 800CBDA8 0000001C  C0 A2 92 B8 */	lfs f5, lit_6040(r2)
 /* 800CBDAC 00000020  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 800CBDB0 00000024  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 800CBDB4 00000028  4B F6 2B 5D */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
@@ -137,7 +137,7 @@ lbl_800CBDC0:
 lbl_800CBDFC:
 /* 800CBDFC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CBE00 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CBE04 00000008  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800CBE04 00000008  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800CBE08 0000000C  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800CBE0C 00000010  41 82 00 14 */	beq lbl_800CBE20
 /* 800CBE10 00000014  38 63 61 C0 */	addi r3, r3, 0x61c0
@@ -283,7 +283,7 @@ lbl_800CBFDC:
 /* 800CC014 00000038  38 E7 00 14 */	addi r7, r7, 0x14
 /* 800CC018 0000003C  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 800CC01C 00000040  39 20 00 00 */	li r9, 0
-/* 800CC020 00000044  C0 A2 92 B8 */	lfs f5, d_a_d_a_alink__lit_6040(r2)
+/* 800CC020 00000044  C0 A2 92 B8 */	lfs f5, lit_6040(r2)
 /* 800CC024 00000048  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 800CC028 0000004C  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 800CC02C 00000050  4B F6 28 E5 */	bl dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
@@ -306,7 +306,7 @@ lbl_800CC038:
 /* 800CC06C 00000034  41 82 00 28 */	beq lbl_800CC094
 /* 800CC070 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CC074 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CC078 00000040  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 800CC078 00000040  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800CC07C 00000044  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 800CC080 00000048  40 82 00 14 */	bne lbl_800CC094
 /* 800CC084 0000004C  7F E3 FB 78 */	mr r3, r31
@@ -330,7 +330,7 @@ lbl_800CC094:
 /* 800CC0C8 00000034  4B F8 9E 55 */	bl addReal__21dDlst_shadowControl_cFUlP8J3DModel
 /* 800CC0CC 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CC0D0 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CC0D4 00000040  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 800CC0D4 00000040  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800CC0D8 00000044  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 800CC0DC 00000048  40 82 00 14 */	bne lbl_800CC0F0
 /* 800CC0E0 0000004C  7F E3 FB 78 */	mr r3, r31
@@ -407,7 +407,7 @@ lbl_800CC198:
 lbl_800CC1E4:
 /* 800CC1E4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CC1E8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CC1EC 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 800CC1EC 00000008  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800CC1F0 0000000C  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 800CC1F4 00000010  41 82 00 50 */	beq lbl_800CC244
 /* 800CC1F8 00000014  80 7D 28 54 */	lwz r3, 0x2854(r29)

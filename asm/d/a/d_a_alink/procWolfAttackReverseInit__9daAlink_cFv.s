@@ -14,9 +14,9 @@ lbl_8013C8C8:
 /* 8013C8F8 00000030  4B F7 2F A9 */	bl setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM
 /* 8013C8FC 00000034  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAttack_c0@ha
 /* 8013C900 00000038  38 63 F7 A4 */	addi r3, r3, m__22daAlinkHIO_wlAttack_c0@l
-/* 8013C904 0000003C  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 8013C904 0000003C  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038F7CC */
 /* 8013C908 00000040  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 8013C90C 00000044  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 8013C90C 00000044  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038F7D0 */
 /* 8013C910 00000048  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 8013C914 0000004C  A8 7F 04 DE */	lha r3, 0x4de(r31)
 /* 8013C918 00000050  3C 63 00 01 */	addis r3, r3, 1
@@ -24,7 +24,7 @@ lbl_8013C8C8:
 /* 8013C920 00000058  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 8013C924 0000005C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013C928 00000060  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 8013C92C 00000064  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013C92C 00000064  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013C930 00000068  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8013C934 0000006C  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 8013C938 00000070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -64,9 +64,9 @@ lbl_8013C988:
 /* 8013C9B8 00000030  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8013C9BC 00000034  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8013C9C0 00000038  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8013C9C4 0000003C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8013C9C4 0000003C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8013C9C8 00000040  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8013C9CC 00000044  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8013C9CC 00000044  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8013C9D0 00000048  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 8013C9D4 0000004C  38 60 00 01 */	li r3, 1
 /* 8013C9D8 00000050  83 E1 00 2C */	lwz r31, 0x2c(r1)

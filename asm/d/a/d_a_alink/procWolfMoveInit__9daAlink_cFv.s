@@ -14,7 +14,7 @@ lbl_8012D3AC:
 /* 8012D3AC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8012D3B0 00000004  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012D3B4 00000008  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 8012D3B8 0000000C  C0 24 00 94 */	lfs f1, 0x94(r4)
+/* 8012D3B8 0000000C  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 8038EEBC */
 /* 8012D3BC 00000010  4B FF B4 89 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8012D3C0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 8012D3C4 00000018  38 80 00 03 */	li r4, 3

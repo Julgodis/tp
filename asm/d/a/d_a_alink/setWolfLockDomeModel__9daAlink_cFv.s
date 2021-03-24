@@ -35,13 +35,13 @@ lbl_80138CB8:
 /* 80138D3C 00000084  B0 1E 30 18 */	sth r0, 0x3018(r30)
 /* 80138D40 00000088  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtLock_c0@ha
 /* 80138D44 0000008C  38 63 F6 F4 */	addi r3, r3, m__22daAlinkHIO_wlAtLock_c0@l
-/* 80138D48 00000090  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 80138D48 00000090  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038F720 */
 /* 80138D4C 00000094  D0 1E 34 90 */	stfs f0, 0x3490(r30)
 /* 80138D50 00000098  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80138D54 0000009C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80138D58 000000A0  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 80138D58 000000A0  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80138D5C 000000A4  64 00 00 80 */	oris r0, r0, 0x80
-/* 80138D60 000000A8  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 80138D60 000000A8  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80138D64 000000AC  7F C3 F3 78 */	mr r3, r30
 /* 80138D68 000000B0  3C 80 00 02 */	lis r4, 0x0002 /* 0x0002001C@ha */
 /* 80138D6C 000000B4  38 84 00 1C */	addi r4, r4, 0x001C /* 0x0002001C@l */
@@ -52,7 +52,7 @@ lbl_80138CB8:
 /* 80138D80 000000C8  48 07 37 FD */	bl dKy_darkworld_check__Fv
 /* 80138D84 000000CC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80138D88 000000D0  41 82 00 14 */	beq lbl_80138D9C
-/* 80138D8C 000000D4  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80138D8C 000000D4  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80138D90 000000D8  80 7E 07 24 */	lwz r3, 0x724(r30)
 /* 80138D94 000000DC  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80138D98 000000E0  48 00 00 10 */	b lbl_80138DA8

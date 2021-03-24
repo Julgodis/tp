@@ -60,7 +60,7 @@ lbl_801D564C:
 /* 801D5734 000000C4  3B C0 00 00 */	li r30, 0
 /* 801D5738 000000C8  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D573C 000000CC  3B E3 FC 60 */	addi r31, r3, g_fmapHIO@l
-/* 801D5740 000000D0  CB E2 A8 08 */	lfd f31, d_menu_d_menu_fmap2D__lit_4496(r2)
+/* 801D5740 000000D0  CB E2 A8 08 */	lfd f31, lit_4496(r2)
 /* 801D5744 000000D4  3F 60 43 30 */	lis r27, 0x4330
 /* 801D5748 000000D8  48 00 01 5C */	b lbl_801D58A4
 lbl_801D574C:
@@ -77,7 +77,7 @@ lbl_801D5758:
 /* 801D576C 00000014  41 82 00 F4 */	beq lbl_801D5860
 /* 801D5770 00000018  7F 83 E3 78 */	mr r3, r28
 /* 801D5774 0000001C  4B FF CF C5 */	bl getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv
-/* 801D5778 00000020  C8 42 A8 08 */	lfd f2, d_menu_d_menu_fmap2D__lit_4496(r2)
+/* 801D5778 00000020  C8 42 A8 08 */	lfd f2, lit_4496(r2)
 /* 801D577C 00000024  6F C0 80 00 */	xoris r0, r30, 0x8000
 /* 801D5780 00000028  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 801D5784 0000002C  3C 00 43 30 */	lis r0, 0x4330
@@ -87,7 +87,7 @@ lbl_801D5758:
 /* 801D5794 0000003C  EF C0 08 2A */	fadds f30, f0, f1
 /* 801D5798 00000040  7F 83 E3 78 */	mr r3, r28
 /* 801D579C 00000044  4B FF CF F5 */	bl getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv
-/* 801D57A0 00000048  C8 42 A8 08 */	lfd f2, d_menu_d_menu_fmap2D__lit_4496(r2)
+/* 801D57A0 00000048  C8 42 A8 08 */	lfd f2, lit_4496(r2)
 /* 801D57A4 0000004C  6F A0 80 00 */	xoris r0, r29, 0x8000
 /* 801D57A8 00000050  90 01 00 54 */	stw r0, 0x54(r1)
 /* 801D57AC 00000054  3C 00 43 30 */	lis r0, 0x4330
@@ -127,10 +127,10 @@ lbl_801D5758:
 /* 801D5834 000000DC  38 61 00 28 */	addi r3, r1, 0x28
 /* 801D5838 000000E0  7C 03 C8 2E */	lwzx r0, r3, r25
 /* 801D583C 000000E4  90 01 00 08 */	stw r0, 8(r1)
-/* 801D5840 000000E8  C0 02 A7 F0 */	lfs f0, d_menu_d_menu_fmap2D__lit_4204(r2)
+/* 801D5840 000000E8  C0 02 A7 F0 */	lfs f0, lit_4204(r2)
 /* 801D5844 000000EC  EC 3E 00 28 */	fsubs f1, f30, f0
 /* 801D5848 000000F0  EC 5D 00 28 */	fsubs f2, f29, f0
-/* 801D584C 000000F4  C0 62 A7 F4 */	lfs f3, d_menu_d_menu_fmap2D__lit_4205(r2)
+/* 801D584C 000000F4  C0 62 A7 F4 */	lfs f3, lit_4205(r2)
 /* 801D5850 000000F8  FC 80 18 90 */	fmr f4, f3
 /* 801D5854 000000FC  38 61 00 08 */	addi r3, r1, 8
 /* 801D5858 00000100  48 11 42 6D */	bl J2DFillBox__FffffQ28JUtility6TColor

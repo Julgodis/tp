@@ -44,8 +44,8 @@ lbl_802D6FE0:
 /* 802D6FF4 00000014  7F E3 FB 78 */	mr r3, r31
 /* 802D6FF8 00000018  48 00 00 24 */	b lbl_802D701C
 lbl_802D6FFC:
-/* 802D6FFC 00000000  3C 60 80 3A */	lis r3, JKRMemArchive__stringBase0@ha
-/* 802D7000 00000004  38 63 D1 60 */	addi r3, r3, JKRMemArchive__stringBase0@l
+/* 802D6FFC 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D7000 00000004  38 63 D1 60 */	addi r3, r3, stringBase0@l
 /* 802D7004 00000008  38 80 02 D3 */	li r4, 0x2d3
 /* 802D7008 0000000C  38 A3 00 12 */	addi r5, r3, 0x12
 /* 802D700C 00000010  38 C3 00 15 */	addi r6, r3, 0x15

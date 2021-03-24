@@ -11,7 +11,7 @@ lbl_800F1294:
 /* 800F12B8 00000024  40 82 00 14 */	bne lbl_800F12CC
 /* 800F12BC 00000028  7F E3 FB 78 */	mr r3, r31
 /* 800F12C0 0000002C  38 80 00 02 */	li r4, 2
-/* 800F12C4 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F12C4 00000030  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F12C8 00000034  4B FB C8 25 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F12CC:
 /* 800F12CC 00000000  7F E3 FB 78 */	mr r3, r31

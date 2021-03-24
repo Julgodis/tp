@@ -26,7 +26,7 @@ lbl_80214C78:
 /* 80214C78 00000000  C0 1A 07 94 */	lfs f0, 0x794(r26)
 /* 80214C7C 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80214C80 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80214C84 0000000C  C0 23 00 20 */	lfs f1, 0x20(r3)
+/* 80214C84 0000000C  C0 23 00 20 */	lfs f1, 0x20(r3)	/* effective address: 8042EBE8 */
 /* 80214C88 00000010  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80214C8C 00000014  40 82 00 0C */	bne lbl_80214C98
 /* 80214C90 00000018  57 60 06 3F */	clrlwi. r0, r27, 0x18
@@ -38,7 +38,7 @@ lbl_80214CA0:
 /* 80214CA0 00000000  C0 1A 07 9C */	lfs f0, 0x79c(r26)
 /* 80214CA4 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80214CA8 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80214CAC 0000000C  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 80214CAC 0000000C  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8042EBFC */
 /* 80214CB0 00000010  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80214CB4 00000014  40 82 00 0C */	bne lbl_80214CC0
 /* 80214CB8 00000018  57 60 06 3F */	clrlwi. r0, r27, 0x18
@@ -50,7 +50,7 @@ lbl_80214CC8:
 /* 80214CC8 00000000  C0 1A 07 98 */	lfs f0, 0x798(r26)
 /* 80214CCC 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80214CD0 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80214CD4 0000000C  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 80214CD4 0000000C  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 8042EBEC */
 /* 80214CD8 00000010  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80214CDC 00000014  40 82 00 0C */	bne lbl_80214CE8
 /* 80214CE0 00000018  57 60 06 3F */	clrlwi. r0, r27, 0x18
@@ -62,7 +62,7 @@ lbl_80214CF0:
 /* 80214CF0 00000000  C0 1A 07 A0 */	lfs f0, 0x7a0(r26)
 /* 80214CF4 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80214CF8 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80214CFC 0000000C  C0 23 00 3C */	lfs f1, 0x3c(r3)
+/* 80214CFC 0000000C  C0 23 00 3C */	lfs f1, 0x3c(r3)	/* effective address: 8042EC04 */
 /* 80214D00 00000010  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80214D04 00000014  40 82 00 0C */	bne lbl_80214D10
 /* 80214D08 00000018  57 60 06 3F */	clrlwi. r0, r27, 0x18

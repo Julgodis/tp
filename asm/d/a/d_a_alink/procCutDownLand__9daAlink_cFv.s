@@ -100,7 +100,7 @@ lbl_800D5C3C:
 /* 800D5C3C 00000000  C0 3E 00 10 */	lfs f1, 0x10(r30)
 /* 800D5C40 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutDown_c0@ha
 /* 800D5C44 00000008  38 63 DD 44 */	addi r3, r3, m__21daAlinkHIO_cutDown_c0@l
-/* 800D5C48 0000000C  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800D5C48 0000000C  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038DD90 */
 /* 800D5C4C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D5C50 00000000  40 81 00 1C */	ble lbl_800D5C6C
 /* 800D5C54 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)

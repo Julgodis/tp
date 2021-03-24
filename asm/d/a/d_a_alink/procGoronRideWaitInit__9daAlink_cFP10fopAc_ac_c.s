@@ -26,7 +26,7 @@ lbl_800C8580:
 /* 800C85A8 00000028  7F C3 F3 78 */	mr r3, r30
 /* 800C85AC 0000002C  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800C85B0 00000030  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800C85B4 00000034  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 800C85B4 00000034  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 800C85B8 00000038  4B FE 58 5D */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C85BC 0000003C  38 60 00 01 */	li r3, 1
 lbl_800C85C0:

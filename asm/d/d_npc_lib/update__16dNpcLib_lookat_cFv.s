@@ -18,7 +18,7 @@ lbl_80251EF8:
 /* 80251F38 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80251F3C 00000030  3B E3 D4 70 */	addi r31, r3, now__14mDoMtx_stack_c@l
 /* 80251F40 00000034  7F F8 FB 78 */	mr r24, r31
-/* 80251F44 00000038  C3 E2 B3 E8 */	lfs f31, d_d_npc_lib__lit_3864(r2)
+/* 80251F44 00000038  C3 E2 B3 E8 */	lfs f31, lit_3864(r2)
 /* 80251F48 0000003C  7F F9 FB 78 */	mr r25, r31
 /* 80251F4C 00000040  48 00 00 A0 */	b lbl_80251FEC
 lbl_80251F50:

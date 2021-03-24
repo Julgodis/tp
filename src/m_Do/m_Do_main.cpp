@@ -100,7 +100,7 @@ extern "C" static void main01__Fv(); // 1
 extern "C" void main(); // 1
 extern "C" void dump_sort__7JKRHeapFv(); // 1
 extern "C" void __sinit_m_Do_main_cpp(); // 1
-extern "C" extern char const* const m_Do_m_Do_main__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 extern "C" extern void* data_803A2F14[5];
 extern "C" extern void* data_803A2F28[5 + 1 /* padding */];
@@ -331,25 +331,25 @@ asm void HeapCheck::CheckHeap1() {
 /* 803D32E0-803D3308 0028+00 s=3 e=0 z=0  None .bss       RootHeapCheck                                                */
 extern "C" u8 RootHeapCheck[40];
 
-/* 803D3308-803D3330 0028+00 s=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
+/* 803D3308-803D3330 0028+00 s=2 e=0 z=0  None .bss       SystemHeapCheck                                              */
 extern "C" u8 SystemHeapCheck[40];
 
-/* 803D3330-803D3358 0028+00 s=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
+/* 803D3330-803D3358 0028+00 s=2 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
 extern "C" u8 ZeldaHeapCheck[40];
 
-/* 803D3358-803D3380 0028+00 s=1 e=0 z=0  None .bss       GameHeapCheck                                                */
+/* 803D3358-803D3380 0028+00 s=2 e=0 z=0  None .bss       GameHeapCheck                                                */
 extern "C" u8 GameHeapCheck[40];
 
-/* 803D3380-803D33A8 0028+00 s=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
+/* 803D3380-803D33A8 0028+00 s=2 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
 extern "C" u8 ArchiveHeapCheck[40];
 
-/* 803D33A8-803D33D0 0028+00 s=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
+/* 803D33A8-803D33D0 0028+00 s=2 e=0 z=0  None .bss       J2dHeapCheck                                                 */
 extern "C" u8 J2dHeapCheck[40];
 
-/* 803D33D0-803D33F8 0028+00 s=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
+/* 803D33D0-803D33F8 0028+00 s=2 e=0 z=0  None .bss       HostioHeapCheck                                              */
 extern "C" u8 HostioHeapCheck[40];
 
-/* 803D33F8-803D3420 0028+00 s=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
+/* 803D33F8-803D3420 0028+00 s=2 e=0 z=0  None .bss       CommandHeapCheck                                             */
 extern "C" u8 CommandHeapCheck[40];
 
 /* 803A2EE0-803A2EF4 0012+02 s=2 e=1 z=0  None .data      COPYDATE_STRING__7mDoMain                                    */
@@ -375,25 +375,25 @@ SECTION_DATA static void* HeapCheckTable[8] = {
 /* 803D32E0-803D3308 0028+00 s=3 e=0 z=0  None .bss       RootHeapCheck                                                */
 static u8 RootHeapCheck[40];
 
-/* 803D3308-803D3330 0028+00 s=1 e=0 z=0  None .bss       SystemHeapCheck                                              */
+/* 803D3308-803D3330 0028+00 s=2 e=0 z=0  None .bss       SystemHeapCheck                                              */
 static u8 SystemHeapCheck[40];
 
-/* 803D3330-803D3358 0028+00 s=1 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
+/* 803D3330-803D3358 0028+00 s=2 e=0 z=0  None .bss       ZeldaHeapCheck                                               */
 static u8 ZeldaHeapCheck[40];
 
-/* 803D3358-803D3380 0028+00 s=1 e=0 z=0  None .bss       GameHeapCheck                                                */
+/* 803D3358-803D3380 0028+00 s=2 e=0 z=0  None .bss       GameHeapCheck                                                */
 static u8 GameHeapCheck[40];
 
-/* 803D3380-803D33A8 0028+00 s=1 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
+/* 803D3380-803D33A8 0028+00 s=2 e=0 z=0  None .bss       ArchiveHeapCheck                                             */
 static u8 ArchiveHeapCheck[40];
 
-/* 803D33A8-803D33D0 0028+00 s=1 e=0 z=0  None .bss       J2dHeapCheck                                                 */
+/* 803D33A8-803D33D0 0028+00 s=2 e=0 z=0  None .bss       J2dHeapCheck                                                 */
 static u8 J2dHeapCheck[40];
 
-/* 803D33D0-803D33F8 0028+00 s=1 e=0 z=0  None .bss       HostioHeapCheck                                              */
+/* 803D33D0-803D33F8 0028+00 s=2 e=0 z=0  None .bss       HostioHeapCheck                                              */
 static u8 HostioHeapCheck[40];
 
-/* 803D33F8-803D3420 0028+00 s=1 e=0 z=0  None .bss       CommandHeapCheck                                             */
+/* 803D33F8-803D3420 0028+00 s=2 e=0 z=0  None .bss       CommandHeapCheck                                             */
 static u8 CommandHeapCheck[40];
 
 /* 8000578C-80005848 00BC+00 s=1 e=0 z=0  None .text      CheckHeap__FUl                                               */
@@ -501,28 +501,28 @@ static u8 data_80450B2C[4];
 static u8 data_80450B30[4];
 
 /* 80451A00-80451A04 0004+00 s=1 e=0 z=0  None .sdata2    @3884                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3884 = 20.0f;
+SECTION_SDATA2 static f32 lit_3884 = 20.0f;
 
 /* 80451A04-80451A08 0004+00 s=1 e=0 z=0  None .sdata2    @3885                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3885 = 30.0f;
+SECTION_SDATA2 static f32 lit_3885 = 30.0f;
 
 /* 80451A08-80451A0C 0004+00 s=1 e=0 z=0  None .sdata2    @3886                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_main__lit_3886[4] = {
+SECTION_SDATA2 static u8 lit_3886[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80451A0C-80451A10 0004+00 s=1 e=0 z=0  None .sdata2    @3887                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3887 = 1.0f;
+SECTION_SDATA2 static f32 lit_3887 = 1.0f;
 
 /* 80451A10-80451A18 0004+04 s=1 e=0 z=0  None .sdata2    @3888                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3888[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3888[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451A18-80451A20 0008+00 s=1 e=0 z=0  None .sdata2    @3890                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_main__lit_3890 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3890 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80005D4C-8000614C 0400+00 s=1 e=0 z=0  None .text      Debug_console__FUl                                           */
 #pragma push
@@ -615,20 +615,20 @@ extern "C" asm void __sinit_m_Do_main_cpp() {
 /* ############################################################################################## */
 /* 803A2F14-803A2F28 0014+00 s=0 e=0 z=0  None .data      desc1$3717                                                   */
 SECTION_DATA void* data_803A2F14[5] = {
-	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
-	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
-	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x164),
-	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x150),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x15A),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x164),
+	/* 4    */ (void*)(((char*)&stringBase0)+0x16E),
 };
 
 /* 803A2F28-803A2F40 0014+04 s=0 e=0 z=0  None .data      desc2$3718                                                   */
 SECTION_DATA void* data_803A2F28[5 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
-	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
-	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
-	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x178),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x182),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x18C),
+	/* 4    */ (void*)(((char*)&stringBase0)+0x18C),
 	/* padding */
 	NULL,
 };

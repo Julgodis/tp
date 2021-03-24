@@ -219,7 +219,7 @@ extern "C" asm void __GXInitRevisionBits() {
 
 /* ############################################################################################## */
 /* 803D2040-803D20A0 0044+1C s=2 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 GXInit__lit_1[68 + 28 /* padding */] = {
+SECTION_DATA static u8 lit_1[68 + 28 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x47, 0x58, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -287,7 +287,7 @@ SECTION_DATA static void* GXResetFuncInfo[4 + 1 /* padding */] = {
 
 /* 80450A78-80450A80 0004+04 s=1 e=0 z=0  None .sdata     __GXVersion                                                  */
 SECTION_SDATA static void* __GXVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&GXInit__lit_1,
+	/* 0    */ (void*)&lit_1,
 	/* padding */
 	NULL,
 };
@@ -296,10 +296,10 @@ SECTION_SDATA static void* __GXVersion[1 + 1 /* padding */] = {
 static u8 data_80451944[4];
 
 /* 80456584-80456588 0004+00 s=1 e=0 z=0  None .sdata2    @267                                                         */
-SECTION_SDATA2 static f32 GXInit__lit_267 = 16777216.0f;
+SECTION_SDATA2 static f32 lit_267 = 16777216.0f;
 
 /* 80456588-8045658C 0004+00 s=2 e=0 z=0  None .sdata2    @268                                                         */
-SECTION_SDATA2 static u8 GXInit__lit_268[4] = {
+SECTION_SDATA2 static u8 lit_268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -316,15 +316,15 @@ extern "C" asm void GXInit() {
 
 /* ############################################################################################## */
 /* 8045658C-80456590 0004+00 s=1 e=0 z=0  None .sdata2    @269                                                         */
-SECTION_SDATA2 static u32 GXInit__lit_269 = 0x404040FF;
+SECTION_SDATA2 static u32 lit_269 = 0x404040FF;
 
 /* 80456590-80456594 0004+00 s=1 e=0 z=0  None .sdata2    @270                                                         */
-SECTION_SDATA2 static u8 GXInit__lit_270[4] = {
+SECTION_SDATA2 static u8 lit_270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456594-80456598 0004+00 s=1 e=0 z=0  None .sdata2    @271                                                         */
-SECTION_SDATA2 static u32 GXInit__lit_271 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_271 = 0xFFFFFFFF;
 
 /* 80456598-8045659C 0004+00 s=1 e=0 z=0  None .sdata2    @331                                                         */
 SECTION_SDATA2 static f32 lit_331 = 1.0f;

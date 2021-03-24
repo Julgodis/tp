@@ -18,7 +18,7 @@ lbl_8018D288:
 /* 8018D298 00000010  80 63 02 0C */	lwz r3, 0x20c(r3)
 /* 8018D29C 00000014  3C 80 80 43 */	lis r4, g_fsHIO@ha
 /* 8018D2A0 00000018  3B A4 C9 EC */	addi r29, r4, g_fsHIO@l
-/* 8018D2A4 0000001C  88 9D 00 07 */	lbz r4, 7(r29)
+/* 8018D2A4 0000001C  88 9D 00 07 */	lbz r4, 7(r29)	/* effective address: 8042C9F3 */
 /* 8018D2A8 00000020  38 A0 00 FF */	li r5, 0xff
 /* 8018D2AC 00000024  38 C0 00 00 */	li r6, 0
 /* 8018D2B0 00000028  38 E0 00 00 */	li r7, 0
@@ -36,7 +36,7 @@ lbl_8018D288:
 /* 8018D2E0 00000058  48 0C 85 99 */	bl alphaAnime__13CPaneMgrAlphaFsUcUcUc
 /* 8018D2E4 0000005C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8018D2E8 00000060  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 8018D2EC 00000064  A8 84 00 94 */	lha r4, 0x94(r4)
+/* 8018D2EC 00000064  A8 84 00 94 */	lha r4, 0x94(r4)	/* effective address: 8043021C */
 /* 8018D2F0 00000068  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 8018D2F4 0000006C  28 00 00 01 */	cmplwi r0, 1
 /* 8018D2F8 00000070  40 82 00 30 */	bne lbl_8018D328

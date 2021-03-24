@@ -2,15 +2,15 @@ lbl_8014D3D8:
 /* 8014D3D8 00000000  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8014D3DC 00000004  3C 60 80 39 */	lis r3, mCcDObjData__8daNpcT_c@ha
 /* 8014D3E0 00000008  38 83 26 80 */	addi r4, r3, mCcDObjData__8daNpcT_c@l
-/* 8014D3E4 0000000C  3C 60 80 3B */	lis r3, d_a_d_a_npc__cNullVec__6Z2Calc@ha
-/* 8014D3E8 00000010  38 63 36 A8 */	addi r3, r3, d_a_d_a_npc__cNullVec__6Z2Calc@l
+/* 8014D3E4 0000000C  3C 60 80 3B */	lis r3, cNullVec__6Z2Calc@ha
+/* 8014D3E8 00000010  38 63 36 A8 */	addi r3, r3, cNullVec__6Z2Calc@l
 /* 8014D3EC 00000014  38 E1 00 64 */	addi r7, r1, 0x64
 /* 8014D3F0 00000018  38 C4 FF FC */	addi r6, r4, -4
 /* 8014D3F4 0000001C  38 00 00 06 */	li r0, 6
 /* 8014D3F8 00000020  7C 09 03 A6 */	mtctr r0
 lbl_8014D3FC:
-/* 8014D3FC 00000000  80 A6 00 04 */	lwz r5, 4(r6)
-/* 8014D400 00000004  84 06 00 08 */	lwzu r0, 8(r6)
+/* 8014D3FC 00000000  80 A6 00 04 */	lwz r5, 4(r6)	/* effective address: 80392680 */
+/* 8014D400 00000004  84 06 00 08 */	lwzu r0, 8(r6)	/* effective address: 80392684 */
 /* 8014D404 00000008  90 A7 00 04 */	stw r5, 4(r7)
 /* 8014D408 0000000C  94 07 00 08 */	stwu r0, 8(r7)
 /* 8014D40C 00000010  42 00 FF F0 */	bdnz lbl_8014D3FC

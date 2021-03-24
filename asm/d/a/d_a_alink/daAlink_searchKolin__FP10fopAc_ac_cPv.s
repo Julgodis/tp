@@ -13,7 +13,7 @@ lbl_800B7F84:
 /* 800B7FB0 0000002C  40 82 00 E4 */	bne lbl_800B8094
 /* 800B7FB4 00000030  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800B7FB8 00000034  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800B7FBC 00000038  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 800B7FBC 00000038  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 800B7FC0 0000003C  4B F6 27 51 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 800B7FC4 00000040  38 80 00 03 */	li r4, 3
 /* 800B7FC8 00000044  A8 1E 04 B6 */	lha r0, 0x4b6(r30)

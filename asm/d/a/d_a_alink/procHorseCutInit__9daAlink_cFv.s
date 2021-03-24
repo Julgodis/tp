@@ -5,8 +5,8 @@ lbl_800F13D8:
 /* 800F13E4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 800F13E8 00000010  48 27 0D F1 */	bl _savegpr_28
 /* 800F13EC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 800F13F0 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800F13F4 0000001C  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
+/* 800F13F0 00000018  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800F13F4 0000001C  3B E4 D6 58 */	addi r31, r4, lit_3757@l
 /* 800F13F8 00000020  38 80 00 41 */	li r4, 0x41
 /* 800F13FC 00000024  4B FD 0B 71 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F1400 00000028  3B A0 00 00 */	li r29, 0
@@ -15,7 +15,7 @@ lbl_800F13D8:
 /* 800F140C 00000034  40 82 00 14 */	bne lbl_800F1420
 /* 800F1410 00000038  7F C3 F3 78 */	mr r3, r30
 /* 800F1414 0000003C  38 80 00 02 */	li r4, 2
-/* 800F1418 00000040  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F1418 00000040  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F141C 00000044  4B FB C6 D1 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1420:
 /* 800F1420 00000000  7F C3 F3 78 */	mr r3, r30

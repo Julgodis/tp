@@ -17,7 +17,7 @@ lbl_8020BF00:
 /* 8020BF3C 0000003C  C0 3E 00 18 */	lfs f1, 0x18(r30)
 /* 8020BF40 00000040  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020BF44 00000044  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8020BF48 00000048  C0 03 05 34 */	lfs f0, 0x534(r3)
+/* 8020BF48 00000048  C0 03 05 34 */	lfs f0, 0x534(r3)	/* effective address: 8042F0FC */
 /* 8020BF4C 0000004C  EC 01 00 2A */	fadds f0, f1, f0
 /* 8020BF50 00000050  D0 1E 00 18 */	stfs f0, 0x18(r30)
 /* 8020BF54 00000054  48 00 00 1C */	b lbl_8020BF70
@@ -25,13 +25,13 @@ lbl_8020BF58:
 /* 8020BF58 00000000  C0 3E 00 18 */	lfs f1, 0x18(r30)
 /* 8020BF5C 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020BF60 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8020BF64 0000000C  C0 03 05 04 */	lfs f0, 0x504(r3)
+/* 8020BF64 0000000C  C0 03 05 04 */	lfs f0, 0x504(r3)	/* effective address: 8042F0CC */
 /* 8020BF68 00000010  EC 01 00 2A */	fadds f0, f1, f0
 /* 8020BF6C 00000014  D0 1E 00 18 */	stfs f0, 0x18(r30)
 lbl_8020BF70:
 /* 8020BF70 00000000  C0 5E 00 18 */	lfs f2, 0x18(r30)
 /* 8020BF74 00000004  A8 9F 00 06 */	lha r4, 6(r31)
-/* 8020BF78 00000008  C8 22 AD F8 */	lfd f1, d_meter_d_meter_haihai__lit_4189(r2)
+/* 8020BF78 00000008  C8 22 AD F8 */	lfd f1, lit_4189(r2)
 /* 8020BF7C 0000000C  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 8020BF80 00000010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8020BF84 00000014  3C 60 43 30 */	lis r3, 0x4330
@@ -51,7 +51,7 @@ lbl_8020BF70:
 /* 8020BFBC 00000024  D0 1E 00 18 */	stfs f0, 0x18(r30)
 /* 8020BFC0 00000028  48 00 00 0C */	b lbl_8020BFCC
 lbl_8020BFC4:
-/* 8020BFC4 00000000  C0 02 AD F0 */	lfs f0, d_meter_d_meter_haihai__lit_4165(r2)
+/* 8020BFC4 00000000  C0 02 AD F0 */	lfs f0, lit_4165(r2)
 /* 8020BFC8 00000004  D0 1E 00 1C */	stfs f0, 0x1c(r30)
 lbl_8020BFCC:
 /* 8020BFCC 00000000  C0 1E 00 18 */	lfs f0, 0x18(r30)

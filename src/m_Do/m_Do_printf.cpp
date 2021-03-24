@@ -46,7 +46,7 @@ extern "C" void OSReport_Error(); // 1
 extern "C" void OSReport_Warning(); // 1
 extern "C" void OSReport_System(); // 1
 extern "C" void OSPanic(); // 1
-extern "C" extern char const* const m_Do_m_Do_printf__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

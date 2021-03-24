@@ -11,9 +11,9 @@ lbl_800C8460:
 /* 800C8484 00000024  C0 22 93 A8 */	lfs f1, lit_9652(r2)
 /* 800C8488 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C848C 0000002C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 800C8490 00000030  C0 45 00 1C */	lfs f2, 0x1c(r5)
-/* 800C8494 00000034  A8 A5 00 14 */	lha r5, 0x14(r5)
-/* 800C8498 00000038  C0 62 93 30 */	lfs f3, d_a_d_a_alink__lit_7625(r2)
+/* 800C8490 00000030  C0 45 00 1C */	lfs f2, 0x1c(r5)	/* effective address: 8038E084 */
+/* 800C8494 00000034  A8 A5 00 14 */	lha r5, 0x14(r5)	/* effective address: 8038E07C */
+/* 800C8498 00000038  C0 62 93 30 */	lfs f3, lit_7625(r2)
 /* 800C849C 0000003C  4B FE 4B 71 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800C84A0 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800C84A4 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)

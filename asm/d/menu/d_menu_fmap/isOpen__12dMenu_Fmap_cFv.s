@@ -13,8 +13,8 @@ lbl_801CADC4:
 /* 801CADF0 0000002C  80 1D 00 1C */	lwz r0, 0x1c(r29)
 /* 801CADF4 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 801CADF8 00000034  40 82 00 20 */	bne lbl_801CAE18
-/* 801CADFC 00000038  3C 60 80 39 */	lis r3, d_menu_d_menu_fmap__stringBase0@ha
-/* 801CAE00 0000003C  38 63 60 E8 */	addi r3, r3, d_menu_d_menu_fmap__stringBase0@l
+/* 801CADFC 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801CAE00 0000003C  38 63 60 E8 */	addi r3, r3, stringBase0@l
 /* 801CAE04 00000040  38 63 00 26 */	addi r3, r3, 0x26
 /* 801CAE08 00000044  38 80 00 02 */	li r4, 2
 /* 801CAE0C 00000048  80 BD 00 04 */	lwz r5, 4(r29)
@@ -39,8 +39,8 @@ lbl_801CAE50:
 /* 801CAE50 00000000  38 00 00 00 */	li r0, 0
 /* 801CAE54 00000004  90 1D 00 1C */	stw r0, 0x1c(r29)
 /* 801CAE58 00000008  80 7D 00 68 */	lwz r3, 0x68(r29)
-/* 801CAE5C 0000000C  3C 80 80 39 */	lis r4, d_menu_d_menu_fmap__stringBase0@ha
-/* 801CAE60 00000010  38 84 60 E8 */	addi r4, r4, d_menu_d_menu_fmap__stringBase0@l
+/* 801CAE5C 0000000C  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801CAE60 00000010  38 84 60 E8 */	addi r4, r4, stringBase0@l
 /* 801CAE64 00000014  38 84 00 3E */	addi r4, r4, 0x3e
 /* 801CAE68 00000018  81 83 00 00 */	lwz r12, 0(r3)
 /* 801CAE6C 0000001C  81 8C 00 14 */	lwz r12, 0x14(r12)
@@ -56,8 +56,8 @@ lbl_801CAE88:
 lbl_801CAE90:
 /* 801CAE90 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801CAE94 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801CAE98 00000008  A8 A3 00 94 */	lha r5, 0x94(r3)
-/* 801CAE9C 0000000C  A8 83 00 96 */	lha r4, 0x96(r3)
+/* 801CAE98 00000008  A8 A3 00 94 */	lha r5, 0x94(r3)	/* effective address: 8042FCF4 */
+/* 801CAE9C 0000000C  A8 83 00 96 */	lha r4, 0x96(r3)	/* effective address: 8042FCF6 */
 /* 801CAEA0 00000010  A8 1D 02 12 */	lha r0, 0x212(r29)
 /* 801CAEA4 00000014  2C 00 00 00 */	cmpwi r0, 0
 /* 801CAEA8 00000018  40 82 00 08 */	bne lbl_801CAEB0
@@ -67,7 +67,7 @@ lbl_801CAEB0:
 /* 801CAEB4 00000004  38 03 00 01 */	addi r0, r3, 1
 /* 801CAEB8 00000008  B0 1D 02 12 */	sth r0, 0x212(r29)
 /* 801CAEBC 0000000C  A8 1D 02 12 */	lha r0, 0x212(r29)
-/* 801CAEC0 00000010  C8 42 A7 40 */	lfd f2, d_menu_d_menu_fmap__lit_4358(r2)
+/* 801CAEC0 00000010  C8 42 A7 40 */	lfd f2, lit_4358(r2)
 /* 801CAEC4 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801CAEC8 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801CAECC 0000001C  3C 60 43 30 */	lis r3, 0x4330
@@ -84,32 +84,32 @@ lbl_801CAEB0:
 /* 801CAEF8 00000048  88 1D 03 04 */	lbz r0, 0x304(r29)
 /* 801CAEFC 0000004C  28 00 00 01 */	cmplwi r0, 1
 /* 801CAF00 00000050  40 82 00 24 */	bne lbl_801CAF24
-/* 801CAF04 00000054  C0 22 A7 2C */	lfs f1, d_menu_d_menu_fmap__lit_4159(r2)
-/* 801CAF08 00000058  C0 02 A7 24 */	lfs f0, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CAF04 00000054  C0 22 A7 2C */	lfs f1, lit_4159(r2)
+/* 801CAF08 00000058  C0 02 A7 24 */	lfs f0, lit_3995(r2)
 /* 801CAF0C 0000005C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801CAF10 00000060  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801CAF14 00000064  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801CAF18 00000068  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAF18 00000068  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CAF1C 0000006C  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801CAF20 00000070  48 00 00 78 */	b lbl_801CAF98
 lbl_801CAF24:
 /* 801CAF24 00000000  28 00 00 03 */	cmplwi r0, 3
 /* 801CAF28 00000004  40 82 00 24 */	bne lbl_801CAF4C
 /* 801CAF2C 00000008  C0 22 A7 30 */	lfs f1, lit_4160(r2)
-/* 801CAF30 0000000C  C0 02 A7 24 */	lfs f0, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CAF30 0000000C  C0 02 A7 24 */	lfs f0, lit_3995(r2)
 /* 801CAF34 00000010  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801CAF38 00000014  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801CAF3C 00000018  D0 1D 01 1C */	stfs f0, 0x11c(r29)
-/* 801CAF40 0000001C  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAF40 0000001C  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CAF44 00000020  D0 1D 01 20 */	stfs f0, 0x120(r29)
 /* 801CAF48 00000024  48 00 00 50 */	b lbl_801CAF98
 lbl_801CAF4C:
 /* 801CAF4C 00000000  28 00 00 02 */	cmplwi r0, 2
 /* 801CAF50 00000004  40 82 00 24 */	bne lbl_801CAF74
-/* 801CAF54 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAF54 00000008  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CAF58 0000000C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
 /* 801CAF5C 00000010  C0 22 A7 34 */	lfs f1, lit_4161(r2)
-/* 801CAF60 00000014  C0 02 A7 24 */	lfs f0, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CAF60 00000014  C0 02 A7 24 */	lfs f0, lit_3995(r2)
 /* 801CAF64 00000018  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801CAF68 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801CAF6C 00000020  D0 1D 01 20 */	stfs f0, 0x120(r29)
@@ -117,10 +117,10 @@ lbl_801CAF4C:
 lbl_801CAF74:
 /* 801CAF74 00000000  28 00 00 00 */	cmplwi r0, 0
 /* 801CAF78 00000004  40 82 00 20 */	bne lbl_801CAF98
-/* 801CAF7C 00000008  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAF7C 00000008  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CAF80 0000000C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
 /* 801CAF84 00000010  C0 22 A7 38 */	lfs f1, lit_4162(r2)
-/* 801CAF88 00000014  C0 02 A7 24 */	lfs f0, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CAF88 00000014  C0 02 A7 24 */	lfs f0, lit_3995(r2)
 /* 801CAF8C 00000018  EC 00 10 28 */	fsubs f0, f0, f2
 /* 801CAF90 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801CAF94 00000020  D0 1D 01 20 */	stfs f0, 0x120(r29)
@@ -131,10 +131,10 @@ lbl_801CAF98:
 /* 801CAFA4 0000000C  7C 03 00 00 */	cmpw r3, r0
 /* 801CAFA8 00000010  41 80 00 20 */	blt lbl_801CAFC8
 /* 801CAFAC 00000014  B0 9D 02 12 */	sth r4, 0x212(r29)
-/* 801CAFB0 00000018  C0 02 A7 28 */	lfs f0, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801CAFB0 00000018  C0 02 A7 28 */	lfs f0, lit_4158(r2)
 /* 801CAFB4 0000001C  D0 1D 01 1C */	stfs f0, 0x11c(r29)
 /* 801CAFB8 00000020  D0 1D 01 20 */	stfs f0, 0x120(r29)
-/* 801CAFBC 00000024  C0 02 A7 24 */	lfs f0, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CAFBC 00000024  C0 02 A7 24 */	lfs f0, lit_3995(r2)
 /* 801CAFC0 00000028  D0 1D 01 24 */	stfs f0, 0x124(r29)
 /* 801CAFC4 0000002C  3B E0 00 01 */	li r31, 1
 lbl_801CAFC8:

@@ -13,7 +13,7 @@ lbl_800269B4:
 lbl_800269E0:
 /* 800269E0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800269E4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800269E8 00000008  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
+/* 800269E8 00000008  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 800269EC 0000000C  7C 00 07 74 */	extsb r0, r0
 /* 800269F0 00000010  7C 1D 03 78 */	mr r29, r0
 lbl_800269F4:
@@ -32,7 +32,7 @@ lbl_800269F4:
 /* 80026A24 00000030  4B FF F6 91 */	bl dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei
 /* 80026A28 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80026A2C 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80026A30 0000003C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 80026A30 0000003C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 80026A34 00000040  81 8C 01 70 */	lwz r12, 0x170(r12)
 /* 80026A38 00000044  7D 89 03 A6 */	mtctr r12
 /* 80026A3C 00000048  4E 80 04 21 */	bctrl 

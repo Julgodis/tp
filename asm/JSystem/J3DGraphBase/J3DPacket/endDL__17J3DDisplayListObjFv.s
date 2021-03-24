@@ -9,8 +9,8 @@ lbl_80312698:
 /* 803126B4 0000001C  48 02 B0 69 */	bl OSRestoreInterrupts
 /* 803126B8 00000020  3C 60 80 43 */	lis r3, sGDLObj__17J3DDisplayListObj@ha
 /* 803126BC 00000024  38 83 4C 70 */	addi r4, r3, sGDLObj__17J3DDisplayListObj@l
-/* 803126C0 00000028  80 64 00 00 */	lwz r3, 0(r4)
-/* 803126C4 0000002C  80 04 00 08 */	lwz r0, 8(r4)
+/* 803126C0 00000028  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80434C70 */
+/* 803126C4 0000002C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80434C78 */
 /* 803126C8 00000030  7C 03 00 50 */	subf r0, r3, r0
 /* 803126CC 00000034  90 1F 00 08 */	stw r0, 8(r31)
 /* 803126D0 00000038  48 04 E8 E1 */	bl GDFlushCurrToMem

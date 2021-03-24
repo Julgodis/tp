@@ -4,11 +4,11 @@ lbl_802F3E24:
 /* 802F3E2C 00000008  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 802F3E30 0000000C  3C E0 80 3A */	lis r7, j2dDefaultIndTevStageInfo@ha
 /* 802F3E34 00000010  39 07 1B F4 */	addi r8, r7, j2dDefaultIndTevStageInfo@l
-/* 802F3E38 00000014  80 E8 00 00 */	lwz r7, 0(r8)
-/* 802F3E3C 00000018  80 08 00 04 */	lwz r0, 4(r8)
+/* 802F3E38 00000014  80 E8 00 00 */	lwz r7, 0(r8)	/* effective address: 803A1BF4 */
+/* 802F3E3C 00000018  80 08 00 04 */	lwz r0, 4(r8)	/* effective address: 803A1BF8 */
 /* 802F3E40 0000001C  90 E1 00 14 */	stw r7, 0x14(r1)
 /* 802F3E44 00000020  90 01 00 18 */	stw r0, 0x18(r1)
-/* 802F3E48 00000024  80 08 00 08 */	lwz r0, 8(r8)
+/* 802F3E48 00000024  80 08 00 08 */	lwz r0, 8(r8)	/* effective address: 803A1BFC */
 /* 802F3E4C 00000028  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802F3E50 0000002C  8B C1 00 14 */	lbz r30, 0x14(r1)
 /* 802F3E54 00000030  88 01 00 15 */	lbz r0, 0x15(r1)

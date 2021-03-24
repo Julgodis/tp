@@ -182,8 +182,8 @@ lbl_8003325C:
 /* 800332A4 00000048  38 60 00 FF */	li r3, 0xff
 /* 800332A8 0000004C  48 00 00 38 */	b lbl_800332E0
 lbl_800332AC:
-/* 800332AC 00000000  3C 60 80 38 */	lis r3, d_save_d_save__stringBase0@ha
-/* 800332B0 00000004  38 63 92 34 */	addi r3, r3, d_save_d_save__stringBase0@l
+/* 800332AC 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 800332B0 00000004  38 63 92 34 */	addi r3, r3, stringBase0@l
 /* 800332B4 00000008  38 63 00 09 */	addi r3, r3, 9
 /* 800332B8 0000000C  57 A4 06 3E */	clrlwi r4, r29, 0x18
 /* 800332BC 00000010  57 85 06 3E */	clrlwi r5, r28, 0x18

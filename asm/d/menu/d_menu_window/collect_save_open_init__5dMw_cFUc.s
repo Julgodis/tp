@@ -8,9 +8,9 @@ lbl_801FA590:
 /* 801FA5A8 00000018  98 A3 01 44 */	stb r5, 0x144(r3)
 /* 801FA5AC 0000001C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801FA5B0 00000020  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801FA5B4 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)
-/* 801FA5B8 00000028  98 04 00 BA */	stb r0, 0xba(r4)
-/* 801FA5BC 0000002C  98 A4 00 B9 */	stb r5, 0xb9(r4)
+/* 801FA5B4 00000024  88 04 00 B9 */	lbz r0, 0xb9(r4)	/* effective address: 80430241 */
+/* 801FA5B8 00000028  98 04 00 BA */	stb r0, 0xba(r4)	/* effective address: 80430242 */
+/* 801FA5BC 0000002C  98 A4 00 B9 */	stb r5, 0xb9(r4)	/* effective address: 80430241 */
 /* 801FA5C0 00000030  38 80 00 01 */	li r4, 1
 /* 801FA5C4 00000034  48 00 1A CD */	bl dMw_collect_delete__5dMw_cFb
 /* 801FA5C8 00000038  7F E3 FB 78 */	mr r3, r31

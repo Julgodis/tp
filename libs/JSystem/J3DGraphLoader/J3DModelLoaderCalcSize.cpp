@@ -11,28 +11,28 @@
 // Types:
 // 
 
+struct J3DMaterialBlock {
+};
+
+struct J3DJointBlock {
+};
+
+struct J3DDrawBlock {
+};
+
+struct J3DModelInfoBlock {
+};
+
 struct J3DShapeBlock {
+};
+
+struct J3DMaterialDLBlock {
 };
 
 struct J3DTextureBlock {
 };
 
 struct J3DEnvelopeBlock {
-};
-
-struct J3DModelInfoBlock {
-};
-
-struct J3DMaterialDLBlock {
-};
-
-struct J3DDrawBlock {
-};
-
-struct J3DMaterialBlock {
-};
-
-struct J3DJointBlock {
 };
 
 struct J3DModelLoader {
@@ -95,7 +95,7 @@ extern "C" void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlock
 extern "C" void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock(); // 1
 extern "C" void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
 extern "C" void calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl(); // 1
-extern "C" extern char const* const J3DModelLoaderCalcSize__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

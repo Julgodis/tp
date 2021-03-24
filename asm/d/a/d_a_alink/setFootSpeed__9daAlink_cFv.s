@@ -21,11 +21,11 @@ lbl_800BBD40:
 /* 800BBD8C 0000004C  48 28 A7 59 */	bl PSMTXConcat
 /* 800BBD90 00000050  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800BBD94 00000054  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 800BBD98 00000058  C0 1E 00 0C */	lfs f0, 0xc(r30)
+/* 800BBD98 00000058  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
 /* 800BBD9C 0000005C  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 800BBDA0 00000060  C0 1E 00 1C */	lfs f0, 0x1c(r30)
+/* 800BBDA0 00000060  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
 /* 800BBDA4 00000064  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 800BBDA8 00000068  C0 1E 00 2C */	lfs f0, 0x2c(r30)
+/* 800BBDA8 00000068  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
 /* 800BBDAC 0000006C  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 800BBDB0 00000070  80 7F 06 50 */	lwz r3, 0x650(r31)
 /* 800BBDB4 00000074  80 63 00 84 */	lwz r3, 0x84(r3)
@@ -82,7 +82,7 @@ lbl_800BBE04:
 /* 800BBE78 00000074  C0 1F 33 9C */	lfs f0, 0x339c(r31)
 /* 800BBE7C 00000078  FC 00 02 10 */	fabs f0, f0
 /* 800BBE80 0000007C  FC 20 00 18 */	frsp f1, f0
-/* 800BBE84 00000080  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800BBE84 00000080  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800BBE88 00000084  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BBE8C 00000000  40 80 00 88 */	bge lbl_800BBF14
 /* 800BBE90 00000004  C0 3F 33 AC */	lfs f1, 0x33ac(r31)

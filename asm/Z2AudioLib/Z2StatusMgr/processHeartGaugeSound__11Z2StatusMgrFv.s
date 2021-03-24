@@ -4,7 +4,7 @@ lbl_802B5F7C:
 /* 802B5F84 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802B5F88 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 802B5F8C 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 802B5F90 00000014  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 802B5F90 00000014  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 802B5F94 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 802B5F98 0000001C  40 82 01 24 */	bne lbl_802B60BC
 /* 802B5F9C 00000020  88 83 00 2D */	lbz r4, 0x2d(r3)

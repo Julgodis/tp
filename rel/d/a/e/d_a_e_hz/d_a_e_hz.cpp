@@ -16,10 +16,10 @@ struct daE_HZ_HIO_c {
 	/* 806F0368 */ ~daE_HZ_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_HZ_c {

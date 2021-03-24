@@ -441,7 +441,7 @@ SECTION_SDATA2 static u8 lit_652[8] = {
 };
 
 /* 80455408-80455410 0008+00 s=5 e=0 z=0  None .sdata2    @792                                                         */
-SECTION_SDATA2 static f64 functionvalue__lit_792 = 1.0;
+SECTION_SDATA2 static f64 lit_792 = 1.0;
 
 /* 80455410-80455418 0008+00 s=1 e=0 z=0  None .sdata2    @793                                                         */
 SECTION_SDATA2 static f64 lit_793 = 3.0;
@@ -494,7 +494,7 @@ asm void JStudio::functionvalue::interpolateValue_BSpline_nonuniform(f64 param_0
 
 /* ############################################################################################## */
 /* 80455438-80455440 0008+00 s=3 e=0 z=0  None .sdata2    @842                                                         */
-SECTION_SDATA2 static f64 functionvalue__lit_842 = 2.0;
+SECTION_SDATA2 static f64 lit_842 = 2.0;
 
 /* 802818B8-80281918 0060+00 s=1 e=0 z=0  None .text      extrapolateParameter_turn__Q27JStudio13functionvalueFdd      */
 #pragma push
@@ -520,7 +520,7 @@ asm void JStudio::TFunctionValueAttribute_range::range_initialize() {
 
 /* ############################################################################################## */
 /* 80455440-80455448 0008+00 s=1 e=0 z=0  None .sdata2    @867                                                         */
-SECTION_SDATA2 static f64 functionvalue__lit_867 = -1.0;
+SECTION_SDATA2 static f64 lit_867 = -1.0;
 
 /* 8028194C-802819F4 00A8+00 s=4 e=0 z=0  None .text      range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv   */
 #pragma push
@@ -902,7 +902,7 @@ asm void JStudio::TFunctionValue_list::prepare() {
 
 /* ############################################################################################## */
 /* 80455448-80455450 0008+00 s=1 e=0 z=0  None .sdata2    @1517                                                        */
-SECTION_SDATA2 static f64 functionvalue__lit_1517 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_1517 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80282858-80282C10 03B8+00 s=1 e=0 z=0  None .text      getValue__Q27JStudio19TFunctionValue_listFd                  */
 #pragma push

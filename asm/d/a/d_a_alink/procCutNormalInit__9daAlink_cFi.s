@@ -6,8 +6,8 @@ lbl_800D2F58:
 /* 800D2F68 00000010  48 28 F2 6D */	bl _savegpr_27
 /* 800D2F6C 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 800D2F70 00000018  7C 9B 23 78 */	mr r27, r4
-/* 800D2F74 0000001C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800D2F78 00000020  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
+/* 800D2F74 0000001C  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800D2F78 00000020  3B E4 D6 58 */	addi r31, r4, lit_3757@l
 /* 800D2F7C 00000024  57 60 20 36 */	slwi r0, r27, 4
 /* 800D2F80 00000028  3B DF 41 B0 */	addi r30, r31, 0x41b0
 /* 800D2F84 0000002C  7F DE 02 14 */	add r30, r30, r0
@@ -112,9 +112,9 @@ lbl_800D30E0:
 /* 800D30E0 00000000  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800D30E4 00000004  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800D30E8 00000008  D0 1D 35 88 */	stfs f0, 0x3588(r29)
-/* 800D30EC 0000000C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800D30EC 0000000C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800D30F0 00000010  D0 1D 35 8C */	stfs f0, 0x358c(r29)
-/* 800D30F4 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800D30F4 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D30F8 00000018  D0 1D 35 90 */	stfs f0, 0x3590(r29)
 /* 800D30FC 0000001C  39 1F 08 34 */	addi r8, r31, 0x834
 /* 800D3100 00000020  A8 08 00 52 */	lha r0, 0x52(r8)
@@ -133,9 +133,9 @@ lbl_800D30E0:
 /* 800D3134 00000054  B0 1D 30 12 */	sth r0, 0x3012(r29)
 /* 800D3138 00000058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D313C 0000005C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D3140 00000060  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800D3140 00000060  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D3144 00000064  60 00 80 00 */	ori r0, r0, 0x8000
-/* 800D3148 00000068  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800D3148 00000068  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D314C 0000006C  7F A3 EB 78 */	mr r3, r29
 /* 800D3150 00000070  48 05 0F F5 */	bl setCutWaterDropEffect__9daAlink_cFv
 /* 800D3154 00000074  7F A3 EB 78 */	mr r3, r29

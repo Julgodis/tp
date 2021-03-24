@@ -4,7 +4,7 @@ lbl_8003EF20:
 /* 8003EF28 00000008  38 60 00 00 */	li r3, 0
 /* 8003EF2C 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8003EF30 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8003EF34 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 8003EF34 00000014  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 8003EF38 00000018  28 04 00 00 */	cmplwi r4, 0
 /* 8003EF3C 0000001C  41 82 00 08 */	beq lbl_8003EF44
 /* 8003EF40 00000020  A8 64 04 E6 */	lha r3, 0x4e6(r4)

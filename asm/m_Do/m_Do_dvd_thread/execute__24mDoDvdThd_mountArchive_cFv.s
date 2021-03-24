@@ -17,8 +17,8 @@ lbl_80015F14:
 /* 80015F14 00000000  4B FF 8E D9 */	bl mDoExt_getArchiveHeap__Fv
 lbl_80015F18:
 /* 80015F18 00000000  7C 79 1B 78 */	mr r25, r3
-/* 80015F1C 00000004  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 80015F20 00000008  3B E3 41 A8 */	addi r31, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 80015F1C 00000004  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80015F20 00000008  3B E3 41 A8 */	addi r31, r3, stringBase0@l
 lbl_80015F24:
 /* 80015F24 00000000  4B FF 8E D1 */	bl mDoExt_getArchiveHeapPtr__Fv
 /* 80015F28 00000004  7C 19 18 40 */	cmplw r25, r3
@@ -96,8 +96,8 @@ lbl_80015FF4:
 lbl_80016024:
 /* 80016024 00000000  57 C0 06 3F */	clrlwi. r0, r30, 0x18
 /* 80016028 00000004  40 82 00 24 */	bne lbl_8001604C
-/* 8001602C 00000008  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 80016030 0000000C  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 8001602C 00000008  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80016030 0000000C  38 63 41 A8 */	addi r3, r3, stringBase0@l
 /* 80016034 00000010  38 63 00 6E */	addi r3, r3, 0x6e
 /* 80016038 00000014  4C C6 31 82 */	crclr 6
 /* 8001603C 00000018  4B FF 0B D1 */	bl OSReport_Error
@@ -107,8 +107,8 @@ lbl_80016024:
 lbl_8001604C:
 /* 8001604C 00000000  57 80 06 3F */	clrlwi. r0, r28, 0x18
 /* 80016050 00000004  40 82 00 24 */	bne lbl_80016074
-/* 80016054 00000008  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 80016058 0000000C  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 80016054 00000008  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80016058 0000000C  38 63 41 A8 */	addi r3, r3, stringBase0@l
 /* 8001605C 00000010  38 63 00 AE */	addi r3, r3, 0xae
 /* 80016060 00000014  4C C6 31 82 */	crclr 6
 /* 80016064 00000018  4B FF 0B A9 */	bl OSReport_Error
@@ -118,8 +118,8 @@ lbl_8001604C:
 lbl_80016074:
 /* 80016074 00000000  57 A0 06 3F */	clrlwi. r0, r29, 0x18
 /* 80016078 00000004  40 82 00 24 */	bne lbl_8001609C
-/* 8001607C 00000008  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 80016080 0000000C  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 8001607C 00000008  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 80016080 0000000C  38 63 41 A8 */	addi r3, r3, stringBase0@l
 /* 80016084 00000010  38 63 00 F2 */	addi r3, r3, 0xf2
 /* 80016088 00000014  4C C6 31 82 */	crclr 6
 /* 8001608C 00000018  4B FF 0B 81 */	bl OSReport_Error
@@ -129,8 +129,8 @@ lbl_80016074:
 lbl_8001609C:
 /* 8001609C 00000000  57 60 06 3F */	clrlwi. r0, r27, 0x18
 /* 800160A0 00000004  40 82 00 24 */	bne lbl_800160C4
-/* 800160A4 00000008  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 800160A8 0000000C  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 800160A4 00000008  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 800160A8 0000000C  38 63 41 A8 */	addi r3, r3, stringBase0@l
 /* 800160AC 00000010  38 63 01 32 */	addi r3, r3, 0x132
 /* 800160B0 00000014  4C C6 31 82 */	crclr 6
 /* 800160B4 00000018  4B FF 0B 59 */	bl OSReport_Error
@@ -138,8 +138,8 @@ lbl_8001609C:
 /* 800160BC 00000020  7C 79 1B 78 */	mr r25, r3
 /* 800160C0 00000024  4B FF FE 64 */	b lbl_80015F24
 lbl_800160C4:
-/* 800160C4 00000000  3C 60 80 37 */	lis r3, m_Do_m_Do_dvd_thread__stringBase0@ha
-/* 800160C8 00000004  38 63 41 A8 */	addi r3, r3, m_Do_m_Do_dvd_thread__stringBase0@l
+/* 800160C4 00000000  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 800160C8 00000004  38 63 41 A8 */	addi r3, r3, stringBase0@l
 /* 800160CC 00000008  38 63 01 6F */	addi r3, r3, 0x16f
 /* 800160D0 0000000C  4C C6 31 82 */	crclr 6
 /* 800160D4 00000010  4B FF 0A 69 */	bl OSReport_FatalError

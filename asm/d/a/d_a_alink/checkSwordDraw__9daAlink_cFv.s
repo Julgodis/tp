@@ -9,7 +9,7 @@ lbl_800CB480:
 /* 800CB49C 0000001C  7F E6 FB 78 */	mr r6, r31
 /* 800CB4A0 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800CB4A4 00000024  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800CB4A8 00000028  88 04 00 14 */	lbz r0, 0x14(r4)
+/* 800CB4A8 00000028  88 04 00 14 */	lbz r0, 0x14(r4)	/* effective address: 804061D4 */
 /* 800CB4AC 0000002C  28 00 00 FF */	cmplwi r0, 0xff
 /* 800CB4B0 00000030  41 82 00 14 */	beq lbl_800CB4C4
 /* 800CB4B4 00000034  88 03 2F D6 */	lbz r0, 0x2fd6(r3)

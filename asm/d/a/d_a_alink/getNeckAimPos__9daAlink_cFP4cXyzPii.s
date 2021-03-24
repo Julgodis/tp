@@ -31,7 +31,7 @@ lbl_800A09A4:
 lbl_800A09AC:
 /* 800A09AC 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800A09B0 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800A09B4 00000008  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800A09B4 00000008  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800A09B8 0000000C  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 800A09BC 00000010  41 82 00 D8 */	beq lbl_800A0A94
 /* 800A09C0 00000014  28 05 01 5B */	cmplwi r5, 0x15b
@@ -239,7 +239,7 @@ lbl_800A0C84:
 /* 800A0C90 0000000C  40 82 06 20 */	bne lbl_800A12B0
 /* 800A0C94 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800A0C98 00000014  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
-/* 800A0C9C 00000018  80 1A 5F 1C */	lwz r0, 0x5f1c(r26)
+/* 800A0C9C 00000018  80 1A 5F 1C */	lwz r0, 0x5f1c(r26)	/* effective address: 8040C0DC */
 /* 800A0CA0 0000001C  74 00 02 01 */	andis. r0, r0, 0x201
 /* 800A0CA4 00000020  41 82 00 20 */	beq lbl_800A0CC4
 /* 800A0CA8 00000024  88 1F 20 68 */	lbz r0, 0x2068(r31)
@@ -468,7 +468,7 @@ lbl_800A0FC8:
 /* 800A0FDC 00000014  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 800A0FE0 00000018  38 61 00 20 */	addi r3, r1, 0x20
 /* 800A0FE4 0000001C  48 2A 61 55 */	bl PSVECSquareMag
-/* 800A0FE8 00000020  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800A0FE8 00000020  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800A0FEC 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800A0FF0 00000000  40 81 00 68 */	ble lbl_800A1058
 /* 800A0FF4 00000004  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -511,7 +511,7 @@ lbl_800A1058:
 /* 800A107C 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800A1080 00000000  40 81 00 58 */	ble lbl_800A10D8
 /* 800A1084 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800A1088 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800A1088 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800A108C 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800A1090 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800A1094 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -573,7 +573,7 @@ lbl_800A114C:
 /* 800A1154 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 800A1158 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_800A115C:
-/* 800A115C 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800A115C 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800A1160 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800A1164 00000000  40 81 00 70 */	ble lbl_800A11D4
 /* 800A1168 00000004  7F E3 FB 78 */	mr r3, r31

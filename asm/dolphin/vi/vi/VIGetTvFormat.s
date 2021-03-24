@@ -7,8 +7,8 @@ lbl_8034DA9C:
 /* 8034DAB0 00000014  80 AD 92 AC */	lwz r5, CurrTvMode(r13)
 /* 8034DAB4 00000018  28 05 00 07 */	cmplwi r5, 7
 /* 8034DAB8 0000001C  41 81 00 30 */	bgt lbl_8034DAE8
-/* 8034DABC 00000020  3C 80 80 3D */	lis r4, vi__lit_740@ha
-/* 8034DAC0 00000024  38 84 1B 24 */	addi r4, r4, vi__lit_740@l
+/* 8034DABC 00000020  3C 80 80 3D */	lis r4, lit_740@ha
+/* 8034DAC0 00000024  38 84 1B 24 */	addi r4, r4, lit_740@l
 /* 8034DAC4 00000028  54 A0 10 3A */	slwi r0, r5, 2
 /* 8034DAC8 0000002C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8034DACC 00000030  7C 09 03 A6 */	mtctr r0

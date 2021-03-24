@@ -17,10 +17,10 @@ struct JKRHeap {
 struct ResTIMG {
 };
 
-struct JPAResource {
+struct JPATexture {
 };
 
-struct JPATexture {
+struct JPAResource {
 };
 
 struct JPAResourceManager {

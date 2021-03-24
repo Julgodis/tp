@@ -31,8 +31,8 @@ lbl_80130698:
 /* 801306C0 00000028  38 80 00 0E */	li r4, 0xe
 /* 801306C4 0000002C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_wlLie_c0@ha
 /* 801306C8 00000030  38 A5 F1 38 */	addi r5, r5, m__19daAlinkHIO_wlLie_c0@l
-/* 801306CC 00000034  C0 25 00 44 */	lfs f1, 0x44(r5)
-/* 801306D0 00000038  C0 45 00 48 */	lfs f2, 0x48(r5)
+/* 801306CC 00000034  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 8038F17C */
+/* 801306D0 00000038  C0 45 00 48 */	lfs f2, 0x48(r5)	/* effective address: 8038F180 */
 /* 801306D4 0000003C  4B FF 90 05 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 801306D8 00000040  48 00 00 10 */	b lbl_801306E8
 lbl_801306DC:

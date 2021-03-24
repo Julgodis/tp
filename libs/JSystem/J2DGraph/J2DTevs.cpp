@@ -153,7 +153,7 @@ asm void J2DTexMtx::calc() {
 SECTION_SDATA2 static f32 lit_1488 = 3.1415927410125732f;
 
 /* 8045616C-80456170 0004+00 s=2 e=0 z=0  None .sdata2    @1489                                                        */
-SECTION_SDATA2 static f32 J2DTevs__lit_1489 = 180.0f;
+SECTION_SDATA2 static f32 lit_1489 = 180.0f;
 
 /* 80456170-80456174 0004+00 s=2 e=0 z=0  None .sdata2    @1490                                                        */
 SECTION_SDATA2 static u8 lit_1490[4] = {
@@ -161,7 +161,7 @@ SECTION_SDATA2 static u8 lit_1490[4] = {
 };
 
 /* 80456174-80456178 0004+00 s=2 e=0 z=0  None .sdata2    @1491                                                        */
-SECTION_SDATA2 static f32 J2DTevs__lit_1491 = 1.0f;
+SECTION_SDATA2 static f32 lit_1491 = 1.0f;
 
 /* 802E9D2C-802E9EBC 0190+00 s=1 e=0 z=0  None .text      getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f     */
 #pragma push

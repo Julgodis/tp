@@ -28,7 +28,7 @@ lbl_80204170:
 /* 802041D8 00000068  41 82 00 30 */	beq lbl_80204208
 /* 802041DC 0000006C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802041E0 00000070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802041E4 00000074  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 802041E4 00000074  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 802041E8 00000078  28 00 00 00 */	cmplwi r0, 0
 /* 802041EC 0000007C  41 82 00 10 */	beq lbl_802041FC
 /* 802041F0 00000080  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)

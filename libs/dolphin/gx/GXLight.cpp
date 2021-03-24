@@ -49,7 +49,7 @@ extern "C" asm void GXInitLightAttn() {
 
 /* ############################################################################################## */
 /* 803D2578-803D2598 001C+04 s=1 e=0 z=0  None .data      @145                                                         */
-SECTION_DATA static void* GXLight__lit_145[7 + 1 /* padding */] = {
+SECTION_DATA static void* lit_145[7 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)GXInitLightSpot)+0x160),
 	/* 1    */ (void*)(((char*)GXInitLightSpot)+0x70),
 	/* 2    */ (void*)(((char*)GXInitLightSpot)+0x84),
@@ -67,7 +67,7 @@ SECTION_SDATA2 static u8 lit_134[4] = {
 };
 
 /* 804565BC-804565C0 0004+00 s=1 e=0 z=0  None .sdata2    @135                                                         */
-SECTION_SDATA2 static f32 GXLight__lit_135 = 90.0f;
+SECTION_SDATA2 static f32 lit_135 = 90.0f;
 
 /* 804565C0-804565C4 0004+00 s=1 e=0 z=0  None .sdata2    @136                                                         */
 SECTION_SDATA2 static f32 lit_136 = 3.1415927410125732f;
@@ -82,7 +82,7 @@ SECTION_SDATA2 static f32 lit_138 = -1000.0f;
 SECTION_SDATA2 static f32 lit_139 = 1000.0f;
 
 /* 804565D0-804565D4 0004+00 s=2 e=0 z=0  None .sdata2    @140                                                         */
-SECTION_SDATA2 static f32 GXLight__lit_140 = 1.0f;
+SECTION_SDATA2 static f32 lit_140 = 1.0f;
 
 /* 804565D4-804565D8 0004+00 s=1 e=0 z=0  None .sdata2    @141                                                         */
 SECTION_SDATA2 static f32 lit_141 = 2.0f;
@@ -109,7 +109,7 @@ extern "C" asm void GXInitLightSpot() {
 
 /* ############################################################################################## */
 /* 804565E4-804565E8 0004+00 s=1 e=0 z=0  None .sdata2    @160                                                         */
-SECTION_SDATA2 static f32 GXLight__lit_160 = 0.5f;
+SECTION_SDATA2 static f32 lit_160 = 0.5f;
 
 /* 8035D7DC-8035D8AC 00D0+00 s=0 e=2 z=0  None .text      GXInitLightDistAttn                                          */
 #pragma push

@@ -213,37 +213,37 @@ lbl_802DF9AC:
 /* 802DFAFC 00000150  48 07 CC 69 */	bl GXBegin
 /* 802DFB00 00000154  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */
 /* 802DFB04 00000158  D3 E3 80 00 */	stfs f31, 0x8000(r3)
-/* 802DFB08 0000015C  D3 43 80 00 */	stfs f26, -0x8000(r3)
+/* 802DFB08 0000015C  D3 43 80 00 */	stfs f26, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB0C 00000160  C0 02 C5 F0 */	lfs f0, lit_647(r2)
-/* 802DFB10 00000164  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802DFB10 00000164  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB14 00000168  80 1E 00 0C */	lwz r0, 0xc(r30)
-/* 802DFB18 0000016C  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802DFB1C 00000170  B3 E3 80 00 */	sth r31, -0x8000(r3)
-/* 802DFB20 00000174  B3 A3 80 00 */	sth r29, -0x8000(r3)
-/* 802DFB24 00000178  D3 C3 80 00 */	stfs f30, -0x8000(r3)
-/* 802DFB28 0000017C  D3 43 80 00 */	stfs f26, -0x8000(r3)
+/* 802DFB18 0000016C  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB1C 00000170  B3 E3 80 00 */	sth r31, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB20 00000174  B3 A3 80 00 */	sth r29, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB24 00000178  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB28 0000017C  D3 43 80 00 */	stfs f26, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB2C 00000180  C0 02 C5 F0 */	lfs f0, lit_647(r2)
-/* 802DFB30 00000184  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802DFB30 00000184  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB34 00000188  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 802DFB38 0000018C  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802DFB3C 00000190  B3 83 80 00 */	sth r28, -0x8000(r3)
-/* 802DFB40 00000194  B3 A3 80 00 */	sth r29, -0x8000(r3)
-/* 802DFB44 00000198  D3 C3 80 00 */	stfs f30, -0x8000(r3)
-/* 802DFB48 0000019C  D3 63 80 00 */	stfs f27, -0x8000(r3)
+/* 802DFB38 0000018C  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB3C 00000190  B3 83 80 00 */	sth r28, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB40 00000194  B3 A3 80 00 */	sth r29, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB44 00000198  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB48 0000019C  D3 63 80 00 */	stfs f27, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB4C 000001A0  C0 02 C5 F0 */	lfs f0, lit_647(r2)
-/* 802DFB50 000001A4  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802DFB50 000001A4  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB54 000001A8  80 1E 00 18 */	lwz r0, 0x18(r30)
-/* 802DFB58 000001AC  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802DFB5C 000001B0  B3 83 80 00 */	sth r28, -0x8000(r3)
-/* 802DFB60 000001B4  B3 63 80 00 */	sth r27, -0x8000(r3)
-/* 802DFB64 000001B8  D3 E3 80 00 */	stfs f31, -0x8000(r3)
-/* 802DFB68 000001BC  D3 63 80 00 */	stfs f27, -0x8000(r3)
+/* 802DFB58 000001AC  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB5C 000001B0  B3 83 80 00 */	sth r28, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB60 000001B4  B3 63 80 00 */	sth r27, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB64 000001B8  D3 E3 80 00 */	stfs f31, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB68 000001BC  D3 63 80 00 */	stfs f27, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB6C 000001C0  C0 02 C5 F0 */	lfs f0, lit_647(r2)
-/* 802DFB70 000001C4  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802DFB70 000001C4  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB74 000001C8  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 802DFB78 000001CC  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802DFB7C 000001D0  B3 E3 80 00 */	sth r31, -0x8000(r3)
-/* 802DFB80 000001D4  B3 63 80 00 */	sth r27, -0x8000(r3)
+/* 802DFB78 000001CC  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB7C 000001D0  B3 E3 80 00 */	sth r31, -0x8000(r3)	/* effective address: CC008000 */
+/* 802DFB80 000001D4  B3 63 80 00 */	sth r27, -0x8000(r3)	/* effective address: CC008000 */
 /* 802DFB84 000001D8  38 60 00 00 */	li r3, 0
 /* 802DFB88 000001DC  38 80 00 09 */	li r4, 9
 /* 802DFB8C 000001E0  38 A0 00 01 */	li r5, 1

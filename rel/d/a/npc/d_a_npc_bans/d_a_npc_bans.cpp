@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 8096741C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Bans_c {
@@ -61,6 +61,8 @@ struct daNpc_Bans_c {
 	/* 80964AD8 */ void setScoopAnm(int, int, f32);
 	/* 80964B9C */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80964BD0 */ void selectAction();
+	/* 80964C4C */ void chkAction(int (daNpc_Bans_c::*)(void*));
+	/* 80964C78 */ void setAction(int (daNpc_Bans_c::*)(void*));
 	/* 80964D20 */ void checkPlayerIn2ndFloorOfBombShop();
 	/* 80964DD0 */ void orderAngerEvt();
 	/* 80964EB0 */ void getKMsgTagP();
@@ -247,8 +249,8 @@ extern "C" void drawOtherMdl__12daNpc_Bans_cFv(); // 1
 extern "C" void setScoopAnm__12daNpc_Bans_cFiif(); // 1
 extern "C" void afterSetMotionAnm__12daNpc_Bans_cFiifi(); // 1
 extern "C" void selectAction__12daNpc_Bans_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i(); // 1
 extern "C" void checkPlayerIn2ndFloorOfBombShop__12daNpc_Bans_cFv(); // 1
 extern "C" void orderAngerEvt__12daNpc_Bans_cFv(); // 1
 extern "C" void getKMsgTagP__12daNpc_Bans_cFv(); // 1
@@ -832,7 +834,7 @@ asm void daNpc_Bans_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i() {
+asm void daNpc_Bans_c::chkAction(int (daNpc_Bans_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/chkAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i.s"
 }
@@ -843,7 +845,7 @@ extern "C" asm static void chkAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i() {
+asm void daNpc_Bans_c::setAction(int (daNpc_Bans_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_bans/d_a_npc_bans/setAction__12daNpc_Bans_cFM12daNpc_Bans_cFPCvPvPv_i.s"
 }

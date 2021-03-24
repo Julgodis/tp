@@ -4,7 +4,7 @@ lbl_80238588:
 /* 80238590 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80238594 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80238598 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8023859C 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 8023859C 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 802385A0 00000018  4B FF F3 35 */	bl isHowlHearingModeLocal__12dMsgObject_cFv
 /* 802385A4 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802385A8 00000020  7C 08 03 A6 */	mtlr r0

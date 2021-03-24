@@ -23,11 +23,11 @@ lbl_801C8B48:
 lbl_801C8B9C:
 /* 801C8B9C 00000000  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C8BA0 00000004  38 80 00 01 */	li r4, 1
-/* 801C8BA4 00000008  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C8BA4 00000008  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C8BA8 0000000C  48 00 EB 6D */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C8BAC 00000010  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C8BB0 00000014  38 80 00 02 */	li r4, 2
-/* 801C8BB4 00000018  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C8BB4 00000018  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C8BB8 0000001C  48 00 EB 5D */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C8BBC 00000020  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C8BC0 00000024  38 80 05 22 */	li r4, 0x522

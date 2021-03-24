@@ -5,14 +5,14 @@ lbl_8033ECA8:
 /* 8033ECB4 0000000C  39 03 40 00 */	addi r8, r3, 0x4000 /* 0xCC004000@l */
 /* 8033ECB8 00000010  38 00 00 00 */	li r0, 0
 /* 8033ECBC 00000014  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8033ECC0 00000018  A0 E3 40 24 */	lhz r7, 0x4024(r3)
+/* 8033ECC0 00000018  A0 E3 40 24 */	lhz r7, 0x4024(r3)	/* effective address: CC004024 */
 /* 8033ECC4 0000001C  3C 60 80 45 */	lis r3, __OSErrorTable@ha
-/* 8033ECC8 00000020  A0 C8 00 22 */	lhz r6, 0x22(r8)
+/* 8033ECC8 00000020  A0 C8 00 22 */	lhz r6, 0x22(r8)	/* effective address: CC004022 */
 /* 8033ECCC 00000024  38 63 BA D0 */	addi r3, r3, __OSErrorTable@l
-/* 8033ECD0 00000028  A0 A8 00 1E */	lhz r5, 0x1e(r8)
+/* 8033ECD0 00000028  A0 A8 00 1E */	lhz r5, 0x1e(r8)	/* effective address: CC00401E */
 /* 8033ECD4 0000002C  50 E6 81 9E */	rlwimi r6, r7, 0x10, 6, 0xf
-/* 8033ECD8 00000030  B0 08 00 20 */	sth r0, 0x20(r8)
-/* 8033ECDC 00000034  81 83 00 3C */	lwz r12, 0x3c(r3)
+/* 8033ECD8 00000030  B0 08 00 20 */	sth r0, 0x20(r8)	/* effective address: CC004020 */
+/* 8033ECDC 00000034  81 83 00 3C */	lwz r12, 0x3c(r3)	/* effective address: 8044BB0C */
 /* 8033ECE0 00000038  28 0C 00 00 */	cmplwi r12, 0
 /* 8033ECE4 0000003C  41 82 00 18 */	beq lbl_8033ECFC
 /* 8033ECE8 00000040  7D 88 03 A6 */	mtlr r12

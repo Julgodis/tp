@@ -75,13 +75,13 @@ lbl_80189AE0:
 /* 80189B2C 0000004C  38 A0 00 01 */	li r5, 1
 /* 80189B30 00000050  48 00 B5 C5 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 80189B34 00000054  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 80189B38 00000058  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 80189B38 00000058  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80189B3C 0000005C  48 00 B7 65 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80189B40 00000060  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 80189B44 00000064  C0 22 9F 68 */	lfs f1, lit_6069(r2)
 /* 80189B48 00000068  C0 42 9F 6C */	lfs f2, lit_6070(r2)
 /* 80189B4C 0000006C  C0 62 9F 70 */	lfs f3, lit_6071(r2)
-/* 80189B50 00000070  C0 82 9F 30 */	lfs f4, d_file_d_file_select__lit_4166(r2)
+/* 80189B50 00000070  C0 82 9F 30 */	lfs f4, lit_4166(r2)
 /* 80189B54 00000074  FC A0 20 90 */	fmr f5, f4
 /* 80189B58 00000078  48 00 B6 59 */	bl setParam__16dSelect_cursor_cFfffff
 lbl_80189B5C:
@@ -96,7 +96,7 @@ lbl_80189B68:
 /* 80189B78 00000010  48 00 00 18 */	b lbl_80189B90
 lbl_80189B7C:
 /* 80189B7C 00000000  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 80189B80 00000004  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 80189B80 00000004  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80189B84 00000008  48 00 B7 1D */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80189B88 0000000C  38 00 00 16 */	li r0, 0x16
 /* 80189B8C 00000010  98 1F 02 6F */	stb r0, 0x26f(r31)

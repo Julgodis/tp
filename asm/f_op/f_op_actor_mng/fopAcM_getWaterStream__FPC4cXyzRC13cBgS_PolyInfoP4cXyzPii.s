@@ -72,9 +72,9 @@ lbl_8001DAA4:
 /* 8001DAA4 00000000  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 8001DAA8 00000004  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 8001DAAC 00000008  D0 1C 00 00 */	stfs f0, 0(r28)
-/* 8001DAB0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8001DAB0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
 /* 8001DAB4 00000010  D0 1C 00 04 */	stfs f0, 4(r28)
-/* 8001DAB8 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8001DAB8 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
 /* 8001DABC 00000018  D0 1C 00 08 */	stfs f0, 8(r28)
 /* 8001DAC0 0000001C  38 00 00 00 */	li r0, 0
 /* 8001DAC4 00000020  90 1D 00 00 */	stw r0, 0(r29)

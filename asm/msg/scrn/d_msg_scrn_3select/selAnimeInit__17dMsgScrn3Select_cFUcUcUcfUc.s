@@ -24,41 +24,41 @@ lbl_8023A094:
 lbl_8023A0EC:
 /* 8023A0EC 00000000  7F FE EA 14 */	add r31, r30, r29
 /* 8023A0F0 00000004  80 7F 00 AC */	lwz r3, 0xac(r31)
-/* 8023A0F4 00000008  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A0F4 00000008  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A0F8 0000000C  FC 40 08 90 */	fmr f2, f1
 /* 8023A0FC 00000010  48 01 A5 3D */	bl paneScale__8CPaneMgrFff
 /* 8023A100 00000014  80 7F 00 B8 */	lwz r3, 0xb8(r31)
-/* 8023A104 00000018  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A104 00000018  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A108 0000001C  FC 40 08 90 */	fmr f2, f1
 /* 8023A10C 00000020  48 01 A5 2D */	bl paneScale__8CPaneMgrFff
 /* 8023A110 00000024  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 8023A114 00000028  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A114 00000028  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A118 0000002C  FC 40 08 90 */	fmr f2, f1
 /* 8023A11C 00000030  48 01 A5 1D */	bl paneScale__8CPaneMgrFff
 /* 8023A120 00000034  80 7F 00 88 */	lwz r3, 0x88(r31)
-/* 8023A124 00000038  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A124 00000038  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A128 0000003C  FC 40 08 90 */	fmr f2, f1
 /* 8023A12C 00000040  48 01 A5 0D */	bl paneScale__8CPaneMgrFff
 /* 8023A130 00000044  80 7F 00 40 */	lwz r3, 0x40(r31)
-/* 8023A134 00000048  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A134 00000048  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A138 0000004C  FC 40 08 90 */	fmr f2, f1
 /* 8023A13C 00000050  48 01 A4 FD */	bl paneScale__8CPaneMgrFff
 /* 8023A140 00000054  80 7F 00 4C */	lwz r3, 0x4c(r31)
-/* 8023A144 00000058  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A144 00000058  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A148 0000005C  FC 40 08 90 */	fmr f2, f1
 /* 8023A14C 00000060  48 01 A4 ED */	bl paneScale__8CPaneMgrFff
 /* 8023A150 00000064  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 8023A154 00000068  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A154 00000068  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A158 0000006C  FC 40 08 90 */	fmr f2, f1
 /* 8023A15C 00000070  48 01 A4 DD */	bl paneScale__8CPaneMgrFff
 /* 8023A160 00000074  80 7F 00 1C */	lwz r3, 0x1c(r31)
-/* 8023A164 00000078  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A164 00000078  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A168 0000007C  FC 40 08 90 */	fmr f2, f1
 /* 8023A16C 00000080  48 01 A4 CD */	bl paneScale__8CPaneMgrFff
 /* 8023A170 00000084  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 8023A174 00000088  28 03 00 00 */	cmplwi r3, 0
 /* 8023A178 0000008C  41 82 00 10 */	beq lbl_8023A188
-/* 8023A17C 00000090  C0 22 B1 60 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A17C 00000090  C0 22 B1 60 */	lfs f1, lit_3911(r2)
 /* 8023A180 00000094  FC 40 08 90 */	fmr f2, f1
 /* 8023A184 00000098  48 01 A4 B5 */	bl paneScale__8CPaneMgrFff
 lbl_8023A188:
@@ -76,7 +76,7 @@ lbl_8023A188:
 /* 8023A1B4 00000008  D0 1E 01 04 */	stfs f0, 0x104(r30)
 /* 8023A1B8 0000000C  48 00 00 0C */	b lbl_8023A1C4
 lbl_8023A1BC:
-/* 8023A1BC 00000000  C0 02 B1 60 */	lfs f0, msg_scrn_d_msg_scrn_3select__lit_3911(r2)
+/* 8023A1BC 00000000  C0 02 B1 60 */	lfs f0, lit_3911(r2)
 /* 8023A1C0 00000004  D0 1E 01 04 */	stfs f0, 0x104(r30)
 lbl_8023A1C4:
 /* 8023A1C4 00000000  57 40 06 3E */	clrlwi r0, r26, 0x18
@@ -101,13 +101,13 @@ lbl_8023A1E0:
 /* 8023A20C 0000002C  80 7E 00 34 */	lwz r3, 0x34(r30)
 /* 8023A210 00000030  C0 43 00 28 */	lfs f2, 0x28(r3)
 /* 8023A214 00000034  80 7E 00 18 */	lwz r3, 0x18(r30)
-/* 8023A218 00000038  C0 22 B1 58 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3909(r2)
+/* 8023A218 00000038  C0 22 B1 58 */	lfs f1, lit_3909(r2)
 /* 8023A21C 0000003C  EC 42 00 28 */	fsubs f2, f2, f0
 /* 8023A220 00000040  48 01 A3 91 */	bl paneTrans__8CPaneMgrFff
 /* 8023A224 00000044  48 00 00 40 */	b lbl_8023A264
 lbl_8023A228:
 /* 8023A228 00000000  80 7E 00 18 */	lwz r3, 0x18(r30)
-/* 8023A22C 00000004  C0 22 B1 58 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3909(r2)
+/* 8023A22C 00000004  C0 22 B1 58 */	lfs f1, lit_3909(r2)
 /* 8023A230 00000008  FC 40 08 90 */	fmr f2, f1
 /* 8023A234 0000000C  48 01 A3 7D */	bl paneTrans__8CPaneMgrFff
 /* 8023A238 00000010  48 00 00 2C */	b lbl_8023A264
@@ -119,7 +119,7 @@ lbl_8023A23C:
 /* 8023A24C 00000010  80 7E 00 3C */	lwz r3, 0x3c(r30)
 /* 8023A250 00000014  48 01 B3 79 */	bl show__13CPaneMgrAlphaFv
 /* 8023A254 00000018  80 7E 00 18 */	lwz r3, 0x18(r30)
-/* 8023A258 0000001C  C0 22 B1 58 */	lfs f1, msg_scrn_d_msg_scrn_3select__lit_3909(r2)
+/* 8023A258 0000001C  C0 22 B1 58 */	lfs f1, lit_3909(r2)
 /* 8023A25C 00000020  FC 40 08 90 */	fmr f2, f1
 /* 8023A260 00000024  48 01 A3 51 */	bl paneTrans__8CPaneMgrFff
 lbl_8023A264:

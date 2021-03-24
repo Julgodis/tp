@@ -5,8 +5,8 @@ lbl_8018C8F4:
 /* 8018C900 0000000C  39 61 00 50 */	addi r11, r1, 0x50
 /* 8018C904 00000010  48 1D 58 C5 */	bl _savegpr_24
 /* 8018C908 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 8018C90C 00000018  3C 60 80 3C */	lis r3, d_file_d_file_select__cNullVec__6Z2Calc@ha
-/* 8018C910 0000001C  3B 83 A8 48 */	addi r28, r3, d_file_d_file_select__cNullVec__6Z2Calc@l
+/* 8018C90C 00000018  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha
+/* 8018C910 0000001C  3B 83 A8 48 */	addi r28, r3, cNullVec__6Z2Calc@l
 /* 8018C914 00000020  38 60 01 18 */	li r3, 0x118
 /* 8018C918 00000024  48 14 23 35 */	bl __nw__FUl
 /* 8018C91C 00000028  7C 60 1B 79 */	or. r0, r3, r3
@@ -16,16 +16,16 @@ lbl_8018C8F4:
 lbl_8018C92C:
 /* 8018C92C 00000000  90 1F 00 58 */	stw r0, 0x58(r31)
 /* 8018C930 00000004  80 7F 00 58 */	lwz r3, 0x58(r31)
-/* 8018C934 00000008  3C 80 80 39 */	lis r4, d_file_d_file_select__stringBase0@ha
-/* 8018C938 0000000C  38 84 43 88 */	addi r4, r4, d_file_d_file_select__stringBase0@l
+/* 8018C934 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 8018C938 0000000C  38 84 43 88 */	addi r4, r4, stringBase0@l
 /* 8018C93C 00000010  38 84 02 68 */	addi r4, r4, 0x268
 /* 8018C940 00000014  3C A0 01 10 */	lis r5, 0x110
 /* 8018C944 00000018  80 DF 00 08 */	lwz r6, 8(r31)
 /* 8018C948 0000001C  48 16 BD 01 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8018C94C 00000020  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 8018C950 00000024  48 0C 87 99 */	bl dPaneClass_showNullPane__FP9J2DScreen
-/* 8018C954 00000028  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
-/* 8018C958 0000002C  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
+/* 8018C954 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8018C958 0000002C  38 63 43 88 */	addi r3, r3, stringBase0@l
 /* 8018C95C 00000030  38 63 02 8B */	addi r3, r3, 0x28b
 /* 8018C960 00000034  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C964 00000038  48 14 79 0D */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -47,8 +47,8 @@ lbl_8018C92C:
 /* 8018C9A4 00000078  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8018C9A8 0000007C  7D 89 03 A6 */	mtctr r12
 /* 8018C9AC 00000080  4E 80 04 21 */	bctrl 
-/* 8018C9B0 00000084  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
-/* 8018C9B4 00000088  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
+/* 8018C9B0 00000084  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8018C9B4 00000088  38 63 43 88 */	addi r3, r3, stringBase0@l
 /* 8018C9B8 0000008C  38 63 02 AE */	addi r3, r3, 0x2ae
 /* 8018C9BC 00000090  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C9C0 00000094  48 14 78 B1 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -62,8 +62,8 @@ lbl_8018C92C:
 /* 8018C9E0 000000B4  4E 80 04 21 */	bctrl 
 /* 8018C9E4 000000B8  38 00 00 00 */	li r0, 0
 /* 8018C9E8 000000BC  90 1F 03 34 */	stw r0, 0x334(r31)
-/* 8018C9EC 000000C0  3C 60 80 39 */	lis r3, d_file_d_file_select__stringBase0@ha
-/* 8018C9F0 000000C4  38 63 43 88 */	addi r3, r3, d_file_d_file_select__stringBase0@l
+/* 8018C9EC 000000C0  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8018C9F0 000000C4  38 63 43 88 */	addi r3, r3, stringBase0@l
 /* 8018C9F4 000000C8  38 63 02 D1 */	addi r3, r3, 0x2d1
 /* 8018C9F8 000000CC  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8018C9FC 000000D0  48 14 78 75 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader

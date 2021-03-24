@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRHeap {
+struct _GXTexMapID {
 };
 
 struct ResFONT {
 };
 
-struct _GXTexMapID {
+struct JKRHeap {
 };
 
 struct JUTCacheFont {
@@ -46,17 +46,17 @@ struct JUTCacheFont {
 	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JUTFont {
 	struct TWidth {
 	};
 
 	/* 802DED24 */ void initialize_state();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct JUTResFont {
@@ -128,7 +128,7 @@ extern "C" void getWidth__10JUTResFontCFv(); // 1
 extern "C" void getAscent__10JUTResFontCFv(); // 1
 extern "C" void getDescent__10JUTResFontCFv(); // 1
 extern "C" void getHeight__10JUTResFontCFv(); // 1
-extern "C" extern char const* const JUTCacheFont__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

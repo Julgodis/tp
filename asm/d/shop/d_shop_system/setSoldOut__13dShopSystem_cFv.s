@@ -63,7 +63,7 @@ lbl_8019A444:
 /* 8019A44C 00000008  38 00 00 00 */	li r0, 0
 /* 8019A450 0000000C  3C 60 80 3C */	lis r3, dShopSystem_itemActor@ha
 /* 8019A454 00000010  38 63 B8 A4 */	addi r3, r3, dShopSystem_itemActor@l
-/* 8019A458 00000014  90 03 00 04 */	stw r0, 4(r3)
+/* 8019A458 00000014  90 03 00 04 */	stw r0, 4(r3)	/* effective address: 803BB8A8 */
 /* 8019A45C 00000018  38 6D 81 68 */	addi r3, r13, 0x804506E8-0x80458580 /* dShopSystem_itemNo-_SDA_BASE_ */
 /* 8019A460 0000001C  98 83 00 01 */	stb r4, 1(r3)
 /* 8019A464 00000020  38 00 00 02 */	li r0, 2
@@ -75,7 +75,7 @@ lbl_8019A470:
 /* 8019A478 00000008  38 00 00 00 */	li r0, 0
 /* 8019A47C 0000000C  3C 60 80 3C */	lis r3, dShopSystem_itemActor@ha
 /* 8019A480 00000010  38 63 B8 A4 */	addi r3, r3, dShopSystem_itemActor@l
-/* 8019A484 00000014  90 03 00 08 */	stw r0, 8(r3)
+/* 8019A484 00000014  90 03 00 08 */	stw r0, 8(r3)	/* effective address: 803BB8AC */
 /* 8019A488 00000018  38 6D 81 68 */	addi r3, r13, 0x804506E8-0x80458580 /* dShopSystem_itemNo-_SDA_BASE_ */
 /* 8019A48C 0000001C  98 83 00 02 */	stb r4, 2(r3)
 /* 8019A490 00000020  38 00 00 02 */	li r0, 2
@@ -87,7 +87,7 @@ lbl_8019A49C:
 /* 8019A4A4 00000008  38 00 00 00 */	li r0, 0
 /* 8019A4A8 0000000C  3C 60 80 3C */	lis r3, dShopSystem_itemActor@ha
 /* 8019A4AC 00000010  38 63 B8 A4 */	addi r3, r3, dShopSystem_itemActor@l
-/* 8019A4B0 00000014  90 03 00 18 */	stw r0, 0x18(r3)
+/* 8019A4B0 00000014  90 03 00 18 */	stw r0, 0x18(r3)	/* effective address: 803BB8BC */
 /* 8019A4B4 00000018  38 6D 81 68 */	addi r3, r13, 0x804506E8-0x80458580 /* dShopSystem_itemNo-_SDA_BASE_ */
 /* 8019A4B8 0000001C  98 83 00 06 */	stb r4, 6(r3)
 /* 8019A4BC 00000020  38 00 00 06 */	li r0, 6

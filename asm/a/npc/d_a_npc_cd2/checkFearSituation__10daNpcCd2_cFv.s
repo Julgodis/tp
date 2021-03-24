@@ -9,9 +9,9 @@ lbl_80159818:
 /* 80159834 00000008  7C 7D 1B 78 */	mr r29, r3
 /* 80159838 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015983C 00000010  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80159840 00000014  80 7F 5D AC */	lwz r3, 0x5dac(r31)
+/* 80159840 00000014  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
 /* 80159844 00000018  C0 3D 04 D4 */	lfs f1, 0x4d4(r29)
-/* 80159848 0000001C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
+/* 80159848 0000001C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 804004D4 */
 /* 8015984C 00000020  EC 21 00 28 */	fsubs f1, f1, f0
 /* 80159850 00000024  3B C0 00 00 */	li r30, 0
 /* 80159854 00000028  7F C4 F3 78 */	mr r4, r30

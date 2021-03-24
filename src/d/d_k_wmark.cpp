@@ -96,7 +96,7 @@ extern "C" static void dkWmark_Delete__FP9dkWmark_c(); // 1
 extern "C" void setMatrix__9dkWmark_cFv(); // 1
 extern "C" static void dkWmark_Execute__FP9dkWmark_c(); // 1
 extern "C" static void dkWmark_Draw__FP9dkWmark_c(); // 1
-extern "C" extern char const* const d_d_k_wmark__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 
 // 
@@ -192,13 +192,13 @@ static u8 m_nowID__9dkWmark_c[4];
 static u8 data_80451134[4];
 
 /* 80454FB0-80454FB4 0004+00 s=1 e=0 z=0  None .sdata2    @3718                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3718 = 11.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3718 = 11.0f / 10.0f;
 
 /* 80454FB4-80454FB8 0004+00 s=2 e=0 z=0  None .sdata2    @3719                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3719 = 1.0f;
+SECTION_SDATA2 static f32 lit_3719 = 1.0f;
 
 /* 80454FB8-80454FBC 0004+00 s=1 e=0 z=0  None .sdata2    @3720                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3720 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3720 = 3.0f / 5.0f;
 
 /* 8026141C-80261640 0224+00 s=1 e=0 z=0  None .text      dkWmark_Create__FP12kankyo_class                             */
 #pragma push
@@ -235,23 +235,23 @@ asm static void dkWmark_Delete(dkWmark_c* param_0) {
 
 /* ############################################################################################## */
 /* 80454FBC-80454FC0 0004+00 s=1 e=0 z=0  None .sdata2    @3844                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3844 = 100.0f;
+SECTION_SDATA2 static f32 lit_3844 = 100.0f;
 
 /* 80454FC0-80454FC8 0004+04 s=2 e=0 z=0  None .sdata2    @3845                                                        */
-SECTION_SDATA2 static u8 d_d_k_wmark__lit_3845[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3845[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454FC8-80454FD0 0008+00 s=1 e=0 z=0  None .sdata2    @3846                                                        */
-SECTION_SDATA2 static f64 d_d_k_wmark__lit_3846 = 0.5;
+SECTION_SDATA2 static f64 lit_3846 = 0.5;
 
 /* 80454FD0-80454FD8 0008+00 s=1 e=0 z=0  None .sdata2    @3847                                                        */
-SECTION_SDATA2 static f64 d_d_k_wmark__lit_3847 = 3.0;
+SECTION_SDATA2 static f64 lit_3847 = 3.0;
 
 /* 80454FD8-80454FE0 0008+00 s=1 e=0 z=0  None .sdata2    @3848                                                        */
-SECTION_SDATA2 static u8 d_d_k_wmark__lit_3848[8] = {
+SECTION_SDATA2 static u8 lit_3848[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -268,7 +268,7 @@ asm void dkWmark_c::setMatrix() {
 
 /* ############################################################################################## */
 /* 80454FE0-80454FE4 0004+00 s=1 e=0 z=0  None .sdata2    @3873                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3873 = 1.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_3873 = 1.0f / 50.0f;
 
 /* 80261964-80261A18 00B4+00 s=1 e=0 z=0  None .text      dkWmark_Execute__FP9dkWmark_c                                */
 #pragma push
@@ -283,7 +283,7 @@ asm static void dkWmark_Execute(dkWmark_c* param_0) {
 
 /* ############################################################################################## */
 /* 80454FE4-80454FE8 0004+00 s=1 e=0 z=0  None .sdata2    @3906                                                        */
-SECTION_SDATA2 static f32 d_d_k_wmark__lit_3906 = 50.0f;
+SECTION_SDATA2 static f32 lit_3906 = 50.0f;
 
 /* 80454FE8-80454FF0 0008+00 s=1 e=0 z=0  None .sdata2    @3908                                                        */
 SECTION_SDATA2 static f64 lit_3908 = 4503599627370496.0 /* cast u32 to float */;

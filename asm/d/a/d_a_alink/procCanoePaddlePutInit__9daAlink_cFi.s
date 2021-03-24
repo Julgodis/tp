@@ -39,19 +39,19 @@ lbl_800F5F1C:
 /* 800F5F38 0000001C  40 82 00 14 */	bne lbl_800F5F4C
 /* 800F5F3C 00000020  3C A0 80 39 */	lis r5, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5F40 00000024  38 A5 E6 10 */	addi r5, r5, m__19daAlinkHIO_canoe_c0@l
-/* 800F5F44 00000028  C0 25 00 04 */	lfs f1, 4(r5)
+/* 800F5F44 00000028  C0 25 00 04 */	lfs f1, 4(r5)	/* effective address: 8038E614 */
 /* 800F5F48 0000002C  48 00 00 14 */	b lbl_800F5F5C
 lbl_800F5F4C:
 /* 800F5F4C 00000000  3C A0 80 39 */	lis r5, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5F50 00000004  38 A5 E6 10 */	addi r5, r5, m__19daAlinkHIO_canoe_c0@l
-/* 800F5F54 00000008  C0 05 00 04 */	lfs f0, 4(r5)
+/* 800F5F54 00000008  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 8038E614 */
 /* 800F5F58 0000000C  FC 20 00 50 */	fneg f1, f0
 lbl_800F5F5C:
 /* 800F5F5C 00000000  3C A0 80 39 */	lis r5, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5F60 00000004  38 C5 E6 10 */	addi r6, r5, m__19daAlinkHIO_canoe_c0@l
-/* 800F5F64 00000008  C0 46 00 08 */	lfs f2, 8(r6)
-/* 800F5F68 0000000C  A8 A6 00 00 */	lha r5, 0(r6)
-/* 800F5F6C 00000010  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 800F5F64 00000008  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038E618 */
+/* 800F5F68 0000000C  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038E610 */
+/* 800F5F6C 00000010  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038E61C */
 /* 800F5F70 00000014  4B FB 70 9D */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800F5F74 00000018  A8 1F 30 12 */	lha r0, 0x3012(r31)
 /* 800F5F78 0000001C  2C 00 00 01 */	cmpwi r0, 1

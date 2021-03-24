@@ -39,8 +39,8 @@ lbl_800F546C:
 /* 800F54B8 00000020  4B FB F5 51 */	bl setTalkStatus__9daAlink_cFv
 /* 800F54BC 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800F54C0 00000028  40 82 00 28 */	bne lbl_800F54E8
-/* 800F54C4 0000002C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800F54C8 00000030  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800F54C4 0000002C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800F54C8 00000030  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800F54CC 00000034  38 63 00 7E */	addi r3, r3, 0x7e
 /* 800F54D0 00000038  4B FA 85 91 */	bl checkStageName__9daAlink_cFPCc
 /* 800F54D4 0000003C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -62,7 +62,7 @@ lbl_800F5504:
 /* 800F550C 00000008  41 82 00 54 */	beq lbl_800F5560
 /* 800F5510 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F5514 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F5518 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800F5518 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800F551C 00000018  28 00 00 16 */	cmplwi r0, 0x16
 /* 800F5520 0000001C  40 82 00 40 */	bne lbl_800F5560
 /* 800F5524 00000020  A0 1F 2F DC */	lhz r0, 0x2fdc(r31)

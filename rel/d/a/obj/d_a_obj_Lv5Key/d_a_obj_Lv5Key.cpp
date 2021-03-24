@@ -17,6 +17,7 @@ struct daObjLv5Key_c {
 	/* 80B9BB5C */ void setBgc();
 	/* 80B9BBCC */ void initCcSph();
 	/* 80B9BC2C */ void setCcSph();
+	/* 80B9BD30 */ void setAction(void (daObjLv5Key_c::*)(int), int);
 	/* 80B9BDD8 */ void Action();
 	/* 80B9BE24 */ void Wait(int);
 	/* 80B9BF08 */ void Open(int);
@@ -68,7 +69,7 @@ extern "C" void initCcSph__13daObjLv5Key_cFv(); // 1
 extern "C" void setCcSph__13daObjLv5Key_cFv(); // 1
 extern "C" void daObjLv5Key_Create__FP10fopAc_ac_c(); // 1
 extern "C" void daObjLv5Key_Delete__FP13daObjLv5Key_c(); // 1
-extern "C" static void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi(); // 1
+extern "C" void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi(); // 1
 extern "C" void Action__13daObjLv5Key_cFv(); // 1
 extern "C" void Wait__13daObjLv5Key_cFi(); // 1
 extern "C" void Open__13daObjLv5Key_cFi(); // 1
@@ -218,7 +219,7 @@ asm void daObjLv5Key_Delete(daObjLv5Key_c* param_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi() {
+asm void daObjLv5Key_c::setAction(void (daObjLv5Key_c::*)(int), int param_1) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/setAction__13daObjLv5Key_cFM13daObjLv5Key_cFPCvPvi_vi.s"
 }

@@ -4,7 +4,7 @@ lbl_8004817C:
 /* 80048184 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80048188 0000000C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8004818C 00000010  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 80048190 00000014  88 05 4F AC */	lbz r0, 0x4fac(r5)
+/* 80048190 00000014  88 05 4F AC */	lbz r0, 0x4fac(r5)	/* effective address: 8040B16C */
 /* 80048194 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80048198 0000001C  41 82 00 4C */	beq lbl_800481E4
 /* 8004819C 00000020  2C 04 FF FF */	cmpwi r4, -1

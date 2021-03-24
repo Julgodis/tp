@@ -29,20 +29,20 @@ extern "C" void SIEnablePolling(); // 1
 extern "C" void SIDisablePolling(); // 1
 extern "C" static void SIGetResponseRaw(); // 1
 extern "C" void SIGetResponse(); // 1
-extern "C" static void SIBios__AlarmHandler(); // 1
+extern "C" static void AlarmHandler(); // 1
 extern "C" void SITransfer(); // 1
 extern "C" static void GetTypeCallback(); // 1
 extern "C" void SIGetType(); // 1
 extern "C" void SIGetTypeAsync(); // 1
-extern "C" extern u8 SIBios__lit_457[12];
-extern "C" extern u8 SIBios__lit_459[15 + 1 /* padding */];
+extern "C" extern u8 lit_457[12];
+extern "C" extern u8 lit_459[15 + 1 /* padding */];
 extern "C" extern u8 lit_460[15 + 1 /* padding */];
 extern "C" extern u8 lit_461[13 + 3 /* padding */];
-extern "C" extern u8 SIBios__lit_462[10 + 2 /* padding */];
-extern "C" extern u8 SIBios__lit_463[16];
-extern "C" extern u8 SIBios__lit_464[20];
-extern "C" extern u8 SIBios__lit_465[18 + 2 /* padding */];
-extern "C" extern u8 SIBios__lit_466[20];
+extern "C" extern u8 lit_462[10 + 2 /* padding */];
+extern "C" extern u8 lit_463[16];
+extern "C" extern u8 lit_464[20];
+extern "C" extern u8 lit_465[18 + 2 /* padding */];
+extern "C" extern u8 lit_466[20];
 extern "C" extern u8 lit_467[9 + 3 /* padding */];
 extern "C" extern u8 lit_468[9 + 7 /* padding */];
 extern "C" extern u8 InputBufferValid[16];
@@ -75,7 +75,7 @@ extern "C" void VIGetCurrentLine(); // 1
 
 /* ############################################################################################## */
 /* 803D11B8-803D11FC 0044+00 s=4 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 SIBios__lit_1[68] = {
+SECTION_DATA static u8 lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x53, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -83,7 +83,7 @@ SECTION_DATA static u8 SIBios__lit_1[68] = {
 	0x20, 0x3E, 0x3E, 0x00,
 };
 
-/* 803D11FC-803D1210 0014+00 s=8 e=0 z=0  None .data      Si                                                           */
+/* 803D11FC-803D1210 0014+00 s=9 e=0 z=0  None .data      Si                                                           */
 SECTION_DATA static u8 Si[20] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -117,7 +117,7 @@ extern "C" asm void SIIsChanBusy() {
 
 /* ############################################################################################## */
 /* 8044C6B0-8044C750 00A0+00 s=1 e=0 z=0  None .bss       Alarm                                                        */
-static u8 SIBios__Alarm[160];
+static u8 Alarm[160];
 
 /* 8044C750-8044C770 0020+00 s=2 e=0 z=0  None .bss       TypeTime                                                     */
 static u8 TypeTime[32];
@@ -194,7 +194,7 @@ extern "C" asm void SIUnregisterPollingHandler() {
 /* ############################################################################################## */
 /* 804509C8-804509D0 0004+04 s=1 e=0 z=0  None .sdata     __SIVersion                                                  */
 SECTION_SDATA static void* __SIVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&SIBios__lit_1,
+	/* 0    */ (void*)&lit_1,
 	/* padding */
 	NULL,
 };
@@ -223,7 +223,7 @@ extern "C" asm static void __SITransfer() {
 
 /* ############################################################################################## */
 /* 803D1210-803D1220 0010+00 s=5 e=0 z=0  None .data      Type                                                         */
-SECTION_DATA static u8 SIBios__Type[16] = {
+SECTION_DATA static u8 Type[16] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08,
 };
 
@@ -319,9 +319,9 @@ extern "C" asm void SIGetResponse() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void SIBios__AlarmHandler() {
+extern "C" asm static void AlarmHandler() {
 	nofralloc
-#include "asm/dolphin/si/SIBios/SIBios__AlarmHandler.s"
+#include "asm/dolphin/si/SIBios/AlarmHandler.s"
 }
 #pragma pop
 
@@ -379,12 +379,12 @@ extern "C" asm void SIGetTypeAsync() {
 
 /* ############################################################################################## */
 /* 803D1220-803D122C 000C+00 s=0 e=0 z=0  None .data      @457                                                         */
-SECTION_DATA u8 SIBios__lit_457[12] = {
+SECTION_DATA u8 lit_457[12] = {
 	0x4E, 0x6F, 0x20, 0x72, 0x65, 0x73, 0x70, 0x6F, 0x6E, 0x73, 0x65, 0x00,
 };
 
 /* 803D122C-803D123C 000F+01 s=0 e=0 z=0  None .data      @459                                                         */
-SECTION_DATA u8 SIBios__lit_459[15 + 1 /* padding */] = {
+SECTION_DATA u8 lit_459[15 + 1 /* padding */] = {
 	0x4E, 0x36, 0x34, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C, 0x6C, 0x65, 0x72, 0x00,
 	/* padding */
 	0x00,
@@ -405,25 +405,25 @@ SECTION_DATA u8 lit_461[13 + 3 /* padding */] = {
 };
 
 /* 803D125C-803D1268 000A+02 s=0 e=0 z=0  None .data      @462                                                         */
-SECTION_DATA u8 SIBios__lit_462[10 + 2 /* padding */] = {
+SECTION_DATA u8 lit_462[10 + 2 /* padding */] = {
 	0x4E, 0x36, 0x34, 0x20, 0x6D, 0x6F, 0x75, 0x73, 0x65, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803D1268-803D1278 0010+00 s=0 e=0 z=0  None .data      @463                                                         */
-SECTION_DATA u8 SIBios__lit_463[16] = {
+SECTION_DATA u8 lit_463[16] = {
 	0x47, 0x61, 0x6D, 0x65, 0x42, 0x6F, 0x79, 0x20, 0x41, 0x64, 0x76, 0x61, 0x6E, 0x63, 0x65, 0x00,
 };
 
 /* 803D1278-803D128C 0014+00 s=0 e=0 z=0  None .data      @464                                                         */
-SECTION_DATA u8 SIBios__lit_464[20] = {
+SECTION_DATA u8 lit_464[20] = {
 	0x53, 0x74, 0x61, 0x6E, 0x64, 0x61, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,
 	0x6C, 0x65, 0x72, 0x00,
 };
 
 /* 803D128C-803D12A0 0012+02 s=0 e=0 z=0  None .data      @465                                                         */
-SECTION_DATA u8 SIBios__lit_465[18 + 2 /* padding */] = {
+SECTION_DATA u8 lit_465[18 + 2 /* padding */] = {
 	0x57, 0x69, 0x72, 0x65, 0x6C, 0x65, 0x73, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65,
 	0x72, 0x00,
 	/* padding */
@@ -431,7 +431,7 @@ SECTION_DATA u8 SIBios__lit_465[18 + 2 /* padding */] = {
 };
 
 /* 803D12A0-803D12B4 0014+00 s=0 e=0 z=0  None .data      @466                                                         */
-SECTION_DATA u8 SIBios__lit_466[20] = {
+SECTION_DATA u8 lit_466[20] = {
 	0x57, 0x61, 0x76, 0x65, 0x42, 0x69, 0x72, 0x64, 0x20, 0x63, 0x6F, 0x6E, 0x74, 0x72, 0x6F, 0x6C,
 	0x6C, 0x65, 0x72, 0x00,
 };

@@ -119,7 +119,7 @@ lbl_800A15C0:
 /* 800A15E8 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800A15EC 00000000  40 81 00 58 */	ble lbl_800A1644
 /* 800A15F0 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800A15F4 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800A15F4 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800A15F8 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800A15FC 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800A1600 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -194,8 +194,8 @@ lbl_800A16D8:
 /* 800A16EC 00000014  40 82 00 7C */	bne lbl_800A1768
 /* 800A16F0 00000018  3C 60 80 39 */	lis r3, m__18daAlinkHIO_wolf_c0@ha
 /* 800A16F4 0000001C  38 63 F9 F8 */	addi r3, r3, m__18daAlinkHIO_wolf_c0@l
-/* 800A16F8 00000020  A8 83 00 0A */	lha r4, 0xa(r3)
-/* 800A16FC 00000024  A8 63 00 08 */	lha r3, 8(r3)
+/* 800A16F8 00000020  A8 83 00 0A */	lha r4, 0xa(r3)	/* effective address: 8038FA02 */
+/* 800A16FC 00000024  A8 63 00 08 */	lha r3, 8(r3)	/* effective address: 8038FA00 */
 /* 800A1700 00000028  7F 25 07 34 */	extsh r5, r25
 /* 800A1704 0000002C  7C 05 18 00 */	cmpw r5, r3
 /* 800A1708 00000030  40 80 00 08 */	bge lbl_800A1710
@@ -211,7 +211,7 @@ lbl_800A1724:
 /* 800A1724 00000000  7C 63 07 34 */	extsh r3, r3
 /* 800A1728 00000004  3C 80 80 39 */	lis r4, m__18daAlinkHIO_wolf_c0@ha
 /* 800A172C 00000008  38 84 F9 F8 */	addi r4, r4, m__18daAlinkHIO_wolf_c0@l
-/* 800A1730 0000000C  A8 A4 00 06 */	lha r5, 6(r4)
+/* 800A1730 0000000C  A8 A4 00 06 */	lha r5, 6(r4)	/* effective address: 8038F9FE */
 /* 800A1734 00000010  7C 85 00 D0 */	neg r4, r5
 /* 800A1738 00000014  7C 84 07 34 */	extsh r4, r4
 /* 800A173C 00000018  7F 46 07 34 */	extsh r6, r26
@@ -231,8 +231,8 @@ lbl_800A1760:
 lbl_800A1768:
 /* 800A1768 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_wolf_c0@ha
 /* 800A176C 00000004  38 63 F9 F8 */	addi r3, r3, m__18daAlinkHIO_wolf_c0@l
-/* 800A1770 00000008  A8 83 00 04 */	lha r4, 4(r3)
-/* 800A1774 0000000C  A8 63 00 02 */	lha r3, 2(r3)
+/* 800A1770 00000008  A8 83 00 04 */	lha r4, 4(r3)	/* effective address: 8038F9FC */
+/* 800A1774 0000000C  A8 63 00 02 */	lha r3, 2(r3)	/* effective address: 8038F9FA */
 /* 800A1778 00000010  7F 25 07 34 */	extsh r5, r25
 /* 800A177C 00000014  7C 05 18 00 */	cmpw r5, r3
 /* 800A1780 00000018  40 80 00 08 */	bge lbl_800A1788
@@ -267,8 +267,8 @@ lbl_800A17D4:
 lbl_800A17DC:
 /* 800A17DC 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 800A17E0 00000004  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 800A17E4 00000008  A8 83 00 06 */	lha r4, 6(r3)
-/* 800A17E8 0000000C  A8 63 00 04 */	lha r3, 4(r3)
+/* 800A17E4 00000008  A8 83 00 06 */	lha r4, 6(r3)	/* effective address: 8038D66A */
+/* 800A17E8 0000000C  A8 63 00 04 */	lha r3, 4(r3)	/* effective address: 8038D668 */
 /* 800A17EC 00000010  7F 25 07 34 */	extsh r5, r25
 /* 800A17F0 00000014  7C 05 18 00 */	cmpw r5, r3
 /* 800A17F4 00000018  40 80 00 08 */	bge lbl_800A17FC
@@ -284,7 +284,7 @@ lbl_800A1810:
 /* 800A1810 00000000  7C 63 07 34 */	extsh r3, r3
 /* 800A1814 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800A1818 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800A181C 0000000C  80 84 5F 1C */	lwz r4, 0x5f1c(r4)
+/* 800A181C 0000000C  80 84 5F 1C */	lwz r4, 0x5f1c(r4)	/* effective address: 8040C0DC */
 /* 800A1820 00000010  54 84 01 8D */	rlwinm. r4, r4, 0, 6, 6
 /* 800A1824 00000014  41 82 00 40 */	beq lbl_800A1864
 /* 800A1828 00000018  A8 9F 30 20 */	lha r4, 0x3020(r31)
@@ -293,12 +293,12 @@ lbl_800A1810:
 /* 800A1834 00000024  38 C0 F0 00 */	li r6, -4096
 /* 800A1838 00000028  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800A183C 0000002C  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800A1840 00000030  A8 E4 00 02 */	lha r7, 2(r4)
+/* 800A1840 00000030  A8 E4 00 02 */	lha r7, 2(r4)	/* effective address: 8038D666 */
 /* 800A1844 00000034  48 00 00 54 */	b lbl_800A1898
 lbl_800A1848:
 /* 800A1848 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800A184C 00000004  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800A1850 00000008  A8 84 00 02 */	lha r4, 2(r4)
+/* 800A1850 00000008  A8 84 00 02 */	lha r4, 2(r4)	/* effective address: 8038D666 */
 /* 800A1854 0000000C  7C 84 00 D0 */	neg r4, r4
 /* 800A1858 00000010  7C 86 07 34 */	extsh r6, r4
 /* 800A185C 00000014  38 E0 10 00 */	li r7, 0x1000
@@ -312,13 +312,13 @@ lbl_800A1864:
 lbl_800A1878:
 /* 800A1878 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800A187C 00000004  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800A1880 00000008  A8 84 00 02 */	lha r4, 2(r4)
+/* 800A1880 00000008  A8 84 00 02 */	lha r4, 2(r4)	/* effective address: 8038D666 */
 /* 800A1884 0000000C  7C 84 00 D0 */	neg r4, r4
 /* 800A1888 00000010  7C 86 07 34 */	extsh r6, r4
 lbl_800A188C:
 /* 800A188C 00000000  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800A1890 00000004  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800A1894 00000008  A8 E4 00 02 */	lha r7, 2(r4)
+/* 800A1894 00000008  A8 E4 00 02 */	lha r7, 2(r4)	/* effective address: 8038D666 */
 lbl_800A1898:
 /* 800A1898 00000000  7F 45 07 34 */	extsh r5, r26
 /* 800A189C 00000004  7C C4 07 34 */	extsh r4, r6

@@ -20,8 +20,8 @@ lbl_800ACA14:
 /* 800ACA5C 00000024  7C BD 2B 78 */	mr r29, r5
 /* 800ACA60 00000028  7C DE 33 78 */	mr r30, r6
 /* 800ACA64 0000002C  FF E0 20 90 */	fmr f31, f4
-/* 800ACA68 00000030  3C A0 80 39 */	lis r5, d_a_d_a_alink__lit_3757@ha
-/* 800ACA6C 00000034  3B E5 D6 58 */	addi r31, r5, d_a_d_a_alink__lit_3757@l
+/* 800ACA68 00000030  3C A0 80 39 */	lis r5, lit_3757@ha
+/* 800ACA6C 00000034  3B E5 D6 58 */	addi r31, r5, lit_3757@l
 /* 800ACA70 00000038  38 A1 00 14 */	addi r5, r1, 0x14
 /* 800ACA74 0000003C  38 C1 00 10 */	addi r6, r1, 0x10
 /* 800ACA78 00000040  38 E0 00 00 */	li r7, 0
@@ -59,14 +59,14 @@ lbl_800ACAE0:
 /* 800ACAF0 00000010  48 01 32 C1 */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800ACAF4 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 800ACAF8 00000018  41 82 00 1C */	beq lbl_800ACB14
-/* 800ACAFC 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800ACAFC 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800ACB00 00000020  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB04 00000024  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 800ACB08 00000028  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACB0C 0000002C  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800ACB10 00000030  48 00 00 8C */	b lbl_800ACB9C
 lbl_800ACB14:
-/* 800ACB14 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800ACB14 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800ACB18 00000004  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB1C 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 800ACB20 0000000C  EC 01 00 24 */	fdivs f0, f1, f0
@@ -90,14 +90,14 @@ lbl_800ACB2C:
 /* 800ACB64 0000001C  48 01 32 4D */	bl checkZoraWearAbility__9daAlink_cCFv
 /* 800ACB68 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800ACB6C 00000024  41 82 00 1C */	beq lbl_800ACB88
-/* 800ACB70 00000028  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800ACB70 00000028  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800ACB74 0000002C  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB78 00000030  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 800ACB7C 00000034  EC 01 00 24 */	fdivs f0, f1, f0
 /* 800ACB80 00000038  EF FF 00 32 */	fmuls f31, f31, f0
 /* 800ACB84 0000003C  48 00 00 18 */	b lbl_800ACB9C
 lbl_800ACB88:
-/* 800ACB88 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800ACB88 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800ACB8C 00000004  38 7F 11 9C */	addi r3, r31, 0x119c
 /* 800ACB90 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 800ACB94 0000000C  EC 01 00 24 */	fdivs f0, f1, f0

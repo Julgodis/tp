@@ -21,8 +21,8 @@ lbl_80039B6C:
 /* 80039BB8 0000004C  48 2A 2D 59 */	bl parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl
 /* 80039BBC 00000050  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80039BC0 00000054  40 82 00 2C */	bne lbl_80039BEC
-/* 80039BC4 00000058  3C 60 80 38 */	lis r3, d_d_demo__stringBase0@ha
-/* 80039BC8 0000005C  38 63 97 F8 */	addi r3, r3, d_d_demo__stringBase0@l
+/* 80039BC4 00000058  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80039BC8 0000005C  38 63 97 F8 */	addi r3, r3, stringBase0@l
 /* 80039BCC 00000060  38 63 00 08 */	addi r3, r3, 8
 /* 80039BD0 00000064  4C C6 31 82 */	crclr 6
 /* 80039BD4 00000068  4B FC D0 39 */	bl OSReport_Error
@@ -52,8 +52,8 @@ lbl_80039C04:
 /* 80039C2C 00000028  38 63 46 68 */	addi r3, r3, data_80424668@l
 /* 80039C30 0000002C  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 80039C34 00000030  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
-/* 80039C38 00000034  3C A0 80 42 */	lis r5, d_d_demo__lit_5233@ha
-/* 80039C3C 00000038  38 A5 46 5C */	addi r5, r5, d_d_demo__lit_5233@l
+/* 80039C38 00000034  3C A0 80 42 */	lis r5, lit_5233@ha
+/* 80039C3C 00000038  38 A5 46 5C */	addi r5, r5, lit_5233@l
 /* 80039C40 0000003C  48 32 7F E5 */	bl __register_global_object
 /* 80039C44 00000040  38 00 00 01 */	li r0, 1
 /* 80039C48 00000044  98 0D 88 D0 */	stb r0, data_80450E50(r13)
@@ -63,9 +63,9 @@ lbl_80039C4C:
 /* 80039C54 00000008  3C 60 80 42 */	lis r3, data_80424668@ha
 /* 80039C58 0000000C  D4 03 46 68 */	stfsu f0, data_80424668@l(r3)
 /* 80039C5C 00000010  C0 04 00 04 */	lfs f0, 4(r4)
-/* 80039C60 00000014  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80039C60 00000014  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80420004 */
 /* 80039C64 00000018  C0 04 00 08 */	lfs f0, 8(r4)
-/* 80039C68 0000001C  D0 03 00 08 */	stfs f0, 8(r3)
+/* 80039C68 0000001C  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80420008 */
 /* 80039C6C 00000020  90 6D 88 AC */	stw r3, m_translation__7dDemo_c(r13)
 /* 80039C70 00000024  D3 ED 88 B0 */	stfs f31, m_rotationY__7dDemo_c(r13)
 /* 80039C74 00000028  80 6D 88 84 */	lwz r3, m_control__7dDemo_c(r13)

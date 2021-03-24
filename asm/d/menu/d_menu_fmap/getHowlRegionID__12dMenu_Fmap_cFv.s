@@ -1,7 +1,7 @@
 lbl_801CD8B4:
 /* 801CD8B4 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801CD8B8 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801CD8BC 00000008  88 03 00 E2 */	lbz r0, 0xe2(r3)
+/* 801CD8BC 00000008  88 03 00 E2 */	lbz r0, 0xe2(r3)	/* effective address: 8043026A */
 /* 801CD8C0 0000000C  2C 00 00 05 */	cmpwi r0, 5
 /* 801CD8C4 00000010  41 82 00 48 */	beq lbl_801CD90C
 /* 801CD8C8 00000014  40 80 00 1C */	bge lbl_801CD8E4

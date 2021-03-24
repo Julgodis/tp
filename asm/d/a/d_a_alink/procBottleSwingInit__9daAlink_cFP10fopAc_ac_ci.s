@@ -47,7 +47,7 @@ lbl_8010FCE0:
 /* 8010FCE0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010FCE4 00000004  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 8010FCE8 00000008  38 64 5B 54 */	addi r3, r4, 0x5b54
-/* 8010FCEC 0000000C  80 84 5B 64 */	lwz r4, 0x5b64(r4)
+/* 8010FCEC 0000000C  80 84 5B 64 */	lwz r4, 0x5b64(r4)	/* effective address: 8040BD24 */
 /* 8010FCF0 00000010  4B F6 3C 9D */	bl convPId__11dAttCatch_cFUi
 /* 8010FCF4 00000014  7C 7F 1B 78 */	mr r31, r3
 lbl_8010FCF8:
@@ -73,7 +73,7 @@ lbl_8010FD2C:
 /* 8010FD38 0000000C  28 00 00 06 */	cmplwi r0, 6
 /* 8010FD3C 00000010  41 82 00 24 */	beq lbl_8010FD60
 /* 8010FD40 00000014  C0 5D 33 B4 */	lfs f2, 0x33b4(r29)
-/* 8010FD44 00000018  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 8010FD44 00000018  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 8010FD48 0000001C  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
 /* 8010FD4C 00000020  EC 01 00 2A */	fadds f0, f1, f0
 /* 8010FD50 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
@@ -110,7 +110,7 @@ lbl_8010FD90:
 /* 8010FDBC 0000002C  90 1D 05 78 */	stw r0, 0x578(r29)
 /* 8010FDC0 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010FDC4 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010FDC8 00000038  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8010FDC8 00000038  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8010FDCC 0000003C  38 63 02 10 */	addi r3, r3, 0x210
 /* 8010FDD0 00000040  80 9D 31 C4 */	lwz r4, 0x31c4(r29)
 /* 8010FDD4 00000044  4B F3 BB 45 */	bl getEmitter__Q213dPa_control_c7level_cFUl
@@ -122,7 +122,7 @@ lbl_8010FD90:
 lbl_8010FDEC:
 /* 8010FDEC 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_bottle_c0@ha
 /* 8010FDF0 00000004  38 63 E9 0C */	addi r3, r3, m__20daAlinkHIO_bottle_c0@l
-/* 8010FDF4 00000008  C0 03 00 B0 */	lfs f0, 0xb0(r3)
+/* 8010FDF4 00000008  C0 03 00 B0 */	lfs f0, 0xb0(r3)	/* effective address: 8038E9BC */
 /* 8010FDF8 0000000C  D0 1D 34 78 */	stfs f0, 0x3478(r29)
 /* 8010FDFC 00000010  C0 02 93 48 */	lfs f0, lit_8130(r2)
 /* 8010FE00 00000014  D0 1D 34 7C */	stfs f0, 0x347c(r29)
@@ -171,7 +171,7 @@ lbl_8010FE88:
 /* 8010FEA4 0000001C  4B F9 D2 51 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 8010FEA8 00000020  3C 60 80 39 */	lis r3, m__20daAlinkHIO_bottle_c0@ha
 /* 8010FEAC 00000024  38 63 E9 0C */	addi r3, r3, m__20daAlinkHIO_bottle_c0@l
-/* 8010FEB0 00000028  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 8010FEB0 00000028  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038E96C */
 /* 8010FEB4 0000002C  D0 1D 34 78 */	stfs f0, 0x3478(r29)
 /* 8010FEB8 00000030  C0 02 93 8C */	lfs f0, lit_8783(r2)
 /* 8010FEBC 00000034  D0 1D 34 7C */	stfs f0, 0x347c(r29)
@@ -185,7 +185,7 @@ lbl_8010FEC4:
 /* 8010FED8 00000014  4B F9 D2 1D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 8010FEDC 00000018  3C 60 80 39 */	lis r3, m__20daAlinkHIO_bottle_c0@ha
 /* 8010FEE0 0000001C  38 63 E9 0C */	addi r3, r3, m__20daAlinkHIO_bottle_c0@l
-/* 8010FEE4 00000020  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 8010FEE4 00000020  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038E980 */
 /* 8010FEE8 00000024  D0 1D 34 78 */	stfs f0, 0x3478(r29)
 /* 8010FEEC 00000028  C0 02 93 24 */	lfs f0, lit_7450(r2)
 /* 8010FEF0 0000002C  D0 1D 34 7C */	stfs f0, 0x347c(r29)

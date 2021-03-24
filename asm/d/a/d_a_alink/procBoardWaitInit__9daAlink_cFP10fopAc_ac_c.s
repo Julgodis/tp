@@ -27,7 +27,7 @@ lbl_80106A74:
 /* 80106A94 00000020  40 82 00 14 */	bne lbl_80106AA8
 /* 80106A98 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80106A9C 00000028  38 80 00 02 */	li r4, 2
-/* 80106AA0 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 80106AA0 0000002C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 80106AA4 00000030  4B FA 6C 81 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_80106AA8:
 /* 80106AA8 00000000  80 1F 31 A0 */	lwz r0, 0x31a0(r31)
@@ -67,17 +67,17 @@ lbl_80106AFC:
 /* 80106B28 0000002C  C0 3F 33 98 */	lfs f1, 0x3398(r31)
 /* 80106B2C 00000030  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 80106B30 00000034  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 80106B34 00000038  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 80106B34 00000038  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038D6EC */
 /* 80106B38 0000003C  EC 41 00 24 */	fdivs f2, f1, f0
-/* 80106B3C 00000040  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80106B3C 00000040  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80106B40 00000044  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80106B44 00000000  40 81 00 08 */	ble lbl_80106B4C
 /* 80106B48 00000004  FC 40 00 90 */	fmr f2, f0
 lbl_80106B4C:
 /* 80106B4C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_board_c0@ha
 /* 80106B50 00000004  38 63 E8 70 */	addi r3, r3, m__19daAlinkHIO_board_c0@l
-/* 80106B54 00000008  C0 23 00 70 */	lfs f1, 0x70(r3)
-/* 80106B58 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 80106B54 00000008  C0 23 00 70 */	lfs f1, 0x70(r3)	/* effective address: 8038E8E0 */
+/* 80106B58 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038E8E4 */
 /* 80106B5C 00000010  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80106B60 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 80106B64 00000018  D0 1F 33 98 */	stfs f0, 0x3398(r31)
@@ -88,7 +88,7 @@ lbl_80106B6C:
 lbl_80106B74:
 /* 80106B74 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_board_c0@ha
 /* 80106B78 00000004  38 63 E8 70 */	addi r3, r3, m__19daAlinkHIO_board_c0@l
-/* 80106B7C 00000008  C0 03 00 50 */	lfs f0, 0x50(r3)
+/* 80106B7C 00000008  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8038E8C0 */
 /* 80106B80 0000000C  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 80106B84 00000010  38 00 00 00 */	li r0, 0
 /* 80106B88 00000014  B0 1F 30 0C */	sth r0, 0x300c(r31)

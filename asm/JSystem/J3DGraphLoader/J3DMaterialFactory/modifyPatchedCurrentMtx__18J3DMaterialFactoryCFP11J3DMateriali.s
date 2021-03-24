@@ -9,7 +9,7 @@ lbl_8033168C:
 /* 803316A8 0000001C  7C BF 2B 78 */	mr r31, r5
 /* 803316AC 00000020  3C 80 80 3A */	lis r4, j3dDefaultTexCoordInfo@ha
 /* 803316B0 00000024  38 84 1E FC */	addi r4, r4, j3dDefaultTexCoordInfo@l
-/* 803316B4 00000028  80 84 00 00 */	lwz r4, 0(r4)
+/* 803316B4 00000028  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 803A1EFC */
 /* 803316B8 0000002C  90 81 00 10 */	stw r4, 0x10(r1)
 /* 803316BC 00000030  88 01 00 12 */	lbz r0, 0x12(r1)
 /* 803316C0 00000034  B0 01 00 14 */	sth r0, 0x14(r1)

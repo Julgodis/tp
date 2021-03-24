@@ -24,7 +24,7 @@ lbl_8011ECA0:
 /* 8011ECB4 00000014  B0 1E 30 0C */	sth r0, 0x300c(r30)
 /* 8011ECB8 00000018  7F C3 F3 78 */	mr r3, r30
 /* 8011ECBC 0000001C  38 80 01 90 */	li r4, 0x190
-/* 8011ECC0 00000020  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 8011ECC0 00000020  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 8011ECC4 00000024  4B F8 E2 ED */	bl setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf
 /* 8011ECC8 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011ECCC 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

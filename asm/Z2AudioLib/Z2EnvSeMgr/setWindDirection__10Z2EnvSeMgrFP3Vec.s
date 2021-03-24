@@ -6,8 +6,8 @@ lbl_802C7FC8:
 /* 802C7FD8 00000010  28 00 00 03 */	cmplwi r0, 3
 /* 802C7FDC 00000014  40 82 00 18 */	bne lbl_802C7FF4
 /* 802C7FE0 00000018  38 63 01 44 */	addi r3, r3, 0x144
-/* 802C7FE4 0000001C  3C 80 80 3A */	lis r4, Z2EnvSeMgr__cNullVec__6Z2Calc@ha
-/* 802C7FE8 00000020  38 84 C2 50 */	addi r4, r4, Z2EnvSeMgr__cNullVec__6Z2Calc@l
+/* 802C7FE4 0000001C  3C 80 80 3A */	lis r4, cNullVec__6Z2Calc@ha
+/* 802C7FE8 00000020  38 84 C2 50 */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 802C7FEC 00000024  4B FF DD 85 */	bl setPanDir__10Z2EnvSeDirFP3Vec
 /* 802C7FF0 00000028  48 00 00 0C */	b lbl_802C7FFC
 lbl_802C7FF4:

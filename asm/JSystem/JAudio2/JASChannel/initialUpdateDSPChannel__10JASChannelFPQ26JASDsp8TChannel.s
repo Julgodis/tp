@@ -183,7 +183,7 @@ lbl_8029B254:
 /* 8029B290 0000003C  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8029B294 00000040  C0 1E 00 CC */	lfs f0, 0xcc(r30)
 /* 8029B298 00000044  EC 21 00 2A */	fadds f1, f1, f0
-/* 8029B29C 00000048  C0 02 BC B0 */	lfs f0, JASChannel__lit_775(r2)
+/* 8029B29C 00000048  C0 02 BC B0 */	lfs f0, lit_775(r2)
 /* 8029B2A0 0000004C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8029B2A4 00000050  EC 02 00 2A */	fadds f0, f2, f0
 /* 8029B2A8 00000054  EC 20 18 2A */	fadds f1, f0, f3

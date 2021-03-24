@@ -35,7 +35,7 @@ lbl_801FC3C0:
 /* 801FC3CC 0000000C  3B E0 00 00 */	li r31, 0
 /* 801FC3D0 00000010  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FC3D4 00000014  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FC3D8 00000018  A0 03 00 AA */	lhz r0, 0xaa(r3)
+/* 801FC3D8 00000018  A0 03 00 AA */	lhz r0, 0xaa(r3)	/* effective address: 80430232 */
 /* 801FC3DC 0000001C  28 00 02 00 */	cmplwi r0, 0x200
 /* 801FC3E0 00000020  40 82 00 0C */	bne lbl_801FC3EC
 /* 801FC3E4 00000024  3B E0 00 03 */	li r31, 3

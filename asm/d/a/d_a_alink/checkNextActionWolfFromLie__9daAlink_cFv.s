@@ -19,7 +19,7 @@ lbl_801372F4:
 /* 801372F4 00000000  80 7F 20 60 */	lwz r3, 0x2060(r31)
 /* 801372F8 00000004  3C 80 80 39 */	lis r4, m__19daAlinkHIO_wlLie_c0@ha
 /* 801372FC 00000008  38 84 F1 38 */	addi r4, r4, m__19daAlinkHIO_wlLie_c0@l
-/* 80137300 0000000C  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 80137300 0000000C  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038F168 */
 /* 80137304 00000010  38 80 00 00 */	li r4, 0
 /* 80137308 00000014  38 A0 00 28 */	li r5, 0x28
 /* 8013730C 00000018  4B ED 85 3D */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs

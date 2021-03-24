@@ -138,7 +138,7 @@ lbl_800EA67C:
 /* 800EA6C0 00000038  38 03 80 00 */	addi r0, r3, -32768
 /* 800EA6C4 0000003C  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800EA6C8 00000040  C0 3F 33 98 */	lfs f1, 0x3398(r31)
-/* 800EA6CC 00000044  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800EA6CC 00000044  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800EA6D0 00000048  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800EA6D4 0000004C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800EA6D8 00000050  88 1F 2F 98 */	lbz r0, 0x2f98(r31)
@@ -158,14 +158,14 @@ lbl_800EA6F8:
 /* 800EA708 00000010  FC 40 00 18 */	frsp f2, f0
 /* 800EA70C 00000014  C0 7F 33 A8 */	lfs f3, 0x33a8(r31)
 /* 800EA710 00000018  C0 22 94 A8 */	lfs f1, lit_16570(r2)
-/* 800EA714 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800EA714 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800EA718 00000020  EC 00 10 28 */	fsubs f0, f0, f2
 /* 800EA71C 00000024  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800EA720 00000028  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 800EA724 00000000  40 81 00 18 */	ble lbl_800EA73C
 /* 800EA728 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_atnMove_c0@ha
 /* 800EA72C 00000008  38 63 D7 14 */	addi r3, r3, m__21daAlinkHIO_atnMove_c0@l
-/* 800EA730 0000000C  C0 03 00 20 */	lfs f0, 0x20(r3)
+/* 800EA730 0000000C  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 8038D734 */
 /* 800EA734 00000010  EC 20 00 F2 */	fmuls f1, f0, f3
 /* 800EA738 00000014  48 00 00 10 */	b lbl_800EA748
 lbl_800EA73C:
@@ -177,7 +177,7 @@ lbl_800EA748:
 /* 800EA748 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800EA74C 00000004  3C 80 80 39 */	lis r4, m__21daAlinkHIO_atnMove_c0@ha
 /* 800EA750 00000008  38 84 D7 14 */	addi r4, r4, m__21daAlinkHIO_atnMove_c0@l
-/* 800EA754 0000000C  C0 44 00 24 */	lfs f2, 0x24(r4)
+/* 800EA754 0000000C  C0 44 00 24 */	lfs f2, 0x24(r4)	/* effective address: 8038D738 */
 /* 800EA758 00000010  4B FC 91 CD */	bl setNormalSpeedF__9daAlink_cFff
 /* 800EA75C 00000014  7F E3 FB 78 */	mr r3, r31
 /* 800EA760 00000018  4B FC 91 A5 */	bl checkZeroSpeedF__9daAlink_cCFv
@@ -216,12 +216,12 @@ lbl_800EA7DC:
 /* 800EA7DC 00000000  88 1F 2F 98 */	lbz r0, 0x2f98(r31)
 /* 800EA7E0 00000004  28 00 00 03 */	cmplwi r0, 3
 /* 800EA7E4 00000008  40 82 00 14 */	bne lbl_800EA7F8
-/* 800EA7E8 0000000C  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800EA7E8 0000000C  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800EA7EC 00000010  A8 1F 1F D8 */	lha r0, 0x1fd8(r31)
 /* 800EA7F0 00000014  B0 1F 1F DA */	sth r0, 0x1fda(r31)
 /* 800EA7F4 00000018  48 00 00 10 */	b lbl_800EA804
 lbl_800EA7F8:
-/* 800EA7F8 00000000  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800EA7F8 00000000  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800EA7FC 00000004  A8 1F 1F D6 */	lha r0, 0x1fd6(r31)
 /* 800EA800 00000008  B0 1F 1F DA */	sth r0, 0x1fda(r31)
 lbl_800EA804:

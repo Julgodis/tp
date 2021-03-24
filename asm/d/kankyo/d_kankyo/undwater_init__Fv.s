@@ -4,8 +4,8 @@ lbl_8019EAA0:
 /* 8019EAA8 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8019EAAC 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8019EAB0 00000010  48 1C 37 25 */	bl _savegpr_27
-/* 8019EAB4 00000014  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
-/* 8019EAB8 00000018  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
+/* 8019EAB4 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8019EAB8 00000018  38 63 4C 6C */	addi r3, r3, stringBase0@l
 /* 8019EABC 0000001C  38 63 01 73 */	addi r3, r3, 0x173
 /* 8019EAC0 00000020  38 80 00 1D */	li r4, 0x1d
 /* 8019EAC4 00000024  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -21,7 +21,7 @@ lbl_8019EAA0:
 /* 8019EAEC 0000004C  4B E7 05 59 */	bl mDoExt_createSolidHeapFromGameToCurrent__FUlUl
 /* 8019EAF0 00000050  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8019EAF4 00000054  3B A4 CA 54 */	addi r29, r4, g_env_light@l
-/* 8019EAF8 00000058  90 7D 0F 38 */	stw r3, 0xf38(r29)
+/* 8019EAF8 00000058  90 7D 0F 38 */	stw r3, 0xf38(r29)	/* effective address: 8042D98C */
 /* 8019EAFC 0000005C  28 03 00 00 */	cmplwi r3, 0
 /* 8019EB00 00000060  41 82 00 B8 */	beq lbl_8019EBB8
 /* 8019EB04 00000064  7F 63 DB 78 */	mr r3, r27
@@ -31,7 +31,7 @@ lbl_8019EAA0:
 /* 8019EB14 00000074  4B E7 61 41 */	bl mDoExt_J3DModel__create__FP12J3DModelDataUlUl
 /* 8019EB18 00000078  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8019EB1C 0000007C  38 84 CA 54 */	addi r4, r4, g_env_light@l
-/* 8019EB20 00000080  90 64 0F 30 */	stw r3, 0xf30(r4)
+/* 8019EB20 00000080  90 64 0F 30 */	stw r3, 0xf30(r4)	/* effective address: 8042D984 */
 /* 8019EB24 00000084  28 03 00 00 */	cmplwi r3, 0
 /* 8019EB28 00000088  41 82 00 84 */	beq lbl_8019EBAC
 /* 8019EB2C 0000008C  38 60 00 18 */	li r3, 0x18
@@ -48,11 +48,11 @@ lbl_8019EAA0:
 lbl_8019EB58:
 /* 8019EB58 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8019EB5C 00000004  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8019EB60 00000008  93 DF 10 5C */	stw r30, 0x105c(r31)
+/* 8019EB60 00000008  93 DF 10 5C */	stw r30, 0x105c(r31)	/* effective address: 8042DAB0 */
 /* 8019EB64 0000000C  28 1E 00 00 */	cmplwi r30, 0
 /* 8019EB68 00000010  41 82 00 44 */	beq lbl_8019EBAC
-/* 8019EB6C 00000014  3C 60 80 39 */	lis r3, d_kankyo_d_kankyo__stringBase0@ha
-/* 8019EB70 00000018  38 63 4C 6C */	addi r3, r3, d_kankyo_d_kankyo__stringBase0@l
+/* 8019EB6C 00000014  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 8019EB70 00000018  38 63 4C 6C */	addi r3, r3, stringBase0@l
 /* 8019EB74 0000001C  38 63 01 73 */	addi r3, r3, 0x173
 /* 8019EB78 00000020  38 80 00 3C */	li r4, 0x3c
 /* 8019EB7C 00000024  7F 85 E3 78 */	mr r5, r28
@@ -63,7 +63,7 @@ lbl_8019EB58:
 /* 8019EB90 00000038  38 9B 00 58 */	addi r4, r27, 0x58
 /* 8019EB94 0000003C  38 C0 00 01 */	li r6, 1
 /* 8019EB98 00000040  38 E0 00 02 */	li r7, 2
-/* 8019EB9C 00000044  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
+/* 8019EB9C 00000044  C0 22 A2 48 */	lfs f1, lit_4505(r2)
 /* 8019EBA0 00000048  39 00 00 00 */	li r8, 0
 /* 8019EBA4 0000004C  39 20 FF FF */	li r9, -1
 /* 8019EBA8 00000050  4B E6 EA 95 */	bl init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss

@@ -72,7 +72,7 @@ lbl_800F1774:
 lbl_800F178C:
 /* 800F178C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F1790 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F1794 00000008  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800F1794 00000008  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800F1798 0000000C  28 00 00 FF */	cmplwi r0, 0xff
 /* 800F179C 00000010  41 82 00 14 */	beq lbl_800F17B0
 /* 800F17A0 00000014  7F E3 FB 78 */	mr r3, r31
@@ -86,7 +86,7 @@ lbl_800F17B0:
 lbl_800F17BC:
 /* 800F17BC 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800F17C0 00000004  38 80 00 02 */	li r4, 2
-/* 800F17C4 00000008  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F17C4 00000008  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F17C8 0000000C  4B FB BF 5D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F17CC 00000010  7F E3 FB 78 */	mr r3, r31
 /* 800F17D0 00000014  38 80 00 55 */	li r4, 0x55
@@ -101,7 +101,7 @@ lbl_800F17E4:
 /* 800F17F0 00000000  40 81 00 40 */	ble lbl_800F1830
 /* 800F17F4 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F17F8 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F17FC 0000000C  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800F17FC 0000000C  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800F1800 00000010  28 00 00 FF */	cmplwi r0, 0xff
 /* 800F1804 00000014  41 82 00 14 */	beq lbl_800F1818
 /* 800F1808 00000018  7F E3 FB 78 */	mr r3, r31

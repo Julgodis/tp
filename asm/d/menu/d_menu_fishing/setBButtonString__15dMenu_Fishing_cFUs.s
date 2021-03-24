@@ -9,8 +9,8 @@ lbl_801C5F68:
 /* 801C5F84 0000001C  40 82 00 3C */	bne lbl_801C5FC0
 /* 801C5F88 00000020  3B A0 00 00 */	li r29, 0
 /* 801C5F8C 00000024  3B E0 00 00 */	li r31, 0
-/* 801C5F90 00000028  3C 60 80 39 */	lis r3, d_menu_d_menu_fishing__stringBase0@ha
-/* 801C5F94 0000002C  3B C3 60 68 */	addi r30, r3, d_menu_d_menu_fishing__stringBase0@l
+/* 801C5F90 00000028  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801C5F94 0000002C  3B C3 60 68 */	addi r30, r3, stringBase0@l
 lbl_801C5F98:
 /* 801C5F98 00000000  38 1F 00 34 */	addi r0, r31, 0x34
 /* 801C5F9C 00000004  7C 7B 00 2E */	lwzx r3, r27, r0

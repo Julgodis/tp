@@ -10,7 +10,7 @@ lbl_80136508:
 /* 80136528 00000020  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013652C 00000024  3C 80 80 39 */	lis r4, m__25daAlinkHIO_wlDamNormal_c0@ha
 /* 80136530 00000028  38 84 F2 3C */	addi r4, r4, m__25daAlinkHIO_wlDamNormal_c0@l
-/* 80136534 0000002C  C0 44 00 58 */	lfs f2, 0x58(r4)
+/* 80136534 0000002C  C0 44 00 58 */	lfs f2, 0x58(r4)	/* effective address: 8038F294 */
 /* 80136538 00000030  48 13 A2 09 */	bl cLib_chaseF__FPfff
 /* 8013653C 00000034  38 00 00 05 */	li r0, 5
 /* 80136540 00000038  98 1E 2F 99 */	stb r0, 0x2f99(r30)

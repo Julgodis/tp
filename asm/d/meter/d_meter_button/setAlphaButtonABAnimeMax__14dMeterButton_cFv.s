@@ -8,7 +8,7 @@ lbl_80208B84:
 /* 80208B9C 00000018  28 03 00 00 */	cmplwi r3, 0
 /* 80208BA0 0000001C  41 82 00 84 */	beq lbl_80208C24
 /* 80208BA4 00000020  48 04 CC 85 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80208BA8 00000024  C0 02 AD 4C */	lfs f0, d_meter_d_meter_button__lit_4147(r2)
+/* 80208BA8 00000024  C0 02 AD 4C */	lfs f0, lit_4147(r2)
 /* 80208BAC 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80208BB0 0000002C  41 82 00 74 */	beq lbl_80208C24
 /* 80208BB4 00000030  80 7F 00 60 */	lwz r3, 0x60(r31)
@@ -19,7 +19,7 @@ lbl_80208B84:
 /* 80208BC8 00000044  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 80208BCC 00000048  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 80208BD0 0000004C  48 04 CC 59 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80208BD4 00000050  C0 42 AD 4C */	lfs f2, d_meter_d_meter_button__lit_4147(r2)
+/* 80208BD4 00000050  C0 42 AD 4C */	lfs f2, lit_4147(r2)
 /* 80208BD8 00000054  FC 02 08 00 */	fcmpu cr0, f2, f1
 /* 80208BDC 00000058  40 82 00 48 */	bne lbl_80208C24
 /* 80208BE0 0000005C  88 1F 04 D1 */	lbz r0, 0x4d1(r31)
@@ -33,7 +33,7 @@ lbl_80208B84:
 /* 80208C00 0000007C  38 C0 00 00 */	li r6, 0
 /* 80208C04 00000080  38 E0 00 00 */	li r7, 0
 /* 80208C08 00000084  FC 20 10 90 */	fmr f1, f2
-/* 80208C0C 00000088  C0 62 AD 58 */	lfs f3, d_meter_d_meter_button__lit_4513(r2)
+/* 80208C0C 00000088  C0 62 AD 58 */	lfs f3, lit_4513(r2)
 /* 80208C10 0000008C  FC 80 18 90 */	fmr f4, f3
 /* 80208C14 00000090  39 00 00 00 */	li r8, 0
 /* 80208C18 00000094  48 0A 2D 6D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

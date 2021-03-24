@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct Z2CreatureEnemy {
+};
+
 template <typename A0>
 struct JSULink { };
 /* JSULink<Z2CreatureEnemy> */
 struct JSULink__template2 {
-};
-
-struct Z2CreatureEnemy {
 };
 
 struct Z2SoundObjMgr {
@@ -137,7 +137,7 @@ SECTION_RODATA static u8 const lit_3380[12 + 4 /* padding */] = {
 };
 
 /* 803CAD70-803CB170 0400+00 s=3 e=0 z=0  None .data      mEnemyInfo                                                   */
-SECTION_DATA static u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
+SECTION_DATA static u8 mEnemyInfo[1024] = {
 	0x44, 0x75, 0x6D, 0x6D, 0x79, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x45, 0x5F, 0x73, 0x31, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0xBC, 0x04, 0xB0, 0x07, 0xD0,
 	0x45, 0x5F, 0x79, 0x6B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -205,7 +205,7 @@ SECTION_DATA static u8 Z2SoundObjMgr__mEnemyInfo[1024] = {
 };
 
 /* 803CB170-803CB230 00C0+00 s=1 e=0 z=0  None .data      @3704                                                        */
-SECTION_DATA static void* Z2SoundObjMgr__lit_3704[48] = {
+SECTION_DATA static void* lit_3704[48] = {
 	/* 0    */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
 	/* 1    */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1E4),
 	/* 2    */ (void*)(((char*)searchEnemy__13Z2SoundObjMgrFv)+0x1EC),
@@ -257,57 +257,57 @@ SECTION_DATA static void* Z2SoundObjMgr__lit_3704[48] = {
 };
 
 /* 80455B80-80455B84 0004+00 s=1 e=0 z=0  None .sdata2    sAreaDefault                                                 */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaDefault = 0x010002BC;
+SECTION_SDATA2 static u32 sAreaDefault = 0x010002BC;
 
 /* 80455B84-80455B88 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B84 = 0x044C05DC;
 
 /* 80455B88-80455B8C 0004+00 s=1 e=0 z=0  None .sdata2    sAreaFloating                                                */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaFloating = 0x000002BC;
+SECTION_SDATA2 static u32 sAreaFloating = 0x000002BC;
 
 /* 80455B8C-80455B90 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B8C = 0x044C05DC;
 
 /* 80455B90-80455B94 0004+00 s=1 e=0 z=0  None .sdata2    sAreaWide                                                    */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaWide = 0x010002BC;
+SECTION_SDATA2 static u32 sAreaWide = 0x010002BC;
 
 /* 80455B94-80455B98 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B94 = 0x05DC0CE4;
 
 /* 80455B98-80455B9C 0004+00 s=1 e=0 z=0  None .sdata2    sAreaWideFloating                                            */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaWideFloating = 0x000002BC;
+SECTION_SDATA2 static u32 sAreaWideFloating = 0x000002BC;
 
 /* 80455B9C-80455BA0 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455B9C = 0x05DC0CE4;
 
 /* 80455BA0-80455BA4 0004+00 s=1 e=0 z=0  None .sdata2    sAreaSmall                                                   */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaSmall = 0x0100012C;
+SECTION_SDATA2 static u32 sAreaSmall = 0x0100012C;
 
 /* 80455BA4-80455BA8 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455BA4 = 0x02BC03E8;
 
 /* 80455BA8-80455BAC 0004+00 s=1 e=0 z=0  None .sdata2    sAreaSmallFloating                                           */
-SECTION_SDATA2 static u32 Z2SoundObjMgr__sAreaSmallFloating = 0x000001F4;
+SECTION_SDATA2 static u32 sAreaSmallFloating = 0x000001F4;
 
 /* 80455BAC-80455BB0 0004+00 s=1 e=0 z=0  None .sdata2    None                                                         */
 SECTION_SDATA2 static u32 data_80455BAC = 0x032004B0;
 
 /* 80455BB0-80455BB4 0004+00 s=1 e=0 z=0  None .sdata2    @3694                                                        */
-SECTION_SDATA2 static u8 Z2SoundObjMgr__lit_3694[4] = {
+SECTION_SDATA2 static u8 lit_3694[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455BB4-80455BB8 0004+00 s=1 e=0 z=0  None .sdata2    @3695                                                        */
-SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3695 = 100.0f;
+SECTION_SDATA2 static f32 lit_3695 = 100.0f;
 
 /* 80455BB8-80455BBC 0004+00 s=1 e=0 z=0  None .sdata2    @3696                                                        */
-SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3696 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3696 = 3.0f / 10.0f;
 
 /* 80455BBC-80455BC0 0004+00 s=1 e=0 z=0  None .sdata2    @3697                                                        */
-SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3697 = 1.0f;
+SECTION_SDATA2 static f32 lit_3697 = 1.0f;
 
 /* 80455BC0-80455BC4 0004+00 s=1 e=0 z=0  None .sdata2    @3698                                                        */
-SECTION_SDATA2 static f32 Z2SoundObjMgr__lit_3698 = 2.5f;
+SECTION_SDATA2 static f32 lit_3698 = 2.5f;
 
 /* 80455BC4-80455BC8 0004+00 s=1 e=0 z=0  None .sdata2    @3699                                                        */
 SECTION_SDATA2 static f32 lit_3699 = 5000.0f;
@@ -319,7 +319,7 @@ SECTION_SDATA2 static f32 lit_3700 = 2.0f;
 SECTION_SDATA2 static f32 lit_3701 = 4.0f;
 
 /* 80455BD0-80455BD8 0008+00 s=1 e=0 z=0  None .sdata2    @3703                                                        */
-SECTION_SDATA2 static f64 Z2SoundObjMgr__lit_3703 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3703 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802BF994-802BFFEC 0658+00 s=1 e=1 z=0  None .text      searchEnemy__13Z2SoundObjMgrFv                               */
 #pragma push

@@ -12,7 +12,7 @@ lbl_80127C54:
 /* 80127C7C 00000028  48 19 BE 81 */	bl setWolfEyeOpen__14Z2CreatureLinkFb
 /* 80127C80 0000002C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_wolf_c0@ha
 /* 80127C84 00000030  38 63 F9 F8 */	addi r3, r3, m__18daAlinkHIO_wolf_c0@l
-/* 80127C88 00000034  A8 03 00 0C */	lha r0, 0xc(r3)
+/* 80127C88 00000034  A8 03 00 0C */	lha r0, 0xc(r3)	/* effective address: 8038FA04 */
 /* 80127C8C 00000038  B0 1F 30 AC */	sth r0, 0x30ac(r31)
 /* 80127C90 0000003C  38 00 00 14 */	li r0, 0x14
 /* 80127C94 00000040  98 1F 2F D2 */	stb r0, 0x2fd2(r31)

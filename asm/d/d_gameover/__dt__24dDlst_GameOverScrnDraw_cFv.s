@@ -30,8 +30,8 @@ lbl_8019BC48:
 lbl_8019BC68:
 /* 8019BC68 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019BC6C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8019BC70 00000008  80 63 5D 30 */	lwz r3, 0x5d30(r3)
-/* 8019BC74 0000000C  81 83 00 00 */	lwz r12, 0(r3)
+/* 8019BC70 00000008  80 63 5D 30 */	lwz r3, 0x5d30(r3)	/* effective address: 8040BEF0 */
+/* 8019BC74 0000000C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 8019BC78 00000010  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 8019BC7C 00000014  7D 89 03 A6 */	mtctr r12
 /* 8019BC80 00000018  4E 80 04 21 */	bctrl 

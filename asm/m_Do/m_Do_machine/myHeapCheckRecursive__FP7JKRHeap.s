@@ -13,8 +13,8 @@ lbl_8000B5C8:
 /* 8000B5F4 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 8000B5F8 00000030  4B FF FB F5 */	bl myGetHeapTypeByString__FP7JKRHeap
 /* 8000B5FC 00000034  7C 65 1B 78 */	mr r5, r3
-/* 8000B600 00000038  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000B604 0000003C  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000B600 00000038  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000B604 0000003C  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000B608 00000040  38 63 01 06 */	addi r3, r3, 0x106
 /* 8000B60C 00000044  7F E4 FB 78 */	mr r4, r31
 /* 8000B610 00000048  4C C6 31 82 */	crclr 6

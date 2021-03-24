@@ -8,8 +8,8 @@ lbl_8001665C:
 /* 80016674 00000018  3C 60 80 3E */	lis r3, DvdErr_thread@ha
 /* 80016678 0000001C  38 63 EC C0 */	addi r3, r3, DvdErr_thread@l
 /* 8001667C 00000020  48 32 AE DD */	bl OSCancelThread
-/* 80016680 00000024  3C 60 80 3E */	lis r3, m_Do_m_Do_DVDError__Alarm@ha
-/* 80016684 00000028  38 63 FB E0 */	addi r3, r3, m_Do_m_Do_DVDError__Alarm@l
+/* 80016680 00000024  3C 60 80 3E */	lis r3, Alarm@ha
+/* 80016684 00000028  38 63 FB E0 */	addi r3, r3, Alarm@l
 /* 80016688 0000002C  48 32 45 B5 */	bl OSCancelAlarm
 /* 8001668C 00000030  38 00 00 00 */	li r0, 0
 /* 80016690 00000034  98 0D 87 08 */	stb r0, data_80450C88(r13)

@@ -22,9 +22,9 @@ lbl_8011E90C:
 /* 8011E92C 00000020  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 8011E930 00000024  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 8011E934 00000028  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8011E938 0000002C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8011E938 0000002C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8011E93C 00000030  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8011E940 00000034  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011E940 00000034  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8011E944 00000038  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 8011E948 0000003C  38 60 00 01 */	li r3, 1
 lbl_8011E94C:

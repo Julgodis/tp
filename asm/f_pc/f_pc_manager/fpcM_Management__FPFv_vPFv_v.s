@@ -84,7 +84,7 @@ lbl_80022268:
 /* 80022284 0000001C  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha
 /* 80022288 00000020  80 83 D2 D8 */	lwz r4, m_gamePad__8mDoCPd_c@l(r3)
 /* 8002228C 00000024  38 64 00 68 */	addi r3, r4, 0x68
-/* 80022290 00000028  A8 84 00 7C */	lha r4, 0x7c(r4)
+/* 80022290 00000028  A8 84 00 7C */	lha r4, 0x7c(r4)	/* effective address: 803DD354 */
 /* 80022294 0000002C  48 2B F6 B5 */	bl stopPatternedRumble__Q210JUTGamePad7CRumbleFs
 /* 80022298 00000030  38 00 00 01 */	li r0, 1
 /* 8002229C 00000034  98 0D 87 B8 */	stb r0, struct_80450D38+0x0(r13)

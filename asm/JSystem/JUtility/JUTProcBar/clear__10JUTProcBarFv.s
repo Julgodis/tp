@@ -42,9 +42,9 @@ lbl_802E5A60:
 /* 802E5B00 000000A0  38 00 00 00 */	li r0, 0
 /* 802E5B04 000000A4  80 6D 8F D8 */	lwz r3, sManager__10JUTProcBar(r13)
 /* 802E5B08 000000A8  90 03 01 04 */	stw r0, 0x104(r3)
-/* 802E5B0C 000000AC  C0 02 C6 D8 */	lfs f0, JUTProcBar__lit_2258(r2)
+/* 802E5B0C 000000AC  C0 02 C6 D8 */	lfs f0, lit_2258(r2)
 /* 802E5B10 000000B0  D0 0D 83 80 */	stfs f0, oneFrameRate(r13)
-/* 802E5B14 000000B4  C0 02 C6 DC */	lfs f0, JUTProcBar__lit_2259(r2)
+/* 802E5B14 000000B4  C0 02 C6 DC */	lfs f0, lit_2259(r2)
 /* 802E5B18 000000B8  D0 0D 83 84 */	stfs f0, oneFrameRateUser(r13)
 /* 802E5B1C 000000BC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E5B20 000000C0  80 01 00 14 */	lwz r0, 0x14(r1)

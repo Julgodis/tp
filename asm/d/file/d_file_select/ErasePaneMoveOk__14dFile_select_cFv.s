@@ -11,7 +11,7 @@ lbl_8018A194:
 /* 8018A1B8 00000024  80 63 01 4C */	lwz r3, 0x14c(r3)
 /* 8018A1BC 00000028  3C 80 80 43 */	lis r4, g_fsHIO@ha
 /* 8018A1C0 0000002C  3B C4 C9 EC */	addi r30, r4, g_fsHIO@l
-/* 8018A1C4 00000030  88 9E 00 09 */	lbz r4, 9(r30)
+/* 8018A1C4 00000030  88 9E 00 09 */	lbz r4, 9(r30)	/* effective address: 8042C9F5 */
 /* 8018A1C8 00000034  38 A0 00 FF */	li r5, 0xff
 /* 8018A1CC 00000038  38 C0 00 00 */	li r6, 0
 /* 8018A1D0 0000003C  38 E0 00 00 */	li r7, 0
@@ -73,7 +73,7 @@ lbl_8018A23C:
 /* 8018A2A8 0000006C  38 C0 00 FF */	li r6, 0xff
 /* 8018A2AC 00000070  3C E0 80 43 */	lis r7, g_fsHIO@ha
 /* 8018A2B0 00000074  38 E7 C9 EC */	addi r7, r7, g_fsHIO@l
-/* 8018A2B4 00000078  88 E7 00 07 */	lbz r7, 7(r7)
+/* 8018A2B4 00000078  88 E7 00 07 */	lbz r7, 7(r7)	/* effective address: 8042C9F3 */
 /* 8018A2B8 0000007C  48 00 33 99 */	bl selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 8018A2BC 00000080  38 00 00 26 */	li r0, 0x26
 /* 8018A2C0 00000084  98 1F 02 6F */	stb r0, 0x26f(r31)

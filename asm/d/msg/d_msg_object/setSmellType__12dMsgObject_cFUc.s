@@ -5,7 +5,7 @@ lbl_80238410:
 /* 8023841C 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 80238420 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80238424 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80238428 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80238428 00000018  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 8023842C 0000001C  4B FF F9 D9 */	bl setSmellTypeLocal__12dMsgObject_cFUc
 /* 80238430 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80238434 00000024  7C 08 03 A6 */	mtlr r0

@@ -20,7 +20,7 @@ lbl_8012FBF8:
 /* 8012FBF8 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 8012FBFC 00000004  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012FC00 00000008  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012FC04 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 8012FC04 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038EE4C */
 /* 8012FC08 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8012FC0C 00000000  40 81 00 10 */	ble lbl_8012FC1C
 /* 8012FC10 00000004  7F C3 F3 78 */	mr r3, r30

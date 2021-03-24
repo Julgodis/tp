@@ -1,7 +1,7 @@
 lbl_801FCDD8:
 /* 801FCDD8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801FCDDC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801FCDE0 00000008  88 03 4F F0 */	lbz r0, 0x4ff0(r3)
+/* 801FCDE0 00000008  88 03 4F F0 */	lbz r0, 0x4ff0(r3)	/* effective address: 8040B1B0 */
 /* 801FCDE4 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801FCDE8 00000010  40 82 00 10 */	bne lbl_801FCDF8
 /* 801FCDEC 00000014  A0 03 00 02 */	lhz r0, 2(r3)

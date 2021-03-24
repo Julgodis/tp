@@ -49,6 +49,9 @@ struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -56,9 +59,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -88,10 +88,7 @@ extern "C" void _draw__12dFile_info_cFv(); // 1
 extern "C" void draw__16dDlst_FileInfo_cFv(); // 1
 extern "C" void __sinit_d_file_sel_info_cpp(); // 1
 extern "C" void __dt__16dDlst_FileInfo_cFv(); // 1
-extern "C" extern char const* const d_file_d_file_sel_info__stringBase0;
-extern "C" extern void* d_file_d_file_sel_info__lit_3953[3];
-extern "C" extern void* d_file_d_file_sel_info__lit_3954[3];
-extern "C" extern u8 d_file_d_file_sel_info__fileWarningProc[24];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -154,7 +151,7 @@ SECTION_DEAD static char const* const pad_8039490F = "";
 #pragma pop
 
 /* 803BB498-803BB4A8 000C+04 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_file_d_file_sel_info__cNullVec__6Z2Calc[12 + 4 /* padding */] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -176,28 +173,28 @@ SECTION_DATA static u8 data_803BB4A8[160] = {
 
 /* 803BB548-803BB558 0010+00 s=1 e=0 z=0  None .data      amariheartTex$3880                                           */
 SECTION_DATA static void* data_803BB548[4] = {
-	/* 0    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 1    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 2    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 3    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x21),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x21),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x21),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x21),
 };
 
-/* 803BB558-803BB564 000C+00 s=0 e=0 z=0  None .data      @3953                                                        */
-SECTION_DATA void* d_file_d_file_sel_info__lit_3953[3] = {
+/* 803BB558-803BB564 000C+00 s=1 e=0 z=0  None .data      @3953                                                        */
+SECTION_DATA static void* lit_3953[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeWait__12dFile_info_cFv,
 };
 
-/* 803BB564-803BB570 000C+00 s=0 e=0 z=0  None .data      @3954                                                        */
-SECTION_DATA void* d_file_d_file_sel_info__lit_3954[3] = {
+/* 803BB564-803BB570 000C+00 s=1 e=0 z=0  None .data      @3954                                                        */
+SECTION_DATA static void* lit_3954[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)modeMove__12dFile_info_cFv,
 };
 
-/* 803BB570-803BB588 0018+00 s=0 e=0 z=0  None .data      fileWarningProc                                              */
-SECTION_DATA u8 d_file_d_file_sel_info__fileWarningProc[24] = {
+/* 803BB570-803BB588 0018+00 s=1 e=0 z=0  None .data      fileWarningProc                                              */
+SECTION_DATA static u8 fileWarningProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -333,10 +330,10 @@ asm void dFile_info_c::_draw() {
 
 /* ############################################################################################## */
 /* 804539F8-804539FC 0004+00 s=1 e=0 z=0  None .sdata2    @4000                                                        */
-SECTION_SDATA2 static f32 d_file_d_file_sel_info__lit_4000 = 1.0f;
+SECTION_SDATA2 static f32 lit_4000 = 1.0f;
 
 /* 804539FC-80453A00 0004+00 s=1 e=0 z=0  None .sdata2    @4001                                                        */
-SECTION_SDATA2 static u8 d_file_d_file_sel_info__lit_4001[4] = {
+SECTION_SDATA2 static u8 lit_4001[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

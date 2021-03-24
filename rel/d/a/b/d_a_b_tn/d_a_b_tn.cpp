@@ -16,7 +16,7 @@ struct daB_TN_HIO_c {
 	/* 8062D98C */ ~daB_TN_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct dCcD_Sph {
@@ -25,7 +25,7 @@ struct dCcD_Sph {
 	/* 8062D678 */ dCcD_Sph();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_TN_c {

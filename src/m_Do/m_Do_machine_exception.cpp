@@ -52,7 +52,9 @@ extern "C" static void dispGameInfo__Fv(); // 1
 extern "C" static void dispDateInfo__Fv(); // 1
 extern "C" static void dispConsoleToTerminal__Fv(); // 1
 extern "C" void exception_addition__FP10JUTConsole(); // 1
-extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
+extern "C" extern char const* const stringBase0;
+extern "C" extern u8 struct_80450C98[4];
+extern "C" extern u8 struct_80450C9C[4];
 
 // 
 // External References:
@@ -79,13 +81,16 @@ extern "C" extern u8 data_80450B14[4];
 extern "C" extern u8 gameHeap[4];
 extern "C" extern u8 zeldaHeap[4];
 extern "C" extern u8 archiveHeap[4];
-extern "C" extern u8 sConsole[4];
 extern "C" extern u8 systemConsole__9JFWSystem[4];
 extern "C" extern u8 sAramObject__7JKRAram[4];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80450C90-80450C98 0004+04 s=3 e=0 z=0  None .sbss      sConsole                                                     */
+static u8 sConsole[4 + 4 /* padding */];
 
 /* 80017D7C-80017E08 008C+00 s=3 e=0 z=0  None .text      print_f__FPCce                                               */
 #pragma push
@@ -195,4 +200,11 @@ asm void exception_addition(JUTConsole* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80450C98-80450C9C 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+u8 struct_80450C98[4];
+
+/* 80450C9C-80450CA0 0004+00 s=0 e=0 z=0  None .sbss      None                                                         */
+u8 struct_80450C9C[4];
 

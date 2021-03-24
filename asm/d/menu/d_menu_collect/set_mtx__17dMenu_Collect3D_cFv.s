@@ -6,7 +6,7 @@ lbl_801B6D30:
 /* 801B6D40 00000010  F3 E1 00 28 */	psq_st f31, 40(r1), 0, 0 /* qr0 */
 /* 801B6D44 00000000  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801B6D48 00000004  7C 7F 1B 78 */	mr r31, r3
-/* 801B6D4C 00000008  C3 E2 A5 28 */	lfs f31, d_menu_d_menu_collect__lit_4481(r2)
+/* 801B6D4C 00000008  C3 E2 A5 28 */	lfs f31, lit_4481(r2)
 /* 801B6D50 0000000C  48 00 07 B5 */	bl getMaskMdlVisible__17dMenu_Collect3D_cFv
 /* 801B6D54 00000010  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 801B6D58 00000014  28 00 00 02 */	cmplwi r0, 2
@@ -45,7 +45,7 @@ lbl_801B6DC4:
 /* 801B6DC4 00000000  C0 3F 03 CC */	lfs f1, 0x3cc(r31)
 /* 801B6DC8 00000004  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801B6DCC 00000008  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 801B6DD0 0000000C  C0 03 06 4C */	lfs f0, 0x64c(r3)
+/* 801B6DD0 0000000C  C0 03 06 4C */	lfs f0, 0x64c(r3)	/* effective address: 8042F214 */
 /* 801B6DD4 00000010  EC 00 F8 2A */	fadds f0, f0, f31
 /* 801B6DD8 00000014  EC 01 00 2A */	fadds f0, f1, f0
 /* 801B6DDC 00000018  D0 01 00 10 */	stfs f0, 0x10(r1)

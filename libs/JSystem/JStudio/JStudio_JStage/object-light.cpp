@@ -11,10 +11,19 @@
 // Types:
 // 
 
-struct _GXColor {
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TLight {
+	};
+
 };
 
 struct Vec {
+};
+
+struct _GXColor {
 };
 
 namespace JStudio {
@@ -42,15 +51,6 @@ namespace JStudio {
 
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TLight {
 	};
 
 };
@@ -97,11 +97,11 @@ extern "C" void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio
 extern "C" void __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor(); // 1
 extern "C" void __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv(); // 1
 extern "C" void func_8028D2B8(); // 1
-extern "C" extern u8 object_light__lit_931[12];
+extern "C" extern u8 lit_931[12];
 extern "C" extern u8 lit_932[12];
 extern "C" extern u8 lit_933[12];
-extern "C" extern u8 object_light__lit_934[12];
-extern "C" extern u8 object_light__lit_935[12];
+extern "C" extern u8 lit_934[12];
+extern "C" extern u8 lit_935[12];
 
 // 
 // External References:
@@ -194,7 +194,7 @@ asm JStudio_JStage::TAdaptor_light::~TAdaptor_light() {
 static u8 lit_930[12];
 
 /* 8043140C-80431418 000C+00 s=0 e=0 z=0  None .bss       @931                                                         */
-u8 object_light__lit_931[12];
+u8 lit_931[12];
 
 /* 80431418-80431424 000C+00 s=0 e=0 z=0  None .bss       @932                                                         */
 u8 lit_932[12];
@@ -203,12 +203,12 @@ u8 lit_932[12];
 u8 lit_933[12];
 
 /* 80431430-8043143C 000C+00 s=0 e=0 z=0  None .bss       @934                                                         */
-u8 object_light__lit_934[12];
+u8 lit_934[12];
 
 /* 8043143C-80431448 000C+00 s=0 e=0 z=0  None .bss       @935                                                         */
-u8 object_light__lit_935[12];
+u8 lit_935[12];
 
-/* 80431448-80431490 0048+00 s=1 e=0 z=0  None .bss       saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light   */
+/* 80431448-80431490 0048+00 s=2 e=0 z=0  None .bss       saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light   */
 static u8 saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light[72];
 
 /* 8028CC68-8028CCB0 0048+00 s=1 e=0 z=0  None .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv     */
@@ -224,25 +224,25 @@ asm void JStudio_JStage::TAdaptor_light::adaptor_do_prepare() {
 
 /* ############################################################################################## */
 /* 804554E8-804554F0 0004+04 s=1 e=0 z=0  None .sdata2    @846                                                         */
-SECTION_SDATA2 static u8 object_light__lit_846[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_846[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804554F0-804554F8 0008+00 s=1 e=0 z=0  None .sdata2    @847                                                         */
-SECTION_SDATA2 static f64 object_light__lit_847 = 0.5;
+SECTION_SDATA2 static f64 lit_847 = 0.5;
 
 /* 804554F8-80455500 0008+00 s=1 e=0 z=0  None .sdata2    @848                                                         */
-SECTION_SDATA2 static f64 object_light__lit_848 = 3.0;
+SECTION_SDATA2 static f64 lit_848 = 3.0;
 
 /* 80455500-80455508 0008+00 s=1 e=0 z=0  None .sdata2    @849                                                         */
-SECTION_SDATA2 static u8 object_light__lit_849[8] = {
+SECTION_SDATA2 static u8 lit_849[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455508-8045550C 0004+00 s=1 e=0 z=0  None .sdata2    @850                                                         */
-SECTION_SDATA2 static f32 object_light__lit_850 = 57.295780181884766f;
+SECTION_SDATA2 static f32 lit_850 = 57.295780181884766f;
 
 /* 8028CCB0-8028CF68 02B8+00 s=1 e=0 z=0  None .text      adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv       */
 #pragma push
@@ -268,7 +268,7 @@ asm void JStudio_JStage::TAdaptor_light::adaptor_do_end() {
 
 /* ############################################################################################## */
 /* 8045550C-80455510 0004+00 s=1 e=0 z=0  None .sdata2    @898                                                         */
-SECTION_SDATA2 static f32 object_light__lit_898 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_898 = 0.01745329238474369f;
 
 /* 8028CFBC-8028D18C 01D0+00 s=1 e=0 z=0  None .text      adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl     */
 #pragma push

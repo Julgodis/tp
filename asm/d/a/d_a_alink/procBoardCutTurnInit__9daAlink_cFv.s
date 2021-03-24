@@ -14,7 +14,7 @@ lbl_801075D4:
 /* 80107604 00000030  4B FA 5A F1 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 80107608 00000034  3C 60 80 39 */	lis r3, m__19daAlinkHIO_board_c0@ha
 /* 8010760C 00000038  38 63 E8 70 */	addi r3, r3, m__19daAlinkHIO_board_c0@l
-/* 80107610 0000003C  C0 23 00 44 */	lfs f1, 0x44(r3)
+/* 80107610 0000003C  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 8038E8B4 */
 /* 80107614 00000040  C0 02 92 C4 */	lfs f0, lit_6109(r2)
 /* 80107618 00000044  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8010761C 00000000  4C 41 13 82 */	cror 2, 1, 2
@@ -70,7 +70,7 @@ lbl_801076BC:
 /* 801076CC 00000010  4B FC 9D 65 */	bl resetCombo__9daAlink_cFi
 /* 801076D0 00000014  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutTurn_c0@ha
 /* 801076D4 00000018  38 63 DB 84 */	addi r3, r3, m__21daAlinkHIO_cutTurn_c0@l
-/* 801076D8 0000001C  C0 03 00 70 */	lfs f0, 0x70(r3)
+/* 801076D8 0000001C  C0 03 00 70 */	lfs f0, 0x70(r3)	/* effective address: 8038DBF4 */
 /* 801076DC 00000020  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 801076E0 00000024  C0 22 92 98 */	lfs f1, lit_5943(r2)
 /* 801076E4 00000028  C0 1F 34 78 */	lfs f0, 0x3478(r31)

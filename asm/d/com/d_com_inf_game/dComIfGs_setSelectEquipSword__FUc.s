@@ -52,7 +52,7 @@ lbl_8002EF5C:
 lbl_8002EF74:
 /* 8002EF74 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002EF78 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002EF7C 00000008  9B E3 00 14 */	stb r31, 0x14(r3)
+/* 8002EF7C 00000008  9B E3 00 14 */	stb r31, 0x14(r3)	/* effective address: 804061D4 */
 /* 8002EF80 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8002EF84 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8002EF88 00000014  7C 08 03 A6 */	mtlr r0

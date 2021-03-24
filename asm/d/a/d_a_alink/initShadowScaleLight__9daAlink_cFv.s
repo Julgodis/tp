@@ -30,7 +30,7 @@ lbl_800CB694:
 /* 800CB704 00000054  4B F5 04 11 */	bl fopAcM_getTalkEventPartner__FPC10fopAc_ac_c
 /* 800CB708 00000058  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800CB70C 0000005C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800CB710 00000060  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800CB710 00000060  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800CB714 00000064  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 800CB718 00000068  41 82 00 0C */	beq lbl_800CB724
 /* 800CB71C 0000006C  C3 E2 92 C0 */	lfs f31, lit_6108(r2)
@@ -122,7 +122,7 @@ lbl_800CB81C:
 /* 800CB850 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800CB854 00000000  40 81 00 58 */	ble lbl_800CB8AC
 /* 800CB858 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800CB85C 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800CB85C 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800CB860 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800CB864 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800CB868 00000014  FC 00 00 32 */	fmul f0, f0, f0

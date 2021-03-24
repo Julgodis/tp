@@ -7,7 +7,7 @@ lbl_8033FE90:
 /* 8033FEA4 00000014  3B E3 BB 20 */	addi r31, r3, Scb@l
 /* 8033FEA8 00000018  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8033FEAC 0000001C  3B DF 00 40 */	addi r30, r31, 0x40
-/* 8033FEB0 00000020  80 9F 00 40 */	lwz r4, 0x40(r31)
+/* 8033FEB0 00000020  80 9F 00 40 */	lwz r4, 0x40(r31)	/* effective address: 8044BB60 */
 /* 8033FEB4 00000024  7C 7F 22 14 */	add r3, r31, r4
 /* 8033FEB8 00000028  20 A4 00 40 */	subfic r5, r4, 0x40
 /* 8033FEBC 0000002C  48 00 00 35 */	bl WriteSram

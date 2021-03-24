@@ -31,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {
@@ -132,10 +132,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -179,10 +179,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -598,15 +598,15 @@ extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
 extern "C" void __dt__18dScnKy_env_light_cFv(); // 1
 extern "C" void __sinit_d_kankyo_cpp(); // 1
 extern "C" static void dKankyo_DayProc__Fv(); // 1
-extern "C" extern char const* const d_kankyo_d_kankyo__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 data_803BC070[16];
 extern "C" extern u8 data_803BC080[16];
 extern "C" extern u8 data_803BC090[16];
 extern "C" extern void* g_profile_KANKYO[10];
 extern "C" extern u8 g_env_light[4880];
-extern "C" extern u8 d_kankyo_d_kankyo__lit_4113[12];
+extern "C" extern u8 lit_4113[12];
 extern "C" extern u8 g_mEnvSeMgr[780];
-extern "C" extern u8 d_kankyo_d_kankyo__lit_7485[12];
+extern "C" extern u8 lit_7485[12];
 extern "C" extern u8 data_8042E7C8[12];
 extern "C" extern u8 lit_7489[12];
 extern "C" extern u8 data_8042E7E0[12 + 4 /* padding */];
@@ -938,7 +938,7 @@ asm static void dKy_sense_pat_get() {
 
 /* ############################################################################################## */
 /* 803BBDB8-803BBDC4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_kankyo_d_kankyo__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -967,7 +967,7 @@ SECTION_DATA static u8 lightMaskData[16] = {
 };
 
 /* 803BBEBC-803BBEFC 0040+00 s=1 e=0 z=0  None .data      @4322                                                        */
-SECTION_DATA static void* d_kankyo_d_kankyo__lit_4322[16] = {
+SECTION_DATA static void* lit_4322[16] = {
 	/* 0    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x1BC),
 	/* 1    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x38),
 	/* 2    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x54),
@@ -999,7 +999,7 @@ asm static void dKy_WolfPowerup_BgAmbCol(_GXColorS10* param_0) {
 
 /* ############################################################################################## */
 /* 803BBEFC-803BBF3C 0040+00 s=1 e=0 z=0  None .data      @4364                                                        */
-SECTION_DATA static void* d_kankyo_d_kankyo__lit_4364[16] = {
+SECTION_DATA static void* lit_4364[16] = {
 	/* 0    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x168),
 	/* 1    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x40),
 	/* 2    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x54),
@@ -1019,19 +1019,19 @@ SECTION_DATA static void* d_kankyo_d_kankyo__lit_4364[16] = {
 };
 
 /* 80453BC0-80453BC4 0004+00 s=1 e=0 z=0  None .sdata2    @4345                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4345 = 750.0f;
+SECTION_SDATA2 static f32 lit_4345 = 750.0f;
 
 /* 80453BC4-80453BC8 0004+00 s=1 e=0 z=0  None .sdata2    @4346                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4346 = 1750.0f;
+SECTION_SDATA2 static f32 lit_4346 = 1750.0f;
 
 /* 80453BC8-80453BCC 0004+00 s=2 e=0 z=0  None .sdata2    @4347                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4347 = 5000.0f;
+SECTION_SDATA2 static f32 lit_4347 = 5000.0f;
 
 /* 80453BCC-80453BD0 0004+00 s=1 e=0 z=0  None .sdata2    @4348                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4348 = 40000.0f;
+SECTION_SDATA2 static f32 lit_4348 = 40000.0f;
 
 /* 80453BD0-80453BD4 0004+00 s=1 e=0 z=0  None .sdata2    @4349                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4349 = 4000.0f;
+SECTION_SDATA2 static f32 lit_4349 = 4000.0f;
 
 /* 80453BD4-80453BD8 0004+00 s=1 e=0 z=0  None .sdata2    @4350                                                        */
 SECTION_SDATA2 static f32 lit_4350 = 12000.0f;
@@ -1043,37 +1043,37 @@ SECTION_SDATA2 static f32 lit_4351 = 500.0f;
 SECTION_SDATA2 static f32 lit_4352 = 2250.0f;
 
 /* 80453BE0-80453BE4 0004+00 s=4 e=0 z=0  None .sdata2    @4353                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4353 = 1000.0f;
+SECTION_SDATA2 static f32 lit_4353 = 1000.0f;
 
 /* 80453BE4-80453BE8 0004+00 s=2 e=0 z=0  None .sdata2    @4354                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4354 = 1800.0f;
+SECTION_SDATA2 static f32 lit_4354 = 1800.0f;
 
 /* 80453BE8-80453BEC 0004+00 s=1 e=0 z=0  None .sdata2    @4355                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4355 = 2750.0f;
+SECTION_SDATA2 static f32 lit_4355 = 2750.0f;
 
 /* 80453BEC-80453BF0 0004+00 s=4 e=0 z=0  None .sdata2    @4356                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4356 = 2000.0f;
+SECTION_SDATA2 static f32 lit_4356 = 2000.0f;
 
 /* 80453BF0-80453BF4 0004+00 s=2 e=0 z=0  None .sdata2    @4357                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4357 = 3000.0f;
+SECTION_SDATA2 static f32 lit_4357 = 3000.0f;
 
 /* 80453BF4-80453BF8 0004+00 s=4 e=0 z=0  None .sdata2    @4358                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4358 = 300.0f;
+SECTION_SDATA2 static f32 lit_4358 = 300.0f;
 
 /* 80453BF8-80453BFC 0004+00 s=1 e=0 z=0  None .sdata2    @4359                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4359 = 700.0f;
+SECTION_SDATA2 static f32 lit_4359 = 700.0f;
 
 /* 80453BFC-80453C00 0004+00 s=4 e=0 z=0  None .sdata2    @4360                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4360 = 1500.0f;
+SECTION_SDATA2 static f32 lit_4360 = 1500.0f;
 
 /* 80453C00-80453C04 0004+00 s=1 e=0 z=0  None .sdata2    @4361                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4361 = 1250.0f;
+SECTION_SDATA2 static f32 lit_4361 = 1250.0f;
 
 /* 80453C04-80453C08 0004+00 s=2 e=0 z=0  None .sdata2    @4362                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4362 = 80000.0f;
+SECTION_SDATA2 static f32 lit_4362 = 80000.0f;
 
 /* 80453C08-80453C0C 0004+00 s=1 e=0 z=0  None .sdata2    @4363                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4363 = 4750.0f;
+SECTION_SDATA2 static f32 lit_4363 = 4750.0f;
 
 /* 8019CCDC-8019CE5C 0180+00 s=4 e=0 z=0  None .text      dKy_WolfPowerup_FogNearFar__FPfPf                            */
 #pragma push
@@ -1088,18 +1088,18 @@ asm static void dKy_WolfPowerup_FogNearFar(f32* param_0, f32* param_1) {
 
 /* ############################################################################################## */
 /* 80453C0C-80453C10 0004+00 s=46 e=0 z=0  None .sdata2    @4409                                                        */
-SECTION_SDATA2 static u8 d_kankyo_d_kankyo__lit_4409[4] = {
+SECTION_SDATA2 static u8 lit_4409[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453C10-80453C18 0008+00 s=12 e=0 z=0  None .sdata2    @4410                                                        */
-SECTION_SDATA2 static f64 d_kankyo_d_kankyo__lit_4410 = 0.5;
+SECTION_SDATA2 static f64 lit_4410 = 0.5;
 
 /* 80453C18-80453C20 0008+00 s=12 e=0 z=0  None .sdata2    @4411                                                        */
-SECTION_SDATA2 static f64 d_kankyo_d_kankyo__lit_4411 = 3.0;
+SECTION_SDATA2 static f64 lit_4411 = 3.0;
 
 /* 80453C20-80453C28 0008+00 s=12 e=0 z=0  None .sdata2    @4412                                                        */
-SECTION_SDATA2 static u8 d_kankyo_d_kankyo__lit_4412[8] = {
+SECTION_SDATA2 static u8 lit_4412[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1116,19 +1116,19 @@ asm static void dKy_pos2_get_angle(cXyz* param_0, cXyz* param_1, s16* param_2, s
 
 /* ############################################################################################## */
 /* 8042CA48-8042CA54 000C+00 s=2 e=0 z=0  None .bss       @4112                                                        */
-static u8 d_kankyo_d_kankyo__lit_4112[12];
+static u8 lit_4112[12];
 
 /* 8042CA54-8042DD64 1310+00 s=116 e=128 z=0  None .bss       g_env_light                                                  */
 u8 g_env_light[4880];
 
 /* 80453C28-80453C2C 0004+00 s=1 e=0 z=0  None .sdata2    @4441                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4441 = 0.0054931640625f;
+SECTION_SDATA2 static f32 lit_4441 = 0.0054931640625f;
 
 /* 80453C2C-80453C30 0004+00 s=13 e=0 z=0  None .sdata2    @4442                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4442 = 90.0f;
+SECTION_SDATA2 static f32 lit_4442 = 90.0f;
 
 /* 80453C30-80453C38 0008+00 s=25 e=0 z=0  None .sdata2    @4444                                                        */
-SECTION_SDATA2 static f64 d_kankyo_d_kankyo__lit_4444 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4444 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8019CFE4-8019D1A0 01BC+00 s=4 e=0 z=0  None .text      dKy_twi_wolflight_set__Fi                                    */
 #pragma push
@@ -1143,7 +1143,7 @@ asm static void dKy_twi_wolflight_set(int param_0) {
 
 /* ############################################################################################## */
 /* 80453C38-80453C3C 0004+00 s=1 e=0 z=0  None .sdata2    @4477                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4477 = 57.2957763671875f;
+SECTION_SDATA2 static f32 lit_4477 = 57.2957763671875f;
 
 /* 8019D1A0-8019D2C4 0124+00 s=3 e=0 z=0  None .text      dKy_lightdir_set__FffP3Vec                                   */
 #pragma push
@@ -1158,7 +1158,7 @@ asm static void dKy_lightdir_set(f32 param_0, f32 param_1, Vec* param_2) {
 
 /* ############################################################################################## */
 /* 803BBF3C-803BBF58 001C+00 s=1 e=0 z=0  None .data      @4511                                                        */
-SECTION_DATA static void* d_kankyo_d_kankyo__lit_4511[7] = {
+SECTION_DATA static void* lit_4511[7] = {
 	/* 0    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x158),
 	/* 1    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x78),
 	/* 2    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x8C),
@@ -1169,31 +1169,31 @@ SECTION_DATA static void* d_kankyo_d_kankyo__lit_4511[7] = {
 };
 
 /* 80453C3C-80453C40 0004+00 s=1 e=0 z=0  None .sdata2    @4502                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4502 = 3.1415927410125732f;
+SECTION_SDATA2 static f32 lit_4502 = 3.1415927410125732f;
 
 /* 80453C40-80453C44 0004+00 s=3 e=0 z=0  None .sdata2    @4503                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4503 = 180.0f;
+SECTION_SDATA2 static f32 lit_4503 = 180.0f;
 
 /* 80453C44-80453C48 0004+00 s=2 e=0 z=0  None .sdata2    @4504                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4504 = -1000.0f;
+SECTION_SDATA2 static f32 lit_4504 = -1000.0f;
 
 /* 80453C48-80453C4C 0004+00 s=36 e=0 z=0  None .sdata2    @4505                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4505 = 1.0f;
+SECTION_SDATA2 static f32 lit_4505 = 1.0f;
 
 /* 80453C4C-80453C50 0004+00 s=6 e=0 z=0  None .sdata2    @4506                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4506 = 2.0f;
+SECTION_SDATA2 static f32 lit_4506 = 2.0f;
 
 /* 80453C50-80453C54 0004+00 s=6 e=0 z=0  None .sdata2    @4507                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4507 = -1.0f;
+SECTION_SDATA2 static f32 lit_4507 = -1.0f;
 
 /* 80453C54-80453C58 0004+00 s=1 e=0 z=0  None .sdata2    @4508                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4508 = -4.0f;
+SECTION_SDATA2 static f32 lit_4508 = -4.0f;
 
 /* 80453C58-80453C5C 0004+00 s=2 e=0 z=0  None .sdata2    @4509                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4509 = 4.0f;
+SECTION_SDATA2 static f32 lit_4509 = 4.0f;
 
 /* 80453C5C-80453C60 0004+00 s=1 e=0 z=0  None .sdata2    @4510                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4510 = -2.0f;
+SECTION_SDATA2 static f32 lit_4510 = -2.0f;
 
 /* 8019D2C4-8019D44C 0188+00 s=3 e=0 z=0  None .text      dKy_GXInitLightSpot__FP12J3DLightInfofUc                     */
 #pragma push
@@ -1208,7 +1208,7 @@ asm static void dKy_GXInitLightSpot(J3DLightInfo* param_0, f32 param_1, u8 param
 
 /* ############################################################################################## */
 /* 80453C60-80453C64 0004+00 s=8 e=0 z=0  None .sdata2    @4529                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4529 = 0.5f;
+SECTION_SDATA2 static f32 lit_4529 = 0.5f;
 
 /* 8019D44C-8019D520 00D4+00 s=2 e=0 z=0  None .text      dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc                */
 #pragma push
@@ -1322,13 +1322,13 @@ asm void dKy_get_parcent(f32 param_0, f32 param_1, f32 param_2) {
 
 /* ############################################################################################## */
 /* 80453C64-80453C68 0004+00 s=4 e=0 z=0  None .sdata2    @4730                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4730 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4730 = 1.0f / 10.0f;
 
 /* 80453C68-80453C6C 0004+00 s=9 e=0 z=0  None .sdata2    @4731                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4731 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4731 = 1.0f / 100.0f;
 
 /* 80453C6C-80453C70 0004+00 s=8 e=0 z=0  None .sdata2    @4732                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_4732 = 255.0f;
+SECTION_SDATA2 static f32 lit_4732 = 255.0f;
 
 /* 8019D8CC-8019DD4C 0480+00 s=1 e=0 z=0  None .text      dKy_FiveSenses_fullthrottle_dark_static1__Fv                 */
 #pragma push
@@ -1475,7 +1475,7 @@ asm static void darkmist_init() {
 
 /* ############################################################################################## */
 /* 80453C8C-80453C90 0004+00 s=6 e=0 z=0  None .sdata2    @5106                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5106 = 200.0f;
+SECTION_SDATA2 static f32 lit_5106 = 200.0f;
 
 /* 8019E734-8019E854 0120+00 s=1 e=0 z=0  None .text      plight_set__Fv                                               */
 #pragma push
@@ -1517,13 +1517,13 @@ SECTION_DATA static u8 data_803BBFB8[24] = {
 };
 
 /* 80453C90-80453C94 0004+00 s=5 e=0 z=0  None .sdata2    @5191                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5191 = 99.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_5191 = 99.0f / 100.0f;
 
 /* 80453C94-80453C98 0004+00 s=9 e=0 z=0  None .sdata2    @5192                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5192 = 100.0f;
+SECTION_SDATA2 static f32 lit_5192 = 100.0f;
 
 /* 80453C98-80453C9C 0004+00 s=1 e=0 z=0  None .sdata2    @5193                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5193 = -90.0f;
+SECTION_SDATA2 static f32 lit_5193 = -90.0f;
 
 /* 80453C9C-80453CA0 0004+00 s=3 e=0 z=0  None .sdata2    @5194                                                        */
 SECTION_SDATA2 static f32 lit_5194 = 0.0010000000474974513f;
@@ -1563,22 +1563,22 @@ asm static void dKy_light_size_get(char const* param_0) {
 
 /* ############################################################################################## */
 /* 80453CA0-80453CA4 0004+00 s=2 e=0 z=0  None .sdata2    @5344                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5344 = 11.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_5344 = 11.0f / 100.0f;
 
 /* 80453CA4-80453CA8 0004+00 s=1 e=0 z=0  None .sdata2    @5345                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5345 = -255.0f;
+SECTION_SDATA2 static f32 lit_5345 = -255.0f;
 
 /* 80453CA8-80453CAC 0004+00 s=3 e=0 z=0  None .sdata2    @5346                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5346 = 999999.875f;
+SECTION_SDATA2 static f32 lit_5346 = 999999.875f;
 
 /* 80453CAC-80453CB0 0004+00 s=7 e=0 z=0  None .sdata2    @5347                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5347 = 15.0f;
+SECTION_SDATA2 static f32 lit_5347 = 15.0f;
 
 /* 80453CB0-80453CB4 0004+00 s=3 e=0 z=0  None .sdata2    @5348                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5348 = 360.0f;
+SECTION_SDATA2 static f32 lit_5348 = 360.0f;
 
 /* 80453CB4-80453CB8 0004+00 s=1 e=0 z=0  None .sdata2    @5349                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5349 = 0.012000000104308128f;
+SECTION_SDATA2 static f32 lit_5349 = 0.012000000104308128f;
 
 /* 8019EC98-8019F264 05CC+00 s=1 e=0 z=0  None .text      envcolor_init__Fv                                            */
 #pragma push
@@ -1857,19 +1857,19 @@ asm void dStage_roomControl_c::GetTimePass() {
 
 /* ############################################################################################## */
 /* 80453CC8-80453CCC 0004+00 s=2 e=0 z=0  None .sdata2    @5613                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5613 = 270.0f;
+SECTION_SDATA2 static f32 lit_5613 = 270.0f;
 
 /* 80453CCC-80453CD0 0004+00 s=1 e=0 z=0  None .sdata2    @5614                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5614 = 105.0f;
+SECTION_SDATA2 static f32 lit_5614 = 105.0f;
 
 /* 80453CD0-80453CD4 0004+00 s=3 e=0 z=0  None .sdata2    @5615                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5615 = 450.0f;
+SECTION_SDATA2 static f32 lit_5615 = 450.0f;
 
 /* 80453CD4-80453CD8 0004+00 s=1 e=0 z=0  None .sdata2    @5616                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5616 = 210.0f;
+SECTION_SDATA2 static f32 lit_5616 = 210.0f;
 
 /* 80453CD8-80453CDC 0004+00 s=1 e=0 z=0  None .sdata2    @5617                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_5617 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_5617 = 0.01745329238474369f;
 
 /* 80453CDC-80453CE0 0004+00 s=1 e=0 z=0  None .sdata2    @5618                                                        */
 SECTION_SDATA2 static f32 lit_5618 = -48000.0f;
@@ -2016,7 +2016,7 @@ SECTION_SDATA2 static f32 lit_6033 = 0.25f;
 SECTION_SDATA2 static f32 lit_6034 = 9.9999998245167e-14f;
 
 /* 80453CF4-80453CF8 0004+00 s=4 e=0 z=0  None .sdata2    @6035                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_6035 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_6035 = 1.0f / 5.0f;
 
 /* 80453CF8-80453CFC 0004+00 s=3 e=0 z=0  None .sdata2    @6036                                                        */
 SECTION_SDATA2 static f32 lit_6036 = 4.0f / 5.0f;
@@ -2031,10 +2031,10 @@ SECTION_SDATA2 static f32 lit_6038 = 13.0f / 20.0f;
 SECTION_SDATA2 static f32 lit_6039 = 11.0f / 20.0f;
 
 /* 80453D08-80453D0C 0004+00 s=4 e=0 z=0  None .sdata2    @6040                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_6040 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_6040 = 1.0f / 20.0f;
 
 /* 80453D0C-80453D10 0004+00 s=1 e=0 z=0  None .sdata2    @6041                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_6041 = 0.004999999888241291f;
+SECTION_SDATA2 static f32 lit_6041 = 0.004999999888241291f;
 
 /* 80453D10-80453D14 0004+00 s=9 e=0 z=0  None .sdata2    @6042                                                        */
 SECTION_SDATA2 static f32 lit_6042 = 9.999999974752427e-07f;
@@ -2122,7 +2122,7 @@ SECTION_SDATA2 static f32 lit_6764 = 80.0f;
 SECTION_SDATA2 static f32 lit_6765 = 10000.0f;
 
 /* 80453D28-80453D2C 0004+00 s=3 e=0 z=0  None .sdata2    @6766                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_6766 = 10.0f;
+SECTION_SDATA2 static f32 lit_6766 = 10.0f;
 
 /* 80453D2C-80453D30 0004+00 s=1 e=0 z=0  None .sdata2    @6767                                                        */
 SECTION_SDATA2 static f32 lit_6767 = -20.0f;
@@ -2161,7 +2161,7 @@ asm void dScnKy_env_light_c::settingTevStruct_plightcol_plus(cXyz* param_0, dKy_
 
 /* ############################################################################################## */
 /* 8042DD64-8042DD70 000C+00 s=0 e=0 z=0  None .bss       @4113                                                        */
-u8 d_kankyo_d_kankyo__lit_4113[12];
+u8 lit_4113[12];
 
 /* 8042DD70-8042E07C 030C+00 s=1 e=8 z=0  None .bss       g_mEnvSeMgr                                                  */
 u8 g_mEnvSeMgr[780];
@@ -2392,7 +2392,7 @@ asm void dScnKy_env_light_c::drawKankyo() {
 SECTION_SDATA2 static f32 lit_7608 = 0.005239999853074551f;
 
 /* 80453DA4-80453DA8 0004+00 s=2 e=0 z=0  None .sdata2    @7609                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo__lit_7609 = 35.0f;
+SECTION_SDATA2 static f32 lit_7609 = 35.0f;
 
 /* 801A572C-801A5B6C 0440+00 s=0 e=1 z=0  None .text      dKy_undwater_filter_draw__Fv                                 */
 #pragma push
@@ -3763,7 +3763,7 @@ asm static void dKankyo_DayProc() {
 
 /* ############################################################################################## */
 /* 8042E7BC-8042E7C8 000C+00 s=0 e=0 z=0  None .bss       @7485                                                        */
-u8 d_kankyo_d_kankyo__lit_7485[12];
+u8 lit_7485[12];
 
 /* 8042E7C8-8042E7D4 000C+00 s=0 e=0 z=0  None .bss       S_old_cameye$7484                                            */
 u8 data_8042E7C8[12];

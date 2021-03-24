@@ -20,7 +20,7 @@ lbl_8021E610:
 /* 8021E614 00000004  41 82 00 24 */	beq lbl_8021E638
 /* 8021E618 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E61C 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E620 00000010  88 83 00 15 */	lbz r4, 0x15(r3)
+/* 8021E620 00000010  88 83 00 15 */	lbz r4, 0x15(r3)	/* effective address: 804061D5 */
 /* 8021E624 00000014  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8021E628 00000018  28 00 00 FF */	cmplwi r0, 0xff
 /* 8021E62C 0000001C  41 82 00 0C */	beq lbl_8021E638
@@ -31,7 +31,7 @@ lbl_8021E638:
 /* 8021E63C 00000004  4B E1 09 59 */	bl dComIfGs_setSelectEquipShield__FUc
 /* 8021E640 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E644 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E648 00000010  9B E3 5E 76 */	stb r31, 0x5e76(r3)
+/* 8021E648 00000010  9B E3 5E 76 */	stb r31, 0x5e76(r3)	/* effective address: 8040C036 */
 /* 8021E64C 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8021E650 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8021E654 0000001C  7C 08 03 A6 */	mtlr r0

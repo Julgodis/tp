@@ -11,8 +11,8 @@ lbl_800987B4:
 /* 800987D8 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800987DC 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800987E0 0000002C  38 00 00 1E */	li r0, 0x1e
-/* 800987E4 00000030  98 03 00 EC */	stb r0, 0xec(r3)
-/* 800987E8 00000034  98 03 00 F8 */	stb r0, 0xf8(r3)
+/* 800987E4 00000030  98 03 00 EC */	stb r0, 0xec(r3)	/* effective address: 804062AC */
+/* 800987E8 00000034  98 03 00 F8 */	stb r0, 0xf8(r3)	/* effective address: 804062B8 */
 /* 800987EC 00000038  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800987F0 0000003C  7C 08 03 A6 */	mtlr r0
 /* 800987F4 00000040  38 21 00 10 */	addi r1, r1, 0x10

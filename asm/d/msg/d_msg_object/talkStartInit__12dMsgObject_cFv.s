@@ -7,7 +7,7 @@ lbl_802360A0:
 /* 802360B4 00000014  39 61 00 30 */	addi r11, r1, 0x30
 /* 802360B8 00000018  48 12 C1 21 */	bl _savegpr_28
 /* 802360BC 0000001C  7C 7F 1B 78 */	mr r31, r3
-/* 802360C0 00000020  C3 E2 B0 BC */	lfs f31, d_msg_d_msg_object__lit_4083(r2)
+/* 802360C0 00000020  C3 E2 B0 BC */	lfs f31, lit_4083(r2)
 /* 802360C4 00000024  4B DD E9 2D */	bl mDoExt_getMesgFont__Fv
 /* 802360C8 00000028  7C 7D 1B 78 */	mr r29, r3
 /* 802360CC 0000002C  38 00 00 00 */	li r0, 0
@@ -24,7 +24,7 @@ lbl_802360A0:
 /* 802360F8 00000058  7F E3 FB 78 */	mr r3, r31
 /* 802360FC 0000005C  38 80 00 00 */	li r4, 0
 /* 80236100 00000060  48 00 08 0D */	bl delete_screen__12dMsgObject_cFb
-/* 80236104 00000064  C3 E2 B0 C0 */	lfs f31, d_msg_d_msg_object__lit_4084(r2)
+/* 80236104 00000064  C3 E2 B0 C0 */	lfs f31, lit_4084(r2)
 /* 80236108 00000068  3B C0 00 01 */	li r30, 1
 lbl_8023610C:
 /* 8023610C 00000000  80 7F 01 18 */	lwz r3, 0x118(r31)
@@ -33,7 +33,7 @@ lbl_8023610C:
 lbl_80236118:
 /* 80236118 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8023611C 00000004  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 80236120 00000008  88 1C 5E 8F */	lbz r0, 0x5e8f(r28)
+/* 80236120 00000008  88 1C 5E 8F */	lbz r0, 0x5e8f(r28)	/* effective address: 8040C04F */
 /* 80236124 0000000C  28 00 00 08 */	cmplwi r0, 8
 /* 80236128 00000010  41 82 00 2C */	beq lbl_80236154
 /* 8023612C 00000014  28 00 00 05 */	cmplwi r0, 5
@@ -49,7 +49,7 @@ lbl_80236118:
 lbl_80236154:
 /* 80236154 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80236158 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8023615C 00000008  80 63 00 1C */	lwz r3, 0x1c(r3)
+/* 8023615C 00000008  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 80236160 0000000C  4B FE 95 8D */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_80236164:
 /* 80236164 00000000  88 9C 5E 8F */	lbz r4, 0x5e8f(r28)
@@ -80,7 +80,7 @@ lbl_802361B4:
 /* 802361BC 00000008  40 82 05 30 */	bne lbl_802366EC
 /* 802361C0 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 802361C4 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 802361C8 00000014  A0 03 00 A6 */	lhz r0, 0xa6(r3)
+/* 802361C8 00000014  A0 03 00 A6 */	lhz r0, 0xa6(r3)	/* effective address: 8043022E */
 /* 802361CC 00000018  28 00 13 EB */	cmplwi r0, 0x13eb
 /* 802361D0 0000001C  41 82 05 1C */	beq lbl_802366EC
 /* 802361D4 00000020  57 C0 06 3F */	clrlwi. r0, r30, 0x18
@@ -401,19 +401,19 @@ lbl_802364BC:
 /* 80236668 000001AC  7D 89 03 A6 */	mtctr r12
 /* 8023666C 000001B0  4E 80 04 21 */	bctrl 
 /* 80236670 000001B4  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 80236674 000001B8  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 80236678 000001BC  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 80236674 000001B8  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80236678 000001BC  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 8023667C 000001C0  38 84 00 6E */	addi r4, r4, 0x6e
 /* 80236680 000001C4  7C 85 23 78 */	mr r5, r4
 /* 80236684 000001C8  48 00 5C DD */	bl setString__14dMsgScrnBase_cFPcPc
 /* 80236688 000001CC  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 8023668C 000001D0  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 80236690 000001D4  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 8023668C 000001D0  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80236690 000001D4  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 80236694 000001D8  38 84 00 6E */	addi r4, r4, 0x6e
 /* 80236698 000001DC  48 00 5D 55 */	bl setRubyString__14dMsgScrnBase_cFPc
 /* 8023669C 000001E0  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 802366A0 000001E4  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 802366A4 000001E8  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 802366A0 000001E4  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802366A4 000001E8  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 802366A8 000001EC  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802366AC 000001F0  7C 85 23 78 */	mr r5, r4
 /* 802366B0 000001F4  7C 86 23 78 */	mr r6, r4
@@ -422,8 +422,8 @@ lbl_802364BC:
 /* 802366BC 00000200  7D 89 03 A6 */	mtctr r12
 /* 802366C0 00000204  4E 80 04 21 */	bctrl 
 /* 802366C4 00000208  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 802366C8 0000020C  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 802366CC 00000210  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 802366C8 0000020C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802366CC 00000210  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 802366D0 00000214  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802366D4 00000218  7C 85 23 78 */	mr r5, r4
 /* 802366D8 0000021C  7C 86 23 78 */	mr r6, r4

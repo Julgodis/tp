@@ -41,7 +41,7 @@ lbl_80233608:
 /* 8023361C 00000014  98 7F 04 CA */	stb r3, 0x4ca(r31)
 /* 80233620 00000018  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80233624 0000001C  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80233628 00000020  88 03 03 59 */	lbz r0, 0x359(r3)
+/* 80233628 00000020  88 03 03 59 */	lbz r0, 0x359(r3)	/* effective address: 804305E5 */
 /* 8023362C 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80233630 00000028  41 82 01 14 */	beq lbl_80233744
 /* 80233634 0000002C  80 7F 01 18 */	lwz r3, 0x118(r31)
@@ -79,25 +79,25 @@ lbl_80233678:
 /* 802336AC 00000034  80 7F 01 20 */	lwz r3, 0x120(r31)
 /* 802336B0 00000038  83 63 00 04 */	lwz r27, 4(r3)
 /* 802336B4 0000003C  38 7B 0A 1C */	addi r3, r27, 0xa1c
-/* 802336B8 00000040  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 802336BC 00000044  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 802336B8 00000040  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802336BC 00000044  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 802336C0 00000048  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802336C4 0000004C  48 13 54 69 */	bl strcpy
 /* 802336C8 00000050  38 7B 0C 1C */	addi r3, r27, 0xc1c
-/* 802336CC 00000054  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 802336D0 00000058  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 802336CC 00000054  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802336D0 00000058  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 802336D4 0000005C  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802336D8 00000060  48 13 54 55 */	bl strcpy
 /* 802336DC 00000064  38 7B 0E 1C */	addi r3, r27, 0xe1c
-/* 802336E0 00000068  3C 80 80 3A */	lis r4, d_msg_d_msg_object__stringBase0@ha
-/* 802336E4 0000006C  38 84 96 60 */	addi r4, r4, d_msg_d_msg_object__stringBase0@l
+/* 802336E0 00000068  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802336E4 0000006C  38 84 96 60 */	addi r4, r4, stringBase0@l
 /* 802336E8 00000070  38 84 00 6E */	addi r4, r4, 0x6e
 /* 802336EC 00000074  48 13 54 41 */	bl strcpy
 /* 802336F0 00000078  3B 40 00 00 */	li r26, 0
 /* 802336F4 0000007C  3B C0 00 00 */	li r30, 0
 /* 802336F8 00000080  3B A0 00 00 */	li r29, 0
-/* 802336FC 00000084  3C 60 80 3A */	lis r3, d_msg_d_msg_object__stringBase0@ha
-/* 80233700 00000088  3B 83 96 60 */	addi r28, r3, d_msg_d_msg_object__stringBase0@l
+/* 802336FC 00000084  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80233700 00000088  3B 83 96 60 */	addi r28, r3, stringBase0@l
 lbl_80233704:
 /* 80233704 00000000  38 7D 10 1C */	addi r3, r29, 0x101c
 /* 80233708 00000004  7C 7B 1A 14 */	add r3, r27, r3
@@ -127,8 +127,8 @@ lbl_80233744:
 /* 80233760 0000001C  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 80233764 00000020  28 00 00 18 */	cmplwi r0, 0x18
 /* 80233768 00000024  41 81 00 B4 */	bgt lbl_8023381C
-/* 8023376C 00000028  3C 60 80 3C */	lis r3, d_msg_d_msg_object__lit_4486@ha
-/* 80233770 0000002C  38 63 0A E8 */	addi r3, r3, d_msg_d_msg_object__lit_4486@l
+/* 8023376C 00000028  3C 60 80 3C */	lis r3, lit_4486@ha
+/* 80233770 0000002C  38 63 0A E8 */	addi r3, r3, lit_4486@l
 /* 80233774 00000030  54 00 10 3A */	slwi r0, r0, 2
 /* 80233778 00000034  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8023377C 00000038  7C 09 03 A6 */	mtctr r0

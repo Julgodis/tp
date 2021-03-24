@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" static void OSMemory__OnReset(); // 1
+extern "C" static void OnReset(); // 1
 extern "C" static void MEMIntrruptHandler(); // 1
 extern "C" void OSProtectRange(); // 1
 extern "C" static void Config24MB(); // 1
@@ -44,9 +44,9 @@ extern "C" extern u8 __OSErrorTable[68 + 12 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSMemory__OnReset() {
+extern "C" asm static void OnReset() {
 	nofralloc
-#include "asm/dolphin/os/OSMemory/OSMemory__OnReset.s"
+#include "asm/dolphin/os/OSMemory/OnReset.s"
 }
 #pragma pop
 
@@ -108,8 +108,8 @@ extern "C" asm static void RealMode() {
 
 /* ############################################################################################## */
 /* 803D07D8-803D07E8 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
-SECTION_DATA static void* OSMemory__ResetFunctionInfo[4] = {
-	/* 0    */ (void*)OSMemory__OnReset,
+SECTION_DATA static void* ResetFunctionInfo[4] = {
+	/* 0    */ (void*)OnReset,
 	/* 1    */ (void*)0x0000007F,
 	/* 2    */ (void*)NULL,
 	/* 3    */ (void*)NULL,

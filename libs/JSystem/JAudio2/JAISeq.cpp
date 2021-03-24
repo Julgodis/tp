@@ -11,25 +11,25 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-struct JAIAudience {
-};
-
-struct JASSoundParams {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
 };
 
-struct JAISeqMgr {
+struct JAISoundActivity {
 };
 
-struct JAISoundActivity {
+struct JAIAudience {
+};
+
+struct JAISoundID {
+};
+
+struct JASSoundParams {
+};
+
+struct JAISeqMgr {
 };
 
 struct JGeometry {
@@ -222,7 +222,7 @@ extern "C" asm static void func_802A0A6C() {
 
 /* ############################################################################################## */
 /* 803C98D8-803C98F4 001C+00 s=1 e=0 z=0  None .data      @852                                                         */
-SECTION_DATA static void* JAISeq__lit_852[7] = {
+SECTION_DATA static void* lit_852[7] = {
 	/* 0    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x68),
 	/* 1    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x9C),
 	/* 2    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x44),
@@ -259,7 +259,7 @@ SECTION_SDATA2 static u8 lit_643[4] = {
 };
 
 /* 804557A0-804557A8 0004+04 s=3 e=0 z=0  None .sdata2    @644                                                         */
-SECTION_SDATA2 static f32 JAISeq__lit_644[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_644[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
@@ -359,7 +359,7 @@ asm void JAISeq::JAISeqMgr_calc_() {
 
 /* ############################################################################################## */
 /* 804340A4-804340B0 000C+00 s=3 e=0 z=0  None .bss       @896                                                         */
-static u8 JAISeq__lit_896[12];
+static u8 lit_896[12];
 
 /* 804340B0-804340C0 0010+00 s=3 e=4 z=0  None .bss       memPool_$localstatic3$getMemPool___35JASPoolAllocObject<13JAISoundChild>Fv */
 u8 data_804340B0[16];

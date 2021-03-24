@@ -77,13 +77,13 @@ lbl_8018DA10:
 /* 8018DB3C 0000012C  38 A0 00 01 */	li r5, 1
 /* 8018DB40 00000130  48 00 75 B5 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 8018DB44 00000134  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 8018DB48 00000138  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018DB48 00000138  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018DB4C 0000013C  48 00 77 55 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018DB50 00000140  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 8018DB54 00000144  C0 22 9F 68 */	lfs f1, lit_6069(r2)
 /* 8018DB58 00000148  C0 42 9F 6C */	lfs f2, lit_6070(r2)
 /* 8018DB5C 0000014C  C0 62 9F 70 */	lfs f3, lit_6071(r2)
-/* 8018DB60 00000150  C0 82 9F 30 */	lfs f4, d_file_d_file_select__lit_4166(r2)
+/* 8018DB60 00000150  C0 82 9F 30 */	lfs f4, lit_4166(r2)
 /* 8018DB64 00000154  FC A0 20 90 */	fmr f5, f4
 /* 8018DB68 00000158  48 00 76 49 */	bl setParam__16dSelect_cursor_cFfffff
 lbl_8018DB6C:

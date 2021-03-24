@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
@@ -24,9 +27,6 @@ struct daNpcF_c {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpc_zrC_c {
@@ -57,6 +57,8 @@ struct daNpc_zrC_c {
 	/* 80B8FF14 */ void playExpression();
 	/* 80B904DC */ void playMotion();
 	/* 80B90940 */ void playMotionAnm2(daNpcF_c::daNpcF_anmPlayData***);
+	/* 80B90A6C */ void chkAction(int (daNpc_zrC_c::*)(void*));
+	/* 80B90A98 */ void setAction(int (daNpc_zrC_c::*)(void*));
 	/* 80B90B40 */ void selectAction();
 	/* 80B90C34 */ void doNormalAction(int);
 	/* 80B90D48 */ void doEvent();
@@ -199,8 +201,8 @@ extern "C" void reset__11daNpc_zrC_cFv(); // 1
 extern "C" void playExpression__11daNpc_zrC_cFv(); // 1
 extern "C" void playMotion__11daNpc_zrC_cFv(); // 1
 extern "C" void playMotionAnm2__11daNpc_zrC_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
-extern "C" static void chkAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__11daNpc_zrC_cFv(); // 1
 extern "C" void doNormalAction__11daNpc_zrC_cFi(); // 1
 extern "C" void doEvent__11daNpc_zrC_cFv(); // 1
@@ -891,7 +893,7 @@ asm void daNpc_zrC_c::playMotionAnm2(daNpcF_c::daNpcF_anmPlayData*** param_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i() {
+asm void daNpc_zrC_c::chkAction(int (daNpc_zrC_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zrc/d_a_npc_zrc/chkAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i.s"
 }
@@ -902,7 +904,7 @@ extern "C" asm static void chkAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i() {
+asm void daNpc_zrC_c::setAction(int (daNpc_zrC_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zrc/d_a_npc_zrc/setAction__11daNpc_zrC_cFM11daNpc_zrC_cFPCvPvPv_i.s"
 }

@@ -15,9 +15,9 @@ lbl_800E53F8:
 /* 800E542C 00000034  41 82 00 20 */	beq lbl_800E544C
 /* 800E5430 00000038  3C 60 80 39 */	lis r3, m__18daAlinkHIO_bomb_c0@ha
 /* 800E5434 0000003C  38 63 E7 14 */	addi r3, r3, m__18daAlinkHIO_bomb_c0@l
-/* 800E5438 00000040  C0 03 00 40 */	lfs f0, 0x40(r3)
+/* 800E5438 00000040  C0 03 00 40 */	lfs f0, 0x40(r3)	/* effective address: 8038E754 */
 /* 800E543C 00000044  D0 1F 05 2C */	stfs f0, 0x52c(r31)
-/* 800E5440 00000048  C0 03 00 44 */	lfs f0, 0x44(r3)
+/* 800E5440 00000048  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 8038E758 */
 /* 800E5444 0000004C  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 800E5448 00000050  48 00 03 38 */	b lbl_800E5780
 lbl_800E544C:
@@ -26,14 +26,14 @@ lbl_800E544C:
 /* 800E5454 00000008  41 82 00 18 */	beq lbl_800E546C
 /* 800E5458 0000000C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_bomb_c0@ha
 /* 800E545C 00000010  38 63 E7 14 */	addi r3, r3, m__18daAlinkHIO_bomb_c0@l
-/* 800E5460 00000014  C0 23 00 38 */	lfs f1, 0x38(r3)
-/* 800E5464 00000018  C0 43 00 3C */	lfs f2, 0x3c(r3)
+/* 800E5460 00000014  C0 23 00 38 */	lfs f1, 0x38(r3)	/* effective address: 8038E74C */
+/* 800E5464 00000018  C0 43 00 3C */	lfs f2, 0x3c(r3)	/* effective address: 8038E750 */
 /* 800E5468 0000001C  48 00 00 14 */	b lbl_800E547C
 lbl_800E546C:
 /* 800E546C 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_bomb_c0@ha
 /* 800E5470 00000004  38 63 E7 14 */	addi r3, r3, m__18daAlinkHIO_bomb_c0@l
-/* 800E5474 00000008  C0 23 00 30 */	lfs f1, 0x30(r3)
-/* 800E5478 0000000C  C0 43 00 34 */	lfs f2, 0x34(r3)
+/* 800E5474 00000008  C0 23 00 30 */	lfs f1, 0x30(r3)	/* effective address: 8038E744 */
+/* 800E5478 0000000C  C0 43 00 34 */	lfs f2, 0x34(r3)	/* effective address: 8038E748 */
 lbl_800E547C:
 /* 800E547C 00000000  54 80 04 E7 */	rlwinm. r0, r4, 0, 0x13, 0x13
 /* 800E5480 00000004  41 82 01 A4 */	beq lbl_800E5624
@@ -66,7 +66,7 @@ lbl_800E547C:
 /* 800E54EC 00000070  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E54F0 00000000  40 81 00 58 */	ble lbl_800E5548
 /* 800E54F4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E54F8 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E54F8 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E54FC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E5500 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E5504 00000014  FC 00 00 32 */	fmul f0, f0, f0

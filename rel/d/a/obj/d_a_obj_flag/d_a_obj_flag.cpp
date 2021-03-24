@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
 struct FlagJoint_c {
 	/* 80BEC3BC */ ~FlagJoint_c();
 	/* 80BEC4E0 */ FlagJoint_c();
+};
+
+struct csXyz {
 };
 
 struct daObjFlag_c {

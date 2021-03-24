@@ -16,15 +16,15 @@ lbl_801A9D60:
 /* 801A9D98 0000001C  3B 83 CA 54 */	addi r28, r3, g_env_light@l
 /* 801A9D9C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A9DA0 00000024  3A A3 61 C0 */	addi r21, r3, g_dComIfG_gameInfo@l
-/* 801A9DA4 00000028  83 75 5D 74 */	lwz r27, 0x5d74(r21)
+/* 801A9DA4 00000028  83 75 5D 74 */	lwz r27, 0x5d74(r21)	/* effective address: 8040BF34 */
 /* 801A9DA8 0000002C  3B 40 00 00 */	li r26, 0
-/* 801A9DAC 00000030  C3 C2 A2 0C */	lfs f30, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A9DAC 00000030  C3 C2 A2 0C */	lfs f30, lit_4409(r2)
 /* 801A9DB0 00000034  3B 20 00 FF */	li r25, 0xff
 /* 801A9DB4 00000038  3B A0 00 00 */	li r29, 0
 /* 801A9DB8 0000003C  3B D5 4E 00 */	addi r30, r21, 0x4e00
 /* 801A9DBC 00000040  7F C3 F3 78 */	mr r3, r30
-/* 801A9DC0 00000044  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801A9DC4 00000048  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801A9DC0 00000044  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801A9DC4 00000048  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801A9DC8 0000004C  38 84 02 49 */	addi r4, r4, 0x249
 /* 801A9DCC 00000050  48 1B EB C9 */	bl strcmp
 /* 801A9DD0 00000054  2C 03 00 00 */	cmpwi r3, 0
@@ -114,11 +114,11 @@ lbl_801A9EBC:
 /* 801A9EFC 00000040  38 00 00 FF */	li r0, 0xff
 /* 801A9F00 00000044  98 04 00 0F */	stb r0, 0xf(r4)
 /* 801A9F04 00000048  D3 E4 00 10 */	stfs f31, 0x10(r4)
-/* 801A9F08 0000004C  C0 02 A2 90 */	lfs f0, d_kankyo_d_kankyo__lit_5191(r2)
+/* 801A9F08 0000004C  C0 02 A2 90 */	lfs f0, lit_5191(r2)
 /* 801A9F0C 00000050  D0 04 00 14 */	stfs f0, 0x14(r4)
-/* 801A9F10 00000054  C0 02 A2 2C */	lfs f0, d_kankyo_d_kankyo__lit_4442(r2)
+/* 801A9F10 00000054  C0 02 A2 2C */	lfs f0, lit_4442(r2)
 /* 801A9F14 00000058  D0 04 00 18 */	stfs f0, 0x18(r4)
-/* 801A9F18 0000005C  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A9F18 0000005C  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801A9F1C 00000060  D0 04 00 1C */	stfs f0, 0x1c(r4)
 /* 801A9F20 00000064  D0 04 00 20 */	stfs f0, 0x20(r4)
 /* 801A9F24 00000068  38 00 00 00 */	li r0, 0
@@ -148,8 +148,8 @@ lbl_801A9F58:
 /* 801A9F78 00000020  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 801A9F7C 00000024  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 801A9F80 00000028  7F C3 F3 78 */	mr r3, r30
-/* 801A9F84 0000002C  3C 80 80 39 */	lis r4, d_kankyo_d_kankyo__stringBase0@ha
-/* 801A9F88 00000030  38 84 4C 6C */	addi r4, r4, d_kankyo_d_kankyo__stringBase0@l
+/* 801A9F84 0000002C  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801A9F88 00000030  38 84 4C 6C */	addi r4, r4, stringBase0@l
 /* 801A9F8C 00000034  38 84 01 0E */	addi r4, r4, 0x10e
 /* 801A9F90 00000038  48 1B EA 05 */	bl strcmp
 /* 801A9F94 0000003C  2C 03 00 00 */	cmpwi r3, 0
@@ -161,13 +161,13 @@ lbl_801A9F58:
 /* 801A9FAC 00000054  38 61 00 20 */	addi r3, r1, 0x20
 /* 801A9FB0 00000058  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801A9FB4 0000005C  48 19 D3 E9 */	bl PSVECSquareDistance
-/* 801A9FB8 00000060  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A9FB8 00000060  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801A9FBC 00000064  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801A9FC0 00000000  40 81 00 58 */	ble lbl_801AA018
 /* 801A9FC4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801A9FC8 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801A9FC8 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801A9FCC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801A9FD0 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801A9FD0 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801A9FD4 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801A9FD8 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801A9FDC 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -186,7 +186,7 @@ lbl_801A9F58:
 /* 801AA010 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA014 00000054  48 00 00 88 */	b lbl_801AA09C
 lbl_801AA018:
-/* 801AA018 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA018 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA01C 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA020 00000000  40 80 00 10 */	bge lbl_801AA030
 /* 801AA024 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -227,7 +227,7 @@ lbl_801AA08C:
 /* 801AA094 00000008  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 801AA098 0000000C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_801AA09C:
-/* 801AA09C 00000000  C0 02 A1 EC */	lfs f0, d_kankyo_d_kankyo__lit_4356(r2)
+/* 801AA09C 00000000  C0 02 A1 EC */	lfs f0, lit_4356(r2)
 /* 801AA0A0 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA0A4 00000000  40 81 00 10 */	ble lbl_801AA0B4
 /* 801AA0A8 00000004  C3 C2 A2 88 */	lfs f30, lit_5077(r2)
@@ -237,13 +237,13 @@ lbl_801AA0B4:
 /* 801AA0B4 00000000  7F A3 EB 78 */	mr r3, r29
 /* 801AA0B8 00000004  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801AA0BC 00000008  48 19 D2 E1 */	bl PSVECSquareDistance
-/* 801AA0C0 0000000C  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA0C0 0000000C  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA0C4 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA0C8 00000000  40 81 00 58 */	ble lbl_801AA120
 /* 801AA0CC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801AA0D0 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801AA0D0 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801AA0D4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801AA0D8 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801AA0D8 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801AA0DC 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801AA0E0 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801AA0E4 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -262,7 +262,7 @@ lbl_801AA0B4:
 /* 801AA118 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA11C 00000054  48 00 00 88 */	b lbl_801AA1A4
 lbl_801AA120:
-/* 801AA120 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA120 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA124 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA128 00000000  40 80 00 10 */	bge lbl_801AA138
 /* 801AA12C 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -308,13 +308,13 @@ lbl_801AA1A4:
 /* 801AA1AC 00000004  7F A3 EB 78 */	mr r3, r29
 /* 801AA1B0 00000008  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801AA1B4 0000000C  48 19 D1 E9 */	bl PSVECSquareDistance
-/* 801AA1B8 00000010  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA1B8 00000010  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA1BC 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA1C0 00000000  40 81 00 58 */	ble lbl_801AA218
 /* 801AA1C4 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801AA1C8 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801AA1C8 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801AA1CC 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801AA1D0 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801AA1D0 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801AA1D4 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801AA1D8 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801AA1DC 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -333,7 +333,7 @@ lbl_801AA1A4:
 /* 801AA210 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA214 00000054  48 00 00 88 */	b lbl_801AA29C
 lbl_801AA218:
-/* 801AA218 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA218 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA21C 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA220 00000000  40 80 00 10 */	bge lbl_801AA230
 /* 801AA224 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -381,13 +381,13 @@ lbl_801AA2A8:
 /* 801AA2A8 00000000  7F A3 EB 78 */	mr r3, r29
 /* 801AA2AC 00000004  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801AA2B0 00000008  48 19 D0 ED */	bl PSVECSquareDistance
-/* 801AA2B4 0000000C  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA2B4 0000000C  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA2B8 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA2BC 00000000  40 81 00 58 */	ble lbl_801AA314
 /* 801AA2C0 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801AA2C4 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801AA2C4 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801AA2C8 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801AA2CC 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801AA2CC 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801AA2D0 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801AA2D4 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801AA2D8 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -406,7 +406,7 @@ lbl_801AA2A8:
 /* 801AA30C 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA310 00000054  48 00 00 88 */	b lbl_801AA398
 lbl_801AA314:
-/* 801AA314 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA314 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA318 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA31C 00000000  40 80 00 10 */	bge lbl_801AA32C
 /* 801AA320 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -452,13 +452,13 @@ lbl_801AA398:
 /* 801AA3A0 00000004  7F A3 EB 78 */	mr r3, r29
 /* 801AA3A4 00000008  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801AA3A8 0000000C  48 19 CF F5 */	bl PSVECSquareDistance
-/* 801AA3AC 00000010  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA3AC 00000010  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA3B0 00000018  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA3B4 00000000  40 81 00 58 */	ble lbl_801AA40C
 /* 801AA3B8 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801AA3BC 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801AA3BC 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801AA3C0 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801AA3C4 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801AA3C4 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801AA3C8 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801AA3CC 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801AA3D0 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -477,7 +477,7 @@ lbl_801AA398:
 /* 801AA404 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA408 00000054  48 00 00 88 */	b lbl_801AA490
 lbl_801AA40C:
-/* 801AA40C 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA40C 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA410 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA414 00000000  40 80 00 10 */	bge lbl_801AA424
 /* 801AA418 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -537,13 +537,13 @@ lbl_801AA4A8:
 /* 801AA4C4 0000001C  7E C3 B3 78 */	mr r3, r22
 /* 801AA4C8 00000020  38 9B 00 D8 */	addi r4, r27, 0xd8
 /* 801AA4CC 00000024  48 19 CE D1 */	bl PSVECSquareDistance
-/* 801AA4D0 00000028  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA4D0 00000028  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA4D4 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA4D8 00000000  40 81 00 58 */	ble lbl_801AA530
 /* 801AA4DC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 801AA4E0 00000008  C8 82 A2 10 */	lfd f4, d_kankyo_d_kankyo__lit_4410(r2)
+/* 801AA4E0 00000008  C8 82 A2 10 */	lfd f4, lit_4410(r2)
 /* 801AA4E4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
-/* 801AA4E8 00000010  C8 62 A2 18 */	lfd f3, d_kankyo_d_kankyo__lit_4411(r2)
+/* 801AA4E8 00000010  C8 62 A2 18 */	lfd f3, lit_4411(r2)
 /* 801AA4EC 00000014  FC 00 00 32 */	fmul f0, f0, f0
 /* 801AA4F0 00000018  FC 01 00 32 */	fmul f0, f1, f0
 /* 801AA4F4 0000001C  FC 03 00 28 */	fsub f0, f3, f0
@@ -562,7 +562,7 @@ lbl_801AA4A8:
 /* 801AA528 00000050  FC 20 08 18 */	frsp f1, f1
 /* 801AA52C 00000054  48 00 00 88 */	b lbl_801AA5B4
 lbl_801AA530:
-/* 801AA530 00000000  C8 02 A2 20 */	lfd f0, d_kankyo_d_kankyo__lit_4412(r2)
+/* 801AA530 00000000  C8 02 A2 20 */	lfd f0, lit_4412(r2)
 /* 801AA534 00000004  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AA538 00000000  40 80 00 10 */	bge lbl_801AA548
 /* 801AA53C 00000004  3C 60 80 45 */	lis r3, __float_nan@ha
@@ -622,11 +622,11 @@ lbl_801AA5B4:
 /* 801AA5F4 0000003C  38 00 00 FF */	li r0, 0xff
 /* 801AA5F8 00000040  98 03 00 0F */	stb r0, 0xf(r3)
 /* 801AA5FC 00000044  D3 E3 00 10 */	stfs f31, 0x10(r3)
-/* 801AA600 00000048  C0 02 A2 90 */	lfs f0, d_kankyo_d_kankyo__lit_5191(r2)
+/* 801AA600 00000048  C0 02 A2 90 */	lfs f0, lit_5191(r2)
 /* 801AA604 0000004C  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 801AA608 00000050  C0 02 A2 2C */	lfs f0, d_kankyo_d_kankyo__lit_4442(r2)
+/* 801AA608 00000050  C0 02 A2 2C */	lfs f0, lit_4442(r2)
 /* 801AA60C 00000054  D0 03 00 18 */	stfs f0, 0x18(r3)
-/* 801AA610 00000058  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801AA610 00000058  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801AA614 0000005C  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 801AA618 00000060  D0 03 00 20 */	stfs f0, 0x20(r3)
 /* 801AA61C 00000064  38 00 00 00 */	li r0, 0

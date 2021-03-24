@@ -8,13 +8,13 @@ lbl_8034DA04:
 /* 8034DA1C 00000018  4B FE FC D9 */	bl OSDisableInterrupts
 /* 8034DA20 0000001C  3C 80 CC 00 */	lis r4, 0xCC00 /* 0xCC002000@ha */
 /* 8034DA24 00000020  39 04 20 00 */	addi r8, r4, 0x2000 /* 0xCC002000@l */
-/* 8034DA28 00000024  A4 08 00 2C */	lhzu r0, 0x2c(r8)
+/* 8034DA28 00000024  A4 08 00 2C */	lhzu r0, 0x2c(r8)	/* effective address: CC00202C */
 /* 8034DA2C 00000028  38 A4 20 00 */	addi r5, r4, 0x2000
 /* 8034DA30 0000002C  54 06 05 7E */	clrlwi r6, r0, 0x15
 lbl_8034DA34:
-/* 8034DA34 00000000  A0 08 00 00 */	lhz r0, 0(r8)
+/* 8034DA34 00000000  A0 08 00 00 */	lhz r0, 0(r8)	/* effective address: CC002000 */
 /* 8034DA38 00000004  7C C7 33 78 */	mr r7, r6
-/* 8034DA3C 00000008  A0 85 00 2E */	lhz r4, 0x2e(r5)
+/* 8034DA3C 00000008  A0 85 00 2E */	lhz r4, 0x2e(r5)	/* effective address: CC00202E */
 /* 8034DA40 0000000C  54 06 05 7E */	clrlwi r6, r0, 0x15
 /* 8034DA44 00000010  7C 07 30 40 */	cmplw r7, r6
 /* 8034DA48 00000014  54 87 05 7E */	clrlwi r7, r4, 0x15

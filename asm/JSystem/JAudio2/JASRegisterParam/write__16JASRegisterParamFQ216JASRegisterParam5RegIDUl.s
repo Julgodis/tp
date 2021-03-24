@@ -15,8 +15,8 @@ lbl_802936B0:
 /* 802936B0 00000000  38 04 FF E0 */	addi r0, r4, -32
 /* 802936B4 00000004  28 00 00 09 */	cmplwi r0, 9
 /* 802936B8 00000008  4D 81 00 20 */	bgtlr 
-/* 802936BC 0000000C  3C 80 80 3C */	lis r4, JASRegisterParam__lit_56@ha
-/* 802936C0 00000010  38 84 5B 90 */	addi r4, r4, JASRegisterParam__lit_56@l
+/* 802936BC 0000000C  3C 80 80 3C */	lis r4, lit_56@ha
+/* 802936C0 00000010  38 84 5B 90 */	addi r4, r4, lit_56@l
 /* 802936C4 00000014  54 00 10 3A */	slwi r0, r0, 2
 /* 802936C8 00000018  7C 04 00 2E */	lwzx r0, r4, r0
 /* 802936CC 0000001C  7C 09 03 A6 */	mtctr r0

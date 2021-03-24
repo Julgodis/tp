@@ -92,7 +92,7 @@ lbl_801EE760:
 /* 801EE79C 0000003C  40 80 00 BC */	bge lbl_801EE858
 /* 801EE7A0 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EE7A4 00000044  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 801EE7A8 00000048  83 7C 5D 30 */	lwz r27, 0x5d30(r28)
+/* 801EE7A8 00000048  83 7C 5D 30 */	lwz r27, 0x5d30(r28)	/* effective address: 8040BEF0 */
 /* 801EE7AC 0000004C  38 00 00 0A */	li r0, 0xa
 /* 801EE7B0 00000050  7C 7D 03 D6 */	divw r3, r29, r0
 /* 801EE7B4 00000054  48 02 FB 15 */	bl dMeter2Info_getNumberTextureName__Fi
@@ -139,7 +139,7 @@ lbl_801EE760:
 lbl_801EE858:
 /* 801EE858 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EE85C 00000004  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 801EE860 00000008  83 7E 5D 30 */	lwz r27, 0x5d30(r30)
+/* 801EE860 00000008  83 7E 5D 30 */	lwz r27, 0x5d30(r30)	/* effective address: 8040BEF0 */
 /* 801EE864 0000000C  38 00 00 64 */	li r0, 0x64
 /* 801EE868 00000010  7C 7D 03 D6 */	divw r3, r29, r0
 /* 801EE86C 00000014  48 02 FA 5D */	bl dMeter2Info_getNumberTextureName__Fi
@@ -212,20 +212,20 @@ lbl_801EE96C:
 /* 801EE974 00000008  41 82 00 14 */	beq lbl_801EE988
 /* 801EE978 0000000C  3C 60 80 43 */	lis r3, g_ringHIO@ha
 /* 801EE97C 00000010  38 63 FA FC */	addi r3, r3, g_ringHIO@l
-/* 801EE980 00000014  88 03 01 52 */	lbz r0, 0x152(r3)
+/* 801EE980 00000014  88 03 01 52 */	lbz r0, 0x152(r3)	/* effective address: 8042FC4E */
 /* 801EE984 00000018  48 00 00 10 */	b lbl_801EE994
 lbl_801EE988:
 /* 801EE988 00000000  3C 60 80 43 */	lis r3, g_ringHIO@ha
 /* 801EE98C 00000004  38 63 FA FC */	addi r3, r3, g_ringHIO@l
-/* 801EE990 00000008  88 03 01 51 */	lbz r0, 0x151(r3)
+/* 801EE990 00000008  88 03 01 51 */	lbz r0, 0x151(r3)	/* effective address: 8042FC4D */
 lbl_801EE994:
 /* 801EE994 00000000  3B 40 00 00 */	li r26, 0
 /* 801EE998 00000004  3B A0 00 00 */	li r29, 0
 /* 801EE99C 00000008  54 1C 06 3E */	clrlwi r28, r0, 0x18
-/* 801EE9A0 0000000C  CB A2 A9 B8 */	lfd f29, d_menu_d_menu_ring__lit_4312(r2)
+/* 801EE9A0 0000000C  CB A2 A9 B8 */	lfd f29, lit_4312(r2)
 /* 801EE9A4 00000010  3F C0 43 30 */	lis r30, 0x4330
-/* 801EE9A8 00000014  C3 C2 AA 18 */	lfs f30, d_menu_d_menu_ring__lit_6143(r2)
-/* 801EE9AC 00000018  CB E2 A9 C8 */	lfd f31, d_menu_d_menu_ring__lit_4596(r2)
+/* 801EE9A8 00000014  C3 C2 AA 18 */	lfs f30, lit_6143(r2)
+/* 801EE9AC 00000018  CB E2 A9 C8 */	lfd f31, lit_4596(r2)
 lbl_801EE9B0:
 /* 801EE9B0 00000000  3B 7D 01 BC */	addi r27, r29, 0x1bc
 /* 801EE9B4 00000004  7C 7F D8 2E */	lwzx r3, r31, r27

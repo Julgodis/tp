@@ -44,11 +44,11 @@ lbl_801D3BF0:
 /* 801D3C60 00000070  80 01 00 08 */	lwz r0, 8(r1)
 /* 801D3C64 00000074  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801D3C68 00000078  C0 01 00 14 */	lfs f0, 0x14(r1)
-/* 801D3C6C 0000007C  C0 42 A7 F0 */	lfs f2, d_menu_d_menu_fmap2D__lit_4204(r2)
+/* 801D3C6C 0000007C  C0 42 A7 F0 */	lfs f2, lit_4204(r2)
 /* 801D3C70 00000080  EC 20 10 28 */	fsubs f1, f0, f2
 /* 801D3C74 00000084  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 801D3C78 00000088  EC 40 10 28 */	fsubs f2, f0, f2
-/* 801D3C7C 0000008C  C0 62 A7 F4 */	lfs f3, d_menu_d_menu_fmap2D__lit_4205(r2)
+/* 801D3C7C 0000008C  C0 62 A7 F4 */	lfs f3, lit_4205(r2)
 /* 801D3C80 00000090  FC 80 18 90 */	fmr f4, f3
 /* 801D3C84 00000094  38 61 00 0C */	addi r3, r1, 0xc
 /* 801D3C88 00000098  48 11 5E 3D */	bl J2DFillBox__FffffQ28JUtility6TColor

@@ -18,14 +18,14 @@ lbl_800FB650:
 /* 800FB690 00000040  2C 1D 00 02 */	cmpwi r29, 2
 /* 800FB694 00000044  40 82 00 1C */	bne lbl_800FB6B0
 /* 800FB698 00000048  3B C0 00 A5 */	li r30, 0xa5
-/* 800FB69C 0000004C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FB69C 0000004C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FB6A0 00000050  D0 1F 33 F0 */	stfs f0, 0x33f0(r31)
 /* 800FB6A4 00000054  38 00 18 00 */	li r0, 0x1800
 /* 800FB6A8 00000058  B0 1F 30 A2 */	sth r0, 0x30a2(r31)
 /* 800FB6AC 0000005C  48 00 00 18 */	b lbl_800FB6C4
 lbl_800FB6B0:
 /* 800FB6B0 00000000  3B C0 00 A6 */	li r30, 0xa6
-/* 800FB6B4 00000004  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FB6B4 00000004  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FB6B8 00000008  D0 1F 33 F0 */	stfs f0, 0x33f0(r31)
 /* 800FB6BC 0000000C  38 00 E8 00 */	li r0, -6144
 /* 800FB6C0 00000010  B0 1F 30 A2 */	sth r0, 0x30a2(r31)
@@ -52,7 +52,7 @@ lbl_800FB6FC:
 /* 800FB708 0000000C  7F C4 F3 78 */	mr r4, r30
 /* 800FB70C 00000010  3C A0 80 39 */	lis r5, m__22daAlinkHIO_wallMove_c0@ha
 /* 800FB710 00000014  38 A5 E1 E0 */	addi r5, r5, m__22daAlinkHIO_wallMove_c0@l
-/* 800FB714 00000018  C0 45 00 08 */	lfs f2, 8(r5)
+/* 800FB714 00000018  C0 45 00 08 */	lfs f2, 8(r5)	/* effective address: 8038E1E8 */
 /* 800FB718 0000001C  4B FB 18 C9 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_800FB71C:
 /* 800FB71C 00000000  2C 1D 00 02 */	cmpwi r29, 2
@@ -68,9 +68,9 @@ lbl_800FB734:
 lbl_800FB740:
 /* 800FB740 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FB744 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FB748 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FB748 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FB74C 0000000C  60 00 01 00 */	ori r0, r0, 0x100
-/* 800FB750 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FB750 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FB754 00000014  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FB758 00000018  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800FB75C 0000001C  38 00 00 09 */	li r0, 9

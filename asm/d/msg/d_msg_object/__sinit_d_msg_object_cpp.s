@@ -7,8 +7,8 @@ lbl_80238B58:
 /* 80238B6C 00000014  4B FF A2 01 */	bl __ct__16dMsgObject_HIO_cFv
 /* 80238B70 00000018  3C 80 80 24 */	lis r4, __dt__16dMsgObject_HIO_cFv@ha
 /* 80238B74 0000001C  38 84 8B DC */	addi r4, r4, __dt__16dMsgObject_HIO_cFv@l
-/* 80238B78 00000020  3C A0 80 43 */	lis r5, d_msg_d_msg_object__lit_4011@ha
-/* 80238B7C 00000024  38 A5 02 80 */	addi r5, r5, d_msg_d_msg_object__lit_4011@l
+/* 80238B78 00000020  3C A0 80 43 */	lis r5, lit_4011@ha
+/* 80238B7C 00000024  38 A5 02 80 */	addi r5, r5, lit_4011@l
 /* 80238B80 00000028  48 12 90 A5 */	bl __register_global_object
 /* 80238B84 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80238B88 00000030  7C 08 03 A6 */	mtlr r0

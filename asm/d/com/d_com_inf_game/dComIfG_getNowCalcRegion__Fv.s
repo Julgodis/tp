@@ -9,13 +9,13 @@ lbl_8002EC54:
 /* 8002EC70 0000001C  48 33 35 5D */	bl _savegpr_25
 /* 8002EC74 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002EC78 00000024  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 8002EC7C 00000028  80 7E 5C 68 */	lwz r3, 0x5c68(r30)
+/* 8002EC7C 00000028  80 7E 5C 68 */	lwz r3, 0x5c68(r30)	/* effective address: 8040BE28 */
 /* 8002EC80 0000002C  38 81 00 60 */	addi r4, r1, 0x60
 /* 8002EC84 00000030  38 A0 08 00 */	li r5, 0x800
-/* 8002EC88 00000034  3C C0 80 38 */	lis r6, d_com_d_com_inf_game__stringBase0@ha
-/* 8002EC8C 00000038  38 C6 8F 38 */	addi r6, r6, d_com_d_com_inf_game__stringBase0@l
+/* 8002EC88 00000034  3C C0 80 38 */	lis r6, stringBase0@ha
+/* 8002EC8C 00000038  38 C6 8F 38 */	addi r6, r6, stringBase0@l
 /* 8002EC90 0000003C  38 C6 01 52 */	addi r6, r6, 0x152
-/* 8002EC94 00000040  81 83 00 00 */	lwz r12, 0(r3)
+/* 8002EC94 00000040  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 80400000 */
 /* 8002EC98 00000044  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 8002EC9C 00000048  7D 89 03 A6 */	mtctr r12
 /* 8002ECA0 0000004C  4E 80 04 21 */	bctrl 
@@ -84,7 +84,7 @@ lbl_8002ED54:
 /* 8002ED7C 00000028  38 00 FF FF */	li r0, -1
 /* 8002ED80 0000002C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002ED84 00000030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002ED88 00000034  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8002ED88 00000034  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 8002ED8C 00000038  28 03 00 00 */	cmplwi r3, 0
 /* 8002ED90 0000003C  41 82 00 0C */	beq lbl_8002ED9C
 /* 8002ED94 00000040  88 03 04 E2 */	lbz r0, 0x4e2(r3)
@@ -94,7 +94,7 @@ lbl_8002ED9C:
 /* 8002EDA0 00000004  40 80 00 14 */	bge lbl_8002EDB4
 /* 8002EDA4 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002EDA8 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002EDAC 00000010  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
+/* 8002EDAC 00000010  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 8002EDB0 00000014  7C 00 07 74 */	extsb r0, r0
 lbl_8002EDB4:
 /* 8002EDB4 00000000  38 61 00 20 */	addi r3, r1, 0x20

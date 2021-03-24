@@ -28,7 +28,7 @@ extern "C" static void SPEC0_MakeStatus(); // 1
 extern "C" static void SPEC1_MakeStatus(); // 1
 extern "C" static void SPEC2_MakeStatus(); // 1
 extern "C" void PADSetAnalogMode(); // 1
-extern "C" static void Pad__OnReset(); // 1
+extern "C" static void OnReset(); // 1
 extern "C" static void SamplingHandler(); // 1
 extern "C" static void PADSetSamplingCallback(); // 1
 extern "C" void __PADDisableRecalibration(); // 1
@@ -72,7 +72,7 @@ extern "C" extern u8 __PADFixBits[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803D1B48-803D1B90 0045+03 s=1 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 Pad__lit_1[69 + 3 /* padding */] = {
+SECTION_DATA static u8 lit_1[69 + 3 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x50, 0x41, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
 	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
@@ -83,13 +83,13 @@ SECTION_DATA static u8 Pad__lit_1[69 + 3 /* padding */] = {
 };
 
 /* 8044CB70-8044CB80 0010+00 s=3 e=0 z=0  None .bss       Type                                                         */
-static u8 Pad__Type[16];
+static u8 Type[16];
 
 /* 8044CB80-8044CBB0 0030+00 s=8 e=0 z=0  None .bss       Origin                                                       */
 static u8 Origin[48];
 
 /* 80450A20-80450A24 0004+00 s=1 e=0 z=0  None .sdata     __PADVersion                                                 */
-SECTION_SDATA static void* __PADVersion = (void*)&Pad__lit_1;
+SECTION_SDATA static void* __PADVersion = (void*)&lit_1;
 
 /* 80450A24-80450A28 0004+00 s=7 e=0 z=0  None .sdata     ResettingChan                                                */
 SECTION_SDATA static u32 ResettingChan = 0x00000020;
@@ -229,8 +229,8 @@ extern "C" asm void PADRecalibrate() {
 
 /* ############################################################################################## */
 /* 803D1B90-803D1BA0 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
-SECTION_DATA static void* Pad__ResetFunctionInfo[4] = {
-	/* 0    */ (void*)Pad__OnReset,
+SECTION_DATA static void* ResetFunctionInfo[4] = {
+	/* 0    */ (void*)OnReset,
 	/* 1    */ (void*)0x0000007F,
 	/* 2    */ (void*)NULL,
 	/* 3    */ (void*)NULL,
@@ -337,9 +337,9 @@ extern "C" asm void PADSetAnalogMode() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void Pad__OnReset() {
+extern "C" asm static void OnReset() {
 	nofralloc
-#include "asm/dolphin/pad/Pad/Pad__OnReset.s"
+#include "asm/dolphin/pad/Pad/OnReset.s"
 }
 #pragma pop
 

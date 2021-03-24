@@ -150,16 +150,16 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -371,7 +371,7 @@ extern "C" void dKyw_custom_windpower__Ff(); // 1
 extern "C" void dKyw_evt_wind_set__Fss(); // 1
 extern "C" void dKyw_evt_wind_set_go__Fv(); // 1
 extern "C" void dKyw_rain_set__Fi(); // 1
-extern "C" extern char const* const d_kankyo_d_kankyo_wether__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__19dKankyo_star_Packet[5];
 extern "C" extern void* __vt__19dKankyo_snow_Packet[5];
 
@@ -506,6 +506,7 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 g_mEnvSeMgr[780];
 extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 data_80431150[16];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
@@ -1192,7 +1193,7 @@ SECTION_SDATA2 static u8 lit_4378[4] = {
 };
 
 /* 804520E4-804520E8 0004+00 s=11 e=0 z=0  None .sdata2    @4379                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4379 = 1.0f;
+SECTION_SDATA2 static f32 lit_4379 = 1.0f;
 
 /* 800574E0-800579EC 050C+00 s=0 e=1 z=0  None .text      dKyw_wether_init__Fv                                         */
 #pragma push
@@ -1493,10 +1494,10 @@ asm void dKyw_wether_move() {
 
 /* ############################################################################################## */
 /* 804520E8-804520EC 0004+00 s=1 e=0 z=0  None .sdata2    @4610                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4610 = 255.0f;
+SECTION_SDATA2 static f32 lit_4610 = 255.0f;
 
 /* 804520EC-804520F0 0004+00 s=1 e=0 z=0  None .sdata2    @4611                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4611 = 1000000000.0f;
+SECTION_SDATA2 static f32 lit_4611 = 1000000000.0f;
 
 /* 80058318-80058894 057C+00 s=1 e=0 z=0  None .text      wether_move_sun__Fv                                          */
 #pragma push
@@ -1511,13 +1512,13 @@ asm static void wether_move_sun() {
 
 /* ############################################################################################## */
 /* 804520F0-804520F4 0004+00 s=2 e=0 z=0  None .sdata2    @4668                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4668 = -1.0f;
+SECTION_SDATA2 static f32 lit_4668 = -1.0f;
 
 /* 804520F4-804520F8 0004+00 s=1 e=0 z=0  None .sdata2    @4669                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4669 = 125.0f;
+SECTION_SDATA2 static f32 lit_4669 = 125.0f;
 
 /* 804520F8-80452100 0008+00 s=2 e=0 z=0  None .sdata2    @4671                                                        */
-SECTION_SDATA2 static f64 d_kankyo_d_kankyo_wether__lit_4671 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4671 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80058894-80058B00 026C+00 s=1 e=0 z=0  None .text      wether_move_rain__Fv                                         */
 #pragma push
@@ -1543,40 +1544,40 @@ asm static void wether_move_snow() {
 
 /* ############################################################################################## */
 /* 80452100-80452104 0004+00 s=1 e=0 z=0  None .sdata2    @4761                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4761 = 330.0f;
+SECTION_SDATA2 static f32 lit_4761 = 330.0f;
 
 /* 80452104-80452108 0004+00 s=1 e=0 z=0  None .sdata2    @4762                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4762 = 45.0f;
+SECTION_SDATA2 static f32 lit_4762 = 45.0f;
 
 /* 80452108-8045210C 0004+00 s=1 e=0 z=0  None .sdata2    @4763                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4763 = 285.0f;
+SECTION_SDATA2 static f32 lit_4763 = 285.0f;
 
 /* 8045210C-80452110 0004+00 s=1 e=0 z=0  None .sdata2    @4764                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4764 = 1.0f / 45.0f;
+SECTION_SDATA2 static f32 lit_4764 = 1.0f / 45.0f;
 
 /* 80452110-80452114 0004+00 s=2 e=0 z=0  None .sdata2    @4765                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4765 = 75.0f;
+SECTION_SDATA2 static f32 lit_4765 = 75.0f;
 
 /* 80452114-80452118 0004+00 s=1 e=0 z=0  None .sdata2    @4766                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4766 = 1.0f / 30.0f;
+SECTION_SDATA2 static f32 lit_4766 = 1.0f / 30.0f;
 
 /* 80452118-8045211C 0004+00 s=2 e=0 z=0  None .sdata2    @4767                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4767 = 0.5f;
+SECTION_SDATA2 static f32 lit_4767 = 0.5f;
 
 /* 8045211C-80452120 0004+00 s=2 e=0 z=0  None .sdata2    @4768                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4768 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4768 = 1.0f / 10.0f;
 
 /* 80452120-80452124 0004+00 s=3 e=0 z=0  None .sdata2    @4769                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4769 = 1.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4769 = 1.0f / 100.0f;
 
 /* 80452124-80452128 0004+00 s=2 e=0 z=0  None .sdata2    @4770                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4770 = 9.999999974752427e-07f;
+SECTION_SDATA2 static f32 lit_4770 = 9.999999974752427e-07f;
 
 /* 80452128-8045212C 0004+00 s=1 e=0 z=0  None .sdata2    @4771                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4771 = 1200.0f;
+SECTION_SDATA2 static f32 lit_4771 = 1200.0f;
 
 /* 8045212C-80452130 0004+00 s=1 e=0 z=0  None .sdata2    @4772                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_4772 = 500.0f;
+SECTION_SDATA2 static f32 lit_4772 = 500.0f;
 
 /* 80058B8C-80058F18 038C+00 s=1 e=0 z=0  None .text      wether_move_star__Fv                                         */
 #pragma push
@@ -1624,7 +1625,7 @@ asm static void wether_move_moya() {
 
 /* ############################################################################################## */
 /* 80424938-80424944 000C+00 s=1 e=0 z=0  None .bss       @4965                                                        */
-static u8 d_kankyo_d_kankyo_wether__lit_4965[12];
+static u8 lit_4965[12];
 
 /* 80424944-80424950 000C+00 s=1 e=0 z=0  None .bss       r09o$4964                                                    */
 static u8 data_80424944[12];
@@ -1648,25 +1649,25 @@ SECTION_SDATA2 static f32 lit_5185 = 1.0000000116860974e-07f;
 SECTION_SDATA2 static f32 lit_5186 = 2.0f / 25.0f;
 
 /* 80452148-8045214C 0004+00 s=1 e=0 z=0  None .sdata2    @5187                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5187 = 0.0020000000949949026f;
+SECTION_SDATA2 static f32 lit_5187 = 0.0020000000949949026f;
 
 /* 8045214C-80452150 0004+00 s=1 e=0 z=0  None .sdata2    @5188                                                        */
 SECTION_SDATA2 static f32 lit_5188 = 9.99999993922529e-09f;
 
 /* 80452150-80452154 0004+00 s=1 e=0 z=0  None .sdata2    @5189                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5189 = 6.0f;
+SECTION_SDATA2 static f32 lit_5189 = 6.0f;
 
 /* 80452154-80452158 0004+00 s=1 e=0 z=0  None .sdata2    @5190                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5190 = 56.0f;
+SECTION_SDATA2 static f32 lit_5190 = 56.0f;
 
 /* 80452158-8045215C 0004+00 s=2 e=0 z=0  None .sdata2    @5191                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5191 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5191 = 3.0f / 10.0f;
 
 /* 8045215C-80452160 0004+00 s=1 e=0 z=0  None .sdata2    @5192                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5192 = 24575.0f;
+SECTION_SDATA2 static f32 lit_5192 = 24575.0f;
 
 /* 80452160-80452164 0004+00 s=1 e=0 z=0  None .sdata2    @5193                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5193 = 0.00139999995008111f;
+SECTION_SDATA2 static f32 lit_5193 = 0.00139999995008111f;
 
 /* 80059728-80059E38 0710+00 s=1 e=0 z=0  None .text      wether_move_vrkumo__Fv                                       */
 #pragma push
@@ -1809,7 +1810,7 @@ SECTION_SDATA2 static f32 lit_5529 = 2.0f;
 SECTION_SDATA2 static f32 lit_5530 = 0.0010000000474974513f;
 
 /* 804521A0-804521A4 0004+00 s=1 e=0 z=0  None .sdata2    @5531                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5531 = 0.004999999888241291f;
+SECTION_SDATA2 static f32 lit_5531 = 0.004999999888241291f;
 
 /* 8005A5C0-8005AAE0 0520+00 s=0 e=2 z=0  None .text      dKyw_wind_set__Fv                                            */
 #pragma push
@@ -1868,7 +1869,7 @@ asm void dKyw_plight_collision_set(cXyz* param_0, s16 param_1, s16 param_2, f32 
 
 /* ############################################################################################## */
 /* 804521A4-804521A8 0004+00 s=1 e=0 z=0  None .sdata2    @5630                                                        */
-SECTION_SDATA2 static f32 d_kankyo_d_kankyo_wether__lit_5630 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_5630 = 1.0f / 5.0f;
 
 /* 8005AC30-8005AD44 0114+00 s=1 e=0 z=0  None .text      squal_proc__Fv                                               */
 #pragma push

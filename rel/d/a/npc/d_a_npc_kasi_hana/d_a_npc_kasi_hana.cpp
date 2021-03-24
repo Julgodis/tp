@@ -46,6 +46,15 @@ struct csXyz {
 	/* 80A208D0 */ csXyz();
 };
 
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -58,15 +67,6 @@ struct daNpcF_c {
 	/* 80A20EAC */ void setExpressionBtp(int);
 	/* 80A20EB4 */ void setExpression(int, f32);
 	/* 80A20EB8 */ void drawOtherMdls();
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcKasiHana_c {
@@ -89,6 +89,7 @@ struct daNpcKasiHana_c {
 	/* 80A1CFF0 */ void reset();
 	/* 80A1D238 */ void playMotion();
 	/* 80A1D604 */ void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
+	/* 80A1D77C */ void setAction(int (daNpcKasiHana_c::*)(int));
 	/* 80A1D824 */ void setLookMode(int);
 	/* 80A1D848 */ void lookat();
 	/* 80A1DA28 */ void step(s16, int);
@@ -230,7 +231,7 @@ extern "C" void drawDbgInfo__15daNpcKasiHana_cFv(); // 1
 extern "C" void reset__15daNpcKasiHana_cFv(); // 1
 extern "C" void playMotion__15daNpcKasiHana_cFv(); // 1
 extern "C" void playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
-extern "C" static void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i(); // 1
+extern "C" void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i(); // 1
 extern "C" void setLookMode__15daNpcKasiHana_cFi(); // 1
 extern "C" void lookat__15daNpcKasiHana_cFv(); // 1
 extern "C" void step__15daNpcKasiHana_cFsi(); // 1
@@ -957,7 +958,7 @@ asm void daNpcKasiHana_c::playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData*** para
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i() {
+asm void daNpcKasiHana_c::setAction(int (daNpcKasiHana_c::*)(int)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setAction__15daNpcKasiHana_cFM15daNpcKasiHana_cFPCvPvi_i.s"
 }

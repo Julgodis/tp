@@ -31,6 +31,9 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -42,9 +45,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -83,7 +83,7 @@ extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TC
 extern "C" void drawCommon__15dMsgScrnLight_cFfffff(); // 1
 extern "C" void __dt__19dMsgScrnLight_HIO_cFv(); // 1
 extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_light__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -174,7 +174,7 @@ static u8 lit_3735[12];
 static u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
 
 /* 80454CD8-80454CDC 0004+00 s=4 e=0 z=0  None .sdata2    @3808                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_light__lit_3808[4] = {
+SECTION_SDATA2 static u8 lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -202,10 +202,10 @@ asm dMsgScrnLight_c::~dMsgScrnLight_c() {
 
 /* ############################################################################################## */
 /* 80454CDC-80454CE0 0004+00 s=2 e=0 z=0  None .sdata2    @3869                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_light__lit_3869 = 1.0f;
+SECTION_SDATA2 static f32 lit_3869 = 1.0f;
 
 /* 80454CE0-80454CE8 0008+00 s=2 e=0 z=0  None .sdata2    @3871                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_light__lit_3871 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3871 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80245C04-80245F90 038C+00 s=0 e=2 z=0  None .text      draw__15dMsgScrnLight_cFPffffffUc                            */
 #pragma push

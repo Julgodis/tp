@@ -10,7 +10,7 @@ lbl_801017AC:
 /* 801017CC 00000020  38 80 00 01 */	li r4, 1
 /* 801017D0 00000024  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 801017D4 00000028  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 801017D8 0000002C  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 801017D8 0000002C  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 801017DC 00000030  4B FC 52 6D */	bl procFallInit__9daAlink_cFif
 /* 801017E0 00000034  48 00 00 80 */	b lbl_80101860
 lbl_801017E4:
@@ -23,8 +23,8 @@ lbl_801017E4:
 /* 801017FC 00000018  38 80 00 A9 */	li r4, 0xa9
 /* 80101800 0000001C  3C A0 80 39 */	lis r5, m__22daAlinkHIO_roofHang_c0@ha
 /* 80101804 00000020  38 A5 EB FC */	addi r5, r5, m__22daAlinkHIO_roofHang_c0@l
-/* 80101808 00000024  C0 25 00 1C */	lfs f1, 0x1c(r5)
-/* 8010180C 00000028  C0 45 00 20 */	lfs f2, 0x20(r5)
+/* 80101808 00000024  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038EC18 */
+/* 8010180C 00000028  C0 45 00 20 */	lfs f2, 0x20(r5)	/* effective address: 8038EC1C */
 /* 80101810 0000002C  4B FA B7 D1 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 80101814 00000030  38 00 00 01 */	li r0, 1
 /* 80101818 00000034  B0 1F 30 0C */	sth r0, 0x300c(r31)
@@ -43,7 +43,7 @@ lbl_80101820:
 /* 80101848 00000028  38 80 00 01 */	li r4, 1
 /* 8010184C 0000002C  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 80101850 00000030  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 80101854 00000034  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 80101854 00000034  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 80101858 00000038  4B FC 51 F1 */	bl procFallInit__9daAlink_cFif
 lbl_8010185C:
 /* 8010185C 00000000  38 60 00 01 */	li r3, 1

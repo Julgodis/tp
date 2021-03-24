@@ -2,7 +2,7 @@ lbl_800ECF5C:
 /* 800ECF5C 00000000  38 A0 00 00 */	li r5, 0
 /* 800ECF60 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800ECF64 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800ECF68 0000000C  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800ECF68 0000000C  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800ECF6C 00000010  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 800ECF70 00000014  40 82 00 20 */	bne lbl_800ECF90
 /* 800ECF74 00000018  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)

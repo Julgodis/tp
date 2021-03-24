@@ -13,12 +13,12 @@ lbl_800C397C:
 /* 800C39A8 0000002C  2C 03 00 00 */	cmpwi r3, 0
 /* 800C39AC 00000030  41 82 00 14 */	beq lbl_800C39C0
 /* 800C39B0 00000034  7F E3 FB 78 */	mr r3, r31
-/* 800C39B4 00000038  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C39B4 00000038  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C39B8 0000003C  4B FE B0 B9 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800C39BC 00000040  48 00 00 10 */	b lbl_800C39CC
 lbl_800C39C0:
 /* 800C39C0 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800C39C4 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C39C4 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C39C8 00000008  4B FE A4 4D */	bl setBlendMoveAnime__9daAlink_cFf
 lbl_800C39CC:
 /* 800C39CC 00000000  7F E3 FB 78 */	mr r3, r31

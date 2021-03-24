@@ -22,7 +22,7 @@ lbl_800DFE84:
 /* 800DFE84 00000000  7F E3 FB 78 */	mr r3, r31
 /* 800DFE88 00000004  3C 80 80 39 */	lis r4, m__17daAlinkHIO_bow_c0@ha
 /* 800DFE8C 00000008  38 84 E6 58 */	addi r4, r4, m__17daAlinkHIO_bow_c0@l
-/* 800DFE90 0000000C  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 800DFE90 0000000C  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038E688 */
 /* 800DFE94 00000010  4B FC EB DD */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800DFE98 00000014  38 00 00 00 */	li r0, 0
 /* 800DFE9C 00000018  B0 1F 30 0C */	sth r0, 0x300c(r31)

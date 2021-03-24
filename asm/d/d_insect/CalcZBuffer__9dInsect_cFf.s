@@ -17,7 +17,7 @@ lbl_8015E26C:
 /* 8015E2A8 00000018  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 8015E2AC 0000001C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8015E2B0 00000020  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8015E2B4 00000024  C0 02 9B E0 */	lfs f0, d_d_insect__lit_3871(r2)
+/* 8015E2B4 00000024  C0 02 9B E0 */	lfs f0, lit_3871(r2)
 /* 8015E2B8 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 8015E2BC 0000002C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8015E2C0 00000030  38 61 00 08 */	addi r3, r1, 8
@@ -25,7 +25,7 @@ lbl_8015E26C:
 /* 8015E2C8 00000038  4B EB 70 49 */	bl mDoLib_project__FP3VecP3Vec
 /* 8015E2CC 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015E2D0 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015E2D4 00000044  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 8015E2D4 00000044  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
 /* 8015E2D8 00000048  28 03 00 00 */	cmplwi r3, 0
 /* 8015E2DC 0000004C  41 82 00 0C */	beq lbl_8015E2E8
 /* 8015E2E0 00000050  C0 63 0B 68 */	lfs f3, 0xb68(r3)
@@ -37,7 +37,7 @@ lbl_8015E2EC:
 /* 8015E2F0 00000004  C0 02 9B E4 */	lfs f0, lit_3872(r2)
 /* 8015E2F4 00000008  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015E2F8 00000000  40 81 00 60 */	ble lbl_8015E358
-/* 8015E2FC 00000004  C0 02 9B E8 */	lfs f0, d_d_insect__lit_3873(r2)
+/* 8015E2FC 00000004  C0 02 9B E8 */	lfs f0, lit_3873(r2)
 /* 8015E300 00000014  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015E304 00000000  40 80 00 54 */	bge lbl_8015E358
 /* 8015E308 00000004  C0 41 00 18 */	lfs f2, 0x18(r1)
@@ -66,9 +66,9 @@ lbl_8015E358:
 lbl_8015E360:
 /* 8015E360 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015E364 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015E368 00000008  80 63 61 B0 */	lwz r3, 0x61b0(r3)
-/* 8015E36C 0000000C  C3 E3 00 C8 */	lfs f31, 0xc8(r3)
-/* 8015E370 00000010  C3 C3 00 CC */	lfs f30, 0xcc(r3)
+/* 8015E368 00000008  80 63 61 B0 */	lwz r3, 0x61b0(r3)	/* effective address: 8040C370 */
+/* 8015E36C 0000000C  C3 E3 00 C8 */	lfs f31, 0xc8(r3)	/* effective address: 80406288 */
+/* 8015E370 00000010  C3 C3 00 CC */	lfs f30, 0xcc(r3)	/* effective address: 8040628C */
 /* 8015E374 00000014  38 61 00 08 */	addi r3, r1, 8
 /* 8015E378 00000018  38 81 00 14 */	addi r4, r1, 0x14
 /* 8015E37C 0000001C  4B EB 71 71 */	bl mDoLib_pos2camera__FP3VecP3Vec
@@ -81,8 +81,8 @@ lbl_8015E360:
 /* 8015E398 00000038  C0 02 9B F0 */	lfs f0, lit_3875(r2)
 /* 8015E39C 0000003C  D0 01 00 1C */	stfs f0, 0x1c(r1)
 lbl_8015E3A0:
-/* 8015E3A0 00000000  C0 62 9B F4 */	lfs f3, d_d_insect__lit_3876(r2)
-/* 8015E3A4 00000004  C0 42 9B F8 */	lfs f2, d_d_insect__lit_3877(r2)
+/* 8015E3A0 00000000  C0 62 9B F4 */	lfs f3, lit_3876(r2)
+/* 8015E3A4 00000004  C0 42 9B F8 */	lfs f2, lit_3877(r2)
 /* 8015E3A8 00000008  EC 3E 07 F2 */	fmuls f1, f30, f31
 /* 8015E3AC 0000000C  C0 01 00 1C */	lfs f0, 0x1c(r1)
 /* 8015E3B0 00000010  EC 01 00 24 */	fdivs f0, f1, f0

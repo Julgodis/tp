@@ -7,7 +7,7 @@ lbl_8020E070:
 /* 8020E084 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 8020E088 00000018  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E08C 0000001C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E090 00000020  A0 03 00 B0 */	lhz r0, 0xb0(r3)
+/* 8020E090 00000020  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
 /* 8020E094 00000024  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8020E098 00000028  40 82 03 AC */	bne lbl_8020E444
 /* 8020E09C 0000002C  4B FF F8 65 */	bl isMapOpenCheck__11dMeterMap_cFv
@@ -31,9 +31,9 @@ lbl_8020E0D0:
 /* 8020E0E0 00000010  38 A0 00 00 */	li r5, 0
 /* 8020E0E4 00000014  38 C0 00 00 */	li r6, 0
 /* 8020E0E8 00000018  38 E0 00 00 */	li r7, 0
-/* 8020E0EC 0000001C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
+/* 8020E0EC 0000001C  C0 22 AE 34 */	lfs f1, lit_4129(r2)
 /* 8020E0F0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 8020E0F4 00000024  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
+/* 8020E0F4 00000024  C0 62 AE 44 */	lfs f3, lit_4515(r2)
 /* 8020E0F8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 8020E0FC 0000002C  39 00 00 00 */	li r8, 0
 /* 8020E100 00000030  48 09 D8 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -41,7 +41,7 @@ lbl_8020E0D0:
 lbl_8020E108:
 /* 8020E108 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E10C 00000004  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-/* 8020E110 00000008  88 1E 00 C1 */	lbz r0, 0xc1(r30)
+/* 8020E110 00000008  88 1E 00 C1 */	lbz r0, 0xc1(r30)	/* effective address: 80430249 */
 /* 8020E114 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 8020E118 00000010  41 82 00 2C */	beq lbl_8020E144
 /* 8020E11C 00000014  28 00 00 07 */	cmplwi r0, 7
@@ -57,7 +57,7 @@ lbl_8020E108:
 lbl_8020E144:
 /* 8020E144 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E148 00000004  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
-/* 8020E14C 00000008  88 1F 00 BF */	lbz r0, 0xbf(r31)
+/* 8020E14C 00000008  88 1F 00 BF */	lbz r0, 0xbf(r31)	/* effective address: 80430247 */
 /* 8020E150 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8020E154 00000010  40 82 00 58 */	bne lbl_8020E1AC
 /* 8020E158 00000014  88 1D 00 2D */	lbz r0, 0x2d(r29)
@@ -72,9 +72,9 @@ lbl_8020E144:
 /* 8020E17C 00000038  38 A0 00 00 */	li r5, 0
 /* 8020E180 0000003C  38 C0 00 00 */	li r6, 0
 /* 8020E184 00000040  38 E0 00 00 */	li r7, 0
-/* 8020E188 00000044  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
+/* 8020E188 00000044  C0 22 AE 34 */	lfs f1, lit_4129(r2)
 /* 8020E18C 00000048  FC 40 08 90 */	fmr f2, f1
-/* 8020E190 0000004C  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
+/* 8020E190 0000004C  C0 62 AE 44 */	lfs f3, lit_4515(r2)
 /* 8020E194 00000050  FC 80 18 90 */	fmr f4, f3
 /* 8020E198 00000054  39 00 00 00 */	li r8, 0
 /* 8020E19C 00000058  48 09 D7 E9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -94,8 +94,8 @@ lbl_8020E1AC:
 /* 8020E1D0 00000024  88 1E 00 C1 */	lbz r0, 0xc1(r30)
 /* 8020E1D4 00000028  28 00 00 07 */	cmplwi r0, 7
 /* 8020E1D8 0000002C  41 81 00 60 */	bgt lbl_8020E238
-/* 8020E1DC 00000030  3C 60 80 3C */	lis r3, d_meter_d_meter_map__lit_4516@ha
-/* 8020E1E0 00000034  38 63 F2 D8 */	addi r3, r3, d_meter_d_meter_map__lit_4516@l
+/* 8020E1DC 00000030  3C 60 80 3C */	lis r3, lit_4516@ha
+/* 8020E1E0 00000034  38 63 F2 D8 */	addi r3, r3, lit_4516@l
 /* 8020E1E4 00000038  54 00 10 3A */	slwi r0, r0, 2
 /* 8020E1E8 0000003C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8020E1EC 00000040  7C 09 03 A6 */	mtctr r0
@@ -121,7 +121,7 @@ lbl_8020E238:
 /* 8020E238 00000000  38 00 04 00 */	li r0, 0x400
 /* 8020E23C 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E240 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E244 0000000C  B0 03 00 AA */	sth r0, 0xaa(r3)
+/* 8020E244 0000000C  B0 03 00 AA */	sth r0, 0xaa(r3)	/* effective address: 80430232 */
 /* 8020E248 00000010  38 00 00 B8 */	li r0, 0xb8
 /* 8020E24C 00000014  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8020E250 00000018  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
@@ -129,9 +129,9 @@ lbl_8020E238:
 /* 8020E258 00000020  38 A0 00 00 */	li r5, 0
 /* 8020E25C 00000024  38 C0 00 00 */	li r6, 0
 /* 8020E260 00000028  38 E0 00 00 */	li r7, 0
-/* 8020E264 0000002C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
+/* 8020E264 0000002C  C0 22 AE 34 */	lfs f1, lit_4129(r2)
 /* 8020E268 00000030  FC 40 08 90 */	fmr f2, f1
-/* 8020E26C 00000034  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
+/* 8020E26C 00000034  C0 62 AE 44 */	lfs f3, lit_4515(r2)
 /* 8020E270 00000038  FC 80 18 90 */	fmr f4, f3
 /* 8020E274 0000003C  39 00 00 00 */	li r8, 0
 /* 8020E278 00000040  48 09 D7 0D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -150,7 +150,7 @@ lbl_8020E28C:
 /* 8020E2A4 00000018  41 82 00 FC */	beq lbl_8020E3A0
 /* 8020E2A8 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E2AC 00000020  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-/* 8020E2B0 00000024  88 1E 00 BF */	lbz r0, 0xbf(r30)
+/* 8020E2B0 00000024  88 1E 00 BF */	lbz r0, 0xbf(r30)	/* effective address: 80430247 */
 /* 8020E2B4 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8020E2B8 0000002C  40 82 00 58 */	bne lbl_8020E310
 /* 8020E2BC 00000030  88 1D 00 2D */	lbz r0, 0x2d(r29)
@@ -165,9 +165,9 @@ lbl_8020E28C:
 /* 8020E2E0 00000054  38 A0 00 00 */	li r5, 0
 /* 8020E2E4 00000058  38 C0 00 00 */	li r6, 0
 /* 8020E2E8 0000005C  38 E0 00 00 */	li r7, 0
-/* 8020E2EC 00000060  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
+/* 8020E2EC 00000060  C0 22 AE 34 */	lfs f1, lit_4129(r2)
 /* 8020E2F0 00000064  FC 40 08 90 */	fmr f2, f1
-/* 8020E2F4 00000068  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
+/* 8020E2F4 00000068  C0 62 AE 44 */	lfs f3, lit_4515(r2)
 /* 8020E2F8 0000006C  FC 80 18 90 */	fmr f4, f3
 /* 8020E2FC 00000070  39 00 00 00 */	li r8, 0
 /* 8020E300 00000074  48 09 D6 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -186,7 +186,7 @@ lbl_8020E310:
 /* 8020E330 00000020  38 00 04 00 */	li r0, 0x400
 /* 8020E334 00000024  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E338 00000028  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E33C 0000002C  B0 03 00 AA */	sth r0, 0xaa(r3)
+/* 8020E33C 0000002C  B0 03 00 AA */	sth r0, 0xaa(r3)	/* effective address: 80430232 */
 /* 8020E340 00000030  38 00 00 B8 */	li r0, 0xb8
 /* 8020E344 00000034  90 01 00 08 */	stw r0, 8(r1)
 /* 8020E348 00000038  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
@@ -194,9 +194,9 @@ lbl_8020E310:
 /* 8020E350 00000040  38 A0 00 00 */	li r5, 0
 /* 8020E354 00000044  38 C0 00 00 */	li r6, 0
 /* 8020E358 00000048  38 E0 00 00 */	li r7, 0
-/* 8020E35C 0000004C  C0 22 AE 34 */	lfs f1, d_meter_d_meter_map__lit_4129(r2)
+/* 8020E35C 0000004C  C0 22 AE 34 */	lfs f1, lit_4129(r2)
 /* 8020E360 00000050  FC 40 08 90 */	fmr f2, f1
-/* 8020E364 00000054  C0 62 AE 44 */	lfs f3, d_meter_d_meter_map__lit_4515(r2)
+/* 8020E364 00000054  C0 62 AE 44 */	lfs f3, lit_4515(r2)
 /* 8020E368 00000058  FC 80 18 90 */	fmr f4, f3
 /* 8020E36C 0000005C  39 00 00 00 */	li r8, 0
 /* 8020E370 00000060  48 09 D6 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -205,7 +205,7 @@ lbl_8020E310:
 lbl_8020E37C:
 /* 8020E37C 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 8020E380 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 8020E384 00000008  80 63 00 34 */	lwz r3, 0x34(r3)
+/* 8020E384 00000008  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
 /* 8020E388 0000000C  54 60 07 39 */	rlwinm. r0, r3, 0, 0x1c, 0x1c
 /* 8020E38C 00000010  40 82 00 14 */	bne lbl_8020E3A0
 /* 8020E390 00000014  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
@@ -230,7 +230,7 @@ lbl_8020E3A0:
 /* 8020E3D8 00000038  38 00 00 01 */	li r0, 1
 /* 8020E3DC 0000003C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E3E0 00000040  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E3E4 00000044  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 8020E3E4 00000044  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 lbl_8020E3E8:
 /* 8020E3E8 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8020E3EC 00000004  38 80 00 01 */	li r4, 1
@@ -251,7 +251,7 @@ lbl_8020E3F8:
 /* 8020E424 0000002C  38 00 00 01 */	li r0, 1
 /* 8020E428 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E42C 00000034  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020E430 00000038  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 8020E430 00000038  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 lbl_8020E434:
 /* 8020E434 00000000  7F C3 F3 78 */	mr r3, r30
 /* 8020E438 00000004  38 80 00 00 */	li r4, 0

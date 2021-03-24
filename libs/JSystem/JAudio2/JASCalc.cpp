@@ -181,17 +181,17 @@ SECTION_RODATA static f32 const data_8039AFB8[6] = {
 };
 
 /* 80455558-80455560 0004+04 s=1 e=0 z=0  None .sdata2    @847                                                         */
-SECTION_SDATA2 static f32 JASCalc__lit_847[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_847[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455560-80455568 0008+00 s=1 e=0 z=0  None .sdata2    @850                                                         */
-SECTION_SDATA2 static f64 JASCalc__lit_850 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_850 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80455568-8045556C 0004+00 s=1 e=0 z=0  None .sdata2    @969                                                         */
-SECTION_SDATA2 static u8 JASCalc__lit_969[4] = {
+SECTION_SDATA2 static u8 lit_969[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -206,10 +206,10 @@ SECTION_SDATA2 static u8 data_80455574[8] = {
 };
 
 /* 8045557C-80455580 0004+00 s=1 e=0 z=0  None .sdata2    @994                                                         */
-SECTION_SDATA2 static f32 JASCalc__lit_994 = 0.75f;
+SECTION_SDATA2 static f32 lit_994 = 0.75f;
 
 /* 80455580-80455588 0004+04 s=1 e=0 z=0  None .sdata2    @995                                                         */
-SECTION_SDATA2 static f32 JASCalc__lit_995[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_995[1 + 1 /* padding */] = {
 	0.25f,
 	/* padding */
 	0.0f,

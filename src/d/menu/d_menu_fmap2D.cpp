@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct STControl {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct STControl {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -87,9 +87,6 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct JKRExpHeap {
 };
 
@@ -121,6 +118,9 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Fmap2DTop_c {
@@ -220,10 +220,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -366,7 +366,7 @@ extern "C" extern u8 const data_80396418[40];
 extern "C" extern u8 const data_80396440[40];
 extern "C" extern u8 const data_80396468[40];
 extern "C" extern u8 const data_80396490[40];
-extern "C" extern char const* const d_menu_d_menu_fmap2D__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -666,7 +666,7 @@ SECTION_DATA static void* __vt__18dMenu_Fmap2DBack_c[7 + 1 /* padding */] = {
 };
 
 /* 804541D0-804541D4 0004+00 s=21 e=0 z=0  None .sdata2    @3970                                                        */
-SECTION_SDATA2 static u8 d_menu_d_menu_fmap2D__lit_3970[4] = {
+SECTION_SDATA2 static u8 lit_3970[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -700,28 +700,28 @@ asm dMenu_Fmap2DBack_c::~dMenu_Fmap2DBack_c() {
 
 /* ############################################################################################## */
 /* 804541DC-804541E0 0004+00 s=6 e=0 z=0  None .sdata2    @4199                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4199 = 608.0f;
+SECTION_SDATA2 static f32 lit_4199 = 608.0f;
 
 /* 804541E0-804541E4 0004+00 s=5 e=0 z=0  None .sdata2    @4200                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4200 = 448.0f;
+SECTION_SDATA2 static f32 lit_4200 = 448.0f;
 
 /* 804541E4-804541E8 0004+00 s=4 e=0 z=0  None .sdata2    @4201                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4201 = 255.0f;
+SECTION_SDATA2 static f32 lit_4201 = 255.0f;
 
 /* 804541E8-804541EC 0004+00 s=18 e=0 z=0  None .sdata2    @4202                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4202 = 0.5f;
+SECTION_SDATA2 static f32 lit_4202 = 0.5f;
 
 /* 804541EC-804541F0 0004+00 s=2 e=0 z=0  None .sdata2    @4203                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4203 = 2.0f;
+SECTION_SDATA2 static f32 lit_4203 = 2.0f;
 
 /* 804541F0-804541F4 0004+00 s=5 e=0 z=0  None .sdata2    @4204                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4204 = 3.0f;
+SECTION_SDATA2 static f32 lit_4204 = 3.0f;
 
 /* 804541F4-804541F8 0004+00 s=6 e=0 z=0  None .sdata2    @4205                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4205 = 6.0f;
+SECTION_SDATA2 static f32 lit_4205 = 6.0f;
 
 /* 804541F8-80454200 0008+00 s=4 e=0 z=0  None .sdata2    @4207                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_fmap2D__lit_4207 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4207 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 801CFF34-801D0804 08D0+00 s=1 e=0 z=0  None .text      draw__18dMenu_Fmap2DBack_cFv                                 */
 #pragma push
@@ -736,7 +736,7 @@ asm void dMenu_Fmap2DBack_c::draw() {
 
 /* ############################################################################################## */
 /* 80454200-80454208 0004+04 s=4 e=0 z=0  None .sdata2    @4260                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_4260[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4260[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,
@@ -1261,13 +1261,13 @@ asm void dMenu_Fmap2DBack_c::regionGridDraw() {
 
 /* ############################################################################################## */
 /* 80454208-80454210 0008+00 s=8 e=0 z=0  None .sdata2    @4496                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_fmap2D__lit_4496 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4496 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80454210-80454214 0004+00 s=1 e=0 z=0  None .sdata2    @5133                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_5133 = -0.0f;
+SECTION_SDATA2 static f32 lit_5133 = -0.0f;
 
 /* 80454214-80454218 0004+00 s=1 e=0 z=0  None .sdata2    @5134                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_5134 = -608.0f;
+SECTION_SDATA2 static f32 lit_5134 = -608.0f;
 
 /* 801D382C-801D38FC 00D0+00 s=1 e=0 z=0  None .text      worldOriginDraw__18dMenu_Fmap2DBack_cFv                      */
 #pragma push
@@ -1326,7 +1326,7 @@ asm void dMenu_Fmap2DBack_c::calcBlink() {
 
 /* ############################################################################################## */
 /* 80454218-8045421C 0004+00 s=1 e=0 z=0  None .sdata2    @5433                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_5433 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_5433 = 2.0f / 5.0f;
 
 /* 8045421C-80454220 0004+00 s=1 e=0 z=0  None .sdata2    @5434                                                        */
 SECTION_SDATA2 static f32 lit_5434 = 1.0f / 10.0f;
@@ -1403,10 +1403,10 @@ asm void dMenu_Fmap2DBack_c::setAllAlphaRate(f32 param_0, bool param_1) {
 
 /* ############################################################################################## */
 /* 80454224-80454228 0004+00 s=1 e=0 z=0  None .sdata2    @5632                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_5632 = 304.0f;
+SECTION_SDATA2 static f32 lit_5632 = 304.0f;
 
 /* 80454228-8045422C 0004+00 s=1 e=0 z=0  None .sdata2    @5633                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fmap2D__lit_5633 = 224.0f;
+SECTION_SDATA2 static f32 lit_5633 = 224.0f;
 
 /* 801D5388-801D564C 02C4+00 s=1 e=0 z=0  None .text      drawDebugStageArea__18dMenu_Fmap2DBack_cFv                   */
 #pragma push

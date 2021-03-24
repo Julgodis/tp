@@ -5,8 +5,8 @@ lbl_80017274:
 /* 80017280 0000000C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80017284 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80017288 00000014  88 63 1F BC */	lbz r3, 0x1fbc(r3)
-/* 8001728C 00000018  3C 80 80 37 */	lis r4, m_Do_m_Do_MemCard__stringBase0@ha
-/* 80017290 0000001C  38 84 43 F8 */	addi r4, r4, m_Do_m_Do_MemCard__stringBase0@l
+/* 8001728C 00000018  3C 80 80 37 */	lis r4, stringBase0@ha
+/* 80017290 0000001C  38 84 43 F8 */	addi r4, r4, stringBase0@l
 /* 80017294 00000020  38 A1 00 08 */	addi r5, r1, 8
 /* 80017298 00000024  48 34 0D 01 */	bl CARDOpen
 /* 8001729C 00000028  7C 64 1B 79 */	or. r4, r3, r3

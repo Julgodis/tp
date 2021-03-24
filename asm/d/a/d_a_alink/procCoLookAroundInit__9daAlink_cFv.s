@@ -5,8 +5,8 @@ lbl_8011C62C:
 /* 8011C638 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8011C63C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 8011C640 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8011C644 00000018  3C 80 80 42 */	lis r4, d_a_d_a_alink__lit_4409@ha
-/* 8011C648 0000001C  3B E4 55 08 */	addi r31, r4, d_a_d_a_alink__lit_4409@l
+/* 8011C644 00000018  3C 80 80 42 */	lis r4, lit_4409@ha
+/* 8011C648 0000001C  3B E4 55 08 */	addi r31, r4, lit_4409@l
 /* 8011C64C 00000020  38 80 01 52 */	li r4, 0x152
 /* 8011C650 00000024  4B FA 67 55 */	bl commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 8011C654 00000028  2C 03 00 00 */	cmpwi r3, 0

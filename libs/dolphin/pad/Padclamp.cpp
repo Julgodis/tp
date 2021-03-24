@@ -40,20 +40,20 @@ extern "C" asm static void ClampStick() {
 
 /* ############################################################################################## */
 /* 80456560-80456568 0004+04 s=1 e=0 z=0  None .sdata2    @160                                                         */
-SECTION_SDATA2 static u8 Padclamp__lit_160[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_160[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456568-80456570 0008+00 s=1 e=0 z=0  None .sdata2    @161                                                         */
-SECTION_SDATA2 static f64 Padclamp__lit_161 = 0.5;
+SECTION_SDATA2 static f64 lit_161 = 0.5;
 
 /* 80456570-80456578 0008+00 s=1 e=0 z=0  None .sdata2    @162                                                         */
 SECTION_SDATA2 static f64 lit_162 = 3.0;
 
 /* 80456578-80456580 0008+00 s=1 e=0 z=0  None .sdata2    @164                                                         */
-SECTION_SDATA2 static f64 Padclamp__lit_164 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_164 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8034DEEC-8034E094 01A8+00 s=1 e=0 z=0  None .text      ClampCircle                                                  */
 #pragma push

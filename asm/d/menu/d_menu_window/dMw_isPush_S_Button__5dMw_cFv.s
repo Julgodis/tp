@@ -9,8 +9,8 @@ lbl_801FCD24:
 /* 801FCD40 0000001C  40 82 00 80 */	bne lbl_801FCDC0
 /* 801FCD44 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801FCD48 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 801FCD4C 00000028  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
-/* 801FCD50 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 801FCD4C 00000028  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
+/* 801FCD50 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 801FCD54 00000030  81 8C 02 6C */	lwz r12, 0x26c(r12)
 /* 801FCD58 00000034  7D 89 03 A6 */	mtctr r12
 /* 801FCD5C 00000038  4E 80 04 21 */	bctrl 

@@ -9,8 +9,8 @@ lbl_802D1C74:
 /* 802D1C90 00000008  7C 7A 1B 78 */	mr r26, r3
 /* 802D1C94 0000000C  7C 9B 23 78 */	mr r27, r4
 /* 802D1C98 00000010  7C BC 2B 79 */	or. r28, r5, r5
-/* 802D1C9C 00000014  3C 60 80 3A */	lis r3, JKRThread__stringBase0@ha
-/* 802D1CA0 00000018  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
+/* 802D1C9C 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D1CA0 00000018  38 63 CF A8 */	addi r3, r3, stringBase0@l
 /* 802D1CA4 0000001C  3B 23 00 5D */	addi r25, r3, 0x5d
 /* 802D1CA8 00000020  3B A3 00 7F */	addi r29, r3, 0x7f
 /* 802D1CAC 00000024  41 82 00 34 */	beq lbl_802D1CE0
@@ -57,8 +57,8 @@ lbl_802D1D38:
 /* 802D1D38 00000000  28 1D 00 00 */	cmplwi r29, 0
 /* 802D1D3C 00000004  40 82 00 24 */	bne lbl_802D1D60
 /* 802D1D40 00000008  38 61 00 08 */	addi r3, r1, 8
-/* 802D1D44 0000000C  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
-/* 802D1D48 00000010  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
+/* 802D1D44 0000000C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802D1D48 00000010  38 84 CF A8 */	addi r4, r4, stringBase0@l
 /* 802D1D4C 00000014  38 84 00 A7 */	addi r4, r4, 0xa7
 /* 802D1D50 00000018  80 B9 00 70 */	lwz r5, 0x70(r25)
 /* 802D1D54 0000001C  4C C6 31 82 */	crclr 6
@@ -70,18 +70,18 @@ lbl_802D1D60:
 /* 802D1D68 00000008  80 9A 00 1C */	lwz r4, 0x1c(r26)
 /* 802D1D6C 0000000C  48 09 09 51 */	bl __cvt_sll_flt
 /* 802D1D70 00000010  80 19 00 64 */	lwz r0, 0x64(r25)
-/* 802D1D74 00000014  C8 42 C5 C8 */	lfd f2, JKRThread__lit_937(r2)
+/* 802D1D74 00000014  C8 42 C5 C8 */	lfd f2, lit_937(r2)
 /* 802D1D78 00000018  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802D1D7C 0000001C  3C 00 43 30 */	lis r0, 0x4330
 /* 802D1D80 00000020  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802D1D84 00000024  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 802D1D88 00000028  EC 00 10 28 */	fsubs f0, f0, f2
 /* 802D1D8C 0000002C  EF E0 08 24 */	fdivs f31, f0, f1
-/* 802D1D90 00000030  C0 02 C5 C0 */	lfs f0, JKRThread__lit_934(r2)
+/* 802D1D90 00000030  C0 02 C5 C0 */	lfs f0, lit_934(r2)
 /* 802D1D94 00000034  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 802D1D98 00000038  48 09 03 15 */	bl __cvt_fp2unsigned
 /* 802D1D9C 0000003C  7C 79 1B 78 */	mr r25, r3
-/* 802D1DA0 00000040  C0 02 C5 C4 */	lfs f0, JKRThread__lit_935(r2)
+/* 802D1DA0 00000040  C0 02 C5 C4 */	lfs f0, lit_935(r2)
 /* 802D1DA4 00000044  EC 20 07 F2 */	fmuls f1, f0, f31
 /* 802D1DA8 00000048  48 09 03 05 */	bl __cvt_fp2unsigned
 /* 802D1DAC 0000004C  38 80 00 0A */	li r4, 0xa
@@ -91,8 +91,8 @@ lbl_802D1D60:
 /* 802D1DBC 0000005C  28 1C 00 00 */	cmplwi r28, 0
 /* 802D1DC0 00000060  41 82 00 28 */	beq lbl_802D1DE8
 /* 802D1DC4 00000064  7F 83 E3 78 */	mr r3, r28
-/* 802D1DC8 00000068  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
-/* 802D1DCC 0000006C  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
+/* 802D1DC8 00000068  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 802D1DCC 0000006C  38 84 CF A8 */	addi r4, r4, stringBase0@l
 /* 802D1DD0 00000070  38 84 00 AA */	addi r4, r4, 0xaa
 /* 802D1DD4 00000074  7F A5 EB 78 */	mr r5, r29
 /* 802D1DD8 00000078  7F E6 FB 78 */	mr r6, r31

@@ -12,6 +12,7 @@
 // 
 
 struct daL7lowDr_c {
+	/* 805AA5F8 */ void setAction(void (daL7lowDr_c::*)());
 	/* 805AA69C */ void action();
 	/* 805AA748 */ void _delete();
 	/* 805AA7B8 */ void mtx_set();
@@ -36,7 +37,7 @@ void daL7lowDr_Create(daL7lowDr_c*); // 2
 void daL7lowDr_Draw(daL7lowDr_c*); // 2
 void daL7lowDr_IsDelete(daL7lowDr_c*); // 2
 
-extern "C" static void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v(); // 1
+extern "C" void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v(); // 1
 extern "C" void action__11daL7lowDr_cFv(); // 1
 extern "C" void _delete__11daL7lowDr_cFv(); // 1
 extern "C" void daL7lowDr_Delete__FP11daL7lowDr_c(); // 1
@@ -86,7 +87,7 @@ extern "C" void _unresolved(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v() {
+asm void daL7lowDr_c::setAction(void (daL7lowDr_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7low_dr/d_a_L7low_dr/setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v.s"
 }

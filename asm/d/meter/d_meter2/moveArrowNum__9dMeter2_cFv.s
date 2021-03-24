@@ -12,14 +12,14 @@ lbl_80224354:
 /* 8022437C 00000028  40 82 00 18 */	bne lbl_80224394
 /* 80224380 0000002C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80224384 00000030  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80224388 00000034  88 03 00 DD */	lbz r0, 0xdd(r3)
+/* 80224388 00000034  88 03 00 DD */	lbz r0, 0xdd(r3)	/* effective address: 80430265 */
 /* 8022438C 00000038  28 00 00 01 */	cmplwi r0, 1
 /* 80224390 0000003C  40 82 00 44 */	bne lbl_802243D4
 lbl_80224394:
 /* 80224394 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80224398 00000004  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8022439C 00000008  88 04 00 EC */	lbz r0, 0xec(r4)
-/* 802243A0 0000000C  88 64 00 F8 */	lbz r3, 0xf8(r4)
+/* 8022439C 00000008  88 04 00 EC */	lbz r0, 0xec(r4)	/* effective address: 804062AC */
+/* 802243A0 0000000C  88 64 00 F8 */	lbz r3, 0xf8(r4)	/* effective address: 804062B8 */
 /* 802243A4 00000010  7C 03 00 40 */	cmplw r3, r0
 /* 802243A8 00000014  41 82 00 10 */	beq lbl_802243B8
 /* 802243AC 00000018  A8 04 5D F4 */	lha r0, 0x5df4(r4)
@@ -28,7 +28,7 @@ lbl_80224394:
 lbl_802243B8:
 /* 802243B8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802243BC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802243C0 00000008  A8 03 5D F4 */	lha r0, 0x5df4(r3)
+/* 802243C0 00000008  A8 03 5D F4 */	lha r0, 0x5df4(r3)	/* effective address: 8040BFB4 */
 /* 802243C4 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 802243C8 00000010  40 80 00 0C */	bge lbl_802243D4
 /* 802243CC 00000014  38 00 00 00 */	li r0, 0
@@ -36,7 +36,7 @@ lbl_802243B8:
 lbl_802243D4:
 /* 802243D4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802243D8 00000004  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 802243DC 00000008  A8 C5 5D F4 */	lha r6, 0x5df4(r5)
+/* 802243DC 00000008  A8 C5 5D F4 */	lha r6, 0x5df4(r5)	/* effective address: 8040BFB4 */
 /* 802243E0 0000000C  7C C0 07 35 */	extsh. r0, r6
 /* 802243E4 00000010  40 82 00 24 */	bne lbl_80224408
 /* 802243E8 00000014  88 65 00 F8 */	lbz r3, 0xf8(r5)
@@ -50,7 +50,7 @@ lbl_802243D4:
 lbl_80224408:
 /* 80224408 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8022440C 00000004  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 80224410 00000008  88 04 00 EC */	lbz r0, 0xec(r4)
+/* 80224410 00000008  88 04 00 EC */	lbz r0, 0xec(r4)	/* effective address: 804062AC */
 /* 80224414 0000000C  7C 00 32 14 */	add r0, r0, r6
 /* 80224418 00000010  7C 06 07 35 */	extsh. r6, r0
 /* 8022441C 00000014  38 00 00 00 */	li r0, 0
@@ -60,7 +60,7 @@ lbl_80224408:
 lbl_8022442C:
 /* 8022442C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80224430 00000004  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80224434 00000008  88 7F 00 F8 */	lbz r3, 0xf8(r31)
+/* 80224434 00000008  88 7F 00 F8 */	lbz r3, 0xf8(r31)	/* effective address: 804062B8 */
 /* 80224438 0000000C  7C C0 07 34 */	extsh r0, r6
 /* 8022443C 00000010  7C 00 18 00 */	cmpw r0, r3
 /* 80224440 00000014  40 81 00 08 */	ble lbl_80224448
@@ -105,9 +105,9 @@ lbl_80224448:
 /* 802244D8 00000090  38 A0 00 00 */	li r5, 0
 /* 802244DC 00000094  38 C0 00 00 */	li r6, 0
 /* 802244E0 00000098  38 E0 00 00 */	li r7, 0
-/* 802244E4 0000009C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
+/* 802244E4 0000009C  C0 22 AF CC */	lfs f1, lit_4663(r2)
 /* 802244E8 000000A0  FC 40 08 90 */	fmr f2, f1
-/* 802244EC 000000A4  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
+/* 802244EC 000000A4  C0 62 AF D0 */	lfs f3, lit_4837(r2)
 /* 802244F0 000000A8  FC 80 18 90 */	fmr f4, f3
 /* 802244F4 000000AC  39 00 00 00 */	li r8, 0
 /* 802244F8 000000B0  48 08 74 8D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -133,9 +133,9 @@ lbl_80224510:
 /* 80224540 00000030  38 A0 00 00 */	li r5, 0
 /* 80224544 00000034  38 C0 00 00 */	li r6, 0
 /* 80224548 00000038  38 E0 00 00 */	li r7, 0
-/* 8022454C 0000003C  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
+/* 8022454C 0000003C  C0 22 AF CC */	lfs f1, lit_4663(r2)
 /* 80224550 00000040  FC 40 08 90 */	fmr f2, f1
-/* 80224554 00000044  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
+/* 80224554 00000044  C0 62 AF D0 */	lfs f3, lit_4837(r2)
 /* 80224558 00000048  FC 80 18 90 */	fmr f4, f3
 /* 8022455C 0000004C  39 00 00 00 */	li r8, 0
 /* 80224560 00000050  48 08 74 25 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

@@ -8,7 +8,7 @@ lbl_801597C0:
 /* 801597D8 00000018  90 0D 8A 84 */	stw r0, target(r13)
 /* 801597DC 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801597E0 00000020  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801597E4 00000024  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 801597E4 00000024  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
 /* 801597E8 00000028  4B EC 0F 29 */	bl fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 801597EC 0000002C  B0 6D 8A 8C */	sth r3, wolfAngle(r13)
 /* 801597F0 00000030  3C 60 80 16 */	lis r3, s_sub1__FPvPv@ha

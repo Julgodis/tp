@@ -9,8 +9,8 @@ lbl_8003C5BC:
 /* 8003C5D8 0000001C  7C BF 2B 78 */	mr r31, r5
 /* 8003C5DC 00000020  38 61 00 08 */	addi r3, r1, 8
 /* 8003C5E0 00000024  38 80 00 14 */	li r4, 0x14
-/* 8003C5E4 00000028  3C A0 80 38 */	lis r5, d_d_resorce__stringBase0@ha
-/* 8003C5E8 0000002C  38 A5 98 B8 */	addi r5, r5, d_d_resorce__stringBase0@l
+/* 8003C5E4 00000028  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 8003C5E8 0000002C  38 A5 98 B8 */	addi r5, r5, stringBase0@l
 /* 8003C5EC 00000030  38 A5 03 1F */	addi r5, r5, 0x31f
 /* 8003C5F0 00000034  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8003C5F4 00000038  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l

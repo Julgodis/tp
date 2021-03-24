@@ -9,7 +9,7 @@ lbl_8019B7C4:
 /* 8019B7E0 0000001C  41 82 00 28 */	beq lbl_8019B808
 /* 8019B7E4 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B7E8 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8019B7EC 00000028  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 8019B7EC 00000028  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8019B7F0 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 8019B7F4 00000030  41 82 00 14 */	beq lbl_8019B808
 /* 8019B7F8 00000034  38 63 5F 64 */	addi r3, r3, 0x5f64

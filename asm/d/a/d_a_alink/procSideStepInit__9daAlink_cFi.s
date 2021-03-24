@@ -53,9 +53,9 @@ lbl_800C3E24:
 /* 800C3E64 00000040  4B FE 92 91 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800C3E68 00000044  3C 60 80 39 */	lis r3, m__22daAlinkHIO_sideStep_c0@ha
 /* 800C3E6C 00000048  38 63 D8 64 */	addi r3, r3, m__22daAlinkHIO_sideStep_c0@l
-/* 800C3E70 0000004C  C0 03 00 58 */	lfs f0, 0x58(r3)
+/* 800C3E70 0000004C  C0 03 00 58 */	lfs f0, 0x58(r3)	/* effective address: 8038D8BC */
 /* 800C3E74 00000050  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 800C3E78 00000054  C0 03 00 5C */	lfs f0, 0x5c(r3)
+/* 800C3E78 00000054  C0 03 00 5C */	lfs f0, 0x5c(r3)	/* effective address: 8038D8C0 */
 /* 800C3E7C 00000058  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 800C3E80 0000005C  38 00 00 00 */	li r0, 0
 /* 800C3E84 00000060  B0 1F 30 0A */	sth r0, 0x300a(r31)
@@ -80,9 +80,9 @@ lbl_800C3EB8:
 /* 800C3EC4 0000000C  4B FE 92 31 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800C3EC8 00000010  3C 60 80 39 */	lis r3, m__22daAlinkHIO_sideStep_c0@ha
 /* 800C3ECC 00000014  38 63 D8 64 */	addi r3, r3, m__22daAlinkHIO_sideStep_c0@l
-/* 800C3ED0 00000018  C0 03 00 50 */	lfs f0, 0x50(r3)
+/* 800C3ED0 00000018  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8038D8B4 */
 /* 800C3ED4 0000001C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 800C3ED8 00000020  C0 03 00 54 */	lfs f0, 0x54(r3)
+/* 800C3ED8 00000020  C0 03 00 54 */	lfs f0, 0x54(r3)	/* effective address: 8038D8B8 */
 /* 800C3EDC 00000024  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 800C3EE0 00000028  38 00 00 01 */	li r0, 1
 /* 800C3EE4 0000002C  B0 1F 30 0A */	sth r0, 0x300a(r31)
@@ -93,11 +93,11 @@ lbl_800C3EE8:
 /* 800C3EF4 0000000C  C0 3F 33 98 */	lfs f1, 0x3398(r31)
 /* 800C3EF8 00000010  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800C3EFC 00000014  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800C3F00 00000018  C0 03 00 3C */	lfs f0, 0x3c(r3)
+/* 800C3F00 00000018  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 8038E830 */
 /* 800C3F04 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800C3F08 00000020  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800C3F0C 00000024  C0 3F 04 FC */	lfs f1, 0x4fc(r31)
-/* 800C3F10 00000028  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800C3F10 00000028  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038E82C */
 /* 800C3F14 0000002C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800C3F18 00000030  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 lbl_800C3F1C:

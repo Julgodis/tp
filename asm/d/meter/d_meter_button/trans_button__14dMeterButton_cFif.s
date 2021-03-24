@@ -17,7 +17,7 @@ lbl_8020A540:
 /* 8020A57C 00000018  88 A4 04 BE */	lbz r5, 0x4be(r4)
 /* 8020A580 0000001C  28 05 00 16 */	cmplwi r5, 0x16
 /* 8020A584 00000020  41 82 03 98 */	beq lbl_8020A91C
-/* 8020A588 00000024  C3 E2 AD 48 */	lfs f31, d_meter_d_meter_button__lit_4146(r2)
+/* 8020A588 00000024  C3 E2 AD 48 */	lfs f31, lit_4146(r2)
 /* 8020A58C 00000028  3B 40 00 01 */	li r26, 1
 /* 8020A590 0000002C  54 A0 15 BA */	rlwinm r0, r5, 2, 0x16, 0x1d
 /* 8020A594 00000030  C0 22 AD 74 */	lfs f1, lit_5629(r2)
@@ -238,7 +238,7 @@ lbl_8020A8C4:
 /* 8020A8D8 00000014  EC 3D 00 2A */	fadds f1, f29, f0
 /* 8020A8DC 00000018  C0 05 06 08 */	lfs f0, 0x608(r5)
 /* 8020A8E0 0000001C  EC 40 F8 2A */	fadds f2, f0, f31
-/* 8020A8E4 00000020  C0 02 AD A8 */	lfs f0, d_meter_d_meter_button__lit_6017(r2)
+/* 8020A8E4 00000020  C0 02 AD A8 */	lfs f0, lit_6017(r2)
 /* 8020A8E8 00000024  EC 42 00 28 */	fsubs f2, f2, f0
 /* 8020A8EC 00000028  57 E5 06 3E */	clrlwi r5, r31, 0x18
 /* 8020A8F0 0000002C  48 00 05 79 */	bl paneTrans__14dMeterButton_cFP8CPaneMgrffUc

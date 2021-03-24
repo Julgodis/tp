@@ -13,8 +13,8 @@ lbl_800B3924:
 /* 800B3950 00000010  7C 7E 1B 78 */	mr r30, r3
 /* 800B3954 00000014  FF A0 08 90 */	fmr f29, f1
 /* 800B3958 00000018  FF C0 10 90 */	fmr f30, f2
-/* 800B395C 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 800B3960 00000020  3B E3 D6 58 */	addi r31, r3, d_a_d_a_alink__lit_3757@l
+/* 800B395C 0000001C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 800B3960 00000020  3B E3 D6 58 */	addi r31, r3, lit_3757@l
 /* 800B3964 00000024  38 00 00 00 */	li r0, 0
 /* 800B3968 00000028  88 7E 05 6A */	lbz r3, 0x56a(r30)
 /* 800B396C 0000002C  28 03 00 00 */	cmplwi r3, 0
@@ -152,7 +152,7 @@ lbl_800B3B34:
 /* 800B3B48 00000000  40 80 00 08 */	bge lbl_800B3B50
 /* 800B3B4C 00000004  48 00 00 18 */	b lbl_800B3B64
 lbl_800B3B50:
-/* 800B3B50 00000000  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 800B3B50 00000000  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800B3B54 00000004  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 800B3B58 00000000  40 81 00 08 */	ble lbl_800B3B60
 /* 800B3B5C 00000004  48 00 00 08 */	b lbl_800B3B64
@@ -160,7 +160,7 @@ lbl_800B3B60:
 /* 800B3B60 00000000  FC 60 00 90 */	fmr f3, f0
 lbl_800B3B64:
 /* 800B3B64 00000000  C0 5E 05 94 */	lfs f2, 0x594(r30)
-/* 800B3B68 00000004  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B3B68 00000004  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B3B6C 00000008  C0 02 92 98 */	lfs f0, lit_5943(r2)
 /* 800B3B70 0000000C  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 800B3B74 00000010  EC 01 00 28 */	fsubs f0, f1, f0
@@ -204,7 +204,7 @@ lbl_800B3BD8:
 /* 800B3BFC 00000024  C0 1E 34 2C */	lfs f0, 0x342c(r30)
 /* 800B3C00 00000028  FC 00 02 10 */	fabs f0, f0
 /* 800B3C04 0000002C  FC 00 00 18 */	frsp f0, f0
-/* 800B3C08 00000030  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B3C08 00000030  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B3C0C 00000034  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 800B3C10 00000000  41 81 00 34 */	bgt lbl_800B3C44
 /* 800B3C14 00000004  C0 1E 34 30 */	lfs f0, 0x3430(r30)
@@ -257,7 +257,7 @@ lbl_800B3CBC:
 /* 800B3CBC 00000000  C0 1E 34 2C */	lfs f0, 0x342c(r30)
 /* 800B3CC0 00000004  FC 00 02 10 */	fabs f0, f0
 /* 800B3CC4 00000008  FC 00 00 18 */	frsp f0, f0
-/* 800B3CC8 0000000C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B3CC8 0000000C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B3CCC 00000010  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 800B3CD0 00000000  41 81 00 18 */	bgt lbl_800B3CE8
 /* 800B3CD4 00000004  C0 1E 34 30 */	lfs f0, 0x3430(r30)
@@ -289,7 +289,7 @@ lbl_800B3D1C:
 /* 800B3D34 00000018  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 800B3D38 0000001C  38 9E 35 40 */	addi r4, r30, 0x3540
 /* 800B3D3C 00000020  48 29 36 61 */	bl PSVECSquareDistance
-/* 800B3D40 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B3D40 00000024  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B3D44 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B3D48 00000000  40 80 00 28 */	bge lbl_800B3D70
 /* 800B3D4C 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -311,7 +311,7 @@ lbl_800B3D70:
 lbl_800B3D88:
 /* 800B3D88 00000000  2C 03 40 00 */	cmpwi r3, 0x4000
 /* 800B3D8C 00000004  40 80 00 24 */	bge lbl_800B3DB0
-/* 800B3D90 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B3D90 00000008  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B3D94 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800B3D98 00000010  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800B3D9C 00000014  57 E0 04 38 */	rlwinm r0, r31, 0, 0x10, 0x1c
@@ -336,8 +336,8 @@ lbl_800B3DB0:
 /* 800B3DE4 00000034  80 1E 31 A0 */	lwz r0, 0x31a0(r30)
 /* 800B3DE8 00000038  54 00 03 5B */	rlwinm. r0, r0, 0, 0xd, 0xd
 /* 800B3DEC 0000003C  41 82 00 30 */	beq lbl_800B3E1C
-/* 800B3DF0 00000040  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
-/* 800B3DF4 00000044  C0 22 94 08 */	lfs f1, d_a_d_a_alink__lit_14064(r2)
+/* 800B3DF0 00000040  C0 42 92 B8 */	lfs f2, lit_6040(r2)
+/* 800B3DF4 00000044  C0 22 94 08 */	lfs f1, lit_14064(r2)
 /* 800B3DF8 00000048  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800B3DFC 0000004C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800B3E00 00000050  57 E0 04 38 */	rlwinm r0, r31, 0, 0x10, 0x1c
@@ -353,7 +353,7 @@ lbl_800B3E1C:
 /* 800B3E24 00000008  C3 E2 92 C0 */	lfs f31, lit_6108(r2)
 /* 800B3E28 0000000C  48 00 00 24 */	b lbl_800B3E4C
 lbl_800B3E2C:
-/* 800B3E2C 00000000  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B3E2C 00000000  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B3E30 00000004  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 800B3E34 00000008  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800B3E38 0000000C  57 E0 04 38 */	rlwinm r0, r31, 0, 0x10, 0x1c

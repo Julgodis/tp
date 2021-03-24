@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B51A44 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Yelia_c {
@@ -58,6 +58,8 @@ struct daNpc_Yelia_c {
 	/* 80B4EE4C */ void setCollision();
 	/* 80B4EFA4 */ void drawDbgInfo();
 	/* 80B4EFAC */ void selectAction();
+	/* 80B4F054 */ void chkAction(int (daNpc_Yelia_c::*)(void*));
+	/* 80B4F080 */ void setAction(int (daNpc_Yelia_c::*)(void*));
 	/* 80B4F128 */ void cutConversationAboutLoopHole(int);
 	/* 80B4F3E0 */ void cutTWResistance(int);
 	/* 80B4F534 */ void cutTakeWoodStatue(int);
@@ -232,8 +234,8 @@ extern "C" void setAttnPos__13daNpc_Yelia_cFv(); // 1
 extern "C" void setCollision__13daNpc_Yelia_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Yelia_cFv(); // 1
 extern "C" void selectAction__13daNpc_Yelia_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i(); // 1
 extern "C" void cutConversationAboutLoopHole__13daNpc_Yelia_cFi(); // 1
 extern "C" void cutTWResistance__13daNpc_Yelia_cFi(); // 1
 extern "C" void cutTakeWoodStatue__13daNpc_Yelia_cFi(); // 1
@@ -782,7 +784,7 @@ asm void daNpc_Yelia_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i() {
+asm void daNpc_Yelia_c::chkAction(int (daNpc_Yelia_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i.s"
 }
@@ -793,7 +795,7 @@ extern "C" asm static void chkAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i() {
+asm void daNpc_Yelia_c::setAction(int (daNpc_Yelia_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yelia/d_a_npc_yelia/setAction__13daNpc_Yelia_cFM13daNpc_Yelia_cFPCvPvPv_i.s"
 }

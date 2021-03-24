@@ -38,7 +38,7 @@ lbl_802438FC:
 /* 80243924 00000028  38 80 00 00 */	li r4, 0
 /* 80243928 0000002C  48 00 04 A5 */	bl moveBaseLength__14dMsgScrnHowl_cFb
 /* 8024392C 00000030  38 60 00 00 */	li r3, 0
-/* 80243930 00000034  C0 42 B2 50 */	lfs f2, msg_scrn_d_msg_scrn_howl__lit_4427(r2)
+/* 80243930 00000034  C0 42 B2 50 */	lfs f2, lit_4427(r2)
 /* 80243934 00000038  38 00 00 1E */	li r0, 0x1e
 /* 80243938 0000003C  7C 09 03 A6 */	mtctr r0
 lbl_8024393C:
@@ -59,7 +59,7 @@ lbl_80243964:
 /* 8024396C 00000008  41 82 00 74 */	beq lbl_802439E0
 /* 80243970 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80243974 00000010  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 80243978 00000014  80 7E 5D B4 */	lwz r3, 0x5db4(r30)
+/* 80243978 00000014  80 7E 5D B4 */	lwz r3, 0x5db4(r30)	/* effective address: 8040BF74 */
 /* 8024397C 00000018  38 63 2D 84 */	addi r3, r3, 0x2d84
 /* 80243980 0000001C  48 08 7C D1 */	bl getOnLineNum__13Z2WolfHowlMgrFv
 /* 80243984 00000020  7C 60 07 75 */	extsb. r0, r3
@@ -89,8 +89,8 @@ lbl_802439D0:
 lbl_802439E0:
 /* 802439E0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802439E4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802439E8 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 802439EC 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 802439E8 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 802439EC 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 802439F0 00000010  81 8C 02 98 */	lwz r12, 0x298(r12)
 /* 802439F4 00000014  7D 89 03 A6 */	mtctr r12
 /* 802439F8 00000018  4E 80 04 21 */	bctrl 
@@ -104,7 +104,7 @@ lbl_802439E0:
 /* 80243A18 00000038  D0 23 01 80 */	stfs f1, 0x180(r3)
 /* 80243A1C 0000003C  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80243A20 00000040  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80243A24 00000044  A8 83 04 0C */	lha r4, 0x40c(r3)
+/* 80243A24 00000044  A8 83 04 0C */	lha r4, 0x40c(r3)	/* effective address: 80430698 */
 /* 80243A28 00000048  A8 1F 21 32 */	lha r0, 0x2132(r31)
 /* 80243A2C 0000004C  54 00 08 3C */	slwi r0, r0, 1
 /* 80243A30 00000050  7C 7F 02 14 */	add r3, r31, r0

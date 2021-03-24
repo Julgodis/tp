@@ -6,24 +6,24 @@ lbl_8032EC28:
 /* 8032EC38 00000010  3C A0 80 43 */	lis r5, mCurrentS__6J3DSys@ha
 /* 8032EC3C 00000014  D4 25 4C 14 */	stfsu f1, mCurrentS__6J3DSys@l(r5)
 /* 8032EC40 00000018  C0 43 00 04 */	lfs f2, 4(r3)
-/* 8032EC44 0000001C  D0 45 00 04 */	stfs f2, 4(r5)
+/* 8032EC44 0000001C  D0 45 00 04 */	stfs f2, 4(r5)	/* effective address: 80430004 */
 /* 8032EC48 00000020  C0 63 00 08 */	lfs f3, 8(r3)
-/* 8032EC4C 00000024  D0 65 00 08 */	stfs f3, 8(r5)
-/* 8032EC50 00000028  3C 60 80 3A */	lis r3, J3DJoint__lit_882@ha
-/* 8032EC54 0000002C  38 A3 20 68 */	addi r5, r3, J3DJoint__lit_882@l
-/* 8032EC58 00000030  80 65 00 00 */	lwz r3, 0(r5)
-/* 8032EC5C 00000034  80 05 00 04 */	lwz r0, 4(r5)
+/* 8032EC4C 00000024  D0 65 00 08 */	stfs f3, 8(r5)	/* effective address: 80430008 */
+/* 8032EC50 00000028  3C 60 80 3A */	lis r3, lit_882@ha
+/* 8032EC54 0000002C  38 A3 20 68 */	addi r5, r3, lit_882@l
+/* 8032EC58 00000030  80 65 00 00 */	lwz r3, 0(r5)	/* effective address: 803A2068 */
+/* 8032EC5C 00000034  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A206C */
 /* 8032EC60 00000038  90 61 00 08 */	stw r3, 8(r1)
 /* 8032EC64 0000003C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8032EC68 00000040  80 05 00 08 */	lwz r0, 8(r5)
+/* 8032EC68 00000040  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2070 */
 /* 8032EC6C 00000044  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8032EC70 00000048  C0 01 00 08 */	lfs f0, 8(r1)
 /* 8032EC74 0000004C  3C 60 80 43 */	lis r3, mParentS__6J3DSys@ha
 /* 8032EC78 00000050  D4 03 4C 20 */	stfsu f0, mParentS__6J3DSys@l(r3)
 /* 8032EC7C 00000054  C0 01 00 0C */	lfs f0, 0xc(r1)
-/* 8032EC80 00000058  D0 03 00 04 */	stfs f0, 4(r3)
+/* 8032EC80 00000058  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80430004 */
 /* 8032EC84 0000005C  C0 01 00 10 */	lfs f0, 0x10(r1)
-/* 8032EC88 00000060  D0 03 00 08 */	stfs f0, 8(r3)
+/* 8032EC88 00000060  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80430008 */
 /* 8032EC8C 00000064  7C 83 23 78 */	mr r3, r4
 /* 8032EC90 00000068  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 8032EC94 0000006C  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l

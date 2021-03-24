@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcThe_c {
@@ -83,6 +83,16 @@ struct J3DTexMtxAnm {
 struct J3DMatColorAnm {
 	/* 80AF80C0 */ ~J3DMatColorAnm();
 	/* 80AF80FC */ J3DMatColorAnm();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80AFB490 */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_ActorMngr_c {
@@ -194,7 +204,7 @@ extern "C" void ctrlBtk__10daNpcThe_cFv(); // 1
 extern "C" void setAttnPos__10daNpcThe_cFv(); // 1
 extern "C" void lookat__10daNpcThe_cFv(); // 1
 extern "C" void drawDbgInfo__10daNpcThe_cFv(); // 1
-extern "C" static void func_80AFB490(); // 1
+extern "C" void func_80AFB490(); // 1
 extern "C" void __sinit_d_a_npc_the_cpp(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
@@ -853,7 +863,7 @@ asm void daNpcThe_c::drawDbgInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80AFB490() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_the/d_a_npc_the/func_80AFB490.s"
 }

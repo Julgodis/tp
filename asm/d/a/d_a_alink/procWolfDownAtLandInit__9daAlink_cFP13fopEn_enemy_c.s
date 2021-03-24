@@ -38,7 +38,7 @@ lbl_8013B964:
 /* 8013B9F4 00000090  4E 80 04 21 */	bctrl 
 /* 8013B9F8 00000094  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013B9FC 00000098  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013BA00 0000009C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013BA00 0000009C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8013BA04 000000A0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8013BA08 000000A4  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8013BA0C 000000A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

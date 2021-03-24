@@ -14,7 +14,7 @@ lbl_800C5C28:
 /* 800C5C58 00000030  C0 3F 05 2C */	lfs f1, 0x52c(r31)
 /* 800C5C5C 00000034  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800C5C60 00000038  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800C5C64 0000003C  C0 03 00 40 */	lfs f0, 0x40(r3)
+/* 800C5C64 0000003C  C0 03 00 40 */	lfs f0, 0x40(r3)	/* effective address: 8038D6FC */
 /* 800C5C68 00000040  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800C5C6C 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800C5C70 00000048  38 00 00 40 */	li r0, 0x40

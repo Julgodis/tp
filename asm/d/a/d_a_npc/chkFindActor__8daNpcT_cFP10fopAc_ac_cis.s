@@ -48,12 +48,12 @@ lbl_8014AEC4:
 /* 8014AEC4 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8014AEC8 00000004  48 00 01 49 */	bl getDistTable__12dAttention_cFi
 /* 8014AECC 00000008  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 8014AED0 0000000C  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 8014AED0 0000000C  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 8014AED4 00000010  EF C0 00 72 */	fmuls f30, f0, f1
 /* 8014AED8 00000014  7F E3 FB 78 */	mr r3, r31
 /* 8014AEDC 00000018  48 00 01 35 */	bl getDistTable__12dAttention_cFi
 /* 8014AEE0 0000001C  C0 23 00 0C */	lfs f1, 0xc(r3)
-/* 8014AEE4 00000020  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 8014AEE4 00000020  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 8014AEE8 00000024  EF A0 00 72 */	fmuls f29, f0, f1
 /* 8014AEEC 00000028  7F E3 FB 78 */	mr r3, r31
 /* 8014AEF0 0000002C  48 00 01 21 */	bl getDistTable__12dAttention_cFi

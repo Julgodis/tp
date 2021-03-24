@@ -3,8 +3,8 @@ lbl_801CDA74:
 /* 801CDA78 00000004  7C 08 02 A6 */	mflr r0
 /* 801CDA7C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801CDA80 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801CDA84 00000010  3C 60 80 3C */	lis r3, d_menu_d_menu_fmap__cNullVec__6Z2Calc@ha
-/* 801CDA88 00000014  3B E3 D0 90 */	addi r31, r3, d_menu_d_menu_fmap__cNullVec__6Z2Calc@l
+/* 801CDA84 00000010  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha
+/* 801CDA88 00000014  3B E3 D0 90 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 801CDA8C 00000018  3C 60 80 43 */	lis r3, g_fmHIO@ha
 /* 801CDA90 0000001C  38 63 E8 2C */	addi r3, r3, g_fmHIO@l
 /* 801CDA94 00000020  4B FF 8B 65 */	bl __ct__9dMf_HIO_cFv

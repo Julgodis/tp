@@ -14,8 +14,8 @@ lbl_80025744:
 /* 80025774 00000030  4B FF E7 8D */	bl dStage_isBossStage__FP11dStage_dt_c
 /* 80025778 00000034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8002577C 00000038  40 82 00 40 */	bne lbl_800257BC
-/* 80025780 0000003C  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80025784 00000040  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80025780 0000003C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80025784 00000040  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80025788 00000044  38 63 00 E3 */	addi r3, r3, 0xe3
 /* 8002578C 00000048  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80025790 0000004C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
@@ -25,7 +25,7 @@ lbl_80025744:
 /* 800257A0 0000005C  48 01 69 F5 */	bl deleteRes__14dRes_control_cFPCcP11dRes_info_ci
 /* 800257A4 00000060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800257A8 00000064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800257AC 00000068  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800257AC 00000068  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800257B0 0000006C  81 8C 01 34 */	lwz r12, 0x134(r12)
 /* 800257B4 00000070  7D 89 03 A6 */	mtctr r12
 /* 800257B8 00000074  4E 80 04 21 */	bctrl 

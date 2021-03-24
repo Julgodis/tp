@@ -8,7 +8,7 @@ lbl_801FD888:
 /* 801FD8A0 00000018  38 00 00 00 */	li r0, 0
 /* 801FD8A4 0000001C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 801FD8A8 00000020  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 801FD8AC 00000024  90 04 00 24 */	stw r0, 0x24(r4)
+/* 801FD8AC 00000024  90 04 00 24 */	stw r0, 0x24(r4)	/* effective address: 804301AC */
 lbl_801FD8B0:
 /* 801FD8B0 00000000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801FD8B4 00000004  7C 08 03 A6 */	mtlr r0

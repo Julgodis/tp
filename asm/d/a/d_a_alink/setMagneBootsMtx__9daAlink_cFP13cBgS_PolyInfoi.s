@@ -29,7 +29,7 @@ lbl_800E2808:
 /* 800E2874 0000006C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E2878 00000000  40 81 00 58 */	ble lbl_800E28D0
 /* 800E287C 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E2880 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E2880 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E2884 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E2888 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E288C 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -136,8 +136,8 @@ lbl_800E29E8:
 /* 800E29E8 00000000  B3 9D 31 14 */	sth r28, 0x3114(r29)
 /* 800E29EC 00000004  48 00 03 60 */	b lbl_800E2D4C
 lbl_800E29F0:
-/* 800E29F0 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800E29F4 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800E29F0 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800E29F4 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800E29F8 00000008  38 63 00 68 */	addi r3, r3, 0x68
 /* 800E29FC 0000000C  4B FB B0 65 */	bl checkStageName__9daAlink_cFPCc
 /* 800E2A00 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -178,7 +178,7 @@ lbl_800E2A38:
 /* 800E2A88 0000002C  38 61 00 28 */	addi r3, r1, 0x28
 /* 800E2A8C 00000030  38 81 00 4C */	addi r4, r1, 0x4c
 /* 800E2A90 00000034  48 18 44 B9 */	bl normalizeZP__4cXyzFv
-/* 800E2A94 00000038  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800E2A94 00000038  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800E2A98 0000003C  EC 1F 07 F2 */	fmuls f0, f31, f31
 /* 800E2A9C 00000040  EC 21 00 28 */	fsubs f1, f1, f0
 /* 800E2AA0 00000044  C0 02 92 C0 */	lfs f0, lit_6108(r2)
@@ -236,7 +236,7 @@ lbl_800E2AF4:
 /* 800E2B64 00000070  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E2B68 00000000  40 81 00 58 */	ble lbl_800E2BC0
 /* 800E2B6C 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E2B70 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E2B70 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E2B74 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E2B78 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E2B7C 00000014  FC 00 00 32 */	fmul f0, f0, f0

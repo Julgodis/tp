@@ -8,7 +8,7 @@ lbl_8005AB00:
 /* 8005AB18 00000018  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8005AB1C 0000001C  38 A4 CA 54 */	addi r5, r4, g_env_light@l
 /* 8005AB20 00000020  38 85 0E 48 */	addi r4, r5, 0xe48
-/* 8005AB24 00000024  C0 25 0E 58 */	lfs f1, 0xe58(r5)
+/* 8005AB24 00000024  C0 25 0E 58 */	lfs f1, 0xe58(r5)	/* effective address: 8042D8AC */
 /* 8005AB28 00000028  48 20 C0 5D */	bl __ml__4cXyzCFf
 /* 8005AB2C 0000002C  C0 41 00 08 */	lfs f2, 8(r1)
 /* 8005AB30 00000030  D0 41 00 14 */	stfs f2, 0x14(r1)

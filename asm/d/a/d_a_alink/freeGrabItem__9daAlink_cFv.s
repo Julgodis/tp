@@ -11,7 +11,7 @@ lbl_800E4BD4:
 /* 800E4BF8 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E4BFC 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800E4C00 0000002C  3B A3 0F 38 */	addi r29, r3, 0xf38
-/* 800E4C04 00000030  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 800E4C04 00000030  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 800E4C08 00000034  28 00 00 00 */	cmplwi r0, 0
 /* 800E4C0C 00000038  40 82 00 10 */	bne lbl_800E4C1C
 /* 800E4C10 0000003C  A0 1F 06 04 */	lhz r0, 0x604(r31)
@@ -84,7 +84,7 @@ lbl_800E4C98:
 /* 800E4D08 00000070  41 82 00 24 */	beq lbl_800E4D2C
 /* 800E4D0C 00000074  38 61 00 08 */	addi r3, r1, 8
 /* 800E4D10 00000078  38 81 00 20 */	addi r4, r1, 0x20
-/* 800E4D14 0000007C  C0 22 93 30 */	lfs f1, d_a_d_a_alink__lit_7625(r2)
+/* 800E4D14 0000007C  C0 22 93 30 */	lfs f1, lit_7625(r2)
 /* 800E4D18 00000080  48 18 1E 6D */	bl __ml__4cXyzCFf
 /* 800E4D1C 00000084  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 800E4D20 00000088  38 81 00 08 */	addi r4, r1, 8

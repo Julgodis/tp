@@ -36,8 +36,8 @@ lbl_8025B1D0:
 /* 8025B258 00000088  88 C3 00 01 */	lbz r6, 1(r3)
 /* 8025B25C 0000008C  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
 /* 8025B260 00000090  38 63 61 94 */	addi r3, r3, mDemoArcName__20dStage_roomControl_c@l
-/* 8025B264 00000094  3C 80 80 3A */	lis r4, d_s_d_s_room__stringBase0@ha
-/* 8025B268 00000098  38 84 A3 88 */	addi r4, r4, d_s_d_s_room__stringBase0@l
+/* 8025B264 00000094  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8025B268 00000098  38 84 A3 88 */	addi r4, r4, stringBase0@l
 /* 8025B26C 0000009C  38 84 00 34 */	addi r4, r4, 0x34
 /* 8025B270 000000A0  7F C5 F3 78 */	mr r5, r30
 /* 8025B274 000000A4  4C C6 31 82 */	crclr 6
@@ -48,8 +48,8 @@ lbl_8025B1D0:
 /* 8025B288 000000B8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8025B28C 000000BC  3C 84 00 02 */	addis r4, r4, 2
 /* 8025B290 000000C0  38 A0 00 80 */	li r5, 0x80
-/* 8025B294 000000C4  3C C0 80 3A */	lis r6, d_s_d_s_room__stringBase0@ha
-/* 8025B298 000000C8  38 C6 A3 88 */	addi r6, r6, d_s_d_s_room__stringBase0@l
+/* 8025B294 000000C4  3C C0 80 3A */	lis r6, stringBase0@ha
+/* 8025B298 000000C8  38 C6 A3 88 */	addi r6, r6, stringBase0@l
 /* 8025B29C 000000CC  38 C6 00 06 */	addi r6, r6, 6
 /* 8025B2A0 000000D0  38 E0 00 00 */	li r7, 0
 /* 8025B2A4 000000D4  39 00 00 00 */	li r8, 0

@@ -9,8 +9,8 @@ lbl_80313188:
 /* 803131A4 0000001C  4B FF CD 1D */	bl loadPosMtxIndx__6J3DSysCFiUs
 /* 803131A8 00000020  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 803131AC 00000024  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 803131B0 00000028  80 63 00 40 */	lwz r3, 0x40(r3)
-/* 803131B4 0000002C  80 63 00 30 */	lwz r3, 0x30(r3)
+/* 803131B0 00000028  80 63 00 40 */	lwz r3, 0x40(r3)	/* effective address: 80434B08 */
+/* 803131B4 0000002C  80 63 00 30 */	lwz r3, 0x30(r3)	/* effective address: 80434AF8 */
 /* 803131B8 00000030  1C 9F 00 03 */	mulli r4, r31, 3
 /* 803131BC 00000034  4B FF C9 A5 */	bl J3DFifoLoadNrmMtxImm__FPA4_fUl
 /* 803131C0 00000038  83 E1 00 0C */	lwz r31, 0xc(r1)

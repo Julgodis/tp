@@ -49,12 +49,12 @@ extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
 SECTION_SDATA2 static f32 lit_689 = 1.0f;
 
 /* 804557DC-804557E0 0004+00 s=1 e=0 z=0  None .sdata2    @690                                                         */
-SECTION_SDATA2 static u8 JAISoundChild__lit_690[4] = {
+SECTION_SDATA2 static u8 lit_690[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804557E0-804557E8 0004+04 s=1 e=0 z=0  None .sdata2    @691                                                         */
-SECTION_SDATA2 static f32 JAISoundChild__lit_691[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_691[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

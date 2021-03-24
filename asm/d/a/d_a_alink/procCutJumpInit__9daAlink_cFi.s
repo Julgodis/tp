@@ -17,17 +17,17 @@ lbl_800D42FC:
 /* 800D4338 0000003C  41 82 00 20 */	beq lbl_800D4358
 /* 800D433C 00000040  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D4340 00000044  38 63 DB 40 */	addi r3, r3, m__21daAlinkHIO_cutJump_c0@l
-/* 800D4344 00000048  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800D4344 00000048  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038DB70 */
 /* 800D4348 0000004C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
-/* 800D434C 00000050  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800D434C 00000050  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038DB74 */
 /* 800D4350 00000054  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 800D4354 00000058  48 00 00 1C */	b lbl_800D4370
 lbl_800D4358:
 /* 800D4358 00000000  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D435C 00000004  38 63 DB 40 */	addi r3, r3, m__21daAlinkHIO_cutJump_c0@l
-/* 800D4360 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 800D4360 00000008  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038DB68 */
 /* 800D4364 0000000C  D0 1E 33 98 */	stfs f0, 0x3398(r30)
-/* 800D4368 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800D4368 00000010  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038DB6C */
 /* 800D436C 00000014  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 lbl_800D4370:
 /* 800D4370 00000000  7F C3 F3 78 */	mr r3, r30
@@ -42,8 +42,8 @@ lbl_800D4370:
 /* 800D4394 00000024  38 E0 00 03 */	li r7, 3
 /* 800D4398 00000028  3D 00 80 39 */	lis r8, m__17daAlinkHIO_cut_c0@ha
 /* 800D439C 0000002C  39 08 DE 8C */	addi r8, r8, m__17daAlinkHIO_cut_c0@l
-/* 800D43A0 00000030  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D43A4 00000034  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D43A0 00000030  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D43A4 00000034  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D43A8 00000038  4B FF D2 E1 */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800D43AC 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 800D43B0 00000040  38 80 00 0A */	li r4, 0xa
@@ -52,9 +52,9 @@ lbl_800D4370:
 /* 800D43BC 0000004C  4B FF DF 49 */	bl setSwordComboVoice__9daAlink_cFv
 /* 800D43C0 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D43C4 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D43C8 00000058  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800D43C8 00000058  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D43CC 0000005C  60 00 80 00 */	ori r0, r0, 0x8000
-/* 800D43D0 00000060  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800D43D0 00000060  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D43D4 00000064  38 00 00 02 */	li r0, 2
 /* 800D43D8 00000068  90 1E 31 98 */	stw r0, 0x3198(r30)
 /* 800D43DC 0000006C  38 60 00 01 */	li r3, 1

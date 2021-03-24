@@ -7,7 +7,7 @@ lbl_80224BAC:
 /* 80224BC0 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80224BC4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80224BC8 0000001C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80224BCC 00000020  88 1F 5E B7 */	lbz r0, 0x5eb7(r31)
+/* 80224BCC 00000020  88 1F 5E B7 */	lbz r0, 0x5eb7(r31)	/* effective address: 8040C077 */
 /* 80224BD0 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 80224BD4 00000028  41 82 00 F0 */	beq lbl_80224CC4
 /* 80224BD8 0000002C  80 7E 01 24 */	lwz r3, 0x124(r30)
@@ -29,7 +29,7 @@ lbl_80224C08:
 lbl_80224C10:
 /* 80224C10 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80224C14 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80224C18 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 80224C18 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 80224C1C 0000000C  38 00 00 00 */	li r0, 0
 /* 80224C20 00000010  88 64 05 6A */	lbz r3, 0x56a(r4)
 /* 80224C24 00000014  28 03 00 00 */	cmplwi r3, 0
@@ -93,7 +93,7 @@ lbl_80224CE4:
 /* 80224CFC 00000018  98 1E 01 E1 */	stb r0, 0x1e1(r30)
 /* 80224D00 0000001C  80 7E 01 0C */	lwz r3, 0x10c(r30)
 /* 80224D04 00000020  C0 23 06 04 */	lfs f1, 0x604(r3)
-/* 80224D08 00000024  C0 02 AF C8 */	lfs f0, d_meter_d_meter2__lit_4662(r2)
+/* 80224D08 00000024  C0 02 AF C8 */	lfs f0, lit_4662(r2)
 /* 80224D0C 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80224D10 00000000  40 81 00 38 */	ble lbl_80224D48
 /* 80224D14 00000004  38 00 00 28 */	li r0, 0x28
@@ -103,9 +103,9 @@ lbl_80224CE4:
 /* 80224D24 00000014  38 A0 00 00 */	li r5, 0
 /* 80224D28 00000018  38 C0 00 00 */	li r6, 0
 /* 80224D2C 0000001C  38 E0 00 00 */	li r7, 0
-/* 80224D30 00000020  C0 22 AF CC */	lfs f1, d_meter_d_meter2__lit_4663(r2)
+/* 80224D30 00000020  C0 22 AF CC */	lfs f1, lit_4663(r2)
 /* 80224D34 00000024  FC 40 08 90 */	fmr f2, f1
-/* 80224D38 00000028  C0 62 AF D0 */	lfs f3, d_meter_d_meter2__lit_4837(r2)
+/* 80224D38 00000028  C0 62 AF D0 */	lfs f3, lit_4837(r2)
 /* 80224D3C 0000002C  FC 80 18 90 */	fmr f4, f3
 /* 80224D40 00000030  39 00 00 00 */	li r8, 0
 /* 80224D44 00000034  48 08 6C 41 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

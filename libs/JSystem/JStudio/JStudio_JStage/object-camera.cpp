@@ -125,17 +125,16 @@ extern "C" void getJSG_targetPosition___Q214JStudio_JStage15TAdaptor_cameraFPCQ2
 extern "C" void func_8028C180(); // 1
 extern "C" void func_8028C4E4(); // 1
 extern "C" void func_8028C544(); // 1
-extern "C" extern u8 lit_1015[12];
 extern "C" extern u8 lit_1019[12];
-extern "C" extern u8 object_camera__lit_1020[12];
-extern "C" extern u8 object_camera__lit_1024[12];
-extern "C" extern u8 object_camera__lit_1025[12];
+extern "C" extern u8 lit_1020[12];
+extern "C" extern u8 lit_1024[12];
+extern "C" extern u8 lit_1025[12];
 extern "C" extern u8 lit_1029[12];
 extern "C" extern u8 lit_1030[12];
-extern "C" extern u8 object_camera__lit_1023[12];
+extern "C" extern u8 lit_1023[12];
 extern "C" extern u8 lit_1028[12];
 extern "C" extern u8 lit_1033[12];
-extern "C" extern u8 object_camera__lit_1034[12];
+extern "C" extern u8 lit_1034[12];
 
 // 
 // External References:
@@ -181,8 +180,8 @@ SECTION_DATA static u8 lit_1014[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x90, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C58B4-803C58C0 000C+00 s=0 e=0 z=0  None .data      @1015                                                        */
-SECTION_DATA u8 lit_1015[12] = {
+/* 803C58B4-803C58C0 000C+00 s=1 e=0 z=0  None .data      @1015                                                        */
+SECTION_DATA static u8 lit_1015[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x8C, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -192,17 +191,17 @@ SECTION_DATA u8 lit_1019[12] = {
 };
 
 /* 803C58CC-803C58D8 000C+00 s=0 e=0 z=0  None .data      @1020                                                        */
-SECTION_DATA u8 object_camera__lit_1020[12] = {
+SECTION_DATA u8 lit_1020[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x54, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C58D8-803C58E4 000C+00 s=0 e=0 z=0  None .data      @1024                                                        */
-SECTION_DATA u8 object_camera__lit_1024[12] = {
+SECTION_DATA u8 lit_1024[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C58E4-803C58F0 000C+00 s=0 e=0 z=0  None .data      @1025                                                        */
-SECTION_DATA u8 object_camera__lit_1025[12] = {
+SECTION_DATA u8 lit_1025[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -278,7 +277,7 @@ asm JStudio_JStage::TAdaptor_camera::~TAdaptor_camera() {
 static u8 lit_1018[12];
 
 /* 804312A4-804312B0 000C+00 s=0 e=0 z=0  None .bss       @1023                                                        */
-u8 object_camera__lit_1023[12];
+u8 lit_1023[12];
 
 /* 804312B0-804312BC 000C+00 s=0 e=0 z=0  None .bss       @1028                                                        */
 u8 lit_1028[12];
@@ -287,9 +286,9 @@ u8 lit_1028[12];
 u8 lit_1033[12];
 
 /* 804312C8-804312D4 000C+00 s=0 e=0 z=0  None .bss       @1034                                                        */
-u8 object_camera__lit_1034[12];
+u8 lit_1034[12];
 
-/* 804312D4-80431378 00A0+04 s=2 e=0 z=0  None .bss       saoVVOutput___Q214JStudio_JStage15TAdaptor_camera            */
+/* 804312D4-80431378 00A0+04 s=3 e=0 z=0  None .bss       saoVVOutput___Q214JStudio_JStage15TAdaptor_camera            */
 static u8 saoVVOutput___Q214JStudio_JStage15TAdaptor_camera[160 + 4 /* padding */];
 
 /* 8028B9D4-8028BA1C 0048+00 s=1 e=0 z=0  None .text      adaptor_do_prepare__Q214JStudio_JStage15TAdaptor_cameraFv    */

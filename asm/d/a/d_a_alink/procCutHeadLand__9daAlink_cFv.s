@@ -31,7 +31,7 @@ lbl_800D61F8:
 /* 800D61F8 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800D61FC 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutHead_c0@ha
 /* 800D6200 00000008  38 63 DD B8 */	addi r3, r3, m__21daAlinkHIO_cutHead_c0@l
-/* 800D6204 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800D6204 0000000C  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038DDF0 */
 /* 800D6208 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D620C 00000000  40 81 00 10 */	ble lbl_800D621C
 /* 800D6210 00000004  7F C3 F3 78 */	mr r3, r30

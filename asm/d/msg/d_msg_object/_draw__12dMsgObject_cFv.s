@@ -52,7 +52,7 @@ lbl_80233A74:
 /* 80233A7C 00000008  41 82 00 50 */	beq lbl_80233ACC
 /* 80233A80 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80233A84 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80233A88 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 80233A88 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 80233A8C 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 80233A90 0000001C  41 82 00 18 */	beq lbl_80233AA8
 /* 80233A94 00000020  38 63 5F 64 */	addi r3, r3, 0x5f64

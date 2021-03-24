@@ -233,7 +233,7 @@ asm void daItemBase_c::__CreateHeap() {
 
 /* ############################################################################################## */
 /* 804533A8-804533AC 0004+00 s=2 e=0 z=0  None .sdata2    @3881                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_itembase__lit_3881 = 1.0f;
+SECTION_SDATA2 static f32 lit_3881 = 1.0f;
 
 /* 8014475C-80144B94 0438+00 s=0 e=3 z=0  None .text      CreateItemHeap__12daItemBase_cFPCcsssssss                    */
 #pragma push
@@ -319,7 +319,7 @@ SECTION_SDATA2 static u8 lit_3952[4] = {
 };
 
 /* 804533B0-804533B8 0004+04 s=1 e=0 z=0  None .sdata2    @3953                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_itembase__lit_3953[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3953[1 + 1 /* padding */] = {
 	150.0f,
 	/* padding */
 	0.0f,
@@ -341,7 +341,7 @@ asm void daItemBase_c::setShadow() {
 
 /* ############################################################################################## */
 /* 804533C0-804533C8 0008+00 s=1 e=0 z=0  None .sdata2    @4041                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_itembase__lit_4041 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4041 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80144EDC-8014503C 0160+00 s=1 e=1 z=0  None .text      animEntry__12daItemBase_cFv                                  */
 #pragma push

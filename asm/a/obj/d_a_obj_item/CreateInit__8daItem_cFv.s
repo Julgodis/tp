@@ -7,7 +7,7 @@ lbl_8015B3D8:
 /* 8015B3EC 00000000  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 8015B3F0 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 8015B3F4 00000008  38 7F 07 64 */	addi r3, r31, 0x764
-/* 8015B3F8 0000000C  C0 22 9B 74 */	lfs f1, a_obj_d_a_obj_item__lit_4067(r2)
+/* 8015B3F8 0000000C  C0 22 9B 74 */	lfs f1, lit_4067(r2)
 /* 8015B3FC 00000010  FC 40 08 90 */	fmr f2, f1
 /* 8015B400 00000014  4B F1 AB 59 */	bl SetWall__12dBgS_AcchCirFff
 /* 8015B404 00000018  38 00 00 00 */	li r0, 0
@@ -29,7 +29,7 @@ lbl_8015B3D8:
 /* 8015B444 00000058  90 1F 05 B8 */	stw r0, 0x5b8(r31)
 /* 8015B448 0000005C  38 00 00 02 */	li r0, 2
 /* 8015B44C 00000060  98 1F 07 60 */	stb r0, 0x760(r31)
-/* 8015B450 00000064  C0 02 9B 78 */	lfs f0, a_obj_d_a_obj_item__lit_4068(r2)
+/* 8015B450 00000064  C0 02 9B 78 */	lfs f0, lit_4068(r2)
 /* 8015B454 00000068  D0 1F 06 5C */	stfs f0, 0x65c(r31)
 /* 8015B458 0000006C  38 7F 07 A4 */	addi r3, r31, 0x7a4
 /* 8015B45C 00000070  38 80 00 00 */	li r4, 0
@@ -54,7 +54,7 @@ lbl_8015B3D8:
 /* 8015B4A8 000000BC  54 00 10 3A */	slwi r0, r0, 2
 /* 8015B4AC 000000C0  7C 83 02 14 */	add r4, r3, r0
 /* 8015B4B0 000000C4  88 04 00 01 */	lbz r0, 1(r4)
-/* 8015B4B4 000000C8  C8 22 9B 88 */	lfd f1, a_obj_d_a_obj_item__lit_4072(r2)
+/* 8015B4B4 000000C8  C8 22 9B 88 */	lfd f1, lit_4072(r2)
 /* 8015B4B8 000000CC  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8015B4BC 000000D0  3C 60 43 30 */	lis r3, 0x4330
 /* 8015B4C0 000000D4  90 61 00 30 */	stw r3, 0x30(r1)
@@ -66,7 +66,7 @@ lbl_8015B3D8:
 /* 8015B4D8 000000EC  C8 01 00 38 */	lfd f0, 0x38(r1)
 /* 8015B4DC 000000F0  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8015B4E0 000000F4  C0 5F 04 EC */	lfs f2, 0x4ec(r31)
-/* 8015B4E4 000000F8  C0 02 9B 7C */	lfs f0, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015B4E4 000000F8  C0 02 9B 7C */	lfs f0, lit_4069(r2)
 /* 8015B4E8 00000110  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8015B4EC 00000000  40 81 00 0C */	ble lbl_8015B4F8
 /* 8015B4F0 00000004  EF FF 00 B2 */	fmuls f31, f31, f2
@@ -91,7 +91,7 @@ lbl_8015B4F8:
 /* 8015B538 00000040  48 00 09 29 */	bl procInitNormal__8daItem_cFv
 /* 8015B53C 00000044  7F E3 FB 78 */	mr r3, r31
 /* 8015B540 00000048  4B ED C5 35 */	bl show__12daItemBase_cFv
-/* 8015B544 0000004C  C0 02 9B 7C */	lfs f0, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015B544 0000004C  C0 02 9B 7C */	lfs f0, lit_4069(r2)
 /* 8015B548 00000050  D0 1F 09 30 */	stfs f0, 0x930(r31)
 /* 8015B54C 00000054  D0 1F 09 34 */	stfs f0, 0x934(r31)
 /* 8015B550 00000058  D0 1F 09 38 */	stfs f0, 0x938(r31)
@@ -150,7 +150,7 @@ lbl_8015B604:
 /* 8015B60C 00000008  7F E3 FB 78 */	mr r3, r31
 /* 8015B610 0000000C  4B FF FA B5 */	bl initBaseMtx__8daItem_cFv
 /* 8015B614 00000010  7F E3 FB 78 */	mr r3, r31
-/* 8015B618 00000014  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015B618 00000014  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015B61C 00000018  FC 40 08 90 */	fmr f2, f1
 /* 8015B620 0000001C  FC 60 08 90 */	fmr f3, f1
 /* 8015B624 00000020  FC 80 08 90 */	fmr f4, f1
@@ -174,7 +174,7 @@ lbl_8015B65C:
 /* 8015B664 00000008  40 82 00 54 */	bne lbl_8015B6B8
 /* 8015B668 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015B66C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015B670 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 8015B670 00000014  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 8015B674 00000018  38 1F 09 98 */	addi r0, r31, 0x998
 /* 8015B678 0000001C  90 01 00 08 */	stw r0, 8(r1)
 /* 8015B67C 00000020  38 00 FF FF */	li r0, -1
@@ -190,7 +190,7 @@ lbl_8015B65C:
 /* 8015B6A4 00000048  39 00 00 00 */	li r8, 0
 /* 8015B6A8 0000004C  39 20 00 00 */	li r9, 0
 /* 8015B6AC 00000050  39 40 00 FF */	li r10, 0xff
-/* 8015B6B0 00000054  C0 22 9B 7C */	lfs f1, a_obj_d_a_obj_item__lit_4069(r2)
+/* 8015B6B0 00000054  C0 22 9B 7C */	lfs f1, lit_4069(r2)
 /* 8015B6B4 00000058  4B EF 13 DD */	bl set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_8015B6B8:
 /* 8015B6B8 00000000  38 7F 09 78 */	addi r3, r31, 0x978
@@ -216,7 +216,7 @@ lbl_8015B6B8:
 /* 8015B708 00000050  54 00 05 29 */	rlwinm. r0, r0, 0, 0x14, 0x14
 /* 8015B70C 00000054  41 82 00 24 */	beq lbl_8015B730
 /* 8015B710 00000058  C0 5F 07 58 */	lfs f2, 0x758(r31)
-/* 8015B714 0000005C  C0 22 9B 80 */	lfs f1, a_obj_d_a_obj_item__lit_4070(r2)
+/* 8015B714 0000005C  C0 22 9B 80 */	lfs f1, lit_4070(r2)
 /* 8015B718 00000060  C0 1F 04 AC */	lfs f0, 0x4ac(r31)
 /* 8015B71C 00000064  EC 01 00 2A */	fadds f0, f1, f0
 /* 8015B720 00000068  FC 02 00 40 */	fcmpo cr0, f2, f0

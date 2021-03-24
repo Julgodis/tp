@@ -1,7 +1,7 @@
 lbl_8015F660:
 /* 8015F660 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F664 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F668 00000008  80 03 0D D0 */	lwz r0, 0xdd0(r3)
+/* 8015F668 00000008  80 03 0D D0 */	lwz r0, 0xdd0(r3)	/* effective address: 80406F90 */
 /* 8015F66C 0000000C  54 00 07 3E */	clrlwi r0, r0, 0x1c
 /* 8015F670 00000010  28 00 00 04 */	cmplwi r0, 4
 /* 8015F674 00000014  41 82 00 14 */	beq lbl_8015F688

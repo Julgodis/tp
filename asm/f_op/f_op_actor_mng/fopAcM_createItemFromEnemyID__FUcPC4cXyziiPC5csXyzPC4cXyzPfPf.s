@@ -47,8 +47,8 @@ lbl_8001BEB0:
 lbl_8001BEB8:
 /* 8001BEB8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001BEBC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001BEC0 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)
-/* 8001BEC4 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 8001BEC0 00000008  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8001BEC4 0000000C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 8001BEC8 00000010  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8001BECC 00000014  7D 89 03 A6 */	mtctr r12
 /* 8001BED0 00000018  4E 80 04 21 */	bctrl 
@@ -61,7 +61,7 @@ lbl_8001BEB8:
 /* 8001BEEC 00000034  7E E5 BB 78 */	mr r5, r23
 /* 8001BEF0 00000038  38 C0 00 00 */	li r6, 0
 /* 8001BEF4 0000003C  38 E0 00 00 */	li r7, 0
-/* 8001BEF8 00000040  C0 22 82 04 */	lfs f1, f_op_f_op_actor_mng__lit_4645(r2)
+/* 8001BEF8 00000040  C0 22 82 04 */	lfs f1, lit_4645(r2)
 /* 8001BEFC 00000044  FC 40 08 90 */	fmr f2, f1
 /* 8001BF00 00000048  48 00 02 B9 */	bl fopAcM_createItemForDirectGet__FPC4cXyziiPC5csXyzPC4cXyzff
 /* 8001BF04 0000004C  28 03 00 00 */	cmplwi r3, 0

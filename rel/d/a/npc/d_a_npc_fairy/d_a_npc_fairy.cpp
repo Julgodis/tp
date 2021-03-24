@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct J3DJoint {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 809B88E8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Fairy_c {
@@ -67,6 +67,7 @@ struct daNpc_Fairy_c {
 	/* 809B3C64 */ void setAttnPos();
 	/* 809B3EA0 */ void setCollision();
 	/* 809B3FD8 */ void drawDbgInfo();
+	/* 809B3FE0 */ void setAction(int (daNpc_Fairy_c::*)(int), int);
 	/* 809B4090 */ void wait(int);
 	/* 809B4360 */ void talk(int);
 	/* 809B4450 */ void AppearDemoCall();
@@ -303,7 +304,7 @@ extern "C" void afterMoved__13daNpc_Fairy_cFv(); // 1
 extern "C" void setAttnPos__13daNpc_Fairy_cFv(); // 1
 extern "C" void setCollision__13daNpc_Fairy_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Fairy_cFv(); // 1
-extern "C" static void setAction__13daNpc_Fairy_cFM13daNpc_Fairy_cFPCvPvi_ii(); // 1
+extern "C" void setAction__13daNpc_Fairy_cFM13daNpc_Fairy_cFPCvPvi_ii(); // 1
 extern "C" void wait__13daNpc_Fairy_cFi(); // 1
 extern "C" void talk__13daNpc_Fairy_cFi(); // 1
 extern "C" void AppearDemoCall__13daNpc_Fairy_cFv(); // 1
@@ -1105,7 +1106,7 @@ asm void daNpc_Fairy_c::drawDbgInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Fairy_cFM13daNpc_Fairy_cFPCvPvi_ii() {
+asm void daNpc_Fairy_c::setAction(int (daNpc_Fairy_c::*)(int), int param_1) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fairy/d_a_npc_fairy/setAction__13daNpc_Fairy_cFM13daNpc_Fairy_cFPCvPvi_ii.s"
 }

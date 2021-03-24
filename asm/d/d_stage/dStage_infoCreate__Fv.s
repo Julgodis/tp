@@ -4,8 +4,8 @@ lbl_80026CDC:
 /* 80026CE4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80026CE8 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80026CEC 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 80026CF0 00000014  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026CF4 00000018  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026CF0 00000014  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026CF4 00000018  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026CF8 0000001C  38 63 01 19 */	addi r3, r3, 0x119
 /* 80026CFC 00000020  48 00 87 39 */	bl dComIfG_getStageRes__FPCc
 /* 80026D00 00000024  7C 7E 1B 78 */	mr r30, r3

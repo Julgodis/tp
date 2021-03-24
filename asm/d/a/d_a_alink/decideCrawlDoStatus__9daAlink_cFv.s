@@ -24,9 +24,9 @@ lbl_800F88F8:
 lbl_800F8950:
 /* 800F8950 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F8954 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F8958 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800F8958 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F895C 0000000C  54 00 04 E2 */	rlwinm r0, r0, 0, 0x13, 0x11
-/* 800F8960 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800F8960 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F8964 00000014  48 00 00 64 */	b lbl_800F89C8
 lbl_800F8968:
 /* 800F8968 00000000  48 08 8C D9 */	bl dCam_getBody__Fv

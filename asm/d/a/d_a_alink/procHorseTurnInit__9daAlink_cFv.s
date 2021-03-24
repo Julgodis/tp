@@ -15,7 +15,7 @@ lbl_800F0C6C:
 /* 800F0CA0 00000034  41 82 00 14 */	beq lbl_800F0CB4
 /* 800F0CA4 00000038  7F E3 FB 78 */	mr r3, r31
 /* 800F0CA8 0000003C  38 80 00 02 */	li r4, 2
-/* 800F0CAC 00000040  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F0CAC 00000040  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F0CB0 00000044  4B FB CE 3D */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F0CB4:
 /* 800F0CB4 00000000  7F E3 FB 78 */	mr r3, r31

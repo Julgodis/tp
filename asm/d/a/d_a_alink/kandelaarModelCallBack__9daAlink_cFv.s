@@ -9,11 +9,11 @@ lbl_801108EC:
 /* 80110908 00000008  7C 7F 1B 78 */	mr r31, r3
 /* 8011090C 0000000C  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 80110910 00000010  3B C3 4B E4 */	addi r30, r3, mCurrentMtx__6J3DSys@l
-/* 80110914 00000014  C0 1E 00 0C */	lfs f0, 0xc(r30)
+/* 80110914 00000014  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 80434BF0 */
 /* 80110918 00000018  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 8011091C 0000001C  C0 1E 00 1C */	lfs f0, 0x1c(r30)
+/* 8011091C 0000001C  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 80434C00 */
 /* 80110920 00000020  D0 01 00 54 */	stfs f0, 0x54(r1)
-/* 80110924 00000024  C0 1E 00 2C */	lfs f0, 0x2c(r30)
+/* 80110924 00000024  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 80434C10 */
 /* 80110928 00000028  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8011092C 0000002C  C0 1F 36 24 */	lfs f0, 0x3624(r31)
 /* 80110930 00000030  D0 1F 36 30 */	stfs f0, 0x3630(r31)
@@ -148,11 +148,11 @@ lbl_80110AC0:
 /* 80110B18 00000058  40 82 00 B0 */	bne lbl_80110BC8
 /* 80110B1C 0000005C  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 80110B20 00000060  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 80110B24 00000064  C0 03 00 20 */	lfs f0, 0x20(r3)
+/* 80110B24 00000064  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80434C04 */
 /* 80110B28 00000068  EC 40 00 32 */	fmuls f2, f0, f0
-/* 80110B2C 0000006C  C0 03 00 00 */	lfs f0, 0(r3)
+/* 80110B2C 0000006C  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80434BE4 */
 /* 80110B30 00000070  EC 20 00 32 */	fmuls f1, f0, f0
-/* 80110B34 00000074  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 80110B34 00000074  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80434BF4 */
 /* 80110B38 00000078  EC 00 00 32 */	fmuls f0, f0, f0
 /* 80110B3C 0000007C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80110B40 00000080  EF E2 00 2A */	fadds f31, f2, f0

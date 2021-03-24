@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct cCcD_Obj {
+struct J3DModel {
 };
 
 struct dBgW {
 };
 
-struct J3DModel {
+struct cCcD_Obj {
 };
 
 struct fopAc_ac_c {

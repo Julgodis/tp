@@ -6,7 +6,7 @@ lbl_800DDF2C:
 /* 800DDF3C 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800DDF40 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800DDF44 00000018  3B FE 1F D0 */	addi r31, r30, 0x1fd0
-/* 800DDF48 0000001C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DDF48 0000001C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DDF4C 00000020  4B FF F0 BD */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800DDF50 00000024  80 1E 05 88 */	lwz r0, 0x588(r30)
 /* 800DDF54 00000028  64 00 08 00 */	oris r0, r0, 0x800
@@ -33,7 +33,7 @@ lbl_800DDFA0:
 /* 800DDFA0 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800DDFA4 00000004  3C 60 80 39 */	lis r3, m__19daAlinkHIO_guard_c0@ha
 /* 800DDFA8 00000008  38 63 DF 9C */	addi r3, r3, m__19daAlinkHIO_guard_c0@l
-/* 800DDFAC 0000000C  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800DDFAC 0000000C  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038DFE8 */
 /* 800DDFB0 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DDFB4 00000000  40 81 00 38 */	ble lbl_800DDFEC
 /* 800DDFB8 00000004  7F C3 F3 78 */	mr r3, r30

@@ -21,8 +21,8 @@ lbl_801D4E80:
 /* 801D4ECC 00000018  7C DD 33 78 */	mr r29, r6
 /* 801D4ED0 0000001C  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4ED4 00000020  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4ED8 00000024  C3 63 00 E0 */	lfs f27, 0xe0(r3)
-/* 801D4EDC 00000028  C0 03 00 E4 */	lfs f0, 0xe4(r3)
+/* 801D4ED8 00000024  C3 63 00 E0 */	lfs f27, 0xe0(r3)	/* effective address: 8042FD40 */
+/* 801D4EDC 00000028  C0 03 00 E4 */	lfs f0, 0xe4(r3)	/* effective address: 8042FD44 */
 /* 801D4EE0 00000060  FC 1B 00 40 */	fcmpo cr0, f27, f0
 /* 801D4EE4 00000000  40 80 00 0C */	bge lbl_801D4EF0
 /* 801D4EE8 00000004  FF C0 D8 90 */	fmr f30, f27
@@ -80,14 +80,14 @@ lbl_801D4F04:
 /* 801D4FA8 00000000  40 80 00 14 */	bge lbl_801D4FBC
 /* 801D4FAC 00000004  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4FB0 00000008  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4FB4 0000000C  C0 23 00 D4 */	lfs f1, 0xd4(r3)
+/* 801D4FB4 0000000C  C0 23 00 D4 */	lfs f1, 0xd4(r3)	/* effective address: 8042FD34 */
 /* 801D4FB8 00000010  48 00 00 10 */	b lbl_801D4FC8
 lbl_801D4FBC:
 /* 801D4FBC 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D4FC0 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D4FC4 00000008  C0 23 00 C4 */	lfs f1, 0xc4(r3)
+/* 801D4FC4 00000008  C0 23 00 C4 */	lfs f1, 0xc4(r3)	/* effective address: 8042FD24 */
 lbl_801D4FC8:
-/* 801D4FC8 00000000  C0 02 A8 00 */	lfs f0, d_menu_d_menu_fmap2D__lit_4260(r2)
+/* 801D4FC8 00000000  C0 02 A8 00 */	lfs f0, lit_4260(r2)
 /* 801D4FCC 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801D4FD0 00000008  EC 40 00 B2 */	fmuls f2, f0, f2
 /* 801D4FD4 0000000C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -131,7 +131,7 @@ lbl_801D5018:
 /* 801D5064 0000004C  4B FF BF 19 */	bl calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf
 /* 801D5068 00000050  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D506C 00000054  38 83 FC 60 */	addi r4, r3, g_fmapHIO@l
-/* 801D5070 00000058  88 04 03 06 */	lbz r0, 0x306(r4)
+/* 801D5070 00000058  88 04 03 06 */	lbz r0, 0x306(r4)	/* effective address: 8042FF66 */
 /* 801D5074 0000005C  28 00 00 00 */	cmplwi r0, 0
 /* 801D5078 00000060  41 82 00 44 */	beq lbl_801D50BC
 /* 801D507C 00000064  88 1E 12 27 */	lbz r0, 0x1227(r30)

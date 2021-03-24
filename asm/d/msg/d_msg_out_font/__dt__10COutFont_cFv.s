@@ -57,7 +57,7 @@ lbl_80225E18:
 lbl_80225E28:
 /* 80225E28 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80225E2C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80225E30 00000008  80 03 5E BC */	lwz r0, 0x5ebc(r3)
+/* 80225E30 00000008  80 03 5E BC */	lwz r0, 0x5ebc(r3)	/* effective address: 8040C07C */
 /* 80225E34 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80225E38 00000010  40 82 00 18 */	bne lbl_80225E50
 /* 80225E3C 00000014  80 63 5C D0 */	lwz r3, 0x5cd0(r3)

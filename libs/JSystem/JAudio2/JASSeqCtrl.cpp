@@ -204,7 +204,7 @@ asm void JASSeqCtrl::timerProcess() {
 
 /* ############################################################################################## */
 /* 80431B18-80431B28 000C+04 s=1 e=0 z=0  None .bss       @433                                                         */
-static u8 JASSeqCtrl__lit_433[12 + 4 /* padding */];
+static u8 lit_433[12 + 4 /* padding */];
 
 /* 80293C6C-80293CAC 0040+00 s=0 e=1 z=0  None .text      __sinit_JASSeqCtrl_cpp                                       */
 #pragma push

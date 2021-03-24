@@ -11,21 +11,6 @@
 // Types:
 // 
 
-struct J3DFrameCtrl {
-	/* 80A3C62C */ ~J3DFrameCtrl();
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct cXyz {
-	/* 80A3B760 */ ~cXyz();
-	/* 80A3C45C */ cXyz();
-};
-
-struct _GXColorS10 {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -33,28 +18,16 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_evtData_c {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DJoint {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
 struct dCcD_GObjInf {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransform {
+struct J3DJoint {
 };
 
 struct fopAc_ac_c {
@@ -63,7 +36,34 @@ struct fopAc_ac_c {
 struct J3DModelData {
 };
 
-struct J3DAnmTexPattern {
+struct J3DModel {
+};
+
+struct _GXColorS10 {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DFrameCtrl {
+	/* 80A3C62C */ ~J3DFrameCtrl();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
+struct cXyz {
+	/* 80A3B760 */ ~cXyz();
+	/* 80A3C45C */ cXyz();
+};
+
+struct J3DAnmTransform {
 };
 
 struct daNpc_Kn_c {
@@ -120,6 +120,8 @@ struct daNpc_Kn_c {
 	/* 80A2D4A0 */ void teach05_selectAction();
 	/* 80A2D4F8 */ void teach06_selectAction();
 	/* 80A2D600 */ void teach07_selectAction();
+	/* 80A2D708 */ void chkAction(int (daNpc_Kn_c::*)(void*));
+	/* 80A2D734 */ void setAction(int (daNpc_Kn_c::*)(void*));
 	/* 80A2D7DC */ void wait(void*);
 	/* 80A2D9C4 */ void talk(void*);
 	/* 80A2DB94 */ void test(void*);
@@ -379,8 +381,8 @@ extern "C" void teach04_selectAction__10daNpc_Kn_cFv(); // 1
 extern "C" void teach05_selectAction__10daNpc_Kn_cFv(); // 1
 extern "C" void teach06_selectAction__10daNpc_Kn_cFv(); // 1
 extern "C" void teach07_selectAction__10daNpc_Kn_cFv(); // 1
-extern "C" static void chkAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i(); // 1
+extern "C" void setAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i(); // 1
 extern "C" void wait__10daNpc_Kn_cFPv(); // 1
 extern "C" void talk__10daNpc_Kn_cFPv(); // 1
 extern "C" void test__10daNpc_Kn_cFPv(); // 1
@@ -1385,7 +1387,7 @@ asm void daNpc_Kn_c::teach07_selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i() {
+asm void daNpc_Kn_c::chkAction(int (daNpc_Kn_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kn/d_a_npc_kn/chkAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i.s"
 }
@@ -1396,7 +1398,7 @@ extern "C" asm static void chkAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i() {
+asm void daNpc_Kn_c::setAction(int (daNpc_Kn_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kn/d_a_npc_kn/setAction__10daNpc_Kn_cFM10daNpc_Kn_cFPCvPvPv_i.s"
 }

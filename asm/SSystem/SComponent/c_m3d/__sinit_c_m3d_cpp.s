@@ -1,5 +1,5 @@
 lbl_8026EC3C:
-/* 8026EC3C 00000000  C0 22 B7 CC */	lfs f1, c_m3d__lit_5508(r2)
+/* 8026EC3C 00000000  C0 22 B7 CC */	lfs f1, lit_5508(r2)
 /* 8026EC40 00000004  3C 60 80 45 */	lis r3, __float_epsilon@ha
 /* 8026EC44 00000008  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 8026EC48 0000000C  EC 01 00 32 */	fmuls f0, f1, f0

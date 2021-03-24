@@ -9,7 +9,7 @@ lbl_8011130C:
 /* 80111328 0000001C  40 82 00 74 */	bne lbl_8011139C
 /* 8011132C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111330 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80111334 00000028  A0 03 00 08 */	lhz r0, 8(r3)
+/* 80111334 00000028  A0 03 00 08 */	lhz r0, 8(r3)	/* effective address: 804061C8 */
 /* 80111338 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 8011133C 00000030  41 82 00 34 */	beq lbl_80111370
 /* 80111340 00000034  3C 60 00 02 */	lis r3, 0x0002 /* 0x00020059@ha */
@@ -52,13 +52,13 @@ lbl_8011139C:
 /* 801113CC 00000030  40 82 00 28 */	bne lbl_801113F4
 /* 801113D0 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801113D4 00000038  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 801113D8 0000003C  80 85 5D D4 */	lwz r4, 0x5dd4(r5)
+/* 801113D8 0000003C  80 85 5D D4 */	lwz r4, 0x5dd4(r5)	/* effective address: 8040BF94 */
 /* 801113DC 00000040  3C 60 80 39 */	lis r3, m__23daAlinkHIO_kandelaar_c0@ha
 /* 801113E0 00000044  38 63 E7 7C */	addi r3, r3, m__23daAlinkHIO_kandelaar_c0@l
-/* 801113E4 00000048  A8 03 00 4A */	lha r0, 0x4a(r3)
+/* 801113E4 00000048  A8 03 00 4A */	lha r0, 0x4a(r3)	/* effective address: 8038E7C6 */
 /* 801113E8 0000004C  7C 00 00 D0 */	neg r0, r0
 /* 801113EC 00000050  7C 04 02 14 */	add r0, r4, r0
-/* 801113F0 00000054  90 05 5D D4 */	stw r0, 0x5dd4(r5)
+/* 801113F0 00000054  90 05 5D D4 */	stw r0, 0x5dd4(r5)	/* effective address: 8040BF94 */
 lbl_801113F4:
 /* 801113F4 00000000  80 1F 0F B8 */	lwz r0, 0xfb8(r31)
 /* 801113F8 00000004  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e

@@ -21,7 +21,7 @@ lbl_800DB0A8:
 /* 800DB0A8 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800DB0AC 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800DB0B0 00000008  38 63 E4 54 */	addi r3, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800DB0B4 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800DB0B4 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E478 */
 /* 800DB0B8 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800DB0BC 00000000  40 81 00 68 */	ble lbl_800DB124
 /* 800DB0C0 00000004  80 1E 31 A0 */	lwz r0, 0x31a0(r30)

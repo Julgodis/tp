@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct cXyz {
+struct dBgS_Acch {
 };
 
 struct csXyz {
@@ -20,7 +20,7 @@ struct csXyz {
 struct dKy_tevstr_c {
 };
 
-struct dBgS_Acch {
+struct cXyz {
 };
 
 struct dPaPo_c {
@@ -97,25 +97,7 @@ extern "C" void getBackLeftEffType__8dPaPoF_cCFi(); // 1
 extern "C" void getBackRightEmitter__8dPaPoF_cFii(); // 1
 extern "C" void getBackLeftEmitter__8dPaPoF_cFii(); // 1
 extern "C" void __sinit_d_particle_copoly_cpp(); // 1
-extern "C" extern void* d_particle_d_particle_copoly__lit_3816[3];
-extern "C" extern void* lit_3817[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3818[3];
-extern "C" extern u8 m_typeTwoData__8dPaPoT_c[36];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3826[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3827[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3828[3];
-extern "C" extern u8 m_emitterTwoData__8dPaPoT_c[36];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3841[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3842[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3843[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3844[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3845[3];
 extern "C" extern u8 m_typeFourData__8dPaPoF_c[60];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3850[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3851[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3852[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3853[3];
-extern "C" extern void* d_particle_d_particle_copoly__lit_3854[3];
 extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
 
 // 
@@ -158,7 +140,7 @@ asm void dPaPo_c::init(dBgS_Acch* param_0, f32 param_1, f32 param_2) {
 
 /* ############################################################################################## */
 /* 80451FF8-80452000 0004+04 s=1 e=0 z=0  None .sdata2    @3672                                                        */
-SECTION_SDATA2 static u8 d_particle_d_particle_copoly__lit_3672[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3672[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -364,7 +346,152 @@ asm void dPaPoF_c::getBackLeftEmitter(int param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 803A85F8-803A8604 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_particle_d_particle_copoly__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A8604-803A8610 000C+00 s=1 e=0 z=0  None .data      @3816                                                        */
+SECTION_DATA static void* lit_3816[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getCenterEffType__7dPaPo_cCFi,
+};
+
+/* 803A8610-803A861C 000C+00 s=1 e=0 z=0  None .data      @3817                                                        */
+SECTION_DATA static void* lit_3817[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getLeftEffType__8dPaPoT_cCFi,
+};
+
+/* 803A861C-803A8628 000C+00 s=1 e=0 z=0  None .data      @3818                                                        */
+SECTION_DATA static void* lit_3818[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getRightEffType__8dPaPoT_cCFi,
+};
+
+/* 803A8628-803A864C 0024+00 s=1 e=0 z=0  None .data      m_typeTwoData__8dPaPoT_c                                     */
+SECTION_DATA static u8 m_typeTwoData__8dPaPoT_c[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A864C-803A8658 000C+00 s=1 e=0 z=0  None .data      @3826                                                        */
+SECTION_DATA static void* lit_3826[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getCenterEmitter__7dPaPo_cFii,
+};
+
+/* 803A8658-803A8664 000C+00 s=1 e=0 z=0  None .data      @3827                                                        */
+SECTION_DATA static void* lit_3827[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getLeftEmitter__8dPaPoT_cFii,
+};
+
+/* 803A8664-803A8670 000C+00 s=1 e=0 z=0  None .data      @3828                                                        */
+SECTION_DATA static void* lit_3828[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getRightEmitter__8dPaPoT_cFii,
+};
+
+/* 803A8670-803A8694 0024+00 s=1 e=0 z=0  None .data      m_emitterTwoData__8dPaPoT_c                                  */
+SECTION_DATA static u8 m_emitterTwoData__8dPaPoT_c[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A8694-803A86A0 000C+00 s=1 e=0 z=0  None .data      @3841                                                        */
+SECTION_DATA static void* lit_3841[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getCenterEffType__7dPaPo_cCFi,
+};
+
+/* 803A86A0-803A86AC 000C+00 s=1 e=0 z=0  None .data      @3842                                                        */
+SECTION_DATA static void* lit_3842[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getLeftEffType__8dPaPoT_cCFi,
+};
+
+/* 803A86AC-803A86B8 000C+00 s=1 e=0 z=0  None .data      @3843                                                        */
+SECTION_DATA static void* lit_3843[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getRightEffType__8dPaPoT_cCFi,
+};
+
+/* 803A86B8-803A86C4 000C+00 s=1 e=0 z=0  None .data      @3844                                                        */
+SECTION_DATA static void* lit_3844[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getBackLeftEffType__8dPaPoF_cCFi,
+};
+
+/* 803A86C4-803A86D0 000C+00 s=1 e=0 z=0  None .data      @3845                                                        */
+SECTION_DATA static void* lit_3845[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getBackRightEffType__8dPaPoF_cCFi,
+};
+
+/* 803A86D0-803A870C 003C+00 s=1 e=5 z=0  None .data      m_typeFourData__8dPaPoF_c                                    */
+SECTION_DATA u8 m_typeFourData__8dPaPoF_c[60] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 803A870C-803A8718 000C+00 s=1 e=0 z=0  None .data      @3850                                                        */
+SECTION_DATA static void* lit_3850[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getCenterEmitter__7dPaPo_cFii,
+};
+
+/* 803A8718-803A8724 000C+00 s=1 e=0 z=0  None .data      @3851                                                        */
+SECTION_DATA static void* lit_3851[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getLeftEmitter__8dPaPoT_cFii,
+};
+
+/* 803A8724-803A8730 000C+00 s=1 e=0 z=0  None .data      @3852                                                        */
+SECTION_DATA static void* lit_3852[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getRightEmitter__8dPaPoT_cFii,
+};
+
+/* 803A8730-803A873C 000C+00 s=1 e=0 z=0  None .data      @3853                                                        */
+SECTION_DATA static void* lit_3853[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getBackLeftEmitter__8dPaPoF_cFii,
+};
+
+/* 803A873C-803A8748 000C+00 s=1 e=0 z=0  None .data      @3854                                                        */
+SECTION_DATA static void* lit_3854[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)getBackRightEmitter__8dPaPoF_cFii,
+};
+
+/* 803A8748-803A87A0 003C+1C s=1 e=5 z=0  None .data      m_emitterFourData__8dPaPoF_c                                 */
+SECTION_DATA u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -378,150 +505,4 @@ extern "C" asm void __sinit_d_particle_copoly_cpp() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 803A8604-803A8610 000C+00 s=0 e=0 z=0  None .data      @3816                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3816[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getCenterEffType__7dPaPo_cCFi,
-};
-
-/* 803A8610-803A861C 000C+00 s=0 e=0 z=0  None .data      @3817                                                        */
-SECTION_DATA void* lit_3817[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getLeftEffType__8dPaPoT_cCFi,
-};
-
-/* 803A861C-803A8628 000C+00 s=0 e=0 z=0  None .data      @3818                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3818[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getRightEffType__8dPaPoT_cCFi,
-};
-
-/* 803A8628-803A864C 0024+00 s=0 e=0 z=0  None .data      m_typeTwoData__8dPaPoT_c                                     */
-SECTION_DATA u8 m_typeTwoData__8dPaPoT_c[36] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 803A864C-803A8658 000C+00 s=0 e=0 z=0  None .data      @3826                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3826[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getCenterEmitter__7dPaPo_cFii,
-};
-
-/* 803A8658-803A8664 000C+00 s=0 e=0 z=0  None .data      @3827                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3827[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getLeftEmitter__8dPaPoT_cFii,
-};
-
-/* 803A8664-803A8670 000C+00 s=0 e=0 z=0  None .data      @3828                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3828[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getRightEmitter__8dPaPoT_cFii,
-};
-
-/* 803A8670-803A8694 0024+00 s=0 e=0 z=0  None .data      m_emitterTwoData__8dPaPoT_c                                  */
-SECTION_DATA u8 m_emitterTwoData__8dPaPoT_c[36] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 803A8694-803A86A0 000C+00 s=0 e=0 z=0  None .data      @3841                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3841[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getCenterEffType__7dPaPo_cCFi,
-};
-
-/* 803A86A0-803A86AC 000C+00 s=0 e=0 z=0  None .data      @3842                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3842[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getLeftEffType__8dPaPoT_cCFi,
-};
-
-/* 803A86AC-803A86B8 000C+00 s=0 e=0 z=0  None .data      @3843                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3843[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getRightEffType__8dPaPoT_cCFi,
-};
-
-/* 803A86B8-803A86C4 000C+00 s=0 e=0 z=0  None .data      @3844                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3844[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getBackLeftEffType__8dPaPoF_cCFi,
-};
-
-/* 803A86C4-803A86D0 000C+00 s=0 e=0 z=0  None .data      @3845                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3845[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getBackRightEffType__8dPaPoF_cCFi,
-};
-
-/* 803A86D0-803A870C 003C+00 s=0 e=5 z=0  None .data      m_typeFourData__8dPaPoF_c                                    */
-SECTION_DATA u8 m_typeFourData__8dPaPoF_c[60] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 803A870C-803A8718 000C+00 s=0 e=0 z=0  None .data      @3850                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3850[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getCenterEmitter__7dPaPo_cFii,
-};
-
-/* 803A8718-803A8724 000C+00 s=0 e=0 z=0  None .data      @3851                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3851[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getLeftEmitter__8dPaPoT_cFii,
-};
-
-/* 803A8724-803A8730 000C+00 s=0 e=0 z=0  None .data      @3852                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3852[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getRightEmitter__8dPaPoT_cFii,
-};
-
-/* 803A8730-803A873C 000C+00 s=0 e=0 z=0  None .data      @3853                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3853[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getBackLeftEmitter__8dPaPoF_cFii,
-};
-
-/* 803A873C-803A8748 000C+00 s=0 e=0 z=0  None .data      @3854                                                        */
-SECTION_DATA void* d_particle_d_particle_copoly__lit_3854[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)getBackRightEmitter__8dPaPoF_cFii,
-};
-
-/* 803A8748-803A87A0 003C+1C s=0 e=5 z=0  None .data      m_emitterFourData__8dPaPoF_c                                 */
-SECTION_DATA u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 

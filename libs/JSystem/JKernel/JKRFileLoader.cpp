@@ -61,7 +61,7 @@ extern "C" void findVolume__13JKRFileLoaderFPPCc(); // 1
 extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc(); // 1
 extern "C" void __sinit_JKRFileLoader_cpp(); // 1
 extern "C" void func_802D45E4(); // 1
-extern "C" extern char const* const JKRFileLoader__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
@@ -161,7 +161,7 @@ asm void JKRFileLoader::getGlbResource(char const* param_0) {
 
 /* ############################################################################################## */
 /* 80434348-80434354 000C+00 s=1 e=0 z=0  None .bss       @2182                                                        */
-static u8 JKRFileLoader__lit_2182[12];
+static u8 lit_2182[12];
 
 /* 80434354-80434360 000C+00 s=5 e=14 z=0  None .bss       sVolumeList__13JKRFileLoader                                 */
 u8 sVolumeList__13JKRFileLoader[12];

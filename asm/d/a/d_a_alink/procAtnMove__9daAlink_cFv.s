@@ -17,7 +17,7 @@ lbl_800C3868:
 /* 800C38A4 0000003C  40 82 00 10 */	bne lbl_800C38B4
 lbl_800C38A8:
 /* 800C38A8 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800C38AC 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C38AC 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C38B0 00000008  4B FE B1 C1 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 lbl_800C38B4:
 /* 800C38B4 00000000  38 60 00 01 */	li r3, 1

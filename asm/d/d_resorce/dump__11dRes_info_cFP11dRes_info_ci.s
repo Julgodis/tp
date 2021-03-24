@@ -6,15 +6,15 @@ lbl_8003BE38:
 /* 8003BE48 00000010  48 32 63 85 */	bl _savegpr_25
 /* 8003BE4C 00000014  7C 7C 1B 78 */	mr r28, r3
 /* 8003BE50 00000018  7C 9D 23 78 */	mr r29, r4
-/* 8003BE54 0000001C  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003BE58 00000020  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003BE54 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003BE58 00000020  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003BE5C 00000024  38 63 01 80 */	addi r3, r3, 0x180
 /* 8003BE60 00000028  7F 84 E3 78 */	mr r4, r28
 /* 8003BE64 0000002C  7F A5 EB 78 */	mr r5, r29
 /* 8003BE68 00000030  4C C6 31 82 */	crclr 6
 /* 8003BE6C 00000034  48 2A C7 5D */	bl JUTReportConsole_f
-/* 8003BE70 00000038  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003BE74 0000003C  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003BE70 00000038  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003BE74 0000003C  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003BE78 00000040  38 63 01 9B */	addi r3, r3, 0x19b
 /* 8003BE7C 00000044  4C C6 31 82 */	crclr 6
 /* 8003BE80 00000048  48 2A C7 49 */	bl JUTReportConsole_f
@@ -35,18 +35,18 @@ lbl_8003BE94:
 /* 8003BEB8 00000024  38 80 00 00 */	li r4, 0
 /* 8003BEBC 00000028  48 29 27 F5 */	bl getSize__7JKRHeapFPvP7JKRHeap
 /* 8003BEC0 0000002C  7C 7A 1B 78 */	mr r26, r3
-/* 8003BEC4 00000030  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003BEC8 00000034  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003BEC4 00000030  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003BEC8 00000034  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003BECC 00000038  38 63 01 D1 */	addi r3, r3, 0x1d1
 /* 8003BED0 0000003C  7F 24 CB 78 */	mr r4, r25
-/* 8003BED4 00000040  C8 62 83 F8 */	lfd f3, d_d_resorce__lit_4277(r2)
+/* 8003BED4 00000040  C8 62 83 F8 */	lfd f3, lit_4277(r2)
 /* 8003BED8 00000044  6F 60 80 00 */	xoris r0, r27, 0x8000
 /* 8003BEDC 00000048  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8003BEE0 0000004C  3C C0 43 30 */	lis r6, 0x4330
 /* 8003BEE4 00000050  90 C1 00 08 */	stw r6, 8(r1)
 /* 8003BEE8 00000054  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8003BEEC 00000058  EC 00 18 28 */	fsubs f0, f0, f3
-/* 8003BEF0 0000005C  C0 42 84 00 */	lfs f2, d_d_resorce__lit_4333(r2)
+/* 8003BEF0 0000005C  C0 42 84 00 */	lfs f2, lit_4333(r2)
 /* 8003BEF4 00000060  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 8003BEF8 00000064  7F 65 DB 78 */	mr r5, r27
 /* 8003BEFC 00000068  6F 40 80 00 */	xoris r0, r26, 0x8000
@@ -68,17 +68,17 @@ lbl_8003BF30:
 lbl_8003BF38:
 /* 8003BF38 00000000  7C 19 E8 00 */	cmpw r25, r29
 /* 8003BF3C 00000004  41 80 FF 58 */	blt lbl_8003BE94
-/* 8003BF40 00000008  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003BF44 0000000C  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003BF40 00000008  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003BF44 0000000C  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003BF48 00000010  38 63 01 F1 */	addi r3, r3, 0x1f1
-/* 8003BF4C 00000014  C8 62 83 F8 */	lfd f3, d_d_resorce__lit_4277(r2)
+/* 8003BF4C 00000014  C8 62 83 F8 */	lfd f3, lit_4277(r2)
 /* 8003BF50 00000018  6F E0 80 00 */	xoris r0, r31, 0x8000
 /* 8003BF54 0000001C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8003BF58 00000020  3C A0 43 30 */	lis r5, 0x4330
 /* 8003BF5C 00000024  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 8003BF60 00000028  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8003BF64 0000002C  EC 00 18 28 */	fsubs f0, f0, f3
-/* 8003BF68 00000030  C0 42 84 00 */	lfs f2, d_d_resorce__lit_4333(r2)
+/* 8003BF68 00000030  C0 42 84 00 */	lfs f2, lit_4333(r2)
 /* 8003BF6C 00000034  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 8003BF70 00000038  7F E4 FB 78 */	mr r4, r31
 /* 8003BF74 0000003C  6F C0 80 00 */	xoris r0, r30, 0x8000

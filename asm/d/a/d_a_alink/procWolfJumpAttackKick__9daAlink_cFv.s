@@ -13,9 +13,9 @@ lbl_8013A8A0:
 /* 8013A8CC 0000002C  4B FF 3A CD */	bl procWolfBackJumpInit__9daAlink_cFi
 /* 8013A8D0 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013A8D4 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013A8D8 00000038  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013A8D8 00000038  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013A8DC 0000003C  64 00 00 20 */	oris r0, r0, 0x20
-/* 8013A8E0 00000040  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013A8E0 00000040  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 lbl_8013A8E4:
 /* 8013A8E4 00000000  38 60 00 01 */	li r3, 1
 /* 8013A8E8 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

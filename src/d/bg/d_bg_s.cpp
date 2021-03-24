@@ -26,11 +26,11 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
-struct cXyz {
-};
-
 struct cBgS_LinChk {
 	/* 80267F40 */ void PreCalc();
+};
+
+struct cBgS_ShdwDraw {
 };
 
 struct cM3dGPla {
@@ -40,15 +40,15 @@ struct cBgS_GndChk {
 	/* 80267D44 */ void PreCheck();
 };
 
-struct cBgS_ShdwDraw {
-};
-
 struct cBgS_PolyInfo {
 	/* 802680F8 */ void ChkSetInfo() const;
 	/* 80268120 */ void ClearPi();
 	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
 	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
 	/* 802681AC */ void ChkBgIndex() const;
+};
+
+struct cXyz {
 };
 
 struct cBgS {
@@ -74,13 +74,13 @@ struct dBgS_SplGrpChk {
 	/* 80078D0C */ void Init();
 };
 
-struct dBgS_SphChk {
-};
-
 struct dBgS_Acch {
 	/* 80077278 */ void SetNowActorInfo(int, void*, unsigned int);
 	/* 800772E8 */ void CalcMovePosWork();
 	/* 8007732C */ void CalcWallRR();
+};
+
+struct dBgS_SphChk {
 };
 
 struct fopAc_ac_c {
@@ -385,7 +385,7 @@ asm void cBgS::LineCross(cBgS_LinChk* param_0) {
 
 /* ############################################################################################## */
 /* 804526B8-804526C0 0004+04 s=1 e=0 z=0  None .sdata2    @3738                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s__lit_3738[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3738[1 + 1 /* padding */] = {
 	-1000000000.0f,
 	/* padding */
 	0.0f,

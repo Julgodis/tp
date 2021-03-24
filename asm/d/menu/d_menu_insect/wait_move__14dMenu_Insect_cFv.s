@@ -10,7 +10,7 @@ lbl_801D8CCC:
 /* 801D8CEC 00000020  40 82 01 00 */	bne lbl_801D8DEC
 /* 801D8CF0 00000024  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 801D8CF4 00000028  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801D8CF8 0000002C  80 A4 00 34 */	lwz r5, 0x34(r4)
+/* 801D8CF8 0000002C  80 A4 00 34 */	lwz r5, 0x34(r4)	/* effective address: 803DD31C */
 /* 801D8CFC 00000030  54 A4 05 AD */	rlwinm. r4, r5, 0, 0x16, 0x16
 /* 801D8D00 00000034  40 82 00 10 */	bne lbl_801D8D10
 /* 801D8D04 00000038  88 1F 00 F7 */	lbz r0, 0xf7(r31)
@@ -25,7 +25,7 @@ lbl_801D8D10:
 /* 801D8D24 00000014  38 00 00 00 */	li r0, 0
 /* 801D8D28 00000018  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801D8D2C 0000001C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801D8D30 00000020  98 03 00 C3 */	stb r0, 0xc3(r3)
+/* 801D8D30 00000020  98 03 00 C3 */	stb r0, 0xc3(r3)	/* effective address: 8043024B */
 lbl_801D8D34:
 /* 801D8D34 00000000  38 00 00 03 */	li r0, 3
 /* 801D8D38 00000004  98 1F 00 F2 */	stb r0, 0xf2(r31)
@@ -51,9 +51,9 @@ lbl_801D8D50:
 /* 801D8D84 00000034  38 A0 00 00 */	li r5, 0
 /* 801D8D88 00000038  38 C0 00 00 */	li r6, 0
 /* 801D8D8C 0000003C  38 E0 00 00 */	li r7, 0
-/* 801D8D90 00000040  C0 22 A8 38 */	lfs f1, d_menu_d_menu_insect__lit_3834(r2)
+/* 801D8D90 00000040  C0 22 A8 38 */	lfs f1, lit_3834(r2)
 /* 801D8D94 00000044  FC 40 08 90 */	fmr f2, f1
-/* 801D8D98 00000048  C0 62 A8 68 */	lfs f3, d_menu_d_menu_insect__lit_4089(r2)
+/* 801D8D98 00000048  C0 62 A8 68 */	lfs f3, lit_4089(r2)
 /* 801D8D9C 0000004C  FC 80 18 90 */	fmr f4, f3
 /* 801D8DA0 00000050  39 00 00 00 */	li r8, 0
 /* 801D8DA4 00000054  48 0D 2B E1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -67,9 +67,9 @@ lbl_801D8DB0:
 /* 801D8DC0 00000010  38 A0 00 00 */	li r5, 0
 /* 801D8DC4 00000014  38 C0 00 00 */	li r6, 0
 /* 801D8DC8 00000018  38 E0 00 00 */	li r7, 0
-/* 801D8DCC 0000001C  C0 22 A8 38 */	lfs f1, d_menu_d_menu_insect__lit_3834(r2)
+/* 801D8DCC 0000001C  C0 22 A8 38 */	lfs f1, lit_3834(r2)
 /* 801D8DD0 00000020  FC 40 08 90 */	fmr f2, f1
-/* 801D8DD4 00000024  C0 62 A8 68 */	lfs f3, d_menu_d_menu_insect__lit_4089(r2)
+/* 801D8DD4 00000024  C0 62 A8 68 */	lfs f3, lit_4089(r2)
 /* 801D8DD8 00000028  FC 80 18 90 */	fmr f4, f3
 /* 801D8DDC 0000002C  39 00 00 00 */	li r8, 0
 /* 801D8DE0 00000030  48 0D 2B A5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

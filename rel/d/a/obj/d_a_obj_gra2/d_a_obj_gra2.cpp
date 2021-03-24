@@ -14,13 +14,13 @@
 struct J3DJoint {
 };
 
-struct dBgW {
+struct fopAc_ac_c {
 };
 
 struct J3DModel {
 };
 
-struct fopAc_ac_c {
+struct dBgW {
 };
 
 struct cXyz {
@@ -57,6 +57,8 @@ struct daObj_GrA_c {
 	/* 80C0178C */ void setBaseMotion(int, f32);
 	/* 80C017AC */ void setFaceMotion(int, f32);
 	/* 80C017F0 */ void calcMotion();
+	/* 80C018C0 */ void checkProcess(int (daObj_GrA_c::*)(void*));
+	/* 80C018F4 */ void setProcess(int (daObj_GrA_c::*)(void*));
 	/* 80C019B8 */ void setParam();
 	/* 80C01C18 */ void checkEvent();
 	/* 80C01D7C */ void mainProc();
@@ -252,8 +254,8 @@ extern "C" void setFaceBtp__11daObj_GrA_cFi(); // 1
 extern "C" void setBaseMotion__11daObj_GrA_cFif(); // 1
 extern "C" void setFaceMotion__11daObj_GrA_cFif(); // 1
 extern "C" void calcMotion__11daObj_GrA_cFv(); // 1
-extern "C" static void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i(); // 1
-extern "C" static void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i(); // 1
+extern "C" void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i(); // 1
 extern "C" static void getDistTableIdx__Fii(); // 1
 extern "C" void setParam__11daObj_GrA_cFv(); // 1
 extern "C" void checkEvent__11daObj_GrA_cFv(); // 1
@@ -1017,7 +1019,7 @@ asm void daObj_GrA_c::calcMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i() {
+asm void daObj_GrA_c::checkProcess(int (daObj_GrA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i.s"
 }
@@ -1028,7 +1030,7 @@ extern "C" asm static void checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i(
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i() {
+asm void daObj_GrA_c::setProcess(int (daObj_GrA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i.s"
 }

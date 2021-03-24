@@ -11,6 +11,16 @@
 // Types:
 // 
 
+struct dTres_c {
+	struct typeGroupData_c {
+	};
+
+	struct data_s {
+	};
+
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
+};
+
 struct dDrawPath_c {
 	struct room_class {
 	};
@@ -31,16 +41,6 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
-};
-
-struct dTres_c {
-	struct typeGroupData_c {
-	};
-
-	struct data_s {
-	};
-
-	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
 struct renderingAmap_c {
@@ -276,7 +276,7 @@ extern "C" void __dt__16renderingDAmap_cFv(); // 1
 extern "C" extern u8 const data_80378E8C[36];
 extern "C" extern u8 const data_80378EB0[36];
 extern "C" extern u8 const data_80378ED4[36];
-extern "C" extern char const* const d_map_d_map__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
 extern "C" extern void* __vt__15dRenderingMap_c[23];
@@ -399,23 +399,23 @@ asm void renderingAmap_c::getIconSize(u8 param_0) const {
 static u8 m_res__22dMap_HIO_prm_res_dst_s[4 + 4 /* padding */];
 
 /* 80451CA0-80451CA4 0004+00 s=4 e=0 z=0  None .sdata2    @3745                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_3745 = 0.5f;
+SECTION_SDATA2 static f32 lit_3745 = 0.5f;
 
 /* 80451CA4-80451CA8 0004+00 s=1 e=0 z=0  None .sdata2    @3746                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_3746 = 65536.0f;
+SECTION_SDATA2 static f32 lit_3746 = 65536.0f;
 
 /* 80451CA8-80451CB0 0004+04 s=1 e=0 z=0  None .sdata2    @3747                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_3747[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3747[1 + 1 /* padding */] = {
 	32768.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451CB0-80451CB8 0008+00 s=5 e=0 z=0  None .sdata2    @3749                                                        */
-SECTION_SDATA2 static f64 d_map_d_map__lit_3749 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3749 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80451CB8-80451CC0 0008+00 s=4 e=0 z=0  None .sdata2    @3751                                                        */
-SECTION_SDATA2 static f64 d_map_d_map__lit_3751 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3751 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 800284D0-800288C4 03F4+00 s=2 e=0 z=0  None .text      draw__15renderingAmap_cFv                                    */
 #pragma push
@@ -430,7 +430,7 @@ asm void renderingAmap_c::draw() {
 
 /* ############################################################################################## */
 /* 803A6F08-803A6F28 0020+00 s=1 e=0 z=0  None .data      @3806                                                        */
-SECTION_DATA static void* d_map_d_map__lit_3806[8] = {
+SECTION_DATA static void* lit_3806[8] = {
 	/* 0    */ (void*)(((char*)getDispType__15renderingAmap_cCFv)+0x58),
 	/* 1    */ (void*)(((char*)getDispType__15renderingAmap_cCFv)+0x60),
 	/* 2    */ (void*)(((char*)getDispType__15renderingAmap_cCFv)+0x68),
@@ -814,7 +814,7 @@ asm void renderingAmap_c::getStayType() const {
 
 /* ############################################################################################## */
 /* 803A6F28-803A6F6C 0044+00 s=1 e=0 z=0  None .data      @4259                                                        */
-SECTION_DATA static void* d_map_d_map__lit_4259[17] = {
+SECTION_DATA static void* lit_4259[17] = {
 	/* 0    */ (void*)(((char*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+0xA0),
 	/* 1    */ (void*)(((char*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+0xE4),
 	/* 2    */ (void*)(((char*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+0x150),
@@ -880,7 +880,7 @@ asm void dMap_c::isSpecialOutline() {
 
 /* ############################################################################################## */
 /* 80451CE0-80451CE4 0004+00 s=4 e=0 z=0  None .sdata2    @4284                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4284 = 1.0f;
+SECTION_SDATA2 static f32 lit_4284 = 1.0f;
 
 /* 8002974C-800297A8 005C+00 s=1 e=0 z=0  None .text      copyPalette__6dMap_cFv                                       */
 #pragma push
@@ -927,7 +927,7 @@ SECTION_DEAD static char const* const pad_80378F33 = "\0\0\0\0";
 #pragma pop
 
 /* 803A6F6C-803A6F88 001C+00 s=1 e=0 z=0  None .data      @4694                                                        */
-SECTION_DATA static void* d_map_d_map__lit_4694[7] = {
+SECTION_DATA static void* lit_4694[7] = {
 	/* 0    */ (void*)(((char*)_move__6dMap_cFffif)+0x350),
 	/* 1    */ (void*)(((char*)_move__6dMap_cFffif)+0x388),
 	/* 2    */ (void*)(((char*)_move__6dMap_cFffif)+0x3CC),
@@ -1045,7 +1045,7 @@ SECTION_DATA static void* __vt__6dMap_c[49] = {
 };
 
 /* 80451CE4-80451CE8 0004+00 s=7 e=0 z=0  None .sdata2    @4321                                                        */
-SECTION_SDATA2 static u8 d_map_d_map__lit_4321[4] = {
+SECTION_SDATA2 static u8 lit_4321[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1106,7 +1106,7 @@ asm void dMap_c::calcMapCenterXZ(int param_0, f32* param_1, f32* param_2) {
 
 /* ############################################################################################## */
 /* 80451CE8-80451CEC 0004+00 s=1 e=0 z=0  None .sdata2    @4503                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4503 = 10800.0f;
+SECTION_SDATA2 static f32 lit_4503 = 10800.0f;
 
 /* 80029E1C-80029F84 0168+00 s=1 e=0 z=0  None .text      calcMapCmPerTexel__6dMap_cFiPf                               */
 #pragma push
@@ -1198,19 +1198,19 @@ asm void dMap_c::isDrawRoomIcon(int param_0, int param_1) const {
 
 /* ############################################################################################## */
 /* 80451CEC-80451CF0 0004+00 s=1 e=0 z=0  None .sdata2    @4688                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4688 = -3710.0f;
+SECTION_SDATA2 static f32 lit_4688 = -3710.0f;
 
 /* 80451CF0-80451CF4 0004+00 s=1 e=0 z=0  None .sdata2    @4689                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4689 = -22397.0f;
+SECTION_SDATA2 static f32 lit_4689 = -22397.0f;
 
 /* 80451CF4-80451CF8 0004+00 s=1 e=0 z=0  None .sdata2    @4690                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4690 = 60.0f;
+SECTION_SDATA2 static f32 lit_4690 = 60.0f;
 
 /* 80451CF8-80451CFC 0004+00 s=1 e=0 z=0  None .sdata2    @4691                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4691 = 5.0f;
+SECTION_SDATA2 static f32 lit_4691 = 5.0f;
 
 /* 80451CFC-80451D00 0004+00 s=1 e=0 z=0  None .sdata2    @4692                                                        */
-SECTION_SDATA2 static f32 d_map_d_map__lit_4692 = 20.0f;
+SECTION_SDATA2 static f32 lit_4692 = 20.0f;
 
 /* 8002A32C-8002AB54 0828+00 s=1 e=1 z=0  None .text      _move__6dMap_cFffif                                          */
 #pragma push

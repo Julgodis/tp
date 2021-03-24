@@ -10,7 +10,7 @@ lbl_8025CF04:
 /* 8025CF24 00000020  40 82 00 1C */	bne lbl_8025CF40
 /* 8025CF28 00000024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8025CF2C 00000028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8025CF30 0000002C  A0 04 00 02 */	lhz r0, 2(r4)
+/* 8025CF30 0000002C  A0 04 00 02 */	lhz r0, 2(r4)	/* effective address: 804061C2 */
 /* 8025CF34 00000030  28 00 00 00 */	cmplwi r0, 0
 /* 8025CF38 00000034  40 82 00 08 */	bne lbl_8025CF40
 /* 8025CF3C 00000038  4B DC 2B 11 */	bl fopMsgM_Delete__FPv
@@ -20,7 +20,7 @@ lbl_8025CF40:
 /* 8025CF48 00000008  41 82 02 20 */	beq lbl_8025D168
 /* 8025CF4C 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025CF50 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025CF54 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 8025CF54 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8025CF58 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 8025CF5C 0000001C  40 82 00 20 */	bne lbl_8025CF7C
 /* 8025CF60 00000020  4B FD B2 CD */	bl getStatus__12dMsgObject_cFv
@@ -147,16 +147,16 @@ lbl_8025D0F8:
 lbl_8025D11C:
 /* 8025D11C 00000000  80 7F 00 FC */	lwz r3, 0xfc(r31)
 /* 8025D120 00000004  C0 43 03 C4 */	lfs f2, 0x3c4(r3)
-/* 8025D124 00000008  C0 22 B5 44 */	lfs f1, d_d_timer__lit_3920(r2)
+/* 8025D124 00000008  C0 22 B5 44 */	lfs f1, lit_3920(r2)
 /* 8025D128 0000000C  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 8025D12C 00000000  40 80 00 F8 */	bge lbl_8025D224
-/* 8025D130 00000004  C0 02 B5 48 */	lfs f0, d_d_timer__lit_4050(r2)
+/* 8025D130 00000004  C0 02 B5 48 */	lfs f0, lit_4050(r2)
 /* 8025D134 00000008  EC 42 00 2A */	fadds f2, f2, f0
 /* 8025D138 0000001C  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 8025D13C 00000000  40 81 00 08 */	ble lbl_8025D144
 /* 8025D140 00000004  FC 40 08 90 */	fmr f2, f1
 lbl_8025D144:
-/* 8025D144 00000000  C0 02 B5 40 */	lfs f0, d_d_timer__lit_3919(r2)
+/* 8025D144 00000000  C0 02 B5 40 */	lfs f0, lit_3919(r2)
 /* 8025D148 00000004  D0 03 03 C0 */	stfs f0, 0x3c0(r3)
 /* 8025D14C 00000008  D0 43 03 C4 */	stfs f2, 0x3c4(r3)
 /* 8025D150 0000000C  48 00 00 D4 */	b lbl_8025D224
@@ -172,7 +172,7 @@ lbl_8025D168:
 /* 8025D170 00000008  40 82 00 40 */	bne lbl_8025D1B0
 /* 8025D174 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8025D178 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8025D17C 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 8025D17C 00000014  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 8025D180 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 8025D184 0000001C  40 82 00 2C */	bne lbl_8025D1B0
 /* 8025D188 00000020  4B FD B0 A5 */	bl getStatus__12dMsgObject_cFv
@@ -204,7 +204,7 @@ lbl_8025D1B0:
 lbl_8025D1EC:
 /* 8025D1EC 00000000  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8025D1F0 00000004  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8025D1F4 00000008  A8 03 0B EA */	lha r0, 0xbea(r3)
+/* 8025D1F4 00000008  A8 03 0B EA */	lha r0, 0xbea(r3)	/* effective address: 8042F7B2 */
 /* 8025D1F8 0000000C  7C 04 00 00 */	cmpw r4, r0
 /* 8025D1FC 00000010  40 82 00 28 */	bne lbl_8025D224
 /* 8025D200 00000014  38 00 00 00 */	li r0, 0
@@ -284,8 +284,8 @@ lbl_8025D308:
 /* 8025D308 00000000  80 7F 00 FC */	lwz r3, 0xfc(r31)
 /* 8025D30C 00000004  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8025D310 00000008  38 A4 01 88 */	addi r5, r4, g_meter2_info@l
-/* 8025D314 0000000C  88 85 00 BC */	lbz r4, 0xbc(r5)
-/* 8025D318 00000010  88 A5 00 BB */	lbz r5, 0xbb(r5)
+/* 8025D314 0000000C  88 85 00 BC */	lbz r4, 0xbc(r5)	/* effective address: 80430244 */
+/* 8025D318 00000010  88 A5 00 BB */	lbz r5, 0xbb(r5)	/* effective address: 80430243 */
 /* 8025D31C 00000014  48 00 1E 65 */	bl setCounter__21dDlst_TimerScrnDraw_cFUcUc
 /* 8025D320 00000018  38 60 00 01 */	li r3, 1
 lbl_8025D324:

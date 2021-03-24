@@ -17,7 +17,7 @@ lbl_8021E4E0:
 /* 8021E4E4 00000004  41 82 00 24 */	beq lbl_8021E508
 /* 8021E4E8 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E4EC 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E4F0 00000010  88 83 00 13 */	lbz r4, 0x13(r3)
+/* 8021E4F0 00000010  88 83 00 13 */	lbz r4, 0x13(r3)	/* effective address: 804061D3 */
 /* 8021E4F4 00000014  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8021E4F8 00000018  28 00 00 FF */	cmplwi r0, 0xff
 /* 8021E4FC 0000001C  41 82 00 0C */	beq lbl_8021E508
@@ -28,7 +28,7 @@ lbl_8021E508:
 /* 8021E50C 00000004  4B E1 09 A5 */	bl dComIfGs_setSelectEquipClothes__FUc
 /* 8021E510 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E514 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E518 00000010  9B E3 5E 74 */	stb r31, 0x5e74(r3)
+/* 8021E518 00000010  9B E3 5E 74 */	stb r31, 0x5e74(r3)	/* effective address: 8040C034 */
 /* 8021E51C 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8021E520 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8021E524 0000001C  7C 08 03 A6 */	mtlr r0

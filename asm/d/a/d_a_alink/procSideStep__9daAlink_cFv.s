@@ -87,7 +87,7 @@ lbl_800C4088:
 /* 800C4098 00000010  C0 3F 34 FC */	lfs f1, 0x34fc(r31)
 /* 800C409C 00000014  3C 60 80 39 */	lis r3, m__22daAlinkHIO_sideStep_c0@ha
 /* 800C40A0 00000018  38 A3 D8 64 */	addi r5, r3, m__22daAlinkHIO_sideStep_c0@l
-/* 800C40A4 0000001C  C0 05 00 60 */	lfs f0, 0x60(r5)
+/* 800C40A4 0000001C  C0 05 00 60 */	lfs f0, 0x60(r5)	/* effective address: 8038D8C4 */
 /* 800C40A8 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800C40AC 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800C40B0 00000000  40 80 00 18 */	bge lbl_800C40C8

@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
 struct cM3dGSph {
 };
 
 struct cM3dGCylS {
+};
+
+struct cXyz {
 };
 
 struct cM3dGCyl {

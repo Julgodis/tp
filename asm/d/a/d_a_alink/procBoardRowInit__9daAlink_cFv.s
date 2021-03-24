@@ -12,7 +12,7 @@ lbl_80106E88:
 /* 80106EB0 00000028  38 80 00 F9 */	li r4, 0xf9
 /* 80106EB4 0000002C  3C A0 80 39 */	lis r5, m__19daAlinkHIO_board_c0@ha
 /* 80106EB8 00000030  38 A5 E8 70 */	addi r5, r5, m__19daAlinkHIO_board_c0@l
-/* 80106EBC 00000034  C0 45 00 84 */	lfs f2, 0x84(r5)
+/* 80106EBC 00000034  C0 45 00 84 */	lfs f2, 0x84(r5)	/* effective address: 8038E8F4 */
 /* 80106EC0 00000038  4B FA 61 21 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 80106EC4 0000003C  80 1F 05 84 */	lwz r0, 0x584(r31)
 /* 80106EC8 00000040  60 00 00 40 */	ori r0, r0, 0x40

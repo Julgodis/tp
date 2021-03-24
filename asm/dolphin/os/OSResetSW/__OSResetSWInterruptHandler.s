@@ -43,7 +43,7 @@ lbl_8033FB70:
 /* 8033FB80 00000010  38 00 00 01 */	li r0, 1
 /* 8033FB84 00000014  90 0D 91 24 */	stw r0, Down(r13)
 /* 8033FB88 00000018  38 60 02 00 */	li r3, 0x200
-/* 8033FB8C 0000001C  90 0D 91 28 */	stw r0, OSResetSW__LastState(r13)
+/* 8033FB8C 0000001C  90 0D 91 28 */	stw r0, LastState(r13)
 /* 8033FB90 00000020  4B FF DF 2D */	bl __OSMaskInterrupts
 /* 8033FB94 00000024  81 8D 91 20 */	lwz r12, ResetCallback(r13)
 /* 8033FB98 00000028  28 0C 00 00 */	cmplwi r12, 0

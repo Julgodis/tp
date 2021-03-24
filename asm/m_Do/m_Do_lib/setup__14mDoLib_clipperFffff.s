@@ -7,13 +7,13 @@ lbl_8001528C:
 /* 800152A0 00000000  FF E0 08 90 */	fmr f31, f1
 /* 800152A4 00000004  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 800152A8 00000008  38 63 D8 E4 */	addi r3, r3, mClipper__14mDoLib_clipper@l
-/* 800152AC 0000000C  D3 E3 00 4C */	stfs f31, 0x4c(r3)
-/* 800152B0 00000010  D0 43 00 50 */	stfs f2, 0x50(r3)
-/* 800152B4 00000014  D0 63 00 54 */	stfs f3, 0x54(r3)
-/* 800152B8 00000018  D0 83 00 58 */	stfs f4, 0x58(r3)
+/* 800152AC 0000000C  D3 E3 00 4C */	stfs f31, 0x4c(r3)	/* effective address: 803DD930 */
+/* 800152B0 00000010  D0 43 00 50 */	stfs f2, 0x50(r3)	/* effective address: 803DD934 */
+/* 800152B4 00000014  D0 63 00 54 */	stfs f3, 0x54(r3)	/* effective address: 803DD938 */
+/* 800152B8 00000018  D0 83 00 58 */	stfs f4, 0x58(r3)	/* effective address: 803DD93C */
 /* 800152BC 0000001C  D0 8D 86 F0 */	stfs f4, mSystemFar__14mDoLib_clipper(r13)
 /* 800152C0 00000020  48 25 E4 CD */	bl calcViewFrustum__11J3DUClipperFv
-/* 800152C4 00000024  C0 02 81 80 */	lfs f0, m_Do_m_Do_lib__lit_3739(r2)
+/* 800152C4 00000024  C0 02 81 80 */	lfs f0, lit_3739(r2)
 /* 800152C8 00000028  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 800152CC 0000002C  FC 00 00 1E */	fctiwz f0, f0
 /* 800152D0 00000030  D8 01 00 08 */	stfd f0, 8(r1)

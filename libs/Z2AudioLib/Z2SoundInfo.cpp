@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JAISeq {
-};
-
-struct JAISoundID {
-};
-
 struct JAIStream {
 };
 
+struct JAISeq {
+};
+
 struct JAISe {
+};
+
+struct JAISoundID {
 };
 
 struct JAISound {
@@ -205,14 +205,14 @@ SECTION_SDATA2 static u8 lit_968[4] = {
 };
 
 /* 80455A80-80455A88 0004+04 s=2 e=0 z=0  None .sdata2    @969                                                         */
-SECTION_SDATA2 static f32 Z2SoundInfo__lit_969[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_969[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455A88-80455A90 0008+00 s=2 e=0 z=0  None .sdata2    @973                                                         */
-SECTION_SDATA2 static f64 Z2SoundInfo__lit_973 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_973 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802BB6DC-802BB8B4 01D8+00 s=1 e=0 z=0  None .text      getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe                */
 #pragma push
@@ -289,7 +289,7 @@ asm void Z2SoundInfo::getSwBit(JAISoundID param_0) const {
 
 /* ############################################################################################## */
 /* 80455A98-80455AA0 0004+04 s=1 e=0 z=0  None .sdata2    @1070                                                        */
-SECTION_SDATA2 static f32 Z2SoundInfo__lit_1070[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_1070[1 + 1 /* padding */] = {
 	1.0f / 127.0f,
 	/* padding */
 	0.0f,

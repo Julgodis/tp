@@ -9,7 +9,7 @@ lbl_80137C90:
 /* 80137CAC 0000001C  7C BD 2B 78 */	mr r29, r5
 /* 80137CB0 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80137CB4 00000024  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
-/* 80137CB8 00000028  80 1F 5F 18 */	lwz r0, 0x5f18(r31)
+/* 80137CB8 00000028  80 1F 5F 18 */	lwz r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 80137CBC 0000002C  54 1E 9F FE */	rlwinm r30, r0, 0x13, 0x1f, 0x1f
 /* 80137CC0 00000030  38 80 01 02 */	li r4, 0x102
 /* 80137CC4 00000034  4B F8 A2 A9 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC

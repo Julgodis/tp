@@ -18,8 +18,8 @@ lbl_8003C078:
 /* 8003C0B8 00000040  48 00 01 A9 */	bl newResInfo__14dRes_control_cFP11dRes_info_ci
 /* 8003C0BC 00000044  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8003C0C0 00000048  40 82 00 30 */	bne lbl_8003C0F0
-/* 8003C0C4 0000004C  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003C0C8 00000050  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003C0C4 0000004C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003C0C8 00000050  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003C0CC 00000054  38 63 02 41 */	addi r3, r3, 0x241
 /* 8003C0D0 00000058  7F 24 CB 78 */	mr r4, r25
 /* 8003C0D4 0000005C  4C C6 31 82 */	crclr 6
@@ -37,8 +37,8 @@ lbl_8003C0F0:
 /* 8003C100 00000010  4B FF E2 49 */	bl set__11dRes_info_cFPCcPCcUcP7JKRHeap
 /* 8003C104 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 8003C108 00000018  40 82 00 30 */	bne lbl_8003C138
-/* 8003C10C 0000001C  3C 60 80 38 */	lis r3, d_d_resorce__stringBase0@ha
-/* 8003C110 00000020  38 63 98 B8 */	addi r3, r3, d_d_resorce__stringBase0@l
+/* 8003C10C 0000001C  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 8003C110 00000020  38 63 98 B8 */	addi r3, r3, stringBase0@l
 /* 8003C114 00000024  38 63 02 88 */	addi r3, r3, 0x288
 /* 8003C118 00000028  7F 24 CB 78 */	mr r4, r25
 /* 8003C11C 0000002C  4C C6 31 82 */	crclr 6

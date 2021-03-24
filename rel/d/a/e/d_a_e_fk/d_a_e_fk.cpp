@@ -16,10 +16,10 @@ struct daE_FK_HIO_c {
 	/* 806BB594 */ ~daE_FK_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_FK_c {

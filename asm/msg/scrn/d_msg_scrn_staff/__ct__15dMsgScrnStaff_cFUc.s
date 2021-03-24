@@ -11,7 +11,7 @@ lbl_80246B34:
 /* 80246B58 00000024  90 1E 00 00 */	stw r0, 0(r30)
 /* 80246B5C 00000028  7F C3 F3 78 */	mr r3, r30
 /* 80246B60 0000002C  4B FF 56 0D */	bl init__14dMsgScrnBase_cFv
-/* 80246B64 00000030  C0 02 B2 F8 */	lfs f0, msg_scrn_d_msg_scrn_staff__lit_3842(r2)
+/* 80246B64 00000030  C0 02 B2 F8 */	lfs f0, lit_3842(r2)
 /* 80246B68 00000034  D0 1E 00 D0 */	stfs f0, 0xd0(r30)
 /* 80246B6C 00000038  D0 1E 00 CC */	stfs f0, 0xcc(r30)
 /* 80246B70 0000003C  38 60 01 18 */	li r3, 0x118
@@ -23,12 +23,12 @@ lbl_80246B34:
 lbl_80246B88:
 /* 80246B88 00000000  90 1E 00 04 */	stw r0, 4(r30)
 /* 80246B8C 00000004  80 7E 00 04 */	lwz r3, 4(r30)
-/* 80246B90 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_staff__stringBase0@ha
-/* 80246B94 0000000C  38 84 9B 98 */	addi r4, r4, msg_scrn_d_msg_scrn_staff__stringBase0@l
+/* 80246B90 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 80246B94 0000000C  38 84 9B 98 */	addi r4, r4, stringBase0@l
 /* 80246B98 00000010  3C A0 00 02 */	lis r5, 2
 /* 80246B9C 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 80246BA0 00000018  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
-/* 80246BA4 0000001C  80 C6 5C 84 */	lwz r6, 0x5c84(r6)
+/* 80246BA4 0000001C  80 C6 5C 84 */	lwz r6, 0x5c84(r6)	/* effective address: 8040BE44 */
 /* 80246BA8 00000020  48 0B 1A A1 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 80246BAC 00000024  80 7E 00 04 */	lwz r3, 4(r30)
 /* 80246BB0 00000028  48 00 E5 39 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -69,8 +69,8 @@ lbl_80246BE4:
 /* 80246C38 00000054  9B 63 00 B0 */	stb r27, 0xb0(r3)
 /* 80246C3C 00000058  3B E0 00 00 */	li r31, 0
 /* 80246C40 0000005C  3B A0 00 00 */	li r29, 0
-/* 80246C44 00000060  3C 60 80 3A */	lis r3, msg_scrn_d_msg_scrn_staff__stringBase0@ha
-/* 80246C48 00000064  3B 83 9B 98 */	addi r28, r3, msg_scrn_d_msg_scrn_staff__stringBase0@l
+/* 80246C44 00000060  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80246C48 00000064  3B 83 9B 98 */	addi r28, r3, stringBase0@l
 lbl_80246C4C:
 /* 80246C4C 00000000  38 60 00 6C */	li r3, 0x6c
 /* 80246C50 00000004  48 08 7F FD */	bl __nw__FUl

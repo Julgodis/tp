@@ -306,7 +306,10 @@ class CPPDisassembler(Disassembler):
             insn_str = 'twi %i, %s, 0x%x' % (31, rA, S)
             return insn_str
         else:
+            if addr in self.registerLoads:
+                return f"{insn.mnemonic} {insn.op_str}\t/* effective address: {self.registerLoads[addr]:08X} */"
             return f"{insn.mnemonic} {insn.op_str}"
+
 
 
 @dataclass
@@ -1295,9 +1298,9 @@ def export_translation_unit_group(context: Context, tus: List[Tuple[TranslationU
     ]
 
     async def wait_all():
-        for task in async_tasks:
-            await task
-        #await asyncio.gather(*async_tasks)
+        #for task in async_tasks:
+        #    await task
+        await asyncio.gather(*async_tasks)
 
     asyncio.run(wait_all())
 
@@ -1331,9 +1334,9 @@ def export_function(context: Context, section: Section, functions: List[Symbol],
     ]
 
     async def wait_all():
-        for task in async_tasks:
-            await task
-        #await asyncio.gather(*async_tasks)
+        #for task in async_tasks:
+        #    await task
+        await asyncio.gather(*async_tasks)
 
     asyncio.run(wait_all())
 

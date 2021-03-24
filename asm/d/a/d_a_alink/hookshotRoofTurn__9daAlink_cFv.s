@@ -14,17 +14,17 @@ lbl_8010B3AC:
 /* 8010B3DC 00000014  3B E0 00 00 */	li r31, 0
 /* 8010B3E0 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010B3E4 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010B3E8 00000020  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 8010B3E8 00000020  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 8010B3EC 00000024  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 8010B3F0 00000028  40 82 01 C4 */	bne lbl_8010B5B4
 /* 8010B3F4 0000002C  C0 02 94 64 */	lfs f0, lit_14954(r2)
 /* 8010B3F8 00000030  C0 5E 38 08 */	lfs f2, 0x3808(r30)
 /* 8010B3FC 00000034  EC 20 10 2A */	fadds f1, f0, f2
-/* 8010B400 00000038  C0 02 93 2C */	lfs f0, d_a_d_a_alink__lit_7624(r2)
+/* 8010B400 00000038  C0 02 93 2C */	lfs f0, lit_7624(r2)
 /* 8010B404 0000003C  EF E1 00 28 */	fsubs f31, f1, f0
 /* 8010B408 00000040  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 8010B40C 00000044  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 8010B410 00000048  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 8010B410 00000048  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038EA08 */
 /* 8010B414 0000004C  EF C2 00 28 */	fsubs f30, f2, f0
 /* 8010B418 00000050  C0 3E 33 AC */	lfs f1, 0x33ac(r30)
 /* 8010B41C 00000054  C0 02 92 A4 */	lfs f0, lit_6021(r2)
@@ -59,7 +59,7 @@ lbl_8010B478:
 /* 8010B488 00000010  C0 5E 04 D4 */	lfs f2, 0x4d4(r30)
 /* 8010B48C 00000014  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 8010B490 00000018  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 8010B494 0000001C  C0 23 00 58 */	lfs f1, 0x58(r3)
+/* 8010B494 0000001C  C0 23 00 58 */	lfs f1, 0x58(r3)	/* effective address: 8038EA18 */
 /* 8010B498 00000020  C0 1E 33 A8 */	lfs f0, 0x33a8(r30)
 /* 8010B49C 00000024  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8010B4A0 00000028  EC 02 00 2A */	fadds f0, f2, f0
@@ -84,7 +84,7 @@ lbl_8010B4E0:
 /* 8010B4E4 00000004  40 82 00 7C */	bne lbl_8010B560
 /* 8010B4E8 00000008  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 8010B4EC 0000000C  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 8010B4F0 00000010  C0 23 00 5C */	lfs f1, 0x5c(r3)
+/* 8010B4F0 00000010  C0 23 00 5C */	lfs f1, 0x5c(r3)	/* effective address: 8038EA1C */
 /* 8010B4F4 00000014  C0 1E 33 AC */	lfs f0, 0x33ac(r30)
 /* 8010B4F8 00000018  EF A1 00 32 */	fmuls f29, f1, f0
 /* 8010B4FC 0000001C  7F C3 F3 78 */	mr r3, r30
@@ -94,7 +94,7 @@ lbl_8010B4E0:
 /* 8010B50C 0000002C  4E 80 04 21 */	bctrl 
 /* 8010B510 00000030  2C 03 00 00 */	cmpwi r3, 0
 /* 8010B514 00000034  41 82 00 0C */	beq lbl_8010B520
-/* 8010B518 00000038  C0 02 93 2C */	lfs f0, d_a_d_a_alink__lit_7624(r2)
+/* 8010B518 00000038  C0 02 93 2C */	lfs f0, lit_7624(r2)
 /* 8010B51C 0000003C  EF BD 00 32 */	fmuls f29, f29, f0
 lbl_8010B520:
 /* 8010B520 00000000  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
@@ -134,10 +134,10 @@ lbl_8010B588:
 /* 8010B598 00000010  38 00 00 78 */	li r0, 0x78
 /* 8010B59C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010B5A0 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010B5A4 0000001C  98 03 5E 3E */	stb r0, 0x5e3e(r3)
-/* 8010B5A8 00000020  9B A3 5E 2E */	stb r29, 0x5e2e(r3)
+/* 8010B5A4 0000001C  98 03 5E 3E */	stb r0, 0x5e3e(r3)	/* effective address: 8040BFFE */
+/* 8010B5A8 00000020  9B A3 5E 2E */	stb r29, 0x5e2e(r3)	/* effective address: 8040BFEE */
 /* 8010B5AC 00000024  38 00 00 00 */	li r0, 0
-/* 8010B5B0 00000028  98 03 5E 58 */	stb r0, 0x5e58(r3)
+/* 8010B5B0 00000028  98 03 5E 58 */	stb r0, 0x5e58(r3)	/* effective address: 8040C018 */
 lbl_8010B5B4:
 /* 8010B5B4 00000000  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010B5B8 00000004  41 82 00 50 */	beq lbl_8010B608
@@ -146,7 +146,7 @@ lbl_8010B5B4:
 /* 8010B5C4 00000010  40 82 00 50 */	bne lbl_8010B614
 /* 8010B5C8 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8010B5CC 00000018  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8010B5D0 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8010B5D0 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 8010B5D4 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8010B5D8 00000024  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8010B5DC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

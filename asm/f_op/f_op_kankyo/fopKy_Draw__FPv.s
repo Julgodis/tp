@@ -5,7 +5,7 @@ lbl_8001F284:
 /* 8001F290 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 8001F294 00000010  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8001F298 00000014  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 8001F29C 00000018  88 05 5E B5 */	lbz r0, 0x5eb5(r5)
+/* 8001F29C 00000018  88 05 5E B5 */	lbz r0, 0x5eb5(r5)	/* effective address: 8040C075 */
 /* 8001F2A0 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8001F2A4 00000020  40 82 00 0C */	bne lbl_8001F2B0
 /* 8001F2A8 00000024  80 64 00 D8 */	lwz r3, 0xd8(r4)

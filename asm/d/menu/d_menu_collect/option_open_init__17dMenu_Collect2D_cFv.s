@@ -17,7 +17,7 @@ lbl_801B5094:
 /* 801B50D0 0000003C  41 82 00 1C */	beq lbl_801B50EC
 /* 801B50D4 00000040  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801B50D8 00000044  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801B50DC 00000048  80 84 5C B8 */	lwz r4, 0x5cb8(r4)
+/* 801B50DC 00000048  80 84 5C B8 */	lwz r4, 0x5cb8(r4)	/* effective address: 8040BE78 */
 /* 801B50E0 0000004C  80 BE 00 10 */	lwz r5, 0x10(r30)
 /* 801B50E4 00000050  48 02 CE 2D */	bl __ct__14dMenu_Option_cFP10JKRArchiveP9STControl
 /* 801B50E8 00000054  7C 60 1B 78 */	mr r0, r3

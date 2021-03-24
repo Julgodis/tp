@@ -14,7 +14,7 @@ lbl_800D1540:
 /* 800D1570 00000030  FF E0 10 90 */	fmr f31, f2
 /* 800D1574 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D1578 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D157C 0000003C  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D157C 0000003C  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D1580 00000040  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800D1584 00000044  40 82 00 24 */	bne lbl_800D15A8
 /* 800D1588 00000048  57 C0 06 3E */	clrlwi r0, r30, 0x18

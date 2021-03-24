@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -315,90 +315,90 @@ asm void Z2SeMgr::decrCrowdSize() {
 
 /* ############################################################################################## */
 /* 80455870-80455874 0004+00 s=1 e=0 z=0  None .sdata2    @4038                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4038 = 10000.0f;
+SECTION_SDATA2 static f32 lit_4038 = 10000.0f;
 
 /* 80455874-80455878 0004+00 s=2 e=0 z=0  None .sdata2    @4039                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4039 = 100.0f;
+SECTION_SDATA2 static f32 lit_4039 = 100.0f;
 
 /* 80455878-8045587C 0004+00 s=11 e=0 z=0  None .sdata2    @4040                                                        */
-SECTION_SDATA2 static u8 Z2SeMgr__lit_4040[4] = {
+SECTION_SDATA2 static u8 lit_4040[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045587C-80455880 0004+00 s=2 e=0 z=0  None .sdata2    @4041                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4041 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4041 = 1.0f / 5.0f;
 
 /* 80455880-80455884 0004+00 s=8 e=0 z=0  None .sdata2    @4042                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4042 = 1.0f;
+SECTION_SDATA2 static f32 lit_4042 = 1.0f;
 
 /* 80455884-80455888 0004+00 s=3 e=0 z=0  None .sdata2    @4043                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4043 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4043 = 7.0f / 10.0f;
 
 /* 80455888-8045588C 0004+00 s=1 e=0 z=0  None .sdata2    @4044                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4044 = 1.25f;
+SECTION_SDATA2 static f32 lit_4044 = 1.25f;
 
 /* 8045588C-80455890 0004+00 s=2 e=0 z=0  None .sdata2    @4045                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4045 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4045 = 2.0f / 5.0f;
 
 /* 80455890-80455894 0004+00 s=1 e=0 z=0  None .sdata2    @4046                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4046 = 1.5f;
+SECTION_SDATA2 static f32 lit_4046 = 1.5f;
 
 /* 80455894-80455898 0004+00 s=1 e=0 z=0  None .sdata2    @4047                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4047 = 35.0f;
+SECTION_SDATA2 static f32 lit_4047 = 35.0f;
 
 /* 80455898-8045589C 0004+00 s=1 e=0 z=0  None .sdata2    @4048                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4048 = 261.0f;
+SECTION_SDATA2 static f32 lit_4048 = 261.0f;
 
 /* 8045589C-804558A0 0004+00 s=1 e=0 z=0  None .sdata2    @4049                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4049 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4049 = 1.0f / 20.0f;
 
 /* 804558A0-804558A4 0004+00 s=1 e=0 z=0  None .sdata2    @4050                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4050 = 7.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4050 = 7.0f / 5.0f;
 
 /* 804558A4-804558A8 0004+00 s=1 e=0 z=0  None .sdata2    @4051                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4051 = 47.0f;
+SECTION_SDATA2 static f32 lit_4051 = 47.0f;
 
 /* 804558A8-804558AC 0004+00 s=5 e=0 z=0  None .sdata2    @4052                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4052 = 0.5f;
+SECTION_SDATA2 static f32 lit_4052 = 0.5f;
 
 /* 804558AC-804558B0 0004+00 s=2 e=0 z=0  None .sdata2    @4053                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4053 = 9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4053 = 9.0f / 10.0f;
 
 /* 804558B0-804558B4 0004+00 s=1 e=0 z=0  None .sdata2    @4054                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4054 = 41.0f;
+SECTION_SDATA2 static f32 lit_4054 = 41.0f;
 
 /* 804558B4-804558B8 0004+00 s=2 e=0 z=0  None .sdata2    @4055                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4055 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4055 = 3.0f / 10.0f;
 
 /* 804558B8-804558BC 0004+00 s=3 e=0 z=0  None .sdata2    @4056                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4056 = -1.0f;
+SECTION_SDATA2 static f32 lit_4056 = -1.0f;
 
 /* 804558BC-804558C0 0004+00 s=2 e=0 z=0  None .sdata2    @4057                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4057 = 400.0f;
+SECTION_SDATA2 static f32 lit_4057 = 400.0f;
 
 /* 804558C0-804558C4 0004+00 s=2 e=0 z=0  None .sdata2    @4058                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4058 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4058 = 4.0f / 5.0f;
 
 /* 804558C4-804558C8 0004+00 s=2 e=0 z=0  None .sdata2    @4059                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4059 = 11.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4059 = 11.0f / 10.0f;
 
 /* 804558C8-804558CC 0004+00 s=1 e=0 z=0  None .sdata2    @4060                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4060 = 15.0f;
+SECTION_SDATA2 static f32 lit_4060 = 15.0f;
 
 /* 804558CC-804558D0 0004+00 s=1 e=0 z=0  None .sdata2    @4061                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4061 = 60.0f;
+SECTION_SDATA2 static f32 lit_4061 = 60.0f;
 
 /* 804558D0-804558D4 0004+00 s=2 e=0 z=0  None .sdata2    @4062                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4062 = 127.0f;
+SECTION_SDATA2 static f32 lit_4062 = 127.0f;
 
 /* 804558D4-804558D8 0004+00 s=2 e=0 z=0  None .sdata2    @4063                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4063 = 6.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4063 = 6.0f / 5.0f;
 
 /* 804558D8-804558E0 0008+00 s=2 e=0 z=0  None .sdata2    @4067                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4067 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4067 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 804558E0-804558E8 0008+00 s=2 e=0 z=0  None .sdata2    @4070                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4070 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4070 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802AB984-802AC50C 0B88+00 s=1 e=196 z=0  None .text      seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc               */
 #pragma push
@@ -413,7 +413,7 @@ asm void Z2SeMgr::seStart(JAISoundID param_0, Vec const* param_1, u32 param_2, s
 
 /* ############################################################################################## */
 /* 803C9D98-803C9DF8 0060+00 s=1 e=0 z=0  None .data      @4619                                                        */
-SECTION_DATA static void* Z2SeMgr__lit_4619[24] = {
+SECTION_DATA static void* lit_4619[24] = {
 	/* 0    */ (void*)(((char*)seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc)+0xF78),
 	/* 1    */ (void*)(((char*)seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc)+0xF78),
 	/* 2    */ (void*)(((char*)seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc)+0xF78),
@@ -441,104 +441,104 @@ SECTION_DATA static void* Z2SeMgr__lit_4619[24] = {
 };
 
 /* 804558E8-804558EC 0004+00 s=1 e=0 z=0  None .sdata2    @4586                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4586 = 25.0f;
+SECTION_SDATA2 static f32 lit_4586 = 25.0f;
 
 /* 804558EC-804558F0 0004+00 s=1 e=0 z=0  None .sdata2    @4587                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4587 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4587 = 1.0f / 10.0f;
 
 /* 804558F0-804558F4 0004+00 s=1 e=0 z=0  None .sdata2    @4588                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4588 = 10.0f;
+SECTION_SDATA2 static f32 lit_4588 = 10.0f;
 
 /* 804558F4-804558F8 0004+00 s=1 e=0 z=0  None .sdata2    @4589                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4589 = 2.0f;
+SECTION_SDATA2 static f32 lit_4589 = 2.0f;
 
 /* 804558F8-80455900 0004+04 s=2 e=0 z=0  None .sdata2    @4590                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4590[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4590[1 + 1 /* padding */] = {
 	13.0f / 10.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455900-80455908 0008+00 s=1 e=0 z=0  None .sdata2    @4591                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4591 = 0.7;
+SECTION_SDATA2 static f64 lit_4591 = 0.7;
 
 /* 80455908-80455910 0008+00 s=1 e=0 z=0  None .sdata2    @4592                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4592 = 0.0006;
+SECTION_SDATA2 static f64 lit_4592 = 0.0006;
 
 /* 80455910-80455918 0008+00 s=1 e=0 z=0  None .sdata2    @4593                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4593 = 1.0;
+SECTION_SDATA2 static f64 lit_4593 = 1.0;
 
 /* 80455918-80455920 0008+00 s=1 e=0 z=0  None .sdata2    @4594                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4594 = 0.0015;
+SECTION_SDATA2 static f64 lit_4594 = 0.0015;
 
 /* 80455920-80455928 0008+00 s=1 e=0 z=0  None .sdata2    @4595                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4595 = 0.005;
+SECTION_SDATA2 static f64 lit_4595 = 0.005;
 
 /* 80455928-80455930 0008+00 s=1 e=0 z=0  None .sdata2    @4596                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4596 = 0.3;
+SECTION_SDATA2 static f64 lit_4596 = 0.3;
 
 /* 80455930-80455938 0008+00 s=1 e=0 z=0  None .sdata2    @4597                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4597 = 0.001;
+SECTION_SDATA2 static f64 lit_4597 = 0.001;
 
 /* 80455938-8045593C 0004+00 s=1 e=0 z=0  None .sdata2    @4598                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4598 = 4000.0f;
+SECTION_SDATA2 static f32 lit_4598 = 4000.0f;
 
 /* 8045593C-80455940 0004+00 s=1 e=0 z=0  None .sdata2    @4599                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4599 = 3500.0f;
+SECTION_SDATA2 static f32 lit_4599 = 3500.0f;
 
 /* 80455940-80455944 0004+00 s=1 e=0 z=0  None .sdata2    @4600                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4600 = 26.0f;
+SECTION_SDATA2 static f32 lit_4600 = 26.0f;
 
 /* 80455944-80455948 0004+00 s=1 e=0 z=0  None .sdata2    @4601                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4601 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4601 = 3.0f / 5.0f;
 
 /* 80455948-8045594C 0004+00 s=1 e=0 z=0  None .sdata2    @4602                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4602 = 64.0f;
+SECTION_SDATA2 static f32 lit_4602 = 64.0f;
 
 /* 8045594C-80455950 0004+00 s=1 e=0 z=0  None .sdata2    @4603                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4603 = 4500.0f;
+SECTION_SDATA2 static f32 lit_4603 = 4500.0f;
 
 /* 80455950-80455954 0004+00 s=1 e=0 z=0  None .sdata2    @4604                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4604 = 40.0f;
+SECTION_SDATA2 static f32 lit_4604 = 40.0f;
 
 /* 80455954-80455958 0004+00 s=1 e=0 z=0  None .sdata2    @4605                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4605 = 120.0f;
+SECTION_SDATA2 static f32 lit_4605 = 120.0f;
 
 /* 80455958-80455960 0004+04 s=1 e=0 z=0  None .sdata2    @4606                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4606[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4606[1 + 1 /* padding */] = {
 	5.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455960-80455968 0008+00 s=1 e=0 z=0  None .sdata2    @4607                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4607 = 0.5;
+SECTION_SDATA2 static f64 lit_4607 = 0.5;
 
 /* 80455968-80455970 0008+00 s=1 e=0 z=0  None .sdata2    @4608                                                        */
-SECTION_SDATA2 static f64 Z2SeMgr__lit_4608 = 3.0;
+SECTION_SDATA2 static f64 lit_4608 = 3.0;
 
 /* 80455970-80455978 0008+00 s=1 e=0 z=0  None .sdata2    @4609                                                        */
-SECTION_SDATA2 static u8 Z2SeMgr__lit_4609[8] = {
+SECTION_SDATA2 static u8 lit_4609[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455978-8045597C 0004+00 s=1 e=0 z=0  None .sdata2    @4610                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4610 = 2000.0f;
+SECTION_SDATA2 static f32 lit_4610 = 2000.0f;
 
 /* 8045597C-80455980 0004+00 s=1 e=0 z=0  None .sdata2    @4611                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4611 = 5000.0f;
+SECTION_SDATA2 static f32 lit_4611 = 5000.0f;
 
 /* 80455980-80455984 0004+00 s=1 e=0 z=0  None .sdata2    @4612                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4612 = 9.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4612 = 9.0f / 20.0f;
 
 /* 80455984-80455988 0004+00 s=1 e=0 z=0  None .sdata2    @4613                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4613 = 50.0f;
+SECTION_SDATA2 static f32 lit_4613 = 50.0f;
 
 /* 80455988-8045598C 0004+00 s=1 e=0 z=0  None .sdata2    @4614                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4614 = 600.0f;
+SECTION_SDATA2 static f32 lit_4614 = 600.0f;
 
 /* 8045598C-80455990 0004+00 s=1 e=0 z=0  None .sdata2    @4615                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_4615 = 90.0f;
+SECTION_SDATA2 static f32 lit_4615 = 90.0f;
 
 /* 802AC50C-802AD8B0 13A4+00 s=3 e=19 z=0  None .text      seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc          */
 #pragma push
@@ -630,7 +630,7 @@ asm void Z2SeMgr::menuInSe() {
 
 /* ############################################################################################## */
 /* 8039B9F0-8039B9FC 000C+00 s=1 e=0 z=0  None .rodata    @5054                                                        */
-SECTION_RODATA static u8 const Z2SeMgr__lit_5054[12] = {
+SECTION_RODATA static u8 const lit_5054[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
 
@@ -650,12 +650,12 @@ asm void Z2SeMgr::setLevObjSE(u32 param_0, Vec* param_1, s8 param_2) {
 
 /* ############################################################################################## */
 /* 8039B9FC-8039BA08 000C+00 s=1 e=0 z=0  None .rodata    @5100                                                        */
-SECTION_RODATA static u8 const Z2SeMgr__lit_5100[12] = {
+SECTION_RODATA static u8 const lit_5100[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
 
 /* 80455994-80455998 0004+00 s=1 e=0 z=0  None .sdata2    @5134                                                        */
-SECTION_SDATA2 static f32 Z2SeMgr__lit_5134 = 3.0f;
+SECTION_SDATA2 static f32 lit_5134 = 3.0f;
 
 /* 802ADFF4-802AE184 0190+00 s=1 e=0 z=0  None .text      setMultiTriggerSE__7Z2SeMgrFUlP3VecSc                        */
 #pragma push

@@ -8,7 +8,7 @@ lbl_8014997C:
 /* 80149994 00000018  3B E0 00 00 */	li r31, 0
 /* 80149998 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8014999C 00000020  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
-/* 801499A0 00000024  88 1D 4F AD */	lbz r0, 0x4fad(r29)
+/* 801499A0 00000024  88 1D 4F AD */	lbz r0, 0x4fad(r29)	/* effective address: 8040B16D */
 /* 801499A4 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 801499A8 0000002C  41 82 01 C4 */	beq lbl_80149B6C
 /* 801499AC 00000030  A0 1E 00 F8 */	lhz r0, 0xf8(r30)
@@ -51,8 +51,8 @@ lbl_801499EC:
 lbl_80149A38:
 /* 80149A38 00000000  38 7D 4F F8 */	addi r3, r29, 0x4ff8
 /* 80149A3C 00000004  4B EF E9 AD */	bl getRunEventName__16dEvent_manager_cFv
-/* 80149A40 00000008  3C 80 80 39 */	lis r4, d_a_d_a_npc__stringBase0@ha
-/* 80149A44 0000000C  38 84 27 10 */	addi r4, r4, d_a_d_a_npc__stringBase0@l
+/* 80149A40 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 80149A44 0000000C  38 84 27 10 */	addi r4, r4, stringBase0@l
 /* 80149A48 00000010  48 21 EF 4D */	bl strcmp
 /* 80149A4C 00000014  2C 03 00 00 */	cmpwi r3, 0
 /* 80149A50 00000018  40 82 00 38 */	bne lbl_80149A88
@@ -98,7 +98,7 @@ lbl_80149AA0:
 /* 80149AE8 00000048  93 9E 0B 5C */	stw r28, 0xb5c(r30)
 /* 80149AEC 0000004C  7C 1D E2 14 */	add r0, r29, r28
 /* 80149AF0 00000050  90 1E 0B 58 */	stw r0, 0xb58(r30)
-/* 80149AF4 00000054  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 80149AF4 00000054  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 80149AF8 00000058  D0 1E 0B 68 */	stfs f0, 0xb68(r30)
 lbl_80149AFC:
 /* 80149AFC 00000000  83 9E 0B 80 */	lwz r28, 0xb80(r30)
@@ -113,7 +113,7 @@ lbl_80149AFC:
 /* 80149B20 00000024  4B FF BD 79 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
 /* 80149B24 00000028  93 9E 0B 80 */	stw r28, 0xb80(r30)
 /* 80149B28 0000002C  93 BE 0B 7C */	stw r29, 0xb7c(r30)
-/* 80149B2C 00000030  C0 02 99 E8 */	lfs f0, d_a_d_a_npc__lit_4148(r2)
+/* 80149B2C 00000030  C0 02 99 E8 */	lfs f0, lit_4148(r2)
 /* 80149B30 00000034  D0 1E 0B 8C */	stfs f0, 0xb8c(r30)
 /* 80149B34 00000038  48 00 00 2C */	b lbl_80149B60
 lbl_80149B38:

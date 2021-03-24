@@ -61,10 +61,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -103,19 +103,7 @@ extern "C" void setExplainString__19dMenu_Calibration_cFUs(); // 1
 extern "C" void setHIO__19dMenu_Calibration_cFb(); // 1
 extern "C" void draw__19dMenu_Calibration_cFv(); // 1
 extern "C" void __sinit_d_menu_calibration_cpp(); // 1
-extern "C" extern char const* const d_menu_d_menu_calibration__stringBase0;
-extern "C" extern void* d_menu_d_menu_calibration__lit_3799[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3800[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3801[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3802[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3803[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3804[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3805[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3806[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3807[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3808[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3809[3];
-extern "C" extern void* d_menu_d_menu_calibration__lit_3810[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -153,54 +141,54 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 803BC238-803BC244 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_menu_d_menu_calibration__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC244-803BC250 000C+00 s=0 e=0 z=0  None .data      @3799                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3799[3] = {
+/* 803BC244-803BC250 000C+00 s=1 e=0 z=0  None .data      @3799                                                        */
+SECTION_DATA static void* lit_3799[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step1_wait_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC250-803BC25C 000C+00 s=0 e=0 z=0  None .data      @3800                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3800[3] = {
+/* 803BC250-803BC25C 000C+00 s=1 e=0 z=0  None .data      @3800                                                        */
+SECTION_DATA static void* lit_3800[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step1_move_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC25C-803BC268 000C+00 s=0 e=0 z=0  None .data      @3801                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3801[3] = {
+/* 803BC25C-803BC268 000C+00 s=1 e=0 z=0  None .data      @3801                                                        */
+SECTION_DATA static void* lit_3801[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step2_wait_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC268-803BC274 000C+00 s=0 e=0 z=0  None .data      @3802                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3802[3] = {
+/* 803BC268-803BC274 000C+00 s=1 e=0 z=0  None .data      @3802                                                        */
+SECTION_DATA static void* lit_3802[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step2_move_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC274-803BC280 000C+00 s=0 e=0 z=0  None .data      @3803                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3803[3] = {
+/* 803BC274-803BC280 000C+00 s=1 e=0 z=0  None .data      @3803                                                        */
+SECTION_DATA static void* lit_3803[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step3_wait_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC280-803BC28C 000C+00 s=0 e=0 z=0  None .data      @3804                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3804[3] = {
+/* 803BC280-803BC28C 000C+00 s=1 e=0 z=0  None .data      @3804                                                        */
+SECTION_DATA static void* lit_3804[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step3_move_init__19dMenu_Calibration_cFv,
 };
 
-/* 803BC28C-803BC2D4 0048+00 s=1 e=0 z=0  None .data      map_init_process                                             */
-SECTION_DATA static u8 d_menu_d_menu_calibration__map_init_process[72] = {
+/* 803BC28C-803BC2D4 0048+00 s=2 e=0 z=0  None .data      map_init_process                                             */
+SECTION_DATA static u8 map_init_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -208,50 +196,50 @@ SECTION_DATA static u8 d_menu_d_menu_calibration__map_init_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BC2D4-803BC2E0 000C+00 s=0 e=0 z=0  None .data      @3805                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3805[3] = {
+/* 803BC2D4-803BC2E0 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
+SECTION_DATA static void* lit_3805[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step1_wait_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC2E0-803BC2EC 000C+00 s=0 e=0 z=0  None .data      @3806                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3806[3] = {
+/* 803BC2E0-803BC2EC 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
+SECTION_DATA static void* lit_3806[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step1_move_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC2EC-803BC2F8 000C+00 s=0 e=0 z=0  None .data      @3807                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3807[3] = {
+/* 803BC2EC-803BC2F8 000C+00 s=1 e=0 z=0  None .data      @3807                                                        */
+SECTION_DATA static void* lit_3807[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step2_wait_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC2F8-803BC304 000C+00 s=0 e=0 z=0  None .data      @3808                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3808[3] = {
+/* 803BC2F8-803BC304 000C+00 s=1 e=0 z=0  None .data      @3808                                                        */
+SECTION_DATA static void* lit_3808[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step2_move_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC304-803BC310 000C+00 s=0 e=0 z=0  None .data      @3809                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3809[3] = {
+/* 803BC304-803BC310 000C+00 s=1 e=0 z=0  None .data      @3809                                                        */
+SECTION_DATA static void* lit_3809[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step3_wait_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC310-803BC31C 000C+00 s=0 e=0 z=0  None .data      @3810                                                        */
-SECTION_DATA void* d_menu_d_menu_calibration__lit_3810[3] = {
+/* 803BC310-803BC31C 000C+00 s=1 e=0 z=0  None .data      @3810                                                        */
+SECTION_DATA static void* lit_3810[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)step3_move_move__19dMenu_Calibration_cFv,
 };
 
-/* 803BC31C-803BC364 0048+00 s=1 e=0 z=0  None .data      map_move_process                                             */
-SECTION_DATA static u8 d_menu_d_menu_calibration__map_move_process[72] = {
+/* 803BC31C-803BC364 0048+00 s=2 e=0 z=0  None .data      map_move_process                                             */
+SECTION_DATA static u8 map_move_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -306,7 +294,7 @@ asm void dMenu_Calibration_c::_draw() {
 
 /* ############################################################################################## */
 /* 80453F10-80453F14 0004+00 s=5 e=0 z=0  None .sdata2    @3847                                                        */
-SECTION_SDATA2 static u8 d_menu_d_menu_calibration__lit_3847[4] = {
+SECTION_SDATA2 static u8 lit_3847[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -323,10 +311,10 @@ asm void dMenu_Calibration_c::step1_wait_init() {
 
 /* ############################################################################################## */
 /* 80453F14-80453F18 0004+00 s=6 e=0 z=0  None .sdata2    @3885                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_calibration__lit_3885 = 1.0f;
+SECTION_SDATA2 static f32 lit_3885 = 1.0f;
 
 /* 80453F18-80453F20 0008+00 s=3 e=0 z=0  None .sdata2    @3887                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_calibration__lit_3887 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3887 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 801AEF60-801AF084 0124+00 s=1 e=0 z=0  None .text      step1_wait_move__19dMenu_Calibration_cFv                     */
 #pragma push
@@ -352,7 +340,7 @@ asm void dMenu_Calibration_c::step1_move_init() {
 
 /* ############################################################################################## */
 /* 80453F20-80453F28 0004+04 s=3 e=0 z=0  None .sdata2    @3911                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_calibration__lit_3911[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3911[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,

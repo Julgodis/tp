@@ -96,9 +96,9 @@ lbl_8017A3F8:
 /* 8017A400 00000008  88 19 0A ED */	lbz r0, 0xaed(r25)
 /* 8017A404 0000000C  28 00 00 FF */	cmplwi r0, 0xff
 /* 8017A408 00000010  41 82 00 2C */	beq lbl_8017A434
-/* 8017A40C 00000014  C0 42 9D 38 */	lfs f2, d_d_camera__lit_9399(r2)
+/* 8017A40C 00000014  C0 42 9D 38 */	lfs f2, lit_9399(r2)
 /* 8017A410 00000018  7C 00 07 74 */	extsb r0, r0
-/* 8017A414 0000001C  C8 22 9C 98 */	lfd f1, d_d_camera__lit_4448(r2)
+/* 8017A414 0000001C  C8 22 9C 98 */	lfd f1, lit_4448(r2)
 /* 8017A418 00000020  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8017A41C 00000024  90 01 02 5C */	stw r0, 0x25c(r1)
 /* 8017A420 00000028  3C 00 43 30 */	lis r0, 0x4330
@@ -167,7 +167,7 @@ lbl_8017A500:
 /* 8017A50C 0000000C  38 61 00 50 */	addi r3, r1, 0x50
 /* 8017A510 00000010  38 99 00 5C */	addi r4, r25, 0x5c
 /* 8017A514 00000014  48 0F 72 DD */	bl __ct__7cSGlobeFRC7cSGlobe
-/* 8017A518 00000018  C0 02 9D 38 */	lfs f0, d_d_camera__lit_9399(r2)
+/* 8017A518 00000018  C0 02 9D 38 */	lfs f0, lit_9399(r2)
 /* 8017A51C 0000001C  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 8017A520 00000020  38 61 01 60 */	addi r3, r1, 0x160
 /* 8017A524 00000024  7F 24 CB 78 */	mr r4, r25
@@ -623,8 +623,8 @@ lbl_8017AB7C:
 /* 8017ABD0 00000054  48 0F 63 F9 */	bl __ct__7cSAngleFf
 /* 8017ABD4 00000058  3C 80 80 03 */	lis r4, __dt__7cSAngleFv@ha
 /* 8017ABD8 0000005C  38 84 05 10 */	addi r4, r4, __dt__7cSAngleFv@l
-/* 8017ABDC 00000060  3C A0 80 43 */	lis r5, d_d_camera__lit_14615@ha
-/* 8017ABE0 00000064  38 A5 C9 B8 */	addi r5, r5, d_d_camera__lit_14615@l
+/* 8017ABDC 00000060  3C A0 80 43 */	lis r5, lit_14615@ha
+/* 8017ABE0 00000064  38 A5 C9 B8 */	addi r5, r5, lit_14615@l
 /* 8017ABE4 00000068  48 1E 70 41 */	bl __register_global_object
 /* 8017ABE8 0000006C  38 00 00 01 */	li r0, 1
 /* 8017ABEC 00000070  98 0D 8A C2 */	stb r0, struct_80451040+0x2(r13)

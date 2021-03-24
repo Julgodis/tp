@@ -11,7 +11,7 @@ lbl_800E0BE4:
 /* 800E0C08 00000024  C0 3F 20 58 */	lfs f1, 0x2058(r31)
 /* 800E0C0C 00000028  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E0C10 0000002C  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E0C14 00000030  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800E0C14 00000030  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038E6EC */
 /* 800E0C18 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E0C1C 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 800E0C20 00000004  41 82 00 10 */	beq lbl_800E0C30

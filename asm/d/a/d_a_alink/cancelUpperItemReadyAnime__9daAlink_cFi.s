@@ -6,7 +6,7 @@ lbl_800B71EC:
 /* 800B71FC 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800B7200 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B7204 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B7208 0000001C  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B7208 0000001C  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B720C 00000020  28 00 00 12 */	cmplwi r0, 0x12
 /* 800B7210 00000024  41 82 00 0C */	beq lbl_800B721C
 /* 800B7214 00000028  2C 04 00 00 */	cmpwi r4, 0
@@ -36,9 +36,9 @@ lbl_800B7258:
 /* 800B7268 00000010  38 A0 00 00 */	li r5, 0
 /* 800B726C 00000014  38 C0 00 00 */	li r6, 0
 /* 800B7270 00000018  38 E0 00 00 */	li r7, 0
-/* 800B7274 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800B7274 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800B7278 00000020  FC 40 08 90 */	fmr f2, f1
-/* 800B727C 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800B727C 00000024  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800B7280 00000028  FC 80 18 90 */	fmr f4, f3
 /* 800B7284 0000002C  39 00 00 00 */	li r8, 0
 /* 800B7288 00000030  48 1F 46 FD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

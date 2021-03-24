@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-struct JAISoundHandle {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -24,6 +18,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundStarter {
@@ -151,10 +151,10 @@ asm void Z2SoundStarter::startSound(JAISoundID param_0, JAISoundHandle* param_1,
 
 /* ############################################################################################## */
 /* 80455864-80455868 0004+00 s=1 e=0 z=0  None .sdata2    @3713                                                        */
-SECTION_SDATA2 static f32 Z2SoundStarter__lit_3713 = 0.5f;
+SECTION_SDATA2 static f32 lit_3713 = 0.5f;
 
 /* 80455868-80455870 0008+00 s=1 e=0 z=0  None .sdata2    @3717                                                        */
-SECTION_SDATA2 static f64 Z2SoundStarter__lit_3717 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3717 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802AAC3C-802AAEDC 02A0+00 s=2 e=2 z=0  None .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push

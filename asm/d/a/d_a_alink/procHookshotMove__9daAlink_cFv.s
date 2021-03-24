@@ -12,7 +12,7 @@ lbl_8010BCA4:
 /* 8010BCCC 00000014  4B FA E4 05 */	bl checkNextAction__9daAlink_cFi
 /* 8010BCD0 00000018  2C 03 00 00 */	cmpwi r3, 0
 /* 8010BCD4 0000001C  40 82 00 9C */	bne lbl_8010BD70
-/* 8010BCD8 00000020  C3 E2 92 BC */	lfs f31, d_a_d_a_alink__lit_6041(r2)
+/* 8010BCD8 00000020  C3 E2 92 BC */	lfs f31, lit_6041(r2)
 /* 8010BCDC 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8010BCE0 00000028  4B FA 7C 25 */	bl checkZeroSpeedF__9daAlink_cCFv
 /* 8010BCE4 0000002C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -27,7 +27,7 @@ lbl_8010BCA4:
 /* 8010BD08 00000050  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 8010BD0C 00000054  3C 60 80 39 */	lis r3, m__19daAlinkHIO_basic_c0@ha
 /* 8010BD10 00000058  38 63 D6 64 */	addi r3, r3, m__19daAlinkHIO_basic_c0@l
-/* 8010BD14 0000005C  C3 E3 00 18 */	lfs f31, 0x18(r3)
+/* 8010BD14 0000005C  C3 E3 00 18 */	lfs f31, 0x18(r3)	/* effective address: 8038D67C */
 /* 8010BD18 00000060  48 00 00 10 */	b lbl_8010BD28
 lbl_8010BD1C:
 /* 8010BD1C 00000000  80 1F 31 A0 */	lwz r0, 0x31a0(r31)

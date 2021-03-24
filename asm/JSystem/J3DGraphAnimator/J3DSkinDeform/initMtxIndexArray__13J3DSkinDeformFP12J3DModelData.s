@@ -134,8 +134,8 @@ lbl_8032D110:
 /* 8032D114 00000004  80 04 00 04 */	lwz r0, 4(r4)
 /* 8032D118 00000008  2C 00 00 03 */	cmpwi r0, 3
 /* 8032D11C 0000000C  41 82 00 68 */	beq lbl_8032D184
-/* 8032D120 00000010  3C 60 80 3A */	lis r3, J3DSkinDeform__stringBase0@ha
-/* 8032D124 00000014  38 63 20 28 */	addi r3, r3, J3DSkinDeform__stringBase0@l
+/* 8032D120 00000010  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 8032D124 00000014  38 63 20 28 */	addi r3, r3, stringBase0@l
 /* 8032D128 00000018  4C C6 31 82 */	crclr 6
 /* 8032D12C 0000001C  4B CD 99 91 */	bl OSReport
 /* 8032D130 00000020  38 60 00 06 */	li r3, 6
@@ -145,8 +145,8 @@ lbl_8032D138:
 /* 8032D13C 00000004  80 04 00 04 */	lwz r0, 4(r4)
 /* 8032D140 00000008  2C 00 00 03 */	cmpwi r0, 3
 /* 8032D144 0000000C  41 82 00 40 */	beq lbl_8032D184
-/* 8032D148 00000010  3C 60 80 3A */	lis r3, J3DSkinDeform__stringBase0@ha
-/* 8032D14C 00000014  38 63 20 28 */	addi r3, r3, J3DSkinDeform__stringBase0@l
+/* 8032D148 00000010  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 8032D14C 00000014  38 63 20 28 */	addi r3, r3, stringBase0@l
 /* 8032D150 00000018  4C C6 31 82 */	crclr 6
 /* 8032D154 0000001C  4B CD 99 69 */	bl OSReport
 /* 8032D158 00000020  38 60 00 06 */	li r3, 6
@@ -155,8 +155,8 @@ lbl_8032D160:
 /* 8032D160 00000000  80 04 00 04 */	lwz r0, 4(r4)
 /* 8032D164 00000004  2C 00 00 03 */	cmpwi r0, 3
 /* 8032D168 00000008  41 82 00 1C */	beq lbl_8032D184
-/* 8032D16C 0000000C  3C 60 80 3A */	lis r3, J3DSkinDeform__stringBase0@ha
-/* 8032D170 00000010  38 63 20 28 */	addi r3, r3, J3DSkinDeform__stringBase0@l
+/* 8032D16C 0000000C  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 8032D170 00000010  38 63 20 28 */	addi r3, r3, stringBase0@l
 /* 8032D174 00000014  4C C6 31 82 */	crclr 6
 /* 8032D178 00000018  4B CD 99 45 */	bl OSReport
 /* 8032D17C 0000001C  38 60 00 06 */	li r3, 6

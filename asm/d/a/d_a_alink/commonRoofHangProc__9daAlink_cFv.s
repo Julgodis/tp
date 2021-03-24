@@ -38,7 +38,7 @@ lbl_801007E0:
 /* 801007FC 0000001C  38 80 00 01 */	li r4, 1
 /* 80100800 00000020  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 80100804 00000024  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 80100808 00000028  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 80100808 00000028  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 8010080C 0000002C  4B FC 62 3D */	bl procFallInit__9daAlink_cFif
 /* 80100810 00000030  48 00 00 BC */	b lbl_801008CC
 lbl_80100814:
@@ -46,7 +46,7 @@ lbl_80100814:
 /* 80100818 00000004  C0 22 95 A4 */	lfs f1, lit_25916(r2)
 /* 8010081C 00000008  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 80100820 0000000C  EC 21 00 2A */	fadds f1, f1, f0
-/* 80100824 00000010  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 80100824 00000010  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 80100828 00000014  EC 21 00 28 */	fsubs f1, f1, f0
 /* 8010082C 00000018  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80100830 0000001C  D0 01 00 08 */	stfs f0, 8(r1)
@@ -85,7 +85,7 @@ lbl_801008AC:
 /* 801008B0 00000004  38 80 00 01 */	li r4, 1
 /* 801008B4 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 801008B8 0000000C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 801008BC 00000010  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 801008BC 00000010  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 801008C0 00000014  4B FC 61 89 */	bl procFallInit__9daAlink_cFif
 /* 801008C4 00000018  48 00 00 08 */	b lbl_801008CC
 lbl_801008C8:

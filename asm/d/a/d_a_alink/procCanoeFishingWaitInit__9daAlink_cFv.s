@@ -21,9 +21,9 @@ lbl_800F6498:
 /* 800F64AC 00000014  7F E3 FB 78 */	mr r3, r31
 /* 800F64B0 00000018  38 80 00 5D */	li r4, 0x5d
 /* 800F64B4 0000001C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800F64B8 00000020  C0 42 92 BC */	lfs f2, d_a_d_a_alink__lit_6041(r2)
+/* 800F64B8 00000020  C0 42 92 BC */	lfs f2, lit_6041(r2)
 /* 800F64BC 00000024  4B FB 6E ED */	bl setUpperAnimeBaseSpeed__9daAlink_cFUsff
-/* 800F64C0 00000028  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 800F64C0 00000028  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800F64C4 0000002C  A8 7F 05 9E */	lha r3, 0x59e(r31)
 /* 800F64C8 00000030  38 03 40 00 */	addi r0, r3, 0x4000
 /* 800F64CC 00000034  C8 42 92 B0 */	lfd f2, lit_6025(r2)

@@ -9,8 +9,8 @@ lbl_802D45A0:
 /* 802D45BC 0000001C  38 63 43 54 */	addi r3, r3, sVolumeList__13JKRFileLoader@l
 /* 802D45C0 00000020  3C 80 80 2D */	lis r4, func_802D45E4@ha
 /* 802D45C4 00000024  38 84 45 E4 */	addi r4, r4, func_802D45E4@l
-/* 802D45C8 00000028  3C A0 80 43 */	lis r5, JKRFileLoader__lit_2182@ha
-/* 802D45CC 0000002C  38 A5 43 48 */	addi r5, r5, JKRFileLoader__lit_2182@l
+/* 802D45C8 00000028  3C A0 80 43 */	lis r5, lit_2182@ha
+/* 802D45CC 0000002C  38 A5 43 48 */	addi r5, r5, lit_2182@l
 /* 802D45D0 00000030  48 08 D6 55 */	bl __register_global_object
 /* 802D45D4 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D45D8 00000038  7C 08 03 A6 */	mtlr r0

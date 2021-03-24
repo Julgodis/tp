@@ -397,7 +397,7 @@ lbl_80209B1C:
 /* 80209B2C 00000010  7C 79 02 14 */	add r3, r25, r0
 /* 80209B30 00000014  B0 83 04 B8 */	sth r4, 0x4b8(r3)
 /* 80209B34 00000018  98 85 04 BC */	stb r4, 0x4bc(r5)
-/* 80209B38 0000001C  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 80209B38 0000001C  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 80209B3C 00000020  57 E0 10 3A */	slwi r0, r31, 2
 /* 80209B40 00000024  7C 79 02 14 */	add r3, r25, r0
 /* 80209B44 00000028  D0 03 02 E8 */	stfs f0, 0x2e8(r3)
@@ -425,7 +425,7 @@ lbl_80209B7C:
 /* 80209B98 0000001C  88 19 04 BF */	lbz r0, 0x4bf(r25)
 /* 80209B9C 00000020  28 00 00 16 */	cmplwi r0, 0x16
 /* 80209BA0 00000024  40 82 00 18 */	bne lbl_80209BB8
-/* 80209BA4 00000028  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 80209BA4 00000028  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 80209BA8 0000002C  57 E0 10 3A */	slwi r0, r31, 2
 /* 80209BAC 00000030  7C 79 02 14 */	add r3, r25, r0
 /* 80209BB0 00000034  D0 03 02 F4 */	stfs f0, 0x2f4(r3)
@@ -433,17 +433,17 @@ lbl_80209B7C:
 lbl_80209BB8:
 /* 80209BB8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80209BBC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80209BC0 00000008  88 03 5E 4B */	lbz r0, 0x5e4b(r3)
+/* 80209BC0 00000008  88 03 5E 4B */	lbz r0, 0x5e4b(r3)	/* effective address: 8040C00B */
 /* 80209BC4 0000000C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 80209BC8 00000010  41 82 00 14 */	beq lbl_80209BDC
-/* 80209BCC 00000014  C0 02 AD 48 */	lfs f0, d_meter_d_meter_button__lit_4146(r2)
+/* 80209BCC 00000014  C0 02 AD 48 */	lfs f0, lit_4146(r2)
 /* 80209BD0 00000018  D0 19 02 F8 */	stfs f0, 0x2f8(r25)
 /* 80209BD4 0000001C  D0 19 02 F4 */	stfs f0, 0x2f4(r25)
 /* 80209BD8 00000020  48 00 00 44 */	b lbl_80209C1C
 lbl_80209BDC:
 /* 80209BDC 00000000  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80209BE0 00000004  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80209BE4 00000008  C0 23 0E 64 */	lfs f1, 0xe64(r3)
+/* 80209BE4 00000008  C0 23 0E 64 */	lfs f1, 0xe64(r3)	/* effective address: 8042FA2C */
 /* 80209BE8 0000000C  C0 59 01 E4 */	lfs f2, 0x1e4(r25)
 /* 80209BEC 00000010  C0 19 01 E8 */	lfs f0, 0x1e8(r25)
 /* 80209BF0 00000014  EC 02 00 2A */	fadds f0, f2, f0

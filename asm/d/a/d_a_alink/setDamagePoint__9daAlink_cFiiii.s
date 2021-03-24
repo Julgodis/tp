@@ -10,7 +10,7 @@ lbl_800D72BC:
 /* 800D72DC 00000020  41 81 00 48 */	bgt lbl_800D7324
 /* 800D72E0 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D72E4 00000028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D72E8 0000002C  C0 43 5D C0 */	lfs f2, 0x5dc0(r3)
+/* 800D72E8 0000002C  C0 43 5D C0 */	lfs f2, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 800D72EC 00000030  7C 1E 00 D0 */	neg r0, r30
 /* 800D72F0 00000034  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800D72F4 00000038  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -20,9 +20,9 @@ lbl_800D72BC:
 /* 800D7304 00000048  C8 01 00 08 */	lfd f0, 8(r1)
 /* 800D7308 0000004C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 800D730C 00000050  EC 02 00 2A */	fadds f0, f2, f0
-/* 800D7310 00000054  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)
+/* 800D7310 00000054  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 800D7314 00000058  38 00 00 00 */	li r0, 0
-/* 800D7318 0000005C  98 03 5E B6 */	stb r0, 0x5eb6(r3)
+/* 800D7318 0000005C  98 03 5E B6 */	stb r0, 0x5eb6(r3)	/* effective address: 8040C076 */
 /* 800D731C 00000060  38 60 00 00 */	li r3, 0
 /* 800D7320 00000064  48 00 01 40 */	b lbl_800D7460
 lbl_800D7324:
@@ -40,7 +40,7 @@ lbl_800D7324:
 /* 800D7350 0000002C  FC 00 08 1E */	fctiwz f0, f1
 /* 800D7354 00000030  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 800D7358 00000034  83 C1 00 14 */	lwz r30, 0x14(r1)
-/* 800D735C 00000038  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800D735C 00000038  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800D7360 0000003C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 800D7364 00000040  FC 00 00 1E */	fctiwz f0, f0
 /* 800D7368 00000044  D8 01 00 18 */	stfd f0, 0x18(r1)
@@ -64,16 +64,16 @@ lbl_800D739C:
 /* 800D73A8 0000000C  41 82 00 24 */	beq lbl_800D73CC
 /* 800D73AC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D73B0 00000014  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800D73B4 00000018  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
+/* 800D73B4 00000018  80 64 5D C4 */	lwz r3, 0x5dc4(r4)	/* effective address: 8040BF84 */
 /* 800D73B8 0000001C  7C 1E 00 D0 */	neg r0, r30
 /* 800D73BC 00000020  1C 00 00 0A */	mulli r0, r0, 0xa
 /* 800D73C0 00000024  7C 03 02 14 */	add r0, r3, r0
-/* 800D73C4 00000028  90 04 5D C4 */	stw r0, 0x5dc4(r4)
+/* 800D73C4 00000028  90 04 5D C4 */	stw r0, 0x5dc4(r4)	/* effective address: 8040BF84 */
 /* 800D73C8 0000002C  48 00 00 40 */	b lbl_800D7408
 lbl_800D73CC:
 /* 800D73CC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D73D0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D73D4 00000008  C0 43 5D C0 */	lfs f2, 0x5dc0(r3)
+/* 800D73D4 00000008  C0 43 5D C0 */	lfs f2, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 800D73D8 0000000C  7C 1E 00 D0 */	neg r0, r30
 /* 800D73DC 00000010  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800D73E0 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -83,9 +83,9 @@ lbl_800D73CC:
 /* 800D73F0 00000024  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 800D73F4 00000028  EC 00 08 28 */	fsubs f0, f0, f1
 /* 800D73F8 0000002C  EC 02 00 2A */	fadds f0, f2, f0
-/* 800D73FC 00000030  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)
+/* 800D73FC 00000030  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 800D7400 00000034  38 00 00 00 */	li r0, 0
-/* 800D7404 00000038  98 03 5E B6 */	stb r0, 0x5eb6(r3)
+/* 800D7404 00000038  98 03 5E B6 */	stb r0, 0x5eb6(r3)	/* effective address: 8040C076 */
 lbl_800D7408:
 /* 800D7408 00000000  80 1D 05 84 */	lwz r0, 0x584(r29)
 /* 800D740C 00000004  60 00 04 00 */	ori r0, r0, 0x400
@@ -96,7 +96,7 @@ lbl_800D7408:
 /* 800D7420 00000018  41 82 00 34 */	beq lbl_800D7454
 /* 800D7424 0000001C  3C 60 80 39 */	lis r3, m__20daAlinkHIO_damage_c0@ha
 /* 800D7428 00000020  38 63 E5 4C */	addi r3, r3, m__20daAlinkHIO_damage_c0@l
-/* 800D742C 00000024  A8 03 00 2A */	lha r0, 0x2a(r3)
+/* 800D742C 00000024  A8 03 00 2A */	lha r0, 0x2a(r3)	/* effective address: 8038E576 */
 /* 800D7430 00000028  B0 1D 05 6C */	sth r0, 0x56c(r29)
 /* 800D7434 0000002C  A8 7D 05 6C */	lha r3, 0x56c(r29)
 /* 800D7438 00000030  54 60 E0 06 */	slwi r0, r3, 0x1c

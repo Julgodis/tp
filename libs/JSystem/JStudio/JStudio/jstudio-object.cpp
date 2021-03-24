@@ -282,18 +282,18 @@ extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_p
 extern "C" extern u8 const sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12];
 extern "C" extern u8 const sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16];
 extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12];
-extern "C" extern char const* const jstudio_object__stringBase0;
-extern "C" extern u8 jstudio_object__lit_745[12];
-extern "C" extern u8 jstudio_object__lit_748[12];
+extern "C" extern char const* const stringBase0;
+extern "C" extern u8 lit_745[12];
+extern "C" extern u8 lit_748[12];
 extern "C" extern u8 lit_751[12];
 extern "C" extern u8 lit_754[12];
-extern "C" extern u8 jstudio_object__lit_757[12];
+extern "C" extern u8 lit_757[12];
 extern "C" extern u8 lit_760[12];
-extern "C" extern u8 jstudio_object__lit_763[12];
-extern "C" extern u8 jstudio_object__lit_766[12];
+extern "C" extern u8 lit_763[12];
+extern "C" extern u8 lit_766[12];
 extern "C" extern u8 lit_769[12];
-extern "C" extern u8 jstudio_object__lit_772[12];
-extern "C" extern u8 jstudio_object__lit_775[12];
+extern "C" extern u8 lit_772[12];
+extern "C" extern u8 lit_775[12];
 extern "C" extern u8 lit_778[12];
 extern "C" extern u8 lit_1305[12];
 extern "C" extern u8 lit_1308[12];
@@ -302,7 +302,7 @@ extern "C" extern u8 lit_1312[12];
 extern "C" extern u8 lit_1314[12];
 extern "C" extern u8 lit_1316[12];
 extern "C" extern u8 lit_1318[12];
-extern "C" extern u8 jstudio_object__lit_1320[12];
+extern "C" extern u8 lit_1320[12];
 extern "C" extern u8 lit_1323[12];
 extern "C" extern u8 lit_1325[12];
 extern "C" extern u8 lit_1327[12];
@@ -324,7 +324,7 @@ extern "C" extern u8 lit_1696[12];
 extern "C" extern u8 lit_1698[12];
 extern "C" extern u8 lit_1701[12];
 extern "C" extern u8 lit_1703[12];
-extern "C" extern u8 jstudio_object__lit_1705[12];
+extern "C" extern u8 lit_1705[12];
 extern "C" extern u8 lit_1776[12];
 extern "C" extern u8 lit_1779[12];
 extern "C" extern u8 lit_1781[12];
@@ -335,7 +335,7 @@ extern "C" extern u8 lit_1789[12];
 extern "C" extern u8 lit_1791[12];
 extern "C" extern u8 lit_1794[12];
 extern "C" extern u8 lit_1796[12];
-extern "C" extern u8 jstudio_object__lit_1798[12];
+extern "C" extern u8 lit_1798[12];
 extern "C" extern u8 lit_1800[12];
 extern "C" extern void* __vt__Q27JStudio14TAdaptor_sound[20];
 extern "C" extern void* __vt__Q27JStudio17TAdaptor_particle[19];
@@ -404,12 +404,12 @@ SECTION_DATA static u8 lit_742[12] = {
 };
 
 /* 803C4B0C-803C4B18 000C+00 s=0 e=0 z=0  None .data      @745                                                         */
-SECTION_DATA u8 jstudio_object__lit_745[12] = {
+SECTION_DATA u8 lit_745[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C4B18-803C4B24 000C+00 s=0 e=0 z=0  None .data      @748                                                         */
-SECTION_DATA u8 jstudio_object__lit_748[12] = {
+SECTION_DATA u8 lit_748[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -424,7 +424,7 @@ SECTION_DATA u8 lit_754[12] = {
 };
 
 /* 803C4B3C-803C4B48 000C+00 s=0 e=0 z=0  None .data      @757                                                         */
-SECTION_DATA u8 jstudio_object__lit_757[12] = {
+SECTION_DATA u8 lit_757[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -434,12 +434,12 @@ SECTION_DATA u8 lit_760[12] = {
 };
 
 /* 803C4B54-803C4B60 000C+00 s=0 e=0 z=0  None .data      @763                                                         */
-SECTION_DATA u8 jstudio_object__lit_763[12] = {
+SECTION_DATA u8 lit_763[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C4B60-803C4B6C 000C+00 s=0 e=0 z=0  None .data      @766                                                         */
-SECTION_DATA u8 jstudio_object__lit_766[12] = {
+SECTION_DATA u8 lit_766[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -449,12 +449,12 @@ SECTION_DATA u8 lit_769[12] = {
 };
 
 /* 803C4B78-803C4B84 000C+00 s=0 e=0 z=0  None .data      @772                                                         */
-SECTION_DATA u8 jstudio_object__lit_772[12] = {
+SECTION_DATA u8 lit_772[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C4B84-803C4B90 000C+00 s=0 e=0 z=0  None .data      @775                                                         */
-SECTION_DATA u8 jstudio_object__lit_775[12] = {
+SECTION_DATA u8 lit_775[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -464,7 +464,7 @@ SECTION_DATA u8 lit_778[12] = {
 };
 
 /* 803C4B9C-803C4BE8 004C+00 s=1 e=0 z=0  None .data      @882                                                         */
-SECTION_DATA static void* jstudio_object__lit_882[19] = {
+SECTION_DATA static void* lit_882[19] = {
 	/* 0    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
 	/* 1    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x2C),
 	/* 2    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x3C),
@@ -522,7 +522,7 @@ SECTION_DATA u8 lit_1318[12] = {
 };
 
 /* 803C4C3C-803C4C48 000C+00 s=0 e=0 z=0  None .data      @1320                                                        */
-SECTION_DATA u8 jstudio_object__lit_1320[12] = {
+SECTION_DATA u8 lit_1320[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -659,7 +659,7 @@ SECTION_DATA u8 lit_1455[12] = {
 };
 
 /* 803C4DF0-803C4EF0 0100+00 s=1 e=0 z=0  None .data      @1491                                                        */
-SECTION_DATA static void* jstudio_object__lit_1491[64] = {
+SECTION_DATA static void* lit_1491[64] = {
 	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x164),
 	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x16C),
 	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x174),
@@ -753,7 +753,7 @@ SECTION_DATA static u8 lit_1570[12] = {
 };
 
 /* 803C4F40-803C4F4C 000C+00 s=1 e=0 z=0  None .data      @1573                                                        */
-SECTION_DATA static u8 jstudio_object__lit_1573[12] = {
+SECTION_DATA static u8 lit_1573[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -852,7 +852,7 @@ SECTION_DATA u8 lit_1703[12] = {
 };
 
 /* 803C505C-803C5068 000C+00 s=0 e=0 z=0  None .data      @1705                                                        */
-SECTION_DATA u8 jstudio_object__lit_1705[12] = {
+SECTION_DATA u8 lit_1705[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -989,7 +989,7 @@ SECTION_DATA u8 lit_1796[12] = {
 };
 
 /* 803C5218-803C5224 000C+00 s=0 e=0 z=0  None .data      @1798                                                        */
-SECTION_DATA u8 jstudio_object__lit_1798[12] = {
+SECTION_DATA u8 lit_1798[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -999,7 +999,7 @@ SECTION_DATA u8 lit_1800[12] = {
 };
 
 /* 803C5230-803C533C 010C+00 s=1 e=0 z=0  None .data      @1831                                                        */
-SECTION_DATA static void* jstudio_object__lit_1831[67] = {
+SECTION_DATA static void* lit_1831[67] = {
 	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x200),
 	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x208),
 	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x210),
@@ -1563,7 +1563,7 @@ SECTION_SDATA2 static u8 lit_1094[4] = {
 };
 
 /* 804554AC-804554B0 0004+00 s=1 e=0 z=0  None .sdata2    @1095                                                        */
-SECTION_SDATA2 static f32 jstudio_object__lit_1095 = 255.0f;
+SECTION_SDATA2 static f32 lit_1095 = 255.0f;
 
 /* 8028638C-802864D8 014C+00 s=0 e=4 z=0  None .text      adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl */
 #pragma push
@@ -1748,9 +1748,9 @@ SECTION_RODATA u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor
 };
 
 /* 80431010-8043101C 000C+00 s=3 e=0 z=0  None .bss       @744                                                         */
-static u8 jstudio_object__lit_744[12];
+static u8 lit_744[12];
 
-/* 8043101C-8043102C 0010+00 s=1 e=0 z=0  None .bss       soovv_actor_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 8043101C-8043102C 0010+00 s=2 e=0 z=0  None .bss       soovv_actor_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 static u8 data_8043101C[16];
 
 /* 8043102C-80431038 000C+00 s=0 e=0 z=0  None .bss       @747                                                         */
@@ -2449,7 +2449,7 @@ u8 data_80431134[16];
 /* 80431144-80431150 000C+00 s=0 e=0 z=0  None .bss       @777                                                         */
 u8 lit_777[12];
 
-/* 80431150-80431160 0010+00 s=0 e=0 z=0  None .bss       soovv_sound_LOCATED___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 80431150-80431160 0010+00 s=0 e=1 z=0  None .bss       soovv_sound_LOCATED___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_80431150[16];
 
 /* 80431160-8043116C 000C+00 s=0 e=0 z=0  None .bss       @780                                                         */

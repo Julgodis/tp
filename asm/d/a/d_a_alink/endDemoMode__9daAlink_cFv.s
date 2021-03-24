@@ -49,9 +49,9 @@ lbl_80117DA0:
 /* 80117DA8 00000008  90 1C 05 70 */	stw r0, 0x570(r28)
 /* 80117DAC 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80117DB0 00000010  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80117DB4 00000014  80 1F 5F 18 */	lwz r0, 0x5f18(r31)
+/* 80117DB4 00000014  80 1F 5F 18 */	lwz r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 80117DB8 00000018  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
-/* 80117DBC 0000001C  90 1F 5F 18 */	stw r0, 0x5f18(r31)
+/* 80117DBC 0000001C  90 1F 5F 18 */	stw r0, 0x5f18(r31)	/* effective address: 8040C0D8 */
 /* 80117DC0 00000020  A0 1C 06 04 */	lhz r0, 0x604(r28)
 /* 80117DC4 00000024  20 00 00 04 */	subfic r0, r0, 4
 /* 80117DC8 00000028  7C 00 00 34 */	cntlzw r0, r0
@@ -82,7 +82,7 @@ lbl_80117DEC:
 lbl_80117E24:
 /* 80117E24 00000000  38 60 00 00 */	li r3, 0
 /* 80117E28 00000004  B0 7C 06 0A */	sth r3, 0x60a(r28)
-/* 80117E2C 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80117E2C 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80117E30 0000000C  D0 1C 06 18 */	stfs f0, 0x618(r28)
 /* 80117E34 00000010  38 00 FF FF */	li r0, -1
 /* 80117E38 00000014  90 1C 31 84 */	stw r0, 0x3184(r28)
@@ -173,9 +173,9 @@ lbl_80117F4C:
 lbl_80117F68:
 /* 80117F68 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80117F6C 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80117F70 00000008  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80117F70 00000008  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803DD2F0 */
 /* 80117F74 0000000C  D0 1C 33 A8 */	stfs f0, 0x33a8(r28)
-/* 80117F78 00000010  A8 63 00 0C */	lha r3, 0xc(r3)
+/* 80117F78 00000010  A8 63 00 0C */	lha r3, 0xc(r3)	/* effective address: 803DD2F4 */
 /* 80117F7C 00000014  3C 63 00 01 */	addis r3, r3, 1
 /* 80117F80 00000018  38 03 80 00 */	addi r0, r3, -32768
 /* 80117F84 0000001C  B0 1C 2F E0 */	sth r0, 0x2fe0(r28)
@@ -258,7 +258,7 @@ lbl_80118088:
 /* 80118094 0000000C  38 80 00 01 */	li r4, 1
 /* 80118098 00000010  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 8011809C 00000014  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 801180A0 00000018  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 801180A0 00000018  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 801180A4 0000001C  4B FA E9 A5 */	bl procFallInit__9daAlink_cFif
 /* 801180A8 00000020  48 00 00 2C */	b lbl_801180D4
 lbl_801180AC:

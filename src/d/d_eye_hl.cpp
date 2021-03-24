@@ -39,7 +39,7 @@ extern "C" void remove__8dEyeHL_cFv(); // 1
 extern "C" void update__12dEyeHL_mng_cFv(); // 1
 extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
 extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
-extern "C" extern char const* const d_d_eye_hl__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 struct_80450FB0[8];
 extern "C" extern u8 struct_80450FB8[4];
 extern "C" extern u8 struct_80450FBC[4];
@@ -98,10 +98,10 @@ asm void dEyeHL_c::remove() {
 static u8 m_obj__12dEyeHL_mng_c[4 + 4 /* padding */];
 
 /* 80452C10-80452C14 0004+00 s=1 e=0 z=0  None .sdata2    @3862                                                        */
-SECTION_SDATA2 static f32 d_d_eye_hl__lit_3862 = 2.0f;
+SECTION_SDATA2 static f32 lit_3862 = 2.0f;
 
 /* 80452C14-80452C18 0004+00 s=1 e=0 z=0  None .sdata2    @3863                                                        */
-SECTION_SDATA2 static f32 d_d_eye_hl__lit_3863 = 45.0f;
+SECTION_SDATA2 static f32 lit_3863 = 45.0f;
 
 /* 8009CA48-8009CB14 00CC+00 s=0 e=1 z=0  None .text      update__12dEyeHL_mng_cFv                                     */
 #pragma push

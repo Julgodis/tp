@@ -12,7 +12,7 @@ lbl_80229A28:
 /* 80229A50 00000028  83 FE 00 04 */	lwz r31, 4(r30)
 /* 80229A54 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 80229A58 00000030  4B FF FD 59 */	bl resetCharactor__19jmessage_tReferenceFv
-/* 80229A5C 00000034  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
+/* 80229A5C 00000034  C0 02 B0 64 */	lfs f0, lit_4028(r2)
 /* 80229A60 00000038  D0 1E 00 38 */	stfs f0, 0x38(r30)
 /* 80229A64 0000003C  38 00 00 00 */	li r0, 0
 /* 80229A68 00000040  B0 1E 00 3C */	sth r0, 0x3c(r30)

@@ -28,12 +28,12 @@ lbl_800F1894:
 /* 800F18FC 00000068  40 82 00 14 */	bne lbl_800F1910
 /* 800F1900 0000006C  7F E3 FB 78 */	mr r3, r31
 /* 800F1904 00000070  38 80 00 02 */	li r4, 2
-/* 800F1908 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F1908 00000074  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F190C 00000078  4B FB C1 E1 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1910:
 /* 800F1910 00000000  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800F1914 00000004  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800F1918 00000008  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 800F1918 00000008  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038DEE2 */
 /* 800F191C 0000000C  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800F1920 00000010  38 00 00 00 */	li r0, 0
 /* 800F1924 00000014  B0 1F 30 04 */	sth r0, 0x3004(r31)

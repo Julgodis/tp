@@ -148,7 +148,7 @@ extern "C" void __sinit_c_angle_cpp(); // 1
 extern "C" extern u8 lit_2402[12];
 extern "C" extern u8 lit_2403[12];
 extern "C" extern u8 lit_2404[12];
-extern "C" extern u8 c_angle__lit_2405[12 + 4 /* padding */];
+extern "C" extern u8 lit_2405[12 + 4 /* padding */];
 extern "C" extern u8 _0__7cSAngle[2 + 2 /* padding */];
 extern "C" extern u8 _90__7cSAngle[2 + 2 /* padding */];
 extern "C" extern u8 _180__7cSAngle[2 + 2 /* padding */];
@@ -262,7 +262,7 @@ asm void cSAngle::Degree() const {
 
 /* ############################################################################################## */
 /* 80455218-8045521C 0004+00 s=1 e=0 z=0  None .sdata2    @2269                                                        */
-SECTION_SDATA2 static f32 c_angle__lit_2269 = 9.58738019107841e-05f;
+SECTION_SDATA2 static f32 lit_2269 = 9.58738019107841e-05f;
 
 /* 80271064-80271098 0034+00 s=3 e=0 z=0  None .text      Radian__7cSAngleCFv                                          */
 #pragma push
@@ -277,7 +277,7 @@ asm void cSAngle::Radian() const {
 
 /* ############################################################################################## */
 /* 8045521C-80455220 0004+00 s=1 e=0 z=0  None .sdata2    @2277                                                        */
-SECTION_SDATA2 static f32 c_angle__lit_2277 = 3.0517578125e-05f;
+SECTION_SDATA2 static f32 lit_2277 = 3.0517578125e-05f;
 
 /* 80271098-802710CC 0034+00 s=0 e=1 z=0  None .text      Norm__7cSAngleCFv                                            */
 #pragma push
@@ -479,10 +479,10 @@ asm cDegree::cDegree(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80455220-80455224 0004+00 s=1 e=0 z=0  None .sdata2    @2440                                                        */
-SECTION_SDATA2 static f32 c_angle__lit_2440 = -180.0f;
+SECTION_SDATA2 static f32 lit_2440 = -180.0f;
 
 /* 80455224-80455228 0004+00 s=1 e=0 z=0  None .sdata2    @2441                                                        */
-SECTION_SDATA2 static f32 c_angle__lit_2441 = 180.0f;
+SECTION_SDATA2 static f32 lit_2441 = 180.0f;
 
 /* 8027137C-802713BC 0040+00 s=1 e=0 z=0  None .text      Formal__7cDegreeFv                                           */
 #pragma push
@@ -758,7 +758,7 @@ asm void cSGlobe::Polar(cSPolar* param_0) const {
 
 /* ############################################################################################## */
 /* 8045523C-80455240 0004+00 s=1 e=0 z=0  None .sdata2    @2744                                                        */
-SECTION_SDATA2 static f32 c_angle__lit_2744 = 1.0f;
+SECTION_SDATA2 static f32 lit_2744 = 1.0f;
 
 /* 80271B30-80271B7C 004C+00 s=0 e=3 z=0  None .text      Norm__7cSGlobeCFv                                            */
 #pragma push
@@ -834,5 +834,5 @@ u8 lit_2403[12];
 u8 lit_2404[12];
 
 /* 80430FC8-80430FD8 000C+04 s=0 e=0 z=0  None .bss       @2405                                                        */
-u8 c_angle__lit_2405[12 + 4 /* padding */];
+u8 lit_2405[12 + 4 /* padding */];
 

@@ -7,32 +7,32 @@ lbl_8021CA70:
 /* 8021CA84 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021CA88 00000018  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 8021CA8C 0000001C  38 7E 4E 20 */	addi r3, r30, 0x4e20
-/* 8021CA90 00000020  81 9E 4E 20 */	lwz r12, 0x4e20(r30)
+/* 8021CA90 00000020  81 9E 4E 20 */	lwz r12, 0x4e20(r30)	/* effective address: 8040AFE0 */
 /* 8021CA94 00000024  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8021CA98 00000028  7D 89 03 A6 */	mtctr r12
 /* 8021CA9C 0000002C  4E 80 04 21 */	bctrl 
-/* 8021CAA0 00000030  88 03 00 09 */	lbz r0, 9(r3)
+/* 8021CAA0 00000030  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 8040AFE9 */
 /* 8021CAA4 00000034  54 00 FE FE */	rlwinm r0, r0, 0x1f, 0x1b, 0x1f
 /* 8021CAA8 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021CAAC 0000003C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 8021CAB0 00000040  98 1F 00 98 */	stb r0, 0x98(r31)
-/* 8021CAB4 00000044  C0 1F 0D BC */	lfs f0, 0xdbc(r31)
+/* 8021CAB0 00000040  98 1F 00 98 */	stb r0, 0x98(r31)	/* effective address: 80406258 */
+/* 8021CAB4 00000044  C0 1F 0D BC */	lfs f0, 0xdbc(r31)	/* effective address: 80406F7C */
 /* 8021CAB8 00000048  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8021CABC 0000004C  C0 1F 0D C0 */	lfs f0, 0xdc0(r31)
+/* 8021CABC 0000004C  C0 1F 0D C0 */	lfs f0, 0xdc0(r31)	/* effective address: 80406F80 */
 /* 8021CAC0 00000050  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8021CAC4 00000054  C0 1F 0D C4 */	lfs f0, 0xdc4(r31)
+/* 8021CAC4 00000054  C0 1F 0D C4 */	lfs f0, 0xdc4(r31)	/* effective address: 80406F84 */
 /* 8021CAC8 00000058  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8021CACC 0000005C  38 61 00 08 */	addi r3, r1, 8
 /* 8021CAD0 00000060  38 80 00 00 */	li r4, 0
-/* 8021CAD4 00000064  A8 BF 0D BA */	lha r5, 0xdba(r31)
+/* 8021CAD4 00000064  A8 BF 0D BA */	lha r5, 0xdba(r31)	/* effective address: 80406F7A */
 /* 8021CAD8 00000068  38 C0 00 00 */	li r6, 0
 /* 8021CADC 0000006C  48 04 A9 19 */	bl __ct__5csXyzFsss
 /* 8021CAE0 00000070  88 1F 0D B4 */	lbz r0, 0xdb4(r31)
 /* 8021CAE4 00000074  7C 1F 07 74 */	extsb r31, r0
 /* 8021CAE8 00000078  3B DE 4E 00 */	addi r30, r30, 0x4e00
 /* 8021CAEC 0000007C  7F C3 F3 78 */	mr r3, r30
-/* 8021CAF0 00000080  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
-/* 8021CAF4 00000084  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
+/* 8021CAF0 00000080  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8021CAF4 00000084  38 84 91 68 */	addi r4, r4, stringBase0@l
 /* 8021CAF8 00000088  38 84 00 0C */	addi r4, r4, 0xc
 /* 8021CAFC 0000008C  48 14 BE 99 */	bl strcmp
 /* 8021CB00 00000090  2C 03 00 00 */	cmpwi r3, 0
@@ -66,8 +66,8 @@ lbl_8021CB48:
 /* 8021CB60 00000018  48 00 00 3C */	b lbl_8021CB9C
 lbl_8021CB64:
 /* 8021CB64 00000000  7F C3 F3 78 */	mr r3, r30
-/* 8021CB68 00000004  3C 80 80 3A */	lis r4, d_meter_d_meter2_info__stringBase0@ha
-/* 8021CB6C 00000008  38 84 91 68 */	addi r4, r4, d_meter_d_meter2_info__stringBase0@l
+/* 8021CB68 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8021CB6C 00000008  38 84 91 68 */	addi r4, r4, stringBase0@l
 /* 8021CB70 0000000C  38 84 00 13 */	addi r4, r4, 0x13
 /* 8021CB74 00000010  48 14 BE 21 */	bl strcmp
 /* 8021CB78 00000014  2C 03 00 00 */	cmpwi r3, 0

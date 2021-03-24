@@ -8,7 +8,7 @@ lbl_8027AA84:
 /* 8027AA9C 00000018  7C 04 2B D6 */	divw r0, r4, r5
 /* 8027AAA0 0000001C  7C 00 29 D6 */	mullw r0, r0, r5
 /* 8027AAA4 00000020  7C 00 20 50 */	subf r0, r0, r4
-/* 8027AAA8 00000024  C8 42 B8 E8 */	lfd f2, JPAExtraShape__lit_2312(r2)
+/* 8027AAA8 00000024  C8 42 B8 E8 */	lfd f2, lit_2312(r2)
 /* 8027AAAC 00000028  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8027AAB0 0000002C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8027AAB4 00000030  3C 80 43 30 */	lis r4, 0x4330

@@ -23,9 +23,9 @@ lbl_8010D714:
 /* 8010D718 00000004  98 1D 20 68 */	stb r0, 0x2068(r29)
 /* 8010D71C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010D720 0000000C  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 8010D724 00000010  80 1C 5F 18 */	lwz r0, 0x5f18(r28)
+/* 8010D724 00000010  80 1C 5F 18 */	lwz r0, 0x5f18(r28)	/* effective address: 8040C0D8 */
 /* 8010D728 00000014  54 00 03 98 */	rlwinm r0, r0, 0, 0xe, 0xc
-/* 8010D72C 00000018  90 1C 5F 18 */	stw r0, 0x5f18(r28)
+/* 8010D72C 00000018  90 1C 5F 18 */	stw r0, 0x5f18(r28)	/* effective address: 8040C0D8 */
 /* 8010D730 0000001C  A8 1D 30 8E */	lha r0, 0x308e(r29)
 /* 8010D734 00000020  2C 00 00 00 */	cmpwi r0, 0
 /* 8010D738 00000024  41 82 00 20 */	beq lbl_8010D758
@@ -110,7 +110,7 @@ lbl_8010D850:
 /* 8010D85C 0000000C  41 82 00 58 */	beq lbl_8010D8B4
 /* 8010D860 00000010  7F A3 EB 78 */	mr r3, r29
 /* 8010D864 00000014  38 9D 1F D0 */	addi r4, r29, 0x1fd0
-/* 8010D868 00000018  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8010D868 00000018  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8010D86C 0000001C  4B FF 44 89 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 /* 8010D870 00000020  A8 1D 30 0C */	lha r0, 0x300c(r29)
 /* 8010D874 00000024  2C 00 00 00 */	cmpwi r0, 0

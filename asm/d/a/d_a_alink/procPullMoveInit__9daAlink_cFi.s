@@ -26,7 +26,7 @@ lbl_800E8D58:
 /* 800E8D78 00000020  A8 1F 30 08 */	lha r0, 0x3008(r31)
 /* 800E8D7C 00000024  2C 00 00 00 */	cmpwi r0, 0
 /* 800E8D80 00000028  41 82 00 18 */	beq lbl_800E8D98
-/* 800E8D84 0000002C  C3 E2 92 B8 */	lfs f31, d_a_d_a_alink__lit_6040(r2)
+/* 800E8D84 0000002C  C3 E2 92 B8 */	lfs f31, lit_6040(r2)
 /* 800E8D88 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800E8D8C 00000034  38 80 00 3B */	li r4, 0x3b
 /* 800E8D90 00000038  4B FC 41 F1 */	bl setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM
@@ -39,7 +39,7 @@ lbl_800E8D98:
 /* 800E8DA8 00000010  38 80 00 3A */	li r4, 0x3a
 /* 800E8DAC 00000014  3C A0 80 39 */	lis r5, m__22daAlinkHIO_pushpull_c0@ha
 /* 800E8DB0 00000018  38 A5 E2 10 */	addi r5, r5, m__22daAlinkHIO_pushpull_c0@l
-/* 800E8DB4 0000001C  C0 45 00 24 */	lfs f2, 0x24(r5)
+/* 800E8DB4 0000001C  C0 45 00 24 */	lfs f2, 0x24(r5)	/* effective address: 8038E234 */
 /* 800E8DB8 00000020  4B FC 42 29 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 lbl_800E8DBC:
 /* 800E8DBC 00000000  D3 FF 1F DC */	stfs f31, 0x1fdc(r31)
@@ -72,7 +72,7 @@ lbl_800E8DBC:
 /* 800E8E28 0000006C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E8E2C 00000000  40 81 00 58 */	ble lbl_800E8E84
 /* 800E8E30 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800E8E34 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800E8E34 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800E8E38 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800E8E3C 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800E8E40 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -137,9 +137,9 @@ lbl_800E8F08:
 /* 800E8F08 00000000  D0 3F 34 7C */	stfs f1, 0x347c(r31)
 /* 800E8F0C 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E8F10 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E8F14 0000000C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800E8F14 0000000C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800E8F18 00000010  64 00 04 00 */	oris r0, r0, 0x400
-/* 800E8F1C 00000014  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800E8F1C 00000014  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800E8F20 00000018  38 60 00 01 */	li r3, 1
 lbl_800E8F24:
 /* 800E8F24 00000000  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */

@@ -9,7 +9,7 @@ lbl_8034BF6C:
 /* 8034BF88 0000001C  BF 61 02 E4 */	stmw r27, 0x2e4(r1)
 /* 8034BF8C 00000020  3B C4 00 00 */	addi r30, r4, 0
 /* 8034BF90 00000024  3B E3 CA 28 */	addi r31, r3, regs@l
-/* 8034BF94 00000028  A4 C5 00 30 */	lhzu r6, 0x30(r5)
+/* 8034BF94 00000028  A4 C5 00 30 */	lhzu r6, 0x30(r5)	/* effective address: CC002030 */
 /* 8034BF98 0000002C  54 C0 04 21 */	rlwinm. r0, r6, 0, 0x10, 0x10
 /* 8034BF9C 00000030  41 82 00 10 */	beq lbl_8034BFAC
 /* 8034BFA0 00000034  54 C0 04 5E */	rlwinm r0, r6, 0, 0x11, 0xf

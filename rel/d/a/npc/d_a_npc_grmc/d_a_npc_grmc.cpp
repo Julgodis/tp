@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 809D9728 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_grMC_c {
@@ -60,6 +60,8 @@ struct daNpc_grMC_c {
 	/* 809D87A0 */ void drawDbgInfo();
 	/* 809D87A8 */ void drawOtherMdl();
 	/* 809D8808 */ void selectAction();
+	/* 809D8850 */ void chkAction(int (daNpc_grMC_c::*)(void*));
+	/* 809D887C */ void setAction(int (daNpc_grMC_c::*)(void*));
 	/* 809D8924 */ void tend(void*);
 	/* 809D8AE8 */ void talk(void*);
 	/* 809D8C6C */ void shop(void*);
@@ -193,8 +195,8 @@ extern "C" void setCollision__12daNpc_grMC_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_grMC_cFv(); // 1
 extern "C" void drawOtherMdl__12daNpc_grMC_cFv(); // 1
 extern "C" void selectAction__12daNpc_grMC_cFv(); // 1
-extern "C" static void chkAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i(); // 1
 extern "C" void tend__12daNpc_grMC_cFPv(); // 1
 extern "C" void talk__12daNpc_grMC_cFPv(); // 1
 extern "C" void shop__12daNpc_grMC_cFPv(); // 1
@@ -617,7 +619,7 @@ asm void daNpc_grMC_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i() {
+asm void daNpc_grMC_c::chkAction(int (daNpc_grMC_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_grmc/d_a_npc_grmc/chkAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i.s"
 }
@@ -628,7 +630,7 @@ extern "C" asm static void chkAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i() {
+asm void daNpc_grMC_c::setAction(int (daNpc_grMC_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_grmc/d_a_npc_grmc/setAction__12daNpc_grMC_cFM12daNpc_grMC_cFPCvPvPv_i.s"
 }

@@ -25,7 +25,7 @@ lbl_80133F3C:
 lbl_80133F44:
 /* 80133F44 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80133F48 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80133F4C 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80133F4C 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 80133F50 0000000C  4B EE 7B C5 */	bl fopAcM_getTalkEventPartner__FPC10fopAc_ac_c
 /* 80133F54 00000010  38 A0 00 00 */	li r5, 0
 /* 80133F58 00000014  80 1F 05 80 */	lwz r0, 0x580(r31)

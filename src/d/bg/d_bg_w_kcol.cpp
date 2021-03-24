@@ -14,39 +14,13 @@
 struct cBgS_LinChk {
 };
 
-struct Vec {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct cBgS_PolyPassChk {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct dBgS_SplGrpChk {
+struct KC_PrismData {
 };
 
 struct cBgS_GndChk {
 };
 
-struct cXyz {
-};
-
-struct sBgPc {
-};
-
-struct dBgPc {
-	/* 80074048 */ void setCode(sBgPc&);
-};
-
-struct dBgS_SphChk {
+struct Vec {
 };
 
 struct dBgS_Acch {
@@ -59,13 +33,39 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
-struct KC_PrismData {
+struct cBgS_ShdwDraw {
 };
 
 struct csXyz {
 };
 
+struct dBgS_SplGrpChk {
+};
+
+struct sBgPc {
+};
+
+struct dBgPc {
+	/* 80074048 */ void setCode(sBgPc&);
+};
+
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct cBgS_GrpPassChk {
+};
+
+struct cXyz {
+};
+
+struct dBgS_SphChk {
+};
+
 struct dBgS_RoofChk {
+};
+
+struct cBgS_PolyPassChk {
 };
 
 struct dBgWKCol {
@@ -599,21 +599,21 @@ asm void dBgWKCol::chkPolyThrough(dBgPc* param_0, cBgS_PolyPassChk* param_1, cBg
 
 /* ############################################################################################## */
 /* 80452718-8045271C 0004+00 s=5 e=0 z=0  None .sdata2    @4187                                                        */
-SECTION_SDATA2 static u8 d_bg_d_bg_w_kcol__lit_4187[4] = {
+SECTION_SDATA2 static u8 lit_4187[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045271C-80452720 0004+00 s=1 e=0 z=0  None .sdata2    @4188                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_kcol__lit_4188 = 500.0f;
+SECTION_SDATA2 static f32 lit_4188 = 500.0f;
 
 /* 80452720-80452724 0004+00 s=6 e=0 z=0  None .sdata2    @4189                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_kcol__lit_4189 = 1.0f;
+SECTION_SDATA2 static f32 lit_4189 = 1.0f;
 
 /* 80452724-80452728 0004+00 s=4 e=0 z=0  None .sdata2    @4190                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_kcol__lit_4190 = 0.007499999832361937f;
+SECTION_SDATA2 static f32 lit_4190 = 0.007499999832361937f;
 
 /* 80452728-8045272C 0004+00 s=4 e=0 z=0  None .sdata2    @4191                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_kcol__lit_4191 = -0.007499999832361937f;
+SECTION_SDATA2 static f32 lit_4191 = -0.007499999832361937f;
 
 /* 8007EE34-8007F628 07F4+00 s=1 e=0 z=0  None .text      LineCheck__8dBgWKColFP11cBgS_LinChk                          */
 #pragma push
@@ -628,7 +628,7 @@ asm void dBgWKCol::LineCheck(cBgS_LinChk* param_0) {
 
 /* ############################################################################################## */
 /* 8045272C-80452730 0004+00 s=1 e=0 z=0  None .sdata2    @4293                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w_kcol__lit_4293 = 0.014000000432133675f;
+SECTION_SDATA2 static f32 lit_4293 = 0.014000000432133675f;
 
 /* 8007F628-8007F9A4 037C+00 s=1 e=0 z=0  None .text      GroundCross__8dBgWKColFP11cBgS_GndChk                        */
 #pragma push
@@ -680,10 +680,10 @@ asm void dBgWKCol::CaptPoly(dBgS_CaptPoly& param_0) {
 
 /* ############################################################################################## */
 /* 80424F94-80425384 03F0+00 s=1 e=0 z=0  None .bss       l_wcsbuf                                                     */
-static u8 d_bg_d_bg_w_kcol__l_wcsbuf[1008];
+static u8 l_wcsbuf[1008];
 
 /* 80452730-80452738 0008+00 s=2 e=0 z=0  None .sdata2    @5298                                                        */
-SECTION_SDATA2 static f64 d_bg_d_bg_w_kcol__lit_5298 = 0.5;
+SECTION_SDATA2 static f64 lit_5298 = 0.5;
 
 /* 80452738-80452740 0008+00 s=2 e=0 z=0  None .sdata2    @5299                                                        */
 SECTION_SDATA2 static f64 lit_5299 = 3.0;

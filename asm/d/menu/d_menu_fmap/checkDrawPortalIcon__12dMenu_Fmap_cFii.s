@@ -4,7 +4,7 @@ lbl_801CCFB0:
 /* 801CCFB8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801CCFBC 0000000C  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801CCFC0 00000010  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801CCFC4 00000014  88 03 02 FC */	lbz r0, 0x2fc(r3)
+/* 801CCFC4 00000014  88 03 02 FC */	lbz r0, 0x2fc(r3)	/* effective address: 8042FF5C */
 /* 801CCFC8 00000018  28 00 00 00 */	cmplwi r0, 0
 /* 801CCFCC 0000001C  41 82 00 0C */	beq lbl_801CCFD8
 /* 801CCFD0 00000020  38 60 00 01 */	li r3, 1

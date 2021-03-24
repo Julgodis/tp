@@ -262,20 +262,20 @@ asm void cM3d_Len2dSq(f32 param_0, f32 param_1, f32 param_2, f32 param_3) {
 f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 /* 80455118-80455120 0004+04 s=28 e=0 z=0  None .sdata2    @2256                                                        */
-SECTION_SDATA2 static u8 c_m3d__lit_2256[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_2256[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455120-80455128 0008+00 s=9 e=0 z=0  None .sdata2    @2257                                                        */
-SECTION_SDATA2 static f64 c_m3d__lit_2257 = 0.5;
+SECTION_SDATA2 static f64 lit_2257 = 0.5;
 
 /* 80455128-80455130 0008+00 s=9 e=0 z=0  None .sdata2    @2258                                                        */
-SECTION_SDATA2 static f64 c_m3d__lit_2258 = 3.0;
+SECTION_SDATA2 static f64 lit_2258 = 3.0;
 
 /* 80455130-80455138 0008+00 s=9 e=0 z=0  None .sdata2    @2259                                                        */
-SECTION_SDATA2 static u8 c_m3d__lit_2259[8] = {
+SECTION_SDATA2 static u8 lit_2259[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -737,10 +737,10 @@ asm static void cM3d_Cross_LinSph(cM3dGLin const* param_0, cM3dGSph const* param
 
 /* ############################################################################################## */
 /* 804551BC-804551C0 0004+00 s=2 e=0 z=0  None .sdata2    @3739                                                        */
-SECTION_SDATA2 static f32 c_m3d__lit_3739 = 2.0f;
+SECTION_SDATA2 static f32 lit_3739 = 2.0f;
 
 /* 804551C0-804551C4 0004+00 s=2 e=0 z=0  None .sdata2    @3740                                                        */
-SECTION_SDATA2 static f32 c_m3d__lit_3740 = 4.0f;
+SECTION_SDATA2 static f32 lit_3740 = 4.0f;
 
 /* 8026B4E8-8026B8A4 03BC+00 s=1 e=2 z=0  None .text      cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec */
 #pragma push
@@ -810,7 +810,7 @@ asm void cM3d_Cross_SphSph(cM3dGSph const* param_0, cM3dGSph const* param_1, Vec
 
 /* ############################################################################################## */
 /* 804551C4-804551C8 0004+00 s=8 e=0 z=0  None .sdata2    @3892                                                        */
-SECTION_SDATA2 static f32 c_m3d__lit_3892 = 0.5f;
+SECTION_SDATA2 static f32 lit_3892 = 0.5f;
 
 /* 8026BE5C-8026BF04 00A8+00 s=1 e=0 z=0  None .text      cM3d_CalcSphVsTriCrossPoint__FPC8cM3dGSphPC8cM3dGTriP3Vec    */
 #pragma push
@@ -1071,7 +1071,7 @@ asm void cM3d_CrawVec(Vec const& param_0, Vec const& param_1, Vec* param_2) {
 
 /* ############################################################################################## */
 /* 804551CC-804551D0 0004+00 s=1 e=0 z=0  None .sdata2    @5508                                                        */
-SECTION_SDATA2 static f32 c_m3d__lit_5508 = 32.0f;
+SECTION_SDATA2 static f32 lit_5508 = 32.0f;
 
 /* 8026EC3C-8026EC54 0018+00 s=0 e=1 z=0  None .text      __sinit_c_m3d_cpp                                            */
 #pragma push

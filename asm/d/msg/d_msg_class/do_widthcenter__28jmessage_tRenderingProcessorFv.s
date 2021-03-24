@@ -24,17 +24,17 @@ lbl_8022E1D0:
 /* 8022E1D0 00000000  C3 E6 04 2C */	lfs f31, 0x42c(r6)
 /* 8022E1D4 00000004  48 00 0C F9 */	bl getLineLength__28jmessage_tRenderingProcessorFi
 /* 8022E1D8 00000008  EC 1F 08 28 */	fsubs f0, f31, f1
-/* 8022E1DC 0000000C  C0 22 B0 5C */	lfs f1, d_msg_d_msg_class__lit_4026(r2)
+/* 8022E1DC 0000000C  C0 22 B0 5C */	lfs f1, lit_4026(r2)
 /* 8022E1E0 00000010  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8022E1E4 00000014  EF E1 00 2A */	fadds f31, f1, f0
-/* 8022E1E8 00000018  C0 02 B0 64 */	lfs f0, d_msg_d_msg_class__lit_4028(r2)
+/* 8022E1E8 00000018  C0 02 B0 64 */	lfs f0, lit_4028(r2)
 /* 8022E1EC 0000001C  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 8022E1F0 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 8022E1F4 00000004  40 82 00 50 */	bne lbl_8022E244
 /* 8022E1F8 00000008  38 61 00 08 */	addi r3, r1, 8
 /* 8022E1FC 0000000C  38 80 00 0F */	li r4, 0xf
-/* 8022E200 00000010  3C A0 80 3A */	lis r5, d_msg_d_msg_class__stringBase0@ha
-/* 8022E204 00000014  38 A5 96 10 */	addi r5, r5, d_msg_d_msg_class__stringBase0@l
+/* 8022E200 00000010  3C A0 80 3A */	lis r5, stringBase0@ha
+/* 8022E204 00000014  38 A5 96 10 */	addi r5, r5, stringBase0@l
 /* 8022E208 00000018  38 A5 00 08 */	addi r5, r5, 8
 /* 8022E20C 0000001C  FC 00 F8 1E */	fctiwz f0, f31
 /* 8022E210 00000020  D8 01 00 18 */	stfd f0, 0x18(r1)

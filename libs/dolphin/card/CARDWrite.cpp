@@ -12,8 +12,8 @@
 // 
 
 
-extern "C" static void CARDWrite__WriteCallback(); // 1
-extern "C" static void CARDWrite__EraseCallback(); // 1
+extern "C" static void WriteCallback(); // 1
+extern "C" static void EraseCallback(); // 1
 extern "C" static void CARDWriteAsync(); // 1
 extern "C" void CARDWrite(); // 1
 
@@ -46,9 +46,9 @@ extern "C" extern u8 __CARDBlock[544];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDWrite__WriteCallback() {
+extern "C" asm static void WriteCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDWrite/CARDWrite__WriteCallback.s"
+#include "asm/dolphin/card/CARDWrite/WriteCallback.s"
 }
 #pragma pop
 
@@ -57,9 +57,9 @@ extern "C" asm static void CARDWrite__WriteCallback() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDWrite__EraseCallback() {
+extern "C" asm static void EraseCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDWrite/CARDWrite__EraseCallback.s"
+#include "asm/dolphin/card/CARDWrite/EraseCallback.s"
 }
 #pragma pop
 

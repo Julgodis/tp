@@ -361,10 +361,10 @@ asm void JASAramStream::prepareFinishTask(void* param_0) {
 
 /* ############################################################################################## */
 /* 8045561C-80455620 0004+00 s=1 e=0 z=0  None .sdata2    @531                                                         */
-SECTION_SDATA2 static f32 JASAramStream__lit_531 = 127.0f;
+SECTION_SDATA2 static f32 lit_531 = 127.0f;
 
 /* 80455620-80455628 0008+00 s=3 e=0 z=0  None .sdata2    @533                                                         */
-SECTION_SDATA2 static f64 JASAramStream__lit_533 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_533 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80296920-80296AE8 01C8+00 s=1 e=0 z=0  None .text      headerLoad__13JASAramStreamFUli                              */
 #pragma push
@@ -482,7 +482,7 @@ SECTION_RODATA static void* const OSC_ENV[6 + 1 /* padding */] = {
 };
 
 /* 80431B28-80431B34 000C+00 s=1 e=0 z=0  None .bss       @792                                                         */
-static u8 JASAramStream__lit_792[12];
+static u8 lit_792[12];
 
 /* 80431B34-80431B48 0010+04 s=1 e=4 z=0  None .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
 u8 data_80431B34[16 + 4 /* padding */];

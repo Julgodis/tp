@@ -11,25 +11,25 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISoundActivity {
 };
 
 struct JAIAudience {
 };
 
-struct JAISeMgr {
-};
-
-struct JASSoundParams {
-};
-
-struct JAISoundActivity {
+struct JAISoundID {
 };
 
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISe> */
 struct JAISoundStrategyMgr__template0 {
+};
+
+struct JASSoundParams {
+};
+
+struct JAISeMgr {
 };
 
 struct JGeometry {
@@ -187,15 +187,15 @@ SECTION_DATA void* __vt__5JAISe[22] = {
 };
 
 /* 80455778-8045577C 0004+00 s=2 e=0 z=0  None .sdata2    @626                                                         */
-SECTION_SDATA2 static f32 JAISe__lit_626 = 1.0f;
+SECTION_SDATA2 static f32 lit_626 = 1.0f;
 
 /* 8045577C-80455780 0004+00 s=2 e=0 z=0  None .sdata2    @627                                                         */
-SECTION_SDATA2 static u8 JAISe__lit_627[4] = {
+SECTION_SDATA2 static u8 lit_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455780-80455784 0004+00 s=2 e=0 z=0  None .sdata2    @628                                                         */
-SECTION_SDATA2 static f32 JAISe__lit_628 = 0.5f;
+SECTION_SDATA2 static f32 lit_628 = 0.5f;
 
 /* 8029F03C-8029F0F8 00BC+00 s=0 e=1 z=0  None .text      __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul      */
 #pragma push

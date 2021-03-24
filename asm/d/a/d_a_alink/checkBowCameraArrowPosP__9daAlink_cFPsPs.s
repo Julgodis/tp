@@ -29,7 +29,7 @@ lbl_800DE8C4:
 /* 800DE8E8 00000024  41 82 00 20 */	beq lbl_800DE908
 /* 800DE8EC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800DE8F0 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800DE8F4 00000030  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 800DE8F4 00000030  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800DE8F8 00000034  28 03 00 00 */	cmplwi r3, 0
 /* 800DE8FC 00000038  41 82 00 0C */	beq lbl_800DE908
 /* 800DE900 0000003C  AB 83 04 E6 */	lha r28, 0x4e6(r3)

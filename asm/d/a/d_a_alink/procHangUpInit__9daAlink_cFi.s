@@ -16,9 +16,9 @@ lbl_800FB2A0:
 /* 800FB2D8 00000038  4B FB 1E 1D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800FB2DC 0000003C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FB2E0 00000040  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FB2E4 00000044  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FB2E4 00000044  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FB2E8 00000048  60 00 01 00 */	ori r0, r0, 0x100
-/* 800FB2EC 0000004C  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FB2EC 0000004C  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FB2F0 00000050  7F C3 F3 78 */	mr r3, r30
 /* 800FB2F4 00000054  4B FE 49 35 */	bl setBowHangAnime__9daAlink_cFv
 /* 800FB2F8 00000058  93 FE 31 98 */	stw r31, 0x3198(r30)

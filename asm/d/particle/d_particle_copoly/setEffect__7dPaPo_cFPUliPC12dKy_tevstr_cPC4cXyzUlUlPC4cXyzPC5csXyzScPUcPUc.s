@@ -40,7 +40,7 @@ lbl_80050EFC:
 /* 80050F08 0000000C  90 C1 00 10 */	stw r6, 0x10(r1)
 /* 80050F0C 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80050F10 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80050F14 00000018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80050F14 00000018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80050F18 0000001C  7C E6 3B 78 */	mr r6, r7
 /* 80050F1C 00000020  38 E1 00 18 */	addi r7, r1, 0x18
 /* 80050F20 00000024  7D 88 63 78 */	mr r8, r12

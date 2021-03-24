@@ -7,10 +7,10 @@ lbl_80238894:
 /* 802388A8 00000014  7C 7D 1B 78 */	mr r29, r3
 /* 802388AC 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802388B0 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802388B4 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)
-/* 802388B8 00000024  A8 03 01 7C */	lha r0, 0x17c(r3)
+/* 802388B4 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 802388B8 00000024  A8 03 01 7C */	lha r0, 0x17c(r3)	/* effective address: 8040633C */
 /* 802388BC 00000028  7C 00 EA 14 */	add r0, r0, r29
-/* 802388C0 0000002C  B0 03 01 7C */	sth r0, 0x17c(r3)
+/* 802388C0 0000002C  B0 03 01 7C */	sth r0, 0x17c(r3)	/* effective address: 8040633C */
 /* 802388C4 00000030  4B FF FF 01 */	bl dMsgObject_getTotalPayment__Fv
 /* 802388C8 00000034  7C 1D 1A 14 */	add r0, r29, r3
 /* 802388CC 00000038  7C 1D 07 35 */	extsh. r29, r0

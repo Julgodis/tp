@@ -24,10 +24,10 @@ struct JAUSeqCollection {
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-struct JAISoundID {
+struct JAISeqDataUser {
 };
 
-struct JAISeqDataUser {
+struct JAISoundID {
 };
 
 struct JAUSeqDataMgr_SeqCollection {

@@ -5,8 +5,8 @@ lbl_8015A4D8:
 /* 8015A4E4 0000000C  39 61 00 30 */	addi r11, r1, 0x30
 /* 8015A4E8 00000010  48 20 7C D9 */	bl _savegpr_22
 /* 8015A4EC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8015A4F0 00000018  3C 60 80 3B */	lis r3, a_npc_d_a_npc_cd2__cNullVec__6Z2Calc@ha
-/* 8015A4F4 0000001C  3B E3 61 C0 */	addi r31, r3, a_npc_d_a_npc_cd2__cNullVec__6Z2Calc@l
+/* 8015A4F0 00000018  3C 60 80 3B */	lis r3, cNullVec__6Z2Calc@ha
+/* 8015A4F4 0000001C  3B E3 61 C0 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8015A4F8 00000020  3C 60 80 3B */	lis r3, __vt__14mDoHIO_entry_c@ha
 /* 8015A4FC 00000024  38 03 61 B4 */	addi r0, r3, __vt__14mDoHIO_entry_c@l
 /* 8015A500 00000028  90 1E 00 00 */	stw r0, 0(r30)

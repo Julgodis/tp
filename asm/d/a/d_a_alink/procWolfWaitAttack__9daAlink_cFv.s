@@ -18,7 +18,7 @@ lbl_8013AFEC:
 /* 8013AFFC 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8013B000 00000014  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8013B004 00000018  38 84 EF 28 */	addi r4, r4, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8013B008 0000001C  C0 44 00 10 */	lfs f2, 0x10(r4)
+/* 8013B008 0000001C  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 8038EF38 */
 /* 8013B00C 00000020  48 13 57 35 */	bl cLib_chaseF__FPfff
 /* 8013B010 00000024  7F C3 F3 78 */	mr r3, r30
 /* 8013B014 00000028  4B F9 70 E9 */	bl setComboReserb__9daAlink_cFv

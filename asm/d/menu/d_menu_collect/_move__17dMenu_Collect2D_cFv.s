@@ -7,8 +7,8 @@ lbl_801B5CD4:
 /* 801B5CE8 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 801B5CEC 00000018  8B E3 02 2C */	lbz r31, 0x22c(r3)
 /* 801B5CF0 0000001C  1C BF 00 0C */	mulli r5, r31, 0xc
-/* 801B5CF4 00000020  3C 80 80 3C */	lis r4, d_menu_d_menu_collect__process@ha
-/* 801B5CF8 00000024  38 04 C6 38 */	addi r0, r4, d_menu_d_menu_collect__process@l
+/* 801B5CF4 00000020  3C 80 80 3C */	lis r4, process@ha
+/* 801B5CF8 00000024  38 04 C6 38 */	addi r0, r4, process@l
 /* 801B5CFC 00000028  7D 80 2A 14 */	add r12, r0, r5
 /* 801B5D00 0000002C  48 1A C3 85 */	bl __ptmf_scall
 /* 801B5D04 00000030  60 00 00 00 */	nop 
@@ -17,8 +17,8 @@ lbl_801B5CD4:
 /* 801B5D10 0000003C  41 82 00 20 */	beq lbl_801B5D30
 /* 801B5D14 00000040  7F C3 F3 78 */	mr r3, r30
 /* 801B5D18 00000044  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801B5D1C 00000048  3C 80 80 3C */	lis r4, d_menu_d_menu_collect__init@ha
-/* 801B5D20 0000004C  38 04 C4 70 */	addi r0, r4, d_menu_d_menu_collect__init@l
+/* 801B5D1C 00000048  3C 80 80 3C */	lis r4, init@ha
+/* 801B5D20 0000004C  38 04 C4 70 */	addi r0, r4, init@l
 /* 801B5D24 00000050  7D 80 2A 14 */	add r12, r0, r5
 /* 801B5D28 00000054  48 1A C3 5D */	bl __ptmf_scall
 /* 801B5D2C 00000058  60 00 00 00 */	nop 

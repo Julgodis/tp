@@ -4,7 +4,7 @@ lbl_8021B0C8:
 /* 8021B0D0 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8021B0D4 0000000C  80 63 02 F8 */	lwz r3, 0x2f8(r3)
 /* 8021B0D8 00000010  48 03 A7 51 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 8021B0DC 00000014  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 8021B0DC 00000014  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 8021B0E0 00000018  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8021B0E4 0000001C  7C 00 00 26 */	mfcr r0
 /* 8021B0E8 00000020  54 00 1F FE */	rlwinm r0, r0, 3, 0x1f, 0x1f

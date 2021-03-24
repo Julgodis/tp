@@ -11,13 +11,13 @@ lbl_80056B48:
 lbl_80056B6C:
 /* 80056B6C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80056B70 00000004  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 80056B74 00000008  80 05 5F 64 */	lwz r0, 0x5f64(r5)
+/* 80056B74 00000008  80 05 5F 64 */	lwz r0, 0x5f64(r5)	/* effective address: 8040C124 */
 /* 80056B78 0000000C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80056B7C 00000010  3B E3 4A C8 */	addi r31, r3, j3dSys@l
 /* 80056B80 00000014  3B DF 00 48 */	addi r30, r31, 0x48
-/* 80056B84 00000018  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80056B88 0000001C  80 05 5F 68 */	lwz r0, 0x5f68(r5)
-/* 80056B8C 00000020  90 1F 00 4C */	stw r0, 0x4c(r31)
+/* 80056B84 00000018  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
+/* 80056B88 0000001C  80 05 5F 68 */	lwz r0, 0x5f68(r5)	/* effective address: 8040C128 */
+/* 80056B8C 00000020  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
 /* 80056B90 00000024  54 80 10 3A */	slwi r0, r4, 2
 /* 80056B94 00000028  7C 7E 00 2E */	lwzx r3, r30, r0
 /* 80056B98 0000002C  7F A4 EB 78 */	mr r4, r29
@@ -25,9 +25,9 @@ lbl_80056B6C:
 /* 80056BA0 00000034  48 2C E8 ED */	bl entryImm__13J3DDrawBufferFP9J3DPacketUs
 /* 80056BA4 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80056BA8 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80056BAC 00000040  80 03 5F 80 */	lwz r0, 0x5f80(r3)
+/* 80056BAC 00000040  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
 /* 80056BB0 00000044  90 1E 00 00 */	stw r0, 0(r30)
-/* 80056BB4 00000048  80 03 5F 84 */	lwz r0, 0x5f84(r3)
+/* 80056BB4 00000048  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
 /* 80056BB8 0000004C  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80056BBC 00000050  7F A3 EB 78 */	mr r3, r29
 lbl_80056BC0:

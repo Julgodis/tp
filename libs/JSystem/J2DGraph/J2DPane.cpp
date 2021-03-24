@@ -11,34 +11,16 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DBasePosition {
-};
-
-struct _GXCullMode {
+struct JKRArchive {
 };
 
 struct ResTIMG {
 };
 
-struct J2DRotateAxis {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTransform {
+struct _GXCullMode {
 };
 
 struct J2DAnmBase {
-};
-
-struct J2DAnmColor {
 };
 
 struct J2DAnmTextureSRTKey {
@@ -53,7 +35,13 @@ struct JGeometry {
 
 };
 
-struct JKRArchive {
+struct J2DRotateAxis {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DGrafContext {
@@ -70,10 +58,22 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct ResFONT {
+struct J2DBasePosition {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmVtxColor {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DPane {
@@ -358,7 +358,7 @@ asm J2DPane::J2DPane() {
 
 /* ############################################################################################## */
 /* 804561F4-804561F8 0004+00 s=3 e=0 z=0  None .sdata2    @1489                                                        */
-SECTION_SDATA2 static f32 J2DPane__lit_1489 = 1.0f;
+SECTION_SDATA2 static f32 lit_1489 = 1.0f;
 
 /* 802F5CB8-802F5D40 0088+00 s=3 e=0 z=0  None .text      initiate__7J2DPaneFv                                         */
 #pragma push
@@ -641,7 +641,7 @@ asm void J2DPane::isUsed(ResFONT const* param_0) {
 
 /* ############################################################################################## */
 /* 8045620C-80456210 0004+00 s=1 e=0 z=0  None .sdata2    @2466                                                        */
-SECTION_SDATA2 static f32 J2DPane__lit_2466 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_2466 = 0.01745329238474369f;
 
 /* 802F7540-802F7680 0140+00 s=1 e=7 z=0  None .text      makeMatrix__7J2DPaneFffff                                    */
 #pragma push

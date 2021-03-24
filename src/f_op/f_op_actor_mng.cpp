@@ -424,19 +424,19 @@ extern "C" void checkWolfDash__9daPy_py_cCFv(); // 1
 extern "C" void checkFrontRoll__9daPy_py_cCFv(); // 1
 extern "C" void checkHorseRide__9daPy_py_cCFv(); // 1
 extern "C" void getGrabActorID__9daPy_py_cCFv(); // 1
-extern "C" extern char const* const f_op_f_op_actor_mng__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__8cM3dGPla[3];
 extern "C" extern void* __vt__11dBgS_WtrChk[12];
 extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 extern "C" extern u8 lit_5078[12];
 extern "C" extern u8 data_803F1C18[12];
-extern "C" extern u8 f_op_f_op_actor_mng__lit_5115[12];
+extern "C" extern u8 lit_5115[12];
 extern "C" extern u8 data_803F1C30[12];
 extern "C" extern u8 lit_6481[12];
 extern "C" extern u8 mLineCheck__11fopAcM_lc_c[112];
-extern "C" extern u8 f_op_f_op_actor_mng__lit_6503[12];
+extern "C" extern u8 lit_6503[12];
 extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
-extern "C" extern u8 f_op_f_op_actor_mng__lit_6509[12];
+extern "C" extern u8 lit_6509[12];
 extern "C" extern u8 mRoofCheck__11fopAcM_rc_c[80];
 extern "C" extern u8 lit_6519[12];
 extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
@@ -682,7 +682,7 @@ asm void fopAcM_CreateAppend() {
 
 /* ############################################################################################## */
 /* 80451C00-80451C04 0004+00 s=1 e=0 z=0  None .sdata2    @4263                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4263 = 10.0f;
+SECTION_SDATA2 static f32 lit_4263 = 10.0f;
 
 /* 80019B1C-80019C78 015C+00 s=4 e=0 z=0  None .text      createAppend__FUsUlPC4cXyziPC5csXyzPC4cXyzScUi               */
 #pragma push
@@ -995,7 +995,7 @@ asm void fopAcM_searchActorAngleY(fopAc_ac_c const* param_0, fopAc_ac_c const* p
 
 /* ############################################################################################## */
 /* 80451C04-80451C08 0004+00 s=13 e=0 z=0  None .sdata2    @4645                                                        */
-SECTION_SDATA2 static u8 f_op_f_op_actor_mng__lit_4645[4] = {
+SECTION_SDATA2 static u8 lit_4645[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1023,13 +1023,13 @@ asm void fopAcM_seenActorAngleY(fopAc_ac_c const* param_0, fopAc_ac_c const* par
 
 /* ############################################################################################## */
 /* 80451C08-80451C10 0008+00 s=3 e=0 z=0  None .sdata2    @4745                                                        */
-SECTION_SDATA2 static f64 f_op_f_op_actor_mng__lit_4745 = 0.5;
+SECTION_SDATA2 static f64 lit_4745 = 0.5;
 
 /* 80451C10-80451C18 0008+00 s=3 e=0 z=0  None .sdata2    @4746                                                        */
-SECTION_SDATA2 static f64 f_op_f_op_actor_mng__lit_4746 = 3.0;
+SECTION_SDATA2 static f64 lit_4746 = 3.0;
 
 /* 80451C18-80451C20 0008+00 s=4 e=0 z=0  None .sdata2    @4747                                                        */
-SECTION_SDATA2 static u8 f_op_f_op_actor_mng__lit_4747[8] = {
+SECTION_SDATA2 static u8 lit_4747[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1079,10 +1079,10 @@ asm void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const* param_0, fopAc_ac_c con
 
 /* ############################################################################################## */
 /* 80451C20-80451C24 0004+00 s=1 e=0 z=0  None .sdata2    @4922                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4922 = 40.0f;
+SECTION_SDATA2 static f32 lit_4922 = 40.0f;
 
 /* 80451C24-80451C28 0004+00 s=1 e=0 z=0  None .sdata2    @4923                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_4923 = 55.0f;
+SECTION_SDATA2 static f32 lit_4923 = 55.0f;
 
 /* 8001AAE0-8001AC40 0160+00 s=0 e=0 z=0  None .text      fopAcM_rollPlayerCrash__FPC10fopAc_ac_cfUlffif               */
 #pragma push
@@ -1498,13 +1498,13 @@ asm static void fopAcM_fastCreateItem2(cXyz const* param_0, int param_1, int par
 SECTION_SDATA2 static f32 lit_5808 = 2.0f;
 
 /* 80451C34-80451C38 0004+00 s=1 e=0 z=0  None .sdata2    @5809                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5809 = 8192.0f;
+SECTION_SDATA2 static f32 lit_5809 = 8192.0f;
 
 /* 80451C38-80451C3C 0004+00 s=4 e=0 z=0  None .sdata2    @5810                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5810 = 1.0f;
+SECTION_SDATA2 static f32 lit_5810 = 1.0f;
 
 /* 80451C3C-80451C40 0004+00 s=1 e=0 z=0  None .sdata2    @5811                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_5811 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5811 = 3.0f / 10.0f;
 
 /* 80451C40-80451C44 0004+00 s=1 e=0 z=0  None .sdata2    @5812                                                        */
 SECTION_SDATA2 static f32 lit_5812 = 1.0f / 5.0f;
@@ -1614,7 +1614,7 @@ asm void fopAcM_otoCheck(fopAc_ac_c const* param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 80451C48-80451C4C 0004+00 s=2 e=0 z=0  None .sdata2    @6035                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_actor_mng__lit_6035 = 100.0f;
+SECTION_SDATA2 static f32 lit_6035 = 100.0f;
 
 /* 8001CDFC-8001CED0 00D4+00 s=0 e=0 z=0  None .text      fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c           */
 #pragma push
@@ -1655,7 +1655,7 @@ asm void fopAcM_plAngleCheck(fopAc_ac_c const* param_0, s16 param_1) {
 
 /* ############################################################################################## */
 /* 803F1C00-803F1C0C 000C+00 s=1 e=0 z=0  None .bss       @4176                                                        */
-static u8 f_op_f_op_actor_mng__lit_4176[12];
+static u8 lit_4176[12];
 
 /* 803F1C0C-803F1C18 000C+00 s=0 e=0 z=0  None .bss       @5078                                                        */
 u8 lit_5078[12];
@@ -1664,7 +1664,7 @@ u8 lit_5078[12];
 u8 data_803F1C18[12];
 
 /* 803F1C24-803F1C30 000C+00 s=0 e=0 z=0  None .bss       @5115                                                        */
-u8 f_op_f_op_actor_mng__lit_5115[12];
+u8 lit_5115[12];
 
 /* 803F1C30-803F1C3C 000C+00 s=0 e=0 z=0  None .bss       max$5114                                                     */
 u8 data_803F1C30[12];
@@ -1676,7 +1676,7 @@ u8 lit_6481[12];
 u8 mLineCheck__11fopAcM_lc_c[112];
 
 /* 803F1CB8-803F1CC4 000C+00 s=0 e=0 z=0  None .bss       @6503                                                        */
-u8 f_op_f_op_actor_mng__lit_6503[12];
+u8 lit_6503[12];
 
 /* 803F1CC4-803F1D18 0054+00 s=2 e=6 z=0  None .bss       mGndCheck__11fopAcM_gc_c                                     */
 u8 mGndCheck__11fopAcM_gc_c[84];
@@ -1831,7 +1831,7 @@ asm void fopAcM_searchFromName4Event(char const* param_0, s16 param_1) {
 
 /* ############################################################################################## */
 /* 803F1D18-803F1D24 000C+00 s=0 e=0 z=0  None .bss       @6509                                                        */
-u8 f_op_f_op_actor_mng__lit_6509[12];
+u8 lit_6509[12];
 
 /* 803F1D24-803F1D74 0050+00 s=1 e=1 z=0  None .bss       mRoofCheck__11fopAcM_rc_c                                    */
 u8 mRoofCheck__11fopAcM_rc_c[80];

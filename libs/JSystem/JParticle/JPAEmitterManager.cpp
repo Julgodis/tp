@@ -11,10 +11,11 @@
 // Types:
 // 
 
-struct JKRHeap {
+struct JPADrawInfo {
 };
 
-struct JPADrawInfo {
+struct JPAResourceManager {
+	/* 80273E68 */ void getResource(u16) const;
 };
 
 struct JPAParticleCallBack {
@@ -37,8 +38,7 @@ struct JPABaseEmitter {
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
-struct JPAResourceManager {
-	/* 80273E68 */ void getResource(u16) const;
+struct JKRHeap {
 };
 
 struct JPAEmitterCallBack {
@@ -268,7 +268,7 @@ asm void JPAEmitterManager::clearResourceManager(u8 param_0) {
 
 /* ############################################################################################## */
 /* 80455358-8045535C 0004+00 s=1 e=0 z=0  None .sdata2    @2632                                                        */
-SECTION_SDATA2 static u8 JPAEmitterManager__lit_2632[4] = {
+SECTION_SDATA2 static u8 lit_2632[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 

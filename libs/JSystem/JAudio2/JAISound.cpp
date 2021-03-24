@@ -15,18 +15,18 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-struct JAISoundID {
-};
-
-struct JAIAudience {
-};
-
 struct JASSoundParams {
 };
 
 struct JASTrack {
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
+};
+
+struct JAIAudience {
+};
+
+struct JAISoundID {
 };
 
 struct JGeometry {
@@ -89,7 +89,7 @@ extern "C" void die_JAISound___8JAISoundFv(); // 1
 extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
 extern "C" void calc_JAISound___8JAISoundFv(); // 1
 extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
-extern "C" extern char const* const JAISound__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -195,7 +195,7 @@ SECTION_DATA static void* __vt__8JAISound[12] = {
 };
 
 /* 804557BC-804557C0 0004+00 s=2 e=0 z=0  None .sdata2    @697                                                         */
-SECTION_SDATA2 static f32 JAISound__lit_697 = 1.0f;
+SECTION_SDATA2 static f32 lit_697 = 1.0f;
 
 /* 804557C0-804557C8 0004+04 s=4 e=0 z=0  None .sdata2    @698                                                         */
 SECTION_SDATA2 static u8 lit_698[4 + 4 /* padding */] = {
@@ -250,7 +250,7 @@ asm void JAISound::newAudible(JGeometry::TVec3<f32> const& param_0, JGeometry::T
 
 /* ############################################################################################## */
 /* 804557C8-804557D0 0008+00 s=1 e=0 z=0  None .sdata2    @766                                                         */
-SECTION_SDATA2 static f64 JAISound__lit_766 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_766 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802A24DC-802A2598 00BC+00 s=0 e=24 z=0  None .text      stop__8JAISoundFUl                                           */
 #pragma push

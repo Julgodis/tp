@@ -7,7 +7,7 @@ lbl_8001BCFC:
 /* 8001BD10 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8001BD14 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8001BD18 0000001C  38 C4 61 C0 */	addi r6, r4, g_dComIfG_gameInfo@l
-/* 8001BD1C 00000020  83 E6 5F 54 */	lwz r31, 0x5f54(r6)
+/* 8001BD1C 00000020  83 E6 5F 54 */	lwz r31, 0x5f54(r6)	/* effective address: 8040C114 */
 /* 8001BD20 00000024  54 65 06 3E */	clrlwi r5, r3, 0x18
 /* 8001BD24 00000028  28 05 00 FF */	cmplwi r5, 0xff
 /* 8001BD28 0000002C  40 82 00 08 */	bne lbl_8001BD30

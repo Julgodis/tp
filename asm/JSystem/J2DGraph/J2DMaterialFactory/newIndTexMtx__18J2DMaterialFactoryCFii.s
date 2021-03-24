@@ -22,7 +22,7 @@ lbl_802F3D4C:
 /* 802F3D68 0000001C  41 80 FF CC */	blt lbl_802F3D34
 /* 802F3D6C 00000020  3C E0 80 3A */	lis r7, j2dDefaultIndTexMtxInfo@ha
 /* 802F3D70 00000024  38 E7 1B C4 */	addi r7, r7, j2dDefaultIndTexMtxInfo@l
-/* 802F3D74 00000028  88 07 00 18 */	lbz r0, 0x18(r7)
+/* 802F3D74 00000028  88 07 00 18 */	lbz r0, 0x18(r7)	/* effective address: 803A1BDC */
 /* 802F3D78 0000002C  98 01 00 20 */	stb r0, 0x20(r1)
 /* 802F3D7C 00000030  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 802F3D80 00000034  28 04 00 00 */	cmplwi r4, 0

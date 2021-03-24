@@ -11,7 +11,7 @@ lbl_800F1AAC:
 /* 800F1AD0 00000024  40 82 00 14 */	bne lbl_800F1AE4
 /* 800F1AD4 00000028  7F E3 FB 78 */	mr r3, r31
 /* 800F1AD8 0000002C  38 80 00 02 */	li r4, 2
-/* 800F1ADC 00000030  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F1ADC 00000030  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F1AE0 00000034  4B FB C0 0D */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F1AE4:
 /* 800F1AE4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -28,7 +28,7 @@ lbl_800F1AE4:
 /* 800F1B10 0000002C  4B FF CE 09 */	bl setSyncRide__9daAlink_cFi
 /* 800F1B14 00000030  3C 60 80 39 */	lis r3, m__25daAlinkHIO_hoCutCharge_c0@ha
 /* 800F1B18 00000034  38 63 DC 9C */	addi r3, r3, m__25daAlinkHIO_hoCutCharge_c0@l
-/* 800F1B1C 00000038  C0 03 00 50 */	lfs f0, 0x50(r3)
+/* 800F1B1C 00000038  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8038DCEC */
 /* 800F1B20 0000003C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800F1B24 00000040  4B FD F4 39 */	bl getSwordAtType__9daAlink_cFv
 /* 800F1B28 00000044  7C 64 1B 78 */	mr r4, r3
@@ -44,7 +44,7 @@ lbl_800F1AE4:
 /* 800F1B50 0000006C  4B FD F9 F1 */	bl setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff
 /* 800F1B54 00000070  3C 60 80 39 */	lis r3, m__25daAlinkHIO_hoCutCharge_c0@ha
 /* 800F1B58 00000074  38 63 DC 9C */	addi r3, r3, m__25daAlinkHIO_hoCutCharge_c0@l
-/* 800F1B5C 00000078  A8 03 00 3E */	lha r0, 0x3e(r3)
+/* 800F1B5C 00000078  A8 03 00 3E */	lha r0, 0x3e(r3)	/* effective address: 8038DCDA */
 /* 800F1B60 0000007C  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 800F1B64 00000080  7F E3 FB 78 */	mr r3, r31
 /* 800F1B68 00000084  3C 80 00 01 */	lis r4, 0x0001 /* 0x00010051@ha */

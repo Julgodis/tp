@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcPray_c {
@@ -39,6 +39,7 @@ struct daNpcPray_c {
 	/* 80AB3C24 */ void drawDbgInfo();
 	/* 80AB3C2C */ void reset();
 	/* 80AB3DBC */ void playMotion();
+	/* 80AB3F54 */ void setAction(bool (daNpcPray_c::*)(void*));
 	/* 80AB3FFC */ void setLookMode(int);
 	/* 80AB4020 */ void lookat();
 	/* 80AB4200 */ void step(s16, int);
@@ -146,7 +147,7 @@ extern "C" void setMotion__11daNpcPray_cFifi(); // 1
 extern "C" void drawDbgInfo__11daNpcPray_cFv(); // 1
 extern "C" void reset__11daNpcPray_cFv(); // 1
 extern "C" void playMotion__11daNpcPray_cFv(); // 1
-extern "C" static void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b(); // 1
+extern "C" void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b(); // 1
 extern "C" void setLookMode__11daNpcPray_cFi(); // 1
 extern "C" void lookat__11daNpcPray_cFv(); // 1
 extern "C" void step__11daNpcPray_cFsi(); // 1
@@ -496,7 +497,7 @@ asm void daNpcPray_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b() {
+asm void daNpcPray_c::setAction(bool (daNpcPray_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_prayer/d_a_npc_prayer/setAction__11daNpcPray_cFM11daNpcPray_cFPCvPvPv_b.s"
 }

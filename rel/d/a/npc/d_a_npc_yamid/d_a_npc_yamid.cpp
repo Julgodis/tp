@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B45828 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_yamiD_c {
@@ -59,6 +59,8 @@ struct daNpc_yamiD_c {
 	/* 80B44498 */ void drawDbgInfo();
 	/* 80B444A0 */ void drawGhost();
 	/* 80B4450C */ void selectAction();
+	/* 80B44554 */ void chkAction(int (daNpc_yamiD_c::*)(void*));
+	/* 80B44580 */ void setAction(int (daNpc_yamiD_c::*)(void*));
 	/* 80B44628 */ void wait(void*);
 	/* 80B44900 */ void talk(void*);
 	/* 80B44AF8 */ void cutStopper(int);
@@ -224,8 +226,8 @@ extern "C" void setCollision__13daNpc_yamiD_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_yamiD_cFv(); // 1
 extern "C" void drawGhost__13daNpc_yamiD_cFv(); // 1
 extern "C" void selectAction__13daNpc_yamiD_cFv(); // 1
-extern "C" static void chkAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i(); // 1
 extern "C" void wait__13daNpc_yamiD_cFPv(); // 1
 extern "C" void talk__13daNpc_yamiD_cFPv(); // 1
 extern "C" void cutStopper__13daNpc_yamiD_cFi(); // 1
@@ -743,7 +745,7 @@ asm void daNpc_yamiD_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i() {
+asm void daNpc_yamiD_c::chkAction(int (daNpc_yamiD_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yamid/d_a_npc_yamid/chkAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i.s"
 }
@@ -754,7 +756,7 @@ extern "C" asm static void chkAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i() {
+asm void daNpc_yamiD_c::setAction(int (daNpc_yamiD_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_yamid/d_a_npc_yamid/setAction__13daNpc_yamiD_cFM13daNpc_yamiD_cFPCvPvPv_i.s"
 }

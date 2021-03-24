@@ -24,8 +24,8 @@ lbl_802F37E4:
 /* 802F37E4 00000000  3C 80 80 3A */	lis r4, j2dDefaultTexCoordInfo@ha
 /* 802F37E8 00000004  8C 04 1B 80 */	lbzu r0, j2dDefaultTexCoordInfo@l(r4)
 /* 802F37EC 00000008  98 03 00 00 */	stb r0, 0(r3)
-/* 802F37F0 0000000C  88 04 00 01 */	lbz r0, 1(r4)
+/* 802F37F0 0000000C  88 04 00 01 */	lbz r0, 1(r4)	/* effective address: 803A0001 */
 /* 802F37F4 00000010  98 03 00 01 */	stb r0, 1(r3)
-/* 802F37F8 00000014  88 04 00 02 */	lbz r0, 2(r4)
+/* 802F37F8 00000014  88 04 00 02 */	lbz r0, 2(r4)	/* effective address: 803A0002 */
 /* 802F37FC 00000018  98 03 00 02 */	stb r0, 2(r3)
 /* 802F3800 0000001C  4E 80 00 20 */	blr 

@@ -18,7 +18,7 @@ lbl_8012987C:
 /* 801298BC 0000002C  40 82 00 18 */	bne lbl_801298D4
 /* 801298C0 00000030  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlDamFall_c0@ha
 /* 801298C4 00000034  38 83 F3 74 */	addi r4, r3, m__23daAlinkHIO_wlDamFall_c0@l
-/* 801298C8 00000038  C0 04 00 2C */	lfs f0, 0x2c(r4)
+/* 801298C8 00000038  C0 04 00 2C */	lfs f0, 0x2c(r4)	/* effective address: 8038F3A0 */
 /* 801298CC 00000050  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 801298D0 00000000  40 80 00 44 */	bge lbl_80129914
 lbl_801298D4:

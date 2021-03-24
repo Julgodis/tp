@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AC3CE8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Saru_c {
@@ -60,6 +60,8 @@ struct daNpc_Saru_c {
 	/* 80AC1A20 */ void drawDbgInfo();
 	/* 80AC1A28 */ void drawOtherMdl();
 	/* 80AC1B30 */ void selectAction();
+	/* 80AC1B78 */ void chkAction(int (daNpc_Saru_c::*)(void*));
+	/* 80AC1BA4 */ void setAction(int (daNpc_Saru_c::*)(void*));
 	/* 80AC1C4C */ void setSe();
 	/* 80AC216C */ void cutFindMonkey(int);
 	/* 80AC2368 */ void cutHelpMe(int);
@@ -192,8 +194,8 @@ extern "C" void setCollision__12daNpc_Saru_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_Saru_cFv(); // 1
 extern "C" void drawOtherMdl__12daNpc_Saru_cFv(); // 1
 extern "C" void selectAction__12daNpc_Saru_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i(); // 1
 extern "C" void setSe__12daNpc_Saru_cFv(); // 1
 extern "C" void cutFindMonkey__12daNpc_Saru_cFi(); // 1
 extern "C" void cutHelpMe__12daNpc_Saru_cFi(); // 1
@@ -640,7 +642,7 @@ asm void daNpc_Saru_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i() {
+asm void daNpc_Saru_c::chkAction(int (daNpc_Saru_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_saru/d_a_npc_saru/chkAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i.s"
 }
@@ -651,7 +653,7 @@ extern "C" asm static void chkAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i() {
+asm void daNpc_Saru_c::setAction(int (daNpc_Saru_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_saru/d_a_npc_saru/setAction__12daNpc_Saru_cFM12daNpc_Saru_cFPCvPvPv_i.s"
 }

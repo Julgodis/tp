@@ -5,7 +5,7 @@ lbl_8023AC14:
 /* 8023AC20 0000000C  A8 A3 01 0A */	lha r5, 0x10a(r3)
 /* 8023AC24 00000010  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 8023AC28 00000014  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 8023AC2C 00000018  A8 04 02 FA */	lha r0, 0x2fa(r4)
+/* 8023AC2C 00000018  A8 04 02 FA */	lha r0, 0x2fa(r4)	/* effective address: 80430586 */
 /* 8023AC30 0000001C  7C 05 00 00 */	cmpw r5, r0
 /* 8023AC34 00000020  4C 81 00 20 */	blelr 
 /* 8023AC38 00000024  38 00 00 03 */	li r0, 3

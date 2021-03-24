@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct J3DLightObj {
-	/* 80323590 */ void load(u32) const;
+struct J3DGXColor {
 };
 
-struct J3DGXColor {
+struct J3DLightObj {
+	/* 80323590 */ void load(u32) const;
 };
 
 struct J3DColorBlock {
@@ -112,13 +112,13 @@ struct J3DColorBlockLightOn {
 	/* 80323018 */ ~J3DColorBlockLightOn();
 };
 
-struct J3DTexCoord {
-};
-
 struct J3DTexMtx {
 	/* 803238C4 */ void load(u32) const;
 	/* 80323900 */ void calc(f32 const (* )[4]);
 	/* 80323C0C */ void calcPostTexMtx(f32 const (* )[4]);
+};
+
+struct J3DTexCoord {
 };
 
 struct J3DNBTScale {
@@ -186,22 +186,22 @@ struct J3DTevBlockNull {
 	/* 803176D4 */ void initialize();
 };
 
-struct J3DIndTevStage {
-};
-
 struct J3DGXColorS10 {
 };
 
-struct J3DTevStage {
+struct J3DIndTevStage {
 };
 
-struct J3DTevOrder {
+struct J3DTevStage {
 };
 
 struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevSwapModeTable {
+};
+
+struct J3DTevOrder {
 };
 
 struct J3DTevBlock {
@@ -509,15 +509,15 @@ struct J3DTevBlock16 {
 struct J3DIndTexOrder {
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
+struct J3DIndBlock {
 };
 
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 };
 
-struct J3DIndBlock {
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
 };
 
 struct J3DIndBlockFull {
@@ -541,16 +541,16 @@ struct J3DIndBlockFull {
 	/* 803234A0 */ ~J3DIndBlockFull();
 };
 
-struct J3DZMode {
+struct J3DAlphaComp {
 };
 
 struct J3DBlend {
 };
 
-struct J3DFog {
+struct J3DZMode {
 };
 
-struct J3DAlphaComp {
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -1171,7 +1171,7 @@ extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage(); // 1
 extern "C" void getTexNoOffset__11J3DTevBlockCFv(); // 1
 extern "C" void getType__21J3DColorBlockLightOffFv(); // 1
 extern "C" void __sinit_J3DMatBlock_cpp(); // 1
-extern "C" extern char const* const J3DMatBlock__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__14J3DPEBlockFull[31];
 extern "C" extern void* __vt__16J3DPEBlockFogOff[31];
 extern "C" extern void* __vt__13J3DTevBlock16[55];
@@ -2874,7 +2874,7 @@ asm void J3DPEBlockFull::reset(J3DPEBlock* param_0) {
 
 /* ############################################################################################## */
 /* 803CDF30-803CDF60 0030+00 s=1 e=0 z=0  None .data      @5062                                                        */
-SECTION_DATA static void* J3DMatBlock__lit_5062[12] = {
+SECTION_DATA static void* lit_5062[12] = {
 	/* 0    */ (void*)(((char*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+0x188),
 	/* 1    */ (void*)(((char*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+0x74),
 	/* 2    */ (void*)(((char*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+0xC8),
@@ -2890,7 +2890,7 @@ SECTION_DATA static void* J3DMatBlock__lit_5062[12] = {
 };
 
 /* 804563AC-804563B0 0004+00 s=3 e=0 z=0  None .sdata2    @5060                                                        */
-SECTION_SDATA2 static u8 J3DMatBlock__lit_5060[4] = {
+SECTION_SDATA2 static u8 lit_5060[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -2907,7 +2907,7 @@ asm void J3DTexGenBlockPatched::calc(f32 const (* param_0)[4]) {
 
 /* ############################################################################################## */
 /* 803CDF60-803CDF90 0030+00 s=1 e=0 z=0  None .data      @5110                                                        */
-SECTION_DATA static void* J3DMatBlock__lit_5110[12] = {
+SECTION_DATA static void* lit_5110[12] = {
 	/* 0    */ (void*)(((char*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0x118),
 	/* 1    */ (void*)(((char*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0x74),
 	/* 2    */ (void*)(((char*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0x88),
@@ -2963,7 +2963,7 @@ asm void J3DTexGenBlockPatched::calcPostTexMtx(f32 const (* param_0)[4]) {
 
 /* ############################################################################################## */
 /* 803CDFC0-803CDFF0 0030+00 s=1 e=0 z=0  None .data      @5187                                                        */
-SECTION_DATA static void* J3DMatBlock__lit_5187[12] = {
+SECTION_DATA static void* lit_5187[12] = {
 	/* 0    */ (void*)(((char*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0xD8),
 	/* 1    */ (void*)(((char*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0x68),
 	/* 2    */ (void*)(((char*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+0x84),

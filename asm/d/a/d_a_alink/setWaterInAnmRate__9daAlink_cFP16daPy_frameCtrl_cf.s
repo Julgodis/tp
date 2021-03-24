@@ -15,13 +15,13 @@ lbl_80101CF4:
 /* 80101D28 00000020  41 82 00 18 */	beq lbl_80101D40
 /* 80101D2C 00000024  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 80101D30 00000028  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 80101D34 0000002C  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 80101D34 0000002C  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038E83C */
 /* 80101D38 00000030  EF FF 00 32 */	fmuls f31, f31, f0
 /* 80101D3C 00000034  48 00 00 14 */	b lbl_80101D50
 lbl_80101D40:
 /* 80101D40 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 80101D44 00000004  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 80101D48 00000008  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 80101D48 00000008  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E820 */
 /* 80101D4C 0000000C  EF FF 00 32 */	fmuls f31, f31, f0
 lbl_80101D50:
 /* 80101D50 00000000  D3 FF 00 0C */	stfs f31, 0xc(r31)

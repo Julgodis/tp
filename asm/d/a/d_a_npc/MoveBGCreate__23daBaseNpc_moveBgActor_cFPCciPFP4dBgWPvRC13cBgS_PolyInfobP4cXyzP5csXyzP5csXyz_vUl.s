@@ -25,8 +25,8 @@ lbl_8014F60C:
 /* 8014F668 0000005C  93 AD 8A 64 */	stw r29, m_dzb_id__23daBaseNpc_moveBgActor_c(r13)
 /* 8014F66C 00000060  93 CD 8A 68 */	stw r30, m_set_func__23daBaseNpc_moveBgActor_c(r13)
 /* 8014F670 00000064  7F 63 DB 78 */	mr r3, r27
-/* 8014F674 00000068  3C 80 80 15 */	lis r4, d_a_d_a_npc__CheckCreateHeap__FP10fopAc_ac_c@ha
-/* 8014F678 0000006C  38 84 F4 F8 */	addi r4, r4, d_a_d_a_npc__CheckCreateHeap__FP10fopAc_ac_c@l
+/* 8014F674 00000068  3C 80 80 15 */	lis r4, CheckCreateHeap__FP10fopAc_ac_c@ha
+/* 8014F678 0000006C  38 84 F4 F8 */	addi r4, r4, CheckCreateHeap__FP10fopAc_ac_c@l
 /* 8014F67C 00000070  7F E5 FB 78 */	mr r5, r31
 /* 8014F680 00000074  4B EC AE 31 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 8014F684 00000078  54 60 06 3F */	clrlwi. r0, r3, 0x18

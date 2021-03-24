@@ -19,7 +19,7 @@ lbl_8010DEA4:
 /* 8010DEB8 00000014  38 80 00 F4 */	li r4, 0xf4
 /* 8010DEBC 00000018  3C A0 80 39 */	lis r5, m__19daAlinkHIO_board_c0@ha
 /* 8010DEC0 0000001C  38 A5 E8 70 */	addi r5, r5, m__19daAlinkHIO_board_c0@l
-/* 8010DEC4 00000020  C0 25 00 68 */	lfs f1, 0x68(r5)
+/* 8010DEC4 00000020  C0 25 00 68 */	lfs f1, 0x68(r5)	/* effective address: 8038E8D8 */
 /* 8010DEC8 00000024  C0 42 93 24 */	lfs f2, lit_7450(r2)
 /* 8010DECC 00000028  4B F9 F1 15 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8010DED0 0000002C  C0 22 92 C0 */	lfs f1, lit_6108(r2)

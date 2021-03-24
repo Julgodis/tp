@@ -11,9 +11,9 @@ lbl_801A16C0:
 /* 801A16E4 00000024  7C FA 3B 78 */	mr r26, r7
 /* 801A16E8 00000028  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A16EC 0000002C  38 83 CA 54 */	addi r4, r3, g_env_light@l
-/* 801A16F0 00000030  88 04 12 C2 */	lbz r0, 0x12c2(r4)
+/* 801A16F0 00000030  88 04 12 C2 */	lbz r0, 0x12c2(r4)	/* effective address: 8042DD16 */
 /* 801A16F4 00000034  98 17 03 7F */	stb r0, 0x37f(r23)
-/* 801A16F8 00000038  88 04 12 C3 */	lbz r0, 0x12c3(r4)
+/* 801A16F8 00000038  88 04 12 C3 */	lbz r0, 0x12c3(r4)	/* effective address: 8042DD17 */
 /* 801A16FC 0000003C  98 17 03 7E */	stb r0, 0x37e(r23)
 /* 801A1700 00000040  88 77 03 7F */	lbz r3, 0x37f(r23)
 /* 801A1704 00000044  88 17 03 7E */	lbz r0, 0x37e(r23)
@@ -27,7 +27,7 @@ lbl_801A171C:
 /* 801A1720 00000004  88 17 03 7C */	lbz r0, 0x37c(r23)
 /* 801A1724 00000008  7C 03 00 40 */	cmplw r3, r0
 /* 801A1728 0000000C  40 82 00 0C */	bne lbl_801A1734
-/* 801A172C 00000010  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A172C 00000010  C0 02 A2 0C */	lfs f0, lit_4409(r2)
 /* 801A1730 00000014  D0 17 03 70 */	stfs f0, 0x370(r23)
 lbl_801A1734:
 /* 801A1734 00000000  38 01 00 20 */	addi r0, r1, 0x20
@@ -67,7 +67,7 @@ lbl_801A17A4:
 lbl_801A17B8:
 /* 801A17B8 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A17BC 00000004  39 23 CA 54 */	addi r9, r3, g_env_light@l
-/* 801A17C0 00000008  80 69 00 04 */	lwz r3, 4(r9)
+/* 801A17C0 00000008  80 69 00 04 */	lwz r3, 4(r9)	/* effective address: 8042CA58 */
 /* 801A17C4 0000000C  1C 00 00 34 */	mulli r0, r0, 0x34
 /* 801A17C8 00000010  7F C3 02 14 */	add r30, r3, r0
 /* 801A17CC 00000014  88 01 00 21 */	lbz r0, 0x21(r1)
@@ -103,7 +103,7 @@ lbl_801A1810:
 /* 801A1840 00000030  C0 77 03 74 */	lfs f3, 0x374(r23)
 /* 801A1844 00000034  3D 20 80 43 */	lis r9, g_env_light@ha
 /* 801A1848 00000038  39 29 CA 54 */	addi r9, r9, g_env_light@l
-/* 801A184C 0000003C  C0 09 11 FC */	lfs f0, 0x11fc(r9)
+/* 801A184C 0000003C  C0 09 11 FC */	lfs f0, 0x11fc(r9)	/* effective address: 8042DC50 */
 /* 801A1850 00000040  EC 00 00 32 */	fmuls f0, f0, f0
 /* 801A1854 00000044  EC 63 00 32 */	fmuls f3, f3, f0
 /* 801A1858 00000048  4B FF EA E9 */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
@@ -173,7 +173,7 @@ lbl_801A1908:
 /* 801A1944 0000003C  C0 21 00 3C */	lfs f1, 0x3c(r1)
 /* 801A1948 00000040  C0 57 03 70 */	lfs f2, 0x370(r23)
 /* 801A194C 00000044  39 01 00 70 */	addi r8, r1, 0x70
-/* 801A1950 00000048  C0 62 A2 48 */	lfs f3, d_kankyo_d_kankyo__lit_4505(r2)
+/* 801A1950 00000048  C0 62 A2 48 */	lfs f3, lit_4505(r2)
 /* 801A1954 0000004C  4B FF E9 ED */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
 /* 801A1958 00000050  4B FB DA CD */	bl checkNowWolfEyeUp__9daPy_py_cFv
 /* 801A195C 00000054  2C 03 00 00 */	cmpwi r3, 0
@@ -367,7 +367,7 @@ lbl_801A1BE4:
 /* 801A1C28 00000044  39 01 00 40 */	addi r8, r1, 0x40
 /* 801A1C2C 00000048  3D 20 80 43 */	lis r9, g_env_light@ha
 /* 801A1C30 0000004C  39 29 CA 54 */	addi r9, r9, g_env_light@l
-/* 801A1C34 00000050  C0 69 12 04 */	lfs f3, 0x1204(r9)
+/* 801A1C34 00000050  C0 69 12 04 */	lfs f3, 0x1204(r9)	/* effective address: 8042DC58 */
 /* 801A1C38 00000054  4B FF E7 09 */	bl dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f
 /* 801A1C3C 00000058  88 17 03 7A */	lbz r0, 0x37a(r23)
 /* 801A1C40 0000005C  28 00 00 0A */	cmplwi r0, 0xa
@@ -375,7 +375,7 @@ lbl_801A1BE4:
 /* 801A1C48 00000064  28 00 00 09 */	cmplwi r0, 9
 /* 801A1C4C 00000068  40 82 00 14 */	bne lbl_801A1C60
 lbl_801A1C50:
-/* 801A1C50 00000000  C0 22 A2 48 */	lfs f1, d_kankyo_d_kankyo__lit_4505(r2)
+/* 801A1C50 00000000  C0 22 A2 48 */	lfs f1, lit_4505(r2)
 /* 801A1C54 00000004  C0 12 12 10 */	lfs f0, 0x1210(r18)
 /* 801A1C58 00000008  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 801A1C5C 0000000C  40 82 00 68 */	bne lbl_801A1CC4
@@ -388,8 +388,8 @@ lbl_801A1C60:
 /* 801A1C74 00000014  C0 D7 03 70 */	lfs f6, 0x370(r23)
 /* 801A1C78 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1C7C 0000001C  3A 03 CA 54 */	addi r16, r3, g_env_light@l
-/* 801A1C80 00000020  C0 F0 11 EC */	lfs f7, 0x11ec(r16)
-/* 801A1C84 00000024  C1 10 11 F4 */	lfs f8, 0x11f4(r16)
+/* 801A1C80 00000020  C0 F0 11 EC */	lfs f7, 0x11ec(r16)	/* effective address: 8042DC40 */
+/* 801A1C84 00000024  C1 10 11 F4 */	lfs f8, 0x11f4(r16)	/* effective address: 8042DC48 */
 /* 801A1C88 00000028  4B FF BB 19 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A1C8C 0000002C  D0 39 00 00 */	stfs f1, 0(r25)
 /* 801A1C90 00000030  C0 3E 00 28 */	lfs f1, 0x28(r30)
@@ -400,7 +400,7 @@ lbl_801A1C60:
 /* 801A1CA4 00000044  C0 D7 03 70 */	lfs f6, 0x370(r23)
 /* 801A1CA8 00000048  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1CAC 0000004C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A1CB0 00000050  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)
+/* 801A1CB0 00000050  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)	/* effective address: 8042DC44 */
 /* 801A1CB4 00000054  C1 10 11 F4 */	lfs f8, 0x11f4(r16)
 /* 801A1CB8 00000058  4B FF BA E9 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A1CBC 0000005C  D0 3A 00 00 */	stfs f1, 0(r26)
@@ -414,8 +414,8 @@ lbl_801A1CC4:
 /* 801A1CD8 00000014  C0 D7 03 70 */	lfs f6, 0x370(r23)
 /* 801A1CDC 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1CE0 0000001C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A1CE4 00000020  C0 E3 11 EC */	lfs f7, 0x11ec(r3)
-/* 801A1CE8 00000024  C1 02 A2 0C */	lfs f8, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A1CE4 00000020  C0 E3 11 EC */	lfs f7, 0x11ec(r3)	/* effective address: 8042DC40 */
+/* 801A1CE8 00000024  C1 02 A2 0C */	lfs f8, lit_4409(r2)
 /* 801A1CEC 00000028  4B FF BA B5 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A1CF0 0000002C  D0 39 00 00 */	stfs f1, 0(r25)
 /* 801A1CF4 00000030  C0 3E 00 28 */	lfs f1, 0x28(r30)
@@ -426,8 +426,8 @@ lbl_801A1CC4:
 /* 801A1D08 00000044  C0 D7 03 70 */	lfs f6, 0x370(r23)
 /* 801A1D0C 00000048  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 801A1D10 0000004C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 801A1D14 00000050  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)
-/* 801A1D18 00000054  C1 02 A2 0C */	lfs f8, d_kankyo_d_kankyo__lit_4409(r2)
+/* 801A1D14 00000050  C0 E3 11 F0 */	lfs f7, 0x11f0(r3)	/* effective address: 8042DC44 */
+/* 801A1D18 00000054  C1 02 A2 0C */	lfs f8, lit_4409(r2)
 /* 801A1D1C 00000058  4B FF BA 85 */	bl float_kankyo_color_ratio_set__Fffffffff
 /* 801A1D20 0000005C  D0 3A 00 00 */	stfs f1, 0(r26)
 lbl_801A1D24:

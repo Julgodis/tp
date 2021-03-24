@@ -30,7 +30,7 @@ extern "C" extern u8 __GDCurrentDL[4];
 
 /* ############################################################################################## */
 /* 803D2948-803D29B0 0068+00 s=1 e=0 z=0  None .data      @121                                                         */
-SECTION_DATA static void* GDGeometry__lit_121[26] = {
+SECTION_DATA static void* lit_121[26] = {
 	/* 0    */ (void*)(((char*)GDSetVtxDescv)+0x78),
 	/* 1    */ (void*)(((char*)GDSetVtxDescv)+0x80),
 	/* 2    */ (void*)(((char*)GDSetVtxDescv)+0x90),

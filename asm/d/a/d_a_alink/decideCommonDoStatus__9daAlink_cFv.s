@@ -21,11 +21,11 @@ lbl_800B4BBC:
 /* 800B4BC0 00000004  40 82 06 A4 */	bne lbl_800B5264
 /* 800B4BC4 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B4BC8 0000000C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 800B4BCC 00000010  88 1E 5E 24 */	lbz r0, 0x5e24(r30)
+/* 800B4BCC 00000010  88 1E 5E 24 */	lbz r0, 0x5e24(r30)	/* effective address: 8040BFE4 */
 /* 800B4BD0 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 800B4BD4 00000018  40 82 06 90 */	bne lbl_800B5264
-/* 800B4BD8 0000001C  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800B4BDC 00000020  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800B4BD8 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800B4BDC 00000020  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800B4BE0 00000024  38 63 04 70 */	addi r3, r3, 0x470
 /* 800B4BE4 00000028  4B FE 8E 7D */	bl checkStageName__9daAlink_cFPCc
 /* 800B4BE8 0000002C  7C 7F 1B 78 */	mr r31, r3

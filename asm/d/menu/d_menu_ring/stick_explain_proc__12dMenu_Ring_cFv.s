@@ -14,7 +14,7 @@ lbl_801ED93C:
 /* 801ED96C 0000001C  40 82 00 40 */	bne lbl_801ED9AC
 /* 801ED970 00000020  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801ED974 00000024  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801ED978 00000028  88 03 00 C0 */	lbz r0, 0xc0(r3)
+/* 801ED978 00000028  88 03 00 C0 */	lbz r0, 0xc0(r3)	/* effective address: 80430248 */
 /* 801ED97C 0000002C  28 00 00 01 */	cmplwi r0, 1
 /* 801ED980 00000030  40 82 00 0C */	bne lbl_801ED98C
 /* 801ED984 00000034  48 02 F0 81 */	bl warpInProc__13dMeter2Info_cFv
@@ -27,7 +27,7 @@ lbl_801ED998:
 /* 801ED998 00000000  38 00 00 00 */	li r0, 0
 /* 801ED99C 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801ED9A0 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801ED9A4 0000000C  98 03 00 E8 */	stb r0, 0xe8(r3)
+/* 801ED9A4 0000000C  98 03 00 E8 */	stb r0, 0xe8(r3)	/* effective address: 80430270 */
 /* 801ED9A8 00000010  98 1F 06 B0 */	stb r0, 0x6b0(r31)
 lbl_801ED9AC:
 /* 801ED9AC 00000000  80 7F 03 70 */	lwz r3, 0x370(r31)
@@ -37,7 +37,7 @@ lbl_801ED9AC:
 /* 801ED9BC 00000010  48 06 7E 15 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801ED9C0 00000014  80 7F 01 B8 */	lwz r3, 0x1b8(r31)
 /* 801ED9C4 00000018  C0 22 AA 10 */	lfs f1, lit_5683(r2)
-/* 801ED9C8 0000001C  C0 02 A9 9C */	lfs f0, d_menu_d_menu_ring__lit_4305(r2)
+/* 801ED9C8 0000001C  C0 02 A9 9C */	lfs f0, lit_4305(r2)
 /* 801ED9CC 00000020  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 801ED9D0 00000024  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801ED9D4 00000028  FC 00 00 1E */	fctiwz f0, f0

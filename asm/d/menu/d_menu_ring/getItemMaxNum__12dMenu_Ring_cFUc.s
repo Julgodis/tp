@@ -50,7 +50,7 @@ lbl_801EE1FC:
 lbl_801EE204:
 /* 801EE204 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EE208 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801EE20C 00000008  88 63 00 F8 */	lbz r3, 0xf8(r3)
+/* 801EE20C 00000008  88 63 00 F8 */	lbz r3, 0xf8(r3)	/* effective address: 804062B8 */
 /* 801EE210 0000000C  48 00 00 08 */	b lbl_801EE218
 lbl_801EE214:
 /* 801EE214 00000000  38 60 00 32 */	li r3, 0x32

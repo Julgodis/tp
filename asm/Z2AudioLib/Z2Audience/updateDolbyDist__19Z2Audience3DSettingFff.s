@@ -1,5 +1,5 @@
 lbl_802BC6F8:
-/* 802BC6F8 00000000  C0 62 C0 AC */	lfs f3, Z2Audience__lit_896(r2)
+/* 802BC6F8 00000000  C0 62 C0 AC */	lfs f3, lit_896(r2)
 /* 802BC6FC 00000004  C0 8D 82 64 */	lfs f4, DOLBY_FLONT_DISTANCE_MAX__7Z2Param(r13)
 /* 802BC700 00000008  EC 03 01 32 */	fmuls f0, f3, f4
 /* 802BC704 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -10,7 +10,7 @@ lbl_802BC6F8:
 lbl_802BC718:
 /* 802BC718 00000000  D0 83 00 44 */	stfs f4, 0x44(r3)
 lbl_802BC71C:
-/* 802BC71C 00000000  C0 22 C0 E0 */	lfs f1, Z2Audience__lit_1059(r2)
+/* 802BC71C 00000000  C0 22 C0 E0 */	lfs f1, lit_1059(r2)
 /* 802BC720 00000004  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 802BC724 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 802BC728 0000000C  FC 02 00 40 */	fcmpo cr0, f2, f0

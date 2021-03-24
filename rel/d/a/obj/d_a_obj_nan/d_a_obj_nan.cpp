@@ -16,14 +16,8 @@ struct daObj_NanHIO_c {
 	/* 80CA30D0 */ ~daObj_NanHIO_c();
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DFrameCtrl {
-	/* 80CA08EC */ ~J3DFrameCtrl();
-};
-
 struct daObjNAN_c {
+	/* 80CA05D4 */ void setAction(void (daObjNAN_c::*)());
 	/* 80CA0978 */ void nan_posMove();
 	/* 80CA0A2C */ void turn();
 	/* 80CA0D9C */ void nan_WalkAnm();
@@ -41,6 +35,13 @@ struct daObjNAN_c {
 	/* 80CA2904 */ void _delete();
 	/* 80CA296C */ void setBaseMtx();
 	/* 80CA2B68 */ void create();
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DFrameCtrl {
+	/* 80CA08EC */ ~J3DFrameCtrl();
 };
 
 struct cM3dGPla {
@@ -79,7 +80,7 @@ static void daObjNAN_Execute(daObjNAN_c*); // 2
 void daObjNAN_IsDelete(daObjNAN_c*); // 2
 
 extern "C" void __ct__14daObj_NanHIO_cFv(); // 1
-extern "C" static void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v(); // 1
+extern "C" void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v(); // 1
 extern "C" void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void daObjNAN_Create__FP10fopAc_ac_c(); // 1
@@ -221,7 +222,7 @@ asm daObj_NanHIO_c::daObj_NanHIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v() {
+asm void daObjNAN_c::setAction(void (daObjNAN_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_nan/d_a_obj_nan/setAction__10daObjNAN_cFM10daObjNAN_cFPCvPv_v.s"
 }

@@ -14,10 +14,10 @@
 struct STControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
 struct dMenu_Fishing_c {
@@ -134,9 +134,7 @@ extern "C" extern u8 const data_80395F70[48];
 extern "C" extern u8 const data_80395FA0[48];
 extern "C" extern u8 const data_80395FD0[48];
 extern "C" extern u8 const data_80396000[24];
-extern "C" extern char const* const d_menu_d_menu_fishing__stringBase0;
-extern "C" extern void* d_menu_d_menu_fishing__lit_3790[3];
-extern "C" extern void* d_menu_d_menu_fishing__lit_3791[3];
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -199,31 +197,31 @@ extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
 
 /* ############################################################################################## */
 /* 803BD038-803BD044 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_menu_d_menu_fishing__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD044-803BD050 000C+00 s=0 e=0 z=0  None .data      @3790                                                        */
-SECTION_DATA void* d_menu_d_menu_fishing__lit_3790[3] = {
+/* 803BD044-803BD050 000C+00 s=1 e=0 z=0  None .data      @3790                                                        */
+SECTION_DATA static void* lit_3790[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_init__15dMenu_Fishing_cFv,
 };
 
-/* 803BD050-803BD05C 000C+00 s=2 e=0 z=0  None .data      map_init_process                                             */
-SECTION_DATA static u8 d_menu_d_menu_fishing__map_init_process[12] = {
+/* 803BD050-803BD05C 000C+00 s=3 e=0 z=0  None .data      map_init_process                                             */
+SECTION_DATA static u8 map_init_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BD05C-803BD068 000C+00 s=0 e=0 z=0  None .data      @3791                                                        */
-SECTION_DATA void* d_menu_d_menu_fishing__lit_3791[3] = {
+/* 803BD05C-803BD068 000C+00 s=1 e=0 z=0  None .data      @3791                                                        */
+SECTION_DATA static void* lit_3791[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)wait_move__15dMenu_Fishing_cFv,
 };
 
-/* 803BD068-803BD074 000C+00 s=1 e=0 z=0  None .data      map_move_process                                             */
-SECTION_DATA static u8 d_menu_d_menu_fishing__map_move_process[12] = {
+/* 803BD068-803BD074 000C+00 s=2 e=0 z=0  None .data      map_move_process                                             */
+SECTION_DATA static u8 map_move_process[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -285,15 +283,15 @@ asm void dMenu_Fishing_c::_move() {
 
 /* ############################################################################################## */
 /* 80454108-8045410C 0004+00 s=3 e=0 z=0  None .sdata2    @3904                                                        */
-SECTION_SDATA2 static u8 d_menu_d_menu_fishing__lit_3904[4] = {
+SECTION_SDATA2 static u8 lit_3904[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045410C-80454110 0004+00 s=1 e=0 z=0  None .sdata2    @3905                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_3905 = 608.0f;
+SECTION_SDATA2 static f32 lit_3905 = 608.0f;
 
 /* 80454110-80454114 0004+00 s=1 e=0 z=0  None .sdata2    @3906                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_3906 = 448.0f;
+SECTION_SDATA2 static f32 lit_3906 = 448.0f;
 
 /* 801C514C-801C5204 00B8+00 s=1 e=1 z=0  None .text      _draw__15dMenu_Fishing_cFv                                   */
 #pragma push
@@ -455,10 +453,10 @@ SECTION_DEAD static char const* const pad_803960CD = "\0\0";
 #pragma pop
 
 /* 80454114-80454118 0004+00 s=1 e=0 z=0  None .sdata2    @4010                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_fishing__lit_4010 = 1.0f;
+SECTION_SDATA2 static f32 lit_4010 = 1.0f;
 
 /* 80454118-80454120 0008+00 s=2 e=0 z=0  None .sdata2    @4012                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_fishing__lit_4012 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4012 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 801C52E4-801C5470 018C+00 s=0 e=2 z=0  None .text      _open__15dMenu_Fishing_cFv                                   */
 #pragma push

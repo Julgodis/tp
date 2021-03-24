@@ -21,29 +21,29 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cXyz {
-};
-
 struct cBgS_LinChk {
 };
 
-struct cBgS_GrpPassChk {
+struct cBgS_GndChk {
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgS_PolyPassChk {
+struct cBgD_t {
+};
+
+struct cBgS_GrpPassChk {
 };
 
 struct cBgS_ShdwDraw {
 };
 
-struct cBgD_t {
+struct cBgS_PolyPassChk {
 };
 
-struct cBgS_GndChk {
+struct cXyz {
 };
 
 struct cBgW {
@@ -112,11 +112,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct cM3dGPla {
-	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+struct Vec {
 };
 
-struct Vec {
+struct cM3dGPla {
+	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
 };
 
 struct cM3dGTri {
@@ -124,7 +124,7 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-struct dBgS_SphChk {
+struct dBgS_SplGrpChk {
 };
 
 struct dBgS_Acch {
@@ -137,16 +137,16 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
+struct dBgS_SphChk {
+};
+
 struct fopAc_ac_c {
 };
 
-struct dBgS_SplGrpChk {
+struct dBgS_RoofChk {
 };
 
 struct csXyz {
-};
-
-struct dBgS_RoofChk {
 };
 
 struct dBgW {
@@ -715,7 +715,7 @@ asm cBgW_NodeTree::~cBgW_NodeTree() {
 
 /* ############################################################################################## */
 /* 804526F8-804526FC 0004+00 s=6 e=0 z=0  None .sdata2    @3717                                                        */
-SECTION_SDATA2 static u8 d_bg_d_bg_w__lit_3717[4] = {
+SECTION_SDATA2 static u8 lit_3717[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -864,13 +864,13 @@ asm void cBgW::MakeBlckMinMax(int param_0, cXyz* param_1, cXyz* param_2) {
 
 /* ############################################################################################## */
 /* 804526FC-80452700 0004+00 s=1 e=0 z=0  None .sdata2    @3935                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3935 = 1000000000.0f;
+SECTION_SDATA2 static f32 lit_3935 = 1000000000.0f;
 
 /* 80452700-80452704 0004+00 s=1 e=0 z=0  None .sdata2    @3936                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3936 = -1000000000.0f;
+SECTION_SDATA2 static f32 lit_3936 = -1000000000.0f;
 
 /* 80452704-80452708 0004+00 s=5 e=0 z=0  None .sdata2    @3937                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3937 = 1.0f;
+SECTION_SDATA2 static f32 lit_3937 = 1.0f;
 
 /* 80079A68-80079BDC 0174+00 s=1 e=0 z=0  None .text      MakeBlckBnd__4cBgWFiP4cXyzP4cXyz                             */
 #pragma push
@@ -929,7 +929,7 @@ asm void cBgW::ChkMemoryError() {
 
 /* ############################################################################################## */
 /* 80452708-8045270C 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_4073 = 128.0f;
+SECTION_SDATA2 static f32 lit_4073 = 128.0f;
 
 /* 80079F38-8007A184 024C+00 s=1 e=3 z=0  None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
 #pragma push
@@ -1043,7 +1043,7 @@ asm void cBgW::RwgGroundCheckGnd(u16 param_0, cBgS_GndChk* param_1) {
 
 /* ############################################################################################## */
 /* 8045270C-80452710 0004+00 s=1 e=0 z=0  None .sdata2    @4271                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_4271 = 0.014000000432133675f;
+SECTION_SDATA2 static f32 lit_4271 = 0.014000000432133675f;
 
 /* 8007A824-8007A8F4 00D0+00 s=1 e=0 z=0  None .text      RwgGroundCheckWall__4cBgWFUsP11cBgS_GndChk                   */
 #pragma push
@@ -1770,7 +1770,7 @@ asm void dBgW::WallCorrect(dBgS_Acch* param_0) {
 
 /* ############################################################################################## */
 /* 80424B80-80424F70 03F0+00 s=1 e=0 z=0  None .bss       l_wcsbuf                                                     */
-static u8 d_bg_d_bg_w__l_wcsbuf[1008];
+static u8 l_wcsbuf[1008];
 
 /* 80450F80-80450F84 0004+00 s=2 e=0 z=0  None .sbss      l_start                                                      */
 static u8 l_start[4];

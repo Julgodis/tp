@@ -15,7 +15,7 @@ lbl_8020ED60:
 /* 8020ED94 00000034  90 03 00 00 */	stw r0, 0(r3)
 /* 8020ED98 00000038  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 8020ED9C 0000003C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
-/* 8020EDA0 00000040  80 05 5C E0 */	lwz r0, 0x5ce0(r5)
+/* 8020EDA0 00000040  80 05 5C E0 */	lwz r0, 0x5ce0(r5)	/* effective address: 8040BEA0 */
 /* 8020EDA4 00000044  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8020EDA8 00000048  38 00 00 00 */	li r0, 0
 /* 8020EDAC 0000004C  98 03 00 28 */	stb r0, 0x28(r3)

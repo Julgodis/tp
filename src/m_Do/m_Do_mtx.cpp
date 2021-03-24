@@ -103,7 +103,7 @@ extern "C" void __dt__18mDoMtx_quatStack_cFv(); // 1
 extern "C" void __dt__14mDoMtx_stack_cFv(); // 1
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
-extern "C" extern u8 m_Do_m_Do_mtx__lit_4078[12];
+extern "C" extern u8 lit_4078[12];
 extern "C" extern u8 mDoMtx_quatStack[284 + 4 /* padding */];
 
 // 
@@ -187,7 +187,7 @@ asm void mDoMtx_ZXYrotM(f32 (* param_0)[4], s16 param_1, s16 param_2, s16 param_
 SECTION_SDATA2 static f32 lit_3676 = 1.0f;
 
 /* 80451B0C-80451B10 0004+00 s=7 e=0 z=0  None .sdata2    @3677                                                        */
-SECTION_SDATA2 static u8 m_Do_m_Do_mtx__lit_3677[4] = {
+SECTION_SDATA2 static u8 lit_3677[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -270,7 +270,7 @@ asm void mDoMtx_lookAt(f32 (* param_0)[4], Vec const* param_1, Vec const* param_
 
 /* ############################################################################################## */
 /* 80451B10-80451B18 0004+04 s=1 e=0 z=0  None .sdata2    @3840                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_mtx__lit_3840[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3840[1 + 1 /* padding */] = {
 	32.0f,
 	/* padding */
 	0.0f,
@@ -339,13 +339,13 @@ u8 now__14mDoMtx_stack_c[48];
 static u8 buffer__14mDoMtx_stack_c[768];
 
 /* 803DD7A0-803DD7AC 000C+00 s=1 e=0 z=0  None .bss       @4048                                                        */
-static u8 m_Do_m_Do_mtx__lit_4048[12];
+static u8 lit_4048[12];
 
 /* 804505A8-804505AC 0004+00 s=3 e=0 z=0  None .sdata     next__14mDoMtx_stack_c                                       */
 SECTION_SDATA static void* next__14mDoMtx_stack_c = (void*)&buffer__14mDoMtx_stack_c;
 
 /* 804505AC-804505B0 0004+00 s=2 e=0 z=0  None .sdata     end__14mDoMtx_stack_c                                        */
-SECTION_SDATA static void* end__14mDoMtx_stack_c = (void*)&m_Do_m_Do_mtx__lit_4048;
+SECTION_SDATA static void* end__14mDoMtx_stack_c = (void*)&lit_4048;
 
 /* 8000CCC8-8000CD14 004C+00 s=0 e=0 z=0  None .text      push__14mDoMtx_stack_cFv                                     */
 #pragma push
@@ -539,7 +539,7 @@ SECTION_DATA u8 g_mDoMtx_identity[48 + 24 /* padding */] = {
 };
 
 /* 803DD7AC-803DD7B8 000C+00 s=0 e=0 z=0  None .bss       @4078                                                        */
-u8 m_Do_m_Do_mtx__lit_4078[12];
+u8 lit_4078[12];
 
 /* 803DD7B8-803DD8D8 011C+04 s=0 e=0 z=0  None .bss       mDoMtx_quatStack                                             */
 u8 mDoMtx_quatStack[284 + 4 /* padding */];

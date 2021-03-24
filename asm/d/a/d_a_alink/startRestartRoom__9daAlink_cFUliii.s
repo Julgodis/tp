@@ -66,7 +66,7 @@ lbl_800BE030:
 /* 800BE054 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BE058 00000000  40 81 00 58 */	ble lbl_800BE0B0
 /* 800BE05C 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800BE060 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800BE060 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800BE064 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800BE068 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800BE06C 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -178,7 +178,7 @@ lbl_800BE1CC:
 /* 800BE1D8 0000000C  4B FF FC 49 */	bl setLastSceneDamage__9daAlink_cFiPUl
 /* 800BE1DC 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800BE1E0 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800BE1E4 00000018  88 03 0D B4 */	lbz r0, 0xdb4(r3)
+/* 800BE1E4 00000018  88 03 0D B4 */	lbz r0, 0xdb4(r3)	/* effective address: 80406F74 */
 /* 800BE1E8 0000001C  7C 03 07 74 */	extsb r3, r0
 /* 800BE1EC 00000020  7F E4 FB 78 */	mr r4, r31
 /* 800BE1F0 00000024  7F A5 EB 78 */	mr r5, r29
@@ -197,9 +197,9 @@ lbl_800BE1CC:
 /* 800BE224 00000058  38 A0 00 00 */	li r5, 0
 /* 800BE228 0000005C  38 C0 00 00 */	li r6, 0
 /* 800BE22C 00000060  38 E0 00 00 */	li r7, 0
-/* 800BE230 00000064  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800BE230 00000064  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800BE234 00000068  FC 40 08 90 */	fmr f2, f1
-/* 800BE238 0000006C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800BE238 0000006C  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800BE23C 00000070  FC 80 18 90 */	fmr f4, f3
 /* 800BE240 00000074  39 00 00 00 */	li r8, 0
 /* 800BE244 00000078  48 1E D7 41 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

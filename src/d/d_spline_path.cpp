@@ -71,10 +71,10 @@ asm void d2DBSplinePath::Init(s32 param_0, s32 param_1) {
 
 /* ############################################################################################## */
 /* 80452BD0-80452BD4 0004+00 s=3 e=0 z=0  None .sdata2    @3684                                                        */
-SECTION_SDATA2 static f32 d_d_spline_path__lit_3684 = 1.0f;
+SECTION_SDATA2 static f32 lit_3684 = 1.0f;
 
 /* 80452BD4-80452BD8 0004+00 s=3 e=0 z=0  None .sdata2    @3685                                                        */
-SECTION_SDATA2 static f32 d_d_spline_path__lit_3685 = 0.5f;
+SECTION_SDATA2 static f32 lit_3685 = 0.5f;
 
 /* 80097904-80097A6C 0168+00 s=0 e=5 z=0  None .text      Step__14d2DBSplinePathFv                                     */
 #pragma push

@@ -20,7 +20,7 @@ lbl_801F36B4:
 /* 801F36FC 00000048  48 00 29 A9 */	bl modoruTxtDispAnmInit__12dMenu_save_cFUc
 /* 801F3700 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801F3704 00000050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801F3708 00000054  88 03 0F 18 */	lbz r0, 0xf18(r3)
+/* 801F3708 00000054  88 03 0F 18 */	lbz r0, 0xf18(r3)	/* effective address: 804070D8 */
 /* 801F370C 00000058  98 1F 00 54 */	stb r0, 0x54(r31)
 /* 801F3710 0000005C  88 1F 00 54 */	lbz r0, 0x54(r31)
 /* 801F3714 00000060  98 1F 00 55 */	stb r0, 0x55(r31)
@@ -42,8 +42,8 @@ lbl_801F36B4:
 /* 801F3754 000000A0  4E 80 04 21 */	bctrl 
 /* 801F3758 000000A4  88 1F 00 54 */	lbz r0, 0x54(r31)
 /* 801F375C 000000A8  54 04 10 3A */	slwi r4, r0, 2
-/* 801F3760 000000AC  3C 60 80 3C */	lis r3, d_menu_d_menu_save__SelStartFrameTbl@ha
-/* 801F3764 000000B0  38 63 DF 84 */	addi r3, r3, d_menu_d_menu_save__SelStartFrameTbl@l
+/* 801F3760 000000AC  3C 60 80 3C */	lis r3, SelStartFrameTbl@ha
+/* 801F3764 000000B0  38 63 DF 84 */	addi r3, r3, SelStartFrameTbl@l
 /* 801F3768 000000B4  7C 03 20 2E */	lwzx r0, r3, r4
 /* 801F376C 000000B8  7C 7F 22 14 */	add r3, r31, r4
 /* 801F3770 000000BC  90 03 00 74 */	stw r0, 0x74(r3)

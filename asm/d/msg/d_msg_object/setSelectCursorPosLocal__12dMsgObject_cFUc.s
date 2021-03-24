@@ -9,7 +9,7 @@ lbl_80237E68:
 /* 80237E84 0000001C  83 E3 00 04 */	lwz r31, 4(r3)
 /* 80237E88 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80237E8C 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80237E90 00000028  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
+/* 80237E90 00000028  88 03 5E B5 */	lbz r0, 0x5eb5(r3)	/* effective address: 8040C075 */
 /* 80237E94 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 80237E98 00000030  40 82 00 50 */	bne lbl_80237EE8
 /* 80237E9C 00000034  57 C3 06 3E */	clrlwi r3, r30, 0x18
@@ -25,9 +25,9 @@ lbl_80237E68:
 /* 80237EC4 0000005C  38 A0 00 00 */	li r5, 0
 /* 80237EC8 00000060  38 C0 00 01 */	li r6, 1
 /* 80237ECC 00000064  38 E0 00 00 */	li r7, 0
-/* 80237ED0 00000068  C0 22 B0 C0 */	lfs f1, d_msg_d_msg_object__lit_4084(r2)
+/* 80237ED0 00000068  C0 22 B0 C0 */	lfs f1, lit_4084(r2)
 /* 80237ED4 0000006C  FC 40 08 90 */	fmr f2, f1
-/* 80237ED8 00000070  C0 62 B1 10 */	lfs f3, d_msg_d_msg_object__lit_4145(r2)
+/* 80237ED8 00000070  C0 62 B1 10 */	lfs f3, lit_4145(r2)
 /* 80237EDC 00000074  FC 80 18 90 */	fmr f4, f3
 /* 80237EE0 00000078  39 00 00 00 */	li r8, 0
 /* 80237EE4 0000007C  48 07 3A A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

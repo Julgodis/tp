@@ -17,12 +17,6 @@ struct daNpc_shopMaro_c {
 	/* 80AEBF64 */ ~daNpc_shopMaro_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct dMsgFlow_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
@@ -34,6 +28,12 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AEC6BC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct dMsgFlow_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct dShopSystem_c {

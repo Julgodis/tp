@@ -40,6 +40,10 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8014D0C0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_Hermite_c {
+	/* 8014CBAC */ ~daNpcT_Hermite_c();
+};
+
 struct Vec {
 };
 
@@ -50,10 +54,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct daNpcT_Hermite_c {
-	/* 8014CBAC */ ~daNpcT_Hermite_c();
 };
 
 struct daNpcT_Path_c {
@@ -88,23 +88,41 @@ struct daNpcT_DmgStagger_c {
 	/* 80147E3C */ void calc(int);
 };
 
-struct _GXColorS10 {
+struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmTexPattern {
 };
 
 struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 };
 
+struct J3DAnmTransformKey {
+};
+
+struct J3DJoint {
+};
+
 struct J3DModelData {
+};
+
+struct J3DAnmTransform {
+};
+
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcT_motionAnmData_c {
 };
 
-struct J3DAnmTexPattern {
-};
-
-struct J3DJoint {
+struct J3DAnmColor {
 };
 
 struct J3DFrameCtrl {
@@ -112,24 +130,6 @@ struct J3DFrameCtrl {
 };
 
 struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmColor {
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct J3DAnmTextureSRTKey {
@@ -612,13 +612,13 @@ struct dPaPoT_c {
 struct cBgS_LinChk {
 };
 
+struct dBgW_Base {
+};
+
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS {
@@ -986,7 +986,7 @@ extern "C" void setAttnPos__11daBaseNpc_cFv(); // 1
 extern "C" void drawOtherMdls__11daBaseNpc_cFv(); // 1
 extern "C" void dbgDraw__11daBaseNpc_cFv(); // 1
 extern "C" void __ct__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" static void d_a_d_a_npc__CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void MoveBGCreateHeap__23daBaseNpc_moveBgActor_cFv(); // 1
 extern "C" void MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl(); // 1
 extern "C" void MoveBGDelete__23daBaseNpc_moveBgActor_cFv(); // 1
@@ -1129,7 +1129,7 @@ extern "C" void __dt__15daNpcF_MatAnm_cFv(); // 1
 extern "C" void __dt__23daBaseNpc_moveBgActor_cFv(); // 1
 extern "C" extern u8 const mCcDObj__11daBaseNpc_c[48];
 extern "C" extern u8 const mCcDObjInfo__8daNpcF_c[48];
-extern "C" extern char const* const d_a_d_a_npc__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 mCcDCyl__8daNpcT_c[68];
 extern "C" extern u8 mCcDSph__8daNpcT_c[64];
 extern "C" extern u8 mCcDCyl__11daBaseNpc_c[68];
@@ -1461,7 +1461,7 @@ asm void daNpcT_ActorMngr_c::getActorP() {
 
 /* ############################################################################################## */
 /* 804533D8-804533DC 0004+00 s=54 e=0 z=0  None .sdata2    @4116                                                        */
-SECTION_SDATA2 static u8 d_a_d_a_npc__lit_4116[4] = {
+SECTION_SDATA2 static u8 lit_4116[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1478,10 +1478,10 @@ asm void daNpcT_MatAnm_c::initialize() {
 
 /* ############################################################################################## */
 /* 804533DC-804533E0 0004+00 s=25 e=0 z=0  None .sdata2    @4140                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4140 = 1.0f;
+SECTION_SDATA2 static f32 lit_4140 = 1.0f;
 
 /* 804533E0-804533E8 0008+00 s=24 e=0 z=0  None .sdata2    @4142                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_npc__lit_4142 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4142 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80145788-80145898 0110+00 s=1 e=0 z=0  None .text      calc__15daNpcT_MatAnm_cCFP11J3DMaterial                      */
 #pragma push
@@ -1496,7 +1496,7 @@ asm void daNpcT_MatAnm_c::calc(J3DMaterial* param_0) const {
 
 /* ############################################################################################## */
 /* 804533E8-804533EC 0004+00 s=13 e=0 z=0  None .sdata2    @4148                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4148 = -1.0f;
+SECTION_SDATA2 static f32 lit_4148 = -1.0f;
 
 /* 80145898-801458C0 0028+00 s=4 e=0 z=0  None .text      initialize__22daNpcT_MotionSeqMngr_cFv                       */
 #pragma push
@@ -1665,7 +1665,7 @@ asm void daNpcT_Path_c::getDstPosH(cXyz param_0, cXyz* param_1, int param_2, int
 
 /* ############################################################################################## */
 /* 804533EC-804533F0 0004+00 s=1 e=0 z=0  None .sdata2    @4513                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4513 = 100.0f;
+SECTION_SDATA2 static f32 lit_4513 = 100.0f;
 
 /* 80146188-801464D8 0350+00 s=2 e=0 z=0  None .text      chkPassed1__13daNpcT_Path_cF4cXyzi                           */
 #pragma push
@@ -1680,12 +1680,12 @@ asm void daNpcT_Path_c::chkPassed1(cXyz param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 803B36A8-803B36B4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_a_d_a_npc__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803B36B4-803B36D8 0024+00 s=1 e=0 z=0  None .data      @5258                                                        */
-SECTION_DATA static void* d_a_d_a_npc__lit_5258[9] = {
+SECTION_DATA static void* lit_5258[9] = {
 	/* 0    */ (void*)(((char*)setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz)+0x3E8),
 	/* 1    */ (void*)(((char*)setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz)+0x3F4),
 	/* 2    */ (void*)(((char*)setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz)+0x428),
@@ -2006,20 +2006,20 @@ SECTION_DATA static void* __vt__16daNpcT_Hermite_c[3] = {
 };
 
 /* 804533F0-804533F4 0004+00 s=4 e=0 z=0  None .sdata2    @4672                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4672 = 2.0f;
+SECTION_SDATA2 static f32 lit_4672 = 2.0f;
 
 /* 804533F4-804533F8 0004+00 s=1 e=0 z=0  None .sdata2    @4673                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4673 = 3.0f;
+SECTION_SDATA2 static f32 lit_4673 = 3.0f;
 
 /* 804533F8-80453400 0004+04 s=3 e=0 z=0  None .sdata2    @4674                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_4674[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4674[1 + 1 /* padding */] = {
 	-2.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80453400-80453408 0008+00 s=1 e=0 z=0  None .sdata2    @4677                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_npc__lit_4677 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4677 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 801464D8-8014698C 04B4+00 s=1 e=0 z=0  None .text      chkPassed2__13daNpcT_Path_cF4cXyzP4cXyzii                    */
 #pragma push
@@ -2056,24 +2056,24 @@ asm void daNpcT_JntAnm_c::initialize() {
 
 /* ############################################################################################## */
 /* 80453408-80453410 0008+00 s=8 e=0 z=0  None .sdata2    @4723                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_npc__lit_4723 = 0.5;
+SECTION_SDATA2 static f64 lit_4723 = 0.5;
 
 /* 80453410-80453418 0008+00 s=8 e=0 z=0  None .sdata2    @4724                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_npc__lit_4724 = 3.0;
+SECTION_SDATA2 static f64 lit_4724 = 3.0;
 
 /* 80453418-80453420 0008+00 s=8 e=0 z=0  None .sdata2    @4725                                                        */
-SECTION_SDATA2 static u8 d_a_d_a_npc__lit_4725[8] = {
+SECTION_SDATA2 static u8 lit_4725[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453420-80453424 0004+00 s=5 e=0 z=0  None .sdata2    @5239                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_5239 = 182.04444885253906f;
+SECTION_SDATA2 static f32 lit_5239 = 182.04444885253906f;
 
 /* 80453424-80453428 0004+00 s=2 e=0 z=0  None .sdata2    @5240                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_5240 = 9.58738019107841e-05f;
+SECTION_SDATA2 static f32 lit_5240 = 9.58738019107841e-05f;
 
 /* 80453428-8045342C 0004+00 s=2 e=0 z=0  None .sdata2    @5241                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_5241 = 1000.0f;
+SECTION_SDATA2 static f32 lit_5241 = 1000.0f;
 
 /* 80146CD8-80147858 0B80+00 s=1 e=0 z=0  None .text      setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz */
 #pragma push
@@ -2931,7 +2931,7 @@ asm void daNpcT_c::talkProc(int* param_0, int param_1, fopAc_ac_c** param_2, int
 
 /* ############################################################################################## */
 /* 8045347C-80453480 0004+00 s=2 e=0 z=0  None .sdata2    @7337                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_npc__lit_7337 = 1000000000.0f;
+SECTION_SDATA2 static f32 lit_7337 = 1000000000.0f;
 
 /* 8014BE2C-8014BEE4 00B8+00 s=0 e=0 z=0  None .text      getNearestActorP__8daNpcT_cFs                                */
 #pragma push
@@ -4227,7 +4227,7 @@ asm daBaseNpc_moveBgActor_c::daBaseNpc_moveBgActor_c() {
 #pragma optimizewithasm off
 asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 	nofralloc
-#include "asm/d/a/d_a_npc/d_a_d_a_npc__CheckCreateHeap__FP10fopAc_ac_c.s"
+#include "asm/d/a/d_a_npc/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 

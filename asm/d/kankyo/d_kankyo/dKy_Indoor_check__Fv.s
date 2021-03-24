@@ -6,11 +6,11 @@ lbl_801AC28C:
 /* 801AC29C 00000010  3B E0 00 00 */	li r31, 0
 /* 801AC2A0 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801AC2A4 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801AC2A8 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 801AC2A8 0000001C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 801AC2AC 00000020  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 801AC2B0 00000024  7D 89 03 A6 */	mtctr r12
 /* 801AC2B4 00000028  4E 80 04 21 */	bctrl 
-/* 801AC2B8 0000002C  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 801AC2B8 0000002C  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 804061CC */
 /* 801AC2BC 00000030  54 00 87 7F */	rlwinm. r0, r0, 0x10, 0x1d, 0x1f
 /* 801AC2C0 00000034  41 82 00 08 */	beq lbl_801AC2C8
 /* 801AC2C4 00000038  3B E0 00 01 */	li r31, 1

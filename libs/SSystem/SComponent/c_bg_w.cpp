@@ -77,7 +77,7 @@ asm void cBgW_BgId::ChkUsed() const {
 
 /* ############################################################################################## */
 /* 804550E8-804550EC 0004+00 s=1 e=0 z=0  None .sdata2    @2242                                                        */
-SECTION_SDATA2 static f32 c_bg_w__lit_2242 = 0.5f;
+SECTION_SDATA2 static f32 lit_2242 = 0.5f;
 
 /* 802681E4-802681FC 0018+00 s=1 e=22 z=0  None .text      cBgW_CheckBGround__Ff                                        */
 #pragma push

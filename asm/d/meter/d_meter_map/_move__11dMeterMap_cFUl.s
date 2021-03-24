@@ -15,22 +15,22 @@ lbl_8020DCE4:
 /* 8020DD18 00000034  7F 83 E3 78 */	mr r3, r28
 /* 8020DD1C 00000038  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8020DD20 0000003C  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8020DD24 00000040  A0 9D 00 EC */	lhz r4, 0xec(r29)
+/* 8020DD24 00000040  A0 9D 00 EC */	lhz r4, 0xec(r29)	/* effective address: 803A7374 */
 /* 8020DD28 00000044  4B E2 6C 95 */	bl isEventBit__11dSv_event_cCFUs
 /* 8020DD2C 00000048  2C 03 00 00 */	cmpwi r3, 0
 /* 8020DD30 0000004C  41 82 00 5C */	beq lbl_8020DD8C
 /* 8020DD34 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DD38 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020DD3C 00000058  38 63 4E 00 */	addi r3, r3, 0x4e00
-/* 8020DD40 0000005C  3C 80 80 3A */	lis r4, d_meter_d_meter_map__stringBase0@ha
-/* 8020DD44 00000060  38 84 82 08 */	addi r4, r4, d_meter_d_meter_map__stringBase0@l
+/* 8020DD40 0000005C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8020DD44 00000060  38 84 82 08 */	addi r4, r4, stringBase0@l
 /* 8020DD48 00000064  48 15 AC 4D */	bl strcmp
 /* 8020DD4C 00000068  2C 03 00 00 */	cmpwi r3, 0
 /* 8020DD50 0000006C  40 82 00 1C */	bne lbl_8020DD6C
 /* 8020DD54 00000070  7F 83 E3 78 */	mr r3, r28
 /* 8020DD58 00000074  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8020DD5C 00000078  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8020DD60 0000007C  A0 84 00 EE */	lhz r4, 0xee(r4)
+/* 8020DD60 0000007C  A0 84 00 EE */	lhz r4, 0xee(r4)	/* effective address: 803A7376 */
 /* 8020DD64 00000080  4B E2 6C 29 */	bl onEventBit__11dSv_event_cFUs
 /* 8020DD68 00000084  48 00 00 24 */	b lbl_8020DD8C
 lbl_8020DD6C:
@@ -41,7 +41,7 @@ lbl_8020DD6C:
 /* 8020DD7C 00000010  38 00 00 02 */	li r0, 2
 /* 8020DD80 00000014  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DD84 00000018  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020DD88 0000001C  98 03 00 C1 */	stb r0, 0xc1(r3)
+/* 8020DD88 0000001C  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
 lbl_8020DD8C:
 /* 8020DD8C 00000000  8B AD 87 E4 */	lbz r29, struct_80450D64+0x0(r13)
 /* 8020DD90 00000004  7F BD 07 74 */	extsb r29, r29
@@ -58,7 +58,7 @@ lbl_8020DD8C:
 /* 8020DDBC 00000030  41 82 00 40 */	beq lbl_8020DDFC
 /* 8020DDC0 00000034  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DDC4 00000038  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020DDC8 0000003C  88 03 00 C1 */	lbz r0, 0xc1(r3)
+/* 8020DDC8 0000003C  88 03 00 C1 */	lbz r0, 0xc1(r3)	/* effective address: 80430249 */
 /* 8020DDCC 00000040  28 00 00 07 */	cmplwi r0, 7
 /* 8020DDD0 00000044  41 82 00 2C */	beq lbl_8020DDFC
 /* 8020DDD4 00000048  28 00 00 02 */	cmplwi r0, 2
@@ -114,7 +114,7 @@ lbl_8020DE6C:
 /* 8020DE8C 00000020  7F C3 F3 78 */	mr r3, r30
 /* 8020DE90 00000024  4B FF F8 9D */	bl getMapDispEdgeLeftX_Layout__11dMeterMap_cFv
 /* 8020DE94 00000028  A8 1E 00 28 */	lha r0, 0x28(r30)
-/* 8020DE98 0000002C  C8 42 AE 28 */	lfd f2, d_meter_d_meter_map__lit_4100(r2)
+/* 8020DE98 0000002C  C8 42 AE 28 */	lfd f2, lit_4100(r2)
 /* 8020DE9C 00000030  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8020DEA0 00000034  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8020DEA4 00000038  3C 00 43 30 */	lis r0, 0x4330
@@ -136,7 +136,7 @@ lbl_8020DE6C:
 /* 8020DEE4 00000078  4B E1 C4 49 */	bl _move__6dMap_cFffif
 /* 8020DEE8 0000007C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DEEC 00000080  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8020DEF0 00000084  88 63 4F AD */	lbz r3, 0x4fad(r3)
+/* 8020DEF0 00000084  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8020DEF4 00000088  30 03 FF FF */	addic r0, r3, -1
 /* 8020DEF8 0000008C  7C 00 19 10 */	subfe r0, r0, r3
 /* 8020DEFC 00000090  54 00 06 3E */	clrlwi r0, r0, 0x18

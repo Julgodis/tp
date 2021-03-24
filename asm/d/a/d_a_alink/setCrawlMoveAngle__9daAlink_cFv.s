@@ -7,14 +7,14 @@ lbl_800F8DBC:
 /* 800F8DD0 00000000  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 800F8DD4 00000004  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 800F8DD8 00000008  7C 7F 1B 78 */	mr r31, r3
-/* 800F8DDC 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 800F8DE0 00000010  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__lit_3757@l
+/* 800F8DDC 0000000C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 800F8DE0 00000010  3B C3 D6 58 */	addi r30, r3, lit_3757@l
 /* 800F8DE4 00000014  38 7F 04 E6 */	addi r3, r31, 0x4e6
 /* 800F8DE8 00000018  A8 9F 2F E2 */	lha r4, 0x2fe2(r31)
 /* 800F8DEC 0000001C  38 FE 09 C4 */	addi r7, r30, 0x9c4
-/* 800F8DF0 00000020  A8 A7 00 28 */	lha r5, 0x28(r7)
-/* 800F8DF4 00000024  A8 C7 00 2A */	lha r6, 0x2a(r7)
-/* 800F8DF8 00000028  A8 E7 00 2C */	lha r7, 0x2c(r7)
+/* 800F8DF0 00000020  A8 A7 00 28 */	lha r5, 0x28(r7)	/* effective address: 8038E044 */
+/* 800F8DF4 00000024  A8 C7 00 2A */	lha r6, 0x2a(r7)	/* effective address: 8038E046 */
+/* 800F8DF8 00000028  A8 E7 00 2C */	lha r7, 0x2c(r7)	/* effective address: 8038E048 */
 /* 800F8DFC 0000002C  48 17 77 45 */	bl cLib_addCalcAngleS__FPsssss
 /* 800F8E00 00000030  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 800F8E04 00000034  A8 1F 04 DE */	lha r0, 0x4de(r31)

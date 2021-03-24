@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B7133C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_ZelR_c {
@@ -60,6 +60,8 @@ struct daNpc_ZelR_c {
 	/* 80B702B0 */ void setCollision();
 	/* 80B703E0 */ void drawDbgInfo();
 	/* 80B703E8 */ void selectAction();
+	/* 80B70430 */ void chkAction(int (daNpc_ZelR_c::*)(void*));
+	/* 80B7045C */ void setAction(int (daNpc_ZelR_c::*)(void*));
 	/* 80B70504 */ void wait(void*);
 	/* 80B706B0 */ void talk(void*);
 	/* 80B71974 */ daNpc_ZelR_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
@@ -224,8 +226,8 @@ extern "C" void setAttnPos__12daNpc_ZelR_cFv(); // 1
 extern "C" void setCollision__12daNpc_ZelR_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_ZelR_cFv(); // 1
 extern "C" void selectAction__12daNpc_ZelR_cFv(); // 1
-extern "C" static void chkAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i(); // 1
 extern "C" void wait__12daNpc_ZelR_cFPv(); // 1
 extern "C" void talk__12daNpc_ZelR_cFPv(); // 1
 extern "C" void daNpc_ZelR_Create__FPv(); // 1
@@ -750,7 +752,7 @@ asm void daNpc_ZelR_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i() {
+asm void daNpc_ZelR_c::chkAction(int (daNpc_ZelR_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelR/d_a_npc_zelR/chkAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i.s"
 }
@@ -761,7 +763,7 @@ extern "C" asm static void chkAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i() {
+asm void daNpc_ZelR_c::setAction(int (daNpc_ZelR_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelR/d_a_npc_zelR/setAction__12daNpc_ZelR_cFM12daNpc_ZelR_cFPCvPvPv_i.s"
 }

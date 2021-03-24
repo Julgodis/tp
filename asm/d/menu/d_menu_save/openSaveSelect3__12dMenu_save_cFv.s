@@ -18,7 +18,7 @@ lbl_801F37A0:
 /* 801F37E0 00000040  80 63 00 F8 */	lwz r3, 0xf8(r3)
 /* 801F37E4 00000044  3C 80 80 43 */	lis r4, g_msHIO@ha
 /* 801F37E8 00000048  38 84 E8 4C */	addi r4, r4, g_msHIO@l
-/* 801F37EC 0000004C  88 84 00 07 */	lbz r4, 7(r4)
+/* 801F37EC 0000004C  88 84 00 07 */	lbz r4, 7(r4)	/* effective address: 8042E853 */
 /* 801F37F0 00000050  38 A0 00 00 */	li r5, 0
 /* 801F37F4 00000054  38 C0 00 FF */	li r6, 0xff
 /* 801F37F8 00000058  38 E0 00 01 */	li r7, 1
@@ -31,8 +31,8 @@ lbl_801F37A0:
 /* 801F3814 00000074  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3818 00000078  7C BB 02 14 */	add r5, r27, r0
 /* 801F381C 0000007C  80 85 00 74 */	lwz r4, 0x74(r5)
-/* 801F3820 00000080  3C 60 80 3C */	lis r3, d_menu_d_menu_save__SelEndFrameTbl@ha
-/* 801F3824 00000084  38 63 DF 90 */	addi r3, r3, d_menu_d_menu_save__SelEndFrameTbl@l
+/* 801F3820 00000080  3C 60 80 3C */	lis r3, SelEndFrameTbl@ha
+/* 801F3824 00000084  38 63 DF 90 */	addi r3, r3, SelEndFrameTbl@l
 /* 801F3828 00000088  7C 03 00 2E */	lwzx r0, r3, r0
 /* 801F382C 0000008C  7C 04 00 00 */	cmpw r4, r0
 /* 801F3830 00000090  41 82 00 7C */	beq lbl_801F38AC
@@ -51,7 +51,7 @@ lbl_801F385C:
 /* 801F3860 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801F3864 00000008  7C 7B 02 14 */	add r3, r27, r0
 /* 801F3868 0000000C  80 03 00 74 */	lwz r0, 0x74(r3)
-/* 801F386C 00000010  C8 22 AA 70 */	lfd f1, d_menu_d_menu_save__lit_4185(r2)
+/* 801F386C 00000010  C8 22 AA 70 */	lfd f1, lit_4185(r2)
 /* 801F3870 00000014  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801F3874 00000018  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801F3878 0000001C  3C 00 43 30 */	lis r0, 0x4330

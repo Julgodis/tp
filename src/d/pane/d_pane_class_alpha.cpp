@@ -16,10 +16,10 @@ struct J2DPane {
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
-struct J2DScreen {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DScreen {
 };
 
 struct CPaneMgrAlpha {
@@ -203,14 +203,14 @@ asm void CPaneMgrAlpha::isVisible() {
 
 /* ############################################################################################## */
 /* 80454EB8-80454EC0 0004+04 s=1 e=0 z=0  None .sdata2    @3692                                                        */
-SECTION_SDATA2 static f32 d_pane_d_pane_class_alpha__lit_3692[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3692[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
 /* 80454EC0-80454EC8 0008+00 s=3 e=0 z=0  None .sdata2    @3694                                                        */
-SECTION_SDATA2 static f64 d_pane_d_pane_class_alpha__lit_3694 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3694 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80255658-80255758 0100+00 s=2 e=2 z=0  None .text      rateCalc__13CPaneMgrAlphaFssUc                               */
 #pragma push
@@ -251,7 +251,7 @@ asm void CPaneMgrAlpha::setAlphaRate(f32 param_0) {
 
 /* ############################################################################################## */
 /* 80454ED0-80454ED8 0004+04 s=2 e=0 z=0  None .sdata2    @3721                                                        */
-SECTION_SDATA2 static u8 d_pane_d_pane_class_alpha__lit_3721[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3721[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

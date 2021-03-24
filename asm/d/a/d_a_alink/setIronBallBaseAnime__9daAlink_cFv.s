@@ -15,8 +15,8 @@ lbl_801151E0:
 /* 80115214 00000034  38 80 01 63 */	li r4, 0x163
 /* 80115218 00000038  3C A0 80 39 */	lis r5, m__22daAlinkHIO_ironBall_c0@ha
 /* 8011521C 0000003C  38 A5 EA 70 */	addi r5, r5, m__22daAlinkHIO_ironBall_c0@l
-/* 80115220 00000040  C0 25 00 24 */	lfs f1, 0x24(r5)
-/* 80115224 00000044  C0 45 00 28 */	lfs f2, 0x28(r5)
+/* 80115220 00000040  C0 25 00 24 */	lfs f1, 0x24(r5)	/* effective address: 8038EA94 */
+/* 80115224 00000044  C0 45 00 28 */	lfs f2, 0x28(r5)	/* effective address: 8038EA98 */
 /* 80115228 00000048  4B F9 7D B9 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8011522C 0000004C  C0 1F 20 58 */	lfs f0, 0x2058(r31)
 /* 80115230 00000050  D0 1F 1F E0 */	stfs f0, 0x1fe0(r31)

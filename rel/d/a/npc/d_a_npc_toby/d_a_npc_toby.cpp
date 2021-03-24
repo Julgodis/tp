@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B2418C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Toby_c {
@@ -63,6 +63,8 @@ struct daNpc_Toby_c {
 	/* 80B2050C */ void afterSetFaceMotionAnm(int, int, f32, int);
 	/* 80B20568 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80B205F4 */ void selectAction();
+	/* 80B20710 */ void chkAction(int (daNpc_Toby_c::*)(void*));
+	/* 80B2073C */ void setAction(int (daNpc_Toby_c::*)(void*));
 	/* 80B207E4 */ void cutTobyHouseFire(int);
 	/* 80B20AB0 */ void cutTalkToOneself(int);
 	/* 80B20FC0 */ void cutRepairSCannon(int);
@@ -237,8 +239,8 @@ extern "C" void drawOtherMdl__12daNpc_Toby_cFv(); // 1
 extern "C" void afterSetFaceMotionAnm__12daNpc_Toby_cFiifi(); // 1
 extern "C" void afterSetMotionAnm__12daNpc_Toby_cFiifi(); // 1
 extern "C" void selectAction__12daNpc_Toby_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i(); // 1
 extern "C" void cutTobyHouseFire__12daNpc_Toby_cFi(); // 1
 extern "C" void cutTalkToOneself__12daNpc_Toby_cFi(); // 1
 extern "C" void cutRepairSCannon__12daNpc_Toby_cFi(); // 1
@@ -900,7 +902,7 @@ asm void daNpc_Toby_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i() {
+asm void daNpc_Toby_c::chkAction(int (daNpc_Toby_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_toby/d_a_npc_toby/chkAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i.s"
 }
@@ -911,7 +913,7 @@ extern "C" asm static void chkAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i() {
+asm void daNpc_Toby_c::setAction(int (daNpc_Toby_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_toby/d_a_npc_toby/setAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i.s"
 }

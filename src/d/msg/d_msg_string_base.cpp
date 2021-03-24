@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct J2DTextBox {
@@ -115,7 +115,7 @@ extern "C" void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextB
 extern "C" void getMessage__16dMsgStringBase_cFUlPc(); // 1
 extern "C" void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox(); // 1
 extern "C" void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf(); // 1
-extern "C" extern char const* const d_msg_d_msg_string_base__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -228,7 +228,7 @@ asm void dMsgStringBase_c::getStringLocal(u32 param_0, J2DTextBox* param_1, J2DT
 
 /* ############################################################################################## */
 /* 80454D70-80454D78 0004+04 s=2 e=0 z=0  None .sdata2    @4046                                                        */
-SECTION_SDATA2 static u8 d_msg_d_msg_string_base__lit_4046[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4046[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

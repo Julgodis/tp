@@ -13,8 +13,8 @@
 
 
 extern "C" void __CARDGetFatBlock(); // 1
-extern "C" static void CARDBlock__WriteCallback(); // 1
-extern "C" static void CARDBlock__EraseCallback(); // 1
+extern "C" static void WriteCallback(); // 1
+extern "C" static void EraseCallback(); // 1
 extern "C" void __CARDAllocBlock(); // 1
 extern "C" void __CARDUpdateFatBlock(); // 1
 
@@ -50,9 +50,9 @@ extern "C" asm void __CARDGetFatBlock() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDBlock__WriteCallback() {
+extern "C" asm static void WriteCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDBlock/CARDBlock__WriteCallback.s"
+#include "asm/dolphin/card/CARDBlock/WriteCallback.s"
 }
 #pragma pop
 
@@ -61,9 +61,9 @@ extern "C" asm static void CARDBlock__WriteCallback() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDBlock__EraseCallback() {
+extern "C" asm static void EraseCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDBlock/CARDBlock__EraseCallback.s"
+#include "asm/dolphin/card/CARDBlock/EraseCallback.s"
 }
 #pragma pop
 

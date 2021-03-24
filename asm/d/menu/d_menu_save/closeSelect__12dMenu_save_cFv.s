@@ -11,14 +11,14 @@ lbl_801F1B38:
 /* 801F1B5C 00000024  38 A0 00 00 */	li r5, 0
 /* 801F1B60 00000028  38 C0 00 00 */	li r6, 0
 /* 801F1B64 0000002C  38 E0 00 00 */	li r7, 0
-/* 801F1B68 00000030  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F1B68 00000030  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F1B6C 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801F1B70 00000038  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F1B70 00000038  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F1B74 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801F1B78 00000040  39 00 00 00 */	li r8, 0
 /* 801F1B7C 00000044  48 0B 9E 09 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801F1B80 00000048  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F1B84 0000004C  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F1B84 0000004C  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F1B88 00000050  4B FA 37 19 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F1B8C 00000054  88 1F 01 BC */	lbz r0, 0x1bc(r31)
 /* 801F1B90 00000058  28 00 00 03 */	cmplwi r0, 3
@@ -29,7 +29,7 @@ lbl_801F1B38:
 /* 801F1BA4 0000006C  98 1F 01 BA */	stb r0, 0x1ba(r31)
 /* 801F1BA8 00000070  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801F1BAC 00000074  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801F1BB0 00000078  88 83 00 DD */	lbz r4, 0xdd(r3)
+/* 801F1BB0 00000078  88 83 00 DD */	lbz r4, 0xdd(r3)	/* effective address: 80430265 */
 /* 801F1BB4 0000007C  28 04 00 00 */	cmplwi r4, 0
 /* 801F1BB8 00000080  41 82 00 08 */	beq lbl_801F1BC0
 /* 801F1BBC 00000084  48 02 C2 5D */	bl setMiniGameItem__13dMeter2Info_cFUc

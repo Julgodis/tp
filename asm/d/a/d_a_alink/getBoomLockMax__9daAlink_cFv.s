@@ -17,7 +17,7 @@ lbl_800E011C:
 lbl_800E0158:
 /* 800E0158 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_boom_c0@ha
 /* 800E015C 00000004  38 63 E6 C8 */	addi r3, r3, m__18daAlinkHIO_boom_c0@l
-/* 800E0160 00000008  C0 23 00 44 */	lfs f1, 0x44(r3)
+/* 800E0160 00000008  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 8038E70C */
 /* 800E0164 0000000C  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 800E0168 00000000  40 81 00 08 */	ble lbl_800E0170
 /* 800E016C 00000004  48 00 00 08 */	b lbl_800E0174

@@ -10,20 +10,20 @@ lbl_801EB960:
 /* 801EB980 00000004  48 17 68 55 */	bl _savegpr_27
 /* 801EB984 00000008  7C 7B 1B 78 */	mr r27, r3
 /* 801EB988 0000000C  88 83 06 AE */	lbz r4, 0x6ae(r3)
-/* 801EB98C 00000010  C0 22 A9 D4 */	lfs f1, d_menu_d_menu_ring__lit_4810(r2)
+/* 801EB98C 00000010  C0 22 A9 D4 */	lfs f1, lit_4810(r2)
 /* 801EB990 00000014  3C A0 80 43 */	lis r5, g_ringHIO@ha
 /* 801EB994 00000018  3B A5 FA FC */	addi r29, r5, g_ringHIO@l
-/* 801EB998 0000001C  C0 1D 01 10 */	lfs f0, 0x110(r29)
+/* 801EB998 0000001C  C0 1D 01 10 */	lfs f0, 0x110(r29)	/* effective address: 8042FC0C */
 /* 801EB99C 00000020  EC 21 00 2A */	fadds f1, f1, f0
-/* 801EB9A0 00000024  C0 42 A9 D8 */	lfs f2, d_menu_d_menu_ring__lit_4811(r2)
-/* 801EB9A4 00000028  C0 1D 01 14 */	lfs f0, 0x114(r29)
+/* 801EB9A0 00000024  C0 42 A9 D8 */	lfs f2, lit_4811(r2)
+/* 801EB9A4 00000028  C0 1D 01 14 */	lfs f0, 0x114(r29)	/* effective address: 8042FC10 */
 /* 801EB9A8 0000002C  EC 42 00 2A */	fadds f2, f2, f0
 /* 801EB9AC 00000030  48 00 37 F5 */	bl clacEllipsePlotAverage__12dMenu_Ring_cFiff
 /* 801EB9B0 00000034  3B 80 00 00 */	li r28, 0
 /* 801EB9B4 00000038  3B E0 00 00 */	li r31, 0
 /* 801EB9B8 0000003C  3B C0 00 00 */	li r30, 0
-/* 801EB9BC 00000040  C3 C2 A9 D4 */	lfs f30, d_menu_d_menu_ring__lit_4810(r2)
-/* 801EB9C0 00000044  C3 E2 A9 D8 */	lfs f31, d_menu_d_menu_ring__lit_4811(r2)
+/* 801EB9BC 00000040  C3 C2 A9 D4 */	lfs f30, lit_4810(r2)
+/* 801EB9C0 00000044  C3 E2 A9 D8 */	lfs f31, lit_4811(r2)
 /* 801EB9C4 00000048  48 00 00 40 */	b lbl_801EBA04
 lbl_801EB9C8:
 /* 801EB9C8 00000000  7C 7B F2 14 */	add r3, r27, r30

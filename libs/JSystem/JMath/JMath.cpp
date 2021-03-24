@@ -57,7 +57,7 @@ asm void JMAEulerToQuat(s16 param_0, s16 param_1, s16 param_2, Quaternion* param
 
 /* ############################################################################################## */
 /* 804564C8-804564D0 0008+00 s=1 e=0 z=0  None .sdata2    @376                                                         */
-SECTION_SDATA2 static u8 JMath__lit_376[8] = {
+SECTION_SDATA2 static u8 lit_376[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

@@ -4,7 +4,7 @@ lbl_803238C4:
 /* 803238CC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803238D0 0000000C  3C A0 80 43 */	lis r5, j3dSys@ha
 /* 803238D4 00000010  38 A5 4A C8 */	addi r5, r5, j3dSys@l
-/* 803238D8 00000014  80 05 00 34 */	lwz r0, 0x34(r5)
+/* 803238D8 00000014  80 05 00 34 */	lwz r0, 0x34(r5)	/* effective address: 80434AFC */
 /* 803238DC 00000018  54 00 00 43 */	rlwinm. r0, r0, 0, 1, 1
 /* 803238E0 0000001C  41 82 00 0C */	beq lbl_803238EC
 /* 803238E4 00000020  48 00 0A D9 */	bl loadPostTexMtx__9J3DTexMtxCFUl

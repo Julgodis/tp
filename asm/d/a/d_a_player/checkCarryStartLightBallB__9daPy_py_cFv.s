@@ -32,7 +32,7 @@ lbl_8015F79C:
 lbl_8015F7A4:
 /* 8015F7A4 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F7A8 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F7AC 00000008  80 03 0D D0 */	lwz r0, 0xdd0(r3)
+/* 8015F7AC 00000008  80 03 0D D0 */	lwz r0, 0xdd0(r3)	/* effective address: 80406F90 */
 /* 8015F7B0 0000000C  54 03 03 18 */	rlwinm r3, r0, 0, 0xc, 0xc
 lbl_8015F7B4:
 /* 8015F7B4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

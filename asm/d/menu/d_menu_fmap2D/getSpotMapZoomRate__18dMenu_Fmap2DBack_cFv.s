@@ -12,6 +12,6 @@ lbl_801D2C4C:
 lbl_801D2C74:
 /* 801D2C74 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D2C78 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D2C7C 00000008  C0 03 00 9C */	lfs f0, 0x9c(r3)
+/* 801D2C7C 00000008  C0 03 00 9C */	lfs f0, 0x9c(r3)	/* effective address: 8042FCFC */
 /* 801D2C80 0000000C  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801D2C84 00000010  4E 80 00 20 */	blr 

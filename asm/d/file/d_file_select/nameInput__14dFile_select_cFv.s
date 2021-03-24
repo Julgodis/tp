@@ -36,7 +36,7 @@ lbl_8018741C:
 lbl_8018743C:
 /* 8018743C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80187440 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80187444 00000008  88 03 0F 1A */	lbz r0, 0xf1a(r3)
+/* 80187444 00000008  88 03 0F 1A */	lbz r0, 0xf1a(r3)	/* effective address: 804070DA */
 /* 80187448 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 8018744C 00000010  40 82 00 18 */	bne lbl_80187464
 /* 80187450 00000014  38 00 00 00 */	li r0, 0
@@ -51,8 +51,8 @@ lbl_80187464:
 /* 80187470 0000000C  38 C0 00 00 */	li r6, 0
 /* 80187474 00000010  48 00 5C 71 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 80187478 00000014  7F E3 FB 78 */	mr r3, r31
-/* 8018747C 00000018  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
-/* 80187480 0000001C  C0 42 9F 40 */	lfs f2, d_file_d_file_select__lit_4611(r2)
+/* 8018747C 00000018  C0 22 9F 48 */	lfs f1, lit_4778(r2)
+/* 80187480 0000001C  C0 42 9F 40 */	lfs f2, lit_4611(r2)
 /* 80187484 00000020  48 00 89 E1 */	bl fileRecScaleAnmInitSet2__14dFile_select_cFff
 /* 80187488 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8018748C 00000028  38 80 0D 29 */	li r4, 0xd29
@@ -72,7 +72,7 @@ lbl_801874B0:
 /* 801874C0 00000010  48 1E 16 6D */	bl strcpy
 /* 801874C4 00000014  80 7F 00 68 */	lwz r3, 0x68(r31)
 /* 801874C8 00000018  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 801874CC 0000001C  C0 22 9F 48 */	lfs f1, d_file_d_file_select__lit_4778(r2)
+/* 801874CC 0000001C  C0 22 9F 48 */	lfs f1, lit_4778(r2)
 /* 801874D0 00000020  48 00 DD D1 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801874D4 00000024  38 00 00 0F */	li r0, 0xf
 /* 801874D8 00000028  98 1F 02 0A */	stb r0, 0x20a(r31)

@@ -10,20 +10,20 @@ lbl_8028D9A4:
 /* 8028D9C4 00000020  38 00 00 00 */	li r0, 0
 /* 8028D9C8 00000024  3C 60 80 43 */	lis r3, data_80431490@ha
 /* 8028D9CC 00000028  38 A3 14 90 */	addi r5, r3, data_80431490@l
-/* 8028D9D0 0000002C  90 05 00 00 */	stw r0, 0(r5)
+/* 8028D9D0 0000002C  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80431490 */
 /* 8028D9D4 00000030  C0 02 BB 10 */	lfs f0, lit_1470(r2)
-/* 8028D9D8 00000034  D0 05 00 04 */	stfs f0, 4(r5)
+/* 8028D9D8 00000034  D0 05 00 04 */	stfs f0, 4(r5)	/* effective address: 80431494 */
 /* 8028D9DC 00000038  38 80 00 01 */	li r4, 1
-/* 8028D9E0 0000003C  90 85 00 08 */	stw r4, 8(r5)
-/* 8028D9E4 00000040  D0 05 00 0C */	stfs f0, 0xc(r5)
+/* 8028D9E0 0000003C  90 85 00 08 */	stw r4, 8(r5)	/* effective address: 80431498 */
+/* 8028D9E4 00000040  D0 05 00 0C */	stfs f0, 0xc(r5)	/* effective address: 8043149C */
 /* 8028D9E8 00000044  38 00 00 02 */	li r0, 2
-/* 8028D9EC 00000048  90 05 00 10 */	stw r0, 0x10(r5)
-/* 8028D9F0 0000004C  D0 05 00 14 */	stfs f0, 0x14(r5)
+/* 8028D9EC 00000048  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 804314A0 */
+/* 8028D9F0 0000004C  D0 05 00 14 */	stfs f0, 0x14(r5)	/* effective address: 804314A4 */
 /* 8028D9F4 00000050  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 8028D9F8 00000054  C0 03 0A E0 */	lfs f0, __float_nan@l(r3)
 /* 8028D9FC 00000058  38 00 FF FF */	li r0, -1
-/* 8028DA00 0000005C  90 05 00 18 */	stw r0, 0x18(r5)
-/* 8028DA04 00000060  D0 05 00 1C */	stfs f0, 0x1c(r5)
+/* 8028DA00 0000005C  90 05 00 18 */	stw r0, 0x18(r5)	/* effective address: 804314A8 */
+/* 8028DA04 00000060  D0 05 00 1C */	stfs f0, 0x1c(r5)	/* effective address: 804314AC */
 /* 8028DA08 00000064  98 8D 8C 78 */	stb r4, data_804511F8(r13)
 lbl_8028DA0C:
 /* 8028DA0C 00000000  7F E3 FB 78 */	mr r3, r31

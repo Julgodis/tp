@@ -8,8 +8,8 @@ lbl_800D34D8:
 /* 800D34F0 00000018  48 28 EC DD */	bl _savegpr_25
 /* 800D34F4 0000001C  7C 7C 1B 78 */	mr r28, r3
 /* 800D34F8 00000020  7C 9D 23 78 */	mr r29, r4
-/* 800D34FC 00000024  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800D3500 00000028  3B 64 D6 58 */	addi r27, r4, d_a_d_a_alink__lit_3757@l
+/* 800D34FC 00000024  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800D3500 00000028  3B 64 D6 58 */	addi r27, r4, lit_3757@l
 /* 800D3504 0000002C  57 A0 20 36 */	slwi r0, r29, 4
 /* 800D3508 00000030  3B FB 42 00 */	addi r31, r27, 0x4200
 /* 800D350C 00000034  7F FF 02 14 */	add r31, r31, r0
@@ -172,9 +172,9 @@ lbl_800D3734:
 /* 800D373C 00000008  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800D3740 0000000C  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800D3744 00000010  D0 1C 35 88 */	stfs f0, 0x3588(r28)
-/* 800D3748 00000014  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800D3748 00000014  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800D374C 00000018  D0 1C 35 8C */	stfs f0, 0x358c(r28)
-/* 800D3750 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800D3750 0000001C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D3754 00000020  D0 1C 35 90 */	stfs f0, 0x3590(r28)
 /* 800D3758 00000024  88 1C 05 68 */	lbz r0, 0x568(r28)
 /* 800D375C 00000028  28 00 00 1A */	cmplwi r0, 0x1a
@@ -189,9 +189,9 @@ lbl_800D3774:
 /* 800D3778 00000004  B0 1C 30 12 */	sth r0, 0x3012(r28)
 /* 800D377C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D3780 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D3784 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800D3784 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D3788 00000014  60 00 80 00 */	ori r0, r0, 0x8000
-/* 800D378C 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800D378C 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D3790 0000001C  7F 83 E3 78 */	mr r3, r28
 /* 800D3794 00000020  48 05 09 B1 */	bl setCutWaterDropEffect__9daAlink_cFv
 /* 800D3798 00000024  7F 83 E3 78 */	mr r3, r28

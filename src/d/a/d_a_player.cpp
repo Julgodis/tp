@@ -17,10 +17,10 @@ struct daPy_frameCtrl_c {
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct daPy_boomerangMove_c {
@@ -321,7 +321,7 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
 /* ############################################################################################## */
 /* 80453600-80453608 0004+04 s=6 e=0 z=0  None .sdata2    @4215                                                        */
-SECTION_SDATA2 static u8 d_a_d_a_player__lit_4215[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4215[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
@@ -351,7 +351,7 @@ asm void daPy_frameCtrl_c::updateFrame() {
 
 /* ############################################################################################## */
 /* 80453608-80453610 0008+00 s=2 e=0 z=0  None .sdata2    @4237                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_player__lit_4237 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4237 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8015E544-8015E5B0 006C+00 s=0 e=1 z=0  None .text      setFrameCtrl__16daPy_frameCtrl_cFUcssff                      */
 #pragma push
@@ -372,7 +372,7 @@ SECTION_SDATA2 static f32 lit_4247 = 30.0f;
 SECTION_SDATA2 static f32 lit_4248 = 70.0f;
 
 /* 80453618-8045361C 0004+00 s=2 e=0 z=0  None .sdata2    @4249                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4249 = 50.0f;
+SECTION_SDATA2 static f32 lit_4249 = 50.0f;
 
 /* 8045361C-80453620 0004+00 s=1 e=0 z=0  None .sdata2    @4250                                                        */
 SECTION_SDATA2 static f32 lit_4250 = 65536.0f;
@@ -396,13 +396,13 @@ u8 m_midnaActor__9daPy_py_c[4];
 u8 struct_8045101C[4];
 
 /* 80453620-80453624 0004+00 s=1 e=0 z=0  None .sdata2    @4332                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4332 = 300.0f;
+SECTION_SDATA2 static f32 lit_4332 = 300.0f;
 
 /* 80453624-80453628 0004+00 s=1 e=0 z=0  None .sdata2    @4333                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4333 = -700.0f;
+SECTION_SDATA2 static f32 lit_4333 = -700.0f;
 
 /* 80453628-80453630 0004+04 s=1 e=0 z=0  None .sdata2    @4334                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4334[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4334[1 + 1 /* padding */] = {
 	2048.0f,
 	/* padding */
 	0.0f,
@@ -421,7 +421,7 @@ asm void daPy_boomerangMove_c::posMove(cXyz* param_0, s16* param_1, fopAc_ac_c* 
 
 /* ############################################################################################## */
 /* 80453630-80453638 0008+00 s=1 e=0 z=0  None .sdata2    @4379                                                        */
-SECTION_SDATA2 static f64 d_a_d_a_player__lit_4379 = 0.5;
+SECTION_SDATA2 static f64 lit_4379 = 0.5;
 
 /* 80453638-80453640 0008+00 s=1 e=0 z=0  None .sdata2    @4380                                                        */
 SECTION_SDATA2 static f64 lit_4380 = 3.0;
@@ -806,10 +806,10 @@ SECTION_DATA static u8 l_sightDL[137 + 3 /* padding */] = {
 };
 
 /* 80453678-8045367C 0004+00 s=1 e=0 z=0  None .sdata2    @4668                                                        */
-SECTION_SDATA2 static u32 d_a_d_a_player__lit_4668 = 0xFF8000FF;
+SECTION_SDATA2 static u32 lit_4668 = 0xFF8000FF;
 
 /* 8045367C-80453680 0004+00 s=1 e=0 z=0  None .sdata2    @4669                                                        */
-SECTION_SDATA2 static u32 d_a_d_a_player__lit_4669 = 0x321400FF;
+SECTION_SDATA2 static u32 lit_4669 = 0x321400FF;
 
 /* 8015F1A0-8015F2FC 015C+00 s=1 e=1 z=0  None .text      draw__18daPy_sightPacket_cFv                                 */
 #pragma push
@@ -824,7 +824,7 @@ asm void daPy_sightPacket_c::draw() {
 
 /* ############################################################################################## */
 /* 80453680-80453684 0004+00 s=1 e=0 z=0  None .sdata2    @4699                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4699 = 32.0f;
+SECTION_SDATA2 static f32 lit_4699 = 32.0f;
 
 /* 8015F2FC-8015F384 0088+00 s=0 e=1 z=0  None .text      setSight__18daPy_sightPacket_cFv                             */
 #pragma push
@@ -872,10 +872,10 @@ asm void daPy_py_c::checkWoodShieldEquip() {
 
 /* ############################################################################################## */
 /* 80453684-80453688 0004+00 s=1 e=0 z=0  None .sdata2    @4741                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4741 = -12.5f;
+SECTION_SDATA2 static f32 lit_4741 = -12.5f;
 
 /* 80453688-80453690 0004+04 s=1 e=0 z=0  None .sdata2    @4742                                                        */
-SECTION_SDATA2 static f32 d_a_d_a_player__lit_4742[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4742[1 + 1 /* padding */] = {
 	57.5f,
 	/* padding */
 	0.0f,

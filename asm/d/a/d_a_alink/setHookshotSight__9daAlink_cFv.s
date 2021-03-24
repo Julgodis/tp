@@ -9,12 +9,12 @@ lbl_80108DB4:
 /* 80108DD0 0000001C  41 82 00 14 */	beq lbl_80108DE4
 /* 80108DD4 00000020  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 80108DD8 00000024  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 80108DDC 00000028  C0 23 00 60 */	lfs f1, 0x60(r3)
+/* 80108DDC 00000028  C0 23 00 60 */	lfs f1, 0x60(r3)	/* effective address: 8038EA20 */
 /* 80108DE0 0000002C  48 00 00 10 */	b lbl_80108DF0
 lbl_80108DE4:
 /* 80108DE4 00000000  3C 60 80 39 */	lis r3, m__22daAlinkHIO_hookshot_c0@ha
 /* 80108DE8 00000004  38 63 E9 C0 */	addi r3, r3, m__22daAlinkHIO_hookshot_c0@l
-/* 80108DEC 00000008  C0 23 00 48 */	lfs f1, 0x48(r3)
+/* 80108DEC 00000008  C0 23 00 48 */	lfs f1, 0x48(r3)	/* effective address: 8038EA08 */
 lbl_80108DF0:
 /* 80108DF0 00000000  7F E3 FB 78 */	mr r3, r31
 /* 80108DF4 00000004  38 81 00 08 */	addi r4, r1, 8
@@ -79,7 +79,7 @@ lbl_80108EC0:
 lbl_80108EC8:
 /* 80108EC8 00000000  38 7F 28 4C */	addi r3, r31, 0x284c
 /* 80108ECC 00000004  48 05 5E 31 */	bl clearData__16daPy_actorKeep_cFv
-/* 80108ED0 00000008  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 80108ED0 00000008  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 80108ED4 0000000C  D0 1F 34 94 */	stfs f0, 0x3494(r31)
 /* 80108ED8 00000010  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80108EDC 00000014  80 01 00 24 */	lwz r0, 0x24(r1)

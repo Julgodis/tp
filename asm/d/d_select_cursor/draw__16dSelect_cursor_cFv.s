@@ -11,14 +11,14 @@ lbl_80194C30:
 /* 80194C54 00000024  48 00 00 6D */	bl update__16dSelect_cursor_cFv
 /* 80194C58 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80194C5C 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80194C60 00000030  83 E3 5F 50 */	lwz r31, 0x5f50(r3)
+/* 80194C60 00000030  83 E3 5F 50 */	lwz r31, 0x5f50(r3)	/* effective address: 8040C110 */
 /* 80194C64 00000034  7F E3 FB 78 */	mr r3, r31
 /* 80194C68 00000038  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80194C6C 0000003C  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 80194C70 00000040  7D 89 03 A6 */	mtctr r12
 /* 80194C74 00000044  4E 80 04 21 */	bctrl 
 /* 80194C78 00000048  80 7E 00 04 */	lwz r3, 4(r30)
-/* 80194C7C 0000004C  C0 22 A0 50 */	lfs f1, d_d_select_cursor__lit_3808(r2)
+/* 80194C7C 0000004C  C0 22 A0 50 */	lfs f1, lit_3808(r2)
 /* 80194C80 00000050  FC 40 08 90 */	fmr f2, f1
 /* 80194C84 00000054  7F E4 FB 78 */	mr r4, r31
 /* 80194C88 00000058  48 16 42 4D */	bl draw__9J2DScreenFffPC14J2DGrafContext

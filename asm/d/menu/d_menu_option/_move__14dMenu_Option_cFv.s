@@ -23,7 +23,7 @@ lbl_801E344C:
 /* 801E3458 0000000C  40 82 01 84 */	bne lbl_801E35DC
 /* 801E345C 00000010  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801E3460 00000014  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801E3464 00000018  80 83 00 34 */	lwz r4, 0x34(r3)
+/* 801E3464 00000018  80 83 00 34 */	lwz r4, 0x34(r3)	/* effective address: 803DD31C */
 /* 801E3468 0000001C  54 85 05 EF */	rlwinm. r5, r4, 0, 0x17, 0x17
 /* 801E346C 00000020  41 82 00 B8 */	beq lbl_801E3524
 /* 801E3470 00000024  88 7F 03 EF */	lbz r3, 0x3ef(r31)
@@ -65,8 +65,8 @@ lbl_801E344C:
 /* 801E3500 000000B4  7F E3 FB 78 */	mr r3, r31
 /* 801E3504 000000B8  88 1F 03 EF */	lbz r0, 0x3ef(r31)
 /* 801E3508 000000BC  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801E350C 000000C0  3C 80 80 3C */	lis r4, d_menu_d_menu_option__init@ha
-/* 801E3510 000000C4  38 04 DC 14 */	addi r0, r4, d_menu_d_menu_option__init@l
+/* 801E350C 000000C0  3C 80 80 3C */	lis r4, init@ha
+/* 801E3510 000000C4  38 04 DC 14 */	addi r0, r4, init@l
 /* 801E3514 000000C8  7D 80 2A 14 */	add r12, r0, r5
 /* 801E3518 000000CC  48 17 EB 6D */	bl __ptmf_scall
 /* 801E351C 000000D0  60 00 00 00 */	nop 
@@ -113,8 +113,8 @@ lbl_801E3524:
 /* 801E35BC 00000098  7F E3 FB 78 */	mr r3, r31
 /* 801E35C0 0000009C  88 1F 03 EF */	lbz r0, 0x3ef(r31)
 /* 801E35C4 000000A0  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801E35C8 000000A4  3C 80 80 3C */	lis r4, d_menu_d_menu_option__init@ha
-/* 801E35CC 000000A8  38 04 DC 14 */	addi r0, r4, d_menu_d_menu_option__init@l
+/* 801E35C8 000000A4  3C 80 80 3C */	lis r4, init@ha
+/* 801E35CC 000000A8  38 04 DC 14 */	addi r0, r4, init@l
 /* 801E35D0 000000AC  7D 80 2A 14 */	add r12, r0, r5
 /* 801E35D4 000000B0  48 17 EA B1 */	bl __ptmf_scall
 /* 801E35D8 000000B4  60 00 00 00 */	nop 
@@ -156,8 +156,8 @@ lbl_801E3658:
 /* 801E3658 00000000  7F E3 FB 78 */	mr r3, r31
 /* 801E365C 00000004  88 1F 03 EF */	lbz r0, 0x3ef(r31)
 /* 801E3660 00000008  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801E3664 0000000C  3C 80 80 3C */	lis r4, d_menu_d_menu_option__process@ha
-/* 801E3668 00000010  38 04 DC D4 */	addi r0, r4, d_menu_d_menu_option__process@l
+/* 801E3664 0000000C  3C 80 80 3C */	lis r4, process@ha
+/* 801E3668 00000010  38 04 DC D4 */	addi r0, r4, process@l
 /* 801E366C 00000014  7D 80 2A 14 */	add r12, r0, r5
 /* 801E3670 00000018  48 17 EA 15 */	bl __ptmf_scall
 /* 801E3674 0000001C  60 00 00 00 */	nop 
@@ -168,8 +168,8 @@ lbl_801E3658:
 /* 801E3688 00000030  41 82 00 20 */	beq lbl_801E36A8
 /* 801E368C 00000034  7F E3 FB 78 */	mr r3, r31
 /* 801E3690 00000038  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801E3694 0000003C  3C 80 80 3C */	lis r4, d_menu_d_menu_option__init@ha
-/* 801E3698 00000040  38 04 DC 14 */	addi r0, r4, d_menu_d_menu_option__init@l
+/* 801E3694 0000003C  3C 80 80 3C */	lis r4, init@ha
+/* 801E3698 00000040  38 04 DC 14 */	addi r0, r4, init@l
 /* 801E369C 00000044  7D 80 2A 14 */	add r12, r0, r5
 /* 801E36A0 00000048  48 17 E9 E5 */	bl __ptmf_scall
 /* 801E36A4 0000004C  60 00 00 00 */	nop 

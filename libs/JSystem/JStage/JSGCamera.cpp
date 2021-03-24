@@ -211,7 +211,7 @@ asm void JStage::TCamera::JSGSetProjectionType(JStage::TECameraProjection param_
 
 /* ############################################################################################## */
 /* 804553D8-804553E0 0004+04 s=4 e=0 z=0  None .sdata2    @319                                                         */
-SECTION_SDATA2 static u8 JSGCamera__lit_319[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_319[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

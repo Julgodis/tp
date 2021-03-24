@@ -37,9 +37,9 @@ lbl_800C51E4:
 /* 800C51E4 00000000  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800C51E8 00000004  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800C51EC 00000008  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 800C51F0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800C51F0 0000000C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800C51F4 00000010  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 800C51F8 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800C51F8 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800C51FC 00000018  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 800C5200 0000001C  38 00 00 04 */	li r0, 4
 /* 800C5204 00000020  98 1E 2F 99 */	stb r0, 0x2f99(r30)

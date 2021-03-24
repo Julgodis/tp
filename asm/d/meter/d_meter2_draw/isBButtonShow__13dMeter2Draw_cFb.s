@@ -7,7 +7,7 @@ lbl_8021BCC0:
 /* 8021BCD4 00000014  7C 9E 23 78 */	mr r30, r4
 /* 8021BCD8 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021BCDC 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021BCE0 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 8021BCE0 00000020  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 8021BCE4 00000024  28 03 00 00 */	cmplwi r3, 0
 /* 8021BCE8 00000028  40 82 00 0C */	bne lbl_8021BCF4
 /* 8021BCEC 0000002C  38 60 00 00 */	li r3, 0
@@ -15,7 +15,7 @@ lbl_8021BCC0:
 lbl_8021BCF4:
 /* 8021BCF4 00000000  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 8021BCF8 00000004  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 8021BCFC 00000008  88 04 00 BD */	lbz r0, 0xbd(r4)
+/* 8021BCFC 00000008  88 04 00 BD */	lbz r0, 0xbd(r4)	/* effective address: 80430245 */
 /* 8021BD00 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8021BD04 00000010  40 82 00 A8 */	bne lbl_8021BDAC
 /* 8021BD08 00000014  48 01 B3 E1 */	bl isHowlMessage__12dMsgObject_cFv
@@ -23,8 +23,8 @@ lbl_8021BCF4:
 /* 8021BD10 0000001C  40 82 00 9C */	bne lbl_8021BDAC
 /* 8021BD14 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021BD18 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 8021BD1C 00000028  80 7F 5D AC */	lwz r3, 0x5dac(r31)
-/* 8021BD20 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 8021BD1C 00000028  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8021BD20 0000002C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 8021BD24 00000030  81 8C 00 78 */	lwz r12, 0x78(r12)
 /* 8021BD28 00000034  7D 89 03 A6 */	mtctr r12
 /* 8021BD2C 00000038  4E 80 04 21 */	bctrl 
@@ -32,7 +32,7 @@ lbl_8021BCF4:
 /* 8021BD34 00000040  40 82 00 78 */	bne lbl_8021BDAC
 /* 8021BD38 00000044  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8021BD3C 00000048  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8021BD40 0000004C  88 03 00 E8 */	lbz r0, 0xe8(r3)
+/* 8021BD40 0000004C  88 03 00 E8 */	lbz r0, 0xe8(r3)	/* effective address: 80430270 */
 /* 8021BD44 00000050  28 00 00 00 */	cmplwi r0, 0
 /* 8021BD48 00000054  40 82 00 64 */	bne lbl_8021BDAC
 /* 8021BD4C 00000058  80 7F 5D AC */	lwz r3, 0x5dac(r31)
@@ -47,7 +47,7 @@ lbl_8021BCF4:
 lbl_8021BD70:
 /* 8021BD70 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021BD74 00000004  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8021BD78 00000008  88 64 4F AD */	lbz r3, 0x4fad(r4)
+/* 8021BD78 00000008  88 64 4F AD */	lbz r3, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 8021BD7C 0000000C  30 03 FF FF */	addic r0, r3, -1
 /* 8021BD80 00000010  7C 00 19 10 */	subfe r0, r0, r3
 /* 8021BD84 00000014  54 03 06 3F */	clrlwi. r3, r0, 0x18

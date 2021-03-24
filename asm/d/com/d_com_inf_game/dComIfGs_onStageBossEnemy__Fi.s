@@ -7,11 +7,11 @@ lbl_8002D7D0:
 /* 8002D7E4 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 8002D7E8 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002D7EC 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002D7F0 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8002D7F0 00000020  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 8002D7F4 00000024  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8002D7F8 00000028  7D 89 03 A6 */	mtctr r12
 /* 8002D7FC 0000002C  4E 80 04 21 */	bctrl 
-/* 8002D800 00000030  88 03 00 09 */	lbz r0, 9(r3)
+/* 8002D800 00000030  88 03 00 09 */	lbz r0, 9(r3)	/* effective address: 804061C9 */
 /* 8002D804 00000034  54 00 FE FE */	rlwinm r0, r0, 0x1f, 0x1b, 0x1f
 /* 8002D808 00000038  7C 1E 00 00 */	cmpw r30, r0
 /* 8002D80C 0000003C  40 82 00 28 */	bne lbl_8002D834

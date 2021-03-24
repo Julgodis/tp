@@ -42,8 +42,8 @@ lbl_80337A70:
 /* 80337A70 00000000  3B E0 00 10 */	li r31, 0x10
 /* 80337A74 00000004  48 00 00 54 */	b lbl_80337AC8
 lbl_80337A78:
-/* 80337A78 00000000  3C 60 80 3A */	lis r3, J3DShapeFactory__stringBase0@ha
-/* 80337A7C 00000004  38 63 21 00 */	addi r3, r3, J3DShapeFactory__stringBase0@l
+/* 80337A78 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80337A7C 00000004  38 63 21 00 */	addi r3, r3, stringBase0@l
 /* 80337A80 00000008  4C C6 31 82 */	crclr 6
 /* 80337A84 0000000C  4B CC F0 39 */	bl OSReport
 /* 80337A88 00000010  48 00 00 40 */	b lbl_80337AC8
@@ -62,8 +62,8 @@ lbl_80337AB0:
 /* 80337AB0 00000000  3B E0 00 10 */	li r31, 0x10
 /* 80337AB4 00000004  48 00 00 14 */	b lbl_80337AC8
 lbl_80337AB8:
-/* 80337AB8 00000000  3C 60 80 3A */	lis r3, J3DShapeFactory__stringBase0@ha
-/* 80337ABC 00000004  38 63 21 00 */	addi r3, r3, J3DShapeFactory__stringBase0@l
+/* 80337AB8 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80337ABC 00000004  38 63 21 00 */	addi r3, r3, stringBase0@l
 /* 80337AC0 00000008  4C C6 31 82 */	crclr 6
 /* 80337AC4 0000000C  4B CC EF F9 */	bl OSReport
 lbl_80337AC8:

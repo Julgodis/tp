@@ -30,7 +30,7 @@ lbl_8011A638:
 /* 8011A638 00000000  80 1F 05 74 */	lwz r0, 0x574(r31)
 /* 8011A63C 00000004  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8011A640 00000008  40 82 00 0C */	bne lbl_8011A64C
-/* 8011A644 0000000C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 8011A644 0000000C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 8011A648 00000010  4B F9 37 CD */	bl setBlendMoveAnime__9daAlink_cFf
 lbl_8011A64C:
 /* 8011A64C 00000000  7F E3 FB 78 */	mr r3, r31

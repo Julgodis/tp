@@ -13,7 +13,7 @@ lbl_801EB624:
 /* 801EB650 0000002C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801EB654 00000030  7D 89 03 A6 */	mtctr r12
 /* 801EB658 00000034  4E 80 04 21 */	bctrl 
-/* 801EB65C 00000038  C0 02 A9 D0 */	lfs f0, d_menu_d_menu_ring__lit_4739(r2)
+/* 801EB65C 00000038  C0 02 A9 D0 */	lfs f0, lit_4739(r2)
 /* 801EB660 0000003C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801EB664 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 801EB668 00000004  40 82 02 18 */	bne lbl_801EB880
@@ -68,7 +68,7 @@ lbl_801EB70C:
 /* 801EB718 0000000C  41 82 01 8C */	beq lbl_801EB8A4
 /* 801EB71C 00000010  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 801EB720 00000014  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 801EB724 00000018  80 04 00 30 */	lwz r0, 0x30(r4)
+/* 801EB724 00000018  80 04 00 30 */	lwz r0, 0x30(r4)	/* effective address: 803DD318 */
 /* 801EB728 0000001C  54 00 06 73 */	rlwinm. r0, r0, 0, 0x19, 0x19
 /* 801EB72C 00000020  41 82 00 38 */	beq lbl_801EB764
 /* 801EB730 00000024  54 E0 15 BA */	rlwinm r0, r7, 2, 0x16, 0x1d

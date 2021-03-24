@@ -16,13 +16,13 @@ struct daE_OC_HIO_c {
 	/* 80735630 */ ~daE_OC_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daE_OC_c {

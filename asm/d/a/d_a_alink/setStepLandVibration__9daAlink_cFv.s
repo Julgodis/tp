@@ -13,7 +13,7 @@ lbl_800B5C64:
 lbl_800B5C90:
 /* 800B5C90 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800B5C94 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800B5C98 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B5C98 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B5C9C 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800B5CA0 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800B5CA4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

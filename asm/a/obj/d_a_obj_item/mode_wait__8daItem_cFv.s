@@ -8,7 +8,7 @@ lbl_8015CCD0:
 /* 8015CCE8 00000018  2C 00 00 05 */	cmpwi r0, 5
 /* 8015CCEC 0000001C  40 80 00 20 */	bge lbl_8015CD0C
 /* 8015CCF0 00000020  C0 3F 04 FC */	lfs f1, 0x4fc(r31)
-/* 8015CCF4 00000024  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015CCF4 00000024  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015CCF8 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8015CCFC 00000000  40 81 00 10 */	ble lbl_8015CD0C
 /* 8015CD00 00000004  80 1F 05 B8 */	lwz r0, 0x5b8(r31)

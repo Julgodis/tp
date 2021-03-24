@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AB1824 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Pouya_c {
@@ -61,6 +61,8 @@ struct daNpc_Pouya_c {
 	/* 80AAFA64 */ void drawOtherMdl();
 	/* 80AAFB4C */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80AAFBDC */ void selectAction();
+	/* 80AAFC24 */ void chkAction(int (daNpc_Pouya_c::*)(void*));
+	/* 80AAFC50 */ void setAction(int (daNpc_Pouya_c::*)(void*));
 	/* 80AAFCF8 */ void setPrtcls();
 	/* 80AAFE08 */ void cutHaveFavorToAsk(int);
 	/* 80AB04A8 */ void wait(void*);
@@ -225,8 +227,8 @@ extern "C" void drawDbgInfo__13daNpc_Pouya_cFv(); // 1
 extern "C" void drawOtherMdl__13daNpc_Pouya_cFv(); // 1
 extern "C" void afterSetMotionAnm__13daNpc_Pouya_cFiifi(); // 1
 extern "C" void selectAction__13daNpc_Pouya_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i(); // 1
 extern "C" void setPrtcls__13daNpc_Pouya_cFv(); // 1
 extern "C" void cutHaveFavorToAsk__13daNpc_Pouya_cFi(); // 1
 extern "C" void wait__13daNpc_Pouya_cFPv(); // 1
@@ -789,7 +791,7 @@ asm void daNpc_Pouya_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i() {
+asm void daNpc_Pouya_c::chkAction(int (daNpc_Pouya_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pouya/d_a_npc_pouya/chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i.s"
 }
@@ -800,7 +802,7 @@ extern "C" asm static void chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i() {
+asm void daNpc_Pouya_c::setAction(int (daNpc_Pouya_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pouya/d_a_npc_pouya/setAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i.s"
 }

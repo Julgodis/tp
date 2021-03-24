@@ -144,7 +144,7 @@ lbl_800F58FC:
 /* 800F5904 00000008  4B FC C6 69 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F5908 0000000C  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F590C 00000010  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F5910 00000014  C3 E3 00 1C */	lfs f31, 0x1c(r3)
+/* 800F5910 00000014  C3 E3 00 1C */	lfs f31, 0x1c(r3)	/* effective address: 8038E62C */
 /* 800F5914 00000018  3B 60 00 00 */	li r27, 0
 /* 800F5918 0000001C  2C 1F 00 DD */	cmpwi r31, 0xdd
 /* 800F591C 00000020  41 82 00 0C */	beq lbl_800F5928
@@ -158,7 +158,7 @@ lbl_800F5928:
 /* 800F5938 00000010  FC 20 F8 50 */	fneg f1, f31
 /* 800F593C 00000014  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F5940 00000018  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F5944 0000001C  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800F5944 0000001C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038E644 */
 /* 800F5948 00000020  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800F594C 00000024  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800F5950 00000028  FC 03 00 40 */	fcmpo cr0, f3, f0
@@ -198,7 +198,7 @@ lbl_800F59C0:
 /* 800F59C4 00000004  41 82 00 10 */	beq lbl_800F59D4
 /* 800F59C8 00000008  3C 60 80 39 */	lis r3, m__19daAlinkHIO_canoe_c0@ha
 /* 800F59CC 0000000C  38 63 E6 10 */	addi r3, r3, m__19daAlinkHIO_canoe_c0@l
-/* 800F59D0 00000010  C3 E3 00 30 */	lfs f31, 0x30(r3)
+/* 800F59D0 00000010  C3 E3 00 30 */	lfs f31, 0x30(r3)	/* effective address: 8038E640 */
 lbl_800F59D4:
 /* 800F59D4 00000000  7F 83 E3 78 */	mr r3, r28
 /* 800F59D8 00000004  7F E4 FB 78 */	mr r4, r31

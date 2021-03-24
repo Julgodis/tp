@@ -173,7 +173,7 @@ lbl_8007E278:
 /* 8007E2A4 0000002C  41 82 00 38 */	beq lbl_8007E2DC
 /* 8007E2A8 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8007E2AC 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8007E2B0 00000038  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 8007E2B0 00000038  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 8007E2B4 0000003C  28 03 00 00 */	cmplwi r3, 0
 /* 8007E2B8 00000040  41 82 00 24 */	beq lbl_8007E2DC
 /* 8007E2BC 00000044  38 81 00 08 */	addi r4, r1, 8

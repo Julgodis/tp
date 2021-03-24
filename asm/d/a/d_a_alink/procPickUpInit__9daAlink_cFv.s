@@ -45,7 +45,7 @@ lbl_800E72DC:
 /* 800E72F4 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800E72F8 0000001C  80 9F 27 F4 */	lwz r4, 0x27f4(r31)
 /* 800E72FC 00000020  4B F3 37 99 */	bl fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
-/* 800E7300 00000024  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E7300 00000024  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E7304 00000028  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E7308 00000000  40 81 00 14 */	ble lbl_800E731C
 /* 800E730C 00000004  7F E3 FB 78 */	mr r3, r31
@@ -76,7 +76,7 @@ lbl_800E731C:
 /* 800E736C 00000050  41 82 00 14 */	beq lbl_800E7380
 /* 800E7370 00000054  7F E3 FB 78 */	mr r3, r31
 /* 800E7374 00000058  38 80 00 02 */	li r4, 2
-/* 800E7378 0000005C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E7378 0000005C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E737C 00000060  4B FC 63 A9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 lbl_800E7380:
 /* 800E7380 00000000  2C 1E 02 1A */	cmpwi r30, 0x21a

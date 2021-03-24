@@ -95,7 +95,7 @@ extern "C" void setEventBit__11Z2StatusMgrFPv(); // 1
 extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec(); // 1
 extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc(); // 1
 extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf(); // 1
-extern "C" extern char const* const Z2StatusMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -353,7 +353,7 @@ SECTION_DEAD static char const* const pad_8039BFA1 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 803CA508-803CA5C0 00B8+00 s=1 e=0 z=0  None .data      @3732                                                        */
-SECTION_DATA static void* Z2StatusMgr__lit_3732[46] = {
+SECTION_DATA static void* lit_3732[46] = {
 	/* 0    */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x438),
 	/* 1    */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x3F8),
 	/* 2    */ (void*)(((char*)setDemoName__11Z2StatusMgrFPc)+0x4E8),
@@ -403,7 +403,7 @@ SECTION_DATA static void* Z2StatusMgr__lit_3732[46] = {
 };
 
 /* 80455A28-80455A30 0008+00 s=1 e=0 z=0  None .sdata2    @3731                                                        */
-SECTION_SDATA2 static f64 Z2StatusMgr__lit_3731 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3731 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802B61E8-802B671C 0534+00 s=1 e=7 z=0  None .text      setDemoName__11Z2StatusMgrFPc                                */
 #pragma push
@@ -473,10 +473,10 @@ asm void Z2StatusMgr::setCameraGroupInfo(u8 param_0) {
 
 /* ############################################################################################## */
 /* 80455A30-80455A34 0004+00 s=1 e=0 z=0  None .sdata2    @3798                                                        */
-SECTION_SDATA2 static f32 Z2StatusMgr__lit_3798 = 2000.0f;
+SECTION_SDATA2 static f32 lit_3798 = 2000.0f;
 
 /* 80455A34-80455A38 0004+00 s=1 e=0 z=0  None .sdata2    @3799                                                        */
-SECTION_SDATA2 static f32 Z2StatusMgr__lit_3799 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3799 = 1.0f / 5.0f;
 
 /* 802B6788-802B6840 00B8+00 s=0 e=2 z=0  None .text      setCameraInWaterDepth__11Z2StatusMgrFf                       */
 #pragma push

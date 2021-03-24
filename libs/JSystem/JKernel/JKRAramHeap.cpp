@@ -112,7 +112,7 @@ SECTION_DATA static void* __vt__11JKRAramHeap[3 + 1 /* padding */] = {
 };
 
 /* 80434300-8043430C 000C+00 s=1 e=0 z=0  None .bss       @297                                                         */
-static u8 JKRAramHeap__lit_297[12];
+static u8 lit_297[12];
 
 /* 8043430C-80434318 000C+00 s=8 e=0 z=0  None .bss       sAramList__11JKRAramHeap                                     */
 static u8 sAramList__11JKRAramHeap[12];

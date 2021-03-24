@@ -15,22 +15,22 @@ lbl_801FB404:
 /* 801FB438 00000034  38 00 00 01 */	li r0, 1
 /* 801FB43C 00000038  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB440 0000003C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB444 00000040  98 03 00 BF */	stb r0, 0xbf(r3)
-/* 801FB448 00000044  80 63 00 20 */	lwz r3, 0x20(r3)
+/* 801FB444 00000040  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
+/* 801FB448 00000044  80 63 00 20 */	lwz r3, 0x20(r3)	/* effective address: 804301A8 */
 /* 801FB44C 00000048  48 01 24 29 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 801FB450 0000004C  48 00 00 1C */	b lbl_801FB46C
 lbl_801FB454:
 /* 801FB454 00000000  38 00 00 00 */	li r0, 0
 /* 801FB458 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB45C 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB460 0000000C  98 03 00 BF */	stb r0, 0xbf(r3)
-/* 801FB464 00000010  80 63 00 20 */	lwz r3, 0x20(r3)
+/* 801FB460 0000000C  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
+/* 801FB464 00000010  80 63 00 20 */	lwz r3, 0x20(r3)	/* effective address: 804301A8 */
 /* 801FB468 00000014  48 01 24 55 */	bl setDispPosOutsideFlg_SE_On__11dMeterMap_cFv
 lbl_801FB46C:
 /* 801FB46C 00000000  38 00 02 00 */	li r0, 0x200
 /* 801FB470 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB474 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB478 0000000C  B0 03 00 AA */	sth r0, 0xaa(r3)
+/* 801FB478 0000000C  B0 03 00 AA */	sth r0, 0xaa(r3)	/* effective address: 80430232 */
 /* 801FB47C 00000010  38 00 00 0C */	li r0, 0xc
 /* 801FB480 00000014  98 1F 01 46 */	stb r0, 0x146(r31)
 /* 801FB484 00000018  38 00 00 03 */	li r0, 3
@@ -56,12 +56,12 @@ lbl_801FB4C8:
 /* 801FB4D0 00000008  38 00 00 00 */	li r0, 0
 /* 801FB4D4 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB4D8 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB4DC 00000014  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 801FB4DC 00000014  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 /* 801FB4E0 00000018  38 00 04 00 */	li r0, 0x400
-/* 801FB4E4 0000001C  B0 03 00 AA */	sth r0, 0xaa(r3)
+/* 801FB4E4 0000001C  B0 03 00 AA */	sth r0, 0xaa(r3)	/* effective address: 80430232 */
 /* 801FB4E8 00000020  38 00 00 0C */	li r0, 0xc
 /* 801FB4EC 00000024  98 1F 01 46 */	stb r0, 0x146(r31)
-/* 801FB4F0 00000028  80 63 00 20 */	lwz r3, 0x20(r3)
+/* 801FB4F0 00000028  80 63 00 20 */	lwz r3, 0x20(r3)	/* effective address: 804301A8 */
 /* 801FB4F4 0000002C  48 01 23 C9 */	bl setDispPosOutsideFlg_SE_On__11dMeterMap_cFv
 /* 801FB4F8 00000030  38 00 00 01 */	li r0, 1
 /* 801FB4FC 00000034  80 7F 01 18 */	lwz r3, 0x118(r31)
@@ -89,13 +89,13 @@ lbl_801FB53C:
 /* 801FB550 00000014  38 00 00 01 */	li r0, 1
 /* 801FB554 00000018  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB558 0000001C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB55C 00000020  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 801FB55C 00000020  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 /* 801FB560 00000024  48 00 00 14 */	b lbl_801FB574
 lbl_801FB564:
 /* 801FB564 00000000  38 00 00 00 */	li r0, 0
 /* 801FB568 00000004  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FB56C 00000008  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FB570 0000000C  98 03 00 BF */	stb r0, 0xbf(r3)
+/* 801FB570 0000000C  98 03 00 BF */	stb r0, 0xbf(r3)	/* effective address: 80430247 */
 lbl_801FB574:
 /* 801FB574 00000000  38 00 00 0C */	li r0, 0xc
 /* 801FB578 00000004  98 1F 01 46 */	stb r0, 0x146(r31)

@@ -27,7 +27,7 @@ lbl_800F2B90:
 /* 800F2BAC 0000001C  40 82 00 14 */	bne lbl_800F2BC0
 /* 800F2BB0 00000020  7F E3 FB 78 */	mr r3, r31
 /* 800F2BB4 00000024  38 80 00 02 */	li r4, 2
-/* 800F2BB8 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F2BB8 00000028  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F2BBC 0000002C  4B FB AF 31 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F2BC0:
 /* 800F2BC0 00000000  7F E3 FB 78 */	mr r3, r31
@@ -46,7 +46,7 @@ lbl_800F2BC0:
 /* 800F2BF4 00000034  41 82 00 30 */	beq lbl_800F2C24
 /* 800F2BF8 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F2BFC 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F2C00 00000040  80 83 5D B8 */	lwz r4, 0x5db8(r3)
+/* 800F2C00 00000040  80 83 5D B8 */	lwz r4, 0x5db8(r3)	/* effective address: 8040BF78 */
 /* 800F2C04 00000044  38 00 00 03 */	li r0, 3
 /* 800F2C08 00000048  98 04 16 B8 */	stb r0, 0x16b8(r4)
 /* 800F2C0C 0000004C  38 60 00 00 */	li r3, 0

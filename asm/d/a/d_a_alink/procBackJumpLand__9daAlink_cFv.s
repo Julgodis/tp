@@ -54,7 +54,7 @@ lbl_800C5BAC:
 /* 800C5BAC 00000000  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 800C5BB0 00000004  3C 60 80 39 */	lis r3, m__22daAlinkHIO_backJump_c0@ha
 /* 800C5BB4 00000008  38 63 D8 2C */	addi r3, r3, m__22daAlinkHIO_backJump_c0@l
-/* 800C5BB8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800C5BB8 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038D850 */
 /* 800C5BBC 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C5BC0 00000000  40 81 00 4C */	ble lbl_800C5C0C
 /* 800C5BC4 00000004  A0 1F 2F DC */	lhz r0, 0x2fdc(r31)

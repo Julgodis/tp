@@ -110,8 +110,8 @@ lbl_80185170:
 /* 801851CC 0000005C  4E 80 04 21 */	bctrl 
 /* 801851D0 00000060  88 1F 02 65 */	lbz r0, 0x265(r31)
 /* 801851D4 00000064  54 04 10 3A */	slwi r4, r0, 2
-/* 801851D8 00000068  3C 60 80 3C */	lis r3, d_file_d_file_select__SelStartFrameTbl@ha
-/* 801851DC 0000006C  38 63 A8 54 */	addi r3, r3, d_file_d_file_select__SelStartFrameTbl@l
+/* 801851D8 00000068  3C 60 80 3C */	lis r3, SelStartFrameTbl@ha
+/* 801851DC 0000006C  38 63 A8 54 */	addi r3, r3, SelStartFrameTbl@l
 /* 801851E0 00000070  7C 03 20 2E */	lwzx r0, r3, r4
 /* 801851E4 00000074  7C 7F 22 14 */	add r3, r31, r4
 /* 801851E8 00000078  90 03 00 E0 */	stw r0, 0xe0(r3)

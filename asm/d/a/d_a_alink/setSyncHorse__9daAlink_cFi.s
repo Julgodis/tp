@@ -12,7 +12,7 @@ lbl_800EDEEC:
 /* 800EDF14 00000014  7C 9E 23 78 */	mr r30, r4
 /* 800EDF18 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800EDF1C 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800EDF20 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)
+/* 800EDF20 00000020  83 E4 5D B8 */	lwz r31, 0x5db8(r4)	/* effective address: 8040BF78 */
 /* 800EDF24 00000024  80 03 31 A0 */	lwz r0, 0x31a0(r3)
 /* 800EDF28 00000028  54 1C 07 FE */	clrlwi r28, r0, 0x1f
 /* 800EDF2C 0000002C  4B FF F5 B1 */	bl setSyncHorsePos__9daAlink_cFv
@@ -67,7 +67,7 @@ lbl_800EDF80:
 /* 800EDFE8 0000005C  40 82 00 2C */	bne lbl_800EE014
 /* 800EDFEC 00000060  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EDFF0 00000064  38 A3 E5 A4 */	addi r5, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EDFF4 00000068  A8 05 00 54 */	lha r0, 0x54(r5)
+/* 800EDFF4 00000068  A8 05 00 54 */	lha r0, 0x54(r5)	/* effective address: 8038E5F8 */
 /* 800EDFF8 0000006C  B0 1D 30 04 */	sth r0, 0x3004(r29)
 /* 800EDFFC 00000070  7F A3 EB 78 */	mr r3, r29
 /* 800EE000 00000074  38 80 00 4D */	li r4, 0x4d
@@ -188,7 +188,7 @@ lbl_800EE158:
 /* 800EE1B0 00000058  4E 80 04 21 */	bctrl 
 /* 800EE1B4 0000005C  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE1B8 00000060  3B C3 E5 A4 */	addi r30, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE1BC 00000064  A8 1E 00 56 */	lha r0, 0x56(r30)
+/* 800EE1BC 00000064  A8 1E 00 56 */	lha r0, 0x56(r30)	/* effective address: 8038E5FA */
 /* 800EE1C0 00000068  B0 1D 30 A6 */	sth r0, 0x30a6(r29)
 /* 800EE1C4 0000006C  7F A3 EB 78 */	mr r3, r29
 /* 800EE1C8 00000070  4B FF ED D5 */	bl setHorseSwordUpAnime__9daAlink_cFv
@@ -208,7 +208,7 @@ lbl_800EE1DC:
 /* 800EE1FC 00000020  41 82 00 C8 */	beq lbl_800EE2C4
 /* 800EE200 00000024  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE204 00000028  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE208 0000002C  A8 03 00 54 */	lha r0, 0x54(r3)
+/* 800EE208 0000002C  A8 03 00 54 */	lha r0, 0x54(r3)	/* effective address: 8038E5F8 */
 /* 800EE20C 00000030  B0 1D 30 04 */	sth r0, 0x3004(r29)
 /* 800EE210 00000034  3B 83 00 28 */	addi r28, r3, 0x28
 /* 800EE214 00000038  A0 1D 2F E8 */	lhz r0, 0x2fe8(r29)
@@ -255,7 +255,7 @@ lbl_800EE240:
 lbl_800EE2B4:
 /* 800EE2B4 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE2B8 00000004  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE2BC 00000008  A8 03 00 56 */	lha r0, 0x56(r3)
+/* 800EE2BC 00000008  A8 03 00 56 */	lha r0, 0x56(r3)	/* effective address: 8038E5FA */
 /* 800EE2C0 0000000C  B0 1D 30 A6 */	sth r0, 0x30a6(r29)
 lbl_800EE2C4:
 /* 800EE2C4 00000000  7F A3 EB 78 */	mr r3, r29
@@ -266,7 +266,7 @@ lbl_800EE2C4:
 /* 800EE2D8 00000014  C0 3D 1F E0 */	lfs f1, 0x1fe0(r29)
 /* 800EE2DC 00000018  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE2E0 0000001C  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE2E4 00000020  C0 03 00 64 */	lfs f0, 0x64(r3)
+/* 800EE2E4 00000020  C0 03 00 64 */	lfs f0, 0x64(r3)	/* effective address: 8038E608 */
 /* 800EE2E8 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800EE2EC 00000000  41 81 00 24 */	bgt lbl_800EE310
 lbl_800EE2F0:
@@ -319,7 +319,7 @@ lbl_800EE378:
 /* 800EE394 0000001C  38 80 00 02 */	li r4, 2
 /* 800EE398 00000020  3C A0 80 39 */	lis r5, m__19daAlinkHIO_horse_c0@ha
 /* 800EE39C 00000024  38 A5 E5 A4 */	addi r5, r5, m__19daAlinkHIO_horse_c0@l
-/* 800EE3A0 00000028  C0 25 00 60 */	lfs f1, 0x60(r5)
+/* 800EE3A0 00000028  C0 25 00 60 */	lfs f1, 0x60(r5)	/* effective address: 8038E604 */
 /* 800EE3A4 0000002C  4B FB F3 81 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800EE3A8 00000030  38 00 00 00 */	li r0, 0
 /* 800EE3AC 00000034  B0 1D 30 02 */	sth r0, 0x3002(r29)
@@ -342,7 +342,7 @@ lbl_800EE3E4:
 /* 800EE3E8 00000004  38 80 00 02 */	li r4, 2
 /* 800EE3EC 00000008  3C A0 80 39 */	lis r5, m__19daAlinkHIO_horse_c0@ha
 /* 800EE3F0 0000000C  38 A5 E5 A4 */	addi r5, r5, m__19daAlinkHIO_horse_c0@l
-/* 800EE3F4 00000010  C0 25 00 60 */	lfs f1, 0x60(r5)
+/* 800EE3F4 00000010  C0 25 00 60 */	lfs f1, 0x60(r5)	/* effective address: 8038E604 */
 /* 800EE3F8 00000014  4B FB F3 2D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800EE3FC 00000018  38 00 00 00 */	li r0, 0
 /* 800EE400 0000001C  B0 1D 30 02 */	sth r0, 0x3002(r29)
@@ -350,7 +350,7 @@ lbl_800EE3E4:
 lbl_800EE408:
 /* 800EE408 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE40C 00000004  3B C3 E5 A4 */	addi r30, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE410 00000008  C0 3E 00 60 */	lfs f1, 0x60(r30)
+/* 800EE410 00000008  C0 3E 00 60 */	lfs f1, 0x60(r30)	/* effective address: 8038E604 */
 /* 800EE414 0000000C  FC 00 08 1E */	fctiwz f0, f1
 /* 800EE418 00000010  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 800EE41C 00000014  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -432,7 +432,7 @@ lbl_800EE528:
 /* 800EE530 00000008  A8 9D 30 04 */	lha r4, 0x3004(r29)
 /* 800EE534 0000000C  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800EE538 00000010  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800EE53C 00000014  A8 03 00 54 */	lha r0, 0x54(r3)
+/* 800EE53C 00000014  A8 03 00 54 */	lha r0, 0x54(r3)	/* effective address: 8038E5F8 */
 /* 800EE540 00000018  7C 04 00 00 */	cmpw r4, r0
 /* 800EE544 0000001C  41 82 00 18 */	beq lbl_800EE55C
 lbl_800EE548:
@@ -483,7 +483,7 @@ lbl_800EE5A8:
 lbl_800EE5E0:
 /* 800EE5E0 00000000  7F A3 EB 78 */	mr r3, r29
 /* 800EE5E4 00000004  FC 20 F0 90 */	fmr f1, f30
-/* 800EE5E8 00000008  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800EE5E8 00000008  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800EE5EC 0000000C  FC 60 10 90 */	fmr f3, f2
 /* 800EE5F0 00000010  80 81 00 08 */	lwz r4, 8(r1)
 /* 800EE5F4 00000014  80 A1 00 0C */	lwz r5, 0xc(r1)

@@ -14,7 +14,7 @@ lbl_801F7F24:
 /* 801F7F54 00000030  7C 03 F8 2E */	lwzx r0, r3, r31
 /* 801F7F58 00000034  90 1E 01 FC */	stw r0, 0x1fc(r30)
 /* 801F7F5C 00000038  80 7E 01 7C */	lwz r3, 0x17c(r30)
-/* 801F7F60 0000003C  C0 22 AA 88 */	lfs f1, d_menu_d_menu_skill__lit_3808(r2)
+/* 801F7F60 0000003C  C0 22 AA 88 */	lfs f1, lit_3808(r2)
 /* 801F7F64 00000040  48 05 D8 6D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801F7F68 00000044  7F C3 F3 78 */	mr r3, r30
 /* 801F7F6C 00000048  3C 80 80 39 */	lis r4, data_80397A34@ha

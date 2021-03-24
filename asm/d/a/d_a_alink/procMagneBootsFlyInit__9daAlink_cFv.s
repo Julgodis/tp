@@ -127,7 +127,7 @@ lbl_800E33F4:
 /* 800E33F8 00000004  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800E33FC 00000008  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800E3400 0000000C  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800E3404 00000010  C0 03 00 30 */	lfs f0, 0x30(r3)
+/* 800E3404 00000010  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8038E824 */
 /* 800E3408 00000014  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 800E340C 00000018  38 00 00 00 */	li r0, 0
 /* 800E3410 0000001C  B0 1F 30 0C */	sth r0, 0x300c(r31)

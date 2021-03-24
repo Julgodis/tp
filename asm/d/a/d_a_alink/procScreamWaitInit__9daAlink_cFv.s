@@ -17,10 +17,10 @@ lbl_800DBD50:
 /* 800DBD54 00000004  38 80 00 19 */	li r4, 0x19
 /* 800DBD58 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800DBD5C 0000000C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 800DBD60 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 800DBD60 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 800DBD64 00000014  3C A0 80 39 */	lis r5, m__19daAlinkHIO_basic_c0@ha
 /* 800DBD68 00000018  38 A5 D6 64 */	addi r5, r5, m__19daAlinkHIO_basic_c0@l
-/* 800DBD6C 0000001C  C0 45 00 18 */	lfs f2, 0x18(r5)
+/* 800DBD6C 0000001C  C0 45 00 18 */	lfs f2, 0x18(r5)	/* effective address: 8038D67C */
 /* 800DBD70 00000020  4B FD 12 71 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800DBD74 00000024  38 00 00 00 */	li r0, 0
 /* 800DBD78 00000028  B0 1F 30 0C */	sth r0, 0x300c(r31)

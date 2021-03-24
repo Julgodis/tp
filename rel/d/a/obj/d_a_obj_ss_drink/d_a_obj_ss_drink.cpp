@@ -31,6 +31,8 @@ struct daObj_SSDrink_c {
 	/* 80CE5B74 */ void getValue();
 	/* 80CE5B80 */ void restart();
 	/* 80CE5BF0 */ void initialize();
+	/* 80CE5DB0 */ void checkProcess(int (daObj_SSDrink_c::*)(void*));
+	/* 80CE5DDC */ void setProcess(int (daObj_SSDrink_c::*)(void*));
 	/* 80CE5EC8 */ void setParam();
 	/* 80CE5FE4 */ void setEnvTevColor();
 	/* 80CE6040 */ void setRoomNo();
@@ -109,8 +111,8 @@ extern "C" void getFlowNodeNum__15daObj_SSDrink_cFv(); // 1
 extern "C" void getValue__15daObj_SSDrink_cFv(); // 1
 extern "C" void restart__15daObj_SSDrink_cFv(); // 1
 extern "C" void initialize__15daObj_SSDrink_cFv(); // 1
-extern "C" static void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i(); // 1
-extern "C" static void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i(); // 1
+extern "C" void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i(); // 1
 extern "C" void setParam__15daObj_SSDrink_cFv(); // 1
 extern "C" void setEnvTevColor__15daObj_SSDrink_cFv(); // 1
 extern "C" void setRoomNo__15daObj_SSDrink_cFv(); // 1
@@ -392,7 +394,7 @@ asm void daObj_SSDrink_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i() {
+asm void daObj_SSDrink_c::checkProcess(int (daObj_SSDrink_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i.s"
 }
@@ -403,7 +405,7 @@ extern "C" asm static void checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPC
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i() {
+asm void daObj_SSDrink_c::setProcess(int (daObj_SSDrink_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i.s"
 }

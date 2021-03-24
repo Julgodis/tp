@@ -57,9 +57,9 @@ lbl_80345C3C:
 /* 80345C58 0000001C  1C 18 00 28 */	mulli r0, r24, 0x28
 /* 80345C5C 00000020  7F C4 98 10 */	subfc r30, r4, r19
 /* 80345C60 00000024  7F E3 A1 10 */	subfe r31, r3, r20
-/* 80345C64 00000028  3C 80 80 34 */	lis r4, SIBios__AlarmHandler@ha
+/* 80345C64 00000028  3C 80 80 34 */	lis r4, AlarmHandler@ha
 /* 80345C68 0000002C  7C 77 02 14 */	add r3, r23, r0
-/* 80345C6C 00000030  38 E4 5B 00 */	addi r7, r4, SIBios__AlarmHandler@l
+/* 80345C6C 00000030  38 E4 5B 00 */	addi r7, r4, AlarmHandler@l
 /* 80345C70 00000034  38 DE 00 00 */	addi r6, r30, 0
 /* 80345C74 00000038  38 BF 00 00 */	addi r5, r31, 0
 /* 80345C78 0000003C  38 63 00 80 */	addi r3, r3, 0x80

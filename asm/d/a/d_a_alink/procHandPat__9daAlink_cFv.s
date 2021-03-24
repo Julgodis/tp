@@ -25,7 +25,7 @@ lbl_8011CCA8:
 /* 8011CD04 0000005C  38 80 00 19 */	li r4, 0x19
 /* 8011CD08 00000060  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 8011CD0C 00000064  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 8011CD10 00000068  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 8011CD10 00000068  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 8011CD14 0000006C  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8011CD18 00000070  4B F9 02 C9 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8011CD1C 00000074  38 00 00 01 */	li r0, 1

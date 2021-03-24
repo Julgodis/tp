@@ -16,7 +16,7 @@ lbl_80027170:
 /* 800271A8 00000024  40 82 00 20 */	bne lbl_800271C8
 /* 800271AC 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800271B0 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800271B4 00000030  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800271B4 00000030  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800271B8 00000034  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800271BC 00000038  7D 89 03 A6 */	mtctr r12
 /* 800271C0 0000003C  4E 80 04 21 */	bctrl 

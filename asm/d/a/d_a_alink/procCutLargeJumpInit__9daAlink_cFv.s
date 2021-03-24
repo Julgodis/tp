@@ -28,9 +28,9 @@ lbl_800D63B0:
 /* 800D63D4 00000024  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800D63D8 00000028  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800D63DC 0000002C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800D63E0 00000030  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800D63E0 00000030  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800D63E4 00000034  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800D63E8 00000038  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800D63E8 00000038  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D63EC 0000003C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800D63F0 00000040  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800D63F4 00000044  D0 1F 33 98 */	stfs f0, 0x3398(r31)
@@ -45,8 +45,8 @@ lbl_800D63B0:
 /* 800D6418 00000068  38 E0 00 02 */	li r7, 2
 /* 800D641C 0000006C  3D 00 80 39 */	lis r8, m__17daAlinkHIO_cut_c0@ha
 /* 800D6420 00000070  39 08 DE 8C */	addi r8, r8, m__17daAlinkHIO_cut_c0@l
-/* 800D6424 00000074  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D6428 00000078  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D6424 00000074  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D6428 00000078  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D642C 0000007C  4B FF B2 5D */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 /* 800D6430 00000080  7F E3 FB 78 */	mr r3, r31
 /* 800D6434 00000084  38 80 00 12 */	li r4, 0x12

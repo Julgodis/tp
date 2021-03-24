@@ -36,8 +36,8 @@ lbl_8000BDB8:
 /* 8000BDC0 00000008  48 32 F4 D5 */	bl OSGetArenaLo
 /* 8000BDC4 0000000C  7C 63 F8 50 */	subf r3, r3, r31
 /* 8000BDC8 00000010  3B C3 FF 10 */	addi r30, r3, -240
-/* 8000BDCC 00000014  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BDD0 00000018  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BDCC 00000014  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BDD0 00000018  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BDD4 0000001C  38 63 02 55 */	addi r3, r3, 0x255
 /* 8000BDD8 00000020  7F C4 F3 78 */	mr r4, r30
 /* 8000BDDC 00000024  4B FF FF 19 */	bl my_PrintHeap__FPCcUl
@@ -50,8 +50,8 @@ lbl_8000BDF4:
 /* 8000BDF4 00000000  3C 9E FF 25 */	addis r4, r30, 0xff25
 /* 8000BDF8 00000004  38 04 32 D0 */	addi r0, r4, 0x32d0
 /* 8000BDFC 00000008  90 0D 81 F4 */	stw r0, sysHeapSize__Q29JFWSystem11CSetUpParam(r13)
-/* 8000BE00 0000000C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BE04 00000010  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BE00 0000000C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BE04 00000010  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BE08 00000014  38 63 02 5E */	addi r3, r3, 0x25e
 /* 8000BE0C 00000018  38 84 32 D0 */	addi r4, r4, 0x32d0
 /* 8000BE10 0000001C  4B FF FE E5 */	bl my_PrintHeap__FPCcUl
@@ -120,8 +120,8 @@ lbl_8000BED4:
 /* 8000BF00 0000002C  7F C4 F3 78 */	mr r4, r30
 /* 8000BF04 00000030  48 00 2E 85 */	bl mDoExt_createCommandHeap__FUlP7JKRHeap
 /* 8000BF08 00000034  7C 64 1B 78 */	mr r4, r3
-/* 8000BF0C 00000038  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BF10 0000003C  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BF0C 00000038  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BF10 0000003C  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BF14 00000040  38 63 02 6D */	addi r3, r3, 0x26d
 /* 8000BF18 00000044  38 A0 10 00 */	li r5, 0x1000
 /* 8000BF1C 00000048  4B FF FD DD */	bl my_SysPrintHeap__FPCcPvUl
@@ -130,8 +130,8 @@ lbl_8000BED4:
 /* 8000BF28 00000054  7F C4 F3 78 */	mr r4, r30
 /* 8000BF2C 00000058  48 00 2E 8D */	bl mDoExt_createArchiveHeap__FUlP7JKRHeap
 /* 8000BF30 0000005C  7C 64 1B 78 */	mr r4, r3
-/* 8000BF34 00000060  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BF38 00000064  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BF34 00000060  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BF38 00000064  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BF3C 00000068  38 63 02 7C */	addi r3, r3, 0x27c
 /* 8000BF40 0000006C  3C A0 00 8E */	lis r5, 0x008E /* 0x008DF400@ha */
 /* 8000BF44 00000070  38 A5 F4 00 */	addi r5, r5, 0xF400 /* 0x008DF400@l */
@@ -141,8 +141,8 @@ lbl_8000BED4:
 /* 8000BF54 00000080  7F C4 F3 78 */	mr r4, r30
 /* 8000BF58 00000084  48 00 2E A5 */	bl mDoExt_createJ2dHeap__FUlP7JKRHeap
 /* 8000BF5C 00000088  7C 64 1B 78 */	mr r4, r3
-/* 8000BF60 0000008C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BF64 00000090  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BF60 0000008C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BF64 00000090  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BF68 00000094  38 63 02 8D */	addi r3, r3, 0x28d
 /* 8000BF6C 00000098  3C A0 00 08 */	lis r5, 0x0008 /* 0x0007D000@ha */
 /* 8000BF70 0000009C  38 A5 D0 00 */	addi r5, r5, 0xD000 /* 0x0007D000@l */
@@ -152,8 +152,8 @@ lbl_8000BED4:
 /* 8000BF80 000000AC  7F C4 F3 78 */	mr r4, r30
 /* 8000BF84 000000B0  48 00 2D 99 */	bl mDoExt_createGameHeap__FUlP7JKRHeap
 /* 8000BF88 000000B4  7C 64 1B 78 */	mr r4, r3
-/* 8000BF8C 000000B8  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BF90 000000BC  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BF8C 000000B8  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BF90 000000BC  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BF94 000000C0  38 63 02 9C */	addi r3, r3, 0x29c
 /* 8000BF98 000000C4  3C A0 00 45 */	lis r5, 0x0045 /* 0x0044E000@ha */
 /* 8000BF9C 000000C8  38 A5 E0 00 */	addi r5, r5, 0xE000 /* 0x0044E000@l */
@@ -166,8 +166,8 @@ lbl_8000BED4:
 /* 8000BFB8 000000E4  7F E4 FB 78 */	mr r4, r31
 /* 8000BFBC 000000E8  48 00 2D 9D */	bl mDoExt_createZeldaHeap__FUlP7JKRHeap
 /* 8000BFC0 000000EC  7C 7F 1B 78 */	mr r31, r3
-/* 8000BFC4 000000F0  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000BFC8 000000F4  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000BFC4 000000F0  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000BFC8 000000F4  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000BFCC 000000F8  38 63 02 A9 */	addi r3, r3, 0x2a9
 /* 8000BFD0 000000FC  7F E4 FB 78 */	mr r4, r31
 /* 8000BFD4 00000100  7F C5 F3 78 */	mr r5, r30
@@ -197,8 +197,8 @@ lbl_8000C020:
 /* 8000C030 00000010  90 03 00 40 */	stw r0, 0x40(r3)
 /* 8000C034 00000014  38 00 00 2A */	li r0, 0x2a
 /* 8000C038 00000018  90 03 00 44 */	stw r0, 0x44(r3)
-/* 8000C03C 0000001C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
-/* 8000C040 00000020  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
+/* 8000C03C 0000001C  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 8000C040 00000020  38 63 3D E8 */	addi r3, r3, stringBase0@l
 /* 8000C044 00000024  38 63 02 B6 */	addi r3, r3, 0x2b6
 /* 8000C048 00000028  48 2D 7A C5 */	bl appendMapFile__12JUTExceptionFPCc
 /* 8000C04C 0000002C  3C 60 80 01 */	lis r3, myExceptionCallback__FUsP9OSContextUlUl@ha

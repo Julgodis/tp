@@ -45,9 +45,9 @@ lbl_801E4B70:
 /* 801E4BD8 00000068  38 A0 00 00 */	li r5, 0
 /* 801E4BDC 0000006C  38 C0 00 00 */	li r6, 0
 /* 801E4BE0 00000070  38 E0 00 00 */	li r7, 0
-/* 801E4BE4 00000074  C0 22 A9 30 */	lfs f1, d_menu_d_menu_option__lit_4069(r2)
+/* 801E4BE4 00000074  C0 22 A9 30 */	lfs f1, lit_4069(r2)
 /* 801E4BE8 00000078  FC 40 08 90 */	fmr f2, f1
-/* 801E4BEC 0000007C  C0 62 A9 54 */	lfs f3, d_menu_d_menu_option__lit_4472(r2)
+/* 801E4BEC 0000007C  C0 62 A9 54 */	lfs f3, lit_4472(r2)
 /* 801E4BF0 00000080  FC 80 18 90 */	fmr f4, f3
 /* 801E4BF4 00000084  39 00 00 00 */	li r8, 0
 /* 801E4BF8 00000088  48 0C 6D 8D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

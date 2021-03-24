@@ -20,8 +20,8 @@ lbl_80297C40:
 /* 80297C88 00000048  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 80297C8C 0000004C  3C 80 80 29 */	lis r4, func_802978DC@ha
 /* 80297C90 00000050  38 84 78 DC */	addi r4, r4, func_802978DC@l
-/* 80297C94 00000054  3C A0 80 43 */	lis r5, JASBank__lit_156@ha
-/* 80297C98 00000058  38 A5 1B 48 */	addi r5, r5, JASBank__lit_156@l
+/* 80297C94 00000054  3C A0 80 43 */	lis r5, lit_156@ha
+/* 80297C98 00000058  38 A5 1B 48 */	addi r5, r5, lit_156@l
 /* 80297C9C 0000005C  48 0C 9F 89 */	bl __register_global_object
 /* 80297CA0 00000060  38 00 00 01 */	li r0, 1
 /* 80297CA4 00000064  98 0D 8C E2 */	stb r0, struct_80451260+0x2(r13)
@@ -53,7 +53,7 @@ lbl_80297CF8:
 /* 80297D00 00000008  38 00 00 02 */	li r0, 2
 /* 80297D04 0000000C  90 19 00 DC */	stw r0, 0xdc(r25)
 /* 80297D08 00000010  48 00 4C E1 */	bl getDacRate__9JASDriverFv
-/* 80297D0C 00000014  C0 02 BC 3C */	lfs f0, JASBank__lit_290(r2)
+/* 80297D0C 00000014  C0 02 BC 3C */	lfs f0, lit_290(r2)
 /* 80297D10 00000018  EC 00 08 24 */	fdivs f0, f0, f1
 /* 80297D14 0000001C  D0 19 00 BC */	stfs f0, 0xbc(r25)
 /* 80297D18 00000020  88 79 00 E1 */	lbz r3, 0xe1(r25)

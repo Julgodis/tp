@@ -54,7 +54,7 @@ lbl_800D9514:
 /* 800D95E4 000000D0  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D95E8 000000D4  3C 80 80 39 */	lis r4, m__23daAlinkHIO_damNormal_c0@ha
 /* 800D95EC 000000D8  38 84 E2 4C */	addi r4, r4, m__23daAlinkHIO_damNormal_c0@l
-/* 800D95F0 000000DC  C0 44 00 5C */	lfs f2, 0x5c(r4)
+/* 800D95F0 000000DC  C0 44 00 5C */	lfs f2, 0x5c(r4)	/* effective address: 8038E2A8 */
 /* 800D95F4 000000E0  48 19 71 4D */	bl cLib_chaseF__FPfff
 /* 800D95F8 000000E4  80 1E 05 74 */	lwz r0, 0x574(r30)
 /* 800D95FC 000000E8  54 00 00 43 */	rlwinm. r0, r0, 0, 1, 1

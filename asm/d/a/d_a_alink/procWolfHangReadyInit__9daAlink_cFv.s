@@ -10,10 +10,10 @@ lbl_801355EC:
 /* 8013560C 00000020  38 80 00 10 */	li r4, 0x10
 /* 80135610 00000024  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 80135614 00000028  38 C5 F1 A0 */	addi r6, r5, m__24daAlinkHIO_wlWallHang_c0@l
-/* 80135618 0000002C  C0 26 00 04 */	lfs f1, 4(r6)
-/* 8013561C 00000030  C0 46 00 08 */	lfs f2, 8(r6)
+/* 80135618 0000002C  C0 26 00 04 */	lfs f1, 4(r6)	/* effective address: 8038F1A4 */
+/* 8013561C 00000030  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8038F1A8 */
 /* 80135620 00000034  38 A0 00 0C */	li r5, 0xc
-/* 80135624 00000038  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 80135624 00000038  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038F1AC */
 /* 80135628 0000003C  4B FF 40 DD */	bl setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf
 /* 8013562C 00000040  88 1F 2F 91 */	lbz r0, 0x2f91(r31)
 /* 80135630 00000044  90 1F 31 98 */	stw r0, 0x3198(r31)

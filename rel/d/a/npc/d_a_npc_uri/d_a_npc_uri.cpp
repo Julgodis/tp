@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80B2BE90 */ ~cXyz();
-	/* 80B2C568 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B2C56C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80B2BE90 */ ~cXyz();
+	/* 80B2C568 */ cXyz();
 };
 
 struct daNpc_Uri_c {
@@ -67,6 +67,8 @@ struct daNpc_Uri_c {
 	/* 80B285EC */ void changeBck(int*, int*);
 	/* 80B28618 */ void changeBtp(int*, int*);
 	/* 80B28644 */ void selectAction();
+	/* 80B28794 */ void chkAction(int (daNpc_Uri_c::*)(void*));
+	/* 80B287C0 */ void setAction(int (daNpc_Uri_c::*)(void*));
 	/* 80B28868 */ void chkPlayerCarryBasket();
 	/* 80B288DC */ void chkPlayerGetWoodShield();
 	/* 80B28910 */ void getTutorialCond(cXyz);
@@ -242,8 +244,8 @@ extern "C" void afterSetMotionAnm__11daNpc_Uri_cFiifi(); // 1
 extern "C" void changeBck__11daNpc_Uri_cFPiPi(); // 1
 extern "C" void changeBtp__11daNpc_Uri_cFPiPi(); // 1
 extern "C" void selectAction__11daNpc_Uri_cFv(); // 1
-extern "C" static void chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i(); // 1
 extern "C" void chkPlayerCarryBasket__11daNpc_Uri_cFv(); // 1
 extern "C" void chkPlayerGetWoodShield__11daNpc_Uri_cFv(); // 1
 extern "C" void getTutorialCond__11daNpc_Uri_cF4cXyz(); // 1
@@ -881,7 +883,7 @@ asm void daNpc_Uri_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i() {
+asm void daNpc_Uri_c::chkAction(int (daNpc_Uri_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_uri/d_a_npc_uri/chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i.s"
 }
@@ -892,7 +894,7 @@ extern "C" asm static void chkAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i() {
+asm void daNpc_Uri_c::setAction(int (daNpc_Uri_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_uri/d_a_npc_uri/setAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i.s"
 }

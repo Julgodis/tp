@@ -23,7 +23,7 @@ lbl_8012F550:
 /* 8012F550 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 8012F554 00000004  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlWallHang_c0@ha
 /* 8012F558 00000008  38 63 F1 A0 */	addi r3, r3, m__24daAlinkHIO_wlWallHang_c0@l
-/* 8012F55C 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 8012F55C 0000000C  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038F214 */
 /* 8012F560 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8012F564 00000000  40 81 00 B4 */	ble lbl_8012F618
 /* 8012F568 00000004  C0 1E 34 78 */	lfs f0, 0x3478(r30)

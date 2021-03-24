@@ -38,11 +38,11 @@ lbl_803159D0:
 /* 80315A2C 0000005C  3C 60 80 3A */	lis r3, j3dDefaultNBTScaleInfo@ha
 /* 80315A30 00000060  8C 03 1F E8 */	lbzu r0, j3dDefaultNBTScaleInfo@l(r3)
 /* 80315A34 00000064  98 1E 00 5C */	stb r0, 0x5c(r30)
-/* 80315A38 00000068  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80315A38 00000068  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803A0004 */
 /* 80315A3C 0000006C  D0 1E 00 60 */	stfs f0, 0x60(r30)
-/* 80315A40 00000070  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80315A40 00000070  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803A0008 */
 /* 80315A44 00000074  D0 1E 00 64 */	stfs f0, 0x64(r30)
-/* 80315A48 00000078  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 80315A48 00000078  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803A000C */
 /* 80315A4C 0000007C  D0 1E 00 68 */	stfs f0, 0x68(r30)
 /* 80315A50 00000080  7F C3 F3 78 */	mr r3, r30
 /* 80315A54 00000084  48 00 1C 21 */	bl initialize__15J3DTexGenBlock4Fv
@@ -76,11 +76,11 @@ lbl_80315A60:
 /* 80315ABC 0000005C  3C 60 80 3A */	lis r3, j3dDefaultNBTScaleInfo@ha
 /* 80315AC0 00000060  8C 03 1F E8 */	lbzu r0, j3dDefaultNBTScaleInfo@l(r3)
 /* 80315AC4 00000064  98 1F 00 5C */	stb r0, 0x5c(r31)
-/* 80315AC8 00000068  C0 03 00 04 */	lfs f0, 4(r3)
+/* 80315AC8 00000068  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803A0004 */
 /* 80315ACC 0000006C  D0 1F 00 60 */	stfs f0, 0x60(r31)
-/* 80315AD0 00000070  C0 03 00 08 */	lfs f0, 8(r3)
+/* 80315AD0 00000070  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803A0008 */
 /* 80315AD4 00000074  D0 1F 00 64 */	stfs f0, 0x64(r31)
-/* 80315AD8 00000078  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 80315AD8 00000078  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803A000C */
 /* 80315ADC 0000007C  D0 1F 00 68 */	stfs f0, 0x68(r31)
 /* 80315AE0 00000080  7F E3 FB 78 */	mr r3, r31
 /* 80315AE4 00000084  48 00 1B C1 */	bl initialize__19J3DTexGenBlockBasicFv

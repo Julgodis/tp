@@ -19,9 +19,9 @@ lbl_8011C9FC:
 /* 8011CA10 00000014  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 8011CA14 00000018  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 8011CA18 0000001C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8011CA1C 00000020  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8011CA1C 00000020  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8011CA20 00000024  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8011CA24 00000028  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011CA24 00000028  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8011CA28 0000002C  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 8011CA2C 00000030  38 00 00 0C */	li r0, 0xc
 /* 8011CA30 00000034  98 1F 2F 99 */	stb r0, 0x2f99(r31)

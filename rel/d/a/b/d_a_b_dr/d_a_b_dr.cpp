@@ -16,10 +16,10 @@ struct daB_DR_HIO_c {
 	/* 805C6B94 */ ~daB_DR_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_DR_c {

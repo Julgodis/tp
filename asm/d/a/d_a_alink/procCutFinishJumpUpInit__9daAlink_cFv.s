@@ -7,8 +7,8 @@ lbl_800D3ADC:
 /* 800D3AF0 00000000  39 61 00 20 */	addi r11, r1, 0x20
 /* 800D3AF4 00000004  48 28 E6 E9 */	bl _savegpr_29
 /* 800D3AF8 00000008  7C 7E 1B 78 */	mr r30, r3
-/* 800D3AFC 0000000C  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800D3B00 00000010  3B E4 D6 58 */	addi r31, r4, d_a_d_a_alink__lit_3757@l
+/* 800D3AFC 0000000C  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800D3B00 00000010  3B E4 D6 58 */	addi r31, r4, lit_3757@l
 /* 800D3B04 00000014  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)
 /* 800D3B08 00000018  20 00 00 11 */	subfic r0, r0, 0x11
 /* 800D3B0C 0000001C  7C 00 00 34 */	cntlzw r0, r0
@@ -54,7 +54,7 @@ lbl_800D3B94:
 /* 800D3BA4 00000010  2C 03 00 00 */	cmpwi r3, 0
 /* 800D3BA8 00000014  41 82 00 14 */	beq lbl_800D3BBC
 /* 800D3BAC 00000018  C0 3E 04 FC */	lfs f1, 0x4fc(r30)
-/* 800D3BB0 0000001C  C0 02 93 2C */	lfs f0, d_a_d_a_alink__lit_7624(r2)
+/* 800D3BB0 0000001C  C0 02 93 2C */	lfs f0, lit_7624(r2)
 /* 800D3BB4 00000020  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800D3BB8 00000024  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 lbl_800D3BBC:
@@ -90,7 +90,7 @@ lbl_800D3BF8:
 /* 800D3C24 0000002C  39 00 00 03 */	li r8, 3
 /* 800D3C28 00000030  39 3F 04 94 */	addi r9, r31, 0x494
 /* 800D3C2C 00000034  C0 29 00 4C */	lfs f1, 0x4c(r9)
-/* 800D3C30 00000038  C0 42 93 30 */	lfs f2, d_a_d_a_alink__lit_7625(r2)
+/* 800D3C30 00000038  C0 42 93 30 */	lfs f2, lit_7625(r2)
 /* 800D3C34 0000003C  4B FF D9 0D */	bl setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff
 /* 800D3C38 00000040  3C 60 00 02 */	lis r3, 0x0002 /* 0x00020003@ha */
 /* 800D3C3C 00000044  38 03 00 03 */	addi r0, r3, 0x0003 /* 0x00020003@l */
@@ -113,9 +113,9 @@ lbl_800D3BF8:
 /* 800D3C80 00000088  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800D3C84 0000008C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D3C88 00000090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D3C8C 00000094  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800D3C8C 00000094  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D3C90 00000098  60 00 80 00 */	ori r0, r0, 0x8000
-/* 800D3C94 0000009C  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800D3C94 0000009C  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800D3C98 000000A0  7F C3 F3 78 */	mr r3, r30
 /* 800D3C9C 000000A4  48 05 04 A9 */	bl setCutWaterDropEffect__9daAlink_cFv
 /* 800D3CA0 000000A8  38 00 00 01 */	li r0, 1

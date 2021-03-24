@@ -8,9 +8,9 @@ lbl_801FA244:
 /* 801FA25C 00000018  98 83 01 44 */	stb r4, 0x144(r3)
 /* 801FA260 0000001C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801FA264 00000020  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 801FA268 00000024  88 03 00 B9 */	lbz r0, 0xb9(r3)
-/* 801FA26C 00000028  98 03 00 BA */	stb r0, 0xba(r3)
-/* 801FA270 0000002C  98 83 00 B9 */	stb r4, 0xb9(r3)
+/* 801FA268 00000024  88 03 00 B9 */	lbz r0, 0xb9(r3)	/* effective address: 80430241 */
+/* 801FA26C 00000028  98 03 00 BA */	stb r0, 0xba(r3)	/* effective address: 80430242 */
+/* 801FA270 0000002C  98 83 00 B9 */	stb r4, 0xb9(r3)	/* effective address: 80430241 */
 /* 801FA274 00000030  38 00 00 5B */	li r0, 0x5b
 /* 801FA278 00000034  90 01 00 08 */	stw r0, 8(r1)
 /* 801FA27C 00000038  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)

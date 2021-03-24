@@ -30,9 +30,9 @@ lbl_800DC4B8:
 /* 800DC4E0 00000028  38 A0 00 00 */	li r5, 0
 /* 800DC4E4 0000002C  38 C0 00 00 */	li r6, 0
 /* 800DC4E8 00000030  38 E0 00 00 */	li r7, 0
-/* 800DC4EC 00000034  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800DC4EC 00000034  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800DC4F0 00000038  FC 40 08 90 */	fmr f2, f1
-/* 800DC4F4 0000003C  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800DC4F4 0000003C  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800DC4F8 00000040  FC 80 18 90 */	fmr f4, f3
 /* 800DC4FC 00000044  39 00 00 00 */	li r8, 0
 /* 800DC500 00000048  48 1C F4 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

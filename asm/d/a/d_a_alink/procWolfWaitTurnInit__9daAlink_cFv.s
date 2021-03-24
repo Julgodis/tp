@@ -18,16 +18,16 @@ lbl_8012DD34:
 /* 8012DD44 00000010  41 82 00 14 */	beq lbl_8012DD58
 /* 8012DD48 00000014  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012DD4C 00000018  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
-/* 8012DD50 0000001C  C0 25 00 74 */	lfs f1, 0x74(r5)
+/* 8012DD50 0000001C  C0 25 00 74 */	lfs f1, 0x74(r5)	/* effective address: 8038EE9C */
 /* 8012DD54 00000020  48 00 00 10 */	b lbl_8012DD64
 lbl_8012DD58:
 /* 8012DD58 00000000  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8012DD5C 00000004  38 A5 EF 28 */	addi r5, r5, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8012DD60 00000008  C0 25 00 18 */	lfs f1, 0x18(r5)
+/* 8012DD60 00000008  C0 25 00 18 */	lfs f1, 0x18(r5)	/* effective address: 8038EF40 */
 lbl_8012DD64:
 /* 8012DD64 00000000  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012DD68 00000004  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
-/* 8012DD6C 00000008  C0 45 00 94 */	lfs f2, 0x94(r5)
+/* 8012DD6C 00000008  C0 45 00 94 */	lfs f2, 0x94(r5)	/* effective address: 8038EEBC */
 /* 8012DD70 0000000C  4B FF B9 69 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8012DD74 00000010  7F E3 FB 78 */	mr r3, r31
 /* 8012DD78 00000014  4B FE 7E A9 */	bl checkEventRun__9daAlink_cCFv

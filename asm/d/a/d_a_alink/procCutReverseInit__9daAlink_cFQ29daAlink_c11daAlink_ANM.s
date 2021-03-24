@@ -42,12 +42,12 @@ lbl_800D40CC:
 /* 800D40FC 00000030  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800D4100 00000034  3C 60 80 39 */	lis r3, m__19daAlinkHIO_guard_c0@ha
 /* 800D4104 00000038  38 63 DF 9C */	addi r3, r3, m__19daAlinkHIO_guard_c0@l
-/* 800D4108 0000003C  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800D4108 0000003C  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038DFD4 */
 /* 800D410C 00000040  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800D4110 00000044  38 00 00 02 */	li r0, 2
 /* 800D4114 00000048  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 /* 800D4118 0000004C  7F E3 FB 78 */	mr r3, r31
-/* 800D411C 00000050  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800D411C 00000050  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800D4120 00000054  48 00 8E E9 */	bl setUpperGuardAnime__9daAlink_cFf
 /* 800D4124 00000058  48 00 00 3C */	b lbl_800D4160
 lbl_800D4128:
@@ -61,14 +61,14 @@ lbl_800D4128:
 /* 800D4144 0000001C  B0 1F 30 0C */	sth r0, 0x300c(r31)
 /* 800D4148 00000020  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D414C 00000024  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D4150 00000028  C0 03 00 38 */	lfs f0, 0x38(r3)
+/* 800D4150 00000028  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8038DEC4 */
 /* 800D4154 0000002C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 800D4158 00000030  38 00 00 04 */	li r0, 4
 /* 800D415C 00000034  98 1F 2F 98 */	stb r0, 0x2f98(r31)
 lbl_800D4160:
 /* 800D4160 00000000  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D4164 00000004  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D4168 00000008  C0 03 00 64 */	lfs f0, 0x64(r3)
+/* 800D4168 00000008  C0 03 00 64 */	lfs f0, 0x64(r3)	/* effective address: 8038DEF0 */
 /* 800D416C 0000000C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 800D4170 00000010  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 800D4174 00000014  3C 63 00 01 */	addis r3, r3, 1
@@ -92,7 +92,7 @@ lbl_800D41B0:
 lbl_800D41B4:
 /* 800D41B4 00000000  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800D41B8 00000004  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800D41BC 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800D41BC 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800D41C0 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800D41C4 00000010  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800D41C8 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

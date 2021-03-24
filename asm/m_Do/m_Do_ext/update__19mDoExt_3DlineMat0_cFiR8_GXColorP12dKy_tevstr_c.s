@@ -32,7 +32,7 @@ lbl_80012EA8:
 lbl_80012EAC:
 /* 80012EAC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80012EB0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80012EB4 00000008  83 E3 61 B0 */	lwz r31, 0x61b0(r3)
+/* 80012EB4 00000008  83 E3 61 B0 */	lwz r31, 0x61b0(r3)	/* effective address: 8040C370 */
 /* 80012EB8 0000000C  83 D2 00 18 */	lwz r30, 0x18(r18)
 /* 80012EBC 00000010  A0 12 00 14 */	lhz r0, 0x14(r18)
 /* 80012EC0 00000014  54 00 08 3C */	slwi r0, r0, 1

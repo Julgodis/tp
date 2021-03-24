@@ -25,12 +25,12 @@ lbl_8020CB04:
 /* 8020CB10 0000000C  3B DE 00 04 */	addi r30, r30, 4
 /* 8020CB14 00000010  41 80 FF CC */	blt lbl_8020CAE0
 /* 8020CB18 00000014  80 7F 00 10 */	lwz r3, 0x10(r31)
-/* 8020CB1C 00000018  C0 22 AE 00 */	lfs f1, d_meter_d_meter_hakusha__lit_3793(r2)
+/* 8020CB1C 00000018  C0 22 AE 00 */	lfs f1, lit_3793(r2)
 /* 8020CB20 0000001C  FC 40 08 90 */	fmr f2, f1
 /* 8020CB24 00000020  48 04 7A 8D */	bl paneTrans__8CPaneMgrFff
 /* 8020CB28 00000024  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 8020CB2C 00000028  80 63 00 04 */	lwz r3, 4(r3)
-/* 8020CB30 0000002C  C0 02 AE 08 */	lfs f0, d_meter_d_meter_hakusha__lit_3936(r2)
+/* 8020CB30 0000002C  C0 02 AE 08 */	lfs f0, lit_3936(r2)
 /* 8020CB34 00000030  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8020CB38 00000034  D0 03 00 D0 */	stfs f0, 0xd0(r3)
 /* 8020CB3C 00000038  81 83 00 00 */	lwz r12, 0(r3)

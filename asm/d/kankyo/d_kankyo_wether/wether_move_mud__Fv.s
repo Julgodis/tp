@@ -6,7 +6,7 @@ lbl_80059E38:
 /* 80059E48 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 80059E4C 00000014  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80059E50 00000018  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80059E54 0000001C  88 1F 10 44 */	lbz r0, 0x1044(r31)
+/* 80059E54 0000001C  88 1F 10 44 */	lbz r0, 0x1044(r31)	/* effective address: 8042DA98 */
 /* 80059E58 00000020  2C 00 00 01 */	cmpwi r0, 1
 /* 80059E5C 00000024  41 82 00 AC */	beq lbl_80059F08
 /* 80059E60 00000028  40 80 00 FC */	bge lbl_80059F5C
@@ -44,7 +44,7 @@ lbl_80059E70:
 lbl_80059EDC:
 /* 80059EDC 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80059EE0 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80059EE4 00000008  93 C3 10 4C */	stw r30, 0x104c(r3)
+/* 80059EE4 00000008  93 C3 10 4C */	stw r30, 0x104c(r3)	/* effective address: 8042DAA0 */
 /* 80059EE8 0000000C  28 1E 00 00 */	cmplwi r30, 0
 /* 80059EEC 00000010  41 82 00 70 */	beq lbl_80059F5C
 /* 80059EF0 00000014  48 01 28 A1 */	bl dKyr_mud_init__Fv
@@ -57,7 +57,7 @@ lbl_80059F08:
 /* 80059F08 00000000  48 01 29 55 */	bl dKyr_mud_move__Fv
 /* 80059F0C 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80059F10 00000008  3B C3 CA 54 */	addi r30, r3, g_env_light@l
-/* 80059F14 0000000C  80 1E 10 48 */	lwz r0, 0x1048(r30)
+/* 80059F14 0000000C  80 1E 10 48 */	lwz r0, 0x1048(r30)	/* effective address: 8042DA9C */
 /* 80059F18 00000010  2C 00 00 00 */	cmpwi r0, 0
 /* 80059F1C 00000014  40 82 00 40 */	bne lbl_80059F5C
 /* 80059F20 00000018  80 7E 10 4C */	lwz r3, 0x104c(r30)

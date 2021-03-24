@@ -19,10 +19,10 @@ struct daE_DK_HIO_c {
 struct cBgD_Vtx_t {
 };
 
-struct dBgS_SphChk {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct dBgS_SphChk {
 };
 
 struct daE_DK_c {

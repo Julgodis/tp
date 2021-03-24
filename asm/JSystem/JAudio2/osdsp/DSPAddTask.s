@@ -8,8 +8,8 @@ lbl_8029EA00:
 /* 8029EA18 00000018  80 0D 8D 8C */	lwz r0, DSP_prior_task(r13)
 /* 8029EA1C 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8029EA20 00000020  40 82 00 1C */	bne lbl_8029EA3C
-/* 8029EA24 00000024  3C 60 80 3A */	lis r3, osdsp__lit_81@ha
-/* 8029EA28 00000028  38 63 B8 B8 */	addi r3, r3, osdsp__lit_81@l
+/* 8029EA24 00000024  3C 60 80 3A */	lis r3, lit_81@ha
+/* 8029EA28 00000028  38 63 B8 B8 */	addi r3, r3, lit_81@l
 /* 8029EA2C 0000002C  4C C6 31 82 */	crclr 6
 /* 8029EA30 00000030  4B D6 80 8D */	bl OSReport
 /* 8029EA34 00000034  38 60 00 00 */	li r3, 0

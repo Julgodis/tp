@@ -204,7 +204,7 @@ asm void fopMsgM_Delete(void* param_0) {
 
 /* ############################################################################################## */
 /* 80451C70-80451C74 0004+00 s=6 e=0 z=0  None .sdata2    @3902                                                        */
-SECTION_SDATA2 static u8 f_op_f_op_msg_mng__lit_3902[4] = {
+SECTION_SDATA2 static u8 lit_3902[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -339,7 +339,7 @@ asm void J2DPane::setAlpha(u8 param_0) {
 
 /* ############################################################################################## */
 /* 803A3970-803A3990 001C+04 s=1 e=0 z=0  None .data      @4305                                                        */
-SECTION_DATA static void* f_op_f_op_msg_mng__lit_4305[7 + 1 /* padding */] = {
+SECTION_DATA static void* lit_4305[7 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x88),
 	/* 1    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x90),
 	/* 2    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xB4),
@@ -352,22 +352,22 @@ SECTION_DATA static void* f_op_f_op_msg_mng__lit_4305[7 + 1 /* padding */] = {
 };
 
 /* 80451C74-80451C78 0004+00 s=1 e=0 z=0  None .sdata2    @4167                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_msg_mng__lit_4167 = 0.5f;
+SECTION_SDATA2 static f32 lit_4167 = 0.5f;
 
 /* 80451C78-80451C7C 0004+00 s=1 e=0 z=0  None .sdata2    @4298                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_msg_mng__lit_4298 = 1.0f;
+SECTION_SDATA2 static f32 lit_4298 = 1.0f;
 
 /* 80451C7C-80451C80 0004+00 s=1 e=0 z=0  None .sdata2    @4299                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_msg_mng__lit_4299 = 2.0f;
+SECTION_SDATA2 static f32 lit_4299 = 2.0f;
 
 /* 80451C80-80451C84 0004+00 s=1 e=0 z=0  None .sdata2    @4300                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_msg_mng__lit_4300 = 32768.0f;
+SECTION_SDATA2 static f32 lit_4300 = 32768.0f;
 
 /* 80451C84-80451C88 0004+00 s=1 e=0 z=0  None .sdata2    @4301                                                        */
-SECTION_SDATA2 static f32 f_op_f_op_msg_mng__lit_4301 = 65535.0f;
+SECTION_SDATA2 static f32 lit_4301 = 65535.0f;
 
 /* 80451C88-80451C90 0008+00 s=1 e=0 z=0  None .sdata2    @4303                                                        */
-SECTION_SDATA2 static f64 f_op_f_op_msg_mng__lit_4303 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4303 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80020160-800202CC 016C+00 s=1 e=4 z=0  None .text      fopMsgM_valueIncrease__FiiUc                                 */
 #pragma push

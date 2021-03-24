@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+struct JPAEmitterWorkData {
 };
 
-struct JPAEmitterWorkData {
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 struct JPABaseParticle {

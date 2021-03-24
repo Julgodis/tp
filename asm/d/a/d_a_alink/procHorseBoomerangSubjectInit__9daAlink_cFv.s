@@ -20,9 +20,9 @@ lbl_800F2480:
 /* 800F2498 00000018  4B FE DF 39 */	bl initBoomerangUpperAnimeSpeed__9daAlink_cFi
 /* 800F249C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F24A0 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F24A4 00000024  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800F24A4 00000024  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F24A8 00000028  64 00 00 08 */	oris r0, r0, 8
-/* 800F24AC 0000002C  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800F24AC 0000002C  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F24B0 00000030  38 60 00 01 */	li r3, 1
 lbl_800F24B4:
 /* 800F24B4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

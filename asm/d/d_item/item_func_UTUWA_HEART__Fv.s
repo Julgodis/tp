@@ -4,12 +4,12 @@ lbl_800982B4:
 /* 800982BC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800982C0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800982C4 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 800982C8 00000014  A8 64 5D CA */	lha r3, 0x5dca(r4)
+/* 800982C8 00000014  A8 64 5D CA */	lha r3, 0x5dca(r4)	/* effective address: 8040BF8A */
 /* 800982CC 00000018  38 03 00 05 */	addi r0, r3, 5
-/* 800982D0 0000001C  B0 04 5D CA */	sth r0, 0x5dca(r4)
+/* 800982D0 0000001C  B0 04 5D CA */	sth r0, 0x5dca(r4)	/* effective address: 8040BF8A */
 /* 800982D4 00000020  4B F9 59 D5 */	bl dComIfGs_getMaxLifeGauge__Fv
 /* 800982D8 00000024  54 60 04 3E */	clrlwi r0, r3, 0x10
-/* 800982DC 00000028  C8 22 91 E0 */	lfd f1, d_d_item__lit_3828(r2)
+/* 800982DC 00000028  C8 22 91 E0 */	lfd f1, lit_3828(r2)
 /* 800982E0 0000002C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 800982E4 00000030  3C 00 43 30 */	lis r0, 0x4330
 /* 800982E8 00000034  90 01 00 08 */	stw r0, 8(r1)
@@ -17,12 +17,12 @@ lbl_800982B4:
 /* 800982F0 0000003C  EC 20 08 28 */	fsubs f1, f0, f1
 /* 800982F4 00000040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800982F8 00000044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800982FC 00000048  C0 03 5D C0 */	lfs f0, 0x5dc0(r3)
+/* 800982FC 00000048  C0 03 5D C0 */	lfs f0, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 80098300 0000004C  EC 00 08 2A */	fadds f0, f0, f1
-/* 80098304 00000050  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)
+/* 80098304 00000050  D0 03 5D C0 */	stfs f0, 0x5dc0(r3)	/* effective address: 8040BF80 */
 /* 80098308 00000054  38 00 00 00 */	li r0, 0
-/* 8009830C 00000058  98 03 5E B6 */	stb r0, 0x5eb6(r3)
-/* 80098310 0000005C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 8009830C 00000058  98 03 5E B6 */	stb r0, 0x5eb6(r3)	/* effective address: 8040C076 */
+/* 80098310 0000005C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 80098314 00000060  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 80098318 00000064  7D 89 03 A6 */	mtctr r12
 /* 8009831C 00000068  4E 80 04 21 */	bctrl 

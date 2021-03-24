@@ -283,11 +283,11 @@ extern "C" void __sinit_d_s_play_cpp(); // 1
 extern "C" void __dt__17dScnPly_env_HIO_cFv(); // 1
 extern "C" void __dt__17dScnPly_reg_HIO_cFv(); // 1
 extern "C" void __dt__21dScnPly_preLoad_HIO_cFv(); // 1
-extern "C" extern char const* const d_s_d_s_play__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_PLAY_SCENE[10];
 extern "C" extern void* g_profile_OPENING_SCENE[10];
-extern "C" extern u8 d_s_d_s_play__lit_4049[12];
-extern "C" extern u8 d_s_d_s_play__lit_4050[12];
+extern "C" extern u8 lit_4049[12];
+extern "C" extern u8 lit_4050[12];
 extern "C" extern u8 g_envHIO[68];
 extern "C" extern u8 struct_80451124[4];
 
@@ -615,7 +615,7 @@ SECTION_SDATA2 static u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */] = {
 };
 
 /* 80454F1C-80454F20 0004+00 s=1 e=0 z=0  None .sdata2    @4055                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4055 = 255.0f;
+SECTION_SDATA2 static f32 lit_4055 = 255.0f;
 
 /* 80259440-80259468 0028+00 s=1 e=0 z=0  None .text      __ct__22dScnPly_env_otherHIO_cFv                             */
 #pragma push
@@ -630,13 +630,13 @@ asm dScnPly_env_otherHIO_c::dScnPly_env_otherHIO_c() {
 
 /* ############################################################################################## */
 /* 80454F20-80454F24 0004+00 s=1 e=0 z=0  None .sdata2    @4066                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4066 = -100.0f;
+SECTION_SDATA2 static f32 lit_4066 = -100.0f;
 
 /* 80454F24-80454F28 0004+00 s=1 e=0 z=0  None .sdata2    @4067                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4067 = 100.0f;
+SECTION_SDATA2 static f32 lit_4067 = 100.0f;
 
 /* 80454F28-80454F2C 0004+00 s=2 e=0 z=0  None .sdata2    @4068                                                        */
-SECTION_SDATA2 static u8 d_s_d_s_play__lit_4068[4] = {
+SECTION_SDATA2 static u8 lit_4068[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -653,7 +653,7 @@ asm dScnPly_env_debugHIO_c::dScnPly_env_debugHIO_c() {
 
 /* ############################################################################################## */
 /* 80454F2C-80454F30 0004+00 s=1 e=0 z=0  None .sdata2    @4100                                                        */
-SECTION_SDATA2 static u32 d_s_d_s_play__lit_4100 = 0x2A1E46FF;
+SECTION_SDATA2 static u32 lit_4100 = 0x2A1E46FF;
 
 /* 802594AC-802597B8 030C+00 s=1 e=0 z=0  None .text      dScnPly_Draw__FP9dScnPly_c                                   */
 #pragma push
@@ -697,7 +697,7 @@ extern "C" u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */];
 
 /* 8039A2C8-8039A2D8 0010+00 s=4 e=0 z=0  None .rodata    PreLoadInfoT                                                 */
 SECTION_RODATA static void* const PreLoadInfoT[4] = {
-	/* 0    */ (void*)(((char*)&d_s_d_s_play__stringBase0)+0x7),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x7),
 	/* 1    */ (void*)&T_JOINT_dylKeyTbl,
 	/* 2    */ (void*)&T_JOINT_resName,
 	/* 3    */ (void*)0x01010000,
@@ -730,7 +730,7 @@ SECTION_DEAD static char const* const pad_8039A381 = "\0\0\0\0\0\0";
 #pragma pop
 
 /* 80450760-80450764 0004+00 s=1 e=0 z=0  None .sdata     T_JOINT_resName                                              */
-SECTION_SDATA static void* T_JOINT_resName = (void*)&d_s_d_s_play__stringBase0;
+SECTION_SDATA static void* T_JOINT_resName = (void*)&stringBase0;
 
 /* 80450764-80450768 0004+00 s=4 e=0 z=0  None .sdata     None                                                         */
 SECTION_SDATA static u8 struct_80450764[4] = {
@@ -852,25 +852,25 @@ asm static void phase_3(dScnPly_c* param_0) {
 
 /* ############################################################################################## */
 /* 80430778-80430784 000C+00 s=1 e=0 z=0  None .bss       @4041                                                        */
-static u8 d_s_d_s_play__lit_4041[12];
+static u8 lit_4041[12];
 
 /* 80430784-80430790 000C+00 s=0 e=0 z=0  None .bss       @4049                                                        */
-u8 d_s_d_s_play__lit_4049[12];
+u8 lit_4049[12];
 
 /* 80430790-8043079C 000C+00 s=0 e=0 z=0  None .bss       @4050                                                        */
-u8 d_s_d_s_play__lit_4050[12];
+u8 lit_4050[12];
 
 /* 8043079C-804307E0 0044+00 s=1 e=3 z=0  None .bss       g_envHIO                                                     */
 u8 g_envHIO[68];
 
 /* 80454F30-80454F34 0004+00 s=1 e=0 z=0  None .sdata2    @4804                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4804 = 608.0f;
+SECTION_SDATA2 static f32 lit_4804 = 608.0f;
 
 /* 80454F34-80454F38 0004+00 s=1 e=0 z=0  None .sdata2    @4805                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4805 = 448.0f;
+SECTION_SDATA2 static f32 lit_4805 = 448.0f;
 
 /* 80454F38-80454F40 0004+04 s=1 e=0 z=0  None .sdata2    @4806                                                        */
-SECTION_SDATA2 static f32 d_s_d_s_play__lit_4806[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4806[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

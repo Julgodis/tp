@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B5CDC0 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_ykM_c {
@@ -70,6 +70,8 @@ struct daNpc_ykM_c {
 	/* 80B566E8 */ void setLeafAnm(int, f32);
 	/* 80B567B4 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80B5680C */ void selectAction();
+	/* 80B56954 */ void chkAction(int (daNpc_ykM_c::*)(void*));
+	/* 80B56980 */ void setAction(int (daNpc_ykM_c::*)(void*));
 	/* 80B56A28 */ void chkContinueAttnPlayer();
 	/* 80B56AB4 */ void chkTouchPlayer();
 	/* 80B56B84 */ void cutSlideDown(int);
@@ -276,8 +278,8 @@ extern "C" void setFishAnm__11daNpc_ykM_cFiif(); // 1
 extern "C" void setLeafAnm__11daNpc_ykM_cFif(); // 1
 extern "C" void afterSetMotionAnm__11daNpc_ykM_cFiifi(); // 1
 extern "C" void selectAction__11daNpc_ykM_cFv(); // 1
-extern "C" static void chkAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i(); // 1
 extern "C" void chkContinueAttnPlayer__11daNpc_ykM_cFv(); // 1
 extern "C" void chkTouchPlayer__11daNpc_ykM_cFv(); // 1
 extern "C" void cutSlideDown__11daNpc_ykM_cFi(); // 1
@@ -1085,7 +1087,7 @@ asm void daNpc_ykM_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i() {
+asm void daNpc_ykM_c::chkAction(int (daNpc_ykM_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ykm/d_a_npc_ykm/chkAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i.s"
 }
@@ -1096,7 +1098,7 @@ extern "C" asm static void chkAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i() {
+asm void daNpc_ykM_c::setAction(int (daNpc_ykM_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_ykm/d_a_npc_ykm/setAction__11daNpc_ykM_cFM11daNpc_ykM_cFPCvPvPv_i.s"
 }

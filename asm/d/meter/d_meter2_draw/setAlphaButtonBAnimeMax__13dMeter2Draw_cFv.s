@@ -9,9 +9,9 @@ lbl_80219474:
 /* 80219490 0000001C  48 03 C3 99 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 80219494 00000020  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80219498 00000024  3B C3 EB C8 */	addi r30, r3, g_drawHIO@l
-/* 8021949C 00000028  C0 7E 00 F0 */	lfs f3, 0xf0(r30)
-/* 802194A0 0000002C  C0 5E 00 18 */	lfs f2, 0x18(r30)
-/* 802194A4 00000030  C0 1E 00 84 */	lfs f0, 0x84(r30)
+/* 8021949C 00000028  C0 7E 00 F0 */	lfs f3, 0xf0(r30)	/* effective address: 8042ECB8 */
+/* 802194A0 0000002C  C0 5E 00 18 */	lfs f2, 0x18(r30)	/* effective address: 8042EBE0 */
+/* 802194A4 00000030  C0 1E 00 84 */	lfs f0, 0x84(r30)	/* effective address: 8042EC4C */
 /* 802194A8 00000034  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802194AC 00000038  EC 03 00 32 */	fmuls f0, f3, f0
 /* 802194B0 0000003C  FC 00 08 00 */	fcmpu cr0, f0, f1

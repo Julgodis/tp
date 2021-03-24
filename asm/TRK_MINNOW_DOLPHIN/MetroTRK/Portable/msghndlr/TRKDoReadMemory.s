@@ -99,9 +99,9 @@ lbl_8036EA48:
 /* 8036EA50 00000008  38 1E F9 00 */	addi r0, r30, -1792
 /* 8036EA54 0000000C  28 00 00 06 */	cmplwi r0, 6
 /* 8036EA58 00000010  41 81 00 44 */	bgt lbl_8036EA9C
-/* 8036EA5C 00000014  3C 60 80 3D */	lis r3, MetroTRK_Portable_msghndlr__lit_536@ha
+/* 8036EA5C 00000014  3C 60 80 3D */	lis r3, lit_536@ha
 /* 8036EA60 00000018  54 00 10 3A */	slwi r0, r0, 2
-/* 8036EA64 0000001C  38 63 32 1C */	addi r3, r3, MetroTRK_Portable_msghndlr__lit_536@l
+/* 8036EA64 0000001C  38 63 32 1C */	addi r3, r3, lit_536@l
 /* 8036EA68 00000020  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8036EA6C 00000024  7C 09 03 A6 */	mtctr r0
 /* 8036EA70 00000028  4E 80 04 20 */	bctr 

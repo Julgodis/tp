@@ -14,7 +14,7 @@ lbl_8018EB10:
 /* 8018EB40 00000030  98 1F 03 B1 */	stb r0, 0x3b1(r31)
 /* 8018EB44 00000034  3C 60 80 43 */	lis r3, g_fsHIO@ha
 /* 8018EB48 00000038  38 63 C9 EC */	addi r3, r3, g_fsHIO@l
-/* 8018EB4C 0000003C  88 03 00 0D */	lbz r0, 0xd(r3)
+/* 8018EB4C 0000003C  88 03 00 0D */	lbz r0, 0xd(r3)	/* effective address: 8042C9F9 */
 /* 8018EB50 00000040  B0 1F 03 AC */	sth r0, 0x3ac(r31)
 /* 8018EB54 00000044  A8 9F 03 AC */	lha r4, 0x3ac(r31)
 /* 8018EB58 00000048  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay(r13)
@@ -37,7 +37,7 @@ lbl_8018EB8C:
 /* 8018EB94 00000008  38 C0 00 00 */	li r6, 0
 /* 8018EB98 0000000C  3C E0 80 43 */	lis r7, g_fsHIO@ha
 /* 8018EB9C 00000010  38 E7 C9 EC */	addi r7, r7, g_fsHIO@l
-/* 8018EBA0 00000014  88 E7 00 08 */	lbz r7, 8(r7)
+/* 8018EBA0 00000014  88 E7 00 08 */	lbz r7, 8(r7)	/* effective address: 8042C9F4 */
 /* 8018EBA4 00000018  4B FF EF DD */	bl yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc
 /* 8018EBA8 0000001C  7F E3 FB 78 */	mr r3, r31
 /* 8018EBAC 00000020  48 00 00 A1 */	bl noSaveSelDispInit__14dFile_select_cFv

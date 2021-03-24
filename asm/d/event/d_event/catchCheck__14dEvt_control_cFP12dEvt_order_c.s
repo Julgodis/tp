@@ -28,7 +28,7 @@ lbl_80041CE8:
 /* 80041CEC 00000004  4B FF FB 19 */	bl setParam__14dEvt_control_cFP12dEvt_order_c
 /* 80041CF0 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80041CF4 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80041CF8 00000010  88 03 5B 68 */	lbz r0, 0x5b68(r3)
+/* 80041CF8 00000010  88 03 5B 68 */	lbz r0, 0x5b68(r3)	/* effective address: 8040BD28 */
 /* 80041CFC 00000014  98 1F 00 EE */	stb r0, 0xee(r31)
 /* 80041D00 00000018  38 00 00 02 */	li r0, 2
 /* 80041D04 0000001C  98 1F 00 E4 */	stb r0, 0xe4(r31)

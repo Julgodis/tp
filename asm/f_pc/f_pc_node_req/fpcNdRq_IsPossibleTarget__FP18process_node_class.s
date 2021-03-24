@@ -2,7 +2,7 @@ lbl_80022BE4:
 /* 80022BE4 00000000  80 83 00 04 */	lwz r4, 4(r3)
 /* 80022BE8 00000004  3C 60 80 3A */	lis r3, l_fpcNdRq_Queue@ha
 /* 80022BEC 00000008  38 63 3A 38 */	addi r3, r3, l_fpcNdRq_Queue@l
-/* 80022BF0 0000000C  80 63 00 00 */	lwz r3, 0(r3)
+/* 80022BF0 0000000C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 803A3A38 */
 /* 80022BF4 00000010  48 00 00 4C */	b lbl_80022C40
 lbl_80022BF8:
 /* 80022BF8 00000000  80 A3 00 0C */	lwz r5, 0xc(r3)

@@ -8,7 +8,7 @@ lbl_8022E860:
 /* 8022E878 00000018  80 83 00 04 */	lwz r4, 4(r3)
 /* 8022E87C 0000001C  C0 04 04 54 */	lfs f0, 0x454(r4)
 /* 8022E880 00000020  EC 61 00 32 */	fmuls f3, f1, f0
-/* 8022E884 00000024  C0 22 B0 5C */	lfs f1, d_msg_d_msg_class__lit_4026(r2)
+/* 8022E884 00000024  C0 22 B0 5C */	lfs f1, lit_4026(r2)
 /* 8022E888 00000028  C0 04 04 20 */	lfs f0, 0x420(r4)
 /* 8022E88C 0000002C  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8022E890 00000030  EC 01 00 2A */	fadds f0, f1, f0
@@ -45,8 +45,8 @@ lbl_8022E860:
 /* 8022E90C 000000AC  B3 BC 01 3E */	sth r29, 0x13e(r28)
 lbl_8022E910:
 /* 8022E910 00000000  38 61 00 08 */	addi r3, r1, 8
-/* 8022E914 00000004  3C 80 80 3A */	lis r4, d_msg_d_msg_class__stringBase0@ha
-/* 8022E918 00000008  38 84 96 10 */	addi r4, r4, d_msg_d_msg_class__stringBase0@l
+/* 8022E914 00000004  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8022E918 00000008  38 84 96 10 */	addi r4, r4, stringBase0@l
 /* 8022E91C 0000000C  38 84 00 2B */	addi r4, r4, 0x2b
 /* 8022E920 00000010  7F E5 07 34 */	extsh r5, r31
 /* 8022E924 00000014  7F C6 07 34 */	extsh r6, r30

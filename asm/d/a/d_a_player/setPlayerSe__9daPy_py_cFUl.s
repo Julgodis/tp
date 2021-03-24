@@ -5,8 +5,8 @@ lbl_8015F520:
 /* 8015F52C 0000000C  7C 64 1B 78 */	mr r4, r3
 /* 8015F530 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F534 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F538 00000018  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 8015F53C 0000001C  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 8015F538 00000018  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8015F53C 0000001C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
 /* 8015F540 00000020  81 8C 01 18 */	lwz r12, 0x118(r12)
 /* 8015F544 00000024  7D 89 03 A6 */	mtctr r12
 /* 8015F548 00000028  4E 80 04 21 */	bctrl 

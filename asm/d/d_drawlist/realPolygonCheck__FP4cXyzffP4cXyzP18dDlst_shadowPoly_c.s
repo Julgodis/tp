@@ -18,10 +18,10 @@ lbl_80054854:
 /* 80054894 00000024  3C 60 80 3B */	lis r3, __vt__14ShdwDrawPoly_c@ha
 /* 80054898 00000028  38 03 8D EC */	addi r0, r3, __vt__14ShdwDrawPoly_c@l
 /* 8005489C 0000002C  90 01 00 30 */	stw r0, 0x30(r1)
-/* 800548A0 00000030  C0 22 86 58 */	lfs f1, d_d_drawlist__lit_5127(r2)
+/* 800548A0 00000030  C0 22 86 58 */	lfs f1, lit_5127(r2)
 /* 800548A4 00000034  EC 1F 07 F2 */	fmuls f0, f31, f31
 /* 800548A8 00000038  EC 01 00 32 */	fmuls f0, f1, f0
-/* 800548AC 0000003C  C0 22 86 5C */	lfs f1, d_d_drawlist__lit_5128(r2)
+/* 800548AC 0000003C  C0 22 86 5C */	lfs f1, lit_5128(r2)
 /* 800548B0 0000005C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 800548B4 00000000  40 81 00 08 */	ble lbl_800548BC
 /* 800548B8 00000004  48 00 00 08 */	b lbl_800548C0
@@ -33,7 +33,7 @@ lbl_800548C0:
 /* 800548C8 00000008  C0 3B 00 04 */	lfs f1, 4(r27)
 /* 800548CC 0000000C  EC 01 10 28 */	fsubs f0, f1, f2
 /* 800548D0 00000010  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 800548D4 00000014  C0 02 86 60 */	lfs f0, d_d_drawlist__lit_5129(r2)
+/* 800548D4 00000014  C0 02 86 60 */	lfs f0, lit_5129(r2)
 /* 800548D8 00000018  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 800548DC 0000001C  EC 01 00 2A */	fadds f0, f1, f0
 /* 800548E0 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
@@ -75,12 +75,12 @@ lbl_80054954:
 /* 80054960 0000000C  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 80054964 00000010  EC 00 F8 2A */	fadds f0, f0, f31
 /* 80054968 00000014  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8005496C 00000018  C0 22 86 64 */	lfs f1, d_d_drawlist__lit_5130(r2)
+/* 8005496C 00000018  C0 22 86 64 */	lfs f1, lit_5130(r2)
 /* 80054970 0000001C  C0 0D 86 F4 */	lfs f0, mFovyRate__14mDoLib_clipper(r13)
 /* 80054974 00000020  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80054978 00000024  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 8005497C 00000028  3B C3 D8 E4 */	addi r30, r3, mClipper__14mDoLib_clipper@l
-/* 80054980 0000002C  D0 1E 00 58 */	stfs f0, 0x58(r30)
+/* 80054980 0000002C  D0 1E 00 58 */	stfs f0, 0x58(r30)	/* effective address: 803DD93C */
 /* 80054984 00000030  7F C3 F3 78 */	mr r3, r30
 /* 80054988 00000034  48 21 EE 05 */	bl calcViewFrustum__11J3DUClipperFv
 /* 8005498C 00000038  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha

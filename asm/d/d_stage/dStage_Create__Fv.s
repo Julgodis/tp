@@ -3,8 +3,8 @@ lbl_80026D38:
 /* 80026D3C 00000004  7C 08 02 A6 */	mflr r0
 /* 80026D40 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80026D44 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80026D48 00000010  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026D4C 00000014  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026D48 00000010  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026D4C 00000014  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026D50 00000018  38 63 01 19 */	addi r3, r3, 0x119
 /* 80026D54 0000001C  48 00 86 E1 */	bl dComIfG_getStageRes__FPCc
 /* 80026D58 00000020  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
@@ -14,7 +14,7 @@ lbl_80026D38:
 /* 80026D68 00000030  48 00 A8 3D */	bl execute__7daSus_cFv
 /* 80026D6C 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80026D70 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80026D74 0000003C  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
+/* 80026D74 0000003C  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
 /* 80026D78 00000040  7C 03 07 75 */	extsb. r3, r0
 /* 80026D7C 00000044  41 80 00 08 */	blt lbl_80026D84
 /* 80026D80 00000048  4B FF DF 91 */	bl dStage_roomInit__Fi
@@ -23,8 +23,8 @@ lbl_80026D84:
 /* 80026D88 00000004  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
 /* 80026D8C 00000008  98 03 61 94 */	stb r0, mDemoArcName__20dStage_roomControl_c@l(r3)
 /* 80026D90 0000000C  4B FF FB 09 */	bl dKankyo_create__Fv
-/* 80026D94 00000010  3C 60 80 38 */	lis r3, d_d_stage__stringBase0@ha
-/* 80026D98 00000014  38 63 8A 50 */	addi r3, r3, d_d_stage__stringBase0@l
+/* 80026D94 00000010  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80026D98 00000014  38 63 8A 50 */	addi r3, r3, stringBase0@l
 /* 80026D9C 00000018  38 63 01 23 */	addi r3, r3, 0x123
 /* 80026DA0 0000001C  48 00 86 95 */	bl dComIfG_getStageRes__FPCc
 /* 80026DA4 00000020  28 03 00 00 */	cmplwi r3, 0

@@ -28,10 +28,10 @@ lbl_800FBC0C:
 /* 800FBC28 0000001C  38 80 00 94 */	li r4, 0x94
 /* 800FBC2C 00000020  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wallCatch_c0@ha
 /* 800FBC30 00000024  38 C5 E1 64 */	addi r6, r5, m__23daAlinkHIO_wallCatch_c0@l
-/* 800FBC34 00000028  C0 26 00 2C */	lfs f1, 0x2c(r6)
+/* 800FBC34 00000028  C0 26 00 2C */	lfs f1, 0x2c(r6)	/* effective address: 8038E190 */
 /* 800FBC38 0000002C  FC 40 F8 90 */	fmr f2, f31
-/* 800FBC3C 00000030  A8 A6 00 28 */	lha r5, 0x28(r6)
-/* 800FBC40 00000034  C0 66 00 34 */	lfs f3, 0x34(r6)
+/* 800FBC3C 00000030  A8 A6 00 28 */	lha r5, 0x28(r6)	/* effective address: 8038E18C */
+/* 800FBC40 00000034  C0 66 00 34 */	lfs f3, 0x34(r6)	/* effective address: 8038E198 */
 /* 800FBC44 00000038  4B FB 13 C9 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800FBC48 0000003C  A0 7E 2F DC */	lhz r3, 0x2fdc(r30)
 /* 800FBC4C 00000040  48 06 2F 45 */	bl checkBowItem__9daPy_py_cFi
@@ -42,9 +42,9 @@ lbl_800FBC0C:
 lbl_800FBC60:
 /* 800FBC60 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FBC64 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FBC68 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FBC68 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FBC6C 0000000C  60 00 02 00 */	ori r0, r0, 0x200
-/* 800FBC70 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FBC70 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FBC74 00000014  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FBC78 00000018  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800FBC7C 0000001C  A8 1E 04 E6 */	lha r0, 0x4e6(r30)

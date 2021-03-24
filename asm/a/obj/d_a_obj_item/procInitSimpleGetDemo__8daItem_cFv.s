@@ -6,7 +6,7 @@ lbl_8015C058:
 /* 8015C068 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8015C06C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015C070 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015C074 0000001C  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8015C074 0000001C  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8015C078 00000020  38 61 00 08 */	addi r3, r1, 8
 /* 8015C07C 00000024  48 00 1F 5D */	bl getItemPos__9daPy_py_cCFv
 /* 8015C080 00000028  C0 01 00 08 */	lfs f0, 8(r1)
@@ -16,7 +16,7 @@ lbl_8015C058:
 /* 8015C090 00000038  C0 01 00 10 */	lfs f0, 0x10(r1)
 /* 8015C094 0000003C  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
 /* 8015C098 00000040  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 8015C09C 00000044  C0 02 9B 98 */	lfs f0, a_obj_d_a_obj_item__lit_4404(r2)
+/* 8015C09C 00000044  C0 02 9B 98 */	lfs f0, lit_4404(r2)
 /* 8015C0A0 00000048  EC 01 00 2A */	fadds f0, f1, f0
 /* 8015C0A4 0000004C  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)
 /* 8015C0A8 00000050  38 00 00 00 */	li r0, 0
@@ -31,7 +31,7 @@ lbl_8015C058:
 /* 8015C0CC 00000074  7F E3 FB 78 */	mr r3, r31
 /* 8015C0D0 00000078  4B FF EF E9 */	bl getData__12daItemBase_cFv
 /* 8015C0D4 0000007C  C0 23 00 2C */	lfs f1, 0x2c(r3)
-/* 8015C0D8 00000080  C0 02 9B 50 */	lfs f0, a_obj_d_a_obj_item__lit_3857(r2)
+/* 8015C0D8 00000080  C0 02 9B 50 */	lfs f0, lit_3857(r2)
 /* 8015C0DC 00000084  D0 1F 04 F8 */	stfs f0, 0x4f8(r31)
 /* 8015C0E0 00000088  D0 3F 04 FC */	stfs f1, 0x4fc(r31)
 /* 8015C0E4 0000008C  D0 1F 05 00 */	stfs f0, 0x500(r31)

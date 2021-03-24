@@ -21,23 +21,13 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct fopAc_ac_c {
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
-	/* 802681A4 */ void SetPolyIndex(int);
+struct cXyz {
 };
 
 struct dBgS_SplGrpChk {
@@ -48,7 +38,20 @@ struct dBgS_SplGrpChk {
 struct csXyz {
 };
 
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+};
+
 struct dBgS_Acch;
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
 struct dBgS {
 	/* 8007524C */ void WallCorrect(dBgS_Acch*);
 	/* 80075374 */ void WallCorrectSort(dBgS_Acch*);
@@ -56,9 +59,6 @@ struct dBgS {
 	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
-};
-
-struct Vec {
 };
 
 struct dBgS_Acch {
@@ -98,14 +98,14 @@ struct daPy_py_c {
 	/* 80077494 */ void checkPlayerFly() const;
 };
 
-struct cM3dGPla {
-	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
-};
-
 struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, unsigned int);
+};
+
+struct cM3dGPla {
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
 struct cBgS_GndChk {
@@ -296,7 +296,7 @@ SECTION_DATA void* __vt__12dBgS_AcchCir[3] = {
 };
 
 /* 804526C0-804526C4 0004+00 s=11 e=0 z=0  None .sdata2    @4025                                                        */
-SECTION_SDATA2 static u8 d_bg_d_bg_s_acch__lit_4025[4] = {
+SECTION_SDATA2 static u8 lit_4025[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -379,16 +379,16 @@ asm dBgS_Acch::~dBgS_Acch() {
 
 /* ############################################################################################## */
 /* 804526C4-804526C8 0004+00 s=5 e=0 z=0  None .sdata2    @4089                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4089 = -1000000000.0f;
+SECTION_SDATA2 static f32 lit_4089 = -1000000000.0f;
 
 /* 804526C8-804526CC 0004+00 s=1 e=0 z=0  None .sdata2    @4090                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4090 = 60.0f;
+SECTION_SDATA2 static f32 lit_4090 = 60.0f;
 
 /* 804526CC-804526D0 0004+00 s=3 e=0 z=0  None .sdata2    @4091                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4091 = 1000000000.0f;
+SECTION_SDATA2 static f32 lit_4091 = 1000000000.0f;
 
 /* 804526D0-804526D4 0004+00 s=1 e=0 z=0  None .sdata2    @4092                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4092 = 1000.0f;
+SECTION_SDATA2 static f32 lit_4092 = 1000.0f;
 
 /* 800760A0-800761CC 012C+00 s=0 e=4 z=0  None .text      __ct__9dBgS_AcchFv                                           */
 #pragma push
@@ -447,7 +447,7 @@ asm void dBgS_Acch::GroundCheckInit(dBgS& param_0) {
 
 /* ############################################################################################## */
 /* 80424B20-80424B2C 000C+00 s=1 e=0 z=0  None .bss       @4166                                                        */
-static u8 d_bg_d_bg_s_acch__lit_4166[12];
+static u8 lit_4166[12];
 
 /* 80424B2C-80424B80 0050+04 s=1 e=0 z=0  None .bss       tmpRoofChk$4165                                              */
 static u8 data_80424B2C[80 + 4 /* padding */];
@@ -476,7 +476,7 @@ asm void dBgS_Acch::GroundRoofProc(dBgS& param_0) {
 
 /* ############################################################################################## */
 /* 804526D4-804526D8 0004+00 s=1 e=0 z=0  None .sdata2    @4424                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4424 = 1.0f;
+SECTION_SDATA2 static f32 lit_4424 = 1.0f;
 
 /* 80076624-80076AAC 0488+00 s=1 e=0 z=0  None .text      LineCheck__9dBgS_AcchFR4dBgS                                 */
 #pragma push
@@ -491,10 +491,10 @@ asm void dBgS_Acch::LineCheck(dBgS& param_0) {
 
 /* ############################################################################################## */
 /* 804526D8-804526DC 0004+00 s=1 e=0 z=0  None .sdata2    @4554                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4554 = 50.0f;
+SECTION_SDATA2 static f32 lit_4554 = 50.0f;
 
 /* 804526DC-804526E0 0004+00 s=1 e=0 z=0  None .sdata2    @4555                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4555 = 1000000.0f;
+SECTION_SDATA2 static f32 lit_4555 = 1000000.0f;
 
 /* 80076AAC-80076F84 04D8+00 s=0 e=15 z=0  None .text      CrrPos__9dBgS_AcchFR4dBgS                                    */
 #pragma push
@@ -586,7 +586,7 @@ asm void dBgS_Acch::GetSpeedY() {
 
 /* ############################################################################################## */
 /* 804526E0-804526E8 0004+04 s=1 e=0 z=0  None .sdata2    @4762                                                        */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_acch__lit_4762[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4762[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

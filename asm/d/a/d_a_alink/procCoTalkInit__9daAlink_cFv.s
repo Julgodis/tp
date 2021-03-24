@@ -50,7 +50,7 @@ lbl_80119E20:
 /* 80119E44 00000024  7F E3 FB 78 */	mr r3, r31
 /* 80119E48 00000028  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 80119E4C 0000002C  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 80119E50 00000030  C0 24 00 BC */	lfs f1, 0xbc(r4)
+/* 80119E50 00000030  C0 24 00 BC */	lfs f1, 0xbc(r4)	/* effective address: 8038EEE4 */
 /* 80119E54 00000034  48 00 E9 F1 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 80119E58 00000038  48 00 00 D4 */	b lbl_80119F2C
 lbl_80119E5C:
@@ -62,7 +62,7 @@ lbl_80119E5C:
 /* 80119E70 00000014  38 80 00 0D */	li r4, 0xd
 /* 80119E74 00000018  3C A0 80 39 */	lis r5, m__19daAlinkHIO_wlLie_c0@ha
 /* 80119E78 0000001C  38 A5 F1 38 */	addi r5, r5, m__19daAlinkHIO_wlLie_c0@l
-/* 80119E7C 00000020  C0 45 00 40 */	lfs f2, 0x40(r5)
+/* 80119E7C 00000020  C0 45 00 40 */	lfs f2, 0x40(r5)	/* effective address: 8038F178 */
 /* 80119E80 00000024  48 00 F8 59 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 80119E84 00000028  48 00 00 64 */	b lbl_80119EE8
 lbl_80119E88:
@@ -95,9 +95,9 @@ lbl_80119EC0:
 lbl_80119EE8:
 /* 80119EE8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80119EEC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80119EF0 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80119EF0 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80119EF4 0000000C  64 00 08 00 */	oris r0, r0, 0x800
-/* 80119EF8 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80119EF8 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80119EFC 00000014  48 00 00 30 */	b lbl_80119F2C
 lbl_80119F00:
 /* 80119F00 00000000  7F E3 FB 78 */	mr r3, r31
@@ -116,9 +116,9 @@ lbl_80119F2C:
 /* 80119F30 00000004  B0 1F 30 08 */	sth r0, 0x3008(r31)
 /* 80119F34 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80119F38 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80119F3C 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80119F3C 00000010  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80119F40 00000014  60 00 00 10 */	ori r0, r0, 0x10
-/* 80119F44 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 80119F44 00000018  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80119F48 0000001C  38 60 00 01 */	li r3, 1
 lbl_80119F4C:
 /* 80119F4C 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

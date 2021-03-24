@@ -46,7 +46,7 @@ extern "C" asm void GXSetTevIndirect() {
 
 /* ############################################################################################## */
 /* 80456610-80456618 0004+04 s=1 e=0 z=0  None .sdata2    @149                                                         */
-SECTION_SDATA2 static f32 GXBump__lit_149[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_149[1 + 1 /* padding */] = {
 	1024.0f,
 	/* padding */
 	0.0f,

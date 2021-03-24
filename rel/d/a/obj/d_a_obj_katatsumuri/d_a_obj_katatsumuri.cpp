@@ -16,10 +16,10 @@ struct daObj_KatHIO_c {
 	/* 80C3C5CC */ ~daObj_KatHIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjKAT_c {

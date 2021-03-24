@@ -74,7 +74,7 @@ lbl_8009D48C:
 /* 8009D528 0000009C  38 63 D3 E8 */	addi r3, r3, mFrameBufferTexObj__13mDoGph_gInf_c@l
 /* 8009D52C 000000A0  38 80 00 01 */	li r4, 1
 /* 8009D530 000000A4  38 A0 00 01 */	li r5, 1
-/* 8009D534 000000A8  C0 22 92 18 */	lfs f1, d_d_error_msg__lit_3758(r2)
+/* 8009D534 000000A8  C0 22 92 18 */	lfs f1, lit_3758(r2)
 /* 8009D538 000000AC  FC 40 08 90 */	fmr f2, f1
 /* 8009D53C 000000B0  FC 60 08 90 */	fmr f3, f1
 /* 8009D540 000000B4  38 C0 00 00 */	li r6, 0
@@ -100,7 +100,7 @@ lbl_8009D48C:
 /* 8009D590 00000104  48 2B E5 ED */	bl GXSetTexCoordGen2
 /* 8009D594 00000108  38 60 00 01 */	li r3, 1
 /* 8009D598 0000010C  48 2C 22 F9 */	bl GXSetNumTevStages
-/* 8009D59C 00000110  80 02 D1 78 */	lwz r0, d_d_error_msg__lit_3873(r2)
+/* 8009D59C 00000110  80 02 D1 78 */	lwz r0, lit_3873(r2)
 /* 8009D5A0 00000114  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8009D5A4 00000118  9B E1 00 1F */	stb r31, 0x1f(r1)
 /* 8009D5A8 0000011C  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -159,7 +159,7 @@ lbl_8009D48C:
 /* 8009D67C 000001F0  80 0D 80 80 */	lwz r0, g_clearColor(r13)
 /* 8009D680 000001F4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8009D684 000001F8  38 60 00 00 */	li r3, 0
-/* 8009D688 000001FC  C0 22 92 18 */	lfs f1, d_d_error_msg__lit_3758(r2)
+/* 8009D688 000001FC  C0 22 92 18 */	lfs f1, lit_3758(r2)
 /* 8009D68C 00000200  FC 40 08 90 */	fmr f2, f1
 /* 8009D690 00000204  FC 60 08 90 */	fmr f3, f1
 /* 8009D694 00000208  FC 80 08 90 */	fmr f4, f1
@@ -174,12 +174,12 @@ lbl_8009D48C:
 /* 8009D6B8 0000022C  38 60 00 01 */	li r3, 1
 /* 8009D6BC 00000230  48 2C 27 1D */	bl GXSetDither
 /* 8009D6C0 00000234  38 61 00 20 */	addi r3, r1, 0x20
-/* 8009D6C4 00000238  C0 22 92 18 */	lfs f1, d_d_error_msg__lit_3758(r2)
-/* 8009D6C8 0000023C  C0 42 92 30 */	lfs f2, d_d_error_msg__lit_3764(r2)
+/* 8009D6C4 00000238  C0 22 92 18 */	lfs f1, lit_3758(r2)
+/* 8009D6C8 0000023C  C0 42 92 30 */	lfs f2, lit_3764(r2)
 /* 8009D6CC 00000240  FC 60 08 90 */	fmr f3, f1
 /* 8009D6D0 00000244  FC 80 10 90 */	fmr f4, f2
 /* 8009D6D4 00000248  FC A0 08 90 */	fmr f5, f1
-/* 8009D6D8 0000024C  C0 C2 92 3C */	lfs f6, d_d_error_msg__lit_3767(r2)
+/* 8009D6D8 0000024C  C0 C2 92 3C */	lfs f6, lit_3767(r2)
 /* 8009D6DC 00000250  48 2A 99 1D */	bl C_MTXOrtho
 /* 8009D6E0 00000254  3C 60 80 3A */	lis r3, g_mDoMtx_identity@ha
 /* 8009D6E4 00000258  38 63 2F D8 */	addi r3, r3, g_mDoMtx_identity@l

@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JUTTransparency {
-};
-
-struct _GXTlutFmt {
-};
-
 struct _GXTlut {
 };
 
+struct JUTTransparency {
+};
+
 struct ResTLUT {
+};
+
+struct _GXTlutFmt {
 };
 
 struct JUTPalette {
@@ -37,7 +37,7 @@ struct JUTPalette {
 extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT(); // 1
 extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
 extern "C" void load__10JUTPaletteFv(); // 1
-extern "C" extern char const* const JUTPalette__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

@@ -47,10 +47,10 @@ SECTION_SDATA2 static u8 lit_2268[4] = {
 };
 
 /* 804550FC-80455100 0004+00 s=1 e=0 z=0  None .sdata2    @2269                                                        */
-SECTION_SDATA2 static f32 c_m2d__lit_2269 = 1.0f;
+SECTION_SDATA2 static f32 lit_2269 = 1.0f;
 
 /* 80455100-80455108 0008+00 s=1 e=0 z=0  None .sdata2    @2270                                                        */
-SECTION_SDATA2 static f64 c_m2d__lit_2270 = 0.5;
+SECTION_SDATA2 static f64 lit_2270 = 0.5;
 
 /* 80455108-80455110 0008+00 s=1 e=0 z=0  None .sdata2    @2271                                                        */
 SECTION_SDATA2 static f64 lit_2271 = 3.0;

@@ -28,12 +28,12 @@ lbl_801D1858:
 /* 801D18C0 00000054  48 00 0E 09 */	bl getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv
 /* 801D18C4 00000058  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801D18C8 0000005C  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801D18CC 00000060  88 03 03 08 */	lbz r0, 0x308(r3)
+/* 801D18CC 00000060  88 03 03 08 */	lbz r0, 0x308(r3)	/* effective address: 8042FF68 */
 /* 801D18D0 00000064  28 00 00 00 */	cmplwi r0, 0
 /* 801D18D4 00000068  40 82 00 64 */	bne lbl_801D1938
 /* 801D18D8 0000006C  88 1F 12 27 */	lbz r0, 0x1227(r31)
 /* 801D18DC 00000070  54 00 10 3A */	slwi r0, r0, 2
-/* 801D18E0 00000074  C0 62 A7 E8 */	lfs f3, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D18E0 00000074  C0 62 A7 E8 */	lfs f3, lit_4202(r2)
 /* 801D18E4 00000078  7C 7F 02 14 */	add r3, r31, r0
 /* 801D18E8 0000007C  C0 43 0E CC */	lfs f2, 0xecc(r3)
 /* 801D18EC 00000080  C0 1F 0F 9C */	lfs f0, 0xf9c(r31)
@@ -60,7 +60,7 @@ lbl_801D1938:
 /* 801D193C 00000004  54 00 10 3A */	slwi r0, r0, 2
 /* 801D1940 00000008  7C 7F 02 14 */	add r3, r31, r0
 /* 801D1944 0000000C  C0 43 0E AC */	lfs f2, 0xeac(r3)
-/* 801D1948 00000010  C0 82 A7 E8 */	lfs f4, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D1948 00000010  C0 82 A7 E8 */	lfs f4, lit_4202(r2)
 /* 801D194C 00000014  C0 03 0E EC */	lfs f0, 0xeec(r3)
 /* 801D1950 00000018  EC 04 00 32 */	fmuls f0, f4, f0
 /* 801D1954 0000001C  EC 62 00 2A */	fadds f3, f2, f0

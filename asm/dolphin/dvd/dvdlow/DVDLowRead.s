@@ -12,10 +12,10 @@ lbl_80347C18:
 /* 80347C40 00000028  3B 45 00 00 */	addi r26, r5, 0
 /* 80347C44 0000002C  3B DF 00 CC */	addi r30, r31, 0xcc
 /* 80347C48 00000030  7C DB 33 78 */	mr r27, r6
-/* 80347C4C 00000034  93 24 00 18 */	stw r25, 0x18(r4)
-/* 80347C50 00000038  93 1F 00 C4 */	stw r24, 0xc4(r31)
-/* 80347C54 0000003C  93 3F 00 C8 */	stw r25, 0xc8(r31)
-/* 80347C58 00000040  93 5F 00 CC */	stw r26, 0xcc(r31)
+/* 80347C4C 00000034  93 24 00 18 */	stw r25, 0x18(r4)	/* effective address: CC006018 */
+/* 80347C50 00000038  93 1F 00 C4 */	stw r24, 0xc4(r31)	/* effective address: 8044C8F4 */
+/* 80347C54 0000003C  93 3F 00 C8 */	stw r25, 0xc8(r31)	/* effective address: 8044C8F8 */
+/* 80347C58 00000040  93 5F 00 CC */	stw r26, 0xcc(r31)	/* effective address: 8044C8FC */
 /* 80347C5C 00000044  80 0D 91 B4 */	lwz r0, WorkAroundType(r13)
 /* 80347C60 00000048  28 00 00 00 */	cmplwi r0, 0
 /* 80347C64 0000004C  40 82 00 2C */	bne lbl_80347C90
@@ -159,8 +159,8 @@ lbl_80347E14:
 /* 80347E5C 00000048  7E C4 31 14 */	adde r22, r4, r6
 /* 80347E60 0000004C  38 7F 00 40 */	addi r3, r31, 0x40
 /* 80347E64 00000050  4B FF 2A 95 */	bl OSCreateAlarm
-/* 80347E68 00000054  3C 60 80 34 */	lis r3, dvdlow__AlarmHandler@ha
-/* 80347E6C 00000058  38 E3 79 94 */	addi r7, r3, dvdlow__AlarmHandler@l
+/* 80347E68 00000054  3C 60 80 34 */	lis r3, AlarmHandler@ha
+/* 80347E6C 00000058  38 E3 79 94 */	addi r7, r3, AlarmHandler@l
 /* 80347E70 0000005C  38 D7 00 00 */	addi r6, r23, 0
 /* 80347E74 00000060  38 B6 00 00 */	addi r5, r22, 0
 /* 80347E78 00000064  38 7F 00 40 */	addi r3, r31, 0x40

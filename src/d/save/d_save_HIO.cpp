@@ -722,7 +722,7 @@ SECTION_DATA static void* __vt__12dSvBit_HIO_c[3] = {
 };
 
 /* 804307E0-804307EC 000C+00 s=1 e=0 z=0  None .bss       @3659                                                        */
-static u8 d_save_d_save_HIO__lit_3659[12];
+static u8 lit_3659[12];
 
 /* 804307EC-80430C90 04A0+04 s=1 e=2 z=0  None .bss       g_save_bit_HIO                                               */
 u8 g_save_bit_HIO[1184 + 4 /* padding */];

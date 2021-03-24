@@ -410,6 +410,20 @@ class Dol2AsmSplitter:
                             section.symbols.extend(new_symbols)
                             section.symbols.sort(key=lambda x: (x.addr, x.size))
 
+    """
+    def apply_relocations(self):
+        print(f"{self.step_count:2} Apply relocations")
+        self.step_count += 1
+
+        for module in self.modules:
+            if not module.index in self.gen_modules:
+                continue
+            for lib in module.libraries.values():
+                for tu in lib.translation_units.values():
+                    for section in tu.sections.values():
+                        for symbol in section.symbols:
+                            if isinstance(symbol, ASMFunction):
+    """
 
     def reference_count(self):
         print(f"{self.step_count:2} Calculate reference count")
@@ -537,14 +551,14 @@ class Dol2AsmSplitter:
         start_time = time.time()
         self.generate_symbol_table()
         self.combine_symbols()
-        self.name_symbols()
         self.search_for_reference_arrays()
+        #self.apply_relocations()
         self.resolve_symbols()
-        self.validate_symbols()
         self.reference_count()
+        self.name_symbols()
+        self.validate_symbols()
         self.library_paths()
 
-        asm_group_count = 1
         cpp_tasks = []
         asm_tasks = []
         symdef_tasks = []
@@ -589,7 +603,7 @@ class Dol2AsmSplitter:
                             for symbol in sec.symbols:
                                 if not isinstance(symbol, ASMFunction):
                                     continue
-                                if no_file_generation:
+                                if self.no_file_generation:
                                     if symbol.include_path.exists():
                                         continue
 
@@ -598,7 +612,7 @@ class Dol2AsmSplitter:
                                 asm_path_tasks.append(util.create_dirs_for_file(symbol.include_path))
                                 functions.append((symbol,))
                             if functions:
-                                for fs in util.chunks(functions, asm_group_count):
+                                for fs in util.chunks(functions, self.asm_group_count):
                                     asm_tasks.append((sec, fs))
                 asyncio.run(util.wait_all(asm_path_tasks))
                 
@@ -634,8 +648,8 @@ class Dol2AsmSplitter:
                     else:
                         makefile_tasks.append(makefile.create_rel(module))
 
-            makefile_tasks.append(makefile.create_obj_files(modules))
-            makefile_tasks.append(makefile.create_include_link(modules))
+            makefile_tasks.append(makefile.create_obj_files(self.modules))
+            makefile_tasks.append(makefile.create_include_link(self.modules))
 
             asyncio.run(util.wait_all(makefile_tasks))
             end_time = time.time()
@@ -645,21 +659,21 @@ class Dol2AsmSplitter:
             print(f"{self.step_count:2} Generate C++ files")
             self.step_count += 1
 
-            cpp_group_count = 1
             start_time = time.time()
-            tasks = [ (x,) for x in util.chunks(cpp_tasks, cpp_group_count) ]
+            tasks = [ (x,) for x in util.chunks(cpp_tasks, self.cpp_group_count) ]
             mp.progress(self.process_count, cpp.export_translation_unit_group, tasks, shared={
                 'symbol_table': self.symbol_table,
             })   
             end_time = time.time()
-            info(f"generated {len(cpp_tasks)} C++ files in {end_time-start_time:.2f} seconds ({(cpp_group_count*len(cpp_tasks))/(end_time-start_time)} c++/sec)")
+            info(f"generated {len(cpp_tasks)} C++ files in {end_time-start_time:.2f} seconds ({(self.cpp_group_count*len(cpp_tasks))/(end_time-start_time)} c++/sec)")
 
         if len(asm_tasks) > 0:
             print(f"{self.step_count:2} Generate ASM files")
             self.step_count += 1
 
             start_time = time.time()
-            tasks = asm_tasks#[ (x,) for x in util.chunks(asm_tasks, asm_group_count) ]
+            tasks = asm_tasks#[ (x,) for x in util.chunks(asm_tasks, self.asm_group_count) ]
+            debug(len(tasks))
             mp.progress(self.process_count, cpp.export_function, tasks, shared={
                 'symbol_table': self.symbol_table,
                 'no_file_generation': self.no_file_generation,
@@ -668,7 +682,7 @@ class Dol2AsmSplitter:
             asm_file_count = 0
             for sec,funcs in asm_tasks:
                 asm_file_count += len(funcs)
-            info(f"generated {asm_file_count} asm files in {end_time-start_time:.2f} seconds ({(asm_group_count*len(asm_tasks))/(end_time-start_time)} asm/sec)")
+            info(f"generated {asm_file_count} asm files in {end_time-start_time:.2f} seconds ({(self.asm_group_count*len(asm_tasks))/(end_time-start_time)} asm/sec)")
 
         if len(symdef_tasks) > 0:
             print(f"{self.step_count:2} Generate module symbol definition files")

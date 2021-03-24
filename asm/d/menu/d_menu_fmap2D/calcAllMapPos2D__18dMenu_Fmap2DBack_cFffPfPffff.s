@@ -31,7 +31,7 @@ lbl_801D0E00:
 /* 801D0E74 00000028  48 00 18 A5 */	bl getMapAreaSizeX__18dMenu_Fmap2DBack_cFv
 /* 801D0E78 0000002C  7F A3 EB 78 */	mr r3, r29
 /* 801D0E7C 00000030  48 00 18 AD */	bl getMapAreaSizeY__18dMenu_Fmap2DBack_cFv
-/* 801D0E80 00000034  C0 42 A7 E8 */	lfs f2, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D0E80 00000034  C0 42 A7 E8 */	lfs f2, lit_4202(r2)
 /* 801D0E84 00000038  88 9D 12 27 */	lbz r4, 0x1227(r29)
 /* 801D0E88 0000003C  1C 04 00 14 */	mulli r0, r4, 0x14
 /* 801D0E8C 00000040  7C 7D 02 14 */	add r3, r29, r0

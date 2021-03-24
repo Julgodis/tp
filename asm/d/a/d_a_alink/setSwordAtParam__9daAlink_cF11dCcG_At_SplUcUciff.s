@@ -20,7 +20,7 @@ lbl_800D1688:
 /* 800D16D0 00000048  90 1A 12 84 */	stw r0, 0x1284(r26)
 /* 800D16D4 0000004C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800D16D8 00000050  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800D16DC 00000054  88 04 00 14 */	lbz r0, 0x14(r4)
+/* 800D16DC 00000054  88 04 00 14 */	lbz r0, 0x14(r4)	/* effective address: 804061D4 */
 /* 800D16E0 00000058  28 00 00 3F */	cmplwi r0, 0x3f
 /* 800D16E4 0000005C  40 82 00 24 */	bne lbl_800D1708
 /* 800D16E8 00000060  57 A0 06 3E */	clrlwi r0, r29, 0x18

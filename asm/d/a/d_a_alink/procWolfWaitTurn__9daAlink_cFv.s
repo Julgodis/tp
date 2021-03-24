@@ -12,12 +12,12 @@ lbl_8012DDB4:
 /* 8012DDDC 00000028  41 82 00 14 */	beq lbl_8012DDF0
 /* 8012DDE0 0000002C  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012DDE4 00000030  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 8012DDE8 00000034  C0 44 00 6C */	lfs f2, 0x6c(r4)
+/* 8012DDE8 00000034  C0 44 00 6C */	lfs f2, 0x6c(r4)	/* effective address: 8038EE94 */
 /* 8012DDEC 00000038  48 00 00 10 */	b lbl_8012DDFC
 lbl_8012DDF0:
 /* 8012DDF0 00000000  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8012DDF4 00000004  38 84 EF 28 */	addi r4, r4, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8012DDF8 00000008  C0 44 00 10 */	lfs f2, 0x10(r4)
+/* 8012DDF8 00000008  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 8038EF38 */
 lbl_8012DDFC:
 /* 8012DDFC 00000000  48 14 29 45 */	bl cLib_chaseF__FPfff
 /* 8012DE00 00000004  7F C3 F3 78 */	mr r3, r30

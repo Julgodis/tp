@@ -30,11 +30,11 @@ extern "C" void init__11J3DUClipperFv(); // 1
 extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
 extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
 extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec(); // 1
-extern "C" extern u8 const J3DUClipper__lit_899[12];
+extern "C" extern u8 const lit_899[12];
 extern "C" extern u8 const lit_900[12];
 extern "C" extern u8 const lit_901[12];
 extern "C" extern u8 const lit_902[12];
-extern "C" extern char const* const J3DUClipper__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -54,10 +54,10 @@ extern "C" void tan(); // 1
 
 /* ############################################################################################## */
 /* 80455278-8045527C 0004+00 s=1 e=0 z=0  None .sdata2    @893                                                         */
-SECTION_SDATA2 static f32 J3DUClipper__lit_893 = 1.0f;
+SECTION_SDATA2 static f32 lit_893 = 1.0f;
 
 /* 8045527C-80455280 0004+00 s=1 e=0 z=0  None .sdata2    @894                                                         */
-SECTION_SDATA2 static f32 J3DUClipper__lit_894 = 100000.0f;
+SECTION_SDATA2 static f32 lit_894 = 100000.0f;
 
 /* 80273778-8027378C 0014+00 s=0 e=1 z=0  None .text      init__11J3DUClipperFv                                        */
 #pragma push
@@ -72,12 +72,12 @@ asm void J3DUClipper::init() {
 
 /* ############################################################################################## */
 /* 8039A948-8039A954 000C+00 s=1 e=0 z=0  None .rodata    @898                                                         */
-SECTION_RODATA static u8 const J3DUClipper__lit_898[12] = {
+SECTION_RODATA static u8 const lit_898[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455280-80455284 0004+00 s=1 e=0 z=0  None .sdata2    @913                                                         */
-SECTION_SDATA2 static f32 J3DUClipper__lit_913 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_913 = 0.01745329238474369f;
 
 /* 80455284-80455288 0004+00 s=1 e=0 z=0  None .sdata2    @914                                                         */
 SECTION_SDATA2 static f32 lit_914 = 0.5f;
@@ -125,7 +125,7 @@ asm void J3DUClipper::clip(f32 const (* param_0)[4], Vec* param_1, Vec* param_2)
 
 /* ############################################################################################## */
 /* 8039A954-8039A960 000C+00 s=0 e=0 z=0  None .rodata    @899                                                         */
-SECTION_RODATA u8 const J3DUClipper__lit_899[12] = {
+SECTION_RODATA u8 const lit_899[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

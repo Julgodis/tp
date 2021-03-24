@@ -4,8 +4,8 @@ lbl_8029C6C4:
 /* 8029C6CC 00000008  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8029C6D0 0000000C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8029C6D4 00000010  38 60 00 03 */	li r3, 3
-/* 8029C6D8 00000014  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
-/* 8029C6DC 00000018  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
+/* 8029C6D8 00000014  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8029C6DC 00000018  38 84 B2 F0 */	addi r4, r4, stringBase0@l
 /* 8029C6E0 0000001C  4B FF 48 05 */	bl start__8JASProbeFlPCc
 /* 8029C6E4 00000020  48 00 13 BD */	bl invalChannelAll__6JASDspFv
 /* 8029C6E8 00000024  4B FF 49 79 */	bl execAllCommand__10JASPortCmdFv
@@ -43,11 +43,11 @@ lbl_8029C70C:
 /* 8029C764 00000058  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8029C768 0000005C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8029C76C 00000060  EC 21 00 24 */	fdivs f1, f1, f0
-/* 8029C770 00000064  C0 02 BD 2C */	lfs f0, JASAiCtrl__lit_275(r2)
+/* 8029C770 00000064  C0 02 BD 2C */	lfs f0, lit_275(r2)
 /* 8029C774 00000068  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029C778 00000000  40 80 00 1C */	bge lbl_8029C794
-/* 8029C77C 00000004  3C 60 80 3A */	lis r3, JASAiCtrl__stringBase0@ha
-/* 8029C780 00000008  38 63 B2 F0 */	addi r3, r3, JASAiCtrl__stringBase0@l
+/* 8029C77C 00000004  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 8029C780 00000008  38 63 B2 F0 */	addi r3, r3, stringBase0@l
 /* 8029C784 0000000C  38 63 00 0B */	addi r3, r3, 0xb
 /* 8029C788 00000010  4C C6 31 82 */	crclr 6
 /* 8029C78C 00000014  4B FF 47 D9 */	bl JASReport__FPCce
@@ -57,7 +57,7 @@ lbl_8029C794:
 /* 8029C798 00000004  48 00 11 05 */	bl updateAll__13JASDSPChannelFv
 /* 8029C79C 00000008  48 00 1B 0D */	bl subframeCallback__9JASDriverFv
 /* 8029C7A0 0000000C  48 00 02 49 */	bl getDacRate__9JASDriverFv
-/* 8029C7A4 00000010  C0 02 BD 30 */	lfs f0, JASAiCtrl__lit_276(r2)
+/* 8029C7A4 00000010  C0 02 BD 30 */	lfs f0, lit_276(r2)
 /* 8029C7A8 00000014  EC 20 08 24 */	fdivs f1, f0, f1
 /* 8029C7AC 00000018  3C 60 80 43 */	lis r3, sFreeRunLfo__6JASLfo@ha
 /* 8029C7B0 0000001C  38 63 1C 40 */	addi r3, r3, sFreeRunLfo__6JASLfo@l

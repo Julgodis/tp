@@ -181,7 +181,7 @@ asm void J3DGetTranslateRotateMtx(s16 param_0, s16 param_1, s16 param_2, f32 par
 
 /* ############################################################################################## */
 /* 8045637C-80456380 0004+00 s=4 e=0 z=0  None .sdata2    @526                                                         */
-SECTION_SDATA2 static f32 J3DTransform__lit_526 = 1.0f;
+SECTION_SDATA2 static f32 lit_526 = 1.0f;
 
 /* 80311ACC-80311B80 00B4+00 s=0 e=3 z=0  None .text      J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f          */
 #pragma push
@@ -270,7 +270,7 @@ asm void J3DMtxProjConcat(f32 (* param_0)[4], f32 (* param_1)[4], f32 (* param_2
 
 /* ############################################################################################## */
 /* 80450958-80450960 0008+00 s=1 e=0 z=0  None .sdata     Unit01                                                       */
-SECTION_SDATA static u8 J3DTransform__Unit01[8] = {
+SECTION_SDATA static u8 Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 

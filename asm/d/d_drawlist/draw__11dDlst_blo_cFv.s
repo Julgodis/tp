@@ -8,7 +8,7 @@ lbl_80053B64:
 /* 80053B7C 00000018  C0 44 01 24 */	lfs f2, 0x124(r4)
 /* 80053B80 0000001C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80053B84 00000020  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80053B88 00000024  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 80053B88 00000024  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 80053B8C 00000028  48 2A 53 49 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 80053B90 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80053B94 00000030  7C 08 03 A6 */	mtlr r0

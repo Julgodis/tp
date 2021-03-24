@@ -5,8 +5,8 @@ lbl_8004212C:
 /* 80042138 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8004213C 00000010  48 32 00 A1 */	bl _savegpr_29
 /* 80042140 00000014  7C 7D 1B 78 */	mr r29, r3
-/* 80042144 00000018  3C A0 80 38 */	lis r5, d_event_d_event__stringBase0@ha
-/* 80042148 0000001C  38 A5 9D 80 */	addi r5, r5, d_event_d_event__stringBase0@l
+/* 80042144 00000018  3C A0 80 38 */	lis r5, stringBase0@ha
+/* 80042148 0000001C  38 A5 9D 80 */	addi r5, r5, stringBase0@l
 /* 8004214C 00000020  3B C5 00 33 */	addi r30, r5, 0x33
 /* 80042150 00000024  38 A0 00 08 */	li r5, 8
 /* 80042154 00000028  38 C0 00 04 */	li r6, 4

@@ -9,7 +9,7 @@ lbl_80237D88:
 /* 80237DA4 0000001C  4B FF FB AD */	bl onCameraCancelFlag__12dMsgObject_cFv
 /* 80237DA8 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80237DAC 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80237DB0 00000028  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80237DB0 00000028  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80237DB4 0000002C  7F E4 FB 78 */	mr r4, r31
 /* 80237DB8 00000030  4B FF C3 71 */	bl getMessageIDAlways__12dMsgObject_cFUl
 /* 80237DBC 00000034  38 80 03 E8 */	li r4, 0x3e8

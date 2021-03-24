@@ -36,7 +36,7 @@ extern "C" void __CARDGetControlBlock(); // 1
 extern "C" void __CARDPutControlBlock(); // 1
 extern "C" void CARDFreeBlocks(); // 1
 extern "C" void __CARDSync(); // 1
-extern "C" static void CARDBios__OnReset(); // 1
+extern "C" static void OnReset(); // 1
 extern "C" void CARDGetFastMode(); // 1
 extern "C" extern u8 __CARDBlock[544];
 extern "C" extern u8 __CARDDiskNone[32];
@@ -270,7 +270,7 @@ extern "C" asm void __CARDEraseSector() {
 
 /* ############################################################################################## */
 /* 803D1E38-803D1E80 0046+02 s=1 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 CARDBios__lit_1[70 + 2 /* padding */] = {
+SECTION_DATA static u8 lit_1[70 + 2 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x43, 0x41, 0x52, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75,
 	0x69, 0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34,
@@ -281,8 +281,8 @@ SECTION_DATA static u8 CARDBios__lit_1[70 + 2 /* padding */] = {
 };
 
 /* 803D1E80-803D1EA0 0010+10 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
-SECTION_DATA static void* CARDBios__ResetFunctionInfo[4 + 4 /* padding */] = {
-	/* 0    */ (void*)CARDBios__OnReset,
+SECTION_DATA static void* ResetFunctionInfo[4 + 4 /* padding */] = {
+	/* 0    */ (void*)OnReset,
 	/* 1    */ (void*)0x0000007F,
 	/* 2    */ (void*)NULL,
 	/* 3    */ (void*)NULL,
@@ -295,7 +295,7 @@ SECTION_DATA static void* CARDBios__ResetFunctionInfo[4 + 4 /* padding */] = {
 
 /* 80450A60-80450A68 0004+04 s=1 e=0 z=0  None .sdata     __CARDVersion                                                */
 SECTION_SDATA static void* __CARDVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&CARDBios__lit_1,
+	/* 0    */ (void*)&lit_1,
 	/* padding */
 	NULL,
 };
@@ -384,9 +384,9 @@ extern "C" asm void __CARDSync() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDBios__OnReset() {
+extern "C" asm static void OnReset() {
 	nofralloc
-#include "asm/dolphin/card/CARDBios/CARDBios__OnReset.s"
+#include "asm/dolphin/card/CARDBios/OnReset.s"
 }
 #pragma pop
 

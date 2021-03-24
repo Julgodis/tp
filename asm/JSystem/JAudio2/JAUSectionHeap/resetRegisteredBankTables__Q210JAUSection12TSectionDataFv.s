@@ -9,8 +9,8 @@ lbl_802A4F68:
 /* 802A4F84 0000001C  3C 60 80 3D */	lis r3, __files@ha
 /* 802A4F88 00000020  38 63 29 B0 */	addi r3, r3, __files@l
 /* 802A4F8C 00000024  3B C3 00 A0 */	addi r30, r3, 0xa0
-/* 802A4F90 00000028  3C 60 80 3A */	lis r3, JAUSectionHeap__stringBase0@ha
-/* 802A4F94 0000002C  3B E3 B9 50 */	addi r31, r3, JAUSectionHeap__stringBase0@l
+/* 802A4F90 00000028  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802A4F94 0000002C  3B E3 B9 50 */	addi r31, r3, stringBase0@l
 lbl_802A4F98:
 /* 802A4F98 00000000  28 1D 00 FF */	cmplwi r29, 0xff
 /* 802A4F9C 00000004  41 80 00 18 */	blt lbl_802A4FB4

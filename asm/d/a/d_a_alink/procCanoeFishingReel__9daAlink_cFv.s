@@ -25,7 +25,7 @@ lbl_800F68C4:
 /* 800F68C8 00000004  41 82 00 20 */	beq lbl_800F68E8
 /* 800F68CC 00000008  7F E3 FB 78 */	mr r3, r31
 /* 800F68D0 0000000C  38 80 00 02 */	li r4, 2
-/* 800F68D4 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F68D4 00000010  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F68D8 00000014  4B FB 6E 4D */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800F68DC 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800F68E0 0000001C  4B FF FB 85 */	bl procCanoeFishingWaitInit__9daAlink_cFv

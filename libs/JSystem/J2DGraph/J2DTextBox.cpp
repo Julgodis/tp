@@ -11,13 +11,48 @@
 // Types:
 // 
 
+struct JKRArchive {
+};
+
+struct JUTFont {
+};
+
+struct J2DMaterial {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmTexPattern {
+};
+
 struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct JSUStreamSeekFrom {
 };
 
-struct J2DAnmVisibilityFull {
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct JGeometry {
@@ -29,36 +64,13 @@ struct JGeometry {
 
 };
 
-struct JKRArchive {
-};
-
-struct _GXCullMode {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct ResTIMG {
-};
-
 struct ResFONT {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmTransform {
 };
 
-struct J2DAnmBase {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmColor {
@@ -102,22 +114,10 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct J2DTextBoxHBinding {
 };
 
-struct J2DMaterial {
-};
-
 struct J2DTextBoxVBinding {
-};
-
-struct JUTFont {
 };
 
 struct J2DTextBox {
@@ -196,7 +196,7 @@ extern "C" void isUsed__10J2DTextBoxFPC7ResFONT(); // 1
 extern "C" void getTypeID__10J2DTextBoxCFv(); // 1
 extern "C" void isUsed__10J2DTextBoxFPC7ResTIMG(); // 1
 extern "C" void rewriteAlpha__10J2DTextBoxFv(); // 1
-extern "C" extern char const* const J2DTextBox__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

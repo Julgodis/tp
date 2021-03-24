@@ -8,7 +8,7 @@ lbl_801B3524:
 /* 801B353C 00000018  3B C0 FF FF */	li r30, -1
 /* 801B3540 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B3544 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B3548 00000024  88 03 00 16 */	lbz r0, 0x16(r3)
+/* 801B3548 00000024  88 03 00 16 */	lbz r0, 0x16(r3)	/* effective address: 804061D6 */
 /* 801B354C 00000028  2C 00 00 B3 */	cmpwi r0, 0xb3
 /* 801B3550 0000002C  41 82 00 40 */	beq lbl_801B3590
 /* 801B3554 00000030  40 80 00 1C */	bge lbl_801B3570

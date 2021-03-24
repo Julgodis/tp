@@ -20,7 +20,7 @@ lbl_8001FAB0:
 /* 8001FAB0 00000000  93 5F 00 00 */	stw r26, 0(r31)
 /* 8001FAB4 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001FAB8 00000008  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8001FABC 0000000C  80 03 5D BC */	lwz r0, 0x5dbc(r3)
+/* 8001FABC 0000000C  80 03 5D BC */	lwz r0, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 8001FAC0 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 8001FAC4 00000014  41 82 00 0C */	beq lbl_8001FAD0
 /* 8001FAC8 00000018  7F 43 D3 78 */	mr r3, r26
@@ -46,7 +46,7 @@ lbl_8001FAF0:
 /* 8001FB0C 0000001C  D0 1F 00 0C */	stfs f0, 0xc(r31)
 /* 8001FB10 00000020  48 00 00 20 */	b lbl_8001FB30
 lbl_8001FB14:
-/* 8001FB14 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__lit_3902(r2)
+/* 8001FB14 00000000  C0 02 82 70 */	lfs f0, lit_3902(r2)
 /* 8001FB18 00000004  D0 01 00 08 */	stfs f0, 8(r1)
 /* 8001FB1C 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8001FB20 0000000C  D0 01 00 10 */	stfs f0, 0x10(r1)

@@ -7,8 +7,8 @@ lbl_8029CF68:
 /* 8029CF7C 00000014  38 60 00 04 */	li r3, 4
 /* 8029CF80 00000018  4B FF 3F A5 */	bl stop__8JASProbeFl
 /* 8029CF84 0000001C  38 60 00 04 */	li r3, 4
-/* 8029CF88 00000020  3C 80 80 3A */	lis r4, JASAudioThread__stringBase0@ha
-/* 8029CF8C 00000024  38 84 B3 38 */	addi r4, r4, JASAudioThread__stringBase0@l
+/* 8029CF88 00000020  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8029CF8C 00000024  38 84 B3 38 */	addi r4, r4, stringBase0@l
 /* 8029CF90 00000028  38 84 00 08 */	addi r4, r4, 8
 /* 8029CF94 0000002C  4B FF 3F 51 */	bl start__8JASProbeFlPCc
 /* 8029CF98 00000030  38 7F 00 30 */	addi r3, r31, 0x30

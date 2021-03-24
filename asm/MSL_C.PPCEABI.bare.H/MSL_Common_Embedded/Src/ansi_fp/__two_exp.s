@@ -16,10 +16,10 @@ lbl_8036367C:
 /* 803636B4 00000038  7C 09 03 A6 */	mtctr r0
 /* 803636B8 0000003C  4E 80 04 20 */	bctr 
 /* 803636BC 00000040  38 00 FF EC */	li r0, -20
-/* 803636C0 00000044  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 803636C0 00000044  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 803636C4 00000048  B0 1F 00 02 */	sth r0, 2(r31)
 /* 803636C8 0000004C  38 80 00 00 */	li r4, 0
-/* 803636CC 00000050  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803636CC 00000050  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803636D0 00000054  98 9F 00 00 */	stb r4, 0(r31)
 /* 803636D4 00000058  38 A3 00 25 */	addi r5, r3, 0x25
 /* 803636D8 0000005C  48 00 00 1C */	b lbl_803636F4
@@ -88,10 +88,10 @@ lbl_803637A8:
 /* 803637B0 00000008  4B FF FF C0 */	b lbl_80363770
 /* 803637B4 0000000C  48 00 16 34 */	b lbl_80364DE8
 /* 803637B8 00000010  38 00 FF F0 */	li r0, -16
-/* 803637BC 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 803637BC 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 803637C0 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 803637C4 0000001C  38 80 00 00 */	li r4, 0
-/* 803637C8 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803637C8 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803637CC 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803637D0 00000028  38 A3 00 53 */	addi r5, r3, 0x53
 /* 803637D4 0000002C  48 00 00 1C */	b lbl_803637F0
@@ -160,10 +160,10 @@ lbl_803638A4:
 /* 803638AC 00000008  4B FF FF C0 */	b lbl_8036386C
 /* 803638B0 0000000C  48 00 15 38 */	b lbl_80364DE8
 /* 803638B4 00000010  38 00 FF F6 */	li r0, -10
-/* 803638B8 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 803638B8 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 803638BC 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 803638C0 0000001C  38 80 00 00 */	li r4, 0
-/* 803638C4 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803638C4 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803638C8 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803638CC 00000028  38 A3 00 7A */	addi r5, r3, 0x7a
 /* 803638D0 0000002C  48 00 00 1C */	b lbl_803638EC
@@ -232,10 +232,10 @@ lbl_803639A0:
 /* 803639A8 00000008  4B FF FF C0 */	b lbl_80363968
 /* 803639AC 0000000C  48 00 14 3C */	b lbl_80364DE8
 /* 803639B0 00000010  38 00 FF FB */	li r0, -5
-/* 803639B4 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 803639B4 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 803639B8 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 803639BC 0000001C  38 80 00 00 */	li r4, 0
-/* 803639C0 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803639C0 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803639C4 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803639C8 00000028  38 A3 00 92 */	addi r5, r3, 0x92
 /* 803639CC 0000002C  48 00 00 1C */	b lbl_803639E8
@@ -304,10 +304,10 @@ lbl_80363A9C:
 /* 80363AA4 00000008  4B FF FF C0 */	b lbl_80363A64
 /* 80363AA8 0000000C  48 00 13 40 */	b lbl_80364DE8
 /* 80363AAC 00000010  38 00 FF FD */	li r0, -3
-/* 80363AB0 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363AB0 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363AB4 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363AB8 0000001C  38 80 00 00 */	li r4, 0
-/* 80363ABC 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363ABC 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363AC0 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363AC4 00000028  38 A3 00 9F */	addi r5, r3, 0x9f
 /* 80363AC8 0000002C  48 00 00 1C */	b lbl_80363AE4
@@ -376,10 +376,10 @@ lbl_80363B98:
 /* 80363BA0 00000008  4B FF FF C0 */	b lbl_80363B60
 /* 80363BA4 0000000C  48 00 12 44 */	b lbl_80364DE8
 /* 80363BA8 00000010  38 00 FF FD */	li r0, -3
-/* 80363BAC 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363BAC 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363BB0 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363BB4 0000001C  38 80 00 00 */	li r4, 0
-/* 80363BB8 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363BB8 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363BBC 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363BC0 00000028  38 A3 00 A6 */	addi r5, r3, 0xa6
 /* 80363BC4 0000002C  48 00 00 1C */	b lbl_80363BE0
@@ -448,10 +448,10 @@ lbl_80363C94:
 /* 80363C9C 00000008  4B FF FF C0 */	b lbl_80363C5C
 /* 80363CA0 0000000C  48 00 11 48 */	b lbl_80364DE8
 /* 80363CA4 00000010  38 00 FF FE */	li r0, -2
-/* 80363CA8 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363CA8 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363CAC 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363CB0 0000001C  38 80 00 00 */	li r4, 0
-/* 80363CB4 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363CB4 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363CB8 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363CBC 00000028  38 A3 00 AC */	addi r5, r3, 0xac
 /* 80363CC0 0000002C  48 00 00 1C */	b lbl_80363CDC
@@ -520,10 +520,10 @@ lbl_80363D90:
 /* 80363D98 00000008  4B FF FF C0 */	b lbl_80363D58
 /* 80363D9C 0000000C  48 00 10 4C */	b lbl_80364DE8
 /* 80363DA0 00000010  38 00 FF FE */	li r0, -2
-/* 80363DA4 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363DA4 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363DA8 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363DAC 0000001C  38 80 00 00 */	li r4, 0
-/* 80363DB0 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363DB0 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363DB4 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363DB8 00000028  38 A3 00 B2 */	addi r5, r3, 0xb2
 /* 80363DBC 0000002C  48 00 00 1C */	b lbl_80363DD8
@@ -592,10 +592,10 @@ lbl_80363E8C:
 /* 80363E94 00000008  4B FF FF C0 */	b lbl_80363E54
 /* 80363E98 0000000C  48 00 0F 50 */	b lbl_80364DE8
 /* 80363E9C 00000010  38 00 FF FE */	li r0, -2
-/* 80363EA0 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363EA0 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363EA4 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363EA8 0000001C  38 80 00 00 */	li r4, 0
-/* 80363EAC 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363EAC 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363EB0 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363EB4 00000028  38 A3 00 B7 */	addi r5, r3, 0xb7
 /* 80363EB8 0000002C  48 00 00 1C */	b lbl_80363ED4
@@ -664,10 +664,10 @@ lbl_80363F88:
 /* 80363F90 00000008  4B FF FF C0 */	b lbl_80363F50
 /* 80363F94 0000000C  48 00 0E 54 */	b lbl_80364DE8
 /* 80363F98 00000010  38 00 FF FF */	li r0, -1
-/* 80363F9C 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80363F9C 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80363FA0 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80363FA4 0000001C  38 80 00 00 */	li r4, 0
-/* 80363FA8 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80363FA8 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80363FAC 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80363FB0 00000028  38 A3 00 BB */	addi r5, r3, 0xbb
 /* 80363FB4 0000002C  48 00 00 1C */	b lbl_80363FD0
@@ -736,10 +736,10 @@ lbl_80364084:
 /* 8036408C 00000008  4B FF FF C0 */	b lbl_8036404C
 /* 80364090 0000000C  48 00 0D 58 */	b lbl_80364DE8
 /* 80364094 00000010  38 00 FF FF */	li r0, -1
-/* 80364098 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364098 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 8036409C 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 803640A0 0000001C  38 80 00 00 */	li r4, 0
-/* 803640A4 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803640A4 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803640A8 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803640AC 00000028  38 A3 00 BF */	addi r5, r3, 0xbf
 /* 803640B0 0000002C  48 00 00 1C */	b lbl_803640CC
@@ -808,10 +808,10 @@ lbl_80364180:
 /* 80364188 00000008  4B FF FF C0 */	b lbl_80364148
 /* 8036418C 0000000C  48 00 0C 5C */	b lbl_80364DE8
 /* 80364190 00000010  38 00 FF FF */	li r0, -1
-/* 80364194 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364194 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364198 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 8036419C 0000001C  38 80 00 00 */	li r4, 0
-/* 803641A0 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 803641A0 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 803641A4 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803641A8 00000028  38 A3 00 C2 */	addi r5, r3, 0xc2
 /* 803641AC 0000002C  48 00 00 1C */	b lbl_803641C8
@@ -880,9 +880,9 @@ lbl_8036427C:
 /* 80364284 00000008  4B FF FF C0 */	b lbl_80364244
 /* 80364288 0000000C  48 00 0B 60 */	b lbl_80364DE8
 /* 8036428C 00000010  38 80 00 00 */	li r4, 0
-/* 80364290 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364290 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364294 00000018  B0 9F 00 02 */	sth r4, 2(r31)
-/* 80364298 0000001C  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364298 0000001C  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 8036429C 00000020  38 A3 00 C4 */	addi r5, r3, 0xc4
 /* 803642A0 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 803642A4 00000028  48 00 00 1C */	b lbl_803642C0
@@ -951,9 +951,9 @@ lbl_80364374:
 /* 8036437C 00000008  4B FF FF C0 */	b lbl_8036433C
 /* 80364380 0000000C  48 00 0A 68 */	b lbl_80364DE8
 /* 80364384 00000010  38 80 00 00 */	li r4, 0
-/* 80364388 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364388 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 8036438C 00000018  B0 9F 00 02 */	sth r4, 2(r31)
-/* 80364390 0000001C  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364390 0000001C  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364394 00000020  38 A3 00 C6 */	addi r5, r3, 0xc6
 /* 80364398 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 8036439C 00000028  48 00 00 1C */	b lbl_803643B8
@@ -1022,9 +1022,9 @@ lbl_8036446C:
 /* 80364474 00000008  4B FF FF C0 */	b lbl_80364434
 /* 80364478 0000000C  48 00 09 70 */	b lbl_80364DE8
 /* 8036447C 00000010  38 80 00 00 */	li r4, 0
-/* 80364480 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364480 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364484 00000018  B0 9F 00 02 */	sth r4, 2(r31)
-/* 80364488 0000001C  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364488 0000001C  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 8036448C 00000020  38 A3 00 C8 */	addi r5, r3, 0xc8
 /* 80364490 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80364494 00000028  48 00 00 1C */	b lbl_803644B0
@@ -1093,9 +1093,9 @@ lbl_80364564:
 /* 8036456C 00000008  4B FF FF C0 */	b lbl_8036452C
 /* 80364570 0000000C  48 00 08 78 */	b lbl_80364DE8
 /* 80364574 00000010  38 80 00 00 */	li r4, 0
-/* 80364578 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364578 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 8036457C 00000018  B0 9F 00 02 */	sth r4, 2(r31)
-/* 80364580 0000001C  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364580 0000001C  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364584 00000020  38 A3 00 CA */	addi r5, r3, 0xca
 /* 80364588 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 8036458C 00000028  48 00 00 1C */	b lbl_803645A8
@@ -1164,10 +1164,10 @@ lbl_8036465C:
 /* 80364664 00000008  4B FF FF C0 */	b lbl_80364624
 /* 80364668 0000000C  48 00 07 80 */	b lbl_80364DE8
 /* 8036466C 00000010  38 00 00 01 */	li r0, 1
-/* 80364670 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364670 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364674 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80364678 0000001C  38 80 00 00 */	li r4, 0
-/* 8036467C 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 8036467C 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364680 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80364684 00000028  38 A3 00 CC */	addi r5, r3, 0xcc
 /* 80364688 0000002C  48 00 00 1C */	b lbl_803646A4
@@ -1236,10 +1236,10 @@ lbl_80364758:
 /* 80364760 00000008  4B FF FF C0 */	b lbl_80364720
 /* 80364764 0000000C  48 00 06 84 */	b lbl_80364DE8
 /* 80364768 00000010  38 00 00 01 */	li r0, 1
-/* 8036476C 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 8036476C 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364770 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80364774 0000001C  38 80 00 00 */	li r4, 0
-/* 80364778 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364778 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 8036477C 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80364780 00000028  38 A3 00 CF */	addi r5, r3, 0xcf
 /* 80364784 0000002C  48 00 00 1C */	b lbl_803647A0
@@ -1308,10 +1308,10 @@ lbl_80364854:
 /* 8036485C 00000008  4B FF FF C0 */	b lbl_8036481C
 /* 80364860 0000000C  48 00 05 88 */	b lbl_80364DE8
 /* 80364864 00000010  38 00 00 01 */	li r0, 1
-/* 80364868 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364868 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 8036486C 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80364870 0000001C  38 80 00 00 */	li r4, 0
-/* 80364874 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364874 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364878 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 8036487C 00000028  38 A3 00 D2 */	addi r5, r3, 0xd2
 /* 80364880 0000002C  48 00 00 1C */	b lbl_8036489C
@@ -1380,10 +1380,10 @@ lbl_80364950:
 /* 80364958 00000008  4B FF FF C0 */	b lbl_80364918
 /* 8036495C 0000000C  48 00 04 8C */	b lbl_80364DE8
 /* 80364960 00000010  38 00 00 02 */	li r0, 2
-/* 80364964 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364964 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364968 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 8036496C 0000001C  38 80 00 00 */	li r4, 0
-/* 80364970 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364970 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364974 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80364978 00000028  38 A3 00 D5 */	addi r5, r3, 0xd5
 /* 8036497C 0000002C  48 00 00 1C */	b lbl_80364998
@@ -1452,10 +1452,10 @@ lbl_80364A4C:
 /* 80364A54 00000008  4B FF FF C0 */	b lbl_80364A14
 /* 80364A58 0000000C  48 00 03 90 */	b lbl_80364DE8
 /* 80364A5C 00000010  38 00 00 02 */	li r0, 2
-/* 80364A60 00000014  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364A60 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364A64 00000018  B0 1F 00 02 */	sth r0, 2(r31)
 /* 80364A68 0000001C  38 80 00 00 */	li r4, 0
-/* 80364A6C 00000020  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364A6C 00000020  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364A70 00000024  98 9F 00 00 */	stb r4, 0(r31)
 /* 80364A74 00000028  38 A3 00 D9 */	addi r5, r3, 0xd9
 /* 80364A78 0000002C  48 00 00 1C */	b lbl_80364A94
@@ -1560,8 +1560,8 @@ lbl_80364B58:
 /* 80364BDC 00000084  B0 01 00 30 */	sth r0, 0x30(r1)
 /* 80364BE0 00000088  40 81 00 FC */	ble lbl_80364CDC
 /* 80364BE4 0000008C  38 A0 00 00 */	li r5, 0
-/* 80364BE8 00000090  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
-/* 80364BEC 00000094  38 83 22 38 */	addi r4, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364BE8 00000090  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 80364BEC 00000094  38 83 22 38 */	addi r4, r3, stringBase0@l
 /* 80364BF0 00000098  B0 A1 00 36 */	sth r5, 0x36(r1)
 /* 80364BF4 0000009C  38 61 00 34 */	addi r3, r1, 0x34
 /* 80364BF8 000000A0  98 A1 00 34 */	stb r5, 0x34(r1)
@@ -1632,10 +1632,10 @@ lbl_80364CD0:
 /* 80364CD8 00000008  4B FF FF C0 */	b lbl_80364C98
 lbl_80364CDC:
 /* 80364CDC 00000000  38 A0 00 00 */	li r5, 0
-/* 80364CE0 00000004  3C 60 80 3A */	lis r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@ha
+/* 80364CE0 00000004  3C 60 80 3A */	lis r3, stringBase0@ha
 /* 80364CE4 00000008  38 00 FF FF */	li r0, -1
 /* 80364CE8 0000000C  98 A1 00 34 */	stb r5, 0x34(r1)
-/* 80364CEC 00000010  38 63 22 38 */	addi r3, r3, MSL_Common_Embedded_Src_ansi_fp__stringBase0@l
+/* 80364CEC 00000010  38 63 22 38 */	addi r3, r3, stringBase0@l
 /* 80364CF0 00000014  38 C3 00 C2 */	addi r6, r3, 0xc2
 /* 80364CF4 00000018  B0 01 00 36 */	sth r0, 0x36(r1)
 /* 80364CF8 0000001C  38 61 00 34 */	addi r3, r1, 0x34

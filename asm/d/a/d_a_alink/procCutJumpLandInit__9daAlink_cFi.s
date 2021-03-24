@@ -20,10 +20,10 @@ lbl_800D452C:
 /* 800D4574 00000048  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
 /* 800D4578 0000004C  41 82 00 28 */	beq lbl_800D45A0
 /* 800D457C 00000050  80 7E 20 60 */	lwz r3, 0x2060(r30)
-/* 800D4580 00000054  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800D4580 00000054  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800D4584 00000058  3C 80 80 39 */	lis r4, m__21daAlinkHIO_cutJump_c0@ha
 /* 800D4588 0000005C  38 84 DB 40 */	addi r4, r4, m__21daAlinkHIO_cutJump_c0@l
-/* 800D458C 00000060  C0 04 00 20 */	lfs f0, 0x20(r4)
+/* 800D458C 00000060  C0 04 00 20 */	lfs f0, 0x20(r4)	/* effective address: 8038DB60 */
 /* 800D4590 00000064  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800D4594 00000068  38 80 00 00 */	li r4, 0
 /* 800D4598 0000006C  38 A0 00 23 */	li r5, 0x23
@@ -50,8 +50,8 @@ lbl_800D45A0:
 /* 800D45E8 00000048  38 E0 00 03 */	li r7, 3
 /* 800D45EC 0000004C  3D 00 80 39 */	lis r8, m__17daAlinkHIO_cut_c0@ha
 /* 800D45F0 00000050  39 08 DE 8C */	addi r8, r8, m__17daAlinkHIO_cut_c0@l
-/* 800D45F4 00000054  C0 28 00 74 */	lfs f1, 0x74(r8)
-/* 800D45F8 00000058  C0 48 00 78 */	lfs f2, 0x78(r8)
+/* 800D45F4 00000054  C0 28 00 74 */	lfs f1, 0x74(r8)	/* effective address: 8038DF00 */
+/* 800D45F8 00000058  C0 48 00 78 */	lfs f2, 0x78(r8)	/* effective address: 8038DF04 */
 /* 800D45FC 0000005C  4B FF D0 8D */	bl setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff
 lbl_800D4600:
 /* 800D4600 00000000  80 1E 05 80 */	lwz r0, 0x580(r30)
@@ -73,9 +73,9 @@ lbl_800D4600:
 /* 800D4640 00000040  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800D4644 00000044  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800D4648 00000048  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 800D464C 0000004C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800D464C 0000004C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800D4650 00000050  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 800D4654 00000054  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800D4654 00000054  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800D4658 00000058  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 800D465C 0000005C  93 FE 31 98 */	stw r31, 0x3198(r30)
 /* 800D4660 00000060  7F C3 F3 78 */	mr r3, r30

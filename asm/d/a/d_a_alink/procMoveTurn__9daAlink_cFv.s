@@ -17,7 +17,7 @@ lbl_800C3D38:
 /* 800C3D74 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 800C3D78 00000040  40 82 00 10 */	bne lbl_800C3D88
 /* 800C3D7C 00000044  7F E3 FB 78 */	mr r3, r31
-/* 800C3D80 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C3D80 00000048  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C3D84 0000004C  4B FE A0 91 */	bl setBlendMoveAnime__9daAlink_cFf
 lbl_800C3D88:
 /* 800C3D88 00000000  38 60 00 01 */	li r3, 1

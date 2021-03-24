@@ -14,10 +14,10 @@
 struct STControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
 struct dMenu_Ring_c {
@@ -279,15 +279,7 @@ extern "C" extern u8 const data_80397828[40];
 extern "C" extern u8 const data_80397850[40];
 extern "C" extern u8 const data_80397878[40];
 extern "C" extern u8 const data_803978A0[40];
-extern "C" extern char const* const d_menu_d_menu_ring__stringBase0;
-extern "C" extern void* d_menu_d_menu_ring__lit_3862[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3863[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3864[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3865[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3866[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3867[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3868[3];
-extern "C" extern void* d_menu_d_menu_ring__lit_3869[3];
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 pad_80454434[4];
 
 // 
@@ -514,74 +506,74 @@ SECTION_DEAD static char const* const pad_8039795A = "\0\0\0\0\0";
 #pragma pop
 
 /* 803BDE70-803BDE7C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_menu_d_menu_ring__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDE7C-803BDE88 000C+00 s=0 e=0 z=0  None .data      @3862                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3862[3] = {
+/* 803BDE7C-803BDE88 000C+00 s=1 e=0 z=0  None .data      @3862                                                        */
+SECTION_DATA static void* lit_3862[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_wait_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDE88-803BDE94 000C+00 s=0 e=0 z=0  None .data      @3863                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3863[3] = {
+/* 803BDE88-803BDE94 000C+00 s=1 e=0 z=0  None .data      @3863                                                        */
+SECTION_DATA static void* lit_3863[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_move_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDE94-803BDEA0 000C+00 s=0 e=0 z=0  None .data      @3864                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3864[3] = {
+/* 803BDE94-803BDEA0 000C+00 s=1 e=0 z=0  None .data      @3864                                                        */
+SECTION_DATA static void* lit_3864[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_explain_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDEA0-803BDEAC 000C+00 s=0 e=0 z=0  None .data      @3865                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3865[3] = {
+/* 803BDEA0-803BDEAC 000C+00 s=1 e=0 z=0  None .data      @3865                                                        */
+SECTION_DATA static void* lit_3865[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_explain_force_init__12dMenu_Ring_cFv,
 };
 
-/* 803BDEAC-803BDEDC 0030+00 s=3 e=0 z=0  None .data      stick_init                                                   */
+/* 803BDEAC-803BDEDC 0030+00 s=4 e=0 z=0  None .data      stick_init                                                   */
 SECTION_DATA static u8 stick_init[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BDEDC-803BDEE8 000C+00 s=0 e=0 z=0  None .data      @3866                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3866[3] = {
+/* 803BDEDC-803BDEE8 000C+00 s=1 e=0 z=0  None .data      @3866                                                        */
+SECTION_DATA static void* lit_3866[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_wait_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDEE8-803BDEF4 000C+00 s=0 e=0 z=0  None .data      @3867                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3867[3] = {
+/* 803BDEE8-803BDEF4 000C+00 s=1 e=0 z=0  None .data      @3867                                                        */
+SECTION_DATA static void* lit_3867[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_move_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDEF4-803BDF00 000C+00 s=0 e=0 z=0  None .data      @3868                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3868[3] = {
+/* 803BDEF4-803BDF00 000C+00 s=1 e=0 z=0  None .data      @3868                                                        */
+SECTION_DATA static void* lit_3868[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_explain_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDF00-803BDF0C 000C+00 s=0 e=0 z=0  None .data      @3869                                                        */
-SECTION_DATA void* d_menu_d_menu_ring__lit_3869[3] = {
+/* 803BDF00-803BDF0C 000C+00 s=1 e=0 z=0  None .data      @3869                                                        */
+SECTION_DATA static void* lit_3869[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)stick_explain_force_proc__12dMenu_Ring_cFv,
 };
 
-/* 803BDF0C-803BDF3C 0030+00 s=1 e=0 z=0  None .data      stick_proc                                                   */
+/* 803BDF0C-803BDF3C 0030+00 s=2 e=0 z=0  None .data      stick_proc                                                   */
 SECTION_DATA static u8 stick_proc[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -589,7 +581,7 @@ SECTION_DATA static u8 stick_proc[48] = {
 };
 
 /* 803BDF3C-803BDF5C 0020+00 s=1 e=0 z=0  None .data      @4795                                                        */
-SECTION_DATA static void* d_menu_d_menu_ring__lit_4795[8] = {
+SECTION_DATA static void* lit_4795[8] = {
 	/* 0    */ (void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x4C),
 	/* 1    */ (void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x60),
 	/* 2    */ (void*)(((char*)calcStickAngle__12dMenu_Ring_cFP9STControlUc)+0x8C),
@@ -613,46 +605,46 @@ SECTION_DATA static void* __vt__12dMenu_Ring_c[4 + 3 /* padding */] = {
 };
 
 /* 80454388-8045438C 0004+00 s=9 e=0 z=0  None .sdata2    @4300                                                        */
-SECTION_SDATA2 static u8 d_menu_d_menu_ring__lit_4300[4] = {
+SECTION_SDATA2 static u8 lit_4300[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045438C-80454390 0004+00 s=3 e=0 z=0  None .sdata2    @4301                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4301 = 448.0f;
+SECTION_SDATA2 static f32 lit_4301 = 448.0f;
 
 /* 80454390-80454394 0004+00 s=3 e=0 z=0  None .sdata2    @4302                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4302 = -448.0f;
+SECTION_SDATA2 static f32 lit_4302 = -448.0f;
 
 /* 80454394-80454398 0004+00 s=3 e=0 z=0  None .sdata2    @4303                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4303 = 608.0f;
+SECTION_SDATA2 static f32 lit_4303 = 608.0f;
 
 /* 80454398-8045439C 0004+00 s=3 e=0 z=0  None .sdata2    @4304                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4304 = -608.0f;
+SECTION_SDATA2 static f32 lit_4304 = -608.0f;
 
 /* 8045439C-804543A0 0004+00 s=18 e=0 z=0  None .sdata2    @4305                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4305 = 1.0f;
+SECTION_SDATA2 static f32 lit_4305 = 1.0f;
 
 /* 804543A0-804543A4 0004+00 s=2 e=0 z=0  None .sdata2    @4306                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4306 = 100.0f;
+SECTION_SDATA2 static f32 lit_4306 = 100.0f;
 
 /* 804543A4-804543A8 0004+00 s=5 e=0 z=0  None .sdata2    @4307                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4307 = 48.0f;
+SECTION_SDATA2 static f32 lit_4307 = 48.0f;
 
 /* 804543A8-804543AC 0004+00 s=4 e=0 z=0  None .sdata2    @4308                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4308 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4308 = 1.0f / 10.0f;
 
 /* 804543AC-804543B0 0004+00 s=4 e=0 z=0  None .sdata2    @4309                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4309 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4309 = 3.0f / 5.0f;
 
 /* 804543B0-804543B8 0004+04 s=7 e=0 z=0  None .sdata2    @4310                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4310[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4310[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
 /* 804543B8-804543C0 0008+00 s=5 e=0 z=0  None .sdata2    @4312                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_ring__lit_4312 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4312 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 801E9118-801EA708 15F0+00 s=0 e=1 z=0  None .text      __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc */
 #pragma push
@@ -678,7 +670,7 @@ asm dMenu_Ring_c::~dMenu_Ring_c() {
 
 /* ############################################################################################## */
 /* 804543C0-804543C8 0004+04 s=8 e=0 z=0  None .sdata2    @4465                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4465[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4465[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
@@ -741,7 +733,7 @@ asm void dMenu_Ring_c::setKanteraPos(f32 param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 804543C8-804543D0 0008+00 s=6 e=0 z=0  None .sdata2    @4596                                                        */
-SECTION_SDATA2 static f64 d_menu_d_menu_ring__lit_4596 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4596 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 801EB0A4-801EB2B4 0210+00 s=0 e=1 z=0  None .text      isOpen__12dMenu_Ring_cFv                                     */
 #pragma push
@@ -778,7 +770,7 @@ asm void dMenu_Ring_c::isClose() {
 
 /* ############################################################################################## */
 /* 804543D0-804543D4 0004+00 s=1 e=0 z=0  None .sdata2    @4739                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4739 = 0.75f;
+SECTION_SDATA2 static f32 lit_4739 = 0.75f;
 
 /* 801EB624-801EB8C0 029C+00 s=1 e=0 z=0  None .text      getStickInfo__12dMenu_Ring_cFP9STControl                     */
 #pragma push
@@ -804,10 +796,10 @@ asm void dMenu_Ring_c::calcStickAngle(STControl* param_0, u8 param_1) {
 
 /* ############################################################################################## */
 /* 804543D4-804543D8 0004+00 s=2 e=0 z=0  None .sdata2    @4810                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4810 = 304.0f;
+SECTION_SDATA2 static f32 lit_4810 = 304.0f;
 
 /* 804543D8-804543DC 0004+00 s=2 e=0 z=0  None .sdata2    @4811                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_4811 = 224.0f;
+SECTION_SDATA2 static f32 lit_4811 = 224.0f;
 
 /* 801EB960-801EBA38 00D8+00 s=1 e=0 z=0  None .text      setRotate__12dMenu_Ring_cFv                                  */
 #pragma push
@@ -899,7 +891,7 @@ asm void dMenu_Ring_c::setActiveCursor() {
 
 /* ############################################################################################## */
 /* 804543DC-804543E0 0004+00 s=1 e=0 z=0  None .sdata2    @5171                                                        */
-SECTION_SDATA2 static u32 d_menu_d_menu_ring__lit_5171 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_5171 = 0xFFFFFFFF;
 
 /* 801EC754-801ECB14 03C0+00 s=1 e=0 z=0  None .text      setMixItem__12dMenu_Ring_cFv                                 */
 #pragma push
@@ -1070,7 +1062,7 @@ asm void dMenu_Ring_c::setSelectItem(int param_0, u8 param_1) {
 
 /* ############################################################################################## */
 /* 80454414-80454418 0004+00 s=1 e=0 z=0  None .sdata2    @5811                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_5811 = 17.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5811 = 17.0f / 10.0f;
 
 /* 801EDC98-801EDF2C 0294+00 s=1 e=0 z=0  None .text      drawSelectItem__12dMenu_Ring_cFv                             */
 #pragma push
@@ -1162,7 +1154,7 @@ asm void dMenu_Ring_c::setCombineBomb(int param_0) {
 
 /* ############################################################################################## */
 /* 80454418-8045441C 0004+00 s=1 e=0 z=0  None .sdata2    @6143                                                        */
-SECTION_SDATA2 static f32 d_menu_d_menu_ring__lit_6143 = 16.0f;
+SECTION_SDATA2 static f32 lit_6143 = 16.0f;
 
 /* 801EE648-801EEA84 043C+00 s=2 e=0 z=0  None .text      drawNumber__12dMenu_Ring_cFiiff                              */
 #pragma push

@@ -11,24 +11,10 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
-};
-
 struct daNpcT_motionAnmData_c {
-};
-
-struct cXyz {
-	/* 80A9A9C0 */ ~cXyz();
-	/* 80A9B050 */ cXyz();
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -36,6 +22,20 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A9B054 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+	/* 80A9A9C0 */ ~cXyz();
+	/* 80A9B050 */ cXyz();
 };
 
 struct daNpc_Pachi_Maro_c {
@@ -66,6 +66,8 @@ struct daNpc_Pachi_Maro_c {
 	/* 80A9939C */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
 	/* 80A99428 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 80A994B4 */ void selectAction();
+	/* 80A99530 */ void chkAction(int (daNpc_Pachi_Maro_c::*)(void*));
+	/* 80A9955C */ void setAction(int (daNpc_Pachi_Maro_c::*)(void*));
 	/* 80A99604 */ void wait(void*);
 	/* 80A9986C */ void talk(void*);
 	/* 80A998FC */ void _turn_to_link(s16);
@@ -252,8 +254,8 @@ extern "C" void drawDbgInfo__18daNpc_Pachi_Maro_cFv(); // 1
 extern "C" void getFaceMotionAnm__18daNpc_Pachi_Maro_cF26daNpcT_faceMotionAnmData_c(); // 1
 extern "C" void getMotionAnm__18daNpc_Pachi_Maro_cF22daNpcT_motionAnmData_c(); // 1
 extern "C" void selectAction__18daNpc_Pachi_Maro_cFv(); // 1
-extern "C" static void chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i(); // 1
+extern "C" void setAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i(); // 1
 extern "C" void wait__18daNpc_Pachi_Maro_cFPv(); // 1
 extern "C" void talk__18daNpc_Pachi_Maro_cFPv(); // 1
 extern "C" void _turn_to_link__18daNpc_Pachi_Maro_cFs(); // 1
@@ -839,7 +841,7 @@ asm void daNpc_Pachi_Maro_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Maro_c::chkAction(int (daNpc_Pachi_Maro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_maro/d_a_npc_pachi_maro/chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i.s"
 }
@@ -850,7 +852,7 @@ extern "C" asm static void chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i() {
+asm void daNpc_Pachi_Maro_c::setAction(int (daNpc_Pachi_Maro_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_pachi_maro/d_a_npc_pachi_maro/setAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i.s"
 }

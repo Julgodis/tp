@@ -14,8 +14,8 @@ lbl_801F8D20:
 lbl_801F8D50:
 /* 801F8D50 00000000  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 801F8D54 00000004  80 7F 00 20 */	lwz r3, 0x20(r31)
-/* 801F8D58 00000008  3C 80 80 39 */	lis r4, d_menu_d_menu_skill__stringBase0@ha
-/* 801F8D5C 0000000C  38 84 7D B8 */	addi r4, r4, d_menu_d_menu_skill__stringBase0@l
+/* 801F8D58 00000008  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801F8D5C 0000000C  38 84 7D B8 */	addi r4, r4, stringBase0@l
 /* 801F8D60 00000010  38 84 00 54 */	addi r4, r4, 0x54
 /* 801F8D64 00000014  3C A0 00 02 */	lis r5, 2
 /* 801F8D68 00000018  80 DF 00 08 */	lwz r6, 8(r31)
@@ -40,8 +40,8 @@ lbl_801F8D84:
 /* 801F8DB0 0000002C  3B 43 7D 30 */	addi r26, r3, data_80397D30@l
 /* 801F8DB4 00000030  3C 60 80 39 */	lis r3, data_80397D58@ha
 /* 801F8DB8 00000034  3B 63 7D 58 */	addi r27, r3, data_80397D58@l
-/* 801F8DBC 00000038  3C 60 80 39 */	lis r3, d_menu_d_menu_skill__stringBase0@ha
-/* 801F8DC0 0000003C  3B 83 7D B8 */	addi r28, r3, d_menu_d_menu_skill__stringBase0@l
+/* 801F8DBC 00000038  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801F8DC0 0000003C  3B 83 7D B8 */	addi r28, r3, stringBase0@l
 lbl_801F8DC4:
 /* 801F8DC4 00000000  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 801F8DC8 00000004  7C 9A EA 14 */	add r4, r26, r29

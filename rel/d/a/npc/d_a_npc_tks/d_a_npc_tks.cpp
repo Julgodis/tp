@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcTks_c {
@@ -36,6 +36,7 @@ struct daNpcTks_c {
 	/* 80B1590C */ void setExpressionBtp(int);
 	/* 80B159E0 */ void setMotion(int, f32, int);
 	/* 80B15A24 */ void reset();
+	/* 80B160A8 */ void setAction(void (daNpcTks_c::*)());
 	/* 80B16148 */ void wait();
 	/* 80B16344 */ void setMotionAnm(int, f32);
 	/* 80B16634 */ void waitNude();
@@ -93,6 +94,16 @@ struct J3DTexMtxAnm {
 struct J3DMatColorAnm {
 	/* 80B15384 */ ~J3DMatColorAnm();
 	/* 80B153C0 */ J3DMatColorAnm();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80B1D35C */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_ActorMngr_c {
@@ -195,7 +206,7 @@ extern "C" void setExpressionAnm__10daNpcTks_cFib(); // 1
 extern "C" void setExpressionBtp__10daNpcTks_cFi(); // 1
 extern "C" void setMotion__10daNpcTks_cFifi(); // 1
 extern "C" void reset__10daNpcTks_cFv(); // 1
-extern "C" static void setAction__10daNpcTks_cFM10daNpcTks_cFPCvPv_v(); // 1
+extern "C" void setAction__10daNpcTks_cFM10daNpcTks_cFPCvPv_v(); // 1
 extern "C" void wait__10daNpcTks_cFv(); // 1
 extern "C" void setMotionAnm__10daNpcTks_cFif(); // 1
 extern "C" void waitNude__10daNpcTks_cFv(); // 1
@@ -234,7 +245,7 @@ extern "C" void setAttnPos__10daNpcTks_cFv(); // 1
 extern "C" void lookat__10daNpcTks_cFv(); // 1
 extern "C" void drawDbgInfo__10daNpcTks_cFv(); // 1
 extern "C" void drawOtherMdls__10daNpcTks_cFv(); // 1
-extern "C" static void func_80B1D35C(); // 1
+extern "C" void func_80B1D35C(); // 1
 extern "C" static void func_80B1D368(); // 1
 extern "C" static void func_80B1D384(); // 1
 extern "C" void __sinit_d_a_npc_tks_cpp(); // 1
@@ -729,7 +740,7 @@ asm void daNpcTks_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__10daNpcTks_cFM10daNpcTks_cFPCvPv_v() {
+asm void daNpcTks_c::setAction(void (daNpcTks_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tks/d_a_npc_tks/setAction__10daNpcTks_cFM10daNpcTks_cFPCvPv_v.s"
 }
@@ -1158,7 +1169,7 @@ asm void daNpcTks_c::drawOtherMdls() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80B1D35C() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_tks/d_a_npc_tks/func_80B1D35C.s"
 }

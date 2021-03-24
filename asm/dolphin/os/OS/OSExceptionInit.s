@@ -8,14 +8,14 @@ lbl_8033A440:
 /* 8033A458 00000018  3C 80 80 34 */	lis r4, __OSEVSetNumber@ha
 /* 8033A45C 0000001C  3B C4 A7 80 */	addi r30, r4, __OSEVSetNumber@l
 /* 8033A460 00000020  3C A0 80 34 */	lis r5, OSExceptionVector@ha
-/* 8033A464 00000024  83 3E 00 00 */	lwz r25, 0(r30)
+/* 8033A464 00000024  83 3E 00 00 */	lwz r25, 0(r30)	/* effective address: 8033A780 */
 /* 8033A468 00000028  3C 80 80 34 */	lis r4, __OSEVEnd@ha
 /* 8033A46C 0000002C  38 A5 A7 18 */	addi r5, r5, OSExceptionVector@l
 /* 8033A470 00000030  38 84 A7 B0 */	addi r4, r4, __OSEVEnd@l
-/* 8033A474 00000034  3C C0 80 3D */	lis r6, OS__lit_1@ha
+/* 8033A474 00000034  3C C0 80 3D */	lis r6, lit_1@ha
 /* 8033A478 00000038  28 00 00 00 */	cmplwi r0, 0
 /* 8033A47C 0000003C  7C B8 2B 78 */	mr r24, r5
-/* 8033A480 00000040  3B A6 F2 88 */	addi r29, r6, OS__lit_1@l
+/* 8033A480 00000040  3B A6 F2 88 */	addi r29, r6, lit_1@l
 /* 8033A484 00000044  7E E5 20 50 */	subf r23, r5, r4
 /* 8033A488 00000048  3A 83 00 60 */	addi r20, r3, 0x60
 /* 8033A48C 0000004C  40 82 00 4C */	bne lbl_8033A4D8

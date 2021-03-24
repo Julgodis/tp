@@ -22,7 +22,7 @@ lbl_801B3734:
 /* 801B3758 00000024  40 81 00 7C */	ble lbl_801B37D4
 /* 801B375C 00000028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801B3760 0000002C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801B3764 00000030  83 A4 5D 30 */	lwz r29, 0x5d30(r4)
+/* 801B3764 00000030  83 A4 5D 30 */	lwz r29, 0x5d30(r4)	/* effective address: 8040BEF0 */
 /* 801B3768 00000034  48 06 AB 61 */	bl dMeter2Info_getNumberTextureName__Fi
 /* 801B376C 00000038  7C 65 1B 78 */	mr r5, r3
 /* 801B3770 0000003C  7F A3 EB 78 */	mr r3, r29
@@ -73,7 +73,7 @@ lbl_801B3800:
 lbl_801B381C:
 /* 801B381C 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801B3820 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 801B3824 00000008  83 A4 5D 30 */	lwz r29, 0x5d30(r4)
+/* 801B3824 00000008  83 A4 5D 30 */	lwz r29, 0x5d30(r4)	/* effective address: 8040BEF0 */
 /* 801B3828 0000000C  48 06 AA A1 */	bl dMeter2Info_getNumberTextureName__Fi
 /* 801B382C 00000010  7C 65 1B 78 */	mr r5, r3
 /* 801B3830 00000014  7F A3 EB 78 */	mr r3, r29
@@ -115,7 +115,7 @@ lbl_801B3890:
 lbl_801B38BC:
 /* 801B38BC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801B38C0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801B38C4 00000008  83 A3 5D 30 */	lwz r29, 0x5d30(r3)
+/* 801B38C4 00000008  83 A3 5D 30 */	lwz r29, 0x5d30(r3)	/* effective address: 8040BEF0 */
 /* 801B38C8 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 801B38CC 00000010  48 06 A9 FD */	bl dMeter2Info_getNumberTextureName__Fi
 /* 801B38D0 00000014  7C 65 1B 78 */	mr r5, r3

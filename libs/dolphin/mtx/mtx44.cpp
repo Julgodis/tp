@@ -28,24 +28,24 @@ extern "C" void tanf(); // 1
 
 /* ############################################################################################## */
 /* 80456528-8045652C 0004+00 s=2 e=0 z=0  None .sdata2    @99                                                          */
-SECTION_SDATA2 static f32 mtx44__lit_99 = 1.0f;
+SECTION_SDATA2 static f32 lit_99 = 1.0f;
 
 /* 8045652C-80456530 0004+00 s=1 e=0 z=0  None .sdata2    @100                                                         */
-SECTION_SDATA2 static f32 mtx44__lit_100 = 2.0f;
+SECTION_SDATA2 static f32 lit_100 = 2.0f;
 
 /* 80456530-80456534 0004+00 s=2 e=0 z=0  None .sdata2    @101                                                         */
-SECTION_SDATA2 static u8 mtx44__lit_101[4] = {
+SECTION_SDATA2 static u8 lit_101[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456534-80456538 0004+00 s=2 e=0 z=0  None .sdata2    @102                                                         */
-SECTION_SDATA2 static f32 mtx44__lit_102 = -1.0f;
+SECTION_SDATA2 static f32 lit_102 = -1.0f;
 
 /* 80456538-8045653C 0004+00 s=1 e=0 z=0  None .sdata2    @105                                                         */
-SECTION_SDATA2 static f32 mtx44__lit_105 = 0.5f;
+SECTION_SDATA2 static f32 lit_105 = 0.5f;
 
 /* 8045653C-80456540 0004+00 s=1 e=0 z=0  None .sdata2    @106                                                         */
-SECTION_SDATA2 static f32 mtx44__lit_106 = 0.01745329238474369f;
+SECTION_SDATA2 static f32 lit_106 = 0.01745329238474369f;
 
 /* 80346F28-80346FF8 00D0+00 s=0 e=6 z=0  None .text      C_MTXPerspective                                             */
 #pragma push

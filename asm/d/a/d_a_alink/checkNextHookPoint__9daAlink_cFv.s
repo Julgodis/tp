@@ -46,7 +46,7 @@ lbl_8010B7B4:
 lbl_8010B7C8:
 /* 8010B7C8 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8010B7CC 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8010B7D0 00000008  80 04 5F 1C */	lwz r0, 0x5f1c(r4)
+/* 8010B7D0 00000008  80 04 5F 1C */	lwz r0, 0x5f1c(r4)	/* effective address: 8040C0DC */
 /* 8010B7D4 0000000C  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 8010B7D8 00000010  41 82 00 4C */	beq lbl_8010B824
 /* 8010B7DC 00000014  4B FF D0 C5 */	bl checkHookshotRoofLv7Boss__9daAlink_cFv
@@ -70,7 +70,7 @@ lbl_8010B7C8:
 lbl_8010B824:
 /* 8010B824 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8010B828 00000004  38 80 00 01 */	li r4, 1
-/* 8010B82C 00000008  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 8010B82C 00000008  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 8010B830 0000000C  4B FB B2 19 */	bl procFallInit__9daAlink_cFif
 lbl_8010B834:
 /* 8010B834 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

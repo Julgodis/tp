@@ -21,11 +21,11 @@ lbl_800C66DC:
 /* 800C6728 0000004C  48 01 BE 59 */	bl setHeavyBoots__9daAlink_cFi
 /* 800C672C 00000050  3C 60 80 39 */	lis r3, m__22daAlinkHIO_autoJump_c0@ha
 /* 800C6730 00000054  38 63 E0 68 */	addi r3, r3, m__22daAlinkHIO_autoJump_c0@l
-/* 800C6734 00000058  C0 03 00 9C */	lfs f0, 0x9c(r3)
+/* 800C6734 00000058  C0 03 00 9C */	lfs f0, 0x9c(r3)	/* effective address: 8038E104 */
 /* 800C6738 0000005C  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
-/* 800C673C 00000060  C0 03 00 A0 */	lfs f0, 0xa0(r3)
+/* 800C673C 00000060  C0 03 00 A0 */	lfs f0, 0xa0(r3)	/* effective address: 8038E108 */
 /* 800C6740 00000064  D0 1F 33 98 */	stfs f0, 0x3398(r31)
-/* 800C6744 00000068  C0 03 00 A4 */	lfs f0, 0xa4(r3)
+/* 800C6744 00000068  C0 03 00 A4 */	lfs f0, 0xa4(r3)	/* effective address: 8038E10C */
 /* 800C6748 0000006C  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 800C674C 00000070  38 00 00 00 */	li r0, 0
 /* 800C6750 00000074  B0 1F 30 0C */	sth r0, 0x300c(r31)

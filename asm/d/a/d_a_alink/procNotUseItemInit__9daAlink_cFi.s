@@ -46,8 +46,8 @@ lbl_8011E4F0:
 /* 8011E4F0 00000000  48 06 31 51 */	bl dCam_getBody__Fv
 /* 8011E4F4 00000004  38 80 00 12 */	li r4, 0x12
 /* 8011E4F8 00000008  7F C5 F3 78 */	mr r5, r30
-/* 8011E4FC 0000000C  3C C0 80 39 */	lis r6, d_a_d_a_alink__stringBase0@ha
-/* 8011E500 00000010  38 C6 20 94 */	addi r6, r6, d_a_d_a_alink__stringBase0@l
+/* 8011E4FC 0000000C  3C C0 80 39 */	lis r6, stringBase0@ha
+/* 8011E500 00000010  38 C6 20 94 */	addi r6, r6, stringBase0@l
 /* 8011E504 00000014  38 C6 00 43 */	addi r6, r6, 0x43
 /* 8011E508 00000018  38 E0 00 01 */	li r7, 1
 /* 8011E50C 0000001C  39 1F 31 94 */	addi r8, r31, 0x3194
@@ -58,10 +58,10 @@ lbl_8011E4F0:
 /* 8011E520 00000030  4B FA 13 35 */	bl keepItemData__9daAlink_cFv
 /* 8011E524 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8011E528 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8011E52C 0000003C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8011E52C 0000003C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8011E530 00000040  64 00 04 00 */	oris r0, r0, 0x400
 /* 8011E534 00000044  60 00 08 00 */	ori r0, r0, 0x800
-/* 8011E538 00000048  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8011E538 00000048  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8011E53C 0000004C  7F A3 EB 78 */	mr r3, r29
 /* 8011E540 00000050  4B FF FE 99 */	bl checkLetterItem__9daAlink_cFi
 /* 8011E544 00000054  2C 03 00 00 */	cmpwi r3, 0

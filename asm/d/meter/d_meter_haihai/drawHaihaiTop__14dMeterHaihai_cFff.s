@@ -20,18 +20,18 @@ lbl_8020BAE8:
 /* 8020BB30 00000048  C0 23 00 28 */	lfs f1, 0x28(r3)
 /* 8020BB34 0000004C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8020BB38 00000050  EC 21 00 28 */	fsubs f1, f1, f0
-/* 8020BB3C 00000054  C0 02 AD C8 */	lfs f0, d_meter_d_meter_haihai__lit_3895(r2)
+/* 8020BB3C 00000054  C0 02 AD C8 */	lfs f0, lit_3895(r2)
 /* 8020BB40 00000058  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8020BB44 0000005C  EC 42 00 32 */	fmuls f2, f2, f0
 /* 8020BB48 00000060  38 80 00 7A */	li r4, 0x7a
-/* 8020BB4C 00000064  C0 62 AD D0 */	lfs f3, d_meter_d_meter_haihai__lit_3897(r2)
+/* 8020BB4C 00000064  C0 62 AD D0 */	lfs f3, lit_3897(r2)
 /* 8020BB50 00000068  48 0E B6 8D */	bl rotate__7J2DPaneFff13J2DRotateAxisf
 /* 8020BB54 0000006C  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8020BB58 00000070  C0 22 AD B0 */	lfs f1, d_meter_d_meter_haihai__lit_3742(r2)
+/* 8020BB58 00000070  C0 22 AD B0 */	lfs f1, lit_3742(r2)
 /* 8020BB5C 00000074  FC 40 08 90 */	fmr f2, f1
 /* 8020BB60 00000078  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8020BB64 0000007C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8020BB68 00000080  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 8020BB68 00000080  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 8020BB6C 00000084  48 0E D3 69 */	bl draw__9J2DScreenFffPC14J2DGrafContext
 /* 8020BB70 00000088  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020BB74 0000008C  80 01 00 14 */	lwz r0, 0x14(r1)

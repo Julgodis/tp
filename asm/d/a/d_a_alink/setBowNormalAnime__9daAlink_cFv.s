@@ -10,7 +10,7 @@ lbl_800DFC70:
 /* 800DFC90 00000020  41 82 00 18 */	beq lbl_800DFCA8
 /* 800DFC94 00000024  7F E3 FB 78 */	mr r3, r31
 /* 800DFC98 00000028  38 80 00 59 */	li r4, 0x59
-/* 800DFC9C 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DFC9C 0000002C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DFCA0 00000030  4B FE 03 E5 */	bl changeItemBck__9daAlink_cFUsf
 /* 800DFCA4 00000034  48 00 00 20 */	b lbl_800DFCC4
 lbl_800DFCA8:
@@ -19,7 +19,7 @@ lbl_800DFCA8:
 /* 800DFCB0 00000008  40 82 00 14 */	bne lbl_800DFCC4
 /* 800DFCB4 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 800DFCB8 00000010  38 80 01 F9 */	li r4, 0x1f9
-/* 800DFCBC 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DFCBC 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DFCC0 00000018  4B FE 03 C5 */	bl changeItemBck__9daAlink_cFUsf
 lbl_800DFCC4:
 /* 800DFCC4 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

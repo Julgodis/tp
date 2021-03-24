@@ -6,12 +6,12 @@ lbl_80191F18:
 /* 80191F28 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 80191F2C 00000014  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 80191F30 00000018  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 80191F34 0000001C  3C 80 80 3C */	lis r4, d_file_d_file_sel_warning__fileWarningProc@ha
-/* 80191F38 00000020  38 04 B4 34 */	addi r0, r4, d_file_d_file_sel_warning__fileWarningProc@l
+/* 80191F34 0000001C  3C 80 80 3C */	lis r4, fileWarningProc@ha
+/* 80191F38 00000020  38 04 B4 34 */	addi r0, r4, fileWarningProc@l
 /* 80191F3C 00000024  7D 80 2A 14 */	add r12, r0, r5
 /* 80191F40 00000028  48 1D 01 45 */	bl __ptmf_scall
 /* 80191F44 0000002C  60 00 00 00 */	nop 
-/* 80191F48 00000030  C0 02 9F D8 */	lfs f0, d_file_d_file_sel_warning__lit_3741(r2)
+/* 80191F48 00000030  C0 02 9F D8 */	lfs f0, lit_3741(r2)
 /* 80191F4C 00000034  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 80191F50 00000038  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80191F54 0000003C  41 82 00 28 */	beq lbl_80191F7C

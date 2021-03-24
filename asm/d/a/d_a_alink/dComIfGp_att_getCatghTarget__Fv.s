@@ -5,7 +5,7 @@ lbl_800CFEC4:
 /* 800CFED0 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CFED4 00000010  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 800CFED8 00000014  38 64 5B 54 */	addi r3, r4, 0x5b54
-/* 800CFEDC 00000018  80 84 5B 64 */	lwz r4, 0x5b64(r4)
+/* 800CFEDC 00000018  80 84 5B 64 */	lwz r4, 0x5b64(r4)	/* effective address: 8040BD24 */
 /* 800CFEE0 0000001C  4B FA 3A AD */	bl convPId__11dAttCatch_cFUi
 /* 800CFEE4 00000020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800CFEE8 00000024  7C 08 03 A6 */	mtlr r0

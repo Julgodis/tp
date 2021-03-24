@@ -7,7 +7,7 @@ lbl_8013FF28:
 lbl_8013FF3C:
 /* 8013FF3C 00000000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8013FF40 00000004  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8013FF44 00000008  88 04 00 13 */	lbz r0, 0x13(r4)
+/* 8013FF44 00000008  88 04 00 13 */	lbz r0, 0x13(r4)	/* effective address: 804061D3 */
 /* 8013FF48 0000000C  28 00 00 2E */	cmplwi r0, 0x2e
 /* 8013FF4C 00000010  40 82 00 10 */	bne lbl_8013FF5C
 /* 8013FF50 00000014  38 02 92 58 */	addi r0, r2, 0x80452C58-0x80459A00 /* l_bArcName-_SDA2_BASE_ */

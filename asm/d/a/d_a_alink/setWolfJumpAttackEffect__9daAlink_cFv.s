@@ -42,7 +42,7 @@ lbl_80123E10:
 /* 80123E24 00000014  4B FF C9 55 */	bl stopDrawParticle__9daAlink_cFUl
 /* 80123E28 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80123E2C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80123E30 00000020  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80123E30 00000020  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80123E34 00000024  38 63 02 10 */	addi r3, r3, 0x210
 /* 80123E38 00000028  80 9E 32 90 */	lwz r4, 0x3290(r30)
 /* 80123E3C 0000002C  4B F2 7A DD */	bl getEmitter__Q213dPa_control_c7level_cFUl

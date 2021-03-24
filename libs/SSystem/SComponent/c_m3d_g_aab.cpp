@@ -165,7 +165,7 @@ asm void cM3dGAab::SetMax(cXyz const& param_0) {
 
 /* ############################################################################################## */
 /* 804551D8-804551E0 0004+04 s=1 e=0 z=0  None .sdata2    @493                                                         */
-SECTION_SDATA2 static f32 c_m3d_g_aab__lit_493[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_493[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,

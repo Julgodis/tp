@@ -7,7 +7,7 @@ lbl_80111440:
 /* 80111454 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80111458 00000018  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 8011145C 0000001C  38 64 5B 54 */	addi r3, r4, 0x5b54
-/* 80111460 00000020  80 84 5B 64 */	lwz r4, 0x5b64(r4)
+/* 80111460 00000020  80 84 5B 64 */	lwz r4, 0x5b64(r4)	/* effective address: 8040BD24 */
 /* 80111464 00000024  4B F6 25 29 */	bl convPId__11dAttCatch_cFUi
 /* 80111468 00000028  7C 64 1B 79 */	or. r4, r3, r3
 /* 8011146C 0000002C  41 82 00 50 */	beq lbl_801114BC
@@ -55,8 +55,8 @@ lbl_801114D8:
 /* 80111504 0000002C  2C 00 00 29 */	cmpwi r0, 0x29
 /* 80111508 00000030  41 82 00 34 */	beq lbl_8011153C
 lbl_8011150C:
-/* 8011150C 00000000  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 80111510 00000004  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 8011150C 00000000  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 80111510 00000004  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 80111514 00000008  38 63 00 A5 */	addi r3, r3, 0xa5
 /* 80111518 0000000C  4B F8 C5 49 */	bl checkStageName__9daAlink_cFPCc
 /* 8011151C 00000010  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -76,9 +76,9 @@ lbl_8011153C:
 /* 80111550 00000014  4B F9 BB A5 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 80111554 00000018  3C 60 80 39 */	lis r3, m__20daAlinkHIO_bottle_c0@ha
 /* 80111558 0000001C  38 63 E9 0C */	addi r3, r3, m__20daAlinkHIO_bottle_c0@l
-/* 8011155C 00000020  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 8011155C 00000020  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038E96C */
 /* 80111560 00000024  D0 1F 34 78 */	stfs f0, 0x3478(r31)
-/* 80111564 00000028  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 80111564 00000028  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 80111568 0000002C  D0 1F 34 7C */	stfs f0, 0x347c(r31)
 /* 8011156C 00000030  C0 02 93 1C */	lfs f0, lit_7448(r2)
 /* 80111570 00000034  D0 1F 34 80 */	stfs f0, 0x3480(r31)
@@ -91,7 +91,7 @@ lbl_80111578:
 /* 80111588 00000010  4B F9 BB 6D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 8011158C 00000014  3C 60 80 39 */	lis r3, m__23daAlinkHIO_kandelaar_c0@ha
 /* 80111590 00000018  38 63 E7 7C */	addi r3, r3, m__23daAlinkHIO_kandelaar_c0@l
-/* 80111594 0000001C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 80111594 0000001C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038E78C */
 /* 80111598 00000020  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 8011159C 00000024  C0 02 93 24 */	lfs f0, lit_7450(r2)
 /* 801115A0 00000028  D0 1F 34 7C */	stfs f0, 0x347c(r31)

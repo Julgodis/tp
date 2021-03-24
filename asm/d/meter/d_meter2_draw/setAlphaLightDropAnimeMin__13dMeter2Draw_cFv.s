@@ -7,13 +7,13 @@ lbl_80215E40:
 /* 80215E54 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80215E58 00000018  80 63 01 E0 */	lwz r3, 0x1e0(r3)
 /* 80215E5C 0000001C  48 03 F9 CD */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80215E60 00000020  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80215E60 00000020  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 80215E64 00000024  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80215E68 00000028  41 82 01 08 */	beq lbl_80215F70
 /* 80215E6C 0000002C  80 7F 01 E0 */	lwz r3, 0x1e0(r31)
 /* 80215E70 00000030  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 80215E74 00000034  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80215E78 00000038  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 80215E78 00000038  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8042EBE0 */
 /* 80215E7C 0000003C  C0 1F 06 FC */	lfs f0, 0x6fc(r31)
 /* 80215E80 00000040  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80215E84 00000044  48 03 F9 4D */	bl setAlphaRate__13CPaneMgrAlphaFf
@@ -45,7 +45,7 @@ lbl_80215EA8:
 /* 80215EE8 00000040  3B 9D 01 14 */	addi r28, r29, 0x114
 lbl_80215EEC:
 /* 80215EEC 00000000  7F 83 E3 78 */	mr r3, r28
-/* 80215EF0 00000004  88 9D 4E 0C */	lbz r4, 0x4e0c(r29)
+/* 80215EF0 00000004  88 9D 4E 0C */	lbz r4, 0x4e0c(r29)	/* effective address: 8040AFCC */
 /* 80215EF4 00000008  4B E1 E4 4D */	bl getLightDropNum__16dSv_light_drop_cCFUc
 /* 80215EF8 0000000C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80215EFC 00000010  7C 1A 00 00 */	cmpw r26, r0

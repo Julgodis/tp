@@ -44,11 +44,11 @@ lbl_801C7BB4:
 /* 801C7BBC 00000008  98 1F 03 11 */	stb r0, 0x311(r31)
 /* 801C7BC0 0000000C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C7BC4 00000010  38 80 00 01 */	li r4, 1
-/* 801C7BC8 00000014  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C7BC8 00000014  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C7BCC 00000018  48 00 FB 49 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C7BD0 0000001C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C7BD4 00000020  38 80 00 02 */	li r4, 2
-/* 801C7BD8 00000024  C0 22 A7 28 */	lfs f1, d_menu_d_menu_fmap__lit_4158(r2)
+/* 801C7BD8 00000024  C0 22 A7 28 */	lfs f1, lit_4158(r2)
 /* 801C7BDC 00000028  48 00 FB 39 */	bl setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf
 /* 801C7BE0 0000002C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 801C7BE4 00000030  38 80 03 F9 */	li r4, 0x3f9

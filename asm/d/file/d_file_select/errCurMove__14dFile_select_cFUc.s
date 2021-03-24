@@ -12,9 +12,9 @@ lbl_8018FB80:
 /* 8018FBA8 00000028  38 A0 00 00 */	li r5, 0
 /* 8018FBAC 0000002C  54 C6 06 3E */	clrlwi r6, r6, 0x18
 /* 8018FBB0 00000030  38 E0 00 00 */	li r7, 0
-/* 8018FBB4 00000034  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018FBB4 00000034  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018FBB8 00000038  FC 40 08 90 */	fmr f2, f1
-/* 8018FBBC 0000003C  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 8018FBBC 0000003C  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 8018FBC0 00000040  FC 80 18 90 */	fmr f4, f3
 /* 8018FBC4 00000044  39 00 00 00 */	li r8, 0
 /* 8018FBC8 00000048  48 11 BD BD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

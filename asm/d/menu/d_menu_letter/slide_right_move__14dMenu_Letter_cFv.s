@@ -5,17 +5,17 @@ lbl_801DE1E8:
 /* 801DE1F4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801DE1F8 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801DE1FC 00000014  38 7F 03 58 */	addi r3, r31, 0x358
-/* 801DE200 00000018  C0 22 A8 E0 */	lfs f1, d_menu_d_menu_letter__lit_3827(r2)
-/* 801DE204 0000001C  C0 42 A9 18 */	lfs f2, d_menu_d_menu_letter__lit_4308(r2)
-/* 801DE208 00000020  C0 62 A9 1C */	lfs f3, d_menu_d_menu_letter__lit_4309(r2)
+/* 801DE200 00000018  C0 22 A8 E0 */	lfs f1, lit_3827(r2)
+/* 801DE204 0000001C  C0 42 A9 18 */	lfs f2, lit_4308(r2)
+/* 801DE208 00000020  C0 62 A9 1C */	lfs f3, lit_4309(r2)
 /* 801DE20C 00000024  48 09 18 31 */	bl cLib_addCalc2__FPffff
 /* 801DE210 00000028  C0 1F 03 58 */	lfs f0, 0x358(r31)
 /* 801DE214 0000002C  FC 00 02 10 */	fabs f0, f0
 /* 801DE218 00000030  FC 20 00 18 */	frsp f1, f0
-/* 801DE21C 00000034  C0 02 A9 20 */	lfs f0, d_menu_d_menu_letter__lit_4310(r2)
+/* 801DE21C 00000034  C0 02 A9 20 */	lfs f0, lit_4310(r2)
 /* 801DE220 00000038  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801DE224 00000000  40 80 00 14 */	bge lbl_801DE238
-/* 801DE228 00000004  C0 02 A8 E0 */	lfs f0, d_menu_d_menu_letter__lit_3827(r2)
+/* 801DE228 00000004  C0 02 A8 E0 */	lfs f0, lit_3827(r2)
 /* 801DE22C 00000008  D0 1F 03 58 */	stfs f0, 0x358(r31)
 /* 801DE230 0000000C  38 00 00 00 */	li r0, 0
 /* 801DE234 00000010  98 1F 03 6D */	stb r0, 0x36d(r31)

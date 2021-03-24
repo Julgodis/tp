@@ -27,13 +27,13 @@ struct daNpc_zrA_Path_c {
 	/* 80B7EF88 */ ~daNpc_zrA_Path_c();
 };
 
+struct J3DJoint {
+};
+
 struct fopAc_ac_c {
 };
 
 struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct csXyz {
@@ -75,6 +75,8 @@ struct daNpc_zrA_c {
 	/* 80B7C71C */ void reset();
 	/* 80B7CA8C */ void playExpression();
 	/* 80B7D0FC */ void playMotion();
+	/* 80B7DAF4 */ void chkAction(int (daNpc_zrA_c::*)(void*));
+	/* 80B7DB20 */ void setAction(int (daNpc_zrA_c::*)(void*));
 	/* 80B7DBC8 */ void selectAction();
 	/* 80B7DF40 */ void doEvent();
 	/* 80B7E668 */ void setSkipZev(int, int);
@@ -298,8 +300,8 @@ extern "C" void isDelete__11daNpc_zrA_cFv(); // 1
 extern "C" void reset__11daNpc_zrA_cFv(); // 1
 extern "C" void playExpression__11daNpc_zrA_cFv(); // 1
 extern "C" void playMotion__11daNpc_zrA_cFv(); // 1
-extern "C" static void chkAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__11daNpc_zrA_cFv(); // 1
 extern "C" void doEvent__11daNpc_zrA_cFv(); // 1
 extern "C" void setSkipZev__11daNpc_zrA_cFii(); // 1
@@ -1426,7 +1428,7 @@ asm void daNpc_zrA_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i() {
+asm void daNpc_zrA_c::chkAction(int (daNpc_zrA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zra/d_a_npc_zra/chkAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i.s"
 }
@@ -1437,7 +1439,7 @@ extern "C" asm static void chkAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i() {
+asm void daNpc_zrA_c::setAction(int (daNpc_zrA_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zra/d_a_npc_zra/setAction__11daNpc_zrA_cFM11daNpc_zrA_cFPCvPvPv_i.s"
 }

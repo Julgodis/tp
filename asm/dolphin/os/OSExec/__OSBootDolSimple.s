@@ -37,9 +37,9 @@ lbl_8033CE40:
 /* 8033CE48 00000008  48 00 E4 2D */	bl DVDSetAutoInvalidation
 /* 8033CE4C 0000000C  48 00 E4 39 */	bl DVDResume
 /* 8033CE50 00000010  38 00 00 00 */	li r0, 0
-/* 8033CE54 00000014  3C 60 80 34 */	lis r3, OSExec__Callback@ha
+/* 8033CE54 00000014  3C 60 80 34 */	lis r3, Callback@ha
 /* 8033CE58 00000018  90 0D 90 D8 */	stw r0, Prepared(r13)
-/* 8033CE5C 0000001C  38 63 CC B0 */	addi r3, r3, OSExec__Callback@l
+/* 8033CE5C 0000001C  38 63 CC B0 */	addi r3, r3, Callback@l
 /* 8033CE60 00000020  48 00 E8 C1 */	bl __DVDPrepareResetAsync
 /* 8033CE64 00000024  38 60 FF E0 */	li r3, -32
 /* 8033CE68 00000028  48 00 0C 55 */	bl __OSMaskInterrupts
@@ -122,8 +122,8 @@ lbl_8033CF28:
 /* 8033CF70 00000048  38 04 00 1F */	addi r0, r4, 0x1f
 /* 8033CF74 0000004C  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
 /* 8033CF78 00000050  4B FF E7 19 */	bl ICInvalidateRange
-/* 8033CF7C 00000054  3C 60 80 3D */	lis r3, OSExec__lit_115@ha
-/* 8033CF80 00000058  38 83 FC 38 */	addi r4, r3, OSExec__lit_115@l
+/* 8033CF7C 00000054  3C 60 80 3D */	lis r3, lit_115@ha
+/* 8033CF80 00000058  38 83 FC 38 */	addi r4, r3, lit_115@l
 /* 8033CF84 0000005C  7F C3 F3 78 */	mr r3, r30
 /* 8033CF88 00000060  38 A0 00 0A */	li r5, 0xa
 /* 8033CF8C 00000064  48 02 B9 C9 */	bl strncmp
@@ -270,7 +270,7 @@ lbl_8033D11C:
 /* 8033D174 00000058  93 64 30 F0 */	stw r27, 0x30F0(r4)
 /* 8033D178 0000005C  38 63 30 00 */	addi r3, r3, 0x3000 /* 0xCC003000@l */
 /* 8033D17C 00000060  38 00 00 07 */	li r0, 7
-/* 8033D180 00000064  90 03 00 24 */	stw r0, 0x24(r3)
+/* 8033D180 00000064  90 03 00 24 */	stw r0, 0x24(r3)	/* effective address: CC003024 */
 /* 8033D184 00000068  48 00 05 71 */	bl OSDisableInterrupts
 /* 8033D188 0000006C  7F 83 E3 78 */	mr r3, r28
 /* 8033D18C 00000070  4B FF FA 7D */	bl Run
@@ -280,7 +280,7 @@ lbl_8033D194:
 /* 8033D198 00000004  93 84 DF F0 */	stw r28, 0xDFF0(r4)
 /* 8033D19C 00000008  38 00 00 01 */	li r0, 1
 /* 8033D1A0 0000000C  3C 60 80 00 */	lis r3, 0x8000 /* 0x800030E2@ha */
-/* 8033D1A4 00000010  93 A4 DF EC */	stw r29, -0x2014(r4)
+/* 8033D1A4 00000010  93 A4 DF EC */	stw r29, -0x2014(r4)	/* effective address: 812FDFEC */
 /* 8033D1A8 00000014  98 03 30 E2 */	stb r0, 0x30E2(r3)
 /* 8033D1AC 00000018  4B FF FB 51 */	bl GetApploaderPosition
 /* 8033D1B0 0000001C  80 1E 00 14 */	lwz r0, 0x14(r30)

@@ -74,8 +74,8 @@ lbl_8021E190:
 /* 8021E1D8 00000048  38 00 00 04 */	li r0, 4
 /* 8021E1DC 0000004C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E1E0 00000050  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 8021E1E4 00000054  98 1D 5E 7D */	stb r0, 0x5e7d(r29)
-/* 8021E1E8 00000058  98 9D 5E 7E */	stb r4, 0x5e7e(r29)
+/* 8021E1E4 00000054  98 1D 5E 7D */	stb r0, 0x5e7d(r29)	/* effective address: 8040C03D */
+/* 8021E1E8 00000058  98 9D 5E 7E */	stb r4, 0x5e7e(r29)	/* effective address: 8040C03E */
 /* 8021E1EC 0000005C  7F 83 E3 78 */	mr r3, r28
 /* 8021E1F0 00000060  88 9E 00 DC */	lbz r4, 0xdc(r30)
 /* 8021E1F4 00000064  38 04 00 0F */	addi r0, r4, 0xf

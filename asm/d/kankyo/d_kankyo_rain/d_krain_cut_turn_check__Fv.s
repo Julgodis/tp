@@ -1,7 +1,7 @@
 lbl_8005E8B0:
 /* 8005E8B0 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8005E8B4 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8005E8B8 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)
+/* 8005E8B8 00000008  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
 /* 8005E8BC 0000000C  38 60 00 00 */	li r3, 0
 /* 8005E8C0 00000010  28 04 00 00 */	cmplwi r4, 0
 /* 8005E8C4 00000014  4D 82 00 20 */	beqlr 

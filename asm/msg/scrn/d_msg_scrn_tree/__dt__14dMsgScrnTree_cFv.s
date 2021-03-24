@@ -120,8 +120,8 @@ lbl_802490B4:
 /* 802490C0 0000000C  41 80 FF 9C */	blt lbl_8024905C
 /* 802490C4 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802490C8 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802490CC 00000018  80 63 5C 74 */	lwz r3, 0x5c74(r3)
-/* 802490D0 0000001C  81 83 00 00 */	lwz r12, 0(r3)
+/* 802490CC 00000018  80 63 5C 74 */	lwz r3, 0x5c74(r3)	/* effective address: 8040BE34 */
+/* 802490D0 0000001C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 802490D4 00000020  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 802490D8 00000024  7D 89 03 A6 */	mtctr r12
 /* 802490DC 00000028  4E 80 04 21 */	bctrl 

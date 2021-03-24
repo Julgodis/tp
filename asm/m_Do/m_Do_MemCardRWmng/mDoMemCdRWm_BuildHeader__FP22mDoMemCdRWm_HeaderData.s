@@ -7,8 +7,8 @@ lbl_8001787C:
 /* 80017890 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 80017894 00000018  38 7F 24 00 */	addi r3, r31, 0x2400
 /* 80017898 0000001C  38 80 00 20 */	li r4, 0x20
-/* 8001789C 00000020  3C A0 80 37 */	lis r5, m_Do_m_Do_MemCardRWmng__stringBase0@ha
-/* 800178A0 00000024  38 A5 44 08 */	addi r5, r5, m_Do_m_Do_MemCardRWmng__stringBase0@l
+/* 8001789C 00000020  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 800178A0 00000024  38 A5 44 08 */	addi r5, r5, stringBase0@l
 /* 800178A4 00000028  4C C6 31 82 */	crclr 6
 /* 800178A8 0000002C  48 34 ED 15 */	bl snprintf
 /* 800178AC 00000030  48 32 AE 51 */	bl OSGetTime
@@ -16,8 +16,8 @@ lbl_8001787C:
 /* 800178B4 00000038  48 32 B0 C1 */	bl OSTicksToCalendarTime
 /* 800178B8 0000003C  38 7F 24 20 */	addi r3, r31, 0x2420
 /* 800178BC 00000040  38 80 00 20 */	li r4, 0x20
-/* 800178C0 00000044  3C A0 80 37 */	lis r5, m_Do_m_Do_MemCardRWmng__stringBase0@ha
-/* 800178C4 00000048  38 A5 44 08 */	addi r5, r5, m_Do_m_Do_MemCardRWmng__stringBase0@l
+/* 800178C0 00000044  3C A0 80 37 */	lis r5, stringBase0@ha
+/* 800178C4 00000048  38 A5 44 08 */	addi r5, r5, stringBase0@l
 /* 800178C8 0000004C  38 A5 00 19 */	addi r5, r5, 0x19
 /* 800178CC 00000050  80 C1 00 18 */	lwz r6, 0x18(r1)
 /* 800178D0 00000054  38 C6 00 01 */	addi r6, r6, 1
@@ -26,20 +26,20 @@ lbl_8001787C:
 /* 800178DC 00000060  48 34 EC E1 */	bl snprintf
 /* 800178E0 00000064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800178E4 00000068  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 800178E8 0000006C  80 7C 5C F0 */	lwz r3, 0x5cf0(r28)
-/* 800178EC 00000070  3C 80 80 37 */	lis r4, m_Do_m_Do_MemCardRWmng__stringBase0@ha
-/* 800178F0 00000074  38 84 44 08 */	addi r4, r4, m_Do_m_Do_MemCardRWmng__stringBase0@l
+/* 800178E8 0000006C  80 7C 5C F0 */	lwz r3, 0x5cf0(r28)	/* effective address: 8040BEB0 */
+/* 800178EC 00000070  3C 80 80 37 */	lis r4, stringBase0@ha
+/* 800178F0 00000074  38 84 44 08 */	addi r4, r4, stringBase0@l
 /* 800178F4 00000078  38 84 00 29 */	addi r4, r4, 0x29
-/* 800178F8 0000007C  81 83 00 00 */	lwz r12, 0(r3)
+/* 800178F8 0000007C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 80400000 */
 /* 800178FC 00000080  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 80017900 00000084  7D 89 03 A6 */	mtctr r12
 /* 80017904 00000088  4E 80 04 21 */	bctrl 
 /* 80017908 0000008C  7C 7D 1B 78 */	mr r29, r3
-/* 8001790C 00000090  80 7C 5C F0 */	lwz r3, 0x5cf0(r28)
-/* 80017910 00000094  3C 80 80 37 */	lis r4, m_Do_m_Do_MemCardRWmng__stringBase0@ha
-/* 80017914 00000098  38 84 44 08 */	addi r4, r4, m_Do_m_Do_MemCardRWmng__stringBase0@l
+/* 8001790C 00000090  80 7C 5C F0 */	lwz r3, 0x5cf0(r28)	/* effective address: 8040BEB0 */
+/* 80017910 00000094  3C 80 80 37 */	lis r4, stringBase0@ha
+/* 80017914 00000098  38 84 44 08 */	addi r4, r4, stringBase0@l
 /* 80017918 0000009C  38 84 00 3E */	addi r4, r4, 0x3e
-/* 8001791C 000000A0  81 83 00 00 */	lwz r12, 0(r3)
+/* 8001791C 000000A0  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 80400000 */
 /* 80017920 000000A4  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 80017924 000000A8  7D 89 03 A6 */	mtctr r12
 /* 80017928 000000AC  4E 80 04 21 */	bctrl 

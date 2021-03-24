@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRArchive {
+};
+
 struct JKRSolidHeap {
 };
 
@@ -18,9 +21,6 @@ struct JAISoundHandle {
 };
 
 struct JAISoundID {
-};
-
-struct JKRArchive {
 };
 
 struct JGeometry {
@@ -238,7 +238,7 @@ extern "C" void func_802CDB1C(); // 1
 extern "C" void func_802CDB68(); // 1
 extern "C" void func_802CDC08(); // 1
 extern "C" void func_802CDCEC(); // 1
-extern "C" extern char const* const Z2AudioMgr__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__10Z2AudioMgr[3];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -410,7 +410,7 @@ SECTION_DATA static void* data_803CBF58[5 + 1 /* padding */] = {
 };
 
 /* 80434268-80434274 000C+00 s=1 e=0 z=0  None .bss       @3779                                                        */
-static u8 Z2AudioMgr__lit_3779[12];
+static u8 lit_3779[12];
 
 /* 80434274-80434280 000C+00 s=1 e=0 z=0  None .bss       @3783                                                        */
 static u8 lit_3783[12];
@@ -489,7 +489,7 @@ asm void Z2AudioMgr::resetProcess(u32 param_0, bool param_1) {
 
 /* ############################################################################################## */
 /* 80455F60-80455F68 0004+04 s=1 e=0 z=0  None .sdata2    @4035                                                        */
-SECTION_SDATA2 static u8 Z2AudioMgr__lit_4035[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_4035[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

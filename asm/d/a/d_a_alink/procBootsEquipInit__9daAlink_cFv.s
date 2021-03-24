@@ -17,15 +17,15 @@ lbl_800E3048:
 /* 800E3084 0000003C  41 82 00 30 */	beq lbl_800E30B4
 /* 800E3088 00000040  7F E3 FB 78 */	mr r3, r31
 /* 800E308C 00000044  38 80 00 02 */	li r4, 2
-/* 800E3090 00000048  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E3090 00000048  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E3094 0000004C  4B FC A6 91 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800E3098 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E309C 00000054  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
-/* 800E30A0 00000058  80 85 5F 18 */	lwz r4, 0x5f18(r5)
+/* 800E30A0 00000058  80 85 5F 18 */	lwz r4, 0x5f18(r5)	/* effective address: 8040C0D8 */
 /* 800E30A4 0000005C  3C 60 00 40 */	lis r3, 0x0040 /* 0x00400030@ha */
 /* 800E30A8 00000060  38 03 00 30 */	addi r0, r3, 0x0030 /* 0x00400030@l */
 /* 800E30AC 00000064  7C 80 00 38 */	and r0, r4, r0
-/* 800E30B0 00000068  90 05 5F 18 */	stw r0, 0x5f18(r5)
+/* 800E30B0 00000068  90 05 5F 18 */	stw r0, 0x5f18(r5)	/* effective address: 8040C0D8 */
 lbl_800E30B4:
 /* 800E30B4 00000000  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800E30B8 00000004  B0 1F 04 DE */	sth r0, 0x4de(r31)

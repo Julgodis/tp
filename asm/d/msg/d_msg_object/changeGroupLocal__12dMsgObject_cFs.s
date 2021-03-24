@@ -8,7 +8,7 @@ lbl_80236D0C:
 /* 80236D24 00000018  7C 9F 23 78 */	mr r31, r4
 /* 80236D28 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80236D2C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80236D30 00000024  80 63 5E C8 */	lwz r3, 0x5ec8(r3)
+/* 80236D30 00000024  80 63 5E C8 */	lwz r3, 0x5ec8(r3)	/* effective address: 8040C088 */
 /* 80236D34 00000028  4B DD 84 99 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 80236D38 0000002C  7C 7D 1B 78 */	mr r29, r3
 /* 80236D3C 00000030  A8 7E 01 6C */	lha r3, 0x16c(r30)
@@ -32,7 +32,7 @@ lbl_80236D60:
 lbl_80236D80:
 /* 80236D80 00000000  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80236D84 00000004  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80236D88 00000008  80 03 00 14 */	lwz r0, 0x14(r3)
+/* 80236D88 00000008  80 03 00 14 */	lwz r0, 0x14(r3)	/* effective address: 8043019C */
 /* 80236D8C 0000000C  90 1E 01 30 */	stw r0, 0x130(r30)
 /* 80236D90 00000010  48 00 00 0C */	b lbl_80236D9C
 lbl_80236D94:

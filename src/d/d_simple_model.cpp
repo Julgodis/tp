@@ -214,7 +214,7 @@ asm void dSmplMdl_draw_c::removeModel(J3DModelData* param_0, int param_1) {
 
 /* ############################################################################################## */
 /* 80451F38-80451F40 0004+04 s=1 e=0 z=0  None .sdata2    @3763                                                        */
-SECTION_SDATA2 static u8 d_d_simple_model__lit_3763[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3763[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

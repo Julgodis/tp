@@ -9,7 +9,7 @@ lbl_800BB408:
 /* 800BB424 0000001C  41 82 00 1C */	beq lbl_800BB440
 /* 800BB428 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800BB42C 00000024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800BB430 00000028  A0 03 00 04 */	lhz r0, 4(r3)
+/* 800BB430 00000028  A0 03 00 04 */	lhz r0, 4(r3)	/* effective address: 804061C4 */
 /* 800BB434 0000002C  28 00 00 00 */	cmplwi r0, 0
 /* 800BB438 00000030  40 82 00 08 */	bne lbl_800BB440
 /* 800BB43C 00000034  3B E0 00 01 */	li r31, 1

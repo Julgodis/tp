@@ -38,8 +38,8 @@ lbl_8003E768:
 /* 8003E76C 00000004  88 1B 00 30 */	lbz r0, 0x30(r27)
 /* 8003E770 00000008  28 00 00 0E */	cmplwi r0, 0xe
 /* 8003E774 0000000C  41 81 03 80 */	bgt lbl_8003EAF4
-/* 8003E778 00000010  3C 60 80 3A */	lis r3, d_map_d_map_path_fmap__lit_4467@ha
-/* 8003E77C 00000014  38 63 7D 38 */	addi r3, r3, d_map_d_map_path_fmap__lit_4467@l
+/* 8003E778 00000010  3C 60 80 3A */	lis r3, lit_4467@ha
+/* 8003E77C 00000014  38 63 7D 38 */	addi r3, r3, lit_4467@l
 /* 8003E780 00000018  54 00 10 3A */	slwi r0, r0, 2
 /* 8003E784 0000001C  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8003E788 00000020  7C 09 03 A6 */	mtctr r0
@@ -97,7 +97,7 @@ lbl_8003E834:
 /* 8003E848 00000014  41 82 00 6C */	beq lbl_8003E8B4
 /* 8003E84C 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003E850 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003E854 00000020  88 03 4E 0C */	lbz r0, 0x4e0c(r3)
+/* 8003E854 00000020  88 03 4E 0C */	lbz r0, 0x4e0c(r3)	/* effective address: 8040AFCC */
 /* 8003E858 00000024  2C 00 00 02 */	cmpwi r0, 2
 /* 8003E85C 00000028  40 82 00 54 */	bne lbl_8003E8B0
 /* 8003E860 0000002C  80 7B 00 2C */	lwz r3, 0x2c(r27)
@@ -113,7 +113,7 @@ lbl_8003E87C:
 /* 8003E884 00000008  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8003E888 0000000C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8003E88C 00000010  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8003E890 00000014  A0 84 00 EE */	lhz r4, 0xee(r4)
+/* 8003E890 00000014  A0 84 00 EE */	lhz r4, 0xee(r4)	/* effective address: 803A7376 */
 /* 8003E894 00000018  4B FF 61 29 */	bl isEventBit__11dSv_event_cCFUs
 /* 8003E898 0000001C  2C 03 00 00 */	cmpwi r3, 0
 /* 8003E89C 00000020  41 82 00 18 */	beq lbl_8003E8B4

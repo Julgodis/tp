@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct cXyz {
+struct JUTFont {
 };
 
 struct J2DPicture {
-};
-
-struct JMSMesgEntry_c {
 };
 
 struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
+};
+
+struct cXyz {
 };
 
 struct dMeter2Info_c {
@@ -220,7 +220,7 @@ extern "C" extern u8 const data_80398F18[148];
 extern "C" extern u8 const data_80398FAC[148];
 extern "C" extern u8 const data_80399040[148];
 extern "C" extern u8 const data_803990D4[148];
-extern "C" extern char const* const d_meter_d_meter2_info__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern u8 letter_data__12dMenu_Letter[512];
 extern "C" extern u8 g_meter2_info[248];
 
@@ -496,7 +496,7 @@ SECTION_DEAD char const* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.b
 #pragma pop
 
 /* 803BF760-803BF7F4 0094+00 s=1 e=0 z=0  None .data      @4572                                                        */
-SECTION_DATA static void* d_meter_d_meter2_info__lit_4572[37] = {
+SECTION_DATA static void* lit_4572[37] = {
 	/* 0    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
 	/* 1    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
 	/* 2    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
@@ -538,16 +538,16 @@ SECTION_DATA static void* d_meter_d_meter2_info__lit_4572[37] = {
 
 /* 803BF7F4-803BF81C 0028+00 s=1 e=0 z=0  None .data      tex_name$5183                                                */
 SECTION_DATA static void* data_803BF7F4[10] = {
-	/* 0    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x1A),
-	/* 1    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x43),
-	/* 2    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x6C),
-	/* 3    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x95),
-	/* 4    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xBE),
-	/* 5    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xE7),
-	/* 6    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x110),
-	/* 7    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x139),
-	/* 8    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x162),
-	/* 9    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x18B),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x1A),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x43),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x6C),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x95),
+	/* 4    */ (void*)(((char*)&stringBase0)+0xBE),
+	/* 5    */ (void*)(((char*)&stringBase0)+0xE7),
+	/* 6    */ (void*)(((char*)&stringBase0)+0x110),
+	/* 7    */ (void*)(((char*)&stringBase0)+0x139),
+	/* 8    */ (void*)(((char*)&stringBase0)+0x162),
+	/* 9    */ (void*)(((char*)&stringBase0)+0x18B),
 };
 
 /* 803BF81C-803BFA1C 0200+00 s=3 e=6 z=0  None .data      letter_data__12dMenu_Letter                                  */
@@ -617,27 +617,27 @@ asm dMeter2Info_c::~dMeter2Info_c() {
 
 /* ############################################################################################## */
 /* 80454998-8045499C 0004+00 s=4 e=0 z=0  None .sdata2    @3916                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter2_info__lit_3916[4] = {
+SECTION_SDATA2 static u8 lit_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045499C-804549A0 0004+00 s=1 e=0 z=0  None .sdata2    @3917                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3917 = 1.0f;
+SECTION_SDATA2 static f32 lit_3917 = 1.0f;
 
 /* 804549A0-804549A4 0004+00 s=1 e=0 z=0  None .sdata2    @3918                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3918 = 30.0f;
+SECTION_SDATA2 static f32 lit_3918 = 30.0f;
 
 /* 804549A4-804549A8 0004+00 s=1 e=0 z=0  None .sdata2    @3919                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3919 = 304.0f;
+SECTION_SDATA2 static f32 lit_3919 = 304.0f;
 
 /* 804549A8-804549AC 0004+00 s=1 e=0 z=0  None .sdata2    @3920                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3920 = 224.0f;
+SECTION_SDATA2 static f32 lit_3920 = 224.0f;
 
 /* 804549AC-804549B0 0004+00 s=1 e=0 z=0  None .sdata2    @3921                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3921 = 608.0f;
+SECTION_SDATA2 static f32 lit_3921 = 608.0f;
 
 /* 804549B0-804549B8 0004+04 s=1 e=0 z=0  None .sdata2    @3922                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter2_info__lit_3922[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3922[1 + 1 /* padding */] = {
 	448.0f,
 	/* padding */
 	0.0f,
@@ -755,7 +755,7 @@ asm void dMeter2Info_c::getStringKanji(u32 param_0, char* param_1, JMSMesgEntry_
 
 /* ############################################################################################## */
 /* 804549B8-804549C0 0008+00 s=2 e=0 z=0  None .sdata2    @4108                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter2_info__lit_4108 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4108 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8021C6A4-8021C7F4 0150+00 s=0 e=1 z=0  None .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             */
 #pragma push
@@ -814,7 +814,7 @@ asm void dMeter2Info_c::isDirectUseItem(int param_0) {
 
 /* ############################################################################################## */
 /* 80430178-80430188 000C+04 s=1 e=0 z=0  None .bss       @3846                                                        */
-static u8 d_meter_d_meter2_info__lit_3846[12 + 4 /* padding */];
+static u8 lit_3846[12 + 4 /* padding */];
 
 /* 80430188-80430280 00F8+00 s=4 e=267 z=0  None .bss       g_meter2_info                                                */
 u8 g_meter2_info[248];

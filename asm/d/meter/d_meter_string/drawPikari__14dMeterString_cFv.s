@@ -39,14 +39,14 @@ lbl_8020F6EC:
 /* 8020F780 00000048  48 0F 0E D9 */	bl getStringPtr__10J2DTextBoxCFv
 /* 8020F784 0000004C  7C 7B 1B 78 */	mr r27, r3
 /* 8020F788 00000050  3B 40 00 00 */	li r26, 0
-/* 8020F78C 00000054  C3 22 AE 58 */	lfs f25, d_meter_d_meter_string__lit_3762(r2)
+/* 8020F78C 00000054  C3 22 AE 58 */	lfs f25, lit_3762(r2)
 /* 8020F790 00000058  FF A0 C8 90 */	fmr f29, f25
 /* 8020F794 0000005C  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 8020F798 00000060  80 63 00 04 */	lwz r3, 4(r3)
 /* 8020F79C 00000064  C3 E3 01 1C */	lfs f31, 0x11c(r3)
 /* 8020F7A0 00000068  4B E0 52 51 */	bl mDoExt_getMesgFont__Fv
 /* 8020F7A4 0000006C  7C 79 1B 78 */	mr r25, r3
-/* 8020F7A8 00000070  C3 82 AE 60 */	lfs f28, d_meter_d_meter_string__lit_3820(r2)
+/* 8020F7A8 00000070  C3 82 AE 60 */	lfs f28, lit_3820(r2)
 /* 8020F7AC 00000074  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 8020F7B0 00000078  80 63 00 04 */	lwz r3, 4(r3)
 /* 8020F7B4 0000007C  48 00 00 10 */	b lbl_8020F7C4
@@ -57,7 +57,7 @@ lbl_8020F7B8:
 lbl_8020F7C4:
 /* 8020F7C4 00000000  28 03 00 00 */	cmplwi r3, 0
 /* 8020F7C8 00000004  40 82 FF F0 */	bne lbl_8020F7B8
-/* 8020F7CC 00000008  CB 62 AE 70 */	lfd f27, d_meter_d_meter_string__lit_3824(r2)
+/* 8020F7CC 00000008  CB 62 AE 70 */	lfd f27, lit_3824(r2)
 /* 8020F7D0 0000000C  3F 80 43 30 */	lis r28, 0x4330
 /* 8020F7D4 00000010  48 00 00 C4 */	b lbl_8020F898
 lbl_8020F7D8:
@@ -118,7 +118,7 @@ lbl_8020F898:
 /* 8020F8A0 00000008  7C 60 07 75 */	extsb. r0, r3
 /* 8020F8A4 0000000C  40 82 FF 34 */	bne lbl_8020F7D8
 /* 8020F8A8 00000010  C0 21 00 30 */	lfs f1, 0x30(r1)
-/* 8020F8AC 00000014  C0 02 AE 7C */	lfs f0, d_meter_d_meter_string__lit_3979(r2)
+/* 8020F8AC 00000014  C0 02 AE 7C */	lfs f0, lit_3979(r2)
 /* 8020F8B0 00000018  EC 19 00 32 */	fmuls f0, f25, f0
 /* 8020F8B4 0000001C  EF 21 00 28 */	fsubs f25, f1, f0
 /* 8020F8B8 00000020  3B 40 00 00 */	li r26, 0
@@ -127,7 +127,7 @@ lbl_8020F898:
 /* 8020F8C4 0000002C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020F8C8 00000030  3B A3 01 88 */	addi r29, r3, g_meter2_info@l
 /* 8020F8CC 00000034  C3 41 00 34 */	lfs f26, 0x34(r1)
-/* 8020F8D0 00000038  CB 62 AE 70 */	lfd f27, d_meter_d_meter_string__lit_3824(r2)
+/* 8020F8D0 00000038  CB 62 AE 70 */	lfd f27, lit_3824(r2)
 /* 8020F8D4 0000003C  3F C0 43 30 */	lis r30, 0x4330
 /* 8020F8D8 00000040  48 00 01 40 */	b lbl_8020FA18
 lbl_8020F8DC:
@@ -197,7 +197,7 @@ lbl_8020F934:
 /* 8020F9CC 00000098  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8020F9D0 0000009C  80 7D 00 1C */	lwz r3, 0x1c(r29)
 /* 8020F9D4 000000A0  80 63 01 0C */	lwz r3, 0x10c(r3)
-/* 8020F9D8 000000A4  C0 02 AE 7C */	lfs f0, d_meter_d_meter_string__lit_3979(r2)
+/* 8020F9D8 000000A4  C0 02 AE 7C */	lfs f0, lit_3979(r2)
 /* 8020F9DC 000000A8  EC 38 00 32 */	fmuls f1, f24, f0
 /* 8020F9E0 000000AC  EC 19 E8 2A */	fadds f0, f25, f29
 /* 8020F9E4 000000B0  EC 21 00 2A */	fadds f1, f1, f0

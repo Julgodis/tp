@@ -48,8 +48,8 @@ lbl_8019B8FC:
 /* 8019B90C 00000010  7F E3 FB 78 */	mr r3, r31
 /* 8019B910 00000014  4B E7 38 BD */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 8019B914 00000018  38 7E 01 08 */	addi r3, r30, 0x108
-/* 8019B918 0000001C  3C 80 80 39 */	lis r4, d_d_gameover__stringBase0@ha
-/* 8019B91C 00000020  38 84 4C 28 */	addi r4, r4, d_d_gameover__stringBase0@l
+/* 8019B918 0000001C  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 8019B91C 00000020  38 84 4C 28 */	addi r4, r4, stringBase0@l
 /* 8019B920 00000024  4B E9 16 E9 */	bl dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8019B924 00000028  38 60 00 01 */	li r3, 1
 /* 8019B928 0000002C  83 E1 00 0C */	lwz r31, 0xc(r1)

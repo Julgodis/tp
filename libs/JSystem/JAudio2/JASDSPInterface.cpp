@@ -203,7 +203,7 @@ asm void JASDsp::syncFrame(u32 param_0, u32 param_1, u32 param_2) {
 
 /* ############################################################################################## */
 /* 80455748-8045574C 0004+00 s=1 e=0 z=0  None .sdata2    @176                                                         */
-SECTION_SDATA2 static f32 JASDSPInterface__lit_176 = 4.0f;
+SECTION_SDATA2 static f32 lit_176 = 4.0f;
 
 /* 8029DA04-8029DA30 002C+00 s=0 e=1 z=0  None .text      setDSPMixerLevel__6JASDspFf                                  */
 #pragma push

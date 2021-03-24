@@ -70,7 +70,7 @@ extern "C" void draw__10COutFont_cFP10J2DTextBoxfff(); // 1
 extern "C" void reset__10COutFont_cFP10J2DTextBox(); // 1
 extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures(); // 1
 extern "C" void getBtiName__10COutFont_cFi(); // 1
-extern "C" extern char const* const d_msg_d_msg_out_font__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -160,7 +160,7 @@ SECTION_DEAD static char const* const pad_803995C5 = "\0\0";
 #pragma pop
 
 /* 803BFA90-803BFBA8 0118+00 s=1 e=0 z=0  None .data      @4395                                                        */
-SECTION_DATA static void* d_msg_d_msg_out_font__lit_4395[70] = {
+SECTION_DATA static void* lit_4395[70] = {
 	/* 0    */ (void*)(((char*)createPane__10COutFont_cFv)+0xDC),
 	/* 1    */ (void*)(((char*)createPane__10COutFont_cFv)+0x140),
 	/* 2    */ (void*)(((char*)createPane__10COutFont_cFv)+0x1A0),
@@ -234,7 +234,7 @@ SECTION_DATA static void* d_msg_d_msg_out_font__lit_4395[70] = {
 };
 
 /* 803BFBA8-803BFCAC 0104+00 s=1 e=0 z=0  None .data      @5000                                                        */
-SECTION_DATA static void* d_msg_d_msg_out_font__lit_5000[65] = {
+SECTION_DATA static void* lit_5000[65] = {
 	/* 0    */ (void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
 	/* 1    */ (void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
 	/* 2    */ (void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x150C),
@@ -304,76 +304,76 @@ SECTION_DATA static void* d_msg_d_msg_out_font__lit_5000[65] = {
 
 /* 803BFCAC-803BFDC4 0118+00 s=1 e=0 z=0  None .data      mpIconName$5045                                              */
 SECTION_DATA static void* data_803BFCAC[70] = {
-	/* 0    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x4B),
-	/* 1    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x57),
-	/* 2    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x63),
-	/* 3    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x6F),
-	/* 4    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x7B),
-	/* 5    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x87),
-	/* 6    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x93),
-	/* 7    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x9F),
-	/* 8    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xAB),
-	/* 9    */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 10   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
-	/* 11   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
-	/* 12   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
-	/* 13   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
-	/* 14   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 15   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 16   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 17   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 18   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 19   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xB7),
-	/* 20   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
-	/* 21   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
-	/* 22   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
-	/* 23   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xDE),
-	/* 24   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xD2),
-	/* 25   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xEA),
-	/* 26   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x10B),
-	/* 27   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x121),
-	/* 28   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x12D),
-	/* 29   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xC6),
-	/* 30   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x139),
-	/* 31   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 32   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 33   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 34   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 35   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 36   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 37   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 38   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 39   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 40   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x158),
-	/* 41   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x159),
-	/* 42   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x16D),
-	/* 43   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x179),
-	/* 44   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x185),
-	/* 45   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x191),
-	/* 46   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x19D),
-	/* 47   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0xF),
-	/* 48   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x19D),
-	/* 49   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1A9),
-	/* 50   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1B5),
-	/* 51   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1C1),
-	/* 52   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1CD),
-	/* 53   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1D9),
-	/* 54   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1E5),
-	/* 55   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1F1),
-	/* 56   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1FD),
-	/* 57   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x27),
-	/* 58   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x33),
-	/* 59   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1F1),
-	/* 60   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x1FD),
-	/* 61   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x209),
-	/* 62   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x215),
-	/* 63   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x221),
-	/* 64   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x22D),
-	/* 65   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x239),
-	/* 66   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x245),
-	/* 67   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x251),
-	/* 68   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x25D),
-	/* 69   */ (void*)(((char*)&d_msg_d_msg_out_font__stringBase0)+0x269),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x4B),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x57),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x63),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x6F),
+	/* 4    */ (void*)(((char*)&stringBase0)+0x7B),
+	/* 5    */ (void*)(((char*)&stringBase0)+0x87),
+	/* 6    */ (void*)(((char*)&stringBase0)+0x93),
+	/* 7    */ (void*)(((char*)&stringBase0)+0x9F),
+	/* 8    */ (void*)(((char*)&stringBase0)+0xAB),
+	/* 9    */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 10   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 11   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 12   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 13   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 14   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 15   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 16   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 17   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 18   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 19   */ (void*)(((char*)&stringBase0)+0xB7),
+	/* 20   */ (void*)(((char*)&stringBase0)+0xD2),
+	/* 21   */ (void*)(((char*)&stringBase0)+0xD2),
+	/* 22   */ (void*)(((char*)&stringBase0)+0xD2),
+	/* 23   */ (void*)(((char*)&stringBase0)+0xDE),
+	/* 24   */ (void*)(((char*)&stringBase0)+0xD2),
+	/* 25   */ (void*)(((char*)&stringBase0)+0xEA),
+	/* 26   */ (void*)(((char*)&stringBase0)+0x10B),
+	/* 27   */ (void*)(((char*)&stringBase0)+0x121),
+	/* 28   */ (void*)(((char*)&stringBase0)+0x12D),
+	/* 29   */ (void*)(((char*)&stringBase0)+0xC6),
+	/* 30   */ (void*)(((char*)&stringBase0)+0x139),
+	/* 31   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 32   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 33   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 34   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 35   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 36   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 37   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 38   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 39   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 40   */ (void*)(((char*)&stringBase0)+0x158),
+	/* 41   */ (void*)(((char*)&stringBase0)+0x159),
+	/* 42   */ (void*)(((char*)&stringBase0)+0x16D),
+	/* 43   */ (void*)(((char*)&stringBase0)+0x179),
+	/* 44   */ (void*)(((char*)&stringBase0)+0x185),
+	/* 45   */ (void*)(((char*)&stringBase0)+0x191),
+	/* 46   */ (void*)(((char*)&stringBase0)+0x19D),
+	/* 47   */ (void*)(((char*)&stringBase0)+0xF),
+	/* 48   */ (void*)(((char*)&stringBase0)+0x19D),
+	/* 49   */ (void*)(((char*)&stringBase0)+0x1A9),
+	/* 50   */ (void*)(((char*)&stringBase0)+0x1B5),
+	/* 51   */ (void*)(((char*)&stringBase0)+0x1C1),
+	/* 52   */ (void*)(((char*)&stringBase0)+0x1CD),
+	/* 53   */ (void*)(((char*)&stringBase0)+0x1D9),
+	/* 54   */ (void*)(((char*)&stringBase0)+0x1E5),
+	/* 55   */ (void*)(((char*)&stringBase0)+0x1F1),
+	/* 56   */ (void*)(((char*)&stringBase0)+0x1FD),
+	/* 57   */ (void*)(((char*)&stringBase0)+0x27),
+	/* 58   */ (void*)(((char*)&stringBase0)+0x33),
+	/* 59   */ (void*)(((char*)&stringBase0)+0x1F1),
+	/* 60   */ (void*)(((char*)&stringBase0)+0x1FD),
+	/* 61   */ (void*)(((char*)&stringBase0)+0x209),
+	/* 62   */ (void*)(((char*)&stringBase0)+0x215),
+	/* 63   */ (void*)(((char*)&stringBase0)+0x221),
+	/* 64   */ (void*)(((char*)&stringBase0)+0x22D),
+	/* 65   */ (void*)(((char*)&stringBase0)+0x239),
+	/* 66   */ (void*)(((char*)&stringBase0)+0x245),
+	/* 67   */ (void*)(((char*)&stringBase0)+0x251),
+	/* 68   */ (void*)(((char*)&stringBase0)+0x25D),
+	/* 69   */ (void*)(((char*)&stringBase0)+0x269),
 };
 
 /* 803BFDC4-803BFDE8 0024+00 s=2 e=0 z=0  None .data      __vt__10COutFont_c                                           */
@@ -422,12 +422,12 @@ asm COutFontSet_c::~COutFontSet_c() {
 
 /* ############################################################################################## */
 /* 80454A10-80454A14 0004+00 s=4 e=0 z=0  None .sdata2    @3748                                                        */
-SECTION_SDATA2 static u8 d_msg_d_msg_out_font__lit_3748[4] = {
+SECTION_SDATA2 static u8 lit_3748[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454A14-80454A18 0004+00 s=6 e=0 z=0  None .sdata2    @3749                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_out_font__lit_3749 = 1.0f;
+SECTION_SDATA2 static f32 lit_3749 = 1.0f;
 
 /* 80225C3C-80225C70 0034+00 s=2 e=0 z=0  None .text      initialize__13COutFontSet_cFv                                */
 #pragma push
@@ -486,7 +486,7 @@ asm void COutFont_c::setPane(J2DPicture* param_0) {
 
 /* ############################################################################################## */
 /* 80454A18-80454A20 0008+00 s=2 e=0 z=0  None .sdata2    @4397                                                        */
-SECTION_SDATA2 static f64 d_msg_d_msg_out_font__lit_4397 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4397 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80225EA8-80226CF8 0E50+00 s=2 e=0 z=0  None .text      createPane__10COutFont_cFv                                   */
 #pragma push
@@ -570,7 +570,7 @@ SECTION_SDATA2 static f32 lit_4996 = 4.0f;
 SECTION_SDATA2 static f32 lit_4997 = 1.25f;
 
 /* 80454A50-80454A58 0008+00 s=1 e=0 z=0  None .sdata2    @5001                                                        */
-SECTION_SDATA2 static f64 d_msg_d_msg_out_font__lit_5001 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_5001 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80226DB0-80228448 1698+00 s=2 e=0 z=0  None .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
 #pragma push

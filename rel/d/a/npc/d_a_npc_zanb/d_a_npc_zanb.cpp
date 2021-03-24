@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B6B4B0 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_zanB_c {
@@ -59,6 +59,8 @@ struct daNpc_zanB_c {
 	/* 80B6A408 */ void drawDbgInfo();
 	/* 80B6A410 */ void drawGhost();
 	/* 80B6A47C */ void selectAction();
+	/* 80B6A4C4 */ void chkAction(int (daNpc_zanB_c::*)(void*));
+	/* 80B6A4F0 */ void setAction(int (daNpc_zanB_c::*)(void*));
 	/* 80B6A598 */ void wait(void*);
 	/* 80B6A874 */ void talk(void*);
 	/* 80B6BADC */ daNpc_zanB_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
@@ -216,8 +218,8 @@ extern "C" void setCollision__12daNpc_zanB_cFv(); // 1
 extern "C" void drawDbgInfo__12daNpc_zanB_cFv(); // 1
 extern "C" void drawGhost__12daNpc_zanB_cFv(); // 1
 extern "C" void selectAction__12daNpc_zanB_cFv(); // 1
-extern "C" static void chkAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i(); // 1
 extern "C" void wait__12daNpc_zanB_cFPv(); // 1
 extern "C" void talk__12daNpc_zanB_cFPv(); // 1
 extern "C" void daNpc_zanB_Create__FPv(); // 1
@@ -733,7 +735,7 @@ asm void daNpc_zanB_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i() {
+asm void daNpc_zanB_c::chkAction(int (daNpc_zanB_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zanb/d_a_npc_zanb/chkAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i.s"
 }
@@ -744,7 +746,7 @@ extern "C" asm static void chkAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i() {
+asm void daNpc_zanB_c::setAction(int (daNpc_zanB_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zanb/d_a_npc_zanb/setAction__12daNpc_zanB_cFM12daNpc_zanB_cFPCvPvPv_i.s"
 }

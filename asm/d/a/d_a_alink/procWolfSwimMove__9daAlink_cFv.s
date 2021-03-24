@@ -43,7 +43,7 @@ lbl_80138808:
 /* 80138838 00000030  38 80 00 38 */	li r4, 0x38
 /* 8013883C 00000034  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlSwim_c0@ha
 /* 80138840 00000038  38 A5 F8 B4 */	addi r5, r5, m__20daAlinkHIO_wlSwim_c0@l
-/* 80138844 0000003C  C0 45 00 78 */	lfs f2, 0x78(r5)
+/* 80138844 0000003C  C0 45 00 78 */	lfs f2, 0x78(r5)	/* effective address: 8038F92C */
 /* 80138848 00000040  4B FF 0E 91 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8013884C 00000044  88 1F 2F C7 */	lbz r0, 0x2fc7(r31)
 /* 80138850 00000048  28 00 00 01 */	cmplwi r0, 1
@@ -53,7 +53,7 @@ lbl_80138808:
 lbl_80138860:
 /* 80138860 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 80138864 00000004  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 80138868 00000008  A8 03 00 5C */	lha r0, 0x5c(r3)
+/* 80138868 00000008  A8 03 00 5C */	lha r0, 0x5c(r3)	/* effective address: 8038EE84 */
 /* 8013886C 0000000C  B0 1F 30 D2 */	sth r0, 0x30d2(r31)
 /* 80138870 00000010  48 00 00 30 */	b lbl_801388A0
 lbl_80138874:
@@ -61,13 +61,13 @@ lbl_80138874:
 /* 80138878 00000004  40 82 00 18 */	bne lbl_80138890
 /* 8013887C 00000008  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 80138880 0000000C  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 80138884 00000010  A8 03 00 60 */	lha r0, 0x60(r3)
+/* 80138884 00000010  A8 03 00 60 */	lha r0, 0x60(r3)	/* effective address: 8038EE88 */
 /* 80138888 00000014  B0 1F 30 D2 */	sth r0, 0x30d2(r31)
 /* 8013888C 00000018  48 00 00 14 */	b lbl_801388A0
 lbl_80138890:
 /* 80138890 00000000  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 80138894 00000004  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 80138898 00000008  A8 03 00 58 */	lha r0, 0x58(r3)
+/* 80138898 00000008  A8 03 00 58 */	lha r0, 0x58(r3)	/* effective address: 8038EE80 */
 /* 8013889C 0000000C  B0 1F 30 D2 */	sth r0, 0x30d2(r31)
 lbl_801388A0:
 /* 801388A0 00000000  7F E3 FB 78 */	mr r3, r31

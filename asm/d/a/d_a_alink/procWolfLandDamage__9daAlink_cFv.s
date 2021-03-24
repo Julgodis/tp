@@ -21,7 +21,7 @@ lbl_80136E2C:
 /* 80136E2C 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80136E30 00000004  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlDamFall_c0@ha
 /* 80136E34 00000008  38 63 F3 74 */	addi r3, r3, m__23daAlinkHIO_wlDamFall_c0@l
-/* 80136E38 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 80136E38 0000000C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038F398 */
 /* 80136E3C 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80136E40 00000000  40 81 00 68 */	ble lbl_80136EA8
 /* 80136E44 00000004  7F C3 F3 78 */	mr r3, r30

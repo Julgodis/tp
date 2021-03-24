@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80B777B0 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Zelda_c {
@@ -59,6 +59,8 @@ struct daNpc_Zelda_c {
 	/* 80B765D4 */ void setCollision();
 	/* 80B76774 */ void drawDbgInfo();
 	/* 80B7677C */ void selectAction();
+	/* 80B767C4 */ void chkAction(int (daNpc_Zelda_c::*)(void*));
+	/* 80B767F0 */ void setAction(int (daNpc_Zelda_c::*)(void*));
 	/* 80B76898 */ void wait(void*);
 	/* 80B76B74 */ void talk(void*);
 	/* 80B77DD8 */ daNpc_Zelda_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
@@ -217,8 +219,8 @@ extern "C" void setAttnPos__13daNpc_Zelda_cFv(); // 1
 extern "C" void setCollision__13daNpc_Zelda_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Zelda_cFv(); // 1
 extern "C" void selectAction__13daNpc_Zelda_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i(); // 1
 extern "C" void wait__13daNpc_Zelda_cFPv(); // 1
 extern "C" void talk__13daNpc_Zelda_cFPv(); // 1
 extern "C" void daNpc_Zelda_Create__FPv(); // 1
@@ -736,7 +738,7 @@ asm void daNpc_Zelda_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i() {
+asm void daNpc_Zelda_c::chkAction(int (daNpc_Zelda_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i.s"
 }
@@ -747,7 +749,7 @@ extern "C" asm static void chkAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i() {
+asm void daNpc_Zelda_c::setAction(int (daNpc_Zelda_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zelda/d_a_npc_zelda/setAction__13daNpc_Zelda_cFM13daNpc_Zelda_cFPCvPvPv_i.s"
 }

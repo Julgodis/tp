@@ -11,8 +11,8 @@ lbl_801C50B4:
 /* 801C50D8 00000024  8B FD 01 FB */	lbz r31, 0x1fb(r29)
 /* 801C50DC 00000028  7F A3 EB 78 */	mr r3, r29
 /* 801C50E0 0000002C  1C BF 00 0C */	mulli r5, r31, 0xc
-/* 801C50E4 00000030  3C 80 80 3C */	lis r4, d_menu_d_menu_fishing__map_move_process@ha
-/* 801C50E8 00000034  38 04 D0 68 */	addi r0, r4, d_menu_d_menu_fishing__map_move_process@l
+/* 801C50E4 00000030  3C 80 80 3C */	lis r4, map_move_process@ha
+/* 801C50E8 00000034  38 04 D0 68 */	addi r0, r4, map_move_process@l
 /* 801C50EC 00000038  7D 80 2A 14 */	add r12, r0, r5
 /* 801C50F0 0000003C  48 19 CF 95 */	bl __ptmf_scall
 /* 801C50F4 00000040  60 00 00 00 */	nop 
@@ -21,8 +21,8 @@ lbl_801C50B4:
 /* 801C5100 0000004C  41 82 00 20 */	beq lbl_801C5120
 /* 801C5104 00000050  7F A3 EB 78 */	mr r3, r29
 /* 801C5108 00000054  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801C510C 00000058  3C 80 80 3C */	lis r4, d_menu_d_menu_fishing__map_init_process@ha
-/* 801C5110 0000005C  38 04 D0 50 */	addi r0, r4, d_menu_d_menu_fishing__map_init_process@l
+/* 801C510C 00000058  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801C5110 0000005C  38 04 D0 50 */	addi r0, r4, map_init_process@l
 /* 801C5114 00000060  7D 80 2A 14 */	add r12, r0, r5
 /* 801C5118 00000064  48 19 CF 6D */	bl __ptmf_scall
 /* 801C511C 00000068  60 00 00 00 */	nop 

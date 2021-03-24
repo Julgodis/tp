@@ -31,8 +31,8 @@ lbl_8036CEE8:
 lbl_8036CEFC:
 /* 8036CEFC 00000000  7C DF 33 78 */	mr r31, r6
 lbl_8036CF00:
-/* 8036CF00 00000000  3C 60 80 3A */	lis r3, MetroTRK_Portable_nubinit__lit_154@ha
-/* 8036CF04 00000004  38 83 26 A4 */	addi r4, r3, MetroTRK_Portable_nubinit__lit_154@l
+/* 8036CF00 00000000  3C 60 80 3A */	lis r3, lit_154@ha
+/* 8036CF04 00000004  38 83 26 A4 */	addi r4, r3, lit_154@l
 /* 8036CF08 00000008  38 60 00 01 */	li r3, 1
 /* 8036CF0C 0000000C  4C C6 31 82 */	crclr 6
 /* 8036CF10 00000010  48 00 5D 45 */	bl MWTRACE
@@ -78,7 +78,7 @@ lbl_8036CF74:
 /* 8036CF98 00000024  3C 80 80 45 */	lis r4, gTRKInputPendingPtr@ha
 /* 8036CF9C 00000028  7C 60 1B 78 */	mr r0, r3
 /* 8036CFA0 0000002C  38 64 19 B8 */	addi r3, r4, gTRKInputPendingPtr@l
-/* 8036CFA4 00000030  80 63 00 00 */	lwz r3, 0(r3)
+/* 8036CFA4 00000030  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 804519B8 */
 /* 8036CFA8 00000034  7C 1E 03 78 */	mr r30, r0
 /* 8036CFAC 00000038  48 00 2B 2D */	bl TRKTargetSetInputPendingPtr
 /* 8036CFB0 0000003C  2C 1E 00 00 */	cmpwi r30, 0

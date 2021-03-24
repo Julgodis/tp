@@ -15,28 +15,26 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColorKey {
-};
-
-struct J2DAnmVtxColorKey {
-};
-
 struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J3DAnmTextureSRTKeyData {
 };
 
-struct J3DAnmTransformKeyData {
+struct J2DScreen {
 };
 
-struct J3DAnmVtxColorKeyData {
+struct J2DAnmBase {
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmTransformKey {
@@ -45,11 +43,13 @@ struct J2DAnmTransformKey {
 struct J3DAnmColorKeyData {
 };
 
-struct J2DScreen {
+struct J3DAnmTransformKeyData {
 };
 
-struct J2DAnmBase {
-	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+struct J2DAnmColorKey {
+};
+
+struct J2DAnmVtxColorKey {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -72,32 +72,32 @@ struct J2DAnmKeyLoader_v15 {
 struct J3DAnmColorFullData {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
-};
-
-struct J2DAnmTransformFull {
-};
-
-struct J3DAnmTransformFullData {
+struct J3DAnmVisibilityFullData {
 };
 
 struct J3DAnmVtxColorFullData {
 };
 
-struct J3DAnmVisibilityFullData {
+struct J2DAnmTexPattern {
 };
 
-struct J3DAnmTexPatternFullData {
+struct J3DAnmTransformFullData {
 };
 
 struct J2DAnmVtxColorFull {
 };
 
-struct J2DAnmTexPattern {
+struct J3DAnmTexPatternFullData {
+};
+
+struct J2DAnmTransformFull {
 };
 
 struct J2DAnmColorFull {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -286,7 +286,7 @@ SECTION_DATA void* __vt__14J2DAnmVtxColor[5] = {
 };
 
 /* 804562F8-80456300 0004+04 s=11 e=0 z=0  None .sdata2    @1581                                                        */
-SECTION_SDATA2 static u8 J2DAnmLoader__lit_1581[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_1581[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

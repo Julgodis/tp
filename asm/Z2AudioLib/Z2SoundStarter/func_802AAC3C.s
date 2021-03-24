@@ -75,7 +75,7 @@ lbl_802AAD3C:
 /* 802AAD48 0000000C  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 802AAD4C 00000000  7C 00 00 26 */	mfcr r0
 /* 802AAD50 00000004  54 00 17 FE */	rlwinm r0, r0, 2, 0x1f, 0x1f
-/* 802AAD54 00000008  C8 22 BE 68 */	lfd f1, Z2SoundStarter__lit_3717(r2)
+/* 802AAD54 00000008  C8 22 BE 68 */	lfd f1, lit_3717(r2)
 /* 802AAD58 0000000C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802AAD5C 00000010  3C 00 43 30 */	lis r0, 0x4330
 /* 802AAD60 00000014  90 01 00 18 */	stw r0, 0x18(r1)
@@ -88,7 +88,7 @@ lbl_802AAD3C:
 lbl_802AAD7C:
 /* 802AAD7C 00000000  80 6D 85 BC */	lwz r3, data_80450B3C(r13)
 /* 802AAD80 00000004  48 01 E6 65 */	bl getFogDensity__10Z2EnvSeMgrFv
-/* 802AAD84 00000008  C0 02 BE 64 */	lfs f0, Z2SoundStarter__lit_3713(r2)
+/* 802AAD84 00000008  C0 02 BE 64 */	lfs f0, lit_3713(r2)
 /* 802AAD88 0000000C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 802AAD8C 00000010  EF 7B 00 2A */	fadds f27, f27, f0
 /* 802AAD90 00000014  C0 02 BE 5C */	lfs f0, lit_3598(r2)

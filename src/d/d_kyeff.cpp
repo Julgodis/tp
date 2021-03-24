@@ -38,7 +38,7 @@ extern "C" static void dKyeff_Execute__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_IsDelete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Delete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Create__FP12kankyo_class(); // 1
-extern "C" extern char const* const d_d_kyeff__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_KYEFF[10 + 1 /* padding */];
 
 // 
@@ -139,21 +139,21 @@ asm static void dKyeff_Delete(dKyeff_c* param_0) {
 
 /* ############################################################################################## */
 /* 80453E58-80453E5C 0004+00 s=1 e=0 z=0  None .sdata2    @3804                                                        */
-SECTION_SDATA2 static u8 d_d_kyeff__lit_3804[4] = {
+SECTION_SDATA2 static u8 lit_3804[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453E5C-80453E60 0004+00 s=1 e=0 z=0  None .sdata2    @3805                                                        */
-SECTION_SDATA2 static f32 d_d_kyeff__lit_3805 = 1.0f;
+SECTION_SDATA2 static f32 lit_3805 = 1.0f;
 
 /* 80453E60-80453E68 0008+00 s=1 e=0 z=0  None .sdata2    @3812                                                        */
-SECTION_SDATA2 static f64 d_d_kyeff__lit_3812 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3812 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80453E68-80453E6C 0004+00 s=1 e=0 z=0  None .sdata2    @3843                                                        */
-SECTION_SDATA2 static f32 d_d_kyeff__lit_3843 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3843 = 7.0f / 10.0f;
 
 /* 80453E6C-80453E70 0004+00 s=1 e=0 z=0  None .sdata2    @3844                                                        */
-SECTION_SDATA2 static f32 d_d_kyeff__lit_3844 = 15.0f;
+SECTION_SDATA2 static f32 lit_3844 = 15.0f;
 
 /* 801ADE00-801ADEA0 00A0+00 s=1 e=0 z=0  None .text      dKyeff_Create__FP12kankyo_class                              */
 #pragma push

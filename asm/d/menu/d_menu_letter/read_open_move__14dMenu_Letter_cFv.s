@@ -9,7 +9,7 @@ lbl_801DE564:
 /* 801DE580 0000001C  7C 7F 1B 78 */	mr r31, r3
 /* 801DE584 00000020  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801DE588 00000024  3B A3 EB C8 */	addi r29, r3, g_drawHIO@l
-/* 801DE58C 00000028  A8 9D 07 5A */	lha r4, 0x75a(r29)
+/* 801DE58C 00000028  A8 9D 07 5A */	lha r4, 0x75a(r29)	/* effective address: 8042F322 */
 /* 801DE590 0000002C  A8 7F 03 6A */	lha r3, 0x36a(r31)
 /* 801DE594 00000030  38 03 00 01 */	addi r0, r3, 1
 /* 801DE598 00000034  B0 1F 03 6A */	sth r0, 0x36a(r31)
@@ -32,7 +32,7 @@ lbl_801DE5B8:
 /* 801DE5D8 00000020  7D 89 03 A6 */	mtctr r12
 /* 801DE5DC 00000024  4E 80 04 21 */	bctrl 
 /* 801DE5E0 00000028  7C 7F E0 2E */	lwzx r3, r31, r28
-/* 801DE5E4 0000002C  C0 22 A8 E4 */	lfs f1, d_menu_d_menu_letter__lit_3828(r2)
+/* 801DE5E4 0000002C  C0 22 A8 E4 */	lfs f1, lit_3828(r2)
 /* 801DE5E8 00000030  48 07 71 E9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801DE5EC 00000034  3B 7B 00 01 */	addi r27, r27, 1
 /* 801DE5F0 00000038  2C 1B 00 02 */	cmpwi r27, 2
@@ -41,14 +41,14 @@ lbl_801DE5B8:
 /* 801DE5FC 00000044  80 7F 02 B4 */	lwz r3, 0x2b4(r31)
 /* 801DE600 00000048  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801DE604 0000004C  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801DE608 00000050  88 84 07 85 */	lbz r4, 0x785(r4)
+/* 801DE608 00000050  88 84 07 85 */	lbz r4, 0x785(r4)	/* effective address: 8042F34D */
 /* 801DE60C 00000054  81 83 00 00 */	lwz r12, 0(r3)
 /* 801DE610 00000058  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 801DE614 0000005C  7D 89 03 A6 */	mtctr r12
 /* 801DE618 00000060  4E 80 04 21 */	bctrl 
 /* 801DE61C 00000064  48 00 00 D0 */	b lbl_801DE6EC
 lbl_801DE620:
-/* 801DE620 00000000  C8 42 A9 10 */	lfd f2, d_menu_d_menu_letter__lit_4171(r2)
+/* 801DE620 00000000  C8 42 A9 10 */	lfd f2, lit_4171(r2)
 /* 801DE624 00000004  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801DE628 00000008  90 01 00 0C */	stw r0, 0xc(r1)
 /* 801DE62C 0000000C  3C 60 43 30 */	lis r3, 0x4330
@@ -85,8 +85,8 @@ lbl_801DE65C:
 /* 801DE6A4 00000048  80 7F 02 B4 */	lwz r3, 0x2b4(r31)
 /* 801DE6A8 0000004C  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801DE6AC 00000050  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801DE6B0 00000054  88 04 07 85 */	lbz r0, 0x785(r4)
-/* 801DE6B4 00000058  C8 22 A9 08 */	lfd f1, d_menu_d_menu_letter__lit_4058(r2)
+/* 801DE6B0 00000054  88 04 07 85 */	lbz r0, 0x785(r4)	/* effective address: 8042F34D */
+/* 801DE6B4 00000058  C8 22 A9 08 */	lfd f1, lit_4058(r2)
 /* 801DE6B8 0000005C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801DE6BC 00000060  3C 00 43 30 */	lis r0, 0x4330
 /* 801DE6C0 00000064  90 01 00 10 */	stw r0, 0x10(r1)

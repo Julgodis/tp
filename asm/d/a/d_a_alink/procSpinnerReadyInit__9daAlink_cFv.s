@@ -32,10 +32,10 @@ lbl_8010DCBC:
 /* 8010DCD8 0000001C  38 80 00 D7 */	li r4, 0xd7
 /* 8010DCDC 00000020  3C A0 80 39 */	lis r5, m__23daAlinkHIO_smallJump_c0@ha
 /* 8010DCE0 00000024  38 C5 E1 1C */	addi r6, r5, m__23daAlinkHIO_smallJump_c0@l
-/* 8010DCE4 00000028  C0 26 00 04 */	lfs f1, 4(r6)
+/* 8010DCE4 00000028  C0 26 00 04 */	lfs f1, 4(r6)	/* effective address: 8038E120 */
 /* 8010DCE8 0000002C  C0 42 93 44 */	lfs f2, lit_7977(r2)
-/* 8010DCEC 00000030  A8 A6 00 00 */	lha r5, 0(r6)
-/* 8010DCF0 00000034  C0 66 00 0C */	lfs f3, 0xc(r6)
+/* 8010DCEC 00000030  A8 A6 00 00 */	lha r5, 0(r6)	/* effective address: 8038E11C */
+/* 8010DCF0 00000034  C0 66 00 0C */	lfs f3, 0xc(r6)	/* effective address: 8038E128 */
 /* 8010DCF4 00000038  4B F9 F3 19 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 8010DCF8 0000003C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 8010DCFC 00000040  D0 1E 33 98 */	stfs f0, 0x3398(r30)
@@ -69,17 +69,17 @@ lbl_8010DCBC:
 /* 8010DD6C 000000B0  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 8010DD70 000000B4  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 8010DD74 000000B8  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 8010DD78 000000BC  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8010DD78 000000BC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8010DD7C 000000C0  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 8010DD80 000000C4  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8010DD80 000000C4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8010DD84 000000C8  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 8010DD88 000000CC  C0 1E 35 8C */	lfs f0, 0x358c(r30)
 /* 8010DD8C 000000D0  D0 1E 33 B0 */	stfs f0, 0x33b0(r30)
-/* 8010DD90 000000D4  C0 03 00 00 */	lfs f0, 0(r3)
+/* 8010DD90 000000D4  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80420000 */
 /* 8010DD94 000000D8  D0 1E 34 D4 */	stfs f0, 0x34d4(r30)
-/* 8010DD98 000000DC  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8010DD98 000000DC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8010DD9C 000000E0  D0 1E 34 D8 */	stfs f0, 0x34d8(r30)
-/* 8010DDA0 000000E4  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8010DDA0 000000E4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8010DDA4 000000E8  D0 1E 34 DC */	stfs f0, 0x34dc(r30)
 /* 8010DDA8 000000EC  38 00 00 08 */	li r0, 8
 /* 8010DDAC 000000F0  B0 1E 30 0C */	sth r0, 0x300c(r30)

@@ -110,16 +110,16 @@ lbl_8001781C:
 /* 8001782C 00000010  80 18 00 04 */	lwz r0, 4(r24)
 /* 80017830 00000014  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 80017834 00000018  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l
-/* 80017838 0000001C  90 03 1F F8 */	stw r0, 0x1ff8(r3)
-/* 8001783C 00000020  88 63 1F BC */	lbz r3, 0x1fbc(r3)
+/* 80017838 0000001C  90 03 1F F8 */	stw r0, 0x1ff8(r3)	/* effective address: 803ECF38 */
+/* 8001783C 00000020  88 63 1F BC */	lbz r3, 0x1fbc(r3)	/* effective address: 803ECEFC */
 /* 80017840 00000024  38 81 00 08 */	addi r4, r1, 8
 /* 80017844 00000028  48 34 19 15 */	bl CARDGetSerialNo
 /* 80017848 0000002C  80 01 00 08 */	lwz r0, 8(r1)
 /* 8001784C 00000030  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 80017850 00000034  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 80017854 00000038  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l
-/* 80017858 0000003C  90 83 1F F4 */	stw r4, 0x1ff4(r3)
-/* 8001785C 00000040  90 03 1F F0 */	stw r0, 0x1ff0(r3)
+/* 80017858 0000003C  90 83 1F F4 */	stw r4, 0x1ff4(r3)	/* effective address: 803ECF34 */
+/* 8001785C 00000040  90 03 1F F0 */	stw r0, 0x1ff0(r3)	/* effective address: 803ECF30 */
 /* 80017860 00000044  38 60 00 00 */	li r3, 0
 lbl_80017864:
 /* 80017864 00000000  39 61 00 40 */	addi r11, r1, 0x40

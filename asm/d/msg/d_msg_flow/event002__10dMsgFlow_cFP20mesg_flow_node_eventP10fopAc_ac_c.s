@@ -6,9 +6,9 @@ lbl_8024C514:
 /* 8024C524 00000010  4B FF EC 0D */	bl getParam__10dMsgFlow_cFPUc
 /* 8024C528 00000014  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8024C52C 00000018  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8024C530 0000001C  80 04 5D C4 */	lwz r0, 0x5dc4(r4)
+/* 8024C530 0000001C  80 04 5D C4 */	lwz r0, 0x5dc4(r4)	/* effective address: 8040BF84 */
 /* 8024C534 00000020  7C 00 1A 14 */	add r0, r0, r3
-/* 8024C538 00000024  90 04 5D C4 */	stw r0, 0x5dc4(r4)
+/* 8024C538 00000024  90 04 5D C4 */	stw r0, 0x5dc4(r4)	/* effective address: 8040BF84 */
 /* 8024C53C 00000028  38 60 00 01 */	li r3, 1
 /* 8024C540 0000002C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8024C544 00000030  7C 08 03 A6 */	mtlr r0

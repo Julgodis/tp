@@ -25,12 +25,12 @@ lbl_800DDEA8:
 /* 800DDEB0 00000008  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 800DDEB4 0000000C  C4 03 55 44 */	lfsu f0, l_halfAtnWaitBaseAnime@l(r3)
 /* 800DDEB8 00000010  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800DDEBC 00000014  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800DDEBC 00000014  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800DDEC0 00000018  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800DDEC4 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800DDEC4 0000001C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800DDEC8 00000020  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800DDECC 00000024  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800DDED0 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800DDED0 00000028  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800DDED4 0000002C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800DDED8 00000030  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800DDEDC 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

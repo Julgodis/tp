@@ -8,14 +8,14 @@ lbl_80216CA8:
 /* 80216CC0 00000004  7C 7F 1B 78 */	mr r31, r3
 /* 80216CC4 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80216CC8 0000000C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80216CCC 00000010  C0 43 03 68 */	lfs f2, 0x368(r3)
-/* 80216CD0 00000014  C0 23 00 18 */	lfs f1, 0x18(r3)
-/* 80216CD4 00000018  C0 03 03 48 */	lfs f0, 0x348(r3)
+/* 80216CCC 00000010  C0 43 03 68 */	lfs f2, 0x368(r3)	/* effective address: 8042EF30 */
+/* 80216CD0 00000014  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 8042EBE0 */
+/* 80216CD4 00000018  C0 03 03 48 */	lfs f0, 0x348(r3)	/* effective address: 8042EF10 */
 /* 80216CD8 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80216CDC 00000020  EF E2 00 32 */	fmuls f31, f2, f0
 /* 80216CE0 00000024  80 7F 02 E0 */	lwz r3, 0x2e0(r31)
 /* 80216CE4 00000028  48 03 EB 45 */	bl getAlphaRate__13CPaneMgrAlphaFv
-/* 80216CE8 0000002C  C0 02 AE 80 */	lfs f0, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80216CE8 0000002C  C0 02 AE 80 */	lfs f0, lit_4182(r2)
 /* 80216CEC 00000030  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80216CF0 00000034  41 82 00 20 */	beq lbl_80216D10
 /* 80216CF4 00000038  80 7F 02 E0 */	lwz r3, 0x2e0(r31)

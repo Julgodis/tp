@@ -22,13 +22,13 @@ lbl_800AC394:
 /* 800AC3E4 00000034  41 82 00 18 */	beq lbl_800AC3FC
 /* 800AC3E8 00000038  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800AC3EC 0000003C  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800AC3F0 00000040  C0 03 00 48 */	lfs f0, 0x48(r3)
+/* 800AC3F0 00000040  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 8038E83C */
 /* 800AC3F4 00000044  EF DE 00 32 */	fmuls f30, f30, f0
 /* 800AC3F8 00000048  48 00 00 14 */	b lbl_800AC40C
 lbl_800AC3FC:
 /* 800AC3FC 00000000  3C 60 80 39 */	lis r3, m__24daAlinkHIO_magneBoots_c0@ha
 /* 800AC400 00000004  38 63 E7 F4 */	addi r3, r3, m__24daAlinkHIO_magneBoots_c0@l
-/* 800AC404 00000008  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800AC404 00000008  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8038E820 */
 /* 800AC408 0000000C  EF DE 00 32 */	fmuls f30, f30, f0
 lbl_800AC40C:
 /* 800AC40C 00000000  7F 83 E3 78 */	mr r3, r28

@@ -4,9 +4,9 @@ lbl_800F3FC4:
 /* 800F3FCC 00000008  3C 80 80 42 */	lis r4, l_waitBaseAnime@ha
 /* 800F3FD0 0000000C  C4 04 55 14 */	lfsu f0, l_waitBaseAnime@l(r4)
 /* 800F3FD4 00000010  D0 03 35 88 */	stfs f0, 0x3588(r3)
-/* 800F3FD8 00000014  C0 04 00 04 */	lfs f0, 4(r4)
+/* 800F3FD8 00000014  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80420004 */
 /* 800F3FDC 00000018  D0 03 35 8C */	stfs f0, 0x358c(r3)
-/* 800F3FE0 0000001C  C0 04 00 08 */	lfs f0, 8(r4)
+/* 800F3FE0 0000001C  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80420008 */
 /* 800F3FE4 00000020  D0 03 35 90 */	stfs f0, 0x3590(r3)
 /* 800F3FE8 00000024  3C 80 80 42 */	lis r4, l_canoeBaseAnime@ha
 /* 800F3FEC 00000028  38 04 55 EC */	addi r0, r4, l_canoeBaseAnime@l

@@ -116,7 +116,7 @@ lbl_80271DEC:
 /* 80271ED0 000000E4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80271ED4 000000E8  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80271ED8 000000EC  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80271EDC 000000F0  C0 02 B8 40 */	lfs f0, JFWSystem__lit_2242(r2)
+/* 80271EDC 000000F0  C0 02 B8 40 */	lfs f0, lit_2242(r2)
 /* 80271EE0 000000F4  EF E0 00 72 */	fmuls f31, f0, f1
 /* 80271EE4 000000F8  80 6D 8C 30 */	lwz r3, systemFont__9JFWSystem(r13)
 /* 80271EE8 000000FC  81 83 00 00 */	lwz r12, 0(r3)

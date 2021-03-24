@@ -8,7 +8,7 @@ lbl_8020D308:
 /* 8020D320 00000018  48 04 85 09 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 8020D324 0000001C  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020D328 00000020  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8020D32C 00000024  C0 03 03 A0 */	lfs f0, 0x3a0(r3)
+/* 8020D32C 00000024  C0 03 03 A0 */	lfs f0, 0x3a0(r3)	/* effective address: 8042EF68 */
 /* 8020D330 00000028  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D334 0000002C  41 82 00 2C */	beq lbl_8020D360
 /* 8020D338 00000030  80 7F 00 2C */	lwz r3, 0x2c(r31)
@@ -16,8 +16,8 @@ lbl_8020D308:
 /* 8020D340 00000038  48 04 84 91 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020D344 0000003C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020D348 00000040  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020D34C 00000044  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 8020D350 00000048  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 8020D34C 00000044  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 8020D350 00000048  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 8020D354 0000004C  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 8020D358 00000050  38 A0 00 05 */	li r5, 5
 /* 8020D35C 00000054  48 00 D7 49 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas
@@ -26,7 +26,7 @@ lbl_8020D360:
 /* 8020D364 00000004  48 04 84 C5 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 8020D368 00000008  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 8020D36C 0000000C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 8020D370 00000010  C0 03 03 A8 */	lfs f0, 0x3a8(r3)
+/* 8020D370 00000010  C0 03 03 A8 */	lfs f0, 0x3a8(r3)	/* effective address: 8042EF70 */
 /* 8020D374 00000014  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8020D378 00000018  41 82 00 2C */	beq lbl_8020D3A4
 /* 8020D37C 0000001C  80 7F 00 30 */	lwz r3, 0x30(r31)
@@ -34,8 +34,8 @@ lbl_8020D360:
 /* 8020D384 00000024  48 04 84 4D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 8020D388 00000028  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020D38C 0000002C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8020D390 00000030  80 63 00 1C */	lwz r3, 0x1c(r3)
-/* 8020D394 00000034  80 63 01 0C */	lwz r3, 0x10c(r3)
+/* 8020D390 00000030  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
+/* 8020D394 00000034  80 63 01 0C */	lwz r3, 0x10c(r3)	/* effective address: 80430294 */
 /* 8020D398 00000038  80 9F 00 30 */	lwz r4, 0x30(r31)
 /* 8020D39C 0000003C  38 A0 00 05 */	li r5, 5
 /* 8020D3A0 00000040  48 00 D7 05 */	bl setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas

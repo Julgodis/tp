@@ -39,7 +39,7 @@ lbl_8013B318:
 /* 8013B328 00000010  4B FE E5 21 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8013B32C 00000014  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtRoll_c0@ha
 /* 8013B330 00000018  38 63 F5 58 */	addi r3, r3, m__22daAlinkHIO_wlAtRoll_c0@l
-/* 8013B334 0000001C  C0 03 00 14 */	lfs f0, 0x14(r3)
+/* 8013B334 0000001C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8038F56C */
 /* 8013B338 00000020  D0 1F 34 78 */	stfs f0, 0x3478(r31)
 /* 8013B33C 00000024  7F E3 FB 78 */	mr r3, r31
 /* 8013B340 00000028  3C 80 40 00 */	lis r4, 0x4000
@@ -59,7 +59,7 @@ lbl_8013B318:
 /* 8013B378 00000060  41 82 00 48 */	beq lbl_8013B3C0
 /* 8013B37C 00000064  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAtRoll_c0@ha
 /* 8013B380 00000068  38 63 F5 58 */	addi r3, r3, m__22daAlinkHIO_wlAtRoll_c0@l
-/* 8013B384 0000006C  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 8013B384 0000006C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038F574 */
 /* 8013B388 00000070  FC 00 00 1E */	fctiwz f0, f0
 /* 8013B38C 00000074  D8 01 00 08 */	stfd f0, 8(r1)
 /* 8013B390 00000078  80 01 00 0C */	lwz r0, 0xc(r1)

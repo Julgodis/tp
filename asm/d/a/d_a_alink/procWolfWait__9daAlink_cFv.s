@@ -28,7 +28,7 @@ lbl_8012D2A8:
 /* 8012D310 00000068  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8012D314 0000006C  D0 1E 33 F0 */	stfs f0, 0x33f0(r30)
 /* 8012D318 00000070  7F C3 F3 78 */	mr r3, r30
-/* 8012D31C 00000074  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 8012D31C 00000074  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 8012D320 00000078  4B FF B5 25 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8012D324 0000007C  7F C3 F3 78 */	mr r3, r30
 /* 8012D328 00000080  4B F8 74 8D */	bl checkServiceWaitMode__9daAlink_cFv

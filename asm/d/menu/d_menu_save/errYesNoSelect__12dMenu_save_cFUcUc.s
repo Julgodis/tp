@@ -19,7 +19,7 @@ lbl_801F4E84:
 /* 801F4E88 00000004  4B E3 D3 15 */	bl checkTrigger__9STControlFv
 /* 801F4E8C 00000008  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801F4E90 0000000C  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801F4E94 00000010  80 03 00 34 */	lwz r0, 0x34(r3)
+/* 801F4E94 00000010  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
 /* 801F4E98 00000014  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 801F4E9C 00000018  41 82 00 A0 */	beq lbl_801F4F3C
 /* 801F4EA0 0000001C  88 1F 01 B6 */	lbz r0, 0x1b6(r31)
@@ -34,9 +34,9 @@ lbl_801F4E84:
 /* 801F4EC4 00000040  38 A0 00 00 */	li r5, 0
 /* 801F4EC8 00000044  38 C0 00 00 */	li r6, 0
 /* 801F4ECC 00000048  38 E0 00 00 */	li r7, 0
-/* 801F4ED0 0000004C  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F4ED0 0000004C  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F4ED4 00000050  FC 40 08 90 */	fmr f2, f1
-/* 801F4ED8 00000054  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F4ED8 00000054  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F4EDC 00000058  FC 80 18 90 */	fmr f4, f3
 /* 801F4EE0 0000005C  39 00 00 00 */	li r8, 0
 /* 801F4EE4 00000060  48 0B 6A A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -51,15 +51,15 @@ lbl_801F4EEC:
 /* 801F4F04 00000018  38 A0 00 00 */	li r5, 0
 /* 801F4F08 0000001C  38 C0 00 00 */	li r6, 0
 /* 801F4F0C 00000020  38 E0 00 00 */	li r7, 0
-/* 801F4F10 00000024  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F4F10 00000024  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F4F14 00000028  FC 40 08 90 */	fmr f2, f1
-/* 801F4F18 0000002C  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F4F18 0000002C  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F4F1C 00000030  FC 80 18 90 */	fmr f4, f3
 /* 801F4F20 00000034  39 00 00 00 */	li r8, 0
 /* 801F4F24 00000038  48 0B 6A 61 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_801F4F28:
 /* 801F4F28 00000000  80 7F 00 2C */	lwz r3, 0x2c(r31)
-/* 801F4F2C 00000004  C0 22 AA 48 */	lfs f1, d_menu_d_menu_save__lit_4175(r2)
+/* 801F4F2C 00000004  C0 22 AA 48 */	lfs f1, lit_4175(r2)
 /* 801F4F30 00000008  4B FA 03 71 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 801F4F34 0000000C  3B C0 00 01 */	li r30, 1
 /* 801F4F38 00000010  48 00 00 60 */	b lbl_801F4F98

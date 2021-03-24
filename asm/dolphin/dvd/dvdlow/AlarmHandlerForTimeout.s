@@ -10,10 +10,10 @@ lbl_80347A18:
 /* 80347A38 00000020  4B FF 45 C9 */	bl OSClearContext
 /* 80347A3C 00000024  38 61 00 10 */	addi r3, r1, 0x10
 /* 80347A40 00000028  4B FF 43 F9 */	bl OSSetCurrentContext
-/* 80347A44 0000002C  81 8D 91 98 */	lwz r12, dvdlow__Callback(r13)
+/* 80347A44 0000002C  81 8D 91 98 */	lwz r12, Callback(r13)
 /* 80347A48 00000030  38 00 00 00 */	li r0, 0
 /* 80347A4C 00000034  28 0C 00 00 */	cmplwi r12, 0
-/* 80347A50 00000038  90 0D 91 98 */	stw r0, dvdlow__Callback(r13)
+/* 80347A50 00000038  90 0D 91 98 */	stw r0, Callback(r13)
 /* 80347A54 0000003C  41 82 00 10 */	beq lbl_80347A64
 /* 80347A58 00000040  7D 88 03 A6 */	mtlr r12
 /* 80347A5C 00000044  38 60 00 10 */	li r3, 0x10

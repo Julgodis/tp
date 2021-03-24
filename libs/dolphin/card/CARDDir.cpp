@@ -13,8 +13,8 @@
 
 
 extern "C" void __CARDGetDirBlock(); // 1
-extern "C" static void CARDDir__WriteCallback(); // 1
-extern "C" static void CARDDir__EraseCallback(); // 1
+extern "C" static void WriteCallback(); // 1
+extern "C" static void EraseCallback(); // 1
 extern "C" void __CARDUpdateDir(); // 1
 
 // 
@@ -49,9 +49,9 @@ extern "C" asm void __CARDGetDirBlock() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDDir__WriteCallback() {
+extern "C" asm static void WriteCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDDir/CARDDir__WriteCallback.s"
+#include "asm/dolphin/card/CARDDir/WriteCallback.s"
 }
 #pragma pop
 
@@ -60,9 +60,9 @@ extern "C" asm static void CARDDir__WriteCallback() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDDir__EraseCallback() {
+extern "C" asm static void EraseCallback() {
 	nofralloc
-#include "asm/dolphin/card/CARDDir/CARDDir__EraseCallback.s"
+#include "asm/dolphin/card/CARDDir/EraseCallback.s"
 }
 #pragma pop
 

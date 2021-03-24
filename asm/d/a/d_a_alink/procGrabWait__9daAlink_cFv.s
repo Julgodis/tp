@@ -60,12 +60,12 @@ lbl_800E6CF4:
 /* 800E6D10 0000001C  40 82 00 14 */	bne lbl_800E6D24
 lbl_800E6D14:
 /* 800E6D14 00000000  7F A3 EB 78 */	mr r3, r29
-/* 800E6D18 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E6D18 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E6D1C 00000008  4B FC 7D 55 */	bl setBlendAtnMoveAnime__9daAlink_cFf
 /* 800E6D20 0000000C  48 00 00 30 */	b lbl_800E6D50
 lbl_800E6D24:
 /* 800E6D24 00000000  7F A3 EB 78 */	mr r3, r29
-/* 800E6D28 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E6D28 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E6D2C 00000008  4B FC 70 E9 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800E6D30 0000000C  48 00 00 20 */	b lbl_800E6D50
 lbl_800E6D34:

@@ -53,15 +53,15 @@ lbl_800408F0:
 /* 800408F4 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 800408F8 00000008  C0 21 00 18 */	lfs f1, 0x18(r1)
 /* 800408FC 0000000C  C0 41 00 20 */	lfs f2, 0x20(r1)
-/* 80040900 00000010  C0 62 84 28 */	lfs f3, d_map_d_map_path_dmap__lit_3796(r2)
+/* 80040900 00000010  C0 62 84 28 */	lfs f3, lit_3796(r2)
 /* 80040904 00000014  48 30 5F E5 */	bl PSMTXTrans
 /* 80040908 00000018  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8004090C 0000001C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80040910 00000020  A8 9D 00 1A */	lha r4, 0x1a(r29)
 /* 80040914 00000024  4B FC BB B9 */	bl mDoMtx_ZrotM__FPA4_fs
-/* 80040918 00000028  C0 22 84 70 */	lfs f1, d_map_d_map_path_dmap__lit_4484(r2)
+/* 80040918 00000028  C0 22 84 70 */	lfs f1, lit_4484(r2)
 /* 8004091C 0000002C  FC 40 08 90 */	fmr f2, f1
-/* 80040920 00000030  C0 62 84 38 */	lfs f3, d_map_d_map_path_dmap__lit_4202(r2)
+/* 80040920 00000030  C0 62 84 38 */	lfs f3, lit_4202(r2)
 /* 80040924 00000034  4B FC C5 15 */	bl scaleM__14mDoMtx_stack_cFfff
 /* 80040928 00000038  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8004092C 0000003C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

@@ -8,7 +8,7 @@ lbl_80051898:
 /* 800518B0 00000018  40 82 00 20 */	bne lbl_800518D0
 /* 800518B4 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800518B8 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800518BC 00000024  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
+/* 800518BC 00000024  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
 /* 800518C0 00000028  81 8C 00 E4 */	lwz r12, 0xe4(r12)
 /* 800518C4 0000002C  7D 89 03 A6 */	mtctr r12
 /* 800518C8 00000030  4E 80 04 21 */	bctrl 

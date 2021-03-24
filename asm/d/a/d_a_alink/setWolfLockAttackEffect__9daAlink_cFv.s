@@ -7,7 +7,7 @@ lbl_80123C8C:
 /* 80123CA0 00000014  7C 7A 1B 78 */	mr r26, r3
 /* 80123CA4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80123CA8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80123CAC 00000020  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 80123CAC 00000020  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80123CB0 00000024  54 00 01 CF */	rlwinm. r0, r0, 0, 7, 7
 /* 80123CB4 00000028  41 82 00 0C */	beq lbl_80123CC0
 /* 80123CB8 0000002C  3B 80 00 FF */	li r28, 0xff

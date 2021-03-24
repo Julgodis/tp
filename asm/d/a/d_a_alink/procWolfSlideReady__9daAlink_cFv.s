@@ -19,7 +19,7 @@ lbl_8012FD2C:
 /* 8012FD70 00000044  C4 04 56 1C */	lfsu f0, l_wolfBaseAnime@l(r4)
 /* 8012FD74 00000048  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8012FD78 0000004C  D0 03 35 88 */	stfs f0, 0x3588(r3)
-/* 8012FD7C 00000050  C0 04 00 08 */	lfs f0, 8(r4)
+/* 8012FD7C 00000050  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80420008 */
 /* 8012FD80 00000054  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8012FD84 00000058  D0 03 35 90 */	stfs f0, 0x3590(r3)
 /* 8012FD88 0000005C  3C 80 80 3A */	lis r4, __vt__8cM3dGPla@ha
@@ -45,7 +45,7 @@ lbl_8012FD2C:
 /* 8012FDD8 000000AC  48 14 07 69 */	bl cLib_addCalcAngleS__FPsssss
 lbl_8012FDDC:
 /* 8012FDDC 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8012FDE0 00000004  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 8012FDE0 00000004  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 8012FDE4 00000008  48 1F 86 49 */	bl checkPass__12J3DFrameCtrlFf
 /* 8012FDE8 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 8012FDEC 00000010  41 82 00 0C */	beq lbl_8012FDF8

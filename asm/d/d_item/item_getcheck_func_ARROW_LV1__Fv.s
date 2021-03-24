@@ -15,7 +15,7 @@ lbl_8009A308:
 /* 8009A33C 00000034  40 82 00 1C */	bne lbl_8009A358
 /* 8009A340 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009A344 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8009A348 00000040  88 03 00 F8 */	lbz r0, 0xf8(r3)
+/* 8009A348 00000040  88 03 00 F8 */	lbz r0, 0xf8(r3)	/* effective address: 804062B8 */
 /* 8009A34C 00000044  28 00 00 1E */	cmplwi r0, 0x1e
 /* 8009A350 00000048  41 80 00 08 */	blt lbl_8009A358
 /* 8009A354 0000004C  3B E0 00 01 */	li r31, 1

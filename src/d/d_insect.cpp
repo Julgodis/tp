@@ -60,7 +60,7 @@ struct dMenu_Insect_c {
 extern "C" void __ct__9dInsect_cFv(); // 1
 extern "C" void Insect_GetDemoMain__9dInsect_cFv(); // 1
 extern "C" void CalcZBuffer__9dInsect_cFf(); // 1
-extern "C" extern char const* const d_d_insect__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -138,7 +138,7 @@ asm void dInsect_c::Insect_GetDemoMain() {
 
 /* ############################################################################################## */
 /* 804535E0-804535E4 0004+00 s=1 e=0 z=0  None .sdata2    @3871                                                        */
-SECTION_SDATA2 static f32 d_d_insect__lit_3871 = 20.0f;
+SECTION_SDATA2 static f32 lit_3871 = 20.0f;
 
 /* 804535E4-804535E8 0004+00 s=1 e=0 z=0  None .sdata2    @3872                                                        */
 SECTION_SDATA2 static u8 lit_3872[4] = {
@@ -146,7 +146,7 @@ SECTION_SDATA2 static u8 lit_3872[4] = {
 };
 
 /* 804535E8-804535EC 0004+00 s=1 e=0 z=0  None .sdata2    @3873                                                        */
-SECTION_SDATA2 static f32 d_d_insect__lit_3873 = 608.0f;
+SECTION_SDATA2 static f32 lit_3873 = 608.0f;
 
 /* 804535EC-804535F0 0004+00 s=1 e=0 z=0  None .sdata2    @3874                                                        */
 SECTION_SDATA2 static f32 lit_3874 = 448.0f;
@@ -155,10 +155,10 @@ SECTION_SDATA2 static f32 lit_3874 = 448.0f;
 SECTION_SDATA2 static f32 lit_3875 = -10.0f;
 
 /* 804535F4-804535F8 0004+00 s=1 e=0 z=0  None .sdata2    @3876                                                        */
-SECTION_SDATA2 static f32 d_d_insect__lit_3876 = 16777215.0f;
+SECTION_SDATA2 static f32 lit_3876 = 16777215.0f;
 
 /* 804535F8-80453600 0004+04 s=1 e=0 z=0  None .sdata2    @3877                                                        */
-SECTION_SDATA2 static f32 d_d_insect__lit_3877[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3877[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,

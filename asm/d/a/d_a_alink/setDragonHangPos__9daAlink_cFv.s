@@ -34,11 +34,11 @@ lbl_800FC5FC:
 lbl_800FC61C:
 /* 800FC61C 00000000  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800FC620 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 800FC624 00000008  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 800FC624 00000008  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
 /* 800FC628 0000000C  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
-/* 800FC62C 00000010  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800FC62C 00000010  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
 /* 800FC630 00000014  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)
-/* 800FC634 00000018  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 800FC634 00000018  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
 /* 800FC638 0000001C  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
 /* 800FC63C 00000020  38 9F 04 E4 */	addi r4, r31, 0x4e4
 /* 800FC640 00000024  4B F1 05 C1 */	bl mDoMtx_MtxToRot__FPA4_CfP5csXyz

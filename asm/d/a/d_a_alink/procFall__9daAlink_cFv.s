@@ -40,7 +40,7 @@ lbl_800C6D90:
 lbl_800C6DAC:
 /* 800C6DAC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800C6DB0 00000004  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 800C6DB4 00000008  A0 1E 00 02 */	lhz r0, 2(r30)
+/* 800C6DB4 00000008  A0 1E 00 02 */	lhz r0, 2(r30)	/* effective address: 804061C2 */
 /* 800C6DB8 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 800C6DBC 00000010  41 82 01 2C */	beq lbl_800C6EE8
 /* 800C6DC0 00000014  A8 1F 30 08 */	lha r0, 0x3008(r31)
@@ -102,7 +102,7 @@ lbl_800C6E68:
 /* 800C6E8C 00000024  40 82 00 34 */	bne lbl_800C6EC0
 /* 800C6E90 00000028  3C 60 80 39 */	lis r3, m__21daAlinkHIO_damFall_c0@ha
 /* 800C6E94 0000002C  38 A3 E4 54 */	addi r5, r3, m__21daAlinkHIO_damFall_c0@l
-/* 800C6E98 00000030  C0 05 00 40 */	lfs f0, 0x40(r5)
+/* 800C6E98 00000030  C0 05 00 40 */	lfs f0, 0x40(r5)	/* effective address: 8038E494 */
 /* 800C6E9C 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C6EA0 00000000  40 81 00 20 */	ble lbl_800C6EC0
 /* 800C6EA4 00000004  7F E3 FB 78 */	mr r3, r31

@@ -21,7 +21,7 @@ lbl_80235CC0:
 lbl_80235D0C:
 /* 80235D0C 00000000  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80235D10 00000004  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80235D14 00000008  AB C3 03 04 */	lha r30, 0x304(r3)
+/* 80235D14 00000008  AB C3 03 04 */	lha r30, 0x304(r3)	/* effective address: 80430590 */
 /* 80235D18 0000000C  48 00 00 50 */	b lbl_80235D68
 lbl_80235D1C:
 /* 80235D1C 00000000  7F E3 FB 78 */	mr r3, r31
@@ -35,7 +35,7 @@ lbl_80235D1C:
 lbl_80235D3C:
 /* 80235D3C 00000000  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80235D40 00000004  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80235D44 00000008  AB C3 03 08 */	lha r30, 0x308(r3)
+/* 80235D44 00000008  AB C3 03 08 */	lha r30, 0x308(r3)	/* effective address: 80430594 */
 /* 80235D48 0000000C  48 00 00 20 */	b lbl_80235D68
 lbl_80235D4C:
 /* 80235D4C 00000000  7F E3 FB 78 */	mr r3, r31
@@ -44,10 +44,10 @@ lbl_80235D4C:
 /* 80235D58 0000000C  41 82 00 10 */	beq lbl_80235D68
 /* 80235D5C 00000010  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 80235D60 00000014  38 63 02 8C */	addi r3, r3, g_MsgObject_HIO_c@l
-/* 80235D64 00000018  AB C3 03 0C */	lha r30, 0x30c(r3)
+/* 80235D64 00000018  AB C3 03 0C */	lha r30, 0x30c(r3)	/* effective address: 80430598 */
 lbl_80235D68:
 /* 80235D68 00000000  A8 1F 01 6A */	lha r0, 0x16a(r31)
-/* 80235D6C 00000004  C8 42 B1 20 */	lfd f2, d_msg_d_msg_object__lit_4965(r2)
+/* 80235D6C 00000004  C8 42 B1 20 */	lfd f2, lit_4965(r2)
 /* 80235D70 00000008  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80235D74 0000000C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80235D78 00000010  3C 60 43 30 */	lis r3, 0x4330
@@ -62,7 +62,7 @@ lbl_80235D68:
 /* 80235D9C 00000034  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80235DA0 00000038  EC 21 00 24 */	fdivs f1, f1, f0
 /* 80235DA4 0000003C  80 7F 01 04 */	lwz r3, 0x104(r31)
-/* 80235DA8 00000040  C0 02 B0 C0 */	lfs f0, d_msg_d_msg_object__lit_4084(r2)
+/* 80235DA8 00000040  C0 02 B0 C0 */	lfs f0, lit_4084(r2)
 /* 80235DAC 00000044  EF E0 08 28 */	fsubs f31, f0, f1
 /* 80235DB0 00000048  FC 20 F8 90 */	fmr f1, f31
 /* 80235DB4 0000004C  81 83 00 00 */	lwz r12, 0(r3)

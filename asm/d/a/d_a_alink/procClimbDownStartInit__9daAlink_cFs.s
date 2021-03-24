@@ -35,7 +35,7 @@ lbl_800FF818:
 /* 800FF89C 00000014  4B FA D8 59 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800FF8A0 00000018  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FF8A4 0000001C  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FF8A8 00000020  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800FF8A8 00000020  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038EB9C */
 /* 800FF8AC 00000024  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800FF8B0 00000028  38 00 00 00 */	li r0, 0
 /* 800FF8B4 0000002C  B0 1E 30 08 */	sth r0, 0x3008(r30)
@@ -49,7 +49,7 @@ lbl_800FF8BC:
 /* 800FF8D0 00000014  4B FA D8 25 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800FF8D4 00000018  3C 60 80 39 */	lis r3, m__20daAlinkHIO_ladder_c0@ha
 /* 800FF8D8 0000001C  38 63 EB 8C */	addi r3, r3, m__20daAlinkHIO_ladder_c0@l
-/* 800FF8DC 00000020  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 800FF8DC 00000020  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038EBB0 */
 /* 800FF8E0 00000024  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 800FF8E4 00000028  38 00 00 01 */	li r0, 1
 /* 800FF8E8 0000002C  B0 1E 30 08 */	sth r0, 0x3008(r30)
@@ -63,9 +63,9 @@ lbl_800FF8BC:
 lbl_800FF908:
 /* 800FF908 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FF90C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FF910 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800FF910 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FF914 0000000C  60 00 00 08 */	ori r0, r0, 8
-/* 800FF918 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800FF918 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800FF91C 00000014  7F C3 F3 78 */	mr r3, r30
 /* 800FF920 00000018  38 80 00 00 */	li r4, 0
 /* 800FF924 0000001C  38 A0 80 00 */	li r5, -32768
@@ -83,9 +83,9 @@ lbl_800FF908:
 /* 800FF954 0000004C  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800FF958 00000050  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800FF95C 00000054  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 800FF960 00000058  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800FF960 00000058  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800FF964 0000005C  D0 1E 35 8C */	stfs f0, 0x358c(r30)
-/* 800FF968 00000060  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800FF968 00000060  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800FF96C 00000064  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 800FF970 00000068  C0 0D 81 18 */	lfs f0, l_ladderAnmBaseTransY(r13)
 /* 800FF974 0000006C  D0 1E 33 B0 */	stfs f0, 0x33b0(r30)

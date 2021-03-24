@@ -5,8 +5,8 @@ lbl_800B8988:
 /* 800B8994 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800B8998 00000010  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B899C 00000014  7C 7F 1B 78 */	mr r31, r3
-/* 800B89A0 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800B89A4 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
+/* 800B89A0 00000018  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800B89A4 0000001C  3B C4 D6 58 */	addi r30, r4, lit_3757@l
 /* 800B89A8 00000020  48 00 09 99 */	bl checkEquipAnime__9daAlink_cCFv
 /* 800B89AC 00000024  2C 03 00 00 */	cmpwi r3, 0
 /* 800B89B0 00000028  40 82 00 3C */	bne lbl_800B89EC
@@ -332,7 +332,7 @@ lbl_800B8E00:
 /* 800B8E14 00000014  41 82 00 8C */	beq lbl_800B8EA0
 /* 800B8E18 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B8E1C 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8E20 00000020  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B8E20 00000020  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B8E24 00000024  28 00 00 13 */	cmplwi r0, 0x13
 /* 800B8E28 00000028  40 82 00 14 */	bne lbl_800B8E3C
 /* 800B8E2C 0000002C  7F E3 FB 78 */	mr r3, r31
@@ -352,7 +352,7 @@ lbl_800B8E54:
 /* 800B8E5C 00000008  41 82 00 44 */	beq lbl_800B8EA0
 /* 800B8E60 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B8E64 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8E68 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)
+/* 800B8E68 00000014  88 03 5E 24 */	lbz r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
 /* 800B8E6C 00000018  28 00 00 2A */	cmplwi r0, 0x2a
 /* 800B8E70 0000001C  40 82 00 30 */	bne lbl_800B8EA0
 /* 800B8E74 00000020  80 7F 28 40 */	lwz r3, 0x2840(r31)
@@ -429,7 +429,7 @@ lbl_800B8F4C:
 /* 800B8F7C 00000030  40 82 00 78 */	bne lbl_800B8FF4
 /* 800B8F80 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B8F84 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8F88 0000003C  88 03 00 15 */	lbz r0, 0x15(r3)
+/* 800B8F88 0000003C  88 03 00 15 */	lbz r0, 0x15(r3)	/* effective address: 804061D5 */
 /* 800B8F8C 00000040  28 00 00 FF */	cmplwi r0, 0xff
 /* 800B8F90 00000044  41 82 00 64 */	beq lbl_800B8FF4
 /* 800B8F94 00000048  48 00 76 01 */	bl checkNotBattleStage__9daAlink_cFv
@@ -444,7 +444,7 @@ lbl_800B8F4C:
 lbl_800B8FB8:
 /* 800B8FB8 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800B8FBC 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800B8FC0 00000008  88 03 5E 1C */	lbz r0, 0x5e1c(r3)
+/* 800B8FC0 00000008  88 03 5E 1C */	lbz r0, 0x5e1c(r3)	/* effective address: 8040BFDC */
 /* 800B8FC4 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 800B8FC8 00000010  40 82 00 2C */	bne lbl_800B8FF4
 /* 800B8FCC 00000014  7F E3 FB 78 */	mr r3, r31

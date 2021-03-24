@@ -7,7 +7,7 @@ lbl_800F9384:
 /* 800F9398 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800F939C 00000018  3B FE 1F D0 */	addi r31, r30, 0x1fd0
 /* 800F93A0 0000001C  4B FF F5 59 */	bl decideCrawlDoStatus__9daAlink_cFv
-/* 800F93A4 00000020  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 800F93A4 00000020  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800F93A8 00000024  C0 5E 34 78 */	lfs f2, 0x3478(r30)
 /* 800F93AC 00000028  C0 3E 34 7C */	lfs f1, 0x347c(r30)
 /* 800F93B0 0000002C  C0 1F 00 10 */	lfs f0, 0x10(r31)
@@ -17,12 +17,12 @@ lbl_800F9384:
 /* 800F93C0 0000003C  D0 1E 33 CC */	stfs f0, 0x33cc(r30)
 /* 800F93C4 00000040  3C 60 80 39 */	lis r3, l_crawlFrontOffset@ha
 /* 800F93C8 00000044  38 63 FA 54 */	addi r3, r3, l_crawlFrontOffset@l
-/* 800F93CC 00000048  C0 23 00 08 */	lfs f1, 8(r3)
+/* 800F93CC 00000048  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8038FA5C */
 /* 800F93D0 0000004C  C0 1E 33 CC */	lfs f0, 0x33cc(r30)
 /* 800F93D4 00000050  EC 21 00 32 */	fmuls f1, f1, f0
-/* 800F93D8 00000054  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800F93D8 00000054  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 8038FA54 */
 /* 800F93DC 00000058  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 800F93E0 0000005C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F93E0 0000005C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8038FA58 */
 /* 800F93E4 00000060  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 800F93E8 00000064  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 800F93EC 00000068  80 7E 06 50 */	lwz r3, 0x650(r30)

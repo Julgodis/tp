@@ -5,8 +5,8 @@ lbl_8015CAB8:
 /* 8015CAC4 0000000C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8015CAC8 00000010  48 20 57 15 */	bl _savegpr_29
 /* 8015CACC 00000014  7C 7E 1B 78 */	mr r30, r3
-/* 8015CAD0 00000018  3C 60 80 3C */	lis r3, a_obj_d_a_obj_item__cNullVec__6Z2Calc@ha
-/* 8015CAD4 0000001C  3B E3 9D A0 */	addi r31, r3, a_obj_d_a_obj_item__cNullVec__6Z2Calc@l
+/* 8015CAD0 00000018  3C 60 80 3C */	lis r3, cNullVec__6Z2Calc@ha
+/* 8015CAD4 0000001C  3B E3 9D A0 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8015CAD8 00000020  88 0D 8A 90 */	lbz r0, data_80451010(r13)
 /* 8015CADC 00000024  7C 00 07 75 */	extsb. r0, r0
 /* 8015CAE0 00000028  40 82 00 40 */	bne lbl_8015CB20

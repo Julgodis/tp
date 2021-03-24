@@ -110,7 +110,7 @@ lbl_800E9D48:
 /* 800E9D58 00000008  38 00 00 FE */	li r0, 0xfe
 /* 800E9D5C 0000000C  98 1C 2F 92 */	stb r0, 0x2f92(r28)
 /* 800E9D60 00000010  98 1C 2F 93 */	stb r0, 0x2f93(r28)
-/* 800E9D64 00000014  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E9D64 00000014  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E9D68 00000018  D0 1C 34 78 */	stfs f0, 0x3478(r28)
 lbl_800E9D6C:
 /* 800E9D6C 00000000  7F A3 EB 78 */	mr r3, r29
@@ -142,7 +142,7 @@ lbl_800E9DBC:
 /* 800E9DD0 00000014  38 80 00 1A */	li r4, 0x1a
 /* 800E9DD4 00000018  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800E9DD8 0000001C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 800E9DDC 00000020  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 800E9DDC 00000020  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 800E9DE0 00000024  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 800E9DE4 00000028  4B FC 31 FD */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800E9DE8 0000002C  80 1C 31 A0 */	lwz r0, 0x31a0(r28)
@@ -173,21 +173,21 @@ lbl_800E9E30:
 /* 800E9E44 00000014  7F 63 DB 78 */	mr r3, r27
 /* 800E9E48 00000018  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800E9E4C 0000001C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800E9E50 00000020  A0 84 04 6A */	lhz r4, 0x46a(r4)
+/* 800E9E50 00000020  A0 84 04 6A */	lhz r4, 0x46a(r4)	/* effective address: 803A76F2 */
 /* 800E9E54 00000024  4B F4 AB 69 */	bl isEventBit__11dSv_event_cCFUs
 /* 800E9E58 00000028  2C 03 00 00 */	cmpwi r3, 0
 /* 800E9E5C 0000002C  41 82 00 1C */	beq lbl_800E9E78
 /* 800E9E60 00000030  7F 63 DB 78 */	mr r3, r27
 /* 800E9E64 00000034  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800E9E68 00000038  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800E9E6C 0000003C  A0 84 04 96 */	lhz r4, 0x496(r4)
+/* 800E9E6C 0000003C  A0 84 04 96 */	lhz r4, 0x496(r4)	/* effective address: 803A771E */
 /* 800E9E70 00000040  4B F4 AB 1D */	bl onEventBit__11dSv_event_cFUs
 /* 800E9E74 00000044  48 00 00 18 */	b lbl_800E9E8C
 lbl_800E9E78:
 /* 800E9E78 00000000  7F 63 DB 78 */	mr r3, r27
 /* 800E9E7C 00000004  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 800E9E80 00000008  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 800E9E84 0000000C  A0 84 01 64 */	lhz r4, 0x164(r4)
+/* 800E9E84 0000000C  A0 84 01 64 */	lhz r4, 0x164(r4)	/* effective address: 803A73EC */
 /* 800E9E88 00000010  4B F4 AB 05 */	bl onEventBit__11dSv_event_cFUs
 lbl_800E9E8C:
 /* 800E9E8C 00000000  7F 83 E3 78 */	mr r3, r28
@@ -258,7 +258,7 @@ lbl_800E9F58:
 /* 800E9F74 0000001C  4B FC 95 21 */	bl getDirectionFromAngle__9daAlink_cFs
 /* 800E9F78 00000020  7C 7B 1B 78 */	mr r27, r3
 /* 800E9F7C 00000024  C0 3C 33 98 */	lfs f1, 0x3398(r28)
-/* 800E9F80 00000028  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800E9F80 00000028  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800E9F84 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E9F88 00000000  40 81 01 48 */	ble lbl_800EA0D0
 /* 800E9F8C 00000004  C3 FD 00 10 */	lfs f31, 0x10(r29)
@@ -279,11 +279,11 @@ lbl_800E9FAC:
 /* 800E9FC4 00000018  90 1C 31 98 */	stw r0, 0x3198(r28)
 /* 800E9FC8 0000001C  38 7C 33 98 */	addi r3, r28, 0x3398
 /* 800E9FCC 00000020  C0 22 92 E0 */	lfs f1, lit_6845(r2)
-/* 800E9FD0 00000024  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800E9FD0 00000024  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800E9FD4 00000028  48 18 67 6D */	bl cLib_chaseF__FPfff
 /* 800E9FD8 0000002C  48 00 00 AC */	b lbl_800EA084
 lbl_800E9FDC:
-/* 800E9FDC 00000000  C3 C2 92 B8 */	lfs f30, d_a_d_a_alink__lit_6040(r2)
+/* 800E9FDC 00000000  C3 C2 92 B8 */	lfs f30, lit_6040(r2)
 /* 800E9FE0 00000004  2C 1E 00 21 */	cmpwi r30, 0x21
 /* 800E9FE4 00000008  41 82 00 0C */	beq lbl_800E9FF0
 /* 800E9FE8 0000000C  2C 1E 01 B1 */	cmpwi r30, 0x1b1
@@ -307,7 +307,7 @@ lbl_800EA01C:
 /* 800EA028 00000000  40 81 00 14 */	ble lbl_800EA03C
 /* 800EA02C 00000004  2C 1B 00 00 */	cmpwi r27, 0
 /* 800EA030 00000008  40 82 00 0C */	bne lbl_800EA03C
-/* 800EA034 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800EA034 0000000C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800EA038 00000010  EF DE 00 2A */	fadds f30, f30, f0
 lbl_800EA03C:
 /* 800EA03C 00000000  7F 83 E3 78 */	mr r3, r28
@@ -379,7 +379,7 @@ lbl_800EA10C:
 /* 800EA130 00000024  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 800EA134 00000028  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
 /* 800EA138 0000002C  38 84 90 C0 */	addi r4, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
-/* 800EA13C 00000030  A0 84 00 46 */	lhz r4, 0x46(r4)
+/* 800EA13C 00000030  A0 84 00 46 */	lhz r4, 0x46(r4)	/* effective address: 80379106 */
 /* 800EA140 00000034  4B F4 A8 4D */	bl onEventBit__11dSv_event_cFUs
 lbl_800EA144:
 /* 800EA144 00000000  38 00 00 04 */	li r0, 4

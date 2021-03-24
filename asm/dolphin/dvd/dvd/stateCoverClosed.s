@@ -41,13 +41,13 @@ lbl_80349EA8:
 /* 80349EBC 00000014  3C 60 80 00 */	lis r3, 0x8000 /* 0x800000F8@ha */
 /* 80349EC0 00000018  80 03 00 F8 */	lwz r0, 0x00F8(r3)
 /* 80349EC4 0000001C  3C 80 10 62 */	lis r4, 0x1062 /* 0x10624DD3@ha */
-/* 80349EC8 00000020  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
+/* 80349EC8 00000020  3C 60 80 35 */	lis r3, AlarmHandler@ha
 /* 80349ECC 00000024  54 00 F0 BE */	srwi r0, r0, 2
 /* 80349ED0 00000028  38 84 4D D3 */	addi r4, r4, 0x4DD3 /* 0x10624DD3@l */
 /* 80349ED4 0000002C  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 80349ED8 00000030  54 00 D1 BE */	srwi r0, r0, 6
 /* 80349EDC 00000034  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 80349EE0 00000038  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
+/* 80349EE0 00000038  38 E3 9D EC */	addi r7, r3, AlarmHandler@l
 /* 80349EE4 0000003C  38 7F 00 70 */	addi r3, r31, 0x70
 /* 80349EE8 00000040  38 A0 00 00 */	li r5, 0
 /* 80349EEC 00000044  4B FF 0C 6D */	bl OSSetAlarm

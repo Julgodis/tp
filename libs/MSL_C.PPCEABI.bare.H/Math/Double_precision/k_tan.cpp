@@ -37,27 +37,27 @@ SECTION_RODATA static u8 const T[104] = {
 };
 
 /* 80456A80-80456A88 0008+00 s=1 e=0 z=0  None .sdata2    @94                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_94 = 1.0;
+SECTION_SDATA2 static f64 lit_94 = 1.0;
 
 /* 80456A88-80456A90 0008+00 s=1 e=0 z=0  None .sdata2    @95                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_95 = -1.0;
+SECTION_SDATA2 static f64 lit_95 = -1.0;
 
 /* 80456A90-80456A98 0008+00 s=1 e=0 z=0  None .sdata2    @96                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_96 = 0.7853981633974483;
+SECTION_SDATA2 static f64 lit_96 = 0.7853981633974483;
 
 /* 80456A98-80456AA0 0008+00 s=1 e=0 z=0  None .sdata2    @97                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_97 = 3.061616997868383e-17;
+SECTION_SDATA2 static f64 lit_97 = 3.061616997868383e-17;
 
 /* 80456AA0-80456AA8 0008+00 s=1 e=0 z=0  None .sdata2    @98                                                          */
-SECTION_SDATA2 static u8 Math_Double_precision_k_tan__lit_98[8] = {
+SECTION_SDATA2 static u8 lit_98[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80456AA8-80456AB0 0008+00 s=1 e=0 z=0  None .sdata2    @99                                                          */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_99 = 2.0;
+SECTION_SDATA2 static f64 lit_99 = 2.0;
 
 /* 80456AB0-80456AB8 0008+00 s=1 e=0 z=0  None .sdata2    @101                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_k_tan__lit_101 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_101 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8036BA90-8036BCA4 0214+00 s=0 e=1 z=0  None .text      __kernel_tan                                                 */
 #pragma push

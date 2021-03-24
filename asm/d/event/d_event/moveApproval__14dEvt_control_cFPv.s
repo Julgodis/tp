@@ -82,7 +82,7 @@ lbl_800430AC:
 lbl_800430BC:
 /* 800430BC 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800430C0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800430C4 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800430C4 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800430C8 0000000C  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
 /* 800430CC 00000010  40 82 00 18 */	bne lbl_800430E4
 /* 800430D0 00000014  80 83 5F 1C */	lwz r4, 0x5f1c(r3)

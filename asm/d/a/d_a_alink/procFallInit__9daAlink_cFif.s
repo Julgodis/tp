@@ -25,7 +25,7 @@ lbl_800C6A94:
 /* 800C6AA0 0000000C  41 82 00 1C */	beq lbl_800C6ABC
 /* 800C6AA4 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800C6AA8 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800C6AAC 00000018  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800C6AAC 00000018  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800C6AB0 0000001C  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
 /* 800C6AB4 00000020  40 82 00 08 */	bne lbl_800C6ABC
 /* 800C6AB8 00000024  38 80 00 01 */	li r4, 1
@@ -76,7 +76,7 @@ lbl_800C6B24:
 /* 800C6B5C 00000038  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 800C6B60 0000003C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 800C6B64 00000040  C0 3C 04 D0 */	lfs f1, 0x4d0(r28)
-/* 800C6B68 00000044  C0 42 93 3C */	lfs f2, d_a_d_a_alink__lit_7808(r2)
+/* 800C6B68 00000044  C0 42 93 3C */	lfs f2, lit_7808(r2)
 /* 800C6B6C 00000048  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800C6B70 0000004C  EC 01 00 2A */	fadds f0, f1, f0
 /* 800C6B74 00000050  D0 1C 04 D0 */	stfs f0, 0x4d0(r28)
@@ -96,7 +96,7 @@ lbl_800C6B9C:
 /* 800C6BA8 0000000C  B0 1C 04 DE */	sth r0, 0x4de(r28)
 /* 800C6BAC 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C6BB0 00000014  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800C6BB4 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C6BB4 00000018  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C6BB8 0000001C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800C6BBC 00000020  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800C6BC0 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -148,7 +148,7 @@ lbl_800C6C30:
 /* 800C6C70 00000040  2C 03 00 00 */	cmpwi r3, 0
 /* 800C6C74 00000044  40 82 00 2C */	bne lbl_800C6CA0
 /* 800C6C78 00000048  C0 3C 33 98 */	lfs f1, 0x3398(r28)
-/* 800C6C7C 0000004C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C6C7C 0000004C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C6C80 00000050  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C6C84 00000000  40 81 00 10 */	ble lbl_800C6C94
 /* 800C6C88 00000004  38 00 00 02 */	li r0, 2

@@ -24,8 +24,8 @@ lbl_802BD510:
 /* 802BD568 00000058  38 63 41 E4 */	addi r3, r3, data_804341E4@l
 /* 802BD56C 0000005C  3C 80 80 2C */	lis r4, func_802BD288@ha
 /* 802BD570 00000060  38 84 D2 88 */	addi r4, r4, func_802BD288@l
-/* 802BD574 00000064  3C A0 80 43 */	lis r5, Z2Audience__lit_1539@ha
-/* 802BD578 00000068  38 A5 41 D8 */	addi r5, r5, Z2Audience__lit_1539@l
+/* 802BD574 00000064  3C A0 80 43 */	lis r5, lit_1539@ha
+/* 802BD578 00000068  38 A5 41 D8 */	addi r5, r5, lit_1539@l
 /* 802BD57C 0000006C  48 0A 46 A9 */	bl __register_global_object
 /* 802BD580 00000070  38 00 00 01 */	li r0, 1
 /* 802BD584 00000074  98 0D 8D D4 */	stb r0, data_80451354(r13)

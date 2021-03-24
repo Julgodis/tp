@@ -193,7 +193,7 @@ lbl_800EB89C:
 /* 800EB8C8 0000002C  38 00 00 01 */	li r0, 1
 /* 800EB8CC 00000030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EB8D0 00000034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EB8D4 00000038  98 03 5E 81 */	stb r0, 0x5e81(r3)
+/* 800EB8D4 00000038  98 03 5E 81 */	stb r0, 0x5e81(r3)	/* effective address: 8040C041 */
 /* 800EB8D8 0000003C  A8 7B 04 E6 */	lha r3, 0x4e6(r27)
 /* 800EB8DC 00000040  38 03 D8 00 */	addi r0, r3, -10240
 /* 800EB8E0 00000044  B0 1B 30 10 */	sth r0, 0x3010(r27)
@@ -208,7 +208,7 @@ lbl_800EB8F0:
 /* 800EB900 00000010  38 00 00 04 */	li r0, 4
 /* 800EB904 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EB908 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EB90C 0000001C  98 03 5E 81 */	stb r0, 0x5e81(r3)
+/* 800EB90C 0000001C  98 03 5E 81 */	stb r0, 0x5e81(r3)	/* effective address: 8040C041 */
 /* 800EB910 00000020  A8 7B 04 E6 */	lha r3, 0x4e6(r27)
 /* 800EB914 00000024  38 03 28 00 */	addi r0, r3, 0x2800
 /* 800EB918 00000028  B0 1B 30 10 */	sth r0, 0x3010(r27)
@@ -279,7 +279,7 @@ lbl_800EB9F0:
 /* 800EB9F8 00000008  93 DB 31 98 */	stw r30, 0x3198(r27)
 /* 800EB9FC 0000000C  7F 63 DB 78 */	mr r3, r27
 /* 800EBA00 00000010  7F C4 F3 78 */	mr r4, r30
-/* 800EBA04 00000014  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800EBA04 00000014  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800EBA08 00000018  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800EBA0C 0000001C  2C 1E 01 42 */	cmpwi r30, 0x142
 /* 800EBA10 00000020  38 00 FF FF */	li r0, -1
@@ -323,7 +323,7 @@ lbl_800EBA1C:
 /* 800EBAA4 00000088  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800EBAA8 00000000  40 81 00 58 */	ble lbl_800EBB00
 /* 800EBAAC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800EBAB0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800EBAB0 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800EBAB4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800EBAB8 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800EBABC 00000014  FC 00 00 32 */	fmul f0, f0, f0

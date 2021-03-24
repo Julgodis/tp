@@ -45,7 +45,7 @@ lbl_800E261C:
 /* 800E2624 00000008  41 82 00 28 */	beq lbl_800E264C
 /* 800E2628 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E262C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E2630 00000014  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 800E2630 00000014  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 800E2634 00000018  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 800E2638 0000001C  40 82 00 14 */	bne lbl_800E264C
 /* 800E263C 00000020  7F E3 FB 78 */	mr r3, r31
@@ -61,7 +61,7 @@ lbl_800E264C:
 /* 800E2660 00000014  41 82 00 18 */	beq lbl_800E2678
 /* 800E2664 00000018  7F E3 FB 78 */	mr r3, r31
 /* 800E2668 0000001C  38 80 00 01 */	li r4, 1
-/* 800E266C 00000020  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800E266C 00000020  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800E2670 00000024  4B FE 43 D9 */	bl procFallInit__9daAlink_cFif
 /* 800E2674 00000028  48 00 00 B0 */	b lbl_800E2724
 lbl_800E2678:

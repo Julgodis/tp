@@ -2,11 +2,11 @@ lbl_802F18A0:
 /* 802F18A0 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F18A4 00000004  3C 80 80 3A */	lis r4, j2dDefaultIndTevStageInfo@ha
 /* 802F18A8 00000008  38 A4 1B F4 */	addi r5, r4, j2dDefaultIndTevStageInfo@l
-/* 802F18AC 0000000C  80 85 00 00 */	lwz r4, 0(r5)
-/* 802F18B0 00000010  80 05 00 04 */	lwz r0, 4(r5)
+/* 802F18AC 0000000C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A1BF4 */
+/* 802F18B0 00000010  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A1BF8 */
 /* 802F18B4 00000014  90 81 00 08 */	stw r4, 8(r1)
 /* 802F18B8 00000018  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802F18BC 0000001C  80 05 00 08 */	lwz r0, 8(r5)
+/* 802F18BC 0000001C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A1BFC */
 /* 802F18C0 00000020  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802F18C4 00000024  89 61 00 08 */	lbz r11, 8(r1)
 /* 802F18C8 00000028  88 01 00 09 */	lbz r0, 9(r1)

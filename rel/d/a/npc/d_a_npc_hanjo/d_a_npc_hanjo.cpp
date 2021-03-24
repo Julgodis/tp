@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 809FF8BC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Hanjo_c {
@@ -60,6 +60,8 @@ struct daNpc_Hanjo_c {
 	/* 809FB2C4 */ void drawDbgInfo();
 	/* 809FB2CC */ void drawOtherMdl();
 	/* 809FB59C */ void selectAction();
+	/* 809FB6CC */ void chkAction(int (daNpc_Hanjo_c::*)(void*));
+	/* 809FB6F8 */ void setAction(int (daNpc_Hanjo_c::*)(void*));
 	/* 809FB7A0 */ void initShoot(int);
 	/* 809FB90C */ void shoot(int);
 	/* 809FBB94 */ void initDive();
@@ -255,8 +257,8 @@ extern "C" void setCollision__13daNpc_Hanjo_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Hanjo_cFv(); // 1
 extern "C" void drawOtherMdl__13daNpc_Hanjo_cFv(); // 1
 extern "C" void selectAction__13daNpc_Hanjo_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i(); // 1
 extern "C" void initShoot__13daNpc_Hanjo_cFi(); // 1
 extern "C" void shoot__13daNpc_Hanjo_cFi(); // 1
 extern "C" void initDive__13daNpc_Hanjo_cFv(); // 1
@@ -907,7 +909,7 @@ asm void daNpc_Hanjo_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i() {
+asm void daNpc_Hanjo_c::chkAction(int (daNpc_Hanjo_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i.s"
 }
@@ -918,7 +920,7 @@ extern "C" asm static void chkAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i() {
+asm void daNpc_Hanjo_c::setAction(int (daNpc_Hanjo_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_hanjo/d_a_npc_hanjo/setAction__13daNpc_Hanjo_cFM13daNpc_Hanjo_cFPCvPvPv_i.s"
 }

@@ -26,6 +26,7 @@ struct daBullet_c {
 	/* 80656198 */ void getBmdName();
 	/* 806561B0 */ void getTypeFromParam();
 	/* 806561D0 */ void initialize();
+	/* 80656378 */ void setProcess(int (daBullet_c::*)(void*));
 	/* 80656420 */ void wait(void*);
 	/* 806564B8 */ void move(void*);
 };
@@ -85,7 +86,7 @@ extern "C" void getResName__10daBullet_cFv(); // 1
 extern "C" void getBmdName__10daBullet_cFv(); // 1
 extern "C" void getTypeFromParam__10daBullet_cFv(); // 1
 extern "C" void initialize__10daBullet_cFv(); // 1
-extern "C" static void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i(); // 1
+extern "C" void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i(); // 1
 extern "C" void wait__10daBullet_cFPv(); // 1
 extern "C" void move__10daBullet_cFPv(); // 1
 extern "C" void daBullet_Create__FPv(); // 1
@@ -318,7 +319,7 @@ asm void daBullet_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i() {
+asm void daBullet_c::setProcess(int (daBullet_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/d_a_bullet/d_a_bullet/setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i.s"
 }

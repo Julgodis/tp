@@ -34,9 +34,9 @@ lbl_800CF06C:
 /* 800CF090 00000024  38 A0 00 00 */	li r5, 0
 /* 800CF094 00000028  38 C0 00 00 */	li r6, 0
 /* 800CF098 0000002C  38 E0 00 00 */	li r7, 0
-/* 800CF09C 00000030  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800CF09C 00000030  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800CF0A0 00000034  FC 40 08 90 */	fmr f2, f1
-/* 800CF0A4 00000038  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800CF0A4 00000038  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800CF0A8 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 800CF0AC 00000040  39 00 00 00 */	li r8, 0
 /* 800CF0B0 00000044  48 1D C8 D5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

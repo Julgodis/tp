@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
+};
+
+struct J3DModel {
+};
+
 struct daNpcF_c {
 	struct daNpcF_anmPlayData {
 	};
@@ -23,15 +32,6 @@ struct daNpcF_c {
 	/* 80A25788 */ void setExpressionBtp(int);
 	/* 80A25790 */ void setExpression(int, f32);
 	/* 80A25794 */ void drawOtherMdls();
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct cXyz {
@@ -59,6 +59,7 @@ struct daNpcKasiKyu_c {
 	/* 80A22AA4 */ void reset();
 	/* 80A22CD8 */ void playMotion();
 	/* 80A2310C */ void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
+	/* 80A23284 */ void setAction(int (daNpcKasiKyu_c::*)(int));
 	/* 80A2332C */ void setLookMode(int);
 	/* 80A23350 */ void lookat();
 	/* 80A23530 */ void step(s16, int);
@@ -176,7 +177,7 @@ extern "C" void drawDbgInfo__14daNpcKasiKyu_cFv(); // 1
 extern "C" void reset__14daNpcKasiKyu_cFv(); // 1
 extern "C" void playMotion__14daNpcKasiKyu_cFv(); // 1
 extern "C" void playMotionAnmLoop__14daNpcKasiKyu_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
-extern "C" static void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i(); // 1
+extern "C" void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i(); // 1
 extern "C" void setLookMode__14daNpcKasiKyu_cFi(); // 1
 extern "C" void lookat__14daNpcKasiKyu_cFv(); // 1
 extern "C" void step__14daNpcKasiKyu_cFsi(); // 1
@@ -651,7 +652,7 @@ asm void daNpcKasiKyu_c::playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData*** param
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i() {
+asm void daNpcKasiKyu_c::setAction(int (daNpcKasiKyu_c::*)(int)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kasi_kyu/d_a_npc_kasi_kyu/setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i.s"
 }

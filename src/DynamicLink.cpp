@@ -127,7 +127,7 @@ extern "C" void dump2__24DynamicModuleControlBaseFv(); // 1
 extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void getModuleSize__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void getModuleName__20DynamicModuleControlCFv(); // 1
-extern "C" extern char const* const DynamicLink__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__20DynamicModuleControl[13];
 
 // 
@@ -226,10 +226,10 @@ SECTION_DEAD static char const* const pad_8039A7E4 = "\0\0\0";
 
 /* 803C34B0-803C34C0 0010+00 s=1 e=0 z=0  None .data      strings$4165                                                 */
 SECTION_DATA static void* data_803C34B0[4] = {
-	/* 0    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
-	/* 1    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
-	/* 2    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C7),
-	/* 3    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2CC),
+	/* 0    */ (void*)(((char*)&stringBase0)+0x2BE),
+	/* 1    */ (void*)(((char*)&stringBase0)+0x2C3),
+	/* 2    */ (void*)(((char*)&stringBase0)+0x2C7),
+	/* 3    */ (void*)(((char*)&stringBase0)+0x2CC),
 };
 
 /* 803C34C0-803C34F4 0034+00 s=1 e=2 z=0  None .data      __vt__20DynamicModuleControl                                 */
@@ -340,14 +340,14 @@ asm void DynamicModuleControlBase::force_unlink() {
 
 /* ############################################################################################## */
 /* 80455008-80455010 0004+04 s=1 e=0 z=0  None .sdata2    @3772                                                        */
-SECTION_SDATA2 static f32 DynamicLink__lit_3772[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3772[1 + 1 /* padding */] = {
 	0.0009765625f,
 	/* padding */
 	0.0f,
 };
 
 /* 80455010-80455018 0008+00 s=1 e=0 z=0  None .sdata2    @3774                                                        */
-SECTION_SDATA2 static f64 DynamicLink__lit_3774 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3774 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80262470-80262660 01F0+00 s=2 e=2 z=0  None .text      dump__24DynamicModuleControlBaseFv                           */
 #pragma push

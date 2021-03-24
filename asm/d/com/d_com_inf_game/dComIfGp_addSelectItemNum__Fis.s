@@ -30,9 +30,9 @@ lbl_8002E8A0:
 /* 8002E8A4 00000004  40 82 00 1C */	bne lbl_8002E8C0
 /* 8002E8A8 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8002E8AC 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8002E8B0 00000010  A8 03 5D F6 */	lha r0, 0x5df6(r3)
+/* 8002E8B0 00000010  A8 03 5D F6 */	lha r0, 0x5df6(r3)	/* effective address: 8040BFB6 */
 /* 8002E8B4 00000014  7C 00 FA 14 */	add r0, r0, r31
-/* 8002E8B8 00000018  B0 03 5D F6 */	sth r0, 0x5df6(r3)
+/* 8002E8B8 00000018  B0 03 5D F6 */	sth r0, 0x5df6(r3)	/* effective address: 8040BFB6 */
 /* 8002E8BC 0000001C  48 00 00 3C */	b lbl_8002E8F8
 lbl_8002E8C0:
 /* 8002E8C0 00000000  28 00 00 76 */	cmplwi r0, 0x76

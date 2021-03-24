@@ -1,8 +1,8 @@
 lbl_802BBE74:
-/* 802BBE74 00000000  C0 02 C0 A4 */	lfs f0, Z2Audience__lit_894(r2)
+/* 802BBE74 00000000  C0 02 C0 A4 */	lfs f0, lit_894(r2)
 /* 802BBE78 00000004  D0 03 00 00 */	stfs f0, 0(r3)
 /* 802BBE7C 00000008  D0 03 00 08 */	stfs f0, 8(r3)
-/* 802BBE80 0000000C  C0 22 C0 A0 */	lfs f1, Z2Audience__lit_848(r2)
+/* 802BBE80 0000000C  C0 22 C0 A0 */	lfs f1, lit_848(r2)
 /* 802BBE84 00000010  D0 23 00 04 */	stfs f1, 4(r3)
 /* 802BBE88 00000014  C0 02 C0 A8 */	lfs f0, lit_895(r2)
 /* 802BBE8C 00000018  D0 03 00 0C */	stfs f0, 0xc(r3)

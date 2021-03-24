@@ -22,8 +22,8 @@ lbl_800AF11C:
 /* 800AF16C 0000000C  48 2B 30 6D */	bl _savegpr_28
 /* 800AF170 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800AF174 00000014  FF E0 08 90 */	fmr f31, f1
-/* 800AF178 00000018  3C 80 80 39 */	lis r4, d_a_d_a_alink__lit_3757@ha
-/* 800AF17C 0000001C  3B C4 D6 58 */	addi r30, r4, d_a_d_a_alink__lit_3757@l
+/* 800AF178 00000018  3C 80 80 39 */	lis r4, lit_3757@ha
+/* 800AF17C 0000001C  3B C4 D6 58 */	addi r30, r4, lit_3757@l
 /* 800AF180 00000020  38 80 00 01 */	li r4, 1
 /* 800AF184 00000024  48 03 33 99 */	bl checkBootsMoveAnime__9daAlink_cFi
 /* 800AF188 00000028  2C 03 00 00 */	cmpwi r3, 0
@@ -35,7 +35,7 @@ lbl_800AF11C:
 /* 800AF1A0 00000040  C3 83 00 30 */	lfs f28, 0x30(r3)
 /* 800AF1A4 00000044  C3 63 00 34 */	lfs f27, 0x34(r3)
 /* 800AF1A8 00000048  C3 43 00 08 */	lfs f26, 8(r3)
-/* 800AF1AC 0000004C  C3 22 92 B8 */	lfs f25, d_a_d_a_alink__lit_6040(r2)
+/* 800AF1AC 0000004C  C3 22 92 B8 */	lfs f25, lit_6040(r2)
 /* 800AF1B0 00000050  FF 00 C8 90 */	fmr f24, f25
 /* 800AF1B4 00000054  3B C0 00 11 */	li r30, 0x11
 /* 800AF1B8 00000058  3B A0 00 0F */	li r29, 0xf
@@ -93,7 +93,7 @@ lbl_800AF26C:
 /* 800AF278 0000000C  48 00 00 1C */	b lbl_800AF294
 lbl_800AF27C:
 /* 800AF27C 00000000  38 C0 00 03 */	li r6, 3
-/* 800AF280 00000004  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800AF280 00000004  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800AF284 00000008  D0 1F 33 9C */	stfs f0, 0x339c(r31)
 /* 800AF288 0000000C  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 800AF28C 00000010  EC 18 00 32 */	fmuls f0, f24, f0
@@ -123,13 +123,13 @@ lbl_800AF2B8:
 /* 800AF2E4 00000028  38 C0 00 03 */	li r6, 3
 /* 800AF2E8 0000002C  FC 80 F8 90 */	fmr f4, f31
 /* 800AF2EC 00000030  4B FF D7 29 */	bl setDoubleAnime__9daAlink_cFfffQ29daAlink_c11daAlink_ANMQ29daAlink_c11daAlink_ANMif
-/* 800AF2F0 00000034  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800AF2F0 00000034  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800AF2F4 00000038  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 800AF2F8 0000003C  D0 1F 33 9C */	stfs f0, 0x339c(r31)
 /* 800AF2FC 00000040  48 00 00 30 */	b lbl_800AF32C
 lbl_800AF300:
 /* 800AF300 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800AF304 00000004  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800AF304 00000004  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800AF308 00000008  FC 40 C0 90 */	fmr f2, f24
 /* 800AF30C 0000000C  FC 60 C0 90 */	fmr f3, f24
 /* 800AF310 00000010  7F 84 E3 78 */	mr r4, r28
@@ -209,7 +209,7 @@ lbl_800AF3F4:
 /* 800AF424 0000000C  41 82 00 34 */	beq lbl_800AF458
 /* 800AF428 00000010  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800AF42C 00000014  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800AF430 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800AF430 00000018  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800AF434 0000001C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800AF438 00000020  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800AF43C 00000024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

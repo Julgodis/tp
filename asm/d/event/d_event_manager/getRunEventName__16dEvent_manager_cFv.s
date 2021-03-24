@@ -5,8 +5,8 @@ lbl_800483E8:
 /* 800483F4 0000000C  A8 83 01 AA */	lha r4, 0x1aa(r3)
 /* 800483F8 00000010  2C 04 FF FF */	cmpwi r4, -1
 /* 800483FC 00000014  40 82 00 14 */	bne lbl_80048410
-/* 80048400 00000018  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
-/* 80048404 0000001C  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
+/* 80048400 00000018  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80048404 0000001C  38 63 9F 60 */	addi r3, r3, stringBase0@l
 /* 80048408 00000020  38 63 01 6A */	addi r3, r3, 0x16a
 /* 8004840C 00000024  48 00 00 50 */	b lbl_8004845C
 lbl_80048410:
@@ -15,8 +15,8 @@ lbl_80048410:
 /* 80048418 00000008  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8004841C 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80048420 00000010  40 82 00 14 */	bne lbl_80048434
-/* 80048424 00000014  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
-/* 80048428 00000018  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
+/* 80048424 00000014  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80048428 00000018  38 63 9F 60 */	addi r3, r3, stringBase0@l
 /* 8004842C 0000001C  38 63 01 6A */	addi r3, r3, 0x16a
 /* 80048430 00000020  48 00 00 2C */	b lbl_8004845C
 lbl_80048434:
@@ -28,8 +28,8 @@ lbl_80048434:
 /* 80048448 00000014  40 82 00 08 */	bne lbl_80048450
 /* 8004844C 00000018  48 00 00 10 */	b lbl_8004845C
 lbl_80048450:
-/* 80048450 00000000  3C 60 80 38 */	lis r3, d_event_d_event_manager__stringBase0@ha
-/* 80048454 00000004  38 63 9F 60 */	addi r3, r3, d_event_d_event_manager__stringBase0@l
+/* 80048450 00000000  3C 60 80 38 */	lis r3, stringBase0@ha
+/* 80048454 00000004  38 63 9F 60 */	addi r3, r3, stringBase0@l
 /* 80048458 00000008  38 63 01 72 */	addi r3, r3, 0x172
 lbl_8004845C:
 /* 8004845C 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

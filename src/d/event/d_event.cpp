@@ -214,7 +214,7 @@ extern "C" void setPtI__14dEvt_control_cFPv(); // 1
 extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
 extern "C" void setPtD__14dEvt_control_cFPv(); // 1
 extern "C" void setGtItm__14dEvt_control_cFUc(); // 1
-extern "C" extern char const* const d_event_d_event__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -366,7 +366,7 @@ asm void dEvt_control_c::order(u16 param_0, u16 param_1, u16 param_2, u16 param_
 
 /* ############################################################################################## */
 /* 80451EC0-80451EC4 0004+00 s=1 e=0 z=0  None .sdata2    @4361                                                        */
-SECTION_SDATA2 static f32 d_event_d_event__lit_4361 = 1.0f;
+SECTION_SDATA2 static f32 lit_4361 = 1.0f;
 
 /* 80041804-80041934 0130+00 s=5 e=0 z=0  None .text      setParam__14dEvt_control_cFP12dEvt_order_c                   */
 #pragma push
@@ -552,7 +552,7 @@ asm void dEvt_control_c::change() {
 
 /* ############################################################################################## */
 /* 803A7F78-803A7FB0 0038+00 s=1 e=0 z=0  None .data      @4719                                                        */
-SECTION_DATA static void* d_event_d_event__lit_4719[14] = {
+SECTION_DATA static void* lit_4719[14] = {
 	/* 0    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x70),
 	/* 1    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
 	/* 2    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x94),

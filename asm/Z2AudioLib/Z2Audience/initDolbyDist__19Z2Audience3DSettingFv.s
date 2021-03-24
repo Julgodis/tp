@@ -11,7 +11,7 @@ lbl_802BC6A4:
 /* 802BC6C8 00000024  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 802BC6CC 00000028  EC 01 00 24 */	fdivs f0, f1, f0
 /* 802BC6D0 0000002C  D0 03 00 68 */	stfs f0, 0x68(r3)
-/* 802BC6D4 00000030  C0 22 C0 A4 */	lfs f1, Z2Audience__lit_894(r2)
+/* 802BC6D4 00000030  C0 22 C0 A4 */	lfs f1, lit_894(r2)
 /* 802BC6D8 00000034  C0 03 00 4C */	lfs f0, 0x4c(r3)
 /* 802BC6DC 00000038  EC 21 00 28 */	fsubs f1, f1, f0
 /* 802BC6E0 0000003C  C0 03 00 48 */	lfs f0, 0x48(r3)

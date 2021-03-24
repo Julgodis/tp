@@ -5,7 +5,7 @@ lbl_8024FDA0:
 /* 8024FDAC 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8024FDB0 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 8024FDB4 00000014  80 63 00 20 */	lwz r3, 0x20(r3)
-/* 8024FDB8 00000018  C0 22 B3 D0 */	lfs f1, d_d_name__lit_4009(r2)
+/* 8024FDB8 00000018  C0 22 B3 D0 */	lfs f1, lit_4009(r2)
 /* 8024FDBC 0000001C  4B F4 54 E5 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8024FDC0 00000020  7F E3 FB 78 */	mr r3, r31
 /* 8024FDC4 00000024  88 9F 02 B0 */	lbz r4, 0x2b0(r31)

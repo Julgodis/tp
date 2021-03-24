@@ -103,7 +103,7 @@ extern "C" void draw__14dMsgScrnTree_cFv(); // 1
 extern "C" void fukiAlpha__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnTree_cFff(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_tree__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -209,12 +209,12 @@ SECTION_DATA static void* __vt__14dMsgScrnTree_c[22] = {
 };
 
 /* 80454D58-80454D5C 0004+00 s=2 e=0 z=0  None .sdata2    @3949                                                        */
-SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_tree__lit_3949[4] = {
+SECTION_SDATA2 static u8 lit_3949[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454D5C-80454D60 0004+00 s=3 e=0 z=0  None .sdata2    @3950                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_tree__lit_3950 = 1.0f;
+SECTION_SDATA2 static f32 lit_3950 = 1.0f;
 
 /* 80454D60-80454D68 0004+04 s=1 e=0 z=0  None .sdata2    @3951                                                        */
 SECTION_SDATA2 static f32 lit_3951[1 + 1 /* padding */] = {
@@ -247,7 +247,7 @@ asm dMsgScrnTree_c::~dMsgScrnTree_c() {
 
 /* ############################################################################################## */
 /* 80454D68-80454D70 0008+00 s=1 e=0 z=0  None .sdata2    @4053                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_tree__lit_4053 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4053 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80249118-80249270 0158+00 s=1 e=0 z=0  None .text      exec__14dMsgScrnTree_cFv                                     */
 #pragma push

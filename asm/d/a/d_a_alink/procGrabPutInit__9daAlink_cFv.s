@@ -33,14 +33,14 @@ lbl_800E6770:
 /* 800E67A0 00000030  38 80 00 B5 */	li r4, 0xb5
 /* 800E67A4 00000034  3C A0 80 39 */	lis r5, m__18daAlinkHIO_grab_c0@ha
 /* 800E67A8 00000038  3B C5 EC 48 */	addi r30, r5, m__18daAlinkHIO_grab_c0@l
-/* 800E67AC 0000003C  C0 3E 00 A4 */	lfs f1, 0xa4(r30)
+/* 800E67AC 0000003C  C0 3E 00 A4 */	lfs f1, 0xa4(r30)	/* effective address: 8038ECEC */
 /* 800E67B0 00000040  C0 42 93 34 */	lfs f2, lit_7710(r2)
-/* 800E67B4 00000044  A8 BE 00 A0 */	lha r5, 0xa0(r30)
-/* 800E67B8 00000048  C0 7E 00 AC */	lfs f3, 0xac(r30)
+/* 800E67B4 00000044  A8 BE 00 A0 */	lha r5, 0xa0(r30)	/* effective address: 8038ECE8 */
+/* 800E67B8 00000048  C0 7E 00 AC */	lfs f3, 0xac(r30)	/* effective address: 8038ECF4 */
 /* 800E67BC 0000004C  4B FC 68 51 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800E67C0 00000050  38 00 00 01 */	li r0, 1
 /* 800E67C4 00000054  B0 1F 30 0E */	sth r0, 0x300e(r31)
-/* 800E67C8 00000058  C0 62 92 B8 */	lfs f3, d_a_d_a_alink__lit_6040(r2)
+/* 800E67C8 00000058  C0 62 92 B8 */	lfs f3, lit_6040(r2)
 /* 800E67CC 0000005C  A8 1E 00 A0 */	lha r0, 0xa0(r30)
 /* 800E67D0 00000060  C8 42 92 B0 */	lfd f2, lit_6025(r2)
 /* 800E67D4 00000064  6C 03 80 00 */	xoris r3, r0, 0x8000
@@ -73,7 +73,7 @@ lbl_800E6820:
 /* 800E683C 0000001C  3B C5 00 50 */	addi r30, r5, 0x50
 /* 800E6840 00000020  7F C5 F3 78 */	mr r5, r30
 /* 800E6844 00000024  4B FC 68 B1 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
-/* 800E6848 00000028  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800E6848 00000028  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800E684C 0000002C  A8 1E 00 00 */	lha r0, 0(r30)
 /* 800E6850 00000030  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800E6854 00000034  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -84,7 +84,7 @@ lbl_800E6820:
 /* 800E6868 00000048  EC 20 08 28 */	fsubs f1, f0, f1
 /* 800E686C 0000004C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6870 00000050  38 63 EC 48 */	addi r3, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E6874 00000054  C0 03 00 58 */	lfs f0, 0x58(r3)
+/* 800E6874 00000054  C0 03 00 58 */	lfs f0, 0x58(r3)	/* effective address: 8038ECA0 */
 /* 800E6878 00000058  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800E687C 0000005C  EC 02 00 24 */	fdivs f0, f2, f0
 /* 800E6880 00000060  D0 1F 34 7C */	stfs f0, 0x347c(r31)

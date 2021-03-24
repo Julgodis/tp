@@ -2,7 +2,7 @@ lbl_80228ACC:
 /* 80228ACC 00000000  38 60 00 00 */	li r3, 0
 /* 80228AD0 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80228AD4 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80228AD8 0000000C  88 04 01 0C */	lbz r0, 0x10c(r4)
+/* 80228AD8 0000000C  88 04 01 0C */	lbz r0, 0x10c(r4)	/* effective address: 804062CC */
 /* 80228ADC 00000010  28 00 00 14 */	cmplwi r0, 0x14
 /* 80228AE0 00000014  40 80 00 10 */	bge lbl_80228AF0
 /* 80228AE4 00000018  20 00 00 14 */	subfic r0, r0, 0x14

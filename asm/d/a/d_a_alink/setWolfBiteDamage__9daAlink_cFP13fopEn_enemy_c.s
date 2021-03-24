@@ -18,7 +18,7 @@ lbl_801396F8:
 /* 80139738 00000040  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8013973C 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80139740 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80139744 0000004C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80139744 0000004C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80139748 00000050  38 80 00 01 */	li r4, 1
 /* 8013974C 00000054  38 C1 00 14 */	addi r6, r1, 0x14
 /* 80139750 00000058  38 E7 04 E4 */	addi r7, r7, 0x4e4
@@ -28,7 +28,7 @@ lbl_801396F8:
 /* 80139760 00000068  4B F1 2A B9 */	bl setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl
 /* 80139764 0000006C  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80139768 00000070  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8013976C 00000074  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 8013976C 00000074  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80139770 00000078  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80139774 0000007C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80139778 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

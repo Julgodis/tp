@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct daNpcWrestler_c {
@@ -36,6 +36,7 @@ struct daNpcWrestler_c {
 	/* 80B30654 */ void setExpressionBtp(int);
 	/* 80B3074C */ void setMotionAnm(int, f32);
 	/* 80B308B0 */ void reset();
+	/* 80B30AD8 */ void setAction(bool (daNpcWrestler_c::*)(void*));
 	/* 80B30BEC */ void checkArenaInfo();
 	/* 80B30CA4 */ void checkArenaSub(fopAc_ac_c*);
 	/* 80B30D48 */ void setOnToArena(f32);
@@ -125,6 +126,16 @@ struct J3DTexMtxAnm {
 struct J3DMatColorAnm {
 	/* 80B2FD5C */ ~J3DMatColorAnm();
 	/* 80B2FD98 */ J3DMatColorAnm();
+};
+
+struct JMath {
+	template <typename A1, typename B1>
+	struct TSinCosTable { };
+	/* TSinCosTable<13, f32> */
+	struct TSinCosTable__template0 {
+		/* 80B40D28 */ void sinShort(s16) const;
+	};
+
 };
 
 struct daNpcF_ActorMngr_c {
@@ -224,7 +235,7 @@ extern "C" void setExpressionAnm__15daNpcWrestler_cFib(); // 1
 extern "C" void setExpressionBtp__15daNpcWrestler_cFi(); // 1
 extern "C" void setMotionAnm__15daNpcWrestler_cFif(); // 1
 extern "C" void reset__15daNpcWrestler_cFv(); // 1
-extern "C" static void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b(); // 1
+extern "C" void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b(); // 1
 extern "C" void s_sub1__FPvPv(); // 1
 extern "C" void checkArenaInfo__15daNpcWrestler_cFv(); // 1
 extern "C" void checkArenaSub__15daNpcWrestler_cFP10fopAc_ac_c(); // 1
@@ -287,7 +298,7 @@ extern "C" void setAttnPos__15daNpcWrestler_cFv(); // 1
 extern "C" void lookat__15daNpcWrestler_cFv(); // 1
 extern "C" void drawDbgInfo__15daNpcWrestler_cFv(); // 1
 extern "C" void drawOtherMdls__15daNpcWrestler_cFv(); // 1
-extern "C" static void func_80B40D28(); // 1
+extern "C" void func_80B40D28(); // 1
 extern "C" void __sinit_d_a_npc_wrestler_cpp(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
@@ -950,7 +961,7 @@ asm void daNpcWrestler_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b() {
+asm void daNpcWrestler_c::setAction(bool (daNpcWrestler_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setAction__15daNpcWrestler_cFM15daNpcWrestler_cFPCvPvPv_b.s"
 }
@@ -1643,7 +1654,7 @@ asm void daNpcWrestler_c::drawOtherMdls() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80B40D28() {
+asm void JMath::TSinCosTable__template0::sinShort(s16 param_0) const {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/func_80B40D28.s"
 }

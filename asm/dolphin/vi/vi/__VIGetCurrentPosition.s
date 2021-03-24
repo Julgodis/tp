@@ -7,12 +7,12 @@ lbl_8034DD5C:
 /* 8034DD70 00000014  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8034DD74 00000018  38 A3 00 00 */	addi r5, r3, 0
 /* 8034DD78 0000001C  38 87 20 00 */	addi r4, r7, 0x2000
-/* 8034DD7C 00000020  A4 09 00 2C */	lhzu r0, 0x2c(r9)
+/* 8034DD7C 00000020  A4 09 00 2C */	lhzu r0, 0x2c(r9)	/* effective address: CC00202C */
 /* 8034DD80 00000024  54 08 05 7E */	clrlwi r8, r0, 0x15
 lbl_8034DD84:
-/* 8034DD84 00000000  A0 09 00 00 */	lhz r0, 0(r9)
+/* 8034DD84 00000000  A0 09 00 00 */	lhz r0, 0(r9)	/* effective address: CC002000 */
 /* 8034DD88 00000004  7D 07 43 78 */	mr r7, r8
-/* 8034DD8C 00000008  A0 64 00 2E */	lhz r3, 0x2e(r4)
+/* 8034DD8C 00000008  A0 64 00 2E */	lhz r3, 0x2e(r4)	/* effective address: CC00202E */
 /* 8034DD90 0000000C  54 08 05 7E */	clrlwi r8, r0, 0x15
 /* 8034DD94 00000010  7C 07 40 40 */	cmplw r7, r8
 /* 8034DD98 00000014  54 60 05 7E */	clrlwi r0, r3, 0x15

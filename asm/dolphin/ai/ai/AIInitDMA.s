@@ -15,17 +15,17 @@ lbl_8034FCB4:
 /* 8034FCE8 00000034  54 04 00 2A */	rlwinm r4, r0, 0, 0, 0x15
 /* 8034FCEC 00000038  57 C0 84 3E */	srwi r0, r30, 0x10
 /* 8034FCF0 0000003C  7C 80 03 78 */	or r0, r4, r0
-/* 8034FCF4 00000040  B0 05 00 30 */	sth r0, 0x30(r5)
+/* 8034FCF4 00000040  B0 05 00 30 */	sth r0, 0x30(r5)	/* effective address: CC005030 */
 /* 8034FCF8 00000044  57 C0 04 3E */	clrlwi r0, r30, 0x10
-/* 8034FCFC 00000048  A0 86 00 32 */	lhz r4, 0x32(r6)
+/* 8034FCFC 00000048  A0 86 00 32 */	lhz r4, 0x32(r6)	/* effective address: CC005032 */
 /* 8034FD00 0000004C  54 84 06 DE */	rlwinm r4, r4, 0, 0x1b, 0xf
 /* 8034FD04 00000050  7C 80 03 78 */	or r0, r4, r0
-/* 8034FD08 00000054  B0 06 00 32 */	sth r0, 0x32(r6)
+/* 8034FD08 00000054  B0 06 00 32 */	sth r0, 0x32(r6)	/* effective address: CC005032 */
 /* 8034FD0C 00000058  57 E0 DC 3E */	rlwinm r0, r31, 0x1b, 0x10, 0x1f
-/* 8034FD10 0000005C  A0 87 00 36 */	lhz r4, 0x36(r7)
+/* 8034FD10 0000005C  A0 87 00 36 */	lhz r4, 0x36(r7)	/* effective address: CC005036 */
 /* 8034FD14 00000060  54 84 00 20 */	rlwinm r4, r4, 0, 0, 0x10
 /* 8034FD18 00000064  7C 80 03 78 */	or r0, r4, r0
-/* 8034FD1C 00000068  B0 07 00 36 */	sth r0, 0x36(r7)
+/* 8034FD1C 00000068  B0 07 00 36 */	sth r0, 0x36(r7)	/* effective address: CC005036 */
 /* 8034FD20 0000006C  4B FE D9 FD */	bl OSRestoreInterrupts
 /* 8034FD24 00000070  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8034FD28 00000074  83 E1 00 14 */	lwz r31, 0x14(r1)

@@ -423,7 +423,7 @@ asm void dMapInfo_n::rotAngle(dStage_FileList2_dt_c const* param_0, Vec* param_1
 
 /* ############################################################################################## */
 /* 80451E28-80451E2C 0004+00 s=6 e=0 z=0  None .sdata2    @3796                                                        */
-SECTION_SDATA2 static u8 d_map_d_map_path_dmap__lit_3796[4] = {
+SECTION_SDATA2 static u8 lit_3796[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -484,7 +484,7 @@ asm void dMapInfo_n::getMapRestartAngleY() {
 
 /* ############################################################################################## */
 /* 80451E2C-80451E30 0004+00 s=4 e=0 z=0  None .sdata2    @3887                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_3887 = 0.5f;
+SECTION_SDATA2 static f32 lit_3887 = 0.5f;
 
 /* 8003F19C-8003F1F4 0058+00 s=0 e=1 z=0  None .text      getRoomCenter__10dMapInfo_nFiPfPf                            */
 #pragma push
@@ -510,7 +510,7 @@ asm void dMapInfo_n::getRoomMinMaxXZ(int param_0, f32* param_1, f32* param_2, f3
 
 /* ############################################################################################## */
 /* 80451E30-80451E38 0008+00 s=1 e=0 z=0  None .sdata2    @3957                                                        */
-SECTION_SDATA2 static f64 d_map_d_map_path_dmap__lit_3957 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3957 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8003F24C-8003F40C 01C0+00 s=2 e=0 z=0  None .text      getFloorParameter__10dMapInfo_nFfPScPfPfPfPf                 */
 #pragma push
@@ -756,7 +756,7 @@ asm void renderingDAmap_c::calcFloorNoForObjectByMapPathRend(f32 param_0, int pa
 
 /* ############################################################################################## */
 /* 80451E38-80451E40 0004+04 s=3 e=0 z=0  None .sdata2    @4202                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4202[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4202[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
@@ -775,7 +775,7 @@ asm void renderingDAmap_c::init(u8* param_0, u16 param_1, u16 param_2, u16 param
 
 /* ############################################################################################## */
 /* 80451E40-80451E48 0008+00 s=2 e=0 z=0  None .sdata2    @4211                                                        */
-SECTION_SDATA2 static f64 d_map_d_map_path_dmap__lit_4211 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4211 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8003FD08-8003FD9C 0094+00 s=0 e=2 z=0  None .text      entry__16renderingDAmap_cFfffiSc                             */
 #pragma push
@@ -862,13 +862,13 @@ asm void renderingDAmap_c::isDrawRoom(int param_0, int param_1) const {
 
 /* ############################################################################################## */
 /* 80451E4C-80451E50 0004+00 s=1 e=0 z=0  None .sdata2    @4264                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4264 = -5000.0f;
+SECTION_SDATA2 static f32 lit_4264 = -5000.0f;
 
 /* 80451E50-80451E54 0004+00 s=1 e=0 z=0  None .sdata2    @4265                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4265 = 5000.0f;
+SECTION_SDATA2 static f32 lit_4265 = 5000.0f;
 
 /* 80451E54-80451E58 0004+00 s=1 e=0 z=0  None .sdata2    @4266                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4266 = -1.0f;
+SECTION_SDATA2 static f32 lit_4266 = -1.0f;
 
 /* 8003FF14-8003FFC4 00B0+00 s=3 e=3 z=0  None .text      preDrawPath__16renderingDAmap_cFv                            */
 #pragma push
@@ -1073,7 +1073,7 @@ SECTION_RODATA static u8 const l_100x100BoxVertexList[48] = {
 };
 
 /* 80451E70-80451E74 0004+00 s=1 e=0 z=0  None .sdata2    @4484                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4484 = 6.0f;
+SECTION_SDATA2 static f32 lit_4484 = 6.0f;
 
 /* 80040838-800409B4 017C+00 s=1 e=0 z=0  None .text      drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib */
 #pragma push
@@ -1222,7 +1222,7 @@ SECTION_SDATA2 static u8 data_80451EA4[4] = {
 };
 
 /* 80451EA8-80451EAC 0004+00 s=2 e=0 z=0  None .sdata2    @4600                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4600 = 2.0f;
+SECTION_SDATA2 static f32 lit_4600 = 2.0f;
 
 /* 80040B00-80040E84 0384+00 s=1 e=0 z=0  None .text      drawTreasure__28renderingPlusDoorAndCursor_cFv               */
 #pragma push
@@ -1346,7 +1346,7 @@ SECTION_SDATA static u8 data_80450638[4 + 4 /* padding */] = {
 };
 
 /* 80451EB8-80451EC0 0004+04 s=1 e=0 z=0  None .sdata2    @4731                                                        */
-SECTION_SDATA2 static f32 d_map_d_map_path_dmap__lit_4731[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4731[1 + 1 /* padding */] = {
 	640.0f,
 	/* padding */
 	0.0f,

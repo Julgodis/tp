@@ -15,10 +15,10 @@ lbl_8011F360:
 /* 8011F394 00000034  38 80 00 19 */	li r4, 0x19
 /* 8011F398 00000038  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 8011F39C 0000003C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 8011F3A0 00000040  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 8011F3A0 00000040  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 8011F3A4 00000044  3C A0 80 39 */	lis r5, m__19daAlinkHIO_basic_c0@ha
 /* 8011F3A8 00000048  38 A5 D6 64 */	addi r5, r5, m__19daAlinkHIO_basic_c0@l
-/* 8011F3AC 0000004C  C0 45 00 18 */	lfs f2, 0x18(r5)
+/* 8011F3AC 0000004C  C0 45 00 18 */	lfs f2, 0x18(r5)	/* effective address: 8038D67C */
 /* 8011F3B0 00000050  4B F8 DC 31 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8011F3B4 00000054  4B FA 0F 5D */	bl checkDungeon__9daAlink_cFv
 /* 8011F3B8 00000058  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -48,7 +48,7 @@ lbl_8011F3E4:
 /* 8011F414 00000030  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
 /* 8011F418 00000034  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 8011F41C 00000038  D0 3F 04 EC */	stfs f1, 0x4ec(r31)
-/* 8011F420 0000003C  C0 02 93 2C */	lfs f0, d_a_d_a_alink__lit_7624(r2)
+/* 8011F420 0000003C  C0 02 93 2C */	lfs f0, lit_7624(r2)
 /* 8011F424 00000040  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 8011F428 00000044  D0 3F 04 F4 */	stfs f1, 0x4f4(r31)
 /* 8011F42C 00000048  80 7F 06 50 */	lwz r3, 0x650(r31)

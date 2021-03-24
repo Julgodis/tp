@@ -35,7 +35,7 @@ lbl_800D3D34:
 /* 800D3D44 00000010  C0 3F 34 FC */	lfs f1, 0x34fc(r31)
 /* 800D3D48 00000014  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutFnJU_c0@ha
 /* 800D3D4C 00000018  38 A3 DA EC */	addi r5, r3, m__21daAlinkHIO_cutFnJU_c0@l
-/* 800D3D50 0000001C  C0 05 00 44 */	lfs f0, 0x44(r5)
+/* 800D3D50 0000001C  C0 05 00 44 */	lfs f0, 0x44(r5)	/* effective address: 8038DB30 */
 /* 800D3D54 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800D3D58 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800D3D5C 00000000  40 80 00 18 */	bge lbl_800D3D74
@@ -48,7 +48,7 @@ lbl_800D3D74:
 /* 800D3D74 00000000  C0 3F 1F E0 */	lfs f1, 0x1fe0(r31)
 /* 800D3D78 00000004  3C 60 80 39 */	lis r3, m__21daAlinkHIO_cutFnJU_c0@ha
 /* 800D3D7C 00000008  38 63 DA EC */	addi r3, r3, m__21daAlinkHIO_cutFnJU_c0@l
-/* 800D3D80 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800D3D80 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038DB20 */
 /* 800D3D84 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D3D88 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800D3D8C 00000004  40 82 00 34 */	bne lbl_800D3DC0

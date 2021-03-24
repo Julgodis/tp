@@ -29,9 +29,9 @@ lbl_800E191C:
 lbl_800E1988:
 /* 800E1988 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800E198C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800E1990 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800E1990 00000008  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800E1994 0000000C  54 00 06 6E */	rlwinm r0, r0, 0, 0x19, 0x17
-/* 800E1998 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800E1998 00000010  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800E199C 00000014  38 00 FF FF */	li r0, -1
 /* 800E19A0 00000018  B0 1F 30 8E */	sth r0, 0x308e(r31)
 /* 800E19A4 0000001C  7F E3 FB 78 */	mr r3, r31

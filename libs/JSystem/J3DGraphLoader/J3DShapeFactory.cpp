@@ -57,7 +57,7 @@ extern "C" static void func_80337AE0(); // 1
 extern "C" static void func_80337AF8(); // 1
 extern "C" static void func_80337B10(); // 1
 extern "C" static void func_80337B28(); // 1
-extern "C" extern char const* const J3DShapeFactory__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

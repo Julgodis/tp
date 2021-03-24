@@ -5,7 +5,7 @@ lbl_8006DA04:
 /* 8006DA10 0000000C  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 8006DA14 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8006DA18 00000014  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8006DA1C 00000018  83 E3 10 58 */	lwz r31, 0x1058(r3)
+/* 8006DA1C 00000018  83 E3 10 58 */	lwz r31, 0x1058(r3)	/* effective address: 8042DAAC */
 /* 8006DA20 0000001C  38 61 00 08 */	addi r3, r1, 8
 /* 8006DA24 00000020  4B FE D0 DD */	bl dKyw_get_wind_vecpow__Fv
 /* 8006DA28 00000024  C0 01 00 08 */	lfs f0, 8(r1)

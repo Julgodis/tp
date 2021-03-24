@@ -36,7 +36,7 @@ lbl_8014AB20:
 /* 8014AB50 00000030  4B FF AD 49 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
 /* 8014AB54 00000034  93 DC 0B 5C */	stw r30, 0xb5c(r28)
 /* 8014AB58 00000038  93 FC 0B 58 */	stw r31, 0xb58(r28)
-/* 8014AB5C 0000003C  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__lit_4116(r2)
+/* 8014AB5C 0000003C  C0 02 99 D8 */	lfs f0, lit_4116(r2)
 /* 8014AB60 00000040  D0 1C 0B 68 */	stfs f0, 0xb68(r28)
 lbl_8014AB64:
 /* 8014AB64 00000000  2C 1D FF FF */	cmpwi r29, -1
@@ -54,10 +54,10 @@ lbl_8014AB8C:
 /* 8014AB90 00000004  4B FF AD 09 */	bl initialize__22daNpcT_MotionSeqMngr_cFv
 /* 8014AB94 00000008  93 DC 0B 80 */	stw r30, 0xb80(r28)
 /* 8014AB98 0000000C  93 BC 0B 7C */	stw r29, 0xb7c(r28)
-/* 8014AB9C 00000010  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__lit_4116(r2)
+/* 8014AB9C 00000010  C0 02 99 D8 */	lfs f0, lit_4116(r2)
 /* 8014ABA0 00000014  D0 1C 0B 8C */	stfs f0, 0xb8c(r28)
 lbl_8014ABA4:
-/* 8014ABA4 00000000  C0 02 99 D8 */	lfs f0, d_a_d_a_npc__lit_4116(r2)
+/* 8014ABA4 00000000  C0 02 99 D8 */	lfs f0, lit_4116(r2)
 /* 8014ABA8 00000004  D0 1C 04 F8 */	stfs f0, 0x4f8(r28)
 /* 8014ABAC 00000008  D0 1C 04 FC */	stfs f0, 0x4fc(r28)
 /* 8014ABB0 0000000C  D0 1C 05 00 */	stfs f0, 0x500(r28)

@@ -181,26 +181,26 @@ asm void dTres_c::addData(dTres_c::list_class* param_0, s8 param_1) {
 
 /* ############################################################################################## */
 /* 80452BE8-80452BEC 0004+00 s=1 e=0 z=0  None .sdata2    @3839                                                        */
-SECTION_SDATA2 static f32 d_d_tresure__lit_3839 = 182.04444885253906f;
+SECTION_SDATA2 static f32 lit_3839 = 182.04444885253906f;
 
 /* 80452BEC-80452BF0 0004+00 s=1 e=0 z=0  None .sdata2    @3840                                                        */
-SECTION_SDATA2 static u8 d_d_tresure__lit_3840[4] = {
+SECTION_SDATA2 static u8 lit_3840[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80452BF0-80452BF8 0008+00 s=1 e=0 z=0  None .sdata2    @3841                                                        */
-SECTION_SDATA2 static f64 d_d_tresure__lit_3841 = 0.5;
+SECTION_SDATA2 static f64 lit_3841 = 0.5;
 
 /* 80452BF8-80452C00 0008+00 s=1 e=0 z=0  None .sdata2    @3842                                                        */
-SECTION_SDATA2 static f64 d_d_tresure__lit_3842 = 3.0;
+SECTION_SDATA2 static f64 lit_3842 = 3.0;
 
 /* 80452C00-80452C08 0008+00 s=1 e=0 z=0  None .sdata2    @3843                                                        */
-SECTION_SDATA2 static u8 d_d_tresure__lit_3843[8] = {
+SECTION_SDATA2 static u8 lit_3843[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80452C08-80452C10 0008+00 s=1 e=0 z=0  None .sdata2    @3845                                                        */
-SECTION_SDATA2 static f64 d_d_tresure__lit_3845 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3845 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8009BE28-8009C168 0340+00 s=1 e=0 z=0  None .text      checkTreasureBox__7dTres_cFPQ27dTres_c6data_s                */
 #pragma push

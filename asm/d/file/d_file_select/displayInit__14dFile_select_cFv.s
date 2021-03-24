@@ -9,7 +9,7 @@ lbl_8018CF50:
 /* 8018CF6C 0000001C  98 83 02 70 */	stb r4, 0x270(r3)
 /* 8018CF70 00000020  3C 60 80 43 */	lis r3, g_fsHIO@ha
 /* 8018CF74 00000024  38 63 C9 EC */	addi r3, r3, g_fsHIO@l
-/* 8018CF78 00000028  88 03 00 0B */	lbz r0, 0xb(r3)
+/* 8018CF78 00000028  88 03 00 0B */	lbz r0, 0xb(r3)	/* effective address: 8042C9F7 */
 /* 8018CF7C 0000002C  B0 1F 03 AC */	sth r0, 0x3ac(r31)
 /* 8018CF80 00000030  98 9F 00 B8 */	stb r4, 0xb8(r31)
 /* 8018CF84 00000034  98 9F 01 4A */	stb r4, 0x14a(r31)
@@ -23,7 +23,7 @@ lbl_8018CF50:
 /* 8018CFA4 00000054  38 00 00 02 */	li r0, 2
 /* 8018CFA8 00000058  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 8018CFAC 0000005C  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l
-/* 8018CFB0 00000060  98 03 1F BE */	stb r0, 0x1fbe(r3)
+/* 8018CFB0 00000060  98 03 1F BE */	stb r0, 0x1fbe(r3)	/* effective address: 803ECEFE */
 /* 8018CFB4 00000064  98 9F 02 48 */	stb r4, 0x248(r31)
 /* 8018CFB8 00000068  98 9F 02 4A */	stb r4, 0x24a(r31)
 /* 8018CFBC 0000006C  98 9F 02 49 */	stb r4, 0x249(r31)

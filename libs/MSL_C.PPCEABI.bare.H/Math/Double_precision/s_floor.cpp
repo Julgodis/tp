@@ -26,10 +26,10 @@ extern "C" void floor(); // 1
 
 /* ############################################################################################## */
 /* 80456AF8-80456B00 0008+00 s=1 e=0 z=0  None .sdata2    @124                                                         */
-SECTION_SDATA2 static f64 Math_Double_precision_s_floor__lit_124 = 1e+300;
+SECTION_SDATA2 static f64 lit_124 = 1e+300;
 
 /* 80456B00-80456B08 0008+00 s=1 e=0 z=0  None .sdata2    @125                                                         */
-SECTION_SDATA2 static u8 Math_Double_precision_s_floor__lit_125[8] = {
+SECTION_SDATA2 static u8 lit_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

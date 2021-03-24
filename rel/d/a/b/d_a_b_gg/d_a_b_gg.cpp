@@ -16,14 +16,14 @@ struct daB_GG_HIO_c {
 	/* 805EC9C4 */ ~daB_GG_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
 	/* 805ED010 */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daB_GG_c {

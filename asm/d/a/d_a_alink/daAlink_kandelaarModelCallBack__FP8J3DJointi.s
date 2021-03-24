@@ -4,8 +4,8 @@ lbl_80110BEC:
 /* 80110BF4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80110BF8 0000000C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80110BFC 00000010  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80110C00 00000014  80 63 00 38 */	lwz r3, 0x38(r3)
-/* 80110C04 00000018  80 63 00 14 */	lwz r3, 0x14(r3)
+/* 80110C00 00000014  80 63 00 38 */	lwz r3, 0x38(r3)	/* effective address: 80434B00 */
+/* 80110C04 00000018  80 63 00 14 */	lwz r3, 0x14(r3)	/* effective address: 80434ADC */
 /* 80110C08 0000001C  2C 04 00 00 */	cmpwi r4, 0
 /* 80110C0C 00000020  40 82 00 08 */	bne lbl_80110C14
 /* 80110C10 00000024  4B FF FC DD */	bl kandelaarModelCallBack__9daAlink_cFv

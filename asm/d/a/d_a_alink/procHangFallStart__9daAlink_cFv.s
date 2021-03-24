@@ -13,7 +13,7 @@ lbl_800FB1A4:
 /* 800FB1D0 0000002C  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800FB1D4 00000030  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wallFall_c0@ha
 /* 800FB1D8 00000034  38 63 E1 B8 */	addi r3, r3, m__22daAlinkHIO_wallFall_c0@l
-/* 800FB1DC 00000038  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800FB1DC 00000038  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038E1C8 */
 /* 800FB1E0 0000003C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FB1E4 00000000  40 81 00 0C */	ble lbl_800FB1F0
 lbl_800FB1E8:
@@ -30,13 +30,13 @@ lbl_800FB1F4:
 /* 800FB208 00000014  48 00 00 80 */	b lbl_800FB288
 lbl_800FB20C:
 /* 800FB20C 00000000  7F E3 FB 78 */	mr r3, r31
-/* 800FB210 00000004  C0 22 93 3C */	lfs f1, d_a_d_a_alink__lit_7808(r2)
+/* 800FB210 00000004  C0 22 93 3C */	lfs f1, lit_7808(r2)
 /* 800FB214 00000008  48 22 D2 19 */	bl checkPass__12J3DFrameCtrlFf
 /* 800FB218 0000000C  2C 03 00 00 */	cmpwi r3, 0
 /* 800FB21C 00000010  41 82 00 34 */	beq lbl_800FB250
 /* 800FB220 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800FB224 00000018  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800FB228 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FB228 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FB22C 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800FB230 00000024  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800FB234 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha

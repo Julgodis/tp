@@ -22,6 +22,9 @@ struct dMsgScrnArrow_c {
 	/* 8023C010 */ void dotAnimeMove();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -33,9 +36,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -69,7 +69,7 @@ extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv(); // 1
 extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv(); // 1
 extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv(); // 1
 extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_arrow__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -181,10 +181,10 @@ asm void dMsgScrnArrow_c::arwAnimeInit() {
 
 /* ############################################################################################## */
 /* 80454B9C-80454BA0 0004+00 s=2 e=0 z=0  None .sdata2    @3761                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_arrow__lit_3761 = 1.0f;
+SECTION_SDATA2 static f32 lit_3761 = 1.0f;
 
 /* 80454BA0-80454BA8 0008+00 s=2 e=0 z=0  None .sdata2    @3763                                                        */
-SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_arrow__lit_3763 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3763 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8023BE90-8023BFC4 0134+00 s=0 e=4 z=0  None .text      arwAnimeMove__15dMsgScrnArrow_cFv                            */
 #pragma push

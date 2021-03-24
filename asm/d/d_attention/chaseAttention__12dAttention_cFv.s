@@ -57,7 +57,7 @@ lbl_80071AE0:
 /* 80071B70 00000090  39 01 00 18 */	addi r8, r1, 0x18
 /* 80071B74 00000094  4B FF F3 1D */	bl calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl
 /* 80071B78 00000098  FF E0 08 90 */	fmr f31, f1
-/* 80071B7C 0000009C  C0 02 8C 50 */	lfs f0, d_d_attention__lit_4071(r2)
+/* 80071B7C 0000009C  C0 02 8C 50 */	lfs f0, lit_4071(r2)
 /* 80071B80 000000A0  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 80071B84 00000000  4C 40 13 82 */	cror 2, 0, 2
 /* 80071B88 00000004  40 82 00 DC */	bne lbl_80071C64
@@ -110,7 +110,7 @@ lbl_80071C08:
 /* 80071C38 00000030  41 82 00 24 */	beq lbl_80071C5C
 /* 80071C3C 00000034  C0 21 00 24 */	lfs f1, 0x24(r1)
 /* 80071C40 00000038  A8 61 00 14 */	lha r3, 0x14(r1)
-/* 80071C44 0000003C  C0 42 8C 94 */	lfs f2, d_d_attention__lit_4563(r2)
+/* 80071C44 0000003C  C0 42 8C 94 */	lfs f2, lit_4563(r2)
 /* 80071C48 00000040  4B FF EF AD */	bl distace_weight__Ffsf
 /* 80071C4C 00000044  7C 7D FA 14 */	add r3, r29, r31
 /* 80071C50 00000048  D0 23 03 38 */	stfs f1, 0x338(r3)

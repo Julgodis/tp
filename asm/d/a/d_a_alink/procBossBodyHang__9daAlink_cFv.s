@@ -135,7 +135,7 @@ lbl_800FCA44:
 /* 800FCA4C 00000008  41 82 01 C4 */	beq lbl_800FCC10
 /* 800FCA50 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FCA54 00000010  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
-/* 800FCA58 00000014  88 1C 5E 24 */	lbz r0, 0x5e24(r28)
+/* 800FCA58 00000014  88 1C 5E 24 */	lbz r0, 0x5e24(r28)	/* effective address: 8040BFE4 */
 /* 800FCA5C 00000018  28 00 00 30 */	cmplwi r0, 0x30
 /* 800FCA60 0000001C  40 82 00 10 */	bne lbl_800FCA70
 /* 800FCA64 00000020  88 1D 2F 8D */	lbz r0, 0x2f8d(r29)
@@ -243,16 +243,16 @@ lbl_800FCBCC:
 /* 800FCBD0 00000004  90 1D 31 98 */	stw r0, 0x3198(r29)
 /* 800FCBD4 00000008  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800FCBD8 0000000C  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800FCBDC 00000010  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800FCBDC 00000010  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038DED8 */
 /* 800FCBE0 00000014  D0 1D 34 78 */	stfs f0, 0x3478(r29)
-/* 800FCBE4 00000018  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800FCBE4 00000018  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800FCBE8 0000001C  D0 1D 34 7C */	stfs f0, 0x347c(r29)
 /* 800FCBEC 00000020  38 00 00 00 */	li r0, 0
 /* 800FCBF0 00000024  B0 1D 30 10 */	sth r0, 0x3010(r29)
 /* 800FCBF4 00000028  38 00 00 01 */	li r0, 1
 /* 800FCBF8 0000002C  B0 1D 30 0A */	sth r0, 0x300a(r29)
 lbl_800FCBFC:
-/* 800FCBFC 00000000  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FCBFC 00000000  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FCC00 00000004  D0 1E 00 0C */	stfs f0, 0xc(r30)
 /* 800FCC04 00000008  38 00 00 00 */	li r0, 0
 /* 800FCC08 0000000C  B0 1D 30 0C */	sth r0, 0x300c(r29)
@@ -310,7 +310,7 @@ lbl_800FCC70:
 /* 800FCCC8 00000058  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FCCCC 00000000  40 81 00 58 */	ble lbl_800FCD24
 /* 800FCCD0 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 800FCCD4 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 800FCCD4 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 800FCCD8 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 800FCCDC 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 800FCCE0 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -394,7 +394,7 @@ lbl_800FCDB0:
 /* 800FCDF0 00000040  B0 1F 05 8E */	sth r0, 0x58e(r31)
 /* 800FCDF4 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800FCDF8 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800FCDFC 0000004C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 800FCDFC 0000004C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 800FCE00 00000050  A8 1D 30 0A */	lha r0, 0x300a(r29)
 /* 800FCE04 00000054  54 04 04 3E */	clrlwi r4, r0, 0x10
 /* 800FCE08 00000058  38 A0 00 00 */	li r5, 0

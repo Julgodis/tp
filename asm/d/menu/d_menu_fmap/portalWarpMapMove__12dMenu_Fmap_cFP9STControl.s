@@ -86,9 +86,9 @@ lbl_801CC9EC:
 /* 801CCA20 00000034  38 A0 00 00 */	li r5, 0
 /* 801CCA24 00000038  38 C0 00 00 */	li r6, 0
 /* 801CCA28 0000003C  38 E0 00 00 */	li r7, 0
-/* 801CCA2C 00000040  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CCA2C 00000040  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801CCA30 00000044  FC 40 08 90 */	fmr f2, f1
-/* 801CCA34 00000048  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801CCA34 00000048  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801CCA38 0000004C  FC 80 18 90 */	fmr f4, f3
 /* 801CCA3C 00000050  39 00 00 00 */	li r8, 0
 /* 801CCA40 00000054  48 0D EF 45 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

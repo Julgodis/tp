@@ -15,7 +15,7 @@ lbl_801F1558:
 /* 801F158C 00000034  40 82 00 4C */	bne lbl_801F15D8
 /* 801F1590 00000038  3C 60 80 43 */	lis r3, g_msHIO@ha
 /* 801F1594 0000003C  38 63 E8 4C */	addi r3, r3, g_msHIO@l
-/* 801F1598 00000040  88 03 00 0B */	lbz r0, 0xb(r3)
+/* 801F1598 00000040  88 03 00 0B */	lbz r0, 0xb(r3)	/* effective address: 8042E857 */
 /* 801F159C 00000044  98 1F 01 BD */	stb r0, 0x1bd(r31)
 /* 801F15A0 00000048  88 9F 01 BD */	lbz r4, 0x1bd(r31)
 /* 801F15A4 0000004C  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay(r13)

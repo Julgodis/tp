@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -82,7 +82,7 @@ extern "C" void fukiAlpha__15dMsgScrnPlace_cFf(); // 1
 extern "C" void fukiScale__15dMsgScrnPlace_cFf(); // 1
 extern "C" void fukiTrans__15dMsgScrnPlace_cFff(); // 1
 extern "C" void fontAlpha__15dMsgScrnPlace_cFf(); // 1
-extern "C" extern char const* const msg_scrn_d_msg_scrn_place__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -190,7 +190,7 @@ SECTION_SDATA2 static u8 lit_3998[4] = {
 SECTION_SDATA2 static f32 lit_3999 = 1.0f;
 
 /* 80454CF0-80454CF8 0004+04 s=1 e=0 z=0  None .sdata2    @4000                                                        */
-SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_place__lit_4000[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4000[1 + 1 /* padding */] = {
 	6.0f / 5.0f,
 	/* padding */
 	0.0f,

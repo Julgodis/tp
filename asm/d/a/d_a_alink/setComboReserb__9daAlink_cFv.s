@@ -9,13 +9,13 @@ lbl_800D20FC:
 /* 800D2118 0000001C  41 82 00 18 */	beq lbl_800D2130
 /* 800D211C 00000020  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wlAttack_c0@ha
 /* 800D2120 00000024  38 63 F7 A4 */	addi r3, r3, m__22daAlinkHIO_wlAttack_c0@l
-/* 800D2124 00000028  A8 03 00 16 */	lha r0, 0x16(r3)
+/* 800D2124 00000028  A8 03 00 16 */	lha r0, 0x16(r3)	/* effective address: 8038F7BA */
 /* 800D2128 0000002C  B0 1F 30 7E */	sth r0, 0x307e(r31)
 /* 800D212C 00000030  48 00 00 14 */	b lbl_800D2140
 lbl_800D2130:
 /* 800D2130 00000000  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D2134 00000004  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D2138 00000008  A8 03 00 52 */	lha r0, 0x52(r3)
+/* 800D2138 00000008  A8 03 00 52 */	lha r0, 0x52(r3)	/* effective address: 8038DEDE */
 /* 800D213C 0000000C  B0 1F 30 7E */	sth r0, 0x307e(r31)
 lbl_800D2140:
 /* 800D2140 00000000  88 1F 05 69 */	lbz r0, 0x569(r31)

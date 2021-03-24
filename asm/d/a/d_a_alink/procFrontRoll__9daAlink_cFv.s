@@ -29,9 +29,9 @@ lbl_800C4B94:
 /* 800C4BA8 00000008  A8 9E 2F E2 */	lha r4, 0x2fe2(r30)
 /* 800C4BAC 0000000C  3C A0 80 39 */	lis r5, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C4BB0 00000010  38 E5 D7 BC */	addi r7, r5, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C4BB4 00000014  A8 A7 00 3E */	lha r5, 0x3e(r7)
-/* 800C4BB8 00000018  A8 C7 00 40 */	lha r6, 0x40(r7)
-/* 800C4BBC 0000001C  A8 E7 00 42 */	lha r7, 0x42(r7)
+/* 800C4BB4 00000014  A8 A7 00 3E */	lha r5, 0x3e(r7)	/* effective address: 8038D7FA */
+/* 800C4BB8 00000018  A8 C7 00 40 */	lha r6, 0x40(r7)	/* effective address: 8038D7FC */
+/* 800C4BBC 0000001C  A8 E7 00 42 */	lha r7, 0x42(r7)	/* effective address: 8038D7FE */
 /* 800C4BC0 00000020  48 1A B9 81 */	bl cLib_addCalcAngleS__FPsssss
 /* 800C4BC4 00000024  A8 1E 04 DE */	lha r0, 0x4de(r30)
 /* 800C4BC8 00000028  B0 1E 04 E6 */	sth r0, 0x4e6(r30)
@@ -40,7 +40,7 @@ lbl_800C4BCC:
 /* 800C4BD0 00000004  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 800C4BD4 00000008  41 82 00 10 */	beq lbl_800C4BE4
 /* 800C4BD8 0000000C  7F C3 F3 78 */	mr r3, r30
-/* 800C4BDC 00000010  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800C4BDC 00000010  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800C4BE0 00000014  48 01 84 29 */	bl setUpperGuardAnime__9daAlink_cFf
 lbl_800C4BE4:
 /* 800C4BE4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -64,7 +64,7 @@ lbl_800C4C18:
 /* 800C4C28 00000004  C0 3E 33 98 */	lfs f1, 0x3398(r30)
 /* 800C4C2C 00000008  3C 60 80 39 */	lis r3, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C4C30 0000000C  38 63 D7 BC */	addi r3, r3, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C4C34 00000010  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 800C4C34 00000010  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038D808 */
 /* 800C4C38 00000014  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800C4C3C 00000018  D0 1E 33 98 */	stfs f0, 0x3398(r30)
 /* 800C4C40 0000001C  C0 3E 33 98 */	lfs f1, 0x3398(r30)
@@ -81,7 +81,7 @@ lbl_800C4C64:
 /* 800C4C64 00000000  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800C4C68 00000004  3C 60 80 39 */	lis r3, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C4C6C 00000008  38 63 D7 BC */	addi r3, r3, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C4C70 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800C4C70 0000000C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038D7CC */
 /* 800C4C74 00000010  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800C4C78 00000000  40 81 00 80 */	ble lbl_800C4CF8
 /* 800C4C7C 00000004  80 1E 31 A0 */	lwz r0, 0x31a0(r30)
@@ -153,7 +153,7 @@ lbl_800C4CF8:
 /* 800C4D78 00000068  48 1A C0 AD */	bl cLib_distanceAngleS__Fss
 /* 800C4D7C 0000006C  3C 80 80 39 */	lis r4, m__23daAlinkHIO_frontRoll_c0@ha
 /* 800C4D80 00000070  38 84 D7 BC */	addi r4, r4, m__23daAlinkHIO_frontRoll_c0@l
-/* 800C4D84 00000074  A8 04 00 3C */	lha r0, 0x3c(r4)
+/* 800C4D84 00000074  A8 04 00 3C */	lha r0, 0x3c(r4)	/* effective address: 8038D7F8 */
 /* 800C4D88 00000078  7C 03 00 00 */	cmpw r3, r0
 /* 800C4D8C 0000007C  41 81 00 AC */	bgt lbl_800C4E38
 /* 800C4D90 00000080  C0 3F 00 10 */	lfs f1, 0x10(r31)
@@ -210,7 +210,7 @@ lbl_800C4E38:
 /* 800C4E48 00000010  41 82 00 34 */	beq lbl_800C4E7C
 /* 800C4E4C 00000014  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 800C4E50 00000018  D0 21 00 08 */	stfs f1, 8(r1)
-/* 800C4E54 0000001C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800C4E54 0000001C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800C4E58 00000020  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 800C4E5C 00000024  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 800C4E60 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -243,7 +243,7 @@ lbl_800C4E94:
 lbl_800C4EC4:
 /* 800C4EC4 00000000  38 7E 33 98 */	addi r3, r30, 0x3398
 /* 800C4EC8 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
-/* 800C4ECC 00000008  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800C4ECC 00000008  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800C4ED0 0000000C  48 1A B8 71 */	bl cLib_chaseF__FPfff
 /* 800C4ED4 00000010  48 00 00 18 */	b lbl_800C4EEC
 lbl_800C4ED8:

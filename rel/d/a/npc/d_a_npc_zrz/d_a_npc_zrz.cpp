@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct fopAc_ac_c {
-};
-
-struct J3DModel {
 };
 
 struct _GXColorS10 {
@@ -52,6 +52,8 @@ struct daNpc_zrZ_c {
 	/* 80B96268 */ void reset();
 	/* 80B9652C */ void playExpression();
 	/* 80B96618 */ void playMotion();
+	/* 80B96740 */ void chkAction(int (daNpc_zrZ_c::*)(void*));
+	/* 80B9676C */ void setAction(int (daNpc_zrZ_c::*)(void*));
 	/* 80B96814 */ void selectAction();
 	/* 80B968E0 */ void doNormalAction(int);
 	/* 80B969F4 */ void doEvent();
@@ -228,8 +230,8 @@ extern "C" void isDelete__11daNpc_zrZ_cFv(); // 1
 extern "C" void reset__11daNpc_zrZ_cFv(); // 1
 extern "C" void playExpression__11daNpc_zrZ_cFv(); // 1
 extern "C" void playMotion__11daNpc_zrZ_cFv(); // 1
-extern "C" static void chkAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i(); // 1
+extern "C" void setAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i(); // 1
 extern "C" void selectAction__11daNpc_zrZ_cFv(); // 1
 extern "C" void doNormalAction__11daNpc_zrZ_cFi(); // 1
 extern "C" void doEvent__11daNpc_zrZ_cFv(); // 1
@@ -945,7 +947,7 @@ asm void daNpc_zrZ_c::playMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i() {
+asm void daNpc_zrZ_c::chkAction(int (daNpc_zrZ_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zrz/d_a_npc_zrz/chkAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i.s"
 }
@@ -956,7 +958,7 @@ extern "C" asm static void chkAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i() {
+asm void daNpc_zrZ_c::setAction(int (daNpc_zrZ_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_zrz/d_a_npc_zrz/setAction__11daNpc_zrZ_cFM11daNpc_zrZ_cFPCvPvPv_i.s"
 }

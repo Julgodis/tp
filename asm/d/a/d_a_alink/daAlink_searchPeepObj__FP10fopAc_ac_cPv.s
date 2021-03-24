@@ -6,7 +6,7 @@ lbl_800CED48:
 /* 800CED58 00000010  7C 85 23 78 */	mr r5, r4
 /* 800CED5C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800CED60 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800CED64 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 800CED64 0000001C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 800CED68 00000020  7C 04 03 78 */	mr r4, r0
 /* 800CED6C 00000024  4B FF FF 79 */	bl searchPeepObj__9daAlink_cFP10fopAc_ac_cPv
 /* 800CED70 00000028  38 60 00 00 */	li r3, 0

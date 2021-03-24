@@ -24,14 +24,14 @@ lbl_8032F3F8:
 /* 8032F450 0000001C  48 01 70 61 */	bl PSMTXCopy
 /* 8032F454 00000020  3C 60 80 43 */	lis r3, mCurrentS__6J3DSys@ha
 /* 8032F458 00000024  3B 83 4C 14 */	addi r28, r3, mCurrentS__6J3DSys@l
-/* 8032F45C 00000028  C3 FC 00 00 */	lfs f31, 0(r28)
-/* 8032F460 0000002C  C3 DC 00 04 */	lfs f30, 4(r28)
-/* 8032F464 00000030  C3 BC 00 08 */	lfs f29, 8(r28)
+/* 8032F45C 00000028  C3 FC 00 00 */	lfs f31, 0(r28)	/* effective address: 80434C14 */
+/* 8032F460 0000002C  C3 DC 00 04 */	lfs f30, 4(r28)	/* effective address: 80434C18 */
+/* 8032F464 00000030  C3 BC 00 08 */	lfs f29, 8(r28)	/* effective address: 80434C1C */
 /* 8032F468 00000034  3C 60 80 43 */	lis r3, mParentS__6J3DSys@ha
 /* 8032F46C 00000038  3B A3 4C 20 */	addi r29, r3, mParentS__6J3DSys@l
-/* 8032F470 0000003C  C3 9D 00 00 */	lfs f28, 0(r29)
-/* 8032F474 00000040  C3 7D 00 04 */	lfs f27, 4(r29)
-/* 8032F478 00000044  C3 5D 00 08 */	lfs f26, 8(r29)
+/* 8032F470 0000003C  C3 9D 00 00 */	lfs f28, 0(r29)	/* effective address: 80434C20 */
+/* 8032F474 00000040  C3 7D 00 04 */	lfs f27, 4(r29)	/* effective address: 80434C24 */
+/* 8032F478 00000044  C3 5D 00 08 */	lfs f26, 8(r29)	/* effective address: 80434C28 */
 /* 8032F47C 00000048  80 7E 00 54 */	lwz r3, 0x54(r30)
 /* 8032F480 0000004C  28 03 00 00 */	cmplwi r3, 0
 /* 8032F484 00000050  41 82 00 24 */	beq lbl_8032F4A8

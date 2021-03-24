@@ -38,9 +38,9 @@ lbl_8010CFA8:
 /* 8010CFF8 00000050  D0 1E 2B 98 */	stfs f0, 0x2b98(r30)
 /* 8010CFFC 00000054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8010D000 00000058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8010D004 0000005C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8010D004 0000005C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010D008 00000060  64 00 00 01 */	oris r0, r0, 1
-/* 8010D00C 00000064  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8010D00C 00000064  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8010D010 00000068  38 00 00 FF */	li r0, 0xff
 /* 8010D014 0000006C  98 1E 08 28 */	stb r0, 0x828(r30)
 /* 8010D018 00000070  38 60 00 01 */	li r3, 1

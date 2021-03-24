@@ -16,10 +16,10 @@ struct daE_TT_HIO_c {
 	/* 807C1AA8 */ ~daE_TT_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_TT_c {

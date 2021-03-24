@@ -13,7 +13,7 @@ lbl_802400CC:
 /* 802400F8 00000018  80 63 00 08 */	lwz r3, 8(r3)
 /* 802400FC 0000001C  3C 80 80 43 */	lis r4, g_MsgObject_HIO_c@ha
 /* 80240100 00000020  38 84 02 8C */	addi r4, r4, g_MsgObject_HIO_c@l
-/* 80240104 00000024  C0 04 00 24 */	lfs f0, 0x24(r4)
+/* 80240104 00000024  C0 04 00 24 */	lfs f0, 0x24(r4)	/* effective address: 804302B0 */
 /* 80240108 00000028  EC 3F 00 32 */	fmuls f1, f31, f0
 /* 8024010C 0000002C  48 01 56 C5 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80240110 00000030  3B A0 00 00 */	li r29, 0

@@ -24,7 +24,7 @@ lbl_800F79CC:
 /* 800F79DC 00000010  4B FC A5 91 */	bl commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC
 /* 800F79E0 00000014  7F E3 FB 78 */	mr r3, r31
 /* 800F79E4 00000018  38 80 01 04 */	li r4, 0x104
-/* 800F79E8 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800F79E8 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800F79EC 00000020  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800F79F0 00000024  38 A0 00 15 */	li r5, 0x15
 /* 800F79F4 00000028  C0 62 92 C4 */	lfs f3, lit_6109(r2)

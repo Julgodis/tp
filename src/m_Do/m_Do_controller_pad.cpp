@@ -117,14 +117,14 @@ SECTION_SDATA2 static f32 lit_3709 = 1.0f / 15.0f;
 SECTION_SDATA2 static f32 lit_3710 = 1.0f;
 
 /* 80451A28-80451A30 0004+04 s=1 e=0 z=0  None .sdata2    @3711                                                        */
-SECTION_SDATA2 static f32 m_Do_m_Do_controller_pad__lit_3711[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_3711[1 + 1 /* padding */] = {
 	0.0071428571827709675f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451A30-80451A38 0008+00 s=1 e=0 z=0  None .sdata2    @3713                                                        */
-SECTION_SDATA2 static f64 m_Do_m_Do_controller_pad__lit_3713 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3713 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80007B7C-80007CD0 0154+00 s=1 e=0 z=0  None .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
 #pragma push

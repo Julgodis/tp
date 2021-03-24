@@ -9,18 +9,18 @@ lbl_8012FB18:
 /* 8012FB34 0000001C  38 9F 1F D0 */	addi r4, r31, 0x1fd0
 /* 8012FB38 00000020  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012FB3C 00000024  38 E3 EE 28 */	addi r7, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012FB40 00000028  C0 27 00 18 */	lfs f1, 0x18(r7)
+/* 8012FB40 00000028  C0 27 00 18 */	lfs f1, 0x18(r7)	/* effective address: 8038EE40 */
 /* 8012FB44 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 8012FB48 00000030  38 A0 00 00 */	li r5, 0
 /* 8012FB4C 00000034  38 C0 00 00 */	li r6, 0
-/* 8012FB50 00000038  A8 E7 00 14 */	lha r7, 0x14(r7)
+/* 8012FB50 00000038  A8 E7 00 14 */	lha r7, 0x14(r7)	/* effective address: 8038EE3C */
 /* 8012FB54 0000003C  C0 1F 1F E0 */	lfs f0, 0x1fe0(r31)
 /* 8012FB58 00000040  EC 41 00 2A */	fadds f2, f1, f0
 /* 8012FB5C 00000044  4B F7 C8 39 */	bl setFrameCtrl__9daAlink_cFP16daPy_frameCtrl_cUcssff
 /* 8012FB60 00000048  C0 22 94 E0 */	lfs f1, lit_19379(r2)
 /* 8012FB64 0000004C  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8012FB68 00000050  38 63 EF 28 */	addi r3, r3, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8012FB6C 00000054  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8012FB6C 00000054  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8038EF30 */
 /* 8012FB70 00000058  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8012FB74 0000005C  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 /* 8012FB78 00000060  38 00 00 05 */	li r0, 5

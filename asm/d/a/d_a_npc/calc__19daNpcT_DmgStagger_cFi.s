@@ -13,12 +13,12 @@ lbl_80147E3C:
 /* 80147E68 00000018  A8 9E 00 16 */	lha r4, 0x16(r30)
 /* 80147E6C 0000001C  4B EC 45 71 */	bl mDoMtx_YrotS__FPA4_fs
 /* 80147E70 00000020  38 7E 00 10 */	addi r3, r30, 0x10
-/* 80147E74 00000024  C0 22 99 D8 */	lfs f1, d_a_d_a_npc__lit_4116(r2)
+/* 80147E74 00000024  C0 22 99 D8 */	lfs f1, lit_4116(r2)
 /* 80147E78 00000028  C0 42 9A 38 */	lfs f2, lit_5459(r2)
 /* 80147E7C 0000002C  C0 62 9A 3C */	lfs f3, lit_5460(r2)
 /* 80147E80 00000030  48 12 7B BD */	bl cLib_addCalc2__FPffff
 /* 80147E84 00000034  38 7E 00 0C */	addi r3, r30, 0xc
-/* 80147E88 00000038  C0 22 99 D8 */	lfs f1, d_a_d_a_npc__lit_4116(r2)
+/* 80147E88 00000038  C0 22 99 D8 */	lfs f1, lit_4116(r2)
 /* 80147E8C 0000003C  C0 42 9A 38 */	lfs f2, lit_5459(r2)
 /* 80147E90 00000040  C0 62 9A 3C */	lfs f3, lit_5460(r2)
 /* 80147E94 00000044  48 12 7B A9 */	bl cLib_addCalc2__FPffff
@@ -27,7 +27,7 @@ lbl_80147E3C:
 /* 80147EA0 00000050  3B 80 00 00 */	li r28, 0
 /* 80147EA4 00000054  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80147EA8 00000058  3B 43 9A 20 */	addi r26, r3, sincosTable___5JMath@l
-/* 80147EAC 0000005C  C3 E2 99 D8 */	lfs f31, d_a_d_a_npc__lit_4116(r2)
+/* 80147EAC 0000005C  C3 E2 99 D8 */	lfs f31, lit_4116(r2)
 /* 80147EB0 00000060  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80147EB4 00000064  3B 63 D4 70 */	addi r27, r3, now__14mDoMtx_stack_c@l
 lbl_80147EB8:

@@ -23,7 +23,7 @@ lbl_80042BBC:
 /* 80042C10 00000054  98 1D 00 E5 */	stb r0, 0xe5(r29)
 /* 80042C14 00000058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80042C18 0000005C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80042C1C 00000060  80 03 5D BC */	lwz r0, 0x5dbc(r3)
+/* 80042C1C 00000060  80 03 5D BC */	lwz r0, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80042C20 00000064  28 00 00 00 */	cmplwi r0, 0
 /* 80042C24 00000068  41 82 00 08 */	beq lbl_80042C2C
 /* 80042C28 0000006C  48 1F 54 71 */	bl endFlowGroup__12dMsgObject_cFv
@@ -52,8 +52,8 @@ lbl_80042C64:
 /* 80042C74 00000010  28 00 00 02 */	cmplwi r0, 2
 /* 80042C78 00000014  40 82 00 38 */	bne lbl_80042CB0
 /* 80042C7C 00000018  7F C3 F3 78 */	mr r3, r30
-/* 80042C80 0000001C  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
-/* 80042C84 00000020  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
+/* 80042C80 0000001C  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80042C84 00000020  38 84 9D 80 */	addi r4, r4, stringBase0@l
 /* 80042C88 00000024  38 84 00 07 */	addi r4, r4, 7
 /* 80042C8C 00000028  48 00 56 BD */	bl cancelStaff__16dEvent_manager_cFPCc
 /* 80042C90 0000002C  38 60 00 00 */	li r3, 0
@@ -75,7 +75,7 @@ lbl_80042CC0:
 /* 80042CC8 00000008  40 82 00 88 */	bne lbl_80042D50
 /* 80042CCC 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80042CD0 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80042CD4 00000014  88 03 4E 1C */	lbz r0, 0x4e1c(r3)
+/* 80042CD4 00000014  88 03 4E 1C */	lbz r0, 0x4e1c(r3)	/* effective address: 8040AFDC */
 /* 80042CD8 00000018  7C 00 07 75 */	extsb. r0, r0
 /* 80042CDC 0000001C  40 82 00 74 */	bne lbl_80042D50
 /* 80042CE0 00000020  A0 1D 00 DA */	lhz r0, 0xda(r29)
@@ -127,8 +127,8 @@ lbl_80042D74:
 /* 80042D7C 00000008  2C 03 FF FF */	cmpwi r3, -1
 /* 80042D80 0000000C  41 82 00 50 */	beq lbl_80042DD0
 /* 80042D84 00000010  7F C3 F3 78 */	mr r3, r30
-/* 80042D88 00000014  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
-/* 80042D8C 00000018  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
+/* 80042D88 00000014  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80042D8C 00000018  38 84 9D 80 */	addi r4, r4, stringBase0@l
 /* 80042D90 0000001C  38 84 00 07 */	addi r4, r4, 7
 /* 80042D94 00000020  48 00 55 B5 */	bl cancelStaff__16dEvent_manager_cFPCc
 /* 80042D98 00000024  38 60 00 00 */	li r3, 0
@@ -165,7 +165,7 @@ lbl_80042DF4:
 /* 80042E0C 00000018  41 82 00 E8 */	beq lbl_80042EF4
 /* 80042E10 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80042E14 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80042E18 00000024  80 03 5D BC */	lwz r0, 0x5dbc(r3)
+/* 80042E18 00000024  80 03 5D BC */	lwz r0, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80042E1C 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 80042E20 0000002C  41 82 00 08 */	beq lbl_80042E28
 /* 80042E24 00000030  48 1F 4B 89 */	bl setKillMessageFlag__12dMsgObject_cFv
@@ -178,7 +178,7 @@ lbl_80042E28:
 /* 80042E3C 00000014  48 02 CF 59 */	bl StopQuake__12dVibration_cFi
 /* 80042E40 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80042E44 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80042E48 00000020  83 83 5D B4 */	lwz r28, 0x5db4(r3)
+/* 80042E48 00000020  83 83 5D B4 */	lwz r28, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 80042E4C 00000024  48 13 E7 F5 */	bl dCam_getBody__Fv
 /* 80042E50 00000028  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 80042E54 0000002C  2C 00 00 00 */	cmpwi r0, 0
@@ -262,7 +262,7 @@ lbl_80042F38:
 /* 80042F6C 00000034  38 00 00 00 */	li r0, 0
 /* 80042F70 00000038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80042F74 0000003C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80042F78 00000040  98 03 5F 63 */	stb r0, 0x5f63(r3)
+/* 80042F78 00000040  98 03 5F 63 */	stb r0, 0x5f63(r3)	/* effective address: 8040C123 */
 /* 80042F7C 00000044  80 7D 01 2C */	lwz r3, 0x12c(r29)
 /* 80042F80 00000048  4B FE CC 01 */	bl dComIfGs_onVisitedRoom__Fi
 lbl_80042F84:

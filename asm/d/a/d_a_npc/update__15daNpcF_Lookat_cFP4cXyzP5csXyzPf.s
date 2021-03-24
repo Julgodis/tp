@@ -21,7 +21,7 @@ lbl_80151A54:
 /* 80151AA0 00000038  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80151AA4 0000003C  3B E3 D4 70 */	addi r31, r3, now__14mDoMtx_stack_c@l
 /* 80151AA8 00000040  7F F4 FB 78 */	mr r20, r31
-/* 80151AAC 00000044  C3 E2 99 D8 */	lfs f31, d_a_d_a_npc__lit_4116(r2)
+/* 80151AAC 00000044  C3 E2 99 D8 */	lfs f31, lit_4116(r2)
 /* 80151AB0 00000048  7F F5 FB 78 */	mr r21, r31
 lbl_80151AB4:
 /* 80151AB4 00000000  7C 7B B2 14 */	add r3, r27, r22

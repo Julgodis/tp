@@ -18,8 +18,8 @@ lbl_80124A2C:
 lbl_80124A6C:
 /* 80124A6C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80124A70 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80124A74 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)
-/* 80124A78 0000000C  C0 03 05 A8 */	lfs f0, 0x5a8(r3)
+/* 80124A74 00000008  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80124A78 0000000C  C0 03 05 A8 */	lfs f0, 0x5a8(r3)	/* effective address: 80406768 */
 /* 80124A7C 00000010  D0 21 00 08 */	stfs f1, 8(r1)
 /* 80124A80 00000014  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80124A84 00000018  D0 41 00 10 */	stfs f2, 0x10(r1)

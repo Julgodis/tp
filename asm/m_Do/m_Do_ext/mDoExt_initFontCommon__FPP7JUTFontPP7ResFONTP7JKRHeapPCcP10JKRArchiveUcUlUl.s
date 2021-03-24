@@ -65,8 +65,8 @@ lbl_800148E0:
 /* 800148EC 0000000C  88 03 00 04 */	lbz r0, 4(r3)
 /* 800148F0 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 800148F4 00000014  40 82 00 40 */	bne lbl_80014934
-/* 800148F8 00000018  3C 60 80 37 */	lis r3, m_Do_m_Do_ext__stringBase0@ha
-/* 800148FC 0000001C  38 63 40 FC */	addi r3, r3, m_Do_m_Do_ext__stringBase0@l
+/* 800148F8 00000018  3C 60 80 37 */	lis r3, stringBase0@ha
+/* 800148FC 0000001C  38 63 40 FC */	addi r3, r3, stringBase0@l
 /* 80014900 00000020  38 63 00 6F */	addi r3, r3, 0x6f
 /* 80014904 00000024  4C C6 31 82 */	crclr 6
 /* 80014908 00000028  4B FF 22 35 */	bl OSReport_FatalError

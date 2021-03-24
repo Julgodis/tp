@@ -102,12 +102,12 @@ SECTION_DATA static void* __vt__14dBgS_SplGrpChk[12] = {
 };
 
 /* 804526E8-804526EC 0004+00 s=1 e=0 z=0  None .sdata2    @319                                                         */
-SECTION_SDATA2 static u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4] = {
+SECTION_SDATA2 static u8 lit_319[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804526EC-804526F0 0004+00 s=1 e=0 z=0  None .sdata2    @320                                                         */
-SECTION_SDATA2 static f32 d_bg_d_bg_s_spl_grp_chk__lit_320 = 1000000000.0f;
+SECTION_SDATA2 static f32 lit_320 = 1000000000.0f;
 
 /* 80078BB0-80078C78 00C8+00 s=0 e=1 z=0  None .text      __ct__14dBgS_SplGrpChkFv                                     */
 #pragma push

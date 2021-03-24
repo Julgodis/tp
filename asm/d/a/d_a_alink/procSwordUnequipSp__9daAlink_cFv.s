@@ -84,7 +84,7 @@ lbl_800D6B58:
 /* 800D6B64 0000000C  38 80 00 8F */	li r4, 0x8f
 /* 800D6B68 00000010  3C A0 80 39 */	lis r5, m__17daAlinkHIO_cut_c0@ha
 /* 800D6B6C 00000014  38 A5 DE 8C */	addi r5, r5, m__17daAlinkHIO_cut_c0@l
-/* 800D6B70 00000018  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800D6B70 00000018  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038DEFC */
 /* 800D6B74 0000001C  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 800D6B78 00000020  4B FD 64 69 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 800D6B7C 00000024  48 00 01 FC */	b lbl_800D6D78
@@ -95,7 +95,7 @@ lbl_800D6B80:
 /* 800D6B8C 0000000C  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800D6B90 00000010  3C 60 80 39 */	lis r3, m__17daAlinkHIO_cut_c0@ha
 /* 800D6B94 00000014  38 63 DE 8C */	addi r3, r3, m__17daAlinkHIO_cut_c0@l
-/* 800D6B98 00000018  C0 03 00 98 */	lfs f0, 0x98(r3)
+/* 800D6B98 00000018  C0 03 00 98 */	lfs f0, 0x98(r3)	/* effective address: 8038DF24 */
 /* 800D6B9C 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800D6BA0 00000000  40 81 00 18 */	ble lbl_800D6BB8
 /* 800D6BA4 00000004  7F C3 F3 78 */	mr r3, r30
@@ -157,7 +157,7 @@ lbl_800D6C5C:
 /* 800D6C70 00000008  7F E4 FB 78 */	mr r4, r31
 /* 800D6C74 0000000C  3C A0 80 39 */	lis r5, m__17daAlinkHIO_cut_c0@ha
 /* 800D6C78 00000010  38 A5 DE 8C */	addi r5, r5, m__17daAlinkHIO_cut_c0@l
-/* 800D6C7C 00000014  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800D6C7C 00000014  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038DEFC */
 /* 800D6C80 00000018  48 02 B0 75 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 lbl_800D6C84:
 /* 800D6C84 00000000  7F C3 F3 78 */	mr r3, r30

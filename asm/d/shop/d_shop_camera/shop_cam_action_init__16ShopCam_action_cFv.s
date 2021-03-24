@@ -7,17 +7,17 @@ lbl_80195C9C:
 /* 80195CB0 00000014  48 00 06 5D */	bl Save__16ShopCam_action_cFv
 /* 80195CB4 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80195CB8 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80195CBC 00000020  80 63 5D AC */	lwz r3, 0x5dac(r3)
-/* 80195CC0 00000024  80 03 05 70 */	lwz r0, 0x570(r3)
+/* 80195CBC 00000020  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80195CC0 00000024  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
 /* 80195CC4 00000028  64 00 08 00 */	oris r0, r0, 0x800
-/* 80195CC8 0000002C  90 03 05 70 */	stw r0, 0x570(r3)
-/* 80195CCC 00000030  3C 60 80 3C */	lis r3, d_shop_d_shop_camera__lit_3771@ha
-/* 80195CD0 00000034  38 83 B8 7C */	addi r4, r3, d_shop_d_shop_camera__lit_3771@l
-/* 80195CD4 00000038  80 64 00 00 */	lwz r3, 0(r4)
-/* 80195CD8 0000003C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80195CC8 0000002C  90 03 05 70 */	stw r0, 0x570(r3)	/* effective address: 80406730 */
+/* 80195CCC 00000030  3C 60 80 3C */	lis r3, lit_3771@ha
+/* 80195CD0 00000034  38 83 B8 7C */	addi r4, r3, lit_3771@l
+/* 80195CD4 00000038  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803BB87C */
+/* 80195CD8 0000003C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803BB880 */
 /* 80195CDC 00000040  90 7F 00 00 */	stw r3, 0(r31)
 /* 80195CE0 00000044  90 1F 00 04 */	stw r0, 4(r31)
-/* 80195CE4 00000048  80 04 00 08 */	lwz r0, 8(r4)
+/* 80195CE4 00000048  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803BB884 */
 /* 80195CE8 0000004C  90 1F 00 08 */	stw r0, 8(r31)
 /* 80195CEC 00000050  A8 7F 00 D6 */	lha r3, 0xd6(r31)
 /* 80195CF0 00000054  7C 60 07 35 */	extsh. r0, r3
@@ -84,12 +84,12 @@ lbl_80195DA4:
 lbl_80195DDC:
 /* 80195DDC 00000000  38 00 FF FF */	li r0, -1
 /* 80195DE0 00000004  B0 1F 00 D4 */	sth r0, 0xd4(r31)
-/* 80195DE4 00000008  C0 22 A0 88 */	lfs f1, d_shop_d_shop_camera__lit_3796(r2)
+/* 80195DE4 00000008  C0 22 A0 88 */	lfs f1, lit_3796(r2)
 /* 80195DE8 0000000C  D0 3F 00 C0 */	stfs f1, 0xc0(r31)
-/* 80195DEC 00000010  C0 02 A0 8C */	lfs f0, d_shop_d_shop_camera__lit_3797(r2)
+/* 80195DEC 00000010  C0 02 A0 8C */	lfs f0, lit_3797(r2)
 /* 80195DF0 00000014  D0 1F 00 C4 */	stfs f0, 0xc4(r31)
 /* 80195DF4 00000018  D0 3F 00 C8 */	stfs f1, 0xc8(r31)
-/* 80195DF8 0000001C  C0 02 A0 90 */	lfs f0, d_shop_d_shop_camera__lit_3798(r2)
+/* 80195DF8 0000001C  C0 02 A0 90 */	lfs f0, lit_3798(r2)
 /* 80195DFC 00000020  D0 1F 00 CC */	stfs f0, 0xcc(r31)
 /* 80195E00 00000024  38 60 00 01 */	li r3, 1
 /* 80195E04 00000028  83 E1 00 0C */	lwz r31, 0xc(r1)

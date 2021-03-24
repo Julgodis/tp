@@ -17,12 +17,12 @@ lbl_8023B9B4:
 lbl_8023B9F0:
 /* 8023B9F0 00000000  90 1F 00 04 */	stw r0, 4(r31)
 /* 8023B9F4 00000004  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8023B9F8 00000008  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_arrow__stringBase0@ha
-/* 8023B9FC 0000000C  38 84 98 A0 */	addi r4, r4, msg_scrn_d_msg_scrn_arrow__stringBase0@l
+/* 8023B9F8 00000008  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8023B9FC 0000000C  38 84 98 A0 */	addi r4, r4, stringBase0@l
 /* 8023BA00 00000010  3C A0 00 02 */	lis r5, 2
 /* 8023BA04 00000014  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 8023BA08 00000018  3B C6 61 C0 */	addi r30, r6, g_dComIfG_gameInfo@l
-/* 8023BA0C 0000001C  80 DE 5C 6C */	lwz r6, 0x5c6c(r30)
+/* 8023BA0C 0000001C  80 DE 5C 6C */	lwz r6, 0x5c6c(r30)	/* effective address: 8040BE2C */
 /* 8023BA10 00000020  48 0B CC 39 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 8023BA14 00000024  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8023BA18 00000028  48 01 96 D1 */	bl dPaneClass_showNullPane__FP9J2DScreen
@@ -38,8 +38,8 @@ lbl_8023B9F0:
 /* 8023BA40 00000050  38 60 00 07 */	li r3, 7
 /* 8023BA44 00000054  64 63 00 07 */	oris r3, r3, 7
 /* 8023BA48 00000058  7C 75 E3 A6 */	mtspr 0x395, r3
-/* 8023BA4C 0000005C  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_arrow__stringBase0@ha
-/* 8023BA50 00000060  38 84 98 A0 */	addi r4, r4, msg_scrn_d_msg_scrn_arrow__stringBase0@l
+/* 8023BA4C 0000005C  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8023BA50 00000060  38 84 98 A0 */	addi r4, r4, stringBase0@l
 /* 8023BA54 00000064  38 64 00 1B */	addi r3, r4, 0x1b
 /* 8023BA58 00000068  80 9E 5C 6C */	lwz r4, 0x5c6c(r30)
 /* 8023BA5C 0000006C  48 09 88 15 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
@@ -47,8 +47,8 @@ lbl_8023B9F0:
 /* 8023BA64 00000074  90 7F 00 08 */	stw r3, 8(r31)
 /* 8023BA68 00000078  C0 02 B1 98 */	lfs f0, lit_3662(r2)
 /* 8023BA6C 0000007C  D0 1F 00 1C */	stfs f0, 0x1c(r31)
-/* 8023BA70 00000080  3C 80 80 3A */	lis r4, msg_scrn_d_msg_scrn_arrow__stringBase0@ha
-/* 8023BA74 00000084  38 84 98 A0 */	addi r4, r4, msg_scrn_d_msg_scrn_arrow__stringBase0@l
+/* 8023BA70 00000080  3C 80 80 3A */	lis r4, stringBase0@ha
+/* 8023BA74 00000084  38 84 98 A0 */	addi r4, r4, stringBase0@l
 /* 8023BA78 00000088  38 64 00 36 */	addi r3, r4, 0x36
 /* 8023BA7C 0000008C  80 9E 5C 6C */	lwz r4, 0x5c6c(r30)
 /* 8023BA80 00000090  48 09 87 F1 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader

@@ -32,7 +32,7 @@ lbl_80139970:
 /* 80139974 00000004  C0 22 92 C0 */	lfs f1, lit_6108(r2)
 /* 80139978 00000008  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8013997C 0000000C  38 84 EF 28 */	addi r4, r4, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 80139980 00000010  C0 44 00 10 */	lfs f2, 0x10(r4)
+/* 80139980 00000010  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 8038EF38 */
 /* 80139984 00000014  48 13 6D BD */	bl cLib_chaseF__FPfff
 /* 80139988 00000018  7F E3 FB 78 */	mr r3, r31
 /* 8013998C 0000001C  38 80 00 00 */	li r4, 0

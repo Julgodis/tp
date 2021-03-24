@@ -34,7 +34,7 @@ lbl_800E938C:
 /* 800E93BC 00000030  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800E93C0 00000034  3C 60 80 39 */	lis r3, m__21daAlinkHIO_atnMove_c0@ha
 /* 800E93C4 00000038  38 63 D7 14 */	addi r3, r3, m__21daAlinkHIO_atnMove_c0@l
-/* 800E93C8 0000003C  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800E93C8 0000003C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D730 */
 /* 800E93CC 00000040  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 800E93D0 00000044  7F E3 FB 78 */	mr r3, r31
 /* 800E93D4 00000048  38 80 01 1A */	li r4, 0x11a

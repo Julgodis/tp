@@ -28,8 +28,8 @@ lbl_802D0D58:
 /* 802D0DC0 00000068  90 1F 00 6C */	stw r0, 0x6c(r31)
 /* 802D0DC4 0000006C  48 00 00 40 */	b lbl_802D0E04
 lbl_802D0DC8:
-/* 802D0DC8 00000000  3C 60 80 3A */	lis r3, JKRSolidHeap__stringBase0@ha
-/* 802D0DCC 00000004  38 63 CE 50 */	addi r3, r3, JKRSolidHeap__stringBase0@l
+/* 802D0DC8 00000000  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802D0DCC 00000004  38 63 CE 50 */	addi r3, r3, stringBase0@l
 /* 802D0DD0 00000008  4C C6 31 82 */	crclr 6
 /* 802D0DD4 0000000C  48 01 78 A9 */	bl JUTWarningConsole_f
 /* 802D0DD8 00000010  88 1F 00 68 */	lbz r0, 0x68(r31)

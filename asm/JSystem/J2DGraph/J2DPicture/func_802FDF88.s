@@ -123,13 +123,13 @@ lbl_802FE010:
 /* 802FE164 00000154  EC 00 20 28 */	fsubs f0, f0, f4
 /* 802FE168 00000158  3C 60 CC 01 */	lis r3, 0xCC01 /* 0xCC008000@ha */
 /* 802FE16C 0000015C  D0 03 80 00 */	stfs f0, 0x8000(r3)
-/* 802FE170 00000160  D0 43 80 00 */	stfs f2, -0x8000(r3)
+/* 802FE170 00000160  D0 43 80 00 */	stfs f2, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE174 00000164  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE178 00000168  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802FE178 00000168  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE17C 0000016C  80 01 00 08 */	lwz r0, 8(r1)
-/* 802FE180 00000170  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802FE184 00000174  D3 E3 80 00 */	stfs f31, -0x8000(r3)
-/* 802FE188 00000178  D3 A3 80 00 */	stfs f29, -0x8000(r3)
+/* 802FE180 00000170  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE184 00000174  D3 E3 80 00 */	stfs f31, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE188 00000178  D3 A3 80 00 */	stfs f29, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE18C 0000017C  D8 21 00 38 */	stfd f1, 0x38(r1)
 /* 802FE190 00000180  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 802FE194 00000184  7C 00 07 34 */	extsh r0, r0
@@ -148,14 +148,14 @@ lbl_802FE010:
 /* 802FE1C8 000001B8  90 81 00 50 */	stw r4, 0x50(r1)
 /* 802FE1CC 000001BC  C8 01 00 50 */	lfd f0, 0x50(r1)
 /* 802FE1D0 000001C0  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE1D4 000001C4  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 802FE1D8 000001C8  D0 23 80 00 */	stfs f1, -0x8000(r3)
+/* 802FE1D4 000001C4  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE1D8 000001C8  D0 23 80 00 */	stfs f1, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE1DC 000001CC  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE1E0 000001D0  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802FE1E0 000001D0  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE1E4 000001D4  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 802FE1E8 000001D8  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802FE1EC 000001DC  D3 C3 80 00 */	stfs f30, -0x8000(r3)
-/* 802FE1F0 000001E0  D3 A3 80 00 */	stfs f29, -0x8000(r3)
+/* 802FE1E8 000001D8  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE1EC 000001DC  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE1F0 000001E0  D3 A3 80 00 */	stfs f29, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE1F4 000001E4  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 802FE1F8 000001E8  FC 20 00 1E */	fctiwz f1, f0
 /* 802FE1FC 000001EC  D8 21 00 58 */	stfd f1, 0x58(r1)
@@ -174,14 +174,14 @@ lbl_802FE010:
 /* 802FE230 00000220  90 81 00 70 */	stw r4, 0x70(r1)
 /* 802FE234 00000224  C8 01 00 70 */	lfd f0, 0x70(r1)
 /* 802FE238 00000228  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE23C 0000022C  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 802FE240 00000230  D0 A3 80 00 */	stfs f5, -0x8000(r3)
+/* 802FE23C 0000022C  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE240 00000230  D0 A3 80 00 */	stfs f5, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE244 00000234  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE248 00000238  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802FE248 00000238  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE24C 0000023C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 802FE250 00000240  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802FE254 00000244  D3 C3 80 00 */	stfs f30, -0x8000(r3)
-/* 802FE258 00000248  D3 83 80 00 */	stfs f28, -0x8000(r3)
+/* 802FE250 00000240  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE254 00000244  D3 C3 80 00 */	stfs f30, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE258 00000248  D3 83 80 00 */	stfs f28, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE25C 0000024C  D8 21 00 78 */	stfd f1, 0x78(r1)
 /* 802FE260 00000250  80 01 00 7C */	lwz r0, 0x7c(r1)
 /* 802FE264 00000254  7C 00 07 34 */	extsh r0, r0
@@ -198,14 +198,14 @@ lbl_802FE010:
 /* 802FE290 00000280  90 81 00 90 */	stw r4, 0x90(r1)
 /* 802FE294 00000284  C8 01 00 90 */	lfd f0, 0x90(r1)
 /* 802FE298 00000288  EC 00 20 28 */	fsubs f0, f0, f4
-/* 802FE29C 0000028C  D0 03 80 00 */	stfs f0, -0x8000(r3)
-/* 802FE2A0 00000290  D0 23 80 00 */	stfs f1, -0x8000(r3)
+/* 802FE29C 0000028C  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE2A0 00000290  D0 23 80 00 */	stfs f1, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE2A4 00000294  C0 02 C8 6C */	lfs f0, lit_2017(r2)
-/* 802FE2A8 00000298  D0 03 80 00 */	stfs f0, -0x8000(r3)
+/* 802FE2A8 00000298  D0 03 80 00 */	stfs f0, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE2AC 0000029C  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 802FE2B0 000002A0  90 03 80 00 */	stw r0, -0x8000(r3)
-/* 802FE2B4 000002A4  D3 E3 80 00 */	stfs f31, -0x8000(r3)
-/* 802FE2B8 000002A8  D3 83 80 00 */	stfs f28, -0x8000(r3)
+/* 802FE2B0 000002A0  90 03 80 00 */	stw r0, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE2B4 000002A4  D3 E3 80 00 */	stfs f31, -0x8000(r3)	/* effective address: CC008000 */
+/* 802FE2B8 000002A8  D3 83 80 00 */	stfs f28, -0x8000(r3)	/* effective address: CC008000 */
 /* 802FE2BC 000002AC  38 60 00 00 */	li r3, 0
 /* 802FE2C0 000002B0  38 80 00 09 */	li r4, 9
 /* 802FE2C4 000002B4  38 A0 00 01 */	li r5, 1

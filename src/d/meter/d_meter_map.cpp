@@ -82,10 +82,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -131,7 +131,7 @@ extern "C" void isFmapScreen__11dMeterMap_cFv(); // 1
 extern "C" void isDmapScreen__11dMeterMap_cFv(); // 1
 extern "C" void meter_map_move__11dMeterMap_cFUl(); // 1
 extern "C" void keyCheck__11dMeterMap_cFv(); // 1
-extern "C" extern char const* const d_meter_d_meter_map__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -225,7 +225,7 @@ asm void dMeterMap_c::isEnableDispMapAndMapDispSizeTypeNo() {
 
 /* ############################################################################################## */
 /* 80454820-80454828 0004+04 s=1 e=0 z=0  None .sdata2    @4076                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4076[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4076[1 + 1 /* padding */] = {
 	421.0f,
 	/* padding */
 	0.0f,
@@ -255,7 +255,7 @@ asm void dMeterMap_c::isEventRunCheck() {
 
 /* ############################################################################################## */
 /* 80454828-80454830 0008+00 s=3 e=0 z=0  None .sdata2    @4100                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter_map__lit_4100 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4100 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8020D72C-8020D75C 0030+00 s=2 e=0 z=0  None .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv                  */
 #pragma push
@@ -270,15 +270,15 @@ asm void dMeterMap_c::getMapDispEdgeLeftX_Layout() {
 
 /* ############################################################################################## */
 /* 80454830-80454834 0004+00 s=2 e=0 z=0  None .sdata2    @4128                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter_map__lit_4128[4] = {
+SECTION_SDATA2 static u8 lit_4128[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454834-80454838 0004+00 s=5 e=0 z=0  None .sdata2    @4129                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4129 = 1.0f;
+SECTION_SDATA2 static f32 lit_4129 = 1.0f;
 
 /* 80454838-80454840 0008+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
-SECTION_SDATA2 static f64 d_meter_d_meter_map__lit_4131 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4131 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8020D75C-8020D7E4 0088+00 s=0 e=1 z=0  None .text      getMapDispEdgeTop__11dMeterMap_cFv                           */
 #pragma push
@@ -304,7 +304,7 @@ asm void dMeterMap_c::getDispPosInside_OffsetX() {
 
 /* ############################################################################################## */
 /* 80454840-80454844 0004+00 s=1 e=0 z=0  None .sdata2    @4159                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4159 = -36.0f;
+SECTION_SDATA2 static f32 lit_4159 = -36.0f;
 
 /* 8020D7EC-8020D874 0088+00 s=2 e=0 z=0  None .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv                   */
 #pragma push
@@ -363,7 +363,7 @@ asm void dMeterMap_c::isMapOpenCheck() {
 
 /* ############################################################################################## */
 /* 803BF2D8-803BF2F8 0020+00 s=1 e=0 z=0  None .data      @4516                                                        */
-SECTION_DATA static void* d_meter_d_meter_map__lit_4516[8] = {
+SECTION_DATA static void* lit_4516[8] = {
 	/* 0    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
 	/* 1    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x184),
 	/* 2    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1B4),
@@ -469,7 +469,7 @@ asm void dMeterMap_c::draw() {
 
 /* ############################################################################################## */
 /* 80454844-80454848 0004+00 s=3 e=0 z=0  None .sdata2    @4515                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_map__lit_4515 = -1.0f;
+SECTION_SDATA2 static f32 lit_4515 = -1.0f;
 
 /* 8020E070-8020E45C 03EC+00 s=2 e=0 z=0  None .text      ctrlShowMap__11dMeterMap_cFv                                 */
 #pragma push

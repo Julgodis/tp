@@ -21,7 +21,7 @@ lbl_801844FC:
 lbl_80184548:
 /* 80184548 00000000  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 8018454C 00000004  3B C3 AF 40 */	addi r30, r3, g_mDoMemCd_control@l
-/* 80184550 00000008  88 1E 1F BE */	lbz r0, 0x1fbe(r30)
+/* 80184550 00000008  88 1E 1F BE */	lbz r0, 0x1fbe(r30)	/* effective address: 803ECEFE */
 /* 80184554 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 80184558 00000010  41 82 00 0C */	beq lbl_80184564
 /* 8018455C 00000014  28 00 00 01 */	cmplwi r0, 1

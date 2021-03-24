@@ -27,13 +27,6 @@ struct Z2SpeechMgr2 {
 	/* 802CCF88 */ void isMidnaSpeak();
 };
 
-struct JAISoundID {
-};
-
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -41,6 +34,13 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct JAISoundID {
 };
 
 struct Z2SpeechStarter {
@@ -279,7 +279,7 @@ SECTION_DATA static void* lit_3729[114] = {
 };
 
 /* 803CBED0-803CBF24 0054+00 s=1 e=0 z=0  None .data      @3839                                                        */
-SECTION_DATA static void* Z2SpeechMgr2__lit_3839[21] = {
+SECTION_DATA static void* lit_3839[21] = {
 	/* 0    */ (void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x13C),
 	/* 1    */ (void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x14C),
 	/* 2    */ (void*)(((char*)setTextCount__12Z2SpeechMgr2Fs)+0x15C),
@@ -400,15 +400,15 @@ SECTION_SDATA2 static u8 sDesideTail__8Z2MdnPrm[8] = {
 };
 
 /* 80455F30-80455F34 0004+00 s=2 e=0 z=0  None .sdata2    @3836                                                        */
-SECTION_SDATA2 static u8 Z2SpeechMgr2__lit_3836[4] = {
+SECTION_SDATA2 static u8 lit_3836[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455F34-80455F38 0004+00 s=6 e=0 z=0  None .sdata2    @3837                                                        */
-SECTION_SDATA2 static f32 Z2SpeechMgr2__lit_3837 = 1.0f;
+SECTION_SDATA2 static f32 lit_3837 = 1.0f;
 
 /* 80455F38-80455F3C 0004+00 s=4 e=0 z=0  None .sdata2    @3838                                                        */
-SECTION_SDATA2 static f32 Z2SpeechMgr2__lit_3838 = -1.0f;
+SECTION_SDATA2 static f32 lit_3838 = -1.0f;
 
 /* 802CBF60-802CC190 0230+00 s=1 e=2 z=0  None .text      setTextCount__12Z2SpeechMgr2Fs                               */
 #pragma push
@@ -423,10 +423,10 @@ asm void Z2SpeechMgr2::setTextCount(s16 param_0) {
 
 /* ############################################################################################## */
 /* 80455F3C-80455F40 0004+00 s=2 e=0 z=0  None .sdata2    @3885                                                        */
-SECTION_SDATA2 static f32 Z2SpeechMgr2__lit_3885 = 127.0f;
+SECTION_SDATA2 static f32 lit_3885 = 127.0f;
 
 /* 80455F40-80455F48 0008+00 s=2 e=0 z=0  None .sdata2    @3887                                                        */
-SECTION_SDATA2 static f64 Z2SpeechMgr2__lit_3887 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3887 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802CC190-802CC2FC 016C+00 s=1 e=1 z=0  None .text      speakOneWord__12Z2SpeechMgr2Fb                               */
 #pragma push
@@ -784,10 +784,10 @@ SECTION_RODATA static void* const sPrm__8Z2MdnPrm[51] = {
 };
 
 /* 80455F48-80455F50 0008+00 s=3 e=0 z=0  None .sdata2    @4083                                                        */
-SECTION_SDATA2 static f64 Z2SpeechMgr2__lit_4083 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4083 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80456BA8-80456BAC 0002+02 s=1 e=0 z=0  None .sbss2     @4003                                                        */
-SECTION_SBSS2 static u8 Z2SpeechMgr2__lit_4003[2 + 2 /* padding */];
+SECTION_SBSS2 static u8 lit_4003[2 + 2 /* padding */];
 
 /* 802CC4C0-802CC738 0278+00 s=2 e=0 z=0  None .text      selectUnit__12Z2SpeechMgr2Fb                                 */
 #pragma push
@@ -802,7 +802,7 @@ asm void Z2SpeechMgr2::selectUnit(bool param_0) {
 
 /* ############################################################################################## */
 /* 80456BAC-80456BB0 0002+02 s=1 e=0 z=0  None .sbss2     @4104                                                        */
-SECTION_SBSS2 static u8 Z2SpeechMgr2__lit_4104[2 + 2 /* padding */];
+SECTION_SBSS2 static u8 lit_4104[2 + 2 /* padding */];
 
 /* 802CC738-802CC9D0 0298+00 s=1 e=0 z=0  None .text      selectTail__12Z2SpeechMgr2Fv                                 */
 #pragma push
@@ -861,10 +861,10 @@ asm Z2SpeechStarter::Z2SpeechStarter() {
 
 /* ############################################################################################## */
 /* 80455F50-80455F54 0004+00 s=1 e=0 z=0  None .sdata2    @4571                                                        */
-SECTION_SDATA2 static f32 Z2SpeechMgr2__lit_4571 = 7.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4571 = 7.0f / 100.0f;
 
 /* 80455F54-80455F58 0004+00 s=1 e=0 z=0  None .sdata2    @4572                                                        */
-SECTION_SDATA2 static f32 Z2SpeechMgr2__lit_4572 = 0.5f;
+SECTION_SDATA2 static f32 lit_4572 = 0.5f;
 
 /* 802CCFF8-802CD248 0250+00 s=1 e=0 z=0  None .text      startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push

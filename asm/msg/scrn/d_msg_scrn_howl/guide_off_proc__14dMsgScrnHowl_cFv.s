@@ -8,12 +8,12 @@ lbl_80241E00:
 /* 80241E18 00000018  48 00 1A 21 */	bl calcMain__14dMsgScrnHowl_cFv
 /* 80241E1C 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80241E20 00000020  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80241E24 00000024  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
-/* 80241E28 00000028  81 83 06 28 */	lwz r12, 0x628(r3)
+/* 80241E24 00000024  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
+/* 80241E28 00000028  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
 /* 80241E2C 0000002C  81 8C 02 98 */	lwz r12, 0x298(r12)
 /* 80241E30 00000030  7D 89 03 A6 */	mtctr r12
 /* 80241E34 00000034  4E 80 04 21 */	bctrl 
-/* 80241E38 00000038  88 03 00 8C */	lbz r0, 0x8c(r3)
+/* 80241E38 00000038  88 03 00 8C */	lbz r0, 0x8c(r3)	/* effective address: 8040008C */
 /* 80241E3C 0000003C  28 00 00 1E */	cmplwi r0, 0x1e
 /* 80241E40 00000040  41 82 00 14 */	beq lbl_80241E54
 /* 80241E44 00000044  80 7F 5D B4 */	lwz r3, 0x5db4(r31)

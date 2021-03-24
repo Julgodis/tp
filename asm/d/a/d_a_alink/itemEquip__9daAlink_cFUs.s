@@ -12,14 +12,14 @@ lbl_800B9664:
 /* 800B9664 00000000  B0 83 2F DE */	sth r4, 0x2fde(r3)
 /* 800B9668 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800B966C 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800B9670 0000000C  80 04 5F 18 */	lwz r0, 0x5f18(r4)
+/* 800B9670 0000000C  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800B9674 00000010  54 00 02 90 */	rlwinm r0, r0, 0, 0xa, 8
-/* 800B9678 00000014  90 04 5F 18 */	stw r0, 0x5f18(r4)
+/* 800B9678 00000014  90 04 5F 18 */	stw r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
 /* 800B967C 00000018  80 03 05 7C */	lwz r0, 0x57c(r3)
 /* 800B9680 0000001C  54 00 03 98 */	rlwinm r0, r0, 0, 0xe, 0xc
 /* 800B9684 00000020  90 03 05 7C */	stw r0, 0x57c(r3)
 /* 800B9688 00000024  A0 83 2F DE */	lhz r4, 0x2fde(r3)
-/* 800B968C 00000028  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800B968C 00000028  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800B9690 0000002C  48 00 00 15 */	bl itemUnequip__9daAlink_cFUsf
 lbl_800B9694:
 /* 800B9694 00000000  80 01 00 14 */	lwz r0, 0x14(r1)

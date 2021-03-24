@@ -36,7 +36,7 @@ lbl_801BDFC8:
 /* 801BDFF0 00000028  88 03 00 EC */	lbz r0, 0xec(r3)
 /* 801BDFF4 0000002C  7C 1F 07 74 */	extsb r31, r0
 /* 801BDFF8 00000030  48 00 2E E9 */	bl getMapBlendPer__20dMenu_StageMapCtrl_cCFv
-/* 801BDFFC 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BDFFC 00000034  C0 02 A5 EC */	lfs f0, lit_3963(r2)
 /* 801BE000 00000038  EC 20 08 28 */	fsubs f1, f0, f1
 /* 801BE004 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 801BE008 00000040  7F E4 FB 78 */	mr r4, r31
@@ -44,8 +44,8 @@ lbl_801BDFC8:
 /* 801BE010 00000048  48 00 02 D8 */	b lbl_801BE2E8
 lbl_801BE014:
 /* 801BE014 00000000  1C BD 00 0C */	mulli r5, r29, 0xc
-/* 801BE018 00000004  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap__map_move_process@ha
-/* 801BE01C 00000008  38 04 CA 20 */	addi r0, r4, d_menu_d_menu_dmap__map_move_process@l
+/* 801BE018 00000004  3C 80 80 3C */	lis r4, map_move_process@ha
+/* 801BE01C 00000008  38 04 CA 20 */	addi r0, r4, map_move_process@l
 /* 801BE020 0000000C  7D 80 2A 14 */	add r12, r0, r5
 /* 801BE024 00000010  48 1A 40 61 */	bl __ptmf_scall
 /* 801BE028 00000014  60 00 00 00 */	nop 
@@ -54,16 +54,16 @@ lbl_801BE014:
 /* 801BE034 00000020  41 82 00 20 */	beq lbl_801BE054
 /* 801BE038 00000024  7F C3 F3 78 */	mr r3, r30
 /* 801BE03C 00000028  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801BE040 0000002C  3C 80 80 3C */	lis r4, d_menu_d_menu_dmap__map_init_process@ha
-/* 801BE044 00000030  38 04 C9 D8 */	addi r0, r4, d_menu_d_menu_dmap__map_init_process@l
+/* 801BE040 0000002C  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801BE044 00000030  38 04 C9 D8 */	addi r0, r4, map_init_process@l
 /* 801BE048 00000034  7D 80 2A 14 */	add r12, r0, r5
 /* 801BE04C 00000038  48 1A 40 39 */	bl __ptmf_scall
 /* 801BE050 0000003C  60 00 00 00 */	nop 
 lbl_801BE054:
 /* 801BE054 00000000  3C 60 80 43 */	lis r3, g_fmapHIO@ha
 /* 801BE058 00000004  38 63 FC 60 */	addi r3, r3, g_fmapHIO@l
-/* 801BE05C 00000008  C3 63 00 E0 */	lfs f27, 0xe0(r3)
-/* 801BE060 0000000C  C0 03 00 E4 */	lfs f0, 0xe4(r3)
+/* 801BE05C 00000008  C3 63 00 E0 */	lfs f27, 0xe0(r3)	/* effective address: 8042FD40 */
+/* 801BE060 0000000C  C0 03 00 E4 */	lfs f0, 0xe4(r3)	/* effective address: 8042FD44 */
 /* 801BE064 00000010  FC 1B 00 40 */	fcmpo cr0, f27, f0
 /* 801BE068 00000000  40 80 00 0C */	bge lbl_801BE074
 /* 801BE06C 00000004  FF C0 D8 90 */	fmr f30, f27
@@ -110,14 +110,14 @@ lbl_801BE0F8:
 /* 801BE0FC 00000000  40 80 00 14 */	bge lbl_801BE110
 /* 801BE100 00000004  3C 80 80 43 */	lis r4, g_fmapHIO@ha
 /* 801BE104 00000008  38 84 FC 60 */	addi r4, r4, g_fmapHIO@l
-/* 801BE108 0000000C  C0 24 00 DC */	lfs f1, 0xdc(r4)
+/* 801BE108 0000000C  C0 24 00 DC */	lfs f1, 0xdc(r4)	/* effective address: 8042FD3C */
 /* 801BE10C 00000010  48 00 00 10 */	b lbl_801BE11C
 lbl_801BE110:
 /* 801BE110 00000000  3C 80 80 43 */	lis r4, g_fmapHIO@ha
 /* 801BE114 00000004  38 84 FC 60 */	addi r4, r4, g_fmapHIO@l
-/* 801BE118 00000008  C0 24 00 CC */	lfs f1, 0xcc(r4)
+/* 801BE118 00000008  C0 24 00 CC */	lfs f1, 0xcc(r4)	/* effective address: 8042FD2C */
 lbl_801BE11C:
-/* 801BE11C 00000000  C0 02 A6 58 */	lfs f0, d_menu_d_menu_dmap__lit_6180(r2)
+/* 801BE11C 00000000  C0 02 A6 58 */	lfs f0, lit_6180(r2)
 /* 801BE120 00000004  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801BE124 00000008  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 801BE128 0000000C  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
@@ -147,7 +147,7 @@ lbl_801BE15C:
 /* 801BE184 00000028  88 03 00 EC */	lbz r0, 0xec(r3)
 /* 801BE188 0000002C  7C 1D 07 74 */	extsb r29, r0
 /* 801BE18C 00000030  48 00 2D 55 */	bl getMapBlendPer__20dMenu_StageMapCtrl_cCFv
-/* 801BE190 00000034  C0 02 A5 EC */	lfs f0, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BE190 00000034  C0 02 A5 EC */	lfs f0, lit_3963(r2)
 /* 801BE194 00000038  EC 20 08 28 */	fsubs f1, f0, f1
 /* 801BE198 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 801BE19C 00000040  7F A4 EB 78 */	mr r4, r29
@@ -169,7 +169,7 @@ lbl_801BE1C8:
 /* 801BE1D8 00000010  38 A0 00 00 */	li r5, 0
 /* 801BE1DC 00000014  38 C0 00 00 */	li r6, 0
 /* 801BE1E0 00000018  38 E0 00 00 */	li r7, 0
-/* 801BE1E4 0000001C  C0 22 A5 EC */	lfs f1, d_menu_d_menu_dmap__lit_3963(r2)
+/* 801BE1E4 0000001C  C0 22 A5 EC */	lfs f1, lit_3963(r2)
 /* 801BE1E8 00000020  FC 40 08 90 */	fmr f2, f1
 /* 801BE1EC 00000024  C0 62 A6 5C */	lfs f3, lit_6181(r2)
 /* 801BE1F0 00000028  FC 80 18 90 */	fmr f4, f3

@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A19A8C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Jagar_c {
@@ -59,6 +59,8 @@ struct daNpc_Jagar_c {
 	/* 80A161EC */ void drawDbgInfo();
 	/* 80A161F4 */ void changeBtp(int*, int*);
 	/* 80A16234 */ void selectAction();
+	/* 80A162B0 */ void chkAction(int (daNpc_Jagar_c::*)(void*));
+	/* 80A162DC */ void setAction(int (daNpc_Jagar_c::*)(void*));
 	/* 80A16384 */ void cutClimbUp(int);
 	/* 80A16544 */ void cutNeedYourHelp(int);
 	/* 80A16CD8 */ void cutAnger(int);
@@ -234,8 +236,8 @@ extern "C" void setCollision__13daNpc_Jagar_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Jagar_cFv(); // 1
 extern "C" void changeBtp__13daNpc_Jagar_cFPiPi(); // 1
 extern "C" void selectAction__13daNpc_Jagar_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i(); // 1
 extern "C" void cutClimbUp__13daNpc_Jagar_cFi(); // 1
 extern "C" void cutNeedYourHelp__13daNpc_Jagar_cFi(); // 1
 extern "C" void cutAnger__13daNpc_Jagar_cFi(); // 1
@@ -840,7 +842,7 @@ asm void daNpc_Jagar_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i() {
+asm void daNpc_Jagar_c::chkAction(int (daNpc_Jagar_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_jagar/d_a_npc_jagar/chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i.s"
 }
@@ -851,7 +853,7 @@ extern "C" asm static void chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i() {
+asm void daNpc_Jagar_c::setAction(int (daNpc_Jagar_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_jagar/d_a_npc_jagar/setAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i.s"
 }

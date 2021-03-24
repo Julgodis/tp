@@ -14,8 +14,8 @@ lbl_80033C2C:
 /* 80033C5C 00000030  38 00 00 15 */	li r0, 0x15
 /* 80033C60 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80033C64 00000038  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80033C68 0000003C  98 1F 5E 7D */	stb r0, 0x5e7d(r31)
-/* 80033C6C 00000040  9B BF 5E 7E */	stb r29, 0x5e7e(r31)
+/* 80033C68 0000003C  98 1F 5E 7D */	stb r0, 0x5e7d(r31)	/* effective address: 8040C03D */
+/* 80033C6C 00000040  9B BF 5E 7E */	stb r29, 0x5e7e(r31)	/* effective address: 8040C03E */
 /* 80033C70 00000044  3B A0 00 00 */	li r29, 0
 lbl_80033C74:
 /* 80033C74 00000000  7F E3 FB 78 */	mr r3, r31

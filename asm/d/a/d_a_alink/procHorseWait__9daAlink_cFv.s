@@ -103,11 +103,11 @@ lbl_800F0C18:
 /* 800F0C24 0000000C  38 00 00 2D */	li r0, 0x2d
 /* 800F0C28 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F0C2C 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F0C30 00000018  98 03 5E 26 */	stb r0, 0x5e26(r3)
+/* 800F0C30 00000018  98 03 5E 26 */	stb r0, 0x5e26(r3)	/* effective address: 8040BFE6 */
 /* 800F0C34 0000001C  38 00 00 05 */	li r0, 5
-/* 800F0C38 00000020  98 03 5E 2D */	stb r0, 0x5e2d(r3)
+/* 800F0C38 00000020  98 03 5E 2D */	stb r0, 0x5e2d(r3)	/* effective address: 8040BFED */
 /* 800F0C3C 00000024  38 00 00 00 */	li r0, 0
-/* 800F0C40 00000028  98 03 5E 4B */	stb r0, 0x5e4b(r3)
+/* 800F0C40 00000028  98 03 5E 4B */	stb r0, 0x5e4b(r3)	/* effective address: 8040C00B */
 /* 800F0C44 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 800F0C48 00000030  38 80 00 2E */	li r4, 0x2e
 /* 800F0C4C 00000034  4B FC 26 4D */	bl setBStatus__9daAlink_cFUc

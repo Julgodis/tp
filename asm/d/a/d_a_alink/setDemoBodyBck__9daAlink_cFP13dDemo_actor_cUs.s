@@ -17,7 +17,7 @@ lbl_801189F8:
 /* 80118A34 0000003C  88 BF 00 04 */	lbz r5, 4(r31)
 /* 80118A38 00000040  38 C0 00 00 */	li r6, 0
 /* 80118A3C 00000044  A8 FF 00 06 */	lha r7, 6(r31)
-/* 80118A40 00000048  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 80118A40 00000048  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 80118A44 0000004C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 80118A48 00000050  4B F9 39 4D */	bl setFrameCtrl__9daAlink_cFP16daPy_frameCtrl_cUcssff
 /* 80118A4C 00000054  93 FD 1F 2C */	stw r31, 0x1f2c(r29)

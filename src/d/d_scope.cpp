@@ -72,13 +72,7 @@ extern "C" void draw__11dMeterSub_cFv(); // 1
 extern "C" void _execute__11dMeterSub_cFUl(); // 1
 extern "C" void isDead__11dMeterSub_cFv(); // 1
 extern "C" void __sinit_d_scope_cpp(); // 1
-extern "C" extern char const* const d_d_scope__stringBase0;
-extern "C" extern void* lit_3693[3];
-extern "C" extern void* d_d_scope__lit_3694[3];
-extern "C" extern void* d_d_scope__lit_3695[3];
-extern "C" extern void* d_d_scope__lit_3696[3];
-extern "C" extern void* d_d_scope__lit_3697[3];
-extern "C" extern void* d_d_scope__lit_3698[3];
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 
 // 
@@ -119,61 +113,61 @@ SECTION_DEAD static char const* const pad_80394A0C = "\0\0\0";
 #pragma pop
 
 /* 803BB618-803BB624 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 d_d_scope__cNullVec__6Z2Calc[12] = {
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB624-803BB630 000C+00 s=0 e=0 z=0  None .data      @3693                                                        */
-SECTION_DATA void* lit_3693[3] = {
+/* 803BB624-803BB630 000C+00 s=1 e=0 z=0  None .data      @3693                                                        */
+SECTION_DATA static void* lit_3693[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)open_init__8dScope_cFv,
 };
 
-/* 803BB630-803BB63C 000C+00 s=0 e=0 z=0  None .data      @3694                                                        */
-SECTION_DATA void* d_d_scope__lit_3694[3] = {
+/* 803BB630-803BB63C 000C+00 s=1 e=0 z=0  None .data      @3694                                                        */
+SECTION_DATA static void* lit_3694[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)move_init__8dScope_cFv,
 };
 
-/* 803BB63C-803BB648 000C+00 s=0 e=0 z=0  None .data      @3695                                                        */
-SECTION_DATA void* d_d_scope__lit_3695[3] = {
+/* 803BB63C-803BB648 000C+00 s=1 e=0 z=0  None .data      @3695                                                        */
+SECTION_DATA static void* lit_3695[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)close_init__8dScope_cFv,
 };
 
-/* 803BB648-803BB66C 0024+00 s=2 e=0 z=0  None .data      init_process                                                 */
-SECTION_DATA static u8 d_d_scope__init_process[36] = {
+/* 803BB648-803BB66C 0024+00 s=3 e=0 z=0  None .data      init_process                                                 */
+SECTION_DATA static u8 init_process[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB66C-803BB678 000C+00 s=0 e=0 z=0  None .data      @3696                                                        */
-SECTION_DATA void* d_d_scope__lit_3696[3] = {
+/* 803BB66C-803BB678 000C+00 s=1 e=0 z=0  None .data      @3696                                                        */
+SECTION_DATA static void* lit_3696[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)open_proc__8dScope_cFv,
 };
 
-/* 803BB678-803BB684 000C+00 s=0 e=0 z=0  None .data      @3697                                                        */
-SECTION_DATA void* d_d_scope__lit_3697[3] = {
+/* 803BB678-803BB684 000C+00 s=1 e=0 z=0  None .data      @3697                                                        */
+SECTION_DATA static void* lit_3697[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)move_proc__8dScope_cFv,
 };
 
-/* 803BB684-803BB690 000C+00 s=0 e=0 z=0  None .data      @3698                                                        */
-SECTION_DATA void* d_d_scope__lit_3698[3] = {
+/* 803BB684-803BB690 000C+00 s=1 e=0 z=0  None .data      @3698                                                        */
+SECTION_DATA static void* lit_3698[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)close_proc__8dScope_cFv,
 };
 
-/* 803BB690-803BB6B4 0024+00 s=1 e=0 z=0  None .data      move_process                                                 */
-SECTION_DATA static u8 d_d_scope__move_process[36] = {
+/* 803BB690-803BB6B4 0024+00 s=2 e=0 z=0  None .data      move_process                                                 */
+SECTION_DATA static u8 move_process[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
@@ -208,15 +202,15 @@ SECTION_DATA void* __vt__11dMeterSub_c[8 + 3 /* padding */] = {
 };
 
 /* 80453A10-80453A14 0004+00 s=4 e=0 z=0  None .sdata2    @3756                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3756 = 3.0f;
+SECTION_SDATA2 static f32 lit_3756 = 3.0f;
 
 /* 80453A14-80453A18 0004+00 s=4 e=0 z=0  None .sdata2    @3757                                                        */
-SECTION_SDATA2 static u8 d_d_scope__lit_3757[4] = {
+SECTION_SDATA2 static u8 lit_3757[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80453A18-80453A20 0008+00 s=1 e=0 z=0  None .sdata2    @3759                                                        */
-SECTION_SDATA2 static f64 d_d_scope__lit_3759 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_3759 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80193690-80193960 02D0+00 s=0 e=1 z=0  None .text      __ct__8dScope_cFUc                                           */
 #pragma push
@@ -264,19 +258,19 @@ asm void dScope_c::_execute(u32 param_0) {
 
 /* ############################################################################################## */
 /* 80453A20-80453A24 0004+00 s=1 e=0 z=0  None .sdata2    @3879                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3879 = 255.0f;
+SECTION_SDATA2 static f32 lit_3879 = 255.0f;
 
 /* 80453A24-80453A28 0004+00 s=1 e=0 z=0  None .sdata2    @3880                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3880 = 304.0f;
+SECTION_SDATA2 static f32 lit_3880 = 304.0f;
 
 /* 80453A28-80453A2C 0004+00 s=1 e=0 z=0  None .sdata2    @3881                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3881 = 448.0f;
+SECTION_SDATA2 static f32 lit_3881 = 448.0f;
 
 /* 80453A2C-80453A30 0004+00 s=1 e=0 z=0  None .sdata2    @3882                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3882 = 224.0f;
+SECTION_SDATA2 static f32 lit_3882 = 224.0f;
 
 /* 80453A30-80453A34 0004+00 s=1 e=0 z=0  None .sdata2    @3883                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3883 = 608.0f;
+SECTION_SDATA2 static f32 lit_3883 = 608.0f;
 
 /* 80193C68-80193FA0 0338+00 s=1 e=0 z=0  None .text      draw__8dScope_cFv                                            */
 #pragma push
@@ -313,16 +307,16 @@ asm void dScope_c::open_init() {
 
 /* ############################################################################################## */
 /* 80453A34-80453A38 0004+00 s=2 e=0 z=0  None .sdata2    @3902                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3902 = 1.5f;
+SECTION_SDATA2 static f32 lit_3902 = 1.5f;
 
 /* 80453A38-80453A3C 0004+00 s=2 e=0 z=0  None .sdata2    @3903                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3903 = 5.0f;
+SECTION_SDATA2 static f32 lit_3903 = 5.0f;
 
 /* 80453A3C-80453A40 0004+00 s=2 e=0 z=0  None .sdata2    @3904                                                        */
-SECTION_SDATA2 static f32 d_d_scope__lit_3904 = 1.0f;
+SECTION_SDATA2 static f32 lit_3904 = 1.0f;
 
 /* 80453A40-80453A48 0008+00 s=2 e=0 z=0  None .sdata2    @3906                                                        */
-SECTION_SDATA2 static f64 d_d_scope__lit_3906 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3906 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80193FD0-80194048 0078+00 s=1 e=0 z=0  None .text      open_proc__8dScope_cFv                                       */
 #pragma push

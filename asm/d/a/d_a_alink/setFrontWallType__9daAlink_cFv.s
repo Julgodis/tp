@@ -23,8 +23,8 @@ lbl_800B02BC:
 /* 800B0310 00000000  39 61 00 E0 */	addi r11, r1, 0xe0
 /* 800B0314 00000004  48 2B 1E B1 */	bl _savegpr_23
 /* 800B0318 00000008  7C 78 1B 78 */	mr r24, r3
-/* 800B031C 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 800B0320 00000010  3B C3 D6 58 */	addi r30, r3, d_a_d_a_alink__lit_3757@l
+/* 800B031C 0000000C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 800B0320 00000010  3B C3 D6 58 */	addi r30, r3, lit_3757@l
 /* 800B0324 00000014  80 18 05 74 */	lwz r0, 0x574(r24)
 /* 800B0328 00000018  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 800B032C 0000001C  41 82 00 0C */	beq lbl_800B0338
@@ -120,7 +120,7 @@ lbl_800B0444:
 /* 800B047C 00000038  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 800B0480 0000003C  C0 38 37 F0 */	lfs f1, 0x37f0(r24)
 /* 800B0484 00000040  FE E0 08 90 */	fmr f23, f1
-/* 800B0488 00000044  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800B0488 00000044  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800B048C 00000048  EF C0 08 2A */	fadds f30, f0, f1
 /* 800B0490 0000004C  48 00 00 44 */	b lbl_800B04D4
 lbl_800B0494:
@@ -128,7 +128,7 @@ lbl_800B0494:
 /* 800B0498 00000004  D0 41 00 44 */	stfs f2, 0x44(r1)
 /* 800B049C 00000008  C0 38 04 D8 */	lfs f1, 0x4d8(r24)
 /* 800B04A0 0000000C  D0 21 00 4C */	stfs f1, 0x4c(r1)
-/* 800B04A4 00000010  C0 02 92 9C */	lfs f0, d_a_d_a_alink__lit_5944(r2)
+/* 800B04A4 00000010  C0 02 92 9C */	lfs f0, lit_5944(r2)
 /* 800B04A8 00000014  EC A0 E8 2A */	fadds f5, f0, f29
 /* 800B04AC 00000018  EC 03 01 72 */	fmuls f0, f3, f5
 /* 800B04B0 0000001C  EC 02 00 2A */	fadds f0, f2, f0
@@ -168,8 +168,8 @@ lbl_800B04EC:
 /* 800B0530 00000044  40 82 00 38 */	bne lbl_800B0568
 /* 800B0534 00000048  2C 1F 00 03 */	cmpwi r31, 3
 /* 800B0538 0000004C  40 82 00 30 */	bne lbl_800B0568
-/* 800B053C 00000050  3C 60 80 39 */	lis r3, d_a_d_a_alink__stringBase0@ha
-/* 800B0540 00000054  38 63 20 94 */	addi r3, r3, d_a_d_a_alink__stringBase0@l
+/* 800B053C 00000050  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 800B0540 00000054  38 63 20 94 */	addi r3, r3, stringBase0@l
 /* 800B0544 00000058  38 63 00 96 */	addi r3, r3, 0x96
 /* 800B0548 0000005C  4B FE D5 19 */	bl checkStageName__9daAlink_cFPCc
 /* 800B054C 00000060  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -860,7 +860,7 @@ lbl_800B0E98:
 /* 800B0F14 0000007C  38 A1 00 78 */	addi r5, r1, 0x78
 /* 800B0F18 00000080  4B FC 38 2D */	bl GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 800B0F1C 00000084  C0 21 00 44 */	lfs f1, 0x44(r1)
-/* 800B0F20 00000088  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
+/* 800B0F20 00000088  C0 42 92 9C */	lfs f2, lit_5944(r2)
 /* 800B0F24 0000008C  C0 01 00 78 */	lfs f0, 0x78(r1)
 /* 800B0F28 00000090  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800B0F2C 00000094  EC 01 00 2A */	fadds f0, f1, f0
@@ -900,7 +900,7 @@ lbl_800B0F98:
 /* 800B0FB0 00000018  38 98 1D 5C */	addi r4, r24, 0x1d5c
 /* 800B0FB4 0000001C  4B FC 44 E9 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
 /* 800B0FB8 00000020  EC 21 B8 28 */	fsubs f1, f1, f23
-/* 800B0FBC 00000024  C0 02 93 30 */	lfs f0, d_a_d_a_alink__lit_7625(r2)
+/* 800B0FBC 00000024  C0 02 93 30 */	lfs f0, lit_7625(r2)
 /* 800B0FC0 00000028  EC 00 D0 2A */	fadds f0, f0, f26
 /* 800B0FC4 0000002C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B0FC8 00000000  40 81 00 0C */	ble lbl_800B0FD4
@@ -945,7 +945,7 @@ lbl_800B1000:
 /* 800B1054 00000054  4B FC 34 4D */	bl GroundCross__4cBgSFP11cBgS_GndChk
 /* 800B1058 00000058  FF 60 08 90 */	fmr f27, f1
 /* 800B105C 0000005C  C0 38 34 F4 */	lfs f1, 0x34f4(r24)
-/* 800B1060 00000060  C0 42 93 2C */	lfs f2, d_a_d_a_alink__lit_7624(r2)
+/* 800B1060 00000060  C0 42 93 2C */	lfs f2, lit_7624(r2)
 /* 800B1064 00000064  C0 01 00 94 */	lfs f0, 0x94(r1)
 /* 800B1068 00000068  EC 02 00 32 */	fmuls f0, f2, f0
 /* 800B106C 0000006C  EC 61 00 28 */	fsubs f3, f1, f0
@@ -1043,7 +1043,7 @@ lbl_800B11B4:
 /* 800B11C0 0000000C  2C 03 00 06 */	cmpwi r3, 6
 /* 800B11C4 00000010  41 82 00 A0 */	beq lbl_800B1264
 /* 800B11C8 00000014  C0 A1 00 20 */	lfs f5, 0x20(r1)
-/* 800B11CC 00000018  C0 62 93 30 */	lfs f3, d_a_d_a_alink__lit_7625(r2)
+/* 800B11CC 00000018  C0 62 93 30 */	lfs f3, lit_7625(r2)
 /* 800B11D0 0000001C  C0 81 00 8C */	lfs f4, 0x8c(r1)
 /* 800B11D4 00000020  EC 03 01 32 */	fmuls f0, f3, f4
 /* 800B11D8 00000024  EC 05 00 2A */	fadds f0, f5, f0

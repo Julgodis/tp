@@ -19,14 +19,14 @@ lbl_8012D3E4:
 /* 8012D428 00000044  C0 3F 05 94 */	lfs f1, 0x594(r31)
 /* 8012D42C 00000048  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlMoveNoP_c0@ha
 /* 8012D430 0000004C  38 63 EF 28 */	addi r3, r3, m__23daAlinkHIO_wlMoveNoP_c0@l
-/* 8012D434 00000050  C0 03 00 28 */	lfs f0, 0x28(r3)
+/* 8012D434 00000050  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8038EF50 */
 /* 8012D438 00000054  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8012D43C 00000058  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8012D440 00000000  40 81 00 08 */	ble lbl_8012D448
 /* 8012D444 00000004  D0 1F 33 98 */	stfs f0, 0x3398(r31)
 lbl_8012D448:
 /* 8012D448 00000000  7F E3 FB 78 */	mr r3, r31
-/* 8012D44C 00000004  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 8012D44C 00000004  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 8012D450 00000008  4B FF B3 F5 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8012D454 0000000C  A8 1F 2F EC */	lha r0, 0x2fec(r31)
 /* 8012D458 00000010  B0 1F 30 A2 */	sth r0, 0x30a2(r31)

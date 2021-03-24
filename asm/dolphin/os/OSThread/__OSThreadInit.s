@@ -12,16 +12,16 @@ lbl_80340B1C:
 /* 80340B44 00000028  93 81 00 08 */	stw r28, 8(r1)
 /* 80340B48 0000002C  3B 83 BB 78 */	addi r28, r3, RunQueue@l
 /* 80340B4C 00000030  3B FC 04 18 */	addi r31, r28, 0x418
-/* 80340B50 00000034  B0 1C 06 E0 */	sth r0, 0x6e0(r28)
+/* 80340B50 00000034  B0 1C 06 E0 */	sth r0, 0x6e0(r28)	/* effective address: 8044C258 */
 /* 80340B54 00000038  38 00 00 01 */	li r0, 1
 /* 80340B58 0000003C  38 7F 02 E8 */	addi r3, r31, 0x2e8
-/* 80340B5C 00000040  B0 1C 06 E2 */	sth r0, 0x6e2(r28)
+/* 80340B5C 00000040  B0 1C 06 E2 */	sth r0, 0x6e2(r28)	/* effective address: 8044C25A */
 /* 80340B60 00000044  38 00 FF FF */	li r0, -1
-/* 80340B64 00000048  90 9C 06 EC */	stw r4, 0x6ec(r28)
-/* 80340B68 0000004C  90 9C 06 E8 */	stw r4, 0x6e8(r28)
-/* 80340B6C 00000050  93 BC 06 E4 */	stw r29, 0x6e4(r28)
-/* 80340B70 00000054  90 1C 06 F0 */	stw r0, 0x6f0(r28)
-/* 80340B74 00000058  93 BC 07 08 */	stw r29, 0x708(r28)
+/* 80340B64 00000048  90 9C 06 EC */	stw r4, 0x6ec(r28)	/* effective address: 8044C264 */
+/* 80340B68 0000004C  90 9C 06 E8 */	stw r4, 0x6e8(r28)	/* effective address: 8044C260 */
+/* 80340B6C 00000050  93 BC 06 E4 */	stw r29, 0x6e4(r28)	/* effective address: 8044C25C */
+/* 80340B70 00000054  90 1C 06 F0 */	stw r0, 0x6f0(r28)	/* effective address: 8044C268 */
+/* 80340B74 00000058  93 BC 07 08 */	stw r29, 0x708(r28)	/* effective address: 8044C280 */
 /* 80340B78 0000005C  48 00 00 FD */	bl OSInitThreadQueue
 /* 80340B7C 00000060  93 BC 07 10 */	stw r29, 0x710(r28)
 /* 80340B80 00000064  3F C0 80 00 */	lis r30, 0x8000 /* 0x800000D8@ha */

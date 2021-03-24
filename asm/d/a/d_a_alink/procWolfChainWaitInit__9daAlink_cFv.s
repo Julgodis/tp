@@ -36,7 +36,7 @@ lbl_8013E6C0:
 /* 8013E748 00000088  B0 1E 30 10 */	sth r0, 0x3010(r30)
 /* 8013E74C 0000008C  3C 60 80 39 */	lis r3, m__21daAlinkHIO_wlChain_c0@ha
 /* 8013E750 00000090  38 63 F8 58 */	addi r3, r3, m__21daAlinkHIO_wlChain_c0@l
-/* 8013E754 00000094  A8 63 00 3C */	lha r3, 0x3c(r3)
+/* 8013E754 00000094  A8 63 00 3C */	lha r3, 0x3c(r3)	/* effective address: 8038F894 */
 /* 8013E758 00000098  38 03 00 14 */	addi r0, r3, 0x14
 /* 8013E75C 0000009C  B0 1E 30 08 */	sth r0, 0x3008(r30)
 /* 8013E760 000000A0  C0 1F 07 A0 */	lfs f0, 0x7a0(r31)

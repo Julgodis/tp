@@ -25,12 +25,12 @@ lbl_801AEAA8:
 /* 801AEAC0 00000018  7C 7E 1B 78 */	mr r30, r3
 lbl_801AEAC4:
 /* 801AEAC4 00000000  7F C3 F3 78 */	mr r3, r30
-/* 801AEAC8 00000004  3C 80 80 39 */	lis r4, d_d_kantera_icon_meter__stringBase0@ha
-/* 801AEACC 00000008  38 84 4F 50 */	addi r4, r4, d_d_kantera_icon_meter__stringBase0@l
+/* 801AEAC8 00000004  3C 80 80 39 */	lis r4, stringBase0@ha
+/* 801AEACC 00000008  38 84 4F 50 */	addi r4, r4, stringBase0@l
 /* 801AEAD0 0000000C  3C A0 00 02 */	lis r5, 2
 /* 801AEAD4 00000010  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 801AEAD8 00000014  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
-/* 801AEADC 00000018  80 C6 5D 30 */	lwz r6, 0x5d30(r6)
+/* 801AEADC 00000018  80 C6 5D 30 */	lwz r6, 0x5d30(r6)	/* effective address: 8040BEF0 */
 /* 801AEAE0 0000001C  48 14 9B 69 */	bl setPriority__9J2DScreenFPCcUlP10JKRArchive
 /* 801AEAE4 00000020  7F C3 F3 78 */	mr r3, r30
 /* 801AEAE8 00000024  48 0A 66 01 */	bl dPaneClass_showNullPane__FP9J2DScreen

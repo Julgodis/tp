@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
+struct JKRArchive {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DMaterial {
 };
 
-struct J2DAnmVisibilityFull {
+struct _GXTexMapID {
 };
 
 struct JGeometry {
@@ -36,10 +36,20 @@ struct JGeometry {
 
 };
 
-struct JKRArchive {
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
 };
 
-struct _GXCullMode {
+struct ResTIMG {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct JSUStreamSeekFrom {
@@ -50,22 +60,25 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct ResTIMG {
+struct _GXCullMode {
 };
 
-struct ResFONT {
+struct J2DAnmBase {
 };
 
 struct J2DAnmVtxColor {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTextureSRTKey {
+};
+
+struct ResFONT {
 };
 
 struct J2DAnmTransform {
 };
 
-struct J2DAnmBase {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmColor {
@@ -112,20 +125,13 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
-struct ResTLUT {
+struct J2DBinding {
 };
 
 struct _GXTlut {
 };
 
-struct _GXTexMapID {
+struct ResTLUT {
 };
 
 struct JUTPalette {
@@ -142,12 +148,6 @@ struct JUTTexture {
 };
 
 struct J2DMirror {
-};
-
-struct J2DMaterial {
-};
-
-struct J2DBinding {
 };
 
 struct J2DPicture {
@@ -898,7 +898,7 @@ asm void J2DPicture::setTexCoord(JUTTexture const* param_0, J2DBinding param_1, 
 
 /* ############################################################################################## */
 /* 8045627C-80456280 0004+00 s=1 e=0 z=0  None .sdata2    @2933                                                        */
-SECTION_SDATA2 static f32 J2DPicture__lit_2933 = 0.5f;
+SECTION_SDATA2 static f32 lit_2933 = 0.5f;
 
 /* 802FED84-802FF09C 0318+00 s=2 e=0 z=0  None .text      setTexCoord__10J2DPictureFPQ29JGeometry8TVec2<s>PC10JUTTexture10J2DBinding9J2DMirrorb */
 #pragma push

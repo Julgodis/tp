@@ -28,7 +28,7 @@ lbl_8012F9C0:
 /* 8012FA28 00000068  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8012FA2C 0000006C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8012FA30 00000070  D0 1E 35 88 */	stfs f0, 0x3588(r30)
-/* 8012FA34 00000074  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8012FA34 00000074  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8012FA38 00000078  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8012FA3C 0000007C  D0 1E 35 90 */	stfs f0, 0x3590(r30)
 /* 8012FA40 00000080  7F E3 FB 78 */	mr r3, r31
@@ -61,7 +61,7 @@ lbl_8012FA98:
 /* 8012FAA4 0000000C  C0 3E 34 FC */	lfs f1, 0x34fc(r30)
 /* 8012FAA8 00000010  3C 60 80 39 */	lis r3, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012FAAC 00000014  38 63 EE 28 */	addi r3, r3, m__20daAlinkHIO_wlMove_c0@l
-/* 8012FAB0 00000018  C0 03 00 C0 */	lfs f0, 0xc0(r3)
+/* 8012FAB0 00000018  C0 03 00 C0 */	lfs f0, 0xc0(r3)	/* effective address: 8038EEE8 */
 /* 8012FAB4 0000001C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8012FAB8 00000020  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8012FABC 00000000  40 80 00 40 */	bge lbl_8012FAFC
@@ -78,7 +78,7 @@ lbl_8012FA98:
 /* 8012FAE8 0000002C  38 80 00 02 */	li r4, 2
 /* 8012FAEC 00000030  3C A0 80 39 */	lis r5, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012FAF0 00000034  38 A5 EE 28 */	addi r5, r5, m__20daAlinkHIO_wlMove_c0@l
-/* 8012FAF4 00000038  C0 25 00 C4 */	lfs f1, 0xc4(r5)
+/* 8012FAF4 00000038  C0 25 00 C4 */	lfs f1, 0xc4(r5)	/* effective address: 8038EEEC */
 /* 8012FAF8 0000003C  4B FF F2 D9 */	bl procWolfFallInit__9daAlink_cFif
 lbl_8012FAFC:
 /* 8012FAFC 00000000  38 60 00 01 */	li r3, 1

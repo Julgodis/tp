@@ -12,7 +12,7 @@ lbl_80049C44:
 /* 80049C6C 00000028  7C 1F 07 34 */	extsh r31, r0
 /* 80049C70 0000002C  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 80049C74 00000030  7C 03 07 74 */	extsb r3, r0
-/* 80049C78 00000034  C0 22 85 50 */	lfs f1, d_particle_d_particle__lit_3964(r2)
+/* 80049C78 00000034  C0 22 85 50 */	lfs f1, lit_3964(r2)
 /* 80049C7C 00000038  48 15 CF DD */	bl dKy_setLight_nowroom_grass__Fcf
 /* 80049C80 0000003C  38 60 00 01 */	li r3, 1
 /* 80049C84 00000040  48 31 5F C1 */	bl GXSetColorUpdate
@@ -37,13 +37,13 @@ lbl_80049C44:
 /* 80049CD0 0000008C  48 31 3E 61 */	bl GXSetNumChans
 /* 80049CD4 00000090  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80049CD8 00000094  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80049CDC 00000098  A8 03 11 08 */	lha r0, 0x1108(r3)
+/* 80049CDC 00000098  A8 03 11 08 */	lha r0, 0x1108(r3)	/* effective address: 8042DB5C */
 /* 80049CE0 0000009C  98 01 00 08 */	stb r0, 8(r1)
-/* 80049CE4 000000A0  A8 03 11 0A */	lha r0, 0x110a(r3)
+/* 80049CE4 000000A0  A8 03 11 0A */	lha r0, 0x110a(r3)	/* effective address: 8042DB5E */
 /* 80049CE8 000000A4  98 01 00 09 */	stb r0, 9(r1)
-/* 80049CEC 000000A8  A8 03 11 0C */	lha r0, 0x110c(r3)
+/* 80049CEC 000000A8  A8 03 11 0C */	lha r0, 0x110c(r3)	/* effective address: 8042DB60 */
 /* 80049CF0 000000AC  98 01 00 0A */	stb r0, 0xa(r1)
-/* 80049CF4 000000B0  A8 03 11 0E */	lha r0, 0x110e(r3)
+/* 80049CF4 000000B0  A8 03 11 0E */	lha r0, 0x110e(r3)	/* effective address: 8042DB62 */
 /* 80049CF8 000000B4  98 01 00 0B */	stb r0, 0xb(r1)
 /* 80049CFC 000000B8  38 61 00 08 */	addi r3, r1, 8
 /* 80049D00 000000BC  7F E4 FB 78 */	mr r4, r31

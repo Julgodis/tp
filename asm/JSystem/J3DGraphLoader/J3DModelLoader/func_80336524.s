@@ -6,9 +6,9 @@ lbl_80336524:
 /* 80336534 00000010  3C 60 80 43 */	lis r3, mCurrentS__6J3DSys@ha
 /* 80336538 00000014  D4 03 4C 14 */	stfsu f0, mCurrentS__6J3DSys@l(r3)
 /* 8033653C 00000018  C0 04 00 04 */	lfs f0, 4(r4)
-/* 80336540 0000001C  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80336540 0000001C  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80430004 */
 /* 80336544 00000020  C0 04 00 08 */	lfs f0, 8(r4)
-/* 80336548 00000024  D0 03 00 08 */	stfs f0, 8(r3)
+/* 80336548 00000024  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80430008 */
 /* 8033654C 00000028  7C A3 2B 78 */	mr r3, r5
 /* 80336550 0000002C  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 80336554 00000030  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l

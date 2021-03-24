@@ -10,8 +10,8 @@ lbl_801F79EC:
 /* 801F7A0C 00000020  7F E3 FB 78 */	mr r3, r31
 /* 801F7A10 00000024  88 1F 02 05 */	lbz r0, 0x205(r31)
 /* 801F7A14 00000028  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801F7A18 0000002C  3C 80 80 3C */	lis r4, d_menu_d_menu_skill__map_init_process@ha
-/* 801F7A1C 00000030  38 04 E8 14 */	addi r0, r4, d_menu_d_menu_skill__map_init_process@l
+/* 801F7A18 0000002C  3C 80 80 3C */	lis r4, map_init_process@ha
+/* 801F7A1C 00000030  38 04 E8 14 */	addi r0, r4, map_init_process@l
 /* 801F7A20 00000034  7D 80 2A 14 */	add r12, r0, r5
 /* 801F7A24 00000038  48 16 A6 61 */	bl __ptmf_scall
 /* 801F7A28 0000003C  60 00 00 00 */	nop 

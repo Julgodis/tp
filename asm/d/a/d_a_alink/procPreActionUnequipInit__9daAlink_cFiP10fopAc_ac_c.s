@@ -14,7 +14,7 @@ lbl_800C2DDC:
 /* 800C2E0C 00000030  7F A3 EB 78 */	mr r3, r29
 /* 800C2E10 00000034  3C 80 80 39 */	lis r4, m__19daAlinkHIO_basic_c0@ha
 /* 800C2E14 00000038  38 84 D6 64 */	addi r4, r4, m__19daAlinkHIO_basic_c0@l
-/* 800C2E18 0000003C  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 800C2E18 0000003C  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 8038D67C */
 /* 800C2E1C 00000040  4B FE AF F9 */	bl setBlendMoveAnime__9daAlink_cFf
 /* 800C2E20 00000044  7F A3 EB 78 */	mr r3, r29
 /* 800C2E24 00000048  38 80 00 00 */	li r4, 0

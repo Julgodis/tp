@@ -95,7 +95,7 @@ lbl_800B4120:
 /* 800B412C 0000000C  EC 21 00 24 */	fdivs f1, f1, f0
 /* 800B4130 00000010  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B4134 00000014  3B E3 D6 BC */	addi r31, r3, m__18daAlinkHIO_move_c0@l
-/* 800B4138 00000018  C0 1F 00 3C */	lfs f0, 0x3c(r31)
+/* 800B4138 00000018  C0 1F 00 3C */	lfs f0, 0x3c(r31)	/* effective address: 8038D6F8 */
 /* 800B413C 0000001C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800B4140 00000000  40 81 00 20 */	ble lbl_800B4160
 /* 800B4144 00000004  A8 7E 2F E0 */	lha r3, 0x2fe0(r30)
@@ -117,9 +117,9 @@ lbl_800B4160:
 /* 800B4180 0000000C  A8 9E 2F E2 */	lha r4, 0x2fe2(r30)
 /* 800B4184 00000010  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800B4188 00000014  38 E5 D6 BC */	addi r7, r5, m__18daAlinkHIO_move_c0@l
-/* 800B418C 00000018  A8 A7 00 18 */	lha r5, 0x18(r7)
-/* 800B4190 0000001C  A8 C7 00 14 */	lha r6, 0x14(r7)
-/* 800B4194 00000020  A8 E7 00 16 */	lha r7, 0x16(r7)
+/* 800B418C 00000018  A8 A7 00 18 */	lha r5, 0x18(r7)	/* effective address: 8038D6D4 */
+/* 800B4190 0000001C  A8 C7 00 14 */	lha r6, 0x14(r7)	/* effective address: 8038D6D0 */
+/* 800B4194 00000020  A8 E7 00 16 */	lha r7, 0x16(r7)	/* effective address: 8038D6D2 */
 /* 800B4198 00000024  48 1B C3 A9 */	bl cLib_addCalcAngleS__FPsssss
 /* 800B419C 00000028  48 00 02 80 */	b lbl_800B441C
 lbl_800B41A0:
@@ -130,9 +130,9 @@ lbl_800B41A8:
 /* 800B41AC 00000004  A8 9E 2F E2 */	lha r4, 0x2fe2(r30)
 /* 800B41B0 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800B41B4 0000000C  38 E5 D6 BC */	addi r7, r5, m__18daAlinkHIO_move_c0@l
-/* 800B41B8 00000010  A8 A7 00 18 */	lha r5, 0x18(r7)
-/* 800B41BC 00000014  A8 C7 00 14 */	lha r6, 0x14(r7)
-/* 800B41C0 00000018  A8 E7 00 16 */	lha r7, 0x16(r7)
+/* 800B41B8 00000010  A8 A7 00 18 */	lha r5, 0x18(r7)	/* effective address: 8038D6D4 */
+/* 800B41BC 00000014  A8 C7 00 14 */	lha r6, 0x14(r7)	/* effective address: 8038D6D0 */
+/* 800B41C0 00000018  A8 E7 00 16 */	lha r7, 0x16(r7)	/* effective address: 8038D6D2 */
 /* 800B41C4 0000001C  48 1B C3 7D */	bl cLib_addCalcAngleS__FPsssss
 /* 800B41C8 00000020  48 00 00 D0 */	b lbl_800B4298
 lbl_800B41CC:
@@ -142,13 +142,13 @@ lbl_800B41CC:
 /* 800B41D8 0000000C  41 82 00 18 */	beq lbl_800B41F0
 /* 800B41DC 00000010  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B41E0 00000014  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B41E4 00000018  A8 C3 00 14 */	lha r6, 0x14(r3)
-/* 800B41E8 0000001C  A8 E3 00 16 */	lha r7, 0x16(r3)
+/* 800B41E4 00000018  A8 C3 00 14 */	lha r6, 0x14(r3)	/* effective address: 8038D6D0 */
+/* 800B41E8 0000001C  A8 E3 00 16 */	lha r7, 0x16(r3)	/* effective address: 8038D6D2 */
 /* 800B41EC 00000020  48 00 00 94 */	b lbl_800B4280
 lbl_800B41F0:
 /* 800B41F0 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B41F4 00000004  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B41F8 00000008  A8 03 00 14 */	lha r0, 0x14(r3)
+/* 800B41F8 00000008  A8 03 00 14 */	lha r0, 0x14(r3)	/* effective address: 8038D6D0 */
 /* 800B41FC 0000000C  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800B4200 00000010  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800B4204 00000014  90 01 00 0C */	stw r0, 0xc(r1)
@@ -167,7 +167,7 @@ lbl_800B41F0:
 lbl_800B4238:
 /* 800B4238 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B423C 00000004  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B4240 00000008  A8 03 00 16 */	lha r0, 0x16(r3)
+/* 800B4240 00000008  A8 03 00 16 */	lha r0, 0x16(r3)	/* effective address: 8038D6D2 */
 /* 800B4244 0000000C  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800B4248 00000010  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 800B424C 00000014  90 01 00 1C */	stw r0, 0x1c(r1)
@@ -188,7 +188,7 @@ lbl_800B4280:
 /* 800B4284 00000004  A8 9E 2F E2 */	lha r4, 0x2fe2(r30)
 /* 800B4288 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800B428C 0000000C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 800B4290 00000010  A8 A5 00 18 */	lha r5, 0x18(r5)
+/* 800B4290 00000010  A8 A5 00 18 */	lha r5, 0x18(r5)	/* effective address: 8038D6D4 */
 /* 800B4294 00000014  48 1B C2 AD */	bl cLib_addCalcAngleS__FPsssss
 lbl_800B4298:
 /* 800B4298 00000000  2C 1F 00 00 */	cmpwi r31, 0
@@ -202,7 +202,7 @@ lbl_800B4298:
 /* 800B42B8 00000020  41 82 00 20 */	beq lbl_800B42D8
 /* 800B42BC 00000024  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B42C0 00000028  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B42C4 0000002C  C0 23 00 34 */	lfs f1, 0x34(r3)
+/* 800B42C4 0000002C  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 8038D6F0 */
 /* 800B42C8 00000030  C0 1E 33 A8 */	lfs f0, 0x33a8(r30)
 /* 800B42CC 00000034  EC 01 00 32 */	fmuls f0, f1, f0
 /* 800B42D0 00000038  EF DE 00 32 */	fmuls f30, f30, f0
@@ -214,7 +214,7 @@ lbl_800B42D8:
 /* 800B42E4 0000000C  FC 00 02 10 */	fabs f0, f0
 /* 800B42E8 00000010  FC 40 00 18 */	frsp f2, f0
 /* 800B42EC 00000014  C0 22 94 A8 */	lfs f1, lit_16570(r2)
-/* 800B42F0 00000018  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800B42F0 00000018  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800B42F4 0000001C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 800B42F8 00000020  EF A1 00 32 */	fmuls f29, f1, f0
 /* 800B42FC 00000024  7F C3 F3 78 */	mr r3, r30
@@ -231,7 +231,7 @@ lbl_800B431C:
 /* 800B4324 00000000  40 81 00 1C */	ble lbl_800B4340
 /* 800B4328 00000004  3C 60 80 39 */	lis r3, m__18daAlinkHIO_move_c0@ha
 /* 800B432C 00000008  38 63 D6 BC */	addi r3, r3, m__18daAlinkHIO_move_c0@l
-/* 800B4330 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)
+/* 800B4330 0000000C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8038D6F0 */
 /* 800B4334 00000010  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 800B4338 00000014  EF DE 00 32 */	fmuls f30, f30, f0
 /* 800B433C 00000018  48 00 00 18 */	b lbl_800B4354
@@ -269,11 +269,11 @@ lbl_800B437C:
 /* 800B43A8 0000000C  A8 9E 2F E2 */	lha r4, 0x2fe2(r30)
 /* 800B43AC 00000010  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 800B43B0 00000014  38 E5 D6 BC */	addi r7, r5, m__18daAlinkHIO_move_c0@l
-/* 800B43B4 00000018  A8 A7 00 18 */	lha r5, 0x18(r7)
-/* 800B43B8 0000001C  A8 07 00 14 */	lha r0, 0x14(r7)
+/* 800B43B4 00000018  A8 A7 00 18 */	lha r5, 0x18(r7)	/* effective address: 8038D6D4 */
+/* 800B43B8 0000001C  A8 07 00 14 */	lha r0, 0x14(r7)	/* effective address: 8038D6D0 */
 /* 800B43BC 00000020  54 00 08 3C */	slwi r0, r0, 1
 /* 800B43C0 00000024  7C 06 07 34 */	extsh r6, r0
-/* 800B43C4 00000028  A8 07 00 16 */	lha r0, 0x16(r7)
+/* 800B43C4 00000028  A8 07 00 16 */	lha r0, 0x16(r7)	/* effective address: 8038D6D2 */
 /* 800B43C8 0000002C  54 00 08 3C */	slwi r0, r0, 1
 /* 800B43CC 00000030  7C 07 07 34 */	extsh r7, r0
 /* 800B43D0 00000034  48 1B C1 71 */	bl cLib_addCalcAngleS__FPsssss
@@ -294,7 +294,7 @@ lbl_800B4404:
 /* 800B4408 00000004  FC 20 F0 90 */	fmr f1, f30
 /* 800B440C 00000008  3C 80 80 39 */	lis r4, m__18daAlinkHIO_move_c0@ha
 /* 800B4410 0000000C  38 84 D6 BC */	addi r4, r4, m__18daAlinkHIO_move_c0@l
-/* 800B4414 00000010  C0 44 00 38 */	lfs f2, 0x38(r4)
+/* 800B4414 00000010  C0 44 00 38 */	lfs f2, 0x38(r4)	/* effective address: 8038D6F4 */
 /* 800B4418 00000014  4B FF F5 0D */	bl setNormalSpeedF__9daAlink_cFff
 lbl_800B441C:
 /* 800B441C 00000000  E3 E1 00 68 */	psq_l f31, 104(r1), 0, 0 /* qr0 */

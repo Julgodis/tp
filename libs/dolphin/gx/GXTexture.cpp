@@ -53,7 +53,7 @@ extern "C" extern void* __GXData;
 
 /* ############################################################################################## */
 /* 803D2598-803D268C 00F4+00 s=1 e=0 z=0  None .data      @104                                                         */
-SECTION_DATA static void* GXTexture__lit_104[61] = {
+SECTION_DATA static void* lit_104[61] = {
 	/* 0    */ (void*)(((char*)GXGetTexBufferSize)+0x28),
 	/* 1    */ (void*)(((char*)GXGetTexBufferSize)+0x34),
 	/* 2    */ (void*)(((char*)GXGetTexBufferSize)+0x34),
@@ -130,7 +130,7 @@ extern "C" asm void GXGetTexBufferSize() {
 
 /* ############################################################################################## */
 /* 803D268C-803D2780 00F4+00 s=1 e=0 z=0  None .data      @145                                                         */
-SECTION_DATA static void* GXTexture__lit_145[61] = {
+SECTION_DATA static void* lit_145[61] = {
 	/* 0    */ (void*)(((char*)__GetImageTileCount)+0x20),
 	/* 1    */ (void*)(((char*)__GetImageTileCount)+0x2C),
 	/* 2    */ (void*)(((char*)__GetImageTileCount)+0x2C),
@@ -228,7 +228,7 @@ SECTION_DATA static void* lit_224[15 + 1 /* padding */] = {
 };
 
 /* 804565E8-804565F0 0004+04 s=2 e=0 z=0  None .sdata2    @220                                                         */
-SECTION_SDATA2 static f32 GXTexture__lit_220[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_220[1 + 1 /* padding */] = {
 	16.0f,
 	/* padding */
 	0.0f,
@@ -296,31 +296,31 @@ SECTION_SDATA static u8 GXTexTlutIds[8] = {
 };
 
 /* 80450AC8-80450AD0 0006+02 s=1 e=0 z=0  None .sdata     GX2HWFiltConv                                                */
-SECTION_SDATA static u8 GXTexture__GX2HWFiltConv[6 + 2 /* padding */] = {
+SECTION_SDATA static u8 GX2HWFiltConv[6 + 2 /* padding */] = {
 	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 804565F8-804565FC 0004+00 s=1 e=0 z=0  None .sdata2    @288                                                         */
-SECTION_SDATA2 static f32 GXTexture__lit_288 = -4.0f;
+SECTION_SDATA2 static f32 lit_288 = -4.0f;
 
 /* 804565FC-80456600 0004+00 s=1 e=0 z=0  None .sdata2    @289                                                         */
 SECTION_SDATA2 static f32 lit_289 = 4.0f;
 
 /* 80456600-80456604 0004+00 s=1 e=0 z=0  None .sdata2    @290                                                         */
-SECTION_SDATA2 static f32 GXTexture__lit_290 = 3.990000009536743f;
+SECTION_SDATA2 static f32 lit_290 = 3.990000009536743f;
 
 /* 80456604-80456608 0004+00 s=1 e=0 z=0  None .sdata2    @291                                                         */
 SECTION_SDATA2 static f32 lit_291 = 32.0f;
 
 /* 80456608-8045660C 0004+00 s=1 e=0 z=0  None .sdata2    @292                                                         */
-SECTION_SDATA2 static u8 GXTexture__lit_292[4] = {
+SECTION_SDATA2 static u8 lit_292[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 8045660C-80456610 0004+00 s=1 e=0 z=0  None .sdata2    @293                                                         */
-SECTION_SDATA2 static f32 GXTexture__lit_293 = 10.0f;
+SECTION_SDATA2 static f32 lit_293 = 10.0f;
 
 /* 8035E0D4-8035E238 0164+00 s=0 e=21 z=0  None .text      GXInitTexObjLOD                                              */
 #pragma push

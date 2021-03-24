@@ -11,17 +11,17 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct cXyz {
-	/* 80658A68 */ ~cXyz();
+struct J3DJoint {
 };
 
 struct fopAc_ac_c {
 };
 
-struct J3DModel {
+struct cXyz {
+	/* 80658A68 */ ~cXyz();
 };
 
 struct daCow_c {
@@ -39,6 +39,8 @@ struct daCow_c {
 	/* 80658DB8 */ void checkThrow();
 	/* 80658E98 */ void setBodyAngle(s16);
 	/* 80658F94 */ void setBodyAngle2(s16);
+	/* 806590E8 */ void checkProcess(void (daCow_c::*)());
+	/* 80659114 */ void setProcess(void (daCow_c::*)(), int);
 	/* 806591BC */ void damage_check();
 	/* 8065945C */ void setEnterCow20();
 	/* 80659540 */ void setEnterCow10();
@@ -179,8 +181,8 @@ extern "C" void setRushVibration__7daCow_cFi(); // 1
 extern "C" void checkThrow__7daCow_cFv(); // 1
 extern "C" void setBodyAngle__7daCow_cFs(); // 1
 extern "C" void setBodyAngle2__7daCow_cFs(); // 1
-extern "C" static void checkProcess__7daCow_cFM7daCow_cFPCvPv_v(); // 1
-extern "C" static void setProcess__7daCow_cFM7daCow_cFPCvPv_vi(); // 1
+extern "C" void checkProcess__7daCow_cFM7daCow_cFPCvPv_v(); // 1
+extern "C" void setProcess__7daCow_cFM7daCow_cFPCvPv_vi(); // 1
 extern "C" void damage_check__7daCow_cFv(); // 1
 extern "C" void setEnterCow20__7daCow_cFv(); // 1
 extern "C" void setEnterCow10__7daCow_cFv(); // 1
@@ -679,7 +681,7 @@ asm void daCow_c::setBodyAngle2(s16 param_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void checkProcess__7daCow_cFM7daCow_cFPCvPv_v() {
+asm void daCow_c::checkProcess(void (daCow_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/checkProcess__7daCow_cFM7daCow_cFPCvPv_v.s"
 }
@@ -690,7 +692,7 @@ extern "C" asm static void checkProcess__7daCow_cFM7daCow_cFPCvPv_v() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setProcess__7daCow_cFM7daCow_cFPCvPv_vi() {
+asm void daCow_c::setProcess(void (daCow_c::*)(), int param_1) {
 	nofralloc
 #include "asm/rel/d/a/d_a_cow/d_a_cow/setProcess__7daCow_cFM7daCow_cFPCvPv_vi.s"
 }

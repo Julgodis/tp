@@ -17,9 +17,9 @@ lbl_80189E28:
 /* 80189E64 0000003C  38 A0 00 00 */	li r5, 0
 /* 80189E68 00000040  38 C0 00 00 */	li r6, 0
 /* 80189E6C 00000044  38 E0 00 00 */	li r7, 0
-/* 80189E70 00000048  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 80189E70 00000048  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80189E74 0000004C  FC 40 08 90 */	fmr f2, f1
-/* 80189E78 00000050  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 80189E78 00000050  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 80189E7C 00000054  FC 80 18 90 */	fmr f4, f3
 /* 80189E80 00000058  39 00 00 00 */	li r8, 0
 /* 80189E84 0000005C  48 12 26 89 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -44,9 +44,9 @@ lbl_80189EBC:
 /* 80189ECC 00000010  38 A0 00 00 */	li r5, 0
 /* 80189ED0 00000014  38 C0 00 00 */	li r6, 0
 /* 80189ED4 00000018  38 E0 00 00 */	li r7, 0
-/* 80189ED8 0000001C  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 80189ED8 0000001C  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80189EDC 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80189EE0 00000024  C0 62 9F 44 */	lfs f3, d_file_d_file_select__lit_4612(r2)
+/* 80189EE0 00000024  C0 62 9F 44 */	lfs f3, lit_4612(r2)
 /* 80189EE4 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80189EE8 0000002C  39 00 00 00 */	li r8, 0
 /* 80189EEC 00000030  48 12 26 21 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -66,7 +66,7 @@ lbl_80189EBC:
 /* 80189F24 00000068  88 1F 02 6D */	lbz r0, 0x26d(r31)
 /* 80189F28 0000006C  3C 60 80 3F */	lis r3, g_mDoMemCd_control@ha
 /* 80189F2C 00000070  38 63 AF 40 */	addi r3, r3, g_mDoMemCd_control@l
-/* 80189F30 00000074  98 03 1F BD */	stb r0, 0x1fbd(r3)
+/* 80189F30 00000074  98 03 1F BD */	stb r0, 0x1fbd(r3)	/* effective address: 803ECEFD */
 /* 80189F34 00000078  7F E3 FB 78 */	mr r3, r31
 /* 80189F38 0000007C  48 00 63 81 */	bl dataSave__14dFile_select_cFv
 /* 80189F3C 00000080  38 00 00 21 */	li r0, 0x21
@@ -74,7 +74,7 @@ lbl_80189EBC:
 lbl_80189F44:
 /* 80189F44 00000000  3C 60 80 43 */	lis r3, g_fsHIO@ha
 /* 80189F48 00000004  38 63 C9 EC */	addi r3, r3, g_fsHIO@l
-/* 80189F4C 00000008  88 03 00 0C */	lbz r0, 0xc(r3)
+/* 80189F4C 00000008  88 03 00 0C */	lbz r0, 0xc(r3)	/* effective address: 8042C9F8 */
 /* 80189F50 0000000C  B0 1F 03 AC */	sth r0, 0x3ac(r31)
 /* 80189F54 00000010  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80189F58 00000014  80 01 00 24 */	lwz r0, 0x24(r1)

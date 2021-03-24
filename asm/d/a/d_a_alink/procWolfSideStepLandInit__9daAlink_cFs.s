@@ -19,7 +19,7 @@ lbl_8012E1E8:
 /* 8012E22C 00000044  4B FF B6 1D */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8012E230 00000048  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlSideStep_c0@ha
 /* 8012E234 0000004C  38 63 EF A8 */	addi r3, r3, m__24daAlinkHIO_wlSideStep_c0@l
-/* 8012E238 00000050  C0 03 00 4C */	lfs f0, 0x4c(r3)
+/* 8012E238 00000050  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 8038EFF4 */
 /* 8012E23C 00000054  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 /* 8012E240 00000058  38 00 00 0A */	li r0, 0xa
 /* 8012E244 0000005C  98 1E 2F CC */	stb r0, 0x2fcc(r30)
@@ -40,7 +40,7 @@ lbl_8012E26C:
 /* 8012E278 0000000C  4B FF B5 D1 */	bl setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c
 /* 8012E27C 00000010  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlSideStep_c0@ha
 /* 8012E280 00000014  38 63 EF A8 */	addi r3, r3, m__24daAlinkHIO_wlSideStep_c0@l
-/* 8012E284 00000018  C0 03 00 24 */	lfs f0, 0x24(r3)
+/* 8012E284 00000018  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 8038EFCC */
 /* 8012E288 0000001C  D0 1E 34 78 */	stfs f0, 0x3478(r30)
 lbl_8012E28C:
 /* 8012E28C 00000000  B3 FE 30 12 */	sth r31, 0x3012(r30)

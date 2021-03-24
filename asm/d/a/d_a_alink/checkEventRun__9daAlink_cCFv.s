@@ -2,7 +2,7 @@ lbl_80115C20:
 /* 80115C20 00000000  38 A0 00 00 */	li r5, 0
 /* 80115C24 00000004  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 80115C28 00000008  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 80115C2C 0000000C  88 04 4F AD */	lbz r0, 0x4fad(r4)
+/* 80115C2C 0000000C  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
 /* 80115C30 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 80115C34 00000014  40 82 00 10 */	bne lbl_80115C44
 /* 80115C38 00000018  A0 03 06 04 */	lhz r0, 0x604(r3)

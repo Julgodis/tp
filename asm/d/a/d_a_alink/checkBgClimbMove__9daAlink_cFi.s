@@ -221,7 +221,7 @@ lbl_800FF1D0:
 /* 800FF20C 0000003C  7F C3 F3 78 */	mr r3, r30
 /* 800FF210 00000040  3C 80 80 39 */	lis r4, m__23daAlinkHIO_wallCatch_c0@ha
 /* 800FF214 00000044  38 84 E1 64 */	addi r4, r4, m__23daAlinkHIO_wallCatch_c0@l
-/* 800FF218 00000048  C0 24 00 30 */	lfs f1, 0x30(r4)
+/* 800FF218 00000048  C0 24 00 30 */	lfs f1, 0x30(r4)	/* effective address: 8038E194 */
 /* 800FF21C 0000004C  4B FF C9 AD */	bl procHangClimbInit__9daAlink_cFf
 /* 800FF220 00000050  48 00 00 2C */	b lbl_800FF24C
 lbl_800FF224:

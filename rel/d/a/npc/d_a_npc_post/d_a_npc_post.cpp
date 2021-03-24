@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80AAC968 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Post_c {
@@ -62,6 +62,8 @@ struct daNpc_Post_c {
 	/* 80AAA8A4 */ void setFlagAnm(int, int, f32);
 	/* 80AAA968 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 80AAA99C */ void selectAction();
+	/* 80AAA9E4 */ void chkAction(int (daNpc_Post_c::*)(void*));
+	/* 80AAAA10 */ void setAction(int (daNpc_Post_c::*)(void*));
 	/* 80AAAAB8 */ void chkPullOutLetter1();
 	/* 80AAAB2C */ void chkPullOutLetter2();
 	/* 80AAABA0 */ void pullOutLetter();
@@ -235,8 +237,8 @@ extern "C" void drawOtherMdl__12daNpc_Post_cFv(); // 1
 extern "C" void setFlagAnm__12daNpc_Post_cFiif(); // 1
 extern "C" void afterSetMotionAnm__12daNpc_Post_cFiifi(); // 1
 extern "C" void selectAction__12daNpc_Post_cFv(); // 1
-extern "C" static void chkAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i(); // 1
+extern "C" void setAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i(); // 1
 extern "C" void chkPullOutLetter1__12daNpc_Post_cFv(); // 1
 extern "C" void chkPullOutLetter2__12daNpc_Post_cFv(); // 1
 extern "C" void pullOutLetter__12daNpc_Post_cFv(); // 1
@@ -859,7 +861,7 @@ asm void daNpc_Post_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i() {
+asm void daNpc_Post_c::chkAction(int (daNpc_Post_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_post/d_a_npc_post/chkAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i.s"
 }
@@ -870,7 +872,7 @@ extern "C" asm static void chkAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i()
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i() {
+asm void daNpc_Post_c::setAction(int (daNpc_Post_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_post/d_a_npc_post/setAction__12daNpc_Post_cFM12daNpc_Post_cFPCvPvPv_i.s"
 }

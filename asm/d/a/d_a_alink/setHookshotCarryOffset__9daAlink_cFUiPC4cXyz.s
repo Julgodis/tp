@@ -1,7 +1,7 @@
 lbl_80108A90:
 /* 80108A90 00000000  3C C0 80 40 */	lis r6, g_dComIfG_gameInfo@ha
 /* 80108A94 00000004  38 C6 61 C0 */	addi r6, r6, g_dComIfG_gameInfo@l
-/* 80108A98 00000008  80 06 5F 1C */	lwz r0, 0x5f1c(r6)
+/* 80108A98 00000008  80 06 5F 1C */	lwz r0, 0x5f1c(r6)	/* effective address: 8040C0DC */
 /* 80108A9C 0000000C  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
 /* 80108AA0 00000010  41 82 00 48 */	beq lbl_80108AE8
 /* 80108AA4 00000014  80 C3 28 58 */	lwz r6, 0x2858(r3)

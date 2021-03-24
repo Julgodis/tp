@@ -1,7 +1,7 @@
 lbl_800736CC:
 /* 800736CC 00000000  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
 /* 800736D0 00000004  38 E5 61 C0 */	addi r7, r5, g_dComIfG_gameInfo@l
-/* 800736D4 00000008  80 C7 5F 18 */	lwz r6, 0x5f18(r7)
+/* 800736D4 00000008  80 C7 5F 18 */	lwz r6, 0x5f18(r7)	/* effective address: 8040C0D8 */
 /* 800736D8 0000000C  3C A0 36 A0 */	lis r5, 0x36A0 /* 0x36A02311@ha */
 /* 800736DC 00000010  38 05 23 11 */	addi r0, r5, 0x2311 /* 0x36A02311@l */
 /* 800736E0 00000014  7C C0 00 39 */	and. r0, r6, r0

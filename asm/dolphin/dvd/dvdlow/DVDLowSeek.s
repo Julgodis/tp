@@ -5,18 +5,18 @@ lbl_80347EB0:
 /* 80347EBC 0000000C  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80347EC0 00000010  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80347EC4 00000014  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 80347EC8 00000018  90 8D 91 98 */	stw r4, dvdlow__Callback(r13)
+/* 80347EC8 00000018  90 8D 91 98 */	stw r4, Callback(r13)
 /* 80347ECC 0000001C  3C 80 CC 00 */	lis r4, 0xCC00 /* 0xCC006000@ha */
 /* 80347ED0 00000020  38 84 60 00 */	addi r4, r4, 0x6000 /* 0xCC006000@l */
 /* 80347ED4 00000024  90 0D 91 90 */	stw r0, StopAtNextInt(r13)
 /* 80347ED8 00000028  3C 00 AB 00 */	lis r0, 0xab00
-/* 80347EDC 0000002C  90 04 00 08 */	stw r0, 8(r4)
+/* 80347EDC 0000002C  90 04 00 08 */	stw r0, 8(r4)	/* effective address: CC006008 */
 /* 80347EE0 00000030  54 60 F0 BE */	srwi r0, r3, 2
 /* 80347EE4 00000034  3C 60 80 45 */	lis r3, AlarmForTimeout@ha
-/* 80347EE8 00000038  90 04 00 0C */	stw r0, 0xc(r4)
+/* 80347EE8 00000038  90 04 00 0C */	stw r0, 0xc(r4)	/* effective address: CC00600C */
 /* 80347EEC 0000003C  38 00 00 01 */	li r0, 1
 /* 80347EF0 00000040  3B E3 C8 98 */	addi r31, r3, AlarmForTimeout@l
-/* 80347EF4 00000044  90 04 00 1C */	stw r0, 0x1c(r4)
+/* 80347EF4 00000044  90 04 00 1C */	stw r0, 0x1c(r4)	/* effective address: CC00601C */
 /* 80347EF8 00000048  3C 80 80 00 */	lis r4, 0x8000 /* 0x800000F8@ha */
 /* 80347EFC 0000004C  38 7F 00 00 */	addi r3, r31, 0
 /* 80347F00 00000050  80 04 00 F8 */	lwz r0, 0x00F8(r4)

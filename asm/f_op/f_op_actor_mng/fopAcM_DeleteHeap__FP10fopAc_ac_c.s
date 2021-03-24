@@ -4,8 +4,8 @@ lbl_8001A138:
 /* 8001A140 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8001A144 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8001A148 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 8001A14C 00000014  3C 80 80 38 */	lis r4, f_op_f_op_actor_mng__stringBase0@ha
-/* 8001A150 00000018  38 84 88 C8 */	addi r4, r4, f_op_f_op_actor_mng__stringBase0@l
+/* 8001A14C 00000014  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 8001A150 00000018  38 84 88 C8 */	addi r4, r4, stringBase0@l
 /* 8001A154 0000001C  38 84 00 42 */	addi r4, r4, 0x42
 /* 8001A158 00000020  4B FF FB 21 */	bl fopAcM_Log__FPC10fopAc_ac_cPCc
 /* 8001A15C 00000024  80 7F 00 F0 */	lwz r3, 0xf0(r31)

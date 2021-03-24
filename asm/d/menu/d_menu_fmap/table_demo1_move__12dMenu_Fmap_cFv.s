@@ -17,9 +17,9 @@ lbl_801CA9B4:
 /* 801CA9F0 0000003C  38 A0 00 00 */	li r5, 0
 /* 801CA9F4 00000040  38 C0 00 00 */	li r6, 0
 /* 801CA9F8 00000044  38 E0 00 00 */	li r7, 0
-/* 801CA9FC 00000048  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CA9FC 00000048  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801CAA00 0000004C  FC 40 08 90 */	fmr f2, f1
-/* 801CAA04 00000050  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801CAA04 00000050  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801CAA08 00000054  FC 80 18 90 */	fmr f4, f3
 /* 801CAA0C 00000058  39 00 00 00 */	li r8, 0
 /* 801CAA10 0000005C  48 0E 0F 75 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -28,14 +28,14 @@ lbl_801CAA14:
 /* 801CAA18 00000004  7C 80 07 35 */	extsh. r0, r4
 /* 801CAA1C 00000008  40 81 00 48 */	ble lbl_801CAA64
 /* 801CAA20 0000000C  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 801CAA24 00000010  C8 22 A7 40 */	lfd f1, d_menu_d_menu_fmap__lit_4358(r2)
+/* 801CAA24 00000010  C8 22 A7 40 */	lfd f1, lit_4358(r2)
 /* 801CAA28 00000014  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 801CAA2C 00000018  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801CAA30 0000001C  3C 00 43 30 */	lis r0, 0x4330
 /* 801CAA34 00000020  90 01 00 10 */	stw r0, 0x10(r1)
 /* 801CAA38 00000024  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 801CAA3C 00000028  EC 20 08 28 */	fsubs f1, f0, f1
-/* 801CAA40 0000002C  C0 02 A7 3C */	lfs f0, d_menu_d_menu_fmap__lit_4353(r2)
+/* 801CAA40 0000002C  C0 02 A7 3C */	lfs f0, lit_4353(r2)
 /* 801CAA44 00000030  EC 21 00 24 */	fdivs f1, f1, f0
 /* 801CAA48 00000034  48 00 67 01 */	bl zoomMapCalc__18dMenu_Fmap2DBack_cFf
 /* 801CAA4C 00000038  A8 1F 02 14 */	lha r0, 0x214(r31)

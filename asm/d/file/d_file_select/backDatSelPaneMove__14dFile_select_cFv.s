@@ -58,7 +58,7 @@ lbl_8018AAC4:
 /* 8018ABA4 000000E0  3C 60 80 3C */	lis r3, MenuSelStartFrameTbl@ha
 /* 8018ABA8 000000E4  38 63 A8 84 */	addi r3, r3, MenuSelStartFrameTbl@l
 /* 8018ABAC 000000E8  7C 03 00 2E */	lwzx r0, r3, r0
-/* 8018ABB0 000000EC  C8 22 9F 38 */	lfd f1, d_file_d_file_select__lit_4342(r2)
+/* 8018ABB0 000000EC  C8 22 9F 38 */	lfd f1, lit_4342(r2)
 /* 8018ABB4 000000F0  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8018ABB8 000000F4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8018ABBC 000000F8  3C 00 43 30 */	lis r0, 0x4330

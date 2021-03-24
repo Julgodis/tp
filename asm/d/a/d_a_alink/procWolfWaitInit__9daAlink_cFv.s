@@ -52,7 +52,7 @@ lbl_8012D250:
 /* 8012D25C 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 8012D260 00000010  3C 80 80 39 */	lis r4, m__20daAlinkHIO_wlMove_c0@ha
 /* 8012D264 00000014  38 84 EE 28 */	addi r4, r4, m__20daAlinkHIO_wlMove_c0@l
-/* 8012D268 00000018  C0 24 00 BC */	lfs f1, 0xbc(r4)
+/* 8012D268 00000018  C0 24 00 BC */	lfs f1, 0xbc(r4)	/* effective address: 8038EEE4 */
 /* 8012D26C 0000001C  4B FF B5 D9 */	bl setBlendWolfMoveAnime__9daAlink_cFf
 /* 8012D270 00000020  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 8012D274 00000024  B0 1F 04 DE */	sth r0, 0x4de(r31)

@@ -15,7 +15,7 @@ lbl_8035FE78:
 /* 8035FEAC 00000034  90 85 00 7C */	stw r4, 0x7c(r5)
 /* 8035FEB0 00000038  9B DF 80 00 */	stb r30, 0x8000(r31)
 /* 8035FEB4 0000003C  80 05 00 7C */	lwz r0, 0x7c(r5)
-/* 8035FEB8 00000040  90 1F 80 00 */	stw r0, -0x8000(r31)
+/* 8035FEB8 00000040  90 1F 80 00 */	stw r0, -0x8000(r31)	/* effective address: CC008000 */
 /* 8035FEBC 00000044  4B FF F2 B9 */	bl __GXFlushTextureState
 /* 8035FEC0 00000048  57 A0 06 3E */	clrlwi r0, r29, 0x18
 /* 8035FEC4 0000004C  9B DF 80 00 */	stb r30, -0x8000(r31)

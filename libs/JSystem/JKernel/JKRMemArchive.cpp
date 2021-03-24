@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRMemBreakFlag {
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -35,9 +38,6 @@ struct JKRArchive {
 	/* 802D6734 */ void findPtrResource(void const*) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
-};
-
-struct JKRMemBreakFlag {
 };
 
 struct JKRMemArchive {
@@ -105,7 +105,7 @@ extern "C" void removeResourceAll__13JKRMemArchiveFv(); // 1
 extern "C" void removeResource__13JKRMemArchiveFPv(); // 1
 extern "C" void fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli(); // 1
 extern "C" void getExpandedResSize__13JKRMemArchiveCFPCv(); // 1
-extern "C" extern char const* const JKRMemArchive__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

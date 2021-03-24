@@ -75,7 +75,7 @@ lbl_80123AA8:
 /* 80123AC0 00000018  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80123AC4 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80123AC8 00000020  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
-/* 80123ACC 00000024  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
+/* 80123ACC 00000024  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
 /* 80123AD0 00000028  80 9F 32 CC */	lwz r4, 0x32cc(r31)
 /* 80123AD4 0000002C  38 DF 1E 2C */	addi r6, r31, 0x1e2c
 /* 80123AD8 00000030  38 FF 37 D4 */	addi r7, r31, 0x37d4

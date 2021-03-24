@@ -86,7 +86,7 @@ lbl_8012F0C8:
 /* 8012F0EC 00000024  EC 22 00 32 */	fmuls f1, f2, f0
 /* 8012F0F0 00000028  3C 60 80 39 */	lis r3, m__23daAlinkHIO_wlDamFall_c0@ha
 /* 8012F0F4 0000002C  38 A3 F3 74 */	addi r5, r3, m__23daAlinkHIO_wlDamFall_c0@l
-/* 8012F0F8 00000030  C0 05 00 38 */	lfs f0, 0x38(r5)
+/* 8012F0F8 00000030  C0 05 00 38 */	lfs f0, 0x38(r5)	/* effective address: 8038F3AC */
 /* 8012F0FC 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8012F100 00000000  40 81 00 20 */	ble lbl_8012F120
 /* 8012F104 00000004  38 00 00 0C */	li r0, 0xc

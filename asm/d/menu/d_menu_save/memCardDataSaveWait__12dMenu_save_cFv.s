@@ -11,9 +11,9 @@ lbl_801F28E4:
 /* 801F2908 00000024  38 A0 00 00 */	li r5, 0
 /* 801F290C 00000028  38 C0 00 00 */	li r6, 0
 /* 801F2910 0000002C  38 E0 00 00 */	li r7, 0
-/* 801F2914 00000030  C0 22 AA 58 */	lfs f1, d_menu_d_menu_save__lit_4179(r2)
+/* 801F2914 00000030  C0 22 AA 58 */	lfs f1, lit_4179(r2)
 /* 801F2918 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801F291C 00000038  C0 62 AA 78 */	lfs f3, d_menu_d_menu_save__lit_4879(r2)
+/* 801F291C 00000038  C0 62 AA 78 */	lfs f3, lit_4879(r2)
 /* 801F2920 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801F2924 00000040  39 00 00 00 */	li r8, 0
 /* 801F2928 00000044  48 0B 9B E5 */	bl seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -30,8 +30,8 @@ lbl_801F2940:
 /* 801F2950 00000010  80 9F 21 98 */	lwz r4, 0x2198(r31)
 /* 801F2954 00000014  2C 04 00 00 */	cmpwi r4, 0
 /* 801F2958 00000018  41 82 00 20 */	beq lbl_801F2978
-/* 801F295C 0000001C  3C 60 80 39 */	lis r3, d_menu_d_menu_save__stringBase0@ha
-/* 801F2960 00000020  38 63 79 60 */	addi r3, r3, d_menu_d_menu_save__stringBase0@l
+/* 801F295C 0000001C  3C 60 80 39 */	lis r3, stringBase0@ha
+/* 801F2960 00000020  38 63 79 60 */	addi r3, r3, stringBase0@l
 /* 801F2964 00000024  38 63 00 A6 */	addi r3, r3, 0xa6
 /* 801F2968 00000028  4C C6 31 82 */	crclr 6
 /* 801F296C 0000002C  48 17 3F 11 */	bl printf

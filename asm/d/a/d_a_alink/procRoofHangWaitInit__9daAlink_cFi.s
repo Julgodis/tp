@@ -27,7 +27,7 @@ lbl_80100BFC:
 /* 80100C10 00000014  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80100C14 00000018  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80100C18 0000001C  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
-/* 80100C1C 00000020  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
+/* 80100C1C 00000020  C0 42 92 9C */	lfs f2, lit_5944(r2)
 /* 80100C20 00000024  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80100C24 00000028  EC 01 00 2A */	fadds f0, f1, f0
 /* 80100C28 0000002C  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
@@ -52,7 +52,7 @@ lbl_80100C64:
 /* 80100C70 0000000C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80100C74 00000010  7C 03 04 2E */	lfsx f0, r3, r0
 /* 80100C78 00000014  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
-/* 80100C7C 00000018  C0 42 92 9C */	lfs f2, d_a_d_a_alink__lit_5944(r2)
+/* 80100C7C 00000018  C0 42 92 9C */	lfs f2, lit_5944(r2)
 /* 80100C80 0000001C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80100C84 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80100C88 00000024  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
@@ -74,8 +74,8 @@ lbl_80100CC0:
 /* 80100CC4 00000004  38 80 00 A9 */	li r4, 0xa9
 /* 80100CC8 00000008  3C A0 80 39 */	lis r5, m__22daAlinkHIO_roofHang_c0@ha
 /* 80100CCC 0000000C  38 A5 EB FC */	addi r5, r5, m__22daAlinkHIO_roofHang_c0@l
-/* 80100CD0 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)
-/* 80100CD4 00000014  C0 45 00 20 */	lfs f2, 0x20(r5)
+/* 80100CD0 00000010  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038EC18 */
+/* 80100CD4 00000014  C0 45 00 20 */	lfs f2, 0x20(r5)	/* effective address: 8038EC1C */
 /* 80100CD8 00000018  4B FA C3 09 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 80100CDC 0000001C  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 80100CE0 00000020  B0 1E 04 DE */	sth r0, 0x4de(r30)
@@ -89,9 +89,9 @@ lbl_80100CC0:
 /* 80100D00 00000040  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80100D04 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80100D08 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80100D0C 0000004C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 80100D0C 0000004C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80100D10 00000050  64 00 00 10 */	oris r0, r0, 0x10
-/* 80100D14 00000054  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 80100D14 00000054  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80100D18 00000058  B3 FE 30 08 */	sth r31, 0x3008(r30)
 /* 80100D1C 0000005C  38 60 00 01 */	li r3, 1
 lbl_80100D20:

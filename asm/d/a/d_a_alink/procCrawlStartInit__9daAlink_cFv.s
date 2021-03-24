@@ -17,9 +17,9 @@ lbl_800F9240:
 /* 800F9248 00000008  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F924C 0000000C  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800F9250 00000010  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800F9254 00000014  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F9254 00000014  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 800F9258 00000018  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800F925C 0000001C  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F925C 0000001C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800F9260 00000020  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800F9264 00000024  7F E3 FB 78 */	mr r3, r31
 /* 800F9268 00000028  38 80 00 34 */	li r4, 0x34
@@ -54,8 +54,8 @@ lbl_800F9240:
 /* 800F92DC 0000009C  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
 /* 800F92E0 000000A0  3C 60 80 39 */	lis r3, m__20daAlinkHIO_crouch_c0@ha
 /* 800F92E4 000000A4  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
-/* 800F92E8 000000A8  C0 43 00 10 */	lfs f2, 0x10(r3)
-/* 800F92EC 000000AC  A8 03 00 00 */	lha r0, 0(r3)
+/* 800F92E8 000000A8  C0 43 00 10 */	lfs f2, 0x10(r3)	/* effective address: 8038E02C */
+/* 800F92EC 000000AC  A8 03 00 00 */	lha r0, 0(r3)	/* effective address: 8038E01C */
 /* 800F92F0 000000B0  C8 22 92 B0 */	lfd f1, lit_6025(r2)
 /* 800F92F4 000000B4  6C 03 80 00 */	xoris r3, r0, 0x8000
 /* 800F92F8 000000B8  90 61 00 0C */	stw r3, 0xc(r1)
@@ -74,11 +74,11 @@ lbl_800F9240:
 lbl_800F932C:
 /* 800F932C 00000000  D0 5F 34 7C */	stfs f2, 0x347c(r31)
 lbl_800F9330:
-/* 800F9330 00000000  C0 42 92 B8 */	lfs f2, d_a_d_a_alink__lit_6040(r2)
+/* 800F9330 00000000  C0 42 92 B8 */	lfs f2, lit_6040(r2)
 /* 800F9334 00000004  C0 3F 34 7C */	lfs f1, 0x347c(r31)
 /* 800F9338 00000008  3C 60 80 39 */	lis r3, m__20daAlinkHIO_crouch_c0@ha
 /* 800F933C 0000000C  38 63 E0 1C */	addi r3, r3, m__20daAlinkHIO_crouch_c0@l
-/* 800F9340 00000010  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F9340 00000010  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8038E024 */
 /* 800F9344 00000014  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800F9348 00000018  EC 02 00 24 */	fdivs f0, f2, f0
 /* 800F934C 0000001C  D0 1F 34 78 */	stfs f0, 0x3478(r31)
@@ -86,9 +86,9 @@ lbl_800F9330:
 /* 800F9354 00000024  D0 1F 33 CC */	stfs f0, 0x33cc(r31)
 /* 800F9358 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F935C 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F9360 00000030  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800F9360 00000030  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F9364 00000034  64 00 08 00 */	oris r0, r0, 0x800
-/* 800F9368 00000038  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800F9368 00000038  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F936C 0000003C  38 60 00 01 */	li r3, 1
 lbl_800F9370:
 /* 800F9370 00000000  83 E1 00 1C */	lwz r31, 0x1c(r1)

@@ -18,7 +18,7 @@ lbl_800BAF44:
 /* 800BAF44 00000000  80 7F 20 60 */	lwz r3, 0x2060(r31)
 /* 800BAF48 00000004  3C 80 80 39 */	lis r4, m__20daAlinkHIO_crouch_c0@ha
 /* 800BAF4C 00000008  38 84 E0 1C */	addi r4, r4, m__20daAlinkHIO_crouch_c0@l
-/* 800BAF50 0000000C  C0 24 00 38 */	lfs f1, 0x38(r4)
+/* 800BAF50 0000000C  C0 24 00 38 */	lfs f1, 0x38(r4)	/* effective address: 8038E054 */
 /* 800BAF54 00000010  38 80 00 00 */	li r4, 0
 /* 800BAF58 00000014  38 A0 00 23 */	li r5, 0x23
 /* 800BAF5C 00000018  4B F5 48 ED */	bl initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs

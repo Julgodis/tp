@@ -6,7 +6,7 @@ lbl_80129958:
 /* 80129968 00000010  3B E0 00 00 */	li r31, 0
 /* 8012996C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80129970 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80129974 0000001C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 80129974 0000001C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 80129978 00000020  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
 /* 8012997C 00000024  40 82 00 10 */	bne lbl_8012998C
 /* 80129980 00000028  48 08 29 61 */	bl dKy_withwarp_capture_check__Fv

@@ -7,7 +7,7 @@ lbl_8015F478:
 /* 8015F48C 00000014  7C A6 2B 78 */	mr r6, r5
 /* 8015F490 00000018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8015F494 0000001C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8015F498 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8015F498 00000020  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
 /* 8015F49C 00000024  7C E4 3B 78 */	mr r4, r7
 /* 8015F4A0 00000028  7C 05 03 78 */	mr r5, r0
 /* 8015F4A4 0000002C  4B F8 86 49 */	bl setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi

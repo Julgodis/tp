@@ -26,8 +26,8 @@ lbl_8013FA58:
 /* 8013FA70 00000018  38 80 00 72 */	li r4, 0x72
 /* 8013FA74 0000001C  3C A0 80 39 */	lis r5, m__21daAlinkHIO_wlChain_c0@ha
 /* 8013FA78 00000020  38 A5 F8 58 */	addi r5, r5, m__21daAlinkHIO_wlChain_c0@l
-/* 8013FA7C 00000024  C0 25 00 54 */	lfs f1, 0x54(r5)
-/* 8013FA80 00000028  C0 45 00 58 */	lfs f2, 0x58(r5)
+/* 8013FA7C 00000024  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F8AC */
+/* 8013FA80 00000028  C0 45 00 58 */	lfs f2, 0x58(r5)	/* effective address: 8038F8B0 */
 /* 8013FA84 0000002C  4B FE 9C 55 */	bl setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff
 /* 8013FA88 00000030  7F E3 FB 78 */	mr r3, r31
 /* 8013FA8C 00000034  3C 80 00 01 */	lis r4, 0x0001 /* 0x0001003E@ha */
@@ -77,11 +77,11 @@ lbl_8013FA58:
 /* 8013FB3C 000000E4  90 03 04 9C */	stw r0, 0x49c(r3)
 /* 8013FB40 000000E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8013FB44 000000EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8013FB48 000000F0  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
+/* 8013FB48 000000F0  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FB4C 000000F4  64 00 04 00 */	oris r0, r0, 0x400
-/* 8013FB50 000000F8  90 03 5F 1C */	stw r0, 0x5f1c(r3)
+/* 8013FB50 000000F8  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
 /* 8013FB54 000000FC  B0 9F 30 0C */	sth r4, 0x300c(r31)
-/* 8013FB58 00000100  88 03 00 16 */	lbz r0, 0x16(r3)
+/* 8013FB58 00000100  88 03 00 16 */	lbz r0, 0x16(r3)	/* effective address: 804061D6 */
 /* 8013FB5C 00000104  28 00 00 FF */	cmplwi r0, 0xff
 /* 8013FB60 00000108  40 82 00 10 */	bne lbl_8013FB70
 /* 8013FB64 0000010C  38 00 0B BC */	li r0, 0xbbc
@@ -126,9 +126,9 @@ lbl_8013FBD8:
 /* 8013FBE8 00000010  3C 60 80 42 */	lis r3, l_wolfBaseAnime@ha
 /* 8013FBEC 00000014  C4 03 56 1C */	lfsu f0, l_wolfBaseAnime@l(r3)
 /* 8013FBF0 00000018  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 8013FBF4 0000001C  C0 03 00 04 */	lfs f0, 4(r3)
+/* 8013FBF4 0000001C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80420004 */
 /* 8013FBF8 00000020  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 8013FBFC 00000024  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8013FBFC 00000024  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 8013FC00 00000028  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 8013FC04 0000002C  7F E3 FB 78 */	mr r3, r31
 /* 8013FC08 00000030  4B FE 80 4D */	bl onWolfEyeUp__9daAlink_cFv

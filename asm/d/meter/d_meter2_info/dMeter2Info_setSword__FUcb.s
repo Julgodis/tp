@@ -27,7 +27,7 @@ lbl_8021E584:
 /* 8021E588 00000004  41 82 00 24 */	beq lbl_8021E5AC
 /* 8021E58C 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E590 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E594 00000010  88 83 00 14 */	lbz r4, 0x14(r3)
+/* 8021E594 00000010  88 83 00 14 */	lbz r4, 0x14(r3)	/* effective address: 804061D4 */
 /* 8021E598 00000014  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8021E59C 00000018  28 00 00 FF */	cmplwi r0, 0xff
 /* 8021E5A0 0000001C  41 82 00 0C */	beq lbl_8021E5AC
@@ -38,7 +38,7 @@ lbl_8021E5AC:
 /* 8021E5B0 00000004  4B E1 09 11 */	bl dComIfGs_setSelectEquipSword__FUc
 /* 8021E5B4 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8021E5B8 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8021E5BC 00000010  9B E3 5E 75 */	stb r31, 0x5e75(r3)
+/* 8021E5BC 00000010  9B E3 5E 75 */	stb r31, 0x5e75(r3)	/* effective address: 8040C035 */
 /* 8021E5C0 00000014  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8021E5C4 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8021E5C8 0000001C  7C 08 03 A6 */	mtlr r0

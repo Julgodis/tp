@@ -29,24 +29,24 @@ extern "C" static void OSDefaultExceptionHandler(); // 1
 extern "C" void __OSPSInit(); // 1
 extern "C" void __OSGetDIConfig(); // 1
 extern "C" void OSRegisterVersion(); // 1
-extern "C" extern u8 OS__lit_105[13 + 3 /* padding */];
-extern "C" extern u8 OS__lit_106[22 + 2 /* padding */];
-extern "C" extern u8 OS__lit_107[12];
-extern "C" extern u8 OS__lit_108[9 + 3 /* padding */];
-extern "C" extern u8 OS__lit_109[16];
-extern "C" extern u8 OS__lit_110[11 + 1 /* padding */];
+extern "C" extern u8 lit_105[13 + 3 /* padding */];
+extern "C" extern u8 lit_106[22 + 2 /* padding */];
+extern "C" extern u8 lit_107[12];
+extern "C" extern u8 lit_108[9 + 3 /* padding */];
+extern "C" extern u8 lit_109[16];
+extern "C" extern u8 lit_110[11 + 1 /* padding */];
 extern "C" extern u8 lit_111[14 + 2 /* padding */];
 extern "C" extern u8 lit_112[13 + 3 /* padding */];
-extern "C" extern u8 OS__lit_113[13 + 3 /* padding */];
+extern "C" extern u8 lit_113[13 + 3 /* padding */];
 extern "C" extern u8 lit_114[13 + 3 /* padding */];
-extern "C" extern u8 OS__lit_115[25 + 3 /* padding */];
-extern "C" extern u8 OS__lit_117[14 + 2 /* padding */];
-extern "C" extern u8 OS__lit_118[21 + 3 /* padding */];
+extern "C" extern u8 lit_115[25 + 3 /* padding */];
+extern "C" extern u8 lit_117[14 + 2 /* padding */];
+extern "C" extern u8 lit_118[21 + 3 /* padding */];
 extern "C" extern u8 __OSExceptionLocations[60];
-extern "C" extern u8 OS__lit_152[27 + 1 /* padding */];
-extern "C" extern u8 OS__lit_153[46 + 2 /* padding */];
-extern "C" extern u8 OS__lit_154[47 + 1 /* padding */];
-extern "C" extern u8 OS__lit_155[27 + 1 /* padding */];
+extern "C" extern u8 lit_152[27 + 1 /* padding */];
+extern "C" extern u8 lit_153[46 + 2 /* padding */];
+extern "C" extern u8 lit_154[47 + 1 /* padding */];
+extern "C" extern u8 lit_155[27 + 1 /* padding */];
 extern "C" extern u8 DriveBlock[48];
 extern "C" extern u8 __OSRebootParams[28 + 4 /* padding */];
 extern "C" extern u8 __OSIsGcam[4];
@@ -114,7 +114,7 @@ extern "C" extern u8 __PADSpec[4 + 4 /* padding */];
 
 /* ############################################################################################## */
 /* 80451600-80451604 0004+00 s=2 e=0 z=0  None .sbss      BootInfo                                                     */
-static u8 OS__BootInfo[4];
+static u8 BootInfo[4];
 
 /* 80451604-80451608 0004+00 s=2 e=0 z=0  None .sbss      BI2DebugFlag                                                 */
 static u8 BI2DebugFlag[4];
@@ -170,7 +170,7 @@ extern "C" asm static void InquiryCallback() {
 
 /* ############################################################################################## */
 /* 803CF288-803CF2CC 0044+00 s=3 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 OS__lit_1[68] = {
+SECTION_DATA static u8 lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x4F, 0x53, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -179,10 +179,10 @@ SECTION_DATA static u8 OS__lit_1[68] = {
 };
 
 /* 80450980-80450984 0004+00 s=1 e=0 z=0  None .sdata     __OSVersion                                                  */
-SECTION_SDATA static void* __OSVersion = (void*)&OS__lit_1;
+SECTION_SDATA static void* __OSVersion = (void*)&lit_1;
 
 /* 80450984-8045098C 0006+02 s=1 e=0 z=0  None .sdata     @116                                                         */
-SECTION_SDATA static u8 OS__lit_116[6 + 2 /* padding */] = {
+SECTION_SDATA static u8 lit_116[6 + 2 /* padding */] = {
 	0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
@@ -363,14 +363,14 @@ extern "C" asm void OSRegisterVersion() {
 
 /* ############################################################################################## */
 /* 803CF2CC-803CF2DC 000D+03 s=0 e=0 z=0  None .data      @105                                                         */
-SECTION_DATA u8 OS__lit_105[13 + 3 /* padding */] = {
+SECTION_DATA u8 lit_105[13 + 3 /* padding */] = {
 	0x0A, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x4F, 0x53, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF2DC-803CF2F4 0016+02 s=0 e=0 z=0  None .data      @106                                                         */
-SECTION_DATA u8 OS__lit_106[22 + 2 /* padding */] = {
+SECTION_DATA u8 lit_106[22 + 2 /* padding */] = {
 	0x4B, 0x65, 0x72, 0x6E, 0x65, 0x6C, 0x20, 0x62, 0x75, 0x69, 0x6C, 0x74, 0x20, 0x3A, 0x20, 0x25,
 	0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
 	/* padding */
@@ -378,24 +378,24 @@ SECTION_DATA u8 OS__lit_106[22 + 2 /* padding */] = {
 };
 
 /* 803CF2F4-803CF300 000C+00 s=0 e=0 z=0  None .data      @107                                                         */
-SECTION_DATA u8 OS__lit_107[12] = {
+SECTION_DATA u8 lit_107[12] = {
 	0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,
 };
 
 /* 803CF300-803CF30C 0009+03 s=0 e=0 z=0  None .data      @108                                                         */
-SECTION_DATA u8 OS__lit_108[9 + 3 /* padding */] = {
+SECTION_DATA u8 lit_108[9 + 3 /* padding */] = {
 	0x30, 0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF30C-803CF31C 0010+00 s=0 e=0 z=0  None .data      @109                                                         */
-SECTION_DATA u8 OS__lit_109[16] = {
+SECTION_DATA u8 lit_109[16] = {
 	0x43, 0x6F, 0x6E, 0x73, 0x6F, 0x6C, 0x65, 0x20, 0x54, 0x79, 0x70, 0x65, 0x20, 0x3A, 0x20, 0x00,
 };
 
 /* 803CF31C-803CF328 000B+01 s=0 e=0 z=0  None .data      @110                                                         */
-SECTION_DATA u8 OS__lit_110[11 + 1 /* padding */] = {
+SECTION_DATA u8 lit_110[11 + 1 /* padding */] = {
 	0x52, 0x65, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x25, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00,
@@ -416,7 +416,7 @@ SECTION_DATA u8 lit_112[13 + 3 /* padding */] = {
 };
 
 /* 803CF348-803CF358 000D+03 s=0 e=0 z=0  None .data      @113                                                         */
-SECTION_DATA u8 OS__lit_113[13 + 3 /* padding */] = {
+SECTION_DATA u8 lit_113[13 + 3 /* padding */] = {
 	0x45, 0x50, 0x50, 0x43, 0x20, 0x41, 0x72, 0x74, 0x68, 0x75, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -430,7 +430,7 @@ SECTION_DATA u8 lit_114[13 + 3 /* padding */] = {
 };
 
 /* 803CF368-803CF384 0019+03 s=0 e=0 z=0  None .data      @115                                                         */
-SECTION_DATA u8 OS__lit_115[25 + 3 /* padding */] = {
+SECTION_DATA u8 lit_115[25 + 3 /* padding */] = {
 	0x44, 0x65, 0x76, 0x65, 0x6C, 0x6F, 0x70, 0x6D, 0x65, 0x6E, 0x74, 0x20, 0x48, 0x57, 0x25, 0x64,
 	0x20, 0x28, 0x25, 0x30, 0x38, 0x78, 0x29, 0x0A, 0x00,
 	/* padding */
@@ -438,14 +438,14 @@ SECTION_DATA u8 OS__lit_115[25 + 3 /* padding */] = {
 };
 
 /* 803CF384-803CF394 000E+02 s=0 e=0 z=0  None .data      @117                                                         */
-SECTION_DATA u8 OS__lit_117[14 + 2 /* padding */] = {
+SECTION_DATA u8 lit_117[14 + 2 /* padding */] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x25, 0x64, 0x20, 0x4D, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803CF394-803CF3AC 0015+03 s=0 e=0 z=0  None .data      @118                                                         */
-SECTION_DATA u8 OS__lit_118[21 + 3 /* padding */] = {
+SECTION_DATA u8 lit_118[21 + 3 /* padding */] = {
 	0x41, 0x72, 0x65, 0x6E, 0x61, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x2D, 0x20, 0x30,
 	0x78, 0x25, 0x78, 0x0A, 0x00,
 	/* padding */
@@ -461,7 +461,7 @@ SECTION_DATA u8 __OSExceptionLocations[60] = {
 };
 
 /* 803CF3E8-803CF404 001B+01 s=0 e=0 z=0  None .data      @152                                                         */
-SECTION_DATA u8 OS__lit_152[27 + 1 /* padding */] = {
+SECTION_DATA u8 lit_152[27 + 1 /* padding */] = {
 	0x49, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x69, 0x6E, 0x67, 0x20, 0x4F, 0x53, 0x44, 0x42, 0x49,
 	0x6E, 0x74, 0x65, 0x67, 0x72, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
@@ -469,7 +469,7 @@ SECTION_DATA u8 OS__lit_152[27 + 1 /* padding */] = {
 };
 
 /* 803CF404-803CF434 002E+02 s=0 e=0 z=0  None .data      @153                                                         */
-SECTION_DATA u8 OS__lit_153[46 + 2 /* padding */] = {
+SECTION_DATA u8 lit_153[46 + 2 /* padding */] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x65, 0x65, 0x72, 0x65, 0x64, 0x20, 0x62, 0x79, 0x20, 0x54, 0x52, 0x4B, 0x0A, 0x00,
@@ -478,7 +478,7 @@ SECTION_DATA u8 OS__lit_153[46 + 2 /* padding */] = {
 };
 
 /* 803CF434-803CF464 002F+01 s=0 e=0 z=0  None .data      @154                                                         */
-SECTION_DATA u8 OS__lit_154[47 + 1 /* padding */] = {
+SECTION_DATA u8 lit_154[47 + 1 /* padding */] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x76, 0x65, 0x63, 0x74, 0x6F, 0x72, 0x65,
 	0x64, 0x20, 0x74, 0x6F, 0x20, 0x64, 0x65, 0x62, 0x75, 0x67, 0x67, 0x65, 0x72, 0x0A, 0x00,
@@ -487,7 +487,7 @@ SECTION_DATA u8 OS__lit_154[47 + 1 /* padding */] = {
 };
 
 /* 803CF464-803CF480 001B+01 s=0 e=0 z=0  None .data      @155                                                         */
-SECTION_DATA u8 OS__lit_155[27 + 1 /* padding */] = {
+SECTION_DATA u8 lit_155[27 + 1 /* padding */] = {
 	0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69,
 	0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x2E, 0x2E, 0x2E, 0x0A, 0x00,
 	/* padding */

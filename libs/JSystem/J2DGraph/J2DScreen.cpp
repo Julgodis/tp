@@ -11,19 +11,16 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
+struct JKRArchive {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
+struct J2DAnmTexPattern {
 };
 
-struct _GXCullMode {
+struct J2DScrnBlockHeader {
+};
+
+struct ResTIMG {
 };
 
 struct J2DGrafContext {
@@ -37,19 +34,31 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct ResTIMG {
+struct _GXCullMode {
 };
 
-struct ResFONT {
+struct J2DAnmBase {
 };
 
 struct J2DAnmVtxColor {
 };
 
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
+struct ResFONT {
+};
+
 struct J2DAnmTransform {
 };
 
-struct J2DAnmBase {
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DPane {
@@ -85,15 +94,6 @@ struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmTextureSRTKey {
-};
-
-struct JKRArchive {
-};
-
-struct J2DScrnBlockHeader {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmColor {
@@ -171,10 +171,10 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-struct J2DResReference {
+struct J2DMaterialBlock {
 };
 
-struct J2DMaterialBlock {
+struct J2DResReference {
 };
 
 struct J2DMaterialFactory {
@@ -499,7 +499,7 @@ asm void J2DScreen::checkSignature(JSURandomInputStream* param_0) {
 
 /* ############################################################################################## */
 /* 80456230-80456238 0008+00 s=1 e=0 z=0  None .sdata2    @1705                                                        */
-SECTION_SDATA2 static f64 J2DScreen__lit_1705 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_1705 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 802F8894-802F8990 00FC+00 s=1 e=0 z=0  None .text      getScreenInformation__9J2DScreenFP20JSURandomInputStream     */
 #pragma push

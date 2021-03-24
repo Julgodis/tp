@@ -307,7 +307,7 @@ extern "C" extern u32 ga4cSignature__Q37JStudio3fvb4data[1 + 1 /* padding */];
 
 /* ############################################################################################## */
 /* 803C49C0-803C4A1C 005C+00 s=1 e=0 z=0  None .data      @838                                                         */
-SECTION_DATA static void* fvb__lit_838[23] = {
+SECTION_DATA static void* lit_838[23] = {
 	/* 0    */ (void*)(((char*)prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl)+0x1F8),
 	/* 1    */ (void*)(((char*)prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl)+0xA0),
 	/* 2    */ (void*)(((char*)prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl)+0x1EC),

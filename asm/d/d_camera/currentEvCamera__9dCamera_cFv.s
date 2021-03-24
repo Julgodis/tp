@@ -23,8 +23,8 @@ lbl_8018050C:
 lbl_80180560:
 /* 80180560 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80180564 00000004  38 81 00 08 */	addi r4, r1, 8
-/* 80180568 00000008  3C A0 80 39 */	lis r5, d_d_camera__stringBase0@ha
-/* 8018056C 0000000C  38 A5 3F 68 */	addi r5, r5, d_d_camera__stringBase0@l
+/* 80180568 00000008  3C A0 80 39 */	lis r5, stringBase0@ha
+/* 8018056C 0000000C  38 A5 3F 68 */	addi r5, r5, stringBase0@l
 /* 80180570 00000010  38 A5 03 93 */	addi r5, r5, 0x393
 /* 80180574 00000014  38 C0 00 00 */	li r6, 0
 /* 80180578 00000018  4B F0 8B 15 */	bl getEvIntData__9dCamera_cFPiPci

@@ -11,52 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct _GXCullMode {
-};
-
-struct J2DTextBoxHBinding {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
 struct J2DTevStage {
 };
 
-struct JUTFont {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
-};
-
-struct ResFONT {
+struct ResTIMG {
 };
 
 struct JSUStreamSeekFrom {
@@ -67,7 +25,23 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+struct _GXCullMode {
+};
+
+struct J2DAnmBase {
+};
+
 struct J2DAnmVtxColor {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -93,10 +67,36 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct JUTFont {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct J2DTextBoxHBinding {
 };
 
 struct J2DTextBoxEx {
@@ -198,10 +198,7 @@ extern "C" void setCullBack__12J2DTextBoxExFb(); // 1
 extern "C" void isUsed__12J2DTextBoxExFPC7ResTIMG(); // 1
 extern "C" void setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__12J2DTextBoxExFP10J2DAnmBase(); // 1
-extern "C" extern u8 const lit_1954[12];
-extern "C" extern u8 const lit_1955[15 + 1 /* padding */];
-extern "C" extern u8 const lit_1956[15 + 1 /* padding */];
-extern "C" extern char const* const J2DTextBoxEx__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -338,7 +335,7 @@ SECTION_SDATA2 static u8 lit_1534[4 + 4 /* padding */] = {
 SECTION_SDATA2 static f64 lit_1536 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 804562E8-804562F0 0008+00 s=1 e=0 z=0  None .sdata2    @1539                                                        */
-SECTION_SDATA2 static f64 J2DTextBoxEx__lit_1539 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_1539 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 803071E4-8030751C 0338+00 s=0 e=1 z=0  None .text      __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
 #pragma push
@@ -387,20 +384,20 @@ SECTION_RODATA static u8 const lit_1953[12] = {
 	0x0F, 0x08, 0x0A, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x0F, 0x0A, 0x00, 0x0F,
 };
 
-/* 803A1DC4-803A1DD0 000C+00 s=0 e=0 z=0  None .rodata    @1954                                                        */
-SECTION_RODATA u8 const lit_1954[12] = {
+/* 803A1DC4-803A1DD0 000C+00 s=1 e=0 z=0  None .rodata    @1954                                                        */
+SECTION_RODATA static u8 const lit_1954[12] = {
 	0x07, 0x04, 0x05, 0x07, 0x01, 0x02, 0x04, 0x07, 0x07, 0x05, 0x00, 0x07,
 };
 
-/* 803A1DD0-803A1DE0 000F+01 s=0 e=0 z=0  None .rodata    @1955                                                        */
-SECTION_RODATA u8 const lit_1955[15 + 1 /* padding */] = {
+/* 803A1DD0-803A1DE0 000F+01 s=1 e=0 z=0  None .rodata    @1955                                                        */
+SECTION_RODATA static u8 const lit_1955[15 + 1 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */
 	0x00,
 };
 
-/* 803A1DE0-803A1DF0 000F+01 s=0 e=0 z=0  None .rodata    @1956                                                        */
-SECTION_RODATA u8 const lit_1956[15 + 1 /* padding */] = {
+/* 803A1DE0-803A1DF0 000F+01 s=1 e=0 z=0  None .rodata    @1956                                                        */
+SECTION_RODATA static u8 const lit_1956[15 + 1 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */
 	0x00,

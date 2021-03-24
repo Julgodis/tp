@@ -1,5 +1,5 @@
 lbl_800E37D0:
 /* 800E37D0 00000000  3C 60 80 39 */	lis r3, m__18daAlinkHIO_bomb_c0@ha
 /* 800E37D4 00000004  38 63 E7 14 */	addi r3, r3, m__18daAlinkHIO_bomb_c0@l
-/* 800E37D8 00000008  C0 23 00 20 */	lfs f1, 0x20(r3)
+/* 800E37D8 00000008  C0 23 00 20 */	lfs f1, 0x20(r3)	/* effective address: 8038E734 */
 /* 800E37DC 0000000C  4E 80 00 20 */	blr 

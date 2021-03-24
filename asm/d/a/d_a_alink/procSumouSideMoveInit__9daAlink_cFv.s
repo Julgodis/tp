@@ -15,7 +15,7 @@ lbl_800EB208:
 /* 800EB23C 00000034  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 800EB240 00000038  3C 60 80 39 */	lis r3, m__21daAlinkHIO_atnMove_c0@ha
 /* 800EB244 0000003C  38 63 D7 14 */	addi r3, r3, m__21daAlinkHIO_atnMove_c0@l
-/* 800EB248 00000040  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 800EB248 00000040  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8038D730 */
 /* 800EB24C 00000044  D0 1F 05 94 */	stfs f0, 0x594(r31)
 /* 800EB250 00000048  7F E3 FB 78 */	mr r3, r31
 /* 800EB254 0000004C  38 80 01 41 */	li r4, 0x141
@@ -30,7 +30,7 @@ lbl_800EB208:
 /* 800EB278 00000070  38 00 00 05 */	li r0, 5
 /* 800EB27C 00000074  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800EB280 00000078  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800EB284 0000007C  98 03 5E 81 */	stb r0, 0x5e81(r3)
+/* 800EB284 0000007C  98 03 5E 81 */	stb r0, 0x5e81(r3)	/* effective address: 8040C041 */
 /* 800EB288 00000080  38 00 00 0C */	li r0, 0xc
 /* 800EB28C 00000084  98 1F 2F 99 */	stb r0, 0x2f99(r31)
 /* 800EB290 00000088  7F E3 FB 78 */	mr r3, r31

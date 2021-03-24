@@ -23,7 +23,7 @@ lbl_800E7CC0:
 /* 800E7D14 00000004  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800E7D18 00000008  3C 60 80 39 */	lis r3, m__21daAlinkHIO_fmChain_c0@ha
 /* 800E7D1C 0000000C  38 63 E7 CC */	addi r3, r3, m__21daAlinkHIO_fmChain_c0@l
-/* 800E7D20 00000010  C0 03 00 10 */	lfs f0, 0x10(r3)
+/* 800E7D20 00000010  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8038E7DC */
 /* 800E7D24 00000064  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E7D28 00000000  40 81 00 60 */	ble lbl_800E7D88
 lbl_800E7D2C:

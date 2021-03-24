@@ -9,12 +9,12 @@ lbl_800B4B2C:
 /* 800B4B48 0000001C  48 00 69 71 */	bl checkHeavyStateOn__9daAlink_cFii
 /* 800B4B4C 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 800B4B50 00000024  41 82 00 14 */	beq lbl_800B4B64
-/* 800B4B54 00000028  C0 22 94 AC */	lfs f1, d_a_d_a_alink__lit_16641(r2)
+/* 800B4B54 00000028  C0 22 94 AC */	lfs f1, lit_16641(r2)
 /* 800B4B58 0000002C  C0 1F 34 34 */	lfs f0, 0x3434(r31)
 /* 800B4B5C 00000030  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800B4B60 00000034  48 00 00 08 */	b lbl_800B4B68
 lbl_800B4B64:
-/* 800B4B64 00000000  C0 22 94 AC */	lfs f1, d_a_d_a_alink__lit_16641(r2)
+/* 800B4B64 00000000  C0 22 94 AC */	lfs f1, lit_16641(r2)
 lbl_800B4B68:
 /* 800B4B68 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800B4B6C 00000004  80 01 00 14 */	lwz r0, 0x14(r1)

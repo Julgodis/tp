@@ -16,16 +16,17 @@ struct daE_OctBg_HIO_c {
 	/* 80739CB8 */ ~daE_OctBg_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct J3DJoint {
 };
 
 struct cXyz {
 };
 
-struct J3DModel {
-};
-
 struct daE_OctBg_c {
+	/* 8073626C */ void setAction(void (daE_OctBg_c::*)());
 	/* 80736310 */ void setSparkEffect();
 	/* 80736418 */ void checkExplode();
 	/* 8073651C */ void action();
@@ -98,7 +99,7 @@ void daE_OctBg_Draw(daE_OctBg_c*); // 2
 void daE_OctBg_IsDelete(daE_OctBg_c*); // 2
 
 extern "C" void __ct__15daE_OctBg_HIO_cFv(); // 1
-extern "C" static void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v(); // 1
+extern "C" void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v(); // 1
 extern "C" void setSparkEffect__11daE_OctBg_cFv(); // 1
 extern "C" void checkExplode__11daE_OctBg_cFv(); // 1
 extern "C" void action__11daE_OctBg_cFv(); // 1
@@ -308,7 +309,7 @@ asm daE_OctBg_HIO_c::daE_OctBg_HIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v() {
+asm void daE_OctBg_c::setAction(void (daE_OctBg_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_oct_bg/d_a_e_oct_bg/setAction__11daE_OctBg_cFM11daE_OctBg_cFPCvPv_v.s"
 }

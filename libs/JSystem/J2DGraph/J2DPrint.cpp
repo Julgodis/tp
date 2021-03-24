@@ -17,11 +17,11 @@ struct JUtility {
 
 };
 
-struct J2DTextBoxVBinding {
-};
-
 struct JUTFont {
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+};
+
+struct J2DTextBoxVBinding {
 };
 
 struct J2DTextBoxHBinding {
@@ -192,7 +192,7 @@ asm J2DPrint::~J2DPrint() {
 
 /* ############################################################################################## */
 /* 804561CC-804561D0 0004+00 s=1 e=0 z=0  None .sdata2    @644                                                         */
-SECTION_SDATA2 static f32 J2DPrint__lit_644 = 32.0f;
+SECTION_SDATA2 static f32 lit_644 = 32.0f;
 
 /* 804561D0-804561D8 0008+00 s=6 e=0 z=0  None .sdata2    @650                                                         */
 SECTION_SDATA2 static f64 lit_650 = 4503601774854144.0 /* cast s32 to float */;
@@ -276,7 +276,7 @@ asm void J2DPrint::printReturn(char const* param_0, f32 param_1, f32 param_2, J2
 
 /* ############################################################################################## */
 /* 804561E8-804561EC 0004+00 s=1 e=0 z=0  None .sdata2    @913                                                         */
-SECTION_SDATA2 static f32 J2DPrint__lit_913 = 10000.0f;
+SECTION_SDATA2 static f32 lit_913 = 10000.0f;
 
 /* 802F4B4C-802F52E8 079C+00 s=2 e=0 z=0  None .text      parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb              */
 #pragma push
@@ -291,7 +291,7 @@ asm void J2DPrint::parse(u8 const* param_0, int param_1, int param_2, u16* param
 
 /* ############################################################################################## */
 /* 804561EC-804561F0 0004+00 s=2 e=0 z=0  None .sdata2    @937                                                         */
-SECTION_SDATA2 static f32 J2DPrint__lit_937 = 1.0f;
+SECTION_SDATA2 static f32 lit_937 = 1.0f;
 
 /* 802F52E8-802F5410 0128+00 s=2 e=0 z=0  None .text      doCtrlCode__8J2DPrintFi                                      */
 #pragma push

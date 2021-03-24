@@ -4,7 +4,7 @@ lbl_8023834C:
 /* 80238354 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80238358 0000000C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8023835C 00000010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80238360 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80238360 00000014  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
 /* 80238364 00000018  4B FF F2 09 */	bl offMsgSendLocal__12dMsgObject_cFv
 /* 80238368 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8023836C 00000020  7C 08 03 A6 */	mtlr r0

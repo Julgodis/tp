@@ -44,7 +44,7 @@ lbl_800F50CC:
 /* 800F50E4 00000008  38 80 00 02 */	li r4, 2
 /* 800F50E8 0000000C  3C A0 80 39 */	lis r5, m__23daAlinkHIO_smallJump_c0@ha
 /* 800F50EC 00000010  38 A5 E1 1C */	addi r5, r5, m__23daAlinkHIO_smallJump_c0@l
-/* 800F50F0 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)
+/* 800F50F0 00000014  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 8038E160 */
 /* 800F50F4 00000018  4B FD 19 55 */	bl procFallInit__9daAlink_cFif
 /* 800F50F8 0000001C  48 00 00 D4 */	b lbl_800F51CC
 lbl_800F50FC:
@@ -69,13 +69,13 @@ lbl_800F5108:
 /* 800F5140 0000001C  4B FB 7F B5 */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 800F5144 00000020  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800F5148 00000024  38 63 55 14 */	addi r3, r3, l_waitBaseAnime@l
-/* 800F514C 00000028  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F514C 00000028  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 800F5150 0000002C  D0 1F 33 B0 */	stfs f0, 0x33b0(r31)
-/* 800F5154 00000030  C0 03 00 00 */	lfs f0, 0(r3)
+/* 800F5154 00000030  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80425514 */
 /* 800F5158 00000034  D0 1F 35 88 */	stfs f0, 0x3588(r31)
-/* 800F515C 00000038  C0 03 00 04 */	lfs f0, 4(r3)
+/* 800F515C 00000038  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80425518 */
 /* 800F5160 0000003C  D0 1F 35 8C */	stfs f0, 0x358c(r31)
-/* 800F5164 00000040  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800F5164 00000040  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042551C */
 /* 800F5168 00000044  D0 1F 35 90 */	stfs f0, 0x3590(r31)
 /* 800F516C 00000048  48 00 00 60 */	b lbl_800F51CC
 lbl_800F5170:
@@ -94,7 +94,7 @@ lbl_800F5170:
 /* 800F51A0 00000030  7F E3 FB 78 */	mr r3, r31
 /* 800F51A4 00000034  3C 80 80 39 */	lis r4, m__22daAlinkHIO_autoJump_c0@ha
 /* 800F51A8 00000038  38 84 E0 68 */	addi r4, r4, m__22daAlinkHIO_autoJump_c0@l
-/* 800F51AC 0000003C  C0 24 00 74 */	lfs f1, 0x74(r4)
+/* 800F51AC 0000003C  C0 24 00 74 */	lfs f1, 0x74(r4)	/* effective address: 8038E0DC */
 /* 800F51B0 00000040  C0 5F 05 34 */	lfs f2, 0x534(r31)
 /* 800F51B4 00000044  38 80 00 00 */	li r4, 0
 /* 800F51B8 00000048  4B FC 65 B9 */	bl setSpecialGravity__9daAlink_cFffi

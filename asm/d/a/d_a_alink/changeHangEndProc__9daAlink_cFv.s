@@ -9,9 +9,9 @@ lbl_800FA78C:
 /* 800FA7A8 0000001C  C0 7F 33 D8 */	lfs f3, 0x33d8(r31)
 /* 800FA7AC 00000020  3C 60 80 39 */	lis r3, m__22daAlinkHIO_wallHang_c0@ha
 /* 800FA7B0 00000024  38 63 E1 F4 */	addi r3, r3, m__22daAlinkHIO_wallHang_c0@l
-/* 800FA7B4 00000028  C0 03 00 18 */	lfs f0, 0x18(r3)
+/* 800FA7B4 00000028  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8038E20C */
 /* 800FA7B8 0000002C  EC 23 00 2A */	fadds f1, f3, f0
-/* 800FA7BC 00000030  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800FA7BC 00000030  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800FA7C0 00000034  EC 01 00 28 */	fsubs f0, f1, f0
 /* 800FA7C4 00000038  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800FA7C8 00000000  40 80 00 40 */	bge lbl_800FA808
@@ -23,7 +23,7 @@ lbl_800FA78C:
 /* 800FA7E0 00000054  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800FA7E4 00000000  41 80 00 24 */	blt lbl_800FA808
 lbl_800FA7E8:
-/* 800FA7E8 00000000  C0 02 93 3C */	lfs f0, d_a_d_a_alink__lit_7808(r2)
+/* 800FA7E8 00000000  C0 02 93 3C */	lfs f0, lit_7808(r2)
 /* 800FA7EC 00000004  EC 02 00 28 */	fsubs f0, f2, f0
 /* 800FA7F0 00000008  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 800FA7F4 00000000  40 80 00 14 */	bge lbl_800FA808
@@ -44,7 +44,7 @@ lbl_800FA808:
 /* 800FA82C 00000024  38 80 00 01 */	li r4, 1
 /* 800FA830 00000028  3C A0 80 39 */	lis r5, m__22daAlinkHIO_autoJump_c0@ha
 /* 800FA834 0000002C  38 A5 E0 68 */	addi r5, r5, m__22daAlinkHIO_autoJump_c0@l
-/* 800FA838 00000030  C0 25 00 70 */	lfs f1, 0x70(r5)
+/* 800FA838 00000030  C0 25 00 70 */	lfs f1, 0x70(r5)	/* effective address: 8038E0D8 */
 /* 800FA83C 00000034  4B FC C2 0D */	bl procFallInit__9daAlink_cFif
 /* 800FA840 00000038  48 00 00 08 */	b lbl_800FA848
 lbl_800FA844:

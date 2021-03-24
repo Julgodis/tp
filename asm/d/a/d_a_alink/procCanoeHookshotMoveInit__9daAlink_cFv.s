@@ -18,9 +18,9 @@ lbl_800F7348:
 /* 800F7358 00000010  48 01 1D 95 */	bl initHookshotUpperAnimeSpeed__9daAlink_cFi
 /* 800F735C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800F7360 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800F7364 0000001C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 800F7364 0000001C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F7368 00000020  60 00 40 00 */	ori r0, r0, 0x4000
-/* 800F736C 00000024  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 800F736C 00000024  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 800F7370 00000028  38 60 00 01 */	li r3, 1
 lbl_800F7374:
 /* 800F7374 00000000  83 E1 00 0C */	lwz r31, 0xc(r1)

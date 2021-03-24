@@ -7,7 +7,7 @@ lbl_800318B4:
 /* 800318C8 00000014  38 A1 00 08 */	addi r5, r1, 8
 /* 800318CC 00000018  4B FE C0 35 */	bl fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz
 /* 800318D0 0000001C  C0 21 00 0C */	lfs f1, 0xc(r1)
-/* 800318D4 00000020  C0 02 83 54 */	lfs f0, d_com_d_com_static__lit_4338(r2)
+/* 800318D4 00000020  C0 02 83 54 */	lfs f0, lit_4338(r2)
 /* 800318D8 00000024  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800318DC 00000000  4C 41 13 82 */	cror 2, 1, 2
 /* 800318E0 00000004  40 82 00 54 */	bne lbl_80031934

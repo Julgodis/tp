@@ -16,11 +16,11 @@ struct daObj_Kanban2_HIO_c {
 	/* 80585578 */ ~daObj_Kanban2_HIO_c();
 };
 
-struct cXyz {
-	/* 805818DC */ ~cXyz();
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
+	/* 805818DC */ ~cXyz();
 };
 
 struct daObj_Kanban2_c {

@@ -126,7 +126,7 @@ extern "C" void state_register__10JKRExpHeapCFPQ27JKRHeap6TStateUl(); // 1
 extern "C" void state_compare__10JKRExpHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
 extern "C" void getHeapType__10JKRExpHeapFv(); // 1
 extern "C" void do_getCurrentGroupId__10JKRExpHeapFv(); // 1
-extern "C" extern char const* const JKRExpHeap__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -602,7 +602,7 @@ asm void JKRExpHeap::check() {
 
 /* ############################################################################################## */
 /* 80455F98-80455FA0 0004+04 s=2 e=0 z=0  None .sdata2    @1121                                                        */
-SECTION_SDATA2 static f32 JKRExpHeap__lit_1121[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_1121[1 + 1 /* padding */] = {
 	100.0f,
 	/* padding */
 	0.0f,

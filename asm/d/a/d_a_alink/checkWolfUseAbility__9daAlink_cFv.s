@@ -34,7 +34,7 @@ lbl_801299EC:
 /* 80129A24 00000038  A8 9F 30 AC */	lha r4, 0x30ac(r31)
 /* 80129A28 0000003C  3C 60 80 39 */	lis r3, m__18daAlinkHIO_wolf_c0@ha
 /* 80129A2C 00000040  38 63 F9 F8 */	addi r3, r3, m__18daAlinkHIO_wolf_c0@l
-/* 80129A30 00000044  A8 03 00 0C */	lha r0, 0xc(r3)
+/* 80129A30 00000044  A8 03 00 0C */	lha r0, 0xc(r3)	/* effective address: 8038FA04 */
 /* 80129A34 00000048  7C 04 00 00 */	cmpw r4, r0
 /* 80129A38 0000004C  40 80 00 34 */	bge lbl_80129A6C
 /* 80129A3C 00000050  7F E3 FB 78 */	mr r3, r31

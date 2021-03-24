@@ -26,7 +26,7 @@ lbl_8023F8DC:
 /* 8023F8E4 00000008  C8 22 B2 18 */	lfd f1, lit_4388(r2)
 /* 8023F8E8 0000000C  3C 00 43 30 */	lis r0, 0x4330
 /* 8023F8EC 00000010  C0 5F 01 40 */	lfs f2, 0x140(r31)
-/* 8023F8F0 00000014  C0 06 00 48 */	lfs f0, 0x48(r6)
+/* 8023F8F0 00000014  C0 06 00 48 */	lfs f0, 0x48(r6)	/* effective address: 804302D4 */
 /* 8023F8F4 00000018  EC 02 00 2A */	fadds f0, f2, f0
 /* 8023F8F8 0000001C  D0 1F 01 40 */	stfs f0, 0x140(r31)
 /* 8023F8FC 00000020  80 7F 01 18 */	lwz r3, 0x118(r31)
@@ -92,7 +92,7 @@ lbl_8023F9BC:
 /* 8023F9E0 00000024  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8023F9E4 00000028  41 82 00 20 */	beq lbl_8023FA04
 /* 8023F9E8 0000002C  7F E3 FB 78 */	mr r3, r31
-/* 8023F9EC 00000030  C0 22 B1 FC */	lfs f1, msg_scrn_d_msg_scrn_item__lit_4193(r2)
+/* 8023F9EC 00000030  C0 22 B1 FC */	lfs f1, lit_4193(r2)
 /* 8023F9F0 00000034  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8023F9F4 00000038  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 8023F9F8 0000003C  7D 89 03 A6 */	mtctr r12
@@ -130,10 +130,10 @@ lbl_8023FA58:
 lbl_8023FA64:
 /* 8023FA64 00000000  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 8023FA68 00000004  38 83 02 8C */	addi r4, r3, g_MsgObject_HIO_c@l
-/* 8023FA6C 00000008  C0 24 00 A8 */	lfs f1, 0xa8(r4)
+/* 8023FA6C 00000008  C0 24 00 A8 */	lfs f1, 0xa8(r4)	/* effective address: 80430334 */
 /* 8023FA70 0000000C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8023FA74 00000010  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023FA78 00000014  C0 04 00 7C */	lfs f0, 0x7c(r4)
+/* 8023FA78 00000014  C0 04 00 7C */	lfs f0, 0x7c(r4)	/* effective address: 80430308 */
 /* 8023FA7C 00000018  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023FA80 0000001C  D0 23 00 D0 */	stfs f1, 0xd0(r3)
 /* 8023FA84 00000020  81 83 00 00 */	lwz r12, 0(r3)
@@ -143,13 +143,13 @@ lbl_8023FA64:
 /* 8023FA94 00000030  C0 3F 01 6C */	lfs f1, 0x16c(r31)
 /* 8023FA98 00000034  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 8023FA9C 00000038  38 83 02 8C */	addi r4, r3, g_MsgObject_HIO_c@l
-/* 8023FAA0 0000003C  C0 04 00 E4 */	lfs f0, 0xe4(r4)
+/* 8023FAA0 0000003C  C0 04 00 E4 */	lfs f0, 0xe4(r4)	/* effective address: 80430370 */
 /* 8023FAA4 00000040  EC 01 00 2A */	fadds f0, f1, f0
 /* 8023FAA8 00000044  EC 5F 00 2A */	fadds f2, f31, f0
 /* 8023FAAC 00000048  80 7F 01 10 */	lwz r3, 0x110(r31)
 /* 8023FAB0 0000004C  80 63 00 04 */	lwz r3, 4(r3)
 /* 8023FAB4 00000050  C0 3F 01 68 */	lfs f1, 0x168(r31)
-/* 8023FAB8 00000054  C0 04 00 E0 */	lfs f0, 0xe0(r4)
+/* 8023FAB8 00000054  C0 04 00 E0 */	lfs f0, 0xe0(r4)	/* effective address: 8043036C */
 /* 8023FABC 00000058  EC 01 00 2A */	fadds f0, f1, f0
 /* 8023FAC0 0000005C  D0 03 00 D4 */	stfs f0, 0xd4(r3)
 /* 8023FAC4 00000060  D0 43 00 D8 */	stfs f2, 0xd8(r3)
@@ -159,10 +159,10 @@ lbl_8023FA64:
 /* 8023FAD4 00000070  4E 80 04 21 */	bctrl 
 /* 8023FAD8 00000074  3C 60 80 43 */	lis r3, g_MsgObject_HIO_c@ha
 /* 8023FADC 00000078  38 83 02 8C */	addi r4, r3, g_MsgObject_HIO_c@l
-/* 8023FAE0 0000007C  C0 24 00 DC */	lfs f1, 0xdc(r4)
+/* 8023FAE0 0000007C  C0 24 00 DC */	lfs f1, 0xdc(r4)	/* effective address: 80430368 */
 /* 8023FAE4 00000080  80 7F 01 10 */	lwz r3, 0x110(r31)
 /* 8023FAE8 00000084  80 63 00 04 */	lwz r3, 4(r3)
-/* 8023FAEC 00000088  C0 04 00 D8 */	lfs f0, 0xd8(r4)
+/* 8023FAEC 00000088  C0 04 00 D8 */	lfs f0, 0xd8(r4)	/* effective address: 80430364 */
 /* 8023FAF0 0000008C  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8023FAF4 00000090  D0 23 00 D0 */	stfs f1, 0xd0(r3)
 /* 8023FAF8 00000094  81 83 00 00 */	lwz r12, 0(r3)

@@ -21,14 +21,20 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct JUTFont {
+};
+
+struct J2DTextBox {
 };
 
 struct fopAc_ac_c {
 };
 
-struct J2DTextBox {
+struct msg_class {
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct JKRHeap {
@@ -43,12 +49,6 @@ struct JKRArchive {
 
 struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
-};
-
-struct JUTFont {
-};
-
-struct msg_class {
 };
 
 struct dMsgObject_c {
@@ -587,7 +587,7 @@ extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void setActorPos__19jmessage_tReferenceF4cXyz(); // 1
-extern "C" extern char const* const d_msg_d_msg_object__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_MSG_OBJECT[10];
 extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
@@ -745,7 +745,7 @@ asm static void dMsgObject_searchSSItem(void* param_0, void* param_1) {
 
 /* ############################################################################################## */
 /* 803C0AE8-803C0B4C 0064+00 s=1 e=0 z=0  None .data      @4486                                                        */
-SECTION_DATA static void* d_msg_d_msg_object__lit_4486[25] = {
+SECTION_DATA static void* lit_4486[25] = {
 	/* 0    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
 	/* 1    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x1F4),
 	/* 2    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x200),
@@ -835,36 +835,36 @@ SECTION_DATA static void* __vt__20dMsgObject_HowlHIO_c[3] = {
 };
 
 /* 80454AA0-80454AA4 0004+00 s=2 e=0 z=0  None .sdata2    @4076                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4076 = 0.5f;
+SECTION_SDATA2 static f32 lit_4076 = 0.5f;
 
 /* 80454AA4-80454AA8 0004+00 s=1 e=0 z=0  None .sdata2    @4077                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4077 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4077 = 1.0f / 10.0f;
 
 /* 80454AA8-80454AAC 0004+00 s=2 e=0 z=0  None .sdata2    @4078                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4078 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4078 = 3.0f / 10.0f;
 
 /* 80454AAC-80454AB0 0004+00 s=2 e=0 z=0  None .sdata2    @4079                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4079 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4079 = 2.0f / 5.0f;
 
 /* 80454AB0-80454AB4 0004+00 s=1 e=0 z=0  None .sdata2    @4080                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4080 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4080 = 1.0f / 20.0f;
 
 /* 80454AB4-80454AB8 0004+00 s=2 e=0 z=0  None .sdata2    @4081                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4081 = 1.5f;
+SECTION_SDATA2 static f32 lit_4081 = 1.5f;
 
 /* 80454AB8-80454ABC 0004+00 s=1 e=0 z=0  None .sdata2    @4082                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4082 = 2.0f;
+SECTION_SDATA2 static f32 lit_4082 = 2.0f;
 
 /* 80454ABC-80454AC0 0004+00 s=7 e=0 z=0  None .sdata2    @4083                                                        */
-SECTION_SDATA2 static u8 d_msg_d_msg_object__lit_4083[4] = {
+SECTION_SDATA2 static u8 lit_4083[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454AC0-80454AC4 0004+00 s=12 e=0 z=0  None .sdata2    @4084                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4084 = 1.0f;
+SECTION_SDATA2 static f32 lit_4084 = 1.0f;
 
 /* 80454AC4-80454AC8 0004+00 s=1 e=0 z=0  None .sdata2    @4085                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4085 = 11.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4085 = 11.0f / 5.0f;
 
 /* 80232AEC-80232D6C 0280+00 s=1 e=0 z=0  None .text      __ct__20dMsgObject_HowlHIO_cFv                               */
 #pragma push
@@ -879,67 +879,67 @@ asm dMsgObject_HowlHIO_c::dMsgObject_HowlHIO_c() {
 
 /* ############################################################################################## */
 /* 80454AC8-80454ACC 0004+00 s=1 e=0 z=0  None .sdata2    @4127                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4127 = 23.0f;
+SECTION_SDATA2 static f32 lit_4127 = 23.0f;
 
 /* 80454ACC-80454AD0 0004+00 s=1 e=0 z=0  None .sdata2    @4128                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4128 = 22.0f;
+SECTION_SDATA2 static f32 lit_4128 = 22.0f;
 
 /* 80454AD0-80454AD4 0004+00 s=1 e=0 z=0  None .sdata2    @4129                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4129 = 26.0f;
+SECTION_SDATA2 static f32 lit_4129 = 26.0f;
 
 /* 80454AD4-80454AD8 0004+00 s=1 e=0 z=0  None .sdata2    @4130                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4130 = 25.0f;
+SECTION_SDATA2 static f32 lit_4130 = 25.0f;
 
 /* 80454AD8-80454ADC 0004+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4131 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4131 = 7.0f / 10.0f;
 
 /* 80454ADC-80454AE0 0004+00 s=1 e=0 z=0  None .sdata2    @4132                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4132 = 9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4132 = 9.0f / 10.0f;
 
 /* 80454AE0-80454AE4 0004+00 s=1 e=0 z=0  None .sdata2    @4133                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4133 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4133 = 1.0f / 5.0f;
 
 /* 80454AE4-80454AE8 0004+00 s=1 e=0 z=0  None .sdata2    @4134                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4134 = 6.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4134 = 6.0f / 5.0f;
 
 /* 80454AE8-80454AEC 0004+00 s=1 e=0 z=0  None .sdata2    @4135                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4135 = 21.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4135 = 21.0f / 20.0f;
 
 /* 80454AEC-80454AF0 0004+00 s=1 e=0 z=0  None .sdata2    @4136                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4136 = 97.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4136 = 97.0f / 100.0f;
 
 /* 80454AF0-80454AF4 0004+00 s=1 e=0 z=0  None .sdata2    @4137                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4137 = 11.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4137 = 11.0f / 10.0f;
 
 /* 80454AF4-80454AF8 0004+00 s=1 e=0 z=0  None .sdata2    @4138                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4138 = 30.0f;
+SECTION_SDATA2 static f32 lit_4138 = 30.0f;
 
 /* 80454AF8-80454AFC 0004+00 s=1 e=0 z=0  None .sdata2    @4139                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4139 = 11.0f;
+SECTION_SDATA2 static f32 lit_4139 = 11.0f;
 
 /* 80454AFC-80454B00 0004+00 s=1 e=0 z=0  None .sdata2    @4140                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4140 = 17.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4140 = 17.0f / 10.0f;
 
 /* 80454B00-80454B04 0004+00 s=1 e=0 z=0  None .sdata2    @4141                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4141 = 4.5f;
+SECTION_SDATA2 static f32 lit_4141 = 4.5f;
 
 /* 80454B04-80454B08 0004+00 s=1 e=0 z=0  None .sdata2    @4142                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4142 = -45.0f;
+SECTION_SDATA2 static f32 lit_4142 = -45.0f;
 
 /* 80454B08-80454B0C 0004+00 s=1 e=0 z=0  None .sdata2    @4143                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4143 = 0.75f;
+SECTION_SDATA2 static f32 lit_4143 = 0.75f;
 
 /* 80454B0C-80454B10 0004+00 s=1 e=0 z=0  None .sdata2    @4144                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4144 = -5.0f;
+SECTION_SDATA2 static f32 lit_4144 = -5.0f;
 
 /* 80454B10-80454B14 0004+00 s=7 e=0 z=0  None .sdata2    @4145                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4145 = -1.0f;
+SECTION_SDATA2 static f32 lit_4145 = -1.0f;
 
 /* 80454B14-80454B18 0004+00 s=1 e=0 z=0  None .sdata2    @4146                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4146 = 19.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4146 = 19.0f / 20.0f;
 
 /* 80454B18-80454B20 0004+04 s=1 e=0 z=0  None .sdata2    @4147                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_4147[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4147[1 + 1 /* padding */] = {
 	-30.0f,
 	/* padding */
 	0.0f,
@@ -989,7 +989,7 @@ SECTION_DEAD static char const* const pad_803996E7 = "";
 #pragma pop
 
 /* 80430280-8043028C 000C+00 s=1 e=0 z=0  None .bss       @4011                                                        */
-static u8 d_msg_d_msg_object__lit_4011[12];
+static u8 lit_4011[12];
 
 /* 8043028C-8043069C 0410+00 s=7 e=51 z=0  None .bss       g_MsgObject_HIO_c                                            */
 u8 g_MsgObject_HIO_c[1040];
@@ -1117,7 +1117,7 @@ asm void dMsgObject_c::waitProc() {
 
 /* ############################################################################################## */
 /* 80454B20-80454B28 0008+00 s=6 e=0 z=0  None .sdata2    @4965                                                        */
-SECTION_SDATA2 static f64 d_msg_d_msg_object__lit_4965 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_4965 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80234318-802349D8 06C0+00 s=1 e=0 z=0  None .text      openProc__12dMsgObject_cFv                                   */
 #pragma push
@@ -1132,7 +1132,7 @@ asm void dMsgObject_c::openProc() {
 
 /* ############################################################################################## */
 /* 80454B28-80454B2C 0004+00 s=3 e=0 z=0  None .sdata2    @5044                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_5044 = 10.0f;
+SECTION_SDATA2 static f32 lit_5044 = 10.0f;
 
 /* 802349D8-80234CCC 02F4+00 s=1 e=0 z=0  None .text      outnowProc__12dMsgObject_cFv                                 */
 #pragma push
@@ -1268,16 +1268,16 @@ asm void dMsgObject_c::talkStartInit() {
 
 /* ############################################################################################## */
 /* 80454B2C-80454B30 0004+00 s=1 e=0 z=0  None .sdata2    @5947                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_5947 = 608.0f;
+SECTION_SDATA2 static f32 lit_5947 = 608.0f;
 
 /* 80454B30-80454B34 0004+00 s=1 e=0 z=0  None .sdata2    @5948                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_5948 = 448.0f;
+SECTION_SDATA2 static f32 lit_5948 = 448.0f;
 
 /* 80454B34-80454B38 0004+00 s=1 e=0 z=0  None .sdata2    @5949                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_5949 = -200.0f;
+SECTION_SDATA2 static f32 lit_5949 = -200.0f;
 
 /* 80454B38-80454B40 0004+04 s=1 e=0 z=0  None .sdata2    @5950                                                        */
-SECTION_SDATA2 static f32 d_msg_d_msg_object__lit_5950[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_5950[1 + 1 /* padding */] = {
 	-100.0f,
 	/* padding */
 	0.0f,

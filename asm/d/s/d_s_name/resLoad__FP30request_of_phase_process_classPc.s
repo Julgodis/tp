@@ -6,6 +6,3 @@ lbl_80258878:
 /* 80258888 00000010  38 8D 81 D8 */	addi r4, r13, 0x80450758-0x80458580 /* data_80450758-_SDA_BASE_ */
 /* 8025888C 00000014  4B DD 72 95 */	bl dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv
 /* 80258890 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80258894 0000001C  7C 08 03 A6 */	mtlr r0
-/* 80258898 00000020  38 21 00 10 */	addi r1, r1, 0x10
-/* 8025889C 00000024  4E 80 00 20 */	blr 

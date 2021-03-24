@@ -8,12 +8,12 @@ lbl_8001FFC4:
 /* 8001FFDC 00000018  48 21 80 BD */	bl endFlowGroup__12dMsgObject_cFv
 /* 8001FFE0 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8001FFE4 00000020  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 8001FFE8 00000024  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
+/* 8001FFE8 00000024  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)	/* effective address: 8040C04F */
 /* 8001FFEC 00000028  28 00 00 08 */	cmplwi r0, 8
 /* 8001FFF0 0000002C  40 82 00 14 */	bne lbl_80020004
 /* 8001FFF4 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8001FFF8 00000034  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8001FFFC 00000038  80 63 00 1C */	lwz r3, 0x1c(r3)
+/* 8001FFFC 00000038  80 63 00 1C */	lwz r3, 0x1c(r3)	/* effective address: 804301A4 */
 /* 80020000 0000003C  48 1F F6 ED */	bl emphasisButtonDelete__9dMeter2_cFv
 lbl_80020004:
 /* 80020004 00000000  88 1F 5E 8F */	lbz r0, 0x5e8f(r31)
@@ -30,7 +30,7 @@ lbl_80020004:
 /* 80020030 0000002C  38 60 FF FF */	li r3, -1
 /* 80020034 00000030  48 00 00 74 */	b lbl_800200A8
 lbl_80020038:
-/* 80020038 00000000  C0 02 82 70 */	lfs f0, f_op_f_op_msg_mng__lit_3902(r2)
+/* 80020038 00000000  C0 02 82 70 */	lfs f0, lit_3902(r2)
 /* 8002003C 00000004  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80020040 00000008  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80020044 0000000C  D0 01 00 08 */	stfs f0, 8(r1)

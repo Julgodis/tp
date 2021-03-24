@@ -2,7 +2,7 @@ lbl_8024BAA0:
 /* 8024BAA0 00000000  38 A0 00 01 */	li r5, 1
 /* 8024BAA4 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8024BAA8 00000008  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
-/* 8024BAAC 0000000C  A0 04 00 08 */	lhz r0, 8(r4)
+/* 8024BAAC 0000000C  A0 04 00 08 */	lhz r0, 8(r4)	/* effective address: 804061C8 */
 /* 8024BAB0 00000010  54 03 04 3F */	clrlwi. r3, r0, 0x10
 /* 8024BAB4 00000014  41 82 00 10 */	beq lbl_8024BAC4
 /* 8024BAB8 00000018  A0 04 00 06 */	lhz r0, 6(r4)

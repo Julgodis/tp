@@ -9,20 +9,20 @@ lbl_80347F70:
 /* 80347F8C 0000001C  3C A0 80 00 */	lis r5, 0x8000 /* 0x800000F8@ha */
 /* 80347F90 00000020  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80347F94 00000024  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 80347F98 00000028  90 8D 91 98 */	stw r4, dvdlow__Callback(r13)
+/* 80347F98 00000028  90 8D 91 98 */	stw r4, Callback(r13)
 /* 80347F9C 0000002C  3C 80 CC 00 */	lis r4, 0xCC00 /* 0xCC006000@ha */
 /* 80347FA0 00000030  38 E4 60 00 */	addi r7, r4, 0x6000 /* 0xCC006000@l */
 /* 80347FA4 00000034  91 0D 91 90 */	stw r8, StopAtNextInt(r13)
-/* 80347FA8 00000038  90 04 60 08 */	stw r0, 0x6008(r4)
+/* 80347FA8 00000038  90 04 60 08 */	stw r0, 0x6008(r4)	/* effective address: CC006008 */
 /* 80347FAC 0000003C  3C 80 80 45 */	lis r4, AlarmForTimeout@ha
 /* 80347FB0 00000040  38 00 00 03 */	li r0, 3
-/* 80347FB4 00000044  91 07 00 0C */	stw r8, 0xc(r7)
+/* 80347FB4 00000044  91 07 00 0C */	stw r8, 0xc(r7)	/* effective address: CC00600C */
 /* 80347FB8 00000048  3B E4 C8 98 */	addi r31, r4, AlarmForTimeout@l
-/* 80347FBC 0000004C  90 C7 00 10 */	stw r6, 0x10(r7)
-/* 80347FC0 00000050  90 67 00 14 */	stw r3, 0x14(r7)
+/* 80347FBC 0000004C  90 C7 00 10 */	stw r6, 0x10(r7)	/* effective address: CC006010 */
+/* 80347FC0 00000050  90 67 00 14 */	stw r3, 0x14(r7)	/* effective address: CC006014 */
 /* 80347FC4 00000054  7F E3 FB 78 */	mr r3, r31
-/* 80347FC8 00000058  90 C7 00 18 */	stw r6, 0x18(r7)
-/* 80347FCC 0000005C  90 07 00 1C */	stw r0, 0x1c(r7)
+/* 80347FC8 00000058  90 C7 00 18 */	stw r6, 0x18(r7)	/* effective address: CC006018 */
+/* 80347FCC 0000005C  90 07 00 1C */	stw r0, 0x1c(r7)	/* effective address: CC00601C */
 /* 80347FD0 00000060  80 05 00 F8 */	lwz r0, 0x00F8(r5)
 /* 80347FD4 00000064  54 00 F0 BE */	srwi r0, r0, 2
 /* 80347FD8 00000068  1F C0 00 0A */	mulli r30, r0, 0xa

@@ -11,7 +11,7 @@ lbl_8009C668:
 /* 8009C68C 00000024  40 82 00 2C */	bne lbl_8009C6B8
 /* 8009C690 00000028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009C694 0000002C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8009C698 00000030  80 63 5F 90 */	lwz r3, 0x5f90(r3)
+/* 8009C698 00000030  80 63 5F 90 */	lwz r3, 0x5f90(r3)	/* effective address: 8040C150 */
 /* 8009C69C 00000034  7F C4 F3 78 */	mr r4, r30
 /* 8009C6A0 00000038  38 A0 00 00 */	li r5, 0
 /* 8009C6A4 0000003C  48 28 8D E9 */	bl entryImm__13J3DDrawBufferFP9J3DPacketUs

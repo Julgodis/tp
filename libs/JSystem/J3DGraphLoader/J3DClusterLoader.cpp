@@ -61,7 +61,7 @@ extern "C" void __dt__16J3DClusterLoaderFv(); // 1
 extern "C" static void func_80334644(); // 1
 extern "C" static void func_8033465C(); // 1
 extern "C" static void func_80334674(); // 1
-extern "C" extern char const* const J3DClusterLoader__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:

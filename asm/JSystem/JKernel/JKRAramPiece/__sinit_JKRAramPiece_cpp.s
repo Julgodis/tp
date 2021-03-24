@@ -9,8 +9,8 @@ lbl_802D3B04:
 /* 802D3B20 0000001C  38 63 43 24 */	addi r3, r3, sAramPieceCommandList__12JKRAramPiece@l
 /* 802D3B24 00000020  3C 80 80 2D */	lis r4, func_802D2DF0@ha
 /* 802D3B28 00000024  38 84 2D F0 */	addi r4, r4, func_802D2DF0@l
-/* 802D3B2C 00000028  3C A0 80 43 */	lis r5, JKRAramPiece__lit_492@ha
-/* 802D3B30 0000002C  38 A5 43 18 */	addi r5, r5, JKRAramPiece__lit_492@l
+/* 802D3B2C 00000028  3C A0 80 43 */	lis r5, lit_492@ha
+/* 802D3B30 0000002C  38 A5 43 18 */	addi r5, r5, lit_492@l
 /* 802D3B34 00000030  48 08 E0 F1 */	bl __register_global_object
 /* 802D3B38 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D3B3C 00000038  7C 08 03 A6 */	mtlr r0

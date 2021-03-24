@@ -13,7 +13,7 @@ lbl_8011CBD4:
 lbl_8011CC00:
 /* 8011CC00 00000000  7F E3 FB 78 */	mr r3, r31
 /* 8011CC04 00000004  38 80 01 1F */	li r4, 0x11f
-/* 8011CC08 00000008  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8011CC08 00000008  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8011CC0C 0000000C  C0 42 93 00 */	lfs f2, lit_6895(r2)
 /* 8011CC10 00000010  38 A0 FF FF */	li r5, -1
 /* 8011CC14 00000014  C0 62 92 C4 */	lfs f3, lit_6109(r2)
@@ -25,10 +25,10 @@ lbl_8011CC00:
 /* 8011CC2C 0000002C  98 1F 2F 99 */	stb r0, 0x2f99(r31)
 /* 8011CC30 00000030  3C 60 80 42 */	lis r3, l_halfAtnWaitBaseAnime@ha
 /* 8011CC34 00000034  38 63 55 44 */	addi r3, r3, l_halfAtnWaitBaseAnime@l
-/* 8011CC38 00000038  C0 03 00 08 */	lfs f0, 8(r3)
+/* 8011CC38 00000038  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8042554C */
 /* 8011CC3C 0000003C  FC 40 00 50 */	fneg f2, f0
-/* 8011CC40 00000040  C0 23 00 04 */	lfs f1, 4(r3)
-/* 8011CC44 00000044  C0 03 00 00 */	lfs f0, 0(r3)
+/* 8011CC40 00000040  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 80425548 */
+/* 8011CC44 00000044  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80425544 */
 /* 8011CC48 00000048  FC 00 00 50 */	fneg f0, f0
 /* 8011CC4C 0000004C  D0 1F 35 88 */	stfs f0, 0x3588(r31)
 /* 8011CC50 00000050  D0 3F 35 8C */	stfs f1, 0x358c(r31)

@@ -37,7 +37,7 @@ lbl_800FDFB8:
 /* 800FDFD4 0000001C  C0 02 92 C0 */	lfs f0, lit_6108(r2)
 /* 800FDFD8 00000020  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 800FDFDC 00000000  40 80 00 0C */	bge lbl_800FDFE8
-/* 800FDFE0 00000004  C0 02 92 BC */	lfs f0, d_a_d_a_alink__lit_6041(r2)
+/* 800FDFE0 00000004  C0 02 92 BC */	lfs f0, lit_6041(r2)
 /* 800FDFE4 00000008  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_800FDFE8:
 /* 800FDFE8 00000000  7F C3 F3 78 */	mr r3, r30

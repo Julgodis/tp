@@ -1,10 +1,10 @@
 lbl_8006B8E4:
 /* 8006B8E4 00000000  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8006B8E8 00000004  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8006B8EC 00000008  80 C3 0F 28 */	lwz r6, 0xf28(r3)
+/* 8006B8EC 00000008  80 C3 0F 28 */	lwz r6, 0xf28(r3)	/* effective address: 8042D97C */
 /* 8006B8F0 0000000C  38 60 00 00 */	li r3, 0
 /* 8006B8F4 00000010  7C 64 1B 78 */	mr r4, r3
-/* 8006B8F8 00000014  C0 02 87 B8 */	lfs f0, d_kankyo_d_kankyo_rain__lit_3954(r2)
+/* 8006B8F8 00000014  C0 02 87 B8 */	lfs f0, lit_3954(r2)
 /* 8006B8FC 00000018  38 00 07 D0 */	li r0, 0x7d0
 /* 8006B900 0000001C  7C 09 03 A6 */	mtctr r0
 lbl_8006B904:

@@ -3,12 +3,12 @@ lbl_8009CA48:
 /* 8009CA4C 00000004  80 AD 8A 28 */	lwz r5, m_obj__12dEyeHL_mng_c(r13)
 /* 8009CA50 00000008  3C 60 80 43 */	lis r3, g_envHIO@ha
 /* 8009CA54 0000000C  38 63 07 9C */	addi r3, r3, g_envHIO@l
-/* 8009CA58 00000010  88 03 00 10 */	lbz r0, 0x10(r3)
+/* 8009CA58 00000010  88 03 00 10 */	lbz r0, 0x10(r3)	/* effective address: 804307AC */
 /* 8009CA5C 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 8009CA60 00000018  41 82 00 2C */	beq lbl_8009CA8C
 /* 8009CA64 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009CA68 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8009CA6C 00000024  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 8009CA6C 00000024  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 8009CA70 00000028  28 00 00 00 */	cmplwi r0, 0
 /* 8009CA74 0000002C  40 82 00 24 */	bne lbl_8009CA98
 /* 8009CA78 00000030  48 00 00 14 */	b lbl_8009CA8C
@@ -22,10 +22,10 @@ lbl_8009CA8C:
 /* 8009CA90 00000004  40 82 FF EC */	bne lbl_8009CA7C
 /* 8009CA94 00000008  48 00 00 78 */	b lbl_8009CB0C
 lbl_8009CA98:
-/* 8009CA98 00000000  C0 42 92 10 */	lfs f2, d_d_eye_hl__lit_3862(r2)
+/* 8009CA98 00000000  C0 42 92 10 */	lfs f2, lit_3862(r2)
 /* 8009CA9C 00000004  80 63 61 B0 */	lwz r3, 0x61b0(r3)
 /* 8009CAA0 00000008  C0 23 00 D0 */	lfs f1, 0xd0(r3)
-/* 8009CAA4 0000000C  C0 02 92 14 */	lfs f0, d_d_eye_hl__lit_3863(r2)
+/* 8009CAA4 0000000C  C0 02 92 14 */	lfs f0, lit_3863(r2)
 /* 8009CAA8 00000010  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8009CAAC 00000014  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8009CAB0 00000018  FC 00 00 1E */	fctiwz f0, f0

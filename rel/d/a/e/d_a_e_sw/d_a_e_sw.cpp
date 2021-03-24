@@ -55,6 +55,7 @@ struct daE_SW_c {
 	/* 807AC170 */ void _delete();
 	/* 807AC204 */ void CreateHeap();
 	/* 807AC31C */ void create();
+	/* 807ACA40 */ void d_setAction(void (daE_SW_c::*)());
 	/* 807ACAE4 */ void d_checkFall();
 	/* 807ACCB0 */ void d_damage_check();
 	/* 807ACFF8 */ void d_action();
@@ -180,7 +181,7 @@ extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void daE_SW_Create__FP8daE_SW_c(); // 1
-extern "C" static void d_setAction__8daE_SW_cFM8daE_SW_cFPCvPv_v(); // 1
+extern "C" void d_setAction__8daE_SW_cFM8daE_SW_cFPCvPv_v(); // 1
 extern "C" void d_checkFall__8daE_SW_cFv(); // 1
 extern "C" void d_damage_check__8daE_SW_cFv(); // 1
 extern "C" void d_action__8daE_SW_cFv(); // 1
@@ -967,7 +968,7 @@ asm void daE_SW_Create(daE_SW_c* param_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void d_setAction__8daE_SW_cFM8daE_SW_cFPCvPv_v() {
+asm void daE_SW_c::d_setAction(void (daE_SW_c::*)()) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_sw/d_a_e_sw/d_setAction__8daE_SW_cFM8daE_SW_cFPCvPv_v.s"
 }

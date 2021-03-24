@@ -9,8 +9,8 @@ lbl_801228F4:
 /* 80122910 00000000  39 61 00 80 */	addi r11, r1, 0x80
 /* 80122914 00000004  48 23 F8 C1 */	bl _savegpr_27
 /* 80122918 00000008  7C 7F 1B 78 */	mr r31, r3
-/* 8012291C 0000000C  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
-/* 80122920 00000010  3B 63 D6 58 */	addi r27, r3, d_a_d_a_alink__lit_3757@l
+/* 8012291C 0000000C  3C 60 80 39 */	lis r3, lit_3757@ha
+/* 80122920 00000010  3B 63 D6 58 */	addi r27, r3, lit_3757@l
 /* 80122924 00000014  48 03 CA 75 */	bl checkMasterSwordEquip__9daPy_py_cFv
 /* 80122928 00000018  7C 7C 1B 79 */	or. r28, r3, r3
 /* 8012292C 0000001C  41 82 00 0C */	beq lbl_80122938
@@ -26,7 +26,7 @@ lbl_8012293C:
 /* 8012294C 00000000  40 81 01 BC */	ble lbl_80122B08
 /* 80122950 00000004  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80122954 00000008  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
-/* 80122958 0000000C  88 1D 00 14 */	lbz r0, 0x14(r29)
+/* 80122958 0000000C  88 1D 00 14 */	lbz r0, 0x14(r29)	/* effective address: 804061D4 */
 /* 8012295C 00000010  28 00 00 3F */	cmplwi r0, 0x3f
 /* 80122960 00000014  41 82 00 8C */	beq lbl_801229EC
 /* 80122964 00000018  7F E3 FB 78 */	mr r3, r31
@@ -85,7 +85,7 @@ lbl_801229EC:
 lbl_80122A34:
 /* 80122A34 00000000  38 61 00 20 */	addi r3, r1, 0x20
 /* 80122A38 00000004  38 81 00 50 */	addi r4, r1, 0x50
-/* 80122A3C 00000008  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 80122A3C 00000008  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 80122A40 0000000C  EC 20 F8 2A */	fadds f1, f0, f31
 /* 80122A44 00000010  48 14 41 41 */	bl __ml__4cXyzCFf
 /* 80122A48 00000014  38 61 00 14 */	addi r3, r1, 0x14
@@ -142,7 +142,7 @@ lbl_80122AF4:
 lbl_80122B08:
 /* 80122B08 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80122B0C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80122B10 00000008  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
+/* 80122B10 00000008  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
 /* 80122B14 0000000C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80122B18 00000010  80 9F 32 1C */	lwz r4, 0x321c(r31)
 /* 80122B1C 00000014  4B F2 8D FD */	bl getEmitter__Q213dPa_control_c7level_cFUl

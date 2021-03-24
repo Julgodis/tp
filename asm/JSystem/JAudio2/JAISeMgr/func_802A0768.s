@@ -45,8 +45,8 @@ lbl_802A0800:
 /* 802A0808 00000008  4B FF FC 7D */	bl newSe___8JAISeMgrFiUl
 /* 802A080C 0000000C  7C 79 1B 79 */	or. r25, r3, r3
 /* 802A0810 00000010  40 82 00 20 */	bne lbl_802A0830
-/* 802A0814 00000014  3C 60 80 3A */	lis r3, JAISeMgr__stringBase0@ha
-/* 802A0818 00000018  38 63 B8 F8 */	addi r3, r3, JAISeMgr__stringBase0@l
+/* 802A0814 00000014  3C 60 80 3A */	lis r3, stringBase0@ha
+/* 802A0818 00000018  38 63 B8 F8 */	addi r3, r3, stringBase0@l
 /* 802A081C 0000001C  80 9D 00 00 */	lwz r4, 0(r29)
 /* 802A0820 00000020  4C C6 31 82 */	crclr 6
 /* 802A0824 00000024  4B FF 07 41 */	bl JASReport__FPCce

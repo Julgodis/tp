@@ -26,7 +26,7 @@ lbl_8021764C:
 /* 802176AC 00000060  48 00 2C 49 */	bl getActionString__13dMeter2Draw_cFUcUcPUc
 /* 802176B0 00000064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 802176B4 00000068  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 802176B8 0000006C  88 63 5E 42 */	lbz r3, 0x5e42(r3)
+/* 802176B8 0000006C  88 63 5E 42 */	lbz r3, 0x5e42(r3)	/* effective address: 8040C002 */
 /* 802176BC 00000070  54 60 FF FF */	rlwinm. r0, r3, 0x1f, 0x1f, 0x1f
 /* 802176C0 00000074  40 82 00 0C */	bne lbl_802176CC
 /* 802176C4 00000078  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d

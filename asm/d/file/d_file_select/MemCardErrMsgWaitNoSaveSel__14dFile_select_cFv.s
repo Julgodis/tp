@@ -21,9 +21,9 @@ lbl_8018ED80:
 /* 8018EDCC 0000004C  38 80 00 01 */	li r4, 1
 /* 8018EDD0 00000050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8018EDD4 00000054  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8018EDD8 00000058  98 83 0F 1A */	stb r4, 0xf1a(r3)
+/* 8018EDD8 00000058  98 83 0F 1A */	stb r4, 0xf1a(r3)	/* effective address: 804070DA */
 /* 8018EDDC 0000005C  38 00 00 00 */	li r0, 0
-/* 8018EDE0 00000060  98 03 0F 18 */	stb r0, 0xf18(r3)
+/* 8018EDE0 00000060  98 03 0F 18 */	stb r0, 0xf18(r3)	/* effective address: 804070D8 */
 /* 8018EDE4 00000064  38 60 00 00 */	li r3, 0
 /* 8018EDE8 00000068  38 00 00 03 */	li r0, 3
 /* 8018EDEC 0000006C  7C 09 03 A6 */	mtctr r0
@@ -38,7 +38,7 @@ lbl_8018EDF0:
 /* 8018EE0C 0000001C  38 C0 00 00 */	li r6, 0
 /* 8018EE10 00000020  4B FF E2 D5 */	bl headerTxtSet__14dFile_select_cFUsUcUc
 /* 8018EE14 00000024  80 7F 00 60 */	lwz r3, 0x60(r31)
-/* 8018EE18 00000028  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 8018EE18 00000028  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 8018EE1C 0000002C  48 00 64 85 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 8018EE20 00000030  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8018EE24 00000034  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -93,11 +93,11 @@ lbl_8018EDF0:
 lbl_8018EEE8:
 /* 8018EEE8 00000000  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8018EEEC 00000004  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8018EEF0 00000008  80 64 00 00 */	lwz r3, 0(r4)
-/* 8018EEF4 0000000C  80 04 00 04 */	lwz r0, 4(r4)
+/* 8018EEF0 00000008  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
+/* 8018EEF4 0000000C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
 /* 8018EEF8 00000010  90 7F 02 84 */	stw r3, 0x284(r31)
 /* 8018EEFC 00000014  90 1F 02 88 */	stw r0, 0x288(r31)
-/* 8018EF00 00000018  80 04 00 08 */	lwz r0, 8(r4)
+/* 8018EF00 00000018  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
 /* 8018EF04 0000001C  90 1F 02 8C */	stw r0, 0x28c(r31)
 /* 8018EF08 00000020  38 00 00 00 */	li r0, 0
 /* 8018EF0C 00000024  98 1F 02 73 */	stb r0, 0x273(r31)

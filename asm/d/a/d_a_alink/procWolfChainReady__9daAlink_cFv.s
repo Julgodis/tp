@@ -20,7 +20,7 @@ lbl_8013E2E8:
 /* 8013E2EC 00000004  38 80 00 02 */	li r4, 2
 /* 8013E2F0 00000008  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8013E2F4 0000000C  38 A5 F0 A8 */	addi r5, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8013E2F8 00000010  C0 25 00 54 */	lfs f1, 0x54(r5)
+/* 8013E2F8 00000010  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F0FC */
 /* 8013E2FC 00000014  4B FF 0A D5 */	bl procWolfFallInit__9daAlink_cFif
 /* 8013E300 00000018  48 00 03 98 */	b lbl_8013E698
 lbl_8013E304:
@@ -72,7 +72,7 @@ lbl_8013E344:
 /* 8013E3B4 00000070  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013E3B8 00000000  40 81 00 58 */	ble lbl_8013E410
 /* 8013E3BC 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8013E3C0 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 8013E3C0 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 8013E3C4 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 8013E3C8 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 8013E3CC 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -143,7 +143,7 @@ lbl_8013E49C:
 /* 8013E4A8 0000000C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8013E4AC 00000000  40 81 00 58 */	ble lbl_8013E504
 /* 8013E4B0 00000004  FC 00 08 34 */	frsqrte f0, f1
-/* 8013E4B4 00000008  C8 82 92 E8 */	lfd f4, d_a_d_a_alink__lit_6846(r2)
+/* 8013E4B4 00000008  C8 82 92 E8 */	lfd f4, lit_6846(r2)
 /* 8013E4B8 0000000C  FC 44 00 32 */	fmul f2, f4, f0
 /* 8013E4BC 00000010  C8 62 92 F0 */	lfd f3, lit_6847(r2)
 /* 8013E4C0 00000014  FC 00 00 32 */	fmul f0, f0, f0
@@ -213,7 +213,7 @@ lbl_8013E590:
 /* 8013E598 00000008  7C 60 07 34 */	extsh r0, r3
 /* 8013E59C 0000000C  7C 00 0E 70 */	srawi r0, r0, 1
 /* 8013E5A0 00000010  B0 1F 30 0C */	sth r0, 0x300c(r31)
-/* 8013E5A4 00000014  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 8013E5A4 00000014  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 8013E5A8 00000018  C0 02 93 D4 */	lfs f0, lit_11442(r2)
 /* 8013E5AC 0000001C  EC 00 07 F2 */	fmuls f0, f0, f31
 /* 8013E5B0 00000020  EC 00 F0 24 */	fdivs f0, f0, f30
@@ -273,7 +273,7 @@ lbl_8013E670:
 /* 8013E680 00000010  38 80 00 02 */	li r4, 2
 /* 8013E684 00000014  3C A0 80 39 */	lis r5, m__24daAlinkHIO_wlAutoJump_c0@ha
 /* 8013E688 00000018  38 A5 F0 A8 */	addi r5, r5, m__24daAlinkHIO_wlAutoJump_c0@l
-/* 8013E68C 0000001C  C0 25 00 54 */	lfs f1, 0x54(r5)
+/* 8013E68C 0000001C  C0 25 00 54 */	lfs f1, 0x54(r5)	/* effective address: 8038F0FC */
 /* 8013E690 00000020  4B FF 07 41 */	bl procWolfFallInit__9daAlink_cFif
 lbl_8013E694:
 /* 8013E694 00000000  38 60 00 01 */	li r3, 1

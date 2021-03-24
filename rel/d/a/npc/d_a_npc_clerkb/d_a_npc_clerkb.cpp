@@ -11,19 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct dMsgFlow_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -34,6 +22,18 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 8099907C */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct dMsgFlow_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DJoint {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_clerkB_c {
@@ -64,6 +64,8 @@ struct daNpc_clerkB_c {
 	/* 80997B58 */ void drawOtherMdl();
 	/* 80997BB8 */ void drawGhost();
 	/* 80997C44 */ void selectAction();
+	/* 80997CC0 */ void chkAction(int (daNpc_clerkB_c::*)(void*));
+	/* 80997CEC */ void setAction(int (daNpc_clerkB_c::*)(void*));
 	/* 80997D94 */ void setSe();
 	/* 80997E54 */ void wait(void*);
 	/* 809980AC */ void tend(void*);
@@ -232,8 +234,8 @@ extern "C" void drawDbgInfo__14daNpc_clerkB_cFv(); // 1
 extern "C" void drawOtherMdl__14daNpc_clerkB_cFv(); // 1
 extern "C" void drawGhost__14daNpc_clerkB_cFv(); // 1
 extern "C" void selectAction__14daNpc_clerkB_cFv(); // 1
-extern "C" static void chkAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i(); // 1
+extern "C" void setAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i(); // 1
 extern "C" void setSe__14daNpc_clerkB_cFv(); // 1
 extern "C" void wait__14daNpc_clerkB_cFPv(); // 1
 extern "C" void tend__14daNpc_clerkB_cFPv(); // 1
@@ -783,7 +785,7 @@ asm void daNpc_clerkB_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i() {
+asm void daNpc_clerkB_c::chkAction(int (daNpc_clerkB_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/chkAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i.s"
 }
@@ -794,7 +796,7 @@ extern "C" asm static void chkAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i() {
+asm void daNpc_clerkB_c::setAction(int (daNpc_clerkB_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_clerkb/d_a_npc_clerkb/setAction__14daNpc_clerkB_cFM14daNpc_clerkB_cFPCvPvPv_i.s"
 }

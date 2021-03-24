@@ -27,7 +27,7 @@ lbl_801FD304:
 lbl_801FD338:
 /* 801FD338 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801FD33C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801FD340 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)
+/* 801FD340 00000008  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
 /* 801FD344 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801FD348 00000010  41 82 00 10 */	beq lbl_801FD358
 /* 801FD34C 00000014  38 00 00 05 */	li r0, 5
@@ -58,15 +58,15 @@ lbl_801FD378:
 /* 801FD3A4 0000002C  7F C3 F3 78 */	mr r3, r30
 /* 801FD3A8 00000030  7F A4 EB 78 */	mr r4, r29
 /* 801FD3AC 00000034  1C C0 00 0C */	mulli r6, r0, 0xc
-/* 801FD3B0 00000038  3C A0 80 3C */	lis r5, d_menu_d_menu_window__init_proc@ha
-/* 801FD3B4 0000003C  38 05 EA A8 */	addi r0, r5, d_menu_d_menu_window__init_proc@l
+/* 801FD3B0 00000038  3C A0 80 3C */	lis r5, init_proc@ha
+/* 801FD3B4 0000003C  38 05 EA A8 */	addi r0, r5, init_proc@l
 /* 801FD3B8 00000040  7D 80 32 14 */	add r12, r0, r6
 /* 801FD3BC 00000044  48 16 4C C9 */	bl __ptmf_scall
 /* 801FD3C0 00000048  60 00 00 00 */	nop 
 lbl_801FD3C4:
 /* 801FD3C4 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801FD3C8 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801FD3CC 00000008  88 03 00 39 */	lbz r0, 0x39(r3)
+/* 801FD3CC 00000008  88 03 00 39 */	lbz r0, 0x39(r3)	/* effective address: 803DD321 */
 /* 801FD3D0 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801FD3D4 00000010  40 82 00 24 */	bne lbl_801FD3F8
 /* 801FD3D8 00000014  7F C3 F3 78 */	mr r3, r30
@@ -80,7 +80,7 @@ lbl_801FD3C4:
 lbl_801FD3F8:
 /* 801FD3F8 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801FD3FC 00000004  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801FD400 00000008  88 03 00 3B */	lbz r0, 0x3b(r3)
+/* 801FD400 00000008  88 03 00 3B */	lbz r0, 0x3b(r3)	/* effective address: 803DD323 */
 /* 801FD404 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 801FD408 00000010  40 82 00 24 */	bne lbl_801FD42C
 /* 801FD40C 00000014  7F C3 F3 78 */	mr r3, r30

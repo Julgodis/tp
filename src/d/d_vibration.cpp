@@ -148,7 +148,7 @@ extern "C" asm static void func_8006F1A4() {
 
 /* ############################################################################################## */
 /* 80452620-80452628 0008+00 s=1 e=0 z=0  None .sdata2    @3756                                                        */
-SECTION_SDATA2 static f64 d_d_vibration__lit_3756 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3756 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 8006F1D8-8006F268 0090+00 s=1 e=0 z=0  None .text      randombit__25@unnamed@d_vibration_cpp@Fll                    */
 #pragma push

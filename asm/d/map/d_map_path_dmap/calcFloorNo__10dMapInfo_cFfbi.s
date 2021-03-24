@@ -41,7 +41,7 @@ lbl_8003F4A4:
 /* 8003F4A4 00000000  98 A1 00 08 */	stb r5, 8(r1)
 /* 8003F4A8 00000004  48 00 00 38 */	b lbl_8003F4E0
 lbl_8003F4AC:
-/* 8003F4AC 00000000  C0 22 84 2C */	lfs f1, d_map_d_map_path_dmap__lit_3887(r2)
+/* 8003F4AC 00000000  C0 22 84 2C */	lfs f1, lit_3887(r2)
 /* 8003F4B0 00000004  EC 02 00 2A */	fadds f0, f2, f0
 /* 8003F4B4 00000008  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8003F4B8 0000000C  FC 1F 00 40 */	fcmpo cr0, f31, f0

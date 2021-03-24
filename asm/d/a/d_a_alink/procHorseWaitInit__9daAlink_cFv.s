@@ -22,10 +22,10 @@ lbl_800F09B0:
 /* 800F09CC 0000001C  7F C3 F3 78 */	mr r3, r30
 /* 800F09D0 00000020  38 80 02 6E */	li r4, 0x26e
 /* 800F09D4 00000024  38 A0 00 02 */	li r5, 2
-/* 800F09D8 00000028  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 800F09D8 00000028  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 800F09DC 0000002C  C0 42 92 C0 */	lfs f2, lit_6108(r2)
 /* 800F09E0 00000030  38 C0 FF FF */	li r6, -1
-/* 800F09E4 00000034  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 800F09E4 00000034  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 800F09E8 00000038  4B FB CF 7D */	bl setUnderAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERffsf
 /* 800F09EC 0000003C  48 00 00 20 */	b lbl_800F0A0C
 lbl_800F09F0:
@@ -34,7 +34,7 @@ lbl_800F09F0:
 /* 800F09F8 00000008  40 82 00 14 */	bne lbl_800F0A0C
 /* 800F09FC 0000000C  7F C3 F3 78 */	mr r3, r30
 /* 800F0A00 00000010  38 80 00 02 */	li r4, 2
-/* 800F0A04 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800F0A04 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800F0A08 00000018  4B FB D0 E5 */	bl resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf
 lbl_800F0A0C:
 /* 800F0A0C 00000000  7F C3 F3 78 */	mr r3, r30

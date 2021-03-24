@@ -10,7 +10,7 @@ lbl_800E6E0C:
 /* 800E6E2C 00000020  28 00 00 00 */	cmplwi r0, 0
 /* 800E6E30 00000024  40 82 00 20 */	bne lbl_800E6E50
 /* 800E6E34 00000028  38 80 00 02 */	li r4, 2
-/* 800E6E38 0000002C  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800E6E38 0000002C  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800E6E3C 00000030  4B FC 68 E9 */	bl resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf
 /* 800E6E40 00000034  7F C3 F3 78 */	mr r3, r30
 /* 800E6E44 00000038  38 80 00 00 */	li r4, 0
@@ -28,7 +28,7 @@ lbl_800E6E50:
 /* 800E6E70 00000004  7F E4 FB 78 */	mr r4, r31
 /* 800E6E74 00000008  3C A0 80 39 */	lis r5, m__18daAlinkHIO_grab_c0@ha
 /* 800E6E78 0000000C  38 A5 EC 48 */	addi r5, r5, m__18daAlinkHIO_grab_c0@l
-/* 800E6E7C 00000010  C0 25 00 68 */	lfs f1, 0x68(r5)
+/* 800E6E7C 00000010  C0 25 00 68 */	lfs f1, 0x68(r5)	/* effective address: 8038ECB0 */
 /* 800E6E80 00000014  48 01 AE 75 */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 /* 800E6E84 00000018  38 00 00 00 */	li r0, 0
 /* 800E6E88 0000001C  90 1E 31 98 */	stw r0, 0x3198(r30)
@@ -45,7 +45,7 @@ lbl_800E6E90:
 /* 800E6EB0 00000004  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 800E6EB4 00000008  3C 60 80 39 */	lis r3, m__18daAlinkHIO_grab_c0@ha
 /* 800E6EB8 0000000C  38 63 EC 48 */	addi r3, r3, m__18daAlinkHIO_grab_c0@l
-/* 800E6EBC 00000010  C0 03 00 74 */	lfs f0, 0x74(r3)
+/* 800E6EBC 00000010  C0 03 00 74 */	lfs f0, 0x74(r3)	/* effective address: 8038ECBC */
 /* 800E6EC0 00000030  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800E6EC4 00000000  40 81 00 0C */	ble lbl_800E6ED0
 lbl_800E6EC8:

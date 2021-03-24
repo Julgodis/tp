@@ -10,7 +10,7 @@ lbl_8034B914:
 /* 8034B934 00000020  38 84 C9 98 */	addi r4, r4, WaitingQueue@l
 /* 8034B938 00000024  3B E0 00 00 */	li r31, 0
 lbl_8034B93C:
-/* 8034B93C 00000000  80 04 00 00 */	lwz r0, 0(r4)
+/* 8034B93C 00000000  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 8044C998 */
 /* 8034B940 00000004  7C 00 20 40 */	cmplw r0, r4
 /* 8034B944 00000008  41 82 00 48 */	beq lbl_8034B98C
 /* 8034B948 0000000C  4B FF 1D D5 */	bl OSRestoreInterrupts

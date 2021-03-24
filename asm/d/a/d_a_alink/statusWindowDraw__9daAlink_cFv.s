@@ -64,7 +64,7 @@ lbl_80140A58:
 /* 80140A70 00000018  4B F8 B8 29 */	bl basicModelDraw__9daAlink_cFP8J3DModel
 /* 80140A74 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80140A78 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80140A7C 00000024  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 80140A7C 00000024  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 80140A80 00000028  28 00 00 3F */	cmplwi r0, 0x3f
 /* 80140A84 0000002C  41 82 00 10 */	beq lbl_80140A94
 /* 80140A88 00000030  7F A3 EB 78 */	mr r3, r29

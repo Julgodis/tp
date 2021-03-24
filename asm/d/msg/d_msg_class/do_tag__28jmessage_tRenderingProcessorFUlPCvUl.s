@@ -597,7 +597,7 @@ lbl_8022DEDC:
 /* 8022E034 00000158  48 00 00 E0 */	b lbl_8022E114
 /* 8022E038 0000015C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8022E03C 00000160  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8022E040 00000164  88 03 01 EB */	lbz r0, 0x1eb(r3)
+/* 8022E040 00000164  88 03 01 EB */	lbz r0, 0x1eb(r3)	/* effective address: 804063AB */
 /* 8022E044 00000168  28 00 00 00 */	cmplwi r0, 0
 /* 8022E048 0000016C  40 82 00 18 */	bne lbl_8022E060
 /* 8022E04C 00000170  7F C3 F3 78 */	mr r3, r30

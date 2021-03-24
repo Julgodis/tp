@@ -5,11 +5,11 @@ lbl_8035247C:
 /* 80352488 0000000C  4B FE B2 6D */	bl OSDisableInterrupts
 /* 8035248C 00000010  3C 80 CC 00 */	lis r4, 0xCC00 /* 0xCC005000@ha */
 /* 80352490 00000014  38 84 50 00 */	addi r4, r4, 0x5000 /* 0xCC005000@l */
-/* 80352494 00000018  A0 A4 00 0A */	lhz r5, 0xa(r4)
+/* 80352494 00000018  A0 A4 00 0A */	lhz r5, 0xa(r4)	/* effective address: CC00500A */
 /* 80352498 0000001C  38 00 FF 57 */	li r0, -169
 /* 8035249C 00000020  7C A0 00 38 */	and r0, r5, r0
 /* 803524A0 00000024  60 00 00 02 */	ori r0, r0, 2
-/* 803524A4 00000028  B0 04 00 0A */	sth r0, 0xa(r4)
+/* 803524A4 00000028  B0 04 00 0A */	sth r0, 0xa(r4)	/* effective address: CC00500A */
 /* 803524A8 0000002C  4B FE B2 75 */	bl OSRestoreInterrupts
 /* 803524AC 00000030  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 803524B0 00000034  38 21 00 08 */	addi r1, r1, 8

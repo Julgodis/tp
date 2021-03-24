@@ -29,10 +29,10 @@ lbl_800DA5BC:
 /* 800DA5BC 00000000  38 80 00 88 */	li r4, 0x88
 /* 800DA5C0 00000004  3C A0 80 39 */	lis r5, m__22daAlinkHIO_damLarge_c0@ha
 /* 800DA5C4 00000008  38 C5 E2 B0 */	addi r6, r5, m__22daAlinkHIO_damLarge_c0@l
-/* 800DA5C8 0000000C  C0 26 00 18 */	lfs f1, 0x18(r6)
+/* 800DA5C8 0000000C  C0 26 00 18 */	lfs f1, 0x18(r6)	/* effective address: 8038E2C8 */
 /* 800DA5CC 00000010  C0 42 93 34 */	lfs f2, lit_7710(r2)
 /* 800DA5D0 00000014  38 A0 FF FF */	li r5, -1
-/* 800DA5D4 00000018  C0 66 00 20 */	lfs f3, 0x20(r6)
+/* 800DA5D4 00000018  C0 66 00 20 */	lfs f3, 0x20(r6)	/* effective address: 8038E2D0 */
 /* 800DA5D8 0000001C  4B FD 2A 35 */	bl setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf
 /* 800DA5DC 00000020  38 00 FF FD */	li r0, -3
 /* 800DA5E0 00000024  90 1E 31 98 */	stw r0, 0x3198(r30)
@@ -57,7 +57,7 @@ lbl_800DA5FC:
 /* 800DA628 0000002C  7F E4 FB 78 */	mr r4, r31
 /* 800DA62C 00000030  3C A0 80 39 */	lis r5, m__20daAlinkHIO_damage_c0@ha
 /* 800DA630 00000034  38 A5 E5 4C */	addi r5, r5, m__20daAlinkHIO_damage_c0@l
-/* 800DA634 00000038  C0 25 00 50 */	lfs f1, 0x50(r5)
+/* 800DA634 00000038  C0 25 00 50 */	lfs f1, 0x50(r5)	/* effective address: 8038E59C */
 /* 800DA638 0000003C  48 02 76 BD */	bl setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf
 /* 800DA63C 00000040  38 00 00 00 */	li r0, 0
 /* 800DA640 00000044  B0 1F 00 14 */	sth r0, 0x14(r31)

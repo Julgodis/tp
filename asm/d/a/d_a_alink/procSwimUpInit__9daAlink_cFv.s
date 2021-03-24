@@ -35,15 +35,15 @@ lbl_80104138:
 /* 80104178 00000040  4B FA 8F 7D */	bl setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c
 /* 8010417C 00000044  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80104180 00000048  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80104184 0000004C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
+/* 80104184 0000004C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104188 00000050  64 00 00 10 */	oris r0, r0, 0x10
-/* 8010418C 00000054  90 03 5F 18 */	stw r0, 0x5f18(r3)
+/* 8010418C 00000054  90 03 5F 18 */	stw r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
 /* 80104190 00000058  38 00 00 00 */	li r0, 0
 /* 80104194 0000005C  B0 1F 30 08 */	sth r0, 0x3008(r31)
 /* 80104198 00000060  B0 1F 30 10 */	sth r0, 0x3010(r31)
 /* 8010419C 00000064  3C 60 80 39 */	lis r3, m__18daAlinkHIO_swim_c0@ha
 /* 801041A0 00000068  38 63 ED 2C */	addi r3, r3, m__18daAlinkHIO_swim_c0@l
-/* 801041A4 0000006C  C0 03 00 60 */	lfs f0, 0x60(r3)
+/* 801041A4 0000006C  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 8038ED8C */
 /* 801041A8 00000070  D0 1F 34 80 */	stfs f0, 0x3480(r31)
 /* 801041AC 00000074  B0 1F 30 00 */	sth r0, 0x3000(r31)
 /* 801041B0 00000078  7F E3 FB 78 */	mr r3, r31

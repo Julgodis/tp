@@ -11,9 +11,9 @@ lbl_801CA468:
 /* 801CA48C 00000024  38 A0 00 00 */	li r5, 0
 /* 801CA490 00000028  38 C0 00 00 */	li r6, 0
 /* 801CA494 0000002C  38 E0 00 00 */	li r7, 0
-/* 801CA498 00000030  C0 22 A7 24 */	lfs f1, d_menu_d_menu_fmap__lit_3995(r2)
+/* 801CA498 00000030  C0 22 A7 24 */	lfs f1, lit_3995(r2)
 /* 801CA49C 00000034  FC 40 08 90 */	fmr f2, f1
-/* 801CA4A0 00000038  C0 62 A7 54 */	lfs f3, d_menu_d_menu_fmap__lit_4541(r2)
+/* 801CA4A0 00000038  C0 62 A7 54 */	lfs f3, lit_4541(r2)
 /* 801CA4A4 0000003C  FC 80 18 90 */	fmr f4, f3
 /* 801CA4A8 00000040  39 00 00 00 */	li r8, 0
 /* 801CA4AC 00000044  48 0E 14 D9 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

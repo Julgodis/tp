@@ -62,7 +62,7 @@ lbl_801879B8:
 /* 80187AA8 000000F0  38 A0 00 01 */	li r5, 1
 /* 80187AAC 000000F4  48 00 D6 49 */	bl setPos__16dSelect_cursor_cFffP7J2DPaneb
 /* 80187AB0 000000F8  80 7F 00 64 */	lwz r3, 0x64(r31)
-/* 80187AB4 000000FC  C0 22 9F 40 */	lfs f1, d_file_d_file_select__lit_4611(r2)
+/* 80187AB4 000000FC  C0 22 9F 40 */	lfs f1, lit_4611(r2)
 /* 80187AB8 00000100  48 00 D7 E9 */	bl setAlphaRate__16dSelect_cursor_cFf
 /* 80187ABC 00000104  38 00 00 16 */	li r0, 0x16
 /* 80187AC0 00000108  98 1F 02 6F */	stb r0, 0x26f(r31)

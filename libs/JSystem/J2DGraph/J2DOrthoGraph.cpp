@@ -126,7 +126,7 @@ SECTION_DATA void* __vt__13J2DOrthoGraph[10] = {
 };
 
 /* 80456160-80456168 0004+04 s=3 e=0 z=0  None .sdata2    @522                                                         */
-SECTION_SDATA2 static u8 J2DOrthoGraph__lit_522[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_522[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

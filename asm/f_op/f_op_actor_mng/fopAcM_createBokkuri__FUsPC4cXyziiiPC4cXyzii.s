@@ -22,7 +22,7 @@ lbl_8001C870:
 /* 8001C8C0 00000050  7F 63 DB 78 */	mr r3, r27
 /* 8001C8C4 00000054  48 24 A8 65 */	bl atan2sX_Z__4cXyzCFv
 /* 8001C8C8 00000058  B0 61 00 12 */	sth r3, 0x12(r1)
-/* 8001C8CC 0000005C  C0 22 82 38 */	lfs f1, f_op_f_op_actor_mng__lit_5810(r2)
+/* 8001C8CC 0000005C  C0 22 82 38 */	lfs f1, lit_5810(r2)
 /* 8001C8D0 00000060  48 24 B0 BD */	bl cM_rndFX__Ff
 /* 8001C8D4 00000064  C0 02 82 44 */	lfs f0, lit_5845(r2)
 /* 8001C8D8 00000068  EC 00 00 72 */	fmuls f0, f0, f1

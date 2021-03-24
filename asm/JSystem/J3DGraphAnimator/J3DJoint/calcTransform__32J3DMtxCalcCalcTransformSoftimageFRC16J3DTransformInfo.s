@@ -17,13 +17,13 @@ lbl_8032EE50:
 /* 8032EE8C 0000003C  C0 3B 00 14 */	lfs f1, 0x14(r27)
 /* 8032EE90 00000040  3C C0 80 43 */	lis r6, mCurrentS__6J3DSys@ha
 /* 8032EE94 00000044  3B C6 4C 14 */	addi r30, r6, mCurrentS__6J3DSys@l
-/* 8032EE98 00000048  C0 1E 00 00 */	lfs f0, 0(r30)
+/* 8032EE98 00000048  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80434C14 */
 /* 8032EE9C 0000004C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8032EEA0 00000050  C0 5B 00 18 */	lfs f2, 0x18(r27)
-/* 8032EEA4 00000054  C0 1E 00 04 */	lfs f0, 4(r30)
+/* 8032EEA4 00000054  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80434C18 */
 /* 8032EEA8 00000058  EC 42 00 32 */	fmuls f2, f2, f0
 /* 8032EEAC 0000005C  C0 7B 00 1C */	lfs f3, 0x1c(r27)
-/* 8032EEB0 00000060  C0 1E 00 08 */	lfs f0, 8(r30)
+/* 8032EEB0 00000060  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 80434C1C */
 /* 8032EEB4 00000064  EC 63 00 32 */	fmuls f3, f3, f0
 /* 8032EEB8 00000068  7F E6 FB 78 */	mr r6, r31
 /* 8032EEBC 0000006C  4B FE 2B 69 */	bl J3DGetTranslateRotateMtx__FsssfffPA4_f
@@ -36,7 +36,7 @@ lbl_8032EE50:
 /* 8032EED8 00000088  C4 23 4C 14 */	lfsu f1, mCurrentS__6J3DSys@l(r3)
 /* 8032EEDC 0000008C  C0 1B 00 00 */	lfs f0, 0(r27)
 /* 8032EEE0 00000090  EC 61 00 32 */	fmuls f3, f1, f0
-/* 8032EEE4 00000094  D0 63 00 00 */	stfs f3, 0(r3)
+/* 8032EEE4 00000094  D0 63 00 00 */	stfs f3, 0(r3)	/* effective address: 80430000 */
 /* 8032EEE8 00000098  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 8032EEEC 0000009C  C0 1B 00 04 */	lfs f0, 4(r27)
 /* 8032EEF0 000000A0  EC 41 00 32 */	fmuls f2, f1, f0
@@ -72,11 +72,11 @@ lbl_8032EF30:
 /* 8032EF60 00000030  48 00 AB 25 */	bl JMAMTXApplyScale__FPA4_CfPA4_ffff
 /* 8032EF64 00000034  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8032EF68 00000038  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 8032EF6C 0000003C  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 8032EF6C 0000003C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80434BF0 */
 /* 8032EF70 00000040  D0 1F 00 0C */	stfs f0, 0xc(r31)
-/* 8032EF74 00000044  C0 03 00 1C */	lfs f0, 0x1c(r3)
+/* 8032EF74 00000044  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80434C00 */
 /* 8032EF78 00000048  D0 1F 00 1C */	stfs f0, 0x1c(r31)
-/* 8032EF7C 0000004C  C0 03 00 2C */	lfs f0, 0x2c(r3)
+/* 8032EF7C 0000004C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 80434C10 */
 /* 8032EF80 00000050  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 8032EF84 00000054  48 00 00 20 */	b lbl_8032EFA4
 lbl_8032EF88:

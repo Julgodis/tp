@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct cSAngle {
 };
 
-struct cSAngle {
+struct cXyz {
 };
 
 struct dCamMath {
@@ -90,7 +90,7 @@ extern "C" void __dt__11dCamSetup_cFv(); // 1
 extern "C" void CheckLatitudeRange__11dCamSetup_cFPs(); // 1
 extern "C" void PlayerHideDist__11dCamSetup_cFv(); // 1
 extern "C" void __dt__9dCstick_cFv(); // 1
-extern "C" extern char const* const d_d_cam_param__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -122,37 +122,37 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 /* ############################################################################################## */
 /* 804527C8-804527D0 0004+04 s=2 e=0 z=0  None .sdata2    @3769                                                        */
-SECTION_SDATA2 static u8 d_d_cam_param__lit_3769[4 + 4 /* padding */] = {
+SECTION_SDATA2 static u8 lit_3769[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804527D0-804527D8 0008+00 s=1 e=0 z=0  None .sdata2    @3770                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3770 = 1.0;
+SECTION_SDATA2 static f64 lit_3770 = 1.0;
 
 /* 804527D8-804527E0 0008+00 s=1 e=0 z=0  None .sdata2    @3771                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3771 = -1.0;
+SECTION_SDATA2 static f64 lit_3771 = -1.0;
 
 /* 804527E0-804527E8 0008+00 s=1 e=0 z=0  None .sdata2    @3772                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3772 = 2.0;
+SECTION_SDATA2 static f64 lit_3772 = 2.0;
 
 /* 804527E8-804527F0 0008+00 s=1 e=0 z=0  None .sdata2    @3773                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3773 = 4.0;
+SECTION_SDATA2 static f64 lit_3773 = 4.0;
 
 /* 804527F0-804527F8 0008+00 s=1 e=0 z=0  None .sdata2    @3774                                                        */
-SECTION_SDATA2 static u8 d_d_cam_param__lit_3774[8] = {
+SECTION_SDATA2 static u8 lit_3774[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804527F8-80452800 0008+00 s=1 e=0 z=0  None .sdata2    @3775                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3775 = 1e-07;
+SECTION_SDATA2 static f64 lit_3775 = 1e-07;
 
 /* 80452800-80452808 0008+00 s=1 e=0 z=0  None .sdata2    @3776                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3776 = -1e-07;
+SECTION_SDATA2 static f64 lit_3776 = -1e-07;
 
 /* 80452808-80452810 0008+00 s=1 e=0 z=0  None .sdata2    @3777                                                        */
-SECTION_SDATA2 static f64 d_d_cam_param__lit_3777 = 1.0000000116860974e-07;
+SECTION_SDATA2 static f64 lit_3777 = 1.0000000116860974e-07;
 
 /* 8008813C-80088284 0148+00 s=0 e=12 z=0  None .text      rationalBezierRatio__8dCamMathFff                            */
 #pragma push
@@ -167,10 +167,10 @@ asm void dCamMath::rationalBezierRatio(f32 param_0, f32 param_1) {
 
 /* ############################################################################################## */
 /* 80452810-80452814 0004+00 s=2 e=0 z=0  None .sdata2    @3791                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_3791 = 1.0f;
+SECTION_SDATA2 static f32 lit_3791 = 1.0f;
 
 /* 80452814-80452818 0004+00 s=1 e=0 z=0  None .sdata2    @3807                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_3807 = 57.2957763671875f;
+SECTION_SDATA2 static f32 lit_3807 = 57.2957763671875f;
 
 /* 80088284-800882E0 005C+00 s=0 e=1 z=0  None .text      zoomFovy__8dCamMathFff                                       */
 #pragma push
@@ -255,7 +255,7 @@ SECTION_DATA static void* __vt__9dCstick_c[3 + 1 /* padding */] = {
 SECTION_SDATA2 static f32 lit_3991 = 1.0f / 5.0f;
 
 /* 8045281C-80452820 0004+00 s=1 e=0 z=0  None .sdata2    @3992                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_3992 = 19.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_3992 = 19.0f / 20.0f;
 
 /* 80088434-8008845C 0028+00 s=1 e=0 z=0  None .text      __ct__9dCstick_cFv                                           */
 #pragma push
@@ -281,13 +281,13 @@ asm void dCstick_c::Shift(u32 param_0) {
 
 /* ############################################################################################## */
 /* 80452820-80452824 0004+00 s=1 e=0 z=0  None .sdata2    @4001                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4001 = 32.0f;
+SECTION_SDATA2 static f32 lit_4001 = 32.0f;
 
 /* 80452824-80452828 0004+00 s=2 e=0 z=0  None .sdata2    @4002                                                        */
 SECTION_SDATA2 static f32 lit_4002 = 25.0f;
 
 /* 80452828-8045282C 0004+00 s=2 e=0 z=0  None .sdata2    @4003                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4003 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4003 = 2.0f / 5.0f;
 
 /* 8045282C-80452830 0004+00 s=1 e=0 z=0  None .sdata2    @4004                                                        */
 SECTION_SDATA2 static f32 lit_4004 = 3.0f / 5.0f;
@@ -305,19 +305,19 @@ SECTION_SDATA2 static f32 lit_4007 = 0.5f;
 SECTION_SDATA2 static f32 lit_4008 = 3.0f / 10.0f;
 
 /* 80452840-80452844 0004+00 s=2 e=0 z=0  None .sdata2    @4009                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4009 = 10.0f;
+SECTION_SDATA2 static f32 lit_4009 = 10.0f;
 
 /* 80452844-80452848 0004+00 s=2 e=0 z=0  None .sdata2    @4010                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4010 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4010 = 1.0f / 10.0f;
 
 /* 80452848-8045284C 0004+00 s=2 e=0 z=0  None .sdata2    @4011                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4011 = 0.75f;
+SECTION_SDATA2 static f32 lit_4011 = 0.75f;
 
 /* 8045284C-80452850 0004+00 s=2 e=0 z=0  None .sdata2    @4012                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4012 = 80.0f;
+SECTION_SDATA2 static f32 lit_4012 = 80.0f;
 
 /* 80452850-80452854 0004+00 s=1 e=0 z=0  None .sdata2    @4013                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4013 = 2.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_4013 = 2.0f / 25.0f;
 
 /* 80452854-80452858 0004+00 s=2 e=0 z=0  None .sdata2    @4014                                                        */
 SECTION_SDATA2 static f32 lit_4014 = 120.0f;
@@ -389,73 +389,73 @@ asm void dCamParam_c::SearchStyle(u32 param_0) {
 
 /* ############################################################################################## */
 /* 80452858-8045285C 0004+00 s=1 e=0 z=0  None .sdata2    @4058                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4058 = 0.25f;
+SECTION_SDATA2 static f32 lit_4058 = 0.25f;
 
 /* 8045285C-80452860 0004+00 s=1 e=0 z=0  None .sdata2    @4119                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4119 = 100000.0f;
+SECTION_SDATA2 static f32 lit_4119 = 100000.0f;
 
 /* 80452860-80452864 0004+00 s=1 e=0 z=0  None .sdata2    @4120                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4120 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4120 = 1.0f / 20.0f;
 
 /* 80452864-80452868 0004+00 s=1 e=0 z=0  None .sdata2    @4121                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4121 = -60.0f;
+SECTION_SDATA2 static f32 lit_4121 = -60.0f;
 
 /* 80452868-8045286C 0004+00 s=1 e=0 z=0  None .sdata2    @4122                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4122 = 33.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_4122 = 33.0f / 100.0f;
 
 /* 8045286C-80452870 0004+00 s=1 e=0 z=0  None .sdata2    @4123                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4123 = 1.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_4123 = 1.0f / 50.0f;
 
 /* 80452870-80452874 0004+00 s=1 e=0 z=0  None .sdata2    @4124                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4124 = 100.0f;
+SECTION_SDATA2 static f32 lit_4124 = 100.0f;
 
 /* 80452874-80452878 0004+00 s=1 e=0 z=0  None .sdata2    @4125                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4125 = 7.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_4125 = 7.0f / 25.0f;
 
 /* 80452878-8045287C 0004+00 s=1 e=0 z=0  None .sdata2    @4126                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4126 = 3.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4126 = 3.0f / 20.0f;
 
 /* 8045287C-80452880 0004+00 s=1 e=0 z=0  None .sdata2    @4127                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4127 = 0.004999999888241291f;
+SECTION_SDATA2 static f32 lit_4127 = 0.004999999888241291f;
 
 /* 80452880-80452884 0004+00 s=1 e=0 z=0  None .sdata2    @4128                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4128 = 3.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_4128 = 3.0f / 50.0f;
 
 /* 80452884-80452888 0004+00 s=1 e=0 z=0  None .sdata2    @4129                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4129 = 70.0f;
+SECTION_SDATA2 static f32 lit_4129 = 70.0f;
 
 /* 80452888-8045288C 0004+00 s=1 e=0 z=0  None .sdata2    @4130                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4130 = 60.0f;
+SECTION_SDATA2 static f32 lit_4130 = 60.0f;
 
 /* 8045288C-80452890 0004+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4131 = 35.0f;
+SECTION_SDATA2 static f32 lit_4131 = 35.0f;
 
 /* 80452890-80452894 0004+00 s=1 e=0 z=0  None .sdata2    @4132                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4132 = 65.0f;
+SECTION_SDATA2 static f32 lit_4132 = 65.0f;
 
 /* 80452894-80452898 0004+00 s=1 e=0 z=0  None .sdata2    @4133                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4133 = 30.0f;
+SECTION_SDATA2 static f32 lit_4133 = 30.0f;
 
 /* 80452898-8045289C 0004+00 s=1 e=0 z=0  None .sdata2    @4134                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4134 = 27.0f;
+SECTION_SDATA2 static f32 lit_4134 = 27.0f;
 
 /* 8045289C-804528A0 0004+00 s=1 e=0 z=0  None .sdata2    @4135                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4135 = 45.0f;
+SECTION_SDATA2 static f32 lit_4135 = 45.0f;
 
 /* 804528A0-804528A4 0004+00 s=1 e=0 z=0  None .sdata2    @4136                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4136 = 3500.0f;
+SECTION_SDATA2 static f32 lit_4136 = 3500.0f;
 
 /* 804528A4-804528A8 0004+00 s=1 e=0 z=0  None .sdata2    @4137                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4137 = 4.0f;
+SECTION_SDATA2 static f32 lit_4137 = 4.0f;
 
 /* 804528A8-804528AC 0004+00 s=1 e=0 z=0  None .sdata2    @4138                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4138 = 1200.0f;
+SECTION_SDATA2 static f32 lit_4138 = 1200.0f;
 
 /* 804528AC-804528B0 0004+00 s=1 e=0 z=0  None .sdata2    @4139                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4139 = 17.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4139 = 17.0f / 20.0f;
 
 /* 804528B0-804528B4 0004+00 s=1 e=0 z=0  None .sdata2    @4140                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4140 = 50.0f;
+SECTION_SDATA2 static f32 lit_4140 = 50.0f;
 
 /* 80088668-800888B8 0250+00 s=0 e=1 z=0  None .text      __ct__11dCamSetup_cFv                                        */
 #pragma push
@@ -481,7 +481,7 @@ asm dCamSetup_c::~dCamSetup_c() {
 
 /* ############################################################################################## */
 /* 804528B4-804528B8 0004+00 s=1 e=0 z=0  None .sdata2    @4173                                                        */
-SECTION_SDATA2 static f32 d_d_cam_param__lit_4173 = 182.04444885253906f;
+SECTION_SDATA2 static f32 lit_4173 = 182.04444885253906f;
 
 /* 80088918-80088988 0070+00 s=0 e=1 z=0  None .text      CheckLatitudeRange__11dCamSetup_cFPs                         */
 #pragma push

@@ -82,7 +82,7 @@ lbl_801D2100:
 /* 801D2240 000000FC  C0 03 0E EC */	lfs f0, 0xeec(r3)
 /* 801D2244 00000100  C0 9B 0F 9C */	lfs f4, 0xf9c(r27)
 /* 801D2248 00000104  EC 00 01 32 */	fmuls f0, f0, f4
-/* 801D224C 00000108  C0 62 A7 E8 */	lfs f3, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D224C 00000108  C0 62 A7 E8 */	lfs f3, lit_4202(r2)
 /* 801D2250 0000010C  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 801D2254 00000110  EC A1 00 2A */	fadds f5, f1, f0
 /* 801D2258 00000114  C0 41 00 1C */	lfs f2, 0x1c(r1)
@@ -107,7 +107,7 @@ lbl_801D2294:
 /* 801D22A0 0000000C  C0 23 0E C8 */	lfs f1, 0xec8(r3)
 /* 801D22A4 00000010  C0 1B 0F 9C */	lfs f0, 0xf9c(r27)
 /* 801D22A8 00000014  EC 21 00 32 */	fmuls f1, f1, f0
-/* 801D22AC 00000018  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D22AC 00000018  C0 02 A7 E8 */	lfs f0, lit_4202(r2)
 /* 801D22B0 0000001C  EF 41 00 32 */	fmuls f26, f1, f0
 /* 801D22B4 00000020  4B E5 CB AD */	bl dComIfGp_getNowLevel__Fv
 /* 801D22B8 00000024  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
@@ -126,7 +126,7 @@ lbl_801D2294:
 /* 801D22EC 00000058  C0 23 0E E8 */	lfs f1, 0xee8(r3)
 /* 801D22F0 0000005C  C0 1B 0F 9C */	lfs f0, 0xf9c(r27)
 /* 801D22F4 00000060  EC 21 00 32 */	fmuls f1, f1, f0
-/* 801D22F8 00000064  C0 02 A7 E8 */	lfs f0, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D22F8 00000064  C0 02 A7 E8 */	lfs f0, lit_4202(r2)
 /* 801D22FC 00000068  EF 61 00 32 */	fmuls f27, f1, f0
 /* 801D2300 0000006C  4B E5 CB 61 */	bl dComIfGp_getNowLevel__Fv
 /* 801D2304 00000070  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
@@ -164,7 +164,7 @@ lbl_801D2374:
 /* 801D237C 00000008  57 80 06 3E */	clrlwi r0, r28, 0x18
 /* 801D2380 0000000C  28 00 00 01 */	cmplwi r0, 1
 /* 801D2384 00000010  40 82 00 18 */	bne lbl_801D239C
-/* 801D2388 00000014  C0 22 A7 E8 */	lfs f1, d_menu_d_menu_fmap2D__lit_4202(r2)
+/* 801D2388 00000014  C0 22 A7 E8 */	lfs f1, lit_4202(r2)
 /* 801D238C 00000018  C0 1B 0F A0 */	lfs f0, 0xfa0(r27)
 /* 801D2390 0000001C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801D2394 00000020  EF E1 00 2A */	fadds f31, f1, f0

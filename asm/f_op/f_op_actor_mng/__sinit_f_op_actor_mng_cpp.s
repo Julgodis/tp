@@ -4,8 +4,8 @@ lbl_8001DE14:
 /* 8001DE1C 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8001DE20 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8001DE24 00000010  93 C1 00 08 */	stw r30, 8(r1)
-/* 8001DE28 00000014  3C 60 80 3F */	lis r3, f_op_f_op_actor_mng__lit_4176@ha
-/* 8001DE2C 00000018  3B E3 1C 00 */	addi r31, r3, f_op_f_op_actor_mng__lit_4176@l
+/* 8001DE28 00000014  3C 60 80 3F */	lis r3, lit_4176@ha
+/* 8001DE2C 00000018  3B E3 1C 00 */	addi r31, r3, lit_4176@l
 /* 8001DE30 0000001C  38 6D 87 4C */	addi r3, r13, 0x80450CCC-0x80458580 /* l_hio-_SDA_BASE_ */
 /* 8001DE34 00000020  3C 80 80 02 */	lis r4, __dt__5l_HIOFv@ha
 /* 8001DE38 00000024  38 84 E0 98 */	addi r4, r4, __dt__5l_HIOFv@l

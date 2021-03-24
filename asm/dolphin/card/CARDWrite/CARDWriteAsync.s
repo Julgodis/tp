@@ -52,8 +52,8 @@ lbl_80358BE4:
 /* 80358BE8 00000004  38 03 2A 30 */	addi r0, r3, __CARDDefaultApiCallback@l
 lbl_80358BEC:
 /* 80358BEC 00000000  80 81 00 1C */	lwz r4, 0x1c(r1)
-/* 80358BF0 00000004  3C 60 80 36 */	lis r3, CARDWrite__EraseCallback@ha
-/* 80358BF4 00000008  38 A3 8A 84 */	addi r5, r3, CARDWrite__EraseCallback@l
+/* 80358BF0 00000004  3C 60 80 36 */	lis r3, EraseCallback@ha
+/* 80358BF4 00000008  38 A3 8A 84 */	addi r5, r3, EraseCallback@l
 /* 80358BF8 0000000C  90 04 00 D0 */	stw r0, 0xd0(r4)
 /* 80358BFC 00000010  80 61 00 1C */	lwz r3, 0x1c(r1)
 /* 80358C00 00000014  93 E3 00 B4 */	stw r31, 0xb4(r3)

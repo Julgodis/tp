@@ -20,7 +20,7 @@ lbl_800A0804:
 lbl_800A081C:
 /* 800A081C 00000000  3C 60 80 39 */	lis r3, m__19daAlinkHIO_horse_c0@ha
 /* 800A0820 00000004  38 63 E5 A4 */	addi r3, r3, m__19daAlinkHIO_horse_c0@l
-/* 800A0824 00000008  AB E3 00 52 */	lha r31, 0x52(r3)
+/* 800A0824 00000008  AB E3 00 52 */	lha r31, 0x52(r3)	/* effective address: 8038E5F6 */
 /* 800A0828 0000000C  48 00 00 08 */	b lbl_800A0830
 lbl_800A082C:
 /* 800A082C 00000000  3B E0 60 00 */	li r31, 0x6000

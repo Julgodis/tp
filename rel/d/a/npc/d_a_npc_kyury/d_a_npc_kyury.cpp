@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A630D4 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Kyury_c {
@@ -59,6 +59,8 @@ struct daNpc_Kyury_c {
 	/* 80A618A8 */ void drawDbgInfo();
 	/* 80A618B0 */ void drawOtherMdl();
 	/* 80A619B8 */ void selectAction();
+	/* 80A61A00 */ void chkAction(int (daNpc_Kyury_c::*)(void*));
+	/* 80A61A2C */ void setAction(int (daNpc_Kyury_c::*)(void*));
 	/* 80A61AD4 */ void cutConversation(int);
 	/* 80A61ED0 */ void wait(void*);
 	/* 80A62370 */ void talk(void*);
@@ -222,8 +224,8 @@ extern "C" void setCollision__13daNpc_Kyury_cFv(); // 1
 extern "C" void drawDbgInfo__13daNpc_Kyury_cFv(); // 1
 extern "C" void drawOtherMdl__13daNpc_Kyury_cFv(); // 1
 extern "C" void selectAction__13daNpc_Kyury_cFv(); // 1
-extern "C" static void chkAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i(); // 1
+extern "C" void setAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i(); // 1
 extern "C" void cutConversation__13daNpc_Kyury_cFi(); // 1
 extern "C" void wait__13daNpc_Kyury_cFPv(); // 1
 extern "C" void talk__13daNpc_Kyury_cFPv(); // 1
@@ -750,7 +752,7 @@ asm void daNpc_Kyury_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i() {
+asm void daNpc_Kyury_c::chkAction(int (daNpc_Kyury_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kyury/d_a_npc_kyury/chkAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i.s"
 }
@@ -761,7 +763,7 @@ extern "C" asm static void chkAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i() {
+asm void daNpc_Kyury_c::setAction(int (daNpc_Kyury_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kyury/d_a_npc_kyury/setAction__13daNpc_Kyury_cFM13daNpc_Kyury_cFPCvPvPv_i.s"
 }

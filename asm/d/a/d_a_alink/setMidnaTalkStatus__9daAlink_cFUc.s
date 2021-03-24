@@ -1,7 +1,7 @@
 lbl_800D014C:
 /* 800D014C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D0150 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D0154 00000008  98 83 5E 33 */	stb r4, 0x5e33(r3)
+/* 800D0154 00000008  98 83 5E 33 */	stb r4, 0x5e33(r3)	/* effective address: 8040BFF3 */
 /* 800D0158 0000000C  38 00 00 00 */	li r0, 0
-/* 800D015C 00000010  98 03 5E 4E */	stb r0, 0x5e4e(r3)
+/* 800D015C 00000010  98 03 5E 4E */	stb r0, 0x5e4e(r3)	/* effective address: 8040C00E */
 /* 800D0160 00000014  4E 80 00 20 */	blr 

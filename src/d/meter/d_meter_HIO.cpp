@@ -170,13 +170,13 @@ extern "C" extern u8 const data_80397FE8[24];
 extern "C" extern u8 const data_80398000[24];
 extern "C" extern u8 const data_80398018[24];
 extern "C" extern u8 const data_80398030[24];
-extern "C" extern u8 d_meter_d_meter_HIO__lit_3767[12];
+extern "C" extern u8 lit_3767[12];
 extern "C" extern u8 g_drawHIO[3880];
-extern "C" extern u8 d_meter_d_meter_HIO__lit_3768[12];
+extern "C" extern u8 lit_3768[12];
 extern "C" extern u8 g_ringHIO[344];
-extern "C" extern u8 d_meter_d_meter_HIO__lit_3769[12];
+extern "C" extern u8 lit_3769[12];
 extern "C" extern u8 g_fmapHIO[1188];
-extern "C" extern u8 d_meter_d_meter_HIO__lit_3770[12];
+extern "C" extern u8 lit_3770[12];
 extern "C" extern u8 g_cursorHIO[68 + 4 /* padding */];
 extern "C" extern u8 g_menuHIO[8];
 
@@ -331,54 +331,54 @@ asm dMeter_menuHIO_c::dMeter_menuHIO_c() {
 
 /* ############################################################################################## */
 /* 804544E0-804544E4 0004+00 s=12 e=0 z=0  None .sdata2    @3787                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3787 = 1.0f;
+SECTION_SDATA2 static f32 lit_3787 = 1.0f;
 
 /* 804544E4-804544E8 0004+00 s=5 e=0 z=0  None .sdata2    @3788                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3788 = 1.5f;
+SECTION_SDATA2 static f32 lit_3788 = 1.5f;
 
 /* 804544E8-804544EC 0004+00 s=6 e=0 z=0  None .sdata2    @3789                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3789 = 11.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3789 = 11.0f / 10.0f;
 
 /* 804544EC-804544F0 0004+00 s=2 e=0 z=0  None .sdata2    @3790                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3790 = -12.0f;
+SECTION_SDATA2 static f32 lit_3790 = -12.0f;
 
 /* 804544F0-804544F4 0004+00 s=4 e=0 z=0  None .sdata2    @3791                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3791 = 13.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3791 = 13.0f / 10.0f;
 
 /* 804544F4-804544F8 0004+00 s=5 e=0 z=0  None .sdata2    @3792                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3792 = 4.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3792 = 4.0f / 5.0f;
 
 /* 804544F8-804544FC 0004+00 s=11 e=0 z=0  None .sdata2    @3793                                                        */
-SECTION_SDATA2 static u8 d_meter_d_meter_HIO__lit_3793[4] = {
+SECTION_SDATA2 static u8 lit_3793[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 804544FC-80454500 0004+00 s=2 e=0 z=0  None .sdata2    @3794                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3794 = -5.0f;
+SECTION_SDATA2 static f32 lit_3794 = -5.0f;
 
 /* 80454500-80454504 0004+00 s=3 e=0 z=0  None .sdata2    @3795                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3795 = 4.0f;
+SECTION_SDATA2 static f32 lit_3795 = 4.0f;
 
 /* 80454504-80454508 0004+00 s=6 e=0 z=0  None .sdata2    @3796                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3796 = 9.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3796 = 9.0f / 10.0f;
 
 /* 80454508-8045450C 0004+00 s=1 e=0 z=0  None .sdata2    @3797                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3797 = -22.299999237060547f;
+SECTION_SDATA2 static f32 lit_3797 = -22.299999237060547f;
 
 /* 8045450C-80454510 0004+00 s=1 e=0 z=0  None .sdata2    @3798                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3798 = 24.899999618530273f;
+SECTION_SDATA2 static f32 lit_3798 = 24.899999618530273f;
 
 /* 80454510-80454514 0004+00 s=4 e=0 z=0  None .sdata2    @3799                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3799 = 25.0f;
+SECTION_SDATA2 static f32 lit_3799 = 25.0f;
 
 /* 80454514-80454518 0004+00 s=1 e=0 z=0  None .sdata2    @3800                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3800 = -24.899999618530273f;
+SECTION_SDATA2 static f32 lit_3800 = -24.899999618530273f;
 
 /* 80454518-8045451C 0004+00 s=1 e=0 z=0  None .sdata2    @3801                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3801 = -27.5f;
+SECTION_SDATA2 static f32 lit_3801 = -27.5f;
 
 /* 8045451C-80454520 0004+00 s=1 e=0 z=0  None .sdata2    @3802                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3802 = 26.0f;
+SECTION_SDATA2 static f32 lit_3802 = 26.0f;
 
 /* 801FE348-801FE4EC 01A4+00 s=1 e=0 z=0  None .text      __ct__23dMeter_drawCollectHIO_cFv                            */
 #pragma push
@@ -393,19 +393,19 @@ asm dMeter_drawCollectHIO_c::dMeter_drawCollectHIO_c() {
 
 /* ############################################################################################## */
 /* 80454520-80454524 0004+00 s=3 e=0 z=0  None .sdata2    @3828                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3828 = 51.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_3828 = 51.0f / 50.0f;
 
 /* 80454524-80454528 0004+00 s=3 e=0 z=0  None .sdata2    @3829                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3829 = 49.0f / 50.0f;
+SECTION_SDATA2 static f32 lit_3829 = 49.0f / 50.0f;
 
 /* 80454528-8045452C 0004+00 s=4 e=0 z=0  None .sdata2    @3830                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3830 = 3.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_3830 = 3.0f / 10.0f;
 
 /* 8045452C-80454530 0004+00 s=1 e=0 z=0  None .sdata2    @3831                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3831 = 45.0f;
+SECTION_SDATA2 static f32 lit_3831 = 45.0f;
 
 /* 80454530-80454534 0004+00 s=1 e=0 z=0  None .sdata2    @3832                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3832 = 38.0f;
+SECTION_SDATA2 static f32 lit_3832 = 38.0f;
 
 /* 801FE4EC-801FE5CC 00E0+00 s=1 e=0 z=0  None .text      __ct__22dMeter_drawOptionHIO_cFv                             */
 #pragma push
@@ -420,7 +420,7 @@ asm dMeter_drawOptionHIO_c::dMeter_drawOptionHIO_c() {
 
 /* ############################################################################################## */
 /* 80454534-80454538 0004+00 s=4 e=0 z=0  None .sdata2    @3867                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3867 = -20.0f;
+SECTION_SDATA2 static f32 lit_3867 = -20.0f;
 
 /* 801FE5CC-801FE730 0164+00 s=1 e=0 z=0  None .text      __ct__22dMeter_drawLetterHIO_cFv                             */
 #pragma push
@@ -441,22 +441,22 @@ SECTION_RODATA static u8 const data_80397E50[24] = {
 };
 
 /* 80454538-8045453C 0004+00 s=1 e=0 z=0  None .sdata2    @3902                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3902 = 83.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_3902 = 83.0f / 100.0f;
 
 /* 8045453C-80454540 0004+00 s=3 e=0 z=0  None .sdata2    @3903                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3903 = 5.0f;
+SECTION_SDATA2 static f32 lit_3903 = 5.0f;
 
 /* 80454540-80454544 0004+00 s=1 e=0 z=0  None .sdata2    @3904                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3904 = -111.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_3904 = -111.0f / 5.0f;
 
 /* 80454544-80454548 0004+00 s=1 e=0 z=0  None .sdata2    @3905                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3905 = -189.5f;
+SECTION_SDATA2 static f32 lit_3905 = -189.5f;
 
 /* 80454548-8045454C 0004+00 s=1 e=0 z=0  None .sdata2    @3906                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3906 = -79.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_3906 = -79.0f / 20.0f;
 
 /* 8045454C-80454550 0004+00 s=1 e=0 z=0  None .sdata2    @3907                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3907 = -188.0f;
+SECTION_SDATA2 static f32 lit_3907 = -188.0f;
 
 /* 801FE730-801FE8DC 01AC+00 s=1 e=0 z=0  None .text      __ct__23dMeter_drawFishingHIO_cFv                            */
 #pragma push
@@ -483,7 +483,7 @@ SECTION_SDATA2 static f32 lit_3914 = 119.0f;
 SECTION_SDATA2 static f32 lit_3915 = 20.0f;
 
 /* 80454560-80454564 0004+00 s=1 e=0 z=0  None .sdata2    @3916                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3916 = -34.0f;
+SECTION_SDATA2 static f32 lit_3916 = -34.0f;
 
 /* 801FE8DC-801FE954 0078+00 s=1 e=0 z=0  None .text      __ct__22dMeter_drawInsectHIO_cFv                             */
 #pragma push
@@ -498,7 +498,7 @@ asm dMeter_drawInsectHIO_c::dMeter_drawInsectHIO_c() {
 
 /* ############################################################################################## */
 /* 80454564-80454568 0004+00 s=3 e=0 z=0  None .sdata2    @3921                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3921 = 0.75f;
+SECTION_SDATA2 static f32 lit_3921 = 0.75f;
 
 /* 801FE954-801FE990 003C+00 s=1 e=0 z=0  None .text      __ct__27dMeter_drawCalibrationHIO_cFv                        */
 #pragma push
@@ -513,10 +513,10 @@ asm dMeter_drawCalibrationHIO_c::dMeter_drawCalibrationHIO_c() {
 
 /* ############################################################################################## */
 /* 80454568-8045456C 0004+00 s=1 e=0 z=0  None .sdata2    @3956                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3956 = 80.0f;
+SECTION_SDATA2 static f32 lit_3956 = 80.0f;
 
 /* 8045456C-80454570 0004+00 s=5 e=0 z=0  None .sdata2    @3957                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_3957 = 19.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_3957 = 19.0f / 20.0f;
 
 /* 801FE990-801FEAF0 0160+00 s=1 e=0 z=0  None .text      __ct__21dMeter_drawSkillHIO_cFv                              */
 #pragma push
@@ -531,49 +531,49 @@ asm dMeter_drawSkillHIO_c::dMeter_drawSkillHIO_c() {
 
 /* ############################################################################################## */
 /* 80454570-80454574 0004+00 s=5 e=0 z=0  None .sdata2    @4028                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4028 = 2.5f;
+SECTION_SDATA2 static f32 lit_4028 = 2.5f;
 
 /* 80454574-80454578 0004+00 s=2 e=0 z=0  None .sdata2    @4029                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4029 = 0.7727050185203552f;
+SECTION_SDATA2 static f32 lit_4029 = 0.7727050185203552f;
 
 /* 80454578-8045457C 0004+00 s=3 e=0 z=0  None .sdata2    @4030                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4030 = 3.0f;
+SECTION_SDATA2 static f32 lit_4030 = 3.0f;
 
 /* 8045457C-80454580 0004+00 s=1 e=0 z=0  None .sdata2    @4031                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4031 = 2.0f;
+SECTION_SDATA2 static f32 lit_4031 = 2.0f;
 
 /* 80454580-80454584 0004+00 s=1 e=0 z=0  None .sdata2    @4032                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4032 = 23.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4032 = 23.0f / 20.0f;
 
 /* 80454584-80454588 0004+00 s=1 e=0 z=0  None .sdata2    @4033                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4033 = 35.0f;
+SECTION_SDATA2 static f32 lit_4033 = 35.0f;
 
 /* 80454588-8045458C 0004+00 s=2 e=0 z=0  None .sdata2    @4034                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4034 = 175.0f;
+SECTION_SDATA2 static f32 lit_4034 = 175.0f;
 
 /* 8045458C-80454590 0004+00 s=1 e=0 z=0  None .sdata2    @4035                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4035 = -392.0f;
+SECTION_SDATA2 static f32 lit_4035 = -392.0f;
 
 /* 80454590-80454594 0004+00 s=2 e=0 z=0  None .sdata2    @4036                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4036 = -26.0f;
+SECTION_SDATA2 static f32 lit_4036 = -26.0f;
 
 /* 80454594-80454598 0004+00 s=1 e=0 z=0  None .sdata2    @4037                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4037 = 67.0f;
+SECTION_SDATA2 static f32 lit_4037 = 67.0f;
 
 /* 80454598-8045459C 0004+00 s=3 e=0 z=0  None .sdata2    @4038                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4038 = 12.0f;
+SECTION_SDATA2 static f32 lit_4038 = 12.0f;
 
 /* 8045459C-804545A0 0004+00 s=3 e=0 z=0  None .sdata2    @4039                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4039 = 17.0f;
+SECTION_SDATA2 static f32 lit_4039 = 17.0f;
 
 /* 804545A0-804545A4 0004+00 s=1 e=0 z=0  None .sdata2    @4040                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4040 = -17.0f;
+SECTION_SDATA2 static f32 lit_4040 = -17.0f;
 
 /* 804545A4-804545A8 0004+00 s=2 e=0 z=0  None .sdata2    @4041                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4041 = -6.0f;
+SECTION_SDATA2 static f32 lit_4041 = -6.0f;
 
 /* 804545A8-804545AC 0004+00 s=3 e=0 z=0  None .sdata2    @4042                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4042 = -8.0f;
+SECTION_SDATA2 static f32 lit_4042 = -8.0f;
 
 /* 801FEAF0-801FEFF0 0500+00 s=1 e=0 z=0  None .text      __ct__25dMeter_drawEmpButtonHIO_cFv                          */
 #pragma push
@@ -588,73 +588,73 @@ asm dMeter_drawEmpButtonHIO_c::dMeter_drawEmpButtonHIO_c() {
 
 /* ############################################################################################## */
 /* 804545AC-804545B0 0004+00 s=4 e=0 z=0  None .sdata2    @4071                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4071 = 6.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4071 = 6.0f / 5.0f;
 
 /* 804545B0-804545B4 0004+00 s=1 e=0 z=0  None .sdata2    @4072                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4072 = 207.0f;
+SECTION_SDATA2 static f32 lit_4072 = 207.0f;
 
 /* 804545B4-804545B8 0004+00 s=1 e=0 z=0  None .sdata2    @4073                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4073 = -43.0f;
+SECTION_SDATA2 static f32 lit_4073 = -43.0f;
 
 /* 804545B8-804545BC 0004+00 s=5 e=0 z=0  None .sdata2    @4074                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4074 = 0.5f;
+SECTION_SDATA2 static f32 lit_4074 = 0.5f;
 
 /* 804545BC-804545C0 0004+00 s=1 e=0 z=0  None .sdata2    @4075                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4075 = 317.0f;
+SECTION_SDATA2 static f32 lit_4075 = 317.0f;
 
 /* 804545C0-804545C4 0004+00 s=5 e=0 z=0  None .sdata2    @4076                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4076 = 7.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4076 = 7.0f / 10.0f;
 
 /* 804545C4-804545C8 0004+00 s=1 e=0 z=0  None .sdata2    @4077                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4077 = -275.0f;
+SECTION_SDATA2 static f32 lit_4077 = -275.0f;
 
 /* 804545C8-804545CC 0004+00 s=2 e=0 z=0  None .sdata2    @4078                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4078 = 76.0f;
+SECTION_SDATA2 static f32 lit_4078 = 76.0f;
 
 /* 804545CC-804545D0 0004+00 s=2 e=0 z=0  None .sdata2    @4079                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4079 = -22.0f;
+SECTION_SDATA2 static f32 lit_4079 = -22.0f;
 
 /* 804545D0-804545D4 0004+00 s=2 e=0 z=0  None .sdata2    @4080                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4080 = -30.0f;
+SECTION_SDATA2 static f32 lit_4080 = -30.0f;
 
 /* 804545D4-804545D8 0004+00 s=4 e=0 z=0  None .sdata2    @4081                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4081 = 7.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4081 = 7.0f / 5.0f;
 
 /* 804545D8-804545DC 0004+00 s=1 e=0 z=0  None .sdata2    @4082                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4082 = 198.0f;
+SECTION_SDATA2 static f32 lit_4082 = 198.0f;
 
 /* 804545DC-804545E0 0004+00 s=2 e=0 z=0  None .sdata2    @4083                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4083 = 160.0f;
+SECTION_SDATA2 static f32 lit_4083 = 160.0f;
 
 /* 804545E0-804545E4 0004+00 s=2 e=0 z=0  None .sdata2    @4084                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4084 = 28.0f;
+SECTION_SDATA2 static f32 lit_4084 = 28.0f;
 
 /* 804545E4-804545E8 0004+00 s=3 e=0 z=0  None .sdata2    @4085                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4085 = -18.0f;
+SECTION_SDATA2 static f32 lit_4085 = -18.0f;
 
 /* 804545E8-804545EC 0004+00 s=1 e=0 z=0  None .sdata2    @4086                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4086 = 23.0f;
+SECTION_SDATA2 static f32 lit_4086 = 23.0f;
 
 /* 804545EC-804545F0 0004+00 s=1 e=0 z=0  None .sdata2    @4087                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4087 = -16.0f;
+SECTION_SDATA2 static f32 lit_4087 = -16.0f;
 
 /* 804545F0-804545F4 0004+00 s=1 e=0 z=0  None .sdata2    @4088                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4088 = 267.0f;
+SECTION_SDATA2 static f32 lit_4088 = 267.0f;
 
 /* 804545F4-804545F8 0004+00 s=1 e=0 z=0  None .sdata2    @4089                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4089 = 288.0f;
+SECTION_SDATA2 static f32 lit_4089 = 288.0f;
 
 /* 804545F8-804545FC 0004+00 s=1 e=0 z=0  None .sdata2    @4090                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4090 = -29.0f;
+SECTION_SDATA2 static f32 lit_4090 = -29.0f;
 
 /* 804545FC-80454600 0004+00 s=1 e=0 z=0  None .sdata2    @4091                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4091 = 50.0f;
+SECTION_SDATA2 static f32 lit_4091 = 50.0f;
 
 /* 80454600-80454604 0004+00 s=1 e=0 z=0  None .sdata2    @4092                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4092 = 9.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4092 = 9.0f / 5.0f;
 
 /* 80454604-80454608 0004+00 s=3 e=0 z=0  None .sdata2    @4093                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4093 = 3.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4093 = 3.0f / 5.0f;
 
 /* 801FEFF0-801FF31C 032C+00 s=1 e=0 z=0  None .text      __ct__24dMeter_drawMiniGameHIO_cFv                           */
 #pragma push
@@ -669,25 +669,25 @@ asm dMeter_drawMiniGameHIO_c::dMeter_drawMiniGameHIO_c() {
 
 /* ############################################################################################## */
 /* 80454608-8045460C 0004+00 s=1 e=0 z=0  None .sdata2    @4126                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4126 = 19.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_4126 = 19.0f / 25.0f;
 
 /* 8045460C-80454610 0004+00 s=1 e=0 z=0  None .sdata2    @4127                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4127 = 11.0f;
+SECTION_SDATA2 static f32 lit_4127 = 11.0f;
 
 /* 80454610-80454614 0004+00 s=3 e=0 z=0  None .sdata2    @4128                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4128 = 33.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4128 = 33.0f / 5.0f;
 
 /* 80454614-80454618 0004+00 s=1 e=0 z=0  None .sdata2    @4129                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4129 = -35.0f;
+SECTION_SDATA2 static f32 lit_4129 = -35.0f;
 
 /* 80454618-8045461C 0004+00 s=3 e=0 z=0  None .sdata2    @4130                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4130 = 1.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4130 = 1.0f / 5.0f;
 
 /* 8045461C-80454620 0004+00 s=1 e=0 z=0  None .sdata2    @4131                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4131 = 19.0f;
+SECTION_SDATA2 static f32 lit_4131 = 19.0f;
 
 /* 80454620-80454624 0004+00 s=1 e=0 z=0  None .sdata2    @4132                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4132 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4132 = 1.0f / 10.0f;
 
 /* 801FF31C-801FF5B8 029C+00 s=1 e=0 z=0  None .text      __ct__25dMeter_drawLightDropHIO_cFv                          */
 #pragma push
@@ -708,46 +708,46 @@ SECTION_SDATA2 static f32 lit_4257 = 40.0f;
 SECTION_SDATA2 static f32 lit_4258 = -28.0f / 5.0f;
 
 /* 8045462C-80454630 0004+00 s=1 e=0 z=0  None .sdata2    @4259                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4259 = -15.0f;
+SECTION_SDATA2 static f32 lit_4259 = -15.0f;
 
 /* 80454630-80454634 0004+00 s=3 e=0 z=0  None .sdata2    @4260                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4260 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4260 = 2.0f / 5.0f;
 
 /* 80454634-80454638 0004+00 s=2 e=0 z=0  None .sdata2    @4261                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4261 = 18.0f;
+SECTION_SDATA2 static f32 lit_4261 = 18.0f;
 
 /* 80454638-8045463C 0004+00 s=2 e=0 z=0  None .sdata2    @4262                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4262 = 11.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4262 = 11.0f / 20.0f;
 
 /* 8045463C-80454640 0004+00 s=1 e=0 z=0  None .sdata2    @4263                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4263 = -42.0f;
+SECTION_SDATA2 static f32 lit_4263 = -42.0f;
 
 /* 80454640-80454644 0004+00 s=2 e=0 z=0  None .sdata2    @4264                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4264 = 8.0f;
+SECTION_SDATA2 static f32 lit_4264 = 8.0f;
 
 /* 80454644-80454648 0004+00 s=2 e=0 z=0  None .sdata2    @4265                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4265 = 23.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_4265 = 23.0f / 25.0f;
 
 /* 80454648-8045464C 0004+00 s=1 e=0 z=0  None .sdata2    @4266                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4266 = -63.0f;
+SECTION_SDATA2 static f32 lit_4266 = -63.0f;
 
 /* 8045464C-80454650 0004+00 s=1 e=0 z=0  None .sdata2    @4267                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4267 = -49.0f;
+SECTION_SDATA2 static f32 lit_4267 = -49.0f;
 
 /* 80454650-80454654 0004+00 s=1 e=0 z=0  None .sdata2    @4268                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4268 = -62.0f;
+SECTION_SDATA2 static f32 lit_4268 = -62.0f;
 
 /* 80454654-80454658 0004+00 s=1 e=0 z=0  None .sdata2    @4269                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4269 = -48.0f;
+SECTION_SDATA2 static f32 lit_4269 = -48.0f;
 
 /* 80454658-8045465C 0004+00 s=1 e=0 z=0  None .sdata2    @4270                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4270 = -11.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4270 = -11.0f / 5.0f;
 
 /* 8045465C-80454660 0004+00 s=2 e=0 z=0  None .sdata2    @4271                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4271 = -13.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4271 = -13.0f / 10.0f;
 
 /* 80454660-80454664 0004+00 s=1 e=0 z=0  None .sdata2    @4272                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4272 = -46.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4272 = -46.0f / 5.0f;
 
 /* 80454664-80454668 0004+00 s=1 e=0 z=0  None .sdata2    @4273                                                        */
 SECTION_SDATA2 static f32 lit_4273 = -65.0f;
@@ -756,52 +756,52 @@ SECTION_SDATA2 static f32 lit_4273 = -65.0f;
 SECTION_SDATA2 static f32 lit_4274 = 23.0f / 10.0f;
 
 /* 8045466C-80454670 0004+00 s=1 e=0 z=0  None .sdata2    @4275                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4275 = 22.0f;
+SECTION_SDATA2 static f32 lit_4275 = 22.0f;
 
 /* 80454670-80454674 0004+00 s=1 e=0 z=0  None .sdata2    @4276                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4276 = 21.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4276 = 21.0f / 10.0f;
 
 /* 80454674-80454678 0004+00 s=2 e=0 z=0  None .sdata2    @4277                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4277 = -14.0f;
+SECTION_SDATA2 static f32 lit_4277 = -14.0f;
 
 /* 80454678-8045467C 0004+00 s=1 e=0 z=0  None .sdata2    @4278                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4278 = -13.0f;
+SECTION_SDATA2 static f32 lit_4278 = -13.0f;
 
 /* 8045467C-80454680 0004+00 s=2 e=0 z=0  None .sdata2    @4279                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4279 = -1.0f;
+SECTION_SDATA2 static f32 lit_4279 = -1.0f;
 
 /* 80454680-80454684 0004+00 s=1 e=0 z=0  None .sdata2    @4280                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4280 = 14.0f;
+SECTION_SDATA2 static f32 lit_4280 = 14.0f;
 
 /* 80454684-80454688 0004+00 s=2 e=0 z=0  None .sdata2    @4281                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4281 = 6.0f;
+SECTION_SDATA2 static f32 lit_4281 = 6.0f;
 
 /* 80454688-8045468C 0004+00 s=1 e=0 z=0  None .sdata2    @4282                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4282 = -47.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_4282 = -47.0f / 10.0f;
 
 /* 8045468C-80454690 0004+00 s=2 e=0 z=0  None .sdata2    @4283                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4283 = 46.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4283 = 46.0f / 5.0f;
 
 /* 80454690-80454694 0004+00 s=1 e=0 z=0  None .sdata2    @4284                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4284 = -4.0f;
+SECTION_SDATA2 static f32 lit_4284 = -4.0f;
 
 /* 80454694-80454698 0004+00 s=2 e=0 z=0  None .sdata2    @4285                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4285 = 11.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4285 = 11.0f / 5.0f;
 
 /* 80454698-8045469C 0004+00 s=2 e=0 z=0  None .sdata2    @4286                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4286 = 17.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4286 = 17.0f / 20.0f;
 
 /* 8045469C-804546A0 0004+00 s=1 e=0 z=0  None .sdata2    @4287                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4287 = 200.0f;
+SECTION_SDATA2 static f32 lit_4287 = 200.0f;
 
 /* 804546A0-804546A4 0004+00 s=1 e=0 z=0  None .sdata2    @4288                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4288 = 150.0f;
+SECTION_SDATA2 static f32 lit_4288 = 150.0f;
 
 /* 804546A4-804546A8 0004+00 s=1 e=0 z=0  None .sdata2    @4289                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4289 = 208.0f;
+SECTION_SDATA2 static f32 lit_4289 = 208.0f;
 
 /* 804546A8-804546AC 0004+00 s=1 e=0 z=0  None .sdata2    @4290                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4290 = -100.0f;
+SECTION_SDATA2 static f32 lit_4290 = -100.0f;
 
 /* 801FF5B8-802001AC 0BF4+00 s=1 e=0 z=0  None .text      __ct__16dMeter_drawHIO_cFv                                   */
 #pragma push
@@ -816,46 +816,46 @@ asm dMeter_drawHIO_c::dMeter_drawHIO_c() {
 
 /* ############################################################################################## */
 /* 804546AC-804546B0 0004+00 s=1 e=0 z=0  None .sdata2    @4334                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4334 = 125.0f;
+SECTION_SDATA2 static f32 lit_4334 = 125.0f;
 
 /* 804546B0-804546B4 0004+00 s=1 e=0 z=0  None .sdata2    @4335                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4335 = 173.0f;
+SECTION_SDATA2 static f32 lit_4335 = 173.0f;
 
 /* 804546B4-804546B8 0004+00 s=1 e=0 z=0  None .sdata2    @4336                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4336 = 7.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4336 = 7.0f / 20.0f;
 
 /* 804546B8-804546BC 0004+00 s=1 e=0 z=0  None .sdata2    @4337                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4337 = -59.0f;
+SECTION_SDATA2 static f32 lit_4337 = -59.0f;
 
 /* 804546BC-804546C0 0004+00 s=1 e=0 z=0  None .sdata2    @4338                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4338 = -64.0f;
+SECTION_SDATA2 static f32 lit_4338 = -64.0f;
 
 /* 804546C0-804546C4 0004+00 s=1 e=0 z=0  None .sdata2    @4339                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4339 = 90.0f;
+SECTION_SDATA2 static f32 lit_4339 = 90.0f;
 
 /* 804546C4-804546C8 0004+00 s=1 e=0 z=0  None .sdata2    @4340                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4340 = -124.0f;
+SECTION_SDATA2 static f32 lit_4340 = -124.0f;
 
 /* 804546C8-804546CC 0004+00 s=1 e=0 z=0  None .sdata2    @4341                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4341 = 118.0f;
+SECTION_SDATA2 static f32 lit_4341 = 118.0f;
 
 /* 804546CC-804546D0 0004+00 s=1 e=0 z=0  None .sdata2    @4342                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4342 = -127.0f;
+SECTION_SDATA2 static f32 lit_4342 = -127.0f;
 
 /* 804546D0-804546D4 0004+00 s=1 e=0 z=0  None .sdata2    @4343                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4343 = 46.0f;
+SECTION_SDATA2 static f32 lit_4343 = 46.0f;
 
 /* 804546D4-804546D8 0004+00 s=1 e=0 z=0  None .sdata2    @4344                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4344 = 9.0f;
+SECTION_SDATA2 static f32 lit_4344 = 9.0f;
 
 /* 804546D8-804546DC 0004+00 s=1 e=0 z=0  None .sdata2    @4345                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4345 = -60.0f;
+SECTION_SDATA2 static f32 lit_4345 = -60.0f;
 
 /* 804546DC-804546E0 0004+00 s=1 e=0 z=0  None .sdata2    @4346                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4346 = -58.0f;
+SECTION_SDATA2 static f32 lit_4346 = -58.0f;
 
 /* 804546E0-804546E4 0004+00 s=1 e=0 z=0  None .sdata2    @4347                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4347 = 120.0f;
+SECTION_SDATA2 static f32 lit_4347 = 120.0f;
 
 /* 802001AC-802004B4 0308+00 s=1 e=0 z=0  None .text      __ct__16dMeter_ringHIO_cFv                                   */
 #pragma push
@@ -870,16 +870,16 @@ asm dMeter_ringHIO_c::dMeter_ringHIO_c() {
 
 /* ############################################################################################## */
 /* 804546E4-804546E8 0004+00 s=1 e=0 z=0  None .sdata2    @4357                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4357 = 13.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4357 = 13.0f / 20.0f;
 
 /* 804546E8-804546EC 0004+00 s=1 e=0 z=0  None .sdata2    @4358                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4358 = 32.0f / 25.0f;
+SECTION_SDATA2 static f32 lit_4358 = 32.0f / 25.0f;
 
 /* 804546EC-804546F0 0004+00 s=1 e=0 z=0  None .sdata2    @4359                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4359 = 8.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4359 = 8.0f / 5.0f;
 
 /* 804546F0-804546F4 0004+00 s=1 e=0 z=0  None .sdata2    @4360                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4360 = 0.25f;
+SECTION_SDATA2 static f32 lit_4360 = 0.25f;
 
 /* 802004B4-802006C8 0214+00 s=1 e=0 z=0  None .text      __ct__19dMeter_mapIconHIO_cFv                                */
 #pragma push
@@ -894,49 +894,49 @@ asm dMeter_mapIconHIO_c::dMeter_mapIconHIO_c() {
 
 /* ############################################################################################## */
 /* 804546F4-804546F8 0004+00 s=1 e=0 z=0  None .sdata2    @4416                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4416 = 50000.0f;
+SECTION_SDATA2 static f32 lit_4416 = 50000.0f;
 
 /* 804546F8-804546FC 0004+00 s=1 e=0 z=0  None .sdata2    @4417                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4417 = 10000.0f;
+SECTION_SDATA2 static f32 lit_4417 = 10000.0f;
 
 /* 804546FC-80454700 0004+00 s=1 e=0 z=0  None .sdata2    @4418                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4418 = -300000.0f;
+SECTION_SDATA2 static f32 lit_4418 = -300000.0f;
 
 /* 80454700-80454704 0004+00 s=1 e=0 z=0  None .sdata2    @4419                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4419 = 300000.0f;
+SECTION_SDATA2 static f32 lit_4419 = 300000.0f;
 
 /* 80454704-80454708 0004+00 s=1 e=0 z=0  None .sdata2    @4420                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4420 = 142.0f;
+SECTION_SDATA2 static f32 lit_4420 = 142.0f;
 
 /* 80454708-8045470C 0004+00 s=1 e=0 z=0  None .sdata2    @4421                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4421 = 61.0f;
+SECTION_SDATA2 static f32 lit_4421 = 61.0f;
 
 /* 8045470C-80454710 0004+00 s=1 e=0 z=0  None .sdata2    @4422                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4422 = 329.0f;
+SECTION_SDATA2 static f32 lit_4422 = 329.0f;
 
 /* 80454710-80454714 0004+00 s=1 e=0 z=0  None .sdata2    @4423                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4423 = 10.0f;
+SECTION_SDATA2 static f32 lit_4423 = 10.0f;
 
 /* 80454714-80454718 0004+00 s=1 e=0 z=0  None .sdata2    @4424                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4424 = 7.0f;
+SECTION_SDATA2 static f32 lit_4424 = 7.0f;
 
 /* 80454718-8045471C 0004+00 s=1 e=0 z=0  None .sdata2    @4425                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4425 = 0.8649899959564209f;
+SECTION_SDATA2 static f32 lit_4425 = 0.8649899959564209f;
 
 /* 8045471C-80454720 0004+00 s=1 e=0 z=0  None .sdata2    @4426                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4426 = 4.5f;
+SECTION_SDATA2 static f32 lit_4426 = 4.5f;
 
 /* 80454720-80454724 0004+00 s=1 e=0 z=0  None .sdata2    @4427                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4427 = -0.5f;
+SECTION_SDATA2 static f32 lit_4427 = -0.5f;
 
 /* 80454724-80454728 0004+00 s=2 e=0 z=0  None .sdata2    @4428                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4428 = 21.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4428 = 21.0f / 20.0f;
 
 /* 80454728-8045472C 0004+00 s=1 e=0 z=0  None .sdata2    @4429                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4429 = -7.5f;
+SECTION_SDATA2 static f32 lit_4429 = -7.5f;
 
 /* 8045472C-80454730 0004+00 s=1 e=0 z=0  None .sdata2    @4430                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4430 = -7.0f;
+SECTION_SDATA2 static f32 lit_4430 = -7.0f;
 
 /* 802006C8-80200BCC 0504+00 s=1 e=0 z=0  None .text      __ct__16dMeter_fmapHIO_cFv                                   */
 #pragma push
@@ -962,19 +962,19 @@ asm dMeter_fmapHIO_c::~dMeter_fmapHIO_c() {
 
 /* ############################################################################################## */
 /* 80454730-80454734 0004+00 s=1 e=0 z=0  None .sdata2    @4485                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4485 = 13.0f;
+SECTION_SDATA2 static f32 lit_4485 = 13.0f;
 
 /* 80454734-80454738 0004+00 s=1 e=0 z=0  None .sdata2    @4486                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4486 = -102.0f;
+SECTION_SDATA2 static f32 lit_4486 = -102.0f;
 
 /* 80454738-8045473C 0004+00 s=1 e=0 z=0  None .sdata2    @4487                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4487 = 100.0f;
+SECTION_SDATA2 static f32 lit_4487 = 100.0f;
 
 /* 8045473C-80454740 0004+00 s=1 e=0 z=0  None .sdata2    @4488                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4488 = 145.0f;
+SECTION_SDATA2 static f32 lit_4488 = 145.0f;
 
 /* 80454740-80454748 0004+04 s=1 e=0 z=0  None .sdata2    @4489                                                        */
-SECTION_SDATA2 static f32 d_meter_d_meter_HIO__lit_4489[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4489[1 + 1 /* padding */] = {
 	-155.0f,
 	/* padding */
 	0.0f,
@@ -1169,7 +1169,7 @@ asm dMeter_menuHIO_c::~dMeter_menuHIO_c() {
 
 /* ############################################################################################## */
 /* 8042EBB0-8042EBBC 000C+00 s=1 e=0 z=0  None .bss       @3766                                                        */
-static u8 d_meter_d_meter_HIO__lit_3766[12];
+static u8 lit_3766[12];
 
 /* 804510B0-804510B8 0008+00 s=1 e=1 z=0  None .sbss      g_menuHIO                                                    */
 u8 g_menuHIO[8];
@@ -1307,25 +1307,25 @@ SECTION_RODATA u8 const data_80398030[24] = {
 };
 
 /* 8042EBBC-8042EBC8 000C+00 s=0 e=0 z=0  None .bss       @3767                                                        */
-u8 d_meter_d_meter_HIO__lit_3767[12];
+u8 lit_3767[12];
 
 /* 8042EBC8-8042FAF0 0F28+00 s=0 e=157 z=0  None .bss       g_drawHIO                                                    */
 u8 g_drawHIO[3880];
 
 /* 8042FAF0-8042FAFC 000C+00 s=0 e=0 z=0  None .bss       @3768                                                        */
-u8 d_meter_d_meter_HIO__lit_3768[12];
+u8 lit_3768[12];
 
 /* 8042FAFC-8042FC54 0158+00 s=0 e=19 z=0  None .bss       g_ringHIO                                                    */
 u8 g_ringHIO[344];
 
 /* 8042FC54-8042FC60 000C+00 s=0 e=0 z=0  None .bss       @3769                                                        */
-u8 d_meter_d_meter_HIO__lit_3769[12];
+u8 lit_3769[12];
 
 /* 8042FC60-80430104 04A4+00 s=0 e=54 z=0  None .bss       g_fmapHIO                                                    */
 u8 g_fmapHIO[1188];
 
 /* 80430104-80430110 000C+00 s=0 e=0 z=0  None .bss       @3770                                                        */
-u8 d_meter_d_meter_HIO__lit_3770[12];
+u8 lit_3770[12];
 
 /* 80430110-80430158 0044+04 s=0 e=6 z=0  None .bss       g_cursorHIO                                                  */
 u8 g_cursorHIO[68 + 4 /* padding */];

@@ -6,12 +6,12 @@ lbl_80157588:
 /* 80157598 00000010  88 03 09 E8 */	lbz r0, 0x9e8(r3)
 /* 8015759C 00000014  28 00 00 00 */	cmplwi r0, 0
 /* 801575A0 00000018  54 84 18 38 */	slwi r4, r4, 3
-/* 801575A4 0000001C  3C 60 80 39 */	lis r3, a_npc_d_a_npc_cd__l_objTbl@ha
-/* 801575A8 00000020  38 03 2C E8 */	addi r0, r3, a_npc_d_a_npc_cd__l_objTbl@l
+/* 801575A4 0000001C  3C 60 80 39 */	lis r3, l_objTbl@ha
+/* 801575A8 00000020  38 03 2C E8 */	addi r0, r3, l_objTbl@l
 /* 801575AC 00000024  7C 60 22 14 */	add r3, r0, r4
 /* 801575B0 00000028  41 82 00 10 */	beq lbl_801575C0
-/* 801575B4 0000002C  3C 60 80 39 */	lis r3, a_npc_d_a_npc_cd__l_objTWTbl@ha
-/* 801575B8 00000030  38 03 2D 30 */	addi r0, r3, a_npc_d_a_npc_cd__l_objTWTbl@l
+/* 801575B4 0000002C  3C 60 80 39 */	lis r3, l_objTWTbl@ha
+/* 801575B8 00000030  38 03 2D 30 */	addi r0, r3, l_objTWTbl@l
 /* 801575BC 00000034  7C 60 22 14 */	add r3, r0, r4
 lbl_801575C0:
 /* 801575C0 00000000  80 83 00 04 */	lwz r4, 4(r3)

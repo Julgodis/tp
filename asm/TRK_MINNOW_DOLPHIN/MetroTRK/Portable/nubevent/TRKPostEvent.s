@@ -12,7 +12,7 @@ lbl_8036CC54:
 /* 8036CC7C 00000028  48 00 28 25 */	bl TRKAcquireMutex
 /* 8036CC80 0000002C  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CC84 00000030  3B C3 D8 90 */	addi r30, r3, gTRKEventQueue@l
-/* 8036CC88 00000034  80 7E 00 04 */	lwz r3, 4(r30)
+/* 8036CC88 00000034  80 7E 00 04 */	lwz r3, 4(r30)	/* effective address: 8044D894 */
 /* 8036CC8C 00000038  2C 03 00 02 */	cmpwi r3, 2
 /* 8036CC90 0000003C  40 82 00 0C */	bne lbl_8036CC9C
 /* 8036CC94 00000040  3B E0 01 00 */	li r31, 0x100
@@ -32,13 +32,13 @@ lbl_8036CC9C:
 /* 8036CCC8 0000002C  4B C9 68 F9 */	bl TRK_memcpy
 /* 8036CCCC 00000030  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CCD0 00000034  38 83 D8 90 */	addi r4, r3, gTRKEventQueue@l
-/* 8036CCD4 00000038  80 04 00 24 */	lwz r0, 0x24(r4)
+/* 8036CCD4 00000038  80 04 00 24 */	lwz r0, 0x24(r4)	/* effective address: 8044D8B4 */
 /* 8036CCD8 0000003C  7C 64 EA 14 */	add r3, r4, r29
 /* 8036CCDC 00000040  90 03 00 10 */	stw r0, 0x10(r3)
-/* 8036CCE0 00000044  80 64 00 24 */	lwz r3, 0x24(r4)
+/* 8036CCE0 00000044  80 64 00 24 */	lwz r3, 0x24(r4)	/* effective address: 8044D8B4 */
 /* 8036CCE4 00000048  38 03 00 01 */	addi r0, r3, 1
 /* 8036CCE8 0000004C  28 00 01 00 */	cmplwi r0, 0x100
-/* 8036CCEC 00000050  90 04 00 24 */	stw r0, 0x24(r4)
+/* 8036CCEC 00000050  90 04 00 24 */	stw r0, 0x24(r4)	/* effective address: 8044D8B4 */
 /* 8036CCF0 00000054  40 80 00 0C */	bge lbl_8036CCFC
 /* 8036CCF4 00000058  38 00 01 00 */	li r0, 0x100
 /* 8036CCF8 0000005C  90 04 00 24 */	stw r0, 0x24(r4)

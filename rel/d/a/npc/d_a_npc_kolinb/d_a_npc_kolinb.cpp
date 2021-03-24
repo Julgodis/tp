@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -31,6 +22,15 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80A48184 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct daNpc_Kolinb_c {
@@ -57,6 +57,8 @@ struct daNpc_Kolinb_c {
 	/* 80A46A4C */ void setCollision();
 	/* 80A46A9C */ void drawDbgInfo();
 	/* 80A46AA4 */ void selectAction();
+	/* 80A46AEC */ void chkAction(int (daNpc_Kolinb_c::*)(void*));
+	/* 80A46B18 */ void setAction(int (daNpc_Kolinb_c::*)(void*));
 	/* 80A46BC0 */ void cutConversationInHotel(int);
 	/* 80A46C48 */ void cutConversationAboutDeathMt(int);
 	/* 80A46EE4 */ void cutConversationAboutGoron(int);
@@ -187,8 +189,8 @@ extern "C" void setAttnPos__14daNpc_Kolinb_cFv(); // 1
 extern "C" void setCollision__14daNpc_Kolinb_cFv(); // 1
 extern "C" void drawDbgInfo__14daNpc_Kolinb_cFv(); // 1
 extern "C" void selectAction__14daNpc_Kolinb_cFv(); // 1
-extern "C" static void chkAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i(); // 1
-extern "C" static void setAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i(); // 1
+extern "C" void chkAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i(); // 1
+extern "C" void setAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i(); // 1
 extern "C" void cutConversationInHotel__14daNpc_Kolinb_cFi(); // 1
 extern "C" void cutConversationAboutDeathMt__14daNpc_Kolinb_cFi(); // 1
 extern "C" void cutConversationAboutGoron__14daNpc_Kolinb_cFi(); // 1
@@ -578,7 +580,7 @@ asm void daNpc_Kolinb_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void chkAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i() {
+asm void daNpc_Kolinb_c::chkAction(int (daNpc_Kolinb_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolinb/d_a_npc_kolinb/chkAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i.s"
 }
@@ -589,7 +591,7 @@ extern "C" asm static void chkAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i() {
+asm void daNpc_Kolinb_c::setAction(int (daNpc_Kolinb_c::*)(void*)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_kolinb/d_a_npc_kolinb/setAction__14daNpc_Kolinb_cFM14daNpc_Kolinb_cFPCvPvPv_i.s"
 }

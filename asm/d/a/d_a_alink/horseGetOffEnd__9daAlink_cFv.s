@@ -37,7 +37,7 @@ lbl_800EF410:
 /* 800EF418 00000008  3C 60 80 42 */	lis r3, l_waitBaseAnime@ha
 /* 800EF41C 0000000C  C4 03 55 14 */	lfsu f0, l_waitBaseAnime@l(r3)
 /* 800EF420 00000010  D0 04 00 14 */	stfs f0, 0x14(r4)
-/* 800EF424 00000014  C0 03 00 08 */	lfs f0, 8(r3)
+/* 800EF424 00000014  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80420008 */
 /* 800EF428 00000018  D0 04 00 1C */	stfs f0, 0x1c(r4)
 /* 800EF42C 0000001C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 800EF430 00000020  B0 1F 04 DE */	sth r0, 0x4de(r31)

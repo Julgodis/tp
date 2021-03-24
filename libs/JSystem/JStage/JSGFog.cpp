@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXColor {
+struct _GXFogType {
 };
 
-struct _GXFogType {
+struct _GXColor {
 };
 
 struct JStage {
@@ -166,7 +166,7 @@ asm void JStage::TFog::JSGSetFogFunction(_GXFogType param_0) {
 
 /* ############################################################################################## */
 /* 804553E0-804553E4 0004+00 s=1 e=0 z=0  None .sdata2    @319                                                         */
-SECTION_SDATA2 static u8 JSGFog__lit_319[4] = {
+SECTION_SDATA2 static u8 lit_319[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -216,7 +216,7 @@ asm void JStage::TFog::JSGSetEndZ(f32 param_0) {
 
 /* ############################################################################################## */
 /* 804553E4-804553E8 0004+00 s=1 e=0 z=0  None .sdata2    @336                                                         */
-SECTION_SDATA2 static u32 JSGFog__lit_336 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_336 = 0xFFFFFFFF;
 
 /* 80280D10-80280D24 0014+00 s=1 e=1 z=0  None .text      JSGGetColor__Q26JStage4TFogCFv                               */
 #pragma push

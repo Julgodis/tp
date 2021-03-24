@@ -60,12 +60,12 @@ lbl_801EE108:
 lbl_801EE128:
 /* 801EE128 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EE12C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801EE130 00000008  88 83 00 EC */	lbz r4, 0xec(r3)
+/* 801EE130 00000008  88 83 00 EC */	lbz r4, 0xec(r3)	/* effective address: 804062AC */
 /* 801EE134 0000000C  48 00 00 10 */	b lbl_801EE144
 lbl_801EE138:
 /* 801EE138 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801EE13C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801EE140 00000008  88 83 00 F4 */	lbz r4, 0xf4(r3)
+/* 801EE140 00000008  88 83 00 F4 */	lbz r4, 0xf4(r3)	/* effective address: 804062B4 */
 lbl_801EE144:
 /* 801EE144 00000000  7C 83 23 78 */	mr r3, r4
 /* 801EE148 00000004  83 E1 00 0C */	lwz r31, 0xc(r1)

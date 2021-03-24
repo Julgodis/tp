@@ -11,7 +11,7 @@ lbl_8032AED8:
 /* 8032AEFC 00000024  98 9F 00 04 */	stb r4, 4(r31)
 /* 8032AF00 00000028  98 9F 00 05 */	stb r4, 5(r31)
 /* 8032AF04 0000002C  B0 9F 00 06 */	sth r4, 6(r31)
-/* 8032AF08 00000030  C0 02 CA 34 */	lfs f0, J3DAnimation__lit_853(r2)
+/* 8032AF08 00000030  C0 02 CA 34 */	lfs f0, lit_853(r2)
 /* 8032AF0C 00000034  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 8032AF10 00000038  3C 60 80 3D */	lis r3, __vt__16J3DAnmTexPattern@ha
 /* 8032AF14 0000003C  38 03 ED 50 */	addi r0, r3, __vt__16J3DAnmTexPattern@l

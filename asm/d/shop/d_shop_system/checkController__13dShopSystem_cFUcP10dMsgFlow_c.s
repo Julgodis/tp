@@ -12,7 +12,7 @@ lbl_80197670:
 /* 80197698 00000028  41 82 00 28 */	beq lbl_801976C0
 /* 8019769C 0000002C  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 801976A0 00000030  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 801976A4 00000034  80 03 00 34 */	lwz r0, 0x34(r3)
+/* 801976A4 00000034  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
 /* 801976A8 00000038  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 801976AC 0000003C  41 82 00 0C */	beq lbl_801976B8
 /* 801976B0 00000040  38 60 00 01 */	li r3, 1
@@ -52,8 +52,8 @@ lbl_80197714:
 lbl_80197720:
 /* 80197720 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80197724 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80197728 00000008  80 63 5D BC */	lwz r3, 0x5dbc(r3)
-/* 8019772C 0000000C  88 03 01 A2 */	lbz r0, 0x1a2(r3)
+/* 80197728 00000008  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 8019772C 0000000C  88 03 01 A2 */	lbz r0, 0x1a2(r3)	/* effective address: 80406362 */
 /* 80197730 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 80197734 00000014  41 82 00 18 */	beq lbl_8019774C
 /* 80197738 00000018  20 00 00 02 */	subfic r0, r0, 2
@@ -64,7 +64,7 @@ lbl_80197720:
 lbl_8019774C:
 /* 8019774C 00000000  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80197750 00000004  3B 83 D2 E8 */	addi r28, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80197754 00000008  80 1C 00 34 */	lwz r0, 0x34(r28)
+/* 80197754 00000008  80 1C 00 34 */	lwz r0, 0x34(r28)	/* effective address: 803DD31C */
 /* 80197758 0000000C  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 8019775C 00000010  41 82 00 54 */	beq lbl_801977B0
 /* 80197760 00000014  48 0A 0A CD */	bl getStatus__12dMsgObject_cFv

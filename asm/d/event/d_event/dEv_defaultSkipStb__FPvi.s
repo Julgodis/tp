@@ -37,8 +37,8 @@ lbl_800427F4:
 /* 800427F8 00000004  38 84 00 0D */	addi r4, r4, 0xd
 /* 800427FC 00000008  48 32 63 31 */	bl strcpy
 /* 80042800 0000000C  38 61 00 08 */	addi r3, r1, 8
-/* 80042804 00000010  3C 80 80 38 */	lis r4, d_event_d_event__stringBase0@ha
-/* 80042808 00000014  38 84 9D 80 */	addi r4, r4, d_event_d_event__stringBase0@l
+/* 80042804 00000010  3C 80 80 38 */	lis r4, stringBase0@ha
+/* 80042808 00000014  38 84 9D 80 */	addi r4, r4, stringBase0@l
 /* 8004280C 00000018  38 84 00 43 */	addi r4, r4, 0x43
 /* 80042810 0000001C  48 32 62 AD */	bl strcat
 /* 80042814 00000020  38 7E 4F F8 */	addi r3, r30, 0x4ff8

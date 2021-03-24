@@ -63,7 +63,7 @@ lbl_8022BB10:
 lbl_8022BB18:
 /* 8022BB18 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8022BB1C 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8022BB20 00000008  88 03 5E B4 */	lbz r0, 0x5eb4(r3)
+/* 8022BB20 00000008  88 03 5E B4 */	lbz r0, 0x5eb4(r3)	/* effective address: 8040C074 */
 /* 8022BB24 0000000C  28 00 00 00 */	cmplwi r0, 0
 /* 8022BB28 00000010  41 82 00 0C */	beq lbl_8022BB34
 /* 8022BB2C 00000014  38 00 00 00 */	li r0, 0

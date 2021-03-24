@@ -39,7 +39,7 @@ lbl_801988FC:
 /* 801988FC 00000000  80 7F 0E 44 */	lwz r3, 0xe44(r31)
 /* 80198900 00000004  3C 80 80 43 */	lis r4, g_cursorHIO@ha
 /* 80198904 00000008  38 84 01 10 */	addi r4, r4, g_cursorHIO@l
-/* 80198908 0000000C  C0 24 00 2C */	lfs f1, 0x2c(r4)
+/* 80198908 0000000C  C0 24 00 2C */	lfs f1, 0x2c(r4)	/* effective address: 8043013C */
 /* 8019890C 00000010  4B FF C8 BD */	bl setScale__16dSelect_cursor_cFf
 /* 80198910 00000014  88 1F 0F 6E */	lbz r0, 0xf6e(r31)
 /* 80198914 00000018  28 00 00 00 */	cmplwi r0, 0

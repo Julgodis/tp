@@ -305,8 +305,8 @@ lbl_801DB40C:
 lbl_801DB414:
 /* 801DB414 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801DB418 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 801DB41C 00000008  80 63 5C 6C */	lwz r3, 0x5c6c(r3)
-/* 801DB420 0000000C  81 83 00 00 */	lwz r12, 0(r3)
+/* 801DB41C 00000008  80 63 5C 6C */	lwz r3, 0x5c6c(r3)	/* effective address: 8040BE2C */
+/* 801DB420 0000000C  81 83 00 00 */	lwz r12, 0(r3)	/* effective address: 804061C0 */
 /* 801DB424 00000010  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 801DB428 00000014  7D 89 03 A6 */	mtctr r12
 /* 801DB42C 00000018  4E 80 04 21 */	bctrl 

@@ -12,16 +12,16 @@ lbl_801B7660:
 /* 801B7688 00000004  FF E0 18 90 */	fmr f31, f3
 /* 801B768C 00000008  7C 7F 1B 78 */	mr r31, r3
 /* 801B7690 0000000C  C0 82 A5 A4 */	lfs f4, lit_7333(r2)
-/* 801B7694 00000010  C0 02 A5 28 */	lfs f0, d_menu_d_menu_collect__lit_4481(r2)
+/* 801B7694 00000010  C0 02 A5 28 */	lfs f0, lit_4481(r2)
 /* 801B7698 00000014  EC 21 00 28 */	fsubs f1, f1, f0
 /* 801B769C 00000018  C0 02 A5 C4 */	lfs f0, lit_7944(r2)
 /* 801B76A0 0000001C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801B76A4 00000020  EC 04 00 32 */	fmuls f0, f4, f0
-/* 801B76A8 00000024  C0 62 A5 2C */	lfs f3, d_menu_d_menu_collect__lit_4482(r2)
+/* 801B76A8 00000024  C0 62 A5 2C */	lfs f3, lit_4482(r2)
 /* 801B76AC 00000028  EF A0 18 28 */	fsubs f29, f0, f3
 /* 801B76B0 0000002C  C0 02 A5 CC */	lfs f0, lit_7946(r2)
 /* 801B76B4 00000030  EC 22 00 28 */	fsubs f1, f2, f0
-/* 801B76B8 00000034  C0 02 A5 C8 */	lfs f0, d_menu_d_menu_collect__lit_7945(r2)
+/* 801B76B8 00000034  C0 02 A5 C8 */	lfs f0, lit_7945(r2)
 /* 801B76BC 00000038  EC 01 00 24 */	fdivs f0, f1, f0
 /* 801B76C0 0000003C  EC 04 00 32 */	fmuls f0, f4, f0
 /* 801B76C4 00000040  EF C0 18 28 */	fsubs f30, f0, f3

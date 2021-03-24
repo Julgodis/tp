@@ -38,13 +38,13 @@ extern "C" static void __VIDisplayPositionToXY(); // 1
 extern "C" static void __VIGetCurrentPosition(); // 1
 extern "C" extern u8 timing[380];
 extern "C" extern u8 taps[50 + 2 /* padding */];
-extern "C" extern u8 vi__lit_355[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_356[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_357[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_358[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_359[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_360[41 + 3 /* padding */];
-extern "C" extern u8 vi__lit_538[75 + 1 /* padding */];
+extern "C" extern u8 lit_355[41 + 3 /* padding */];
+extern "C" extern u8 lit_356[41 + 3 /* padding */];
+extern "C" extern u8 lit_357[41 + 3 /* padding */];
+extern "C" extern u8 lit_358[41 + 3 /* padding */];
+extern "C" extern u8 lit_359[41 + 3 /* padding */];
+extern "C" extern u8 lit_360[41 + 3 /* padding */];
+extern "C" extern u8 lit_538[75 + 1 /* padding */];
 extern "C" extern u8 shdwRegs[118 + 2 /* padding */];
 extern "C" extern u8 pad_80450A19[4];
 
@@ -171,7 +171,7 @@ extern "C" asm void VISetPostRetraceCallback() {
 
 /* ############################################################################################## */
 /* 803D1760-803D17A4 0044+00 s=4 e=0 z=0  None .data      @1                                                           */
-SECTION_DATA static u8 vi__lit_1[68] = {
+SECTION_DATA static u8 lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x56, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x37, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -218,7 +218,7 @@ SECTION_DATA u8 taps[50 + 2 /* padding */] = {
 };
 
 /* 803D1954-803D19D0 007C+00 s=1 e=0 z=0  None .data      @101                                                         */
-SECTION_DATA static void* vi__lit_101[31] = {
+SECTION_DATA static void* lit_101[31] = {
 	/* 0    */ (void*)(((char*)getTiming)+0x28),
 	/* 1    */ (void*)(((char*)getTiming)+0x30),
 	/* 2    */ (void*)(((char*)getTiming)+0x68),
@@ -282,7 +282,7 @@ extern "C" asm static void __VIInit() {
 
 /* ############################################################################################## */
 /* 80450A10-80450A14 0004+00 s=1 e=0 z=0  None .sdata     __VIVersion                                                  */
-SECTION_SDATA static void* __VIVersion = (void*)&vi__lit_1;
+SECTION_SDATA static void* __VIVersion = (void*)&lit_1;
 
 /* 8034C514-8034C9C4 04B0+00 s=0 e=1 z=0  None .text      VIInit                                                       */
 #pragma push
@@ -330,7 +330,7 @@ extern "C" asm static void setVerticalRegs() {
 
 /* ############################################################################################## */
 /* 80450A14-80450A1C 0005+03 s=1 e=0 z=0  None .sdata     @537                                                         */
-SECTION_SDATA static u8 vi__lit_537[5 + 3 /* padding */] = {
+SECTION_SDATA static u8 lit_537[5 + 3 /* padding */] = {
 	0x76, 0x69, 0x2E, 0x63, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -469,7 +469,7 @@ extern "C" asm void VIGetCurrentLine() {
 
 /* ############################################################################################## */
 /* 803D19D0-803D19FC 0029+03 s=0 e=0 z=0  None .data      @355                                                         */
-SECTION_DATA u8 vi__lit_355[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_355[41 + 3 /* padding */] = {
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x0A, 0x00,
@@ -478,7 +478,7 @@ SECTION_DATA u8 vi__lit_355[41 + 3 /* padding */] = {
 };
 
 /* 803D19FC-803D1A28 0029+03 s=0 e=0 z=0  None .data      @356                                                         */
-SECTION_DATA u8 vi__lit_356[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_356[41 + 3 /* padding */] = {
 	0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x43, 0x20, 0x41, 0x20, 0x55, 0x20, 0x54, 0x20, 0x49,
 	0x20, 0x4F, 0x20, 0x4E, 0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -487,7 +487,7 @@ SECTION_DATA u8 vi__lit_356[41 + 3 /* padding */] = {
 };
 
 /* 803D1A28-803D1A54 0029+03 s=0 e=0 z=0  None .data      @357                                                         */
-SECTION_DATA u8 vi__lit_357[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_357[41 + 3 /* padding */] = {
 	0x54, 0x68, 0x69, 0x73, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x20, 0x22,
 	0x44, 0x45, 0x42, 0x55, 0x47, 0x5F, 0x50, 0x41, 0x4C, 0x22, 0x20, 0x69, 0x73, 0x20, 0x6F, 0x6E,
 	0x6C, 0x79, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x0A, 0x00,
@@ -496,7 +496,7 @@ SECTION_DATA u8 vi__lit_357[41 + 3 /* padding */] = {
 };
 
 /* 803D1A54-803D1A80 0029+03 s=0 e=0 z=0  None .data      @358                                                         */
-SECTION_DATA u8 vi__lit_358[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_358[41 + 3 /* padding */] = {
 	0x74, 0x65, 0x6D, 0x70, 0x6F, 0x72, 0x61, 0x72, 0x79, 0x20, 0x73, 0x6F, 0x6C, 0x75, 0x74, 0x69,
 	0x6F, 0x6E, 0x20, 0x75, 0x6E, 0x74, 0x69, 0x6C, 0x20, 0x50, 0x41, 0x4C, 0x20, 0x44, 0x41, 0x43,
 	0x20, 0x62, 0x6F, 0x61, 0x72, 0x64, 0x20, 0x0A, 0x00,
@@ -505,7 +505,7 @@ SECTION_DATA u8 vi__lit_358[41 + 3 /* padding */] = {
 };
 
 /* 803D1A80-803D1AAC 0029+03 s=0 e=0 z=0  None .data      @359                                                         */
-SECTION_DATA u8 vi__lit_359[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_359[41 + 3 /* padding */] = {
 	0x69, 0x73, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x2E, 0x20, 0x50, 0x6C,
 	0x65, 0x61, 0x73, 0x65, 0x20, 0x64, 0x6F, 0x20, 0x4E, 0x4F, 0x54, 0x20, 0x75, 0x73, 0x65, 0x20,
 	0x74, 0x68, 0x69, 0x73, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -514,7 +514,7 @@ SECTION_DATA u8 vi__lit_359[41 + 3 /* padding */] = {
 };
 
 /* 803D1AAC-803D1AD8 0029+03 s=0 e=0 z=0  None .data      @360                                                         */
-SECTION_DATA u8 vi__lit_360[41 + 3 /* padding */] = {
+SECTION_DATA u8 lit_360[41 + 3 /* padding */] = {
 	0x6D, 0x6F, 0x64, 0x65, 0x20, 0x69, 0x6E, 0x20, 0x72, 0x65, 0x61, 0x6C, 0x20, 0x67, 0x61, 0x6D,
 	0x65, 0x73, 0x21, 0x21, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -523,7 +523,7 @@ SECTION_DATA u8 vi__lit_360[41 + 3 /* padding */] = {
 };
 
 /* 803D1AD8-803D1B24 004B+01 s=0 e=0 z=0  None .data      @538                                                         */
-SECTION_DATA u8 vi__lit_538[75 + 1 /* padding */] = {
+SECTION_DATA u8 lit_538[75 + 1 /* padding */] = {
 	0x56, 0x49, 0x43, 0x6F, 0x6E, 0x66, 0x69, 0x67, 0x75, 0x72, 0x65, 0x28, 0x29, 0x3A, 0x20, 0x54,
 	0x72, 0x69, 0x65, 0x64, 0x20, 0x74, 0x6F, 0x20, 0x63, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x20, 0x6D,
 	0x6F, 0x64, 0x65, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x28, 0x25, 0x64, 0x29, 0x20, 0x74, 0x6F,
@@ -534,7 +534,7 @@ SECTION_DATA u8 vi__lit_538[75 + 1 /* padding */] = {
 };
 
 /* 803D1B24-803D1B48 0020+04 s=1 e=0 z=0  None .data      @740                                                         */
-SECTION_DATA static void* vi__lit_740[8 + 1 /* padding */] = {
+SECTION_DATA static void* lit_740[8 + 1 /* padding */] = {
 	/* 0    */ (void*)(((char*)VIGetTvFormat)+0x38),
 	/* 1    */ (void*)(((char*)VIGetTvFormat)+0x40),
 	/* 2    */ (void*)(((char*)VIGetTvFormat)+0x48),

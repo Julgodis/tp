@@ -45,12 +45,6 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct JAISoundID {
-};
-
-struct JAISoundHandle {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -58,6 +52,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -353,34 +353,34 @@ asm void Z2WolfHowlMgr::startWolfHowlSound(f32 param_0, f32 param_1, bool param_
 
 /* ############################################################################################## */
 /* 80455E80-80455E84 0004+00 s=1 e=0 z=0  None .sdata2    @3711                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3711 = 1.1224600076675415f;
+SECTION_SDATA2 static f32 lit_3711 = 1.1224600076675415f;
 
 /* 80455E84-80455E88 0004+00 s=1 e=0 z=0  None .sdata2    @3712                                                        */
 SECTION_SDATA2 static f32 lit_3712 = 1.0594600439071655f;
 
 /* 80455E88-80455E8C 0004+00 s=1 e=0 z=0  None .sdata2    @3713                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3713 = 0.7936859726905823f;
+SECTION_SDATA2 static f32 lit_3713 = 0.7936859726905823f;
 
 /* 80455E8C-80455E90 0004+00 s=1 e=0 z=0  None .sdata2    @3714                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3714 = 1.2599060535430908f;
+SECTION_SDATA2 static f32 lit_3714 = 1.2599060535430908f;
 
 /* 80455E90-80455E94 0004+00 s=1 e=0 z=0  None .sdata2    @3715                                                        */
 SECTION_SDATA2 static f32 lit_3715 = 0.9438700079917908f;
 
 /* 80455E94-80455E98 0004+00 s=1 e=0 z=0  None .sdata2    @3716                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3716 = 0.8408849835395813f;
+SECTION_SDATA2 static f32 lit_3716 = 0.8408849835395813f;
 
 /* 80455E98-80455E9C 0004+00 s=1 e=0 z=0  None .sdata2    @3717                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3717 = 1.3348400592803955f;
+SECTION_SDATA2 static f32 lit_3717 = 1.3348400592803955f;
 
 /* 80455E9C-80455EA0 0004+00 s=1 e=0 z=0  None .sdata2    @3718                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3718 = 0.8909000158309937f;
+SECTION_SDATA2 static f32 lit_3718 = 0.8909000158309937f;
 
 /* 80455EA0-80455EA4 0004+00 s=1 e=0 z=0  None .sdata2    @3719                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3719 = 0.7491499781608582f;
+SECTION_SDATA2 static f32 lit_3719 = 0.7491499781608582f;
 
 /* 80455EA4-80455EA8 0004+00 s=1 e=0 z=0  None .sdata2    @3720                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_3720 = 1.1892000436782837f;
+SECTION_SDATA2 static f32 lit_3720 = 1.1892000436782837f;
 
 /* 802CB100-802CB320 0220+00 s=0 e=1 z=0  None .text      setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData          */
 #pragma push
@@ -419,10 +419,10 @@ asm void Z2WolfHowlMgr::getCorrectLineNum() {
 /* 804341F8-8043421C 0024+00 s=2 e=0 z=0  None .bss       sCorrectPhrase                                               */
 static u8 sCorrectPhrase[36];
 
-/* 8043421C-80434240 0024+00 s=2 e=0 z=0  None .bss       sWindStoneSound                                              */
+/* 8043421C-80434240 0024+00 s=3 e=0 z=0  None .bss       sWindStoneSound                                              */
 static u8 sWindStoneSound[36];
 
-/* 80434240-80434268 0024+04 s=1 e=0 z=0  None .bss       sCorrectDuo                                                  */
+/* 80434240-80434268 0024+04 s=2 e=0 z=0  None .bss       sCorrectDuo                                                  */
 static u8 sCorrectDuo[36 + 4 /* padding */];
 
 /* 802CB38C-802CB650 02C4+00 s=1 e=0 z=0  None .text      checkLine__13Z2WolfHowlMgrFv                                 */
@@ -449,36 +449,36 @@ asm void Z2WolfHowlMgr::getOnLineNum() {
 
 /* ############################################################################################## */
 /* 80455EA8-80455EB0 0008+00 s=1 e=0 z=0  None .sdata2    @4032                                                        */
-SECTION_SDATA2 static f64 Z2WolfHowlMgr__lit_4032 = 0.5;
+SECTION_SDATA2 static f64 lit_4032 = 0.5;
 
 /* 80455EB0-80455EB8 0008+00 s=1 e=0 z=0  None .sdata2    @4033                                                        */
-SECTION_SDATA2 static f64 Z2WolfHowlMgr__lit_4033 = 3.0;
+SECTION_SDATA2 static f64 lit_4033 = 3.0;
 
 /* 80455EB8-80455EC0 0008+00 s=1 e=0 z=0  None .sdata2    @4034                                                        */
-SECTION_SDATA2 static u8 Z2WolfHowlMgr__lit_4034[8] = {
+SECTION_SDATA2 static u8 lit_4034[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80455EC0-80455EC4 0004+00 s=1 e=0 z=0  None .sdata2    @4035                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4035 = 2100.0f;
+SECTION_SDATA2 static f32 lit_4035 = 2100.0f;
 
 /* 80455EC4-80455EC8 0004+00 s=1 e=0 z=0  None .sdata2    @4036                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4036 = 150.0f;
+SECTION_SDATA2 static f32 lit_4036 = 150.0f;
 
 /* 80455EC8-80455ECC 0004+00 s=1 e=0 z=0  None .sdata2    @4037                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4037 = 2000.0f;
+SECTION_SDATA2 static f32 lit_4037 = 2000.0f;
 
 /* 80455ECC-80455ED0 0004+00 s=1 e=0 z=0  None .sdata2    @4038                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4038 = 9.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4038 = 9.0f / 20.0f;
 
 /* 80455ED0-80455ED4 0004+00 s=1 e=0 z=0  None .sdata2    @4039                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4039 = 1.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4039 = 1.0f / 20.0f;
 
 /* 80455ED4-80455ED8 0004+00 s=1 e=0 z=0  None .sdata2    @4040                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4040 = 2.0f / 5.0f;
+SECTION_SDATA2 static f32 lit_4040 = 2.0f / 5.0f;
 
 /* 80455ED8-80455EE0 0004+04 s=1 e=0 z=0  None .sdata2    @4041                                                        */
-SECTION_SDATA2 static f32 Z2WolfHowlMgr__lit_4041[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4041[1 + 1 /* padding */] = {
 	1.0f / 25.0f,
 	/* padding */
 	0.0f,

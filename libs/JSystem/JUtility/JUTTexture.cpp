@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct ResTIMG {
-};
-
 struct _GXTlut {
 };
 
@@ -29,6 +26,9 @@ struct _GXTlutFmt {
 struct JUTPalette {
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
+};
+
+struct ResTIMG {
 };
 
 struct JUTTexture {
@@ -159,7 +159,7 @@ SECTION_SDATA2 static f32 lit_454 = 100.0f;
 SECTION_SDATA2 static f64 lit_456 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 80455FE8-80455FF0 0008+00 s=2 e=0 z=0  None .sdata2    @459                                                         */
-SECTION_SDATA2 static f64 JUTTexture__lit_459 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_459 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802DE658-802DE744 00EC+00 s=2 e=0 z=0  None .text      initTexObj__10JUTTextureFv                                   */
 #pragma push

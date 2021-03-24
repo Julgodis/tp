@@ -40,7 +40,7 @@ lbl_8003AD08:
 /* 8003ADA0 0000007C  48 30 BB 49 */	bl PSMTXTrans
 /* 8003ADA4 00000080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8003ADA8 00000084  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 8003ADAC 00000088  88 03 5D B0 */	lbz r0, 0x5db0(r3)
+/* 8003ADAC 00000088  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
 /* 8003ADB0 0000008C  7C 00 07 74 */	extsb r0, r0
 /* 8003ADB4 00000090  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8003ADB8 00000094  7C 63 02 14 */	add r3, r3, r0

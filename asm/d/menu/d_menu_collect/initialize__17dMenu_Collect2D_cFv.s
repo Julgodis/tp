@@ -4,8 +4,8 @@ lbl_801B0570:
 /* 801B0578 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801B057C 0000000C  88 03 02 2C */	lbz r0, 0x22c(r3)
 /* 801B0580 00000010  1C A0 00 0C */	mulli r5, r0, 0xc
-/* 801B0584 00000014  3C 80 80 3C */	lis r4, d_menu_d_menu_collect__init@ha
-/* 801B0588 00000018  38 04 C4 70 */	addi r0, r4, d_menu_d_menu_collect__init@l
+/* 801B0584 00000014  3C 80 80 3C */	lis r4, init@ha
+/* 801B0588 00000018  38 04 C4 70 */	addi r0, r4, init@l
 /* 801B058C 0000001C  7D 80 2A 14 */	add r12, r0, r5
 /* 801B0590 00000020  48 1B 1A F5 */	bl __ptmf_scall
 /* 801B0594 00000024  60 00 00 00 */	nop 

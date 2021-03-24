@@ -20,14 +20,14 @@ lbl_80252D0C:
 lbl_80252D54:
 /* 80252D54 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80252D58 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252D5C 00000008  88 03 5D 44 */	lbz r0, 0x5d44(r3)
+/* 80252D5C 00000008  88 03 5D 44 */	lbz r0, 0x5d44(r3)	/* effective address: 8040BF04 */
 /* 80252D60 0000000C  2C 00 00 00 */	cmpwi r0, 0
 /* 80252D64 00000010  40 82 00 84 */	bne lbl_80252DE8
 /* 80252D68 00000014  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80252D6C 00000018  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80252D70 0000001C  C0 22 B4 24 */	lfs f1, lit_3683(r2)
 /* 80252D74 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80252D78 00000024  C0 62 B4 54 */	lfs f3, d_ovlp_d_ovlp_fade2__lit_3822(r2)
+/* 80252D78 00000024  C0 62 B4 54 */	lfs f3, lit_3822(r2)
 /* 80252D7C 00000028  48 0F 3B 6D */	bl PSMTXTrans
 /* 80252D80 0000002C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80252D84 00000030  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
@@ -46,21 +46,3 @@ lbl_80252D54:
 /* 80252DB8 00000064  4B DB 97 15 */	bl mDoMtx_ZrotM__FPA4_fs
 /* 80252DBC 00000068  38 9F 00 E0 */	addi r4, r31, 0xe0
 /* 80252DC0 0000006C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
-/* 80252DC4 00000070  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80252DC8 00000074  48 0F 36 E9 */	bl PSMTXCopy
-/* 80252DCC 00000078  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
-/* 80252DD0 0000007C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 80252DD4 00000080  38 63 5F 64 */	addi r3, r3, 0x5f64
-/* 80252DD8 00000084  38 83 02 3C */	addi r4, r3, 0x23c
-/* 80252DDC 00000088  38 A3 02 40 */	addi r5, r3, 0x240
-/* 80252DE0 0000008C  38 DF 00 DC */	addi r6, r31, 0xdc
-/* 80252DE4 00000090  4B E0 39 B1 */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
-lbl_80252DE8:
-/* 80252DE8 00000000  38 00 00 00 */	li r0, 0
-/* 80252DEC 00000004  98 0D 86 64 */	stb r0, struct_80450BE4+0x0(r13)
-/* 80252DF0 00000008  38 60 00 01 */	li r3, 1
-/* 80252DF4 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80252DF8 00000010  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80252DFC 00000014  7C 08 03 A6 */	mtlr r0
-/* 80252E00 00000018  38 21 00 10 */	addi r1, r1, 0x10
-/* 80252E04 0000001C  4E 80 00 20 */	blr 

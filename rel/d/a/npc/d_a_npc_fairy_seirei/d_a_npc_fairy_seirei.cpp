@@ -11,10 +11,13 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -22,9 +25,6 @@ struct daNpcT_MotionSeqMngr_c {
 	};
 
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct daNpc_FairySeirei_c {
@@ -45,6 +45,7 @@ struct daNpc_FairySeirei_c {
 	/* 80540988 */ void setAttnPos();
 	/* 80540A30 */ void drawDbgInfo();
 	/* 80540A38 */ void selectAction();
+	/* 80540A80 */ void setAction(int (daNpc_FairySeirei_c::*)(int));
 	/* 80540B28 */ void setPrtcls();
 	/* 80540C54 */ void wait(int);
 	/* 80540CC0 */ void talk(int);
@@ -167,7 +168,7 @@ extern "C" void setCollision__19daNpc_FairySeirei_cFv(); // 1
 extern "C" void setAttnPos__19daNpc_FairySeirei_cFv(); // 1
 extern "C" void drawDbgInfo__19daNpc_FairySeirei_cFv(); // 1
 extern "C" void selectAction__19daNpc_FairySeirei_cFv(); // 1
-extern "C" static void setAction__19daNpc_FairySeirei_cFM19daNpc_FairySeirei_cFPCvPvi_i(); // 1
+extern "C" void setAction__19daNpc_FairySeirei_cFM19daNpc_FairySeirei_cFPCvPvi_i(); // 1
 extern "C" void setPrtcls__19daNpc_FairySeirei_cFv(); // 1
 extern "C" void wait__19daNpc_FairySeirei_cFi(); // 1
 extern "C" void talk__19daNpc_FairySeirei_cFi(); // 1
@@ -484,7 +485,7 @@ asm void daNpc_FairySeirei_c::selectAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void setAction__19daNpc_FairySeirei_cFM19daNpc_FairySeirei_cFPCvPvi_i() {
+asm void daNpc_FairySeirei_c::setAction(int (daNpc_FairySeirei_c::*)(int)) {
 	nofralloc
 #include "asm/rel/d/a/npc/d_a_npc_fairy_seirei/d_a_npc_fairy_seirei/func_80540A80.s"
 }

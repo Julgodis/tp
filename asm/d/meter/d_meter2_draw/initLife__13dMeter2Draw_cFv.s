@@ -9,7 +9,7 @@ lbl_80211BEC:
 /* 80211C08 0000001C  3B C3 82 58 */	addi r30, r3, data_80398258@l
 /* 80211C0C 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80211C10 00000024  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
-/* 80211C14 00000028  A3 5F 00 02 */	lhz r26, 2(r31)
+/* 80211C14 00000028  A3 5F 00 02 */	lhz r26, 2(r31)	/* effective address: 804061C2 */
 /* 80211C18 0000002C  4B E1 C0 91 */	bl dComIfGs_getMaxLifeGauge__Fv
 /* 80211C1C 00000030  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 80211C20 00000034  57 40 04 3E */	clrlwi r0, r26, 0x10
@@ -134,12 +134,12 @@ lbl_80211D94:
 lbl_80211DDC:
 /* 80211DDC 00000000  90 1C 01 C8 */	stw r0, 0x1c8(r28)
 /* 80211DE0 00000004  80 7C 01 24 */	lwz r3, 0x124(r28)
-/* 80211DE4 00000008  C0 22 AE 80 */	lfs f1, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80211DE4 00000008  C0 22 AE 80 */	lfs f1, lit_4182(r2)
 /* 80211DE8 0000000C  48 04 39 E9 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 80211DEC 00000010  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80211DF0 00000014  38 A3 EB C8 */	addi r5, r3, g_drawHIO@l
-/* 80211DF4 00000018  C0 25 00 08 */	lfs f1, 8(r5)
-/* 80211DF8 0000001C  C0 42 AE 80 */	lfs f2, d_meter_d_meter2_draw__lit_4182(r2)
+/* 80211DF4 00000018  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 8042EBD0 */
+/* 80211DF8 0000001C  C0 42 AE 80 */	lfs f2, lit_4182(r2)
 /* 80211DFC 00000020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80211E00 00000024  A0 83 61 C0 */	lhz r4, g_dComIfG_gameInfo@l(r3)
 /* 80211E04 00000028  54 80 04 3E */	clrlwi r0, r4, 0x10
@@ -153,9 +153,9 @@ lbl_80211E14:
 /* 80211E20 0000000C  7C 05 07 34 */	extsh r5, r0
 /* 80211E24 00000010  3C C0 80 43 */	lis r6, g_drawHIO@ha
 /* 80211E28 00000014  38 C6 EB C8 */	addi r6, r6, g_drawHIO@l
-/* 80211E2C 00000018  C0 06 00 28 */	lfs f0, 0x28(r6)
+/* 80211E2C 00000018  C0 06 00 28 */	lfs f0, 0x28(r6)	/* effective address: 8042EBF0 */
 /* 80211E30 0000001C  EC 20 08 2A */	fadds f1, f0, f1
-/* 80211E34 00000020  C0 06 00 2C */	lfs f0, 0x2c(r6)
+/* 80211E34 00000020  C0 06 00 2C */	lfs f0, 0x2c(r6)	/* effective address: 8042EBF4 */
 /* 80211E38 00000024  EC 40 10 2A */	fadds f2, f0, f2
 /* 80211E3C 00000028  48 00 2B B9 */	bl drawLife__13dMeter2Draw_cFssff
 /* 80211E40 0000002C  7F 83 E3 78 */	mr r3, r28

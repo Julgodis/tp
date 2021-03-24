@@ -11,14 +11,6 @@
 // Types:
 // 
 
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80267128 */ void atan2sX_Z() const;
-};
-
-struct csXyz {
-};
-
 struct _GXTexMapID {
 };
 
@@ -27,6 +19,14 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
+};
+
+struct csXyz {
+};
+
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80267128 */ void atan2sX_Z() const;
 };
 
 struct dPa_followEcallBack {
@@ -73,12 +73,12 @@ struct dPa_modelPcallBack {
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -112,17 +112,11 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
 struct JPADrawInfo {
 };
 
-struct JPAParticleCallBack {
-	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
-	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
-	/* 8027EFA4 */ ~JPAParticleCallBack();
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct ResTIMG {
@@ -133,6 +127,12 @@ struct JPAResourceManager {
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
+};
+
+struct JPAParticleCallBack {
+	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
+	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
+	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
 struct JPAEmitterCallBack {
@@ -182,19 +182,19 @@ struct dPa_windPcallBack {
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct mDoDvdThd_toMainRam_c {
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
-struct fopAc_ac_c {
+struct cBgS_PolyInfo {
 };
 
 struct dPa_levelEcallBack {
 	/* 8004FB18 */ ~dPa_levelEcallBack();
 	/* 8004FB8C */ void cleanup();
+};
+
+struct fopAc_ac_c {
 };
 
 struct dPa_control_c {
@@ -523,33 +523,33 @@ extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void __dt__18dPa_modelEcallBackFv(); // 1
 extern "C" void __dt__25dPa_gen_d_light8EcallBackFv(); // 1
 extern "C" void __sinit_d_particle_cpp(); // 1
-extern "C" extern char const* const d_particle_d_particle__stringBase0;
+extern "C" extern char const* const stringBase0;
 extern "C" extern void* __vt__22dPa_hermiteEcallBack_c[9];
 extern "C" extern void* __vt__18dPa_levelEcallBack[9];
 extern "C" extern void* __vt__18JPAEmitterCallBack[7];
-extern "C" extern u8 d_particle_d_particle__lit_4054[12];
-extern "C" extern u8 d_particle_d_particle__lit_4723[12];
-extern "C" extern u8 d_particle_d_particle__lit_4724[12];
-extern "C" extern u8 d_particle_d_particle__lit_4725[12];
-extern "C" extern u8 d_particle_d_particle__lit_4726[12];
-extern "C" extern u8 d_particle_d_particle__lit_4727[12];
-extern "C" extern u8 d_particle_d_particle__lit_4728[12];
-extern "C" extern u8 d_particle_d_particle__lit_4729[12];
-extern "C" extern u8 d_particle_d_particle__lit_4730[12];
+extern "C" extern u8 lit_4054[12];
+extern "C" extern u8 lit_4723[12];
+extern "C" extern u8 lit_4724[12];
+extern "C" extern u8 lit_4725[12];
+extern "C" extern u8 lit_4726[12];
+extern "C" extern u8 lit_4727[12];
+extern "C" extern u8 lit_4728[12];
+extern "C" extern u8 lit_4729[12];
+extern "C" extern u8 lit_4730[12];
 extern "C" extern u8 mTsubo__13dPa_control_c[64];
-extern "C" extern u8 d_particle_d_particle__lit_4731[12];
-extern "C" extern u8 d_particle_d_particle__lit_4732[12];
-extern "C" extern u8 d_particle_d_particle__lit_4733[12];
+extern "C" extern u8 lit_4731[12];
+extern "C" extern u8 lit_4732[12];
+extern "C" extern u8 lit_4733[12];
 extern "C" extern u8 mLifeBall__13dPa_control_c[24];
-extern "C" extern u8 d_particle_d_particle__lit_4734[12];
-extern "C" extern u8 d_particle_d_particle__lit_4735[12];
-extern "C" extern u8 d_particle_d_particle__lit_4736[12];
-extern "C" extern u8 d_particle_d_particle__lit_4737[12];
-extern "C" extern u8 d_particle_d_particle__lit_4738[12];
-extern "C" extern u8 d_particle_d_particle__lit_4739[12];
-extern "C" extern u8 d_particle_d_particle__lit_4740[12];
-extern "C" extern u8 d_particle_d_particle__lit_4741[12];
-extern "C" extern u8 d_particle_d_particle__lit_4742[12];
+extern "C" extern u8 lit_4734[12];
+extern "C" extern u8 lit_4735[12];
+extern "C" extern u8 lit_4736[12];
+extern "C" extern u8 lit_4737[12];
+extern "C" extern u8 lit_4738[12];
+extern "C" extern u8 lit_4739[12];
+extern "C" extern u8 lit_4740[12];
+extern "C" extern u8 lit_4741[12];
+extern "C" extern u8 lit_4742[12];
 extern "C" extern u8 mEcallback__18dPa_modelEcallBack[4];
 extern "C" extern u8 mEmitterMng__13dPa_control_c[4];
 extern "C" extern u8 mWaterBubblePcallBack__13dPa_control_c[4];
@@ -1153,13 +1153,13 @@ asm static void dPa_group_id_change(u32* param_0, u8* param_1) {
 
 /* ############################################################################################## */
 /* 80451F40-80451F44 0004+00 s=2 e=0 z=0  None .sdata2    @3880                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_3880 = 255.0f;
+SECTION_SDATA2 static f32 lit_3880 = 255.0f;
 
 /* 80451F44-80451F48 0004+00 s=1 e=0 z=0  None .sdata2    @3881                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_3881 = 4.0f;
+SECTION_SDATA2 static f32 lit_3881 = 4.0f;
 
 /* 80451F48-80451F50 0008+00 s=2 e=0 z=0  None .sdata2    @3883                                                        */
-SECTION_SDATA2 static f64 d_particle_d_particle__lit_3883 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_3883 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80049934-80049B30 01FC+00 s=1 e=0 z=0  None .text      initiateLighting8__FR8_GXColors                              */
 #pragma push
@@ -1207,7 +1207,7 @@ asm static void drawFirst_l8(JPABaseEmitter* param_0) {
 
 /* ############################################################################################## */
 /* 80451F50-80451F54 0004+00 s=9 e=0 z=0  None .sdata2    @3964                                                        */
-SECTION_SDATA2 static u8 d_particle_d_particle__lit_3964[4] = {
+SECTION_SDATA2 static u8 lit_3964[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1301,10 +1301,10 @@ asm void dPa_gen_d_light8EcallBack::draw(JPABaseEmitter* param_0) {
 
 /* ############################################################################################## */
 /* 80451F54-80451F58 0004+00 s=1 e=0 z=0  None .sdata2    @4048                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4048 = 13.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_4048 = 13.0f / 20.0f;
 
 /* 80451F58-80451F5C 0004+00 s=1 e=0 z=0  None .sdata2    @4049                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4049 = 9.0f;
+SECTION_SDATA2 static f32 lit_4049 = 9.0f;
 
 /* 8004A3AC-8004A460 00B4+00 s=2 e=0 z=0  None .text      dPa_setWindPower__FP15JPABaseParticle                        */
 #pragma push
@@ -1319,22 +1319,22 @@ asm static void dPa_setWindPower(JPABaseParticle* param_0) {
 
 /* ############################################################################################## */
 /* 8037A108-8037A114 000C+00 s=1 e=0 z=0  None .rodata    @4065                                                        */
-SECTION_RODATA static u8 const d_particle_d_particle__lit_4065[12] = {
+SECTION_RODATA static u8 const lit_4065[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 80451F5C-80451F60 0004+00 s=3 e=0 z=0  None .sdata2    @4090                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4090 = -0.0054931640625f;
+SECTION_SDATA2 static f32 lit_4090 = -0.0054931640625f;
 
 /* 80451F60-80451F68 0004+04 s=3 e=0 z=0  None .sdata2    @4091                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4091[1 + 1 /* padding */] = {
+SECTION_SDATA2 static f32 lit_4091[1 + 1 /* padding */] = {
 	0.01745329238474369f,
 	/* padding */
 	0.0f,
 };
 
 /* 80451F68-80451F70 0008+00 s=7 e=0 z=0  None .sdata2    @4093                                                        */
-SECTION_SDATA2 static f64 d_particle_d_particle__lit_4093 = 4503599627370496.0 /* cast u32 to float */;
+SECTION_SDATA2 static f64 lit_4093 = 4503599627370496.0 /* cast u32 to float */;
 
 /* 8004A460-8004A608 01A8+00 s=1 e=0 z=0  None .text      draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
@@ -1606,10 +1606,10 @@ asm dPa_simpleData_c::dPa_simpleData_c() {
 
 /* ############################################################################################## */
 /* 80424710-8042471C 000C+00 s=1 e=0 z=0  None .bss       @4053                                                        */
-static u8 d_particle_d_particle__lit_4053[12];
+static u8 lit_4053[12];
 
 /* 8042471C-80424728 000C+00 s=0 e=0 z=0  None .bss       @4054                                                        */
-u8 d_particle_d_particle__lit_4054[12];
+u8 lit_4054[12];
 
 /* 80424728-80424734 000C+00 s=1 e=0 z=0  None .bss       pos$4424                                                     */
 static u8 data_80424728[12];
@@ -1627,22 +1627,22 @@ asm void dPa_simpleEcallBack::createEmitter(JPAEmitterManager* param_0) {
 
 /* ############################################################################################## */
 /* 80451F74-80451F78 0004+00 s=1 e=0 z=0  None .sdata2    @4473                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_4473 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_4473 = 0xFFFFFFFF;
 
 /* 80451F78-80451F7C 0004+00 s=1 e=0 z=0  None .sdata2    @4474                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_4474 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_4474 = 0xFFFFFFFF;
 
 /* 80451F7C-80451F80 0004+00 s=1 e=0 z=0  None .sdata2    @4482                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_4482 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_4482 = 0xFFFFFFFF;
 
 /* 80451F80-80451F84 0004+00 s=1 e=0 z=0  None .sdata2    @4483                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_4483 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_4483 = 0xFFFFFFFF;
 
 /* 80451F84-80451F88 0004+00 s=3 e=0 z=0  None .sdata2    @4518                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4518 = 99.0f;
+SECTION_SDATA2 static f32 lit_4518 = 99.0f;
 
 /* 80451F88-80451F8C 0004+00 s=10 e=0 z=0  None .sdata2    @4519                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_4519 = 1.0f;
+SECTION_SDATA2 static f32 lit_4519 = 1.0f;
 
 /* 8004B168-8004B4E0 0378+00 s=1 e=0 z=0  None .text      set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
 #pragma push
@@ -1829,67 +1829,67 @@ asm void dPa_control_c::level_c::cutTable(dPa_control_c::level_c::emitter_c* par
 
 /* ############################################################################################## */
 /* 80424734-80424740 000C+00 s=0 e=0 z=0  None .bss       @4723                                                        */
-u8 d_particle_d_particle__lit_4723[12];
+u8 lit_4723[12];
 
 /* 80424740-8042474C 000C+00 s=0 e=0 z=0  None .bss       @4724                                                        */
-u8 d_particle_d_particle__lit_4724[12];
+u8 lit_4724[12];
 
 /* 8042474C-80424758 000C+00 s=0 e=0 z=0  None .bss       @4725                                                        */
-u8 d_particle_d_particle__lit_4725[12];
+u8 lit_4725[12];
 
 /* 80424758-80424764 000C+00 s=0 e=0 z=0  None .bss       @4726                                                        */
-u8 d_particle_d_particle__lit_4726[12];
+u8 lit_4726[12];
 
 /* 80424764-80424770 000C+00 s=0 e=0 z=0  None .bss       @4727                                                        */
-u8 d_particle_d_particle__lit_4727[12];
+u8 lit_4727[12];
 
 /* 80424770-8042477C 000C+00 s=0 e=0 z=0  None .bss       @4728                                                        */
-u8 d_particle_d_particle__lit_4728[12];
+u8 lit_4728[12];
 
 /* 8042477C-80424788 000C+00 s=0 e=0 z=0  None .bss       @4729                                                        */
-u8 d_particle_d_particle__lit_4729[12];
+u8 lit_4729[12];
 
 /* 80424788-80424794 000C+00 s=0 e=0 z=0  None .bss       @4730                                                        */
-u8 d_particle_d_particle__lit_4730[12];
+u8 lit_4730[12];
 
 /* 80424794-804247D4 0040+00 s=0 e=1 z=0  None .bss       mTsubo__13dPa_control_c                                      */
 u8 mTsubo__13dPa_control_c[64];
 
 /* 804247D4-804247E0 000C+00 s=0 e=0 z=0  None .bss       @4731                                                        */
-u8 d_particle_d_particle__lit_4731[12];
+u8 lit_4731[12];
 
 /* 804247E0-804247EC 000C+00 s=0 e=0 z=0  None .bss       @4732                                                        */
-u8 d_particle_d_particle__lit_4732[12];
+u8 lit_4732[12];
 
 /* 804247EC-804247F8 000C+00 s=0 e=0 z=0  None .bss       @4733                                                        */
-u8 d_particle_d_particle__lit_4733[12];
+u8 lit_4733[12];
 
 /* 804247F8-80424810 0018+00 s=0 e=0 z=0  None .bss       mLifeBall__13dPa_control_c                                   */
 u8 mLifeBall__13dPa_control_c[24];
 
 /* 80424810-8042481C 000C+00 s=0 e=0 z=0  None .bss       @4734                                                        */
-u8 d_particle_d_particle__lit_4734[12];
+u8 lit_4734[12];
 
 /* 8042481C-80424828 000C+00 s=0 e=0 z=0  None .bss       @4735                                                        */
-u8 d_particle_d_particle__lit_4735[12];
+u8 lit_4735[12];
 
 /* 80424828-80424834 000C+00 s=0 e=0 z=0  None .bss       @4736                                                        */
-u8 d_particle_d_particle__lit_4736[12];
+u8 lit_4736[12];
 
 /* 80424834-80424840 000C+00 s=0 e=0 z=0  None .bss       @4737                                                        */
-u8 d_particle_d_particle__lit_4737[12];
+u8 lit_4737[12];
 
 /* 80424840-8042484C 000C+00 s=0 e=0 z=0  None .bss       @4738                                                        */
-u8 d_particle_d_particle__lit_4738[12];
+u8 lit_4738[12];
 
 /* 8042484C-80424858 000C+00 s=0 e=0 z=0  None .bss       @4739                                                        */
-u8 d_particle_d_particle__lit_4739[12];
+u8 lit_4739[12];
 
 /* 80424858-80424864 000C+00 s=0 e=0 z=0  None .bss       @4740                                                        */
-u8 d_particle_d_particle__lit_4740[12];
+u8 lit_4740[12];
 
 /* 80424864-80424870 000C+00 s=0 e=0 z=0  None .bss       @4741                                                        */
-u8 d_particle_d_particle__lit_4741[12];
+u8 lit_4741[12];
 
 /* 80424870-804248A0 0030+00 s=1 e=0 z=0  None .bss       mWindViewMatrix__13dPa_control_c                             */
 static u8 mWindViewMatrix__13dPa_control_c[48];
@@ -1918,12 +1918,12 @@ asm void dPa_control_c::getRM_ID(u16 param_0) {
 
 /* ############################################################################################## */
 /* 8037A114-8037A120 000C+00 s=1 e=0 z=0  None .rodata    @5691                                                        */
-SECTION_RODATA static u8 const d_particle_d_particle__lit_5691[12] = {
+SECTION_RODATA static u8 const lit_5691[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
 /* 8037A120-8037A12C 000C+00 s=1 e=0 z=0  None .rodata    @6363                                                        */
-SECTION_RODATA static u8 const d_particle_d_particle__lit_6363[12] = {
+SECTION_RODATA static u8 const lit_6363[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
@@ -1962,7 +1962,7 @@ asm void dPa_control_c::createRoomScene() {
 
 /* ############################################################################################## */
 /* 804248A0-804248AC 000C+00 s=0 e=0 z=0  None .bss       @4742                                                        */
-u8 d_particle_d_particle__lit_4742[12];
+u8 lit_4742[12];
 
 /* 804248AC-804248D0 0020+04 s=1 e=0 z=0  None .bss       jpcName$4821                                                 */
 static u8 data_804248AC[32 + 4 /* padding */];
@@ -2068,7 +2068,7 @@ asm void dPa_control_c::draw(JPADrawInfo* param_0, u8 param_1) {
 
 /* ############################################################################################## */
 /* 80451F8C-80451F90 0004+00 s=5 e=0 z=0  None .sdata2    @5066                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_5066 = 0.5f;
+SECTION_SDATA2 static f32 lit_5066 = 0.5f;
 
 /* 8004C218-8004C838 0620+00 s=0 e=7 z=0  None .text      setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl */
 #pragma push
@@ -2091,19 +2091,19 @@ SECTION_SDATA2 static u8 data_80451F90[4] = {
 SECTION_SDATA2 static f32 lit_5140 = 1.0f / 20.0f;
 
 /* 80451F98-80451F9C 0004+00 s=1 e=0 z=0  None .sdata2    @5141                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_5141 = 3.0f / 20.0f;
+SECTION_SDATA2 static f32 lit_5141 = 3.0f / 20.0f;
 
 /* 80451F9C-80451FA0 0004+00 s=2 e=0 z=0  None .sdata2    @5142                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_5142 = 1.0f / 10.0f;
+SECTION_SDATA2 static f32 lit_5142 = 1.0f / 10.0f;
 
 /* 80451FA0-80451FA8 0008+00 s=2 e=0 z=0  None .sdata2    @5143                                                        */
-SECTION_SDATA2 static f64 d_particle_d_particle__lit_5143 = 0.5;
+SECTION_SDATA2 static f64 lit_5143 = 0.5;
 
 /* 80451FA8-80451FB0 0008+00 s=2 e=0 z=0  None .sdata2    @5144                                                        */
-SECTION_SDATA2 static f64 d_particle_d_particle__lit_5144 = 3.0;
+SECTION_SDATA2 static f64 lit_5144 = 3.0;
 
 /* 80451FB0-80451FB8 0008+00 s=2 e=0 z=0  None .sdata2    @5145                                                        */
-SECTION_SDATA2 static u8 d_particle_d_particle__lit_5145[8] = {
+SECTION_SDATA2 static u8 lit_5145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -2120,16 +2120,16 @@ asm void dPa_control_c::setWaterRipple(u32* param_0, cBgS_PolyInfo& param_1, cXy
 
 /* ############################################################################################## */
 /* 80451FB8-80451FBC 0004+00 s=1 e=0 z=0  None .sdata2    @5189                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_5189 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_5189 = 0xFFFFFFFF;
 
 /* 80451FBC-80451FC0 0004+00 s=1 e=0 z=0  None .sdata2    @5190                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_5190 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_5190 = 0xFFFFFFFF;
 
 /* 80451FC0-80451FC4 0004+00 s=1 e=0 z=0  None .sdata2    @5198                                                        */
 SECTION_SDATA2 static u32 lit_5198 = 0xFFFFFFFF;
 
 /* 80451FC4-80451FC8 0004+00 s=1 e=0 z=0  None .sdata2    @5199                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_5199 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_5199 = 0xFFFFFFFF;
 
 /* 8004CA90-8004CF90 0500+00 s=3 e=20 z=0  None .text      set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
 #pragma push
@@ -2202,7 +2202,7 @@ asm void dPa_control_c::getSimple(u16 param_0) {
 SECTION_SDATA2 static u32 lit_5374 = 0xFFFFFFFF;
 
 /* 80451FCC-80451FD0 0004+00 s=1 e=0 z=0  None .sdata2    @5375                                                        */
-SECTION_SDATA2 static u32 d_particle_d_particle__lit_5375 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_5375 = 0xFFFFFFFF;
 
 /* 80451FD0-80451FD4 0004+00 s=1 e=0 z=0  None .sdata2    @5383                                                        */
 SECTION_SDATA2 static u32 lit_5383 = 0xFFFFFFFF;
@@ -2411,7 +2411,7 @@ asm void dPa_hermiteEcallBack_c::setOldPosP(cXyz const* param_0, cXyz const* par
 
 /* ############################################################################################## */
 /* 80451FF4-80451FF8 0004+00 s=1 e=0 z=0  None .sdata2    @6846                                                        */
-SECTION_SDATA2 static f32 d_particle_d_particle__lit_6846 = -2.0f;
+SECTION_SDATA2 static f32 lit_6846 = -2.0f;
 
 /* 8004F6C4-8004FABC 03F8+00 s=1 e=0 z=0  None .text      executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter     */
 #pragma push

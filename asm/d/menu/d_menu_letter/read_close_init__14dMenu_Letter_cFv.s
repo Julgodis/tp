@@ -6,7 +6,7 @@ lbl_801DEE20:
 /* 801DEE30 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 801DEE34 00000014  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801DEE38 00000018  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 801DEE3C 0000001C  A8 04 07 5E */	lha r0, 0x75e(r4)
+/* 801DEE3C 0000001C  A8 04 07 5E */	lha r0, 0x75e(r4)	/* effective address: 8042F326 */
 /* 801DEE40 00000020  B0 03 03 6A */	sth r0, 0x36a(r3)
 /* 801DEE44 00000024  38 80 00 00 */	li r4, 0
 /* 801DEE48 00000028  48 00 26 D1 */	bl setAButtonString__14dMenu_Letter_cFUs

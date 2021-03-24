@@ -5,7 +5,7 @@ lbl_80058B00:
 /* 80058B0C 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80058B10 00000010  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80058B14 00000014  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80058B18 00000018  88 1F 0E 88 */	lbz r0, 0xe88(r31)
+/* 80058B18 00000018  88 1F 0E 88 */	lbz r0, 0xe88(r31)	/* effective address: 8042D8DC */
 /* 80058B1C 0000001C  2C 00 00 01 */	cmpwi r0, 1
 /* 80058B20 00000020  41 82 00 54 */	beq lbl_80058B74
 /* 80058B24 00000024  40 80 00 54 */	bge lbl_80058B78
@@ -23,7 +23,7 @@ lbl_80058B4C:
 /* 80058B4C 00000000  48 00 70 91 */	bl dKyr_snow_init__Fv
 /* 80058B50 00000004  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80058B54 00000008  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80058B58 0000000C  80 03 0E 94 */	lwz r0, 0xe94(r3)
+/* 80058B58 0000000C  80 03 0E 94 */	lwz r0, 0xe94(r3)	/* effective address: 8042D8E8 */
 /* 80058B5C 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 80058B60 00000014  41 82 00 18 */	beq lbl_80058B78
 /* 80058B64 00000018  48 00 71 E5 */	bl dKyr_snow_move__Fv

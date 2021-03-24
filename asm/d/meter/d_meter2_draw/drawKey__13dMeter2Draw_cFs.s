@@ -40,7 +40,7 @@ lbl_80216ABC:
 /* 80216AC8 0000000C  41 80 FF AC */	blt lbl_80216A74
 /* 80216ACC 00000010  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 80216AD0 00000014  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
-/* 80216AD4 00000018  C0 03 03 5C */	lfs f0, 0x35c(r3)
+/* 80216AD4 00000018  C0 03 03 5C */	lfs f0, 0x35c(r3)	/* effective address: 8042EF24 */
 /* 80216AD8 0000001C  80 7B 02 E0 */	lwz r3, 0x2e0(r27)
 /* 80216ADC 00000020  80 63 00 04 */	lwz r3, 4(r3)
 /* 80216AE0 00000024  D0 03 00 CC */	stfs f0, 0xcc(r3)
@@ -52,8 +52,8 @@ lbl_80216ABC:
 /* 80216AF8 0000003C  80 7B 02 E0 */	lwz r3, 0x2e0(r27)
 /* 80216AFC 00000040  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 80216B00 00000044  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
-/* 80216B04 00000048  C0 24 03 60 */	lfs f1, 0x360(r4)
-/* 80216B08 0000004C  C0 44 03 64 */	lfs f2, 0x364(r4)
+/* 80216B04 00000048  C0 24 03 60 */	lfs f1, 0x360(r4)	/* effective address: 8042EF28 */
+/* 80216B08 0000004C  C0 44 03 64 */	lfs f2, 0x364(r4)	/* effective address: 8042EF2C */
 /* 80216B0C 00000050  48 03 DA A5 */	bl paneTrans__8CPaneMgrFff
 /* 80216B10 00000054  39 61 00 20 */	addi r11, r1, 0x20
 /* 80216B14 00000058  48 14 B7 0D */	bl _restgpr_27

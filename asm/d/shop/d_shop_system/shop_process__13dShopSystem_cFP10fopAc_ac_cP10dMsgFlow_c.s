@@ -7,8 +7,8 @@ lbl_8019A158:
 /* 8019A16C 00000014  7C 7F 1B 78 */	mr r31, r3
 /* 8019A170 00000018  88 03 0F 70 */	lbz r0, 0xf70(r3)
 /* 8019A174 0000001C  1C E0 00 0C */	mulli r7, r0, 0xc
-/* 8019A178 00000020  3C C0 80 3C */	lis r6, d_shop_d_shop_system__process@ha
-/* 8019A17C 00000024  38 06 B9 74 */	addi r0, r6, d_shop_d_shop_system__process@l
+/* 8019A178 00000020  3C C0 80 3C */	lis r6, process@ha
+/* 8019A17C 00000024  38 06 B9 74 */	addi r0, r6, process@l
 /* 8019A180 00000028  7D 80 3A 14 */	add r12, r0, r7
 /* 8019A184 0000002C  48 1C 7F 01 */	bl __ptmf_scall
 /* 8019A188 00000030  60 00 00 00 */	nop 
@@ -31,7 +31,7 @@ lbl_8019A1BC:
 /* 8019A1C4 00000008  38 00 00 00 */	li r0, 0
 /* 8019A1C8 0000000C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8019A1CC 00000010  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8019A1D0 00000014  98 03 00 BD */	stb r0, 0xbd(r3)
+/* 8019A1D0 00000014  98 03 00 BD */	stb r0, 0xbd(r3)	/* effective address: 80430245 */
 /* 8019A1D4 00000018  88 1F 0F 70 */	lbz r0, 0xf70(r31)
 /* 8019A1D8 0000001C  28 00 00 00 */	cmplwi r0, 0
 /* 8019A1DC 00000020  41 82 00 10 */	beq lbl_8019A1EC

@@ -25,9 +25,9 @@ lbl_80131AB4:
 /* 80131AC4 00000010  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr(r13)
 /* 80131AC8 00000014  38 81 00 08 */	addi r4, r1, 8
 /* 80131ACC 00000018  38 BF 04 D0 */	addi r5, r31, 0x4d0
-/* 80131AD0 0000001C  C0 22 92 B8 */	lfs f1, d_a_d_a_alink__lit_6040(r2)
+/* 80131AD0 0000001C  C0 22 92 B8 */	lfs f1, lit_6040(r2)
 /* 80131AD4 00000020  FC 40 08 90 */	fmr f2, f1
-/* 80131AD8 00000024  C0 62 92 BC */	lfs f3, d_a_d_a_alink__lit_6041(r2)
+/* 80131AD8 00000024  C0 62 92 BC */	lfs f3, lit_6041(r2)
 /* 80131ADC 00000028  FC 80 18 90 */	fmr f4, f3
 /* 80131AE0 0000002C  39 00 00 00 */	li r8, 0
 /* 80131AE4 00000030  48 17 9E A1 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

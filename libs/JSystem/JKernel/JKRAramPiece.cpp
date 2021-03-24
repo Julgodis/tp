@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct JKRAramBlock {
-};
-
 struct JKRAMCommand {
 	/* 802D39EC */ JKRAMCommand();
 	/* 802D3A5C */ ~JKRAMCommand();
+};
+
+struct JKRAramBlock {
 };
 
 struct JKRAramPiece {
@@ -77,7 +77,7 @@ extern "C" void doneDMA__12JKRAramPieceFUl(); // 1
 extern "C" void __ct__12JKRAMCommandFv(); // 1
 extern "C" void __dt__12JKRAMCommandFv(); // 1
 extern "C" void __sinit_JKRAramPiece_cpp(); // 1
-extern "C" extern char const* const JKRAramPiece__stringBase0;
+extern "C" extern char const* const stringBase0;
 
 // 
 // External References:
@@ -157,7 +157,7 @@ SECTION_DEAD char const* const stringBase_8039D108 = "illegal address. abort.";
 #pragma pop
 
 /* 80434318-80434324 000C+00 s=1 e=0 z=0  None .bss       @492                                                         */
-static u8 JKRAramPiece__lit_492[12];
+static u8 lit_492[12];
 
 /* 80434324-80434330 000C+00 s=3 e=0 z=0  None .bss       sAramPieceCommandList__12JKRAramPiece                        */
 static u8 sAramPieceCommandList__12JKRAramPiece[12];

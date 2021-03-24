@@ -4,7 +4,7 @@ lbl_8023BDC0:
 /* 8023BDC8 00000008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8023BDCC 0000000C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8023BDD0 00000010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 8023BDD4 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)
+/* 8023BDD4 00000014  80 84 5F 50 */	lwz r4, 0x5f50(r4)	/* effective address: 8040C110 */
 /* 8023BDD8 00000018  80 63 00 04 */	lwz r3, 4(r3)
 /* 8023BDDC 0000001C  C0 22 B1 98 */	lfs f1, lit_3662(r2)
 /* 8023BDE0 00000020  FC 40 08 90 */	fmr f2, f1

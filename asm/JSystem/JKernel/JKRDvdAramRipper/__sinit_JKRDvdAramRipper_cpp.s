@@ -9,8 +9,8 @@ lbl_802DB5E8:
 /* 802DB604 0000001C  38 63 43 B4 */	addi r3, r3, sDvdAramAsyncList__16JKRDvdAramRipper@l
 /* 802DB608 00000020  3C 80 80 2E */	lis r4, func_802DB62C@ha
 /* 802DB60C 00000024  38 84 B6 2C */	addi r4, r4, func_802DB62C@l
-/* 802DB610 00000028  3C A0 80 43 */	lis r5, JKRDvdAramRipper__lit_301@ha
-/* 802DB614 0000002C  38 A5 43 A8 */	addi r5, r5, JKRDvdAramRipper__lit_301@l
+/* 802DB610 00000028  3C A0 80 43 */	lis r5, lit_301@ha
+/* 802DB614 0000002C  38 A5 43 A8 */	addi r5, r5, lit_301@l
 /* 802DB618 00000030  48 08 66 0D */	bl __register_global_object
 /* 802DB61C 00000034  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DB620 00000038  7C 08 03 A6 */	mtlr r0

@@ -19,10 +19,10 @@ struct dBgW {
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -85,7 +85,7 @@ struct cBgW_BgId {
 static void CheckCreateHeap(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__16dBgS_MoveBgActorFv(); // 1
 extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
 extern "C" void Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
@@ -162,7 +162,7 @@ asm dBgS_MoveBgActor::dBgS_MoveBgActor() {
 #pragma optimizewithasm off
 asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 	nofralloc
-#include "asm/d/bg/d_bg_s_movebg_actor/d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c.s"
+#include "asm/d/bg/d_bg_s_movebg_actor/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 

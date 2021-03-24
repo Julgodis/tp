@@ -7,7 +7,7 @@ lbl_800EF6B0:
 /* 800EF6C4 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 800EF6C8 00000018  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 800EF6CC 0000001C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
-/* 800EF6D0 00000020  83 84 5D B8 */	lwz r28, 0x5db8(r4)
+/* 800EF6D0 00000020  83 84 5D B8 */	lwz r28, 0x5db8(r4)	/* effective address: 8040BF78 */
 /* 800EF6D4 00000024  3B E0 00 00 */	li r31, 0
 /* 800EF6D8 00000028  4B FF FE C1 */	bl checkHorseGetOff__9daAlink_cFv
 /* 800EF6DC 0000002C  7C 7D 1B 78 */	mr r29, r3

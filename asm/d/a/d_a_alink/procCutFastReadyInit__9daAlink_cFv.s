@@ -19,7 +19,7 @@ lbl_8011EB14:
 /* 8011EB28 00000014  38 80 00 19 */	li r4, 0x19
 /* 8011EB2C 00000018  3C A0 80 39 */	lis r5, m__18daAlinkHIO_move_c0@ha
 /* 8011EB30 0000001C  38 A5 D6 BC */	addi r5, r5, m__18daAlinkHIO_move_c0@l
-/* 8011EB34 00000020  C0 25 00 1C */	lfs f1, 0x1c(r5)
+/* 8011EB34 00000020  C0 25 00 1C */	lfs f1, 0x1c(r5)	/* effective address: 8038D6D8 */
 /* 8011EB38 00000024  C0 42 92 C4 */	lfs f2, lit_6109(r2)
 /* 8011EB3C 00000028  4B F8 E4 A5 */	bl setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff
 /* 8011EB40 0000002C  7F E3 FB 78 */	mr r3, r31
@@ -27,10 +27,10 @@ lbl_8011EB14:
 /* 8011EB48 00000034  38 A0 00 02 */	li r5, 2
 /* 8011EB4C 00000038  3C C0 80 39 */	lis r6, m__17daAlinkHIO_cut_c0@ha
 /* 8011EB50 0000003C  38 E6 DE 8C */	addi r7, r6, m__17daAlinkHIO_cut_c0@l
-/* 8011EB54 00000040  C0 27 00 04 */	lfs f1, 4(r7)
+/* 8011EB54 00000040  C0 27 00 04 */	lfs f1, 4(r7)	/* effective address: 8038DE90 */
 /* 8011EB58 00000044  C0 42 93 1C */	lfs f2, lit_7448(r2)
-/* 8011EB5C 00000048  A8 C7 00 00 */	lha r6, 0(r7)
-/* 8011EB60 0000004C  C0 67 00 0C */	lfs f3, 0xc(r7)
+/* 8011EB5C 00000048  A8 C7 00 00 */	lha r6, 0(r7)	/* effective address: 8038DE8C */
+/* 8011EB60 0000004C  C0 67 00 0C */	lfs f3, 0xc(r7)	/* effective address: 8038DE98 */
 /* 8011EB64 00000050  4B F8 E8 75 */	bl setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf
 /* 8011EB68 00000054  80 1F 05 70 */	lwz r0, 0x570(r31)
 /* 8011EB6C 00000058  64 00 01 00 */	oris r0, r0, 0x100

@@ -17,10 +17,10 @@ struct dBgW_Base {
 
 };
 
-struct dBgW {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct dBgW {
 };
 
 struct cXyz {
@@ -29,6 +29,9 @@ struct cXyz {
 };
 
 struct daObjMovebox {
+	struct BgcSrc_c {
+	};
+
 	struct Act_c {
 		struct Prm_e {
 		};
@@ -64,9 +67,6 @@ struct daObjMovebox {
 		/* 8048027C */ void Execute(f32 (** )[3][4]);
 		/* 80480728 */ void Draw();
 		/* 804808FC */ void Delete();
-	};
-
-	struct BgcSrc_c {
 	};
 
 	struct Bgc_c {

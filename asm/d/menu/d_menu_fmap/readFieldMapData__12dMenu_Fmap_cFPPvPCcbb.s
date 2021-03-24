@@ -11,7 +11,7 @@ lbl_801CC094:
 /* 801CC0B8 00000024  80 63 00 64 */	lwz r3, 0x64(r3)
 /* 801CC0BC 00000028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801CC0C0 0000002C  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
-/* 801CC0C4 00000030  80 1D 5C 68 */	lwz r0, 0x5c68(r29)
+/* 801CC0C4 00000030  80 1D 5C 68 */	lwz r0, 0x5c68(r29)	/* effective address: 8040BE28 */
 /* 801CC0C8 00000034  7C 03 00 40 */	cmplw r3, r0
 /* 801CC0CC 00000038  41 82 00 9C */	beq lbl_801CC168
 /* 801CC0D0 0000003C  54 E0 06 3F */	clrlwi. r0, r7, 0x18

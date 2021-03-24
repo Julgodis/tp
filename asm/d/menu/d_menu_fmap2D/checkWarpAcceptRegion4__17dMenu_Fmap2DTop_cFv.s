@@ -22,14 +22,14 @@ lbl_801D7AF4:
 /* 801D7B00 0000000C  7F E3 FB 78 */	mr r3, r31
 /* 801D7B04 00000010  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801D7B08 00000014  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801D7B0C 00000018  A0 84 00 D0 */	lhz r4, 0xd0(r4)
+/* 801D7B0C 00000018  A0 84 00 D0 */	lhz r4, 0xd0(r4)	/* effective address: 803A7358 */
 /* 801D7B10 0000001C  4B E5 CE AD */	bl isEventBit__11dSv_event_cCFUs
 /* 801D7B14 00000020  2C 03 00 00 */	cmpwi r3, 0
 /* 801D7B18 00000024  41 82 00 28 */	beq lbl_801D7B40
 /* 801D7B1C 00000028  7F E3 FB 78 */	mr r3, r31
 /* 801D7B20 0000002C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 801D7B24 00000030  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 801D7B28 00000034  A0 84 01 F4 */	lhz r4, 0x1f4(r4)
+/* 801D7B28 00000034  A0 84 01 F4 */	lhz r4, 0x1f4(r4)	/* effective address: 803A747C */
 /* 801D7B2C 00000038  4B E5 CE 91 */	bl isEventBit__11dSv_event_cCFUs
 /* 801D7B30 0000003C  2C 03 00 00 */	cmpwi r3, 0
 /* 801D7B34 00000040  40 82 00 0C */	bne lbl_801D7B40

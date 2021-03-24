@@ -12,7 +12,7 @@ lbl_8036CD34:
 /* 8036CD5C 00000028  48 00 27 45 */	bl TRKAcquireMutex
 /* 8036CD60 0000002C  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CD64 00000030  3B E3 D8 90 */	addi r31, r3, gTRKEventQueue@l
-/* 8036CD68 00000034  80 1F 00 04 */	lwz r0, 4(r31)
+/* 8036CD68 00000034  80 1F 00 04 */	lwz r0, 4(r31)	/* effective address: 8044D894 */
 /* 8036CD6C 00000038  2C 00 00 00 */	cmpwi r0, 0
 /* 8036CD70 0000003C  40 81 00 4C */	ble lbl_8036CDBC
 /* 8036CD74 00000040  80 1F 00 08 */	lwz r0, 8(r31)

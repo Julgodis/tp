@@ -9,7 +9,7 @@ lbl_800DD894:
 /* 800DD8B0 00000008  A0 03 2F DC */	lhz r0, 0x2fdc(r3)
 /* 800DD8B4 0000000C  28 00 00 42 */	cmplwi r0, 0x42
 /* 800DD8B8 00000010  41 82 00 0C */	beq lbl_800DD8C4
-/* 800DD8BC 00000014  C0 22 92 BC */	lfs f1, d_a_d_a_alink__lit_6041(r2)
+/* 800DD8BC 00000014  C0 22 92 BC */	lfs f1, lit_6041(r2)
 /* 800DD8C0 00000018  4B FF F7 49 */	bl setUpperGuardAnime__9daAlink_cFf
 lbl_800DD8C4:
 /* 800DD8C4 00000000  7F E3 FB 78 */	mr r3, r31
@@ -88,7 +88,7 @@ lbl_800DD9D0:
 /* 800DD9D0 00000000  A0 1F 2F DC */	lhz r0, 0x2fdc(r31)
 /* 800DD9D4 00000004  28 00 00 42 */	cmplwi r0, 0x42
 /* 800DD9D8 00000008  40 82 00 0C */	bne lbl_800DD9E4
-/* 800DD9DC 0000000C  C0 02 92 B8 */	lfs f0, d_a_d_a_alink__lit_6040(r2)
+/* 800DD9DC 0000000C  C0 02 92 B8 */	lfs f0, lit_6040(r2)
 /* 800DD9E0 00000010  D0 1F 1F 50 */	stfs f0, 0x1f50(r31)
 lbl_800DD9E4:
 /* 800DD9E4 00000000  7F E3 FB 78 */	mr r3, r31

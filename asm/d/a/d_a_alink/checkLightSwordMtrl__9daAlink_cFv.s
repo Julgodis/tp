@@ -6,7 +6,7 @@ lbl_800D0E08:
 /* 800D0E18 00000010  7C 7F 1B 78 */	mr r31, r3
 /* 800D0E1C 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800D0E20 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
-/* 800D0E24 0000001C  88 03 00 14 */	lbz r0, 0x14(r3)
+/* 800D0E24 0000001C  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 804061D4 */
 /* 800D0E28 00000020  28 00 00 49 */	cmplwi r0, 0x49
 /* 800D0E2C 00000024  40 82 00 4C */	bne lbl_800D0E78
 /* 800D0E30 00000028  85 83 4E 20 */	lwzu r12, 0x4e20(r3)

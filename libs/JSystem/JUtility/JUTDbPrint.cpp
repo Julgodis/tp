@@ -11,11 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
 struct JUtility {
 	struct TColor {
 	};
@@ -25,6 +20,11 @@ struct JUtility {
 struct JUTFont {
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JUTDbPrint {
@@ -153,13 +153,13 @@ asm void JUTDbPrint::flush() {
 
 /* ############################################################################################## */
 /* 80456008-8045600C 0004+00 s=1 e=0 z=0  None .sdata2    @835                                                         */
-SECTION_SDATA2 static f32 JUTDbPrint__lit_835 = -1.0f;
+SECTION_SDATA2 static f32 lit_835 = -1.0f;
 
 /* 8045600C-80456010 0004+00 s=1 e=0 z=0  None .sdata2    @836                                                         */
-SECTION_SDATA2 static f32 JUTDbPrint__lit_836 = 1.0f;
+SECTION_SDATA2 static f32 lit_836 = 1.0f;
 
 /* 80456010-80456018 0008+00 s=2 e=0 z=0  None .sdata2    @838                                                         */
-SECTION_SDATA2 static f64 JUTDbPrint__lit_838 = 4503601774854144.0 /* cast s32 to float */;
+SECTION_SDATA2 static f64 lit_838 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 802E02DC-802E0440 0164+00 s=1 e=0 z=0  None .text      flush__10JUTDbPrintFiiii                                     */
 #pragma push

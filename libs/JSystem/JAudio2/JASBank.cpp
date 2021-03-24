@@ -86,7 +86,7 @@ extern "C" extern u8 struct_80451260[8];
 
 /* ############################################################################################## */
 /* 80431B48-80431B58 000C+04 s=2 e=0 z=0  None .bss       @156                                                         */
-static u8 JASBank__lit_156[12 + 4 /* padding */];
+static u8 lit_156[12 + 4 /* padding */];
 
 /* 80455630-80455634 0004+00 s=1 e=0 z=0  None .sdata2    @248                                                         */
 SECTION_SDATA2 static f32 lit_248 = 1.0f;
@@ -129,7 +129,7 @@ SECTION_RODATA static void* const data_8039B19C[6 + 1 /* padding */] = {
 };
 
 /* 8045563C-80455640 0004+00 s=1 e=0 z=0  None .sdata2    @290                                                         */
-SECTION_SDATA2 static f32 JASBank__lit_290 = 16736.015625f;
+SECTION_SDATA2 static f32 lit_290 = 16736.015625f;
 
 /* 80297C40-80297D78 0138+00 s=1 e=0 z=0  None .text      noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
 #pragma push

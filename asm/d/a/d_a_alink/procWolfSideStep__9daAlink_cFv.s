@@ -11,9 +11,9 @@ lbl_8012E0AC:
 /* 8012E0D0 00000024  A8 9F 30 0C */	lha r4, 0x300c(r31)
 /* 8012E0D4 00000028  3C A0 80 39 */	lis r5, m__23daAlinkHIO_wlAtnMove_c0@ha
 /* 8012E0D8 0000002C  38 E5 EF 70 */	addi r7, r5, m__23daAlinkHIO_wlAtnMove_c0@l
-/* 8012E0DC 00000030  A8 A7 00 04 */	lha r5, 4(r7)
-/* 8012E0E0 00000034  A8 C7 00 00 */	lha r6, 0(r7)
-/* 8012E0E4 00000038  A8 E7 00 02 */	lha r7, 2(r7)
+/* 8012E0DC 00000030  A8 A7 00 04 */	lha r5, 4(r7)	/* effective address: 8038EF74 */
+/* 8012E0E0 00000034  A8 C7 00 00 */	lha r6, 0(r7)	/* effective address: 8038EF70 */
+/* 8012E0E4 00000038  A8 E7 00 02 */	lha r7, 2(r7)	/* effective address: 8038EF72 */
 /* 8012E0E8 0000003C  48 14 24 59 */	bl cLib_addCalcAngleS__FPsssss
 /* 8012E0EC 00000040  A8 7F 04 E6 */	lha r3, 0x4e6(r31)
 /* 8012E0F0 00000044  3C 63 00 01 */	addis r3, r3, 1
@@ -63,7 +63,7 @@ lbl_8012E180:
 /* 8012E190 00000010  C0 3F 34 FC */	lfs f1, 0x34fc(r31)
 /* 8012E194 00000014  3C 60 80 39 */	lis r3, m__24daAlinkHIO_wlSideStep_c0@ha
 /* 8012E198 00000018  38 A3 EF A8 */	addi r5, r3, m__24daAlinkHIO_wlSideStep_c0@l
-/* 8012E19C 0000001C  C0 05 00 60 */	lfs f0, 0x60(r5)
+/* 8012E19C 0000001C  C0 05 00 60 */	lfs f0, 0x60(r5)	/* effective address: 8038F008 */
 /* 8012E1A0 00000020  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8012E1A4 00000024  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8012E1A8 00000000  40 80 00 20 */	bge lbl_8012E1C8

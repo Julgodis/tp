@@ -181,36 +181,36 @@ asm void dDlst_snapShot_c::draw() {
 
 /* ############################################################################################## */
 /* 80454E58-80454E5C 0004+00 s=1 e=0 z=0  None .sdata2    @3748                                                        */
-SECTION_SDATA2 static u32 d_ovlp_d_ovlp_fade3__lit_3748 = 0xFFFFFFFF;
+SECTION_SDATA2 static u32 lit_3748 = 0xFFFFFFFF;
 
 /* 80454E5C-80454E60 0004+00 s=2 e=0 z=0  None .sdata2    @3800                                                        */
-SECTION_SDATA2 static u8 d_ovlp_d_ovlp_fade3__lit_3800[4] = {
+SECTION_SDATA2 static u8 lit_3800[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80454E60-80454E64 0004+00 s=1 e=0 z=0  None .sdata2    @3801                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3801 = 608.0f;
+SECTION_SDATA2 static f32 lit_3801 = 608.0f;
 
 /* 80454E64-80454E68 0004+00 s=1 e=0 z=0  None .sdata2    @3802                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3802 = 448.0f;
+SECTION_SDATA2 static f32 lit_3802 = 448.0f;
 
 /* 80454E68-80454E6C 0004+00 s=3 e=0 z=0  None .sdata2    @3803                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3803 = 1.0f;
+SECTION_SDATA2 static f32 lit_3803 = 1.0f;
 
 /* 80454E6C-80454E70 0004+00 s=1 e=0 z=0  None .sdata2    @3804                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3804 = 60.0f;
+SECTION_SDATA2 static f32 lit_3804 = 60.0f;
 
 /* 80454E70-80454E74 0004+00 s=1 e=0 z=0  None .sdata2    @3805                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3805 = 19.0f / 14.0f;
+SECTION_SDATA2 static f32 lit_3805 = 19.0f / 14.0f;
 
 /* 80454E74-80454E78 0004+00 s=1 e=0 z=0  None .sdata2    @3806                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3806 = 100.0f;
+SECTION_SDATA2 static f32 lit_3806 = 100.0f;
 
 /* 80454E78-80454E7C 0004+00 s=1 e=0 z=0  None .sdata2    @3807                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3807 = 100000.0f;
+SECTION_SDATA2 static f32 lit_3807 = 100000.0f;
 
 /* 80454E7C-80454E80 0004+00 s=1 e=0 z=0  None .sdata2    @3808                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3808 = -1.0f;
+SECTION_SDATA2 static f32 lit_3808 = -1.0f;
 
 /* 80252F28-8025343C 0514+00 s=1 e=0 z=0  None .text      draw__15dOvlpFd3_dlst_cFv                                    */
 #pragma push
@@ -225,28 +225,28 @@ asm void dOvlpFd3_dlst_c::draw() {
 
 /* ############################################################################################## */
 /* 803C2D70-803C2D7C 000C+00 s=1 e=0 z=0  None .data      @3812                                                        */
-SECTION_DATA static void* d_ovlp_d_ovlp_fade3__lit_3812[3] = {
+SECTION_DATA static void* lit_3812[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)execFirstSnap__10dOvlpFd3_cFv,
 };
 
 /* 803C2D7C-803C2D88 000C+00 s=1 e=0 z=0  None .data      @3857                                                        */
-SECTION_DATA static void* d_ovlp_d_ovlp_fade3__lit_3857[3] = {
+SECTION_DATA static void* lit_3857[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)execFadeOut__10dOvlpFd3_cFv,
 };
 
 /* 803C2D88-803C2D94 000C+00 s=1 e=0 z=0  None .data      @3871                                                        */
-SECTION_DATA static void* d_ovlp_d_ovlp_fade3__lit_3871[3] = {
+SECTION_DATA static void* lit_3871[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)execNextSnap__10dOvlpFd3_cFv,
 };
 
 /* 803C2D94-803C2DA0 000C+00 s=1 e=0 z=0  None .data      @3898                                                        */
-SECTION_DATA static void* d_ovlp_d_ovlp_fade3__lit_3898[3] = {
+SECTION_DATA static void* lit_3898[3] = {
 	/* 0    */ (void*)NULL,
 	/* 1    */ (void*)0xFFFFFFFF,
 	/* 2    */ (void*)execFadeIn__10dOvlpFd3_cFv,
@@ -336,7 +336,7 @@ asm void dOvlpFd3_c::execNextSnap() {
 
 /* ############################################################################################## */
 /* 80454E80-80454E84 0004+00 s=1 e=0 z=0  None .sdata2    @3923                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3923 = 3.0f / 100.0f;
+SECTION_SDATA2 static f32 lit_3923 = 3.0f / 100.0f;
 
 /* 80253730-802537AC 007C+00 s=1 e=0 z=0  None .text      execFadeIn__10dOvlpFd3_cFv                                   */
 #pragma push
@@ -351,7 +351,7 @@ asm void dOvlpFd3_c::execFadeIn() {
 
 /* ############################################################################################## */
 /* 80454E84-80454E88 0004+00 s=1 e=0 z=0  None .sdata2    @3947                                                        */
-SECTION_SDATA2 static f32 d_ovlp_d_ovlp_fade3__lit_3947 = -388.0f;
+SECTION_SDATA2 static f32 lit_3947 = -388.0f;
 
 /* 802537AC-80253880 00D4+00 s=1 e=0 z=0  None .text      dOvlpFd3_Draw__FP10dOvlpFd3_c                                */
 #pragma push
