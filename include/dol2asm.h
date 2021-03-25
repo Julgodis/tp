@@ -21,14 +21,14 @@
 #define SECTION_RODATA
 #define SECTION_DATA
 #define SECTION_SDATA
-#define SECTION_SDATA2 
+#define SECTION_SDATA2
 #define SECTION_BSS
 #define SECTION_SBSS
 #define SECTION_SBSS2
 #define SECTION_CTORS
 #define SECTION_DTORS
 #define SECTION_EXTAB
-#define SECTION_EXTABINDEX 
+#define SECTION_EXTABINDEX
 
 #define SECTION_DEAD
 
@@ -36,15 +36,13 @@
 #define nofralloc
 #endif
 
-#define _HUGE_ENUF  1e+300
-#define INFINITY   ((float)(_HUGE_ENUF * _HUGE_ENUF))
-#define HUGE_VAL   ((double)INFINITY)
-#define HUGE_VALF  ((float)INFINITY)
-#define HUGE_VALL  ((long double)INFINITY)
+#define _HUGE_ENUF 1e+300
+#define INFINITY ((float)(_HUGE_ENUF * _HUGE_ENUF))
+#define HUGE_VAL ((double)INFINITY)
+#define HUGE_VALF ((float)INFINITY)
+#define HUGE_VALL ((long double)INFINITY)
 
 #define FLOAT_INF HUGE_VALF
 #define DOUBLE_INF HUGE_VAL
 
 #endif /* DOL2ASM */
-
-
