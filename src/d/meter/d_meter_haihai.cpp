@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmTransformKey {
 };
 
-struct J2DAnmTransformKey {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
@@ -45,9 +45,6 @@ struct dMeterSub_c {
 	/* 80194138 */ void isDead();
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
@@ -59,6 +56,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

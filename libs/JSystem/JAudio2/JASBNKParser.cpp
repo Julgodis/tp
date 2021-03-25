@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct JASInst {
-};
-
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
+};
+
+struct JASInst {
 };
 
 struct JASBasicBank {

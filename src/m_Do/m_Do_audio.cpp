@@ -16,10 +16,16 @@ struct mDoAud_zelAudio_c {
 	/* 80007368 */ ~mDoAud_zelAudio_c();
 };
 
-struct JKRArchive {
-	struct EMountMode {
-	};
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
 
+struct JAISoundID {
+};
+
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
 };
 
 struct JGeometry {
@@ -31,16 +37,10 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-};
+struct JKRArchive {
+	struct EMountMode {
+	};
 
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
-struct JAISoundID {
 };
 
 struct Z2AudioMgr {

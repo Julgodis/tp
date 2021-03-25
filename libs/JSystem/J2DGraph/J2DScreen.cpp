@@ -11,33 +11,31 @@
 // Types:
 // 
 
-struct ResFONT {
+struct J2DAnmTransform {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmVisibilityFull {
+};
+
+struct JKRArchive {
 };
 
 struct J2DAnmBase {
 };
 
-struct ResTIMG {
-};
-
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
 struct J2DGrafContext {
 };
 
-struct JSUStreamSeekFrom {
+struct J2DAnmTexPattern {
 };
 
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+struct ResFONT {
 };
 
-struct J2DAnmVtxColor {
+struct ResTIMG {
 };
 
 struct JGeometry {
@@ -49,13 +47,18 @@ struct JGeometry {
 
 };
 
-struct J2DAnmTransform {
+struct J2DAnmVtxColor {
 };
 
 struct _GXCullMode {
 };
 
-struct J2DAnmVisibilityFull {
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DPane {
@@ -87,10 +90,7 @@ struct J2DPane {
 	/* 802F8478 */ void drawSelf(f32, f32);
 };
 
-struct J2DAnmColor {
-};
-
-struct JKRArchive {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmTextureSRTKey {
@@ -171,10 +171,10 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-struct J2DResReference {
+struct J2DMaterialBlock {
 };
 
-struct J2DMaterialBlock {
+struct J2DResReference {
 };
 
 struct J2DMaterialFactory {

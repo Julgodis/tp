@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
 struct dDemo_actor_c {
@@ -255,10 +255,10 @@ struct dRes_control_c {
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

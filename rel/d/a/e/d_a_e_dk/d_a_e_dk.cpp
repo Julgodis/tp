@@ -16,11 +16,11 @@ struct daE_DK_HIO_c {
 	/* 806AD490 */ ~daE_DK_HIO_c();
 };
 
-struct dBgS_SphChk {
-	/* 80078A14 */ dBgS_SphChk();
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct dBgS_SphChk {
+	/* 80078A14 */ dBgS_SphChk();
 };
 
 struct cM3dGPla {
@@ -116,10 +116,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -141,13 +141,13 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -185,10 +185,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

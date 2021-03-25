@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JPATexture {
-	/* 8027D7D4 */ JPATexture(u8 const*);
-};
-
 struct JKRHeap {
 };
 
 struct JPAResource {
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
+};
+
+struct JPATexture {
+	/* 8027D7D4 */ JPATexture(u8 const*);
 };
 
 struct JPAResourceManager {

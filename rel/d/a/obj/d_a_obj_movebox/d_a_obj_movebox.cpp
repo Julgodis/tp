@@ -11,10 +11,17 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct dBgW_Base {
 	struct PushPullLabel {
 	};
 
+};
+
+struct dBgW {
+	/* 8007B9C0 */ void Move();
 };
 
 struct Vec {
@@ -24,13 +31,6 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 8047DBB0 */ ~cXyz();
 	/* 8047DBEC */ cXyz();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgW {
-	/* 8007B9C0 */ void Move();
 };
 
 struct daObjMovebox {
@@ -176,10 +176,10 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -200,14 +200,14 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
 struct cBgS {

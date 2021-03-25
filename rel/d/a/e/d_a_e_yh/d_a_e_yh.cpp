@@ -39,9 +39,6 @@ struct dBgS_AcchCir {
 	/* 80803A4C */ ~dBgS_AcchCir();
 };
 
-struct dCcD_SrcSph {
-};
-
 struct Vec {
 };
 
@@ -51,6 +48,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80803CFC */ cXyz();
 	/* 8080422C */ ~cXyz();
+};
+
+struct dCcD_SrcSph {
 };
 
 struct dCcD_Sph {
@@ -104,10 +104,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -129,13 +129,13 @@ struct mDoExt_McaMorf {
 struct J3DModelData {
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -147,13 +147,13 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
+struct _GXColor {
+};
+
 struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

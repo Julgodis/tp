@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct JKRArchive {
 };
 
@@ -29,6 +20,15 @@ struct JSURandomInputStream {
 
 struct J2DScreen {
 	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct J2DRotateAxis {

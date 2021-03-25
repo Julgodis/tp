@@ -45,7 +45,7 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
@@ -54,7 +54,7 @@ struct dKy_tevstr_c {
 struct cXyz {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {

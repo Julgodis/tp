@@ -12,7 +12,7 @@
 // 
 
 
-extern void* data_8060FDCC[2];
+extern void* const data_8060FDCC[2];
 
 // 
 // External References:

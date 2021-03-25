@@ -26,7 +26,8 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
-struct cBgS_ShdwDraw {
+struct cBgS_GndChk {
+	/* 80267D44 */ void PreCheck();
 };
 
 struct cBgS_PolyInfo {
@@ -44,11 +45,10 @@ struct cBgS_LinChk {
 	/* 80267F40 */ void PreCalc();
 };
 
-struct cM3dGPla {
+struct cBgS_ShdwDraw {
 };
 
-struct cBgS_GndChk {
-	/* 80267D44 */ void PreCheck();
+struct cM3dGPla {
 };
 
 struct cBgS {
@@ -74,7 +74,10 @@ struct dBgS_RoofChk {
 	/* 80079124 */ void Init();
 };
 
-struct dBgS_SphChk {
+struct dBgS_Acch {
+	/* 80077278 */ void SetNowActorInfo(int, void*, unsigned int);
+	/* 800772E8 */ void CalcMovePosWork();
+	/* 8007732C */ void CalcWallRR();
 };
 
 struct fopAc_ac_c {
@@ -84,13 +87,10 @@ struct dBgS_SplGrpChk {
 	/* 80078D0C */ void Init();
 };
 
-struct dBgS_Acch {
-	/* 80077278 */ void SetNowActorInfo(int, void*, unsigned int);
-	/* 800772E8 */ void CalcMovePosWork();
-	/* 8007732C */ void CalcWallRR();
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS_SphChk {
 };
 
 struct dBgS {

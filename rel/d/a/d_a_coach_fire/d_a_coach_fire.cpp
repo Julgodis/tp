@@ -49,13 +49,13 @@ struct cCcD_GStts {
 	/* 80658398 */ ~cCcD_GStts();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {

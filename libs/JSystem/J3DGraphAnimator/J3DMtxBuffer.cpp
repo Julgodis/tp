@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DMtxBuffer {

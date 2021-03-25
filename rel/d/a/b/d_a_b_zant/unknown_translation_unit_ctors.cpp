@@ -12,7 +12,7 @@
 // 
 
 
-extern void* data_8064EB08[2];
+extern void* const data_8064EB08[2];
 
 // 
 // External References:

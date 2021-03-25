@@ -15,8 +15,8 @@
 extern "C" void __register_global_object(); // 1
 extern "C" static void __destroy_global_chain(); // 1
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
-extern void* pad_806DFDEC[2];
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
+extern void* const pad_806DFDEC[2];
 
 // 
 // External References:
@@ -31,7 +31,7 @@ extern void* pad_806DFDEC[2];
 /* ############################################################################################## */
 #pragma section ".dtors$10"
 /* 806DFDE8-806DFDEC 0004+00 s=0 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+__declspec(section ".dtors$10") void* const __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
 /* ############################################################################################## */

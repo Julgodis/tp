@@ -45,6 +45,9 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
+struct J3DModelData {
+};
+
 struct J3DAnmTransform {
 };
 
@@ -52,9 +55,6 @@ struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {

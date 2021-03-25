@@ -56,10 +56,10 @@ struct cM3dGAab {
 	/* 809ADF60 */ ~cM3dGAab();
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -138,6 +138,12 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct Vec {
 };
 
@@ -145,12 +151,6 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {

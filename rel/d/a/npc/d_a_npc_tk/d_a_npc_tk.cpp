@@ -16,14 +16,14 @@ struct daNPC_TK_HIO_c {
 	/* 80B0C104 */ ~daNPC_TK_HIO_c();
 };
 
-struct J3DModel {
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct Vec {
@@ -126,15 +126,15 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -198,10 +198,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -215,12 +215,12 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 	/* 80267D0C */ void SetPos(Vec const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {

@@ -14,6 +14,15 @@
 struct J3DJoint {
 };
 
+struct fopAc_ac_c {
+};
+
+struct dBgW {
+};
+
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -23,15 +32,6 @@ struct cXyz {
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80C04BAC */ cXyz();
 	/* 80C04C40 */ ~cXyz();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgW {
-};
-
-struct J3DModel {
 };
 
 struct daObj_GrA_c {
@@ -273,14 +273,14 @@ struct mDoExt_morf_c {
 struct J3DModelData {
 };
 
-struct Z2Creature {
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -325,13 +325,13 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -343,15 +343,15 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct dBgS_AcchCir {
-	/* 80075F58 */ void SetWall(f32, f32);
-};
-
 struct dBgW_Base {
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
+};
+
+struct dBgS_AcchCir {
+	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {
@@ -433,10 +433,10 @@ struct daBaseNpc_lookat_c {
 	/* 8014E6AC */ void getRot(int);
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
 struct daBaseNpc_c {

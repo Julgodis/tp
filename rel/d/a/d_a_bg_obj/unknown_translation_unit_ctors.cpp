@@ -12,7 +12,7 @@
 // 
 
 
-extern void* data_8045C9AC[2];
+extern void* const data_8045C9AC[2];
 
 // 
 // External References:

@@ -57,11 +57,11 @@ struct cM3dGPla {
 	/* 804A44D8 */ ~cM3dGPla();
 };
 
-struct J3DSkinDeform {
-	/* 8032C96C */ J3DSkinDeform();
+struct J3DDeformData {
 };
 
-struct J3DDeformData {
+struct J3DSkinDeform {
+	/* 8032C96C */ J3DSkinDeform();
 };
 
 struct J3DModel {
@@ -82,13 +82,13 @@ struct J3DFrameCtrl {
 struct J3DMaterial {
 };
 
+struct _GXColor {
+};
+
 struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -167,16 +167,16 @@ struct mDoExt_invisibleModel {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {

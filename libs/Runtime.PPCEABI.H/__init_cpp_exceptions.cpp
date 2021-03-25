@@ -15,13 +15,13 @@
 extern "C" void __fini_cpp_exceptions(); // 1
 extern "C" void __init_cpp_exceptions(); // 1
 #pragma section ".ctors$10"
-__declspec(section ".ctors$10") extern void* __init_cpp_exceptions_reference;
+__declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
 #pragma section ".ctors$15"
-__declspec(section ".ctors$10") extern void* _ctors[106];
+__declspec(section ".ctors$10") extern void* const _ctors[106];
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
 #pragma section ".dtors$15"
-__declspec(section ".dtors$15") extern void* __fini_cpp_exceptions_reference;
+__declspec(section ".dtors$15") extern void* const __fini_cpp_exceptions_reference;
 
 // 
 // External References:
@@ -29,7 +29,7 @@ __declspec(section ".dtors$15") extern void* __fini_cpp_exceptions_reference;
 
 
 #pragma section "extabindex_"
-extern void* data_8000569C[8];
+extern void* const data_8000569C[8];
 extern "C" void __sinit_m_Do_main_cpp(); // 1
 extern "C" void __sinit_m_Do_audio_cpp(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
@@ -147,10 +147,10 @@ extern "C" void __register_fragment(); // 1
 /* ############################################################################################## */
 #pragma section ".ctors$10"
 /* 803737C0-803737C4 0004+00 s=0 e=1 z=0  None .ctors     __init_cpp_exceptions_reference                              */
-__declspec(section ".ctors$10") void* __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
+__declspec(section ".ctors$10") void* const __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
 
 /* 803737C4-8037396C 01A8+00 s=0 e=0 z=0  None .ctors     _ctors                                                       */
-__declspec(section ".ctors$10") void* _ctors[106] = {
+__declspec(section ".ctors$10") void* const _ctors[106] = {
 	/* 0    */ (void*)__sinit_m_Do_main_cpp,
 	/* 1    */ (void*)__sinit_m_Do_audio_cpp,
 	/* 2    */ (void*)__sinit_m_Do_graphic_cpp,
@@ -262,11 +262,11 @@ __declspec(section ".ctors$10") void* _ctors[106] = {
 /* ############################################################################################## */
 #pragma section ".dtors$10"
 /* 80373980-80373984 0004+00 s=0 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+__declspec(section ".dtors$10") void* const __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
 /* 80373984-80373988 0004+00 s=0 e=0 z=0  None .dtors     __fini_cpp_exceptions_reference                              */
-__declspec(section ".dtors$15") void* __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
+__declspec(section ".dtors$15") void* const __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
 
 /* ############################################################################################## */
 /* 80450AD0-80450AD8 0004+04 s=2 e=0 z=0  None .sdata     fragmentID                                                   */

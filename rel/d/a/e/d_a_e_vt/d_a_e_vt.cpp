@@ -208,10 +208,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
 struct mDoExt_brkAnm {
@@ -230,13 +230,13 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {
@@ -251,13 +251,13 @@ struct mDoExt_3DlineMat0_c {
 	/* 800125E0 */ void init(u16, u16, int);
 };
 
+struct _GXColor {
+};
+
 struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

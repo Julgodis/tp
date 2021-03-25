@@ -18,13 +18,13 @@ struct J2DTextBox {
 struct cXyz {
 };
 
-struct J2DPicture {
-};
-
 struct JUTFont {
 };
 
 struct JMSMesgEntry_c {
+};
+
+struct J2DPicture {
 };
 
 struct dMeter2Info_c {

@@ -18,6 +18,9 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct J3DModelData {
+};
+
 struct J3DAnmTransform {
 };
 
@@ -25,9 +28,6 @@ struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {

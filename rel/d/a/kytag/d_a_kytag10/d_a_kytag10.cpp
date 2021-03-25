@@ -24,13 +24,13 @@ struct kytag10_class {
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {

@@ -19,6 +19,9 @@ struct fopAc_ac_c {
 struct J3DJoint {
 };
 
+struct J3DAnmTransformKey {
+};
+
 struct Vec {
 };
 
@@ -27,19 +30,16 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct msg_class {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DModelData {
 };
 
 struct J3DModel {
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DModelData {
+struct msg_class {
 };
 
 struct J3DFrameCtrl {
@@ -196,16 +196,16 @@ struct mDoExt_btpAnm {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {

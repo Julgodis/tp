@@ -19,10 +19,10 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_evtData_c {
+struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_faceMotionAnmData_c {
@@ -62,9 +62,6 @@ struct cCcD_GStts {
 	/* 80540F00 */ ~cCcD_GStts();
 };
 
-struct J3DJoint {
-};
-
 struct cXyz {
 	/* 805412D0 */ ~cXyz();
 	/* 8054184C */ cXyz();
@@ -73,6 +70,9 @@ struct cXyz {
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct J3DJoint {
 };
 
 struct J3DModel {
@@ -193,13 +193,13 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

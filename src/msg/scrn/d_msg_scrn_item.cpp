@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {

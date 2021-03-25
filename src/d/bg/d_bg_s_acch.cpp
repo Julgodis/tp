@@ -21,7 +21,13 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct Vec {
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+};
+
+struct cXyz {
 };
 
 struct cBgS_PolyInfo {
@@ -32,7 +38,9 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cXyz {
+struct dBgS_SplGrpChk {
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
 struct dBgS_RoofChk {
@@ -41,17 +49,6 @@ struct dBgS_RoofChk {
 };
 
 struct dBgS_Acch;
-struct csXyz {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_SplGrpChk {
-	/* 80078B90 */ void Set(cXyz&, f32);
-	/* 80078C78 */ ~dBgS_SplGrpChk();
-};
-
 struct dBgS {
 	/* 8007524C */ void WallCorrect(dBgS_Acch*);
 	/* 80075374 */ void WallCorrectSort(dBgS_Acch*);
@@ -59,6 +56,9 @@ struct dBgS {
 	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
+};
+
+struct Vec {
 };
 
 struct dBgS_Acch {
@@ -98,6 +98,10 @@ struct daPy_py_c {
 	/* 80077494 */ void checkPlayerFly() const;
 };
 
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
 struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
@@ -106,10 +110,6 @@ struct cBgS_LinChk {
 
 struct cM3dGPla {
 	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
-};
-
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {

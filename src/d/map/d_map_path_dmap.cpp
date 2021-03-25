@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct dStage_FileList2_dt_c {
 };
 
-struct dStage_FileList2_dt_c {
+struct Vec {
 };
 
 struct dMapInfo_n {

@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DJoint {
+};
+
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -23,18 +34,7 @@ struct daNpcT_MotionSeqMngr_c {
 struct daNpcT_motionAnmData_c {
 };
 
-struct J3DJoint {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daNpc_Aru_c {
@@ -131,6 +131,17 @@ struct cCcD_GStts {
 	/* 80956378 */ ~cCcD_GStts();
 };
 
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800844F8 */ void GetTgHitObj();
+};
+
+struct csXyz {
+	/* 80956784 */ ~csXyz();
+	/* 80956CD8 */ csXyz();
+};
+
 struct Vec {
 };
 
@@ -141,18 +152,7 @@ struct cXyz {
 	/* 80956DD8 */ cXyz();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
 struct J3DModel {
-};
-
-struct csXyz {
-	/* 80956784 */ ~csXyz();
-	/* 80956CD8 */ csXyz();
 };
 
 struct _GXColorS10 {
@@ -274,16 +274,16 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -332,17 +332,17 @@ struct dPaPo_c {
 	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267C1C */ cBgS_GndChk();
+	/* 80267C94 */ ~cBgS_GndChk();
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct cBgS_GndChk {
-	/* 80267C1C */ cBgS_GndChk();
-	/* 80267C94 */ ~cBgS_GndChk();
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
 struct cBgS {

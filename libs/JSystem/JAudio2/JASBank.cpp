@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct JASOscillator {
-	struct Data {
+struct JASDsp {
+	struct TChannel {
 	};
 
 };
 
-struct JASDsp {
-	struct TChannel {
+struct JASOscillator {
+	struct Data {
 	};
 
 };

@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct J3DModelData {
+};
+
+struct J3DModel {
+};
+
+struct cXyz {
+};
+
 struct dTimer_c {
 	/* 8025D524 */ void deleteCheck();
 	/* 8025D618 */ void start(int, s16);
@@ -19,15 +28,6 @@ struct dTimer_c {
 	/* 8025D86C */ void restart(u8);
 	/* 8025D920 */ void end(int);
 	/* 8025D9E0 */ void deleteRequest();
-};
-
-struct cXyz {
-};
-
-struct J3DModelData {
-};
-
-struct J3DModel {
 };
 
 struct dStage_startStage_c {

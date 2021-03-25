@@ -44,12 +44,12 @@ struct J2DAnmColorKey {
 	/* 80239BE0 */ ~J2DAnmColorKey();
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -57,9 +57,6 @@ struct dSelect_cursor_c {
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
-};
-
-struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -70,6 +67,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

@@ -12,7 +12,7 @@
 // 
 
 
-extern u8 data_80CFD1D4[4];
+extern u8 const data_80CFD1D4[4];
 
 // 
 // External References:

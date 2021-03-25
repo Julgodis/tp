@@ -125,10 +125,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -142,11 +142,11 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {

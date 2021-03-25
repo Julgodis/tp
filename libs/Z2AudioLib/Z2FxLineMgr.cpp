@@ -16,11 +16,11 @@ struct JKRArchive {
 	/* 802D610C */ void countResource() const;
 };
 
-struct Z2FxLineConfig {
-};
-
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct Z2FxLineConfig {
 };
 
 struct Z2FxLineMgr {

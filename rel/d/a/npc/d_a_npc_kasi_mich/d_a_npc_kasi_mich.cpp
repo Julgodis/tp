@@ -11,21 +11,36 @@
 // Types:
 // 
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DModelData {
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DAnmTexPattern {
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80A29908 */ ~cXyz();
+	/* 80A29944 */ cXyz();
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct _GXColorS10 {
+};
+
+struct J3DAnmTexPattern {
 };
 
 struct daNpcF_c {
@@ -58,21 +73,6 @@ struct daNpcF_c {
 	/* 80A29F1C */ void setExpressionBtp(int);
 	/* 80A29F24 */ void setExpression(int, f32);
 	/* 80A29F28 */ void drawOtherMdls();
-};
-
-struct J3DJoint {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80A29908 */ ~cXyz();
-	/* 80A29944 */ cXyz();
-};
-
-struct J3DModel {
 };
 
 struct daNpcKasiMich_c {
@@ -214,13 +214,13 @@ struct mDoExt_morf_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {

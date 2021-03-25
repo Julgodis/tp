@@ -40,10 +40,10 @@ struct cCcD_GStts {
 	/* 80AA8580 */ ~cCcD_GStts();
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
 struct daNpcCd_c {

@@ -116,11 +116,11 @@ struct jmessage_tRenderingProcessor {
 	/* 8023293C */ ~jmessage_tRenderingProcessor();
 };
 
-struct JUTFont {
-};
-
 struct COutFont_c {
 	/* 80226CF8 */ void initialize();
+};
+
+struct JUTFont {
 };
 
 struct J2DTextBox {

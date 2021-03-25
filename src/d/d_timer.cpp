@@ -35,12 +35,12 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {

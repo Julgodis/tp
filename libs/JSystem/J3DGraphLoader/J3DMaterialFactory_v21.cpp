@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J3DMaterialBlock_v21 {
-};
-
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -21,6 +18,9 @@ struct J3DMaterial {
 	/* 80315E78 */ void createIndBlock(int);
 	/* 80315F60 */ void createPEBlock(u32, u32);
 	/* 80316240 */ void initialize();
+};
+
+struct J3DMaterialBlock_v21 {
 };
 
 struct J3DMaterialFactory_v21 {

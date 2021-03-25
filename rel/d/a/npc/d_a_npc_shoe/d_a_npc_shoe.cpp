@@ -86,16 +86,16 @@ struct daNpcF_Lookat_c {
 	/* 80AE9B5C */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct J3DModelData {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct _GXColorS10 {
+};
+
+struct J3DAnmTexPattern {
 };
 
 struct daNpcF_c {
@@ -170,13 +170,13 @@ struct mDoMtx_stack_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfSO {

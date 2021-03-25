@@ -11,7 +11,13 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct JAISoundHandle {
+};
+
+struct JAISoundID {
+};
+
+struct JKRSolidHeap {
 };
 
 struct JGeometry {
@@ -23,13 +29,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-};
-
-struct JKRSolidHeap {
-};
-
-struct JAISoundID {
+struct JKRArchive {
 };
 
 struct Z2AudioMgr {
@@ -92,13 +92,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeqDataMgr {
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
 struct JAISeMgr {

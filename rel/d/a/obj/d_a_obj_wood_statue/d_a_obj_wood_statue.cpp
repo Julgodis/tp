@@ -163,10 +163,10 @@ struct dEvent_manager_c {
 	/* 800483C4 */ void setGoal(cXyz*);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
@@ -20,11 +25,6 @@ struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 	/* 80084548 */ void GetTgHitGObj();
 	/* 80084658 */ void ChkCoHit();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct Vec {
@@ -147,10 +147,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -168,10 +168,10 @@ struct dPa_hermiteEcallBack_c {
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 };
 
-struct cBgS_LinChk {
+struct cBgS_PolyInfo {
 };
 
-struct cBgS_PolyInfo {
+struct cBgS_LinChk {
 };
 
 struct cBgS {

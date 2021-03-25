@@ -14,21 +14,21 @@
 struct ResTIMG {
 };
 
-struct _GXTlutFmt {
-};
-
-struct JUTTransparency {
+struct _GXTexMapID {
 };
 
 struct _GXTlut {
 };
 
+struct JUTTransparency {
+};
+
+struct _GXTlutFmt {
+};
+
 struct JUTPalette {
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
-};
-
-struct _GXTexMapID {
 };
 
 struct JUTTexture {

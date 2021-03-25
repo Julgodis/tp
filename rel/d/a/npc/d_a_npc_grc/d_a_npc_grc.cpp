@@ -114,7 +114,7 @@ struct dCcD_GObjInf {
 	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
-struct J3DAnmTransform {
+struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTexPattern {
@@ -127,16 +127,16 @@ struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTransformKey {
+struct J3DAnmTransform {
 };
 
 struct J3DModelData {
 };
 
 struct _GXColorS10 {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct daNpcF_c {
@@ -210,16 +210,16 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -252,6 +252,9 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dBgS {
 };
 
@@ -260,9 +263,6 @@ struct dBgS_Acch {
 	/* 800760A0 */ dBgS_Acch();
 	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 	/* 80076AAC */ void CrrPos(dBgS&);
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPaPo_c {

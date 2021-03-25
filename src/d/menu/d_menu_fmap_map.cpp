@@ -14,9 +14,6 @@
 struct _GXColor {
 };
 
-struct dMenu_Fmap_world_data_c {
-};
-
 struct dDrawPath_c {
 	struct group_class {
 	};
@@ -36,6 +33,9 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
+};
+
+struct dMenu_Fmap_world_data_c {
 };
 
 struct dMenu_Fmap_region_data_c {

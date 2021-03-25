@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
 struct _GXTexMapID {
 };
 
@@ -22,6 +19,9 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
+};
+
+struct csXyz {
 };
 
 struct cXyz {
@@ -73,12 +73,12 @@ struct dPa_modelPcallBack {
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -112,11 +112,11 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-struct ResTIMG {
-};
-
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct ResTIMG {
 };
 
 struct JPAResourceManager {
@@ -126,13 +126,12 @@ struct JPAResourceManager {
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
 struct JPADrawInfo {
@@ -144,12 +143,13 @@ struct JPAParticleCallBack {
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-struct JPAEmitterCallBack {
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
 struct JPAEmitterManager {
@@ -187,11 +187,11 @@ struct dPa_levelEcallBack {
 	/* 8004FB8C */ void cleanup();
 };
 
-struct mDoDvdThd_toMainRam_c {
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct mDoDvdThd_toMainRam_c {
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
 struct cBgS_PolyInfo {

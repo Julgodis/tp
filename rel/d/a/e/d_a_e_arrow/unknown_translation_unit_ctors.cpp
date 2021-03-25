@@ -12,7 +12,7 @@
 // 
 
 
-extern u8 data_8067E870[4];
+extern u8 const data_8067E870[4];
 
 // 
 // External References:

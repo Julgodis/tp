@@ -91,7 +91,7 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
@@ -106,7 +106,7 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {

@@ -93,13 +93,13 @@ struct dEvt_control_c {
 	/* 80042FA8 */ void moveApproval(void*);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

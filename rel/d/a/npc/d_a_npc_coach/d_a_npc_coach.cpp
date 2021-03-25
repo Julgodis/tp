@@ -37,13 +37,13 @@ struct cXyz {
 	/* 809A4D78 */ cXyz();
 };
 
-struct csXyz {
-};
-
 struct SVec {
 };
 
 struct J3DModel {
+};
+
+struct csXyz {
 };
 
 struct daNpcCoach_c {
@@ -177,16 +177,16 @@ struct mDoExt_bckAnm {
 struct J3DModelData {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -207,13 +207,13 @@ struct mDoExt_McaMorf2 {
 	/* 800121E8 */ void stopZelAnime();
 };
 
+struct _GXColor {
+};
+
 struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

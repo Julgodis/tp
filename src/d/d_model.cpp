@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J3DModelData {
+};
+
 struct dMdl_obj_c {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
 };
 
 struct dMdl_c {

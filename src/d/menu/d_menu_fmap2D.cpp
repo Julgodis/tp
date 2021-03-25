@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct STControl {
 };
 
-struct STControl {
+struct ResTIMG {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -87,10 +87,10 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct J2DAnmTextureSRTKey {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DAnmTextureSRTKey {
 };
 
 struct JKRArchive {

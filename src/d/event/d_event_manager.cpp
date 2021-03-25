@@ -26,10 +26,10 @@ struct dEvDtEvent_c {
 	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
-struct fopAc_ac_c {
+struct dEvDtData_c {
 };
 
-struct dEvDtData_c {
+struct fopAc_ac_c {
 };
 
 struct Vec {

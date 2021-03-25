@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct OSThread {
-};
-
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
+};
+
+struct OSThread {
 };
 
 struct JKRThread {

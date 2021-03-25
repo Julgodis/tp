@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISeqData {
+struct JAISeqDataRegion {
 };
 
-struct JAISeqDataRegion {
+struct JAISeqData {
 };
 
 struct JAUSeqCollection {

@@ -14,7 +14,16 @@
 struct ResFONT {
 };
 
+struct JKRHeap {
+};
+
 struct _GXTexMapID {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct JUTFont {
@@ -26,15 +35,6 @@ struct JUTFont {
 	/* 802E0108 */ void isLeadByte_1Byte(int);
 	/* 802E0110 */ void isLeadByte_2Byte(int);
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct JKRHeap {
 };
 
 struct JUTResFont {

@@ -29,7 +29,7 @@ extern "C" void __begin_critical_region(); // 1
 extern "C" void __kill_critical_regions(); // 1
 extern "C" void raise(); // 1
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
 
 // 
 // Declarations:

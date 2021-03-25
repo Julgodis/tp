@@ -15,13 +15,13 @@ struct JAUSeqDataBlock {
 	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
-struct JAISoundID {
-};
-
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUSeqDataBlock> */
 struct JSULink__template1 {
+};
+
+struct JAISoundID {
 };
 
 struct JAUSeqDataBlocks {
@@ -32,13 +32,13 @@ struct JAUSeqDataBlocks {
 	/* 802A6A18 */ void hasFailedBlock(JAISoundID);
 };
 
-struct JKRArchive {
-};
-
 struct JAISeqDataUser {
 };
 
 struct JAISeqData {
+};
+
+struct JKRArchive {
 };
 
 struct JAUDynamicSeqDataBlocks {

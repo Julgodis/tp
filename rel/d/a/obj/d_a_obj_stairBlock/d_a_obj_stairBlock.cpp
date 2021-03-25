@@ -56,10 +56,10 @@ struct cM3dGAab {
 	/* 80CE8748 */ ~cM3dGAab();
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {

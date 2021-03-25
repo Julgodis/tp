@@ -26,8 +26,8 @@ extern "C" void ModuleConstructorsX(); // 1
 extern "C" void ModuleDestructorsX(); // 1
 extern "C" void ModuleProlog(); // 1
 extern "C" void ModuleEpilog(); // 1
-extern u8 data_80456C7C[4];
-extern u8 data_80456C80[4];
+extern u8 const data_80456C7C[4];
+extern u8 const data_80456C80[4];
 
 // 
 // Declarations:

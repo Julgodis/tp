@@ -20,6 +20,17 @@ struct JASOscillator {
 
 };
 
+struct JASChannel {
+	/* 8029AAD0 */ void release(u16);
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+	/* 8029AB98 */ void setMixConfig(u32, u16);
+	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
+	/* 8029BBFC */ void free();
+};
+
+struct JASSoundParams {
+};
+
 struct JASDsp {
 	struct TChannel {
 		/* 8029E00C */ void setFilterMode(u16);
@@ -28,17 +39,6 @@ struct JASDsp {
 		/* 8029E094 */ void setDistFilter(s16);
 	};
 
-};
-
-struct JASSoundParams {
-};
-
-struct JASChannel {
-	/* 8029AAD0 */ void release(u16);
-	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
-	/* 8029AB98 */ void setMixConfig(u32, u16);
-	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
-	/* 8029BBFC */ void free();
 };
 
 struct JASTrack {

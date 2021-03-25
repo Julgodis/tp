@@ -14,10 +14,10 @@
 struct Vec {
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
 struct Z2SoundObjBase {

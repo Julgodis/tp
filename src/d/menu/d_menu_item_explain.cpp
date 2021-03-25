@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
-struct JKRArchive {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct JKRExpHeap {
+};
+
+struct JKRArchive {
 };
 
 struct J2DOrthoGraph {
@@ -76,6 +76,9 @@ struct dKantera_icon_c {
 struct JUTFont {
 };
 
+struct ResTLUT {
+};
+
 struct ResTIMG {
 };
 
@@ -86,9 +89,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTLUT {
 };
 
 struct J2DPicture {

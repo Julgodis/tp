@@ -32,20 +32,20 @@ struct daGrass_c {
 	/* 8051C304 */ void create();
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8051EB4C */ ~csXyz();
-};
-
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct dCcMassS_HitInf {
+	/* 8051ED98 */ ~dCcMassS_HitInf();
 };
 
 struct cCcD_Obj {
 };
 
-struct dCcMassS_HitInf {
-	/* 8051ED98 */ ~dCcMassS_HitInf();
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8051EB4C */ ~csXyz();
 };
 
 struct dGrass_data_c {
@@ -131,13 +131,13 @@ struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

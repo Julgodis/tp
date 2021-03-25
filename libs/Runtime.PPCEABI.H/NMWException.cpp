@@ -21,15 +21,15 @@ struct __partial_array_destructor {
 
 
 #pragma section "extabindex_"
-extern void* lit_211[3];
+extern void* const lit_211[3];
 #pragma section "extabindex_"
-extern void* lit_232[3];
+extern void* const lit_232[3];
 #pragma section "extabindex_"
-extern void* lit_240[3];
+extern void* const lit_240[3];
 #pragma section "extabindex_"
-extern void* lit_263[3];
+extern void* const lit_263[3];
 #pragma section "extabindex_"
-extern void* data_8000569C[8];
+extern void* const data_8000569C[8];
 extern "C" void __destroy_new_array(); // 1
 extern "C" void __destroy_arr(); // 1
 extern "C" void __construct_array(); // 1
@@ -44,7 +44,7 @@ void operator delete(void*); // 2
 void operator delete[](void*); // 2
 
 #pragma section "extab_"
-extern "C" extern void* _section_symbol_extab[18];
+extern "C" extern void* const _section_symbol_extab[18];
 extern "C" void __dl__FPv(); // 1
 extern "C" void __dla__FPv(); // 1
 
@@ -109,42 +109,42 @@ extern "C" asm void __construct_new_array() {
 
 /* ############################################################################################## */
 /* 80005660-8000566C 000C+00 s=1 e=0 z=0  None .extabindex @206                                                         */
-SECTION_EXTABINDEX static void* lit_206[3] = {
+SECTION_EXTABINDEX static void* const lit_206[3] = {
 	/* 0    */ (void*)__destroy_new_array,
 	/* 1    */ (void*)0x0000007C,
 	/* 2    */ (void*)&_section_symbol_extab,
 };
 
 /* 8000566C-80005678 000C+00 s=0 e=0 z=0  None .extabindex @211                                                         */
-SECTION_EXTABINDEX void* lit_211[3] = {
+SECTION_EXTABINDEX void* const lit_211[3] = {
 	/* 0    */ (void*)__destroy_arr,
 	/* 1    */ (void*)0x00000078,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x8),
 };
 
 /* 80005678-80005684 000C+00 s=0 e=0 z=0  None .extabindex @232                                                         */
-SECTION_EXTABINDEX void* lit_232[3] = {
+SECTION_EXTABINDEX void* const lit_232[3] = {
 	/* 0    */ (void*)__construct_array,
 	/* 1    */ (void*)0x000000FC,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x10),
 };
 
 /* 80005684-80005690 000C+00 s=0 e=0 z=0  None .extabindex @240                                                         */
-SECTION_EXTABINDEX void* lit_240[3] = {
+SECTION_EXTABINDEX void* const lit_240[3] = {
 	/* 0    */ (void*)__dt__26__partial_array_destructorFv,
 	/* 1    */ (void*)0x000000B8,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x28),
 };
 
 /* 80005690-8000569C 000C+00 s=0 e=0 z=0  None .extabindex @263                                                         */
-SECTION_EXTABINDEX void* lit_263[3] = {
+SECTION_EXTABINDEX void* const lit_263[3] = {
 	/* 0    */ (void*)__construct_new_array,
 	/* 1    */ (void*)0x00000104,
 	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x30),
 };
 
 /* 8000569C-800056BC 0020+00 s=0 e=1 z=0  None .extabindex None                                                         */
-SECTION_EXTABINDEX void* data_8000569C[8] = {
+SECTION_EXTABINDEX void* const data_8000569C[8] = {
 	/* 0    */ (void*)&lit_206,
 	/* 1    */ (void*)&data_8000569C,
 	/* 2    */ (void*)__destroy_new_array,

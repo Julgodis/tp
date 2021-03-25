@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -19,9 +22,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266F48 */ void normalizeZP();
-};
-
-struct J3DModelData {
 };
 
 struct Sakuita_c {
@@ -63,13 +63,13 @@ struct cCcD_GStts {
 	/* 80CC68A0 */ ~cCcD_GStts();
 };
 
+struct _GXColor {
+};
+
 struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

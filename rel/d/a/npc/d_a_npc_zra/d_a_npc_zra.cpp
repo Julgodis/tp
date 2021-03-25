@@ -32,21 +32,21 @@ struct daNpc_zrA_Path_c {
 	/* 80B7EF88 */ ~daNpc_zrA_Path_c();
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct csXyz {
 	/* 80B7EF80 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
 	/* 80B7EF44 */ ~csXyz();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DModel {
 };
 
 struct daNpc_zrA_c {
@@ -238,6 +238,9 @@ struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 };
 
+struct J3DAnmTransformKey {
+};
+
 struct J3DAnmTevRegKey {
 };
 
@@ -248,13 +251,10 @@ struct J3DAnmTexPattern {
 struct J3DAnmTransform {
 };
 
-struct J3DAnmTextureSRTKey {
-};
-
-struct J3DAnmTransformKey {
-};
-
 struct J3DModelData {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct daNpcF_c {
@@ -375,16 +375,16 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {

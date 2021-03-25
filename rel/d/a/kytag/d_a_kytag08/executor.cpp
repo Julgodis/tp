@@ -26,8 +26,8 @@ extern "C" void ModuleEpilog(); // 1
 extern "C" void ModuleUnresolved(); // 1
 extern "C" void ModuleConstructorsX(); // 1
 extern "C" void ModuleDestructorsX(); // 1
-extern u8 data_8085B284[4];
-extern u8 data_8085B288[4];
+extern u8 const data_8085B284[4];
+extern u8 const data_8085B288[4];
 
 // 
 // Declarations:

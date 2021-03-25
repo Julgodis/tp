@@ -26,10 +26,10 @@ struct J3DFrameCtrl {
 	/* 80D68000 */ ~J3DFrameCtrl();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {

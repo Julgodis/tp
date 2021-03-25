@@ -25,19 +25,19 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct Vec {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTransform {
 };
 
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {

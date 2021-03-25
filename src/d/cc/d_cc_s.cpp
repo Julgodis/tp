@@ -11,24 +11,15 @@
 // Types:
 // 
 
-struct cCcD_GStts {
-};
-
-struct cXyz {
-};
-
 struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
-};
-
-struct cCcD_GObjInf {
 };
 
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct cCcD_Stts {
@@ -42,10 +33,19 @@ struct cCcD_ShapeAttr {
 
 };
 
-struct csXyz {
+struct cCcD_GObjInf {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dCcD_GStts {
+};
+
+struct cCcD_GStts {
+};
+
+struct csXyz {
 };
 
 struct dCcS {

@@ -12,7 +12,7 @@
 // 
 
 
-extern u8 data_8058AB2C[4];
+extern u8 const data_8058AB2C[4];
 
 // 
 // External References:

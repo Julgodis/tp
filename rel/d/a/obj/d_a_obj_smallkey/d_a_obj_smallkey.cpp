@@ -166,10 +166,10 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

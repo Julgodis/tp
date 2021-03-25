@@ -26,9 +26,9 @@ extern "C" void ModuleEpilog(); // 1
 extern "C" void ModuleUnresolved(); // 1
 extern "C" void ModuleConstructorsX(); // 1
 extern "C" void ModuleDestructorsX(); // 1
-extern u8 data_80BC2138[4];
+extern u8 const data_80BC2138[4];
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
 
 // 
 // Declarations:

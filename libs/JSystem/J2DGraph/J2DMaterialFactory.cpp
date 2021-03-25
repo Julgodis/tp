@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J2DMaterialBlock {
+};
+
 struct JKRArchive {
 };
 
@@ -22,9 +25,6 @@ struct J2DResReference {
 struct J2DMaterial {
 	/* 802EA410 */ void createTevBlock(int, bool);
 	/* 802EA5C4 */ void createIndBlock(int, bool);
-};
-
-struct J2DMaterialBlock {
 };
 
 struct J2DMaterialFactory {

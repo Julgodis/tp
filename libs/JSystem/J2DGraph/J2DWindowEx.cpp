@@ -11,19 +11,16 @@
 // Types:
 // 
 
-struct J2DAnmTexPattern {
-};
-
-struct ResFONT {
-};
-
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J2DMaterial {
@@ -34,36 +31,20 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
+struct J2DTevStage {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
 struct ResTIMG {
-};
-
-struct J2DWindow {
-	struct TMaterial {
-	};
-
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ void getTypeID() const;
-};
-
-struct J2DAnmBase {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct JGeometry {
@@ -75,14 +56,25 @@ struct JGeometry {
 
 };
 
-struct J2DAnmTransform {
+struct J2DAnmBase {
+};
+
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct _GXCullMode {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DPane {
@@ -111,13 +103,21 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
+struct J2DWindow {
+	struct TMaterial {
+	};
+
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ void getTypeID() const;
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct J2DTevStage {
 };
 
 struct J2DWindowEx {

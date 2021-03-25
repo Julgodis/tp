@@ -24,31 +24,31 @@ struct dMsgObject_HIO_c {
 struct fopAc_ac_c {
 };
 
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
 struct JKRArchive {
 	struct EMountMode {
 	};
 
 };
 
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
 struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct JUTFont {
 };
 
 struct J2DTextBox {
 };
 
 struct msg_class {
-};
-
-struct JUTFont {
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {

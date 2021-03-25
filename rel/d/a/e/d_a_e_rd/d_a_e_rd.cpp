@@ -121,10 +121,10 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -218,12 +218,12 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 	/* 80267D0C */ void SetPos(Vec const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {

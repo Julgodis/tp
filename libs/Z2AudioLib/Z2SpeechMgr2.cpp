@@ -31,6 +31,9 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
+struct JAISoundID {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -38,9 +41,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundID {
 };
 
 struct Z2SpeechStarter {

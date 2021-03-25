@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct STControl {
 };
 
-struct STControl {
+struct JKRExpHeap {
 };
 
 struct CSTControl {

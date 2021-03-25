@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct J2DScreen {
 };
 
-struct J2DScreen {
+struct JKRExpHeap {
 };
 
 struct J2DPane {

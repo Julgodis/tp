@@ -23,8 +23,8 @@ struct daNpc_zrC_c {
 extern "C" void __register_global_object(); // 1
 extern "C" static void __destroy_global_chain(); // 1
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
-extern void* pad_80B931F4[2];
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
+extern void* const pad_80B931F4[2];
 
 // 
 // External References:
@@ -40,7 +40,7 @@ extern "C" void playExpression__11daNpc_zrC_cFv(); // 1
 /* ############################################################################################## */
 #pragma section ".dtors$10"
 /* 80B931F0-80B931F4 0004+00 s=0 e=1 z=0  None .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+__declspec(section ".dtors$10") void* const __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
 /* ############################################################################################## */

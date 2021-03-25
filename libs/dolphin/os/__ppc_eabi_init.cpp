@@ -23,7 +23,7 @@ extern "C" void _ExitProcess(); // 1
 
 extern "C" void PPCHalt(); // 1
 #pragma section ".ctors$10"
-__declspec(section ".ctors$10") extern void* __init_cpp_exceptions_reference;
+__declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
 
 // 
 // Declarations:

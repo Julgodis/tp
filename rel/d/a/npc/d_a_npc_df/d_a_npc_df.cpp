@@ -54,9 +54,6 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cBgS_LinChk {
-};
-
 struct Vec {
 };
 
@@ -68,6 +65,9 @@ struct cXyz {
 
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {

@@ -33,15 +33,15 @@ struct dCcD_GStts {
 	/* 80C9F45C */ ~dCcD_GStts();
 };
 
-struct dCcD_Stts {
-	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
-};
-
 struct dMdl_obj_c {
 };
 
 struct dMdl_c {
 	/* 8009C668 */ void entryObj(dMdl_obj_c*);
+};
+
+struct dCcD_Stts {
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
 struct daObjIsuChild_c {
@@ -96,13 +96,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct csXyz {

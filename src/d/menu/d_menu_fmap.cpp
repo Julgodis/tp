@@ -16,7 +16,8 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
-struct dMenu_Fmap_stage_data_c {
+struct STControl {
+	/* 8003219C */ void checkTrigger();
 };
 
 struct JKRHeap {
@@ -29,11 +30,10 @@ struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-struct STControl {
-	/* 8003219C */ void checkTrigger();
+struct CSTControl {
 };
 
-struct CSTControl {
+struct dMenu_Fmap_stage_data_c {
 };
 
 struct dMenu_Fmap_c {

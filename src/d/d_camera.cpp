@@ -43,6 +43,13 @@ struct cXyz {
 struct stage_camera2_data_class {
 };
 
+struct camera_class {
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -73,13 +80,6 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct camera_class {
 };
 
 struct dCamera_c {
@@ -511,11 +511,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {

@@ -133,10 +133,10 @@ struct dDlst_shadowPoly_c {
 	/* 800543B4 */ void draw();
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
 struct dDlst_shadowReal_c {
@@ -186,6 +186,9 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
+struct dDlst_base_c {
+};
+
 struct J3DPacket {
 };
 
@@ -196,9 +199,6 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
-};
-
-struct dDlst_base_c {
 };
 
 struct dDlst_list_c {

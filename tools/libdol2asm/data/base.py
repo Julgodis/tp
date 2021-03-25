@@ -24,8 +24,17 @@ class ArbitraryData(Symbol):
         type = self.data_type
         if self._section == ".rodata":
             type = ConstType(type)
+        if self._section == ".extabindex":
+            type = ConstType(type)
+        if self._section == ".extab":
+            type = ConstType(type)
+        if self._section.startswith(".ctors"):
+            type = ConstType(type)
+        if self._section.startswith(".dtors"):
+            type = ConstType(type)
+        if self._section.startswith(".init"):
+            type = ConstType(type)
         return type
-
 
     def array_type(self):
         return PaddingArrayType.create(

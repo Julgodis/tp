@@ -11,16 +11,6 @@
 // Types:
 // 
 
-struct STControl {
-	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 800320AC */ void init();
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
-
 struct fopAc_ac_c {
 };
 
@@ -31,6 +21,16 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A528 */ void getEventId(int*);
 	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+struct STControl {
+	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 800320AC */ void init();
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct Vec {
@@ -110,16 +110,16 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct daNpcT_motionAnmData_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct J3DJoint {
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_c {

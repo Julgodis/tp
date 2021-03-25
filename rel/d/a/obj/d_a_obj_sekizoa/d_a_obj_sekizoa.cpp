@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -24,14 +32,6 @@ struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daObj_Sekizoa_c {
@@ -94,7 +94,19 @@ struct cCcD_GStts {
 	/* 80CD4800 */ ~cCcD_GStts();
 };
 
-struct J3DJoint {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846F0 */ void GetCoHitObj();
+};
+
+struct csXyz {
+	/* 80CD4C0C */ ~csXyz();
+	/* 80CD51A8 */ csXyz();
 };
 
 struct Vec {
@@ -107,34 +119,22 @@ struct cXyz {
 	/* 80CD52A8 */ cXyz();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846F0 */ void GetCoHitObj();
-};
-
 struct J3DAnmTevRegKey {
-};
-
-struct J3DModel {
-};
-
-struct csXyz {
-	/* 80CD4C0C */ ~csXyz();
-	/* 80CD51A8 */ csXyz();
-};
-
-struct J3DAnmTextureSRTKey {
 };
 
 struct J3DModelData {
 };
 
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
 struct _GXColorS10 {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct daNpcT_c {
@@ -287,16 +287,16 @@ struct mDoExt_invisibleModel {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfSO {
@@ -346,13 +346,13 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {

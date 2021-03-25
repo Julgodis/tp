@@ -21,29 +21,29 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cBgS_ShdwDraw {
+struct cBgD_t {
+};
+
+struct cBgS_GndChk {
+};
+
+struct cXyz {
 };
 
 struct cBgS_GrpPassChk {
 };
 
-struct cXyz {
+struct cBgS_LinChk {
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgD_t {
-};
-
-struct cBgS_LinChk {
+struct cBgS_ShdwDraw {
 };
 
 struct cBgS_PolyPassChk {
-};
-
-struct cBgS_GndChk {
 };
 
 struct cBgW {
@@ -124,19 +124,10 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-struct dBgS_RoofChk {
-};
-
-struct dBgS_SphChk {
-};
-
 struct dBgS_CaptPoly {
 };
 
-struct fopAc_ac_c {
-};
-
-struct dBgS_SplGrpChk {
+struct dBgS_RoofChk {
 };
 
 struct dBgS_Acch {
@@ -146,7 +137,16 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
+struct fopAc_ac_c {
+};
+
+struct dBgS_SplGrpChk {
+};
+
 struct csXyz {
+};
+
+struct dBgS_SphChk {
 };
 
 struct dBgW {

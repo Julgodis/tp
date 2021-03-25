@@ -11,6 +11,20 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -19,24 +33,10 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8054E460 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_motionAnmData_c {
 };
 
-struct J3DJoint {
-};
-
 struct daNpcT_evtData_c {
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct J3DModel {
 };
 
 struct daNpc_Kakashi_c {
@@ -83,11 +83,6 @@ struct cCcD_GStts {
 	/* 8054DA00 */ ~cCcD_GStts();
 };
 
-struct cXyz {
-	/* 8054DDD0 */ ~cXyz();
-	/* 8054E414 */ cXyz();
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
@@ -99,6 +94,11 @@ struct dCcD_GObjInf {
 struct csXyz {
 	/* 8054DED8 */ ~csXyz();
 	/* 8054E8F8 */ csXyz();
+};
+
+struct cXyz {
+	/* 8054DDD0 */ ~cXyz();
+	/* 8054E414 */ cXyz();
 };
 
 struct _GXColorS10 {
@@ -228,15 +228,15 @@ struct J3DModelData {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
 };
 
 struct mDoExt_McaMorfSO {
@@ -273,13 +273,13 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
