@@ -20,16 +20,16 @@ struct J3DSkinNList {
 struct Vec {
 };
 
-struct J3DModelData {
+struct J3DVertexBuffer {
+};
+
+struct J3DMtxBuffer {
 };
 
 struct J3DModel {
 };
 
-struct J3DVertexBuffer {
-};
-
-struct J3DMtxBuffer {
+struct J3DModelData {
 };
 
 struct J3DSkinDeform {

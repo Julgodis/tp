@@ -17,6 +17,18 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
+struct dEvDtStaff_c {
+	/* 80044134 */ void init();
+};
+
+struct dEvDtEvent_c {
+	/* 80043E78 */ void finishCheck();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
+};
+
+struct fopAc_ac_c {
+};
+
 struct dEvDtData_c {
 };
 
@@ -25,18 +37,6 @@ struct Vec {
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct fopAc_ac_c {
-};
-
-struct dEvDtStaff_c {
-	/* 80044134 */ void init();
-};
-
-struct dEvDtEvent_c {
-	/* 80043E78 */ void finishCheck();
-	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
 struct dEvent_manager_c {
@@ -67,7 +67,7 @@ struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 80047F5C */ void getMyNowCutName(int);
 	/* 80047FC8 */ void getMyDataP(int, char const*, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
@@ -791,7 +791,7 @@ asm static void dEvmng_strcmp(char const* param_0, char* param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMyActIdx(int param_0, char const** param_1, int param_2, int param_3, int param_4) {
+asm void dEvent_manager_c::getMyActIdx(int param_0, char const* const* param_1, int param_2, int param_3, int param_4) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyActIdx__16dEvent_manager_cFiPCPCciii.s"
 }

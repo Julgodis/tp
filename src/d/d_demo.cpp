@@ -255,10 +255,10 @@ struct dRes_control_c {
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

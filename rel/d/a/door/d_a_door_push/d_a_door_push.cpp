@@ -71,7 +71,7 @@ struct dEvent_manager_c {
 	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800483C4 */ void setGoal(cXyz*);
@@ -88,12 +88,12 @@ struct dBgS {
 struct cBgS_PolyInfo {
 };
 
+struct csXyz {
+};
+
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
-};
-
-struct csXyz {
 };
 
 struct dBgS_MoveBgActor {

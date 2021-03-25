@@ -81,10 +81,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -98,14 +98,14 @@ struct dSelect_cursor_c {
 struct JUTFont {
 };
 
-struct JMSMesgEntry_c {
-};
-
 struct ResTIMG {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {

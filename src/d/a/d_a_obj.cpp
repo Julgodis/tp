@@ -11,6 +11,17 @@
 // Types:
 // 
 
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
+struct Quaternion {
+};
+
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -20,17 +31,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
-};
-
-struct fopAc_ac_c {
-};
-
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-};
-
-struct Quaternion {
 };
 
 struct daObj {
@@ -60,26 +60,26 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct J3DModelData {
-};
-
 struct JPABaseEmitter {
 };
 
 struct dKy_tevstr_c {
 };
 
+struct J3DModelData {
+};
+
 struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

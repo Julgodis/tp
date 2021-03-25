@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct JAIStream {
+struct JAISeq {
 };
 
 struct JAISound {
 };
 
-struct JAISeq {
+struct JAISe {
+};
+
+struct JAIStream {
 };
 
 struct JAISoundID {
-};
-
-struct JAISe {
 };
 
 struct Z2SoundInfo {

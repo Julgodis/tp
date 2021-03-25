@@ -174,9 +174,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -187,6 +184,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -207,13 +207,13 @@ struct mDoExt_McaMorf2 {
 	/* 800121E8 */ void stopZelAnime();
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

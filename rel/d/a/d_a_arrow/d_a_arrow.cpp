@@ -11,6 +11,22 @@
 // Types:
 // 
 
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 80084658 */ void ChkCoHit();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -21,22 +37,6 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80267150 */ void atan2sY_XZ() const;
 	/* 8049A334 */ ~cXyz();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 80084658 */ void ChkCoHit();
 };
 
 struct daArrow_c {
@@ -168,10 +168,10 @@ struct dPa_hermiteEcallBack_c {
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 };
 
-struct cBgS_PolyInfo {
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {

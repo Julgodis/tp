@@ -32,6 +32,9 @@ struct daNpc_zrA_Path_c {
 	/* 80B7EF88 */ ~daNpc_zrA_Path_c();
 };
 
+struct J3DJoint {
+};
+
 struct csXyz {
 	/* 80B7EF80 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
@@ -44,9 +47,6 @@ struct fopAc_ac_c {
 };
 
 struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daNpc_zrA_c {
@@ -232,29 +232,29 @@ struct J3DFrameCtrl {
 	/* 80B7F0A0 */ ~J3DFrameCtrl();
 };
 
-struct J3DAnmTransform {
-};
-
-struct J3DModelData {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084460 */ void ChkTgHit();
 };
 
 struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
+struct J3DAnmTransform {
+};
+
 struct J3DAnmTextureSRTKey {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084460 */ void ChkTgHit();
+struct J3DAnmTransformKey {
+};
+
+struct J3DModelData {
 };
 
 struct daNpcF_c {
@@ -375,9 +375,6 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
@@ -385,6 +382,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -437,7 +437,7 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800483E8 */ void getRunEventName();

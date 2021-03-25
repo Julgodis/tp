@@ -14,12 +14,6 @@
 struct J3DJoint {
 };
 
-struct fopAc_ac_c {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -31,7 +25,13 @@ struct cXyz {
 	/* 80C04C40 */ ~cXyz();
 };
 
+struct fopAc_ac_c {
+};
+
 struct dBgW {
+};
+
+struct J3DModel {
 };
 
 struct daObj_GrA_c {
@@ -270,9 +270,6 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -281,6 +278,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -325,13 +325,13 @@ struct dEvent_manager_c {
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
+struct dPa_levelEcallBack {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -433,10 +433,10 @@ struct daBaseNpc_lookat_c {
 	/* 8014E6AC */ void getRot(int);
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct daBaseNpc_c {

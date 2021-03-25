@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -25,7 +19,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_evtData_c {
+};
+
 struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_FairySeirei_c {
@@ -62,9 +62,7 @@ struct cCcD_GStts {
 	/* 80540F00 */ ~cCcD_GStts();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct J3DJoint {
 };
 
 struct cXyz {
@@ -72,10 +70,12 @@ struct cXyz {
 	/* 8054184C */ cXyz();
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -188,18 +188,18 @@ struct dEvt_control_c {
 
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800487F0 */ void ChkPresentEnd();
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

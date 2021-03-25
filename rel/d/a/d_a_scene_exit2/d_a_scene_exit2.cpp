@@ -54,7 +54,7 @@ struct dEvent_manager_c {
 	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 	/* 80047A78 */ void endCheck(s16);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 };

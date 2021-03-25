@@ -35,7 +35,7 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -44,7 +44,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

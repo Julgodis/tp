@@ -64,10 +64,10 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template2 {
 };
 
-struct JASSoundParams {
+struct JAIAudience {
 };
 
-struct JAIAudience {
+struct JASSoundParams {
 };
 
 struct JAISoundActivity {

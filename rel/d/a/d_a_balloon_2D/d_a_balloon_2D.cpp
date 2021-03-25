@@ -94,10 +94,10 @@ struct dMsgObject_c {
 struct JKRExpHeap {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {

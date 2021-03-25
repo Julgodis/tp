@@ -82,6 +82,12 @@ def type_from_demangled_param(param):
         )
     elif isinstance(param, demangle.IntegerParam):
         return ValueType(param.value)
+    elif isinstance(param, demangle.ConstParam):
+        return ConstType(of=type_from_demangled_param(param.base_type))
+    elif isinstance(param, demangle.PointerParam):
+        return PointerType(of=type_from_demangled_param(param.base_type))
+    elif isinstance(param, demangle.ReferenceParam):
+        return ReferenceType(of=type_from_demangled_param(param.base_type))
 
     if not param.name:
         # used for making types like: A (*)[3] easier to work with. 
@@ -102,12 +108,10 @@ def type_from_demangled_param(param):
     if not type:
         return None
 
-    if param.is_const:
-        type = ConstType(of=type)
-    for _ in range(param.pointer_lvl):
-        type = PointerType(of=type)
-    if param.is_ref:
-        type = ReferenceType(of=type)
+    assert param.is_const == False
+    assert param.pointer_lvl == 0
+    assert param.is_ref == False
+
     return type
 
 def nameFix(context, label_collisions, reference_collisions, symbol):
@@ -157,6 +161,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
             context.error(f"\t{e}")
             context.error(f"\t{p.func_name}")
             context.error(f"\t{p.class_name}")
+            context.error(f"\t{p.to_str()}")
             
             pass
 

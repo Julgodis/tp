@@ -110,13 +110,13 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 };
 
-struct csXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

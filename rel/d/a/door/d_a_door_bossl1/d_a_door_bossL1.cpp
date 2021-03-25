@@ -88,10 +88,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -99,10 +99,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -149,16 +149,10 @@ struct dEvent_manager_c {
 	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800483C4 */ void setGoal(cXyz*);
-};
-
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct cBgS_PolyInfo {
@@ -166,6 +160,12 @@ struct cBgS_PolyInfo {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {

@@ -11,6 +11,11 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct Vec {
 };
 
@@ -22,11 +27,6 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80BEC790 */ ~cXyz();
 	/* 80BEDB70 */ cXyz();
-};
-
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct FlagCloth_c {

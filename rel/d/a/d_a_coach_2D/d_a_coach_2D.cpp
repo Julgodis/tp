@@ -79,14 +79,10 @@ struct dMsgScrnLight_c {
 struct JKRExpHeap {
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRArchive {
 };
 
 struct J2DGrafContext {
-};
-
-struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -94,6 +90,10 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {

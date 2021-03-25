@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct JKRArchive {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JKRArchive {
 };
 
 struct dFile_warning_c {

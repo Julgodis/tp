@@ -21,8 +21,7 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
+struct fopAc_ac_c {
 };
 
 struct JKRArchive {
@@ -31,20 +30,21 @@ struct JKRArchive {
 
 };
 
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
 struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-struct fopAc_ac_c {
-};
-
-struct JUTFont {
+struct J2DTextBox {
 };
 
 struct msg_class {
 };
 
-struct J2DTextBox {
+struct JUTFont {
 };
 
 struct COutFont_c {

@@ -24,14 +24,14 @@ struct mDoHIO_entry_c {
 	/* 80BB8308 */ ~mDoHIO_entry_c();
 };
 
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct fopAc_ac_c {
 };
 
 struct daBmWindow_c {
@@ -107,7 +107,7 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -116,7 +116,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

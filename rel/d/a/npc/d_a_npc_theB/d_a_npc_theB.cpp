@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daNpcTheB_c {
@@ -130,16 +130,10 @@ struct daNpcF_Lookat_c {
 	/* 80B004B0 */ ~daNpcF_Lookat_c();
 };
 
-struct J3DModelData {
+struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTransform {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTransformKey {
 };
 
 struct J3DAnmTexPattern {
@@ -147,6 +141,12 @@ struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcF_c {
@@ -222,9 +222,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
@@ -232,6 +229,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {

@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRHeap {
+struct JASWaveInfo {
 };
 
-struct JASWaveInfo {
+struct JKRHeap {
 };
 
 struct JASSimpleWaveBank {

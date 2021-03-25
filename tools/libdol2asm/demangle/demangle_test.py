@@ -82,6 +82,9 @@ def test():
     dm("JSUConvertOffsetToPtr<A3_A4_f>__FPCvPCv")
     dm("newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl")
     dm("find_if<Q37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal")
-
+    dm("getMyActIdx__16dEvent_manager_cFiPCPCciii")
+    dm("insert__Q27JGadget20TVector_pointer_voidFPPvRCPv")
+    dm("setString__17dMsgScrn3Select_cFPcPcPc")
+    dm("chkAction__13daNpc_yamiS_cFM13daNpc_yamiS_cFPCvPvPv_i")
 
 

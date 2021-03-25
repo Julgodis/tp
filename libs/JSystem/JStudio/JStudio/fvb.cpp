@@ -48,7 +48,7 @@ namespace JGadget {
 
 	struct TVector_pointer_void {
 		/* 802DCCFC */ ~TVector_pointer_void();
-		/* 802DCDA4 */ void insert(void**, void const*&);
+		/* 802DCDA4 */ void insert(void**, void* const&);
 	};
 
 };

@@ -14,11 +14,6 @@
 struct csXyz {
 };
 
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80267128 */ void atan2sX_Z() const;
-};
-
 struct _GXTexMapID {
 };
 
@@ -27,6 +22,11 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
+};
+
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80267128 */ void atan2sX_Z() const;
 };
 
 struct dPa_followEcallBack {
@@ -73,12 +73,12 @@ struct dPa_modelPcallBack {
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
+struct dKy_tevstr_c {
+};
+
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -112,12 +112,18 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-struct JPAEmitterCallBack {
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
+struct ResTIMG {
+};
+
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
+struct JPAResourceManager {
+	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
+	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
+	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
+	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
 struct JGeometry {
@@ -129,27 +135,21 @@ struct JGeometry {
 
 };
 
+struct JPADrawInfo {
+};
+
 struct JPAParticleCallBack {
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JPADrawInfo {
-};
-
-struct ResTIMG {
-};
-
-struct JPAResourceManager {
-	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
-	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
-	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
-	/* 80273FCC */ void getResUserWork(u16) const;
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
 struct JPAEmitterManager {
@@ -182,19 +182,19 @@ struct dPa_windPcallBack {
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-struct fopAc_ac_c {
+struct dPa_levelEcallBack {
+	/* 8004FB18 */ ~dPa_levelEcallBack();
+	/* 8004FB8C */ void cleanup();
 };
 
 struct mDoDvdThd_toMainRam_c {
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
-struct cBgS_PolyInfo {
+struct fopAc_ac_c {
 };
 
-struct dPa_levelEcallBack {
-	/* 8004FB18 */ ~dPa_levelEcallBack();
-	/* 8004FB8C */ void cleanup();
+struct cBgS_PolyInfo {
 };
 
 struct dPa_control_c {

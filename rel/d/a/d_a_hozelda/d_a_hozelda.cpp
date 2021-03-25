@@ -148,11 +148,11 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {

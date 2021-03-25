@@ -70,10 +70,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -132,10 +132,10 @@ struct dAttention_c {
 	/* 80073734 */ void ActionTarget(s32);
 };
 
-struct csXyz {
+struct dBgS {
 };
 
-struct dBgS {
+struct csXyz {
 };
 
 struct dBgS_Acch {

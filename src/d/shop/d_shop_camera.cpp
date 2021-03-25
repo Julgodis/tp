@@ -11,14 +11,14 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct fopAc_ac_c {
 };
 
 struct ShopCam_action_c {

@@ -11,29 +11,24 @@
 // Types:
 // 
 
-struct sBgPc {
-};
-
-struct dBgPc {
-	/* 80074048 */ void setCode(sBgPc&);
-};
-
 struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct dBgS_SplGrpChk {
 };
 
 struct cXyz {
 };
 
-struct dBgS_CaptPoly {
+struct Vec {
 };
 
-struct Vec {
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct sBgPc {
+};
+
+struct dBgPc {
+	/* 80074048 */ void setCode(sBgPc&);
 };
 
 struct dBgS_Acch {
@@ -43,11 +38,7 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct cBgS_PolyPassChk {
+struct cBgS_GrpPassChk {
 };
 
 struct dBgS_RoofChk {
@@ -56,16 +47,25 @@ struct dBgS_RoofChk {
 struct KC_PrismData {
 };
 
+struct dBgS_SphChk {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct dBgS_SplGrpChk {
+};
+
 struct cBgS_LinChk {
 };
 
 struct csXyz {
 };
 
-struct cBgS_GndChk {
+struct cBgS_PolyPassChk {
 };
 
-struct dBgS_SphChk {
+struct cBgS_GndChk {
 };
 
 struct dBgWKCol {

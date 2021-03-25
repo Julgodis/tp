@@ -11,20 +11,6 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -33,7 +19,21 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80AB1824 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_motionAnmData_c {
+};
+
 struct J3DJoint {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Pouya_c {
@@ -109,12 +109,6 @@ struct cCcD_GStts {
 	/* 80AB0DB4 */ ~cCcD_GStts();
 };
 
-struct J3DModelData {
-};
-
-struct _GXColorS10 {
-};
-
 struct Vec {
 };
 
@@ -123,6 +117,12 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80AB1184 */ ~cXyz();
 	/* 80AB17D8 */ cXyz();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800844F8 */ void GetTgHitObj();
 };
 
 struct J3DAnmTevRegKey {
@@ -136,10 +136,10 @@ struct csXyz {
 	/* 80AB16D8 */ csXyz();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800844F8 */ void GetTgHitObj();
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcT_c {
@@ -259,9 +259,6 @@ struct mDoGph_gInf_c {
 	/* 80008028 */ void fadeOut_f(f32, _GXColor&);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DAnmTransform {
 };
 
@@ -272,6 +269,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -301,16 +301,16 @@ struct dEvt_control_c {
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

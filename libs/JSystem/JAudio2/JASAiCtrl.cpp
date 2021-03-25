@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JASOutputRate {
+struct JASMixMode {
 };
 
-struct JASMixMode {
+struct JASOutputRate {
 };
 
 struct JASDriver {

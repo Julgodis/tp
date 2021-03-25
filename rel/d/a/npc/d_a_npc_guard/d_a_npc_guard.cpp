@@ -85,10 +85,10 @@ struct daNpcT_ActorMngr_c {
 	/* 809F26F8 */ ~daNpcT_ActorMngr_c();
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {

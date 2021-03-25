@@ -99,7 +99,7 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -108,7 +108,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

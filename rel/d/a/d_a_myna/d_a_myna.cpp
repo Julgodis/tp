@@ -19,17 +19,6 @@ struct fopAc_ac_c {
 struct J3DJoint {
 };
 
-struct J3DModelData {
-};
-
-struct msg_class {
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80946370 */ ~J3DFrameCtrl();
-};
-
 struct Vec {
 };
 
@@ -38,13 +27,24 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
+struct msg_class {
+};
+
+struct J3DAnmTexPattern {
+};
+
 struct J3DModel {
 };
 
 struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTexPattern {
+struct J3DModelData {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80946370 */ ~J3DFrameCtrl();
 };
 
 struct daMyna_c {
@@ -193,9 +193,6 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DAnmTransform {
 };
 
@@ -206,6 +203,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {

@@ -11,6 +11,15 @@
 // Types:
 // 
 
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
+};
+
 struct JASDsp {
 	struct TChannel {
 		/* 8029E00C */ void setFilterMode(u16);
@@ -22,15 +31,6 @@ struct JASDsp {
 };
 
 struct JASSoundParams {
-};
-
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
 };
 
 struct JASChannel {

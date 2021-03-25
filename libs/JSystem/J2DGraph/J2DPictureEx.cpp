@@ -11,68 +11,22 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
 struct J2DAnmTexPattern {
-};
-
-struct ResTLUT {
-};
-
-struct JUTPalette {
-};
-
-struct _GXTlut {
-};
-
-struct ResTIMG {
-};
-
-struct JUTTexture {
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmBase {
 };
 
 struct _GXTexMapID {
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template0 {
-		/* 802FF204 */ TVec2__template0();
-	};
-
-};
-
 struct ResFONT {
 };
 
-struct J2DAnmVtxColor {
+struct ResTIMG {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmColor {
@@ -86,6 +40,9 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
+struct J2DAnmBase {
+};
+
 struct JSUStreamSeekFrom {
 };
 
@@ -94,13 +51,17 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DTevStage {
+struct J2DAnmVtxColor {
 };
 
 struct J2DAnmTransform {
 };
 
 struct _GXCullMode {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -126,6 +87,45 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
+};
+
+struct ResTLUT {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DTevStage {
+};
+
+struct JUTPalette {
+};
+
+struct _GXTlut {
+};
+
+struct JUTTexture {
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
 struct J2DPictureEx {

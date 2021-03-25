@@ -51,13 +51,13 @@ struct mDoMtx_stack_c {
 	/* 8000CED4 */ void XYZrotM(csXyz const&);
 };
 
+struct dPa_levelEcallBack {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

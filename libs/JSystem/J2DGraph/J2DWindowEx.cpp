@@ -11,59 +11,16 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
 struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DWindow {
-	struct TMaterial {
-	};
-
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ void getTypeID() const;
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
 };
 
 struct ResFONT {
 };
 
-struct ResTIMG {
+struct J2DAnmTextureSRTKey {
 };
 
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmColor {
@@ -77,6 +34,23 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
+struct ResTIMG {
+};
+
+struct J2DWindow {
+	struct TMaterial {
+	};
+
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ void getTypeID() const;
+};
+
+struct J2DAnmBase {
+};
+
 struct JSUStreamSeekFrom {
 };
 
@@ -85,13 +59,30 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DTevStage {
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
 struct J2DAnmTransform {
 };
 
 struct _GXCullMode {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -118,6 +109,15 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DTevStage {
 };
 
 struct J2DWindowEx {

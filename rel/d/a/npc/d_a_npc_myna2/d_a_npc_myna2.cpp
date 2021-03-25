@@ -94,13 +94,10 @@ struct csXyz {
 	/* 80A87BB8 */ csXyz();
 };
 
-struct _GXColorS10 {
-};
-
-struct J3DModelData {
-};
-
-struct J3DAnmTransformKey {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 80084658 */ void ChkCoHit();
 };
 
 struct J3DAnmTexPattern {
@@ -113,10 +110,13 @@ struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 80084658 */ void ChkCoHit();
+struct J3DAnmTransformKey {
+};
+
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcF_c {
@@ -184,9 +184,6 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DAnmTransform {
 };
 
@@ -196,6 +193,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -228,7 +228,7 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800487F0 */ void ChkPresentEnd();

@@ -82,13 +82,13 @@ struct J3DFrameCtrl {
 struct J3DMaterial {
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -110,10 +110,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
@@ -164,9 +164,6 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DAnmTransform {
 };
 
@@ -177,6 +174,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {

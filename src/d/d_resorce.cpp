@@ -11,6 +11,13 @@
 // Types:
 // 
 
+struct JKRArchive {
+	/* 802D5CE4 */ void getIdxResource(u32);
+	/* 802D625C */ void getFileAttribute(u32) const;
+	/* 802D6684 */ void findIdxResource(u32) const;
+	/* 802D66AC */ void findNameResource(char const*) const;
+};
+
 struct JKRHeap {
 	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
@@ -23,13 +30,6 @@ struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
-};
-
-struct JKRArchive {
-	/* 802D5CE4 */ void getIdxResource(u32);
-	/* 802D625C */ void getFileAttribute(u32) const;
-	/* 802D6684 */ void findIdxResource(u32) const;
-	/* 802D66AC */ void findNameResource(char const*) const;
 };
 
 struct dRes_info_c {

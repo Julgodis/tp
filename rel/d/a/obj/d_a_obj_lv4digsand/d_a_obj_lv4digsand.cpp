@@ -108,10 +108,10 @@ struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
-struct dBgW {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgW {
 };
 
 struct dBgS_MoveBgActor {

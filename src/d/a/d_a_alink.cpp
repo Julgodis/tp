@@ -11,12 +11,43 @@
 // Types:
 // 
 
-struct J3DAnmTransform {
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct daPy_frameCtrl_c {
+	/* 80140D24 */ ~daPy_frameCtrl_c();
+	/* 80140D80 */ daPy_frameCtrl_c();
+	/* 8015E4CC */ void checkAnmEnd();
+	/* 8015E510 */ void updateFrame();
+	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
+};
+
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+};
+
+struct J3DAnmBase {
 };
 
 struct Vec {
@@ -41,17 +72,15 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
 };
 
 struct daPy_py_c {
@@ -284,73 +313,11 @@ struct daPy_py_c {
 	/* 8015F730 */ void checkCarryStartLightBallB();
 };
 
-struct daAlinkHIO_anm_c {
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct daPy_anmHeap_c {
-	struct daAlinkHEAP_TYPE {
-	};
-
-	/* 80140DCC */ void __defctor();
-	/* 8015ED10 */ daPy_anmHeap_c(u32);
-	/* 8015ED50 */ ~daPy_anmHeap_c();
-	/* 8015EDC4 */ void mallocBuffer();
-	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
-	/* 8015F068 */ void loadDataIdx(u16);
-	/* 8015F0D0 */ void loadDataPriIdx(u16);
-	/* 8015F118 */ void loadDataDemoRID(u16, u16);
-	/* 8015F168 */ void setAnimeHeap();
-};
-
-struct J3DModelData {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DAnmBase {
-};
-
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
-struct dCcG_At_Spl {
-};
-
-struct JPABaseEmitter {
-};
-
 struct cM3dGPla {
 	/* 8001DB90 */ ~cM3dGPla();
 	/* 801411F0 */ cM3dGPla();
 	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
 struct fopEn_enemy_c {
@@ -360,8 +327,26 @@ struct dBgS_LinChk {
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct JPABaseEmitter {
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+};
+
+struct J3DAnmTransform {
+};
+
+struct dCcG_At_Spl {
+};
+
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct dCcD_GObjInf {
@@ -379,17 +364,19 @@ struct dCcD_GObjInf {
 	/* 800846B0 */ void ResetCoHit();
 };
 
-struct daPy_frameCtrl_c {
-	/* 80140D24 */ ~daPy_frameCtrl_c();
-	/* 80140D80 */ daPy_frameCtrl_c();
-	/* 8015E4CC */ void checkAnmEnd();
-	/* 8015E510 */ void updateFrame();
-	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
-};
+struct daPy_anmHeap_c {
+	struct daAlinkHEAP_TYPE {
+	};
 
-struct daAlink_footData_c {
-	/* 800CFCB8 */ ~daAlink_footData_c();
-	/* 800CFCF4 */ daAlink_footData_c();
+	/* 80140DCC */ void __defctor();
+	/* 8015ED10 */ daPy_anmHeap_c(u32);
+	/* 8015ED50 */ ~daPy_anmHeap_c();
+	/* 8015EDC4 */ void mallocBuffer();
+	/* 8015EE00 */ void createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE);
+	/* 8015F068 */ void loadDataIdx(u16);
+	/* 8015F0D0 */ void loadDataPriIdx(u16);
+	/* 8015F118 */ void loadDataDemoRID(u16, u16);
+	/* 8015F168 */ void setAnimeHeap();
 };
 
 struct J3DDeformData {
@@ -403,9 +390,22 @@ struct J3DModel {
 	/* 80327C58 */ void calcWeightEnvelopeMtx();
 };
 
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
+};
+
+struct daAlink_footData_c {
+	/* 800CFCB8 */ ~daAlink_footData_c();
+	/* 800CFCF4 */ daAlink_footData_c();
+};
+
+struct daAlinkHIO_anm_c {
 };
 
 struct daAlink_c {
@@ -2422,10 +2422,10 @@ struct J3DTevBlock {
 	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
 struct J2DPane {
@@ -2825,10 +2825,10 @@ struct dEvent_manager_c {
 	/* 8004882C */ void checkStartDemo();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -2868,13 +2868,13 @@ struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
-};
-
+struct J3DDrawBuffer;
 struct J3DPacket {
 	/* 80312750 */ void entry(J3DDrawBuffer*);
+};
+
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
 struct dDlst_list_c {
@@ -3036,11 +3036,11 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct J2DGrafContext {
-};
-
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -3112,13 +3112,13 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-struct JAISeqMgr {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISeqMgr {
 };
 
 struct JAISeq {

@@ -49,7 +49,6 @@ demangle.test()
 sys.exit(1)
 """
 
-
 class Dol2AsmSplitter:
 
     def __init__(self, debug_logging, game_path, lib_path, src_path, asm_path, rel_path, inc_path, mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, process_count, select_modules):

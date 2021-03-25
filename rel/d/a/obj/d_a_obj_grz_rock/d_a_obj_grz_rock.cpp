@@ -52,19 +52,19 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
-};
-
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

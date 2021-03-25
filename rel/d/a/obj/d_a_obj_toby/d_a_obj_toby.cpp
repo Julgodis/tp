@@ -76,8 +76,7 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct csXyz {
-	/* 8026745C */ void operator+=(csXyz&);
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -86,7 +85,8 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct dPa_control_c {

@@ -93,10 +93,10 @@ struct dBgS_Acch {
 struct cBgS_PolyInfo {
 };
 
-struct dBgW {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgW {
 };
 
 struct dBgS_MoveBgActor {

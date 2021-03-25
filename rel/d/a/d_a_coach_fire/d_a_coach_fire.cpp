@@ -49,7 +49,7 @@ struct cCcD_GStts {
 	/* 80658398 */ ~cCcD_GStts();
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
@@ -58,7 +58,7 @@ struct dKy_tevstr_c {
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

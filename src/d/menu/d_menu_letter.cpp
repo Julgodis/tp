@@ -83,10 +83,10 @@ struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct dMsgString_c {
@@ -115,11 +115,11 @@ struct JUtility {
 
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct dSelect_cursor_c {

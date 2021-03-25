@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
-};
-
-struct fopAc_ac_c {
 };
 
 struct daSus_c {

@@ -119,6 +119,26 @@ class Param:
             ret += '&'
         return ret
 
+@dataclass
+class ReferenceParam:
+    base_type: Optional[Param] = None
+
+    def to_str(self) -> str:
+        return f"{self.base_type.to_str()}&"
+
+@dataclass
+class ConstParam:
+    base_type: Optional[Param] = None
+
+    def to_str(self) -> str:
+        return f"{self.base_type.to_str()} const"
+
+@dataclass
+class PointerParam:
+    base_type: Optional[Param] = None
+
+    def to_str(self) -> str:
+        return f"{self.base_type.to_str()}*"
 
 @dataclass
 class FuncParam:
@@ -238,18 +258,33 @@ class ParseCtx:
             if self.consume_next_char() != 'F':
                 raise ParseError('next char should be F!')
     
+    def apply_prev_types(self, cur_type, types):
+        for type_char in reversed(types):
+            if type_char == 'C':
+                cur_type = ConstParam(cur_type)
+            elif type_char == 'R':
+                cur_type = ReferenceParam(cur_type)
+            elif type_char == 'P':
+                cur_type = PointerParam(cur_type)
+            else:
+                assert False
+
+        return cur_type
+
     def demangle_next_type(self) -> str:
+
+        prev_types = []
         cur_type = Param()
         while True:
             cur_char = self.peek_next_char()
             if cur_char.isdecimal():
                 class_name = self.demangle_class()
                 cur_type.name = QualifiedName([class_name])
-                return cur_type
+                return self.apply_prev_types(cur_type, prev_types)
             elif cur_char in types:
                 type_name = self.demangle_prim_type()
                 cur_type.name = QualifiedName([type_name])
-                return cur_type
+                return self.apply_prev_types(cur_type, prev_types)
             elif cur_char == 'U':
                 cur_type.is_unsigned = True
                 self.index += 1
@@ -257,27 +292,28 @@ class ParseCtx:
                 cur_type.is_signed = True
                 self.index += 1
             elif cur_char == 'C':
-                cur_type.is_const = True
+                prev_types.append(cur_char)
                 self.index += 1
             elif cur_char == 'P':
-                cur_type.pointer_lvl += 1
+                prev_types.append(cur_char)
                 self.index += 1
             elif cur_char == 'R':
-                cur_type.is_ref = True
+                prev_types.append(cur_char)
                 self.index += 1
             elif cur_char == 'F':
                 self.index += 1
-                func = self.demangle_function(cur_type)
+                func = self.demangle_function(self.apply_prev_types(cur_type, prev_types))
                 return func
             elif cur_char == 'Q':
                 self.index += 1
                 qual_type = cur_type
                 qual_type.name = self.demangle_qualified_name()
-                return qual_type
+                return self.apply_prev_types(qual_type, prev_types)
             elif cur_char == 'A':
                 #if cur_type.pointer_lvl < 1 and not cur_type.is_ref:
                 #    raise ParseError("pointer level for array is wrong!")
-                return self.demangle_array(cur_type)
+                array_type = self.demangle_array(self.apply_prev_types(cur_type, prev_types))
+                return array_type
             elif cur_char == 'M':
                 self.index += 1
 
@@ -324,9 +360,10 @@ class ParseCtx:
                 self.index += 1
 
                 # the member function does not encode the pointer
-                cur_type.pointer_lvl += 1
+                #cur_type.pointer_lvl += 1
 
-                func = self.demangle_function(cur_type)
+                prev_types.append('P')
+                func = self.demangle_function(self.apply_prev_types(cur_type, prev_types))
                 func.class_name = class_name
                 return func
             else:

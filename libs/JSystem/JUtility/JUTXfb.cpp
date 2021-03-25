@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRHeap {
+struct _GXRenderModeObj {
 };
 
-struct _GXRenderModeObj {
+struct JKRHeap {
 };
 
 struct JUTXfb {

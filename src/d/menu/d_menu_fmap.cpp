@@ -16,6 +16,9 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
+struct dMenu_Fmap_stage_data_c {
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -24,9 +27,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct dMenu_Fmap_stage_data_c {
 };
 
 struct STControl {

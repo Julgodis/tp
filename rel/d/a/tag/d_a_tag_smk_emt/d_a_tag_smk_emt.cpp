@@ -27,20 +27,20 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
-};
-
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
+};
+
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {

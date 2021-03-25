@@ -79,10 +79,10 @@ struct dPa_control_c {
 struct cBgS_PolyInfo {
 };
 
-struct dBgW {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgW {
 };
 
 struct dBgS_MoveBgActor {

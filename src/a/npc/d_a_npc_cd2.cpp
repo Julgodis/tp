@@ -14,10 +14,10 @@
 struct J3DJoint {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {
@@ -45,14 +45,14 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
+struct Vec {
+};
+
 struct fopAc_ac_c {
 };
 
 struct cXyz {
 	/* 80009184 */ ~cXyz();
-};
-
-struct Vec {
 };
 
 struct PathTrace_c {
@@ -112,9 +112,6 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -125,6 +122,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -151,13 +151,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dPa_levelEcallBack {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

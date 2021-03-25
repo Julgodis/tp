@@ -29,10 +29,10 @@ struct cM3dGLin {
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-struct fopAc_ac_c {
+struct csXyz {
 };
 
-struct csXyz {
+struct fopAc_ac_c {
 };
 
 struct dJntColData_c {

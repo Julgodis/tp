@@ -11,24 +11,6 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct dMsgFlow_c {
-	/* 80249F00 */ dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -37,7 +19,25 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8099907C */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_motionAnmData_c {
+};
+
 struct J3DJoint {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+};
+
+struct dMsgFlow_c {
+	/* 80249F00 */ dMsgFlow_c();
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_clerkB_c {
@@ -149,15 +149,15 @@ struct J3DFrameCtrl {
 	/* 80998B2C */ ~J3DFrameCtrl();
 };
 
-struct _GXColorS10 {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct J3DModel {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct _GXColorS10 {
 };
 
 struct daNpcT_c {
@@ -279,9 +279,6 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -294,6 +291,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -315,7 +315,7 @@ struct dEvt_control_c {
 
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800487F0 */ void ChkPresentEnd();
 };

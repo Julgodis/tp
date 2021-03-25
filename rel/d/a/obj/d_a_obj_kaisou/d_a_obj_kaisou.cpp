@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DModel {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
 struct daObjKaisou_c {

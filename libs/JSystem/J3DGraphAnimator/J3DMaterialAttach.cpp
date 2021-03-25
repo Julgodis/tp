@@ -45,16 +45,16 @@ struct J3DTexMtxInfo {
 struct J3DTexMtxAnm {
 };
 
-struct J3DTevColorAnm {
-};
-
 struct J3DTevKColorAnm {
 };
 
-struct J3DMatColorAnm {
+struct J3DTexNoAnm {
 };
 
-struct J3DTexNoAnm {
+struct J3DTevColorAnm {
+};
+
+struct J3DMatColorAnm {
 };
 
 struct J3DMaterialAnm {

@@ -64,13 +64,13 @@ struct dRes_control_c {
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dBgW {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS_MoveBgActor {

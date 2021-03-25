@@ -212,6 +212,9 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
+struct ResTIMG {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -222,9 +225,6 @@ struct JGeometry {
 };
 
 struct ResTLUT {
-};
-
-struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -289,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct dMsgString_c {
@@ -308,14 +308,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {

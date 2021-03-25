@@ -67,10 +67,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -125,15 +125,9 @@ struct dEvt_info_c {
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800483C4 */ void setGoal(cXyz*);
-};
-
-struct csXyz {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct cBgS_PolyInfo {
@@ -141,6 +135,12 @@ struct cBgS_PolyInfo {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct dKy_tevstr_c {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

@@ -11,18 +11,7 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
+struct J3DJoint {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -33,7 +22,18 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 809B88E8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct J3DJoint {
+struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Fairy_c {
@@ -186,10 +186,9 @@ struct cCcD_GStts {
 	/* 809B7F8C */ ~cCcD_GStts();
 };
 
-struct J3DModelData {
-};
-
-struct _GXColorS10 {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct J3DAnmTevRegKey {
@@ -198,18 +197,19 @@ struct J3DAnmTevRegKey {
 struct J3DModel {
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmColor {
 };
 
 struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmColor {
+struct J3DAnmTransformKey {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcT_c {
@@ -340,9 +340,6 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DAnmTransform {
 };
 
@@ -353,6 +350,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -387,19 +387,19 @@ struct dEvt_control_c {
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800487F0 */ void ChkPresentEnd();
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

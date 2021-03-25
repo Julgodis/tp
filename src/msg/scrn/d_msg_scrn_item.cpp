@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct J2DAnmTextureSRTKey {
+};
+
 struct JKRExpHeap {
 };
 
 struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
 };
 
 struct dMsgScrnItem_c {
@@ -110,19 +110,11 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+struct JKRArchive {
+	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
 struct J2DGrafContext {
-};
-
-struct JKRArchive {
-	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
 struct J2DScreen {
@@ -130,6 +122,14 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {

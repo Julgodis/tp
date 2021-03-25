@@ -46,10 +46,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -86,13 +86,13 @@ struct dEvent_manager_c {
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dBgW {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS_MoveBgActor {

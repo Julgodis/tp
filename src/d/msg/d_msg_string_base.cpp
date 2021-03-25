@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct J2DTextBox {

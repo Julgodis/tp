@@ -62,17 +62,17 @@ struct dEvent_manager_c {
 	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {

@@ -133,10 +133,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -158,13 +158,13 @@ struct J3DModel {
 struct J3DModelData {
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

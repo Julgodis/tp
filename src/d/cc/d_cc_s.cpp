@@ -11,10 +11,29 @@
 // Types:
 // 
 
-struct dCcD_GStts {
+struct cCcD_GStts {
+};
+
+struct cXyz {
+};
+
+struct dCcD_GObjInf {
+	/* 800843DC */ void ChkAtNoGuard();
+};
+
+struct cCcD_GObjInf {
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct fopAc_ac_c {
+};
+
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
 };
 
 struct cCcD_ShapeAttr {
@@ -23,29 +42,10 @@ struct cCcD_ShapeAttr {
 
 };
 
-struct cXyz {
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
-struct cCcD_GStts {
-};
-
 struct csXyz {
 };
 
-struct cCcD_GObjInf {
-};
-
-struct dCcD_GObjInf {
-	/* 800843DC */ void ChkAtNoGuard();
-};
-
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(int);
+struct dCcD_GStts {
 };
 
 struct dCcS {

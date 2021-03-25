@@ -32,16 +32,16 @@ struct cXyz {
 	/* 808392D8 */ cXyz();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
 	/* 80084318 */ void ResetAtHit();
 	/* 80084460 */ void ChkTgHit();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
 };
 
 struct daHorse_c {
@@ -244,10 +244,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -262,13 +262,13 @@ struct mDoExt_MtxCalcOldFrame {
 	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -344,10 +344,10 @@ struct dEvent_manager_c {
 	/* 800483E0 */ void getGoal();
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {

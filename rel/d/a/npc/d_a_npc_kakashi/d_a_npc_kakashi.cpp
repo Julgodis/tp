@@ -11,20 +11,6 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
-};
-
-struct daNpcT_evtData_c {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -33,10 +19,24 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8054E460 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct J3DModel {
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_motionAnmData_c {
 };
 
 struct J3DJoint {
+};
+
+struct daNpcT_evtData_c {
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct J3DModel {
 };
 
 struct daNpc_Kakashi_c {
@@ -83,17 +83,9 @@ struct cCcD_GStts {
 	/* 8054DA00 */ ~cCcD_GStts();
 };
 
-struct _GXColorS10 {
-};
-
 struct cXyz {
 	/* 8054DDD0 */ ~cXyz();
 	/* 8054E414 */ cXyz();
-};
-
-struct csXyz {
-	/* 8054DED8 */ ~csXyz();
-	/* 8054E8F8 */ csXyz();
 };
 
 struct dCcD_GObjInf {
@@ -102,6 +94,14 @@ struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 	/* 800844F8 */ void GetTgHitObj();
 	/* 800845B0 */ void getHitSeID(u8, int);
+};
+
+struct csXyz {
+	/* 8054DED8 */ ~csXyz();
+	/* 8054E8F8 */ csXyz();
+};
+
+struct _GXColorS10 {
 };
 
 struct daNpcT_c {
@@ -222,9 +222,6 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -237,6 +234,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -268,18 +268,18 @@ struct dEvt_control_c {
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
 };
 
 struct _GXColor {
-};
-
-struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

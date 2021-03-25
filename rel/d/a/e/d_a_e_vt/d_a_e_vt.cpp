@@ -16,6 +16,12 @@ struct daE_VA_HIO_c {
 	/* 807CE2AC */ ~daE_VA_HIO_c();
 };
 
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -27,12 +33,6 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 807CE23C */ cXyz();
 	/* 807CEC40 */ ~cXyz();
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daE_VA_c {
@@ -208,10 +208,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -222,9 +222,6 @@ struct mDoExt_brkAnm {
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
-};
-
-struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct J3DModelData {
@@ -239,6 +236,9 @@ struct Z2Creature {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct mDoExt_McaMorfSO {
 	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
@@ -251,13 +251,13 @@ struct mDoExt_3DlineMat0_c {
 	/* 800125E0 */ void init(u16, u16, int);
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

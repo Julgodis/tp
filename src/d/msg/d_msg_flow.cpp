@@ -14,10 +14,10 @@
 struct mesg_flow_node_event {
 };
 
-struct mesg_flow_node_branch {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct mesg_flow_node_branch {
 };
 
 struct mesg_flow_node {

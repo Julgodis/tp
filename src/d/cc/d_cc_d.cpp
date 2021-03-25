@@ -196,6 +196,10 @@ struct dCcD_Sph {
 	/* 80084BF4 */ ~dCcD_Sph();
 };
 
+struct cCcD_AabAttr {
+};
+
+struct cCcD_CylAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -205,15 +209,11 @@ struct cCcD_ShapeAttr {
 	/* 80263A64 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
+struct cCcD_TriAttr;
 struct cCcD_SphAttr;
 struct cCcD_PntAttr {
 };
 
-struct cCcD_AabAttr {
-};
-
-struct cCcD_CylAttr;
-struct cCcD_TriAttr;
 struct cCcD_CpsAttr {
 	/* 80263DC0 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
 	/* 80084FE4 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;

@@ -25,7 +25,7 @@ namespace JGadget {
 	struct TVector_pointer_void {
 		/* 802DCCD0 */ TVector_pointer_void(JGadget::TAllocator<void*> const&);
 		/* 802DCCFC */ ~TVector_pointer_void();
-		/* 802DCDA4 */ void insert(void**, void const*&);
+		/* 802DCDA4 */ void insert(void**, void* const&);
 		/* 802DCDC4 */ void erase(void**, void**);
 	};
 
@@ -33,8 +33,8 @@ namespace JGadget {
 	struct TVector { };
 	/* TVector<void*, JGadget::TAllocator<void*>> */
 	struct TVector__template0 {
-		/* 802DD130 */ void insert(void**, void const*&);
-		/* 802DCE1C */ void insert(void**, u32, void const*&);
+		/* 802DD130 */ void insert(void**, void* const&);
+		/* 802DCE1C */ void insert(void**, u32, void* const&);
 		/* 802DCE8C */ void Insert_raw(void**, u32);
 	};
 
@@ -109,7 +109,7 @@ asm JGadget::TVector_pointer_void::~TVector_pointer_void() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::TVector_pointer_void::insert(void** param_0, void const*& param_1) {
+asm void JGadget::TVector_pointer_void::insert(void** param_0, void* const& param_1) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/insert__Q27JGadget20TVector_pointer_voidFPPvRCPv.s"
 }
@@ -131,7 +131,7 @@ asm void JGadget::TVector_pointer_void::erase(void** param_0, void** param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::TVector__template0::insert(void** param_0, u32 param_1, void const*& param_2) {
+asm void JGadget::TVector__template0::insert(void** param_0, u32 param_1, void* const& param_2) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DCE1C.s"
 }
@@ -153,7 +153,7 @@ asm void JGadget::TVector__template0::Insert_raw(void** param_0, u32 param_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::TVector__template0::insert(void** param_0, void const*& param_1) {
+asm void JGadget::TVector__template0::insert(void** param_0, void* const& param_1) {
 	nofralloc
 #include "asm/JSystem/JGadget/std-vector/func_802DD130.s"
 }

@@ -87,17 +87,14 @@ struct dEvt_control_c {
 
 struct dEvent_manager_c {
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct Vec {
@@ -109,7 +106,10 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
+};
+
+struct csXyz {
 };
 
 struct dPa_control_c {

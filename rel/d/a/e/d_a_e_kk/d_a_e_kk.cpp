@@ -16,6 +16,12 @@ struct daE_KK_HIO_c {
 	/* 806FF0F0 */ ~daE_KK_HIO_c();
 };
 
+struct J3DJoint {
+};
+
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -25,12 +31,6 @@ struct cXyz {
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 806FF084 */ cXyz();
 	/* 806FF598 */ ~cXyz();
-};
-
-struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct daE_KK_c {
@@ -134,9 +134,6 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct J3DModelData {
 };
 
@@ -147,6 +144,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -182,10 +182,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -194,11 +194,11 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {

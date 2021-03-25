@@ -44,10 +44,10 @@ struct dBgS_ObjGndChk {
 	/* 8058D478 */ ~dBgS_ObjGndChk();
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
 struct daObj {

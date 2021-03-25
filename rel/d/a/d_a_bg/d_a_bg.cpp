@@ -157,10 +157,10 @@ struct dBgWKCol {
 	/* 8007E804 */ void create(void*, void*);
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {

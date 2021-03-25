@@ -60,6 +60,9 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
+struct JKRArchive {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -73,9 +76,6 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
@@ -83,10 +83,10 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct CSTControl {
+struct J2DOrthoGraph {
 };
 
-struct J2DOrthoGraph {
+struct CSTControl {
 };
 
 struct dMenu_Dmap_c {

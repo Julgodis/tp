@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -26,9 +29,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266CE4 */ void norm() const;
 	/* 80266EF4 */ void normalize();
-};
-
-struct fopAc_ac_c {
 };
 
 struct dCamera_c {

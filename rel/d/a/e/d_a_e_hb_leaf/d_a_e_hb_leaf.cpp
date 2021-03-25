@@ -18,16 +18,16 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
-};
-
 struct J3DAnmTransform {
 };
 
+struct mDoExt_McaMorfCallBack1_c {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -46,10 +46,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {

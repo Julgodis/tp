@@ -11,15 +11,13 @@
 // Types:
 // 
 
-struct daNpcT_evtData_c {
-};
+struct daNpcT_MotionSeqMngr_c {
+	struct sequenceStepData_c {
+	};
 
-struct J3DAnmTransform {
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80A3C62C */ ~J3DFrameCtrl();
+	/* 80145898 */ void initialize();
+	/* 801458C0 */ void play(u16, int*, f32*);
+	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
 struct Vec {
@@ -32,15 +30,6 @@ struct cXyz {
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80A3B760 */ ~cXyz();
 	/* 80A3C45C */ cXyz();
-};
-
-struct J3DAnmTexPattern {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct daNpcT_motionAnmData_c {
 };
 
 struct dCcD_GObjInf {
@@ -56,31 +45,42 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct J3DModel {
+};
+
+struct J3DAnmTextureSRTKey {
+};
+
 struct J3DModelData {
 };
 
 struct _GXColorS10 {
 };
 
-struct J3DModel {
+struct daNpcT_evtData_c {
 };
 
-struct daNpcT_MotionSeqMngr_c {
-	struct sequenceStepData_c {
-	};
-
-	/* 80145898 */ void initialize();
-	/* 801458C0 */ void play(u16, int*, f32*);
-	/* 80A3C4A8 */ ~daNpcT_MotionSeqMngr_c();
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80A3C62C */ ~J3DFrameCtrl();
 };
 
 struct J3DJoint {
 };
 
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTexPattern {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
 struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpc_Kn_c {
@@ -409,9 +409,6 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
@@ -419,6 +416,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -468,17 +468,17 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
 	/* 80047D4C */ void getIsAddvance(int);
-	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047E10 */ void getMyActIdx(int, char const* const*, int, int, int);
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 8004817C */ void cutEnd(int);
 	/* 800483E8 */ void getRunEventName();
 	/* 800487F0 */ void ChkPresentEnd();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -515,13 +515,13 @@ struct dDlst_shadowControl_c {
 	/* 80055F1C */ void addReal(u32, J3DModel*);
 };
 
+struct cBgS_LinChk {
+};
+
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
-struct cBgS_LinChk {
 };
 
 struct cBgS {

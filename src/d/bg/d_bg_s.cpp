@@ -26,21 +26,7 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
-struct cM3dGPla {
-};
-
-struct cBgS_GndChk {
-	/* 80267D44 */ void PreCheck();
-};
-
-struct cBgS_LinChk {
-	/* 80267F40 */ void PreCalc();
-};
-
 struct cBgS_ShdwDraw {
-};
-
-struct cXyz {
 };
 
 struct cBgS_PolyInfo {
@@ -49,6 +35,20 @@ struct cBgS_PolyInfo {
 	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
 	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
 	/* 802681AC */ void ChkBgIndex() const;
+};
+
+struct cXyz {
+};
+
+struct cBgS_LinChk {
+	/* 80267F40 */ void PreCalc();
+};
+
+struct cM3dGPla {
+};
+
+struct cBgS_GndChk {
+	/* 80267D44 */ void PreCheck();
 };
 
 struct cBgS {
@@ -74,6 +74,9 @@ struct dBgS_RoofChk {
 	/* 80079124 */ void Init();
 };
 
+struct dBgS_SphChk {
+};
+
 struct fopAc_ac_c {
 };
 
@@ -88,9 +91,6 @@ struct dBgS_Acch {
 };
 
 struct csXyz {
-};
-
-struct dBgS_SphChk {
 };
 
 struct dBgS {

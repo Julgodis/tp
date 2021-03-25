@@ -63,13 +63,13 @@ struct cCcD_GStts {
 	/* 80CC68A0 */ ~cCcD_GStts();
 };
 
-struct _GXColor {
+struct ResTIMG {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct ResTIMG {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {

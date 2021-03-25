@@ -81,10 +81,10 @@ struct cCcD_GStts {
 	/* 80AA5974 */ ~cCcD_GStts();
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {

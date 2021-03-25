@@ -11,13 +11,7 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-struct JAISeqData {
-};
-
-struct JAISeqDataUser {
+struct JKRArchive {
 };
 
 struct JKRHeap {
@@ -30,7 +24,13 @@ struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-struct JKRArchive {
+struct JAISeqDataUser {
+};
+
+struct JAISeqData {
+};
+
+struct JAISoundID {
 };
 
 struct JAUSectionHeap {
@@ -117,14 +117,14 @@ struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
+};
+
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUBankTable> */
 struct JSULink__template0 {
-};
-
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
 };
 
 struct JAUBankTableDictionary {

@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct JASOscillator {
+	struct Data {
+	};
+
+	struct EffectParams {
+	};
+
+	/* 8029BE94 */ JASOscillator();
+	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
+	/* 8029BF68 */ void incCounter(f32);
+	/* 8029BFC8 */ void getValue() const;
+	/* 8029BFE4 */ void release();
+	/* 8029C0E0 */ void update();
+};
+
 struct JASWaveInfo {
 };
 
@@ -27,21 +42,6 @@ struct JASDsp {
 		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
-};
-
-struct JASOscillator {
-	struct Data {
-	};
-
-	struct EffectParams {
-	};
-
-	/* 8029BE94 */ JASOscillator();
-	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
-	/* 8029BF68 */ void incCounter(f32);
-	/* 8029BFC8 */ void getValue() const;
-	/* 8029BFE4 */ void release();
-	/* 8029C0E0 */ void update();
 };
 
 struct JASChannel {

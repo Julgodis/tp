@@ -41,12 +41,6 @@ struct cXyz {
 	/* 804BD8F4 */ cXyz();
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
-};
-
 struct J3DDeformData {
 };
 
@@ -58,6 +52,12 @@ struct J3DModel {
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
+};
+
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct daMidna_c {
@@ -199,9 +199,6 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
@@ -211,6 +208,9 @@ struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -281,10 +281,10 @@ struct dEvent_manager_c {
 	/* 8004882C */ void checkStartDemo();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
