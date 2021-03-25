@@ -27,7 +27,7 @@ struct daItemShield_c {
 	/* 80CD6D9C */ void initBaseMtx();
 	/* 80CD6DD8 */ void setBaseMtx();
 	/* 80CD7094 */ void Create();
-	/* 80CD724C */ void __CreateHeap();
+	/* 80CD724C */ bool __CreateHeap();
 	/* 80CD7254 */ void create();
 	/* 80CD75EC */ void bg_check();
 	/* 80CD7734 */ void action_proc_call();
@@ -105,7 +105,7 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
+	/* 8014474C */ bool clothCreate();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144C7C */ void setListStart();
@@ -211,7 +211,7 @@ extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void initBaseMtx__14daItemShield_cFv(); // 1
 extern "C" void setBaseMtx__14daItemShield_cFv(); // 1
 extern "C" void Create__14daItemShield_cFv(); // 1
-extern "C" void __CreateHeap__14daItemShield_cFv(); // 1
+extern "C" bool __CreateHeap__14daItemShield_cFv(); // 1
 extern "C" void create__14daItemShield_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
@@ -316,7 +316,7 @@ extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
 extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void setListStart__12daItemBase_cFv(); // 1
@@ -686,14 +686,9 @@ asm void daItemShield_c::Create() {
 
 
 /* 80CD724C-80CD7254 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__14daItemShield_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItemShield_c::__CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/__CreateHeap__14daItemShield_cFv.s"
+bool daItemShield_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CD7254-80CD7420 01CC+00 s=1 e=0 z=0  None .text      create__14daItemShield_cFv                                   */
@@ -928,14 +923,9 @@ asm void daItemShield_c::actionCamDemo() {
 
 
 /* 80CD7FE4-80CD7FE8 0004+00 s=1 e=0 z=0  None .text      actionCamDemoEnd__14daItemShield_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItemShield_c::actionCamDemoEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_shield/d_a_obj_shield/actionCamDemoEnd__14daItemShield_cFv.s"
+void daItemShield_c::actionCamDemoEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CD7FE8-80CD80EC 0104+00 s=1 e=0 z=0  None .text      execute__14daItemShield_cFv                                  */

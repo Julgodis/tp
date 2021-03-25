@@ -20,7 +20,7 @@ struct daObjWaterFall_c {
 	/* 80D2F5A0 */ void create();
 	/* 80D2F984 */ void execute();
 	/* 80D2FA6C */ void push_player();
-	/* 80D2FC94 */ void draw();
+	/* 80D2FC94 */ bool draw();
 	/* 80D2FC9C */ void _delete();
 };
 
@@ -132,7 +132,7 @@ extern "C" void __dt__8cM3dGTriFv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void execute__16daObjWaterFall_cFv(); // 1
 extern "C" void push_player__16daObjWaterFall_cFv(); // 1
-extern "C" void draw__16daObjWaterFall_cFv(); // 1
+extern "C" bool draw__16daObjWaterFall_cFv(); // 1
 extern "C" void _delete__16daObjWaterFall_cFv(); // 1
 extern "C" static void daObjWaterFall_Draw__FP16daObjWaterFall_c(); // 1
 extern "C" static void daObjWaterFall_Execute__FP16daObjWaterFall_c(); // 1
@@ -423,14 +423,9 @@ asm void daObjWaterFall_c::create() {
 
 
 /* 80D2F6DC-80D2F6E0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2F6E0-80D2F728 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
@@ -522,14 +517,9 @@ asm void daObjWaterFall_c::push_player() {
 
 
 /* 80D2FC94-80D2FC9C 0008+00 s=1 e=0 z=0  None .text      draw__16daObjWaterFall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWaterFall_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_waterfall/d_a_obj_waterfall/draw__16daObjWaterFall_cFv.s"
+bool daObjWaterFall_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D2FC9C-80D2FCD0 0034+00 s=1 e=0 z=0  None .text      _delete__16daObjWaterFall_cFv                                */

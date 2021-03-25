@@ -11,17 +11,17 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
+struct JSUFileInputStream {
 };
 
 struct JKRAramStreamCommand {
 	/* 802D4088 */ JKRAramStreamCommand();
 };
 
-struct JSUFileInputStream {
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JKRAramStream {
@@ -29,7 +29,7 @@ struct JKRAramStream {
 	/* 802D3BB8 */ JKRAramStream(s32);
 	/* 802D3C08 */ ~JKRAramStream();
 	/* 802D3C68 */ void run();
-	/* 802D3CD8 */ void readFromAram();
+	/* 802D3CD8 */ bool readFromAram();
 	/* 802D3CE0 */ void writeToAram(JKRAramStreamCommand*);
 	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
 	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, int);
@@ -73,7 +73,7 @@ extern "C" void create__13JKRAramStreamFl(); // 1
 extern "C" void __ct__13JKRAramStreamFl(); // 1
 extern "C" void __dt__13JKRAramStreamFv(); // 1
 extern "C" void run__13JKRAramStreamFv(); // 1
-extern "C" void readFromAram__13JKRAramStreamFv(); // 1
+extern "C" bool readFromAram__13JKRAramStreamFv(); // 1
 extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand(); // 1
 extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl(); // 1
 extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi(); // 1
@@ -184,14 +184,9 @@ asm void JKRAramStream::run() {
 
 
 /* 802D3CD8-802D3CE0 0008+00 s=1 e=0 z=0  None .text      readFromAram__13JKRAramStreamFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRAramStream::readFromAram() {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRAramStream/readFromAram__13JKRAramStreamFv.s"
+bool JKRAramStream::readFromAram() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

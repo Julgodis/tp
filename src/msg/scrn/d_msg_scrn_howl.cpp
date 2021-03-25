@@ -71,13 +71,13 @@ struct dMeter2Info_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ void selectAnimeMove(u8, u8, bool);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
 	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
 	/* 80238C5C */ void fukiPosCalc(u8);
-	/* 80238C60 */ void isSelect();
-	/* 80238C68 */ void selectAnimeEnd();
+	/* 80238C60 */ bool isSelect();
+	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
 	/* 80238C74 */ void dotAnimeInit();
 	/* 8023C0DC */ dMsgScrnBase_c();
@@ -88,19 +88,19 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -216,13 +216,13 @@ extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6T
 extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
 extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" void selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
 extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
 extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" void isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
@@ -533,14 +533,9 @@ asm void dMsgScrnHowl_c::drawSelf() {
 
 
 /* 80241D58-80241D5C 0004+00 s=1 e=0 z=0  None .text      guide_on_init__14dMsgScrnHowl_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::guide_on_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/guide_on_init__14dMsgScrnHowl_cFv.s"
+void dMsgScrnHowl_c::guide_on_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80241D5C-80241DFC 00A0+00 s=1 e=0 z=0  None .text      guide_on_proc__14dMsgScrnHowl_cFv                            */
@@ -555,14 +550,9 @@ asm void dMsgScrnHowl_c::guide_on_proc() {
 
 
 /* 80241DFC-80241E00 0004+00 s=1 e=0 z=0  None .text      guide_off_init__14dMsgScrnHowl_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::guide_off_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/guide_off_init__14dMsgScrnHowl_cFv.s"
+void dMsgScrnHowl_c::guide_off_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80241E00-80241E7C 007C+00 s=1 e=0 z=0  None .text      guide_off_proc__14dMsgScrnHowl_cFv                           */
@@ -577,14 +567,9 @@ asm void dMsgScrnHowl_c::guide_off_proc() {
 
 
 /* 80241E7C-80241E80 0004+00 s=1 e=0 z=0  None .text      guide_stop_init__14dMsgScrnHowl_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::guide_stop_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/guide_stop_init__14dMsgScrnHowl_cFv.s"
+void dMsgScrnHowl_c::guide_stop_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80241E80-80241F28 00A8+00 s=1 e=0 z=0  None .text      guide_stop_proc__14dMsgScrnHowl_cFv                          */
@@ -621,36 +606,21 @@ asm void dMsgScrnHowl_c::guide_demo_play_proc() {
 
 
 /* 8024202C-80242030 0004+00 s=1 e=0 z=0  None .text      guide_off_test_init__14dMsgScrnHowl_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::guide_off_test_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/guide_off_test_init__14dMsgScrnHowl_cFv.s"
+void dMsgScrnHowl_c::guide_off_test_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80242030-80242034 0004+00 s=1 e=0 z=0  None .text      guide_off_test_proc__14dMsgScrnHowl_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::guide_off_test_proc() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/guide_off_test_proc__14dMsgScrnHowl_cFv.s"
+void dMsgScrnHowl_c::guide_off_test_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80242034-80242038 0004+00 s=1 e=0 z=0  None .text      fukiScale__14dMsgScrnHowl_cFf                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnHowl_c::fukiScale(f32 param_0) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_howl/fukiScale__14dMsgScrnHowl_cFf.s"
+void dMsgScrnHowl_c::fukiScale(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80242038-8024205C 0024+00 s=1 e=0 z=0  None .text      fukiTrans__14dMsgScrnHowl_cFff                               */

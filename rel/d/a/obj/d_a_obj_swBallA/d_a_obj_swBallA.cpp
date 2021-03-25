@@ -42,9 +42,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80CF42F4 */ ~dEvLib_callback_c();
-	/* 80CF433C */ void eventStart();
-	/* 80CF4344 */ void eventRun();
-	/* 80CF434C */ void eventEnd();
+	/* 80CF433C */ bool eventStart();
+	/* 80CF4344 */ bool eventRun();
+	/* 80CF434C */ bool eventEnd();
 };
 
 struct mDoMtx_stack_c {
@@ -142,9 +142,9 @@ extern "C" static void daObjSwBallA_Execute__FP14daObjSwBallA_c(); // 1
 extern "C" static void daObjSwBallA_Delete__FP14daObjSwBallA_c(); // 1
 extern "C" static void daObjSwBallA_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__14daObjSwBallA_cFv(); // 1
 extern "C" static void func_80CF43D4(); // 1
 extern "C" extern u32 const lit_3730;
@@ -515,14 +515,9 @@ asm void daObjSwBallA_c::actionRun() {
 
 
 /* 80CF3D80-80CF3D84 0004+00 s=1 e=0 z=0  None .text      actionStop__14daObjSwBallA_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwBallA_c::actionStop() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallA/d_a_obj_swBallA/actionStop__14daObjSwBallA_cFv.s"
+void daObjSwBallA_c::actionStop() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CF3D84-80CF406C 02E8+00 s=1 e=0 z=0  None .text      PutCrrPos__14daObjSwBallA_cFv                                */
@@ -614,36 +609,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80CF433C-80CF4344 0008+00 s=2 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallA/d_a_obj_swBallA/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CF4344-80CF434C 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallA/d_a_obj_swBallA/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CF434C-80CF4354 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallA/d_a_obj_swBallA/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CF4354-80CF43D4 0080+00 s=2 e=0 z=0  None .text      __dt__14daObjSwBallA_cFv                                     */

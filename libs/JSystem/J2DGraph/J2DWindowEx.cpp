@@ -11,16 +11,25 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmTexPattern {
 };
 
 struct J2DMaterial {
@@ -31,32 +40,39 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct J2DTevStage {
+struct J2DWindow {
+	struct TMaterial {
+	};
+
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ s32 getTypeID() const;
 };
 
 struct ResFONT {
 };
 
-struct J2DAnmTransform {
+struct JSUStreamSeekFrom {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct ResTIMG {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
+struct JUtility {
+	struct TColor {
 	};
 
 };
 
 struct J2DAnmBase {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct _GXColor {
@@ -66,15 +82,13 @@ struct J2DAnmVtxColor {
 	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
+struct ResTIMG {
+};
+
+struct J2DAnmTransform {
+};
+
 struct _GXCullMode {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DPane {
@@ -103,21 +117,7 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DWindow {
-	struct TMaterial {
-	};
-
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ void getTypeID() const;
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
+struct J2DTevStage {
 };
 
 struct J2DWindowEx {
@@ -272,7 +272,7 @@ extern "C" void __ct__9J2DWindowFv(); // 1
 extern "C" void __dt__9J2DWindowFv(); // 1
 extern "C" void resize__9J2DWindowFff(); // 1
 extern "C" void drawSelf__9J2DWindowFff(); // 1
-extern "C" void getTypeID__9J2DWindowCFv(); // 1
+extern "C" s32 getTypeID__9J2DWindowCFv(); // 1
 extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc(); // 1
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -898,13 +898,8 @@ asm void J2DWindowEx::setAnimation(J2DAnmBase* param_0) {
 
 
 /* 8030363C-80303640 0004+00 s=0 e=1 z=0  None .text      getColor__14J2DAnmVtxColorCFUcUsP8_GXColor                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DAnmVtxColor::getColor(u8 param_0, u16 param_1, _GXColor* param_2) const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindowEx/getColor__14J2DAnmVtxColorCFUcUsP8_GXColor.s"
+void J2DAnmVtxColor::getColor(u8 param_0, u16 param_1, _GXColor* param_2) const {
+	/* empty function */
 }
-#pragma pop
 
 

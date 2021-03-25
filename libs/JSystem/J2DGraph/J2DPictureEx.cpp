@@ -11,16 +11,32 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmTexPattern {
 };
 
 struct J2DMaterial {
@@ -31,35 +47,7 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct J2DTevStage {
-};
-
-struct _GXTexMapID {
-};
-
-struct J2DAnmBase {
-};
-
-struct JUTPalette {
-};
-
 struct ResFONT {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct _GXCullMode {
 };
 
 struct JSUStreamSeekFrom {
@@ -68,6 +56,31 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmTransform {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -95,29 +108,10 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct _GXTexMapID {
 };
 
-struct ResTLUT {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template0 {
-		/* 802FF204 */ TVec2__template0();
-	};
-
+struct JUTPalette {
 };
 
 struct _GXTlut {
@@ -126,6 +120,12 @@ struct _GXTlut {
 struct JUTTexture {
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+};
+
+struct J2DTevStage {
+};
+
+struct ResTLUT {
 };
 
 struct J2DPictureEx {
@@ -215,7 +215,7 @@ struct J2DPicture {
 	/* 802FCFF0 */ ~J2DPicture();
 	/* 802FDB28 */ void drawSelf(f32, f32);
 	/* 802FF1D0 */ void getTlutID(ResTIMG const*, u8);
-	/* 802FF2E8 */ void getTypeID() const;
+	/* 802FF2E8 */ s32 getTypeID() const;
 };
 
 struct JSUInputStream {
@@ -363,7 +363,7 @@ extern "C" void __dt__10J2DPictureFv(); // 1
 extern "C" void drawSelf__10J2DPictureFff(); // 1
 extern "C" void getTlutID__10J2DPictureFPC7ResTIMGUc(); // 1
 extern "C" void func_802FF204(); // 1
-extern "C" void getTypeID__10J2DPictureCFv(); // 1
+extern "C" s32 getTypeID__10J2DPictureCFv(); // 1
 extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc(); // 1
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXConcat(); // 1

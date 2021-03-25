@@ -13,9 +13,9 @@
 
 struct daTag_BottleItem_c {
 	/* 80D55FD8 */ void create();
-	/* 80D5605C */ void Delete();
+	/* 80D5605C */ bool Delete();
 	/* 80D56064 */ void Execute();
-	/* 80D560D0 */ void Draw();
+	/* 80D560D0 */ bool Draw();
 	/* 80D560D8 */ void setTypeFromParam();
 	/* 80D56100 */ void restart();
 	/* 80D56170 */ void initialize();
@@ -57,12 +57,12 @@ static void daTag_BottleItem_Create(void*); // 2
 static void daTag_BottleItem_Delete(void*); // 2
 static void daTag_BottleItem_Execute(void*); // 2
 static void daTag_BottleItem_Draw(void*); // 2
-static void daTag_BottleItem_IsDelete(void*); // 2
+static bool daTag_BottleItem_IsDelete(void*); // 2
 
 extern "C" void create__18daTag_BottleItem_cFv(); // 1
-extern "C" void Delete__18daTag_BottleItem_cFv(); // 1
+extern "C" bool Delete__18daTag_BottleItem_cFv(); // 1
 extern "C" void Execute__18daTag_BottleItem_cFv(); // 1
-extern "C" void Draw__18daTag_BottleItem_cFv(); // 1
+extern "C" bool Draw__18daTag_BottleItem_cFv(); // 1
 extern "C" void setTypeFromParam__18daTag_BottleItem_cFv(); // 1
 extern "C" void restart__18daTag_BottleItem_cFv(); // 1
 extern "C" void initialize__18daTag_BottleItem_cFv(); // 1
@@ -77,7 +77,7 @@ extern "C" static void daTag_BottleItem_Create__FPv(); // 1
 extern "C" static void daTag_BottleItem_Delete__FPv(); // 1
 extern "C" static void daTag_BottleItem_Execute__FPv(); // 1
 extern "C" static void daTag_BottleItem_Draw__FPv(); // 1
-extern "C" static void daTag_BottleItem_IsDelete__FPv(); // 1
+extern "C" static bool daTag_BottleItem_IsDelete__FPv(); // 1
 extern "C" void __dt__18daTag_BottleItem_cFv(); // 1
 extern "C" extern void* g_profile_TAG_BTLITM[12];
 
@@ -165,14 +165,9 @@ asm void daTag_BottleItem_c::create() {
 
 
 /* 80D5605C-80D56064 0008+00 s=1 e=0 z=0  None .text      Delete__18daTag_BottleItem_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_BottleItem_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/Delete__18daTag_BottleItem_cFv.s"
+bool daTag_BottleItem_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D56064-80D560D0 006C+00 s=2 e=0 z=0  None .text      Execute__18daTag_BottleItem_cFv                              */
@@ -187,14 +182,9 @@ asm void daTag_BottleItem_c::Execute() {
 
 
 /* 80D560D0-80D560D8 0008+00 s=1 e=0 z=0  None .text      Draw__18daTag_BottleItem_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_BottleItem_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/Draw__18daTag_BottleItem_cFv.s"
+bool daTag_BottleItem_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D560D8-80D56100 0028+00 s=1 e=0 z=0  None .text      setTypeFromParam__18daTag_BottleItem_cFv                     */
@@ -372,14 +362,9 @@ asm static void daTag_BottleItem_Draw(void* param_0) {
 
 
 /* 80D565E8-80D565F0 0008+00 s=1 e=0 z=0  None .text      daTag_BottleItem_IsDelete__FPv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_BottleItem_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_bottle_item/d_a_tag_bottle_item/daTag_BottleItem_IsDelete__FPv.s"
+static bool daTag_BottleItem_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D565F0-80D56650 0060+00 s=1 e=0 z=0  None .text      __dt__18daTag_BottleItem_cFv                                 */

@@ -69,10 +69,10 @@ struct J3DModel {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -1398,14 +1398,9 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* 80BC2134-80BC2138 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_brg/d_a_obj_brg/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

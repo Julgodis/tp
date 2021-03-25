@@ -112,7 +112,7 @@ static void ih_normal(obj_ihasi_class*); // 2
 static void ih_disappear(obj_ihasi_class*); // 2
 static void action(obj_ihasi_class*); // 2
 static void daObj_Ihasi_Execute(obj_ihasi_class*); // 2
-static void daObj_Ihasi_IsDelete(obj_ihasi_class*); // 2
+static bool daObj_Ihasi_IsDelete(obj_ihasi_class*); // 2
 static void daObj_Ihasi_Delete(obj_ihasi_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Ihasi_Create(fopAc_ac_c*); // 2
@@ -122,7 +122,7 @@ extern "C" static void ih_normal__FP15obj_ihasi_class(); // 1
 extern "C" static void ih_disappear__FP15obj_ihasi_class(); // 1
 extern "C" static void action__FP15obj_ihasi_class(); // 1
 extern "C" static void daObj_Ihasi_Execute__FP15obj_ihasi_class(); // 1
-extern "C" static void daObj_Ihasi_IsDelete__FP15obj_ihasi_class(); // 1
+extern "C" static bool daObj_Ihasi_IsDelete__FP15obj_ihasi_class(); // 1
 extern "C" static void daObj_Ihasi_Delete__FP15obj_ihasi_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -215,25 +215,15 @@ asm static void daObj_Ihasi_Draw(obj_ihasi_class* param_0) {
 
 
 /* 80C2611C-80C26120 0004+00 s=1 e=0 z=0  None .text      ih_normal__FP15obj_ihasi_class                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void ih_normal(obj_ihasi_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/ih_normal__FP15obj_ihasi_class.s"
+static void ih_normal(obj_ihasi_class* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C26120-80C26124 0004+00 s=1 e=0 z=0  None .text      ih_disappear__FP15obj_ihasi_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void ih_disappear(obj_ihasi_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/ih_disappear__FP15obj_ihasi_class.s"
+static void ih_disappear(obj_ihasi_class* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -263,14 +253,9 @@ asm static void daObj_Ihasi_Execute(obj_ihasi_class* param_0) {
 
 
 /* 80C262C4-80C262CC 0008+00 s=1 e=0 z=0  None .text      daObj_Ihasi_IsDelete__FP15obj_ihasi_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Ihasi_IsDelete(obj_ihasi_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ihasi/d_a_obj_ihasi/daObj_Ihasi_IsDelete__FP15obj_ihasi_class.s"
+static bool daObj_Ihasi_IsDelete(obj_ihasi_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -14,7 +14,7 @@
 struct daObjGraWall_c {
 	/* 80C10BF8 */ void Create();
 	/* 80C10DD8 */ void Execute();
-	/* 80C10E78 */ void Delete();
+	/* 80C10E78 */ bool Delete();
 	/* 80C10E80 */ void col_init();
 	/* 80C10ED4 */ void col_set();
 };
@@ -76,7 +76,7 @@ struct cCcS {
 // 
 
 static void daObjGraWall_Execute(daObjGraWall_c*); // 2
-static void daObjGraWall_IsDelete(daObjGraWall_c*); // 2
+static bool daObjGraWall_IsDelete(daObjGraWall_c*); // 2
 static void daObjGraWall_Delete(daObjGraWall_c*); // 2
 static void daObjGraWall_create(fopAc_ac_c*); // 2
 
@@ -84,11 +84,11 @@ extern "C" void Create__14daObjGraWall_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void Execute__14daObjGraWall_cFv(); // 1
-extern "C" void Delete__14daObjGraWall_cFv(); // 1
+extern "C" bool Delete__14daObjGraWall_cFv(); // 1
 extern "C" void col_init__14daObjGraWall_cFv(); // 1
 extern "C" void col_set__14daObjGraWall_cFv(); // 1
 extern "C" static void daObjGraWall_Execute__FP14daObjGraWall_c(); // 1
-extern "C" static void daObjGraWall_IsDelete__FP14daObjGraWall_c(); // 1
+extern "C" static bool daObjGraWall_IsDelete__FP14daObjGraWall_c(); // 1
 extern "C" static void daObjGraWall_Delete__FP14daObjGraWall_c(); // 1
 extern "C" static void daObjGraWall_create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_GRA_WALL[12];
@@ -215,14 +215,9 @@ asm void daObjGraWall_c::Execute() {
 
 
 /* 80C10E78-80C10E80 0008+00 s=1 e=0 z=0  None .text      Delete__14daObjGraWall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGraWall_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/Delete__14daObjGraWall_cFv.s"
+bool daObjGraWall_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -274,14 +269,9 @@ asm static void daObjGraWall_Execute(daObjGraWall_c* param_0) {
 
 
 /* 80C10F60-80C10F68 0008+00 s=1 e=0 z=0  None .text      daObjGraWall_IsDelete__FP14daObjGraWall_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjGraWall_IsDelete(daObjGraWall_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_graWall/d_a_obj_graWall/daObjGraWall_IsDelete__FP14daObjGraWall_c.s"
+static bool daObjGraWall_IsDelete(daObjGraWall_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C10F68-80C10F88 0020+00 s=1 e=0 z=0  None .text      daObjGraWall_Delete__FP14daObjGraWall_c                      */

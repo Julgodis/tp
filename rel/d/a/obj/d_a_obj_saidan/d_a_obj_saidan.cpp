@@ -73,10 +73,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ void Create();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -161,10 +161,10 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -462,14 +462,9 @@ asm void daSaidan_c::init_modeMoveEnd() {
 
 
 /* 80CC4314-80CC4318 0004+00 s=1 e=0 z=0  None .text      modeMoveEnd__10daSaidan_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSaidan_c::modeMoveEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_saidan/d_a_obj_saidan/modeMoveEnd__10daSaidan_cFv.s"
+void daSaidan_c::modeMoveEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC4318-80CC43BC 00A4+00 s=1 e=0 z=0  None .text      Draw__10daSaidan_cFv                                         */

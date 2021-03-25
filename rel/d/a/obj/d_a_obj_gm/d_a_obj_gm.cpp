@@ -187,7 +187,7 @@ static void action(obj_gm_class*); // 2
 static void s_tbox_sub(void*, void*); // 2
 static void s_so_sub(void*, void*); // 2
 static void daObj_Gm_Execute(obj_gm_class*); // 2
-static void daObj_Gm_IsDelete(obj_gm_class*); // 2
+static bool daObj_Gm_IsDelete(obj_gm_class*); // 2
 static void daObj_Gm_Delete(obj_gm_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Gm_Create(fopAc_ac_c*); // 2
@@ -204,7 +204,7 @@ extern "C" static void action__FP12obj_gm_class(); // 1
 extern "C" static void s_tbox_sub__FPvPv(); // 1
 extern "C" static void s_so_sub__FPvPv(); // 1
 extern "C" static void daObj_Gm_Execute__FP12obj_gm_class(); // 1
-extern "C" static void daObj_Gm_IsDelete__FP12obj_gm_class(); // 1
+extern "C" static bool daObj_Gm_IsDelete__FP12obj_gm_class(); // 1
 extern "C" static void daObj_Gm_Delete__FP12obj_gm_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Gm_Create__FP10fopAc_ac_c(); // 1
@@ -773,14 +773,9 @@ asm static void daObj_Gm_Execute(obj_gm_class* param_0) {
 
 
 /* 80BFCAF8-80BFCB00 0008+00 s=1 e=0 z=0  None .text      daObj_Gm_IsDelete__FP12obj_gm_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Gm_IsDelete(obj_gm_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gm/d_a_obj_gm/daObj_Gm_IsDelete__FP12obj_gm_class.s"
+static bool daObj_Gm_IsDelete(obj_gm_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -902,14 +897,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80BFD238-80BFD23C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gm/d_a_obj_gm/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFD23C-80BFD284 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -36,10 +36,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct J2DRotateAxis {
+struct J2DBasePosition {
 };
 
-struct J2DBasePosition {
+struct J2DRotateAxis {
 };
 
 struct J2DPane {

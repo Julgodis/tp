@@ -158,7 +158,7 @@ static void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*); 
 static void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*); // 2
 static void mtx_set(e_warpappear_class*); // 2
 static void daE_Warpappear_Execute(e_warpappear_class*); // 2
-static void daE_Warpappear_IsDelete(e_warpappear_class*); // 2
+static bool daE_Warpappear_IsDelete(e_warpappear_class*); // 2
 static void daE_Warpappear_Delete(e_warpappear_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Warpappear_Create(fopAc_ac_c*); // 2
@@ -178,7 +178,7 @@ extern "C" static void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz(); // 1
 extern "C" static void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz(); // 1
 extern "C" static void mtx_set__FP18e_warpappear_class(); // 1
 extern "C" static void daE_Warpappear_Execute__FP18e_warpappear_class(); // 1
-extern "C" static void daE_Warpappear_IsDelete__FP18e_warpappear_class(); // 1
+extern "C" static bool daE_Warpappear_IsDelete__FP18e_warpappear_class(); // 1
 extern "C" static void daE_Warpappear_Delete__FP18e_warpappear_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -996,14 +996,9 @@ asm static void daE_Warpappear_Execute(e_warpappear_class* param_0) {
 
 
 /* 807D1C50-807D1C58 0008+00 s=1 e=0 z=0  None .text      daE_Warpappear_IsDelete__FP18e_warpappear_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Warpappear_IsDelete(e_warpappear_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_IsDelete__FP18e_warpappear_class.s"
+static bool daE_Warpappear_IsDelete(e_warpappear_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807D1C58-807D1C8C 0034+00 s=1 e=0 z=0  None .text      daE_Warpappear_Delete__FP18e_warpappear_class                */

@@ -11,16 +11,36 @@
 // Types:
 // 
 
-struct J2DMaterial {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
 
-struct JKRArchive {
-};
-
-struct J2DTextBoxVBinding {
 };
 
 struct J2DTextBoxHBinding {
+};
+
+struct J2DMaterial {
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DTextBoxVBinding {
 };
 
 struct JUTFont {
@@ -32,31 +52,22 @@ struct JUtility {
 
 };
 
-struct ResFONT {
+struct JKRArchive {
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmColor {
+struct J2DAnmBase {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct ResTIMG {
+struct J2DAnmVisibilityFull {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
+struct J2DAnmVtxColor {
+};
 
+struct J2DAnmTransform {
 };
 
 struct J2DAnmTevRegKey {
@@ -65,21 +76,10 @@ struct J2DAnmTevRegKey {
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
+struct J2DAnmColor {
 };
 
 struct _GXCullMode {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DPane {
@@ -127,7 +127,7 @@ struct J2DTextBox {
 	/* 801DFA34 */ void getBlack() const;
 	/* 8021C7F4 */ void getFont() const;
 	/* 80254408 */ void setBlack(JUtility::TColor);
-	/* 8025602C */ void getMaterial() const;
+	/* 8025602C */ bool getMaterial() const;
 	/* 802FFBC4 */ J2DTextBox(u64, JGeometry::TBox2<f32> const&, ResFONT const*, char const*, s16, J2DTextBoxHBinding, J2DTextBoxVBinding);
 	/* 802FF6D8 */ J2DTextBox(J2DPane*, JSURandomInputStream*, JKRArchive*);
 	/* 802FF75C */ J2DTextBox(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
@@ -147,7 +147,7 @@ struct J2DTextBox {
 	/* 80300AF8 */ void resize(f32, f32);
 	/* 80300C70 */ void isUsed(ResTIMG const*);
 	/* 80300BFC */ void isUsed(ResFONT const*);
-	/* 80300C68 */ void getTypeID() const;
+	/* 80300C68 */ s32 getTypeID() const;
 	/* 80300C90 */ void rewriteAlpha();
 };
 
@@ -193,7 +193,7 @@ extern "C" void drawSelf__10J2DTextBoxFff(); // 1
 extern "C" void drawSelf__10J2DTextBoxFffPA3_A4_f(); // 1
 extern "C" void resize__10J2DTextBoxFff(); // 1
 extern "C" void isUsed__10J2DTextBoxFPC7ResFONT(); // 1
-extern "C" void getTypeID__10J2DTextBoxCFv(); // 1
+extern "C" s32 getTypeID__10J2DTextBoxCFv(); // 1
 extern "C" void isUsed__10J2DTextBoxFPC7ResTIMG(); // 1
 extern "C" void rewriteAlpha__10J2DTextBoxFv(); // 1
 extern "C" extern char const* const J2DTextBox__stringBase0;
@@ -222,7 +222,7 @@ extern "C" void setBlack__10J2DTextBoxFQ28JUtility6TColor(); // 1
 extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
 extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern(); // 1
-extern "C" void getMaterial__10J2DTextBoxCFv(); // 1
+extern "C" bool getMaterial__10J2DTextBoxCFv(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void* __nwa__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
@@ -574,14 +574,9 @@ asm void J2DTextBox::isUsed(ResFONT const* param_0) {
 
 
 /* 80300C68-80300C70 0008+00 s=1 e=1 z=0  None .text      getTypeID__10J2DTextBoxCFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTextBox::getTypeID() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTextBox/getTypeID__10J2DTextBoxCFv.s"
+s32 J2DTextBox::getTypeID() const {
+	return 19;
 }
-#pragma pop
 
 
 /* 80300C70-80300C90 0020+00 s=1 e=0 z=0  None .text      isUsed__10J2DTextBoxFPC7ResTIMG                              */
@@ -596,13 +591,8 @@ asm void J2DTextBox::isUsed(ResTIMG const* param_0) {
 
 
 /* 80300C90-80300C94 0004+00 s=1 e=0 z=0  None .text      rewriteAlpha__10J2DTextBoxFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTextBox::rewriteAlpha() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTextBox/rewriteAlpha__10J2DTextBoxFv.s"
+void J2DTextBox::rewriteAlpha() {
+	/* empty function */
 }
-#pragma pop
 
 

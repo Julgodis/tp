@@ -47,7 +47,7 @@ struct dMenu_DmapBg_c {
 	/* 801B9164 */ void deleteExplain();
 	/* 801B91DC */ void baseScreenInit();
 	/* 801B944C */ void setFloorMessage();
-	/* 801BA0B4 */ void dpdMove(s8, s8, s8, u8*, u8);
+	/* 801BA0B4 */ bool dpdMove(s8, s8, s8, u8*, u8);
 	/* 801BA0BC */ ~dMenu_DmapBg_c();
 	/* 801BA60C */ void setAllAlphaRate(f32, bool);
 	/* 801BA700 */ void setGoldAnimation(bool);
@@ -58,9 +58,6 @@ struct dMenu_DmapBg_c {
 	/* 801BB334 */ void update();
 	/* 801BB464 */ void calcCursor();
 	/* 801BB468 */ void drawCursor();
-};
-
-struct CSTControl {
 };
 
 struct J2DOrthoGraph {
@@ -87,6 +84,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Dmap_c {
@@ -357,7 +357,7 @@ extern "C" void createExplain__14dMenu_DmapBg_cFv(); // 1
 extern "C" void deleteExplain__14dMenu_DmapBg_cFv(); // 1
 extern "C" void baseScreenInit__14dMenu_DmapBg_cFv(); // 1
 extern "C" void setFloorMessage__14dMenu_DmapBg_cFv(); // 1
-extern "C" void dpdMove__14dMenu_DmapBg_cFScScScPUcUc(); // 1
+extern "C" bool dpdMove__14dMenu_DmapBg_cFScScScPUcUc(); // 1
 extern "C" void __dt__14dMenu_DmapBg_cFv(); // 1
 extern "C" void setAllAlphaRate__14dMenu_DmapBg_cFfb(); // 1
 extern "C" void setGoldAnimation__14dMenu_DmapBg_cFb(); // 1
@@ -1262,14 +1262,9 @@ asm void dMenu_DmapBg_c::setFloorMessage() {
 
 
 /* 801BA0B4-801BA0BC 0008+00 s=1 e=0 z=0  None .text      dpdMove__14dMenu_DmapBg_cFScScScPUcUc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_DmapBg_c::dpdMove(s8 param_0, s8 param_1, s8 param_2, u8* param_3, u8 param_4) {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/dpdMove__14dMenu_DmapBg_cFScScScPUcUc.s"
+bool dMenu_DmapBg_c::dpdMove(s8 param_0, s8 param_1, s8 param_2, u8* param_3, u8 param_4) {
+	return false;
 }
-#pragma pop
 
 
 /* 801BA0BC-801BA60C 0550+00 s=2 e=0 z=0  None .text      __dt__14dMenu_DmapBg_cFv                                     */
@@ -1388,14 +1383,9 @@ asm void dMenu_DmapBg_c::update() {
 
 
 /* 801BB464-801BB468 0004+00 s=1 e=0 z=0  None .text      calcCursor__14dMenu_DmapBg_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_DmapBg_c::calcCursor() {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/calcCursor__14dMenu_DmapBg_cFv.s"
+void dMenu_DmapBg_c::calcCursor() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801BB468-801BB498 0030+00 s=1 e=0 z=0  None .text      drawCursor__14dMenu_DmapBg_cFv                               */
@@ -1909,14 +1899,9 @@ asm void dMenu_Dmap_c::mapMode_proc() {
 
 
 /* 801BFA84-801BFA88 0004+00 s=1 e=0 z=0  None .text      floorSelect_init_proc__12dMenu_Dmap_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Dmap_c::floorSelect_init_proc() {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/floorSelect_init_proc__12dMenu_Dmap_cFv.s"
+void dMenu_Dmap_c::floorSelect_init_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801BFA88-801BFC78 01F0+00 s=1 e=0 z=0  None .text      floorSelect_proc__12dMenu_Dmap_cFv                           */
@@ -1964,14 +1949,9 @@ asm void dMenu_Dmap_c::floorChange_proc() {
 
 
 /* 801BFF84-801BFF88 0004+00 s=1 e=0 z=0  None .text      zoomWait_init_proc__12dMenu_Dmap_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Dmap_c::zoomWait_init_proc() {
-	nofralloc
-#include "asm/d/menu/d_menu_dmap/zoomWait_init_proc__12dMenu_Dmap_cFv.s"
+void dMenu_Dmap_c::zoomWait_init_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801BFF88-801C008C 0104+00 s=1 e=0 z=0  None .text      zoomWait_proc__12dMenu_Dmap_cFv                              */

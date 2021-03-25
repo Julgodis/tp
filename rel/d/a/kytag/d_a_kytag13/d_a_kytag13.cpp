@@ -57,21 +57,21 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-static void daKytag13_Draw(kytag13_class*); // 2
+static bool daKytag13_Draw(kytag13_class*); // 2
 static void vectle_calc(DOUBLE_POS*, cXyz*); // 2
 static void daKytag13_Execute_standard(kytag13_class*); // 2
 static void daKytag13_Execute(kytag13_class*); // 2
-static void daKytag13_IsDelete(kytag13_class*); // 2
-static void daKytag13_Delete(kytag13_class*); // 2
+static bool daKytag13_IsDelete(kytag13_class*); // 2
+static bool daKytag13_Delete(kytag13_class*); // 2
 static void daKytag13_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daKytag13_Draw__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_Draw__FP13kytag13_class(); // 1
 extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz(); // 1
 extern "C" static void daKytag13_Execute_standard__FP13kytag13_class(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
 extern "C" static void daKytag13_Execute__FP13kytag13_class(); // 1
-extern "C" static void daKytag13_IsDelete__FP13kytag13_class(); // 1
-extern "C" static void daKytag13_Delete__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_IsDelete__FP13kytag13_class(); // 1
+extern "C" static bool daKytag13_Delete__FP13kytag13_class(); // 1
 extern "C" static void daKytag13_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_80860450(); // 1
 extern "C" static void func_80860458(); // 1
@@ -179,14 +179,9 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* 8085F1F8-8085F200 0008+00 s=1 e=0 z=0  None .text      daKytag13_Draw__FP13kytag13_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag13_Draw(kytag13_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Draw__FP13kytag13_class.s"
+static bool daKytag13_Draw(kytag13_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -436,25 +431,15 @@ asm static void daKytag13_Execute(kytag13_class* param_0) {
 
 
 /* 80860200-80860208 0008+00 s=1 e=0 z=0  None .text      daKytag13_IsDelete__FP13kytag13_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag13_IsDelete(kytag13_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_IsDelete__FP13kytag13_class.s"
+static bool daKytag13_IsDelete(kytag13_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80860208-80860210 0008+00 s=1 e=0 z=0  None .text      daKytag13_Delete__FP13kytag13_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag13_Delete(kytag13_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag13/d_a_kytag13/daKytag13_Delete__FP13kytag13_class.s"
+static bool daKytag13_Delete(kytag13_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80860210-80860450 0240+00 s=1 e=0 z=0  None .text      daKytag13_Create__FP10fopAc_ac_c                             */

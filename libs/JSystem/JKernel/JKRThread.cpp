@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct OSThread {
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
-};
-
-struct OSThread {
 };
 
 struct JKRThread {
@@ -31,16 +31,16 @@ struct JKRThread {
 	/* 802D18A4 */ void setCommon_heapSpecified(JKRHeap*, u32, int);
 	/* 802D1934 */ void start(void*);
 	/* 802D1960 */ void searchThread(OSThread*);
-	/* 802D1E14 */ void run();
+	/* 802D1E14 */ bool run();
+};
+
+struct JKRThreadName_ {
 };
 
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-};
-
-struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {
@@ -101,7 +101,7 @@ extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap(); // 1
 extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi(); // 1
 extern "C" void callback__15JKRThreadSwitchFP8OSThreadP8OSThread(); // 1
 extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole(); // 1
-extern "C" void run__9JKRThreadFv(); // 1
+extern "C" bool run__9JKRThreadFv(); // 1
 extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_(); // 1
 extern "C" void __dt__15JKRThreadSwitchFv(); // 1
 extern "C" void __sinit_JKRThread_cpp(); // 1
@@ -389,14 +389,9 @@ asm void JKRThreadSwitch::draw(JKRThreadName_* param_0, JUTConsole* param_1) {
 
 
 /* 802D1E14-802D1E1C 0008+00 s=1 e=0 z=0  None .text      run__9JKRThreadFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRThread::run() {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRThread/run__9JKRThreadFv.s"
+bool JKRThread::run() {
+	return false;
 }
-#pragma pop
 
 
 /* 802D1E1C-802D1E4C 0030+00 s=1 e=0 z=0  None .text      draw__15JKRThreadSwitchFP14JKRThreadName_                    */

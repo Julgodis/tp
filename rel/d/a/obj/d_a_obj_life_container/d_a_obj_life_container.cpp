@@ -41,7 +41,7 @@ struct daObjLife_c {
 	/* 804CCE00 */ void setEffect();
 	/* 804CCF5C */ void endEffect00();
 	/* 804CCFAC */ void endEffect02();
-	/* 804CCFD8 */ void __CreateHeap();
+	/* 804CCFD8 */ bool __CreateHeap();
 	/* 804CCFE0 */ void create();
 	/* 804CD428 */ void bg_check();
 	/* 804CD5B8 */ void actionWaitInit();
@@ -138,7 +138,7 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
+	/* 8014474C */ bool clothCreate();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144CC4 */ void settingBeforeDraw();
@@ -264,7 +264,7 @@ extern "C" void Create__11daObjLife_cFv(); // 1
 extern "C" void setEffect__11daObjLife_cFv(); // 1
 extern "C" void endEffect00__11daObjLife_cFv(); // 1
 extern "C" void endEffect02__11daObjLife_cFv(); // 1
-extern "C" void __CreateHeap__11daObjLife_cFv(); // 1
+extern "C" bool __CreateHeap__11daObjLife_cFv(); // 1
 extern "C" void create__11daObjLife_cFv(); // 1
 extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -380,7 +380,7 @@ extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
 extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
 extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
@@ -793,14 +793,9 @@ asm void daObjLife_c::endEffect02() {
 
 
 /* 804CCFD8-804CCFE0 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__11daObjLife_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLife_c::__CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/__CreateHeap__11daObjLife_cFv.s"
+bool daObjLife_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 804CCFE0-804CD258 0278+00 s=1 e=0 z=0  None .text      create__11daObjLife_cFv                                      */
@@ -815,14 +810,9 @@ asm void daObjLife_c::create() {
 
 
 /* 804CD258-804CD25C 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CD25C-804CD2A4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
@@ -1171,47 +1161,27 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 
 
 /* 804CE3B0-804CE3B4 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3B4-804CE3B8 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3B8-804CE3BC 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3BC-804CE3C0 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_life_container/d_a_obj_life_container/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CE3C0-804CE3DC 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<Uc>__FPUc                                     */

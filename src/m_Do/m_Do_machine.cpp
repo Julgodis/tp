@@ -463,14 +463,9 @@ asm static void fault_callback_scroll(u16 param_0, OSContext* param_1, u32 param
 
 
 /* 8000BCF4-8000BCF8 0004+00 s=1 e=0 z=0  None .text      my_PrintHeap__FPCcUl                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void my_PrintHeap(char const* param_0, u32 param_1) {
-	nofralloc
-#include "asm/m_Do/m_Do_machine/my_PrintHeap__FPCcUl.s"
+static void my_PrintHeap(char const* param_0, u32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8000BCF8-8000BD44 004C+00 s=1 e=0 z=0  None .text      my_SysPrintHeap__FPCcPvUl                                    */

@@ -78,14 +78,9 @@ extern "C" void CARDUnmount(); // 1
 // 
 
 /* 80352A30-80352A34 0004+00 s=0 e=5 z=0  None .text      __CARDDefaultApiCallback                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void __CARDDefaultApiCallback() {
-	nofralloc
-#include "asm/dolphin/card/CARDBios/__CARDDefaultApiCallback.s"
+extern "C" void __CARDDefaultApiCallback() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

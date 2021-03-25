@@ -169,7 +169,7 @@ static void daNpcFgd_Create(void*); // 2
 static void daNpcFgd_Delete(void*); // 2
 static void daNpcFgd_Execute(void*); // 2
 static void daNpcFgd_Draw(void*); // 2
-static void daNpcFgd_IsDelete(void*); // 2
+static bool daNpcFgd_IsDelete(void*); // 2
 
 extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
 extern "C" void initPosAngle__10daNpcFgd_cFR3Vecs(); // 1
@@ -181,7 +181,7 @@ extern "C" void __dt__10daNpcFgd_cFv(); // 1
 extern "C" static void daNpcFgd_Execute__FPv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" static void daNpcFgd_Draw__FPv(); // 1
-extern "C" static void daNpcFgd_IsDelete__FPv(); // 1
+extern "C" static bool daNpcFgd_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_809BAE70(); // 1
 extern "C" static void func_809BAE78(); // 1
@@ -549,14 +549,9 @@ asm static void daNpcFgd_Draw(void* param_0) {
 
 
 /* 809BAE20-809BAE28 0008+00 s=1 e=0 z=0  None .text      daNpcFgd_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcFgd_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_fguard/d_a_npc_fguard/daNpcFgd_IsDelete__FPv.s"
+static bool daNpcFgd_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809BAE28-809BAE70 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

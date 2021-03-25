@@ -21,7 +21,7 @@ struct daTagAtkItem_c {
 	/* 805A2D34 */ void eventEnd();
 	/* 805A2D58 */ void checkHit();
 	/* 805A2F54 */ void createItem();
-	/* 805A3038 */ void _delete();
+	/* 805A3038 */ bool _delete();
 	/* 805A3118 */ ~daTagAtkItem_c();
 };
 
@@ -48,9 +48,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 805A30A0 */ ~dEvLib_callback_c();
-	/* 805A30E8 */ void eventRun();
-	/* 805A30F0 */ void eventStart();
-	/* 805A30F8 */ void eventEnd();
+	/* 805A30E8 */ bool eventRun();
+	/* 805A30F0 */ bool eventStart();
+	/* 805A30F8 */ bool eventEnd();
 };
 
 struct cCcD_GStts {
@@ -116,14 +116,14 @@ extern "C" void eventStart__14daTagAtkItem_cFv(); // 1
 extern "C" void eventEnd__14daTagAtkItem_cFv(); // 1
 extern "C" void checkHit__14daTagAtkItem_cFv(); // 1
 extern "C" void createItem__14daTagAtkItem_cFv(); // 1
-extern "C" void _delete__14daTagAtkItem_cFv(); // 1
+extern "C" bool _delete__14daTagAtkItem_cFv(); // 1
 extern "C" static void daTagAtkItem_Execute__FP14daTagAtkItem_c(); // 1
 extern "C" static void daTagAtkItem_Delete__FP14daTagAtkItem_c(); // 1
 extern "C" static void daTagAtkItem_Create__FP14daTagAtkItem_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" static void func_805A3100(); // 1
 extern "C" static void func_805A3108(); // 1
 extern "C" static void func_805A3110(); // 1
@@ -442,14 +442,9 @@ asm void daTagAtkItem_c::createItem() {
 
 
 /* 805A3038-805A3040 0008+00 s=1 e=0 z=0  None .text      _delete__14daTagAtkItem_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagAtkItem_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/_delete__14daTagAtkItem_cFv.s"
+bool daTagAtkItem_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A3040-805A3060 0020+00 s=1 e=0 z=0  None .text      daTagAtkItem_Execute__FP14daTagAtkItem_c                     */
@@ -497,36 +492,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 805A30E8-805A30F0 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A30F0-805A30F8 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A30F8-805A3100 0008+00 s=1 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attack_item/d_a_tag_attack_item/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A3100-805A3108 0008+00 s=1 e=0 z=0  None .text      @1384@eventEnd__14daTagAtkItem_cFv                           */

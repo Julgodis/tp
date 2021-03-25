@@ -59,10 +59,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -73,7 +73,7 @@ struct mDoExt_btpAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -82,7 +82,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -300,7 +300,7 @@ static void demo_camera(e_mk_class*); // 2
 static void action(e_mk_class*); // 2
 static void anm_se_set(e_mk_class*); // 2
 static void daE_MK_Execute(e_mk_class*); // 2
-static void daE_MK_IsDelete(e_mk_class*); // 2
+static bool daE_MK_IsDelete(e_mk_class*); // 2
 static void daE_MK_Delete(e_mk_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_MK_Create(fopAc_ac_c*); // 2
@@ -337,7 +337,7 @@ extern "C" static void demo_camera__FP10e_mk_class(); // 1
 extern "C" static void action__FP10e_mk_class(); // 1
 extern "C" static void anm_se_set__FP10e_mk_class(); // 1
 extern "C" static void daE_MK_Execute__FP10e_mk_class(); // 1
-extern "C" static void daE_MK_IsDelete__FP10e_mk_class(); // 1
+extern "C" static bool daE_MK_IsDelete__FP10e_mk_class(); // 1
 extern "C" static void daE_MK_Delete__FP10e_mk_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1898,14 +1898,9 @@ asm static void daE_MK_Execute(e_mk_class* param_0) {
 
 
 /* 8071B9C4-8071B9CC 0008+00 s=1 e=0 z=0  None .text      daE_MK_IsDelete__FP10e_mk_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MK_IsDelete(e_mk_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mk/d_a_e_mk/daE_MK_IsDelete__FP10e_mk_class.s"
+static bool daE_MK_IsDelete(e_mk_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8071B9CC-8071BA34 0068+00 s=1 e=0 z=0  None .text      daE_MK_Delete__FP10e_mk_class                                */

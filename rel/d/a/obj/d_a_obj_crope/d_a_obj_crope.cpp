@@ -66,10 +66,10 @@ struct cCcD_GStts {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -374,14 +374,9 @@ asm void daObjCrope_c::create() {
 
 
 /* 80BCD3D8-80BCD3DC 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BCD3DC-80BCD424 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

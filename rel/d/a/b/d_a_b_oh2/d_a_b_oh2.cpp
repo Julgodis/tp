@@ -71,19 +71,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -125,7 +125,7 @@ static void daB_OH2_Draw(b_oh2_class*); // 2
 static void dmcalc(b_oh2_class*); // 2
 static void action(b_oh2_class*); // 2
 static void daB_OH2_Execute(b_oh2_class*); // 2
-static void daB_OH2_IsDelete(b_oh2_class*); // 2
+static bool daB_OH2_IsDelete(b_oh2_class*); // 2
 static void daB_OH2_Delete(b_oh2_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_OH2_Create(fopAc_ac_c*); // 2
@@ -136,7 +136,7 @@ extern "C" static void dmcalc__FP11b_oh2_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void action__FP11b_oh2_class(); // 1
 extern "C" static void daB_OH2_Execute__FP11b_oh2_class(); // 1
-extern "C" static void daB_OH2_IsDelete__FP11b_oh2_class(); // 1
+extern "C" static bool daB_OH2_IsDelete__FP11b_oh2_class(); // 1
 extern "C" static void daB_OH2_Delete__FP11b_oh2_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -358,14 +358,9 @@ asm static void daB_OH2_Execute(b_oh2_class* param_0) {
 
 
 /* 8061E4E8-8061E4F0 0008+00 s=1 e=0 z=0  None .text      daB_OH2_IsDelete__FP11b_oh2_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_OH2_IsDelete(b_oh2_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/daB_OH2_IsDelete__FP11b_oh2_class.s"
+static bool daB_OH2_IsDelete(b_oh2_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -483,24 +478,14 @@ asm csXyz::~csXyz() {
 
 
 /* 8061EA28-8061EA2C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061EA2C-8061EA30 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh2/d_a_b_oh2/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 

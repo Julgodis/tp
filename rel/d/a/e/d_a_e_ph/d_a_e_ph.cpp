@@ -16,13 +16,13 @@ struct daE_PH_HIO_c {
 	/* 80741B4C */ ~daE_PH_HIO_c();
 };
 
-struct J3DJoint {
+struct cXyz {
 };
 
 struct J3DModel {
 };
 
-struct cXyz {
+struct J3DJoint {
 };
 
 struct daE_PH_c {
@@ -94,19 +94,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -263,7 +263,7 @@ static void daE_PH_Create(fopAc_ac_c*); // 2
 static void daE_PH_Delete(daE_PH_c*); // 2
 static void daE_PH_Draw(daE_PH_c*); // 2
 static void daE_PH_Execute(daE_PH_c*); // 2
-static void daE_PH_IsDelete(daE_PH_c*); // 2
+static bool daE_PH_IsDelete(daE_PH_c*); // 2
 
 extern "C" void __ct__12daE_PH_HIO_cFv(); // 1
 extern "C" void initCcSph__8daE_PH_cFv(); // 1
@@ -316,7 +316,7 @@ extern "C" void create__8daE_PH_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daE_PH_IsDelete__FP8daE_PH_c(); // 1
+extern "C" static bool daE_PH_IsDelete__FP8daE_PH_c(); // 1
 extern "C" void __dt__12daE_PH_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_ph_cpp(); // 1
 extern "C" static void func_80741BD0(); // 1
@@ -1307,14 +1307,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80741B44-80741B4C 0008+00 s=1 e=0 z=0  None .text      daE_PH_IsDelete__FP8daE_PH_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_PH_IsDelete(daE_PH_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ph/d_a_e_ph/daE_PH_IsDelete__FP8daE_PH_c.s"
+static bool daE_PH_IsDelete(daE_PH_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80741B4C-80741B94 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_PH_HIO_cFv                                       */

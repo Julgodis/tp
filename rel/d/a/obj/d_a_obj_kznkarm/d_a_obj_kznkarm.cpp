@@ -147,7 +147,7 @@ struct daObjKazeNeko_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjKznkarm_Draw(daObjKznkarm_c*); // 2
 static void daObjKznkarm_Execute(daObjKznkarm_c*); // 2
-static void daObjKznkarm_IsDelete(daObjKznkarm_c*); // 2
+static bool daObjKznkarm_IsDelete(daObjKznkarm_c*); // 2
 static void daObjKznkarm_Delete(daObjKznkarm_c*); // 2
 static void daObjKznkarm_Create(fopAc_ac_c*); // 2
 
@@ -170,7 +170,7 @@ extern "C" void getGroundSlope__14daObjKznkarm_cFs(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjKznkarm_Draw__FP14daObjKznkarm_c(); // 1
 extern "C" static void daObjKznkarm_Execute__FP14daObjKznkarm_c(); // 1
-extern "C" static void daObjKznkarm_IsDelete__FP14daObjKznkarm_c(); // 1
+extern "C" static bool daObjKznkarm_IsDelete__FP14daObjKznkarm_c(); // 1
 extern "C" static void daObjKznkarm_Delete__FP14daObjKznkarm_c(); // 1
 extern "C" static void daObjKznkarm_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
@@ -697,14 +697,9 @@ asm static void daObjKznkarm_Execute(daObjKznkarm_c* param_0) {
 
 
 /* 80C509A8-80C509B0 0008+00 s=1 e=0 z=0  None .text      daObjKznkarm_IsDelete__FP14daObjKznkarm_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKznkarm_IsDelete(daObjKznkarm_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kznkarm/d_a_obj_kznkarm/daObjKznkarm_IsDelete__FP14daObjKznkarm_c.s"
+static bool daObjKznkarm_IsDelete(daObjKznkarm_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C509B0-80C50A5C 00AC+00 s=1 e=0 z=0  None .text      daObjKznkarm_Delete__FP14daObjKznkarm_c                      */

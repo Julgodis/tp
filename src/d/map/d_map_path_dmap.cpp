@@ -57,7 +57,7 @@ struct dDrawPath_c {
 	struct poly_class {
 	};
 
-	/* 8002ABF0 */ void isDrawType(int);
+	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
@@ -107,7 +107,7 @@ struct renderingDAmap_c {
 	/* 80040134 */ void getFirstRoomPointer();
 	/* 800401E8 */ void getNextRoomPointer();
 	/* 800402C0 */ void isDrawPath();
-	/* 800402E0 */ void getFirstDrawLayerNo();
+	/* 800402E0 */ bool getFirstDrawLayerNo();
 	/* 800402E8 */ void getNextDrawLayerNo(int);
 	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
 	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
@@ -231,7 +231,7 @@ extern "C" void getNextDrawRoomNo__16renderingDAmap_cFi(); // 1
 extern "C" void getFirstRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void getNextRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void isDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" void getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
+extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
 extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi(); // 1
 extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv(); // 1
 extern "C" void afterDrawPath__19renderingPlusDoor_cFv(); // 1
@@ -288,7 +288,7 @@ extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
 extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
 extern "C" void dStage_GetKeepDoorInfo__Fv(); // 1
 extern "C" void dStage_GetRoomKeepDoorInfo__Fv(); // 1
-extern "C" void isDrawType__11dDrawPath_cFi(); // 1
+extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
 extern "C" void getLineColor__11dDrawPath_cFii(); // 1
 extern "C" void __dt__28renderingPlusDoorAndCursor_cFv(); // 1
 extern "C" void __dt__19renderingPlusDoor_cFv(); // 1
@@ -600,14 +600,9 @@ asm void dMapInfo_c::create() {
 
 
 /* 8003F754-8003F758 0004+00 s=1 e=0 z=0  None .text      remove__10dMapInfo_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMapInfo_c::remove() {
-	nofralloc
-#include "asm/d/map/d_map_path_dmap/remove__10dMapInfo_cFv.s"
+void dMapInfo_c::remove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -839,14 +834,9 @@ asm void renderingDAmap_c::isRenderingFloor(int param_0) {
 
 
 /* 8003FE6C-8003FE70 0004+00 s=2 e=0 z=0  None .text      setSingleRoomSetting__16renderingDAmap_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingDAmap_c::setSingleRoomSetting() {
-	nofralloc
-#include "asm/d/map/d_map_path_dmap/setSingleRoomSetting__16renderingDAmap_cFv.s"
+void renderingDAmap_c::setSingleRoomSetting() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8003FE70-8003FF14 00A4+00 s=3 e=3 z=0  None .text      isDrawRoom__16renderingDAmap_cCFii                           */
@@ -959,14 +949,9 @@ asm void renderingDAmap_c::isDrawPath() {
 
 
 /* 800402E0-800402E8 0008+00 s=3 e=3 z=0  None .text      getFirstDrawLayerNo__16renderingDAmap_cFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingDAmap_c::getFirstDrawLayerNo() {
-	nofralloc
-#include "asm/d/map/d_map_path_dmap/getFirstDrawLayerNo__16renderingDAmap_cFv.s"
+bool renderingDAmap_c::getFirstDrawLayerNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 800402E8-800402FC 0014+00 s=3 e=3 z=0  None .text      getNextDrawLayerNo__16renderingDAmap_cFi                     */
@@ -1364,14 +1349,9 @@ asm void renderingPlusDoorAndCursor_c::drawCursor(Vec const& param_0, s16 param_
 
 
 /* 8004145C-80041460 0004+00 s=2 e=0 z=0  None .text      beforeDrawPath__19renderingPlusDoor_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingPlusDoor_c::beforeDrawPath() {
-	nofralloc
-#include "asm/d/map/d_map_path_dmap/beforeDrawPath__19renderingPlusDoor_cFv.s"
+void renderingPlusDoor_c::beforeDrawPath() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80041460-80041480 0020+00 s=0 e=1 z=0  None .text      __sinit_d_map_path_dmap_cpp                                  */

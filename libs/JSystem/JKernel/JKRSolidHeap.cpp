@@ -15,7 +15,7 @@ struct JKRHeap {
 	struct TState {
 	};
 
-	/* 800065D8 */ void dump_sort();
+	/* 800065D8 */ bool dump_sort();
 	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
 	/* 802CE264 */ ~JKRHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -28,8 +28,8 @@ struct JKRHeap {
 	/* 802CEAA0 */ void dispose(void*, void*);
 	/* 802CEAC0 */ void dispose();
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
-	/* 802CEDA4 */ void do_changeGroupID(u8);
-	/* 802CEDAC */ void do_getCurrentGroupId();
+	/* 802CEDA4 */ bool do_changeGroupID(u8);
+	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
 struct JKRSolidHeap {
@@ -92,7 +92,7 @@ extern "C" extern char const* const JKRSolidHeap__stringBase0;
 
 void operator delete(void*); // 2
 
-extern "C" void dump_sort__7JKRHeapFv(); // 1
+extern "C" bool dump_sort__7JKRHeapFv(); // 1
 extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb(); // 1
 extern "C" void __dt__7JKRHeapFv(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
@@ -106,8 +106,8 @@ extern "C" void dispose__7JKRHeapFPvPv(); // 1
 extern "C" void dispose__7JKRHeapFv(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
-extern "C" void do_changeGroupID__7JKRHeapFUc(); // 1
-extern "C" void do_getCurrentGroupId__7JKRHeapFv(); // 1
+extern "C" bool do_changeGroupID__7JKRHeapFUc(); // 1
+extern "C" bool do_getCurrentGroupId__7JKRHeapFv(); // 1
 extern "C" void JUTReportConsole_f(); // 1
 extern "C" void JUTWarningConsole_f(); // 1
 extern "C" void OSLockMutex(); // 1
@@ -298,14 +298,9 @@ asm void JKRSolidHeap::do_freeTail() {
 
 
 /* 802D1000-802D1004 0004+00 s=1 e=0 z=0  None .text      do_fillFreeArea__12JKRSolidHeapFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRSolidHeap::do_fillFreeArea() {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRSolidHeap/do_fillFreeArea__12JKRSolidHeapFv.s"
+void JKRSolidHeap::do_fillFreeArea() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802D1004-802D1038 0034+00 s=1 e=0 z=0  None .text      do_resize__12JKRSolidHeapFPvUl                               */

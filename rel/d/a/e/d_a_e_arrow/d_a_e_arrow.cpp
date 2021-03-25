@@ -81,13 +81,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -229,7 +229,7 @@ static void e_arrow_shield(e_arrow_class*); // 2
 static void e_arrow_demo_bound(e_arrow_class*); // 2
 static void action(e_arrow_class*); // 2
 static void daE_ARROW_Execute(e_arrow_class*); // 2
-static void daE_ARROW_IsDelete(e_arrow_class*); // 2
+static bool daE_ARROW_IsDelete(e_arrow_class*); // 2
 static void daE_ARROW_Delete(e_arrow_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_ARROW_Create(fopAc_ac_c*); // 2
@@ -249,7 +249,7 @@ extern "C" static void e_arrow_shield__FP13e_arrow_class(); // 1
 extern "C" static void e_arrow_demo_bound__FP13e_arrow_class(); // 1
 extern "C" static void action__FP13e_arrow_class(); // 1
 extern "C" static void daE_ARROW_Execute__FP13e_arrow_class(); // 1
-extern "C" static void daE_ARROW_IsDelete__FP13e_arrow_class(); // 1
+extern "C" static bool daE_ARROW_IsDelete__FP13e_arrow_class(); // 1
 extern "C" static void daE_ARROW_Delete__FP13e_arrow_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_ARROW_Create__FP10fopAc_ac_c(); // 1
@@ -988,14 +988,9 @@ asm static void daE_ARROW_Execute(e_arrow_class* param_0) {
 
 
 /* 8067E304-8067E30C 0008+00 s=1 e=0 z=0  None .text      daE_ARROW_IsDelete__FP13e_arrow_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_ARROW_IsDelete(e_arrow_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_arrow/d_a_e_arrow/daE_ARROW_IsDelete__FP13e_arrow_class.s"
+static bool daE_ARROW_IsDelete(e_arrow_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8067E30C-8067E374 0068+00 s=1 e=0 z=0  None .text      daE_ARROW_Delete__FP13e_arrow_class                          */

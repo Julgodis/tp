@@ -167,7 +167,7 @@ static void chain_control_00(obj_key_class*); // 2
 void chain_control_01(obj_key_class*); // 2
 static void action(obj_key_class*); // 2
 static void daObj_Key_Execute(obj_key_class*); // 2
-static void daObj_Key_IsDelete(obj_key_class*); // 2
+static bool daObj_Key_IsDelete(obj_key_class*); // 2
 static void daObj_Key_Delete(obj_key_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Key_Create(fopAc_ac_c*); // 2
@@ -183,7 +183,7 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void chain_control_01__FP13obj_key_class(); // 1
 extern "C" static void action__FP13obj_key_class(); // 1
 extern "C" static void daObj_Key_Execute__FP13obj_key_class(); // 1
-extern "C" static void daObj_Key_IsDelete__FP13obj_key_class(); // 1
+extern "C" static bool daObj_Key_IsDelete__FP13obj_key_class(); // 1
 extern "C" static void daObj_Key_Delete__FP13obj_key_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Key_Create__FP10fopAc_ac_c(); // 1
@@ -595,14 +595,9 @@ asm static void daObj_Key_Execute(obj_key_class* param_0) {
 
 
 /* 80C4093C-80C40944 0008+00 s=1 e=0 z=0  None .text      daObj_Key_IsDelete__FP13obj_key_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Key_IsDelete(obj_key_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_IsDelete__FP13obj_key_class.s"
+static bool daObj_Key_IsDelete(obj_key_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -763,25 +758,15 @@ asm csXyz::~csXyz() {
 
 
 /* 80C40F20-80C40F24 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C40F24-80C40F28 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C40F28-80C40F70 0048+00 s=2 e=0 z=0  None .text      __dt__15daObj_Key_HIO_cFv                                    */

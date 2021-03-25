@@ -155,13 +155,13 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
-};
-
 struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -188,19 +188,19 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -407,7 +407,7 @@ struct daE_FZ_c {
 static void daB_YO_Draw(daB_YO_c*); // 2
 static void s_frizad_delete(void*, void*); // 2
 static void daB_YO_Execute(daB_YO_c*); // 2
-static void daB_YO_IsDelete(daB_YO_c*); // 2
+static bool daB_YO_IsDelete(daB_YO_c*); // 2
 static void daB_YO_Delete(daB_YO_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void useHeapInit2(fopAc_ac_c*); // 2
@@ -460,7 +460,7 @@ extern "C" void mtx_set__8daB_YO_cFv(); // 1
 extern "C" void cc_set__8daB_YO_cFv(); // 1
 extern "C" void execute__8daB_YO_cFv(); // 1
 extern "C" static void daB_YO_Execute__FP8daB_YO_c(); // 1
-extern "C" static void daB_YO_IsDelete__FP8daB_YO_c(); // 1
+extern "C" static bool daB_YO_IsDelete__FP8daB_YO_c(); // 1
 extern "C" void _delete__8daB_YO_cFv(); // 1
 extern "C" static void daB_YO_Delete__FP8daB_YO_c(); // 1
 extern "C" void CreateHeap__8daB_YO_cFv(); // 1
@@ -2256,14 +2256,9 @@ asm static void daB_YO_Execute(daB_YO_c* param_0) {
 
 
 /* 80637FC0-80637FC8 0008+00 s=1 e=0 z=0  None .text      daB_YO_IsDelete__FP8daB_YO_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_YO_IsDelete(daB_YO_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_yo/d_a_b_yo/daB_YO_IsDelete__FP8daB_YO_c.s"
+static bool daB_YO_IsDelete(daB_YO_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80637FC8-806380D8 0110+00 s=1 e=0 z=0  None .text      _delete__8daB_YO_cFv                                         */
@@ -2443,14 +2438,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80639578-8063957C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_yo/d_a_b_yo/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8063957C-8063959C 0020+00 s=1 e=0 z=0  None .text      daB_YO_Create__FP8daB_YO_c                                   */

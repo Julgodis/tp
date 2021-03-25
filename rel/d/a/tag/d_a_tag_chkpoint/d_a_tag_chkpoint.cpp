@@ -35,16 +35,16 @@ struct daPy_py_c {
 // Forward References:
 // 
 
-static void daTag_Chk_Draw(daTag_Chk_c*); // 2
+static bool daTag_Chk_Draw(daTag_Chk_c*); // 2
 static void daTag_Chk_Execute(daTag_Chk_c*); // 2
-static void daTag_Chk_IsDelete(daTag_Chk_c*); // 2
+static bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
 static void daTag_Chk_Delete(daTag_Chk_c*); // 2
 static void daTag_Chk_Create(fopAc_ac_c*); // 2
 
 extern "C" void execute__11daTag_Chk_cFv(); // 1
-extern "C" static void daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
+extern "C" static bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
 extern "C" static void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
+extern "C" static bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
 extern "C" static void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
 extern "C" static void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u8 const lit_3843[4];
@@ -99,14 +99,9 @@ asm void daTag_Chk_c::execute() {
 
 
 /* 8048A9EC-8048A9F4 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Chk_Draw(daTag_Chk_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Draw__FP11daTag_Chk_c.s"
+static bool daTag_Chk_Draw(daTag_Chk_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A9F4-8048AA18 0024+00 s=1 e=0 z=0  None .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
@@ -121,14 +116,9 @@ asm static void daTag_Chk_Execute(daTag_Chk_c* param_0) {
 
 
 /* 8048AA18-8048AA20 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_IsDelete__FP11daTag_Chk_c.s"
+static bool daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048AA20-8048AA50 0030+00 s=1 e=0 z=0  None .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */

@@ -16,12 +16,6 @@ struct daB_MGN_HIO_c {
 	/* 8060F8D0 */ ~daB_MGN_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -30,6 +24,12 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 8060F864 */ cXyz();
 	/* 8060FD78 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daB_MGN_c {
@@ -177,10 +177,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -198,19 +198,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -251,10 +251,10 @@ struct dEvt_control_c {
 	/* 800429A8 */ void onSkipFade();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -389,7 +389,7 @@ struct daObjBHASHI_c {
 static void daB_MGN_Draw(daB_MGN_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void daB_MGN_Execute(daB_MGN_c*); // 2
-static void daB_MGN_IsDelete(daB_MGN_c*); // 2
+static bool daB_MGN_IsDelete(daB_MGN_c*); // 2
 static void daB_MGN_Delete(daB_MGN_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_MGN_Create(daB_MGN_c*); // 2
@@ -453,7 +453,7 @@ extern "C" void mtx_set__9daB_MGN_cFv(); // 1
 extern "C" void cc_set__9daB_MGN_cFv(); // 1
 extern "C" void execute__9daB_MGN_cFv(); // 1
 extern "C" static void daB_MGN_Execute__FP9daB_MGN_c(); // 1
-extern "C" static void daB_MGN_IsDelete__FP9daB_MGN_c(); // 1
+extern "C" static bool daB_MGN_IsDelete__FP9daB_MGN_c(); // 1
 extern "C" void _delete__9daB_MGN_cFv(); // 1
 extern "C" static void daB_MGN_Delete__FP9daB_MGN_c(); // 1
 extern "C" void CreateHeap__9daB_MGN_cFv(); // 1
@@ -2196,14 +2196,9 @@ asm static void daB_MGN_Execute(daB_MGN_c* param_0) {
 
 
 /* 8060EA30-8060EA38 0008+00 s=1 e=0 z=0  None .text      daB_MGN_IsDelete__FP9daB_MGN_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_MGN_IsDelete(daB_MGN_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_mgn/d_a_b_mgn/daB_MGN_IsDelete__FP9daB_MGN_c.s"
+static bool daB_MGN_IsDelete(daB_MGN_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8060EA38-8060EAC0 0088+00 s=1 e=0 z=0  None .text      _delete__9daB_MGN_cFv                                        */
@@ -2350,14 +2345,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 8060F864-8060F868 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_mgn/d_a_b_mgn/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8060F868-8060F888 0020+00 s=1 e=0 z=0  None .text      daB_MGN_Create__FP9daB_MGN_c                                 */

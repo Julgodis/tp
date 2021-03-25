@@ -55,13 +55,13 @@ struct dCamera_c {
 // Forward References:
 // 
 
-static void daTag_Cam_Draw(daTag_Cam_c*); // 2
+static bool daTag_Cam_Draw(daTag_Cam_c*); // 2
 static void daTag_Cam_Execute(daTag_Cam_c*); // 2
-static void daTag_Cam_IsDelete(daTag_Cam_c*); // 2
+static bool daTag_Cam_IsDelete(daTag_Cam_c*); // 2
 static void daTag_Cam_Delete(daTag_Cam_c*); // 2
 static void daTag_Cam_Create(fopAc_ac_c*); // 2
 
-extern "C" static void func_80489A98(); // 1
+extern "C" static bool func_80489A98(); // 1
 extern "C" static void func_80489AA0(); // 1
 extern "C" static void func_80489B18(); // 1
 extern "C" static void func_80489B2C(); // 1
@@ -92,9 +92,9 @@ extern "C" void getRailID__11daTag_Cam_cFv(); // 1
 extern "C" void getAreaType__11daTag_Cam_cFv(); // 1
 extern "C" void getAreaNoChk__11daTag_Cam_cFv(); // 1
 extern "C" void execute__11daTag_Cam_cFv(); // 1
-extern "C" static void daTag_Cam_Draw__FP11daTag_Cam_c(); // 1
+extern "C" static bool daTag_Cam_Draw__FP11daTag_Cam_c(); // 1
 extern "C" static void daTag_Cam_Execute__FP11daTag_Cam_c(); // 1
-extern "C" static void daTag_Cam_IsDelete__FP11daTag_Cam_c(); // 1
+extern "C" static bool daTag_Cam_IsDelete__FP11daTag_Cam_c(); // 1
 extern "C" static void daTag_Cam_Delete__FP11daTag_Cam_c(); // 1
 extern "C" static void daTag_Cam_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* const lit_4358[22];
@@ -138,14 +138,9 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* 80489A98-80489AA0 0008+00 s=1 e=0 z=0  None .text      always_true__28@unnamed@d_a_tag_camera_cpp@Fv                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_80489A98() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/func_80489A98.s"
+extern "C" static bool func_80489A98() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -489,14 +484,9 @@ asm void daTag_Cam_c::execute() {
 
 
 /* 8048A378-8048A380 0008+00 s=1 e=0 z=0  None .text      daTag_Cam_Draw__FP11daTag_Cam_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Cam_Draw(daTag_Cam_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_Draw__FP11daTag_Cam_c.s"
+static bool daTag_Cam_Draw(daTag_Cam_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A380-8048A3A4 0024+00 s=1 e=0 z=0  None .text      daTag_Cam_Execute__FP11daTag_Cam_c                           */
@@ -511,14 +501,9 @@ asm static void daTag_Cam_Execute(daTag_Cam_c* param_0) {
 
 
 /* 8048A3A4-8048A3AC 0008+00 s=1 e=0 z=0  None .text      daTag_Cam_IsDelete__FP11daTag_Cam_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Cam_IsDelete(daTag_Cam_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_camera/d_a_tag_camera/daTag_Cam_IsDelete__FP11daTag_Cam_c.s"
+static bool daTag_Cam_IsDelete(daTag_Cam_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048A3AC-8048A3DC 0030+00 s=1 e=0 z=0  None .text      daTag_Cam_Delete__FP11daTag_Cam_c                            */

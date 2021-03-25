@@ -16,7 +16,10 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
-struct J2DPane {
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DAnmTransformKey {
@@ -26,10 +29,7 @@ struct J2DAnmTransformKey {
 struct JKRArchive {
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmColor {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -56,6 +56,9 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -64,9 +67,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {

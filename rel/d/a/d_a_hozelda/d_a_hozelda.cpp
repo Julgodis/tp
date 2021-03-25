@@ -82,8 +82,8 @@ struct J3DMtxCalc {
 	/* 808464F4 */ ~J3DMtxCalc();
 	/* 80848CB8 */ void setAnmTransform(u8, J3DAnmTransform*);
 	/* 80848CBC */ void setAnmTransform(J3DAnmTransform*);
-	/* 80848CC0 */ void getAnmTransform(u8);
-	/* 80848CC8 */ void getAnmTransform();
+	/* 80848CC0 */ bool getAnmTransform(u8);
+	/* 80848CC8 */ bool getAnmTransform();
 	/* 80848CD0 */ void setWeight(u8, f32);
 	/* 80848CD4 */ void getWeight(u8) const;
 };
@@ -148,11 +148,11 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -313,8 +313,8 @@ extern "C" static void daHoZelda_Draw__FP11daHoZelda_c(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform(); // 1
-extern "C" void getAnmTransform__10J3DMtxCalcFUc(); // 1
-extern "C" void getAnmTransform__10J3DMtxCalcFv(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFUc(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFv(); // 1
 extern "C" void setWeight__10J3DMtxCalcFUcf(); // 1
 extern "C" void getWeight__10J3DMtxCalcCFUc(); // 1
 extern "C" void func_80848CE0(); // 1
@@ -1270,58 +1270,33 @@ asm void J3DTexNoAnm::calc(u16* param_0) const {
 
 
 /* 80848CB8-80848CBC 0004+00 s=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setAnmTransform(u8 param_0, J3DAnmTransform* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(u8 param_0, J3DAnmTransform* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80848CBC-80848CC0 0004+00 s=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setAnmTransform(J3DAnmTransform* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(J3DAnmTransform* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80848CC0-80848CC8 0008+00 s=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::getAnmTransform(u8 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/getAnmTransform__10J3DMtxCalcFUc.s"
+bool J3DMtxCalc::getAnmTransform(u8 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80848CC8-80848CD0 0008+00 s=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::getAnmTransform() {
-	nofralloc
-#include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/getAnmTransform__10J3DMtxCalcFv.s"
+bool J3DMtxCalc::getAnmTransform() {
+	return false;
 }
-#pragma pop
 
 
 /* 80848CD0-80848CD4 0004+00 s=3 e=0 z=0  None .text      setWeight__10J3DMtxCalcFUcf                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setWeight(u8 param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hozelda/d_a_hozelda/setWeight__10J3DMtxCalcFUcf.s"
+void J3DMtxCalc::setWeight(u8 param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80848CD4-80848CE0 000C+00 s=3 e=0 z=0  None .text      getWeight__10J3DMtxCalcCFUc                                  */

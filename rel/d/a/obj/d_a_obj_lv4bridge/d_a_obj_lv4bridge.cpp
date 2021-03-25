@@ -35,9 +35,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80C63064 */ ~dEvLib_callback_c();
-	/* 80C630AC */ void eventStart();
-	/* 80C630B4 */ void eventRun();
-	/* 80C630BC */ void eventEnd();
+	/* 80C630AC */ bool eventStart();
+	/* 80C630B4 */ bool eventRun();
+	/* 80C630BC */ bool eventEnd();
 };
 
 struct cXyz {
@@ -89,9 +89,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -146,9 +146,9 @@ extern "C" static void daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c(); // 1
 extern "C" static void daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c(); // 1
 extern "C" static void daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__13daObjLv4Brg_cFv(); // 1
 extern "C" static void func_80C63158(); // 1
 extern "C" static void func_80C63160(); // 1
@@ -188,9 +188,9 @@ extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
 extern "C" void StopQuake__12dVibration_cFi(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -432,14 +432,9 @@ asm void daObjLv4Brg_c::mode_init_dead() {
 
 
 /* 80C62E30-80C62E34 0004+00 s=1 e=0 z=0  None .text      mode_dead__13daObjLv4Brg_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLv4Brg_c::mode_dead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/mode_dead__13daObjLv4Brg_cFv.s"
+void daObjLv4Brg_c::mode_dead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C62E34-80C62EA0 006C+00 s=2 e=0 z=0  None .text      eventStart__13daObjLv4Brg_cFv                                */
@@ -592,36 +587,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80C630AC-80C630B4 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630B4-80C630BC 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630BC-80C630C4 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C630C4-80C63158 0094+00 s=2 e=0 z=0  None .text      __dt__13daObjLv4Brg_cFv                                      */

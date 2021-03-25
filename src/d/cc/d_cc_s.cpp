@@ -11,20 +11,29 @@
 // Types:
 // 
 
+struct cXyz {
+};
+
 struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
+};
+
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
+};
+
+struct csXyz {
+};
+
+struct fopAc_ac_c {
 };
 
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-struct cXyz {
-};
-
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(int);
+struct cCcD_GStts {
 };
 
 struct cCcD_ShapeAttr {
@@ -33,19 +42,10 @@ struct cCcD_ShapeAttr {
 
 };
 
-struct cCcD_GObjInf {
-};
-
-struct fopAc_ac_c {
-};
-
 struct dCcD_GStts {
 };
 
-struct cCcD_GStts {
-};
-
-struct csXyz {
+struct cCcD_GObjInf {
 };
 
 struct dCcS {
@@ -58,7 +58,7 @@ struct dCcS {
 	/* 800861B4 */ void ChkAtTgHitAfterCross(bool, bool, cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
 	/* 80086240 */ void SetCoGObjInf(bool, bool, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
 	/* 80086360 */ void GetRank(u8);
-	/* 80086404 */ void ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*);
+	/* 80086404 */ bool ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*);
 	/* 8008640C */ void SetPosCorrect(cCcD_Obj*, cXyz*, cCcD_Obj*, cXyz*, f32);
 	/* 80086754 */ void CalcParticleAngle(dCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, csXyz*);
 	/* 8008685C */ void ProcAtTgHitmark(bool, bool, cCcD_Obj*, cCcD_Obj*, dCcD_GObjInf*, dCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, dCcD_GStts*, dCcD_GStts*, cXyz*, bool);
@@ -154,7 +154,7 @@ extern "C" void CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts(
 extern "C" void ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
 extern "C" void SetCoGObjInf__4dCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
 extern "C" void GetRank__4dCcSFUc(); // 1
-extern "C" void ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" bool ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
 extern "C" void SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
 extern "C" void CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csXyz(); // 1
 extern "C" void ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10dCcD_GSttsP10dCcD_GSttsP4cXyzb(); // 1
@@ -293,14 +293,9 @@ asm void dCcS::ChkShield(cCcD_Obj* param_0, cCcD_Obj* param_1, dCcD_GObjInf* par
 
 
 /* 800861B0-800861B4 0004+00 s=1 e=0 z=0  None .text      CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCcS::CalcTgPlusDmg(cCcD_Obj* param_0, cCcD_Obj* param_1, cCcD_Stts* param_2, cCcD_Stts* param_3) {
-	nofralloc
-#include "asm/d/cc/d_cc_s/CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts.s"
+void dCcS::CalcTgPlusDmg(cCcD_Obj* param_0, cCcD_Obj* param_1, cCcD_Stts* param_2, cCcD_Stts* param_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800861B4-80086240 008C+00 s=1 e=0 z=0  None .text      ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts */
@@ -337,14 +332,9 @@ asm void dCcS::GetRank(u8 param_0) {
 
 
 /* 80086404-8008640C 0008+00 s=1 e=0 z=0  None .text      ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCcS::ChkNoHitGCo(cCcD_Obj* param_0, cCcD_Obj* param_1) {
-	nofralloc
-#include "asm/d/cc/d_cc_s/ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj.s"
+bool dCcS::ChkNoHitGCo(cCcD_Obj* param_0, cCcD_Obj* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -461,25 +451,15 @@ asm cCcD_SphAttr::~cCcD_SphAttr() {
 
 
 /* 800872A8-800872AC 0004+00 s=1 e=0 z=0  None .text      MoveAfterCheck__4dCcSFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCcS::MoveAfterCheck() {
-	nofralloc
-#include "asm/d/cc/d_cc_s/MoveAfterCheck__4dCcSFv.s"
+void dCcS::MoveAfterCheck() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800872AC-800872B0 0004+00 s=1 e=0 z=0  None .text      DrawAfter__4dCcSFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCcS::DrawAfter() {
-	nofralloc
-#include "asm/d/cc/d_cc_s/DrawAfter__4dCcSFv.s"
+void dCcS::DrawAfter() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800872B0-800872D0 0020+00 s=0 e=1 z=0  None .text      Move__4dCcSFv                                                */

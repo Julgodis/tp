@@ -51,21 +51,21 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daDisappear_Draw(disappear_class*); // 2
+static bool daDisappear_Draw(disappear_class*); // 2
 static void s_ks_sub(void*, void*); // 2
 static void daDisappear_Execute(disappear_class*); // 2
-static void daDisappear_IsDelete(disappear_class*); // 2
-static void daDisappear_Delete(disappear_class*); // 2
+static bool daDisappear_IsDelete(disappear_class*); // 2
+static bool daDisappear_Delete(disappear_class*); // 2
 static void yami_disappear(disappear_class*, f32); // 2
 static void ghost_disappear(disappear_class*, f32); // 2
 static void set_disappear(disappear_class*, f32); // 2
 static void daDisappear_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daDisappear_Draw__FP15disappear_class(); // 1
+extern "C" static bool daDisappear_Draw__FP15disappear_class(); // 1
 extern "C" static void s_ks_sub__FPvPv(); // 1
 extern "C" static void daDisappear_Execute__FP15disappear_class(); // 1
-extern "C" static void daDisappear_IsDelete__FP15disappear_class(); // 1
-extern "C" static void daDisappear_Delete__FP15disappear_class(); // 1
+extern "C" static bool daDisappear_IsDelete__FP15disappear_class(); // 1
+extern "C" static bool daDisappear_Delete__FP15disappear_class(); // 1
 extern "C" static void yami_disappear__FP15disappear_classf(); // 1
 extern "C" static void ghost_disappear__FP15disappear_classf(); // 1
 extern "C" static void set_disappear__FP15disappear_classf(); // 1
@@ -112,14 +112,9 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* 804A8F18-804A8F20 0008+00 s=1 e=0 z=0  None .text      daDisappear_Draw__FP15disappear_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDisappear_Draw(disappear_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Draw__FP15disappear_class.s"
+static bool daDisappear_Draw(disappear_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A8F20-804A8F6C 004C+00 s=1 e=0 z=0  None .text      s_ks_sub__FPvPv                                              */
@@ -145,25 +140,15 @@ asm static void daDisappear_Execute(disappear_class* param_0) {
 
 
 /* 804A8FA8-804A8FB0 0008+00 s=1 e=0 z=0  None .text      daDisappear_IsDelete__FP15disappear_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDisappear_IsDelete(disappear_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_IsDelete__FP15disappear_class.s"
+static bool daDisappear_IsDelete(disappear_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A8FB0-804A8FB8 0008+00 s=1 e=0 z=0  None .text      daDisappear_Delete__FP15disappear_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDisappear_Delete(disappear_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Delete__FP15disappear_class.s"
+static bool daDisappear_Delete(disappear_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

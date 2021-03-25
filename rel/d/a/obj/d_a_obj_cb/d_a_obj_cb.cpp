@@ -146,7 +146,7 @@ static void daObj_Cb_Draw(obj_cb_class*); // 2
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void action(obj_cb_class*); // 2
 static void daObj_Cb_Execute(obj_cb_class*); // 2
-static void daObj_Cb_IsDelete(obj_cb_class*); // 2
+static bool daObj_Cb_IsDelete(obj_cb_class*); // 2
 static void daObj_Cb_Delete(obj_cb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Cb_Create(fopAc_ac_c*); // 2
@@ -156,7 +156,7 @@ extern "C" static void daObj_Cb_Draw__FP12obj_cb_class(); // 1
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void action__FP12obj_cb_class(); // 1
 extern "C" static void daObj_Cb_Execute__FP12obj_cb_class(); // 1
-extern "C" static void daObj_Cb_IsDelete__FP12obj_cb_class(); // 1
+extern "C" static bool daObj_Cb_IsDelete__FP12obj_cb_class(); // 1
 extern "C" static void daObj_Cb_Delete__FP12obj_cb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Cb_Create__FP10fopAc_ac_c(); // 1
@@ -412,14 +412,9 @@ asm static void daObj_Cb_Execute(obj_cb_class* param_0) {
 
 
 /* 80BC5240-80BC5248 0008+00 s=1 e=0 z=0  None .text      daObj_Cb_IsDelete__FP12obj_cb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Cb_IsDelete(obj_cb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cb/d_a_obj_cb/daObj_Cb_IsDelete__FP12obj_cb_class.s"
+static bool daObj_Cb_IsDelete(obj_cb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

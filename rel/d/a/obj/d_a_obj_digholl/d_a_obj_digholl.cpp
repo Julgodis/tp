@@ -15,7 +15,7 @@ struct daObjDigholl_c {
 	/* 80BDC618 */ void create();
 	/* 80BDC75C */ ~daObjDigholl_c();
 	/* 80BDC7D8 */ void execute();
-	/* 80BDCB0C */ void draw();
+	/* 80BDCB0C */ bool draw();
 };
 
 struct fopAc_ac_c {
@@ -31,10 +31,10 @@ struct dSv_info_c {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -60,7 +60,7 @@ extern "C" void __dt__14daObjDigholl_cFv(); // 1
 extern "C" static void daObjDigholl_Delete__FP14daObjDigholl_c(); // 1
 extern "C" void execute__14daObjDigholl_cFv(); // 1
 extern "C" static void daObjDigholl_Execute__FP14daObjDigholl_c(); // 1
-extern "C" void draw__14daObjDigholl_cFv(); // 1
+extern "C" bool draw__14daObjDigholl_cFv(); // 1
 extern "C" static void daObjDigholl_Draw__FP14daObjDigholl_c(); // 1
 extern "C" extern u8 const lit_3679[4];
 extern "C" extern u32 const lit_3680;
@@ -180,14 +180,9 @@ asm static void daObjDigholl_Execute(daObjDigholl_c* param_0) {
 
 
 /* 80BDCB0C-80BDCB14 0008+00 s=1 e=0 z=0  None .text      draw__14daObjDigholl_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjDigholl_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_digholl/d_a_obj_digholl/draw__14daObjDigholl_cFv.s"
+bool daObjDigholl_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BDCB14-80BDCB34 0020+00 s=1 e=0 z=0  None .text      daObjDigholl_Draw__FP14daObjDigholl_c                        */

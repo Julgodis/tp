@@ -224,7 +224,7 @@ static void daObj_ItaMato_Create(void*); // 2
 static void daObj_ItaMato_Delete(void*); // 2
 static void daObj_ItaMato_Execute(void*); // 2
 static void daObj_ItaMato_Draw(void*); // 2
-static void daObj_ItaMato_IsDelete(void*); // 2
+static bool daObj_ItaMato_IsDelete(void*); // 2
 
 extern "C" void __dt__15daObj_ItaMato_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -252,7 +252,7 @@ extern "C" static void daObj_ItaMato_Create__FPv(); // 1
 extern "C" static void daObj_ItaMato_Delete__FPv(); // 1
 extern "C" static void daObj_ItaMato_Execute__FPv(); // 1
 extern "C" static void daObj_ItaMato_Draw__FPv(); // 1
-extern "C" static void daObj_ItaMato_IsDelete__FPv(); // 1
+extern "C" static bool daObj_ItaMato_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_itamato_cpp(); // 1
 extern "C" void __dt__21daObj_ItaMato_Param_cFv(); // 1
@@ -633,14 +633,9 @@ asm void daObj_ItaMato_c::create() {
 
 
 /* 80C29AC0-80C29AC4 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C29AC4-80C29B0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
@@ -886,14 +881,9 @@ asm static void daObj_ItaMato_Draw(void* param_0) {
 
 
 /* 80C2AA40-80C2AA48 0008+00 s=1 e=0 z=0  None .text      daObj_ItaMato_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_ItaMato_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_itamato/d_a_obj_itamato/daObj_ItaMato_IsDelete__FPv.s"
+static bool daObj_ItaMato_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C2AA48-80C2AA90 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -59,7 +59,7 @@ struct dMenu_Ring_c {
 	/* 801EE058 */ void getItemNum(u8);
 	/* 801EE15C */ void getItemMaxNum(u8);
 	/* 801EE228 */ void checkExplainForce();
-	/* 801EE63C */ void checkCombineBomb(int);
+	/* 801EE63C */ bool checkCombineBomb(int);
 	/* 801EE644 */ void setCombineBomb(int);
 	/* 801EE648 */ void drawNumber(int, int, f32, f32);
 	/* 801EEA84 */ void getItem(int, u8);
@@ -72,7 +72,7 @@ struct dMenu_Ring_c {
 	/* 801EF13C */ void clacEllipseFunction(f32, f32, f32);
 	/* 801EF174 */ void calcDistance(f32, f32, f32, f32);
 	/* 801EF1A0 */ void clacEllipsePlotAverage(int, f32, f32);
-	/* 801EF484 */ void dpdMove();
+	/* 801EF484 */ bool dpdMove();
 	/* 801EF48C */ void openExplain(u8);
 	/* 801EF560 */ void draw();
 };
@@ -153,19 +153,19 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
 struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {
@@ -253,7 +253,7 @@ extern "C" void getCursorPos__12dMenu_Ring_cFUc(); // 1
 extern "C" void getItemNum__12dMenu_Ring_cFUc(); // 1
 extern "C" void getItemMaxNum__12dMenu_Ring_cFUc(); // 1
 extern "C" void checkExplainForce__12dMenu_Ring_cFv(); // 1
-extern "C" void checkCombineBomb__12dMenu_Ring_cFi(); // 1
+extern "C" bool checkCombineBomb__12dMenu_Ring_cFi(); // 1
 extern "C" void setCombineBomb__12dMenu_Ring_cFi(); // 1
 extern "C" void drawNumber__12dMenu_Ring_cFiiff(); // 1
 extern "C" void getItem__12dMenu_Ring_cFiUc(); // 1
@@ -266,7 +266,7 @@ extern "C" void textCentering__12dMenu_Ring_cFv(); // 1
 extern "C" void clacEllipseFunction__12dMenu_Ring_cFfff(); // 1
 extern "C" void calcDistance__12dMenu_Ring_cFffff(); // 1
 extern "C" void clacEllipsePlotAverage__12dMenu_Ring_cFiff(); // 1
-extern "C" void dpdMove__12dMenu_Ring_cFv(); // 1
+extern "C" bool dpdMove__12dMenu_Ring_cFv(); // 1
 extern "C" void openExplain__12dMenu_Ring_cFUc(); // 1
 extern "C" void draw__12dMenu_Ring_cFv(); // 1
 extern "C" void __sinit_d_menu_ring_cpp(); // 1
@@ -290,7 +290,7 @@ void mDoExt_getMesgFont(); // 2
 void dComIfGs_setSelectItemIndex(int, u8); // 2
 void dComIfGs_setMixItemIndex(int, u8); // 2
 void dComIfGs_getMixItemIndex(int); // 2
-void dComIfGs_getBottleMax(); // 2
+s32 dComIfGs_getBottleMax(); // 2
 void dMw_UP_TRIGGER(); // 2
 void dMw_DOWN_TRIGGER(); // 2
 void dMw_A_TRIGGER(); // 2
@@ -313,7 +313,7 @@ extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
 extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
 extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
-extern "C" void dComIfGs_getBottleMax__Fv(); // 1
+extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
 extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
 extern "C" void getItem__17dSv_player_item_cCFib(); // 1
 extern "C" void getLineUpItem__17dSv_player_item_cCFi(); // 1
@@ -688,14 +688,9 @@ asm void dMenu_Ring_c::_create() {
 
 
 /* 801EABE8-801EABEC 0004+00 s=0 e=1 z=0  None .text      _delete__12dMenu_Ring_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::_delete() {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/_delete__12dMenu_Ring_cFv.s"
+void dMenu_Ring_c::_delete() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801EABEC-801EACC8 00DC+00 s=0 e=1 z=0  None .text      _move__12dMenu_Ring_cFv                                      */
@@ -1002,25 +997,15 @@ asm void dMenu_Ring_c::stick_move_proc() {
 
 
 /* 801ED934-801ED938 0004+00 s=1 e=0 z=0  None .text      stick_explain_init__12dMenu_Ring_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::stick_explain_init() {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/stick_explain_init__12dMenu_Ring_cFv.s"
+void dMenu_Ring_c::stick_explain_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801ED938-801ED93C 0004+00 s=1 e=0 z=0  None .text      stick_explain_force_init__12dMenu_Ring_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::stick_explain_force_init() {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/stick_explain_force_init__12dMenu_Ring_cFv.s"
+void dMenu_Ring_c::stick_explain_force_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1131,25 +1116,15 @@ asm void dMenu_Ring_c::checkExplainForce() {
 
 
 /* 801EE63C-801EE644 0008+00 s=1 e=0 z=0  None .text      checkCombineBomb__12dMenu_Ring_cFi                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::checkCombineBomb(int param_0) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/checkCombineBomb__12dMenu_Ring_cFi.s"
+bool dMenu_Ring_c::checkCombineBomb(int param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 801EE644-801EE648 0004+00 s=1 e=0 z=0  None .text      setCombineBomb__12dMenu_Ring_cFi                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::setCombineBomb(int param_0) {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/setCombineBomb__12dMenu_Ring_cFi.s"
+void dMenu_Ring_c::setCombineBomb(int param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1286,14 +1261,9 @@ asm void dMenu_Ring_c::clacEllipsePlotAverage(int param_0, f32 param_1, f32 para
 
 
 /* 801EF484-801EF48C 0008+00 s=1 e=0 z=0  None .text      dpdMove__12dMenu_Ring_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Ring_c::dpdMove() {
-	nofralloc
-#include "asm/d/menu/d_menu_ring/dpdMove__12dMenu_Ring_cFv.s"
+bool dMenu_Ring_c::dpdMove() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

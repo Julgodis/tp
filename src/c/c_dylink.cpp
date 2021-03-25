@@ -15,15 +15,15 @@ struct request_of_phase_process_class {
 };
 
 struct cDylPhs {
-	/* 80018804 */ void phase_01(void*);
+	/* 80018804 */ s32 phase_01(void*);
 	/* 8001880C */ void phase_02(s16*);
-	/* 80018844 */ void phase_03(void*);
+	/* 80018844 */ bool phase_03(void*);
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
 };
 
 struct DynamicModuleControlBase {
-	/* 800188DC */ void getModuleName() const;
+	/* 800188DC */ bool getModuleName() const;
 	/* 802621CC */ ~DynamicModuleControlBase();
 	/* 802622D0 */ void link();
 	/* 80262364 */ void unlink();
@@ -77,12 +77,12 @@ extern "C" void cDyl_LinkASync__Fs(); // 1
 extern "C" static void cDyl_InitCallback__FPv(); // 1
 extern "C" void cDyl_InitAsync__Fv(); // 1
 extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
-extern "C" void phase_01__7cDylPhsFPv(); // 1
+extern "C" s32 phase_01__7cDylPhsFPv(); // 1
 extern "C" void phase_02__7cDylPhsFPs(); // 1
-extern "C" void phase_03__7cDylPhsFPv(); // 1
+extern "C" bool phase_03__7cDylPhsFPv(); // 1
 extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
 extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
-extern "C" void getModuleName__24DynamicModuleControlBaseCFv(); // 1
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void __dt__20DynamicModuleControlFv(); // 1
 extern "C" extern char const* const c_c_dylink__stringBase0;
 
@@ -2508,14 +2508,9 @@ asm void cDyl_InitAsyncIsDone() {
 
 
 /* 80018804-8001880C 0008+00 s=1 e=0 z=0  None .text      phase_01__7cDylPhsFPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cDylPhs::phase_01(void* param_0) {
-	nofralloc
-#include "asm/c/c_dylink/phase_01__7cDylPhsFPv.s"
+s32 cDylPhs::phase_01(void* param_0) {
+	return 2;
 }
-#pragma pop
 
 
 /* 8001880C-80018844 0038+00 s=1 e=0 z=0  None .text      phase_02__7cDylPhsFPs                                        */
@@ -2530,14 +2525,9 @@ asm void cDylPhs::phase_02(s16* param_0) {
 
 
 /* 80018844-8001884C 0008+00 s=1 e=0 z=0  None .text      phase_03__7cDylPhsFPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cDylPhs::phase_03(void* param_0) {
-	nofralloc
-#include "asm/c/c_dylink/phase_03__7cDylPhsFPv.s"
+bool cDylPhs::phase_03(void* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -2573,14 +2563,9 @@ asm void cDylPhs::Unlink(request_of_phase_process_class* param_0, s16 param_1) {
 
 
 /* 800188DC-800188E4 0008+00 s=0 e=1 z=0  None .text      getModuleName__24DynamicModuleControlBaseCFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void DynamicModuleControlBase::getModuleName() const {
-	nofralloc
-#include "asm/c/c_dylink/getModuleName__24DynamicModuleControlBaseCFv.s"
+bool DynamicModuleControlBase::getModuleName() const {
+	return false;
 }
-#pragma pop
 
 
 /* 800188E4-80018944 0060+00 s=0 e=1 z=0  None .text      __dt__20DynamicModuleControlFv                               */

@@ -20,7 +20,7 @@ struct daObjKshtr_c {
 	/* 80C48050 */ void initKey();
 	/* 80C48148 */ void phase_0();
 	/* 80C4827C */ void phase_1();
-	/* 80C48320 */ void phase_2();
+	/* 80C48320 */ s32 phase_2();
 	/* 80C48328 */ void create1st();
 	/* 80C483CC */ void event_proc_call();
 	/* 80C48470 */ void event_proc_call2();
@@ -41,7 +41,7 @@ struct daObjKshtr_c {
 	/* 80C4925C */ void demoJail1();
 	/* 80C494A8 */ void demoJail2();
 	/* 80C495A4 */ void demoJail11();
-	/* 80C496C8 */ void demoJail21();
+	/* 80C496C8 */ bool demoJail21();
 	/* 80C496D0 */ void anmInit();
 	/* 80C497A0 */ void actionWaitEvent();
 	/* 80C49880 */ void actionEvent();
@@ -75,10 +75,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -154,17 +154,17 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct cBgS_PolyInfo {
+struct dBgW {
 };
 
-struct dBgW {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -205,7 +205,7 @@ extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void initKey__12daObjKshtr_cFv(); // 1
 extern "C" void phase_0__12daObjKshtr_cFv(); // 1
 extern "C" void phase_1__12daObjKshtr_cFv(); // 1
-extern "C" void phase_2__12daObjKshtr_cFv(); // 1
+extern "C" s32 phase_2__12daObjKshtr_cFv(); // 1
 extern "C" void create1st__12daObjKshtr_cFv(); // 1
 extern "C" void event_proc_call__12daObjKshtr_cFv(); // 1
 extern "C" void event_proc_call2__12daObjKshtr_cFv(); // 1
@@ -226,7 +226,7 @@ extern "C" void demoProc__12daObjKshtr_cFv(); // 1
 extern "C" void demoJail1__12daObjKshtr_cFv(); // 1
 extern "C" void demoJail2__12daObjKshtr_cFv(); // 1
 extern "C" void demoJail11__12daObjKshtr_cFv(); // 1
-extern "C" void demoJail21__12daObjKshtr_cFv(); // 1
+extern "C" bool demoJail21__12daObjKshtr_cFv(); // 1
 extern "C" void anmInit__12daObjKshtr_cFv(); // 1
 extern "C" void actionWaitEvent__12daObjKshtr_cFv(); // 1
 extern "C" void actionEvent__12daObjKshtr_cFv(); // 1
@@ -308,9 +308,9 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -839,14 +839,9 @@ asm void daObjKshtr_c::phase_1() {
 
 
 /* 80C48320-80C48328 0008+00 s=1 e=0 z=0  None .text      phase_2__12daObjKshtr_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKshtr_c::phase_2() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/phase_2__12daObjKshtr_cFv.s"
+s32 daObjKshtr_c::phase_2() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80C48328-80C483CC 00A4+00 s=1 e=0 z=0  None .text      create1st__12daObjKshtr_cFv                                  */
@@ -1070,14 +1065,9 @@ asm void daObjKshtr_c::demoJail11() {
 
 
 /* 80C496C8-80C496D0 0008+00 s=1 e=0 z=0  None .text      demoJail21__12daObjKshtr_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKshtr_c::demoJail21() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/demoJail21__12daObjKshtr_cFv.s"
+bool daObjKshtr_c::demoJail21() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C496D0-80C497A0 00D0+00 s=4 e=0 z=0  None .text      anmInit__12daObjKshtr_cFv                                    */
@@ -1114,14 +1104,9 @@ asm void daObjKshtr_c::actionEvent() {
 
 
 /* 80C49914-80C49918 0004+00 s=1 e=0 z=0  None .text      actionDead__12daObjKshtr_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKshtr_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionDead__12daObjKshtr_cFv.s"
+void daObjKshtr_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C49918-80C499CC 00B4+00 s=1 e=0 z=0  None .text      actionWaitEvent2__12daObjKshtr_cFv                           */
@@ -1158,14 +1143,9 @@ asm void daObjKshtr_c::actionEvent2() {
 
 
 /* 80C49A70-80C49A74 0004+00 s=1 e=0 z=0  None .text      actionDead2__12daObjKshtr_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKshtr_c::actionDead2() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kshutter/d_a_obj_kshutter/actionDead2__12daObjKshtr_cFv.s"
+void daObjKshtr_c::actionDead2() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C49A74-80C49B4C 00D8+00 s=1 e=0 z=0  None .text      Draw__12daObjKshtr_cFv                                       */

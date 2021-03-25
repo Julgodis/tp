@@ -90,7 +90,7 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -99,7 +99,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -254,7 +254,7 @@ static void damage_check(e_bs_class*); // 2
 static void action(e_bs_class*); // 2
 static void anm_se_set(e_bs_class*); // 2
 static void daE_BS_Execute(e_bs_class*); // 2
-static void daE_BS_IsDelete(e_bs_class*); // 2
+static bool daE_BS_IsDelete(e_bs_class*); // 2
 void daE_BS_Delete(e_bs_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_BS_Create(fopAc_ac_c*); // 2
@@ -278,7 +278,7 @@ extern "C" static void damage_check__FP10e_bs_class(); // 1
 extern "C" static void action__FP10e_bs_class(); // 1
 extern "C" static void anm_se_set__FP10e_bs_class(); // 1
 extern "C" static void daE_BS_Execute__FP10e_bs_class(); // 1
-extern "C" static void daE_BS_IsDelete__FP10e_bs_class(); // 1
+extern "C" static bool daE_BS_IsDelete__FP10e_bs_class(); // 1
 extern "C" void daE_BS_Delete__FP10e_bs_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_BS_Create__FP10fopAc_ac_c(); // 1
@@ -1044,14 +1044,9 @@ asm static void daE_BS_Execute(e_bs_class* param_0) {
 
 
 /* 8068FFA8-8068FFB0 0008+00 s=1 e=0 z=0  None .text      daE_BS_IsDelete__FP10e_bs_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_BS_IsDelete(e_bs_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bs/d_a_e_bs/daE_BS_IsDelete__FP10e_bs_class.s"
+static bool daE_BS_IsDelete(e_bs_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8068FFB0-80690018 0068+00 s=2 e=1 z=0  None .text      daE_BS_Delete__FP10e_bs_class                                */

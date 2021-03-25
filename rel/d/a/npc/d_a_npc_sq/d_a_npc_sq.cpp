@@ -60,7 +60,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -69,10 +69,10 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Vec {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -118,10 +118,10 @@ struct dBgS_AcchCir {
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -191,7 +191,7 @@ static void action(npc_sq_class*); // 2
 static void cam_3d_morf(npc_sq_class*, f32); // 2
 static void demo_camera(npc_sq_class*); // 2
 static void daNpc_Sq_Execute(npc_sq_class*); // 2
-static void daNpc_Sq_IsDelete(npc_sq_class*); // 2
+static bool daNpc_Sq_IsDelete(npc_sq_class*); // 2
 static void daNpc_Sq_Delete(npc_sq_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Sq_Create(fopAc_ac_c*); // 2
@@ -204,7 +204,7 @@ extern "C" static void action__FP12npc_sq_class(); // 1
 extern "C" static void cam_3d_morf__FP12npc_sq_classf(); // 1
 extern "C" static void demo_camera__FP12npc_sq_class(); // 1
 extern "C" static void daNpc_Sq_Execute__FP12npc_sq_class(); // 1
-extern "C" static void daNpc_Sq_IsDelete__FP12npc_sq_class(); // 1
+extern "C" static bool daNpc_Sq_IsDelete__FP12npc_sq_class(); // 1
 extern "C" static void daNpc_Sq_Delete__FP12npc_sq_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -669,14 +669,9 @@ asm static void daNpc_Sq_Execute(npc_sq_class* param_0) {
 
 
 /* 80AF6D54-80AF6D5C 0008+00 s=1 e=0 z=0  None .text      daNpc_Sq_IsDelete__FP12npc_sq_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Sq_IsDelete(npc_sq_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_sq/d_a_npc_sq/daNpc_Sq_IsDelete__FP12npc_sq_class.s"
+static bool daNpc_Sq_IsDelete(npc_sq_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF6D5C-80AF6DB0 0054+00 s=1 e=0 z=0  None .text      daNpc_Sq_Delete__FP12npc_sq_class                            */

@@ -57,6 +57,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -66,24 +69,21 @@ struct dKy_tevstr_c {
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-};
-
-struct cBgS_PolyInfo {
 };
 
 struct dBgW {
 };
 
+struct cBgS_PolyInfo {
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -153,9 +153,9 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -408,14 +408,9 @@ asm void daObjWCover_c::init_modeBreak() {
 
 
 /* 80D3689C-80D368A0 0004+00 s=1 e=0 z=0  None .text      modeBreak__13daObjWCover_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWCover_c::modeBreak() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_well_cover/d_a_obj_well_cover/modeBreak__13daObjWCover_cFv.s"
+void daObjWCover_c::modeBreak() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D368A0-80D36944 00A4+00 s=1 e=0 z=0  None .text      Draw__13daObjWCover_cFv                                      */

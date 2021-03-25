@@ -174,72 +174,44 @@ def is_load_global_function(data: bytearray) -> Tuple[bool, int, str, int]:
 
 
 def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
-    """Create function from group of linker map symbols. 
+    """
+    Create function from group of linker map symbols. 
     Try to find simply pattern of function that we can decompile when generating c++ code.
+
     """
-
-    if False:
-        if len(group) == 1:
-            block = group[0]
-            data = section.get_data(block.start, block.end)
-            if is_return_function(data):
-                return [ReturnFunction(
-                    Identifier("func", block.start, block.name),
-                    addr=block.addr,
-                    size=block.size,
-                    padding=block.padding,
-                    alignment=0,
-                    return_type=VOID)]
-
-            if is_return_integer_function(data):
-                integer_value = get_short_value(data)
-                if integer_value == 0:
-                    value = "false"
-                    type = BOOL
-                elif integer_value == 1:
-                    value = "true"
-                    type = BOOL
-                else:
-                    value = f"{integer_value}"
-                    type = S32
-
-                return [ReturnFunction(
-                    Identifier("func", block.start, block.name),
-                    addr=block.addr,
-                    size=block.size,
-                    padding=block.padding,
-                    alignment=0,
-                    return_type=type,
-                    return_value=value)]
-
-    # TODO: Re-enable this code to find simple function patterns
-    """
-    if group[0].name.startswith("__sinit_"):
-        return SInitFunction(group, section)
 
     if len(group) == 1:
-        start = group[0].addr
-        end = start + group[0].size
-        print(group[0])
-        data = section.data[start:end]
+        block = group[0]
+        data = section.get_data(block.start, block.end)
         if is_return_function(data):
-            return ReturnFunction(group, section)
+            return [ReturnFunction(
+                Identifier("func", block.start, block.name),
+                addr=block.addr,
+                size=block.size,
+                padding=block.padding,
+                alignment=0,
+                return_type=VOID)]
+
         if is_return_integer_function(data):
-            value = get_short_value(data)
-            return ReturnIntegerFunction(value, group, section)
+            integer_value = get_short_value(data)
+            if integer_value == 0:
+                value = "false"
+                type = BOOL
+            elif integer_value == 1:
+                value = "true"
+                type = BOOL
+            else:
+                value = f"{integer_value}"
+                type = S32
 
-        lfp_result, lfp_value, lfp_type = is_load_first_param_function(data)
-        if lfp_result:
-            return FirstParamFunction("load", lfp_value, lfp_type, group, section)
-
-        rfp_result, rfp_value, rfp_type = is_reference_first_param_function(data)
-        if rfp_result:
-            return FirstParamFunction("reference", rfp_value, rfp_type, group, section)
-
-        lg_result, lg_value, lg_type, lg_section = is_load_global_function(data)
-        if lg_result:
-            return GlobalFunction("load", lg_value, lg_type, lg_section, group, section)
-    """
+            return [ReturnFunction(
+                Identifier("func", block.start, block.name),
+                addr=block.addr,
+                size=block.size,
+                padding=block.padding,
+                alignment=0,
+                return_type=type,
+                return_value=value)]
 
     first = group[0]
     if first.size <= 0:

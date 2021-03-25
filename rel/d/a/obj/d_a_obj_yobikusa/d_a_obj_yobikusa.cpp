@@ -178,7 +178,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjYobikusa_Draw(daObjYobikusa_c*); // 2
 static void daObjYobikusa_Execute(daObjYobikusa_c*); // 2
-static void daObjYobikusa_IsDelete(daObjYobikusa_c*); // 2
+static bool daObjYobikusa_IsDelete(daObjYobikusa_c*); // 2
 static void daObjYobikusa_Delete(daObjYobikusa_c*); // 2
 static void daObjYobikusa_Create(fopAc_ac_c*); // 2
 
@@ -207,7 +207,7 @@ extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjYobikusa_Draw__FP15daObjYobikusa_c(); // 1
 extern "C" static void daObjYobikusa_Execute__FP15daObjYobikusa_c(); // 1
 extern "C" void execute__15daObjYobikusa_cFv(); // 1
-extern "C" static void daObjYobikusa_IsDelete__FP15daObjYobikusa_c(); // 1
+extern "C" static bool daObjYobikusa_IsDelete__FP15daObjYobikusa_c(); // 1
 extern "C" static void daObjYobikusa_Delete__FP15daObjYobikusa_c(); // 1
 extern "C" static void daObjYobikusa_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
@@ -794,14 +794,9 @@ asm void daObjYobikusa_c::execute() {
 
 
 /* 8059D9A0-8059D9A8 0008+00 s=1 e=0 z=0  None .text      daObjYobikusa_IsDelete__FP15daObjYobikusa_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjYobikusa_IsDelete(daObjYobikusa_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/daObjYobikusa_IsDelete__FP15daObjYobikusa_c.s"
+static bool daObjYobikusa_IsDelete(daObjYobikusa_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8059D9A8-8059DAF4 014C+00 s=1 e=0 z=0  None .text      daObjYobikusa_Delete__FP15daObjYobikusa_c                    */
@@ -827,14 +822,9 @@ asm static void daObjYobikusa_Create(fopAc_ac_c* param_0) {
 
 
 /* 8059DC88-8059DC8C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yobikusa/d_a_obj_yobikusa/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059DC8C-8059DCD4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */

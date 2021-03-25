@@ -16,12 +16,6 @@ struct daE_VA_HIO_c {
 	/* 807CE2AC */ ~daE_VA_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -33,6 +27,12 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 807CE23C */ cXyz();
 	/* 807CEC40 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_VA_c {
@@ -224,19 +224,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -254,10 +254,10 @@ struct mDoExt_3DlineMat0_c {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -409,7 +409,7 @@ struct Z2SeqMgr {
 
 static void daE_VA_Draw(daE_VA_c*); // 2
 static void daE_VA_Execute(daE_VA_c*); // 2
-static void daE_VA_IsDelete(daE_VA_c*); // 2
+static bool daE_VA_IsDelete(daE_VA_c*); // 2
 static void daE_VA_Delete(daE_VA_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_VA_Create(daE_VA_c*); // 2
@@ -481,7 +481,7 @@ extern "C" void mtx_set__8daE_VA_cFv(); // 1
 extern "C" void cc_set__8daE_VA_cFv(); // 1
 extern "C" void execute__8daE_VA_cFv(); // 1
 extern "C" static void daE_VA_Execute__FP8daE_VA_c(); // 1
-extern "C" static void daE_VA_IsDelete__FP8daE_VA_c(); // 1
+extern "C" static bool daE_VA_IsDelete__FP8daE_VA_c(); // 1
 extern "C" void _delete__8daE_VA_cFv(); // 1
 extern "C" static void daE_VA_Delete__FP8daE_VA_c(); // 1
 extern "C" void CreateHeap__8daE_VA_cFv(); // 1
@@ -2618,14 +2618,9 @@ asm static void daE_VA_Execute(daE_VA_c* param_0) {
 
 
 /* 807CCF5C-807CCF64 0008+00 s=1 e=0 z=0  None .text      daE_VA_IsDelete__FP8daE_VA_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_VA_IsDelete(daE_VA_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_vt/d_a_e_vt/daE_VA_IsDelete__FP8daE_VA_c.s"
+static bool daE_VA_IsDelete(daE_VA_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807CCF64-807CD028 00C4+00 s=1 e=0 z=0  None .text      _delete__8daE_VA_cFv                                         */
@@ -2794,25 +2789,15 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 807CE23C-807CE240 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_vt/d_a_e_vt/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807CE240-807CE244 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_vt/d_a_e_vt/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807CE244-807CE264 0020+00 s=1 e=0 z=0  None .text      daE_VA_Create__FP8daE_VA_c                                   */

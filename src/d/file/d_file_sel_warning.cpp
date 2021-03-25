@@ -287,14 +287,9 @@ asm void dFile_warning_c::_move() {
 
 
 /* 80191F90-80191F94 0004+00 s=1 e=0 z=0  None .text      modeWait__15dFile_warning_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dFile_warning_c::modeWait() {
-	nofralloc
-#include "asm/d/file/d_file_sel_warning/modeWait__15dFile_warning_cFv.s"
+void dFile_warning_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80191F94-80191FD4 0040+00 s=1 e=0 z=0  None .text      modeMove__15dFile_warning_cFv                                */

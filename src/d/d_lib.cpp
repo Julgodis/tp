@@ -55,10 +55,10 @@ struct dEvt_control_c {
 	/* 800434D8 */ void searchMapEventData(u8);
 };
 
-struct JKRExpandSwitch {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JKRExpandSwitch {
 };
 
 struct JKRAram {

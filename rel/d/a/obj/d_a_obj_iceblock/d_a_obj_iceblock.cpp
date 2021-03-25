@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct dBgW_Base {
 	struct PushPullLabel {
 	};
 
+};
+
+struct fopAc_ac_c {
 };
 
 struct daObjIceBlk_c {
@@ -140,6 +140,9 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -147,9 +150,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -165,11 +165,11 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct cBgS {
@@ -206,9 +206,9 @@ struct dBgS_ObjLinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -420,9 +420,9 @@ extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
 extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -1155,14 +1155,9 @@ asm void daObjIceBlk_c::actionEvent() {
 
 
 /* 80C23CA0-80C23CA4 0004+00 s=1 e=0 z=0  None .text      actionDead__13daObjIceBlk_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIceBlk_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceblock/d_a_obj_iceblock/actionDead__13daObjIceBlk_cFv.s"
+void daObjIceBlk_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C23CA4-80C23DA8 0104+00 s=1 e=0 z=0  None .text      Draw__13daObjIceBlk_cFv                                      */

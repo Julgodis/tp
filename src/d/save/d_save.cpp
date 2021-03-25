@@ -473,7 +473,7 @@ void dComIfGs_setSelectItemIndex(int, u8); // 2
 void dComIfGs_setMixItemIndex(int, u8); // 2
 void dComIfGs_getMixItemIndex(int); // 2
 void dComIfGp_setSelectItem(int); // 2
-void dComIfGs_getBottleMax(); // 2
+s32 dComIfGs_getBottleMax(); // 2
 void dComIfGs_setKeyNum(int, u8); // 2
 void setInitEventBit(); // 2
 
@@ -486,7 +486,7 @@ extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
 extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
 extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
 extern "C" void dComIfGp_setSelectItem__Fi(); // 1
-extern "C" void dComIfGs_getBottleMax__Fv(); // 1
+extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
 extern "C" void dComIfGs_setKeyNum__FiUc(); // 1
 extern "C" void __ct__13dSv_memory2_cFv(); // 1
 extern "C" void __ct__12dSv_memory_cFv(); // 1

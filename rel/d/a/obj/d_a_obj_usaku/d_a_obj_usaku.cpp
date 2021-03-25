@@ -80,14 +80,14 @@ struct dScnKy_env_light_c {
 
 static void daObj_Usaku_Draw(obj_usaku_class*); // 2
 static void daObj_Usaku_Execute(obj_usaku_class*); // 2
-static void daObj_Usaku_IsDelete(obj_usaku_class*); // 2
+static bool daObj_Usaku_IsDelete(obj_usaku_class*); // 2
 static void daObj_Usaku_Delete(obj_usaku_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Usaku_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daObj_Usaku_Draw__FP15obj_usaku_class(); // 1
 extern "C" static void daObj_Usaku_Execute__FP15obj_usaku_class(); // 1
-extern "C" static void daObj_Usaku_IsDelete__FP15obj_usaku_class(); // 1
+extern "C" static bool daObj_Usaku_IsDelete__FP15obj_usaku_class(); // 1
 extern "C" static void daObj_Usaku_Delete__FP15obj_usaku_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Usaku_Create__FP10fopAc_ac_c(); // 1
@@ -168,14 +168,9 @@ asm static void daObj_Usaku_Execute(obj_usaku_class* param_0) {
 
 
 /* 80D21048-80D21050 0008+00 s=1 e=0 z=0  None .text      daObj_Usaku_IsDelete__FP15obj_usaku_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Usaku_IsDelete(obj_usaku_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_usaku/d_a_obj_usaku/daObj_Usaku_IsDelete__FP15obj_usaku_class.s"
+static bool daObj_Usaku_IsDelete(obj_usaku_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

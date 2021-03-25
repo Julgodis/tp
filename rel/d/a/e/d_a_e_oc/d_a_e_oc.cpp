@@ -20,10 +20,10 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_OC_c {
@@ -159,19 +159,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -211,10 +211,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -337,7 +337,7 @@ static void s_other_oc(void*, void*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void s_demo_oc(void*, void*); // 2
 static void daE_OC_Execute(daE_OC_c*); // 2
-static void daE_OC_IsDelete(daE_OC_c*); // 2
+static bool daE_OC_IsDelete(daE_OC_c*); // 2
 static void daE_OC_Delete(daE_OC_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_OC_Create(daE_OC_c*); // 2
@@ -406,7 +406,7 @@ extern "C" void mtx_set__8daE_OC_cFv(); // 1
 extern "C" void cc_set__8daE_OC_cFv(); // 1
 extern "C" void execute__8daE_OC_cFv(); // 1
 extern "C" static void daE_OC_Execute__FP8daE_OC_c(); // 1
-extern "C" static void daE_OC_IsDelete__FP8daE_OC_c(); // 1
+extern "C" static bool daE_OC_IsDelete__FP8daE_OC_c(); // 1
 extern "C" void _delete__8daE_OC_cFv(); // 1
 extern "C" static void daE_OC_Delete__FP8daE_OC_c(); // 1
 extern "C" void CreateHeap__8daE_OC_cFv(); // 1
@@ -2079,14 +2079,9 @@ asm static void daE_OC_Execute(daE_OC_c* param_0) {
 
 
 /* 80734B64-80734B6C 0008+00 s=1 e=0 z=0  None .text      daE_OC_IsDelete__FP8daE_OC_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_OC_IsDelete(daE_OC_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_oc/d_a_e_oc/daE_OC_IsDelete__FP8daE_OC_c.s"
+static bool daE_OC_IsDelete(daE_OC_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80734B6C-80734BF0 0084+00 s=1 e=0 z=0  None .text      _delete__8daE_OC_cFv                                         */

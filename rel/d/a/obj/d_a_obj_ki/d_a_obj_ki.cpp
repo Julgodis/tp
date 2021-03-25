@@ -45,16 +45,16 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -115,7 +115,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void daObj_Ki_Draw(obj_ki_class*); // 2
 static void action(obj_ki_class*); // 2
 static void daObj_Ki_Execute(obj_ki_class*); // 2
-static void daObj_Ki_IsDelete(obj_ki_class*); // 2
+static bool daObj_Ki_IsDelete(obj_ki_class*); // 2
 static void daObj_Ki_Delete(obj_ki_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Ki_Create(fopAc_ac_c*); // 2
@@ -127,7 +127,7 @@ extern "C" static void action__FP12obj_ki_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void daObj_Ki_Execute__FP12obj_ki_class(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
-extern "C" static void daObj_Ki_IsDelete__FP12obj_ki_class(); // 1
+extern "C" static bool daObj_Ki_IsDelete__FP12obj_ki_class(); // 1
 extern "C" static void daObj_Ki_Delete__FP12obj_ki_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Ki_Create__FP10fopAc_ac_c(); // 1
@@ -355,14 +355,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80C4441C-80C44424 0008+00 s=1 e=0 z=0  None .text      daObj_Ki_IsDelete__FP12obj_ki_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Ki_IsDelete(obj_ki_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/daObj_Ki_IsDelete__FP12obj_ki_class.s"
+static bool daObj_Ki_IsDelete(obj_ki_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -482,25 +477,15 @@ asm sq_cp_s::sq_cp_s() {
 
 
 /* 80C44AA0-80C44AA4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C44AA4-80C44AA8 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ki/d_a_obj_ki/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C44AA8-80C44AF0 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_Ki_HIO_cFv                                     */

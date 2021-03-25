@@ -76,6 +76,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
+struct csXyz {
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
 struct _GXColor {
 };
 
@@ -83,10 +87,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct dPa_control_c {
@@ -154,7 +154,7 @@ static void yuka_mtxset(obj_toby_class*, yuka_s*); // 2
 static void yuka_control(obj_toby_class*); // 2
 static void demo_camera(obj_toby_class*); // 2
 static void daObj_Toby_Execute(obj_toby_class*); // 2
-static void daObj_Toby_IsDelete(obj_toby_class*); // 2
+static bool daObj_Toby_IsDelete(obj_toby_class*); // 2
 static void daObj_Toby_Delete(obj_toby_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_toby_class*, int); // 2
@@ -172,7 +172,7 @@ extern "C" static void yuka_mtxset__FP14obj_toby_classP6yuka_s(); // 1
 extern "C" static void yuka_control__FP14obj_toby_class(); // 1
 extern "C" static void demo_camera__FP14obj_toby_class(); // 1
 extern "C" static void daObj_Toby_Execute__FP14obj_toby_class(); // 1
-extern "C" static void daObj_Toby_IsDelete__FP14obj_toby_class(); // 1
+extern "C" static bool daObj_Toby_IsDelete__FP14obj_toby_class(); // 1
 extern "C" static void daObj_Toby_Delete__FP14obj_toby_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP14obj_toby_classi(); // 1
@@ -704,14 +704,9 @@ asm static void daObj_Toby_Execute(obj_toby_class* param_0) {
 
 
 /* 80D14884-80D1488C 0008+00 s=1 e=0 z=0  None .text      daObj_Toby_IsDelete__FP14obj_toby_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Toby_IsDelete(obj_toby_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/daObj_Toby_IsDelete__FP14obj_toby_class.s"
+static bool daObj_Toby_IsDelete(obj_toby_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -859,14 +854,9 @@ asm yuka_s::~yuka_s() {
 
 
 /* 80D15530-80D15534 0004+00 s=1 e=0 z=0  None .text      __ct__6yuka_sFv                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm yuka_s::yuka_s() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_toby/d_a_obj_toby/__ct__6yuka_sFv.s"
+yuka_s::yuka_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D15534-80D1557C 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Toby_HIO_cFv                                   */

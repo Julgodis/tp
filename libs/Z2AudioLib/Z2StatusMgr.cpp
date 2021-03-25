@@ -461,14 +461,9 @@ asm void Z2StatusMgr::setCameraPolygonPos(Vec* param_0) {
 
 
 /* 802B6784-802B6788 0004+00 s=0 e=1 z=0  None .text      setCameraGroupInfo__11Z2StatusMgrFUc                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Z2StatusMgr::setCameraGroupInfo(u8 param_0) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2StatusMgr/setCameraGroupInfo__11Z2StatusMgrFUc.s"
+void Z2StatusMgr::setCameraGroupInfo(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

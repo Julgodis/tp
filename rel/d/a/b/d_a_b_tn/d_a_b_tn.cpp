@@ -26,10 +26,10 @@ struct dCcD_Sph {
 	/* 8062D678 */ dCcD_Sph();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_TN_c {
@@ -204,19 +204,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -271,10 +271,10 @@ struct dEvt_control_c {
 	/* 800429A8 */ void onSkipFade();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -387,7 +387,7 @@ struct Z2SeqMgr {
 static void daB_TN_Draw(daB_TN_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void daB_TN_Execute(daB_TN_c*); // 2
-static void daB_TN_IsDelete(daB_TN_c*); // 2
+static bool daB_TN_IsDelete(daB_TN_c*); // 2
 static void daB_TN_Delete(daB_TN_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_TN_Create(daB_TN_c*); // 2
@@ -460,7 +460,7 @@ extern "C" void mtx_set__8daB_TN_cFv(); // 1
 extern "C" void cc_set__8daB_TN_cFv(); // 1
 extern "C" void execute__8daB_TN_cFv(); // 1
 extern "C" static void daB_TN_Execute__FP8daB_TN_c(); // 1
-extern "C" static void daB_TN_IsDelete__FP8daB_TN_c(); // 1
+extern "C" static bool daB_TN_IsDelete__FP8daB_TN_c(); // 1
 extern "C" void _delete__8daB_TN_cFv(); // 1
 extern "C" static void daB_TN_Delete__FP8daB_TN_c(); // 1
 extern "C" void CreateHeap__8daB_TN_cFv(); // 1
@@ -2795,14 +2795,9 @@ asm static void daB_TN_Execute(daB_TN_c* param_0) {
 
 
 /* 8062C7C0-8062C7C8 0008+00 s=1 e=0 z=0  None .text      daB_TN_IsDelete__FP8daB_TN_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_TN_IsDelete(daB_TN_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_tn/d_a_b_tn/daB_TN_IsDelete__FP8daB_TN_c.s"
+static bool daB_TN_IsDelete(daB_TN_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8062C7C8-8062C848 0080+00 s=1 e=0 z=0  None .text      _delete__8daB_TN_cFv                                         */
@@ -2960,25 +2955,15 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 8062D91C-8062D920 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_tn/d_a_b_tn/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8062D920-8062D924 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_tn/d_a_b_tn/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8062D924-8062D944 0020+00 s=1 e=0 z=0  None .text      daB_TN_Create__FP8daB_TN_c                                   */

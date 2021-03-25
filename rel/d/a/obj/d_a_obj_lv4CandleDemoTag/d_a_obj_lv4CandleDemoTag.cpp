@@ -35,8 +35,8 @@ struct dalv4CandleDemoTag_c {
 	/* 80C5CF40 */ void modeEnd();
 	/* 80C5CF78 */ void eventStart();
 	/* 80C5CF9C */ void searchShutterAct(void*, void*);
-	/* 80C5CFEC */ void Draw();
-	/* 80C5CFF4 */ void Delete();
+	/* 80C5CFEC */ bool Draw();
+	/* 80C5CFF4 */ bool Delete();
 	/* 80C5D184 */ ~dalv4CandleDemoTag_c();
 };
 
@@ -49,9 +49,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80C5D124 */ ~dEvLib_callback_c();
-	/* 80C5D16C */ void eventRun();
-	/* 80C5D174 */ void eventEnd();
-	/* 80C5D17C */ void eventStart();
+	/* 80C5D16C */ bool eventRun();
+	/* 80C5D174 */ bool eventEnd();
+	/* 80C5D17C */ bool eventStart();
 };
 
 struct cXyz {
@@ -91,8 +91,8 @@ extern "C" void init_modeEnd__20dalv4CandleDemoTag_cFv(); // 1
 extern "C" void modeEnd__20dalv4CandleDemoTag_cFv(); // 1
 extern "C" void eventStart__20dalv4CandleDemoTag_cFv(); // 1
 extern "C" void searchShutterAct__20dalv4CandleDemoTag_cFPvPv(); // 1
-extern "C" void Draw__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void Delete__20dalv4CandleDemoTag_cFv(); // 1
+extern "C" bool Draw__20dalv4CandleDemoTag_cFv(); // 1
+extern "C" bool Delete__20dalv4CandleDemoTag_cFv(); // 1
 extern "C" static void dalv4CandleDemoTag_Draw__FP20dalv4CandleDemoTag_c(); // 1
 extern "C" static void dalv4CandleDemoTag_Execute__FP20dalv4CandleDemoTag_c(); // 1
 extern "C" static void dalv4CandleDemoTag_Delete__FP20dalv4CandleDemoTag_c(); // 1
@@ -102,9 +102,9 @@ extern "C" void __sinit_d_a_obj_lv4CandleDemoTag_cpp(); // 1
 extern "C" static void func_80C5D114(); // 1
 extern "C" static void func_80C5D11C(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__20dalv4CandleDemoTag_cFv(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_Lv4CandleDm[12];
@@ -448,25 +448,15 @@ asm void dalv4CandleDemoTag_c::searchShutterAct(void* param_0, void* param_1) {
 
 
 /* 80C5CFEC-80C5CFF4 0008+00 s=1 e=0 z=0  None .text      Draw__20dalv4CandleDemoTag_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dalv4CandleDemoTag_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4CandleDemoTag/d_a_obj_lv4CandleDemoTag/Draw__20dalv4CandleDemoTag_cFv.s"
+bool dalv4CandleDemoTag_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5CFF4-80C5CFFC 0008+00 s=1 e=0 z=0  None .text      Delete__20dalv4CandleDemoTag_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dalv4CandleDemoTag_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4CandleDemoTag/d_a_obj_lv4CandleDemoTag/Delete__20dalv4CandleDemoTag_cFv.s"
+bool dalv4CandleDemoTag_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5CFFC-80C5D01C 0020+00 s=1 e=0 z=0  None .text      dalv4CandleDemoTag_Draw__FP20dalv4CandleDemoTag_c            */
@@ -569,36 +559,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80C5D16C-80C5D174 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4CandleDemoTag/d_a_obj_lv4CandleDemoTag/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5D174-80C5D17C 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4CandleDemoTag/d_a_obj_lv4CandleDemoTag/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5D17C-80C5D184 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4CandleDemoTag/d_a_obj_lv4CandleDemoTag/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5D184-80C5D204 0080+00 s=2 e=0 z=0  None .text      __dt__20dalv4CandleDemoTag_cFv                               */

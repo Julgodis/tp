@@ -20,7 +20,7 @@ struct daTagQs_c {
 	/* 80D5E268 */ void getCenterPower();
 	/* 80D5E28C */ void calcPower(f32, f32);
 	/* 80D5E9F8 */ void execute();
-	/* 80D5EBF8 */ void draw();
+	/* 80D5EBF8 */ bool draw();
 };
 
 struct dCcD_GStts {
@@ -96,7 +96,7 @@ static void hikiyose(cXyz*, cXyz*, cXyz*, f32); // 2
 static void search(void*, void*); // 2
 static void daTagQs_Draw(daTagQs_c*); // 2
 static void daTagQs_Execute(daTagQs_c*); // 2
-static void daTagQs_IsDelete(daTagQs_c*); // 2
+static bool daTagQs_IsDelete(daTagQs_c*); // 2
 static void daTagQs_Delete(daTagQs_c*); // 2
 static void daTagQs_Create(fopAc_ac_c*); // 2
 
@@ -113,10 +113,10 @@ extern "C" void calcPower__9daTagQs_cFff(); // 1
 extern "C" static void hikiyose__FP4cXyzP4cXyzP4cXyzf(); // 1
 extern "C" static void search__FPvPv(); // 1
 extern "C" void execute__9daTagQs_cFv(); // 1
-extern "C" void draw__9daTagQs_cFv(); // 1
+extern "C" bool draw__9daTagQs_cFv(); // 1
 extern "C" static void daTagQs_Draw__FP9daTagQs_c(); // 1
 extern "C" static void daTagQs_Execute__FP9daTagQs_c(); // 1
-extern "C" static void daTagQs_IsDelete__FP9daTagQs_c(); // 1
+extern "C" static bool daTagQs_IsDelete__FP9daTagQs_c(); // 1
 extern "C" static void daTagQs_Delete__FP9daTagQs_c(); // 1
 extern "C" static void daTagQs_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
@@ -453,14 +453,9 @@ asm void daTagQs_c::execute() {
 
 
 /* 80D5EBF8-80D5EC00 0008+00 s=1 e=0 z=0  None .text      draw__9daTagQs_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagQs_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/draw__9daTagQs_cFv.s"
+bool daTagQs_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EC00-80D5EC20 0020+00 s=1 e=0 z=0  None .text      daTagQs_Draw__FP9daTagQs_c                                   */
@@ -486,14 +481,9 @@ asm static void daTagQs_Execute(daTagQs_c* param_0) {
 
 
 /* 80D5EC40-80D5EC48 0008+00 s=1 e=0 z=0  None .text      daTagQs_IsDelete__FP9daTagQs_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagQs_IsDelete(daTagQs_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_qs/d_a_tag_qs/daTagQs_IsDelete__FP9daTagQs_c.s"
+static bool daTagQs_IsDelete(daTagQs_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EC48-80D5EC70 0028+00 s=1 e=0 z=0  None .text      daTagQs_Delete__FP9daTagQs_c                                 */

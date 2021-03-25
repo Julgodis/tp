@@ -115,16 +115,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -133,6 +127,12 @@ struct Vec {
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -249,7 +249,7 @@ static void daObjBATTA_Create(fopAc_ac_c*); // 2
 static void daObjBATTA_Delete(daObjBATTA_c*); // 2
 static void daObjBATTA_Draw(daObjBATTA_c*); // 2
 static void daObjBATTA_Execute(daObjBATTA_c*); // 2
-static void daObjBATTA_IsDelete(daObjBATTA_c*); // 2
+static bool daObjBATTA_IsDelete(daObjBATTA_c*); // 2
 
 extern "C" void __ct__16daObj_BattaHIO_cFv(); // 1
 extern "C" void setAction__12daObjBATTA_cFM12daObjBATTA_cFPCvPv_v(); // 1
@@ -280,7 +280,7 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" static void daObjBATTA_IsDelete__FP12daObjBATTA_c(); // 1
+extern "C" static bool daObjBATTA_IsDelete__FP12daObjBATTA_c(); // 1
 extern "C" void __dt__16daObj_BattaHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_batta_cpp(); // 1
 extern "C" static void func_80BAC8F8(); // 1
@@ -1213,14 +1213,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80BAC86C-80BAC874 0008+00 s=1 e=0 z=0  None .text      daObjBATTA_IsDelete__FP12daObjBATTA_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjBATTA_IsDelete(daObjBATTA_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_batta/d_a_obj_batta/daObjBATTA_IsDelete__FP12daObjBATTA_c.s"
+static bool daObjBATTA_IsDelete(daObjBATTA_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BAC874-80BAC8BC 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_BattaHIO_cFv                                   */

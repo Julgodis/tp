@@ -146,7 +146,7 @@ static void daObjMATO_Create(fopAc_ac_c*); // 2
 static void daObjMATO_Delete(daObjMATO_c*); // 2
 static void daObjMATO_Draw(daObjMATO_c*); // 2
 static void daObjMATO_Execute(daObjMATO_c*); // 2
-static void daObjMATO_IsDelete(daObjMATO_c*); // 2
+static bool daObjMATO_IsDelete(daObjMATO_c*); // 2
 
 extern "C" void setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
@@ -170,7 +170,7 @@ extern "C" void __ct__10MatoData_sFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" static void daObjMATO_IsDelete__FP11daObjMATO_c(); // 1
+extern "C" static bool daObjMATO_IsDelete__FP11daObjMATO_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern u8 const l_rupee_itemno_table[28];
 extern "C" extern u8 const l_rupee_count_table[7 + 1 /* padding */];
@@ -672,14 +672,9 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 80C92BF8-80C92C00 0008+00 s=1 e=0 z=0  None .text      daObjMATO_IsDelete__FP11daObjMATO_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMATO_IsDelete(daObjMATO_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mato/d_a_obj_mato/daObjMATO_IsDelete__FP11daObjMATO_c.s"
+static bool daObjMATO_IsDelete(daObjMATO_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C92C00-80C92C48 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

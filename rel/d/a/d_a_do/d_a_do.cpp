@@ -61,10 +61,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -80,7 +80,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -89,7 +89,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -291,7 +291,7 @@ static void do_message(do_class*); // 2
 static void action(do_class*); // 2
 static void message(do_class*); // 2
 static void daDo_Execute(do_class*); // 2
-static void daDo_IsDelete(do_class*); // 2
+static bool daDo_IsDelete(do_class*); // 2
 static void daDo_Delete(do_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daDo_Create(fopAc_ac_c*); // 2
@@ -334,7 +334,7 @@ extern "C" static void do_message__FP8do_class(); // 1
 extern "C" static void action__FP8do_class(); // 1
 extern "C" static void message__FP8do_class(); // 1
 extern "C" static void daDo_Execute__FP8do_class(); // 1
-extern "C" static void daDo_IsDelete__FP8do_class(); // 1
+extern "C" static bool daDo_IsDelete__FP8do_class(); // 1
 extern "C" static void daDo_Delete__FP8do_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -488,7 +488,7 @@ void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
@@ -530,7 +530,7 @@ extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
 extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
 extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
@@ -1685,14 +1685,9 @@ asm static void daDo_Execute(do_class* param_0) {
 
 
 /* 8066E494-8066E49C 0008+00 s=1 e=0 z=0  None .text      daDo_IsDelete__FP8do_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDo_IsDelete(do_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_do/d_a_do/daDo_IsDelete__FP8do_class.s"
+static bool daDo_IsDelete(do_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8066E49C-8066E504 0068+00 s=1 e=0 z=0  None .text      daDo_Delete__FP8do_class                                     */

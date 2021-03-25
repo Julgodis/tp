@@ -158,8 +158,8 @@ struct J3DMtxCalc {
 	/* 808393A4 */ ~J3DMtxCalc();
 	/* 80844B8C */ void setAnmTransform(u8, J3DAnmTransform*);
 	/* 80844B90 */ void setAnmTransform(J3DAnmTransform*);
-	/* 80844B94 */ void getAnmTransform(u8);
-	/* 80844B9C */ void getAnmTransform();
+	/* 80844B94 */ bool getAnmTransform(u8);
+	/* 80844B9C */ bool getAnmTransform();
 	/* 80844BA4 */ void setWeight(u8, f32);
 	/* 80844BA8 */ void getWeight(u8) const;
 };
@@ -244,10 +244,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -265,10 +265,10 @@ struct mDoExt_MtxCalcOldFrame {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -344,10 +344,10 @@ struct dEvent_manager_c {
 	/* 800483E0 */ void getGoal();
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -659,8 +659,8 @@ extern "C" static void daHorse_Delete__FP9daHorse_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform(); // 1
-extern "C" void getAnmTransform__10J3DMtxCalcFUc(); // 1
-extern "C" void getAnmTransform__10J3DMtxCalcFv(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFUc(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFv(); // 1
 extern "C" void setWeight__10J3DMtxCalcFUcf(); // 1
 extern "C" void getWeight__10J3DMtxCalcCFUc(); // 1
 extern "C" void func_80844BB4(); // 1
@@ -1700,14 +1700,9 @@ asm void daHorse_c::createHeap() {
 
 
 /* 808392D8-808392DC 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 808392DC-80839348 006C+00 s=1 e=0 z=0  None .text      __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
@@ -2263,25 +2258,15 @@ asm void daHorse_c::setStickData() {
 
 
 /* 8083B828-8083B82C 0004+00 s=1 e=0 z=0  None .text      setTurnStartVibration__9daHorse_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daHorse_c::setTurnStartVibration() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setTurnStartVibration__9daHorse_cFv.s"
+void daHorse_c::setTurnStartVibration() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083B82C-8083B830 0004+00 s=1 e=0 z=0  None .text      setTurnVibration__9daHorse_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daHorse_c::setTurnVibration() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setTurnVibration__9daHorse_cFv.s"
+void daHorse_c::setTurnVibration() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083B830-8083BF48 0718+00 s=6 e=0 z=0  None .text      setMoveAnime__9daHorse_cFf                                   */
@@ -3158,58 +3143,33 @@ asm cCcD_GStts::~cCcD_GStts() {
 
 
 /* 80844B8C-80844B90 0004+00 s=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setAnmTransform(u8 param_0, J3DAnmTransform* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(u8 param_0, J3DAnmTransform* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844B90-80844B94 0004+00 s=3 e=0 z=0  None .text      setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setAnmTransform(J3DAnmTransform* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform.s"
+void J3DMtxCalc::setAnmTransform(J3DAnmTransform* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844B94-80844B9C 0008+00 s=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::getAnmTransform(u8 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/getAnmTransform__10J3DMtxCalcFUc.s"
+bool J3DMtxCalc::getAnmTransform(u8 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80844B9C-80844BA4 0008+00 s=3 e=0 z=0  None .text      getAnmTransform__10J3DMtxCalcFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::getAnmTransform() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/getAnmTransform__10J3DMtxCalcFv.s"
+bool J3DMtxCalc::getAnmTransform() {
+	return false;
 }
-#pragma pop
 
 
 /* 80844BA4-80844BA8 0004+00 s=3 e=0 z=0  None .text      setWeight__10J3DMtxCalcFUcf                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DMtxCalc::setWeight(u8 param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/setWeight__10J3DMtxCalcFUcf.s"
+void J3DMtxCalc::setWeight(u8 param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844BA8-80844BB4 000C+00 s=3 e=0 z=0  None .text      getWeight__10J3DMtxCalcCFUc                                  */
@@ -3301,14 +3261,9 @@ asm daHorseFootData_c::~daHorseFootData_c() {
 
 
 /* 80844FAC-80844FB0 0004+00 s=1 e=0 z=0  None .text      __ct__17daHorseFootData_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daHorseFootData_c::daHorseFootData_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__17daHorseFootData_cFv.s"
+daHorseFootData_c::daHorseFootData_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844FB0-80844FEC 003C+00 s=2 e=0 z=0  None .text      __dt__13daHorseRein_cFv                                      */
@@ -3323,14 +3278,9 @@ asm daHorseRein_c::~daHorseRein_c() {
 
 
 /* 80844FEC-80844FF0 0004+00 s=1 e=0 z=0  None .text      __ct__13daHorseRein_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daHorseRein_c::daHorseRein_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_horse/d_a_horse/__ct__13daHorseRein_cFv.s"
+daHorseRein_c::daHorseRein_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80844FF0-80845038 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

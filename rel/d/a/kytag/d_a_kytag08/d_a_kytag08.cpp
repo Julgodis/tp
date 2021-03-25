@@ -36,19 +36,19 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -71,16 +71,16 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void daKytag08_Draw(kytag08_class*); // 2
+static bool daKytag08_Draw(kytag08_class*); // 2
 static void daKytag08_Execute(kytag08_class*); // 2
-static void daKytag08_IsDelete(kytag08_class*); // 2
+static bool daKytag08_IsDelete(kytag08_class*); // 2
 static void daKytag08_Delete(kytag08_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daKytag08_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daKytag08_Draw__FP13kytag08_class(); // 1
+extern "C" static bool daKytag08_Draw__FP13kytag08_class(); // 1
 extern "C" static void daKytag08_Execute__FP13kytag08_class(); // 1
-extern "C" static void daKytag08_IsDelete__FP13kytag08_class(); // 1
+extern "C" static bool daKytag08_IsDelete__FP13kytag08_class(); // 1
 extern "C" static void daKytag08_Delete__FP13kytag08_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daKytag08_Create__FP10fopAc_ac_c(); // 1
@@ -165,14 +165,9 @@ extern "C" extern u32 __float_nan;
 // 
 
 /* 8085A578-8085A580 0008+00 s=1 e=0 z=0  None .text      daKytag08_Draw__FP13kytag08_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag08_Draw(kytag08_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag08/d_a_kytag08/daKytag08_Draw__FP13kytag08_class.s"
+static bool daKytag08_Draw(kytag08_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -191,14 +186,9 @@ asm static void daKytag08_Execute(kytag08_class* param_0) {
 
 
 /* 8085AEA0-8085AEA8 0008+00 s=1 e=0 z=0  None .text      daKytag08_IsDelete__FP13kytag08_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag08_IsDelete(kytag08_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag08/d_a_kytag08/daKytag08_IsDelete__FP13kytag08_class.s"
+static bool daKytag08_IsDelete(kytag08_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

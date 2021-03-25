@@ -21,13 +21,26 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct fopAc_ac_c {
-};
-
 struct csXyz {
 };
 
+struct fopAc_ac_c {
+};
+
 struct cXyz {
+};
+
+struct Vec {
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_SplGrpChk {
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
 struct cBgS_PolyInfo {
@@ -38,16 +51,6 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct dBgS_SplGrpChk {
-	/* 80078B90 */ void Set(cXyz&, f32);
-	/* 80078C78 */ ~dBgS_SplGrpChk();
-};
-
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
 struct dBgS_Acch;
 struct dBgS {
 	/* 8007524C */ void WallCorrect(dBgS_Acch*);
@@ -56,9 +59,6 @@ struct dBgS {
 	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
-};
-
-struct Vec {
 };
 
 struct dBgS_Acch {
@@ -95,7 +95,11 @@ struct dBgS_Acch {
 };
 
 struct daPy_py_c {
-	/* 80077494 */ void checkPlayerFly() const;
+	/* 80077494 */ bool checkPlayerFly() const;
+};
+
+struct cM3dGPla {
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
 struct cBgS_GndChk {
@@ -106,10 +110,6 @@ struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, unsigned int);
-};
-
-struct cM3dGPla {
-	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
 struct cBgS {
@@ -203,7 +203,7 @@ extern "C" void ChkLineDown__9dBgS_AcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" static void func_80077484(); // 1
 extern "C" static void func_8007748C(); // 1
-extern "C" void checkPlayerFly__9daPy_py_cCFv(); // 1
+extern "C" bool checkPlayerFly__9daPy_py_cCFv(); // 1
 extern "C" extern void* __vt__12dBgS_AcchCir[3];
 
 // 
@@ -769,13 +769,8 @@ extern "C" asm static void func_8007748C() {
 
 
 /* 80077494-8007749C 0008+00 s=0 e=1 z=0  None .text      checkPlayerFly__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkPlayerFly() const {
-	nofralloc
-#include "asm/d/bg/d_bg_s_acch/checkPlayerFly__9daPy_py_cCFv.s"
+bool daPy_py_c::checkPlayerFly() const {
+	return false;
 }
-#pragma pop
 
 

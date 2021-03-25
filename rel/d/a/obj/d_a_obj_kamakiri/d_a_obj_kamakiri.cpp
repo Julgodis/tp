@@ -107,21 +107,21 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -268,7 +268,7 @@ static void daObjKAM_Create(fopAc_ac_c*); // 2
 static void daObjKAM_Delete(daObjKAM_c*); // 2
 static void daObjKAM_Draw(daObjKAM_c*); // 2
 static void daObjKAM_Execute(daObjKAM_c*); // 2
-static void daObjKAM_IsDelete(daObjKAM_c*); // 2
+static bool daObjKAM_IsDelete(daObjKAM_c*); // 2
 
 extern "C" void __ct__14daObj_KamHIO_cFv(); // 1
 extern "C" void InitCcSph__10daObjKAM_cFv(); // 1
@@ -303,7 +303,7 @@ extern "C" void create__10daObjKAM_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static void daObjKAM_IsDelete__FP10daObjKAM_c(); // 1
+extern "C" static bool daObjKAM_IsDelete__FP10daObjKAM_c(); // 1
 extern "C" void __dt__14daObj_KamHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kamakiri_cpp(); // 1
 extern "C" static void func_80C383E4(); // 1
@@ -1075,14 +1075,9 @@ asm cM3dGAab::~cM3dGAab() {
 
 
 /* 80C38358-80C38360 0008+00 s=1 e=0 z=0  None .text      daObjKAM_IsDelete__FP10daObjKAM_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKAM_IsDelete(daObjKAM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kamakiri/d_a_obj_kamakiri/daObjKAM_IsDelete__FP10daObjKAM_c.s"
+static bool daObjKAM_IsDelete(daObjKAM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C38360-80C383A8 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_KamHIO_cFv                                     */

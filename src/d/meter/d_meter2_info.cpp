@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct J2DTextBox {
-	/* 8021C7F4 */ void getFont() const;
-};
-
 struct cXyz {
 };
 
 struct JUTFont {
+};
+
+struct J2DTextBox {
+	/* 8021C7F4 */ void getFont() const;
 };
 
 struct JMSMesgEntry_c {
@@ -142,7 +142,7 @@ void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*); // 2
 void dMeter2Info_setCloth(u8, bool); // 2
 void dMeter2Info_setSword(u8, bool); // 2
 void dMeter2Info_setShield(u8, bool); // 2
-void dMeter2Info_is2DActiveTouchArea(); // 2
+bool dMeter2Info_is2DActiveTouchArea(); // 2
 void dMeter2Info_isMapOpenCheck(); // 2
 void dMeter2Info_isItemOpenCheck(); // 2
 void dMeter2Info_getRecieveLetterNum(); // 2
@@ -199,7 +199,7 @@ extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG(); // 1
 extern "C" void dMeter2Info_setCloth__FUcb(); // 1
 extern "C" void dMeter2Info_setSword__FUcb(); // 1
 extern "C" void dMeter2Info_setShield__FUcb(); // 1
-extern "C" void dMeter2Info_is2DActiveTouchArea__Fv(); // 1
+extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv(); // 1
 extern "C" void dMeter2Info_isMapOpenCheck__Fv(); // 1
 extern "C" void dMeter2Info_isItemOpenCheck__Fv(); // 1
 extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
@@ -1161,14 +1161,9 @@ asm void dMeter2Info_setShield(u8 param_0, bool param_1) {
 
 
 /* 8021E660-8021E668 0008+00 s=0 e=1 z=0  None .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeter2Info_is2DActiveTouchArea() {
-	nofralloc
-#include "asm/d/meter/d_meter2_info/dMeter2Info_is2DActiveTouchArea__Fv.s"
+bool dMeter2Info_is2DActiveTouchArea() {
+	return false;
 }
-#pragma pop
 
 
 /* 8021E668-8021E688 0020+00 s=0 e=1 z=0  None .text      dMeter2Info_isMapOpenCheck__Fv                               */
@@ -1238,25 +1233,15 @@ asm void dMeter2Info_recieveLetter() {
 
 
 /* 8021E9D0-8021E9D4 0004+00 s=0 e=33 z=0  None .text      dMeter2Info_set2DVibration__Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeter2Info_set2DVibration() {
-	nofralloc
-#include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibration__Fv.s"
+void dMeter2Info_set2DVibration() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8021E9D4-8021E9D8 0004+00 s=0 e=12 z=0  None .text      dMeter2Info_set2DVibrationM__Fv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeter2Info_set2DVibrationM() {
-	nofralloc
-#include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibrationM__Fv.s"
+void dMeter2Info_set2DVibrationM() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8021E9D8-8021EA14 003C+00 s=0 e=1 z=0  None .text      __sinit_d_meter2_info_cpp                                    */

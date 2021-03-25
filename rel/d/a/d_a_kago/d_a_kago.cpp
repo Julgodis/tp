@@ -16,12 +16,6 @@ struct daKago_HIO_c {
 	/* 80854A4C */ ~daKago_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -31,6 +25,12 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80849924 */ ~cXyz();
 	/* 80854A28 */ cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daKago_c {
@@ -43,7 +43,7 @@ struct daKago_c {
 	/* 8084A070 */ void checkRoofHeight(cXyz);
 	/* 8084A210 */ void checkMoveHeight();
 	/* 8084A2A8 */ void checkSizeBg();
-	/* 8084A6DC */ void getBeforeGroundHeight(u8);
+	/* 8084A6DC */ bool getBeforeGroundHeight(u8);
 	/* 8084A6E4 */ void demo_skip(int);
 	/* 8084AA64 */ void DemoSkipCallBack(void*, int);
 	/* 8084AA98 */ void setActionMode(int, int);
@@ -146,19 +146,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -391,7 +391,7 @@ struct daTagWaterFall_c {
 static void daKago_Draw(daKago_c*); // 2
 static void s_waterfall(void*, void*); // 2
 static void daKago_Execute(daKago_c*); // 2
-static void daKago_IsDelete(daKago_c*); // 2
+static bool daKago_IsDelete(daKago_c*); // 2
 static void daKago_Delete(daKago_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daKago_Create(daKago_c*); // 2
@@ -409,7 +409,7 @@ extern "C" void checkRoofHeight__8daKago_cF4cXyz(); // 1
 extern "C" void checkMoveHeight__8daKago_cFv(); // 1
 extern "C" void checkSizeBg__8daKago_cFv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void getBeforeGroundHeight__8daKago_cFUc(); // 1
+extern "C" bool getBeforeGroundHeight__8daKago_cFUc(); // 1
 extern "C" void demo_skip__8daKago_cFi(); // 1
 extern "C" void DemoSkipCallBack__8daKago_cFPvi(); // 1
 extern "C" void setActionMode__8daKago_cFii(); // 1
@@ -469,7 +469,7 @@ extern "C" void mtx_set__8daKago_cFv(); // 1
 extern "C" void cc_set__8daKago_cFv(); // 1
 extern "C" void execute__8daKago_cFv(); // 1
 extern "C" static void daKago_Execute__FP8daKago_c(); // 1
-extern "C" static void daKago_IsDelete__FP8daKago_c(); // 1
+extern "C" static bool daKago_IsDelete__FP8daKago_c(); // 1
 extern "C" void _delete__8daKago_cFv(); // 1
 extern "C" static void daKago_Delete__FP8daKago_c(); // 1
 extern "C" void ctrlJoint__8daKago_cFP8J3DJointP8J3DModel(); // 1
@@ -1556,14 +1556,9 @@ asm cM3dGPla::~cM3dGPla() {
 
 
 /* 8084A6DC-8084A6E4 0008+00 s=1 e=0 z=0  None .text      getBeforeGroundHeight__8daKago_cFUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daKago_c::getBeforeGroundHeight(u8 param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/getBeforeGroundHeight__8daKago_cFUc.s"
+bool daKago_c::getBeforeGroundHeight(u8 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 8084A6E4-8084AA64 0380+00 s=2 e=0 z=0  None .text      demo_skip__8daKago_cFi                                       */
@@ -2216,14 +2211,9 @@ asm static void daKago_Execute(daKago_c* param_0) {
 
 
 /* 80854188-80854190 0008+00 s=1 e=0 z=0  None .text      daKago_IsDelete__FP8daKago_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKago_IsDelete(daKago_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_IsDelete__FP8daKago_c.s"
+static bool daKago_IsDelete(daKago_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80854190-80854200 0070+00 s=1 e=0 z=0  None .text      _delete__8daKago_cFv                                         */
@@ -2337,14 +2327,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80854A28-80854A2C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_kago/d_a_kago/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80854A2C-80854A4C 0020+00 s=1 e=0 z=0  None .text      daKago_Create__FP8daKago_c                                   */

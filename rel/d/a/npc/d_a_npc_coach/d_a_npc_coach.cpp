@@ -37,13 +37,13 @@ struct cXyz {
 	/* 809A4D78 */ cXyz();
 };
 
-struct SVec {
+struct csXyz {
 };
 
 struct J3DModel {
 };
 
-struct csXyz {
+struct SVec {
 };
 
 struct daNpcCoach_c {
@@ -174,12 +174,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -187,6 +181,12 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -210,10 +210,10 @@ struct mDoExt_McaMorf2 {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -397,7 +397,7 @@ static void s_sub(void*, void*); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daNpcCoach_Execute(daNpcCoach_c*); // 2
 static void daNpcCoach_Draw(daNpcCoach_c*); // 2
-static void daNpcCoach_IsDelete(daNpcCoach_c*); // 2
+static bool daNpcCoach_IsDelete(daNpcCoach_c*); // 2
 static void daNpcCoach_Delete(daNpcCoach_c*); // 2
 static void daNpcCoach_Create(fopAc_ac_c*); // 2
 
@@ -434,7 +434,7 @@ extern "C" void calcHorseAnm__12daNpcCoach_cFv(); // 1
 extern "C" void calcHorsePath__12daNpcCoach_cFv(); // 1
 extern "C" static void daNpcCoach_Draw__FP12daNpcCoach_c(); // 1
 extern "C" void draw__12daNpcCoach_cFv(); // 1
-extern "C" static void daNpcCoach_IsDelete__FP12daNpcCoach_c(); // 1
+extern "C" static bool daNpcCoach_IsDelete__FP12daNpcCoach_c(); // 1
 extern "C" static void daNpcCoach_Delete__FP12daNpcCoach_c(); // 1
 extern "C" void __dt__12daNpcCoach_cFv(); // 1
 extern "C" void __dt__16daNpcChHarness_cFv(); // 1
@@ -1488,14 +1488,9 @@ asm void daNpcCoach_c::draw() {
 
 
 /* 809A3300-809A3308 0008+00 s=1 e=0 z=0  None .text      daNpcCoach_IsDelete__FP12daNpcCoach_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcCoach_IsDelete(daNpcCoach_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/daNpcCoach_IsDelete__FP12daNpcCoach_c.s"
+static bool daNpcCoach_IsDelete(daNpcCoach_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809A3308-809A3330 0028+00 s=1 e=0 z=0  None .text      daNpcCoach_Delete__FP12daNpcCoach_c                          */
@@ -1708,14 +1703,9 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* 809A4D78-809A4D7C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_coach/d_a_npc_coach/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809A4D7C-809A4E00 0084+00 s=1 e=0 z=0  None .text      __ct__8dCcD_CylFv                                            */

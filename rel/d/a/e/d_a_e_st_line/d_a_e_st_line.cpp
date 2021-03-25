@@ -42,17 +42,17 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-static void daE_ST_LINE_Draw(e_st_line_class*); // 2
-static void daE_ST_LINE_Execute(e_st_line_class*); // 2
-static void daE_ST_LINE_IsDelete(e_st_line_class*); // 2
+static bool daE_ST_LINE_Draw(e_st_line_class*); // 2
+static bool daE_ST_LINE_Execute(e_st_line_class*); // 2
+static bool daE_ST_LINE_IsDelete(e_st_line_class*); // 2
 static void daE_ST_LINE_Delete(e_st_line_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_ST_LINE_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daE_ST_LINE_Draw__FP15e_st_line_class(); // 1
+extern "C" static bool daE_ST_LINE_Draw__FP15e_st_line_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daE_ST_LINE_Execute__FP15e_st_line_class(); // 1
-extern "C" static void daE_ST_LINE_IsDelete__FP15e_st_line_class(); // 1
+extern "C" static bool daE_ST_LINE_Execute__FP15e_st_line_class(); // 1
+extern "C" static bool daE_ST_LINE_IsDelete__FP15e_st_line_class(); // 1
 extern "C" static void daE_ST_LINE_Delete__FP15e_st_line_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_ST_LINE_Create__FP10fopAc_ac_c(); // 1
@@ -115,14 +115,9 @@ extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 // 
 
 /* 807A6F58-807A6F60 0008+00 s=1 e=0 z=0  None .text      daE_ST_LINE_Draw__FP15e_st_line_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_ST_LINE_Draw(e_st_line_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/daE_ST_LINE_Draw__FP15e_st_line_class.s"
+static bool daE_ST_LINE_Draw(e_st_line_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807A6F60-807A6F9C 003C+00 s=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -137,25 +132,15 @@ asm cXyz::~cXyz() {
 
 
 /* 807A6F9C-807A6FA4 0008+00 s=2 e=0 z=0  None .text      daE_ST_LINE_Execute__FP15e_st_line_class                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_ST_LINE_Execute(e_st_line_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/daE_ST_LINE_Execute__FP15e_st_line_class.s"
+static bool daE_ST_LINE_Execute(e_st_line_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807A6FA4-807A6FAC 0008+00 s=1 e=0 z=0  None .text      daE_ST_LINE_IsDelete__FP15e_st_line_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_ST_LINE_IsDelete(e_st_line_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/daE_ST_LINE_IsDelete__FP15e_st_line_class.s"
+static bool daE_ST_LINE_IsDelete(e_st_line_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -322,13 +307,8 @@ asm static void daE_ST_LINE_Create(fopAc_ac_c* param_0) {
 
 
 /* 807A7220-807A7224 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 

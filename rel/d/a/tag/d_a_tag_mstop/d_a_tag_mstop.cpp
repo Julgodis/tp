@@ -67,7 +67,7 @@ struct Z2SeMgr {
 static void daTagMstop_Create(fopAc_ac_c*); // 2
 static void daTagMstop_Delete(daTagMstop_c*); // 2
 static void daTagMstop_Execute(daTagMstop_c*); // 2
-static void daTagMstop_Draw(daTagMstop_c*); // 2
+static bool daTagMstop_Draw(daTagMstop_c*); // 2
 
 extern "C" void create__12daTagMstop_cFv(); // 1
 extern "C" static void daTagMstop_Create__FP10fopAc_ac_c(); // 1
@@ -76,7 +76,7 @@ extern "C" static void daTagMstop_Delete__FP12daTagMstop_c(); // 1
 extern "C" void eventOrder__12daTagMstop_cFv(); // 1
 extern "C" void execute__12daTagMstop_cFv(); // 1
 extern "C" static void daTagMstop_Execute__FP12daTagMstop_c(); // 1
-extern "C" static void daTagMstop_Draw__FP12daTagMstop_c(); // 1
+extern "C" static bool daTagMstop_Draw__FP12daTagMstop_c(); // 1
 extern "C" extern u32 const lit_4058;
 extern "C" extern u8 const lit_4059[4];
 extern "C" extern void* g_profile_Tag_Mstop[12];
@@ -226,14 +226,9 @@ asm static void daTagMstop_Execute(daTagMstop_c* param_0) {
 
 
 /* 805A695C-805A6964 0008+00 s=1 e=0 z=0  None .text      daTagMstop_Draw__FP12daTagMstop_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagMstop_Draw(daTagMstop_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mstop/d_a_tag_mstop/daTagMstop_Draw__FP12daTagMstop_c.s"
+static bool daTagMstop_Draw(daTagMstop_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

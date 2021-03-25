@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct J2DMaterialBlock {
+struct J2DResReference {
+	/* 8030CF10 */ void getResReference(u16) const;
+	/* 8030CF44 */ void getName(u16) const;
 };
 
 struct JKRArchive {
 };
 
-struct J2DResReference {
-	/* 8030CF10 */ void getResReference(u16) const;
-	/* 8030CF44 */ void getName(u16) const;
+struct J2DMaterialBlock {
 };
 
 struct J2DMaterial {

@@ -16,7 +16,7 @@ struct daTag_Lantern_c {
 	/* 8048ED28 */ void create();
 	/* 8048EDA8 */ void Delete();
 	/* 8048EDDC */ void Execute();
-	/* 8048EF6C */ void Draw();
+	/* 8048EF6C */ bool Draw();
 	/* 8048EF74 */ void initialize();
 };
 
@@ -69,19 +69,19 @@ static void daTag_Lantern_Create(void*); // 2
 static void daTag_Lantern_Delete(void*); // 2
 static void daTag_Lantern_Execute(void*); // 2
 static void daTag_Lantern_Draw(void*); // 2
-static void daTag_Lantern_IsDelete(void*); // 2
+static bool daTag_Lantern_IsDelete(void*); // 2
 
 extern "C" void __dt__15daTag_Lantern_cFv(); // 1
 extern "C" void create__15daTag_Lantern_cFv(); // 1
 extern "C" void Delete__15daTag_Lantern_cFv(); // 1
 extern "C" void Execute__15daTag_Lantern_cFv(); // 1
-extern "C" void Draw__15daTag_Lantern_cFv(); // 1
+extern "C" bool Draw__15daTag_Lantern_cFv(); // 1
 extern "C" void initialize__15daTag_Lantern_cFv(); // 1
 extern "C" static void daTag_Lantern_Create__FPv(); // 1
 extern "C" static void daTag_Lantern_Delete__FPv(); // 1
 extern "C" static void daTag_Lantern_Execute__FPv(); // 1
 extern "C" static void daTag_Lantern_Draw__FPv(); // 1
-extern "C" static void daTag_Lantern_IsDelete__FPv(); // 1
+extern "C" static bool daTag_Lantern_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_tag_lantern_cpp(); // 1
 extern "C" void __dt__21daTag_Lantern_Param_cFv(); // 1
 extern "C" extern void* g_profile_TAG_LANTERN[12];
@@ -207,14 +207,9 @@ asm void daTag_Lantern_c::Execute() {
 
 
 /* 8048EF6C-8048EF74 0008+00 s=1 e=0 z=0  None .text      Draw__15daTag_Lantern_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Lantern_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/Draw__15daTag_Lantern_cFv.s"
+bool daTag_Lantern_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -282,14 +277,9 @@ asm static void daTag_Lantern_Draw(void* param_0) {
 
 
 /* 8048F0A4-8048F0AC 0008+00 s=1 e=0 z=0  None .text      daTag_Lantern_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Lantern_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_IsDelete__FPv.s"
+static bool daTag_Lantern_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

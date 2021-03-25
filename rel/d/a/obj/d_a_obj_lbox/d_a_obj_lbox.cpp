@@ -161,7 +161,7 @@ struct Z2SeMgr {
 static void daObj_Lbox_Draw(obj_lbox_class*); // 2
 static void action(obj_lbox_class*); // 2
 static void daObj_Lbox_Execute(obj_lbox_class*); // 2
-static void daObj_Lbox_IsDelete(obj_lbox_class*); // 2
+static bool daObj_Lbox_IsDelete(obj_lbox_class*); // 2
 static void daObj_Lbox_Delete(obj_lbox_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Lbox_Create(fopAc_ac_c*); // 2
@@ -170,7 +170,7 @@ extern "C" void __ct__16daObj_Lbox_HIO_cFv(); // 1
 extern "C" static void daObj_Lbox_Draw__FP14obj_lbox_class(); // 1
 extern "C" static void action__FP14obj_lbox_class(); // 1
 extern "C" static void daObj_Lbox_Execute__FP14obj_lbox_class(); // 1
-extern "C" static void daObj_Lbox_IsDelete__FP14obj_lbox_class(); // 1
+extern "C" static bool daObj_Lbox_IsDelete__FP14obj_lbox_class(); // 1
 extern "C" static void daObj_Lbox_Delete__FP14obj_lbox_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Lbox_Create__FP10fopAc_ac_c(); // 1
@@ -416,14 +416,9 @@ asm static void daObj_Lbox_Execute(obj_lbox_class* param_0) {
 
 
 /* 80C539C8-80C539D0 0008+00 s=1 e=0 z=0  None .text      daObj_Lbox_IsDelete__FP14obj_lbox_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Lbox_IsDelete(obj_lbox_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lbox/d_a_obj_lbox/daObj_Lbox_IsDelete__FP14obj_lbox_class.s"
+static bool daObj_Lbox_IsDelete(obj_lbox_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

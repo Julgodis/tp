@@ -136,7 +136,7 @@ static void bug_control(e_bug_class*); // 2
 static void s_boom_sub(void*, void*); // 2
 static void s_bomb_sub(void*, void*); // 2
 static void daE_Bug_Execute(e_bug_class*); // 2
-static void daE_Bug_IsDelete(e_bug_class*); // 2
+static bool daE_Bug_IsDelete(e_bug_class*); // 2
 static void daE_Bug_Delete(e_bug_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Bug_Create(fopAc_ac_c*); // 2
@@ -162,7 +162,7 @@ extern "C" static void bug_control__FP11e_bug_class(); // 1
 extern "C" static void s_boom_sub__FPvPv(); // 1
 extern "C" static void s_bomb_sub__FPvPv(); // 1
 extern "C" static void daE_Bug_Execute__FP11e_bug_class(); // 1
-extern "C" static void daE_Bug_IsDelete__FP11e_bug_class(); // 1
+extern "C" static bool daE_Bug_IsDelete__FP11e_bug_class(); // 1
 extern "C" static void daE_Bug_Delete__FP11e_bug_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Bug_Create__FP10fopAc_ac_c(); // 1
@@ -866,14 +866,9 @@ asm static void daE_Bug_Execute(e_bug_class* param_0) {
 
 
 /* 806975A0-806975A8 0008+00 s=1 e=0 z=0  None .text      daE_Bug_IsDelete__FP11e_bug_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Bug_IsDelete(e_bug_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bug/d_a_e_bug/daE_Bug_IsDelete__FP11e_bug_class.s"
+static bool daE_Bug_IsDelete(e_bug_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -28,20 +28,6 @@ struct daMidna_McaMorfCB1_c {
 	/* 804C6398 */ ~daMidna_McaMorfCB1_c();
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327C58 */ void calcWeightEnvelopeMtx();
-};
-
 struct Vec {
 };
 
@@ -55,9 +41,23 @@ struct cXyz {
 	/* 804BD8F4 */ cXyz();
 };
 
+struct J3DDeformData {
+};
+
+struct J3DModel {
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327C58 */ void calcWeightEnvelopeMtx();
+};
+
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DModelData {
 };
 
 struct daMidna_c {
@@ -199,9 +199,6 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -211,6 +208,9 @@ struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
 	/* 802C06D0 */ void updateAnime(f32, f32);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -1634,14 +1634,9 @@ asm cXyz::~cXyz() {
 
 
 /* 804BD8F4-804BD8F8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_midna/d_a_midna/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BD8F8-804BD91C 0024+00 s=1 e=0 z=0  None .text      __defctor__14daPy_anmHeap_cFv                                */

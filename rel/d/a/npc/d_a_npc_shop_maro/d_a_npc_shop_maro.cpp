@@ -17,7 +17,7 @@ struct daNpc_shopMaro_c {
 	/* 80AEBF64 */ ~daNpc_shopMaro_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -28,14 +28,14 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80AEC6BC */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_motionAnmData_c {
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct dMsgFlow_c {
 	/* 80249F00 */ dMsgFlow_c();
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct dShopSystem_c {
@@ -43,9 +43,9 @@ struct dShopSystem_c {
 	/* 801974E4 */ ~dShopSystem_c();
 	/* 8019A564 */ void deleteObject();
 	/* 80AEBFC4 */ dShopSystem_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
-	/* 80AEC118 */ void getResName2(int);
-	/* 80AEC120 */ void beforeStartSeqAction(dMsgFlow_c*, int);
-	/* 80AEC128 */ void beforeSelectSeqAction(dMsgFlow_c*, int);
+	/* 80AEC118 */ bool getResName2(int);
+	/* 80AEC120 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 80AEC128 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
 };
 
 struct cXyz {
@@ -70,42 +70,42 @@ struct daNpcT_c {
 	/* 8014997C */ void evtProc();
 	/* 80149BB4 */ void setFootPos();
 	/* 80149D7C */ void setFootPrtcl(cXyz*, f32, f32);
-	/* 8014A05C */ void checkCullDraw();
+	/* 8014A05C */ bool checkCullDraw();
 	/* 8014A064 */ void twilight();
 	/* 8014A0B0 */ void evtOrder();
 	/* 8014A324 */ void clrParam();
 	/* 8014A628 */ void setMotionAnm(int, f32, int);
 	/* 80AEC16C */ daNpcT_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
 	/* 80AEC7BC */ void ctrlSubFaceMotion(int);
-	/* 80AEC7C0 */ void checkChangeJoint(int);
-	/* 80AEC7C8 */ void checkRemoveJoint(int);
-	/* 80AEC7D0 */ void getBackboneJointNo();
-	/* 80AEC7D8 */ void getNeckJointNo();
-	/* 80AEC7E0 */ void getHeadJointNo();
-	/* 80AEC7E8 */ void getFootLJointNo();
-	/* 80AEC7F0 */ void getFootRJointNo();
-	/* 80AEC7F8 */ void getEyeballLMaterialNo();
-	/* 80AEC800 */ void getEyeballRMaterialNo();
-	/* 80AEC808 */ void getEyeballMaterialNo();
+	/* 80AEC7C0 */ bool checkChangeJoint(int);
+	/* 80AEC7C8 */ bool checkRemoveJoint(int);
+	/* 80AEC7D0 */ s32 getBackboneJointNo();
+	/* 80AEC7D8 */ s32 getNeckJointNo();
+	/* 80AEC7E0 */ s32 getHeadJointNo();
+	/* 80AEC7E8 */ s32 getFootLJointNo();
+	/* 80AEC7F0 */ s32 getFootRJointNo();
+	/* 80AEC7F8 */ bool getEyeballLMaterialNo();
+	/* 80AEC800 */ bool getEyeballRMaterialNo();
+	/* 80AEC808 */ bool getEyeballMaterialNo();
 	/* 80AEC810 */ void afterJntAnm(int);
 	/* 80AEC814 */ void setParam();
-	/* 80AEC818 */ void checkChangeEvt();
-	/* 80AEC820 */ void evtTalk();
-	/* 80AEC828 */ void evtEndProc();
-	/* 80AEC830 */ void evtCutProc();
+	/* 80AEC818 */ bool checkChangeEvt();
+	/* 80AEC820 */ bool evtTalk();
+	/* 80AEC828 */ bool evtEndProc();
+	/* 80AEC830 */ bool evtCutProc();
 	/* 80AEC838 */ void setAfterTalkMotion();
 	/* 80AEC83C */ void action();
 	/* 80AEC840 */ void beforeMove();
 	/* 80AEC844 */ void afterMoved();
 	/* 80AEC848 */ void setAttnPos();
 	/* 80AEC84C */ void setCollision();
-	/* 80AEC850 */ void chkXYItems();
+	/* 80AEC850 */ bool chkXYItems();
 	/* 80AEC858 */ void decTmr();
-	/* 80AEC870 */ void drawDbgInfo();
+	/* 80AEC870 */ bool drawDbgInfo();
 	/* 80AEC878 */ void drawOtherMdl();
 	/* 80AEC87C */ void drawGhost();
-	/* 80AEC880 */ void afterSetFaceMotionAnm(int, int, f32, int);
-	/* 80AEC888 */ void afterSetMotionAnm(int, int, f32, int);
+	/* 80AEC880 */ bool afterSetFaceMotionAnm(int, int, f32, int);
+	/* 80AEC888 */ bool afterSetMotionAnm(int, int, f32, int);
 	/* 80AEC890 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
 	/* 80AEC8C0 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 80AEC8F0 */ void changeAnm(int*, int*);
@@ -180,23 +180,23 @@ struct Z2Creature {
 
 static void daNpc_shopMaro_Create(void*); // 2
 static void daNpc_shopMaro_Delete(void*); // 2
-static void daNpc_shopMaro_Execute(void*); // 2
-static void daNpc_shopMaro_Draw(void*); // 2
-static void daNpc_shopMaro_IsDelete(void*); // 2
+static bool daNpc_shopMaro_Execute(void*); // 2
+static bool daNpc_shopMaro_Draw(void*); // 2
+static bool daNpc_shopMaro_IsDelete(void*); // 2
 
 extern "C" static void daNpc_shopMaro_Create__FPv(); // 1
 extern "C" static void daNpc_shopMaro_Delete__FPv(); // 1
-extern "C" static void daNpc_shopMaro_Execute__FPv(); // 1
-extern "C" static void daNpc_shopMaro_Draw__FPv(); // 1
-extern "C" static void daNpc_shopMaro_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_shopMaro_Execute__FPv(); // 1
+extern "C" static bool daNpc_shopMaro_Draw__FPv(); // 1
+extern "C" static bool daNpc_shopMaro_IsDelete__FPv(); // 1
 extern "C" void create__16daNpc_shopMaro_cFv(); // 1
 extern "C" void __ct__16daNpc_shopMaro_cFv(); // 1
 extern "C" void __dt__16daNpc_shopMaro_cFv(); // 1
 extern "C" void __ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void getResName2__13dShopSystem_cFi(); // 1
-extern "C" void beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" void beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
+extern "C" bool getResName2__13dShopSystem_cFi(); // 1
+extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
+extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
@@ -207,35 +207,35 @@ extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void ctrlSubFaceMotion__8daNpcT_cFi(); // 1
-extern "C" void checkChangeJoint__8daNpcT_cFi(); // 1
-extern "C" void checkRemoveJoint__8daNpcT_cFi(); // 1
-extern "C" void getBackboneJointNo__8daNpcT_cFv(); // 1
-extern "C" void getNeckJointNo__8daNpcT_cFv(); // 1
-extern "C" void getHeadJointNo__8daNpcT_cFv(); // 1
-extern "C" void getFootLJointNo__8daNpcT_cFv(); // 1
-extern "C" void getFootRJointNo__8daNpcT_cFv(); // 1
-extern "C" void getEyeballLMaterialNo__8daNpcT_cFv(); // 1
-extern "C" void getEyeballRMaterialNo__8daNpcT_cFv(); // 1
-extern "C" void getEyeballMaterialNo__8daNpcT_cFv(); // 1
+extern "C" bool checkChangeJoint__8daNpcT_cFi(); // 1
+extern "C" bool checkRemoveJoint__8daNpcT_cFi(); // 1
+extern "C" s32 getBackboneJointNo__8daNpcT_cFv(); // 1
+extern "C" s32 getNeckJointNo__8daNpcT_cFv(); // 1
+extern "C" s32 getHeadJointNo__8daNpcT_cFv(); // 1
+extern "C" s32 getFootLJointNo__8daNpcT_cFv(); // 1
+extern "C" s32 getFootRJointNo__8daNpcT_cFv(); // 1
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv(); // 1
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv(); // 1
+extern "C" bool getEyeballMaterialNo__8daNpcT_cFv(); // 1
 extern "C" void afterJntAnm__8daNpcT_cFi(); // 1
 extern "C" void setParam__8daNpcT_cFv(); // 1
-extern "C" void checkChangeEvt__8daNpcT_cFv(); // 1
-extern "C" void evtTalk__8daNpcT_cFv(); // 1
-extern "C" void evtEndProc__8daNpcT_cFv(); // 1
-extern "C" void evtCutProc__8daNpcT_cFv(); // 1
+extern "C" bool checkChangeEvt__8daNpcT_cFv(); // 1
+extern "C" bool evtTalk__8daNpcT_cFv(); // 1
+extern "C" bool evtEndProc__8daNpcT_cFv(); // 1
+extern "C" bool evtCutProc__8daNpcT_cFv(); // 1
 extern "C" void setAfterTalkMotion__8daNpcT_cFv(); // 1
 extern "C" void action__8daNpcT_cFv(); // 1
 extern "C" void beforeMove__8daNpcT_cFv(); // 1
 extern "C" void afterMoved__8daNpcT_cFv(); // 1
 extern "C" void setAttnPos__8daNpcT_cFv(); // 1
 extern "C" void setCollision__8daNpcT_cFv(); // 1
-extern "C" void chkXYItems__8daNpcT_cFv(); // 1
+extern "C" bool chkXYItems__8daNpcT_cFv(); // 1
 extern "C" void decTmr__8daNpcT_cFv(); // 1
-extern "C" void drawDbgInfo__8daNpcT_cFv(); // 1
+extern "C" bool drawDbgInfo__8daNpcT_cFv(); // 1
 extern "C" void drawOtherMdl__8daNpcT_cFv(); // 1
 extern "C" void drawGhost__8daNpcT_cFv(); // 1
-extern "C" void afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" void afterSetMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi(); // 1
 extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c(); // 1
 extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c(); // 1
 extern "C" void changeAnm__8daNpcT_cFPiPi(); // 1
@@ -272,7 +272,7 @@ extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel(); // 1
 extern "C" void evtProc__8daNpcT_cFv(); // 1
 extern "C" void setFootPos__8daNpcT_cFv(); // 1
 extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff(); // 1
-extern "C" void checkCullDraw__8daNpcT_cFv(); // 1
+extern "C" bool checkCullDraw__8daNpcT_cFv(); // 1
 extern "C" void twilight__8daNpcT_cFv(); // 1
 extern "C" void evtOrder__8daNpcT_cFv(); // 1
 extern "C" void clrParam__8daNpcT_cFv(); // 1
@@ -326,36 +326,21 @@ asm static void daNpc_shopMaro_Delete(void* param_0) {
 
 
 /* 80AEBE9C-80AEBEA4 0008+00 s=1 e=0 z=0  None .text      daNpc_shopMaro_Execute__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_shopMaro_Execute(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/daNpc_shopMaro_Execute__FPv.s"
+static bool daNpc_shopMaro_Execute(void* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEBEA4-80AEBEAC 0008+00 s=1 e=0 z=0  None .text      daNpc_shopMaro_Draw__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_shopMaro_Draw(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/daNpc_shopMaro_Draw__FPv.s"
+static bool daNpc_shopMaro_Draw(void* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEBEAC-80AEBEB4 0008+00 s=1 e=0 z=0  None .text      daNpc_shopMaro_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_shopMaro_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/daNpc_shopMaro_IsDelete__FPv.s"
+static bool daNpc_shopMaro_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEBEB4-80AEBF04 0050+00 s=1 e=0 z=0  None .text      create__16daNpc_shopMaro_cFv                                 */
@@ -561,36 +546,21 @@ asm cXyz::~cXyz() {
 
 
 /* 80AEC118-80AEC120 0008+00 s=1 e=0 z=0  None .text      getResName2__13dShopSystem_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dShopSystem_c::getResName2(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getResName2__13dShopSystem_cFi.s"
+bool dShopSystem_c::getResName2(int param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC120-80AEC128 0008+00 s=1 e=0 z=0  None .text      beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* param_0, int param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci.s"
+bool dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* param_0, int param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC128-80AEC130 0008+00 s=1 e=0 z=0  None .text      beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* param_0, int param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci.s"
+bool dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* param_0, int param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC130-80AEC16C 003C+00 s=1 e=0 z=0  None .text      __dt__5csXyzFv                                               */
@@ -616,14 +586,9 @@ asm daNpcT_c::daNpcT_c(daNpcT_faceMotionAnmData_c const* param_0, daNpcT_motionA
 
 
 /* 80AEC570-80AEC574 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC574-80AEC670 00FC+00 s=1 e=0 z=0  None .text      __dt__15daNpcT_JntAnm_cFv                                    */
@@ -638,14 +603,9 @@ asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 
 
 /* 80AEC670-80AEC674 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC674-80AEC6BC 0048+00 s=1 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */
@@ -693,267 +653,147 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80AEC7BC-80AEC7C0 0004+00 s=1 e=0 z=0  None .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::ctrlSubFaceMotion(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(int param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC7C0-80AEC7C8 0008+00 s=1 e=0 z=0  None .text      checkChangeJoint__8daNpcT_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::checkChangeJoint(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/checkChangeJoint__8daNpcT_cFi.s"
+bool daNpcT_c::checkChangeJoint(int param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC7C8-80AEC7D0 0008+00 s=1 e=0 z=0  None .text      checkRemoveJoint__8daNpcT_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::checkRemoveJoint(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/checkRemoveJoint__8daNpcT_cFi.s"
+bool daNpcT_c::checkRemoveJoint(int param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC7D0-80AEC7D8 0008+00 s=1 e=0 z=0  None .text      getBackboneJointNo__8daNpcT_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getBackboneJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getBackboneJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getBackboneJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80AEC7D8-80AEC7E0 0008+00 s=1 e=0 z=0  None .text      getNeckJointNo__8daNpcT_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getNeckJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getNeckJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getNeckJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80AEC7E0-80AEC7E8 0008+00 s=1 e=0 z=0  None .text      getHeadJointNo__8daNpcT_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getHeadJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getHeadJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getHeadJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80AEC7E8-80AEC7F0 0008+00 s=1 e=0 z=0  None .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getFootLJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80AEC7F0-80AEC7F8 0008+00 s=1 e=0 z=0  None .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getFootRJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 80AEC7F8-80AEC800 0008+00 s=1 e=0 z=0  None .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getEyeballLMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC800-80AEC808 0008+00 s=1 e=0 z=0  None .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getEyeballRMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC808-80AEC810 0008+00 s=1 e=0 z=0  None .text      getEyeballMaterialNo__8daNpcT_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getEyeballMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/getEyeballMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC810-80AEC814 0004+00 s=1 e=0 z=0  None .text      afterJntAnm__8daNpcT_cFi                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterJntAnm(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/afterJntAnm__8daNpcT_cFi.s"
+void daNpcT_c::afterJntAnm(int param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC814-80AEC818 0004+00 s=1 e=0 z=0  None .text      setParam__8daNpcT_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::setParam() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/setParam__8daNpcT_cFv.s"
+void daNpcT_c::setParam() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC818-80AEC820 0008+00 s=1 e=0 z=0  None .text      checkChangeEvt__8daNpcT_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::checkChangeEvt() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/checkChangeEvt__8daNpcT_cFv.s"
+bool daNpcT_c::checkChangeEvt() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC820-80AEC828 0008+00 s=1 e=0 z=0  None .text      evtTalk__8daNpcT_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::evtTalk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/evtTalk__8daNpcT_cFv.s"
+bool daNpcT_c::evtTalk() {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC828-80AEC830 0008+00 s=1 e=0 z=0  None .text      evtEndProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::evtEndProc() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/evtEndProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC830-80AEC838 0008+00 s=1 e=0 z=0  None .text      evtCutProc__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::evtCutProc() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/evtCutProc__8daNpcT_cFv.s"
+bool daNpcT_c::evtCutProc() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC838-80AEC83C 0004+00 s=1 e=0 z=0  None .text      setAfterTalkMotion__8daNpcT_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::setAfterTalkMotion() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/setAfterTalkMotion__8daNpcT_cFv.s"
+void daNpcT_c::setAfterTalkMotion() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC83C-80AEC840 0004+00 s=1 e=0 z=0  None .text      action__8daNpcT_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::action() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/action__8daNpcT_cFv.s"
+void daNpcT_c::action() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC840-80AEC844 0004+00 s=1 e=0 z=0  None .text      beforeMove__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::beforeMove() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/beforeMove__8daNpcT_cFv.s"
+void daNpcT_c::beforeMove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC844-80AEC848 0004+00 s=1 e=0 z=0  None .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterMoved() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC848-80AEC84C 0004+00 s=1 e=0 z=0  None .text      setAttnPos__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::setAttnPos() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/setAttnPos__8daNpcT_cFv.s"
+void daNpcT_c::setAttnPos() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC84C-80AEC850 0004+00 s=1 e=0 z=0  None .text      setCollision__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::setCollision() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/setCollision__8daNpcT_cFv.s"
+void daNpcT_c::setCollision() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC850-80AEC858 0008+00 s=1 e=0 z=0  None .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::chkXYItems() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC858-80AEC870 0018+00 s=1 e=0 z=0  None .text      decTmr__8daNpcT_cFv                                          */
@@ -968,58 +808,33 @@ asm void daNpcT_c::decTmr() {
 
 
 /* 80AEC870-80AEC878 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__8daNpcT_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/drawDbgInfo__8daNpcT_cFv.s"
+bool daNpcT_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AEC878-80AEC87C 0004+00 s=1 e=0 z=0  None .text      drawOtherMdl__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::drawOtherMdl() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/drawOtherMdl__8daNpcT_cFv.s"
+void daNpcT_c::drawOtherMdl() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC87C-80AEC880 0004+00 s=1 e=0 z=0  None .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::drawGhost() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC880-80AEC888 0008+00 s=1 e=0 z=0  None .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterSetFaceMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC888-80AEC890 0008+00 s=1 e=0 z=0  None .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterSetMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEC890-80AEC8C0 0030+00 s=1 e=0 z=0  None .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
@@ -1045,47 +860,27 @@ asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c param_0) {
 
 
 /* 80AEC8F0-80AEC8F4 0004+00 s=1 e=0 z=0  None .text      changeAnm__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeAnm(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/changeAnm__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeAnm(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC8F4-80AEC8F8 0004+00 s=1 e=0 z=0  None .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBck(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC8F8-80AEC8FC 0004+00 s=1 e=0 z=0  None .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBtp(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC8FC-80AEC900 0004+00 s=1 e=0 z=0  None .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBtk(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop_maro/d_a_npc_shop_maro/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AEC900-80AEC908 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

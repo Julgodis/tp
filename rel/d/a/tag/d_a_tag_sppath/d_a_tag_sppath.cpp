@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct dPath {
-};
-
 struct Vec {
 };
 
@@ -21,6 +18,9 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266F48 */ void normalizeZP();
+};
+
+struct dPath {
 };
 
 struct daTagSppath_c {
@@ -93,7 +93,7 @@ struct cCcS {
 static void daTagSppath_Create(fopAc_ac_c*); // 2
 static void daTagSppath_Delete(daTagSppath_c*); // 2
 static void daTagSppath_Execute(daTagSppath_c*); // 2
-static void daTagSppath_Draw(daTagSppath_c*); // 2
+static bool daTagSppath_Draw(daTagSppath_c*); // 2
 
 extern "C" void create__13daTagSppath_cFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
@@ -106,7 +106,7 @@ extern "C" void getNearPathPos__13daTagSppath_cFP4cXyzP5dPath(); // 1
 extern "C" void __dt__8cM3dGLinFv(); // 1
 extern "C" void execute__13daTagSppath_cFv(); // 1
 extern "C" static void daTagSppath_Execute__FP13daTagSppath_c(); // 1
-extern "C" static void daTagSppath_Draw__FP13daTagSppath_c(); // 1
+extern "C" static bool daTagSppath_Draw__FP13daTagSppath_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" extern u8 const lit_4100[4 + 4 /* padding */];
 extern "C" extern u8 const lit_4101[8];
@@ -409,14 +409,9 @@ asm static void daTagSppath_Execute(daTagSppath_c* param_0) {
 
 
 /* 80D62BC0-80D62BC8 0008+00 s=1 e=0 z=0  None .text      daTagSppath_Draw__FP13daTagSppath_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagSppath_Draw(daTagSppath_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Draw__FP13daTagSppath_c.s"
+static bool daTagSppath_Draw(daTagSppath_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D62BC8-80D62C10 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

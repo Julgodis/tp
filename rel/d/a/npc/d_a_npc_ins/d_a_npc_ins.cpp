@@ -16,18 +16,18 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct cXyz {
 	/* 80A136EC */ ~cXyz();
 	/* 80A13728 */ cXyz();
 };
 
 struct Vec {
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcIns_c {
@@ -69,7 +69,7 @@ struct daNpcIns_c {
 	/* 80A12EA4 */ void setAttnPos();
 	/* 80A131AC */ void lookat();
 	/* 80A1339C */ void setMtx();
-	/* 80A13460 */ void drawDbgInfo();
+	/* 80A13460 */ bool drawDbgInfo();
 };
 
 struct cM3dGCyl {
@@ -144,23 +144,23 @@ struct daNpcF_Lookat_c {
 	/* 80A135DC */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
 struct J3DModelData {
-};
-
-struct J3DAnmTransform {
 };
 
 struct _GXColorS10 {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -236,9 +236,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -246,6 +243,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -382,7 +382,7 @@ static void daNpcIns_Create(void*); // 2
 static void daNpcIns_Delete(void*); // 2
 static void daNpcIns_Execute(void*); // 2
 static void daNpcIns_Draw(void*); // 2
-static void daNpcIns_IsDelete(void*); // 2
+static bool daNpcIns_IsDelete(void*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
 
 extern "C" void __ct__10daNpcIns_cFv(); // 1
@@ -433,7 +433,7 @@ extern "C" static void daNpcIns_Create__FPv(); // 1
 extern "C" static void daNpcIns_Delete__FPv(); // 1
 extern "C" static void daNpcIns_Execute__FPv(); // 1
 extern "C" static void daNpcIns_Draw__FPv(); // 1
-extern "C" static void daNpcIns_IsDelete__FPv(); // 1
+extern "C" static bool daNpcIns_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setParam__10daNpcIns_cFv(); // 1
 extern "C" void main__10daNpcIns_cFv(); // 1
@@ -442,7 +442,7 @@ extern "C" void ctrlBtk__10daNpcIns_cFv(); // 1
 extern "C" void setAttnPos__10daNpcIns_cFv(); // 1
 extern "C" void lookat__10daNpcIns_cFv(); // 1
 extern "C" void setMtx__10daNpcIns_cFv(); // 1
-extern "C" void drawDbgInfo__10daNpcIns_cFv(); // 1
+extern "C" bool drawDbgInfo__10daNpcIns_cFv(); // 1
 extern "C" void func_80A13468(); // 1
 extern "C" static void func_80A13474(); // 1
 extern "C" void __sinit_d_a_npc_ins_cpp(); // 1
@@ -1979,14 +1979,9 @@ asm static void daNpcIns_Draw(void* param_0) {
 
 
 /* 80A125E0-80A125E8 0008+00 s=1 e=0 z=0  None .text      daNpcIns_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcIns_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/daNpcIns_IsDelete__FPv.s"
+static bool daNpcIns_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A125E8-80A12618 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -2078,14 +2073,9 @@ asm void daNpcIns_c::setMtx() {
 
 
 /* 80A13460-80A13468 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__10daNpcIns_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcIns_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/drawDbgInfo__10daNpcIns_cFv.s"
+bool daNpcIns_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A13468-80A13474 000C+00 s=1 e=0 z=0  None .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
@@ -2180,14 +2170,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80A136E8-80A136EC 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A136EC-80A13728 003C+00 s=5 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -2202,14 +2187,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80A13728-80A1372C 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A1372C-80A13978 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -2279,36 +2259,21 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80A13CEC-80A13CF0 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A13CF0-80A13CF4 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A13CF4-80A13CF8 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ins/d_a_npc_ins/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A13CF8-80A13D40 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

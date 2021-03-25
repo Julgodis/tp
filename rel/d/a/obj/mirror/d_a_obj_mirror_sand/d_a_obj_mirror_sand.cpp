@@ -47,10 +47,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -117,7 +117,7 @@ struct cBgW_BgId {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjMirrorSand_Draw(daObjMirrorSand_c*); // 2
 static void daObjMirrorSand_Execute(daObjMirrorSand_c*); // 2
-static void daObjMirrorSand_IsDelete(daObjMirrorSand_c*); // 2
+static bool daObjMirrorSand_IsDelete(daObjMirrorSand_c*); // 2
 static void daObjMirrorSand_Delete(daObjMirrorSand_c*); // 2
 static void daObjMirrorSand_Create(fopAc_ac_c*); // 2
 
@@ -127,7 +127,7 @@ extern "C" void initBaseMtx__17daObjMirrorSand_cFv(); // 1
 extern "C" void setBaseMtx__17daObjMirrorSand_cFv(); // 1
 extern "C" static void daObjMirrorSand_Draw__FP17daObjMirrorSand_c(); // 1
 extern "C" static void daObjMirrorSand_Execute__FP17daObjMirrorSand_c(); // 1
-extern "C" static void daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c(); // 1
+extern "C" static bool daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c(); // 1
 extern "C" static void daObjMirrorSand_Delete__FP17daObjMirrorSand_c(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
 extern "C" static void daObjMirrorSand_Create__FP10fopAc_ac_c(); // 1
@@ -321,14 +321,9 @@ asm static void daObjMirrorSand_Execute(daObjMirrorSand_c* param_0) {
 
 
 /* 80C98700-80C98708 0008+00 s=1 e=0 z=0  None .text      daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMirrorSand_IsDelete(daObjMirrorSand_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c.s"
+static bool daObjMirrorSand_IsDelete(daObjMirrorSand_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C98708-80C987B8 00B0+00 s=1 e=0 z=0  None .text      daObjMirrorSand_Delete__FP17daObjMirrorSand_c                */

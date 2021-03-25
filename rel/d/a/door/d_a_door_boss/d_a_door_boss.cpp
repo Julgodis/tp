@@ -35,7 +35,7 @@ struct daBdoor_c {
 	/* 806700C4 */ void checkArea();
 	/* 806701F4 */ void checkFront();
 	/* 80670294 */ void checkOpen();
-	/* 80670320 */ void actionWait();
+	/* 80670320 */ bool actionWait();
 	/* 80670328 */ void actionCloseWait();
 	/* 806703C0 */ void actionOpen();
 	/* 806703E4 */ void actionEnd();
@@ -67,10 +67,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -130,17 +130,17 @@ struct dEvent_manager_c {
 	/* 800483C4 */ void setGoal(cXyz*);
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -235,7 +235,7 @@ extern "C" void smokeInit__9daBdoor_cFv(); // 1
 extern "C" void checkArea__9daBdoor_cFv(); // 1
 extern "C" void checkFront__9daBdoor_cFv(); // 1
 extern "C" void checkOpen__9daBdoor_cFv(); // 1
-extern "C" void actionWait__9daBdoor_cFv(); // 1
+extern "C" bool actionWait__9daBdoor_cFv(); // 1
 extern "C" void actionCloseWait__9daBdoor_cFv(); // 1
 extern "C" void actionOpen__9daBdoor_cFv(); // 1
 extern "C" void actionEnd__9daBdoor_cFv(); // 1
@@ -846,14 +846,9 @@ asm void daBdoor_c::checkOpen() {
 
 
 /* 80670320-80670328 0008+00 s=1 e=0 z=0  None .text      actionWait__9daBdoor_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoor_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_boss/d_a_door_boss/actionWait__9daBdoor_cFv.s"
+bool daBdoor_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 80670328-806703C0 0098+00 s=1 e=0 z=0  None .text      actionCloseWait__9daBdoor_cFv                                */

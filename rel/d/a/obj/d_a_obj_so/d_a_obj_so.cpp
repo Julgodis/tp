@@ -120,11 +120,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -236,7 +236,7 @@ static void action(obj_so_class*); // 2
 static void part_move(obj_so_class*); // 2
 static void demo_camera(obj_so_class*); // 2
 static void daObj_So_Execute(obj_so_class*); // 2
-static void daObj_So_IsDelete(obj_so_class*); // 2
+static bool daObj_So_IsDelete(obj_so_class*); // 2
 static void daObj_So_Delete(obj_so_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_So_Create(fopAc_ac_c*); // 2
@@ -257,7 +257,7 @@ extern "C" static void part_move__FP12obj_so_class(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
 extern "C" static void demo_camera__FP12obj_so_class(); // 1
 extern "C" static void daObj_So_Execute__FP12obj_so_class(); // 1
-extern "C" static void daObj_So_IsDelete__FP12obj_so_class(); // 1
+extern "C" static bool daObj_So_IsDelete__FP12obj_so_class(); // 1
 extern "C" static void daObj_So_Delete__FP12obj_so_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_So_Create__FP10fopAc_ac_c(); // 1
@@ -1097,14 +1097,9 @@ asm static void daObj_So_Execute(obj_so_class* param_0) {
 
 
 /* 80CE2F60-80CE2F68 0008+00 s=1 e=0 z=0  None .text      daObj_So_IsDelete__FP12obj_so_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_So_IsDelete(obj_so_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_so/d_a_obj_so/daObj_So_IsDelete__FP12obj_so_class.s"
+static bool daObj_So_IsDelete(obj_so_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE2F68-80CE3018 00B0+00 s=1 e=0 z=0  None .text      daObj_So_Delete__FP12obj_so_class                            */
@@ -1196,25 +1191,15 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80CE3920-80CE3924 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_so/d_a_obj_so/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CE3924-80CE3928 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_so/d_a_obj_so/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CE3928-80CE3970 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_So_HIO_cFv                                     */

@@ -36,7 +36,7 @@ struct daTbox2_c {
 	/* 80497C60 */ void boxCheck();
 	/* 80497DA0 */ void Draw();
 	/* 80497E6C */ void Delete();
-	/* 80498140 */ void checkSmallTbox();
+	/* 80498140 */ bool checkSmallTbox();
 };
 
 struct J3DFrameCtrl {
@@ -54,14 +54,14 @@ struct dBgS_ObjAcch {
 	/* 804970F0 */ ~dBgS_ObjAcch();
 };
 
+struct cM3dGCylS {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct cM3dGCylS {
 };
 
 struct cM3dGCyl {
@@ -91,10 +91,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -173,14 +173,14 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078688 */ void CreateHeap();
-	/* 80078690 */ void Create();
-	/* 80078698 */ void Execute(f32 (** )[3][4]);
-	/* 800786A0 */ void Draw();
-	/* 800786A8 */ void Delete();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078688 */ bool CreateHeap();
+	/* 80078690 */ bool Create();
+	/* 80078698 */ bool Execute(f32 (** )[3][4]);
+	/* 800786A0 */ bool Draw();
+	/* 800786A8 */ bool Delete();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -286,7 +286,7 @@ extern "C" static void daTbox2_MoveBGDelete__FP9daTbox2_c(); // 1
 extern "C" static void daTbox2_MoveBGExecute__FP9daTbox2_c(); // 1
 extern "C" static void daTbox2_MoveBGDraw__FP9daTbox2_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void checkSmallTbox__9daTbox2_cFv(); // 1
+extern "C" bool checkSmallTbox__9daTbox2_cFv(); // 1
 extern "C" static void func_80498148(); // 1
 extern "C" static void func_80498150(); // 1
 extern "C" extern u32 const lit_4266;
@@ -353,14 +353,14 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void CreateHeap__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
-extern "C" void Draw__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Delete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool CreateHeap__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
+extern "C" bool Draw__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Delete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -907,14 +907,9 @@ asm void daTbox2_c::init_actionWait() {
 
 
 /* 804978D4-804978D8 0004+00 s=1 e=0 z=0  None .text      actionWait__9daTbox2_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox2_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/actionWait__9daTbox2_cFv.s"
+void daTbox2_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804978D8-804978E4 000C+00 s=1 e=0 z=0  None .text      init_actionNotOpenDemo__9daTbox2_cFv                         */
@@ -1083,14 +1078,9 @@ asm cCcD_GStts::~cCcD_GStts() {
 
 
 /* 80498140-80498148 0008+00 s=1 e=0 z=0  None .text      checkSmallTbox__9daTbox2_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox2_c::checkSmallTbox() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox2/d_a_tbox2/checkSmallTbox__9daTbox2_cFv.s"
+bool daTbox2_c::checkSmallTbox() {
+	return true;
 }
-#pragma pop
 
 
 /* 80498148-80498150 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

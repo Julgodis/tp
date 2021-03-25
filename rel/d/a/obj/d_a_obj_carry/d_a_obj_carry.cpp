@@ -111,13 +111,13 @@ struct daObjCarry_c {
 	/* 80474B8C */ void mode_proc_sink();
 	/* 80474D64 */ void mode_init_yogan();
 	/* 80474E08 */ void mode_proc_yogan();
-	/* 80474E98 */ void mode_proc_magne();
-	/* 80474EA0 */ void mode_proc_magneCarry();
+	/* 80474E98 */ bool mode_proc_magne();
+	/* 80474EA0 */ bool mode_proc_magneCarry();
 	/* 80474EA8 */ void mode_init_boomCarry();
 	/* 80474FA8 */ void mode_proc_boomCarry();
 	/* 80475014 */ void mode_init_growth();
 	/* 804750C8 */ void mode_proc_growth();
-	/* 8047515C */ void mode_proc_end();
+	/* 8047515C */ bool mode_proc_end();
 	/* 80475164 */ void mode_init_dbDrop(u8);
 	/* 80475210 */ void mode_proc_dbDrop();
 	/* 80475238 */ void mode_init_hookCarry();
@@ -135,12 +135,12 @@ struct daObjCarry_c {
 	/* 80476764 */ void bg_damage_proc_kotubo();
 	/* 804767C4 */ void bg_damage_proc_ootubo();
 	/* 804767E4 */ void bg_damage_proc_kibako();
-	/* 80476804 */ void bg_damage_proc_ironball();
+	/* 80476804 */ bool bg_damage_proc_ironball();
 	/* 8047680C */ void bg_damage_proc_taru();
 	/* 8047682C */ void bg_damage_proc_dokuro();
 	/* 8047684C */ void bg_damage_proc_bokkuri();
-	/* 80476930 */ void bg_damage_proc_LightBall();
-	/* 80476938 */ void bg_damage_proc_Lv8Ball();
+	/* 80476930 */ bool bg_damage_proc_LightBall();
+	/* 80476938 */ bool bg_damage_proc_Lv8Ball();
 	/* 80476940 */ void obj_break(bool, bool, bool);
 	/* 80476A5C */ void check_cc_damage_proc_base(bool);
 	/* 80476B04 */ void cc_damage_proc_kotubo();
@@ -150,8 +150,8 @@ struct daObjCarry_c {
 	/* 80476E04 */ void cc_damage_proc_taru();
 	/* 80476F88 */ void cc_damage_proc_dokuro();
 	/* 80476FA8 */ void cc_damage_proc_bokkuri();
-	/* 804771B0 */ void cc_damage_proc_LightBall();
-	/* 804771B8 */ void cc_damage_proc_Lv8Ball();
+	/* 804771B0 */ bool cc_damage_proc_LightBall();
+	/* 804771B8 */ bool cc_damage_proc_Lv8Ball();
 	/* 804771C0 */ void eff_break_tuboBmd(u16, cXyz);
 	/* 8047731C */ void eff_break_kibakoBmd(cXyz);
 	/* 8047747C */ void eff_break_tsubo();
@@ -309,10 +309,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct JPABaseEmitter {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct JPABaseEmitter {
 };
 
 struct dPa_modelEcallBack {
@@ -554,13 +554,13 @@ extern "C" void mode_init_sink__12daObjCarry_cFv(); // 1
 extern "C" void mode_proc_sink__12daObjCarry_cFv(); // 1
 extern "C" void mode_init_yogan__12daObjCarry_cFv(); // 1
 extern "C" void mode_proc_yogan__12daObjCarry_cFv(); // 1
-extern "C" void mode_proc_magne__12daObjCarry_cFv(); // 1
-extern "C" void mode_proc_magneCarry__12daObjCarry_cFv(); // 1
+extern "C" bool mode_proc_magne__12daObjCarry_cFv(); // 1
+extern "C" bool mode_proc_magneCarry__12daObjCarry_cFv(); // 1
 extern "C" void mode_init_boomCarry__12daObjCarry_cFv(); // 1
 extern "C" void mode_proc_boomCarry__12daObjCarry_cFv(); // 1
 extern "C" void mode_init_growth__12daObjCarry_cFv(); // 1
 extern "C" void mode_proc_growth__12daObjCarry_cFv(); // 1
-extern "C" void mode_proc_end__12daObjCarry_cFv(); // 1
+extern "C" bool mode_proc_end__12daObjCarry_cFv(); // 1
 extern "C" void mode_init_dbDrop__12daObjCarry_cFUc(); // 1
 extern "C" void mode_proc_dbDrop__12daObjCarry_cFv(); // 1
 extern "C" void mode_init_hookCarry__12daObjCarry_cFv(); // 1
@@ -578,12 +578,12 @@ extern "C" void check_bg_damage_proc_base__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_kotubo__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_ootubo__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_kibako__12daObjCarry_cFv(); // 1
-extern "C" void bg_damage_proc_ironball__12daObjCarry_cFv(); // 1
+extern "C" bool bg_damage_proc_ironball__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_taru__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_dokuro__12daObjCarry_cFv(); // 1
 extern "C" void bg_damage_proc_bokkuri__12daObjCarry_cFv(); // 1
-extern "C" void bg_damage_proc_LightBall__12daObjCarry_cFv(); // 1
-extern "C" void bg_damage_proc_Lv8Ball__12daObjCarry_cFv(); // 1
+extern "C" bool bg_damage_proc_LightBall__12daObjCarry_cFv(); // 1
+extern "C" bool bg_damage_proc_Lv8Ball__12daObjCarry_cFv(); // 1
 extern "C" void obj_break__12daObjCarry_cFbbb(); // 1
 extern "C" void check_cc_damage_proc_base__12daObjCarry_cFb(); // 1
 extern "C" void cc_damage_proc_kotubo__12daObjCarry_cFv(); // 1
@@ -593,8 +593,8 @@ extern "C" void cc_damage_proc_ironball__12daObjCarry_cFv(); // 1
 extern "C" void cc_damage_proc_taru__12daObjCarry_cFv(); // 1
 extern "C" void cc_damage_proc_dokuro__12daObjCarry_cFv(); // 1
 extern "C" void cc_damage_proc_bokkuri__12daObjCarry_cFv(); // 1
-extern "C" void cc_damage_proc_LightBall__12daObjCarry_cFv(); // 1
-extern "C" void cc_damage_proc_Lv8Ball__12daObjCarry_cFv(); // 1
+extern "C" bool cc_damage_proc_LightBall__12daObjCarry_cFv(); // 1
+extern "C" bool cc_damage_proc_Lv8Ball__12daObjCarry_cFv(); // 1
 extern "C" void eff_break_tuboBmd__12daObjCarry_cFUs4cXyz(); // 1
 extern "C" void eff_break_kibakoBmd__12daObjCarry_cF4cXyz(); // 1
 extern "C" void eff_break_tsubo__12daObjCarry_cFv(); // 1
@@ -2503,14 +2503,9 @@ asm cM3dGPla::~cM3dGPla() {
 
 
 /* 8046F33C-8046F340 0004+00 s=1 e=0 z=0  None .text      TgHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void TgHitCallBackBase(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_ac_c* param_2, dCcD_GObjInf* param_3) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F33C.s"
+static void TgHitCallBackBase(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_ac_c* param_2, dCcD_GObjInf* param_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8046F340-8046F3E0 00A0+00 s=1 e=0 z=0  None .text      TgHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
@@ -2525,14 +2520,9 @@ asm static void TgHitCallBackBokkuri(fopAc_ac_c* param_0, dCcD_GObjInf* param_1,
 
 
 /* 8046F3E0-8046F3E4 0004+00 s=1 e=0 z=0  None .text      CoHitCallBackBase__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void CoHitCallBackBase(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_ac_c* param_2, dCcD_GObjInf* param_3) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/func_8046F3E0.s"
+static void CoHitCallBackBase(fopAc_ac_c* param_0, dCcD_GObjInf* param_1, fopAc_ac_c* param_2, dCcD_GObjInf* param_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8046F3E4-8046F4AC 00C8+00 s=1 e=0 z=0  None .text      CoHitCallBackBokkuri__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf */
@@ -3057,14 +3047,9 @@ asm void daObjCarry_c::draw() {
 
 
 /* 80472730-80472734 0004+00 s=1 e=0 z=0  None .text      debugDraw__12daObjCarry_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::debugDraw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/debugDraw__12daObjCarry_cFv.s"
+void daObjCarry_c::debugDraw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80472734-80472B54 0420+00 s=1 e=0 z=0  None .text      _delete__12daObjCarry_cFv                                    */
@@ -3292,25 +3277,15 @@ asm void daObjCarry_c::mode_proc_yogan() {
 
 
 /* 80474E98-80474EA0 0008+00 s=1 e=0 z=0  None .text      mode_proc_magne__12daObjCarry_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::mode_proc_magne() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_magne__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_magne() {
+	return true;
 }
-#pragma pop
 
 
 /* 80474EA0-80474EA8 0008+00 s=1 e=0 z=0  None .text      mode_proc_magneCarry__12daObjCarry_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::mode_proc_magneCarry() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_magneCarry__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_magneCarry() {
+	return true;
 }
-#pragma pop
 
 
 /* 80474EA8-80474FA8 0100+00 s=1 e=0 z=0  None .text      mode_init_boomCarry__12daObjCarry_cFv                        */
@@ -3358,14 +3333,9 @@ asm void daObjCarry_c::mode_proc_growth() {
 
 
 /* 8047515C-80475164 0008+00 s=1 e=0 z=0  None .text      mode_proc_end__12daObjCarry_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::mode_proc_end() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/mode_proc_end__12daObjCarry_cFv.s"
+bool daObjCarry_c::mode_proc_end() {
+	return true;
 }
-#pragma pop
 
 
 /* 80475164-80475210 00AC+00 s=1 e=0 z=0  None .text      mode_init_dbDrop__12daObjCarry_cFUc                          */
@@ -3556,14 +3526,9 @@ asm void daObjCarry_c::bg_damage_proc_kibako() {
 
 
 /* 80476804-8047680C 0008+00 s=1 e=0 z=0  None .text      bg_damage_proc_ironball__12daObjCarry_cFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::bg_damage_proc_ironball() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_ironball__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_ironball() {
+	return false;
 }
-#pragma pop
 
 
 /* 8047680C-8047682C 0020+00 s=1 e=0 z=0  None .text      bg_damage_proc_taru__12daObjCarry_cFv                        */
@@ -3600,25 +3565,15 @@ asm void daObjCarry_c::bg_damage_proc_bokkuri() {
 
 
 /* 80476930-80476938 0008+00 s=2 e=0 z=0  None .text      bg_damage_proc_LightBall__12daObjCarry_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::bg_damage_proc_LightBall() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_LightBall__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_LightBall() {
+	return false;
 }
-#pragma pop
 
 
 /* 80476938-80476940 0008+00 s=1 e=0 z=0  None .text      bg_damage_proc_Lv8Ball__12daObjCarry_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::bg_damage_proc_Lv8Ball() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/bg_damage_proc_Lv8Ball__12daObjCarry_cFv.s"
+bool daObjCarry_c::bg_damage_proc_Lv8Ball() {
+	return false;
 }
-#pragma pop
 
 
 /* 80476940-80476A5C 011C+00 s=6 e=0 z=0  None .text      obj_break__12daObjCarry_cFbbb                                */
@@ -3721,25 +3676,15 @@ asm void daObjCarry_c::cc_damage_proc_bokkuri() {
 
 
 /* 804771B0-804771B8 0008+00 s=2 e=0 z=0  None .text      cc_damage_proc_LightBall__12daObjCarry_cFv                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::cc_damage_proc_LightBall() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_LightBall__12daObjCarry_cFv.s"
+bool daObjCarry_c::cc_damage_proc_LightBall() {
+	return false;
 }
-#pragma pop
 
 
 /* 804771B8-804771C0 0008+00 s=1 e=0 z=0  None .text      cc_damage_proc_Lv8Ball__12daObjCarry_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::cc_damage_proc_Lv8Ball() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/cc_damage_proc_Lv8Ball__12daObjCarry_cFv.s"
+bool daObjCarry_c::cc_damage_proc_Lv8Ball() {
+	return false;
 }
-#pragma pop
 
 
 /* 804771C0-8047731C 015C+00 s=7 e=0 z=0  None .text      eff_break_tuboBmd__12daObjCarry_cFUs4cXyz                    */
@@ -3798,14 +3743,9 @@ asm void daObjCarry_c::eff_break_kibako() {
 
 
 /* 80477574-80477578 0004+00 s=1 e=0 z=0  None .text      eff_break_ironball__12daObjCarry_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::eff_break_ironball() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_ironball__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_ironball() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80477578-804775BC 0044+00 s=1 e=0 z=0  None .text      eff_break_taru__12daObjCarry_cFv                             */
@@ -3853,14 +3793,9 @@ asm void daObjCarry_c::eff_break_kotubo2() {
 
 
 /* 804777F0-804777F4 0004+00 s=2 e=0 z=0  None .text      eff_break_LightBall__12daObjCarry_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::eff_break_LightBall() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_LightBall__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_LightBall() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804777F4-8047784C 0058+00 s=1 e=0 z=0  None .text      eff_break_ootubo2__12daObjCarry_cFv                          */
@@ -3875,14 +3810,9 @@ asm void daObjCarry_c::eff_break_ootubo2() {
 
 
 /* 8047784C-80477850 0004+00 s=1 e=0 z=0  None .text      eff_break_Lv8Ball__12daObjCarry_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::eff_break_Lv8Ball() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/eff_break_Lv8Ball__12daObjCarry_cFv.s"
+void daObjCarry_c::eff_break_Lv8Ball() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80477850-804778A8 0058+00 s=1 e=0 z=0  None .text      eff_break_tsuboL8__12daObjCarry_cFv                          */
@@ -4106,14 +4036,9 @@ asm void daObjCarry_c::exec_proc_ootubo() {
 
 
 /* 80478848-8047884C 0004+00 s=1 e=0 z=0  None .text      exec_proc_kibako__12daObjCarry_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::exec_proc_kibako() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_kibako__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_kibako() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8047884C-804788C4 0078+00 s=1 e=0 z=0  None .text      exec_proc_ironball__12daObjCarry_cFv                         */
@@ -4128,25 +4053,15 @@ asm void daObjCarry_c::exec_proc_ironball() {
 
 
 /* 804788C4-804788C8 0004+00 s=1 e=0 z=0  None .text      exec_proc_taru__12daObjCarry_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::exec_proc_taru() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_taru__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_taru() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804788C8-804788CC 0004+00 s=1 e=0 z=0  None .text      exec_proc_dokuro__12daObjCarry_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjCarry_c::exec_proc_dokuro() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_carry/d_a_obj_carry/exec_proc_dokuro__12daObjCarry_cFv.s"
+void daObjCarry_c::exec_proc_dokuro() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804788CC-80478C18 034C+00 s=1 e=0 z=0  None .text      exec_proc_bokkuri__12daObjCarry_cFv                          */

@@ -60,14 +60,14 @@ struct dRes_control_c {
 
 static void daKytag15_Draw(kytag15_class*); // 2
 static void daKytag15_Execute(kytag15_class*); // 2
-static void daKytag15_IsDelete(kytag15_class*); // 2
+static bool daKytag15_IsDelete(kytag15_class*); // 2
 static void daKytag15_Delete(kytag15_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daKytag15_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daKytag15_Draw__FP13kytag15_class(); // 1
 extern "C" static void daKytag15_Execute__FP13kytag15_class(); // 1
-extern "C" static void daKytag15_IsDelete__FP13kytag15_class(); // 1
+extern "C" static bool daKytag15_IsDelete__FP13kytag15_class(); // 1
 extern "C" static void daKytag15_Delete__FP13kytag15_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daKytag15_Create__FP10fopAc_ac_c(); // 1
@@ -177,14 +177,9 @@ asm static void daKytag15_Execute(kytag15_class* param_0) {
 
 
 /* 808608B0-808608B8 0008+00 s=1 e=0 z=0  None .text      daKytag15_IsDelete__FP13kytag15_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag15_IsDelete(kytag15_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag15/d_a_kytag15/daKytag15_IsDelete__FP13kytag15_class.s"
+static bool daKytag15_IsDelete(kytag15_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -50,10 +50,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -72,7 +72,7 @@ struct mDoExt_btkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -81,7 +81,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -117,7 +117,7 @@ static void daObj_Wflag_Draw(obj_wflag_class*); // 2
 static void tail_control(fopAc_ac_c*, wf_tail_s*); // 2
 static void tail_mtxset(wf_tail_s*); // 2
 static void daObj_Wflag_Execute(obj_wflag_class*); // 2
-static void daObj_Wflag_IsDelete(obj_wflag_class*); // 2
+static bool daObj_Wflag_IsDelete(obj_wflag_class*); // 2
 static void daObj_Wflag_Delete(obj_wflag_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Wflag_Create(fopAc_ac_c*); // 2
@@ -127,7 +127,7 @@ extern "C" static void tail_control__FP10fopAc_ac_cP9wf_tail_s(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void tail_mtxset__FP9wf_tail_s(); // 1
 extern "C" static void daObj_Wflag_Execute__FP15obj_wflag_class(); // 1
-extern "C" static void daObj_Wflag_IsDelete__FP15obj_wflag_class(); // 1
+extern "C" static bool daObj_Wflag_IsDelete__FP15obj_wflag_class(); // 1
 extern "C" static void daObj_Wflag_Delete__FP15obj_wflag_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -314,14 +314,9 @@ asm static void daObj_Wflag_Execute(obj_wflag_class* param_0) {
 
 
 /* 80D372D0-80D372D8 0008+00 s=1 e=0 z=0  None .text      daObj_Wflag_IsDelete__FP15obj_wflag_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Wflag_IsDelete(obj_wflag_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/daObj_Wflag_IsDelete__FP15obj_wflag_class.s"
+static bool daObj_Wflag_IsDelete(obj_wflag_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -467,24 +462,14 @@ asm wf_tail_s::wf_tail_s() {
 
 
 /* 80D3787C-80D37880 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D37880-80D37884 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wflag/d_a_obj_wflag/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 

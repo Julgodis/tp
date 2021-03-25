@@ -16,10 +16,10 @@ struct daE_HZ_HIO_c {
 	/* 806F0368 */ ~daE_HZ_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_HZ_c {
@@ -144,19 +144,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -208,7 +208,7 @@ struct dPa_control_c {
 	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS_GndChk {
@@ -216,7 +216,7 @@ struct cBgS_GndChk {
 	/* 80267D0C */ void SetPos(Vec const*);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -328,7 +328,7 @@ struct daObjCarry_c {
 static void daE_HZ_Draw(daE_HZ_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void daE_HZ_Execute(daE_HZ_c*); // 2
-static void daE_HZ_IsDelete(daE_HZ_c*); // 2
+static bool daE_HZ_IsDelete(daE_HZ_c*); // 2
 static void daE_HZ_Delete(daE_HZ_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_HZ_Create(daE_HZ_c*); // 2
@@ -374,7 +374,7 @@ extern "C" void mtx_set__8daE_HZ_cFv(); // 1
 extern "C" void cc_set__8daE_HZ_cFv(); // 1
 extern "C" void execute__8daE_HZ_cFv(); // 1
 extern "C" static void daE_HZ_Execute__FP8daE_HZ_c(); // 1
-extern "C" static void daE_HZ_IsDelete__FP8daE_HZ_c(); // 1
+extern "C" static bool daE_HZ_IsDelete__FP8daE_HZ_c(); // 1
 extern "C" void _delete__8daE_HZ_cFv(); // 1
 extern "C" static void daE_HZ_Delete__FP8daE_HZ_c(); // 1
 extern "C" void ctrlJoint__8daE_HZ_cFP8J3DJointP8J3DModel(); // 1
@@ -1541,14 +1541,9 @@ asm static void daE_HZ_Execute(daE_HZ_c* param_0) {
 
 
 /* 806EF6AC-806EF6B4 0008+00 s=1 e=0 z=0  None .text      daE_HZ_IsDelete__FP8daE_HZ_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_HZ_IsDelete(daE_HZ_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hz/d_a_e_hz/daE_HZ_IsDelete__FP8daE_HZ_c.s"
+static bool daE_HZ_IsDelete(daE_HZ_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806EF6B4-806EF750 009C+00 s=1 e=0 z=0  None .text      _delete__8daE_HZ_cFv                                         */

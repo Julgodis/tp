@@ -66,6 +66,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -73,9 +76,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -155,7 +155,7 @@ static void daE_CR_EGG_Draw(e_cr_egg_class*); // 2
 static void e_cr_egg_move(e_cr_egg_class*); // 2
 static void action(e_cr_egg_class*); // 2
 static void daE_CR_EGG_Execute(e_cr_egg_class*); // 2
-static void daE_CR_EGG_IsDelete(e_cr_egg_class*); // 2
+static bool daE_CR_EGG_IsDelete(e_cr_egg_class*); // 2
 static void daE_CR_EGG_Delete(e_cr_egg_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_CR_EGG_Create(fopAc_ac_c*); // 2
@@ -164,7 +164,7 @@ extern "C" static void daE_CR_EGG_Draw__FP14e_cr_egg_class(); // 1
 extern "C" static void e_cr_egg_move__FP14e_cr_egg_class(); // 1
 extern "C" static void action__FP14e_cr_egg_class(); // 1
 extern "C" static void daE_CR_EGG_Execute__FP14e_cr_egg_class(); // 1
-extern "C" static void daE_CR_EGG_IsDelete__FP14e_cr_egg_class(); // 1
+extern "C" static bool daE_CR_EGG_IsDelete__FP14e_cr_egg_class(); // 1
 extern "C" static void daE_CR_EGG_Delete__FP14e_cr_egg_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_CR_EGG_Create__FP10fopAc_ac_c(); // 1
@@ -331,14 +331,9 @@ asm static void daE_CR_EGG_Execute(e_cr_egg_class* param_0) {
 
 
 /* 8069A4C4-8069A4CC 0008+00 s=1 e=0 z=0  None .text      daE_CR_EGG_IsDelete__FP14e_cr_egg_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_CR_EGG_IsDelete(e_cr_egg_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_cr_egg/d_a_e_cr_egg/daE_CR_EGG_IsDelete__FP14e_cr_egg_class.s"
+static bool daE_CR_EGG_IsDelete(e_cr_egg_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

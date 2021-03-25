@@ -19,9 +19,6 @@ struct fopAc_ac_c {
 struct J3DJoint {
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct Vec {
 };
 
@@ -30,21 +27,24 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct J3DAnmTexPattern {
+struct J3DModel {
 };
 
 struct J3DModelData {
 };
 
-struct J3DModel {
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+	/* 80946370 */ ~J3DFrameCtrl();
+};
+
+struct J3DAnmTexPattern {
 };
 
 struct msg_class {
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-	/* 80946370 */ ~J3DFrameCtrl();
+struct J3DAnmTransformKey {
 };
 
 struct daMyna_c {
@@ -193,19 +193,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -323,7 +323,7 @@ static void daMyna_Create(void*); // 2
 static void daMyna_Delete(void*); // 2
 static void daMyna_Execute(void*); // 2
 static void daMyna_Draw(void*); // 2
-static void daMyna_IsDelete(void*); // 2
+static bool daMyna_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
 
@@ -427,7 +427,7 @@ extern "C" static void daMyna_Create__FPv(); // 1
 extern "C" static void daMyna_Delete__FPv(); // 1
 extern "C" static void daMyna_Execute__FPv(); // 1
 extern "C" static void daMyna_Draw__FPv(); // 1
-extern "C" static void daMyna_IsDelete__FPv(); // 1
+extern "C" static bool daMyna_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__12daMyna_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -1968,14 +1968,9 @@ asm void daMyna_c::turn_on_end2_move() {
 
 
 /* 80948070-80948074 0004+00 s=1 e=0 z=0  None .text      turn_on_end3_init__8daMyna_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMyna_c::turn_on_end3_init() {
-	nofralloc
-#include "asm/rel/d/a/d_a_myna/d_a_myna/turn_on_end3_init__8daMyna_cFv.s"
+void daMyna_c::turn_on_end3_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80948074-809480E4 0070+00 s=1 e=0 z=0  None .text      turn_on_end3_move__8daMyna_cFv                               */
@@ -2496,14 +2491,9 @@ asm static void daMyna_Draw(void* param_0) {
 
 
 /* 8094A910-8094A918 0008+00 s=1 e=0 z=0  None .text      daMyna_IsDelete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMyna_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_myna/d_a_myna/daMyna_IsDelete__FPv.s"
+static bool daMyna_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8094A918-8094A960 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

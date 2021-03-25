@@ -21,29 +21,29 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cBgD_t {
+struct cXyz {
 };
 
 struct cBgS_GndChk {
 };
 
-struct cXyz {
-};
-
-struct cBgS_GrpPassChk {
-};
-
 struct cBgS_LinChk {
+};
+
+struct cBgD_t {
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgS_ShdwDraw {
+struct cBgS_PolyPassChk {
 };
 
-struct cBgS_PolyPassChk {
+struct cBgS_GrpPassChk {
+};
+
+struct cBgS_ShdwDraw {
 };
 
 struct cBgW {
@@ -80,9 +80,9 @@ struct cBgW {
 	/* 8007AEA4 */ void ShdwDrawRp(cBgS_ShdwDraw*, int);
 	/* 8007AFC0 */ void ShdwDrawGrpRp(cBgS_ShdwDraw*, int);
 	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
-	/* 8007B0A8 */ void ChkPolyThrough(int, cBgS_PolyPassChk*);
+	/* 8007B0A8 */ bool ChkPolyThrough(int, cBgS_PolyPassChk*);
 	/* 8007B0B0 */ void ChkShdwDrawThrough(int, cBgS_PolyPassChk*);
-	/* 8007B0DC */ void ChkGrpThrough(int, cBgS_GrpPassChk*, int);
+	/* 8007B0DC */ bool ChkGrpThrough(int, cBgS_GrpPassChk*, int);
 	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
 	/* 8007B164 */ void GetBnd() const;
 	/* 8007B17C */ void GetTrans(cXyz*) const;
@@ -112,11 +112,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct Vec {
-};
-
 struct cM3dGPla {
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+};
+
+struct Vec {
 };
 
 struct cM3dGTri {
@@ -124,10 +124,22 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
+struct dBgS_SphChk {
+};
+
 struct dBgS_CaptPoly {
 };
 
+struct csXyz {
+};
+
+struct fopAc_ac_c {
+};
+
 struct dBgS_RoofChk {
+};
+
+struct dBgS_SplGrpChk {
 };
 
 struct dBgS_Acch {
@@ -135,18 +147,6 @@ struct dBgS_Acch {
 	/* 80077200 */ void GetWallAddY(Vec&);
 	/* 80077288 */ void SetWallPolyIndex(int, int);
 	/* 800772E8 */ void CalcMovePosWork();
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_SplGrpChk {
-};
-
-struct csXyz {
-};
-
-struct dBgS_SphChk {
 };
 
 struct dBgW {
@@ -303,9 +303,9 @@ extern "C" void RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw(); // 1
 extern "C" void ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
 extern "C" void ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
 extern "C" void ShdwDraw__4cBgWFP13cBgS_ShdwDraw(); // 1
-extern "C" void ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" bool ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
 extern "C" void ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
-extern "C" void ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki(); // 1
+extern "C" bool ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki(); // 1
 extern "C" void GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo(); // 1
 extern "C" void GetBnd__4cBgWCFv(); // 1
 extern "C" void GetTrans__4cBgWCFP4cXyz(); // 1
@@ -1156,14 +1156,9 @@ asm void cBgW::ShdwDraw(cBgS_ShdwDraw* param_0) {
 
 
 /* 8007B0A8-8007B0B0 0008+00 s=1 e=0 z=0  None .text      ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cBgW::ChkPolyThrough(int param_0, cBgS_PolyPassChk* param_1) {
-	nofralloc
-#include "asm/d/bg/d_bg_w/ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk.s"
+bool cBgW::ChkPolyThrough(int param_0, cBgS_PolyPassChk* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 8007B0B0-8007B0DC 002C+00 s=1 e=0 z=0  None .text      ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk               */
@@ -1178,14 +1173,9 @@ asm void cBgW::ChkShdwDrawThrough(int param_0, cBgS_PolyPassChk* param_1) {
 
 
 /* 8007B0DC-8007B0E4 0008+00 s=1 e=0 z=0  None .text      ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void cBgW::ChkGrpThrough(int param_0, cBgS_GrpPassChk* param_1, int param_2) {
-	nofralloc
-#include "asm/d/bg/d_bg_w/ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki.s"
+bool cBgW::ChkGrpThrough(int param_0, cBgS_GrpPassChk* param_1, int param_2) {
+	return false;
 }
-#pragma pop
 
 
 /* 8007B0E4-8007B164 0080+00 s=2 e=1 z=0  None .text      GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo                    */

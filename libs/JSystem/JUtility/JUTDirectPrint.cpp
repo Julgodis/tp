@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct __va_list_struct {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct __va_list_struct {
 };
 
 struct JUTDirectPrint {

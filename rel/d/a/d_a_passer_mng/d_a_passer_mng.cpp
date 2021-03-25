@@ -46,7 +46,7 @@ struct Vec {
 // 
 
 static void daPasserMng_Execute(daPasserMng_c*); // 2
-static void daPasserMng_IsDelete(daPasserMng_c*); // 2
+static bool daPasserMng_IsDelete(daPasserMng_c*); // 2
 static void daPasserMng_Delete(daPasserMng_c*); // 2
 static void daPasserMng_Create(fopAc_ac_c*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
@@ -55,7 +55,7 @@ extern "C" static void daPasserMng_Execute__FP13daPasserMng_c(); // 1
 extern "C" void execute__13daPasserMng_cFv(); // 1
 extern "C" void getPasserParam__13daPasserMng_cFv(); // 1
 extern "C" void getLuggageParamHigh__13daPasserMng_cFUl(); // 1
-extern "C" static void daPasserMng_IsDelete__FP13daPasserMng_c(); // 1
+extern "C" static bool daPasserMng_IsDelete__FP13daPasserMng_c(); // 1
 extern "C" static void daPasserMng_Delete__FP13daPasserMng_c(); // 1
 extern "C" static void daPasserMng_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__13daPasserMng_cFv(); // 1
@@ -266,14 +266,9 @@ asm void daPasserMng_c::getLuggageParamHigh(u32 param_0) {
 
 
 /* 80D466FC-80D46704 0008+00 s=1 e=0 z=0  None .text      daPasserMng_IsDelete__FP13daPasserMng_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daPasserMng_IsDelete(daPasserMng_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_passer_mng/d_a_passer_mng/daPasserMng_IsDelete__FP13daPasserMng_c.s"
+static bool daPasserMng_IsDelete(daPasserMng_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D46704-80D46748 0044+00 s=1 e=0 z=0  None .text      daPasserMng_Delete__FP13daPasserMng_c                        */

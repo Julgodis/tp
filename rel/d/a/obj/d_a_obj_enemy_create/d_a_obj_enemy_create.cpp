@@ -43,9 +43,9 @@ struct dSv_info_c {
 
 static void daObjE_CREATE_Create(fopAc_ac_c*); // 2
 static void daObjE_CREATE_Delete(daObjE_CREATE_c*); // 2
-static void daObjE_CREATE_Draw(daObjE_CREATE_c*); // 2
+static bool daObjE_CREATE_Draw(daObjE_CREATE_c*); // 2
 static void daObjE_CREATE_Execute(daObjE_CREATE_c*); // 2
-static void daObjE_CREATE_IsDelete(daObjE_CREATE_c*); // 2
+static bool daObjE_CREATE_IsDelete(daObjE_CREATE_c*); // 2
 
 extern "C" static void daObjE_CREATE_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjE_CREATE_Delete__FP15daObjE_CREATE_c(); // 1
@@ -55,11 +55,11 @@ extern "C" void LoopAction__15daObjE_CREATE_cFv(); // 1
 extern "C" void Action__15daObjE_CREATE_cFv(); // 1
 extern "C" void Execute__15daObjE_CREATE_cFv(); // 1
 extern "C" void Delete__15daObjE_CREATE_cFv(); // 1
-extern "C" static void daObjE_CREATE_Draw__FP15daObjE_CREATE_c(); // 1
+extern "C" static bool daObjE_CREATE_Draw__FP15daObjE_CREATE_c(); // 1
 extern "C" static void daObjE_CREATE_Execute__FP15daObjE_CREATE_c(); // 1
 extern "C" void NameChk__15daObjE_CREATE_cFv(); // 1
 extern "C" void create__15daObjE_CREATE_cFv(); // 1
-extern "C" static void daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c(); // 1
+extern "C" static bool daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c(); // 1
 extern "C" extern u32 const lit_3722[1 + 1 /* padding */];
 extern "C" extern u8 const lit_3724[8];
 extern "C" extern void* g_profile_Obj_E_CREATE[12];
@@ -192,14 +192,9 @@ asm void daObjE_CREATE_c::Delete() {
 
 
 /* 80BE35F0-80BE35F8 0008+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Draw__FP15daObjE_CREATE_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjE_CREATE_Draw(daObjE_CREATE_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_Draw__FP15daObjE_CREATE_c.s"
+static bool daObjE_CREATE_Draw(daObjE_CREATE_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE35F8-80BE3618 0020+00 s=1 e=0 z=0  None .text      daObjE_CREATE_Execute__FP15daObjE_CREATE_c                   */
@@ -254,14 +249,9 @@ asm void daObjE_CREATE_c::create() {
 
 
 /* 80BE3878-80BE3880 0008+00 s=1 e=0 z=0  None .text      daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjE_CREATE_IsDelete(daObjE_CREATE_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_enemy_create/d_a_obj_enemy_create/daObjE_CREATE_IsDelete__FP15daObjE_CREATE_c.s"
+static bool daObjE_CREATE_IsDelete(daObjE_CREATE_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

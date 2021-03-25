@@ -34,17 +34,17 @@ struct dStage_roomControl_c {
 
 static void daVrbox_Draw(vrbox_class*); // 2
 static void daVrbox_color_set(vrbox_class*); // 2
-static void daVrbox_Execute(vrbox_class*); // 2
-static void daVrbox_IsDelete(vrbox_class*); // 2
-static void daVrbox_Delete(vrbox_class*); // 2
+static bool daVrbox_Execute(vrbox_class*); // 2
+static bool daVrbox_IsDelete(vrbox_class*); // 2
+static bool daVrbox_Delete(vrbox_class*); // 2
 static void daVrbox_solidHeapCB(fopAc_ac_c*); // 2
 static void daVrbox_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daVrbox_Draw__FP11vrbox_class(); // 1
 extern "C" static void daVrbox_color_set__FP11vrbox_class(); // 1
-extern "C" static void daVrbox_Execute__FP11vrbox_class(); // 1
-extern "C" static void daVrbox_IsDelete__FP11vrbox_class(); // 1
-extern "C" static void daVrbox_Delete__FP11vrbox_class(); // 1
+extern "C" static bool daVrbox_Execute__FP11vrbox_class(); // 1
+extern "C" static bool daVrbox_IsDelete__FP11vrbox_class(); // 1
+extern "C" static bool daVrbox_Delete__FP11vrbox_class(); // 1
 extern "C" static void daVrbox_solidHeapCB__FP10fopAc_ac_c(); // 1
 extern "C" static void daVrbox_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
@@ -117,36 +117,21 @@ asm static void daVrbox_color_set(vrbox_class* param_0) {
 
 
 /* 80498850-80498858 0008+00 s=1 e=0 z=0  None .text      daVrbox_Execute__FP11vrbox_class                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daVrbox_Execute(vrbox_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Execute__FP11vrbox_class.s"
+static bool daVrbox_Execute(vrbox_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80498858-80498860 0008+00 s=1 e=0 z=0  None .text      daVrbox_IsDelete__FP11vrbox_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daVrbox_IsDelete(vrbox_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_IsDelete__FP11vrbox_class.s"
+static bool daVrbox_IsDelete(vrbox_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80498860-80498868 0008+00 s=1 e=0 z=0  None .text      daVrbox_Delete__FP11vrbox_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daVrbox_Delete(vrbox_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Delete__FP11vrbox_class.s"
+static bool daVrbox_Delete(vrbox_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

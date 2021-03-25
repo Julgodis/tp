@@ -19,7 +19,7 @@ struct daObjLadder {
 		/* 8058D158 */ void CreateHeap();
 		/* 8058D1D8 */ void Create();
 		/* 8058D378 */ void Mthd_Create();
-		/* 8058D4F0 */ void Delete();
+		/* 8058D4F0 */ bool Delete();
 		/* 8058D4F8 */ void Mthd_Delete();
 		/* 8058D544 */ void demo_end_reset();
 		/* 8058D5AC */ void mode_wait_init();
@@ -124,9 +124,9 @@ struct dBgS_GndChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -163,7 +163,7 @@ extern "C" void CreateHeap__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void Create__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void Mthd_Create__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" void Delete__Q211daObjLadder5Act_cFv(); // 1
+extern "C" bool Delete__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void Mthd_Delete__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void demo_end_reset__Q211daObjLadder5Act_cFv(); // 1
 extern "C" void mode_wait_init__Q211daObjLadder5Act_cFv(); // 1
@@ -237,9 +237,9 @@ extern "C" void dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -477,14 +477,9 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 
 
 /* 8058D4F0-8058D4F8 0008+00 s=1 e=0 z=0  None .text      Delete__Q211daObjLadder5Act_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLadder::Act_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/Delete__Q211daObjLadder5Act_cFv.s"
+bool daObjLadder::Act_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8058D4F8-8058D544 004C+00 s=1 e=0 z=0  None .text      Mthd_Delete__Q211daObjLadder5Act_cFv                         */
@@ -617,14 +612,9 @@ asm void daObjLadder::Act_c::mode_fell_init() {
 
 
 /* 8058D9CC-8058D9D0 0004+00 s=1 e=0 z=0  None .text      mode_fell__Q211daObjLadder5Act_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLadder::Act_c::mode_fell() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ladder/d_a_obj_ladder/mode_fell__Q211daObjLadder5Act_cFv.s"
+void daObjLadder::Act_c::mode_fell() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

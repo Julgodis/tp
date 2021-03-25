@@ -85,9 +85,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -119,7 +119,7 @@ struct Vec {
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daObjIkada_Draw(daObjIkada_c*); // 2
 static void daObjIkada_Execute(daObjIkada_c*); // 2
-static void daObjIkada_IsDelete(daObjIkada_c*); // 2
+static bool daObjIkada_IsDelete(daObjIkada_c*); // 2
 static void daObjIkada_Delete(daObjIkada_c*); // 2
 static void daObjIkada_Create(fopAc_ac_c*); // 2
 
@@ -130,7 +130,7 @@ extern "C" void setBaseMtx__12daObjIkada_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void daObjIkada_Draw__FP12daObjIkada_c(); // 1
 extern "C" static void daObjIkada_Execute__FP12daObjIkada_c(); // 1
-extern "C" static void daObjIkada_IsDelete__FP12daObjIkada_c(); // 1
+extern "C" static bool daObjIkada_IsDelete__FP12daObjIkada_c(); // 1
 extern "C" static void daObjIkada_Delete__FP12daObjIkada_c(); // 1
 extern "C" static void daObjIkada_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
@@ -197,9 +197,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -360,14 +360,9 @@ asm static void daObjIkada_Execute(daObjIkada_c* param_0) {
 
 
 /* 80C26D88-80C26D90 0008+00 s=1 e=0 z=0  None .text      daObjIkada_IsDelete__FP12daObjIkada_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjIkada_IsDelete(daObjIkada_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ikada/d_a_obj_ikada/daObjIkada_IsDelete__FP12daObjIkada_c.s"
+static bool daObjIkada_IsDelete(daObjIkada_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C26D90-80C26DB4 0024+00 s=1 e=0 z=0  None .text      daObjIkada_Delete__FP12daObjIkada_c                          */

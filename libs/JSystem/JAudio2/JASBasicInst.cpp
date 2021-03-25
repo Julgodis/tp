@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-};
-
 struct JASOscillator {
 	struct Data {
 	};
@@ -21,6 +18,9 @@ struct JASOscillator {
 };
 
 struct JASInstParam {
+};
+
+struct JKRHeap {
 };
 
 struct JASBasicInst {

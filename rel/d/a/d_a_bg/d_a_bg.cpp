@@ -157,10 +157,10 @@ struct dBgWKCol {
 	/* 8007E804 */ void create(void*, void*);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -205,7 +205,7 @@ static void createMatAnm(J3DModelData*, u16); // 2
 static void checkCreateHeap(fopAc_ac_c*); // 2
 static void daBg_Draw(daBg_c*); // 2
 static void daBg_Execute(daBg_c*); // 2
-static void daBg_IsDelete(daBg_c*); // 2
+static bool daBg_IsDelete(daBg_c*); // 2
 static void daBg_Delete(daBg_c*); // 2
 static void daBg_Create(fopAc_ac_c*); // 2
 
@@ -235,7 +235,7 @@ extern "C" void __dt__6daBg_cFv(); // 1
 extern "C" static void daBg_Draw__FP6daBg_c(); // 1
 extern "C" void draw__6daBg_cFv(); // 1
 extern "C" static void daBg_Execute__FP6daBg_c(); // 1
-extern "C" static void daBg_IsDelete__FP6daBg_c(); // 1
+extern "C" static bool daBg_IsDelete__FP6daBg_c(); // 1
 extern "C" static void daBg_Delete__FP6daBg_c(); // 1
 extern "C" static void daBg_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__6daBg_cFv(); // 1
@@ -787,14 +787,9 @@ asm static void daBg_Execute(daBg_c* param_0) {
 
 
 /* 8045901C-80459024 0008+00 s=1 e=0 z=0  None .text      daBg_IsDelete__FP6daBg_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daBg_IsDelete(daBg_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bg/d_a_bg/daBg_IsDelete__FP6daBg_c.s"
+static bool daBg_IsDelete(daBg_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80459024-8045904C 0028+00 s=1 e=0 z=0  None .text      daBg_Delete__FP6daBg_c                                       */

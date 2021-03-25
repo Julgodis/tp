@@ -25,10 +25,10 @@ struct J2DAnmTransformKey {
 	/* 8030CD7C */ void getTransform(u16, J3DTransformInfo*) const;
 };
 
-struct J2DScreen {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct J2DScreen {
 };
 
 struct J2DAnmColor {
@@ -107,10 +107,10 @@ struct JUTResReference {
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
-struct JUTTransparency {
+struct _GXTlutFmt {
 };
 
-struct _GXTlutFmt {
+struct JUTTransparency {
 };
 
 struct _GXTlut {

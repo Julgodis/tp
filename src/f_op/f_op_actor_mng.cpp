@@ -82,10 +82,10 @@ struct l_HIO {
 
 struct daPy_py_c {
 	/* 8001E11C */ void onFrollCrashFlg(u8, int);
-	/* 8001E120 */ void checkWolfDash() const;
-	/* 8001E128 */ void checkFrontRoll() const;
-	/* 8001E130 */ void checkHorseRide() const;
-	/* 8001E138 */ void getGrabActorID() const;
+	/* 8001E120 */ bool checkWolfDash() const;
+	/* 8001E128 */ bool checkFrontRoll() const;
+	/* 8001E130 */ bool checkHorseRide() const;
+	/* 8001E138 */ s32 getGrabActorID() const;
 };
 
 struct JKRSolidHeap {
@@ -147,14 +147,14 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS_SplGrpChk {
-	/* 80078B90 */ void Set(cXyz&, f32);
-	/* 80078C78 */ ~dBgS_SplGrpChk();
-};
-
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct dBgS_SplGrpChk {
+	/* 80078B90 */ void Set(cXyz&, f32);
+	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
 struct dBgS {
@@ -284,7 +284,7 @@ void fopAcM_wayBgCheck(fopAc_ac_c const*, f32, f32); // 2
 void fopAcM_plAngleCheck(fopAc_ac_c const*, s16); // 2
 void fopAcM_effSmokeSet1(u32*, u32*, cXyz const*, csXyz const*, f32, dKy_tevstr_c const*, int); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopAcM_carryOffRevise(fopAc_ac_c*); // 2
 static void vectle_calc(DOUBLE_POS const*, cXyz*); // 2
 static void get_vectle_calc(cXyz const*, cXyz const*, cXyz*); // 2
@@ -384,7 +384,7 @@ extern "C" void fopAcM_wayBgCheck__FPC10fopAc_ac_cff(); // 1
 extern "C" void fopAcM_plAngleCheck__FPC10fopAc_ac_cs(); // 1
 extern "C" void fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopAcM_carryOffRevise__FP10fopAc_ac_c(); // 1
 extern "C" static void vectle_calc__FPC10DOUBLE_POSP4cXyz(); // 1
 extern "C" static void get_vectle_calc__FPC4cXyzPC4cXyzP4cXyz(); // 1
@@ -420,10 +420,10 @@ extern "C" static void func_8001E104(); // 1
 extern "C" static void func_8001E10C(); // 1
 extern "C" static void func_8001E114(); // 1
 extern "C" void onFrollCrashFlg__9daPy_py_cFUci(); // 1
-extern "C" void checkWolfDash__9daPy_py_cCFv(); // 1
-extern "C" void checkFrontRoll__9daPy_py_cCFv(); // 1
-extern "C" void checkHorseRide__9daPy_py_cCFv(); // 1
-extern "C" void getGrabActorID__9daPy_py_cCFv(); // 1
+extern "C" bool checkWolfDash__9daPy_py_cCFv(); // 1
+extern "C" bool checkFrontRoll__9daPy_py_cCFv(); // 1
+extern "C" bool checkHorseRide__9daPy_py_cCFv(); // 1
+extern "C" s32 getGrabActorID__9daPy_py_cCFv(); // 1
 extern "C" extern char const* const f_op_f_op_actor_mng__stringBase0;
 extern "C" extern void* __vt__8cM3dGPla[3];
 extern "C" extern void* __vt__11dBgS_WtrChk[12];
@@ -697,14 +697,9 @@ asm static void createAppend(u16 param_0, u32 param_1, cXyz const* param_2, int 
 
 
 /* 80019C78-80019C7C 0004+00 s=3 e=0 z=0  None .text      fopAcM_Log__FPC10fopAc_ac_cPCc                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void fopAcM_Log(fopAc_ac_c const* param_0, char const* param_1) {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/fopAcM_Log__FPC10fopAc_ac_cPCc.s"
+static void fopAcM_Log(fopAc_ac_c const* param_0, char const* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1717,14 +1712,9 @@ asm void fopAcM_effHamonSet(u32* param_0, cXyz const* param_1, f32 param_2, f32 
 
 
 /* 8001D1F4-8001D1FC 0008+00 s=0 e=0 z=7  None .text      fopAcM_riverStream__FP4cXyzPsPff                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopAcM_riverStream(cXyz* param_0, s16* param_1, f32* param_2, f32 param_3) {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/fopAcM_riverStream__FP4cXyzPsPff.s"
+bool fopAcM_riverStream(cXyz* param_0, s16* param_1, f32* param_2, f32 param_3) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1983,14 +1973,9 @@ asm void fopAcM_wt_c::waterCheck(cXyz const* param_0) {
 
 
 /* 8001DE10-8001DE14 0004+00 s=0 e=1 z=0  None .text      fopAcM_initManager__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopAcM_initManager() {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/fopAcM_initManager__Fv.s"
+void fopAcM_initManager() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -2199,57 +2184,32 @@ extern "C" asm static void func_8001E114() {
 
 
 /* 8001E11C-8001E120 0004+00 s=0 e=1 z=0  None .text      onFrollCrashFlg__9daPy_py_cFUci                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::onFrollCrashFlg(u8 param_0, int param_1) {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/onFrollCrashFlg__9daPy_py_cFUci.s"
+void daPy_py_c::onFrollCrashFlg(u8 param_0, int param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8001E120-8001E128 0008+00 s=0 e=1 z=0  None .text      checkWolfDash__9daPy_py_cCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkWolfDash() const {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/checkWolfDash__9daPy_py_cCFv.s"
+bool daPy_py_c::checkWolfDash() const {
+	return false;
 }
-#pragma pop
 
 
 /* 8001E128-8001E130 0008+00 s=0 e=1 z=0  None .text      checkFrontRoll__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkFrontRoll() const {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/checkFrontRoll__9daPy_py_cCFv.s"
+bool daPy_py_c::checkFrontRoll() const {
+	return false;
 }
-#pragma pop
 
 
 /* 8001E130-8001E138 0008+00 s=0 e=1 z=0  None .text      checkHorseRide__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkHorseRide() const {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/checkHorseRide__9daPy_py_cCFv.s"
+bool daPy_py_c::checkHorseRide() const {
+	return false;
 }
-#pragma pop
 
 
 /* 8001E138-8001E140 0008+00 s=0 e=1 z=0  None .text      getGrabActorID__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::getGrabActorID() const {
-	nofralloc
-#include "asm/f_op/f_op_actor_mng/getGrabActorID__9daPy_py_cCFv.s"
+s32 daPy_py_c::getGrabActorID() const {
+	return -1;
 }
-#pragma pop
 
 

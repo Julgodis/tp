@@ -15,8 +15,8 @@ struct daTagWrHowl_c {
 	/* 80D63F38 */ daTagWrHowl_c();
 	/* 80D63F74 */ ~daTagWrHowl_c();
 	/* 80D63FD4 */ void create();
-	/* 80D6402C */ void Delete();
-	/* 80D64034 */ void draw();
+	/* 80D6402C */ bool Delete();
+	/* 80D64034 */ bool draw();
 	/* 80D6403C */ void execute();
 	/* 80D64090 */ void init();
 	/* 80D640B4 */ void chkWlfInTag();
@@ -39,8 +39,8 @@ static void daTagWrHowl_draw(daTagWrHowl_c*); // 2
 extern "C" void __ct__13daTagWrHowl_cFv(); // 1
 extern "C" void __dt__13daTagWrHowl_cFv(); // 1
 extern "C" void create__13daTagWrHowl_cFv(); // 1
-extern "C" void Delete__13daTagWrHowl_cFv(); // 1
-extern "C" void draw__13daTagWrHowl_cFv(); // 1
+extern "C" bool Delete__13daTagWrHowl_cFv(); // 1
+extern "C" bool draw__13daTagWrHowl_cFv(); // 1
 extern "C" void execute__13daTagWrHowl_cFv(); // 1
 extern "C" void init__13daTagWrHowl_cFv(); // 1
 extern "C" void chkWlfInTag__13daTagWrHowl_cFv(); // 1
@@ -138,25 +138,15 @@ asm void daTagWrHowl_c::create() {
 
 
 /* 80D6402C-80D64034 0008+00 s=1 e=0 z=0  None .text      Delete__13daTagWrHowl_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagWrHowl_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/Delete__13daTagWrHowl_cFv.s"
+bool daTagWrHowl_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D64034-80D6403C 0008+00 s=1 e=0 z=0  None .text      draw__13daTagWrHowl_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagWrHowl_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wara_howl/d_a_tag_wara_howl/draw__13daTagWrHowl_cFv.s"
+bool daTagWrHowl_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6403C-80D64090 0054+00 s=1 e=0 z=0  None .text      execute__13daTagWrHowl_cFv                                   */

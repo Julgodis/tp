@@ -144,7 +144,7 @@ extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
 extern "C" void DVDChangeDir(); // 1
 extern "C" void DVDOpenDir(); // 1
 extern "C" void DVDReadDir(); // 1
-extern "C" void DVDCloseDir(); // 1
+extern "C" bool DVDCloseDir(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1

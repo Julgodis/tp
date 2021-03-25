@@ -268,14 +268,9 @@ asm void dMsgStringBase_c::getMessageLocal(u32 param_0, char* param_1) {
 
 
 /* 80249BAC-80249BB0 0004+00 s=1 e=0 z=0  None .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgStringBase_c::drawFontLocal(J2DTextBox* param_0, u8 param_1, f32 param_2, f32 param_3, f32 param_4, f32 param_5, u32 param_6, u8 param_7) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc.s"
+void dMsgStringBase_c::drawFontLocal(J2DTextBox* param_0, u8 param_1, f32 param_2, f32 param_3, f32 param_4, f32 param_5, u32 param_6, u8 param_7) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80249BB0-80249BD0 0020+00 s=1 e=0 z=0  None .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
@@ -312,24 +307,14 @@ asm void dMsgStringBase_c::getMessage(u32 param_0, char* param_1) {
 
 
 /* 80249C18-80249C1C 0004+00 s=1 e=0 z=0  None .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgStringBase_c::resetStringLocal(J2DTextBox* param_0) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/resetStringLocal__16dMsgStringBase_cFP10J2DTextBox.s"
+void dMsgStringBase_c::resetStringLocal(J2DTextBox* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80249C1C-80249C20 0004+00 s=1 e=0 z=0  None .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgStringBase_c::drawOutFontLocal(J2DTextBox* param_0, f32 param_1) {
-	nofralloc
-#include "asm/d/msg/d_msg_string_base/drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf.s"
+void dMsgStringBase_c::drawOutFontLocal(J2DTextBox* param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 

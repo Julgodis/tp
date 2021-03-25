@@ -34,7 +34,7 @@ struct cDegree {
 
 struct dCstick_c {
 	/* 80088434 */ dCstick_c();
-	/* 8008845C */ void Shift(u32);
+	/* 8008845C */ bool Shift(u32);
 	/* 800889B0 */ ~dCstick_c();
 };
 
@@ -79,7 +79,7 @@ extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle(); // 1
 extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
 extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
 extern "C" void __ct__9dCstick_cFv(); // 1
-extern "C" void Shift__9dCstick_cFUl(); // 1
+extern "C" bool Shift__9dCstick_cFUl(); // 1
 extern "C" void __ct__11dCamBGChk_cFv(); // 1
 extern "C" void __ct__11dCamParam_cFl(); // 1
 extern "C" void __dt__11dCamParam_cFv(); // 1
@@ -269,14 +269,9 @@ asm dCstick_c::dCstick_c() {
 
 
 /* 8008845C-80088464 0008+00 s=0 e=1 z=0  None .text      Shift__9dCstick_cFUl                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCstick_c::Shift(u32 param_0) {
-	nofralloc
-#include "asm/d/d_cam_param/Shift__9dCstick_cFUl.s"
+bool dCstick_c::Shift(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

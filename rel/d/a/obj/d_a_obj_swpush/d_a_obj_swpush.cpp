@@ -236,7 +236,7 @@ extern "C" static void func_80484C5C(); // 1
 extern "C" static void func_80484C7C(); // 1
 extern "C" static void func_80484C9C(); // 1
 extern "C" static void func_80484CBC(); // 1
-extern "C" static void func_80484CDC(); // 1
+extern "C" static bool func_80484CDC(); // 1
 extern "C" void func_80484CE4(); // 1
 extern "C" extern u8 const M_heap_size__Q211daObjSwpush5Act_c[12];
 extern "C" extern u32 const M_op_vtx__Q211daObjSwpush5Act_c;
@@ -629,14 +629,9 @@ asm void daObjSwpush::Act_c::init_mtx() {
 
 
 /* 80483570-80483574 0004+00 s=2 e=0 z=0  None .text      set_btp_frame__Q211daObjSwpush5Act_cFv                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwpush::Act_c::set_btp_frame() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/set_btp_frame__Q211daObjSwpush5Act_cFv.s"
+void daObjSwpush::Act_c::set_btp_frame() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1000,14 +995,9 @@ asm void daObjSwpush::Act_c::demo_non_init() {
 
 
 /* 8048457C-80484580 0004+00 s=1 e=0 z=0  None .text      demo_non__Q211daObjSwpush5Act_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwpush::Act_c::demo_non() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/demo_non__Q211daObjSwpush5Act_cFv.s"
+void daObjSwpush::Act_c::demo_non() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80484580-804845D8 0058+00 s=1 e=0 z=0  None .text      demo_reqPause_init__Q211daObjSwpush5Act_cFv                  */
@@ -1202,14 +1192,9 @@ extern "C" asm static void func_80484CBC() {
 
 
 /* 80484CDC-80484CE4 0008+00 s=1 e=0 z=0  None .text      Mthd_IsDelete__Q211daObjSwpush28@unnamed@d_a_obj_swpush_cpp@FPv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_80484CDC() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush/d_a_obj_swpush/func_80484CDC.s"
+extern "C" static bool func_80484CDC() {
+	return true;
 }
-#pragma pop
 
 
 /* 80484CE4-80484D00 001C+00 s=8 e=0 z=0  None .text      PrmAbstract<Q311daObjSwpush5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ311daObjSwpush5Act_c5Prm_eQ311daObjSwpush5Act_c5Prm_e */

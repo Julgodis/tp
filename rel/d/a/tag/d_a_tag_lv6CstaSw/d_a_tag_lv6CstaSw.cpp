@@ -26,8 +26,8 @@ struct daLv6CstaSw_c {
 	/* 80D5B410 */ void searchSekizoAct(void*, void*);
 	/* 80D5B460 */ void areaCheck();
 	/* 80D5B600 */ void Execute();
-	/* 80D5B6B0 */ void Draw();
-	/* 80D5B6B8 */ void Delete();
+	/* 80D5B6B0 */ bool Draw();
+	/* 80D5B6B8 */ bool Delete();
 };
 
 struct fopAc_ac_c {
@@ -63,8 +63,8 @@ extern "C" void create__13daLv6CstaSw_cFv(); // 1
 extern "C" void searchSekizoAct__13daLv6CstaSw_cFPvPv(); // 1
 extern "C" void areaCheck__13daLv6CstaSw_cFv(); // 1
 extern "C" void Execute__13daLv6CstaSw_cFv(); // 1
-extern "C" void Draw__13daLv6CstaSw_cFv(); // 1
-extern "C" void Delete__13daLv6CstaSw_cFv(); // 1
+extern "C" bool Draw__13daLv6CstaSw_cFv(); // 1
+extern "C" bool Delete__13daLv6CstaSw_cFv(); // 1
 extern "C" static void daLv6CstaSw_Draw__FP13daLv6CstaSw_c(); // 1
 extern "C" static void daLv6CstaSw_Execute__FP13daLv6CstaSw_c(); // 1
 extern "C" static void daLv6CstaSw_Delete__FP13daLv6CstaSw_c(); // 1
@@ -239,25 +239,15 @@ asm void daLv6CstaSw_c::Execute() {
 
 
 /* 80D5B6B0-80D5B6B8 0008+00 s=1 e=0 z=0  None .text      Draw__13daLv6CstaSw_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daLv6CstaSw_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/Draw__13daLv6CstaSw_cFv.s"
+bool daLv6CstaSw_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5B6B8-80D5B6C0 0008+00 s=1 e=0 z=0  None .text      Delete__13daLv6CstaSw_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daLv6CstaSw_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv6CstaSw/d_a_tag_lv6CstaSw/Delete__13daLv6CstaSw_cFv.s"
+bool daLv6CstaSw_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5B6C0-80D5B6E0 0020+00 s=1 e=0 z=0  None .text      daLv6CstaSw_Draw__FP13daLv6CstaSw_c                          */

@@ -51,13 +51,8 @@ extern "C" asm void MWEnterCriticalSection() {
 
 
 /* 80372CF8-80372CFC 0004+00 s=0 e=1 z=0  None .text      MWInitializeCriticalSection                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void MWInitializeCriticalSection() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/utils/gc/MWCriticalSection_gc/MWInitializeCriticalSection.s"
+extern "C" void MWInitializeCriticalSection() {
+	/* empty function */
 }
-#pragma pop
 
 

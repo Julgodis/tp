@@ -105,9 +105,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -155,7 +155,7 @@ struct daE_YMB_c {
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daObjIta_Draw(daObjIta_c*); // 2
 static void daObjIta_Execute(daObjIta_c*); // 2
-static void daObjIta_IsDelete(daObjIta_c*); // 2
+static bool daObjIta_IsDelete(daObjIta_c*); // 2
 static void daObjIta_Delete(daObjIta_c*); // 2
 static void daObjIta_Create(fopAc_ac_c*); // 2
 
@@ -167,7 +167,7 @@ extern "C" void setBaseMtx__10daObjIta_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void daObjIta_Draw__FP10daObjIta_c(); // 1
 extern "C" static void daObjIta_Execute__FP10daObjIta_c(); // 1
-extern "C" static void daObjIta_IsDelete__FP10daObjIta_c(); // 1
+extern "C" static bool daObjIta_IsDelete__FP10daObjIta_c(); // 1
 extern "C" static void daObjIta_Delete__FP10daObjIta_c(); // 1
 extern "C" static void daObjIta_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__10daObjIta_cFv(); // 1
@@ -251,9 +251,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -602,14 +602,9 @@ asm static void daObjIta_Execute(daObjIta_c* param_0) {
 
 
 /* 80C288DC-80C288E4 0008+00 s=1 e=0 z=0  None .text      daObjIta_IsDelete__FP10daObjIta_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjIta_IsDelete(daObjIta_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ita/d_a_obj_ita/daObjIta_IsDelete__FP10daObjIta_c.s"
+static bool daObjIta_IsDelete(daObjIta_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C288E4-80C28908 0024+00 s=1 e=0 z=0  None .text      daObjIta_Delete__FP10daObjIta_c                              */

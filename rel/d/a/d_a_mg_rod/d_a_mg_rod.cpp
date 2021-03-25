@@ -113,16 +113,16 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -2729,25 +2729,15 @@ asm mg_hook_s::mg_hook_s() {
 
 
 /* 804BB020-804BB024 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BB024-804BB028 0004+00 s=3 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_rod/d_a_mg_rod/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804BB028-804BB070 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

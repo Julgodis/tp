@@ -94,7 +94,7 @@ struct JKRExpHeap {
 // Forward References:
 // 
 
-static void dScnRoom_Draw(room_of_scene_class*); // 2
+static bool dScnRoom_Draw(room_of_scene_class*); // 2
 static void getResetArchiveBank(int, u8 const**); // 2
 static void resetArchiveBank(int); // 2
 static void setArchiveBank(int); // 2
@@ -105,7 +105,7 @@ static void isCreating(unsigned int); // 2
 static void loadDemoArchive(int); // 2
 static void objectSetCheck(room_of_scene_class*); // 2
 static void dScnRoom_Execute(room_of_scene_class*); // 2
-static void dScnRoom_IsDelete(room_of_scene_class*); // 2
+static bool dScnRoom_IsDelete(room_of_scene_class*); // 2
 static void isReadRoom(int); // 2
 static void dScnRoom_Delete(room_of_scene_class*); // 2
 static void phase_0(room_of_scene_class*); // 2
@@ -115,7 +115,7 @@ static void phase_3(room_of_scene_class*); // 2
 static void phase_4(room_of_scene_class*); // 2
 static void dScnRoom_Create(scene_class*); // 2
 
-extern "C" static void dScnRoom_Draw__FP19room_of_scene_class(); // 1
+extern "C" static bool dScnRoom_Draw__FP19room_of_scene_class(); // 1
 extern "C" static void getResetArchiveBank__FiPPCUc(); // 1
 extern "C" static void resetArchiveBank__Fi(); // 1
 extern "C" static void setArchiveBank__Fi(); // 1
@@ -126,7 +126,7 @@ extern "C" static void isCreating__FUi(); // 1
 extern "C" static void loadDemoArchive__Fi(); // 1
 extern "C" static void objectSetCheck__FP19room_of_scene_class(); // 1
 extern "C" static void dScnRoom_Execute__FP19room_of_scene_class(); // 1
-extern "C" static void dScnRoom_IsDelete__FP19room_of_scene_class(); // 1
+extern "C" static bool dScnRoom_IsDelete__FP19room_of_scene_class(); // 1
 extern "C" static void isReadRoom__Fi(); // 1
 extern "C" static void dScnRoom_Delete__FP19room_of_scene_class(); // 1
 extern "C" static void phase_0__FP19room_of_scene_class(); // 1
@@ -222,14 +222,9 @@ extern "C" extern u8 struct_80451124[4];
 // 
 
 /* 8025AE1C-8025AE24 0008+00 s=1 e=0 z=0  None .text      dScnRoom_Draw__FP19room_of_scene_class                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dScnRoom_Draw(room_of_scene_class* param_0) {
-	nofralloc
-#include "asm/d/s/d_s_room/dScnRoom_Draw__FP19room_of_scene_class.s"
+static bool dScnRoom_Draw(room_of_scene_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -359,14 +354,9 @@ asm static void dScnRoom_Execute(room_of_scene_class* param_0) {
 
 
 /* 8025B674-8025B67C 0008+00 s=1 e=0 z=0  None .text      dScnRoom_IsDelete__FP19room_of_scene_class                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dScnRoom_IsDelete(room_of_scene_class* param_0) {
-	nofralloc
-#include "asm/d/s/d_s_room/dScnRoom_IsDelete__FP19room_of_scene_class.s"
+static bool dScnRoom_IsDelete(room_of_scene_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8025B67C-8025B73C 00C0+00 s=1 e=0 z=0  None .text      isReadRoom__Fi                                               */

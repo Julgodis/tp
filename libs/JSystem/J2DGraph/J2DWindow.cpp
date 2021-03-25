@@ -11,36 +11,6 @@
 // Types:
 // 
 
-struct J2DMaterial {
-};
-
-struct JKRArchive {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct ResFONT {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -50,19 +20,22 @@ struct JGeometry {
 
 };
 
-struct J2DAnmTevRegKey {
+struct J2DMaterial {
 };
 
-struct J2DAnmTextureSRTKey {
+struct _GXTexMapID {
 };
 
-struct J2DAnmBase {
+struct ResTIMG {
 };
 
-struct J2DAnmVtxColor {
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-struct _GXCullMode {
+struct ResFONT {
 };
 
 struct JSUStreamSeekFrom {
@@ -71,6 +44,42 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRArchive {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -112,15 +121,6 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
 struct J2DWindow {
 	struct TMaterial {
 	};
@@ -152,11 +152,11 @@ struct J2DWindow {
 	/* 802FBE60 */ void getFrameTexture(u8, u8) const;
 	/* 802FC02C */ void isUsed(ResFONT const*);
 	/* 802FBEDC */ void isUsed(ResTIMG const*);
-	/* 802FBF98 */ void getTypeID() const;
+	/* 802FBF98 */ s32 getTypeID() const;
 	/* 802FBFE8 */ void getContentsTexture(u8) const;
 	/* 802FC000 */ void getMaterial(J2DWindow::TMaterial&) const;
-	/* 802FC01C */ void getFrameMaterial(u8) const;
-	/* 802FC024 */ void getContentsMaterial() const;
+	/* 802FC01C */ bool getFrameMaterial(u8) const;
+	/* 802FC024 */ bool getContentsMaterial() const;
 	/* 802FC04C */ void rewriteAlpha();
 };
 
@@ -199,12 +199,12 @@ extern "C" void drawContentsTexture__9J2DWindowFffff(); // 1
 extern "C" void setTevMode__9J2DWindowFP10JUTTextureQ28JUtility6TColorQ28JUtility6TColor(); // 1
 extern "C" void getFrameTexture__9J2DWindowCFUcUc(); // 1
 extern "C" void isUsed__9J2DWindowFPC7ResTIMG(); // 1
-extern "C" void getTypeID__9J2DWindowCFv(); // 1
+extern "C" s32 getTypeID__9J2DWindowCFv(); // 1
 extern "C" void draw__9J2DWindowFffff(); // 1
 extern "C" void getContentsTexture__9J2DWindowCFUc(); // 1
 extern "C" void getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial(); // 1
-extern "C" void getFrameMaterial__9J2DWindowCFUc(); // 1
-extern "C" void getContentsMaterial__9J2DWindowCFv(); // 1
+extern "C" bool getFrameMaterial__9J2DWindowCFUc(); // 1
+extern "C" bool getContentsMaterial__9J2DWindowCFv(); // 1
 extern "C" void isUsed__9J2DWindowFPC7ResFONT(); // 1
 extern "C" void rewriteAlpha__9J2DWindowFv(); // 1
 
@@ -629,14 +629,9 @@ asm void J2DWindow::isUsed(ResTIMG const* param_0) {
 
 
 /* 802FBF98-802FBFA0 0008+00 s=1 e=1 z=0  None .text      getTypeID__9J2DWindowCFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DWindow::getTypeID() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getTypeID__9J2DWindowCFv.s"
+s32 J2DWindow::getTypeID() const {
+	return 17;
 }
-#pragma pop
 
 
 /* 802FBFA0-802FBFE8 0048+00 s=1 e=0 z=0  None .text      draw__9J2DWindowFffff                                        */
@@ -673,25 +668,15 @@ asm void J2DWindow::getMaterial(J2DWindow::TMaterial& param_0) const {
 
 
 /* 802FC01C-802FC024 0008+00 s=1 e=0 z=0  None .text      getFrameMaterial__9J2DWindowCFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DWindow::getFrameMaterial(u8 param_0) const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getFrameMaterial__9J2DWindowCFUc.s"
+bool J2DWindow::getFrameMaterial(u8 param_0) const {
+	return false;
 }
-#pragma pop
 
 
 /* 802FC024-802FC02C 0008+00 s=1 e=0 z=0  None .text      getContentsMaterial__9J2DWindowCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DWindow::getContentsMaterial() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/getContentsMaterial__9J2DWindowCFv.s"
+bool J2DWindow::getContentsMaterial() const {
+	return false;
 }
-#pragma pop
 
 
 /* 802FC02C-802FC04C 0020+00 s=1 e=0 z=0  None .text      isUsed__9J2DWindowFPC7ResFONT                                */
@@ -706,13 +691,8 @@ asm void J2DWindow::isUsed(ResFONT const* param_0) {
 
 
 /* 802FC04C-802FC050 0004+00 s=1 e=0 z=0  None .text      rewriteAlpha__9J2DWindowFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DWindow::rewriteAlpha() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DWindow/rewriteAlpha__9J2DWindowFv.s"
+void J2DWindow::rewriteAlpha() {
+	/* empty function */
 }
-#pragma pop
 
 

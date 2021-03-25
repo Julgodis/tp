@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
 struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMsgScrnItem_c {
@@ -110,6 +110,14 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
+};
+
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
@@ -122,14 +130,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {
@@ -518,14 +518,9 @@ asm void dMsgScrnItem_c::selectAnimeEnd() {
 
 
 /* 802400A4-802400A8 0004+00 s=1 e=0 z=0  None .text      fukiScale__14dMsgScrnItem_cFf                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnItem_c::fukiScale(f32 param_0) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_item/fukiScale__14dMsgScrnItem_cFf.s"
+void dMsgScrnItem_c::fukiScale(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802400A8-802400CC 0024+00 s=1 e=0 z=0  None .text      fukiTrans__14dMsgScrnItem_cFff                               */

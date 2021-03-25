@@ -33,7 +33,7 @@ struct dSv_info_c {
 static void daTagGstart_Create(fopAc_ac_c*); // 2
 static void daTagGstart_Delete(daTagGstart_c*); // 2
 static void daTagGstart_Execute(daTagGstart_c*); // 2
-static void daTagGstart_Draw(daTagGstart_c*); // 2
+static bool daTagGstart_Draw(daTagGstart_c*); // 2
 
 extern "C" void create__13daTagGstart_cFv(); // 1
 extern "C" static void daTagGstart_Create__FP10fopAc_ac_c(); // 1
@@ -41,7 +41,7 @@ extern "C" void __dt__13daTagGstart_cFv(); // 1
 extern "C" static void daTagGstart_Delete__FP13daTagGstart_c(); // 1
 extern "C" void execute__13daTagGstart_cFv(); // 1
 extern "C" static void daTagGstart_Execute__FP13daTagGstart_c(); // 1
-extern "C" static void daTagGstart_Draw__FP13daTagGstart_c(); // 1
+extern "C" static bool daTagGstart_Draw__FP13daTagGstart_c(); // 1
 extern "C" extern void* g_profile_Tag_Gstart[12];
 
 // 
@@ -129,14 +129,9 @@ asm static void daTagGstart_Execute(daTagGstart_c* param_0) {
 
 
 /* 805A3678-805A3680 0008+00 s=1 e=0 z=0  None .text      daTagGstart_Draw__FP13daTagGstart_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagGstart_Draw(daTagGstart_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_gstart/d_a_tag_gstart/daTagGstart_Draw__FP13daTagGstart_c.s"
+static bool daTagGstart_Draw(daTagGstart_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -32,14 +32,14 @@ struct J3DFrameCtrl {
 	/* 806A63B8 */ ~J3DFrameCtrl();
 };
 
+struct dCcD_SrcSph {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dCcD_SrcSph {
 };
 
 struct dCcD_Sph {
@@ -109,19 +109,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -294,7 +294,7 @@ static void e_dd_arrowdamage(e_dd_class*); // 2
 static void action(e_dd_class*); // 2
 static void anm_se_set(e_dd_class*); // 2
 static void daE_DD_Execute(e_dd_class*); // 2
-static void daE_DD_IsDelete(e_dd_class*); // 2
+static bool daE_DD_IsDelete(e_dd_class*); // 2
 static void daE_DD_Delete(e_dd_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void kabe_initial_pos_set(e_dd_class*); // 2
@@ -325,7 +325,7 @@ extern "C" static void e_dd_arrowdamage__FP10e_dd_class(); // 1
 extern "C" static void action__FP10e_dd_class(); // 1
 extern "C" static void anm_se_set__FP10e_dd_class(); // 1
 extern "C" static void daE_DD_Execute__FP10e_dd_class(); // 1
-extern "C" static void daE_DD_IsDelete__FP10e_dd_class(); // 1
+extern "C" static bool daE_DD_IsDelete__FP10e_dd_class(); // 1
 extern "C" static void daE_DD_Delete__FP10e_dd_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1222,14 +1222,9 @@ asm static void daE_DD_Execute(e_dd_class* param_0) {
 
 
 /* 806A60E0-806A60E8 0008+00 s=1 e=0 z=0  None .text      daE_DD_IsDelete__FP10e_dd_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_DD_IsDelete(e_dd_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_dd/d_a_e_dd/daE_DD_IsDelete__FP10e_dd_class.s"
+static bool daE_DD_IsDelete(e_dd_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806A60E8-806A6154 006C+00 s=1 e=0 z=0  None .text      daE_DD_Delete__FP10e_dd_class                                */

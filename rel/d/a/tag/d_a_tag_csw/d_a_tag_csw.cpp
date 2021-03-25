@@ -181,7 +181,7 @@ static void searchTagCswOut(void*, void*); // 2
 static void searchCStatue(void*, void*); // 2
 static void daTagCsw_Draw(daTagCsw_c*); // 2
 static void daTagCsw_Execute(daTagCsw_c*); // 2
-static void daTagCsw_IsDelete(daTagCsw_c*); // 2
+static bool daTagCsw_IsDelete(daTagCsw_c*); // 2
 static void daTagCsw_Delete(daTagCsw_c*); // 2
 static void daTagCsw_Create(fopAc_ac_c*); // 2
 
@@ -204,7 +204,7 @@ extern "C" void execute__10daTagCsw_cFv(); // 1
 extern "C" void draw__10daTagCsw_cFv(); // 1
 extern "C" static void daTagCsw_Draw__FP10daTagCsw_c(); // 1
 extern "C" static void daTagCsw_Execute__FP10daTagCsw_c(); // 1
-extern "C" static void daTagCsw_IsDelete__FP10daTagCsw_c(); // 1
+extern "C" static bool daTagCsw_IsDelete__FP10daTagCsw_c(); // 1
 extern "C" static void daTagCsw_Delete__FP10daTagCsw_c(); // 1
 extern "C" static void daTagCsw_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
@@ -705,14 +705,9 @@ asm static void daTagCsw_Execute(daTagCsw_c* param_0) {
 
 
 /* 80D58504-80D5850C 0008+00 s=1 e=0 z=0  None .text      daTagCsw_IsDelete__FP10daTagCsw_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagCsw_IsDelete(daTagCsw_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_csw/d_a_tag_csw/daTagCsw_IsDelete__FP10daTagCsw_c.s"
+static bool daTagCsw_IsDelete(daTagCsw_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5850C-80D58548 003C+00 s=1 e=0 z=0  None .text      daTagCsw_Delete__FP10daTagCsw_c                              */

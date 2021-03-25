@@ -115,11 +115,11 @@ struct JUtility {
 
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct dSelect_cursor_c {

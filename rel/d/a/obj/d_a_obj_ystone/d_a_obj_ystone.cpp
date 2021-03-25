@@ -53,19 +53,19 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -86,19 +86,19 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -120,7 +120,7 @@ static void daObj_Ystone_Draw(obj_ystone_class*); // 2
 static void setModelBaseMtx(obj_ystone_class*); // 2
 static void action(obj_ystone_class*); // 2
 static void daObj_Ystone_Execute(obj_ystone_class*); // 2
-static void daObj_Ystone_IsDelete(obj_ystone_class*); // 2
+static bool daObj_Ystone_IsDelete(obj_ystone_class*); // 2
 static void daObj_Ystone_Delete(obj_ystone_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Ystone_Create(fopAc_ac_c*); // 2
@@ -130,7 +130,7 @@ extern "C" static void daObj_Ystone_Draw__FP16obj_ystone_class(); // 1
 extern "C" static void setModelBaseMtx__FP16obj_ystone_class(); // 1
 extern "C" static void action__FP16obj_ystone_class(); // 1
 extern "C" static void daObj_Ystone_Execute__FP16obj_ystone_class(); // 1
-extern "C" static void daObj_Ystone_IsDelete__FP16obj_ystone_class(); // 1
+extern "C" static bool daObj_Ystone_IsDelete__FP16obj_ystone_class(); // 1
 extern "C" static void daObj_Ystone_Delete__FP16obj_ystone_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -360,14 +360,9 @@ asm static void daObj_Ystone_Execute(obj_ystone_class* param_0) {
 
 
 /* 80D3E770-80D3E778 0008+00 s=1 e=0 z=0  None .text      daObj_Ystone_IsDelete__FP16obj_ystone_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Ystone_IsDelete(obj_ystone_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ystone/d_a_obj_ystone/daObj_Ystone_IsDelete__FP16obj_ystone_class.s"
+static bool daObj_Ystone_IsDelete(obj_ystone_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3E778-80D3E7B8 0040+00 s=1 e=0 z=0  None .text      daObj_Ystone_Delete__FP16obj_ystone_class                    */

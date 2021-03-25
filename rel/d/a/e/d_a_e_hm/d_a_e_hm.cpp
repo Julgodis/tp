@@ -16,18 +16,18 @@ struct daE_HM_HIO_c {
 	/* 806E53F8 */ ~daE_HM_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 806E58D0 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_HM_c {
@@ -171,19 +171,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -224,10 +224,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -330,7 +330,7 @@ static void other_bg_check(daE_HM_c*, fopAc_ac_c*); // 2
 static void JointCallBack(J3DJoint*, int); // 2
 static void daE_HM_Draw(daE_HM_c*); // 2
 static void daE_HM_Execute(daE_HM_c*); // 2
-static void daE_HM_IsDelete(daE_HM_c*); // 2
+static bool daE_HM_IsDelete(daE_HM_c*); // 2
 static void daE_HM_Delete(daE_HM_c*); // 2
 static void daE_HM_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
@@ -389,7 +389,7 @@ extern "C" void Delete__8daE_HM_cFv(); // 1
 extern "C" void setBaseMtx__8daE_HM_cFv(); // 1
 extern "C" static void daE_HM_Draw__FP8daE_HM_c(); // 1
 extern "C" static void daE_HM_Execute__FP8daE_HM_c(); // 1
-extern "C" static void daE_HM_IsDelete__FP8daE_HM_c(); // 1
+extern "C" static bool daE_HM_IsDelete__FP8daE_HM_c(); // 1
 extern "C" static void daE_HM_Delete__FP8daE_HM_c(); // 1
 extern "C" void CheckRoof__8daE_HM_cFv(); // 1
 extern "C" void CheckWall__8daE_HM_cFv(); // 1
@@ -1699,14 +1699,9 @@ asm static void daE_HM_Execute(daE_HM_c* param_0) {
 
 
 /* 806E45F8-806E4600 0008+00 s=1 e=0 z=0  None .text      daE_HM_IsDelete__FP8daE_HM_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_HM_IsDelete(daE_HM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hm/d_a_e_hm/daE_HM_IsDelete__FP8daE_HM_c.s"
+static bool daE_HM_IsDelete(daE_HM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806E4600-806E4620 0020+00 s=1 e=0 z=0  None .text      daE_HM_Delete__FP8daE_HM_c                                   */

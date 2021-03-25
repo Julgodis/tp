@@ -15,7 +15,7 @@ struct daTalk_c {
 	/* 80D66378 */ ~daTalk_c();
 	/* 80D663E4 */ void create();
 	/* 80D664AC */ void execute();
-	/* 80D6665C */ void draw();
+	/* 80D6665C */ bool draw();
 	/* 80D66664 */ void setStatus(u16);
 	/* 80D66688 */ void getStatus();
 	/* 80D666A8 */ void messageSet();
@@ -58,7 +58,7 @@ static void daTalk_Draw(daTalk_c*); // 2
 extern "C" void __dt__8daTalk_cFv(); // 1
 extern "C" void create__8daTalk_cFv(); // 1
 extern "C" void execute__8daTalk_cFv(); // 1
-extern "C" void draw__8daTalk_cFv(); // 1
+extern "C" bool draw__8daTalk_cFv(); // 1
 extern "C" void setStatus__8daTalk_cFUs(); // 1
 extern "C" void getStatus__8daTalk_cFv(); // 1
 extern "C" void messageSet__8daTalk_cFv(); // 1
@@ -140,14 +140,9 @@ asm void daTalk_c::execute() {
 
 
 /* 80D6665C-80D66664 0008+00 s=1 e=0 z=0  None .text      draw__8daTalk_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTalk_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_talk/d_a_talk/draw__8daTalk_cFv.s"
+bool daTalk_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D66664-80D66688 0024+00 s=1 e=0 z=0  None .text      setStatus__8daTalk_cFUs                                      */

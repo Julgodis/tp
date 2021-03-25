@@ -115,7 +115,7 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -124,7 +124,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -434,7 +434,7 @@ static void cam_3d_morf(e_rd_class*, f32); // 2
 static void cam_spd_set(e_rd_class*); // 2
 static void demo_camera(e_rd_class*); // 2
 static void daE_RD_Execute(e_rd_class*); // 2
-static void daE_RD_IsDelete(e_rd_class*); // 2
+static bool daE_RD_IsDelete(e_rd_class*); // 2
 static void daE_RD_Delete(e_rd_class*); // 2
 static void ride_game_actor_set(e_rd_class*); // 2
 static void coach_game_actor_set(e_rd_class*); // 2
@@ -539,7 +539,7 @@ extern "C" static void cam_spd_set__FP10e_rd_class(); // 1
 extern "C" static void demo_camera__FP10e_rd_class(); // 1
 extern "C" static void daE_RD_Execute__FP10e_rd_class(); // 1
 extern "C" void abs__4cXyzCFv(); // 1
-extern "C" static void daE_RD_IsDelete__FP10e_rd_class(); // 1
+extern "C" static bool daE_RD_IsDelete__FP10e_rd_class(); // 1
 extern "C" static void daE_RD_Delete__FP10e_rd_class(); // 1
 extern "C" static void ride_game_actor_set__FP10e_rd_class(); // 1
 extern "C" static void coach_game_actor_set__FP10e_rd_class(); // 1
@@ -3590,14 +3590,9 @@ asm void cXyz::abs() const {
 
 
 /* 805164D4-805164DC 0008+00 s=1 e=0 z=0  None .text      daE_RD_IsDelete__FP10e_rd_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_RD_IsDelete(e_rd_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rd/d_a_e_rd/daE_RD_IsDelete__FP10e_rd_class.s"
+static bool daE_RD_IsDelete(e_rd_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805164DC-80516540 0064+00 s=1 e=0 z=0  None .text      daE_RD_Delete__FP10e_rd_class                                */
@@ -3779,25 +3774,15 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80517FCC-80517FD0 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rd/d_a_e_rd/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80517FD0-80517FD4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rd/d_a_e_rd/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80517FD4-8051801C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

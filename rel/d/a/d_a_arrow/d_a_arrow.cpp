@@ -16,17 +16,6 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 80084658 */ void ChkCoHit();
-};
-
 struct Vec {
 };
 
@@ -37,6 +26,17 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80267150 */ void atan2sY_XZ() const;
 	/* 8049A334 */ ~cXyz();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 80084658 */ void ChkCoHit();
 };
 
 struct daArrow_c {
@@ -147,10 +147,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -1451,14 +1451,9 @@ asm void daArrow_c::create() {
 
 
 /* 8049D808-8049D80C 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049D80C-8049D880 0074+00 s=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
@@ -1550,47 +1545,27 @@ asm cCcD_GStts::~cCcD_GStts() {
 
 
 /* 8049DC48-8049DC4C 0004+00 s=2 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC4C-8049DC50 0004+00 s=2 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC50-8049DC54 0004+00 s=2 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC54-8049DC58 0004+00 s=2 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_arrow/d_a_arrow/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8049DC58-8049DC74 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<s>__FPs                                       */

@@ -93,7 +93,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjFlag_Draw(daObjFlag_c*); // 2
 static void daObjFlag_Execute(daObjFlag_c*); // 2
-static void daObjFlag_IsDelete(daObjFlag_c*); // 2
+static bool daObjFlag_IsDelete(daObjFlag_c*); // 2
 static void daObjFlag_Delete(daObjFlag_c*); // 2
 static void daObjFlag_Create(fopAc_ac_c*); // 2
 
@@ -108,7 +108,7 @@ extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjFlag_Draw__FP11daObjFlag_c(); // 1
 extern "C" static void daObjFlag_Execute__FP11daObjFlag_c(); // 1
-extern "C" static void daObjFlag_IsDelete__FP11daObjFlag_c(); // 1
+extern "C" static bool daObjFlag_IsDelete__FP11daObjFlag_c(); // 1
 extern "C" static void daObjFlag_Delete__FP11daObjFlag_c(); // 1
 extern "C" void __dt__11FlagJoint_cFv(); // 1
 extern "C" static void daObjFlag_Create__FP10fopAc_ac_c(); // 1
@@ -361,14 +361,9 @@ asm static void daObjFlag_Execute(daObjFlag_c* param_0) {
 
 
 /* 80BEC338-80BEC340 0008+00 s=1 e=0 z=0  None .text      daObjFlag_IsDelete__FP11daObjFlag_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjFlag_IsDelete(daObjFlag_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_IsDelete__FP11daObjFlag_c.s"
+static bool daObjFlag_IsDelete(daObjFlag_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BEC340-80BEC3BC 007C+00 s=1 e=0 z=0  None .text      daObjFlag_Delete__FP11daObjFlag_c                            */
@@ -405,14 +400,9 @@ asm static void daObjFlag_Create(fopAc_ac_c* param_0) {
 
 
 /* 80BEC4E0-80BEC4E4 0004+00 s=1 e=0 z=0  None .text      __ct__11FlagJoint_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm FlagJoint_c::FlagJoint_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/__ct__11FlagJoint_cFv.s"
+FlagJoint_c::FlagJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

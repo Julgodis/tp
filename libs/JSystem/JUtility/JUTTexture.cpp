@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct ResTIMG {
-};
-
 struct _GXTexMapID {
 };
 
 struct _GXTlut {
 };
 
-struct JUTTransparency {
+struct ResTIMG {
 };
 
 struct _GXTlutFmt {
+};
+
+struct JUTTransparency {
 };
 
 struct JUTPalette {

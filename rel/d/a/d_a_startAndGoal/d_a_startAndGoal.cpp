@@ -28,7 +28,7 @@ struct daStartAndGoal_c {
 	/* 80D4DBAC */ void isStartCheck();
 	/* 80D4DBD0 */ void isReadyCheck();
 	/* 80D4DC50 */ void Execute();
-	/* 80D4DCF4 */ void Draw();
+	/* 80D4DCF4 */ bool Draw();
 	/* 80D4DCFC */ void Delete();
 };
 
@@ -69,7 +69,7 @@ struct Z2SeqMgr {
 
 static void daStartAndGoal_Execute(daStartAndGoal_c*); // 2
 static void daStartAndGoal_Draw(daStartAndGoal_c*); // 2
-static void daStartAndGoal_IsDelete(daStartAndGoal_c*); // 2
+static bool daStartAndGoal_IsDelete(daStartAndGoal_c*); // 2
 static void daStartAndGoal_Delete(daStartAndGoal_c*); // 2
 static void daStartAndGoal_create(fopAc_ac_c*); // 2
 
@@ -83,11 +83,11 @@ extern "C" void readyStartTimer__16daStartAndGoal_cFv(); // 1
 extern "C" void isStartCheck__16daStartAndGoal_cFv(); // 1
 extern "C" void isReadyCheck__16daStartAndGoal_cFv(); // 1
 extern "C" void Execute__16daStartAndGoal_cFv(); // 1
-extern "C" void Draw__16daStartAndGoal_cFv(); // 1
+extern "C" bool Draw__16daStartAndGoal_cFv(); // 1
 extern "C" void Delete__16daStartAndGoal_cFv(); // 1
 extern "C" static void daStartAndGoal_Execute__FP16daStartAndGoal_c(); // 1
 extern "C" static void daStartAndGoal_Draw__FP16daStartAndGoal_c(); // 1
-extern "C" static void daStartAndGoal_IsDelete__FP16daStartAndGoal_c(); // 1
+extern "C" static bool daStartAndGoal_IsDelete__FP16daStartAndGoal_c(); // 1
 extern "C" static void daStartAndGoal_Delete__FP16daStartAndGoal_c(); // 1
 extern "C" static void daStartAndGoal_create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daNpcF_Path_cFv(); // 1
@@ -323,14 +323,9 @@ asm void daStartAndGoal_c::Execute() {
 
 
 /* 80D4DCF4-80D4DCFC 0008+00 s=1 e=0 z=0  None .text      Draw__16daStartAndGoal_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daStartAndGoal_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_startAndGoal/d_a_startAndGoal/Draw__16daStartAndGoal_cFv.s"
+bool daStartAndGoal_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4DCFC-80D4DD80 0084+00 s=1 e=0 z=0  None .text      Delete__16daStartAndGoal_cFv                                 */
@@ -367,14 +362,9 @@ asm static void daStartAndGoal_Draw(daStartAndGoal_c* param_0) {
 
 
 /* 80D4DDC0-80D4DDC8 0008+00 s=1 e=0 z=0  None .text      daStartAndGoal_IsDelete__FP16daStartAndGoal_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daStartAndGoal_IsDelete(daStartAndGoal_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_startAndGoal/d_a_startAndGoal/daStartAndGoal_IsDelete__FP16daStartAndGoal_c.s"
+static bool daStartAndGoal_IsDelete(daStartAndGoal_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4DDC8-80D4DDE8 0020+00 s=1 e=0 z=0  None .text      daStartAndGoal_Delete__FP16daStartAndGoal_c                  */

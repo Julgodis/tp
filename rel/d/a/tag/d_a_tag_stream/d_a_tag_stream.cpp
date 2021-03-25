@@ -33,7 +33,7 @@ struct dSv_info_c {
 static void daTagStream_Create(fopAc_ac_c*); // 2
 static void daTagStream_Delete(daTagStream_c*); // 2
 static void daTagStream_Execute(daTagStream_c*); // 2
-static void daTagStream_Draw(daTagStream_c*); // 2
+static bool daTagStream_Draw(daTagStream_c*); // 2
 
 extern "C" void create__13daTagStream_cFv(); // 1
 extern "C" static void daTagStream_Create__FP10fopAc_ac_c(); // 1
@@ -41,7 +41,7 @@ extern "C" void __dt__13daTagStream_cFv(); // 1
 extern "C" static void daTagStream_Delete__FP13daTagStream_c(); // 1
 extern "C" void execute__13daTagStream_cFv(); // 1
 extern "C" static void daTagStream_Execute__FP13daTagStream_c(); // 1
-extern "C" static void daTagStream_Draw__FP13daTagStream_c(); // 1
+extern "C" static bool daTagStream_Draw__FP13daTagStream_c(); // 1
 extern "C" extern void* g_profile_Tag_Stream[12];
 
 // 
@@ -135,14 +135,9 @@ asm static void daTagStream_Execute(daTagStream_c* param_0) {
 
 
 /* 80D63BE0-80D63BE8 0008+00 s=1 e=0 z=0  None .text      daTagStream_Draw__FP13daTagStream_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagStream_Draw(daTagStream_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Draw__FP13daTagStream_c.s"
+static bool daTagStream_Draw(daTagStream_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

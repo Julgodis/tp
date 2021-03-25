@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Vec {
+struct Z2WolfHowlData {
 };
 
-struct Z2WolfHowlData {
+struct Vec {
 };
 
 struct Z2WolfHowlMgr {
@@ -45,12 +45,6 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct JAISoundHandle {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -58,6 +52,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
 };
 
 struct JAISoundStarter {

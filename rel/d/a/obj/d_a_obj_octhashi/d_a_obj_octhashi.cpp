@@ -144,9 +144,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -209,7 +209,7 @@ static void daObjOCTHASHI_Delete(daObjOCTHASHI_c*); // 2
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daObjOCTHASHI_Draw(daObjOCTHASHI_c*); // 2
 static void daObjOCTHASHI_Execute(daObjOCTHASHI_c*); // 2
-static void daObjOCTHASHI_IsDelete(daObjOCTHASHI_c*); // 2
+static bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c*); // 2
 
 extern "C" void initCcCylinder__15daObjOCTHASHI_cFv(); // 1
 extern "C" static void daObjOCTHASHI_Create__FP10fopAc_ac_c(); // 1
@@ -240,7 +240,7 @@ extern "C" void __ct__9dCcD_SttsFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c(); // 1
+extern "C" static bool daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void Create__15daObjOCTHASHI_cFv(); // 1
 extern "C" void Execute__15daObjOCTHASHI_cFPPA3_A4_f(); // 1
@@ -302,9 +302,9 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -889,36 +889,21 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 80CA624C-80CA6250 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA6250-80CA6254 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA6254-80CA625C 0008+00 s=1 e=0 z=0  None .text      daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjOCTHASHI_IsDelete(daObjOCTHASHI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_octhashi/d_a_obj_octhashi/daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c.s"
+static bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CA625C-80CA62A4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

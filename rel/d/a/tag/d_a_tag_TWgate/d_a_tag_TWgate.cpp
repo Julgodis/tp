@@ -59,19 +59,19 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -122,6 +122,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct _GXColor {
 };
 
@@ -129,10 +133,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -172,7 +172,7 @@ static void daTagTWGate_Create(fopAc_ac_c*); // 2
 static void daTagTWGate_Delete(daTagTWGate_c*); // 2
 static void daTagTWGate_Execute(daTagTWGate_c*); // 2
 static void daTagTWGate_Draw(daTagTWGate_c*); // 2
-static void daTagTWGate_IsDelete(daTagTWGate_c*); // 2
+static bool daTagTWGate_IsDelete(daTagTWGate_c*); // 2
 
 extern "C" void initWait__13daTagTWGate_cFv(); // 1
 extern "C" void executeWait__13daTagTWGate_cFv(); // 1
@@ -210,7 +210,7 @@ extern "C" static void daTagTWGate_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void daTagTWGate_Delete__FP13daTagTWGate_c(); // 1
 extern "C" static void daTagTWGate_Execute__FP13daTagTWGate_c(); // 1
 extern "C" static void daTagTWGate_Draw__FP13daTagTWGate_c(); // 1
-extern "C" static void daTagTWGate_IsDelete__FP13daTagTWGate_c(); // 1
+extern "C" static bool daTagTWGate_IsDelete__FP13daTagTWGate_c(); // 1
 extern "C" void __sinit_d_a_tag_TWgate_cpp(); // 1
 extern "C" extern u32 const lit_4081;
 extern "C" extern u32 const lit_4082;
@@ -1065,14 +1065,9 @@ asm static void daTagTWGate_Draw(daTagTWGate_c* param_0) {
 
 
 /* 80D55518-80D55520 0008+00 s=1 e=0 z=0  None .text      daTagTWGate_IsDelete__FP13daTagTWGate_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagTWGate_IsDelete(daTagTWGate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_TWgate/d_a_tag_TWgate/daTagTWGate_IsDelete__FP13daTagTWGate_c.s"
+static bool daTagTWGate_IsDelete(daTagTWGate_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D55520-80D557A0 0280+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_TWgate_cpp                                   */

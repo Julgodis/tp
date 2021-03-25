@@ -128,14 +128,9 @@ asm JStudio_JStage::TAdaptor_ambientLight::~TAdaptor_ambientLight() {
 
 
 /* 8028B720-8028B724 0004+00 s=1 e=0 z=0  None .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_prepare() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JStage/object-ambientlight/adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv.s"
+void JStudio_JStage::TAdaptor_ambientLight::adaptor_do_prepare() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8028B724-8028B7B0 008C+00 s=1 e=0 z=0  None .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */

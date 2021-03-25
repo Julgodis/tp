@@ -34,11 +34,11 @@ struct JUtility {
 
 struct dMeterSub_c {
 	/* 801940D4 */ ~dMeterSub_c();
-	/* 8019411C */ void _create();
-	/* 80194124 */ void _delete();
+	/* 8019411C */ bool _create();
+	/* 80194124 */ bool _delete();
 	/* 8019412C */ void draw();
-	/* 80194130 */ void _execute(u32);
-	/* 80194138 */ void isDead();
+	/* 80194130 */ bool _execute(u32);
+	/* 80194138 */ bool isDead();
 };
 
 struct ResTIMG {
@@ -66,11 +66,11 @@ extern "C" void move_proc__8dScope_cFv(); // 1
 extern "C" void close_init__8dScope_cFv(); // 1
 extern "C" void close_proc__8dScope_cFv(); // 1
 extern "C" void __dt__11dMeterSub_cFv(); // 1
-extern "C" void _create__11dMeterSub_cFv(); // 1
-extern "C" void _delete__11dMeterSub_cFv(); // 1
+extern "C" bool _create__11dMeterSub_cFv(); // 1
+extern "C" bool _delete__11dMeterSub_cFv(); // 1
 extern "C" void draw__11dMeterSub_cFv(); // 1
-extern "C" void _execute__11dMeterSub_cFUl(); // 1
-extern "C" void isDead__11dMeterSub_cFv(); // 1
+extern "C" bool _execute__11dMeterSub_cFUl(); // 1
+extern "C" bool isDead__11dMeterSub_cFv(); // 1
 extern "C" void __sinit_d_scope_cpp(); // 1
 extern "C" extern char const* const d_d_scope__stringBase0;
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
@@ -330,36 +330,21 @@ asm void dScope_c::open_proc() {
 
 
 /* 80194048-8019404C 0004+00 s=1 e=0 z=0  None .text      move_init__8dScope_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dScope_c::move_init() {
-	nofralloc
-#include "asm/d/d_scope/move_init__8dScope_cFv.s"
+void dScope_c::move_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8019404C-80194050 0004+00 s=1 e=0 z=0  None .text      move_proc__8dScope_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dScope_c::move_proc() {
-	nofralloc
-#include "asm/d/d_scope/move_proc__8dScope_cFv.s"
+void dScope_c::move_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80194050-80194054 0004+00 s=1 e=0 z=0  None .text      close_init__8dScope_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dScope_c::close_init() {
-	nofralloc
-#include "asm/d/d_scope/close_init__8dScope_cFv.s"
+void dScope_c::close_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80194054-801940D4 0080+00 s=1 e=0 z=0  None .text      close_proc__8dScope_cFv                                      */
@@ -385,58 +370,33 @@ asm dMeterSub_c::~dMeterSub_c() {
 
 
 /* 8019411C-80194124 0008+00 s=2 e=0 z=0  None .text      _create__11dMeterSub_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterSub_c::_create() {
-	nofralloc
-#include "asm/d/d_scope/_create__11dMeterSub_cFv.s"
+bool dMeterSub_c::_create() {
+	return false;
 }
-#pragma pop
 
 
 /* 80194124-8019412C 0008+00 s=2 e=0 z=0  None .text      _delete__11dMeterSub_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterSub_c::_delete() {
-	nofralloc
-#include "asm/d/d_scope/_delete__11dMeterSub_cFv.s"
+bool dMeterSub_c::_delete() {
+	return false;
 }
-#pragma pop
 
 
 /* 8019412C-80194130 0004+00 s=1 e=0 z=0  None .text      draw__11dMeterSub_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterSub_c::draw() {
-	nofralloc
-#include "asm/d/d_scope/draw__11dMeterSub_cFv.s"
+void dMeterSub_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80194130-80194138 0008+00 s=1 e=0 z=0  None .text      _execute__11dMeterSub_cFUl                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterSub_c::_execute(u32 param_0) {
-	nofralloc
-#include "asm/d/d_scope/_execute__11dMeterSub_cFUl.s"
+bool dMeterSub_c::_execute(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 80194138-80194140 0008+00 s=1 e=3 z=0  None .text      isDead__11dMeterSub_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterSub_c::isDead() {
-	nofralloc
-#include "asm/d/d_scope/isDead__11dMeterSub_cFv.s"
+bool dMeterSub_c::isDead() {
+	return false;
 }
-#pragma pop
 
 
 /* 80194140-801941E4 00A4+00 s=0 e=1 z=0  None .text      __sinit_d_scope_cpp                                          */

@@ -35,18 +35,18 @@ struct Z2EnvSeMgr {
 
 static void get_check_pos(kytag01_class*); // 2
 static void mist_tag_move(kytag01_class*); // 2
-static void daKytag01_Draw(kytag01_class*); // 2
+static bool daKytag01_Draw(kytag01_class*); // 2
 static void daKytag01_Execute(kytag01_class*); // 2
-static void daKytag01_IsDelete(kytag01_class*); // 2
-static void daKytag01_Delete(kytag01_class*); // 2
+static bool daKytag01_IsDelete(kytag01_class*); // 2
+static bool daKytag01_Delete(kytag01_class*); // 2
 static void daKytag01_Create(fopAc_ac_c*); // 2
 
 extern "C" static void get_check_pos__FP13kytag01_class(); // 1
 extern "C" static void mist_tag_move__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Draw__FP13kytag01_class(); // 1
+extern "C" static bool daKytag01_Draw__FP13kytag01_class(); // 1
 extern "C" static void daKytag01_Execute__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_IsDelete__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Delete__FP13kytag01_class(); // 1
+extern "C" static bool daKytag01_IsDelete__FP13kytag01_class(); // 1
+extern "C" static bool daKytag01_Delete__FP13kytag01_class(); // 1
 extern "C" static void daKytag01_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u8 const lit_3799[8];
 extern "C" extern u32 const lit_3879;
@@ -144,14 +144,9 @@ asm static void mist_tag_move(kytag01_class* param_0) {
 
 
 /* 80855638-80855640 0008+00 s=1 e=0 z=0  None .text      daKytag01_Draw__FP13kytag01_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag01_Draw(kytag01_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Draw__FP13kytag01_class.s"
+static bool daKytag01_Draw(kytag01_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80855640-808557DC 019C+00 s=1 e=0 z=0  None .text      daKytag01_Execute__FP13kytag01_class                         */
@@ -166,25 +161,15 @@ asm static void daKytag01_Execute(kytag01_class* param_0) {
 
 
 /* 808557DC-808557E4 0008+00 s=1 e=0 z=0  None .text      daKytag01_IsDelete__FP13kytag01_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag01_IsDelete(kytag01_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_IsDelete__FP13kytag01_class.s"
+static bool daKytag01_IsDelete(kytag01_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808557E4-808557EC 0008+00 s=1 e=0 z=0  None .text      daKytag01_Delete__FP13kytag01_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag01_Delete(kytag01_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Delete__FP13kytag01_class.s"
+static bool daKytag01_Delete(kytag01_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808557EC-80855984 0198+00 s=1 e=0 z=0  None .text      daKytag01_Create__FP10fopAc_ac_c                             */

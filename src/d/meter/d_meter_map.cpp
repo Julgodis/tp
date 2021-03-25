@@ -22,7 +22,7 @@ struct dMeterMap_c {
 	/* 8020D698 */ void isEventRunCheck();
 	/* 8020D72C */ void getMapDispEdgeLeftX_Layout();
 	/* 8020D75C */ void getMapDispEdgeTop();
-	/* 8020D7E4 */ void getDispPosInside_OffsetX();
+	/* 8020D7E4 */ bool getDispPosInside_OffsetX();
 	/* 8020D7EC */ void getDispPosOutSide_OffsetX();
 	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
 	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
@@ -111,7 +111,7 @@ extern "C" void getMapDispEdgeBottomY_Layout__11dMeterMap_cFv(); // 1
 extern "C" void isEventRunCheck__11dMeterMap_cFv(); // 1
 extern "C" void getMapDispEdgeLeftX_Layout__11dMeterMap_cFv(); // 1
 extern "C" void getMapDispEdgeTop__11dMeterMap_cFv(); // 1
-extern "C" void getDispPosInside_OffsetX__11dMeterMap_cFv(); // 1
+extern "C" bool getDispPosInside_OffsetX__11dMeterMap_cFv(); // 1
 extern "C" void getDispPosOutSide_OffsetX__11dMeterMap_cFv(); // 1
 extern "C" void setDispPosInsideFlg_SE_On__11dMeterMap_cFv(); // 1
 extern "C" void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv(); // 1
@@ -292,14 +292,9 @@ asm void dMeterMap_c::getMapDispEdgeTop() {
 
 
 /* 8020D7E4-8020D7EC 0008+00 s=2 e=0 z=0  None .text      getDispPosInside_OffsetX__11dMeterMap_cFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMeterMap_c::getDispPosInside_OffsetX() {
-	nofralloc
-#include "asm/d/meter/d_meter_map/getDispPosInside_OffsetX__11dMeterMap_cFv.s"
+bool dMeterMap_c::getDispPosInside_OffsetX() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -250,7 +250,7 @@ struct Z2SoundObjSimple {
 
 static void daObj_Kanban2_Draw(daObj_Kanban2_c*); // 2
 static void daObj_Kanban2_Execute(daObj_Kanban2_c*); // 2
-static void daObj_Kanban2_IsDelete(daObj_Kanban2_c*); // 2
+static bool daObj_Kanban2_IsDelete(daObj_Kanban2_c*); // 2
 static void daObj_Kanban2_Delete(daObj_Kanban2_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Kanban2_Create(daObj_Kanban2_c*); // 2
@@ -289,7 +289,7 @@ extern "C" void mtx_set__15daObj_Kanban2_cFv(); // 1
 extern "C" void cc_set__15daObj_Kanban2_cFv(); // 1
 extern "C" void execute__15daObj_Kanban2_cFv(); // 1
 extern "C" static void daObj_Kanban2_Execute__FP15daObj_Kanban2_c(); // 1
-extern "C" static void daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c(); // 1
+extern "C" static bool daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c(); // 1
 extern "C" void _delete__15daObj_Kanban2_cFv(); // 1
 extern "C" static void daObj_Kanban2_Delete__FP15daObj_Kanban2_c(); // 1
 extern "C" void CreateHeap__15daObj_Kanban2_cFv(); // 1
@@ -1453,14 +1453,9 @@ asm static void daObj_Kanban2_Execute(daObj_Kanban2_c* param_0) {
 
 
 /* 80584ED0-80584ED8 0008+00 s=1 e=0 z=0  None .text      daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Kanban2_IsDelete(daObj_Kanban2_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kanban2/d_a_obj_kanban2/daObj_Kanban2_IsDelete__FP15daObj_Kanban2_c.s"
+static bool daObj_Kanban2_IsDelete(daObj_Kanban2_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80584ED8-80584F44 006C+00 s=1 e=0 z=0  None .text      _delete__15daObj_Kanban2_cFv                                 */

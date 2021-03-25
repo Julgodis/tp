@@ -143,10 +143,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -238,11 +238,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -1664,14 +1664,9 @@ asm void daDoor20_c::openProc(int param_0) {
 
 
 /* 804622A8-804622AC 0004+00 s=1 e=0 z=0  None .text      openEnd_0__10daDoor20_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDoor20_c::openEnd_0() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/openEnd_0__10daDoor20_cFv.s"
+void daDoor20_c::openEnd_0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804622AC-80462328 007C+00 s=1 e=0 z=0  None .text      openEnd_1__10daDoor20_cFv                                    */
@@ -1741,14 +1736,9 @@ asm void daDoor20_c::closeProc(int param_0) {
 
 
 /* 804627E8-804627EC 0004+00 s=1 e=0 z=0  None .text      closeEnd_0__10daDoor20_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDoor20_c::closeEnd_0() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_shutter/d_a_door_shutter/closeEnd_0__10daDoor20_cFv.s"
+void daDoor20_c::closeEnd_0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804627EC-80462868 007C+00 s=1 e=0 z=0  None .text      closeEnd_1__10daDoor20_cFv                                   */

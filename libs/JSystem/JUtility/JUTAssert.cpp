@@ -68,14 +68,9 @@ extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 // 
 
 /* 802E495C-802E4960 0004+00 s=0 e=1 z=0  None .text      create__12JUTAssertionFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JUTAssertion::create() {
-	nofralloc
-#include "asm/JSystem/JUtility/JUTAssert/create__12JUTAssertionFv.s"
+void JUTAssertion::create() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

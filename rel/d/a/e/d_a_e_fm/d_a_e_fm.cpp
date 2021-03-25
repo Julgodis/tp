@@ -152,7 +152,7 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -161,7 +161,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -377,7 +377,7 @@ static void s_ba_sub(void*, void*); // 2
 static void action(e_fm_class*); // 2
 static void effect_set(e_fm_class*); // 2
 static void daE_FM_Execute(e_fm_class*); // 2
-static void daE_FM_IsDelete(e_fm_class*); // 2
+static bool daE_FM_IsDelete(e_fm_class*); // 2
 static void daE_FM_Delete(e_fm_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_FM_Create(fopAc_ac_c*); // 2
@@ -422,7 +422,7 @@ extern "C" static void s_ba_sub__FPvPv(); // 1
 extern "C" static void action__FP10e_fm_class(); // 1
 extern "C" static void effect_set__FP10e_fm_class(); // 1
 extern "C" static void daE_FM_Execute__FP10e_fm_class(); // 1
-extern "C" static void daE_FM_IsDelete__FP10e_fm_class(); // 1
+extern "C" static bool daE_FM_IsDelete__FP10e_fm_class(); // 1
 extern "C" static void daE_FM_Delete__FP10e_fm_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -2238,14 +2238,9 @@ asm static void daE_FM_Execute(e_fm_class* param_0) {
 
 
 /* 804F8C60-804F8C68 0008+00 s=1 e=0 z=0  None .text      daE_FM_IsDelete__FP10e_fm_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_FM_IsDelete(e_fm_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_fm/d_a_e_fm/daE_FM_IsDelete__FP10e_fm_class.s"
+static bool daE_FM_IsDelete(e_fm_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804F8C68-804F8CE8 0080+00 s=1 e=0 z=0  None .text      daE_FM_Delete__FP10e_fm_class                                */
@@ -2359,14 +2354,9 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* 804FA06C-804FA070 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_fm/d_a_e_fm/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804FA070-804FA0B8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
@@ -2447,14 +2437,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 804FA38C-804FA390 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_fm/d_a_e_fm/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804FA390-804FA3D8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

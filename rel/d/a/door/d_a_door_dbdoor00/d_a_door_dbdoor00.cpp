@@ -28,7 +28,7 @@ struct daDbDoor00_c {
 	/* 8045DA68 */ void getDemoAction();
 	/* 8045DAB0 */ void demoProc();
 	/* 8045DE44 */ void checkArea();
-	/* 8045DF70 */ void checkUnlock();
+	/* 8045DF70 */ bool checkUnlock();
 	/* 8045DF78 */ void actionWait();
 	/* 8045DF9C */ void actionLockWait();
 	/* 8045E000 */ void actionLockOff();
@@ -152,7 +152,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void CheckCreateHeap(fopAc_ac_c*); // 2
 static void daDbdoor00_Draw(daDbDoor00_c*); // 2
 static void daDbdoor00_Execute(daDbDoor00_c*); // 2
-static void daDbdoor00_IsDelete(daDbDoor00_c*); // 2
+static bool daDbdoor00_IsDelete(daDbDoor00_c*); // 2
 static void daDbdoor00_Delete(daDbDoor00_c*); // 2
 static void daDbdoor00_Create(fopAc_ac_c*); // 2
 
@@ -171,7 +171,7 @@ extern "C" void create__12daDbDoor00_cFv(); // 1
 extern "C" void getDemoAction__12daDbDoor00_cFv(); // 1
 extern "C" void demoProc__12daDbDoor00_cFv(); // 1
 extern "C" void checkArea__12daDbDoor00_cFv(); // 1
-extern "C" void checkUnlock__12daDbDoor00_cFv(); // 1
+extern "C" bool checkUnlock__12daDbDoor00_cFv(); // 1
 extern "C" void actionWait__12daDbDoor00_cFv(); // 1
 extern "C" void actionLockWait__12daDbDoor00_cFv(); // 1
 extern "C" void actionLockOff__12daDbDoor00_cFv(); // 1
@@ -184,7 +184,7 @@ extern "C" void draw__12daDbDoor00_cFv(); // 1
 extern "C" void Delete__12daDbDoor00_cFv(); // 1
 extern "C" static void daDbdoor00_Draw__FP12daDbDoor00_c(); // 1
 extern "C" static void daDbdoor00_Execute__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_IsDelete__FP12daDbDoor00_c(); // 1
+extern "C" static bool daDbdoor00_IsDelete__FP12daDbDoor00_c(); // 1
 extern "C" static void daDbdoor00_Delete__FP12daDbDoor00_c(); // 1
 extern "C" static void daDbdoor00_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3811;
@@ -577,14 +577,9 @@ asm void daDbDoor00_c::checkArea() {
 
 
 /* 8045DF70-8045DF78 0008+00 s=1 e=0 z=0  None .text      checkUnlock__12daDbDoor00_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDbDoor00_c::checkUnlock() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/checkUnlock__12daDbDoor00_cFv.s"
+bool daDbDoor00_c::checkUnlock() {
+	return true;
 }
-#pragma pop
 
 
 /* 8045DF78-8045DF9C 0024+00 s=1 e=0 z=0  None .text      actionWait__12daDbDoor00_cFv                                 */
@@ -775,14 +770,9 @@ asm static void daDbdoor00_Execute(daDbDoor00_c* param_0) {
 
 
 /* 8045E4E0-8045E4E8 0008+00 s=1 e=0 z=0  None .text      daDbdoor00_IsDelete__FP12daDbDoor00_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDbdoor00_IsDelete(daDbDoor00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_dbdoor00/d_a_door_dbdoor00/daDbdoor00_IsDelete__FP12daDbDoor00_c.s"
+static bool daDbdoor00_IsDelete(daDbDoor00_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8045E4E8-8045E50C 0024+00 s=1 e=0 z=0  None .text      daDbdoor00_Delete__FP12daDbDoor00_c                          */

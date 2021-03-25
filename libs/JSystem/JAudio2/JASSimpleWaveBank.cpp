@@ -31,7 +31,7 @@ struct JASSimpleWaveBank {
 	/* 80298E60 */ void getWaveHandle(u32) const;
 	/* 80298E84 */ void setWaveInfo(u32, JASWaveInfo const&);
 	/* 80298F18 */ void getWaveArc(u32);
-	/* 80298F98 */ void getArcCount() const;
+	/* 80298F98 */ bool getArcCount() const;
 };
 
 struct JASWaveArc {
@@ -57,7 +57,7 @@ extern "C" void getWaveArc__17JASSimpleWaveBankFUl(); // 1
 extern "C" void getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv(); // 1
 extern "C" void __ct__Q217JASSimpleWaveBank11TWaveHandleFv(); // 1
 extern "C" void getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv(); // 1
-extern "C" void getArcCount__17JASSimpleWaveBankCFv(); // 1
+extern "C" bool getArcCount__17JASSimpleWaveBankCFv(); // 1
 extern "C" void onLoadDone__10JASWaveArcFv(); // 1
 extern "C" void onEraseDone__10JASWaveArcFv(); // 1
 extern "C" static void func_80298FA8(); // 1
@@ -225,36 +225,21 @@ asm void JASSimpleWaveBank::TWaveHandle::getWaveInfo() const {
 
 
 /* 80298F98-80298FA0 0008+00 s=1 e=0 z=0  None .text      getArcCount__17JASSimpleWaveBankCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JASSimpleWaveBank::getArcCount() const {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASSimpleWaveBank/getArcCount__17JASSimpleWaveBankCFv.s"
+bool JASSimpleWaveBank::getArcCount() const {
+	return true;
 }
-#pragma pop
 
 
 /* 80298FA0-80298FA4 0004+00 s=1 e=1 z=0  None .text      onLoadDone__10JASWaveArcFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JASWaveArc::onLoadDone() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASSimpleWaveBank/onLoadDone__10JASWaveArcFv.s"
+void JASWaveArc::onLoadDone() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80298FA4-80298FA8 0004+00 s=1 e=1 z=0  None .text      onEraseDone__10JASWaveArcFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JASWaveArc::onEraseDone() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASSimpleWaveBank/onEraseDone__10JASWaveArcFv.s"
+void JASWaveArc::onEraseDone() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80298FA8-80298FB0 0008+00 s=1 e=0 z=0  None .text      @4@__dt__17JASSimpleWaveBankFv                               */

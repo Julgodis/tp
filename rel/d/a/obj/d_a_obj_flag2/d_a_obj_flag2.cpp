@@ -165,7 +165,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct J3DLightInfo {
@@ -179,7 +179,7 @@ struct J3DLightInfo {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjFlag2_Draw(daObjFlag2_c*); // 2
 static void daObjFlag2_Execute(daObjFlag2_c*); // 2
-static void daObjFlag2_IsDelete(daObjFlag2_c*); // 2
+static bool daObjFlag2_IsDelete(daObjFlag2_c*); // 2
 static void daObjFlag2_Delete(daObjFlag2_c*); // 2
 static void daObjFlag2_Create(fopAc_ac_c*); // 2
 
@@ -211,7 +211,7 @@ extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void draw__12daObjFlag2_cFv(); // 1
 extern "C" static void daObjFlag2_Draw__FP12daObjFlag2_c(); // 1
 extern "C" static void daObjFlag2_Execute__FP12daObjFlag2_c(); // 1
-extern "C" static void daObjFlag2_IsDelete__FP12daObjFlag2_c(); // 1
+extern "C" static bool daObjFlag2_IsDelete__FP12daObjFlag2_c(); // 1
 extern "C" static void daObjFlag2_Delete__FP12daObjFlag2_c(); // 1
 extern "C" void __dt__12daObjFlag2_cFv(); // 1
 extern "C" static void daObjFlag2_Create__FP10fopAc_ac_c(); // 1
@@ -287,7 +287,7 @@ extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
 extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1
@@ -920,14 +920,9 @@ asm FlagCloth_c::~FlagCloth_c() {
 
 
 /* 80BEDB70-80BEDB74 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag2/d_a_obj_flag2/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BEDB74-80BEDBBC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
@@ -1019,14 +1014,9 @@ asm static void daObjFlag2_Execute(daObjFlag2_c* param_0) {
 
 
 /* 80BEDEB0-80BEDEB8 0008+00 s=1 e=0 z=0  None .text      daObjFlag2_IsDelete__FP12daObjFlag2_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjFlag2_IsDelete(daObjFlag2_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag2/d_a_obj_flag2/daObjFlag2_IsDelete__FP12daObjFlag2_c.s"
+static bool daObjFlag2_IsDelete(daObjFlag2_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BEDEB8-80BEDEE0 0028+00 s=1 e=0 z=0  None .text      daObjFlag2_Delete__FP12daObjFlag2_c                          */

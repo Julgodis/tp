@@ -76,6 +76,13 @@ struct dMsgScrnLight_c {
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 };
 
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -87,13 +94,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -487,14 +487,9 @@ asm static void daCoach2D_draw(daCoach2D_c* param_0) {
 
 
 /* 80657734-80657738 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_coach_2D/d_a_coach_2D/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

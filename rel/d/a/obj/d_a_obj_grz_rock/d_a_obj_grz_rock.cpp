@@ -52,19 +52,19 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -103,9 +103,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -134,7 +134,7 @@ struct cBgW_BgId {
 
 static void daObjGrzRock_Draw(daObjGrzRock_c*); // 2
 static void daObjGrzRock_Execute(daObjGrzRock_c*); // 2
-static void daObjGrzRock_IsDelete(daObjGrzRock_c*); // 2
+static bool daObjGrzRock_IsDelete(daObjGrzRock_c*); // 2
 static void daObjGrzRock_Delete(daObjGrzRock_c*); // 2
 static void daObjGrzRock_create(fopAc_ac_c*); // 2
 
@@ -151,7 +151,7 @@ extern "C" void Draw__14daObjGrzRock_cFv(); // 1
 extern "C" void Delete__14daObjGrzRock_cFv(); // 1
 extern "C" static void daObjGrzRock_Draw__FP14daObjGrzRock_c(); // 1
 extern "C" static void daObjGrzRock_Execute__FP14daObjGrzRock_c(); // 1
-extern "C" static void daObjGrzRock_IsDelete__FP14daObjGrzRock_c(); // 1
+extern "C" static bool daObjGrzRock_IsDelete__FP14daObjGrzRock_c(); // 1
 extern "C" static void daObjGrzRock_Delete__FP14daObjGrzRock_c(); // 1
 extern "C" static void daObjGrzRock_create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_80C15348(); // 1
@@ -196,9 +196,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -455,14 +455,9 @@ asm static void daObjGrzRock_Execute(daObjGrzRock_c* param_0) {
 
 
 /* 80C15300-80C15308 0008+00 s=1 e=0 z=0  None .text      daObjGrzRock_IsDelete__FP14daObjGrzRock_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjGrzRock_IsDelete(daObjGrzRock_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_grz_rock/d_a_obj_grz_rock/daObjGrzRock_IsDelete__FP14daObjGrzRock_c.s"
+static bool daObjGrzRock_IsDelete(daObjGrzRock_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C15308-80C15328 0020+00 s=1 e=0 z=0  None .text      daObjGrzRock_Delete__FP14daObjGrzRock_c                      */

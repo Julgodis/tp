@@ -29,22 +29,18 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-struct J2DTevSwapModeInfo {
-};
-
-struct J2DTevStageInfo {
-};
-
-struct J2DTevStage {
-	/* 802F1940 */ J2DTevStage();
-	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
-};
-
 struct _GXTexMapID {
 };
 
 struct J2DTevSwapModeTable {
 	/* 802F1934 */ J2DTevSwapModeTable();
+};
+
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+struct ResTIMG {
 };
 
 struct ResTLUT {
@@ -57,18 +53,12 @@ struct JUTPalette {
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
-struct JUTFont {
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 struct J2DTevOrder {
@@ -78,7 +68,25 @@ struct J2DTevOrder {
 struct ResFONT {
 };
 
-struct ResTIMG {
+struct J2DTevSwapModeInfo {
+};
+
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct JUTFont {
+};
+
+struct J2DTevStageInfo {
+};
+
+struct J2DTevStage {
+	/* 802F1940 */ J2DTevStage();
+	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
 };
 
 struct J2DIndTevStage {
@@ -86,33 +94,25 @@ struct J2DIndTevStage {
 	/* 802F18A0 */ J2DIndTevStage();
 };
 
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
 struct J2DTevBlock {
-	/* 802EA12C */ void getTevSwapModeTable(u32);
-	/* 802EA134 */ void getTevStage(u32);
-	/* 802EA13C */ void getTevColor(u32);
-	/* 802EA144 */ void getTevOrder(u32);
-	/* 802EA14C */ void getTevKAlphaSel(u32);
-	/* 802EA154 */ void getTevKColorSel(u32);
-	/* 802EA15C */ void getTevKColor(u32);
+	/* 802EA12C */ bool getTevSwapModeTable(u32);
+	/* 802EA134 */ bool getTevStage(u32);
+	/* 802EA13C */ bool getTevColor(u32);
+	/* 802EA144 */ bool getTevOrder(u32);
+	/* 802EA14C */ bool getTevKAlphaSel(u32);
+	/* 802EA154 */ bool getTevKColorSel(u32);
+	/* 802EA15C */ bool getTevKColor(u32);
 	/* 802EA164 */ void getFontNo() const;
 	/* 802EA170 */ void getTexNo(u32) const;
-	/* 802EA17C */ void getTevStageNum() const;
-	/* 802EA184 */ void getIndTevStage(u32);
+	/* 802EA17C */ bool getTevStageNum() const;
+	/* 802EA184 */ bool getIndTevStage(u32);
 	/* 802EB184 */ ~J2DTevBlock();
 	/* 802EB1D0 */ void setGX();
 	/* 802EB1D4 */ void setTevKColor(u32, JUtility::TColor);
 	/* 802EB1D8 */ void setTevColor(u32, J2DGXColorS10);
 	/* 802EB1DC */ void setTexNo(u32, u16);
-	/* 802EB87C */ void getTexture(u32);
-	/* 802EB884 */ void getPalette(u32);
+	/* 802EB87C */ bool getTexture(u32);
+	/* 802EB884 */ bool getPalette(u32);
 	/* 802F2A40 */ void initialize();
 	/* 802F2A44 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F2A48 */ void setFontNo(u16);
@@ -124,17 +124,17 @@ struct J2DTevBlock {
 	/* 802F2A60 */ void setTevSwapModeInfo(u32, J2DTevSwapModeInfo);
 	/* 802F2A64 */ void setTevSwapModeTable(u32, J2DTevSwapModeTable);
 	/* 802F2A68 */ void setIndTevStage(u32, J2DIndTevStage);
-	/* 802F2A6C */ void insertTexture(u32, JUTTexture*);
-	/* 802F2A74 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
-	/* 802F2A7C */ void insertTexture(u32, ResTIMG const*);
-	/* 802F2A84 */ void setTexture(u32, JUTTexture*);
-	/* 802F2A8C */ void setTexture(u32, ResTIMG const*);
-	/* 802F2A94 */ void removeTexture(u32);
-	/* 802F2A9C */ void setFont(JUTFont*);
-	/* 802F2AA4 */ void setFont(ResFONT*);
-	/* 802F2AAC */ void setPalette(u32, ResTLUT const*);
-	/* 802F2AB4 */ void prepareTexture(u8);
-	/* 802F2ABC */ void getFont();
+	/* 802F2A6C */ bool insertTexture(u32, JUTTexture*);
+	/* 802F2A74 */ bool insertTexture(u32, ResTIMG const*, JUTPalette*);
+	/* 802F2A7C */ bool insertTexture(u32, ResTIMG const*);
+	/* 802F2A84 */ bool setTexture(u32, JUTTexture*);
+	/* 802F2A8C */ bool setTexture(u32, ResTIMG const*);
+	/* 802F2A94 */ bool removeTexture(u32);
+	/* 802F2A9C */ bool setFont(JUTFont*);
+	/* 802F2AA4 */ bool setFont(ResFONT*);
+	/* 802F2AAC */ bool setPalette(u32, ResTLUT const*);
+	/* 802F2AB4 */ bool prepareTexture(u8);
+	/* 802F2ABC */ bool getFont();
 	/* 802F2AC4 */ void shiftDeleteFlag(u8, bool);
 	/* 802F2AC8 */ void setUndeleteFlag(u8);
 	/* 802F2ACC */ void setFontUndeleteFlag();
@@ -158,7 +158,7 @@ struct J2DTevBlock1 {
 	/* 802EC328 */ void setGX();
 	/* 802EC570 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F27A0 */ void getType();
-	/* 802F27AC */ void getMaxStage();
+	/* 802F27AC */ bool getMaxStage();
 	/* 802F27B4 */ void setTexNo(u32, u16);
 	/* 802F27C4 */ void getTexNo(u32) const;
 	/* 802F27D4 */ void setFontNo(u16);
@@ -174,7 +174,7 @@ struct J2DTevBlock1 {
 	/* 802F28B4 */ void setTevKAlphaSel(u32, u8);
 	/* 802F28C0 */ void getTevKAlphaSel(u32);
 	/* 802F28CC */ void setTevStageNum(u8);
-	/* 802F28D0 */ void getTevStageNum() const;
+	/* 802F28D0 */ bool getTevStageNum() const;
 	/* 802F28D8 */ void setTevStage(u32, J2DTevStage);
 	/* 802F2914 */ void getTevStage(u32);
 	/* 802F2928 */ void setTevSwapModeInfo(u32, J2DTevSwapModeInfo);
@@ -207,7 +207,7 @@ struct J2DTevBlock2 {
 	/* 802ED584 */ void setGX();
 	/* 802ED874 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F24FC */ void getType();
-	/* 802F2508 */ void getMaxStage();
+	/* 802F2508 */ s32 getMaxStage();
 	/* 802F2510 */ void setTexNo(u32, u16);
 	/* 802F2520 */ void getTexNo(u32) const;
 	/* 802F2530 */ void setFontNo(u16);
@@ -256,7 +256,7 @@ struct J2DTevBlock4 {
 	/* 802EEA2C */ void setGX();
 	/* 802EED1C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F2258 */ void getType();
-	/* 802F2264 */ void getMaxStage();
+	/* 802F2264 */ s32 getMaxStage();
 	/* 802F226C */ void setTexNo(u32, u16);
 	/* 802F227C */ void getTexNo(u32) const;
 	/* 802F228C */ void setFontNo(u16);
@@ -305,7 +305,7 @@ struct J2DTevBlock8 {
 	/* 802EFEAC */ void setGX();
 	/* 802F019C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F1FB8 */ void getType();
-	/* 802F1FC4 */ void getMaxStage();
+	/* 802F1FC4 */ s32 getMaxStage();
 	/* 802F1FCC */ void setTexNo(u32, u16);
 	/* 802F1FDC */ void getTexNo(u32) const;
 	/* 802F1FEC */ void setFontNo(u16);
@@ -354,7 +354,7 @@ struct J2DTevBlock16 {
 	/* 802F132C */ void setGX();
 	/* 802F161C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F1D18 */ void getType();
-	/* 802F1D24 */ void getMaxStage();
+	/* 802F1D24 */ s32 getMaxStage();
 	/* 802F1D2C */ void setTexNo(u32, u16);
 	/* 802F1D3C */ void getTexNo(u32) const;
 	/* 802F1D4C */ void setFontNo(u16);
@@ -438,8 +438,8 @@ extern "C" void setGX__14J2DTexGenBlockFv(); // 1
 extern "C" void __dt__14J2DTexGenBlockFv(); // 1
 extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
 extern "C" void getTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
-extern "C" void getTexture__11J2DTevBlockFUl(); // 1
-extern "C" void getPalette__11J2DTevBlockFUl(); // 1
+extern "C" bool getTexture__11J2DTevBlockFUl(); // 1
+extern "C" bool getPalette__11J2DTevBlockFUl(); // 1
 extern "C" void __ct__12J2DTevBlock1Fv(); // 1
 extern "C" void __dt__12J2DTevBlock1Fv(); // 1
 extern "C" void initialize__12J2DTevBlock1Fv(); // 1
@@ -536,7 +536,7 @@ extern "C" void setIndTexCoordScale__15J2DIndBlockFullFUl19J2DIndTexCoordScale()
 extern "C" void getIndTexCoordScale__15J2DIndBlockFullFUl(); // 1
 extern "C" void __dt__15J2DIndBlockFullFv(); // 1
 extern "C" void getType__13J2DTevBlock16Fv(); // 1
-extern "C" void getMaxStage__13J2DTevBlock16Fv(); // 1
+extern "C" s32 getMaxStage__13J2DTevBlock16Fv(); // 1
 extern "C" void setTexNo__13J2DTevBlock16FUlUs(); // 1
 extern "C" void getTexNo__13J2DTevBlock16CFUl(); // 1
 extern "C" void setFontNo__13J2DTevBlock16FUs(); // 1
@@ -567,7 +567,7 @@ extern "C" void getFont__13J2DTevBlock16Fv(); // 1
 extern "C" void setUndeleteFlag__13J2DTevBlock16FUc(); // 1
 extern "C" void setFontUndeleteFlag__13J2DTevBlock16Fv(); // 1
 extern "C" void getType__12J2DTevBlock8Fv(); // 1
-extern "C" void getMaxStage__12J2DTevBlock8Fv(); // 1
+extern "C" s32 getMaxStage__12J2DTevBlock8Fv(); // 1
 extern "C" void setTexNo__12J2DTevBlock8FUlUs(); // 1
 extern "C" void getTexNo__12J2DTevBlock8CFUl(); // 1
 extern "C" void setFontNo__12J2DTevBlock8FUs(); // 1
@@ -598,7 +598,7 @@ extern "C" void getFont__12J2DTevBlock8Fv(); // 1
 extern "C" void setUndeleteFlag__12J2DTevBlock8FUc(); // 1
 extern "C" void setFontUndeleteFlag__12J2DTevBlock8Fv(); // 1
 extern "C" void getType__12J2DTevBlock4Fv(); // 1
-extern "C" void getMaxStage__12J2DTevBlock4Fv(); // 1
+extern "C" s32 getMaxStage__12J2DTevBlock4Fv(); // 1
 extern "C" void setTexNo__12J2DTevBlock4FUlUs(); // 1
 extern "C" void getTexNo__12J2DTevBlock4CFUl(); // 1
 extern "C" void setFontNo__12J2DTevBlock4FUs(); // 1
@@ -629,7 +629,7 @@ extern "C" void getFont__12J2DTevBlock4Fv(); // 1
 extern "C" void setUndeleteFlag__12J2DTevBlock4FUc(); // 1
 extern "C" void setFontUndeleteFlag__12J2DTevBlock4Fv(); // 1
 extern "C" void getType__12J2DTevBlock2Fv(); // 1
-extern "C" void getMaxStage__12J2DTevBlock2Fv(); // 1
+extern "C" s32 getMaxStage__12J2DTevBlock2Fv(); // 1
 extern "C" void setTexNo__12J2DTevBlock2FUlUs(); // 1
 extern "C" void getTexNo__12J2DTevBlock2CFUl(); // 1
 extern "C" void setFontNo__12J2DTevBlock2FUs(); // 1
@@ -660,7 +660,7 @@ extern "C" void getFont__12J2DTevBlock2Fv(); // 1
 extern "C" void setUndeleteFlag__12J2DTevBlock2FUc(); // 1
 extern "C" void setFontUndeleteFlag__12J2DTevBlock2Fv(); // 1
 extern "C" void getType__12J2DTevBlock1Fv(); // 1
-extern "C" void getMaxStage__12J2DTevBlock1Fv(); // 1
+extern "C" bool getMaxStage__12J2DTevBlock1Fv(); // 1
 extern "C" void setTexNo__12J2DTevBlock1FUlUs(); // 1
 extern "C" void getTexNo__12J2DTevBlock1CFUl(); // 1
 extern "C" void setFontNo__12J2DTevBlock1FUs(); // 1
@@ -676,7 +676,7 @@ extern "C" void getTevKColorSel__12J2DTevBlock1FUl(); // 1
 extern "C" void setTevKAlphaSel__12J2DTevBlock1FUlUc(); // 1
 extern "C" void getTevKAlphaSel__12J2DTevBlock1FUl(); // 1
 extern "C" void setTevStageNum__12J2DTevBlock1FUc(); // 1
-extern "C" void getTevStageNum__12J2DTevBlock1CFv(); // 1
+extern "C" bool getTevStageNum__12J2DTevBlock1CFv(); // 1
 extern "C" void setTevStage__12J2DTevBlock1FUl11J2DTevStage(); // 1
 extern "C" void getTevStage__12J2DTevBlock1FUl(); // 1
 extern "C" void setTevSwapModeInfo__12J2DTevBlock1FUl18J2DTevSwapModeInfo(); // 1
@@ -701,17 +701,17 @@ extern "C" void setTevStage__11J2DTevBlockFUl11J2DTevStage(); // 1
 extern "C" void setTevSwapModeInfo__11J2DTevBlockFUl18J2DTevSwapModeInfo(); // 1
 extern "C" void setTevSwapModeTable__11J2DTevBlockFUl19J2DTevSwapModeTable(); // 1
 extern "C" void setIndTevStage__11J2DTevBlockFUl14J2DIndTevStage(); // 1
-extern "C" void insertTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
-extern "C" void insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
-extern "C" void setTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
-extern "C" void setTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
-extern "C" void removeTexture__11J2DTevBlockFUl(); // 1
-extern "C" void setFont__11J2DTevBlockFP7JUTFont(); // 1
-extern "C" void setFont__11J2DTevBlockFP7ResFONT(); // 1
-extern "C" void setPalette__11J2DTevBlockFUlPC7ResTLUT(); // 1
-extern "C" void prepareTexture__11J2DTevBlockFUc(); // 1
-extern "C" void getFont__11J2DTevBlockFv(); // 1
+extern "C" bool insertTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
+extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette(); // 1
+extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
+extern "C" bool setTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
+extern "C" bool setTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
+extern "C" bool removeTexture__11J2DTevBlockFUl(); // 1
+extern "C" bool setFont__11J2DTevBlockFP7JUTFont(); // 1
+extern "C" bool setFont__11J2DTevBlockFP7ResFONT(); // 1
+extern "C" bool setPalette__11J2DTevBlockFUlPC7ResTLUT(); // 1
+extern "C" bool prepareTexture__11J2DTevBlockFUc(); // 1
+extern "C" bool getFont__11J2DTevBlockFv(); // 1
 extern "C" void shiftDeleteFlag__11J2DTevBlockFUcb(); // 1
 extern "C" void setUndeleteFlag__11J2DTevBlockFUc(); // 1
 extern "C" void setFontUndeleteFlag__11J2DTevBlockFv(); // 1
@@ -742,17 +742,17 @@ extern "C" void load__14J2DIndTevStageFUc(); // 1
 extern "C" void load__12J2DIndTexMtxFUc(); // 1
 extern "C" void load__19J2DIndTexCoordScaleFUc(); // 1
 extern "C" void load__14J2DIndTexOrderFUc(); // 1
-extern "C" void getTevSwapModeTable__11J2DTevBlockFUl(); // 1
-extern "C" void getTevStage__11J2DTevBlockFUl(); // 1
-extern "C" void getTevColor__11J2DTevBlockFUl(); // 1
-extern "C" void getTevOrder__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKAlphaSel__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKColorSel__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKColor__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J2DTevBlockFUl(); // 1
 extern "C" void getFontNo__11J2DTevBlockCFv(); // 1
 extern "C" void getTexNo__11J2DTevBlockCFUl(); // 1
-extern "C" void getTevStageNum__11J2DTevBlockCFv(); // 1
-extern "C" void getIndTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevStageNum__11J2DTevBlockCFv(); // 1
+extern "C" bool getIndTevStage__11J2DTevBlockFUl(); // 1
 extern "C" void __dt__11J2DTevBlockFv(); // 1
 extern "C" void setGX__11J2DTevBlockFv(); // 1
 extern "C" void setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor(); // 1
@@ -1234,25 +1234,15 @@ asm void J2DTexGenBlock::getTexMtx(u32 param_0, J2DTexMtx& param_1) {
 
 
 /* 802EB87C-802EB884 0008+00 s=1 e=0 z=0  None .text      getTexture__11J2DTevBlockFUl                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTexture(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getTexture__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTexture(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EB884-802EB88C 0008+00 s=1 e=0 z=0  None .text      getPalette__11J2DTevBlockFUl                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getPalette(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getPalette__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getPalette(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EB88C-802EB998 010C+00 s=0 e=1 z=0  None .text      __ct__12J2DTevBlock1Fv                                       */
@@ -2180,14 +2170,9 @@ asm J2DTevOrder::J2DTevOrder() {
 
 
 /* 802F1B90-802F1B94 0004+00 s=5 e=0 z=0  None .text      __ct__13J2DGXColorS10Fv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm J2DGXColorS10::J2DGXColorS10() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/__ct__13J2DGXColorS10Fv.s"
+J2DGXColorS10::J2DGXColorS10() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F1B94-802F1BA0 000C+00 s=1 e=0 z=0  None .text      getType__15J2DIndBlockFullFv                                 */
@@ -2312,14 +2297,9 @@ asm void J2DTevBlock16::getType() {
 
 
 /* 802F1D24-802F1D2C 0008+00 s=1 e=0 z=0  None .text      getMaxStage__13J2DTevBlock16Fv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock16::getMaxStage() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getMaxStage__13J2DTevBlock16Fv.s"
+s32 J2DTevBlock16::getMaxStage() {
+	return 16;
 }
-#pragma pop
 
 
 /* 802F1D2C-802F1D3C 0010+00 s=1 e=0 z=0  None .text      setTexNo__13J2DTevBlock16FUlUs                               */
@@ -2653,14 +2633,9 @@ asm void J2DTevBlock8::getType() {
 
 
 /* 802F1FC4-802F1FCC 0008+00 s=1 e=0 z=0  None .text      getMaxStage__12J2DTevBlock8Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock8::getMaxStage() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getMaxStage__12J2DTevBlock8Fv.s"
+s32 J2DTevBlock8::getMaxStage() {
+	return 8;
 }
-#pragma pop
 
 
 /* 802F1FCC-802F1FDC 0010+00 s=1 e=0 z=0  None .text      setTexNo__12J2DTevBlock8FUlUs                                */
@@ -2994,14 +2969,9 @@ asm void J2DTevBlock4::getType() {
 
 
 /* 802F2264-802F226C 0008+00 s=1 e=0 z=0  None .text      getMaxStage__12J2DTevBlock4Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock4::getMaxStage() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getMaxStage__12J2DTevBlock4Fv.s"
+s32 J2DTevBlock4::getMaxStage() {
+	return 4;
 }
-#pragma pop
 
 
 /* 802F226C-802F227C 0010+00 s=1 e=0 z=0  None .text      setTexNo__12J2DTevBlock4FUlUs                                */
@@ -3335,14 +3305,9 @@ asm void J2DTevBlock2::getType() {
 
 
 /* 802F2508-802F2510 0008+00 s=1 e=0 z=0  None .text      getMaxStage__12J2DTevBlock2Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock2::getMaxStage() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getMaxStage__12J2DTevBlock2Fv.s"
+s32 J2DTevBlock2::getMaxStage() {
+	return 2;
 }
-#pragma pop
 
 
 /* 802F2510-802F2520 0010+00 s=1 e=0 z=0  None .text      setTexNo__12J2DTevBlock2FUlUs                                */
@@ -3676,14 +3641,9 @@ asm void J2DTevBlock1::getType() {
 
 
 /* 802F27AC-802F27B4 0008+00 s=1 e=0 z=0  None .text      getMaxStage__12J2DTevBlock1Fv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock1::getMaxStage() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getMaxStage__12J2DTevBlock1Fv.s"
+bool J2DTevBlock1::getMaxStage() {
+	return true;
 }
-#pragma pop
 
 
 /* 802F27B4-802F27C4 0010+00 s=1 e=0 z=0  None .text      setTexNo__12J2DTevBlock1FUlUs                                */
@@ -3841,25 +3801,15 @@ asm void J2DTevBlock1::getTevKAlphaSel(u32 param_0) {
 
 
 /* 802F28CC-802F28D0 0004+00 s=1 e=0 z=0  None .text      setTevStageNum__12J2DTevBlock1FUc                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock1::setTevStageNum(u8 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__12J2DTevBlock1FUc.s"
+void J2DTevBlock1::setTevStageNum(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F28D0-802F28D8 0008+00 s=1 e=0 z=0  None .text      getTevStageNum__12J2DTevBlock1CFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock1::getTevStageNum() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getTevStageNum__12J2DTevBlock1CFv.s"
+bool J2DTevBlock1::getTevStageNum() const {
+	return true;
 }
-#pragma pop
 
 
 /* 802F28D8-802F2914 003C+00 s=1 e=0 z=0  None .text      setTevStage__12J2DTevBlock1FUl11J2DTevStage                  */
@@ -4006,277 +3956,152 @@ asm void J2DTevBlock1::setFontUndeleteFlag() {
 
 
 /* 802F2A40-802F2A44 0004+00 s=1 e=0 z=0  None .text      initialize__11J2DTevBlockFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::initialize() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/initialize__11J2DTevBlockFv.s"
+void J2DTevBlock::initialize() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A44-802F2A48 0004+00 s=1 e=0 z=0  None .text      loadTexture__11J2DTevBlockF11_GXTexMapIDUl                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::loadTexture(_GXTexMapID param_0, u32 param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/loadTexture__11J2DTevBlockF11_GXTexMapIDUl.s"
+void J2DTevBlock::loadTexture(_GXTexMapID param_0, u32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A48-802F2A4C 0004+00 s=1 e=0 z=0  None .text      setFontNo__11J2DTevBlockFUs                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setFontNo(u16 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setFontNo__11J2DTevBlockFUs.s"
+void J2DTevBlock::setFontNo(u16 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A4C-802F2A50 0004+00 s=1 e=0 z=0  None .text      setTevOrder__11J2DTevBlockFUl11J2DTevOrder                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevOrder(u32 param_0, J2DTevOrder param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevOrder__11J2DTevBlockFUl11J2DTevOrder.s"
+void J2DTevBlock::setTevOrder(u32 param_0, J2DTevOrder param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A50-802F2A54 0004+00 s=1 e=0 z=0  None .text      setTevKColorSel__11J2DTevBlockFUlUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevKColorSel(u32 param_0, u8 param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__11J2DTevBlockFUlUc.s"
+void J2DTevBlock::setTevKColorSel(u32 param_0, u8 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A54-802F2A58 0004+00 s=1 e=0 z=0  None .text      setTevKAlphaSel__11J2DTevBlockFUlUc                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevKAlphaSel(u32 param_0, u8 param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__11J2DTevBlockFUlUc.s"
+void J2DTevBlock::setTevKAlphaSel(u32 param_0, u8 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A58-802F2A5C 0004+00 s=1 e=0 z=0  None .text      setTevStageNum__11J2DTevBlockFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevStageNum(u8 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__11J2DTevBlockFUc.s"
+void J2DTevBlock::setTevStageNum(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A5C-802F2A60 0004+00 s=1 e=0 z=0  None .text      setTevStage__11J2DTevBlockFUl11J2DTevStage                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevStage(u32 param_0, J2DTevStage param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStage__11J2DTevBlockFUl11J2DTevStage.s"
+void J2DTevBlock::setTevStage(u32 param_0, J2DTevStage param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A60-802F2A64 0004+00 s=1 e=0 z=0  None .text      setTevSwapModeInfo__11J2DTevBlockFUl18J2DTevSwapModeInfo     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevSwapModeInfo(u32 param_0, J2DTevSwapModeInfo param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevSwapModeInfo__11J2DTevBlockFUl18J2DTevSwapModeInfo.s"
+void J2DTevBlock::setTevSwapModeInfo(u32 param_0, J2DTevSwapModeInfo param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A64-802F2A68 0004+00 s=1 e=0 z=0  None .text      setTevSwapModeTable__11J2DTevBlockFUl19J2DTevSwapModeTable   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTevSwapModeTable(u32 param_0, J2DTevSwapModeTable param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTevSwapModeTable__11J2DTevBlockFUl19J2DTevSwapModeTable.s"
+void J2DTevBlock::setTevSwapModeTable(u32 param_0, J2DTevSwapModeTable param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A68-802F2A6C 0004+00 s=1 e=0 z=0  None .text      setIndTevStage__11J2DTevBlockFUl14J2DIndTevStage             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setIndTevStage(u32 param_0, J2DIndTevStage param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setIndTevStage__11J2DTevBlockFUl14J2DIndTevStage.s"
+void J2DTevBlock::setIndTevStage(u32 param_0, J2DIndTevStage param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2A6C-802F2A74 0008+00 s=1 e=0 z=0  None .text      insertTexture__11J2DTevBlockFUlP10JUTTexture                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::insertTexture(u32 param_0, JUTTexture* param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/insertTexture__11J2DTevBlockFUlP10JUTTexture.s"
+bool J2DTevBlock::insertTexture(u32 param_0, JUTTexture* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A74-802F2A7C 0008+00 s=1 e=0 z=0  None .text      insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::insertTexture(u32 param_0, ResTIMG const* param_1, JUTPalette* param_2) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette.s"
+bool J2DTevBlock::insertTexture(u32 param_0, ResTIMG const* param_1, JUTPalette* param_2) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A7C-802F2A84 0008+00 s=1 e=0 z=0  None .text      insertTexture__11J2DTevBlockFUlPC7ResTIMG                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::insertTexture(u32 param_0, ResTIMG const* param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/insertTexture__11J2DTevBlockFUlPC7ResTIMG.s"
+bool J2DTevBlock::insertTexture(u32 param_0, ResTIMG const* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A84-802F2A8C 0008+00 s=1 e=0 z=0  None .text      setTexture__11J2DTevBlockFUlP10JUTTexture                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTexture(u32 param_0, JUTTexture* param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTexture__11J2DTevBlockFUlP10JUTTexture.s"
+bool J2DTevBlock::setTexture(u32 param_0, JUTTexture* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A8C-802F2A94 0008+00 s=1 e=0 z=0  None .text      setTexture__11J2DTevBlockFUlPC7ResTIMG                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setTexture(u32 param_0, ResTIMG const* param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setTexture__11J2DTevBlockFUlPC7ResTIMG.s"
+bool J2DTevBlock::setTexture(u32 param_0, ResTIMG const* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A94-802F2A9C 0008+00 s=1 e=0 z=0  None .text      removeTexture__11J2DTevBlockFUl                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::removeTexture(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/removeTexture__11J2DTevBlockFUl.s"
+bool J2DTevBlock::removeTexture(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2A9C-802F2AA4 0008+00 s=1 e=0 z=0  None .text      setFont__11J2DTevBlockFP7JUTFont                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setFont(JUTFont* param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setFont__11J2DTevBlockFP7JUTFont.s"
+bool J2DTevBlock::setFont(JUTFont* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2AA4-802F2AAC 0008+00 s=1 e=0 z=0  None .text      setFont__11J2DTevBlockFP7ResFONT                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setFont(ResFONT* param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setFont__11J2DTevBlockFP7ResFONT.s"
+bool J2DTevBlock::setFont(ResFONT* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2AAC-802F2AB4 0008+00 s=1 e=0 z=0  None .text      setPalette__11J2DTevBlockFUlPC7ResTLUT                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setPalette(u32 param_0, ResTLUT const* param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setPalette__11J2DTevBlockFUlPC7ResTLUT.s"
+bool J2DTevBlock::setPalette(u32 param_0, ResTLUT const* param_1) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2AB4-802F2ABC 0008+00 s=1 e=0 z=0  None .text      prepareTexture__11J2DTevBlockFUc                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::prepareTexture(u8 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__11J2DTevBlockFUc.s"
+bool J2DTevBlock::prepareTexture(u8 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2ABC-802F2AC4 0008+00 s=1 e=0 z=0  None .text      getFont__11J2DTevBlockFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getFont() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/getFont__11J2DTevBlockFv.s"
+bool J2DTevBlock::getFont() {
+	return false;
 }
-#pragma pop
 
 
 /* 802F2AC4-802F2AC8 0004+00 s=1 e=0 z=0  None .text      shiftDeleteFlag__11J2DTevBlockFUcb                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::shiftDeleteFlag(u8 param_0, bool param_1) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__11J2DTevBlockFUcb.s"
+void J2DTevBlock::shiftDeleteFlag(u8 param_0, bool param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2AC8-802F2ACC 0004+00 s=1 e=0 z=0  None .text      setUndeleteFlag__11J2DTevBlockFUc                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setUndeleteFlag(u8 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__11J2DTevBlockFUc.s"
+void J2DTevBlock::setUndeleteFlag(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F2ACC-802F2AD0 0004+00 s=1 e=0 z=0  None .text      setFontUndeleteFlag__11J2DTevBlockFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::setFontUndeleteFlag() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DMatBlock/setFontUndeleteFlag__11J2DTevBlockFv.s"
+void J2DTevBlock::setFontUndeleteFlag() {
+	/* empty function */
 }
-#pragma pop
 
 

@@ -65,8 +65,8 @@ struct J2DOrthoGraph {
 
 static void dOvlpFd3_Draw(dOvlpFd3_c*); // 2
 static void dOvlpFd3_Execute(dOvlpFd3_c*); // 2
-static void dOvlpFd3_IsDelete(dOvlpFd3_c*); // 2
-static void dOvlpFd3_Delete(dOvlpFd3_c*); // 2
+static bool dOvlpFd3_IsDelete(dOvlpFd3_c*); // 2
+static bool dOvlpFd3_Delete(dOvlpFd3_c*); // 2
 static void dOvlpFd3_Create(void*); // 2
 
 extern "C" void draw__16dDlst_snapShot_cFv(); // 1
@@ -78,8 +78,8 @@ extern "C" void execNextSnap__10dOvlpFd3_cFv(); // 1
 extern "C" void execFadeIn__10dOvlpFd3_cFv(); // 1
 extern "C" static void dOvlpFd3_Draw__FP10dOvlpFd3_c(); // 1
 extern "C" static void dOvlpFd3_Execute__FP10dOvlpFd3_c(); // 1
-extern "C" static void dOvlpFd3_IsDelete__FP10dOvlpFd3_c(); // 1
-extern "C" static void dOvlpFd3_Delete__FP10dOvlpFd3_c(); // 1
+extern "C" static bool dOvlpFd3_IsDelete__FP10dOvlpFd3_c(); // 1
+extern "C" static bool dOvlpFd3_Delete__FP10dOvlpFd3_c(); // 1
 extern "C" static void dOvlpFd3_Create__FPv(); // 1
 extern "C" void __dt__15dOvlpFd3_dlst_cFv(); // 1
 extern "C" extern void* g_profile_OVERLAP3[10];
@@ -376,25 +376,15 @@ asm static void dOvlpFd3_Execute(dOvlpFd3_c* param_0) {
 
 
 /* 802538AC-802538B4 0008+00 s=1 e=0 z=0  None .text      dOvlpFd3_IsDelete__FP10dOvlpFd3_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dOvlpFd3_IsDelete(dOvlpFd3_c* param_0) {
-	nofralloc
-#include "asm/d/ovlp/d_ovlp_fade3/dOvlpFd3_IsDelete__FP10dOvlpFd3_c.s"
+static bool dOvlpFd3_IsDelete(dOvlpFd3_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 802538B4-802538BC 0008+00 s=1 e=0 z=0  None .text      dOvlpFd3_Delete__FP10dOvlpFd3_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dOvlpFd3_Delete(dOvlpFd3_c* param_0) {
-	nofralloc
-#include "asm/d/ovlp/d_ovlp_fade3/dOvlpFd3_Delete__FP10dOvlpFd3_c.s"
+static bool dOvlpFd3_Delete(dOvlpFd3_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 802538BC-802538E8 002C+00 s=1 e=0 z=0  None .text      dOvlpFd3_Create__FPv                                         */

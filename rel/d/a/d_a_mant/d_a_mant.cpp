@@ -73,7 +73,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 // 
@@ -85,8 +85,8 @@ static void joint_control(mant_class*, mant_j_s*, int, f32, f32); // 2
 static void mant_v_calc(mant_class*); // 2
 static void mant_move(mant_class*); // 2
 static void daMant_Execute(mant_class*); // 2
-static void daMant_IsDelete(mant_class*); // 2
-static void daMant_Delete(mant_class*); // 2
+static bool daMant_IsDelete(mant_class*); // 2
+static bool daMant_Delete(mant_class*); // 2
 static void daMant_Create(fopAc_ac_c*); // 2
 
 extern "C" void draw__15daMant_packet_cFv(); // 1
@@ -96,8 +96,8 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void mant_v_calc__FP10mant_class(); // 1
 extern "C" static void mant_move__FP10mant_class(); // 1
 extern "C" static void daMant_Execute__FP10mant_class(); // 1
-extern "C" static void daMant_IsDelete__FP10mant_class(); // 1
-extern "C" static void daMant_Delete__FP10mant_class(); // 1
+extern "C" static bool daMant_IsDelete__FP10mant_class(); // 1
+extern "C" static bool daMant_Delete__FP10mant_class(); // 1
 extern "C" static void daMant_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8mant_j_sFv(); // 1
 extern "C" void __ct__8mant_j_sFv(); // 1
@@ -207,7 +207,7 @@ extern "C" void MtxTrans__FfffUc(); // 1
 extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -2840,25 +2840,15 @@ asm static void daMant_Execute(mant_class* param_0) {
 
 
 /* 80862908-80862910 0008+00 s=1 e=0 z=0  None .text      daMant_IsDelete__FP10mant_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMant_IsDelete(mant_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_IsDelete__FP10mant_class.s"
+static bool daMant_IsDelete(mant_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80862910-80862918 0008+00 s=1 e=0 z=0  None .text      daMant_Delete__FP10mant_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMant_Delete(mant_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Delete__FP10mant_class.s"
+static bool daMant_Delete(mant_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -2944,14 +2934,9 @@ asm daMant_packet_c::~daMant_packet_c() {
 
 
 /* 80862C40-80862C44 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mant/d_a_mant/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

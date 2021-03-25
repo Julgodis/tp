@@ -16,10 +16,10 @@ struct daE_HP_HIO_c {
 	/* 806E9D38 */ ~daE_HP_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_HP_c {
@@ -136,7 +136,7 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -145,7 +145,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -203,10 +203,10 @@ struct dEvent_manager_c {
 	/* 800483E8 */ void getRunEventName();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -326,7 +326,7 @@ struct J3DFrameCtrl {
 
 static void daE_HP_Draw(daE_HP_c*); // 2
 static void daE_HP_Execute(daE_HP_c*); // 2
-static void daE_HP_IsDelete(daE_HP_c*); // 2
+static bool daE_HP_IsDelete(daE_HP_c*); // 2
 static void daE_HP_Delete(daE_HP_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_HP_Create(daE_HP_c*); // 2
@@ -356,7 +356,7 @@ extern "C" void mtx_set__8daE_HP_cFv(); // 1
 extern "C" void cc_set__8daE_HP_cFv(); // 1
 extern "C" void execute__8daE_HP_cFv(); // 1
 extern "C" static void daE_HP_Execute__FP8daE_HP_c(); // 1
-extern "C" static void daE_HP_IsDelete__FP8daE_HP_c(); // 1
+extern "C" static bool daE_HP_IsDelete__FP8daE_HP_c(); // 1
 extern "C" void _delete__8daE_HP_cFv(); // 1
 extern "C" static void daE_HP_Delete__FP8daE_HP_c(); // 1
 extern "C" void CreateHeap__8daE_HP_cFv(); // 1
@@ -1224,14 +1224,9 @@ asm static void daE_HP_Execute(daE_HP_c* param_0) {
 
 
 /* 806E9190-806E9198 0008+00 s=1 e=0 z=0  None .text      daE_HP_IsDelete__FP8daE_HP_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_HP_IsDelete(daE_HP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hp/d_a_e_hp/daE_HP_IsDelete__FP8daE_HP_c.s"
+static bool daE_HP_IsDelete(daE_HP_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806E9198-806E9220 0088+00 s=1 e=0 z=0  None .text      _delete__8daE_HP_cFv                                         */

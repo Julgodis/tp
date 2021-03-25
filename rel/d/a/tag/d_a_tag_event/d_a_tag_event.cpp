@@ -31,10 +31,10 @@ struct daTag_Event_c {
 	/* 8048B378 */ void checkArea();
 	/* 8048B514 */ void actionHunt();
 	/* 8048B5C8 */ void actionArrival();
-	/* 8048B5F4 */ void actionWait();
+	/* 8048B5F4 */ bool actionWait();
 	/* 8048B5FC */ void actionHunt2();
 	/* 8048B6D4 */ void execute();
-	/* 8048B784 */ void draw();
+	/* 8048B784 */ bool draw();
 };
 
 struct fopAc_ac_c {
@@ -75,7 +75,7 @@ struct cXyz {
 static void daTag_getBk(u32); // 2
 static void daTag_Event_Draw(daTag_Event_c*); // 2
 static void daTag_Event_Execute(daTag_Event_c*); // 2
-static void daTag_Event_IsDelete(daTag_Event_c*); // 2
+static bool daTag_Event_IsDelete(daTag_Event_c*); // 2
 static void daTag_Event_Delete(daTag_Event_c*); // 2
 static void daTag_Event_Create(fopAc_ac_c*); // 2
 
@@ -99,13 +99,13 @@ extern "C" void actionReady__13daTag_Event_cFv(); // 1
 extern "C" void checkArea__13daTag_Event_cFv(); // 1
 extern "C" void actionHunt__13daTag_Event_cFv(); // 1
 extern "C" void actionArrival__13daTag_Event_cFv(); // 1
-extern "C" void actionWait__13daTag_Event_cFv(); // 1
+extern "C" bool actionWait__13daTag_Event_cFv(); // 1
 extern "C" void actionHunt2__13daTag_Event_cFv(); // 1
 extern "C" void execute__13daTag_Event_cFv(); // 1
-extern "C" void draw__13daTag_Event_cFv(); // 1
+extern "C" bool draw__13daTag_Event_cFv(); // 1
 extern "C" static void daTag_Event_Draw__FP13daTag_Event_c(); // 1
 extern "C" static void daTag_Event_Execute__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_IsDelete__FP13daTag_Event_c(); // 1
+extern "C" static bool daTag_Event_IsDelete__FP13daTag_Event_c(); // 1
 extern "C" static void daTag_Event_Delete__FP13daTag_Event_c(); // 1
 extern "C" static void daTag_Event_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
@@ -287,25 +287,15 @@ asm void daTag_Event_c::demoInitProc() {
 
 
 /* 8048AEF8-8048AEFC 0004+00 s=1 e=0 z=0  None .text      demoEndProc__13daTag_Event_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Event_c::demoEndProc() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/demoEndProc__13daTag_Event_cFv.s"
+void daTag_Event_c::demoEndProc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048AEFC-8048AF00 0004+00 s=1 e=0 z=0  None .text      demoProc__13daTag_Event_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Event_c::demoProc() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/demoProc__13daTag_Event_cFv.s"
+void daTag_Event_c::demoProc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048AF00-8048B0E4 01E4+00 s=1 e=0 z=0  None .text      create__13daTag_Event_cFv                                    */
@@ -386,14 +376,9 @@ asm void daTag_Event_c::actionArrival() {
 
 
 /* 8048B5F4-8048B5FC 0008+00 s=1 e=0 z=0  None .text      actionWait__13daTag_Event_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Event_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/actionWait__13daTag_Event_cFv.s"
+bool daTag_Event_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B5FC-8048B6D4 00D8+00 s=1 e=0 z=0  None .text      actionHunt2__13daTag_Event_cFv                               */
@@ -419,14 +404,9 @@ asm void daTag_Event_c::execute() {
 
 
 /* 8048B784-8048B78C 0008+00 s=1 e=0 z=0  None .text      draw__13daTag_Event_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Event_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/draw__13daTag_Event_cFv.s"
+bool daTag_Event_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B78C-8048B7AC 0020+00 s=1 e=0 z=0  None .text      daTag_Event_Draw__FP13daTag_Event_c                          */
@@ -452,14 +432,9 @@ asm static void daTag_Event_Execute(daTag_Event_c* param_0) {
 
 
 /* 8048B7D0-8048B7D8 0008+00 s=1 e=0 z=0  None .text      daTag_Event_IsDelete__FP13daTag_Event_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Event_IsDelete(daTag_Event_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_IsDelete__FP13daTag_Event_c.s"
+static bool daTag_Event_IsDelete(daTag_Event_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048B7D8-8048B808 0030+00 s=1 e=0 z=0  None .text      daTag_Event_Delete__FP13daTag_Event_c                        */

@@ -46,14 +46,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -70,7 +70,7 @@ static void daNPC_TR_Draw(npc_tr_class*); // 2
 static void npc_tr_move(npc_tr_class*); // 2
 static void action(npc_tr_class*); // 2
 static void daNPC_TR_Execute(npc_tr_class*); // 2
-static void daNPC_TR_IsDelete(npc_tr_class*); // 2
+static bool daNPC_TR_IsDelete(npc_tr_class*); // 2
 static void daNPC_TR_Delete(npc_tr_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNPC_TR_Create(fopAc_ac_c*); // 2
@@ -81,7 +81,7 @@ extern "C" static void daNPC_TR_Draw__FP12npc_tr_class(); // 1
 extern "C" static void npc_tr_move__FP12npc_tr_class(); // 1
 extern "C" static void action__FP12npc_tr_class(); // 1
 extern "C" static void daNPC_TR_Execute__FP12npc_tr_class(); // 1
-extern "C" static void daNPC_TR_IsDelete__FP12npc_tr_class(); // 1
+extern "C" static bool daNPC_TR_IsDelete__FP12npc_tr_class(); // 1
 extern "C" static void daNPC_TR_Delete__FP12npc_tr_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daNPC_TR_Create__FP10fopAc_ac_c(); // 1
@@ -305,14 +305,9 @@ asm static void daNPC_TR_Execute(npc_tr_class* param_0) {
 
 
 /* 80B262D0-80B262D8 0008+00 s=1 e=0 z=0  None .text      daNPC_TR_IsDelete__FP12npc_tr_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNPC_TR_IsDelete(npc_tr_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tr/d_a_npc_tr/daNPC_TR_IsDelete__FP12npc_tr_class.s"
+static bool daNPC_TR_IsDelete(npc_tr_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

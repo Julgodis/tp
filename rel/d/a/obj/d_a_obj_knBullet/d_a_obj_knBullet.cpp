@@ -14,8 +14,8 @@
 struct daObjKnBullet_c {
 	/* 80C47118 */ void Create();
 	/* 80C47300 */ void Execute();
-	/* 80C47480 */ void Draw();
-	/* 80C47488 */ void Delete();
+	/* 80C47480 */ bool Draw();
+	/* 80C47488 */ bool Delete();
 	/* 80C47490 */ void setBaseMtx();
 	/* 80C474E8 */ void col_init();
 	/* 80C47558 */ void col_chk();
@@ -113,7 +113,7 @@ struct Z2SeMgr {
 
 static void daObjKnBullet_Execute(daObjKnBullet_c*); // 2
 static void daObjKnBullet_Draw(daObjKnBullet_c*); // 2
-static void daObjKnBullet_IsDelete(daObjKnBullet_c*); // 2
+static bool daObjKnBullet_IsDelete(daObjKnBullet_c*); // 2
 static void daObjKnBullet_Delete(daObjKnBullet_c*); // 2
 static void daObjKnBullet_create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
@@ -122,15 +122,15 @@ extern "C" void Create__15daObjKnBullet_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void Execute__15daObjKnBullet_cFv(); // 1
-extern "C" void Draw__15daObjKnBullet_cFv(); // 1
-extern "C" void Delete__15daObjKnBullet_cFv(); // 1
+extern "C" bool Draw__15daObjKnBullet_cFv(); // 1
+extern "C" bool Delete__15daObjKnBullet_cFv(); // 1
 extern "C" void setBaseMtx__15daObjKnBullet_cFv(); // 1
 extern "C" void col_init__15daObjKnBullet_cFv(); // 1
 extern "C" void col_chk__15daObjKnBullet_cFv(); // 1
 extern "C" void hitPrtclSet__15daObjKnBullet_cFv(); // 1
 extern "C" static void daObjKnBullet_Execute__FP15daObjKnBullet_c(); // 1
 extern "C" static void daObjKnBullet_Draw__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_IsDelete__FP15daObjKnBullet_c(); // 1
+extern "C" static bool daObjKnBullet_IsDelete__FP15daObjKnBullet_c(); // 1
 extern "C" static void daObjKnBullet_Delete__FP15daObjKnBullet_c(); // 1
 extern "C" static void daObjKnBullet_create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_80C4792C(); // 1
@@ -298,25 +298,15 @@ asm void daObjKnBullet_c::Execute() {
 
 
 /* 80C47480-80C47488 0008+00 s=1 e=0 z=0  None .text      Draw__15daObjKnBullet_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKnBullet_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Draw__15daObjKnBullet_cFv.s"
+bool daObjKnBullet_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C47488-80C47490 0008+00 s=1 e=0 z=0  None .text      Delete__15daObjKnBullet_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjKnBullet_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/Delete__15daObjKnBullet_cFv.s"
+bool daObjKnBullet_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C47490-80C474E8 0058+00 s=2 e=0 z=0  None .text      setBaseMtx__15daObjKnBullet_cFv                              */
@@ -434,14 +424,9 @@ asm static void daObjKnBullet_Draw(daObjKnBullet_c* param_0) {
 
 
 /* 80C478E4-80C478EC 0008+00 s=1 e=0 z=0  None .text      daObjKnBullet_IsDelete__FP15daObjKnBullet_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKnBullet_IsDelete(daObjKnBullet_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_knBullet/d_a_obj_knBullet/daObjKnBullet_IsDelete__FP15daObjKnBullet_c.s"
+static bool daObjKnBullet_IsDelete(daObjKnBullet_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C478EC-80C4790C 0020+00 s=1 e=0 z=0  None .text      daObjKnBullet_Delete__FP15daObjKnBullet_c                    */

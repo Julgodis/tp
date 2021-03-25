@@ -116,9 +116,6 @@ struct JAISoundParamsMove {
 	/* 802A2EBC */ void movePan(f32, u32);
 };
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -126,6 +123,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -366,14 +366,9 @@ asm void JStudio_JAudio2::TAdaptor_sound::adaptor_do_prepare() {
 
 
 /* 8028DA74-8028DA78 0004+00 s=1 e=0 z=0  None .text      adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio_JAudio2::TAdaptor_sound::adaptor_do_end() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv.s"
+void JStudio_JAudio2::TAdaptor_sound::adaptor_do_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8028DA78-8028DC20 01A8+00 s=1 e=0 z=0  None .text      adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl    */

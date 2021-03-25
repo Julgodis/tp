@@ -288,14 +288,9 @@ asm void daTagRiverBack_c::actionEvent() {
 
 
 /* 80D5F70C-80D5F710 0004+00 s=1 e=0 z=0  None .text      actionDead__16daTagRiverBack_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRiverBack_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/actionDead__16daTagRiverBack_cFv.s"
+void daTagRiverBack_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

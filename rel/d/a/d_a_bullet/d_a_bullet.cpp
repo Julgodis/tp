@@ -153,7 +153,7 @@ static void daBullet_Create(void*); // 2
 static void daBullet_Delete(void*); // 2
 static void daBullet_Execute(void*); // 2
 static void daBullet_Draw(void*); // 2
-static void daBullet_IsDelete(void*); // 2
+static bool daBullet_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__10daBullet_cFv(); // 1
@@ -179,7 +179,7 @@ extern "C" static void daBullet_Create__FPv(); // 1
 extern "C" static void daBullet_Delete__FPv(); // 1
 extern "C" static void daBullet_Execute__FPv(); // 1
 extern "C" static void daBullet_Draw__FPv(); // 1
-extern "C" static void daBullet_IsDelete__FPv(); // 1
+extern "C" static bool daBullet_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80656618(); // 1
 extern "C" void __sinit_d_a_bullet_cpp(); // 1
@@ -671,14 +671,9 @@ asm static void daBullet_Draw(void* param_0) {
 
 
 /* 806565C8-806565D0 0008+00 s=1 e=0 z=0  None .text      daBullet_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daBullet_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bullet/d_a_bullet/daBullet_IsDelete__FPv.s"
+static bool daBullet_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806565D0-80656618 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

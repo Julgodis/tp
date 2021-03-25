@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void TRKTerminateSerialHandler(); // 1
+extern "C" bool TRKTerminateSerialHandler(); // 1
 extern "C" void TRKInitializeSerialHandler(); // 1
 extern "C" void TRKProcessInput(); // 1
 extern "C" void TRKGetInput(); // 1
@@ -50,14 +50,9 @@ extern "C" void MWTRACE(); // 1
 // 
 
 /* 8036D858-8036D860 0008+00 s=0 e=1 z=0  None .text      TRKTerminateSerialHandler                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void TRKTerminateSerialHandler() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/serpoll/TRKTerminateSerialHandler.s"
+extern "C" bool TRKTerminateSerialHandler() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

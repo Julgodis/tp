@@ -25,7 +25,7 @@ struct daObjStair_c {
 	/* 80C9D82C */ void actionWait();
 	/* 80C9D8EC */ void actionOrderEvent();
 	/* 80C9D95C */ void actionEvent();
-	/* 80C9D9BC */ void actionEnd();
+	/* 80C9D9BC */ bool actionEnd();
 	/* 80C9D9C4 */ void modeWaitUpperInit();
 	/* 80C9D9F4 */ void modeWaitUpper();
 	/* 80C9DA98 */ void modeUpperInit();
@@ -101,13 +101,13 @@ struct dEvent_manager_c {
 	/* 80047A78 */ void endCheck(s16);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -126,9 +126,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -172,7 +172,7 @@ extern "C" void Delete__12daObjStair_cFv(); // 1
 extern "C" void actionWait__12daObjStair_cFv(); // 1
 extern "C" void actionOrderEvent__12daObjStair_cFv(); // 1
 extern "C" void actionEvent__12daObjStair_cFv(); // 1
-extern "C" void actionEnd__12daObjStair_cFv(); // 1
+extern "C" bool actionEnd__12daObjStair_cFv(); // 1
 extern "C" void modeWaitUpperInit__12daObjStair_cFv(); // 1
 extern "C" void modeWaitUpper__12daObjStair_cFv(); // 1
 extern "C" void modeUpperInit__12daObjStair_cFv(); // 1
@@ -235,9 +235,9 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -576,14 +576,9 @@ asm void daObjStair_c::actionEvent() {
 
 
 /* 80C9D9BC-80C9D9C4 0008+00 s=1 e=0 z=0  None .text      actionEnd__12daObjStair_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjStair_c::actionEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/actionEnd__12daObjStair_cFv.s"
+bool daObjStair_c::actionEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9D9C4-80C9D9F4 0030+00 s=2 e=0 z=0  None .text      modeWaitUpperInit__12daObjStair_cFv                          */
@@ -775,14 +770,9 @@ asm static void daObjStair_create1st(daObjStair_c* param_0) {
 
 
 /* 80C9E700-80C9E704 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E704-80C9E788 0084+00 s=1 e=0 z=0  None .text      __dt__19dPa_followEcallBackFv                                */
@@ -797,14 +787,9 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 
 
 /* 80C9E788-80C9E78C 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E78C-80C9E7B4 0028+00 s=1 e=0 z=0  None .text      __defctor__19dPa_followEcallBackFv                           */
@@ -863,46 +848,26 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 
 
 /* 80C9E894-80C9E898 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E898-80C9E89C 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E89C-80C9E8A0 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9E8A0-80C9E8A4 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mvstair/d_a_obj_mvstair/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 

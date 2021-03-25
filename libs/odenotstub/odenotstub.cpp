@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void Hu_IsStub(); // 1
+extern "C" bool Hu_IsStub(); // 1
 
 // 
 // External References:
@@ -25,13 +25,8 @@ extern "C" void Hu_IsStub(); // 1
 // 
 
 /* 803737AC-803737B4 0008+00 s=0 e=1 z=0  None .text      Hu_IsStub                                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void Hu_IsStub() {
-	nofralloc
-#include "asm/odenotstub/odenotstub/Hu_IsStub.s"
+extern "C" bool Hu_IsStub() {
+	return false;
 }
-#pragma pop
 
 

@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct OSContext {
-};
-
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+};
+
+struct OSContext {
 };
 
 struct __va_list_struct {
@@ -56,10 +56,10 @@ struct JUTException {
 	/* 802E40EC */ ~JUTException();
 };
 
-struct _GXRenderModeObj {
+struct _GXGamma {
 };
 
-struct _GXGamma {
+struct _GXRenderModeObj {
 };
 
 struct JUTExternalFB {

@@ -15,7 +15,7 @@ struct daTag_Evt_c {
 	/* 8048B918 */ void create();
 	/* 8048B9D8 */ void destroy();
 	/* 8048BA0C */ void execute();
-	/* 8048BE44 */ void draw();
+	/* 8048BE44 */ bool draw();
 	/* 8048BE4C */ void getParam();
 	/* 8048BF64 */ void isDelete();
 	/* 8048C090 */ void doEvtCutWait(int);
@@ -82,13 +82,13 @@ static void daTag_Evt_Create(void*); // 2
 static void daTag_Evt_Delete(void*); // 2
 static void daTag_Evt_Execute(void*); // 2
 static void daTag_Evt_Draw(void*); // 2
-static void daTag_Evt_IsDelete(void*); // 2
+static bool daTag_Evt_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void create__11daTag_Evt_cFv(); // 1
 extern "C" void destroy__11daTag_Evt_cFv(); // 1
 extern "C" void execute__11daTag_Evt_cFv(); // 1
-extern "C" void draw__11daTag_Evt_cFv(); // 1
+extern "C" bool draw__11daTag_Evt_cFv(); // 1
 extern "C" void getParam__11daTag_Evt_cFv(); // 1
 extern "C" void isDelete__11daTag_Evt_cFv(); // 1
 extern "C" void doEvtCutWait__11daTag_Evt_cFi(); // 1
@@ -98,7 +98,7 @@ extern "C" static void daTag_Evt_Create__FPv(); // 1
 extern "C" static void daTag_Evt_Delete__FPv(); // 1
 extern "C" static void daTag_Evt_Execute__FPv(); // 1
 extern "C" static void daTag_Evt_Draw__FPv(); // 1
-extern "C" static void daTag_Evt_IsDelete__FPv(); // 1
+extern "C" static bool daTag_Evt_IsDelete__FPv(); // 1
 extern "C" void __dt__11daTag_Evt_cFv(); // 1
 extern "C" static void func_8048C374(); // 1
 extern "C" extern u8 const lit_3786[8];
@@ -292,14 +292,9 @@ asm void daTag_Evt_c::execute() {
 
 
 /* 8048BE44-8048BE4C 0008+00 s=1 e=0 z=0  None .text      draw__11daTag_Evt_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_Evt_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evt/d_a_tag_evt/draw__11daTag_Evt_cFv.s"
+bool daTag_Evt_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048BE4C-8048BF64 0118+00 s=1 e=0 z=0  None .text      getParam__11daTag_Evt_cFv                                    */
@@ -402,14 +397,9 @@ asm static void daTag_Evt_Draw(void* param_0) {
 
 
 /* 8048C2FC-8048C304 0008+00 s=1 e=0 z=0  None .text      daTag_Evt_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Evt_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evt/d_a_tag_evt/daTag_Evt_IsDelete__FPv.s"
+static bool daTag_Evt_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048C304-8048C374 0070+00 s=1 e=0 z=0  None .text      __dt__11daTag_Evt_cFv                                        */

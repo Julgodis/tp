@@ -82,10 +82,10 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -104,7 +104,7 @@ struct J3DTexMtxInfo {
 static void daObj_Lv3waterB_Draw(obj_lv3WaterB_class*); // 2
 static void action(obj_lv3WaterB_class*); // 2
 static void daObj_Lv3waterB_Execute(obj_lv3WaterB_class*); // 2
-static void daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class*); // 2
+static bool daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class*); // 2
 static void daObj_Lv3waterB_Delete(obj_lv3WaterB_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Lv3waterB_Create(fopAc_ac_c*); // 2
@@ -112,7 +112,7 @@ static void daObj_Lv3waterB_Create(fopAc_ac_c*); // 2
 extern "C" static void daObj_Lv3waterB_Draw__FP19obj_lv3WaterB_class(); // 1
 extern "C" static void action__FP19obj_lv3WaterB_class(); // 1
 extern "C" static void daObj_Lv3waterB_Execute__FP19obj_lv3WaterB_class(); // 1
-extern "C" static void daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class(); // 1
+extern "C" static bool daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class(); // 1
 extern "C" static void daObj_Lv3waterB_Delete__FP19obj_lv3WaterB_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -227,14 +227,9 @@ asm static void daObj_Lv3waterB_Execute(obj_lv3WaterB_class* param_0) {
 
 
 /* 80C5B8C0-80C5B8C8 0008+00 s=1 e=0 z=0  None .text      daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3WaterB/d_a_obj_lv3WaterB/daObj_Lv3waterB_IsDelete__FP19obj_lv3WaterB_class.s"
+static bool daObj_Lv3waterB_IsDelete(obj_lv3WaterB_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

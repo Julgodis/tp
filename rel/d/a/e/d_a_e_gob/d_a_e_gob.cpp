@@ -70,20 +70,20 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -133,10 +133,10 @@ struct dEvt_control_c {
 	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -292,7 +292,7 @@ static void action(e_gob_class*); // 2
 static void cam_3d_morf(e_gob_class*, f32); // 2
 static void demo_camera(e_gob_class*); // 2
 static void daE_GOB_Execute(e_gob_class*); // 2
-static void daE_GOB_IsDelete(e_gob_class*); // 2
+static bool daE_GOB_IsDelete(e_gob_class*); // 2
 static void daE_GOB_Delete(e_gob_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_GOB_Create(fopAc_ac_c*); // 2
@@ -319,7 +319,7 @@ extern "C" static void action__FP11e_gob_class(); // 1
 extern "C" static void cam_3d_morf__FP11e_gob_classf(); // 1
 extern "C" static void demo_camera__FP11e_gob_class(); // 1
 extern "C" static void daE_GOB_Execute__FP11e_gob_class(); // 1
-extern "C" static void daE_GOB_IsDelete__FP11e_gob_class(); // 1
+extern "C" static bool daE_GOB_IsDelete__FP11e_gob_class(); // 1
 extern "C" static void daE_GOB_Delete__FP11e_gob_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_GOB_Create__FP10fopAc_ac_c(); // 1
@@ -1585,14 +1585,9 @@ asm static void daE_GOB_Execute(e_gob_class* param_0) {
 
 
 /* 806DE4B8-806DE4C0 0008+00 s=1 e=0 z=0  None .text      daE_GOB_IsDelete__FP11e_gob_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_GOB_IsDelete(e_gob_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gob/d_a_e_gob/daE_GOB_IsDelete__FP11e_gob_class.s"
+static bool daE_GOB_IsDelete(e_gob_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806DE4C0-806DE528 0068+00 s=1 e=0 z=0  None .text      daE_GOB_Delete__FP11e_gob_class                              */

@@ -28,9 +28,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80C83704 */ ~dEvLib_callback_c();
-	/* 80C8374C */ void eventStart();
-	/* 80C83754 */ void eventRun();
-	/* 80C8375C */ void eventEnd();
+	/* 80C8374C */ bool eventStart();
+	/* 80C83754 */ bool eventRun();
+	/* 80C8375C */ bool eventEnd();
 };
 
 struct J3DModel {
@@ -71,9 +71,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -123,9 +123,9 @@ extern "C" static void daObjLv6ElevtA_MoveBGDelete__FP16daObjLv6ElevtA_c(); // 1
 extern "C" static void daObjLv6ElevtA_MoveBGExecute__FP16daObjLv6ElevtA_c(); // 1
 extern "C" static void daObjLv6ElevtA_MoveBGDraw__FP16daObjLv6ElevtA_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__16daObjLv6ElevtA_cFv(); // 1
 extern "C" static void func_80C837F8(); // 1
 extern "C" static void func_80C83800(); // 1
@@ -163,9 +163,9 @@ extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
 extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -459,36 +459,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80C8374C-80C83754 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C83754-80C8375C 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C8375C-80C83764 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6elevta/d_a_obj_lv6elevta/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C83764-80C837F8 0094+00 s=2 e=0 z=0  None .text      __dt__16daObjLv6ElevtA_cFv                                   */

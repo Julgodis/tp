@@ -15,7 +15,7 @@ struct daTagChgRestart_c {
 	/* 80D56758 */ void Create();
 	/* 80D567E4 */ void create();
 	/* 80D568B8 */ void execute();
-	/* 80D56A84 */ void _delete();
+	/* 80D56A84 */ bool _delete();
 };
 
 struct cXyz {
@@ -53,7 +53,7 @@ extern "C" void create__17daTagChgRestart_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void execute__17daTagChgRestart_cFv(); // 1
-extern "C" void _delete__17daTagChgRestart_cFv(); // 1
+extern "C" bool _delete__17daTagChgRestart_cFv(); // 1
 extern "C" static void daTagChgRestart_Execute__FP17daTagChgRestart_c(); // 1
 extern "C" static void daTagChgRestart_Delete__FP17daTagChgRestart_c(); // 1
 extern "C" static void daTagChgRestart_Create__FP10fopAc_ac_c(); // 1
@@ -133,14 +133,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80D568B4-80D568B8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D568B8-80D56A84 01CC+00 s=1 e=0 z=0  None .text      execute__17daTagChgRestart_cFv                               */
@@ -155,14 +150,9 @@ asm void daTagChgRestart_c::execute() {
 
 
 /* 80D56A84-80D56A8C 0008+00 s=1 e=0 z=0  None .text      _delete__17daTagChgRestart_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagChgRestart_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_chgrestart/d_a_tag_chgrestart/_delete__17daTagChgRestart_cFv.s"
+bool daTagChgRestart_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D56A8C-80D56AAC 0020+00 s=1 e=0 z=0  None .text      daTagChgRestart_Execute__FP17daTagChgRestart_c               */

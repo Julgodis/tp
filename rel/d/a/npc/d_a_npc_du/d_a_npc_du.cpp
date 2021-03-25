@@ -57,10 +57,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -68,7 +68,7 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -77,7 +77,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -127,10 +127,10 @@ struct dBgS_AcchCir {
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -215,7 +215,7 @@ static void npc_du_message(npc_du_class*); // 2
 static void action(npc_du_class*); // 2
 static void message(npc_du_class*); // 2
 static void daNpc_Du_Execute(npc_du_class*); // 2
-static void daNpc_Du_IsDelete(npc_du_class*); // 2
+static bool daNpc_Du_IsDelete(npc_du_class*); // 2
 static void daNpc_Du_Delete(npc_du_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Du_Create(fopAc_ac_c*); // 2
@@ -231,7 +231,7 @@ extern "C" static void npc_du_message__FP12npc_du_class(); // 1
 extern "C" static void action__FP12npc_du_class(); // 1
 extern "C" static void message__FP12npc_du_class(); // 1
 extern "C" static void daNpc_Du_Execute__FP12npc_du_class(); // 1
-extern "C" static void daNpc_Du_IsDelete__FP12npc_du_class(); // 1
+extern "C" static bool daNpc_Du_IsDelete__FP12npc_du_class(); // 1
 extern "C" static void daNpc_Du_Delete__FP12npc_du_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -738,14 +738,9 @@ asm static void daNpc_Du_Execute(npc_du_class* param_0) {
 
 
 /* 809B116C-809B1174 0008+00 s=1 e=0 z=0  None .text      daNpc_Du_IsDelete__FP12npc_du_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Du_IsDelete(npc_du_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_du/d_a_npc_du/daNpc_Du_IsDelete__FP12npc_du_class.s"
+static bool daNpc_Du_IsDelete(npc_du_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809B1174-809B11E0 006C+00 s=1 e=0 z=0  None .text      daNpc_Du_Delete__FP12npc_du_class                            */

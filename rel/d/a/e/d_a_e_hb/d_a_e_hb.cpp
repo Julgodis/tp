@@ -33,6 +33,9 @@ struct dBgS_AcchCir {
 	/* 805002D4 */ ~dBgS_AcchCir();
 };
 
+struct dCcD_SrcSph {
+};
+
 struct Vec {
 };
 
@@ -42,9 +45,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80500584 */ cXyz();
 	/* 80500AB4 */ ~cXyz();
-};
-
-struct dCcD_SrcSph {
 };
 
 struct dCcD_Sph {
@@ -105,16 +105,16 @@ struct mDoExt_McaMorf {
 	/* 800105C8 */ void play(Vec*, u32, s8);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -129,10 +129,10 @@ struct mDoExt_McaMorfSO {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -277,7 +277,7 @@ static void action(e_hb_class*); // 2
 static void eff_set(e_hb_class*, int); // 2
 static void anm_se_set(e_hb_class*); // 2
 static void daE_HB_Execute(e_hb_class*); // 2
-static void daE_HB_IsDelete(e_hb_class*); // 2
+static bool daE_HB_IsDelete(e_hb_class*); // 2
 static void daE_HB_Delete(e_hb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 void daE_HB_Create(fopAc_ac_c*); // 2
@@ -305,7 +305,7 @@ extern "C" static void action__FP10e_hb_class(); // 1
 extern "C" static void eff_set__FP10e_hb_classi(); // 1
 extern "C" static void anm_se_set__FP10e_hb_class(); // 1
 extern "C" static void daE_HB_Execute__FP10e_hb_class(); // 1
-extern "C" static void daE_HB_IsDelete__FP10e_hb_class(); // 1
+extern "C" static bool daE_HB_IsDelete__FP10e_hb_class(); // 1
 extern "C" static void daE_HB_Delete__FP10e_hb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void daE_HB_Create__FP10fopAc_ac_c(); // 1
@@ -1242,14 +1242,9 @@ asm static void daE_HB_Execute(e_hb_class* param_0) {
 
 
 /* 804FFAFC-804FFB04 0008+00 s=1 e=0 z=0  None .text      daE_HB_IsDelete__FP10e_hb_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_HB_IsDelete(e_hb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hb/d_a_e_hb/daE_HB_IsDelete__FP10e_hb_class.s"
+static bool daE_HB_IsDelete(e_hb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804FFB04-804FFB6C 0068+00 s=1 e=0 z=0  None .text      daE_HB_Delete__FP10e_hb_class                                */
@@ -1363,25 +1358,15 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 80500580-80500584 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hb/d_a_e_hb/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80500584-80500588 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hb/d_a_e_hb/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80500588-805005D0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

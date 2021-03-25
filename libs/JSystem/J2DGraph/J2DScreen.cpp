@@ -11,31 +11,51 @@
 // Types:
 // 
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct JKRArchive {
-};
-
 struct J2DAnmBase {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct ResFONT {
+struct J2DGrafContext {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DScrnBlockHeader {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct ResTIMG {
+};
+
+struct J2DAnmTransform {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -47,18 +67,7 @@ struct JGeometry {
 
 };
 
-struct J2DAnmVtxColor {
-};
-
 struct _GXCullMode {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DPane {
@@ -88,15 +97,6 @@ struct J2DPane {
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
 	/* 802F8478 */ void drawSelf(f32, f32);
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DScrnBlockHeader {
 };
 
 struct J2DScreen {
@@ -130,7 +130,7 @@ struct J2DScreen {
 	/* 802F9620 */ void isUsed(ResFONT const*);
 	/* 802F9640 */ void getNameResource(char const*);
 	/* 802F9690 */ void animation();
-	/* 802F9A18 */ void getTypeID() const;
+	/* 802F9A18 */ s32 getTypeID() const;
 	/* 802F9A20 */ void calcMtx();
 	/* 802F9A74 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F9A78 */ void setAnimationVC(J2DAnmVtxColor*);
@@ -171,10 +171,10 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-struct J2DMaterialBlock {
+struct J2DResReference {
 };
 
-struct J2DResReference {
+struct J2DMaterialBlock {
 };
 
 struct J2DMaterialFactory {
@@ -245,7 +245,7 @@ extern "C" void setAnimation__9J2DScreenFP15J2DAnmTevRegKey(); // 1
 extern "C" void setAnimation__9J2DScreenFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
 extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl(); // 1
-extern "C" void getTypeID__9J2DScreenCFv(); // 1
+extern "C" s32 getTypeID__9J2DScreenCFv(); // 1
 extern "C" void calcMtx__9J2DScreenFv(); // 1
 extern "C" void setAnimation__9J2DScreenFP10J2DAnmBase(); // 1
 extern "C" void setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
@@ -733,14 +733,9 @@ asm void J2DScreen::createPane(J2DScrnBlockHeader const& param_0, JSURandomInput
 
 
 /* 802F9A18-802F9A20 0008+00 s=1 e=0 z=0  None .text      getTypeID__9J2DScreenCFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DScreen::getTypeID() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DScreen/getTypeID__9J2DScreenCFv.s"
+s32 J2DScreen::getTypeID() const {
+	return 8;
 }
-#pragma pop
 
 
 /* 802F9A20-802F9A54 0034+00 s=1 e=0 z=0  None .text      calcMtx__9J2DScreenFv                                        */
@@ -766,24 +761,14 @@ asm void J2DScreen::setAnimation(J2DAnmBase* param_0) {
 
 
 /* 802F9A74-802F9A78 0004+00 s=1 e=0 z=0  None .text      setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DScreen::setAnimationVF(J2DAnmVisibilityFull* param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DScreen/setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull.s"
+void J2DScreen::setAnimationVF(J2DAnmVisibilityFull* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802F9A78-802F9A7C 0004+00 s=1 e=0 z=0  None .text      setAnimationVC__9J2DScreenFP14J2DAnmVtxColor                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DScreen::setAnimationVC(J2DAnmVtxColor* param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DScreen/setAnimationVC__9J2DScreenFP14J2DAnmVtxColor.s"
+void J2DScreen::setAnimationVC(J2DAnmVtxColor* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 

@@ -117,10 +117,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -131,21 +131,21 @@ struct mDoExt_btpAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -395,7 +395,7 @@ static void action(npc_ks_class*); // 2
 static void s_kago_sub(void*, void*); // 2
 static void kantera_sub(npc_ks_class*); // 2
 static void daNpc_Ks_Execute(npc_ks_class*); // 2
-static void daNpc_Ks_IsDelete(npc_ks_class*); // 2
+static bool daNpc_Ks_IsDelete(npc_ks_class*); // 2
 static void daNpc_Ks_Delete(npc_ks_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void start_check(npc_ks_class*); // 2
@@ -489,7 +489,7 @@ extern "C" static void action__FP12npc_ks_class(); // 1
 extern "C" static void s_kago_sub__FPvPv(); // 1
 extern "C" static void kantera_sub__FP12npc_ks_class(); // 1
 extern "C" static void daNpc_Ks_Execute__FP12npc_ks_class(); // 1
-extern "C" static void daNpc_Ks_IsDelete__FP12npc_ks_class(); // 1
+extern "C" static bool daNpc_Ks_IsDelete__FP12npc_ks_class(); // 1
 extern "C" static void daNpc_Ks_Delete__FP12npc_ks_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -3856,14 +3856,9 @@ asm static void daNpc_Ks_Execute(npc_ks_class* param_0) {
 
 
 /* 80A5C3E4-80A5C3EC 0008+00 s=1 e=0 z=0  None .text      daNpc_Ks_IsDelete__FP12npc_ks_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Ks_IsDelete(npc_ks_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ks/d_a_npc_ks/daNpc_Ks_IsDelete__FP12npc_ks_class.s"
+static bool daNpc_Ks_IsDelete(npc_ks_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A5C3EC-80A5C450 0064+00 s=1 e=0 z=0  None .text      daNpc_Ks_Delete__FP12npc_ks_class                            */

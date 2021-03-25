@@ -63,10 +63,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -459,14 +459,9 @@ asm void daObjStopper2_c::actionEvent() {
 
 
 /* 80CEFAD4-80CEFAD8 0004+00 s=1 e=0 z=0  None .text      actionDead__15daObjStopper2_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjStopper2_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_stopper2/d_a_obj_stopper2/actionDead__15daObjStopper2_cFv.s"
+void daObjStopper2_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

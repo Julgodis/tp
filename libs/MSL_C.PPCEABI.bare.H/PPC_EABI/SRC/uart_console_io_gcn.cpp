@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __close_console(); // 1
+extern "C" bool __close_console(); // 1
 extern "C" void __write_console(); // 1
 
 // 
@@ -30,14 +30,9 @@ extern "C" void __TRK_write_console(); // 1
 // 
 
 /* 8036919C-803691A4 0008+00 s=0 e=1 z=0  None .text      __close_console                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void __close_console() {
-	nofralloc
-#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/uart_console_io_gcn/__close_console.s"
+extern "C" bool __close_console() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

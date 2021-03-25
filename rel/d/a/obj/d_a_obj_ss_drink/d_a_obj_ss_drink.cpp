@@ -42,7 +42,7 @@ struct daObj_SSDrink_c {
 	/* 80CE61E4 */ void animePlay();
 	/* 80CE622C */ void chkEvent();
 	/* 80CE63AC */ void orderEvent();
-	/* 80CE644C */ void wait(void*);
+	/* 80CE644C */ bool wait(void*);
 	/* 80CE6454 */ void talk(void*);
 	/* 80CE6514 */ void drink(void*);
 };
@@ -107,10 +107,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -249,7 +249,7 @@ static void daObj_SSDrink_Create(void*); // 2
 static void daObj_SSDrink_Delete(void*); // 2
 static void daObj_SSDrink_Execute(void*); // 2
 static void daObj_SSDrink_Draw(void*); // 2
-static void daObj_SSDrink_IsDelete(void*); // 2
+static bool daObj_SSDrink_IsDelete(void*); // 2
 
 extern "C" void __dt__15daObj_SSDrink_cFv(); // 1
 extern "C" void create__15daObj_SSDrink_cFv(); // 1
@@ -280,14 +280,14 @@ extern "C" void animeEntry__15daObj_SSDrink_cFv(); // 1
 extern "C" void animePlay__15daObj_SSDrink_cFv(); // 1
 extern "C" void chkEvent__15daObj_SSDrink_cFv(); // 1
 extern "C" void orderEvent__15daObj_SSDrink_cFv(); // 1
-extern "C" void wait__15daObj_SSDrink_cFPv(); // 1
+extern "C" bool wait__15daObj_SSDrink_cFPv(); // 1
 extern "C" void talk__15daObj_SSDrink_cFPv(); // 1
 extern "C" void drink__15daObj_SSDrink_cFPv(); // 1
 extern "C" static void daObj_SSDrink_Create__FPv(); // 1
 extern "C" static void daObj_SSDrink_Delete__FPv(); // 1
 extern "C" static void daObj_SSDrink_Execute__FPv(); // 1
 extern "C" static void daObj_SSDrink_Draw__FPv(); // 1
-extern "C" static void daObj_SSDrink_IsDelete__FPv(); // 1
+extern "C" static bool daObj_SSDrink_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_ss_drink_cpp(); // 1
 extern "C" static void func_80CE672C(); // 1
@@ -983,14 +983,9 @@ asm void daObj_SSDrink_c::orderEvent() {
 
 
 /* 80CE644C-80CE6454 0008+00 s=2 e=0 z=0  None .text      wait__15daObj_SSDrink_cFPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_SSDrink_c::wait(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/wait__15daObj_SSDrink_cFPv.s"
+bool daObj_SSDrink_c::wait(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE6454-80CE6514 00C0+00 s=3 e=0 z=0  None .text      talk__15daObj_SSDrink_cFPv                                   */
@@ -1060,14 +1055,9 @@ asm static void daObj_SSDrink_Draw(void* param_0) {
 
 
 /* 80CE66A4-80CE66AC 0008+00 s=1 e=0 z=0  None .text      daObj_SSDrink_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_SSDrink_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_drink/d_a_obj_ss_drink/daObj_SSDrink_IsDelete__FPv.s"
+static bool daObj_SSDrink_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE66AC-80CE66F4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

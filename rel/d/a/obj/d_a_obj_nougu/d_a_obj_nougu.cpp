@@ -163,7 +163,7 @@ static void daObj_Nougu_Create(void*); // 2
 static void daObj_Nougu_Delete(void*); // 2
 static void daObj_Nougu_Execute(void*); // 2
 static void daObj_Nougu_Draw(void*); // 2
-static void daObj_Nougu_IsDelete(void*); // 2
+static bool daObj_Nougu_IsDelete(void*); // 2
 
 extern "C" void __dt__13daObj_Nougu_cFv(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
@@ -188,7 +188,7 @@ extern "C" static void daObj_Nougu_Create__FPv(); // 1
 extern "C" static void daObj_Nougu_Delete__FPv(); // 1
 extern "C" static void daObj_Nougu_Execute__FPv(); // 1
 extern "C" static void daObj_Nougu_Draw__FPv(); // 1
-extern "C" static void daObj_Nougu_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Nougu_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_nougu_cpp(); // 1
 extern "C" void __dt__19daObj_Nougu_Param_cFv(); // 1
@@ -681,14 +681,9 @@ asm static void daObj_Nougu_Draw(void* param_0) {
 
 
 /* 80CA4888-80CA4890 0008+00 s=1 e=0 z=0  None .text      daObj_Nougu_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Nougu_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_nougu/d_a_obj_nougu/daObj_Nougu_IsDelete__FPv.s"
+static bool daObj_Nougu_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CA4890-80CA48D8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

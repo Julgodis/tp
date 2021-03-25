@@ -105,7 +105,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct J3DShape {
@@ -237,7 +237,7 @@ extern "C" void cLib_chaseF__FPfff(); // 1
 extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void PSMTXCopy(); // 1
@@ -369,25 +369,15 @@ asm csXyz::~csXyz() {
 
 
 /* 80D303D0-80D303D4 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D303D4-80D303D8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wchain/d_a_obj_wchain/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D303D8-80D30414 003C+00 s=2 e=0 z=0  None .text      __dt__4cXyzFv                                                */

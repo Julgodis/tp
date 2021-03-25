@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -210,7 +210,7 @@ static void daE_MD_Create(fopAc_ac_c*); // 2
 static void daE_MD_Delete(daE_MD_c*); // 2
 static void daE_MD_Draw(daE_MD_c*); // 2
 static void daE_MD_Execute(daE_MD_c*); // 2
-static void daE_MD_IsDelete(daE_MD_c*); // 2
+static bool daE_MD_IsDelete(daE_MD_c*); // 2
 
 extern "C" void initCcCylinder__8daE_MD_cFv(); // 1
 extern "C" void setCcCylinder__8daE_MD_cFf(); // 1
@@ -235,7 +235,7 @@ extern "C" void create__8daE_MD_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daE_MD_IsDelete__FP8daE_MD_c(); // 1
+extern "C" static bool daE_MD_IsDelete__FP8daE_MD_c(); // 1
 extern "C" static void func_8070A4D4(); // 1
 extern "C" static void func_8070A4DC(); // 1
 extern "C" extern u32 const lit_4212;
@@ -728,14 +728,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 8070A4CC-8070A4D4 0008+00 s=1 e=0 z=0  None .text      daE_MD_IsDelete__FP8daE_MD_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MD_IsDelete(daE_MD_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_md/d_a_e_md/daE_MD_IsDelete__FP8daE_MD_c.s"
+static bool daE_MD_IsDelete(daE_MD_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8070A4D4-8070A4DC 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

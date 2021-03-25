@@ -219,7 +219,7 @@ static void daObj_KBacket_Create(void*); // 2
 static void daObj_KBacket_Delete(void*); // 2
 static void daObj_KBacket_Execute(void*); // 2
 static void daObj_KBacket_Draw(void*); // 2
-static void daObj_KBacket_IsDelete(void*); // 2
+static bool daObj_KBacket_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__15daObj_KBacket_cFv(); // 1
@@ -249,7 +249,7 @@ extern "C" static void daObj_KBacket_Create__FPv(); // 1
 extern "C" static void daObj_KBacket_Delete__FPv(); // 1
 extern "C" static void daObj_KBacket_Execute__FPv(); // 1
 extern "C" static void daObj_KBacket_Draw__FPv(); // 1
-extern "C" static void daObj_KBacket_IsDelete__FPv(); // 1
+extern "C" static bool daObj_KBacket_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80587C88(); // 1
 extern "C" void __sinit_d_a_obj_kbacket_cpp(); // 1
@@ -982,14 +982,9 @@ asm static void daObj_KBacket_Draw(void* param_0) {
 
 
 /* 80587C38-80587C40 0008+00 s=1 e=0 z=0  None .text      daObj_KBacket_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_KBacket_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kbacket/d_a_obj_kbacket/daObj_KBacket_IsDelete__FPv.s"
+static bool daObj_KBacket_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80587C40-80587C88 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

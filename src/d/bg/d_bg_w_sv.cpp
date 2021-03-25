@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cBgD_t {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct cBgD_t {
 };
 
 struct dBgWSv {
@@ -67,28 +67,28 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
+struct dBgS_SphChk {
+};
+
 struct dBgS_CaptPoly {
-};
-
-struct dBgS_RoofChk {
-};
-
-struct dBgS_Acch {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dBgS_SplGrpChk {
-};
-
-struct cBgS_GrpPassChk {
 };
 
 struct cBgS_PolyPassChk {
 };
 
-struct dBgS_SphChk {
+struct fopAc_ac_c {
+};
+
+struct cBgS_GrpPassChk {
+};
+
+struct dBgS_RoofChk {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct dBgS_Acch {
 };
 
 struct dBgW {
@@ -307,14 +307,9 @@ asm void dBgWSv::TransPos(cBgS_PolyInfo const& param_0, void* param_1, bool para
 
 
 /* 800835D8-800835DC 0004+00 s=1 e=0 z=0  None .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& param_0, void* param_1, bool param_2, cXyz* param_3, csXyz* param_4, csXyz* param_5) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_sv/MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s"
+void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& param_0, void* param_1, bool param_2, cXyz* param_3, csXyz* param_4, csXyz* param_5) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

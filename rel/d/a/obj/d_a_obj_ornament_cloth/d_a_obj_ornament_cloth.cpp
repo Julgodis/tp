@@ -98,7 +98,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjOnCloth_Draw(daObjOnCloth_c*); // 2
 static void daObjOnCloth_Execute(daObjOnCloth_c*); // 2
-static void daObjOnCloth_IsDelete(daObjOnCloth_c*); // 2
+static bool daObjOnCloth_IsDelete(daObjOnCloth_c*); // 2
 static void daObjOnCloth_Delete(daObjOnCloth_c*); // 2
 static void daObjOnCloth_Create(fopAc_ac_c*); // 2
 
@@ -113,7 +113,7 @@ extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void daObjOnCloth_Draw__FP14daObjOnCloth_c(); // 1
 extern "C" static void daObjOnCloth_Execute__FP14daObjOnCloth_c(); // 1
-extern "C" static void daObjOnCloth_IsDelete__FP14daObjOnCloth_c(); // 1
+extern "C" static bool daObjOnCloth_IsDelete__FP14daObjOnCloth_c(); // 1
 extern "C" static void daObjOnCloth_Delete__FP14daObjOnCloth_c(); // 1
 extern "C" void __dt__12ClothJoint_cFv(); // 1
 extern "C" static void daObjOnCloth_Create__FP10fopAc_ac_c(); // 1
@@ -444,14 +444,9 @@ asm static void daObjOnCloth_Execute(daObjOnCloth_c* param_0) {
 
 
 /* 80595B2C-80595B34 0008+00 s=1 e=0 z=0  None .text      daObjOnCloth_IsDelete__FP14daObjOnCloth_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjOnCloth_IsDelete(daObjOnCloth_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_IsDelete__FP14daObjOnCloth_c.s"
+static bool daObjOnCloth_IsDelete(daObjOnCloth_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80595B34-80595B9C 0068+00 s=1 e=0 z=0  None .text      daObjOnCloth_Delete__FP14daObjOnCloth_c                      */
@@ -488,13 +483,8 @@ asm static void daObjOnCloth_Create(fopAc_ac_c* param_0) {
 
 
 /* 80595CA8-80595CAC 0004+00 s=1 e=0 z=0  None .text      __ct__12ClothJoint_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm ClothJoint_c::ClothJoint_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/__ct__12ClothJoint_cFv.s"
+ClothJoint_c::ClothJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 

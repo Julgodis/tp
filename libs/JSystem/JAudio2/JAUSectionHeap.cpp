@@ -17,6 +17,9 @@ struct JAISoundID {
 struct JAISeqDataUser {
 };
 
+struct JKRArchive {
+};
+
 struct JAISeqData {
 };
 
@@ -28,9 +31,6 @@ struct JKRHeap {
 
 struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
-};
-
-struct JKRArchive {
 };
 
 struct JAUSectionHeap {
@@ -46,7 +46,7 @@ struct JAUSectionHeap {
 	/* 802A60A0 */ void setSeqDataUser(JAISeqDataUser*);
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 	/* 802A61D0 */ void getSeqData(JAISoundID, JAISeqData*);
-	/* 802A6270 */ void releaseSeqData();
+	/* 802A6270 */ bool releaseSeqData();
 	/* 802A6278 */ ~JAUSectionHeap();
 };
 
@@ -117,14 +117,14 @@ struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
+};
+
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUBankTable> */
 struct JSULink__template0 {
-};
-
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
 };
 
 struct JAUBankTableDictionary {
@@ -221,7 +221,7 @@ extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
 extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser(); // 1
 extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
 extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData(); // 1
-extern "C" void releaseSeqData__14JAUSectionHeapFv(); // 1
+extern "C" bool releaseSeqData__14JAUSectionHeapFv(); // 1
 extern "C" void __dt__14JAUSectionHeapFv(); // 1
 extern "C" static void func_802A6440(); // 1
 extern "C" void __dt__10JAUSectionFv(); // 1
@@ -727,14 +727,9 @@ asm void JAUSectionHeap::getSeqData(JAISoundID param_0, JAISeqData* param_1) {
 
 
 /* 802A6270-802A6278 0008+00 s=2 e=0 z=0  None .text      releaseSeqData__14JAUSectionHeapFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAUSectionHeap::releaseSeqData() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAUSectionHeap/releaseSeqData__14JAUSectionHeapFv.s"
+bool JAUSectionHeap::releaseSeqData() {
+	return false;
 }
-#pragma pop
 
 
 /* 802A6278-802A6440 01C8+00 s=2 e=0 z=0  None .text      __dt__14JAUSectionHeapFv                                     */

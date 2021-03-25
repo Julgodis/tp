@@ -142,14 +142,14 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -222,7 +222,7 @@ static void s_ball_sub(void*, void*); // 2
 static void koro2_game(fshop_class*); // 2
 static void ball_wall_check(fshop_class*); // 2
 static void daFshop_Execute(fshop_class*); // 2
-static void daFshop_IsDelete(fshop_class*); // 2
+static bool daFshop_IsDelete(fshop_class*); // 2
 static void daFshop_Delete(fshop_class*); // 2
 static void koro2_heapinit(fopAc_ac_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
@@ -247,7 +247,7 @@ extern "C" static void s_ball_sub__FPvPv(); // 1
 extern "C" static void koro2_game__FP11fshop_class(); // 1
 extern "C" static void ball_wall_check__FP11fshop_class(); // 1
 extern "C" static void daFshop_Execute__FP11fshop_class(); // 1
-extern "C" static void daFshop_IsDelete__FP11fshop_class(); // 1
+extern "C" static bool daFshop_IsDelete__FP11fshop_class(); // 1
 extern "C" static void daFshop_Delete__FP11fshop_class(); // 1
 extern "C" static void koro2_heapinit__FP10fopAc_ac_c(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
@@ -1205,14 +1205,9 @@ asm static void daFshop_Execute(fshop_class* param_0) {
 
 
 /* 8086E6C4-8086E6CC 0008+00 s=1 e=0 z=0  None .text      daFshop_IsDelete__FP11fshop_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daFshop_IsDelete(fshop_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/daFshop_IsDelete__FP11fshop_class.s"
+static bool daFshop_IsDelete(fshop_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1651,14 +1646,9 @@ asm fs_koro2_s::~fs_koro2_s() {
 
 
 /* 8086FDB4-8086FDB8 0004+00 s=1 e=0 z=0  None .text      __ct__10fs_koro2_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm fs_koro2_s::fs_koro2_s() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__10fs_koro2_sFv.s"
+fs_koro2_s::fs_koro2_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FDB8-8086FE28 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
@@ -1695,14 +1685,9 @@ asm fs_tsubo_s::~fs_tsubo_s() {
 
 
 /* 8086FED4-8086FED8 0004+00 s=1 e=0 z=0  None .text      __ct__10fs_tsubo_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm fs_tsubo_s::fs_tsubo_s() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__10fs_tsubo_sFv.s"
+fs_tsubo_s::fs_tsubo_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FED8-8086FF38 0060+00 s=1 e=0 z=0  None .text      __dt__9fs_weed_sFv                                           */
@@ -1728,14 +1713,9 @@ asm fs_weed_s::fs_weed_s() {
 
 
 /* 8086FF80-8086FF84 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8086FF84-8086FFC0 003C+00 s=1 e=0 z=0  None .text      __dt__8fs_rod_sFv                                            */
@@ -1772,14 +1752,9 @@ asm fs_lure_s::~fs_lure_s() {
 
 
 /* 80870018-8087001C 0004+00 s=1 e=0 z=0  None .text      __ct__9fs_lure_sFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm fs_lure_s::fs_lure_s() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fshop/d_a_mg_fshop/__ct__9fs_lure_sFv.s"
+fs_lure_s::fs_lure_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8087001C-80870070 0054+00 s=0 e=1 z=0  None .text      __sinit_d_a_mg_fshop_cpp                                     */

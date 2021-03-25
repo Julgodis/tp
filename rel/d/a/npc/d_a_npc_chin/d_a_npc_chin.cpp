@@ -16,13 +16,13 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct J3DModel {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DJoint {
-};
-
-struct J3DModel {
 };
 
 struct daNpcChin_c {
@@ -51,7 +51,7 @@ struct daNpcChin_c {
 	/* 8098D938 */ void setMotionAnm(int, f32);
 	/* 8098DB44 */ void setExpression(int, f32);
 	/* 8098DB70 */ void setMotion(int, f32, int);
-	/* 8098DBB4 */ void drawDbgInfo();
+	/* 8098DBB4 */ bool drawDbgInfo();
 	/* 8098DBBC */ void reset();
 	/* 8098DCD0 */ void playExpression();
 	/* 8098E04C */ void playMotion();
@@ -150,23 +150,23 @@ struct daNpcF_Lookat_c {
 	/* 80990F50 */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
 struct J3DModelData {
-};
-
-struct J3DAnmTransform {
 };
 
 struct _GXColorS10 {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -269,9 +269,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -279,6 +276,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -430,7 +430,7 @@ static void daNpcChin_Create(void*); // 2
 static void daNpcChin_Delete(void*); // 2
 static void daNpcChin_Execute(void*); // 2
 static void daNpcChin_Draw(void*); // 2
-static void daNpcChin_IsDelete(void*); // 2
+static bool daNpcChin_IsDelete(void*); // 2
 
 extern "C" void loadModel__Q211daNpcChin_c12_SpotLight_cFv(); // 1
 extern "C" void setMtx__Q211daNpcChin_c12_SpotLight_cFv(); // 1
@@ -464,7 +464,7 @@ extern "C" void setExpressionBtp__11daNpcChin_cFi(); // 1
 extern "C" void setMotionAnm__11daNpcChin_cFif(); // 1
 extern "C" void setExpression__11daNpcChin_cFif(); // 1
 extern "C" void setMotion__11daNpcChin_cFifi(); // 1
-extern "C" void drawDbgInfo__11daNpcChin_cFv(); // 1
+extern "C" bool drawDbgInfo__11daNpcChin_cFv(); // 1
 extern "C" void reset__11daNpcChin_cFv(); // 1
 extern "C" void playExpression__11daNpcChin_cFv(); // 1
 extern "C" void playMotion__11daNpcChin_cFv(); // 1
@@ -508,7 +508,7 @@ extern "C" static void daNpcChin_Create__FPv(); // 1
 extern "C" static void daNpcChin_Delete__FPv(); // 1
 extern "C" static void daNpcChin_Execute__FPv(); // 1
 extern "C" static void daNpcChin_Draw__FPv(); // 1
-extern "C" static void daNpcChin_IsDelete__FPv(); // 1
+extern "C" static bool daNpcChin_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
@@ -2140,14 +2140,9 @@ asm void daNpcChin_c::setMotion(int param_0, f32 param_1, int param_2) {
 
 
 /* 8098DBB4-8098DBBC 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__11daNpcChin_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcChin_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/drawDbgInfo__11daNpcChin_cFv.s"
+bool daNpcChin_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8098DBBC-8098DCD0 0114+00 s=1 e=0 z=0  None .text      reset__11daNpcChin_cFv                                       */
@@ -2624,14 +2619,9 @@ asm static void daNpcChin_Draw(void* param_0) {
 
 
 /* 80990E94-80990E9C 0008+00 s=1 e=0 z=0  None .text      daNpcChin_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcChin_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/daNpcChin_IsDelete__FPv.s"
+static bool daNpcChin_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80990E9C-80990ECC 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -2690,14 +2680,9 @@ asm csXyz::~csXyz() {
 
 
 /* 8099105C-80991060 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80991060-8099109C 003C+00 s=5 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -2712,14 +2697,9 @@ asm cXyz::~cXyz() {
 
 
 /* 8099109C-809910A0 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809910A0-809912EC 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -2778,36 +2758,21 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80991618-8099161C 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8099161C-80991620 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80991620-80991624 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_chin/d_a_npc_chin/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80991624-8099166C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

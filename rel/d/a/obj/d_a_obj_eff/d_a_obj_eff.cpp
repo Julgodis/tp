@@ -33,19 +33,19 @@ struct daObj {
 
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -59,10 +59,10 @@ struct dPa_control_c {
 
 extern "C" void _create__Q28daObjEff5Act_cFv(); // 1
 extern "C" static void func_8057CA94(); // 1
-extern "C" static void func_8057CAB4(); // 1
-extern "C" static void func_8057CABC(); // 1
-extern "C" static void func_8057CAC4(); // 1
-extern "C" static void func_8057CACC(); // 1
+extern "C" static bool func_8057CAB4(); // 1
+extern "C" static bool func_8057CABC(); // 1
+extern "C" static bool func_8057CAC4(); // 1
+extern "C" static bool func_8057CACC(); // 1
 extern "C" void func_8057CAD4(); // 1
 extern "C" extern void* g_profile_Obj_Eff[12];
 
@@ -110,47 +110,27 @@ extern "C" asm static void func_8057CA94() {
 
 
 /* 8057CAB4-8057CABC 0008+00 s=1 e=0 z=0  None .text      Mthd_Delete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8057CAB4() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAB4.s"
+extern "C" static bool func_8057CAB4() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CABC-8057CAC4 0008+00 s=1 e=0 z=0  None .text      Mthd_Execute__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8057CABC() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CABC.s"
+extern "C" static bool func_8057CABC() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CAC4-8057CACC 0008+00 s=1 e=0 z=0  None .text      Mthd_Draw__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8057CAC4() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CAC4.s"
+extern "C" static bool func_8057CAC4() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CACC-8057CAD4 0008+00 s=1 e=0 z=0  None .text      Mthd_IsDelete__Q28daObjEff25@unnamed@d_a_obj_eff_cpp@FPv     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8057CACC() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_eff/d_a_obj_eff/func_8057CACC.s"
+extern "C" static bool func_8057CACC() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057CAD4-8057CAF0 001C+00 s=1 e=0 z=0  None .text      PrmAbstract<Q38daObjEff5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ38daObjEff5Act_c5Prm_eQ38daObjEff5Act_c5Prm_e */

@@ -66,7 +66,7 @@ struct dCamera_c {
 	/* 80090478 */ void styleEvCamera();
 	/* 80090514 */ void gameOverEvCamera();
 	/* 80091468 */ void tactEvCamera();
-	/* 800923B8 */ void turnToActorEvCamera();
+	/* 800923B8 */ bool turnToActorEvCamera();
 	/* 800923C0 */ void stbWaitEvCamera();
 	/* 800924D0 */ void saveEvCamera();
 	/* 8009258C */ void loadEvCamera();
@@ -81,7 +81,7 @@ struct dCamera_c {
 	/* 80095FD0 */ void digHoleEvCamera();
 	/* 800965AC */ void hintTalkEvCamera();
 	/* 80096EDC */ void bspTransEvCamera();
-	/* 80097694 */ void portalWarpEvCamera();
+	/* 80097694 */ bool portalWarpEvCamera();
 	/* 8009771C */ void attentionPos(fopAc_ac_c*);
 	/* 80097738 */ void directionOf(fopAc_ac_c*);
 	/* 8009775C */ void positionOf(fopAc_ac_c*);
@@ -141,10 +141,10 @@ struct daMidna_c {
 
 struct daPy_py_c {
 	/* 800977B4 */ void checkMidnaRide() const;
-	/* 80097850 */ void checkCanoeRide() const;
-	/* 80097858 */ void checkBoardRide() const;
-	/* 80097860 */ void checkSpinnerRide() const;
-	/* 80097868 */ void checkBoarRide() const;
+	/* 80097850 */ bool checkCanoeRide() const;
+	/* 80097858 */ bool checkBoardRide() const;
+	/* 80097860 */ bool checkSpinnerRide() const;
+	/* 80097868 */ bool checkBoarRide() const;
 };
 
 struct daAlink_c {
@@ -254,7 +254,7 @@ extern "C" void styleEvCamera__9dCamera_cFv(); // 1
 extern "C" void gameOverEvCamera__9dCamera_cFv(); // 1
 extern "C" void tactEvCamera__9dCamera_cFv(); // 1
 extern "C" static void dComIfGp_saveCameraPosition__FiP4cXyzP4cXyzfs(); // 1
-extern "C" void turnToActorEvCamera__9dCamera_cFv(); // 1
+extern "C" bool turnToActorEvCamera__9dCamera_cFv(); // 1
 extern "C" void stbWaitEvCamera__9dCamera_cFv(); // 1
 extern "C" void saveEvCamera__9dCamera_cFv(); // 1
 extern "C" void loadEvCamera__9dCamera_cFv(); // 1
@@ -269,7 +269,7 @@ extern "C" void peepHoleEvCamera__9dCamera_cFv(); // 1
 extern "C" void digHoleEvCamera__9dCamera_cFv(); // 1
 extern "C" void hintTalkEvCamera__9dCamera_cFv(); // 1
 extern "C" void bspTransEvCamera__9dCamera_cFv(); // 1
-extern "C" void portalWarpEvCamera__9dCamera_cFv(); // 1
+extern "C" bool portalWarpEvCamera__9dCamera_cFv(); // 1
 extern "C" void __sinit_d_ev_camera_cpp(); // 1
 extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c(); // 1
 extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c(); // 1
@@ -283,10 +283,10 @@ extern "C" void __as__4cXyzFRC4cXyz(); // 1
 extern "C" void __ct__4cXyzFRC4cXyz(); // 1
 extern "C" static void func_80097810(); // 1
 extern "C" static void func_8009784C(); // 1
-extern "C" void checkCanoeRide__9daPy_py_cCFv(); // 1
-extern "C" void checkBoardRide__9daPy_py_cCFv(); // 1
-extern "C" void checkSpinnerRide__9daPy_py_cCFv(); // 1
-extern "C" void checkBoarRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkCanoeRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkBoardRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkSpinnerRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkBoarRide__9daPy_py_cCFv(); // 1
 extern "C" void getShadowTalkAtnPos__9daAlink_cFv(); // 1
 extern "C" extern u8 const lit_5985[28];
 extern "C" extern u8 const lit_5986[28];
@@ -1484,14 +1484,9 @@ asm static void dComIfGp_saveCameraPosition(int param_0, cXyz* param_1, cXyz* pa
 
 
 /* 800923B8-800923C0 0008+00 s=0 e=1 z=0  None .text      turnToActorEvCamera__9dCamera_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCamera_c::turnToActorEvCamera() {
-	nofralloc
-#include "asm/d/d_ev_camera/turnToActorEvCamera__9dCamera_cFv.s"
+bool dCamera_c::turnToActorEvCamera() {
+	return true;
 }
-#pragma pop
 
 
 /* 800923C0-800924D0 0110+00 s=0 e=1 z=0  None .text      stbWaitEvCamera__9dCamera_cFv                                */
@@ -1903,14 +1898,9 @@ asm void dCamera_c::bspTransEvCamera() {
 
 
 /* 80097694-8009769C 0008+00 s=0 e=1 z=0  None .text      portalWarpEvCamera__9dCamera_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dCamera_c::portalWarpEvCamera() {
-	nofralloc
-#include "asm/d/d_ev_camera/portalWarpEvCamera__9dCamera_cFv.s"
+bool dCamera_c::portalWarpEvCamera() {
+	return true;
 }
-#pragma pop
 
 
 /* 8009769C-8009771C 0080+00 s=0 e=1 z=0  None .text      __sinit_d_ev_camera_cpp                                      */
@@ -2046,58 +2036,33 @@ extern "C" asm static void func_80097810() {
 
 
 /* 8009784C-80097850 0004+00 s=1 e=0 z=0  None .text      __ct__Q29dCamera_c26@class$5983d_ev_camera_cppFv             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8009784C() {
-	nofralloc
-#include "asm/d/d_ev_camera/func_8009784C.s"
+extern "C" static void func_8009784C() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80097850-80097858 0008+00 s=0 e=1 z=0  None .text      checkCanoeRide__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkCanoeRide() const {
-	nofralloc
-#include "asm/d/d_ev_camera/checkCanoeRide__9daPy_py_cCFv.s"
+bool daPy_py_c::checkCanoeRide() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80097858-80097860 0008+00 s=0 e=1 z=0  None .text      checkBoardRide__9daPy_py_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkBoardRide() const {
-	nofralloc
-#include "asm/d/d_ev_camera/checkBoardRide__9daPy_py_cCFv.s"
+bool daPy_py_c::checkBoardRide() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80097860-80097868 0008+00 s=0 e=1 z=0  None .text      checkSpinnerRide__9daPy_py_cCFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkSpinnerRide() const {
-	nofralloc
-#include "asm/d/d_ev_camera/checkSpinnerRide__9daPy_py_cCFv.s"
+bool daPy_py_c::checkSpinnerRide() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80097868-80097870 0008+00 s=0 e=1 z=0  None .text      checkBoarRide__9daPy_py_cCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::checkBoarRide() const {
-	nofralloc
-#include "asm/d/d_ev_camera/checkBoarRide__9daPy_py_cCFv.s"
+bool daPy_py_c::checkBoarRide() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80097870-80097878 0008+00 s=0 e=1 z=0  None .text      getShadowTalkAtnPos__9daAlink_cFv                            */

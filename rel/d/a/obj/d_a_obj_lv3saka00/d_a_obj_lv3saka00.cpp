@@ -20,7 +20,7 @@ struct daObjLv3saka_c {
 	/* 80C5C0FC */ void Execute(f32 (** )[3][4]);
 	/* 80C5C17C */ void setNrmDzb();
 	/* 80C5C1F8 */ void setWtrDzb();
-	/* 80C5C274 */ void Draw();
+	/* 80C5C274 */ bool Draw();
 	/* 80C5C27C */ void Delete();
 };
 
@@ -68,9 +68,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -104,7 +104,7 @@ extern "C" void create1st__14daObjLv3saka_cFv(); // 1
 extern "C" void Execute__14daObjLv3saka_cFPPA3_A4_f(); // 1
 extern "C" void setNrmDzb__14daObjLv3saka_cFv(); // 1
 extern "C" void setWtrDzb__14daObjLv3saka_cFv(); // 1
-extern "C" void Draw__14daObjLv3saka_cFv(); // 1
+extern "C" bool Draw__14daObjLv3saka_cFv(); // 1
 extern "C" void Delete__14daObjLv3saka_cFv(); // 1
 extern "C" static void daObjLv3saka_create1st__FP14daObjLv3saka_c(); // 1
 extern "C" static void daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c(); // 1
@@ -131,9 +131,9 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -272,14 +272,9 @@ asm void daObjLv3saka_c::setWtrDzb() {
 
 
 /* 80C5C274-80C5C27C 0008+00 s=1 e=0 z=0  None .text      Draw__14daObjLv3saka_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLv3saka_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv3saka00/d_a_obj_lv3saka00/Draw__14daObjLv3saka_cFv.s"
+bool daObjLv3saka_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C5C27C-80C5C2F0 0074+00 s=1 e=0 z=0  None .text      Delete__14daObjLv3saka_cFv                                   */

@@ -18,9 +18,9 @@ extern "C" void gdev_cc_post_stop(); // 1
 extern "C" void gdev_cc_pre_continue(); // 1
 extern "C" void gdev_cc_write(); // 1
 extern "C" void gdev_cc_read(); // 1
-extern "C" void gdev_cc_close(); // 1
+extern "C" bool gdev_cc_close(); // 1
 extern "C" void gdev_cc_open(); // 1
-extern "C" void gdev_cc_shutdown(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
 extern "C" void gdev_cc_initialize(); // 1
 extern "C" extern u8 const lit_319[41 + 3 /* padding */];
 extern "C" extern u8 const lit_320[28];
@@ -165,14 +165,9 @@ extern "C" asm void gdev_cc_read() {
 
 
 /* 80372B98-80372BA0 0008+00 s=0 e=1 z=0  None .text      gdev_cc_close                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void gdev_cc_close() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_close.s"
+extern "C" bool gdev_cc_close() {
+	return false;
 }
-#pragma pop
 
 
 /* 80372BA0-80372BC4 0024+00 s=0 e=1 z=0  None .text      gdev_cc_open                                                 */
@@ -187,14 +182,9 @@ extern "C" asm void gdev_cc_open() {
 
 
 /* 80372BC4-80372BCC 0008+00 s=0 e=1 z=0  None .text      gdev_cc_shutdown                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void gdev_cc_shutdown() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_shutdown.s"
+extern "C" bool gdev_cc_shutdown() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -125,7 +125,7 @@ struct cCcS {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjNameplate_Draw(daObjNameplate_c*); // 2
 static void daObjNameplate_Execute(daObjNameplate_c*); // 2
-static void daObjNameplate_IsDelete(daObjNameplate_c*); // 2
+static bool daObjNameplate_IsDelete(daObjNameplate_c*); // 2
 static void daObjNameplate_Delete(daObjNameplate_c*); // 2
 static void daObjNameplate_Create(fopAc_ac_c*); // 2
 
@@ -141,7 +141,7 @@ extern "C" void messageProc__16daObjNameplate_cFv(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjNameplate_Draw__FP16daObjNameplate_c(); // 1
 extern "C" static void daObjNameplate_Execute__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_IsDelete__FP16daObjNameplate_c(); // 1
+extern "C" static bool daObjNameplate_IsDelete__FP16daObjNameplate_c(); // 1
 extern "C" static void daObjNameplate_Delete__FP16daObjNameplate_c(); // 1
 extern "C" static void daObjNameplate_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
@@ -435,14 +435,9 @@ asm static void daObjNameplate_Execute(daObjNameplate_c* param_0) {
 
 
 /* 80594AB4-80594ABC 0008+00 s=1 e=0 z=0  None .text      daObjNameplate_IsDelete__FP16daObjNameplate_c                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjNameplate_IsDelete(daObjNameplate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_nameplate/d_a_obj_nameplate/daObjNameplate_IsDelete__FP16daObjNameplate_c.s"
+static bool daObjNameplate_IsDelete(daObjNameplate_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

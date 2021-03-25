@@ -25,7 +25,7 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -34,10 +34,10 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Vec {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -100,7 +100,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void daNpc_Inko_Draw(npc_inko_class*); // 2
 static void anm_init(npc_inko_class*, int, f32, u8, f32); // 2
 static void daNpc_Inko_Execute(npc_inko_class*); // 2
-static void daNpc_Inko_IsDelete(npc_inko_class*); // 2
+static bool daNpc_Inko_IsDelete(npc_inko_class*); // 2
 static void daNpc_Inko_Delete(npc_inko_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Inko_Create(fopAc_ac_c*); // 2
@@ -109,7 +109,7 @@ extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void daNpc_Inko_Draw__FP14npc_inko_class(); // 1
 extern "C" static void anm_init__FP14npc_inko_classifUcf(); // 1
 extern "C" static void daNpc_Inko_Execute__FP14npc_inko_class(); // 1
-extern "C" static void daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
+extern "C" static bool daNpc_Inko_IsDelete__FP14npc_inko_class(); // 1
 extern "C" static void daNpc_Inko_Delete__FP14npc_inko_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daNpc_Inko_Create__FP10fopAc_ac_c(); // 1
@@ -444,14 +444,9 @@ asm static void daNpc_Inko_Execute(npc_inko_class* param_0) {
 
 
 /* 80A0DD70-80A0DD78 0008+00 s=1 e=0 z=0  None .text      daNpc_Inko_IsDelete__FP14npc_inko_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Inko_IsDelete(npc_inko_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_inko/d_a_npc_inko/daNpc_Inko_IsDelete__FP14npc_inko_class.s"
+static bool daNpc_Inko_IsDelete(npc_inko_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A0DD78-80A0DDC8 0050+00 s=1 e=0 z=0  None .text      daNpc_Inko_Delete__FP14npc_inko_class                        */

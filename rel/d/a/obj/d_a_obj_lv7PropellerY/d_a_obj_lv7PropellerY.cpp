@@ -77,10 +77,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ void Create();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -168,10 +168,10 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -475,14 +475,9 @@ asm void daPropY_c::init_modeMoveWait() {
 
 
 /* 80C859C0-80C859C4 0004+00 s=1 e=0 z=0  None .text      modeMoveWait__9daPropY_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPropY_c::modeMoveWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv7PropellerY/d_a_obj_lv7PropellerY/modeMoveWait__9daPropY_cFv.s"
+void daPropY_c::modeMoveWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C859C4-80C859E0 001C+00 s=2 e=0 z=0  None .text      init_modeMove__9daPropY_cFv                                  */

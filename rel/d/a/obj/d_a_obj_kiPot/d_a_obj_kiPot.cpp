@@ -28,8 +28,8 @@ struct daKiPot_c {
 	/* 80C44F74 */ void init_modeWait();
 	/* 80C44F80 */ void modeWait();
 	/* 80C45008 */ void chkEvent();
-	/* 80C45058 */ void Draw();
-	/* 80C45060 */ void Delete();
+	/* 80C45058 */ bool Draw();
+	/* 80C45060 */ bool Delete();
 };
 
 struct fopAc_ac_c {
@@ -58,8 +58,8 @@ extern "C" void procMain__9daKiPot_cFv(); // 1
 extern "C" void init_modeWait__9daKiPot_cFv(); // 1
 extern "C" void modeWait__9daKiPot_cFv(); // 1
 extern "C" void chkEvent__9daKiPot_cFv(); // 1
-extern "C" void Draw__9daKiPot_cFv(); // 1
-extern "C" void Delete__9daKiPot_cFv(); // 1
+extern "C" bool Draw__9daKiPot_cFv(); // 1
+extern "C" bool Delete__9daKiPot_cFv(); // 1
 extern "C" static void daKiPot_Draw__FP9daKiPot_c(); // 1
 extern "C" static void daKiPot_Execute__FP9daKiPot_c(); // 1
 extern "C" static void daKiPot_Delete__FP9daKiPot_c(); // 1
@@ -278,25 +278,15 @@ asm void daKiPot_c::chkEvent() {
 
 
 /* 80C45058-80C45060 0008+00 s=1 e=0 z=0  None .text      Draw__9daKiPot_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daKiPot_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/Draw__9daKiPot_cFv.s"
+bool daKiPot_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C45060-80C45068 0008+00 s=1 e=0 z=0  None .text      Delete__9daKiPot_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daKiPot_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kiPot/d_a_obj_kiPot/Delete__9daKiPot_cFv.s"
+bool daKiPot_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C45068-80C45088 0020+00 s=1 e=0 z=0  None .text      daKiPot_Draw__FP9daKiPot_c                                   */

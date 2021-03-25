@@ -15,7 +15,7 @@ struct daTag_KMsg_c {
 	/* 8048DE78 */ void create();
 	/* 8048DFDC */ void Delete();
 	/* 8048E010 */ void Execute();
-	/* 8048E8B8 */ void Draw();
+	/* 8048E8B8 */ bool Draw();
 	/* 8048E8C0 */ void isDelete();
 	/* 8048EA30 */ ~daTag_KMsg_c();
 };
@@ -89,18 +89,18 @@ static void daTag_KMsg_Create(void*); // 2
 static void daTag_KMsg_Delete(void*); // 2
 static void daTag_KMsg_Execute(void*); // 2
 static void daTag_KMsg_Draw(void*); // 2
-static void daTag_KMsg_IsDelete(void*); // 2
+static bool daTag_KMsg_IsDelete(void*); // 2
 
 extern "C" void create__12daTag_KMsg_cFv(); // 1
 extern "C" void Delete__12daTag_KMsg_cFv(); // 1
 extern "C" void Execute__12daTag_KMsg_cFv(); // 1
-extern "C" void Draw__12daTag_KMsg_cFv(); // 1
+extern "C" bool Draw__12daTag_KMsg_cFv(); // 1
 extern "C" void isDelete__12daTag_KMsg_cFv(); // 1
 extern "C" static void daTag_KMsg_Create__FPv(); // 1
 extern "C" static void daTag_KMsg_Delete__FPv(); // 1
 extern "C" static void daTag_KMsg_Execute__FPv(); // 1
 extern "C" static void daTag_KMsg_Draw__FPv(); // 1
-extern "C" static void daTag_KMsg_IsDelete__FPv(); // 1
+extern "C" static bool daTag_KMsg_IsDelete__FPv(); // 1
 extern "C" void __dt__12daTag_KMsg_cFv(); // 1
 extern "C" extern u32 const lit_4206;
 extern "C" extern u32 const lit_4207;
@@ -301,14 +301,9 @@ asm void daTag_KMsg_c::Execute() {
 
 
 /* 8048E8B8-8048E8C0 0008+00 s=1 e=0 z=0  None .text      Draw__12daTag_KMsg_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_KMsg_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/Draw__12daTag_KMsg_cFv.s"
+bool daTag_KMsg_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048E8C0-8048E9A8 00E8+00 s=2 e=0 z=0  None .text      isDelete__12daTag_KMsg_cFv                                   */
@@ -367,14 +362,9 @@ asm static void daTag_KMsg_Draw(void* param_0) {
 
 
 /* 8048EA28-8048EA30 0008+00 s=1 e=0 z=0  None .text      daTag_KMsg_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_KMsg_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_IsDelete__FPv.s"
+static bool daTag_KMsg_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048EA30-8048EAD4 00A4+00 s=1 e=0 z=0  None .text      __dt__12daTag_KMsg_cFv                                       */

@@ -131,7 +131,7 @@ static void daObj_SMTile_Create(void*); // 2
 static void daObj_SMTile_Delete(void*); // 2
 static void daObj_SMTile_Execute(void*); // 2
 static void daObj_SMTile_Draw(void*); // 2
-static void daObj_SMTile_IsDelete(void*); // 2
+static bool daObj_SMTile_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__14daObj_SMTile_cFv(); // 1
@@ -152,7 +152,7 @@ extern "C" static void daObj_SMTile_Create__FPv(); // 1
 extern "C" static void daObj_SMTile_Delete__FPv(); // 1
 extern "C" static void daObj_SMTile_Execute__FPv(); // 1
 extern "C" static void daObj_SMTile_Draw__FPv(); // 1
-extern "C" static void daObj_SMTile_IsDelete__FPv(); // 1
+extern "C" static bool daObj_SMTile_IsDelete__FPv(); // 1
 extern "C" static void func_80CDE2A4(); // 1
 extern "C" void __sinit_d_a_obj_smtile_cpp(); // 1
 extern "C" void __dt__20daObj_SMTile_Param_cFv(); // 1
@@ -364,14 +364,9 @@ asm void daObj_SMTile_c::create() {
 
 
 /* 80CDD580-80CDD584 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDD584-80CDD5CC 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
@@ -529,14 +524,9 @@ asm static void daObj_SMTile_Draw(void* param_0) {
 
 
 /* 80CDE29C-80CDE2A4 0008+00 s=1 e=0 z=0  None .text      daObj_SMTile_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_SMTile_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smtile/d_a_obj_smtile/daObj_SMTile_IsDelete__FPv.s"
+static bool daObj_SMTile_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDE2A4-80CDE2C0 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<i>__FPi                                       */

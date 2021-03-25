@@ -116,19 +116,19 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -169,11 +169,11 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
-};
-
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -318,7 +318,7 @@ static void ball_bg_check(e_hzelda_class*); // 2
 static void demo_camera(e_hzelda_class*); // 2
 static void anm_se_set(e_hzelda_class*); // 2
 static void daE_HZELDA_Execute(e_hzelda_class*); // 2
-static void daE_HZELDA_IsDelete(e_hzelda_class*); // 2
+static bool daE_HZELDA_IsDelete(e_hzelda_class*); // 2
 static void daE_HZELDA_Delete(e_hzelda_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_HZELDA_Create(fopAc_ac_c*); // 2
@@ -339,7 +339,7 @@ extern "C" static void ball_bg_check__FP14e_hzelda_class(); // 1
 extern "C" static void demo_camera__FP14e_hzelda_class(); // 1
 extern "C" static void anm_se_set__FP14e_hzelda_class(); // 1
 extern "C" static void daE_HZELDA_Execute__FP14e_hzelda_class(); // 1
-extern "C" static void daE_HZELDA_IsDelete__FP14e_hzelda_class(); // 1
+extern "C" static bool daE_HZELDA_IsDelete__FP14e_hzelda_class(); // 1
 extern "C" static void daE_HZELDA_Delete__FP14e_hzelda_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1249,14 +1249,9 @@ asm static void daE_HZELDA_Execute(e_hzelda_class* param_0) {
 
 
 /* 806F474C-806F4754 0008+00 s=1 e=0 z=0  None .text      daE_HZELDA_IsDelete__FP14e_hzelda_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_HZELDA_IsDelete(e_hzelda_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_hzelda/d_a_e_hzelda/daE_HZELDA_IsDelete__FP14e_hzelda_class.s"
+static bool daE_HZELDA_IsDelete(e_hzelda_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806F4754-806F47C4 0070+00 s=1 e=0 z=0  None .text      daE_HZELDA_Delete__FP14e_hzelda_class                        */

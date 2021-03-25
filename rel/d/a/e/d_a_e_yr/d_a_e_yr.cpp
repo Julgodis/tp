@@ -83,19 +83,19 @@ struct Z2CreatureEnemy {
 	/* 802C1B90 */ void setEnemyName(char const*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -275,7 +275,7 @@ static void e_yr_damage(e_yr_class*); // 2
 static void damage_check(e_yr_class*); // 2
 static void ground_angle_set(e_yr_class*); // 2
 static void daE_Yr_Execute(e_yr_class*); // 2
-static void daE_Yr_IsDelete(e_yr_class*); // 2
+static bool daE_Yr_IsDelete(e_yr_class*); // 2
 static void daE_Yr_Delete(e_yr_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Yr_Create(fopAc_ac_c*); // 2
@@ -303,7 +303,7 @@ extern "C" static void e_yr_damage__FP10e_yr_class(); // 1
 extern "C" static void damage_check__FP10e_yr_class(); // 1
 extern "C" static void ground_angle_set__FP10e_yr_class(); // 1
 extern "C" static void daE_Yr_Execute__FP10e_yr_class(); // 1
-extern "C" static void daE_Yr_IsDelete__FP10e_yr_class(); // 1
+extern "C" static bool daE_Yr_IsDelete__FP10e_yr_class(); // 1
 extern "C" static void daE_Yr_Delete__FP10e_yr_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Yr_Create__FP10fopAc_ac_c(); // 1
@@ -1225,14 +1225,9 @@ asm static void daE_Yr_Execute(e_yr_class* param_0) {
 
 
 /* 8082789C-808278A4 0008+00 s=1 e=0 z=0  None .text      daE_Yr_IsDelete__FP10e_yr_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Yr_IsDelete(e_yr_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yr/d_a_e_yr/daE_Yr_IsDelete__FP10e_yr_class.s"
+static bool daE_Yr_IsDelete(e_yr_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808278A4-808278F4 0050+00 s=1 e=0 z=0  None .text      daE_Yr_Delete__FP10e_yr_class                                */
@@ -1416,14 +1411,9 @@ asm e_yr_class::e_yr_class() {
 
 
 /* 80827F80-80827F84 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yr/d_a_e_yr/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80827F84-80827FCC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

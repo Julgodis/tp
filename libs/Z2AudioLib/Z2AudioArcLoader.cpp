@@ -165,14 +165,9 @@ asm void Z2AudioArcLoader::readBFCA(void const* param_0) {
 
 
 /* 802A9B54-802A9B58 0004+00 s=1 e=0 z=0  None .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Z2AudioArcLoader::readBSTN(void const* param_0, u32 param_1) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2AudioArcLoader/readBSTN__16Z2AudioArcLoaderFPCvUl.s"
+void Z2AudioArcLoader::readBSTN(void const* param_0, u32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802A9B58-802A9BC8 0070+00 s=1 e=0 z=0  None .text      __dt__16Z2AudioArcLoaderFv                                   */

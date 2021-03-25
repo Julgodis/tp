@@ -15,7 +15,7 @@ struct daTagWljump_c {
 	/* 80D64EB8 */ void create();
 	/* 80D65004 */ ~daTagWljump_c();
 	/* 80D65090 */ void execute();
-	/* 80D6589C */ void draw();
+	/* 80D6589C */ bool draw();
 };
 
 struct fopAc_ac_c {
@@ -76,7 +76,7 @@ extern "C" void __dt__13daTagWljump_cFv(); // 1
 extern "C" static void daTagWljump_Delete__FP13daTagWljump_c(); // 1
 extern "C" void execute__13daTagWljump_cFv(); // 1
 extern "C" static void daTagWljump_Execute__FP13daTagWljump_c(); // 1
-extern "C" void draw__13daTagWljump_cFv(); // 1
+extern "C" bool draw__13daTagWljump_cFv(); // 1
 extern "C" static void daTagWljump_Draw__FP13daTagWljump_c(); // 1
 extern "C" extern u32 const lit_4045;
 extern "C" extern u8 const lit_4046[4 + 4 /* padding */];
@@ -197,14 +197,9 @@ asm static void daTagWljump_Execute(daTagWljump_c* param_0) {
 
 
 /* 80D6589C-80D658A4 0008+00 s=1 e=0 z=0  None .text      draw__13daTagWljump_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagWljump_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_wljump/d_a_tag_wljump/draw__13daTagWljump_cFv.s"
+bool daTagWljump_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D658A4-80D658C4 0020+00 s=1 e=0 z=0  None .text      daTagWljump_Draw__FP13daTagWljump_c                          */

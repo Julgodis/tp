@@ -62,20 +62,20 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void dEnvSe_Draw(dEnvSe_c*); // 2
+static bool dEnvSe_Draw(dEnvSe_c*); // 2
 static void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*); // 2
 static void dEnvSe_Execute(dEnvSe_c*); // 2
-static void dEnvSe_IsDelete(dEnvSe_c*); // 2
-static void dEnvSe_Delete(dEnvSe_c*); // 2
+static bool dEnvSe_IsDelete(dEnvSe_c*); // 2
+static bool dEnvSe_Delete(dEnvSe_c*); // 2
 static void dEnvSe_Create(dEnvSe_c*); // 2
 
-extern "C" static void dEnvSe_Draw__FP8dEnvSe_c(); // 1
+extern "C" static bool dEnvSe_Draw__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath(); // 1
 extern "C" void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc(); // 1
 extern "C" void execute__8dEnvSe_cFv(); // 1
 extern "C" static void dEnvSe_Execute__FP8dEnvSe_c(); // 1
-extern "C" static void dEnvSe_IsDelete__FP8dEnvSe_c(); // 1
-extern "C" static void dEnvSe_Delete__FP8dEnvSe_c(); // 1
+extern "C" static bool dEnvSe_IsDelete__FP8dEnvSe_c(); // 1
+extern "C" static bool dEnvSe_Delete__FP8dEnvSe_c(); // 1
 extern "C" static void dEnvSe_Create__FP8dEnvSe_c(); // 1
 extern "C" extern char const* const d_d_envse__stringBase0;
 extern "C" extern void* g_profile_ENVSE[10 + 1 /* padding */];
@@ -132,14 +132,9 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* 80182DD4-80182DDC 0008+00 s=1 e=0 z=0  None .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dEnvSe_Draw(dEnvSe_c* param_0) {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Draw__FP8dEnvSe_c.s"
+static bool dEnvSe_Draw(dEnvSe_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -204,25 +199,15 @@ asm static void dEnvSe_Execute(dEnvSe_c* param_0) {
 
 
 /* 801835C0-801835C8 0008+00 s=1 e=0 z=0  None .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dEnvSe_IsDelete(dEnvSe_c* param_0) {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_IsDelete__FP8dEnvSe_c.s"
+static bool dEnvSe_IsDelete(dEnvSe_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 801835C8-801835D0 0008+00 s=1 e=0 z=0  None .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dEnvSe_Delete(dEnvSe_c* param_0) {
-	nofralloc
-#include "asm/d/d_envse/dEnvSe_Delete__FP8dEnvSe_c.s"
+static bool dEnvSe_Delete(dEnvSe_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 801835D0-801835F8 0028+00 s=1 e=0 z=0  None .text      dEnvSe_Create__FP8dEnvSe_c                                   */

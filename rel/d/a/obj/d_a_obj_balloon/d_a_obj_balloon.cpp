@@ -179,7 +179,7 @@ struct daBalloon2D_c {
 
 static void daObj_Balloon_Draw(daObj_Balloon_c*); // 2
 static void daObj_Balloon_Execute(daObj_Balloon_c*); // 2
-static void daObj_Balloon_IsDelete(daObj_Balloon_c*); // 2
+static bool daObj_Balloon_IsDelete(daObj_Balloon_c*); // 2
 static void daObj_Balloon_Delete(daObj_Balloon_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Balloon_Create(daObj_Balloon_c*); // 2
@@ -193,7 +193,7 @@ extern "C" void action__15daObj_Balloon_cFv(); // 1
 extern "C" void mtx_set__15daObj_Balloon_cFv(); // 1
 extern "C" void execute__15daObj_Balloon_cFv(); // 1
 extern "C" static void daObj_Balloon_Execute__FP15daObj_Balloon_c(); // 1
-extern "C" static void daObj_Balloon_IsDelete__FP15daObj_Balloon_c(); // 1
+extern "C" static bool daObj_Balloon_IsDelete__FP15daObj_Balloon_c(); // 1
 extern "C" void _delete__15daObj_Balloon_cFv(); // 1
 extern "C" static void daObj_Balloon_Delete__FP15daObj_Balloon_c(); // 1
 extern "C" void CreateHeap__15daObj_Balloon_cFv(); // 1
@@ -687,14 +687,9 @@ asm static void daObj_Balloon_Execute(daObj_Balloon_c* param_0) {
 
 
 /* 80BA872C-80BA8734 0008+00 s=1 e=0 z=0  None .text      daObj_Balloon_IsDelete__FP15daObj_Balloon_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Balloon_IsDelete(daObj_Balloon_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_balloon/d_a_obj_balloon/daObj_Balloon_IsDelete__FP15daObj_Balloon_c.s"
+static bool daObj_Balloon_IsDelete(daObj_Balloon_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

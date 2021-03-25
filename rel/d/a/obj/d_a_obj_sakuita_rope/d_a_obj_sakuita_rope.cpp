@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -22,6 +19,9 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266F48 */ void normalizeZP();
+};
+
+struct J3DModelData {
 };
 
 struct Sakuita_c {
@@ -66,10 +66,10 @@ struct cCcD_GStts {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -114,7 +114,7 @@ struct dScnKy_env_light_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjItaRope_Draw(daObjItaRope_c*); // 2
 static void daObjItaRope_Execute(daObjItaRope_c*); // 2
-static void daObjItaRope_IsDelete(daObjItaRope_c*); // 2
+static bool daObjItaRope_IsDelete(daObjItaRope_c*); // 2
 static void daObjItaRope_Delete(daObjItaRope_c*); // 2
 static void daObjItaRope_Create(fopAc_ac_c*); // 2
 
@@ -137,7 +137,7 @@ extern "C" void __dt__10RopeWork_cFv(); // 1
 extern "C" void __ct__10RopeWork_cFv(); // 1
 extern "C" static void daObjItaRope_Draw__FP14daObjItaRope_c(); // 1
 extern "C" static void daObjItaRope_Execute__FP14daObjItaRope_c(); // 1
-extern "C" static void daObjItaRope_IsDelete__FP14daObjItaRope_c(); // 1
+extern "C" static bool daObjItaRope_IsDelete__FP14daObjItaRope_c(); // 1
 extern "C" static void daObjItaRope_Delete__FP14daObjItaRope_c(); // 1
 extern "C" static void daObjItaRope_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
@@ -499,14 +499,9 @@ asm Sakuita_c::~Sakuita_c() {
 
 
 /* 80CC6420-80CC6424 0004+00 s=1 e=0 z=0  None .text      __ct__9Sakuita_cFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm Sakuita_c::Sakuita_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__ct__9Sakuita_cFv.s"
+Sakuita_c::Sakuita_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC6424-80CC6460 003C+00 s=2 e=0 z=0  None .text      __dt__10RopeWork_cFv                                         */
@@ -521,14 +516,9 @@ asm RopeWork_c::~RopeWork_c() {
 
 
 /* 80CC6460-80CC6464 0004+00 s=1 e=0 z=0  None .text      __ct__10RopeWork_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm RopeWork_c::RopeWork_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/__ct__10RopeWork_cFv.s"
+RopeWork_c::RopeWork_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -560,14 +550,9 @@ asm static void daObjItaRope_Execute(daObjItaRope_c* param_0) {
 
 
 /* 80CC6610-80CC6618 0008+00 s=1 e=0 z=0  None .text      daObjItaRope_IsDelete__FP14daObjItaRope_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjItaRope_IsDelete(daObjItaRope_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_IsDelete__FP14daObjItaRope_c.s"
+static bool daObjItaRope_IsDelete(daObjItaRope_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

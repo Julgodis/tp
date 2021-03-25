@@ -25,7 +25,7 @@ struct daSwBall_c {
 	/* 80D4E524 */ void actionRun();
 	/* 80D4E6C4 */ void actionStop();
 	/* 80D4E6C8 */ void PutCrrPos();
-	/* 80D4E90C */ void _delete();
+	/* 80D4E90C */ bool _delete();
 };
 
 struct cXyz {
@@ -59,7 +59,7 @@ extern "C" void execute__10daSwBall_cFv(); // 1
 extern "C" void actionRun__10daSwBall_cFv(); // 1
 extern "C" void actionStop__10daSwBall_cFv(); // 1
 extern "C" void PutCrrPos__10daSwBall_cFv(); // 1
-extern "C" void _delete__10daSwBall_cFv(); // 1
+extern "C" bool _delete__10daSwBall_cFv(); // 1
 extern "C" static void daSwBall_Execute__FP10daSwBall_c(); // 1
 extern "C" static void daSwBall_Delete__FP10daSwBall_c(); // 1
 extern "C" static void daSwBall_Create__FP10fopAc_ac_c(); // 1
@@ -245,14 +245,9 @@ asm void daSwBall_c::actionRun() {
 
 
 /* 80D4E6C4-80D4E6C8 0004+00 s=1 e=0 z=0  None .text      actionStop__10daSwBall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSwBall_c::actionStop() {
-	nofralloc
-#include "asm/rel/d/a/d_a_swBall/d_a_swBall/actionStop__10daSwBall_cFv.s"
+void daSwBall_c::actionStop() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -279,14 +274,9 @@ asm void daSwBall_c::PutCrrPos() {
 
 
 /* 80D4E90C-80D4E914 0008+00 s=1 e=0 z=0  None .text      _delete__10daSwBall_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSwBall_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/d_a_swBall/d_a_swBall/_delete__10daSwBall_cFv.s"
+bool daSwBall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4E914-80D4E934 0020+00 s=1 e=0 z=0  None .text      daSwBall_Execute__FP10daSwBall_c                             */

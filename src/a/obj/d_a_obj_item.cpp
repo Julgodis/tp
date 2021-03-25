@@ -31,8 +31,8 @@ struct daItemBase_c {
 	/* 80037A84 */ void changeDraw();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
-	/* 80144754 */ void __CreateHeap();
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144C7C */ void setListStart();
@@ -415,8 +415,8 @@ extern "C" void checkItemGet__FUci(); // 1
 extern "C" void isHeart__FUc(); // 1
 extern "C" void func_80141AE8(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
-extern "C" void __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void setListStart__12daItemBase_cFv(); // 1
@@ -958,14 +958,9 @@ asm void daItem_c::procMainNormal() {
 
 
 /* 8015BFE8-8015BFEC 0004+00 s=1 e=0 z=0  None .text      procMainEnemyCarry__8daItem_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItem_c::procMainEnemyCarry() {
-	nofralloc
-#include "asm/a/obj/d_a_obj_item/procMainEnemyCarry__8daItem_cFv.s"
+void daItem_c::procMainEnemyCarry() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8015BFEC-8015C038 004C+00 s=1 e=0 z=0  None .text      procInitForceGet__8daItem_cFv                                */

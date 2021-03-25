@@ -89,10 +89,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -140,11 +140,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -791,14 +791,9 @@ asm void daObjIceLeaf_c::modePlayerWait() {
 
 
 /* 80C25904-80C25908 0004+00 s=1 e=0 z=0  None .text      modeRide__14daObjIceLeaf_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIceLeaf_c::modeRide() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/modeRide__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::modeRide() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C25908-80C259C4 00BC+00 s=1 e=0 z=0  None .text      event_proc_call__14daObjIceLeaf_cFv                          */
@@ -813,14 +808,9 @@ asm void daObjIceLeaf_c::event_proc_call() {
 
 
 /* 80C259C4-80C259C8 0004+00 s=1 e=0 z=0  None .text      actionWait__14daObjIceLeaf_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIceLeaf_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionWait__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C259C8-80C25A68 00A0+00 s=1 e=0 z=0  None .text      actionOrderEvent__14daObjIceLeaf_cFv                         */
@@ -846,14 +836,9 @@ asm void daObjIceLeaf_c::actionEvent() {
 
 
 /* 80C25AC4-80C25AC8 0004+00 s=1 e=0 z=0  None .text      actionDead__14daObjIceLeaf_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjIceLeaf_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_iceleaf/d_a_obj_iceleaf/actionDead__14daObjIceLeaf_cFv.s"
+void daObjIceLeaf_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C25AC8-80C25BB8 00F0+00 s=1 e=0 z=0  None .text      setFallSE__14daObjIceLeaf_cFv                                */

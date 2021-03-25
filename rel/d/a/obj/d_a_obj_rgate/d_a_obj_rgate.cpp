@@ -136,19 +136,19 @@ struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
 };
 
+struct cBgS_PolyInfo {
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -314,9 +314,9 @@ extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -738,14 +738,9 @@ asm void daObjRgate_c::actionEvent() {
 
 
 /* 80CBBB5C-80CBBB60 0004+00 s=1 e=0 z=0  None .text      actionDead__12daObjRgate_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjRgate_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rgate/d_a_obj_rgate/actionDead__12daObjRgate_cFv.s"
+void daObjRgate_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

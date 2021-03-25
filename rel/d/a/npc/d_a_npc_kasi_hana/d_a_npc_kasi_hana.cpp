@@ -57,22 +57,16 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
+struct J3DAnmTexPattern {
 };
 
 struct J3DModelData {
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct _GXColorS10 {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -103,12 +97,18 @@ struct daNpcF_c {
 	/* 80154278 */ void getDistTableIdx(int, int);
 	/* 80A208D8 */ ~daNpcF_c();
 	/* 80A20B24 */ daNpcF_c();
-	/* 80A20E98 */ void ctrlBtk();
+	/* 80A20E98 */ bool ctrlBtk();
 	/* 80A20EA0 */ void setCollisions();
-	/* 80A20EA4 */ void setExpressionAnm(int, bool);
-	/* 80A20EAC */ void setExpressionBtp(int);
+	/* 80A20EA4 */ bool setExpressionAnm(int, bool);
+	/* 80A20EAC */ bool setExpressionBtp(int);
 	/* 80A20EB4 */ void setExpression(int, f32);
 	/* 80A20EB8 */ void drawOtherMdls();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcKasiHana_c {
@@ -127,7 +127,7 @@ struct daNpcKasiHana_c {
 	/* 80A1CD28 */ void setAttnPos();
 	/* 80A1CED0 */ void setMotionAnm(int, f32);
 	/* 80A1CFA0 */ void setMotion(int, f32, int);
-	/* 80A1CFE8 */ void drawDbgInfo();
+	/* 80A1CFE8 */ bool drawDbgInfo();
 	/* 80A1CFF0 */ void reset();
 	/* 80A1D238 */ void playMotion();
 	/* 80A1D604 */ void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
@@ -250,16 +250,16 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
+struct J3DAnmTransform {
+};
+
 struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -385,7 +385,7 @@ static void daNpcKasiHana_Create(void*); // 2
 static void daNpcKasiHana_Delete(void*); // 2
 static void daNpcKasiHana_Execute(void*); // 2
 static void daNpcKasiHana_Draw(void*); // 2
-static void daNpcKasiHana_IsDelete(void*); // 2
+static bool daNpcKasiHana_IsDelete(void*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
 
 extern "C" void calcEscapeForm__15daNpcKasi_Mng_cFv(); // 1
@@ -426,7 +426,7 @@ extern "C" void main__15daNpcKasiHana_cFv(); // 1
 extern "C" void setAttnPos__15daNpcKasiHana_cFv(); // 1
 extern "C" void setMotionAnm__15daNpcKasiHana_cFif(); // 1
 extern "C" void setMotion__15daNpcKasiHana_cFifi(); // 1
-extern "C" void drawDbgInfo__15daNpcKasiHana_cFv(); // 1
+extern "C" bool drawDbgInfo__15daNpcKasiHana_cFv(); // 1
 extern "C" void reset__15daNpcKasiHana_cFv(); // 1
 extern "C" void playMotion__15daNpcKasiHana_cFv(); // 1
 extern "C" void playMotionAnmLoop__15daNpcKasiHana_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
@@ -471,7 +471,7 @@ extern "C" static void daNpcKasiHana_Create__FPv(); // 1
 extern "C" static void daNpcKasiHana_Delete__FPv(); // 1
 extern "C" static void daNpcKasiHana_Execute__FPv(); // 1
 extern "C" static void daNpcKasiHana_Draw__FPv(); // 1
-extern "C" static void daNpcKasiHana_IsDelete__FPv(); // 1
+extern "C" static bool daNpcKasiHana_IsDelete__FPv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void getCenterPos__15daNpcKasi_Mng_cFv(); // 1
@@ -492,10 +492,10 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void ctrlBtk__8daNpcF_cFv(); // 1
+extern "C" bool ctrlBtk__8daNpcF_cFv(); // 1
 extern "C" void setCollisions__8daNpcF_cFv(); // 1
-extern "C" void setExpressionAnm__8daNpcF_cFib(); // 1
-extern "C" void setExpressionBtp__8daNpcF_cFi(); // 1
+extern "C" bool setExpressionAnm__8daNpcF_cFib(); // 1
+extern "C" bool setExpressionBtp__8daNpcF_cFi(); // 1
 extern "C" void setExpression__8daNpcF_cFif(); // 1
 extern "C" void drawOtherMdls__8daNpcF_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
@@ -1987,14 +1987,9 @@ asm void daNpcKasiHana_c::setMotion(int param_0, f32 param_1, int param_2) {
 
 
 /* 80A1CFE8-80A1CFF0 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__15daNpcKasiHana_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcKasiHana_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/drawDbgInfo__15daNpcKasiHana_cFv.s"
+bool daNpcKasiHana_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A1CFF0-80A1D238 0248+00 s=1 e=0 z=0  None .text      reset__15daNpcKasiHana_cFv                                   */
@@ -2546,14 +2541,9 @@ asm static void daNpcKasiHana_Draw(void* param_0) {
 
 
 /* 80A205C4-80A205CC 0008+00 s=1 e=0 z=0  None .text      daNpcKasiHana_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcKasiHana_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/daNpcKasiHana_IsDelete__FPv.s"
+static bool daNpcKasiHana_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A205CC-80A20614 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
@@ -2590,14 +2580,9 @@ asm void daNpcKasi_Mng_c::getCenterPos() {
 
 
 /* 80A20678-80A2067C 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__15daNpcKasiHana_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcKasiHana_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/adjustShapeAngle__15daNpcKasiHana_cFv.s"
+void daNpcKasiHana_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -2697,25 +2682,15 @@ asm daNpcF_Lookat_c::~daNpcF_Lookat_c() {
 
 
 /* 80A208D0-80A208D4 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A208D4-80A208D8 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A208D8-80A20B24 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -2785,69 +2760,39 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80A20E98-80A20EA0 0008+00 s=1 e=0 z=0  None .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::ctrlBtk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A20EA0-80A20EA4 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EA4-80A20EAC 0008+00 s=1 e=0 z=0  None .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A20EAC-80A20EB4 0008+00 s=1 e=0 z=0  None .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionBtp(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(int param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A20EB4-80A20EB8 0004+00 s=1 e=0 z=0  None .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpression(int param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(int param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EB8-80A20EBC 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_hana/d_a_npc_kasi_hana/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A20EBC-80A20F04 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

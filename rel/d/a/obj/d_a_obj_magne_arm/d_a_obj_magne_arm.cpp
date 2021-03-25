@@ -161,10 +161,10 @@ struct J3DModelData {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -231,9 +231,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -524,9 +524,9 @@ extern "C" void __dt__9dBgS_AcchFv(); // 1
 extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -1419,25 +1419,15 @@ asm void daObjMarm_c::typeA_modeMholeOn() {
 
 
 /* 80590C68-80590C6C 0004+00 s=1 e=0 z=0  None .text      typeA_modeLiftUp__11daObjMarm_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeA_modeLiftUp() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeLiftUp__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeLiftUp() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590C6C-80590C70 0004+00 s=1 e=0 z=0  None .text      typeA_modeLiftDown__11daObjMarm_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeA_modeLiftDown() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeLiftDown__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeLiftDown() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590C70-80590CE4 0074+00 s=2 e=0 z=0  None .text      init_typeA_modeRotate__11daObjMarm_cFv                       */
@@ -1463,14 +1453,9 @@ asm void daObjMarm_c::typeA_modeRotate() {
 
 
 /* 80590E24-80590E28 0004+00 s=1 e=0 z=0  None .text      typeA_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeA_modeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeA_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeA_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80590E28-80590E38 0010+00 s=1 e=0 z=0  None .text      init_typeB_modeWait__11daObjMarm_cFv                         */
@@ -1573,14 +1558,9 @@ asm void daObjMarm_c::typeB_modeRotate() {
 
 
 /* 805912AC-805912B0 0004+00 s=1 e=0 z=0  None .text      typeB_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeB_modeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeB_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeB_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805912B0-805912C0 0010+00 s=1 e=0 z=0  None .text      init_typeC_modeWait__11daObjMarm_cFv                         */
@@ -1694,14 +1674,9 @@ asm void daObjMarm_c::typeC_modeRotate() {
 
 
 /* 80591750-80591754 0004+00 s=1 e=0 z=0  None .text      typeC_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeC_modeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeC_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeC_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591754-80591764 0010+00 s=1 e=0 z=0  None .text      init_typeD_modeWait__11daObjMarm_cFv                         */
@@ -1815,25 +1790,15 @@ asm void daObjMarm_c::typeD_modeRotate() {
 
 
 /* 80591BF4-80591BF8 0004+00 s=1 e=0 z=0  None .text      typeD_modeEnd__11daObjMarm_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::typeD_modeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/typeD_modeEnd__11daObjMarm_cFv.s"
+void daObjMarm_c::typeD_modeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591BF8-80591BFC 0004+00 s=8 e=0 z=0  None .text      setMagneHoleEffect__11daObjMarm_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::setMagneHoleEffect() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/setMagneHoleEffect__11daObjMarm_cFv.s"
+void daObjMarm_c::setMagneHoleEffect() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80591BFC-80591C38 003C+00 s=5 e=0 z=0  None .text      endMagneHoleEffect__11daObjMarm_cFv                          */
@@ -1936,14 +1901,9 @@ asm void daObjMarm_c::Draw() {
 
 
 /* 805923C4-805923C8 0004+00 s=1 e=0 z=0  None .text      debugDraw__11daObjMarm_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMarm_c::debugDraw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_magne_arm/d_a_obj_magne_arm/debugDraw__11daObjMarm_cFv.s"
+void daObjMarm_c::debugDraw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805923C8-80592468 00A0+00 s=1 e=0 z=0  None .text      Delete__11daObjMarm_cFv                                      */

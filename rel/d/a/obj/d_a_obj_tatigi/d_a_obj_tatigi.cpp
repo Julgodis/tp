@@ -116,7 +116,7 @@ struct cCcS {
 
 static void daObj_Tatigi_Draw(obj_tatigi_class*); // 2
 static void daObj_Tatigi_Execute(obj_tatigi_class*); // 2
-static void daObj_Tatigi_IsDelete(obj_tatigi_class*); // 2
+static bool daObj_Tatigi_IsDelete(obj_tatigi_class*); // 2
 static void daObj_Tatigi_Delete(obj_tatigi_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_tatigi_class*, int); // 2
@@ -124,7 +124,7 @@ static void daObj_Tatigi_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daObj_Tatigi_Draw__FP16obj_tatigi_class(); // 1
 extern "C" static void daObj_Tatigi_Execute__FP16obj_tatigi_class(); // 1
-extern "C" static void daObj_Tatigi_IsDelete__FP16obj_tatigi_class(); // 1
+extern "C" static bool daObj_Tatigi_IsDelete__FP16obj_tatigi_class(); // 1
 extern "C" static void daObj_Tatigi_Delete__FP16obj_tatigi_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP16obj_tatigi_classi(); // 1
@@ -264,14 +264,9 @@ asm static void daObj_Tatigi_Execute(obj_tatigi_class* param_0) {
 
 
 /* 80D07CE8-80D07CF0 0008+00 s=1 e=0 z=0  None .text      daObj_Tatigi_IsDelete__FP16obj_tatigi_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Tatigi_IsDelete(obj_tatigi_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tatigi/d_a_obj_tatigi/daObj_Tatigi_IsDelete__FP16obj_tatigi_class.s"
+static bool daObj_Tatigi_IsDelete(obj_tatigi_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -99,13 +99,13 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
+struct J3DAnmTextureSRTKey {
+};
+
 struct J3DAnmColor {
 };
 
 struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -924,14 +924,9 @@ asm void daObjSwpush2::Act_c::mode_lower_init() {
 
 
 /* 80CFF188-80CFF18C 0004+00 s=1 e=0 z=0  None .text      mode_lower__Q212daObjSwpush25Act_cFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwpush2::Act_c::mode_lower() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/mode_lower__Q212daObjSwpush25Act_cFv.s"
+void daObjSwpush2::Act_c::mode_lower() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CFF18C-80CFF24C 00C0+00 s=1 e=0 z=0  None .text      mode_l_u__Q212daObjSwpush25Act_cFv                           */
@@ -957,14 +952,9 @@ asm void daObjSwpush2::Act_c::demo_non_init() {
 
 
 /* 80CFF258-80CFF25C 0004+00 s=1 e=0 z=0  None .text      demo_non__Q212daObjSwpush25Act_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwpush2::Act_c::demo_non() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush2/d_a_obj_swpush2/demo_non__Q212daObjSwpush25Act_cFv.s"
+void daObjSwpush2::Act_c::demo_non() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CFF25C-80CFF2B4 0058+00 s=1 e=0 z=0  None .text      demo_reqPause_init__Q212daObjSwpush25Act_cFv                 */

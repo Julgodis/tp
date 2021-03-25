@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcWrestler_c {
@@ -91,7 +91,7 @@ struct daNpcWrestler_c {
 	/* 80B404FC */ void ctrlBtk();
 	/* 80B405E8 */ void setAttnPos();
 	/* 80B40B3C */ void lookat();
-	/* 80B40D1C */ void drawDbgInfo();
+	/* 80B40D1C */ bool drawDbgInfo();
 	/* 80B40D24 */ void drawOtherMdls();
 	/* 80B4166C */ void adjustShapeAngle();
 };
@@ -173,23 +173,23 @@ struct daNpcF_Lookat_c {
 	/* 80B40EBC */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
 struct J3DModelData {
-};
-
-struct J3DAnmTransform {
 };
 
 struct _GXColorS10 {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -283,9 +283,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -293,6 +290,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -482,7 +482,7 @@ static void daNpcWrestler_Create(void*); // 2
 static void daNpcWrestler_Delete(void*); // 2
 static void daNpcWrestler_Execute(void*); // 2
 static void daNpcWrestler_Draw(void*); // 2
-static void daNpcWrestler_IsDelete(void*); // 2
+static bool daNpcWrestler_IsDelete(void*); // 2
 
 extern "C" void __ct__15daNpcWrestler_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -563,7 +563,7 @@ extern "C" static void daNpcWrestler_Create__FPv(); // 1
 extern "C" static void daNpcWrestler_Delete__FPv(); // 1
 extern "C" static void daNpcWrestler_Execute__FPv(); // 1
 extern "C" static void daNpcWrestler_Draw__FPv(); // 1
-extern "C" static void daNpcWrestler_IsDelete__FPv(); // 1
+extern "C" static bool daNpcWrestler_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setParam__15daNpcWrestler_cFv(); // 1
 extern "C" void main__15daNpcWrestler_cFv(); // 1
@@ -572,7 +572,7 @@ extern "C" void playMotion__15daNpcWrestler_cFv(); // 1
 extern "C" void ctrlBtk__15daNpcWrestler_cFv(); // 1
 extern "C" void setAttnPos__15daNpcWrestler_cFv(); // 1
 extern "C" void lookat__15daNpcWrestler_cFv(); // 1
-extern "C" void drawDbgInfo__15daNpcWrestler_cFv(); // 1
+extern "C" bool drawDbgInfo__15daNpcWrestler_cFv(); // 1
 extern "C" void drawOtherMdls__15daNpcWrestler_cFv(); // 1
 extern "C" void func_80B40D28(); // 1
 extern "C" void __sinit_d_a_npc_wrestler_cpp(); // 1
@@ -3907,14 +3907,9 @@ asm static void daNpcWrestler_Draw(void* param_0) {
 
 
 /* 80B3EAAC-80B3EAB4 0008+00 s=1 e=0 z=0  None .text      daNpcWrestler_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcWrestler_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/daNpcWrestler_IsDelete__FPv.s"
+static bool daNpcWrestler_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B3EAB4-80B3EAE4 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -4022,25 +4017,15 @@ asm void daNpcWrestler_c::lookat() {
 
 
 /* 80B40D1C-80B40D24 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__15daNpcWrestler_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcWrestler_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/drawDbgInfo__15daNpcWrestler_cFv.s"
+bool daNpcWrestler_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B40D24-80B40D28 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__15daNpcWrestler_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcWrestler_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/drawOtherMdls__15daNpcWrestler_cFv.s"
+void daNpcWrestler_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B40D28-80B40D34 000C+00 s=2 e=0 z=0  None .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
@@ -4118,14 +4103,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80B40FC8-80B40FCC 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B40FCC-80B41008 003C+00 s=6 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -4140,14 +4120,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80B41008-80B4100C 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B4100C-80B41258 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -4217,14 +4192,9 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80B415CC-80B415D0 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B415D0-80B41618 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -4272,14 +4242,9 @@ asm void daPy_py_c::getLeftFootPos() const {
 
 
 /* 80B4166C-80B41670 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__15daNpcWrestler_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcWrestler_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_wrestler/d_a_npc_wrestler/adjustShapeAngle__15daNpcWrestler_cFv.s"
+void daNpcWrestler_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B41670-80B416B8 0048+00 s=2 e=0 z=0  None .text      __dt__21daNpcWrestler_Param_cFv                              */

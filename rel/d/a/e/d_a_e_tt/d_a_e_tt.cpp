@@ -16,10 +16,10 @@ struct daE_TT_HIO_c {
 	/* 807C1AA8 */ ~daE_TT_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_TT_c {
@@ -120,19 +120,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -287,7 +287,7 @@ struct J3DFrameCtrl {
 
 static void daE_TT_Draw(daE_TT_c*); // 2
 static void daE_TT_Execute(daE_TT_c*); // 2
-static void daE_TT_IsDelete(daE_TT_c*); // 2
+static bool daE_TT_IsDelete(daE_TT_c*); // 2
 static void daE_TT_Delete(daE_TT_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_TT_Create(daE_TT_c*); // 2
@@ -323,7 +323,7 @@ extern "C" void mtx_set__8daE_TT_cFi(); // 1
 extern "C" void cc_set__8daE_TT_cFv(); // 1
 extern "C" void execute__8daE_TT_cFv(); // 1
 extern "C" static void daE_TT_Execute__FP8daE_TT_c(); // 1
-extern "C" static void daE_TT_IsDelete__FP8daE_TT_c(); // 1
+extern "C" static bool daE_TT_IsDelete__FP8daE_TT_c(); // 1
 extern "C" void _delete__8daE_TT_cFv(); // 1
 extern "C" static void daE_TT_Delete__FP8daE_TT_c(); // 1
 extern "C" void CreateHeap__8daE_TT_cFv(); // 1
@@ -1470,14 +1470,9 @@ asm static void daE_TT_Execute(daE_TT_c* param_0) {
 
 
 /* 807C115C-807C1164 0008+00 s=1 e=0 z=0  None .text      daE_TT_IsDelete__FP8daE_TT_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_TT_IsDelete(daE_TT_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tt/d_a_e_tt/daE_TT_IsDelete__FP8daE_TT_c.s"
+static bool daE_TT_IsDelete(daE_TT_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807C1164-807C11FC 0098+00 s=1 e=0 z=0  None .text      _delete__8daE_TT_cFv                                         */

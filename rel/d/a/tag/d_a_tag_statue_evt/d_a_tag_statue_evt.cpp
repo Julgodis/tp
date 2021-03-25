@@ -662,14 +662,9 @@ asm void daTagStatue_c::actionEvent() {
 
 
 /* 805A7848-805A784C 0004+00 s=1 e=0 z=0  None .text      actionDead__13daTagStatue_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagStatue_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/actionDead__13daTagStatue_cFv.s"
+void daTagStatue_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805A784C-805A7A68 021C+00 s=2 e=0 z=0  None .text      demoProc__13daTagStatue_cFv                                  */

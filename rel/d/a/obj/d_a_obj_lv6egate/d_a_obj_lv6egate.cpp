@@ -14,7 +14,7 @@
 struct daObjLv6EGate_c {
 	/* 80C82078 */ void create1st();
 	/* 80C82108 */ void setMtx();
-	/* 80C82178 */ void CreateHeap();
+	/* 80C82178 */ bool CreateHeap();
 	/* 80C82180 */ void Create();
 	/* 80C822DC */ void offDisp();
 	/* 80C82330 */ void onDisp();
@@ -65,6 +65,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -72,9 +75,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -100,9 +100,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -151,7 +151,7 @@ static void daObjLv6EGate_MoveBGDraw(daObjLv6EGate_c*); // 2
 
 extern "C" void create1st__15daObjLv6EGate_cFv(); // 1
 extern "C" void setMtx__15daObjLv6EGate_cFv(); // 1
-extern "C" void CreateHeap__15daObjLv6EGate_cFv(); // 1
+extern "C" bool CreateHeap__15daObjLv6EGate_cFv(); // 1
 extern "C" void Create__15daObjLv6EGate_cFv(); // 1
 extern "C" void offDisp__15daObjLv6EGate_cFv(); // 1
 extern "C" void onDisp__15daObjLv6EGate_cFv(); // 1
@@ -201,9 +201,9 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -305,14 +305,9 @@ asm void daObjLv6EGate_c::setMtx() {
 
 
 /* 80C82178-80C82180 0008+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjLv6EGate_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLv6EGate_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6egate/d_a_obj_lv6egate/CreateHeap__15daObjLv6EGate_cFv.s"
+bool daObjLv6EGate_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

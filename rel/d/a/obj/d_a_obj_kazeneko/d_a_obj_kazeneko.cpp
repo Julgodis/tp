@@ -127,7 +127,7 @@ struct daNPC_TK_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjKazeNeko_Draw(daObjKazeNeko_c*); // 2
 static void daObjKazeNeko_Execute(daObjKazeNeko_c*); // 2
-static void daObjKazeNeko_IsDelete(daObjKazeNeko_c*); // 2
+static bool daObjKazeNeko_IsDelete(daObjKazeNeko_c*); // 2
 static void daObjKazeNeko_Delete(daObjKazeNeko_c*); // 2
 static void daObjKazeNeko_Create(fopAc_ac_c*); // 2
 
@@ -141,7 +141,7 @@ extern "C" void getFirstVec__15daObjKazeNeko_cFP4cXyzi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjKazeNeko_Draw__FP15daObjKazeNeko_c(); // 1
 extern "C" static void daObjKazeNeko_Execute__FP15daObjKazeNeko_c(); // 1
-extern "C" static void daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c(); // 1
+extern "C" static bool daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c(); // 1
 extern "C" static void daObjKazeNeko_Delete__FP15daObjKazeNeko_c(); // 1
 extern "C" static void daObjKazeNeko_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -404,14 +404,9 @@ asm static void daObjKazeNeko_Execute(daObjKazeNeko_c* param_0) {
 
 
 /* 80C3D030-80C3D038 0008+00 s=1 e=0 z=0  None .text      daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKazeNeko_IsDelete(daObjKazeNeko_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kazeneko/d_a_obj_kazeneko/daObjKazeNeko_IsDelete__FP15daObjKazeNeko_c.s"
+static bool daObjKazeNeko_IsDelete(daObjKazeNeko_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

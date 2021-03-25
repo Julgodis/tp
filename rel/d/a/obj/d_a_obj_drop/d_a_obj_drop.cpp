@@ -25,7 +25,7 @@ struct daObjDrop_c {
 	/* 80BE0994 */ void modeNoParent();
 	/* 80BE09F4 */ void modeParentWait();
 	/* 80BE0C08 */ void modeWait();
-	/* 80BE1928 */ void actionCompleteWait();
+	/* 80BE1928 */ bool actionCompleteWait();
 	/* 80BE1930 */ void actionOrderCompleteDemo();
 	/* 80BE19D0 */ void actionCompleateDemo();
 	/* 80BE1ACC */ void actionWaitCompleteGetDemo();
@@ -245,7 +245,7 @@ extern "C" void modeNoParent__11daObjDrop_cFv(); // 1
 extern "C" void modeParentWait__11daObjDrop_cFv(); // 1
 extern "C" void modeWait__11daObjDrop_cFv(); // 1
 extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" void actionCompleteWait__11daObjDrop_cFv(); // 1
+extern "C" bool actionCompleteWait__11daObjDrop_cFv(); // 1
 extern "C" void actionOrderCompleteDemo__11daObjDrop_cFv(); // 1
 extern "C" void actionCompleateDemo__11daObjDrop_cFv(); // 1
 extern "C" void actionWaitCompleteGetDemo__11daObjDrop_cFv(); // 1
@@ -708,14 +708,9 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 
 
 /* 80BE02AC-80BE02B0 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE02B0-80BE02D8 0028+00 s=1 e=0 z=0  None .text      __defctor__19dPa_followEcallBackFv                           */
@@ -741,14 +736,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80BE0314-80BE0318 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE0318-80BE0354 003C+00 s=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -763,14 +753,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80BE0354-80BE0358 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE0358-80BE0430 00D8+00 s=2 e=0 z=0  None .text      dropGet__11daObjDrop_cFv                                     */
@@ -996,14 +981,9 @@ asm cM3dGLin::~cM3dGLin() {
 
 
 /* 80BE1928-80BE1930 0008+00 s=1 e=0 z=0  None .text      actionCompleteWait__11daObjDrop_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjDrop_c::actionCompleteWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/actionCompleteWait__11daObjDrop_cFv.s"
+bool daObjDrop_c::actionCompleteWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE1930-80BE19D0 00A0+00 s=1 e=0 z=0  None .text      actionOrderCompleteDemo__11daObjDrop_cFv                     */
@@ -1117,47 +1097,27 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 
 
 /* 80BE1EE0-80BE1EE4 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE1EE4-80BE1EE8 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE1EE8-80BE1EEC 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE1EEC-80BE1EF0 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_drop/d_a_obj_drop/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE1EF0-80BE1F38 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

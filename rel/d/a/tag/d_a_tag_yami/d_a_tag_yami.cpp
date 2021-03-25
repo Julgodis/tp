@@ -277,14 +277,9 @@ asm void daTagYami_c::calcCoC(cXyz& param_0) {
 
 
 /* 80D65D08-80D65D0C 0004+00 s=1 e=0 z=0  None .text      col_set__11daTagYami_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagYami_c::col_set() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_yami/d_a_tag_yami/col_set__11daTagYami_cFv.s"
+void daTagYami_c::col_set() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D65D0C-80D65D60 0054+00 s=1 e=0 z=0  None .text      chk_CoHit__11daTagYami_cFv                                   */

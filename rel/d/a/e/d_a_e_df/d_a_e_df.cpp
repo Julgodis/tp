@@ -16,17 +16,17 @@ struct daE_DF_HIO_c {
 	/* 806A9A84 */ ~daE_DF_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_DF_c {
@@ -100,19 +100,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -233,7 +233,7 @@ static void JointCallBack(J3DJoint*, int); // 2
 static void s_obj_sub(void*, void*); // 2
 static void daE_DF_Draw(daE_DF_c*); // 2
 static void daE_DF_Execute(daE_DF_c*); // 2
-static void daE_DF_IsDelete(daE_DF_c*); // 2
+static bool daE_DF_IsDelete(daE_DF_c*); // 2
 static void daE_DF_Delete(daE_DF_c*); // 2
 static void daE_DF_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
@@ -271,7 +271,7 @@ extern "C" void Delete__8daE_DF_cFv(); // 1
 extern "C" void setBaseMtx__8daE_DF_cFv(); // 1
 extern "C" static void daE_DF_Draw__FP8daE_DF_c(); // 1
 extern "C" static void daE_DF_Execute__FP8daE_DF_c(); // 1
-extern "C" static void daE_DF_IsDelete__FP8daE_DF_c(); // 1
+extern "C" static bool daE_DF_IsDelete__FP8daE_DF_c(); // 1
 extern "C" static void daE_DF_Delete__FP8daE_DF_c(); // 1
 extern "C" void Create__8daE_DF_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -1011,14 +1011,9 @@ asm static void daE_DF_Execute(daE_DF_c* param_0) {
 
 
 /* 806A9650-806A9658 0008+00 s=1 e=0 z=0  None .text      daE_DF_IsDelete__FP8daE_DF_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_DF_IsDelete(daE_DF_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_df/d_a_e_df/daE_DF_IsDelete__FP8daE_DF_c.s"
+static bool daE_DF_IsDelete(daE_DF_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806A9658-806A9678 0020+00 s=1 e=0 z=0  None .text      daE_DF_Delete__FP8daE_DF_c                                   */

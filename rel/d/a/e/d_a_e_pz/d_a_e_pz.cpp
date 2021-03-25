@@ -173,19 +173,19 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -332,7 +332,7 @@ struct Z2SeqMgr {
 static void daE_PZ_Draw(daE_PZ_c*); // 2
 static void s_PointSearch(void*, void*); // 2
 static void daE_PZ_Execute(daE_PZ_c*); // 2
-static void daE_PZ_IsDelete(daE_PZ_c*); // 2
+static bool daE_PZ_IsDelete(daE_PZ_c*); // 2
 static void daE_PZ_Delete(daE_PZ_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_PZ_Create(daE_PZ_c*); // 2
@@ -374,7 +374,7 @@ extern "C" void mtx_set__8daE_PZ_cFv(); // 1
 extern "C" void cc_set__8daE_PZ_cFv(); // 1
 extern "C" void execute__8daE_PZ_cFv(); // 1
 extern "C" static void daE_PZ_Execute__FP8daE_PZ_c(); // 1
-extern "C" static void daE_PZ_IsDelete__FP8daE_PZ_c(); // 1
+extern "C" static bool daE_PZ_IsDelete__FP8daE_PZ_c(); // 1
 extern "C" void _delete__8daE_PZ_cFv(); // 1
 extern "C" static void daE_PZ_Delete__FP8daE_PZ_c(); // 1
 extern "C" void CreateHeap__8daE_PZ_cFv(); // 1
@@ -2205,14 +2205,9 @@ asm static void daE_PZ_Execute(daE_PZ_c* param_0) {
 
 
 /* 8075FA80-8075FA88 0008+00 s=1 e=0 z=0  None .text      daE_PZ_IsDelete__FP8daE_PZ_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_PZ_IsDelete(daE_PZ_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_pz/d_a_e_pz/daE_PZ_IsDelete__FP8daE_PZ_c.s"
+static bool daE_PZ_IsDelete(daE_PZ_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8075FA88-8075FB2C 00A4+00 s=1 e=0 z=0  None .text      _delete__8daE_PZ_cFv                                         */
@@ -2359,14 +2354,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80760BF4-80760BF8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_pz/d_a_e_pz/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80760BF8-80760C18 0020+00 s=1 e=0 z=0  None .text      daE_PZ_Create__FP8daE_PZ_c                                   */

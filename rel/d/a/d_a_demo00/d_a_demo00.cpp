@@ -85,10 +85,10 @@ struct J3DMaterial {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -110,16 +110,16 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmColor {
-};
-
-struct J3DAnmTevRegKey {
-};
-
 struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmColor {
+};
+
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -164,19 +164,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -289,7 +289,7 @@ static void ke_move(daDemo00_c*, mDoExt_3DlineMat0_c*, demo_s1_ke_s*, int, f32);
 static void ke_set(daDemo00_c*); // 2
 static void daDemo00_Draw(daDemo00_c*); // 2
 static void daDemo00_Execute(daDemo00_c*); // 2
-static void daDemo00_IsDelete(daDemo00_c*); // 2
+static bool daDemo00_IsDelete(daDemo00_c*); // 2
 static void daDemo00_Delete(daDemo00_c*); // 2
 static void daDemo00_Create(fopAc_ac_c*); // 2
 
@@ -320,7 +320,7 @@ extern "C" static void daDemo00_Draw__FP10daDemo00_c(); // 1
 extern "C" void draw__10daDemo00_cFv(); // 1
 extern "C" static void daDemo00_Execute__FP10daDemo00_c(); // 1
 extern "C" void execute__10daDemo00_cFv(); // 1
-extern "C" static void daDemo00_IsDelete__FP10daDemo00_c(); // 1
+extern "C" static bool daDemo00_IsDelete__FP10daDemo00_c(); // 1
 extern "C" static void daDemo00_Delete__FP10daDemo00_c(); // 1
 extern "C" static void daDemo00_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__12demo_s1_ke_sFv(); // 1
@@ -1485,14 +1485,9 @@ asm void daDemo00_c::execute() {
 
 
 /* 804A84AC-804A84B4 0008+00 s=1 e=0 z=0  None .text      daDemo00_IsDelete__FP10daDemo00_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDemo00_IsDelete(daDemo00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/daDemo00_IsDelete__FP10daDemo00_c.s"
+static bool daDemo00_IsDelete(daDemo00_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804A84B4-804A84DC 0028+00 s=1 e=0 z=0  None .text      daDemo00_Delete__FP10daDemo00_c                              */
@@ -1529,14 +1524,9 @@ asm demo_s1_ke_s::demo_s1_ke_s() {
 
 
 /* 804A871C-804A8720 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo00/d_a_demo00/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A8720-804A87DC 00BC+00 s=0 e=1 z=0  None .text      __sinit_d_a_demo00_cpp                                       */

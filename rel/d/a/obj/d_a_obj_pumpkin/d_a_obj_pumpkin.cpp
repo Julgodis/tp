@@ -240,7 +240,7 @@ static void daObj_Pumpkin_Create(void*); // 2
 static void daObj_Pumpkin_Delete(void*); // 2
 static void daObj_Pumpkin_Execute(void*); // 2
 static void daObj_Pumpkin_Draw(void*); // 2
-static void daObj_Pumpkin_IsDelete(void*); // 2
+static bool daObj_Pumpkin_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__15daObj_Pumpkin_cFv(); // 1
@@ -272,7 +272,7 @@ extern "C" static void daObj_Pumpkin_Create__FPv(); // 1
 extern "C" static void daObj_Pumpkin_Delete__FPv(); // 1
 extern "C" static void daObj_Pumpkin_Execute__FPv(); // 1
 extern "C" static void daObj_Pumpkin_Draw__FPv(); // 1
-extern "C" static void daObj_Pumpkin_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Pumpkin_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80CB8274(); // 1
 extern "C" void __sinit_d_a_obj_pumpkin_cpp(); // 1
@@ -1045,14 +1045,9 @@ asm static void daObj_Pumpkin_Draw(void* param_0) {
 
 
 /* 80CB8224-80CB822C 0008+00 s=1 e=0 z=0  None .text      daObj_Pumpkin_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Pumpkin_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pumpkin/d_a_obj_pumpkin/daObj_Pumpkin_IsDelete__FPv.s"
+static bool daObj_Pumpkin_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB822C-80CB8274 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

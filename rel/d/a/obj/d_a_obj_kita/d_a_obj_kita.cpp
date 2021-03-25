@@ -109,7 +109,7 @@ static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void ita_control(obj_kita_class*); // 2
 static void action(obj_kita_class*); // 2
 static void daObj_Kita_Execute(obj_kita_class*); // 2
-static void daObj_Kita_IsDelete(obj_kita_class*); // 2
+static bool daObj_Kita_IsDelete(obj_kita_class*); // 2
 static void daObj_Kita_Delete(obj_kita_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Kita_Create(fopAc_ac_c*); // 2
@@ -120,7 +120,7 @@ extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" static void ita_control__FP14obj_kita_class(); // 1
 extern "C" static void action__FP14obj_kita_class(); // 1
 extern "C" static void daObj_Kita_Execute__FP14obj_kita_class(); // 1
-extern "C" static void daObj_Kita_IsDelete__FP14obj_kita_class(); // 1
+extern "C" static bool daObj_Kita_IsDelete__FP14obj_kita_class(); // 1
 extern "C" static void daObj_Kita_Delete__FP14obj_kita_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Kita_Create__FP10fopAc_ac_c(); // 1
@@ -361,14 +361,9 @@ asm static void daObj_Kita_Execute(obj_kita_class* param_0) {
 
 
 /* 80C45A6C-80C45A74 0008+00 s=1 e=0 z=0  None .text      daObj_Kita_IsDelete__FP14obj_kita_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Kita_IsDelete(obj_kita_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kita/d_a_obj_kita/daObj_Kita_IsDelete__FP14obj_kita_class.s"
+static bool daObj_Kita_IsDelete(obj_kita_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -488,14 +483,9 @@ asm kita_s::~kita_s() {
 
 
 /* 80C45E80-80C45E84 0004+00 s=1 e=0 z=0  None .text      __ct__6kita_sFv                                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm kita_s::kita_s() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kita/d_a_obj_kita/__ct__6kita_sFv.s"
+kita_s::kita_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C45E84-80C45ECC 0048+00 s=2 e=0 z=0  None .text      __dt__16daObj_Kita_HIO_cFv                                   */

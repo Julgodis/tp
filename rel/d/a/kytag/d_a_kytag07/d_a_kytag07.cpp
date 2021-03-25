@@ -25,13 +25,13 @@ struct LIGHT_INFLUENCE {
 // Forward References:
 // 
 
-static void daKytag07_Draw(kytag07_class*); // 2
+static bool daKytag07_Draw(kytag07_class*); // 2
 static void daKytag07_Execute(kytag07_class*); // 2
 static void daKytag07_IsDelete(kytag07_class*); // 2
 static void daKytag07_Delete(kytag07_class*); // 2
 static void daKytag07_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daKytag07_Draw__FP13kytag07_class(); // 1
+extern "C" static bool daKytag07_Draw__FP13kytag07_class(); // 1
 extern "C" static void daKytag07_Execute__FP13kytag07_class(); // 1
 extern "C" static void daKytag07_IsDelete__FP13kytag07_class(); // 1
 extern "C" static void daKytag07_Delete__FP13kytag07_class(); // 1
@@ -68,14 +68,9 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* 8085A278-8085A280 0008+00 s=1 e=0 z=0  None .text      daKytag07_Draw__FP13kytag07_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag07_Draw(kytag07_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag07/d_a_kytag07/daKytag07_Draw__FP13kytag07_class.s"
+static bool daKytag07_Draw(kytag07_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

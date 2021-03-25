@@ -105,19 +105,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -177,10 +177,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -323,7 +323,7 @@ static void demo_camera(e_s1_class*); // 2
 static void anm_se_set(e_s1_class*); // 2
 static void body_eff_set(e_s1_class*); // 2
 static void daE_S1_Execute(e_s1_class*); // 2
-static void daE_S1_IsDelete(e_s1_class*); // 2
+static bool daE_S1_IsDelete(e_s1_class*); // 2
 static void daE_S1_Delete(e_s1_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 void daE_S1_Create(fopAc_ac_c*); // 2
@@ -365,7 +365,7 @@ extern "C" static void demo_camera__FP10e_s1_class(); // 1
 extern "C" static void anm_se_set__FP10e_s1_class(); // 1
 extern "C" static void body_eff_set__FP10e_s1_class(); // 1
 extern "C" static void daE_S1_Execute__FP10e_s1_class(); // 1
-extern "C" static void daE_S1_IsDelete__FP10e_s1_class(); // 1
+extern "C" static bool daE_S1_IsDelete__FP10e_s1_class(); // 1
 extern "C" static void daE_S1_Delete__FP10e_s1_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void daE_S1_Create__FP10fopAc_ac_c(); // 1
@@ -1809,14 +1809,9 @@ asm static void daE_S1_Execute(e_s1_class* param_0) {
 
 
 /* 8077FC88-8077FC90 0008+00 s=1 e=0 z=0  None .text      daE_S1_IsDelete__FP10e_s1_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_S1_IsDelete(e_s1_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_s1/d_a_e_s1/daE_S1_IsDelete__FP10e_s1_class.s"
+static bool daE_S1_IsDelete(e_s1_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8077FC90-8077FCF8 0068+00 s=1 e=0 z=0  None .text      daE_S1_Delete__FP10e_s1_class                                */
@@ -1875,14 +1870,9 @@ asm s1_ke_s::s1_ke_s() {
 
 
 /* 807804D8-807804DC 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_s1/d_a_e_s1/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807804DC-80780524 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

@@ -99,7 +99,7 @@ static void daObjCRVHAHEN_Create(fopAc_ac_c*); // 2
 static void daObjCRVHAHEN_Delete(daObjCRVHAHEN_c*); // 2
 static void daObjCRVHAHEN_Draw(daObjCRVHAHEN_c*); // 2
 static void daObjCRVHAHEN_Execute(daObjCRVHAHEN_c*); // 2
-static void daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c*); // 2
+static bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c*); // 2
 
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjCRVHAHEN_Create__FP10fopAc_ac_c(); // 1
@@ -119,7 +119,7 @@ extern "C" void create__15daObjCRVHAHEN_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c(); // 1
+extern "C" static bool daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c(); // 1
 extern "C" extern u32 const lit_3704;
 extern "C" extern u32 const lit_3705;
 extern "C" extern u32 const lit_3706;
@@ -456,36 +456,21 @@ asm csXyz::~csXyz() {
 
 
 /* 80BD3FD8-80BD3FDC 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD3FDC-80BD3FE0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD3FE0-80BD3FE8 0008+00 s=1 e=0 z=0  None .text      daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvhahen/d_a_obj_crvhahen/daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c.s"
+static bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

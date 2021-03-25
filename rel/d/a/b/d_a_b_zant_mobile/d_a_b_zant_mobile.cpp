@@ -108,19 +108,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -160,11 +160,11 @@ struct dVibration_c {
 	/* 8006FD94 */ void StopQuake(int);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -250,7 +250,7 @@ struct Z2CreatureEnemy {
 
 static void daB_ZANTZ_Draw(daB_ZANTZ_c*); // 2
 static void daB_ZANTZ_Execute(daB_ZANTZ_c*); // 2
-static void daB_ZANTZ_IsDelete(daB_ZANTZ_c*); // 2
+static bool daB_ZANTZ_IsDelete(daB_ZANTZ_c*); // 2
 static void daB_ZANTZ_Delete(daB_ZANTZ_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_ZANTZ_Create(daB_ZANTZ_c*); // 2
@@ -268,7 +268,7 @@ extern "C" void action__11daB_ZANTZ_cFv(); // 1
 extern "C" void cc_set__11daB_ZANTZ_cFv(); // 1
 extern "C" void execute__11daB_ZANTZ_cFv(); // 1
 extern "C" static void daB_ZANTZ_Execute__FP11daB_ZANTZ_c(); // 1
-extern "C" static void daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c(); // 1
+extern "C" static bool daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c(); // 1
 extern "C" void _delete__11daB_ZANTZ_cFv(); // 1
 extern "C" static void daB_ZANTZ_Delete__FP11daB_ZANTZ_c(); // 1
 extern "C" void CreateHeap__11daB_ZANTZ_cFv(); // 1
@@ -800,14 +800,9 @@ asm static void daB_ZANTZ_Execute(daB_ZANTZ_c* param_0) {
 
 
 /* 80651D14-80651D1C 0008+00 s=1 e=0 z=0  None .text      daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_ZANTZ_IsDelete(daB_ZANTZ_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_mobile/d_a_b_zant_mobile/daB_ZANTZ_IsDelete__FP11daB_ZANTZ_c.s"
+static bool daB_ZANTZ_IsDelete(daB_ZANTZ_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80651D1C-80651DA4 0088+00 s=1 e=0 z=0  None .text      _delete__11daB_ZANTZ_cFv                                     */

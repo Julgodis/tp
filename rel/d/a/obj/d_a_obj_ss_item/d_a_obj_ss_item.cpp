@@ -198,7 +198,7 @@ static void daObj_SSItem_Create(void*); // 2
 static void daObj_SSItem_Delete(void*); // 2
 static void daObj_SSItem_Execute(void*); // 2
 static void daObj_SSItem_Draw(void*); // 2
-static void daObj_SSItem_IsDelete(void*); // 2
+static bool daObj_SSItem_IsDelete(void*); // 2
 
 extern "C" void __dt__14daObj_SSItem_cFv(); // 1
 extern "C" void create__14daObj_SSItem_cFv(); // 1
@@ -233,7 +233,7 @@ extern "C" static void daObj_SSItem_Create__FPv(); // 1
 extern "C" static void daObj_SSItem_Delete__FPv(); // 1
 extern "C" static void daObj_SSItem_Execute__FPv(); // 1
 extern "C" static void daObj_SSItem_Draw__FPv(); // 1
-extern "C" static void daObj_SSItem_IsDelete__FPv(); // 1
+extern "C" static bool daObj_SSItem_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_ss_item_cpp(); // 1
 extern "C" static void func_80CE7E94(); // 1
@@ -892,14 +892,9 @@ asm static void daObj_SSItem_Draw(void* param_0) {
 
 
 /* 80CE7E0C-80CE7E14 0008+00 s=1 e=0 z=0  None .text      daObj_SSItem_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_SSItem_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ss_item/d_a_obj_ss_item/daObj_SSItem_IsDelete__FPv.s"
+static bool daObj_SSItem_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CE7E14-80CE7E5C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

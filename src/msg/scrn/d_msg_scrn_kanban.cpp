@@ -27,13 +27,13 @@ struct dMsgScrnKanban_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ void selectAnimeMove(u8, u8, bool);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
 	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
 	/* 80238C5C */ void fukiPosCalc(u8);
-	/* 80238C60 */ void isSelect();
-	/* 80238C68 */ void selectAnimeEnd();
+	/* 80238C60 */ bool isSelect();
+	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
 	/* 80238C74 */ void dotAnimeInit();
 	/* 8023C0DC */ dMsgScrnBase_c();
@@ -112,13 +112,13 @@ extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGp_getSubHeap2D__Fi(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
 extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" void selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
 extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
 extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" void isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
@@ -273,24 +273,14 @@ asm void dMsgScrnKanban_c::fukiAlpha(f32 param_0) {
 
 
 /* 80245754-80245758 0004+00 s=1 e=0 z=0  None .text      fukiScale__16dMsgScrnKanban_cFf                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnKanban_c::fukiScale(f32 param_0) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_kanban/fukiScale__16dMsgScrnKanban_cFf.s"
+void dMsgScrnKanban_c::fukiScale(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80245758-8024575C 0004+00 s=1 e=0 z=0  None .text      fukiTrans__16dMsgScrnKanban_cFff                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnKanban_c::fukiTrans(f32 param_0, f32 param_1) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_kanban/fukiTrans__16dMsgScrnKanban_cFff.s"
+void dMsgScrnKanban_c::fukiTrans(f32 param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 

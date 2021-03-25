@@ -29,17 +29,17 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static void daTag_Telop_Draw(daTag_Telop_c*); // 2
+static bool daTag_Telop_Draw(daTag_Telop_c*); // 2
 static void daTag_Telop_Execute(daTag_Telop_c*); // 2
-static void daTag_Telop_IsDelete(daTag_Telop_c*); // 2
+static bool daTag_Telop_IsDelete(daTag_Telop_c*); // 2
 static void daTag_Telop_Delete(daTag_Telop_c*); // 2
 static void daTag_Telop_Create(fopAc_ac_c*); // 2
 
 extern "C" void create__13daTag_Telop_cFv(); // 1
 extern "C" void execute__13daTag_Telop_cFv(); // 1
-extern "C" static void daTag_Telop_Draw__FP13daTag_Telop_c(); // 1
+extern "C" static bool daTag_Telop_Draw__FP13daTag_Telop_c(); // 1
 extern "C" static void daTag_Telop_Execute__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_IsDelete__FP13daTag_Telop_c(); // 1
+extern "C" static bool daTag_Telop_IsDelete__FP13daTag_Telop_c(); // 1
 extern "C" static void daTag_Telop_Delete__FP13daTag_Telop_c(); // 1
 extern "C" static void daTag_Telop_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_TAG_TELOP[12];
@@ -87,14 +87,9 @@ asm void daTag_Telop_c::execute() {
 
 
 /* 80490B5C-80490B64 0008+00 s=1 e=0 z=0  None .text      daTag_Telop_Draw__FP13daTag_Telop_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Telop_Draw(daTag_Telop_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_telop/d_a_tag_telop/daTag_Telop_Draw__FP13daTag_Telop_c.s"
+static bool daTag_Telop_Draw(daTag_Telop_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80490B64-80490B88 0024+00 s=1 e=0 z=0  None .text      daTag_Telop_Execute__FP13daTag_Telop_c                       */
@@ -109,14 +104,9 @@ asm static void daTag_Telop_Execute(daTag_Telop_c* param_0) {
 
 
 /* 80490B88-80490B90 0008+00 s=1 e=0 z=0  None .text      daTag_Telop_IsDelete__FP13daTag_Telop_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_Telop_IsDelete(daTag_Telop_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_telop/d_a_tag_telop/daTag_Telop_IsDelete__FP13daTag_Telop_c.s"
+static bool daTag_Telop_IsDelete(daTag_Telop_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80490B90-80490BC0 0030+00 s=1 e=0 z=0  None .text      daTag_Telop_Delete__FP13daTag_Telop_c                        */

@@ -24,7 +24,7 @@ struct daObj_Bed_c {
 	/* 80BADCB4 */ void Execute();
 	/* 80BADDF4 */ void Draw();
 	/* 80BADEB8 */ void createHeapCallBack(fopAc_ac_c*);
-	/* 80BADED8 */ void getType();
+	/* 80BADED8 */ bool getType();
 	/* 80BADEE0 */ void getResName();
 	/* 80BADEF0 */ void isDelete();
 	/* 80BADF34 */ void setEnvTevColor();
@@ -148,7 +148,7 @@ static void daObj_Bed_Create(void*); // 2
 static void daObj_Bed_Delete(void*); // 2
 static void daObj_Bed_Execute(void*); // 2
 static void daObj_Bed_Draw(void*); // 2
-static void daObj_Bed_IsDelete(void*); // 2
+static bool daObj_Bed_IsDelete(void*); // 2
 
 extern "C" void __dt__11daObj_Bed_cFv(); // 1
 extern "C" void create__11daObj_Bed_cFv(); // 1
@@ -161,7 +161,7 @@ extern "C" void Delete__11daObj_Bed_cFv(); // 1
 extern "C" void Execute__11daObj_Bed_cFv(); // 1
 extern "C" void Draw__11daObj_Bed_cFv(); // 1
 extern "C" void createHeapCallBack__11daObj_Bed_cFP10fopAc_ac_c(); // 1
-extern "C" void getType__11daObj_Bed_cFv(); // 1
+extern "C" bool getType__11daObj_Bed_cFv(); // 1
 extern "C" void getResName__11daObj_Bed_cFv(); // 1
 extern "C" void isDelete__11daObj_Bed_cFv(); // 1
 extern "C" void setEnvTevColor__11daObj_Bed_cFv(); // 1
@@ -171,7 +171,7 @@ extern "C" static void daObj_Bed_Create__FPv(); // 1
 extern "C" static void daObj_Bed_Delete__FPv(); // 1
 extern "C" static void daObj_Bed_Execute__FPv(); // 1
 extern "C" static void daObj_Bed_Draw__FPv(); // 1
-extern "C" static void daObj_Bed_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Bed_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_obj_bed_cpp(); // 1
 extern "C" void __dt__17daObj_Bed_Param_cFv(); // 1
 extern "C" static void func_80BAE144(); // 1
@@ -474,14 +474,9 @@ asm void daObj_Bed_c::createHeapCallBack(fopAc_ac_c* param_0) {
 
 
 /* 80BADED8-80BADEE0 0008+00 s=1 e=0 z=0  None .text      getType__11daObj_Bed_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Bed_c::getType() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/getType__11daObj_Bed_cFv.s"
+bool daObj_Bed_c::getType() {
+	return false;
 }
-#pragma pop
 
 
 /* 80BADEE0-80BADEF0 0010+00 s=3 e=0 z=0  None .text      getResName__11daObj_Bed_cFv                                  */
@@ -584,14 +579,9 @@ asm static void daObj_Bed_Draw(void* param_0) {
 
 
 /* 80BAE0B4-80BAE0BC 0008+00 s=1 e=0 z=0  None .text      daObj_Bed_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Bed_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bed/d_a_obj_bed/daObj_Bed_IsDelete__FPv.s"
+static bool daObj_Bed_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

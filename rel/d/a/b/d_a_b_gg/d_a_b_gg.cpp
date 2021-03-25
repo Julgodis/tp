@@ -16,18 +16,18 @@ struct daB_GG_HIO_c {
 	/* 805EC9C4 */ ~daB_GG_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 805ED010 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daB_GG_c {
@@ -184,19 +184,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -245,10 +245,10 @@ struct dEvt_control_c {
 	/* 800429A8 */ void onSkipFade();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -377,7 +377,7 @@ static void other_bg_check(daB_GG_c*, fopAc_ac_c*); // 2
 static void Hanekaeri(daB_GG_c*, cXyz, cXyz, f32); // 2
 static void daB_GG_Draw(daB_GG_c*); // 2
 static void daB_GG_Execute(daB_GG_c*); // 2
-static void daB_GG_IsDelete(daB_GG_c*); // 2
+static bool daB_GG_IsDelete(daB_GG_c*); // 2
 static void daB_GG_Delete(daB_GG_c*); // 2
 static void daB_GG_Create(fopAc_ac_c*); // 2
 static void setMidnaBindEffect(fopEn_enemy_c*, Z2CreatureEnemy*, cXyz*, cXyz*); // 2
@@ -465,7 +465,7 @@ extern "C" void setHeadMtx__8daB_GG_cFv(); // 1
 extern "C" void setHeadMtx1__8daB_GG_cFv(); // 1
 extern "C" static void daB_GG_Draw__FP8daB_GG_c(); // 1
 extern "C" static void daB_GG_Execute__FP8daB_GG_c(); // 1
-extern "C" static void daB_GG_IsDelete__FP8daB_GG_c(); // 1
+extern "C" static bool daB_GG_IsDelete__FP8daB_GG_c(); // 1
 extern "C" static void daB_GG_Delete__FP8daB_GG_c(); // 1
 extern "C" void Create__8daB_GG_cFv(); // 1
 extern "C" void __ct__8daB_GG_cFv(); // 1
@@ -2644,14 +2644,9 @@ asm static void daB_GG_Execute(daB_GG_c* param_0) {
 
 
 /* 805EBBBC-805EBBC4 0008+00 s=1 e=0 z=0  None .text      daB_GG_IsDelete__FP8daB_GG_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_GG_IsDelete(daB_GG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gg/d_a_b_gg/daB_GG_IsDelete__FP8daB_GG_c.s"
+static bool daB_GG_IsDelete(daB_GG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805EBBC4-805EBBE4 0020+00 s=1 e=0 z=0  None .text      daB_GG_Delete__FP8daB_GG_c                                   */

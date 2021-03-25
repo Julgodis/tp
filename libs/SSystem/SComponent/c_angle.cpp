@@ -48,10 +48,10 @@ struct cDegree {
 	/* 80271440 */ void Tan() const;
 };
 
-struct cSPolar;
 struct cXyz {
 };
 
+struct cSPolar;
 struct cSGlobe {
 	/* 80271820 */ cSGlobe(f32, s16, s16);
 	/* 80271880 */ cSGlobe(cXyz const&);

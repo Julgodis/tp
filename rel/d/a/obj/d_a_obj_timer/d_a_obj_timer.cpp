@@ -17,7 +17,7 @@ struct daObjTimer {
 		};
 
 		/* 80485198 */ void _create();
-		/* 8048526C */ void _delete();
+		/* 8048526C */ bool _delete();
 		/* 80485274 */ void mode_wait_init();
 		/* 80485284 */ void mode_wait();
 		/* 804852E0 */ void mode_count_init();
@@ -63,7 +63,7 @@ struct Z2SeMgr {
 
 
 extern "C" void _create__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void _delete__Q210daObjTimer5Act_cFv(); // 1
+extern "C" bool _delete__Q210daObjTimer5Act_cFv(); // 1
 extern "C" void mode_wait_init__Q210daObjTimer5Act_cFv(); // 1
 extern "C" void mode_wait__Q210daObjTimer5Act_cFv(); // 1
 extern "C" void mode_count_init__Q210daObjTimer5Act_cFv(); // 1
@@ -72,8 +72,8 @@ extern "C" void _execute__Q210daObjTimer5Act_cFv(); // 1
 extern "C" static void func_804855A4(); // 1
 extern "C" static void func_804855C4(); // 1
 extern "C" static void func_804855E8(); // 1
-extern "C" static void func_8048560C(); // 1
-extern "C" static void func_80485614(); // 1
+extern "C" static bool func_8048560C(); // 1
+extern "C" static bool func_80485614(); // 1
 extern "C" void func_8048561C(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Timer[12];
@@ -114,14 +114,9 @@ asm void daObjTimer::Act_c::_create() {
 
 
 /* 8048526C-80485274 0008+00 s=1 e=0 z=0  None .text      _delete__Q210daObjTimer5Act_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjTimer::Act_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/_delete__Q210daObjTimer5Act_cFv.s"
+bool daObjTimer::Act_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80485274-80485284 0010+00 s=2 e=0 z=0  None .text      mode_wait_init__Q210daObjTimer5Act_cFv                       */
@@ -253,25 +248,15 @@ extern "C" asm static void func_804855E8() {
 
 
 /* 8048560C-80485614 0008+00 s=1 e=0 z=0  None .text      Mthd_Draw__Q210daObjTimer27@unnamed@d_a_obj_timer_cpp@FPv    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_8048560C() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_8048560C.s"
+extern "C" static bool func_8048560C() {
+	return true;
 }
-#pragma pop
 
 
 /* 80485614-8048561C 0008+00 s=1 e=0 z=0  None .text      Mthd_IsDelete__Q210daObjTimer27@unnamed@d_a_obj_timer_cpp@FPv */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void func_80485614() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timer/d_a_obj_timer/func_80485614.s"
+extern "C" static bool func_80485614() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048561C-80485638 001C+00 s=5 e=0 z=0  None .text      PrmAbstract<Q310daObjTimer5Act_c5Prm_e>__5daObjFPC10fopAc_ac_cQ310daObjTimer5Act_c5Prm_eQ310daObjTimer5Act_c5Prm_e */

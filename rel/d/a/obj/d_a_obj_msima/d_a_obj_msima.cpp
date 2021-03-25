@@ -168,7 +168,7 @@ static void action(obj_msima_class*); // 2
 static void chain_move(obj_msima_class*, ms_chain_s*, int); // 2
 static void chain_move2(obj_msima_class*, ms_chain_s*, int); // 2
 static void daObj_Msima_Execute(obj_msima_class*); // 2
-static void daObj_Msima_IsDelete(obj_msima_class*); // 2
+static bool daObj_Msima_IsDelete(obj_msima_class*); // 2
 static void daObj_Msima_Delete(obj_msima_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Msima_Create(fopAc_ac_c*); // 2
@@ -184,7 +184,7 @@ extern "C" static void action__FP15obj_msima_class(); // 1
 extern "C" static void chain_move__FP15obj_msima_classP10ms_chain_si(); // 1
 extern "C" static void chain_move2__FP15obj_msima_classP10ms_chain_si(); // 1
 extern "C" static void daObj_Msima_Execute__FP15obj_msima_class(); // 1
-extern "C" static void daObj_Msima_IsDelete__FP15obj_msima_class(); // 1
+extern "C" static bool daObj_Msima_IsDelete__FP15obj_msima_class(); // 1
 extern "C" static void daObj_Msima_Delete__FP15obj_msima_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -729,14 +729,9 @@ asm static void daObj_Msima_Execute(obj_msima_class* param_0) {
 
 
 /* 80C9C3A8-80C9C3B0 0008+00 s=1 e=0 z=0  None .text      daObj_Msima_IsDelete__FP15obj_msima_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Msima_IsDelete(obj_msima_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_IsDelete__FP15obj_msima_class.s"
+static bool daObj_Msima_IsDelete(obj_msima_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -839,14 +834,9 @@ asm ms_chain_s::~ms_chain_s() {
 
 
 /* 80C9CA9C-80C9CAA0 0004+00 s=1 e=0 z=0  None .text      __ct__10ms_chain_sFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm ms_chain_s::ms_chain_s() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/__ct__10ms_chain_sFv.s"
+ms_chain_s::ms_chain_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C9CAA0-80C9CAE8 0048+00 s=2 e=0 z=0  None .text      __dt__17daObj_Msima_HIO_cFv                                  */

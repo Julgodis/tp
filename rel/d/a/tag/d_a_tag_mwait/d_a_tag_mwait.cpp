@@ -45,7 +45,7 @@ struct dMsgFlow_c {
 static void daTagMwait_Create(fopAc_ac_c*); // 2
 static void daTagMwait_Delete(daTagMwait_c*); // 2
 static void daTagMwait_Execute(daTagMwait_c*); // 2
-static void daTagMwait_Draw(daTagMwait_c*); // 2
+static bool daTagMwait_Draw(daTagMwait_c*); // 2
 
 extern "C" void create__12daTagMwait_cFv(); // 1
 extern "C" static void daTagMwait_Create__FP10fopAc_ac_c(); // 1
@@ -53,7 +53,7 @@ extern "C" void __dt__12daTagMwait_cFv(); // 1
 extern "C" static void daTagMwait_Delete__FP12daTagMwait_c(); // 1
 extern "C" void execute__12daTagMwait_cFv(); // 1
 extern "C" static void daTagMwait_Execute__FP12daTagMwait_c(); // 1
-extern "C" static void daTagMwait_Draw__FP12daTagMwait_c(); // 1
+extern "C" static bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
 extern "C" extern u32 const lit_3842;
 extern "C" extern u32 const lit_3843;
 extern "C" extern u32 const lit_3844;
@@ -173,14 +173,9 @@ asm static void daTagMwait_Execute(daTagMwait_c* param_0) {
 
 
 /* 80D5C570-80D5C578 0008+00 s=1 e=0 z=0  None .text      daTagMwait_Draw__FP12daTagMwait_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagMwait_Draw(daTagMwait_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Draw__FP12daTagMwait_c.s"
+static bool daTagMwait_Draw(daTagMwait_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

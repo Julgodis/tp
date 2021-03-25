@@ -90,16 +90,16 @@ struct JStage {
 	};
 
 	struct TObject {
-		/* 80280E1C */ void JSGGetName() const;
+		/* 80280E1C */ bool JSGGetName() const;
 		/* 80280E24 */ void JSGUpdate();
-		/* 80280E28 */ void JSGGetFlag() const;
+		/* 80280E28 */ bool JSGGetFlag() const;
 		/* 80280E30 */ void JSGSetFlag(u32);
-		/* 80280E34 */ void JSGGetData(u32, void*, u32) const;
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
 		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
 		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
-		/* 80280E4C */ void JSGFindNodeID(char const*) const;
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
@@ -108,42 +108,42 @@ struct JStage {
 
 	struct TActor {
 		/* 80280A48 */ ~TActor();
-		/* 80280AA8 */ void JSGFGetType() const;
-		/* 80280AC8 */ void JSGGetShape() const;
-		/* 80280AD4 */ void JSGGetAnimation() const;
+		/* 80280AA8 */ s32 JSGFGetType() const;
+		/* 80280AC8 */ s32 JSGGetShape() const;
+		/* 80280AD4 */ s32 JSGGetAnimation() const;
 		/* 80280AE0 */ void JSGGetAnimationFrame() const;
 		/* 80280AF4 */ void JSGGetAnimationTransition() const;
-		/* 80280B00 */ void JSGGetTextureAnimation() const;
+		/* 80280B00 */ s32 JSGGetTextureAnimation() const;
 		/* 80280B0C */ void JSGGetTextureAnimationFrame() const;
 	};
 
 	struct TAmbientLight {
 		/* 80280B20 */ ~TAmbientLight();
-		/* 80280B80 */ void JSGFGetType() const;
+		/* 80280B80 */ s32 JSGFGetType() const;
 		/* 80280B88 */ void JSGGetColor() const;
-	};
-
-	struct TECameraView {
 	};
 
 	struct TECameraProjection {
 	};
 
+	struct TECameraView {
+	};
+
 	struct TCamera {
 		/* 80280BA0 */ ~TCamera();
-		/* 80280C00 */ void JSGFGetType() const;
-		/* 80280C08 */ void JSGGetProjectionType() const;
+		/* 80280C00 */ s32 JSGFGetType() const;
+		/* 80280C08 */ bool JSGGetProjectionType() const;
 		/* 80280C10 */ void JSGSetProjectionType(JStage::TECameraProjection);
 		/* 80280C48 */ void JSGGetProjectionField(f32*) const;
 		/* 80280C4C */ void JSGSetProjectionField(f32 const*);
-		/* 80280C50 */ void JSGGetViewType() const;
+		/* 80280C50 */ bool JSGGetViewType() const;
 		/* 80280C58 */ void JSGSetViewType(JStage::TECameraView);
 	};
 
 	struct TFog {
 		/* 80280C80 */ ~TFog();
-		/* 80280CE0 */ void JSGFGetType() const;
-		/* 80280CE8 */ void JSGGetFogFunction() const;
+		/* 80280CE0 */ s32 JSGFGetType() const;
+		/* 80280CE8 */ bool JSGGetFogFunction() const;
 		/* 80280CF4 */ void JSGGetStartZ() const;
 		/* 80280D00 */ void JSGGetEndZ() const;
 		/* 80280D10 */ void JSGGetColor() const;
@@ -151,8 +151,8 @@ struct JStage {
 
 	struct TLight {
 		/* 80280D28 */ ~TLight();
-		/* 80280D88 */ void JSGFGetType() const;
-		/* 80280D90 */ void JSGGetLightType() const;
+		/* 80280D88 */ s32 JSGFGetType() const;
+		/* 80280D90 */ bool JSGGetLightType() const;
 		/* 80280D9C */ void JSGGetColor() const;
 		/* 80280DB4 */ void JSGGetDistanceAttenuation(f32*, f32*, _GXDistAttnFn*) const;
 		/* 80280DBC */ void JSGGetAngleAttenuation(f32*, _GXSpotFn*) const;
@@ -162,10 +162,10 @@ struct JStage {
 
 	struct TSystem {
 		/* 80280E90 */ ~TSystem();
-		/* 80280EF0 */ void JSGFGetType() const;
-		/* 80280F00 */ void JSGCreateObject(char const*, JStage::TEObject, u32);
+		/* 80280EF0 */ bool JSGFGetType() const;
+		/* 80280F00 */ bool JSGCreateObject(char const*, JStage::TEObject, u32);
 		/* 80280F08 */ void JSGDestroyObject(JStage::TObject*);
-		/* 80280F0C */ void JSGGetSystemData(u32);
+		/* 80280F0C */ bool JSGGetSystemData(u32);
 		/* 80280F14 */ void JSGSetSystemData(u32, u32);
 	};
 
@@ -519,54 +519,54 @@ extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzU
 extern "C" void __ct__17jmessage_tControlFv(); // 1
 extern "C" void setDemoMessage__12dMsgObject_cFUl(); // 1
 extern "C" void __dt__Q26JStage6TActorFv(); // 1
-extern "C" void JSGFGetType__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetShape__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetAnimation__Q26JStage6TActorCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage6TActorCFv(); // 1
+extern "C" s32 JSGGetShape__Q26JStage6TActorCFv(); // 1
+extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv(); // 1
 extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv(); // 1
 extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetTextureAnimation__Q26JStage6TActorCFv(); // 1
+extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv(); // 1
 extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv(); // 1
 extern "C" void __dt__Q26JStage13TAmbientLightFv(); // 1
-extern "C" void JSGFGetType__Q26JStage13TAmbientLightCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv(); // 1
 extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv(); // 1
 extern "C" void __dt__Q26JStage7TCameraFv(); // 1
-extern "C" void JSGFGetType__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGGetProjectionType__Q26JStage7TCameraCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv(); // 1
+extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv(); // 1
 extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection(); // 1
 extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf(); // 1
 extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf(); // 1
-extern "C" void JSGGetViewType__Q26JStage7TCameraCFv(); // 1
+extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv(); // 1
 extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView(); // 1
 extern "C" void __dt__Q26JStage4TFogFv(); // 1
-extern "C" void JSGFGetType__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage4TFogCFv(); // 1
+extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
 extern "C" void JSGGetStartZ__Q26JStage4TFogCFv(); // 1
 extern "C" void JSGGetEndZ__Q26JStage4TFogCFv(); // 1
 extern "C" void JSGGetColor__Q26JStage4TFogCFv(); // 1
 extern "C" void __dt__Q26JStage6TLightFv(); // 1
-extern "C" void JSGFGetType__Q26JStage6TLightCFv(); // 1
-extern "C" void JSGGetLightType__Q26JStage6TLightCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage6TLightCFv(); // 1
+extern "C" bool JSGGetLightType__Q26JStage6TLightCFv(); // 1
 extern "C" void JSGGetColor__Q26JStage6TLightCFv(); // 1
 extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn(); // 1
 extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn(); // 1
 extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec(); // 1
 extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec(); // 1
-extern "C" void JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" void JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" void JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
 extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
 extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
 extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
 extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
 extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
 extern "C" void __dt__Q26JStage7TSystemFv(); // 1
-extern "C" void JSGFGetType__Q26JStage7TSystemCFv(); // 1
-extern "C" void JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl(); // 1
+extern "C" bool JSGFGetType__Q26JStage7TSystemCFv(); // 1
+extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl(); // 1
 extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject(); // 1
-extern "C" void JSGGetSystemData__Q26JStage7TSystemFUl(); // 1
+extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl(); // 1
 extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl(); // 1
 extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv(); // 1
 extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv(); // 1

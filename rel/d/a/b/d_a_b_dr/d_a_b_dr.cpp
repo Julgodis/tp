@@ -16,10 +16,10 @@ struct daB_DR_HIO_c {
 	/* 805C6B94 */ ~daB_DR_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_DR_c {
@@ -184,19 +184,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -394,7 +394,7 @@ struct Z2CreatureEnemy {
 
 static void daB_DR_Draw(daB_DR_c*); // 2
 static void daB_DR_Execute(daB_DR_c*); // 2
-static void daB_DR_IsDelete(daB_DR_c*); // 2
+static bool daB_DR_IsDelete(daB_DR_c*); // 2
 static void daB_DR_Delete(daB_DR_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_DR_Create(daB_DR_c*); // 2
@@ -459,7 +459,7 @@ extern "C" void demo_skip__8daB_DR_cFi(); // 1
 extern "C" void DemoSkipCallBack__8daB_DR_cFPvi(); // 1
 extern "C" void execute__8daB_DR_cFv(); // 1
 extern "C" static void daB_DR_Execute__FP8daB_DR_c(); // 1
-extern "C" static void daB_DR_IsDelete__FP8daB_DR_c(); // 1
+extern "C" static bool daB_DR_IsDelete__FP8daB_DR_c(); // 1
 extern "C" void _delete__8daB_DR_cFv(); // 1
 extern "C" static void daB_DR_Delete__FP8daB_DR_c(); // 1
 extern "C" void CreateHeap__8daB_DR_cFv(); // 1
@@ -2517,14 +2517,9 @@ asm static void daB_DR_Execute(daB_DR_c* param_0) {
 
 
 /* 805C55A8-805C55B0 0008+00 s=1 e=0 z=0  None .text      daB_DR_IsDelete__FP8daB_DR_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_DR_IsDelete(daB_DR_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_dr/d_a_b_dr/daB_DR_IsDelete__FP8daB_DR_c.s"
+static bool daB_DR_IsDelete(daB_DR_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805C55B0-805C5684 00D4+00 s=1 e=0 z=0  None .text      _delete__8daB_DR_cFv                                         */

@@ -66,8 +66,8 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
-	/* 80144754 */ void __CreateHeap();
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144CC4 */ void settingBeforeDraw();
@@ -106,7 +106,7 @@ static void daShopItem_Create(void*); // 2
 static void daShopItem_Delete(void*); // 2
 static void daShopItem_Draw(void*); // 2
 static void daShopItem_Execute(void*); // 2
-static void daShopItem_IsDelete(void*); // 2
+static bool daShopItem_IsDelete(void*); // 2
 
 extern "C" void getShopArcname__12daShopItem_cFv(); // 1
 extern "C" void getHeapSize__12daShopItem_cFv(); // 1
@@ -129,7 +129,7 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" static void daShopItem_Delete__FPv(); // 1
 extern "C" static void daShopItem_Draw__FPv(); // 1
 extern "C" static void daShopItem_Execute__FPv(); // 1
-extern "C" static void daShopItem_IsDelete__FPv(); // 1
+extern "C" static bool daShopItem_IsDelete__FPv(); // 1
 extern "C" static void func_8059F420(); // 1
 extern "C" static void func_8059F428(); // 1
 extern "C" extern u32 const lit_3724;
@@ -169,8 +169,8 @@ extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
 extern "C" void __ct__10dCcD_GSttsFv(); // 1
 extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
-extern "C" void __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
@@ -316,14 +316,9 @@ asm void daShopItem_c::_draw() {
 
 
 /* 8059EF9C-8059EFA0 0004+00 s=1 e=0 z=0  None .text      setListStart__12daShopItem_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daShopItem_c::setListStart() {
-	nofralloc
-#include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/setListStart__12daShopItem_cFv.s"
+void daShopItem_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059EFA0-8059F024 0084+00 s=1 e=0 z=0  None .text      setShadow__12daShopItem_cFv                                  */
@@ -558,14 +553,9 @@ asm static void daShopItem_Execute(void* param_0) {
 
 
 /* 8059F418-8059F420 0008+00 s=1 e=0 z=0  None .text      daShopItem_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daShopItem_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_shop_item/d_a_shop_item/daShopItem_IsDelete__FPv.s"
+static bool daShopItem_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8059F420-8059F428 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

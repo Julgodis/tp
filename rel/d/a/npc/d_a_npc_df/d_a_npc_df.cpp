@@ -100,7 +100,7 @@ static void df_rod(npc_df_class*, df_s*); // 2
 static void df_control(npc_df_class*); // 2
 static void s_rod_sub(void*, void*); // 2
 static void daNpc_Df_Execute(npc_df_class*); // 2
-static void daNpc_Df_IsDelete(npc_df_class*); // 2
+static bool daNpc_Df_IsDelete(npc_df_class*); // 2
 static void daNpc_Df_Delete(npc_df_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Df_Create(fopAc_ac_c*); // 2
@@ -111,7 +111,7 @@ extern "C" static void df_rod__FP12npc_df_classP4df_s(); // 1
 extern "C" static void df_control__FP12npc_df_class(); // 1
 extern "C" static void s_rod_sub__FPvPv(); // 1
 extern "C" static void daNpc_Df_Execute__FP12npc_df_class(); // 1
-extern "C" static void daNpc_Df_IsDelete__FP12npc_df_class(); // 1
+extern "C" static bool daNpc_Df_IsDelete__FP12npc_df_class(); // 1
 extern "C" static void daNpc_Df_Delete__FP12npc_df_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daNpc_Df_Create__FP10fopAc_ac_c(); // 1
@@ -511,14 +511,9 @@ asm static void daNpc_Df_Execute(npc_df_class* param_0) {
 
 
 /* 809A63AC-809A63B4 0008+00 s=1 e=0 z=0  None .text      daNpc_Df_IsDelete__FP12npc_df_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Df_IsDelete(npc_df_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/daNpc_Df_IsDelete__FP12npc_df_class.s"
+static bool daNpc_Df_IsDelete(npc_df_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -640,14 +635,9 @@ asm df_s::~df_s() {
 
 
 /* 809A6764-809A6768 0004+00 s=1 e=0 z=0  None .text      __ct__4df_sFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm df_s::df_s() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_df/d_a_npc_df/__ct__4df_sFv.s"
+df_s::df_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

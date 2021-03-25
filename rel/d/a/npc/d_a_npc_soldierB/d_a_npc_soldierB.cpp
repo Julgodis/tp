@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpc_SoldierB_c {
@@ -35,11 +35,11 @@ struct daNpc_SoldierB_c {
 	/* 80AF3850 */ void ctrlJointCallBack(J3DJoint*, int);
 	/* 80AF389C */ void setParam();
 	/* 80AF39B8 */ void main();
-	/* 80AF3B30 */ void ctrlBtk();
+	/* 80AF3B30 */ bool ctrlBtk();
 	/* 80AF3B38 */ void setAttnPos();
 	/* 80AF4030 */ void setMotionAnm(int, f32);
 	/* 80AF4130 */ void setMotion(int, f32, int);
-	/* 80AF4174 */ void drawDbgInfo();
+	/* 80AF4174 */ bool drawDbgInfo();
 	/* 80AF417C */ void drawOtherMdls();
 	/* 80AF4228 */ void getTypeFromParam();
 	/* 80AF4248 */ void isDelete();
@@ -98,15 +98,12 @@ struct daNpcF_Lookat_c {
 	/* 80AF526C */ ~daNpcF_Lookat_c();
 };
 
+struct _GXColorS10 {
+};
+
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct _GXColorS10 {
 };
 
 struct dCcD_SrcCyl {
@@ -114,6 +111,9 @@ struct dCcD_SrcCyl {
 
 struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -144,8 +144,8 @@ struct daNpcF_c {
 	/* 80AF5608 */ daNpcF_c();
 	/* 80AF597C */ void adjustShapeAngle();
 	/* 80AF5980 */ void setCollisions();
-	/* 80AF5984 */ void setExpressionAnm(int, bool);
-	/* 80AF598C */ void setExpressionBtp(int);
+	/* 80AF5984 */ bool setExpressionAnm(int, bool);
+	/* 80AF598C */ bool setExpressionBtp(int);
 	/* 80AF5994 */ void setExpression(int, f32);
 };
 
@@ -183,22 +183,22 @@ struct mDoMtx_stack_c {
 	/* 8000CE70 */ void scaleM(cXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -303,7 +303,7 @@ static void daNpc_SoldierB_Create(void*); // 2
 static void daNpc_SoldierB_Delete(void*); // 2
 static void daNpc_SoldierB_Execute(void*); // 2
 static void daNpc_SoldierB_Draw(void*); // 2
-static void daNpc_SoldierB_IsDelete(void*); // 2
+static bool daNpc_SoldierB_IsDelete(void*); // 2
 
 extern "C" void __ct__16daNpc_SoldierB_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -319,11 +319,11 @@ extern "C" void createHeapCallBack__16daNpc_SoldierB_cFP10fopAc_ac_c(); // 1
 extern "C" void ctrlJointCallBack__16daNpc_SoldierB_cFP8J3DJointi(); // 1
 extern "C" void setParam__16daNpc_SoldierB_cFv(); // 1
 extern "C" void main__16daNpc_SoldierB_cFv(); // 1
-extern "C" void ctrlBtk__16daNpc_SoldierB_cFv(); // 1
+extern "C" bool ctrlBtk__16daNpc_SoldierB_cFv(); // 1
 extern "C" void setAttnPos__16daNpc_SoldierB_cFv(); // 1
 extern "C" void setMotionAnm__16daNpc_SoldierB_cFif(); // 1
 extern "C" void setMotion__16daNpc_SoldierB_cFifi(); // 1
-extern "C" void drawDbgInfo__16daNpc_SoldierB_cFv(); // 1
+extern "C" bool drawDbgInfo__16daNpc_SoldierB_cFv(); // 1
 extern "C" void drawOtherMdls__16daNpc_SoldierB_cFv(); // 1
 extern "C" void getTypeFromParam__16daNpc_SoldierB_cFv(); // 1
 extern "C" void isDelete__16daNpc_SoldierB_cFv(); // 1
@@ -345,7 +345,7 @@ extern "C" static void daNpc_SoldierB_Create__FPv(); // 1
 extern "C" static void daNpc_SoldierB_Delete__FPv(); // 1
 extern "C" static void daNpc_SoldierB_Execute__FPv(); // 1
 extern "C" static void daNpc_SoldierB_Draw__FPv(); // 1
-extern "C" static void daNpc_SoldierB_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_SoldierB_IsDelete__FPv(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __dt__15daNpcF_Lookat_cFv(); // 1
@@ -361,8 +361,8 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void adjustShapeAngle__8daNpcF_cFv(); // 1
 extern "C" void setCollisions__8daNpcF_cFv(); // 1
-extern "C" void setExpressionAnm__8daNpcF_cFib(); // 1
-extern "C" void setExpressionBtp__8daNpcF_cFi(); // 1
+extern "C" bool setExpressionAnm__8daNpcF_cFib(); // 1
+extern "C" bool setExpressionBtp__8daNpcF_cFi(); // 1
 extern "C" void setExpression__8daNpcF_cFif(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_npc_soldierB_cpp(); // 1
@@ -1120,14 +1120,9 @@ asm void daNpc_SoldierB_c::main() {
 
 
 /* 80AF3B30-80AF3B38 0008+00 s=1 e=0 z=0  None .text      ctrlBtk__16daNpc_SoldierB_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_SoldierB_c::ctrlBtk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/ctrlBtk__16daNpc_SoldierB_cFv.s"
+bool daNpc_SoldierB_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1225,14 +1220,9 @@ asm void daNpc_SoldierB_c::setMotion(int param_0, f32 param_1, int param_2) {
 
 
 /* 80AF4174-80AF417C 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__16daNpc_SoldierB_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_SoldierB_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/drawDbgInfo__16daNpc_SoldierB_cFv.s"
+bool daNpc_SoldierB_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80AF417C-80AF4228 00AC+00 s=1 e=0 z=0  None .text      drawOtherMdls__16daNpc_SoldierB_cFv                          */
@@ -1467,14 +1457,9 @@ asm static void daNpc_SoldierB_Draw(void* param_0) {
 
 
 /* 80AF51E0-80AF51E8 0008+00 s=1 e=0 z=0  None .text      daNpc_SoldierB_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_SoldierB_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/daNpc_SoldierB_IsDelete__FPv.s"
+static bool daNpc_SoldierB_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF51E8-80AF5230 0048+00 s=5 e=0 z=0  None .text      __dt__18daNpcF_ActorMngr_cFv                                 */
@@ -1522,14 +1507,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80AF5378-80AF537C 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF537C-80AF53B8 003C+00 s=6 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -1544,14 +1524,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80AF53B8-80AF53BC 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF53BC-80AF5608 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -1621,58 +1596,33 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80AF597C-80AF5980 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF5980-80AF5984 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF5984-80AF598C 0008+00 s=1 e=0 z=0  None .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF598C-80AF5994 0008+00 s=1 e=0 z=0  None .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionBtp(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(int param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AF5994-80AF5998 0004+00 s=1 e=0 z=0  None .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpression(int param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_soldierB/d_a_npc_soldierB/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(int param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80AF5998-80AF59E0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

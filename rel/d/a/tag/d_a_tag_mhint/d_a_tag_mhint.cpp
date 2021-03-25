@@ -70,7 +70,7 @@ struct Z2SeMgr {
 static void daTagMhint_Create(fopAc_ac_c*); // 2
 static void daTagMhint_Delete(daTagMhint_c*); // 2
 static void daTagMhint_Execute(daTagMhint_c*); // 2
-static void daTagMhint_Draw(daTagMhint_c*); // 2
+static bool daTagMhint_Draw(daTagMhint_c*); // 2
 
 extern "C" void create__12daTagMhint_cFv(); // 1
 extern "C" static void daTagMhint_Create__FP10fopAc_ac_c(); // 1
@@ -79,7 +79,7 @@ extern "C" static void daTagMhint_Delete__FP12daTagMhint_c(); // 1
 extern "C" void eventOrder__12daTagMhint_cFv(); // 1
 extern "C" void execute__12daTagMhint_cFv(); // 1
 extern "C" static void daTagMhint_Execute__FP12daTagMhint_c(); // 1
-extern "C" static void daTagMhint_Draw__FP12daTagMhint_c(); // 1
+extern "C" static bool daTagMhint_Draw__FP12daTagMhint_c(); // 1
 extern "C" extern u32 const lit_3742;
 extern "C" extern u32 const lit_3743;
 extern "C" extern u8 const lit_3956[4];
@@ -244,14 +244,9 @@ asm static void daTagMhint_Execute(daTagMhint_c* param_0) {
 
 
 /* 805A6024-805A602C 0008+00 s=1 e=0 z=0  None .text      daTagMhint_Draw__FP12daTagMhint_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagMhint_Draw(daTagMhint_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Draw__FP12daTagMhint_c.s"
+static bool daTagMhint_Draw(daTagMhint_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

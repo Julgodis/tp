@@ -16,12 +16,6 @@ struct daE_DT_HIO_c {
 	/* 806B5BDC */ ~daE_DT_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -29,6 +23,12 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 806AE56C */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_DT_c {
@@ -150,19 +150,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -363,7 +363,7 @@ static void s_fall_otama(void*, void*); // 2
 static void s_demo_otama(void*, void*); // 2
 void s_bomb_search(void*, void*); // 2
 static void daE_DT_Execute(daE_DT_c*); // 2
-static void daE_DT_IsDelete(daE_DT_c*); // 2
+static bool daE_DT_IsDelete(daE_DT_c*); // 2
 static void daE_DT_Delete(daE_DT_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_DT_Create(daE_DT_c*); // 2
@@ -430,7 +430,7 @@ extern "C" void mtx_set__8daE_DT_cFv(); // 1
 extern "C" void cc_set__8daE_DT_cFv(); // 1
 extern "C" void execute__8daE_DT_cFv(); // 1
 extern "C" static void daE_DT_Execute__FP8daE_DT_c(); // 1
-extern "C" static void daE_DT_IsDelete__FP8daE_DT_c(); // 1
+extern "C" static bool daE_DT_IsDelete__FP8daE_DT_c(); // 1
 extern "C" void _delete__8daE_DT_cFv(); // 1
 extern "C" static void daE_DT_Delete__FP8daE_DT_c(); // 1
 extern "C" void CreateHeap__8daE_DT_cFv(); // 1
@@ -2240,14 +2240,9 @@ asm static void daE_DT_Execute(daE_DT_c* param_0) {
 
 
 /* 806B5150-806B5158 0008+00 s=1 e=0 z=0  None .text      daE_DT_IsDelete__FP8daE_DT_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_DT_IsDelete(daE_DT_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_dt/d_a_e_dt/daE_DT_IsDelete__FP8daE_DT_c.s"
+static bool daE_DT_IsDelete(daE_DT_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806B5158-806B51F4 009C+00 s=1 e=0 z=0  None .text      _delete__8daE_DT_cFv                                         */
@@ -2361,14 +2356,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 806B5B7C-806B5B80 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_dt/d_a_e_dt/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806B5B80-806B5BBC 003C+00 s=1 e=0 z=0  None .text      __dt__5csXyzFv                                               */

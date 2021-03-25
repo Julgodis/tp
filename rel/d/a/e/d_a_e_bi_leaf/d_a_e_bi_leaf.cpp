@@ -55,7 +55,7 @@ struct dScnKy_env_light_c {
 static void daE_BI_LEAF_Draw(e_bi_leaf_class*); // 2
 static void action(e_bi_leaf_class*); // 2
 static void daE_BI_LEAF_Execute(e_bi_leaf_class*); // 2
-static void daE_BI_LEAF_IsDelete(e_bi_leaf_class*); // 2
+static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class*); // 2
 static void daE_BI_LEAF_Delete(e_bi_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_BI_LEAF_Create(fopAc_ac_c*); // 2
@@ -63,7 +63,7 @@ static void daE_BI_LEAF_Create(fopAc_ac_c*); // 2
 extern "C" static void daE_BI_LEAF_Draw__FP15e_bi_leaf_class(); // 1
 extern "C" static void action__FP15e_bi_leaf_class(); // 1
 extern "C" static void daE_BI_LEAF_Execute__FP15e_bi_leaf_class(); // 1
-extern "C" static void daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class(); // 1
+extern "C" static bool daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class(); // 1
 extern "C" static void daE_BI_LEAF_Delete__FP15e_bi_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_BI_LEAF_Create__FP10fopAc_ac_c(); // 1
@@ -143,14 +143,9 @@ asm static void daE_BI_LEAF_Execute(e_bi_leaf_class* param_0) {
 
 
 /* 8068DE68-8068DE70 0008+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_BI_LEAF_IsDelete(e_bi_leaf_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bi_leaf/d_a_e_bi_leaf/daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class.s"
+static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

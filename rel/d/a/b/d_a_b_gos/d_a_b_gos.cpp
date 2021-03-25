@@ -55,19 +55,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -106,10 +106,10 @@ struct dBgS_AcchCir {
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -172,7 +172,7 @@ static void ball(b_gos_class*); // 2
 static void stick(b_gos_class*); // 2
 static void action(b_gos_class*); // 2
 static void daB_GOS_Execute(b_gos_class*); // 2
-static void daB_GOS_IsDelete(b_gos_class*); // 2
+static bool daB_GOS_IsDelete(b_gos_class*); // 2
 static void daB_GOS_Delete(b_gos_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_GOS_Create(fopAc_ac_c*); // 2
@@ -187,7 +187,7 @@ extern "C" static void ball__FP11b_gos_class(); // 1
 extern "C" static void stick__FP11b_gos_class(); // 1
 extern "C" static void action__FP11b_gos_class(); // 1
 extern "C" static void daB_GOS_Execute__FP11b_gos_class(); // 1
-extern "C" static void daB_GOS_IsDelete__FP11b_gos_class(); // 1
+extern "C" static bool daB_GOS_IsDelete__FP11b_gos_class(); // 1
 extern "C" static void daB_GOS_Delete__FP11b_gos_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daB_GOS_Create__FP10fopAc_ac_c(); // 1
@@ -522,14 +522,9 @@ asm static void anm_init(b_gos_class* param_0, int param_1, f32 param_2, u8 para
 
 
 /* 8060441C-80604420 0004+00 s=1 e=0 z=0  None .text      damage_check__FP11b_gos_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void damage_check(b_gos_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/damage_check__FP11b_gos_class.s"
+static void damage_check(b_gos_class* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80604420-806044D8 00B8+00 s=1 e=0 z=0  None .text      wait__FP11b_gos_class                                        */
@@ -612,14 +607,9 @@ asm static void daB_GOS_Execute(b_gos_class* param_0) {
 
 
 /* 80604CF4-80604CFC 0008+00 s=1 e=0 z=0  None .text      daB_GOS_IsDelete__FP11b_gos_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_GOS_IsDelete(b_gos_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gos/d_a_b_gos/daB_GOS_IsDelete__FP11b_gos_class.s"
+static bool daB_GOS_IsDelete(b_gos_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80604CFC-80604D64 0068+00 s=1 e=0 z=0  None .text      daB_GOS_Delete__FP11b_gos_class                              */

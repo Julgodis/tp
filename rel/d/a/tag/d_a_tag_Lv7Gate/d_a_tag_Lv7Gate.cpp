@@ -44,10 +44,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -120,7 +120,7 @@ static void createSolidHeap(fopAc_ac_c*); // 2
 static void daTagLv7Gate_Create(fopAc_ac_c*); // 2
 static void daTagLv7Gate_Execute(daTagLv7Gate_c*); // 2
 static void daTagLv7Gate_Draw(daTagLv7Gate_c*); // 2
-static void daTagLv7Gate_IsDelete(daTagLv7Gate_c*); // 2
+static bool daTagLv7Gate_IsDelete(daTagLv7Gate_c*); // 2
 static void daTagLv7Gate_Delete(daTagLv7Gate_c*); // 2
 
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
@@ -132,7 +132,7 @@ extern "C" static void daTagLv7Gate_Execute__FP14daTagLv7Gate_c(); // 1
 extern "C" void execute__14daTagLv7Gate_cFv(); // 1
 extern "C" void calcFly__14daTagLv7Gate_cFv(); // 1
 extern "C" static void daTagLv7Gate_Draw__FP14daTagLv7Gate_c(); // 1
-extern "C" static void daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c(); // 1
+extern "C" static bool daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c(); // 1
 extern "C" static void daTagLv7Gate_Delete__FP14daTagLv7Gate_c(); // 1
 extern "C" extern u8 const lit_3938[8];
 extern "C" extern u32 const lit_3939;
@@ -418,14 +418,9 @@ asm static void daTagLv7Gate_Draw(daTagLv7Gate_c* param_0) {
 
 
 /* 80D51A58-80D51A60 0008+00 s=1 e=0 z=0  None .text      daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagLv7Gate_IsDelete(daTagLv7Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv7Gate/d_a_tag_Lv7Gate/daTagLv7Gate_IsDelete__FP14daTagLv7Gate_c.s"
+static bool daTagLv7Gate_IsDelete(daTagLv7Gate_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D51A60-80D51ACC 006C+00 s=1 e=0 z=0  None .text      daTagLv7Gate_Delete__FP14daTagLv7Gate_c                      */

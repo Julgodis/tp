@@ -21,7 +21,7 @@ struct daObjTrnd_c {
 	/* 80D1BE6C */ void Create();
 	/* 80D1BFB0 */ void create();
 	/* 80D1C0F0 */ void execute();
-	/* 80D1C290 */ void draw();
+	/* 80D1C290 */ bool draw();
 	/* 80D1C298 */ void _delete();
 };
 
@@ -116,7 +116,7 @@ extern "C" void Create__11daObjTrnd_cFv(); // 1
 extern "C" void create__11daObjTrnd_cFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void execute__11daObjTrnd_cFv(); // 1
-extern "C" void draw__11daObjTrnd_cFv(); // 1
+extern "C" bool draw__11daObjTrnd_cFv(); // 1
 extern "C" void _delete__11daObjTrnd_cFv(); // 1
 extern "C" static void daObjTrnd_Draw__FP11daObjTrnd_c(); // 1
 extern "C" static void daObjTrnd_Execute__FP11daObjTrnd_c(); // 1
@@ -412,14 +412,9 @@ asm void daObjTrnd_c::execute() {
 
 
 /* 80D1C290-80D1C298 0008+00 s=1 e=0 z=0  None .text      draw__11daObjTrnd_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjTrnd_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tornado/d_a_obj_tornado/draw__11daObjTrnd_cFv.s"
+bool daObjTrnd_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1C298-80D1C2CC 0034+00 s=1 e=0 z=0  None .text      _delete__11daObjTrnd_cFv                                     */

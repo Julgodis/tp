@@ -13,9 +13,9 @@
 
 struct daTag_ShopCamera_c {
 	/* 80D60898 */ void create();
-	/* 80D608FC */ void Delete();
-	/* 80D60904 */ void Execute();
-	/* 80D6090C */ void Draw();
+	/* 80D608FC */ bool Delete();
+	/* 80D60904 */ bool Execute();
+	/* 80D6090C */ bool Draw();
 	/* 80D60914 */ void initialize();
 	/* 80D60A18 */ ~daTag_ShopCamera_c();
 };
@@ -33,18 +33,18 @@ static void daTag_ShopCamera_Create(void*); // 2
 static void daTag_ShopCamera_Delete(void*); // 2
 static void daTag_ShopCamera_Execute(void*); // 2
 static void daTag_ShopCamera_Draw(void*); // 2
-static void daTag_ShopCamera_IsDelete(void*); // 2
+static bool daTag_ShopCamera_IsDelete(void*); // 2
 
 extern "C" void create__18daTag_ShopCamera_cFv(); // 1
-extern "C" void Delete__18daTag_ShopCamera_cFv(); // 1
-extern "C" void Execute__18daTag_ShopCamera_cFv(); // 1
-extern "C" void Draw__18daTag_ShopCamera_cFv(); // 1
+extern "C" bool Delete__18daTag_ShopCamera_cFv(); // 1
+extern "C" bool Execute__18daTag_ShopCamera_cFv(); // 1
+extern "C" bool Draw__18daTag_ShopCamera_cFv(); // 1
 extern "C" void initialize__18daTag_ShopCamera_cFv(); // 1
 extern "C" static void daTag_ShopCamera_Create__FPv(); // 1
 extern "C" static void daTag_ShopCamera_Delete__FPv(); // 1
 extern "C" static void daTag_ShopCamera_Execute__FPv(); // 1
 extern "C" static void daTag_ShopCamera_Draw__FPv(); // 1
-extern "C" static void daTag_ShopCamera_IsDelete__FPv(); // 1
+extern "C" static bool daTag_ShopCamera_IsDelete__FPv(); // 1
 extern "C" void __dt__18daTag_ShopCamera_cFv(); // 1
 extern "C" extern void* g_profile_TAG_SHOPCAM[12];
 
@@ -114,36 +114,21 @@ asm void daTag_ShopCamera_c::create() {
 
 
 /* 80D608FC-80D60904 0008+00 s=1 e=0 z=0  None .text      Delete__18daTag_ShopCamera_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_ShopCamera_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Delete__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D60904-80D6090C 0008+00 s=1 e=0 z=0  None .text      Execute__18daTag_ShopCamera_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_ShopCamera_c::Execute() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Execute__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6090C-80D60914 0008+00 s=1 e=0 z=0  None .text      Draw__18daTag_ShopCamera_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_ShopCamera_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/Draw__18daTag_ShopCamera_cFv.s"
+bool daTag_ShopCamera_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -215,14 +200,9 @@ asm static void daTag_ShopCamera_Draw(void* param_0) {
 
 
 /* 80D60A10-80D60A18 0008+00 s=1 e=0 z=0  None .text      daTag_ShopCamera_IsDelete__FPv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_ShopCamera_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_camera/d_a_tag_shop_camera/daTag_ShopCamera_IsDelete__FPv.s"
+static bool daTag_ShopCamera_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D60A18-80D60A78 0060+00 s=1 e=0 z=0  None .text      __dt__18daTag_ShopCamera_cFv                                 */

@@ -68,10 +68,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -492,14 +492,9 @@ asm static void daCrod_Delete(daCrod_c* param_0) {
 
 
 /* 804A34B0-804A34B4 0004+00 s=2 e=0 z=0  None .text      setRoomInfo__8daCrod_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daCrod_c::setRoomInfo() {
-	nofralloc
-#include "asm/rel/d/a/d_a_crod/d_a_crod/setRoomInfo__8daCrod_cFv.s"
+void daCrod_c::setRoomInfo() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A34B4-804A3500 004C+00 s=2 e=0 z=0  None .text      setMatrix__8daCrod_cFv                                       */

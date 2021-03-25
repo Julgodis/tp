@@ -55,10 +55,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -76,10 +76,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -173,7 +173,7 @@ static void rideCallBack1(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void rideCallBack2(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daObjMirrorTable_Draw(daObjMirrorTable_c*); // 2
 static void daObjMirrorTable_Execute(daObjMirrorTable_c*); // 2
-static void daObjMirrorTable_IsDelete(daObjMirrorTable_c*); // 2
+static bool daObjMirrorTable_IsDelete(daObjMirrorTable_c*); // 2
 static void daObjMirrorTable_Delete(daObjMirrorTable_c*); // 2
 static void daObjMirrorTable_Create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(s8*); // 2
@@ -188,7 +188,7 @@ extern "C" static void daObjMirrorTable_Draw__FP18daObjMirrorTable_c(); // 1
 extern "C" void draw__18daObjMirrorTable_cFv(); // 1
 extern "C" static void daObjMirrorTable_Execute__FP18daObjMirrorTable_c(); // 1
 extern "C" void execute__18daObjMirrorTable_cFv(); // 1
-extern "C" static void daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c(); // 1
+extern "C" static bool daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c(); // 1
 extern "C" static void daObjMirrorTable_Delete__FP18daObjMirrorTable_c(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
 extern "C" static void daObjMirrorTable_Create__FP10fopAc_ac_c(); // 1
@@ -495,14 +495,9 @@ asm void daObjMirrorTable_c::execute() {
 
 
 /* 80C9A9D4-80C9A9DC 0008+00 s=1 e=0 z=0  None .text      daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMirrorTable_IsDelete(daObjMirrorTable_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_table/d_a_obj_mirror_table/daObjMirrorTable_IsDelete__FP18daObjMirrorTable_c.s"
+static bool daObjMirrorTable_IsDelete(daObjMirrorTable_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9A9DC-80C9AAB0 00D4+00 s=1 e=0 z=0  None .text      daObjMirrorTable_Delete__FP18daObjMirrorTable_c              */

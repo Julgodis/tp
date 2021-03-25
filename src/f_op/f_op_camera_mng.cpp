@@ -74,24 +74,14 @@ asm void fopCamM_Create(int param_0, s16 param_1, void* param_2) {
 
 
 /* 8001E374-8001E378 0004+00 s=0 e=1 z=0  None .text      fopCamM_Management__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopCamM_Management() {
-	nofralloc
-#include "asm/f_op/f_op_camera_mng/fopCamM_Management__Fv.s"
+void fopCamM_Management() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8001E378-8001E37C 0004+00 s=0 e=1 z=0  None .text      fopCamM_Init__Fv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopCamM_Init() {
-	nofralloc
-#include "asm/f_op/f_op_camera_mng/fopCamM_Init__Fv.s"
+void fopCamM_Init() {
+	/* empty function */
 }
-#pragma pop
 
 

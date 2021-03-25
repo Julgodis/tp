@@ -81,7 +81,7 @@ struct dMenu_Option_c {
 	/* 801E7E98 */ void setAButtonString(u16);
 	/* 801E7F9C */ void setBButtonString(u16);
 	/* 801E80A0 */ void isRumbleSupported();
-	/* 801E80AC */ void dpdMenuMove();
+	/* 801E80AC */ bool dpdMenuMove();
 	/* 801E80B4 */ void paneResize(u64);
 	/* 801E8210 */ void initialize();
 	/* 801E82C4 */ void yesnoMenuMoveAnmInitSet(int, int);
@@ -174,6 +174,9 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -182,9 +185,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -310,7 +310,7 @@ extern "C" void changeTVCheck__14dMenu_Option_cFv(); // 1
 extern "C" void setAButtonString__14dMenu_Option_cFUs(); // 1
 extern "C" void setBButtonString__14dMenu_Option_cFUs(); // 1
 extern "C" void isRumbleSupported__14dMenu_Option_cFv(); // 1
-extern "C" void dpdMenuMove__14dMenu_Option_cFv(); // 1
+extern "C" bool dpdMenuMove__14dMenu_Option_cFv(); // 1
 extern "C" void paneResize__14dMenu_Option_cFUx(); // 1
 extern "C" void initialize__14dMenu_Option_cFv(); // 1
 extern "C" void yesnoMenuMoveAnmInitSet__14dMenu_Option_cFii(); // 1
@@ -1417,14 +1417,9 @@ asm void dMenu_Option_c::confirm_move_move() {
 
 
 /* 801E4E98-801E4E9C 0004+00 s=1 e=0 z=0  None .text      confirm_select_init__14dMenu_Option_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Option_c::confirm_select_init() {
-	nofralloc
-#include "asm/d/menu/d_menu_option/confirm_select_init__14dMenu_Option_cFv.s"
+void dMenu_Option_c::confirm_select_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801E4E9C-801E4F18 007C+00 s=1 e=0 z=0  None .text      confirm_select_move__14dMenu_Option_cFv                      */
@@ -1790,14 +1785,9 @@ asm void dMenu_Option_c::isRumbleSupported() {
 
 
 /* 801E80AC-801E80B4 0008+00 s=1 e=0 z=0  None .text      dpdMenuMove__14dMenu_Option_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Option_c::dpdMenuMove() {
-	nofralloc
-#include "asm/d/menu/d_menu_option/dpdMenuMove__14dMenu_Option_cFv.s"
+bool dMenu_Option_c::dpdMenuMove() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

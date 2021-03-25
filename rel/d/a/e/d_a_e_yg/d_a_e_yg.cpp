@@ -99,19 +99,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -291,7 +291,7 @@ static void ke_set(e_yg_class*); // 2
 static void action(e_yg_class*); // 2
 static void anm_se_set(e_yg_class*); // 2
 static void daE_YG_Execute(e_yg_class*); // 2
-static void daE_YG_IsDelete(e_yg_class*); // 2
+static bool daE_YG_IsDelete(e_yg_class*); // 2
 static void daE_YG_Delete(e_yg_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YG_Create(fopAc_ac_c*); // 2
@@ -322,7 +322,7 @@ extern "C" static void ke_set__FP10e_yg_class(); // 1
 extern "C" static void action__FP10e_yg_class(); // 1
 extern "C" static void anm_se_set__FP10e_yg_class(); // 1
 extern "C" static void daE_YG_Execute__FP10e_yg_class(); // 1
-extern "C" static void daE_YG_IsDelete__FP10e_yg_class(); // 1
+extern "C" static bool daE_YG_IsDelete__FP10e_yg_class(); // 1
 extern "C" static void daE_YG_Delete__FP10e_yg_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_YG_Create__FP10fopAc_ac_c(); // 1
@@ -1292,14 +1292,9 @@ asm static void search_ground_1(e_yg_class* param_0) {
 
 
 /* 807F99CC-807F99D0 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yg/d_a_e_yg/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807F99D0-807F9BB8 01E8+00 s=1 e=0 z=0  None .text      e_yg_swim__FP10e_yg_class                                    */
@@ -1520,14 +1515,9 @@ asm static void daE_YG_Execute(e_yg_class* param_0) {
 
 
 /* 807FB908-807FB910 0008+00 s=1 e=0 z=0  None .text      daE_YG_IsDelete__FP10e_yg_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YG_IsDelete(e_yg_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yg/d_a_e_yg/daE_YG_IsDelete__FP10e_yg_class.s"
+static bool daE_YG_IsDelete(e_yg_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807FB910-807FB978 0068+00 s=1 e=0 z=0  None .text      daE_YG_Delete__FP10e_yg_class                                */

@@ -36,6 +36,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -43,9 +46,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -75,9 +75,9 @@ static void getSound_pos(fopAc_ac_c*); // 2
 static void get_Extent_pos_start_get(kytag03_class*, dPath*, cXyz*, f32, int*); // 2
 static void get_Extent_pos_end_get(kytag03_class*, dPath*, cXyz*, f32, int*); // 2
 static void odour_move(kytag03_class*); // 2
-static void daKytag03_Draw(kytag03_class*); // 2
+static bool daKytag03_Draw(kytag03_class*); // 2
 static void daKytag03_Execute(kytag03_class*); // 2
-static void daKytag03_IsDelete(kytag03_class*); // 2
+static bool daKytag03_IsDelete(kytag03_class*); // 2
 static void daKytag03_Delete(kytag03_class*); // 2
 static void daKytag03_Create(fopAc_ac_c*); // 2
 
@@ -89,9 +89,9 @@ extern "C" static void getSound_pos__FP10fopAc_ac_c(); // 1
 extern "C" static void get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi(); // 1
 extern "C" static void get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi(); // 1
 extern "C" static void odour_move__FP13kytag03_class(); // 1
-extern "C" static void daKytag03_Draw__FP13kytag03_class(); // 1
+extern "C" static bool daKytag03_Draw__FP13kytag03_class(); // 1
 extern "C" static void daKytag03_Execute__FP13kytag03_class(); // 1
-extern "C" static void daKytag03_IsDelete__FP13kytag03_class(); // 1
+extern "C" static bool daKytag03_IsDelete__FP13kytag03_class(); // 1
 extern "C" static void daKytag03_Delete__FP13kytag03_class(); // 1
 extern "C" static void daKytag03_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_4218;
@@ -328,14 +328,9 @@ asm static void odour_move(kytag03_class* param_0) {
 
 
 /* 80856E24-80856E2C 0008+00 s=1 e=0 z=0  None .text      daKytag03_Draw__FP13kytag03_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag03_Draw(kytag03_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_Draw__FP13kytag03_class.s"
+static bool daKytag03_Draw(kytag03_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -354,14 +349,9 @@ asm static void daKytag03_Execute(kytag03_class* param_0) {
 
 
 /* 808573F4-808573FC 0008+00 s=1 e=0 z=0  None .text      daKytag03_IsDelete__FP13kytag03_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag03_IsDelete(kytag03_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag03/d_a_kytag03/daKytag03_IsDelete__FP13kytag03_class.s"
+static bool daKytag03_IsDelete(kytag03_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808573FC-80857470 0074+00 s=1 e=0 z=0  None .text      daKytag03_Delete__FP13kytag03_class                          */

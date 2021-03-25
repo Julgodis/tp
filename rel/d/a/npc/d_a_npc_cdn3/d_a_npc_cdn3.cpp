@@ -264,10 +264,10 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DModelData {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {
@@ -317,7 +317,7 @@ static void daNpcCdn3_Create(void*); // 2
 static void daNpcCdn3_Delete(void*); // 2
 static void daNpcCdn3_Execute(void*); // 2
 static void daNpcCdn3_Draw(void*); // 2
-static void daNpcCdn3_IsDelete(void*); // 2
+static bool daNpcCdn3_IsDelete(void*); // 2
 
 extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
 extern "C" void setAction__11daNpcCdn3_cFQ211daNpcCdn3_c6Mode_e(); // 1
@@ -397,7 +397,7 @@ extern "C" static void daNpcCdn3_Execute__FPv(); // 1
 extern "C" void execute__11daNpcCdn3_cFv(); // 1
 extern "C" void checkTimeSchedule__11daNpcCdn3_cFv(); // 1
 extern "C" static void daNpcCdn3_Draw__FPv(); // 1
-extern "C" static void daNpcCdn3_IsDelete__FPv(); // 1
+extern "C" static bool daNpcCdn3_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_npc_cdn3_cpp(); // 1
 extern "C" static void func_8097EFD8(); // 1
@@ -3147,14 +3147,9 @@ asm static void daNpcCdn3_Draw(void* param_0) {
 
 
 /* 8097E000-8097E008 0008+00 s=1 e=0 z=0  None .text      daNpcCdn3_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcCdn3_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_cdn3/d_a_npc_cdn3/daNpcCdn3_IsDelete__FPv.s"
+static bool daNpcCdn3_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8097E008-8097E050 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

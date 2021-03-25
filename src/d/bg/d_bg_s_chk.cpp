@@ -89,14 +89,9 @@ asm dBgS_Chk::~dBgS_Chk() {
 
 
 /* 80077560-80077564 0004+00 s=0 e=6 z=0  None .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBgS_Chk::GetPolyPassChkInfo() {
-	nofralloc
-#include "asm/d/bg/d_bg_s_chk/GetPolyPassChkInfo__8dBgS_ChkFv.s"
+void dBgS_Chk::GetPolyPassChkInfo() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80077564-80077574 0010+00 s=0 e=6 z=0  None .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */

@@ -121,6 +121,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -128,9 +131,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -861,25 +861,15 @@ asm void daWdStick_c::createHeapCallBack(fopAc_ac_c* param_0) {
 
 
 /* 80D32194-80D32198 0004+00 s=1 e=0 z=0  None .text      lightInit__11daWdStick_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daWdStick_c::lightInit() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/lightInit__11daWdStick_cFv.s"
+void daWdStick_c::lightInit() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D32198-80D3219C 0004+00 s=2 e=0 z=0  None .text      setLight__11daWdStick_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daWdStick_c::setLight() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wdStick/d_a_obj_wdStick/setLight__11daWdStick_cFv.s"
+void daWdStick_c::setLight() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3219C-80D3269C 0500+00 s=1 e=0 z=0  None .text      setFire__11daWdStick_cFv                                     */

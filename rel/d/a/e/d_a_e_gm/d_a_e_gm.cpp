@@ -119,19 +119,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -248,7 +248,7 @@ struct Z2SeMgr {
 static void s_obj_sub2(void*, void*); // 2
 static void daE_GM_Draw(daE_GM_c*); // 2
 static void daE_GM_Execute(daE_GM_c*); // 2
-static void daE_GM_IsDelete(daE_GM_c*); // 2
+static bool daE_GM_IsDelete(daE_GM_c*); // 2
 static void daE_GM_Delete(daE_GM_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_GM_Create(daE_GM_c*); // 2
@@ -288,7 +288,7 @@ extern "C" static void daE_GM_Draw__FP8daE_GM_c(); // 1
 extern "C" void damage_check__8daE_GM_cFv(); // 1
 extern "C" void execute__8daE_GM_cFv(); // 1
 extern "C" static void daE_GM_Execute__FP8daE_GM_c(); // 1
-extern "C" static void daE_GM_IsDelete__FP8daE_GM_c(); // 1
+extern "C" static bool daE_GM_IsDelete__FP8daE_GM_c(); // 1
 extern "C" void _delete__8daE_GM_cFv(); // 1
 extern "C" static void daE_GM_Delete__FP8daE_GM_c(); // 1
 extern "C" void CreateHeap__8daE_GM_cFv(); // 1
@@ -1752,14 +1752,9 @@ asm static void daE_GM_Execute(daE_GM_c* param_0) {
 
 
 /* 806D6978-806D6980 0008+00 s=1 e=0 z=0  None .text      daE_GM_IsDelete__FP8daE_GM_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_GM_IsDelete(daE_GM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gm/d_a_e_gm/daE_GM_IsDelete__FP8daE_GM_c.s"
+static bool daE_GM_IsDelete(daE_GM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806D6980-806D6AA8 0128+00 s=1 e=0 z=0  None .text      _delete__8daE_GM_cFv                                         */

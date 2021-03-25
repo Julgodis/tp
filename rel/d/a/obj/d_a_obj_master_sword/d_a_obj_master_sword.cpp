@@ -70,10 +70,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -132,10 +132,10 @@ struct dAttention_c {
 	/* 80073734 */ void ActionTarget(s32);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -189,7 +189,7 @@ static void daObjMasterSword_Create(fopAc_ac_c*); // 2
 static void daObjMasterSword_Delete(daObjMasterSword_c*); // 2
 static void daObjMasterSword_Execute(daObjMasterSword_c*); // 2
 static void daObjMasterSword_Draw(daObjMasterSword_c*); // 2
-static void daObjMasterSword_IsDelete(daObjMasterSword_c*); // 2
+static bool daObjMasterSword_IsDelete(daObjMasterSword_c*); // 2
 
 extern "C" void initWait__18daObjMasterSword_cFv(); // 1
 extern "C" void executeWait__18daObjMasterSword_cFv(); // 1
@@ -209,7 +209,7 @@ extern "C" void __dt__18daObjMasterSword_cFv(); // 1
 extern "C" static void daObjMasterSword_Execute__FP18daObjMasterSword_c(); // 1
 extern "C" static void daObjMasterSword_Draw__FP18daObjMasterSword_c(); // 1
 extern "C" void draw__18daObjMasterSword_cFv(); // 1
-extern "C" static void daObjMasterSword_IsDelete__FP18daObjMasterSword_c(); // 1
+extern "C" static bool daObjMasterSword_IsDelete__FP18daObjMasterSword_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_master_sword_cpp(); // 1
 extern "C" static void func_80C91924(); // 1
@@ -688,14 +688,9 @@ asm void daObjMasterSword_c::draw() {
 
 
 /* 80C91894-80C9189C 0008+00 s=1 e=0 z=0  None .text      daObjMasterSword_IsDelete__FP18daObjMasterSword_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMasterSword_IsDelete(daObjMasterSword_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_IsDelete__FP18daObjMasterSword_c.s"
+static bool daObjMasterSword_IsDelete(daObjMasterSword_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C9189C-80C918E4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

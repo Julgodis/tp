@@ -100,9 +100,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80D23C40 */ ~dEvLib_callback_c();
-	/* 80D23C88 */ void eventRun();
-	/* 80D23C90 */ void eventEnd();
-	/* 80D23D64 */ void eventStart();
+	/* 80D23C88 */ bool eventRun();
+	/* 80D23C90 */ bool eventEnd();
+	/* 80D23D64 */ bool eventStart();
 };
 
 struct cCcD_GStts {
@@ -288,15 +288,15 @@ extern "C" static void daObjVolcBall_Delete__FP15daObjVolcBall_c(); // 1
 extern "C" static void daObjVolcBall_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__15daObjVolcBall_cFv(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
 extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" static void func_80D23D6C(); // 1
 extern "C" static void func_80D23D88(); // 1
 extern "C" static void func_80D23DA4(); // 1
@@ -843,14 +843,9 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 
 
 /* 80D22148-80D2214C 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D2214C-80D22230 00E4+00 s=1 e=0 z=0  None .text      __ct__Q215daObjVolcBall_c7vball_sFv                          */
@@ -1239,25 +1234,15 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80D23C88-80D23C90 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23C90-80D23C98 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23C98-80D23CE0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -1283,58 +1268,33 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 
 
 /* 80D23D54-80D23D58 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D58-80D23D5C 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D5C-80D23D60 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D60-80D23D64 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D23D64-80D23D6C 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_volcball/d_a_obj_volcball/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D23D6C-80D23D88 001C+00 s=1 e=0 z=0  None .text      cLib_calcTimer<Uc>__FPUc                                     */

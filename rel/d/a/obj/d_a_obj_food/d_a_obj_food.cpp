@@ -75,13 +75,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -197,7 +197,7 @@ static void food_normal(obj_food_class*); // 2
 static void ball_move(obj_food_class*); // 2
 static void action(obj_food_class*); // 2
 static void daObj_Food_Execute(obj_food_class*); // 2
-static void daObj_Food_IsDelete(obj_food_class*); // 2
+static bool daObj_Food_IsDelete(obj_food_class*); // 2
 static void daObj_Food_Delete(obj_food_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Food_Create(fopAc_ac_c*); // 2
@@ -211,7 +211,7 @@ extern "C" static void food_normal__FP14obj_food_class(); // 1
 extern "C" static void ball_move__FP14obj_food_class(); // 1
 extern "C" static void action__FP14obj_food_class(); // 1
 extern "C" static void daObj_Food_Execute__FP14obj_food_class(); // 1
-extern "C" static void daObj_Food_IsDelete__FP14obj_food_class(); // 1
+extern "C" static bool daObj_Food_IsDelete__FP14obj_food_class(); // 1
 extern "C" static void daObj_Food_Delete__FP14obj_food_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Food_Create__FP10fopAc_ac_c(); // 1
@@ -605,14 +605,9 @@ asm static void daObj_Food_Execute(obj_food_class* param_0) {
 
 
 /* 80BF1794-80BF179C 0008+00 s=1 e=0 z=0  None .text      daObj_Food_IsDelete__FP14obj_food_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Food_IsDelete(obj_food_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_food/d_a_obj_food/daObj_Food_IsDelete__FP14obj_food_class.s"
+static bool daObj_Food_IsDelete(obj_food_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -92,19 +92,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -273,7 +273,7 @@ static void cam_3d_morf(e_th_class*, f32); // 2
 static void demo_camera(e_th_class*); // 2
 static void anm_se_set(e_th_class*); // 2
 static void daE_TH_Execute(e_th_class*); // 2
-static void daE_TH_IsDelete(e_th_class*); // 2
+static bool daE_TH_IsDelete(e_th_class*); // 2
 static void daE_TH_Delete(e_th_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_TH_Create(fopAc_ac_c*); // 2
@@ -303,7 +303,7 @@ extern "C" static void cam_3d_morf__FP10e_th_classf(); // 1
 extern "C" static void demo_camera__FP10e_th_class(); // 1
 extern "C" static void anm_se_set__FP10e_th_class(); // 1
 extern "C" static void daE_TH_Execute__FP10e_th_class(); // 1
-extern "C" static void daE_TH_IsDelete__FP10e_th_class(); // 1
+extern "C" static bool daE_TH_IsDelete__FP10e_th_class(); // 1
 extern "C" static void daE_TH_Delete__FP10e_th_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_TH_Create__FP10fopAc_ac_c(); // 1
@@ -1403,14 +1403,9 @@ asm static void daE_TH_Execute(e_th_class* param_0) {
 
 
 /* 807B3514-807B351C 0008+00 s=1 e=0 z=0  None .text      daE_TH_IsDelete__FP10e_th_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_TH_IsDelete(e_th_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_th/d_a_e_th/daE_TH_IsDelete__FP10e_th_class.s"
+static bool daE_TH_IsDelete(e_th_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807B351C-807B3584 0068+00 s=1 e=0 z=0  None .text      daE_TH_Delete__FP10e_th_class                                */
@@ -1469,14 +1464,9 @@ asm th_ke_s::th_ke_s() {
 
 
 /* 807B3C3C-807B3C40 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_th/d_a_e_th/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807B3C40-807B3D0C 00CC+00 s=1 e=0 z=0  None .text      __dt__8dCcD_SphFv                                            */

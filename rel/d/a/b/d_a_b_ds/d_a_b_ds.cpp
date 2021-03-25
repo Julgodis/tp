@@ -16,10 +16,10 @@ struct daB_DS_HIO_c {
 	/* 805DC89C */ ~daB_DS_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_DS_c {
@@ -213,19 +213,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -279,10 +279,10 @@ struct dEvt_control_c {
 	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -438,7 +438,7 @@ static void daB_DS_Draw(daB_DS_c*); // 2
 static void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*); // 2
 static void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*); // 2
 static void daB_DS_Execute(daB_DS_c*); // 2
-static void daB_DS_IsDelete(daB_DS_c*); // 2
+static bool daB_DS_IsDelete(daB_DS_c*); // 2
 static void daB_DS_Delete(daB_DS_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_DS_Create(daB_DS_c*); // 2
@@ -518,7 +518,7 @@ extern "C" void mBattle2_cc_etc_set__8daB_DS_cFv(); // 1
 extern "C" void mBattle2_cc_set__8daB_DS_cFv(); // 1
 extern "C" void execute__8daB_DS_cFv(); // 1
 extern "C" static void daB_DS_Execute__FP8daB_DS_c(); // 1
-extern "C" static void daB_DS_IsDelete__FP8daB_DS_c(); // 1
+extern "C" static bool daB_DS_IsDelete__FP8daB_DS_c(); // 1
 extern "C" void _delete__8daB_DS_cFv(); // 1
 extern "C" static void daB_DS_Delete__FP8daB_DS_c(); // 1
 extern "C" void CreateHeap__8daB_DS_cFv(); // 1
@@ -4052,14 +4052,9 @@ asm static void daB_DS_Execute(daB_DS_c* param_0) {
 
 
 /* 805DB1A4-805DB1AC 0008+00 s=1 e=0 z=0  None .text      daB_DS_IsDelete__FP8daB_DS_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_DS_IsDelete(daB_DS_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/daB_DS_IsDelete__FP8daB_DS_c.s"
+static bool daB_DS_IsDelete(daB_DS_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805DB1AC-805DB244 0098+00 s=1 e=0 z=0  None .text      _delete__8daB_DS_cFv                                         */
@@ -4228,14 +4223,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 805DC830-805DC834 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_ds/d_a_b_ds/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805DC834-805DC854 0020+00 s=1 e=0 z=0  None .text      daB_DS_Create__FP8daB_DS_c                                   */

@@ -28,7 +28,7 @@ struct daFireWood2_c {
 	/* 80BE86FC */ void cutLight();
 	/* 80BE872C */ void pointLightProc();
 	/* 80BE87DC */ void Execute();
-	/* 80BE8D98 */ void Draw();
+	/* 80BE8D98 */ bool Draw();
 	/* 80BE8DA0 */ void Delete();
 };
 
@@ -56,6 +56,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -63,9 +66,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -134,7 +134,7 @@ extern "C" void setLight__13daFireWood2_cFv(); // 1
 extern "C" void cutLight__13daFireWood2_cFv(); // 1
 extern "C" void pointLightProc__13daFireWood2_cFv(); // 1
 extern "C" void Execute__13daFireWood2_cFv(); // 1
-extern "C" void Draw__13daFireWood2_cFv(); // 1
+extern "C" bool Draw__13daFireWood2_cFv(); // 1
 extern "C" void Delete__13daFireWood2_cFv(); // 1
 extern "C" static void daFireWood2_Draw__FP13daFireWood2_c(); // 1
 extern "C" static void daFireWood2_Execute__FP13daFireWood2_c(); // 1
@@ -453,14 +453,9 @@ asm void daFireWood2_c::Execute() {
 
 
 /* 80BE8D98-80BE8DA0 0008+00 s=1 e=0 z=0  None .text      Draw__13daFireWood2_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daFireWood2_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_fireWood2/d_a_obj_fireWood2/Draw__13daFireWood2_cFv.s"
+bool daFireWood2_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE8DA0-80BE8DD4 0034+00 s=1 e=0 z=0  None .text      Delete__13daFireWood2_cFv                                    */

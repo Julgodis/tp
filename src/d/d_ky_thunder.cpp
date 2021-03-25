@@ -73,7 +73,7 @@ struct J3DFrameCtrl {
 
 static void dThunder_Draw(dThunder_c*); // 2
 static void dThunder_Execute(dThunder_c*); // 2
-static void dThunder_IsDelete(dThunder_c*); // 2
+static bool dThunder_IsDelete(dThunder_c*); // 2
 static void dThunder_Delete(dThunder_c*); // 2
 static void dThunder_Create(kankyo_class*); // 2
 
@@ -81,7 +81,7 @@ extern "C" void createHeap__10dThunder_cFv(); // 1
 extern "C" void adjustHeap__10dThunder_cFv(); // 1
 extern "C" static void dThunder_Draw__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Execute__FP10dThunder_c(); // 1
-extern "C" static void dThunder_IsDelete__FP10dThunder_c(); // 1
+extern "C" static bool dThunder_IsDelete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Delete__FP10dThunder_c(); // 1
 extern "C" static void dThunder_Create__FP12kankyo_class(); // 1
 extern "C" void create__10dThunder_cFv(); // 1
@@ -251,14 +251,9 @@ asm static void dThunder_Execute(dThunder_c* param_0) {
 
 
 /* 801AE374-801AE37C 0008+00 s=1 e=0 z=0  None .text      dThunder_IsDelete__FP10dThunder_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dThunder_IsDelete(dThunder_c* param_0) {
-	nofralloc
-#include "asm/d/d_ky_thunder/dThunder_IsDelete__FP10dThunder_c.s"
+static bool dThunder_IsDelete(dThunder_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 801AE37C-801AE3FC 0080+00 s=1 e=0 z=0  None .text      dThunder_Delete__FP10dThunder_c                              */

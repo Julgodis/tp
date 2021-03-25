@@ -228,13 +228,8 @@ asm void fopOvlpM_Cancel() {
 
 
 /* 8001E6E8-8001E6EC 0004+00 s=0 e=1 z=0  None .text      fopOvlpM_Init__Fv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void fopOvlpM_Init() {
-	nofralloc
-#include "asm/f_op/f_op_overlap_mng/fopOvlpM_Init__Fv.s"
+void fopOvlpM_Init() {
+	/* empty function */
 }
-#pragma pop
 
 

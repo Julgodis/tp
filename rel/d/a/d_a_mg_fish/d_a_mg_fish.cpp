@@ -93,10 +93,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -115,7 +115,7 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -124,7 +124,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -358,7 +358,7 @@ static void action(mg_fish_class*); // 2
 static void ke_control(mg_fish_class*, mf_ke_s*); // 2
 static void ke_move(mg_fish_class*, mf_ke_s*, int); // 2
 static void daMg_Fish_Execute(mg_fish_class*); // 2
-static void daMg_Fish_IsDelete(mg_fish_class*); // 2
+static bool daMg_Fish_IsDelete(mg_fish_class*); // 2
 static void daMg_Fish_Delete(mg_fish_class*); // 2
 static void useHeapInit2(fopAc_ac_c*); // 2
 static void useHeapImg_fisht(fopAc_ac_c*); // 2
@@ -423,7 +423,7 @@ extern "C" static void action__FP13mg_fish_class(); // 1
 extern "C" static void ke_control__FP13mg_fish_classP7mf_ke_s(); // 1
 extern "C" static void ke_move__FP13mg_fish_classP7mf_ke_si(); // 1
 extern "C" static void daMg_Fish_Execute__FP13mg_fish_class(); // 1
-extern "C" static void daMg_Fish_IsDelete__FP13mg_fish_class(); // 1
+extern "C" static bool daMg_Fish_IsDelete__FP13mg_fish_class(); // 1
 extern "C" static void daMg_Fish_Delete__FP13mg_fish_class(); // 1
 extern "C" static void useHeapInit2__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -2476,14 +2476,9 @@ asm static void daMg_Fish_Execute(mg_fish_class* param_0) {
 
 
 /* 80534964-8053496C 0008+00 s=1 e=0 z=0  None .text      daMg_Fish_IsDelete__FP13mg_fish_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMg_Fish_IsDelete(mg_fish_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/daMg_Fish_IsDelete__FP13mg_fish_class.s"
+static bool daMg_Fish_IsDelete(mg_fish_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8053496C-805349DC 0070+00 s=1 e=0 z=0  None .text      daMg_Fish_Delete__FP13mg_fish_class                          */
@@ -2630,25 +2625,15 @@ asm csXyz::~csXyz() {
 
 
 /* 80536058-8053605C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8053605C-80536060 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mg_fish/d_a_mg_fish/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80536060-805360A8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

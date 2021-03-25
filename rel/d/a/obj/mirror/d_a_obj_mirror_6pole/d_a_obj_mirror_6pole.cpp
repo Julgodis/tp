@@ -42,10 +42,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -90,7 +90,7 @@ static void daObjMirror6Pole_Create(fopAc_ac_c*); // 2
 static void daObjMirror6Pole_Delete(daObjMirror6Pole_c*); // 2
 static void daObjMirror6Pole_Execute(daObjMirror6Pole_c*); // 2
 static void daObjMirror6Pole_Draw(daObjMirror6Pole_c*); // 2
-static void daObjMirror6Pole_IsDelete(daObjMirror6Pole_c*); // 2
+static bool daObjMirror6Pole_IsDelete(daObjMirror6Pole_c*); // 2
 
 extern "C" void initWait__18daObjMirror6Pole_cFv(); // 1
 extern "C" void executeWait__18daObjMirror6Pole_cFv(); // 1
@@ -104,7 +104,7 @@ extern "C" static void daObjMirror6Pole_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjMirror6Pole_Delete__FP18daObjMirror6Pole_c(); // 1
 extern "C" static void daObjMirror6Pole_Execute__FP18daObjMirror6Pole_c(); // 1
 extern "C" static void daObjMirror6Pole_Draw__FP18daObjMirror6Pole_c(); // 1
-extern "C" static void daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c(); // 1
+extern "C" static bool daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c(); // 1
 extern "C" void __sinit_d_a_obj_mirror_6pole_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
@@ -254,14 +254,9 @@ asm void daObjMirror6Pole_c::executeWait() {
 
 
 /* 80C95E88-80C95E8C 0004+00 s=1 e=0 z=0  None .text      initDemo__18daObjMirror6Pole_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjMirror6Pole_c::initDemo() {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/initDemo__18daObjMirror6Pole_cFv.s"
+void daObjMirror6Pole_c::initDemo() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C95E8C-80C95EFC 0070+00 s=1 e=0 z=0  None .text      executeDemo__18daObjMirror6Pole_cFv                          */
@@ -400,14 +395,9 @@ asm static void daObjMirror6Pole_Draw(daObjMirror6Pole_c* param_0) {
 
 
 /* 80C9648C-80C96494 0008+00 s=1 e=0 z=0  None .text      daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMirror6Pole_IsDelete(daObjMirror6Pole_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_6pole/d_a_obj_mirror_6pole/daObjMirror6Pole_IsDelete__FP18daObjMirror6Pole_c.s"
+static bool daObjMirror6Pole_IsDelete(daObjMirror6Pole_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C96494-80C96504 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_mirror_6pole_cpp                             */

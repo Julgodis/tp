@@ -58,10 +58,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -74,16 +74,16 @@ struct dScnKy_env_light_c {
 // 
 
 static void daKytag09_Draw(kytag09_class*); // 2
-static void daKytag09_Execute(kytag09_class*); // 2
-static void daKytag09_IsDelete(kytag09_class*); // 2
+static bool daKytag09_Execute(kytag09_class*); // 2
+static bool daKytag09_IsDelete(kytag09_class*); // 2
 static void daKytag09_Delete(kytag09_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void useHeapInit2(fopAc_ac_c*); // 2
 static void daKytag09_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daKytag09_Draw__FP13kytag09_class(); // 1
-extern "C" static void daKytag09_Execute__FP13kytag09_class(); // 1
-extern "C" static void daKytag09_IsDelete__FP13kytag09_class(); // 1
+extern "C" static bool daKytag09_Execute__FP13kytag09_class(); // 1
+extern "C" static bool daKytag09_IsDelete__FP13kytag09_class(); // 1
 extern "C" static void daKytag09_Delete__FP13kytag09_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void useHeapInit2__FP10fopAc_ac_c(); // 1
@@ -153,25 +153,15 @@ asm static void daKytag09_Draw(kytag09_class* param_0) {
 
 
 /* 8085B5F4-8085B5FC 0008+00 s=1 e=0 z=0  None .text      daKytag09_Execute__FP13kytag09_class                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag09_Execute(kytag09_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag09/d_a_kytag09/daKytag09_Execute__FP13kytag09_class.s"
+static bool daKytag09_Execute(kytag09_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8085B5FC-8085B604 0008+00 s=1 e=0 z=0  None .text      daKytag09_IsDelete__FP13kytag09_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag09_IsDelete(kytag09_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag09/d_a_kytag09/daKytag09_IsDelete__FP13kytag09_class.s"
+static bool daKytag09_IsDelete(kytag09_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

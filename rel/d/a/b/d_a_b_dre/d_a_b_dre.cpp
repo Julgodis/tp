@@ -25,19 +25,19 @@ struct cXyz {
 	/* 805C7FCC */ ~cXyz();
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -230,7 +230,7 @@ static void daB_DRE_Create(fopAc_ac_c*); // 2
 static void daB_DRE_Delete(daB_DRE_c*); // 2
 static void daB_DRE_Draw(daB_DRE_c*); // 2
 static void daB_DRE_Execute(daB_DRE_c*); // 2
-static void daB_DRE_IsDelete(daB_DRE_c*); // 2
+static bool daB_DRE_IsDelete(daB_DRE_c*); // 2
 
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -262,7 +262,7 @@ extern "C" static void daB_DRE_Draw__FP9daB_DRE_c(); // 1
 extern "C" static void daB_DRE_Execute__FP9daB_DRE_c(); // 1
 extern "C" void create__9daB_DRE_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daB_DRE_IsDelete__FP9daB_DRE_c(); // 1
+extern "C" static bool daB_DRE_IsDelete__FP9daB_DRE_c(); // 1
 extern "C" void __sinit_d_a_b_dre_cpp(); // 1
 extern "C" static void func_805CAD1C(); // 1
 extern "C" static void func_805CAD24(); // 1
@@ -1329,14 +1329,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 805CACAC-805CACB4 0008+00 s=1 e=0 z=0  None .text      daB_DRE_IsDelete__FP9daB_DRE_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_DRE_IsDelete(daB_DRE_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_dre/d_a_b_dre/daB_DRE_IsDelete__FP9daB_DRE_c.s"
+static bool daB_DRE_IsDelete(daB_DRE_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805CACB4-805CAD1C 0068+00 s=0 e=1 z=0  None .text      __sinit_d_a_b_dre_cpp                                        */

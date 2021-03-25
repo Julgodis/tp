@@ -55,7 +55,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -64,10 +64,10 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Vec {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -120,10 +120,10 @@ struct dBgS_AcchCir {
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -199,7 +199,7 @@ static void fr_message(fr_class*); // 2
 static void action(fr_class*); // 2
 static void message(fr_class*); // 2
 static void daFr_Execute(fr_class*); // 2
-static void daFr_IsDelete(fr_class*); // 2
+static bool daFr_IsDelete(fr_class*); // 2
 static void daFr_Delete(fr_class*); // 2
 static void useHeapIfrt(fopAc_ac_c*); // 2
 static void daFr_Create(fopAc_ac_c*); // 2
@@ -223,7 +223,7 @@ extern "C" static void fr_message__FP8fr_class(); // 1
 extern "C" static void action__FP8fr_class(); // 1
 extern "C" static void message__FP8fr_class(); // 1
 extern "C" static void daFr_Execute__FP8fr_class(); // 1
-extern "C" static void daFr_IsDelete__FP8fr_class(); // 1
+extern "C" static bool daFr_IsDelete__FP8fr_class(); // 1
 extern "C" static void daFr_Delete__FP8fr_class(); // 1
 extern "C" static void useHeapIfrt__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -282,7 +282,7 @@ void fopAcM_delete(fopAc_ac_c*); // 2
 void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopKyM_createWpillar(cXyz const*, f32, int); // 2
 void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
@@ -319,7 +319,7 @@ extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
 extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
 extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
@@ -892,14 +892,9 @@ asm static void daFr_Execute(fr_class* param_0) {
 
 
 /* 8051B354-8051B35C 0008+00 s=1 e=0 z=0  None .text      daFr_IsDelete__FP8fr_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daFr_IsDelete(fr_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_fr/d_a_fr/daFr_IsDelete__FP8fr_class.s"
+static bool daFr_IsDelete(fr_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8051B35C-8051B3B0 0054+00 s=1 e=0 z=0  None .text      daFr_Delete__FP8fr_class                                     */

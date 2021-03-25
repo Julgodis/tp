@@ -15,8 +15,8 @@ struct daTagRetRm_c {
 	/* 80D5EE98 */ daTagRetRm_c();
 	/* 80D5EED4 */ ~daTagRetRm_c();
 	/* 80D5EF34 */ void create();
-	/* 80D5EF8C */ void Delete();
-	/* 80D5EF94 */ void draw();
+	/* 80D5EF8C */ bool Delete();
+	/* 80D5EF94 */ bool draw();
 	/* 80D5EF9C */ void execute();
 	/* 80D5F010 */ void init();
 	/* 80D5F050 */ void chkPlyrInTag();
@@ -50,8 +50,8 @@ static void daTagRetRm_draw(daTagRetRm_c*); // 2
 extern "C" void __ct__12daTagRetRm_cFv(); // 1
 extern "C" void __dt__12daTagRetRm_cFv(); // 1
 extern "C" void create__12daTagRetRm_cFv(); // 1
-extern "C" void Delete__12daTagRetRm_cFv(); // 1
-extern "C" void draw__12daTagRetRm_cFv(); // 1
+extern "C" bool Delete__12daTagRetRm_cFv(); // 1
+extern "C" bool draw__12daTagRetRm_cFv(); // 1
 extern "C" void execute__12daTagRetRm_cFv(); // 1
 extern "C" void init__12daTagRetRm_cFv(); // 1
 extern "C" void chkPlyrInTag__12daTagRetRm_cFv(); // 1
@@ -154,25 +154,15 @@ asm void daTagRetRm_c::create() {
 
 
 /* 80D5EF8C-80D5EF94 0008+00 s=1 e=0 z=0  None .text      Delete__12daTagRetRm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRetRm_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/Delete__12daTagRetRm_cFv.s"
+bool daTagRetRm_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EF94-80D5EF9C 0008+00 s=1 e=0 z=0  None .text      draw__12daTagRetRm_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRetRm_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/draw__12daTagRetRm_cFv.s"
+bool daTagRetRm_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5EF9C-80D5F010 0074+00 s=1 e=0 z=0  None .text      execute__12daTagRetRm_cFv                                    */

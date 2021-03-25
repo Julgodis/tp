@@ -65,10 +65,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -84,7 +84,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -93,7 +93,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -314,7 +314,7 @@ void action(npc_ne_class*); // 2
 static void demo_camera(npc_ne_class*); // 2
 static void message(npc_ne_class*); // 2
 static void daNpc_Ne_Execute(npc_ne_class*); // 2
-static void daNpc_Ne_IsDelete(npc_ne_class*); // 2
+static bool daNpc_Ne_IsDelete(npc_ne_class*); // 2
 static void daNpc_Ne_Delete(npc_ne_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Ne_Create(fopAc_ac_c*); // 2
@@ -364,7 +364,7 @@ extern "C" void action__FP12npc_ne_class(); // 1
 extern "C" static void demo_camera__FP12npc_ne_class(); // 1
 extern "C" static void message__FP12npc_ne_class(); // 1
 extern "C" static void daNpc_Ne_Execute__FP12npc_ne_class(); // 1
-extern "C" static void daNpc_Ne_IsDelete__FP12npc_ne_class(); // 1
+extern "C" static bool daNpc_Ne_IsDelete__FP12npc_ne_class(); // 1
 extern "C" static void daNpc_Ne_Delete__FP12npc_ne_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -521,7 +521,7 @@ void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, in
 void fopAcM_otherBgCheck(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_wayBgCheck(fopAc_ac_c const*, f32, f32); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopKyM_createWpillar(cXyz const*, f32, int); // 2
 void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeForPName(void*, void*); // 2
@@ -572,7 +572,7 @@ extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi(); // 1
 extern "C" void fopAcM_otherBgCheck__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
 extern "C" void fopAcM_wayBgCheck__FPC10fopAc_ac_cff(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
@@ -1657,14 +1657,9 @@ asm static void search_ground_1(npc_ne_class* param_0) {
 
 
 /* 80A8DD54-80A8DD58 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A8DD58-80A8DEE0 0188+00 s=1 e=0 z=0  None .text      search_ground_2__FP12npc_ne_classs                           */
@@ -1811,14 +1806,9 @@ asm static void daNpc_Ne_Execute(npc_ne_class* param_0) {
 
 
 /* 80A9172C-80A91734 0008+00 s=1 e=0 z=0  None .text      daNpc_Ne_IsDelete__FP12npc_ne_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Ne_IsDelete(npc_ne_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_ne/d_a_npc_ne/daNpc_Ne_IsDelete__FP12npc_ne_class.s"
+static bool daNpc_Ne_IsDelete(npc_ne_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A91734-80A91798 0064+00 s=1 e=0 z=0  None .text      daNpc_Ne_Delete__FP12npc_ne_class                            */

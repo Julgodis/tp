@@ -48,11 +48,11 @@ struct daNpcCd2_c {
 struct fopAc_ac_c {
 };
 
-struct Vec {
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
+};
+
+struct Vec {
 };
 
 struct PathTrace_c {
@@ -112,19 +112,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

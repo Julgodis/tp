@@ -257,6 +257,15 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -265,15 +274,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {
@@ -2099,14 +2099,9 @@ asm void dMenu_save_c::restartInit() {
 
 
 /* 801F31B0-801F31B4 0004+00 s=1 e=0 z=0  None .text      saveWait__12dMenu_save_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_save_c::saveWait() {
-	nofralloc
-#include "asm/d/menu/d_menu_save/saveWait__12dMenu_save_cFv.s"
+void dMenu_save_c::saveWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801F31B4-801F328C 00D8+00 s=1 e=0 z=0  None .text      messageChange__12dMenu_save_cFv                              */

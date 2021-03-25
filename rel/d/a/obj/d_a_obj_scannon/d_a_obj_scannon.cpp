@@ -97,10 +97,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -1139,14 +1139,9 @@ asm void daSCannon_c::exeModeActionEvt() {
 
 
 /* 80CC7EBC-80CC7EC0 0004+00 s=1 e=0 z=0  None .text      exeModeEnd__11daSCannon_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSCannon_c::exeModeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/exeModeEnd__11daSCannon_cFv.s"
+void daSCannon_c::exeModeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC7EC0-80CC7FAC 00EC+00 s=1 e=0 z=0  None .text      demoExe__11daSCannon_cFv                                     */
@@ -1172,14 +1167,9 @@ asm void daSCannon_c::demoModeInit(int param_0) {
 
 
 /* 80CC8044-80CC8048 0004+00 s=1 e=0 z=0  None .text      demoInitLinkIn__11daSCannon_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSCannon_c::demoInitLinkIn() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitLinkIn__11daSCannon_cFv.s"
+void daSCannon_c::demoInitLinkIn() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC8048-80CC8108 00C0+00 s=1 e=0 z=0  None .text      demoExeLinkIn__11daSCannon_cFv                               */
@@ -1216,14 +1206,9 @@ asm void daSCannon_c::demoExeSet() {
 
 
 /* 80CC8274-80CC8278 0004+00 s=1 e=0 z=0  None .text      demoInitMove__11daSCannon_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSCannon_c::demoInitMove() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon/d_a_obj_scannon/demoInitMove__11daSCannon_cFv.s"
+void daSCannon_c::demoInitMove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CC8278-80CC8378 0100+00 s=1 e=0 z=0  None .text      demoExeMove__11daSCannon_cFv                                 */

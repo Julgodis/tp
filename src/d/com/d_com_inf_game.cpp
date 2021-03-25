@@ -11,13 +11,16 @@
 // Types:
 // 
 
+struct cXyz {
+};
+
 struct J3DModelData {
 };
 
-struct J3DModel {
+struct dStage_startStage_c {
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
 struct dTimer_c {
@@ -28,9 +31,6 @@ struct dTimer_c {
 	/* 8025D86C */ void restart(u8);
 	/* 8025D920 */ void end(int);
 	/* 8025D9E0 */ void deleteRequest();
-};
-
-struct dStage_startStage_c {
 };
 
 struct dComIfG_play_c {
@@ -413,11 +413,11 @@ void dComIfG_changeOpeningScene(scene_class*, s16); // 2
 void dComIfG_resetToOpening(scene_class*); // 2
 static void phase_1(char*); // 2
 static void phase_2(char*); // 2
-static void phase_3(char*); // 2
+static s32 phase_3(char*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
 static void phase_01(phaseParam_c*); // 2
 static void phase_02(phaseParam_c*); // 2
-static void phase_03(phaseParam_c*); // 2
+static bool phase_03(phaseParam_c*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*, JKRHeap*); // 2
 void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGp_getReverb(int); // 2
@@ -464,7 +464,7 @@ static void dComIfGp_searchUseSubHeap2D(int); // 2
 void dComIfGp_getSubHeap2D(int); // 2
 void dComIfGs_checkGetInsectNum(); // 2
 static void dComIfGs_checkGetItem(u8); // 2
-void dComIfGs_getBottleMax(); // 2
+s32 dComIfGs_getBottleMax(); // 2
 void dComIfGp_getSelectItemNum(int); // 2
 void dComIfGp_getSelectItemMaxNum(int); // 2
 void dComIfGp_setSelectItemNum(int, s16); // 2
@@ -556,11 +556,11 @@ extern "C" void dComIfG_changeOpeningScene__FP11scene_classs(); // 1
 extern "C" void dComIfG_resetToOpening__FP11scene_class(); // 1
 extern "C" static void phase_1__FPc(); // 1
 extern "C" static void phase_2__FPc(); // 1
-extern "C" static void phase_3__FPc(); // 1
+extern "C" static s32 phase_3__FPc(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
 extern "C" static void phase_01__FP12phaseParam_c(); // 1
 extern "C" static void phase_02__FP12phaseParam_c(); // 1
-extern "C" static void phase_03__FP12phaseParam_c(); // 1
+extern "C" static bool phase_03__FP12phaseParam_c(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap(); // 1
 extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void dComIfGp_getReverb__Fi(); // 1
@@ -608,7 +608,7 @@ extern "C" static void dComIfGp_searchUseSubHeap2D__Fi(); // 1
 extern "C" void dComIfGp_getSubHeap2D__Fi(); // 1
 extern "C" void dComIfGs_checkGetInsectNum__Fv(); // 1
 extern "C" static void dComIfGs_checkGetItem__FUc(); // 1
-extern "C" void dComIfGs_getBottleMax__Fv(); // 1
+extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
 extern "C" void dComIfGp_getSelectItemNum__Fi(); // 1
 extern "C" void dComIfGp_getSelectItemMaxNum__Fi(); // 1
 extern "C" void dComIfGp_setSelectItemNum__Fis(); // 1
@@ -1359,14 +1359,9 @@ asm static void phase_2(char* param_0) {
 
 
 /* 8002CEB4-8002CEBC 0008+00 s=1 e=0 z=0  None .text      phase_3__FPc                                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void phase_3(char* param_0) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/phase_3__FPc.s"
+static s32 phase_3(char* param_0) {
+	return 4;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1411,14 +1406,9 @@ asm static void phase_02(phaseParam_c* param_0) {
 
 
 /* 8002CFB8-8002CFC0 0008+00 s=1 e=0 z=0  None .text      phase_03__FP12phaseParam_c                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void phase_03(phaseParam_c* param_0) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/phase_03__FP12phaseParam_c.s"
+static bool phase_03(phaseParam_c* param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1975,14 +1965,9 @@ asm static void dComIfGs_checkGetItem(u8 param_0) {
 
 
 /* 8002E5B8-8002E5C0 0008+00 s=2 e=3 z=0  None .text      dComIfGs_getBottleMax__Fv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dComIfGs_getBottleMax() {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGs_getBottleMax__Fv.s"
+s32 dComIfGs_getBottleMax() {
+	return 10;
 }
-#pragma pop
 
 
 /* 8002E5C0-8002E688 00C8+00 s=0 e=11 z=0  None .text      dComIfGp_getSelectItemNum__Fi                                */
@@ -2257,14 +2242,9 @@ asm void dComIfGs_getWarpMarkFlag() {
 
 
 /* 8002F310-8002F314 0004+00 s=0 e=1 z=0  None .text      dComIfGs_setWarpMarkFlag__FUc                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dComIfGs_setWarpMarkFlag(u8 param_0) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGs_setWarpMarkFlag__FUc.s"
+void dComIfGs_setWarpMarkFlag(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8002F314-8002F328 0014+00 s=0 e=0 z=1  None .text      __ct__19dComIfG_resLoader_cFv                                */
@@ -2338,14 +2318,9 @@ asm void dComIfG_getRoomArcName(int param_0) {
 
 
 /* 8002F500-8002F504 0004+00 s=0 e=1 z=0  None .text      dComIfGp_ret_wp_set__FSc                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dComIfGp_ret_wp_set(s8 param_0) {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/dComIfGp_ret_wp_set__FSc.s"
+void dComIfGp_ret_wp_set(s8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8002F504-8002F518 0014+00 s=0 e=1 z=0  None .text      dComIfGp_world_dark_set__FUc                                 */
@@ -2812,25 +2787,15 @@ asm dComIfG_inf_c::dComIfG_inf_c() {
 
 
 /* 800304C8-800304CC 0004+00 s=1 e=0 z=0  None .text      __ct__25dComIfG_camera_info_classFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dComIfG_camera_info_class::dComIfG_camera_info_class() {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__25dComIfG_camera_info_classFv.s"
+dComIfG_camera_info_class::dComIfG_camera_info_class() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800304CC-800304D0 0004+00 s=1 e=0 z=0  None .text      __ct__14dDlst_window_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dDlst_window_c::dDlst_window_c() {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__14dDlst_window_cFv.s"
+dDlst_window_c::dDlst_window_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800304D0-8003050C 003C+00 s=1 e=2 z=0  None .text      __dt__10dAttList_cFv                                         */
@@ -2845,14 +2810,9 @@ asm dAttList_c::~dAttList_c() {
 
 
 /* 8003050C-80030510 0004+00 s=1 e=1 z=0  None .text      __ct__10dAttList_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dAttList_c::dAttList_c() {
-	nofralloc
-#include "asm/d/com/d_com_inf_game/__ct__10dAttList_cFv.s"
+dAttList_c::dAttList_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80030510-8003054C 003C+00 s=0 e=9 z=0  None .text      __dt__7cSAngleFv                                             */

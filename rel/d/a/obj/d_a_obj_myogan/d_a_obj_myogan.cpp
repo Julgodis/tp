@@ -122,7 +122,7 @@ struct dScnKy_env_light_c {
 static void daObj_Myogan_Draw(obj_myogan_class*); // 2
 static void action(obj_myogan_class*); // 2
 static void daObj_Myogan_Execute(obj_myogan_class*); // 2
-static void daObj_Myogan_IsDelete(obj_myogan_class*); // 2
+static bool daObj_Myogan_IsDelete(obj_myogan_class*); // 2
 static void daObj_Myogan_Delete(obj_myogan_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Myogan_Create(fopAc_ac_c*); // 2
@@ -131,7 +131,7 @@ extern "C" void __ct__18daObj_Myogan_HIO_cFv(); // 1
 extern "C" static void daObj_Myogan_Draw__FP16obj_myogan_class(); // 1
 extern "C" static void action__FP16obj_myogan_class(); // 1
 extern "C" static void daObj_Myogan_Execute__FP16obj_myogan_class(); // 1
-extern "C" static void daObj_Myogan_IsDelete__FP16obj_myogan_class(); // 1
+extern "C" static bool daObj_Myogan_IsDelete__FP16obj_myogan_class(); // 1
 extern "C" static void daObj_Myogan_Delete__FP16obj_myogan_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -312,14 +312,9 @@ asm static void daObj_Myogan_Execute(obj_myogan_class* param_0) {
 
 
 /* 80C9EDB8-80C9EDC0 0008+00 s=1 e=0 z=0  None .text      daObj_Myogan_IsDelete__FP16obj_myogan_class                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Myogan_IsDelete(obj_myogan_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_myogan/d_a_obj_myogan/daObj_Myogan_IsDelete__FP16obj_myogan_class.s"
+static bool daObj_Myogan_IsDelete(obj_myogan_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

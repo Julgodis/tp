@@ -26,10 +26,10 @@ struct J3DMaterial {
 	/* 80332B94 */ ~J3DMaterial();
 };
 
-struct J3DMaterialBlock {
+struct J3DMaterialDLBlock {
 };
 
-struct J3DMaterialDLBlock {
+struct J3DMaterialBlock {
 };
 
 struct J3DMaterialFactory {
@@ -85,14 +85,8 @@ struct J3DPEBlockNull {
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
-struct J3DTevOrder {
-	/* 8000E140 */ J3DTevOrder();
-};
-
-struct J3DTevSwapModeInfo {
-};
-
-struct J3DTevSwapModeTable {
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevStageInfo {
@@ -103,31 +97,37 @@ struct J3DTevStage {
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct J3DTevSwapModeInfo {
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
+struct J3DTevSwapModeTable {
 };
 
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
 };
 
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DTevOrder {
+	/* 8000E140 */ J3DTevOrder();
+};
+
 struct J3DTevBlock {
 	/* 8000DBC8 */ void patchTexNoAndTexCoordScale();
 	/* 8000DBD4 */ void patch();
-	/* 8000DF84 */ void getIndTevStage(u32);
-	/* 8000DF8C */ void getTevStage(u32);
+	/* 8000DF84 */ bool getIndTevStage(u32);
+	/* 8000DF8C */ bool getTevStage(u32);
 	/* 8000DF94 */ void getTexNo(u32) const;
-	/* 8000DFA0 */ void getTevSwapModeTable(u32);
-	/* 8000DFA8 */ void getTevKAlphaSel(u32);
-	/* 8000DFB0 */ void getTevKColorSel(u32);
-	/* 8000DFB8 */ void getTevOrder(u32);
-	/* 8000DFC0 */ void getTevKColor(u32);
-	/* 8000DFC8 */ void getTevColor(u32);
-	/* 8000DFD0 */ void getTevStageNum() const;
+	/* 8000DFA0 */ bool getTevSwapModeTable(u32);
+	/* 8000DFA8 */ bool getTevKAlphaSel(u32);
+	/* 8000DFB0 */ bool getTevKColorSel(u32);
+	/* 8000DFB8 */ bool getTevOrder(u32);
+	/* 8000DFC0 */ bool getTevKColor(u32);
+	/* 8000DFC8 */ bool getTevColor(u32);
+	/* 8000DFD0 */ bool getTevStageNum() const;
 	/* 8000E0A4 */ void setIndTevStage(u32, J3DIndTevStage);
 	/* 80323554 */ void setIndTevStage(u32, J3DIndTevStage const*);
 	/* 8000E0A8 */ void setTevStage(u32, J3DTevStage);
@@ -148,7 +148,7 @@ struct J3DTevBlock {
 	/* 8000E0C4 */ void setTevColor(u32, J3DGXColorS10);
 	/* 8000E0C8 */ void setTevStageNum(u8);
 	/* 8032354C */ void setTevStageNum(u8 const*);
-	/* 8031730C */ void countDLSize();
+	/* 8031730C */ bool countDLSize();
 	/* 80317330 */ void load();
 	/* 8031CD44 */ void diff(u32);
 	/* 8031E098 */ void indexToPtr_private(u32);
@@ -160,11 +160,11 @@ struct J3DTevBlock {
 	/* 80321FE0 */ void setTexNoOffset(u32);
 	/* 80322958 */ void setTevSwapModeInfo(u32, J3DTevSwapModeInfo);
 	/* 8032295C */ void setTevSwapModeInfo(u32, J3DTevSwapModeInfo const*);
-	/* 80322964 */ void getTevRegOffset() const;
+	/* 80322964 */ bool getTevRegOffset() const;
 	/* 8032296C */ void setTevRegOffset(u32);
 	/* 8032353C */ void patchTexNo();
 	/* 80323540 */ void patchTevReg();
-	/* 80323558 */ void getTexNoOffset() const;
+	/* 80323558 */ bool getTexNoOffset() const;
 };
 
 struct J3DTevBlockNull {
@@ -198,10 +198,10 @@ struct J3DColorBlockNull {
 struct J3DZMode {
 };
 
-struct J3DFog {
+struct J3DAlphaComp {
 };
 
-struct J3DAlphaComp {
+struct J3DFog {
 };
 
 struct J3DBlend {
@@ -209,11 +209,11 @@ struct J3DBlend {
 
 struct J3DPEBlock {
 	/* 8000DBCC */ void patch();
-	/* 8000DF3C */ void getZCompLoc() const;
-	/* 8000DF44 */ void getZMode();
-	/* 8000DF4C */ void getBlend();
-	/* 8000DF54 */ void getAlphaComp();
-	/* 8000DF5C */ void getFog();
+	/* 8000DF3C */ bool getZCompLoc() const;
+	/* 8000DF44 */ bool getZMode();
+	/* 8000DF4C */ bool getBlend();
+	/* 8000DF54 */ bool getAlphaComp();
+	/* 8000DF5C */ bool getFog();
 	/* 8000E010 */ void setZCompLoc(u8);
 	/* 80317378 */ void setZCompLoc(u8 const*);
 	/* 8000E014 */ void setZMode(J3DZMode);
@@ -222,7 +222,7 @@ struct J3DPEBlock {
 	/* 80317370 */ void setBlend(J3DBlend const*);
 	/* 8000E01C */ void setAlphaComp(J3DAlphaComp const&);
 	/* 8031736C */ void setAlphaComp(J3DAlphaComp const*);
-	/* 8031731C */ void countDLSize();
+	/* 8031731C */ bool countDLSize();
 	/* 80317344 */ void diff(u32);
 	/* 80317348 */ void reset(J3DPEBlock*);
 	/* 8031735C */ void diffFog();
@@ -231,8 +231,8 @@ struct J3DPEBlock {
 	/* 80317368 */ void setFog(J3DFog);
 	/* 80317380 */ void setDither(u8 const*);
 	/* 8031737C */ void setDither(u8);
-	/* 80317384 */ void getDither() const;
-	/* 8031738C */ void getFogOffset() const;
+	/* 80317384 */ bool getDither() const;
+	/* 8031738C */ bool getFogOffset() const;
 	/* 80317394 */ void setFogOffset(u32);
 };
 
@@ -244,10 +244,10 @@ struct J3DLightObj {
 
 struct J3DColorBlock {
 	/* 8000DBD0 */ void patchLight();
-	/* 8000DFF0 */ void getAmbColor(u32);
-	/* 8000DFF8 */ void getColorChan(u32);
-	/* 8000E000 */ void getMatColor(u32);
-	/* 8000E008 */ void getColorChanNum() const;
+	/* 8000DFF0 */ bool getAmbColor(u32);
+	/* 8000DFF8 */ bool getColorChan(u32);
+	/* 8000E000 */ bool getMatColor(u32);
+	/* 8000E008 */ bool getColorChanNum() const;
 	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 	/* 8000E0D4 */ void setAmbColor(u32, J3DGXColor);
 	/* 80317450 */ void setColorChan(u32, J3DColorChan const*);
@@ -257,9 +257,9 @@ struct J3DColorBlock {
 	/* 8031744C */ void setColorChanNum(u8 const*);
 	/* 8000E0E0 */ void setColorChanNum(u8);
 	/* 801A4C08 */ void setLight(u32, J3DLightObj*);
-	/* 80317304 */ void countDLSize();
+	/* 80317304 */ bool countDLSize();
 	/* 80317324 */ void load();
-	/* 80317328 */ void getCullMode() const;
+	/* 80317328 */ s32 getCullMode() const;
 	/* 8031733C */ void patch();
 	/* 80317340 */ void diff(u32);
 	/* 80317358 */ void reset(J3DColorBlock*);
@@ -268,16 +268,13 @@ struct J3DColorBlock {
 	/* 8031743C */ void diffMatColor();
 	/* 80317440 */ void diffColorChan();
 	/* 80317444 */ void diffLightObj(u32);
-	/* 80317454 */ void getLight(u32);
+	/* 80317454 */ bool getLight(u32);
 	/* 8031745C */ void setCullMode(u8);
 	/* 80317460 */ void setCullMode(u8 const*);
-	/* 80317464 */ void getMatColorOffset() const;
-	/* 8031746C */ void getColorChanOffset() const;
+	/* 80317464 */ bool getMatColorOffset() const;
+	/* 8031746C */ bool getColorChanOffset() const;
 	/* 80317474 */ void setMatColorOffset(u32);
 	/* 80317478 */ void setColorChanOffset(u32);
-};
-
-struct J3DTexMtx {
 };
 
 struct J3DTexCoord {
@@ -287,20 +284,23 @@ struct J3DTexCoord {
 struct J3DNBTScale {
 };
 
+struct J3DTexMtx {
+};
+
 struct J3DTexGenBlock {
-	/* 8000DFD8 */ void getTexMtx(u32);
-	/* 8000DFE0 */ void getTexCoord(u32);
-	/* 8000DFE8 */ void getTexGenNum() const;
+	/* 8000DFD8 */ bool getTexMtx(u32);
+	/* 8000DFE0 */ bool getTexCoord(u32);
+	/* 8000DFE8 */ bool getTexGenNum() const;
 	/* 8000E0CC */ void setTexCoord(u32, J3DTexCoord const*);
 	/* 8031741C */ void setTexGenNum(u32 const*);
 	/* 8000E0D0 */ void setTexGenNum(u32);
 	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
-	/* 803172FC */ void countDLSize();
-	/* 80317334 */ void getNBTScale();
+	/* 803172FC */ bool countDLSize();
+	/* 80317334 */ bool getNBTScale();
 	/* 80317354 */ void reset(J3DTexGenBlock*);
 	/* 80317420 */ void setNBTScale(J3DNBTScale);
 	/* 80317424 */ void setNBTScale(J3DNBTScale const*);
-	/* 80317428 */ void getTexMtxOffset() const;
+	/* 80317428 */ bool getTexMtxOffset() const;
 	/* 80317430 */ void setTexMtxOffset(u32);
 };
 
@@ -459,28 +459,28 @@ extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv(); // 1
 extern "C" void patch__10J3DPEBlockFv(); // 1
 extern "C" void patchLight__13J3DColorBlockFv(); // 1
 extern "C" void patch__11J3DTevBlockFv(); // 1
-extern "C" void getZCompLoc__10J3DPEBlockCFv(); // 1
-extern "C" void getZMode__10J3DPEBlockFv(); // 1
-extern "C" void getBlend__10J3DPEBlockFv(); // 1
-extern "C" void getAlphaComp__10J3DPEBlockFv(); // 1
-extern "C" void getFog__10J3DPEBlockFv(); // 1
-extern "C" void getIndTevStage__11J3DTevBlockFUl(); // 1
-extern "C" void getTevStage__11J3DTevBlockFUl(); // 1
+extern "C" bool getZCompLoc__10J3DPEBlockCFv(); // 1
+extern "C" bool getZMode__10J3DPEBlockFv(); // 1
+extern "C" bool getBlend__10J3DPEBlockFv(); // 1
+extern "C" bool getAlphaComp__10J3DPEBlockFv(); // 1
+extern "C" bool getFog__10J3DPEBlockFv(); // 1
+extern "C" bool getIndTevStage__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J3DTevBlockFUl(); // 1
 extern "C" void getTexNo__11J3DTevBlockCFUl(); // 1
-extern "C" void getTevSwapModeTable__11J3DTevBlockFUl(); // 1
-extern "C" void getTevKAlphaSel__11J3DTevBlockFUl(); // 1
-extern "C" void getTevKColorSel__11J3DTevBlockFUl(); // 1
-extern "C" void getTevOrder__11J3DTevBlockFUl(); // 1
-extern "C" void getTevKColor__11J3DTevBlockFUl(); // 1
-extern "C" void getTevColor__11J3DTevBlockFUl(); // 1
-extern "C" void getTevStageNum__11J3DTevBlockCFv(); // 1
-extern "C" void getTexMtx__14J3DTexGenBlockFUl(); // 1
-extern "C" void getTexCoord__14J3DTexGenBlockFUl(); // 1
-extern "C" void getTexGenNum__14J3DTexGenBlockCFv(); // 1
-extern "C" void getAmbColor__13J3DColorBlockFUl(); // 1
-extern "C" void getColorChan__13J3DColorBlockFUl(); // 1
-extern "C" void getMatColor__13J3DColorBlockFUl(); // 1
-extern "C" void getColorChanNum__13J3DColorBlockCFv(); // 1
+extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStageNum__11J3DTevBlockCFv(); // 1
+extern "C" bool getTexMtx__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexCoord__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexGenNum__14J3DTexGenBlockCFv(); // 1
+extern "C" bool getAmbColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChan__13J3DColorBlockFUl(); // 1
+extern "C" bool getMatColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChanNum__13J3DColorBlockCFv(); // 1
 extern "C" void setZCompLoc__10J3DPEBlockFUc(); // 1
 extern "C" void setZMode__10J3DPEBlockF8J3DZMode(); // 1
 extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend(); // 1
@@ -534,14 +534,14 @@ extern "C" void calcSizePEBlock__11J3DMaterialFUlUl(); // 1
 extern "C" void initialize__11J3DMaterialFv(); // 1
 extern "C" void initialize__18J3DPatchedMaterialFv(); // 1
 extern "C" void initialize__17J3DLockedMaterialFv(); // 1
-extern "C" void countDLSize__14J3DTexGenBlockFv(); // 1
-extern "C" void countDLSize__13J3DColorBlockFv(); // 1
-extern "C" void countDLSize__11J3DTevBlockFv(); // 1
-extern "C" void countDLSize__10J3DPEBlockFv(); // 1
+extern "C" bool countDLSize__14J3DTexGenBlockFv(); // 1
+extern "C" bool countDLSize__13J3DColorBlockFv(); // 1
+extern "C" bool countDLSize__11J3DTevBlockFv(); // 1
+extern "C" bool countDLSize__10J3DPEBlockFv(); // 1
 extern "C" void load__13J3DColorBlockFv(); // 1
-extern "C" void getCullMode__13J3DColorBlockCFv(); // 1
+extern "C" s32 getCullMode__13J3DColorBlockCFv(); // 1
 extern "C" void load__11J3DTevBlockFv(); // 1
-extern "C" void getNBTScale__14J3DTexGenBlockFv(); // 1
+extern "C" bool getNBTScale__14J3DTexGenBlockFv(); // 1
 extern "C" void patch__13J3DColorBlockFv(); // 1
 extern "C" void diff__13J3DColorBlockFUl(); // 1
 extern "C" void diff__10J3DPEBlockFUl(); // 1
@@ -558,13 +558,13 @@ extern "C" void setZMode__10J3DPEBlockFPC8J3DZMode(); // 1
 extern "C" void setZCompLoc__10J3DPEBlockFPCUc(); // 1
 extern "C" void setDither__10J3DPEBlockFUc(); // 1
 extern "C" void setDither__10J3DPEBlockFPCUc(); // 1
-extern "C" void getDither__10J3DPEBlockCFv(); // 1
-extern "C" void getFogOffset__10J3DPEBlockCFv(); // 1
+extern "C" bool getDither__10J3DPEBlockCFv(); // 1
+extern "C" bool getFogOffset__10J3DPEBlockCFv(); // 1
 extern "C" void setFogOffset__10J3DPEBlockFUl(); // 1
 extern "C" void setTexGenNum__14J3DTexGenBlockFPCUl(); // 1
 extern "C" void setNBTScale__14J3DTexGenBlockF11J3DNBTScale(); // 1
 extern "C" void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale(); // 1
-extern "C" void getTexMtxOffset__14J3DTexGenBlockCFv(); // 1
+extern "C" bool getTexMtxOffset__14J3DTexGenBlockCFv(); // 1
 extern "C" void setTexMtxOffset__14J3DTexGenBlockFUl(); // 1
 extern "C" void patchMatColor__13J3DColorBlockFv(); // 1
 extern "C" void diffAmbColor__13J3DColorBlockFv(); // 1
@@ -574,11 +574,11 @@ extern "C" void diffLightObj__13J3DColorBlockFUl(); // 1
 extern "C" void setMatColor__13J3DColorBlockFUlPC10J3DGXColor(); // 1
 extern "C" void setColorChanNum__13J3DColorBlockFPCUc(); // 1
 extern "C" void setColorChan__13J3DColorBlockFUlPC12J3DColorChan(); // 1
-extern "C" void getLight__13J3DColorBlockFUl(); // 1
+extern "C" bool getLight__13J3DColorBlockFUl(); // 1
 extern "C" void setCullMode__13J3DColorBlockFUc(); // 1
 extern "C" void setCullMode__13J3DColorBlockFPCUc(); // 1
-extern "C" void getMatColorOffset__13J3DColorBlockCFv(); // 1
-extern "C" void getColorChanOffset__13J3DColorBlockCFv(); // 1
+extern "C" bool getMatColorOffset__13J3DColorBlockCFv(); // 1
+extern "C" bool getColorChanOffset__13J3DColorBlockCFv(); // 1
 extern "C" void setMatColorOffset__13J3DColorBlockFUl(); // 1
 extern "C" void setColorChanOffset__13J3DColorBlockFUl(); // 1
 extern "C" void initialize__21J3DTexGenBlockPatchedFv(); // 1
@@ -597,7 +597,7 @@ extern "C" void setTevKAlphaSel__11J3DTevBlockFUlPCUc(); // 1
 extern "C" void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo(); // 1
 extern "C" void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo(); // 1
 extern "C" void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable(); // 1
-extern "C" void getTevRegOffset__11J3DTevBlockCFv(); // 1
+extern "C" bool getTevRegOffset__11J3DTevBlockCFv(); // 1
 extern "C" void setTevRegOffset__11J3DTevBlockFUl(); // 1
 extern "C" void patchTexNo__11J3DTevBlockFv(); // 1
 extern "C" void patchTevReg__11J3DTevBlockFv(); // 1
@@ -606,7 +606,7 @@ extern "C" void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder(); // 1
 extern "C" void setTevStageNum__11J3DTevBlockFPCUc(); // 1
 extern "C" void setTevStage__11J3DTevBlockFUlPC11J3DTevStage(); // 1
 extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage(); // 1
-extern "C" void getTexNoOffset__11J3DTevBlockCFv(); // 1
+extern "C" bool getTexNoOffset__11J3DTevBlockCFv(); // 1
 extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
 extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
 extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo(); // 1
@@ -1294,14 +1294,9 @@ asm void J3DMaterialFactory::newNBTScale(int param_0) const {
 
 
 /* 803329A0-803329A4 0004+00 s=1 e=0 z=0  None .text      load__14J3DPEBlockNullFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DPEBlockNull::load() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/load__14J3DPEBlockNullFv.s"
+void J3DPEBlockNull::load() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 803329A4-803329B0 000C+00 s=1 e=0 z=0  None .text      getType__14J3DPEBlockNullFv                                  */
@@ -1327,25 +1322,15 @@ asm J3DPEBlockNull::~J3DPEBlockNull() {
 
 
 /* 80332A0C-80332A10 0004+00 s=1 e=0 z=0  None .text      reset__15J3DTevBlockNullFP11J3DTevBlock                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTevBlockNull::reset(J3DTevBlock* param_0) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/reset__15J3DTevBlockNullFP11J3DTevBlock.s"
+void J3DTevBlockNull::reset(J3DTevBlock* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332A10-80332A14 0004+00 s=1 e=0 z=0  None .text      ptrToIndex__15J3DTevBlockNullFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTevBlockNull::ptrToIndex() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/ptrToIndex__15J3DTevBlockNullFv.s"
+void J3DTevBlockNull::ptrToIndex() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332A14-80332A38 0024+00 s=1 e=0 z=0  None .text      indexToPtr__15J3DTevBlockNullFv                              */
@@ -1382,102 +1367,57 @@ asm J3DTevBlockNull::~J3DTevBlockNull() {
 
 
 /* 80332AA0-80332AA4 0004+00 s=1 e=0 z=0  None .text      calc__18J3DTexGenBlockNullFPA4_Cf                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::calc(f32 const (* param_0)[4]) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/calc__18J3DTexGenBlockNullFPA4_Cf.s"
+void J3DTexGenBlockNull::calc(f32 const (* param_0)[4]) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AA4-80332AA8 0004+00 s=1 e=0 z=0  None .text      calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::calcWithoutViewMtx(f32 const (* param_0)[4]) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf.s"
+void J3DTexGenBlockNull::calcWithoutViewMtx(f32 const (* param_0)[4]) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AA8-80332AAC 0004+00 s=1 e=0 z=0  None .text      calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::calcPostTexMtx(f32 const (* param_0)[4]) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf.s"
+void J3DTexGenBlockNull::calcPostTexMtx(f32 const (* param_0)[4]) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AAC-80332AB0 0004+00 s=1 e=0 z=0  None .text      calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::calcPostTexMtxWithoutViewMtx(f32 const (* param_0)[4]) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf.s"
+void J3DTexGenBlockNull::calcPostTexMtxWithoutViewMtx(f32 const (* param_0)[4]) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AB0-80332AB4 0004+00 s=1 e=0 z=0  None .text      load__18J3DTexGenBlockNullFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::load() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/load__18J3DTexGenBlockNullFv.s"
+void J3DTexGenBlockNull::load() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AB4-80332AB8 0004+00 s=1 e=0 z=0  None .text      patch__18J3DTexGenBlockNullFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::patch() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/patch__18J3DTexGenBlockNullFv.s"
+void J3DTexGenBlockNull::patch() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AB8-80332ABC 0004+00 s=1 e=0 z=0  None .text      diff__18J3DTexGenBlockNullFUl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::diff(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/diff__18J3DTexGenBlockNullFUl.s"
+void J3DTexGenBlockNull::diff(u32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332ABC-80332AC0 0004+00 s=1 e=0 z=0  None .text      diffTexMtx__18J3DTexGenBlockNullFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::diffTexMtx() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/diffTexMtx__18J3DTexGenBlockNullFv.s"
+void J3DTexGenBlockNull::diffTexMtx() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AC0-80332AC4 0004+00 s=1 e=0 z=0  None .text      diffTexGen__18J3DTexGenBlockNullFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTexGenBlockNull::diffTexGen() {
-	nofralloc
-#include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/diffTexGen__18J3DTexGenBlockNullFv.s"
+void J3DTexGenBlockNull::diffTexGen() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80332AC4-80332AD0 000C+00 s=1 e=0 z=0  None .text      getType__18J3DTexGenBlockNullFv                              */

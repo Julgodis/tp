@@ -25,7 +25,7 @@ struct dMeterString_c {
 };
 
 struct dMeterSub_c {
-	/* 80194138 */ void isDead();
+	/* 80194138 */ bool isDead();
 };
 
 struct JUtility {
@@ -46,6 +46,14 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -56,14 +64,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
 };
 
 struct CPaneMgr {
@@ -119,7 +119,7 @@ void operator delete(void*); // 2
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
-extern "C" void isDead__11dMeterSub_cFv(); // 1
+extern "C" bool isDead__11dMeterSub_cFv(); // 1
 extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
 extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
 extern "C" void resetMeterString__13dMeter2Info_cFv(); // 1

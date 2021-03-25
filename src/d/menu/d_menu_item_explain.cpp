@@ -17,10 +17,10 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct JKRExpHeap {
 };
 
 struct J2DOrthoGraph {
@@ -73,15 +73,6 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JUTFont {
-};
-
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -91,12 +82,21 @@ struct JGeometry {
 
 };
 
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
 };
 
 struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -555,25 +555,15 @@ asm void dMenu_ItemExplain_c::drawKantera() {
 
 
 /* 801DB818-801DB81C 0004+00 s=1 e=0 z=0  None .text      wait_init__19dMenu_ItemExplain_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_ItemExplain_c::wait_init() {
-	nofralloc
-#include "asm/d/menu/d_menu_item_explain/wait_init__19dMenu_ItemExplain_cFv.s"
+void dMenu_ItemExplain_c::wait_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801DB81C-801DB820 0004+00 s=1 e=0 z=0  None .text      wait_proc__19dMenu_ItemExplain_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_ItemExplain_c::wait_proc() {
-	nofralloc
-#include "asm/d/menu/d_menu_item_explain/wait_proc__19dMenu_ItemExplain_cFv.s"
+void dMenu_ItemExplain_c::wait_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801DB820-801DBAB4 0294+00 s=3 e=0 z=0  None .text      open_init__19dMenu_ItemExplain_cFv                           */

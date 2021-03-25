@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct dBgW_Base {
 	struct PushPullLabel {
 	};
 
+};
+
+struct fopAc_ac_c {
 };
 
 struct daObjBm_c {
@@ -189,10 +189,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -271,9 +271,9 @@ struct dBgS_ObjLinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -627,9 +627,9 @@ extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
 extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -1591,14 +1591,9 @@ asm void daObjBm_c::effect_proc() {
 
 
 /* 80BB0580-80BB0584 0004+00 s=1 e=0 z=0  None .text      effectWait__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBm_c::effectWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectWait__9daObjBm_cFv.s"
+void daObjBm_c::effectWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0584-80BB0718 0194+00 s=1 e=0 z=0  None .text      initEffectSet0__9daObjBm_cFv                                 */
@@ -1613,36 +1608,21 @@ asm void daObjBm_c::initEffectSet0() {
 
 
 /* 80BB0718-80BB071C 0004+00 s=1 e=0 z=0  None .text      effectSet0__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBm_c::effectSet0() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectSet0__9daObjBm_cFv.s"
+void daObjBm_c::effectSet0() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB071C-80BB0720 0004+00 s=1 e=0 z=0  None .text      effectSet1__9daObjBm_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBm_c::effectSet1() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectSet1__9daObjBm_cFv.s"
+void daObjBm_c::effectSet1() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0720-80BB0724 0004+00 s=1 e=0 z=0  None .text      effectEnd__9daObjBm_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBm_c::effectEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/effectEnd__9daObjBm_cFv.s"
+void daObjBm_c::effectEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0724-80BB0824 0100+00 s=1 e=0 z=0  None .text      check_to_walk__9daObjBm_cFv                                  */
@@ -1739,14 +1719,9 @@ asm void daObjBm_c::mode_dead_init() {
 
 
 /* 80BB0DE4-80BB0DE8 0004+00 s=1 e=0 z=0  None .text      mode_dead__9daObjBm_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBm_c::mode_dead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/mode_dead__9daObjBm_cFv.s"
+void daObjBm_c::mode_dead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BB0DE8-80BB0E0C 0024+00 s=2 e=0 z=0  None .text      clr_moment_cnt__9daObjBm_cFv                                 */
@@ -1772,14 +1747,9 @@ asm daObjBm_c::Bgc_c::Bgc_c() {
 
 
 /* 80BB0ED0-80BB0ED4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bemos/d_a_obj_bemos/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -16,8 +16,8 @@ struct daTagSetBall_c {
 	/* 80D60218 */ void setBaseMtx();
 	/* 80D6021C */ void Create();
 	/* 80D6024C */ void create();
-	/* 80D602B4 */ void execute();
-	/* 80D602BC */ void _delete();
+	/* 80D602B4 */ bool execute();
+	/* 80D602BC */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -36,8 +36,8 @@ extern "C" void initBaseMtx__14daTagSetBall_cFv(); // 1
 extern "C" void setBaseMtx__14daTagSetBall_cFv(); // 1
 extern "C" void Create__14daTagSetBall_cFv(); // 1
 extern "C" void create__14daTagSetBall_cFv(); // 1
-extern "C" void execute__14daTagSetBall_cFv(); // 1
-extern "C" void _delete__14daTagSetBall_cFv(); // 1
+extern "C" bool execute__14daTagSetBall_cFv(); // 1
+extern "C" bool _delete__14daTagSetBall_cFv(); // 1
 extern "C" static void daTagSetBall_Execute__FP14daTagSetBall_c(); // 1
 extern "C" static void daTagSetBall_Delete__FP14daTagSetBall_c(); // 1
 extern "C" static void daTagSetBall_Create__FP14daTagSetBall_c(); // 1
@@ -68,14 +68,9 @@ asm void daTagSetBall_c::initBaseMtx() {
 
 
 /* 80D60218-80D6021C 0004+00 s=1 e=0 z=0  None .text      setBaseMtx__14daTagSetBall_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSetBall_c::setBaseMtx() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/setBaseMtx__14daTagSetBall_cFv.s"
+void daTagSetBall_c::setBaseMtx() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D6021C-80D6024C 0030+00 s=1 e=0 z=0  None .text      Create__14daTagSetBall_cFv                                   */
@@ -101,25 +96,15 @@ asm void daTagSetBall_c::create() {
 
 
 /* 80D602B4-80D602BC 0008+00 s=1 e=0 z=0  None .text      execute__14daTagSetBall_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSetBall_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/execute__14daTagSetBall_cFv.s"
+bool daTagSetBall_c::execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D602BC-80D602C4 0008+00 s=1 e=0 z=0  None .text      _delete__14daTagSetBall_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSetBall_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setBall/d_a_tag_setBall/_delete__14daTagSetBall_cFv.s"
+bool daTagSetBall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D602C4-80D602E4 0020+00 s=1 e=0 z=0  None .text      daTagSetBall_Execute__FP14daTagSetBall_c                     */

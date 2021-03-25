@@ -240,7 +240,7 @@ static void daNpcPasser_Create(void*); // 2
 static void daNpcPasser_Delete(void*); // 2
 static void daNpcPasser_Execute(void*); // 2
 static void daNpcPasser_Draw(void*); // 2
-static void daNpcPasser_IsDelete(void*); // 2
+static bool daNpcPasser_IsDelete(void*); // 2
 static void cLib_getRndValue__template0(f32, f32); // 2
 static void cLib_getRndValue__template1(int, int); // 2
 
@@ -301,7 +301,7 @@ extern "C" static void daNpcPasser_Create__FPv(); // 1
 extern "C" static void daNpcPasser_Delete__FPv(); // 1
 extern "C" static void daNpcPasser_Execute__FPv(); // 1
 extern "C" static void daNpcPasser_Draw__FPv(); // 1
-extern "C" static void daNpcPasser_IsDelete__FPv(); // 1
+extern "C" static bool daNpcPasser_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80AA59BC(); // 1
 extern "C" static void func_80AA59F8(); // 1
@@ -2190,14 +2190,9 @@ asm static void daNpcPasser_Draw(void* param_0) {
 
 
 /* 80AA596C-80AA5974 0008+00 s=1 e=0 z=0  None .text      daNpcPasser_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcPasser_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_passer/d_a_npc_passer/daNpcPasser_IsDelete__FPv.s"
+static bool daNpcPasser_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AA5974-80AA59BC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

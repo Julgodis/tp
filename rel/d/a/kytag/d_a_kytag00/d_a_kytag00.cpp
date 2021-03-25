@@ -39,7 +39,7 @@ static void wether_tag_efect_reset(kytag00_class*); // 2
 static void wether_tag_efect_move(kytag00_class*); // 2
 static void daKytag00_Draw(kytag00_class*); // 2
 static void daKytag00_Execute(kytag00_class*); // 2
-static void daKytag00_IsDelete(kytag00_class*); // 2
+static bool daKytag00_IsDelete(kytag00_class*); // 2
 static void daKytag00_Delete(kytag00_class*); // 2
 static void daKytag00_Create(fopAc_ac_c*); // 2
 
@@ -52,7 +52,7 @@ extern "C" static void wether_tag_efect_reset__FP13kytag00_class(); // 1
 extern "C" static void wether_tag_efect_move__FP13kytag00_class(); // 1
 extern "C" static void daKytag00_Draw__FP13kytag00_class(); // 1
 extern "C" static void daKytag00_Execute__FP13kytag00_class(); // 1
-extern "C" static void daKytag00_IsDelete__FP13kytag00_class(); // 1
+extern "C" static bool daKytag00_IsDelete__FP13kytag00_class(); // 1
 extern "C" static void daKytag00_Delete__FP13kytag00_class(); // 1
 extern "C" static void daKytag00_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u8 const lit_3801[8];
@@ -290,14 +290,9 @@ asm static void daKytag00_Execute(kytag00_class* param_0) {
 
 
 /* 8046C76C-8046C774 0008+00 s=1 e=0 z=0  None .text      daKytag00_IsDelete__FP13kytag00_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag00_IsDelete(kytag00_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag00/d_a_kytag00/daKytag00_IsDelete__FP13kytag00_class.s"
+static bool daKytag00_IsDelete(kytag00_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046C774-8046C7BC 0048+00 s=1 e=0 z=0  None .text      daKytag00_Delete__FP13kytag00_class                          */

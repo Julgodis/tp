@@ -26,19 +26,19 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daEcont_Draw(econt_class*); // 2
+static bool daEcont_Draw(econt_class*); // 2
 static void s_rd_sub(void*, void*); // 2
 static void rider_game(econt_class*); // 2
 static void daEcont_Execute(econt_class*); // 2
-static void daEcont_IsDelete(econt_class*); // 2
+static bool daEcont_IsDelete(econt_class*); // 2
 static void daEcont_Delete(econt_class*); // 2
 static void daEcont_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daEcont_Draw__FP11econt_class(); // 1
+extern "C" static bool daEcont_Draw__FP11econt_class(); // 1
 extern "C" static void s_rd_sub__FPvPv(); // 1
 extern "C" static void rider_game__FP11econt_class(); // 1
 extern "C" static void daEcont_Execute__FP11econt_class(); // 1
-extern "C" static void daEcont_IsDelete__FP11econt_class(); // 1
+extern "C" static bool daEcont_IsDelete__FP11econt_class(); // 1
 extern "C" static void daEcont_Delete__FP11econt_class(); // 1
 extern "C" static void daEcont_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3871;
@@ -76,14 +76,9 @@ extern "C" extern u8 data_805197E0[4];
 // 
 
 /* 80519518-80519520 0008+00 s=1 e=0 z=0  None .text      daEcont_Draw__FP11econt_class                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daEcont_Draw(econt_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Draw__FP11econt_class.s"
+static bool daEcont_Draw(econt_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80519520-80519578 0058+00 s=1 e=0 z=0  None .text      s_rd_sub__FPvPv                                              */
@@ -120,14 +115,9 @@ asm static void daEcont_Execute(econt_class* param_0) {
 
 
 /* 805196B4-805196BC 0008+00 s=1 e=0 z=0  None .text      daEcont_IsDelete__FP11econt_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daEcont_IsDelete(econt_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_IsDelete__FP11econt_class.s"
+static bool daEcont_IsDelete(econt_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805196BC-805196E4 0028+00 s=1 e=0 z=0  None .text      daEcont_Delete__FP11econt_class                              */

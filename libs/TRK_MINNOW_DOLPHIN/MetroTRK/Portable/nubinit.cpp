@@ -24,10 +24,10 @@ SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
 extern "C" void TRKInitializeEventQueue(); // 1
 extern "C" void TRKInitializeMessageBuffers(); // 1
-extern "C" void TRKTerminateSerialHandler(); // 1
+extern "C" bool TRKTerminateSerialHandler(); // 1
 extern "C" void TRKInitializeSerialHandler(); // 1
 extern "C" void usr_put_initialize(); // 1
-extern "C" void TRKInitializeDispatcher(); // 1
+extern "C" bool TRKInitializeDispatcher(); // 1
 extern "C" void TRKTargetSetInputPendingPtr(); // 1
 extern "C" void TRKInitializeTarget(); // 1
 extern "C" void InitializeProgramEndTrap(); // 1

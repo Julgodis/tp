@@ -84,19 +84,19 @@ struct Z2CreatureEnemy {
 	/* 802C1B90 */ void setEnemyName(char const*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -262,7 +262,7 @@ static void damage_check(e_kr_class*); // 2
 static void ground_angle_set(e_kr_class*); // 2
 static void action(e_kr_class*); // 2
 static void daE_Kr_Execute(e_kr_class*); // 2
-static void daE_Kr_IsDelete(e_kr_class*); // 2
+static bool daE_Kr_IsDelete(e_kr_class*); // 2
 static void daE_Kr_Delete(e_kr_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Kr_Create(fopAc_ac_c*); // 2
@@ -292,7 +292,7 @@ extern "C" static void damage_check__FP10e_kr_class(); // 1
 extern "C" static void ground_angle_set__FP10e_kr_class(); // 1
 extern "C" static void action__FP10e_kr_class(); // 1
 extern "C" static void daE_Kr_Execute__FP10e_kr_class(); // 1
-extern "C" static void daE_Kr_IsDelete__FP10e_kr_class(); // 1
+extern "C" static bool daE_Kr_IsDelete__FP10e_kr_class(); // 1
 extern "C" static void daE_Kr_Delete__FP10e_kr_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Kr_Create__FP10fopAc_ac_c(); // 1
@@ -1218,14 +1218,9 @@ asm static void daE_Kr_Execute(e_kr_class* param_0) {
 
 
 /* 80704B5C-80704B64 0008+00 s=1 e=0 z=0  None .text      daE_Kr_IsDelete__FP10e_kr_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Kr_IsDelete(e_kr_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_kr/d_a_e_kr/daE_Kr_IsDelete__FP10e_kr_class.s"
+static bool daE_Kr_IsDelete(e_kr_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80704B64-80704BB4 0050+00 s=1 e=0 z=0  None .text      daE_Kr_Delete__FP10e_kr_class                                */
@@ -1382,14 +1377,9 @@ asm e_kr_class::e_kr_class() {
 
 
 /* 80705220-80705224 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_kr/d_a_e_kr/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80705224-8070526C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

@@ -24,8 +24,8 @@ struct daBdoorL5_c {
 	/* 80670C54 */ void getBmd();
 	/* 80670C64 */ void getDzb();
 	/* 80670C74 */ void getAnmArcName();
-	/* 80670C84 */ void getOpenAnm();
-	/* 80670C8C */ void getCloseAnm();
+	/* 80670C84 */ s32 getOpenAnm();
+	/* 80670C8C */ s32 getCloseAnm();
 	/* 80670C94 */ void getDoorModelData();
 	/* 80670D10 */ void CreateHeap();
 	/* 80670F08 */ void calcMtx();
@@ -35,7 +35,7 @@ struct daBdoorL5_c {
 	/* 80671324 */ void demoProc();
 	/* 806715D0 */ void openInit();
 	/* 80671670 */ void openProc();
-	/* 80671718 */ void openEnd();
+	/* 80671718 */ bool openEnd();
 	/* 80671720 */ void closeInit();
 	/* 806717FC */ void closeProc();
 	/* 80671820 */ void closeEnd();
@@ -46,7 +46,7 @@ struct daBdoorL5_c {
 	/* 80671C14 */ void checkArea();
 	/* 80671D44 */ void checkFront();
 	/* 80671DE4 */ void checkOpen();
-	/* 80671E70 */ void actionWait();
+	/* 80671E70 */ bool actionWait();
 	/* 80671E78 */ void actionCloseWait();
 	/* 80671F58 */ void actionOpen();
 	/* 80672004 */ void actionEnd();
@@ -81,10 +81,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -139,11 +139,11 @@ struct dEvent_manager_c {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -223,8 +223,8 @@ extern "C" void getAlwaysArcName__11daBdoorL5_cFv(); // 1
 extern "C" void getBmd__11daBdoorL5_cFv(); // 1
 extern "C" void getDzb__11daBdoorL5_cFv(); // 1
 extern "C" void getAnmArcName__11daBdoorL5_cFv(); // 1
-extern "C" void getOpenAnm__11daBdoorL5_cFv(); // 1
-extern "C" void getCloseAnm__11daBdoorL5_cFv(); // 1
+extern "C" s32 getOpenAnm__11daBdoorL5_cFv(); // 1
+extern "C" s32 getCloseAnm__11daBdoorL5_cFv(); // 1
 extern "C" void getDoorModelData__11daBdoorL5_cFv(); // 1
 extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__11daBdoorL5_cFv(); // 1
@@ -238,7 +238,7 @@ extern "C" void getDemoAction__11daBdoorL5_cFv(); // 1
 extern "C" void demoProc__11daBdoorL5_cFv(); // 1
 extern "C" void openInit__11daBdoorL5_cFv(); // 1
 extern "C" void openProc__11daBdoorL5_cFv(); // 1
-extern "C" void openEnd__11daBdoorL5_cFv(); // 1
+extern "C" bool openEnd__11daBdoorL5_cFv(); // 1
 extern "C" void closeInit__11daBdoorL5_cFv(); // 1
 extern "C" void closeProc__11daBdoorL5_cFv(); // 1
 extern "C" void closeEnd__11daBdoorL5_cFv(); // 1
@@ -249,7 +249,7 @@ extern "C" void createKey__11daBdoorL5_cFv(); // 1
 extern "C" void checkArea__11daBdoorL5_cFv(); // 1
 extern "C" void checkFront__11daBdoorL5_cFv(); // 1
 extern "C" void checkOpen__11daBdoorL5_cFv(); // 1
-extern "C" void actionWait__11daBdoorL5_cFv(); // 1
+extern "C" bool actionWait__11daBdoorL5_cFv(); // 1
 extern "C" void actionCloseWait__11daBdoorL5_cFv(); // 1
 extern "C" void actionOpen__11daBdoorL5_cFv(); // 1
 extern "C" void actionEnd__11daBdoorL5_cFv(); // 1
@@ -507,25 +507,15 @@ asm void daBdoorL5_c::getAnmArcName() {
 
 
 /* 80670C84-80670C8C 0008+00 s=2 e=0 z=0  None .text      getOpenAnm__11daBdoorL5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL5_c::getOpenAnm() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossL5/d_a_door_bossL5/getOpenAnm__11daBdoorL5_cFv.s"
+s32 daBdoorL5_c::getOpenAnm() {
+	return 5;
 }
-#pragma pop
 
 
 /* 80670C8C-80670C94 0008+00 s=1 e=0 z=0  None .text      getCloseAnm__11daBdoorL5_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL5_c::getCloseAnm() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossL5/d_a_door_bossL5/getCloseAnm__11daBdoorL5_cFv.s"
+s32 daBdoorL5_c::getCloseAnm() {
+	return 4;
 }
-#pragma pop
 
 
 /* 80670C94-80670CF0 005C+00 s=1 e=0 z=0  None .text      getDoorModelData__11daBdoorL5_cFv                            */
@@ -875,14 +865,9 @@ asm void daBdoorL5_c::openProc() {
 
 
 /* 80671718-80671720 0008+00 s=1 e=0 z=0  None .text      openEnd__11daBdoorL5_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL5_c::openEnd() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossL5/d_a_door_bossL5/openEnd__11daBdoorL5_cFv.s"
+bool daBdoorL5_c::openEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80671720-806717FC 00DC+00 s=1 e=0 z=0  None .text      closeInit__11daBdoorL5_cFv                                   */
@@ -996,14 +981,9 @@ asm void daBdoorL5_c::checkOpen() {
 
 
 /* 80671E70-80671E78 0008+00 s=1 e=0 z=0  None .text      actionWait__11daBdoorL5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL5_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossL5/d_a_door_bossL5/actionWait__11daBdoorL5_cFv.s"
+bool daBdoorL5_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 80671E78-80671F58 00E0+00 s=1 e=0 z=0  None .text      actionCloseWait__11daBdoorL5_cFv                             */

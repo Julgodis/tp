@@ -38,19 +38,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -105,7 +105,7 @@ static void daL7lowDr_Execute(daL7lowDr_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daL7lowDr_Create(daL7lowDr_c*); // 2
 static void daL7lowDr_Draw(daL7lowDr_c*); // 2
-static void daL7lowDr_IsDelete(daL7lowDr_c*); // 2
+static bool daL7lowDr_IsDelete(daL7lowDr_c*); // 2
 
 extern "C" void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v(); // 1
 extern "C" void action__11daL7lowDr_cFv(); // 1
@@ -121,7 +121,7 @@ extern "C" void create__11daL7lowDr_cFv(); // 1
 extern "C" static void daL7lowDr_Create__FP11daL7lowDr_c(); // 1
 extern "C" void draw__11daL7lowDr_cFv(); // 1
 extern "C" static void daL7lowDr_Draw__FP11daL7lowDr_c(); // 1
-extern "C" static void daL7lowDr_IsDelete__FP11daL7lowDr_c(); // 1
+extern "C" static bool daL7lowDr_IsDelete__FP11daL7lowDr_c(); // 1
 extern "C" extern u32 const lit_3779;
 extern "C" extern u32 const lit_3780;
 extern "C" extern u32 const lit_3781;
@@ -407,14 +407,9 @@ asm static void daL7lowDr_Draw(daL7lowDr_c* param_0) {
 
 
 /* 805AAF64-805AAF6C 0008+00 s=1 e=0 z=0  None .text      daL7lowDr_IsDelete__FP11daL7lowDr_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daL7lowDr_IsDelete(daL7lowDr_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_L7low_dr/d_a_L7low_dr/daL7lowDr_IsDelete__FP11daL7lowDr_c.s"
+static bool daL7lowDr_IsDelete(daL7lowDr_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

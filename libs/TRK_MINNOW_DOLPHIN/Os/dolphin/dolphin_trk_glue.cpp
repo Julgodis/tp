@@ -48,24 +48,24 @@ extern "C" void DCFlushRange(); // 1
 extern "C" void ICInvalidateRange(); // 1
 extern "C" void OSEnableScheduler(); // 1
 extern "C" void TRKInterruptHandler(); // 1
-extern "C" void udp_cc_post_stop(); // 1
-extern "C" void udp_cc_pre_continue(); // 1
-extern "C" void udp_cc_peek(); // 1
-extern "C" void udp_cc_write(); // 1
-extern "C" void udp_cc_read(); // 1
-extern "C" void udp_cc_close(); // 1
-extern "C" void udp_cc_open(); // 1
-extern "C" void udp_cc_shutdown(); // 1
-extern "C" void udp_cc_initialize(); // 1
+extern "C" s32 udp_cc_post_stop(); // 1
+extern "C" s32 udp_cc_pre_continue(); // 1
+extern "C" bool udp_cc_peek(); // 1
+extern "C" bool udp_cc_write(); // 1
+extern "C" bool udp_cc_read(); // 1
+extern "C" s32 udp_cc_close(); // 1
+extern "C" s32 udp_cc_open(); // 1
+extern "C" s32 udp_cc_shutdown(); // 1
+extern "C" s32 udp_cc_initialize(); // 1
 extern "C" void ddh_cc_initinterrupts(); // 1
 extern "C" void ddh_cc_peek(); // 1
 extern "C" void ddh_cc_post_stop(); // 1
 extern "C" void ddh_cc_pre_continue(); // 1
 extern "C" void ddh_cc_write(); // 1
 extern "C" void ddh_cc_read(); // 1
-extern "C" void ddh_cc_close(); // 1
+extern "C" bool ddh_cc_close(); // 1
 extern "C" void ddh_cc_open(); // 1
-extern "C" void ddh_cc_shutdown(); // 1
+extern "C" bool ddh_cc_shutdown(); // 1
 extern "C" void ddh_cc_initialize(); // 1
 extern "C" void gdev_cc_initinterrupts(); // 1
 extern "C" void gdev_cc_peek(); // 1
@@ -73,12 +73,12 @@ extern "C" void gdev_cc_post_stop(); // 1
 extern "C" void gdev_cc_pre_continue(); // 1
 extern "C" void gdev_cc_write(); // 1
 extern "C" void gdev_cc_read(); // 1
-extern "C" void gdev_cc_close(); // 1
+extern "C" bool gdev_cc_close(); // 1
 extern "C" void gdev_cc_open(); // 1
-extern "C" void gdev_cc_shutdown(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
 extern "C" void gdev_cc_initialize(); // 1
-extern "C" void AMC_IsStub(); // 1
-extern "C" void Hu_IsStub(); // 1
+extern "C" bool AMC_IsStub(); // 1
+extern "C" bool Hu_IsStub(); // 1
 
 // 
 // Declarations:
@@ -96,14 +96,9 @@ extern "C" asm static void TRKLoadContext() {
 
 
 /* 80371C7C-80371C80 0004+00 s=0 e=1 z=0  None .text      TRKUARTInterruptHandler                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void TRKUARTInterruptHandler() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue/TRKUARTInterruptHandler.s"
+extern "C" void TRKUARTInterruptHandler() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

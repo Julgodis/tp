@@ -13,8 +13,8 @@
 
 struct daItemBase_c {
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
-	/* 80144754 */ void __CreateHeap();
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
 	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
@@ -38,10 +38,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
 struct mDoExt_bpkAnm {
@@ -73,10 +73,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -127,8 +127,8 @@ struct J3DFrameCtrl {
 
 
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
-extern "C" void __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
 extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
@@ -210,25 +210,15 @@ asm void daItemBase_c::DeleteBase(char const* param_0) {
 
 
 /* 8014474C-80144754 0008+00 s=1 e=1 z=9  None .text      clothCreate__12daItemBase_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItemBase_c::clothCreate() {
-	nofralloc
-#include "asm/d/a/d_a_itembase/clothCreate__12daItemBase_cFv.s"
+bool daItemBase_c::clothCreate() {
+	return true;
 }
-#pragma pop
 
 
 /* 80144754-8014475C 0008+00 s=1 e=1 z=3  None .text      __CreateHeap__12daItemBase_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItemBase_c::__CreateHeap() {
-	nofralloc
-#include "asm/d/a/d_a_itembase/__CreateHeap__12daItemBase_cFv.s"
+bool daItemBase_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -74,9 +74,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -98,7 +98,7 @@ static void daObj_Sekizo_Create(void*); // 2
 static void daObj_Sekizo_Delete(void*); // 2
 static void daObj_Sekizo_Execute(void*); // 2
 static void daObj_Sekizo_Draw(void*); // 2
-static void daObj_Sekizo_IsDelete(void*); // 2
+static bool daObj_Sekizo_IsDelete(void*); // 2
 
 extern "C" void create__14daObj_Sekizo_cFv(); // 1
 extern "C" void CreateHeap__14daObj_Sekizo_cFv(); // 1
@@ -112,7 +112,7 @@ extern "C" static void daObj_Sekizo_Create__FPv(); // 1
 extern "C" static void daObj_Sekizo_Delete__FPv(); // 1
 extern "C" static void daObj_Sekizo_Execute__FPv(); // 1
 extern "C" static void daObj_Sekizo_Draw__FPv(); // 1
-extern "C" static void daObj_Sekizo_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Sekizo_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_obj_sekizo_cpp(); // 1
 extern "C" void __dt__20daObj_Sekizo_Param_cFv(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
@@ -144,9 +144,9 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -379,14 +379,9 @@ asm static void daObj_Sekizo_Draw(void* param_0) {
 
 
 /* 80CCE0D0-80CCE0D8 0008+00 s=1 e=0 z=0  None .text      daObj_Sekizo_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Sekizo_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_IsDelete__FPv.s"
+static bool daObj_Sekizo_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

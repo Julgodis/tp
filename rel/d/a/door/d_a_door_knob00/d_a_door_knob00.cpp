@@ -57,7 +57,7 @@ struct daKnob20_c {
 	/* 8046012C */ void actionTalkWait();
 	/* 804601D4 */ void actionTalkOpen();
 	/* 8046027C */ void actionInit();
-	/* 804602D8 */ void actionDead();
+	/* 804602D8 */ bool actionDead();
 	/* 804602E0 */ void execute();
 	/* 8046045C */ void draw();
 	/* 80460550 */ void Delete();
@@ -77,10 +77,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -234,7 +234,7 @@ extern "C" void actionTalk__10daKnob20_cFv(); // 1
 extern "C" void actionTalkWait__10daKnob20_cFv(); // 1
 extern "C" void actionTalkOpen__10daKnob20_cFv(); // 1
 extern "C" void actionInit__10daKnob20_cFv(); // 1
-extern "C" void actionDead__10daKnob20_cFv(); // 1
+extern "C" bool actionDead__10daKnob20_cFv(); // 1
 extern "C" void execute__10daKnob20_cFv(); // 1
 extern "C" void draw__10daKnob20_cFv(); // 1
 extern "C" void Delete__10daKnob20_cFv(); // 1
@@ -1138,14 +1138,9 @@ asm void daKnob20_c::actionInit() {
 
 
 /* 804602D8-804602E0 0008+00 s=1 e=0 z=0  None .text      actionDead__10daKnob20_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daKnob20_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_knob00/d_a_door_knob00/actionDead__10daKnob20_cFv.s"
+bool daKnob20_c::actionDead() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

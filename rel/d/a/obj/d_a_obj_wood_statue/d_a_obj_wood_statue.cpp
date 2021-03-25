@@ -36,7 +36,7 @@ struct daObjWStatue_c {
 	/* 80D3A268 */ void initBaseMtx();
 	/* 80D3A2A4 */ void setBaseMtx();
 	/* 80D3A2F0 */ void Create();
-	/* 80D3A474 */ void __CreateHeap();
+	/* 80D3A474 */ bool __CreateHeap();
 	/* 80D3A47C */ void create();
 	/* 80D3A8E8 */ void bg_check();
 	/* 80D3AA3C */ void actionWaitInit();
@@ -130,7 +130,7 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
+	/* 8014474C */ bool clothCreate();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144CC4 */ void settingBeforeDraw();
@@ -249,7 +249,7 @@ extern "C" static void s_sh_sub__FPvPv(); // 1
 extern "C" void initBaseMtx__14daObjWStatue_cFv(); // 1
 extern "C" void setBaseMtx__14daObjWStatue_cFv(); // 1
 extern "C" void Create__14daObjWStatue_cFv(); // 1
-extern "C" void __CreateHeap__14daObjWStatue_cFv(); // 1
+extern "C" bool __CreateHeap__14daObjWStatue_cFv(); // 1
 extern "C" void create__14daObjWStatue_cFv(); // 1
 extern "C" void __dt__19dPa_followEcallBackFv(); // 1
 extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
@@ -370,7 +370,7 @@ extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
 extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
@@ -798,14 +798,9 @@ asm void daObjWStatue_c::Create() {
 
 
 /* 80D3A474-80D3A47C 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__14daObjWStatue_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWStatue_c::__CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/__CreateHeap__14daObjWStatue_cFv.s"
+bool daObjWStatue_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3A47C-80D3A66C 01F0+00 s=1 e=0 z=0  None .text      create__14daObjWStatue_cFv                                   */
@@ -831,14 +826,9 @@ asm dPa_followEcallBack::~dPa_followEcallBack() {
 
 
 /* 80D3A6F0-80D3A6F4 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dPa_levelEcallBack::cleanup() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/cleanup__18dPa_levelEcallBackFv.s"
+void dPa_levelEcallBack::cleanup() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3A6F4-80D3A71C 0028+00 s=1 e=0 z=0  None .text      __defctor__19dPa_followEcallBackFv                           */
@@ -1073,14 +1063,9 @@ asm void daObjWStatue_c::draw() {
 
 
 /* 80D3B47C-80D3B480 0004+00 s=1 e=0 z=0  None .text      setListStart__14daObjWStatue_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWStatue_c::setListStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/setListStart__14daObjWStatue_cFv.s"
+void daObjWStatue_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B480-80D3B4B8 0038+00 s=1 e=0 z=0  None .text      _delete__14daObjWStatue_cFv                                  */
@@ -1161,47 +1146,27 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 
 
 /* 80D3B5F4-80D3B5F8 0004+00 s=1 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/execute__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B5F8-80D3B5FC 0004+00 s=1 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B5FC-80D3B600 0004+00 s=1 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/draw__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B600-80D3B604 0004+00 s=1 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_wood_statue/d_a_obj_wood_statue/drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter.s"
+void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D3B604-80D3B620 001C+00 s=2 e=0 z=0  None .text      cLib_calcTimer<Uc>__FPUc                                     */

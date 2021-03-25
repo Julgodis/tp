@@ -18,7 +18,7 @@ struct daTagSpring_c {
 	/* 805A6AF4 */ void create();
 	/* 805A6B5C */ void execute();
 	/* 805A6C84 */ void checkArea();
-	/* 805A6DFC */ void _delete();
+	/* 805A6DFC */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -50,7 +50,7 @@ extern "C" void Create__13daTagSpring_cFv(); // 1
 extern "C" void create__13daTagSpring_cFv(); // 1
 extern "C" void execute__13daTagSpring_cFv(); // 1
 extern "C" void checkArea__13daTagSpring_cFv(); // 1
-extern "C" void _delete__13daTagSpring_cFv(); // 1
+extern "C" bool _delete__13daTagSpring_cFv(); // 1
 extern "C" static void daTagSpring_Execute__FP13daTagSpring_c(); // 1
 extern "C" static void daTagSpring_Delete__FP13daTagSpring_c(); // 1
 extern "C" static void daTagSpring_Create__FP13daTagSpring_c(); // 1
@@ -168,14 +168,9 @@ asm void daTagSpring_c::checkArea() {
 
 
 /* 805A6DFC-805A6E04 0008+00 s=1 e=0 z=0  None .text      _delete__13daTagSpring_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSpring_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/_delete__13daTagSpring_cFv.s"
+bool daTagSpring_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A6E04-805A6E24 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Execute__FP13daTagSpring_c                       */

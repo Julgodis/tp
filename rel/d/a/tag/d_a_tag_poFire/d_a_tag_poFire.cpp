@@ -24,8 +24,8 @@ struct daTagPoFire_c {
 	/* 80D5DB38 */ void setBaseMtx();
 	/* 80D5DB90 */ void create();
 	/* 80D5DBF0 */ void Execute();
-	/* 80D5DC20 */ void Draw();
-	/* 80D5DC28 */ void Delete();
+	/* 80D5DC20 */ bool Draw();
+	/* 80D5DC28 */ bool Delete();
 };
 
 struct fopAc_ac_c {
@@ -46,8 +46,8 @@ extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
 extern "C" void setBaseMtx__13daTagPoFire_cFv(); // 1
 extern "C" void create__13daTagPoFire_cFv(); // 1
 extern "C" void Execute__13daTagPoFire_cFv(); // 1
-extern "C" void Draw__13daTagPoFire_cFv(); // 1
-extern "C" void Delete__13daTagPoFire_cFv(); // 1
+extern "C" bool Draw__13daTagPoFire_cFv(); // 1
+extern "C" bool Delete__13daTagPoFire_cFv(); // 1
 extern "C" static void daTagPoFire_Draw__FP13daTagPoFire_c(); // 1
 extern "C" static void daTagPoFire_Execute__FP13daTagPoFire_c(); // 1
 extern "C" static void daTagPoFire_Delete__FP13daTagPoFire_c(); // 1
@@ -177,25 +177,15 @@ asm void daTagPoFire_c::Execute() {
 
 
 /* 80D5DC20-80D5DC28 0008+00 s=1 e=0 z=0  None .text      Draw__13daTagPoFire_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagPoFire_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/Draw__13daTagPoFire_cFv.s"
+bool daTagPoFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5DC28-80D5DC30 0008+00 s=1 e=0 z=0  None .text      Delete__13daTagPoFire_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagPoFire_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_poFire/d_a_tag_poFire/Delete__13daTagPoFire_cFv.s"
+bool daTagPoFire_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5DC30-80D5DC50 0020+00 s=1 e=0 z=0  None .text      daTagPoFire_Draw__FP13daTagPoFire_c                          */

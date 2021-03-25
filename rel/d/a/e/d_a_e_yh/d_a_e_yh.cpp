@@ -39,6 +39,9 @@ struct dBgS_AcchCir {
 	/* 80803A4C */ ~dBgS_AcchCir();
 };
 
+struct dCcD_SrcSph {
+};
+
 struct Vec {
 };
 
@@ -48,9 +51,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80803CFC */ cXyz();
 	/* 8080422C */ ~cXyz();
-};
-
-struct dCcD_SrcSph {
 };
 
 struct dCcD_Sph {
@@ -126,16 +126,16 @@ struct mDoExt_McaMorf {
 	/* 800105C8 */ void play(Vec*, u32, s8);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -150,10 +150,10 @@ struct mDoExt_McaMorfSO {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -332,7 +332,7 @@ static void action(e_yh_class*); // 2
 static void eff_set(e_yh_class*); // 2
 static void anm_se_set(e_yh_class*); // 2
 static void daE_YH_Execute(e_yh_class*); // 2
-static void daE_YH_IsDelete(e_yh_class*); // 2
+static bool daE_YH_IsDelete(e_yh_class*); // 2
 static void daE_YH_Delete(e_yh_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YH_Create(fopAc_ac_c*); // 2
@@ -366,7 +366,7 @@ extern "C" static void action__FP10e_yh_class(); // 1
 extern "C" static void eff_set__FP10e_yh_class(); // 1
 extern "C" static void anm_se_set__FP10e_yh_class(); // 1
 extern "C" static void daE_YH_Execute__FP10e_yh_class(); // 1
-extern "C" static void daE_YH_IsDelete__FP10e_yh_class(); // 1
+extern "C" static bool daE_YH_IsDelete__FP10e_yh_class(); // 1
 extern "C" static void daE_YH_Delete__FP10e_yh_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1512,14 +1512,9 @@ asm static void daE_YH_Execute(e_yh_class* param_0) {
 
 
 /* 80803178-80803180 0008+00 s=1 e=0 z=0  None .text      daE_YH_IsDelete__FP10e_yh_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YH_IsDelete(e_yh_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yh/d_a_e_yh/daE_YH_IsDelete__FP10e_yh_class.s"
+static bool daE_YH_IsDelete(e_yh_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80803180-808031E8 0068+00 s=1 e=0 z=0  None .text      daE_YH_Delete__FP10e_yh_class                                */
@@ -1644,25 +1639,15 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 80803CF8-80803CFC 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yh/d_a_e_yh/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80803CFC-80803D00 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yh/d_a_e_yh/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80803D00-80803D48 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

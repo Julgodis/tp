@@ -93,10 +93,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -677,14 +677,9 @@ asm void daZrTuraRc_c::init_modeDropEnd() {
 
 
 /* 80D4215C-80D42160 0004+00 s=1 e=0 z=0  None .text      modeDropEnd__12daZrTuraRc_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daZrTuraRc_c::modeDropEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zrTuraraRock/d_a_obj_zrTuraraRock/modeDropEnd__12daZrTuraRc_cFv.s"
+void daZrTuraRc_c::modeDropEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D42160-80D421C4 0064+00 s=1 e=0 z=0  None .text      Draw__12daZrTuraRc_cFv                                       */

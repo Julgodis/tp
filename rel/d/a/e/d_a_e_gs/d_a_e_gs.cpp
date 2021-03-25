@@ -27,10 +27,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModel {
+struct cXyz {
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
 struct mDoExt_invisibleModel {
@@ -38,19 +38,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -100,7 +100,7 @@ static void daE_GS_Draw(e_gs_class*); // 2
 static void e_gs_wait(e_gs_class*); // 2
 static void action(e_gs_class*); // 2
 static void daE_GS_Execute(e_gs_class*); // 2
-static void daE_GS_IsDelete(e_gs_class*); // 2
+static bool daE_GS_IsDelete(e_gs_class*); // 2
 static void daE_GS_Delete(e_gs_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_GS_Create(fopAc_ac_c*); // 2
@@ -111,7 +111,7 @@ extern "C" static void daE_GS_Draw__FP10e_gs_class(); // 1
 extern "C" static void e_gs_wait__FP10e_gs_class(); // 1
 extern "C" static void action__FP10e_gs_class(); // 1
 extern "C" static void daE_GS_Execute__FP10e_gs_class(); // 1
-extern "C" static void daE_GS_IsDelete__FP10e_gs_class(); // 1
+extern "C" static bool daE_GS_IsDelete__FP10e_gs_class(); // 1
 extern "C" static void daE_GS_Delete__FP10e_gs_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_GS_Create__FP10fopAc_ac_c(); // 1
@@ -363,14 +363,9 @@ asm static void daE_GS_Execute(e_gs_class* param_0) {
 
 
 /* 806DFA48-806DFA50 0008+00 s=1 e=0 z=0  None .text      daE_GS_IsDelete__FP10e_gs_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_GS_IsDelete(e_gs_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_IsDelete__FP10e_gs_class.s"
+static bool daE_GS_IsDelete(e_gs_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806DFA50-806DFAB8 0068+00 s=1 e=0 z=0  None .text      daE_GS_Delete__FP10e_gs_class                                */

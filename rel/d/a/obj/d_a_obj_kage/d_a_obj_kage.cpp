@@ -62,14 +62,14 @@ struct Z2SoundObjSimple {
 
 static void daObj_Kage_Draw(obj_kage_class*); // 2
 static void daObj_Kage_Execute(obj_kage_class*); // 2
-static void daObj_Kage_IsDelete(obj_kage_class*); // 2
+static bool daObj_Kage_IsDelete(obj_kage_class*); // 2
 static void daObj_Kage_Delete(obj_kage_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Kage_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daObj_Kage_Draw__FP14obj_kage_class(); // 1
 extern "C" static void daObj_Kage_Execute__FP14obj_kage_class(); // 1
-extern "C" static void daObj_Kage_IsDelete__FP14obj_kage_class(); // 1
+extern "C" static bool daObj_Kage_IsDelete__FP14obj_kage_class(); // 1
 extern "C" static void daObj_Kage_Delete__FP14obj_kage_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Kage_Create__FP10fopAc_ac_c(); // 1
@@ -173,14 +173,9 @@ asm static void daObj_Kage_Execute(obj_kage_class* param_0) {
 
 
 /* 80C31764-80C3176C 0008+00 s=1 e=0 z=0  None .text      daObj_Kage_IsDelete__FP14obj_kage_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Kage_IsDelete(obj_kage_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kage/d_a_obj_kage/daObj_Kage_IsDelete__FP14obj_kage_class.s"
+static bool daObj_Kage_IsDelete(obj_kage_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

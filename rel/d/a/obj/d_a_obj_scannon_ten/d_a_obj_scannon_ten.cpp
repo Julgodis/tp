@@ -73,10 +73,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -126,13 +126,13 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -882,14 +882,9 @@ asm void daObjSCannonTen_c::exeModeActionEvt() {
 
 
 /* 80CCBDCC-80CCBDD0 0004+00 s=1 e=0 z=0  None .text      exeModeEnd__17daObjSCannonTen_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSCannonTen_c::exeModeEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/exeModeEnd__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::exeModeEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCBDD0-80CCBE8C 00BC+00 s=1 e=0 z=0  None .text      demoExe__17daObjSCannonTen_cFv                               */
@@ -915,14 +910,9 @@ asm void daObjSCannonTen_c::demoModeInit(int param_0) {
 
 
 /* 80CCBF00-80CCBF04 0004+00 s=1 e=0 z=0  None .text      demoInitLinkIn__17daObjSCannonTen_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSCannonTen_c::demoInitLinkIn() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitLinkIn__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::demoInitLinkIn() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCBF04-80CCBFC4 00C0+00 s=1 e=0 z=0  None .text      demoExeLinkIn__17daObjSCannonTen_cFv                         */
@@ -959,14 +949,9 @@ asm void daObjSCannonTen_c::demoExeSet() {
 
 
 /* 80CCC114-80CCC118 0004+00 s=1 e=0 z=0  None .text      demoInitMove__17daObjSCannonTen_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSCannonTen_c::demoInitMove() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_ten/d_a_obj_scannon_ten/demoInitMove__17daObjSCannonTen_cFv.s"
+void daObjSCannonTen_c::demoInitMove() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCC118-80CCC20C 00F4+00 s=1 e=0 z=0  None .text      demoExeMove__17daObjSCannonTen_cFv                           */

@@ -101,10 +101,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -668,14 +668,9 @@ asm void daObjSwBallC_c::actionEvent() {
 
 
 /* 80CF63F0-80CF63F4 0004+00 s=1 e=0 z=0  None .text      actionDead__14daObjSwBallC_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSwBallC_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swBallC/d_a_obj_swBallC/actionDead__14daObjSwBallC_cFv.s"
+void daObjSwBallC_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CF63F4-80CF6818 0424+00 s=4 e=0 z=0  None .text      demoProc__14daObjSwBallC_cFv                                 */

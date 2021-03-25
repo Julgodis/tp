@@ -14,16 +14,16 @@
 struct JStage {
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
-		/* 80280E1C */ void JSGGetName() const;
+		/* 80280E1C */ bool JSGGetName() const;
 		/* 80280E24 */ void JSGUpdate();
-		/* 80280E28 */ void JSGGetFlag() const;
+		/* 80280E28 */ bool JSGGetFlag() const;
 		/* 80280E30 */ void JSGSetFlag(u32);
-		/* 80280E34 */ void JSGGetData(u32, void*, u32) const;
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
 		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
 		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
-		/* 80280E4C */ void JSGFindNodeID(char const*) const;
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
@@ -35,16 +35,16 @@ struct JStage {
 
 
 extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" void JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" void JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" void JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
 extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
 extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
 extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
 extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
 extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
 extern "C" extern void* __vt__Q26JStage7TObject[15 + 1 /* padding */];
 
@@ -94,113 +94,63 @@ asm JStage::TObject::~TObject() {
 
 
 /* 80280E1C-80280E24 0008+00 s=1 e=12 z=0  None .text      JSGGetName__Q26JStage7TObjectCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGGetName() const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGGetName__Q26JStage7TObjectCFv.s"
+bool JStage::TObject::JSGGetName() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80280E24-80280E28 0004+00 s=1 e=12 z=0  None .text      JSGUpdate__Q26JStage7TObjectFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGUpdate() {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGUpdate__Q26JStage7TObjectFv.s"
+void JStage::TObject::JSGUpdate() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E28-80280E30 0008+00 s=1 e=12 z=0  None .text      JSGGetFlag__Q26JStage7TObjectCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGGetFlag() const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGGetFlag__Q26JStage7TObjectCFv.s"
+bool JStage::TObject::JSGGetFlag() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80280E30-80280E34 0004+00 s=1 e=12 z=0  None .text      JSGSetFlag__Q26JStage7TObjectFUl                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGSetFlag(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGSetFlag__Q26JStage7TObjectFUl.s"
+void JStage::TObject::JSGSetFlag(u32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E34-80280E3C 0008+00 s=1 e=12 z=0  None .text      JSGGetData__Q26JStage7TObjectCFUlPvUl                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGGetData(u32 param_0, void* param_1, u32 param_2) const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGGetData__Q26JStage7TObjectCFUlPvUl.s"
+bool JStage::TObject::JSGGetData(u32 param_0, void* param_1, u32 param_2) const {
+	return false;
 }
-#pragma pop
 
 
 /* 80280E3C-80280E40 0004+00 s=1 e=11 z=0  None .text      JSGSetData__Q26JStage7TObjectFUlPCvUl                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGSetData(u32 param_0, void const* param_1, u32 param_2) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGSetData__Q26JStage7TObjectFUlPCvUl.s"
+void JStage::TObject::JSGSetData(u32 param_0, void const* param_1, u32 param_2) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E40-80280E44 0004+00 s=1 e=12 z=0  None .text      JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGGetParent(JStage::TObject** param_0, u32* param_1) const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl.s"
+void JStage::TObject::JSGGetParent(JStage::TObject** param_0, u32* param_1) const {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E44-80280E48 0004+00 s=1 e=12 z=0  None .text      JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGSetParent(JStage::TObject* param_0, u32 param_1) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl.s"
+void JStage::TObject::JSGSetParent(JStage::TObject* param_0, u32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E48-80280E4C 0004+00 s=1 e=12 z=0  None .text      JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGSetRelation(bool param_0, JStage::TObject* param_1, u32 param_2) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl.s"
+void JStage::TObject::JSGSetRelation(bool param_0, JStage::TObject* param_1, u32 param_2) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280E4C-80280E54 0008+00 s=1 e=11 z=0  None .text      JSGFindNodeID__Q26JStage7TObjectCFPCc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TObject::JSGFindNodeID(char const* param_0) const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGObject/JSGFindNodeID__Q26JStage7TObjectCFPCc.s"
+s32 JStage::TObject::JSGFindNodeID(char const* param_0) const {
+	return -1;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

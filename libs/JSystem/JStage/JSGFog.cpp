@@ -11,17 +11,17 @@
 // Types:
 // 
 
-struct _GXColor {
+struct _GXFogType {
 };
 
-struct _GXFogType {
+struct _GXColor {
 };
 
 struct JStage {
 	struct TFog {
 		/* 80280C80 */ ~TFog();
-		/* 80280CE0 */ void JSGFGetType() const;
-		/* 80280CE8 */ void JSGGetFogFunction() const;
+		/* 80280CE0 */ s32 JSGFGetType() const;
+		/* 80280CE8 */ bool JSGGetFogFunction() const;
 		/* 80280CF0 */ void JSGSetFogFunction(_GXFogType);
 		/* 80280CF4 */ void JSGGetStartZ() const;
 		/* 80280CFC */ void JSGSetStartZ(f32);
@@ -33,16 +33,16 @@ struct JStage {
 
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
-		/* 80280E1C */ void JSGGetName() const;
+		/* 80280E1C */ bool JSGGetName() const;
 		/* 80280E24 */ void JSGUpdate();
-		/* 80280E28 */ void JSGGetFlag() const;
+		/* 80280E28 */ bool JSGGetFlag() const;
 		/* 80280E30 */ void JSGSetFlag(u32);
-		/* 80280E34 */ void JSGGetData(u32, void*, u32) const;
+		/* 80280E34 */ bool JSGGetData(u32, void*, u32) const;
 		/* 80280E3C */ void JSGSetData(u32, void const*, u32);
 		/* 80280E40 */ void JSGGetParent(JStage::TObject**, u32*) const;
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
-		/* 80280E4C */ void JSGFindNodeID(char const*) const;
+		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
@@ -54,8 +54,8 @@ struct JStage {
 
 
 extern "C" void __dt__Q26JStage4TFogFv(); // 1
-extern "C" void JSGFGetType__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage4TFogCFv(); // 1
+extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
 extern "C" void JSGSetFogFunction__Q26JStage4TFogF10_GXFogType(); // 1
 extern "C" void JSGGetStartZ__Q26JStage4TFogCFv(); // 1
 extern "C" void JSGSetStartZ__Q26JStage4TFogFf(); // 1
@@ -72,16 +72,16 @@ extern "C" extern void* __vt__Q26JStage4TFog[23 + 1 /* padding */];
 void operator delete(void*); // 2
 
 extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" void JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" void JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
 extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" void JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
 extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
 extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
 extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
 extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
 extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" extern u32 __float_max;
@@ -132,36 +132,21 @@ asm JStage::TFog::~TFog() {
 
 
 /* 80280CE0-80280CE8 0008+00 s=1 e=1 z=0  None .text      JSGFGetType__Q26JStage4TFogCFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGFGetType() const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGFGetType__Q26JStage4TFogCFv.s"
+s32 JStage::TFog::JSGFGetType() const {
+	return 6;
 }
-#pragma pop
 
 
 /* 80280CE8-80280CF0 0008+00 s=1 e=1 z=0  None .text      JSGGetFogFunction__Q26JStage4TFogCFv                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGGetFogFunction() const {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGGetFogFunction__Q26JStage4TFogCFv.s"
+bool JStage::TFog::JSGGetFogFunction() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80280CF0-80280CF4 0004+00 s=1 e=0 z=0  None .text      JSGSetFogFunction__Q26JStage4TFogF10_GXFogType               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGSetFogFunction(_GXFogType param_0) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGSetFogFunction__Q26JStage4TFogF10_GXFogType.s"
+void JStage::TFog::JSGSetFogFunction(_GXFogType param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -182,14 +167,9 @@ asm void JStage::TFog::JSGGetStartZ() const {
 
 
 /* 80280CFC-80280D00 0004+00 s=1 e=0 z=0  None .text      JSGSetStartZ__Q26JStage4TFogFf                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGSetStartZ(f32 param_0) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGSetStartZ__Q26JStage4TFogFf.s"
+void JStage::TFog::JSGSetStartZ(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80280D00-80280D0C 000C+00 s=1 e=1 z=0  None .text      JSGGetEndZ__Q26JStage4TFogCFv                                */
@@ -204,14 +184,9 @@ asm void JStage::TFog::JSGGetEndZ() const {
 
 
 /* 80280D0C-80280D10 0004+00 s=1 e=0 z=0  None .text      JSGSetEndZ__Q26JStage4TFogFf                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGSetEndZ(f32 param_0) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGSetEndZ__Q26JStage4TFogFf.s"
+void JStage::TFog::JSGSetEndZ(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -230,13 +205,8 @@ asm void JStage::TFog::JSGGetColor() const {
 
 
 /* 80280D24-80280D28 0004+00 s=1 e=0 z=0  None .text      JSGSetColor__Q26JStage4TFogF8_GXColor                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStage::TFog::JSGSetColor(_GXColor param_0) {
-	nofralloc
-#include "asm/JSystem/JStage/JSGFog/JSGSetColor__Q26JStage4TFogF8_GXColor.s"
+void JStage::TFog::JSGSetColor(_GXColor param_0) {
+	/* empty function */
 }
-#pragma pop
 
 

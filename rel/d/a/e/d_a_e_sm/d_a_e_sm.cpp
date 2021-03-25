@@ -126,19 +126,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -290,7 +290,7 @@ static void way_bg_check(daE_SM_c*, f32, cXyz, s16); // 2
 static void other_bg_check(daE_SM_c*, fopAc_ac_c*); // 2
 static void pl_check(daE_SM_c*, f32); // 2
 static void move_check(daE_SM_c*, int*); // 2
-static void daE_SM_IsDelete(daE_SM_c*); // 2
+static bool daE_SM_IsDelete(daE_SM_c*); // 2
 static void daE_SM_Delete(daE_SM_c*); // 2
 static void daE_SM_Draw(daE_SM_c*); // 2
 static void daE_SM_Execute(daE_SM_c*); // 2
@@ -339,7 +339,7 @@ extern "C" void setSmBaseMtx__8daE_SM_cFv(); // 1
 extern "C" void setBaseMtx__8daE_SM_cFv(); // 1
 extern "C" void CoCoreSet__8daE_SM_cFv(); // 1
 extern "C" void CoSmSet__8daE_SM_cFv(); // 1
-extern "C" static void daE_SM_IsDelete__FP8daE_SM_c(); // 1
+extern "C" static bool daE_SM_IsDelete__FP8daE_SM_c(); // 1
 extern "C" static void daE_SM_Delete__FP8daE_SM_c(); // 1
 extern "C" static void daE_SM_Draw__FP8daE_SM_c(); // 1
 extern "C" static void daE_SM_Execute__FP8daE_SM_c(); // 1
@@ -1675,14 +1675,9 @@ asm void daE_SM_c::CoSmSet() {
 
 
 /* 807974E8-807974F0 0008+00 s=1 e=0 z=0  None .text      daE_SM_IsDelete__FP8daE_SM_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_SM_IsDelete(daE_SM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sm/d_a_e_sm/daE_SM_IsDelete__FP8daE_SM_c.s"
+static bool daE_SM_IsDelete(daE_SM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807974F0-80797510 0020+00 s=1 e=0 z=0  None .text      daE_SM_Delete__FP8daE_SM_c                                   */
@@ -1851,14 +1846,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 8079809C-807980A0 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sm/d_a_e_sm/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807980A0-807980E8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

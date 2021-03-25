@@ -26,10 +26,10 @@ struct dCcD_Sph {
 	/* 8064E76C */ dCcD_Sph();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_ZANT_c {
@@ -210,19 +210,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -282,10 +282,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -419,7 +419,7 @@ static void s_obj_sub(void*, void*); // 2
 static void s_pillar_sub(void*, void*); // 2
 static void s_del_tp(void*, void*); // 2
 static void daB_ZANT_Execute(daB_ZANT_c*); // 2
-static void daB_ZANT_IsDelete(daB_ZANT_c*); // 2
+static bool daB_ZANT_IsDelete(daB_ZANT_c*); // 2
 static void daB_ZANT_Delete(daB_ZANT_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_ZANT_Create(daB_ZANT_c*); // 2
@@ -504,7 +504,7 @@ extern "C" void cc_set__10daB_ZANT_cFv(); // 1
 extern "C" void cc_ice_set__10daB_ZANT_cFv(); // 1
 extern "C" void execute__10daB_ZANT_cFv(); // 1
 extern "C" static void daB_ZANT_Execute__FP10daB_ZANT_c(); // 1
-extern "C" static void daB_ZANT_IsDelete__FP10daB_ZANT_c(); // 1
+extern "C" static bool daB_ZANT_IsDelete__FP10daB_ZANT_c(); // 1
 extern "C" void _delete__10daB_ZANT_cFv(); // 1
 extern "C" static void daB_ZANT_Delete__FP10daB_ZANT_c(); // 1
 extern "C" void CreateHeap__10daB_ZANT_cFv(); // 1
@@ -3023,14 +3023,9 @@ asm static void daB_ZANT_Execute(daB_ZANT_c* param_0) {
 
 
 /* 8064DB68-8064DB70 0008+00 s=1 e=0 z=0  None .text      daB_ZANT_IsDelete__FP10daB_ZANT_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_ZANT_IsDelete(daB_ZANT_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant/d_a_b_zant/daB_ZANT_IsDelete__FP10daB_ZANT_c.s"
+static bool daB_ZANT_IsDelete(daB_ZANT_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8064DB70-8064DBE4 0074+00 s=1 e=0 z=0  None .text      _delete__10daB_ZANT_cFv                                      */

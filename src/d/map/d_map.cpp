@@ -24,7 +24,7 @@ struct dDrawPath_c {
 	struct group_class {
 	};
 
-	/* 8002ABF0 */ void isDrawType(int);
+	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
 	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
@@ -66,15 +66,15 @@ struct renderingAmap_c {
 	/* 80029058 */ void getIconGroupNumber(u8) const;
 	/* 80029078 */ void hasMap() const;
 	/* 800290C0 */ void isRendDoor() const;
-	/* 80029104 */ void isCheckFloor() const;
-	/* 8002910C */ void isRendRestart() const;
-	/* 80029114 */ void isRendCursor() const;
+	/* 80029104 */ bool isCheckFloor() const;
+	/* 8002910C */ bool isRendRestart() const;
+	/* 80029114 */ bool isRendCursor() const;
 	/* 8002911C */ void isRendAllRoom() const;
 	/* 80029160 */ void getStayType() const;
 	/* 80029190 */ void isDrawIconSingle2(dTres_c::data_s const*, bool, bool, int) const;
 	/* 8002ADB0 */ ~renderingAmap_c();
 	/* 8002AE6C */ renderingAmap_c();
-	/* 8002B000 */ void isRendIcon() const;
+	/* 8002B000 */ bool isRendIcon() const;
 };
 
 struct dMap_c {
@@ -82,7 +82,7 @@ struct dMap_c {
 	/* 80029038 */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 	/* 800296EC */ void isDrawType(int);
 	/* 800296F8 */ void isRendAllRoom() const;
-	/* 80029744 */ void isSpecialOutline();
+	/* 80029744 */ bool isSpecialOutline();
 	/* 8002974C */ void copyPalette();
 	/* 8002A064 */ void copyPalette(int, int, f32);
 	/* 80029F84 */ void setMapPaletteColorAlphaPer(int, f32);
@@ -159,7 +159,7 @@ struct renderingDAmap_c {
 	/* 80040134 */ void getFirstRoomPointer();
 	/* 800401E8 */ void getNextRoomPointer();
 	/* 800402C0 */ void isDrawPath();
-	/* 800402E0 */ void getFirstDrawLayerNo();
+	/* 800402E0 */ bool getFirstDrawLayerNo();
 	/* 800402E8 */ void getNextDrawLayerNo(int);
 	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
 	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
@@ -230,15 +230,15 @@ extern "C" void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c(); // 1
 extern "C" void getIconGroupNumber__15renderingAmap_cCFUc(); // 1
 extern "C" void hasMap__15renderingAmap_cCFv(); // 1
 extern "C" void isRendDoor__15renderingAmap_cCFv(); // 1
-extern "C" void isCheckFloor__15renderingAmap_cCFv(); // 1
-extern "C" void isRendRestart__15renderingAmap_cCFv(); // 1
-extern "C" void isRendCursor__15renderingAmap_cCFv(); // 1
+extern "C" bool isCheckFloor__15renderingAmap_cCFv(); // 1
+extern "C" bool isRendRestart__15renderingAmap_cCFv(); // 1
+extern "C" bool isRendCursor__15renderingAmap_cCFv(); // 1
 extern "C" void isRendAllRoom__15renderingAmap_cCFv(); // 1
 extern "C" void getStayType__15renderingAmap_cCFv(); // 1
 extern "C" void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi(); // 1
 extern "C" void isDrawType__6dMap_cFi(); // 1
 extern "C" void isRendAllRoom__6dMap_cCFv(); // 1
-extern "C" void isSpecialOutline__6dMap_cFv(); // 1
+extern "C" bool isSpecialOutline__6dMap_cFv(); // 1
 extern "C" void copyPalette__6dMap_cFv(); // 1
 extern "C" void setMapPaletteColorAlphaPer__6dMap_cFiif(); // 1
 extern "C" void resCopy__6dMap_cFv(); // 1
@@ -260,7 +260,7 @@ extern "C" void _draw__6dMap_cFv(); // 1
 extern "C" void getFirstData__6dMap_cFUc(); // 1
 extern "C" void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" void isDrawType__11dDrawPath_cFi(); // 1
+extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
 extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
 extern "C" void __dt__15dRenderingMap_cFv(); // 1
 extern "C" void __dt__28dDrawPathWithNormalPattern_cFv(); // 1
@@ -269,7 +269,7 @@ extern "C" void getLineColor__11dDrawPath_cFii(); // 1
 extern "C" void __dt__15renderingAmap_cFv(); // 1
 extern "C" void __ct__15renderingAmap_cFv(); // 1
 extern "C" void __dt__6dMap_cFv(); // 1
-extern "C" void isRendIcon__15renderingAmap_cCFv(); // 1
+extern "C" bool isRendIcon__15renderingAmap_cCFv(); // 1
 extern "C" void __dt__28renderingPlusDoorAndCursor_cFv(); // 1
 extern "C" void __dt__19renderingPlusDoor_cFv(); // 1
 extern "C" void __dt__16renderingDAmap_cFv(); // 1
@@ -325,7 +325,7 @@ extern "C" void getRoomNoSingle__16renderingDAmap_cFv(); // 1
 extern "C" void getFirstRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void getNextRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void isDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" void getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
+extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
 extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi(); // 1
 extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv(); // 1
 extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii(); // 1
@@ -751,36 +751,21 @@ asm void renderingAmap_c::isRendDoor() const {
 
 
 /* 80029104-8002910C 0008+00 s=2 e=0 z=0  None .text      isCheckFloor__15renderingAmap_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingAmap_c::isCheckFloor() const {
-	nofralloc
-#include "asm/d/map/d_map/isCheckFloor__15renderingAmap_cCFv.s"
+bool renderingAmap_c::isCheckFloor() const {
+	return true;
 }
-#pragma pop
 
 
 /* 8002910C-80029114 0008+00 s=2 e=0 z=0  None .text      isRendRestart__15renderingAmap_cCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingAmap_c::isRendRestart() const {
-	nofralloc
-#include "asm/d/map/d_map/isRendRestart__15renderingAmap_cCFv.s"
+bool renderingAmap_c::isRendRestart() const {
+	return true;
 }
-#pragma pop
 
 
 /* 80029114-8002911C 0008+00 s=2 e=0 z=0  None .text      isRendCursor__15renderingAmap_cCFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingAmap_c::isRendCursor() const {
-	nofralloc
-#include "asm/d/map/d_map/isRendCursor__15renderingAmap_cCFv.s"
+bool renderingAmap_c::isRendCursor() const {
+	return true;
 }
-#pragma pop
 
 
 /* 8002911C-80029160 0044+00 s=3 e=0 z=0  None .text      isRendAllRoom__15renderingAmap_cCFv                          */
@@ -868,14 +853,9 @@ asm void dMap_c::isRendAllRoom() const {
 
 
 /* 80029744-8002974C 0008+00 s=1 e=0 z=0  None .text      isSpecialOutline__6dMap_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMap_c::isSpecialOutline() {
-	nofralloc
-#include "asm/d/map/d_map/isSpecialOutline__6dMap_cFv.s"
+bool dMap_c::isSpecialOutline() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1257,25 +1237,15 @@ asm void dMap_c::getNextData(dTres_c::typeGroupData_c* param_0) {
 
 
 /* 8002ABEC-8002ABF0 0004+00 s=3 e=3 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/d/map/d_map/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8002ABF0-8002ABF8 0008+00 s=3 e=7 z=0  None .text      isDrawType__11dDrawPath_cFi                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDrawPath_c::isDrawType(int param_0) {
-	nofralloc
-#include "asm/d/map/d_map/isDrawType__11dDrawPath_cFi.s"
+bool dDrawPath_c::isDrawType(int param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8002ABF8-8002AC74 007C+00 s=0 e=1 z=0  None .text      __dt__18dRenderingFDAmap_cFv                                 */
@@ -1421,14 +1391,9 @@ asm dMap_c::~dMap_c() {
 
 
 /* 8002B000-8002B008 0008+00 s=2 e=0 z=0  None .text      isRendIcon__15renderingAmap_cCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void renderingAmap_c::isRendIcon() const {
-	nofralloc
-#include "asm/d/map/d_map/isRendIcon__15renderingAmap_cCFv.s"
+bool renderingAmap_c::isRendIcon() const {
+	return true;
 }
-#pragma pop
 
 
 /* 8002B008-8002B0B4 00AC+00 s=0 e=1 z=0  None .text      __dt__28renderingPlusDoorAndCursor_cFv                       */

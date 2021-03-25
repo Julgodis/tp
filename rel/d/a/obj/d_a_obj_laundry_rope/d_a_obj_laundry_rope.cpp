@@ -60,10 +60,10 @@ struct cCcD_GStts {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -108,7 +108,7 @@ struct dScnKy_env_light_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjLndRope_Draw(daObjLndRope_c*); // 2
 static void daObjLndRope_Execute(daObjLndRope_c*); // 2
-static void daObjLndRope_IsDelete(daObjLndRope_c*); // 2
+static bool daObjLndRope_IsDelete(daObjLndRope_c*); // 2
 static void daObjLndRope_Delete(daObjLndRope_c*); // 2
 static void daObjLndRope_Create(fopAc_ac_c*); // 2
 
@@ -120,7 +120,7 @@ extern "C" void setNormalRopePos__14daObjLndRope_cFv(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjLndRope_Draw__FP14daObjLndRope_c(); // 1
 extern "C" static void daObjLndRope_Execute__FP14daObjLndRope_c(); // 1
-extern "C" static void daObjLndRope_IsDelete__FP14daObjLndRope_c(); // 1
+extern "C" static bool daObjLndRope_IsDelete__FP14daObjLndRope_c(); // 1
 extern "C" static void daObjLndRope_Delete__FP14daObjLndRope_c(); // 1
 extern "C" void __dt__8dCcD_SphFv(); // 1
 extern "C" static void daObjLndRope_Create__FP10fopAc_ac_c(); // 1
@@ -403,14 +403,9 @@ asm static void daObjLndRope_Execute(daObjLndRope_c* param_0) {
 
 
 /* 80C52E34-80C52E3C 0008+00 s=1 e=0 z=0  None .text      daObjLndRope_IsDelete__FP14daObjLndRope_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjLndRope_IsDelete(daObjLndRope_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/daObjLndRope_IsDelete__FP14daObjLndRope_c.s"
+static bool daObjLndRope_IsDelete(daObjLndRope_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -513,14 +508,9 @@ asm static void daObjLndRope_Create(fopAc_ac_c* param_0) {
 
 
 /* 80C53140-80C53144 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry_rope/d_a_obj_laundry_rope/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C53144-80C531C8 0084+00 s=1 e=0 z=0  None .text      __ct__8dCcD_SphFv                                            */

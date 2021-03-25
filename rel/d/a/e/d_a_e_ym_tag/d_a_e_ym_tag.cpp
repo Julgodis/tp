@@ -24,19 +24,19 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-static void daE_YM_TAG_Draw(daE_YM_TAG_c*); // 2
+static bool daE_YM_TAG_Draw(daE_YM_TAG_c*); // 2
 static void s_e_ym(void*, void*); // 2
 static void daE_YM_TAG_Execute(daE_YM_TAG_c*); // 2
-static void daE_YM_TAG_IsDelete(daE_YM_TAG_c*); // 2
-static void daE_YM_TAG_Delete(daE_YM_TAG_c*); // 2
+static bool daE_YM_TAG_IsDelete(daE_YM_TAG_c*); // 2
+static bool daE_YM_TAG_Delete(daE_YM_TAG_c*); // 2
 static void daE_YM_TAG_Create(daE_YM_TAG_c*); // 2
 
-extern "C" static void daE_YM_TAG_Draw__FP12daE_YM_TAG_c(); // 1
+extern "C" static bool daE_YM_TAG_Draw__FP12daE_YM_TAG_c(); // 1
 extern "C" static void s_e_ym__FPvPv(); // 1
 extern "C" void execute__12daE_YM_TAG_cFv(); // 1
 extern "C" static void daE_YM_TAG_Execute__FP12daE_YM_TAG_c(); // 1
-extern "C" static void daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c(); // 1
-extern "C" static void daE_YM_TAG_Delete__FP12daE_YM_TAG_c(); // 1
+extern "C" static bool daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c(); // 1
+extern "C" static bool daE_YM_TAG_Delete__FP12daE_YM_TAG_c(); // 1
 extern "C" void create__12daE_YM_TAG_cFv(); // 1
 extern "C" static void daE_YM_TAG_Create__FP12daE_YM_TAG_c(); // 1
 extern "C" extern void* g_profile_E_YM_TAG[12];
@@ -63,14 +63,9 @@ extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 // 
 
 /* 80815DF8-80815E00 0008+00 s=1 e=0 z=0  None .text      daE_YM_TAG_Draw__FP12daE_YM_TAG_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YM_TAG_Draw(daE_YM_TAG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ym_tag/d_a_e_ym_tag/daE_YM_TAG_Draw__FP12daE_YM_TAG_c.s"
+static bool daE_YM_TAG_Draw(daE_YM_TAG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80815E00-80815E8C 008C+00 s=1 e=0 z=0  None .text      s_e_ym__FPvPv                                                */
@@ -107,25 +102,15 @@ asm static void daE_YM_TAG_Execute(daE_YM_TAG_c* param_0) {
 
 
 /* 80815F18-80815F20 0008+00 s=1 e=0 z=0  None .text      daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YM_TAG_IsDelete(daE_YM_TAG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ym_tag/d_a_e_ym_tag/daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c.s"
+static bool daE_YM_TAG_IsDelete(daE_YM_TAG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80815F20-80815F28 0008+00 s=1 e=0 z=0  None .text      daE_YM_TAG_Delete__FP12daE_YM_TAG_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YM_TAG_Delete(daE_YM_TAG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ym_tag/d_a_e_ym_tag/daE_YM_TAG_Delete__FP12daE_YM_TAG_c.s"
+static bool daE_YM_TAG_Delete(daE_YM_TAG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80815F28-80815F90 0068+00 s=1 e=0 z=0  None .text      create__12daE_YM_TAG_cFv                                     */

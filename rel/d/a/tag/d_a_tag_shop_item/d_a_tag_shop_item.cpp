@@ -15,7 +15,7 @@ struct daTag_ShopItem_c {
 	/* 80D60B78 */ void create();
 	/* 80D60D78 */ void Delete();
 	/* 80D60E04 */ void Execute();
-	/* 80D61024 */ void Draw();
+	/* 80D61024 */ bool Draw();
 	/* 80D6102C */ void getType();
 	/* 80D61038 */ void getGroupID();
 	/* 80D61044 */ void getSwitchBit1();
@@ -58,12 +58,12 @@ static void daTag_ShopItem_Create(void*); // 2
 static void daTag_ShopItem_Delete(void*); // 2
 static void daTag_ShopItem_Execute(void*); // 2
 static void daTag_ShopItem_Draw(void*); // 2
-static void daTag_ShopItem_IsDelete(void*); // 2
+static bool daTag_ShopItem_IsDelete(void*); // 2
 
 extern "C" void create__16daTag_ShopItem_cFv(); // 1
 extern "C" void Delete__16daTag_ShopItem_cFv(); // 1
 extern "C" void Execute__16daTag_ShopItem_cFv(); // 1
-extern "C" void Draw__16daTag_ShopItem_cFv(); // 1
+extern "C" bool Draw__16daTag_ShopItem_cFv(); // 1
 extern "C" void getType__16daTag_ShopItem_cFv(); // 1
 extern "C" void getGroupID__16daTag_ShopItem_cFv(); // 1
 extern "C" void getSwitchBit1__16daTag_ShopItem_cFv(); // 1
@@ -73,7 +73,7 @@ extern "C" static void daTag_ShopItem_Create__FPv(); // 1
 extern "C" static void daTag_ShopItem_Delete__FPv(); // 1
 extern "C" static void daTag_ShopItem_Execute__FPv(); // 1
 extern "C" static void daTag_ShopItem_Draw__FPv(); // 1
-extern "C" static void daTag_ShopItem_IsDelete__FPv(); // 1
+extern "C" static bool daTag_ShopItem_IsDelete__FPv(); // 1
 extern "C" void __dt__16daTag_ShopItem_cFv(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_TAG_SHOPITM[12];
@@ -206,14 +206,9 @@ asm void daTag_ShopItem_c::Execute() {
 
 
 /* 80D61024-80D6102C 0008+00 s=1 e=0 z=0  None .text      Draw__16daTag_ShopItem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_ShopItem_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/Draw__16daTag_ShopItem_cFv.s"
+bool daTag_ShopItem_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6102C-80D61038 000C+00 s=1 e=0 z=0  None .text      getType__16daTag_ShopItem_cFv                                */
@@ -316,14 +311,9 @@ asm static void daTag_ShopItem_Draw(void* param_0) {
 
 
 /* 80D61160-80D61168 0008+00 s=1 e=0 z=0  None .text      daTag_ShopItem_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_ShopItem_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_shop_item/d_a_tag_shop_item/daTag_ShopItem_IsDelete__FPv.s"
+static bool daTag_ShopItem_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61168-80D611C8 0060+00 s=1 e=0 z=0  None .text      __dt__16daTag_ShopItem_cFv                                   */

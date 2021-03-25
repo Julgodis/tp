@@ -73,10 +73,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct JPABaseEmitter {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct JPABaseEmitter {
 };
 
 struct dPa_modelEcallBack {

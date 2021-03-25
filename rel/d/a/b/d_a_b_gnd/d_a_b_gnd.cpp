@@ -69,10 +69,10 @@ struct J3DFrameCtrl {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -174,10 +174,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -201,7 +201,7 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -210,7 +210,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -463,7 +463,7 @@ static void cam_spd_set(b_gnd_class*); // 2
 static void demo_camera(b_gnd_class*); // 2
 static void anm_se_set(b_gnd_class*); // 2
 void daB_GND_Execute(b_gnd_class*); // 2
-static void daB_GND_IsDelete(b_gnd_class*); // 2
+static bool daB_GND_IsDelete(b_gnd_class*); // 2
 static void daB_GND_Delete(b_gnd_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_GND_Create(fopAc_ac_c*); // 2
@@ -520,7 +520,7 @@ extern "C" void daB_GND_Execute__FP11b_gnd_class(); // 1
 extern "C" void multVecZero__14mDoMtx_stack_cFP3Vec(); // 1
 extern "C" void setDownPos__13fopEn_enemy_cFPC4cXyz(); // 1
 extern "C" void __as__5csXyzFRC5csXyz(); // 1
-extern "C" static void daB_GND_IsDelete__FP11b_gnd_class(); // 1
+extern "C" static bool daB_GND_IsDelete__FP11b_gnd_class(); // 1
 extern "C" static void daB_GND_Delete__FP11b_gnd_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -2701,14 +2701,9 @@ asm void csXyz::operator=(csXyz const& param_0) {
 
 
 /* 80600A54-80600A5C 0008+00 s=1 e=0 z=0  None .text      daB_GND_IsDelete__FP11b_gnd_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_GND_IsDelete(b_gnd_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gnd/d_a_b_gnd/daB_GND_IsDelete__FP11b_gnd_class.s"
+static bool daB_GND_IsDelete(b_gnd_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80600A5C-80600B14 00B8+00 s=1 e=0 z=0  None .text      daB_GND_Delete__FP11b_gnd_class                              */
@@ -2800,14 +2795,9 @@ asm g_himo_s::g_himo_s() {
 
 
 /* 80601DE8-80601DEC 0004+00 s=3 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gnd/d_a_b_gnd/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80601DEC-80601E4C 0060+00 s=1 e=0 z=0  None .text      __dt__16Z2SoundObjSimpleFv                                   */

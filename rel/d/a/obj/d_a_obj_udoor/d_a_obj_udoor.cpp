@@ -121,14 +121,14 @@ struct Z2SeMgr {
 
 static void daObj_Udoor_Draw(obj_udoor_class*); // 2
 static void daObj_Udoor_Execute(obj_udoor_class*); // 2
-static void daObj_Udoor_IsDelete(obj_udoor_class*); // 2
+static bool daObj_Udoor_IsDelete(obj_udoor_class*); // 2
 static void daObj_Udoor_Delete(obj_udoor_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Udoor_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daObj_Udoor_Draw__FP15obj_udoor_class(); // 1
 extern "C" static void daObj_Udoor_Execute__FP15obj_udoor_class(); // 1
-extern "C" static void daObj_Udoor_IsDelete__FP15obj_udoor_class(); // 1
+extern "C" static bool daObj_Udoor_IsDelete__FP15obj_udoor_class(); // 1
 extern "C" static void daObj_Udoor_Delete__FP15obj_udoor_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Udoor_Create__FP10fopAc_ac_c(); // 1
@@ -244,14 +244,9 @@ asm static void daObj_Udoor_Execute(obj_udoor_class* param_0) {
 
 
 /* 80D209BC-80D209C4 0008+00 s=1 e=0 z=0  None .text      daObj_Udoor_IsDelete__FP15obj_udoor_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Udoor_IsDelete(obj_udoor_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_IsDelete__FP15obj_udoor_class.s"
+static bool daObj_Udoor_IsDelete(obj_udoor_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

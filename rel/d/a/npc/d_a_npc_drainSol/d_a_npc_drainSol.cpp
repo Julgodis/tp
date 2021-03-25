@@ -36,7 +36,7 @@ struct daNpcDrSol_c {
 	/* 809AEE24 */ void main();
 	/* 809AEFDC */ void setAttnPos();
 	/* 809AF12C */ void setMotionAnm(int, f32);
-	/* 809AF1FC */ void drawDbgInfo();
+	/* 809AF1FC */ bool drawDbgInfo();
 	/* 809AF934 */ void adjustShapeAngle();
 };
 
@@ -56,10 +56,10 @@ struct cM3dGAab {
 	/* 809ADF60 */ ~cM3dGAab();
 };
 
-struct _GXColorS10 {
+struct J3DAnmTransformKey {
 };
 
-struct J3DAnmTransformKey {
+struct _GXColorS10 {
 };
 
 struct daNpcF_c {
@@ -83,10 +83,10 @@ struct daNpcF_c {
 	/* 80154278 */ void getDistTableIdx(int, int);
 	/* 809AF204 */ ~daNpcF_c();
 	/* 809AF4D4 */ daNpcF_c();
-	/* 809AF88C */ void ctrlBtk();
+	/* 809AF88C */ bool ctrlBtk();
 	/* 809AF894 */ void setCollisions();
-	/* 809AF898 */ void setExpressionAnm(int, bool);
-	/* 809AF8A0 */ void setExpressionBtp(int);
+	/* 809AF898 */ bool setExpressionAnm(int, bool);
+	/* 809AF8A0 */ bool setExpressionBtp(int);
 	/* 809AF8A8 */ void setExpression(int, f32);
 };
 
@@ -132,16 +132,10 @@ struct daNpcDrSol_Param_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -151,6 +145,12 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -272,7 +272,7 @@ static void daNpcDrSol_Create(void*); // 2
 static void daNpcDrSol_Delete(void*); // 2
 static void daNpcDrSol_Execute(void*); // 2
 static void daNpcDrSol_Draw(void*); // 2
-static void daNpcDrSol_IsDelete(void*); // 2
+static bool daNpcDrSol_IsDelete(void*); // 2
 
 extern "C" void __ct__12daNpcDrSol_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -296,12 +296,12 @@ extern "C" static void daNpcDrSol_Create__FPv(); // 1
 extern "C" static void daNpcDrSol_Delete__FPv(); // 1
 extern "C" static void daNpcDrSol_Execute__FPv(); // 1
 extern "C" static void daNpcDrSol_Draw__FPv(); // 1
-extern "C" static void daNpcDrSol_IsDelete__FPv(); // 1
+extern "C" static bool daNpcDrSol_IsDelete__FPv(); // 1
 extern "C" void setParam__12daNpcDrSol_cFv(); // 1
 extern "C" void main__12daNpcDrSol_cFv(); // 1
 extern "C" void setAttnPos__12daNpcDrSol_cFv(); // 1
 extern "C" void setMotionAnm__12daNpcDrSol_cFif(); // 1
-extern "C" void drawDbgInfo__12daNpcDrSol_cFv(); // 1
+extern "C" bool drawDbgInfo__12daNpcDrSol_cFv(); // 1
 extern "C" void __dt__8daNpcF_cFv(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -313,10 +313,10 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void ctrlBtk__8daNpcF_cFv(); // 1
+extern "C" bool ctrlBtk__8daNpcF_cFv(); // 1
 extern "C" void setCollisions__8daNpcF_cFv(); // 1
-extern "C" void setExpressionAnm__8daNpcF_cFib(); // 1
-extern "C" void setExpressionBtp__8daNpcF_cFi(); // 1
+extern "C" bool setExpressionAnm__8daNpcF_cFib(); // 1
+extern "C" bool setExpressionBtp__8daNpcF_cFi(); // 1
 extern "C" void setExpression__8daNpcF_cFif(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_npc_drainSol_cpp(); // 1
@@ -950,14 +950,9 @@ asm static void daNpcDrSol_Draw(void* param_0) {
 
 
 /* 809AEDA0-809AEDA8 0008+00 s=1 e=0 z=0  None .text      daNpcDrSol_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcDrSol_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/daNpcDrSol_IsDelete__FPv.s"
+static bool daNpcDrSol_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AEDA8-809AEE24 007C+00 s=1 e=0 z=0  None .text      setParam__12daNpcDrSol_cFv                                   */
@@ -1005,14 +1000,9 @@ asm void daNpcDrSol_c::setMotionAnm(int param_0, f32 param_1) {
 
 
 /* 809AF1FC-809AF204 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__12daNpcDrSol_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcDrSol_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/drawDbgInfo__12daNpcDrSol_cFv.s"
+bool daNpcDrSol_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809AF204-809AF450 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -1060,25 +1050,15 @@ asm daNpcF_c::daNpcF_c() {
 
 
 /* 809AF6C4-809AF6C8 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AF6C8-809AF6CC 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AF6CC-809AF708 003C+00 s=1 e=0 z=0  None .text      __ct__18daNpcF_ActorMngr_cFv                                 */
@@ -1137,58 +1117,33 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 809AF88C-809AF894 0008+00 s=1 e=0 z=0  None .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::ctrlBtk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 809AF894-809AF898 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AF898-809AF8A0 0008+00 s=1 e=0 z=0  None .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AF8A0-809AF8A8 0008+00 s=1 e=0 z=0  None .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionBtp(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(int param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809AF8A8-809AF8AC 0004+00 s=1 e=0 z=0  None .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpression(int param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(int param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AF8AC-809AF8F4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -1228,14 +1183,9 @@ extern "C" asm void __sinit_d_a_npc_drainSol_cpp() {
 
 
 /* 809AF934-809AF938 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__12daNpcDrSol_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcDrSol_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_drainSol/d_a_npc_drainSol/adjustShapeAngle__12daNpcDrSol_cFv.s"
+void daNpcDrSol_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809AF938-809AF980 0048+00 s=2 e=0 z=0  None .text      __dt__18daNpcDrSol_Param_cFv                                 */

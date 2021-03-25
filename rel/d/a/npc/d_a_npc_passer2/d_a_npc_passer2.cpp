@@ -109,10 +109,10 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS {
+struct csXyz {
 };
 
-struct csXyz {
+struct dBgS {
 };
 
 struct dBgS_Acch {
@@ -178,7 +178,7 @@ static void daNpcPasser2_Create(void*); // 2
 static void daNpcPasser2_Delete(void*); // 2
 static void daNpcPasser2_Execute(void*); // 2
 static void daNpcPasser2_Draw(void*); // 2
-static void daNpcPasser2_IsDelete(void*); // 2
+static bool daNpcPasser2_IsDelete(void*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
 
 extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
@@ -197,7 +197,7 @@ extern "C" static void daNpcPasser2_Delete__FPv(); // 1
 extern "C" void __dt__14daNpcPasser2_cFv(); // 1
 extern "C" static void daNpcPasser2_Execute__FPv(); // 1
 extern "C" static void daNpcPasser2_Draw__FPv(); // 1
-extern "C" static void daNpcPasser2_IsDelete__FPv(); // 1
+extern "C" static bool daNpcPasser2_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80AA85C8(); // 1
 extern "C" void __sinit_d_a_npc_passer2_cpp(); // 1
@@ -700,14 +700,9 @@ asm static void daNpcPasser2_Draw(void* param_0) {
 
 
 /* 80AA8578-80AA8580 0008+00 s=1 e=0 z=0  None .text      daNpcPasser2_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcPasser2_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_passer2/d_a_npc_passer2/daNpcPasser2_IsDelete__FPv.s"
+static bool daNpcPasser2_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AA8580-80AA85C8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

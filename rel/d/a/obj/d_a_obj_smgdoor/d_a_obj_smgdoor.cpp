@@ -93,20 +93,20 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -213,9 +213,9 @@ extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
 extern "C" void setGoal__16dEvent_manager_cFP4cXyz(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -612,14 +612,9 @@ asm void daObjSmgDoor_c::actionEvent() {
 
 
 /* 80CDC7F4-80CDC7F8 0004+00 s=1 e=0 z=0  None .text      actionDead__14daObjSmgDoor_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSmgDoor_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_smgdoor/d_a_obj_smgdoor/actionDead__14daObjSmgDoor_cFv.s"
+void daObjSmgDoor_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CDC7F8-80CDC974 017C+00 s=1 e=0 z=0  None .text      checkArea__14daObjSmgDoor_cFv                                */

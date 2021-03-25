@@ -245,7 +245,7 @@ static void dScnPly_IsDelete(dScnPly_c); // 2
 static void dScnPly_Delete(dScnPly_c*); // 2
 static void phase_00(dScnPly_c*); // 2
 static void phase_01(dScnPly_c*); // 2
-static void phase_0(dScnPly_c*); // 2
+static s32 phase_0(dScnPly_c*); // 2
 static void phase_1(dScnPly_c*); // 2
 static void phase_1_0(dScnPly_c*); // 2
 static void phase_2(dScnPly_c*); // 2
@@ -253,7 +253,7 @@ static void phase_3(dScnPly_c*); // 2
 static void phase_4(dScnPly_c*); // 2
 static void phase_5(dScnPly_c*); // 2
 static void phase_6(dScnPly_c*); // 2
-static void phase_compleate(void*); // 2
+static s32 phase_compleate(void*); // 2
 static void dScnPly_Create(scene_class*); // 2
 
 extern "C" void calcPauseTimer__9dScnPly_cFv(); // 1
@@ -267,7 +267,7 @@ extern "C" void resetGame__9dScnPly_cFv(); // 1
 extern "C" void offReset__9dScnPly_cFv(); // 1
 extern "C" static void phase_00__FP9dScnPly_c(); // 1
 extern "C" static void phase_01__FP9dScnPly_c(); // 1
-extern "C" static void phase_0__FP9dScnPly_c(); // 1
+extern "C" static s32 phase_0__FP9dScnPly_c(); // 1
 extern "C" static void phase_1__FP9dScnPly_c(); // 1
 extern "C" static void phase_1_0__FP9dScnPly_c(); // 1
 extern "C" static void phase_2__FP9dScnPly_c(); // 1
@@ -275,7 +275,7 @@ extern "C" static void phase_3__FP9dScnPly_c(); // 1
 extern "C" static void phase_4__FP9dScnPly_c(); // 1
 extern "C" static void phase_5__FP9dScnPly_c(); // 1
 extern "C" static void phase_6__FP9dScnPly_c(); // 1
-extern "C" static void phase_compleate__FPv(); // 1
+extern "C" static s32 phase_compleate__FPv(); // 1
 extern "C" static void dScnPly_Create__FP11scene_class(); // 1
 extern "C" void __dt__22dScnPly_env_debugHIO_cFv(); // 1
 extern "C" void __dt__22dScnPly_env_otherHIO_cFv(); // 1
@@ -796,14 +796,9 @@ asm static void phase_01(dScnPly_c* param_0) {
 
 
 /* 80259D7C-80259D84 0008+00 s=1 e=0 z=0  None .text      phase_0__FP9dScnPly_c                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void phase_0(dScnPly_c* param_0) {
-	nofralloc
-#include "asm/d/s/d_s_play/phase_0__FP9dScnPly_c.s"
+static s32 phase_0(dScnPly_c* param_0) {
+	return 2;
 }
-#pragma pop
 
 
 /* 80259D84-8025A438 06B4+00 s=1 e=0 z=0  None .text      phase_1__FP9dScnPly_c                                        */
@@ -910,14 +905,9 @@ asm static void phase_6(dScnPly_c* param_0) {
 
 
 /* 8025AB8C-8025AB94 0008+00 s=1 e=0 z=0  None .text      phase_compleate__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void phase_compleate(void* param_0) {
-	nofralloc
-#include "asm/d/s/d_s_play/phase_compleate__FPv.s"
+static s32 phase_compleate(void* param_0) {
+	return 4;
 }
-#pragma pop
 
 
 /* 8025AB94-8025ABC4 0030+00 s=1 e=0 z=0  None .text      dScnPly_Create__FP11scene_class                              */

@@ -26,8 +26,8 @@ struct daTagCstaSw_c {
 	/* 805A2150 */ void searchSekizoAct(void*, void*);
 	/* 805A21A0 */ void areaCheck();
 	/* 805A2340 */ void Execute();
-	/* 805A23F0 */ void Draw();
-	/* 805A23F8 */ void Delete();
+	/* 805A23F0 */ bool Draw();
+	/* 805A23F8 */ bool Delete();
 };
 
 struct fopAc_ac_c {
@@ -63,8 +63,8 @@ extern "C" void create__13daTagCstaSw_cFv(); // 1
 extern "C" void searchSekizoAct__13daTagCstaSw_cFPvPv(); // 1
 extern "C" void areaCheck__13daTagCstaSw_cFv(); // 1
 extern "C" void Execute__13daTagCstaSw_cFv(); // 1
-extern "C" void Draw__13daTagCstaSw_cFv(); // 1
-extern "C" void Delete__13daTagCstaSw_cFv(); // 1
+extern "C" bool Draw__13daTagCstaSw_cFv(); // 1
+extern "C" bool Delete__13daTagCstaSw_cFv(); // 1
 extern "C" static void daTagCstaSw_Draw__FP13daTagCstaSw_c(); // 1
 extern "C" static void daTagCstaSw_Execute__FP13daTagCstaSw_c(); // 1
 extern "C" static void daTagCstaSw_Delete__FP13daTagCstaSw_c(); // 1
@@ -239,25 +239,15 @@ asm void daTagCstaSw_c::Execute() {
 
 
 /* 805A23F0-805A23F8 0008+00 s=1 e=0 z=0  None .text      Draw__13daTagCstaSw_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagCstaSw_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/Draw__13daTagCstaSw_cFv.s"
+bool daTagCstaSw_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A23F8-805A2400 0008+00 s=1 e=0 z=0  None .text      Delete__13daTagCstaSw_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagCstaSw_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_cstasw/d_a_tag_CstaSw/Delete__13daTagCstaSw_cFv.s"
+bool daTagCstaSw_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A2400-805A2420 0020+00 s=1 e=0 z=0  None .text      daTagCstaSw_Draw__FP13daTagCstaSw_c                          */

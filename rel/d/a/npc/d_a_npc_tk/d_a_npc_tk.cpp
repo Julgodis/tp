@@ -20,12 +20,6 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -38,6 +32,12 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 	/* 80B01678 */ ~cXyz();
 	/* 80B0C0E0 */ cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daNPC_TK_c {
@@ -120,21 +120,21 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -351,7 +351,7 @@ static void checkRangeOfTake(fopAc_ac_c*, fopAc_ac_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void s_hanjo(void*, void*); // 2
 static void daNPC_TK_Execute(daNPC_TK_c*); // 2
-static void daNPC_TK_IsDelete(daNPC_TK_c*); // 2
+static bool daNPC_TK_IsDelete(daNPC_TK_c*); // 2
 static void daNPC_TK_Delete(daNPC_TK_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNPC_TK_Create(daNPC_TK_c*); // 2
@@ -407,7 +407,7 @@ extern "C" void mtx_set__10daNPC_TK_cFv(); // 1
 extern "C" void cc_set__10daNPC_TK_cFv(); // 1
 extern "C" void execute__10daNPC_TK_cFv(); // 1
 extern "C" static void daNPC_TK_Execute__FP10daNPC_TK_c(); // 1
-extern "C" static void daNPC_TK_IsDelete__FP10daNPC_TK_c(); // 1
+extern "C" static bool daNPC_TK_IsDelete__FP10daNPC_TK_c(); // 1
 extern "C" void _delete__10daNPC_TK_cFv(); // 1
 extern "C" static void daNPC_TK_Delete__FP10daNPC_TK_c(); // 1
 extern "C" void ctrlJoint__10daNPC_TK_cFP8J3DJointP8J3DModel(); // 1
@@ -1921,14 +1921,9 @@ asm static void daNPC_TK_Execute(daNPC_TK_c* param_0) {
 
 
 /* 80B0B910-80B0B918 0008+00 s=1 e=0 z=0  None .text      daNPC_TK_IsDelete__FP10daNPC_TK_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNPC_TK_IsDelete(daNPC_TK_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/daNPC_TK_IsDelete__FP10daNPC_TK_c.s"
+static bool daNPC_TK_IsDelete(daNPC_TK_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B0B918-80B0B98C 0074+00 s=1 e=0 z=0  None .text      _delete__10daNPC_TK_cFv                                      */
@@ -2042,14 +2037,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80B0C0E0-80B0C0E4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tk/d_a_npc_tk/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B0C0E4-80B0C104 0020+00 s=1 e=0 z=0  None .text      daNPC_TK_Create__FP10daNPC_TK_c                              */

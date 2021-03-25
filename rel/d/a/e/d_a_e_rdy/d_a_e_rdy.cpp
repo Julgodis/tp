@@ -120,19 +120,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -389,7 +389,7 @@ static void cam_3d_morf(e_rdy_class*, f32); // 2
 static void s_adel_sub(void*, void*); // 2
 static void demo_camera(e_rdy_class*); // 2
 static void daE_RDY_Execute(e_rdy_class*); // 2
-static void daE_RDY_IsDelete(e_rdy_class*); // 2
+static bool daE_RDY_IsDelete(e_rdy_class*); // 2
 static void daE_RDY_Delete(e_rdy_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_RDY_Create(fopAc_ac_c*); // 2
@@ -453,7 +453,7 @@ extern "C" static void cam_3d_morf__FP11e_rdy_classf(); // 1
 extern "C" static void s_adel_sub__FPvPv(); // 1
 extern "C" static void demo_camera__FP11e_rdy_class(); // 1
 extern "C" static void daE_RDY_Execute__FP11e_rdy_class(); // 1
-extern "C" static void daE_RDY_IsDelete__FP11e_rdy_class(); // 1
+extern "C" static bool daE_RDY_IsDelete__FP11e_rdy_class(); // 1
 extern "C" static void daE_RDY_Delete__FP11e_rdy_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_RDY_Create__FP10fopAc_ac_c(); // 1
@@ -2746,14 +2746,9 @@ asm static void daE_RDY_Execute(e_rdy_class* param_0) {
 
 
 /* 8077892C-80778934 0008+00 s=1 e=0 z=0  None .text      daE_RDY_IsDelete__FP11e_rdy_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_RDY_IsDelete(e_rdy_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rdy/d_a_e_rdy/daE_RDY_IsDelete__FP11e_rdy_class.s"
+static bool daE_RDY_IsDelete(e_rdy_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80778934-80778998 0064+00 s=1 e=0 z=0  None .text      daE_RDY_Delete__FP11e_rdy_class                              */
@@ -2878,14 +2873,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 807797FC-80779800 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rdy/d_a_e_rdy/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80779800-80779838 0038+00 s=1 e=0 z=0  None .text      __ct__11J3DLightObjFv                                        */

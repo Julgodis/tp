@@ -49,91 +49,91 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct stage_vrboxcol_info_class {
-};
-
-struct stage_scls_info_dummy_class {
-};
-
-struct dStage_FileList2_dt_c {
+struct dStage_FileList_dt_c {
 };
 
 struct dStage_MemoryMap_c {
 };
 
-struct stage_actor_class {
-};
-
-struct dStage_Multi_c {
-};
-
-struct stage_map_info_dummy_class {
-};
-
-struct stage_vrbox_info_class {
-};
-
-struct stage_arrow_class {
-};
-
-struct dStage_Lbnk_c {
-};
-
-struct stage_stag_info_class {
-};
-
 struct stage_camera_class {
-};
-
-struct dStage_Elst_c {
-};
-
-struct dStage_MemoryConfig_c {
-};
-
-struct stage_plight_info_class {
 };
 
 struct roomRead_class {
 };
 
-struct dStage_dPnt_c {
-};
-
-struct stage_palette_info_class {
-};
-
-struct stage_envr_info_class {
-};
-
-struct dStage_dPath_c {
-};
-
-struct dStage_FileList_dt_c {
-};
-
-struct stage_pselect_info_class {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct stage_tresure_class {
+struct dStage_Elst_c {
 };
 
 struct dStage_DMap_c {
 };
 
-struct dStage_SoundInfo_c {
+struct stage_envr_info_class {
 };
 
 struct stage_pure_lightvec_info_class {
 };
 
+struct stage_tresure_class {
+};
+
+struct dStage_FileList2_dt_c {
+};
+
+struct dStage_dPath_c {
+};
+
+struct stage_palette_info_class {
+};
+
+struct dStage_Lbnk_c {
+};
+
+struct dStage_MemoryConfig_c {
+};
+
+struct stage_vrbox_info_class {
+};
+
+struct stage_pselect_info_class {
+};
+
+struct dStage_dPnt_c {
+};
+
+struct stage_actor_class {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct stage_plight_info_class {
+};
+
+struct stage_map_info_dummy_class {
+};
+
+struct dStage_Multi_c {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct stage_stag_info_class {
+};
+
+struct stage_vrboxcol_info_class {
+};
+
 struct stage_map_info_class {
+};
+
+struct stage_arrow_class {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
+struct dStage_FloorInfo_c {
 };
 
 struct dStage_stageDt_c {
@@ -226,7 +226,7 @@ struct dStage_stageDt_c {
 	/* 80028228 */ void setDoor(stage_tgsc_class*);
 	/* 80028230 */ void getDoor() const;
 	/* 80028238 */ void setMapPath(void*);
-	/* 8002823C */ void getMapPath();
+	/* 8002823C */ bool getMapPath();
 	/* 80028244 */ void setElst(dStage_Elst_c*);
 };
 
@@ -314,7 +314,7 @@ struct dStage_roomDt_c {
 	/* 80027D04 */ void setTresure(stage_tresure_class*);
 	/* 80027D0C */ void getTresure() const;
 	/* 80027D14 */ void setDMap(dStage_DMap_c*);
-	/* 80027D18 */ void getDMap() const;
+	/* 80027D18 */ bool getDMap() const;
 	/* 80027D20 */ void setDrTg(stage_tgsc_class*);
 	/* 80027D28 */ void getDrTg() const;
 	/* 80027D30 */ void setDoor(stage_tgsc_class*);
@@ -751,7 +751,7 @@ extern "C" void getLbnk__15dStage_roomDt_cCFv(); // 1
 extern "C" void setTresure__15dStage_roomDt_cFP19stage_tresure_class(); // 1
 extern "C" void getTresure__15dStage_roomDt_cCFv(); // 1
 extern "C" void setDMap__15dStage_roomDt_cFP13dStage_DMap_c(); // 1
-extern "C" void getDMap__15dStage_roomDt_cCFv(); // 1
+extern "C" bool getDMap__15dStage_roomDt_cCFv(); // 1
 extern "C" void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class(); // 1
 extern "C" void getDrTg__15dStage_roomDt_cCFv(); // 1
 extern "C" void setDoor__15dStage_roomDt_cFP16stage_tgsc_class(); // 1
@@ -839,7 +839,7 @@ extern "C" void getDrTg__16dStage_stageDt_cCFv(); // 1
 extern "C" void setDoor__16dStage_stageDt_cFP16stage_tgsc_class(); // 1
 extern "C" void getDoor__16dStage_stageDt_cCFv(); // 1
 extern "C" void setMapPath__16dStage_stageDt_cFPv(); // 1
-extern "C" void getMapPath__16dStage_stageDt_cFv(); // 1
+extern "C" bool getMapPath__16dStage_stageDt_cFv(); // 1
 extern "C" void setElst__16dStage_stageDt_cFP13dStage_Elst_c(); // 1
 extern "C" void __sinit_d_stage_cpp(); // 1
 extern "C" static void func_80028328(); // 1
@@ -4256,25 +4256,15 @@ asm void dStage_roomDt_c::getTresure() const {
 
 
 /* 80027D14-80027D18 0004+00 s=1 e=0 z=0  None .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomDt_c::setDMap(dStage_DMap_c* param_0) {
-	nofralloc
-#include "asm/d/d_stage/setDMap__15dStage_roomDt_cFP13dStage_DMap_c.s"
+void dStage_roomDt_c::setDMap(dStage_DMap_c* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80027D18-80027D20 0008+00 s=1 e=0 z=0  None .text      getDMap__15dStage_roomDt_cCFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_roomDt_c::getDMap() const {
-	nofralloc
-#include "asm/d/d_stage/getDMap__15dStage_roomDt_cCFv.s"
+bool dStage_roomDt_c::getDMap() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80027D20-80027D28 0008+00 s=1 e=0 z=0  None .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
@@ -5224,25 +5214,15 @@ asm void dStage_stageDt_c::getDoor() const {
 
 
 /* 80028238-8002823C 0004+00 s=1 e=0 z=0  None .text      setMapPath__16dStage_stageDt_cFPv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stageDt_c::setMapPath(void* param_0) {
-	nofralloc
-#include "asm/d/d_stage/setMapPath__16dStage_stageDt_cFPv.s"
+void dStage_stageDt_c::setMapPath(void* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8002823C-80028244 0008+00 s=1 e=0 z=0  None .text      getMapPath__16dStage_stageDt_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dStage_stageDt_c::getMapPath() {
-	nofralloc
-#include "asm/d/d_stage/getMapPath__16dStage_stageDt_cFv.s"
+bool dStage_stageDt_c::getMapPath() {
+	return false;
 }
-#pragma pop
 
 
 /* 80028244-8002824C 0008+00 s=1 e=0 z=0  None .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
@@ -5615,14 +5595,9 @@ asm stage_tgsc_data_class::~stage_tgsc_data_class() {
 
 
 /* 800284B8-800284BC 0004+00 s=1 e=0 z=0  None .text      __ct__21stage_tgsc_data_classFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm stage_tgsc_data_class::stage_tgsc_data_class() {
-	nofralloc
-#include "asm/d/d_stage/__ct__21stage_tgsc_data_classFv.s"
+stage_tgsc_data_class::stage_tgsc_data_class() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

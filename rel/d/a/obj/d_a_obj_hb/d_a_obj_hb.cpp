@@ -197,7 +197,7 @@ static void obj_hb_drop(obj_hb_class*); // 2
 static void obj_hb_float(obj_hb_class*); // 2
 static void action(obj_hb_class*); // 2
 static void daOBJ_HB_Execute(obj_hb_class*); // 2
-static void daOBJ_HB_IsDelete(obj_hb_class*); // 2
+static bool daOBJ_HB_IsDelete(obj_hb_class*); // 2
 static void daOBJ_HB_Delete(obj_hb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daOBJ_HB_Create(fopAc_ac_c*); // 2
@@ -212,7 +212,7 @@ extern "C" static void obj_hb_drop__FP12obj_hb_class(); // 1
 extern "C" static void obj_hb_float__FP12obj_hb_class(); // 1
 extern "C" static void action__FP12obj_hb_class(); // 1
 extern "C" static void daOBJ_HB_Execute__FP12obj_hb_class(); // 1
-extern "C" static void daOBJ_HB_IsDelete__FP12obj_hb_class(); // 1
+extern "C" static bool daOBJ_HB_IsDelete__FP12obj_hb_class(); // 1
 extern "C" static void daOBJ_HB_Delete__FP12obj_hb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daOBJ_HB_Create__FP10fopAc_ac_c(); // 1
@@ -671,14 +671,9 @@ asm static void daOBJ_HB_Execute(obj_hb_class* param_0) {
 
 
 /* 80C1B124-80C1B12C 0008+00 s=1 e=0 z=0  None .text      daOBJ_HB_IsDelete__FP12obj_hb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daOBJ_HB_IsDelete(obj_hb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_hb/d_a_obj_hb/daOBJ_HB_IsDelete__FP12obj_hb_class.s"
+static bool daOBJ_HB_IsDelete(obj_hb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -64,10 +64,10 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -161,19 +161,19 @@ struct mDoMtx_stack_c {
 	/* 807E288C */ void YrotS(s16);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -455,7 +455,7 @@ static void cM_scos(s16); // 2
 static void cM_ssin(s16); // 2
 void anm_se_eff_set(e_wb_class*); // 2
 static void daE_WB_Execute(e_wb_class*); // 2
-static void daE_WB_IsDelete(e_wb_class*); // 2
+static bool daE_WB_IsDelete(e_wb_class*); // 2
 static void daE_WB_Delete(e_wb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_WB_Create(fopAc_ac_c*); // 2
@@ -541,7 +541,7 @@ extern "C" static void cM_scos__Fs(); // 1
 extern "C" static void cM_ssin__Fs(); // 1
 extern "C" void anm_se_eff_set__FP10e_wb_class(); // 1
 extern "C" static void daE_WB_Execute__FP10e_wb_class(); // 1
-extern "C" static void daE_WB_IsDelete__FP10e_wb_class(); // 1
+extern "C" static bool daE_WB_IsDelete__FP10e_wb_class(); // 1
 extern "C" static void daE_WB_Delete__FP10e_wb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_WB_Create__FP10fopAc_ac_c(); // 1
@@ -3632,14 +3632,9 @@ asm static void daE_WB_Execute(e_wb_class* param_0) {
 
 
 /* 807E1020-807E1028 0008+00 s=1 e=0 z=0  None .text      daE_WB_IsDelete__FP10e_wb_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_WB_IsDelete(e_wb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_wb/d_a_e_wb/daE_WB_IsDelete__FP10e_wb_class.s"
+static bool daE_WB_IsDelete(e_wb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807E1028-807E108C 0064+00 s=1 e=0 z=0  None .text      daE_WB_Delete__FP10e_wb_class                                */
@@ -3786,14 +3781,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 807E2090-807E2094 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_wb/d_a_e_wb/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807E2094-807E20DC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -4083,14 +4073,9 @@ asm void dEvt_info_c::checkCommandDemoAccrpt() {
 
 
 /* 807E24FC-807E2500 0004+00 s=4 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_wb/d_a_e_wb/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807E2500-807E2530 0030+00 s=1 e=0 z=0  None .text      fopAcM_SearchByName__Fs                                      */

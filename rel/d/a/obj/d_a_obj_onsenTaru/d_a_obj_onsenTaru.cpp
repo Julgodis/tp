@@ -113,23 +113,23 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct JPABaseEmitter {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct JPABaseEmitter {
 };
 
 struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -878,14 +878,9 @@ asm void daOnsTaru_c::mode_init_break() {
 
 
 /* 80CA9514-80CA9518 0004+00 s=1 e=0 z=0  None .text      mode_proc_break__11daOnsTaru_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daOnsTaru_c::mode_proc_break() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_onsenTaru/d_a_obj_onsenTaru/mode_proc_break__11daOnsTaru_cFv.s"
+void daOnsTaru_c::mode_proc_break() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CA9518-80CA9530 0018+00 s=2 e=0 z=0  None .text      mode_init_sink__11daOnsTaru_cFv                              */

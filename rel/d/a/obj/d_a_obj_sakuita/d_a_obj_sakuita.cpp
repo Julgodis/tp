@@ -90,7 +90,7 @@ struct dCcD_GObjInf {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjSakuita_Draw(daObjSakuita_c*); // 2
 static void daObjSakuita_Execute(daObjSakuita_c*); // 2
-static void daObjSakuita_IsDelete(daObjSakuita_c*); // 2
+static bool daObjSakuita_IsDelete(daObjSakuita_c*); // 2
 static void daObjSakuita_Delete(daObjSakuita_c*); // 2
 static void daObjSakuita_Create(fopAc_ac_c*); // 2
 
@@ -102,7 +102,7 @@ extern "C" void calcAngle__14daObjSakuita_cFv(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daObjSakuita_Draw__FP14daObjSakuita_c(); // 1
 extern "C" static void daObjSakuita_Execute__FP14daObjSakuita_c(); // 1
-extern "C" static void daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
+extern "C" static bool daObjSakuita_IsDelete__FP14daObjSakuita_c(); // 1
 extern "C" static void daObjSakuita_Delete__FP14daObjSakuita_c(); // 1
 extern "C" void __dt__14daObjSakuita_cFv(); // 1
 extern "C" static void daObjSakuita_Create__FP10fopAc_ac_c(); // 1
@@ -328,14 +328,9 @@ asm static void daObjSakuita_Execute(daObjSakuita_c* param_0) {
 
 
 /* 80CC4C6C-80CC4C74 0008+00 s=1 e=0 z=0  None .text      daObjSakuita_IsDelete__FP14daObjSakuita_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sakuita/d_a_obj_sakuita/daObjSakuita_IsDelete__FP14daObjSakuita_c.s"
+static bool daObjSakuita_IsDelete(daObjSakuita_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CC4C74-80CC4C9C 0028+00 s=1 e=0 z=0  None .text      daObjSakuita_Delete__FP14daObjSakuita_c                      */

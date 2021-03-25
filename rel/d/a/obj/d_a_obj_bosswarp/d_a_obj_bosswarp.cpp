@@ -142,6 +142,9 @@ struct dEvent_manager_c {
 	/* 8004882C */ void checkStartDemo();
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -149,9 +152,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -1063,14 +1063,9 @@ asm void daObjBossWarp_c::actionWarpEvent() {
 
 
 /* 8057A7C4-8057A7C8 0004+00 s=1 e=0 z=0  None .text      actionDead__15daObjBossWarp_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBossWarp_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_bosswarp/d_a_obj_bosswarp/actionDead__15daObjBossWarp_cFv.s"
+void daObjBossWarp_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8057A7C8-8057A8B4 00EC+00 s=1 e=0 z=0  None .text      actionOrderChkEvent__15daObjBossWarp_cFv                     */

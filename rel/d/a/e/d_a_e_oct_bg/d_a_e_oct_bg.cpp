@@ -16,17 +16,17 @@ struct daE_OctBg_HIO_c {
 	/* 80739CB8 */ ~daE_OctBg_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_OctBg_c {
@@ -119,19 +119,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

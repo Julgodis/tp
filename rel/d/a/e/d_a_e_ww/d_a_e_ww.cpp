@@ -16,18 +16,18 @@ struct daE_WW_HIO_c {
 	/* 807EEEBC */ ~daE_WW_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 807EF708 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_WW_c {
@@ -146,19 +146,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -189,10 +189,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -304,7 +304,7 @@ static void s_child_ww(void*, void*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void s_attack_ww(void*, void*); // 2
 static void daE_WW_Execute(daE_WW_c*); // 2
-static void daE_WW_IsDelete(daE_WW_c*); // 2
+static bool daE_WW_IsDelete(daE_WW_c*); // 2
 static void daE_WW_Delete(daE_WW_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_WW_Create(daE_WW_c*); // 2
@@ -352,7 +352,7 @@ extern "C" void cc_set__8daE_WW_cFv(); // 1
 extern "C" void execute__8daE_WW_cFv(); // 1
 extern "C" static void daE_WW_Execute__FP8daE_WW_c(); // 1
 extern "C" void calcMoveDir__8daE_WW_cFPss(); // 1
-extern "C" static void daE_WW_IsDelete__FP8daE_WW_c(); // 1
+extern "C" static bool daE_WW_IsDelete__FP8daE_WW_c(); // 1
 extern "C" void _delete__8daE_WW_cFv(); // 1
 extern "C" static void daE_WW_Delete__FP8daE_WW_c(); // 1
 extern "C" void CreateHeap__8daE_WW_cFv(); // 1
@@ -1705,14 +1705,9 @@ asm void daE_WW_c::calcMoveDir(s16* param_0, s16 param_1) {
 
 
 /* 807EE438-807EE440 0008+00 s=1 e=0 z=0  None .text      daE_WW_IsDelete__FP8daE_WW_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_WW_IsDelete(daE_WW_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ww/d_a_e_ww/daE_WW_IsDelete__FP8daE_WW_c.s"
+static bool daE_WW_IsDelete(daE_WW_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807EE440-807EE4B4 0074+00 s=1 e=0 z=0  None .text      _delete__8daE_WW_cFv                                         */

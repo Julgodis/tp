@@ -117,7 +117,7 @@ struct cCcS {
 
 static void daObj_Rock_Draw(obj_rock_class*); // 2
 static void daObj_Rock_Execute(obj_rock_class*); // 2
-static void daObj_Rock_IsDelete(obj_rock_class*); // 2
+static bool daObj_Rock_IsDelete(obj_rock_class*); // 2
 static void daObj_Rock_Delete(obj_rock_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_rock_class*, int); // 2
@@ -125,7 +125,7 @@ static void daObj_Rock_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daObj_Rock_Draw__FP14obj_rock_class(); // 1
 extern "C" static void daObj_Rock_Execute__FP14obj_rock_class(); // 1
-extern "C" static void daObj_Rock_IsDelete__FP14obj_rock_class(); // 1
+extern "C" static bool daObj_Rock_IsDelete__FP14obj_rock_class(); // 1
 extern "C" static void daObj_Rock_Delete__FP14obj_rock_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP14obj_rock_classi(); // 1
@@ -251,14 +251,9 @@ asm static void daObj_Rock_Execute(obj_rock_class* param_0) {
 
 
 /* 80CBDE48-80CBDE50 0008+00 s=1 e=0 z=0  None .text      daObj_Rock_IsDelete__FP14obj_rock_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Rock_IsDelete(obj_rock_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rock/d_a_obj_rock/daObj_Rock_IsDelete__FP14obj_rock_class.s"
+static bool daObj_Rock_IsDelete(obj_rock_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmVtxColor {
 };
 
@@ -21,6 +18,9 @@ struct J2DAnmTexPattern {
 };
 
 struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
 };
 
 struct J2DPane {
@@ -36,7 +36,7 @@ struct J2DTextBoxEx {
 };
 
 struct J2DTextBox {
-	/* 8025602C */ void getMaterial() const;
+	/* 8025602C */ bool getMaterial() const;
 };
 
 struct J2DPictureEx {
@@ -45,7 +45,7 @@ struct J2DPictureEx {
 };
 
 struct J2DPicture {
-	/* 8025603C */ void getMaterial() const;
+	/* 8025603C */ bool getMaterial() const;
 };
 
 struct J2DWindowEx {
@@ -61,9 +61,9 @@ extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
 extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern(); // 1
 extern "C" void getMaterial__12J2DTextBoxExCFv(); // 1
-extern "C" void getMaterial__10J2DTextBoxCFv(); // 1
+extern "C" bool getMaterial__10J2DTextBoxCFv(); // 1
 extern "C" void getMaterial__12J2DPictureExCFv(); // 1
-extern "C" void getMaterial__10J2DPictureCFv(); // 1
+extern "C" bool getMaterial__10J2DPictureCFv(); // 1
 extern "C" void setAnimation__12J2DTextBoxExFP15J2DAnmTransform(); // 1
 extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTransform(); // 1
 extern "C" void setAnimation__11J2DWindowExFP15J2DAnmTransform(); // 1
@@ -80,36 +80,21 @@ extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
 // 
 
 /* 80256018-8025601C 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPane::setAnimation(J2DAnmVtxColor* param_0) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP14J2DAnmVtxColor.s"
+void J2DPane::setAnimation(J2DAnmVtxColor* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8025601C-80256020 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPane::setAnimation(J2DAnmVisibilityFull* param_0) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP20J2DAnmVisibilityFull.s"
+void J2DPane::setAnimation(J2DAnmVisibilityFull* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80256020-80256024 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPane::setAnimation(J2DAnmTexPattern* param_0) {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/setAnimation__7J2DPaneFP16J2DAnmTexPattern.s"
+void J2DPane::setAnimation(J2DAnmTexPattern* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80256024-8025602C 0008+00 s=0 e=1 z=0  None .text      getMaterial__12J2DTextBoxExCFv                               */
@@ -124,14 +109,9 @@ asm void J2DTextBoxEx::getMaterial() const {
 
 
 /* 8025602C-80256034 0008+00 s=0 e=1 z=0  None .text      getMaterial__10J2DTextBoxCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTextBox::getMaterial() const {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/getMaterial__10J2DTextBoxCFv.s"
+bool J2DTextBox::getMaterial() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80256034-8025603C 0008+00 s=0 e=1 z=0  None .text      getMaterial__12J2DPictureExCFv                               */
@@ -146,14 +126,9 @@ asm void J2DPictureEx::getMaterial() const {
 
 
 /* 8025603C-80256044 0008+00 s=0 e=1 z=0  None .text      getMaterial__10J2DPictureCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPicture::getMaterial() const {
-	nofralloc
-#include "asm/d/pane/d_pane_class_ex/getMaterial__10J2DPictureCFv.s"
+bool J2DPicture::getMaterial() const {
+	return false;
 }
-#pragma pop
 
 
 /* 80256044-80256064 0020+00 s=0 e=1 z=0  None .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */

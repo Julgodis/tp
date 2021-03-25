@@ -18,6 +18,12 @@ struct JPAEmitterCallBack {
 struct _GXTexMapID {
 };
 
+struct JPAResource {
+};
+
+struct JPAEmitterManager {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -25,12 +31,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JPAResource {
-};
-
-struct JPAEmitterManager {
 };
 
 struct JPAEmitterWorkData {

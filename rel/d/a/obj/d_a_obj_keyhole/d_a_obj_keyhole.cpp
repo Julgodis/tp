@@ -83,7 +83,7 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -92,7 +92,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -185,7 +185,7 @@ static void chain_move(obj_keyhole_class*); // 2
 static void open(obj_keyhole_class*); // 2
 static void drop(obj_keyhole_class*); // 2
 static void daObj_Keyhole_Execute(obj_keyhole_class*); // 2
-static void daObj_Keyhole_IsDelete(obj_keyhole_class*); // 2
+static bool daObj_Keyhole_IsDelete(obj_keyhole_class*); // 2
 static void daObj_Keyhole_Delete(obj_keyhole_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Keyhole_Create(fopAc_ac_c*); // 2
@@ -202,7 +202,7 @@ extern "C" static void chain_move__FP17obj_keyhole_class(); // 1
 extern "C" static void open__FP17obj_keyhole_class(); // 1
 extern "C" static void drop__FP17obj_keyhole_class(); // 1
 extern "C" static void daObj_Keyhole_Execute__FP17obj_keyhole_class(); // 1
-extern "C" static void daObj_Keyhole_IsDelete__FP17obj_keyhole_class(); // 1
+extern "C" static bool daObj_Keyhole_IsDelete__FP17obj_keyhole_class(); // 1
 extern "C" static void daObj_Keyhole_Delete__FP17obj_keyhole_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Keyhole_Create__FP10fopAc_ac_c(); // 1
@@ -951,14 +951,9 @@ asm static void daObj_Keyhole_Execute(obj_keyhole_class* param_0) {
 
 
 /* 80C42D0C-80C42D14 0008+00 s=1 e=0 z=0  None .text      daObj_Keyhole_IsDelete__FP17obj_keyhole_class                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Keyhole_IsDelete(obj_keyhole_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/daObj_Keyhole_IsDelete__FP17obj_keyhole_class.s"
+static bool daObj_Keyhole_IsDelete(obj_keyhole_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C42D14-80C42DC8 00B4+00 s=1 e=0 z=0  None .text      daObj_Keyhole_Delete__FP17obj_keyhole_class                  */
@@ -1083,25 +1078,15 @@ asm dCcD_Sph::dCcD_Sph() {
 
 
 /* 80C438FC-80C43900 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C43900-80C43904 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_keyhole/d_a_obj_keyhole/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C43904-80C4394C 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -25,7 +25,7 @@ struct daObjTrnd2_c {
 	/* 80D1D214 */ void endParticle();
 	/* 80D1D278 */ void startParticle();
 	/* 80D1D2AC */ void stopParticle();
-	/* 80D1D2E0 */ void draw();
+	/* 80D1D2E0 */ bool draw();
 	/* 80D1D2E8 */ void _delete();
 };
 
@@ -128,7 +128,7 @@ extern "C" void setParticle__12daObjTrnd2_cFv(); // 1
 extern "C" void endParticle__12daObjTrnd2_cFv(); // 1
 extern "C" void startParticle__12daObjTrnd2_cFv(); // 1
 extern "C" void stopParticle__12daObjTrnd2_cFv(); // 1
-extern "C" void draw__12daObjTrnd2_cFv(); // 1
+extern "C" bool draw__12daObjTrnd2_cFv(); // 1
 extern "C" void _delete__12daObjTrnd2_cFv(); // 1
 extern "C" static void daObjTrnd2_Draw__FP12daObjTrnd2_c(); // 1
 extern "C" static void daObjTrnd2_Execute__FP12daObjTrnd2_c(); // 1
@@ -510,14 +510,9 @@ asm void daObjTrnd2_c::stopParticle() {
 
 
 /* 80D1D2E0-80D1D2E8 0008+00 s=1 e=0 z=0  None .text      draw__12daObjTrnd2_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjTrnd2_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/draw__12daObjTrnd2_cFv.s"
+bool daObjTrnd2_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1D2E8-80D1D330 0048+00 s=1 e=0 z=0  None .text      _delete__12daObjTrnd2_cFv                                    */

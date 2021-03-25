@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JAIAudience {
-};
-
-struct JAISeqMgr {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,6 +18,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISeqMgr {
 };
 
 template <typename A0>
@@ -39,6 +33,12 @@ struct JASSoundParams {
 };
 
 struct JAISoundActivity {
+};
+
+struct JAIAudience {
+};
+
+struct JAISoundID {
 };
 
 struct JAISeq {
@@ -54,7 +54,7 @@ struct JAISeq {
 	/* 802A12BC */ void JAISound_tryDie_();
 	/* 802A1348 */ void mixOut_(JASSoundParams const&, JAISoundActivity);
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
-	/* 802A1570 */ void getNumChild() const;
+	/* 802A1570 */ s32 getNumChild() const;
 	/* 802A1578 */ void getChild(int);
 	/* 802A165C */ void releaseChild(int);
 	/* 802A1728 */ void getTrack();
@@ -105,8 +105,8 @@ struct JAISoundParams {
 struct JAISound {
 	/* 802A22F8 */ JAISound();
 	/* 802A2328 */ void start_JAISound_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
-	/* 802A25D8 */ void asSe();
-	/* 802A25E8 */ void asStream();
+	/* 802A25D8 */ bool asSe();
+	/* 802A25E8 */ bool asStream();
 	/* 802A25F0 */ void die_JAISound_();
 	/* 802A266C */ void increasePrepareCount_JAISound_();
 	/* 802A26B8 */ void calc_JAISound_();
@@ -142,7 +142,7 @@ extern "C" void func_802A1268(); // 1
 extern "C" void JAISound_tryDie___6JAISeqFv(); // 1
 extern "C" void mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
 extern "C" void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void getNumChild__6JAISeqCFv(); // 1
+extern "C" s32 getNumChild__6JAISeqCFv(); // 1
 extern "C" void getChild__6JAISeqFi(); // 1
 extern "C" void releaseChild__6JAISeqFi(); // 1
 extern "C" void getTrack__6JAISeqFv(); // 1
@@ -177,8 +177,8 @@ extern "C" void func_802932E0(); // 1
 extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf(); // 1
 extern "C" void __ct__8JAISoundFv(); // 1
 extern "C" void func_802A2328(); // 1
-extern "C" void asSe__8JAISoundFv(); // 1
-extern "C" void asStream__8JAISoundFv(); // 1
+extern "C" bool asSe__8JAISoundFv(); // 1
+extern "C" bool asStream__8JAISoundFv(); // 1
 extern "C" void die_JAISound___8JAISoundFv(); // 1
 extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
 extern "C" void calc_JAISound___8JAISoundFv(); // 1
@@ -420,14 +420,9 @@ asm void JAISeq::JAISeqMgr_mixOut_(JASSoundParams const& param_0, JAISoundActivi
 
 
 /* 802A1570-802A1578 0008+00 s=1 e=0 z=0  None .text      getNumChild__6JAISeqCFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeq::getNumChild() const {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeq/getNumChild__6JAISeqCFv.s"
+s32 JAISeq::getNumChild() const {
+	return 32;
 }
-#pragma pop
 
 
 /* 802A1578-802A165C 00E4+00 s=1 e=0 z=0  None .text      getChild__6JAISeqFi                                          */
@@ -475,14 +470,9 @@ asm void JAISeq::getChildTrack(int param_0) {
 
 
 /* 802A1768-802A176C 0004+00 s=1 e=0 z=0  None .text      asSeq__6JAISeqFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JAISeq::asSeq() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JAISeq/asSeq__6JAISeqFv.s"
+void JAISeq::asSeq() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802A176C-802A1774 0008+00 s=1 e=0 z=0  None .text      getTempoMgr__6JAISeqFv                                       */

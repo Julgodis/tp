@@ -27,7 +27,7 @@ struct daItemKantera_c {
 	/* 80C389BC */ void initBaseMtx();
 	/* 80C389F8 */ void setBaseMtx();
 	/* 80C38A64 */ void Create();
-	/* 80C38BA8 */ void __CreateHeap();
+	/* 80C38BA8 */ bool __CreateHeap();
 	/* 80C38BB0 */ void create();
 	/* 80C38F78 */ void bg_check();
 	/* 80C39068 */ void actionInit();
@@ -85,7 +85,7 @@ struct daItemBase_c {
 	/* 80037A74 */ void show();
 	/* 80037ACC */ void chkDraw();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
+	/* 8014474C */ bool clothCreate();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144C7C */ void setListStart();
@@ -162,7 +162,7 @@ extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void initBaseMtx__15daItemKantera_cFv(); // 1
 extern "C" void setBaseMtx__15daItemKantera_cFv(); // 1
 extern "C" void Create__15daItemKantera_cFv(); // 1
-extern "C" void __CreateHeap__15daItemKantera_cFv(); // 1
+extern "C" bool __CreateHeap__15daItemKantera_cFv(); // 1
 extern "C" void create__15daItemKantera_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
@@ -240,7 +240,7 @@ extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void checkItemGet__FUci(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void setListStart__12daItemBase_cFv(); // 1
@@ -536,14 +536,9 @@ asm void daItemKantera_c::Create() {
 
 
 /* 80C38BA8-80C38BB0 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__15daItemKantera_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daItemKantera_c::__CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kantera/d_a_obj_kantera/__CreateHeap__15daItemKantera_cFv.s"
+bool daItemKantera_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C38BB0-80C38DAC 01FC+00 s=1 e=0 z=0  None .text      create__15daItemKantera_cFv                                  */

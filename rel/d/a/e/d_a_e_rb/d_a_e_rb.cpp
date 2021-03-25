@@ -83,19 +83,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE70 */ void scaleM(cXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -240,7 +240,7 @@ static void s_s_sub(void*, void*); // 2
 static void e_rb_base_1(e_rb_class*); // 2
 static void e_rb_base(e_rb_class*); // 2
 static void daE_RB_Execute(e_rb_class*); // 2
-static void daE_RB_IsDelete(e_rb_class*); // 2
+static bool daE_RB_IsDelete(e_rb_class*); // 2
 static void daE_RB_Delete(e_rb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_RB_Create(fopAc_ac_c*); // 2
@@ -264,7 +264,7 @@ extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
 extern "C" static void e_rb_base__FP10e_rb_class(); // 1
 extern "C" static void daE_RB_Execute__FP10e_rb_class(); // 1
-extern "C" static void daE_RB_IsDelete__FP10e_rb_class(); // 1
+extern "C" static bool daE_RB_IsDelete__FP10e_rb_class(); // 1
 extern "C" static void daE_RB_Delete__FP10e_rb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_RB_Create__FP10fopAc_ac_c(); // 1
@@ -1001,14 +1001,9 @@ asm static void daE_RB_Execute(e_rb_class* param_0) {
 
 
 /* 80764104-8076410C 0008+00 s=1 e=0 z=0  None .text      daE_RB_IsDelete__FP10e_rb_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_RB_IsDelete(e_rb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_rb/d_a_e_rb/daE_RB_IsDelete__FP10e_rb_class.s"
+static bool daE_RB_IsDelete(e_rb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8076410C-80764174 0068+00 s=1 e=0 z=0  None .text      daE_RB_Delete__FP10e_rb_class                                */

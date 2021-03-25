@@ -120,7 +120,7 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -129,7 +129,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -243,7 +243,7 @@ struct dCcU_AtInfo {
 };
 
 struct daPy_py_c {
-	/* 8015F8C8 */ void checkBoomerangChargeTime();
+	/* 8015F8C8 */ bool checkBoomerangChargeTime();
 };
 
 struct dCamera_c {
@@ -316,7 +316,7 @@ static void action2(e_gb_class*); // 2
 static void cam_3d_morf(e_gb_class*, f32); // 2
 static void demo_camera(e_gb_class*); // 2
 static void daE_GB_Execute(e_gb_class*); // 2
-static void daE_GB_IsDelete(e_gb_class*); // 2
+static bool daE_GB_IsDelete(e_gb_class*); // 2
 static void daE_GB_Delete(e_gb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_GB_Create(fopAc_ac_c*); // 2
@@ -347,7 +347,7 @@ extern "C" static void action2__FP10e_gb_class(); // 1
 extern "C" static void cam_3d_morf__FP10e_gb_classf(); // 1
 extern "C" static void demo_camera__FP10e_gb_class(); // 1
 extern "C" static void daE_GB_Execute__FP10e_gb_class(); // 1
-extern "C" static void daE_GB_IsDelete__FP10e_gb_class(); // 1
+extern "C" static bool daE_GB_IsDelete__FP10e_gb_class(); // 1
 extern "C" static void daE_GB_Delete__FP10e_gb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -581,7 +581,7 @@ extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
 extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
 extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c(); // 1
 extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo(); // 1
-extern "C" void checkBoomerangChargeTime__9daPy_py_cFv(); // 1
+extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv(); // 1
 extern "C" void Start__9dCamera_cFv(); // 1
 extern "C" void Stop__9dCamera_cFv(); // 1
 extern "C" void SetTrimSize__9dCamera_cFl(); // 1
@@ -1521,14 +1521,9 @@ asm static void daE_GB_Execute(e_gb_class* param_0) {
 
 
 /* 806C64A0-806C64A8 0008+00 s=1 e=0 z=0  None .text      daE_GB_IsDelete__FP10e_gb_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_GB_IsDelete(e_gb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gb/d_a_e_gb/daE_GB_IsDelete__FP10e_gb_class.s"
+static bool daE_GB_IsDelete(e_gb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806C64A8-806C651C 0074+00 s=1 e=0 z=0  None .text      daE_GB_Delete__FP10e_gb_class                                */
@@ -1653,25 +1648,15 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 806C6F48-806C6F4C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gb/d_a_e_gb/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806C6F4C-806C6F50 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_gb/d_a_e_gb/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806C6F50-806C6F98 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -35,15 +35,15 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void daKytag02_Draw(kytag02_class*); // 2
+static bool daKytag02_Draw(kytag02_class*); // 2
 static void daKytag02_Execute(kytag02_class*); // 2
-static void daKytag02_IsDelete(kytag02_class*); // 2
+static bool daKytag02_IsDelete(kytag02_class*); // 2
 static void daKytag02_Delete(kytag02_class*); // 2
 static void daKytag02_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daKytag02_Draw__FP13kytag02_class(); // 1
+extern "C" static bool daKytag02_Draw__FP13kytag02_class(); // 1
 extern "C" static void daKytag02_Execute__FP13kytag02_class(); // 1
-extern "C" static void daKytag02_IsDelete__FP13kytag02_class(); // 1
+extern "C" static bool daKytag02_IsDelete__FP13kytag02_class(); // 1
 extern "C" static void daKytag02_Delete__FP13kytag02_class(); // 1
 extern "C" static void daKytag02_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3667;
@@ -82,14 +82,9 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* 80855AB8-80855AC0 0008+00 s=1 e=0 z=0  None .text      daKytag02_Draw__FP13kytag02_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag02_Draw(kytag02_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag02/d_a_kytag02/daKytag02_Draw__FP13kytag02_class.s"
+static bool daKytag02_Draw(kytag02_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -108,14 +103,9 @@ asm static void daKytag02_Execute(kytag02_class* param_0) {
 
 
 /* 80855CC4-80855CCC 0008+00 s=1 e=0 z=0  None .text      daKytag02_IsDelete__FP13kytag02_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag02_IsDelete(kytag02_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag02/d_a_kytag02/daKytag02_IsDelete__FP13kytag02_class.s"
+static bool daKytag02_IsDelete(kytag02_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80855CCC-80855CEC 0020+00 s=1 e=0 z=0  None .text      daKytag02_Delete__FP13kytag02_class                          */

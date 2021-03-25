@@ -13,9 +13,9 @@
 
 struct daTag_SSDrink_c {
 	/* 80D62DB8 */ void create();
-	/* 80D62E5C */ void Delete();
+	/* 80D62E5C */ bool Delete();
 	/* 80D62E64 */ void Execute();
-	/* 80D62ED0 */ void Draw();
+	/* 80D62ED0 */ bool Draw();
 	/* 80D62ED8 */ void getTypeFromParam();
 	/* 80D62F80 */ void getSwitchFromParam();
 	/* 80D62F8C */ void getFlowNodeNum();
@@ -80,12 +80,12 @@ static void daTag_SSDrink_Create(void*); // 2
 static void daTag_SSDrink_Delete(void*); // 2
 static void daTag_SSDrink_Execute(void*); // 2
 static void daTag_SSDrink_Draw(void*); // 2
-static void daTag_SSDrink_IsDelete(void*); // 2
+static bool daTag_SSDrink_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_SSDrink_cFv(); // 1
-extern "C" void Delete__15daTag_SSDrink_cFv(); // 1
+extern "C" bool Delete__15daTag_SSDrink_cFv(); // 1
 extern "C" void Execute__15daTag_SSDrink_cFv(); // 1
-extern "C" void Draw__15daTag_SSDrink_cFv(); // 1
+extern "C" bool Draw__15daTag_SSDrink_cFv(); // 1
 extern "C" void getTypeFromParam__15daTag_SSDrink_cFv(); // 1
 extern "C" void getSwitchFromParam__15daTag_SSDrink_cFv(); // 1
 extern "C" void getFlowNodeNum__15daTag_SSDrink_cFv(); // 1
@@ -103,7 +103,7 @@ extern "C" static void daTag_SSDrink_Create__FPv(); // 1
 extern "C" static void daTag_SSDrink_Delete__FPv(); // 1
 extern "C" static void daTag_SSDrink_Execute__FPv(); // 1
 extern "C" static void daTag_SSDrink_Draw__FPv(); // 1
-extern "C" static void daTag_SSDrink_IsDelete__FPv(); // 1
+extern "C" static bool daTag_SSDrink_IsDelete__FPv(); // 1
 extern "C" void __dt__15daTag_SSDrink_cFv(); // 1
 extern "C" void setSoldOut__14daObj_SSBase_cFv(); // 1
 extern "C" extern u32 const lit_3991;
@@ -239,14 +239,9 @@ asm void daTag_SSDrink_c::create() {
 
 
 /* 80D62E5C-80D62E64 0008+00 s=1 e=0 z=0  None .text      Delete__15daTag_SSDrink_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_SSDrink_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/Delete__15daTag_SSDrink_cFv.s"
+bool daTag_SSDrink_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D62E64-80D62ED0 006C+00 s=2 e=0 z=0  None .text      Execute__15daTag_SSDrink_cFv                                 */
@@ -261,14 +256,9 @@ asm void daTag_SSDrink_c::Execute() {
 
 
 /* 80D62ED0-80D62ED8 0008+00 s=1 e=0 z=0  None .text      Draw__15daTag_SSDrink_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_SSDrink_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/Draw__15daTag_SSDrink_cFv.s"
+bool daTag_SSDrink_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D62ED8-80D62F80 00A8+00 s=2 e=0 z=0  None .text      getTypeFromParam__15daTag_SSDrink_cFv                        */
@@ -476,14 +466,9 @@ asm static void daTag_SSDrink_Draw(void* param_0) {
 
 
 /* 80D6371C-80D63724 0008+00 s=1 e=0 z=0  None .text      daTag_SSDrink_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_SSDrink_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/daTag_SSDrink_IsDelete__FPv.s"
+static bool daTag_SSDrink_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D63724-80D63794 0070+00 s=1 e=0 z=0  None .text      __dt__15daTag_SSDrink_cFv                                    */
@@ -498,14 +483,9 @@ asm daTag_SSDrink_c::~daTag_SSDrink_c() {
 
 
 /* 80D63794-80D63798 0004+00 s=1 e=0 z=0  None .text      setSoldOut__14daObj_SSBase_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_SSBase_c::setSoldOut() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ss_drink/d_a_tag_ss_drink/setSoldOut__14daObj_SSBase_cFv.s"
+void daObj_SSBase_c::setSoldOut() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

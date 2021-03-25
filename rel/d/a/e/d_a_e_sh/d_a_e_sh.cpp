@@ -89,19 +89,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -133,13 +133,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -240,7 +240,7 @@ void action(e_sh_class*); // 2
 static void eff_set(e_sh_class*); // 2
 static void anm_se_set(e_sh_class*); // 2
 static void daE_SH_Execute(e_sh_class*); // 2
-static void daE_SH_IsDelete(e_sh_class*); // 2
+static bool daE_SH_IsDelete(e_sh_class*); // 2
 static void daE_SH_Delete(e_sh_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_SH_Create(fopAc_ac_c*); // 2
@@ -262,7 +262,7 @@ extern "C" void action__FP10e_sh_class(); // 1
 extern "C" static void eff_set__FP10e_sh_class(); // 1
 extern "C" static void anm_se_set__FP10e_sh_class(); // 1
 extern "C" static void daE_SH_Execute__FP10e_sh_class(); // 1
-extern "C" static void daE_SH_IsDelete__FP10e_sh_class(); // 1
+extern "C" static bool daE_SH_IsDelete__FP10e_sh_class(); // 1
 extern "C" static void daE_SH_Delete__FP10e_sh_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_SH_Create__FP10fopAc_ac_c(); // 1
@@ -1131,14 +1131,9 @@ asm static void daE_SH_Execute(e_sh_class* param_0) {
 
 
 /* 80790FC0-80790FC8 0008+00 s=1 e=0 z=0  None .text      daE_SH_IsDelete__FP10e_sh_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_SH_IsDelete(e_sh_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sh/d_a_e_sh/daE_SH_IsDelete__FP10e_sh_class.s"
+static bool daE_SH_IsDelete(e_sh_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80790FC8-80791030 0068+00 s=1 e=0 z=0  None .text      daE_SH_Delete__FP10e_sh_class                                */

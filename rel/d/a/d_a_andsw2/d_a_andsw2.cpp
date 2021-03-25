@@ -56,7 +56,7 @@ static void daAndsw2_actionTimer(daAndsw2_c*); // 2
 static void daAndsw2_actionOrder(daAndsw2_c*); // 2
 static void daAndsw2_actionEvent(daAndsw2_c*); // 2
 static void daAndsw2_actionOff(daAndsw2_c*); // 2
-static void daAndsw2_actionWait(daAndsw2_c*); // 2
+static bool daAndsw2_actionWait(daAndsw2_c*); // 2
 static void daAndsw2_Execute(daAndsw2_c*); // 2
 static void daAndsw2_Delete(daAndsw2_c*); // 2
 static void daAndsw2_Create(fopAc_ac_c*); // 2
@@ -79,7 +79,7 @@ extern "C" static void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionWait__FP10daAndsw2_c(); // 1
+extern "C" static bool daAndsw2_actionWait__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_Execute__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_Delete__FP10daAndsw2_c(); // 1
 extern "C" static void daAndsw2_Create__FP10fopAc_ac_c(); // 1
@@ -329,14 +329,9 @@ asm static void daAndsw2_actionOff(daAndsw2_c* param_0) {
 
 
 /* 804D6A34-804D6A3C 0008+00 s=1 e=0 z=0  None .text      daAndsw2_actionWait__FP10daAndsw2_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daAndsw2_actionWait(daAndsw2_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_andsw2/d_a_andsw2/daAndsw2_actionWait__FP10daAndsw2_c.s"
+static bool daAndsw2_actionWait(daAndsw2_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

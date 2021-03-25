@@ -104,6 +104,9 @@ struct dBgS_GndChk {
 	/* 800775F0 */ ~dBgS_GndChk();
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
 };
@@ -111,14 +114,11 @@ struct cBgS_PolyInfo {
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -222,9 +222,9 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -564,14 +564,9 @@ asm void daObjL4DigSand_c::mode_init_end() {
 
 
 /* 80C67100-80C67104 0004+00 s=1 e=0 z=0  None .text      mode_end__16daObjL4DigSand_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjL4DigSand_c::mode_end() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4digsand/d_a_obj_lv4digsand/mode_end__16daObjL4DigSand_cFv.s"
+void daObjL4DigSand_c::mode_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C67104-80C671A8 00A4+00 s=1 e=0 z=0  None .text      Draw__16daObjL4DigSand_cFv                                   */

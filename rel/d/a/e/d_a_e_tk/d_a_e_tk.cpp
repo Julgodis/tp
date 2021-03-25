@@ -48,19 +48,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -207,7 +207,7 @@ static void e_tk_s_damage(e_tk_class*); // 2
 static void e_tk_damage(e_tk_class*); // 2
 static void action(e_tk_class*); // 2
 static void daE_TK_Execute(e_tk_class*); // 2
-static void daE_TK_IsDelete(e_tk_class*); // 2
+static bool daE_TK_IsDelete(e_tk_class*); // 2
 static void daE_TK_Delete(e_tk_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_TK_Create(fopAc_ac_c*); // 2
@@ -228,7 +228,7 @@ extern "C" static void e_tk_s_damage__FP10e_tk_class(); // 1
 extern "C" static void e_tk_damage__FP10e_tk_class(); // 1
 extern "C" static void action__FP10e_tk_class(); // 1
 extern "C" static void daE_TK_Execute__FP10e_tk_class(); // 1
-extern "C" static void daE_TK_IsDelete__FP10e_tk_class(); // 1
+extern "C" static bool daE_TK_IsDelete__FP10e_tk_class(); // 1
 extern "C" static void daE_TK_Delete__FP10e_tk_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_TK_Create__FP10fopAc_ac_c(); // 1
@@ -792,14 +792,9 @@ asm static void daE_TK_Execute(e_tk_class* param_0) {
 
 
 /* 807B9C50-807B9C58 0008+00 s=1 e=0 z=0  None .text      daE_TK_IsDelete__FP10e_tk_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_TK_IsDelete(e_tk_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tk/d_a_e_tk/daE_TK_IsDelete__FP10e_tk_class.s"
+static bool daE_TK_IsDelete(e_tk_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807B9C58-807B9CC0 0068+00 s=1 e=0 z=0  None .text      daE_TK_Delete__FP10e_tk_class                                */

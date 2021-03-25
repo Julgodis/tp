@@ -15,6 +15,15 @@ struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
+};
+
 struct JASInst {
 };
 
@@ -23,15 +32,6 @@ struct JASBasicBank {
 	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
 	/* 80297E68 */ void setInst(int, JASInst*);
 	/* 80297E80 */ void getInst(int) const;
-};
-
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
 };
 
 struct JASBNKParser {

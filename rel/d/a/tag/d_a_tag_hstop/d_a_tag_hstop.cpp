@@ -55,7 +55,7 @@ struct dMsgFlow_c {
 static void daTagHstop_Create(fopAc_ac_c*); // 2
 static void daTagHstop_Delete(daTagHstop_c*); // 2
 static void daTagHstop_Execute(daTagHstop_c*); // 2
-static void daTagHstop_Draw(daTagHstop_c*); // 2
+static bool daTagHstop_Draw(daTagHstop_c*); // 2
 
 extern "C" void create__12daTagHstop_cFv(); // 1
 extern "C" static void daTagHstop_Create__FP10fopAc_ac_c(); // 1
@@ -64,7 +64,7 @@ extern "C" static void daTagHstop_Delete__FP12daTagHstop_c(); // 1
 extern "C" void setActive__12daTagHstop_cFv(); // 1
 extern "C" void execute__12daTagHstop_cFv(); // 1
 extern "C" static void daTagHstop_Execute__FP12daTagHstop_c(); // 1
-extern "C" static void daTagHstop_Draw__FP12daTagHstop_c(); // 1
+extern "C" static bool daTagHstop_Draw__FP12daTagHstop_c(); // 1
 extern "C" void __sinit_d_a_tag_hstop_cpp(); // 1
 extern "C" extern void* g_profile_Tag_Hstop[12];
 
@@ -189,14 +189,9 @@ asm static void daTagHstop_Execute(daTagHstop_c* param_0) {
 
 
 /* 805A4AC8-805A4AD0 0008+00 s=1 e=0 z=0  None .text      daTagHstop_Draw__FP12daTagHstop_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagHstop_Draw(daTagHstop_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_hstop/d_a_tag_hstop/daTagHstop_Draw__FP12daTagHstop_c.s"
+static bool daTagHstop_Draw(daTagHstop_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A4AD0-805A4B0C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_hstop_cpp                                    */

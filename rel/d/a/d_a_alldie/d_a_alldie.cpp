@@ -14,7 +14,7 @@
 struct daAlldie_c {
 	/* 804D5818 */ void getEventNo();
 	/* 804D5824 */ void getSwbit();
-	/* 804D5830 */ void actionWait();
+	/* 804D5830 */ bool actionWait();
 	/* 804D5838 */ void actionCheck();
 	/* 804D5888 */ void actionTimer();
 	/* 804D5938 */ void actionOrder();
@@ -47,24 +47,24 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-static void daAlldie_Draw(daAlldie_c*); // 2
+static bool daAlldie_Draw(daAlldie_c*); // 2
 static void daAlldie_Execute(daAlldie_c*); // 2
-static void daAlldie_IsDelete(daAlldie_c*); // 2
+static bool daAlldie_IsDelete(daAlldie_c*); // 2
 static void daAlldie_Delete(daAlldie_c*); // 2
 static void daAlldie_Create(fopAc_ac_c*); // 2
 
 extern "C" void getEventNo__10daAlldie_cFv(); // 1
 extern "C" void getSwbit__10daAlldie_cFv(); // 1
-extern "C" void actionWait__10daAlldie_cFv(); // 1
+extern "C" bool actionWait__10daAlldie_cFv(); // 1
 extern "C" void actionCheck__10daAlldie_cFv(); // 1
 extern "C" void actionTimer__10daAlldie_cFv(); // 1
 extern "C" void actionOrder__10daAlldie_cFv(); // 1
 extern "C" void actionEvent__10daAlldie_cFv(); // 1
 extern "C" void actionNext__10daAlldie_cFv(); // 1
 extern "C" void execute__10daAlldie_cFv(); // 1
-extern "C" static void daAlldie_Draw__FP10daAlldie_c(); // 1
+extern "C" static bool daAlldie_Draw__FP10daAlldie_c(); // 1
 extern "C" static void daAlldie_Execute__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_IsDelete__FP10daAlldie_c(); // 1
+extern "C" static bool daAlldie_IsDelete__FP10daAlldie_c(); // 1
 extern "C" static void daAlldie_Delete__FP10daAlldie_c(); // 1
 extern "C" static void daAlldie_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_ALLDIE[12];
@@ -119,14 +119,9 @@ asm void daAlldie_c::getSwbit() {
 
 
 /* 804D5830-804D5838 0008+00 s=1 e=0 z=0  None .text      actionWait__10daAlldie_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daAlldie_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/actionWait__10daAlldie_cFv.s"
+bool daAlldie_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5838-804D5888 0050+00 s=1 e=0 z=0  None .text      actionCheck__10daAlldie_cFv                                  */
@@ -196,14 +191,9 @@ asm void daAlldie_c::execute() {
 
 
 /* 804D5B8C-804D5B94 0008+00 s=1 e=0 z=0  None .text      daAlldie_Draw__FP10daAlldie_c                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daAlldie_Draw(daAlldie_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Draw__FP10daAlldie_c.s"
+static bool daAlldie_Draw(daAlldie_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5B94-804D5BB8 0024+00 s=1 e=0 z=0  None .text      daAlldie_Execute__FP10daAlldie_c                             */
@@ -218,14 +208,9 @@ asm static void daAlldie_Execute(daAlldie_c* param_0) {
 
 
 /* 804D5BB8-804D5BC0 0008+00 s=1 e=0 z=0  None .text      daAlldie_IsDelete__FP10daAlldie_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daAlldie_IsDelete(daAlldie_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_IsDelete__FP10daAlldie_c.s"
+static bool daAlldie_IsDelete(daAlldie_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5BC0-804D5BF0 0030+00 s=1 e=0 z=0  None .text      daAlldie_Delete__FP10daAlldie_c                              */

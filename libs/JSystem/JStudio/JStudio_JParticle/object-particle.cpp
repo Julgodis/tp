@@ -279,14 +279,9 @@ asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_prepare() {
 
 
 /* 8028E97C-8028E980 0004+00 s=1 e=0 z=0  None .text      adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_end() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv.s"
+void JStudio_JParticle::TAdaptor_particle::adaptor_do_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8028E980-8028EA68 00E8+00 s=1 e=0 z=0  None .text      adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl */

@@ -16,10 +16,16 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_motionAnmData_c {
 };
 
 struct J3DJoint {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct daNpcT_MotionSeqMngr_c {
@@ -28,12 +34,6 @@ struct daNpcT_MotionSeqMngr_c {
 
 	/* 80145898 */ void initialize();
 	/* 80971FD0 */ ~daNpcT_MotionSeqMngr_c();
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
 };
 
 struct daNpc_Bou_c {
@@ -56,13 +56,13 @@ struct daNpc_Bou_c {
 	/* 8096E0EC */ void setAfterTalkMotion();
 	/* 8096E18C */ void srchActors();
 	/* 8096E27C */ void evtTalk();
-	/* 8096E31C */ void evtEndProc();
+	/* 8096E31C */ bool evtEndProc();
 	/* 8096E324 */ void evtCutProc();
 	/* 8096E3EC */ void action();
 	/* 8096E7E0 */ void beforeMove();
 	/* 8096E8A4 */ void setAttnPos();
 	/* 8096EB14 */ void setCollision();
-	/* 8096EC6C */ void drawDbgInfo();
+	/* 8096EC6C */ bool drawDbgInfo();
 	/* 8096EC74 */ void changeAnm(int*, int*);
 	/* 8096ECC0 */ void selectAction();
 	/* 8096ED3C */ void chkAction(int (daNpc_Bou_c::*)(void*));
@@ -79,10 +79,10 @@ struct daNpc_Bou_c {
 	/* 80970DFC */ void talkwithJagar(void*);
 	/* 80970F9C */ void talk(void*);
 	/* 809726D4 */ daNpc_Bou_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
-	/* 809727B4 */ void getEyeballMaterialNo();
-	/* 809727BC */ void getHeadJointNo();
-	/* 809727C4 */ void getNeckJointNo();
-	/* 809727CC */ void getBackboneJointNo();
+	/* 809727B4 */ bool getEyeballMaterialNo();
+	/* 809727BC */ s32 getHeadJointNo();
+	/* 809727C4 */ s32 getNeckJointNo();
+	/* 809727CC */ bool getBackboneJointNo();
 	/* 809727D4 */ void checkChangeJoint(int);
 	/* 809727E4 */ void checkRemoveJoint(int);
 };
@@ -117,17 +117,6 @@ struct cCcD_GStts {
 	/* 80971524 */ ~cCcD_GStts();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800844F8 */ void GetTgHitObj();
-};
-
-struct csXyz {
-	/* 80971930 */ ~csXyz();
-	/* 80971ECC */ csXyz();
-};
-
 struct Vec {
 };
 
@@ -138,10 +127,21 @@ struct cXyz {
 	/* 80971FCC */ cXyz();
 };
 
-struct J3DModel {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800844F8 */ void GetTgHitObj();
 };
 
 struct _GXColorS10 {
+};
+
+struct csXyz {
+	/* 80971930 */ ~csXyz();
+	/* 80971ECC */ csXyz();
+};
+
+struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -158,7 +158,7 @@ struct daNpcT_c {
 	/* 8014997C */ void evtProc();
 	/* 80149BB4 */ void setFootPos();
 	/* 80149D7C */ void setFootPrtcl(cXyz*, f32, f32);
-	/* 8014A05C */ void checkCullDraw();
+	/* 8014A05C */ bool checkCullDraw();
 	/* 8014A064 */ void twilight();
 	/* 8014A0B0 */ void evtOrder();
 	/* 8014A224 */ void evtChange();
@@ -181,17 +181,17 @@ struct daNpcT_c {
 	/* 8097156C */ ~daNpcT_c();
 	/* 80971AC8 */ daNpcT_c(daNpcT_faceMotionAnmData_c const*, daNpcT_motionAnmData_c const*, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_MotionSeqMngr_c::sequenceStepData_c const*, int, daNpcT_evtData_c const*, char**);
 	/* 809724C0 */ void ctrlSubFaceMotion(int);
-	/* 809724C4 */ void getFootLJointNo();
-	/* 809724CC */ void getFootRJointNo();
-	/* 809724D4 */ void getEyeballLMaterialNo();
-	/* 809724DC */ void getEyeballRMaterialNo();
+	/* 809724C4 */ s32 getFootLJointNo();
+	/* 809724CC */ s32 getFootRJointNo();
+	/* 809724D4 */ bool getEyeballLMaterialNo();
+	/* 809724DC */ bool getEyeballRMaterialNo();
 	/* 809724E4 */ void afterMoved();
-	/* 809724E8 */ void chkXYItems();
+	/* 809724E8 */ bool chkXYItems();
 	/* 809724F0 */ void decTmr();
 	/* 80972508 */ void drawOtherMdl();
 	/* 8097250C */ void drawGhost();
-	/* 80972510 */ void afterSetFaceMotionAnm(int, int, f32, int);
-	/* 80972518 */ void afterSetMotionAnm(int, int, f32, int);
+	/* 80972510 */ bool afterSetFaceMotionAnm(int, int, f32, int);
+	/* 80972518 */ bool afterSetMotionAnm(int, int, f32, int);
 	/* 80972520 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
 	/* 80972550 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 80972580 */ void changeBck(int*, int*);
@@ -257,22 +257,22 @@ struct daNpc_Bou_Param_c {
 	/* 809727F4 */ ~daNpc_Bou_Param_c();
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -410,7 +410,7 @@ static void daNpc_Bou_Create(void*); // 2
 static void daNpc_Bou_Delete(void*); // 2
 static void daNpc_Bou_Execute(void*); // 2
 static void daNpc_Bou_Draw(void*); // 2
-static void daNpc_Bou_IsDelete(void*); // 2
+static bool daNpc_Bou_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__11daNpc_Bou_cFv(); // 1
@@ -442,13 +442,13 @@ extern "C" void checkChangeEvt__11daNpc_Bou_cFv(); // 1
 extern "C" void setAfterTalkMotion__11daNpc_Bou_cFv(); // 1
 extern "C" void srchActors__11daNpc_Bou_cFv(); // 1
 extern "C" void evtTalk__11daNpc_Bou_cFv(); // 1
-extern "C" void evtEndProc__11daNpc_Bou_cFv(); // 1
+extern "C" bool evtEndProc__11daNpc_Bou_cFv(); // 1
 extern "C" void evtCutProc__11daNpc_Bou_cFv(); // 1
 extern "C" void action__11daNpc_Bou_cFv(); // 1
 extern "C" void beforeMove__11daNpc_Bou_cFv(); // 1
 extern "C" void setAttnPos__11daNpc_Bou_cFv(); // 1
 extern "C" void setCollision__11daNpc_Bou_cFv(); // 1
-extern "C" void drawDbgInfo__11daNpc_Bou_cFv(); // 1
+extern "C" bool drawDbgInfo__11daNpc_Bou_cFv(); // 1
 extern "C" void changeAnm__11daNpc_Bou_cFPiPi(); // 1
 extern "C" void selectAction__11daNpc_Bou_cFv(); // 1
 extern "C" void chkAction__11daNpc_Bou_cFM11daNpc_Bou_cFPCvPvPv_i(); // 1
@@ -468,7 +468,7 @@ extern "C" static void daNpc_Bou_Create__FPv(); // 1
 extern "C" static void daNpc_Bou_Delete__FPv(); // 1
 extern "C" static void daNpc_Bou_Execute__FPv(); // 1
 extern "C" static void daNpc_Bou_Draw__FPv(); // 1
-extern "C" static void daNpc_Bou_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_Bou_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__8daNpcT_cFv(); // 1
@@ -491,17 +491,17 @@ extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void setEyeAngleY__15daNpcT_JntAnm_cF4cXyzsifs(); // 1
 extern "C" void setEyeAngleX__15daNpcT_JntAnm_cF4cXyzfs(); // 1
 extern "C" void ctrlSubFaceMotion__8daNpcT_cFi(); // 1
-extern "C" void getFootLJointNo__8daNpcT_cFv(); // 1
-extern "C" void getFootRJointNo__8daNpcT_cFv(); // 1
-extern "C" void getEyeballLMaterialNo__8daNpcT_cFv(); // 1
-extern "C" void getEyeballRMaterialNo__8daNpcT_cFv(); // 1
+extern "C" s32 getFootLJointNo__8daNpcT_cFv(); // 1
+extern "C" s32 getFootRJointNo__8daNpcT_cFv(); // 1
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv(); // 1
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv(); // 1
 extern "C" void afterMoved__8daNpcT_cFv(); // 1
-extern "C" void chkXYItems__8daNpcT_cFv(); // 1
+extern "C" bool chkXYItems__8daNpcT_cFv(); // 1
 extern "C" void decTmr__8daNpcT_cFv(); // 1
 extern "C" void drawOtherMdl__8daNpcT_cFv(); // 1
 extern "C" void drawGhost__8daNpcT_cFv(); // 1
-extern "C" void afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" void afterSetMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi(); // 1
 extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c(); // 1
 extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c(); // 1
 extern "C" void changeBck__8daNpcT_cFPiPi(); // 1
@@ -510,10 +510,10 @@ extern "C" void changeBtk__8daNpcT_cFPiPi(); // 1
 extern "C" static void func_8097258C(); // 1
 extern "C" void __sinit_d_a_npc_bou_cpp(); // 1
 extern "C" void __ct__11daNpc_Bou_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc(); // 1
-extern "C" void getEyeballMaterialNo__11daNpc_Bou_cFv(); // 1
-extern "C" void getHeadJointNo__11daNpc_Bou_cFv(); // 1
-extern "C" void getNeckJointNo__11daNpc_Bou_cFv(); // 1
-extern "C" void getBackboneJointNo__11daNpc_Bou_cFv(); // 1
+extern "C" bool getEyeballMaterialNo__11daNpc_Bou_cFv(); // 1
+extern "C" s32 getHeadJointNo__11daNpc_Bou_cFv(); // 1
+extern "C" s32 getNeckJointNo__11daNpc_Bou_cFv(); // 1
+extern "C" bool getBackboneJointNo__11daNpc_Bou_cFv(); // 1
 extern "C" void checkChangeJoint__11daNpc_Bou_cFi(); // 1
 extern "C" void checkRemoveJoint__11daNpc_Bou_cFi(); // 1
 extern "C" void __dt__17daNpc_Bou_Param_cFv(); // 1
@@ -644,7 +644,7 @@ extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel(); // 1
 extern "C" void evtProc__8daNpcT_cFv(); // 1
 extern "C" void setFootPos__8daNpcT_cFv(); // 1
 extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff(); // 1
-extern "C" void checkCullDraw__8daNpcT_cFv(); // 1
+extern "C" bool checkCullDraw__8daNpcT_cFv(); // 1
 extern "C" void twilight__8daNpcT_cFv(); // 1
 extern "C" void evtOrder__8daNpcT_cFv(); // 1
 extern "C" void evtChange__8daNpcT_cFv(); // 1
@@ -1763,14 +1763,9 @@ asm void daNpc_Bou_c::evtTalk() {
 
 
 /* 8096E31C-8096E324 0008+00 s=1 e=0 z=0  None .text      evtEndProc__11daNpc_Bou_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::evtEndProc() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/evtEndProc__11daNpc_Bou_cFv.s"
+bool daNpc_Bou_c::evtEndProc() {
+	return true;
 }
-#pragma pop
 
 
 /* 8096E324-8096E3EC 00C8+00 s=1 e=0 z=0  None .text      evtCutProc__11daNpc_Bou_cFv                                  */
@@ -1829,14 +1824,9 @@ asm void daNpc_Bou_c::setCollision() {
 
 
 /* 8096EC6C-8096EC74 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__11daNpc_Bou_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/drawDbgInfo__11daNpc_Bou_cFv.s"
+bool daNpc_Bou_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 8096EC74-8096ECC0 004C+00 s=1 e=0 z=0  None .text      changeAnm__11daNpc_Bou_cFPiPi                                */
@@ -2049,14 +2039,9 @@ asm static void daNpc_Bou_Draw(void* param_0) {
 
 
 /* 809714EC-809714F4 0008+00 s=1 e=0 z=0  None .text      daNpc_Bou_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Bou_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/daNpc_Bou_IsDelete__FPv.s"
+static bool daNpc_Bou_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809714F4-80971524 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -2181,14 +2166,9 @@ asm daNpcT_c::daNpcT_c(daNpcT_faceMotionAnmData_c const* param_0, daNpcT_motionA
 
 
 /* 80971ECC-80971ED0 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80971ED0-80971FCC 00FC+00 s=1 e=0 z=0  None .text      __dt__15daNpcT_JntAnm_cFv                                    */
@@ -2203,14 +2183,9 @@ asm daNpcT_JntAnm_c::~daNpcT_JntAnm_c() {
 
 
 /* 80971FCC-80971FD0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80971FD0-80972018 0048+00 s=1 e=0 z=0  None .text      __dt__22daNpcT_MotionSeqMngr_cFv                             */
@@ -2291,80 +2266,45 @@ asm void daNpcT_JntAnm_c::setEyeAngleX(cXyz param_0, f32 param_1, s16 param_2) {
 
 
 /* 809724C0-809724C4 0004+00 s=1 e=0 z=0  None .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::ctrlSubFaceMotion(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/ctrlSubFaceMotion__8daNpcT_cFi.s"
+void daNpcT_c::ctrlSubFaceMotion(int param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809724C4-809724CC 0008+00 s=1 e=0 z=0  None .text      getFootLJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getFootLJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getFootLJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootLJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 809724CC-809724D4 0008+00 s=1 e=0 z=0  None .text      getFootRJointNo__8daNpcT_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getFootRJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getFootRJointNo__8daNpcT_cFv.s"
+s32 daNpcT_c::getFootRJointNo() {
+	return -1;
 }
-#pragma pop
 
 
 /* 809724D4-809724DC 0008+00 s=1 e=0 z=0  None .text      getEyeballLMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getEyeballLMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getEyeballLMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballLMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809724DC-809724E4 0008+00 s=1 e=0 z=0  None .text      getEyeballRMaterialNo__8daNpcT_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::getEyeballRMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getEyeballRMaterialNo__8daNpcT_cFv.s"
+bool daNpcT_c::getEyeballRMaterialNo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809724E4-809724E8 0004+00 s=1 e=0 z=0  None .text      afterMoved__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterMoved() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/afterMoved__8daNpcT_cFv.s"
+void daNpcT_c::afterMoved() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809724E8-809724F0 0008+00 s=1 e=0 z=0  None .text      chkXYItems__8daNpcT_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::chkXYItems() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/chkXYItems__8daNpcT_cFv.s"
+bool daNpcT_c::chkXYItems() {
+	return false;
 }
-#pragma pop
 
 
 /* 809724F0-80972508 0018+00 s=1 e=0 z=0  None .text      decTmr__8daNpcT_cFv                                          */
@@ -2379,47 +2319,27 @@ asm void daNpcT_c::decTmr() {
 
 
 /* 80972508-8097250C 0004+00 s=1 e=0 z=0  None .text      drawOtherMdl__8daNpcT_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::drawOtherMdl() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/drawOtherMdl__8daNpcT_cFv.s"
+void daNpcT_c::drawOtherMdl() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8097250C-80972510 0004+00 s=1 e=0 z=0  None .text      drawGhost__8daNpcT_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::drawGhost() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/drawGhost__8daNpcT_cFv.s"
+void daNpcT_c::drawGhost() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80972510-80972518 0008+00 s=1 e=0 z=0  None .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterSetFaceMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/afterSetFaceMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetFaceMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80972518-80972520 0008+00 s=1 e=0 z=0  None .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::afterSetMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/afterSetMotionAnm__8daNpcT_cFiifi.s"
+bool daNpcT_c::afterSetMotionAnm(int param_0, int param_1, f32 param_2, int param_3) {
+	return true;
 }
-#pragma pop
 
 
 /* 80972520-80972550 0030+00 s=1 e=0 z=0  None .text      getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c     */
@@ -2445,36 +2365,21 @@ asm void daNpcT_c::getMotionAnm(daNpcT_motionAnmData_c param_0) {
 
 
 /* 80972580-80972584 0004+00 s=1 e=0 z=0  None .text      changeBck__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBck(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/changeBck__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBck(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80972584-80972588 0004+00 s=1 e=0 z=0  None .text      changeBtp__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBtp(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/changeBtp__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtp(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80972588-8097258C 0004+00 s=1 e=0 z=0  None .text      changeBtk__8daNpcT_cFPiPi                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcT_c::changeBtk(int* param_0, int* param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/changeBtk__8daNpcT_cFPiPi.s"
+void daNpcT_c::changeBtk(int* param_0, int* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8097258C-809725A8 001C+00 s=2 e=0 z=0  None .text      cLib_calcTimer<i>__FPi                                       */
@@ -2525,47 +2430,27 @@ asm daNpc_Bou_c::daNpc_Bou_c(daNpcT_faceMotionAnmData_c const* param_0, daNpcT_m
 
 
 /* 809727B4-809727BC 0008+00 s=1 e=0 z=0  None .text      getEyeballMaterialNo__11daNpc_Bou_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::getEyeballMaterialNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getEyeballMaterialNo__11daNpc_Bou_cFv.s"
+bool daNpc_Bou_c::getEyeballMaterialNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 809727BC-809727C4 0008+00 s=1 e=0 z=0  None .text      getHeadJointNo__11daNpc_Bou_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::getHeadJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getHeadJointNo__11daNpc_Bou_cFv.s"
+s32 daNpc_Bou_c::getHeadJointNo() {
+	return 4;
 }
-#pragma pop
 
 
 /* 809727C4-809727CC 0008+00 s=1 e=0 z=0  None .text      getNeckJointNo__11daNpc_Bou_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::getNeckJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getNeckJointNo__11daNpc_Bou_cFv.s"
+s32 daNpc_Bou_c::getNeckJointNo() {
+	return 3;
 }
-#pragma pop
 
 
 /* 809727CC-809727D4 0008+00 s=1 e=0 z=0  None .text      getBackboneJointNo__11daNpc_Bou_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_Bou_c::getBackboneJointNo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_bou/d_a_npc_bou/getBackboneJointNo__11daNpc_Bou_cFv.s"
+bool daNpc_Bou_c::getBackboneJointNo() {
+	return true;
 }
-#pragma pop
 
 
 /* 809727D4-809727E4 0010+00 s=1 e=0 z=0  None .text      checkChangeJoint__11daNpc_Bou_cFi                            */

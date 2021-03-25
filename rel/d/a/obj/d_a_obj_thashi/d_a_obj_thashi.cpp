@@ -100,9 +100,9 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -159,7 +159,7 @@ static void daObjTHASHI_Create(fopAc_ac_c*); // 2
 static void daObjTHASHI_Delete(daObjTHASHI_c*); // 2
 static void daObjTHASHI_Draw(daObjTHASHI_c*); // 2
 static void daObjTHASHI_Execute(daObjTHASHI_c*); // 2
-static void daObjTHASHI_IsDelete(daObjTHASHI_c*); // 2
+static bool daObjTHASHI_IsDelete(daObjTHASHI_c*); // 2
 
 extern "C" void initCcCylinder__13daObjTHASHI_cFv(); // 1
 extern "C" static void daObjTHASHI_Create__FP10fopAc_ac_c(); // 1
@@ -179,7 +179,7 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daObjTHASHI_IsDelete__FP13daObjTHASHI_c(); // 1
+extern "C" static bool daObjTHASHI_IsDelete__FP13daObjTHASHI_c(); // 1
 extern "C" void Create__13daObjTHASHI_cFv(); // 1
 extern "C" void Execute__13daObjTHASHI_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjTHASHI_cFv(); // 1
@@ -261,9 +261,9 @@ extern "C" void __ct__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__9dBgS_AcchFv(); // 1
 extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -758,36 +758,21 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80D0CE60-80D0CE64 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thashi/d_a_obj_thashi/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D0CE64-80D0CE68 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thashi/d_a_obj_thashi/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D0CE68-80D0CE70 0008+00 s=1 e=0 z=0  None .text      daObjTHASHI_IsDelete__FP13daObjTHASHI_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjTHASHI_IsDelete(daObjTHASHI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_thashi/d_a_obj_thashi/daObjTHASHI_IsDelete__FP13daObjTHASHI_c.s"
+static bool daObjTHASHI_IsDelete(daObjTHASHI_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D0CE70-80D0CEB4 0044+00 s=1 e=0 z=0  None .text      Create__13daObjTHASHI_cFv                                    */

@@ -46,8 +46,8 @@ struct daPoFire_c {
 	/* 80CB3AE8 */ void modeFireEnd();
 	/* 80CB3B70 */ void eventStart();
 	/* 80CB3BE0 */ void eventRun();
-	/* 80CB3C64 */ void eventEnd();
-	/* 80CB3C6C */ void Draw();
+	/* 80CB3C64 */ bool eventEnd();
+	/* 80CB3C6C */ bool Draw();
 	/* 80CB3C74 */ void Delete();
 	/* 80CB3E58 */ ~daPoFire_c();
 };
@@ -61,9 +61,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80CB3DDC */ ~dEvLib_callback_c();
-	/* 80CB3E24 */ void eventStart();
-	/* 80CB3E2C */ void eventRun();
-	/* 80CB3E34 */ void eventEnd();
+	/* 80CB3E24 */ bool eventStart();
+	/* 80CB3E2C */ bool eventRun();
+	/* 80CB3E34 */ bool eventEnd();
 };
 
 struct daPoCandle_c {
@@ -91,10 +91,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct Vec {
@@ -106,10 +106,10 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -187,8 +187,8 @@ extern "C" void init_modeFireEnd__10daPoFire_cFv(); // 1
 extern "C" void modeFireEnd__10daPoFire_cFv(); // 1
 extern "C" void eventStart__10daPoFire_cFv(); // 1
 extern "C" void eventRun__10daPoFire_cFv(); // 1
-extern "C" void eventEnd__10daPoFire_cFv(); // 1
-extern "C" void Draw__10daPoFire_cFv(); // 1
+extern "C" bool eventEnd__10daPoFire_cFv(); // 1
+extern "C" bool Draw__10daPoFire_cFv(); // 1
 extern "C" void Delete__10daPoFire_cFv(); // 1
 extern "C" static void daPoFire_Draw__FP10daPoFire_c(); // 1
 extern "C" static void daPoFire_Execute__FP10daPoFire_c(); // 1
@@ -201,9 +201,9 @@ extern "C" static void func_80CB3DC4(); // 1
 extern "C" static void func_80CB3DCC(); // 1
 extern "C" static void func_80CB3DD4(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void getFirePos__12daPoCandle_cFv(); // 1
 extern "C" void __dt__10daPoFire_cFv(); // 1
 extern "C" extern u32 const lit_3889;
@@ -815,25 +815,15 @@ asm void daPoFire_c::eventRun() {
 
 
 /* 80CB3C64-80CB3C6C 0008+00 s=2 e=0 z=0  None .text      eventEnd__10daPoFire_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPoFire_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventEnd__10daPoFire_cFv.s"
+bool daPoFire_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3C6C-80CB3C74 0008+00 s=1 e=0 z=0  None .text      Draw__10daPoFire_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPoFire_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/Draw__10daPoFire_cFv.s"
+bool daPoFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3C74-80CB3CA4 0030+00 s=1 e=0 z=0  None .text      Delete__10daPoFire_cFv                                       */
@@ -969,36 +959,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80CB3E24-80CB3E2C 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E2C-80CB3E34 0008+00 s=1 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E34-80CB3E3C 0008+00 s=1 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_poFire/d_a_obj_poFire/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB3E3C-80CB3E58 001C+00 s=1 e=0 z=0  None .text      getFirePos__12daPoCandle_cFv                                 */

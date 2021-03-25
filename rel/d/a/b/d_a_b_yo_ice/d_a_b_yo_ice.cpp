@@ -209,7 +209,7 @@ struct Z2SoundObjSimple {
 
 static void daB_YOI_Draw(daB_YOI_c*); // 2
 static void daB_YOI_Execute(daB_YOI_c*); // 2
-static void daB_YOI_IsDelete(daB_YOI_c*); // 2
+static bool daB_YOI_IsDelete(daB_YOI_c*); // 2
 static void daB_YOI_Delete(daB_YOI_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_YOI_Create(daB_YOI_c*); // 2
@@ -241,7 +241,7 @@ extern "C" void mtx_set__9daB_YOI_cFv(); // 1
 extern "C" void cc_set__9daB_YOI_cFv(); // 1
 extern "C" void execute__9daB_YOI_cFv(); // 1
 extern "C" static void daB_YOI_Execute__FP9daB_YOI_c(); // 1
-extern "C" static void daB_YOI_IsDelete__FP9daB_YOI_c(); // 1
+extern "C" static bool daB_YOI_IsDelete__FP9daB_YOI_c(); // 1
 extern "C" void _delete__9daB_YOI_cFv(); // 1
 extern "C" static void daB_YOI_Delete__FP9daB_YOI_c(); // 1
 extern "C" void CreateHeap__9daB_YOI_cFv(); // 1
@@ -1114,14 +1114,9 @@ asm static void daB_YOI_Execute(daB_YOI_c* param_0) {
 
 
 /* 8063D454-8063D45C 0008+00 s=1 e=0 z=0  None .text      daB_YOI_IsDelete__FP9daB_YOI_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_YOI_IsDelete(daB_YOI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_yo_ice/d_a_b_yo_ice/daB_YOI_IsDelete__FP9daB_YOI_c.s"
+static bool daB_YOI_IsDelete(daB_YOI_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

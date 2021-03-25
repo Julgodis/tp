@@ -97,7 +97,7 @@ struct cBgW_BgId {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjCatDoor_Draw(daObjCatDoor_c*); // 2
 static void daObjCatDoor_Execute(daObjCatDoor_c*); // 2
-static void daObjCatDoor_IsDelete(daObjCatDoor_c*); // 2
+static bool daObjCatDoor_IsDelete(daObjCatDoor_c*); // 2
 static void daObjCatDoor_Delete(daObjCatDoor_c*); // 2
 static void daObjCatDoor_Create(fopAc_ac_c*); // 2
 
@@ -108,7 +108,7 @@ extern "C" void setBaseMtx__14daObjCatDoor_cFv(); // 1
 extern "C" void calcOpen__14daObjCatDoor_cFv(); // 1
 extern "C" static void daObjCatDoor_Draw__FP14daObjCatDoor_c(); // 1
 extern "C" static void daObjCatDoor_Execute__FP14daObjCatDoor_c(); // 1
-extern "C" static void daObjCatDoor_IsDelete__FP14daObjCatDoor_c(); // 1
+extern "C" static bool daObjCatDoor_IsDelete__FP14daObjCatDoor_c(); // 1
 extern "C" static void daObjCatDoor_Delete__FP14daObjCatDoor_c(); // 1
 extern "C" static void daObjCatDoor_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3712;
@@ -297,14 +297,9 @@ asm static void daObjCatDoor_Execute(daObjCatDoor_c* param_0) {
 
 
 /* 80BC4760-80BC4768 0008+00 s=1 e=0 z=0  None .text      daObjCatDoor_IsDelete__FP14daObjCatDoor_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjCatDoor_IsDelete(daObjCatDoor_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_catdoor/d_a_obj_catdoor/daObjCatDoor_IsDelete__FP14daObjCatDoor_c.s"
+static bool daObjCatDoor_IsDelete(daObjCatDoor_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BC4768-80BC4848 00E0+00 s=1 e=0 z=0  None .text      daObjCatDoor_Delete__FP14daObjCatDoor_c                      */

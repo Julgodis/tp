@@ -111,10 +111,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -146,9 +146,9 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -192,7 +192,7 @@ static void daObjCRVFENCE_Delete(daObjCRVFENCE_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void daObjCRVFENCE_Draw(daObjCRVFENCE_c*); // 2
 static void daObjCRVFENCE_Execute(daObjCRVFENCE_c*); // 2
-static void daObjCRVFENCE_IsDelete(daObjCRVFENCE_c*); // 2
+static bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c*); // 2
 
 extern "C" void CheckVec__15daObjCRVFENCE_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -218,7 +218,7 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c(); // 1
+extern "C" static bool daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c(); // 1
 extern "C" void Create__15daObjCRVFENCE_cFv(); // 1
 extern "C" void Execute__15daObjCRVFENCE_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjCRVFENCE_cFv(); // 1
@@ -303,9 +303,9 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -791,25 +791,15 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 80BCFFBC-80BCFFC0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BCFFC0-80BCFFC8 0008+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjCRVFENCE_IsDelete(daObjCRVFENCE_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c.s"
+static bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BCFFC8-80BD000C 0044+00 s=1 e=0 z=0  None .text      Create__15daObjCRVFENCE_cFv                                  */

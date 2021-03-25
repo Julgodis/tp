@@ -25,10 +25,10 @@ SECTION_INIT static void __fill_mem(); // 1
 SECTION_INIT void memcpy(); // 1
 SECTION_INIT void TRK_memset(); // 1
 SECTION_INIT void TRK_memcpy(); // 1
-extern "C" extern u8 __TRK_unknown_data[7988];
+extern "C" extern u8 const __TRK_unknown_data[7988];
 SECTION_INIT void __TRK_reset(); // 1
-extern "C" extern u8 _rom_copy_info[132];
-extern "C" extern u8 _bss_init_info[32];
+extern "C" extern u8 const _rom_copy_info[132];
+extern "C" extern u8 const _bss_init_info[32];
 
 // 
 // External References:
@@ -198,7 +198,7 @@ SECTION_INIT asm void TRK_memcpy() {
 
 
 /* 800035E4-80005518 1F34+00 s=0 e=1 z=0  None .init      __TRK_unknown_data                                           */
-SECTION_INIT u8 __TRK_unknown_data[7988] = {
+SECTION_INIT u8 const __TRK_unknown_data[7988] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x77, 0x65, 0x72, 0x6B, 0x73, 0x20, 0x54, 0x61, 0x72, 0x67, 0x65,
 	0x74, 0x20, 0x52, 0x65, 0x73, 0x69, 0x64, 0x65, 0x6E, 0x74, 0x20, 0x4B, 0x65, 0x72, 0x6E, 0x65,
 	0x6C, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x50, 0x6F, 0x77, 0x65, 0x72, 0x50, 0x43, 0x00, 0x00, 0x00,

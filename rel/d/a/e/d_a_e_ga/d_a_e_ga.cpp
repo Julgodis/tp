@@ -55,14 +55,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -78,7 +78,7 @@ static void ga_fly(e_ga_class*, ga_s*); // 2
 static void bt_fly(e_ga_class*, ga_s*); // 2
 static void ga_control(e_ga_class*); // 2
 static void daE_Ga_Execute(e_ga_class*); // 2
-static void daE_Ga_IsDelete(e_ga_class*); // 2
+static bool daE_Ga_IsDelete(e_ga_class*); // 2
 static void daE_Ga_Delete(e_ga_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Ga_Create(fopAc_ac_c*); // 2
@@ -89,7 +89,7 @@ extern "C" static void ga_fly__FP10e_ga_classP4ga_s(); // 1
 extern "C" static void bt_fly__FP10e_ga_classP4ga_s(); // 1
 extern "C" static void ga_control__FP10e_ga_class(); // 1
 extern "C" static void daE_Ga_Execute__FP10e_ga_class(); // 1
-extern "C" static void daE_Ga_IsDelete__FP10e_ga_class(); // 1
+extern "C" static bool daE_Ga_IsDelete__FP10e_ga_class(); // 1
 extern "C" static void daE_Ga_Delete__FP10e_ga_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Ga_Create__FP10fopAc_ac_c(); // 1
@@ -311,14 +311,9 @@ asm static void daE_Ga_Execute(e_ga_class* param_0) {
 
 
 /* 804FB71C-804FB724 0008+00 s=1 e=0 z=0  None .text      daE_Ga_IsDelete__FP10e_ga_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Ga_IsDelete(e_ga_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ga/d_a_e_ga/daE_Ga_IsDelete__FP10e_ga_class.s"
+static bool daE_Ga_IsDelete(e_ga_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -405,14 +400,9 @@ asm ga_s::~ga_s() {
 
 
 /* 804FBAF4-804FBAF8 0004+00 s=1 e=0 z=0  None .text      __ct__4ga_sFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm ga_s::ga_s() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ga/d_a_e_ga/__ct__4ga_sFv.s"
+ga_s::ga_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804FBAF8-804FBB40 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_Ga_HIO_cFv                                       */

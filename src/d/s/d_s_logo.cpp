@@ -139,7 +139,7 @@ struct Z2SeMgr {
 
 struct Z2SceneMgr {
 	/* 802BA56C */ void loadStaticWaves();
-	/* 802BA5C0 */ void checkFirstWaves();
+	/* 802BA5C0 */ bool checkFirstWaves();
 };
 
 struct Z2AudioMgr {
@@ -171,7 +171,7 @@ static void dScnLogo_Create(scene_class*); // 2
 static void dScnLogo_Execute(dScnLogo_c*); // 2
 static void dScnLogo_Draw(dScnLogo_c*); // 2
 static void dScnLogo_Delete(dScnLogo_c*); // 2
-static void dScnLogo_IsDelete(dScnLogo_c*); // 2
+static bool dScnLogo_IsDelete(dScnLogo_c*); // 2
 static void cLib_calcTimer__template5(u16*); // 2
 
 extern "C" void __ct__10dLog_HIO_cFv(); // 1
@@ -208,7 +208,7 @@ extern "C" static void dScnLogo_Create__FP11scene_class(); // 1
 extern "C" static void dScnLogo_Execute__FP10dScnLogo_c(); // 1
 extern "C" static void dScnLogo_Draw__FP10dScnLogo_c(); // 1
 extern "C" static void dScnLogo_Delete__FP10dScnLogo_c(); // 1
-extern "C" static void dScnLogo_IsDelete__FP10dScnLogo_c(); // 1
+extern "C" static bool dScnLogo_IsDelete__FP10dScnLogo_c(); // 1
 extern "C" void setProgressiveMode__10dScnLogo_cFUc(); // 1
 extern "C" void getProgressiveMode__10dScnLogo_cFv(); // 1
 extern "C" void isProgressiveMode__10dScnLogo_cFv(); // 1
@@ -272,7 +272,7 @@ extern "C" void createWork__7dTres_cFv(); // 1
 extern "C" void waitBlanking__10JFWDisplayFi(); // 1
 extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void loadStaticWaves__10Z2SceneMgrFv(); // 1
-extern "C" void checkFirstWaves__10Z2SceneMgrFv(); // 1
+extern "C" bool checkFirstWaves__10Z2SceneMgrFv(); // 1
 extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
 extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
 extern "C" void destroy__7JKRHeapFv(); // 1
@@ -937,14 +937,9 @@ asm static void dScnLogo_Delete(dScnLogo_c* param_0) {
 
 
 /* 802584D0-802584D8 0008+00 s=1 e=0 z=0  None .text      dScnLogo_IsDelete__FP10dScnLogo_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dScnLogo_IsDelete(dScnLogo_c* param_0) {
-	nofralloc
-#include "asm/d/s/d_s_logo/dScnLogo_IsDelete__FP10dScnLogo_c.s"
+static bool dScnLogo_IsDelete(dScnLogo_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 802584D8-802584FC 0024+00 s=1 e=0 z=0  None .text      setProgressiveMode__10dScnLogo_cFUc                          */

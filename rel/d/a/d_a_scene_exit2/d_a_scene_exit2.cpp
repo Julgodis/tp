@@ -24,7 +24,7 @@ struct daScExit_c {
 	/* 8059E504 */ void actionDead();
 	/* 8059E508 */ void demoProc();
 	/* 8059E6CC */ void checkArea();
-	/* 8059E714 */ void draw();
+	/* 8059E714 */ bool draw();
 	/* 8059E71C */ void _delete();
 };
 
@@ -91,7 +91,7 @@ extern "C" void actionEvent__10daScExit_cFv(); // 1
 extern "C" void actionDead__10daScExit_cFv(); // 1
 extern "C" void demoProc__10daScExit_cFv(); // 1
 extern "C" void checkArea__10daScExit_cFv(); // 1
-extern "C" void draw__10daScExit_cFv(); // 1
+extern "C" bool draw__10daScExit_cFv(); // 1
 extern "C" void _delete__10daScExit_cFv(); // 1
 extern "C" static void daScExit_Draw__FP10daScExit_c(); // 1
 extern "C" static void daScExit_Execute__FP10daScExit_c(); // 1
@@ -330,14 +330,9 @@ asm void daScExit_c::actionEvent() {
 
 
 /* 8059E504-8059E508 0004+00 s=1 e=0 z=0  None .text      actionDead__10daScExit_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daScExit_c::actionDead() {
-	nofralloc
-#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/actionDead__10daScExit_cFv.s"
+void daScExit_c::actionDead() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -376,14 +371,9 @@ asm void daScExit_c::checkArea() {
 
 
 /* 8059E714-8059E71C 0008+00 s=1 e=0 z=0  None .text      draw__10daScExit_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daScExit_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_scene_exit2/d_a_scene_exit2/draw__10daScExit_cFv.s"
+bool daScExit_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8059E71C-8059E750 0034+00 s=1 e=0 z=0  None .text      _delete__10daScExit_cFv                                      */

@@ -240,7 +240,7 @@ static void ep_switch_event_move(ep_class*); // 2
 static void ep_move(ep_class*); // 2
 static void daEp_set_mtx(ep_class*); // 2
 static void daEp_Execute(ep_class*); // 2
-static void daEp_IsDelete(ep_class*); // 2
+static bool daEp_IsDelete(ep_class*); // 2
 static void daEp_Delete(ep_class*); // 2
 static void daEp_CreateHeap(fopAc_ac_c*); // 2
 static void daEp_CreateInit(fopAc_ac_c*); // 2
@@ -260,7 +260,7 @@ extern "C" static void ep_switch_event_move__FP8ep_class(); // 1
 extern "C" static void ep_move__FP8ep_class(); // 1
 extern "C" static void daEp_set_mtx__FP8ep_class(); // 1
 extern "C" static void daEp_Execute__FP8ep_class(); // 1
-extern "C" static void daEp_IsDelete__FP8ep_class(); // 1
+extern "C" static bool daEp_IsDelete__FP8ep_class(); // 1
 extern "C" static void daEp_Delete__FP8ep_class(); // 1
 extern "C" static void daEp_CreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void daEp_CreateInit__FP10fopAc_ac_c(); // 1
@@ -917,14 +917,9 @@ asm static void daEp_Execute(ep_class* param_0) {
 
 
 /* 8046A6D4-8046A6DC 0008+00 s=1 e=0 z=0  None .text      daEp_IsDelete__FP8ep_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daEp_IsDelete(ep_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ep/d_a_ep/daEp_IsDelete__FP8ep_class.s"
+static bool daEp_IsDelete(ep_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046A6DC-8046A724 0048+00 s=1 e=0 z=0  None .text      daEp_Delete__FP8ep_class                                     */

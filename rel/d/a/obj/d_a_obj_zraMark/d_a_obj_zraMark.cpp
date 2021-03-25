@@ -168,7 +168,7 @@ struct J3DLightInfo {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjZraMark_Execute(daObjZraMark_c*); // 2
 static void daObjZraMark_Draw(daObjZraMark_c*); // 2
-static void daObjZraMark_IsDelete(daObjZraMark_c*); // 2
+static bool daObjZraMark_IsDelete(daObjZraMark_c*); // 2
 static void daObjZraMark_Delete(daObjZraMark_c*); // 2
 static void daObjZraMark_create(fopAc_ac_c*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
@@ -188,7 +188,7 @@ extern "C" void entryPointer__14daObjZraMark_cFP10fopAc_ac_c(); // 1
 extern "C" void informBlast__14daObjZraMark_cFv(); // 1
 extern "C" static void daObjZraMark_Execute__FP14daObjZraMark_c(); // 1
 extern "C" static void daObjZraMark_Draw__FP14daObjZraMark_c(); // 1
-extern "C" static void daObjZraMark_IsDelete__FP14daObjZraMark_c(); // 1
+extern "C" static bool daObjZraMark_IsDelete__FP14daObjZraMark_c(); // 1
 extern "C" static void daObjZraMark_Delete__FP14daObjZraMark_c(); // 1
 extern "C" static void daObjZraMark_create__FP10fopAc_ac_c(); // 1
 extern "C" void create__16_ZraMark_Hahen_cFRC4cXyzScScScSc(); // 1
@@ -680,14 +680,9 @@ asm static void daObjZraMark_Draw(daObjZraMark_c* param_0) {
 
 
 /* 80D43434-80D4343C 0008+00 s=1 e=0 z=0  None .text      daObjZraMark_IsDelete__FP14daObjZraMark_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjZraMark_IsDelete(daObjZraMark_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zraMark/d_a_obj_zraMark/daObjZraMark_IsDelete__FP14daObjZraMark_c.s"
+static bool daObjZraMark_IsDelete(daObjZraMark_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4343C-80D4345C 0020+00 s=1 e=0 z=0  None .text      daObjZraMark_Delete__FP14daObjZraMark_c                      */

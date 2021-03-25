@@ -11,6 +11,14 @@
 // Types:
 // 
 
+struct JPAEmitterWorkData {
+};
+
+struct JPABaseParticle {
+	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
+	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
+};
+
 struct JPABaseEmitter {
 	/* 8027EDD4 */ void processTillStartFrame();
 	/* 8027EE14 */ void processTermination();
@@ -18,14 +26,6 @@ struct JPABaseEmitter {
 
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-};
-
-struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
-	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
-	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
 struct JPAResource {
@@ -564,13 +564,8 @@ asm void JPAResource::calcWorkData_d(JPAEmitterWorkData* param_0) {
 
 
 /* 80276A8C-80276A90 0004+00 s=0 e=3 z=0  None .text      prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAFieldBase::prepare(JPAEmitterWorkData* param_0, JPAFieldBlock* param_1) {
-	nofralloc
-#include "asm/JSystem/JParticle/JPAResource/prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock.s"
+void JPAFieldBase::prepare(JPAEmitterWorkData* param_0, JPAFieldBlock* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 

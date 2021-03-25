@@ -64,7 +64,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -73,7 +73,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -198,7 +198,7 @@ static void sq_message(sq_class*); // 2
 static void action(sq_class*); // 2
 static void message(sq_class*); // 2
 static void daSq_Execute(sq_class*); // 2
-static void daSq_IsDelete(sq_class*); // 2
+static bool daSq_IsDelete(sq_class*); // 2
 static void daSq_Delete(sq_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daSq_Create(fopAc_ac_c*); // 2
@@ -216,7 +216,7 @@ extern "C" static void sq_message__FP8sq_class(); // 1
 extern "C" static void action__FP8sq_class(); // 1
 extern "C" static void message__FP8sq_class(); // 1
 extern "C" static void daSq_Execute__FP8sq_class(); // 1
-extern "C" static void daSq_IsDelete__FP8sq_class(); // 1
+extern "C" static bool daSq_IsDelete__FP8sq_class(); // 1
 extern "C" static void daSq_Delete__FP8sq_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -723,14 +723,9 @@ asm static void daSq_Execute(sq_class* param_0) {
 
 
 /* 805A09EC-805A09F4 0008+00 s=1 e=0 z=0  None .text      daSq_IsDelete__FP8sq_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daSq_IsDelete(sq_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_sq/d_a_sq/daSq_IsDelete__FP8sq_class.s"
+static bool daSq_IsDelete(sq_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A09F4-805A0A48 0054+00 s=1 e=0 z=0  None .text      daSq_Delete__FP8sq_class                                     */

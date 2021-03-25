@@ -77,6 +77,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -84,9 +87,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -150,7 +150,7 @@ struct Z2SeMgr {
 
 static void daObj_Maki_Draw(obj_maki_class*); // 2
 void daObj_Maki_Execute(obj_maki_class*); // 2
-static void daObj_Maki_IsDelete(obj_maki_class*); // 2
+static bool daObj_Maki_IsDelete(obj_maki_class*); // 2
 static void daObj_Maki_Delete(obj_maki_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Maki_Create(fopAc_ac_c*); // 2
@@ -158,7 +158,7 @@ static void daObj_Maki_Create(fopAc_ac_c*); // 2
 extern "C" void __ct__16daObj_Maki_HIO_cFv(); // 1
 extern "C" static void daObj_Maki_Draw__FP14obj_maki_class(); // 1
 extern "C" void daObj_Maki_Execute__FP14obj_maki_class(); // 1
-extern "C" static void daObj_Maki_IsDelete__FP14obj_maki_class(); // 1
+extern "C" static bool daObj_Maki_IsDelete__FP14obj_maki_class(); // 1
 extern "C" static void daObj_Maki_Delete__FP14obj_maki_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -375,14 +375,9 @@ asm void daObj_Maki_Execute(obj_maki_class* param_0) {
 
 
 /* 80C90378-80C90380 0008+00 s=1 e=0 z=0  None .text      daObj_Maki_IsDelete__FP14obj_maki_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Maki_IsDelete(obj_maki_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_maki/d_a_obj_maki/daObj_Maki_IsDelete__FP14obj_maki_class.s"
+static bool daObj_Maki_IsDelete(obj_maki_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

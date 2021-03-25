@@ -97,6 +97,10 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
 struct JKRArchive {
 };
 
@@ -107,10 +111,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -472,25 +472,15 @@ asm void dMsgScrnTalk_c::selectAnimeEnd() {
 
 
 /* 802482AC-802482B0 0004+00 s=1 e=0 z=0  None .text      fukiScale__14dMsgScrnTalk_cFf                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnTalk_c::fukiScale(f32 param_0) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_talk/fukiScale__14dMsgScrnTalk_cFf.s"
+void dMsgScrnTalk_c::fukiScale(f32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802482B0-802482B4 0004+00 s=1 e=0 z=0  None .text      fukiTrans__14dMsgScrnTalk_cFff                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnTalk_c::fukiTrans(f32 param_0, f32 param_1) {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_talk/fukiTrans__14dMsgScrnTalk_cFff.s"
+void dMsgScrnTalk_c::fukiTrans(f32 param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802482B4-8024835C 00A8+00 s=1 e=0 z=0  None .text      fukiAlpha__14dMsgScrnTalk_cFf                                */

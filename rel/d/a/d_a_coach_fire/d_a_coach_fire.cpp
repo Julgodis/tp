@@ -49,6 +49,9 @@ struct cCcD_GStts {
 	/* 80658398 */ ~cCcD_GStts();
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -56,9 +59,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -112,7 +112,7 @@ struct daNpcCoach_c {
 
 static void daCoachFire_Draw(daCoachFire_c*); // 2
 static void daCoachFire_Execute(daCoachFire_c*); // 2
-static void daCoachFire_IsDelete(daCoachFire_c*); // 2
+static bool daCoachFire_IsDelete(daCoachFire_c*); // 2
 static void daCoachFire_Delete(daCoachFire_c*); // 2
 static void daCoachFire_Create(fopAc_ac_c*); // 2
 
@@ -122,7 +122,7 @@ extern "C" void setBaseMtx__13daCoachFire_cFv(); // 1
 extern "C" void initCcSphere__13daCoachFire_cFv(); // 1
 extern "C" static void daCoachFire_Draw__FP13daCoachFire_c(); // 1
 extern "C" static void daCoachFire_Execute__FP13daCoachFire_c(); // 1
-extern "C" static void daCoachFire_IsDelete__FP13daCoachFire_c(); // 1
+extern "C" static bool daCoachFire_IsDelete__FP13daCoachFire_c(); // 1
 extern "C" static void daCoachFire_Delete__FP13daCoachFire_c(); // 1
 extern "C" static void daCoachFire_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
@@ -295,14 +295,9 @@ asm static void daCoachFire_Execute(daCoachFire_c* param_0) {
 
 
 /* 80658094-8065809C 0008+00 s=1 e=0 z=0  None .text      daCoachFire_IsDelete__FP13daCoachFire_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daCoachFire_IsDelete(daCoachFire_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_coach_fire/d_a_coach_fire/daCoachFire_IsDelete__FP13daCoachFire_c.s"
+static bool daCoachFire_IsDelete(daCoachFire_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

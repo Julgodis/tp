@@ -53,10 +53,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -64,7 +64,7 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -73,7 +73,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -99,10 +99,10 @@ struct mDoExt_McaMorfSO {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -189,7 +189,7 @@ static void e_mb_firstdemo(e_mb_class*); // 2
 static void e_mb_end(e_mb_class*); // 2
 static void action(e_mb_class*); // 2
 static void daE_MB_Execute(e_mb_class*); // 2
-static void daE_MB_IsDelete(e_mb_class*); // 2
+static bool daE_MB_IsDelete(e_mb_class*); // 2
 static void daE_MB_Delete(e_mb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_MB_Create(fopAc_ac_c*); // 2
@@ -206,7 +206,7 @@ extern "C" static void e_mb_firstdemo__FP10e_mb_class(); // 1
 extern "C" static void e_mb_end__FP10e_mb_class(); // 1
 extern "C" static void action__FP10e_mb_class(); // 1
 extern "C" static void daE_MB_Execute__FP10e_mb_class(); // 1
-extern "C" static void daE_MB_IsDelete__FP10e_mb_class(); // 1
+extern "C" static bool daE_MB_IsDelete__FP10e_mb_class(); // 1
 extern "C" static void daE_MB_Delete__FP10e_mb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -892,14 +892,9 @@ asm static void daE_MB_Execute(e_mb_class* param_0) {
 
 
 /* 80708148-80708150 0008+00 s=1 e=0 z=0  None .text      daE_MB_IsDelete__FP10e_mb_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MB_IsDelete(e_mb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mb/d_a_e_mb/daE_MB_IsDelete__FP10e_mb_class.s"
+static bool daE_MB_IsDelete(e_mb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80708150-807081B8 0068+00 s=1 e=0 z=0  None .text      daE_MB_Delete__FP10e_mb_class                                */

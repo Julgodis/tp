@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TFog {
-	};
-
-};
-
 struct _GXColor {
 };
 
@@ -40,6 +31,15 @@ namespace JStudio {
 
 	struct TAdaptor_fog {
 		/* 8028717C */ ~TAdaptor_fog();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TFog {
 	};
 
 };

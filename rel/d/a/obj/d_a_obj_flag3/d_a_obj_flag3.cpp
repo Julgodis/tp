@@ -115,7 +115,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct J3DLightInfo {
@@ -129,7 +129,7 @@ struct J3DLightInfo {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjFlag3_Draw(daObjFlag3_c*); // 2
 static void daObjFlag3_Execute(daObjFlag3_c*); // 2
-static void daObjFlag3_IsDelete(daObjFlag3_c*); // 2
+static bool daObjFlag3_IsDelete(daObjFlag3_c*); // 2
 static void daObjFlag3_Delete(daObjFlag3_c*); // 2
 static void daObjFlag3_Create(fopAc_ac_c*); // 2
 
@@ -142,7 +142,7 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void execute__12FlagCloth2_cFv(); // 1
 extern "C" void calcFlagNormal__12FlagCloth2_cFP4cXyzi(); // 1
 extern "C" void calcFlagFactor__12FlagCloth2_cFP4cXyzP4cXyzP4cXyzi(); // 1
-extern "C" static void daObjFlag3_IsDelete__FP12daObjFlag3_c(); // 1
+extern "C" static bool daObjFlag3_IsDelete__FP12daObjFlag3_c(); // 1
 extern "C" static void daObjFlag3_Delete__FP12daObjFlag3_c(); // 1
 extern "C" void __dt__12daObjFlag3_cFv(); // 1
 extern "C" void __dt__12FlagCloth2_cFv(); // 1
@@ -216,7 +216,7 @@ extern "C" void normalizeZP__4cXyzFv(); // 1
 extern "C" void cM_rndFX__Ff(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1
@@ -505,14 +505,9 @@ asm void FlagCloth2_c::calcFlagFactor(cXyz* param_0, cXyz* param_1, cXyz* param_
 
 
 /* 80BEF6D0-80BEF6D8 0008+00 s=1 e=0 z=0  None .text      daObjFlag3_IsDelete__FP12daObjFlag3_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjFlag3_IsDelete(daObjFlag3_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/daObjFlag3_IsDelete__FP12daObjFlag3_c.s"
+static bool daObjFlag3_IsDelete(daObjFlag3_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BEF6D8-80BEF700 0028+00 s=1 e=0 z=0  None .text      daObjFlag3_Delete__FP12daObjFlag3_c                          */
@@ -659,14 +654,9 @@ asm void FlagCloth2_c::initFlagPos(cXyz* param_0, fopAc_ac_c* param_1) {
 
 
 /* 80BEFF30-80BEFF34 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_flag3/d_a_obj_flag3/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BEFF34-80BEFF7C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */

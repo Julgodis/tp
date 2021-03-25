@@ -123,7 +123,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 struct J3DShapePacket {
@@ -237,7 +237,7 @@ extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
 extern "C" void callDL__17J3DDisplayListObjCFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void drawFast__14J3DShapePacketFv(); // 1
 extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
@@ -494,14 +494,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80870C90-80870C94 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_mirror/d_a_mirror/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80870C94-80870CA0 000C+00 s=2 e=0 z=0  None .text      reset__16dMirror_packet_cFv                                  */

@@ -91,6 +91,9 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -101,9 +104,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -473,25 +473,15 @@ asm void daBalloon2D_c::addScoreCount(cXyz* param_0, u32 param_1, u8 param_2) {
 
 
 /* 806540B4-806540B8 0004+00 s=1 e=0 z=0  None .text      initiate__13daBalloon2D_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBalloon2D_c::initiate() {
-	nofralloc
-#include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/initiate__13daBalloon2D_cFv.s"
+void daBalloon2D_c::initiate() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806540B8-806540BC 0004+00 s=1 e=0 z=0  None .text      update__13daBalloon2D_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBalloon2D_c::update() {
-	nofralloc
-#include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/update__13daBalloon2D_cFv.s"
+void daBalloon2D_c::update() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806540BC-806541B4 00F8+00 s=2 e=0 z=0  None .text      setComboNum__13daBalloon2D_cFUc                              */
@@ -633,14 +623,9 @@ asm daBalloon2D_c::CHeadScore::~CHeadScore() {
 
 
 /* 80655340-80655344 0004+00 s=1 e=0 z=0  None .text      __ct__Q213daBalloon2D_c10CHeadScoreFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daBalloon2D_c::CHeadScore::CHeadScore() {
-	nofralloc
-#include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/__ct__Q213daBalloon2D_c10CHeadScoreFv.s"
+daBalloon2D_c::CHeadScore::CHeadScore() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80655344-80655364 0020+00 s=1 e=0 z=0  None .text      daBalloon2D_destroy__FP13daBalloon2D_c                       */
@@ -677,14 +662,9 @@ asm static void daBalloon2D_draw(daBalloon2D_c* param_0) {
 
 
 /* 806553A4-806553A8 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_balloon_2D/d_a_balloon_2D/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

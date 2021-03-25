@@ -29,7 +29,7 @@ struct fopAc_ac_c {
 static void daTagAJnot_Create(fopAc_ac_c*); // 2
 static void daTagAJnot_Delete(daTagAJnot_c*); // 2
 static void daTagAJnot_Execute(daTagAJnot_c*); // 2
-static void daTagAJnot_Draw(daTagAJnot_c*); // 2
+static bool daTagAJnot_Draw(daTagAJnot_c*); // 2
 
 extern "C" void create__12daTagAJnot_cFv(); // 1
 extern "C" static void daTagAJnot_Create__FP10fopAc_ac_c(); // 1
@@ -37,7 +37,7 @@ extern "C" void __dt__12daTagAJnot_cFv(); // 1
 extern "C" static void daTagAJnot_Delete__FP12daTagAJnot_c(); // 1
 extern "C" void execute__12daTagAJnot_cFv(); // 1
 extern "C" static void daTagAJnot_Execute__FP12daTagAJnot_c(); // 1
-extern "C" static void daTagAJnot_Draw__FP12daTagAJnot_c(); // 1
+extern "C" static bool daTagAJnot_Draw__FP12daTagAJnot_c(); // 1
 extern "C" extern void* g_profile_Tag_AJnot[12];
 
 // 
@@ -139,14 +139,9 @@ asm static void daTagAJnot_Execute(daTagAJnot_c* param_0) {
 
 
 /* 805A2870-805A2878 0008+00 s=1 e=0 z=0  None .text      daTagAJnot_Draw__FP12daTagAJnot_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagAJnot_Draw(daTagAJnot_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_ajnot/d_a_tag_ajnot/daTagAJnot_Draw__FP12daTagAJnot_c.s"
+static bool daTagAJnot_Draw(daTagAJnot_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

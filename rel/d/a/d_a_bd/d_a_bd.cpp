@@ -63,7 +63,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -72,7 +72,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -196,7 +196,7 @@ static void bd_kkri(bd_class*); // 2
 static void bd_drop(bd_class*); // 2
 static void action(bd_class*); // 2
 static void daBd_Execute(bd_class*); // 2
-static void daBd_IsDelete(bd_class*); // 2
+static bool daBd_IsDelete(bd_class*); // 2
 static void daBd_Delete(bd_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daBd_Create(fopAc_ac_c*); // 2
@@ -222,7 +222,7 @@ extern "C" static void bd_kkri__FP8bd_class(); // 1
 extern "C" static void bd_drop__FP8bd_class(); // 1
 extern "C" static void action__FP8bd_class(); // 1
 extern "C" static void daBd_Execute__FP8bd_class(); // 1
-extern "C" static void daBd_IsDelete__FP8bd_class(); // 1
+extern "C" static bool daBd_IsDelete__FP8bd_class(); // 1
 extern "C" static void daBd_Delete__FP8bd_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1077,14 +1077,9 @@ asm static void daBd_Execute(bd_class* param_0) {
 
 
 /* 804D959C-804D95A4 0008+00 s=1 e=0 z=0  None .text      daBd_IsDelete__FP8bd_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daBd_IsDelete(bd_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_bd/d_a_bd/daBd_IsDelete__FP8bd_class.s"
+static bool daBd_IsDelete(bd_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D95A4-804D960C 0068+00 s=1 e=0 z=0  None .text      daBd_Delete__FP8bd_class                                     */

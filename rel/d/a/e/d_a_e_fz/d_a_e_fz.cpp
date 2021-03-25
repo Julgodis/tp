@@ -136,10 +136,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -253,7 +253,7 @@ struct JGeometry {
 
 static void daE_FZ_Draw(daE_FZ_c*); // 2
 static void daE_FZ_Execute(daE_FZ_c*); // 2
-static void daE_FZ_IsDelete(daE_FZ_c*); // 2
+static bool daE_FZ_IsDelete(daE_FZ_c*); // 2
 static void daE_FZ_Delete(daE_FZ_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_FZ_Create(daE_FZ_c*); // 2
@@ -279,7 +279,7 @@ extern "C" void cc_set__8daE_FZ_cFv(); // 1
 extern "C" void execute__8daE_FZ_cFv(); // 1
 extern "C" static void daE_FZ_Execute__FP8daE_FZ_c(); // 1
 extern "C" void demoDelete__8daE_FZ_cFv(); // 1
-extern "C" static void daE_FZ_IsDelete__FP8daE_FZ_c(); // 1
+extern "C" static bool daE_FZ_IsDelete__FP8daE_FZ_c(); // 1
 extern "C" void _delete__8daE_FZ_cFv(); // 1
 extern "C" static void daE_FZ_Delete__FP8daE_FZ_c(); // 1
 extern "C" void CreateHeap__8daE_FZ_cFv(); // 1
@@ -998,14 +998,9 @@ asm void daE_FZ_c::demoDelete() {
 
 
 /* 806C0B8C-806C0B94 0008+00 s=1 e=0 z=0  None .text      daE_FZ_IsDelete__FP8daE_FZ_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_FZ_IsDelete(daE_FZ_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_fz/d_a_e_fz/daE_FZ_IsDelete__FP8daE_FZ_c.s"
+static bool daE_FZ_IsDelete(daE_FZ_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1149,14 +1144,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 806C13D4-806C13D8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_fz/d_a_e_fz/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 806C13D8-806C13F8 0020+00 s=1 e=0 z=0  None .text      daE_FZ_Create__FP8daE_FZ_c                                   */

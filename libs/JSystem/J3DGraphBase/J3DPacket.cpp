@@ -29,7 +29,7 @@ struct J3DDrawBuffer {
 
 struct J3DPacket {
 	/* 8000E680 */ ~J3DPacket();
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 	/* 80312758 */ void addChildPacket(J3DPacket*);
 	/* 80313044 */ void draw();
 };
@@ -90,7 +90,7 @@ extern "C" void beginDL__17J3DDisplayListObjFv(); // 1
 extern "C" void endDL__17J3DDisplayListObjFv(); // 1
 extern "C" void beginPatch__17J3DDisplayListObjFv(); // 1
 extern "C" void endPatch__17J3DDisplayListObjFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void addChildPacket__9J3DPacketFP9J3DPacket(); // 1
 extern "C" void __ct__13J3DDrawPacketFv(); // 1
 extern "C" void __dt__13J3DDrawPacketFv(); // 1
@@ -272,14 +272,9 @@ asm void J3DDisplayListObj::endPatch() {
 
 
 /* 80312750-80312758 0008+00 s=3 e=16 z=10  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DPacket::entry(J3DDrawBuffer* param_0) {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DPacket/entry__9J3DPacketFP13J3DDrawBuffer.s"
+bool J3DPacket::entry(J3DDrawBuffer* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80312758-80312778 0020+00 s=0 e=2 z=0  None .text      addChildPacket__9J3DPacketFP9J3DPacket                       */
@@ -552,14 +547,9 @@ asm void J3DShapePacket::drawFast() {
 
 
 /* 80313044-80313048 0004+00 s=1 e=0 z=0  None .text      draw__9J3DPacketFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DPacket::draw() {
-	nofralloc
-#include "asm/JSystem/J3DGraphBase/J3DPacket/draw__9J3DPacketFv.s"
+void J3DPacket::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80313048-803130A8 0060+00 s=1 e=0 z=0  None .text      entry__12J3DMatPacketFP13J3DDrawBuffer                       */

@@ -17,7 +17,7 @@ struct daTagLightBall_c {
 	/* 80D5A870 */ void Create();
 	/* 80D5A9B8 */ void create();
 	/* 80D5AA20 */ void execute();
-	/* 80D5ABA0 */ void draw();
+	/* 80D5ABA0 */ bool draw();
 	/* 80D5ABA8 */ void _delete();
 };
 
@@ -47,7 +47,7 @@ extern "C" void setBaseMtx__16daTagLightBall_cFv(); // 1
 extern "C" void Create__16daTagLightBall_cFv(); // 1
 extern "C" void create__16daTagLightBall_cFv(); // 1
 extern "C" void execute__16daTagLightBall_cFv(); // 1
-extern "C" void draw__16daTagLightBall_cFv(); // 1
+extern "C" bool draw__16daTagLightBall_cFv(); // 1
 extern "C" void _delete__16daTagLightBall_cFv(); // 1
 extern "C" static void daTagLightBall_Draw__FP16daTagLightBall_c(); // 1
 extern "C" static void daTagLightBall_Execute__FP16daTagLightBall_c(); // 1
@@ -139,14 +139,9 @@ asm void daTagLightBall_c::execute() {
 
 
 /* 80D5ABA0-80D5ABA8 0008+00 s=1 e=0 z=0  None .text      draw__16daTagLightBall_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLightBall_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/draw__16daTagLightBall_cFv.s"
+bool daTagLightBall_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5ABA8-80D5ABF0 0048+00 s=1 e=0 z=0  None .text      _delete__16daTagLightBall_cFv                                */

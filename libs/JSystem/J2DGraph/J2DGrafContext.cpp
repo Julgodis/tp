@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -28,6 +22,12 @@ struct JGeometry {
 	struct TVec2 { };
 	/* TVec2<f32> */
 	struct TVec2__template1 {
+	};
+
+};
+
+struct JUtility {
+	struct TColor {
 	};
 
 };
@@ -47,7 +47,7 @@ struct J2DGrafContext {
 	/* 802E9488 */ void line(JGeometry::TVec2<f32>, JGeometry::TVec2<f32>);
 	/* 802E9564 */ void lineTo(JGeometry::TVec2<f32>);
 	/* 802E95D4 */ ~J2DGrafContext();
-	/* 802E9664 */ void getGrafType() const;
+	/* 802E9664 */ bool getGrafType() const;
 	/* 802E966C */ void setLookat();
 };
 
@@ -70,7 +70,7 @@ extern "C" void func_802E9488(); // 1
 extern "C" void func_802E9564(); // 1
 extern "C" void __dt__14J2DGrafContextFv(); // 1
 extern "C" void place__14J2DGrafContextFffff(); // 1
-extern "C" void getGrafType__14J2DGrafContextCFv(); // 1
+extern "C" bool getGrafType__14J2DGrafContextCFv(); // 1
 extern "C" void setLookat__14J2DGrafContextFv(); // 1
 extern "C" extern void* __vt__14J2DGrafContext[10];
 
@@ -305,24 +305,14 @@ asm void J2DGrafContext::place(f32 param_0, f32 param_1, f32 param_2, f32 param_
 
 
 /* 802E9664-802E966C 0008+00 s=1 e=0 z=0  None .text      getGrafType__14J2DGrafContextCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DGrafContext::getGrafType() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DGrafContext/getGrafType__14J2DGrafContextCFv.s"
+bool J2DGrafContext::getGrafType() const {
+	return false;
 }
-#pragma pop
 
 
 /* 802E966C-802E9670 0004+00 s=1 e=0 z=0  None .text      setLookat__14J2DGrafContextFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DGrafContext::setLookat() {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DGrafContext/setLookat__14J2DGrafContextFv.s"
+void J2DGrafContext::setLookat() {
+	/* empty function */
 }
-#pragma pop
 
 

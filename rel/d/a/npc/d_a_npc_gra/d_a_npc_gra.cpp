@@ -16,12 +16,6 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -29,6 +23,12 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 809C947C */ ~cXyz();
 	/* 809C94B8 */ cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daNpc_grA_c {
@@ -55,14 +55,14 @@ struct daNpc_grA_c {
 	/* 809BFDCC */ void checkTagGraSubCrashed(fopAc_ac_c*);
 	/* 809BFDFC */ void setParam();
 	/* 809C0038 */ void main();
-	/* 809C0298 */ void ctrlBtk();
+	/* 809C0298 */ bool ctrlBtk();
 	/* 809C02A0 */ void setAttnPos();
 	/* 809C0948 */ void setExpressionAnm(int, bool);
 	/* 809C0CE4 */ void setExpressionBtp(int);
 	/* 809C0E18 */ void setExpression(int, f32);
 	/* 809C0E44 */ void setMotionAnm(int, f32);
 	/* 809C1018 */ void setMotion(int, f32, int);
-	/* 809C105C */ void drawDbgInfo();
+	/* 809C105C */ bool drawDbgInfo();
 	/* 809C1064 */ void drawOtherMdls();
 	/* 809C1154 */ void getMode();
 	/* 809C1160 */ void getMode1();
@@ -164,10 +164,19 @@ struct daNpcF_Lookat_c {
 	/* 809C936C */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
+struct J3DModelData {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransform {
 };
 
 struct dCcD_SrcCyl {
@@ -177,16 +186,7 @@ struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -272,9 +272,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -282,6 +279,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -331,11 +331,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -456,7 +456,7 @@ static void daNpc_grA_Create(void*); // 2
 static void daNpc_grA_Delete(void*); // 2
 static void daNpc_grA_Execute(void*); // 2
 static void daNpc_grA_Draw(void*); // 2
-static void daNpc_grA_IsDelete(void*); // 2
+static bool daNpc_grA_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 static void cLib_calcTimer__template1(int*); // 2
 static void cLib_getRndValue__template0(int, int); // 2
@@ -488,14 +488,14 @@ extern "C" static void s_subCrashed__FPvPv(); // 1
 extern "C" void checkTagGraSubCrashed__11daNpc_grA_cFP10fopAc_ac_c(); // 1
 extern "C" void setParam__11daNpc_grA_cFv(); // 1
 extern "C" void main__11daNpc_grA_cFv(); // 1
-extern "C" void ctrlBtk__11daNpc_grA_cFv(); // 1
+extern "C" bool ctrlBtk__11daNpc_grA_cFv(); // 1
 extern "C" void setAttnPos__11daNpc_grA_cFv(); // 1
 extern "C" void setExpressionAnm__11daNpc_grA_cFib(); // 1
 extern "C" void setExpressionBtp__11daNpc_grA_cFi(); // 1
 extern "C" void setExpression__11daNpc_grA_cFif(); // 1
 extern "C" void setMotionAnm__11daNpc_grA_cFif(); // 1
 extern "C" void setMotion__11daNpc_grA_cFifi(); // 1
-extern "C" void drawDbgInfo__11daNpc_grA_cFv(); // 1
+extern "C" bool drawDbgInfo__11daNpc_grA_cFv(); // 1
 extern "C" void drawOtherMdls__11daNpc_grA_cFv(); // 1
 extern "C" void getMode__11daNpc_grA_cFv(); // 1
 extern "C" void getMode1__11daNpc_grA_cFv(); // 1
@@ -548,7 +548,7 @@ extern "C" static void daNpc_grA_Create__FPv(); // 1
 extern "C" static void daNpc_grA_Delete__FPv(); // 1
 extern "C" static void daNpc_grA_Execute__FPv(); // 1
 extern "C" static void daNpc_grA_Draw__FPv(); // 1
-extern "C" static void daNpc_grA_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_grA_IsDelete__FPv(); // 1
 extern "C" void __dt__13daNpcF_Path_cFv(); // 1
 extern "C" void __dt__16daNpcF_SPCurve_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -2851,14 +2851,9 @@ asm daNpc_grA_c::daNpc_GrA_prtclMngr_c::~daNpc_GrA_prtclMngr_c() {
 
 
 /* 809BEB60-809BEB64 0004+00 s=1 e=0 z=0  None .text      __ct__Q211daNpc_grA_c21daNpc_GrA_prtclMngr_cFv               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daNpc_grA_c::daNpc_GrA_prtclMngr_c::daNpc_GrA_prtclMngr_c() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/__ct__Q211daNpc_grA_c21daNpc_GrA_prtclMngr_cFv.s"
+daNpc_grA_c::daNpc_GrA_prtclMngr_c::daNpc_GrA_prtclMngr_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809BEB64-809BEDA4 0240+00 s=1 e=0 z=0  None .text      __dt__11daNpc_grA_cFv                                        */
@@ -3126,14 +3121,9 @@ asm void daNpc_grA_c::main() {
 
 
 /* 809C0298-809C02A0 0008+00 s=1 e=0 z=0  None .text      ctrlBtk__11daNpc_grA_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_grA_c::ctrlBtk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/ctrlBtk__11daNpc_grA_cFv.s"
+bool daNpc_grA_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -3264,14 +3254,9 @@ asm void daNpc_grA_c::setMotion(int param_0, f32 param_1, int param_2) {
 
 
 /* 809C105C-809C1064 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__11daNpc_grA_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_grA_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/drawDbgInfo__11daNpc_grA_cFv.s"
+bool daNpc_grA_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 809C1064-809C1154 00F0+00 s=1 e=0 z=0  None .text      drawOtherMdls__11daNpc_grA_cFv                               */
@@ -3847,14 +3832,9 @@ asm static void daNpc_grA_Draw(void* param_0) {
 
 
 /* 809C91A8-809C91B0 0008+00 s=1 e=0 z=0  None .text      daNpc_grA_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_grA_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/daNpc_grA_IsDelete__FPv.s"
+static bool daNpc_grA_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809C91B0-809C9210 0060+00 s=1 e=0 z=0  None .text      __dt__13daNpcF_Path_cFv                                      */
@@ -3946,14 +3926,9 @@ asm csXyz::~csXyz() {
 
 
 /* 809C9478-809C947C 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809C947C-809C94B8 003C+00 s=6 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -3968,14 +3943,9 @@ asm cXyz::~cXyz() {
 
 
 /* 809C94B8-809C94BC 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809C94BC-809C9708 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -4045,14 +4015,9 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 809C9A7C-809C9A80 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809C9A80-809C9AC8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -4141,14 +4106,9 @@ asm void daTagGra_c::getGraPos() {
 
 
 /* 809C9D28-809C9D2C 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__11daNpc_grA_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpc_grA_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_gra/d_a_npc_gra/adjustShapeAngle__11daNpc_grA_cFv.s"
+void daNpc_grA_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 809C9D2C-809C9D74 0048+00 s=2 e=0 z=0  None .text      __dt__17daNpc_grA_Param_cFv                                  */

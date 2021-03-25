@@ -25,12 +25,12 @@ struct daTagAssist_c {
 
 static void daTagAssist_Create(fopAc_ac_c*); // 2
 static void daTagAssist_Execute(daTagAssist_c*); // 2
-static void daTagAssist_IsDelete(daTagAssist_c*); // 2
+static bool daTagAssist_IsDelete(daTagAssist_c*); // 2
 static void daTagAssist_Delete(daTagAssist_c*); // 2
 
 extern "C" static void daTagAssist_Create__FP10fopAc_ac_c(); // 1
 extern "C" static void daTagAssist_Execute__FP13daTagAssist_c(); // 1
-extern "C" static void daTagAssist_IsDelete__FP13daTagAssist_c(); // 1
+extern "C" static bool daTagAssist_IsDelete__FP13daTagAssist_c(); // 1
 extern "C" static void daTagAssist_Delete__FP13daTagAssist_c(); // 1
 extern "C" extern void* g_profile_Tag_Assist[12];
 
@@ -74,14 +74,9 @@ asm static void daTagAssist_Execute(daTagAssist_c* param_0) {
 
 
 /* 80D55EC8-80D55ED0 0008+00 s=1 e=0 z=0  None .text      daTagAssist_IsDelete__FP13daTagAssist_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagAssist_IsDelete(daTagAssist_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_assistance/d_a_tag_assistance/daTagAssist_IsDelete__FP13daTagAssist_c.s"
+static bool daTagAssist_IsDelete(daTagAssist_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D55ED0-80D55F00 0030+00 s=1 e=0 z=0  None .text      daTagAssist_Delete__FP13daTagAssist_c                        */

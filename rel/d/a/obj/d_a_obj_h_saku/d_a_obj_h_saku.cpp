@@ -77,10 +77,10 @@ struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -111,9 +111,9 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -152,7 +152,7 @@ struct Z2SeMgr {
 
 static void daObjH_Saku_Draw(daObjH_Saku_c*); // 2
 static void daObjH_Saku_Execute(daObjH_Saku_c*); // 2
-static void daObjH_Saku_IsDelete(daObjH_Saku_c*); // 2
+static bool daObjH_Saku_IsDelete(daObjH_Saku_c*); // 2
 static void daObjH_Saku_Delete(daObjH_Saku_c*); // 2
 static void daObjH_Saku_Create(fopAc_ac_c*); // 2
 
@@ -164,7 +164,7 @@ extern "C" void initBaseMtx__13daObjH_Saku_cFv(); // 1
 extern "C" void setBaseMtx__13daObjH_Saku_cFv(); // 1
 extern "C" static void daObjH_Saku_Draw__FP13daObjH_Saku_c(); // 1
 extern "C" static void daObjH_Saku_Execute__FP13daObjH_Saku_c(); // 1
-extern "C" static void daObjH_Saku_IsDelete__FP13daObjH_Saku_c(); // 1
+extern "C" static bool daObjH_Saku_IsDelete__FP13daObjH_Saku_c(); // 1
 extern "C" static void daObjH_Saku_Delete__FP13daObjH_Saku_c(); // 1
 extern "C" static void daObjH_Saku_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
@@ -271,9 +271,9 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -455,14 +455,9 @@ asm static void daObjH_Saku_Execute(daObjH_Saku_c* param_0) {
 
 
 /* 80C15F98-80C15FA0 0008+00 s=1 e=0 z=0  None .text      daObjH_Saku_IsDelete__FP13daObjH_Saku_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjH_Saku_IsDelete(daObjH_Saku_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_IsDelete__FP13daObjH_Saku_c.s"
+static bool daObjH_Saku_IsDelete(daObjH_Saku_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C15FA0-80C15FC4 0024+00 s=1 e=0 z=0  None .text      daObjH_Saku_Delete__FP13daObjH_Saku_c                        */

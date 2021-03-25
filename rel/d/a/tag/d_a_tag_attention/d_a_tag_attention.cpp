@@ -15,8 +15,8 @@ struct daAttp_c {
 	/* 804D5318 */ void Create();
 	/* 804D5354 */ void create();
 	/* 804D53AC */ void execute();
-	/* 804D568C */ void draw();
-	/* 804D5694 */ void _delete();
+	/* 804D568C */ bool draw();
+	/* 804D5694 */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -46,8 +46,8 @@ static void daAttp_Create(fopAc_ac_c*); // 2
 extern "C" void Create__8daAttp_cFv(); // 1
 extern "C" void create__8daAttp_cFv(); // 1
 extern "C" void execute__8daAttp_cFv(); // 1
-extern "C" void draw__8daAttp_cFv(); // 1
-extern "C" void _delete__8daAttp_cFv(); // 1
+extern "C" bool draw__8daAttp_cFv(); // 1
+extern "C" bool _delete__8daAttp_cFv(); // 1
 extern "C" static void daAttp_Draw__FP8daAttp_c(); // 1
 extern "C" static void daAttp_Execute__FP8daAttp_c(); // 1
 extern "C" static void daAttp_Delete__FP8daAttp_c(); // 1
@@ -134,25 +134,15 @@ asm void daAttp_c::execute() {
 
 
 /* 804D568C-804D5694 0008+00 s=1 e=0 z=0  None .text      draw__8daAttp_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daAttp_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/draw__8daAttp_cFv.s"
+bool daAttp_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D5694-804D569C 0008+00 s=1 e=0 z=0  None .text      _delete__8daAttp_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daAttp_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_attention/d_a_tag_attention/_delete__8daAttp_cFv.s"
+bool daAttp_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 804D569C-804D56BC 0020+00 s=1 e=0 z=0  None .text      daAttp_Draw__FP8daAttp_c                                     */

@@ -154,6 +154,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -161,9 +164,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -988,14 +988,9 @@ asm void daGlwSph_c::actionWaitInit() {
 
 
 /* 80BFA070-80BFA074 0004+00 s=1 e=0 z=0  None .text      actionWait__10daGlwSph_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGlwSph_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_glowSphere/d_a_obj_glowSphere/actionWait__10daGlwSph_cFv.s"
+void daGlwSph_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BFA074-80BFA130 00BC+00 s=1 e=0 z=0  None .text      actionGetInit__10daGlwSph_cFv                                */

@@ -38,7 +38,7 @@ struct dSv_info_c {
 static void daTagMmsg_Create(fopAc_ac_c*); // 2
 static void daTagMmsg_Delete(daTagMmsg_c*); // 2
 static void daTagMmsg_Execute(daTagMmsg_c*); // 2
-static void daTagMmsg_Draw(daTagMmsg_c*); // 2
+static bool daTagMmsg_Draw(daTagMmsg_c*); // 2
 
 extern "C" void create__11daTagMmsg_cFv(); // 1
 extern "C" static void daTagMmsg_Create__FP10fopAc_ac_c(); // 1
@@ -46,7 +46,7 @@ extern "C" void __dt__11daTagMmsg_cFv(); // 1
 extern "C" static void daTagMmsg_Delete__FP11daTagMmsg_c(); // 1
 extern "C" void execute__11daTagMmsg_cFv(); // 1
 extern "C" static void daTagMmsg_Execute__FP11daTagMmsg_c(); // 1
-extern "C" static void daTagMmsg_Draw__FP11daTagMmsg_c(); // 1
+extern "C" static bool daTagMmsg_Draw__FP11daTagMmsg_c(); // 1
 extern "C" extern u32 const lit_3703;
 extern "C" extern u32 const lit_3704;
 extern "C" extern void* g_profile_Tag_Mmsg[12];
@@ -156,14 +156,9 @@ asm static void daTagMmsg_Execute(daTagMmsg_c* param_0) {
 
 
 /* 80D5BD28-80D5BD30 0008+00 s=1 e=0 z=0  None .text      daTagMmsg_Draw__FP11daTagMmsg_c                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagMmsg_Draw(daTagMmsg_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mmsg/d_a_tag_mmsg/daTagMmsg_Draw__FP11daTagMmsg_c.s"
+static bool daTagMmsg_Draw(daTagMmsg_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

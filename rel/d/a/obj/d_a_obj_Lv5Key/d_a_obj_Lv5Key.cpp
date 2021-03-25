@@ -73,10 +73,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -165,7 +165,7 @@ static void daObjLv5Key_Delete(daObjLv5Key_c*); // 2
 static void daObjLv5Key_Draw(daObjLv5Key_c*); // 2
 static void daObjLv5Key_Execute(daObjLv5Key_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObjLv5Key_IsDelete(daObjLv5Key_c*); // 2
+static bool daObjLv5Key_IsDelete(daObjLv5Key_c*); // 2
 
 extern "C" void CreateHeap__13daObjLv5Key_cFv(); // 1
 extern "C" void Init__13daObjLv5Key_cFv(); // 1
@@ -194,7 +194,7 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjLv5Key_IsDelete__FP13daObjLv5Key_c(); // 1
+extern "C" static bool daObjLv5Key_IsDelete__FP13daObjLv5Key_c(); // 1
 extern "C" static void func_80B9C908(); // 1
 extern "C" static void func_80B9C910(); // 1
 extern "C" extern u32 const lit_3907;
@@ -773,14 +773,9 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 
 
 /* 80B9C900-80B9C908 0008+00 s=1 e=0 z=0  None .text      daObjLv5Key_IsDelete__FP13daObjLv5Key_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjLv5Key_IsDelete(daObjLv5Key_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_Lv5Key/d_a_obj_Lv5Key/daObjLv5Key_IsDelete__FP13daObjLv5Key_c.s"
+static bool daObjLv5Key_IsDelete(daObjLv5Key_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B9C908-80B9C910 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

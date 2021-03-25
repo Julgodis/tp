@@ -17,12 +17,6 @@ struct J3DJoint {
 struct fopAc_ac_c {
 };
 
-struct dBgW {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -32,6 +26,12 @@ struct cXyz {
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80C04BAC */ cXyz();
 	/* 80C04C40 */ ~cXyz();
+};
+
+struct dBgW {
+};
+
+struct J3DModel {
 };
 
 struct daObj_GrA_c {
@@ -73,7 +73,7 @@ struct daObj_GrA_c {
 	/* 80C02614 */ void setCollisions();
 	/* 80C02970 */ void setAttnPos();
 	/* 80C02A5C */ void drawOtherMdls();
-	/* 80C02A60 */ void dbgDraw();
+	/* 80C02A60 */ bool dbgDraw();
 	/* 80C02A68 */ void ppMoveInit();
 	/* 80C02AD4 */ void setLookMode(int);
 	/* 80C02AE8 */ void lookat();
@@ -232,14 +232,14 @@ struct daBaseNpc_moveBgActor_c {
 	/* 8014F6FC */ void MoveBGDelete();
 	/* 8014F770 */ void MoveBGExecute();
 	/* 80C04E9C */ ~daBaseNpc_moveBgActor_c();
-	/* 80C04EFC */ void Draw();
-	/* 80C04F04 */ void Create();
-	/* 80C04F0C */ void IsDelete();
-	/* 80C04F14 */ void ToFore();
-	/* 80C04F1C */ void ToBack();
-	/* 80C04F24 */ void CreateHeap();
-	/* 80C04F2C */ void Execute(f32 (** )[3][4]);
-	/* 80C04F34 */ void Delete();
+	/* 80C04EFC */ bool Draw();
+	/* 80C04F04 */ bool Create();
+	/* 80C04F0C */ bool IsDelete();
+	/* 80C04F14 */ bool ToFore();
+	/* 80C04F1C */ bool ToBack();
+	/* 80C04F24 */ bool CreateHeap();
+	/* 80C04F2C */ bool Execute(f32 (** )[3][4]);
+	/* 80C04F34 */ bool Delete();
 };
 
 struct daTagGra_c {
@@ -270,17 +270,17 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Z2Creature {
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -343,15 +343,15 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS_AcchCir {
+	/* 80075F58 */ void SetWall(f32, f32);
+};
+
 struct dBgW_Base {
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct dBgS_AcchCir {
-	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {
@@ -433,17 +433,17 @@ struct daBaseNpc_lookat_c {
 	/* 8014E6AC */ void getRot(int);
 };
 
-struct J3DAnmTransformKey {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct daBaseNpc_c {
 	/* 8014E89C */ ~daBaseNpc_c();
 	/* 8014EAD0 */ void execute();
 	/* 8014EC50 */ void draw(f32);
-	/* 8014EE3C */ void getResName();
+	/* 8014EE3C */ bool getResName();
 	/* 8014EE44 */ void getTrnsfrmKeyAnmP(char*, int);
 	/* 8014EE80 */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
 	/* 8014EEE4 */ void setBckAnm(J3DAnmTransform*, f32, int, int, int, bool);
@@ -455,14 +455,14 @@ struct daBaseNpc_c {
 	/* 8014F09C */ void mainProc();
 	/* 8014F0A0 */ void setEnvTevColor();
 	/* 8014F0FC */ void setRoomNo();
-	/* 8014F140 */ void btkCtrl();
+	/* 8014F140 */ bool btkCtrl();
 	/* 8014F228 */ void allAnmPlay();
 	/* 8014F38C */ void adjustShapeAngle();
 	/* 8014F390 */ void setMtx(int);
 	/* 8014F4A0 */ void setCollisions();
 	/* 8014F4A4 */ void setAttnPos();
 	/* 8014F4A8 */ void drawOtherMdls();
-	/* 8014F4AC */ void dbgDraw();
+	/* 8014F4AC */ bool dbgDraw();
 };
 
 struct daPy_py_c {
@@ -529,7 +529,7 @@ static void daObj_GrA_Create(void*); // 2
 static void daObj_GrA_Delete(void*); // 2
 static void daObj_GrA_Execute(void*); // 2
 static void daObj_GrA_Draw(void*); // 2
-static void daObj_GrA_IsDelete(void*); // 2
+static bool daObj_GrA_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 static void cLib_calcTimer__template1(s16*); // 2
 static void s_sub2(void*, void*); // 2
@@ -570,7 +570,7 @@ extern "C" void setMtx__11daObj_GrA_cFi(); // 1
 extern "C" void setCollisions__11daObj_GrA_cFv(); // 1
 extern "C" void setAttnPos__11daObj_GrA_cFv(); // 1
 extern "C" void drawOtherMdls__11daObj_GrA_cFv(); // 1
-extern "C" void dbgDraw__11daObj_GrA_cFv(); // 1
+extern "C" bool dbgDraw__11daObj_GrA_cFv(); // 1
 extern "C" void ppMoveInit__11daObj_GrA_cFv(); // 1
 extern "C" void setLookMode__11daObj_GrA_cFi(); // 1
 extern "C" void lookat__11daObj_GrA_cFv(); // 1
@@ -624,7 +624,7 @@ extern "C" static void daObj_GrA_Create__FPv(); // 1
 extern "C" static void daObj_GrA_Delete__FPv(); // 1
 extern "C" static void daObj_GrA_Execute__FPv(); // 1
 extern "C" static void daObj_GrA_Draw__FPv(); // 1
-extern "C" static void daObj_GrA_IsDelete__FPv(); // 1
+extern "C" static bool daObj_GrA_IsDelete__FPv(); // 1
 extern "C" void __dt__17daObj_GrA_Param_cFv(); // 1
 extern "C" void __dt__16daBaseNpc_path_cFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
@@ -638,14 +638,14 @@ extern "C" void __dt__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv(); // 1
 extern "C" void __ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv(); // 1
 extern "C" void __dt__18daBaseNpc_acMngr_cFv(); // 1
 extern "C" void __dt__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void Draw__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void Create__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void IsDelete__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void ToFore__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void ToBack__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void CreateHeap__23daBaseNpc_moveBgActor_cFv(); // 1
-extern "C" void Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f(); // 1
-extern "C" void Delete__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool Draw__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool Create__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool IsDelete__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool ToFore__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool ToBack__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool CreateHeap__23daBaseNpc_moveBgActor_cFv(); // 1
+extern "C" bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f(); // 1
+extern "C" bool Delete__23daBaseNpc_moveBgActor_cFv(); // 1
 extern "C" static void func_80C04F3C(); // 1
 extern "C" static void func_80C04F58(); // 1
 extern "C" void __sinit_d_a_obj_gra2_cpp(); // 1
@@ -994,7 +994,7 @@ extern "C" void getRot__18daBaseNpc_lookat_cFi(); // 1
 extern "C" void __dt__11daBaseNpc_cFv(); // 1
 extern "C" void execute__11daBaseNpc_cFv(); // 1
 extern "C" void draw__11daBaseNpc_cFf(); // 1
-extern "C" void getResName__11daBaseNpc_cFv(); // 1
+extern "C" bool getResName__11daBaseNpc_cFv(); // 1
 extern "C" void getTrnsfrmKeyAnmP__11daBaseNpc_cFPci(); // 1
 extern "C" void setMcaMorfAnm__11daBaseNpc_cFP18J3DAnmTransformKeyffiii(); // 1
 extern "C" void setBckAnm__11daBaseNpc_cFP15J3DAnmTransformfiiib(); // 1
@@ -1006,14 +1006,14 @@ extern "C" void orderEvent__11daBaseNpc_cFiPc(); // 1
 extern "C" void mainProc__11daBaseNpc_cFv(); // 1
 extern "C" void setEnvTevColor__11daBaseNpc_cFv(); // 1
 extern "C" void setRoomNo__11daBaseNpc_cFv(); // 1
-extern "C" void btkCtrl__11daBaseNpc_cFv(); // 1
+extern "C" bool btkCtrl__11daBaseNpc_cFv(); // 1
 extern "C" void allAnmPlay__11daBaseNpc_cFv(); // 1
 extern "C" void adjustShapeAngle__11daBaseNpc_cFv(); // 1
 extern "C" void setMtx__11daBaseNpc_cFi(); // 1
 extern "C" void setCollisions__11daBaseNpc_cFv(); // 1
 extern "C" void setAttnPos__11daBaseNpc_cFv(); // 1
 extern "C" void drawOtherMdls__11daBaseNpc_cFv(); // 1
-extern "C" void dbgDraw__11daBaseNpc_cFv(); // 1
+extern "C" bool dbgDraw__11daBaseNpc_cFv(); // 1
 extern "C" void __ct__23daBaseNpc_moveBgActor_cFv(); // 1
 extern "C" void MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl(); // 1
 extern "C" void MoveBGDelete__23daBaseNpc_moveBgActor_cFv(); // 1
@@ -3014,14 +3014,9 @@ asm void daObj_GrA_c::mainProc() {
 
 
 /* 80C01FE4-80C01FE8 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__11daObj_GrA_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_GrA_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/adjustShapeAngle__11daObj_GrA_cFv.s"
+void daObj_GrA_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -3120,25 +3115,15 @@ asm void daObj_GrA_c::setAttnPos() {
 
 
 /* 80C02A5C-80C02A60 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__11daObj_GrA_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_GrA_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/drawOtherMdls__11daObj_GrA_cFv.s"
+void daObj_GrA_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C02A60-80C02A68 0008+00 s=1 e=0 z=0  None .text      dbgDraw__11daObj_GrA_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_GrA_c::dbgDraw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/dbgDraw__11daObj_GrA_cFv.s"
+bool daObj_GrA_c::dbgDraw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C02A68-80C02AD4 006C+00 s=2 e=0 z=0  None .text      ppMoveInit__11daObj_GrA_cFv                                  */
@@ -3725,14 +3710,9 @@ asm static void daObj_GrA_Draw(void* param_0) {
 
 
 /* 80C04B14-80C04B1C 0008+00 s=1 e=0 z=0  None .text      daObj_GrA_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_GrA_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/daObj_GrA_IsDelete__FPv.s"
+static bool daObj_GrA_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -3766,14 +3746,9 @@ asm daBaseNpc_path_c::~daBaseNpc_path_c() {
 
 
 /* 80C04BAC-80C04BB0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C04BB0-80C04BF8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
@@ -3854,14 +3829,9 @@ asm daObj_GrA_c::daObj_GrA_prtclMngr_c::~daObj_GrA_prtclMngr_c() {
 
 
 /* 80C04E50-80C04E54 0004+00 s=1 e=0 z=0  None .text      __ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObj_GrA_c::daObj_GrA_prtclMngr_c::daObj_GrA_prtclMngr_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/__ct__Q211daObj_GrA_c21daObj_GrA_prtclMngr_cFv.s"
+daObj_GrA_c::daObj_GrA_prtclMngr_c::daObj_GrA_prtclMngr_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C04E54-80C04E9C 0048+00 s=1 e=0 z=0  None .text      __dt__18daBaseNpc_acMngr_cFv                                 */
@@ -3887,91 +3857,51 @@ asm daBaseNpc_moveBgActor_c::~daBaseNpc_moveBgActor_c() {
 
 
 /* 80C04EFC-80C04F04 0008+00 s=1 e=0 z=0  None .text      Draw__23daBaseNpc_moveBgActor_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Draw__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F04-80C04F0C 0008+00 s=2 e=0 z=0  None .text      Create__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Create__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Create() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F0C-80C04F14 0008+00 s=2 e=0 z=0  None .text      IsDelete__23daBaseNpc_moveBgActor_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::IsDelete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/IsDelete__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::IsDelete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F14-80C04F1C 0008+00 s=2 e=0 z=0  None .text      ToFore__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::ToFore() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ToFore__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::ToFore() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F1C-80C04F24 0008+00 s=2 e=0 z=0  None .text      ToBack__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::ToBack() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/ToBack__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::ToBack() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F24-80C04F2C 0008+00 s=1 e=0 z=0  None .text      CreateHeap__23daBaseNpc_moveBgActor_cFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/CreateHeap__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F2C-80C04F34 0008+00 s=1 e=0 z=0  None .text      Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::Execute(f32 (** param_0)[3][4]) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f.s"
+bool daBaseNpc_moveBgActor_c::Execute(f32 (** param_0)[3][4]) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F34-80C04F3C 0008+00 s=1 e=0 z=0  None .text      Delete__23daBaseNpc_moveBgActor_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBaseNpc_moveBgActor_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gra2/d_a_obj_gra2/Delete__23daBaseNpc_moveBgActor_cFv.s"
+bool daBaseNpc_moveBgActor_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C04F3C-80C04F58 001C+00 s=5 e=0 z=0  None .text      cLib_calcTimer<i>__FPi                                       */

@@ -43,19 +43,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -123,7 +123,7 @@ struct Z2CreatureEnemy {
 
 static void daDr_Draw(daDr_c*); // 2
 static void daDr_Execute(daDr_c*); // 2
-static void daDr_IsDelete(daDr_c*); // 2
+static bool daDr_IsDelete(daDr_c*); // 2
 static void daDr_Delete(daDr_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daDr_Create(daDr_c*); // 2
@@ -140,7 +140,7 @@ extern "C" void bridge_destroy__6daDr_cFv(); // 1
 extern "C" void bridge_destroy2__6daDr_cFv(); // 1
 extern "C" void execute__6daDr_cFv(); // 1
 extern "C" static void daDr_Execute__FP6daDr_c(); // 1
-extern "C" static void daDr_IsDelete__FP6daDr_c(); // 1
+extern "C" static bool daDr_IsDelete__FP6daDr_c(); // 1
 extern "C" void _delete__6daDr_cFv(); // 1
 extern "C" static void daDr_Delete__FP6daDr_c(); // 1
 extern "C" void CreateHeap__6daDr_cFv(); // 1
@@ -474,14 +474,9 @@ asm static void daDr_Execute(daDr_c* param_0) {
 
 
 /* 805A9FF4-805A9FFC 0008+00 s=1 e=0 z=0  None .text      daDr_IsDelete__FP6daDr_c                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daDr_IsDelete(daDr_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_IsDelete__FP6daDr_c.s"
+static bool daDr_IsDelete(daDr_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

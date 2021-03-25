@@ -177,7 +177,7 @@ static void dComIfGd_set2DOpa(dDlst_base_c*); // 2
 static void fopAcM_OnCondition(fopAc_ac_c*, u32); // 2
 static void* operator new(u32, void*); // 2
 static void fopAcM_CheckCondition(fopAc_ac_c*, u32); // 2
-static void daMP_Callback_Dummy(daMP_c*); // 2
+static bool daMP_Callback_Dummy(daMP_c*); // 2
 
 extern "C" static void THPAudioDecode(); // 1
 extern "C" static void __THPAudioGetNewSample(); // 1
@@ -309,7 +309,7 @@ extern "C" static void fopAcM_CheckCondition__FP10fopAc_ac_cUl(); // 1
 extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c(); // 1
-extern "C" static void daMP_Callback_Dummy__FP6daMP_c(); // 1
+extern "C" static bool daMP_Callback_Dummy__FP6daMP_c(); // 1
 extern "C" void __sinit_d_a_movie_player_cpp(); // 1
 extern "C" void __ct__16daMP_Dlst_base_cFv(); // 1
 extern "C" void __ct__12dDlst_base_cFv(); // 1
@@ -1520,14 +1520,9 @@ asm static void daMP_THPGXYuv2RgbDraw(u8* param_0, u8* param_1, u8* param_2, s16
 
 
 /* 80876DE4-80876DE8 0004+00 s=1 e=0 z=0  None .text      GXEnd                                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm static void GXEnd() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/GXEnd.s"
+extern "C" static void GXEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80876DE8-80876DF8 0010+00 s=1 e=0 z=0  None .text      GXTexCoord2u16                                               */
@@ -2348,14 +2343,9 @@ asm void daMP_c::daMP_c_Callback_Draw(daMP_c* param_0) {
 
 
 /* 80878FA8-80878FB0 0008+00 s=1 e=0 z=0  None .text      daMP_Callback_Dummy__FP6daMP_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daMP_Callback_Dummy(daMP_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/daMP_Callback_Dummy__FP6daMP_c.s"
+static bool daMP_Callback_Dummy(daMP_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80878FB0-80878FD8 0028+00 s=0 e=1 z=0  None .text      __sinit_d_a_movie_player_cpp                                 */
@@ -2436,14 +2426,9 @@ asm dDlst_base_c::dDlst_base_c() {
 
 
 /* 80879024-80879028 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_movie_player/d_a_movie_player/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -78,19 +78,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -130,13 +130,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -249,7 +249,7 @@ static void damage_check(e_ms_class*); // 2
 static void action(e_ms_class*); // 2
 static void anm_se_set(e_ms_class*); // 2
 static void daE_MS_Execute(e_ms_class*); // 2
-static void daE_MS_IsDelete(e_ms_class*); // 2
+static bool daE_MS_IsDelete(e_ms_class*); // 2
 static void daE_MS_Delete(e_ms_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_MS_Create(fopAc_ac_c*); // 2
@@ -277,7 +277,7 @@ extern "C" static void damage_check__FP10e_ms_class(); // 1
 extern "C" static void action__FP10e_ms_class(); // 1
 extern "C" static void anm_se_set__FP10e_ms_class(); // 1
 extern "C" static void daE_MS_Execute__FP10e_ms_class(); // 1
-extern "C" static void daE_MS_IsDelete__FP10e_ms_class(); // 1
+extern "C" static bool daE_MS_IsDelete__FP10e_ms_class(); // 1
 extern "C" static void daE_MS_Delete__FP10e_ms_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_MS_Create__FP10fopAc_ac_c(); // 1
@@ -1087,14 +1087,9 @@ asm static void search_ground_1(e_ms_class* param_0) {
 
 
 /* 80726F54-80726F58 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ms/d_a_e_ms/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80726F58-80727100 01A8+00 s=1 e=0 z=0  None .text      e_ms_swim__FP10e_ms_class                                    */
@@ -1197,14 +1192,9 @@ asm static void daE_MS_Execute(e_ms_class* param_0) {
 
 
 /* 80728920-80728928 0008+00 s=1 e=0 z=0  None .text      daE_MS_IsDelete__FP10e_ms_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MS_IsDelete(e_ms_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ms/d_a_e_ms/daE_MS_IsDelete__FP10e_ms_class.s"
+static bool daE_MS_IsDelete(e_ms_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80728928-80728990 0068+00 s=1 e=0 z=0  None .text      daE_MS_Delete__FP10e_ms_class                                */

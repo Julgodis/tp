@@ -28,7 +28,7 @@ SECTION_BSS u8 lc_base[4 + 4 /* padding */];
 
 
 SECTION_INIT void TRK_memcpy(); // 1
-extern "C" extern u8 __TRK_unknown_data[7988];
+extern "C" extern u8 const __TRK_unknown_data[7988];
 extern "C" void ARGetDMAStatus(); // 1
 extern "C" void ARStartDMA(); // 1
 extern "C" void __ARClearInterrupt(); // 1

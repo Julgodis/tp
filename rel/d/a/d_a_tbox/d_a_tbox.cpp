@@ -31,12 +31,12 @@ struct mDoHIO_entry_c {
 struct daTbox_c {
 	/* 80490E50 */ void getModelInfo();
 	/* 80490E6C */ void commonShapeSet();
-	/* 804911B8 */ void effectShapeSet();
-	/* 804911C0 */ void envShapeSet();
+	/* 804911B8 */ s32 effectShapeSet();
+	/* 804911C0 */ s32 envShapeSet();
 	/* 804911C8 */ void bgCheckSet();
 	/* 8049129C */ void lightReady();
 	/* 804912EC */ void setLightPos();
-	/* 8049135C */ void checkEnv();
+	/* 8049135C */ bool checkEnv();
 	/* 80491364 */ void checkAppear();
 	/* 8049139C */ void checkOpen();
 	/* 804913D0 */ void clrDzb();
@@ -68,7 +68,7 @@ struct daTbox_c {
 	/* 80493518 */ void demoProc();
 	/* 80493838 */ void OpenInit_com();
 	/* 804939A4 */ void OpenInit();
-	/* 804939F4 */ void actionWait();
+	/* 804939F4 */ bool actionWait();
 	/* 804939FC */ void actionDemo();
 	/* 80493CC8 */ void actionDemo2();
 	/* 80493D90 */ void actionDropDemo();
@@ -96,8 +96,8 @@ struct daTbox_c {
 	/* 804959EC */ void Execute(f32 (** )[3][4]);
 	/* 80495AF0 */ void Draw();
 	/* 80495C9C */ void Delete();
-	/* 804961B0 */ void Create();
-	/* 804961B8 */ void checkSmallTbox();
+	/* 804961B0 */ bool Create();
+	/* 804961B8 */ bool checkSmallTbox();
 };
 
 struct J3DFrameCtrl {
@@ -165,10 +165,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -259,11 +259,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -275,11 +275,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct dBgW_Base {
 };
 
-struct dBgW_Base {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -311,14 +311,14 @@ struct dBgS_GndChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078688 */ void CreateHeap();
-	/* 80078690 */ void Create();
-	/* 80078698 */ void Execute(f32 (** )[3][4]);
-	/* 800786A0 */ void Draw();
-	/* 800786A8 */ void Delete();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078688 */ bool CreateHeap();
+	/* 80078690 */ bool Create();
+	/* 80078698 */ bool Execute(f32 (** )[3][4]);
+	/* 800786A0 */ bool Draw();
+	/* 800786A8 */ bool Delete();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -404,12 +404,12 @@ extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
 extern "C" void getModelInfo__8daTbox_cFv(); // 1
 extern "C" void commonShapeSet__8daTbox_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void effectShapeSet__8daTbox_cFv(); // 1
-extern "C" void envShapeSet__8daTbox_cFv(); // 1
+extern "C" s32 effectShapeSet__8daTbox_cFv(); // 1
+extern "C" s32 envShapeSet__8daTbox_cFv(); // 1
 extern "C" void bgCheckSet__8daTbox_cFv(); // 1
 extern "C" void lightReady__8daTbox_cFv(); // 1
 extern "C" void setLightPos__8daTbox_cFv(); // 1
-extern "C" void checkEnv__8daTbox_cFv(); // 1
+extern "C" bool checkEnv__8daTbox_cFv(); // 1
 extern "C" void checkAppear__8daTbox_cFv(); // 1
 extern "C" void checkOpen__8daTbox_cFv(); // 1
 extern "C" void clrDzb__8daTbox_cFv(); // 1
@@ -442,7 +442,7 @@ extern "C" void demoProcAppear__8daTbox_cFv(); // 1
 extern "C" void demoProc__8daTbox_cFv(); // 1
 extern "C" void OpenInit_com__8daTbox_cFv(); // 1
 extern "C" void OpenInit__8daTbox_cFv(); // 1
-extern "C" void actionWait__8daTbox_cFv(); // 1
+extern "C" bool actionWait__8daTbox_cFv(); // 1
 extern "C" void actionDemo__8daTbox_cFv(); // 1
 extern "C" void actionDemo2__8daTbox_cFv(); // 1
 extern "C" void actionDropDemo__8daTbox_cFv(); // 1
@@ -487,8 +487,8 @@ extern "C" static void func_80496190(); // 1
 extern "C" static void func_80496198(); // 1
 extern "C" static void func_804961A0(); // 1
 extern "C" static void func_804961A8(); // 1
-extern "C" void Create__8daTbox_cFv(); // 1
-extern "C" void checkSmallTbox__8daTbox_cFv(); // 1
+extern "C" bool Create__8daTbox_cFv(); // 1
+extern "C" bool checkSmallTbox__8daTbox_cFv(); // 1
 extern "C" extern u8 const l_open_se_id[12];
 extern "C" extern u32 const lit_4169;
 extern "C" extern u32 const lit_4404;
@@ -666,14 +666,14 @@ extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void CreateHeap__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
-extern "C" void Draw__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Delete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool CreateHeap__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
+extern "C" bool Draw__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Delete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -1521,25 +1521,15 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 804911B8-804911C0 0008+00 s=1 e=0 z=0  None .text      effectShapeSet__8daTbox_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::effectShapeSet() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/effectShapeSet__8daTbox_cFv.s"
+s32 daTbox_c::effectShapeSet() {
+	return 4;
 }
-#pragma pop
 
 
 /* 804911C0-804911C8 0008+00 s=1 e=0 z=0  None .text      envShapeSet__8daTbox_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::envShapeSet() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/envShapeSet__8daTbox_cFv.s"
+s32 daTbox_c::envShapeSet() {
+	return 4;
 }
-#pragma pop
 
 
 /* 804911C8-8049129C 00D4+00 s=1 e=0 z=0  None .text      bgCheckSet__8daTbox_cFv                                      */
@@ -1576,14 +1566,9 @@ asm void daTbox_c::setLightPos() {
 
 
 /* 8049135C-80491364 0008+00 s=2 e=0 z=0  None .text      checkEnv__8daTbox_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::checkEnv() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkEnv__8daTbox_cFv.s"
+bool daTbox_c::checkEnv() {
+	return true;
 }
-#pragma pop
 
 
 /* 80491364-8049139C 0038+00 s=2 e=0 z=0  None .text      checkAppear__8daTbox_cFv                                     */
@@ -1939,14 +1924,9 @@ asm void daTbox_c::OpenInit() {
 
 
 /* 804939F4-804939FC 0008+00 s=2 e=0 z=0  None .text      actionWait__8daTbox_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/actionWait__8daTbox_cFv.s"
+bool daTbox_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 804939FC-80493CC8 02CC+00 s=1 e=0 z=0  None .text      actionDemo__8daTbox_cFv                                      */
@@ -2444,25 +2424,15 @@ extern "C" asm static void func_804961A8() {
 
 
 /* 804961B0-804961B8 0008+00 s=1 e=0 z=0  None .text      Create__8daTbox_cFv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/Create__8daTbox_cFv.s"
+bool daTbox_c::Create() {
+	return true;
 }
-#pragma pop
 
 
 /* 804961B8-804961C0 0008+00 s=1 e=0 z=0  None .text      checkSmallTbox__8daTbox_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTbox_c::checkSmallTbox() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tbox/d_a_tbox/checkSmallTbox__8daTbox_cFv.s"
+bool daTbox_c::checkSmallTbox() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

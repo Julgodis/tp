@@ -67,8 +67,8 @@ static void texScrollCheck(f32&); // 2
 static void daVrbox2_Draw(vrbox2_class*); // 2
 static void daVrbox2_color_set(vrbox2_class*); // 2
 static void daVrbox2_Execute(vrbox2_class*); // 2
-static void daVrbox2_IsDelete(vrbox2_class*); // 2
-static void daVrbox2_Delete(vrbox2_class*); // 2
+static bool daVrbox2_IsDelete(vrbox2_class*); // 2
+static bool daVrbox2_Delete(vrbox2_class*); // 2
 static void daVrbox2_solidHeapCB(fopAc_ac_c*); // 2
 static void daVrbox2_Create(fopAc_ac_c*); // 2
 
@@ -76,8 +76,8 @@ extern "C" static void texScrollCheck__FRf(); // 1
 extern "C" static void daVrbox2_Draw__FP12vrbox2_class(); // 1
 extern "C" static void daVrbox2_color_set__FP12vrbox2_class(); // 1
 extern "C" static void daVrbox2_Execute__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_IsDelete__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_Delete__FP12vrbox2_class(); // 1
+extern "C" static bool daVrbox2_IsDelete__FP12vrbox2_class(); // 1
+extern "C" static bool daVrbox2_Delete__FP12vrbox2_class(); // 1
 extern "C" static void daVrbox2_solidHeapCB__FP10fopAc_ac_c(); // 1
 extern "C" static void daVrbox2_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -302,25 +302,15 @@ asm static void daVrbox2_Execute(vrbox2_class* param_0) {
 
 
 /* 8049982C-80499834 0008+00 s=1 e=0 z=0  None .text      daVrbox2_IsDelete__FP12vrbox2_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daVrbox2_IsDelete(vrbox2_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_IsDelete__FP12vrbox2_class.s"
+static bool daVrbox2_IsDelete(vrbox2_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80499834-8049983C 0008+00 s=1 e=0 z=0  None .text      daVrbox2_Delete__FP12vrbox2_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daVrbox2_Delete(vrbox2_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Delete__FP12vrbox2_class.s"
+static bool daVrbox2_Delete(vrbox2_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8049983C-80499978 013C+00 s=1 e=0 z=0  None .text      daVrbox2_solidHeapCB__FP10fopAc_ac_c                         */

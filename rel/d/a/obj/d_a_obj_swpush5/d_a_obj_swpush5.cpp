@@ -30,7 +30,7 @@ struct daObjSw5_c {
 	/* 8059BB1C */ void create();
 	/* 8059BBD4 */ void Execute(f32 (** )[3][4]);
 	/* 8059BC70 */ void setting_ride_flag();
-	/* 8059BD24 */ void checkPushable();
+	/* 8059BD24 */ bool checkPushable();
 	/* 8059BD2C */ void event_proc_call();
 	/* 8059BE18 */ void actionPauseNoneInit();
 	/* 8059BE24 */ void actionPauseNone();
@@ -117,9 +117,9 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -171,7 +171,7 @@ extern "C" void CreateHeap__10daObjSw5_cFv(); // 1
 extern "C" void create__10daObjSw5_cFv(); // 1
 extern "C" void Execute__10daObjSw5_cFPPA3_A4_f(); // 1
 extern "C" void setting_ride_flag__10daObjSw5_cFv(); // 1
-extern "C" void checkPushable__10daObjSw5_cFv(); // 1
+extern "C" bool checkPushable__10daObjSw5_cFv(); // 1
 extern "C" void event_proc_call__10daObjSw5_cFv(); // 1
 extern "C" void actionPauseNoneInit__10daObjSw5_cFv(); // 1
 extern "C" void actionPauseNone__10daObjSw5_cFv(); // 1
@@ -284,9 +284,9 @@ extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -675,14 +675,9 @@ asm void daObjSw5_c::setting_ride_flag() {
 
 
 /* 8059BD24-8059BD2C 0008+00 s=1 e=0 z=0  None .text      checkPushable__10daObjSw5_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSw5_c::checkPushable() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/checkPushable__10daObjSw5_cFv.s"
+bool daObjSw5_c::checkPushable() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -712,14 +707,9 @@ asm void daObjSw5_c::actionPauseNoneInit() {
 
 
 /* 8059BE24-8059BE28 0004+00 s=1 e=0 z=0  None .text      actionPauseNone__10daObjSw5_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSw5_c::actionPauseNone() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionPauseNone__10daObjSw5_cFv.s"
+void daObjSw5_c::actionPauseNone() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BE28-8059BE80 0058+00 s=1 e=0 z=0  None .text      actionPauseOrderInit__10daObjSw5_cFv                         */
@@ -767,36 +757,21 @@ asm void daObjSw5_c::actionPause() {
 
 
 /* 8059BF48-8059BF4C 0004+00 s=1 e=0 z=0  None .text      actionWait__10daObjSw5_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSw5_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionWait__10daObjSw5_cFv.s"
+void daObjSw5_c::actionWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF4C-8059BF50 0004+00 s=1 e=0 z=0  None .text      actionOrder__10daObjSw5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSw5_c::actionOrder() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionOrder__10daObjSw5_cFv.s"
+void daObjSw5_c::actionOrder() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF50-8059BF54 0004+00 s=1 e=0 z=0  None .text      actionEvent__10daObjSw5_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjSw5_c::actionEvent() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_swpush5/d_a_obj_swpush5/actionEvent__10daObjSw5_cFv.s"
+void daObjSw5_c::actionEvent() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8059BF54-8059BFE4 0090+00 s=1 e=0 z=0  None .text      calc_top_pos__10daObjSw5_cFv                                 */

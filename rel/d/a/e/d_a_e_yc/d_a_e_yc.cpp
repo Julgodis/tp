@@ -48,19 +48,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -94,13 +94,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -205,7 +205,7 @@ static void e_yc_wolfbite(e_yc_class*); // 2
 static void anm_se_set(e_yc_class*); // 2
 static void action(e_yc_class*); // 2
 static void daE_YC_Execute(e_yc_class*); // 2
-static void daE_YC_IsDelete(e_yc_class*); // 2
+static bool daE_YC_IsDelete(e_yc_class*); // 2
 static void daE_YC_Delete(e_yc_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YC_Create(fopAc_ac_c*); // 2
@@ -222,7 +222,7 @@ extern "C" static void e_yc_wolfbite__FP10e_yc_class(); // 1
 extern "C" static void anm_se_set__FP10e_yc_class(); // 1
 extern "C" static void action__FP10e_yc_class(); // 1
 extern "C" static void daE_YC_Execute__FP10e_yc_class(); // 1
-extern "C" static void daE_YC_IsDelete__FP10e_yc_class(); // 1
+extern "C" static bool daE_YC_IsDelete__FP10e_yc_class(); // 1
 extern "C" static void daE_YC_Delete__FP10e_yc_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_YC_Create__FP10fopAc_ac_c(); // 1
@@ -872,14 +872,9 @@ asm static void daE_YC_Execute(e_yc_class* param_0) {
 
 
 /* 807F2234-807F223C 0008+00 s=1 e=0 z=0  None .text      daE_YC_IsDelete__FP10e_yc_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YC_IsDelete(e_yc_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yc/d_a_e_yc/daE_YC_IsDelete__FP10e_yc_class.s"
+static bool daE_YC_IsDelete(e_yc_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807F223C-807F22A4 0068+00 s=1 e=0 z=0  None .text      daE_YC_Delete__FP10e_yc_class                                */

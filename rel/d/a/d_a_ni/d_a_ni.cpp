@@ -93,7 +93,7 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -102,7 +102,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -148,10 +148,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -304,7 +304,7 @@ static void play_camera(ni_class*); // 2
 void action(ni_class*); // 2
 static void message(ni_class*); // 2
 static void daNi_Execute(ni_class*); // 2
-static void daNi_IsDelete(ni_class*); // 2
+static bool daNi_IsDelete(ni_class*); // 2
 static void daNi_Delete(ni_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNi_Create(fopAc_ac_c*); // 2
@@ -339,7 +339,7 @@ extern "C" static void play_camera__FP8ni_class(); // 1
 extern "C" void action__FP8ni_class(); // 1
 extern "C" static void message__FP8ni_class(); // 1
 extern "C" static void daNi_Execute__FP8ni_class(); // 1
-extern "C" static void daNi_IsDelete__FP8ni_class(); // 1
+extern "C" static bool daNi_IsDelete__FP8ni_class(); // 1
 extern "C" static void daNi_Delete__FP8ni_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -482,7 +482,7 @@ void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
 void fopAcM_wayBgCheck(fopAc_ac_c const*, f32, f32); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopAcM_carryOffRevise(fopAc_ac_c*); // 2
 void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeForPName(void*, void*); // 2
@@ -526,7 +526,7 @@ extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 
 extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
 extern "C" void fopAcM_wayBgCheck__FPC10fopAc_ac_cff(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopAcM_carryOffRevise__FP10fopAc_ac_c(); // 1
 extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
@@ -1495,14 +1495,9 @@ asm static void daNi_Execute(ni_class* param_0) {
 
 
 /* 80950870-80950878 0008+00 s=1 e=0 z=0  None .text      daNi_IsDelete__FP8ni_class                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNi_IsDelete(ni_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ni/d_a_ni/daNi_IsDelete__FP8ni_class.s"
+static bool daNi_IsDelete(ni_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80950878-809508E0 0068+00 s=1 e=0 z=0  None .text      daNi_Delete__FP8ni_class                                     */

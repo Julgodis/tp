@@ -76,7 +76,7 @@ struct daMBdoorL1_c {
 	/* 806762A4 */ void checkFront();
 	/* 80676308 */ void checkOpen();
 	/* 806764D0 */ void checkFrontKey();
-	/* 80676568 */ void checkBackKey();
+	/* 80676568 */ bool checkBackKey();
 	/* 80676570 */ void checkFrontStop();
 	/* 80676610 */ void checkBackStop();
 	/* 806766B0 */ void checkFrontSw();
@@ -87,7 +87,7 @@ struct daMBdoorL1_c {
 	/* 806769D0 */ void checkStopClose();
 	/* 80676AB4 */ void checkMakeStop();
 	/* 80676B64 */ void checkMakeKey();
-	/* 80676BE0 */ void actionWait();
+	/* 80676BE0 */ bool actionWait();
 	/* 80676BE8 */ void actionCloseWait();
 	/* 80676DEC */ void actionStopClose();
 	/* 80676E40 */ void actionDemo();
@@ -220,11 +220,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -361,7 +361,7 @@ extern "C" void checkArea__12daMBdoorL1_cFv(); // 1
 extern "C" void checkFront__12daMBdoorL1_cFv(); // 1
 extern "C" void checkOpen__12daMBdoorL1_cFv(); // 1
 extern "C" void checkFrontKey__12daMBdoorL1_cFv(); // 1
-extern "C" void checkBackKey__12daMBdoorL1_cFv(); // 1
+extern "C" bool checkBackKey__12daMBdoorL1_cFv(); // 1
 extern "C" void checkFrontStop__12daMBdoorL1_cFv(); // 1
 extern "C" void checkBackStop__12daMBdoorL1_cFv(); // 1
 extern "C" void checkFrontSw__12daMBdoorL1_cFv(); // 1
@@ -372,7 +372,7 @@ extern "C" void checkMBossRoom__12daMBdoorL1_cFv(); // 1
 extern "C" void checkStopClose__12daMBdoorL1_cFv(); // 1
 extern "C" void checkMakeStop__12daMBdoorL1_cFv(); // 1
 extern "C" void checkMakeKey__12daMBdoorL1_cFv(); // 1
-extern "C" void actionWait__12daMBdoorL1_cFv(); // 1
+extern "C" bool actionWait__12daMBdoorL1_cFv(); // 1
 extern "C" void actionCloseWait__12daMBdoorL1_cFv(); // 1
 extern "C" void actionStopClose__12daMBdoorL1_cFv(); // 1
 extern "C" void actionDemo__12daMBdoorL1_cFv(); // 1
@@ -1802,14 +1802,9 @@ asm void daMBdoorL1_c::checkFrontKey() {
 
 
 /* 80676568-80676570 0008+00 s=1 e=0 z=0  None .text      checkBackKey__12daMBdoorL1_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMBdoorL1_c::checkBackKey() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_mbossL1/d_a_door_mbossL1/checkBackKey__12daMBdoorL1_cFv.s"
+bool daMBdoorL1_c::checkBackKey() {
+	return false;
 }
-#pragma pop
 
 
 /* 80676570-80676610 00A0+00 s=1 e=0 z=0  None .text      checkFrontStop__12daMBdoorL1_cFv                             */
@@ -1923,14 +1918,9 @@ asm void daMBdoorL1_c::checkMakeKey() {
 
 
 /* 80676BE0-80676BE8 0008+00 s=1 e=0 z=0  None .text      actionWait__12daMBdoorL1_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daMBdoorL1_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_mbossL1/d_a_door_mbossL1/actionWait__12daMBdoorL1_cFv.s"
+bool daMBdoorL1_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 80676BE8-80676DEC 0204+00 s=2 e=0 z=0  None .text      actionCloseWait__12daMBdoorL1_cFv                            */

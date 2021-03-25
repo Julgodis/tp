@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcTkc_c {
@@ -58,7 +58,7 @@ struct daNpcTkc_c {
 	/* 80B0FAD0 */ void main();
 	/* 80B0FD18 */ void ctrlBtk();
 	/* 80B0FDE4 */ void setAttnPos();
-	/* 80B0FFD4 */ void drawDbgInfo();
+	/* 80B0FFD4 */ bool drawDbgInfo();
 };
 
 struct Vec {
@@ -116,23 +116,23 @@ struct daNpcF_ActorMngr_c {
 	/* 80B10024 */ daNpcF_ActorMngr_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
 struct J3DModelData {
-};
-
-struct J3DAnmTransform {
 };
 
 struct _GXColorS10 {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -212,9 +212,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -222,6 +219,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -347,7 +347,7 @@ static void daNpcTkc_Create(void*); // 2
 static void daNpcTkc_Delete(void*); // 2
 static void daNpcTkc_Execute(void*); // 2
 static void daNpcTkc_Draw(void*); // 2
-static void daNpcTkc_IsDelete(void*); // 2
+static bool daNpcTkc_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 static void cLib_getRndValue__template0(f32, f32); // 2
 static void cLib_getRndValue__template1(int, int); // 2
@@ -400,13 +400,13 @@ extern "C" static void daNpcTkc_Create__FPv(); // 1
 extern "C" static void daNpcTkc_Delete__FPv(); // 1
 extern "C" static void daNpcTkc_Execute__FPv(); // 1
 extern "C" static void daNpcTkc_Draw__FPv(); // 1
-extern "C" static void daNpcTkc_IsDelete__FPv(); // 1
+extern "C" static bool daNpcTkc_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setParam__10daNpcTkc_cFv(); // 1
 extern "C" void main__10daNpcTkc_cFv(); // 1
 extern "C" void ctrlBtk__10daNpcTkc_cFv(); // 1
 extern "C" void setAttnPos__10daNpcTkc_cFv(); // 1
-extern "C" void drawDbgInfo__10daNpcTkc_cFv(); // 1
+extern "C" bool drawDbgInfo__10daNpcTkc_cFv(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
 extern "C" void __dt__8daNpcF_cFv(); // 1
@@ -1653,14 +1653,9 @@ asm static void daNpcTkc_Draw(void* param_0) {
 
 
 /* 80B0FA24-80B0FA2C 0008+00 s=1 e=0 z=0  None .text      daNpcTkc_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcTkc_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/daNpcTkc_IsDelete__FPv.s"
+static bool daNpcTkc_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B0FA2C-80B0FA5C 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -1719,14 +1714,9 @@ asm void daNpcTkc_c::setAttnPos() {
 
 
 /* 80B0FFD4-80B0FFDC 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__10daNpcTkc_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcTkc_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/drawDbgInfo__10daNpcTkc_cFv.s"
+bool daNpcTkc_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80B0FFDC-80B10024 0048+00 s=5 e=1 z=0  None .text      __dt__18daNpcF_ActorMngr_cFv                                 */
@@ -1785,25 +1775,15 @@ asm daNpcF_c::daNpcF_c() {
 
 
 /* 80B104D8-80B104DC 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B104DC-80B104E0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B104E0-80B10550 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
@@ -1851,36 +1831,21 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80B10664-80B10668 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B10668-80B1066C 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B1066C-80B10670 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkc/d_a_npc_tkc/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80B10670-80B106B8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

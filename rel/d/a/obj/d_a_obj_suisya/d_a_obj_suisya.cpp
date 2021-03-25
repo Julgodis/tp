@@ -99,7 +99,7 @@ struct Z2SeMgr {
 
 static void daObj_Suisya_Draw(daObj_Suisya_c*); // 2
 static void daObj_Suisya_Execute(daObj_Suisya_c*); // 2
-static void daObj_Suisya_IsDelete(daObj_Suisya_c*); // 2
+static bool daObj_Suisya_IsDelete(daObj_Suisya_c*); // 2
 static void daObj_Suisya_Delete(daObj_Suisya_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Suisya_Create(daObj_Suisya_c*); // 2
@@ -108,7 +108,7 @@ extern "C" void draw__14daObj_Suisya_cFv(); // 1
 extern "C" static void daObj_Suisya_Draw__FP14daObj_Suisya_c(); // 1
 extern "C" void execute__14daObj_Suisya_cFv(); // 1
 extern "C" static void daObj_Suisya_Execute__FP14daObj_Suisya_c(); // 1
-extern "C" static void daObj_Suisya_IsDelete__FP14daObj_Suisya_c(); // 1
+extern "C" static bool daObj_Suisya_IsDelete__FP14daObj_Suisya_c(); // 1
 extern "C" void _delete__14daObj_Suisya_cFv(); // 1
 extern "C" static void daObj_Suisya_Delete__FP14daObj_Suisya_c(); // 1
 extern "C" void CreateHeap__14daObj_Suisya_cFv(); // 1
@@ -240,14 +240,9 @@ asm static void daObj_Suisya_Execute(daObj_Suisya_c* param_0) {
 
 
 /* 80CF022C-80CF0234 0008+00 s=1 e=0 z=0  None .text      daObj_Suisya_IsDelete__FP14daObj_Suisya_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Suisya_IsDelete(daObj_Suisya_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_IsDelete__FP14daObj_Suisya_c.s"
+static bool daObj_Suisya_IsDelete(daObj_Suisya_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

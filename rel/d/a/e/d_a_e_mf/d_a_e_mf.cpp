@@ -102,19 +102,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -163,10 +163,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -326,7 +326,7 @@ static void damage_check(e_mf_class*); // 2
 static void action(e_mf_class*); // 2
 static void anm_se_set(e_mf_class*); // 2
 static void daE_MF_Execute(e_mf_class*); // 2
-static void daE_MF_IsDelete(e_mf_class*); // 2
+static bool daE_MF_IsDelete(e_mf_class*); // 2
 static void daE_MF_Delete(e_mf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_MF_Create(fopAc_ac_c*); // 2
@@ -377,7 +377,7 @@ extern "C" static void damage_check__FP10e_mf_class(); // 1
 extern "C" static void action__FP10e_mf_class(); // 1
 extern "C" static void anm_se_set__FP10e_mf_class(); // 1
 extern "C" static void daE_MF_Execute__FP10e_mf_class(); // 1
-extern "C" static void daE_MF_IsDelete__FP10e_mf_class(); // 1
+extern "C" static bool daE_MF_IsDelete__FP10e_mf_class(); // 1
 extern "C" static void daE_MF_Delete__FP10e_mf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_MF_Create__FP10fopAc_ac_c(); // 1
@@ -1916,14 +1916,9 @@ asm static void daE_MF_Execute(e_mf_class* param_0) {
 
 
 /* 80712998-807129A0 0008+00 s=1 e=0 z=0  None .text      daE_MF_IsDelete__FP10e_mf_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MF_IsDelete(e_mf_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mf/d_a_e_mf/daE_MF_IsDelete__FP10e_mf_class.s"
+static bool daE_MF_IsDelete(e_mf_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807129A0-80712A08 0068+00 s=1 e=0 z=0  None .text      daE_MF_Delete__FP10e_mf_class                                */
@@ -2048,14 +2043,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 80713418-8071341C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mf/d_a_e_mf/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8071341C-80713464 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

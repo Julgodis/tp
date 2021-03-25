@@ -17,7 +17,7 @@ struct daTagKagoFall_c {
 	/* 80D59E18 */ void setActionMode(u8, u8);
 	/* 80D59E24 */ void actionWaitRiver();
 	/* 80D5A218 */ void actionWaitFall();
-	/* 80D5A67C */ void _delete();
+	/* 80D5A67C */ bool _delete();
 };
 
 struct _GXColor {
@@ -91,7 +91,7 @@ extern "C" void execute__15daTagKagoFall_cFv(); // 1
 extern "C" void setActionMode__15daTagKagoFall_cFUcUc(); // 1
 extern "C" void actionWaitRiver__15daTagKagoFall_cFv(); // 1
 extern "C" void actionWaitFall__15daTagKagoFall_cFv(); // 1
-extern "C" void _delete__15daTagKagoFall_cFv(); // 1
+extern "C" bool _delete__15daTagKagoFall_cFv(); // 1
 extern "C" static void daTagKagoFall_Execute__FP15daTagKagoFall_c(); // 1
 extern "C" static void daTagKagoFall_Delete__FP15daTagKagoFall_c(); // 1
 extern "C" static void daTagKagoFall_Create__FP15daTagKagoFall_c(); // 1
@@ -244,14 +244,9 @@ asm void daTagKagoFall_c::actionWaitFall() {
 
 
 /* 80D5A67C-80D5A684 0008+00 s=1 e=0 z=0  None .text      _delete__15daTagKagoFall_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagKagoFall_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/_delete__15daTagKagoFall_cFv.s"
+bool daTagKagoFall_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5A684-80D5A6A4 0020+00 s=1 e=0 z=0  None .text      daTagKagoFall_Execute__FP15daTagKagoFall_c                   */

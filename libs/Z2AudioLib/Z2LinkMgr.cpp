@@ -14,10 +14,10 @@
 struct Vec {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -61,9 +61,6 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
-struct JAISoundHandle {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -71,6 +68,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundHandle {
 };
 
 struct Z2LinkSoundStarter {
@@ -312,14 +312,9 @@ extern "C" extern u8 data_80450B88[4];
 // 
 
 /* 802C321C-802C3220 0004+00 s=0 e=1 z=0  None .text      setLinkGroupInfo__14Z2CreatureLinkFUc                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void Z2CreatureLink::setLinkGroupInfo(u8 param_0) {
-	nofralloc
-#include "asm/Z2AudioLib/Z2LinkMgr/setLinkGroupInfo__14Z2CreatureLinkFUc.s"
+void Z2CreatureLink::setLinkGroupInfo(u8 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 802C3220-802C3228 0008+00 s=0 e=1 z=0  None .text      setLinkHp__14Z2CreatureLinkFll                               */

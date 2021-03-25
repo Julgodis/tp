@@ -28,7 +28,7 @@ struct daTimeFire_c {
 	/* 80D0EB64 */ void cutLight();
 	/* 80D0EB88 */ void Execute();
 	/* 80D0ED68 */ void fireCheck(u8);
-	/* 80D0EF88 */ void Draw();
+	/* 80D0EF88 */ bool Draw();
 	/* 80D0EF90 */ void Delete();
 };
 
@@ -40,19 +40,19 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -91,7 +91,7 @@ extern "C" void setLight__12daTimeFire_cFv(); // 1
 extern "C" void cutLight__12daTimeFire_cFv(); // 1
 extern "C" void Execute__12daTimeFire_cFv(); // 1
 extern "C" void fireCheck__12daTimeFire_cFUc(); // 1
-extern "C" void Draw__12daTimeFire_cFv(); // 1
+extern "C" bool Draw__12daTimeFire_cFv(); // 1
 extern "C" void Delete__12daTimeFire_cFv(); // 1
 extern "C" static void daTimeFire_Draw__FP12daTimeFire_c(); // 1
 extern "C" static void daTimeFire_Execute__FP12daTimeFire_c(); // 1
@@ -306,14 +306,9 @@ asm void daTimeFire_c::fireCheck(u8 param_0) {
 
 
 /* 80D0EF88-80D0EF90 0008+00 s=1 e=0 z=0  None .text      Draw__12daTimeFire_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTimeFire_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_timeFire/d_a_obj_timeFire/Draw__12daTimeFire_cFv.s"
+bool daTimeFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D0EF90-80D0EFB8 0028+00 s=1 e=0 z=0  None .text      Delete__12daTimeFire_cFv                                     */

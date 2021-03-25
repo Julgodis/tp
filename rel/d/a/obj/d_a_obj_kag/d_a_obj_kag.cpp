@@ -110,16 +110,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -128,6 +122,12 @@ struct Vec {
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -252,7 +252,7 @@ static void daObjKAG_Create(fopAc_ac_c*); // 2
 static void daObjKAG_Delete(daObjKAG_c*); // 2
 static void daObjKAG_Draw(daObjKAG_c*); // 2
 static void daObjKAG_Execute(daObjKAG_c*); // 2
-static void daObjKAG_IsDelete(daObjKAG_c*); // 2
+static bool daObjKAG_IsDelete(daObjKAG_c*); // 2
 
 extern "C" void __ct__14daObj_KagHIO_cFv(); // 1
 extern "C" void setAction__10daObjKAG_cFM10daObjKAG_cFPCvPv_v(); // 1
@@ -281,7 +281,7 @@ extern "C" void create__10daObjKAG_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" static void daObjKAG_IsDelete__FP10daObjKAG_c(); // 1
+extern "C" static bool daObjKAG_IsDelete__FP10daObjKAG_c(); // 1
 extern "C" void kag_setParticle__10daObjKAG_cFv(); // 1
 extern "C" void __dt__14daObj_KagHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_kag_cpp(); // 1
@@ -1184,14 +1184,9 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 80C30E4C-80C30E54 0008+00 s=1 e=0 z=0  None .text      daObjKAG_IsDelete__FP10daObjKAG_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKAG_IsDelete(daObjKAG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kag/d_a_obj_kag/daObjKAG_IsDelete__FP10daObjKAG_c.s"
+static bool daObjKAG_IsDelete(daObjKAG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C30E54-80C31060 020C+00 s=7 e=0 z=0  None .text      kag_setParticle__10daObjKAG_cFv                              */

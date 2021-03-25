@@ -52,8 +52,8 @@ struct cXyz {
 
 static void hitCheck(daSwc00_c*); // 2
 static void daSwc00_Execute(daSwc00_c*); // 2
-static void daSwc00_IsDelete(daSwc00_c*); // 2
-static void daSwc00_Delete(daSwc00_c*); // 2
+static bool daSwc00_IsDelete(daSwc00_c*); // 2
+static bool daSwc00_Delete(daSwc00_c*); // 2
 static void daSwc00_Create(fopAc_ac_c*); // 2
 
 extern "C" static void hitCheck__FP9daSwc00_c(); // 1
@@ -64,8 +64,8 @@ extern "C" void actionWait__9daSwc00_cFv(); // 1
 extern "C" void actionOrderEvent__9daSwc00_cFv(); // 1
 extern "C" void actionEvent__9daSwc00_cFv(); // 1
 extern "C" void actionDead__9daSwc00_cFv(); // 1
-extern "C" static void daSwc00_IsDelete__FP9daSwc00_c(); // 1
-extern "C" static void daSwc00_Delete__FP9daSwc00_c(); // 1
+extern "C" static bool daSwc00_IsDelete__FP9daSwc00_c(); // 1
+extern "C" static bool daSwc00_Delete__FP9daSwc00_c(); // 1
 extern "C" static void daSwc00_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern u32 const lit_3991;
 extern "C" extern u32 const lit_3992;
@@ -294,25 +294,15 @@ asm void daSwc00_c::actionDead() {
 
 
 /* 805A1B1C-805A1B24 0008+00 s=1 e=0 z=0  None .text      daSwc00_IsDelete__FP9daSwc00_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daSwc00_IsDelete(daSwc00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_IsDelete__FP9daSwc00_c.s"
+static bool daSwc00_IsDelete(daSwc00_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805A1B24-805A1B2C 0008+00 s=1 e=0 z=0  None .text      daSwc00_Delete__FP9daSwc00_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daSwc00_Delete(daSwc00_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_swc00/d_a_swc00/daSwc00_Delete__FP9daSwc00_c.s"
+static bool daSwc00_Delete(daSwc00_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

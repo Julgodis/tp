@@ -16,12 +16,6 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -31,16 +25,16 @@ struct cXyz {
 	/* 80A29944 */ cXyz();
 };
 
-struct J3DModelData {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModelData {
 };
 
 struct _GXColorS10 {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -67,12 +61,18 @@ struct daNpcF_c {
 	/* 80154278 */ void getDistTableIdx(int, int);
 	/* 80A29948 */ ~daNpcF_c();
 	/* 80A29B94 */ daNpcF_c();
-	/* 80A29F08 */ void ctrlBtk();
+	/* 80A29F08 */ bool ctrlBtk();
 	/* 80A29F10 */ void setCollisions();
-	/* 80A29F14 */ void setExpressionAnm(int, bool);
-	/* 80A29F1C */ void setExpressionBtp(int);
+	/* 80A29F14 */ bool setExpressionAnm(int, bool);
+	/* 80A29F1C */ bool setExpressionBtp(int);
 	/* 80A29F24 */ void setExpression(int, f32);
 	/* 80A29F28 */ void drawOtherMdls();
+};
+
+struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcKasiMich_c {
@@ -91,7 +91,7 @@ struct daNpcKasiMich_c {
 	/* 80A26FDC */ void setAttnPos();
 	/* 80A27184 */ void setMotionAnm(int, f32);
 	/* 80A27254 */ void setMotion(int, f32, int);
-	/* 80A2729C */ void drawDbgInfo();
+	/* 80A2729C */ bool drawDbgInfo();
 	/* 80A272A4 */ void reset();
 	/* 80A274D8 */ void playMotion();
 	/* 80A2790C */ void playMotionAnmLoop(daNpcF_c::daNpcF_anmPlayData***);
@@ -211,16 +211,16 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
+struct J3DAnmTransform {
+};
+
 struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -329,7 +329,7 @@ static void daNpcKasiMich_Create(void*); // 2
 static void daNpcKasiMich_Delete(void*); // 2
 static void daNpcKasiMich_Execute(void*); // 2
 static void daNpcKasiMich_Draw(void*); // 2
-static void daNpcKasiMich_IsDelete(void*); // 2
+static bool daNpcKasiMich_IsDelete(void*); // 2
 
 extern "C" void __ct__15daNpcKasiMich_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -348,7 +348,7 @@ extern "C" void main__15daNpcKasiMich_cFv(); // 1
 extern "C" void setAttnPos__15daNpcKasiMich_cFv(); // 1
 extern "C" void setMotionAnm__15daNpcKasiMich_cFif(); // 1
 extern "C" void setMotion__15daNpcKasiMich_cFifi(); // 1
-extern "C" void drawDbgInfo__15daNpcKasiMich_cFv(); // 1
+extern "C" bool drawDbgInfo__15daNpcKasiMich_cFv(); // 1
 extern "C" void reset__15daNpcKasiMich_cFv(); // 1
 extern "C" void playMotion__15daNpcKasiMich_cFv(); // 1
 extern "C" void playMotionAnmLoop__15daNpcKasiMich_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
@@ -386,7 +386,7 @@ extern "C" static void daNpcKasiMich_Create__FPv(); // 1
 extern "C" static void daNpcKasiMich_Delete__FPv(); // 1
 extern "C" static void daNpcKasiMich_Execute__FPv(); // 1
 extern "C" static void daNpcKasiMich_Draw__FPv(); // 1
-extern "C" static void daNpcKasiMich_IsDelete__FPv(); // 1
+extern "C" static bool daNpcKasiMich_IsDelete__FPv(); // 1
 extern "C" void __dt__13daNpcF_Path_cFv(); // 1
 extern "C" void __dt__16daNpcF_SPCurve_cFv(); // 1
 extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
@@ -402,10 +402,10 @@ extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void ctrlBtk__8daNpcF_cFv(); // 1
+extern "C" bool ctrlBtk__8daNpcF_cFv(); // 1
 extern "C" void setCollisions__8daNpcF_cFv(); // 1
-extern "C" void setExpressionAnm__8daNpcF_cFib(); // 1
-extern "C" void setExpressionBtp__8daNpcF_cFi(); // 1
+extern "C" bool setExpressionAnm__8daNpcF_cFib(); // 1
+extern "C" bool setExpressionBtp__8daNpcF_cFi(); // 1
 extern "C" void setExpression__8daNpcF_cFif(); // 1
 extern "C" void drawOtherMdls__8daNpcF_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
@@ -1610,14 +1610,9 @@ asm void daNpcKasiMich_c::setMotion(int param_0, f32 param_1, int param_2) {
 
 
 /* 80A2729C-80A272A4 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__15daNpcKasiMich_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcKasiMich_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/drawDbgInfo__15daNpcKasiMich_cFv.s"
+bool daNpcKasiMich_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A272A4-80A274D8 0234+00 s=1 e=0 z=0  None .text      reset__15daNpcKasiMich_cFv                                   */
@@ -2028,14 +2023,9 @@ asm static void daNpcKasiMich_Draw(void* param_0) {
 
 
 /* 80A296C4-80A296CC 0008+00 s=1 e=0 z=0  None .text      daNpcKasiMich_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcKasiMich_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/daNpcKasiMich_IsDelete__FPv.s"
+static bool daNpcKasiMich_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A296CC-80A2972C 0060+00 s=1 e=0 z=0  None .text      __dt__13daNpcF_Path_cFv                                      */
@@ -2105,14 +2095,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80A29904-80A29908 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29908-80A29944 003C+00 s=5 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -2127,14 +2112,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80A29944-80A29948 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29948-80A29B94 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -2204,69 +2184,39 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80A29F08-80A29F10 0008+00 s=1 e=0 z=0  None .text      ctrlBtk__8daNpcF_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::ctrlBtk() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/ctrlBtk__8daNpcF_cFv.s"
+bool daNpcF_c::ctrlBtk() {
+	return false;
 }
-#pragma pop
 
 
 /* 80A29F10-80A29F14 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29F14-80A29F1C 0008+00 s=1 e=0 z=0  None .text      setExpressionAnm__8daNpcF_cFib                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/setExpressionAnm__8daNpcF_cFib.s"
+bool daNpcF_c::setExpressionAnm(int param_0, bool param_1) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A29F1C-80A29F24 0008+00 s=1 e=0 z=0  None .text      setExpressionBtp__8daNpcF_cFi                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpressionBtp(int param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/setExpressionBtp__8daNpcF_cFi.s"
+bool daNpcF_c::setExpressionBtp(int param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A29F24-80A29F28 0004+00 s=1 e=0 z=0  None .text      setExpression__8daNpcF_cFif                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setExpression(int param_0, f32 param_1) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/setExpression__8daNpcF_cFif.s"
+void daNpcF_c::setExpression(int param_0, f32 param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29F28-80A29F2C 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/drawOtherMdls__8daNpcF_cFv.s"
+void daNpcF_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29F2C-80A29F74 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -2300,14 +2250,9 @@ extern "C" asm void __sinit_d_a_npc_kasi_mich_cpp() {
 
 
 /* 80A29FDC-80A29FE0 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__15daNpcKasiMich_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcKasiMich_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_kasi_mich/d_a_npc_kasi_mich/adjustShapeAngle__15daNpcKasiMich_cFv.s"
+void daNpcKasiMich_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A29FE0-80A2A028 0048+00 s=2 e=0 z=0  None .text      __dt__21daNpcKasiMich_Param_cFv                              */

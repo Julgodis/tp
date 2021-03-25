@@ -31,18 +31,18 @@ struct dAttDraw_CallBack_c {
 struct fopAc_ac_c {
 };
 
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
 };
 
 struct dAttention_c {
@@ -138,10 +138,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
 struct mDoExt_bpkAnm {
@@ -165,10 +165,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -933,14 +933,9 @@ asm void dAttention_c::runDrawProc() {
 
 
 /* 800720F4-800720F8 0004+00 s=1 e=0 z=0  None .text      runDebugDisp__12dAttention_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dAttention_c::runDebugDisp() {
-	nofralloc
-#include "asm/d/d_attention/runDebugDisp__12dAttention_cFv.s"
+void dAttention_c::runDebugDisp() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800720F8-800722A0 01A8+00 s=1 e=0 z=0  None .text      checkButton__12dAttention_cFv                                */
@@ -1076,14 +1071,9 @@ asm void dAttDraw_c::alphaAnm() {
 
 
 /* 800732AC-800732B0 0004+00 s=0 e=3 z=0  None .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J3DTevBlock::setTevKColor(u32 param_0, J3DGXColor const* param_1) {
-	nofralloc
-#include "asm/d/d_attention/setTevKColor__11J3DTevBlockFUlPC10J3DGXColor.s"
+void J3DTevBlock::setTevKColor(u32 param_0, J3DGXColor const* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

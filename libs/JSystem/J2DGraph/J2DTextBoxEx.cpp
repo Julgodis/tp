@@ -11,16 +11,19 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct J2DTextBoxHBinding {
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmTexPattern {
 };
 
 struct J2DMaterial {
@@ -31,32 +34,7 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct J2DTevStage {
-};
-
-struct J2DTextBoxHBinding {
-};
-
 struct ResFONT {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct _GXCullMode {
 };
 
 struct JSUStreamSeekFrom {
@@ -65,6 +43,34 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JUTFont {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmTransform {
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -90,13 +96,7 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct JUTFont {
+struct J2DTevStage {
 };
 
 struct J2DTextBoxEx {
@@ -159,7 +159,7 @@ struct J2DTextBox {
 	/* 80300870 */ void setConnectParent(bool);
 	/* 803008E8 */ void drawSelf(f32, f32);
 	/* 80300AF8 */ void resize(f32, f32);
-	/* 80300C68 */ void getTypeID() const;
+	/* 80300C68 */ s32 getTypeID() const;
 };
 
 // 
@@ -249,7 +249,7 @@ extern "C" void __dt__10J2DTextBoxFv(); // 1
 extern "C" void setConnectParent__10J2DTextBoxFb(); // 1
 extern "C" void drawSelf__10J2DTextBoxFff(); // 1
 extern "C" void resize__10J2DTextBoxFff(); // 1
-extern "C" void getTypeID__10J2DTextBoxCFv(); // 1
+extern "C" s32 getTypeID__10J2DTextBoxCFv(); // 1
 extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc(); // 1
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -699,14 +699,9 @@ asm void J2DTextBoxEx::isUsed(ResTIMG const* param_0) {
 
 
 /* 80308A48-80308A4C 0004+00 s=1 e=0 z=0  None .text      setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTextBoxEx::setAnimation(J2DAnmVtxColor* param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTextBoxEx/setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor.s"
+void J2DTextBoxEx::setAnimation(J2DAnmVtxColor* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80308A4C-80308A6C 0020+00 s=1 e=0 z=0  None .text      setAnimation__12J2DTextBoxExFP10J2DAnmBase                   */

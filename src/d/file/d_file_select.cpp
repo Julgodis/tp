@@ -212,12 +212,6 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -225,6 +219,12 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTIMG {
+};
+
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -3161,14 +3161,9 @@ asm void dFile_select_c::backDatSelWait2() {
 
 
 /* 8018AD9C-8018ADA0 0004+00 s=1 e=0 z=0  None .text      nextModeWait__14dFile_select_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dFile_select_c::nextModeWait() {
-	nofralloc
-#include "asm/d/file/d_file_select/nextModeWait__14dFile_select_cFv.s"
+void dFile_select_c::nextModeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -3237,14 +3232,9 @@ asm void J2DPicture::setBlackWhite(JUtility::TColor param_0, JUtility::TColor pa
 
 
 /* 8018BF28-8018BF2C 0004+00 s=0 e=4 z=0  None .text      setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPane::setAnimation(J2DAnmTextureSRTKey* param_0) {
-	nofralloc
-#include "asm/d/file/d_file_select/setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey.s"
+void J2DPane::setAnimation(J2DAnmTextureSRTKey* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8018BF2C-8018C524 05F8+00 s=1 e=0 z=0  None .text      screenSetCopySel__14dFile_select_cFv                         */
@@ -4167,14 +4157,9 @@ asm void dFile_select3D_c::_create(u8 param_0, u8 param_1) {
 
 
 /* 8019049C-801904A0 0004+00 s=1 e=0 z=0  None .text      _delete__16dFile_select3D_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dFile_select3D_c::_delete() {
-	nofralloc
-#include "asm/d/file/d_file_select/_delete__16dFile_select3D_cFv.s"
+void dFile_select3D_c::_delete() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801904A0-801904E4 0044+00 s=2 e=0 z=0  None .text      freeHeap__16dFile_select3D_cFv                               */
@@ -4328,14 +4313,9 @@ asm void dFile_select3D_c::calcViewMtx(f32 (* param_0)[4]) {
 
 
 /* 80191130-80191134 0004+00 s=1 e=0 z=0  None .text      getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DAnmTransform::getTransform(u16 param_0, J3DTransformInfo* param_1) const {
-	nofralloc
-#include "asm/d/file/d_file_select/getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo.s"
+void J2DAnmTransform::getTransform(u16 param_0, J3DTransformInfo* param_1) const {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80191134-8019117C 0048+00 s=1 e=0 z=0  None .text      __dt__10JUTNameTabFv                                         */

@@ -11,28 +11,28 @@
 // Types:
 // 
 
+struct J3DTextureBlock {
+};
+
+struct J3DDrawBlock {
+};
+
 struct J3DJointBlock {
-};
-
-struct J3DShapeBlock {
-};
-
-struct J3DModelInfoBlock {
-};
-
-struct J3DMaterialDLBlock {
-};
-
-struct J3DMaterialBlock {
 };
 
 struct J3DEnvelopeBlock {
 };
 
-struct J3DTextureBlock {
+struct J3DMaterialBlock {
 };
 
-struct J3DDrawBlock {
+struct J3DMaterialDLBlock {
+};
+
+struct J3DModelInfoBlock {
+};
+
+struct J3DShapeBlock {
 };
 
 struct J3DModelLoader {

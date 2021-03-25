@@ -15,12 +15,6 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -28,6 +22,12 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80658A68 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daCow_c {
@@ -184,10 +184,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -195,21 +195,21 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -352,7 +352,7 @@ static void daCow_Execute(void*); // 2
 static void daCow_Create(void*); // 2
 static void daCow_Draw(void*); // 2
 static void daCow_Delete(void*); // 2
-static void daCow_IsDelete(void*); // 2
+static bool daCow_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void calcRunAnime__7daCow_cFi(); // 1
@@ -455,7 +455,7 @@ extern "C" void Draw__7daCow_cFv(); // 1
 extern "C" static void daCow_Draw__FPv(); // 1
 extern "C" void Delete__7daCow_cFv(); // 1
 extern "C" static void daCow_Delete__FPv(); // 1
-extern "C" static void daCow_IsDelete__FPv(); // 1
+extern "C" static bool daCow_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80662CB0(); // 1
 extern "C" void __sinit_d_a_cow_cpp(); // 1
@@ -2907,14 +2907,9 @@ asm static void daCow_Delete(void* param_0) {
 
 
 /* 80662C60-80662C68 0008+00 s=1 e=0 z=0  None .text      daCow_IsDelete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daCow_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_cow/d_a_cow/daCow_IsDelete__FPv.s"
+static bool daCow_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80662C68-80662CB0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -27,7 +27,7 @@ extern "C" void DVDReadPrio(); // 1
 extern "C" static void cbForReadSync(); // 1
 extern "C" void DVDOpenDir(); // 1
 extern "C" void DVDReadDir(); // 1
-extern "C" void DVDCloseDir(); // 1
+extern "C" bool DVDCloseDir(); // 1
 extern "C" extern u8 __DVDLongFileNameFlag[4];
 extern "C" extern u8 __DVDThreadQueue[8];
 
@@ -302,13 +302,8 @@ extern "C" asm void DVDReadDir() {
 
 
 /* 803490E4-803490EC 0008+00 s=0 e=3 z=0  None .text      DVDCloseDir                                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void DVDCloseDir() {
-	nofralloc
-#include "asm/dolphin/dvd/dvdfs/DVDCloseDir.s"
+extern "C" bool DVDCloseDir() {
+	return true;
 }
-#pragma pop
 
 

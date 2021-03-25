@@ -103,7 +103,7 @@ static void hit_check(obj_lp_class*, wd_ss*); // 2
 static void hasu_action(obj_lp_class*, wd_ss*); // 2
 static void set_out_check(obj_lp_class*, cXyz*); // 2
 static void daObj_Lp_Execute(obj_lp_class*); // 2
-static void daObj_Lp_IsDelete(obj_lp_class*); // 2
+static bool daObj_Lp_IsDelete(obj_lp_class*); // 2
 static void daObj_Lp_Delete(obj_lp_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_lp_class*, int); // 2
@@ -115,7 +115,7 @@ extern "C" static void hit_check__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void hasu_action__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void set_out_check__FP12obj_lp_classP4cXyz(); // 1
 extern "C" static void daObj_Lp_Execute__FP12obj_lp_class(); // 1
-extern "C" static void daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
+extern "C" static bool daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
 extern "C" static void daObj_Lp_Delete__FP12obj_lp_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP12obj_lp_classi(); // 1
@@ -570,14 +570,9 @@ asm static void daObj_Lp_Execute(obj_lp_class* param_0) {
 
 
 /* 80C550F0-80C550F8 0008+00 s=1 e=0 z=0  None .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Lp_IsDelete(obj_lp_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_IsDelete__FP12obj_lp_class.s"
+static bool daObj_Lp_IsDelete(obj_lp_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C550F8-80C5518C 0094+00 s=1 e=0 z=0  None .text      daObj_Lp_Delete__FP12obj_lp_class                            */
@@ -674,14 +669,9 @@ asm wd_ss::~wd_ss() {
 
 
 /* 80C55A04-80C55A08 0004+00 s=1 e=0 z=0  None .text      __ct__5wd_ssFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm wd_ss::wd_ss() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/__ct__5wd_ssFv.s"
+wd_ss::wd_ss() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

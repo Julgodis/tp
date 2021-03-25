@@ -22,7 +22,7 @@ struct dBgW_Base {
 	/* 8007E5A8 */ dBgW_Base();
 	/* 8007E640 */ ~dBgW_Base();
 	/* 8007E69C */ void ClrDBgWBase();
-	/* 8007E6D0 */ void ChkMemoryError();
+	/* 8007E6D0 */ bool ChkMemoryError();
 	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
 	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 	/* 8007E6E0 */ void CalcDiffShapeAngleY(s16);
@@ -41,7 +41,7 @@ extern "C" void __ct__9dBgW_BaseFv(); // 1
 extern "C" void __dt__9cBgW_BgIdFv(); // 1
 extern "C" void __dt__9dBgW_BaseFv(); // 1
 extern "C" void ClrDBgWBase__9dBgW_BaseFv(); // 1
-extern "C" void ChkMemoryError__9dBgW_BaseFv(); // 1
+extern "C" bool ChkMemoryError__9dBgW_BaseFv(); // 1
 extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
 extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs(); // 1
@@ -178,36 +178,21 @@ asm void dBgW_Base::ClrDBgWBase() {
 
 
 /* 8007E6D0-8007E6D8 0008+00 s=1 e=1 z=0  None .text      ChkMemoryError__9dBgW_BaseFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBgW_Base::ChkMemoryError() {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/ChkMemoryError__9dBgW_BaseFv.s"
+bool dBgW_Base::ChkMemoryError() {
+	return false;
 }
-#pragma pop
 
 
 /* 8007E6D8-8007E6DC 0004+00 s=1 e=2 z=0  None .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBgW_Base::CallRideCallBack(fopAc_ac_c* param_0, fopAc_ac_c* param_1) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c.s"
+void dBgW_Base::CallRideCallBack(fopAc_ac_c* param_0, fopAc_ac_c* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8007E6DC-8007E6E0 0004+00 s=1 e=2 z=0  None .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBgW_Base::CallArrowStickCallBack(fopAc_ac_c* param_0, fopAc_ac_c* param_1, cXyz& param_2) {
-	nofralloc
-#include "asm/d/bg/d_bg_w_base/CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz.s"
+void dBgW_Base::CallArrowStickCallBack(fopAc_ac_c* param_0, fopAc_ac_c* param_1, cXyz& param_2) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8007E6E0-8007E6F4 0014+00 s=0 e=1 z=0  None .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */

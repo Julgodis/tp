@@ -158,7 +158,7 @@ static void damage_check(obj_rw_class*); // 2
 static void normal(obj_rw_class*); // 2
 static void action(obj_rw_class*); // 2
 static void daOBJ_RW_Execute(obj_rw_class*); // 2
-static void daOBJ_RW_IsDelete(obj_rw_class*); // 2
+static bool daOBJ_RW_IsDelete(obj_rw_class*); // 2
 static void daOBJ_RW_Delete(obj_rw_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daOBJ_RW_Create(fopAc_ac_c*); // 2
@@ -170,7 +170,7 @@ extern "C" static void damage_check__FP12obj_rw_class(); // 1
 extern "C" static void normal__FP12obj_rw_class(); // 1
 extern "C" static void action__FP12obj_rw_class(); // 1
 extern "C" static void daOBJ_RW_Execute__FP12obj_rw_class(); // 1
-extern "C" static void daOBJ_RW_IsDelete__FP12obj_rw_class(); // 1
+extern "C" static bool daOBJ_RW_IsDelete__FP12obj_rw_class(); // 1
 extern "C" static void daOBJ_RW_Delete__FP12obj_rw_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daOBJ_RW_Create__FP10fopAc_ac_c(); // 1
@@ -492,14 +492,9 @@ asm static void daOBJ_RW_Execute(obj_rw_class* param_0) {
 
 
 /* 80CC32EC-80CC32F4 0008+00 s=1 e=0 z=0  None .text      daOBJ_RW_IsDelete__FP12obj_rw_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daOBJ_RW_IsDelete(obj_rw_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_rw/d_a_obj_rw/daOBJ_RW_IsDelete__FP12obj_rw_class.s"
+static bool daOBJ_RW_IsDelete(obj_rw_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

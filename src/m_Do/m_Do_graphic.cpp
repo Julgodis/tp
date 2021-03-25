@@ -58,7 +58,7 @@ struct J2DOrthoGraph {
 };
 
 struct daPy_py_c {
-	/* 8000B1E4 */ void getAtnActorID() const;
+	/* 8000B1E4 */ s32 getAtnActorID() const;
 };
 
 struct Vec {
@@ -111,13 +111,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
-struct _GXRenderModeObj {
-};
-
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
+};
+
+struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -198,7 +198,7 @@ extern "C" void mDoGph_Painter__Fv(); // 1
 extern "C" void __dt__13J2DOrthoGraphFv(); // 1
 extern "C" void mDoGph_Create__Fv(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
-extern "C" void getAtnActorID__9daPy_py_cCFv(); // 1
+extern "C" s32 getAtnActorID__9daPy_py_cCFv(); // 1
 extern "C" extern char const* const m_Do_m_Do_graphic__stringBase0;
 extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 extern "C" extern u8 m_bloom__13mDoGph_gInf_c[20];
@@ -556,25 +556,15 @@ asm void mDoGph_gInf_c::calcFade() {
 
 
 /* 8000841C-80008420 0004+00 s=0 e=1 z=0  None .text      mDoGph_BlankingON__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoGph_BlankingON() {
-	nofralloc
-#include "asm/m_Do/m_Do_graphic/mDoGph_BlankingON__Fv.s"
+void mDoGph_BlankingON() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80008420-80008424 0004+00 s=0 e=1 z=0  None .text      mDoGph_BlankingOFF__Fv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void mDoGph_BlankingOFF() {
-	nofralloc
-#include "asm/m_Do/m_Do_graphic/mDoGph_BlankingOFF__Fv.s"
+void mDoGph_BlankingOFF() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80008424-80008450 002C+00 s=1 e=0 z=0  None .text      dScnPly_BeforeOfPaint__Fv                                    */
@@ -938,13 +928,8 @@ extern "C" asm void __sinit_m_Do_graphic_cpp() {
 
 
 /* 8000B1E4-8000B1EC 0008+00 s=0 e=1 z=0  None .text      getAtnActorID__9daPy_py_cCFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daPy_py_c::getAtnActorID() const {
-	nofralloc
-#include "asm/m_Do/m_Do_graphic/getAtnActorID__9daPy_py_cCFv.s"
+s32 daPy_py_c::getAtnActorID() const {
+	return -1;
 }
-#pragma pop
 
 

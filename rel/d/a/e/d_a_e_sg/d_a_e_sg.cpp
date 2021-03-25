@@ -209,7 +209,7 @@ static void e_sg_damage(e_sg_class*); // 2
 static void damage_check(e_sg_class*); // 2
 static void action(e_sg_class*); // 2
 static void daE_SG_Execute(e_sg_class*); // 2
-static void daE_SG_IsDelete(e_sg_class*); // 2
+static bool daE_SG_IsDelete(e_sg_class*); // 2
 static void daE_SG_Delete(e_sg_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_SG_Create(fopAc_ac_c*); // 2
@@ -233,7 +233,7 @@ extern "C" static void e_sg_damage__FP10e_sg_class(); // 1
 extern "C" static void damage_check__FP10e_sg_class(); // 1
 extern "C" static void action__FP10e_sg_class(); // 1
 extern "C" static void daE_SG_Execute__FP10e_sg_class(); // 1
-extern "C" static void daE_SG_IsDelete__FP10e_sg_class(); // 1
+extern "C" static bool daE_SG_IsDelete__FP10e_sg_class(); // 1
 extern "C" static void daE_SG_Delete__FP10e_sg_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_SG_Create__FP10fopAc_ac_c(); // 1
@@ -1014,14 +1014,9 @@ asm static void daE_SG_Execute(e_sg_class* param_0) {
 
 
 /* 8078D5F4-8078D5FC 0008+00 s=1 e=0 z=0  None .text      daE_SG_IsDelete__FP10e_sg_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_SG_IsDelete(e_sg_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sg/d_a_e_sg/daE_SG_IsDelete__FP10e_sg_class.s"
+static bool daE_SG_IsDelete(e_sg_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1215,14 +1210,9 @@ extern "C" asm static void func_8078DD44() {
 
 
 /* 8078DD7C-8078DD80 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sg/d_a_e_sg/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8078DD80-8078DD88 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */

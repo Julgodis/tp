@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct JPABaseEmitter {
+struct daMidna_c {
 };
 
-struct daMidna_c {
+struct JPABaseEmitter {
 };
 
 struct daSCannonCrs_c {
@@ -83,10 +83,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -807,14 +807,9 @@ asm void daSCannonCrs_c::exeModeWarpEvt(daMidna_c* param_0) {
 
 
 /* 80CCA344-80CCA348 0004+00 s=1 e=0 z=0  None .text      exeModeEnd__14daSCannonCrs_cFP9daMidna_c                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSCannonCrs_c::exeModeEnd(daMidna_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_scannon_crs/d_a_obj_scannon_crs/exeModeEnd__14daSCannonCrs_cFP9daMidna_c.s"
+void daSCannonCrs_c::exeModeEnd(daMidna_c* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CCA348-80CCA74C 0404+00 s=1 e=0 z=0  None .text      demoExe__14daSCannonCrs_cFv                                  */

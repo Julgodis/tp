@@ -15,8 +15,8 @@ struct daTagRmbitSw_c {
 	/* 80D5FAF8 */ daTagRmbitSw_c();
 	/* 80D5FB34 */ ~daTagRmbitSw_c();
 	/* 80D5FB94 */ void create();
-	/* 80D5FBEC */ void Delete();
-	/* 80D5FBF4 */ void draw();
+	/* 80D5FBEC */ bool Delete();
+	/* 80D5FBF4 */ bool draw();
 	/* 80D5FBFC */ void execute();
 	/* 80D5FDB8 */ void init();
 	/* 80D5FDF0 */ void chkPlyrInTag();
@@ -59,8 +59,8 @@ static void daTagRmbitSw_draw(daTagRmbitSw_c*); // 2
 extern "C" void __ct__14daTagRmbitSw_cFv(); // 1
 extern "C" void __dt__14daTagRmbitSw_cFv(); // 1
 extern "C" void create__14daTagRmbitSw_cFv(); // 1
-extern "C" void Delete__14daTagRmbitSw_cFv(); // 1
-extern "C" void draw__14daTagRmbitSw_cFv(); // 1
+extern "C" bool Delete__14daTagRmbitSw_cFv(); // 1
+extern "C" bool draw__14daTagRmbitSw_cFv(); // 1
 extern "C" void execute__14daTagRmbitSw_cFv(); // 1
 extern "C" void init__14daTagRmbitSw_cFv(); // 1
 extern "C" void chkPlyrInTag__14daTagRmbitSw_cFv(); // 1
@@ -170,25 +170,15 @@ asm void daTagRmbitSw_c::create() {
 
 
 /* 80D5FBEC-80D5FBF4 0008+00 s=1 e=0 z=0  None .text      Delete__14daTagRmbitSw_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRmbitSw_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/Delete__14daTagRmbitSw_cFv.s"
+bool daTagRmbitSw_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5FBF4-80D5FBFC 0008+00 s=1 e=0 z=0  None .text      draw__14daTagRmbitSw_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRmbitSw_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_rmbit_sw/d_a_tag_rmbit_sw/draw__14daTagRmbitSw_cFv.s"
+bool daTagRmbitSw_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5FBFC-80D5FDB8 01BC+00 s=1 e=0 z=0  None .text      execute__14daTagRmbitSw_cFv                                  */

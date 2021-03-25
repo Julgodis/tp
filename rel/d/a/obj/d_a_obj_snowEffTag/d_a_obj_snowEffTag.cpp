@@ -25,18 +25,18 @@ struct daSnowEffTag_c {
 	/* 80CDF184 */ void create();
 	/* 80CDF2B8 */ void playerAreaCheck();
 	/* 80CDF498 */ void Execute();
-	/* 80CDF5E4 */ void Draw();
-	/* 80CDF5EC */ void Delete();
+	/* 80CDF5E4 */ bool Draw();
+	/* 80CDF5EC */ bool Delete();
 };
 
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct Vec {
@@ -46,10 +46,10 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -91,8 +91,8 @@ extern "C" void setBaseMtx__14daSnowEffTag_cFv(); // 1
 extern "C" void create__14daSnowEffTag_cFv(); // 1
 extern "C" void playerAreaCheck__14daSnowEffTag_cFv(); // 1
 extern "C" void Execute__14daSnowEffTag_cFv(); // 1
-extern "C" void Draw__14daSnowEffTag_cFv(); // 1
-extern "C" void Delete__14daSnowEffTag_cFv(); // 1
+extern "C" bool Draw__14daSnowEffTag_cFv(); // 1
+extern "C" bool Delete__14daSnowEffTag_cFv(); // 1
 extern "C" static void daSnowEffTag_Draw__FP14daSnowEffTag_c(); // 1
 extern "C" static void daSnowEffTag_Execute__FP14daSnowEffTag_c(); // 1
 extern "C" static void daSnowEffTag_Delete__FP14daSnowEffTag_c(); // 1
@@ -297,25 +297,15 @@ asm void daSnowEffTag_c::Execute() {
 
 
 /* 80CDF5E4-80CDF5EC 0008+00 s=1 e=0 z=0  None .text      Draw__14daSnowEffTag_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSnowEffTag_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/Draw__14daSnowEffTag_cFv.s"
+bool daSnowEffTag_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDF5EC-80CDF5F4 0008+00 s=1 e=0 z=0  None .text      Delete__14daSnowEffTag_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSnowEffTag_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_snowEffTag/d_a_obj_snowEffTag/Delete__14daSnowEffTag_cFv.s"
+bool daSnowEffTag_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80CDF5F4-80CDF614 0020+00 s=1 e=0 z=0  None .text      daSnowEffTag_Draw__FP14daSnowEffTag_c                        */

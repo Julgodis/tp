@@ -11,17 +11,17 @@
 // Forward References:
 // 
 
-static void daNpc_Mk_Create(void*); // 2
-static void daNpc_Mk_Delete(void*); // 2
-static void daNpc_Mk_Execute(void*); // 2
-static void daNpc_Mk_Draw(void*); // 2
-static void daNpc_Mk_IsDelete(void*); // 2
+static bool daNpc_Mk_Create(void*); // 2
+static bool daNpc_Mk_Delete(void*); // 2
+static bool daNpc_Mk_Execute(void*); // 2
+static bool daNpc_Mk_Draw(void*); // 2
+static bool daNpc_Mk_IsDelete(void*); // 2
 
-extern "C" static void daNpc_Mk_Create__FPv(); // 1
-extern "C" static void daNpc_Mk_Delete__FPv(); // 1
-extern "C" static void daNpc_Mk_Execute__FPv(); // 1
-extern "C" static void daNpc_Mk_Draw__FPv(); // 1
-extern "C" static void daNpc_Mk_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_Mk_Create__FPv(); // 1
+extern "C" static bool daNpc_Mk_Delete__FPv(); // 1
+extern "C" static bool daNpc_Mk_Execute__FPv(); // 1
+extern "C" static bool daNpc_Mk_Draw__FPv(); // 1
+extern "C" static bool daNpc_Mk_IsDelete__FPv(); // 1
 extern "C" extern void* g_profile_NPC_MK[12];
 
 // 
@@ -37,58 +37,33 @@ extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 // 
 
 /* 80A73DD8-80A73DE0 0008+00 s=1 e=0 z=0  None .text      daNpc_Mk_Create__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Mk_Create(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Create__FPv.s"
+static bool daNpc_Mk_Create(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DE0-80A73DE8 0008+00 s=1 e=0 z=0  None .text      daNpc_Mk_Delete__FPv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Mk_Delete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Delete__FPv.s"
+static bool daNpc_Mk_Delete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DE8-80A73DF0 0008+00 s=1 e=0 z=0  None .text      daNpc_Mk_Execute__FPv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Mk_Execute(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Execute__FPv.s"
+static bool daNpc_Mk_Execute(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DF0-80A73DF8 0008+00 s=1 e=0 z=0  None .text      daNpc_Mk_Draw__FPv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Mk_Draw(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_Draw__FPv.s"
+static bool daNpc_Mk_Draw(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80A73DF8-80A73E00 0008+00 s=1 e=0 z=0  None .text      daNpc_Mk_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Mk_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_mk/d_a_npc_mk/daNpc_Mk_IsDelete__FPv.s"
+static bool daNpc_Mk_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

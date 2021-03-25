@@ -120,7 +120,7 @@ struct dScnKy_env_light_c {
 static void daB_ZANTS_Draw(daB_ZANTS_c*); // 2
 static void zants_ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daB_ZANTS_Execute(daB_ZANTS_c*); // 2
-static void daB_ZANTS_IsDelete(daB_ZANTS_c*); // 2
+static bool daB_ZANTS_IsDelete(daB_ZANTS_c*); // 2
 static void daB_ZANTS_Delete(daB_ZANTS_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_ZANTS_Create(daB_ZANTS_c*); // 2
@@ -131,7 +131,7 @@ extern "C" static void zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c()
 extern "C" void action__11daB_ZANTS_cFv(); // 1
 extern "C" void execute__11daB_ZANTS_cFv(); // 1
 extern "C" static void daB_ZANTS_Execute__FP11daB_ZANTS_c(); // 1
-extern "C" static void daB_ZANTS_IsDelete__FP11daB_ZANTS_c(); // 1
+extern "C" static bool daB_ZANTS_IsDelete__FP11daB_ZANTS_c(); // 1
 extern "C" void _delete__11daB_ZANTS_cFv(); // 1
 extern "C" static void daB_ZANTS_Delete__FP11daB_ZANTS_c(); // 1
 extern "C" void CreateHeap__11daB_ZANTS_cFv(); // 1
@@ -319,14 +319,9 @@ asm static void daB_ZANTS_Execute(daB_ZANTS_c* param_0) {
 
 
 /* 80652EB8-80652EC0 0008+00 s=1 e=0 z=0  None .text      daB_ZANTS_IsDelete__FP11daB_ZANTS_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_ZANTS_IsDelete(daB_ZANTS_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_IsDelete__FP11daB_ZANTS_c.s"
+static bool daB_ZANTS_IsDelete(daB_ZANTS_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

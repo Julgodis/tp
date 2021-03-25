@@ -272,7 +272,7 @@ static void bee_nest_action(e_nest_class*); // 2
 static void shot_b_sub(void*, void*); // 2
 static void demo_camera(e_nest_class*); // 2
 static void daE_Nest_Execute(e_nest_class*); // 2
-static void daE_Nest_IsDelete(e_nest_class*); // 2
+static bool daE_Nest_IsDelete(e_nest_class*); // 2
 static void daE_Nest_Delete(e_nest_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Nest_Create(fopAc_ac_c*); // 2
@@ -297,7 +297,7 @@ extern "C" static void bee_nest_action__FP12e_nest_class(); // 1
 extern "C" static void shot_b_sub__FPvPv(); // 1
 extern "C" static void demo_camera__FP12e_nest_class(); // 1
 extern "C" static void daE_Nest_Execute__FP12e_nest_class(); // 1
-extern "C" static void daE_Nest_IsDelete__FP12e_nest_class(); // 1
+extern "C" static bool daE_Nest_IsDelete__FP12e_nest_class(); // 1
 extern "C" static void daE_Nest_Delete__FP12e_nest_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Nest_Create__FP10fopAc_ac_c(); // 1
@@ -1086,14 +1086,9 @@ asm static void daE_Nest_Execute(e_nest_class* param_0) {
 
 
 /* 80503E24-80503E2C 0008+00 s=1 e=0 z=0  None .text      daE_Nest_IsDelete__FP12e_nest_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Nest_IsDelete(e_nest_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_IsDelete__FP12e_nest_class.s"
+static bool daE_Nest_IsDelete(e_nest_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80503E2C-80503EA0 0074+00 s=1 e=0 z=0  None .text      daE_Nest_Delete__FP12e_nest_class                            */
@@ -1141,14 +1136,9 @@ asm nest_hahen_s::~nest_hahen_s() {
 
 
 /* 805044E8-805044EC 0004+00 s=1 e=0 z=0  None .text      __ct__12nest_hahen_sFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm nest_hahen_s::nest_hahen_s() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/__ct__12nest_hahen_sFv.s"
+nest_hahen_s::nest_hahen_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805044EC-80504534 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */

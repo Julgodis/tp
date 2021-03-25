@@ -140,19 +140,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -299,7 +299,7 @@ static void daE_SW_Draw(daE_SW_c*); // 2
 static void s_b_sub(void*, void*); // 2
 static void s_child_sub(void*, void*); // 2
 static void daE_SW_Execute(daE_SW_c*); // 2
-static void daE_SW_IsDelete(daE_SW_c*); // 2
+static bool daE_SW_IsDelete(daE_SW_c*); // 2
 static void daE_SW_Delete(daE_SW_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_SW_Create(daE_SW_c*); // 2
@@ -345,7 +345,7 @@ extern "C" void damage_check__8daE_SW_cFv(); // 1
 extern "C" void checkGroundSand__8daE_SW_cFv(); // 1
 extern "C" void execute__8daE_SW_cFv(); // 1
 extern "C" static void daE_SW_Execute__FP8daE_SW_c(); // 1
-extern "C" static void daE_SW_IsDelete__FP8daE_SW_c(); // 1
+extern "C" static bool daE_SW_IsDelete__FP8daE_SW_c(); // 1
 extern "C" void _delete__8daE_SW_cFv(); // 1
 extern "C" static void daE_SW_Delete__FP8daE_SW_c(); // 1
 extern "C" void CreateHeap__8daE_SW_cFv(); // 1
@@ -1823,14 +1823,9 @@ asm static void daE_SW_Execute(daE_SW_c* param_0) {
 
 
 /* 807AC168-807AC170 0008+00 s=1 e=0 z=0  None .text      daE_SW_IsDelete__FP8daE_SW_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_SW_IsDelete(daE_SW_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sw/d_a_e_sw/daE_SW_IsDelete__FP8daE_SW_c.s"
+static bool daE_SW_IsDelete(daE_SW_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807AC170-807AC1E4 0074+00 s=1 e=0 z=0  None .text      _delete__8daE_SW_cFv                                         */

@@ -19,7 +19,7 @@ struct daTagLv2PrChk_c {
 	/* 805A4DF4 */ void actionCheck();
 	/* 805A5290 */ void actionEnd();
 	/* 805A5294 */ void seStartWrong();
-	/* 805A52F4 */ void _delete();
+	/* 805A52F4 */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -56,7 +56,7 @@ extern "C" void action__15daTagLv2PrChk_cFv(); // 1
 extern "C" void actionCheck__15daTagLv2PrChk_cFv(); // 1
 extern "C" void actionEnd__15daTagLv2PrChk_cFv(); // 1
 extern "C" void seStartWrong__15daTagLv2PrChk_cFv(); // 1
-extern "C" void _delete__15daTagLv2PrChk_cFv(); // 1
+extern "C" bool _delete__15daTagLv2PrChk_cFv(); // 1
 extern "C" static void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c(); // 1
 extern "C" static void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c(); // 1
 extern "C" static void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c(); // 1
@@ -174,14 +174,9 @@ asm void daTagLv2PrChk_c::actionCheck() {
 
 
 /* 805A5290-805A5294 0004+00 s=1 e=0 z=0  None .text      actionEnd__15daTagLv2PrChk_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv2PrChk_c::actionEnd() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/actionEnd__15daTagLv2PrChk_cFv.s"
+void daTagLv2PrChk_c::actionEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -203,14 +198,9 @@ asm void daTagLv2PrChk_c::seStartWrong() {
 
 
 /* 805A52F4-805A52FC 0008+00 s=1 e=0 z=0  None .text      _delete__15daTagLv2PrChk_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagLv2PrChk_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/_delete__15daTagLv2PrChk_cFv.s"
+bool daTagLv2PrChk_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 805A52FC-805A531C 0020+00 s=1 e=0 z=0  None .text      daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c                   */

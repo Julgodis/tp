@@ -158,7 +158,7 @@ static void createSolidHeap(fopAc_ac_c*); // 2
 static void daTagLv6Gate_Create(fopAc_ac_c*); // 2
 static void daTagLv6Gate_Execute(daTagLv6Gate_c*); // 2
 static void daTagLv6Gate_Draw(daTagLv6Gate_c*); // 2
-static void daTagLv6Gate_IsDelete(daTagLv6Gate_c*); // 2
+static bool daTagLv6Gate_IsDelete(daTagLv6Gate_c*); // 2
 static void daTagLv6Gate_Delete(daTagLv6Gate_c*); // 2
 
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
@@ -171,7 +171,7 @@ extern "C" static void daTagLv6Gate_Execute__FP14daTagLv6Gate_c(); // 1
 extern "C" void execute__14daTagLv6Gate_cFv(); // 1
 extern "C" static void daTagLv6Gate_Draw__FP14daTagLv6Gate_c(); // 1
 extern "C" void draw__14daTagLv6Gate_cFv(); // 1
-extern "C" static void daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c(); // 1
+extern "C" static bool daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c(); // 1
 extern "C" static void daTagLv6Gate_Delete__FP14daTagLv6Gate_c(); // 1
 extern "C" extern u8 const l_maxRelative[12];
 extern "C" extern u8 const lit_3803[12];
@@ -544,14 +544,9 @@ asm void daTagLv6Gate_c::draw() {
 
 
 /* 80D50848-80D50850 0008+00 s=1 e=0 z=0  None .text      daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagLv6Gate_IsDelete(daTagLv6Gate_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_Lv6Gate/d_a_tag_Lv6Gate/daTagLv6Gate_IsDelete__FP14daTagLv6Gate_c.s"
+static bool daTagLv6Gate_IsDelete(daTagLv6Gate_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D50850-80D50900 00B0+00 s=1 e=0 z=0  None .text      daTagLv6Gate_Delete__FP14daTagLv6Gate_c                      */

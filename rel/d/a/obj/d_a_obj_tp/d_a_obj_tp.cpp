@@ -80,8 +80,7 @@ struct mDoExt_brkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -90,7 +89,8 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct mDoExt_McaMorf {
@@ -209,7 +209,7 @@ static void daObj_Tp_Draw(obj_tp_class*); // 2
 static void anm_init(obj_tp_class*, int, f32, u8, f32); // 2
 static void s_tp_sub(void*, void*); // 2
 static void daObj_Tp_Execute(obj_tp_class*); // 2
-static void daObj_Tp_IsDelete(obj_tp_class*); // 2
+static bool daObj_Tp_IsDelete(obj_tp_class*); // 2
 static void daObj_Tp_Delete(obj_tp_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Tp_Create(fopAc_ac_c*); // 2
@@ -218,7 +218,7 @@ extern "C" static void daObj_Tp_Draw__FP12obj_tp_class(); // 1
 extern "C" static void anm_init__FP12obj_tp_classifUcf(); // 1
 extern "C" static void s_tp_sub__FPvPv(); // 1
 extern "C" static void daObj_Tp_Execute__FP12obj_tp_class(); // 1
-extern "C" static void daObj_Tp_IsDelete__FP12obj_tp_class(); // 1
+extern "C" static bool daObj_Tp_IsDelete__FP12obj_tp_class(); // 1
 extern "C" static void daObj_Tp_Delete__FP12obj_tp_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -537,14 +537,9 @@ asm static void daObj_Tp_Execute(obj_tp_class* param_0) {
 
 
 /* 80D1E460-80D1E468 0008+00 s=1 e=0 z=0  None .text      daObj_Tp_IsDelete__FP12obj_tp_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Tp_IsDelete(obj_tp_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tp/d_a_obj_tp/daObj_Tp_IsDelete__FP12obj_tp_class.s"
+static bool daObj_Tp_IsDelete(obj_tp_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D1E468-80D1E4C0 0058+00 s=1 e=0 z=0  None .text      daObj_Tp_Delete__FP12obj_tp_class                            */

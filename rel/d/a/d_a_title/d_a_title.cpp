@@ -61,10 +61,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
 struct mDoExt_bpkAnm {
@@ -88,10 +88,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -132,6 +132,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
 struct JKRArchive {
 };
 
@@ -142,10 +146,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct CPaneMgrAlpha {
@@ -783,14 +783,9 @@ asm void dDlst_daTitle_c::draw() {
 
 
 /* 80D67A04-80D67A08 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_title/d_a_title/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D67A08-80D67A50 0048+00 s=2 e=0 z=0  None .text      __dt__11daTit_HIO_cFv                                        */

@@ -101,19 +101,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -330,7 +330,7 @@ static void foot_control(e_st_class*, st_foot*); // 2
 static void foot_control_main(e_st_class*); // 2
 static void action(e_st_class*); // 2
 static void daE_ST_Execute(e_st_class*); // 2
-static void daE_ST_IsDelete(e_st_class*); // 2
+static bool daE_ST_IsDelete(e_st_class*); // 2
 static void daE_ST_Delete(e_st_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void kabe_initial_pos_set(e_st_class*); // 2
@@ -384,7 +384,7 @@ extern "C" static void foot_control__FP10e_st_classP7st_foot(); // 1
 extern "C" static void foot_control_main__FP10e_st_class(); // 1
 extern "C" static void action__FP10e_st_class(); // 1
 extern "C" static void daE_ST_Execute__FP10e_st_class(); // 1
-extern "C" static void daE_ST_IsDelete__FP10e_st_class(); // 1
+extern "C" static bool daE_ST_IsDelete__FP10e_st_class(); // 1
 extern "C" static void daE_ST_Delete__FP10e_st_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void kabe_initial_pos_set__FP10e_st_class(); // 1
@@ -1939,14 +1939,9 @@ asm static void daE_ST_Execute(e_st_class* param_0) {
 
 
 /* 807A53BC-807A53C4 0008+00 s=1 e=0 z=0  None .text      daE_ST_IsDelete__FP10e_st_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_ST_IsDelete(e_st_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st/d_a_e_st/daE_ST_IsDelete__FP10e_st_class.s"
+static bool daE_ST_IsDelete(e_st_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807A53C4-807A542C 0068+00 s=1 e=0 z=0  None .text      daE_ST_Delete__FP10e_st_class                                */
@@ -2027,14 +2022,9 @@ asm st_foot::~st_foot() {
 
 
 /* 807A5F98-807A5F9C 0004+00 s=1 e=0 z=0  None .text      __ct__7st_footFv                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm st_foot::st_foot() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st/d_a_e_st/__ct__7st_footFv.s"
+st_foot::st_foot() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807A5F9C-807A5FE4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
@@ -2104,14 +2094,9 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 
 
 /* 807A61B0-807A61B4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_st/d_a_e_st/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807A61B4-807A61FC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

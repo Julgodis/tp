@@ -63,15 +63,15 @@ struct cCcS {
 // Forward References:
 // 
 
-static void daHitobj_Draw(hitobj_class*); // 2
+static bool daHitobj_Draw(hitobj_class*); // 2
 static void daHitobj_Execute(hitobj_class*); // 2
-static void daHitobj_IsDelete(hitobj_class*); // 2
+static bool daHitobj_IsDelete(hitobj_class*); // 2
 static void daHitobj_Delete(hitobj_class*); // 2
 static void daHitobj_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daHitobj_Draw__FP12hitobj_class(); // 1
+extern "C" static bool daHitobj_Draw__FP12hitobj_class(); // 1
 extern "C" static void daHitobj_Execute__FP12hitobj_class(); // 1
-extern "C" static void daHitobj_IsDelete__FP12hitobj_class(); // 1
+extern "C" static bool daHitobj_IsDelete__FP12hitobj_class(); // 1
 extern "C" static void daHitobj_Delete__FP12hitobj_class(); // 1
 extern "C" static void daHitobj_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
@@ -113,14 +113,9 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* 8046B358-8046B360 0008+00 s=1 e=0 z=0  None .text      daHitobj_Draw__FP12hitobj_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daHitobj_Draw(hitobj_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_Draw__FP12hitobj_class.s"
+static bool daHitobj_Draw(hitobj_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046B360-8046B3C8 0068+00 s=1 e=0 z=0  None .text      daHitobj_Execute__FP12hitobj_class                           */
@@ -135,14 +130,9 @@ asm static void daHitobj_Execute(hitobj_class* param_0) {
 
 
 /* 8046B3C8-8046B3D0 0008+00 s=1 e=0 z=0  None .text      daHitobj_IsDelete__FP12hitobj_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daHitobj_IsDelete(hitobj_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_hitobj/d_a_hitobj/daHitobj_IsDelete__FP12hitobj_class.s"
+static bool daHitobj_IsDelete(hitobj_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -25,7 +25,7 @@ struct daObjFPillar_c {
 	/* 80BE986C */ void actionOnInit();
 	/* 80BE98A0 */ void actionOn();
 	/* 80BE9984 */ void draw();
-	/* 80BE99B8 */ void _delete();
+	/* 80BE99B8 */ bool _delete();
 };
 
 struct cM3dGAab {
@@ -143,7 +143,7 @@ extern "C" void actionOnInit__14daObjFPillar_cFv(); // 1
 extern "C" void actionOn__14daObjFPillar_cFv(); // 1
 extern "C" static void drawCylinder__FP4cXyzP4cXyzP5csXyz(); // 1
 extern "C" void draw__14daObjFPillar_cFv(); // 1
-extern "C" void _delete__14daObjFPillar_cFv(); // 1
+extern "C" bool _delete__14daObjFPillar_cFv(); // 1
 extern "C" static void daObjFPillar_Draw__FP14daObjFPillar_c(); // 1
 extern "C" static void daObjFPillar_Execute__FP14daObjFPillar_c(); // 1
 extern "C" static void daObjFPillar_Delete__FP14daObjFPillar_c(); // 1
@@ -531,14 +531,9 @@ asm void daObjFPillar_c::actionOn() {
 
 
 /* 80BE9980-80BE9984 0004+00 s=1 e=0 z=0  None .text      drawCylinder__FP4cXyzP4cXyzP5csXyz                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void drawCylinder(cXyz* param_0, cXyz* param_1, csXyz* param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/drawCylinder__FP4cXyzP4cXyzP5csXyz.s"
+static void drawCylinder(cXyz* param_0, cXyz* param_1, csXyz* param_2) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BE9984-80BE99B8 0034+00 s=1 e=0 z=0  None .text      draw__14daObjFPillar_cFv                                     */
@@ -553,14 +548,9 @@ asm void daObjFPillar_c::draw() {
 
 
 /* 80BE99B8-80BE99C0 0008+00 s=1 e=0 z=0  None .text      _delete__14daObjFPillar_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjFPillar_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_firepillar/d_a_obj_firepillar/_delete__14daObjFPillar_cFv.s"
+bool daObjFPillar_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BE99C0-80BE99E0 0020+00 s=1 e=0 z=0  None .text      daObjFPillar_Draw__FP14daObjFPillar_c                        */

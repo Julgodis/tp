@@ -15,10 +15,10 @@ struct daObjBoard_c {
 	/* 8057B958 */ void initBaseMtx();
 	/* 8057B978 */ void setBaseMtx();
 	/* 8057B9C8 */ void Create();
-	/* 8057BA70 */ void CreateHeap();
+	/* 8057BA70 */ bool CreateHeap();
 	/* 8057BA78 */ void create1st();
 	/* 8057BB74 */ void Execute(f32 (** )[3][4]);
-	/* 8057BCC0 */ void Draw();
+	/* 8057BCC0 */ bool Draw();
 	/* 8057BCC8 */ void Delete();
 };
 
@@ -59,17 +59,17 @@ struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-struct cBgS_PolyInfo {
+struct dBgW {
 };
 
-struct dBgW {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -91,10 +91,10 @@ static void daObjBoard_MoveBGDraw(daObjBoard_c*); // 2
 extern "C" void initBaseMtx__12daObjBoard_cFv(); // 1
 extern "C" void setBaseMtx__12daObjBoard_cFv(); // 1
 extern "C" void Create__12daObjBoard_cFv(); // 1
-extern "C" void CreateHeap__12daObjBoard_cFv(); // 1
+extern "C" bool CreateHeap__12daObjBoard_cFv(); // 1
 extern "C" void create1st__12daObjBoard_cFv(); // 1
 extern "C" void Execute__12daObjBoard_cFPPA3_A4_f(); // 1
-extern "C" void Draw__12daObjBoard_cFv(); // 1
+extern "C" bool Draw__12daObjBoard_cFv(); // 1
 extern "C" void Delete__12daObjBoard_cFv(); // 1
 extern "C" static void daObjBoard_create1st__FP12daObjBoard_c(); // 1
 extern "C" static void daObjBoard_MoveBGDelete__FP12daObjBoard_c(); // 1
@@ -121,9 +121,9 @@ extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -214,14 +214,9 @@ asm void daObjBoard_c::Create() {
 
 
 /* 8057BA70-8057BA78 0008+00 s=1 e=0 z=0  None .text      CreateHeap__12daObjBoard_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBoard_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/CreateHeap__12daObjBoard_cFv.s"
+bool daObjBoard_c::CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057BA78-8057BB74 00FC+00 s=1 e=0 z=0  None .text      create1st__12daObjBoard_cFv                                  */
@@ -268,14 +263,9 @@ asm void daObjBoard_c::Execute(f32 (** param_0)[3][4]) {
 
 
 /* 8057BCC0-8057BCC8 0008+00 s=1 e=0 z=0  None .text      Draw__12daObjBoard_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjBoard_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cboard/d_a_obj_cboard/Draw__12daObjBoard_cFv.s"
+bool daObjBoard_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8057BCC8-8057BCFC 0034+00 s=1 e=0 z=0  None .text      Delete__12daObjBoard_cFv                                     */

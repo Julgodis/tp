@@ -123,19 +123,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -178,10 +178,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -268,7 +268,7 @@ struct cM3dGCir {
 
 static void daE_AI_Draw(e_ai_class*); // 2
 static void daE_AI_Execute(e_ai_class*); // 2
-static void daE_AI_IsDelete(e_ai_class*); // 2
+static bool daE_AI_IsDelete(e_ai_class*); // 2
 static void daE_AI_Delete(e_ai_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_AI_Create(fopAc_ac_c*); // 2
@@ -296,7 +296,7 @@ extern "C" void setBaseMtx__10e_ai_classFv(); // 1
 extern "C" void Delete__10e_ai_classFv(); // 1
 extern "C" static void daE_AI_Draw__FP10e_ai_class(); // 1
 extern "C" static void daE_AI_Execute__FP10e_ai_class(); // 1
-extern "C" static void daE_AI_IsDelete__FP10e_ai_class(); // 1
+extern "C" static bool daE_AI_IsDelete__FP10e_ai_class(); // 1
 extern "C" static void daE_AI_Delete__FP10e_ai_class(); // 1
 extern "C" void CreateHeap__10e_ai_classFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1057,14 +1057,9 @@ asm static void daE_AI_Execute(e_ai_class* param_0) {
 
 
 /* 8067B6C8-8067B6D0 0008+00 s=1 e=0 z=0  None .text      daE_AI_IsDelete__FP10e_ai_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_AI_IsDelete(e_ai_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ai/d_a_e_ai/daE_AI_IsDelete__FP10e_ai_class.s"
+static bool daE_AI_IsDelete(e_ai_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8067B6D0-8067B6F0 0020+00 s=1 e=0 z=0  None .text      daE_AI_Delete__FP10e_ai_class                                */

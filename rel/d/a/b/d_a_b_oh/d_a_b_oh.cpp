@@ -95,7 +95,7 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -104,10 +104,10 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Vec {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -126,13 +126,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
-};
-
 struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -204,7 +204,7 @@ static void non(b_oh_class*); // 2
 static void action(b_oh_class*); // 2
 static void damage_check(b_oh_class*); // 2
 static void daB_OH_Execute(b_oh_class*); // 2
-static void daB_OH_IsDelete(b_oh_class*); // 2
+static bool daB_OH_IsDelete(b_oh_class*); // 2
 static void daB_OH_Delete(b_oh_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_OH_Create(fopAc_ac_c*); // 2
@@ -222,7 +222,7 @@ extern "C" static void non__FP10b_oh_class(); // 1
 extern "C" static void action__FP10b_oh_class(); // 1
 extern "C" static void damage_check__FP10b_oh_class(); // 1
 extern "C" static void daB_OH_Execute__FP10b_oh_class(); // 1
-extern "C" static void daB_OH_IsDelete__FP10b_oh_class(); // 1
+extern "C" static bool daB_OH_IsDelete__FP10b_oh_class(); // 1
 extern "C" static void daB_OH_Delete__FP10b_oh_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -735,14 +735,9 @@ asm static void daB_OH_Execute(b_oh_class* param_0) {
 
 
 /* 8061D05C-8061D064 0008+00 s=1 e=0 z=0  None .text      daB_OH_IsDelete__FP10b_oh_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_OH_IsDelete(b_oh_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/daB_OH_IsDelete__FP10b_oh_class.s"
+static bool daB_OH_IsDelete(b_oh_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -954,14 +949,9 @@ asm cM3dGAab::~cM3dGAab() {
 
 
 /* 8061D8F8-8061D8FC 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061D8FC-8061D938 003C+00 s=1 e=0 z=0  None .text      __dt__5csXyzFv                                               */
@@ -976,14 +966,9 @@ asm csXyz::~csXyz() {
 
 
 /* 8061D938-8061D93C 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_oh/d_a_b_oh/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8061D93C-8061D984 0048+00 s=2 e=0 z=0  None .text      __dt__12daB_OH_HIO_cFv                                       */

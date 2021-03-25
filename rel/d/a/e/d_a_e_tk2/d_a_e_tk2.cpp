@@ -44,19 +44,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -203,7 +203,7 @@ static void e_tk2_s_damage(e_tk2_class*); // 2
 static void e_tk2_damage(e_tk2_class*); // 2
 static void action(e_tk2_class*); // 2
 static void daE_TK2_Execute(e_tk2_class*); // 2
-static void daE_TK2_IsDelete(e_tk2_class*); // 2
+static bool daE_TK2_IsDelete(e_tk2_class*); // 2
 static void daE_TK2_Delete(e_tk2_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_TK2_Create(fopAc_ac_c*); // 2
@@ -221,7 +221,7 @@ extern "C" static void e_tk2_s_damage__FP11e_tk2_class(); // 1
 extern "C" static void e_tk2_damage__FP11e_tk2_class(); // 1
 extern "C" static void action__FP11e_tk2_class(); // 1
 extern "C" static void daE_TK2_Execute__FP11e_tk2_class(); // 1
-extern "C" static void daE_TK2_IsDelete__FP11e_tk2_class(); // 1
+extern "C" static bool daE_TK2_IsDelete__FP11e_tk2_class(); // 1
 extern "C" static void daE_TK2_Delete__FP11e_tk2_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_TK2_Create__FP10fopAc_ac_c(); // 1
@@ -715,14 +715,9 @@ asm static void daE_TK2_Execute(e_tk2_class* param_0) {
 
 
 /* 807BB7E4-807BB7EC 0008+00 s=1 e=0 z=0  None .text      daE_TK2_IsDelete__FP11e_tk2_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_TK2_IsDelete(e_tk2_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tk2/d_a_e_tk2/daE_TK2_IsDelete__FP11e_tk2_class.s"
+static bool daE_TK2_IsDelete(e_tk2_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807BB7EC-807BB854 0068+00 s=1 e=0 z=0  None .text      daE_TK2_Delete__FP11e_tk2_class                              */

@@ -63,7 +63,7 @@ struct dRes_control_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daWarpBug_Draw(daWarpBug_c*); // 2
 static void daWarpBug_Execute(daWarpBug_c*); // 2
-static void daWarpBug_IsDelete(daWarpBug_c*); // 2
+static bool daWarpBug_IsDelete(daWarpBug_c*); // 2
 static void daWarpBug_Delete(daWarpBug_c*); // 2
 static void daWarpBug_Create(fopAc_ac_c*); // 2
 
@@ -73,7 +73,7 @@ extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void daWarpBug_Draw__FP11daWarpBug_c(); // 1
 extern "C" void draw__11daWarpBug_cFv(); // 1
 extern "C" static void daWarpBug_Execute__FP11daWarpBug_c(); // 1
-extern "C" static void daWarpBug_IsDelete__FP11daWarpBug_c(); // 1
+extern "C" static bool daWarpBug_IsDelete__FP11daWarpBug_c(); // 1
 extern "C" static void daWarpBug_Delete__FP11daWarpBug_c(); // 1
 extern "C" static void daWarpBug_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
@@ -115,14 +115,9 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* 80D67E38-80D67E3C 0004+00 s=1 e=0 z=0  None .text      create_init__11daWarpBug_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daWarpBug_c::create_init() {
-	nofralloc
-#include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/create_init__11daWarpBug_cFv.s"
+void daWarpBug_c::create_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -233,14 +228,9 @@ asm static void daWarpBug_Execute(daWarpBug_c* param_0) {
 
 
 /* 80D680D8-80D680E0 0008+00 s=1 e=0 z=0  None .text      daWarpBug_IsDelete__FP11daWarpBug_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daWarpBug_IsDelete(daWarpBug_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_warp_bug/d_a_warp_bug/daWarpBug_IsDelete__FP11daWarpBug_c.s"
+static bool daWarpBug_IsDelete(daWarpBug_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D680E0-80D68130 0050+00 s=1 e=0 z=0  None .text      daWarpBug_Delete__FP11daWarpBug_c                            */

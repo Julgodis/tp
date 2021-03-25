@@ -11,16 +11,13 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
-};
-
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 8026745C */ void operator+=(csXyz&);
 };
 
-struct J3DModel {
+struct fopAc_ac_c {
 };
 
 struct Vec {
@@ -32,6 +29,9 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
+};
+
+struct J3DModel {
 };
 
 struct dNpcLib_lookat_c {
@@ -181,14 +181,9 @@ asm void dNpcLib_lookat_c::action(cXyz param_0, cXyz param_1, fopAc_ac_c* param_
 
 
 /* 80251B60-80251B64 0004+00 s=0 e=0 z=2  None .text      dbView__16dNpcLib_lookat_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dNpcLib_lookat_c::dbView() {
-	nofralloc
-#include "asm/d/d_npc_lib/dbView__16dNpcLib_lookat_cFv.s"
+void dNpcLib_lookat_c::dbView() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

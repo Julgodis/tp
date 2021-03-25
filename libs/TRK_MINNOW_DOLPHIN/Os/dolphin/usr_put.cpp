@@ -29,14 +29,9 @@ extern "C" void GetTRKConnected(); // 1
 // 
 
 /* 8036DB10-8036DB14 0004+00 s=0 e=1 z=0  None .text      usr_put_initialize                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void usr_put_initialize() {
-	nofralloc
-#include "asm/TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put/usr_put_initialize.s"
+extern "C" void usr_put_initialize() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8036DB14-8036DB9C 0088+00 s=0 e=2 z=0  None .text      usr_puts_serial                                              */

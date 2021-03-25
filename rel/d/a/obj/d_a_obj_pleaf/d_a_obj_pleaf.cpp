@@ -149,7 +149,7 @@ static void daObj_Pleaf_Create(void*); // 2
 static void daObj_Pleaf_Delete(void*); // 2
 static void daObj_Pleaf_Execute(void*); // 2
 static void daObj_Pleaf_Draw(void*); // 2
-static void daObj_Pleaf_IsDelete(void*); // 2
+static bool daObj_Pleaf_IsDelete(void*); // 2
 
 extern "C" void __dt__13daObj_Pleaf_cFv(); // 1
 extern "C" void create__13daObj_Pleaf_cFv(); // 1
@@ -172,7 +172,7 @@ extern "C" static void daObj_Pleaf_Create__FPv(); // 1
 extern "C" static void daObj_Pleaf_Delete__FPv(); // 1
 extern "C" static void daObj_Pleaf_Execute__FPv(); // 1
 extern "C" static void daObj_Pleaf_Draw__FPv(); // 1
-extern "C" static void daObj_Pleaf_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Pleaf_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_pleaf_cpp(); // 1
 extern "C" void __dt__19daObj_Pleaf_Param_cFv(); // 1
@@ -602,14 +602,9 @@ asm static void daObj_Pleaf_Draw(void* param_0) {
 
 
 /* 80CB1768-80CB1770 0008+00 s=1 e=0 z=0  None .text      daObj_Pleaf_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Pleaf_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pleaf/d_a_obj_pleaf/daObj_Pleaf_IsDelete__FPv.s"
+static bool daObj_Pleaf_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CB1770-80CB17B8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

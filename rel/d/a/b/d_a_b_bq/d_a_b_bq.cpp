@@ -156,19 +156,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -334,7 +334,7 @@ static void fish_set(b_bq_class*); // 2
 static void demo_camera(b_bq_class*); // 2
 static void cM_scos(s16); // 2
 static void daB_BQ_Execute(b_bq_class*); // 2
-static void daB_BQ_IsDelete(b_bq_class*); // 2
+static bool daB_BQ_IsDelete(b_bq_class*); // 2
 static void daB_BQ_Delete(b_bq_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_BQ_Create(fopAc_ac_c*); // 2
@@ -375,7 +375,7 @@ extern "C" static void demo_camera__FP10b_bq_class(); // 1
 extern "C" void GetCross__11cBgS_LinChkFv(); // 1
 extern "C" static void cM_scos__Fs(); // 1
 extern "C" static void daB_BQ_Execute__FP10b_bq_class(); // 1
-extern "C" static void daB_BQ_IsDelete__FP10b_bq_class(); // 1
+extern "C" static bool daB_BQ_IsDelete__FP10b_bq_class(); // 1
 extern "C" static void daB_BQ_Delete__FP10b_bq_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1973,14 +1973,9 @@ asm static void daB_BQ_Execute(b_bq_class* param_0) {
 
 
 /* 805B92F0-805B92F8 0008+00 s=1 e=0 z=0  None .text      daB_BQ_IsDelete__FP10b_bq_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_BQ_IsDelete(b_bq_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/daB_BQ_IsDelete__FP10b_bq_class.s"
+static bool daB_BQ_IsDelete(b_bq_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805B92F8-805B9370 0078+00 s=1 e=0 z=0  None .text      daB_BQ_Delete__FP10b_bq_class                                */
@@ -2039,14 +2034,9 @@ asm b_bq_class::b_bq_class() {
 
 
 /* 805B9D74-805B9D78 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_bq/d_a_b_bq/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805B9D78-805B9DFC 0084+00 s=1 e=0 z=0  None .text      __ct__8dCcD_SphFv                                            */

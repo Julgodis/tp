@@ -65,10 +65,10 @@ struct dBgW {
 	/* 8007B970 */ dBgW();
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

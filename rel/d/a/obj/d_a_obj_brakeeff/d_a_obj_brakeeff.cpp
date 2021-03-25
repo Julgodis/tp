@@ -70,6 +70,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -77,9 +80,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -157,7 +157,7 @@ static void daObj_Brakeeff_Draw(obj_brakeeff_class*); // 2
 static void obj_brakeeff_1(obj_brakeeff_class*); // 2
 static void action(obj_brakeeff_class*); // 2
 static void daObj_Brakeeff_Execute(obj_brakeeff_class*); // 2
-static void daObj_Brakeeff_IsDelete(obj_brakeeff_class*); // 2
+static bool daObj_Brakeeff_IsDelete(obj_brakeeff_class*); // 2
 static void daObj_Brakeeff_Delete(obj_brakeeff_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Brakeeff_Create(fopAc_ac_c*); // 2
@@ -166,7 +166,7 @@ extern "C" static void daObj_Brakeeff_Draw__FP18obj_brakeeff_class(); // 1
 extern "C" static void obj_brakeeff_1__FP18obj_brakeeff_class(); // 1
 extern "C" static void action__FP18obj_brakeeff_class(); // 1
 extern "C" static void daObj_Brakeeff_Execute__FP18obj_brakeeff_class(); // 1
-extern "C" static void daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class(); // 1
+extern "C" static bool daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class(); // 1
 extern "C" static void daObj_Brakeeff_Delete__FP18obj_brakeeff_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -315,14 +315,9 @@ asm static void daObj_Brakeeff_Execute(obj_brakeeff_class* param_0) {
 
 
 /* 8046E098-8046E0A0 0008+00 s=1 e=0 z=0  None .text      daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Brakeeff_IsDelete(obj_brakeeff_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_brakeeff/d_a_obj_brakeeff/daObj_Brakeeff_IsDelete__FP18obj_brakeeff_class.s"
+static bool daObj_Brakeeff_IsDelete(obj_brakeeff_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

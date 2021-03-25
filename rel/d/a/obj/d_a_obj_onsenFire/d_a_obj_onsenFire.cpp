@@ -28,10 +28,10 @@ struct dSv_event_c {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

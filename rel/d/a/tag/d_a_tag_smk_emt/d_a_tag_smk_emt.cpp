@@ -16,8 +16,8 @@ struct daTagSmkEmt_c {
 	/* 80D61324 */ ~daTagSmkEmt_c();
 	/* 80D61384 */ void create();
 	/* 80D613DC */ void Delete();
-	/* 80D61400 */ void draw();
-	/* 80D61408 */ void execute();
+	/* 80D61400 */ bool draw();
+	/* 80D61408 */ bool execute();
 	/* 80D61410 */ void createSmkEmt();
 	/* 80D61500 */ void deleteSmkEmt();
 };
@@ -27,20 +27,20 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct _GXColor {
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -60,8 +60,8 @@ extern "C" void __ct__13daTagSmkEmt_cFv(); // 1
 extern "C" void __dt__13daTagSmkEmt_cFv(); // 1
 extern "C" void create__13daTagSmkEmt_cFv(); // 1
 extern "C" void Delete__13daTagSmkEmt_cFv(); // 1
-extern "C" void draw__13daTagSmkEmt_cFv(); // 1
-extern "C" void execute__13daTagSmkEmt_cFv(); // 1
+extern "C" bool draw__13daTagSmkEmt_cFv(); // 1
+extern "C" bool execute__13daTagSmkEmt_cFv(); // 1
 extern "C" void createSmkEmt__13daTagSmkEmt_cFv(); // 1
 extern "C" void deleteSmkEmt__13daTagSmkEmt_cFv(); // 1
 extern "C" static void daTagSmkEmt_create__FP13daTagSmkEmt_c(); // 1
@@ -173,25 +173,15 @@ asm void daTagSmkEmt_c::Delete() {
 
 
 /* 80D61400-80D61408 0008+00 s=1 e=0 z=0  None .text      draw__13daTagSmkEmt_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSmkEmt_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/draw__13daTagSmkEmt_cFv.s"
+bool daTagSmkEmt_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D61408-80D61410 0008+00 s=1 e=0 z=0  None .text      execute__13daTagSmkEmt_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagSmkEmt_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_smk_emt/d_a_tag_smk_emt/execute__13daTagSmkEmt_cFv.s"
+bool daTagSmkEmt_c::execute() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

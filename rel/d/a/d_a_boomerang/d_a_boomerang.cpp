@@ -125,10 +125,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -1689,14 +1689,9 @@ asm static void daBoomerang_Create(fopAc_ac_c* param_0) {
 
 
 /* 804A2718-804A271C 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_base_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/draw__12dDlst_base_cFv.s"
+void dDlst_base_c::draw() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A271C-804A2764 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
@@ -1777,14 +1772,9 @@ asm daBoomerang_sight_c::~daBoomerang_sight_c() {
 
 
 /* 804A27FC-804A2800 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804A2800-804A2848 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */

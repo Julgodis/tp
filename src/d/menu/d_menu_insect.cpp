@@ -57,7 +57,7 @@ struct dMenu_Insect_c {
 	/* 801D9F3C */ void isCatchNotGiveInsect(u8);
 	/* 801D9F8C */ void cursorMove();
 	/* 801DA1EC */ void setCursorPos();
-	/* 801DA2FC */ void dpdMove();
+	/* 801DA2FC */ bool dpdMove();
 	/* 801DA304 */ void setAButtonString(u16);
 	/* 801DA3B4 */ void setBButtonString(u16);
 	/* 801DA464 */ void setHIO(bool);
@@ -81,10 +81,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -95,9 +95,6 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct JUTFont {
-};
-
 struct ResTIMG {
 };
 
@@ -106,6 +103,9 @@ struct J2DPicture {
 };
 
 struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -209,7 +209,7 @@ extern "C" void isGiveInsect__14dMenu_Insect_cFUc(); // 1
 extern "C" void isCatchNotGiveInsect__14dMenu_Insect_cFUc(); // 1
 extern "C" void cursorMove__14dMenu_Insect_cFv(); // 1
 extern "C" void setCursorPos__14dMenu_Insect_cFv(); // 1
-extern "C" void dpdMove__14dMenu_Insect_cFv(); // 1
+extern "C" bool dpdMove__14dMenu_Insect_cFv(); // 1
 extern "C" void setAButtonString__14dMenu_Insect_cFUs(); // 1
 extern "C" void setBButtonString__14dMenu_Insect_cFUs(); // 1
 extern "C" void setHIO__14dMenu_Insect_cFb(); // 1
@@ -699,14 +699,9 @@ asm void dMenu_Insect_c::explain_open_move() {
 
 
 /* 801D9264-801D9268 0004+00 s=1 e=0 z=0  None .text      explain_move_init__14dMenu_Insect_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Insect_c::explain_move_init() {
-	nofralloc
-#include "asm/d/menu/d_menu_insect/explain_move_init__14dMenu_Insect_cFv.s"
+void dMenu_Insect_c::explain_move_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 801D9268-801D9290 0028+00 s=1 e=0 z=0  None .text      explain_move_move__14dMenu_Insect_cFv                        */
@@ -905,14 +900,9 @@ asm void dMenu_Insect_c::setCursorPos() {
 
 
 /* 801DA2FC-801DA304 0008+00 s=1 e=0 z=0  None .text      dpdMove__14dMenu_Insect_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Insect_c::dpdMove() {
-	nofralloc
-#include "asm/d/menu/d_menu_insect/dpdMove__14dMenu_Insect_cFv.s"
+bool dMenu_Insect_c::dpdMove() {
+	return false;
 }
-#pragma pop
 
 
 /* 801DA304-801DA3B4 00B0+00 s=5 e=0 z=0  None .text      setAButtonString__14dMenu_Insect_cFUs                        */

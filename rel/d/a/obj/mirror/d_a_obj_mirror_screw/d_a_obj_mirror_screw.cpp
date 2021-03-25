@@ -92,9 +92,9 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -122,7 +122,7 @@ struct Z2SeMgr {
 
 static void daObjMirrorScrew_Draw(daObjMirrorScrew_c*); // 2
 static void daObjMirrorScrew_Execute(daObjMirrorScrew_c*); // 2
-static void daObjMirrorScrew_IsDelete(daObjMirrorScrew_c*); // 2
+static bool daObjMirrorScrew_IsDelete(daObjMirrorScrew_c*); // 2
 static void daObjMirrorScrew_Delete(daObjMirrorScrew_c*); // 2
 static void daObjMirrorScrew_Create(fopAc_ac_c*); // 2
 
@@ -132,7 +132,7 @@ extern "C" void initDown__18daObjMirrorScrew_cFv(); // 1
 extern "C" void executeDown__18daObjMirrorScrew_cFv(); // 1
 extern "C" static void daObjMirrorScrew_Draw__FP18daObjMirrorScrew_c(); // 1
 extern "C" static void daObjMirrorScrew_Execute__FP18daObjMirrorScrew_c(); // 1
-extern "C" static void daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c(); // 1
+extern "C" static bool daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c(); // 1
 extern "C" static void daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c(); // 1
 extern "C" static void daObjMirrorScrew_Create__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__18daObjMirrorScrew_cFv(); // 1
@@ -185,9 +185,9 @@ extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
 extern "C" void StopQuake__12dVibration_cFi(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -372,14 +372,9 @@ asm static void daObjMirrorScrew_Execute(daObjMirrorScrew_c* param_0) {
 
 
 /* 80C991A0-80C991A8 0008+00 s=1 e=0 z=0  None .text      daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMirrorScrew_IsDelete(daObjMirrorScrew_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_screw/d_a_obj_mirror_screw/daObjMirrorScrew_IsDelete__FP18daObjMirrorScrew_c.s"
+static bool daObjMirrorScrew_IsDelete(daObjMirrorScrew_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C991A8-80C991CC 0024+00 s=1 e=0 z=0  None .text      daObjMirrorScrew_Delete__FP18daObjMirrorScrew_c              */

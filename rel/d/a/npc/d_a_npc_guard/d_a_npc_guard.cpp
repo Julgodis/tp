@@ -253,7 +253,7 @@ static void daNpcGuard_Create(void*); // 2
 static void daNpcGuard_Delete(void*); // 2
 static void daNpcGuard_Execute(void*); // 2
 static void daNpcGuard_Draw(void*); // 2
-static void daNpcGuard_IsDelete(void*); // 2
+static bool daNpcGuard_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 static void cLib_getRndValue__template0(f32, f32); // 2
 static void cLib_getRndValue__template1(int, int); // 2
@@ -295,7 +295,7 @@ extern "C" void __dt__12daNpcGuard_cFv(); // 1
 extern "C" static void daNpcGuard_Execute__FPv(); // 1
 extern "C" void execute__12daNpcGuard_cFv(); // 1
 extern "C" static void daNpcGuard_Draw__FPv(); // 1
-extern "C" static void daNpcGuard_IsDelete__FPv(); // 1
+extern "C" static bool daNpcGuard_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_809F24B4(); // 1
 extern "C" static void func_809F24D0(); // 1
@@ -1279,14 +1279,9 @@ asm static void daNpcGuard_Draw(void* param_0) {
 
 
 /* 809F2464-809F246C 0008+00 s=1 e=0 z=0  None .text      daNpcGuard_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpcGuard_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_guard/d_a_npc_guard/daNpcGuard_IsDelete__FPv.s"
+static bool daNpcGuard_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 809F246C-809F24B4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -18,7 +18,7 @@ struct daB_ZANTM_c {
 	/* 8064FA50 */ void executeSmall();
 	/* 8064FD6C */ void cc_set();
 	/* 8064FE6C */ void execute();
-	/* 8064FF2C */ void _delete();
+	/* 8064FF2C */ bool _delete();
 	/* 8064FF54 */ void create();
 	/* 806500A8 */ daB_ZANTM_c();
 };
@@ -65,6 +65,9 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -72,9 +75,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -175,7 +175,7 @@ struct daB_ZANT_c {
 
 static void daB_ZANTM_Draw(daB_ZANTM_c*); // 2
 static void daB_ZANTM_Execute(daB_ZANTM_c*); // 2
-static void daB_ZANTM_IsDelete(daB_ZANTM_c*); // 2
+static bool daB_ZANTM_IsDelete(daB_ZANTM_c*); // 2
 static void daB_ZANTM_Delete(daB_ZANTM_c*); // 2
 static void daB_ZANTM_Create(daB_ZANTM_c*); // 2
 
@@ -187,8 +187,8 @@ extern "C" void executeSmall__11daB_ZANTM_cFv(); // 1
 extern "C" void cc_set__11daB_ZANTM_cFv(); // 1
 extern "C" void execute__11daB_ZANTM_cFv(); // 1
 extern "C" static void daB_ZANTM_Execute__FP11daB_ZANTM_c(); // 1
-extern "C" static void daB_ZANTM_IsDelete__FP11daB_ZANTM_c(); // 1
-extern "C" void _delete__11daB_ZANTM_cFv(); // 1
+extern "C" static bool daB_ZANTM_IsDelete__FP11daB_ZANTM_c(); // 1
+extern "C" bool _delete__11daB_ZANTM_cFv(); // 1
 extern "C" static void daB_ZANTM_Delete__FP11daB_ZANTM_c(); // 1
 extern "C" void create__11daB_ZANTM_cFv(); // 1
 extern "C" void __ct__11daB_ZANTM_cFv(); // 1
@@ -498,25 +498,15 @@ asm static void daB_ZANTM_Execute(daB_ZANTM_c* param_0) {
 
 
 /* 8064FF24-8064FF2C 0008+00 s=1 e=0 z=0  None .text      daB_ZANTM_IsDelete__FP11daB_ZANTM_c                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_ZANTM_IsDelete(daB_ZANTM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/daB_ZANTM_IsDelete__FP11daB_ZANTM_c.s"
+static bool daB_ZANTM_IsDelete(daB_ZANTM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8064FF2C-8064FF34 0008+00 s=1 e=0 z=0  None .text      _delete__11daB_ZANTM_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daB_ZANTM_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_zant_magic/d_a_b_zant_magic/_delete__11daB_ZANTM_cFv.s"
+bool daB_ZANTM_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8064FF34-8064FF54 0020+00 s=1 e=0 z=0  None .text      daB_ZANTM_Delete__FP11daB_ZANTM_c                            */

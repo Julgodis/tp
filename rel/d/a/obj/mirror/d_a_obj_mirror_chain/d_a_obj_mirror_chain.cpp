@@ -81,10 +81,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -167,7 +167,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 // 
@@ -177,7 +177,7 @@ struct J3DPacket {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjMirrorChain_Draw(daObjMirrorChain_c*); // 2
 static void daObjMirrorChain_Execute(daObjMirrorChain_c*); // 2
-static void daObjMirrorChain_IsDelete(daObjMirrorChain_c*); // 2
+static bool daObjMirrorChain_IsDelete(daObjMirrorChain_c*); // 2
 static void daObjMirrorChain_Delete(daObjMirrorChain_c*); // 2
 static void daObjMirrorChain_Create(fopAc_ac_c*); // 2
 
@@ -193,7 +193,7 @@ extern "C" static void daObjMirrorChain_Draw__FP18daObjMirrorChain_c(); // 1
 extern "C" void draw__18daObjMirrorChain_cFv(); // 1
 extern "C" static void daObjMirrorChain_Execute__FP18daObjMirrorChain_c(); // 1
 extern "C" void execute__18daObjMirrorChain_cFv(); // 1
-extern "C" static void daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c(); // 1
+extern "C" static bool daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c(); // 1
 extern "C" static void daObjMirrorChain_Delete__FP18daObjMirrorChain_c(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
 extern "C" static void daObjMirrorChain_Create__FP10fopAc_ac_c(); // 1
@@ -260,7 +260,7 @@ extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
 extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void init__12J3DFrameCtrlFs(); // 1
 extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
@@ -552,14 +552,9 @@ asm void daObjMirrorChain_c::execute() {
 
 
 /* 80C97BA4-80C97BAC 0008+00 s=1 e=0 z=0  None .text      daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjMirrorChain_IsDelete(daObjMirrorChain_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/daObjMirrorChain_IsDelete__FP18daObjMirrorChain_c.s"
+static bool daObjMirrorChain_IsDelete(daObjMirrorChain_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -637,13 +632,8 @@ asm dScissorBegin_packet_c::~dScissorBegin_packet_c() {
 
 
 /* 80C9801C-80C98020 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_chain/d_a_obj_mirror_chain/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 

@@ -112,7 +112,7 @@ struct cCcD_GStts {
 
 struct dBomb_c {
 	/* 80031F94 */ void checkStateCarry();
-	/* 804CC31C */ void checkExplodeNow();
+	/* 804CC31C */ bool checkExplodeNow();
 	/* 804CC324 */ void deleteBombAndEffect();
 	/* 804CC328 */ void setCargoBombExplode();
 };
@@ -130,10 +130,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -389,7 +389,7 @@ extern "C" static void func_804CC2B8(); // 1
 extern "C" void checkExplodeNow__9daNbomb_cFv(); // 1
 extern "C" void deleteBombAndEffect__9daNbomb_cFv(); // 1
 extern "C" void setCargoBombExplode__9daNbomb_cFv(); // 1
-extern "C" void checkExplodeNow__7dBomb_cFv(); // 1
+extern "C" bool checkExplodeNow__7dBomb_cFv(); // 1
 extern "C" void deleteBombAndEffect__7dBomb_cFv(); // 1
 extern "C" void setCargoBombExplode__7dBomb_cFv(); // 1
 extern "C" extern u8 const l_localCenterOffset[12];
@@ -1804,36 +1804,21 @@ asm void daNbomb_c::setCargoBombExplode() {
 
 
 /* 804CC31C-804CC324 0008+00 s=1 e=0 z=0  None .text      checkExplodeNow__7dBomb_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBomb_c::checkExplodeNow() {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/checkExplodeNow__7dBomb_cFv.s"
+bool dBomb_c::checkExplodeNow() {
+	return false;
 }
-#pragma pop
 
 
 /* 804CC324-804CC328 0004+00 s=1 e=0 z=0  None .text      deleteBombAndEffect__7dBomb_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBomb_c::deleteBombAndEffect() {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/deleteBombAndEffect__7dBomb_cFv.s"
+void dBomb_c::deleteBombAndEffect() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804CC328-804CC32C 0004+00 s=1 e=0 z=0  None .text      setCargoBombExplode__7dBomb_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBomb_c::setCargoBombExplode() {
-	nofralloc
-#include "asm/rel/d/a/d_a_nbomb/d_a_nbomb/setCargoBombExplode__7dBomb_cFv.s"
+void dBomb_c::setCargoBombExplode() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

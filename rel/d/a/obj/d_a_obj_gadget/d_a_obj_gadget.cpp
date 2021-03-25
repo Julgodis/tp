@@ -213,7 +213,7 @@ static void daObj_Gadget_Create(void*); // 2
 static void daObj_Gadget_Delete(void*); // 2
 static void daObj_Gadget_Execute(void*); // 2
 static void daObj_Gadget_Draw(void*); // 2
-static void daObj_Gadget_IsDelete(void*); // 2
+static bool daObj_Gadget_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__14daObj_Gadget_cFv(); // 1
@@ -244,7 +244,7 @@ extern "C" static void daObj_Gadget_Create__FPv(); // 1
 extern "C" static void daObj_Gadget_Delete__FPv(); // 1
 extern "C" static void daObj_Gadget_Execute__FPv(); // 1
 extern "C" static void daObj_Gadget_Draw__FPv(); // 1
-extern "C" static void daObj_Gadget_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Gadget_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80BF4848(); // 1
 extern "C" void __sinit_d_a_obj_gadget_cpp(); // 1
@@ -332,7 +332,7 @@ void fopAcM_calcSpeed(fopAc_ac_c*); // 2
 void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_effSmokeSet1(u32*, u32*, cXyz const*, csXyz const*, f32, dKy_tevstr_c const*, int); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopAcM_carryOffRevise(fopAc_ac_c*); // 2
 void fopAcM_getWaterY(cXyz const*, f32*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
@@ -365,7 +365,7 @@ extern "C" void fopAcM_calcSpeed__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
 extern "C" void fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopAcM_carryOffRevise__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_getWaterY__FPC4cXyzPf(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
@@ -1075,14 +1075,9 @@ asm static void daObj_Gadget_Draw(void* param_0) {
 
 
 /* 80BF47F8-80BF4800 0008+00 s=1 e=0 z=0  None .text      daObj_Gadget_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Gadget_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gadget/d_a_obj_gadget/daObj_Gadget_IsDelete__FPv.s"
+static bool daObj_Gadget_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BF4800-80BF4848 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

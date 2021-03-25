@@ -386,13 +386,8 @@ asm JASHeap::~JASHeap() {
 
 
 /* 80290BCC-80290BD0 0004+00 s=0 e=1 z=0  None .text      onDispose__11JASDisposerFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JASDisposer::onDispose() {
-	nofralloc
-#include "asm/JSystem/JAudio2/JASHeapCtrl/onDispose__11JASDisposerFv.s"
+void JASDisposer::onDispose() {
+	/* empty function */
 }
-#pragma pop
 
 

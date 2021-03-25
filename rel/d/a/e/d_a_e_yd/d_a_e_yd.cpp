@@ -39,6 +39,9 @@ struct dBgS_AcchCir {
 	/* 807F71D0 */ ~dBgS_AcchCir();
 };
 
+struct dCcD_SrcSph {
+};
+
 struct Vec {
 };
 
@@ -48,9 +51,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 807F7480 */ cXyz();
 	/* 807F79B0 */ ~cXyz();
-};
-
-struct dCcD_SrcSph {
 };
 
 struct dCcD_Sph {
@@ -126,16 +126,16 @@ struct mDoExt_McaMorf {
 	/* 800105C8 */ void play(Vec*, u32, s8);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -150,10 +150,10 @@ struct mDoExt_McaMorfSO {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -298,7 +298,7 @@ static void action(e_yd_class*); // 2
 static void eff_set(e_yd_class*); // 2
 static void anm_se_set(e_yd_class*); // 2
 static void daE_YD_Execute(e_yd_class*); // 2
-static void daE_YD_IsDelete(e_yd_class*); // 2
+static bool daE_YD_IsDelete(e_yd_class*); // 2
 static void daE_YD_Delete(e_yd_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YD_Create(fopAc_ac_c*); // 2
@@ -327,7 +327,7 @@ extern "C" static void action__FP10e_yd_class(); // 1
 extern "C" static void eff_set__FP10e_yd_class(); // 1
 extern "C" static void anm_se_set__FP10e_yd_class(); // 1
 extern "C" static void daE_YD_Execute__FP10e_yd_class(); // 1
-extern "C" static void daE_YD_IsDelete__FP10e_yd_class(); // 1
+extern "C" static bool daE_YD_IsDelete__FP10e_yd_class(); // 1
 extern "C" static void daE_YD_Delete__FP10e_yd_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1288,14 +1288,9 @@ asm static void daE_YD_Execute(e_yd_class* param_0) {
 
 
 /* 807F694C-807F6954 0008+00 s=1 e=0 z=0  None .text      daE_YD_IsDelete__FP10e_yd_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YD_IsDelete(e_yd_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yd/d_a_e_yd/daE_YD_IsDelete__FP10e_yd_class.s"
+static bool daE_YD_IsDelete(e_yd_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 807F6954-807F69BC 0068+00 s=1 e=0 z=0  None .text      daE_YD_Delete__FP10e_yd_class                                */
@@ -1420,25 +1415,15 @@ asm dCcD_GStts::~dCcD_GStts() {
 
 
 /* 807F747C-807F7480 0004+00 s=1 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yd/d_a_e_yd/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807F7480-807F7484 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yd/d_a_e_yd/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 807F7484-807F74CC 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

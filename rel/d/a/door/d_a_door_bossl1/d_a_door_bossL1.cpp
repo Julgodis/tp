@@ -41,7 +41,7 @@ struct daBdoorL1_c {
 	/* 804E3794 */ void openEnd();
 	/* 804E3850 */ void closeInit();
 	/* 804E3A2C */ void closeProc();
-	/* 804E3C0C */ void closeEnd();
+	/* 804E3C0C */ bool closeEnd();
 	/* 804E3C14 */ void unlockInit();
 	/* 804E3CCC */ void setPos();
 	/* 804E3DE8 */ void calcGoal(cXyz*, int);
@@ -52,7 +52,7 @@ struct daBdoorL1_c {
 	/* 804E4158 */ void checkArea();
 	/* 804E432C */ void checkFront();
 	/* 804E43A0 */ void checkOpen();
-	/* 804E4414 */ void actionWait();
+	/* 804E4414 */ bool actionWait();
 	/* 804E441C */ void actionCloseWait();
 	/* 804E44B4 */ void actionOpen();
 	/* 804E44EC */ void actionEnd();
@@ -99,10 +99,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -161,11 +161,11 @@ struct _GXColor {
 struct dKy_tevstr_c {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -281,7 +281,7 @@ extern "C" void openProc__11daBdoorL1_cFv(); // 1
 extern "C" void openEnd__11daBdoorL1_cFv(); // 1
 extern "C" void closeInit__11daBdoorL1_cFv(); // 1
 extern "C" void closeProc__11daBdoorL1_cFv(); // 1
-extern "C" void closeEnd__11daBdoorL1_cFv(); // 1
+extern "C" bool closeEnd__11daBdoorL1_cFv(); // 1
 extern "C" void unlockInit__11daBdoorL1_cFv(); // 1
 extern "C" void setPos__11daBdoorL1_cFv(); // 1
 extern "C" void calcGoal__11daBdoorL1_cFP4cXyzi(); // 1
@@ -292,7 +292,7 @@ extern "C" void deleteEmitter__11daBdoorL1_cFv(); // 1
 extern "C" void checkArea__11daBdoorL1_cFv(); // 1
 extern "C" void checkFront__11daBdoorL1_cFv(); // 1
 extern "C" void checkOpen__11daBdoorL1_cFv(); // 1
-extern "C" void actionWait__11daBdoorL1_cFv(); // 1
+extern "C" bool actionWait__11daBdoorL1_cFv(); // 1
 extern "C" void actionCloseWait__11daBdoorL1_cFv(); // 1
 extern "C" void actionOpen__11daBdoorL1_cFv(); // 1
 extern "C" void actionEnd__11daBdoorL1_cFv(); // 1
@@ -1242,14 +1242,9 @@ asm void daBdoorL1_c::closeProc() {
 
 
 /* 804E3C0C-804E3C14 0008+00 s=1 e=0 z=0  None .text      closeEnd__11daBdoorL1_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL1_c::closeEnd() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossl1/d_a_door_bossL1/closeEnd__11daBdoorL1_cFv.s"
+bool daBdoorL1_c::closeEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 804E3C14-804E3CCC 00B8+00 s=1 e=0 z=0  None .text      unlockInit__11daBdoorL1_cFv                                  */
@@ -1308,14 +1303,9 @@ asm void daBdoorL1_c::createKey() {
 
 
 /* 804E4100-804E4104 0004+00 s=1 e=0 z=0  None .text      smokeInit__11daBdoorL1_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL1_c::smokeInit() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossl1/d_a_door_bossL1/smokeInit__11daBdoorL1_cFv.s"
+void daBdoorL1_c::smokeInit() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804E4104-804E4158 0054+00 s=1 e=0 z=0  None .text      deleteEmitter__11daBdoorL1_cFv                               */
@@ -1363,14 +1353,9 @@ asm void daBdoorL1_c::checkOpen() {
 
 
 /* 804E4414-804E441C 0008+00 s=1 e=0 z=0  None .text      actionWait__11daBdoorL1_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daBdoorL1_c::actionWait() {
-	nofralloc
-#include "asm/rel/d/a/door/d_a_door_bossl1/d_a_door_bossL1/actionWait__11daBdoorL1_cFv.s"
+bool daBdoorL1_c::actionWait() {
+	return true;
 }
-#pragma pop
 
 
 /* 804E441C-804E44B4 0098+00 s=1 e=0 z=0  None .text      actionCloseWait__11daBdoorL1_cFv                             */

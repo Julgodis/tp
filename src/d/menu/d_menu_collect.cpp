@@ -19,6 +19,9 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -26,9 +29,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct J2DAnmTextureSRTKey {
 };
 
 struct CSTControl {
@@ -104,7 +104,7 @@ struct dMenu_Collect2D_c {
 	/* 801B5D70 */ void _draw();
 	/* 801B5F48 */ void drawTop();
 	/* 801B5F84 */ void isKeyCheck();
-	/* 801B5FAC */ void isOutCheck();
+	/* 801B5FAC */ bool isOutCheck();
 	/* 801B5FB4 */ void setAButtonString(u16);
 	/* 801B60B8 */ void setBButtonString(u16);
 	/* 801B61BC */ void setItemNameString(u8, u8);
@@ -250,10 +250,10 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
 struct dSelect_cursor_c {
@@ -489,7 +489,7 @@ extern "C" void _move__17dMenu_Collect2D_cFv(); // 1
 extern "C" void _draw__17dMenu_Collect2D_cFv(); // 1
 extern "C" void drawTop__17dMenu_Collect2D_cFv(); // 1
 extern "C" void isKeyCheck__17dMenu_Collect2D_cFv(); // 1
-extern "C" void isOutCheck__17dMenu_Collect2D_cFv(); // 1
+extern "C" bool isOutCheck__17dMenu_Collect2D_cFv(); // 1
 extern "C" void setAButtonString__17dMenu_Collect2D_cFUs(); // 1
 extern "C" void setBButtonString__17dMenu_Collect2D_cFUs(); // 1
 extern "C" void setItemNameString__17dMenu_Collect2D_cFUcUc(); // 1
@@ -2166,14 +2166,9 @@ asm void dMenu_Collect2D_c::isKeyCheck() {
 
 
 /* 801B5FAC-801B5FB4 0008+00 s=0 e=1 z=0  None .text      isOutCheck__17dMenu_Collect2D_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMenu_Collect2D_c::isOutCheck() {
-	nofralloc
-#include "asm/d/menu/d_menu_collect/isOutCheck__17dMenu_Collect2D_cFv.s"
+bool dMenu_Collect2D_c::isOutCheck() {
+	return false;
 }
-#pragma pop
 
 
 /* 801B5FB4-801B60B8 0104+00 s=20 e=0 z=0  None .text      setAButtonString__17dMenu_Collect2D_cFUs                     */

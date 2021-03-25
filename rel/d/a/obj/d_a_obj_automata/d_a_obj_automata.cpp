@@ -104,16 +104,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct Vec {
@@ -123,6 +117,12 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -233,7 +233,7 @@ static void daObj_AutoMata_Create(void*); // 2
 static void daObj_AutoMata_Delete(void*); // 2
 static void daObj_AutoMata_Execute(void*); // 2
 static void daObj_AutoMata_Draw(void*); // 2
-static void daObj_AutoMata_IsDelete(void*); // 2
+static bool daObj_AutoMata_IsDelete(void*); // 2
 
 extern "C" void __dt__16daObj_AutoMata_cFv(); // 1
 extern "C" void create__16daObj_AutoMata_cFv(); // 1
@@ -259,7 +259,7 @@ extern "C" static void daObj_AutoMata_Create__FPv(); // 1
 extern "C" static void daObj_AutoMata_Delete__FPv(); // 1
 extern "C" static void daObj_AutoMata_Execute__FPv(); // 1
 extern "C" static void daObj_AutoMata_Draw__FPv(); // 1
-extern "C" static void daObj_AutoMata_IsDelete__FPv(); // 1
+extern "C" static bool daObj_AutoMata_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_automata_cpp(); // 1
 extern "C" void __dt__22daObj_AutoMata_Param_cFv(); // 1
@@ -873,14 +873,9 @@ asm static void daObj_AutoMata_Draw(void* param_0) {
 
 
 /* 80BA6A90-80BA6A98 0008+00 s=1 e=0 z=0  None .text      daObj_AutoMata_IsDelete__FPv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_AutoMata_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_automata/d_a_obj_automata/daObj_AutoMata_IsDelete__FPv.s"
+static bool daObj_AutoMata_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA6A98-80BA6AE0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

@@ -27,7 +27,7 @@ struct daKtOnFire_c {
 	/* 8058C9D4 */ void setLight();
 	/* 8058C9F8 */ void cutLight();
 	/* 8058CA1C */ void Execute();
-	/* 8058CDF8 */ void Draw();
+	/* 8058CDF8 */ bool Draw();
 	/* 8058CE00 */ void Delete();
 };
 
@@ -55,6 +55,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -62,9 +65,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -132,7 +132,7 @@ extern "C" void lightInit__12daKtOnFire_cFv(); // 1
 extern "C" void setLight__12daKtOnFire_cFv(); // 1
 extern "C" void cutLight__12daKtOnFire_cFv(); // 1
 extern "C" void Execute__12daKtOnFire_cFv(); // 1
-extern "C" void Draw__12daKtOnFire_cFv(); // 1
+extern "C" bool Draw__12daKtOnFire_cFv(); // 1
 extern "C" void Delete__12daKtOnFire_cFv(); // 1
 extern "C" static void daKtOnFire_Draw__FP12daKtOnFire_c(); // 1
 extern "C" static void daKtOnFire_Execute__FP12daKtOnFire_c(); // 1
@@ -415,14 +415,9 @@ asm void daKtOnFire_c::Execute() {
 
 
 /* 8058CDF8-8058CE00 0008+00 s=1 e=0 z=0  None .text      Draw__12daKtOnFire_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daKtOnFire_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ktonfire/d_a_obj_ktOnFire/Draw__12daKtOnFire_cFv.s"
+bool daKtOnFire_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8058CE00-8058CE28 0028+00 s=1 e=0 z=0  None .text      Delete__12daKtOnFire_cFv                                     */

@@ -53,9 +53,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80BA2288 */ ~dEvLib_callback_c();
-	/* 80BA22D0 */ void eventStart();
-	/* 80BA22D8 */ void eventRun();
-	/* 80BA22E0 */ void eventEnd();
+	/* 80BA22D0 */ bool eventStart();
+	/* 80BA22D8 */ bool eventRun();
+	/* 80BA22E0 */ bool eventEnd();
 };
 
 struct J3DModel {
@@ -96,10 +96,10 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ void Create();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -161,9 +161,9 @@ extern "C" void __sinit_d_a_obj_amiShutter_cpp(); // 1
 extern "C" static void func_80BA2278(); // 1
 extern "C" static void func_80BA2280(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__14daAmiShutter_cFv(); // 1
 extern "C" extern u8 const lit_3825[8];
 extern "C" extern u32 const lit_3826;
@@ -200,10 +200,10 @@ extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
 extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -639,14 +639,9 @@ asm void daAmiShutter_c::init_modeCloseEnd() {
 
 
 /* 80BA1F7C-80BA1F80 0004+00 s=1 e=0 z=0  None .text      modeCloseEnd__14daAmiShutter_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daAmiShutter_c::modeCloseEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/modeCloseEnd__14daAmiShutter_cFv.s"
+void daAmiShutter_c::modeCloseEnd() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BA1F80-80BA2004 0084+00 s=1 e=0 z=0  None .text      init_modeOpen__14daAmiShutter_cFv                            */
@@ -793,36 +788,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80BA22D0-80BA22D8 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22D8-80BA22E0 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22E0-80BA22E8 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_amiShutter/d_a_obj_amiShutter/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80BA22E8-80BA237C 0094+00 s=2 e=0 z=0  None .text      __dt__14daAmiShutter_cFv                                     */

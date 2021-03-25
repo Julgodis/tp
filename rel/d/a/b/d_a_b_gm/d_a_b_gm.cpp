@@ -126,7 +126,7 @@ struct mDoExt_btkAnm {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -135,7 +135,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -327,7 +327,7 @@ static void cam_3d_morf(b_gm_class*, f32); // 2
 static void cam_spd_set(b_gm_class*); // 2
 static void demo_camera(b_gm_class*); // 2
 static void daB_GM_Execute(b_gm_class*); // 2
-static void daB_GM_IsDelete(b_gm_class*); // 2
+static bool daB_GM_IsDelete(b_gm_class*); // 2
 static void daB_GM_Delete(b_gm_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_GM_Create(fopAc_ac_c*); // 2
@@ -360,7 +360,7 @@ extern "C" static void cam_3d_morf__FP10b_gm_classf(); // 1
 extern "C" static void cam_spd_set__FP10b_gm_class(); // 1
 extern "C" static void demo_camera__FP10b_gm_class(); // 1
 extern "C" static void daB_GM_Execute__FP10b_gm_class(); // 1
-extern "C" static void daB_GM_IsDelete__FP10b_gm_class(); // 1
+extern "C" static bool daB_GM_IsDelete__FP10b_gm_class(); // 1
 extern "C" static void daB_GM_Delete__FP10b_gm_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1814,14 +1814,9 @@ asm static void daB_GM_Execute(b_gm_class* param_0) {
 
 
 /* 805F30A0-805F30A8 0008+00 s=1 e=0 z=0  None .text      daB_GM_IsDelete__FP10b_gm_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_GM_IsDelete(b_gm_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gm/d_a_b_gm/daB_GM_IsDelete__FP10b_gm_class.s"
+static bool daB_GM_IsDelete(b_gm_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805F30A8-805F3118 0070+00 s=1 e=0 z=0  None .text      daB_GM_Delete__FP10b_gm_class                                */
@@ -1891,14 +1886,9 @@ asm b_gm_foot::~b_gm_foot() {
 
 
 /* 805F3AFC-805F3B00 0004+00 s=1 e=0 z=0  None .text      __ct__9b_gm_footFv                                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm b_gm_foot::b_gm_foot() {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_gm/d_a_b_gm/__ct__9b_gm_footFv.s"
+b_gm_foot::b_gm_foot() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805F3B00-805F3B84 0084+00 s=1 e=0 z=0  None .text      __ct__8dCcD_SphFv                                            */

@@ -16,10 +16,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjTks_c {
@@ -50,7 +50,7 @@ struct daObjTks_c {
 	/* 80D118E8 */ void ctrlBtk();
 	/* 80D119BC */ void setAttnPos();
 	/* 80D11CB4 */ void lookat();
-	/* 80D11E94 */ void drawDbgInfo();
+	/* 80D11E94 */ bool drawDbgInfo();
 	/* 80D11E9C */ void drawOtherMdls();
 };
 
@@ -122,23 +122,23 @@ struct daNpcF_Lookat_c {
 	/* 80D11EEC */ ~daNpcF_Lookat_c();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
-};
-
 struct J3DModelData {
-};
-
-struct J3DAnmTransform {
 };
 
 struct _GXColorS10 {
 };
 
 struct J3DAnmTextureSRTKey {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+};
+
+struct J3DAnmTransform {
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -216,9 +216,6 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct mDoExt_McaMorfCallBack2_c {
 };
 
@@ -226,6 +223,9 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -354,7 +354,7 @@ static void daObjTks_Create(void*); // 2
 static void daObjTks_Delete(void*); // 2
 static void daObjTks_Execute(void*); // 2
 static void daObjTks_Draw(void*); // 2
-static void daObjTks_IsDelete(void*); // 2
+static bool daObjTks_IsDelete(void*); // 2
 
 extern "C" void __ct__10daObjTks_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -394,14 +394,14 @@ extern "C" static void daObjTks_Create__FPv(); // 1
 extern "C" static void daObjTks_Delete__FPv(); // 1
 extern "C" static void daObjTks_Execute__FPv(); // 1
 extern "C" static void daObjTks_Draw__FPv(); // 1
-extern "C" static void daObjTks_IsDelete__FPv(); // 1
+extern "C" static bool daObjTks_IsDelete__FPv(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" void setParam__10daObjTks_cFv(); // 1
 extern "C" void main__10daObjTks_cFv(); // 1
 extern "C" void ctrlBtk__10daObjTks_cFv(); // 1
 extern "C" void setAttnPos__10daObjTks_cFv(); // 1
 extern "C" void lookat__10daObjTks_cFv(); // 1
-extern "C" void drawDbgInfo__10daObjTks_cFv(); // 1
+extern "C" bool drawDbgInfo__10daObjTks_cFv(); // 1
 extern "C" void drawOtherMdls__10daObjTks_cFv(); // 1
 extern "C" void func_80D11EA0(); // 1
 extern "C" void __sinit_d_a_obj_tks_cpp(); // 1
@@ -1459,14 +1459,9 @@ asm static void daObjTks_Draw(void* param_0) {
 
 
 /* 80D11638-80D11640 0008+00 s=1 e=0 z=0  None .text      daObjTks_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjTks_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/daObjTks_IsDelete__FPv.s"
+static bool daObjTks_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D11640-80D11670 0030+00 s=1 e=0 z=0  None .text      calc__11J3DTexNoAnmCFPUs                                     */
@@ -1536,25 +1531,15 @@ asm void daObjTks_c::lookat() {
 
 
 /* 80D11E94-80D11E9C 0008+00 s=1 e=0 z=0  None .text      drawDbgInfo__10daObjTks_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjTks_c::drawDbgInfo() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/drawDbgInfo__10daObjTks_cFv.s"
+bool daObjTks_c::drawDbgInfo() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D11E9C-80D11EA0 0004+00 s=1 e=0 z=0  None .text      drawOtherMdls__10daObjTks_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjTks_c::drawOtherMdls() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/drawOtherMdls__10daObjTks_cFv.s"
+void daObjTks_c::drawOtherMdls() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D11EA0-80D11EAC 000C+00 s=1 e=0 z=0  None .text      sinShort__Q25JMath18TSinCosTable<13,f>CFs                    */
@@ -1616,14 +1601,9 @@ asm csXyz::~csXyz() {
 
 
 /* 80D11FF8-80D11FFC 0004+00 s=2 e=0 z=0  None .text      __ct__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__5csXyzFv.s"
+csXyz::csXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D11FFC-80D12038 003C+00 s=5 e=0 z=0  None .text      __dt__4cXyzFv                                                */
@@ -1638,14 +1618,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80D12038-80D1203C 0004+00 s=2 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D1203C-80D12288 024C+00 s=1 e=0 z=0  None .text      __dt__8daNpcF_cFv                                            */
@@ -1737,25 +1712,15 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 
 
 /* 80D12680-80D12684 0004+00 s=1 e=0 z=0  None .text      adjustShapeAngle__8daNpcF_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::adjustShapeAngle() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/adjustShapeAngle__8daNpcF_cFv.s"
+void daNpcF_c::adjustShapeAngle() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D12684-80D12688 0004+00 s=1 e=0 z=0  None .text      setCollisions__8daNpcF_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daNpcF_c::setCollisions() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_tks/d_a_obj_tks/setCollisions__8daNpcF_cFv.s"
+void daNpcF_c::setCollisions() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D12688-80D126D0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

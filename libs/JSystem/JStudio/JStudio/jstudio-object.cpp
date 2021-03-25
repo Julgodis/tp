@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct _GXColor {
-};
-
 struct Vec {
 };
 
+struct _GXColor {
+};
+
 namespace JStudio {
+	struct TControl {
+	};
+
 	struct data {
 		struct TEOperationData {
 		};
 
-	};
-
-	struct TControl {
 	};
 
 	struct TAdaptor {
@@ -1353,14 +1353,9 @@ asm JStudio::TVariableValue::TOutput_none_::~TOutput_none_() {
 
 
 /* 80285FCC-80285FD0 0004+00 s=1 e=0 z=0  None .text      __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TVariableValue::TOutput_none_::operator()(f32 param_0, JStudio::TAdaptor* param_1) const {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/__cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor.s"
+void JStudio::TVariableValue::TOutput_none_::operator()(f32 param_0, JStudio::TAdaptor* param_1) const {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80285FD0-80286018 0048+00 s=8 e=0 z=0  None .text      __dt__Q27JStudio8TAdaptorFv                                  */
@@ -1375,58 +1370,33 @@ asm JStudio::TAdaptor::~TAdaptor() {
 
 
 /* 80286018-8028601C 0004+00 s=8 e=2 z=0  None .text      adaptor_do_prepare__Q27JStudio8TAdaptorFv                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TAdaptor::adaptor_do_prepare() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_do_prepare__Q27JStudio8TAdaptorFv.s"
+void JStudio::TAdaptor::adaptor_do_prepare() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8028601C-80286020 0004+00 s=8 e=4 z=0  None .text      adaptor_do_begin__Q27JStudio8TAdaptorFv                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TAdaptor::adaptor_do_begin() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_do_begin__Q27JStudio8TAdaptorFv.s"
+void JStudio::TAdaptor::adaptor_do_begin() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80286020-80286024 0004+00 s=8 e=2 z=0  None .text      adaptor_do_end__Q27JStudio8TAdaptorFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TAdaptor::adaptor_do_end() {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_do_end__Q27JStudio8TAdaptorFv.s"
+void JStudio::TAdaptor::adaptor_do_end() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80286024-80286028 0004+00 s=8 e=2 z=0  None .text      adaptor_do_update__Q27JStudio8TAdaptorFUl                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TAdaptor::adaptor_do_update(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_do_update__Q27JStudio8TAdaptorFUl.s"
+void JStudio::TAdaptor::adaptor_do_update(u32 param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80286028-8028602C 0004+00 s=8 e=4 z=0  None .text      adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::TAdaptor::adaptor_do_data(void const* param_0, u32 param_1, void const* param_2, u32 param_3) {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/jstudio-object/adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl.s"
+void JStudio::TAdaptor::adaptor_do_data(void const* param_0, u32 param_1, void const* param_2, u32 param_3) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8028602C-802860CC 00A0+00 s=8 e=0 z=0  None .text      adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl */

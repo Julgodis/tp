@@ -16,10 +16,10 @@ struct daE_BG_HIO_c {
 	/* 8068A19C */ ~daE_BG_HIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_BG_c {
@@ -94,19 +94,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -276,7 +276,7 @@ struct Z2CreatureEnemy {
 
 static void daE_BG_Draw(daE_BG_c*); // 2
 static void daE_BG_Execute(daE_BG_c*); // 2
-static void daE_BG_IsDelete(daE_BG_c*); // 2
+static bool daE_BG_IsDelete(daE_BG_c*); // 2
 static void daE_BG_Delete(daE_BG_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_BG_Create(daE_BG_c*); // 2
@@ -305,7 +305,7 @@ extern "C" void mtx_set__8daE_BG_cFv(); // 1
 extern "C" void cc_set__8daE_BG_cFv(); // 1
 extern "C" void execute__8daE_BG_cFv(); // 1
 extern "C" static void daE_BG_Execute__FP8daE_BG_c(); // 1
-extern "C" static void daE_BG_IsDelete__FP8daE_BG_c(); // 1
+extern "C" static bool daE_BG_IsDelete__FP8daE_BG_c(); // 1
 extern "C" void _delete__8daE_BG_cFv(); // 1
 extern "C" static void daE_BG_Delete__FP8daE_BG_c(); // 1
 extern "C" void CreateHeap__8daE_BG_cFv(); // 1
@@ -1079,14 +1079,9 @@ asm static void daE_BG_Execute(daE_BG_c* param_0) {
 
 
 /* 80689970-80689978 0008+00 s=1 e=0 z=0  None .text      daE_BG_IsDelete__FP8daE_BG_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_BG_IsDelete(daE_BG_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bg/d_a_e_bg/daE_BG_IsDelete__FP8daE_BG_c.s"
+static bool daE_BG_IsDelete(daE_BG_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80689978-806899EC 0074+00 s=1 e=0 z=0  None .text      _delete__8daE_BG_cFv                                         */

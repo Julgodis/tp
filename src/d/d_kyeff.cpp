@@ -28,14 +28,14 @@ struct Z2EnvSeMgr {
 
 static void dKyeff_Draw(dKyeff_c*); // 2
 static void dKyeff_Execute(dKyeff_c*); // 2
-static void dKyeff_IsDelete(dKyeff_c*); // 2
+static bool dKyeff_IsDelete(dKyeff_c*); // 2
 static void dKyeff_Delete(dKyeff_c*); // 2
 static void dKyeff_Create(kankyo_class*); // 2
 
 extern "C" static void dKyeff_Draw__FP8dKyeff_c(); // 1
 extern "C" void execute__8dKyeff_cFv(); // 1
 extern "C" static void dKyeff_Execute__FP8dKyeff_c(); // 1
-extern "C" static void dKyeff_IsDelete__FP8dKyeff_c(); // 1
+extern "C" static bool dKyeff_IsDelete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Delete__FP8dKyeff_c(); // 1
 extern "C" static void dKyeff_Create__FP12kankyo_class(); // 1
 extern "C" extern char const* const d_d_kyeff__stringBase0;
@@ -116,14 +116,9 @@ asm static void dKyeff_Execute(dKyeff_c* param_0) {
 
 
 /* 801ADDD4-801ADDDC 0008+00 s=1 e=0 z=0  None .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dKyeff_IsDelete(dKyeff_c* param_0) {
-	nofralloc
-#include "asm/d/d_kyeff/dKyeff_IsDelete__FP8dKyeff_c.s"
+static bool dKyeff_IsDelete(dKyeff_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 801ADDDC-801ADE00 0024+00 s=1 e=0 z=0  None .text      dKyeff_Delete__FP8dKyeff_c                                   */

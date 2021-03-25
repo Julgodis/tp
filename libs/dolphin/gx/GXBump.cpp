@@ -108,14 +108,9 @@ extern "C" asm void GXSetTevDirect() {
 
 
 /* 8035F140-8035F144 0004+00 s=0 e=2 z=0  None .text      __GXUpdateBPMask                                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void __GXUpdateBPMask() {
-	nofralloc
-#include "asm/dolphin/gx/GXBump/__GXUpdateBPMask.s"
+extern "C" void __GXUpdateBPMask() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8035F144-8035F174 0030+00 s=0 e=1 z=0  None .text      __GXSetIndirectMask                                          */

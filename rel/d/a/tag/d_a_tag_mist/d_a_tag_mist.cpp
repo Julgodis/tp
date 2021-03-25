@@ -18,7 +18,7 @@ struct daTagMist_c {
 	/* 8048F370 */ void Create();
 	/* 8048F444 */ void create();
 	/* 8048F558 */ void execute();
-	/* 8048F690 */ void _delete();
+	/* 8048F690 */ bool _delete();
 };
 
 struct cXyz {
@@ -52,7 +52,7 @@ extern "C" void create__11daTagMist_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void execute__11daTagMist_cFv(); // 1
-extern "C" void _delete__11daTagMist_cFv(); // 1
+extern "C" bool _delete__11daTagMist_cFv(); // 1
 extern "C" static void daTagMist_Execute__FP11daTagMist_c(); // 1
 extern "C" static void daTagMist_Delete__FP11daTagMist_c(); // 1
 extern "C" static void daTagMist_Create__FP10fopAc_ac_c(); // 1
@@ -165,14 +165,9 @@ asm cXyz::~cXyz() {
 
 
 /* 8048F554-8048F558 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8048F558-8048F690 0138+00 s=1 e=0 z=0  None .text      execute__11daTagMist_cFv                                     */
@@ -187,14 +182,9 @@ asm void daTagMist_c::execute() {
 
 
 /* 8048F690-8048F698 0008+00 s=1 e=0 z=0  None .text      _delete__11daTagMist_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagMist_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_mist/d_a_tag_mist/_delete__11daTagMist_cFv.s"
+bool daTagMist_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048F698-8048F6B8 0020+00 s=1 e=0 z=0  None .text      daTagMist_Execute__FP11daTagMist_c                           */

@@ -13,9 +13,9 @@
 
 struct daTag_AllMato_c {
 	/* 80487538 */ void create();
-	/* 804876B0 */ void Delete();
+	/* 804876B0 */ bool Delete();
 	/* 804876B8 */ void Execute();
-	/* 80487C5C */ void Draw();
+	/* 80487C5C */ bool Draw();
 	/* 80487C64 */ void srchBouMato(void*, void*);
 	/* 80487D00 */ void srchItaMato(void*, void*);
 	/* 80487D9C */ void srchTaro(void*, void*);
@@ -114,14 +114,14 @@ static void daTag_AllMato_Create(void*); // 2
 static void daTag_AllMato_Delete(void*); // 2
 static void daTag_AllMato_Execute(void*); // 2
 static void daTag_AllMato_Draw(void*); // 2
-static void daTag_AllMato_IsDelete(void*); // 2
+static bool daTag_AllMato_IsDelete(void*); // 2
 
 extern "C" void create__15daTag_AllMato_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void Delete__15daTag_AllMato_cFv(); // 1
+extern "C" bool Delete__15daTag_AllMato_cFv(); // 1
 extern "C" void Execute__15daTag_AllMato_cFv(); // 1
-extern "C" void Draw__15daTag_AllMato_cFv(); // 1
+extern "C" bool Draw__15daTag_AllMato_cFv(); // 1
 extern "C" void srchBouMato__15daTag_AllMato_cFPvPv(); // 1
 extern "C" void srchItaMato__15daTag_AllMato_cFPvPv(); // 1
 extern "C" void srchTaro__15daTag_AllMato_cFPvPv(); // 1
@@ -139,7 +139,7 @@ extern "C" static void daTag_AllMato_Create__FPv(); // 1
 extern "C" static void daTag_AllMato_Delete__FPv(); // 1
 extern "C" static void daTag_AllMato_Execute__FPv(); // 1
 extern "C" static void daTag_AllMato_Draw__FPv(); // 1
-extern "C" static void daTag_AllMato_IsDelete__FPv(); // 1
+extern "C" static bool daTag_AllMato_IsDelete__FPv(); // 1
 extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
 extern "C" void __ct__18daNpcT_ActorMngr_cFv(); // 1
 extern "C" void checkCrs__15daObj_ItaMato_cFP10fopAc_ac_c4cXyz4cXyzf(); // 1
@@ -437,25 +437,15 @@ asm cXyz::~cXyz() {
 
 
 /* 804876AC-804876B0 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804876B0-804876B8 0008+00 s=1 e=0 z=0  None .text      Delete__15daTag_AllMato_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_AllMato_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/Delete__15daTag_AllMato_cFv.s"
+bool daTag_AllMato_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 804876B8-80487C5C 05A4+00 s=1 e=0 z=0  None .text      Execute__15daTag_AllMato_cFv                                 */
@@ -470,14 +460,9 @@ asm void daTag_AllMato_c::Execute() {
 
 
 /* 80487C5C-80487C64 0008+00 s=1 e=0 z=0  None .text      Draw__15daTag_AllMato_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_AllMato_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/Draw__15daTag_AllMato_cFv.s"
+bool daTag_AllMato_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -675,14 +660,9 @@ asm static void daTag_AllMato_Draw(void* param_0) {
 
 
 /* 80489130-80489138 0008+00 s=1 e=0 z=0  None .text      daTag_AllMato_IsDelete__FPv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_AllMato_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_allmato/d_a_tag_allmato/daTag_AllMato_IsDelete__FPv.s"
+static bool daTag_AllMato_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80489138-80489180 0048+00 s=3 e=0 z=0  None .text      __dt__18daNpcT_ActorMngr_cFv                                 */

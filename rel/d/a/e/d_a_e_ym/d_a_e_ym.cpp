@@ -183,19 +183,19 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -242,10 +242,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -365,7 +365,7 @@ static void daE_YM_Draw(daE_YM_c*); // 2
 static void s_obj_sub(void*, void*); // 2
 static void s_ym_sub(void*, void*); // 2
 static void daE_YM_Execute(daE_YM_c*); // 2
-static void daE_YM_IsDelete(daE_YM_c*); // 2
+static bool daE_YM_IsDelete(daE_YM_c*); // 2
 static void daE_YM_Delete(daE_YM_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YM_Create(daE_YM_c*); // 2
@@ -434,7 +434,7 @@ extern "C" void mtx_set__8daE_YM_cFv(); // 1
 extern "C" void cc_set__8daE_YM_cFv(); // 1
 extern "C" void execute__8daE_YM_cFv(); // 1
 extern "C" static void daE_YM_Execute__FP8daE_YM_c(); // 1
-extern "C" static void daE_YM_IsDelete__FP8daE_YM_c(); // 1
+extern "C" static bool daE_YM_IsDelete__FP8daE_YM_c(); // 1
 extern "C" void _delete__8daE_YM_cFv(); // 1
 extern "C" static void daE_YM_Delete__FP8daE_YM_c(); // 1
 extern "C" void CreateHeap__8daE_YM_cFv(); // 1
@@ -1909,14 +1909,9 @@ asm static void daE_YM_Execute(daE_YM_c* param_0) {
 
 
 /* 80813A30-80813A38 0008+00 s=1 e=0 z=0  None .text      daE_YM_IsDelete__FP8daE_YM_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YM_IsDelete(daE_YM_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ym/d_a_e_ym/daE_YM_IsDelete__FP8daE_YM_c.s"
+static bool daE_YM_IsDelete(daE_YM_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80813A38-80813AD0 0098+00 s=1 e=0 z=0  None .text      _delete__8daE_YM_cFv                                         */
@@ -1953,14 +1948,9 @@ asm void daE_YM_c::CreateHeap() {
 
 
 /* 80813E38-80813E3C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ym/d_a_e_ym/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80813E3C-80813E84 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */

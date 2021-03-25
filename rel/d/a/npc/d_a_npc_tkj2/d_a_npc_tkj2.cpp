@@ -71,10 +71,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -90,19 +90,19 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -256,7 +256,7 @@ static void npc_tkj2_return(npc_tkj2_class*); // 2
 static void ObjHit(npc_tkj2_class*); // 2
 static void action(npc_tkj2_class*); // 2
 static void daNpc_Tkj2_Execute(npc_tkj2_class*); // 2
-static void daNpc_Tkj2_IsDelete(npc_tkj2_class*); // 2
+static bool daNpc_Tkj2_IsDelete(npc_tkj2_class*); // 2
 static void daNpc_Tkj2_Delete(npc_tkj2_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Tkj2_Create(fopAc_ac_c*); // 2
@@ -283,7 +283,7 @@ extern "C" static void npc_tkj2_return__FP14npc_tkj2_class(); // 1
 extern "C" static void ObjHit__FP14npc_tkj2_class(); // 1
 extern "C" static void action__FP14npc_tkj2_class(); // 1
 extern "C" static void daNpc_Tkj2_Execute__FP14npc_tkj2_class(); // 1
-extern "C" static void daNpc_Tkj2_IsDelete__FP14npc_tkj2_class(); // 1
+extern "C" static bool daNpc_Tkj2_IsDelete__FP14npc_tkj2_class(); // 1
 extern "C" static void daNpc_Tkj2_Delete__FP14npc_tkj2_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1008,14 +1008,9 @@ asm static void daNpc_Tkj2_Execute(npc_tkj2_class* param_0) {
 
 
 /* 80B13B38-80B13B40 0008+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_IsDelete__FP14npc_tkj2_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Tkj2_IsDelete(npc_tkj2_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_tkj2/d_a_npc_tkj2/daNpc_Tkj2_IsDelete__FP14npc_tkj2_class.s"
+static bool daNpc_Tkj2_IsDelete(npc_tkj2_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80B13B40-80B13BA8 0068+00 s=1 e=0 z=0  None .text      daNpc_Tkj2_Delete__FP14npc_tkj2_class                        */

@@ -12,11 +12,11 @@
 // 
 
 struct daTboxSw_c {
-	/* 80D66858 */ void Create();
+	/* 80D66858 */ bool Create();
 	/* 80D66860 */ void create();
 	/* 80D668C8 */ void execute();
-	/* 80D66938 */ void draw();
-	/* 80D66940 */ void _delete();
+	/* 80D66938 */ bool draw();
+	/* 80D66940 */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -40,11 +40,11 @@ static void daTboxSw_Execute(daTboxSw_c*); // 2
 static void daTboxSw_Delete(daTboxSw_c*); // 2
 static void daTboxSw_Create(fopAc_ac_c*); // 2
 
-extern "C" void Create__10daTboxSw_cFv(); // 1
+extern "C" bool Create__10daTboxSw_cFv(); // 1
 extern "C" void create__10daTboxSw_cFv(); // 1
 extern "C" void execute__10daTboxSw_cFv(); // 1
-extern "C" void draw__10daTboxSw_cFv(); // 1
-extern "C" void _delete__10daTboxSw_cFv(); // 1
+extern "C" bool draw__10daTboxSw_cFv(); // 1
+extern "C" bool _delete__10daTboxSw_cFv(); // 1
 extern "C" static void daTboxSw_Draw__FP10daTboxSw_c(); // 1
 extern "C" static void daTboxSw_Execute__FP10daTboxSw_c(); // 1
 extern "C" static void daTboxSw_Delete__FP10daTboxSw_c(); // 1
@@ -70,14 +70,9 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* 80D66858-80D66860 0008+00 s=1 e=0 z=0  None .text      Create__10daTboxSw_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTboxSw_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/Create__10daTboxSw_cFv.s"
+bool daTboxSw_c::Create() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D66860-80D668C8 0068+00 s=1 e=0 z=0  None .text      create__10daTboxSw_cFv                                       */
@@ -86,7 +81,7 @@ asm void daTboxSw_c::Create() {
 #pragma optimizewithasm off
 asm void daTboxSw_c::create() {
 	nofralloc
-#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/func_80D66860.s"
+#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/create__10daTboxSw_cFv.s"
 }
 #pragma pop
 
@@ -103,25 +98,15 @@ asm void daTboxSw_c::execute() {
 
 
 /* 80D66938-80D66940 0008+00 s=1 e=0 z=0  None .text      draw__10daTboxSw_cFv                                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTboxSw_c::draw() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/draw__10daTboxSw_cFv.s"
+bool daTboxSw_c::draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D66940-80D66948 0008+00 s=1 e=0 z=0  None .text      _delete__10daTboxSw_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTboxSw_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/d_a_tboxSw/d_a_tboxSw/_delete__10daTboxSw_cFv.s"
+bool daTboxSw_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D66948-80D66968 0020+00 s=1 e=0 z=0  None .text      daTboxSw_Draw__FP10daTboxSw_c                                */

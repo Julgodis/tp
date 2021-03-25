@@ -65,11 +65,11 @@ struct dEvent_manager_c {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
@@ -99,7 +99,7 @@ struct dScnKy_env_light_c {
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daZraFreeze_Draw(daZraFreeze_c*); // 2
 static void daZraFreeze_Execute(daZraFreeze_c*); // 2
-static void daZraFreeze_IsDelete(daZraFreeze_c*); // 2
+static bool daZraFreeze_IsDelete(daZraFreeze_c*); // 2
 static void daZraFreeze_Delete(daZraFreeze_c*); // 2
 static void daZraFreeze_create(fopAc_ac_c*); // 2
 
@@ -114,7 +114,7 @@ extern "C" void Draw__13daZraFreeze_cFv(); // 1
 extern "C" void Delete__13daZraFreeze_cFv(); // 1
 extern "C" static void daZraFreeze_Draw__FP13daZraFreeze_c(); // 1
 extern "C" static void daZraFreeze_Execute__FP13daZraFreeze_c(); // 1
-extern "C" static void daZraFreeze_IsDelete__FP13daZraFreeze_c(); // 1
+extern "C" static bool daZraFreeze_IsDelete__FP13daZraFreeze_c(); // 1
 extern "C" static void daZraFreeze_Delete__FP13daZraFreeze_c(); // 1
 extern "C" static void daZraFreeze_create__FP10fopAc_ac_c(); // 1
 extern "C" extern u8 const data_80D44B60[4];
@@ -388,14 +388,9 @@ asm static void daZraFreeze_Execute(daZraFreeze_c* param_0) {
 
 
 /* 80D44AF8-80D44B00 0008+00 s=1 e=0 z=0  None .text      daZraFreeze_IsDelete__FP13daZraFreeze_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daZraFreeze_IsDelete(daZraFreeze_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_IsDelete__FP13daZraFreeze_c.s"
+static bool daZraFreeze_IsDelete(daZraFreeze_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D44B00-80D44B20 0020+00 s=1 e=0 z=0  None .text      daZraFreeze_Delete__FP13daZraFreeze_c                        */

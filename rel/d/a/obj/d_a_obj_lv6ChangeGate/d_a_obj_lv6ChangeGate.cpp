@@ -85,9 +85,9 @@ struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 80048940 */ void orderEvent(int, int, int);
 	/* 80C71FD4 */ ~dEvLib_callback_c();
-	/* 80C7201C */ void eventStart();
-	/* 80C72024 */ void eventRun();
-	/* 80C7202C */ void eventEnd();
+	/* 80C7201C */ bool eventStart();
+	/* 80C72024 */ bool eventRun();
+	/* 80C7202C */ bool eventEnd();
 };
 
 struct mDoMtx_stack_c {
@@ -115,6 +115,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -122,9 +125,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -139,10 +139,10 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ void Create();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 80078690 */ bool Create();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -226,9 +226,9 @@ extern "C" void __sinit_d_a_obj_lv6ChangeGate_cpp(); // 1
 extern "C" static void func_80C71FC4(); // 1
 extern "C" static void func_80C71FCC(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" void eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" void eventEnd__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
+extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__17daLv6ChangeGate_cFv(); // 1
 extern "C" extern u32 const lit_3866;
 extern "C" extern u32 const lit_3867;
@@ -275,10 +275,10 @@ extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
 extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -733,14 +733,9 @@ asm void daLv6ChangeGate_c::init_modeWait() {
 
 
 /* 80C71600-80C71604 0004+00 s=1 e=0 z=0  None .text      modeWait__17daLv6ChangeGate_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daLv6ChangeGate_c::modeWait() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/modeWait__17daLv6ChangeGate_cFv.s"
+void daLv6ChangeGate_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C71604-80C716B4 00B0+00 s=1 e=0 z=0  None .text      init_modeSlideRight__17daLv6ChangeGate_cFv                   */
@@ -942,36 +937,21 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 
 
 /* 80C7201C-80C72024 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventStart() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventStart__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventStart() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C72024-80C7202C 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventRun() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventRun__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventRun() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C7202C-80C72034 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dEvLib_callback_c::eventEnd() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv6ChangeGate/d_a_obj_lv6ChangeGate/eventEnd__17dEvLib_callback_cFv.s"
+bool dEvLib_callback_c::eventEnd() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C72034-80C72138 0104+00 s=2 e=0 z=0  None .text      __dt__17daLv6ChangeGate_cFv                                  */

@@ -83,19 +83,19 @@ struct dEvt_control_c {
 	/* 80042518 */ void reset(void*);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -122,14 +122,14 @@ struct Z2SeMgr {
 
 static void daKytag04_Draw(kytag04_class*); // 2
 static void daKytag04_Execute(kytag04_class*); // 2
-static void daKytag04_IsDelete(kytag04_class*); // 2
+static bool daKytag04_IsDelete(kytag04_class*); // 2
 static void daKytag04_Delete(kytag04_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daKytag04_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daKytag04_Draw__FP13kytag04_class(); // 1
 extern "C" static void daKytag04_Execute__FP13kytag04_class(); // 1
-extern "C" static void daKytag04_IsDelete__FP13kytag04_class(); // 1
+extern "C" static bool daKytag04_IsDelete__FP13kytag04_class(); // 1
 extern "C" static void daKytag04_Delete__FP13kytag04_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daKytag04_Create__FP10fopAc_ac_c(); // 1
@@ -285,14 +285,9 @@ asm static void daKytag04_Execute(kytag04_class* param_0) {
 
 
 /* 8046D354-8046D35C 0008+00 s=1 e=0 z=0  None .text      daKytag04_IsDelete__FP13kytag04_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag04_IsDelete(kytag04_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag04/d_a_kytag04/daKytag04_IsDelete__FP13kytag04_class.s"
+static bool daKytag04_IsDelete(kytag04_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8046D35C-8046D474 0118+00 s=1 e=0 z=0  None .text      daKytag04_Delete__FP13kytag04_class                          */

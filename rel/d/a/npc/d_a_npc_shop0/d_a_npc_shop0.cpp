@@ -144,12 +144,12 @@ struct dDlst_shadowControl_c {
 	/* 80055F84 */ void setSimple(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
 struct cBgS_PolyInfo {
 	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -223,7 +223,7 @@ static void daNpc_Shop0_Create(void*); // 2
 static void daNpc_Shop0_Delete(void*); // 2
 static void daNpc_Shop0_Execute(void*); // 2
 static void daNpc_Shop0_Draw(void*); // 2
-static void daNpc_Shop0_IsDelete(void*); // 2
+static bool daNpc_Shop0_IsDelete(void*); // 2
 
 extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daNpc_Shop0_cFv(); // 1
@@ -261,7 +261,7 @@ extern "C" static void daNpc_Shop0_Create__FPv(); // 1
 extern "C" static void daNpc_Shop0_Delete__FPv(); // 1
 extern "C" static void daNpc_Shop0_Execute__FPv(); // 1
 extern "C" static void daNpc_Shop0_Draw__FPv(); // 1
-extern "C" static void daNpc_Shop0_IsDelete__FPv(); // 1
+extern "C" static bool daNpc_Shop0_IsDelete__FPv(); // 1
 extern "C" void __dt__19daNpc_Shop0_Param_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80AEBBA4(); // 1
@@ -983,14 +983,9 @@ asm static void daNpc_Shop0_Draw(void* param_0) {
 
 
 /* 80AEBB0C-80AEBB14 0008+00 s=1 e=0 z=0  None .text      daNpc_Shop0_IsDelete__FPv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Shop0_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_shop0/d_a_npc_shop0/daNpc_Shop0_IsDelete__FPv.s"
+static bool daNpc_Shop0_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80AEBB14-80AEBB5C 0048+00 s=1 e=0 z=0  None .text      __dt__19daNpc_Shop0_Param_cFv                                */

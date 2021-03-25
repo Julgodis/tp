@@ -67,19 +67,19 @@ struct mDoMtx_stack_c {
 	/* 805ADF08 */ void multVecZero(Vec*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -175,7 +175,7 @@ struct Z2CreatureEnemy {
 
 static void daL7ODR_Draw(daL7ODR_c*); // 2
 static void daL7ODR_Execute(daL7ODR_c*); // 2
-static void daL7ODR_IsDelete(daL7ODR_c*); // 2
+static bool daL7ODR_IsDelete(daL7ODR_c*); // 2
 static void daL7ODR_Delete(daL7ODR_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daL7ODR_Create(daL7ODR_c*); // 2
@@ -194,7 +194,7 @@ extern "C" void dr_wait__9daL7ODR_cFv(); // 1
 extern "C" void dr_fly__9daL7ODR_cFv(); // 1
 extern "C" void execute__9daL7ODR_cFv(); // 1
 extern "C" static void daL7ODR_Execute__FP9daL7ODR_c(); // 1
-extern "C" static void daL7ODR_IsDelete__FP9daL7ODR_c(); // 1
+extern "C" static bool daL7ODR_IsDelete__FP9daL7ODR_c(); // 1
 extern "C" void _delete__9daL7ODR_cFv(); // 1
 extern "C" static void daL7ODR_Delete__FP9daL7ODR_c(); // 1
 extern "C" void CreateHeap__9daL7ODR_cFv(); // 1
@@ -829,14 +829,9 @@ asm static void daL7ODR_Execute(daL7ODR_c* param_0) {
 
 
 /* 805AD874-805AD87C 0008+00 s=1 e=0 z=0  None .text      daL7ODR_IsDelete__FP9daL7ODR_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daL7ODR_IsDelete(daL7ODR_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_L7op_demo_dr/d_a_L7op_demo_dr/daL7ODR_IsDelete__FP9daL7ODR_c.s"
+static bool daL7ODR_IsDelete(daL7ODR_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805AD87C-805AD8EC 0070+00 s=1 e=0 z=0  None .text      _delete__9daL7ODR_cFv                                        */

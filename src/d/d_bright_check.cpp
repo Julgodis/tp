@@ -252,14 +252,9 @@ asm void dBrightCheck_c::_move() {
 
 
 /* 80193508-8019350C 0004+00 s=1 e=0 z=0  None .text      modeWait__14dBrightCheck_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dBrightCheck_c::modeWait() {
-	nofralloc
-#include "asm/d/d_bright_check/modeWait__14dBrightCheck_cFv.s"
+void dBrightCheck_c::modeWait() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -134,20 +134,20 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ void IsDelete();
-	/* 800786B8 */ void ToFore();
-	/* 800786C0 */ void ToBack();
+	/* 800786B0 */ bool IsDelete();
+	/* 800786B8 */ bool ToFore();
+	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -355,9 +355,9 @@ extern "C" void onSwitch__10dSv_info_cFii(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -703,14 +703,9 @@ asm daObjCwall_c::chain_s::~chain_s() {
 
 
 /* 80BD6ED0-80BD6ED4 0004+00 s=1 e=0 z=0  None .text      __ct__Q212daObjCwall_c7chain_sFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObjCwall_c::chain_s::chain_s() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__ct__Q212daObjCwall_c7chain_sFv.s"
+daObjCwall_c::chain_s::chain_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD6ED4-80BD6F80 00AC+00 s=1 e=0 z=0  None .text      create1st__12daObjCwall_cFv                                  */
@@ -1167,14 +1162,9 @@ asm static void daObjCwall_create1st(daObjCwall_c* param_0) {
 
 
 /* 80BD9B70-80BD9B74 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_cwall/d_a_obj_cwall/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80BD9B74-80BD9BF8 0084+00 s=1 e=0 z=0  None .text      __ct__8dCcD_CylFv                                            */

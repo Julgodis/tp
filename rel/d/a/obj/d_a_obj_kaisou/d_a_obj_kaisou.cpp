@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjKaisou_c {
@@ -129,7 +129,7 @@ static void daObjKaisou_Create(fopAc_ac_c*); // 2
 static void daObjKaisou_Delete(daObjKaisou_c*); // 2
 static void daObjKaisou_Draw(daObjKaisou_c*); // 2
 static void daObjKaisou_Execute(daObjKaisou_c*); // 2
-static void daObjKaisou_IsDelete(daObjKaisou_c*); // 2
+static bool daObjKaisou_IsDelete(daObjKaisou_c*); // 2
 
 extern "C" void ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel(); // 1
 extern "C" static void JointCallBack__FP8J3DJointi(); // 1
@@ -147,7 +147,7 @@ extern "C" static void daObjKaisou_Execute__FP13daObjKaisou_c(); // 1
 extern "C" void create__13daObjKaisou_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static void daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
+extern "C" static bool daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
 extern "C" extern u8 const lit_3966[8];
 extern "C" extern u32 const lit_3967;
 extern "C" extern u32 const lit_3968;
@@ -601,13 +601,8 @@ asm cM3dGAab::~cM3dGAab() {
 
 
 /* 80C34EDC-80C34EE4 0008+00 s=1 e=0 z=0  None .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_IsDelete__FP13daObjKaisou_c.s"
+static bool daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
+	return true;
 }
-#pragma pop
 
 

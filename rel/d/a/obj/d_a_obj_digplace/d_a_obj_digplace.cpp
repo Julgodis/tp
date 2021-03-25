@@ -54,7 +54,7 @@ struct daPy_py_c {
 static void daObjDigpl_Create(fopAc_ac_c*); // 2
 static void daObjDigpl_Delete(daObjDigpl_c*); // 2
 static void daObjDigpl_Execute(daObjDigpl_c*); // 2
-static void daObjDigpl_Draw(daObjDigpl_c*); // 2
+static bool daObjDigpl_Draw(daObjDigpl_c*); // 2
 
 extern "C" void create__12daObjDigpl_cFv(); // 1
 extern "C" static void daObjDigpl_Create__FP10fopAc_ac_c(); // 1
@@ -62,7 +62,7 @@ extern "C" void __dt__12daObjDigpl_cFv(); // 1
 extern "C" static void daObjDigpl_Delete__FP12daObjDigpl_c(); // 1
 extern "C" void execute__12daObjDigpl_cFv(); // 1
 extern "C" static void daObjDigpl_Execute__FP12daObjDigpl_c(); // 1
-extern "C" static void daObjDigpl_Draw__FP12daObjDigpl_c(); // 1
+extern "C" static bool daObjDigpl_Draw__FP12daObjDigpl_c(); // 1
 extern "C" extern u32 const lit_3823;
 extern "C" extern u32 const lit_3824;
 extern "C" extern u32 const lit_3825;
@@ -233,14 +233,9 @@ asm static void daObjDigpl_Execute(daObjDigpl_c* param_0) {
 
 
 /* 8057C8A0-8057C8A8 0008+00 s=1 e=0 z=0  None .text      daObjDigpl_Draw__FP12daObjDigpl_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjDigpl_Draw(daObjDigpl_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Draw__FP12daObjDigpl_c.s"
+static bool daObjDigpl_Draw(daObjDigpl_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

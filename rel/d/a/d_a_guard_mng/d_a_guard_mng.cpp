@@ -39,7 +39,7 @@ struct dSv_danBit_c {
 
 static void s_sub(void*, void*); // 2
 static void daGuardMng_Execute(daGuardMng_c*); // 2
-static void daGuardMng_IsDelete(daGuardMng_c*); // 2
+static bool daGuardMng_IsDelete(daGuardMng_c*); // 2
 static void daGuardMng_Delete(daGuardMng_c*); // 2
 static void daGuardMng_Create(fopAc_ac_c*); // 2
 
@@ -47,7 +47,7 @@ extern "C" static void s_sub__FPvPv(); // 1
 extern "C" void checkMerchantNum__12daGuardMng_cFv(); // 1
 extern "C" void checkAppearTag__12daGuardMng_cFP12daTagGuard_c(); // 1
 extern "C" static void daGuardMng_Execute__FP12daGuardMng_c(); // 1
-extern "C" static void daGuardMng_IsDelete__FP12daGuardMng_c(); // 1
+extern "C" static bool daGuardMng_IsDelete__FP12daGuardMng_c(); // 1
 extern "C" static void daGuardMng_Delete__FP12daGuardMng_c(); // 1
 extern "C" static void daGuardMng_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern void* g_profile_GUARD_MNG[12];
@@ -130,14 +130,9 @@ asm static void daGuardMng_Execute(daGuardMng_c* param_0) {
 
 
 /* 80837D44-80837D4C 0008+00 s=1 e=0 z=0  None .text      daGuardMng_IsDelete__FP12daGuardMng_c                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daGuardMng_IsDelete(daGuardMng_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_IsDelete__FP12daGuardMng_c.s"
+static bool daGuardMng_IsDelete(daGuardMng_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80837D4C-80837D7C 0030+00 s=1 e=0 z=0  None .text      daGuardMng_Delete__FP12daGuardMng_c                          */

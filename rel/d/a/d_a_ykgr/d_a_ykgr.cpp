@@ -45,19 +45,19 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -78,19 +78,19 @@ struct JGeometry {
 // 
 
 static void daYkgrCreate(void*); // 2
-static void daYkgrDelete(void*); // 2
+static bool daYkgrDelete(void*); // 2
 static void daYkgrExecute(void*); // 2
 static void daYkgrDraw(void*); // 2
-static void daYkgrIsDelete(void*); // 2
+static bool daYkgrIsDelete(void*); // 2
 
 extern "C" void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" void setParam__17dPa_YkgrPcallBackFf(); // 1
 extern "C" void getPosRate__8daYkgr_cFv(); // 1
 extern "C" static void daYkgrCreate__FPv(); // 1
-extern "C" static void daYkgrDelete__FPv(); // 1
+extern "C" static bool daYkgrDelete__FPv(); // 1
 extern "C" static void daYkgrExecute__FPv(); // 1
 extern "C" static void daYkgrDraw__FPv(); // 1
-extern "C" static void daYkgrIsDelete__FPv(); // 1
+extern "C" static bool daYkgrIsDelete__FPv(); // 1
 extern "C" void __dt__12daYkgr_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
 extern "C" void __dt__17dPa_YkgrPcallBackFv(); // 1
@@ -318,14 +318,9 @@ asm static void daYkgrCreate(void* param_0) {
 
 
 /* 805A8A48-805A8A50 0008+00 s=1 e=0 z=0  None .text      daYkgrDelete__FPv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daYkgrDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrDelete__FPv.s"
+static bool daYkgrDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -417,14 +412,9 @@ asm static void daYkgrDraw(void* param_0) {
 
 
 /* 805A8D90-805A8D98 0008+00 s=1 e=0 z=0  None .text      daYkgrIsDelete__FPv                                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daYkgrIsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrIsDelete__FPv.s"
+static bool daYkgrIsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -522,14 +512,9 @@ asm dPa_YkgrPcallBack::~dPa_YkgrPcallBack() {
 
 
 /* 805A8E9C-805A8EA0 0004+00 s=2 e=0 z=0  None .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAParticleCallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
+void JPAParticleCallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 805A8EA0-805A8FA4 0104+00 s=0 e=1 z=0  None .text      __sinit_d_a_ykgr_cpp                                         */
@@ -544,14 +529,9 @@ extern "C" asm void __sinit_d_a_ykgr_cpp() {
 
 
 /* 805A8FA4-805A8FA8 0004+00 s=1 e=0 z=0  None .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JPAParticleCallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
-	nofralloc
-#include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
+void JPAParticleCallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */

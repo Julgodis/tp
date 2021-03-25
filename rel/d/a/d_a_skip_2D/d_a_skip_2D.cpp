@@ -19,9 +19,9 @@ struct fopAc_ac_c {
 struct daSkip2D_c {
 	/* 80D4D498 */ void createHeap();
 	/* 80D4D4F4 */ void create();
-	/* 80D4D588 */ void destroy();
+	/* 80D4D588 */ bool destroy();
 	/* 80D4D590 */ void draw();
-	/* 80D4D5D0 */ void execute();
+	/* 80D4D5D0 */ bool execute();
 	/* 80D4D5D8 */ void initiate();
 	/* 80D4D674 */ ~daSkip2D_c();
 };
@@ -46,20 +46,20 @@ static void daSkip2D_Create(void*); // 2
 static void daSkip2D_Delete(void*); // 2
 static void daSkip2D_Execute(void*); // 2
 static void daSkip2D_Draw(void*); // 2
-static void daSkip2D_IsDelete(void*); // 2
+static bool daSkip2D_IsDelete(void*); // 2
 
 extern "C" static void daSkip2D_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void createHeap__10daSkip2D_cFv(); // 1
 extern "C" void create__10daSkip2D_cFv(); // 1
-extern "C" void destroy__10daSkip2D_cFv(); // 1
+extern "C" bool destroy__10daSkip2D_cFv(); // 1
 extern "C" void draw__10daSkip2D_cFv(); // 1
-extern "C" void execute__10daSkip2D_cFv(); // 1
+extern "C" bool execute__10daSkip2D_cFv(); // 1
 extern "C" void initiate__10daSkip2D_cFv(); // 1
 extern "C" static void daSkip2D_Create__FPv(); // 1
 extern "C" static void daSkip2D_Delete__FPv(); // 1
 extern "C" static void daSkip2D_Execute__FPv(); // 1
 extern "C" static void daSkip2D_Draw__FPv(); // 1
-extern "C" static void daSkip2D_IsDelete__FPv(); // 1
+extern "C" static bool daSkip2D_IsDelete__FPv(); // 1
 extern "C" void __dt__10daSkip2D_cFv(); // 1
 extern "C" extern void* g_profile_SKIP2D[12];
 
@@ -156,14 +156,9 @@ asm void daSkip2D_c::create() {
 
 
 /* 80D4D588-80D4D590 0008+00 s=1 e=0 z=0  None .text      destroy__10daSkip2D_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSkip2D_c::destroy() {
-	nofralloc
-#include "asm/rel/d/a/d_a_skip_2D/d_a_skip_2D/destroy__10daSkip2D_cFv.s"
+bool daSkip2D_c::destroy() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4D590-80D4D5D0 0040+00 s=1 e=0 z=0  None .text      draw__10daSkip2D_cFv                                         */
@@ -178,14 +173,9 @@ asm void daSkip2D_c::draw() {
 
 
 /* 80D4D5D0-80D4D5D8 0008+00 s=1 e=0 z=0  None .text      execute__10daSkip2D_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daSkip2D_c::execute() {
-	nofralloc
-#include "asm/rel/d/a/d_a_skip_2D/d_a_skip_2D/execute__10daSkip2D_cFv.s"
+bool daSkip2D_c::execute() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4D5D8-80D4D5EC 0014+00 s=1 e=0 z=0  None .text      initiate__10daSkip2D_cFv                                     */
@@ -244,14 +234,9 @@ asm static void daSkip2D_Draw(void* param_0) {
 
 
 /* 80D4D66C-80D4D674 0008+00 s=1 e=0 z=0  None .text      daSkip2D_IsDelete__FPv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daSkip2D_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_skip_2D/d_a_skip_2D/daSkip2D_IsDelete__FPv.s"
+static bool daSkip2D_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D4D674-80D4D6D4 0060+00 s=1 e=0 z=0  None .text      __dt__10daSkip2D_cFv                                         */

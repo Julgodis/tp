@@ -89,13 +89,13 @@ struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -103,7 +103,7 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct Vec {
@@ -113,7 +113,7 @@ struct cBgS_GndChk {
 	/* 80267D0C */ void SetPos(Vec const*);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -230,7 +230,7 @@ static void kbox_drop(obj_kbox_class*); // 2
 static void kbox_float(obj_kbox_class*); // 2
 static void action(obj_kbox_class*); // 2
 static void daObj_Kbox_Execute(obj_kbox_class*); // 2
-static void daObj_Kbox_IsDelete(obj_kbox_class*); // 2
+static bool daObj_Kbox_IsDelete(obj_kbox_class*); // 2
 static void daObj_Kbox_Delete(obj_kbox_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Kbox_Create(fopAc_ac_c*); // 2
@@ -248,7 +248,7 @@ extern "C" static void kbox_drop__FP14obj_kbox_class(); // 1
 extern "C" static void kbox_float__FP14obj_kbox_class(); // 1
 extern "C" static void action__FP14obj_kbox_class(); // 1
 extern "C" static void daObj_Kbox_Execute__FP14obj_kbox_class(); // 1
-extern "C" static void daObj_Kbox_IsDelete__FP14obj_kbox_class(); // 1
+extern "C" static bool daObj_Kbox_IsDelete__FP14obj_kbox_class(); // 1
 extern "C" static void daObj_Kbox_Delete__FP14obj_kbox_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Kbox_Create__FP10fopAc_ac_c(); // 1
@@ -905,14 +905,9 @@ asm static void daObj_Kbox_Execute(obj_kbox_class* param_0) {
 
 
 /* 80C3EA24-80C3EA2C 0008+00 s=1 e=0 z=0  None .text      daObj_Kbox_IsDelete__FP14obj_kbox_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Kbox_IsDelete(obj_kbox_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_kbox/d_a_obj_kbox/daObj_Kbox_IsDelete__FP14obj_kbox_class.s"
+static bool daObj_Kbox_IsDelete(obj_kbox_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C3EA2C-80C3EAAC 0080+00 s=1 e=0 z=0  None .text      daObj_Kbox_Delete__FP14obj_kbox_class                        */

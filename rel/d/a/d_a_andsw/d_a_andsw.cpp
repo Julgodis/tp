@@ -15,7 +15,7 @@ struct daAndsw_c {
 	/* 80457978 */ void Create();
 	/* 804579B8 */ void create();
 	/* 80457A20 */ void execute();
-	/* 80457ABC */ void _delete();
+	/* 80457ABC */ bool _delete();
 };
 
 struct fopAc_ac_c {
@@ -38,7 +38,7 @@ static void daAndsw_Create(fopAc_ac_c*); // 2
 extern "C" void Create__9daAndsw_cFv(); // 1
 extern "C" void create__9daAndsw_cFv(); // 1
 extern "C" void execute__9daAndsw_cFv(); // 1
-extern "C" void _delete__9daAndsw_cFv(); // 1
+extern "C" bool _delete__9daAndsw_cFv(); // 1
 extern "C" static void daAndsw_Execute__FP9daAndsw_c(); // 1
 extern "C" static void daAndsw_Delete__FP9daAndsw_c(); // 1
 extern "C" static void daAndsw_Create__FP10fopAc_ac_c(); // 1
@@ -96,14 +96,9 @@ asm void daAndsw_c::execute() {
 
 
 /* 80457ABC-80457AC4 0008+00 s=1 e=0 z=0  None .text      _delete__9daAndsw_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daAndsw_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/d_a_andsw/d_a_andsw/_delete__9daAndsw_cFv.s"
+bool daAndsw_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80457AC4-80457AE4 0020+00 s=1 e=0 z=0  None .text      daAndsw_Execute__FP9daAndsw_c                                */

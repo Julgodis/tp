@@ -81,6 +81,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -88,9 +91,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -177,7 +177,7 @@ struct Z2SeMgr {
 static void daObj_Web0_Draw(obj_web0_class*); // 2
 static void damage_check(obj_web0_class*); // 2
 static void daObj_Web0_Execute(obj_web0_class*); // 2
-static void daObj_Web0_IsDelete(obj_web0_class*); // 2
+static bool daObj_Web0_IsDelete(obj_web0_class*); // 2
 static void daObj_Web0_Delete(obj_web0_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Web0_Create(fopAc_ac_c*); // 2
@@ -186,7 +186,7 @@ extern "C" void __ct__16daObj_Web0_HIO_cFv(); // 1
 extern "C" static void daObj_Web0_Draw__FP14obj_web0_class(); // 1
 extern "C" static void damage_check__FP14obj_web0_class(); // 1
 extern "C" static void daObj_Web0_Execute__FP14obj_web0_class(); // 1
-extern "C" static void daObj_Web0_IsDelete__FP14obj_web0_class(); // 1
+extern "C" static bool daObj_Web0_IsDelete__FP14obj_web0_class(); // 1
 extern "C" static void daObj_Web0_Delete__FP14obj_web0_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -411,14 +411,9 @@ asm static void daObj_Web0_Execute(obj_web0_class* param_0) {
 
 
 /* 80D34B24-80D34B2C 0008+00 s=1 e=0 z=0  None .text      daObj_Web0_IsDelete__FP14obj_web0_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Web0_IsDelete(obj_web0_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_web0/d_a_obj_web0/daObj_Web0_IsDelete__FP14obj_web0_class.s"
+static bool daObj_Web0_IsDelete(obj_web0_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

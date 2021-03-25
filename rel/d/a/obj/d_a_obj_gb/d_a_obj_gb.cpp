@@ -124,7 +124,7 @@ struct Z2SeMgr {
 
 static void daObj_Gb_Draw(obj_gb_class*); // 2
 static void daObj_Gb_Execute(obj_gb_class*); // 2
-static void daObj_Gb_IsDelete(obj_gb_class*); // 2
+static bool daObj_Gb_IsDelete(obj_gb_class*); // 2
 static void daObj_Gb_Delete(obj_gb_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Gb_Create(fopAc_ac_c*); // 2
@@ -132,7 +132,7 @@ static void daObj_Gb_Create(fopAc_ac_c*); // 2
 extern "C" static void daObj_Gb_Draw__FP12obj_gb_class(); // 1
 extern "C" static void daObj_Gb_Execute__FP12obj_gb_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daObj_Gb_IsDelete__FP12obj_gb_class(); // 1
+extern "C" static bool daObj_Gb_IsDelete__FP12obj_gb_class(); // 1
 extern "C" static void daObj_Gb_Delete__FP12obj_gb_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -310,14 +310,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80BF67C8-80BF67D0 0008+00 s=1 e=0 z=0  None .text      daObj_Gb_IsDelete__FP12obj_gb_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Gb_IsDelete(obj_gb_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/daObj_Gb_IsDelete__FP12obj_gb_class.s"
+static bool daObj_Gb_IsDelete(obj_gb_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80BF67D0-80BF682C 005C+00 s=1 e=0 z=0  None .text      daObj_Gb_Delete__FP12obj_gb_class                            */
@@ -433,13 +428,8 @@ asm static void daObj_Gb_Create(fopAc_ac_c* param_0) {
 
 
 /* 80BF6DB0-80BF6DB4 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gb/d_a_obj_gb/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 

@@ -105,7 +105,7 @@ static void npc_worm_dive(npc_worm_class*); // 2
 static void npc_worm_binwait(npc_worm_class*); // 2
 static void action(npc_worm_class*); // 2
 static void daNPC_WORM_Execute(npc_worm_class*); // 2
-static void daNPC_WORM_IsDelete(npc_worm_class*); // 2
+static bool daNPC_WORM_IsDelete(npc_worm_class*); // 2
 static void daNPC_WORM_Delete(npc_worm_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNPC_WORM_Create(fopAc_ac_c*); // 2
@@ -118,7 +118,7 @@ extern "C" static void npc_worm_dive__FP14npc_worm_class(); // 1
 extern "C" static void npc_worm_binwait__FP14npc_worm_class(); // 1
 extern "C" static void action__FP14npc_worm_class(); // 1
 extern "C" static void daNPC_WORM_Execute__FP14npc_worm_class(); // 1
-extern "C" static void daNPC_WORM_IsDelete__FP14npc_worm_class(); // 1
+extern "C" static bool daNPC_WORM_IsDelete__FP14npc_worm_class(); // 1
 extern "C" static void daNPC_WORM_Delete__FP14npc_worm_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daNPC_WORM_Create__FP10fopAc_ac_c(); // 1
@@ -343,14 +343,9 @@ asm static void daNPC_WORM_Execute(npc_worm_class* param_0) {
 
 
 /* 80B2EDD0-80B2EDD8 0008+00 s=1 e=0 z=0  None .text      daNPC_WORM_IsDelete__FP14npc_worm_class                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNPC_WORM_IsDelete(npc_worm_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_worm/d_a_npc_worm/daNPC_WORM_IsDelete__FP14npc_worm_class.s"
+static bool daNPC_WORM_IsDelete(npc_worm_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

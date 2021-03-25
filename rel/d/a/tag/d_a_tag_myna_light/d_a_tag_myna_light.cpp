@@ -28,19 +28,19 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -66,7 +66,7 @@ static void daTag_MynaLight_Create(void*); // 2
 static void daTag_MynaLight_Delete(void*); // 2
 static void daTag_MynaLight_Execute(void*); // 2
 static void daTag_MynaLight_Draw(void*); // 2
-static void daTag_MynaLight_IsDelete(void*); // 2
+static bool daTag_MynaLight_IsDelete(void*); // 2
 
 extern "C" void create__17daTag_MynaLight_cFv(); // 1
 extern "C" void Delete__17daTag_MynaLight_cFv(); // 1
@@ -80,7 +80,7 @@ extern "C" static void daTag_MynaLight_Create__FPv(); // 1
 extern "C" static void daTag_MynaLight_Delete__FPv(); // 1
 extern "C" static void daTag_MynaLight_Execute__FPv(); // 1
 extern "C" static void daTag_MynaLight_Draw__FPv(); // 1
-extern "C" static void daTag_MynaLight_IsDelete__FPv(); // 1
+extern "C" static bool daTag_MynaLight_IsDelete__FPv(); // 1
 extern "C" void __dt__17daTag_MynaLight_cFv(); // 1
 extern "C" extern u32 const lit_3706;
 extern "C" extern u32 const lit_3712;
@@ -351,14 +351,9 @@ asm static void daTag_MynaLight_Draw(void* param_0) {
 
 
 /* 80D5D290-80D5D298 0008+00 s=1 e=0 z=0  None .text      daTag_MynaLight_IsDelete__FPv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_MynaLight_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_IsDelete__FPv.s"
+static bool daTag_MynaLight_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D5D298-80D5D2F8 0060+00 s=1 e=0 z=0  None .text      __dt__17daTag_MynaLight_cFv                                  */

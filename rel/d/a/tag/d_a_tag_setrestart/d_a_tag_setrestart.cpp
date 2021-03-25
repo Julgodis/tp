@@ -15,7 +15,7 @@ struct daTagRestart_c {
 	/* 80D603F8 */ void Create();
 	/* 80D6048C */ void create();
 	/* 80D60560 */ void execute();
-	/* 80D60744 */ void _delete();
+	/* 80D60744 */ bool _delete();
 };
 
 struct Vec {
@@ -52,7 +52,7 @@ extern "C" void create__14daTagRestart_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void execute__14daTagRestart_cFv(); // 1
-extern "C" void _delete__14daTagRestart_cFv(); // 1
+extern "C" bool _delete__14daTagRestart_cFv(); // 1
 extern "C" static void daTagRestart_Execute__FP14daTagRestart_c(); // 1
 extern "C" static void daTagRestart_Delete__FP14daTagRestart_c(); // 1
 extern "C" static void daTagRestart_Create__FP10fopAc_ac_c(); // 1
@@ -133,14 +133,9 @@ asm cXyz::~cXyz() {
 
 
 /* 80D6055C-80D60560 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80D60560-80D60744 01E4+00 s=1 e=0 z=0  None .text      execute__14daTagRestart_cFv                                  */
@@ -155,14 +150,9 @@ asm void daTagRestart_c::execute() {
 
 
 /* 80D60744-80D6074C 0008+00 s=1 e=0 z=0  None .text      _delete__14daTagRestart_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTagRestart_c::_delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_setrestart/d_a_tag_setrestart/_delete__14daTagRestart_cFv.s"
+bool daTagRestart_c::_delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 80D6074C-80D6076C 0020+00 s=1 e=0 z=0  None .text      daTagRestart_Execute__FP14daTagRestart_c                     */

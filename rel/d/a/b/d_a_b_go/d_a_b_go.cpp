@@ -44,19 +44,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -140,7 +140,7 @@ static void h_walk(b_go_class*); // 2
 static void h_attack(b_go_class*); // 2
 static void action(b_go_class*); // 2
 static void daB_GO_Execute(b_go_class*); // 2
-static void daB_GO_IsDelete(b_go_class*); // 2
+static bool daB_GO_IsDelete(b_go_class*); // 2
 static void daB_GO_Delete(b_go_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daB_GO_Create(fopAc_ac_c*); // 2
@@ -154,7 +154,7 @@ extern "C" static void h_walk__FP10b_go_class(); // 1
 extern "C" static void h_attack__FP10b_go_class(); // 1
 extern "C" static void action__FP10b_go_class(); // 1
 extern "C" static void daB_GO_Execute__FP10b_go_class(); // 1
-extern "C" static void daB_GO_IsDelete__FP10b_go_class(); // 1
+extern "C" static bool daB_GO_IsDelete__FP10b_go_class(); // 1
 extern "C" static void daB_GO_Delete__FP10b_go_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daB_GO_Create__FP10fopAc_ac_c(); // 1
@@ -452,14 +452,9 @@ asm static void anm_init(b_go_class* param_0, int param_1, f32 param_2, u8 param
 
 
 /* 8060331C-80603320 0004+00 s=1 e=0 z=0  None .text      damage_check__FP10b_go_class                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void damage_check(b_go_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/damage_check__FP10b_go_class.s"
+static void damage_check(b_go_class* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80603320-806033F0 00D0+00 s=1 e=0 z=0  None .text      h_wait__FP10b_go_class                                       */
@@ -518,14 +513,9 @@ asm static void daB_GO_Execute(b_go_class* param_0) {
 
 
 /* 806038EC-806038F4 0008+00 s=1 e=0 z=0  None .text      daB_GO_IsDelete__FP10b_go_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daB_GO_IsDelete(b_go_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/b/d_a_b_go/d_a_b_go/daB_GO_IsDelete__FP10b_go_class.s"
+static bool daB_GO_IsDelete(b_go_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 806038F4-8060395C 0068+00 s=1 e=0 z=0  None .text      daB_GO_Delete__FP10b_go_class                                */

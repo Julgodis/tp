@@ -41,24 +41,24 @@ struct J2DIndTexOrder {
 };
 
 struct J2DTevBlock {
-	/* 802EA12C */ void getTevSwapModeTable(u32);
-	/* 802EA134 */ void getTevStage(u32);
-	/* 802EA13C */ void getTevColor(u32);
-	/* 802EA144 */ void getTevOrder(u32);
-	/* 802EA14C */ void getTevKAlphaSel(u32);
-	/* 802EA154 */ void getTevKColorSel(u32);
-	/* 802EA15C */ void getTevKColor(u32);
+	/* 802EA12C */ bool getTevSwapModeTable(u32);
+	/* 802EA134 */ bool getTevStage(u32);
+	/* 802EA13C */ bool getTevColor(u32);
+	/* 802EA144 */ bool getTevOrder(u32);
+	/* 802EA14C */ bool getTevKAlphaSel(u32);
+	/* 802EA154 */ bool getTevKColorSel(u32);
+	/* 802EA15C */ bool getTevKColor(u32);
 	/* 802EA164 */ void getFontNo() const;
 	/* 802EA170 */ void getTexNo(u32) const;
-	/* 802EA17C */ void getTevStageNum() const;
-	/* 802EA184 */ void getIndTevStage(u32);
+	/* 802EA17C */ bool getTevStageNum() const;
+	/* 802EA184 */ bool getIndTevStage(u32);
 };
 
 struct J2DIndBlock {
-	/* 802EA18C */ void getIndTexCoordScale(u32);
-	/* 802EA194 */ void getIndTexMtx(u32);
-	/* 802EA19C */ void getIndTexOrder(u32);
-	/* 802EA1A4 */ void getIndTexStageNum() const;
+	/* 802EA18C */ bool getIndTexCoordScale(u32);
+	/* 802EA194 */ bool getIndTexMtx(u32);
+	/* 802EA19C */ bool getIndTexOrder(u32);
+	/* 802EA1A4 */ bool getIndTexStageNum() const;
 };
 
 // 
@@ -74,21 +74,21 @@ extern "C" void load__14J2DIndTevStageFUc(); // 1
 extern "C" void load__12J2DIndTexMtxFUc(); // 1
 extern "C" void load__19J2DIndTexCoordScaleFUc(); // 1
 extern "C" void load__14J2DIndTexOrderFUc(); // 1
-extern "C" void getTevSwapModeTable__11J2DTevBlockFUl(); // 1
-extern "C" void getTevStage__11J2DTevBlockFUl(); // 1
-extern "C" void getTevColor__11J2DTevBlockFUl(); // 1
-extern "C" void getTevOrder__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKAlphaSel__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKColorSel__11J2DTevBlockFUl(); // 1
-extern "C" void getTevKColor__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J2DTevBlockFUl(); // 1
 extern "C" void getFontNo__11J2DTevBlockCFv(); // 1
 extern "C" void getTexNo__11J2DTevBlockCFUl(); // 1
-extern "C" void getTevStageNum__11J2DTevBlockCFv(); // 1
-extern "C" void getIndTevStage__11J2DTevBlockFUl(); // 1
-extern "C" void getIndTexCoordScale__11J2DIndBlockFUl(); // 1
-extern "C" void getIndTexMtx__11J2DIndBlockFUl(); // 1
-extern "C" void getIndTexOrder__11J2DIndBlockFUl(); // 1
-extern "C" void getIndTexStageNum__11J2DIndBlockCFv(); // 1
+extern "C" bool getTevStageNum__11J2DTevBlockCFv(); // 1
+extern "C" bool getIndTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexMtx__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexOrder__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexStageNum__11J2DIndBlockCFv(); // 1
 extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
 extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
 extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
@@ -234,80 +234,45 @@ asm void J2DIndTexOrder::load(u8 param_0) {
 
 
 /* 802EA12C-802EA134 0008+00 s=0 e=1 z=0  None .text      getTevSwapModeTable__11J2DTevBlockFUl                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevSwapModeTable(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevSwapModeTable__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevSwapModeTable(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA134-802EA13C 0008+00 s=0 e=1 z=0  None .text      getTevStage__11J2DTevBlockFUl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevStage(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevStage__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevStage(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA13C-802EA144 0008+00 s=0 e=1 z=0  None .text      getTevColor__11J2DTevBlockFUl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevColor(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevColor__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevColor(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA144-802EA14C 0008+00 s=0 e=1 z=0  None .text      getTevOrder__11J2DTevBlockFUl                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevOrder(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevOrder__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevOrder(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA14C-802EA154 0008+00 s=0 e=1 z=0  None .text      getTevKAlphaSel__11J2DTevBlockFUl                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevKAlphaSel(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevKAlphaSel__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevKAlphaSel(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA154-802EA15C 0008+00 s=0 e=1 z=0  None .text      getTevKColorSel__11J2DTevBlockFUl                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevKColorSel(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevKColorSel__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevKColorSel(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA15C-802EA164 0008+00 s=0 e=1 z=0  None .text      getTevKColor__11J2DTevBlockFUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevKColor(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevKColor__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getTevKColor(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA164-802EA170 000C+00 s=0 e=1 z=0  None .text      getFontNo__11J2DTevBlockCFv                                  */
@@ -333,69 +298,39 @@ asm void J2DTevBlock::getTexNo(u32 param_0) const {
 
 
 /* 802EA17C-802EA184 0008+00 s=0 e=1 z=0  None .text      getTevStageNum__11J2DTevBlockCFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getTevStageNum() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getTevStageNum__11J2DTevBlockCFv.s"
+bool J2DTevBlock::getTevStageNum() const {
+	return true;
 }
-#pragma pop
 
 
 /* 802EA184-802EA18C 0008+00 s=0 e=1 z=0  None .text      getIndTevStage__11J2DTevBlockFUl                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DTevBlock::getIndTevStage(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getIndTevStage__11J2DTevBlockFUl.s"
+bool J2DTevBlock::getIndTevStage(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA18C-802EA194 0008+00 s=0 e=2 z=0  None .text      getIndTexCoordScale__11J2DIndBlockFUl                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DIndBlock::getIndTexCoordScale(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getIndTexCoordScale__11J2DIndBlockFUl.s"
+bool J2DIndBlock::getIndTexCoordScale(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA194-802EA19C 0008+00 s=0 e=2 z=0  None .text      getIndTexMtx__11J2DIndBlockFUl                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DIndBlock::getIndTexMtx(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getIndTexMtx__11J2DIndBlockFUl.s"
+bool J2DIndBlock::getIndTexMtx(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA19C-802EA1A4 0008+00 s=0 e=2 z=0  None .text      getIndTexOrder__11J2DIndBlockFUl                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DIndBlock::getIndTexOrder(u32 param_0) {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getIndTexOrder__11J2DIndBlockFUl.s"
+bool J2DIndBlock::getIndTexOrder(u32 param_0) {
+	return false;
 }
-#pragma pop
 
 
 /* 802EA1A4-802EA1AC 0008+00 s=0 e=2 z=0  None .text      getIndTexStageNum__11J2DIndBlockCFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DIndBlock::getIndTexStageNum() const {
-	nofralloc
-#include "asm/JSystem/J2DGraph/J2DTevs/getIndTexStageNum__11J2DIndBlockCFv.s"
+bool J2DIndBlock::getIndTexStageNum() const {
+	return false;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

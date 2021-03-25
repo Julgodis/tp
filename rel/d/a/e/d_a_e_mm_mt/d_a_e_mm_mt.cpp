@@ -101,10 +101,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -202,7 +202,7 @@ static void wall_angle_get(e_mm_mt_class*); // 2
 static void e_mm_mt_drop(e_mm_mt_class*); // 2
 static void action(e_mm_mt_class*); // 2
 static void daE_MM_MT_Execute(e_mm_mt_class*); // 2
-static void daE_MM_MT_IsDelete(e_mm_mt_class*); // 2
+static bool daE_MM_MT_IsDelete(e_mm_mt_class*); // 2
 static void daE_MM_MT_Delete(e_mm_mt_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_MM_MT_Create(fopAc_ac_c*); // 2
@@ -217,7 +217,7 @@ extern "C" static void wall_angle_get__FP13e_mm_mt_class(); // 1
 extern "C" static void e_mm_mt_drop__FP13e_mm_mt_class(); // 1
 extern "C" static void action__FP13e_mm_mt_class(); // 1
 extern "C" static void daE_MM_MT_Execute__FP13e_mm_mt_class(); // 1
-extern "C" static void daE_MM_MT_IsDelete__FP13e_mm_mt_class(); // 1
+extern "C" static bool daE_MM_MT_IsDelete__FP13e_mm_mt_class(); // 1
 extern "C" static void daE_MM_MT_Delete__FP13e_mm_mt_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_MM_MT_Create__FP10fopAc_ac_c(); // 1
@@ -613,14 +613,9 @@ asm static void daE_MM_MT_Execute(e_mm_mt_class* param_0) {
 
 
 /* 80724DF4-80724DFC 0008+00 s=1 e=0 z=0  None .text      daE_MM_MT_IsDelete__FP13e_mm_mt_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_MM_MT_IsDelete(e_mm_mt_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_mm_mt/d_a_e_mm_mt/daE_MM_MT_IsDelete__FP13e_mm_mt_class.s"
+static bool daE_MM_MT_IsDelete(e_mm_mt_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

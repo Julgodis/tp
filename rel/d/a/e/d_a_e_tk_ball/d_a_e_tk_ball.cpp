@@ -55,6 +55,9 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -62,9 +65,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -149,7 +149,7 @@ static void e_tk_ball_return(e_tk_ball_class*); // 2
 static void e_tk_ball_drop(e_tk_ball_class*); // 2
 static void action(e_tk_ball_class*); // 2
 static void daE_TK_BALL_Execute(e_tk_ball_class*); // 2
-static void daE_TK_BALL_IsDelete(e_tk_ball_class*); // 2
+static bool daE_TK_BALL_IsDelete(e_tk_ball_class*); // 2
 static void daE_TK_BALL_Delete(e_tk_ball_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_TK_BALL_Create(fopAc_ac_c*); // 2
@@ -162,7 +162,7 @@ extern "C" static void e_tk_ball_return__FP15e_tk_ball_class(); // 1
 extern "C" static void e_tk_ball_drop__FP15e_tk_ball_class(); // 1
 extern "C" static void action__FP15e_tk_ball_class(); // 1
 extern "C" static void daE_TK_BALL_Execute__FP15e_tk_ball_class(); // 1
-extern "C" static void daE_TK_BALL_IsDelete__FP15e_tk_ball_class(); // 1
+extern "C" static bool daE_TK_BALL_IsDelete__FP15e_tk_ball_class(); // 1
 extern "C" static void daE_TK_BALL_Delete__FP15e_tk_ball_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_TK_BALL_Create__FP10fopAc_ac_c(); // 1
@@ -401,14 +401,9 @@ asm static void daE_TK_BALL_Execute(e_tk_ball_class* param_0) {
 
 
 /* 807BD0C0-807BD0C8 0008+00 s=1 e=0 z=0  None .text      daE_TK_BALL_IsDelete__FP15e_tk_ball_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_TK_BALL_IsDelete(e_tk_ball_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_tk_ball/d_a_e_tk_ball/daE_TK_BALL_IsDelete__FP15e_tk_ball_class.s"
+static bool daE_TK_BALL_IsDelete(e_tk_ball_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -75,21 +75,21 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
-};
-
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -244,7 +244,7 @@ static void daObjYOUSEI_Create(fopAc_ac_c*); // 2
 static void daObjYOUSEI_Delete(daObjYOUSEI_c*); // 2
 static void daObjYOUSEI_Draw(daObjYOUSEI_c*); // 2
 static void daObjYOUSEI_Execute(daObjYOUSEI_c*); // 2
-static void daObjYOUSEI_IsDelete(daObjYOUSEI_c*); // 2
+static bool daObjYOUSEI_IsDelete(daObjYOUSEI_c*); // 2
 
 extern "C" void InitCcSph__13daObjYOUSEI_cFv(); // 1
 extern "C" void SetCcSph__13daObjYOUSEI_cFv(); // 1
@@ -274,7 +274,7 @@ extern "C" void create__13daObjYOUSEI_cFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c(); // 1
+extern "C" static bool daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c(); // 1
 extern "C" static void func_804D15A4(); // 1
 extern "C" static void func_804D15AC(); // 1
 extern "C" static void func_804D15B4(); // 1
@@ -1133,14 +1133,9 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 
 
 /* 804D159C-804D15A4 0008+00 s=1 e=0 z=0  None .text      daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjYOUSEI_IsDelete(daObjYOUSEI_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yousei/d_a_obj_yousei/daObjYOUSEI_IsDelete__FP13daObjYOUSEI_c.s"
+static bool daObjYOUSEI_IsDelete(daObjYOUSEI_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 804D15A4-804D15AC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */

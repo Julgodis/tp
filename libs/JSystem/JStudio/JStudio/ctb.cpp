@@ -25,7 +25,7 @@ namespace JStudio {
 
 		struct TObject_TxyzRy {
 			/* 80280F60 */ TObject_TxyzRy(JStudio::ctb::data::TParse_TBlock const&);
-			/* 80280FBC */ void getScheme() const;
+			/* 80280FBC */ bool getScheme() const;
 			/* 80281554 */ ~TObject_TxyzRy();
 		};
 
@@ -113,7 +113,7 @@ namespace std {
 
 extern "C" void __dt__Q37JStudio3ctb7TObjectFv(); // 1
 extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
-extern "C" void getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv(); // 1
+extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv(); // 1
 extern "C" void __ct__Q37JStudio3ctb8TControlFv(); // 1
 extern "C" void __dt__Q37JStudio3ctb8TControlFv(); // 1
 extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
@@ -231,14 +231,9 @@ asm JStudio::ctb::TObject_TxyzRy::TObject_TxyzRy(JStudio::ctb::data::TParse_TBlo
 
 
 /* 80280FBC-80280FC4 0008+00 s=1 e=0 z=0  None .text      getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JStudio::ctb::TObject_TxyzRy::getScheme() const {
-	nofralloc
-#include "asm/JSystem/JStudio/JStudio/ctb/getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv.s"
+bool JStudio::ctb::TObject_TxyzRy::getScheme() const {
+	return true;
 }
-#pragma pop
 
 
 /* 80280FC4-80280FF4 0030+00 s=0 e=1 z=0  None .text      __ct__Q37JStudio3ctb8TControlFv                              */

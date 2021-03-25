@@ -65,8 +65,8 @@ struct dCcD_GObjInf {
 };
 
 struct daItemBase_c {
-	/* 8014474C */ void clothCreate();
-	/* 80144754 */ void __CreateHeap();
+	/* 8014474C */ bool clothCreate();
+	/* 80144754 */ bool __CreateHeap();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144C7C */ void setListStart();
@@ -134,8 +134,8 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
 extern "C" void __ct__10dCcD_GSttsFv(); // 1
 extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
-extern "C" void __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void setListStart__12daItemBase_cFv(); // 1

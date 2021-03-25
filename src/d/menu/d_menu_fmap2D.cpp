@@ -90,9 +90,6 @@ struct dMenu_Fmap2DBack_c {
 struct JKRExpHeap {
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct JKRArchive {
 };
 
@@ -121,6 +118,9 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Fmap2DTop_c {

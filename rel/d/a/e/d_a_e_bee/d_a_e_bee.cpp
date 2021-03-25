@@ -189,7 +189,7 @@ static void bee_fail(bee_s*); // 2
 static void bee_start(e_bee_class*, bee_s*); // 2
 static void bee_control(e_bee_class*); // 2
 static void daE_Bee_Execute(e_bee_class*); // 2
-static void daE_Bee_IsDelete(e_bee_class*); // 2
+static bool daE_Bee_IsDelete(e_bee_class*); // 2
 static void daE_Bee_Delete(e_bee_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_Bee_Create(fopAc_ac_c*); // 2
@@ -205,7 +205,7 @@ extern "C" static void bee_fail__FP5bee_s(); // 1
 extern "C" static void bee_start__FP11e_bee_classP5bee_s(); // 1
 extern "C" static void bee_control__FP11e_bee_class(); // 1
 extern "C" static void daE_Bee_Execute__FP11e_bee_class(); // 1
-extern "C" static void daE_Bee_IsDelete__FP11e_bee_class(); // 1
+extern "C" static bool daE_Bee_IsDelete__FP11e_bee_class(); // 1
 extern "C" static void daE_Bee_Delete__FP11e_bee_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_Bee_Create__FP10fopAc_ac_c(); // 1
@@ -824,14 +824,9 @@ asm static void daE_Bee_Execute(e_bee_class* param_0) {
 
 
 /* 80684B5C-80684B64 0008+00 s=1 e=0 z=0  None .text      daE_Bee_IsDelete__FP11e_bee_class                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_Bee_IsDelete(e_bee_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_bee/d_a_e_bee/daE_Bee_IsDelete__FP11e_bee_class.s"
+static bool daE_Bee_IsDelete(e_bee_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

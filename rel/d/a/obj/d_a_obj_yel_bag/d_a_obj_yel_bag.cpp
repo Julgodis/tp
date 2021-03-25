@@ -25,8 +25,8 @@ struct daObj_YBag_c {
 	/* 80D3C970 */ void Execute();
 	/* 80D3D32C */ void Draw();
 	/* 80D3D438 */ void createHeapCallBack(fopAc_ac_c*);
-	/* 80D3D458 */ void getTypeFromParam();
-	/* 80D3D460 */ void isDelete();
+	/* 80D3D458 */ bool getTypeFromParam();
+	/* 80D3D460 */ bool isDelete();
 	/* 80D3D468 */ void setEnvTevColor();
 	/* 80D3D4C4 */ void setRoomNo();
 	/* 80D3D508 */ void reset();
@@ -204,7 +204,7 @@ static void daObj_YBag_Create(void*); // 2
 static void daObj_YBag_Delete(void*); // 2
 static void daObj_YBag_Execute(void*); // 2
 static void daObj_YBag_Draw(void*); // 2
-static void daObj_YBag_IsDelete(void*); // 2
+static bool daObj_YBag_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __ct__12daObj_YBag_cFv(); // 1
@@ -221,8 +221,8 @@ extern "C" void Delete__12daObj_YBag_cFv(); // 1
 extern "C" void Execute__12daObj_YBag_cFv(); // 1
 extern "C" void Draw__12daObj_YBag_cFv(); // 1
 extern "C" void createHeapCallBack__12daObj_YBag_cFP10fopAc_ac_c(); // 1
-extern "C" void getTypeFromParam__12daObj_YBag_cFv(); // 1
-extern "C" void isDelete__12daObj_YBag_cFv(); // 1
+extern "C" bool getTypeFromParam__12daObj_YBag_cFv(); // 1
+extern "C" bool isDelete__12daObj_YBag_cFv(); // 1
 extern "C" void setEnvTevColor__12daObj_YBag_cFv(); // 1
 extern "C" void setRoomNo__12daObj_YBag_cFv(); // 1
 extern "C" void reset__12daObj_YBag_cFv(); // 1
@@ -236,7 +236,7 @@ extern "C" static void daObj_YBag_Create__FPv(); // 1
 extern "C" static void daObj_YBag_Delete__FPv(); // 1
 extern "C" static void daObj_YBag_Execute__FPv(); // 1
 extern "C" static void daObj_YBag_Draw__FPv(); // 1
-extern "C" static void daObj_YBag_IsDelete__FPv(); // 1
+extern "C" static bool daObj_YBag_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80D3DB90(); // 1
 extern "C" void __sinit_d_a_obj_yel_bag_cpp(); // 1
@@ -325,7 +325,7 @@ void fopAcM_calcSpeed(fopAc_ac_c*); // 2
 void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_effSmokeSet1(u32*, u32*, cXyz const*, csXyz const*, f32, dKy_tevstr_c const*, int); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopAcM_carryOffRevise(fopAc_ac_c*); // 2
 void fopAcM_getWaterY(cXyz const*, f32*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
@@ -357,7 +357,7 @@ extern "C" void fopAcM_calcSpeed__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
 extern "C" void fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopAcM_carryOffRevise__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_getWaterY__FPC4cXyzPf(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
@@ -847,25 +847,15 @@ asm void daObj_YBag_c::createHeapCallBack(fopAc_ac_c* param_0) {
 
 
 /* 80D3D458-80D3D460 0008+00 s=1 e=0 z=0  None .text      getTypeFromParam__12daObj_YBag_cFv                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_YBag_c::getTypeFromParam() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/getTypeFromParam__12daObj_YBag_cFv.s"
+bool daObj_YBag_c::getTypeFromParam() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D3D460-80D3D468 0008+00 s=1 e=0 z=0  None .text      isDelete__12daObj_YBag_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_YBag_c::isDelete() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/isDelete__12daObj_YBag_cFv.s"
+bool daObj_YBag_c::isDelete() {
+	return false;
 }
-#pragma pop
 
 
 /* 80D3D468-80D3D4C4 005C+00 s=2 e=0 z=0  None .text      setEnvTevColor__12daObj_YBag_cFv                             */
@@ -1073,14 +1063,9 @@ asm static void daObj_YBag_Draw(void* param_0) {
 
 
 /* 80D3DB40-80D3DB48 0008+00 s=1 e=0 z=0  None .text      daObj_YBag_IsDelete__FPv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_YBag_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_yel_bag/d_a_obj_yel_bag/daObj_YBag_IsDelete__FPv.s"
+static bool daObj_YBag_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80D3DB48-80D3DB90 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

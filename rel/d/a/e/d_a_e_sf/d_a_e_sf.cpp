@@ -93,19 +93,19 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -288,7 +288,7 @@ static void action(e_sf_class*); // 2
 static void anm_se_set(e_sf_class*); // 2
 static void demo_camera(e_sf_class*); // 2
 static void daE_SF_Execute(e_sf_class*); // 2
-static void daE_SF_IsDelete(e_sf_class*); // 2
+static bool daE_SF_IsDelete(e_sf_class*); // 2
 static void daE_SF_Delete(e_sf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_SF_Create(fopAc_ac_c*); // 2
@@ -320,7 +320,7 @@ extern "C" static void action__FP10e_sf_class(); // 1
 extern "C" static void anm_se_set__FP10e_sf_class(); // 1
 extern "C" static void demo_camera__FP10e_sf_class(); // 1
 extern "C" static void daE_SF_Execute__FP10e_sf_class(); // 1
-extern "C" static void daE_SF_IsDelete__FP10e_sf_class(); // 1
+extern "C" static bool daE_SF_IsDelete__FP10e_sf_class(); // 1
 extern "C" static void daE_SF_Delete__FP10e_sf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_SF_Create__FP10fopAc_ac_c(); // 1
@@ -1475,14 +1475,9 @@ asm static void daE_SF_Execute(e_sf_class* param_0) {
 
 
 /* 80788D38-80788D40 0008+00 s=1 e=0 z=0  None .text      daE_SF_IsDelete__FP10e_sf_class                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_SF_IsDelete(e_sf_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_sf/d_a_e_sf/daE_SF_IsDelete__FP10e_sf_class.s"
+static bool daE_SF_IsDelete(e_sf_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80788D40-80788DA8 0068+00 s=1 e=0 z=0  None .text      daE_SF_Delete__FP10e_sf_class                                */

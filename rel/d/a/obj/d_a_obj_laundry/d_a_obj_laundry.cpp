@@ -21,7 +21,7 @@ struct daObjLdy_c {
 	/* 80C5116C */ void getJointAngle(csXyz*, int);
 	/* 80C51194 */ void setNormalClothPos();
 	/* 80C51644 */ void calcJointAngle();
-	/* 80C5183C */ void divorceParent();
+	/* 80C5183C */ bool divorceParent();
 };
 
 struct J3DJoint {
@@ -132,7 +132,7 @@ static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
 static void daObjLdy_Draw(daObjLdy_c*); // 2
 static void daObjLdy_Execute(daObjLdy_c*); // 2
-static void daObjLdy_IsDelete(daObjLdy_c*); // 2
+static bool daObjLdy_IsDelete(daObjLdy_c*); // 2
 static void daObjLdy_Delete(daObjLdy_c*); // 2
 static void daObjLdy_Create(fopAc_ac_c*); // 2
 
@@ -142,13 +142,13 @@ extern "C" void setBaseMtx__10daObjLdy_cFv(); // 1
 extern "C" void getJointAngle__10daObjLdy_cFP5csXyzi(); // 1
 extern "C" void setNormalClothPos__10daObjLdy_cFv(); // 1
 extern "C" void calcJointAngle__10daObjLdy_cFv(); // 1
-extern "C" void divorceParent__10daObjLdy_cFv(); // 1
+extern "C" bool divorceParent__10daObjLdy_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void daObjLdy_Draw__FP10daObjLdy_c(); // 1
 extern "C" static void daObjLdy_Execute__FP10daObjLdy_c(); // 1
-extern "C" static void daObjLdy_IsDelete__FP10daObjLdy_c(); // 1
+extern "C" static bool daObjLdy_IsDelete__FP10daObjLdy_c(); // 1
 extern "C" static void daObjLdy_Delete__FP10daObjLdy_c(); // 1
 extern "C" void __dt__12LaundJoint_cFv(); // 1
 extern "C" static void daObjLdy_Create__FP10fopAc_ac_c(); // 1
@@ -379,14 +379,9 @@ asm void daObjLdy_c::calcJointAngle() {
 
 
 /* 80C5183C-80C51844 0008+00 s=1 e=0 z=0  None .text      divorceParent__10daObjLdy_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLdy_c::divorceParent() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/divorceParent__10daObjLdy_cFv.s"
+bool daObjLdy_c::divorceParent() {
+	return true;
 }
-#pragma pop
 
 
 /* 80C51844-80C518FC 00B8+00 s=1 e=0 z=0  None .text      nodeCallBack__FP8J3DJointi                                   */
@@ -544,14 +539,9 @@ asm static void daObjLdy_Execute(daObjLdy_c* param_0) {
 
 
 /* 80C51BDC-80C51BE4 0008+00 s=1 e=0 z=0  None .text      daObjLdy_IsDelete__FP10daObjLdy_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjLdy_IsDelete(daObjLdy_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/daObjLdy_IsDelete__FP10daObjLdy_c.s"
+static bool daObjLdy_IsDelete(daObjLdy_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C51BE4-80C51D2C 0148+00 s=1 e=0 z=0  None .text      daObjLdy_Delete__FP10daObjLdy_c                              */
@@ -588,14 +578,9 @@ asm static void daObjLdy_Create(fopAc_ac_c* param_0) {
 
 
 /* 80C51EC0-80C51EC4 0004+00 s=1 e=0 z=0  None .text      __ct__12LaundJoint_cFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm LaundJoint_c::LaundJoint_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_laundry/d_a_obj_laundry/__ct__12LaundJoint_cFv.s"
+LaundJoint_c::LaundJoint_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80C51EC4-80C51F0C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */

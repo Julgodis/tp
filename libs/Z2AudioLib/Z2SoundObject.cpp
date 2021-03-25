@@ -14,10 +14,10 @@
 struct Vec {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -62,9 +62,6 @@ struct Z2SoundStarter {
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
-struct JAUSoundAnimationSound {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -72,6 +69,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAUSoundAnimationSound {
 };
 
 struct Z2SoundObjAnime {

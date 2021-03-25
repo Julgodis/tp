@@ -35,6 +35,9 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -42,9 +45,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -80,7 +80,7 @@ static void daKytag06_type_11_Execute(kytag06_class*); // 2
 static void daKytag06_type_05_Execute(kytag06_class*); // 2
 static void daKytag06_type_03_Execute(kytag06_class*); // 2
 static void daKytag06_Execute(kytag06_class*); // 2
-static void daKytag06_IsDelete(kytag06_class*); // 2
+static bool daKytag06_IsDelete(kytag06_class*); // 2
 static void daKytag06_Delete(kytag06_class*); // 2
 static void daKytag06_type04_init(fopAc_ac_c*); // 2
 static void daKytag06_type06_init(fopAc_ac_c*); // 2
@@ -110,7 +110,7 @@ extern "C" static void daKytag06_type_11_Execute__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_type_05_Execute__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_type_03_Execute__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_IsDelete__FP13kytag06_class(); // 1
+extern "C" static bool daKytag06_IsDelete__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_Delete__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_type04_init__FP10fopAc_ac_c(); // 1
 extern "C" static void daKytag06_type06_init__FP10fopAc_ac_c(); // 1
@@ -883,14 +883,9 @@ asm static void daKytag06_Execute(kytag06_class* param_0) {
 
 
 /* 80859A88-80859A90 0008+00 s=1 e=0 z=0  None .text      daKytag06_IsDelete__FP13kytag06_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daKytag06_IsDelete(kytag06_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_IsDelete__FP13kytag06_class.s"
+static bool daKytag06_IsDelete(kytag06_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80859A90-80859AD0 0040+00 s=1 e=0 z=0  None .text      daKytag06_Delete__FP13kytag06_class                          */

@@ -22,16 +22,16 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DModelData {
-};
-
-struct J3DAnmTransform {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
+};
+
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorf {
@@ -50,10 +50,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -67,14 +67,14 @@ struct dScnKy_env_light_c {
 
 static void daE_YD_LEAF_Draw(e_yd_leaf_class*); // 2
 static void daE_YD_LEAF_Execute(e_yd_leaf_class*); // 2
-static void daE_YD_LEAF_IsDelete(e_yd_leaf_class*); // 2
+static bool daE_YD_LEAF_IsDelete(e_yd_leaf_class*); // 2
 static void daE_YD_LEAF_Delete(e_yd_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YD_LEAF_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daE_YD_LEAF_Draw__FP15e_yd_leaf_class(); // 1
 extern "C" static void daE_YD_LEAF_Execute__FP15e_yd_leaf_class(); // 1
-extern "C" static void daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class(); // 1
+extern "C" static bool daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class(); // 1
 extern "C" static void daE_YD_LEAF_Delete__FP15e_yd_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daE_YD_LEAF_Create__FP10fopAc_ac_c(); // 1
@@ -158,14 +158,9 @@ asm static void daE_YD_LEAF_Execute(e_yd_leaf_class* param_0) {
 
 
 /* 807F7FEC-807F7FF4 0008+00 s=1 e=0 z=0  None .text      daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YD_LEAF_IsDelete(e_yd_leaf_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_yd_leaf/d_a_e_yd_leaf/daE_YD_LEAF_IsDelete__FP15e_yd_leaf_class.s"
+static bool daE_YD_LEAF_IsDelete(e_yd_leaf_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

@@ -43,10 +43,10 @@ struct dMsgScrnExplain_c {
 	/* 8023E654 */ void checkTriggerB();
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -94,6 +94,13 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
@@ -104,13 +111,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -457,36 +457,21 @@ asm void dMsgScrnExplain_c::draw(J2DOrthoGraph* param_0) {
 
 
 /* 8023DAD0-8023DAD4 0004+00 s=1 e=0 z=0  None .text      wait_init__17dMsgScrnExplain_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnExplain_c::wait_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_explain/wait_init__17dMsgScrnExplain_cFv.s"
+void dMsgScrnExplain_c::wait_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8023DAD4-8023DAD8 0004+00 s=1 e=0 z=0  None .text      wait_proc__17dMsgScrnExplain_cFv                             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnExplain_c::wait_proc() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_explain/wait_proc__17dMsgScrnExplain_cFv.s"
+void dMsgScrnExplain_c::wait_proc() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8023DAD8-8023DADC 0004+00 s=2 e=0 z=0  None .text      open_request_init__17dMsgScrnExplain_cFv                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dMsgScrnExplain_c::open_request_init() {
-	nofralloc
-#include "asm/msg/scrn/d_msg_scrn_explain/open_request_init__17dMsgScrnExplain_cFv.s"
+void dMsgScrnExplain_c::open_request_init() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8023DADC-8023DBE4 0108+00 s=1 e=0 z=0  None .text      open_request_proc__17dMsgScrnExplain_cFv                     */

@@ -94,10 +94,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -184,7 +184,7 @@ static void cut_set(obj_ito_class*, int); // 2
 static void ito_end(ito_s*); // 2
 static void action(obj_ito_class*); // 2
 static void daObj_Ito_Execute(obj_ito_class*); // 2
-static void daObj_Ito_IsDelete(obj_ito_class*); // 2
+static bool daObj_Ito_IsDelete(obj_ito_class*); // 2
 static void daObj_Ito_Delete(obj_ito_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Ito_Create(fopAc_ac_c*); // 2
@@ -198,7 +198,7 @@ extern "C" static void cut_set__FP13obj_ito_classi(); // 1
 extern "C" static void ito_end__FP5ito_s(); // 1
 extern "C" static void action__FP13obj_ito_class(); // 1
 extern "C" static void daObj_Ito_Execute__FP13obj_ito_class(); // 1
-extern "C" static void daObj_Ito_IsDelete__FP13obj_ito_class(); // 1
+extern "C" static bool daObj_Ito_IsDelete__FP13obj_ito_class(); // 1
 extern "C" static void daObj_Ito_Delete__FP13obj_ito_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Ito_Create__FP10fopAc_ac_c(); // 1
@@ -650,14 +650,9 @@ asm static void daObj_Ito_Execute(obj_ito_class* param_0) {
 
 
 /* 8047CFA8-8047CFB0 0008+00 s=1 e=0 z=0  None .text      daObj_Ito_IsDelete__FP13obj_ito_class                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Ito_IsDelete(obj_ito_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/daObj_Ito_IsDelete__FP13obj_ito_class.s"
+static bool daObj_Ito_IsDelete(obj_ito_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -759,14 +754,9 @@ asm static void daObj_Ito_Create(fopAc_ac_c* param_0) {
 
 
 /* 8047D594-8047D598 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_ito/d_a_obj_ito/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8047D598-8047D664 00CC+00 s=1 e=0 z=0  None .text      __dt__8dCcD_SphFv                                            */

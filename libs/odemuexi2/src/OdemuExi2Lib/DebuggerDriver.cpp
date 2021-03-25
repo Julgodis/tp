@@ -44,25 +44,15 @@ extern "C" extern u32 data_80450AF0;
 // 
 
 /* 80372D2C-80372D30 0004+00 s=0 e=1 z=0  None .text      DBClose                                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void DBClose() {
-	nofralloc
-#include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBClose.s"
+extern "C" void DBClose() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80372D30-80372D34 0004+00 s=0 e=1 z=0  None .text      DBOpen                                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-extern "C" asm void DBOpen() {
-	nofralloc
-#include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBOpen.s"
+extern "C" void DBOpen() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80372D34-80372F94 0260+00 s=0 e=1 z=0  None .text      DBWrite                                                      */

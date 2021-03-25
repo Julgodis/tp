@@ -205,7 +205,7 @@ static void daObj_Mie_Create(void*); // 2
 static void daObj_Mie_Delete(void*); // 2
 static void daObj_Mie_Execute(void*); // 2
 static void daObj_Mie_Draw(void*); // 2
-static void daObj_Mie_IsDelete(void*); // 2
+static bool daObj_Mie_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void __dt__11daObj_Mie_cFv(); // 1
@@ -236,7 +236,7 @@ extern "C" static void daObj_Mie_Create__FPv(); // 1
 extern "C" static void daObj_Mie_Delete__FPv(); // 1
 extern "C" static void daObj_Mie_Execute__FPv(); // 1
 extern "C" static void daObj_Mie_Draw__FPv(); // 1
-extern "C" static void daObj_Mie_IsDelete__FPv(); // 1
+extern "C" static bool daObj_Mie_IsDelete__FPv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80C959B0(); // 1
 extern "C" void __sinit_d_a_obj_mie_cpp(); // 1
@@ -320,7 +320,7 @@ void fopAcM_calcSpeed(fopAc_ac_c*); // 2
 void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_effSmokeSet1(u32*, u32*, cXyz const*, csXyz const*, f32, dKy_tevstr_c const*, int); // 2
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
-void fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
+bool fopAcM_riverStream(cXyz*, s16*, f32*, f32); // 2
 void fopAcM_carryOffRevise(fopAc_ac_c*); // 2
 void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*); // 2
 void fopAcM_getWaterY(cXyz const*, f32*); // 2
@@ -352,7 +352,7 @@ extern "C" void fopAcM_calcSpeed__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
 extern "C" void fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci(); // 1
 extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
-extern "C" void fopAcM_riverStream__FP4cXyzPsPff(); // 1
+extern "C" bool fopAcM_riverStream__FP4cXyzPsPff(); // 1
 extern "C" void fopAcM_carryOffRevise__FP10fopAc_ac_c(); // 1
 extern "C" void fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData(); // 1
 extern "C" void fopAcM_getWaterY__FPC4cXyzPf(); // 1
@@ -1040,14 +1040,9 @@ asm static void daObj_Mie_Draw(void* param_0) {
 
 
 /* 80C95960-80C95968 0008+00 s=1 e=0 z=0  None .text      daObj_Mie_IsDelete__FPv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Mie_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_mie/d_a_obj_mie/daObj_Mie_IsDelete__FPv.s"
+static bool daObj_Mie_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80C95968-80C959B0 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */

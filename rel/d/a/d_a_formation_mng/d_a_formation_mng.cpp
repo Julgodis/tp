@@ -91,9 +91,9 @@ struct daNpcFgd_c {
 // Forward References:
 // 
 
-static void daFmtMng_Draw(daFmtMng_c*); // 2
+static bool daFmtMng_Draw(daFmtMng_c*); // 2
 static void daFmtMng_Execute(daFmtMng_c*); // 2
-static void daFmtMng_IsDelete(daFmtMng_c*); // 2
+static bool daFmtMng_IsDelete(daFmtMng_c*); // 2
 static void daFmtMng_Delete(daFmtMng_c*); // 2
 static void daFmtMng_Create(fopAc_ac_c*); // 2
 
@@ -113,9 +113,9 @@ extern "C" void initMotion__10daFmtMng_cFv(); // 1
 extern "C" void executeMotion__10daFmtMng_cFv(); // 1
 extern "C" void initFight__10daFmtMng_cFv(); // 1
 extern "C" void executeFight__10daFmtMng_cFv(); // 1
-extern "C" static void daFmtMng_Draw__FP10daFmtMng_c(); // 1
+extern "C" static bool daFmtMng_Draw__FP10daFmtMng_c(); // 1
 extern "C" static void daFmtMng_Execute__FP10daFmtMng_c(); // 1
-extern "C" static void daFmtMng_IsDelete__FP10daFmtMng_c(); // 1
+extern "C" static bool daFmtMng_IsDelete__FP10daFmtMng_c(); // 1
 extern "C" static void daFmtMng_Delete__FP10daFmtMng_c(); // 1
 extern "C" void __dt__11FmtMember_cFv(); // 1
 extern "C" static void daFmtMng_Create__FP10fopAc_ac_c(); // 1
@@ -482,14 +482,9 @@ asm FmtPos_c::~FmtPos_c() {
 
 
 /* 80836C60-80836C64 0004+00 s=2 e=0 z=0  None .text      __ct__8FmtPos_cFv                                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm FmtPos_c::FmtPos_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__ct__8FmtPos_cFv.s"
+FmtPos_c::FmtPos_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80836C64-80836E20 01BC+00 s=1 e=0 z=0  None .text      initMotion__10daFmtMng_cFv                                   */
@@ -537,14 +532,9 @@ asm void daFmtMng_c::executeFight() {
 
 
 /* 80837250-80837258 0008+00 s=1 e=0 z=0  None .text      daFmtMng_Draw__FP10daFmtMng_c                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daFmtMng_Draw(daFmtMng_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_Draw__FP10daFmtMng_c.s"
+static bool daFmtMng_Draw(daFmtMng_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80837258-808373BC 0164+00 s=1 e=0 z=0  None .text      daFmtMng_Execute__FP10daFmtMng_c                             */
@@ -559,14 +549,9 @@ asm static void daFmtMng_Execute(daFmtMng_c* param_0) {
 
 
 /* 808373BC-808373C4 0008+00 s=1 e=0 z=0  None .text      daFmtMng_IsDelete__FP10daFmtMng_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daFmtMng_IsDelete(daFmtMng_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/daFmtMng_IsDelete__FP10daFmtMng_c.s"
+static bool daFmtMng_IsDelete(daFmtMng_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 808373C4-80837458 0094+00 s=1 e=0 z=0  None .text      daFmtMng_Delete__FP10daFmtMng_c                              */
@@ -680,14 +665,9 @@ asm void daFmtMng_c::create_init() {
 
 
 /* 80837798-8083779C 0004+00 s=1 e=0 z=0  None .text      __ct__11FmtMember_cFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm FmtMember_c::FmtMember_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_formation_mng/d_a_formation_mng/__ct__11FmtMember_cFv.s"
+FmtMember_c::FmtMember_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8083779C-8083789C 0100+00 s=0 e=1 z=0  None .text      __sinit_d_a_formation_mng_cpp                                */

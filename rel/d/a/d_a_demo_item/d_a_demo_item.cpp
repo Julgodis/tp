@@ -12,7 +12,7 @@
 // 
 
 struct daDitem_c {
-	/* 804DFBCC */ void __CreateHeap();
+	/* 804DFBCC */ bool __CreateHeap();
 	/* 804DFBD4 */ void CreateInit();
 	/* 804DFC98 */ void action();
 	/* 804DFD10 */ void actionStart();
@@ -80,7 +80,7 @@ struct daItemBase_c {
 	/* 80037ACC */ void chkDraw();
 	/* 80037AF4 */ void chkDead();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ void clothCreate();
+	/* 8014474C */ bool clothCreate();
 	/* 80144B94 */ void DrawBase();
 	/* 80144C30 */ void RotateYBase();
 	/* 80144CC4 */ void settingBeforeDraw();
@@ -99,6 +99,9 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -106,9 +109,6 @@ struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -165,7 +165,7 @@ static void daDitem_Create(daDitem_c*); // 2
 static void daDitem_Execute(daDitem_c*); // 2
 static void daDitem_Draw(daDitem_c*); // 2
 
-extern "C" void __CreateHeap__9daDitem_cFv(); // 1
+extern "C" bool __CreateHeap__9daDitem_cFv(); // 1
 extern "C" void CreateInit__9daDitem_cFv(); // 1
 extern "C" void action__9daDitem_cFv(); // 1
 extern "C" void actionStart__9daDitem_cFv(); // 1
@@ -308,7 +308,7 @@ extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void execItemGet__FUc(); // 1
 extern "C" void isInsect__FUc(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" void clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
 extern "C" void DrawBase__12daItemBase_cFv(); // 1
 extern "C" void RotateYBase__12daItemBase_cFv(); // 1
 extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
@@ -361,14 +361,9 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* 804DFBCC-804DFBD4 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__9daDitem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDitem_c::__CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/__CreateHeap__9daDitem_cFv.s"
+bool daDitem_c::__CreateHeap() {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -759,14 +754,9 @@ asm void daDitem_c::setTevStr() {
 
 
 /* 804E122C-804E1230 0004+00 s=1 e=0 z=0  None .text      setListStart__9daDitem_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daDitem_c::setListStart() {
-	nofralloc
-#include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/setListStart__9daDitem_cFv.s"
+void daDitem_c::setListStart() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 804E1230-804E12C8 0098+00 s=1 e=0 z=0  None .text      draw_WOOD_STICK__9daDitem_cFv                                */

@@ -38,7 +38,7 @@ struct dSv_info_c {
 static void daTagHinit_Create(fopAc_ac_c*); // 2
 static void daTagHinit_Delete(daTagHinit_c*); // 2
 static void daTagHinit_Execute(daTagHinit_c*); // 2
-static void daTagHinit_Draw(daTagHinit_c*); // 2
+static bool daTagHinit_Draw(daTagHinit_c*); // 2
 
 extern "C" void create__12daTagHinit_cFv(); // 1
 extern "C" static void daTagHinit_Create__FP10fopAc_ac_c(); // 1
@@ -46,7 +46,7 @@ extern "C" void __dt__12daTagHinit_cFv(); // 1
 extern "C" static void daTagHinit_Delete__FP12daTagHinit_c(); // 1
 extern "C" void execute__12daTagHinit_cFv(); // 1
 extern "C" static void daTagHinit_Execute__FP12daTagHinit_c(); // 1
-extern "C" static void daTagHinit_Draw__FP12daTagHinit_c(); // 1
+extern "C" static bool daTagHinit_Draw__FP12daTagHinit_c(); // 1
 extern "C" extern void* g_profile_Tag_Hinit[12];
 
 // 
@@ -140,14 +140,9 @@ asm static void daTagHinit_Execute(daTagHinit_c* param_0) {
 
 
 /* 805A39D8-805A39E0 0008+00 s=1 e=0 z=0  None .text      daTagHinit_Draw__FP12daTagHinit_c                            */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTagHinit_Draw(daTagHinit_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_hinit/d_a_tag_hinit/daTagHinit_Draw__FP12daTagHinit_c.s"
+static bool daTagHinit_Draw(daTagHinit_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */

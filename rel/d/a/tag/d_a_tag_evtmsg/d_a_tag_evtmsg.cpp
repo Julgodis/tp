@@ -16,9 +16,9 @@ struct cXyz {
 
 struct daTag_EvtMsg_c {
 	/* 8048CF38 */ void create();
-	/* 8048D014 */ void Delete();
+	/* 8048D014 */ bool Delete();
 	/* 8048D01C */ void Execute();
-	/* 8048D31C */ void Draw();
+	/* 8048D31C */ bool Draw();
 	/* 8048D324 */ void getOnEvtBit();
 	/* 8048D340 */ void getOffEvtBit();
 	/* 8048D35C */ void getOnSwBit();
@@ -70,13 +70,13 @@ static void daTag_EvtMsg_Create(void*); // 2
 static void daTag_EvtMsg_Delete(void*); // 2
 static void daTag_EvtMsg_Execute(void*); // 2
 static void daTag_EvtMsg_Draw(void*); // 2
-static void daTag_EvtMsg_IsDelete(void*); // 2
+static bool daTag_EvtMsg_IsDelete(void*); // 2
 static void cLib_calcTimer__template0(int*); // 2
 
 extern "C" void create__14daTag_EvtMsg_cFv(); // 1
-extern "C" void Delete__14daTag_EvtMsg_cFv(); // 1
+extern "C" bool Delete__14daTag_EvtMsg_cFv(); // 1
 extern "C" void Execute__14daTag_EvtMsg_cFv(); // 1
-extern "C" void Draw__14daTag_EvtMsg_cFv(); // 1
+extern "C" bool Draw__14daTag_EvtMsg_cFv(); // 1
 extern "C" void getOnEvtBit__14daTag_EvtMsg_cFv(); // 1
 extern "C" void getOffEvtBit__14daTag_EvtMsg_cFv(); // 1
 extern "C" void getOnSwBit__14daTag_EvtMsg_cFv(); // 1
@@ -90,7 +90,7 @@ extern "C" static void daTag_EvtMsg_Create__FPv(); // 1
 extern "C" static void daTag_EvtMsg_Delete__FPv(); // 1
 extern "C" static void daTag_EvtMsg_Execute__FPv(); // 1
 extern "C" static void daTag_EvtMsg_Draw__FPv(); // 1
-extern "C" static void daTag_EvtMsg_IsDelete__FPv(); // 1
+extern "C" static bool daTag_EvtMsg_IsDelete__FPv(); // 1
 extern "C" void __dt__14daTag_EvtMsg_cFv(); // 1
 extern "C" static void func_8048D760(); // 1
 extern "C" void __sinit_d_a_tag_evtmsg_cpp(); // 1
@@ -259,14 +259,9 @@ asm void daTag_EvtMsg_c::create() {
 
 
 /* 8048D014-8048D01C 0008+00 s=1 e=0 z=0  None .text      Delete__14daTag_EvtMsg_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_EvtMsg_c::Delete() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/Delete__14daTag_EvtMsg_cFv.s"
+bool daTag_EvtMsg_c::Delete() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D01C-8048D31C 0300+00 s=1 e=0 z=0  None .text      Execute__14daTag_EvtMsg_cFv                                  */
@@ -281,14 +276,9 @@ asm void daTag_EvtMsg_c::Execute() {
 
 
 /* 8048D31C-8048D324 0008+00 s=1 e=0 z=0  None .text      Draw__14daTag_EvtMsg_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daTag_EvtMsg_c::Draw() {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/Draw__14daTag_EvtMsg_cFv.s"
+bool daTag_EvtMsg_c::Draw() {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D324-8048D340 001C+00 s=1 e=0 z=0  None .text      getOnEvtBit__14daTag_EvtMsg_cFv                              */
@@ -435,14 +425,9 @@ asm static void daTag_EvtMsg_Draw(void* param_0) {
 
 
 /* 8048D6E8-8048D6F0 0008+00 s=1 e=0 z=0  None .text      daTag_EvtMsg_IsDelete__FPv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daTag_EvtMsg_IsDelete(void* param_0) {
-	nofralloc
-#include "asm/rel/d/a/tag/d_a_tag_evtmsg/d_a_tag_evtmsg/daTag_EvtMsg_IsDelete__FPv.s"
+static bool daTag_EvtMsg_IsDelete(void* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 8048D6F0-8048D760 0070+00 s=1 e=0 z=0  None .text      __dt__14daTag_EvtMsg_cFv                                     */

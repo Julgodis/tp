@@ -22,7 +22,7 @@ struct JKRExpHeap {
 };
 
 struct JKRHeap {
-	/* 800065D8 */ void dump_sort();
+	/* 800065D8 */ bool dump_sort();
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 };
@@ -98,7 +98,7 @@ extern "C" static void LOAD_COPYDATE__FPv(); // 1
 extern "C" static void debug__Fv(); // 1
 extern "C" static void main01__Fv(); // 1
 extern "C" void main(); // 1
-extern "C" void dump_sort__7JKRHeapFv(); // 1
+extern "C" bool dump_sort__7JKRHeapFv(); // 1
 extern "C" void __sinit_m_Do_main_cpp(); // 1
 extern "C" extern char const* const m_Do_m_Do_main__stringBase0;
 extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
@@ -591,14 +591,9 @@ extern "C" asm void main() {
 
 
 /* 800065D8-800065E0 0008+00 s=0 e=2 z=0  None .text      dump_sort__7JKRHeapFv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRHeap::dump_sort() {
-	nofralloc
-#include "asm/m_Do/m_Do_main/dump_sort__7JKRHeapFv.s"
+bool JKRHeap::dump_sort() {
+	return true;
 }
-#pragma pop
 
 
 /* 800065E0-80006798 01B8+00 s=0 e=1 z=0  None .text      __sinit_m_Do_main_cpp                                        */

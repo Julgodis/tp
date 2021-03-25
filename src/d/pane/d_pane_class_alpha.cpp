@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct J2DScreen {
+struct J2DPane {
+	/* 802F7A8C */ void getFirstChildPane();
+	/* 802F7AC4 */ void getNextChildPane();
 };
 
 struct JKRExpHeap {
 };
 
-struct J2DPane {
-	/* 802F7A8C */ void getFirstChildPane();
-	/* 802F7AC4 */ void getNextChildPane();
+struct J2DScreen {
 };
 
 struct CPaneMgrAlpha {

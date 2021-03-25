@@ -24,7 +24,7 @@ struct JKRDvdFile {
 	/* 802D9850 */ void open(char const*);
 	/* 802D9938 */ void close();
 	/* 802D99B4 */ void readData(void*, s32, s32);
-	/* 802D9A68 */ void writeData(void const*, s32, s32);
+	/* 802D9A68 */ s32 writeData(void const*, s32, s32);
 	/* 802D9A70 */ void sync();
 	/* 802D9AC4 */ void doneProcess(s32, DVDFileInfo*);
 	/* 802D9AF8 */ void getFileSize() const;
@@ -72,7 +72,7 @@ extern "C" void open__10JKRDvdFileFPCc(); // 1
 extern "C" void open__10JKRDvdFileFl(); // 1
 extern "C" void close__10JKRDvdFileFv(); // 1
 extern "C" void readData__10JKRDvdFileFPvll(); // 1
-extern "C" void writeData__10JKRDvdFileFPCvll(); // 1
+extern "C" s32 writeData__10JKRDvdFileFPCvll(); // 1
 extern "C" void sync__10JKRDvdFileFv(); // 1
 extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo(); // 1
 extern "C" void getFileSize__10JKRDvdFileCFv(); // 1
@@ -254,14 +254,9 @@ asm void JKRDvdFile::readData(void* param_0, s32 param_1, s32 param_2) {
 
 
 /* 802D9A68-802D9A70 0008+00 s=1 e=0 z=0  None .text      writeData__10JKRDvdFileFPCvll                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void JKRDvdFile::writeData(void const* param_0, s32 param_1, s32 param_2) {
-	nofralloc
-#include "asm/JSystem/JKernel/JKRDvdFile/writeData__10JKRDvdFileFPCvll.s"
+s32 JKRDvdFile::writeData(void const* param_0, s32 param_1, s32 param_2) {
+	return -1;
 }
-#pragma pop
 
 
 /* 802D9A70-802D9AC4 0054+00 s=1 e=0 z=0  None .text      sync__10JKRDvdFileFv                                         */

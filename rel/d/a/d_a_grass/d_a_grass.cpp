@@ -32,20 +32,20 @@ struct daGrass_c {
 	/* 8051C304 */ void create();
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8051EB4C */ ~csXyz();
 };
 
-struct dCcMassS_HitInf {
-	/* 8051ED98 */ ~dCcMassS_HitInf();
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
 };
 
 struct cCcD_Obj {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8051EB4C */ ~csXyz();
+struct dCcMassS_HitInf {
+	/* 8051ED98 */ ~dCcMassS_HitInf();
 };
 
 struct dGrass_data_c {
@@ -199,7 +199,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ void entry(J3DDrawBuffer*);
+	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
 // 
@@ -573,7 +573,7 @@ extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -2839,14 +2839,9 @@ asm void daGrass_c::newFlowerData(s8 param_0, cXyz& param_1, int param_2, s8 par
 
 
 /* 8051C2AC-8051C2B0 0004+00 s=1 e=0 z=0  None .text      dGrass_Tex_Change__Fv                                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void dGrass_Tex_Change() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/dGrass_Tex_Change__Fv.s"
+static void dGrass_Tex_Change() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8051C2B0-8051C304 0054+00 s=1 e=0 z=0  None .text      daGrass_create__FP9daGrass_c                                 */

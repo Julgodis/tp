@@ -16,12 +16,6 @@ struct daE_YMB_HIO_c {
 	/* 80821460 */ ~daE_YMB_HIO_c();
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -30,6 +24,12 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 808164B4 */ ~cXyz();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
 };
 
 struct daE_YMB_c {
@@ -174,19 +174,19 @@ struct mDoExt_invisibleModel {
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
+struct Z2Creature {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -238,10 +238,10 @@ struct dEvt_control_c {
 	/* 8004368C */ void setPtT(void*);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -266,12 +266,12 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
+struct dBgW_Base {
+};
+
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 	/* 80267D0C */ void SetPos(Vec const*);
-};
-
-struct dBgW_Base {
 };
 
 struct cBgS {
@@ -390,7 +390,7 @@ static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daE_YMB_Draw(daE_YMB_c*); // 2
 static void search_drop(void*, void*); // 2
 static void daE_YMB_Execute(daE_YMB_c*); // 2
-static void daE_YMB_IsDelete(daE_YMB_c*); // 2
+static bool daE_YMB_IsDelete(daE_YMB_c*); // 2
 static void daE_YMB_Delete(daE_YMB_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daE_YMB_Create(daE_YMB_c*); // 2
@@ -460,7 +460,7 @@ extern "C" void setAttentionPos__9daE_YMB_cFv(); // 1
 extern "C" void cc_set__9daE_YMB_cFv(); // 1
 extern "C" void execute__9daE_YMB_cFv(); // 1
 extern "C" static void daE_YMB_Execute__FP9daE_YMB_c(); // 1
-extern "C" static void daE_YMB_IsDelete__FP9daE_YMB_c(); // 1
+extern "C" static bool daE_YMB_IsDelete__FP9daE_YMB_c(); // 1
 extern "C" void _delete__9daE_YMB_cFv(); // 1
 extern "C" static void daE_YMB_Delete__FP9daE_YMB_c(); // 1
 extern "C" void CreateHeap__9daE_YMB_cFv(); // 1
@@ -2444,14 +2444,9 @@ asm static void daE_YMB_Execute(daE_YMB_c* param_0) {
 
 
 /* 80820A38-80820A40 0008+00 s=1 e=0 z=0  None .text      daE_YMB_IsDelete__FP9daE_YMB_c                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daE_YMB_IsDelete(daE_YMB_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/e/d_a_e_ymb/d_a_e_ymb/daE_YMB_IsDelete__FP9daE_YMB_c.s"
+static bool daE_YMB_IsDelete(daE_YMB_c* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80820A40-80820AD0 0090+00 s=1 e=0 z=0  None .text      _delete__9daE_YMB_cFv                                        */

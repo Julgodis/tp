@@ -48,7 +48,7 @@ struct mDoMtx_stack_c {
 struct J3DModel {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
@@ -57,7 +57,7 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -71,10 +71,10 @@ struct mDoExt_McaMorf {
 struct _GXColor {
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -151,7 +151,7 @@ static void demo_camera(obj_sw_class*); // 2
 static void sc_action(obj_sw_class*); // 2
 static void sw_action(obj_sw_class*); // 2
 static void daObj_Sw_Execute(obj_sw_class*); // 2
-static void daObj_Sw_IsDelete(obj_sw_class*); // 2
+static bool daObj_Sw_IsDelete(obj_sw_class*); // 2
 static void daObj_Sw_Delete(obj_sw_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daObj_Sw_Create(fopAc_ac_c*); // 2
@@ -167,7 +167,7 @@ extern "C" static void demo_camera__FP12obj_sw_class(); // 1
 extern "C" static void sc_action__FP12obj_sw_class(); // 1
 extern "C" static void sw_action__FP12obj_sw_class(); // 1
 extern "C" static void daObj_Sw_Execute__FP12obj_sw_class(); // 1
-extern "C" static void daObj_Sw_IsDelete__FP12obj_sw_class(); // 1
+extern "C" static bool daObj_Sw_IsDelete__FP12obj_sw_class(); // 1
 extern "C" static void daObj_Sw_Delete__FP12obj_sw_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daObj_Sw_Create__FP10fopAc_ac_c(); // 1
@@ -676,14 +676,9 @@ asm static void daObj_Sw_Execute(obj_sw_class* param_0) {
 
 
 /* 80CF26F0-80CF26F8 0008+00 s=1 e=0 z=0  None .text      daObj_Sw_IsDelete__FP12obj_sw_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObj_Sw_IsDelete(obj_sw_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sw/d_a_obj_sw/daObj_Sw_IsDelete__FP12obj_sw_class.s"
+static bool daObj_Sw_IsDelete(obj_sw_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 80CF26F8-80CF2790 0098+00 s=1 e=0 z=0  None .text      daObj_Sw_Delete__FP12obj_sw_class                            */
@@ -758,14 +753,9 @@ asm static void daObj_Sw_Create(fopAc_ac_c* param_0) {
 
 
 /* 80CF2F38-80CF2F3C 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_sw/d_a_obj_sw/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80CF2F3C-80CF2FA8 006C+00 s=1 e=0 z=0  None .text      __dt__8obj_sc_sFv                                            */

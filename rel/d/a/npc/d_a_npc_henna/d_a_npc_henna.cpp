@@ -91,10 +91,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -110,10 +110,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -124,10 +124,10 @@ struct mDoExt_bckAnm {
 struct J3DModel {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorf {
@@ -237,7 +237,7 @@ static void message_guide(npc_henna_class*); // 2
 static void s_boat_sub(void*, void*); // 2
 static void env_control(npc_henna_class*); // 2
 static void daNpc_Henna_Execute(npc_henna_class*); // 2
-static void daNpc_Henna_IsDelete(npc_henna_class*); // 2
+static bool daNpc_Henna_IsDelete(npc_henna_class*); // 2
 static void daNpc_Henna_Delete(npc_henna_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNpc_Henna_Create(fopAc_ac_c*); // 2
@@ -293,7 +293,7 @@ extern "C" static void message_guide__FP15npc_henna_class(); // 1
 extern "C" static void s_boat_sub__FPvPv(); // 1
 extern "C" static void env_control__FP15npc_henna_class(); // 1
 extern "C" static void daNpc_Henna_Execute__FP15npc_henna_class(); // 1
-extern "C" static void daNpc_Henna_IsDelete__FP15npc_henna_class(); // 1
+extern "C" static bool daNpc_Henna_IsDelete__FP15npc_henna_class(); // 1
 extern "C" static void daNpc_Henna_Delete__FP15npc_henna_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -1918,14 +1918,9 @@ asm static void daNpc_Henna_Execute(npc_henna_class* param_0) {
 
 
 /* 805492A4-805492AC 0008+00 s=1 e=0 z=0  None .text      daNpc_Henna_IsDelete__FP15npc_henna_class                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNpc_Henna_IsDelete(npc_henna_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/daNpc_Henna_IsDelete__FP15npc_henna_class.s"
+static bool daNpc_Henna_IsDelete(npc_henna_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* 805492AC-80549300 0054+00 s=1 e=0 z=0  None .text      daNpc_Henna_Delete__FP15npc_henna_class                      */
@@ -2402,14 +2397,9 @@ asm static void dComIfGp_event_runCheck() {
 
 
 /* 8054A8A4-8054A8A8 0004+00 s=1 e=0 z=0  None .text      __ct__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::cXyz() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_henna/d_a_npc_henna/__ct__4cXyzFv.s"
+cXyz::cXyz() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 8054A8A8-8054A8C0 0018+00 s=1 e=0 z=0  None .text      dComIfGp_getCamera__Fi                                       */

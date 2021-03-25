@@ -51,14 +51,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -75,7 +75,7 @@ static void daNPC_LF_Draw(npc_lf_class*); // 2
 static void npc_lf_move(fopAc_ac_c*, lf_s*); // 2
 static void action(fopAc_ac_c*, lf_s*); // 2
 static void daNPC_LF_Execute(npc_lf_class*); // 2
-static void daNPC_LF_IsDelete(npc_lf_class*); // 2
+static bool daNPC_LF_IsDelete(npc_lf_class*); // 2
 static void daNPC_LF_Delete(npc_lf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void daNPC_LF_Create(fopAc_ac_c*); // 2
@@ -86,7 +86,7 @@ extern "C" static void daNPC_LF_Draw__FP12npc_lf_class(); // 1
 extern "C" static void npc_lf_move__FP10fopAc_ac_cP4lf_s(); // 1
 extern "C" static void action__FP10fopAc_ac_cP4lf_s(); // 1
 extern "C" static void daNPC_LF_Execute__FP12npc_lf_class(); // 1
-extern "C" static void daNPC_LF_IsDelete__FP12npc_lf_class(); // 1
+extern "C" static bool daNPC_LF_IsDelete__FP12npc_lf_class(); // 1
 extern "C" static void daNPC_LF_Delete__FP12npc_lf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void daNPC_LF_Create__FP10fopAc_ac_c(); // 1
@@ -413,14 +413,9 @@ asm static void daNPC_LF_Execute(npc_lf_class* param_0) {
 
 
 /* 80A6A514-80A6A51C 0008+00 s=1 e=0 z=0  None .text      daNPC_LF_IsDelete__FP12npc_lf_class                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daNPC_LF_IsDelete(npc_lf_class* param_0) {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_lf/d_a_npc_lf/daNPC_LF_IsDelete__FP12npc_lf_class.s"
+static bool daNPC_LF_IsDelete(npc_lf_class* param_0) {
+	return true;
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -488,14 +483,9 @@ asm lf_s::~lf_s() {
 
 
 /* 80A6A8E0-80A6A8E4 0004+00 s=1 e=0 z=0  None .text      __ct__4lf_sFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm lf_s::lf_s() {
-	nofralloc
-#include "asm/rel/d/a/npc/d_a_npc_lf/d_a_npc_lf/__ct__4lf_sFv.s"
+lf_s::lf_s() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 80A6A8E4-80A6A92C 0048+00 s=2 e=0 z=0  None .text      __dt__14daNPC_LF_HIO_cFv                                     */

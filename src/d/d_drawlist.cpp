@@ -86,7 +86,7 @@ struct J2DScreen {
 struct J2DPane {
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
-	/* 80053C3C */ void getTypeID() const;
+	/* 80053C3C */ s32 getTypeID() const;
 	/* 802F8004 */ void clearAnmTransform();
 };
 
@@ -122,10 +122,10 @@ struct dDlst_effectLine_c {
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
 struct dDlst_shadowPoly_c {
@@ -133,10 +133,10 @@ struct dDlst_shadowPoly_c {
 	/* 800543B4 */ void draw();
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct dDlst_shadowReal_c {
@@ -186,9 +186,6 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-struct dDlst_base_c {
-};
-
 struct J3DPacket {
 };
 
@@ -199,6 +196,9 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
+};
+
+struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -230,7 +230,7 @@ struct dDlst_shadowTri_c {
 
 struct dDlst_shadowRealPoly_c {
 	/* 800569A0 */ void getTri();
-	/* 800569A8 */ void getTriMax();
+	/* 800569A8 */ s32 getTriMax();
 };
 
 struct mDoMtx_stack_c {
@@ -293,7 +293,7 @@ extern "C" void draw__11dDlst_blo_cFv(); // 1
 extern "C" void clearAnmTransform__9J2DScreenFv(); // 1
 extern "C" void calcMtx__7J2DPaneFv(); // 1
 extern "C" void makeMatrix__7J2DPaneFff(); // 1
-extern "C" void getTypeID__7J2DPaneCFv(); // 1
+extern "C" s32 getTypeID__7J2DPaneCFv(); // 1
 extern "C" void setWhite__10J2DPictureFQ28JUtility6TColor(); // 1
 extern "C" void setBlack__10J2DPictureFQ28JUtility6TColor(); // 1
 extern "C" void __dt__10J2DAnmBaseFv(); // 1
@@ -350,7 +350,7 @@ extern "C" void wipeIn__12dDlst_list_cFfR8_GXColor(); // 1
 extern "C" void wipeIn__12dDlst_list_cFf(); // 1
 extern "C" void calcWipe__12dDlst_list_cFv(); // 1
 extern "C" void getTri__22dDlst_shadowRealPoly_cFv(); // 1
-extern "C" void getTriMax__22dDlst_shadowRealPoly_cFv(); // 1
+extern "C" s32 getTriMax__22dDlst_shadowRealPoly_cFv(); // 1
 extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
 extern "C" void __sinit_d_drawlist_cpp(); // 1
 extern "C" extern char const* const d_d_drawlist__stringBase0;
@@ -1085,14 +1085,9 @@ asm void J2DPane::makeMatrix(f32 param_0, f32 param_1) {
 
 
 /* 80053C3C-80053C44 0008+00 s=0 e=1 z=0  None .text      getTypeID__7J2DPaneCFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DPane::getTypeID() const {
-	nofralloc
-#include "asm/d/d_drawlist/getTypeID__7J2DPaneCFv.s"
+s32 J2DPane::getTypeID() const {
+	return 16;
 }
-#pragma pop
 
 
 /* 80053C44-80053C6C 0028+00 s=0 e=1 z=0  None .text      setWhite__10J2DPictureFQ28JUtility6TColor                    */
@@ -1683,14 +1678,9 @@ asm dDlst_shadowTri_c::dDlst_shadowTri_c() {
 
 
 /* 8005638C-80056390 0004+00 s=1 e=0 z=0  None .text      __ct__20dDlst_shadowSimple_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dDlst_shadowSimple_c::dDlst_shadowSimple_c() {
-	nofralloc
-#include "asm/d/d_drawlist/__ct__20dDlst_shadowSimple_cFv.s"
+dDlst_shadowSimple_c::dDlst_shadowSimple_c() {
+	/* empty function */
 }
-#pragma pop
 
 
 /* ############################################################################################## */
@@ -1916,25 +1906,15 @@ asm void dDlst_shadowRealPoly_c::getTri() {
 
 
 /* 800569A8-800569B0 0008+00 s=1 e=0 z=0  None .text      getTriMax__22dDlst_shadowRealPoly_cFv                        */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void dDlst_shadowRealPoly_c::getTriMax() {
-	nofralloc
-#include "asm/d/d_drawlist/getTriMax__22dDlst_shadowRealPoly_cFv.s"
+s32 dDlst_shadowRealPoly_c::getTriMax() {
+	return 256;
 }
-#pragma pop
 
 
 /* 800569B0-800569B4 0004+00 s=1 e=7 z=0  None .text      searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen             */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void J2DAnmBase::searchUpdateMaterialID(J2DScreen* param_0) {
-	nofralloc
-#include "asm/d/d_drawlist/searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen.s"
+void J2DAnmBase::searchUpdateMaterialID(J2DScreen* param_0) {
+	/* empty function */
 }
-#pragma pop
 
 
 /* 800569B4-800569DC 0028+00 s=0 e=1 z=0  None .text      __sinit_d_drawlist_cpp                                       */
