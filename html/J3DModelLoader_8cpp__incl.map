@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J3DGraphLoader/J3DModelLoader.cpp" name="libs/JSystem/J3DGraphLoader/J3DModelLoader.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="6804,5,7003,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5833,5,6032,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="133,213,241,240"/>
 <area shape="rect" id="node4" href="$J3DModelLoader_8h.html" title=" " alt="" coords="163,109,337,151"/>
@@ -28,25 +28,19 @@
 <area shape="rect" id="node27" title=" " alt="" coords="7033,102,7272,158"/>
 <area shape="rect" id="node28" title=" " alt="" coords="7296,102,7535,158"/>
 <area shape="rect" id="node29" title=" " alt="" coords="7559,102,7797,158"/>
-<area shape="rect" id="node30" title=" " alt="" coords="7822,95,8107,165"/>
-<area shape="rect" id="node31" title=" " alt="" coords="8132,102,8445,158"/>
-<area shape="rect" id="node32" title=" " alt="" coords="8469,102,8839,158"/>
-<area shape="rect" id="node33" title=" " alt="" coords="8863,102,9176,158"/>
-<area shape="rect" id="node34" title=" " alt="" coords="9200,102,9513,158"/>
-<area shape="rect" id="node35" title=" " alt="" coords="9537,95,9827,165"/>
-<area shape="rect" id="node36" title=" " alt="" coords="9851,109,10079,151"/>
-<area shape="rect" id="node37" title=" " alt="" coords="10103,109,10330,151"/>
-<area shape="rect" id="node38" title=" " alt="" coords="10355,109,10583,151"/>
-<area shape="rect" id="node39" title=" " alt="" coords="10607,109,10834,151"/>
-<area shape="rect" id="node40" title=" " alt="" coords="10858,109,11085,151"/>
-<area shape="rect" id="node41" title=" " alt="" coords="11109,109,11335,151"/>
-<area shape="rect" id="node42" title=" " alt="" coords="11359,109,11634,151"/>
-<area shape="rect" id="node43" title=" " alt="" coords="11658,109,11930,151"/>
-<area shape="rect" id="node44" title=" " alt="" coords="11954,109,12183,151"/>
-<area shape="rect" id="node45" title=" " alt="" coords="12207,109,12434,151"/>
-<area shape="rect" id="node46" title=" " alt="" coords="12459,109,12687,151"/>
-<area shape="rect" id="node47" title=" " alt="" coords="12711,109,12938,151"/>
-<area shape="rect" id="node48" title=" " alt="" coords="12963,109,13191,151"/>
-<area shape="rect" id="node49" title=" " alt="" coords="13215,109,13442,151"/>
-<area shape="rect" id="node50" title=" " alt="" coords="13467,109,13695,151"/>
+<area shape="rect" id="node30" title=" " alt="" coords="7821,109,8049,151"/>
+<area shape="rect" id="node31" title=" " alt="" coords="8074,109,8301,151"/>
+<area shape="rect" id="node32" title=" " alt="" coords="8325,109,8553,151"/>
+<area shape="rect" id="node33" title=" " alt="" coords="8578,109,8805,151"/>
+<area shape="rect" id="node34" title=" " alt="" coords="8829,109,9055,151"/>
+<area shape="rect" id="node35" title=" " alt="" coords="9079,109,9306,151"/>
+<area shape="rect" id="node36" title=" " alt="" coords="9330,109,9605,151"/>
+<area shape="rect" id="node37" title=" " alt="" coords="9629,109,9901,151"/>
+<area shape="rect" id="node38" title=" " alt="" coords="9925,109,10154,151"/>
+<area shape="rect" id="node39" title=" " alt="" coords="10178,109,10405,151"/>
+<area shape="rect" id="node40" title=" " alt="" coords="10429,109,10657,151"/>
+<area shape="rect" id="node41" title=" " alt="" coords="10682,109,10909,151"/>
+<area shape="rect" id="node42" title=" " alt="" coords="10933,109,11161,151"/>
+<area shape="rect" id="node43" title=" " alt="" coords="11186,109,11413,151"/>
+<area shape="rect" id="node44" title=" " alt="" coords="11437,109,11665,151"/>
 </map>

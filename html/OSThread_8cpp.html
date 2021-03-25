@@ -83,7 +83,6 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="OSThread_8h_source.html">dolphin/os/OSThread.h</a>&quot;</code><br />
-<code>#include &quot;asm/dolphin/os/OSThread/DefaultSwitchThreadCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/OSSetSwitchThreadCallback.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/__OSThreadInit.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/os/OSThread/OSInitThreadQueue.s&quot;</code><br />
@@ -122,8 +121,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a07b72adf579a604ffd12d29d0912de60"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a07b72adf579a604ffd12d29d0912de60">DefaultSwitchThreadCallback</a> ()</td></tr>
-<tr class="separator:a07b72adf579a604ffd12d29d0912de60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a866c7143e6073bfcaf572dbf1d2b9f97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a866c7143e6073bfcaf572dbf1d2b9f97">DefaultSwitchThreadCallback</a> ()</td></tr>
+<tr class="separator:a866c7143e6073bfcaf572dbf1d2b9f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2936dd46a06a6af195016544901156b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#aa2936dd46a06a6af195016544901156b">OSSetSwitchThreadCallback</a> ()</td></tr>
 <tr class="separator:aa2936dd46a06a6af195016544901156b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2190507a060e0debba7d5639a1a39f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af2190507a060e0debba7d5639a1a39f0">__OSThreadInit</a> ()</td></tr>
@@ -271,7 +270,7 @@ Variables</h2></td></tr>
 <tr class="separator:a01dd0c20e4599e93a4c3ac8e7e8984e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f43d21cbf11269deabbaed0e6fcad4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a9f43d21cbf11269deabbaed0e6fcad4a">__OSFpscrEnableBits</a></td></tr>
 <tr class="separator:a9f43d21cbf11269deabbaed0e6fcad4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6923b4ad760e11d44ddc82f96fd553d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af6923b4ad760e11d44ddc82f96fd553d">SwitchThreadCallback</a> = (void*)<a class="el" href="OSThread_8cpp.html#a07b72adf579a604ffd12d29d0912de60">DefaultSwitchThreadCallback</a></td></tr>
+<tr class="memitem:af6923b4ad760e11d44ddc82f96fd553d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#af6923b4ad760e11d44ddc82f96fd553d">SwitchThreadCallback</a> = (void*)<a class="el" href="OSThread_8cpp.html#a866c7143e6073bfcaf572dbf1d2b9f97">DefaultSwitchThreadCallback</a></td></tr>
 <tr class="separator:af6923b4ad760e11d44ddc82f96fd553d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e513d686e0e813e7692b883c4f04f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OSThread_8cpp.html#a61e513d686e0e813e7692b883c4f04f5">RunQueue</a> [256]</td></tr>
 <tr class="separator:a61e513d686e0e813e7692b883c4f04f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -431,8 +430,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a07b72adf579a604ffd12d29d0912de60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07b72adf579a604ffd12d29d0912de60">&#9670;&nbsp;</a></span>DefaultSwitchThreadCallback()</h2>
+<a id="a866c7143e6073bfcaf572dbf1d2b9f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866c7143e6073bfcaf572dbf1d2b9f97">&#9670;&nbsp;</a></span>DefaultSwitchThreadCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +440,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm void DefaultSwitchThreadCallback </td>
+          <td class="memname">static void DefaultSwitchThreadCallback </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1884,7 +1883,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* SwitchThreadCallback = (void*)<a class="el" href="OSThread_8cpp.html#a07b72adf579a604ffd12d29d0912de60">DefaultSwitchThreadCallback</a></td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* SwitchThreadCallback = (void*)<a class="el" href="OSThread_8cpp.html#a866c7143e6073bfcaf572dbf1d2b9f97">DefaultSwitchThreadCallback</a></td>
         </tr>
       </table>
   </td>

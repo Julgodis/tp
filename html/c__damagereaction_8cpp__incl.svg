@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1708;
+var viewWidth = 993;
 var viewHeight = 162;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,13 +54,13 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>src/c/c_damagereaction.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-158 1704,-158 1704,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-158 989,-158 989,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="657,-134.5 657,-153.5 796,-153.5 796,-134.5 657,-134.5"/>
-<text text-anchor="middle" x="726.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/c/c_damagereaction.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="297,-134.5 297,-153.5 436,-153.5 436,-134.5 297,-134.5"/>
+<text text-anchor="middle" x="366.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/c/c_damagereaction.cpp</text>
 </a>
 </g>
 </g>
@@ -76,8 +76,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M656.79,-141.24C512.17,-137.1 184,-124.97 75.5,-98 68.86,-96.35 61.97,-93.77 55.64,-91.02"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="56.8,-87.7 46.26,-86.63 53.84,-94.04 56.8,-87.7"/>
+<path fill="none" stroke="midnightblue" d="M296.88,-137.45C237.21,-131.47 149.44,-119.73 75.5,-98 69.15,-96.13 62.52,-93.57 56.37,-90.89"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="57.74,-87.67 47.19,-86.69 54.83,-94.04 57.74,-87.67"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -91,8 +91,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M656.84,-143.14C503.06,-142.72 145.2,-137.46 108.5,-98 90.67,-78.83 106.04,-47.48 118.78,-28.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="121.82,-29.87 124.67,-19.66 116.08,-25.86 121.82,-29.87"/>
+<path fill="none" stroke="midnightblue" d="M296.96,-140.64C228.92,-136.69 132.16,-126.15 108.5,-98 91.74,-78.06 106.56,-47.2 118.94,-28.09"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="121.89,-29.98 124.67,-19.75 116.12,-26.01 121.89,-29.98"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -106,8 +106,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M656.76,-141.09C561.47,-137.45 385.61,-127.09 238.5,-98 227.99,-95.92 216.76,-92.8 206.65,-89.64"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="207.56,-86.26 196.97,-86.51 205.4,-92.92 207.56,-86.26"/>
+<path fill="none" stroke="midnightblue" d="M340.87,-134.37C306.89,-122.92 246.78,-102.68 208.6,-89.82"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="209.52,-86.44 198.93,-86.56 207.29,-93.07 209.52,-86.44"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -123,108 +123,57 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M679.07,-134.44C629.85,-125.55 550.97,-111.31 484.76,-99.35"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="485.13,-95.86 474.67,-97.53 483.89,-102.75 485.13,-95.86"/>
+<path fill="none" stroke="midnightblue" d="M366.5,-134.23C366.5,-127.36 366.5,-117.38 366.5,-107.73"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="370,-107.54 366.5,-97.54 363,-107.54 370,-107.54"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="504,-56.5 504,-97.5 743,-97.5 743,-56.5 504,-56.5"/>
-<text text-anchor="start" x="512" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="start" x="512" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/draw__24JPTraceParticleCall</text>
-<text text-anchor="middle" x="623.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Back4FP14JPABaseEmitterP15JPABaseParticle.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="504,-62 504,-92 641,-92 641,-62 504,-62"/>
+<text text-anchor="start" x="512" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
+<text text-anchor="middle" x="572.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/cDmrNowMidnaTalk__Fv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M712.61,-134.23C699.98,-126.27 680.73,-114.11 663.34,-103.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="664.79,-99.92 654.47,-97.54 661.06,-105.84 664.79,-99.92"/>
+<path fill="none" stroke="midnightblue" d="M393.86,-134.37C425.5,-124.38 478.38,-107.7 518.42,-95.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="519.56,-98.38 528.04,-92.03 517.45,-91.7 519.56,-98.38"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="761,-62 761,-92 898,-92 898,-62 761,-62"/>
-<text text-anchor="start" x="769" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="middle" x="829.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/cDmrNowMidnaTalk__Fv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="659.5,-56.5 659.5,-97.5 805.5,-97.5 805.5,-56.5 659.5,-56.5"/>
+<text text-anchor="start" x="667.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
+<text text-anchor="start" x="667.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/__dt__24JPTraceParticleCall</text>
+<text text-anchor="middle" x="732.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Back4Fv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M740.39,-134.23C755.25,-124.86 779.29,-109.69 798.65,-97.47"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="800.59,-100.39 807.17,-92.09 796.85,-94.47 800.59,-100.39"/>
+<path fill="none" stroke="midnightblue" d="M429.93,-134.47C485.41,-126.66 568.34,-114.16 649.38,-98.15"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="650.13,-101.57 659.25,-96.18 648.76,-94.71 650.13,-101.57"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="916.5,-56.5 916.5,-97.5 1062.5,-97.5 1062.5,-56.5 916.5,-56.5"/>
-<text text-anchor="start" x="924.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="start" x="924.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/__dt__24JPTraceParticleCall</text>
-<text text-anchor="middle" x="989.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Back4Fv.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="824,-62 824,-92 985,-92 985,-62 824,-62"/>
+<text text-anchor="start" x="832" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
+<text text-anchor="middle" x="904.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/__sinit_c_damagereaction_cpp.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M761.15,-134.44C797.95,-125.34 857.46,-110.63 906.5,-98.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="907.61,-101.85 916.47,-96.05 905.93,-95.05 907.61,-101.85"/>
-</g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1081,-62 1081,-92 1242,-92 1242,-62 1081,-62"/>
-<text text-anchor="start" x="1089" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="middle" x="1161.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">/__sinit_c_damagereaction_cpp.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node9 -->
-<g id="edge9" class="edge">
-<title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M796.16,-135.76C866.04,-128.06 976.61,-114.7 1071.5,-98 1078.07,-96.84 1084.88,-95.54 1091.68,-94.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1092.54,-97.55 1101.62,-92.09 1091.11,-90.7 1092.54,-97.55"/>
-</g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1260,-56.5 1260,-97.5 1471,-97.5 1471,-56.5 1260,-56.5"/>
-<text text-anchor="start" x="1268" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="start" x="1268" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/execute__19JPAParticleCallBack</text>
-<text text-anchor="middle" x="1365.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">FP14JPABaseEmitterP15JPABaseParticle.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge10" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M796.35,-138.98C895.18,-132.85 1081.66,-119.69 1249.93,-98.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1250.5,-101.61 1259.96,-96.85 1249.6,-94.66 1250.5,-101.61"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1489,-56.5 1489,-97.5 1700,-97.5 1700,-56.5 1489,-56.5"/>
-<text text-anchor="start" x="1497" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/c/c_damagereaction</text>
-<text text-anchor="start" x="1497" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/draw__19JPAParticleCallBack</text>
-<text text-anchor="middle" x="1594.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">FP14JPABaseEmitterP15JPABaseParticle.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node11 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M796.12,-141.5C927.64,-138.08 1221.73,-127.68 1478.7,-98.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1479.45,-101.58 1488.98,-96.95 1478.64,-94.63 1479.45,-101.58"/>
+<path fill="none" stroke="midnightblue" d="M436.29,-138.56C524.7,-132.36 681.56,-119.37 814.5,-98 821.56,-96.86 828.9,-95.52 836.21,-94.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="837.02,-97.47 846.11,-92.03 835.61,-90.61 837.02,-97.47"/>
 </g>
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge4" class="edge">

@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J3DGraphLoader/J3DAnmLoader.cpp" name="libs/JSystem/J3DGraphLoader/J3DAnmLoader.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="5457,5,5656,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5316,5,5515,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="133,213,241,240"/>
 <area shape="rect" id="node4" href="$J3DAnmLoader_8h.html" title=" " alt="" coords="163,109,337,151"/>
@@ -38,8 +38,7 @@
 <area shape="rect" id="node37" title=" " alt="" coords="9814,95,10113,165"/>
 <area shape="rect" id="node38" title=" " alt="" coords="10137,109,10355,151"/>
 <area shape="rect" id="node39" title=" " alt="" coords="10380,102,10651,158"/>
-<area shape="rect" id="node40" title=" " alt="" coords="10675,102,10918,158"/>
-<area shape="rect" id="node41" title=" " alt="" coords="10942,109,11230,151"/>
-<area shape="rect" id="node42" title=" " alt="" coords="11254,109,11473,151"/>
-<area shape="rect" id="node43" title=" " alt="" coords="11497,109,11715,151"/>
+<area shape="rect" id="node40" title=" " alt="" coords="10675,109,10963,151"/>
+<area shape="rect" id="node41" title=" " alt="" coords="10987,109,11206,151"/>
+<area shape="rect" id="node42" title=" " alt="" coords="11230,109,11449,151"/>
 </map>

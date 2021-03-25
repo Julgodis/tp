@@ -90,9 +90,6 @@ $(function() {
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/create__8dBgWKColFPvPv.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/ChkNotReady__8dBgWKColCFv.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/ChkLock__8dBgWKColCFv.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/ChkMoveBg__8dBgWKColCFv.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/ChkMoveFlag__8dBgWKColCFv.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetTriPla__8dBgWKColCFi.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz.s&quot;</code><br />
@@ -100,7 +97,6 @@ $(function() {
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetTriPnt__8dBgWKColCFPC12KC_PrismDataP3VecP3VecP3Vec.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetBnd__8dBgWKColCFv.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/OffMoveFlag__8dBgWKColFv.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/getPolyCode__8dBgWKColCFiP5dBgPc.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/chkPolyThrough__8dBgWKColCFP5dBgPcP16cBgS_PolyPassChkP15cBgS_GrpPassChkR4cXyz.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/LineCheck__8dBgWKColFP11cBgS_LinChk.s&quot;</code><br />
@@ -145,45 +141,42 @@ $(function() {
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo.s&quot;</code><br />
 <code>#include &quot;asm/d/bg/d_bg_w_kcol/GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s&quot;</code><br />
-<code>#include &quot;asm/d/bg/d_bg_w_kcol/MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcXyz.html">cXyz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__LinChk.html">cBgS_LinChk</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__CaptPoly.html">dBgS_CaptPoly</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__PolyInfo.html">cBgS_PolyInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__Acch.html">dBgS_Acch</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__GrpPassChk.html">cBgS_GrpPassChk</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structKC__PrismData.html">KC_PrismData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__RoofChk.html">dBgS_RoofChk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__SplGrpChk.html">dBgS_SplGrpChk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__ShdwDraw.html">cBgS_ShdwDraw</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__GndChk.html">cBgS_GndChk</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcXyz.html">cXyz</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__RoofChk.html">dBgS_RoofChk</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsBgPc.html">sBgPc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgPc.html">dBgPc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structKC__PrismData.html">KC_PrismData</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVec.html">Vec</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__PolyInfo.html">cBgS_PolyInfo</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__GndChk.html">cBgS_GndChk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__LinChk.html">cBgS_LinChk</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__GrpPassChk.html">cBgS_GrpPassChk</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__SphChk.html">dBgS_SphChk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgS__PolyPassChk.html">cBgS_PolyPassChk</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcsXyz.html">csXyz</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__SphChk.html">dBgS_SphChk</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgS__Acch.html">dBgS_Acch</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdBgWKCol.html">dBgWKCol</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,12 +213,12 @@ Functions</h2></td></tr>
 <tr class="separator:af3fb6da29c5a9e0c2db3cbcd883f85c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed87167db4de71c7cd57529dad3d03f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#afed87167db4de71c7cd57529dad3d03f">ChkNotReady__8dBgWKColCFv</a> ()</td></tr>
 <tr class="separator:afed87167db4de71c7cd57529dad3d03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2daaed335f88707b389917bd54b1188"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#af2daaed335f88707b389917bd54b1188">ChkLock__8dBgWKColCFv</a> ()</td></tr>
-<tr class="separator:af2daaed335f88707b389917bd54b1188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b0f18e64d6fcfde99226c0f7f48c81c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a8b0f18e64d6fcfde99226c0f7f48c81c">ChkMoveBg__8dBgWKColCFv</a> ()</td></tr>
-<tr class="separator:a8b0f18e64d6fcfde99226c0f7f48c81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127159c2fa316cd5f06616a6c1d5587c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a127159c2fa316cd5f06616a6c1d5587c">ChkMoveFlag__8dBgWKColCFv</a> ()</td></tr>
-<tr class="separator:a127159c2fa316cd5f06616a6c1d5587c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06bb6067ee925a79f1b51f45faa3ad54"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a06bb6067ee925a79f1b51f45faa3ad54">ChkLock__8dBgWKColCFv</a> ()</td></tr>
+<tr class="separator:a06bb6067ee925a79f1b51f45faa3ad54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada65a824e9451334ceced22ed70ead0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#ada65a824e9451334ceced22ed70ead0a">ChkMoveBg__8dBgWKColCFv</a> ()</td></tr>
+<tr class="separator:ada65a824e9451334ceced22ed70ead0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb678afc522a1bd46694917c28ae9e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#abcb678afc522a1bd46694917c28ae9e2">ChkMoveFlag__8dBgWKColCFv</a> ()</td></tr>
+<tr class="separator:abcb678afc522a1bd46694917c28ae9e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a803f10aa3552b319446a6e67443dc97e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a803f10aa3552b319446a6e67443dc97e">GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo</a> ()</td></tr>
 <tr class="separator:a803f10aa3552b319446a6e67443dc97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11254b469c3003ac281beb9486ca8dcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a11254b469c3003ac281beb9486ca8dcd">GetTriPla__8dBgWKColCFi</a> ()</td></tr>
@@ -384,8 +377,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac3a25231df9935ccb8a52a16de904879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23162545972cfa094892d846a708cf11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a23162545972cfa094892d846a708cf11">ClrDBgWBase__9dBgW_BaseFv</a> ()</td></tr>
 <tr class="separator:a23162545972cfa094892d846a708cf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32a1417317db484ddfc5d0155efeb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#aa32a1417317db484ddfc5d0155efeb71">ChkMemoryError__9dBgW_BaseFv</a> ()</td></tr>
-<tr class="separator:aa32a1417317db484ddfc5d0155efeb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d3df96cc7ec6e592d93af4cdbc5acf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a28d3df96cc7ec6e592d93af4cdbc5acf">ChkMemoryError__9dBgW_BaseFv</a> ()</td></tr>
+<tr class="separator:a28d3df96cc7ec6e592d93af4cdbc5acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5022dfa81bc158319126be15efd1bc17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a5022dfa81bc158319126be15efd1bc17">CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c</a> ()</td></tr>
 <tr class="separator:a5022dfa81bc158319126be15efd1bc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76bdb2a910a43b155485526225e47116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__bg__w__kcol_8cpp.html#a76bdb2a910a43b155485526225e47116">CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz</a> ()</td></tr>
@@ -978,14 +971,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af2daaed335f88707b389917bd54b1188"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2daaed335f88707b389917bd54b1188">&#9670;&nbsp;</a></span>ChkLock__8dBgWKColCFv()</h2>
+<a id="a06bb6067ee925a79f1b51f45faa3ad54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06bb6067ee925a79f1b51f45faa3ad54">&#9670;&nbsp;</a></span>ChkLock__8dBgWKColCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ChkLock__8dBgWKColCFv </td>
+          <td class="memname">bool ChkLock__8dBgWKColCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -995,14 +988,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa32a1417317db484ddfc5d0155efeb71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa32a1417317db484ddfc5d0155efeb71">&#9670;&nbsp;</a></span>ChkMemoryError__9dBgW_BaseFv()</h2>
+<a id="a28d3df96cc7ec6e592d93af4cdbc5acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d3df96cc7ec6e592d93af4cdbc5acf">&#9670;&nbsp;</a></span>ChkMemoryError__9dBgW_BaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ChkMemoryError__9dBgW_BaseFv </td>
+          <td class="memname">bool ChkMemoryError__9dBgW_BaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1012,14 +1005,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b0f18e64d6fcfde99226c0f7f48c81c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b0f18e64d6fcfde99226c0f7f48c81c">&#9670;&nbsp;</a></span>ChkMoveBg__8dBgWKColCFv()</h2>
+<a id="ada65a824e9451334ceced22ed70ead0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada65a824e9451334ceced22ed70ead0a">&#9670;&nbsp;</a></span>ChkMoveBg__8dBgWKColCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ChkMoveBg__8dBgWKColCFv </td>
+          <td class="memname">bool ChkMoveBg__8dBgWKColCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1029,14 +1022,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a127159c2fa316cd5f06616a6c1d5587c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127159c2fa316cd5f06616a6c1d5587c">&#9670;&nbsp;</a></span>ChkMoveFlag__8dBgWKColCFv()</h2>
+<a id="abcb678afc522a1bd46694917c28ae9e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb678afc522a1bd46694917c28ae9e2">&#9670;&nbsp;</a></span>ChkMoveFlag__8dBgWKColCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ChkMoveFlag__8dBgWKColCFv </td>
+          <td class="memname">bool ChkMoveFlag__8dBgWKColCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

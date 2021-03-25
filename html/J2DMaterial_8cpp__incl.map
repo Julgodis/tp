@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J2DGraph/J2DMaterial.cpp" name="libs/JSystem/J2DGraph/J2DMaterial.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4400,5,4559,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3044,5,3203,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="144,213,252,240"/>
 <area shape="rect" id="node4" href="$J2DMaterial_8h.html" title=" " alt="" coords="162,117,381,143"/>
@@ -18,25 +18,13 @@
 <area shape="rect" id="node17" title=" " alt="" coords="3475,102,3681,158"/>
 <area shape="rect" id="node18" title=" " alt="" coords="3705,102,3899,158"/>
 <area shape="rect" id="node19" title=" " alt="" coords="3923,102,4121,158"/>
-<area shape="rect" id="node20" title=" " alt="" coords="4145,102,4350,158"/>
-<area shape="rect" id="node21" title=" " alt="" coords="4375,102,4584,158"/>
-<area shape="rect" id="node22" title=" " alt="" coords="4608,102,4876,158"/>
-<area shape="rect" id="node23" title=" " alt="" coords="4900,102,5168,158"/>
-<area shape="rect" id="node24" title=" " alt="" coords="5193,102,5369,158"/>
-<area shape="rect" id="node25" title=" " alt="" coords="5393,102,5598,158"/>
-<area shape="rect" id="node26" title=" " alt="" coords="5623,102,5795,158"/>
-<area shape="rect" id="node27" title=" " alt="" coords="5819,102,6012,158"/>
-<area shape="rect" id="node28" title=" " alt="" coords="6036,102,6200,158"/>
-<area shape="rect" id="node29" title=" " alt="" coords="6224,102,6415,158"/>
-<area shape="rect" id="node30" title=" " alt="" coords="6439,102,6701,158"/>
-<area shape="rect" id="node31" title=" " alt="" coords="6725,102,6977,158"/>
-<area shape="rect" id="node32" title=" " alt="" coords="7001,95,7256,165"/>
-<area shape="rect" id="node33" title=" " alt="" coords="7280,102,7476,158"/>
-<area shape="rect" id="node34" title=" " alt="" coords="7501,102,7706,158"/>
-<area shape="rect" id="node35" title=" " alt="" coords="7731,102,7924,158"/>
-<area shape="rect" id="node36" title=" " alt="" coords="7948,102,8141,158"/>
-<area shape="rect" id="node37" title=" " alt="" coords="8165,102,8359,158"/>
-<area shape="rect" id="node38" title=" " alt="" coords="8383,102,8576,158"/>
-<area shape="rect" id="node39" title=" " alt="" coords="8600,102,8793,158"/>
-<area shape="rect" id="node40" title=" " alt="" coords="8817,95,8997,165"/>
+<area shape="rect" id="node20" title=" " alt="" coords="4145,102,4317,158"/>
+<area shape="rect" id="node21" title=" " alt="" coords="4341,102,4535,158"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4559,102,4755,158"/>
+<area shape="rect" id="node23" title=" " alt="" coords="4779,102,4985,158"/>
+<area shape="rect" id="node24" title=" " alt="" coords="5009,102,5203,158"/>
+<area shape="rect" id="node25" title=" " alt="" coords="5227,102,5420,158"/>
+<area shape="rect" id="node26" title=" " alt="" coords="5444,102,5637,158"/>
+<area shape="rect" id="node27" title=" " alt="" coords="5661,102,5855,158"/>
+<area shape="rect" id="node28" title=" " alt="" coords="5879,102,6072,158"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="libs/JSystem/JKernel/JKRSolidHeap.cpp" name="libs/JSystem/JKernel/JKRSolidHeap.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2339,5,2484,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2240,5,2385,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="133,213,241,240"/>
 <area shape="rect" id="node4" href="$JKRSolidHeap_8h.html" title=" " alt="" coords="162,109,341,151"/>
@@ -14,15 +14,14 @@
 <area shape="rect" id="node13" title=" " alt="" coords="2131,102,2300,158"/>
 <area shape="rect" id="node14" title=" " alt="" coords="2325,102,2498,158"/>
 <area shape="rect" id="node15" title=" " alt="" coords="2522,102,2701,158"/>
-<area shape="rect" id="node16" title=" " alt="" coords="2725,102,2927,158"/>
-<area shape="rect" id="node17" title=" " alt="" coords="2951,102,3133,158"/>
-<area shape="rect" id="node18" title=" " alt="" coords="3158,102,3337,158"/>
-<area shape="rect" id="node19" title=" " alt="" coords="3361,102,3521,158"/>
-<area shape="rect" id="node20" title=" " alt="" coords="3545,102,3699,158"/>
-<area shape="rect" id="node21" title=" " alt="" coords="3723,95,3958,165"/>
-<area shape="rect" id="node22" title=" " alt="" coords="3983,95,4261,165"/>
-<area shape="rect" id="node23" title=" " alt="" coords="4286,102,4478,158"/>
-<area shape="rect" id="node24" title=" " alt="" coords="4502,102,4707,158"/>
-<area shape="rect" id="node25" title=" " alt="" coords="4732,102,4936,158"/>
-<area shape="rect" id="node26" title=" " alt="" coords="4960,102,5169,158"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2725,102,2908,158"/>
+<area shape="rect" id="node17" title=" " alt="" coords="2933,102,3111,158"/>
+<area shape="rect" id="node18" title=" " alt="" coords="3135,102,3295,158"/>
+<area shape="rect" id="node19" title=" " alt="" coords="3319,102,3474,158"/>
+<area shape="rect" id="node20" title=" " alt="" coords="3498,95,3733,165"/>
+<area shape="rect" id="node21" title=" " alt="" coords="3757,95,4036,165"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4061,102,4253,158"/>
+<area shape="rect" id="node23" title=" " alt="" coords="4277,102,4482,158"/>
+<area shape="rect" id="node24" title=" " alt="" coords="4507,102,4711,158"/>
+<area shape="rect" id="node25" title=" " alt="" coords="4735,102,4944,158"/>
 </map>

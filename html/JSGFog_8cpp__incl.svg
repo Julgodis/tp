@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1876;
+var viewWidth = 899;
 var viewHeight = 173;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>libs/JSystem/JStage/JSGFog.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 1871.5,-169 1871.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-169 895,-169 895,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="825,-134.5 825,-164.5 932,-164.5 932,-134.5 825,-134.5"/>
-<text text-anchor="start" x="833" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JStage</text>
-<text text-anchor="middle" x="878.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="309,-134.5 309,-164.5 416,-164.5 416,-134.5 309,-134.5"/>
+<text text-anchor="start" x="317" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">libs/JSystem/JStage</text>
+<text text-anchor="middle" x="362.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog.cpp</text>
 </a>
 </g>
 </g>
@@ -77,8 +77,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M824.95,-147.6C669.18,-144.59 218.29,-133.02 75.5,-98 68.85,-96.37 61.96,-93.8 55.63,-91.04"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="56.8,-87.73 46.25,-86.66 53.83,-94.07 56.8,-87.73"/>
+<path fill="none" stroke="midnightblue" d="M308.96,-143.04C250.61,-136.17 154.98,-122.26 75.5,-98 69.17,-96.07 62.55,-93.47 56.4,-90.8"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="57.77,-87.58 47.22,-86.6 54.86,-93.94 57.77,-87.58"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -92,8 +92,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M824.82,-149.11C658.22,-150.43 158.2,-150 109.5,-98 91.16,-78.42 109.27,-46.74 123.67,-27.5"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="126.44,-29.64 129.89,-19.62 120.95,-25.3 126.44,-29.64"/>
+<path fill="none" stroke="midnightblue" d="M308.86,-145.55C242.21,-140.63 134.21,-128.13 109.5,-98 92.65,-77.45 109.83,-46.55 123.73,-27.64"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="126.57,-29.69 129.93,-19.65 121.04,-25.4 126.57,-29.69"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -107,8 +107,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M824.97,-147.21C717.59,-143.94 468.53,-132.93 262.5,-98 249.73,-95.84 235.99,-92.57 223.7,-89.31"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="224.34,-85.86 213.77,-86.59 222.49,-92.61 224.34,-85.86"/>
+<path fill="none" stroke="midnightblue" d="M327.11,-134.4C294.7,-121.49 247.21,-102.58 216.33,-90.28"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="217.51,-86.98 206.92,-86.53 214.92,-93.49 217.51,-86.98"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -123,8 +123,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M824.93,-143.27C745.69,-135.24 592.69,-118.62 463.5,-98 455.8,-96.77 447.8,-95.38 439.82,-93.92"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="440.21,-90.43 429.74,-92.04 438.93,-97.32 440.21,-90.43"/>
+<path fill="none" stroke="midnightblue" d="M362.5,-134.23C362.5,-125.16 362.5,-113.16 362.5,-102.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="366,-102.25 362.5,-92.25 359,-102.25 366,-102.25"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
@@ -132,7 +132,7 @@ var sectionId = 'dynsection-0';
 <g id="a_node6"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="472,-56.5 472,-97.5 601,-97.5 601,-56.5 472,-56.5"/>
 <text text-anchor="start" x="480" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="480" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGFGetType</text>
+<text text-anchor="start" x="480" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetStartZ</text>
 <text text-anchor="middle" x="536.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogCFv.s</text>
 </a>
 </g>
@@ -140,144 +140,42 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M824.86,-139.66C772.8,-130.79 691.36,-116.17 611.62,-98.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="611.93,-94.65 601.4,-95.85 610.37,-101.48 611.93,-94.65"/>
+<path fill="none" stroke="midnightblue" d="M397.29,-134.4C420.63,-124.95 451.91,-112.27 478.91,-101.34"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="480.3,-104.55 488.26,-97.55 477.68,-98.06 480.3,-104.55"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="619.5,-56.5 619.5,-97.5 767.5,-97.5 767.5,-56.5 619.5,-56.5"/>
+<polygon fill="white" stroke="#bfbfbf" points="619.5,-56.5 619.5,-97.5 743.5,-97.5 743.5,-56.5 619.5,-56.5"/>
 <text text-anchor="start" x="627.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="627.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetFogFunction</text>
-<text text-anchor="middle" x="693.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogCFv.s</text>
+<text text-anchor="start" x="627.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetEndZ_</text>
+<text text-anchor="middle" x="681.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Q26JStage4TFogCFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M841.51,-134.4C816.59,-124.91 783.15,-112.16 754.36,-101.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="755.38,-97.84 744.79,-97.55 752.89,-104.38 755.38,-97.84"/>
+<path fill="none" stroke="midnightblue" d="M416.45,-138.7C464.6,-129.69 537.21,-115.44 609.09,-98.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="610.33,-101.57 619.23,-95.82 608.69,-94.76 610.33,-101.57"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="786,-56.5 786,-97.5 971,-97.5 971,-56.5 786,-56.5"/>
-<text text-anchor="start" x="794" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="794" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGSetFogFunction</text>
-<text text-anchor="middle" x="878.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogF10_GXFogType.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="762,-56.5 762,-97.5 891,-97.5 891,-56.5 762,-56.5"/>
+<text text-anchor="start" x="770" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
+<text text-anchor="start" x="770" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetColor</text>
+<text text-anchor="middle" x="826.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogCFv.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M878.5,-134.23C878.5,-126.57 878.5,-116.84 878.5,-107.63"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="882,-107.59 878.5,-97.59 875,-107.59 882,-107.59"/>
-</g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="989,-56.5 989,-97.5 1118,-97.5 1118,-56.5 989,-56.5"/>
-<text text-anchor="start" x="997" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="997" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetStartZ</text>
-<text text-anchor="middle" x="1053.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogCFv.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node9 -->
-<g id="edge9" class="edge">
-<title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M913.49,-134.4C936.96,-124.95 968.42,-112.27 995.58,-101.34"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="997.01,-104.53 1004.98,-97.55 994.4,-98.04 997.01,-104.53"/>
-</g>
-<!-- Node10 -->
-<g id="node10" class="node">
-<title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1136.5,-56.5 1136.5,-97.5 1256.5,-97.5 1256.5,-56.5 1136.5,-56.5"/>
-<text text-anchor="start" x="1144.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="1144.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGSetStartZ</text>
-<text text-anchor="middle" x="1196.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogFf.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge10" class="edge">
-<title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M932.21,-138.92C980.66,-129.99 1054.04,-115.72 1126.6,-98.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1127.49,-101.52 1136.37,-95.74 1125.82,-94.72 1127.49,-101.52"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1274.5,-56.5 1274.5,-97.5 1398.5,-97.5 1398.5,-56.5 1274.5,-56.5"/>
-<text text-anchor="start" x="1282.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="1282.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetEndZ_</text>
-<text text-anchor="middle" x="1336.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Q26JStage4TFogCFv.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node11 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M932.12,-143.98C1005.21,-137.27 1140.32,-122.93 1264.24,-98.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1265.18,-101.5 1274.29,-96.07 1263.79,-94.64 1265.18,-101.5"/>
-</g>
-<!-- Node12 -->
-<g id="node12" class="node">
-<title>Node12</title>
-<g id="a_node12"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1417,-56.5 1417,-97.5 1538,-97.5 1538,-56.5 1417,-56.5"/>
-<text text-anchor="start" x="1425" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="1425" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGSetEndZ_</text>
-<text text-anchor="middle" x="1477.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Q26JStage4TFogFf.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node12 -->
-<g id="edge12" class="edge">
-<title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M932.27,-146.62C1026.65,-142.61 1228.26,-130.89 1407.11,-97.88"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1407.77,-101.31 1416.96,-96.03 1406.48,-94.43 1407.77,-101.31"/>
-</g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1556,-56.5 1556,-97.5 1685,-97.5 1685,-56.5 1556,-56.5"/>
-<text text-anchor="start" x="1564" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="1564" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGGetColor</text>
-<text text-anchor="middle" x="1620.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogCFv.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node13 -->
-<g id="edge13" class="edge">
-<title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M932.26,-147.93C1044.8,-145.99 1313.37,-137.43 1545.78,-98.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1546.5,-101.57 1555.77,-96.43 1545.32,-94.67 1546.5,-101.57"/>
-</g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1703.5,-56.5 1703.5,-97.5 1867.5,-97.5 1867.5,-56.5 1703.5,-56.5"/>
-<text text-anchor="start" x="1711.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/JSystem/JStage</text>
-<text text-anchor="start" x="1711.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/JSGFog/JSGSetColor</text>
-<text text-anchor="middle" x="1785.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Q26JStage4TFogF8_GXColor.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node14 -->
-<g id="edge14" class="edge">
-<title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M932.25,-148.04C1061.78,-146.31 1401.41,-138.13 1693.33,-98.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1693.84,-101.51 1703.26,-96.67 1692.88,-94.58 1693.84,-101.51"/>
+<path fill="none" stroke="midnightblue" d="M416.18,-143.87C489.73,-137.01 626.05,-122.47 751.48,-98.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="752.51,-101.43 761.65,-96.06 751.16,-94.56 752.51,-101.43"/>
 </g>
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge4" class="edge">

@@ -99,7 +99,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_dmap/deleteExplain__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/baseScreenInit__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/setFloorMessage__14dMenu_DmapBg_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_dmap/dpdMove__14dMenu_DmapBg_cFScScScPUcUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/__dt__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/setAllAlphaRate__14dMenu_DmapBg_cFfb.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/setGoldAnimation__14dMenu_DmapBg_cFb.s&quot;</code><br />
@@ -108,7 +107,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_dmap/decGoldFrameAlphaRate__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/draw__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/update__14dMenu_DmapBg_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_dmap/calcCursor__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/drawCursor__14dMenu_DmapBg_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/__ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/screenInit__12dMenu_Dmap_cFv.s&quot;</code><br />
@@ -153,12 +151,10 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_dmap/lv5_talk_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/mapMode_init_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/mapMode_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_dmap/floorSelect_init_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/floorSelect_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/itemCarryCheck__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/floorChange_init_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/floorChange_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_dmap/zoomWait_init_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/zoomWait_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/zoomIn_init_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_dmap/zoomIn_proc__12dMenu_Dmap_cFv.s&quot;</code><br />
@@ -181,8 +177,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__DmapBg__c.html">dMenu_DmapBg_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCSTControl.html">CSTControl</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DOrthoGraph.html">J2DOrthoGraph</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRArchive.html">JKRArchive</a></td></tr>
@@ -196,6 +190,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DGrafContext.html">J2DGrafContext</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DScreen.html">J2DScreen</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCSTControl.html">CSTControl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__Dmap__c.html">dMenu_Dmap_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,8 +296,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1345bde325a73297e3575de4e37a7bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aac726684b69b9b8e7039a92d5167b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__dmap_8cpp.html#a4aac726684b69b9b8e7039a92d5167b1">setFloorMessage__14dMenu_DmapBg_cFv</a> ()</td></tr>
 <tr class="separator:a4aac726684b69b9b8e7039a92d5167b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dffbef781e059ad19a269cdae94c29d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__dmap_8cpp.html#a8dffbef781e059ad19a269cdae94c29d">dpdMove__14dMenu_DmapBg_cFScScScPUcUc</a> ()</td></tr>
-<tr class="separator:a8dffbef781e059ad19a269cdae94c29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6528eebf5d3cd98f8441b4a2fcd902e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__dmap_8cpp.html#aa6528eebf5d3cd98f8441b4a2fcd902e">dpdMove__14dMenu_DmapBg_cFScScScPUcUc</a> ()</td></tr>
+<tr class="separator:aa6528eebf5d3cd98f8441b4a2fcd902e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79159b62e487437d210075197d3898a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__dmap_8cpp.html#aa79159b62e487437d210075197d3898a">__dt__14dMenu_DmapBg_cFv</a> ()</td></tr>
 <tr class="separator:aa79159b62e487437d210075197d3898a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2242695502c03a844a996abac66effc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__dmap_8cpp.html#af2242695502c03a844a996abac66effc">setAllAlphaRate__14dMenu_DmapBg_cFfb</a> ()</td></tr>
@@ -2477,14 +2473,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8dffbef781e059ad19a269cdae94c29d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8dffbef781e059ad19a269cdae94c29d">&#9670;&nbsp;</a></span>dpdMove__14dMenu_DmapBg_cFScScScPUcUc()</h2>
+<a id="aa6528eebf5d3cd98f8441b4a2fcd902e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6528eebf5d3cd98f8441b4a2fcd902e">&#9670;&nbsp;</a></span>dpdMove__14dMenu_DmapBg_cFScScScPUcUc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dpdMove__14dMenu_DmapBg_cFScScScPUcUc </td>
+          <td class="memname">bool dpdMove__14dMenu_DmapBg_cFScScScPUcUc </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -5204,7 +5200,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ad__menu__dmap_8cpp_html_a15c156a8ce6309dae7c74e44454544aa"><div class="ttname"><a href="d__menu__dmap_8cpp.html#a15c156a8ce6309dae7c74e44454544aa">func_801C0844</a></div><div class="ttdeci">static void func_801C0844()</div><div class="ttdef"><b>Definition:</b> d_menu_dmap.cpp:2091</div></div>
+<div class="ttc" id="ad__menu__dmap_8cpp_html_a15c156a8ce6309dae7c74e44454544aa"><div class="ttname"><a href="d__menu__dmap_8cpp.html#a15c156a8ce6309dae7c74e44454544aa">func_801C0844</a></div><div class="ttdeci">static void func_801C0844()</div><div class="ttdef"><b>Definition:</b> d_menu_dmap.cpp:2071</div></div>
 <div class="ttc" id="ad__menu__dmap_8cpp_html_a1b7eb3c5d8504bcd68cd5b5325485b94"><div class="ttname"><a href="d__menu__dmap_8cpp.html#a1b7eb3c5d8504bcd68cd5b5325485b94">draw__14dMenu_DmapBg_cFv</a></div><div class="ttdeci">void draw__14dMenu_DmapBg_cFv()</div></div>
 <div class="ttc" id="ad__menu__dmap_8cpp_html_aa79159b62e487437d210075197d3898a"><div class="ttname"><a href="d__menu__dmap_8cpp.html#aa79159b62e487437d210075197d3898a">__dt__14dMenu_DmapBg_cFv</a></div><div class="ttdeci">void __dt__14dMenu_DmapBg_cFv()</div></div>
 </div><!-- fragment -->

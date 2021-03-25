@@ -1,5 +1,5 @@
 <map id="libs/Z2AudioLib/Z2SceneMgr.cpp" name="libs/Z2AudioLib/Z2SceneMgr.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4337,5,4552,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4220,5,4435,32"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="133,184,241,211"/>
 <area shape="rect" id="node4" href="$Z2SceneMgr_8h.html" title=" " alt="" coords="162,95,338,121"/>
@@ -32,10 +32,9 @@
 <area shape="rect" id="node31" title=" " alt="" coords="7026,80,7261,136"/>
 <area shape="rect" id="node32" title=" " alt="" coords="7285,87,7527,129"/>
 <area shape="rect" id="node33" title=" " alt="" coords="7551,87,7802,129"/>
-<area shape="rect" id="node34" title=" " alt="" coords="7827,87,8081,129"/>
-<area shape="rect" id="node35" title=" " alt="" coords="8106,87,8346,129"/>
-<area shape="rect" id="node36" title=" " alt="" coords="8370,87,8621,129"/>
-<area shape="rect" id="node37" title=" " alt="" coords="8645,80,8892,136"/>
-<area shape="rect" id="node38" title=" " alt="" coords="8917,87,9149,129"/>
-<area shape="rect" id="node39" title=" " alt="" coords="9173,87,9415,129"/>
+<area shape="rect" id="node34" title=" " alt="" coords="7826,87,8066,129"/>
+<area shape="rect" id="node35" title=" " alt="" coords="8090,87,8341,129"/>
+<area shape="rect" id="node36" title=" " alt="" coords="8365,80,8612,136"/>
+<area shape="rect" id="node37" title=" " alt="" coords="8637,87,8869,129"/>
+<area shape="rect" id="node38" title=" " alt="" coords="8893,87,9135,129"/>
 </map>

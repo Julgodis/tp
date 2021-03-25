@@ -95,7 +95,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_free__12JKRSolidHeapFPv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_freeAll__12JKRSolidHeapFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_freeTail__12JKRSolidHeapFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_fillFreeArea__12JKRSolidHeapFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_resize__12JKRSolidHeapFPvUl.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/do_getSize__12JKRSolidHeapFPv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JKernel/JKRSolidHeap/check__12JKRSolidHeapFv.s&quot;</code><br />
@@ -172,8 +171,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3a0731d933c74100ded070c5096b313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581ac9487348557df9e0f9bd828952af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a581ac9487348557df9e0f9bd828952af">operator delete</a> (void *)</td></tr>
 <tr class="separator:a581ac9487348557df9e0f9bd828952af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a539c2474546f86e4ff5f3e6b2b038504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a539c2474546f86e4ff5f3e6b2b038504">dump_sort__7JKRHeapFv</a> ()</td></tr>
-<tr class="separator:a539c2474546f86e4ff5f3e6b2b038504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378bd3239254b6b807ea2e3909695a90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a378bd3239254b6b807ea2e3909695a90">dump_sort__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:a378bd3239254b6b807ea2e3909695a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a758c4368325ed4e05f98c70df33bb198"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a758c4368325ed4e05f98c70df33bb198">__ct__7JKRHeapFPvUlP7JKRHeapb</a> ()</td></tr>
 <tr class="separator:a758c4368325ed4e05f98c70df33bb198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208e12666bceff4f78f4eb9b3578eae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a208e12666bceff4f78f4eb9b3578eae0">__dt__7JKRHeapFv</a> ()</td></tr>
@@ -200,10 +199,10 @@ Functions</h2></td></tr>
 <tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6bb4ab2ad7902af2c9a74736c3a9883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#ae6bb4ab2ad7902af2c9a74736c3a9883">state_dump__7JKRHeapCFRCQ27JKRHeap6TState</a> ()</td></tr>
 <tr class="separator:ae6bb4ab2ad7902af2c9a74736c3a9883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208ea124e71ac9c4fcc11a183258b1e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a208ea124e71ac9c4fcc11a183258b1e3">do_changeGroupID__7JKRHeapFUc</a> ()</td></tr>
-<tr class="separator:a208ea124e71ac9c4fcc11a183258b1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0f48548b9b48097e37c09610433765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a3f0f48548b9b48097e37c09610433765">do_getCurrentGroupId__7JKRHeapFv</a> ()</td></tr>
-<tr class="separator:a3f0f48548b9b48097e37c09610433765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8dd2705858b868e6936cddfce0867b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a6f8dd2705858b868e6936cddfce0867b">do_changeGroupID__7JKRHeapFUc</a> ()</td></tr>
+<tr class="separator:a6f8dd2705858b868e6936cddfce0867b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ff83ec0640635f6f602c12eb56a826"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#aa2ff83ec0640635f6f602c12eb56a826">do_getCurrentGroupId__7JKRHeapFv</a> ()</td></tr>
+<tr class="separator:aa2ff83ec0640635f6f602c12eb56a826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2a08d9d4c3b3c5813f0cdae2faaedfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#aa2a08d9d4c3b3c5813f0cdae2faaedfc">JUTReportConsole_f</a> ()</td></tr>
 <tr class="separator:aa2a08d9d4c3b3c5813f0cdae2faaedfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a1fb18b91801fcb8cc6b0613f03b82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JKRSolidHeap_8cpp.html#a37a1fb18b91801fcb8cc6b0613f03b82">JUTWarningConsole_f</a> ()</td></tr>
@@ -582,14 +581,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a208ea124e71ac9c4fcc11a183258b1e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a208ea124e71ac9c4fcc11a183258b1e3">&#9670;&nbsp;</a></span>do_changeGroupID__7JKRHeapFUc()</h2>
+<a id="a6f8dd2705858b868e6936cddfce0867b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8dd2705858b868e6936cddfce0867b">&#9670;&nbsp;</a></span>do_changeGroupID__7JKRHeapFUc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_changeGroupID__7JKRHeapFUc </td>
+          <td class="memname">bool do_changeGroupID__7JKRHeapFUc </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -684,14 +683,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3f0f48548b9b48097e37c09610433765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0f48548b9b48097e37c09610433765">&#9670;&nbsp;</a></span>do_getCurrentGroupId__7JKRHeapFv()</h2>
+<a id="aa2ff83ec0640635f6f602c12eb56a826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ff83ec0640635f6f602c12eb56a826">&#9670;&nbsp;</a></span>do_getCurrentGroupId__7JKRHeapFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_getCurrentGroupId__7JKRHeapFv </td>
+          <td class="memname">bool do_getCurrentGroupId__7JKRHeapFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -803,14 +802,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a539c2474546f86e4ff5f3e6b2b038504"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a539c2474546f86e4ff5f3e6b2b038504">&#9670;&nbsp;</a></span>dump_sort__7JKRHeapFv()</h2>
+<a id="a378bd3239254b6b807ea2e3909695a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378bd3239254b6b807ea2e3909695a90">&#9670;&nbsp;</a></span>dump_sort__7JKRHeapFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dump_sort__7JKRHeapFv </td>
+          <td class="memname">bool dump_sort__7JKRHeapFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1086,7 +1085,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a52d7ae11d36c630ffeb70e98b41a2e73">callAllDisposer__7JKRHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#ac9fcf8521d898543caae00514b2a90d1">getHeapType__12JKRSolidHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a68e6bc4c75419e18760021cfd2dd8320">check__12JKRSolidHeapFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a539c2474546f86e4ff5f3e6b2b038504">dump_sort__7JKRHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a378bd3239254b6b807ea2e3909695a90">dump_sort__7JKRHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a267ecd76be02c8bff4b6487d8f312d71">dump__12JKRSolidHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a011f205873fddf2f7c562a5436ad82fa">do_destroy__12JKRSolidHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#ab885f318394cbe6162873decfa296359">do_alloc__12JKRSolidHeapFUli</a>,</div>
@@ -1099,29 +1098,29 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a1cc82fb2835f36db07615388357ffd90">do_getFreeSize__12JKRSolidHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a29943abdba263889f29e95806169aa61">do_getMaxFreeBlock__12JKRSolidHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a3a0731d933c74100ded070c5096b313a">do_getTotalFreeSize__12JKRSolidHeapFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a208ea124e71ac9c4fcc11a183258b1e3">do_changeGroupID__7JKRHeapFUc</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a3f0f48548b9b48097e37c09610433765">do_getCurrentGroupId__7JKRHeapFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a6f8dd2705858b868e6936cddfce0867b">do_changeGroupID__7JKRHeapFUc</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#aa2ff83ec0640635f6f602c12eb56a826">do_getCurrentGroupId__7JKRHeapFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#a21819ed945917589e1a62192fcbc5a44">state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#ad02dc3df4ffa66d526abf1fc515e1231">state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JKRSolidHeap_8cpp.html#ae6bb4ab2ad7902af2c9a74736c3a9883">state_dump__7JKRHeapCFRCQ27JKRHeap6TState</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a011f205873fddf2f7c562a5436ad82fa"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a011f205873fddf2f7c562a5436ad82fa">do_destroy__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_destroy__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a1cc82fb2835f36db07615388357ffd90"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a1cc82fb2835f36db07615388357ffd90">do_getFreeSize__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_getFreeSize__12JKRSolidHeapFv()</div></div>
-<div class="ttc" id="aJKRSolidHeap_8cpp_html_a208ea124e71ac9c4fcc11a183258b1e3"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a208ea124e71ac9c4fcc11a183258b1e3">do_changeGroupID__7JKRHeapFUc</a></div><div class="ttdeci">void do_changeGroupID__7JKRHeapFUc()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a21819ed945917589e1a62192fcbc5a44"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a21819ed945917589e1a62192fcbc5a44">state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl</a></div><div class="ttdeci">void state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a267ecd76be02c8bff4b6487d8f312d71"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a267ecd76be02c8bff4b6487d8f312d71">dump__12JKRSolidHeapFv</a></div><div class="ttdeci">void dump__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a29943abdba263889f29e95806169aa61"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a29943abdba263889f29e95806169aa61">do_getMaxFreeBlock__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_getMaxFreeBlock__12JKRSolidHeapFv()</div></div>
+<div class="ttc" id="aJKRSolidHeap_8cpp_html_a378bd3239254b6b807ea2e3909695a90"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a378bd3239254b6b807ea2e3909695a90">dump_sort__7JKRHeapFv</a></div><div class="ttdeci">bool dump_sort__7JKRHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a3a0731d933c74100ded070c5096b313a"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a3a0731d933c74100ded070c5096b313a">do_getTotalFreeSize__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_getTotalFreeSize__12JKRSolidHeapFv()</div></div>
-<div class="ttc" id="aJKRSolidHeap_8cpp_html_a3f0f48548b9b48097e37c09610433765"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a3f0f48548b9b48097e37c09610433765">do_getCurrentGroupId__7JKRHeapFv</a></div><div class="ttdeci">void do_getCurrentGroupId__7JKRHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a52d7ae11d36c630ffeb70e98b41a2e73"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a52d7ae11d36c630ffeb70e98b41a2e73">callAllDisposer__7JKRHeapFv</a></div><div class="ttdeci">void callAllDisposer__7JKRHeapFv()</div></div>
-<div class="ttc" id="aJKRSolidHeap_8cpp_html_a539c2474546f86e4ff5f3e6b2b038504"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a539c2474546f86e4ff5f3e6b2b038504">dump_sort__7JKRHeapFv</a></div><div class="ttdeci">void dump_sort__7JKRHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a54bac8d83b55c36cf8417b3ba2af1ddd"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a54bac8d83b55c36cf8417b3ba2af1ddd">do_getSize__12JKRSolidHeapFPv</a></div><div class="ttdeci">void do_getSize__12JKRSolidHeapFPv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a5d3f803f5fdd56615099992f61d5e568"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a5d3f803f5fdd56615099992f61d5e568">do_freeTail__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_freeTail__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a60096d138149aa026e2b7a0473f9488f"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a60096d138149aa026e2b7a0473f9488f">__dt__12JKRSolidHeapFv</a></div><div class="ttdeci">void __dt__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a68e6bc4c75419e18760021cfd2dd8320"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a68e6bc4c75419e18760021cfd2dd8320">check__12JKRSolidHeapFv</a></div><div class="ttdeci">void check__12JKRSolidHeapFv()</div></div>
+<div class="ttc" id="aJKRSolidHeap_8cpp_html_a6f8dd2705858b868e6936cddfce0867b"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a6f8dd2705858b868e6936cddfce0867b">do_changeGroupID__7JKRHeapFUc</a></div><div class="ttdeci">bool do_changeGroupID__7JKRHeapFUc()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a763922dac8852da1f215156ecda77af8"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a763922dac8852da1f215156ecda77af8">do_resize__12JKRSolidHeapFPvUl</a></div><div class="ttdeci">void do_resize__12JKRSolidHeapFPvUl()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a7f7db5b6a49df92c54d8b4e9766aa1f6"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a7f7db5b6a49df92c54d8b4e9766aa1f6">do_fillFreeArea__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_fillFreeArea__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_a91680359dec820e0bd1789e6d94ee666"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#a91680359dec820e0bd1789e6d94ee666">do_free__12JKRSolidHeapFPv</a></div><div class="ttdeci">void do_free__12JKRSolidHeapFPv()</div></div>
+<div class="ttc" id="aJKRSolidHeap_8cpp_html_aa2ff83ec0640635f6f602c12eb56a826"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#aa2ff83ec0640635f6f602c12eb56a826">do_getCurrentGroupId__7JKRHeapFv</a></div><div class="ttdeci">bool do_getCurrentGroupId__7JKRHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_ab885f318394cbe6162873decfa296359"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#ab885f318394cbe6162873decfa296359">do_alloc__12JKRSolidHeapFUli</a></div><div class="ttdeci">void do_alloc__12JKRSolidHeapFUli()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_abbb98404d61cbfb7464cd6f9c2e0a750"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#abbb98404d61cbfb7464cd6f9c2e0a750">do_freeAll__12JKRSolidHeapFv</a></div><div class="ttdeci">void do_freeAll__12JKRSolidHeapFv()</div></div>
 <div class="ttc" id="aJKRSolidHeap_8cpp_html_ac9fcf8521d898543caae00514b2a90d1"><div class="ttname"><a href="JKRSolidHeap_8cpp.html#ac9fcf8521d898543caae00514b2a90d1">getHeapType__12JKRSolidHeapFv</a></div><div class="ttdeci">void getHeapType__12JKRSolidHeapFv()</div></div>

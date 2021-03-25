@@ -1,5 +1,5 @@
 <map id="src/d/s/d_s_logo.cpp" name="src/d/s/d_s_logo.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4353,5,4496,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4249,5,4392,32"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,95,87,121"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="116,184,224,211"/>
 <area shape="rect" id="node4" href="$d__s__logo_8h.html" title=" " alt="" coords="162,95,269,121"/>
@@ -37,12 +37,11 @@
 <area shape="rect" id="node36" title=" " alt="" coords="6765,87,6967,129"/>
 <area shape="rect" id="node37" title=" " alt="" coords="6992,87,7180,129"/>
 <area shape="rect" id="node38" title=" " alt="" coords="7205,87,7399,129"/>
-<area shape="rect" id="node39" title=" " alt="" coords="7423,87,7629,129"/>
-<area shape="rect" id="node40" title=" " alt="" coords="7653,87,7869,129"/>
-<area shape="rect" id="node41" title=" " alt="" coords="7893,87,8109,129"/>
-<area shape="rect" id="node42" title=" " alt="" coords="8133,87,8341,129"/>
-<area shape="rect" id="node43" title=" " alt="" coords="8365,87,8553,129"/>
-<area shape="rect" id="node44" title=" " alt="" coords="8577,87,8744,129"/>
-<area shape="rect" id="node45" title=" " alt="" coords="8769,87,8923,129"/>
-<area shape="rect" id="node46" title=" " alt="" coords="8948,87,9099,129"/>
+<area shape="rect" id="node39" title=" " alt="" coords="7423,87,7639,129"/>
+<area shape="rect" id="node40" title=" " alt="" coords="7663,87,7879,129"/>
+<area shape="rect" id="node41" title=" " alt="" coords="7903,87,8111,129"/>
+<area shape="rect" id="node42" title=" " alt="" coords="8136,87,8324,129"/>
+<area shape="rect" id="node43" title=" " alt="" coords="8348,87,8515,129"/>
+<area shape="rect" id="node44" title=" " alt="" coords="8539,87,8694,129"/>
+<area shape="rect" id="node45" title=" " alt="" coords="8719,87,8869,129"/>
 </map>

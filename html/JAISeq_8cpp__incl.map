@@ -1,5 +1,5 @@
 <map id="libs/JSystem/JAudio2/JAISeq.cpp" name="libs/JSystem/JAudio2/JAISeq.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2272,5,2420,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2052,5,2200,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="135,213,243,240"/>
 <area shape="rect" id="node4" href="$JAISeq_8h.html" title=" " alt="" coords="162,117,343,143"/>
@@ -17,11 +17,9 @@
 <area shape="rect" id="node16" title=" " alt="" coords="2762,102,2933,158"/>
 <area shape="rect" id="node17" title=" " alt="" coords="2957,102,3210,158"/>
 <area shape="rect" id="node18" title=" " alt="" coords="3235,95,3489,165"/>
-<area shape="rect" id="node19" title=" " alt="" coords="3513,102,3667,158"/>
-<area shape="rect" id="node20" title=" " alt="" coords="3691,109,3897,151"/>
-<area shape="rect" id="node21" title=" " alt="" coords="3921,102,4075,158"/>
-<area shape="rect" id="node22" title=" " alt="" coords="4099,109,4313,151"/>
+<area shape="rect" id="node19" title=" " alt="" coords="3514,109,3719,151"/>
+<area shape="rect" id="node20" title=" " alt="" coords="3744,102,3897,158"/>
+<area shape="rect" id="node21" title=" " alt="" coords="3922,109,4135,151"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4160,102,4313,158"/>
 <area shape="rect" id="node23" title=" " alt="" coords="4337,102,4491,158"/>
-<area shape="rect" id="node24" title=" " alt="" coords="4515,109,4713,151"/>
-<area shape="rect" id="node25" title=" " alt="" coords="4737,102,4891,158"/>
 </map>

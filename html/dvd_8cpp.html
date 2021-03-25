@@ -83,7 +83,6 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="dol2asm_8h_source.html">dol2asm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">dolphin/types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dvd_8h_source.html">dolphin/dvd/dvd.h</a>&quot;</code><br />
-<code>#include &quot;asm/dolphin/dvd/dvd/defaultOptionalCommandChecker.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/DVDInit.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/stateReadingFST.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/cbForStateReadingFST.s&quot;</code><br />
@@ -130,11 +129,19 @@ $(function() {
 <code>#include &quot;asm/dolphin/dvd/dvd/DVDCheckDisk.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/__DVDPrepareResetAsync.s&quot;</code><br />
 <code>#include &quot;asm/dolphin/dvd/dvd/__DVDTestAlarm.s&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for dvd.cpp:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="dvd_8cpp__incl.svg" width="100%" height="451"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9a844041b16b877b5ba2c7bc36f7cf08"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a9a844041b16b877b5ba2c7bc36f7cf08">defaultOptionalCommandChecker</a> ()</td></tr>
-<tr class="separator:a9a844041b16b877b5ba2c7bc36f7cf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add15f034cdedc81baa55f5cb536d6d3a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#add15f034cdedc81baa55f5cb536d6d3a">defaultOptionalCommandChecker</a> ()</td></tr>
+<tr class="separator:add15f034cdedc81baa55f5cb536d6d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9f42d06b582e03bfe763f069a8ca5e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ab9f42d06b582e03bfe763f069a8ca5e3">DVDInit</a> ()</td></tr>
 <tr class="separator:ab9f42d06b582e03bfe763f069a8ca5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45018ee813dcfcad31eccdfdd81c3bfc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#a45018ee813dcfcad31eccdfdd81c3bfc">stateReadingFST</a> ()</td></tr>
@@ -364,7 +371,7 @@ Variables</h2></td></tr>
 <tr class="separator:a518e975590bb0c3537038870245a219d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab316ceea9d3654662299e5baebfd2e09"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ab316ceea9d3654662299e5baebfd2e09">autoInvalidation</a> = 0x00000001</td></tr>
 <tr class="separator:ab316ceea9d3654662299e5baebfd2e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18b3578c87674ebbab4b628c39e9102"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ab18b3578c87674ebbab4b628c39e9102">checkOptionalCommand</a> = (void*)<a class="el" href="dvd_8cpp.html#a9a844041b16b877b5ba2c7bc36f7cf08">defaultOptionalCommandChecker</a></td></tr>
+<tr class="memitem:ab18b3578c87674ebbab4b628c39e9102"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ab18b3578c87674ebbab4b628c39e9102">checkOptionalCommand</a> = (void*)<a class="el" href="dvd_8cpp.html#add15f034cdedc81baa55f5cb536d6d3a">defaultOptionalCommandChecker</a></td></tr>
 <tr class="separator:ab18b3578c87674ebbab4b628c39e9102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5b573c69a67891bd74c710015c7fde9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> <a class="el" href="types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dvd_8cpp.html#ac5b573c69a67891bd74c710015c7fde9">lit_23</a> [6+2]</td></tr>
 <tr class="separator:ac5b573c69a67891bd74c710015c7fde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1077,8 +1084,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9a844041b16b877b5ba2c7bc36f7cf08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a844041b16b877b5ba2c7bc36f7cf08">&#9670;&nbsp;</a></span>defaultOptionalCommandChecker()</h2>
+<a id="add15f034cdedc81baa55f5cb536d6d3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add15f034cdedc81baa55f5cb536d6d3a">&#9670;&nbsp;</a></span>defaultOptionalCommandChecker()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1087,7 +1094,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm void defaultOptionalCommandChecker </td>
+          <td class="memname">static void defaultOptionalCommandChecker </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2341,7 +2348,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* checkOptionalCommand = (void*)<a class="el" href="dvd_8cpp.html#a9a844041b16b877b5ba2c7bc36f7cf08">defaultOptionalCommandChecker</a></td>
+          <td class="memname"><a class="el" href="dol2asm_8h.html#a22a2a06fa275008ac56121fac5e1ff92">SECTION_SDATA</a> void* checkOptionalCommand = (void*)<a class="el" href="dvd_8cpp.html#add15f034cdedc81baa55f5cb536d6d3a">defaultOptionalCommandChecker</a></td>
         </tr>
       </table>
   </td>
@@ -2687,7 +2694,7 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="advd_8cpp_html_a6f565d9ceb2f251f8ea88337293d056b"><div class="ttname"><a href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a></div><div class="ttdeci">void DVDCheckDisk()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:795</div></div>
+<div class="ttc" id="advd_8cpp_html_a6f565d9ceb2f251f8ea88337293d056b"><div class="ttname"><a href="dvd_8cpp.html#a6f565d9ceb2f251f8ea88337293d056b">DVDCheckDisk</a></div><div class="ttdeci">void DVDCheckDisk()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:790</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>
@@ -2812,7 +2819,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x140),</div>
 <div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a>)+0x2F8),</div>
 <div class="line">}</div>
-<div class="ttc" id="advd_8cpp_html_a1b7526621b195f5dd21993a1c99be2fa"><div class="ttname"><a href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a></div><div class="ttdeci">static void stateBusy()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:561</div></div>
+<div class="ttc" id="advd_8cpp_html_a1b7526621b195f5dd21993a1c99be2fa"><div class="ttname"><a href="dvd_8cpp.html#a1b7526621b195f5dd21993a1c99be2fa">stateBusy</a></div><div class="ttdeci">static void stateBusy()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:556</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2873,7 +2880,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#ab1682dc6594c83caf4bcf8f3f4ecd8ee">DVDCancelAsync</a>)+0x50),</div>
 <div class="line">     (<span class="keywordtype">void</span>*)(((<span class="keywordtype">char</span>*)<a class="code" href="dvd_8cpp.html#ab1682dc6594c83caf4bcf8f3f4ecd8ee">DVDCancelAsync</a>)+0x17C),</div>
 <div class="line">}</div>
-<div class="ttc" id="advd_8cpp_html_ab1682dc6594c83caf4bcf8f3f4ecd8ee"><div class="ttname"><a href="dvd_8cpp.html#ab1682dc6594c83caf4bcf8f3f4ecd8ee">DVDCancelAsync</a></div><div class="ttdeci">static void DVDCancelAsync()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:731</div></div>
+<div class="ttc" id="advd_8cpp_html_ab1682dc6594c83caf4bcf8f3f4ecd8ee"><div class="ttname"><a href="dvd_8cpp.html#ab1682dc6594c83caf4bcf8f3f4ecd8ee">DVDCancelAsync</a></div><div class="ttdeci">static void DVDCancelAsync()</div><div class="ttdef"><b>Definition:</b> dvd.cpp:726</div></div>
 </div><!-- fragment -->
 </div>
 </div>

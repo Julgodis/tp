@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J2DGraph/J2DWindow.cpp" name="libs/JSystem/J2DGraph/J2DWindow.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="3372,5,3531,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2963,5,3121,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="144,213,252,240"/>
 <area shape="rect" id="node4" href="$J2DWindow_8h.html" title=" " alt="" coords="162,117,381,143"/>
@@ -23,12 +23,8 @@
 <area shape="rect" id="node22" title=" " alt="" coords="4581,95,4815,165"/>
 <area shape="rect" id="node23" title=" " alt="" coords="4839,102,5037,158"/>
 <area shape="rect" id="node24" title=" " alt="" coords="5061,102,5292,158"/>
-<area shape="rect" id="node25" title=" " alt="" coords="5316,102,5480,158"/>
-<area shape="rect" id="node26" title=" " alt="" coords="5504,102,5721,158"/>
-<area shape="rect" id="node27" title=" " alt="" coords="5745,102,5957,158"/>
-<area shape="rect" id="node28" title=" " alt="" coords="5981,102,6284,158"/>
-<area shape="rect" id="node29" title=" " alt="" coords="6309,102,6509,158"/>
-<area shape="rect" id="node30" title=" " alt="" coords="6533,102,6748,158"/>
-<area shape="rect" id="node31" title=" " alt="" coords="6772,102,7003,158"/>
-<area shape="rect" id="node32" title=" " alt="" coords="7027,102,7198,158"/>
+<area shape="rect" id="node25" title=" " alt="" coords="5316,102,5533,158"/>
+<area shape="rect" id="node26" title=" " alt="" coords="5557,102,5769,158"/>
+<area shape="rect" id="node27" title=" " alt="" coords="5793,102,6096,158"/>
+<area shape="rect" id="node28" title=" " alt="" coords="6120,102,6351,158"/>
 </map>

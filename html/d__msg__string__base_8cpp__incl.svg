@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 2858;
+var viewWidth = 2241;
 var viewHeight = 184;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>src/d/msg/d_msg_string_base.cpp</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-180 2854,-180 2854,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-180 2236.5,-180 2236.5,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="1186.5,-145.5 1186.5,-175.5 1308.5,-175.5 1308.5,-145.5 1186.5,-145.5"/>
-<text text-anchor="start" x="1194.5" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/d/msg/d_msg_string</text>
-<text text-anchor="middle" x="1247.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base.cpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="900.5,-145.5 900.5,-175.5 1022.5,-175.5 1022.5,-145.5 900.5,-145.5"/>
+<text text-anchor="start" x="908.5" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/d/msg/d_msg_string</text>
+<text text-anchor="middle" x="961.5" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base.cpp</text>
 </a>
 </g>
 </g>
@@ -77,8 +77,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M1186.31,-158.54C960.62,-154.77 182.44,-139.67 75.5,-109 66.88,-106.53 58.14,-102.11 50.68,-97.63"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="52.34,-94.53 42.03,-92.08 48.56,-100.42 52.34,-94.53"/>
+<path fill="none" stroke="midnightblue" d="M900.37,-159.62C726.29,-159.39 230.51,-154.62 75.5,-109 66.9,-106.47 58.16,-102.03 50.7,-97.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="52.36,-94.47 42.05,-92.02 48.58,-100.36 52.36,-94.47"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -92,8 +92,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M1186.19,-159.1C954.98,-157.29 146.97,-148.17 109.5,-109 88.69,-87.25 105.23,-50.02 118.08,-28.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="121.09,-30.04 123.41,-19.7 115.15,-26.33 121.09,-30.04"/>
+<path fill="none" stroke="midnightblue" d="M900.42,-158.15C709.75,-153.64 136.59,-137.74 109.5,-109 88.85,-87.09 105.34,-49.92 118.14,-28.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="121.13,-30.01 123.44,-19.67 115.19,-26.31 121.13,-30.01"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -108,8 +108,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M1186.4,-159.17C996.08,-157.72 415.77,-149.97 232.5,-109 224.42,-107.19 216.05,-104.43 208.17,-101.37"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="209.44,-98.1 198.86,-97.54 206.78,-104.58 209.44,-98.1"/>
+<path fill="none" stroke="midnightblue" d="M900.48,-157.79C748.99,-153.13 358.89,-138.55 232.5,-109 224.61,-107.16 216.43,-104.43 208.69,-101.44"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="209.78,-98.1 199.2,-97.55 207.12,-104.58 209.78,-98.1"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -124,8 +124,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M1186.39,-159.44C1050.79,-158.49 714.81,-151.61 437.5,-109 423,-106.77 407.56,-103.46 393.16,-99.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="393.93,-96.55 383.38,-97.52 392.24,-103.34 393.93,-96.55"/>
+<path fill="none" stroke="midnightblue" d="M900.2,-156.51C801.98,-151.07 603.48,-137.39 437.5,-109 423.55,-106.61 408.69,-103.36 394.73,-99.98"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="395.29,-96.51 384.74,-97.5 393.61,-103.31 395.29,-96.51"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
@@ -140,8 +140,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M1186.13,-157.61C1076.4,-153.51 839.59,-141.41 642.5,-109 628.38,-106.68 613.36,-103.42 599.27,-100"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="599.75,-96.52 589.2,-97.5 598.06,-103.31 599.75,-96.52"/>
+<path fill="none" stroke="midnightblue" d="M900.36,-151.41C835.95,-142.51 731.67,-127.06 642.5,-109 629.48,-106.36 615.62,-103.19 602.43,-99.99"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="603.04,-96.53 592.5,-97.54 601.37,-103.33 603.04,-96.53"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
@@ -157,8 +157,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M1186.45,-154.81C1104.99,-147.93 956.49,-133.24 831.5,-109 826.05,-107.94 820.46,-106.74 814.84,-105.46"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="815.26,-101.96 804.73,-103.05 813.64,-108.77 815.26,-101.96"/>
+<path fill="none" stroke="midnightblue" d="M919.97,-145.47C887.57,-134.53 841.88,-119.1 804.21,-106.37"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="804.91,-102.91 794.32,-103.03 802.67,-109.55 804.91,-102.91"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
@@ -175,8 +175,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M1194.71,-145.47C1158.55,-135.86 1109.37,-122.8 1065.5,-111.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1066.21,-107.7 1055.65,-108.52 1064.41,-114.47 1066.21,-107.7"/>
+<path fill="none" stroke="midnightblue" d="M961.5,-145.2C961.5,-137.63 961.5,-127.95 961.5,-118.53"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="965,-118.5 961.5,-108.5 958,-118.5 965,-118.5"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
@@ -191,8 +191,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1231.89,-145.2C1219.37,-133.74 1201.61,-117.48 1187.47,-104.53"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1189.78,-101.9 1180.04,-97.73 1185.05,-107.07 1189.78,-101.9"/>
+<path fill="none" stroke="midnightblue" d="M999.21,-145.38C1032.54,-132.91 1081.3,-114.65 1117.22,-101.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1118.86,-104.33 1126.99,-97.54 1116.4,-97.77 1118.86,-104.33"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
@@ -208,8 +208,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M1263.3,-145.2C1274.26,-135.28 1289.2,-121.77 1302.29,-109.93"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1304.68,-112.48 1309.75,-103.18 1299.98,-107.29 1304.68,-112.48"/>
+<path fill="none" stroke="midnightblue" d="M1022.64,-149.83C1078.77,-140.59 1164.1,-125.64 1237.5,-109 1242.25,-107.92 1247.12,-106.77 1252.02,-105.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1253.26,-108.86 1262.11,-103.03 1251.56,-102.07 1253.26,-108.86"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
@@ -225,113 +225,61 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node11 -->
 <g id="edge11" class="edge">
 <title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M1297.4,-145.47C1333.11,-135.4 1382.29,-121.46 1425.5,-109 1429.04,-107.98 1432.65,-106.93 1436.3,-105.88"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1437.39,-109.2 1446.02,-103.05 1435.44,-102.48 1437.39,-109.2"/>
+<path fill="none" stroke="midnightblue" d="M1022.83,-156.28C1112.13,-150.82 1282.86,-137.44 1425.5,-109 1430.49,-108.01 1435.6,-106.86 1440.73,-105.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1441.75,-108.96 1450.58,-103.1 1440.02,-102.18 1441.75,-108.96"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1608,-62 1608,-103 1789,-103 1789,-62 1608,-62"/>
-<text text-anchor="start" x="1616" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="1616" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">_base/drawFontLocal__16dMsgString</text>
-<text text-anchor="middle" x="1698.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFP10J2DTextBoxUcffffUlUc.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1608,-56.5 1608,-108.5 1813,-108.5 1813,-56.5 1608,-56.5"/>
+<text text-anchor="start" x="1616" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
+<text text-anchor="start" x="1616" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getString__16dMsgString</text>
+<text text-anchor="start" x="1616" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlP10J2DTextBoxP10J2DTextBox</text>
+<text text-anchor="middle" x="1710.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">P7JUTFontP10COutFont_cUc.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M1308.58,-152.8C1379.05,-144.59 1498.25,-129.24 1599.5,-109 1605.13,-107.87 1610.92,-106.63 1616.74,-105.3"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1617.59,-108.7 1626.53,-103.02 1615.99,-101.88 1617.59,-108.7"/>
+<path fill="none" stroke="midnightblue" d="M1022.54,-157.65C1134.79,-153.6 1381.57,-141.67 1597.84,-109.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1598.43,-112.62 1607.79,-107.65 1597.38,-105.7 1598.43,-112.62"/>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
 <g id="a_node13"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="1807,-56.5 1807,-108.5 2012,-108.5 2012,-56.5 1807,-56.5"/>
-<text text-anchor="start" x="1815" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="1815" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getString__16dMsgString</text>
-<text text-anchor="start" x="1815" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlP10J2DTextBoxP10J2DTextBox</text>
-<text text-anchor="middle" x="1909.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">P7JUTFontP10COutFont_cUc.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="1830.5,-56.5 1830.5,-108.5 2044.5,-108.5 2044.5,-56.5 1830.5,-56.5"/>
+<text text-anchor="start" x="1838.5" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
+<text text-anchor="start" x="1838.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getStringPage__16dMsgString</text>
+<text text-anchor="start" x="1838.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlUcUcP10J2DTextBoxP10J2DText</text>
+<text text-anchor="middle" x="1937.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">BoxP7JUTFontP10COutFont_cUc.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node13 -->
 <g id="edge13" class="edge">
 <title>Node1&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M1308.58,-156.59C1408.74,-151.23 1614.24,-137.76 1796.74,-109.2"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="1797.46,-112.63 1806.79,-107.61 1796.36,-105.71 1797.46,-112.63"/>
+<path fill="none" stroke="midnightblue" d="M1022.64,-159.26C1162.49,-157.98 1516.52,-150.66 1820.15,-109.24"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="1821.05,-112.65 1830.48,-107.82 1820.09,-105.72 1821.05,-112.65"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
 <g id="a_node14"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="2029.5,-56.5 2029.5,-108.5 2243.5,-108.5 2243.5,-56.5 2029.5,-56.5"/>
-<text text-anchor="start" x="2037.5" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="2037.5" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getStringPage__16dMsgString</text>
-<text text-anchor="start" x="2037.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlUcUcP10J2DTextBoxP10J2DText</text>
-<text text-anchor="middle" x="2136.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">BoxP7JUTFontP10COutFont_cUc.s</text>
+<polygon fill="white" stroke="#bfbfbf" points="2062.5,-62 2062.5,-103 2232.5,-103 2232.5,-62 2062.5,-62"/>
+<text text-anchor="start" x="2070.5" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
+<text text-anchor="start" x="2070.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getMessage__16dMsgString</text>
+<text text-anchor="middle" x="2147.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlPc.s</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node14 -->
 <g id="edge14" class="edge">
 <title>Node1&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M1308.54,-158.69C1438.09,-156.27 1750.14,-146.84 2019.51,-109.2"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2020.06,-112.66 2029.47,-107.79 2019.08,-105.73 2020.06,-112.66"/>
-</g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="2261.5,-62 2261.5,-103 2431.5,-103 2431.5,-62 2261.5,-62"/>
-<text text-anchor="start" x="2269.5" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="2269.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">_base/getMessage__16dMsgString</text>
-<text text-anchor="middle" x="2346.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">Base_cFUlPc.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node15 -->
-<g id="edge15" class="edge">
-<title>Node1&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M1308.81,-158.14C1497.73,-153.69 2069.18,-138.12 2252.5,-109 2258.75,-108.01 2265.17,-106.76 2271.6,-105.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2272.71,-108.69 2281.66,-103.03 2271.13,-101.87 2272.71,-108.69"/>
-</g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="2450,-62 2450,-103 2653,-103 2653,-62 2450,-62"/>
-<text text-anchor="start" x="2458" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="2458" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">_base/resetStringLocal</text>
-<text text-anchor="middle" x="2551.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">__16dMsgStringBase_cFP10J2DTextBox.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node16 -->
-<g id="edge16" class="edge">
-<title>Node1&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M1308.79,-158.39C1520.24,-154.34 2218.36,-138.96 2440.5,-109 2448.44,-107.93 2456.65,-106.56 2464.84,-105.01"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2465.67,-108.41 2474.81,-103.04 2464.32,-101.55 2465.67,-108.41"/>
-</g>
-<!-- Node17 -->
-<g id="node17" class="node">
-<title>Node17</title>
-<g id="a_node17"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="2671,-56.5 2671,-108.5 2850,-108.5 2850,-56.5 2671,-56.5"/>
-<text text-anchor="start" x="2679" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">asm/d/msg/d_msg_string</text>
-<text text-anchor="start" x="2679" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">_base/drawOutFontLocal</text>
-<text text-anchor="start" x="2679" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">__16dMsgStringBase_cFP10J2DText</text>
-<text text-anchor="middle" x="2760.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Boxf.s</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node17 -->
-<g id="edge17" class="edge">
-<title>Node1&#45;&gt;Node17</title>
-<path fill="none" stroke="midnightblue" d="M1308.51,-159.1C1541.41,-157.29 2375.39,-148.27 2661.01,-109.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="2661.53,-112.51 2670.94,-107.64 2660.55,-105.58 2661.53,-112.51"/>
+<path fill="none" stroke="midnightblue" d="M1022.78,-158.43C1222.39,-154.66 1852.53,-140.52 2053.5,-109 2059.8,-108.01 2066.29,-106.76 2072.77,-105.35"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="2073.97,-108.66 2082.92,-103 2072.39,-101.84 2073.97,-108.66"/>
 </g>
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge4" class="edge">

@@ -94,7 +94,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/endDL__17J3DDisplayListObjFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/beginPatch__17J3DDisplayListObjFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/endPatch__17J3DDisplayListObjFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/entry__9J3DPacketFP13J3DDrawBuffer.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/addChildPacket__9J3DPacketFP9J3DPacket.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/__ct__13J3DDrawPacketFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/__dt__13J3DDrawPacketFv.s&quot;</code><br />
@@ -115,7 +114,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/prepareDraw__14J3DShapePacketCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/draw__14J3DShapePacketFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/drawFast__14J3DShapePacketFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/draw__9J3DPacketFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DPacket/entry__12J3DMatPacketFP13J3DDrawBuffer.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for J3DPacket.cpp:</div>
@@ -169,8 +167,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3a909ff9ba1a30267af3e80c886dd49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001ae63c4a8e50b5cd3c533c1537a22b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DPacket_8cpp.html#a001ae63c4a8e50b5cd3c533c1537a22b">endPatch__17J3DDisplayListObjFv</a> ()</td></tr>
 <tr class="separator:a001ae63c4a8e50b5cd3c533c1537a22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0790028347edef8af86818a8de8b44e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DPacket_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a> ()</td></tr>
-<tr class="separator:a0790028347edef8af86818a8de8b44e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6182f0ec775b094125fcf5d9f73cd28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DPacket_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a> ()</td></tr>
+<tr class="separator:ae6182f0ec775b094125fcf5d9f73cd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0215185724a46292debaad390148bae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DPacket_8cpp.html#a0215185724a46292debaad390148bae3">addChildPacket__9J3DPacketFP9J3DPacket</a> ()</td></tr>
 <tr class="separator:a0215185724a46292debaad390148bae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a659d64ff3f4adb57387d301f55a77a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DPacket_8cpp.html#a2a659d64ff3f4adb57387d301f55a77a">__ct__13J3DDrawPacketFv</a> ()</td></tr>
@@ -802,14 +800,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0790028347edef8af86818a8de8b44e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0790028347edef8af86818a8de8b44e3">&#9670;&nbsp;</a></span>entry__9J3DPacketFP13J3DDrawBuffer()</h2>
+<a id="ae6182f0ec775b094125fcf5d9f73cd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6182f0ec775b094125fcf5d9f73cd28">&#9670;&nbsp;</a></span>entry__9J3DPacketFP13J3DDrawBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void entry__9J3DPacketFP13J3DDrawBuffer </td>
+          <td class="memname">bool entry__9J3DPacketFP13J3DDrawBuffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1301,13 +1299,13 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#aa6c82023eef6059bc7570f711a407f77">draw__13J3DDrawPacketFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#aad2110a461e7ec1b9c98609339e59da4">__dt__13J3DDrawPacketFv</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aJ3DPacket_8cpp_html_a0790028347edef8af86818a8de8b44e3"><div class="ttname"><a href="J3DPacket_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a></div><div class="ttdeci">void entry__9J3DPacketFP13J3DDrawBuffer()</div></div>
 <div class="ttc" id="aJ3DPacket_8cpp_html_aa6c82023eef6059bc7570f711a407f77"><div class="ttname"><a href="J3DPacket_8cpp.html#aa6c82023eef6059bc7570f711a407f77">draw__13J3DDrawPacketFv</a></div><div class="ttdeci">void draw__13J3DDrawPacketFv()</div></div>
 <div class="ttc" id="aJ3DPacket_8cpp_html_aad2110a461e7ec1b9c98609339e59da4"><div class="ttname"><a href="J3DPacket_8cpp.html#aad2110a461e7ec1b9c98609339e59da4">__dt__13J3DDrawPacketFv</a></div><div class="ttdeci">void __dt__13J3DDrawPacketFv()</div></div>
+<div class="ttc" id="aJ3DPacket_8cpp_html_ae6182f0ec775b094125fcf5d9f73cd28"><div class="ttname"><a href="J3DPacket_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a></div><div class="ttdeci">bool entry__9J3DPacketFP13J3DDrawBuffer()</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1333,7 +1331,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#abcf64058511d63a3ccdef2061f315eed">draw__14J3DShapePacketFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a1594e435df3d4a444cfc18ac01bec1b6">__dt__14J3DShapePacketFv</a>,</div>
 <div class="line">}</div>
@@ -1356,7 +1354,7 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a71c9af7ab1879f9004c307618e31bf7f">draw__9J3DPacketFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DPacket_8cpp.html#a74df1441a424e26ea09e65cb6dbbae75">__dt__9J3DPacketFv</a>,</div>
 <div class="line">}</div>

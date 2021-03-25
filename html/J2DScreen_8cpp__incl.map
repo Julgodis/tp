@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J2DGraph/J2DScreen.cpp" name="libs/JSystem/J2DGraph/J2DScreen.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4100,5,4259,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3727,5,3885,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="143,213,251,240"/>
 <area shape="rect" id="node4" href="$J2DScreen_8h.html" title=" " alt="" coords="162,117,375,143"/>
@@ -30,9 +30,6 @@
 <area shape="rect" id="node29" title=" " alt="" coords="6709,102,6956,158"/>
 <area shape="rect" id="node30" title=" " alt="" coords="6980,95,7216,165"/>
 <area shape="rect" id="node31" title=" " alt="" coords="7240,95,7564,165"/>
-<area shape="rect" id="node32" title=" " alt="" coords="7588,102,7752,158"/>
-<area shape="rect" id="node33" title=" " alt="" coords="7776,109,8025,151"/>
-<area shape="rect" id="node34" title=" " alt="" coords="8049,102,8277,158"/>
-<area shape="rect" id="node35" title=" " alt="" coords="8301,95,8537,165"/>
-<area shape="rect" id="node36" title=" " alt="" coords="8561,102,8808,158"/>
+<area shape="rect" id="node32" title=" " alt="" coords="7588,109,7837,151"/>
+<area shape="rect" id="node33" title=" " alt="" coords="7861,102,8089,158"/>
 </map>

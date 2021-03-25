@@ -94,7 +94,6 @@ $(function() {
 <code>#include &quot;asm/m_Do/m_Do_machine/exceptionRestart__Fv.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_machine/myExceptionCallback__FUsP9OSContextUlUl.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_machine/fault_callback_scroll__FUsP9OSContextUlUl.s&quot;</code><br />
-<code>#include &quot;asm/m_Do/m_Do_machine/my_PrintHeap__FPCcUl.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_machine/my_SysPrintHeap__FPCcPvUl.s&quot;</code><br />
 <code>#include &quot;asm/m_Do/m_Do_machine/mDoMch_Create__Fv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -169,8 +168,8 @@ Functions</h2></td></tr>
 <tr class="separator:a136f20700a64d3e4163e8b5b25d5eaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa86f5ff536a3daecec3b54b576b247fe"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__machine_8cpp.html#aa86f5ff536a3daecec3b54b576b247fe">fault_callback_scroll</a> (<a class="el" href="types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>, <a class="el" href="structOSContext.html">OSContext</a> *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
 <tr class="separator:aa86f5ff536a3daecec3b54b576b247fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2a9870de45e75e3772229d463199503"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__machine_8cpp.html#ad2a9870de45e75e3772229d463199503">my_PrintHeap</a> (char const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
-<tr class="separator:ad2a9870de45e75e3772229d463199503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2771804e1fcd2db43ba3b5a2e0367f1c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__machine_8cpp.html#a2771804e1fcd2db43ba3b5a2e0367f1c">my_PrintHeap</a> (char const *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
+<tr class="separator:a2771804e1fcd2db43ba3b5a2e0367f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ee803fccf5b06fe0d8a70d4e02bab5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__machine_8cpp.html#a95ee803fccf5b06fe0d8a70d4e02bab5">my_SysPrintHeap</a> (char const *, void *, <a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>)</td></tr>
 <tr class="separator:a95ee803fccf5b06fe0d8a70d4e02bab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7b3d323bcd275f14b18e39e717b5f70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="m__Do__machine_8cpp.html#aa7b3d323bcd275f14b18e39e717b5f70">mDoMch_Create</a> ()</td></tr>
@@ -2005,8 +2004,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad2a9870de45e75e3772229d463199503"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2a9870de45e75e3772229d463199503">&#9670;&nbsp;</a></span>my_PrintHeap()</h2>
+<a id="a2771804e1fcd2db43ba3b5a2e0367f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2771804e1fcd2db43ba3b5a2e0367f1c">&#9670;&nbsp;</a></span>my_PrintHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2015,7 +2014,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static asm void my_PrintHeap </td>
+          <td class="memname">static void my_PrintHeap </td>
           <td>(</td>
           <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>param_0</em>, </td>
@@ -3513,7 +3512,7 @@ Variables</h2></td></tr>
 <div class="line">    </div>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="am__Do__machine_8cpp_html_a0e9594ee38e8036957d92fcf708044d1"><div class="ttname"><a href="m__Do__machine_8cpp.html#a0e9594ee38e8036957d92fcf708044d1">g_ntscZeldaIntDf</a></div><div class="ttdeci">static SECTION_DATA u8 g_ntscZeldaIntDf[60]</div><div class="ttdef"><b>Definition:</b> m_Do_machine.cpp:489</div></div>
+<div class="ttc" id="am__Do__machine_8cpp_html_a0e9594ee38e8036957d92fcf708044d1"><div class="ttname"><a href="m__Do__machine_8cpp.html#a0e9594ee38e8036957d92fcf708044d1">g_ntscZeldaIntDf</a></div><div class="ttdeci">static SECTION_DATA u8 g_ntscZeldaIntDf[60]</div><div class="ttdef"><b>Definition:</b> m_Do_machine.cpp:484</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

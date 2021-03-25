@@ -107,7 +107,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/load__28J3DShapeMtxYBBoardConcatViewCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/__dt__28J3DShapeMtxYBBoardConcatViewFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getType__28J3DShapeMtxYBBoardConcatViewCFv.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__21J3DShapeMtxConcatViewCFiUs.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getUseMtxIndex__11J3DShapeMtxCFUs.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/__dt__27J3DShapeMtxBBoardConcatViewFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getType__27J3DShapeMtxBBoardConcatViewCFv.s&quot;</code><br />
@@ -115,7 +114,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getType__26J3DShapeMtxMultiConcatViewCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/__dt__16J3DShapeMtxMultiFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getType__16J3DShapeMtxMultiCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/J3DGraphBase/J3DShapeMtx/getUseMtxNum__16J3DShapeMtxMultiCFv.s&quot;</code><br />
@@ -273,8 +271,8 @@ Functions</h2></td></tr>
 <tr class="separator:a261dd988680f5f2fdb766d13835a60ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53cb0bb0c4fff84dd66ebfad89e18f58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DShapeMtx_8cpp.html#a53cb0bb0c4fff84dd66ebfad89e18f58">J3DMtxProjConcat</a> (<a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)[4], <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)[4], <a class="el" href="types_8h.html#a5f6906312a689f27d70e9d086649d3fd">f32</a>(*)[4])</td></tr>
 <tr class="separator:a53cb0bb0c4fff84dd66ebfad89e18f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802b617cc1208a2feadb72cbef3b461d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a> ()</td></tr>
-<tr class="separator:a802b617cc1208a2feadb72cbef3b461d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f606db53e5f536376ad43a22ecff73f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a> ()</td></tr>
+<tr class="separator:a7f606db53e5f536376ad43a22ecff73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a498e6440d5c316e2672169ee4ed92309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DShapeMtx_8cpp.html#a498e6440d5c316e2672169ee4ed92309">__dl__FPv</a> ()</td></tr>
 <tr class="separator:a498e6440d5c316e2672169ee4ed92309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f05960aefd84a173858eb7805a2454b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="J3DShapeMtx_8cpp.html#a3f05960aefd84a173858eb7805a2454b">J3DFifoLoadPosMtxImm__FPA4_fUl</a> ()</td></tr>
@@ -932,14 +930,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a802b617cc1208a2feadb72cbef3b461d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a802b617cc1208a2feadb72cbef3b461d">&#9670;&nbsp;</a></span>getUseMtxNum__11J3DShapeMtxCFv()</h2>
+<a id="a7f606db53e5f536376ad43a22ecff73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f606db53e5f536376ad43a22ecff73f">&#9670;&nbsp;</a></span>getUseMtxNum__11J3DShapeMtxCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getUseMtxNum__11J3DShapeMtxCFv </td>
+          <td class="memname">bool getUseMtxNum__11J3DShapeMtxCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2167,7 +2165,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af06f03bb3dfc382af8a510a95c0b3d03">__dt__11J3DShapeMtxFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#aa11b7da64dded1f9139ab4e2176c9e4b">getType__11J3DShapeMtxCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af494afbd32f69d496ad05f444ceb24f3">getUseMtxIndex__11J3DShapeMtxCFUs</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#ac13df999e719c8e41408845fdf8e437a">load__11J3DShapeMtxCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a5721d548c4a29a38125a0f1b5578c74a">calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f</a>,</div>
@@ -2175,7 +2173,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aJ3DShapeMtx_8cpp_html_a5721d548c4a29a38125a0f1b5578c74a"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#a5721d548c4a29a38125a0f1b5578c74a">calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f</a></div><div class="ttdeci">void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f()</div></div>
-<div class="ttc" id="aJ3DShapeMtx_8cpp_html_a802b617cc1208a2feadb72cbef3b461d"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a></div><div class="ttdeci">void getUseMtxNum__11J3DShapeMtxCFv()</div></div>
+<div class="ttc" id="aJ3DShapeMtx_8cpp_html_a7f606db53e5f536376ad43a22ecff73f"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a></div><div class="ttdeci">bool getUseMtxNum__11J3DShapeMtxCFv()</div></div>
 <div class="ttc" id="aJ3DShapeMtx_8cpp_html_aa11b7da64dded1f9139ab4e2176c9e4b"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#aa11b7da64dded1f9139ab4e2176c9e4b">getType__11J3DShapeMtxCFv</a></div><div class="ttdeci">void getType__11J3DShapeMtxCFv()</div></div>
 <div class="ttc" id="aJ3DShapeMtx_8cpp_html_ac13df999e719c8e41408845fdf8e437a"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#ac13df999e719c8e41408845fdf8e437a">load__11J3DShapeMtxCFv</a></div><div class="ttdeci">void load__11J3DShapeMtxCFv()</div></div>
 <div class="ttc" id="aJ3DShapeMtx_8cpp_html_af06f03bb3dfc382af8a510a95c0b3d03"><div class="ttname"><a href="J3DShapeMtx_8cpp.html#af06f03bb3dfc382af8a510a95c0b3d03">__dt__11J3DShapeMtxFv</a></div><div class="ttdeci">void __dt__11J3DShapeMtxFv()</div></div>
@@ -2230,7 +2228,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#abd883741845aa79b098d994caa66d378">__dt__21J3DShapeMtxConcatViewFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af78c6d118441e2d3c85fbf22f81169cf">getType__21J3DShapeMtxConcatViewCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af494afbd32f69d496ad05f444ceb24f3">getUseMtxIndex__11J3DShapeMtxCFUs</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#ac758d6270922cf224306c0129cd5f7d9">load__21J3DShapeMtxConcatViewCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a5721d548c4a29a38125a0f1b5578c74a">calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f</a>,</div>
@@ -2294,7 +2292,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a2089e7d498912458b954a92c15098a2e">__dt__27J3DShapeMtxBBoardConcatViewFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#ad7562200622150e5134671bba4da1e9c">getType__27J3DShapeMtxBBoardConcatViewCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af494afbd32f69d496ad05f444ceb24f3">getUseMtxIndex__11J3DShapeMtxCFUs</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#ad6f335b1e469c0fd038382a49615e049">load__27J3DShapeMtxBBoardConcatViewCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a5721d548c4a29a38125a0f1b5578c74a">calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f</a>,</div>
@@ -2323,7 +2321,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a8c05dffceef2c9f1fdcc835d7d9bd60b">__dt__28J3DShapeMtxYBBoardConcatViewFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a8c1210ca8d820c69392d38ed96cbc615">getType__28J3DShapeMtxYBBoardConcatViewCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a802b617cc1208a2feadb72cbef3b461d">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a7f606db53e5f536376ad43a22ecff73f">getUseMtxNum__11J3DShapeMtxCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#af494afbd32f69d496ad05f444ceb24f3">getUseMtxIndex__11J3DShapeMtxCFUs</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a92283e679e7906563079d30219fd93c5">load__28J3DShapeMtxYBBoardConcatViewCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="J3DShapeMtx_8cpp.html#a5721d548c4a29a38125a0f1b5578c74a">calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f</a>,</div>

@@ -98,12 +98,10 @@ $(function() {
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/JAISound_tryDie___6JAISeqFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JAISeq/getNumChild__6JAISeqCFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/getChild__6JAISeqFi.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/releaseChild__6JAISeqFi.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/getTrack__6JAISeqFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/getChildTrack__6JAISeqFi.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JAudio2/JAISeq/asSeq__6JAISeqFv.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JAudio2/JAISeq/getTempoMgr__6JAISeqFv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JAISeq.cpp:</div>
@@ -116,17 +114,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAIAudience.html">JAIAudience</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISeqMgr.html">JAISeqMgr</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundID.html">JAISoundID</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry.html">JGeometry</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry_1_1TVec3.html">JGeometry::TVec3&lt; A1 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJGeometry_1_1TVec3____template0.html">JGeometry::TVec3__template0</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISeqMgr.html">JAISeqMgr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundStrategyMgr.html">JAISoundStrategyMgr&lt; A0 &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +129,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJASSoundParams.html">JASSoundParams</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundActivity.html">JAISoundActivity</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAIAudience.html">JAIAudience</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISoundID.html">JAISoundID</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJAISeq.html">JAISeq</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,8 +187,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae085225c6c5e64492cbe006ca65d1edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf2ee540a4041057e7c62ca2eaf4260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a9bf2ee540a4041057e7c62ca2eaf4260">JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity</a> ()</td></tr>
 <tr class="separator:a9bf2ee540a4041057e7c62ca2eaf4260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80b1851939c29e022d43a93e798011fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a80b1851939c29e022d43a93e798011fa">getNumChild__6JAISeqCFv</a> ()</td></tr>
-<tr class="separator:a80b1851939c29e022d43a93e798011fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d520da4d7e5d4865709165c51e89664"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a8d520da4d7e5d4865709165c51e89664">getNumChild__6JAISeqCFv</a> ()</td></tr>
+<tr class="separator:a8d520da4d7e5d4865709165c51e89664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe774c878ae8d62440232699647fb370"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#abe774c878ae8d62440232699647fb370">getChild__6JAISeqFi</a> ()</td></tr>
 <tr class="separator:abe774c878ae8d62440232699647fb370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e70d070d53252e07e722cb947338865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a3e70d070d53252e07e722cb947338865">releaseChild__6JAISeqFi</a> ()</td></tr>
@@ -243,10 +241,10 @@ Functions</h2></td></tr>
 <tr class="separator:a87c04efa1201a6c09b1c30e8d97529fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b1f26a10370faf56a22a0eeb7e9239"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a23b1f26a10370faf56a22a0eeb7e9239">func_802A2328</a> ()</td></tr>
 <tr class="separator:a23b1f26a10370faf56a22a0eeb7e9239"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea22f5ae64f77ce0bf7feec253df5986"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#aea22f5ae64f77ce0bf7feec253df5986">asSe__8JAISoundFv</a> ()</td></tr>
-<tr class="separator:aea22f5ae64f77ce0bf7feec253df5986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820b979dde6f19ab12bc8b6f20a2bf30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a820b979dde6f19ab12bc8b6f20a2bf30">asStream__8JAISoundFv</a> ()</td></tr>
-<tr class="separator:a820b979dde6f19ab12bc8b6f20a2bf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad903c8f3d038b455cc5677c3a757a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#afad903c8f3d038b455cc5677c3a757a8">asSe__8JAISoundFv</a> ()</td></tr>
+<tr class="separator:afad903c8f3d038b455cc5677c3a757a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad637761944ce6533ee744a507a5a5838"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#ad637761944ce6533ee744a507a5a5838">asStream__8JAISoundFv</a> ()</td></tr>
+<tr class="separator:ad637761944ce6533ee744a507a5a5838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaac5931318971f11eef49fc7f37c065f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#aaac5931318971f11eef49fc7f37c065f">die_JAISound___8JAISoundFv</a> ()</td></tr>
 <tr class="separator:aaac5931318971f11eef49fc7f37c065f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac4d0ed916e4bc9c5be80798b1efc9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JAISeq_8cpp.html#a4ac4d0ed916e4bc9c5be80798b1efc9d">increasePrepareCount_JAISound___8JAISoundFv</a> ()</td></tr>
@@ -641,14 +639,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aea22f5ae64f77ce0bf7feec253df5986"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea22f5ae64f77ce0bf7feec253df5986">&#9670;&nbsp;</a></span>asSe__8JAISoundFv()</h2>
+<a id="afad903c8f3d038b455cc5677c3a757a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad903c8f3d038b455cc5677c3a757a8">&#9670;&nbsp;</a></span>asSe__8JAISoundFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void asSe__8JAISoundFv </td>
+          <td class="memname">bool asSe__8JAISoundFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -692,14 +690,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a820b979dde6f19ab12bc8b6f20a2bf30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a820b979dde6f19ab12bc8b6f20a2bf30">&#9670;&nbsp;</a></span>asStream__8JAISoundFv()</h2>
+<a id="ad637761944ce6533ee744a507a5a5838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad637761944ce6533ee744a507a5a5838">&#9670;&nbsp;</a></span>asStream__8JAISoundFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void asStream__8JAISoundFv </td>
+          <td class="memname">bool asStream__8JAISoundFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -955,14 +953,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a80b1851939c29e022d43a93e798011fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80b1851939c29e022d43a93e798011fa">&#9670;&nbsp;</a></span>getNumChild__6JAISeqCFv()</h2>
+<a id="a8d520da4d7e5d4865709165c51e89664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d520da4d7e5d4865709165c51e89664">&#9670;&nbsp;</a></span>getNumChild__6JAISeqCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getNumChild__6JAISeqCFv </td>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> getNumChild__6JAISeqCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1447,12 +1445,12 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#a80b1851939c29e022d43a93e798011fa">getNumChild__6JAISeqCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#a8d520da4d7e5d4865709165c51e89664">getNumChild__6JAISeqCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#abe774c878ae8d62440232699647fb370">getChild__6JAISeqFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#a3e70d070d53252e07e722cb947338865">releaseChild__6JAISeqFi</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#aea22f5ae64f77ce0bf7feec253df5986">asSe__8JAISoundFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#afad903c8f3d038b455cc5677c3a757a8">asSe__8JAISoundFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#ade3a5dcad8cc21a196a6eaed4ba22cc3">asSeq__6JAISeqFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#a820b979dde6f19ab12bc8b6f20a2bf30">asStream__8JAISoundFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#ad637761944ce6533ee744a507a5a5838">asStream__8JAISoundFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#a6dd334a146135c429dcdc4add6b993e0">getTrack__6JAISeqFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#abbcd357ba0801b95885e2202d12a1309">getChildTrack__6JAISeqFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JAISeq_8cpp.html#ace903d73ac2df7fbfcb515c469f13f2a">getTempoMgr__6JAISeqFv</a>,</div>
@@ -1462,14 +1460,14 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="ttc" id="aJAISeq_8cpp_html_a3e70d070d53252e07e722cb947338865"><div class="ttname"><a href="JAISeq_8cpp.html#a3e70d070d53252e07e722cb947338865">releaseChild__6JAISeqFi</a></div><div class="ttdeci">void releaseChild__6JAISeqFi()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_a6dd334a146135c429dcdc4add6b993e0"><div class="ttname"><a href="JAISeq_8cpp.html#a6dd334a146135c429dcdc4add6b993e0">getTrack__6JAISeqFv</a></div><div class="ttdeci">void getTrack__6JAISeqFv()</div></div>
-<div class="ttc" id="aJAISeq_8cpp_html_a80b1851939c29e022d43a93e798011fa"><div class="ttname"><a href="JAISeq_8cpp.html#a80b1851939c29e022d43a93e798011fa">getNumChild__6JAISeqCFv</a></div><div class="ttdeci">void getNumChild__6JAISeqCFv()</div></div>
-<div class="ttc" id="aJAISeq_8cpp_html_a820b979dde6f19ab12bc8b6f20a2bf30"><div class="ttname"><a href="JAISeq_8cpp.html#a820b979dde6f19ab12bc8b6f20a2bf30">asStream__8JAISoundFv</a></div><div class="ttdeci">void asStream__8JAISoundFv()</div></div>
+<div class="ttc" id="aJAISeq_8cpp_html_a8d520da4d7e5d4865709165c51e89664"><div class="ttname"><a href="JAISeq_8cpp.html#a8d520da4d7e5d4865709165c51e89664">getNumChild__6JAISeqCFv</a></div><div class="ttdeci">s32 getNumChild__6JAISeqCFv()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_abbcd357ba0801b95885e2202d12a1309"><div class="ttname"><a href="JAISeq_8cpp.html#abbcd357ba0801b95885e2202d12a1309">getChildTrack__6JAISeqFi</a></div><div class="ttdeci">void getChildTrack__6JAISeqFi()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_abe774c878ae8d62440232699647fb370"><div class="ttname"><a href="JAISeq_8cpp.html#abe774c878ae8d62440232699647fb370">getChild__6JAISeqFi</a></div><div class="ttdeci">void getChild__6JAISeqFi()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_ace903d73ac2df7fbfcb515c469f13f2a"><div class="ttname"><a href="JAISeq_8cpp.html#ace903d73ac2df7fbfcb515c469f13f2a">getTempoMgr__6JAISeqFv</a></div><div class="ttdeci">void getTempoMgr__6JAISeqFv()</div></div>
+<div class="ttc" id="aJAISeq_8cpp_html_ad637761944ce6533ee744a507a5a5838"><div class="ttname"><a href="JAISeq_8cpp.html#ad637761944ce6533ee744a507a5a5838">asStream__8JAISoundFv</a></div><div class="ttdeci">bool asStream__8JAISoundFv()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_ad9838ac44341ab32fbb01497d99fa083"><div class="ttname"><a href="JAISeq_8cpp.html#ad9838ac44341ab32fbb01497d99fa083">JAISound_tryDie___6JAISeqFv</a></div><div class="ttdeci">void JAISound_tryDie___6JAISeqFv()</div></div>
 <div class="ttc" id="aJAISeq_8cpp_html_ade3a5dcad8cc21a196a6eaed4ba22cc3"><div class="ttname"><a href="JAISeq_8cpp.html#ade3a5dcad8cc21a196a6eaed4ba22cc3">asSeq__6JAISeqFv</a></div><div class="ttdeci">void asSeq__6JAISeqFv()</div></div>
-<div class="ttc" id="aJAISeq_8cpp_html_aea22f5ae64f77ce0bf7feec253df5986"><div class="ttname"><a href="JAISeq_8cpp.html#aea22f5ae64f77ce0bf7feec253df5986">asSe__8JAISoundFv</a></div><div class="ttdeci">void asSe__8JAISoundFv()</div></div>
+<div class="ttc" id="aJAISeq_8cpp_html_afad903c8f3d038b455cc5677c3a757a8"><div class="ttname"><a href="JAISeq_8cpp.html#afad903c8f3d038b455cc5677c3a757a8">asSe__8JAISoundFv</a></div><div class="ttdeci">bool asSe__8JAISoundFv()</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
 </div>

@@ -1,5 +1,5 @@
 <map id="libs/JSystem/J2DGraph/J2DTextBoxEx.cpp" name="libs/JSystem/J2DGraph/J2DTextBoxEx.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="3844,5,4003,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3700,5,3859,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="136,213,244,240"/>
 <area shape="rect" id="node4" href="$J2DTextBoxEx_8h.html" title=" " alt="" coords="162,109,349,151"/>
@@ -32,6 +32,5 @@
 <area shape="rect" id="node31" title=" " alt="" coords="7022,102,7315,158"/>
 <area shape="rect" id="node32" title=" " alt="" coords="7339,102,7523,158"/>
 <area shape="rect" id="node33" title=" " alt="" coords="7548,102,7781,158"/>
-<area shape="rect" id="node34" title=" " alt="" coords="7806,102,8081,158"/>
-<area shape="rect" id="node35" title=" " alt="" coords="8105,102,8360,158"/>
+<area shape="rect" id="node34" title=" " alt="" coords="7805,102,8060,158"/>
 </map>

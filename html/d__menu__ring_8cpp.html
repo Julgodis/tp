@@ -87,7 +87,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_ring/__ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/__dt__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/_create__12dMenu_Ring_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/_delete__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/_move__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/_draw__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/setKanteraPos__12dMenu_Ring_cFff.s&quot;</code><br />
@@ -111,8 +110,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_ring/stick_wait_proc__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/stick_move_init__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/stick_move_proc__12dMenu_Ring_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/stick_explain_init__12dMenu_Ring_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/stick_explain_force_init__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/stick_explain_proc__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/stick_explain_force_proc__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/setSelectItem__12dMenu_Ring_cFiUc.s&quot;</code><br />
@@ -122,8 +119,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_ring/getItemNum__12dMenu_Ring_cFUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/getItemMaxNum__12dMenu_Ring_cFUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/checkExplainForce__12dMenu_Ring_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/checkCombineBomb__12dMenu_Ring_cFi.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/setCombineBomb__12dMenu_Ring_cFi.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/drawNumber__12dMenu_Ring_cFiiff.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/getItem__12dMenu_Ring_cFiUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/setDoStatus__12dMenu_Ring_cFUc.s&quot;</code><br />
@@ -135,7 +130,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_ring/clacEllipseFunction__12dMenu_Ring_cFfff.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/calcDistance__12dMenu_Ring_cFffff.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/clacEllipsePlotAverage__12dMenu_Ring_cFiff.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_ring/dpdMove__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/openExplain__12dMenu_Ring_cFUc.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/draw__12dMenu_Ring_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_ring/__sinit_d_menu_ring_cpp.s&quot;</code><br />
@@ -182,13 +176,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMsgString__c.html">dMsgString_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DGrafContext.html">J2DGrafContext</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DScreen.html">J2DScreen</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DBasePosition.html">J2DBasePosition</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DPane.html">J2DPane</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DGrafContext.html">J2DGrafContext</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ2DScreen.html">J2DScreen</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCPaneMgr.html">CPaneMgr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,8 +279,8 @@ Functions</h2></td></tr>
 <tr class="separator:a45076ddfab6f76d994c847fced9b4ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b713160ff501e3b49120a0930a265c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a1b713160ff501e3b49120a0930a265c0">checkExplainForce__12dMenu_Ring_cFv</a> ()</td></tr>
 <tr class="separator:a1b713160ff501e3b49120a0930a265c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ab3586bda7116a66654927e2a5af7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a21ab3586bda7116a66654927e2a5af7b">checkCombineBomb__12dMenu_Ring_cFi</a> ()</td></tr>
-<tr class="separator:a21ab3586bda7116a66654927e2a5af7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65412970f4d08ea3927e541a234707d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a65412970f4d08ea3927e541a234707d7">checkCombineBomb__12dMenu_Ring_cFi</a> ()</td></tr>
+<tr class="separator:a65412970f4d08ea3927e541a234707d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5771d9cc3ca792325d7a6ca34cca3dd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a5771d9cc3ca792325d7a6ca34cca3dd5">setCombineBomb__12dMenu_Ring_cFi</a> ()</td></tr>
 <tr class="separator:a5771d9cc3ca792325d7a6ca34cca3dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a574ffdabd13a482a4badb1677cb4c1e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a574ffdabd13a482a4badb1677cb4c1e9">drawNumber__12dMenu_Ring_cFiiff</a> ()</td></tr>
@@ -311,8 +305,8 @@ Functions</h2></td></tr>
 <tr class="separator:a10bcc32900e0c3b8b8f59d729cecbc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a147d91fb69af8d4b464a39c628bbcae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a147d91fb69af8d4b464a39c628bbcae8">clacEllipsePlotAverage__12dMenu_Ring_cFiff</a> ()</td></tr>
 <tr class="separator:a147d91fb69af8d4b464a39c628bbcae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7beff8151e58e4c0b2f7c5566efe66fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a7beff8151e58e4c0b2f7c5566efe66fd">dpdMove__12dMenu_Ring_cFv</a> ()</td></tr>
-<tr class="separator:a7beff8151e58e4c0b2f7c5566efe66fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2284d897e311a175bce298aac4bffba0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a2284d897e311a175bce298aac4bffba0">dpdMove__12dMenu_Ring_cFv</a> ()</td></tr>
+<tr class="separator:a2284d897e311a175bce298aac4bffba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3aefda50af311a647cad25ec1e18bba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#aa3aefda50af311a647cad25ec1e18bba">openExplain__12dMenu_Ring_cFUc</a> ()</td></tr>
 <tr class="separator:aa3aefda50af311a647cad25ec1e18bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a9a9b070975b86b75018184ddbd6b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a22a9a9b070975b86b75018184ddbd6b2">draw__12dMenu_Ring_cFv</a> ()</td></tr>
@@ -327,8 +321,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7bf6937a08c1987d664b9026c1be6e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962fb8561ff7be88cccb1c299e69740e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a962fb8561ff7be88cccb1c299e69740e">dComIfGs_getMixItemIndex</a> (int)</td></tr>
 <tr class="separator:a962fb8561ff7be88cccb1c299e69740e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab688cf77683addcb2fb807c56a2e892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#aab688cf77683addcb2fb807c56a2e892">dComIfGs_getBottleMax</a> ()</td></tr>
-<tr class="separator:aab688cf77683addcb2fb807c56a2e892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cb69b818d2f29ddb0766967bc69f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#ab7cb69b818d2f29ddb0766967bc69f44">dComIfGs_getBottleMax</a> ()</td></tr>
+<tr class="separator:ab7cb69b818d2f29ddb0766967bc69f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c648929018c53492d3287879d5c8cf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a0c648929018c53492d3287879d5c8cf0">dMw_UP_TRIGGER</a> ()</td></tr>
 <tr class="separator:a0c648929018c53492d3287879d5c8cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61bd4377b06bab21282fd26610174bb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a61bd4377b06bab21282fd26610174bb4">dMw_DOWN_TRIGGER</a> ()</td></tr>
@@ -371,8 +365,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4c7ee48a3e5d9043285b54c798da7a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a162d42be78303eec61e06d02cc21a978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a162d42be78303eec61e06d02cc21a978">dComIfGs_getMixItemIndex__Fi</a> ()</td></tr>
 <tr class="separator:a162d42be78303eec61e06d02cc21a978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abde6dcbdcc0b20d7c312e28109c2434a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#abde6dcbdcc0b20d7c312e28109c2434a">dComIfGs_getBottleMax__Fv</a> ()</td></tr>
-<tr class="separator:abde6dcbdcc0b20d7c312e28109c2434a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dcb425cac70481c47d4eb21ceaaff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a06dcb425cac70481c47d4eb21ceaaff0">dComIfGs_getBottleMax__Fv</a> ()</td></tr>
+<tr class="separator:a06dcb425cac70481c47d4eb21ceaaff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d9f5f09d8e63bd7103cb23f7e9f0f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a9d9f5f09d8e63bd7103cb23f7e9f0f82">getSelectItemIndex__21dSv_player_status_a_cCFi</a> ()</td></tr>
 <tr class="separator:a9d9f5f09d8e63bd7103cb23f7e9f0f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e24ad90b226bfff2095e88e284c42d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__ring_8cpp.html#a00e24ad90b226bfff2095e88e284c42d">getItem__17dSv_player_item_cCFib</a> ()</td></tr>
@@ -1522,14 +1516,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a21ab3586bda7116a66654927e2a5af7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21ab3586bda7116a66654927e2a5af7b">&#9670;&nbsp;</a></span>checkCombineBomb__12dMenu_Ring_cFi()</h2>
+<a id="a65412970f4d08ea3927e541a234707d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65412970f4d08ea3927e541a234707d7">&#9670;&nbsp;</a></span>checkCombineBomb__12dMenu_Ring_cFi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void checkCombineBomb__12dMenu_Ring_cFi </td>
+          <td class="memname">bool checkCombineBomb__12dMenu_Ring_cFi </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1761,14 +1755,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aab688cf77683addcb2fb807c56a2e892"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab688cf77683addcb2fb807c56a2e892">&#9670;&nbsp;</a></span>dComIfGs_getBottleMax()</h2>
+<a id="ab7cb69b818d2f29ddb0766967bc69f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7cb69b818d2f29ddb0766967bc69f44">&#9670;&nbsp;</a></span>dComIfGs_getBottleMax()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dComIfGs_getBottleMax </td>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> dComIfGs_getBottleMax </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1778,14 +1772,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abde6dcbdcc0b20d7c312e28109c2434a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abde6dcbdcc0b20d7c312e28109c2434a">&#9670;&nbsp;</a></span>dComIfGs_getBottleMax__Fv()</h2>
+<a id="a06dcb425cac70481c47d4eb21ceaaff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06dcb425cac70481c47d4eb21ceaaff0">&#9670;&nbsp;</a></span>dComIfGs_getBottleMax__Fv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dComIfGs_getBottleMax__Fv </td>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> dComIfGs_getBottleMax__Fv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2263,14 +2257,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7beff8151e58e4c0b2f7c5566efe66fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7beff8151e58e4c0b2f7c5566efe66fd">&#9670;&nbsp;</a></span>dpdMove__12dMenu_Ring_cFv()</h2>
+<a id="a2284d897e311a175bce298aac4bffba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2284d897e311a175bce298aac4bffba0">&#9670;&nbsp;</a></span>dpdMove__12dMenu_Ring_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dpdMove__12dMenu_Ring_cFv </td>
+          <td class="memname">bool dpdMove__12dMenu_Ring_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

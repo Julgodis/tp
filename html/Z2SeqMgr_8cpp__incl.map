@@ -1,0 +1,50 @@
+<map id="libs/Z2AudioLib/Z2SeqMgr.cpp" name="libs/Z2AudioLib/Z2SeqMgr.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="5181,5,5381,32"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,102,87,129"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="129,199,237,225"/>
+<area shape="rect" id="node4" href="$Z2SeqMgr_8h.html" title=" " alt="" coords="162,102,325,129"/>
+<area shape="rect" id="node5" title=" " alt="" coords="349,95,530,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="555,95,761,136"/>
+<area shape="rect" id="node7" title=" " alt="" coords="785,95,979,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1003,95,1217,136"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1241,95,1448,136"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1472,95,1708,136"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1733,95,1983,136"/>
+<area shape="rect" id="node12" title=" " alt="" coords="2007,87,2189,143"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2213,95,2437,136"/>
+<area shape="rect" id="node14" title=" " alt="" coords="2461,95,2693,136"/>
+<area shape="rect" id="node15" title=" " alt="" coords="2717,95,2951,136"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2975,95,3234,136"/>
+<area shape="rect" id="node17" title=" " alt="" coords="3258,87,3439,143"/>
+<area shape="rect" id="node18" title=" " alt="" coords="3464,95,3703,136"/>
+<area shape="rect" id="node19" title=" " alt="" coords="3727,95,3917,136"/>
+<area shape="rect" id="node20" title=" " alt="" coords="3941,95,4143,136"/>
+<area shape="rect" id="node21" title=" " alt="" coords="4167,95,4370,136"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4395,95,4607,136"/>
+<area shape="rect" id="node23" title=" " alt="" coords="4630,95,4867,136"/>
+<area shape="rect" id="node24" title=" " alt="" coords="4891,95,5134,136"/>
+<area shape="rect" id="node25" title=" " alt="" coords="5158,95,5403,136"/>
+<area shape="rect" id="node26" title=" " alt="" coords="5428,87,5653,143"/>
+<area shape="rect" id="node27" title=" " alt="" coords="5678,87,5859,143"/>
+<area shape="rect" id="node28" title=" " alt="" coords="5884,95,6139,136"/>
+<area shape="rect" id="node29" title=" " alt="" coords="6163,87,6401,143"/>
+<area shape="rect" id="node30" title=" " alt="" coords="6426,80,6658,151"/>
+<area shape="rect" id="node31" title=" " alt="" coords="6682,87,6863,143"/>
+<area shape="rect" id="node32" title=" " alt="" coords="6888,95,7116,136"/>
+<area shape="rect" id="node33" title=" " alt="" coords="7140,95,7379,136"/>
+<area shape="rect" id="node34" title=" " alt="" coords="7403,87,7585,143"/>
+<area shape="rect" id="node35" title=" " alt="" coords="7609,95,7857,136"/>
+<area shape="rect" id="node36" title=" " alt="" coords="7881,95,8129,136"/>
+<area shape="rect" id="node37" title=" " alt="" coords="8153,95,8401,136"/>
+<area shape="rect" id="node38" title=" " alt="" coords="8425,95,8662,136"/>
+<area shape="rect" id="node39" title=" " alt="" coords="8686,95,8942,136"/>
+<area shape="rect" id="node40" title=" " alt="" coords="8966,95,9185,136"/>
+<area shape="rect" id="node41" title=" " alt="" coords="9209,95,9454,136"/>
+<area shape="rect" id="node42" title=" " alt="" coords="9478,95,9689,136"/>
+<area shape="rect" id="node43" title=" " alt="" coords="9713,95,9933,136"/>
+<area shape="rect" id="node44" title=" " alt="" coords="9958,87,10139,143"/>
+<area shape="rect" id="node45" title=" " alt="" coords="10164,95,10419,136"/>
+<area shape="rect" id="node46" title=" " alt="" coords="10443,95,10689,136"/>
+<area shape="rect" id="node47" title=" " alt="" coords="10713,95,10928,136"/>
+<area shape="rect" id="node48" title=" " alt="" coords="10953,95,11185,136"/>
+</map>

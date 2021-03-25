@@ -91,8 +91,6 @@ $(function() {
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReadRegisters.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoWriteMemory.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReadMemory.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoSupportMask.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoVersions.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoOverride.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoReset.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoDisconnect.s&quot;</code><br />
@@ -127,10 +125,10 @@ Functions</h2></td></tr>
 <tr class="separator:a452463e0f8b225a5514541c9362df47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a850211fb424bda2e8b80dca71583a94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#a850211fb424bda2e8b80dca71583a94d">TRKDoReadMemory</a> ()</td></tr>
 <tr class="separator:a850211fb424bda2e8b80dca71583a94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a885967f4a1befc85798bb70c33df37f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#a885967f4a1befc85798bb70c33df37f3">TRKDoSupportMask</a> ()</td></tr>
-<tr class="separator:a885967f4a1befc85798bb70c33df37f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5df8a57903c7657c197487fe5f82f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#adc5df8a57903c7657c197487fe5f82f6">TRKDoVersions</a> ()</td></tr>
-<tr class="separator:adc5df8a57903c7657c197487fe5f82f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e5977c448ceb35561ab0667a62aa88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#ac9e5977c448ceb35561ab0667a62aa88">TRKDoSupportMask</a> ()</td></tr>
+<tr class="separator:ac9e5977c448ceb35561ab0667a62aa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61740c167d8a004370735f8c1aae6504"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#a61740c167d8a004370735f8c1aae6504">TRKDoVersions</a> ()</td></tr>
+<tr class="separator:a61740c167d8a004370735f8c1aae6504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06836d4d262b543d6691f7f16af32ef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#a06836d4d262b543d6691f7f16af32ef2">TRKDoOverride</a> ()</td></tr>
 <tr class="separator:a06836d4d262b543d6691f7f16af32ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af28306eba4da646be462b02ef1ee547d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msghndlr_8cpp.html#af28306eba4da646be462b02ef1ee547d">TRKDoReset</a> ()</td></tr>
@@ -599,14 +597,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a885967f4a1befc85798bb70c33df37f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a885967f4a1befc85798bb70c33df37f3">&#9670;&nbsp;</a></span>TRKDoSupportMask()</h2>
+<a id="ac9e5977c448ceb35561ab0667a62aa88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9e5977c448ceb35561ab0667a62aa88">&#9670;&nbsp;</a></span>TRKDoSupportMask()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TRKDoSupportMask </td>
+          <td class="memname">bool TRKDoSupportMask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -616,14 +614,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adc5df8a57903c7657c197487fe5f82f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc5df8a57903c7657c197487fe5f82f6">&#9670;&nbsp;</a></span>TRKDoVersions()</h2>
+<a id="a61740c167d8a004370735f8c1aae6504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61740c167d8a004370735f8c1aae6504">&#9670;&nbsp;</a></span>TRKDoVersions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void TRKDoVersions </td>
+          <td class="memname">bool TRKDoVersions </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

@@ -104,8 +104,6 @@ $(function() {
 <code>#include &quot;asm/JSystem/JUtility/JUTResFont/getFontCode__10JUTResFontCFi.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JUtility/JUTResFont/loadImage__10JUTResFontFi11_GXTexMapID.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JUtility/JUTResFont/convertSjis__10JUTResFontCFiPUs.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JUtility/JUTResFont/isLeadByte_1Byte__7JUTFontFi.s&quot;</code><br />
-<code>#include &quot;asm/JSystem/JUtility/JUTResFont/isLeadByte_2Byte__7JUTFontFi.s&quot;</code><br />
 <code>#include &quot;asm/JSystem/JUtility/JUTResFont/isLeadByte_ShiftJIS__7JUTFontFi.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for JUTResFont.cpp:</div>
@@ -118,19 +116,19 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structResFONT.html">ResFONT</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__GXTexMapID.html">_GXTexMapID</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUtility.html">JUtility</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUtility_1_1TColor.html">JUtility::TColor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJKRHeap.html">JKRHeap</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTFont.html">JUTFont</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTFont_1_1TWidth.html">JUTFont::TWidth</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structResFONT.html">ResFONT</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJUTResFont.html">JUTResFont</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,10 +175,10 @@ Functions</h2></td></tr>
 <tr class="separator:a22cee3355f086309e2a977bdcdc0ae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cfe1cd4ecc726371d9cf341bff205b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a0cfe1cd4ecc726371d9cf341bff205b4">convertSjis__10JUTResFontCFiPUs</a> ()</td></tr>
 <tr class="separator:a0cfe1cd4ecc726371d9cf341bff205b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60d9d5c1159b79f3777b3fdafbcd2f61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a60d9d5c1159b79f3777b3fdafbcd2f61">isLeadByte_1Byte__7JUTFontFi</a> ()</td></tr>
-<tr class="separator:a60d9d5c1159b79f3777b3fdafbcd2f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cfe499814b1d8d357ccf25da53966b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a1cfe499814b1d8d357ccf25da53966b2">isLeadByte_2Byte__7JUTFontFi</a> ()</td></tr>
-<tr class="separator:a1cfe499814b1d8d357ccf25da53966b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e11ca5c6ed07e94dcd2d049b05f860"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a54e11ca5c6ed07e94dcd2d049b05f860">isLeadByte_1Byte__7JUTFontFi</a> ()</td></tr>
+<tr class="separator:a54e11ca5c6ed07e94dcd2d049b05f860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a890c2ad49976df1a2115925fe13eeff9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a890c2ad49976df1a2115925fe13eeff9">isLeadByte_2Byte__7JUTFontFi</a> ()</td></tr>
+<tr class="separator:a890c2ad49976df1a2115925fe13eeff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac426a0bb38316cc90ab0457838a527f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#ac426a0bb38316cc90ab0457838a527f9">isLeadByte_ShiftJIS__7JUTFontFi</a> ()</td></tr>
 <tr class="separator:ac426a0bb38316cc90ab0457838a527f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad9e715d76b73e7cd90ebd9bc650247"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="JUTResFont_8cpp.html#a1ad9e715d76b73e7cd90ebd9bc650247">operator new[]</a> (<a class="el" href="types_8h.html#a2caf5cd7bcdbe1eefa727f44ffb10bac">u32</a>, <a class="el" href="structJKRHeap.html">JKRHeap</a> *, int)</td></tr>
@@ -1178,14 +1176,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a60d9d5c1159b79f3777b3fdafbcd2f61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60d9d5c1159b79f3777b3fdafbcd2f61">&#9670;&nbsp;</a></span>isLeadByte_1Byte__7JUTFontFi()</h2>
+<a id="a54e11ca5c6ed07e94dcd2d049b05f860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e11ca5c6ed07e94dcd2d049b05f860">&#9670;&nbsp;</a></span>isLeadByte_1Byte__7JUTFontFi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void isLeadByte_1Byte__7JUTFontFi </td>
+          <td class="memname">bool isLeadByte_1Byte__7JUTFontFi </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1195,14 +1193,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1cfe499814b1d8d357ccf25da53966b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cfe499814b1d8d357ccf25da53966b2">&#9670;&nbsp;</a></span>isLeadByte_2Byte__7JUTFontFi()</h2>
+<a id="a890c2ad49976df1a2115925fe13eeff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a890c2ad49976df1a2115925fe13eeff9">&#9670;&nbsp;</a></span>isLeadByte_2Byte__7JUTFontFi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void isLeadByte_2Byte__7JUTFontFi </td>
+          <td class="memname">bool isLeadByte_2Byte__7JUTFontFi </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1664,12 +1662,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JUTResFont_8cpp.html#a60d9d5c1159b79f3777b3fdafbcd2f61">isLeadByte_1Byte__7JUTFontFi</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JUTResFont_8cpp.html#a1cfe499814b1d8d357ccf25da53966b2">isLeadByte_2Byte__7JUTFontFi</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JUTResFont_8cpp.html#a54e11ca5c6ed07e94dcd2d049b05f860">isLeadByte_1Byte__7JUTFontFi</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JUTResFont_8cpp.html#a890c2ad49976df1a2115925fe13eeff9">isLeadByte_2Byte__7JUTFontFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="JUTResFont_8cpp.html#ac426a0bb38316cc90ab0457838a527f9">isLeadByte_ShiftJIS__7JUTFontFi</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aJUTResFont_8cpp_html_a1cfe499814b1d8d357ccf25da53966b2"><div class="ttname"><a href="JUTResFont_8cpp.html#a1cfe499814b1d8d357ccf25da53966b2">isLeadByte_2Byte__7JUTFontFi</a></div><div class="ttdeci">void isLeadByte_2Byte__7JUTFontFi()</div></div>
-<div class="ttc" id="aJUTResFont_8cpp_html_a60d9d5c1159b79f3777b3fdafbcd2f61"><div class="ttname"><a href="JUTResFont_8cpp.html#a60d9d5c1159b79f3777b3fdafbcd2f61">isLeadByte_1Byte__7JUTFontFi</a></div><div class="ttdeci">void isLeadByte_1Byte__7JUTFontFi()</div></div>
+<div class="ttc" id="aJUTResFont_8cpp_html_a54e11ca5c6ed07e94dcd2d049b05f860"><div class="ttname"><a href="JUTResFont_8cpp.html#a54e11ca5c6ed07e94dcd2d049b05f860">isLeadByte_1Byte__7JUTFontFi</a></div><div class="ttdeci">bool isLeadByte_1Byte__7JUTFontFi()</div></div>
+<div class="ttc" id="aJUTResFont_8cpp_html_a890c2ad49976df1a2115925fe13eeff9"><div class="ttname"><a href="JUTResFont_8cpp.html#a890c2ad49976df1a2115925fe13eeff9">isLeadByte_2Byte__7JUTFontFi</a></div><div class="ttdeci">bool isLeadByte_2Byte__7JUTFontFi()</div></div>
 <div class="ttc" id="aJUTResFont_8cpp_html_ac426a0bb38316cc90ab0457838a527f9"><div class="ttname"><a href="JUTResFont_8cpp.html#ac426a0bb38316cc90ab0457838a527f9">isLeadByte_ShiftJIS__7JUTFontFi</a></div><div class="ttdeci">void isLeadByte_ShiftJIS__7JUTFontFi()</div></div>
 </div><!-- fragment -->
 </div>

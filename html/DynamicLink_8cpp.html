@@ -104,19 +104,10 @@ $(function() {
 <code>#include &quot;asm/DynamicLink/do_unlink__20DynamicModuleControlFv.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/getModuleSize__20DynamicModuleControlCFv.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/getModuleTypeString__20DynamicModuleControlCFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/ModuleProlog.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/ModuleEpilog.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/ModuleUnresolved.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/ModuleConstructorsX.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/ModuleDestructorsX.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/do_link__24DynamicModuleControlBaseFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/do_load__24DynamicModuleControlBaseFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/do_unload__24DynamicModuleControlBaseFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/do_unlink__24DynamicModuleControlBaseFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/do_load_async__24DynamicModuleControlBaseFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/dump2__24DynamicModuleControlBaseFv.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/getModuleTypeString__24DynamicModuleControlBaseCFv.s&quot;</code><br />
-<code>#include &quot;asm/DynamicLink/getModuleSize__24DynamicModuleControlBaseCFv.s&quot;</code><br />
 <code>#include &quot;asm/DynamicLink/getModuleName__20DynamicModuleControlCFv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for DynamicLink.cpp:</div>
@@ -198,32 +189,32 @@ Functions</h2></td></tr>
 <tr class="separator:a98aaf273702b73b96952af2df3908f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad42ad6410ab8bfe04fad6b8354c049db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#ad42ad6410ab8bfe04fad6b8354c049db">getModuleTypeString__20DynamicModuleControlCFv</a> ()</td></tr>
 <tr class="separator:ad42ad6410ab8bfe04fad6b8354c049db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5adea4a116d5e212ac49d96c1109b860"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a5adea4a116d5e212ac49d96c1109b860">ModuleProlog</a> ()</td></tr>
-<tr class="separator:a5adea4a116d5e212ac49d96c1109b860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbbf520a983b043a53a9bbb98c8a9957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#acbbf520a983b043a53a9bbb98c8a9957">ModuleEpilog</a> ()</td></tr>
-<tr class="separator:acbbf520a983b043a53a9bbb98c8a9957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6296048be88484c153e44461cc5ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a7d6296048be88484c153e44461cc5ad6">ModuleProlog</a> ()</td></tr>
+<tr class="separator:a7d6296048be88484c153e44461cc5ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364a7a88438e4857f78ccb533aa0aa8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a364a7a88438e4857f78ccb533aa0aa8e">ModuleEpilog</a> ()</td></tr>
+<tr class="separator:a364a7a88438e4857f78ccb533aa0aa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f87881c4c6c43a4ca2832efcb168250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a7f87881c4c6c43a4ca2832efcb168250">ModuleUnresolved</a> ()</td></tr>
 <tr class="separator:a7f87881c4c6c43a4ca2832efcb168250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e42f5f0dd5faf7a2de1b711d7ebf5c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a2e42f5f0dd5faf7a2de1b711d7ebf5c8">ModuleConstructorsX</a> ()</td></tr>
 <tr class="separator:a2e42f5f0dd5faf7a2de1b711d7ebf5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b24f4c4ea9e9425a0861120db2df388"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a2b24f4c4ea9e9425a0861120db2df388">ModuleDestructorsX</a> ()</td></tr>
 <tr class="separator:a2b24f4c4ea9e9425a0861120db2df388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a301ca4fb507fd107e9fa8482f0f2205d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a301ca4fb507fd107e9fa8482f0f2205d">do_link__24DynamicModuleControlBaseFv</a> ()</td></tr>
-<tr class="separator:a301ca4fb507fd107e9fa8482f0f2205d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c12e543eccb6bc352071435eed0fa05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a2c12e543eccb6bc352071435eed0fa05">do_load__24DynamicModuleControlBaseFv</a> ()</td></tr>
-<tr class="separator:a2c12e543eccb6bc352071435eed0fa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad10ee9b701ae70ecefe2f49c8f23a927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#ad10ee9b701ae70ecefe2f49c8f23a927">do_unload__24DynamicModuleControlBaseFv</a> ()</td></tr>
-<tr class="separator:ad10ee9b701ae70ecefe2f49c8f23a927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b85f0dcc2f41377e4cbee2186f95899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a7b85f0dcc2f41377e4cbee2186f95899">do_unlink__24DynamicModuleControlBaseFv</a> ()</td></tr>
-<tr class="separator:a7b85f0dcc2f41377e4cbee2186f95899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187c36947165f86469b77d433157a485"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a187c36947165f86469b77d433157a485">do_load_async__24DynamicModuleControlBaseFv</a> ()</td></tr>
-<tr class="separator:a187c36947165f86469b77d433157a485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22b8ebb54005d912b131c75dc4b663a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#ac22b8ebb54005d912b131c75dc4b663a">do_link__24DynamicModuleControlBaseFv</a> ()</td></tr>
+<tr class="separator:ac22b8ebb54005d912b131c75dc4b663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a880ae23a7f469c6bf1fa7c9ef3fb7637"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a880ae23a7f469c6bf1fa7c9ef3fb7637">do_load__24DynamicModuleControlBaseFv</a> ()</td></tr>
+<tr class="separator:a880ae23a7f469c6bf1fa7c9ef3fb7637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d61aca2b0a6371b4e6c42abd9a44680"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a5d61aca2b0a6371b4e6c42abd9a44680">do_unload__24DynamicModuleControlBaseFv</a> ()</td></tr>
+<tr class="separator:a5d61aca2b0a6371b4e6c42abd9a44680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1243c0cf71fa42719837d5bdd71bd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a3f1243c0cf71fa42719837d5bdd71bd2">do_unlink__24DynamicModuleControlBaseFv</a> ()</td></tr>
+<tr class="separator:a3f1243c0cf71fa42719837d5bdd71bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13c89e4781c03f57487a71de651af78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#ac13c89e4781c03f57487a71de651af78">do_load_async__24DynamicModuleControlBaseFv</a> ()</td></tr>
+<tr class="separator:ac13c89e4781c03f57487a71de651af78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa96b7c142aaeaf2326e645630c63f181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#aa96b7c142aaeaf2326e645630c63f181">dump2__24DynamicModuleControlBaseFv</a> ()</td></tr>
 <tr class="separator:aa96b7c142aaeaf2326e645630c63f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab33b19183ff4b6af3126494c54bfb0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#aab33b19183ff4b6af3126494c54bfb0d">getModuleTypeString__24DynamicModuleControlBaseCFv</a> ()</td></tr>
 <tr class="separator:aab33b19183ff4b6af3126494c54bfb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c246a585df14be8dbcc631197c01f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a0c246a585df14be8dbcc631197c01f27">getModuleSize__24DynamicModuleControlBaseCFv</a> ()</td></tr>
-<tr class="separator:a0c246a585df14be8dbcc631197c01f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03507fa1a8a3c1a5b77d4875fce9e59b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a03507fa1a8a3c1a5b77d4875fce9e59b">getModuleSize__24DynamicModuleControlBaseCFv</a> ()</td></tr>
+<tr class="separator:a03507fa1a8a3c1a5b77d4875fce9e59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bdd48af2ab8c7c2ec6af66bfb9dfd38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a0bdd48af2ab8c7c2ec6af66bfb9dfd38">getModuleName__20DynamicModuleControlCFv</a> ()</td></tr>
 <tr class="separator:a0bdd48af2ab8c7c2ec6af66bfb9dfd38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84010040d9498c45f5bb6fc1c2da238d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a84010040d9498c45f5bb6fc1c2da238d">mDoExt_getArchiveHeap</a> ()</td></tr>
@@ -240,8 +231,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4235530040e23b64fa31e531fc61e0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a070fed179d7ee5be221e2f72f289604f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a070fed179d7ee5be221e2f72f289604f">create__20mDoDvdThd_callback_cFPFPv_PvPv</a> ()</td></tr>
 <tr class="separator:a070fed179d7ee5be221e2f72f289604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8fca5c6c2541738a4a071cf4b132d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a8f8fca5c6c2541738a4a071cf4b132d1">getModuleName__24DynamicModuleControlBaseCFv</a> ()</td></tr>
-<tr class="separator:a8f8fca5c6c2541738a4a071cf4b132d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab390eb64c934defb33c9835c6c65f73e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#ab390eb64c934defb33c9835c6c65f73e">getModuleName__24DynamicModuleControlBaseCFv</a> ()</td></tr>
+<tr class="separator:ab390eb64c934defb33c9835c6c65f73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a545079ea162966c275225b307d1429ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a545079ea162966c275225b307d1429ad">__dt__20DynamicModuleControlFv</a> ()</td></tr>
 <tr class="separator:a545079ea162966c275225b307d1429ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50822d5e9b3169cfa601e786f9cb374e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DynamicLink_8cpp.html#a50822d5e9b3169cfa601e786f9cb374e">alloc__7JKRHeapFUliP7JKRHeap</a> ()</td></tr>
@@ -712,14 +703,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a301ca4fb507fd107e9fa8482f0f2205d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a301ca4fb507fd107e9fa8482f0f2205d">&#9670;&nbsp;</a></span>do_link__24DynamicModuleControlBaseFv()</h2>
+<a id="ac22b8ebb54005d912b131c75dc4b663a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22b8ebb54005d912b131c75dc4b663a">&#9670;&nbsp;</a></span>do_link__24DynamicModuleControlBaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_link__24DynamicModuleControlBaseFv </td>
+          <td class="memname">bool do_link__24DynamicModuleControlBaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -746,14 +737,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c12e543eccb6bc352071435eed0fa05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c12e543eccb6bc352071435eed0fa05">&#9670;&nbsp;</a></span>do_load__24DynamicModuleControlBaseFv()</h2>
+<a id="a880ae23a7f469c6bf1fa7c9ef3fb7637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a880ae23a7f469c6bf1fa7c9ef3fb7637">&#9670;&nbsp;</a></span>do_load__24DynamicModuleControlBaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_load__24DynamicModuleControlBaseFv </td>
+          <td class="memname">bool do_load__24DynamicModuleControlBaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -780,14 +771,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a187c36947165f86469b77d433157a485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a187c36947165f86469b77d433157a485">&#9670;&nbsp;</a></span>do_load_async__24DynamicModuleControlBaseFv()</h2>
+<a id="ac13c89e4781c03f57487a71de651af78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13c89e4781c03f57487a71de651af78">&#9670;&nbsp;</a></span>do_load_async__24DynamicModuleControlBaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_load_async__24DynamicModuleControlBaseFv </td>
+          <td class="memname">bool do_load_async__24DynamicModuleControlBaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -814,14 +805,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b85f0dcc2f41377e4cbee2186f95899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b85f0dcc2f41377e4cbee2186f95899">&#9670;&nbsp;</a></span>do_unlink__24DynamicModuleControlBaseFv()</h2>
+<a id="a3f1243c0cf71fa42719837d5bdd71bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1243c0cf71fa42719837d5bdd71bd2">&#9670;&nbsp;</a></span>do_unlink__24DynamicModuleControlBaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_unlink__24DynamicModuleControlBaseFv </td>
+          <td class="memname">bool do_unlink__24DynamicModuleControlBaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -848,14 +839,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad10ee9b701ae70ecefe2f49c8f23a927"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad10ee9b701ae70ecefe2f49c8f23a927">&#9670;&nbsp;</a></span>do_unload__24DynamicModuleControlBaseFv()</h2>
+<a id="a5d61aca2b0a6371b4e6c42abd9a44680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d61aca2b0a6371b4e6c42abd9a44680">&#9670;&nbsp;</a></span>do_unload__24DynamicModuleControlBaseFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void do_unload__24DynamicModuleControlBaseFv </td>
+          <td class="memname">bool do_unload__24DynamicModuleControlBaseFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -984,14 +975,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8f8fca5c6c2541738a4a071cf4b132d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f8fca5c6c2541738a4a071cf4b132d1">&#9670;&nbsp;</a></span>getModuleName__24DynamicModuleControlBaseCFv()</h2>
+<a id="ab390eb64c934defb33c9835c6c65f73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab390eb64c934defb33c9835c6c65f73e">&#9670;&nbsp;</a></span>getModuleName__24DynamicModuleControlBaseCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getModuleName__24DynamicModuleControlBaseCFv </td>
+          <td class="memname">bool getModuleName__24DynamicModuleControlBaseCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1018,14 +1009,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0c246a585df14be8dbcc631197c01f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c246a585df14be8dbcc631197c01f27">&#9670;&nbsp;</a></span>getModuleSize__24DynamicModuleControlBaseCFv()</h2>
+<a id="a03507fa1a8a3c1a5b77d4875fce9e59b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03507fa1a8a3c1a5b77d4875fce9e59b">&#9670;&nbsp;</a></span>getModuleSize__24DynamicModuleControlBaseCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getModuleSize__24DynamicModuleControlBaseCFv </td>
+          <td class="memname">bool getModuleSize__24DynamicModuleControlBaseCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1239,14 +1230,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acbbf520a983b043a53a9bbb98c8a9957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbbf520a983b043a53a9bbb98c8a9957">&#9670;&nbsp;</a></span>ModuleEpilog()</h2>
+<a id="a364a7a88438e4857f78ccb533aa0aa8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364a7a88438e4857f78ccb533aa0aa8e">&#9670;&nbsp;</a></span>ModuleEpilog()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void ModuleEpilog </td>
+          <td class="memname">void ModuleEpilog </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1256,14 +1247,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5adea4a116d5e212ac49d96c1109b860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5adea4a116d5e212ac49d96c1109b860">&#9670;&nbsp;</a></span>ModuleProlog()</h2>
+<a id="a7d6296048be88484c153e44461cc5ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6296048be88484c153e44461cc5ad6">&#9670;&nbsp;</a></span>ModuleProlog()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void ModuleProlog </td>
+          <td class="memname">void ModuleProlog </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1611,27 +1602,27 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#ac27d3ad8a53bd081e603a76cb0c116d8">__dt__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a8f8fca5c6c2541738a4a071cf4b132d1">getModuleName__24DynamicModuleControlBaseCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a0c246a585df14be8dbcc631197c01f27">getModuleSize__24DynamicModuleControlBaseCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#ab390eb64c934defb33c9835c6c65f73e">getModuleName__24DynamicModuleControlBaseCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a03507fa1a8a3c1a5b77d4875fce9e59b">getModuleSize__24DynamicModuleControlBaseCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#aab33b19183ff4b6af3126494c54bfb0d">getModuleTypeString__24DynamicModuleControlBaseCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a93ca21b10727d8654670ead77745977d">dump__24DynamicModuleControlBaseFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#aa96b7c142aaeaf2326e645630c63f181">dump2__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a2c12e543eccb6bc352071435eed0fa05">do_load__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a187c36947165f86469b77d433157a485">do_load_async__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#ad10ee9b701ae70ecefe2f49c8f23a927">do_unload__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a301ca4fb507fd107e9fa8482f0f2205d">do_link__24DynamicModuleControlBaseFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a7b85f0dcc2f41377e4cbee2186f95899">do_unlink__24DynamicModuleControlBaseFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a880ae23a7f469c6bf1fa7c9ef3fb7637">do_load__24DynamicModuleControlBaseFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#ac13c89e4781c03f57487a71de651af78">do_load_async__24DynamicModuleControlBaseFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a5d61aca2b0a6371b4e6c42abd9a44680">do_unload__24DynamicModuleControlBaseFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#ac22b8ebb54005d912b131c75dc4b663a">do_link__24DynamicModuleControlBaseFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="DynamicLink_8cpp.html#a3f1243c0cf71fa42719837d5bdd71bd2">do_unlink__24DynamicModuleControlBaseFv</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a0c246a585df14be8dbcc631197c01f27"><div class="ttname"><a href="DynamicLink_8cpp.html#a0c246a585df14be8dbcc631197c01f27">getModuleSize__24DynamicModuleControlBaseCFv</a></div><div class="ttdeci">void getModuleSize__24DynamicModuleControlBaseCFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a187c36947165f86469b77d433157a485"><div class="ttname"><a href="DynamicLink_8cpp.html#a187c36947165f86469b77d433157a485">do_load_async__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void do_load_async__24DynamicModuleControlBaseFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a2c12e543eccb6bc352071435eed0fa05"><div class="ttname"><a href="DynamicLink_8cpp.html#a2c12e543eccb6bc352071435eed0fa05">do_load__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void do_load__24DynamicModuleControlBaseFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a301ca4fb507fd107e9fa8482f0f2205d"><div class="ttname"><a href="DynamicLink_8cpp.html#a301ca4fb507fd107e9fa8482f0f2205d">do_link__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void do_link__24DynamicModuleControlBaseFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a7b85f0dcc2f41377e4cbee2186f95899"><div class="ttname"><a href="DynamicLink_8cpp.html#a7b85f0dcc2f41377e4cbee2186f95899">do_unlink__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void do_unlink__24DynamicModuleControlBaseFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_a8f8fca5c6c2541738a4a071cf4b132d1"><div class="ttname"><a href="DynamicLink_8cpp.html#a8f8fca5c6c2541738a4a071cf4b132d1">getModuleName__24DynamicModuleControlBaseCFv</a></div><div class="ttdeci">void getModuleName__24DynamicModuleControlBaseCFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_a03507fa1a8a3c1a5b77d4875fce9e59b"><div class="ttname"><a href="DynamicLink_8cpp.html#a03507fa1a8a3c1a5b77d4875fce9e59b">getModuleSize__24DynamicModuleControlBaseCFv</a></div><div class="ttdeci">bool getModuleSize__24DynamicModuleControlBaseCFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_a3f1243c0cf71fa42719837d5bdd71bd2"><div class="ttname"><a href="DynamicLink_8cpp.html#a3f1243c0cf71fa42719837d5bdd71bd2">do_unlink__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">bool do_unlink__24DynamicModuleControlBaseFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_a5d61aca2b0a6371b4e6c42abd9a44680"><div class="ttname"><a href="DynamicLink_8cpp.html#a5d61aca2b0a6371b4e6c42abd9a44680">do_unload__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">bool do_unload__24DynamicModuleControlBaseFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_a880ae23a7f469c6bf1fa7c9ef3fb7637"><div class="ttname"><a href="DynamicLink_8cpp.html#a880ae23a7f469c6bf1fa7c9ef3fb7637">do_load__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">bool do_load__24DynamicModuleControlBaseFv()</div></div>
 <div class="ttc" id="aDynamicLink_8cpp_html_aa96b7c142aaeaf2326e645630c63f181"><div class="ttname"><a href="DynamicLink_8cpp.html#aa96b7c142aaeaf2326e645630c63f181">dump2__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void dump2__24DynamicModuleControlBaseFv()</div></div>
 <div class="ttc" id="aDynamicLink_8cpp_html_aab33b19183ff4b6af3126494c54bfb0d"><div class="ttname"><a href="DynamicLink_8cpp.html#aab33b19183ff4b6af3126494c54bfb0d">getModuleTypeString__24DynamicModuleControlBaseCFv</a></div><div class="ttdeci">void getModuleTypeString__24DynamicModuleControlBaseCFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_ab390eb64c934defb33c9835c6c65f73e"><div class="ttname"><a href="DynamicLink_8cpp.html#ab390eb64c934defb33c9835c6c65f73e">getModuleName__24DynamicModuleControlBaseCFv</a></div><div class="ttdeci">bool getModuleName__24DynamicModuleControlBaseCFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_ac13c89e4781c03f57487a71de651af78"><div class="ttname"><a href="DynamicLink_8cpp.html#ac13c89e4781c03f57487a71de651af78">do_load_async__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">bool do_load_async__24DynamicModuleControlBaseFv()</div></div>
+<div class="ttc" id="aDynamicLink_8cpp_html_ac22b8ebb54005d912b131c75dc4b663a"><div class="ttname"><a href="DynamicLink_8cpp.html#ac22b8ebb54005d912b131c75dc4b663a">do_link__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">bool do_link__24DynamicModuleControlBaseFv()</div></div>
 <div class="ttc" id="aDynamicLink_8cpp_html_ac27d3ad8a53bd081e603a76cb0c116d8"><div class="ttname"><a href="DynamicLink_8cpp.html#ac27d3ad8a53bd081e603a76cb0c116d8">__dt__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void __dt__24DynamicModuleControlBaseFv()</div></div>
-<div class="ttc" id="aDynamicLink_8cpp_html_ad10ee9b701ae70ecefe2f49c8f23a927"><div class="ttname"><a href="DynamicLink_8cpp.html#ad10ee9b701ae70ecefe2f49c8f23a927">do_unload__24DynamicModuleControlBaseFv</a></div><div class="ttdeci">void do_unload__24DynamicModuleControlBaseFv()</div></div>
 </div><!-- fragment -->
 </div>
 </div>

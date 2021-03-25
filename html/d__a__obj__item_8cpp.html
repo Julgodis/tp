@@ -101,7 +101,6 @@ $(function() {
 <code>#include &quot;asm/a/obj/d_a_obj_item/_daItem_delete__8daItem_cFv.s&quot;</code><br />
 <code>#include &quot;asm/a/obj/d_a_obj_item/procInitNormal__8daItem_cFv.s&quot;</code><br />
 <code>#include &quot;asm/a/obj/d_a_obj_item/procMainNormal__8daItem_cFv.s&quot;</code><br />
-<code>#include &quot;asm/a/obj/d_a_obj_item/procMainEnemyCarry__8daItem_cFv.s&quot;</code><br />
 <code>#include &quot;asm/a/obj/d_a_obj_item/procInitForceGet__8daItem_cFv.s&quot;</code><br />
 <code>#include &quot;asm/a/obj/d_a_obj_item/procMainForceGet__8daItem_cFv.s&quot;</code><br />
 <code>#include &quot;asm/a/obj/d_a_obj_item/procInitSimpleGetDemo__8daItem_cFv.s&quot;</code><br />
@@ -520,10 +519,10 @@ Functions</h2></td></tr>
 <tr class="separator:adf982ed14406190ac85670f85423b1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d399f1d97475b4670f88659c4e3a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#a62d399f1d97475b4670f88659c4e3a89">DeleteBase__12daItemBase_cFPCc</a> ()</td></tr>
 <tr class="separator:a62d399f1d97475b4670f88659c4e3a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac62245711a07056c5bb466fcf88c838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#aac62245711a07056c5bb466fcf88c838">clothCreate__12daItemBase_cFv</a> ()</td></tr>
-<tr class="separator:aac62245711a07056c5bb466fcf88c838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce7f99d6e84e58132d80d86686f6a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#a3ce7f99d6e84e58132d80d86686f6a05">__CreateHeap__12daItemBase_cFv</a> ()</td></tr>
-<tr class="separator:a3ce7f99d6e84e58132d80d86686f6a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07a2ee344eba613b7b8565d08dc29c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#aa07a2ee344eba613b7b8565d08dc29c6">clothCreate__12daItemBase_cFv</a> ()</td></tr>
+<tr class="separator:aa07a2ee344eba613b7b8565d08dc29c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a376778e806ad013b58a3568efc9c547c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#a376778e806ad013b58a3568efc9c547c">__CreateHeap__12daItemBase_cFv</a> ()</td></tr>
+<tr class="separator:a376778e806ad013b58a3568efc9c547c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d838311767630bf7c2cbcf928c65ce8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#a0d838311767630bf7c2cbcf928c65ce8">DrawBase__12daItemBase_cFv</a> ()</td></tr>
 <tr class="separator:a0d838311767630bf7c2cbcf928c65ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97bc2c74b57b803b7ae59bd7fe60c7c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__obj__item_8cpp.html#a97bc2c74b57b803b7ae59bd7fe60c7c9">RotateYBase__12daItemBase_cFv</a> ()</td></tr>
@@ -779,14 +778,14 @@ Variables</h2></td></tr>
 <tr class="separator:a1c8683d0c9bb7b3a4b2df9ff4f5f1834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3ce7f99d6e84e58132d80d86686f6a05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ce7f99d6e84e58132d80d86686f6a05">&#9670;&nbsp;</a></span>__CreateHeap__12daItemBase_cFv()</h2>
+<a id="a376778e806ad013b58a3568efc9c547c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a376778e806ad013b58a3568efc9c547c">&#9670;&nbsp;</a></span>__CreateHeap__12daItemBase_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void __CreateHeap__12daItemBase_cFv </td>
+          <td class="memname">bool __CreateHeap__12daItemBase_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1642,14 +1641,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aac62245711a07056c5bb466fcf88c838"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac62245711a07056c5bb466fcf88c838">&#9670;&nbsp;</a></span>clothCreate__12daItemBase_cFv()</h2>
+<a id="aa07a2ee344eba613b7b8565d08dc29c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07a2ee344eba613b7b8565d08dc29c6">&#9670;&nbsp;</a></span>clothCreate__12daItemBase_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void clothCreate__12daItemBase_cFv </td>
+          <td class="memname">bool clothCreate__12daItemBase_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4532,17 +4531,17 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__mass__s_8cpp.html#a4dddb27a5a32e482babfbbd9e014f282">__dt__12cCcD_CylAttrFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#af8f06d7978a72b505f62dd462f2d518a">CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a5f17cd8e9a83b3dd25f72ab484dc0246">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ab4b756a9a89ef38448711c73edeac202">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ac86c9501b41de9030dd536048a26b0f4">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a0dd4d6cd32e490cb482ee4070f8c4f46">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ac678b5fa657f6889a2902d8a3ea4b6d5">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a46ce91ddbf30f60d6675e1cabc1185e7">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ad82cc04f4ec587d482c397f225e5ace1">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#adb7a6adaf3067191e290b812e12f30d0">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ae4e9bab708756ac0d700a4f0eceb0646">CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ab0232bb8b56ac8db28382c2ec7f0d54d">CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#abc05c22c43f1f37d50df30b3843693e8">CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#acc5b337a92a84ed2f096d052cc5f80d3">CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ab30d6fb34e8b4d1048dc4d240337ef4d">CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#aee894b9c89e00ff3f1371cb29937587d">CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a4563423bd46f1b3413438f9aad574d78">CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a5f071c49d775371c0bc71a5eaa188ab0">CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#acb6c1e4f25c31f61bfe80d6d111581ac">CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a3599b7e10aedff9f3ca948ecb64df337">CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a535dbd80d89d5e041ea5f5c4d2978b10">GetCoCP__12cCcD_CylAttrCFv</a>,</div>
@@ -4554,17 +4553,18 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#a18300e43f45071376cf37108d70d7536">func_80264A5C</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ac__cc__d_8cpp_html_a18300e43f45071376cf37108d70d7536"><div class="ttname"><a href="c__cc__d_8cpp.html#a18300e43f45071376cf37108d70d7536">func_80264A5C</a></div><div class="ttdeci">static void func_80264A5C()</div><div class="ttdef"><b>Definition:</b> c_cc_d.cpp:1409</div></div>
+<div class="ttc" id="ac__cc__d_8cpp_html_a18300e43f45071376cf37108d70d7536"><div class="ttname"><a href="c__cc__d_8cpp.html#a18300e43f45071376cf37108d70d7536">func_80264A5C</a></div><div class="ttdeci">static void func_80264A5C()</div><div class="ttdef"><b>Definition:</b> c_cc_d.cpp:1384</div></div>
 <div class="ttc" id="ad__a__obj_8cpp_html_a2dae7bf8d81c9bbd062196c89444cabe"><div class="ttname"><a href="d__a__obj_8cpp.html#a2dae7bf8d81c9bbd062196c89444cabe">GetCoCP__12cCcD_CylAttrFv</a></div><div class="ttdeci">void GetCoCP__12cCcD_CylAttrFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a0dd4d6cd32e490cb482ee4070f8c4f46"><div class="ttname"><a href="d__cc__d_8cpp.html#a0dd4d6cd32e490cb482ee4070f8c4f46">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a0e8d0cae9e8f43f6668b25a0d13cceef"><div class="ttname"><a href="d__cc__d_8cpp.html#a0e8d0cae9e8f43f6668b25a0d13cceef">GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz</a></div><div class="ttdeci">void GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a3599b7e10aedff9f3ca948ecb64df337"><div class="ttname"><a href="d__cc__d_8cpp.html#a3599b7e10aedff9f3ca948ecb64df337">CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_a4563423bd46f1b3413438f9aad574d78"><div class="ttname"><a href="d__cc__d_8cpp.html#a4563423bd46f1b3413438f9aad574d78">CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf</a></div><div class="ttdeci">bool CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_a46ce91ddbf30f60d6675e1cabc1185e7"><div class="ttname"><a href="d__cc__d_8cpp.html#a46ce91ddbf30f60d6675e1cabc1185e7">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz</a></div><div class="ttdeci">bool CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a535dbd80d89d5e041ea5f5c4d2978b10"><div class="ttname"><a href="d__cc__d_8cpp.html#a535dbd80d89d5e041ea5f5c4d2978b10">GetCoCP__12cCcD_CylAttrCFv</a></div><div class="ttdeci">void GetCoCP__12cCcD_CylAttrCFv()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_a5f17cd8e9a83b3dd25f72ab484dc0246"><div class="ttname"><a href="d__cc__d_8cpp.html#a5f17cd8e9a83b3dd25f72ab484dc0246">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_a5f071c49d775371c0bc71a5eaa188ab0"><div class="ttname"><a href="d__cc__d_8cpp.html#a5f071c49d775371c0bc71a5eaa188ab0">CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf</a></div><div class="ttdeci">bool CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a6286fb813d6848edb27483435d9b2f6a"><div class="ttname"><a href="d__cc__d_8cpp.html#a6286fb813d6848edb27483435d9b2f6a">getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape</a></div><div class="ttdeci">void getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_ab0232bb8b56ac8db28382c2ec7f0d54d"><div class="ttname"><a href="d__cc__d_8cpp.html#ab0232bb8b56ac8db28382c2ec7f0d54d">CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_ab30d6fb34e8b4d1048dc4d240337ef4d"><div class="ttname"><a href="d__cc__d_8cpp.html#ab30d6fb34e8b4d1048dc4d240337ef4d">CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_ac678b5fa657f6889a2902d8a3ea4b6d5"><div class="ttname"><a href="d__cc__d_8cpp.html#ac678b5fa657f6889a2902d8a3ea4b6d5">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_ab4b756a9a89ef38448711c73edeac202"><div class="ttname"><a href="d__cc__d_8cpp.html#ab4b756a9a89ef38448711c73edeac202">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz</a></div><div class="ttdeci">bool CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_abc05c22c43f1f37d50df30b3843693e8"><div class="ttname"><a href="d__cc__d_8cpp.html#abc05c22c43f1f37d50df30b3843693e8">CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf</a></div><div class="ttdeci">bool CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_ac86c9501b41de9030dd536048a26b0f4"><div class="ttname"><a href="d__cc__d_8cpp.html#ac86c9501b41de9030dd536048a26b0f4">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_acb6c1e4f25c31f61bfe80d6d111581ac"><div class="ttname"><a href="d__cc__d_8cpp.html#acb6c1e4f25c31f61bfe80d6d111581ac">CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_acc5b337a92a84ed2f096d052cc5f80d3"><div class="ttname"><a href="d__cc__d_8cpp.html#acc5b337a92a84ed2f096d052cc5f80d3">CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf()</div></div>
@@ -4572,7 +4572,6 @@ Variables</h2></td></tr>
 <div class="ttc" id="ad__cc__d_8cpp_html_ad82cc04f4ec587d482c397f225e5ace1"><div class="ttname"><a href="d__cc__d_8cpp.html#ad82cc04f4ec587d482c397f225e5ace1">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_adb7a6adaf3067191e290b812e12f30d0"><div class="ttname"><a href="d__cc__d_8cpp.html#adb7a6adaf3067191e290b812e12f30d0">CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_ae4e9bab708756ac0d700a4f0eceb0646"><div class="ttname"><a href="d__cc__d_8cpp.html#ae4e9bab708756ac0d700a4f0eceb0646">CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_aee894b9c89e00ff3f1371cb29937587d"><div class="ttname"><a href="d__cc__d_8cpp.html#aee894b9c89e00ff3f1371cb29937587d">CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf</a></div><div class="ttdeci">void CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_af8f06d7978a72b505f62dd462f2d518a"><div class="ttname"><a href="d__cc__d_8cpp.html#af8f06d7978a72b505f62dd462f2d518a">CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__mass__s_8cpp_html_a4dddb27a5a32e482babfbbd9e014f282"><div class="ttname"><a href="d__cc__mass__s_8cpp.html#a4dddb27a5a32e482babfbbd9e014f282">__dt__12cCcD_CylAttrFv</a></div><div class="ttdeci">void __dt__12cCcD_CylAttrFv()</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
@@ -4608,8 +4607,8 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a0efdf4bed19829cc8c85a5aef6ffaf7f">setShadow__12daItemBase_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#aac9427c6f6a434f965ae79514cb473cb">animEntry__12daItemBase_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a97bc2c74b57b803b7ae59bd7fe60c7c9">RotateYBase__12daItemBase_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#aac62245711a07056c5bb466fcf88c838">clothCreate__12daItemBase_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a3ce7f99d6e84e58132d80d86686f6a05">__CreateHeap__12daItemBase_cFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#aa07a2ee344eba613b7b8565d08dc29c6">clothCreate__12daItemBase_cFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a376778e806ad013b58a3568efc9c547c">__CreateHeap__12daItemBase_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a7fbdca23c0d097421f6c75c111961edf">chkFlag__12daItemBase_cFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a42ed4336fbe6bfb628d3a91f4309fece">getTevFrm__12daItemBase_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__obj__item_8cpp.html#a4fb568a2bba37578ececf49fb8a4add4">getBtpFrm__12daItemBase_cFv</a>,</div>
@@ -4622,14 +4621,14 @@ Variables</h2></td></tr>
 <div class="ttc" id="ad__a__itembase_8cpp_html_a2589a5df5ec7d5365ecfc12c731d71cd"><div class="ttname"><a href="d__a__itembase_8cpp.html#a2589a5df5ec7d5365ecfc12c731d71cd">setTevStr__12daItemBase_cFv</a></div><div class="ttdeci">void setTevStr__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a0d838311767630bf7c2cbcf928c65ce8"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a0d838311767630bf7c2cbcf928c65ce8">DrawBase__12daItemBase_cFv</a></div><div class="ttdeci">void DrawBase__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a0efdf4bed19829cc8c85a5aef6ffaf7f"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a0efdf4bed19829cc8c85a5aef6ffaf7f">setShadow__12daItemBase_cFv</a></div><div class="ttdeci">void setShadow__12daItemBase_cFv()</div></div>
+<div class="ttc" id="ad__a__obj__item_8cpp_html_a376778e806ad013b58a3568efc9c547c"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a376778e806ad013b58a3568efc9c547c">__CreateHeap__12daItemBase_cFv</a></div><div class="ttdeci">bool __CreateHeap__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a3c9eafcd5acd711c2bdd05de42708e0b"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a3c9eafcd5acd711c2bdd05de42708e0b">setListStart__12daItemBase_cFv</a></div><div class="ttdeci">void setListStart__12daItemBase_cFv()</div></div>
-<div class="ttc" id="ad__a__obj__item_8cpp_html_a3ce7f99d6e84e58132d80d86686f6a05"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a3ce7f99d6e84e58132d80d86686f6a05">__CreateHeap__12daItemBase_cFv</a></div><div class="ttdeci">void __CreateHeap__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a42ed4336fbe6bfb628d3a91f4309fece"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a42ed4336fbe6bfb628d3a91f4309fece">getTevFrm__12daItemBase_cFv</a></div><div class="ttdeci">void getTevFrm__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a4fb568a2bba37578ececf49fb8a4add4"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a4fb568a2bba37578ececf49fb8a4add4">getBtpFrm__12daItemBase_cFv</a></div><div class="ttdeci">void getBtpFrm__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a7fbdca23c0d097421f6c75c111961edf"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a7fbdca23c0d097421f6c75c111961edf">chkFlag__12daItemBase_cFi</a></div><div class="ttdeci">void chkFlag__12daItemBase_cFi()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_a97bc2c74b57b803b7ae59bd7fe60c7c9"><div class="ttname"><a href="d__a__obj__item_8cpp.html#a97bc2c74b57b803b7ae59bd7fe60c7c9">RotateYBase__12daItemBase_cFv</a></div><div class="ttdeci">void RotateYBase__12daItemBase_cFv()</div></div>
+<div class="ttc" id="ad__a__obj__item_8cpp_html_aa07a2ee344eba613b7b8565d08dc29c6"><div class="ttname"><a href="d__a__obj__item_8cpp.html#aa07a2ee344eba613b7b8565d08dc29c6">clothCreate__12daItemBase_cFv</a></div><div class="ttdeci">bool clothCreate__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_aa608e24bc3f38bfa55228b18cd7def98"><div class="ttname"><a href="d__a__obj__item_8cpp.html#aa608e24bc3f38bfa55228b18cd7def98">getCollisionR__12daItemBase_cFv</a></div><div class="ttdeci">void getCollisionR__12daItemBase_cFv()</div></div>
-<div class="ttc" id="ad__a__obj__item_8cpp_html_aac62245711a07056c5bb466fcf88c838"><div class="ttname"><a href="d__a__obj__item_8cpp.html#aac62245711a07056c5bb466fcf88c838">clothCreate__12daItemBase_cFv</a></div><div class="ttdeci">void clothCreate__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_aac9427c6f6a434f965ae79514cb473cb"><div class="ttname"><a href="d__a__obj__item_8cpp.html#aac9427c6f6a434f965ae79514cb473cb">animEntry__12daItemBase_cFv</a></div><div class="ttdeci">void animEntry__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_ab540a1f1a93284feec3e396107d14d33"><div class="ttname"><a href="d__a__obj__item_8cpp.html#ab540a1f1a93284feec3e396107d14d33">getCollisionH__12daItemBase_cFv</a></div><div class="ttdeci">void getCollisionH__12daItemBase_cFv()</div></div>
 <div class="ttc" id="ad__a__obj__item_8cpp_html_ad40f5c1dba912fd1ecb98dabc3633e9b"><div class="ttname"><a href="d__a__obj__item_8cpp.html#ad40f5c1dba912fd1ecb98dabc3633e9b">getShadowSize__12daItemBase_cFv</a></div><div class="ttdeci">void getShadowSize__12daItemBase_cFv()</div></div>
@@ -4668,8 +4667,8 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__alink_8cpp.html#adfcca75abe947c7086f6d80a39a88cf8">func_801446D4</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__a__alink_8cpp_html_a1cb08adad5e21ca4815c30454fe5d97f"><div class="ttname"><a href="d__a__alink_8cpp.html#a1cb08adad5e21ca4815c30454fe5d97f">__dt__12dBgS_ObjAcchFv</a></div><div class="ttdeci">void __dt__12dBgS_ObjAcchFv()</div></div>
-<div class="ttc" id="ad__a__alink_8cpp_html_a88baac35b498cb64a29d8f5b127740d5"><div class="ttname"><a href="d__a__alink_8cpp.html#a88baac35b498cb64a29d8f5b127740d5">func_801446DC</a></div><div class="ttdeci">static void func_801446DC()</div><div class="ttdef"><b>Definition:</b> d_a_alink.cpp:39186</div></div>
-<div class="ttc" id="ad__a__alink_8cpp_html_adfcca75abe947c7086f6d80a39a88cf8"><div class="ttname"><a href="d__a__alink_8cpp.html#adfcca75abe947c7086f6d80a39a88cf8">func_801446D4</a></div><div class="ttdeci">static void func_801446D4()</div><div class="ttdef"><b>Definition:</b> d_a_alink.cpp:39175</div></div>
+<div class="ttc" id="ad__a__alink_8cpp_html_a88baac35b498cb64a29d8f5b127740d5"><div class="ttname"><a href="d__a__alink_8cpp.html#a88baac35b498cb64a29d8f5b127740d5">func_801446DC</a></div><div class="ttdeci">static void func_801446DC()</div><div class="ttdef"><b>Definition:</b> d_a_alink.cpp:38446</div></div>
+<div class="ttc" id="ad__a__alink_8cpp_html_adfcca75abe947c7086f6d80a39a88cf8"><div class="ttname"><a href="d__a__alink_8cpp.html#adfcca75abe947c7086f6d80a39a88cf8">func_801446D4</a></div><div class="ttdeci">static void func_801446D4()</div><div class="ttdef"><b>Definition:</b> d_a_alink.cpp:38435</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4696,14 +4695,14 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__mass__s_8cpp.html#a068745df83ef8518f2c01b495eb6e5c1">__dt__14cCcD_ShapeAttrFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#a800acaa163fa6db44b25ceaacb367df6">CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#adab3f5e9481c2bb7175548f2bdfa7b9e">CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#aa8ed9182371ae43aacb65e44441686de">CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#a01ad4ddba18b188f9774e214116b3e41">CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
@@ -4716,8 +4715,8 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a92c6976e3738ab96ca1d25248f2bb5a5">getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ac__cc__d_8cpp_html_a800acaa163fa6db44b25ceaacb367df6"><div class="ttname"><a href="c__cc__d_8cpp.html#a800acaa163fa6db44b25ceaacb367df6">CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz</a></div><div class="ttdeci">void CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz()</div></div>
-<div class="ttc" id="ac__cc__d_8cpp_html_aa8ed9182371ae43aacb65e44441686de"><div class="ttname"><a href="c__cc__d_8cpp.html#aa8ed9182371ae43aacb65e44441686de">CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf</a></div><div class="ttdeci">void CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf()</div></div>
+<div class="ttc" id="ac__cc__d_8cpp_html_a01ad4ddba18b188f9774e214116b3e41"><div class="ttname"><a href="c__cc__d_8cpp.html#a01ad4ddba18b188f9774e214116b3e41">CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf</a></div><div class="ttdeci">bool CrossCo__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrPf()</div></div>
+<div class="ttc" id="ac__cc__d_8cpp_html_adab3f5e9481c2bb7175548f2bdfa7b9e"><div class="ttname"><a href="c__cc__d_8cpp.html#adab3f5e9481c2bb7175548f2bdfa7b9e">CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz</a></div><div class="ttdeci">bool CrossAtTg__14cCcD_ShapeAttrCFRC14cCcD_ShapeAttrP4cXyz()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a4551de16e4cc159a3a2131329d757061"><div class="ttname"><a href="d__cc__d_8cpp.html#a4551de16e4cc159a3a2131329d757061">GetCoCP__14cCcD_ShapeAttrFv</a></div><div class="ttdeci">void GetCoCP__14cCcD_ShapeAttrFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a92c6976e3738ab96ca1d25248f2bb5a5"><div class="ttname"><a href="d__cc__d_8cpp.html#a92c6976e3738ab96ca1d25248f2bb5a5">getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape</a></div><div class="ttdeci">void getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_ad00af5cd83c91ef9e43ad4c8651552e3"><div class="ttname"><a href="d__cc__d_8cpp.html#ad00af5cd83c91ef9e43ad4c8651552e3">GetCoCP__14cCcD_ShapeAttrCFv</a></div><div class="ttdeci">void GetCoCP__14cCcD_ShapeAttrCFv()</div></div>
@@ -4914,18 +4913,18 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__alink_8cpp.html#a490d30d75196cb7b0beadb93afa9695b">__dt__9cCcD_SttsFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a4252da33fbb7cefe3008609c1538d3d2">GetGStts__9cCcD_SttsCFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#a2193de686c42a745907bccd86f8e0ccf">GetGStts__9cCcD_SttsFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#aef75571291bdc4b3b4baf41a756f3371">GetGStts__9cCcD_SttsCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#add323437fdb619e187da80eee46a05f7">GetGStts__9cCcD_SttsFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#abee80438005a9085ee9a9d03af9524d2">Ct__9cCcD_SttsFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#ad8fb8f27696f6710efa475276733521a">ClrAt__9cCcD_SttsFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="c__cc__d_8cpp.html#a7ef85879ccc8ca913e0f1c8549a68dc1">ClrTg__9cCcD_SttsFv</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ac__cc__d_8cpp_html_a2193de686c42a745907bccd86f8e0ccf"><div class="ttname"><a href="c__cc__d_8cpp.html#a2193de686c42a745907bccd86f8e0ccf">GetGStts__9cCcD_SttsFv</a></div><div class="ttdeci">void GetGStts__9cCcD_SttsFv()</div></div>
 <div class="ttc" id="ac__cc__d_8cpp_html_a7ef85879ccc8ca913e0f1c8549a68dc1"><div class="ttname"><a href="c__cc__d_8cpp.html#a7ef85879ccc8ca913e0f1c8549a68dc1">ClrTg__9cCcD_SttsFv</a></div><div class="ttdeci">void ClrTg__9cCcD_SttsFv()</div></div>
 <div class="ttc" id="ac__cc__d_8cpp_html_ad8fb8f27696f6710efa475276733521a"><div class="ttname"><a href="c__cc__d_8cpp.html#ad8fb8f27696f6710efa475276733521a">ClrAt__9cCcD_SttsFv</a></div><div class="ttdeci">void ClrAt__9cCcD_SttsFv()</div></div>
+<div class="ttc" id="ac__cc__d_8cpp_html_add323437fdb619e187da80eee46a05f7"><div class="ttname"><a href="c__cc__d_8cpp.html#add323437fdb619e187da80eee46a05f7">GetGStts__9cCcD_SttsFv</a></div><div class="ttdeci">bool GetGStts__9cCcD_SttsFv()</div></div>
 <div class="ttc" id="ad__a__alink_8cpp_html_a490d30d75196cb7b0beadb93afa9695b"><div class="ttname"><a href="d__a__alink_8cpp.html#a490d30d75196cb7b0beadb93afa9695b">__dt__9cCcD_SttsFv</a></div><div class="ttdeci">void __dt__9cCcD_SttsFv()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_a4252da33fbb7cefe3008609c1538d3d2"><div class="ttname"><a href="d__cc__d_8cpp.html#a4252da33fbb7cefe3008609c1538d3d2">GetGStts__9cCcD_SttsCFv</a></div><div class="ttdeci">void GetGStts__9cCcD_SttsCFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_abee80438005a9085ee9a9d03af9524d2"><div class="ttname"><a href="d__cc__d_8cpp.html#abee80438005a9085ee9a9d03af9524d2">Ct__9cCcD_SttsFv</a></div><div class="ttdeci">void Ct__9cCcD_SttsFv()</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_aef75571291bdc4b3b4baf41a756f3371"><div class="ttname"><a href="d__cc__d_8cpp.html#aef75571291bdc4b3b4baf41a756f3371">GetGStts__9cCcD_SttsCFv</a></div><div class="ttdeci">bool GetGStts__9cCcD_SttsCFv()</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4952,7 +4951,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a879016fb26aa1f5178eb9e26c6c5b6a8">__dt__9dCcD_SttsFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a4252da33fbb7cefe3008609c1538d3d2">GetGStts__9cCcD_SttsCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#aef75571291bdc4b3b4baf41a756f3371">GetGStts__9cCcD_SttsCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#a6a0f5fcf94e2b325da14607dd18e5b40">GetGStts__9dCcD_SttsFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#adcb08a69b8133b5c4b4a9f7a2e33c7c6">Ct__9dCcD_SttsFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__cc__d_8cpp.html#ad9b50a5fe0e25338a074ecebb85701b2">ClrAt__9dCcD_SttsFv</a>,</div>
@@ -4964,7 +4963,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="ad__cc__d_8cpp_html_a304ade9b1f0be5a65e3154eba418947d"><div class="ttname"><a href="d__cc__d_8cpp.html#a304ade9b1f0be5a65e3154eba418947d">ClrTg__9dCcD_SttsFv</a></div><div class="ttdeci">void ClrTg__9dCcD_SttsFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a6a0f5fcf94e2b325da14607dd18e5b40"><div class="ttname"><a href="d__cc__d_8cpp.html#a6a0f5fcf94e2b325da14607dd18e5b40">GetGStts__9dCcD_SttsFv</a></div><div class="ttdeci">void GetGStts__9dCcD_SttsFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_a879016fb26aa1f5178eb9e26c6c5b6a8"><div class="ttname"><a href="d__cc__d_8cpp.html#a879016fb26aa1f5178eb9e26c6c5b6a8">__dt__9dCcD_SttsFv</a></div><div class="ttdeci">void __dt__9dCcD_SttsFv()</div></div>
-<div class="ttc" id="ad__cc__d_8cpp_html_abd151865f3ece86bbc8ee88f7baf8d1d"><div class="ttname"><a href="d__cc__d_8cpp.html#abd151865f3ece86bbc8ee88f7baf8d1d">func_80085298</a></div><div class="ttdeci">static void func_80085298()</div><div class="ttdef"><b>Definition:</b> d_cc_d.cpp:2165</div></div>
+<div class="ttc" id="ad__cc__d_8cpp_html_abd151865f3ece86bbc8ee88f7baf8d1d"><div class="ttname"><a href="d__cc__d_8cpp.html#abd151865f3ece86bbc8ee88f7baf8d1d">func_80085298</a></div><div class="ttdeci">static void func_80085298()</div><div class="ttdef"><b>Definition:</b> d_cc_d.cpp:2010</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_ad9b50a5fe0e25338a074ecebb85701b2"><div class="ttname"><a href="d__cc__d_8cpp.html#ad9b50a5fe0e25338a074ecebb85701b2">ClrAt__9dCcD_SttsFv</a></div><div class="ttdeci">void ClrAt__9dCcD_SttsFv()</div></div>
 <div class="ttc" id="ad__cc__d_8cpp_html_adcb08a69b8133b5c4b4a9f7a2e33c7c6"><div class="ttname"><a href="d__cc__d_8cpp.html#adcb08a69b8133b5c4b4a9f7a2e33c7c6">Ct__9dCcD_SttsFv</a></div><div class="ttdeci">void Ct__9dCcD_SttsFv()</div></div>
 </div><!-- fragment -->

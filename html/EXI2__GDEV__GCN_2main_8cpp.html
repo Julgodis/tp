@@ -89,9 +89,7 @@ $(function() {
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_pre_continue.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_write.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_read.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_close.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_open.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_shutdown.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_initialize.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.cpp:</div>
@@ -116,12 +114,12 @@ Functions</h2></td></tr>
 <tr class="separator:a138b3dbeeb4331d7b8b439f46286d304"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02c182c3f5e5ad45a6f813cc3ba446cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a02c182c3f5e5ad45a6f813cc3ba446cb">gdev_cc_read</a> ()</td></tr>
 <tr class="separator:a02c182c3f5e5ad45a6f813cc3ba446cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb8c532761b7c854f7fc29ddaff41303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#acb8c532761b7c854f7fc29ddaff41303">gdev_cc_close</a> ()</td></tr>
-<tr class="separator:acb8c532761b7c854f7fc29ddaff41303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a1be0ab4665c9ac0ddcbefeb217eaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a62a1be0ab4665c9ac0ddcbefeb217eaa">gdev_cc_close</a> ()</td></tr>
+<tr class="separator:a62a1be0ab4665c9ac0ddcbefeb217eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a439ca3ef3c94fb932e0ae49d6cc8cbe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a439ca3ef3c94fb932e0ae49d6cc8cbe8">gdev_cc_open</a> ()</td></tr>
 <tr class="separator:a439ca3ef3c94fb932e0ae49d6cc8cbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67292b1b787bb9a21828f802508130e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a67292b1b787bb9a21828f802508130e8">gdev_cc_shutdown</a> ()</td></tr>
-<tr class="separator:a67292b1b787bb9a21828f802508130e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e42f90ee0d2995d3327446e5cba3b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a45e42f90ee0d2995d3327446e5cba3b8">gdev_cc_shutdown</a> ()</td></tr>
+<tr class="separator:a45e42f90ee0d2995d3327446e5cba3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71dd6108de6467e888ea9a69897dfb48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#a71dd6108de6467e888ea9a69897dfb48">gdev_cc_initialize</a> ()</td></tr>
 <tr class="separator:a71dd6108de6467e888ea9a69897dfb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae160684beaba80dfd7a9937c1427e417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__GDEV__GCN_2main_8cpp.html#ae160684beaba80dfd7a9937c1427e417">CircleBufferReadBytes</a> ()</td></tr>
@@ -360,14 +358,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acb8c532761b7c854f7fc29ddaff41303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb8c532761b7c854f7fc29ddaff41303">&#9670;&nbsp;</a></span>gdev_cc_close()</h2>
+<a id="a62a1be0ab4665c9ac0ddcbefeb217eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a1be0ab4665c9ac0ddcbefeb217eaa">&#9670;&nbsp;</a></span>gdev_cc_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void gdev_cc_close </td>
+          <td class="memname">bool gdev_cc_close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -496,14 +494,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a67292b1b787bb9a21828f802508130e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67292b1b787bb9a21828f802508130e8">&#9670;&nbsp;</a></span>gdev_cc_shutdown()</h2>
+<a id="a45e42f90ee0d2995d3327446e5cba3b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e42f90ee0d2995d3327446e5cba3b8">&#9670;&nbsp;</a></span>gdev_cc_shutdown()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void gdev_cc_shutdown </td>
+          <td class="memname">bool gdev_cc_shutdown </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

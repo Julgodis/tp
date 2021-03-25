@@ -1,10 +1,8 @@
 <map id="libs/JSystem/JStage/JSGAmbientLight.cpp" name="libs/JSystem/JStage/JSGAmbientLight.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="419,5,572,47"/>
-<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
-<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="139,213,247,240"/>
-<area shape="rect" id="node4" href="$JSGAmbientLight_8h.html" title=" " alt="" coords="163,109,359,151"/>
-<area shape="rect" id="node5" title=" " alt="" coords="383,102,608,158"/>
-<area shape="rect" id="node6" title=" " alt="" coords="631,102,866,158"/>
-<area shape="rect" id="node7" title=" " alt="" coords="890,102,1125,158"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1149,95,1364,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="184,5,337,47"/>
+<area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,109,87,136"/>
+<area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="139,199,247,225"/>
+<area shape="rect" id="node4" href="$JSGAmbientLight_8h.html" title=" " alt="" coords="163,102,359,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="383,95,608,151"/>
+<area shape="rect" id="node6" title=" " alt="" coords="631,95,866,151"/>
 </map>

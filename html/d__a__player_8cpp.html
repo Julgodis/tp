@@ -134,7 +134,6 @@ $(function() {
 <code>#include &quot;asm/d/a/d_a_player/getSpinnerRideSpeed__9daPy_py_cCFv.s&quot;</code><br />
 <code>#include &quot;asm/d/a/d_a_player/checkSpinnerReflectEffect__9daPy_py_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/a/d_a_player/checkBoomerangCharge__9daPy_py_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/a/d_a_player/checkBoomerangChargeTime__9daPy_py_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/a/d_a_player/getThrowBoomerangActor__9daPy_py_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/a/d_a_player/cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c.s&quot;</code><br />
 <code>#include &quot;asm/d/a/d_a_player/setPlayerDamage__9daPy_py_cFii.s&quot;</code><br />
@@ -303,8 +302,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4d9b9ba10380722b2c0dbe92b193abb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a805a411c881437f03c96c276b56b7257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__player_8cpp.html#a805a411c881437f03c96c276b56b7257">checkBoomerangCharge__9daPy_py_cFv</a> ()</td></tr>
 <tr class="separator:a805a411c881437f03c96c276b56b7257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21c011df0694eefa113e9c9fb491980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__player_8cpp.html#ae21c011df0694eefa113e9c9fb491980">checkBoomerangChargeTime__9daPy_py_cFv</a> ()</td></tr>
-<tr class="separator:ae21c011df0694eefa113e9c9fb491980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46ffd364d5c849c2364c31db05d9a6cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__player_8cpp.html#a46ffd364d5c849c2364c31db05d9a6cd">checkBoomerangChargeTime__9daPy_py_cFv</a> ()</td></tr>
+<tr class="separator:a46ffd364d5c849c2364c31db05d9a6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71195c0ffc97c299bc3fcf468ab6dbf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__player_8cpp.html#a71195c0ffc97c299bc3fcf468ab6dbf3">getThrowBoomerangActor__9daPy_py_cFv</a> ()</td></tr>
 <tr class="separator:a71195c0ffc97c299bc3fcf468ab6dbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d8f0e6825ed623af156840e20017ca1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__a__player_8cpp.html#a1d8f0e6825ed623af156840e20017ca1">cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c</a> ()</td></tr>
@@ -921,14 +920,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae21c011df0694eefa113e9c9fb491980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae21c011df0694eefa113e9c9fb491980">&#9670;&nbsp;</a></span>checkBoomerangChargeTime__9daPy_py_cFv()</h2>
+<a id="a46ffd364d5c849c2364c31db05d9a6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46ffd364d5c849c2364c31db05d9a6cd">&#9670;&nbsp;</a></span>checkBoomerangChargeTime__9daPy_py_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void checkBoomerangChargeTime__9daPy_py_cFv </td>
+          <td class="memname">bool checkBoomerangChargeTime__9daPy_py_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2800,10 +2799,10 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#accf658ced9b419f21529a0571d699486">__dt__18J3DAnmTransformKeyFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#ac2b2e7cb7b11d07f90062c4527987f07">getKind__18J3DAnmTransformKeyCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#a519ca5c9cee26b13133706bda5175ef6">getKind__18J3DAnmTransformKeyCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#aec345f1d0630875feb5a1b328db7abc4">getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ad__resorce_8cpp_html_ac2b2e7cb7b11d07f90062c4527987f07"><div class="ttname"><a href="d__resorce_8cpp.html#ac2b2e7cb7b11d07f90062c4527987f07">getKind__18J3DAnmTransformKeyCFv</a></div><div class="ttdeci">void getKind__18J3DAnmTransformKeyCFv()</div></div>
+<div class="ttc" id="ad__resorce_8cpp_html_a519ca5c9cee26b13133706bda5175ef6"><div class="ttname"><a href="d__resorce_8cpp.html#a519ca5c9cee26b13133706bda5175ef6">getKind__18J3DAnmTransformKeyCFv</a></div><div class="ttdeci">s32 getKind__18J3DAnmTransformKeyCFv()</div></div>
 <div class="ttc" id="ad__resorce_8cpp_html_accf658ced9b419f21529a0571d699486"><div class="ttname"><a href="d__resorce_8cpp.html#accf658ced9b419f21529a0571d699486">__dt__18J3DAnmTransformKeyFv</a></div><div class="ttdeci">void __dt__18J3DAnmTransformKeyFv()</div></div>
 <div class="ttc" id="ad__resorce_8cpp_html_aec345f1d0630875feb5a1b328db7abc4"><div class="ttname"><a href="d__resorce_8cpp.html#aec345f1d0630875feb5a1b328db7abc4">getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo</a></div><div class="ttdeci">void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo()</div></div>
 </div><!-- fragment -->
@@ -2832,7 +2831,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#a99271e8a85293a027a7832f9a5e2329f">__dt__18mDoExt_transAnmBasFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#ac2b2e7cb7b11d07f90062c4527987f07">getKind__18J3DAnmTransformKeyCFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#a519ca5c9cee26b13133706bda5175ef6">getKind__18J3DAnmTransformKeyCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__resorce_8cpp.html#aec345f1d0630875feb5a1b328db7abc4">getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__resorce_8cpp_html_a99271e8a85293a027a7832f9a5e2329f"><div class="ttname"><a href="d__resorce_8cpp.html#a99271e8a85293a027a7832f9a5e2329f">__dt__18mDoExt_transAnmBasFv</a></div><div class="ttdeci">void __dt__18mDoExt_transAnmBasFv()</div></div>

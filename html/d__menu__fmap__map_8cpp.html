@@ -92,7 +92,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/preDrawPath__15renderingFmap_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_fmap_map/isDrawPath__15renderingFmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/isDrawRoom__15renderingFmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/postDrawPath__15renderingFmap_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/postRenderingMap__15renderingFmap_cFv.s&quot;</code><br />
@@ -124,9 +123,6 @@ $(function() {
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/setTexture__15dMenu_FmapMap_cFUsUsUsUs.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff.s&quot;</code><br />
 <code>#include &quot;asm/d/menu/d_menu_fmap_map/__dt__15renderingFmap_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_fmap_map/isRenderingFloor__15renderingFmap_cFi.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_fmap_map/beforeDrawPath__15renderingFmap_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/menu/d_menu_fmap_map/afterDrawPath__15renderingFmap_cFv.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for d_menu_fmap_map.cpp:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -140,6 +136,10 @@ $(function() {
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__GXColor.html">_GXColor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__Fmap__region__data__c.html">dMenu_Fmap_region_data_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__Fmap__world__data__c.html">dMenu_Fmap_world_data_c</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDrawPath__c.html">dDrawPath_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDrawPath__c_1_1group__class.html">dDrawPath_c::group_class</a></td></tr>
@@ -149,10 +149,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDrawPath__c_1_1poly__class.html">dDrawPath_c::poly_class</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDrawPath__c_1_1room__class.html">dDrawPath_c::room_class</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__Fmap__world__data__c.html">dMenu_Fmap_world_data_c</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdMenu__Fmap__region__data__c.html">dMenu_Fmap_region_data_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrenderingFmap__c.html">renderingFmap_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,8 +195,8 @@ Functions</h2></td></tr>
 <tr class="separator:a07b30b98366196b23c292822dcdfaa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5eddfcd4c8526429ddb11350497b8f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#ac5eddfcd4c8526429ddb11350497b8f2">preDrawPath__15renderingFmap_cFv</a> ()</td></tr>
 <tr class="separator:ac5eddfcd4c8526429ddb11350497b8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e8ce6682d73fab166281eac54354bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#af0e8ce6682d73fab166281eac54354bf">isDrawPath__15renderingFmap_cFv</a> ()</td></tr>
-<tr class="separator:af0e8ce6682d73fab166281eac54354bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1c9480dec79408525609c60171ad80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a8f1c9480dec79408525609c60171ad80">isDrawPath__15renderingFmap_cFv</a> ()</td></tr>
+<tr class="separator:a8f1c9480dec79408525609c60171ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbbcbc2f7165a326d8940a61d00a8a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a5bbbcbc2f7165a326d8940a61d00a8a5">isDrawRoom__15renderingFmap_cFv</a> ()</td></tr>
 <tr class="separator:a5bbbcbc2f7165a326d8940a61d00a8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfa61d44183c6ecfe57e4cca833880a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#acfa61d44183c6ecfe57e4cca833880a2">postDrawPath__15renderingFmap_cFv</a> ()</td></tr>
@@ -263,8 +259,8 @@ Functions</h2></td></tr>
 <tr class="separator:a967af04c43e772ad95c784b4c3ae2176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1568fe74c4d9ae21a909b535a264ed09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a1568fe74c4d9ae21a909b535a264ed09">__dt__15renderingFmap_cFv</a> ()</td></tr>
 <tr class="separator:a1568fe74c4d9ae21a909b535a264ed09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5ec3fa9ed76cf829374e141a904262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a6f5ec3fa9ed76cf829374e141a904262">isRenderingFloor__15renderingFmap_cFi</a> ()</td></tr>
-<tr class="separator:a6f5ec3fa9ed76cf829374e141a904262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc28b92a8a65f2408743c615926f0e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a1fc28b92a8a65f2408743c615926f0e6">isRenderingFloor__15renderingFmap_cFi</a> ()</td></tr>
+<tr class="separator:a1fc28b92a8a65f2408743c615926f0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8f2b5e693b3ce9245a655103b76d1a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#ac8f2b5e693b3ce9245a655103b76d1a4">beforeDrawPath__15renderingFmap_cFv</a> ()</td></tr>
 <tr class="separator:ac8f2b5e693b3ce9245a655103b76d1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48c196cdffe2754dc479b3860a685017"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a48c196cdffe2754dc479b3860a685017">afterDrawPath__15renderingFmap_cFv</a> ()</td></tr>
@@ -287,8 +283,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac935a620ec938639b78f188cf9ecf06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc70c93ec3e19a14f7bd0b613651806c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#adc70c93ec3e19a14f7bd0b613651806c">draw__12dDlst_base_cFv</a> ()</td></tr>
 <tr class="separator:adc70c93ec3e19a14f7bd0b613651806c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0610af047114f446f381bd4e20796d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#ac0610af047114f446f381bd4e20796d8">isDrawType__11dDrawPath_cFi</a> ()</td></tr>
-<tr class="separator:ac0610af047114f446f381bd4e20796d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbba71772161b7d29ac7a57c307671b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a1bbba71772161b7d29ac7a57c307671b">isDrawType__11dDrawPath_cFi</a> ()</td></tr>
+<tr class="separator:a1bbba71772161b7d29ac7a57c307671b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c6c6cd9745a5a5f41a4fe918469019d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a7c6c6cd9745a5a5f41a4fe918469019d">getLineColor__11dDrawPath_cFii</a> ()</td></tr>
 <tr class="separator:a7c6c6cd9745a5a5f41a4fe918469019d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c5bc291ea601df5dcc62e57be188176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__menu__fmap__map_8cpp.html#a9c5bc291ea601df5dcc62e57be188176">dComIfGs_isStageSwitch__Fii</a> ()</td></tr>
@@ -1316,14 +1312,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af0e8ce6682d73fab166281eac54354bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0e8ce6682d73fab166281eac54354bf">&#9670;&nbsp;</a></span>isDrawPath__15renderingFmap_cFv()</h2>
+<a id="a8f1c9480dec79408525609c60171ad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1c9480dec79408525609c60171ad80">&#9670;&nbsp;</a></span>isDrawPath__15renderingFmap_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void isDrawPath__15renderingFmap_cFv </td>
+          <td class="memname">bool isDrawPath__15renderingFmap_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1350,14 +1346,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac0610af047114f446f381bd4e20796d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0610af047114f446f381bd4e20796d8">&#9670;&nbsp;</a></span>isDrawType__11dDrawPath_cFi()</h2>
+<a id="a1bbba71772161b7d29ac7a57c307671b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bbba71772161b7d29ac7a57c307671b">&#9670;&nbsp;</a></span>isDrawType__11dDrawPath_cFi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void isDrawType__11dDrawPath_cFi </td>
+          <td class="memname">bool isDrawType__11dDrawPath_cFi </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1401,14 +1397,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f5ec3fa9ed76cf829374e141a904262"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f5ec3fa9ed76cf829374e141a904262">&#9670;&nbsp;</a></span>isRenderingFloor__15renderingFmap_cFi()</h2>
+<a id="a1fc28b92a8a65f2408743c615926f0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc28b92a8a65f2408743c615926f0e6">&#9670;&nbsp;</a></span>isRenderingFloor__15renderingFmap_cFi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void isRenderingFloor__15renderingFmap_cFi </td>
+          <td class="memname">bool isRenderingFloor__15renderingFmap_cFi </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2195,7 +2191,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a6ff6e7cc4035c0fded4a5804aa6d0263">getLineColor__15dMenu_FmapMap_cFii</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a8e4465902f02aa8bb8f02120df8ebe54">getLineWidth__15dMenu_FmapMap_cFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a28050c75275b8aba27069c2dfbbd7266">isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a6f5ec3fa9ed76cf829374e141a904262">isRenderingFloor__15renderingFmap_cFi</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a1fc28b92a8a65f2408743c615926f0e6">isRenderingFloor__15renderingFmap_cFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac42a4896d0c54aa4d63d30bd2054624a">getFirstRoomPointer__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#aa5337179b5b73ca2cad9ba901e3526f5">getNextRoomPointer__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a3ac48f43de8b082f3ad3d11e56e8225c">drawPath__11dDrawPath_cFv</a>,</div>
@@ -2206,13 +2202,14 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a48c196cdffe2754dc479b3860a685017">afterDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac5eddfcd4c8526429ddb11350497b8f2">preDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#acfa61d44183c6ecfe57e4cca833880a2">postDrawPath__15renderingFmap_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#af0e8ce6682d73fab166281eac54354bf">isDrawPath__15renderingFmap_cFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a8f1c9480dec79408525609c60171ad80">isDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ad5eb902429c704bf95971ce8a7083c28">preRenderingMap__18dRenderingFDAmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#accfdaa05842eac5c475b4ce3b5bde7b7">postRenderingMap__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#afefd3e6f1e8689eefc5f3709145b305e">getBackColor__15dMenu_FmapMap_cCFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac8ddda3881db2357afbfcb98e1a95d33">getDecoLineColor__18dRenderingFDAmap_cFii</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ab11aa189f094920c9d7d59ec6f798a03">getDecorationLineWidth__18dRenderingFDAmap_cFi</a>,</div>
 <div class="line">}</div>
+<div class="ttc" id="ad__menu__fmap__map_8cpp_html_a1fc28b92a8a65f2408743c615926f0e6"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a1fc28b92a8a65f2408743c615926f0e6">isRenderingFloor__15renderingFmap_cFi</a></div><div class="ttdeci">bool isRenderingFloor__15renderingFmap_cFi()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a2095981210deb7fe67b00249df8533ae"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a2095981210deb7fe67b00249df8533ae">rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class</a></div><div class="ttdeci">void rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a28050c75275b8aba27069c2dfbbd7266"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a28050c75275b8aba27069c2dfbbd7266">isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class</a></div><div class="ttdeci">void isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a3ac48f43de8b082f3ad3d11e56e8225c"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a3ac48f43de8b082f3ad3d11e56e8225c">drawPath__11dDrawPath_cFv</a></div><div class="ttdeci">void drawPath__11dDrawPath_cFv()</div></div>
@@ -2221,9 +2218,9 @@ Variables</h2></td></tr>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a60906138e9cec5a423a781d0d6bb0ab6"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a60906138e9cec5a423a781d0d6bb0ab6">rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class</a></div><div class="ttdeci">void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a658034b9cf95c46854d88b5f912786f5"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a658034b9cf95c46854d88b5f912786f5">draw__15dMenu_FmapMap_cFv</a></div><div class="ttdeci">void draw__15dMenu_FmapMap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a66bc14745b31281f65bb45bfe1c79dad"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a66bc14745b31281f65bb45bfe1c79dad">rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class</a></div><div class="ttdeci">void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class()</div></div>
-<div class="ttc" id="ad__menu__fmap__map_8cpp_html_a6f5ec3fa9ed76cf829374e141a904262"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a6f5ec3fa9ed76cf829374e141a904262">isRenderingFloor__15renderingFmap_cFi</a></div><div class="ttdeci">void isRenderingFloor__15renderingFmap_cFi()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a6ff6e7cc4035c0fded4a5804aa6d0263"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a6ff6e7cc4035c0fded4a5804aa6d0263">getLineColor__15dMenu_FmapMap_cFii</a></div><div class="ttdeci">void getLineColor__15dMenu_FmapMap_cFii()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a8e4465902f02aa8bb8f02120df8ebe54"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a8e4465902f02aa8bb8f02120df8ebe54">getLineWidth__15dMenu_FmapMap_cFi</a></div><div class="ttdeci">void getLineWidth__15dMenu_FmapMap_cFi()</div></div>
+<div class="ttc" id="ad__menu__fmap__map_8cpp_html_a8f1c9480dec79408525609c60171ad80"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a8f1c9480dec79408525609c60171ad80">isDrawPath__15renderingFmap_cFv</a></div><div class="ttdeci">bool isDrawPath__15renderingFmap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a9848ce17c298530fbb79ce1420b7cee7"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a9848ce17c298530fbb79ce1420b7cee7">__dt__15dMenu_FmapMap_cFv</a></div><div class="ttdeci">void __dt__15dMenu_FmapMap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_aa5337179b5b73ca2cad9ba901e3526f5"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#aa5337179b5b73ca2cad9ba901e3526f5">getNextRoomPointer__15renderingFmap_cFv</a></div><div class="ttdeci">void getNextRoomPointer__15renderingFmap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_ab11aa189f094920c9d7d59ec6f798a03"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#ab11aa189f094920c9d7d59ec6f798a03">getDecorationLineWidth__18dRenderingFDAmap_cFi</a></div><div class="ttdeci">void getDecorationLineWidth__18dRenderingFDAmap_cFi()</div></div>
@@ -2235,7 +2232,6 @@ Variables</h2></td></tr>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_acfa61d44183c6ecfe57e4cca833880a2"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#acfa61d44183c6ecfe57e4cca833880a2">postDrawPath__15renderingFmap_cFv</a></div><div class="ttdeci">void postDrawPath__15renderingFmap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_ad5eb902429c704bf95971ce8a7083c28"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#ad5eb902429c704bf95971ce8a7083c28">preRenderingMap__18dRenderingFDAmap_cFv</a></div><div class="ttdeci">void preRenderingMap__18dRenderingFDAmap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_ae302293fa4b8e63af13b7f27dc493ca6"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#ae302293fa4b8e63af13b7f27dc493ca6">isDrawType__15dMenu_FmapMap_cFi</a></div><div class="ttdeci">void isDrawType__15dMenu_FmapMap_cFi()</div></div>
-<div class="ttc" id="ad__menu__fmap__map_8cpp_html_af0e8ce6682d73fab166281eac54354bf"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#af0e8ce6682d73fab166281eac54354bf">isDrawPath__15renderingFmap_cFv</a></div><div class="ttdeci">void isDrawPath__15renderingFmap_cFv()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_afefd3e6f1e8689eefc5f3709145b305e"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#afefd3e6f1e8689eefc5f3709145b305e">getBackColor__15dMenu_FmapMap_cCFv</a></div><div class="ttdeci">void getBackColor__15dMenu_FmapMap_cCFv()</div></div>
 <div class="ttc" id="atypes_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> types.h:32</div></div>
 </div><!-- fragment -->
@@ -2287,12 +2283,12 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#adc70c93ec3e19a14f7bd0b613651806c">draw__12dDlst_base_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a1568fe74c4d9ae21a909b535a264ed09">__dt__15renderingFmap_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac0610af047114f446f381bd4e20796d8">isDrawType__11dDrawPath_cFi</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a1bbba71772161b7d29ac7a57c307671b">isDrawType__11dDrawPath_cFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a7c6c6cd9745a5a5f41a4fe918469019d">getLineColor__11dDrawPath_cFii</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a28050c75275b8aba27069c2dfbbd7266">isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a6f5ec3fa9ed76cf829374e141a904262">isRenderingFloor__15renderingFmap_cFi</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a1fc28b92a8a65f2408743c615926f0e6">isRenderingFloor__15renderingFmap_cFi</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac42a4896d0c54aa4d63d30bd2054624a">getFirstRoomPointer__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#aa5337179b5b73ca2cad9ba901e3526f5">getNextRoomPointer__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a3ac48f43de8b082f3ad3d11e56e8225c">drawPath__11dDrawPath_cFv</a>,</div>
@@ -2303,7 +2299,7 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a48c196cdffe2754dc479b3860a685017">afterDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ac5eddfcd4c8526429ddb11350497b8f2">preDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#acfa61d44183c6ecfe57e4cca833880a2">postDrawPath__15renderingFmap_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#af0e8ce6682d73fab166281eac54354bf">isDrawPath__15renderingFmap_cFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#a8f1c9480dec79408525609c60171ad80">isDrawPath__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ad5eb902429c704bf95971ce8a7083c28">preRenderingMap__18dRenderingFDAmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#accfdaa05842eac5c475b4ce3b5bde7b7">postRenderingMap__15renderingFmap_cFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
@@ -2311,8 +2307,8 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__menu__fmap__map_8cpp.html#ab11aa189f094920c9d7d59ec6f798a03">getDecorationLineWidth__18dRenderingFDAmap_cFi</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a1568fe74c4d9ae21a909b535a264ed09"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a1568fe74c4d9ae21a909b535a264ed09">__dt__15renderingFmap_cFv</a></div><div class="ttdeci">void __dt__15renderingFmap_cFv()</div></div>
+<div class="ttc" id="ad__menu__fmap__map_8cpp_html_a1bbba71772161b7d29ac7a57c307671b"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a1bbba71772161b7d29ac7a57c307671b">isDrawType__11dDrawPath_cFi</a></div><div class="ttdeci">bool isDrawType__11dDrawPath_cFi()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_a7c6c6cd9745a5a5f41a4fe918469019d"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#a7c6c6cd9745a5a5f41a4fe918469019d">getLineColor__11dDrawPath_cFii</a></div><div class="ttdeci">void getLineColor__11dDrawPath_cFii()</div></div>
-<div class="ttc" id="ad__menu__fmap__map_8cpp_html_ac0610af047114f446f381bd4e20796d8"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#ac0610af047114f446f381bd4e20796d8">isDrawType__11dDrawPath_cFi</a></div><div class="ttdeci">void isDrawType__11dDrawPath_cFi()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_ad92529ff2c35233603ebf4e4d001b6a6"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#ad92529ff2c35233603ebf4e4d001b6a6">rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class</a></div><div class="ttdeci">void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class()</div></div>
 <div class="ttc" id="ad__menu__fmap__map_8cpp_html_adc70c93ec3e19a14f7bd0b613651806c"><div class="ttname"><a href="d__menu__fmap__map_8cpp.html#adc70c93ec3e19a14f7bd0b613651806c">draw__12dDlst_base_cFv</a></div><div class="ttdeci">void draw__12dDlst_base_cFv()</div></div>
 </div><!-- fragment -->

@@ -1,5 +1,5 @@
 <map id="libs/JSystem/JKernel/JKRThread.cpp" name="libs/JSystem/JKernel/JKRThread.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2255,5,2400,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2139,5,2284,47"/>
 <area shape="rect" id="node2" href="$dol2asm_8h.html" title=" " alt="" coords="5,117,87,143"/>
 <area shape="rect" id="node3" href="$types_8h.html" title=" " alt="" coords="139,213,247,240"/>
 <area shape="rect" id="node4" href="$JKRThread_8h.html" title=" " alt="" coords="162,117,362,143"/>
@@ -16,10 +16,9 @@
 <area shape="rect" id="node15" title=" " alt="" coords="2844,102,3061,158"/>
 <area shape="rect" id="node16" title=" " alt="" coords="3085,95,3324,165"/>
 <area shape="rect" id="node17" title=" " alt="" coords="3348,102,3653,158"/>
-<area shape="rect" id="node18" title=" " alt="" coords="3678,109,3902,151"/>
-<area shape="rect" id="node19" title=" " alt="" coords="3926,102,4142,158"/>
-<area shape="rect" id="node20" title=" " alt="" coords="4166,102,4379,158"/>
-<area shape="rect" id="node21" title=" " alt="" coords="4403,109,4646,151"/>
-<area shape="rect" id="node22" title=" " alt="" coords="4671,109,4869,151"/>
-<area shape="rect" id="node23" title=" " alt="" coords="4893,109,5089,151"/>
+<area shape="rect" id="node18" title=" " alt="" coords="3678,102,3894,158"/>
+<area shape="rect" id="node19" title=" " alt="" coords="3918,102,4131,158"/>
+<area shape="rect" id="node20" title=" " alt="" coords="4155,109,4398,151"/>
+<area shape="rect" id="node21" title=" " alt="" coords="4423,109,4621,151"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4645,109,4841,151"/>
 </map>

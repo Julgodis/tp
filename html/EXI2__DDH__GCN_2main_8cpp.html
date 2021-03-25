@@ -89,9 +89,7 @@ $(function() {
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_pre_continue.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_write.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_read.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_close.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_open.s&quot;</code><br />
-<code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_shutdown.s&quot;</code><br />
 <code>#include &quot;asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_initialize.s&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for main.cpp:</div>
@@ -116,12 +114,12 @@ Functions</h2></td></tr>
 <tr class="separator:a5120830a0eaf184a5198ea5892319c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654490c46b704d69917ccfba9f0d400c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a654490c46b704d69917ccfba9f0d400c">ddh_cc_read</a> ()</td></tr>
 <tr class="separator:a654490c46b704d69917ccfba9f0d400c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e49fbafaa627981fecb1dbc4cb4a3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a69e49fbafaa627981fecb1dbc4cb4a3a">ddh_cc_close</a> ()</td></tr>
-<tr class="separator:a69e49fbafaa627981fecb1dbc4cb4a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bed60fb0317ab4ff6e8265f65a61f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ac9bed60fb0317ab4ff6e8265f65a61f6">ddh_cc_close</a> ()</td></tr>
+<tr class="separator:ac9bed60fb0317ab4ff6e8265f65a61f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76993c8c9af24127a15eb5f0a892f137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a76993c8c9af24127a15eb5f0a892f137">ddh_cc_open</a> ()</td></tr>
 <tr class="separator:a76993c8c9af24127a15eb5f0a892f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26443e2517beb1707be3d28d7a053d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab26443e2517beb1707be3d28d7a053d1">ddh_cc_shutdown</a> ()</td></tr>
-<tr class="separator:ab26443e2517beb1707be3d28d7a053d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241b1b8fb79b4ea6428ad3f5731b0a77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a241b1b8fb79b4ea6428ad3f5731b0a77">ddh_cc_shutdown</a> ()</td></tr>
+<tr class="separator:a241b1b8fb79b4ea6428ad3f5731b0a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad41fade5fd60780ef66d40d2f93db987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ad41fade5fd60780ef66d40d2f93db987">ddh_cc_initialize</a> ()</td></tr>
 <tr class="separator:ad41fade5fd60780ef66d40d2f93db987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab555d70ee82516ccc5c1c04443820e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab555d70ee82516ccc5c1c04443820e63">CircleBufferReadBytes</a> ()</td></tr>
@@ -138,12 +136,12 @@ Functions</h2></td></tr>
 <tr class="separator:aa1ad29b760bd1f580202149ba1c23e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6238babe397ebbf8e935f106bf53fb73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a6238babe397ebbf8e935f106bf53fb73">EXI2_EnableInterrupts</a> ()</td></tr>
 <tr class="separator:a6238babe397ebbf8e935f106bf53fb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9c0655ddd4cb0d4a05d10a09c6cd1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a9d9c0655ddd4cb0d4a05d10a09c6cd1e">EXI2_Poll</a> ()</td></tr>
-<tr class="separator:a9d9c0655ddd4cb0d4a05d10a09c6cd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5a29e187e78add55b489fbf00e70a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a7e5a29e187e78add55b489fbf00e70a7">EXI2_ReadN</a> ()</td></tr>
-<tr class="separator:a7e5a29e187e78add55b489fbf00e70a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e70cfe6c623ed97d9fdde17d2b964e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#aa0e70cfe6c623ed97d9fdde17d2b964e">EXI2_WriteN</a> ()</td></tr>
-<tr class="separator:aa0e70cfe6c623ed97d9fdde17d2b964e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad362e3b4d06e69e00f37a5b6eaa47380"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ad362e3b4d06e69e00f37a5b6eaa47380">EXI2_Poll</a> ()</td></tr>
+<tr class="separator:ad362e3b4d06e69e00f37a5b6eaa47380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a62754598d5322f54287026273c6e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a98a62754598d5322f54287026273c6e6">EXI2_ReadN</a> ()</td></tr>
+<tr class="separator:a98a62754598d5322f54287026273c6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f748cdbb124c20b374756ae5896bfb6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a5f748cdbb124c20b374756ae5896bfb6">EXI2_WriteN</a> ()</td></tr>
+<tr class="separator:a5f748cdbb124c20b374756ae5896bfb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a728d488125d4565b836cff949d46ad21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#a728d488125d4565b836cff949d46ad21">EXI2_Reserve</a> ()</td></tr>
 <tr class="separator:a728d488125d4565b836cff949d46ad21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dacb764d77bde437dbc03fdcf6b085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EXI2__DDH__GCN_2main_8cpp.html#ab4dacb764d77bde437dbc03fdcf6b085">EXI2_Unreserve</a> ()</td></tr>
@@ -241,14 +239,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a69e49fbafaa627981fecb1dbc4cb4a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69e49fbafaa627981fecb1dbc4cb4a3a">&#9670;&nbsp;</a></span>ddh_cc_close()</h2>
+<a id="ac9bed60fb0317ab4ff6e8265f65a61f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bed60fb0317ab4ff6e8265f65a61f6">&#9670;&nbsp;</a></span>ddh_cc_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void ddh_cc_close </td>
+          <td class="memname">bool ddh_cc_close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -377,14 +375,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab26443e2517beb1707be3d28d7a053d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab26443e2517beb1707be3d28d7a053d1">&#9670;&nbsp;</a></span>ddh_cc_shutdown()</h2>
+<a id="a241b1b8fb79b4ea6428ad3f5731b0a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241b1b8fb79b4ea6428ad3f5731b0a77">&#9670;&nbsp;</a></span>ddh_cc_shutdown()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">asm void ddh_cc_shutdown </td>
+          <td class="memname">bool ddh_cc_shutdown </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -445,14 +443,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d9c0655ddd4cb0d4a05d10a09c6cd1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d9c0655ddd4cb0d4a05d10a09c6cd1e">&#9670;&nbsp;</a></span>EXI2_Poll()</h2>
+<a id="ad362e3b4d06e69e00f37a5b6eaa47380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad362e3b4d06e69e00f37a5b6eaa47380">&#9670;&nbsp;</a></span>EXI2_Poll()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EXI2_Poll </td>
+          <td class="memname">bool EXI2_Poll </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -462,14 +460,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e5a29e187e78add55b489fbf00e70a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e5a29e187e78add55b489fbf00e70a7">&#9670;&nbsp;</a></span>EXI2_ReadN()</h2>
+<a id="a98a62754598d5322f54287026273c6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a62754598d5322f54287026273c6e6">&#9670;&nbsp;</a></span>EXI2_ReadN()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EXI2_ReadN </td>
+          <td class="memname">bool EXI2_ReadN </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -513,14 +511,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0e70cfe6c623ed97d9fdde17d2b964e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0e70cfe6c623ed97d9fdde17d2b964e">&#9670;&nbsp;</a></span>EXI2_WriteN()</h2>
+<a id="a5f748cdbb124c20b374756ae5896bfb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f748cdbb124c20b374756ae5896bfb6">&#9670;&nbsp;</a></span>EXI2_WriteN()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void EXI2_WriteN </td>
+          <td class="memname">bool EXI2_WriteN </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

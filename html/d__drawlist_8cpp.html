@@ -103,7 +103,6 @@ $(function() {
 <code>#include &quot;asm/d/d_drawlist/clearAnmTransform__9J2DScreenFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/calcMtx__7J2DPaneFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/makeMatrix__7J2DPaneFff.s&quot;</code><br />
-<code>#include &quot;asm/d/d_drawlist/getTypeID__7J2DPaneCFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/setWhite__10J2DPictureFQ28JUtility6TColor.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/setBlack__10J2DPictureFQ28JUtility6TColor.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/__dt__10J2DAnmBaseFv.s&quot;</code><br />
@@ -145,7 +144,6 @@ $(function() {
 <code>#include &quot;asm/d/d_drawlist/__dt__17dDlst_shadowTri_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/__ct__18dDlst_shadowReal_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/__ct__17dDlst_shadowTri_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/d_drawlist/__ct__20dDlst_shadowSimple_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/init__12dDlst_list_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/__dt__12dDlst_list_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/reset__12dDlst_list_cFv.s&quot;</code><br />
@@ -160,8 +158,6 @@ $(function() {
 <code>#include &quot;asm/d/d_drawlist/wipeIn__12dDlst_list_cFf.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/calcWipe__12dDlst_list_cFv.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/getTri__22dDlst_shadowRealPoly_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/d_drawlist/getTriMax__22dDlst_shadowRealPoly_cFv.s&quot;</code><br />
-<code>#include &quot;asm/d/d_drawlist/searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen.s&quot;</code><br />
 <code>#include &quot;asm/d/d_drawlist/__sinit_d_drawlist_cpp.s&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -214,15 +210,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__effectLine__c.html">dDlst_effectLine_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgD__Vtx__t.html">cBgD_Vtx_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcM3dGPla.html">cM3dGPla</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcBgD__Vtx__t.html">cBgD_Vtx_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__shadowPoly__c.html">dDlst_shadowPoly_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdKy__tevstr__c.html">dKy_tevstr_c</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DModel.html">J3DModel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdKy__tevstr__c.html">dKy_tevstr_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__shadowReal__c.html">dDlst_shadowReal_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,11 +234,11 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__peekZ__c.html">dDlst_peekZ_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html">dDlst_base_c</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DPacket.html">J3DPacket</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structJ3DDrawBuffer.html">J3DDrawBuffer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__base__c.html">dDlst_base_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdDlst__list__c.html">dDlst_list_c</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -317,8 +313,8 @@ Functions</h2></td></tr>
 <tr class="separator:a120387a48594d62d7c295e4d64ccc70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac39520436ccd02e5613156a36d1ede73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#ac39520436ccd02e5613156a36d1ede73">makeMatrix__7J2DPaneFff</a> ()</td></tr>
 <tr class="separator:ac39520436ccd02e5613156a36d1ede73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60a0a97f8578d9eae2d0e2d41feda7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#ac60a0a97f8578d9eae2d0e2d41feda7d">getTypeID__7J2DPaneCFv</a> ()</td></tr>
-<tr class="separator:ac60a0a97f8578d9eae2d0e2d41feda7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8729d152f48fe01f48dbd814ba2c68a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a8729d152f48fe01f48dbd814ba2c68a7">getTypeID__7J2DPaneCFv</a> ()</td></tr>
+<tr class="separator:a8729d152f48fe01f48dbd814ba2c68a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85b72873f18e57abc417973e7779d826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a85b72873f18e57abc417973e7779d826">setWhite__10J2DPictureFQ28JUtility6TColor</a> ()</td></tr>
 <tr class="separator:a85b72873f18e57abc417973e7779d826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60a9f35d1e2dfbbfcdc2a5577851d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#af60a9f35d1e2dfbbfcdc2a5577851d10">setBlack__10J2DPictureFQ28JUtility6TColor</a> ()</td></tr>
@@ -431,8 +427,8 @@ Functions</h2></td></tr>
 <tr class="separator:a32df5c2eb43b65b3531d15e0117d1f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a010f5c6cffb730cba88db2b4817a80a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a010f5c6cffb730cba88db2b4817a80a7">getTri__22dDlst_shadowRealPoly_cFv</a> ()</td></tr>
 <tr class="separator:a010f5c6cffb730cba88db2b4817a80a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dda65abe602301dd8f92bc7a31b862f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a5dda65abe602301dd8f92bc7a31b862f">getTriMax__22dDlst_shadowRealPoly_cFv</a> ()</td></tr>
-<tr class="separator:a5dda65abe602301dd8f92bc7a31b862f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a279929987a697479e6d68d471068cabe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a279929987a697479e6d68d471068cabe">getTriMax__22dDlst_shadowRealPoly_cFv</a> ()</td></tr>
+<tr class="separator:a279929987a697479e6d68d471068cabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab638ff22c79d87e59a80b7ca6a2db8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#adab638ff22c79d87e59a80b7ca6a2db8">searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen</a> ()</td></tr>
 <tr class="separator:adab638ff22c79d87e59a80b7ca6a2db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45aa1eadfd13a58fef23a907f045df14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="d__drawlist_8cpp.html#a45aa1eadfd13a58fef23a907f045df14">__sinit_d_drawlist_cpp</a> ()</td></tr>
@@ -2551,14 +2547,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5dda65abe602301dd8f92bc7a31b862f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dda65abe602301dd8f92bc7a31b862f">&#9670;&nbsp;</a></span>getTriMax__22dDlst_shadowRealPoly_cFv()</h2>
+<a id="a279929987a697479e6d68d471068cabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a279929987a697479e6d68d471068cabe">&#9670;&nbsp;</a></span>getTriMax__22dDlst_shadowRealPoly_cFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getTriMax__22dDlst_shadowRealPoly_cFv </td>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> getTriMax__22dDlst_shadowRealPoly_cFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2568,14 +2564,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac60a0a97f8578d9eae2d0e2d41feda7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60a0a97f8578d9eae2d0e2d41feda7d">&#9670;&nbsp;</a></span>getTypeID__7J2DPaneCFv()</h2>
+<a id="a8729d152f48fe01f48dbd814ba2c68a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8729d152f48fe01f48dbd814ba2c68a7">&#9670;&nbsp;</a></span>getTypeID__7J2DPaneCFv()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void getTypeID__7J2DPaneCFv </td>
+          <td class="memname"><a class="el" href="types_8h.html#adafe97a8e4be18b0198f234819016582">s32</a> getTypeID__7J2DPaneCFv </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -5168,10 +5164,10 @@ Variables</h2></td></tr>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__drawlist_8cpp.html#a010f5c6cffb730cba88db2b4817a80a7">getTri__22dDlst_shadowRealPoly_cFv</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__drawlist_8cpp.html#a5dda65abe602301dd8f92bc7a31b862f">getTriMax__22dDlst_shadowRealPoly_cFv</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__drawlist_8cpp.html#a279929987a697479e6d68d471068cabe">getTriMax__22dDlst_shadowRealPoly_cFv</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="ad__drawlist_8cpp_html_a010f5c6cffb730cba88db2b4817a80a7"><div class="ttname"><a href="d__drawlist_8cpp.html#a010f5c6cffb730cba88db2b4817a80a7">getTri__22dDlst_shadowRealPoly_cFv</a></div><div class="ttdeci">void getTri__22dDlst_shadowRealPoly_cFv()</div></div>
-<div class="ttc" id="ad__drawlist_8cpp_html_a5dda65abe602301dd8f92bc7a31b862f"><div class="ttname"><a href="d__drawlist_8cpp.html#a5dda65abe602301dd8f92bc7a31b862f">getTriMax__22dDlst_shadowRealPoly_cFv</a></div><div class="ttdeci">void getTriMax__22dDlst_shadowRealPoly_cFv()</div></div>
+<div class="ttc" id="ad__drawlist_8cpp_html_a279929987a697479e6d68d471068cabe"><div class="ttname"><a href="d__drawlist_8cpp.html#a279929987a697479e6d68d471068cabe">getTriMax__22dDlst_shadowRealPoly_cFv</a></div><div class="ttdeci">s32 getTriMax__22dDlst_shadowRealPoly_cFv()</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5197,11 +5193,11 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
-<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__alink_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
+<div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__a__alink_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="m__Do__ext_8cpp.html#a2800366a7e86e57f989d24225d2ed756">draw__26mDoExt_3DlineMatSortPacketFv</a>,</div>
 <div class="line">     (<span class="keywordtype">void</span>*)<a class="code" href="d__drawlist_8cpp.html#a8c468537491b9f5d1c3465ee0b2e01db">__dt__26mDoExt_3DlineMatSortPacketFv</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="ad__a__alink_8cpp_html_a0790028347edef8af86818a8de8b44e3"><div class="ttname"><a href="d__a__alink_8cpp.html#a0790028347edef8af86818a8de8b44e3">entry__9J3DPacketFP13J3DDrawBuffer</a></div><div class="ttdeci">void entry__9J3DPacketFP13J3DDrawBuffer()</div></div>
+<div class="ttc" id="ad__a__alink_8cpp_html_ae6182f0ec775b094125fcf5d9f73cd28"><div class="ttname"><a href="d__a__alink_8cpp.html#ae6182f0ec775b094125fcf5d9f73cd28">entry__9J3DPacketFP13J3DDrawBuffer</a></div><div class="ttdeci">bool entry__9J3DPacketFP13J3DDrawBuffer()</div></div>
 <div class="ttc" id="ad__drawlist_8cpp_html_a8c468537491b9f5d1c3465ee0b2e01db"><div class="ttname"><a href="d__drawlist_8cpp.html#a8c468537491b9f5d1c3465ee0b2e01db">__dt__26mDoExt_3DlineMatSortPacketFv</a></div><div class="ttdeci">void __dt__26mDoExt_3DlineMatSortPacketFv()</div></div>
 <div class="ttc" id="am__Do__ext_8cpp_html_a2800366a7e86e57f989d24225d2ed756"><div class="ttname"><a href="m__Do__ext_8cpp.html#a2800366a7e86e57f989d24225d2ed756">draw__26mDoExt_3DlineMatSortPacketFv</a></div><div class="ttdeci">void draw__26mDoExt_3DlineMatSortPacketFv()</div></div>
 </div><!-- fragment -->
